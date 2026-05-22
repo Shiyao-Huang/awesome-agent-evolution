@@ -1,0 +1,144 @@
+---
+title: "ADAS 到 DGM：智能体架构自动搜索的进化之路"
+description: "追踪从 ADAS（ICLR 2025）到 Darwin Gödel Machine 的技术演进：从图灵完备搜索到开放式进化归档。UBC Jeff Clune 团队如何让 Agent 自己设计自己。"
+pubDate: 2026-05-22
+tags: ["ADAS", "DGM", "智能体架构搜索", "Self Evolve AI", "哥德尔机"]
+author: "Self Evolve Research Network"
+---
+
+## 同一团队的进化
+
+ADAS（Automated Design of Agentic Systems）和 DGM（Darwin Gödel Machine）来自同一个团队：UBC 的 Jeff Clune 组。ADAS 发表于 ICLR 2025，DGM 紧随其后在 2025 年发布。两者形成了清晰的技术演进路径。
+
+## ADAS：定义问题
+
+### 核心洞察
+
+ADAS 的关键洞察是：**编程语言是图灵完备的，因此在代码空间中搜索等价于搜索所有可能的 Agent 架构**。
+
+这和 NAS（Neural Architecture Search）搜索神经网络拓扑类似，但搜索空间从连续权重变成了离散代码。
+
+### Meta Agent Search
+
+```
+初始化：D = {}（已发现的 Agent）
+每轮迭代 t：
+  1. Meta Agent 审查 D + 性能历史
+  2. Meta Agent 用 Python 编写新 Agent 代码
+  3. 在 benchmark 上评估新 Agent
+  4. 记录 (代码, 分数) 到 D
+返回 D 中最优 Agent
+```
+
+### 关键发现
+
+ADAS 发现的 Agent 有三个令人惊讶的特性：
+
+1. **超越人工设计 SOTA**：自动搜索发现的架构优于人类专家设计
+2. **跨领域迁移**：在任务 A 上搜索的架构在任务 B 上也有效
+3. **跨模型迁移**：用 GPT-3.5 设计的架构用 GPT-4 执行也有效
+
+这说明 Meta Agent 发现的不是特定任务的 hack，而是**通用的推理模式**。
+
+## DGM：开放式进化
+
+### ADAS 的局限
+
+ADAS 的搜索过程本质上是"爬山"——每轮选择当前最优方向。这有两个问题：
+- 容易陷入局部最优
+- 丢弃了"不最优但有趣"的候选
+
+### DGM 的解决方案
+
+DGM 引入了两个关键改进：
+
+**1. 开放式归档**
+
+```python
+# ADAS：只保留最优
+D = {best_agent}
+
+# DGM：保留多样化的归档
+archive = {
+    agent_1: (code, score, behavior_descriptor),
+    agent_2: (code, score, behavior_descriptor),
+    ...
+}
+```
+
+**2. 多样性加权采样**
+
+```python
+def sample_parent(archive):
+    """不只选最优，而是多样性加权"""
+    weights = [fitness(a) * diversity_bonus(a, archive) for a in archive]
+    return weighted_sample(archive, weights)
+```
+
+### DGM 的进化循环
+
+```
+初始化归档 A = {种子 Agent a₀}
+每次迭代：
+  1. 从 A 中多样性加权采样父代
+  2. LLM (Claude/GPT) 提出代码修改
+  3. 在 benchmark 上评估子代
+  4. 如果改进：添加到 A
+  5. 可选：即使未改进也保留（为了多样性）
+```
+
+### Benchmark 结果
+
+| 基准 | 初始 | DGM 后 | 提升 |
+|------|------|--------|------|
+| SWE-bench | 20.0% | **50.0%** | +150% |
+| Polyglot | 14.2% | **30.7%** | +116% |
+
+## 从 NAS 到 ADAS 到 DGM 的技术谱系
+
+```
+NAS (2017-2022)
+  搜索空间：神经网络拓扑
+  变异算子：数学操作（加层、改宽等）
+  ↓
+ADAS (2024-2025)
+  搜索空间：Python 代码（图灵完备）
+  变异算子：LLM 代码生成
+  ↓
+DGM (2025)
+  搜索空间：Python 代码（图灵完备）
+  变异算子：LLM 代码修改
+  选择策略：开放式 + 多样性保留
+```
+
+## 研究者网络
+
+Jeff Clune 组是这一方向的核心力量：
+
+- **Jeff Clune**（UBC / Vector Institute）：开放式进化先驱，POET、Quality Diversity 提出者
+- **Shengran Hu**：ADAS 第一作者，同时参与 DGM
+- **Cong Lu**：进化 AI 研究者，多篇共著
+- **Jie (Jenny) Zhang**：DGM 第一作者
+
+这个团队从 Uber AI Labs 时期就开始探索开放式进化，如今将这个理念应用到 Agent 自进化领域。
+
+## 对 Self Evolve 的意义
+
+ADAS 和 DGM 代表了 Self Evolve 技术图谱中"Agent 自我进化"方向的最前沿：
+
+1. **证明可行性**：Agent 可以自动发现超越人类设计的架构
+2. **展示迁移性**：进化出的能力可以跨领域迁移
+3. **提供范式**：代码级进化 + 基准验证 + 开放式归档
+
+## 下一步
+
+- Gödel Agent 将进化从离线搬到运行时
+- Agent Symbolic Learning 提供结构化的"语言梯度"优化
+- 这些方法的融合将产生下一代自进化系统
+
+---
+
+**延伸阅读**：
+- [AI 自我进化：从概念到实现](/blog/ai-self-evolution-from-concept-to-implementation/)
+- [LLM 自我改进的五种范式](/blog/llm-five-self-improvement-paradigms/)
+- [如何构建自我进化的 AI Agent](/blog/how-to-build-self-evolving-agent/)

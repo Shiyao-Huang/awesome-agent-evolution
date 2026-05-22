@@ -1,0 +1,38 @@
+---
+title: "ADAS：智能体系统自动设计"
+description: "定义'智能体系统自动设计'研究范式。Meta Agent 在图灵完备的 Python 代码空间中搜索，发现的 Agent 跨领域、跨模型迁移且超越人工设计 SOTA。"
+pubDate: 2025-01-01
+arxiv: "2408.08435"
+venue: "ICLR 2025"
+tags: ["元搜索", "图灵完备", "架构发现"]
+status: "featured"
+authors: ["Shengran Hu", "Cong Lu", "Jeff Clune"]
+affiliations: ["UBC", "Vector Institute"]
+code: "https://github.com/ShengranHu/ADAS"
+---
+
+## 核心思想
+
+定义 "Automated Design of Agentic Systems" (ADAS) 研究领域。核心洞察：编程语言是图灵完备的，因此在代码空间中搜索等价于搜索所有可能的 Agent 架构。
+
+## Meta Agent Search
+
+1. **Meta Agent**：一个 LLM，负责编写定义新 Agent 架构的代码
+2. **搜索空间**：所有实现 Agent 的合法 Python 程序
+3. **迭代流程**：每轮 Meta Agent 审查历史发现 + 性能 → 编写新 Agent → 评估 → 归档
+
+## 关键发现
+
+- 发现的 Agent **超越人工设计 SOTA**
+- Agent **跨领域迁移**（任务 A 训练，任务 B 有效）
+- Agent **跨模型迁移**（GPT-3.5 设计，GPT-4 可用）
+
+## 意义
+
+ADAS 证明：Agent 架构设计可以从手工工程转向自动搜索，类似 NAS 对神经网络架构的影响。
+
+## 关系网络
+
+- DGM 的前身（同作者，增加开放式归档）
+- 与 NAS 思路类似，但搜索空间从连续权重变为离散代码
+- 受 AutoML / ZERO 成本代理概念启发

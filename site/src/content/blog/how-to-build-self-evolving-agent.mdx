@@ -1,0 +1,171 @@
+---
+title: "如何构建自我进化的 AI Agent：从架构到实践的完整教程"
+description: "面向开发者的 Self-Evolving Agent 构建指南。从最小闭环开始，逐步添加评估器、记忆、进化策略和回归防护，构建真正能自我改进的 AI 系统。"
+pubDate: 2026-05-22
+tags: ["自进化智能体", "Self-Evolving Agents", "技术教程", "Code Self Improvement"]
+author: "Self Evolve Research Network"
+---
+
+## 从最小闭环开始
+
+构建自进化 Agent 不需要一步到位。Self Evolve 推荐从最小可行闭环开始，逐步增加复杂度。
+
+### 最小闭环：Self-Refine 模式
+
+```python
+def self_refine(task, model, max_iterations=3):
+    """最简单的自进化闭环：生成 → 评判 → 修正"""
+    output = model.generate(task)
+
+    for i in range(max_iterations):
+        critique = model.critique(task, output)
+        if "无需改进" in critique:
+            break
+        output = model.refine(task, output, critique)
+
+    return output
+```
+
+这就是 Self-Refine 的核心。三步循环，零外部依赖。
+
+## 第一步：添加评估器
+
+自进化需要客观的评估信号。最小评估器可以是一个简单的测试套件：
+
+```python
+def evaluate(output, test_cases):
+    """基于测试用例的评估器"""
+    results = []
+    for test in test_cases:
+        try:
+            result = exec_in_sandbox(output, test["input"])
+            passed = result == test["expected"]
+        except:
+            passed = False
+        results.append(passed)
+    return sum(results) / len(results)  # 通过率
+```
+
+**关键原则**：评估器必须可重复执行、无副作用、有明确的通过/失败标准。
+
+## 第二步：添加记忆（Reflexion 模式）
+
+让 Agent 记住失败的经验：
+
+```python
+class ReflexionAgent:
+    def __init__(self, model):
+        self.model = model
+        self.memory = []  # 反思记忆
+
+    def act(self, task):
+        context = "\n".join(self.memory[-5:])  # 最近 5 条反思
+        output = self.model.generate(task, context=context)
+        return output
+
+    def reflect(self, task, output, reward):
+        if reward < 1.0:
+            reflection = self.model.reflect(task, output, "为什么失败了？")
+            self.memory.append(reflection)
+```
+
+记忆管理的最佳实践：
+- 设置记忆窗口（不要无限增长）
+- 按时间衰减旧记忆
+- 去重相似反思
+
+## 第三步：添加进化策略（ADAS 模式）
+
+当简单的迭代修复不够时，引入代码级进化：
+
+```python
+def evolve_agent(parent_code, model, benchmark):
+    """进化 Agent 代码"""
+    # 1. 评估父代
+    parent_score = evaluate_on_benchmark(parent_code, benchmark)
+
+    # 2. LLM 提出修改
+    modification = model.propose_modification(
+        parent_code,
+        parent_score,
+        history_of_attempts
+    )
+    child_code = apply_modification(parent_code, modification)
+
+    # 3. 评估子代
+    child_score = evaluate_on_benchmark(child_code, benchmark)
+
+    # 4. 仅在改进时保留
+    if child_score > parent_score:
+        return child_code, child_score
+    return parent_code, parent_score
+```
+
+## 第四步：回归防护
+
+这是工程实践中最关键的一步。没有回归防护的"进化"只会制造混乱：
+
+```python
+class SafeEvolution:
+    def __init__(self, baseline_score, regression_threshold=0.05):
+        self.baseline = baseline_score
+        self.threshold = regression_threshold
+
+    def accept(self, candidate_score):
+        """只在不回归时接受改进"""
+        if candidate_score >= self.baseline - self.threshold:
+            return True
+        return False  # 拒绝回归
+```
+
+**Self Evolve 工程铁律**：
+1. 冻结基线——在验证改进前不移动基线
+2. 单变量控制——一次只改一个维度
+3. 完整回归——改 A 不应该破坏 B
+4. 记录证据——每次改动留下评估记录
+
+## 第五步：开放式归档（DGM 模式）
+
+最终形态是 DGM 的开放式归档：不收敛到单一最优，而是维护多样化的 Agent 集合：
+
+```python
+class OpenEndedArchive:
+    def __init__(self):
+        self.agents = {}  # {agent_id: (code, score)}
+
+    def add(self, agent_code, score):
+        agent_id = hash(agent_code)
+        if agent_id not in self.agents or score > self.agents[agent_id][1]:
+            self.agents[agent_id] = (agent_code, score)
+
+    def sample_parent(self):
+        """多样性加权采样"""
+        return diversity_weighted_sample(self.agents)
+```
+
+## 工具选择建议
+
+| 阶段 | 推荐工具 |
+|------|---------|
+| 基础自反馈 | 任何 LLM API + Python |
+| 沙盒执行 | Docker、E2B、Modal |
+| 评估框架 | pytest、evalplus |
+| Agent 框架 | LangChain、AutoGen |
+| 进化搜索 | OpenEvolve、自定义 |
+
+## Self Evolve 的持续支持
+
+Self Evolve 项目将持续提供：
+- 最新论文的方法解读和公式拆解
+- 开源项目的技术栈和架构分析
+- 可直接复用的代码模板
+- 研究者网络和社区讨论
+
+访问 [x.mitbunny.ai](https://x.mitbunny.ai) 获取最新内容。
+
+---
+
+**延伸阅读**：
+- [代码自我改进：从智能体补丁到回归门禁](/blog/code-self-improvement-playbook/)
+- [ADAS 到 DGM：智能体架构自动搜索的进化](/blog/adas-to-dgm-evolution/)
+- [AI 自我进化：从概念到实现](/blog/ai-self-evolution-from-concept-to-implementation/)

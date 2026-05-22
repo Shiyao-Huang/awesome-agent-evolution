@@ -1,0 +1,11 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+export async function getStaticPaths(){const posts=(await getCollection('blog')).filter((p)=>!p.data.draft);return posts.map((post)=>({params:{slug:post.id},props:{post}}));}
+const { post } = Astro.props;
+const { Content } = await render(post);
+const jsonLd = {'@context':'https://schema.org','@type':'BlogPosting',headline:post.data.title,description:post.data.description,datePublished:post.data.pubDate.toISOString(),dateModified:(post.data.updatedDate ?? post.data.pubDate).toISOString(),author:{'@type':'Organization',name:post.data.author},mainEntityOfPage:Astro.url.toString()};
+---
+<BaseLayout title={`${post.data.title} | Self Evolve`} description={post.data.description} type="article" publishedTime={post.data.pubDate.toISOString()} modifiedTime={(post.data.updatedDate ?? post.data.pubDate).toISOString()}>
+  <article class="blog-article"><div class="eyebrow">{post.data.pubDate.toISOString().slice(0,10)} · {post.data.author}</div><h1>{post.data.title}</h1><p class="lead">{post.data.description}</p><div class="pill-row">{post.data.tags.map((tag)=><a class="pill" href={`/blog/tag/${encodeURIComponent(tag)}`}>{tag}</a>)}</div><script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline /><Content /></article>
+</BaseLayout>

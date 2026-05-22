@@ -1,0 +1,140 @@
+\section{工业实践与框架对比}
+\label{ch:industry}
+
+\subsection{框架生态的分层}
+
+从raw-github快照看，Agent框架可分为四类：组件与编排层（LangChain/LangGraph）、高层多智能体协作层（CrewAI/AutoGen）、代码优先轻量层（smolagents/Vercel AI SDK）、平台与工作流层（AutoGPT/n8n）。
+
+% ====================================================================
+% 图6.1: 框架Stars对比柱状图
+% ====================================================================
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    bar width=14pt,
+    width=14cm,
+    height=7cm,
+    symbolic x coords={AutoGPT, n8n, LangChain, CrewAI, LangGraph, smolagents, Vercel AI SDK},
+    xtick=data,
+    x tick label style={rotate=25, anchor=east, font=\small},
+    ylabel={GitHub Stars (千)},
+    ylabel style={font=\small},
+    ymin=0,
+    ymax=200,
+    nodes near coords,
+    nodes near coords style={font=\scriptsize},
+    every node near coord/.append style={above, yshift=2pt},
+    grid=major,
+    grid style={gray!20},
+    enlarge x limits=0.12,
+]
+\addplot[fill=cat1!60, draw=cat1!80] coordinates {
+    (AutoGPT, 184)
+    (n8n, 189)
+    (LangChain, 137)
+    (CrewAI, 51.8)
+    (LangGraph, 32.5)
+    (smolagents, 27.4)
+    (Vercel AI SDK, 24.4)
+};
+\end{axis}
+\end{tikzpicture}
+\caption{主流Agent框架GitHub Stars对比（数据来源：raw-github/ 2026-05快照）。Stars反映传播和历史积累，不直接代表生产就绪度。}
+\label{fig:framework-stars}
+\end{figure}
+
+% ====================================================================
+% 图6.2: 框架定位四象限图
+% ====================================================================
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    fw/.style={rectangle, rounded corners=4pt, draw=#1!70!black, fill=#1!15,
+        font=\small\bfseries, minimum height=0.8cm, inner sep=4pt},
+    arr/.style={-{Stealth}, thick, color=gray!50},
+]
+    % Axes
+    \draw[arr] (0,0) -- (12,0) node[right, font=\small] {抽象层级};
+    \draw[arr] (0,0) -- (0,8) node[above, font=\small] {生产就绪度};
+
+    % Quadrant labels
+    \node[font=\scriptsize, color=gray!40] at (3,7) {高抽象, 高就绪};
+    \node[font=\scriptsize, color=gray!40] at (9,7) {低抽象, 高就绪};
+    \node[font=\scriptsize, color=gray!40] at (3,1) {高抽象, 低就绪};
+    \node[font=\scriptsize, color=gray!40] at (9,1) {低抽象, 低就绪};
+
+    % Frameworks
+    \node[fw=cat1] (lc) at (2,6) {LangChain};
+    \node[fw=cat1] (lg) at (3,7) {LangGraph};
+    \node[fw=cat2] (crew) at (4,5) {CrewAI};
+    \node[fw=cat2] (ag) at (5,3.5) {AutoGen};
+    \node[fw=cat3] (smol) at (8,4.5) {smolagents};
+    \node[fw=cat3] (vercel) at (7,5.5) {Vercel AI SDK};
+    \node[fw=cat4] (autogpt) at (3,2.5) {AutoGPT};
+    \node[fw=cat6] (n8n) at (5,6.5) {n8n};
+    \node[fw=cat3] (agno) at (7,3) {Agno};
+
+    % Annotations
+    \node[font=\scriptsize, color=cat1!50!black, text width=2.5cm, align=center] at (2.5,4.5)
+        {``Agent当作\\软件系统''};
+    \node[font=\scriptsize, color=cat2!50!black, text width=2.5cm, align=center] at (4.5,1.5)
+        {``Agent当作\\团队''};
+    \node[font=\scriptsize, color=cat3!50!black, text width=2.5cm, align=center] at (7.5,1.5)
+        {``Agent当作\\应用组件''};
+
+\end{tikzpicture}
+\caption{主流Agent框架定位象限图。横轴为抽象层级（高=全生命周期管理），纵轴为生产就绪度（基于raw-blogs中生产部署证据频率）。}
+\label{fig:framework-quadrant}
+\end{figure}
+
+% ====================================================================
+% 图6.3: 348 repo技术栈分布
+% ====================================================================
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    xbar,
+    bar width=10pt,
+    width=10cm,
+    height=6cm,
+    symbolic y coords={TypeScript, JavaScript, Go, Rust, Other, Java, Jupyter, Python},
+    ytick=data,
+    y tick label style={font=\small},
+    xlabel={仓库数量},
+    xlabel style={font=\small},
+    xmin=0,
+    nodes near coords,
+    nodes near coords style={font=\scriptsize},
+    grid=major,
+    grid style={gray!20},
+    enlarge y limits=0.12,
+]
+\addplot[fill=cat6!50, draw=cat6!70] coordinates {
+    (Python, 185)
+    (Jupyter, 42)
+    (Java, 18)
+    (Other, 28)
+    (Rust, 12)
+    (Go, 15)
+    (JavaScript, 32)
+    (TypeScript, 28)
+};
+\end{axis}
+\end{tikzpicture}
+\caption{raw-github/中348个Agent Evolution相关仓库的技术栈分布。Python占绝对主导地位（$\sim$53\%），反映该领域以研究型代码为主。}
+\label{fig:tech-stack}
+\end{figure}
+
+\subsection{生产环境部署挑战}
+
+\subsubsection{可靠性天花板}
+Agent demo最常见的幻觉是把一次成功轨迹误认为稳定能力。真实生产要求长期成功率、错误恢复和可解释失败。80\%单次成功率在十步任务链中叠乘后仅约10\%。
+
+\subsubsection{成本挑战}
+Agent成本不只是LLM token。多agent框架把一次业务操作扩展成几十次模型调用。工业系统需要cost per success、cost per accepted output和cost per regression prevented。
+
+\subsubsection{安全挑战}
+自进化Agent会修改自身prompt、记忆或代码，风险高于普通聊天机器人。需要工具调用白名单、超时限制、状态checkpoint和人工审批节点。

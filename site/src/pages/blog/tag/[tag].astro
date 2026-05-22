@@ -1,0 +1,47 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('blog')).filter((p) => !p.data.draft);
+  const tagMap = new Map<string, typeof posts>();
+  for (const post of posts) {
+    for (const tag of post.data.tags) {
+      if (!tagMap.has(tag)) tagMap.set(tag, []);
+      tagMap.get(tag)!.push(post);
+    }
+  }
+  return Array.from(tagMap.entries()).map(([tag, taggedPosts]) => ({
+    params: { tag },
+    props: { tag, posts: taggedPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()) }
+  }));
+}
+
+const { tag, posts } = Astro.props;
+const decodedTag = decodeURIComponent(tag as string);
+---
+
+<BaseLayout title={`标签「${decodedTag}」的博客 — Self Evolve`} description={`Self Evolve 博客中标签为「${decodedTag}」的所有文章。`}>
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">标签过滤</div>
+      <h1 class="gradient-text">{decodedTag}</h1>
+      <p class="lead">共 {posts.length} 篇文章</p>
+      <p><a href="/blog/">← 返回全部博客</a></p>
+      <div class="grid">
+        {posts.map((post) => (
+          <article class="card">
+            <div class="eyebrow">{post.data.pubDate.toISOString().slice(0, 10)} · {post.data.author}</div>
+            <h2><a href={`/blog/${post.id}/`}>{post.data.title}</a></h2>
+            <p>{post.data.description}</p>
+            <div class="pill-row">
+              {post.data.tags.map((t) => (
+                <a class={`pill${t === decodedTag ? ' active' : ''}`} href={`/blog/tag/${encodeURIComponent(t)}`}>{t}</a>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

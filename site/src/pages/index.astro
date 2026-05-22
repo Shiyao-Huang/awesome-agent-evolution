@@ -1,0 +1,155 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { projects, projectGroups } from '@/data/projects';
+import { featuredResearch } from '@/data/research';
+import { communityLinks } from '@/data/community';
+import { knowledgeGraphStats } from '@/data/knowledgeGraph';
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf()).slice(0,3);
+---
+<BaseLayout>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Self Evolve AI · AI 自我进化</div>
+        <h1>索引那些让 <span class="gradient-text">AI 学会自我改进</span> 的系统。</h1>
+        <p class="lead">Self Evolve 是自进化智能体的中文入口：汇集论文、GitHub 实现、Benchmark、代码自我改进循环，以及 LLM 迭代优化的工程实践。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">浏览项目</a>
+          <a class="button" href="/research/">阅读研究图谱</a>
+          <a class="button" href="/graph/">打开知识图谱</a>
+          <a class="button" href="/star-analysis/">Star 质量分析</a>
+        </div>
+        <div class="metrics" aria-label="研究站点指标">
+          <div class="metric"><strong>{featuredResearch.length}</strong><span>篇代表论文进入前台</span></div>
+          <div class="metric"><strong>{projects.length}</strong><span>个精选 GitHub 开源项目</span></div>
+          <div class="metric"><strong>{knowledgeGraphStats.nodes}</strong><span>个图谱节点</span></div>
+        </div>
+      </div>
+      <div class="orbital" aria-label="自我进化动态视觉">
+        <div class="orbit"></div>
+        <div class="core">观察<br/>修正<br/>验证</div>
+        <div class="node a">记忆</div><div class="node b">基准</div><div class="node c">代码修复</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container split">
+      <div>
+        <div class="eyebrow">关于</div>
+        <h2>从一次性生成，走向可验证的闭环进化。</h2>
+      </div>
+      <div class="card">
+        <p>Self Evolve 把 AI 自我进化视为一门工程学：智能体观察结果、诊断差距、修改提示词/工具/记忆/代码/策略，再用评测确认改动确实提升目标能力且没有回归。</p>
+        <p>本站面向研究者、开发者与产品团队，提供可搜索的机制图谱、证据链和实现索引。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">项目</div>
+          <h2>GitHub 实现索引</h2>
+        </div>
+        <p>按进化模式分组，覆盖代码优化、Agent 进化、反思精炼与安全评判。</p>
+      </div>
+      {projectGroups.map((group) => (
+        <div style="margin-bottom: 36px">
+          <h3 style="color: var(--hot); font-size: 18px; margin-bottom: 14px; letter-spacing: -0.02em">{group.title}</h3>
+          <div class="grid">
+            {projects.filter((p) => group.repos.includes(p.repo)).map((project) => (
+              <article class="card">
+                <div class="eyebrow">{project.category}</div>
+                <h3><a href={project.url}>{project.name}</a></h3>
+                <p>{project.description}</p>
+                <div class="pill-row">
+                  <span class="pill">&#9733; {project.stars.toLocaleString()}</span>
+                  {project.stack.slice(0, 3).map((s) => <span class="pill">{s}</span>)}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section class="section" id="research">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">研究</div>
+          <h2>值得持续追踪的进化机制</h2>
+        </div>
+        <a class="button" href="/research/">全部研究</a>
+      </div>
+      <div class="timeline">
+        {featuredResearch.map((paper) => (
+          <article class="timeline-item">
+            <div class="year">{paper.year}</div>
+            <div>
+              <h3>{paper.url ? <a href={paper.url} target="_blank" rel="noopener">{paper.title}</a> : paper.title}</h3>
+              <p>{paper.insight}</p>
+              {paper.relation && <p style="color: var(--brand); font-size: 14px"><strong>关联：</strong>{paper.relation}</p>}
+              <div class="pill-row">
+                {paper.cluster && <span class="pill" style="border-color: var(--brand)">{paper.cluster}</span>}
+                {paper.tags.map((t) => <span class="pill">{t}</span>)}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="section" id="blog">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">博客</div>
+          <h2>面向 SEO 与开发者的实践笔记</h2>
+        </div>
+        <a class="button" href="/blog/">全部文章</a>
+      </div>
+      <div class="grid">
+        {posts.map((post) => (
+          <article class="card">
+            <div class="eyebrow">{post.data.pubDate.toISOString().slice(0,10)}</div>
+            <h3><a href={`/blog/${post.id}/`}>{post.data.title}</a></h3>
+            <p>{post.data.description}</p>
+            <div class="pill-row">{post.data.tags.map((tag) => <span class="pill">{tag}</span>)}</div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section class="section" id="community">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">社区</div>
+          <h2>一起构建 Self Evolve 知识图谱。</h2>
+        </div>
+        <a class="button" href="/graph/">查看图谱</a>
+      </div>
+      <div class="grid">
+        {communityLinks.map((link) => (
+          <article class="card">
+            <h3><a href={link.href}>{link.label}</a></h3>
+            <p>{link.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

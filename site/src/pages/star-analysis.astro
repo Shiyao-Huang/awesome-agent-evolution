@@ -1,0 +1,594 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import {
+  starQualityScores,
+  competitiveMatrix,
+  propagationChains,
+  comparisonGroups,
+  scoreColor
+} from '@/data/starAnalysis';
+---
+
+<BaseLayout
+  title="GitHub 明星项目传播链分析 — Self Evolve"
+  description="AI Agent 领域 GitHub 项目的 Star 质量评分、传播链重构、竞品对比矩阵。判断热度是真实自发还是炒作/水军行为。"
+>
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">数据研究报告</div>
+      <h1 class="gradient-text">GitHub 明星项目传播链分析</h1>
+      <p class="lead">Star 质量评分 · 传播链重构 · 炒作 vs 自发检测 · 竞品对比矩阵</p>
+      <p style="color: var(--muted); margin-top: 12px">覆盖 {starQualityScores.length} 个核心项目，{comparisonGroups.length} 组对比分析</p>
+    </div>
+  </section>
+
+  <!-- Executive Summary -->
+  <section class="section" id="summary">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">核心发现</div>
+          <h2>Executive Summary</h2>
+        </div>
+      </div>
+      <div class="split">
+        <div class="card">
+          <h3>关键洞察</h3>
+          <ul class="finding-list">
+            <li><strong>Star 数 ≠ 项目质量</strong>：AutoGPT (175K stars) 综合评分仅 28，低于 OpenEvolve (6.3K stars) 的 74 分</li>
+            <li><strong>爆发式增长多为 Hype 驱动</strong>：3天内从 0→50K stars 的项目，fork 质量和 issue 质量普遍偏低</li>
+            <li><strong>学术项目被系统性低估</strong>：DSPy、SWE-Agent 等论文驱动项目 star 增长慢但 star 质量最高</li>
+            <li><strong>Devika 是典型 Me-too 项目</strong>：蹭 Devin 热度达到 20K stars，3个月后活跃度归零</li>
+            <li><strong>Stars/Contributor Ratio</strong> 是最可靠的炒作检测指标：超过 150 即为高风险</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>方法论</h3>
+          <ul class="finding-list">
+            <li><strong>Star 活跃度评分</strong>：过去 90 天内有活动的 stargazer 占比</li>
+            <li><strong>贡献者多样性</strong>：Gini 系数反转，top 10 贡献者占比越低越好</li>
+            <li><strong>Fork 质量</strong>：有实际 commit/push 的 fork 占比</li>
+            <li><strong>Issue 质量</strong>：非灌水/非模板 issue 占比</li>
+            <li><strong>PR 合并率</strong>：merged PRs / total PRs</li>
+            <li><strong>Stars/Contributor Ratio</strong>：每个贡献者对应的 star 数（高=炒作嫌疑）</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Star Quality Scores -->
+  <section class="section" id="quality-scores">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Star 质量评分</div>
+          <h2>综合质量排名</h2>
+        </div>
+      </div>
+      <p style="color: var(--muted); margin-bottom: 24px">基于 5 维度加权评分：Star 活跃度(20%) + 贡献者多样性(20%) + Fork 质量(20%) + Issue 质量(20%) + PR 合并率(20%)</p>
+      <div class="score-table-wrap">
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>项目</th>
+              <th>Stars</th>
+              <th>综合评分</th>
+              <th>Star 活跃</th>
+              <th>贡献多样性</th>
+              <th>Fork 质量</th>
+              <th>Issue 质量</th>
+              <th>PR 合并</th>
+              <th>增长模式</th>
+            </tr>
+          </thead>
+          <tbody>
+            {starQualityScores
+              .sort((a, b) => b.compositeScore - a.compositeScore)
+              .map((s) => (
+              <tr>
+                <td><strong>{s.name}</strong><br/><span style="color:var(--muted);font-size:12px">{s.repo}</span></td>
+                <td>{s.totalStars.toLocaleString()}</td>
+                <td>
+                  <span class="score-badge" style={`background:${scoreColor(s.compositeScore)}20;color:${scoreColor(s.compositeScore)}`}>
+                    {s.compositeScore}
+                  </span>
+                </td>
+                <td>{s.starActivityScore}</td>
+                <td>{s.contributorDiversity}</td>
+                <td>{s.forkQualityScore}</td>
+                <td>{s.issueQualityScore}</td>
+                <td>{s.prMergeRate}</td>
+                <td><span class={`growth-badge growth-${s.growthPattern}`}>{s.growthPattern}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Verdict cards -->
+      <div class="grid" style="margin-top: 36px">
+        {starQualityScores
+          .sort((a, b) => b.compositeScore - a.compositeScore)
+          .slice(0, 6)
+          .map((s) => (
+          <article class="card">
+            <div style="display:flex;justify-content:space-between;align-items:start">
+              <div>
+                <div class="eyebrow">{s.growthPattern}</div>
+                <h3>{s.name}</h3>
+              </div>
+              <span class="score-badge" style={`background:${scoreColor(s.compositeScore)}20;color:${scoreColor(s.compositeScore)};font-size:24px;font-weight:900`}>
+                {s.compositeScore}
+              </span>
+            </div>
+            <p style="font-size:14px;color:var(--muted);margin-top:12px">{s.verdict}</p>
+            <div class="pill-row">
+              <span class="pill">&#9733; {s.totalStars.toLocaleString()}</span>
+              {s.daysFrom1Kto10K ? <span class="pill">1K→10K: {s.daysFrom1Kto10K}天</span> : <span class="pill">未达 10K</span>}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Radar Charts (CSS-only) -->
+  <section class="section" id="radar">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">多维评分</div>
+          <h2>质量雷达对比</h2>
+        </div>
+      </div>
+      <div class="radar-grid">
+        {['AutoGPT', 'MetaGPT', 'CrewAI', 'DSPy', 'OpenEvolve', 'Devika'].map((name) => {
+          const s = starQualityScores.find((x) => x.name === name)!;
+          const scores = [s.starActivityScore, s.contributorDiversity, s.forkQualityScore, s.issueQualityScore, s.prMergeRate];
+          return (
+            <div class="radar-card card">
+              <h3 style="text-align:center;margin-bottom:16px">{name} <span style="font-size:14px;color:var(--muted)">({s.compositeScore})</span></h3>
+              <div class="radar-visual">
+                {scores.map((val, i) => {
+                  const labels = ['活跃', '多样性', 'Fork', 'Issue', 'PR'];
+                  return (
+                    <div class="radar-bar-row">
+                      <span class="radar-label">{labels[i]}</span>
+                      <div class="radar-bar-track">
+                        <div class="radar-bar-fill" style={`width:${val}%;background:${scoreColor(val)}`} />
+                      </div>
+                      <span class="radar-value">{val}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Competitive Matrix -->
+  <section class="section" id="competitive">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">竞品对比矩阵</div>
+          <h2>横向对比</h2>
+        </div>
+      </div>
+
+      <div class="score-table-wrap">
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>项目</th>
+              <th>Stars</th>
+              <th>Forks</th>
+              <th>贡献者</th>
+              <th>Star/Contrib</th>
+              <th>代码质量</th>
+              <th>社区</th>
+              <th>文档</th>
+              <th>营销度</th>
+              <th>类型</th>
+            </tr>
+          </thead>
+          <tbody>
+            {competitiveMatrix
+              .sort((a, b) => b.stars - a.stars)
+              .map((c) => (
+              <tr>
+                <td><strong>{c.name}</strong></td>
+                <td>{c.stars.toLocaleString()}</td>
+                <td>{c.forks.toLocaleString()}</td>
+                <td>{c.contributors}</td>
+                <td>
+                  <span style={`color:${c.starsPerContributor > 150 ? '#ef4444' : c.starsPerContributor > 100 ? '#f59e0b' : '#10b981'}`}>
+                    {c.starsPerContributor}
+                  </span>
+                </td>
+                <td>{'●'.repeat(c.codeQuality)}{'○'.repeat(10 - c.codeQuality)}</td>
+                <td>{'●'.repeat(c.communityHealth)}{'○'.repeat(10 - c.communityHealth)}</td>
+                <td>{'●'.repeat(c.docQuality)}{'○'.repeat(10 - c.docQuality)}</td>
+                <td>
+                  <span class={`marketing-${c.marketingDriven}`}>{c.marketingDriven}</span>
+                </td>
+                <td><span class="org-badge org-{c.orgType}">{c.orgType}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Group Comparisons -->
+  <section class="section" id="comparisons">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">分组对比</div>
+          <h2>四维对比分析</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {comparisonGroups.map((group) => (
+          <article class="card">
+            <div class="eyebrow">{group.label}</div>
+            <h3>{group.description}</h3>
+            <p style="color:var(--muted);margin:12px 0">{group.verdict}</p>
+            <div class="pill-row">
+              <span class="pill">平均评分: {group.avgCompositeScore}</span>
+              <span class="pill">Star/Contrib: {group.avgStarsPerContributor}</span>
+              <span class="pill">代码质量: {group.avgCodeQuality}/10</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Propagation Chains -->
+  <section class="section" id="propagation">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">传播链</div>
+          <h2>Star 增长时间轴</h2>
+        </div>
+      </div>
+
+      {propagationChains.map((chain) => (
+        <div style="margin-bottom: 48px">
+          <h3 style="margin-bottom: 16px">{chain.name}</h3>
+
+          <!-- Timeline visualization -->
+          <div class="timeline">
+            {chain.nodes.map((node, i) => (
+              <article class="timeline-item">
+                <div class="year">{node.date.slice(0, 10)}</div>
+                <div>
+                  <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+                    <span class="platform-badge platform-{node.platform.toLowerCase().replace(/[^a-z]/g,'')}">{node.platform}</span>
+                    <strong>{node.event}</strong>
+                  </div>
+                  <p style="color:var(--hot);font-weight:700;font-size:14px">
+                    &#9733; {node.starsAfter.toLocaleString()}
+                    {i > 0 && <span style="color:var(--muted);font-weight:400;margin-left:8px">
+                      (+{(node.starsAfter - chain.nodes[i-1].starsAfter).toLocaleString()})
+                    </span>}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <!-- Signals -->
+          <div class="split" style="margin-top: 18px">
+            <div class="card" style="border-color: #ef444440">
+              <h3 style="color:#ef4444;font-size:16px;margin-bottom:10px">炒作信号</h3>
+              <ul class="signal-list">
+                {chain.hypeSignals.map((s) => <li style="color:var(--muted);font-size:14px">{s}</li>)}
+              </ul>
+            </div>
+            <div class="card" style="border-color: #10b98140">
+              <h3 style="color:#10b981;font-size:16px;margin-bottom:10px">自发信号</h3>
+              <ul class="signal-list">
+                {chain.organicSignals.map((s) => <li style="color:var(--muted);font-size:14px">{s}</li>)}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Mermaid Diagrams -->
+  <section class="section" id="diagrams">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">可视化</div>
+          <h2>传播链流程图</h2>
+        </div>
+      </div>
+
+      <div class="mermaid-wrap">
+        <pre class="mermaid" set:html={`flowchart LR
+    A[GitHub 创建] --> B[Twitter/X 首发]
+    B --> C{"是否有 KOL 转发?"}
+    C -->|有| D[HN Front Page]
+    C -->|无| E[缓慢自然增长]
+    D --> F[Reddit 热帖]
+    F --> G[YouTube 教程]
+    G --> H[中文媒体翻译]
+    H --> I[Star 爆发]
+    E --> J[学术引用]
+    J --> K[长期稳步增长]
+    I --> L[高 Star 低质量]
+    K --> M[低 Star 高质量]
+
+    style L fill:#ef4444,stroke:#ef4444,color:#fff
+    style M fill:#10b981,stroke:#10b981,color:#fff`} />
+      </div>
+
+      <div class="mermaid-wrap" style="margin-top:24px">
+        <pre class="mermaid" set:html={`graph TD
+    subgraph 炒作驱动
+        A1[AutoGPT 175K] --> A2[Devika 22K]
+        A1 ---|3天→50K| A3[爆发式增长]
+        A2 ---|5天→20K| A3
+        A3 --> A4["低 Fork 质量 / 低 Issue 质量 / Stars/Contrib > 150"]
+    end
+    subgraph 稳健增长
+        B1[CrewAI 30K] --> B2[AutoGen 50K]
+        B1 ---|30天→1K| B3[自然增长]
+        B2 ---|21天→1K| B3
+        B3 --> B4["高社区健康度 / 高 PR 合并率 / Stars/Contrib < 120"]
+    end
+    subgraph 学术驱动
+        C1[DSPy 25K] --> C2[SWE-Agent 15K]
+        C1 ---|90天→1K| C3[论文驱动增长]
+        C2 ---|30天→1K| C3
+        C3 --> C4["高代码质量 / 高 Issue 质量 / Stars/Contrib < 160"]
+    end
+
+    style A3 fill:#ef444480,stroke:#ef4444
+    style B3 fill:#f59e0b80,stroke:#f59e0b
+    style C3 fill:#10b98180,stroke:#10b981`} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section class="section" id="methodology">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">方法论</div>
+          <h2>Star 质量评分体系</h2>
+        </div>
+      </div>
+      <div class="split">
+        <div class="card">
+          <h3>评分维度与权重</h3>
+          <table class="score-table" style="margin-top:16px">
+            <thead>
+              <tr><th>维度</th><th>权重</th><th>数据来源</th><th>说明</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Star 活跃度</td><td>20%</td><td>GitHub API</td><td>90天内活跃 stargazer 占比</td></tr>
+              <tr><td>贡献者多样性</td><td>20%</td><td>GitHub API</td><td>Gini 系数反转，避免单人/单组织垄断</td></tr>
+              <tr><td>Fork 质量</td><td>20%</td><td>GitHub API</td><td>有 commit 的 fork 占比（排除空 fork）</td></tr>
+              <tr><td>Issue 质量</td><td>20%</td><td>GitHub API + NLP</td><td>非灌水/非模板 issue 占比</td></tr>
+              <tr><td>PR 合并率</td><td>20%</td><td>GitHub API</td><td>merged / total PRs 比例</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h3>炒作检测阈值</h3>
+          <table class="score-table" style="margin-top:16px">
+            <thead>
+              <tr><th>指标</th><th>绿色 (&lt; 50)</th><th>黄色 (50-150)</th><th>红色 (&gt; 150)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Stars/Contributor</td><td>健康</td><td>可能偏高</td><td>炒作嫌疑</td></tr>
+              <tr><td>0→1K 天数</td><td>&gt; 30 天</td><td>7-30 天</td><td>&lt; 7 天</td></tr>
+              <tr><td>Fork 质量</td><td>&gt; 40%</td><td>20-40%</td><td>&lt; 20%</td></tr>
+              <tr><td>Issue 质量</td><td>&gt; 60%</td><td>40-60%</td><td>&lt; 40%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer note -->
+  <section class="section">
+    <div class="container">
+      <div class="card" style="border-color: var(--brand)">
+        <p style="color:var(--muted);font-size:14px">
+          <strong style="color:var(--text)">声明</strong>：本分析基于公开 GitHub 数据估算，评分模型为研究用途，不代表对任何项目的价值判断。
+          Star 数是可见性指标而非质量指标。建议研究者同时参考论文引用量、代码实际使用量和社区讨论深度。
+          本报告将作为 arXiv 论文「Self Evolving AI: A Survey」的补充材料。
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Score badges */
+  .score-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 14px;
+  }
+
+  /* Growth pattern badges */
+  .growth-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .growth-organic { background: rgba(16,185,129,.15); color: #10b981; }
+  .growth-steady { background: rgba(59,130,246,.15); color: #3b82f6; }
+  .growth-viral { background: rgba(245,158,11,.15); color: #f59e0b; }
+  .growth-suspicious { background: rgba(239,68,68,.15); color: #ef4444; }
+
+  /* Table */
+  .score-table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--line) }
+  .score-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .score-table th {
+    background: var(--bg2);
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--muted);
+    white-space: nowrap;
+    border-bottom: 1px solid var(--line);
+  }
+  .score-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  .score-table tbody tr:hover { background: var(--card-bg) }
+
+  /* Finding list */
+  .finding-list { list-style: none; padding: 0 }
+  .finding-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+    line-height: 1.6;
+  }
+  .finding-list li:last-child { border-bottom: none }
+
+  /* Signal list */
+  .signal-list { list-style: disc; padding-left: 20px }
+  .signal-list li { padding: 4px 0; line-height: 1.5 }
+
+  /* Platform badges */
+  .platform-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .platform-github { background: rgba(255,255,255,.12); color: var(--text) }
+  .platform-twitterx { background: rgba(29,155,240,.2); color: #1d9bf0 }
+  .platform-hackernews { background: rgba(255,102,0,.2); color: #ff6600 }
+  .platform-reddit { background: rgba(255,69,0,.2); color: #ff4500 }
+  .platform-youtube { background: rgba(255,0,0,.2); color: #ff0000 }
+  .platform-wechat { background: rgba(7,193,96,.2); color: #07c160 }
+  .platform-arxiv { background: rgba(179,27,27,.2); color: #b31b1b }
+  .platform-linkedin { background: rgba(0,119,181,.2); color: #0077b5 }
+  .platform-iclr { background: rgba(124,124,247,.2); color: #7c7cf7 }
+
+  /* Marketing badges */
+  .marketing-low { color: #10b981 }
+  .marketing-medium { color: #f59e0b }
+  .marketing-high { color: #ef4444 }
+
+  /* Org badges */
+  .org-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    background: var(--card-bg);
+  }
+  .org-deepmind { background: rgba(66,133,244,.15); color: #4285f4 }
+  .org-big-tech { background: rgba(59,130,246,.15); color: #3b82f6 }
+  .org-startup { background: rgba(168,85,247,.15); color: #a855f7 }
+  .org-academic { background: rgba(16,185,129,.15); color: #10b981 }
+  .org-community { background: rgba(245,158,11,.15); color: #f59e0b }
+  .org-chinese-team { background: rgba(239,68,68,.15); color: #ef4444 }
+
+  /* Radar */
+  .radar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .radar-card { text-align: center }
+  .radar-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+  }
+  .radar-label {
+    width: 48px;
+    text-align: right;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .radar-bar-track {
+    flex: 1;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--line);
+    overflow: hidden;
+  }
+  .radar-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width .6s ease-out;
+  }
+  .radar-value {
+    width: 28px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  /* Mermaid */
+  .mermaid-wrap {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px;
+    background: var(--card-bg);
+    overflow-x: auto;
+  }
+
+  /* Responsive */
+  @media (max-width: 880px) {
+    .radar-grid { grid-template-columns: 1fr }
+    .score-table { font-size: 12px }
+    .score-table th, .score-table td { padding: 8px 10px }
+  }
+</style>
+
+<!-- Mermaid JS -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js" is:inline></script>
+<script is:inline>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    themeVariables: {
+      primaryColor: '#7cf7d4',
+      primaryTextColor: '#f6f8ff',
+      primaryBorderColor: 'rgba(255,255,255,.12)',
+      lineColor: '#aab4d4',
+      secondaryColor: '#0f1630',
+      tertiaryColor: '#0a1024'
+    }
+  });
+</script>

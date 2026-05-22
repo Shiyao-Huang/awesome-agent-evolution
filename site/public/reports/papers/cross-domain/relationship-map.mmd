@@ -1,0 +1,20 @@
+graph TD
+  SE[Self Evolve：生成 -> 评估 -> 记忆 -> 改进]
+  AutoML[AutoML + LLM]
+  NAS[NAS + LLM]
+  SI[LLM 自我改进]
+  EVO[进化计算 + LLM]
+  AG[AI Agent 框架]
+  SE --> AutoML
+  SE --> NAS
+  SE --> SI
+  SE --> EVO
+  SE --> AG
+  AutoML -->|流水线合成| AG
+  NAS -->|架构基因组| EVO
+  SI -->|反思记忆| AG
+  EVO -->|适应度 + 种群| SE
+  AG -->|角色 + 工具 + 编排| SE
+  AutoML -->|指标 / 评估| SE
+  NAS -->|基准测试| SE
+  SI -->|经验获取 / 优化 / 更新 / 评估| SE

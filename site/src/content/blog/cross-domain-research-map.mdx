@@ -1,0 +1,78 @@
+---
+title: "AI 自我进化的跨领域图谱：从 AutoML 到 Agent 自修改"
+description: "梳理 AutoML/NAS、进化计算、LLM 自我改进与 Agent 框架之间的深层连接，揭示 Self Evolve 的技术全景。"
+pubDate: 2026-05-22
+tags: ["AutoML", "NAS", "LLM 自我改进", "Agent 框架", "进化计算", "技术图谱"]
+---
+
+AI 自我进化并非单一方向的进展，而是多条技术路线在"可验证改进闭环"这一共同目标下的汇聚。本文梳理五个核心领域之间的深层联系。
+
+## 五大领域的交汇
+
+### 1. AutoML / NAS → Agent 架构搜索
+
+NAS 搜索神经网络拓扑，ADAS 搜索 Agent 代码/提示词/管线结构。关键差异：搜索空间从连续权重变为离散代码。
+
+可借鉴的 NAS 经验：
+- ENAS 的权重共享 → Agent 搜索的评估加速
+- NAS-Bench-101/201/301 → Self Evolve 需要类似标准基准
+- NAS 的收敛证明 → Self Evolve 缺乏形式化保证
+
+### 2. 进化计算 + LLM：从 FunSearch 到 AlphaEvolve
+
+FunSearch (Nature 2023) 用 LLM + 评估器进化单函数 → AlphaEvolve 扩展到完整代码库。核心模式：**LLM 作为变异算子 + 自动评估器作为适应度函数**。
+
+关键里程碑：
+- FunSearch：单函数发现
+- OPRO：自然语言优化
+- AlphaEvolve：MAP-Elites + 双模型（Flash 广度 + Pro 深度）
+- OpenEvolve：社区开源复现
+
+### 3. LLM 自我改进：推理期 vs 训练期
+
+两大路线：
+
+**推理期改进**（不改权重）：
+- Self-Refine：生成 → 批判 → 修正循环
+- Reflexion：语言反思写入记忆
+- Agent Symbolic Learning：语言梯度反向传播
+
+**训练期改进**（更新权重）：
+- SPIN：自博弈微调
+- Absolute Zero：零数据自博弈 RL
+- RISE：推理期自编辑 + RL
+
+### 4. Agent 自我进化：代码即基因组
+
+最前沿方向——Agent 直接修改自身代码：
+
+- **ADAS** (ICLR 2025)：Meta Agent 在图灵完备代码空间搜索
+- **DGM** (2025)：开放式进化归档，SWE-bench 20%→50%
+- **Gödel Agent** (2025)：运行时 monkey patching
+- **Agent Symbolic Learning** (NeurIPS 2024)：符号网络反向传播
+
+### 5. Agent 框架：进化层的底座
+
+AutoGen、MetaGPT、CrewAI 提供角色/工具/流程编排。Self Evolve 需要在此基础上叠加：
+- 评估器/打分器
+- 进化记忆/谱系
+- 回归防护门禁
+
+## 技术地图总结
+
+```
+观察 → 诊断 → 变异 → 验证 → 保留
+  ↑                            │
+  └──────── 反馈闭环 ──────────┘
+```
+
+被进化的对象从简单到复杂：
+1. 提示词（Self-Refine）
+2. 记忆（Reflexion）
+3. 工具调用（Agent Symbolic Learning）
+4. 代码/架构（ADAS, DGM）
+5. 训练数据（Absolute Zero）
+6. 奖励模型（SPIN）
+7. 完整工作流（Agent 框架 + 进化层）
+
+Self Evolve 将持续追踪让这些闭环可复现的论文与代码项目。

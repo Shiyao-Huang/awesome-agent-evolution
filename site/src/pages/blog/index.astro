@@ -1,0 +1,8 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog')).filter((p)=>!p.data.draft).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+---
+<BaseLayout title="Self Evolve 博客 — AI 自我进化实践笔记" description="围绕自进化智能体、LLM 迭代优化、代码自我改进与评测闭环的中文 SEO 文章。">
+  <section class="section"><div class="container"><div class="eyebrow">博客</div><h1 class="gradient-text">Self Evolve 实践笔记</h1><p class="lead">支持 MDX、代码高亮、标签、RSS 与结构化 SEO 元数据，方便持续发布研究与工程内容。</p><div class="grid">{posts.map((post)=><article class="card"><div class="eyebrow">{post.data.pubDate.toISOString().slice(0,10)} · {post.data.author}</div><h2><a href={`/blog/${post.id}/`}>{post.data.title}</a></h2><p>{post.data.description}</p><div class="pill-row">{post.data.tags.map((tag)=><a class="pill" href={`/blog/tag/${encodeURIComponent(tag)}`}>{tag}</a>)}</div></article>)}</div></div></section>
+</BaseLayout>

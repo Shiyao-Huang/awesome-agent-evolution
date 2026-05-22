@@ -1,0 +1,133 @@
+---
+title: "开源自进化 AI 项目巡礼：10 个值得关注的仓库"
+description: "精选 Self Evolve 项目索引中最值得关注的 10 个开源自进化 AI 项目，涵盖进化式代码优化、Agent 进化框架、反思记忆与自评判训练。技术栈、架构模式与社区活跃度全解析。"
+pubDate: 2026-05-22
+tags: ["开源项目", "自进化 AI", "GitHub", "Self Evolve AI", "项目索引"]
+author: "Self Evolve Research Network"
+---
+
+## 为什么关注这些项目
+
+Self Evolve 项目索引已收录 348 个相关仓库。本文精选 10 个最具代表性的开源项目，它们覆盖了自进化 AI 的核心技术模式：进化搜索循环、评估器/打分器、反思记忆和智能体编排。
+
+## 1. OpenEvolve — AlphaEvolve 社区复现
+
+- **仓库**：[algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve)
+- **Stars**：6,300+ | **语言**：Python | **协议**：Apache-2.0
+- **模式**：进化/搜索循环 → 评估器/打分器
+
+Google DeepMind AlphaEvolve 的开源实现。使用 LLM 生成程序变体、评估打分并选择高分候选持续迭代。支持 OpenAI 兼容 API，是进入进化式代码优化领域的最佳起点。
+
+**适合**：想快速体验 AlphaEvolve 范式的开发者
+
+## 2. AIWaves Agents — 符号学习框架
+
+- **仓库**：[aiwaves-cn/agents](https://github.com/aiwaves-cn/agents)
+- **Stars**：5,900+ | **语言**：Python | **协议**：Apache-2.0
+- **模式**：进化/搜索循环 → 评估器/打分器 → 智能体编排
+
+Agent Symbolic Learning（NeurIPS 2024）的官方实现。数据中心化的自进化语言智能体框架，强调数据、环境反馈和智能体编排让 Agent 在任务中持续改进。
+
+**适合**：构建多组件自进化 Agent 系统的研究者
+
+## 3. Reflexion — 语言反思记忆
+
+- **仓库**：[noahshinn/reflexion](https://github.com/noahshinn/reflexion)
+- **Stars**：3,100+ | **语言**：Python | **协议**：MIT
+- **模式**：进化/搜索循环 → 反思记忆 → 反馈-精炼 → 评估器
+
+Reflexion（NeurIPS 2023）的经典实现。使用语言反思作为"verbal reinforcement"，把失败经验写入记忆以改进后续行为。HumanEval 91% pass@1 的实现基础。
+
+**适合**：学习反思记忆机制的最佳入门项目
+
+## 4. AgentEvolver — 阿里达摩院自进化框架
+
+- **仓库**：[modelscope/AgentEvolver](https://github.com/modelscope/AgentEvolver)
+- **Stars**：1,400+ | **语言**：Python | **协议**：Apache-2.0
+- **模式**：进化/搜索循环 → 评估器/打分器 → 智能体编排 → 训练/数据循环
+
+面向高效自进化智能体系统的研究实现。核心关注轨迹、经验和评估反馈驱动的 Agent 能力提升。基于 ModelScope 生态。
+
+**适合**：需要中文支持和国内模型接入的开发者
+
+## 5. Self-Refine — 迭代自反馈基线
+
+- **仓库**：[madaan/self-refine](https://github.com/madaan/self-refine)
+- **Stars**：800+ | **语言**：Python | **协议**：Apache-2.0
+- **模式**：反馈-精炼
+
+Self-Refine（NeurIPS 2023）的经典实现。用同一个 LLM 生成初稿、生成反馈、再根据反馈迭代精炼，无需训练或强化学习。
+
+**适合**：最小化实现自进化闭环的教学项目
+
+## 6. SE-Agent — 代码智能体自进化
+
+- **仓库**：[JARVIS-Xs/SE-Agent](https://github.com/JARVIS-Xs/SE-Agent)
+- **Stars**：270+ | **语言**：Python | **协议**：MIT
+- **模式**：进化/搜索循环 → 评估器/打分器 → 智能体编排
+
+面向代码智能体的自进化框架，通过 Revision、Recombination、Refinement 在多条推理轨迹间交换信息，扩大搜索空间。
+
+**适合**：关注代码生成 Agent 进化的研究者
+
+## 7. SCOPE — 提示词/上下文进化
+
+- **仓库**：[JarvisPei/SCOPE](https://github.com/JarvisPei/SCOPE)
+- **Stars**：77+ | **语言**：Python | **协议**：MIT
+- **模式**：进化/搜索循环
+
+Self-evolving Context Optimization via Prompt Evolution。通过提示词和上下文演化优化 LLM 的任务表现，支持 OpenAI 和 Claude API。
+
+**适合**：专注于 Prompt Engineering 优化的开发者
+
+## 8. CodeEvolve — 科学代码进化
+
+- **仓库**：[inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve)
+- **Stars**：97+ | **语言**：Python | **协议**：Apache-2.0
+- **模式**：进化/搜索循环 → 评估器/打分器
+
+面向科学与算法发现的 CodeEvolve 实现，将 LLM 与遗传算法、岛屿模型、交叉/变异等机制结合。
+
+**适合**：科学计算和算法优化方向
+
+## 9. LLM-Self-Judge — 自评判训练
+
+- **仓库**：[OPPO-Mente-Lab/LLM-Self-Judge](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge)
+- **Stars**：43+ | **语言**：Python | **协议**：Apache-2.0
+- **模式**：进化/搜索循环 → 评估器/打分器 → 智能体编排 → 训练/数据循环
+
+围绕多模态推理中模型自评判和无监督自进化的官方实现，关注 judge 信号如何驱动模型/数据改进。
+
+**适合**：研究模型自评估和自训练的团队
+
+## 10. DARWIN — 安全策略进化
+
+- **仓库**：[ZJU-LLM-Safety/DARWIN](https://github.com/ZJU-LLM-Safety/DARWIN)
+- **Stars**：41+ | **语言**：Python
+- **模式**：进化/搜索循环 → 反思记忆
+
+浙大安全团队的自进化 LLM 越狱/安全研究框架。维护策略池并用检索、过滤、马尔可夫选择、反思和遗传演化扩展攻击策略。
+
+**适合**：AI 安全与对抗性测试研究者
+
+## 项目选择建议
+
+| 你的目标 | 推荐项目 |
+|---------|---------|
+| 快速上手自进化概念 | Self-Refine → Reflexion |
+| 构建 Agent 自进化系统 | AIWaves Agents → AgentEvolver |
+| 代码/算法进化 | OpenEvolve → CodeEvolve |
+| Prompt 优化 | SCOPE |
+| AI 安全 | DARWIN |
+| 模型自训练 | LLM-Self-Judge |
+
+## 持续更新
+
+Self Evolve 项目索引（x.mitbunny.ai）持续追踪新项目。所有项目均经 GitNexus 深度分析，提供技术栈、架构模式和实现模式的结构化索引。
+
+---
+
+**延伸阅读**：
+- [AI 自我进化：从概念到实现](/blog/ai-self-evolution-from-concept-to-implementation/)
+- [如何构建自我进化的 AI Agent](/blog/how-to-build-self-evolving-agent/)
+- [进化计算 × 大语言模型前沿综述](/blog/evolutionary-computation-llm-survey/)

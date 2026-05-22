@@ -1,0 +1,44 @@
+---
+title: "Self-Refine：基于自反馈的迭代式优化"
+description: "同一 LLM 生成答案、批评答案并在推理期迭代改写，无需训练或强化学习。跨 7 个任务平均提升 ~20%。"
+pubDate: 2023-03-01
+arxiv: "2303.17651"
+venue: "NeurIPS 2023"
+tags: ["自反馈", "迭代优化", "推理期改进"]
+status: "featured"
+authors: ["Aman Madaan", "Niket Tandon", "Prakhar Gupta", "Peter Clark"]
+affiliations: ["AI2", "Google", "CMU"]
+code: "https://github.com/madaan/self-refine"
+---
+
+## 核心思想
+
+单模型迭代"生成 → 批判 → 修正"闭环，无需外部训练数据、强化学习或权重更新。
+
+## 三步循环
+
+1. **GENERATE**：模型根据输入生成初始输出
+2. **CRITIQUE**：模型分析自身输出，识别具体问题
+3. **REFINE**：模型根据批判改进输出
+
+```
+输入 x → GENERATE → output_0
+output_0 → CRITIQUE → feedback_0
+(output_0, feedback_0) → REFINE → output_1
+... 重复直到无改进或达到最大迭代
+```
+
+## Benchmark 结果
+
+跨 7 个任务（代码生成、数学推理、对话、情感翻转等）平均提升 ~20%。
+
+## 局限性
+
+- 改进幅度受模型初始能力限制
+- 批判质量依赖 prompt 设计
+- 多次迭代增加推理成本
+
+## 关系网络
+
+- Agent Symbolic Learning 的前身概念（结构化反传 vs 简单循环）
+- Reflexion 的互补：Self-Refine 无记忆，Reflexion 引入跨 episode 记忆

@@ -1,0 +1,110 @@
+{
+  "content_timestamp": "2026-05-22",
+  "collected_at": "2026-05-22T13:00:00+08:00",
+  "time_slice": "2026-05",
+  "source_tool": "anysearch",
+  "audit": {
+    "raw_temporal_missing_count": 0,
+    "main_gap": "hot practitioner/project recall plus unknown upstream timestamps/stacks",
+    "latest_validation": {
+      "raw_github_md": 354,
+      "raw_github_unknown_records": 179,
+      "raw_blogs_md": 655,
+      "raw_blogs_json": 653,
+      "raw_blogs_unknown_records": 4,
+      "raw_papers_md": 184,
+      "raw_social_md": 650,
+      "raw_social_json": 657,
+      "missing_count": 0
+    }
+  },
+  "queries": [
+    "OpenHuman open source AI harness Product Hunt GitHub",
+    "agentmemory open source multimodal AI agent stack GitHub",
+    "obra superpowers agentic skills framework GitHub",
+    "Hermes Agent self improving skills persistent memory GitHub Nous Research",
+    "OpenClaw KiloClaw PinchBench GitHub self hosted personal agent",
+    "OpenClaw GitHub open source AI agent openclaw repo",
+    "site:github.com OpenClaw AI agent OpenClaw",
+    "PinchBench GitHub OpenClaw benchmark",
+    "site:x.com OpenClaw self improving agent 2026",
+    "site:x.com PinchBench OpenClaw benchmark 2026",
+    "User-reported: https://github.com/china-qijizhifeng/agentic-Harness-engineering"
+  ],
+  "added_assets": [
+    {
+      "path": "raw-github/tinyhumansai_openhuman.md",
+      "url": "https://github.com/tinyhumansai/openhuman",
+      "type": "github",
+      "category_hint": "application-demo",
+      "content_timestamp": "2026-05-21"
+    },
+    {
+      "path": "raw-github/rohitg00_agentmemory.md",
+      "url": "https://github.com/rohitg00/agentmemory",
+      "type": "github",
+      "category_hint": "tool-module",
+      "content_timestamp": "2026-05-18"
+    },
+    {
+      "path": "raw-github/obra_superpowers.md",
+      "url": "https://github.com/obra/superpowers",
+      "type": "github",
+      "category_hint": "tool-module",
+      "content_timestamp": "2026-05-04"
+    },
+    {
+      "path": "raw-github/nousresearch_hermes-agent.md",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "type": "github",
+      "category_hint": "framework-runtime",
+      "content_timestamp": "2026-05-16"
+    },
+    {
+      "path": "raw-github/openclaw_openclaw.md",
+      "url": "https://github.com/openclaw/openclaw",
+      "type": "github",
+      "category_hint": "framework-runtime",
+      "content_timestamp": "2026-05-21"
+    },
+    {
+      "path": "raw-github/pinchbench_skill.md",
+      "url": "https://github.com/pinchbench/skill",
+      "type": "github",
+      "category_hint": "benchmark-eval",
+      "content_timestamp": "2026-05-06"
+    },
+    {
+      "path": "raw-blogs/0651-Product-Hunt-OpenHuman.md",
+      "url": "https://www.producthunt.com/products/openhuman",
+      "type": "product_discovery",
+      "category_hint": "agent_product_or_directory",
+      "content_timestamp": "2026-05-15"
+    },
+    {
+      "path": "raw-blogs/0652-KiloClaw-PinchBench-OpenClaw.md",
+      "url": "https://blog.kilo.ai/p/kiloclaw-hosted-openclaw",
+      "type": "product_discovery",
+      "category_hint": "hosted_agent_runtime_and_benchmark",
+      "content_timestamp": "2026-02-24"
+    },
+    {
+      "path": "README.md",
+      "url": "https://github.com/china-qijizhifeng/agentic-Harness-engineering",
+      "type": "user_reported_github",
+      "category_hint": "framework-runtime",
+      "content_timestamp": "2026-05-14"
+    }
+  ],
+  "remaining_gaps": [
+    "raw-social/x-trending.md still has 10 of target 50 X/Twitter items",
+    "README and generated classification outputs still mirror unknown upstream fields",
+    "New raw assets need dedupe and classification before main README regeneration"
+  ],
+  "resolved_gaps": [
+    "Canonical OpenClaw repository resolved as https://github.com/openclaw/openclaw",
+    "PinchBench benchmark repository resolved as https://github.com/pinchbench/skill",
+    "X/Twitter candidates appended to raw-social/x-trending.md without counting them as verified full captures",
+    "Agentic Harness Engineering resolved as https://github.com/china-qijizhifeng/agentic-Harness-engineering and classified as framework-runtime / harness evolution"
+  ]
+}

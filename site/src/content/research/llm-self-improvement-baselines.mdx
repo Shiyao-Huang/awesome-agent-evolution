@@ -1,0 +1,17 @@
+---
+title: "LLM 自我改进基线：Self-Refine、Reflexion、Self-Debug、SPIN"
+description: "把推理期反馈、反思记忆、执行反馈和训练期自博弈串成 Self Evolve 的经验飞轮。"
+pubDate: 2026-05-22
+arxiv: "2303.17651 / 2303.11366 / 2304.05128 / 2401.01335"
+tags: ["Self-Refine", "Reflexion", "Self-Debug", "Self-Play"]
+status: "reviewed"
+---
+
+LLM 自我改进方向提供 Self Evolve 的基础语言：经验获取、经验优化、更新与评估。
+
+- **Self-Refine**：同一模型生成、反馈、修正，适合作为最轻量的推理期闭环。
+- **Reflexion**：将失败轨迹压缩为语言记忆，让后续任务利用过去经验。
+- **Self-Debug**：用执行结果、测试反馈和调试解释驱动代码修复。
+- **SPIN / Self-Play**：把自我改进推进到训练期，用自博弈产生更强模型。
+
+在 Landing Page 中，这组工作可作为“经验飞轮”板块：观察结果 → 形成反馈 → 写入记忆或训练数据 → 重新验证。

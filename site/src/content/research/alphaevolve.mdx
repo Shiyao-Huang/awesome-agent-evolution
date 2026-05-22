@@ -1,0 +1,50 @@
+---
+title: "AlphaEvolve：Gemini 驱动的进化式算法发现"
+description: "Google DeepMind 进化编码 Agent，结合 Gemini Flash + Pro 的 MAP-Elites 质量多样性搜索。56 年来首次改进 Strassen 矩阵乘法。"
+pubDate: 2025-06-01
+arxiv: "2506.13131"
+tags: ["MAP-Elites", "质量多样性", "算法发现"]
+status: "featured"
+authors: ["Alexander Novikov", "Ngân Vũ", "Marvin Eisenberger", "Pushmeet Kohli"]
+affiliations: ["Google DeepMind"]
+code: "https://github.com/codelion/openevolve"
+---
+
+## 核心思想
+
+进化式编码 Agent，结合两个 Gemini 模型做质量多样性搜索：
+
+- **Gemini Flash**：快速广度探索，生成大量候选
+- **Gemini Pro**：深度洞察，生成关键改进
+
+使用 MAP-Elites 算法在行为维度上维护高性能解的地图。
+
+## 进化循环
+
+```
+初始化种群 P
+每步进化:
+  1. 从 P 选择父代（适应度 + 新颖度加权）
+  2. LLM 提出变异/交叉 → 子代程序
+  3. 自动评估器评分
+  4. MAP-Elites 更新（如果改进了该行为小生境则保留）
+```
+
+## 重大成果
+
+| 发现 | 结果 |
+|------|------|
+| 4×4 复数矩阵乘法 | **48 次乘法**（56 年来首次改进 Strassen） |
+| 数据中心调度 (Borg) | 恢复全球 **0.7%** 算力 |
+| FlashAttention kernel | **23% 加速** |
+| LLM 训练 attention | **32% 加速** |
+
+## 开源实现
+
+OpenEvolve（社区复现）：https://github.com/codelion/openevolve
+
+## 关系网络
+
+- 基于 FunSearch (Nature 2023) 扩展，从单函数到完整代码库
+- 使用 MAP-Elites (Mouret & Clune, 2015)
+- 学术对应：ADAS/DGM

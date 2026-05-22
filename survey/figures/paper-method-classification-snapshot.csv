@@ -1,0 +1,88 @@
+arxiv_id,title,method_category,content_timestamp,time_slice,file
+2510.06056,Scientific Algorithm Discovery by Augmenting AlphaEvolve with Deep Research,code/self-modification,2025-10-07,2025-10,raw-papers/2510.06056.md
+2506.01716,Self-Challenging Language Model Agents,reward/RL/self-play,2025-06-02,2025-06,raw-papers/2506.01716.md
+2508.09586,EvoCurr: Self-evolving Curriculum with Behavior Code Generation for Complex Decision-making,code/self-modification,2025-08-13,2025-08,raw-papers/2508.09586.md
+2305.16291,Voyager: An Open-Ended Embodied Agent with Large Language Models,web/tool/environment adaptation,2023-05-25,2023-Q2,raw-papers/2305.16291.md
+2312.09390,Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision,reward/RL/self-play,2023-12-14,2023-Q4,raw-papers/2312.09390.md
+2508.19005,Building Self-Evolving Agents via Experience-Driven Lifelong Learning: A Framework and Benchmark,memory/knowledge evolution,2025-08-26,2025-08,raw-papers/2508.19005.md
+2505.23060,Self-Correcting Code Generation Using Small Language Models,reward/RL/self-play,2025-05-29,2025-05,raw-papers/2505.23060.md
+2409.18382,CurricuLLM: Automatic Task Curricula Design for Learning Complex Robot Skills using Large Language Models,reward/RL/self-play,2024-09-27,2024-Q3,raw-papers/2409.18382.md
+2510.04618,Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models,reward/RL/self-play,2025-10-06,2025-10,raw-papers/2510.04618.md
+2510.07841,Self-Improving LLM Agents at Test-Time,reward/RL/self-play,2025-10-09,2025-10,raw-papers/2510.07841.md
+2303.11366,Reflexion: Language Agents with Verbal Reinforcement Learning,reward/RL/self-play,2023-03-20,2023-Q1,raw-papers/2303.11366.md
+2403.18341,IterAlign: Iterative Constitutional Alignment of Large Language Models,evaluation/safety/governance,2024-03-27,2024-Q1,raw-papers/2403.18341.md
+2412.01951,Self-Improvement in Language Models: The Sharpening Mechanism,code/self-modification,2024-12-02,2024-Q4,raw-papers/2412.01951.md
+2508.07407,A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems,memory/knowledge evolution,2025-08-10,2025-08,raw-papers/2508.07407.md
+2505.16067,How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior,memory/knowledge evolution,2025-05-21,2025-05,raw-papers/2505.16067.md
+2407.19594,Meta-Rewarding Language Models: Self-Improving Alignment with LLM-as-a-Meta-Judge,reward/RL/self-play,2024-07-01,2024-Q3,raw-papers/2407.19594.md
+2504.21024,WebEvolver: Enhancing Web Agent Self-Improvement with Coevolving World Model,web/tool/environment adaptation,2025-04-23,2025-04,raw-papers/2504.21024.md
+2409.14051,GroupDebate: Enhancing the Efficiency of Multi-Agent Debate Using Group Discussion,multi-agent reflection/debate,2024-09-01,2024-Q3,raw-papers/2409.14051.md
+2508.19828,Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning,memory/knowledge evolution,2025-08-01,2025-08,raw-papers/2508.19828.md
+2501.01264,ProgCo: Program Helps Self-Correction of Large Language Models,code/self-modification,2025-01-02,2025-01,raw-papers/2501.01264.md
+2506.13131,AlphaEvolve: A coding agent for scientific and algorithmic discovery,code/self-modification,2025-06-16,2025-06,raw-papers/2506.13131.md
+2502.05957,AutoAgent: A Fully-Automated and Zero-Code Framework for LLM Agents,code/self-modification,2025-02-09,2025-02,raw-papers/2502.05957.md
+2502.05605,Evolving LLMs' Self-Refinement Capability via Iterative Preference Optimization,multi-agent reflection/debate,2025-02-08,2025-02,raw-papers/2502.05605.md
+2303.17651,Self-Refine: Iterative Refinement with Self-Feedback,multi-agent reflection/debate,2023-03-30,2023-Q1,raw-papers/2303.17651.md
+2509.20562,SAMULE: Self-Learning Agents Enhanced by Multi-Level Reflection,multi-agent reflection/debate,2025-09-01,2025-09,raw-papers/2509.20562.md
+2401.13996,Investigate-Consolidate-Exploit: A General Strategy for Inter-Task Agent Self-Evolution,web/tool/environment adaptation,2024-01-25,2024-Q1,raw-papers/2401.13996.md
+2501.12793,Revisit Self-Debugging with Self-Generated Tests for Code Generation,code/self-modification,2025-01-22,2025-01,raw-papers/2501.12793.md
+2409.12917,Training Language Models to Self-Correct via Reinforcement Learning,reward/RL/self-play,2024-09-19,2024-Q3,raw-papers/2409.12917.md
+2511.10395,AgentEvolver: Towards Efficient Self-Evolving Agent System,code/self-modification,2025-11-13,2025-11,raw-papers/2511.10395.md
+2512.09108,Evolving Excellence: Automated Optimization of LLM-based Agents,prompt/search optimization,2025-12-09,2025-12,raw-papers/2512.09108.md
+2502.13550,STaR-SQL: Self-Taught Reasoner for Text-to-SQL,reward/RL/self-play,2025-02-19,2025-02,raw-papers/2502.13550.md
+2203.14465,STaR: Bootstrapping Reasoning With Reasoning,reward/RL/self-play,2022-03-28,early,raw-papers/2203.14465.md
+2508.04700,SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience,reward/RL/self-play,2025-08-06,2025-08,raw-papers/2508.04700.md
+2410.15639,Can Large Language Models Invent Algorithms to Improve Themselves?: Algorithm Discovery for Recursive Self-Improvement through Reinforcement Learning,reward/RL/self-play,2024-10-21,2024-Q4,raw-papers/2410.15639.md
+2410.23912,RL-STaR: Theoretical Analysis of Reinforcement Learning Frameworks for Self-Taught Reasoner,reward/RL/self-play,2024-10-31,2024-Q4,raw-papers/2410.23912.md
+2504.01990,"Advances and Challenges in Foundation Agents: From Brain-Inspired Intelligence to Evolutionary, Collaborative, and Safe Systems",reward/RL/self-play,2025-03-31,2025-03,raw-papers/2504.01990.md
+2308.10144,ExpeL: LLM Agents Are Experiential Learners,reward/RL/self-play,2023-08-20,2023-Q3,raw-papers/2308.10144.md
+2510.14253,Towards Agentic Self-Learning LLMs in Search Environment,reward/RL/self-play,2025-10-16,2025-10,raw-papers/2510.14253.md
+2506.24119,SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning,reward/RL/self-play,2025-06-01,2025-06,raw-papers/2506.24119.md
+2406.18532,Symbolic Learning Enables Self-Evolving Agents,web/tool/environment adaptation,2024-06-26,2024-Q2,raw-papers/2406.18532.md
+2509.22502,InfiAgent: Self-Evolving Pyramid Agent Framework for Infinite Scenarios,multi-agent reflection/debate,2025-09-26,2025-09,raw-papers/2509.22502.md
+2505.16475,ReflectEvo: Improving Meta Introspection of Small LLMs by Learning Self-Reflection,multi-agent reflection/debate,2025-05-22,2025-05,raw-papers/2505.16475.md
+2509.25140,ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory,memory/knowledge evolution,2025-09-29,2025-09,raw-papers/2509.25140.md
+2407.18219,Recursive Introspection: Teaching Language Model Agents How to Self-Improve,reward/RL/self-play,2024-07-25,2024-Q3,raw-papers/2407.18219.md
+2507.21046,"A Survey of Self-Evolving Agents: What, When, How, and Where to Evolve on the Path to Artificial Super Intelligence",code/self-modification,2025-07-28,2025-07,raw-papers/2507.21046.md
+2505.14970,Self-Evolving Curriculum for LLM Reasoning,reward/RL/self-play,2025-05-20,2025-05,raw-papers/2505.14970.md
+2411.02337,WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning,reward/RL/self-play,2024-11-01,2024-Q4,raw-papers/2411.02337.md
+2501.13011,MONA: Myopic Optimization with Non-myopic Approval Can Mitigate Multi-step Reward Hacking,reward/RL/self-play,2025-01-22,2025-01,raw-papers/2501.13011.md
+2410.16946,Self-Evolving Multi-Agent Collaboration Networks for Software Development,evaluation/safety/governance,2024-10-22,2024-Q4,raw-papers/2410.16946.md
+2603.03290,AriadneMem: Threading the Maze of Lifelong Memory for LLM Agents,memory/knowledge evolution,2026-03-01,2026-03,raw-papers/2603.03290.md
+2405.06682,Self-Reflection in LLM Agents: Effects on Problem-Solving Performance,multi-agent reflection/debate,2024-05-05,2024-Q2,raw-papers/2405.06682.md
+2510.18327,InspectCoder: Dynamic Analysis-Enabled Self Repair through interactive LLM-Debugger Collaboration,code/self-modification,2025-10-21,2025-10,raw-papers/2510.18327.md
+2501.07278,Lifelong Learning of Large Language Model based Agents: A Roadmap,memory/knowledge evolution,2025-01-13,2025-01,raw-papers/2501.07278.md
+2502.12110,A-Mem: Agentic Memory for LLM Agents,memory/knowledge evolution,2025-02-01,2025-02,raw-papers/2502.12110.md
+2506.04651,Agents of Change: Self-Evolving LLM Agents for Strategic Planning,web/tool/environment adaptation,2025-06-05,2025-06,raw-papers/2506.04651.md
+2506.09046,Agentic Neural Networks: Self-Evolving Multi-Agent Systems via Textual Backpropagation,multi-agent reflection/debate,2025-06-10,2025-06,raw-papers/2506.09046.md
+2401.01335,Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models,reward/RL/self-play,2024-01-02,2024-Q1,raw-papers/2401.01335.md
+2509.04575,Bootstrapping Task Spaces for Self-Improvement,code/self-modification,2025-09-04,2025-09,raw-papers/2509.04575.md
+2502.00593,Dominated Novelty Search: Rethinking Local Competition in Quality-Diversity,prompt/search optimization,2025-02-01,2025-02,raw-papers/2502.00593.md
+2304.03442,Generative Agents: Interactive Simulacra of Human Behavior,web/tool/environment adaptation,2023-04-07,2023-Q2,raw-papers/2304.03442.md
+2410.12853,Diversity of Thought Elicits Stronger Reasoning Capabilities in Multi-Agent Debate Frameworks,multi-agent reflection/debate,2024-10-10,2024-Q4,raw-papers/2410.12853.md
+2401.10020,Self-Rewarding Language Models,reward/RL/self-play,2024-01-18,2024-Q1,raw-papers/2401.10020.md
+2505.18646,SEW: Self-Evolving Agentic Workflows for Automated Code Generation,web/tool/environment adaptation,2025-05-01,2025-05,raw-papers/2505.18646.md
+2511.16043,Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning,reward/RL/self-play,2025-11-20,2025-11,raw-papers/2511.16043.md
+2504.20073,RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning,reward/RL/self-play,2025-04-24,2025-04,raw-papers/2504.20073.md
+2311.09336,LLMRefine: Pinpointing and Refining Large Language Models via Fine-Grained Actionable Feedback,prompt/search optimization,2023-11-15,2023-Q4,raw-papers/2311.09336.md
+2509.25541,Vision-Zero: Scalable VLM Self-Evolution via Multi-Agent Self-Play,reward/RL/self-play,2025-09-01,2025-09,raw-papers/2509.25541.md
+2410.01215,From Code to Correctness: Closing the Last Mile of Code Generation with Hierarchical Debugging,code/self-modification,2024-10-02,2024-Q4,raw-papers/2410.01215.md
+2508.02085,SE-Agent: Self-Evolution Trajectory Optimization in Multi-Step Reasoning with LLM-Based Agents,reward/RL/self-play,2025-08-04,2025-08,raw-papers/2508.02085.md
+2505.03335,Absolute Zero: Reinforced Self-play Reasoning with Zero Data,reward/RL/self-play,2025-05-06,2025-05,raw-papers/2505.03335.md
+placeholder-no-arxiv,Papers Without arXiv IDs — Placeholder Index,reward/RL/self-play,unknown,unknown,raw-papers/placeholder-no-arxiv.md
+2402.18381,Large Language Models As Evolution Strategies,prompt/search optimization,2024-02-01,2024-Q1,raw-papers/2402.18381.md
+2510.16079,EvolveR: Self-Evolving LLM Agents through an Experience-Driven Lifecycle,code/self-modification,2025-10-17,2025-10,raw-papers/2510.16079.md
+2505.08827,RLSR: Reinforcement Learning from Self Reward,reward/RL/self-play,2025-05-12,2025-05,raw-papers/2505.08827.md
+2409.12147,"MAgICoRe: Multi-Agent, Iterative, Coarse-to-Fine Refinement for Reasoning",multi-agent reflection/debate,2024-09-01,2024-Q3,raw-papers/2409.12147.md
+2510.23595,Multi-Agent Evolve: LLM Self-Improve through Co-evolution,reward/RL/self-play,2025-10-27,2025-10,raw-papers/2510.23595.md
+2512.22716,Memento-II: Learning by Stateful Reflective Memory,memory/knowledge evolution,2025-12-01,2025-12,raw-papers/2512.22716.md
+2504.15228,A Self-Improving Coding Agent,code/self-modification,2025-04-21,2025-04,raw-papers/2504.15228.md
+2402.17574,Agent-Pro: Learning to Evolve via Policy-Level Reflection and Optimization,prompt/search optimization,2024-02-27,2024-Q1,raw-papers/2402.17574.md
+2510.17498,Deep Self-Evolving Reasoning,reward/RL/self-play,2025-10-20,2025-10,raw-papers/2510.17498.md
+2511.06449,FLEX: Continuous Agent Evolution via Forward Learning from Experience,reward/RL/self-play,2025-11-01,2025-11,raw-papers/2511.06449.md
+2305.14325,Improving Factuality and Reasoning in Language Models through Multiagent Debate,reward/RL/self-play,2023-05-23,2023-Q2,raw-papers/2305.14325.md
+2408.08435,Automated Design of Agentic Systems,prompt/search optimization,2024-08-15,2024-Q3,raw-papers/2408.08435.md
+2511.23473,ThetaEvolve: Test-time Learning on Open Problems,code/self-modification,2025-11-28,2025-11,raw-papers/2511.23473.md
+2410.04444,Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement,prompt/search optimization,2024-10-06,2024-Q4,raw-papers/2410.04444.md
+2505.22954,Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents,code/self-modification,2025-05-29,2025-05,raw-papers/2505.22954.md
+2501.11425,Agent-R: Training Language Model Agents to Reflect via Iterative Self-Training,reward/RL/self-play,2025-01-20,2025-01,raw-papers/2501.11425.md

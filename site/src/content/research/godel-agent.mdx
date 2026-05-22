@@ -1,0 +1,32 @@
+---
+title: "Gödel Agent：运行时自修改智能体"
+description: "通过 monkey patching 实现智能体在运行时的自修改，结合自我评估与进化策略让 Agent 动态调整自身代码。"
+pubDate: 2025-04-01
+arxiv: "2504.10322"
+tags: ["运行时修改", "monkey patching", "自评估"]
+status: "candidate"
+authors: []
+affiliations: []
+---
+
+## 核心思想
+
+借鉴 Gödel Machine 的自引用概念，让 Agent 在运行时通过 monkey patching 修改自身代码。Agent 同时扮演执行者和修改者的角色。
+
+## 方法
+
+1. Agent 执行任务并评估自身表现
+2. 基于评估结果，Agent 生成代码补丁修改自身行为
+3. 修改后的 Agent 在新任务上继续执行
+4. 进化策略选择保留有益修改
+
+## 与 DGM 的区别
+
+- DGM：离线进化，维护归档库
+- Gödel Agent：在线运行时自修改，无需归档
+
+## 局限性
+
+- 运行时自修改的安全性风险
+- 代码修改可能引入不可预测行为
+- 需要精心设计的评估机制防止退化

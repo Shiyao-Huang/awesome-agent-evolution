@@ -1,0 +1,28 @@
+---
+title: "ReVeal：多轮代码 RL 持续改进"
+description: "多轮代码生成与验证的 RL 框架，让模型在迭代修复循环中持续改进代码质量。Google DeepMind。"
+pubDate: 2024-12-01
+arxiv: "2312.05315"
+tags: ["代码 RL", "多轮修复", "持续改进"]
+status: "candidate"
+authors: []
+affiliations: ["Google DeepMind"]
+---
+
+## 核心思想
+
+多轮代码生成与验证的强化学习框架。模型在迭代修复循环中持续改进代码质量，每次循环的反馈都用于训练更好的生成策略。
+
+## 方法
+
+1. 生成初始代码
+2. 自动测试验证
+3. 失败测试作为 RL 反馈信号
+4. 模型基于反馈重新生成改进代码
+5. 循环直到代码通过所有测试
+
+## 与其他工作的关系
+
+- 与 SelfEvolve 类似但增加了 RL 训练信号
+- 与 DGM 的代码修改思路互补
+- Google DeepMind 内部与 AlphaEvolve 共享基础设施理念

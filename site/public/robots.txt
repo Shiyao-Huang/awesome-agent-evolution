@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://x.mitbunny.ai/sitemap-index.xml

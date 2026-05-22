@@ -1,0 +1,401 @@
+[
+  {
+    "name": "agents",
+    "repo": "aiwaves-cn/agents",
+    "url": "https://github.com/aiwaves-cn/agents",
+    "stars": 5928,
+    "forks": "482",
+    "last_pushed": "2024-09-26T03:12:53Z",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "local_path": "repos/aiwaves_cn__agents",
+    "report": "projects/aiwaves_cn__agents.md",
+    "pattern": "进化/搜索循环 → 评估器/打分器 → 智能体编排",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "ae-aiwaves_cn__agents",
+    "gitnexus_stats": {
+      "nodes": "14149",
+      "edges": "15626",
+      "clusters": "56",
+      "flows": "93"
+    }
+  },
+  {
+    "name": "AgentEvolver",
+    "repo": "modelscope/AgentEvolver",
+    "url": "https://github.com/modelscope/AgentEvolver",
+    "stars": 1441,
+    "forks": "167",
+    "last_pushed": "2026-04-01T08:47:19Z",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "local_path": "repos/modelscope__agentevolver",
+    "report": "projects/modelscope__agentevolver.md",
+    "pattern": "进化/搜索循环 → 评估器/打分器 → 智能体编排 → 训练/数据循环",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "ae-modelscope__agentevolver",
+    "gitnexus_stats": {
+      "nodes": "7152",
+      "edges": "12157",
+      "clusters": "286",
+      "flows": "249"
+    }
+  },
+  {
+    "name": "SE-Agent",
+    "repo": "JARVIS-Xs/SE-Agent",
+    "url": "https://github.com/JARVIS-Xs/SE-Agent",
+    "stars": 274,
+    "forks": "29",
+    "last_pushed": "2025-09-23T01:32:14Z",
+    "language": "Python",
+    "license": "MIT",
+    "local_path": "repos/jarvis_xs__se_agent",
+    "report": "projects/jarvis_xs__se_agent.md",
+    "pattern": "进化/搜索循环 → 评估器/打分器 → 智能体编排",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "ae-jarvis_xs__se_agent",
+    "gitnexus_stats": {
+      "nodes": "4510",
+      "edges": "8103",
+      "clusters": "225",
+      "flows": "192"
+    }
+  },
+  {
+    "name": "openevolve",
+    "repo": "algorithmicsuperintelligence/openevolve",
+    "url": "https://github.com/algorithmicsuperintelligence/openevolve",
+    "stars": 6358,
+    "forks": "1018",
+    "last_pushed": "2026-03-18T12:25:39Z",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "local_path": "repos/algorithmicsuperintelligence__openevolve",
+    "report": "projects/algorithmicsuperintelligence__openevolve.md",
+    "pattern": "进化/搜索循环 → 评估器/打分器",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "ae-algorithmicsuperintelligence__openevolve",
+    "gitnexus_stats": {
+      "nodes": "8733",
+      "edges": "13519",
+      "clusters": "249",
+      "flows": "233"
+    }
+  },
+  {
+    "name": "science-codeevolve",
+    "repo": "inter-co/science-codeevolve",
+    "url": "https://github.com/inter-co/science-codeevolve",
+    "stars": 97,
+    "forks": "14",
+    "last_pushed": "2026-04-08T14:38:23Z",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "local_path": "repos/inter_co__science_codeevolve",
+    "report": "projects/inter_co__science_codeevolve.md",
+    "pattern": "进化/搜索循环 → 评估器/打分器",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "ae-inter_co__science_codeevolve",
+    "gitnexus_stats": {
+      "nodes": "2887",
+      "edges": "4511",
+      "clusters": "60",
+      "flows": "49"
+    }
+  },
+  {
+    "name": "reflexion",
+    "repo": "noahshinn/reflexion",
+    "url": "https://github.com/noahshinn/reflexion",
+    "stars": 3158,
+    "forks": "306",
+    "last_pushed": "2025-01-14T07:54:02Z",
+    "language": "Python",
+    "license": "MIT",
+    "local_path": "repos/noahshinn__reflexion",
+    "report": "projects/noahshinn__reflexion.md",
+    "pattern": "进化/搜索循环 → 反思记忆 → 反馈-精炼 → 评估器/打分器 → 训练/数据循环",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "ae-noahshinn__reflexion",
+    "gitnexus_stats": {
+      "nodes": "1403",
+      "edges": "2293",
+      "clusters": "54",
+      "flows": "79"
+    }
+  },
+  {
+    "name": "self-refine",
+    "repo": "madaan/self-refine",
+    "url": "https://github.com/madaan/self-refine",
+    "stars": 805,
+    "forks": "70",
+    "last_pushed": "2024-10-04T21:06:28Z",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "local_path": "repos/madaan__self_refine",
+    "report": "projects/madaan__self_refine.md",
+    "pattern": "反馈-精炼",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "ae-madaan__self_refine",
+    "gitnexus_stats": {
+      "nodes": "1197",
+      "edges": "1802",
+      "clusters": "67",
+      "flows": "32"
+    }
+  },
+  {
+    "name": "SCOPE",
+    "repo": "JarvisPei/SCOPE",
+    "url": "https://github.com/JarvisPei/SCOPE",
+    "stars": 77,
+    "forks": "6",
+    "last_pushed": "2026-03-26T03:01:04Z",
+    "language": "Python",
+    "license": "MIT",
+    "local_path": "repos/jarvispei__scope",
+    "report": "projects/jarvispei__scope.md",
+    "pattern": "进化/搜索循环",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "ae-jarvispei__scope",
+    "gitnexus_stats": {
+      "nodes": "754",
+      "edges": "1336",
+      "clusters": "23",
+      "flows": "29"
+    }
+  },
+  {
+    "name": "DARWIN",
+    "repo": "ZJU-LLM-Safety/DARWIN",
+    "url": "https://github.com/ZJU-LLM-Safety/DARWIN",
+    "stars": 41,
+    "forks": "4",
+    "last_pushed": "2026-05-07T03:26:42Z",
+    "language": "Python",
+    "license": "NOASSERTION",
+    "local_path": "repos/zju_llm_safety__darwin",
+    "report": "projects/zju_llm_safety__darwin.md",
+    "pattern": "进化/搜索循环 → 反思记忆",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "ae-zju_llm_safety__darwin",
+    "gitnexus_stats": {
+      "nodes": "1053",
+      "edges": "1895",
+      "clusters": "38",
+      "flows": "68"
+    }
+  },
+  {
+    "name": "LLM-Self-Judge",
+    "repo": "OPPO-Mente-Lab/LLM-Self-Judge",
+    "url": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+    "stars": 43,
+    "forks": "1",
+    "last_pushed": "2026-03-24T03:51:30Z",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "local_path": "repos/oppo_mente_lab__llm_self_judge",
+    "report": "projects/oppo_mente_lab__llm_self_judge.md",
+    "pattern": "进化/搜索循环 → 评估器/打分器 → 智能体编排 → 训练/数据循环",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "ae-oppo_mente_lab__llm_self_judge",
+    "gitnexus_stats": {
+      "nodes": "10236",
+      "edges": "18110",
+      "clusters": "354",
+      "flows": "300"
+    }
+  },
+  {
+    "name": "OPRO",
+    "repo": "google-deepmind/opro",
+    "url": "https://github.com/google-deepmind/opro",
+    "stars": null,
+    "forks": null,
+    "last_pushed": null,
+    "language": null,
+    "license": null,
+    "local_path": "projects/repos/google_deepmind__opro",
+    "report": "projects/01-opro-llm-as-optimizer.md",
+    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "opro",
+    "gitnexus_stats": {
+      "nodes": "697",
+      "edges": "826",
+      "clusters": "9",
+      "flows": "12"
+    }
+  },
+  {
+    "name": "OpenELM",
+    "repo": "CarperAI/OpenELM",
+    "url": "https://github.com/CarperAI/OpenELM",
+    "stars": null,
+    "forks": null,
+    "last_pushed": null,
+    "language": null,
+    "license": null,
+    "local_path": "projects/repos/carperai__openelm",
+    "report": "projects/02-openelm-evolution-large-models.md",
+    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "OpenELM",
+    "gitnexus_stats": {
+      "nodes": "3596",
+      "edges": "6639",
+      "clusters": "157",
+      "flows": "139"
+    }
+  },
+  {
+    "name": "ADAS",
+    "repo": "ShengranHu/ADAS",
+    "url": "https://github.com/ShengranHu/ADAS",
+    "stars": null,
+    "forks": null,
+    "last_pushed": null,
+    "language": null,
+    "license": null,
+    "local_path": "projects/repos/shengranhu__adas",
+    "report": "projects/03-adas-automated-design-agentic-systems.md",
+    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "ADAS",
+    "gitnexus_stats": {
+      "nodes": "2107",
+      "edges": "2795",
+      "clusters": "49",
+      "flows": "78"
+    }
+  },
+  {
+    "name": "FunSearch",
+    "repo": "google-deepmind/funsearch",
+    "url": "https://github.com/google-deepmind/funsearch",
+    "stars": null,
+    "forks": null,
+    "last_pushed": null,
+    "language": null,
+    "license": null,
+    "local_path": "projects/repos/google_deepmind__funsearch",
+    "report": "projects/04-funsearch-mathematical-discoveries.md",
+    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "funsearch",
+    "gitnexus_stats": {
+      "nodes": "310",
+      "edges": "441",
+      "clusters": "10",
+      "flows": "7"
+    }
+  },
+  {
+    "name": "AutoML-Agent",
+    "repo": "DeepAuto-AI/AutoML-Agent",
+    "url": "https://github.com/DeepAuto-AI/AutoML-Agent",
+    "stars": null,
+    "forks": null,
+    "last_pushed": null,
+    "language": null,
+    "license": null,
+    "local_path": "projects/repos/deepauto_ai__automl_agent",
+    "report": "projects/05-automl-agent-multi-agent.md",
+    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "automl-agent",
+    "gitnexus_stats": {
+      "nodes": "1239",
+      "edges": "1517",
+      "clusters": "19",
+      "flows": "14"
+    }
+  },
+  {
+    "name": "CoML / MLCopilot",
+    "repo": "microsoft/CoML",
+    "url": "https://github.com/microsoft/CoML",
+    "stars": null,
+    "forks": null,
+    "last_pushed": null,
+    "language": null,
+    "license": null,
+    "local_path": "projects/repos/microsoft__coml",
+    "report": "projects/06-coml-mlcopilot.md",
+    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "CoML",
+    "gitnexus_stats": {
+      "nodes": "937",
+      "edges": "1693",
+      "clusters": "36",
+      "flows": "78"
+    }
+  },
+  {
+    "name": "MetaGPT",
+    "repo": "FoundationAgents/MetaGPT",
+    "url": "https://github.com/FoundationAgents/MetaGPT",
+    "stars": null,
+    "forks": null,
+    "last_pushed": null,
+    "language": null,
+    "license": null,
+    "local_path": "projects/repos/foundation_agents__metagpt",
+    "report": "projects/07-metagpt-multi-agent-framework.md",
+    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "MetaGPT",
+    "gitnexus_stats": {
+      "nodes": "18107",
+      "edges": "36116",
+      "clusters": "833",
+      "flows": "300"
+    }
+  },
+  {
+    "name": "AutoGPT",
+    "repo": "Significant-Gravitas/AutoGPT",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT",
+    "stars": null,
+    "forks": null,
+    "last_pushed": null,
+    "language": null,
+    "license": null,
+    "local_path": "projects/repos/significant_gravitas__autogpt",
+    "report": "projects/08-autogpt-autonomous-agent.md",
+    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "AutoGPT",
+    "gitnexus_stats": {
+      "nodes": "75477",
+      "edges": "135916",
+      "clusters": "1499",
+      "flows": "300"
+    }
+  },
+  {
+    "name": "CrewAI",
+    "repo": "crewAIInc/crewAI",
+    "url": "https://github.com/crewAIInc/crewAI",
+    "stars": null,
+    "forks": null,
+    "last_pushed": null,
+    "language": null,
+    "license": null,
+    "local_path": "projects/repos/crewai_inc__crewai",
+    "report": "projects/09-crewai-multi-agent-framework.md",
+    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
+    "gitnexus_analyzed": true,
+    "gitnexus_alias": "crewAI",
+    "gitnexus_stats": {
+      "nodes": "55773",
+      "edges": "86393",
+      "clusters": "713",
+      "flows": "300"
+    }
+  }
+]

@@ -1,0 +1,42 @@
+---
+title: "Darwin Gödel Machine：开放式自进化 Agent 归档"
+description: "结合达尔文进化与哥德尔机自引用，维护开放式 Agent 归档库，通过基础模型提出代码修改并在基准测试中验证改进。"
+pubDate: 2025-05-01
+arxiv: "2505.22954"
+venue: "2025"
+tags: ["开放式进化", "代码自修改", "哥德尔机"]
+status: "featured"
+authors: ["Jie Zhang", "Shengran Hu", "Cong Lu", "Jeff Clune"]
+affiliations: ["UBC", "Vector Institute"]
+---
+
+## 核心思想
+
+结合 Darwinian 进化与 Schmidhuber 的 Gödel Machine 自引用思想。维护一个不断增长的 Agent 实现归档库，每次迭代：
+
+1. 从归档中采样父代 Agent（多样性加权）
+2. 基础模型（Claude/GPT）提出代码修改
+3. 在基准测试上评估修改后的 Agent
+4. 改进的版本保留到归档
+
+## 开放式进化
+
+与收敛到单一最优解的传统进化算法不同，DGM 维护多样性归档，实现：
+- 探索质不同的 Agent 架构
+- 发现人类未预想到的策略
+- 累积改进而不陷入局部最优
+
+## Benchmark 结果
+
+| 基准 | 进化前 | DGM 后 |
+|------|--------|--------|
+| SWE-bench | 20.0% | **50.0%** |
+| Polyglot | 14.2% | **30.7%** |
+
+发现的 Agent 可跨领域、跨模型迁移。
+
+## 关键联系
+
+- 基于同组 ADAS 工作，增加了开放式归档机制
+- 受 POET（开放式学习）和 Quality Diversity 算法启发
+- 与 Gödel Agent 同期但方法不同

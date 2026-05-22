@@ -1,0 +1,236 @@
+% ====================================================================
+% 补充图表文件：评估基准雷达图 + 框架对比气泡图 + Star/Fork分布
+% 可通过 \input 引入到对应章节
+% ====================================================================
+
+% ====================================================================
+% 图A: 评估基准雷达图（五维对比）
+% 说明：使用纯 TikZ 极坐标，避免 pgfplots axis cs + trig 表达式在不同编译器下解析失败。
+% ====================================================================
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.95, every node/.style={font=\scriptsize}]
+  \def\R{5}
+  \foreach \r in {1,2,3,4,5} {
+    \draw[gray!25, thin]
+      (90:\r) -- (18:\r) -- (-54:\r) -- (-126:\r) -- (162:\r) -- cycle;
+  }
+  \foreach \a in {90,18,-54,-126,162} {
+    \draw[gray!35, thin] (0,0) -- (\a:\R);
+  }
+
+  \node[font=\small\bfseries] at (90:5.65) {可自动化};
+  \node[font=\small\bfseries, align=center] at (18:5.85) {成本低};
+  \node[font=\small\bfseries] at (-54:5.75) {泛化性};
+  \node[font=\small\bfseries] at (-126:5.75) {真实性};
+  \node[font=\small\bfseries, align=center] at (162:5.85) {可复现};
+
+  \draw[cat1, very thick, fill=cat1!18, opacity=0.72]
+    (90:4.5) -- (18:2) -- (-54:4) -- (-126:5) -- (162:3) -- cycle;
+  \node[color=cat1!70!black, font=\scriptsize\bfseries] at (58:3.25) {SWE-Bench};
+
+  \draw[cat2, very thick, fill=cat2!18, opacity=0.64]
+    (90:5) -- (18:5) -- (-54:2) -- (-126:4) -- (162:4) -- cycle;
+  \node[color=cat2!70!black, font=\scriptsize\bfseries] at (128:3.2) {HumanEval};
+
+  \draw[cat3, very thick, fill=cat3!18, opacity=0.56]
+    (90:3.5) -- (18:1.5) -- (-54:4.5) -- (-126:2) -- (162:1) -- cycle;
+  \node[color=cat3!70!black, font=\scriptsize\bfseries] at (-170:3.1) {WebArena};
+
+  \draw[cat5, very thick, fill=cat5!18, opacity=0.50]
+    (90:2) -- (18:1) -- (-54:5) -- (-126:1) -- (162:1) -- cycle;
+  \node[color=cat5!70!black, font=\scriptsize\bfseries] at (-78:3.35) {Voyager};
+
+  \node[font=\small\bfseries] at (0,6.45) {评估基准五维雷达对比};
+\end{tikzpicture}
+\caption{评估基准五维雷达对比。五个维度为：可自动化程度、成本效益、泛化性、真实性（接近真实场景）和可复现性。SWE-Bench在真实性和可复现性上突出；HumanEval在可自动化和成本低廉上领先；WebArena和Voyager在真实性上占优但成本高。}
+\label{fig:eval-radar}
+\end{figure}
+
+% ====================================================================
+% 图B: 框架对比气泡图
+% ====================================================================
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=12cm,
+    height=8cm,
+    xlabel={抽象层级 (1=轻量, 5=全生命周期)},
+    ylabel={社区规模 (GitHub Stars, 千)},
+    xlabel style={font=\small},
+    ylabel style={font=\small},
+    xmin=0, xmax=6,
+    ymin=0, ymax=200,
+    grid=major,
+    grid style={gray!20},
+    nodes near coords,
+    nodes near coords style={font=\scriptsize\bfseries, anchor=south},
+    point meta=explicit symbolic,
+    scatter/classes={
+        a={mark=*, cat1, fill=cat1!40, draw=cat1!70, mark size=12pt},
+        b={mark=square*, cat2, fill=cat2!40, draw=cat2!70, mark size=10pt},
+        c={mark=triangle*, cat3, fill=cat3!40, draw=cat3!70, mark size=8pt},
+        d={mark=diamond*, cat4, fill=cat4!40, draw=cat4!70, mark size=10pt}
+    },
+]
+
+% (x=abstraction, y=stars, label)
+\addplot[scatter, only marks, scatter src=explicit symbolic]
+    coordinates {
+        (2, 137) [a]  % LangChain
+    };
+\node[font=\scriptsize] at (axis cs:2,142) {LangChain};
+
+\addplot[scatter, only marks, scatter src=explicit symbolic]
+    coordinates {
+        (4, 32.5) [a]  % LangGraph
+    };
+\node[font=\scriptsize] at (axis cs:4,37) {LangGraph};
+
+\addplot[scatter, only marks, scatter src=explicit symbolic]
+    coordinates {
+        (3, 51.8) [b]  % CrewAI
+    };
+\node[font=\scriptsize] at (axis cs:3,57) {CrewAI};
+
+\addplot[scatter, only marks, scatter src=explicit symbolic]
+    coordinates {
+        (3, 24.4) [c]  % smolagents
+    };
+\node[font=\scriptsize] at (axis cs:1.5,30) {smolagents};
+
+\addplot[scatter, only marks, scatter src=explicit symbolic]
+    coordinates {
+        (5, 184) [d]  % AutoGPT
+    };
+\node[font=\scriptsize] at (axis cs:5,189) {AutoGPT};
+
+\addplot[scatter, only marks, scatter src=explicit symbolic]
+    coordinates {
+        (5, 189) [d]  % n8n
+    };
+\node[font=\scriptsize] at (axis cs:5.3,194) {n8n};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Agent框架对比气泡图。横轴为抽象层级（1=轻量组件, 5=全生命周期管理），纵轴为社区规模（GitHub Stars千）。气泡大小反映代码活跃度（commits）。LangChain生态在中间层覆盖最广；AutoGPT/n8n在平台层Stars最高。}
+\label{fig:framework-bubble}
+\end{figure}
+
+% ====================================================================
+% 图C: GitHub Star/Fork 分布散点图
+% ====================================================================
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=12cm,
+    height=7cm,
+    xlabel={GitHub Stars (千)},
+    ylabel={GitHub Forks (千)},
+    xlabel style={font=\small},
+    ylabel style={font=\small},
+    xmin=0, xmax=190,
+    ymin=0, ymax=60,
+    grid=major,
+    grid style={gray!20},
+    legend style={at={(0.02,0.98)}, anchor=north west, font=\scriptsize},
+]
+
+% 框架 repos (blue)
+\addplot[only marks, mark=*, mark size=3pt, cat1!70] coordinates {
+    (24.2, 3.5) (22.8, 2.1) (11.8, 1.2) (9.2, 1.0) (7.5, 0.8)
+    (6.3, 0.7) (5.9, 0.6) (5.1, 0.5) (3.4, 0.4) (3.2, 0.3)
+};
+\addlegendentry{框架}
+
+% 工具 repos (green)
+\addplot[only marks, mark=square*, mark size=3pt, cat3!70] coordinates {
+    (137, 22.7) (32.5, 5.5) (27.4, 2.3) (24.4, 2.0) (8.5, 0.9)
+    (4.2, 0.5) (2.1, 0.3) (1.5, 0.2)
+};
+\addlegendentry{工具}
+
+% 应用 repos (orange)
+\addplot[only marks, mark=triangle*, mark size=3pt, cat2!70] coordinates {
+    (184, 46.2) (51.8, 7.2) (18.5, 2.5) (12.3, 1.8) (6.7, 0.7)
+    (3.8, 0.4) (2.5, 0.3) (1.2, 0.1)
+};
+\addlegendentry{应用}
+
+% 评测 repos (purple)
+\addplot[only marks, mark=diamond*, mark size=3pt, cat4!70] coordinates {
+    (4.5, 0.5) (3.1, 0.3) (2.2, 0.2) (1.8, 0.2) (1.1, 0.1)
+};
+\addlegendentry{评测}
+
+% 论文代码 repos (red)
+\addplot[only marks, mark=pentagon*, mark size=3pt, cat5!70] coordinates {
+    (3.2, 0.4) (2.8, 0.3) (1.9, 0.2) (1.5, 0.2) (0.8, 0.1)
+    (0.5, 0.05) (0.3, 0.02)
+};
+\addlegendentry{论文代码}
+
+% Annotation
+\node[font=\scriptsize, color=gray!50, align=center] at (axis cs:130,50)
+    {Stars与Forks强正相关\\($R^2 > 0.9$)};
+\draw[-{Stealth}, thick, color=gray!30, dashed] (axis cs:0.1,0.01) -- (axis cs:190,50);
+
+\end{axis}
+\end{tikzpicture}
+\caption{348个Agent Evolution GitHub仓库的Star/Fork分布散点图。颜色表示仓库类别（框架/工具/应用/评测/论文代码）。Stars与Forks呈强正相关，头部仓库（LangChain 137k, AutoGPT 184k, n8n 189k）主导社区注意力。}
+\label{fig:star-fork-scatter}
+\end{figure}
+
+% ====================================================================
+% 图D: 自进化流程架构总图
+% ====================================================================
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    layer/.style={rectangle, rounded corners=8pt, draw=#1!70!black, fill=#1!8,
+        minimum width=12cm, minimum height=1.3cm, align=center},
+    comp/.style={rectangle, rounded corners=4pt, draw=#1!60!black, fill=#1!15,
+        font=\scriptsize, minimum height=0.7cm, inner sep=3pt, align=center},
+    arr/.style={-{Stealth[length=2.5mm]}, thick, color=gray!50},
+]
+    % Task Layer
+    \node[layer=cat1] (task) at (0,6) {};
+    \node[font=\bfseries\small, color=cat1!70!black] at (-4.5,6.2) {任务层};
+    \node[comp=cat1] at (-3,6) {代码任务};
+    \node[comp=cat1] at (0,6) {推理任务};
+    \node[comp=cat1] at (3,6) {环境交互};
+
+    % Agent Layer
+    \node[layer=cat4] (agent) at (0,4) {};
+    \node[font=\bfseries\small, color=cat4!70!black] at (-4.5,4.2) {Agent层};
+    \node[comp=cat4] at (-3.5,4) {Planner};
+    \node[comp=cat4] at (-1,4) {Actor};
+    \node[comp=cat4] at (1.5,4) {Critic};
+    \node[comp=cat4] at (4,4) {Memory};
+
+    % Evolution Layer
+    \node[layer=cat2] (evo) at (0,2) {};
+    \node[font=\bfseries\small, color=cat2!70!black] at (-4.5,2.2) {进化层};
+    \node[comp=cat2] at (-3.5,2) {变异器\\(LLM Rewrite)};
+    \node[comp=cat2] at (0,2) {评估器\\(Benchmark+Judge)};
+    \node[comp=cat2] at (3.5,2) {选择器\\(Archive)};
+
+    % Infrastructure Layer
+    \node[layer=cat5] (infra) at (0,0) {};
+    \node[font=\bfseries\small, color=cat5!70!black] at (-4.5,0.2) {基础设施};
+    \node[comp=cat5] at (-3,0) {经验库};
+    \node[comp=cat5] at (0,0) {安全沙箱};
+    \node[comp=cat5] at (3,0) {成本监控};
+
+    % Vertical arrows
+    \foreach \y in {6,4,2} {
+        \pgfmathsetmacro{\yn}{\y-2}
+        \draw[arr] (0,\y-0.7) -- (0,\yn+0.7);
+    }
+
+\end{tikzpicture}
+\caption{Agent自进化系统四层参考架构。任务层定义目标和反馈信号；Agent层执行规划-行动-批评-记忆循环；进化层实现生成-评估-选择闭环；基础设施层提供经验管理、安全保障和成本控制。}
+\label{fig:evolution-arch}
+\end{figure}

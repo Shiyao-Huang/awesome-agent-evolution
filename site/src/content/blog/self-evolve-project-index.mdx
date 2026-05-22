@@ -1,0 +1,17 @@
+---
+title: "Self Evolve GitHub 项目索引如何阅读"
+description: "从 OpenEvolve、AgentEvolver、Reflexion 到 Self-Refine，理解自进化 AI 项目的四类实现路线。"
+pubDate: 2026-05-22
+tags: ["GitHub 项目", "Self Evolve", "项目索引"]
+---
+
+Workflow A 的项目分析已经进入站点数据层，并在 `/projects/` 生成项目索引页。
+
+阅读时可以按四类路线理解：
+
+1. **进化式代码 / AlphaEvolve 类**：关注可执行程序、评估器、候选池和谱系。
+2. **Agent 自进化系统**：关注任务轨迹、智能体编排和评估反馈。
+3. **反思 / 精炼经典范式**：关注自然语言反馈、反思记忆和推理期修正。
+4. **安全、评判与数据/模型自进化**：关注 judge 信号、策略池和训练数据闭环。
+
+后续新仓库只需要进入 `projects/projects_manifest.json` 和 `site/src/data/projects.ts`，Landing Page 与项目页即可同步展示。

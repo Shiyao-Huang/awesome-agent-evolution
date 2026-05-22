@@ -1,0 +1,253 @@
+[
+  {
+    "rank": 1,
+    "name": "OpenClaw / KiloClaw / PinchBench ecosystem",
+    "signal_type": "Product Hunt + X + GitHub trend signal",
+    "urls": [
+      "https://www.producthunt.com/products/kiloclaw?comment=5246851",
+      "https://x.com/OSSAIHub/status/2031207602890354821",
+      "https://x.com/openclaw/status/2036293335007264807"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 2,
+    "name": "Kilo Code / KiloClaw / Kilo Code v7",
+    "signal_type": "Product Hunt AI engineering trend",
+    "urls": [
+      "https://www.producthunt.com/products?order=best_rated",
+      "https://www.producthunt.com/categories/ai-engineer?order=recent_launches"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 3,
+    "name": "OpenHuman",
+    "signal_type": "Product Hunt May 2026 top product",
+    "urls": [
+      "https://www.producthunt.com/products?order=best_rated"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 4,
+    "name": "FlowMarket / Agent-to-agent deal matching",
+    "signal_type": "Product Hunt recent AI agents launch",
+    "urls": [
+      "https://www.producthunt.com/categories/ai-agents?order=recent_launches&page=1"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 5,
+    "name": "Ajelix / Agentic AI chat for work",
+    "signal_type": "Product Hunt recent AI agents launch",
+    "urls": [
+      "https://www.producthunt.com/categories/ai-agents?order=recent_launches&page=1"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 6,
+    "name": "ElevenLabs Agent Templates",
+    "signal_type": "Product Hunt recent AI SDR/agent launch",
+    "urls": [
+      "https://www.producthunt.com/categories/ai-sdr?order=recent_launches"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 7,
+    "name": "Genspark Super Agent / agentic search",
+    "signal_type": "Product Hunt recent search trend",
+    "urls": [
+      "https://www.producthunt.com/categories/search?order=recent_launches"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 8,
+    "name": "Kimi K2.6 / long-horizon coding and agent swarms",
+    "signal_type": "Product Hunt model/agent trend",
+    "urls": [
+      "https://www.producthunt.com/products/kimi-ai-assistant"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 9,
+    "name": "GitHubFinds / GitHub momentum tracker",
+    "signal_type": "Trending methodology source",
+    "urls": [
+      "https://githubfinds.dev/"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 10,
+    "name": "Presenc AI Agent Framework Rankings May 2026",
+    "signal_type": "GitHub ranking source",
+    "urls": [
+      "https://presenc.ai/research/ai-agent-framework-github-rankings-2026"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 11,
+    "name": "TrendingBots.ai",
+    "signal_type": "live AI agent rankings",
+    "urls": [
+      "https://www.trendingbots.ai/"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 12,
+    "name": "Awesome AI Agents 2026 lists",
+    "signal_type": "fast-updated curation sources",
+    "urls": [
+      "https://github.com/caramaschiHG/awesome-ai-agents-2026",
+      "https://github.com/G1o22/awesome-ai-agents-2026",
+      "https://github.com/Zijian-Ni/awesome-ai-agents-2026",
+      "https://github.com/Supersynergy/awesome-ai-agents-2025"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 13,
+    "name": "agentmemory",
+    "signal_type": "Reddit/GitHub fastest growing repo signal",
+    "urls": [
+      "https://www.reddit.com/r/StartupMind/comments/1tgey16/the_10_fastest_growing_github_repos_this_week/"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 14,
+    "name": "obra/superpowers",
+    "signal_type": "agentic skills framework momentum",
+    "urls": [
+      "https://www.reddit.com/r/AI_Agents/comments/1sue0si/watching_the_agenttooling_space_dominate_github/"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 15,
+    "name": "Hermes Agent / Nous Research",
+    "signal_type": "self-improving skills and memory trend",
+    "urls": [
+      "https://x.com/intheworldofai/status/2041411760943456589"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 16,
+    "name": "Self-Improving AI Stack / five-layer stack",
+    "signal_type": "X practitioner synthesis",
+    "urls": [
+      "https://x.com/chappyasel/status/2041166770472644721"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 17,
+    "name": "Claw / Markdown-agent pattern",
+    "signal_type": "X/Techmeme community terminology",
+    "urls": [
+      "https://x.com/Techmeme/status/2025039183182532756",
+      "https://x.com/simonw/status/2025007712992723235",
+      "https://x.com/itsolelehmann/status/2026559843109306774"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 18,
+    "name": "AIDev / agentic PR papers (2026)",
+    "signal_type": "GitHub practice evidence",
+    "urls": [
+      "https://arxiv.org/abs/2602.09185",
+      "https://arxiv.org/abs/2601.15195",
+      "https://arxiv.org/abs/2604.18334",
+      "https://arxiv.org/abs/2601.17413"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 19,
+    "name": "Donna AI / agent-to-agent hiring",
+    "signal_type": "Product Hunt 2026 product",
+    "urls": [
+      "https://www.producthunt.com/products/donna-ai-agent-to-agent-hiring-platform"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  },
+  {
+    "rank": 20,
+    "name": "Fluent Agentic AI in Any Mac App",
+    "signal_type": "Product Hunt 2026 product",
+    "urls": [
+      "https://www.producthunt.com/products/fluent-ai-writing-assistant-for-macos/launches"
+    ],
+    "content_timestamp": "2026-05-22",
+    "collected_at": "2026-05-22T00:00:00+08:00",
+    "time_slice": "2026-05",
+    "source": "fallback_web_search"
+  }
+]

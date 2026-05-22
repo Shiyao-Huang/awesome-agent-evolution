@@ -1,0 +1,45 @@
+---
+title: "Reflexion：带语言强化学习的智能体"
+description: "引入'语言强化学习'——Agent 将失败后的反思写入记忆，后续尝试在不更新权重的情况下改进。HumanEval 91%。"
+pubDate: 2023-03-01
+arxiv: "2303.11366"
+venue: "NeurIPS 2023"
+tags: ["反思记忆", "语言强化学习", "智能体"]
+status: "featured"
+authors: ["Noah Shinn", "Federico Cassano", "Edward Berman", "Ashwin Gopinath", "Karthik Narasimhan", "Shunyu Yao"]
+affiliations: ["Northeastern University", "MIT"]
+code: "https://github.com/noahshinn/reflexion"
+---
+
+## 核心思想
+
+引入"语言强化学习"——Agent 不通过权重更新学习，而是将失败经验以自然语言反思的形式写入记忆。后续尝试可读取这些反思来避免同样的错误。
+
+## 三模型架构
+
+1. **Actor (Ma)**：根据任务 + 记忆上下文生成行动
+2. **Evaluator (Me)**：对 Actor 输出评分（二元奖励或标量）
+3. **Self-Reflection (Mr)**：生成语言反馈解释失败原因
+
+## Reflexion 循环
+
+```
+对每轮 episode e:
+  1. Actor 根据任务 + 记忆生成行动
+  2. Evaluator 评分 → 奖励 r_e
+  3. 如果失败：Self-Reflection 生成反馈 → 存入记忆
+  4. 下一轮读取更新的记忆
+```
+
+## Benchmark 结果
+
+| 任务 | 基线 | Reflexion |
+|------|------|-----------|
+| HumanEval pass@1 | 80% (GPT-4) | **91%** |
+| HumanEval | 48% | **91%** |
+
+## 局限性
+
+- 反思质量依赖 LLM 能力
+- 记忆缓冲区管理策略影响性能
+- 长期任务中记忆可能累积噪声

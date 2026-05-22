@@ -1,0 +1,26 @@
+# 来源索引
+
+- AutoML-GPT：https://arxiv.org/abs/2305.02499
+- AutoML-Agent：https://arxiv.org/abs/2410.02958
+- Large Language Models Synergize with Automated Machine Learning：https://arxiv.org/abs/2405.03727
+- AutoM3L：https://arxiv.org/abs/2408.00665
+- EvoPrompting：https://arxiv.org/abs/2302.14838
+- LLMatic：https://arxiv.org/abs/2306.01102
+- LLaMA-NAS：https://huggingface.co/papers/2405.18377
+- NADER：https://arxiv.org/abs/2412.19206
+- LLM-assisted ARNAS：https://arxiv.org/abs/2406.05433
+- Self-Refine：https://arxiv.org/abs/2303.17651
+- Reflexion：https://arxiv.org/abs/2303.11366
+- Teaching Large Language Models to Self-Debug：https://arxiv.org/abs/2304.05128
+- SPIN：https://arxiv.org/abs/2401.01335
+- Survey on Self-Evolution of LLMs：https://arxiv.org/abs/2404.14387
+- OPRO / Large Language Models as Optimizers：https://arxiv.org/abs/2309.03409
+- Large Language Models as Evolutionary Optimizers：https://arxiv.org/abs/2310.19046
+- FunSearch：https://www.nature.com/articles/s41586-023-06924-6
+- ReEvo：https://huggingface.co/papers/2402.01145
+- LLaMEA：https://arxiv.org/abs/2405.20132
+- AutoGPT：https://github.com/Significant-Gravitas/AutoGPT
+- MetaGPT：https://arxiv.org/abs/2308.00352
+- AutoGen：https://arxiv.org/abs/2308.08155
+- CrewAI 文档：https://docs.crewai.com/introduction
+- AutoAgents：https://arxiv.org/abs/2309.17288

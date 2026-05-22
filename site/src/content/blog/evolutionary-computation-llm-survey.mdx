@@ -1,0 +1,107 @@
+---
+title: "进化计算 × 大语言模型：2024-2025 前沿综述"
+description: "梳理进化计算与 LLM 融合的最新进展：从 OPRO、FunSearch 到 AlphaEvolve，从 LLaMEA 到 OpenEvolve。探索 LLM 如何成为新一代进化优化的核心引擎。"
+pubDate: 2026-05-22
+tags: ["进化计算", "LLM 优化器", "FunSearch", "AlphaEvolve", "AI Self Evolution"]
+author: "Self Evolve Research Network"
+---
+
+## 进化计算的新引擎
+
+传统进化算法依赖人工设计的变异算子（如高斯扰动、交叉重组）。大语言模型的出现改变了这个范式——LLM 可以理解问题语义，生成有意义的"变异"，而不仅仅是随机扰动。
+
+Self Evolve 将这一融合称为"LLM 作为进化引擎"范式。
+
+## 里程碑：从 OPRO 到 AlphaEvolve
+
+### OPRO：LLM 作为优化器（2023）
+
+**OPRO**（arXiv: 2309.03409）首次系统性地展示了 LLM 可以作为通用优化器：
+
+```
+历史候选 + 分数 → LLM → 新候选
+```
+
+LLM 读取过去尝试的分数，理解优化方向，提出新的候选方案。这比随机搜索高效得多，因为 LLM 能从失败中学习模式。
+
+### FunSearch：数学发现的突破（Nature 2023）
+
+**FunSearch** 在 Nature 上发表，用 LLM + 自动评估器发现了新的数学构造：
+
+- 使用 Codey 模型生成函数变体
+- 自动评估器筛选
+- 维护进化谱系
+
+关键成果：发现了超过已知最优的集合分割问题解。
+
+### AlphaEvolve：从单函数到完整代码库（2025）
+
+**AlphaEvolve** 将 FunSearch 的理念扩展到工业规模：
+
+- 双模型架构（Gemini Flash + Pro）
+- MAP-Elites 质量多样性搜索
+- 56 年来首次改进 Strassen 算法
+- Google 数据中心调度优化恢复 0.7% 全球算力
+
+## 关键技术组件
+
+### 1. LLM 作为变异算子
+
+传统变异：`x' = x + N(0, σ)`
+LLM 变异：`x' = LLM(x, 评估历史, 上下文)`
+
+LLM 变异的优势：
+- 理解语义，不会产生无意义变异
+- 可以进行"大跳跃"而不仅仅是局部扰动
+- 可以从失败中提取模式
+
+### 2. 自动评估器
+
+进化搜索需要适应度函数。在不同领域：
+
+| 领域 | 评估器 |
+|------|--------|
+| 数学 | 正确性验证 |
+| 代码 | 单元测试 + 基准 |
+| 算法 | 性能 benchmark |
+| Agent | 任务成功率 |
+
+### 3. 谱系管理
+
+维护进化历史，追踪每个候选的祖先：
+
+```
+种子 → 变异1 → 子代A（保留）
+  → 变异2 → 子代B（淘汰）
+子代A → 变异3 → 子代C（保留）
+```
+
+## 开源生态
+
+| 项目 | 特点 | Stars |
+|------|------|-------|
+| [OpenEvolve](https://github.com/algorithmicsuperintelligence/openevolve) | AlphaEvolve 社区复现 | 6300+ |
+| [LLaMEA](https://github.com/leonlan/LLaMEA) | LLM 作为进化算法 | 活跃 |
+| [ReEvo](https://github.com/RE-Evo/ReEvo) | 反思式进化优化 | 活跃 |
+
+## 与 Self Evolve 的交叉
+
+在 Self Evolve 的技术图谱中，"进化计算 + LLM"路线与"Agent 自我进化"路线正在汇聚：
+
+- **ADAS/DGM**：将 Agent 代码作为进化对象
+- **AlphaEvolve**：将算法代码作为进化对象
+- 两者共享同一核心模式：**LLM 变异 + 自动评估 + 谱系保留**
+
+## 未来方向
+
+1. **多目标进化**：同时优化性能、可读性、安全性
+2. **迁移进化**：在一个领域学到的进化策略迁移到新领域
+3. **人在回路**：人类评估者提供定性反馈，补充自动评估器
+4. **安全约束**：确保进化出的代码不会引入安全漏洞
+
+---
+
+**延伸阅读**：
+- [AlphaEvolve 深度解析](/blog/alphaevolve-deep-dive/)
+- [开源自进化 AI 项目巡礼](/blog/open-source-self-evolving-projects/)
+- [AI 自我进化：从概念到实现](/blog/ai-self-evolution-from-concept-to-implementation/)

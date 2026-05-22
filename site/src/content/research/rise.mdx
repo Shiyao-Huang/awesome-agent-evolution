@@ -1,0 +1,26 @@
+---
+title: "RISE：推理期自编辑强化学习"
+description: "通过迭代式自编辑让 LLM 在推理时修改自身输出，结合 RL 训练让模型学会何时及如何修改。"
+pubDate: 2024-03-01
+arxiv: "2403.06312"
+tags: ["推理期修改", "自编辑", "RL"]
+status: "candidate"
+authors: []
+affiliations: []
+---
+
+## 核心思想
+
+让 LLM 在推理阶段通过 self-edit 机制修改自身输出。结合 RL 训练，模型不仅学会生成更好的初始输出，还学会何时需要修改以及如何修改。
+
+## 方法
+
+1. 模型生成初始输出
+2. 模型判断是否需要自编辑
+3. 如果需要，生成修改指令并应用
+4. RL 信号来自最终输出的质量评估
+
+## 与其他工作的关系
+
+- 比 Self-Refine 更进一步：Self-Refine 不改权重，RISE 通过 RL 改权重
+- 与 Reflexion 互补：RISE 在推理期修改输出，Reflexion 在记忆层积累经验

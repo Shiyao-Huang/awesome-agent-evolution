@@ -1,0 +1,108 @@
+---
+title: "AlphaEvolve 深度解析：DeepMind 的进化算法革命"
+description: "深入分析 Google DeepMind 的 AlphaEvolve 系统：双模型架构、MAP-Elites 质量多样性搜索、56 年来首次改进 Strassen 算法。探索进化计算 × LLM 的未来。"
+pubDate: 2026-05-22
+tags: ["AlphaEvolve", "DeepMind", "进化计算", "MAP-Elites", "AI Self Evolution"]
+author: "Self Evolve Research Network"
+---
+
+## 为什么 AlphaEvolve 重要
+
+2025 年，Google DeepMind 发布了 AlphaEvolve——一个用 LLM 驱动进化搜索的系统。它做到了一件震撼学术界的事情：**56 年来首次改进 Strassen 矩阵乘法算法**，将 4×4 复数矩阵乘法从 49 次乘法降到 48 次。
+
+这不是一个小众优化。Strassen 算法自 1969 年以来一直是算法理论的标杆，无数研究者尝试改进而未果。
+
+## 双模型架构
+
+AlphaEvolve 的核心创新在于使用两个不同能力的 Gemini 模型协同工作：
+
+### Gemini Flash（广度探索）
+
+- 生成大量候选程序变体
+- 快速探索搜索空间的不同区域
+- 成本低、速度快
+
+### Gemini Pro（深度洞察）
+
+- 对有潜力的候选进行深度改进
+- 理解代码语义并提出关键修改
+- 成本高但质量更高
+
+这种"广度 + 深度"的组合模拟了进化生物学中的"变异 + 选择"机制。
+
+## MAP-Elites：质量多样性搜索
+
+AlphaEvolve 使用 MAP-Elites 算法，与传统"找最优解"不同，它维护一个**行为空间中的精英地图**：
+
+```
+初始化：空归档 Archive
+每步进化：
+  1. 从 Archive 选择父代（适应度 + 新颖度加权）
+  2. LLM 变异/交叉 → 子代程序
+  3. 自动评估器评分
+  4. 计算行为描述符 b(child)
+  5. 如果 f(child) > f(Archive[b(child)])：
+     Archive[b(child)] = child
+```
+
+MAP-Elites 的关键公式：
+
+```
+Archive[b(p)] = p  if  f(p) > f(Archive[b(p)])
+```
+
+这意味着归档中的每个"小生境"（niche）都保存该区域的最优解。归档不断增长，照亮整个解空间。
+
+## 重大成果
+
+### 数学发现
+
+| 问题 | 结果 |
+|------|------|
+| 4×4 复数矩阵乘法 | **48 次乘法**（改进 Strassen） |
+| 50+ 数学问题 | 75% 重新发现 SOTA，20% 找到更优解 |
+
+### Google 基础设施
+
+| 应用 | 效果 |
+|------|------|
+| 数据中心调度 (Borg) | 恢复全球 **0.7%** 算力 |
+| FlashAttention kernel | **23% 加速** |
+| LLM 训练 attention | **32% 加速** |
+
+0.7% 的全球算力听起来不多，但对于 Google 规模的数据中心来说，这等于免费获得了大量计算资源。
+
+## 与 FunSearch 的关系
+
+AlphaEvolve 建立在 FunSearch（Nature 2023）的基础之上：
+
+- **FunSearch**：单函数发现，使用 Codey 模型
+- **AlphaEvolve**：完整代码库进化，使用 Gemini 双模型
+
+两者共享核心理念：LLM 生成程序变体 + 自动评估器提供适应度信号。
+
+## 开源替代：OpenEvolve
+
+AlphaEvolve 本身不公开，但社区已有开源实现：
+
+**OpenEvolve**（https://github.com/algorithmicsuperintelligence/openevolve）——AlphaEvolve 概念的社区复现版本，支持 OpenAI 兼容 API，已在我们的项目索引中标记为 verified 状态。
+
+## 局限性
+
+1. 需要定义良好的评估函数（不是所有问题都有自动验证器）
+2. 计算成本高（大量 LLM 调用 + 程序评估）
+3. 双模型架构需要访问多个 LLM 层级
+4. 仅限有自动验证器的领域
+
+## 对 Self Evolve 的启示
+
+AlphaEvolve 证明了"LLM 作为变异算子 + 自动评估器"的范式可以产生超越人类直觉的发现。在 Self Evolve 的技术地图中，它处于"进化计算 + LLM"路线的旗舰位置。
+
+这个方向正在快速发展：学术界的 ADAS/DGM 提出了 Agent 级别的代码进化，而 AlphaEvolve 展示了工业化规模的可能性。
+
+---
+
+**延伸阅读**：
+- [进化计算 × 大语言模型：2024-2025 前沿综述](/blog/evolutionary-computation-llm-survey/)
+- [开源自进化 AI 项目巡礼](/blog/open-source-self-evolving-projects/)
+- [AI 自我进化：从概念到实现](/blog/ai-self-evolution-from-concept-to-implementation/)

@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+export async function getStaticPaths(){const notes=await getCollection('research');return notes.map((note)=>({params:{slug:note.id},props:{note}}));}
+const { note } = Astro.props;
+const { Content } = await render(note);
+const jsonLd = {'@context':'https://schema.org','@type':'ScholarlyArticle',headline:note.data.title,description:note.data.description,datePublished:note.data.pubDate.toISOString(),mainEntityOfPage:Astro.url.toString()};
+---
+<BaseLayout title={`${note.data.title} | Self Evolve 研究图谱`} description={note.data.description} type="article">
+  <article class="blog-article">
+    <div class="eyebrow">{note.data.pubDate.toISOString().slice(0,10)} · {note.data.status}</div>
+    <h1>{note.data.title}</h1>
+    <p class="lead">{note.data.description}</p>
+    <div class="pill-row">{note.data.arxiv && <a class="pill" href={`https://arxiv.org/abs/${note.data.arxiv}`} target="_blank" rel="noopener">arXiv</a>}{note.data.tags.map((tag)=><span class="pill">{tag}</span>)}</div>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <Content />
+    <p style="margin-top:48px"><a href="/research/" class="button">&larr; 返回研究图谱</a></p>
+  </article>
+</BaseLayout>

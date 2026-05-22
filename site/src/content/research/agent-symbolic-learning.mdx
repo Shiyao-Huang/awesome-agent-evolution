@@ -1,0 +1,40 @@
+---
+title: "Agent Symbolic Learning：符号反向传播驱动的自进化智能体"
+description: "将智能体视为符号网络，用语言梯度在自然语言空间做反向传播，实现提示词、工具与管线的自动进化。"
+pubDate: 2024-10-01
+arxiv: "2406.18532"
+venue: "NeurIPS 2024"
+tags: ["符号学习", "语言梯度", "智能体进化"]
+status: "featured"
+authors: ["Wangchunshu Zhou", "Ningyu Zhang", "Huajun Chen"]
+affiliations: ["AIWaves Inc.", "Zhejiang University"]
+code: "https://github.com/aiwaves-cn/agents"
+---
+
+## 核心思想
+
+将智能体参数化为符号网络，其中"可学习权重"是提示词（𝒫）、工具（𝒯）和管线连接（ℐ, 𝒪）。模仿深度学习中的反向传播和梯度下降，但全部在自然语言空间中操作。
+
+## 语言梯度
+
+算法的核心是"语言梯度"∇_lang——一段自然语言描述，说明如何改进每个组件，沿 Agent 的计算图反向传播：
+
+1. **前向执行**：Agent 在任务上执行 → 生成轨迹 τ
+2. **语言损失**：ℒ_lang = LLM(𝒫_loss(τ))
+3. **语言梯度反传**：逐层（从输出到输入）计算改进建议
+4. **权重更新**：PromptOptimizer、ToolOptimizer、PipelineOptimizer 分别更新各层
+
+## Benchmark 结果
+
+| 任务 | 基线 | 符号学习 |
+|------|------|----------|
+| HotPotQA F1 | 36.2 | **39.1** |
+| MATH (GPT-4) | 56.0% | **60.7%** |
+| HumanEval | 68.3% | **73.2%** |
+| 软件开发 | 2.4 | **3.8** |
+
+## 局限性
+
+- 需要 GPT-4 级别骨干模型计算梯度
+- 无理论收敛保证
+- 每步多次 LLM 调用，计算成本高

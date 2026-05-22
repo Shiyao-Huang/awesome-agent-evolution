@@ -1,0 +1,98 @@
+platform,pain_id,title,source_file
+Reddit,1,Agent Reliability — Agents Are Too Unreliable for Production,mom-test-findings-reddit.md
+Reddit,2,Self-Improvement Is a Myth in Practice — Feedback Loops Require Manual Human Labor,mom-test-findings-reddit.md
+Reddit,3,Agent Drift — All Agents Degrade Over Time Without Constant Monitoring,mom-test-findings-reddit.md
+Reddit,4,Framework Opacity — No Visibility Into What Prompts Are Actually Being Sent,mom-test-findings-reddit.md
+Reddit,5,Framework Bloat and Deployment Complexity,mom-test-findings-reddit.md
+Reddit,6,Runaway Loops and Cost Spirals,mom-test-findings-reddit.md
+Reddit,7,Agent Evaluation Is Broken — No Good Way to Measure Agent Quality,mom-test-findings-reddit.md
+Reddit,8,Benchmarks Only Test Coding — 92% of Labor Is Ignored,mom-test-findings-reddit.md
+Reddit,9,Reflection and Self-Critique Introduce Latency Without Solving Edge Cases,mom-test-findings-reddit.md
+Reddit,10,RLAIF (AI Evaluating AI) Is Fragile in Real-World Conditions,mom-test-findings-reddit.md
+Reddit,11,Skill Acquisition by Agents Is Overhyped — They Stumble and Need Handholding,mom-test-findings-reddit.md
+Reddit,12,Framework Abstractions Fight You More Than They Help,mom-test-findings-reddit.md
+Reddit,13,Environment Isolation and Silent Sub-Agent Failures,mom-test-findings-reddit.md
+Reddit,14,"Web Interaction Flakiness — APIs Change, Sessions Expire, Pages Render Differently",mom-test-findings-reddit.md
+Reddit,15,Trace Accumulation Kills Context — Agents Hallucinate Fixes After 10-15 Runs,mom-test-findings-reddit.md
+Reddit,16,Maintaining the Optimization System Costs More Than Running the Agent,mom-test-findings-reddit.md
+Reddit,17,Self-Written Skills Drift and Break When Base Models Update,mom-test-findings-reddit.md
+Reddit,18,Unstructured Self-Modification Leads to Rapid Degradation,mom-test-findings-reddit.md
+Reddit,19,Source Control for Self-Modifying Systems Is Unsolved,mom-test-findings-reddit.md
+Reddit,20,Cost Is the Dominant Constraint for Self-Improving Systems,mom-test-findings-reddit.md
+Reddit,21,Self-Improvement Plateaus Quickly Without a Reliable Verifier,mom-test-findings-reddit.md
+Reddit,22,Goodharting Benchmarks — Optimizing the Harness Does Not Improve the Agent,mom-test-findings-reddit.md
+Reddit,23,Memory Architecture for Agents Is Unsettled — Operational vs. Learned Memory,mom-test-findings-reddit.md
+Reddit,24,"Memory for Agent Evolution Requires Relationships, Not Just Embeddings",mom-test-findings-reddit.md
+Reddit,25,Safety and Security — Agents Can Be Hacked or Go Rogue,mom-test-findings-reddit.md
+Reddit,26,"The Tooling Layer Is the Real Bottleneck, Not Model Reasoning",mom-test-findings-reddit.md
+Reddit,27,No Standard for Dynamic Context Selection in Unpredictable Workflows,mom-test-findings-reddit.md
+Reddit,28,Persistent Memory Without Drift Remains Unsolved,mom-test-findings-reddit.md
+Reddit,29,Non-Technical Stakeholders Force Bad Framework Choices,mom-test-findings-reddit.md
+Reddit,30,Code Agents Break When Inputs Become Unpredictable,mom-test-findings-reddit.md
+Reddit,31,No Good Way to Validate Improvement Claims — Cherry-Picked Results Are the Norm,mom-test-findings-reddit.md
+Reddit,32,LLMs Lack Intrinsic Logical Reasoning,mom-test-findings-reddit.md
+Reddit,33,Reward Functions for Self-Learning Agents Are Easy to Game,mom-test-findings-reddit.md
+Reddit,34,Users Have Unrealistic Expectations — They Think AI Is Magic,mom-test-findings-reddit.md
+Reddit,35,No Good Leaderboard or Trusted Metric for Agent Quality,mom-test-findings-reddit.md
+Reddit,36,MCP Is Too Constraining for General-Purpose Agents,mom-test-findings-reddit.md
+Reddit,37,State Management Becomes a Nightmare in Complex Agent Systems,mom-test-findings-reddit.md
+Reddit,38,The Overwhelming Pace of Tool and Framework Churn,mom-test-findings-reddit.md
+Reddit,39,Agents Stuck in Tool-Call Loops When Prompts Are Not Perfect,mom-test-findings-reddit.md
+Reddit,40,Regression Hell in Self-Improvement Loops,mom-test-findings-reddit.md
+Reddit,41,"The Definition of ""Self-Improvement"" Is Undefined and Contested",mom-test-findings-reddit.md
+Reddit,42,Claude Code Writes Against Deprecated APIs,mom-test-findings-reddit.md
+Reddit,43,AutoGPT-Style Agents Still Just Talk and Do Not Produce Useful Output,mom-test-findings-reddit.md
+Reddit,44,Custom Trained Models Become Obsolete When New Foundation Models Release,mom-test-findings-reddit.md
+Reddit,45,Security Vulnerabilities in Open Agent Platforms,mom-test-findings-reddit.md
+Reddit,46,Agents That Work in Demos Fail at Scale with Real Users,mom-test-findings-reddit.md
+Reddit,47,Open LLMs Produce Invalid Code for Evolutionary Systems,mom-test-findings-reddit.md
+HN,1,Agents Fabricate APIs and Cannot Self-Correct,mom-test-findings-hn.md
+HN,2,LLMs Fail on Niche/Out-of-Distribution Code,mom-test-findings-hn.md
+HN,3,Framework Abstractions Obfuscate Debugging (LangChain Problem),mom-test-findings-hn.md
+HN,4,Agents Cannot Do Long-Term Planning or Adjust on Failure,mom-test-findings-hn.md
+HN,5,LLMs Are Terrible at Prompting Other LLMs,mom-test-findings-hn.md
+HN,6,Agent Trajectory Improvement Is an Unsolved Problem,mom-test-findings-hn.md
+HN,7,Evaluating Self-Improvement Is Circular and Unreliable,mom-test-findings-hn.md
+HN,8,Prompt Optimization Search Space Is Too Large,mom-test-findings-hn.md
+HN,9,Agents Rewrite Code from Memory Instead of Preserving It,mom-test-findings-hn.md
+HN,10,Agents Only See a Fraction of the Codebase,mom-test-findings-hn.md
+HN,11,Agents Require Extreme Babysitting for Even Minor Tasks,mom-test-findings-hn.md
+HN,12,Unit Test Generation Wastes More Time Than It Saves,mom-test-findings-hn.md
+HN,13,Agent Frameworks Get Abandoned When They Hit Production,mom-test-findings-hn.md
+HN,14,The Edit/Harness Format Matters More Than the Model (But Nobody Invests in It),mom-test-findings-hn.md
+HN,15,"Benchmarks Are Contaminated, Saturated, and Gameable",mom-test-findings-hn.md
+HN,16,Voice AI Cannot Distinguish Speech from Background Noise,mom-test-findings-hn.md
+HN,17,Self-Generated Skills/Docs by LLMs Are Actively Harmful,mom-test-findings-hn.md
+HN,18,"The ""When to Use a Tool"" Problem Is Unsolved",mom-test-findings-hn.md
+HN,19,Every Agent Session Starts Cold with No Accumulated Knowledge,mom-test-findings-hn.md
+HN,20,Self-Improving Agents Fabricate Their Own Evaluation Results,mom-test-findings-hn.md
+HN,21,Context Bloat Kills Agent Performance Over Time,mom-test-findings-hn.md
+HN,22,The Tautology Trap — Agents Writing Tests for Their Own Code,mom-test-findings-hn.md
+HN,23,Cost and Speed Make Evolutionary Approaches Impractical at Scale,mom-test-findings-hn.md
+HN,24,Code Review Is Broken and Agents Make It Worse,mom-test-findings-hn.md
+HN,25,Agent Self-Modification Is a Security Nightmare,mom-test-findings-hn.md
+HN,26,No One Can Demonstrate Real Production Success with Self-Improving Agents,mom-test-findings-hn.md
+HN,27,Claude Code Ignores Its Own Configuration Files,mom-test-findings-hn.md
+HN,28,Goodhart's Law Applies to Every Self-Improvement Metric,mom-test-findings-hn.md
+HN,29,LLMs Write Bad Code Because of Misleading Variable Names in Existing Codebases,mom-test-findings-hn.md
+HN,30,"Voice AI Is Deployed to Avoid Problems, Not Solve Them",mom-test-findings-hn.md
+HN,31,Tool Registries Accumulate Noise Over Time,mom-test-findings-hn.md
+HN,32,Nobody Wants to Chat — They Want the Work Done,mom-test-findings-hn.md
+HN,33,"LLMs Cannot Actually ""Learn"" — RAG Is Not Learning",mom-test-findings-hn.md
+HN,34,Cost Governance for Autonomous Agents Is Unsolved,mom-test-findings-hn.md
+HN,35,Writing Compliance Tests for Self-Modifying Code Is a Chicken-and-Egg Problem,mom-test-findings-hn.md
+HN,36,Models Produce Invalid Code at Completion Boundaries,mom-test-findings-hn.md
+X/Twitter,1,Static Agents Become Obsolete After Deployment,mom-test-findings-x.md
+X/Twitter,2,Catastrophic Forgetting in Continually Learning Agents,mom-test-findings-x.md
+X/Twitter,3,"Misevolution — Agents Evolve in Unintended, Harmful Directions",mom-test-findings-x.md
+X/Twitter,4,Unstable Training on Complex Multi-Step Tasks,mom-test-findings-x.md
+X/Twitter,5,Benchmaxxing — Research Focus on Benchmarks Instead of Real-World Improvement,mom-test-findings-x.md
+X/Twitter,6,Expensive Data and Handcrafted Rewards Are Required Bottlenecks,mom-test-findings-x.md
+X/Twitter,7,No Standardized Enterprise Safety and Governance for Self-Evolving Agents,mom-test-findings-x.md
+X/Twitter,8,Agents Cannot Reliably Self-Diagnose Their Own Weaknesses,mom-test-findings-x.md
+X/Twitter,9,Self-Improvement Gains Are Modest Despite Significant Complexity Overhead,mom-test-findings-x.md
+X/Twitter,10,"No Unified Architecture — Fragmented, Incompatible Approaches",mom-test-findings-x.md
+X/Twitter,11,Agents That Modify Their Own Code Create Expanded and Unpredictable Risk Surfaces,mom-test-findings-x.md
+X/Twitter,12,"Real-World Practitioners Need Simple, Practical Self-Improvement — Not Research-Scale Systems",mom-test-findings-x.md
+X/Twitter,13,Search Space Is Too Large for Single-Agent Exploration,mom-test-findings-x.md
+X/Twitter,14,Quality Control in Agent-Created Tools and Skills,mom-test-findings-x.md

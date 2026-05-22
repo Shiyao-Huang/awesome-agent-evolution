@@ -1,0 +1,16 @@
+---
+title: "LLM 即优化器：OPRO、FunSearch、ReEvo 与 LLaMEA"
+description: "从标量反馈到程序进化，说明 LLM 可以承担变异器、重组器和候选生成器角色。"
+pubDate: 2026-05-22
+tags: ["OPRO", "FunSearch", "ReEvo", "LLaMEA", "程序进化"]
+status: "reviewed"
+---
+
+进化计算 + LLM 给 Self Evolve 最清晰的机制：生成候选、打分、选择、变异 / 重组，并保留谱系。
+
+- **OPRO**：用自然语言任务描述和历史分数提示 LLM 生成新候选。
+- **FunSearch**：用 LLM 生成程序，用评估器选择高价值程序并持续进化。
+- **ReEvo**：将反思与启发式程序搜索结合。
+- **LLaMEA**：进化的对象不只是解，而是优化器本身。
+
+这条线可以支撑 Self Evolve 的产品架构：每个产物都有适应度函数，每次运行都有轨迹，每次改进都有谱系。

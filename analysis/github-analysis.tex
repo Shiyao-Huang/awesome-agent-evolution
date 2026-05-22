@@ -1,0 +1,164 @@
+% Auto-generated from research/repo-classification.json and raw-github/*.md
+% Source count: 348 raw GitHub captures. Generated for survey technical-stack analysis.
+\section{GitHub生态与技术栈分析}\label{sec:github-techstack-analysis}
+
+\subsection{数据范围与GitNexus分析口径}
+本节基于本地 \texttt{raw-github/} 中的 348 个仓库快照，以及 \texttt{research/repo-classification.json} 中的分类结果，对 Agent Evolution 开源生态进行 GitNexus 式技术栈分析：把仓库、README描述、文件结构、依赖线索、星标信号、时间切片和综述主题连接为一个可检索的证据图。该口径不把 star 当作唯一质量指标，而是同时观察代码形态、评测/测试线索、文档与示例、部署文件、agent 操作说明以及 self-evolution 闭环证据。
+
+\subsection{仓库类型分布：框架多、评测强、教程入口明显}
+\begin{table}[htbp]
+\centering
+\caption{raw-github仓库最终分类分布}
+\label{tab:github-final-category}
+\begin{tabular}{lrrr}
+\toprule
+类别 & 仓库数 & 占比 & 类内星标合计 \\
+\midrule
+框架/framework & 101 & 29.0\% & 10870 \\
+评测/evaluation & 81 & 23.3\% & 7635 \\
+教程/tutorial & 61 & 17.5\% & 9549 \\
+应用/application & 42 & 12.1\% & 4925 \\
+工具/tool & 40 & 11.5\% & 3909 \\
+论文代码/paper-code & 23 & 6.6\% & 2608 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+从类别看，\textbf{框架/工具}合计 141 个（40.5\%），说明开发者首先需要可复用的 orchestration、runtime、memory、tooling 与集成层；\textbf{评测/论文代码}合计 104 个（29.9\%），说明 self-evolution 仍强依赖 benchmark 与研究 artifact；\textbf{教程/awesome-list}有 61 个（17.5\%），是 SEO 和用户入口，但需要与论文、痛点和真实 demo 交叉索引，避免只形成列表而不形成平台数据壁垒。
+
+\subsection{README主题与技术栈分布}
+\begin{table}[htbp]
+\centering
+\caption{README级主题与技术栈分布}
+\label{tab:github-theme-stack}
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{lrr}
+\toprule
+主题 & 数量 & 占比 \\
+\midrule
+evaluation & 81 & 23.3\% \\
+evolution & 58 & 16.7\% \\
+memory & 56 & 16.1\% \\
+framework & 38 & 10.9\% \\
+education-list & 35 & 10.1\% \\
+research-agent & 30 & 8.6\% \\
+prompt-optimization & 26 & 7.5\% \\
+coding-agent & 17 & 4.9\% \\
+workflow-automation & 6 & 1.7\% \\
+safety & 1 & 0.3\% \\
+\bottomrule
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{lrr}
+\toprule
+技术栈/形态 & 数量 & 占比 \\
+\midrule
+Markdown & 197 & 56.6\% \\
+Python & 123 & 35.3\% \\
+Unknown & 14 & 4.0\% \\
+TypeScript/JavaScript & 6 & 1.7\% \\
+Shell & 6 & 1.7\% \\
+TypeScript & 1 & 0.3\% \\
+Jupyter Notebook & 1 & 0.3\% \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+技术栈分布中的 \texttt{Markdown} 并不等价于“无代码”：它通常表示 awesome-list、论文列表、研究索引、README-first demo 或 GitHub HTML 快照未暴露语言统计。真正的可执行生态仍明显偏向 Python：评测、训练、prompt优化、memory/RAG、科研 agent 和 self-evolution 实验大多使用 Python 工具链；TypeScript/JavaScript 则更多出现在浏览器自动化、前端工作台、CLI、MCP 工具和 workflow 产品化界面。
+
+\subsection{文件与依赖线索：从README到可运行系统的证据}
+\begin{table}[htbp]
+\centering
+\caption{GitNexus文件/依赖信号覆盖率（从raw-github文本匹配）}
+\label{tab:github-dependency-signals}
+\begin{tabular}{lrr}
+\toprule
+信号 & 命中仓库数 & 占比 \\
+\midrule
+Python packaging & 178 & 51.1\% \\
+Node/TypeScript packaging & 27 & 7.8\% \\
+Container/deployment & 61 & 17.5\% \\
+Tests/evaluation files & 206 & 59.2\% \\
+Docs/examples & 223 & 64.1\% \\
+Agent operating docs & 84 & 24.1\% \\
+Memory/RAG terms & 174 & 50.0\% \\
+MCP/tools & 233 & 67.0\% \\
+Browser/workflow automation & 169 & 48.6\% \\
+LangGraph/CrewAI & 23 & 6.6\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+这些信号揭示了三个工程事实。第一，Python packaging 和 Node/TypeScript packaging 同时存在，说明 Agent Evolution 并不是单语言生态：研究闭环在 Python，交互和产品界面常在 TypeScript。第二，测试/benchmark 线索覆盖较高，但真正的长期演化评估、回滚、安全边界和跨任务保持能力仍需要单独验证。第三，AGENTS/CLAUDE/Codex/Cursor 等 agent 操作说明已经成为新型仓库元数据，适合被 Evolver 平台解析为“agent-readable repository contract”。
+
+\subsection{时间切片：2026年5月样本密集，但历史未知仍需回填}
+\begin{table}[htbp]
+\centering
+\caption{raw-github时间切片分布（Top 12）}
+\label{tab:github-time-slice}
+\begin{tabular}{lrr}
+\toprule
+time\_slice & 仓库数 & 占比 \\
+\midrule
+2026-05 & 186 & 53.4\% \\
+unknown & 109 & 31.3\% \\
+2026-04 & 8 & 2.3\% \\
+2024-Q2 & 7 & 2.0\% \\
+2026-03 & 6 & 1.7\% \\
+2024-Q3 & 4 & 1.1\% \\
+2025-11 & 4 & 1.1\% \\
+2026-01 & 3 & 0.9\% \\
+early & 3 & 0.9\% \\
+2025-05 & 3 & 0.9\% \\
+2025-12 & 2 & 0.6\% \\
+2025-02 & 2 & 0.6\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+当前样本中 2026 年切片约 205 个，表明数据采集强烈捕获到了最新 agent/tooling 热点；但仍有 109 个仓库的 \texttt{time\_slice} 为 unknown，需要继续从 GitHub release、first commit、README badge、arXiv/论文链接或 Product Hunt/X 传播链补时间戳。对于 survey 来说，unknown 时间会放大 recency bias：热门新项目和长期维护项目可能被混在一起。
+
+\subsection{星标信号与代表仓库}
+\begin{table}[htbp]
+\centering
+\caption{星标Top仓库与分类（本地采集快照）}
+\label{tab:github-top-stars}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrll}
+\toprule
+Repo & 类别 & Stars & 主题 & 技术栈 & time\_slice \\
+\midrule
+\texttt{metauto-ai/gptswarm} & 应用/application & 998 & evolution & Python & 2026-05 \\
+\texttt{langchain-ai/langsmith-sdk} & 框架/framework & 894 & framework & Markdown & 2026-05 \\
+\texttt{aimagelab/mammoth} & 框架/framework & 812 & evaluation & Python & unknown \\
+\texttt{madaan/self-refine} & 工具/tool & 805 & prompt-optimization & Markdown & 2026-05 \\
+\texttt{openmemind/memind} & 框架/framework & 787 & memory & Markdown & 2026-05 \\
+\texttt{tiger-ai-lab/openresearcher} & 评测/evaluation & 756 & research-agent & Python & 2026-05 \\
+\texttt{polarseeker/openseeker} & 评测/evaluation & 711 & evaluation & Python & 2026-05 \\
+\texttt{tsinghua-fib-lab/world-model} & 教程/tutorial & 711 & education-list & Markdown & early \\
+\texttt{opendilab/awesome-exploration-rl} & 教程/tutorial & 689 & education-list & Markdown & 2026-05 \\
+\texttt{human-agent-society/coral} & 评测/evaluation & 669 & evolution & Markdown & 2026-04 \\
+\texttt{lamm-mit/sciagentsdiscovery} & 应用/application & 610 & research-agent & Python & unknown \\
+\texttt{vision-intelligence-and-robots-group/best-incremental-learning} & 工具/tool & 607 & coding-agent & Unknown & unknown \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+星标Top列表覆盖 evolution、framework、memory、prompt optimization、research-agent、evaluation 和 tutorial 多个主题，说明社区兴趣是多峰的，而不是集中在单一“自进化框架”。这也解释了为什么只用 academic keyword 搜索会漏掉热门项目：许多仓库以 agent workflow、memory、MCP、browser automation、coding agent、AI scientist 或 awesome list 形式出现，并不直接使用 self-evolution 术语。
+
+\subsection{面向Evolver平台的数据产品启示}
+\begin{enumerate}
+\item \textbf{从列表转为证据图。} 每个 repo 需要保留 repo、URL、stars、category、base theme、stack、time slice、dependency signals、paper links、social signals 和 review links，形成可搜索、可排序、可追溯的 GitNexus 节点。
+\item \textbf{用多源信号校正star偏差。} Star 高说明传播强，但不等于可复现、可维护、可部署；需要结合 tests、benchmarks、Docker、docs、examples、last update、issue 活跃度和第三方讨论。
+\item \textbf{把agent-readable文件作为新元数据。} AGENTS.md、CLAUDE.md、Codex/Cursor/Gemini 配置、MCP manifest 和 workflow 文件应被解析为“agent operation contract”，用于判断仓库是否适合自动接入 Evolver demo/leaderboard。
+\item \textbf{分类体系要兼容热门词。} 除 self-evolution 外，持续监控 AI agent framework、MCP、browser agent、coding agent、memory/RAG、AI scientist、workflow automation、agent OS、eval harness 等热门关键词，才能捕获 GitHub Trending 与 X/微信公众号传播中的新项目。
+\item \textbf{时间戳回填是排行榜基础设施。} 仍为 unknown 的 GitHub 时间切片需要优先补齐，否则“最新/热门/长期维护”三类项目会在榜单中混淆。
+\end{enumerate}
+
+\subsection{结论}
+348 个 raw-github 仓库显示，Agent Evolution 开源生态已经从单纯论文代码扩展为 \textbf{框架 + 工具 + 评测 + memory/RAG + workflow + 教程} 的复合系统。当前最大机会不是再做一个静态 awesome-list，而是把仓库技术栈、论文证据、社交热度、用户痛点和可运行 demo 连接为 Evolver 的结构化数据资产。

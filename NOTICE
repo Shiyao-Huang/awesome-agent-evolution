@@ -1,0 +1,16 @@
+Self Evolve is an index and analysis project for self-evolving agents, agent
+evolution systems, code self-improvement, benchmarks, papers, and community
+signals.
+
+Licensing:
+- Code and site implementation: MIT, see LICENSE-CODE.
+- Original written analysis and normalized metadata: CC BY 4.0, see LICENSE-CONTENT.
+- Third-party source materials remain owned by their original authors.
+
+Publication boundary:
+- Public pages should prioritize links, bibliographic metadata, repo metadata,
+  tags, rankings, and original analysis.
+- Raw scraped pages, full copied article text, private data, API responses, or
+  materials with unclear redistribution rights should not be republished without
+  a source-specific review.
+

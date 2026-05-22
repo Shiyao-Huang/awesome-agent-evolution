@@ -1,0 +1,30 @@
+---
+title: "SelfEvolve：自生成知识 + 迭代自调试"
+description: "两阶段管线：LLM 自生成 API 文档作为知识，然后在沙盒中执行代码并将错误反馈回 LLM 进行迭代修复。"
+pubDate: 2023-06-01
+arxiv: "2306.02907"
+tags: ["自调试", "沙盒执行", "文档生成"]
+status: "candidate"
+authors: ["Shuyang Jiang", "Yuhao Wang", "Yu Wang"]
+affiliations: ["Shanghai Jiao Tong University", "Shanghai AI Laboratory"]
+---
+
+## 核心思想
+
+两阶段管线实现代码自我改进：
+
+**阶段 1：自生成知识**——LLM 从自身参数生成必要的 API 文档和算法描述，避免外部检索的领域不匹配问题。
+
+**阶段 2：迭代自调试**——生成代码在沙盒中执行，错误信息（traceback）反馈回 LLM，LLM 修改代码并重新执行，直到通过或达到最大迭代次数。
+
+## 创新点
+
+- 无需外部知识库或检索系统
+- 无需特殊测试用例
+- 错误 traceback 作为自然的改进信号
+
+## 局限性
+
+- 自生成知识的准确性依赖模型能力
+- 沙盒环境限制复杂项目
+- 迭代修复可能引入新错误

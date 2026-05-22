@@ -1,0 +1,44 @@
+# Repo Classification Verification — GitHub README API + AnySearch Fallback
+
+- content_timestamp: 2026-05-21
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: 2026-05
+- scope: uncertain subset from `research/repo-classification.csv`
+
+## Method
+
+Uncertain repo categories were rechecked rather than guessed. GitHub README API was attempted concurrently first, but the local IP hit GitHub unauthenticated rate limits (HTTP 403). Per Master instruction, AnySearch fallback was then attempted for every uncertain repo; however the AnySearch account hit daily quota (`user_daily_quota_exhausted`, quota_used=454). Therefore this verification log preserves the previous local classification and flags the external verification as blocked rather than pretending success.
+
+- verified repos attempted: 26
+- retained category distribution: 应用/application:13；教程/tutorial:11；评测/evaluation:1；论文代码/paper-code:1
+- GitHub README ok: 0; GitHub errors/rate-limit: 26
+- AnySearch ok: 0; quota_exhausted: 26
+
+| Repo | Previous | Retained category | GitHub API | AnySearch fallback | Evidence / blocker |
+|---|---|---|---|---|---|
+| [agi-edgerunners/llm-agents-papers](https://github.com/agi-edgerunners/llm-agents-papers) | 教程/tutorial | 教程/tutorial | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [ashish-kamboj/agentic-ai-workflows](https://github.com/ashish-kamboj/agentic-ai-workflows) | 应用/application | 应用/application | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [browser-use/browser-use](https://github.com/browser-use/browser-use) | 应用/application | 应用/application | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [browser-use/web-ui](https://github.com/browser-use/web-ui) | 应用/application | 应用/application | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [chuacheowhuan/gym-continuousdoubleauction](https://github.com/chuacheowhuan/gym-continuousdoubleauction) | 应用/application | 应用/application | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [colab2/midca](https://github.com/colab2/midca) | 应用/application | 应用/application | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [george-salafatinos/tictactoe-self-play](https://github.com/george-salafatinos/tictactoe-self-play) | 应用/application | 应用/application | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [haotang1995/worldcoder](https://github.com/haotang1995/worldcoder) | 应用/application | 应用/application | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [ilsilfverskiold/awesome-llm-resources-list](https://github.com/ilsilfverskiold/awesome-llm-resources-list) | 教程/tutorial | 教程/tutorial | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [leofan90/awesome-world-models](https://github.com/leofan90/awesome-world-models) | 教程/tutorial | 教程/tutorial | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [machuangtao/llm-kg4qa](https://github.com/machuangtao/llm-kg4qa) | 应用/application | 应用/application | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks) | 教程/tutorial | 教程/tutorial | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [mdalamin5/end-to-end-agentic-ai-automation-lab](https://github.com/mdalamin5/end-to-end-agentic-ai-automation-lab) | 应用/application | 应用/application | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [n8n-io/n8n](https://github.com/n8n-io/n8n) | 应用/application | 应用/application | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [rishab-agrawal/humanoid-curriculum-rl](https://github.com/rishab-agrawal/humanoid-curriculum-rl) | 应用/application | 应用/application | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [ronit26mehta/argus-ai-debate](https://github.com/ronit26mehta/argus-ai-debate) | 评测/evaluation | 评测/evaluation | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [smiles724/awesome-llm-rlvr](https://github.com/smiles724/awesome-llm-rlvr) | 教程/tutorial | 教程/tutorial | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [vercel/workflow](https://github.com/vercel/workflow) | 应用/application | 应用/application | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [vision-intelligence-and-robots-group/best-incremental-learning](https://github.com/vision-intelligence-and-robots-group/best-incremental-learning) | 应用/application | 应用/application | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [voltagent/awesome-agent-skills](https://github.com/voltagent/awesome-agent-skills) | 教程/tutorial | 教程/tutorial | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [xialeiliu/awesome-incremental-learning](https://github.com/xialeiliu/awesome-incremental-learning) | 教程/tutorial | 教程/tutorial | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [xiaofangxd/llm_ea](https://github.com/xiaofangxd/llm_ea) | 论文代码/paper-code | 论文代码/paper-code | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [yennning/awesome-code-as-agent-harness-papers](https://github.com/yennning/awesome-code-as-agent-harness-papers) | 教程/tutorial | 教程/tutorial | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [yingchengyang/reinforcement-learning-papers](https://github.com/yingchengyang/reinforcement-learning-papers) | 教程/tutorial | 教程/tutorial | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [zijian-ni/awesome-ai-agents-2026](https://github.com/zijian-ni/awesome-ai-agents-2026) | 教程/tutorial | 教程/tutorial | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |
+| [zzz47zzz/awesome-lifelong-learning-methods-for-llm](https://github.com/zzz47zzz/awesome-lifelong-learning-methods-for-llm) | 教程/tutorial | 教程/tutorial | error | quota_exhausted | user_daily_quota_exhausted 已达到今日免费额度上限，明日再试。 You have reached today's free quota limit. Please try again tomorrow. quota_used: 454 quota_limit: 0 |

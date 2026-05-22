@@ -1,0 +1,263 @@
+{
+  "generated_at": "2026-05-21T22:21:49+08:00",
+  "counts": {
+    "paper_records_timestamp_index": 87,
+    "raw_paper_md_files": 171,
+    "paper_reviews": 88,
+    "academic_reviews": 34,
+    "repo_records_timestamp_index": 348,
+    "raw_github_md_files": 348,
+    "repo_cross_analysis_rows": 348,
+    "raw_blog_files": 1306,
+    "raw_blog_json_records": 652,
+    "raw_social_files": 1291,
+    "raw_social_json_records": 612,
+    "raw_social_rank_json_records": 228,
+    "pain_points_parsed": 97
+  },
+  "top_repo_categories": [
+    [
+      "evaluation",
+      81
+    ],
+    [
+      "evolution",
+      58
+    ],
+    [
+      "memory",
+      56
+    ],
+    [
+      "framework",
+      38
+    ],
+    [
+      "education-list",
+      35
+    ],
+    [
+      "research-agent",
+      30
+    ],
+    [
+      "prompt-optimization",
+      26
+    ],
+    [
+      "coding-agent",
+      17
+    ],
+    [
+      "workflow-automation",
+      6
+    ],
+    [
+      "safety",
+      1
+    ]
+  ],
+  "top_repo_languages": [
+    [
+      "Markdown",
+      197
+    ],
+    [
+      "Python",
+      123
+    ],
+    [
+      "Unknown",
+      14
+    ],
+    [
+      "TypeScript/JavaScript",
+      6
+    ],
+    [
+      "Shell",
+      6
+    ],
+    [
+      "TypeScript",
+      1
+    ],
+    [
+      "Jupyter Notebook",
+      1
+    ]
+  ],
+  "top_blog_platforms": [
+    [
+      "YouTube",
+      121
+    ],
+    [
+      "Product Hunt",
+      39
+    ],
+    [
+      "Medium/TDS",
+      39
+    ],
+    [
+      "Zhihu",
+      30
+    ],
+    [
+      "CSDN",
+      24
+    ],
+    [
+      "GitHub Blog/Docs",
+      21
+    ],
+    [
+      "Dev.to",
+      20
+    ],
+    [
+      "Tencent Cloud Dev",
+      18
+    ],
+    [
+      "Substack",
+      16
+    ],
+    [
+      "CNBlogs",
+      15
+    ],
+    [
+      "36Kr",
+      13
+    ],
+    [
+      "Juejin",
+      13
+    ],
+    [
+      "Alibaba Cloud Dev",
+      12
+    ],
+    [
+      "arxiv.org",
+      12
+    ],
+    [
+      "Anthropic Blog",
+      11
+    ]
+  ],
+  "blog_influence_counts": [
+    [
+      "unknown",
+      174
+    ],
+    [
+      "creator",
+      121
+    ],
+    [
+      "cn_developer",
+      52
+    ],
+    [
+      "product_team_or_maker",
+      39
+    ],
+    [
+      "practitioner_or_blogger",
+      39
+    ],
+    [
+      "expert_org",
+      32
+    ],
+    [
+      "cn_vendor_expert",
+      30
+    ],
+    [
+      "cn_practitioner",
+      30
+    ],
+    [
+      "cn_media",
+      23
+    ],
+    [
+      "developer",
+      21
+    ],
+    [
+      "developer_blogger",
+      20
+    ],
+    [
+      "cn_ai_media",
+      20
+    ],
+    [
+      "newsletter_author",
+      16
+    ],
+    [
+      "academic",
+      14
+    ],
+    [
+      "cn_media_or_kol",
+      11
+    ],
+    [
+      "cn_media_or_expert",
+      10
+    ]
+  ],
+  "blog_needs_enrichment": 652,
+  "pain_platform_counts": [
+    [
+      "Reddit",
+      47
+    ],
+    [
+      "HN",
+      36
+    ],
+    [
+      "X/Twitter",
+      14
+    ]
+  ],
+  "method_counts": [
+    [
+      "reward/RL/self-play",
+      36
+    ],
+    [
+      "code/self-modification",
+      16
+    ],
+    [
+      "multi-agent reflection/debate",
+      10
+    ],
+    [
+      "memory/knowledge evolution",
+      9
+    ],
+    [
+      "web/tool/environment adaptation",
+      7
+    ],
+    [
+      "prompt/search optimization",
+      7
+    ],
+    [
+      "evaluation/safety/governance",
+      2
+    ]
+  ]
+}

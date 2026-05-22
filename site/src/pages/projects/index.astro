@@ -1,0 +1,48 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { projects, projectGroups } from '@/data/projects';
+const totalStars = projects.reduce((sum, project) => sum + Number(project.stars || 0), 0);
+const recentProjects = [...projects].sort((a,b)=>new Date(b.lastPushed).valueOf()-new Date(a.lastPushed).valueOf()).slice(0,4);
+---
+<BaseLayout title="Self Evolve 项目索引 — GitHub 自进化 AI 仓库" description="Self Evolve GitHub 项目索引，收录 OpenEvolve、AgentEvolver、Reflexion、Self-Refine 等自进化 AI 与 LLM 项目。">
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Projects / 项目索引</div>
+      <h1 class="gradient-text">自进化 AI 的 GitHub 实现图谱</h1>
+      <p class="lead">本页整合 Workflow A 已落盘项目分析。中文摘要用于快速理解，英文仓库名、技术栈和关键词保留用于搜索与国际读者检索。</p>
+      <div class="metrics">
+        <div class="metric"><strong>{projects.length}</strong><span>个已分析仓库</span></div>
+        <div class="metric"><strong>{totalStars.toLocaleString()}</strong><span>GitHub Stars 合计</span></div>
+        <div class="metric"><strong>{recentProjects[0]?.lastPushed.slice(0,10)}</strong><span>最近活跃项目日期</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><div><div class="eyebrow">分组</div><h2>从代码进化到 Agent 组织进化</h2></div></div>
+      <div class="grid">
+        {projectGroups.map((group)=><article class="card"><h3>{group.title}</h3><p>{group.repos.join('、')}</p></article>)}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><div><div class="eyebrow">Repository Cards</div><h2>真实项目数据层</h2></div></div>
+      <div class="grid">
+        {projects.map((project)=><article class="card">
+          <div class="eyebrow">{project.category}</div>
+          <h3><a href={project.url}>{project.name}</a></h3>
+          <p><strong>{project.repo}</strong></p>
+          <p>{project.description}</p>
+          <p>Stars：{project.stars.toLocaleString()} · Forks：{project.forks} · 最近活跃：{project.lastPushed.slice(0,10)}</p>
+          <div class="pill-row">
+            <span class="pill">{project.language}</span>
+            <span class="pill">{project.license}</span>
+            {project.tags.map((tag)=><span class="pill">{tag}</span>)}
+          </div>
+          <p><a class="button" href={`/reports/${project.report}`}>读取分析报告</a></p>
+        </article>)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+title: "RAGEN：轨迹级 Agent 强化学习"
+description: "在轨迹级别对 Agent 进行强化学习训练，让 Agent 从完整交互历史中学习策略改进。"
+pubDate: 2025-04-01
+arxiv: "2504.14773"
+tags: ["轨迹训练", "Agent RL", "策略进化"]
+status: "candidate"
+authors: []
+affiliations: []
+---
+
+## 核心思想
+
+在轨迹级别对 Agent 进行强化学习训练。不同于单步奖励，RAGEN 从 Agent 的完整交互历史中学习策略改进。
+
+## 方法
+
+1. Agent 执行完整交互轨迹
+2. 轨迹级评估计算整体奖励
+3. RL 更新 Agent 策略
+4. 新策略生成改进的交互轨迹
+
+## 意义
+
+- 从单步优化扩展到轨迹级策略优化
+- 完整交互历史提供更丰富的学习信号
+- 为 Agent 级别的进化训练提供框架

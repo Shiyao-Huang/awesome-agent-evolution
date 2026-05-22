@@ -1,0 +1,76 @@
+\section{评估体系与基准测试}
+\label{ch:evaluation}
+
+\subsection{本章概述}
+
+Agent自进化研究的核心矛盾是``系统声称变得更强''与``我们如何确认它真的变强''之间的张力。评估体系不只是论文中的实验章节，而是整个自进化闭环的``选择压力''和``安全闸门''。
+
+% ====================================================================
+% 图5.1: 评估基准分层体系
+% ====================================================================
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    layer/.style={rectangle, rounded corners=6pt, draw=#1!70!black, fill=#1!12,
+        minimum width=12cm, minimum height=1.4cm, align=center, font=\small},
+    bench/.style={font=\scriptsize, color=gray!60},
+]
+    % Layers from bottom to top
+    \node[layer=cat1] (l1) at (0,0) {\textbf{L1: 程序化验证} — 单元测试, 类型检查, Lint, Fuzzing, Sandbox执行};
+    \node[layer=cat2] (l2) at (0,2) {\textbf{L2: 代码/推理基准} — SWE-Bench, HumanEval, GSM8K, MATH, MMLU};
+    \node[layer=cat3] (l3) at (0,4) {\textbf{L3: 环境交互基准} — WebArena, ALFWorld, Voyager/Minecraft, AppWorld};
+    \node[layer=cat4] (l4) at (0,6) {\textbf{L4: 过程性指标} — 迭代增益曲线, Archive多样性, 迁移性, 回滚率};
+    \node[layer=cat5] (l5) at (0,8) {\textbf{L5: 安全/成本门控} — 权限检查, 预算上限, 回归测试, 人工抽检};
+
+    % Side annotations
+    \node[font=\scriptsize\bfseries, color=cat1!60!black, rotate=90] at (-7,0) {自动};
+    \node[font=\scriptsize\bfseries, color=cat5!60!black, rotate=90] at (-7,8) {人工};
+    \draw[-{Stealth}, thick, dashed, color=gray!40] (-6.5,0) -- (-6.5,8);
+
+\end{tikzpicture}
+\caption{Agent自进化评估分层体系。从L1（完全自动化程序验证）到L5（人工参与的安关门控），评估成本和可靠性逐层增加。}
+\label{fig:eval-layers}
+\end{figure}
+
+% ====================================================================
+% 图5.2: 主要基准在方法空间中的覆盖
+% ====================================================================
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l
+    >{\centering\arraybackslash}p{20mm}
+    >{\centering\arraybackslash}p{20mm}
+    >{\centering\arraybackslash}p{20mm}
+    >{\centering\arraybackslash}p{20mm}
+    >{\centering\arraybackslash}p{25mm}}
+\toprule
+\textbf{基准类别} & \textbf{代表基准} & \textbf{使用系统} & \textbf{优势} & \textbf{局限} & \textbf{污染风险} \\
+\midrule
+软件工程 & SWE-Bench & DGM, SICA & 真实仓库, 可执行 & 搭建复杂 & 中 \\
+代码生成 & HumanEval, MBPP & Reflexion, EvoMAC & 低成本, 易复现 & 粒度小 & 高 \\
+推理 & GSM8K, MATH, GPQA & STaR, RISE, SPIRAL & 成熟, 可比较 & 静态题集 & 高 \\
+环境交互 & WebArena, ALFWorld & ExpeL, WebEvolver & 多步决策 & 成本高 & 低 \\
+开放式 & Minecraft/Voyager & Voyager & 终身学习 & 领域依赖 & 低 \\
+科学发现 & 矩阵乘法, 调度 & AlphaEvolve & 可验证 & 需程序化evaluator & 低 \\
+\bottomrule
+\end{tabular}%
+}
+\caption{主要评估基准对比。污染风险反映训练数据泄露的可能性。}
+\label{fig:bench-compare}
+\end{figure}
+
+\subsection{主要评估基准}
+
+\subsubsection{软件工程基准}
+SWE-Bench要求系统在真实开源仓库中定位问题、修改代码、运行测试并提交可验证补丁。DGM和SICA使用SWE-Bench证明``自我修改代码库''能够带来真实收益。
+
+\subsubsection{推理与知识基准}
+GSM8K、MATH、MMLU等对Agent Evolution的支持有限——许多是静态题集，只衡量最终答案，无法衡量工具使用、记忆复用和多轮交互质量。
+
+\subsubsection{环境交互基准}
+Voyager使用独特物品发现数和科技树解锁速度衡量lifelong learning。WebArena、AppWorld等多步环境更能暴露上下文崩溃和记忆失真问题。
+
+\subsection{Agent进化专用评估指标}
+
+关键过程性指标：（1）\textbf{迭代增益曲线}——多轮稳定上升 vs 偶然跳升；（2）\textbf{泛化与迁移}——跨任务、跨模型、跨环境；（3）\textbf{成本效率}——单位改进的API调用和token消耗；（4）\textbf{安全性}——权限违规率、reward hacking率。

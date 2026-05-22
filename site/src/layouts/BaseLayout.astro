@@ -1,0 +1,134 @@
+---
+import '../styles/global.css';
+import { nav, site } from '@/data/site';
+const { title = site.title, description = site.description, image = '/og.svg', type = 'website', publishedTime, modifiedTime } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).toString();
+const keywords = site.keywords.join(', ');
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: site.name,
+  url: site.url,
+  description: site.description,
+  keywords: site.keywords,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${site.url}/search?q={search_term_string}`,
+    'query-input': 'required name=search_term_string'
+  }
+};
+const orgLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: site.name,
+  url: site.url,
+  logo: `${site.url}/og.svg`,
+  sameAs: [site.github, site.discord, site.x],
+  description: site.description
+};
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title="Self Evolve RSS 订阅" href="/rss.xml" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(image, site.url).toString()} />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content={site.name} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(image, site.url).toString()} />
+    <meta name="twitter:site" content="@SelfEvolveAI" />
+    <meta name="theme-color" content="#050615" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <script type="application/ld+json" set:html={JSON.stringify(orgLd)} is:inline />
+    <!-- Theme init (prevent flash) -->
+    <script is:inline>
+      (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})()
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="/" aria-label="Self Evolve home"><span class="brand-mark"></span><span>Self Evolve</span></a>
+        <nav class="nav-links" aria-label="主导航">{nav.map((item) => <a href={item.href}>{item.label}</a>)}</nav>
+        <button class="theme-toggle" id="theme-toggle" aria-label="切换主题">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <a class="button" href="/blog/">阅读博客</a>
+        <button class="menu-btn" id="menu-btn" aria-label="打开菜单">☰</button>
+      </div>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="移动端导航">
+      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      <a href="/blog/">博客</a>
+      <a href="/research/">研究</a>
+    </nav>
+    <main id="main"><slot /></main>
+    <footer class="footer"><div class="container">© {new Date().getFullYear()} Self Evolve. AI 自我进化中文研究与项目索引静态站点。</div></footer>
+
+    <!-- Theme toggle + Mobile menu + Scroll reveal -->
+    <script is:inline>
+      // Theme toggle
+      (function(){
+        var btn=document.getElementById('theme-toggle');
+        var icon=document.getElementById('theme-icon');
+        var html=document.documentElement;
+        function updateIcon(){
+          var isDark=html.getAttribute('data-theme')!=='light';
+          icon.textContent=isDark?'🌙':'☀️';
+        }
+        updateIcon();
+        btn.addEventListener('click',function(){
+          var current=html.getAttribute('data-theme');
+          var next=current==='light'?'dark':'light';
+          html.setAttribute('data-theme',next);
+          localStorage.setItem('theme',next);
+          updateIcon();
+        });
+      })();
+
+      // Mobile menu
+      (function(){
+        var btn=document.getElementById('menu-btn');
+        var nav=document.getElementById('mobile-nav');
+        btn.addEventListener('click',function(){
+          nav.classList.toggle('open');
+          btn.textContent=nav.classList.contains('open')?'✕':'☰';
+        });
+        nav.querySelectorAll('a').forEach(function(a){
+          a.addEventListener('click',function(){
+            nav.classList.remove('open');
+            btn.textContent='☰';
+          });
+        });
+      })();
+
+      // Scroll reveal
+      (function(){
+        var els=document.querySelectorAll('.card,.timeline-item,.metric,.section,.split');
+        els.forEach(function(el){el.classList.add('reveal')});
+        var obs=new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
+          });
+        },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+        els.forEach(function(el){obs.observe(el)});
+      })();
+    </script>
+  </body>
+</html>

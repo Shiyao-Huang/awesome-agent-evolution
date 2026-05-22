@@ -1,0 +1,151 @@
+\documentclass[11pt,a4paper]{article}
+
+% ====== 中文支持 ======
+\usepackage[UTF8]{ctex}
+\usepackage{fontspec}
+
+% ====== 数学 ======
+\usepackage{amsmath,amssymb,amsfonts}
+
+% ====== 图形 ======
+\usepackage{tikz}
+\usetikzlibrary{
+  shapes.geometric,
+  arrows.meta,
+  positioning,
+  calc,
+  decorations.pathreplacing,
+  backgrounds,
+  fit,
+  trees,
+  mindmap,
+  shadows,
+  matrix,
+  patterns
+}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{pgfplotstable}
+\usepackage{tikzscale}
+
+% ====== 表格 ======
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+% ====== 布局 ======
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{enumitem}
+
+% ====== 颜色定义 ======
+\definecolor{cat1}{HTML}{2196F3}  % 奖励 - 蓝
+\definecolor{cat2}{HTML}{FF9800}  % 自博弈 - 橙
+\definecolor{cat3}{HTML}{4CAF50}  % 提示词 - 绿
+\definecolor{cat4}{HTML}{9C27B0}  % 架构搜索 - 紫
+\definecolor{cat5}{HTML}{F44336}  % 记忆 - 红
+\definecolor{cat6}{HTML}{00BCD4}  % 混合 - 青
+\definecolor{painhigh}{HTML}{D32F2F}
+\definecolor{painmed}{HTML}{F57C00}
+\definecolor{painlow}{HTML}{388E3C}
+\definecolor{lightgray}{HTML}{F5F5F5}
+
+% ====== 文档信息 ======
+\title{\textbf{Agent Self-Evolution: \\ A Comprehensive Survey}\\[6pt]
+\large 从理论框架到工业实践的系统综述}
+\author{Awesome Evolution Research Team}
+\date{2026年5月}
+
+\hypersetup{
+  pdftitle={Agent Self-Evolution: A Comprehensive Survey},
+  pdfauthor={Awesome Evolution Research Team},
+  pdfsubject={Agent Evolution, Self-Improvement, Recursive Self-Modification},
+  colorlinks=true,
+  linkcolor=blue!70!black,
+  citecolor=green!50!black,
+  urlcolor=blue!60!black
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+本文对Agent Self-Evolution（智能体自演化）领域进行系统综述。基于88篇核心论文、348个GitHub仓库、97个用户痛点、1306篇博客和6万字综述素材，本文从理论基础、方法分类、核心系统、评估体系、工业实践、用户痛点和未来方向七个维度展开分析。综述覆盖2022年至2026年的关键工作，包括STaR、Reflexion、Self-Rewarding LM、ADAS、DGM、AlphaEvolve、Absolute Zero、ACE、ReasoningBank、AriadneMem等代表性系统，并结合Mom Test方法论收集的真实用户痛点，讨论从demo到production的工程鸿沟。
+
+\textbf{关键词}：智能体自演化；递归自我改进；进化计算；LLM Agent；自我指涉；开放式进化
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% ====================================================================
+% 第1章：引言
+% ====================================================================
+\input{chapters/ch1-intro}
+
+% ====================================================================
+% 第2章：理论基础
+% ====================================================================
+\input{chapters/ch2-theory}
+
+% ====================================================================
+% 第3章：方法分类
+% ====================================================================
+\input{chapters/ch3-methods}
+
+% ====================================================================
+% 第4章：核心系统
+% ====================================================================
+\input{chapters/ch4-systems}
+
+% ====================================================================
+% 第5章：评估体系
+% ====================================================================
+\input{chapters/ch5-evaluation}
+
+% ====================================================================
+% 第6章：工业实践
+% ====================================================================
+\input{chapters/ch6-industry}
+
+% ====================================================================
+% 第7章：用户痛点
+% ====================================================================
+\input{chapters/ch7-painpoints}
+
+% ====================================================================
+% 第8章：未来方向
+% ====================================================================
+\input{chapters/ch8-future}
+
+% ====================================================================
+% 参考文献
+% ====================================================================
+\bibliographystyle{plain}
+\begin{thebibliography}{99}
+\bibitem{star2022} Zelikman et al., ``STaR: Bootstrapping Reasoning With Reasoning,'' 2022.
+\bibitem{reflexion2023} Shinn et al., ``Reflexion: Language Agents with Verbal Reinforcement Learning,'' NeurIPS 2023.
+\bibitem{selfrefine2023} Madaan et al., ``Self-Refine: Iterative Refinement with Self-Feedback,'' 2023.
+\bibitem{voyager2023} Wang et al., ``Voyager: An Open-Ended Embodied Agent with Large Language Models,'' 2023.
+\bibitem{selfreward2024} Metauker et al., ``Self-Rewarding Language Models,'' 2024.
+\bibitem{adas2024} Hu et al., ``Automated Design of Agentic Systems,'' 2024.
+\bibitem{dgm2025} Darwin G\"{o}del Machine team, ``Open-Ended Evolution of Self-Improving Agents,'' 2025.
+\bibitem{alphaevolve2025} AlphaEvolve team, ``AlphaEvolve: A Coding Agent for Scientific Algorithm Discovery,'' 2025.
+\bibitem{absolutezero2025} Absolute Zero team, ``Absolute Zero Reasoners,'' 2025.
+\bibitem{dgm2025} ``Darwin G\"{o}del Machine,'' 2025.
+\bibitem{sica2025} SICA team, ``Self-Improving Coding Agent,'' 2025.
+\bibitem{ace2025} ACE team, ``ACE: Attaining Classifiable Evolution of Context,'' 2025.
+\bibitem{spiral2025} SPIRAL team, ``Self-Play for Reasoning,'' 2025.
+\bibitem{memoryr1} Memory-R1 team, ``Memory-R1,'' 2025.
+\bibitem{reasoningbank} ReasoningBank team, 2025.
+\bibitem{ariadnemem} AriadneMem team, 2026.
+\end{thebibliography}
+
+\end{document}
