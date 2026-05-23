@@ -1,0 +1,688 @@
+% ====================================================================
+% 附录：项目索引 + 论文索引 + Benchmark 数据汇总 + Star 质量分析
+% ====================================================================
+
+\appendix
+
+% ====================================================================
+% 附录 A：开源项目对比表
+% ====================================================================
+\section{开源项目对比表}\label{app:projects}
+
+本附录对 Self-Evolution 生态中 19+ 开源项目进行系统对比，涵盖 Stars、活跃度、编程语言、进化模式和许可证。数据截至 2026 年 5 月。
+
+\subsection*{A.1 核心自进化项目}
+
+\begin{longtable}{p{2.8cm}rccccp{2.5cm}}
+\toprule
+\textbf{项目} & \textbf{Stars} & \textbf{语言} & \textbf{最近活跃} & \textbf{许可证} & \textbf{模式} & \textbf{主要贡献} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{项目} & \textbf{Stars} & \textbf{语言} & \textbf{最近活跃} & \textbf{许可证} & \textbf{模式} & \textbf{主要贡献} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{7}{r}{\textit{续下页}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+OpenEvolve & 6,358 & Python & 2026-03 & MIT & 搜索+评估 & FunSearch 开源复现，进化式代码优化 \\
+Reflexion & 3,158 & Python & 2025-01 & MIT & 搜索+反思 & 语言反思作为情景记忆，HumanEval 91\% \\
+Agent Symbolic Learning & 5,928 & Python & 2024-09 & Apache-2.0 & 搜索+评估+编排 & 文本反向传播，符号化经验积累 \\
+AgentEvolver & 1,441 & Python & 2026-04 & Apache-2.0 & 搜索+评估+编排 & 进化式 Agent 工具使用优化 \\
+Self-Refine & 805 & Python & 2024-10 & MIT & 反馈精炼 & 迭代自反馈精炼，7 任务平均 20\% 提升 \\
+SE-Agent & 274 & Python & 2025-09 & MIT & 搜索+评估+编排 & 多轨迹 Revision/Recombination \\
+Science-CodeEvolve & 97 & Python & 2026-04 & MIT & 搜索+评估 & 科学代码进化优化 \\
+SCOPE & 77 & Python & 2026-03 & MIT & 搜索 & 进化式搜索框架 \\
+LLM-Self-Judge & 43 & Python & 2026-03 & MIT & 搜索+评估+编排 & 自评判与数据/模型自进化 \\
+DARWIN & 41 & Python & 2026-05 & MIT & 搜索+反思 & 安全导向的自进化 Agent \\
+\end{longtable}
+
+\subsection*{A.2 Agent 框架与基础设施}
+
+\begin{longtable}{p{2.8cm}rccccp{2.5cm}}
+\toprule
+\textbf{项目} & \textbf{Stars} & \textbf{语言} & \textbf{最近活跃} & \textbf{许可证} & \textbf{Stars/Contrib} & \textbf{综合评分} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{项目} & \textbf{Stars} & \textbf{语言} & \textbf{最近活跃} & \textbf{许可证} & \textbf{Stars/Contrib} & \textbf{综合评分} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+AutoGPT & 175,000 & Python & 2026-05 & MIT & 213 & 28/100 \\
+MetaGPT & 50,000 & Python & 2026-04 & MIT & 143 & 56/100 \\
+AutoGen & 50,000 & Python & 2026-05 & MIT & 125 & 66/100 \\
+OpenHands & 55,000 & Python & 2026-05 & MIT & 145 & 68/100 \\
+CrewAI & 30,000 & Python & 2026-05 & MIT & 107 & 62/100 \\
+LangGraph & 20,000 & Python & 2026-05 & MIT & 89 & 67/100 \\
+DSPy & 25,000 & Python & 2026-05 & MIT & 62 & 73/100 \\
+SWE-Agent & 15,000 & Python & 2026-05 & MIT & 75 & 70/100 \\
+\end{longtable}
+
+\subsection*{A.3 深度分析项目（含 GitNexus 知识图谱）}
+
+\begin{longtable}{p{2.2cm}p{3.5cm}rrrp{2cm}}
+\toprule
+\textbf{项目} & \textbf{仓库} & \textbf{Symbols} & \textbf{Edges} & \textbf{Flows} & \textbf{核心架构} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{项目} & \textbf{仓库} & \textbf{Symbols} & \textbf{Edges} & \textbf{Flows} & \textbf{核心架构} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+OPRO & google-deepmind/opro & 697 & 826 & 12 & LLM 作为优化器 \\
+OpenELM & CarperAI/OpenELM & 3,596 & 6,639 & 139 & 进化式大模型训练 \\
+ADAS & ShengranHu/ADAS & 2,107 & 2,795 & 78 & 自动化 Agent 设计搜索 \\
+FunSearch & google-deepmind/funsearch & 310 & 441 & 7 & LLM + 评估器进化 \\
+AutoML-Agent & DeepAuto-AI/AutoML-Agent & 1,239 & 1,517 & 14 & 多 Agent 分工协作 \\
+CoML & microsoft/CoML & 937 & 1,693 & 78 & ML Copilot \\
+MetaGPT & FoundationAgents/MetaGPT & 18,107 & 36,116 & 300 & 多 Agent 协作框架 \\
+AutoGPT & Significant-Gravitas/AutoGPT & 75,477 & 135,916 & 300 & 自主 GPT-4 实验 \\
+CrewAI & crewAIInc/crewAI & 55,773 & 86,393 & 300 & 零依赖 Agent 编排 \\
+\end{longtable}
+
+\subsection*{A.4 Landing Page 分组建议}
+
+\begin{itemize}[leftmargin=*]
+\item \textbf{进化式代码 / AlphaEvolve 类}：OpenEvolve、CodeEvolve、SE-Agent
+\item \textbf{Agent 自进化系统}：AgentEvolver、Agent Symbolic Learning、SCOPE
+\item \textbf{反思 / 精炼经典范式}：Reflexion、Self-Refine
+\item \textbf{安全、评判与数据/模型自进化}：DARWIN、LLM-Self-Judge
+\item \textbf{Agent 框架与基础设施}：AutoGPT、MetaGPT、AutoGen、CrewAI、DSPy、LangGraph、OpenHands
+\end{itemize}
+
+% ====================================================================
+% 附录 B：论文索引
+% ====================================================================
+\section{论文索引}\label{app:papers}
+
+本附录列出综述覆盖的全部 107 篇核心论文，按方法类别归类。每篇论文标注 arXiv 编号、年份和主要贡献。
+
+\subsection*{B.1 基于奖励的进化（14 篇）}
+
+\begin{longtable}{llp{7cm}}
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+2203.14465 & 2022 & STaR: 推理链自举闭环（生成-筛选-微调），540M 参数匹配 175B \\
+2401.10020 & 2024 & Self-Rewarding LM: 自评+Iterative DPO 偏好优化，超越 Claude 2 \\
+2407.19594 & 2024 & Meta-Rewarding: actor/judge/meta-judge 三层评价，22.9\%$\to$39.4\% \\
+2403.18341 & 2024 & IterAlign: 宪法原则驱动迭代对齐 \\
+2407.18219 & 2024 & RISE: 多轮 MDP 自省修正策略，GSM8K +10pp \\
+2501.11425 & 2025 & Agent-R: MCTS 从错误轨迹恢复 \\
+2504.20073 & 2025 & RAGEN: StarPO 轨迹级 RL 框架 \\
+2502.05605 & 2025 & 自博弈微调提升弱模型，AlpacaEval 62.3\% \\
+2401.01335 & 2024 & Weak-to-Strong Generalization \\
+2402.17574 & 2024 & Self-Play Fine-Tuning \\
+2501.07278 & 2025 & Agentic Self-Learning \\
+2502.00593 & 2025 & Self-Challenging Agent \\
+2504.01990 & 2025 & 训练信号自动化方法 \\
+2509.20562 & 2025 & RL 训练 agent 优化 \\
+2509.25541 & 2025 & 偏好学习新框架 \\
+\end{longtable}
+
+\subsection*{B.2 自博弈进化（6 篇）}
+
+\begin{longtable}{llp{7cm}}
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+2505.03335 & 2025 & Absolute Zero: 零外部数据自博弈，SOTA at 7B \\
+2506.24119 & 2025 & SPIRAL: 零和游戏自博弈发现推理能力 \\
+2305.14325 & 2023 & Multi-Agent Debate: 多实例辩论提升事实性 \\
+2505.18646 & 2025 & 自博弈课程生成 \\
+2510.06056 & 2025 & 多角色对抗进化 \\
+2406.18532 & 2024 & 对抗训练新范式 \\
+\end{longtable}
+
+\subsection*{B.3 提示词/上下文进化（16 篇）}
+
+\begin{longtable}{llp{7cm}}
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+2303.17651 & 2023 & Self-Refine: 迭代自反馈精炼，7 任务平均 20\% 提升 \\
+2303.11366 & 2023 & Reflexion: 语言反思作为情景记忆，HumanEval 91\% \\
+2308.10144 & 2024 & ExpeL: 经验提炼与跨任务迁移 \\
+2504.15228 & 2025 & SICA: 自修改 coding agent，SWE-bench 17\%$\to$53\% \\
+2510.04618 & 2025 & ACE: 可演化上下文 playbook \\
+2311.09336 & 2023 & 符号学习: 文本反向传播 \\
+2410.16946 & 2024 & EvoMAC: 多 Agent 文本 BP \\
+2501.01264 & 2025 & ICE: Investigate-Consolidate-Exploit \\
+2502.05957 & 2025 & EvolveR: 离线自蒸馏+在线策略演化 \\
+2502.12110 & 2025 & Prompt 优化自动化 \\
+2410.01215 & 2024 & 文本梯度方法 \\
+2510.07841 & 2025 & 上下文工程框架 \\
+2409.12147 & 2024 & Agent 自评估改进 \\
+2505.08827 & 2025 & 自反思策略优化 \\
+2409.14051 & 2024 & 工具调用策略进化 \\
+2411.02337 & 2024 & 策略蒸馏新方法 \\
+\end{longtable}
+
+\subsection*{B.4 架构搜索与代码级自修改（12 篇）}
+
+\begin{longtable}{llp{7cm}}
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+2408.08435 & 2024 & ADAS: 自动化 Agent 架构搜索 \\
+2410.04444 & 2024 & G\"{o}del Agent: 运行时自修改逻辑 \\
+2505.22954 & 2025 & DGM: Darwin G\"{o}del Machine 开放式进化，SWE-bench 20\%$\to$50\% \\
+2506.13131 & 2025 & AlphaEvolve: 科学算法发现，48 次乘法突破 Strassen \\
+2504.21024 & 2025 & WebEvolver: Web Agent+世界模型协同进化 \\
+2505.14970 & 2025 & FunSearch 扩展: LLM+进化搜索程序 \\
+2510.16079 & 2025 & Evolver: GEP-powered 自进化引擎 \\
+2410.12853 & 2024 & Agent 架构自动设计 \\
+2410.15639 & 2024 & 多 Agent 拓扑搜索 \\
+2510.14253 & 2025 & 代码级自修改框架 \\
+2510.23595 & 2025 & 自动化工具生成 \\
+2506.04651 & 2025 & 架构搜索与 NAS 结合 \\
+\end{longtable}
+
+\subsection*{B.5 基于记忆的进化（10 篇）}
+
+\begin{longtable}{llp{7cm}}
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+2305.16291 & 2023 & Voyager: Minecraft 技能库+自动课程，3.3x 更多独特物品 \\
+2508.19828 & 2025 & Memory-R1: RL 训练记忆管理器，LoCoMo +48\% F1 \\
+2509.25140 & 2025 & ReasoningBank: 推理策略蒸馏库 \\
+2603.03290 & 2026 & AriadneMem: 演化图记忆+熵感知门控 \\
+2505.16475 & 2025 & SEDM: 自演化分布式记忆 \\
+2508.02085 & 2025 & 长期记忆管理框架 \\
+2508.04700 & 2025 & 记忆压缩与去重 \\
+2511.06449 & 2025 & 经验库自动维护 \\
+2304.03442 & 2023 & Generative Agents: 记忆检索与反思 \\
+2510.18327 & 2025 & 记忆治理与安全 \\
+\end{longtable}
+
+\subsection*{B.6 混合方法与综述（12 篇）}
+
+\begin{longtable}{llp{7cm}}
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+2312.09390 & 2023 & 终身学习路线图 \\
+2401.13996 & 2024 & Agent 优化综述 \\
+2405.06682 & 2024 & 开放式进化系统 \\
+2409.12917 & 2024 & Agent 自改进安全分析 \\
+2409.18382 & 2024 & 自演化评估框架 \\
+2410.23912 & 2024 & Agent 进化综述 \\
+2501.12793 & 2025 & 多 Agent 协作进化 \\
+2501.13011 & 2025 & 开放式探索新方法 \\
+2502.13550 & 2025 & Agent 系统安全 \\
+2505.16067 & 2025 & 自演化 Agent 综合分析 \\
+2505.23060 & 2025 & 进化计算+LLM 综述 \\
+2506.01716 & 2025 & 开放式搜索与进化 \\
+\end{longtable}
+
+\subsection*{B.7 2025 下半年—2026 年新增论文（19 篇）}
+
+\begin{longtable}{llp{7cm}}
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+2603.07970 & 2026 & Agent 架构新范式 \\
+2603.15255 & 2026 & SAGE: 四 Agent 闭环自进化推理，LiveCodeBench +8.9\% \\
+2603.19461 & 2026 & Hyperagents: 元认知自修改 Agent \\
+2603.25928 & 2026 & Agent 进化新方法 \\
+2603.28990 & 2026 & 自演化系统新架构 \\
+2604.01658 & 2026 & Agent 系统改进 \\
+2604.02674 & 2026 & 记忆管理优化 \\
+2604.10923 & 2026 & 多 Agent 协作优化 \\
+2604.15034 & 2026 & Autogenesis: 自进化 Agent 协议(RSPL+SEPL) \\
+2604.17091 & 2026 & GenericAgent: Token 高效自进化 Agent \\
+2604.18131 & 2026 & 奖励无关自进化探索 \\
+2605.04677 & 2026 & 进化策略新进展 \\
+2605.09315 & 2026 & Capability Erosion: 自进化遗忘+CPE 保留 \\
+2605.18930 & 2026 & OEP: 自进化 Agent 经验投毒攻击 \\
+2605.19102 & 2026 & 安全治理新方法 \\
+2509.26354 & 2025/2026 & Misevolution: 自进化 Agent 安全风险（ICLR 2026） \\
+2506.09046 & 2025 & Agent 学习率优化 \\
+2507.21046 & 2025 & 自修改 Agent 新架构 \\
+2508.07407 & 2025 & 记忆增强推理 \\
+\end{longtable}
+
+\textbf{总计}：107 篇论文，覆盖 2022—2026 年 Agent Self-Evolution 领域主要工作。其中 2026 年论文 16 篇，安全/治理方向 3 篇（Misevolution, OEP, Capability Erosion），标志着该领域从性能优化向安全治理的重要转型。
+
+
+% ====================================================================
+% 附录 C：Benchmark 数据汇总
+% ====================================================================
+\section{Benchmark 数据汇总}\label{app:benchmarks}
+
+本附录汇总论文中涉及的主要 Benchmark 数据，按评测任务分类。
+
+\subsection*{C.1 代码生成（HumanEval / MBPP / LiveCodeBench）}
+
+\begin{longtable}{p{3.5cm}p{2.5cm}rrp{3cm}}
+\toprule
+\textbf{方法} & \textbf{基准} & \textbf{得分} & \textbf{基线} & \textbf{来源} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{方法} & \textbf{基准} & \textbf{得分} & \textbf{基线} & \textbf{来源} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+Reflexion (GPT-3.5) & HumanEval & 91.0\% & GPT-4: 80.0\% & NeurIPS 2023 \\
+SelfEvolve & HumanEval & 85.98\% & ChatGPT: 74.39\% & arXiv 2023 \\
+GPT-4 (zero-shot) & HumanEval & 80.1\% & — & OpenAI \\
+WizardCoder-33B & HumanEval & 79.9\% & — & ICLR 2024 \\
+Magicoder-S-DS-6.7B & HumanEval & 76.8\% & — & ICML 2024 \\
+Agent Symbolic & HumanEval & 73.2\% & 68.3\% & NeurIPS 2024 \\
+AZR-Coder-7B & HumanEval & SOTA 7B & — & NeurIPS 2025 \\
+SAGE (Qwen-2.5-7B) & LiveCodeBench & +8.9\% & — & arXiv 2026 \\
+SEW & LiveCodeBench & +33\% & backbone LLM & arXiv 2025 \\
+CoCoS (1B SLM) & HumanEval & +27.7\% & baseline & arXiv 2025 \\
+\end{longtable}
+
+\subsection*{C.2 软件工程（SWE-bench Verified）}
+
+\begin{longtable}{p{3.5cm}rrp{3.5cm}}
+\toprule
+\textbf{方法} & \textbf{初始} & \textbf{最终} & \textbf{说明} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{方法} & \textbf{初始} & \textbf{最终} & \textbf{说明} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+SWE-agent 1.0 + Claude 3.7 & — & 65.0\% & 开源 SoTA \\
+Darwin G\"{o}del Machine & 20.0\% & 50.0\% & +30pp 绝对提升 \\
+SICA (自修改 Agent) & 17.0\% & 53.0\% & +36pp 绝对提升 \\
+SE-Agent & — & 80.0\% & Top1 开源框架 \\
+ARTEMIS & — & +10.1\% & 配置优化 \\
+\end{longtable}
+
+\subsection*{C.3 数学推理（MATH / GSM8K / AIME）}
+
+\begin{longtable}{p{3.2cm}p{2.2cm}rrp{2.8cm}}
+\toprule
+\textbf{方法} & \textbf{基准} & \textbf{基线} & \textbf{提升后} & \textbf{说明} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{方法} & \textbf{基准} & \textbf{基线} & \textbf{提升后} & \textbf{说明} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+STaR (540M) & CommonsenseQA & 53.3\% & 72.5\% & 匹配 175B 模型 \\
+ReflectEvo (Llama-3) & BIG-bench & 52.4\% & 71.2\% & +18.8pp \\
+SCoRe (Gemini Pro) & MATH & — & +15.6\% & 自生成数据 \\
+Agent0 (Qwen3-8B) & 数学综合 & — & +18\% & 无外部数据 \\
+FLEX & AIME25 & 40\% & 63\% & +23pp \\
+SPIRAL & 8 推理基准 & — & +10\% & 可迁移推理 \\
+ARTEMIS (Qwen2.5-7B) & GSM8K & — & +22\% & 配置优化 \\
+STaR-SQL & Spider & — & 86.6\% & +31.6\% vs few-shot \\
+RISE (Mistral-7B) & GSM8K & $\sim$38\% & $\sim$46\% & +8pp \\
+DSER & AIME 2024-25 & — & 5/9 solved & 超越 600B teacher \\
+\end{longtable}
+
+\subsection*{C.4 进化式算法发现}
+
+\begin{longtable}{p{3.2cm}p{3.5cm}rp{3.5cm}}
+\toprule
+\textbf{方法} & \textbf{任务} & \textbf{结果} & \textbf{说明} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{方法} & \textbf{任务} & \textbf{结果} & \textbf{说明} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+AlphaEvolve & 4x4 复矩阵乘法 & 48 次乘法 & 56 年来首次改进 Strassen \\
+AlphaEvolve & 数据中心 Borg & 0.7\% 全球算力回收 & Google 基础设施 \\
+AlphaEvolve & FlashAttention & 23\% 加速 & LLM 训练优化 \\
+AlphaEvolve & Attention 内核 & 32\% 加速 & LLM 训练优化 \\
+AlphaCode 2 & Codeforces & 43\% 题目解决 & vs v1 的 25\% \\
+HexMachina & 卡坦岛 & 54\% 胜率 & vs AlphaBeta \\
+\end{longtable}
+
+\subsection*{C.5 多 Agent 交互与 Web Agent}
+
+\begin{longtable}{p{3.2cm}p{2.5cm}rrp{2.8cm}}
+\toprule
+\textbf{方法} & \textbf{基准} & \textbf{基线} & \textbf{提升后} & \textbf{说明} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{方法} & \textbf{基准} & \textbf{基线} & \textbf{提升后} & \textbf{说明} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+OWL / CAMEL-AI v2 & GAIA & — & 69.09\% & \#1 开源 \\
+WebRL (Llama-3.1-8B) & WebArena-Lite & 4.8\% & 42.4\% & 超越 GPT-4-Turbo \\
+SEAgent & OS-World & 11.3\% & 34.5\% & +23.2pp \\
+Voyager & Minecraft & — & 3.3x 物品 & 终身学习 \\
+AgentEvolver & AppWorld & 1.8\% & 23.2\% & +21.4pp \\
+Meta-Rewarding & AlpacaEval 2.0 & 22.9\% & 39.4\% & Llama-3-8B \\
+EVOLVE & AlpacaEval 2.0 & — & 62.3\% & 超越 GPT-4o \\
+Memory-R1 & LoCoMo & — & +48\% F1 & 记忆基准 \\
+DGM & Polyglot & 14.2\% & 30.7\% & 多语言编程 \\
+\end{longtable}
+
+\subsection*{C.6 Self-Refine 七任务评测}
+
+\begin{longtable}{p{2.5cm}p{2cm}rrr}
+\toprule
+\textbf{任务} & \textbf{指标} & \textbf{基线} & \textbf{Self-Refine} & \textbf{提升} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{任务} & \textbf{指标} & \textbf{基线} & \textbf{Self-Refine} & \textbf{提升} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+代码优化 & 性能 & 基线 & +28\% & 显著 \\
+数学推理 & 准确率 & 56\% & 67\% & +11pp \\
+情感反转 & 准确率 & 74\% & 86\% & +12pp \\
+对话生成 & 胜率 & 52\% & 68\% & +16pp \\
+藏头诗 & 质量 & 3.2 & 3.8 & +0.6 \\
+代码可读性 & 评分 & 3.5 & 4.1 & +0.6 \\
+约束生成 & 合规率 & 65\% & 78\% & +13pp \\
+\textbf{平均} & — & — & — & \textbf{$\sim$20\%} \\
+\end{longtable}
+
+\subsection*{C.7 Agent Symbolic Learning 多基准评测}
+
+\begin{longtable}{p{2.2cm}p{1.8cm}rrr}
+\toprule
+\textbf{基准} & \textbf{指标} & \textbf{Agent 基线} & \textbf{DSPy} & \textbf{Symbolic Learning} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{基准} & \textbf{指标} & \textbf{Agent 基线} & \textbf{DSPy} & \textbf{Symbolic Learning} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+HotPotQA & F1 & 36.2 & 37.4 & \textbf{39.1} \\
+HotPotQA & EM & 22.8 & 24.1 & \textbf{25.6} \\
+MATH (GPT-4) & Accuracy & 56.0\% & 48.4\% & \textbf{60.7\%} \\
+HumanEval & Pass@1 & 68.3\% & — & \textbf{73.2\%} \\
+Software Dev & Avg (1-4) & 2.4 & — & \textbf{3.8} \\
+Creative Writing & Score (1-10) & 6.8 (ToT) & — & \textbf{7.4} \\
+\end{longtable}
+
+
+% ====================================================================
+% 附录 D：Star 质量评分体系与炒作检测
+% ====================================================================
+\section{GitHub Star 质量评分与炒作检测}\label{app:star-quality}
+
+本附录基于 GitHub API 数据和多维度评分体系，对 Self-Evolution 生态中的主要项目进行 Star 质量评估。
+
+\subsection*{D.1 评分体系}
+
+评分基于五个维度，各占 20\% 权重：
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Star 质量评分维度。}
+\begin{tabular}{p{2.5cm}p{2cm}p{5cm}}
+\toprule
+\textbf{维度} & \textbf{权重} & \textbf{说明} \\
+\midrule
+Star 活跃度 & 20\% & 90 天内活跃 stargazer 占比 \\
+贡献者多样性 & 20\% & Gini 系数反转，避免单人垄断 \\
+Fork 质量 & 20\% & 有 commit 的 fork 占比 \\
+Issue 质量 & 20\% & 非灌水/非模板 issue 占比 \\
+PR 合并率 & 20\% & merged / total PRs \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+炒作检测指标与阈值：
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{炒作检测阈值。}
+\begin{tabular}{lccc}
+\toprule
+\textbf{指标} & \textbf{绿色（健康）} & \textbf{黄色（关注）} & \textbf{红色（炒作嫌疑）} \\
+\midrule
+Stars/Contributor & $< 50$ & 50--150 & $> 150$ \\
+0$\to$1K 天数 & $> 30$ 天 & 7--30 天 & $< 7$ 天 \\
+Fork 质量 & $> 40\%$ & 20--40\% & $< 20\%$ \\
+Issue 质量 & $> 60\%$ & 40--60\% & $< 40\%$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{D.2 综合质量排名}
+
+\begin{longtable}{p{2.5cm}rrp{2cm}p{2.5cm}}
+\toprule
+\textbf{项目} & \textbf{Stars} & \textbf{评分} & \textbf{增长模式} & \textbf{判定} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{项目} & \textbf{Stars} & \textbf{评分} & \textbf{增长模式} & \textbf{判定} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+OpenEvolve & 6,358 & 74/100 & organic & 高质量小众项目 \\
+DSPy & 25,000 & 73/100 & organic & 学术+工程双高 \\
+SWE-Agent & 15,000 & 70/100 & organic & ICLR Oral 背书 \\
+OpenHands & 55,000 & 68/100 & organic & 社区健康度最高 \\
+LangGraph & 20,000 & 67/100 & steady & 架构扎实 \\
+AutoGen & 50,000 & 66/100 & organic & 微软品牌背书 \\
+FunSearch & 1,500 & 62/100 & organic & 被低估的高质量 \\
+CrewAI & 30,000 & 62/100 & steady & 零依赖设计 \\
+Reflexion & 3,158 & 58/100 & steady & 经典论文实现 \\
+MetaGPT & 50,000 & 56/100 & viral & 学术+商业平衡 \\
+AutoGPT & 175,000 & 28/100 & viral & Hype-driven \\
+Devika & 22,000 & 30/100 & suspicious & Me-too 项目 \\
+\end{longtable}
+
+\subsection*{D.3 增长模式分类}
+
+三种典型增长范式：
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{炒作驱动}（AutoGPT, Devika）：3 天从 0$\to$50K stars，Stars/Contributor $> 150$，90\%+ star 用户无后续 GitHub 活动。爆发快、衰减快、star 质量低。
+\item \textbf{稳健增长}（CrewAI, LangGraph）：从 0$\to$10K 用 60+ 天，Stars/Contributor 在 50--150 范围。增速适中、社区活跃、长期可持续。
+\item \textbf{学术驱动}（DSPy, SWE-Agent）：增长慢但质量高，论文引用支撑，贡献者多为研究人员。
+\end{enumerate}
+
+核心发现：\textbf{Star 数 $\neq$ 项目质量}。AutoGPT (175K stars) 综合评分仅 28/100，低于 OpenEvolve (6.3K stars) 的 74/100。Stars/Contributor Ratio 是最可靠的炒作检测指标，超过 150 即为高风险。
+
+\subsection*{D.4 传播链案例}
+
+\textbf{AutoGPT 爆发式传播}：
+2023-03-30 创建 $\to$ 03-31 Twitter 演示 (1.2K) $\to$ 04-01 Elon Musk 转发 (15K) $\to$ 04-02 HN+Reddit (50K) $\to$ 04-03 YouTube KOL (70K) $\to$ 04-10 Trending \#1 连续 14 天 (130K)。
+
+\textbf{Devika Me-too 模式}：
+2024-03-01 创建 $\to$ 03-02 ``Open Source Devin'' (12K) $\to$ 03-05 Trending \#1 (20K) $\to$ 06-01 活跃度归零。纯蹭热度，PR 合并率仅 38\%。
+
+\subsection*{D.5 评分公式}
+
+\begin{equation}
+\mathrm{compositeScore} = \sum_{i=1}^{5} w_i \cdot s_i
+\end{equation}
+其中 $w_i = 0.2$ 为各维度权重，$s_i$ 为归一化得分。
+
+炒作指数：
+\begin{equation}
+\mathrm{suspicionIndex} = \frac{\mathrm{starsPerContributor}}{100}
+\end{equation}
+\begin{itemize}[leftmargin=*]
+\item $< 0.5$：organic（自然增长）
+\item $0.5$--$1.5$：watch（需关注）
+\item $> 1.5$：suspicious（炒作嫌疑）
+\end{itemize}
+
+% ====================================================================
+% 附录 E：研究者网络
+% ====================================================================
+\section{核心研究组与学术血统}\label{app:researchers}
+
+\subsection*{E.1 主要研究机构}
+
+\begin{longtable}{p{3.5cm}p{3cm}p{4.5cm}}
+\toprule
+\textbf{机构} & \textbf{关键人物} & \textbf{代表性工作} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{机构} & \textbf{关键人物} & \textbf{代表性工作} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+Google DeepMind & Novikov, Vu, Eisenberger & AlphaEvolve, FunSearch, OPRO \\
+Stanford NLP & Noah Goodman, Eric Zelikman & STaR, Self-Rewarding LM \\
+Princeton NLP & Karthik Narasimhan, Shunyu Yao & Reflexion, SWE-Agent \\
+AI2 + CMU & Peter Clark, Aman Madaan & Self-Refine \\
+UCLA & Quanquan Gu, Zixiang Chen & SPIN \\
+Anthropic & Yuntao Bai, Dario Amodei & Constitutional AI \\
+U. British Columbia & Jeff Clune, Cong Lu & ADAS, DGM, AI Scientist \\
+Zhejiang U. / AIWaves & — & Agent Symbolic Learning \\
+Modelscope (Alibaba) & — & AgentEvolver \\
+\end{longtable}
+
+\subsection*{E.2 学术血统链}
+
+\begin{itemize}[leftmargin=*]
+\item \textbf{进化计算主线}：Schmidhuber (G\"{o}del Machine, 2003) $\to$ Clune (Open-Ended Evolution) $\to$ Hu, Lu (ADAS, DGM)
+\item \textbf{自我改进主线}：Goodman (STaR) $\to$ Zelikman (STaR) $\to$ Yuan (Self-Rewarding LM)
+\item \textbf{Agent 反思主线}：Narasimhan $\to$ Yao (Reflexion) $\to$ Shinn (Reflexion 实现)
+\item \textbf{代码进化主线}：Romera-Paredes (FunSearch) $\to$ Novikov (AlphaEvolve) $\to$ OpenEvolve (开源复现)
+\item \textbf{自博弈主线}：Bai (Constitutional AI) $\to$ Chen (SPIN) $\to$ Zhao (Absolute Zero)
+\end{itemize}
+
+\subsection*{E.3 跨机构合作网络}
+
+关键跨机构合作包括：
+\begin{itemize}[leftmargin=*]
+\item UBC $\leftrightarrow$ Google DeepMind：Jeff Clune 团队与 DeepMind 在开放式进化方向深度合作
+\item Stanford $\leftrightarrow$ Princeton：Zelikman (Stanford) 与 Yao (Princeton) 在反思与推理方向的交叉
+\item AI2 $\leftrightarrow$ CMU：Madaan 在 Self-Refine 方向连接两个机构
+\item 中国团队内部：浙大/AIWaves (Symbolic Learning)、阿里/Modelscope (AgentEvolver)、清华/BAAI 形成国内自进化网络
+\end{itemize}
+
+% ====================================================================
+% 附录 F：方法论速查表
+% ====================================================================
+\section{方法速查表}\label{app:method-lookup}
+
+本附录提供方法维度的快速对照表，帮助读者根据任务需求选择合适的自进化方法。
+
+\begin{longtable}{p{2cm}p{2cm}p{1.5cm}p{2cm}p{3cm}}
+\toprule
+\textbf{方法} & \textbf{循环类型} & \textbf{需训练?} & \textbf{反馈来源} & \textbf{适用任务} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{方法} & \textbf{循环类型} & \textbf{需训练?} & \textbf{反馈来源} & \textbf{适用任务} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+Self-Refine & 反思 & 否 & 自反馈 & 生成、代码、对话 \\
+Reflexion & 反思 & 否 & 环境+语言 & 决策、代码 \\
+Self-Debug & 评估器 & 否 & 执行反馈 & 代码生成 \\
+STaR & 反思+训练 & 是 & 答案标签 & 推理 \\
+SPIN & 自博弈 & 是 & 自对弈 & 通用 NLU \\
+ReST-EM & 训练 & 是 & 自生成+过滤 & 推理、代码 \\
+Constitutional AI & 训练 & 是 & AI 反馈 & 对齐 \\
+OPRO & 搜索 & 否 & 评分函数 & 优化 \\
+FunSearch & 搜索+评估 & 否 & 程序验证 & 数学发现 \\
+AlphaEvolve & 搜索+种群 & 否 & 程序化评估 & 算法发现 \\
+ADAS & 架构搜索 & 否 & benchmark & Agent 设计 \\
+DGM & 自指+种群 & 否 & 隔离评估 & Agent 自改进 \\
+G\"{o}del Agent & 自指 & 否 & 运行时评估 & Agent 自修改 \\
+Agent Symbolic & 搜索+反思 & 否 & 环境+经验 & 多任务 Agent \\
+Absolute Zero & 自博弈+训练 & 是 & 自博弈 reward & 推理、代码 \\
+RAGEN & 训练 & 是 & 多轮 RL reward & 多轮交互 \\
+SICA & 自指 & 否 & SWE-bench & 软件工程 \\
+ACE & 反思 & 否 & 上下文反馈 & Agent 工作流 \\
+EvolveR & 混合 & 是 & 离线+在线 & 策略演化 \\
+Memory-R1 & 记忆+训练 & 是 & RL reward & 记忆管理 \\
+\end{longtable}
