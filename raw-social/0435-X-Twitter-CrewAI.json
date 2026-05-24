@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/crewAIInc AI agent OR agents",
+  "search_rank": 10,
+  "name": "CrewAI",
+  "url": "https://x.com/crewAIInc/status/1833134025961087387",
+  "snippet": "... AI agents: ✓ Share ideas for building and orchestrating AI agent teams with CrewAI ✓ Get feedback and solutions to your agentic code ... date: Sep 9, 2024 ---",
+  "id": 435,
+  "platform": "X/Twitter",
+  "content": "... AI agents: ✓ Share ideas for building and orchestrating AI agent teams with CrewAI ✓ Get feedback and solutions to your agentic code ... date: Sep 9, 2024 ---",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Sep 9, 2024 ---",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2024-Q1"
+}

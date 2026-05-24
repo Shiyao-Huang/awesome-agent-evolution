@@ -1,0 +1,35 @@
+{
+  "id": 82,
+  "name": "Create MultiAgent with Autogen | AGENTIC AI - YouTube",
+  "url": "https://www.youtube.com/watch?v=muSam6Yy8lM",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=muSam6Yy8lM\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Create MultiAgent with Autogen | AGENTIC AI Description: Join me for an engaging live session where we dive into Autogen, that makes building AI agents a breeze! 🌟🤖 Discover how you can harness this framework to create efficient, interactive agents for various applications with minimal setup and maximum flexibility. 🔑 What You'll Learn: Introduction to Autogen: AutoGen is a framework for creating multi-agent AI applications that can act autonomously or work alongside humans. Step-by-step guide to building AI agents using Autogen Live coding demo & interactive Q&A session 🎟 Admission Link: https://bit.ly/4a3CYkE 📚 Upcoming Bootcamp Alert! I'm thrilled to share details about our first live batch for the Agentic AI and Generative AI Application with Cloud Bootcamp (AWS & GCP), starting January 25, 2025! 📌 Bootcamp Highlights: Duration: 4-5 months (Saturday & Sunday, 3 PM - 6 PM IST) Mentors",
+  "content_timestamp": "2025-01-25",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2025-01",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, AutoGen",
+    "representative_works": [
+      "Create MultiAgent with Autogen | AGENTIC AI - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

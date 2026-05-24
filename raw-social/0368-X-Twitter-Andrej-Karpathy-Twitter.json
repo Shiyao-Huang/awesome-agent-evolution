@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/karpathy AI agent OR agents",
+  "search_rank": 3,
+  "name": "Andrej Karpathy - Twitter",
+  "url": "https://x.com/karpathy",
+  "snippet": "I like to train large deep neural nets. Previously Director of AI @ Tesla, founding team @ OpenAI, PhD @ Stanford. Posts. Pinned Post.",
+  "id": 368,
+  "platform": "X/Twitter",
+  "content": "I like to train large deep neural nets. Previously Director of AI @ Tesla, founding team @ OpenAI, PhD @ Stanford. Posts. Pinned Post.",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

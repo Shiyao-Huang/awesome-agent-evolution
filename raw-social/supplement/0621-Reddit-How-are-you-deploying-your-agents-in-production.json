@@ -1,0 +1,80 @@
+{
+  "id": 621,
+  "name": "How are you deploying your agents in production?",
+  "url": "https://www.reddit.com/r/LangChain/comments/1gxnse4/how_are_you_deploying_your_agents_in_production/",
+  "platform": "Reddit",
+  "subreddit": "LangChain",
+  "extraction_status": "ok",
+  "anysearch_extract_status": "failed:extract_upstream_error\nupstream returned error: HTTP 403 403 Forbidden",
+  "content_timestamp": "2024-11-23",
+  "collected_at": "2026-05-21T22:23:52+08:00",
+  "time_slice": "2024-11",
+  "query": "site:reddit.com/r/LangChain/comments agent production pain",
+  "source": "builder-b-raw-social-supplement-2026-05-21",
+  "score": 48,
+  "num_comments": 36,
+  "author": "Consistent_Yak6765",
+  "content": "# How are you deploying your agents in production?\n\nSource: https://www.reddit.com/r/LangChain/comments/1gxnse4/how_are_you_deploying_your_agents_in_production/\nSubreddit: r/LangChain\nAuthor: u/Consistent_Yak6765\nScore: 48 | Comments: 36\nCreated: 2024-11-23\n\n## Post Body\nHi all,\n\nWe've been building agents for quite some time and often face issues trying to make them work reliably together.\n\nLangChain with LangSmith has been extremely helpful, but the available tools for debugging and deploying agents still feel inadequate. I'm curious about what others are using and the best practices you're following in production:\n\n1. **How are you deploying complex single agents in production?** *For us, it feels like deploying a massive monolith, and scaling each one has been quite costly.*\n2. **Are you deploying agents in distributed environments?** *While it has helped, it also introduced a whole new set of challenges.*\n3. **How do you ensure reliable communication between agents in centralized/distributed setups?** *This is our biggest pain point, often leading to failures due to a lack of standardized message-passing behavior. We've tried standardizing it, but teams keep tweaking things, causing frequent breakages.*\n4. **What tools are you using to trace requests across multiple agents?** We've tried Langsmith, *Opentelemetry, and others, but none feel purpose-built for this use case.*\n5. **Any other pain points in making agents/multi-agent systems work in production?** *We face a lot of other smaller issues. Would love to hear your thoughts.*\n\nI feel many agent deployment/management issues stem from the ecosystem's rapid evolution, but that doesn't justify the lack of robust support.\n\nHonestly, I'm asking this to understand the current state of operations and explore potential solutions for myself and others. Any insights or experiences you can share would be greatly appreciated.\n\n## Top Comments\n\n### Comment 1 — u/[deleted] (score 7)\n[deleted]\n\n### Comment 2 — u/AdditionalWeb107 (score 6)\nFor #3 - this project is squarely trying to solve the observability for agents, between agents and give developers a way to build powerful agents using just APIs (so that you can decouple things better/faster) https://github.com/katanemo/archgw. I will say that agent to agent tracing isn't precise today, but that's where the project is headed. Its built on Envoy - so its distributed by nature\n\n### Comment 3 — u/310paul310 (score 4)\nThere are some actual challenges in high volume setups you haven't mentioned:\n\n1. Rate limits. You can easily get your SOTA-models API calls via the actual vendor, but if you've got high-volume setup - you are either limited with the choice of the models or you have to negotiate with the vendor / reseller (like MS if you're using OpenAI models).\n2. Code optimization - frameworks like langchain or haystack are not really about performance - chances are you have to rewrite some of the abstractions.\n\nSpeaking about high-volume python code: it's usually Redis + Celery + Flower. Solving most of the problems you've mentioned, IMHO.\n\nIf you're unhappy with the tracing solutions for your high-volume setup - maybe the way to go is to build your own tracing.\n\n### Comment 4 — u/foobarbazquix (score 2)\ntemporal.io\n\n### Comment 5 — u/chonbee (score 1)\nRemindMe! 5 days\n\n### Comment 6 — u/sandys1 (score 1)\nCould you talk about \"communication between agents\". Generally speaking, your router would invoke your agents. Why are agents communicating between each other.\n\nP.S. I build https://github.com/arakoodev/EdgeChains\nAnd am trying to think about and fix some of these issues\n\n### Comment 7 — u/visualagents (score 1)\n100% at the edge\n\n### Comment 8 — u/oddnearfuture (score 1)\nRemind me 1 day\n\n### Comment 9 — u/Dark_elon (score 1)\nRemindMe! 1 Day\n\n### Comment 10 — u/Tedddybeer (score 1)\nRemindMe! 5 days",
+  "top_comments": [
+    {
+      "author": "[deleted]",
+      "score": 7,
+      "created_utc": 1732369657.0,
+      "body": "[deleted]"
+    },
+    {
+      "author": "AdditionalWeb107",
+      "score": 6,
+      "created_utc": 1732334845.0,
+      "body": "For #3 - this project is squarely trying to solve the observability for agents, between agents and give developers a way to build powerful agents using just APIs (so that you can decouple things better/faster) https://github.com/katanemo/archgw. I will say that agent to agent tracing isn't precise today, but that's where the project is headed. Its built on Envoy - so its distributed by nature"
+    },
+    {
+      "author": "310paul310",
+      "score": 4,
+      "created_utc": 1732344661.0,
+      "body": "There are some actual challenges in high volume setups you haven't mentioned:\n\n1. Rate limits. You can easily get your SOTA-models API calls via the actual vendor, but if you've got high-volume setup - you are either limited with the choice of the models or you have to negotiate with the vendor / reseller (like MS if you're using OpenAI models).\n2. Code optimization - frameworks like langchain or haystack are not really about performance - chances are you have to rewrite some of the abstractions.\n\nSpeaking about high-volume python code: it's usually Redis + Celery + Flower. Solving most of the problems you've mentioned, IMHO.\n\nIf you're unhappy with the tracing solutions for your high-volume setup - maybe the way to go is to build your own tracing."
+    },
+    {
+      "author": "foobarbazquix",
+      "score": 2,
+      "created_utc": 1732406607.0,
+      "body": "temporal.io"
+    },
+    {
+      "author": "chonbee",
+      "score": 1,
+      "created_utc": 1732354109.0,
+      "body": "RemindMe! 5 days"
+    },
+    {
+      "author": "sandys1",
+      "score": 1,
+      "created_utc": 1732387626.0,
+      "body": "Could you talk about \"communication between agents\". Generally speaking, your router would invoke your agents. Why are agents communicating between each other.\n\nP.S. I build https://github.com/arakoodev/EdgeChains\nAnd am trying to think about and fix some of these issues"
+    },
+    {
+      "author": "visualagents",
+      "score": 1,
+      "created_utc": 1732389168.0,
+      "body": "100% at the edge"
+    },
+    {
+      "author": "oddnearfuture",
+      "score": 1,
+      "created_utc": 1732507546.0,
+      "body": "Remind me 1 day"
+    },
+    {
+      "author": "Dark_elon",
+      "score": 1,
+      "created_utc": 1732530121.0,
+      "body": "RemindMe! 1 Day"
+    },
+    {
+      "author": "Tedddybeer",
+      "score": 1,
+      "created_utc": 1732587931.0,
+      "body": "RemindMe! 5 days"
+    }
+  ]
+}

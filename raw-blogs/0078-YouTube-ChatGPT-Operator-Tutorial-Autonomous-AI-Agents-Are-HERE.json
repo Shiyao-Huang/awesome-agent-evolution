@@ -1,0 +1,35 @@
+{
+  "id": 78,
+  "name": "ChatGPT Operator Tutorial | Autonomous AI Agents Are HERE!",
+  "url": "https://www.youtube.com/watch?v=I4beIbJT8wE",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=I4beIbJT8wE\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "ChatGPT Operator Tutorial | Autonomous AI Agents Are HERE! Here's a quick tutorial to learn how to use ChatGPT Operator! This is their Autonomous AI agent! This is going to be 99% of people's first agentic AI experience, and is a great sample of what is coming! but you can see all of right it's using Bing browser it's searching Docs it also testing it I wanted to test multi-step and see what I want to get this is what I'm most 'll see this blows my mind know what fields didn't give 's going to do when",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent",
+    "representative_works": [
+      "ChatGPT Operator Tutorial | Autonomous AI Agents Are HERE!"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

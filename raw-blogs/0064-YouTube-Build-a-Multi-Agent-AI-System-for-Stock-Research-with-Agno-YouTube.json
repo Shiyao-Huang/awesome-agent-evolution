@@ -1,0 +1,35 @@
+{
+  "id": 64,
+  "name": "Build a Multi-Agent AI System for Stock Research with Agno - YouTube",
+  "url": "https://www.youtube.com/watch?v=Vn3JO83owcM",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=Vn3JO83owcM\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Build a Multi-Agent AI System for Stock Research with Agno | Open Source AI Agent Framework Tutorial - Channel - Views: 3. Learn how to build a powerful multi-agent AI system for stock market research using Agno — an open-source agent framework in Python. In this tutorial, we’ll explore how Agno simplifies the creation of AI agents that can use tools, follow instructions, etc. Perfect for developers and AI enthusiasts looking to automate trading research with intelligent agents. Hello everyone, I am Sedharthan. In this video, we will explore how to build a stock research multi- aent system using Agno in Python. Agno is an open-source framework that makes it easy to create powerful AI agents. These agents can use tools, follow custom instructions, access, knowledge, sources, and even retain memory all with minimal steps. So if you are curious about how to build intelligent collaborative a",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, memory",
+    "representative_works": [
+      "Build a Multi-Agent AI System for Stock Research with Agno - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

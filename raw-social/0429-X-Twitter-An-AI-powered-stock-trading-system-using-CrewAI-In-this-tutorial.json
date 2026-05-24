@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/crewAIInc AI agent OR agents",
+  "search_rank": 4,
+  "name": "An AI-powered stock trading system using #CrewAI. In this tutorial ...",
+  "url": "https://x.com/crewAIInc/status/1941560228358783049",
+  "snippet": "An AI-powered stock trading system using #CrewAI. In this tutorial, Siddhardhan walks through how a crew of #AI agents: ✓ Analyzes live ... date: Jul 5, 2025",
+  "id": 429,
+  "platform": "X/Twitter",
+  "content": "An AI-powered stock trading system using #CrewAI. In this tutorial, Siddhardhan walks through how a crew of #AI agents: ✓ Analyzes live ... date: Jul 5, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jul 5, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

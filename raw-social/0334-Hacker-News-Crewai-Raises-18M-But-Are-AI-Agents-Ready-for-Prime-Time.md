@@ -1,0 +1,13 @@
+# Crewai Raises $18M–But Are AI Agents Ready for Prime Time?
+
+- URL: https://news.ycombinator.com/item?id=41918658
+- Platform: Hacker News
+- Extraction status: fallback_snippet
+- content_timestamp: unknown
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+- Query: site:news.ycombinator.com/item "CrewAI"
+
+## Raw Content
+
+Crewai Raises $18M–But Are AI Agents Ready for Prime Time? | Hacker News | Hacker News new| past| comments| ask| show| jobs| submit | login | | --- | --- | | Crewai Raises $18M–But Are AI Agents Ready for Prime Time?(yahoo.com) | | --- | | 4 points by fsndz on Oct 22, 2024| hide| past| favorite| 3 comments | fsndz on Oct 22, 2024 [–] Saw that Crewai just raised $18 million for their multi-agent platform, but I’m struggling to understand the value beyond what you can do with vanilla API calls to OpenAI or something like DSPy/OpenAI Swarm. From what I’ve seen, AI agents aren’t even close to being reliable for real-world tasks yet. What am I missing here? Is there something about Crewai’s approach that’s genuinely groundbreaking, or are they just riding the AI hype? Would love to get educated on this. Links: https://www.lycee.ai/blog/ai-agents-automation-eng Crewai’s funding announcement: https://finance.yahoo.com/news/crewai-launches-multi-agentic... Looking forward to hearing your thoughts! NomDePlum on Oct 22, 2024| [–] Had a play about with it for a few weeks. Was interesting enough but didn't really get to the point were having multiple LLMs combining their various outputs felt like much of a benefit. The founder seemed super enthusiastic and constantly tweeting about how great everything was. My guess is it's mostly hype but I guess now they have funding they might prove me wrong. fsndz on Oct 22, 2024| | [–] I had the exact same experience. Just calling an API call "agent" and giving it a system prompt like "you are a robust data analyst" doesn’t magically make it one. That’s not how it works. My first conclusion is that it’s mostly hype. And honestly, $18M isn’t nearly enough to make AI agents reliable and useful, because solving that would require breakthroughs in reasoning—something we're nowhere close to. Even o1 fails miserably at most real life reasoning tasks despite the hype from openai. (https://www.lycee.ai/blog/why-sam-altman-is-wrong) It seems Crewai is more focused on deploying AI agents now, hoping that reliability will eventually come from improvements made by foundation model companies. But that's a highly uncertain, almost wishful, scenario. And they shouldn't go around screaming that AI agents are reliable in production yet. | Guidelines| FAQ| Lists| API| Security| Legal| Apply to YC| Contact Search: | | --- |

@@ -1,0 +1,35 @@
+{
+  "id": 79,
+  "name": "Claude Engineer V3: Self-Evolving AI Agent (GitHub Open Source)",
+  "url": "https://www.youtube.com/watch?v=mspXJaWagdw",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "self_evolving_agent",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=mspXJaWagdw\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Claude Engineer V3: Self-Evolving AI Agent (GitHub Open Source) - Channel: AI PI - Length: 03:03 - Views: 2.2K - Likes: 47 - Published: 2024-12-27T10:15:06-08:00 - Category: Howto & Style - Keywords: claude engineer v3, new claude engineer ai coder, new ai coding claude engineer, ai coding with claude engineer, new ai coding engineer, ai coder new, new self evolving ai coding agent, new ai coding self evolving, self evolving ai coding agent, ai coding with claude engineer new, new claude 3.5 sonnet ai coder, new ai coder, aider, cline, cursor alternative, bolt alternative, v0 alternative - Language: en #githubprojects #aiprojects #autogpttutorials Discover Claude Engineer V3, a powerful self-evolving AI coding agent 🚀 available as an open-source project on GitHub. Build tools, boost productivity, and explore cutting-edge AI innovation 🌟. Perfect for developers and tech enthusiasts! hey t",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, self-evolving",
+    "representative_works": [
+      "Claude Engineer V3: Self-Evolving AI Agent (GitHub Open Source)"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

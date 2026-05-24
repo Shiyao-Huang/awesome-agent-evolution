@@ -1,0 +1,35 @@
+{
+  "id": 147,
+  "name": "The Four Types of Memory Every AI Agent Needs - YouTube",
+  "url": "https://www.youtube.com/watch?v=hiuozSx9dWM",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=hiuozSx9dWM\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Oracle’s Director of AI Developer Experience Richmond Alake returns to the show to talk to @JonKrohnLearns about agent memory; the network of systems, models, databases and LLMs that enable AI agents to learn and adapt over time. Listen to the episode to hear about Richmond’s “100 Days of Agent Memory” initiative, retrieval-augmented generation’s (RAG) limitations with AI agents, the layers of the AI agent stack, and what makes the Oracle AI database so useful to developers. In order to build an effective agentic AI application, there are lots of things you have to get right. But one area that particularly requires [music] a lot of attention and has not been getting enough of it in recent months is agent [music] memory. Welcome to another episode of the Super Data Science podcast. I'm your [music] host John Krohn. Today I'm joined for the third time on this podcast by Richmond Alake, and",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, memory",
+    "representative_works": [
+      "The Four Types of Memory Every AI Agent Needs - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

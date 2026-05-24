@@ -1,0 +1,13 @@
+# The recursive self improving AI is the pipe dream. | Hacker News
+
+- URL: https://news.ycombinator.com/item?id=45657235
+- Platform: Hacker News
+- Extraction status: fallback_snippet
+- content_timestamp: unknown
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+- Query: site:news.ycombinator.com/item "self-improving AI"
+
+## Raw Content
+
+The recursive self improving AI is the pipe dream. | Hacker News | Hacker News new| past| comments| ask| show| jobs| submit | login | | --- | --- | rhetocj23 4 months ago| parent| context| favorite| on: AI is making us work more The recursive self improving AI is the pipe dream. byyoung3 4 months ago [–] until it works rhetocj23 4 months ago| | [–] Only the naive trust the tech over-lords. baconbrand 4 months ago| | [–] yes… just one more data center… one more model… one million more gallons of water… it’s going to work any second now, I swear… we definitely can get human level output without human level intelligence… i promise… byyoung3 4 months ago| | | [–] im not a sam altman hypebeast. My point is we are so early. Nobody thought todays LLM's were possible 3 years ago. rhetocj23 4 months ago| | | [–] My use of LLMs has declined not increased. Some of us are way ahead of the curve of understanding what these things can and cant do, and will not do due to fundamental issues the technology faces. antonvs 4 months ago| | | [–] Model output is already superhuman in many significant respects, which raises the question: what are you talking about? rhetocj23 4 months ago| | [–] Superhuman my arse. antonvs 4 months ago| | [–] Any recent LLM can converse in more natural languages than you, can write code in more programming languages than you and do it much quicker than you, can find bugs quicker than you, can extract useful information from large amounts of text quicker than you, can produce a more balanced take on many issues than you. The list goes on. Your denial of this is either ignorance or a coping mechanism. Either way, I recommend learning more about the subject and getting meaningful experience with it in order to address those shortcomings. baconbrand 4 months ago| | [–] not to beat a dead horse but… they can’t do any of this. they can do about 20-90% of this and then hallucinate the rest, rendering the entire thing useless I’m really not sure what your angle is here in ignoring that basic fact | Guidelines| FAQ| Lists| API| Security| Legal| Apply to YC| Contact Search: | | --- | ---

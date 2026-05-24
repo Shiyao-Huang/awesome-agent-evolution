@@ -1,0 +1,15 @@
+{
+  "query": "site:blog.csdn.net AI Agent 自我改进",
+  "search_rank": 1,
+  "name": "Gödel Agent: 一种自我递归改进的智能体框架",
+  "url": "https://blog.csdn.net/m0_59235699/article/details/143579245",
+  "snippet": "Gödel Agent: 一种自我递归改进的智能体框架\\_递归自我改进-CSDN博客 # Gödel Agent: 一种自我递归改进的智能体框架 m0\\_59235699 article/details/143579245 文章提出了“Gödel Agent”，一种新型的自我递归改进智能体框架，旨在克服传统智能体系统的局限性。该框架通过大型语言模型（LLM）实现智能体的自我感知、自我修改和持续优化，能够在没有人工设计的前提下，根据高层目标动态调整自身逻辑和行为。实验结果显示，Gödel Agent在多项任务中表现优于传统的手工设计智能体和固定的元学习优化智能体，展现出更高的性能、效率和适应性。这一研究为未来智能体的自主发展提供了新思路，强调了LLM在自主系统中的潜力。 ### 1 Gödel Agent 一种自我递归改进的智能体框架，灵感来源于Gödel机器理论。它允许智能体在没有预定义例程的情况下，动态调整自身的逻辑和行为。 自我感知：Gödel Agent能够读取和理解自身的运行状态，从而进行自我优化。 自我修改：智能体可以修改自己的代码和操作逻辑，以适应不同的任务需求。 递归自我改进：通过持续的自我分析和反馈循环，Gödel Agent可以逐步提高其性能和效率。 动态记忆管理：通过运行时内存的动态读写，Gödel Agent可以实时调整其行为和策略。 ### 如何学习大模型AI ？",
+  "id": 109,
+  "platform": "CSDN",
+  "content": "extract failed: fetch failed: Get \"https://blog.csdn.net/m0_59235699/article/details/143579245\": net/http: TLS handshake timeout",
+  "extraction_status": "ok",
+  "error": "",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

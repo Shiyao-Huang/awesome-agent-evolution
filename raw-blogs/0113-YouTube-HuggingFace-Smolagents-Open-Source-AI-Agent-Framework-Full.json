@@ -1,0 +1,35 @@
+{
+  "id": 113,
+  "name": "HuggingFace Smolagents Open Source AI Agent Framework Full ...",
+  "url": "https://www.youtube.com/watch?v=WoosiKbOAqU",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=WoosiKbOAqU\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "HuggingFace Smolagents Open Source AI Agent Framework Full Setup Tutorial Guide HuggingFace Smolagents Open Source AI Agent Framework Full Setup Tutorial Guide Unlock the power of AI agents for content creation! In this comprehensive guide, learn how to automate your creative projects using Hugging Face's Smolagents AI framework. Discover the step-by-step process of integrating AI agents with language models like LLaMA to streamline tasks such as writing movie scripts, generating short stories, and more. Explore practical examples, including how to set up the framework, use web tools like DuckDuckGo for information gathering, and manage multiple agents for efficient workflow. Whether you're a content creator, writer, or tech enthusiast, this video will show you how to harness the potential of Smolagents to enhance your creative process. Watch now and take your content creation to the nex",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, workflow",
+    "representative_works": [
+      "HuggingFace Smolagents Open Source AI Agent Framework Full ..."
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

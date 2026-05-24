@@ -1,0 +1,35 @@
+{
+  "id": 146,
+  "name": "The Agentic AI Era | Salesforce AI Research - YouTube",
+  "url": "https://www.youtube.com/watch?v=D6zHWQP15K8",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=D6zHWQP15K8\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "AI agents are progressing from simple task execution to complex cross-organizational collaboration, all conducted by human vision and expertise. Learn more about this vision for the future of enterprise AI from Salesforce Chief Scientist Silvio Savarese here: https://sforce.co/4fQku8a Additional Resources Learn about What are AI Agents? https://www.salesforce.com/agentforce/ai-agents/ What is Agentic AI? https://www.salesforce.com/agentforce/what-is-agentic-ai/ - 00:01 The Agentic Era Begins: We are entering the era of agentic AI, where digital labor acts as a new instrument revolutionizing business operations. - 00:12 The Three-Stage Agent Evolution: AI agents are evolving from solo performers to orchestrated ensembles through three distinct stages. - 00:30 Stage 1: Monophonic Agents: These act as solo instruments, mastering specialized, routine tasks across industries while remaining g",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent",
+    "representative_works": [
+      "The Agentic AI Era | Salesforce AI Research - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

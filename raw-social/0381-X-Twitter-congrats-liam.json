@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/sama AI agent OR agents",
+  "search_rank": 6,
+  "name": "congrats, liam!",
+  "url": "https://x.com/sama/status/1973074276765835657",
+  "snippet": "Our goal is to create an AI scientist. Science works by conjecturing how the world might be, running experiments, and learning from the results. Intelligence is ...",
+  "id": 381,
+  "platform": "X/Twitter",
+  "content": "Our goal is to create an AI scientist. Science works by conjecturing how the world might be, running experiments, and learning from the results. Intelligence is ...",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

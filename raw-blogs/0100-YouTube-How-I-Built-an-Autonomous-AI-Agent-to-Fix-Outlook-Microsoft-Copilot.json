@@ -1,0 +1,35 @@
+{
+  "id": 100,
+  "name": "How I Built an Autonomous AI Agent to Fix Outlook (Microsoft Copilot ...",
+  "url": "https://www.youtube.com/watch?v=Y8NmL93HzdI",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=Y8NmL93HzdI\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "How I Built an Autonomous AI Agent to Fix Outlook (Microsoft Copilot Studio Tutorial) Learn how to build an Autonomous Copilot Agent in Microsoft Copilot Studio to de-clutter your Outlook Inbox by automatically sorting, organizing and notifying you of urgent emails in Microsoft Teams. Join Shervin Shaffie, a Copilot Principal Engineer at Microsoft, as he walks you through all the steps to creating this powerful agent and simplify your work. You'll learn: • How to build an autonomous agent in Microsoft Copilot Studio • How to use agent Instructions, Triggers and Tools including Anthropic's MCP Servers • How to check your agents activity and disable your agent if needed If your Outlook inbox looks like something like this, but you want it to look like this, I'm going to show you how to get there by building a simple autonomous AI agent in Microsoft Copilot Studio. This autonomous AI agent ",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, MCP",
+    "representative_works": [
+      "How I Built an Autonomous AI Agent to Fix Outlook (Microsoft Copilot ..."
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

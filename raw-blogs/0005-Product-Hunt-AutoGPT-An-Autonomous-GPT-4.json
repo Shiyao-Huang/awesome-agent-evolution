@@ -1,0 +1,35 @@
+{
+  "id": 5,
+  "name": "AutoGPT - An Autonomous GPT-4",
+  "url": "https://www.producthunt.com/products/autogpt-an-autonomous-gpt-4",
+  "platform": "Product Hunt",
+  "source_type": "product_discovery",
+  "category": "developer_framework",
+  "source_dataset": "rank-platforms-product-discovery-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "extract failed: HTTP 403: 403 Forbidden\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "AutoGPT - An Autonomous GPT-4 - Product Information, Latest Updates, and Reviews 2024 | Product Hunt AutoGPT - An Autonomous GPT-4 # AutoGPT - An Autonomous GPT-4 AutoGPT in the browser 16reviews 1.5Kfollowers Save Follow Visit website Overview Reviews Launches Team Awards Do you useAutoGPT - An Autonomous GPT-4? I use thisI use something else What isAutoGPT - An Autonomous GPT-4? First Signs of AGI with an autonomous GPT4 AutoGPT - An Autonomous GPT-4 media 1 AutoGPT - An Autonomous GPT-4 media 2 ### Recent launches AutoGPT 2.0 Unleash the Power of AI with AutoGPT 2.0: Your Comprehensive Digital Assistant with templates. 3mo ago AutoGPT 2.0 ",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "Product Hunt maker/team",
+    "title_position_company": "Product launch team",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.producthunt.com",
+    "domains_expertise": "developer_framework",
+    "representative_works": [
+      "AutoGPT - An Autonomous GPT-4"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "product_team_or_maker",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/swyx AI agent OR agents",
+  "search_rank": 2,
+  "name": "THE BITTER LESSON APPLIED TO AGENTS (aka how to not be ...",
+  "url": "https://x.com/swyx/status/1902454997427904865",
+  "snippet": "Stop over-engineering agents. Rahul Sengottuvelu started an AI Agent company in 2021, acquired by @tryramp where he's now head of Applied AI. date: Mar 19, 2025",
+  "id": 357,
+  "platform": "X/Twitter",
+  "content": "Stop over-engineering agents. Rahul Sengottuvelu started an AI Agent company in 2021, acquired by @tryramp where he's now head of Applied AI. date: Mar 19, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Mar 19, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

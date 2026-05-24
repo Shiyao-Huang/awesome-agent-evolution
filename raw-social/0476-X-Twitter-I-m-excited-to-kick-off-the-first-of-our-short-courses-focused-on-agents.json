@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/AndrewYNg AI agent OR agents",
+  "search_rank": 5,
+  "name": "I'm excited to kick off the first of our short courses focused on agents ...",
+  "url": "https://twitter.com/AndrewYNg/status/1788246239517282795?lang=fi",
+  "snippet": "This lets the agent decide what information to fetch, and enables it to answer more complex questions using multi-step reasoning. In detail, you ... date: May 8, 2024",
+  "id": 476,
+  "platform": "X/Twitter",
+  "content": "This lets the agent decide what information to fetch, and enables it to answer more complex questions using multi-step reasoning. In detail, you ... date: May 8, 2024",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "May 8, 2024",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2024-Q1"
+}

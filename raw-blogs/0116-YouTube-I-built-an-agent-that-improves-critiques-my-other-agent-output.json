@@ -1,0 +1,35 @@
+{
+  "id": 116,
+  "name": "I built an agent that improves/critiques my other agent output",
+  "url": "https://www.youtube.com/watch?v=e698TjbQe3w",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=e698TjbQe3w\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Welcome to the ultimate step-by-step guide on building a multi-agent AI system that can plan, execute, and review its own responses! In this hands-on Python tutorial, we’ll implement a powerful Agentic AI workflow using LangGraph, LangChain, and Groq’s ChatGroq LLM. ✅ Use LangGraph to orchestrate agent workflows in a visual, structured graph format. , and even . And by , you'll understand how to that can learn and improve themselves So if the planner is the strategist and the worker is the executor then the reviewer will act as a quality control expert. Its job is simply uh its job is simple but extremely important here. So it will evaluate the worker's response and then choose whether the answer is good enough or whether it needs revision. So this is a key idea in modern AI uh agentic systems. Uh instead of trusting the first answer provided by the model, we add a self critic stage wher",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, LangGraph, workflow",
+    "representative_works": [
+      "I built an agent that improves/critiques my other agent output"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/bindureddy AI agent OR agents",
+  "search_rank": 7,
+  "name": "Custom LLM and AI Agents (RAG) On Structured + Unstructured Data",
+  "url": "https://x.com/bindureddy/status/1748156782932029608",
+  "snippet": "Imagine a ChatGPT-like interface over all your structured (database) and unstructured data. Ideally, you want to ask a question to an AI bot, ... date: Jan 19, 2024",
+  "id": 452,
+  "platform": "X/Twitter",
+  "content": "Imagine a ChatGPT-like interface over all your structured (database) and unstructured data. Ideally, you want to ask a question to an AI bot, ... date: Jan 19, 2024",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jan 19, 2024",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2024-Q1"
+}

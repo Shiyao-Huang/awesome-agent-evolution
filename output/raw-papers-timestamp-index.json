@@ -1,0 +1,1674 @@
+{
+  "generated_at": "2026-05-22T03:11:06+08:00",
+  "total": 184,
+  "updated_files": 9,
+  "new_files_since_previous_index": [
+    "2502.04780.md",
+    "2505.00234.md",
+    "2506.10943.md",
+    "2507.03616.md",
+    "2507.19457.md",
+    "2601.05280.md",
+    "2602.23720.md",
+    "2604.01687.md",
+    "2605.06614.md"
+  ],
+  "records": [
+    {
+      "file": "raw-papers/2203-14465.md",
+      "arxiv_id": "2203.14465",
+      "content_timestamp": "2022-03-28",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "early",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2203.14465.md",
+      "arxiv_id": "2203.14465",
+      "content_timestamp": "2022-03-28",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "early",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2303-11366.md",
+      "arxiv_id": "2303.11366",
+      "content_timestamp": "2023-03-20",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2303-17651.md",
+      "arxiv_id": "2303.17651",
+      "content_timestamp": "2023-03-30",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2303.11366.md",
+      "arxiv_id": "2303.11366",
+      "content_timestamp": "2023-03-20",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2303.17651.md",
+      "arxiv_id": "2303.17651",
+      "content_timestamp": "2023-03-30",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2304-03442.md",
+      "arxiv_id": "2304.03442",
+      "content_timestamp": "2023-04-07",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q2",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2304.03442.md",
+      "arxiv_id": "2304.03442",
+      "content_timestamp": "2023-04-07",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q2",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2305-14325.md",
+      "arxiv_id": "2305.14325",
+      "content_timestamp": "2023-05-23",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q2",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2305-16291.md",
+      "arxiv_id": "2305.16291",
+      "content_timestamp": "2023-05-25",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q2",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2305.14325.md",
+      "arxiv_id": "2305.14325",
+      "content_timestamp": "2023-05-23",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q2",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2305.16291.md",
+      "arxiv_id": "2305.16291",
+      "content_timestamp": "2023-05-25",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q2",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2308-10144.md",
+      "arxiv_id": "2308.10144",
+      "content_timestamp": "2023-08-20",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q3",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2308.10144.md",
+      "arxiv_id": "2308.10144",
+      "content_timestamp": "2023-08-20",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q3",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2311-09336.md",
+      "arxiv_id": "2311.09336",
+      "content_timestamp": "2023-11-15",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2311.09336.md",
+      "arxiv_id": "2311.09336",
+      "content_timestamp": "2023-11-15",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2312-09390.md",
+      "arxiv_id": "2312.09390",
+      "content_timestamp": "2023-12-14",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2312.09390.md",
+      "arxiv_id": "2312.09390",
+      "content_timestamp": "2023-12-14",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2401-01335.md",
+      "arxiv_id": "2401.01335",
+      "content_timestamp": "2024-01-02",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2401-10020.md",
+      "arxiv_id": "2401.10020",
+      "content_timestamp": "2024-01-18",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2401-13996.md",
+      "arxiv_id": "2401.13996",
+      "content_timestamp": "2024-01-25",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2401.01335.md",
+      "arxiv_id": "2401.01335",
+      "content_timestamp": "2024-01-02",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2401.10020.md",
+      "arxiv_id": "2401.10020",
+      "content_timestamp": "2024-01-18",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2401.13996.md",
+      "arxiv_id": "2401.13996",
+      "content_timestamp": "2024-01-25",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2402-17574.md",
+      "arxiv_id": "2402.17574",
+      "content_timestamp": "2024-02-27",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2402.17574.md",
+      "arxiv_id": "2402.17574",
+      "content_timestamp": "2024-02-27",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2402.18381.md",
+      "arxiv_id": "2402.18381",
+      "content_timestamp": "2024-02-28",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q1",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2403-18341.md",
+      "arxiv_id": "2403.18341",
+      "content_timestamp": "2024-03-27",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2403.18341.md",
+      "arxiv_id": "2403.18341",
+      "content_timestamp": "2024-03-27",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q1",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2405-06682.md",
+      "arxiv_id": "2405.06682",
+      "content_timestamp": "2024-05-05",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q2",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2405.06682.md",
+      "arxiv_id": "2405.06682",
+      "content_timestamp": "2024-05-05",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q2",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2406.18532.md",
+      "arxiv_id": "2406.18532",
+      "content_timestamp": "2024-06-26",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q2",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2407-18219.md",
+      "arxiv_id": "2407.18219",
+      "content_timestamp": "2024-07-25",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q3",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2407.18219.md",
+      "arxiv_id": "2407.18219",
+      "content_timestamp": "2024-07-25",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q3",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2407.19594.md",
+      "arxiv_id": "2407.19594",
+      "content_timestamp": "2024-07-28",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q3",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2408-08435.md",
+      "arxiv_id": "2408.08435",
+      "content_timestamp": "2024-08-15",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q3",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2408.08435.md",
+      "arxiv_id": "2408.08435",
+      "content_timestamp": "2024-08-15",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q3",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2409-12917.md",
+      "arxiv_id": "2409.12917",
+      "content_timestamp": "2024-09-19",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q3",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2409-18382.md",
+      "arxiv_id": "2409.18382",
+      "content_timestamp": "2024-09-27",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q3",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2409.12147.md",
+      "arxiv_id": "2409.12147",
+      "content_timestamp": "2024-09-18",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q3",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2409.12917.md",
+      "arxiv_id": "2409.12917",
+      "content_timestamp": "2024-09-19",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q3",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2409.14051.md",
+      "arxiv_id": "2409.14051",
+      "content_timestamp": "2024-09-21",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q3",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2409.18382.md",
+      "arxiv_id": "2409.18382",
+      "content_timestamp": "2024-09-27",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q3",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2410-01215.md",
+      "arxiv_id": "2410.01215",
+      "content_timestamp": "2024-10-02",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2410-04444.md",
+      "arxiv_id": "2410.04444",
+      "content_timestamp": "2024-10-06",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2410-12853.md",
+      "arxiv_id": "2410.12853",
+      "content_timestamp": "2024-10-10",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2410-15639.md",
+      "arxiv_id": "2410.15639",
+      "content_timestamp": "2024-10-21",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2410-16946.md",
+      "arxiv_id": "2410.16946",
+      "content_timestamp": "2024-10-22",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2410-23912.md",
+      "arxiv_id": "2410.23912",
+      "content_timestamp": "2024-10-31",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2410.01215.md",
+      "arxiv_id": "2410.01215",
+      "content_timestamp": "2024-10-02",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2410.04444.md",
+      "arxiv_id": "2410.04444",
+      "content_timestamp": "2024-10-06",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2410.12853.md",
+      "arxiv_id": "2410.12853",
+      "content_timestamp": "2024-10-10",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2410.15639.md",
+      "arxiv_id": "2410.15639",
+      "content_timestamp": "2024-10-21",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2410.16946.md",
+      "arxiv_id": "2410.16946",
+      "content_timestamp": "2024-10-22",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2410.23912.md",
+      "arxiv_id": "2410.23912",
+      "content_timestamp": "2024-10-31",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2411.02337.md",
+      "arxiv_id": "2411.02337",
+      "content_timestamp": "2024-11-04",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2412-01951.md",
+      "arxiv_id": "2412.01951",
+      "content_timestamp": "2024-12-02",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2412.01951.md",
+      "arxiv_id": "2412.01951",
+      "content_timestamp": "2024-12-02",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2024-Q4",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2501-01264.md",
+      "arxiv_id": "2501.01264",
+      "content_timestamp": "2025-01-02",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-01",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2501-07278.md",
+      "arxiv_id": "2501.07278",
+      "content_timestamp": "2025-01-13",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-01",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2501-11425.md",
+      "arxiv_id": "2501.11425",
+      "content_timestamp": "2025-01-20",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-01",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2501-12793.md",
+      "arxiv_id": "2501.12793",
+      "content_timestamp": "2025-01-22",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-01",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2501-13011.md",
+      "arxiv_id": "2501.13011",
+      "content_timestamp": "2025-01-22",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-01",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2501.01264.md",
+      "arxiv_id": "2501.01264",
+      "content_timestamp": "2025-01-02",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-01",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2501.07278.md",
+      "arxiv_id": "2501.07278",
+      "content_timestamp": "2025-01-13",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-01",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2501.11425.md",
+      "arxiv_id": "2501.11425",
+      "content_timestamp": "2025-01-20",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-01",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2501.12793.md",
+      "arxiv_id": "2501.12793",
+      "content_timestamp": "2025-01-22",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-01",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2501.13011.md",
+      "arxiv_id": "2501.13011",
+      "content_timestamp": "2025-01-22",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-01",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2502-00593.md",
+      "arxiv_id": "2502.00593",
+      "content_timestamp": "2025-02-01",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-02",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2502-05605.md",
+      "arxiv_id": "2502.05605",
+      "content_timestamp": "2025-02-08",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-02",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2502-05957.md",
+      "arxiv_id": "2502.05957",
+      "content_timestamp": "2025-02-09",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-02",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2502-13550.md",
+      "arxiv_id": "2502.13550",
+      "content_timestamp": "2025-02-19",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-02",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2502.00593.md",
+      "arxiv_id": "2502.00593",
+      "content_timestamp": "2025-02-01",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-02",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2502.04780.md",
+      "arxiv_id": "2502.04780",
+      "content_timestamp": "2025-02-07",
+      "collected_at": "2026-05-22T01:00:00+08:00",
+      "time_slice": "2025-02",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2502.05605.md",
+      "arxiv_id": "2502.05605",
+      "content_timestamp": "2025-02-08",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-02",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2502.05957.md",
+      "arxiv_id": "2502.05957",
+      "content_timestamp": "2025-02-09",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-02",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2502.12110.md",
+      "arxiv_id": "2502.12110",
+      "content_timestamp": "2025-02-17",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-02",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2502.13550.md",
+      "arxiv_id": "2502.13550",
+      "content_timestamp": "2025-02-19",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-02",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2504-01990.md",
+      "arxiv_id": "2504.01990",
+      "content_timestamp": "2025-03-31",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-03",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2504-15228.md",
+      "arxiv_id": "2504.15228",
+      "content_timestamp": "2025-04-21",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-04",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2504-20073.md",
+      "arxiv_id": "2504.20073",
+      "content_timestamp": "2025-04-24",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-04",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2504-21024.md",
+      "arxiv_id": "2504.21024",
+      "content_timestamp": "2025-04-23",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-04",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2504.01990.md",
+      "arxiv_id": "2504.01990",
+      "content_timestamp": "2025-03-31",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-03",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2504.15228.md",
+      "arxiv_id": "2504.15228",
+      "content_timestamp": "2025-04-21",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-04",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2504.20073.md",
+      "arxiv_id": "2504.20073",
+      "content_timestamp": "2025-04-24",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-04",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2504.21024.md",
+      "arxiv_id": "2504.21024",
+      "content_timestamp": "2025-04-23",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-04",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2505-03335.md",
+      "arxiv_id": "2505.03335",
+      "content_timestamp": "2025-05-06",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2505-08827.md",
+      "arxiv_id": "2505.08827",
+      "content_timestamp": "2025-05-12",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2505-14970.md",
+      "arxiv_id": "2505.14970",
+      "content_timestamp": "2025-05-20",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2505-16067.md",
+      "arxiv_id": "2505.16067",
+      "content_timestamp": "2025-05-21",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2505-16475.md",
+      "arxiv_id": "2505.16475",
+      "content_timestamp": "2025-05-22",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2505-23060.md",
+      "arxiv_id": "2505.23060",
+      "content_timestamp": "2025-05-29",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2505.00234.md",
+      "arxiv_id": "2505.00234",
+      "content_timestamp": "2025-05-01",
+      "collected_at": "2026-05-22T01:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2505.03335.md",
+      "arxiv_id": "2505.03335",
+      "content_timestamp": "2025-05-06",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2505.08827.md",
+      "arxiv_id": "2505.08827",
+      "content_timestamp": "2025-05-12",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2505.14970.md",
+      "arxiv_id": "2505.14970",
+      "content_timestamp": "2025-05-20",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2505.16067.md",
+      "arxiv_id": "2505.16067",
+      "content_timestamp": "2025-05-21",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2505.16475.md",
+      "arxiv_id": "2505.16475",
+      "content_timestamp": "2025-05-22",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2505.18646.md",
+      "arxiv_id": "2505.18646",
+      "content_timestamp": "2025-05-24",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2505.22954.md",
+      "arxiv_id": "2505.22954",
+      "content_timestamp": "2025-05-29",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2505.23060.md",
+      "arxiv_id": "2505.23060",
+      "content_timestamp": "2025-05-29",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2506-01716.md",
+      "arxiv_id": "2506.01716",
+      "content_timestamp": "2025-06-02",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-06",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2506-04651.md",
+      "arxiv_id": "2506.04651",
+      "content_timestamp": "2025-06-05",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-06",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2506-09046.md",
+      "arxiv_id": "2506.09046",
+      "content_timestamp": "2025-06-10",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-06",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2506-13131.md",
+      "arxiv_id": "2506.13131",
+      "content_timestamp": "2025-06-16",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-06",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2506.01716.md",
+      "arxiv_id": "2506.01716",
+      "content_timestamp": "2025-06-02",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-06",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2506.04651.md",
+      "arxiv_id": "2506.04651",
+      "content_timestamp": "2025-06-05",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-06",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2506.09046.md",
+      "arxiv_id": "2506.09046",
+      "content_timestamp": "2025-06-10",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-06",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2506.10943.md",
+      "arxiv_id": "2506.10943",
+      "content_timestamp": "2025-06-12",
+      "collected_at": "2026-05-22T01:00:00+08:00",
+      "time_slice": "2025-06",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2506.13131.md",
+      "arxiv_id": "2506.13131",
+      "content_timestamp": "2025-06-16",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-06",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2506.24119.md",
+      "arxiv_id": "2506.24119",
+      "content_timestamp": "2025-06-30",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-06",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2507-21046.md",
+      "arxiv_id": "2507.21046",
+      "content_timestamp": "2025-07-28",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-07",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2507.03616.md",
+      "arxiv_id": "2507.03616",
+      "content_timestamp": "2025-07-04",
+      "collected_at": "2026-05-22T01:00:00+08:00",
+      "time_slice": "2025-07",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2507.19457.md",
+      "arxiv_id": "2507.19457",
+      "content_timestamp": "2025-07-25",
+      "collected_at": "2026-05-22T01:00:00+08:00",
+      "time_slice": "2025-07",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2507.21046.md",
+      "arxiv_id": "2507.21046",
+      "content_timestamp": "2025-07-28",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-07",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2508-02085.md",
+      "arxiv_id": "2508.02085",
+      "content_timestamp": "2025-08-04",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-08",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2508-04700.md",
+      "arxiv_id": "2508.04700",
+      "content_timestamp": "2025-08-06",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-08",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2508-07407.md",
+      "arxiv_id": "2508.07407",
+      "content_timestamp": "2025-08-10",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-08",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2508-09586.md",
+      "arxiv_id": "2508.09586",
+      "content_timestamp": "2025-08-13",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-08",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2508-19005.md",
+      "arxiv_id": "2508.19005",
+      "content_timestamp": "2025-08-26",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-08",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2508.02085.md",
+      "arxiv_id": "2508.02085",
+      "content_timestamp": "2025-08-04",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-08",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2508.04700.md",
+      "arxiv_id": "2508.04700",
+      "content_timestamp": "2025-08-06",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-08",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2508.07407.md",
+      "arxiv_id": "2508.07407",
+      "content_timestamp": "2025-08-10",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-08",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2508.09586.md",
+      "arxiv_id": "2508.09586",
+      "content_timestamp": "2025-08-13",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-08",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2508.19005.md",
+      "arxiv_id": "2508.19005",
+      "content_timestamp": "2025-08-26",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-08",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2508.19828.md",
+      "arxiv_id": "2508.19828",
+      "content_timestamp": "2025-08-27",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-08",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2509-04575.md",
+      "arxiv_id": "2509.04575",
+      "content_timestamp": "2025-09-04",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-09",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2509-22502.md",
+      "arxiv_id": "2509.22502",
+      "content_timestamp": "2025-09-26",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-09",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2509-25140.md",
+      "arxiv_id": "2509.25140",
+      "content_timestamp": "2025-09-29",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-09",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2509.04575.md",
+      "arxiv_id": "2509.04575",
+      "content_timestamp": "2025-09-04",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-09",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2509.20562.md",
+      "arxiv_id": "2509.20562",
+      "content_timestamp": "2025-09-24",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-09",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2509.22502.md",
+      "arxiv_id": "2509.22502",
+      "content_timestamp": "2025-09-26",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-09",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2509.25140.md",
+      "arxiv_id": "2509.25140",
+      "content_timestamp": "2025-09-29",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-09",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2509.25541.md",
+      "arxiv_id": "2509.25541",
+      "content_timestamp": "2025-09-29",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-09",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2509.26354.md",
+      "arxiv_id": "2509.26354",
+      "content_timestamp": "2025-09-30",
+      "collected_at": "2026-05-21T23:10:00+08:00",
+      "time_slice": "2025-09",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2510-04618.md",
+      "arxiv_id": "2510.04618",
+      "content_timestamp": "2025-10-06",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2510-06056.md",
+      "arxiv_id": "2510.06056",
+      "content_timestamp": "2025-10-07",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2510-07841.md",
+      "arxiv_id": "2510.07841",
+      "content_timestamp": "2025-10-09",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2510-14253.md",
+      "arxiv_id": "2510.14253",
+      "content_timestamp": "2025-10-16",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2510-16079.md",
+      "arxiv_id": "2510.16079",
+      "content_timestamp": "2025-10-17",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2510-17498.md",
+      "arxiv_id": "2510.17498",
+      "content_timestamp": "2025-10-20",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2510-18327.md",
+      "arxiv_id": "2510.18327",
+      "content_timestamp": "2025-10-21",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2510-23595.md",
+      "arxiv_id": "2510.23595",
+      "content_timestamp": "2025-10-27",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2510.04618.md",
+      "arxiv_id": "2510.04618",
+      "content_timestamp": "2025-10-06",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2510.06056.md",
+      "arxiv_id": "2510.06056",
+      "content_timestamp": "2025-10-07",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2510.07841.md",
+      "arxiv_id": "2510.07841",
+      "content_timestamp": "2025-10-09",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2510.14253.md",
+      "arxiv_id": "2510.14253",
+      "content_timestamp": "2025-10-16",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2510.16079.md",
+      "arxiv_id": "2510.16079",
+      "content_timestamp": "2025-10-17",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2510.17498.md",
+      "arxiv_id": "2510.17498",
+      "content_timestamp": "2025-10-20",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2510.18327.md",
+      "arxiv_id": "2510.18327",
+      "content_timestamp": "2025-10-21",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2510.23595.md",
+      "arxiv_id": "2510.23595",
+      "content_timestamp": "2025-10-27",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-10",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2511-10395.md",
+      "arxiv_id": "2511.10395",
+      "content_timestamp": "2025-11-13",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-11",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2511-16043.md",
+      "arxiv_id": "2511.16043",
+      "content_timestamp": "2025-11-20",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-11",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2511-23473.md",
+      "arxiv_id": "2511.23473",
+      "content_timestamp": "2025-11-28",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-11",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2511.06449.md",
+      "arxiv_id": "2511.06449",
+      "content_timestamp": "2025-11-09",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-11",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2511.10395.md",
+      "arxiv_id": "2511.10395",
+      "content_timestamp": "2025-11-13",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-11",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2511.16043.md",
+      "arxiv_id": "2511.16043",
+      "content_timestamp": "2025-11-20",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-11",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2511.23473.md",
+      "arxiv_id": "2511.23473",
+      "content_timestamp": "2025-11-28",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-11",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2512-09108.md",
+      "arxiv_id": "2512.09108",
+      "content_timestamp": "2025-12-09",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-12",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "matched_duplicate_arxiv_metadata"
+    },
+    {
+      "file": "raw-papers/2512.09108.md",
+      "arxiv_id": "2512.09108",
+      "content_timestamp": "2025-12-09",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-12",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2512.22716.md",
+      "arxiv_id": "2512.22716",
+      "content_timestamp": "2025-12-27",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2025-12",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2601.05280.md",
+      "arxiv_id": "2601.05280",
+      "content_timestamp": "2026-01-05",
+      "collected_at": "2026-05-22T01:00:00+08:00",
+      "time_slice": "2026-01",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2602.01983.md",
+      "arxiv_id": "2602.01983",
+      "content_timestamp": "2026-02-02",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2026-02",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2602.02474.md",
+      "arxiv_id": "2602.02474",
+      "content_timestamp": "2026-02-02",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2026-02",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2602.23720.md",
+      "arxiv_id": "2602.23720",
+      "content_timestamp": "2026-02-27",
+      "collected_at": "2026-05-22T01:00:00+08:00",
+      "time_slice": "2026-02",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2603.03290.md",
+      "arxiv_id": "2603.03290",
+      "content_timestamp": "2026-02-05",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2026-02",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "arxiv_abs_page_submitted_on_verified"
+    },
+    {
+      "file": "raw-papers/2603.07970.md",
+      "arxiv_id": "2603.07970",
+      "content_timestamp": "2026-03-09",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2026-03",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2603.15255.md",
+      "arxiv_id": "2603.15255",
+      "content_timestamp": "2026-03-16",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2026-03",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2603.19461.md",
+      "arxiv_id": "2603.19461",
+      "content_timestamp": "2026-03-19",
+      "collected_at": "2026-05-21T23:00:00+08:00",
+      "time_slice": "2026-03",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2603.25928.md",
+      "arxiv_id": "2603.25928",
+      "content_timestamp": "2026-03-26",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2026-03",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2603.28990.md",
+      "arxiv_id": "2603.28990",
+      "content_timestamp": "2026-03-30",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2026-03",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2604.01658.md",
+      "arxiv_id": "2604.01658",
+      "content_timestamp": "2026-04-02",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2026-04",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2604.01687.md",
+      "arxiv_id": "2604.01687",
+      "content_timestamp": "2026-04-02",
+      "collected_at": "2026-05-22T01:00:00+08:00",
+      "time_slice": "2026-04",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2604.02674.md",
+      "arxiv_id": "2604.02674",
+      "content_timestamp": "2026-04-03",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2026-04",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2604.10923.md",
+      "arxiv_id": "2604.10923",
+      "content_timestamp": "2026-04-13",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2026-04",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2604.15034.md",
+      "arxiv_id": "2604.15034",
+      "content_timestamp": "2026-04-16",
+      "collected_at": "2026-05-21T22:30:00+08:00",
+      "time_slice": "2026-04",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2604.17091.md",
+      "arxiv_id": "2604.17091",
+      "content_timestamp": "2026-04-18",
+      "collected_at": "2026-05-22T01:00:00+08:00",
+      "time_slice": "2026-04",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2604.18131.md",
+      "arxiv_id": "2604.18131",
+      "content_timestamp": "2026-04-20",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2026-04",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2605.04677.md",
+      "arxiv_id": "2605.04677",
+      "content_timestamp": "2026-05-06",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/2605.06614.md",
+      "arxiv_id": "2605.06614",
+      "content_timestamp": "2026-05-07",
+      "collected_at": "2026-05-22T01:00:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2605.09315.md",
+      "arxiv_id": "2605.09315",
+      "content_timestamp": "2026-05-10",
+      "collected_at": "2026-05-21T23:10:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2605.18930.md",
+      "arxiv_id": "2605.18930",
+      "content_timestamp": "2026-05-18",
+      "collected_at": "2026-05-21T23:10:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "arxiv submission date"
+    },
+    {
+      "file": "raw-papers/2605.19102.md",
+      "arxiv_id": "2605.19102",
+      "content_timestamp": "2026-05-18",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_confidence": "derived",
+      "timestamp_source": "published_field"
+    },
+    {
+      "file": "raw-papers/placeholder-no-arxiv.md",
+      "arxiv_id": "",
+      "content_timestamp": "2023-12-14",
+      "collected_at": "2026-05-21T00:00:00+08:00",
+      "time_slice": "2023-Q4",
+      "timestamp_confidence": "verified",
+      "timestamp_source": "Nature/DeepMind FunSearch online publication date (web verified)"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/crewAIInc AI agent OR agents",
+  "search_rank": 7,
+  "name": "Tool integration via MCP servers Memory with Zep's Graphiti Tracing ...",
+  "url": "https://x.com/crewAIInc/status/1944801326749139362",
+  "snippet": "Build autonomous AI agents that think, remember, and act. @akshay_pachaar's new crash course walks through: date: Jul 14, 2025",
+  "id": 432,
+  "platform": "X/Twitter",
+  "content": "Build autonomous AI agents that think, remember, and act. @akshay_pachaar's new crash course walks through: date: Jul 14, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jul 14, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

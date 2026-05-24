@@ -1,0 +1,35 @@
+{
+  "id": 125,
+  "name": "MCP Agent Fine tuning Workshop - Ronan McGovern - YouTube",
+  "url": "https://www.youtube.com/watch?v=Nqb7JTx0Pqo",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=Nqb7JTx0Pqo\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "MCP Agent Fine tuning Workshop - Ronan McGovern This is a hands on workshop where students will run an agent with access to MCP servers (a playwright browser, although others can be added), generate high quality reasoning traces, and then train a Qwen3 model on those traces. - How to generate high quality MCP agent reasoning traces, via an OpenAI style endpoint - How to save tools and multi-turn traces - Fine-tune a Qwen3 model on those traces with unsloth - Run the fine-tuned model Okay, welcome to this workshop on MCP agent fine-tuning. I'm Ronan from the Trellis Research YouTube channel and today I'll be showing you how to run an agent that has access to tools via MCP servers and then take traces or logs from the highquality runs and use them to fine-tune and improve the performance of a model. By the end of the workshop, you should be able to generate highquality MCP agent reasoning ",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, MCP",
+    "representative_works": [
+      "MCP Agent Fine tuning Workshop - Ronan McGovern - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

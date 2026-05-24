@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/karpathy AI agent OR agents",
+  "search_rank": 3,
+  "name": "A few random notes from claude coding quite a bit last few weeks ...",
+  "url": "https://twitter.com/karpathy/status/2015883857489522876?ref_src=twsrc%5Etfw&ref=simonsays.so",
+  "snippet": "Change your approach from imperative to declarative to get the agents looping longer and gain leverage. Fun. I didn't anticipate that with ... date: Jan 26, 2026",
+  "id": 465,
+  "platform": "X/Twitter",
+  "content": "Change your approach from imperative to declarative to get the agents looping longer and gain leverage. Fun. I didn't anticipate that with ... date: Jan 26, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jan 26, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

@@ -1,0 +1,35 @@
+{
+  "id": 16,
+  "name": "Knowly AI: Reliable AI that browses the web exactly like you do | Product Hunt",
+  "url": "https://www.producthunt.com/products/knowly-ai",
+  "platform": "Product Hunt",
+  "source_type": "product_discovery",
+  "category": "benchmark_or_competition",
+  "source_dataset": "rank-platforms-product-discovery-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "extract failed: HTTP 403: 403 Forbidden\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Launching today ## Reliable AI that browses the web exactly like you do 111 followers Visit website Web browsers•Automation tools Knowly is a super reliable AI agent that learns how you browse the web and automates your daily browsing routines - saving you from repetitive tasks and delivering only the information you truly care about. Overview Reviews Team More Blog• Newsletter• Questions• Forums• Product Categories• Apps• About• FAQ• Terms• Privacy and Cookies• X.com• Facebook• 📌Hey Product Hunt! 👋I’mYT, founder ofKnowly—and I couldn’t be more excited to finally share what we’ve been building recently. 🚀❓What isKnowly Knowly is an AI agent t",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "Product Hunt maker/team",
+    "title_position_company": "Product launch team",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.producthunt.com",
+    "domains_expertise": "agent",
+    "representative_works": [
+      "Knowly AI: Reliable AI that browses the web exactly like you do | Product Hunt"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "product_team_or_maker",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

@@ -1,0 +1,1 @@
+[{"query": "site:twitter.com \"AI agent\" \"self-improving\"", "max_results": 20}, {"query": "site:twitter.com \"self-evolving agents\"", "max_results": 20}, {"query": "site:twitter.com \"agent evolution\" \"LLM\"", "max_results": 20}, {"query": "site:twitter.com \"AutoGen\" \"CrewAI\"", "max_results": 20}, {"query": "site:twitter.com \"MCP\" \"AI agent\"", "max_results": 20}]

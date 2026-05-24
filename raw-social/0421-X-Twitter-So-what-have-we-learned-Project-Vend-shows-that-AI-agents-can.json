@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/AnthropicAI AI agent OR agents",
+  "search_rank": 6,
+  "name": "So, what have we learned? Project Vend shows that AI agents can ...",
+  "url": "https://x.com/AnthropicAI/status/2001686782446841880",
+  "snippet": "So, what have we learned? Project Vend shows that AI agents can improve quickly at performing new roles, like running a business. date: Dec 18, 2025",
+  "id": 421,
+  "platform": "X/Twitter",
+  "content": "So, what have we learned? Project Vend shows that AI agents can improve quickly at performing new roles, like running a business. date: Dec 18, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Dec 18, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

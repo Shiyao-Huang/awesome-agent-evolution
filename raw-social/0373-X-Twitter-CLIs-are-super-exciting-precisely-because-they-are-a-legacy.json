@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/karpathy AI agent OR agents",
+  "search_rank": 8,
+  "name": "CLIs are super exciting precisely because they are a \"legacy ...",
+  "url": "https://x.com/karpathy/status/2026360908398862478",
+  "snippet": "AI agents can natively and easily use them, combine them, interact with them via the entire terminal toolkit. E.g ask your Claude/Codex agent ... date: Feb 24, 2026",
+  "id": 373,
+  "platform": "X/Twitter",
+  "content": "AI agents can natively and easily use them, combine them, interact with them via the entire terminal toolkit. E.g ask your Claude/Codex agent ... date: Feb 24, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Feb 24, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

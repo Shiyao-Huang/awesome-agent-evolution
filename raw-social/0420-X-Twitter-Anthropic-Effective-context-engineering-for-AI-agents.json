@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/AnthropicAI AI agent OR agents",
+  "search_rank": 5,
+  "name": "Anthropic - Effective context engineering for AI agents",
+  "url": "https://x.com/AnthropicAI/status/1973098580060631341",
+  "snippet": "But to get the most out of AI agents, you need context engineering. We explain how it works: anthropic.com/engineering/ef… date: Sep 30, 2025",
+  "id": 420,
+  "platform": "X/Twitter",
+  "content": "But to get the most out of AI agents, you need context engineering. We explain how it works: anthropic.com/engineering/ef… date: Sep 30, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Sep 30, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

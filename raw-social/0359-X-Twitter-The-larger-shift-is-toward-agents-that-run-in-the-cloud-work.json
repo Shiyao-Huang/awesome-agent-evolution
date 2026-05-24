@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/swyx AI agent OR agents",
+  "search_rank": 4,
+  "name": "The larger shift is toward agents that run in the cloud, work ...",
+  "url": "https://x.com/swyx/status/2021498862012334274",
+  "snippet": "The local agent model, like Cursor, Windsurf, or Claude Code in your terminal, is a human and an AI sharing one environment. You are pair ... date: Feb 11, 2026",
+  "id": 359,
+  "platform": "X/Twitter",
+  "content": "The local agent model, like Cursor, Windsurf, or Claude Code in your terminal, is a human and an AI sharing one environment. You are pair ... date: Feb 11, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Feb 11, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

@@ -1,0 +1,35 @@
+{
+  "id": 47,
+  "name": "Agents Tutorial: Build Your First AI Agent from Scratch ... - YouTube",
+  "url": "https://www.youtube.com/watch?v=PY44_vQFkR4",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=PY44_vQFkR4\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Agents Tutorial: Build Your First AI Agent from Scratch (JavaScript, OpenAI & LangChain) In this tutorial, I share in detail the process of building an AI agent specifically for real estate. The video covers the definition and functionality of AI agents, the architecture of the application, and the integration of various APIs, including Zillow and OpenAI. Thank You to Convex for sponsoring this video. Check out Convex here- https://convex.link/shrutiai Tech Stack - Frontend - React 19, Vite, Tailwind CSS, TanStack Router, TanStack Query, Zustand (for state management) Backend - Express, Node.js, Convex (for vector database), LangChain, LangGraph, OpenAI APIs - OpenAI API (for embeddings and natural language processing), Zillow API (via RapidAPI) AI agents, autonomous systems, LLM, agentic workflow, technology, machine learning, programming, software development, automation, artificial in",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, LangGraph, workflow",
+    "representative_works": [
+      "Agents Tutorial: Build Your First AI Agent from Scratch ... - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

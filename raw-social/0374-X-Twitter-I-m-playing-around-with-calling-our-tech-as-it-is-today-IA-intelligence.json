@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/karpathy AI agent OR agents",
+  "search_rank": 9,
+  "name": "I'm playing around with calling our tech, as it is today, IA (intelligence ...",
+  "url": "https://x.com/karpathy/status/1744062845426532473",
+  "snippet": "IA have the vibe of tools for thought, needing human interaction, and resemble a lot more what we actually have today. AI feels more like ... date: Jan 7, 2024",
+  "id": 374,
+  "platform": "X/Twitter",
+  "content": "IA have the vibe of tools for thought, needing human interaction, and resemble a lot more what we actually have today. AI feels more like ... date: Jan 7, 2024",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jan 7, 2024",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2024-Q1"
+}

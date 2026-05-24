@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/OpenAIDevs AI agent OR agents",
+  "search_rank": 3,
+  "name": "Codex can now help you build AI apps and agents faster with ...",
+  "url": "https://x.com/OpenAIDevs/status/2053925962287583379",
+  "snippet": "OpenAI Developers (@OpenAIDevs). 99 replies. Codex can now help you build AI apps and agents faster with OpenAI APIs using the OpenAI ... date: May 11, 2026",
+  "id": 408,
+  "platform": "X/Twitter",
+  "content": "OpenAI Developers (@OpenAIDevs). 99 replies. Codex can now help you build AI apps and agents faster with OpenAI APIs using the OpenAI ... date: May 11, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "May 11, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

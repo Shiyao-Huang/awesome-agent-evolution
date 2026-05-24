@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/LangChainAI AI agent OR agents",
+  "search_rank": 5,
+  "name": "UI/UX for Generative AI Applications UI/UX is critical for shipping ...",
+  "url": "https://twitter.com/LangChainAI/status/1854925528031195148",
+  "snippet": "In this video, @EdenEmarco177 goes over CoAgents by @CopilotKit as a frontend framework for shipping agent applications with LangGraph. youtube.com/watch?v= ...",
+  "id": 483,
+  "platform": "X/Twitter",
+  "content": "In this video, @EdenEmarco177 goes over CoAgents by @CopilotKit as a frontend framework for shipping agent applications with LangGraph. youtube.com/watch?v= ...",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

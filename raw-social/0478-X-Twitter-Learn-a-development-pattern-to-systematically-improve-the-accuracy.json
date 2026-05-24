@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/AndrewYNg AI agent OR agents",
+  "search_rank": 7,
+  "name": "Learn a development pattern to systematically improve the accuracy ...",
+  "url": "https://twitter.com/AndrewYNg/status/1823759268937650528",
+  "snippet": "... agent with a custom schema and simulate situations where it ... Please sign up here: deeplearning.ai/short-courses/… 22. 125. 624. date: Aug 14, 2024 ---",
+  "id": 478,
+  "platform": "X/Twitter",
+  "content": "... agent with a custom schema and simulate situations where it ... Please sign up here: deeplearning.ai/short-courses/… 22. 125. 624. date: Aug 14, 2024 ---",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Aug 14, 2024 ---",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2024-Q1"
+}

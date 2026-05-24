@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/OpenAIDevs AI agent OR agents",
+  "search_rank": 5,
+  "name": "OpenAI Developers",
+  "url": "https://x.com/OpenAIDevs/status/1899531225468969240",
+  "snippet": "OpenAI Developers (@OpenAIDevs). 270 replies. We're launching new tools to help developers build reliable and powerful AI agents. date: Mar 11, 2025",
+  "id": 410,
+  "platform": "X/Twitter",
+  "content": "OpenAI Developers (@OpenAIDevs). 270 replies. We're launching new tools to help developers build reliable and powerful AI agents. date: Mar 11, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Mar 11, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/karpathy AI agent OR agents",
+  "search_rank": 5,
+  "name": "+We are looking to hire engineers to help us create more web ...",
+  "url": "https://twitter.com/karpathy/status/809889309775925249",
+  "snippet": "+We are looking to hire engineers to help us create more web environments for AI agents. Ping me at karpathy@openai.com if interested! date: Dec 16, 2016",
+  "id": 467,
+  "platform": "X/Twitter",
+  "content": "+We are looking to hire engineers to help us create more web environments for AI agents. Ping me at karpathy@openai.com if interested! date: Dec 16, 2016",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Dec 16, 2016",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "early"
+}

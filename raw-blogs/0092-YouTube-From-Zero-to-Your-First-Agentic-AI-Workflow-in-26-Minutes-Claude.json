@@ -1,0 +1,35 @@
+{
+  "id": 92,
+  "name": "From Zero to Your First Agentic AI Workflow in 26 Minutes (Claude ...",
+  "url": "https://www.youtube.com/watch?v=tDGiWn0flK8",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=tDGiWn0flK8\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "From Zero to Your First Agentic AI Workflow in 26 Minutes (Claude Code) - Channel: Nate Herk | AI Automation - Length: 26:22 - Views: 147.3K - Likes: 3.5K - Published: - Category: Film & Animation - Keywords: From Zero to Your First Agentic AI Workflow in 26 Minutes, How to build ai workflows, claude code, how to build using claude code, agentic workflows nate herk, how to build agentic workflows, agentic ai, anti gravity, Nate Herk ai automation, Nate Herk tutorial, claude code tutorial, How to use claude code, How to build first agentic workflow, agentic ai full course, agentic ai full guide, how to build agentic ai, nate herk From Zero to Your First Agentic AI Workflow in 26 Minutes using Claude Code. This full guide shows exactly how to go from zero to your first agentic AI workflow in 26 minutes with Claude Code, step by step. This is the most valuable video I've ever made on Agenti",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, workflow",
+    "representative_works": [
+      "From Zero to Your First Agentic AI Workflow in 26 Minutes (Claude ..."
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

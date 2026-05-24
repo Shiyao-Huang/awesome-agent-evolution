@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/swyx AI agent OR agents",
+  "search_rank": 2,
+  "name": "swyx AIE Singapore! (@swyx) / Highlights / X - Twitter",
+  "url": "https://twitter.com/swyx/highlights",
+  "snippet": "OpenAI's Greg Brockman, Anthropic's Dario Amodei, Meta's Alexandr Wang, to name just a few. Most agree that the von Neumann among them was Scott Wu. In November ...",
+  "id": 457,
+  "platform": "X/Twitter",
+  "content": "OpenAI's Greg Brockman, Anthropic's Dario Amodei, Meta's Alexandr Wang, to name just a few. Most agree that the von Neumann among them was Scott Wu. In November ...",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

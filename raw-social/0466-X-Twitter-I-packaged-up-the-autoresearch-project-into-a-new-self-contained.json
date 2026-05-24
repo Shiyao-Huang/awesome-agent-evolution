@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/karpathy AI agent OR agents",
+  "search_rank": 4,
+  "name": "I packaged up the \"autoresearch\" project into a new self-contained ...",
+  "url": "https://twitter.com/karpathy/status/2030371219518931079",
+  "snippet": "The goal is to engineer your agents to make the fastest research progress indefinitely and without any of your own involvement. In the image, ... date: Mar 7, 2026",
+  "id": 466,
+  "platform": "X/Twitter",
+  "content": "The goal is to engineer your agents to make the fastest research progress indefinitely and without any of your own involvement. In the image, ... date: Mar 7, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Mar 7, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

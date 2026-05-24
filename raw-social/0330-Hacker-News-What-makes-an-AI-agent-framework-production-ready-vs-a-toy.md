@@ -1,0 +1,13 @@
+# What makes an AI agent framework production-ready vs. a toy?
+
+- URL: https://news.ycombinator.com/item?id=46998170
+- Platform: Hacker News
+- Extraction status: fallback_snippet
+- content_timestamp: unknown
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+- Query: site:news.ycombinator.com/item "AI agent framework"
+
+## Raw Content
+
+Ask HN: What makes an AI agent framework production-ready vs. a toy? | Hacker News I've been evaluating AI agent frameworks (LangChain, CrewAI, AutoGPT, OpenClaw, etc.) and I'm trying to figure out what separates the ones that actually work in production from the ones that are fun demos. My current checklist for "production-ready": 1. Persistent memory across sessions (not just in-context window stuffing) 2. Real tool use with error recovery (file I/O, shell, browser, APIs) 3. Multi-model support (swap between Claude, GPT, local models without rewriting) 4. Extensibility via a skill/plugin system rather than hardcoded chains 5. Runs as a daemon/service, not just a CLI you invoke manually 6. Security boundaries — sandboxing, permission models, audit logs What I've noticed is most frameworks nail 1-2 of these but fall apart on the rest. The ones built for demos tend to have flashy UIs but break when you try to run them unattended for a week. What's your checklist? What patterns have you seen that separate real agent infrastructure from weekend projects? | Ask HN: What makes an AI agent framework production-ready vs. a toy? | | --- | | 5 points by winclaw-dev 79 days ago| hide| past| favorite| 1 comment | I'd look to Google's ADK for what enterprise open source / production features look like. Available in { python, java, golang, typescript } at varying levels of maturity. Work appears rapid (I maintain a fork for adk-go, which includes sandboxing, time travel, and a few bug fixes / enhancements). Great interfaces that are easy to extend with code.

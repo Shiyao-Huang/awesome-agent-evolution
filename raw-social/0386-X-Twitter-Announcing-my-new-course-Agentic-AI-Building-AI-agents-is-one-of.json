@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/AndrewYNg AI agent OR agents",
+  "search_rank": 1,
+  "name": "Announcing my new course: Agentic AI! Building AI agents is one of ...",
+  "url": "https://x.com/AndrewYNg/status/1975614372799283423",
+  "snippet": "Together, we'll build a deep research agent that searches, synthesizes, and reports, using all of these agentic design patterns and best ... date: Oct 7, 2025",
+  "id": 386,
+  "platform": "X/Twitter",
+  "content": "Together, we'll build a deep research agent that searches, synthesizes, and reports, using all of these agentic design patterns and best ... date: Oct 7, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Oct 7, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

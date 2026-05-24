@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/sama AI agent OR agents",
+  "search_rank": 1,
+  "name": "Sam Altman (@sama) / Posts / X - Twitter",
+  "url": "https://twitter.com/sama",
+  "snippet": "three of the things we are most excited about: 1. AGI accelerating research 2. AGI accelerating companies 3. personal AGI accelerating everyone in achieving ...",
+  "id": 470,
+  "platform": "X/Twitter",
+  "content": "three of the things we are most excited about: 1. AGI accelerating research 2. AGI accelerating companies 3. personal AGI accelerating everyone in achieving ...",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

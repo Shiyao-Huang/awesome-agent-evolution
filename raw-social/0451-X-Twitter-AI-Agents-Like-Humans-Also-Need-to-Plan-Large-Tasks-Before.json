@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/bindureddy AI agent OR agents",
+  "search_rank": 6,
+  "name": "AI Agents, Like Humans, Also Need to Plan Large Tasks Before ...",
+  "url": "https://x.com/bindureddy/status/1772721265566257291",
+  "snippet": "With Abacus AI, you can create AI agents that will first create a \"plan\" for you to review. Users can review the plan and then have the AI Agent ... date: Mar 26, 2024",
+  "id": 451,
+  "platform": "X/Twitter",
+  "content": "With Abacus AI, you can create AI agents that will first create a \"plan\" for you to review. Users can review the plan and then have the AI Agent ... date: Mar 26, 2024",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Mar 26, 2024",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2024-Q1"
+}

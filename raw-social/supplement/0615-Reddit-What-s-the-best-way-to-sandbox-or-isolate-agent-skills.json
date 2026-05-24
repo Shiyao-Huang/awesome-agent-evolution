@@ -1,0 +1,32 @@
+{
+  "id": 615,
+  "name": "What's the best way to sandbox or isolate agent skills?",
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1rz1heg/whats_the_best_way_to_sandbox_or_isolate_agent/",
+  "platform": "Reddit",
+  "subreddit": "LocalLLaMA",
+  "extraction_status": "ok",
+  "anysearch_extract_status": "failed:extract_upstream_error\nupstream returned error: HTTP 403 403 Forbidden",
+  "content_timestamp": "2026-03-21",
+  "collected_at": "2026-05-21T22:23:52+08:00",
+  "time_slice": "2026-03",
+  "query": "site:reddit.com/r/LocalLLaMA/comments agent self improve",
+  "source": "builder-b-raw-social-supplement-2026-05-21",
+  "score": 3,
+  "num_comments": 4,
+  "author": "[deleted]",
+  "content": "# What's the best way to sandbox or isolate agent skills?\n\nSource: https://www.reddit.com/r/LocalLLaMA/comments/1rz1heg/whats_the_best_way_to_sandbox_or_isolate_agent/\nSubreddit: r/LocalLLaMA\nAuthor: u/[deleted]\nScore: 3 | Comments: 4\nCreated: 2026-03-21\n\n## Post Body\nI know there are several techniques out there, and they work at different OS levels. Sometimes I think a simple Docker container for each skill might be enough, just to make sure a malicious skill or some random data I find online doesn't mess up my system.\n\nWhat do you think? What technology or architecture do you use to isolate agent skills from the host or from each other?\n\n## Top Comments\n\n### Comment 1 — u/Aggressive_Bed7113 (score 3)\nDocker helps with host isolation, but it doesn’t answer the harder question: what is this skill actually allowed to do right now?\n\nFor agent skills, the useful split is usually:\n\n- container / sandbox = where code runs\n- execution policy = what actions may cross the boundary\n\nSo even inside a container, I’d still want:\n- narrow per-skill scopes\n- short-lived credentials / mandates\n- network egress rules\n- file / tool allowlists\n- audit trail per action\n\nOtherwise you just end up with a nicely isolated box that can still do the wrong thing inside its allowed blast radius such as leaking your credentials\n\n### Comment 2 — u/hexxagon_ai (score 1)\nContainer-per-skill is a good start, but it only answers where the code runs. For agent skills, the bigger questions are what files it can touch, what network destinations it can reach, what secrets it can access, what identity it acts as, and what audit trail exists after it acts.\n\nIf those stay wide open, a clean Docker boundary still leaves you with a large blast radius. I would think in layers: runtime isolation, capability scoping, and observability. The second layer is usually the one people underinvest in.",
+  "top_comments": [
+    {
+      "author": "Aggressive_Bed7113",
+      "score": 3,
+      "created_utc": 1774026124.0,
+      "body": "Docker helps with host isolation, but it doesn’t answer the harder question: what is this skill actually allowed to do right now?\n\nFor agent skills, the useful split is usually:\n\n- container / sandbox = where code runs\n- execution policy = what actions may cross the boundary\n\nSo even inside a container, I’d still want:\n- narrow per-skill scopes\n- short-lived credentials / mandates\n- network egress rules\n- file / tool allowlists\n- audit trail per action\n\nOtherwise you just end up with a nicely isolated box that can still do the wrong thing inside its allowed blast radius such as leaking your credentials"
+    },
+    {
+      "author": "hexxagon_ai",
+      "score": 1,
+      "created_utc": 1774235856.0,
+      "body": "Container-per-skill is a good start, but it only answers where the code runs. For agent skills, the bigger questions are what files it can touch, what network destinations it can reach, what secrets it can access, what identity it acts as, and what audit trail exists after it acts.\n\nIf those stay wide open, a clean Docker boundary still leaves you with a large blast radius. I would think in layers: runtime isolation, capability scoping, and observability. The second layer is usually the one people underinvest in."
+    }
+  ]
+}

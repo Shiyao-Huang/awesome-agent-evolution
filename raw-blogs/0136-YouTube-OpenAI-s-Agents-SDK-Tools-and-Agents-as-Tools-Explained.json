@@ -1,0 +1,35 @@
+{
+  "id": 136,
+  "name": "OpenAI's Agents SDK | Tools and Agents-as-Tools Explained",
+  "url": "https://www.youtube.com/watch?v=_RTxDOnLfVM",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=_RTxDOnLfVM\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "OpenAI's Agents SDK | Tools and Agents-as-Tools Explained Agents SDK provides various approaches for tool use, including pre-built tools and all the features we need to develop custom tools. In this chapter, we'll learn everything there is about tools, tool-use, and agents-as-tools. - 00:00 Agents SDK Tools - 00:59 Using Prebuilt Tools - 02:30 Custom Tools - 09:36 FunctionTool Object - 13:43 Agents as Tools In this chapter of the agents SDK course, we are going to be taking a look at tools. Now for tools in agents SDK, there are various ways that we can use them. First, we have pre-built tools. So there is a small number of these pre-built tools that come with agents SDK. They are OpenAI built and they allow us to do a few interesting things. So we can define our own tools and use those as well. So in this chapter we'll work through those and take a look at how we use tools and how we ca",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent",
+    "representative_works": [
+      "OpenAI's Agents SDK | Tools and Agents-as-Tools Explained"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

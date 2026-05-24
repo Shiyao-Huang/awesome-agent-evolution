@@ -1,0 +1,143 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { projects } from '@/data/projects';
+import { site } from '@/data/site';
+
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+
+export async function getStaticPaths() {
+  const toSlug = (value: string) =>
+    value
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+
+  return projects.map((project) => ({
+    params: { slug: toSlug(project.repo) },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+const projectSlug = slugify(project.repo);
+const title = `${project.name} Model Card — ${project.category} | Self Evolve`;
+const description = `${project.name} 深度分析：${project.description} 机制模式：${project.pattern}。`;
+const reportHref = `/reports/${project.report}`;
+const localReportPath = `research/${project.report}`;
+const updatedDate = project.lastPushed ? project.lastPushed.slice(0, 10) : 'unknown';
+const maturity =
+  project.status === 'verified'
+    ? 'Verified evidence path'
+    : project.status === 'candidate'
+      ? 'Candidate requiring more evidence'
+      : 'Placeholder requiring verification';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: title,
+  description,
+  url: `${site.url}/projects/${projectSlug}/`,
+  dateModified: project.lastPushed,
+  about: [
+    project.name,
+    project.repo,
+    project.category,
+    project.pattern,
+    ...project.tags
+  ],
+  isBasedOn: project.url,
+  mainEntity: {
+    '@type': 'SoftwareSourceCode',
+    name: project.name,
+    codeRepository: project.url,
+    programmingLanguage: project.language,
+    license: project.license
+  }
+};
+---
+
+<BaseLayout title={title} description={description} type="article" modifiedTime={project.lastPushed}>
+  <article class="project-detail">
+    <div class="container">
+      <a class="button" href="/projects/">&larr; 返回项目索引</a>
+      <header class="project-hero">
+        <div>
+          <div class="eyebrow">{project.category}</div>
+          <h1>{project.name}</h1>
+          <p class="lead">{project.description}</p>
+          <div class="pill-row">
+            <a class="pill" href={project.url} target="_blank" rel="noopener">{project.repo}</a>
+            <span class="pill">{project.language}</span>
+            <span class="pill">{project.license}</span>
+            <span class="pill">{maturity}</span>
+          </div>
+        </div>
+        <aside class="model-card-summary" aria-label={`${project.name} model card summary`}>
+          <div class="eyebrow">Model Card</div>
+          <dl>
+            <div><dt>Stars</dt><dd>{project.stars.toLocaleString()}</dd></div>
+            <div><dt>Forks</dt><dd>{project.forks}</dd></div>
+            <div><dt>Updated</dt><dd>{updatedDate}</dd></div>
+            <div><dt>Pattern</dt><dd>{project.pattern}</dd></div>
+          </dl>
+        </aside>
+      </header>
+
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+
+      <section class="model-card-grid" aria-label="Project model card">
+        <section class="model-card-block">
+          <div class="eyebrow">1. 它在图谱里的角色</div>
+          <h2>为什么这个项目重要</h2>
+          <p>{project.name} 属于 <strong>{project.category}</strong>，在 Self Evolve 图谱中承担 <strong>{project.pattern}</strong> 这一类机制的代表样本。它的价值不只来自 Star 数，而来自它能把自进化问题落到可观察的工程环节：生成、反馈、评估、记忆、搜索、编排或训练数据闭环。</p>
+        </section>
+
+        <section class="model-card-block">
+          <div class="eyebrow">2. 进化机制</div>
+          <h2>它如何产生改进信号</h2>
+          <p>当前归档的机制链是：<strong>{project.pattern}</strong>。阅读时应优先确认三件事：改进对象是什么，反馈信号来自哪里，评估是否能阻止退化。</p>
+          <div class="pill-row">{project.tags.map((tag) => <span class="pill">{tag}</span>)}</div>
+        </section>
+
+        <section class="model-card-block">
+          <div class="eyebrow">3. 教学用法</div>
+          <h2>适合拿来教什么</h2>
+          <p>适合用作 <strong>{project.category}</strong> 的案例卡。教学时可以让读者沿着 “目标任务 -> 反馈来源 -> 改动策略 -> 评估指标 -> 失败模式” 五步复盘，而不是只看 README 或安装命令。</p>
+        </section>
+
+        <section class="model-card-block">
+          <div class="eyebrow">4. 工程表面</div>
+          <h2>技术栈与可运行性线索</h2>
+          <p>主要语言是 <strong>{project.language}</strong>，记录的技术栈包括：{project.stack.join('、')}。许可证记录为 <strong>{project.license}</strong>，最近活跃日期为 <strong>{updatedDate}</strong>。</p>
+        </section>
+
+        <section class="model-card-block">
+          <div class="eyebrow">5. 证据链</div>
+          <h2>从原始材料到分析</h2>
+          <p>站内数据保留了 GitHub 源、局部镜像路径和报告路径。若公开报告尚未同步到站点，仍以本页 model card 作为 SEO 与教学入口，并把原始仓库作为第一证据源。</p>
+          <ul>
+            <li>GitHub: <a href={project.url} target="_blank" rel="noopener">{project.url}</a></li>
+            <li>Local mirror: <code>{project.localPath ?? 'not recorded'}</code></li>
+            <li>Source report: <code>{localReportPath}</code></li>
+            <li>Published report path: <a href={reportHref}>{reportHref}</a></li>
+          </ul>
+        </section>
+
+        <section class="model-card-block">
+          <div class="eyebrow">6. 读者问题</div>
+          <h2>继续深挖时问什么</h2>
+          <ul>
+            <li>这个项目的评估信号能否稳定复现，还是只在 demo 中成立？</li>
+            <li>它改进的是 prompt、工具、记忆、代码、策略、数据，还是完整 agent 组织？</li>
+            <li>失败样本会不会被保存，并在下一轮产生行为改变？</li>
+            <li>它和同类项目相比，真正多出来的机制是什么？</li>
+          </ul>
+        </section>
+      </section>
+    </div>
+  </article>
+</BaseLayout>

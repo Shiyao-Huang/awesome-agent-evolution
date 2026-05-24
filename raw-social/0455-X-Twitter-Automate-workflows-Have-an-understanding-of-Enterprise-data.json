@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/bindureddy AI agent OR agents",
+  "search_rank": 10,
+  "name": "Automate workflows - Have an understanding of Enterprise data",
+  "url": "https://x.com/bindureddy/status/1874568118439461254",
+  "snippet": "Organizations will have 50 - 500 agents that automate various tasks. These AI agents will - Talk and perform actions on Enterprise systems - ... date: Jan 1, 2025",
+  "id": 455,
+  "platform": "X/Twitter",
+  "content": "Organizations will have 50 - 500 agents that automate various tasks. These AI agents will - Talk and perform actions on Enterprise systems - ... date: Jan 1, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jan 1, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/bindureddy AI agent OR agents",
+  "search_rank": 4,
+  "name": "DeepAgent searches for other AI agents and tools",
+  "url": "https://x.com/bindureddy/status/1931331911487729953",
+  "snippet": "Bindu Reddy (@bindureddy). 150 likes 19 replies. Launching AI Discovery And Communication DeepAgent discovers other AI agents and software ... date: Jun 7, 2025",
+  "id": 449,
+  "platform": "X/Twitter",
+  "content": "Bindu Reddy (@bindureddy). 150 likes 19 replies. Launching AI Discovery And Communication DeepAgent discovers other AI agents and software ... date: Jun 7, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jun 7, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

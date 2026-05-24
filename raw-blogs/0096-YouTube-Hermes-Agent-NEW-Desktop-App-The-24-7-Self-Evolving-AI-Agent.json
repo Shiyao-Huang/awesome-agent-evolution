@@ -1,0 +1,35 @@
+{
+  "id": 96,
+  "name": "Hermes Agent NEW Desktop App - The 24/7 Self-Evolving AI Agent!",
+  "url": "https://www.youtube.com/watch?v=YBp_PXBbe80",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "self_evolving_agent",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=YBp_PXBbe80\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Hermes Agent NEW Desktop App - The 24/7 Self-Evolving AI Agent! Hermes Agent is one of most advanced open-source AI agents right now, and in this video I showcase the brand new Hermes Desktop App that makes running persistent autonomous AI agents dramatically easier. Unlike traditional AI assistants, Hermes is designed to continuously evolve over time through: Built by Nous Research under the MIT license, Hermes can run 24/7 on your own infrastructure while learning from previous tasks and improving itself over time. Agent is one most interesting open-source AI projects right now. It's designed to be a persistent autonomous system that is continuously evolving over time. It's built by Newest Research under the MIT license. And Hermes can run exactly like OpenCloud, but better 24/7 on your computer and your own infrastructure while building long-term memory, reusable skills, and even deep",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, self-evolving, memory",
+    "representative_works": [
+      "Hermes Agent NEW Desktop App - The 24/7 Self-Evolving AI Agent!"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

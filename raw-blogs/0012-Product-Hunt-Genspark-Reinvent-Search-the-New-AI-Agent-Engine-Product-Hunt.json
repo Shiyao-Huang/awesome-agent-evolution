@@ -1,0 +1,35 @@
+{
+  "id": 12,
+  "name": "Genspark: Reinvent Search, the New AI Agent Engine | Product Hunt",
+  "url": "https://www.producthunt.com/products/genspark?launch=genspark",
+  "platform": "Product Hunt",
+  "source_type": "product_discovery",
+  "category": "agent_product_or_directory",
+  "source_dataset": "rank-platforms-product-discovery-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "extract failed: HTTP 403: 403 Forbidden\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Reinvent Search, the New AI Agent Engine An AI Agent engine where specialized AI agents perform research and generate custom pages called Sparkpages. Free from biases and SEO-driven content, Sparkpages synthesize trustworthy information, offering more valuable results and saving users time. genspark.aiApp Store GensparkInfo Launched in2024View2 launches Forum p/genspark This is the 2nd launch Genspark.View more ## Genspark Super Agent General AI agent built for your everyday task Genspark Super Agent was ranked #2 of the day for April 24th, 2025 Genspark Super Agent handles your everyday tasks, from making phone calls and generating slides to",
+  "content_timestamp": "2025-04-24",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2025-04",
+  "author_profile": {
+    "name_or_id": "Product Hunt maker/team",
+    "title_position_company": "Product launch team",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.producthunt.com",
+    "domains_expertise": "agent",
+    "representative_works": [
+      "Genspark: Reinvent Search, the New AI Agent Engine | Product Hunt"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "product_team_or_maker",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

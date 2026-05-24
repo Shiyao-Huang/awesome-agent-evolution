@@ -1,0 +1,35 @@
+{
+  "id": 90,
+  "name": "End-to-End Agentic AI QA Workflow with AI Agents, MCP & Playwright",
+  "url": "https://www.youtube.com/watch?v=rwR1h8OG0aI",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=rwR1h8OG0aI\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "End-to-End Agentic AI QA Workflow with AI Agents, MCP & Playwright | Build an Autonomous QA Engineer In this hands-on tutorial you will learn how to: This is our lesson 23 where I will be covering a very important concept called end to end QA workflow with aentic AI. So as part of this lesson, I'm going to show you how can we automate the entire end to end QA workflow with the help of agentic AI. So what is our end toend QA workflow? starting from analyzing the user stories until you push your automation scripts into your GitHub repository and deploy the application into production. So this entire end toend QA workflow is possible with simple prompt by using the natural language. We are not going to use a single line of code. So now let us see how can we automate this end toend QA workflow with the help of AI agents and MCP servers. This agent reads and understands the user stories and t",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, MCP, workflow",
+    "representative_works": [
+      "End-to-End Agentic AI QA Workflow with AI Agents, MCP & Playwright"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

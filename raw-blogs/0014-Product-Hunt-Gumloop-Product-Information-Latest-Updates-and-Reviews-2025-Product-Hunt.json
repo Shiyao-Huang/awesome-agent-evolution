@@ -1,0 +1,35 @@
+{
+  "id": 14,
+  "name": "Gumloop - Product Information, Latest Updates, and Reviews 2025 | Product Hunt",
+  "url": "https://www.producthunt.com/products/agenthub",
+  "platform": "Product Hunt",
+  "source_type": "product_discovery",
+  "category": "agent_workflow_automation",
+  "source_dataset": "rank-platforms-product-discovery-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "extract failed: HTTP 403: 403 Forbidden\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Gumloop # Gumloop Automate Any Workflow with AI •6 reviews•3 shoutouts• 465 followers Visit websiteFollow Overview Launches Shoutouts Reviews Team More Blog• Newsletter• Questions• Forums• Product Categories• • • • Terms• * Privacy and Cookies Michael Seibel AgentHub—Automate any workflow with AI Upvote(267)• 105 • 1yr ago View all Start new thread Max Brodeur-Urbas All Makers ## What isGumloop? Gumloop is a no-code platform for building powerful AI automations. Our no-code visual builder lets users create reliable, cost-effective, intuitive AI-powered automation. Tackle complex repetitive work for your business end-to-end. ### Do you use Gum",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "Product Hunt maker/team",
+    "title_position_company": "Product launch team",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.producthunt.com",
+    "domains_expertise": "agent, workflow",
+    "representative_works": [
+      "Gumloop - Product Information, Latest Updates, and Reviews 2025 | Product Hunt"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "product_team_or_maker",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

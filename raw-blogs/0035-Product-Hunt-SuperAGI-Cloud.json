@@ -1,0 +1,35 @@
+{
+  "id": 35,
+  "name": "SuperAGI Cloud",
+  "url": "https://www.producthunt.com/products/superagi-cloud",
+  "platform": "Product Hunt",
+  "source_type": "product_discovery",
+  "category": "investor_market_resource",
+  "source_dataset": "rank-platforms-product-discovery-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "extract failed: HTTP 403: 403 Forbidden\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "SuperAGI Cloud Product Information and Latest Updates (2025) | Product Hunt Product Hunt logo dark Subscribe Sign in # SuperAGI Cloud Build, Manage & Run useful autonomous AI agents on cloud •7 reviews• 1K followers Visit websiteFollow Overview Launches Forums Reviews Team Awards Alternatives More Blog• Newsletter• Questions• Forums• Product Categories• Apps• About• FAQ• Terms• Privacy and Cookies• X.com• Facebook• Instagram• LinkedIn• YouTube• * Advertise ©2025Product Hunt Product status Claimed Awards SuperAGI Cloud was ranked #1 of the day for August 4th, 2023 All Awards Links superagi.comGitHub X.com Makers haider ali khan Mukunda NS Snow",
+  "content_timestamp": "2023-08-04",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2023-Q3",
+  "author_profile": {
+    "name_or_id": "Product Hunt maker/team",
+    "title_position_company": "Product launch team",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.producthunt.com",
+    "domains_expertise": "agent",
+    "representative_works": [
+      "SuperAGI Cloud"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "product_team_or_maker",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

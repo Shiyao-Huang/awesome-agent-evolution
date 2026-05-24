@@ -1,0 +1,12 @@
+# Show HN: Build production-ready LangGraph AI agents with natural language | Hacker News
+
+- URL: https://news.ycombinator.com/item?id=44329496
+- Platform: Hacker News
+- Extraction status: fallback_snippet
+- content_timestamp: unknown
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+
+## Raw Content
+
+Show HN: Build production-ready LangGraph AI agents with natural language | Hacker News We just open-sourced Braid, a LangGraph agent-development system that lets you go from a list of requirements to a containerised, production-grade AI agent in minutes. Why we built it We needed to build a custom LangGraph agent and wanted to handle the setup with Claude Code, but grew frustrated by having to start from scratch, bolting together integrations, handling observability, writing boilerplate and deployment scripts… and then debugging. Braid is designed to turbocharge and guide Claude Code to automate that grind so you can stay at the “describe what I want” level and then automate part of the debugging process. What’s inside • Natural-language agent creation – tell Claude Code what you need; it scaffolds the LangGraph workflow plus tests and docs. • 40 + baked-in integrations – Google Workspace, Slack, Xero, Notion, Perplexity and more. • Production defaults – Docker image, health-checks, retries, circuit-breakers, LangSmith tracing, Kubernetes manifests. • Security – • Examples – financial-ops assistant, autonomous A/R clerk, sales-intelligence engine (all in the README). # then ask Claude Code: # "Please prepare to create a LangGraph agent by reviewing the docs and examples." Looking for feedback • Does the “describe → deploy” flow feel natural, or do we hide too much? • How does this compare to your prior agent development workflows? • What is your perspective on MCP in production environments with LangGraph agents? • What other functionality would you prefer to see? | Show HN: Build production-ready LangGraph AI agents with natural language(github.com/braid-ink) | | --- | | 2 points by digitcatphd 9 months ago| hide| past| favorite |

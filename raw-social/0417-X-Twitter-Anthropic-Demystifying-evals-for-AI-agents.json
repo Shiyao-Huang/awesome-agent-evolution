@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/AnthropicAI AI agent OR agents",
+  "search_rank": 2,
+  "name": "Anthropic - Demystifying evals for AI agents",
+  "url": "https://x.com/AnthropicAI/status/2009696515061911674",
+  "snippet": "Here are evaluation strategies that have worked across real-world deployments. Demystifying evals for AI agents. date: Jan 9, 2026",
+  "id": 417,
+  "platform": "X/Twitter",
+  "content": "Here are evaluation strategies that have worked across real-world deployments. Demystifying evals for AI agents. date: Jan 9, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jan 9, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

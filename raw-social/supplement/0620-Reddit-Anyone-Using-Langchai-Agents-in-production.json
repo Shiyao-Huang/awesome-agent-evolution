@@ -1,0 +1,80 @@
+{
+  "id": 620,
+  "name": "Anyone Using Langchai Agents in production?",
+  "url": "https://www.reddit.com/r/LangChain/comments/1i81qks/anyone_using_langchai_agents_in_production/",
+  "platform": "Reddit",
+  "subreddit": "LangChain",
+  "extraction_status": "ok",
+  "anysearch_extract_status": "failed:extract_upstream_error\nupstream returned error: HTTP 403 403 Forbidden",
+  "content_timestamp": "2025-01-23",
+  "collected_at": "2026-05-21T22:23:52+08:00",
+  "time_slice": "2025-01",
+  "query": "site:reddit.com/r/LangChain/comments agent production",
+  "source": "builder-b-raw-social-supplement-2026-05-21",
+  "score": 12,
+  "num_comments": 31,
+  "author": "Defiant-Sir-1199",
+  "content": "# Anyone Using Langchai Agents in production?\n\nSource: https://www.reddit.com/r/LangChain/comments/1i81qks/anyone_using_langchai_agents_in_production/\nSubreddit: r/LangChain\nAuthor: u/Defiant-Sir-1199\nScore: 12 | Comments: 31\nCreated: 2025-01-23\n\n## Post Body\nI have built a few agentic application pocs with langchain , crewai , swarm . Comparing Langchain agent with other frameworks it's quite good , but seems no one is using the Langchain out of the box agent in production. Just wondering what all frameworks you guys are using in production and why \n\n## Top Comments\n\n### Comment 1 — u/FutureClubNL (score 11)\nWe do, in contrast to the popular opinion here (which i I find strange for a sub called Langchain) that Langchain and Langgraph sucks and bloats everything up, we actually use it for agents in production and make lean agents where Langgraph saves us quite a lot of work in the nitty gritty details.\n\n### Comment 2 — u/macronancer (score 5)\nNo. Bloatware.\n\nRolled our own agents at 3 diff companies.\n\nI dont need a library to call an LLM and parse the response as json.\n\n### Comment 3 — u/Ok-Garage679 (score 5)\nIt's an interesting and early adopter landscape right now. Accenture has made more money than OpenAI in consulting in this GenAI space and is doing very well from the consulting side. HOWEVER, only a tiny % has actually become production grade. Mainly PoC/prototypes.\n\n### Comment 4 — u/codekarate3 (score 5)\nIt seems that Langchain docs always point you to using LangGraph now for agents.\n\nIf you are looking for a good Typescript/Javascript AI Agent framework, you could check out Mastra. I've been hearing some good things about Haystack and Letta as well if you want Python.\n\n### Comment 5 — u/Aggressive_Tea9664 (score 3)\nIm using concepts from swarm as i find it lightweight and flexible\n\n### Comment 6 — u/Appropriate-Bet-3655 (score 2)\nPydantic is awesome but still not production ready really. But the code is open source and they have solid code coverage. If you want something hardcore and if you need complex state-machine like system go with LangGraph.   \n  \nYou can always build your own framework or use a minimalistic framework. I wrote one in TypeScript, you can check it out here: [https://axar-ai.gitbook.io/axar](https://axar-ai.gitbook.io/axar)\n\n### Comment 7 — u/felixthekraut (score 2)\nIt's all about LangGraph, son.\n\n### Comment 8 — u/Clean-View8108 (score 1)\nAre you working somewhere?\n\n### Comment 9 — u/olivier_r (score 1)\nWe had with langchain and moved to langgraph when it came out. Even for simple agents the tooling is better, and it’s much better to iterate when the complexity increases. Pretty happy about it overall\n\n### Comment 10 — u/conscious-wanderer (score 1)\nOur team uses langgraph agent in production, it's fast for trying new ideas, do continuous development, we migrated from langchain agent executor, and can't complain yet.",
+  "top_comments": [
+    {
+      "author": "FutureClubNL",
+      "score": 11,
+      "created_utc": 1737702764.0,
+      "body": "We do, in contrast to the popular opinion here (which i I find strange for a sub called Langchain) that Langchain and Langgraph sucks and bloats everything up, we actually use it for agents in production and make lean agents where Langgraph saves us quite a lot of work in the nitty gritty details."
+    },
+    {
+      "author": "macronancer",
+      "score": 5,
+      "created_utc": 1737667251.0,
+      "body": "No. Bloatware.\n\nRolled our own agents at 3 diff companies.\n\nI dont need a library to call an LLM and parse the response as json."
+    },
+    {
+      "author": "Ok-Garage679",
+      "score": 5,
+      "created_utc": 1737658717.0,
+      "body": "It's an interesting and early adopter landscape right now. Accenture has made more money than OpenAI in consulting in this GenAI space and is doing very well from the consulting side. HOWEVER, only a tiny % has actually become production grade. Mainly PoC/prototypes."
+    },
+    {
+      "author": "codekarate3",
+      "score": 5,
+      "created_utc": 1737656643.0,
+      "body": "It seems that Langchain docs always point you to using LangGraph now for agents.\n\nIf you are looking for a good Typescript/Javascript AI Agent framework, you could check out Mastra. I've been hearing some good things about Haystack and Letta as well if you want Python."
+    },
+    {
+      "author": "Aggressive_Tea9664",
+      "score": 3,
+      "created_utc": 1737635848.0,
+      "body": "Im using concepts from swarm as i find it lightweight and flexible"
+    },
+    {
+      "author": "Appropriate-Bet-3655",
+      "score": 2,
+      "created_utc": 1737674783.0,
+      "body": "Pydantic is awesome but still not production ready really. But the code is open source and they have solid code coverage. If you want something hardcore and if you need complex state-machine like system go with LangGraph.   \n  \nYou can always build your own framework or use a minimalistic framework. I wrote one in TypeScript, you can check it out here: [https://axar-ai.gitbook.io/axar](https://axar-ai.gitbook.io/axar)"
+    },
+    {
+      "author": "felixthekraut",
+      "score": 2,
+      "created_utc": 1737689496.0,
+      "body": "It's all about LangGraph, son."
+    },
+    {
+      "author": "Clean-View8108",
+      "score": 1,
+      "created_utc": 1737657764.0,
+      "body": "Are you working somewhere?"
+    },
+    {
+      "author": "olivier_r",
+      "score": 1,
+      "created_utc": 1737709920.0,
+      "body": "We had with langchain and moved to langgraph when it came out. Even for simple agents the tooling is better, and it’s much better to iterate when the complexity increases. Pretty happy about it overall"
+    },
+    {
+      "author": "conscious-wanderer",
+      "score": 1,
+      "created_utc": 1737716369.0,
+      "body": "Our team uses langgraph agent in production, it's fast for trying new ideas, do continuous development, we migrated from langchain agent executor, and can't complain yet."
+    }
+  ]
+}

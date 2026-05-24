@@ -7,6 +7,8 @@ This chapter surveys eight representative open-source agent and LLM-programming 
 
 The unifying observation is that none of these frameworks is, by itself, a complete self-evolution layer.  Each provides one or more ingredients.  Some provide orchestration, some memory, some tool execution, some evaluation, and some optimization.  But current frameworks generally lack persistent lineage tracking, long-horizon cross-run memory, regression-safe promotion, unified experiment provenance, and benchmark governance.  Therefore, a self-evolving AI architecture should not replace these frameworks.  It should sit above them as an evolution layer that treats framework instances as execution substrates, collects traces and metrics, proposes mutations, evaluates variants, and promotes only those changes whose evidence survives regression checks.  In this sense, agent frameworks are to self-evolution what operating systems and build systems are to software engineering: they are necessary infrastructure, but they are not the entire engineering discipline.
 
+\input{../analysis/github-project-data-analysis}
+
 \subsection{Framework Overview}
 \label{subsec:framework-overview}
 

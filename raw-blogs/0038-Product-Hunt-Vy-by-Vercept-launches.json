@@ -1,0 +1,35 @@
+{
+  "id": 38,
+  "name": "Vy by Vercept launches",
+  "url": "https://www.producthunt.com/products/vy-by-vercept/launches",
+  "platform": "Product Hunt",
+  "source_type": "product_discovery",
+  "category": "agent_workflow_automation",
+  "source_dataset": "rank-platforms-product-discovery-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "extract failed: HTTP 403: 403 Forbidden\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Vy by Vercept Vy by Vercept ## Vy by Vercept ## AI agent that does tasks on your Mac 4.0•2 reviews• 145 followers Visit website Automation tools Vy is a native Mac app powered by combining our model's advanced interaction capabilities with frontier reasoning agents. It runs directly on your machine. It works with your actual software, on your screen. Overview Launches1 Reviews2 Team More Blog• Newsletter• Questions• Forums• Product Categories• Apps• About• FAQ• Terms• Privacy and Cookies• X.com• Facebook• Instagram• LinkedIn• YouTube• * Advertise ©2025Product Hunt Follow Vy by VerceptAdd to collectionShare Company Info vercept.com Vy by Verce",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "Product Hunt maker/team",
+    "title_position_company": "Product launch team",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.producthunt.com",
+    "domains_expertise": "agent",
+    "representative_works": [
+      "Vy by Vercept launches"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "product_team_or_maker",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

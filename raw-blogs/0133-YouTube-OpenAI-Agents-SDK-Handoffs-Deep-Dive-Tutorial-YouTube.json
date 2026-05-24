@@ -1,0 +1,35 @@
+{
+  "id": 133,
+  "name": "OpenAI Agents SDK Handoffs | Deep Dive Tutorial - YouTube",
+  "url": "https://www.youtube.com/watch?v=LuarehusOWU",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=LuarehusOWU\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "OpenAI Agents SDK Handoffs | Deep Dive Tutorial In OpenAI's Agents SDK, we can build multi-agent workflows in two ways. The first is agents-as-tools, which follow an orchestrator-subagent pattern. The second is using handoffs, which allow agents to pass control over to other agents. In this video, we'll dive into handoffs using Agents SDK and the latest LLMs, including gpt-4.1-mini and gpt-4.1 — using a multi-agent workflow containing a web search agent, dummy RAG agent, and code execution agent. - 05:06 Code Start - 12:36 Agents SDK Handoffs I will note that the there are many features in OpenAI's agents SDK that you can use with other LM providers, but handoffs are not one of those. So handoffs from what I have seen so far do only work with OpenAI LMS. So we will need an OpenAI API key. So we'll run this and you get this from the openi platform which is platform.topi.com. Now we will b",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, workflow",
+    "representative_works": [
+      "OpenAI Agents SDK Handoffs | Deep Dive Tutorial - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

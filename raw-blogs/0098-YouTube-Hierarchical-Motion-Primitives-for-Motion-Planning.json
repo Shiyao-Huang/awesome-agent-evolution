@@ -1,0 +1,35 @@
+{
+  "id": 98,
+  "name": "Hierarchical Motion Primitives for Motion Planning",
+  "url": "https://www.youtube.com/watch/;?v=xJqXwKzxdEk&cbrd=1&ucbcb=1",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch/;?v=xJqXwKzxdEk&cbrd=1&ucbcb=1\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Hierarchical Motion Primitives for Motion Planning In this video, we demonstrate how hierarchy can be employed to build motion primitives for moving agents on a grid. This enables us to achieve significant reduction in computational complexity that scales well with the number of agents. It builds on our previous work that introduced feedback-based motion primitives. The idea is to recursively build more complex motion primitives from existing ones, taking care of concatenation constraints to ensure implementability. We build suitable higher level motion primitives for achieving formation flight, morphing between formations, and even switching between these modalities. The results are shown on quadrotor vehicles in cluttered spaces. safe an autonomous flight of quadrille cockers is a challenging task previously we developed basic motion primitives based on feedback control which could be ",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent",
+    "representative_works": [
+      "Hierarchical Motion Primitives for Motion Planning"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

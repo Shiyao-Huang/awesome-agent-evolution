@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/LangChainAI AI agent OR agents",
+  "search_rank": 10,
+  "name": "LangChain",
+  "url": "https://x.com/LangChainAI/status/1936846649852076197",
+  "snippet": "An AI agent that intelligently manages and processes documents, leveraging LangChain's RAG technology to handle multiple files and provide ... date: Jun 22, 2025",
+  "id": 405,
+  "platform": "X/Twitter",
+  "content": "An AI agent that intelligently manages and processes documents, leveraging LangChain's RAG technology to handle multiple files and provide ... date: Jun 22, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jun 22, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

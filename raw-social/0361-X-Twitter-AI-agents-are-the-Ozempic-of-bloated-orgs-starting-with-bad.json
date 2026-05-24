@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/swyx AI agent OR agents",
+  "search_rank": 6,
+  "name": "AI agents are the Ozempic of bloated orgs. starting with (bad ...",
+  "url": "https://x.com/swyx/status/1847379022407487847",
+  "snippet": "AI agents are the Ozempic of bloated orgs. starting with (bad) customer support for decades there was a class of job that was essentially gpt3.5-level ...",
+  "id": 361,
+  "platform": "X/Twitter",
+  "content": "AI agents are the Ozempic of bloated orgs. starting with (bad) customer support for decades there was a class of job that was essentially gpt3.5-level ...",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "query": "site:news.ycombinator.com/item \"AI coding agents\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "site:news.ycombinator.com/item \"autonomous agents\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "site:news.ycombinator.com/item \"OpenAI agents\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "site:news.ycombinator.com/item \"Claude Code\" \"agent\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "site:news.ycombinator.com/item \"AI workflows\" \"agents\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  }
+]

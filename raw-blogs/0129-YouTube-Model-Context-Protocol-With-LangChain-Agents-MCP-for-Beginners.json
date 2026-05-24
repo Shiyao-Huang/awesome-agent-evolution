@@ -1,0 +1,35 @@
+{
+  "id": 129,
+  "name": "Model Context Protocol With LangChain Agents | MCP for Beginners",
+  "url": "https://www.youtube.com/watch?v=G2pN_-oDlAQ",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=G2pN_-oDlAQ\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Model Context Protocol With LangChain Agents | Building From Scratch | MCP for Beginners In this deep dive, we explore Model Context Protocol (MCP) - the groundbreaking standard that's revolutionizing how AI applications communicate with language models. If you've ever struggled with building AI agents that work across different models, this video is for you. We break down how MCP serves as the \"USB-C port for AI applications,\" creating a universal connector between AI models and various data sources and tools. - Why MCP matters for developers building cross-platform AI solutions - How MCP eliminates the need to write model-specific code for each AI system - The real-world applications and benefits of standardized context sharing - How early adopters are already leveraging MCP to build more efficient AI systems uma you can find me on X AKA Twitter at princea on YouTube uh you can find me",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, MCP",
+    "representative_works": [
+      "Model Context Protocol With LangChain Agents | MCP for Beginners"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

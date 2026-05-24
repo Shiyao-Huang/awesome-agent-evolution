@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/bindureddy AI agent OR agents",
+  "search_rank": 9,
+  "name": "Secure OpenClaw - Message Your Custom AI Agent From Telegram ...",
+  "url": "https://x.com/bindureddy/status/2024320622470533360",
+  "snippet": "Create and simply message the agent! - do tasks like respond to emails - schedule meetings - use the browser to book tickets date: Feb 19, 2026",
+  "id": 454,
+  "platform": "X/Twitter",
+  "content": "Create and simply message the agent! - do tasks like respond to emails - schedule meetings - use the browser to book tickets date: Feb 19, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Feb 19, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

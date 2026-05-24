@@ -1,0 +1,35 @@
+{
+  "id": 91,
+  "name": "Forget Devin.. Start building your own Autonomous AI AGENTS",
+  "url": "https://www.youtube.com/watch?v=EWwdIgXfYPI",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=EWwdIgXfYPI\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Devin.. Start building your Autonomous AI AGENTS A beginner’s guide to understanding Autonomous AI Agent Architectures and how to get started with building your own agents using AutoGPT and CrewAI. - 00:00 Intro - 00:53 Who is this content for ? - 01:16 Chapters - 02:01 LLMs vs Agents - 02:35 Prompting Techniques for Agents - 04:36 Timeline of Autonomous Agents - 05:49 Standalone Autonomous Agent (AutoGPT) - 08:25 Multi-agent Architectures (Crew AI) - 11:46 Final Thoughts",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, CrewAI",
+    "representative_works": [
+      "Forget Devin.. Start building your own Autonomous AI AGENTS"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

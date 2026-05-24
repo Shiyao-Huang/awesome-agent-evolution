@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/latentspacepod AI agent OR agents",
+  "search_rank": 7,
+  "name": "From applied cryptography and offensive security in France's ...",
+  "url": "https://x.com/latentspacepod/status/1998935828878537011",
+  "snippet": "... AI as CTO of Superhuman Mail (Superhuman, recently acquired by ... agents and fight agent laziness, what box-priced inference and local ... date: Dec 11, 2025",
+  "id": 442,
+  "platform": "X/Twitter",
+  "content": "... AI as CTO of Superhuman Mail (Superhuman, recently acquired by ... agents and fight agent laziness, what box-priced inference and local ... date: Dec 11, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Dec 11, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/AndrewYNg AI agent OR agents",
+  "search_rank": 2,
+  "name": "New agentic short course! Multi AI Agent Systems with crewAI, built ...",
+  "url": "https://x.com/AndrewYNg/status/1790769732146307308",
+  "snippet": "In this course, you'll learn how to break down complex tasks into subtasks for multiple AI agents, each playing a specialized role, to execute. date: May 15, 2024",
+  "id": 387,
+  "platform": "X/Twitter",
+  "content": "In this course, you'll learn how to break down complex tasks into subtasks for multiple AI agents, each playing a specialized role, to execute. date: May 15, 2024",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "May 15, 2024",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2024-Q1"
+}

@@ -1,0 +1,35 @@
+{
+  "id": 49,
+  "name": "Architecting Agent Memory: Principles, Patterns, and Best Practices",
+  "url": "https://www.youtube.com/watch?v=W2HVdB4Jbjs",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=W2HVdB4Jbjs\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "In the rapidly evolving landscape of agentic systems, memory management has emerged as a key pillar for building intelligent, context-aware AI Agents. Inspired by the complexity of human memory systems—such as episodic, working, semantic, and procedural memory—this talk unpacks how AI agents can achieve believability, reliability, and capability by retaining and reasoning over past experiences. , working memory. Agent memory is the mechanisms that we are implementing to actually make sure that states persist in our AI application. And the core topic that we are going to be working on as AI memory engineers is on memory management. We're going to be building memory management systems. And memory management is a systematic process of organizing all the information that you're putting into the context window. Yes, we have like large context window, but that's not for you to stuff all your d",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, memory",
+    "representative_works": [
+      "Architecting Agent Memory: Principles, Patterns, and Best Practices"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

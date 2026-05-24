@@ -1,0 +1,35 @@
+{
+  "id": 150,
+  "name": "This 100% self-improving AI Agent is insane… just watch - YouTube",
+  "url": "https://www.youtube.com/watch?v=EHlqRx0r4BI",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "self_evolving_agent",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=EHlqRx0r4BI\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "100 We have entered the era of self-improving AI. First came order research which went super viral. It's a self-improving agentic loop from AJ Kapathy. And now there's a new AI agent called Hermes agent which is basically a self-improving alternative to openclaw. So imagine if your openclaw could create new skills and self-improve based on the mistakes it did based on the conversation with you without you having to lift a finger. This is what the future of AI agents will look like and Hermes agent is the first taste of it. own computer, establishing a new VPS own virtual private server do anything on that server just like a human would Like if you hire a new human for a company, you would give him a new computer. You wouldn't have five people at your company share a single computer. And this is the ideology that we need to have for AI agents as well. Now, right now, the best VPS option f",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, self-improving",
+    "representative_works": [
+      "This 100% self-improving AI Agent is insane… just watch - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

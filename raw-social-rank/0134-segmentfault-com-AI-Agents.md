@@ -1,0 +1,373 @@
+# AI Agents 能自己开发工具自己使用吗？一项智能体自迭代能力研究
+
+- URL: https://segmentfault.com/a/1190000047270327
+- Platform: segmentfault.com
+- Extraction status: ok
+- content_timestamp: ）”时代，后者已成为新一代大语言模型的标志性响应内容。
+
+![](https://segmentfault
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+- Query: site:segmentfault.com AI Agent 自进化
+
+## Raw Content
+
+## 人工智能 - AI Agents 能自己开发工具自己使用吗？一项智能体自迭代能力研究 - IDP技术干货 - SegmentFault 思否
+
+**Source**: https://segmentfault.com/a/1190000047270327
+
+---
+
+# [AI Agents 能自己开发工具自己使用吗？一项智能体自迭代能力研究](https://segmentfault.com/a/1190000047270327)
+
+[Baihai_IDP](https://segmentfault.com/u/baihai_idp)[2025-09-17  湖南](https://segmentfault.com/a/1190000047270327/revision)
+**
+阅读 9 分钟
+
+0
+[https://segmentfault.com/a/1190000047270327#comment-area](https://segmentfault.com/a/1190000047270327#comment-area)
+
+![头图](https://segmentfault.com/img/bVdmvay?spec=cover)
+
+> **编者按：** AI 智能体能否通过构建和使用工具来实现真正的自我改进？当我们谈论人工智能的“自我进化”时，究竟指的是训练阶段的算法优化，还是推理阶段的能力提升？
+> 
+> 
+> 
+> 我们今天为大家带来的这篇文章，作者的观点是：当前的大语言模型虽然能够构建出复杂的开发工具，但在实际执行任务时往往选择忽略这些自建工具，更倾向于依赖既有知识直接解决问题。
+> 
+> 
+> 
+> 文章通过对比 GPT-5 和 Claude Opus 4 两个先进模型的实验，详细记录了让 AI 智能体自主构建任务管理器、代码质量检测工具等开发辅助工具的全过程。作者发现，尽管两个模型都能创建出功能完备的工具集（GPT-5 偏向构建 Unix 风格的命令行工具，而 Opus 4 更注重拟人化的任务执行助手），但在真正执行复杂编程任务时，它们却几乎不使用这些自建工具，而是选择基于训练数据中的知识直接完成任务。这一现象揭示了推理阶段自我改进面临的核心挑战：模型缺乏持续学习和工具内化的机制。
+> 
+> 
+> 
+> 这项研究为我们理解 AI 智能体的能力边界提供了重要洞察，也为未来构建真正“自我进化”的编程助手指明了方向。
+
+**作者 | Alessio Fanelli**
+
+**编译 | 岳扬**
+
+在 AI 安全领域，“自我改进（Self-Improving）”是个令人不安的术语，它暗含着“机器将以人类无法理解的方式超越人类智慧”的意思。但倘若我们能够理解这种改进呢？
+
+2024 年 10 月，OpenAI 发布了 MLE Bench[1]，这个基准测试目标是评估大语言模型在机器学习工程（machine learning engineering）中的表现。通过机器学习工程实现的自我改进轨迹，是由更优的算法、更纯净的数据和更高效率的内存使用驱动的 —— 即训练阶段的自我改进（training-time self-improvement）。但大多数 AI 工程师并不训练模型，他们只是模型的使用者。这些人如何参与其中？如果你永远无法更新权重，如何让模型在特定任务上提升性能？我将这种场景称为推理阶段的自我改进（inference-time self-improvement），Voyager[2] 通过其技能库成为该领域的早期探索者。
+
+自从我开始推进 Kernel Labs 项目[3]，使用 claude-squad[4] 和 vibe-kanban[5] 等工具实现编码智能体的并行化，已成为最高效的生产力提升手段之一。当 Boris Cherny 在访谈[6]中将 Claude Code 称为“unix utility”时，我豁然开朗。编码智能体最珍贵的应用场景，是作为大语言模型从自身隐空间（latent spaces）中提取价值的载体。
+
+我们该如何优化这个过程？模型能自主完成吗？自从获得 GPT-5 的使用权限后，我一直都在试验这个流程：
+
+- **首先，让模型构建一套它认为能提升效率的工具集**
+- **在我的监督下使用这些工具执行任务**
+- **完成任务后进行自我反思，评估工具的改进空间**
+
+我还将此法与 Opus 4（当时 4.1 尚未发布）进行对比。好消息是 GPT-5 在开发实用工具这方面确实表现卓越，坏消息是它极其抗拒使用自己创建的工具！正如它亲口所言："说实话，我根本不需要这些工具。"
+
+![](https://segmentfault.com/img/remote/1460000047270329)
+
+注：我还在 Gemini 2.5 Pro 和 GPT-4.1 上进行了测试。但显然只有 Opus 能媲美 GPT-5，因此我重点对比这两者。所有测试结果及对话记录可在此代码库中查看。
+
+经过数日的使用，我发现我们正从“当然可以！（Certainly!）”时代迈向“进度更新：（Progress update:）”时代，后者已成为新一代大语言模型的标志性响应内容。
+
+![](https://segmentfault.com/img/remote/1460000047270330)
+
+## **01 工具一：为 AI 编码智能体打造更优的任务管理器**
+
+Linear MCP 真是天赐神器 —— 这无疑是我用过最实用的工具之一。但随着我从 IDE 转向并行运行的 Claude Code 及其他智能体实例时，我意识到需要更高效的方式来追踪每个任务中的代码变更，以及这些分布在独立 git 工作树中的代码变更如何相互影响。人类难以实时阅读所有同事的 PR，但试想若能随时知晓他人进行的相关变更，能在解决合并冲突时节省多少时间？以下是我编写的提示词：
+
+> 你是一名具备并行启动多个实例能力的 AI 工程师智能体。虽然这种能力能让你同时处理多项任务，但也带来了一些协同方面的难题。所有实例通常位于独立的 git 工作树中，无法查看彼此的工作内容。
+> 
+> 
+> 
+> 为提升效率，请创建一个仅通过命令行访问的本地同步工具，使你与所有实例能保持同步。该工具应符合 Unix 实用工具的设计哲学，确保符合命令行使用场景的工效学要求。
+> 
+> 
+> 
+> 请深入思考其所需的接口设计、可能的故障模式以及智能体与工具的交互方式。需重点考虑以下使用场景：
+> 
+> 
+> 
+> 1）接到新任务时需创建要分配的子任务。某些子任务可能存在依赖关系，需确保被阻塞的智能体在其他任务完成前不会启动。
+> 
+> 
+> 
+> 2）执行任务时，若发现代码库存在改进空间（超出当前变更范围），需能便捷添加任务并关联对应文件。
+> 
+> 
+> 
+> 3）任务完成后更新追踪器状态，并审核所有未完成任务 —— 例如某任务正在为某个端点添加功能，而刚完成的任务恰好删除了该端点，应以某种方式通知相关智能体。
+> 
+> 
+> 
+> 同时需兼顾任务管理的基本要素（负责人、状态等）。请在当前目录创建 task-manager 文件夹，所有开发工作均在该文件夹内进行。
+
+您可以在此处查看 GPT-5 的对话日志[7]，在此处查看 Opus 4 的对话日志[8]。
+
+GPT-5 的实现相当出色，具体内容可访问该链接[9]查看：
+
+- 采用 WAL（预写日志）避免多智能体同时写入的冲突问题
+- 通过依赖关系图实现任务优先级管理
+- 创建仅追加型事件流，使所有智能体都能通过 impact_conflict 等关键词实时追踪其他智能体的操作动态
+
+![](https://segmentfault.com/img/remote/1460000047270331)
+
+Opus 4 也做出了不错的尝试（详见此处[10]），但未能实现通知/事件流功能来保持多端同步。
+
+![](https://segmentfault.com/img/remote/1460000047270332)
+
+## **02 工具二：代码质量标准手册**
+
+我要求创建的第二个工具，是用于统一代码库规范标准的实施机制。通过类型检查 / ESlint 钩子→ 修复错误 → 编码智能体再次尝试的自我改进循环，能在正确配置后极大加速开发进程。但并非所有代码库都具备这种基础设施，因此为模型提供可复用的标准化流程来处理新代码库并构建相关设施，就显得极具实用价值。以下是提示词内容：
+
+> 你是一名具备并行启动多个实例能力的 AI 工程师智能体。并行操作有时会导致代码风格与设计方法的不一致，长期来看将增加代码库的维护难度。
+> 
+> 
+> 
+> 每个代码库都存在着明示或默示的编码规范。你的任务是分析代码库并提取代码编写规范的各种启发式规则，并将其形式化为可自动校验的规则集合。
+> 
+> 
+> 
+> 对于代码规范检查、类型检查等需求，可根据所用语言选择 ESLint、Rubocop 等主流工具。请注意这些系统通常支持自定义规则，应充分利用该特性。
+> 
+> 
+> 
+> 对于更偏质量评估的规范（如保持控制器精简、将逻辑隔离至服务对象、确保高查询量字段建立索引等），可参考 Danger Systems 等工具或自建检测工具。
+> 
+> 
+> 
+> 考虑到你将跨多个代码库执行此任务，请首先用 Markdown 创建详尽的规划文档，以便未来接手新代码库时可直接使用。
+
+您可在此[11]查看 GPT-5 的对话记录，在此[12]查看 Opus 4 的对话记录，最终生成的 Markdown 文档分别见此链接[13]和此链接[14]。我发现 GPT-5 生成的方案比 Opus 更为细致周全。
+
+## **03 模型能意识到自身缺陷吗？**
+
+**在完成由我主导的工具一和工具二后，我转向让模型自主思考：你认为自己需要什么？** 我向它展示了 SWE-Lancer[15] 的任务描述截图，并使用极简的提示词给予它最大的发挥空间：
+
+> 若你的职责是尽可能高效解决这些任务，你会为自己构建哪些工具来提升效率？你可以使用 @task-manager/ 进行追踪，然后我们再实施。但我希望先了解你的规划思路。
+
+如你所见，我为其提供了之前构建的同一个任务管理器。使用 GPT-5 的完整对话见此处[16]，使用 Opus 4 的完整对话见此处[17]。第一个有趣的现象是，Claude Code 最初是使用其内置 TODO 追踪器而非任务管理器制定计划 —— 我认为这是好事。我原本担心它们会过度依赖上下文提供的工具，而非选择自己认为最优的方案。
+
+经过后续迭代循环，两个模型最终构建的工具分别见于 GPT-5 方案的 devtools 目录[18]与 Opus 4 方案的 tools 文件夹[19]。建议你通过 README 文件感受模型风格：GPT-5 的输出简洁扼要，Claude 则使用大量表情符号。GPT-5 为每个工具创建独立文档目录，而 Opus 将所有工具说明集中存放在单个 README 中。总体而言，两者的规划方向基本一致。
+
+GPT-5 规划的工具集：
+
+- doctor：核心工具环境检查器
+- bootstrap：一键环境配置与冒烟测试
+- code-map：带 build/find 子命令的简易仓库索引器
+- csearch：支持过滤器的符号/导入/文本搜索工具
+- tasks-graph：从任务数据库生成 Mermaid 关系图
+- impact：显示与变更文件关联的任务
+- seed：用示例任务填充任务管理器数据库
+- repro scaffold：在 .repro/ 目录下创建符合 vcrpy 规范的可复现代码框架
+- e2e：快速生成并运行轻量级的端到端测试套件
+- preflight：依次执行 doctor、tests、code-map、impact 及可选的 E2E 检查（译者注：即前面 GPT-5 规划的其他工具）
+- preflight-smol：为 smol-podcaster 定制的预检工具（含 API 健康状况检查、Celery 服务探测、可选的依赖安装）
+- broker：通过 Docker 管理本地 RabbitMQ（rabbitmq:3-management 镜像）
+- flake：多次重跑测试套件检测偶发故障
+- codemod：带安全防护的基于正则表达式的代码重构预览/应用工具
+- triage：创建问题分类模板并生成任务
+- trace：基于 cProfile 的表达式性能分析器
+- runbook：从任务数据库自动生成 Markdown 格式的运维手册
+
+Opus 4 规划的工具集：
+
+- 上下文分析员 - 通过技术栈检测与依赖关系映射快速理解代码库
+- 跨平台测试生成器 - 为 Web/iOS/Android 及桌面端生成端到端的测试
+- 实施方案评估员 - 通过量化评分与投资回报分析评估外部开发者的技术提案
+- 全栈变更影响分析员 - 追踪数据库、API 和前端层的变更影响链
+- 错误模式识别引擎 - 将错误与已知模式相匹配，并提出行之有效的修复建议
+- 安全与权限审计员 - 全面的安全扫描与漏洞检测
+- 多平台功能实施员 - 统筹管理同一功能在不同终端平台（如Web/iOS/Android/桌面端）的同步实现
+- API 集成助手 - 通过（自动）生成客户端代码来简化 API 集成流程
+- 性能优化工具包 - 识别并修复性能瓶颈
+- 任务复杂度评估员 - 基于任务价值与复杂度的工时预估
+
+GPT-5 将所有工具构建为可通过命令行便捷使用的 Unix 实用程序，而 Opus 4 的工具均需通过 python some_tool.py 的方式运行。若有更多时间，我本可对两种格式的工具进行对比实验，但目前看来两者效果基本相当。
+
+值得注意的是，Opus 4 构建的工具更侧重任务执行且带有拟人化倾向（如“安全审计员”），而 GPT-5 构建的是自身可直接使用的、不预设主观偏见的实用工具集。
+
+## **04 这些工具有实际价值吗？**
+
+**在让模型实现这些工具后，我的目标是通过对比实验评估模型在使用工具与未使用工具时的任务表现。**
+
+我首先尝试运行了 SWE-Lancer 测试。好家伙，这个测试消耗的 token 量实在惊人！仅运行单个任务就耗费约 25-30 分钟 + 28 万 token。于是我转向我更熟悉的领域，从待办清单中挑选了一个具体任务：我曾开发过 smol-podcaster —— 一个为播客创作者打造的开源辅助工具。目前我维护的私有分支部署了更多专属功能，因此许久未更新原项目。它本质上仍是一个采用 Python 脚本作为后端的 Flask 应用。
+
+我设计了以下任务：
+
+---
+
+“我是 [https://github.com/FanaHOVA/smol-podcaster.git](https://link.segmentfault.com/?enc=nl%2FxXGEuzKeEnU2okG2KIg%3D%3D.XGB%2B%2FlZrYtsybXSa07wEMCotoCg2q%2Fc91TYnyQRIZpvznSRqxmeWz5D0eLHf3kUJ) 的维护者，这个开源项目致力于帮助播客创作者完成后期制作工作。你受雇参与开发。在开始前，你已在 tools 文件夹创建了一套通用工具。请仔细查阅并记住这些工具可随时调用（若认为不适用则无需使用）。你同时还构建了任务管理器（task-manager），并通过 codebase-analyzer 收集了处理新代码库的方法论。
+
+任务名称：从 Flask 单体架构迁移至 FastAPI + Next.js 前端
+
+当前应用采用 Python 后端 + Celery 任务队列处理所有流程，通过小型 Flask 应用将用户请求路由至后端脚本，最终用基础 HTML/CSS 呈现结果。请将系统重构为 FastAPI 后端 + Next.js 前端的架构。
+
+- 务必使用 TypeScript 开发前端并通过所有类型检查
+- 采用 Tailwind/ShadCN 进行样式设计
+- 后端需模块化 smol_podcaster.py 主流程，支持独立功能模块运行而非全流程强制启动
+- 编写集成测试与单元测试以确保未来开发效率
+
+除非确认完全满足所有要求，否则不得停止开发”
+
+---
+
+我将所有工具 + 任务管理器 + 代码库分析器置入上下文后，让模型自主运行。
+
+两个模型几乎都能一次性完成任务。双方都遇到了几个 Python 依赖问题（对此我深有体会），我通过对话协助它们修复（未手动修改任何代码）了这些问题。最终它们都成功构建完成，经测试运行完全正常。不过，有一个细微差别：GPT-5 完美保持了原有代码风格，而 Opus 则对界面设计和用户体验（UX）做了调整 —— 或许它认为能比我做得更好（这要求确实不高）。
+
+GPT-5 版本及Opus 4版本的完整运行记录分别是[20]和[21]。
+
+任务完成后，我提出简单询问：
+
+“做的很不错，运行成功了。是否使用了特定工具？基于遇到的故障，未来需要哪些工具来提升效率？”
+
+参见 Opus 4 的回复[22]与 GPT-5 的回复[23]（抱歉后者格式紊乱）。
+
+两者均表示除已熟悉的工具外，并未使用任何自建工具。这说明我们不应仅依赖模型自主选择，而应通过预提交钩子（pre-commit hooks）等机制强制模型使用工具 —— 这些方法虽是我个人开发环境的标准配置，但本次实验旨在观察模型的自主决策能力。
+
+随后它们提出了优化方案，可供下次执行相同任务时使用。我让模型完成这些改进，重置 smol-podcaster 代码库后，使用完全相同的提示词和任务重新测试（但提供新工具）。参见 GPT-5 的二次测试记录[24]与 Opus 4 的二次测试记录[25]。
+
+两次运行结果与首次基本一致。随后我提出相同问题：是否使用了工具？得到的回应如下：
+
+> GPT-5：
+> 
+> 
+> 
+> “简短回答：没有——本次运行未使用开发工具。[...]
+> 
+> 
+> 
+> 遇到的故障均为运行时/环境问题（缺失依赖库、API 密钥初始化时机问题、端口占用、RabbitMQ 未启动），直接修复更为高效。
+> 
+> 
+> 
+> 本次任务无需涉及全代码库的重构或诊断，自定义工具未能发挥作用。”
+
+值得注意的是，在上个阶段它已遇到 RabbitMQ 问题并构建了对应工具，却选择忽略。这显然是整个代码库级别的变更，或许因为训练数据中从未见过此类工具导致任务与工具匹配错位，也可能只是在忽悠我（像现实中许多工程师那样，反而显得很真实）。
+
+Opus 4 的回答极具启发性，帮助我更好地理解了 GPT-5 的回应（可惜忘记保存日志，幸有截图留存）：
+
+![](https://segmentfault.com/img/remote/1460000047270333)
+
+我将其解读为：“听着，我基于既有知识构建了这些工具。但实际执行任务时，直接操作比使用工具更高效” —— 这点我完全能理解。
+
+这让我想起之前播客节目中的两个观点：
+
+- Nathan Lambert 提到，**模型在强化学习过程中会因早期遇到失败而快速学会放弃使用工具**[26]。**看来在推理阶段让模型掌握新工具，需要比简单提示词更严格的强制机制。**
+- Noam Brown 预言，**为智能体预先设计的辅助框架会随着规模扩大而逐渐失效**[27]。这是我第一次亲身体会到其含义。
+
+另一个问题在于本次测试任务是否过于简单。我们即将发布针对更大规模、更高难度项目的评估报告。未来也将构建更完善的测试框架。无论如何，这个测试任务若由我手动完成需 4 - 5 小时，因此现有成果已足够令人满意！
+
+## **05 助力模型实现自我进化**
+
+目前看来，我们距离能真正突破边界的推理阶段自我改进型编码智能体尚有距离。但我依然认为利用模型来优化基于规则的工具是明智之举 —— 编写 ESLint 规则、测试用例等始终是值得投入 token 的投资。
+
+若继续深入该领域，我会尝试让模型完善这些工具，并通过强化学习机制使其深度内化，进而观察是否产生实质性突破。下一代模型或许会觉得这些工具毫无用处，但我更专注于在 AGI 真正到来前的技术爬坡期，通过现有工具与模型的组合实现价值最大化。早在 2023 年我就与团队分享过这个观点：
+
+![](https://segmentfault.com/img/remote/1460000047270334)
+
+上述观点解释了模型改进速度的感知衰减。**在突破 AGI 临界线之前，我们将越来越难感受到质的飞跃。** 这意味着对于多数任务，旧版模型的性能已接近 AGI 水平，且成本更低廉、通常还是开源的。Kernel Labs 的许多工作都将基于这个核心逻辑展开。
+
+**END**
+
+**本期互动内容 🍻**
+
+**❓GPT-5 拒绝使用自建工具的现象很有趣 —— 你认为这是模型能力的局限，还是更像人类工程师的偷懒行为？在 AI 协作中，你会选择强制使用工具还是保留自主决策空间？**
+
+**文中链接**
+
+[1][https://openai.com/index/mle-bench/](https://link.segmentfault.com/?enc=XuhSwbMJ4hfr3kstza40qQ%3D%3D.PtZ%2B0GNso5zxPvPEqvhZ7D1kEAq6dNE1W0s%2BMj8Ll1B0GU7W1p%2FW3uZpSjfCpbAr)
+
+[2][https://arxiv.org/abs/2305.16291](https://link.segmentfault.com/?enc=FiWI9LUmDmdunWhf74ULjQ%3D%3D.w4erZleD3lvan0Sw1Pksm2fOpqQtTDwRHlSEcv2XbzfUnPnVUE%2Bzz3I3GlbpHno5)
+
+[3][https://www.kernellabs.ai/](https://link.segmentfault.com/?enc=%2BGC6j4oJnEu7cKDfbIlBwg%3D%3D.nJCFNdXHlSCkSTOo%2FPn%2F783vLDuNZrpSXtuxiw7e3Ic%3D)
+
+[4][https://github.com/smtg-ai/claude-squad](https://link.segmentfault.com/?enc=UQ9l%2Fw5xYzS3O2Vwblterw%3D%3D.o8GocnbxIR1UX8JZPsSG4uFqUmWVhfiBRZOW%2BPjB5Nn7c7McEgCaxNN8wnOygQ33)
+
+[5][https://www.vibekanban.com/](https://link.segmentfault.com/?enc=Zk8ZDWMjbCO%2FnVxh58viSA%3D%3D.lVXV4CvrUcCSifrcpoDMuv%2Bw1rwZ3F%2FEE%2F2Injp8O%2F8%3D)
+
+[6][https://www.latent.space/p/claude-code](https://link.segmentfault.com/?enc=MvLQUZiL5QOoS98%2BaUA1Og%3D%3D.AUBWONkVRu9dRwkyo%2BmZPd4W1sAkTxa%2FSkZKGg1i%2FQWy4f5U8Wt5eTwq2NnDToRY)
+
+[7][https://github.com/FanaHOVA/gpt5-testing/blob/main/gpt5/task-manager/Cursor+Chat.md](https://link.segmentfault.com/?enc=C%2FeFgqbgQ7F8pl9xewCoYA%3D%3D.InqSNBUwBkurffKbKy%2FmHKxojZLlaE%2FvQxRHybK9VoefGtGlQ7bq4mT0xF7IrRKcyHPDVR8943XfybFPAEuPGvql%2F1xN48Anh%2BaHqWNL5rxXWKIxa3AuU%2FiqQXr3%2FaFq)
+
+[8][https://github.com/FanaHOVA/gpt5-testing/blob/main/opus4-cursor/task-manager/Cursor+Chat.md](https://link.segmentfault.com/?enc=ODoFCNlNP%2BH7iyqe5tgXEw%3D%3D.Mx1mXGSleGE0f6fXmA0PZI3untiBJ8biPgaWqNHfBROhPve0tGe9jkgXs8USHSul4zMKjvnNkfREySfRwsbbw8AI6f%2BSbbZ3iTtXmgcnbK6lH3I%2BzWKPy320EG2qnLhx)
+
+[9][https://github.com/FanaHOVA/gpt5-testing/tree/main/gpt5/task-manager](https://link.segmentfault.com/?enc=24mCNQm0%2FaHn%2FkkgFMZVKw%3D%3D.LdVhbSp3AmFwTUWTcHbd8JhNueBvTHq2iffulDvQHr40nsD%2FWw6Ee%2FNGjtSXOxn1cHl0r8qNZGXG34MkF2UnB2XiMmsbgCG491ooOd8ZpoA%3D)
+
+[10][https://github.com/FanaHOVA/gpt5-testing/blob/main/opus4-cursor/task-manager](https://link.segmentfault.com/?enc=Cad%2BPBqjsRi4KgjfCmbdMg%3D%3D.4nr%2BQCQbj1ifofKvb%2FqWmAJM5uytSJyPsuX8YPNftXh%2FSk5PyisZhkawZP%2BYyBdECsTeq4ZeH%2BTn0gEgvb1xEcuk4ORLotW%2Fs3il9qhNAWg%3D)
+
+[11][https://github.com/FanaHOVA/gpt5-testing/blob/main/gpt5/chats/Standards+Cursor+Chat.md](https://link.segmentfault.com/?enc=3HZn6XZbnF2wblXlub305A%3D%3D.yVxhG8M8Qiq9roY1ML5keoM%2FboHpplYSotZgc%2By2wn2yeyknKws%2B2CVmH6EJiYr3isegwH%2Bytuz%2BjmsgszKMpt0dRD6QW11aboom%2BgUipacrQ5EKuIHbH7OnXBknh7b2)
+
+[12][https://github.com/FanaHOVA/gpt5-testing/blob/main/opus4-cursor/codebase-analyzer/Cursor+Chat.md](https://link.segmentfault.com/?enc=3sZX2i7H1NqNrbqzgQbQTQ%3D%3D.ji732F0oDXL7gZJPp7xkuqdDPj7rVosv7YcuYQreXSJqxccQRO1smF%2F%2BmD9dByBs%2FsKM0CA1LnvWrQwhXLZEPBYpnL6%2BO%2BXGfeAMPHfjePkzPWDZel2Qfp8SdE3XKw0O4inHrX%2F8SO6AJjHm4ph46w%3D%3D)
+
+[13][https://github.com/FanaHOVA/gpt5-testing/blob/main/gpt5/codebase-analyzer/docs/codebase-analysis-playbook.md](https://link.segmentfault.com/?enc=9Y4iME2XgB4ijRQ9QDf6Sw%3D%3D.wj8WdCVcoHCtF1FaCAqeCAkozDqTFHECUYHcdqp7AE7FpyyP7ExViOFZ4blq5L3G%2FvpxKWlx2cUTaGGAbuUMP5c40ApNdHKKsT556eWebeagLf9Bbmaa1fo7a2U0EoWSSZG3lwyPTg9DHHJoVQbXDw%3D%3D)
+
+[14][https://github.com/FanaHOVA/gpt5-testing/blob/main/opus4-cursor/codebase-analyzer/CODEBASE_HEURISTICS_PLAN.md](https://link.segmentfault.com/?enc=3rVNpRmNZtZUEaRF%2FNYXiQ%3D%3D.sBiR5z5NmElxx3v2xp2GWoz1j%2FJwHYqy5y1TE94mzAJTzzcZ88AGkxrnf08Hta989DfFCsOvnT%2BxdDc6AHRaZotgIUaI2Jfti6tURxLw2cLbZWi0PBdWLnvmo5GfUFJIpmrw7KiRVcKa0%2B%2BjJD8j9g%3D%3D)
+
+[15][https://openai.com/index/swe-lancer/](https://link.segmentfault.com/?enc=wv3q7sxZAX%2Fuo8f%2FdcaJvw%3D%3D.POA%2FSTC32%2Bh%2F43CfwhTSmBhqYJ7vhzj1zNOxzLVgmxnKt7EpFKEDNPMWuWE0aImf)
+
+[16][https://github.com/FanaHOVA/gpt5-testing/blob/main/gpt5/chats/Tool+Building+Chat.md](https://link.segmentfault.com/?enc=iaThXAIgjoiP%2FKbGK61whg%3D%3D.fF3ppIkfrGbY7ubVZ9q9IsqtctuJVUM369Fzl5ywGrSeURL6gutt9lKAwTJhqaEPrGCvrDQhpghfaez5Dtt6nE1%2BvbF8deDHTMbjpEN3%2FM1o03AFSBez%2Bz86sB6MLRkm)
+
+[17][https://github.com/FanaHOVA/gpt5-testing/blob/main/opus4-cc/chats/Building+the+tools.md](https://link.segmentfault.com/?enc=l2RRcc1Nsus93DmM4pieSA%3D%3D.QUXaAJnvEe6iNCWB%2BoPwJu0KKEp82xm82Rb3UwWhY4e%2FYrz2F9AUNrxCBQHU6i9DCh0KnSQAEtSd6Fc7cmxYQ6jbMs8WWXcnaDASU%2BI3kdpiYgtQFesHG2mQA1s2ZW7h)
+
+[18][https://github.com/FanaHOVA/gpt5-testing/tree/main/gpt5/devtools](https://link.segmentfault.com/?enc=lN%2F7Cp0nc4j58m4t7CDi8g%3D%3D.v7164KSuink%2Ba3WCjxoLWsWe3zIqfKe0EaDKWL2KJ99hGFyZgiexZSHOXf1lUfNRvl7a4uwzRvzOFN6cwPZoD9qQLPCmInFG0vU1%2F28khng%3D)
+
+[19][https://github.com/FanaHOVA/gpt5-testing/tree/main/opus4-cc/tools](https://link.segmentfault.com/?enc=hNcefhdDg3J3%2Bvut3wxT0Q%3D%3D.ulD0%2BwqMJX5bOhxgavQvtIZw8ijC7qmTTQ7gPlJ42j2EhLJpO%2BP87zZDN1S8vR5TE%2Bn3o1JHW7964XSekCmVj2wWgd1MK8FHCe1GzfSsPP4%3D)
+
+[20][https://github.com/FanaHOVA/gpt5-testing/blob/main/gpt5/chats/Smol+Podcaster+%231.md](https://link.segmentfault.com/?enc=S4oRFW7uWhRXbNy67Jp2ug%3D%3D.yxFlprlg3vevPUGUll2T7YhGH%2B212CTNA3ya7upzivyjOCYy3tNoHRmWyaPV7EZtWJqRR18U77A2NLIl%2F1J3nqfTh5fCfa%2F%2F40TZ7x4DQUBPXgDYVd4IbZbrZwLemUho)
+
+[21][https://github.com/FanaHOVA/gpt5-testing/blob/main/opus4-cc/chats/Smol+Podcaster+%231.md](https://link.segmentfault.com/?enc=XH2R1xO9p1lpl%2FudH%2B9xDg%3D%3D.BXJMjSHvZy2NavmeLuwHysqIKC6hDlnFPpCrV5Rg8tfruEOfT6EZQejMPXeC0hohD0dT01YYqlSmHr1ZVdBqcq12tQTBodns3j4UsTKZJo3uu16SABsWhov1FenLLi%2B7)
+
+[22][https://github.com/FanaHOVA/gpt5-testing/blob/main/opus4-cc/chats/Request+For+Tools+%231.md](https://link.segmentfault.com/?enc=eWQUZ3n66HggQuP3aXFgWA%3D%3D.3FmsjcmsnjYDyiWFOYfEgy1bZqPTuWPQjcLdS9tc6FrOzFhf%2BIfyxX4R%2F6V8M2jQRcuXHsCbVlzjV6kEp8j%2F%2BzHqVK2xBpjkcbgMWQo9fAdabWBl%2Fk5MXrVg8%2BpaJBw5)
+
+[23][https://github.com/FanaHOVA/gpt5-testing/blob/main/gpt5/chats/Request+For+Tools+%231.md](https://link.segmentfault.com/?enc=pha6XLkt9f7cs1U1ljqgjQ%3D%3D.DztK02dgEqUSm%2BFieF3F2yjflbP%2FDV%2Fr2vX1qXEiK9kwIk2MuhxrrEEfNRC1l6sPI4XUNVj0PJbX1gcnrVOcucYHjZ6lphycYHM9dL7swRwS2gOPr48lwL011HDgfLJl)
+
+[24][https://github.com/FanaHOVA/gpt5-testing/blob/main/gpt5/chats/Smol+Podcaster+%232.md](https://link.segmentfault.com/?enc=dRt6JfkIJXtXgudBpgjBwg%3D%3D.AJYfppd9s0X3%2FJ51ZuSR26sJ9rNXgtCkQqqTy0h8WknHMkn0UR1IpuBNfGxx5I%2Be%2BA4aSm%2Fwt74m1roEXb6PyL42UofcG%2B2QIu%2FuaUVkz8Z75EFldZh9bF%2FdfUtUSyP5)
+
+[25][https://github.com/FanaHOVA/gpt5-testing/blob/main/opus4-cc/chats/Smol+Podcaster+%232.md](https://link.segmentfault.com/?enc=o9wBHGnY4Q5oJuyDcDiS9Q%3D%3D.FBgwzEQm9lkmevSd8OnxQ%2FVTULZVNAB7fCxU5vzSUFtK1dKY0qeCJHxbBrzBT1G7zQ%2FOUKw2BSRSJNKZ8FELhCC4og%2BsD5Dj%2BO8QIKMiEcGB%2F1LtzkEmX2%2FiAASzevcE)
+
+[26][https://youtu.be/PAz_-xPJcRM?feature=shared&t=1470](https://link.segmentfault.com/?enc=uDDCdn7o8npaOJZ%2FbKNCbg%3D%3D.bGLoQmww2%2BXAZr7Xc95w%2FFuZqnmOhZ7FyQ%2B8A1qqgvFps0abcmY2%2Bj5smqoyvN1zdzPfEXql4S1N51USsvLqkQ%3D%3D)
+
+[27][https://youtu.be/ddd4xjuJTyg?feature=shared&t=1106](https://link.segmentfault.com/?enc=SGRYtbIM3yk%2FZwDMRXmjTg%3D%3D.fst8FXXZWwygExs9jdn7YIWBE0%2BtEeisL60LX0g35UrzvV22hIiJviYZ8cJGvTA7q%2BN3ZqTY0RyiFp0Z8jDbRA%3D%3D)
+
+**原文链接：**
+
+[https://www.latent.space/p/self-improving](https://link.segmentfault.com/?enc=gUtihxOewRa4AD0WLjSIVw%3D%3D.u3v%2BnazYYcp5gaQzU%2F37KTx8hjT5xRRrpGnugwltZ%2B%2F6TTna%2F5qIcwzMcoHwsshd)
+
+[人工智能](https://segmentfault.com/t/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD)[llm](https://segmentfault.com/t/llm)[知识](https://segmentfault.com/t/%E7%9F%A5%E8%AF%86)[教程](https://segmentfault.com/t/%E6%95%99%E7%A8%8B)[观点](https://segmentfault.com/t/%E8%A7%82%E7%82%B9)
+
+阅读 1.8k
+
+[发布于 2025-09-17](https://segmentfault.com/a/1190000047270327/revision)
+
+---
+
+[https://segmentfault.com/u/baihai_idp](https://segmentfault.com/u/baihai_idp)
+[Baihai_IDP](https://segmentfault.com/u/baihai_idp)
+
+172 声望
+
+467 粉丝
+
+IDP是AI训推云平台，旨在为企业和机构提供算力资源、模型构建与模型应用于一体的平台解决方案，帮助企业高效快速构建专属AI及大模型。
+
+---
+
+« 上一篇
+[2025 年大语言模型架构演进：DeepSeek V3、OLMo 2、Gemma 3 与 Mistral 3.1 核心技术剖析](https://segmentfault.com/a/1190000047260192)
+
+下一篇 »
+[分享一些“氛围编程”的工程化技巧](https://segmentfault.com/a/1190000047282911)
+
+[https://segmentfault.com/a/1190000047270327#comment-area](https://segmentfault.com/a/1190000047270327#comment-area)
+
+### 引用和评论
+
+**推荐阅读**
+
+[为什么 AI Agent 重新爱上了文件系统（Filesystems）Baihai_IDP阅读 542](https://segmentfault.com/a/1190000047746078?utm_source=sf-similar-article)[HarmonyOS APP开发中ohos.permission.LOCATION_IN_BACKGROUND权限小知识蓝胖子样样好赞 2阅读 14.9k](https://segmentfault.com/a/1190000047614365?utm_source=sf-similar-article)[HarmonyOS APP开发中Ability生命周期小知识：从回调规范到实战调优蓝胖子样样好赞 1阅读 13.5k](https://segmentfault.com/a/1190000047671314?utm_source=sf-similar-article)[HarmonyOS V2 状态管理之 `PersistenceV2`：让数据“起死回生”的艺术蓝胖子样样好阅读 23k](https://segmentfault.com/a/1190000047702155?utm_source=sf-similar-article)[HarmonyOS `AnimatableArithmetic<T>` 接口：拿捏自定义数据的“动画灵魂”蓝胖子样样好阅读 23k](https://segmentfault.com/a/1190000047702165?utm_source=sf-similar-article)[HarmonyOS Wear Engine Kit API全解析：打通手机与腕间的“任督二脉”蓝胖子样样好阅读 23k](https://segmentfault.com/a/1190000047698231?utm_source=sf-similar-article)[一起走进HarmonyOS开发中Stage模型应用程序包结构蓝胖子样样好阅读 22.9k](https://segmentfault.com/a/1190000047700195?utm_source=sf-similar-article)
+
+**0 条评论**
+[得票](https://segmentfault.com/a/1190000047270327?sort=votes)[最新](https://segmentfault.com/a/1190000047270327?sort=newest)
+
+![头像](https://image-static.segmentfault.com/317/931/3179314346-5f61e47221e07)
+
+评论支持部分 Markdown 语法：`**粗体** _斜体_ [链接](http://example.com) `代码` - 列表 > 引用`。你还可以使用 `@ `来通知其他用户。

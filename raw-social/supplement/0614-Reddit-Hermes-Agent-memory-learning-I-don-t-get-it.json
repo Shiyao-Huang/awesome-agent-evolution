@@ -1,0 +1,62 @@
+{
+  "id": 614,
+  "name": "Hermes Agent memory/learning - I don't get it",
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1s43ts3/hermes_agent_memorylearning_i_dont_get_it/",
+  "platform": "Reddit",
+  "subreddit": "LocalLLaMA",
+  "extraction_status": "ok",
+  "anysearch_extract_status": "failed:extract_upstream_error\nupstream returned error: HTTP 403 403 Forbidden",
+  "content_timestamp": "2026-03-26",
+  "collected_at": "2026-05-21T22:23:52+08:00",
+  "time_slice": "2026-03",
+  "query": "site:reddit.com/r/LocalLLaMA/comments agent self improve",
+  "source": "builder-b-raw-social-supplement-2026-05-21",
+  "score": 25,
+  "num_comments": 48,
+  "author": "sixteenpoundblanket",
+  "content": "# Hermes Agent memory/learning - I don't get it\n\nSource: https://www.reddit.com/r/LocalLLaMA/comments/1s43ts3/hermes_agent_memorylearning_i_dont_get_it/\nSubreddit: r/LocalLLaMA\nAuthor: u/sixteenpoundblanket\nScore: 25 | Comments: 48\nCreated: 2026-03-26\n\n## Post Body\nHeremes comes with a lot of skills and the cron capability out of the box is nice, but the \"self-improving\" seems like hype. \n\nMaybe I'm missing something, but all docs and tutorials I could find say you have to tell Hermes to remember something and tell it to make a skill out of some complicated thing you just did. \n\nHow is this any different than say gemini cli? I've been doing exactly this same thing with gemini and opencode. I don't get it. What's so special or different about Hermes?\n\n## Top Comments\n\n### Comment 1 — u/Alan_Silva_TI (score 24)\nThis thing is **realy good**. I’d honestly recommend it over OpenClaw.\n\nOpenClaw feels like it was designed around SOTA, ultra-expensive models, and while it *can* run on self-hosted or smaller models, the results are far from excellent. It almost feels like the whole design expects you to burn tokens constantly(*\"Why would they do that?\"*), sometimes dozens or even hundreds of dollars a day, which honestly explains why NVIDIA and OpenAI are pushing it so hard.\n\nHermes, by contrast, is much less token-hungry and clearly smarter about working within the limits of smaller models. I’ve been using it with Nemotron-Cascade 2 30B and it has worked surprisingly well.\n\nFor people confused about why anyone spends time with agents or what the **real use cases** are, here’s the simple answer:\n\nThese agents combine lots of small tools to do more complex work for you.\n\nThey can:\n\n* search the web \n* fetch images, PDFs, and documents \n* process information from multiple sources\n* write code \n* build simple apps\n* automate repetitive searches\n\nWith just web search + document handling, you already have something that can do lightweight research or build knowledge on demand.\n\nWant to learn how to cook food from a specific country?   \nWant to gather sources before arguing a point on Reddit?😅  \nWant an agent to visit multiple websites several times a day, check a product price, and report the cheapest option?\n\nIt can do all of that.\n\nAnd because these are still LLMs underneath, you can also ask them to compare products, decide what fits your needs best, and even find the best place to buy them.\n\nHonestly, a big part of the appeal is just letting it cook and seeing what happens. Over time, you learn alongside the tool and start discovering more and more useful workflows.\n\n**TL;DR:**\n\n* It’s fun\n* It works\n* It’s better than OpenClaw\n* It does useful stuff for you basically for ***free***\n\nThat said, I strongly believe the sweet spot is **good local models or/and(you can use both) very cheap but capable models through OpenRouter**. These agents still fail *a lot*, they overthink, retry constantly, and can burn tokens fast if you’re not careful.\n\nA solid local model can already handle 80–90% of complex tasks, so don’t fall for the “it’s only useful with Claude Opus 4.6” nonsense. That’s mostly grifters trying to hype expensive cloud models.\n\nNvidia giving Nemotron 3 Super 120B A12B for free on Openrouter(they do collect ALL your data tho so be advised) - [Nemotron 3 Super (free) - API Pricing &amp; Providers | OpenRouter](https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free)\n\n  \n\n\nYes, I used chatgpt to rewrite my comment, English it's not my main language and the original text was a disaster.\n\n### Comment 2 — u/CommonPurpose1969 (score 4)\nFor self-improvement, you need Honcho enabled, which isn't enabled by default.\n\n### Comment 3 — u/Only-Associate2698 (score 3)\nYeah, the self-improving thing is the real deal.\n\nBasically when I'm doing a complex tasks like adding couple of entries to my self-hosted nocodb instance. it auto-creates a skills for nocodb in the productivity folder.\n\nAnother example is when I'm extracting product hunt maker's social handles from product hunt page. It understands that product hunt blocks browser tools and fire crawl web scraping is the only way to make it work. And it creates a skill for the same.\n\n### Comment 4 — u/Final_Ad_7431 (score 3)\nyou don't require honcho, not sure why that person said that, every 15 or so prompts the agent inserts a message to the effect of \"is there anything i should remember in our last X messages, or a skill that i could create from this?\" and then it will remember or create a skill from that if it thinks there's anything, it being in the prompt means it scales with your model unfortunately, a smarter model will probably pick up on more things without being pushed to doing it\n\nthere is a side project on their github (https://github.com/NousResearch/hermes-agent-self-evolution) for self reviewing skills/prompts and looking at session info to see what failed and how to improve etc but it requires a bit of set up, you could mimic this with your own skill, extracting failures and corrections from session history etc, telling it to run once a day or once a week or whatever, but again that is always going to scale off the model you use with it\n\n### Comment 5 — u/No_Afternoon_4260 (score 2)\nWhat model are you using?\nHermes is just one of this new breed of agent\n\n### Comment 6 — u/dampflokfreund (score 2)\nYeah, I don't get the memory function. So far it has not written anything in the memory files. If it has to be prompted to, it is not really self learning. Hermes is really nice though and Teknium is working really hard on it.\n\n### Comment 7 — u/georgeApuiu (score 2)\nim curious if any of you guys tried the hermes RL ...",
+  "top_comments": [
+    {
+      "author": "Alan_Silva_TI",
+      "score": 24,
+      "created_utc": 1774556202.0,
+      "body": "This thing is **realy good**. I’d honestly recommend it over OpenClaw.\n\nOpenClaw feels like it was designed around SOTA, ultra-expensive models, and while it *can* run on self-hosted or smaller models, the results are far from excellent. It almost feels like the whole design expects you to burn tokens constantly(*\"Why would they do that?\"*), sometimes dozens or even hundreds of dollars a day, which honestly explains why NVIDIA and OpenAI are pushing it so hard.\n\nHermes, by contrast, is much less token-hungry and clearly smarter about working within the limits of smaller models. I’ve been using it with Nemotron-Cascade 2 30B and it has worked surprisingly well.\n\nFor people confused about why anyone spends time with agents or what the **real use cases** are, here’s the simple answer:\n\nThese agents combine lots of small tools to do more complex work for you.\n\nThey can:\n\n* search the web \n* fetch images, PDFs, and documents \n* process information from multiple sources\n* write code \n* build simple apps\n* automate repetitive searches\n\nWith just web search + document handling, you already have something that can do lightweight research or build knowledge on demand.\n\nWant to learn how to cook food from a specific country?   \nWant to gather sources before arguing a point on Reddit?😅  \nWant an agent to visit multiple websites several times a day, check a product price, and report the cheapest option?\n\nIt can do all of that.\n\nAnd because these are still LLMs underneath, you can also ask them to compare products, decide what fits your needs best, and even find the best place to buy them.\n\nHonestly, a big part of the appeal is just letting it cook and seeing what happens. Over time, you learn alongside the tool and start discovering more and more useful workflows.\n\n**TL;DR:**\n\n* It’s fun\n* It works\n* It’s better than OpenClaw\n* It does useful stuff for you basically for ***free***\n\nThat said, I strongly believe the sweet spot is **good local models or/and(you can use both) very cheap but capable models through OpenRouter**. These agents still fail *a lot*, they overthink, retry constantly, and can burn tokens fast if you’re not careful.\n\nA solid local model can already handle 80–90% of complex tasks, so don’t fall for the “it’s only useful with Claude Opus 4.6” nonsense. That’s mostly grifters trying to hype expensive cloud models.\n\nNvidia giving Nemotron 3 Super 120B A12B for free on Openrouter(they do collect ALL your data tho so be advised) - [Nemotron 3 Super (free) - API Pricing &amp; Providers | OpenRouter](https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free)\n\n  \n\n\nYes, I used chatgpt to rewrite my comment, English it's not my main language and the original text was a disaster."
+    },
+    {
+      "author": "CommonPurpose1969",
+      "score": 4,
+      "created_utc": 1774527658.0,
+      "body": "For self-improvement, you need Honcho enabled, which isn't enabled by default."
+    },
+    {
+      "author": "Only-Associate2698",
+      "score": 3,
+      "created_utc": 1774604164.0,
+      "body": "Yeah, the self-improving thing is the real deal.\n\nBasically when I'm doing a complex tasks like adding couple of entries to my self-hosted nocodb instance. it auto-creates a skills for nocodb in the productivity folder.\n\nAnother example is when I'm extracting product hunt maker's social handles from product hunt page. It understands that product hunt blocks browser tools and fire crawl web scraping is the only way to make it work. And it creates a skill for the same."
+    },
+    {
+      "author": "Final_Ad_7431",
+      "score": 3,
+      "created_utc": 1774905864.0,
+      "body": "you don't require honcho, not sure why that person said that, every 15 or so prompts the agent inserts a message to the effect of \"is there anything i should remember in our last X messages, or a skill that i could create from this?\" and then it will remember or create a skill from that if it thinks there's anything, it being in the prompt means it scales with your model unfortunately, a smarter model will probably pick up on more things without being pushed to doing it\n\nthere is a side project on their github (https://github.com/NousResearch/hermes-agent-self-evolution) for self reviewing skills/prompts and looking at session info to see what failed and how to improve etc but it requires a bit of set up, you could mimic this with your own skill, extracting failures and corrections from session history etc, telling it to run once a day or once a week or whatever, but again that is always going to scale off the model you use with it"
+    },
+    {
+      "author": "No_Afternoon_4260",
+      "score": 2,
+      "created_utc": 1774523418.0,
+      "body": "What model are you using?\nHermes is just one of this new breed of agent"
+    },
+    {
+      "author": "dampflokfreund",
+      "score": 2,
+      "created_utc": 1774526958.0,
+      "body": "Yeah, I don't get the memory function. So far it has not written anything in the memory files. If it has to be prompted to, it is not really self learning. Hermes is really nice though and Teknium is working really hard on it."
+    },
+    {
+      "author": "georgeApuiu",
+      "score": 2,
+      "created_utc": 1774857379.0,
+      "body": "im curious if any of you guys tried the hermes RL ..."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": 619,
+  "name": "Examples of best production grade agents",
+  "url": "https://www.reddit.com/r/LangChain/comments/1jgrsld/examples_of_best_production_grade_agents/",
+  "platform": "Reddit",
+  "subreddit": "LangChain",
+  "extraction_status": "ok",
+  "anysearch_extract_status": "failed:extract_upstream_error\nupstream returned error: HTTP 403 403 Forbidden",
+  "content_timestamp": "2025-03-22",
+  "collected_at": "2026-05-21T22:23:52+08:00",
+  "time_slice": "2025-03",
+  "query": "site:reddit.com/r/LangChain/comments agent production",
+  "source": "builder-b-raw-social-supplement-2026-05-21",
+  "score": 43,
+  "num_comments": 20,
+  "author": "gojo-satoru-saikyo",
+  "content": "# Examples of best production grade agents\n\nSource: https://www.reddit.com/r/LangChain/comments/1jgrsld/examples_of_best_production_grade_agents/\nSubreddit: r/LangChain\nAuthor: u/gojo-satoru-saikyo\nScore: 43 | Comments: 20\nCreated: 2025-03-22\n\n## Post Body\nWhat are some of the best production grade agents that you seen? Any examples where I can see the code? \n\nWhat according to you makes production grade agents different from what you see on LangChain and LangGraph guides? \n\n## Top Comments\n\n### Comment 1 — u/MentionAccurate8410 (score 11)\nI found this repo a good boilerplate for building agentic systems based on Langgraph: [https://github.com/panaversity/langgraph-agents-template](https://github.com/panaversity/langgraph-agents-template)\n\n### Comment 2 — u/YashRevannavar (score 3)\nWe have used it here is what what we made with Lnagchain/langgraph.\n\n“ComplyEase extracts and structures information from your source code, enabling an AI-powered scan and generating automated reports. The tool uses a temporary vector database to store and analyze the code, ensuring that all data remains secure and internal, with no external internet connection required. By operating within a secure Azure Sovereignty Cloud, ComplyEase guarantees both data and code safety.”\n\nhttps://complyease.dc360.de/ \n\nTry it.\n\n### Comment 3 — u/colin_colout (score 2)\nDefine \"production grade\". We're all early adopters here, and there are trade-offs for every use case.\n\n### Comment 4 — u/Potential-Row-4876 (score 2)\nCursor’s software dev agent\n\n### Comment 5 — u/spersingerorinda (score 2)\nWe recently ported the Deep Research agent from Langchain into code you can actually understand, haha: https://github.com/supercog-ai/agentic/tree/main/examples/deep\\_research. Ours isn't at quite at the level of OpenAI yet, but it still works well and I use it every day.\n\n### Comment 6 — u/atapiawastaken (score 2)\nHi, I would like to mention www.restack.io. I am one of the founders. Our framework offers low abstractions and high scalability in K8s clusters. We run agents on a large scale: a few hundred thousand daily runs in our cloud.\n\n### Comment 7 — u/NoEye2705 (score 2)\nError handling and fine-tuned models are key. Basic guides skip these crucial parts.\n\n### Comment 8 — u/LooseLossage (score 1)\nRemindMe! -7 day\n\n### Comment 9 — u/Poildek (score 1)\nCursor or windsurf agents.",
+  "top_comments": [
+    {
+      "author": "MentionAccurate8410",
+      "score": 11,
+      "created_utc": 1742595100.0,
+      "body": "I found this repo a good boilerplate for building agentic systems based on Langgraph: [https://github.com/panaversity/langgraph-agents-template](https://github.com/panaversity/langgraph-agents-template)"
+    },
+    {
+      "author": "YashRevannavar",
+      "score": 3,
+      "created_utc": 1742598542.0,
+      "body": "We have used it here is what what we made with Lnagchain/langgraph.\n\n“ComplyEase extracts and structures information from your source code, enabling an AI-powered scan and generating automated reports. The tool uses a temporary vector database to store and analyze the code, ensuring that all data remains secure and internal, with no external internet connection required. By operating within a secure Azure Sovereignty Cloud, ComplyEase guarantees both data and code safety.”\n\nhttps://complyease.dc360.de/ \n\nTry it."
+    },
+    {
+      "author": "colin_colout",
+      "score": 2,
+      "created_utc": 1742593701.0,
+      "body": "Define \"production grade\". We're all early adopters here, and there are trade-offs for every use case."
+    },
+    {
+      "author": "Potential-Row-4876",
+      "score": 2,
+      "created_utc": 1742624220.0,
+      "body": "Cursor’s software dev agent"
+    },
+    {
+      "author": "spersingerorinda",
+      "score": 2,
+      "created_utc": 1742739615.0,
+      "body": "We recently ported the Deep Research agent from Langchain into code you can actually understand, haha: https://github.com/supercog-ai/agentic/tree/main/examples/deep\\_research. Ours isn't at quite at the level of OpenAI yet, but it still works well and I use it every day."
+    },
+    {
+      "author": "atapiawastaken",
+      "score": 2,
+      "created_utc": 1742804748.0,
+      "body": "Hi, I would like to mention www.restack.io. I am one of the founders. Our framework offers low abstractions and high scalability in K8s clusters. We run agents on a large scale: a few hundred thousand daily runs in our cloud."
+    },
+    {
+      "author": "NoEye2705",
+      "score": 2,
+      "created_utc": 1742811377.0,
+      "body": "Error handling and fine-tuned models are key. Basic guides skip these crucial parts."
+    },
+    {
+      "author": "LooseLossage",
+      "score": 1,
+      "created_utc": 1742651194.0,
+      "body": "RemindMe! -7 day"
+    },
+    {
+      "author": "Poildek",
+      "score": 1,
+      "created_utc": 1742671329.0,
+      "body": "Cursor or windsurf agents."
+    }
+  ]
+}

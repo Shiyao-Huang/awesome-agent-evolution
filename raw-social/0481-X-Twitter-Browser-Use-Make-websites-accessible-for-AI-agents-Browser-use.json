@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/LangChainAI AI agent OR agents",
+  "search_rank": 3,
+  "name": "Browser Use Make websites accessible for AI agents Browser use ...",
+  "url": "https://twitter.com/LangChainAI/status/1870892057470161305",
+  "snippet": "LangChain (@LangChain). 591 likes 9 replies. Browser Use Make websites accessible for AI agents Browser use is the easiest way to ... date: Dec 22, 2024",
+  "id": 481,
+  "platform": "X/Twitter",
+  "content": "LangChain (@LangChain). 591 likes 9 replies. Browser Use Make websites accessible for AI agents Browser use is the easiest way to ... date: Dec 22, 2024",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Dec 22, 2024",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2024-Q1"
+}

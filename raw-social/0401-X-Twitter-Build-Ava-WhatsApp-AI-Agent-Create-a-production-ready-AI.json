@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/LangChainAI AI agent OR agents",
+  "search_rank": 6,
+  "name": "Build Ava: WhatsApp AI Agent Create a production-ready AI ...",
+  "url": "https://x.com/LangChainAI/status/1898403360128090320",
+  "snippet": "LangChain (@LangChain). 910 likes 10 replies. Build Ava: WhatsApp AI Agent Create a production-ready AI companion in WhatsApp using ... date: Mar 8, 2025",
+  "id": 401,
+  "platform": "X/Twitter",
+  "content": "LangChain (@LangChain). 910 likes 10 replies. Build Ava: WhatsApp AI Agent Create a production-ready AI companion in WhatsApp using ... date: Mar 8, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Mar 8, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

@@ -1,0 +1,35 @@
+{
+  "id": 62,
+  "name": "Build Self-Improving Agents: LangMem Procedural Memory Tutorial",
+  "url": "https://www.youtube.com/watch?v=WW-v5mO2P7w",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "self_evolving_agent",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=WW-v5mO2P7w\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Build Self-Improving Agents: LangMem Procedural Memory Tutorial Learn how to implement dynamic instruction learning in LLM agents using the LangMem SDK. This technical tutorial demonstrates automatic prompt optimization, enabling agents to learn and adapt behavior through user feedback. You will implement automated prompt refinement from conversation history so your agent can learn from actions, and then expand to apply it to a multi-agent system so the whole team can learn as it works. In this video, we will show you how to add procedural memory to your agents so they can learn instructions, rules, and other procedures that dictate how they should respond and act in given situations. We'll start by installing LangMem and LangGraph and then set up our initial instructions for the agent. These instructions can be learned over time, as we'll demonstrate later. We'll import the prompt optim",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, self-improving, LangGraph, memory",
+    "representative_works": [
+      "Build Self-Improving Agents: LangMem Procedural Memory Tutorial"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

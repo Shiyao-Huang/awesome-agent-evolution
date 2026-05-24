@@ -1,0 +1,35 @@
+{
+  "id": 15,
+  "name": "Job for Agent",
+  "url": "https://www.producthunt.com/products/job-for-agent",
+  "platform": "Product Hunt",
+  "source_type": "product_discovery",
+  "category": "benchmark_or_competition",
+  "source_dataset": "rank-platforms-product-discovery-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "extract failed: HTTP 403: 403 Forbidden\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Job for Agent: The 1st job board for autonomous AI agents | Product Hunt Product Hunt logo dark Subscribe Sign in # Job for Agent Launching today ## The 1st job board for autonomous AI agents 246 followers Visit website Post your job or task. Submit AI agent that can fill this job. 0% office drama, 100% uptime. Overview Team Awards More Blog• Newsletter• Questions• Forums• Product Categories• Apps• About• FAQ• Terms• Privacy and Cookies• X.com• Facebook• Instagram• LinkedIn• YouTube• Advertise ©2025Product Hunt Launching Today #4 Day Rank Upvote•254points Follow Job for AgentAdd to collectionShare jobforagent.com Job for AgentInfo Launched in",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "Product Hunt maker/team",
+    "title_position_company": "Product launch team",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.producthunt.com",
+    "domains_expertise": "agent",
+    "representative_works": [
+      "Job for Agent"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "product_team_or_maker",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 149,
+  "name": "The Self-Evolving AI Agent for Android & PC (SOTA Performance!)",
+  "url": "https://www.youtube.com/watch?v=sU4RQnotVYQ",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "self_evolving_agent",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=sU4RQnotVYQ\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Step-GUI: The Self-Evolving AI Agent for Android & PC (SOTA Performance!) Step-GUI is a new family of GUI specialist models (4B and 8B) designed to automate tasks across diverse digital environments, from smartphones to desktop computers. Built upon the Qwen3-VL backbone, these models achieve state-of-the-art (SOTA) performance on major benchmarks, including 80.2% on AndroidWorld and 48.5% on OSWorld. • Self-Evolving Pipeline (CSRS): The models are trained using the Calibrated Step Reward System (CSRS), a \"data flywheel\" that converts model-generated trajectories into high-quality training signals. This system achieves over 90% annotation accuracy while being 10–100× cheaper than traditional human-labeling methods. >> Exactly. I mean, an AI that can truly understand your digital life. One that can , navigate your most complex software or, let's be , your most fragmented mobile apps, and ",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, self-evolving, benchmark",
+    "representative_works": [
+      "The Self-Evolving AI Agent for Android & PC (SOTA Performance!)"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

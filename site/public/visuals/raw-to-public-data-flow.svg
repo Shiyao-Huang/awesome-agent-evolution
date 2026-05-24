@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">Raw to Public Data Flow</title>
+  <desc id="desc">The project governance loop requested by the user: raw, processed, work, and results remain separated but connected.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#101827"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" x2="1">
+      <stop offset="0" stop-color="#7cf7d4"/>
+      <stop offset="1" stop-color="#5fb4ff"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffcf7c"/>
+      <stop offset="1" stop-color="#ff8f70"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" rx="34" fill="url(#bg)"/>
+  <path d="M0 90 C220 32 330 132 530 70 S890 56 1200 112" fill="none" stroke="#7cf7d4" stroke-opacity=".13" stroke-width="2"/>
+  <path d="M0 510 C210 450 420 560 650 496 S960 430 1200 505" fill="none" stroke="#ffcf7c" stroke-opacity=".12" stroke-width="2"/>
+  <text x="46" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#f6f8ff">Raw to Public Data Flow</text>
+  <text x="46" y="88" font-family="Inter, Arial, sans-serif" font-size="14" fill="#aab4d4">The project governance loop requested by the user: raw, processed, work, and results remain separated but connected.</text>
+  
+  <g filter="url(#softShadow)">
+    <rect x="72" y="206" width="190" height="180" rx="26" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.16)"/>
+    <circle cx="167" cy="252" r="28" fill="url(#teal)"/>
+    <text x="167" y="312" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="850" fill="#f6f8ff">Raw</text>
+    <foreignObject x="96" y="326" width="142" height="46">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.35;color:#aab4d4;text-align:center">GitHub, papers, blogs, social</div>
+    </foreignObject>
+  </g><path d="M252 298 C282 298 292 298 322 298" stroke="#7cf7d4" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M316 286 L334 298 L316 310" fill="none" stroke="#7cf7d4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="322" y="206" width="190" height="180" rx="26" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.16)"/>
+    <circle cx="417" cy="252" r="28" fill="url(#amber)"/>
+    <text x="417" y="312" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="850" fill="#f6f8ff">Processed</text>
+    <foreignObject x="346" y="326" width="142" height="46">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.35;color:#aab4d4;text-align:center">classification, timestamps, analysis</div>
+    </foreignObject>
+  </g><path d="M502 298 C532 298 542 298 572 298" stroke="#7cf7d4" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M566 286 L584 298 L566 310" fill="none" stroke="#7cf7d4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="572" y="206" width="190" height="180" rx="26" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.16)"/>
+    <circle cx="667" cy="252" r="28" fill="url(#teal)"/>
+    <text x="667" y="312" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="850" fill="#f6f8ff">Work</text>
+    <foreignObject x="596" y="326" width="142" height="46">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.35;color:#aab4d4;text-align:center">learning notes, Mermaid graph, blockers</div>
+    </foreignObject>
+  </g><path d="M752 298 C782 298 792 298 822 298" stroke="#7cf7d4" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M816 286 L834 298 L816 310" fill="none" stroke="#7cf7d4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="822" y="206" width="190" height="180" rx="26" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.16)"/>
+    <circle cx="917" cy="252" r="28" fill="url(#amber)"/>
+    <text x="917" y="312" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="850" fill="#f6f8ff">Results</text>
+    <foreignObject x="846" y="326" width="142" height="46">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.35;color:#aab4d4;text-align:center">site, reports, paper PDF</div>
+    </foreignObject>
+  </g>
+</svg>

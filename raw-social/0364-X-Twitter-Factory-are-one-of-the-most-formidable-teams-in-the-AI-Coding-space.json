@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/swyx AI agent OR agents",
+  "search_rank": 9,
+  "name": "Factory are one of the most formidable teams in the AI Coding space ...",
+  "url": "https://x.com/swyx/status/1971310686585356295",
+  "snippet": "Droids are the best software development agents in the world, reaching #1 on Terminal-Bench. We have raised $50M from NEA, Sequoia Capital, J.P. ... date: Sep 25, 2025",
+  "id": 364,
+  "platform": "X/Twitter",
+  "content": "Droids are the best software development agents in the world, reaching #1 on Terminal-Bench. We have raised $50M from NEA, Sequoia Capital, J.P. ... date: Sep 25, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Sep 25, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

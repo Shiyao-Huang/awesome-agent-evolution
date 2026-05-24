@@ -1,0 +1,35 @@
+{
+  "id": 13,
+  "name": "Graphiti: Build personalized AI agents that learn from dynamic data | Product Hunt",
+  "url": "https://www.producthunt.com/products/graphiti?launch=graphiti",
+  "platform": "Product Hunt",
+  "source_type": "product_discovery",
+  "category": "developer_framework",
+  "source_dataset": "rank-platforms-product-discovery-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "extract failed: HTTP 403: 403 Forbidden\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Graphiti: Build personalized AI agents that learn from dynamic data | Product Hunt Graphiti # Graphiti ## Build personalized AI agents that learn from dynamic data 419 followers Visit website AI Infrastructure Tools•AI Databases Graphiti is Knowledge Graph-based memory for AI agents. Automatically build rich graphs from changing business data & chat histories. Enable your Python agent with fast access to relevant, accurate data, even as it evolves over time. Visit our GitHub repo! Overview Launches1 Reviews Team Awards More Blog• Newsletter• Questions• Forums• Product Categories• Apps• About• FAQ• Terms• Privacy and Cookies• • * I want to int",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "Product Hunt maker/team",
+    "title_position_company": "Product launch team",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.producthunt.com",
+    "domains_expertise": "agent, memory",
+    "representative_works": [
+      "Graphiti: Build personalized AI agents that learn from dynamic data | Product Hunt"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "product_team_or_maker",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

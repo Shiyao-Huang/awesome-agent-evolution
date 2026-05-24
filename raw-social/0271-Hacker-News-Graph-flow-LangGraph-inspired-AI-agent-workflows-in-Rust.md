@@ -1,0 +1,28 @@
+# Graph-flow – LangGraph-inspired AI agent workflows in Rust
+
+- URL: https://news.ycombinator.com/item?id=47925524
+- Platform: Hacker News
+- Extraction status: ok
+- content_timestamp: unknown
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+- Query: site:news.ycombinator.com/item "LangGraph"
+
+## Raw Content
+
+## Show HN: Graph-flow – LangGraph-inspired AI agent workflows in Rust | Hacker News
+
+**Source**: https://news.ycombinator.com/item?id=47925524
+
+---
+
+| Hacker Newsnew | past | comments | ask | show | jobs | submitlogin |  | Hacker Newsnew | past | comments | ask | show | jobs | submit | login |  |  |  |  |
+|---|---|---|---|---|---|---|---|
+|  | Hacker Newsnew | past | comments | ask | show | jobs | submit | login |  |  |  |  |  |
+| Show HN: Graph-flow – LangGraph-inspired AI agent workflows in Rust (github.com/a-agmon)2 points by alonagmon 22 days ago  | hide | past | favorite300 GitHub stars and 6,000 crates.io downloads later, graph-flow has been a fun experiment in building AI-agent workflows in Rust.It is a LangGraph-inspired library focused on graph-based orchestration, stateful execution, conditional routing, persistence, and type safety. The goal was to keep the core small and useful not only for AI agents, but for any Rust application that needs robust workflow execution.Rust in AI still feels early, but projects like Rig, LanceDB, and others make it feel like the ecosystem is starting to take shape.If you’re building AI systems in Rust, I’d love for you to check it out and share feedback.GitHub: https://github.com/a-agmon/rs-graph-llm |  |  | Show HN: Graph-flow – LangGraph-inspired AI agent workflows in Rust (github.com/a-agmon) |  | 2 points by alonagmon 22 days ago  | hide | past | favorite |  | 300 GitHub stars and 6,000 crates.io downloads later, graph-flow has been a fun experiment in building AI-agent workflows in Rust.It is a LangGraph-inspired library focused on graph-based orchestration, stateful execution, conditional routing, persistence, and type safety. The goal was to keep the core small and useful not only for AI agents, but for any Rust application that needs robust workflow execution.Rust in AI still feels early, but projects like Rig, LanceDB, and others make it feel like the ecosystem is starting to take shape.If you’re building AI systems in Rust, I’d love for you to check it out and share feedback.GitHub: https://github.com/a-agmon/rs-graph-llm |
+|  |  | Show HN: Graph-flow – LangGraph-inspired AI agent workflows in Rust (github.com/a-agmon) |  |  |  |  |  |
+|  | 2 points by alonagmon 22 days ago  | hide | past | favorite |  |  |  |  |  |  |
+|  | 300 GitHub stars and 6,000 crates.io downloads later, graph-flow has been a fun experiment in building AI-agent workflows in Rust.It is a LangGraph-inspired library focused on graph-based orchestration, stateful execution, conditional routing, persistence, and type safety. The goal was to keep the core small and useful not only for AI agents, but for any Rust application that needs robust workflow execution.Rust in AI still feels early, but projects like Rig, LanceDB, and others make it feel like the ecosystem is starting to take shape.If you’re building AI systems in Rust, I’d love for you to check it out and share feedback.GitHub: https://github.com/a-agmon/rs-graph-llm |  |  |  |  |  |  |
+| Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact
+Search: |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |

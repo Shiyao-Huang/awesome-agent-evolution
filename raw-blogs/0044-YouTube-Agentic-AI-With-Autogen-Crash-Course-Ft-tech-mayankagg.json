@@ -1,0 +1,35 @@
+{
+  "id": 44,
+  "name": "Agentic AI With Autogen Crash Course Ft: @tech.mayankagg",
+  "url": "https://www.youtube.com/watch?v=yDpV_jgO93c",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=yDpV_jgO93c\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Master Microsoft Autogen step-by-step in this beginner-friendly crash course! 🚀 Build Powerful Multi-Agent AI Systems with Ease — Even If You're a Beginner! Microsoft Autogen tutorial, Multi Agent Framework crash course, HelloAgenticAI course, Autogen beginner guide, AI frameworks for beginners, Build AI agents Microsoft, Autogen hands-on, Multi-agent systems tutorial, Microsoft AI tools, AI programming with Autogen, Autogen project-based learning, Open-source multi-agent AI - 00:00 Intro - 00:41 Course walkthrough - 03:38 Resource & Doubts 04:15 Installation - 21:02 First Autogen Agent - 31:23 Architecture - 41:08 Autogen Agent in Depth - 01:00:50 Models in Autogen - 01:16:57 Mult - 01:33:27 Team in Autogen (Multi Agent) - 02:05:40 Termination Condition 02:2 :31 :43 Tools - 03:1 :06 03:3 :16 A game-changing framework by Microsoft that has been revolutionizing the AI automation. Autogen ",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, AutoGen",
+    "representative_works": [
+      "Agentic AI With Autogen Crash Course Ft: @tech.mayankagg"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": 617,
+  "name": "microagents: Modular Agents Capable of Self-Editing Their Prompts and Python code",
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/18r73gj/microagents_modular_agents_capable_of_selfediting/",
+  "platform": "Reddit",
+  "subreddit": "LocalLLaMA",
+  "extraction_status": "ok",
+  "anysearch_extract_status": "failed:extract_upstream_error\nupstream returned error: HTTP 403 403 Forbidden",
+  "content_timestamp": "2023-12-26",
+  "collected_at": "2026-05-21T22:23:52+08:00",
+  "time_slice": "2023-12",
+  "query": "site:reddit.com/r/LocalLLaMA/comments self-evolving agents",
+  "source": "builder-b-raw-social-supplement-2026-05-21",
+  "score": 22,
+  "num_comments": 5,
+  "author": "[deleted]",
+  "content": "# microagents: Modular Agents Capable of Self-Editing Their Prompts and Python code\n\nSource: https://www.reddit.com/r/LocalLLaMA/comments/18r73gj/microagents_modular_agents_capable_of_selfediting/\nSubreddit: r/LocalLLaMA\nAuthor: u/[deleted]\nScore: 22 | Comments: 5\nCreated: 2023-12-26\n\n## Post Body\n**Project**: [https://github.com/aymenfurter/microagents](https://github.com/aymenfurter/microagents)\n\n**Description**:\n\n&gt;This  experiment explores self-evolving agents that automatically  generate  and improve themselves. No specific agent design or prompting  is  required from the user. Simply pose a question, and the system   initiates and evolves agents tailored to provide answers. The process   starts with a user query, activating a basic \"bootstrap\" agent, which   doesn't execute Python code but plans and delegates to specialized   agents capable of running Python for broader functions. An Agent Manager   oversees them, selecting or creating agents via vector similarity for   specific tasks. Agents have evolving system prompts that improve  through  learning. For coding tasks, agents include Python in prompts,  refining  their approach through an \"evolution step\" if unsuccessful.  Upon  completing a task, an agent's status updates, and the bootstrap  agent  evaluates the result, engaging other agents for further steps in  larger  processes.\n\n## Top Comments\n\n### Comment 1 — u/[deleted] (score 10)\n[removed]\n\n### Comment 2 — u/jetaudio (score 2)\nAgent Smith",
+  "top_comments": [
+    {
+      "author": "[deleted]",
+      "score": 10,
+      "created_utc": 1703602541.0,
+      "body": "[removed]"
+    },
+    {
+      "author": "jetaudio",
+      "score": 2,
+      "created_utc": 1703667749.0,
+      "body": "Agent Smith"
+    }
+  ]
+}

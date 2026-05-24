@@ -1,0 +1,35 @@
+{
+  "id": 124,
+  "name": "MCP - RAG & Self-Evolve Agent ALITA - YouTube",
+  "url": "https://www.youtube.com/watch?v=ZtwN79n9dRE",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "self_evolving_agent",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=ZtwN79n9dRE\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "ALITA: Unscripted Agent Evolution with MCP tool box. In addition: RAG-MCP paper. Self-evolving Agent w/ MCP tools Hello community. How can we outperform OpenAI deep research or even outperform Manus AI? We have a brand new idea. It's called Alita. It goes down to the DNA of our AI agents. And yes, we will compare it here to a rag MCP. Interested? Then let's start this video. We start with a paradigm shift in the agent design itself. So we have a new idea to have a minimal predefin right at the start but have a maximal self evolution of our agentic system and we achieve this simply by the dynamic capability expansion via an MCP our model context protocols we just implement it in an intelligent way Alita doesn't just use your tools it autonomously creates the tools it refineses those tools, it reuses them, it stores them by generating here task related. So really absolutely narrow down MCP",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, self-evolving, MCP",
+    "representative_works": [
+      "MCP - RAG & Self-Evolve Agent ALITA - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

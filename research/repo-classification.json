@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T03:11:27+08:00",
+  "generated_at": "2026-05-25T01:06:44+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -47,19 +47,34 @@
       "description": "Cognitive Memory OS for AI Agents — persistent, self-improving, multi-agent memory"
     },
     {
+      "repo": "803/skills-supply",
+      "url": "https://github.com/803/skills-supply",
+      "stars": "32",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 60 commits, MIT license, TypeScript primary language, sk CLI with agents.toml, latest sk@0.2.4 on Jan 12 2026, 32 stars and 1 fork",
+      "description": "skills-supply 是跨 Claude Code、Amp、Codex、OpenCode、Factory 的 agent skill 管理 CLI，用 agents.toml 把技能包来源、同步和团队共享统一成一条供应链。"
+    },
+    {
       "repo": "a-evo-lab/a-evolve",
       "url": "https://github.com/a-evo-lab/a-evolve",
-      "stars": "549",
+      "stars": "552",
       "prior_category": "论文代码",
       "prior_unclassified": "false",
       "final_category": "论文代码/paper-code",
-      "function_tag": "research-artifact",
+      "function_tag": "agent-evolution-infra",
       "base_theme": "evolution",
-      "stack": "Markdown",
+      "stack": "Python",
       "time_slice": "2026-05",
-      "content_timestamp": "2026-05-21",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "The official repository of \"Position: Agentic Evolution is the Path to Evolving LLMs\"."
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 64 commits, MIT license, Python stack, 552 stars and 67 forks; README says PyTorch for Agentic AI, evolves any agent with any evolution algorithm, and reports MCP-Atlas, SWE-bench Verified, Terminal-Bench, SkillsBench, ARC-AGI, and OSWorld benchmark deltas",
+      "description": "A-Evolve 是通用 self-improving agent 基础设施：给定 base agent、benchmark 和 evolution algorithm，就把 prompt、skills、memory 等 agent workspace 文件作为可变状态进行迭代。"
     },
     {
       "repo": "aaronowh/ai-scientist-v2",
@@ -107,6 +122,21 @@
       "description": "Turn any website into a typed JSON API using self improving agents"
     },
     {
+      "repo": "aden-hive/hive",
+      "url": "https://github.com/aden-hive/hive",
+      "stars": "10400",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evolution",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed production multi-agent harness README, self-heal through failure capture and graph evolution claim, quickstart/runtime docs, Apache-2.0 license, and public star/fork snapshot",
+      "description": "Aden Hive 是生产 AI 的 multi-agent harness，强调状态持久化、崩溃恢复、成本控制、审计轨迹、MCP 工具集成和失败驱动的 graph evolution。"
+    },
+    {
       "repo": "adiban17/ppo-ping-pong-agent-",
       "url": "https://github.com/adiban17/ppo-ping-pong-agent-",
       "stars": "0",
@@ -120,6 +150,21 @@
       "content_timestamp": "unknown",
       "evidence": "application/self-evolving-agent signal",
       "description": "🏓 RL Pong Agent"
+    },
+    {
+      "repo": "adolfousier/opencrabs",
+      "url": "https://github.com/adolfousier/opencrabs",
+      "stars": "755",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "应用/application",
+      "function_tag": "application-demo",
+      "base_theme": "evolution",
+      "stack": "Rust",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed MIT license, Rust primary language, 121 releases with v0.3.27 latest on 2026-05-23, local brain/memory/command self-improvement mechanics, 755 stars and 72 forks",
+      "description": "OpenCrabs 是受 OpenClaw 启发的单二进制多渠道 AI agent，强调本地 brain files、memory search、custom commands、cron/background jobs 和 self-update 组成的自改进循环。"
     },
     {
       "repo": "agent-on-the-fly/memento",
@@ -227,6 +272,21 @@
       "description": "A curated list of awesome AI tools, libraries, papers, datasets, and frameworks that accelerate scientific discovery — from physics and chemistry to biology, materials, and beyond."
     },
     {
+      "repo": "ai-boost/awesome-harness-engineering",
+      "url": "https://github.com/ai-boost/awesome-harness-engineering",
+      "stars": "1100",
+      "prior_category": "-",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "education-list",
+      "stack": "Markdown",
+      "evidence": "web GitHub page verified awesome/list/tutorial resource signal",
+      "description": "Curated resources, patterns, and templates for AI agent harness engineering across tools, memory, MCP, verification, and observability.",
+      "prior_unclassified": "true",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24"
+    },
+    {
       "repo": "ai4co/awesome-fm4co",
       "url": "https://github.com/ai4co/awesome-fm4co",
       "stars": "534",
@@ -285,6 +345,51 @@
       "content_timestamp": "unknown",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Alignment Tipping Process: How Self-Evolution Pushes LLM Agents Off the Rails"
+    },
+    {
+      "repo": "aiming-lab/AutoResearchClaw",
+      "url": "https://github.com/aiming-lab/AutoResearchClaw",
+      "stars": "12600",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "应用/application",
+      "function_tag": "research-agent-pipeline",
+      "base_theme": "evolution",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 239 commits, MIT license, Python primary language, v0.5.0 latest May 20 2026, 12.6k stars and 1.5k forks; README describes 23-stage autonomous/co-pilot research pipeline, PIVOT/REFINE loop, self-learning lessons, ARC-Bench, and A-Evolve skill integration",
+      "description": "AutoResearchClaw 是从 research idea 到 paper 的自主/协作式科研 agent 管线，结合多 agent debate、实验沙箱、claim verification、HITL co-pilot、MetaClaw cross-run learning 和 ARC-Bench。"
+    },
+    {
+      "repo": "aiming-lab/SimpleMem",
+      "url": "https://github.com/aiming-lab/SimpleMem",
+      "stars": "3400",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed MIT license, Python primary language, SimpleMem/Omni-SimpleMem/EvolveMem stack, v0.3.0 release on 2026-05-21, 3.4k stars and 347 forks",
+      "description": "SimpleMem 把文本、多模态记忆和 EvolveMem 自进化检索放入同一 Python 包，用压缩记忆、意图检索规划和 AutoResearch 式优化循环提升 agent memory 的质量与成本表现。"
+    },
+    {
+      "repo": "aisa-group/skill-inject",
+      "url": "https://github.com/aisa-group/skill-inject",
+      "stars": "73",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 8 commits, Python primary language, skill-file injection benchmark, Docker agent containers, Claude/Codex/Gemini agents, 73 stars and 2 forks",
+      "description": "SKILL-INJECT 是面向 agent skill 文件的安全 benchmark，用上下文/明显恶意注入、Docker agent 容器和多安全策略评估 Claude Code、Codex、Gemini CLI 等代理的技能文件攻击面。"
     },
     {
       "repo": "aiwaves-cn/agents",
@@ -347,6 +452,21 @@
       "description": "SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024]"
     },
     {
+      "repo": "AMA-Bench/AMA-Bench",
+      "url": "https://github.com/AMA-Bench/AMA-Bench",
+      "stars": "40",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed benchmark README, two-stage method API, judge reliability table, and leaderboard links",
+      "description": "面向 agentic applications 的长程记忆 benchmark，评估方法是否能从长 agent 轨迹构建记忆、召回证据并回答问题。"
+    },
+    {
       "repo": "amap-ml/skillclaw",
       "url": "https://github.com/amap-ml/skillclaw",
       "stars": "1",
@@ -390,6 +510,21 @@
       "content_timestamp": "2026-05-19",
       "evidence": "framework/runtime/orchestration signal",
       "description": "Claude SDK for Python"
+    },
+    {
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": "140000",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed official Agent Skills repository, spec/template folders, Claude Code plugin marketplace instructions, and public star/fork snapshot",
+      "description": "Anthropic 官方 Agent Skills 公共仓库，提供技能规范、模板、示例技能与 Claude Code 插件市场安装入口，是技能生态的上游参考实现。"
     },
     {
       "repo": "archishmansengupta/autovoiceevals",
@@ -570,6 +705,21 @@
       "content_timestamp": "unknown",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "Official implementation of the paper Connecting Large Language Models with Evolutionary Algorithms Yields Powerful Prompt Optimizers"
+    },
+    {
+      "repo": "beita6969/scienceclaw",
+      "url": "https://github.com/beita6969/ScienceClaw",
+      "stars": "816",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "应用/application",
+      "function_tag": "application-demo",
+      "base_theme": "research-agent",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 25 commits, MIT license, TypeScript primary language, 285 skills, four-layer memory/research protocol, self-evolving topic, 816 stars and 90 forks",
+      "description": "ScienceClaw 是面向科学家的 self-evolving research agent，把 OpenClaw、长期记忆、285 个研究技能、领域适配和零幻觉引用约束组织成科研工作台。"
     },
     {
       "repo": "bennettschwartz/membrane",
@@ -797,6 +947,36 @@
       "description": "[https://github.com/CharlesQ9/Self-Evolving-Agents/blob/main/figures/evolution.png](https://github.com/CharlesQ9/Self-Evolving-Agents/blob/main/figures/evolution.png) A Survey of Self-Evolving Agents: On Path to Artifici"
     },
     {
+      "repo": "china-qijizhifeng/agentic-Harness-engineering",
+      "url": "https://github.com/china-qijizhifeng/agentic-Harness-engineering",
+      "stars": "391",
+      "prior_category": "框架",
+      "prior_unclassified": "false",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evolution",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-22",
+      "evidence": "user-reported URL + legacy README + search supplement classified as harness evolution",
+      "description": "Agentic Harness Engineering treats prompts, tools, middleware, skills, sub-agents, memory, and evaluator scaffolds as evolvable harness surfaces while the base model stays fixed."
+    },
+    {
+      "repo": "chriscox/agent-skills",
+      "url": "https://github.com/chriscox/agent-skills",
+      "stars": "10",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Shell",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 15 commits, MIT license, Shell primary language, Claude Code/Codex/Gemini/OpenClaw support, project-planner and docs-sync workflow signals, 10 stars and 2 forks",
+      "description": "chriscox/agent-skills 是可复用的 AI coding agent skill 库，重点覆盖 project-planner、docs-sync 和跨 Claude Code、Codex、Gemini CLI、OpenClaw 的共享工作流。"
+    },
+    {
       "repo": "chrisworsey55/atlas-gic",
       "url": "https://github.com/chrisworsey55/atlas-gic",
       "stars": "1",
@@ -855,6 +1035,66 @@
       "content_timestamp": "unknown",
       "evidence": "tool/module/memory/prompt/coding signal",
       "description": "Efficiently discovering algorithms via LLMs with evolutionary search and reinforcement learning."
+    },
+    {
+      "repo": "claw-bench/claw-bench",
+      "url": "https://github.com/claw-bench/claw-bench",
+      "stars": "171",
+      "prior_category": "-",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python",
+      "evidence": "web GitHub page verified benchmark/evaluation/harness signal",
+      "description": "The Definitive AI Agent Benchmark with real agent tasks, skill.md instructions, pytest verifiers, and leaderboard submission.",
+      "prior_unclassified": "true",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24"
+    },
+    {
+      "repo": "claw-eval/claw-eval",
+      "url": "https://github.com/claw-eval/claw-eval",
+      "stars": "606",
+      "prior_category": "-",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python",
+      "evidence": "web GitHub page verified human-verified benchmark signal",
+      "description": "Trustworthy evaluation harness for autonomous agents with 300 human-verified tasks and Pass^3 evaluation logic.",
+      "prior_unclassified": "true",
+      "time_slice": "2026-03",
+      "content_timestamp": "2026-03"
+    },
+    {
+      "repo": "ClawBio/ClawBio",
+      "url": "https://github.com/ClawBio/ClawBio",
+      "stars": "867",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 864 commits, MIT license, Python skill library, 74 skills, 1,756 tests, validation/benchmark infrastructure, 867 stars and 174 forks",
+      "description": "ClawBio 是 built on OpenClaw 的生物信息 Agent Skill Library，用 SKILL.md、Python workflow、demo data、reproducibility bundle 和 benchmark scorer 把专业分析变成可复现技能。"
+    },
+    {
+      "repo": "clawdotnet/openclaw.net",
+      "url": "https://github.com/clawdotnet/openclaw.net",
+      "stars": "345",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "C#",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 375 commits, MIT license, C#/.NET runtime folders, self-hosted OpenClaw gateway description, self-evolving/agent-harness topics, 345 stars and 66 forks",
+      "description": "OpenClaw.NET 是 self-hosted OpenClaw gateway 和 .NET agent runtime，强调 NativeAOT-friendly、OpenAI-compatible API、MCP、memory、tool execution 和 Microsoft Agent Framework 互操作。"
     },
     {
       "repo": "clawland-ai/geneclaw",
@@ -917,6 +1157,21 @@
       "description": "The Metacognitive Integrated Dual-Cycle Architecture (MIDCA)"
     },
     {
+      "repo": "ComposioHQ/awesome-claude-skills",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "stars": "61500",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 1000+ production-ready Claude Skills/Plugins claim, cross-agent compatibility list, App Automation via Composio section, Apache-2.0 license, and public star/fork snapshot",
+      "description": "Composio 维护的 Claude Skills/agent skills 大型索引，覆盖生产技能、插件、SaaS workflow、MCP/Rube 集成和跨 coding agent 复用场景。"
+    },
+    {
       "repo": "crewaiinc/crewai",
       "url": "https://github.com/crewaiinc/crewai",
       "stars": "51",
@@ -930,6 +1185,21 @@
       "content_timestamp": "unknown",
       "evidence": "framework/runtime/orchestration signal",
       "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks."
+    },
+    {
+      "repo": "cxcscmu/SkillLearnBench",
+      "url": "https://github.com/cxcscmu/SkillLearnBench",
+      "stars": "21",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 5 commits, MIT license, Python stack, 21 stars and 2 forks; README states 20 skill-dependent tasks, 15 sub-domains, 100 verified instances, Docker requirement, task success/skill quality/trajectory quality metrics, and arXiv 2604.20087",
+      "description": "SkillLearnBench 是面向自动生成 agent skills 的 continual learning benchmark，覆盖真实任务、技能质量、轨迹质量和 task success。"
     },
     {
       "repo": "davidzwz/awesome-rag-reasoning",
@@ -990,6 +1260,21 @@
       "content_timestamp": "unknown",
       "evidence": "framework/runtime/orchestration signal",
       "description": "MCP server integrating GEPA (Genetic-Evolutionary Prompt Architecture) for automatic prompt optimization with Claude Desktop"
+    },
+    {
+      "repo": "dmgrok/agent_skills_directory",
+      "url": "https://github.com/dmgrok/agent_skills_directory",
+      "stars": "16",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed skill catalog, provider count, quality scoring, and local CLI install paths",
+      "description": "AI Agent skills 发现与安装目录，聚合 40+ providers、130+ curated skills，并提供本地质量评分、维护状态和安全扫描。"
     },
     {
       "repo": "dongxiangjue/awesome-llm-self-improvement",
@@ -1157,19 +1442,19 @@
       "description": "A comprehensive 0-to-1 guide for building self-improving LLM applications with DSPy framework"
     },
     {
-      "repo": "evermind-ai/everos",
-      "url": "https://github.com/evermind-ai/everos",
-      "stars": "5",
-      "prior_category": "评测",
-      "prior_unclassified": "false",
-      "final_category": "评测/evaluation",
-      "function_tag": "benchmark-eval",
-      "base_theme": "evaluation",
-      "stack": "Markdown",
-      "time_slice": "2025-02",
-      "content_timestamp": "2025-02-01",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "Build, evaluate, and integrate long-term memory for self-evolving agents."
+      "repo": "EverMind-AI/EverOS",
+      "url": "https://github.com/EverMind-AI/EverOS",
+      "stars": "5600",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 654 commits, Apache-2.0 license, Python primary language, benchmarks/methods/use-cases folders, EverMemBench/EvoAgentBench entries, 5.6k stars and 593 forks",
+      "description": "EverOS 把长期记忆方法、HyperMem 架构、用例集成、EverMemBench 和 EvoAgentBench 放在同一仓库中，直接连接 agent memory、MCP/skills 和 self-evolution evaluation。"
     },
     {
       "repo": "evermind-ai/everos?tab=readme-ov-file",
@@ -1442,6 +1727,21 @@
       "description": "Self-aware cognitive AI agent that reads, modifies & verifies its own code. Autonomous planning, episodic memory, emotional state & MCP integration. Runs on Claude, GPT-4 or Ollama. Electron desktop app for Windows, macO"
     },
     {
+      "repo": "GeniusHTX/SWE-Skills-Bench",
+      "url": "https://github.com/GeniusHTX/SWE-Skills-Bench",
+      "stars": "42",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 49-task benchmark README, Hugging Face dataset loading path, Docker/Claude Code evaluation commands, MIT license, 13 commits, and public star/fork snapshot",
+      "description": "SWE-Skills-Bench 是评估 skill 文档注入是否提升真实软件工程任务表现的 benchmark，提供 49 个任务、skill/no-skill 对照运行和结果统计脚本。"
+    },
+    {
       "repo": "gensi-thuair/flex",
       "url": "https://github.com/gensi-thuair/flex",
       "stars": "78",
@@ -1500,6 +1800,21 @@
       "content_timestamp": "unknown",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "ACM CAIS'26 Artifact — GEPA"
+    },
+    {
+      "repo": "getzep/graphiti",
+      "url": "https://github.com/getzep/graphiti",
+      "stars": "26500",
+      "prior_category": "-",
+      "prior_unclassified": "false",
+      "final_category": "框架/framework",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed README, 831 commits, Apache-2.0 license, 26.5k stars, 2.6k forks, temporal context graph and MCP server signals",
+      "description": "Graphiti 构建面向 AI agents 的 temporal context graph，持续集成交互、结构化/非结构化数据和外部信息，支持 provenance、时间查询、增量更新和 MCP server。"
     },
     {
       "repo": "ghy0501/awesome-continual-learning-in-generative-models",
@@ -1697,6 +2012,21 @@
       "description": "This repository contains the Hugging Face Agents Course."
     },
     {
+      "repo": "huggingface/skills",
+      "url": "https://github.com/huggingface/skills",
+      "stars": "10600",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 285 commits, Apache-2.0 license, Python primary language, Codex/Claude/Gemini/Cursor compatibility, Agent Skills standard, 10.6k stars and 681 forks",
+      "description": "huggingface/skills 是 Hugging Face 生态的 Agent Skills 仓库，提供 Codex、Claude Code、Gemini CLI、Cursor 可用的 HF CLI、数据集、评测、训练、论文发布等技能包。"
+    },
+    {
       "repo": "huggingface/smolagents",
       "url": "https://github.com/huggingface/smolagents",
       "stars": "27",
@@ -1713,18 +2043,33 @@
     },
     {
       "repo": "human-agent-society/coral",
-      "url": "https://github.com/human-agent-society/coral",
-      "stars": "669",
-      "prior_category": "评测",
+      "url": "https://github.com/Human-Agent-Society/CORAL",
+      "stars": "667",
+      "prior_category": "-",
       "prior_unclassified": "false",
-      "final_category": "评测/evaluation",
-      "function_tag": "tool-module",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
       "base_theme": "evolution",
-      "stack": "Markdown",
-      "time_slice": "2026-04",
-      "content_timestamp": "2026-04-24",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "CORAL is a robust, lightweight infrastructure for multi-agent autonomous self-evolution, built for autoresearch. Works with Claude Code, Codex, Cursor, OpenCode, Kiro, and more."
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "existing raw capture promoted; web GitHub page observed 118 commits, Apache-2.0 license, Python primary language, Claude Code/Codex/Cursor/OpenCode/Kiro runtimes, v0.5.1 latest on 2026-05-09, 667 stars and 89 forks",
+      "description": "CORAL 是面向 open-ended discovery 的多代理自主演化基础设施，用隔离 git worktrees、共享状态目录、grader daemon、heartbeat prompt 和多 runtime 集成推动 agent teams 连续改进。"
+    },
+    {
+      "repo": "HUST-AI-HYZ/MemoryAgentBench",
+      "url": "https://github.com/HUST-AI-HYZ/MemoryAgentBench",
+      "stars": "341",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 24 commits, MIT license, Python primary language, ICLR 2026 memory-agent benchmark, LongMemEval/EventQA/FactConsolidation signals, mem0/letta/cognee method folders, 341 stars and 53 forks",
+      "description": "MemoryAgentBench 是 ICLR 2026 记忆评测代码库，用增量多轮交互测试 agent memory 的准确检索、测试时学习、长程理解和冲突解决能力。"
     },
     {
       "repo": "hwfengcs/dm-code-agent",
@@ -1759,17 +2104,17 @@
     {
       "repo": "iii-experimental/agentos",
       "url": "https://github.com/iii-experimental/agentos",
-      "stars": "144",
+      "stars": "145",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
-      "base_theme": "evaluation",
-      "stack": "TypeScript/JavaScript",
+      "base_theme": "evolution",
+      "stack": "Rust/TypeScript/Python",
       "time_slice": "2026-05",
-      "content_timestamp": "2026-05-21",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "The agent OS that evolves itself."
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed redirect to iii-experimental/agentos, 223 commits, Apache-2.0 license, Rust/TypeScript/Python stack, self-evolving topic, 145 stars and 20 forks",
+      "description": "AgentOS 是 iii engine 上的 self-evolving agent OS，把 worker、function、trigger 三个原语放到统一 bus 上，并把 function generate/register/eval/feedback/promote 作为自进化路径。"
     },
     {
       "repo": "ilearn-lab/evoharness",
@@ -1937,6 +2282,36 @@
       "description": "SE-Agent is a self-evolution framework for LLM Code agents. It enables trajectory-level evolution to exchange information across reasoning paths via Revision, Recombination, and Refinement, expanding the search space and"
     },
     {
+      "repo": "jayzeng/agentmemory",
+      "url": "https://github.com/jayzeng/agentmemory",
+      "stars": "5",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 36 commits, MIT license, TypeScript primary language, Claude/Codex/Cursor skill install paths, qmd search, local markdown storage, 5 stars and 0 forks",
+      "description": "agent-memory 是面向 Claude Code、OpenAI Codex、Cursor 和 Agent CLI 的本地优先记忆 CLI，用 Markdown 文件保存长期事实、daily log、topic note 和 scratchpad，并用 qmd 做语义检索与上下文注入。"
+    },
+    {
+      "repo": "jbrahy/meta-agent-teams",
+      "url": "https://github.com/jbrahy/meta-agent-teams",
+      "stars": "2",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evolution",
+      "stack": "Shell",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 14 commits, AGPL-3.0 license, skill/prompt/teams/docs layout, meta-agent/auditor/git-backed evolution README, 2 stars and topic agent-evolution signal",
+      "description": "Agent Teams 是面向 self-improving AI agent teams 的开放框架，用 meta-agent、auditor、structured feedback loops 和 git-backed history 管理团队角色、规则、关系和演化原因。"
+    },
+    {
       "repo": "jennyzzt/awesome-open-ended",
       "url": "https://github.com/jennyzzt/awesome-open-ended",
       "stars": "438",
@@ -1965,6 +2340,36 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents"
+    },
+    {
+      "repo": "JordanMcCann/agentmemory",
+      "url": "https://github.com/JordanMcCann/agentmemory",
+      "stars": "23",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 1 commit, MIT license, Python memory package, LongMemEval 96.20% claim, legitimacy verification notes, 23 stars and 2 forks",
+      "description": "JordanMcCann/agentmemory 是一个以 LongMemEval 96.20% world-record claim 为中心的 agent memory system，附带 LEGITIMACY.md、完整运行日志和 real-retrieval benchmark harness。"
+    },
+    {
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "stars": "25500",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 138 ready-to-use scientific/research skills, 78+ database lookup claim, security disclaimer/scanner guidance, MIT license, releases, and public star/fork snapshot",
+      "description": "K-Dense 的 Scientific Agent Skills 把生物、化学、医学、材料、地理、数据分析等科研工具和数据库组织为可安装技能，面向 AI co-scientist 工作流。"
     },
     {
       "repo": "kadubon/audit-closed-ai-scientist",
@@ -2160,6 +2565,21 @@
       "content_timestamp": "2026-05-12",
       "evidence": "framework/runtime/orchestration signal",
       "description": "Build resilient agents."
+    },
+    {
+      "repo": "langchain-ai/langmem",
+      "url": "https://github.com/langchain-ai/langmem",
+      "stars": "1500",
+      "prior_category": "-",
+      "prior_unclassified": "false",
+      "final_category": "框架/framework",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed README, 125 commits, MIT license, Python language, 1.5k stars, 168 forks, memory tools and LangGraph long-term memory integration",
+      "description": "LangChain 的 LangMem 帮助 agent 从交互中学习并适配用户，提供记忆抽取、prompt refinement、长期记忆管理工具和 LangGraph store 集成。"
     },
     {
       "repo": "langchain-ai/langsmith-sdk",
@@ -2567,6 +2987,21 @@
       "description": "AI powered automatic software healing agent"
     },
     {
+      "repo": "matrixorigin/Memoria",
+      "url": "https://github.com/matrixorigin/Memoria",
+      "stars": "271",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Rust/TypeScript/Shell",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 178 commits, Apache-2.0 license, Rust/TypeScript/Shell stack, memory snapshots/branches/merge/rollback positioning, benchmarks/datasets folder, v0.4.0 latest May 11 2026, 271 stars and 36 forks",
+      "description": "Memoria 把 AI Agent memory 做成类似 Git 的可版本化基础设施，用 snapshot、branch、merge、rollback、语义检索和自治理规则降低幻觉并维护长期上下文一致性。"
+    },
+    {
       "repo": "maxnorm8650/medagentsim",
       "url": "https://github.com/maxnorm8650/medagentsim",
       "stars": "163",
@@ -2642,6 +3077,51 @@
       "description": "This repository contains hands-on projects, code examples, and deployment workflows. Explore multi-agent systems, LangChain, LangGraph, AutoGen, CrewAI, RAG, MCP, automation with n8n, and scalable agent deployment using "
     },
     {
+      "repo": "meituan/EvoCUA",
+      "url": "https://github.com/meituan/EvoCUA",
+      "stars": "317",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "research-artifact",
+      "base_theme": "evolution",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed EvoCUA README, OSWorld/WAA claims, model release dates, and evaluation files",
+      "description": "美团 EvoCUA 计算机使用 Agent 项目，发布 EvoCUA-32B/8B 并在 OSWorld、WindowsAgentArena 等 GUI 自动化评测上报告结果。"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "url": "https://github.com/mem0ai/mem0",
+      "stars": "56500",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed memory/plugin/evaluation directories and README benchmark claims",
+      "description": "通用 AI Agent 记忆层，提供用户、会话和 Agent 状态记忆，以及 OpenClaw、CLI、SDK 和 evaluation 支持。"
+    },
+    {
+      "repo": "mem0ai/memory-benchmarks",
+      "url": "https://github.com/mem0ai/memory-benchmarks",
+      "stars": "33",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Python/TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 15 commits, Apache-2.0 license, Python/TypeScript stack, LOCOMO/LongMemEval/BEAM benchmarks, Mem0 cloud and OSS paths, 33 stars and 9 forks",
+      "description": "mem0ai/memory-benchmarks 是 memory-augmented LLM systems 的公开评测套件，覆盖 LOCOMO、LongMemEval 和 BEAM，并同时支持 Mem0 cloud 与 OSS self-hosted pipeline。"
+    },
+    {
       "repo": "memodb-io/acontext",
       "url": "https://github.com/memodb-io/acontext",
       "stars": "3",
@@ -2655,6 +3135,36 @@
       "content_timestamp": "2026-05-21",
       "evidence": "tool/module/memory/prompt/coding signal",
       "description": "Agent Skills as a Memory Layer"
+    },
+    {
+      "repo": "memodb-io/memobase",
+      "url": "https://github.com/memodb-io/memobase",
+      "stars": "2700",
+      "prior_category": "-",
+      "prior_unclassified": "false",
+      "final_category": "框架/framework",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed README, 467 commits, Apache-2.0 license, 2.7k stars, 212 forks, profile/event memory workflow and SDK/MCP integration",
+      "description": "Memobase 是 profile-based long-term memory 系统，围绕用户画像、事件时间线、批处理 buffer 和 context API 给 LLM 应用提供可控、低延迟的长期记忆。"
+    },
+    {
+      "repo": "MemoriLabs/Memori",
+      "url": "https://github.com/memorilabs/memori",
+      "stars": "14900",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Python/TypeScript/Rust",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 600 commits, Apache 2.0 license, Python/TypeScript/Rust stack, LoCoMo 81.95% accuracy claim, Version 3.3.4 latest May 20 2026, 14.9k stars and 2.3k forks",
+      "description": "Memori 是 agent-native memory infrastructure，把 agent execution 和 conversation 转成结构化持久状态，并用 LoCoMo benchmark 报告记忆质量和上下文成本表现。"
     },
     {
       "repo": "memovai/memov",
@@ -2674,32 +3184,32 @@
     {
       "repo": "memtensor/memos",
       "url": "https://github.com/memtensor/memos",
-      "stars": "9",
+      "stars": "9400",
       "prior_category": "评测",
       "prior_unclassified": "false",
-      "final_category": "评测/evaluation",
-      "function_tag": "benchmark-eval",
+      "final_category": "工具/tool",
+      "function_tag": "memory-runtime",
       "base_theme": "memory",
-      "stack": "Markdown",
+      "stack": "TypeScript/Python/HTML/JavaScript",
       "time_slice": "2026-05",
-      "content_timestamp": "2026-05-09",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "Self-evolving memory OS for LLM & AI Agents: ultra-persistent memory, hybrid-retrieval, and cross-task skill reuse, with 35.24% token savings"
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 1,778 commits, Apache-2.0 license, TypeScript/Python stack, release v2.0.16 latest May 19 2026, 9.4k stars and 846 forks; README reports +43.70% accuracy vs OpenAI Memory, 35.24% token savings, LoCoMo/LongMemEval/PrefEval/PersonaMem signals, and self-evolving memory L1-L3 plus Skills",
+      "description": "MemOS 是面向 LLM 和 Agent 的 memory operating system，把 memory API、memory cube、插件、dashboard 和 self-evolving memory layers 合成可治理的长期记忆基础设施。"
     },
     {
       "repo": "memtensor/memrl",
       "url": "https://github.com/memtensor/memrl",
-      "stars": "118",
+      "stars": "117",
       "prior_category": "论文代码",
       "prior_unclassified": "false",
       "final_category": "论文代码/paper-code",
-      "function_tag": "framework-runtime",
-      "base_theme": "memory",
+      "function_tag": "research-artifact",
+      "base_theme": "evolution",
       "stack": "Python",
       "time_slice": "2026-05",
-      "content_timestamp": "2026-05-21",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "Paper: “MEMRL: SELF-EVOLVING AGENTS VIA RUNTIME REINFORCEMENT LEARNING ON EPISODIC MEMORY” Open-Source Code"
+      "content_timestamp": "2026-05-24",
+      "evidence": "existing raw capture promoted; web GitHub page observed 76 commits, MIT license, Python primary language, HLE/BigCodeBench/ALFWorld/Lifelong Agent Bench runners, 117 stars and 10 forks",
+      "description": "MemRL 是自进化 agent 的论文代码，用 episodic memory 上的 runtime reinforcement learning 代替参数微调，通过环境反馈筛选高效策略并在多个 benchmark 上验证持续改进。"
     },
     {
       "repo": "metauto-ai/gptswarm",
@@ -2745,6 +3255,51 @@
       "content_timestamp": "2026-05-21",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "Official repository for \"RLVR-World: Training World Models with Reinforcement Learning\" (NeurIPS 2025), https://arxiv.org/abs/2505.13934"
+    },
+    {
+      "repo": "microsoft/STATE-Bench",
+      "url": "https://github.com/microsoft/STATE-Bench",
+      "stars": "25",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 41 commits, MIT license, Python 100% stack, release v0.5.0 latest May 22 2026, 25 stars and 3 forks; README states 450 enterprise tasks across travel, customer support, and shopping assistant domains with sandbox database, tools, simulated user, and procedure/state assertions",
+      "description": "STATE-Bench 是 Microsoft 发布的 stateful agent task evaluation benchmark，用三类企业任务评估 memory 是否改善 agent 的可靠性、效率和多步执行。"
+    },
+    {
+      "repo": "microsoft/WindowsAgentArena",
+      "url": "https://github.com/microsoft/WindowsAgentArena",
+      "stars": "861",
+      "prior_category": "-",
+      "prior_unclassified": "false",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed technical report citation, Docker/WSL/Python prerequisites, Windows 11 VM golden image workflow, and local deployment commands; 861 stars, 95 forks, 86 commits",
+      "description": "Microsoft Windows Agent Arena 是面向多模态 OS agents 的 Windows 评测平台，使用 Docker、Windows 11 VM/golden image 和 OpenAI/Azure OpenAI endpoint 执行大规模 benchmark。"
+    },
+    {
+      "repo": "MicrosoftDocs/Agent-Skills",
+      "url": "https://github.com/MicrosoftDocs/Agent-Skills",
+      "stars": "557",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed Azure Agent Skills README, progressive disclosure explanation, products/raw scan pipeline note, dual license, and public star/fork snapshot",
+      "description": "MicrosoftDocs 的 Azure Agent Skills 仓库，把 Microsoft Learn/Azure 文档组织为 SKILL.md 技能，服务 Copilot、Codex、Claude Code、Cursor 等 coding agents。"
     },
     {
       "repo": "mitchellgordon95/dspy",
@@ -2897,6 +3452,21 @@
       "description": "Bring your own agent and build a self-improving agentic system. Automatically mine failures, optimize the agent harness, and gate against regressions."
     },
     {
+      "repo": "NevaMind-AI/memU",
+      "url": "https://github.com/NevaMind-AI/memU",
+      "stars": "13700",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 288 commits, Apache 2.0 license, Python primary language, OpenClaw alternative section, custom LLM/provider docs, 13.7k stars and 1k forks",
+      "description": "memU 是面向 24/7 proactive agents 的 memory framework，公开页面把它定位为 OpenClaw-like always-on assistant 的长期记忆底座，关注低 token 成本、用户意图理解和主动行动。"
+    },
+    {
       "repo": "ngoodman/metaprompt",
       "url": "https://github.com/ngoodman/metaprompt",
       "stars": "88",
@@ -2942,18 +3512,18 @@
       "description": "Large Language Model Evolutionary Algorithm"
     },
     {
-      "repo": "noahshinn024/reflexion-human-eval",
-      "url": "https://github.com/noahshinn024/reflexion-human-eval",
+      "repo": "noahshinn/reflexion",
+      "url": "https://github.com/noahshinn/reflexion",
       "stars": "3",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "评测/evaluation",
+      "prior_category": "论文代码",
+      "prior_unclassified": "false",
+      "final_category": "论文代码/paper-code",
       "function_tag": "benchmark-eval",
       "base_theme": "memory",
       "stack": "Markdown",
       "time_slice": "2026-05",
       "content_timestamp": "2026-05-21",
-      "evidence": "benchmark/evaluation/harness signal",
+      "evidence": "kept prior human/analysis category + README verified",
       "description": "[NeurIPS 2023] Reflexion: Language Agents with Verbal Reinforcement Learning"
     },
     {
@@ -2972,19 +3542,34 @@
       "description": "Reflexion: an autonomous agent with dynamic memory and self-reflection"
     },
     {
-      "repo": "noahshinn/reflexion",
-      "url": "https://github.com/noahshinn/reflexion",
+      "repo": "noahshinn024/reflexion-human-eval",
+      "url": "https://github.com/noahshinn024/reflexion-human-eval",
       "stars": "3",
-      "prior_category": "论文代码",
-      "prior_unclassified": "false",
-      "final_category": "论文代码/paper-code",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
       "base_theme": "memory",
       "stack": "Markdown",
       "time_slice": "2026-05",
       "content_timestamp": "2026-05-21",
-      "evidence": "kept prior human/analysis category + README verified",
+      "evidence": "benchmark/evaluation/harness signal",
       "description": "[NeurIPS 2023] Reflexion: Language Agents with Verbal Reinforcement Learning"
+    },
+    {
+      "repo": "nousresearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "stars": "0",
+      "prior_category": "-",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Markdown",
+      "evidence": "framework/runtime/orchestration signal; local raw capture promoted from project supplement",
+      "description": "Hermes Agent runtime and self-evolution evidence capture used by the site project supplement.",
+      "prior_unclassified": "true",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-16"
     },
     {
       "repo": "nousresearch/hermes-agent-self-evolution",
@@ -3002,6 +3587,21 @@
       "description": "⚒ Evolutionary self-improvement for Hermes Agent — optimize skills, prompts, and code using DSPy + GEPA"
     },
     {
+      "repo": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "stars": "202000",
+      "prior_category": "-",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Shell",
+      "evidence": "tool/module/skill signal; local raw capture promoted from project supplement",
+      "description": "Skills and software-development methodology for coding agents across Claude Code, Codex, Cursor, and related runtimes.",
+      "prior_unclassified": "true",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-04"
+    },
+    {
       "repo": "octobrist/cope",
       "url": "https://github.com/octobrist/cope",
       "stars": "11",
@@ -3015,6 +3615,21 @@
       "content_timestamp": "unknown",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "A LLM-based agent optimization framework that assesses and incorporates planning-execution coordination into agent optimization. (ICML 2026)"
+    },
+    {
+      "repo": "oiioai/molt",
+      "url": "https://github.com/OiiOAI/MOLT",
+      "stars": "0",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evolution",
+      "stack": "Shell",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed MIT license, Shell primary language, reflexive co-evolution engine, task/team/system observation levels, OpenClaw native and Claude Code Skill signals, 0 stars and 0 forks",
+      "description": "MOLT 是 OpenClaw multi-agent systems 的 reflexive co-evolution engine，用结构化观察发现重复劳动、handoff 断裂、协议偏移和 memory 不读回等系统性摩擦。"
     },
     {
       "repo": "omdivyatej/self-learning-agents",
@@ -3047,6 +3662,21 @@
       "description": "Harness-agnostic orchestration package for multi-agent consensus workflows"
     },
     {
+      "repo": "OneWave-AI/claude-skills",
+      "url": "https://github.com/OneWave-AI/claude-skills",
+      "stars": "154",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 19 commits, MIT license, 162 skills claim, agent-army/agent-swarm folders, install instructions, 154 stars and 23 forks",
+      "description": "OneWave Claude Skills 是 production-ready Claude Code skills 库，覆盖业务、销售、工程、咨询和 AI agent architecture，并包含 agent-army 等多 agent 并行执行技能。"
+    },
+    {
       "repo": "openautocoder/live-swe-agent",
       "url": "https://github.com/openautocoder/live-swe-agent",
       "stars": "392",
@@ -3060,6 +3690,51 @@
       "content_timestamp": "2025-11-24",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Live-SWE-agent: live, runtime self-evolving software engineering agent"
+    },
+    {
+      "repo": "OpenBMB/EdgeClaw",
+      "url": "https://github.com/OpenBMB/EdgeClaw",
+      "stars": "1200",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed MIT license, OpenClaw-based edge-cloud collaborative agent, ClawXMemory/ClawXSkill/ClawXTool/ClawXKairos signals, 1.2k stars and 70 forks",
+      "description": "EdgeClaw 是 OpenBMB 等机构基于 OpenClaw 的边云协同个人 AI Assistant，把 cost-aware routing、multi-layer memory、skill discovery、tool governance 和 sandbox 组织成个人 Agent runtime。"
+    },
+    {
+      "repo": "openclaw/clawbench",
+      "url": "https://github.com/openclaw/clawbench",
+      "stars": "97",
+      "prior_category": "-",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python",
+      "evidence": "web GitHub page verified trace-based benchmark signal",
+      "description": "Agent benchmark scoring the full stack with trace-based scoring, reliability metrics, and dynamical-systems diagnostics.",
+      "prior_unclassified": "true",
+      "time_slice": "2026-04",
+      "content_timestamp": "2026-04-20"
+    },
+    {
+      "repo": "openclaw/openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "stars": "374000",
+      "prior_category": "-",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "TypeScript",
+      "evidence": "framework/runtime/product signal; local raw capture promoted from project supplement",
+      "description": "Local-first personal AI assistant and agent runtime with tools, sessions, channels, and skills.",
+      "prior_unclassified": "true",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-21"
     },
     {
       "repo": "opendatabox/workspace-bench",
@@ -3120,6 +3795,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "A curated list of reinforcement learning with human feedback resources (continually updated)"
+    },
+    {
+      "repo": "OpenHands/benchmarks",
+      "url": "https://github.com/OpenHands/benchmarks",
+      "stars": "85",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/Shell/Jinja",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 414 commits, MIT license, Python/Shell/Jinja stack, migration to OpenHands Software Agent SDK V1, active SWE-Bench/GAIA/Commit0/OpenAgentSafety benchmark table, 85 stars and 62 forks",
+      "description": "OpenHands Benchmarks 是 OpenHands V1 的 evaluation harness，用标准化 pipeline 测试软件工程、通用推理、Commit0 和 workplace safety 等真实任务上的 agent 能力。"
     },
     {
       "repo": "openmemind/memind",
@@ -3272,6 +3962,21 @@
       "description": "L-AutoDA"
     },
     {
+      "repo": "pinchbench/skill",
+      "url": "https://github.com/pinchbench/skill",
+      "stars": "1200",
+      "prior_category": "-",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python",
+      "evidence": "benchmark/evaluation/harness signal; local raw capture promoted from project supplement",
+      "description": "OpenClaw-oriented real task benchmark covering meetings, code, email, research, files, memory, and skill discovery.",
+      "prior_unclassified": "true",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-06"
+    },
+    {
       "repo": "pingcap/ossinsight",
       "url": "https://github.com/pingcap/ossinsight",
       "stars": "2",
@@ -3300,6 +4005,21 @@
       "content_timestamp": "unknown",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "ACE LangGraph: ReAct Agent with Adaptive Learning - Integrating ACE framework with LangGraph for self-improving agents"
+    },
+    {
+      "repo": "pjt222/agent-almanac",
+      "url": "https://github.com/pjt222/agent-almanac",
+      "stars": "17",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "R/JavaScript/CSS/Shell",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 462 commits, MIT license, R/JavaScript/CSS/Shell stack, .claude-plugin/skills/agents/teams/viz folders, 350-skill and 72-agent README claims from search snippet, release v1.3.0 latest May 4 2026, 17 stars and 2 forks",
+      "description": "Agent Almanac 是 executable skills、specialist agents 和 pre-built teams 的索引库，用技能目录、agent/team 编排和交互可视化帮助 AI-assisted development 复用操作流程。"
     },
     {
       "repo": "polarseeker/openseeker",
@@ -3332,6 +4052,21 @@
       "description": "Automatic ''Differentiation'' via Text -- using large language models to backpropagate textual gradients."
     },
     {
+      "repo": "princeton-pli/hal-harness",
+      "url": "https://github.com/princeton-pli/hal-harness",
+      "stars": "289",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 701 commits, Python primary language, no license field visible in captured page, unified hal-eval CLI, Weave cost logging, Docker/Azure runners, HAL leaderboard integration, 289 stars and 55 forks",
+      "description": "HAL Harness 是 Princeton PLI 的 holistic agent evaluation harness，用统一 CLI 在 SWE-bench、USACO、AppWorld、CORE-bench、tau-bench 等任务上比较 agent，同时记录成本、trace 和 leaderboard 提交流程。"
+    },
+    {
       "repo": "privkeyio/evolve-mcp",
       "url": "https://github.com/privkeyio/evolve-mcp",
       "stars": "11",
@@ -3345,6 +4080,21 @@
       "content_timestamp": "unknown",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Universal MCP server for agent self-improvement via evolutionary algorithms."
+    },
+    {
+      "repo": "psenger/ai-agent-skills",
+      "url": "https://github.com/psenger/ai-agent-skills",
+      "stars": "3",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Python/HTML/Shell",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 82 commits, MIT license, Python/HTML/Shell stack, Agent Skills Open Standard, Codex/Claude/Cursor topics, v2.2.0 latest May 23 2026, 3 stars and 0 forks",
+      "description": "psenger/ai-agent-skills 是面向 Claude Code、Codex、Cursor 和 Agent Skills Open Standard 的 production-ready skill 包，强调 API、Git、Obsidian、架构评审和安全等工程场景。"
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
@@ -3422,6 +4172,36 @@
       "description": "Comprehensive toolkit for Reinforcement Learning from Human Feedback (RLHF) training, featuring instruction fine-tuning, reward model training, and support for PPO and DPO algorithms with various configurations for the A"
     },
     {
+      "repo": "Randroids-Dojo/skills",
+      "url": "https://github.com/Randroids-Dojo/skills",
+      "stars": "33",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "HTML/Shell/Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 48 commits, MIT license, dual-format Claude Code/Codex/OpenCode skills, .agents/.codex compatibility paths, 33 stars and 2 forks",
+      "description": "Randroids Dojo Skills 是面向 Claude Code、Codex CLI 和 OpenCode 的双格式技能库，把 randroid-loop、task tracking、game-dev skills 和 spiral scaffold 组织成可安装的 agent skill bundle。"
+    },
+    {
+      "repo": "raphaelchristi/harness-evolver",
+      "url": "https://github.com/raphaelchristi/harness-evolver",
+      "stars": "21",
+      "prior_category": "-",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "evolution",
+      "stack": "TypeScript/JavaScript",
+      "evidence": "web GitHub page verified harness evolution and skill/plugin signal",
+      "description": "Claude Code plugin and npm tool that evolves agent harness prompts, routing, tools, and architecture using evaluation-backed gates.",
+      "prior_unclassified": "true",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24"
+    },
+    {
       "repo": "reflexioai/reflexio",
       "url": "https://github.com/reflexioai/reflexio",
       "stars": "220",
@@ -3435,6 +4215,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Make your agents improve themselves. Reflexio is an AI agent self-improvement harness that enables your AI agents to continuously learn from real user interactions."
+    },
+    {
+      "repo": "rendro/sediment",
+      "url": "https://github.com/rendro/sediment",
+      "stars": "32",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Rust",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 86 commits, MIT license, Rust primary language, single-binary MCP memory server, LanceDB/SQLite hybrid graph+vector design, benchmark table versus ChromaDB/Mem0, v0.5.1 latest Mar 30 2026, 32 stars and 5 forks",
+      "description": "Sediment 是 local-first、MCP-native 的 agent semantic memory 层，用单文件 Rust binary 把向量检索、关系图、访问衰减、项目隔离和冲突检测组合成可本地运行的记忆系统。"
     },
     {
       "repo": "researai/awesome-ai-scientist",
@@ -3557,6 +4352,21 @@
       "description": "[NeurIPS'25, ICLR'26] Graph Foundation Model for Retrieval Augmented Generation"
     },
     {
+      "repo": "rohitg00/agentmemory",
+      "url": "https://github.com/rohitg00/agentmemory",
+      "stars": "16000",
+      "prior_category": "-",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "TypeScript",
+      "evidence": "tool/module/memory signal; local raw capture promoted from project supplement",
+      "description": "Persistent memory layer for coding agents and MCP clients with cross-session continuity signals.",
+      "prior_unclassified": "true",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-18"
+    },
+    {
       "repo": "ronit26mehta/argus-ai-debate",
       "url": "https://github.com/ronit26mehta/argus-ai-debate",
       "stars": "3",
@@ -3587,21 +4397,6 @@
       "description": "[ICLR 2026] Official repository for the paper \"LaSeR: Reinforcement Learning with Last-Token Self-Rewarding\""
     },
     {
-      "repo": "sakanaai/ai-scientist-v2",
-      "url": "https://github.com/sakanaai/ai-scientist-v2",
-      "stars": "6",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "应用/application",
-      "function_tag": "application-demo",
-      "base_theme": "research-agent",
-      "stack": "Python",
-      "time_slice": "2024-Q2",
-      "content_timestamp": "2024-05-13",
-      "evidence": "application/self-evolving-agent signal",
-      "description": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search"
-    },
-    {
       "repo": "sakanaai/ai-scientist",
       "url": "https://github.com/sakanaai/ai-scientist",
       "stars": "13",
@@ -3615,6 +4410,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery 🧑‍🔬"
+    },
+    {
+      "repo": "sakanaai/ai-scientist-v2",
+      "url": "https://github.com/sakanaai/ai-scientist-v2",
+      "stars": "6",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "应用/application",
+      "function_tag": "application-demo",
+      "base_theme": "research-agent",
+      "stack": "Python",
+      "time_slice": "2024-Q2",
+      "content_timestamp": "2024-05-13",
+      "evidence": "application/self-evolving-agent signal",
+      "description": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search"
     },
     {
       "repo": "sakanaai/shinkaevolve",
@@ -3765,6 +4575,21 @@
       "content_timestamp": "unknown",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "High-performance Rust agent OS. Multi-agent orchestration, self-evolution, memory-first design, built-in security, and hardware-to-chat extensibility."
+    },
+    {
+      "repo": "ServiceNow/BrowserGym",
+      "url": "https://github.com/ServiceNow/BrowserGym",
+      "stars": "1200",
+      "prior_category": "-",
+      "prior_unclassified": "false",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed README, 385 commits, 1.2k stars, 174 forks, browsergym package install instructions, benchmark list, and AgentLab integration",
+      "description": "ServiceNow BrowserGym 是网页任务自动化的 Gym 环境，整合 MiniWoB、WebArena、VisualWebArena、WorkArena、AssistantBench、WebLINX、OpenApps、TimeWarp 等 web agent benchmark。"
     },
     {
       "repo": "sethkarten/continual-harness",
@@ -3930,6 +4755,36 @@
       "content_timestamp": "2026-05-21",
       "evidence": "framework/runtime/orchestration signal",
       "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters."
+    },
+    {
+      "repo": "simota/agent-skills",
+      "url": "https://github.com/simota/agent-skills",
+      "stars": "39",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "HTML",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 1,843 commits, MIT license, 137 specialized agents in README, Nexus Orchestrator, platform-agnostic support, 39 stars and 8 forks",
+      "description": "simota/agent-skills 是跨 Claude Code、Codex CLI、Antigravity CLI 等平台的 agent skill collection，包含 Nexus Orchestrator 用于分析任务并设计 specialist agent chain。"
+    },
+    {
+      "repo": "SJTU-IPADS/SkVM",
+      "url": "https://github.com/SJTU-IPADS/SkVM",
+      "stars": "480",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "skill",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 86 commits, MIT license, TypeScript primary language, SkVM profiling/AOT/JIT/benchmark flow, OpenClaw/Hermes/pi skill install paths, 480 stars and 41 forks",
+      "description": "SkVM 是面向 agent skills 的语言虚拟机，把技能编译、优化并运行到不同模型和 harness 上，使 skill 在 OpenClaw、Hermes、pi Agent 等环境里可迁移和可评测。"
     },
     {
       "repo": "skills-mcp/skills-mcp",
@@ -4112,6 +4967,21 @@
       "description": "Optimize prompts, code, and more with AI-powered Reflective Text Evolution"
     },
     {
+      "repo": "sudokrang/aceforge",
+      "url": "https://github.com/sudokrang/aceforge",
+      "stars": "1",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "evolution",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed OpenClaw skill engine README, plugin manifest, validation/security sections",
+      "description": "OpenClaw agent 的自进化技能引擎，观察工具调用、失败和用户修正，把模式提炼为可审计、人工批准的 SKILL.md。"
+    },
+    {
       "repo": "sunitj/colloquip",
       "url": "https://github.com/sunitj/colloquip",
       "stars": "1",
@@ -4140,6 +5010,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "[ICML-2026] Official implementation of \"SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience\""
+    },
+    {
+      "repo": "swarmclawai/swarmclaw",
+      "url": "https://github.com/swarmclawai/swarmclaw",
+      "stars": "518",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 488 commits, MIT license, TypeScript primary language, agent memory/MCP/schedules/delegation runtime, 197 releases with 1.9.35 latest on 2026-05-20, 518 stars and 103 forks",
+      "description": "swarmclaw 是 self-hosted agent runtime 与多代理框架，覆盖 agent memory、MCP tools、schedule、delegation、SwarmDock/SwarmFeed/SwarmVault 和 23+ LLM provider。"
     },
     {
       "repo": "swe-agent/swe-agent",
@@ -4232,6 +5117,36 @@
       "description": "Research works from Tencent AI Lab regarding self-evolving agents"
     },
     {
+      "repo": "terryfyl/openclaw-evolution-framework",
+      "url": "https://github.com/TerryFYL/openclaw-evolution-framework",
+      "stars": "4",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evolution",
+      "stack": "Markdown",
+      "time_slice": "2026-02",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 1 commit, MIT license, OpenClaw cron evolution flow, 59 overnight exploration rounds claim, v1.0.0 latest on 2026-02-28, 4 stars and 0 forks",
+      "description": "OpenClaw Evolution Framework 用 cron 触发、自选主题轮转、markdown insight 输出、HITL checkpoint 和 self-trigger next round 组成 OpenClaw agent 的连续学习实验框架。"
+    },
+    {
+      "repo": "TheQtCompanyRnD/agent-skills",
+      "url": "https://github.com/TheQtCompanyRnD/agent-skills",
+      "stars": "171",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Python/C++/HTML",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 27 commits, BSD-3-Clause license, Python/C++/HTML stack, Qt C++ and QML review skills, Codex/Claude/Gemini/Copilot install paths, 171 stars and 16 forks",
+      "description": "Qt AI Skills 是 Qt 官方工程技能包，把 Qt C++/QML review、deterministic rules、parallel deep-analysis agents 和跨 Codex/Claude/Gemini/Copilot 安装路径放在同一仓库。"
+    },
+    {
       "repo": "thesdes/textgrad",
       "url": "https://github.com/thesdes/textgrad",
       "stars": "0",
@@ -4322,6 +5237,36 @@
       "description": "OpenResearcher: A Fully Open Pipeline for Long-Horizon Deep Research Trajectory Synthesis"
     },
     {
+      "repo": "TiMEM-AI/timem",
+      "url": "https://github.com/TiMEM-AI/timem",
+      "stars": "134",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed Temporal Memory Tree README and memory service directories",
+      "description": "Temporal-Hierarchical Memory Consolidation 项目，用五层 Temporal Memory Tree 组织长程对话记忆并支持云服务与自托管部署。"
+    },
+    {
+      "repo": "tinyhumansai/openhuman",
+      "url": "https://github.com/tinyhumansai/openhuman",
+      "stars": "25100",
+      "prior_category": "-",
+      "final_category": "应用/application",
+      "function_tag": "application-demo",
+      "base_theme": "memory",
+      "stack": "Rust",
+      "evidence": "application/personal-agent memory signal; local raw capture promoted from project supplement",
+      "description": "UI-first personal AI super intelligence with local memory, wiki, integrations, tools, and token compression.",
+      "prior_unclassified": "true",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-21"
+    },
+    {
       "repo": "tmgthb/autonomous-agents",
       "url": "https://github.com/tmgthb/autonomous-agents",
       "stars": "1",
@@ -4335,6 +5280,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "Autonomous Agents (LLMs) research papers. Updated Daily."
+    },
+    {
+      "repo": "trillskillz/clawdmarket",
+      "url": "https://github.com/trillskillz/clawdmarket",
+      "stars": "2",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "应用/application",
+      "function_tag": "application-demo",
+      "base_theme": "evolution",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 457 commits, MIT license, TypeScript/Next.js app, Karpathy loop self-improvement, MPP/x402/A2A marketplace contracts, 2 stars and 0 forks",
+      "description": "ClawdMarket 是 agent-to-agent marketplace，把机器支付、A2A messaging、public proof、seller benchmark 和 Karpathy-style recursive self-improvement loop 放进同一个生产系统叙事。"
     },
     {
       "repo": "tsinghua-fib-lab/awesome-ai-scientists",
@@ -4455,6 +5415,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "framework/runtime/orchestration signal",
       "description": "Emergent multi-agent intelligence — AI agents collaborate via a shared knowledge graph, discovering tensions and synthesizing theses without a central orchestrator."
+    },
+    {
+      "repo": "vectorize-io/agent-memory-benchmark",
+      "url": "https://github.com/vectorize-io/agent-memory-benchmark",
+      "stars": "43",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 29 commits, Python/Vue stack, benchmark topics, reproducibility claims, uv CLI commands, 43 stars and 15 forks",
+      "description": "AMB 是面向 agent memory 的公开 benchmark，强调可复现的评测 harness、judge prompts、answer prompts 和结果，并同时跟踪 accuracy、speed、token cost。"
     },
     {
       "repo": "ventr1c/memma",
@@ -4593,18 +5568,18 @@
     },
     {
       "repo": "voltagent/awesome-agent-skills",
-      "url": "https://github.com/voltagent/awesome-agent-skills",
-      "stars": "22",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "stars": "22900",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "教程/tutorial",
       "function_tag": "resource-index",
-      "base_theme": "education-list",
-      "stack": "Unknown",
-      "time_slice": "unknown",
-      "content_timestamp": "unknown",
-      "evidence": "awesome/list/tutorial/survey resource signal",
-      "description": "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more."
+      "base_theme": "skill",
+      "stack": "Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "existing raw capture promoted; web GitHub page observed 350 commits, MIT license, official/community Agent Skills index, Claude Code/Codex/Gemini/Cursor/GitHub Copilot compatibility, 22.9k stars and 2.4k forks",
+      "description": "VoltAgent awesome-agent-skills 是跨 Claude Code、Codex、Gemini CLI、Cursor、GitHub Copilot、OpenCode 等 agent 的官方与社区技能索引，重点筛选真实团队使用的 Agent Skills。"
     },
     {
       "repo": "vsonicv/es-fine-tuning-paper",
@@ -4787,6 +5762,21 @@
       "description": "[NeurIPS 2025] WorldMem: Long-term Consistent World Simulation with Memory"
     },
     {
+      "repo": "xlang-ai/OSWorld",
+      "url": "https://github.com/xlang-ai/OSWorld",
+      "stars": "2900",
+      "prior_category": "-",
+      "prior_unclassified": "false",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed README, 1,444 commits, Apache-2.0 license, 2.9k stars, 463 forks, project page/paper/data links, and OSWorld-Verified update signals",
+      "description": "OSWorld 是 NeurIPS 2024 的真实计算机环境 multimodal agent benchmark，提供桌面环境、数据、运行脚本和 OSWorld-Verified 更新，用于衡量 CUA/GUI agent 能力。"
+    },
+    {
       "repo": "xmudeeplit/awesome-self-evolving-agents",
       "url": "https://github.com/xmudeeplit/awesome-self-evolving-agents",
       "stars": "181",
@@ -4875,6 +5865,21 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "Related papers for reinforcement learning, including classic papers and latest papers in top conferences"
+    },
+    {
+      "repo": "ynulihao/AgentSkillOS",
+      "url": "https://github.com/ynulihao/AgentSkillOS",
+      "stars": "415",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "HTML/Python/JavaScript/TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 14 commits, MIT license, HTML/Python stack, 415 stars and 49 forks; README states 200,000+ skills, retrieval and orchestration, March 2026 benchmark with 30 multi-format creative tasks across 5 categories, and modular architecture",
+      "description": "AgentSkillOS 把 200,000+ public skills 做成检索、组合和编排系统，并提供 30 个多格式 creative tasks 的 benchmark。"
     },
     {
       "repo": "yologdev/yoyo-evolve",
@@ -5115,6 +6120,21 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "🤖 A curated list of AI Agent frameworks, tools, platforms, and resources for 2026 — the year agents went mainstream"
+    },
+    {
+      "repo": "zilliztech/memsearch",
+      "url": "https://github.com/zilliztech/memsearch",
+      "stars": "1800",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 352 commits, MIT license, Python primary language, Markdown/Milvus memory layer, Claude Code/OpenClaw/OpenCode/Codex plugins, v0.4.4 latest on 2026-05-21, 1.8k stars and 169 forks",
+      "description": "memsearch 是给 Claude Code、Codex、OpenClaw、OpenCode 等代理使用的 Markdown + Milvus 统一记忆层，支持索引、搜索、watch、compact 和平台插件。"
     },
     {
       "repo": "zixuanfeng-nyu/textgrad",

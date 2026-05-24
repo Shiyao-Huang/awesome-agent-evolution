@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/crewAIInc AI agent OR agents",
+  "search_rank": 3,
+  "name": "Check out our latest insights on AI Agents in prod.",
+  "url": "https://x.com/crewAIInc/status/1869089014558642502",
+  "snippet": "Check out our latest insights on AI Agents in prod. João Moura profile. João Moura. ✓. joaomdmoura. Dec 17. AI Agents In Production! insights.crewai.com",
+  "id": 428,
+  "platform": "X/Twitter",
+  "content": "Check out our latest insights on AI Agents in prod. João Moura profile. João Moura. ✓. joaomdmoura. Dec 17. AI Agents In Production! insights.crewai.com",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

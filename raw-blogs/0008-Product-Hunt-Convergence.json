@@ -1,0 +1,35 @@
+{
+  "id": 8,
+  "name": "Convergence",
+  "url": "https://www.producthunt.com/products/convergence-3",
+  "platform": "Product Hunt",
+  "source_type": "product_discovery",
+  "category": "agent_workflow_automation",
+  "source_dataset": "rank-platforms-product-discovery-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "extract failed: HTTP 403: 403 Forbidden\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Tanmay Jain ## What isConvergence? At Convergence, our mission is to build a future of abundance for all of humanity. We are developing the first generation of truly general agents that can pick up any skill by actively working and learning from experience. ### Do you use Convergence? I use thisI use something else Convergence gallery image Web browsers•LLMs•AI Chatbots ## RecentConvergenceLaunches Proxy DeepWork Proxy DeepWorkAutomate Complex Workflows with AI Agents Launched onMarch 14th, 2025 Your AI Assistant that actually gets things done Meet Proxy - the AI assistant that gets things done. While others just chat, Proxy executes tasks ac",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "Product Hunt maker/team",
+    "title_position_company": "Product launch team",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.producthunt.com",
+    "domains_expertise": "agent, workflow",
+    "representative_works": [
+      "Convergence"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "product_team_or_maker",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

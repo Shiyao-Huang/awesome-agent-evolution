@@ -1,0 +1,73 @@
+# Agentic AI Tutorial: Step-by-Step Guide to Building Autonomous ...
+
+- URL: https://news.ycombinator.com/item?id=47121471
+- Platform: Hacker News
+- Extraction status: ok
+- content_timestamp: Chapter 4 is now complete and live in the repo!This chapter dives into LangGraph for real agent orchestration:
+- Build ReAct-style agents with tool calling
+- Visualize graphs (nodes/edges/conditional routing) using Graphviz – super visual and satisfying
+- Handle state updates live, multi-agent collaboration patterns, self-refinement loops
+- Full executed notebook showing a simple agent reasoning through queries (e
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+- Query: site:news.ycombinator.com/item "agentic AI"
+
+## Raw Content
+
+## Agentic AI Tutorial: Step-by-Step Guide to Building Autonomous Agents (GitHub) | Hacker News
+
+**Source**: https://news.ycombinator.com/item?id=47121471
+
+---
+
+| Hacker Newsnew | past | comments | ask | show | jobs | submitlogin |  | Hacker Newsnew | past | comments | ask | show | jobs | submit | login |  |  |  |  |  |  |  |  |  |  |  |  |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|  | Hacker Newsnew | past | comments | ask | show | jobs | submit | login |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Agentic AI Tutorial: Step-by-Step Guide to Building Autonomous Agents (GitHub) (github.com/zkzkgamal)1 point by Zakaria_Gamal 86 days ago  | hide | past | favorite | 2 comments
+Zakaria_Gamal 85 days ago  | next [–]
+Update: Chapter 4 is now complete and live in the repo!This chapter dives into LangGraph for real agent orchestration:
+- Build ReAct-style agents with tool calling
+- Visualize graphs (nodes/edges/conditional routing) using Graphviz – super visual and satisfying
+- Handle state updates live, multi-agent collaboration patterns, self-refinement loops
+- Full executed notebook showing a simple agent reasoning through queries (e.g., math tools, search integration)All local-first with Ollama, plus OpenAI/Gemini support.Repo: https://github.com/zkzkGamal/Agentic-AI-Tutorial (Chapter4 folder has the notebook + code)Chapter 5 (Personal Finance Tracker Agent with FastAPI + ChromaDB RAG) is next and almost ready.Feedback super welcome – especially on the LangGraph patterns or what real-world agents you'd like to see built!Thanks for any upvotes/comments – still early days :)Zakaria_Gamal 86 days ago  | prev [–]
+Hi HN, sharing my open-source tutorial on Agentic AI. It walks through creating intelligent agents that can reason, plan, and act— with practical code examples in Python. Aimed at devs interested in the next wave of AI beyond basic LLMs. Questions or suggestions welcome! |  |  | Agentic AI Tutorial: Step-by-Step Guide to Building Autonomous Agents (GitHub) (github.com/zkzkgamal) |  | 1 point by Zakaria_Gamal 86 days ago  | hide | past | favorite | 2 comments |  |  | Zakaria_Gamal 85 days ago  | next [–]
+Update: Chapter 4 is now complete and live in the repo!This chapter dives into LangGraph for real agent orchestration:
+- Build ReAct-style agents with tool calling
+- Visualize graphs (nodes/edges/conditional routing) using Graphviz – super visual and satisfying
+- Handle state updates live, multi-agent collaboration patterns, self-refinement loops
+- Full executed notebook showing a simple agent reasoning through queries (e.g., math tools, search integration)All local-first with Ollama, plus OpenAI/Gemini support.Repo: https://github.com/zkzkGamal/Agentic-AI-Tutorial (Chapter4 folder has the notebook + code)Chapter 5 (Personal Finance Tracker Agent with FastAPI + ChromaDB RAG) is next and almost ready.Feedback super welcome – especially on the LangGraph patterns or what real-world agents you'd like to see built!Thanks for any upvotes/comments – still early days :) |  |  | Zakaria_Gamal 85 days ago  | next [–]
+Update: Chapter 4 is now complete and live in the repo!This chapter dives into LangGraph for real agent orchestration:
+- Build ReAct-style agents with tool calling
+- Visualize graphs (nodes/edges/conditional routing) using Graphviz – super visual and satisfying
+- Handle state updates live, multi-agent collaboration patterns, self-refinement loops
+- Full executed notebook showing a simple agent reasoning through queries (e.g., math tools, search integration)All local-first with Ollama, plus OpenAI/Gemini support.Repo: https://github.com/zkzkGamal/Agentic-AI-Tutorial (Chapter4 folder has the notebook + code)Chapter 5 (Personal Finance Tracker Agent with FastAPI + ChromaDB RAG) is next and almost ready.Feedback super welcome – especially on the LangGraph patterns or what real-world agents you'd like to see built!Thanks for any upvotes/comments – still early days :) | Zakaria_Gamal 86 days ago  | prev [–]
+Hi HN, sharing my open-source tutorial on Agentic AI. It walks through creating intelligent agents that can reason, plan, and act— with practical code examples in Python. Aimed at devs interested in the next wave of AI beyond basic LLMs. Questions or suggestions welcome! |  |  | Zakaria_Gamal 86 days ago  | prev [–]
+Hi HN, sharing my open-source tutorial on Agentic AI. It walks through creating intelligent agents that can reason, plan, and act— with practical code examples in Python. Aimed at devs interested in the next wave of AI beyond basic LLMs. Questions or suggestions welcome! |
+|  |  | Agentic AI Tutorial: Step-by-Step Guide to Building Autonomous Agents (GitHub) (github.com/zkzkgamal) |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|  | 1 point by Zakaria_Gamal 86 days ago  | hide | past | favorite | 2 comments |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Zakaria_Gamal 85 days ago  | next [–]
+Update: Chapter 4 is now complete and live in the repo!This chapter dives into LangGraph for real agent orchestration:
+- Build ReAct-style agents with tool calling
+- Visualize graphs (nodes/edges/conditional routing) using Graphviz – super visual and satisfying
+- Handle state updates live, multi-agent collaboration patterns, self-refinement loops
+- Full executed notebook showing a simple agent reasoning through queries (e.g., math tools, search integration)All local-first with Ollama, plus OpenAI/Gemini support.Repo: https://github.com/zkzkGamal/Agentic-AI-Tutorial (Chapter4 folder has the notebook + code)Chapter 5 (Personal Finance Tracker Agent with FastAPI + ChromaDB RAG) is next and almost ready.Feedback super welcome – especially on the LangGraph patterns or what real-world agents you'd like to see built!Thanks for any upvotes/comments – still early days :) |  |  | Zakaria_Gamal 85 days ago  | next [–]
+Update: Chapter 4 is now complete and live in the repo!This chapter dives into LangGraph for real agent orchestration:
+- Build ReAct-style agents with tool calling
+- Visualize graphs (nodes/edges/conditional routing) using Graphviz – super visual and satisfying
+- Handle state updates live, multi-agent collaboration patterns, self-refinement loops
+- Full executed notebook showing a simple agent reasoning through queries (e.g., math tools, search integration)All local-first with Ollama, plus OpenAI/Gemini support.Repo: https://github.com/zkzkGamal/Agentic-AI-Tutorial (Chapter4 folder has the notebook + code)Chapter 5 (Personal Finance Tracker Agent with FastAPI + ChromaDB RAG) is next and almost ready.Feedback super welcome – especially on the LangGraph patterns or what real-world agents you'd like to see built!Thanks for any upvotes/comments – still early days :) |  |  |  |  |  |  |  |  |  |  |  |  |
+|  |  | Zakaria_Gamal 85 days ago  | next [–]
+Update: Chapter 4 is now complete and live in the repo!This chapter dives into LangGraph for real agent orchestration:
+- Build ReAct-style agents with tool calling
+- Visualize graphs (nodes/edges/conditional routing) using Graphviz – super visual and satisfying
+- Handle state updates live, multi-agent collaboration patterns, self-refinement loops
+- Full executed notebook showing a simple agent reasoning through queries (e.g., math tools, search integration)All local-first with Ollama, plus OpenAI/Gemini support.Repo: https://github.com/zkzkGamal/Agentic-AI-Tutorial (Chapter4 folder has the notebook + code)Chapter 5 (Personal Finance Tracker Agent with FastAPI + ChromaDB RAG) is next and almost ready.Feedback super welcome – especially on the LangGraph patterns or what real-world agents you'd like to see built!Thanks for any upvotes/comments – still early days :) |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Zakaria_Gamal 86 days ago  | prev [–]
+Hi HN, sharing my open-source tutorial on Agentic AI. It walks through creating intelligent agents that can reason, plan, and act— with practical code examples in Python. Aimed at devs interested in the next wave of AI beyond basic LLMs. Questions or suggestions welcome! |  |  | Zakaria_Gamal 86 days ago  | prev [–]
+Hi HN, sharing my open-source tutorial on Agentic AI. It walks through creating intelligent agents that can reason, plan, and act— with practical code examples in Python. Aimed at devs interested in the next wave of AI beyond basic LLMs. Questions or suggestions welcome! |  |  |  |  |  |  |  |  |  |  |  |  |
+|  |  | Zakaria_Gamal 86 days ago  | prev [–]
+Hi HN, sharing my open-source tutorial on Agentic AI. It walks through creating intelligent agents that can reason, plan, and act— with practical code examples in Python. Aimed at devs interested in the next wave of AI beyond basic LLMs. Questions or suggestions welcome! |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact
+Search: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |

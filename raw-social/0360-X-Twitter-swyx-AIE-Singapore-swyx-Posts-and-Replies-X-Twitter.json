@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/swyx AI agent OR agents",
+  "search_rank": 5,
+  "name": "swyx AIE Singapore! (@swyx) / Posts and Replies / X - Twitter",
+  "url": "https://x.com/swyx/with_replies",
+  "snippet": "MagicPath is now a multiplayer canvas for humans and agents like Codex or Claude Code to design and build with AI. Use your codebase, grab data from ...",
+  "id": 360,
+  "platform": "X/Twitter",
+  "content": "MagicPath is now a multiplayer canvas for humans and agents like Codex or Claude Code to design and build with AI. Use your codebase, grab data from ...",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

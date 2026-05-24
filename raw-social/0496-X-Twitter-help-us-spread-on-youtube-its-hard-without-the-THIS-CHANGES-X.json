@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/latentspacepod AI agent OR agents",
+  "search_rank": 2,
+  "name": "help us spread on youtube ! its hard without the THIS CHANGES ... - X",
+  "url": "https://twitter.com/latentspacepod/status/1929605211544539186",
+  "snippet": "I didn't expect it to be this good. Practical insights esp for people building AI-Agent companies. Cool stuff gotta check @latentspacepod guys more.",
+  "id": 496,
+  "platform": "X/Twitter",
+  "content": "I didn't expect it to be this good. Practical insights esp for people building AI-Agent companies. Cool stuff gotta check @latentspacepod guys more.",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

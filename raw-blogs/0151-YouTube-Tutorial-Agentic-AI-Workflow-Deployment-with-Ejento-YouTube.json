@@ -1,0 +1,35 @@
+{
+  "id": 151,
+  "name": "Tutorial: Agentic AI Workflow Deployment with Ejento - YouTube",
+  "url": "https://www.youtube.com/watch?v=5SbLJNVuqR0",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=5SbLJNVuqR0\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Tutorial: Agentic AI Workflow Deployment with Ejento | Future of Data and AI | Agentic AI Conference The tutorial, led by Raja Iqbal - Founder of Ejento, walks through the complete lifecycle of building an agentic AI system - from initial setup and tool integration with MCP, to applying the workflow in real-world use cases like proposal generation and HubSpot deal data analysis. Attendees will see how to iterate and refine outputs, showcasing the practical value of deploying a robust, end-to-end agentic AI workflow in enterprise settings. and deploy it end to end. So that is uh what we are going to talk about. Um so u I have not done my formal introduction uh so far right. So I am um I've been doing AI for quite some time. Um I am also teaching uh at the University of Pittsburgh. I'm a part-time faculty member at University of Pittsburgh. um recently built uh um an agent platform called ",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, MCP, workflow",
+    "representative_works": [
+      "Tutorial: Agentic AI Workflow Deployment with Ejento - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

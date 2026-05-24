@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/sama AI agent OR agents",
+  "search_rank": 8,
+  "name": "it is amazing and exciting how much software one person is going to ...",
+  "url": "https://x.com/sama/status/1923399498019021298",
+  "snippet": "We are introducing codex. It is a software engineering agent that runs in the cloud and does tasks for you, like writing a new feature of fixing a bug. date: May 16, 2025",
+  "id": 383,
+  "platform": "X/Twitter",
+  "content": "We are introducing codex. It is a software engineering agent that runs in the cloud and does tasks for you, like writing a new feature of fixing a bug. date: May 16, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "May 16, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

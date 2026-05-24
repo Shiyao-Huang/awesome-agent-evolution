@@ -1,0 +1,35 @@
+{
+  "id": 135,
+  "name": "OpenAI President Greg Brockman: AI Self-Improvement ... - YouTube",
+  "url": "https://www.youtube.com/watch?v=J6vYvk7R190",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=J6vYvk7R190\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "- 3 Already Happened? - 38:45 The Really Took Off - 42:19 The Vision for AI Agents Running Your Life - 55:1 starting is with app today is something which is a it two things in one. It s a general that can use tools and it's also a agent that knows how to write you're not there yet. I think I think that I'd m I'm I'm basically like 70 80% there. So I quite close. are going to do that and almost there and >> You had a pretty interesting quote about this recently uh talking about getting these autonomous AI agents to work on your behalf. you said um you become when you do it, you become this CEO of a fleet of hundreds of thousands of agents that are completing your objectives, your goals, your vision, and you're not in the wheat on exactly how different things are solved. And in some ways, this new way of work can make you feel like you're losing your pulse on the problem. Is that good? I t",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent",
+    "representative_works": [
+      "OpenAI President Greg Brockman: AI Self-Improvement ... - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/AndrewYNg AI agent OR agents",
+  "search_rank": 6,
+  "name": "Should there be a Stack Overflow for AI coding agents to share ...",
+  "url": "https://x.com/AndrewYNg/status/2033577583200354812",
+  "snippet": "OpenClaw and Moltbook showed that agents can use social media built for them to share information. In our new chub release, agents can share ... date: Mar 16, 2026",
+  "id": 391,
+  "platform": "X/Twitter",
+  "content": "OpenClaw and Moltbook showed that agents can use social media built for them to share information. In our new chub release, agents can share ... date: Mar 16, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Mar 16, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

@@ -1,0 +1,37 @@
+{
+  "collected_at": "2026-05-21T22:23:52+08:00",
+  "candidate_count": 21,
+  "written_count": 11,
+  "skipped_existing_count": 10,
+  "error_count": 0,
+  "written_files": [
+    "raw-social/supplement/0613-Reddit-Auto-creation-of-agent-SKILLs-from-observing-your-screen-via-Gemma-4-for-any-agent-to-exec.json",
+    "raw-social/supplement/0614-Reddit-Hermes-Agent-memory-learning-I-don-t-get-it.json",
+    "raw-social/supplement/0615-Reddit-What-s-the-best-way-to-sandbox-or-isolate-agent-skills.json",
+    "raw-social/supplement/0616-Reddit-My-local-self-improving-agent-swarm-corrupted-its-own-code-and-that-failure-led-to-the-bre.json",
+    "raw-social/supplement/0617-Reddit-microagents-Modular-Agents-Capable-of-Self-Editing-Their-Prompts-and-Python-code.json",
+    "raw-social/supplement/0618-Reddit-Okay-guys-I-finally-made-a-framework-that-can-rewrite-itself-Thus-it-can-be-called-self-im.json",
+    "raw-social/supplement/0619-Reddit-Examples-of-best-production-grade-agents.json",
+    "raw-social/supplement/0620-Reddit-Anyone-Using-Langchai-Agents-in-production.json",
+    "raw-social/supplement/0621-Reddit-How-are-you-deploying-your-agents-in-production.json",
+    "raw-social/supplement/0622-Reddit-How-are-you-preventing-runaway-AI-agent-behavior-in-production.json",
+    "raw-social/supplement/0623-Reddit-Developers-Play-A-R-S-E-Reddit-for-Developers.json"
+  ],
+  "skipped_existing": [
+    "https://news.ycombinator.com/item?id=46450307",
+    "https://news.ycombinator.com/item?id=45808308",
+    "https://news.ycombinator.com/item?id=47301395",
+    "https://news.ycombinator.com/item?id=45802430",
+    "https://news.ycombinator.com/item?id=42485738",
+    "https://news.ycombinator.com/item?id=45456381",
+    "https://news.ycombinator.com/item?id=44712315",
+    "https://news.ycombinator.com/item?id=43708129",
+    "https://news.ycombinator.com/item?id=40739982",
+    "https://news.ycombinator.com/item?id=45502646"
+  ],
+  "errors": [],
+  "content_timestamp": "unknown",
+  "time_slice": "unknown",
+  "extraction_status": "metadata_report",
+  "platform": "internal-validation"
+}

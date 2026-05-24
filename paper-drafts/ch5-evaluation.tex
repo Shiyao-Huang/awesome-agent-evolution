@@ -124,26 +124,16 @@ ReVeal & LiveCodeBench pass@1 & Turn 1: 36.9 & Turn 19: 42.4 & +5.5 pp over infe
 
 \begin{figure}[t]
 \centering
-\begin{tikzpicture}
-\begin{axis}[
-    ybar,
-    width=0.96\linewidth,
-    height=6.2cm,
-    ylabel={Score (\%)},
-    symbolic x coords={SelfEvolve DS1000,DGM SWE,DGM Polyglot,ReVeal LCB},
-    xtick=data,
-    x tick label style={rotate=25,anchor=east,font=\footnotesize},
-    ymin=0,
-    ymax=65,
-    legend style={at={(0.5,1.05)},anchor=south,legend columns=2},
-    nodes near coords,
-    nodes near coords style={font=\scriptsize},
-]
-\addplot coordinates {(SelfEvolve DS1000,49.4) (DGM SWE,20.0) (DGM Polyglot,14.2) (ReVeal LCB,36.9)};
-\addplot coordinates {(SelfEvolve DS1000,57.2) (DGM SWE,50.0) (DGM Polyglot,30.7) (ReVeal LCB,42.4)};
-\legend{Baseline,Self-evolved}
-\end{axis}
-\end{tikzpicture}
+\begin{tabular}{lrrr}
+\toprule
+Benchmark slice & Baseline & Self-evolved & Gain \\
+\midrule
+SelfEvolve DS1000 & 49.4 & 57.2 & +7.8 pp \\
+DGM SWE-bench verified & 20.0 & 50.0 & +30.0 pp \\
+DGM Polyglot & 14.2 & 30.7 & +16.5 pp \\
+ReVeal LiveCodeBench & 36.9 & 42.4 & +5.5 pp \\
+\bottomrule
+\end{tabular}
 \caption{Representative code benchmark gains. The figure intentionally mixes benchmark families only to visualize gain magnitudes; the underlying tasks are not directly comparable.}
 \label{fig:code-gains}
 \end{figure}
@@ -326,23 +316,16 @@ Here $S_{activity}$ measures the share of recent active stargazers, $C_{diversit
 
 \begin{figure}[t]
 \centering
-\begin{tikzpicture}
-\begin{axis}[
-    ybar,
-    width=\linewidth,
-    height=7cm,
-    ylabel={Composite quality score},
-    symbolic x coords={OpenEvolve,DSPy,SWE-Agent,OpenHands,LangGraph,AutoGen,FunSearch,CrewAI,Reflexion,MetaGPT,AutoGPT,Devika},
-    xtick=data,
-    x tick label style={rotate=45,anchor=east,font=\scriptsize},
-    ymin=0,
-    ymax=80,
-    nodes near coords,
-    nodes near coords style={font=\tiny},
-]
-\addplot coordinates {(OpenEvolve,74) (DSPy,73) (SWE-Agent,70) (OpenHands,68) (LangGraph,67) (AutoGen,66) (FunSearch,62) (CrewAI,62) (Reflexion,58) (MetaGPT,56) (AutoGPT,28) (Devika,30)};
-\end{axis}
-\end{tikzpicture}
+\begin{tabular}{lr@{\quad}lr@{\quad}lr}
+\toprule
+Project & Score & Project & Score & Project & Score \\
+\midrule
+OpenEvolve & 74 & DSPy & 73 & SWE-Agent & 70 \\
+OpenHands & 68 & LangGraph & 67 & AutoGen & 66 \\
+FunSearch & 62 & CrewAI & 62 & Reflexion & 58 \\
+MetaGPT & 56 & AutoGPT & 28 & Devika & 30 \\
+\bottomrule
+\end{tabular}
 \caption{Composite star-quality ranking. The figure shows that raw popularity and ecosystem quality can diverge sharply.}
 \label{fig:star-quality}
 \end{figure}

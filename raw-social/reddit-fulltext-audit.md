@@ -1,0 +1,73 @@
+# Reddit Fulltext Extraction Audit
+
+- generated_at: 2026-05-22T01:47:21+08:00
+- source_file: `raw-social/reddit-posts.md`
+- source_sha256: `dc0148f3e545a5b1d293b6013e471759d76f55cd358b1b587f83b79b9359df21`
+- post_count: 55
+- nonempty_fulltext_count: 55
+- subreddits: AIEval, AIQuality, AISEOInsider, AI_Agents, AgentsOfAI, ArtificialInteligence, ClaudeAI, ClaudeCode, LangChain, LocalLLaMA, MachineLearning, PromptEngineering, SideProject, agi, aiagents, automation, hackernews, n8n, reinforcementlearning, selfhosted, singularity
+
+## Posts
+- `reddit_fulltext_001` r/AIEval — Top Agent Evaluation Platforms 2026: The Market Leading Platforms I Tested (7511 chars, https://old.reddit.com/r/AIEval/comments/1rm6ns3/top_agent_evaluation_platforms_2026_the_market/)
+- `reddit_fulltext_002` r/AIQuality — Self-Evolving AI Agents (754 chars, https://old.reddit.com/r/AIQuality/comments/1o3732t/selfevolving_ai_agents/)
+- `reddit_fulltext_003` r/AISEOInsider — Hermes Self Evolving AI Agent Keeps Learning From Your Work (10123 chars, https://old.reddit.com/r/AISEOInsider/comments/1s7ffmr/hermes_self_evolving_ai_agent_keeps_learning_from/)
+- `reddit_fulltext_004` r/AI_Agents — Built a curated directory of 100+ AI agents to help devs &amp; founders find the right tools [Lessons from building] (2601 chars, https://old.reddit.com/r/AI_Agents/comments/1hvq0x2/built_a_curated_directory_of_100_ai_agents_to/)
+- `reddit_fulltext_005` r/AI_Agents — I built a self-improving AI (2816 chars, https://old.reddit.com/r/AI_Agents/comments/1kz3n75/i_built_a_selfimproving_ai/)
+- `reddit_fulltext_006` r/AI_Agents — Who’s using crewAI really? (3479 chars, https://old.reddit.com/r/AI_Agents/comments/1l6rw2n/whos_using_crewai_really/)
+- `reddit_fulltext_007` r/AI_Agents — Self-improving AI agent is a myth (5797 chars, https://old.reddit.com/r/AI_Agents/comments/1nq9gv5/selfimproving_ai_agent_is_a_myth/)
+- `reddit_fulltext_008` r/AI_Agents — Self Evolving AI Agent -- problem .. (2067 chars, https://old.reddit.com/r/AI_Agents/comments/1o64emt/self_evolving_ai_agent_problem/)
+- `reddit_fulltext_009` r/AI_Agents — Any good AI / AI Agents newsletters you recommend? (5150 chars, https://old.reddit.com/r/AI_Agents/comments/1q3i6cq/any_good_ai_ai_agents_newsletters_you_recommend/)
+- `reddit_fulltext_010` r/AI_Agents — My guide on what tools to use to build AI agents in 2026 (if youre a newb) (9173 chars, https://old.reddit.com/r/AI_Agents/comments/1rdf5v7/my_guide_on_what_tools_to_use_to_build_ai_agents/)
+- `reddit_fulltext_011` r/AI_Agents — What is your full AI Agent stack in 2026? (6951 chars, https://old.reddit.com/r/AI_Agents/comments/1rqnv3a/what_is_your_full_ai_agent_stack_in_2026/)
+- `reddit_fulltext_012` r/AI_Agents — I spent months trying to make my agents recursively self-improve so they can run more autonomously. Here's what actually worked (6556 chars, https://old.reddit.com/r/AI_Agents/comments/1s63az9/i_spent_months_trying_to_make_my_agents/)
+- `reddit_fulltext_013` r/AI_Agents — The raise of the self-improving agent (5453 chars, https://old.reddit.com/r/AI_Agents/comments/1sajyzk/the_raise_of_the_selfimproving_agent/)
+- `reddit_fulltext_014` r/AgentsOfAI — I built a self-evolving Multi-Agent system (SYNAPSE) that modifies its own source code. Am I crazy, or is this the future? (3504 chars, https://old.reddit.com/r/AgentsOfAI/comments/1rxr6ga/i_built_a_selfevolving_multiagent_system_synapse/)
+- `reddit_fulltext_015` r/ArtificialInteligence — Agentic Directory - A Curated Collection of Agent-Friendly Apps (2966 chars, https://old.reddit.com/r/ArtificialInteligence/comments/1h6ajx9/agentic_directory_a_curated_collection_of/)
+- `reddit_fulltext_016` r/ArtificialInteligence — AI agent benchmarks obsess over coding while ignoring 92% of the US labor market, study finds (5712 chars, https://old.reddit.com/r/ArtificialInteligence/comments/1roe1bv/ai_agent_benchmarks_obsess_over_coding_while/)
+- `reddit_fulltext_017` r/ClaudeAI — Claude improved my agent harness by 40.7% overnight (5721 chars, https://old.reddit.com/r/ClaudeAI/comments/1t8cn9y/claude_improved_my_agent_harness_by_407_overnight/)
+- `reddit_fulltext_018` r/ClaudeCode — self evolving  agents (1180 chars, https://old.reddit.com/r/ClaudeCode/comments/1py61jr/self_evolving_agents/)
+- `reddit_fulltext_019` r/LangChain — Where can I find people to chat with about langchain / LLM app development? (1536 chars, https://old.reddit.com/r/LangChain/comments/1f3ymw8/where_can_i_find_people_to_chat_with_about/)
+- `reddit_fulltext_020` r/LangChain — Building self-evolving agents? (978 chars, https://old.reddit.com/r/LangChain/comments/1izwi3p/building_selfevolving_agents/)
+- `reddit_fulltext_021` r/LocalLLaMA — Is LLMSYS Chatbot Arena a Reliable Metric for evaluating LLMs? (4167 chars, https://old.reddit.com/r/LocalLLaMA/comments/1dcomxt/is_llmsys_chatbot_arena_a_reliable_metric_for/)
+- `reddit_fulltext_022` r/LocalLLaMA — What leaderboard do you trust for ranking LLMs in coding tasks? (3167 chars, https://old.reddit.com/r/LocalLLaMA/comments/1gve7cw/what_leaderboard_do_you_trust_for_ranking_llms_in/)
+- `reddit_fulltext_023` r/LocalLLaMA — Truly self-evolving AI agent (2749 chars, https://old.reddit.com/r/LocalLLaMA/comments/1k8vy1v/truly_selfevolving_ai_agent/)
+- `reddit_fulltext_024` r/LocalLLaMA — Anyone tried this? - Self improving AI agents (2197 chars, https://old.reddit.com/r/LocalLLaMA/comments/1l1glmq/anyone_tried_this_self_improving_ai_agents/)
+- `reddit_fulltext_025` r/LocalLLaMA — someone built a SELF-EVOLVING AI agent that rewrites its own code, prompts, and identity AUTONOMOUSLY, with having a background consciousness (1741 chars, https://old.reddit.com/r/LocalLLaMA/comments/1re8l13/someone_built_a_selfevolving_ai_agent_that/)
+- `reddit_fulltext_026` r/MachineLearning — [R] Reflexion: an autonomous agent with dynamic memory and self-reflection - Noah Shinn et al 2023 Northeastern University Boston - Outperforms GPT-4 on HumanEval accuracy (0.67 --&gt; 0.88)! (4979 chars, https://old.reddit.com/r/MachineLearning/comments/1215dbl/r_reflexion_an_autonomous_agent_with_dynamic/)
+- `reddit_fulltext_027` r/MachineLearning — Approaches to add logical reasoning into LLMs [D] (4040 chars, https://old.reddit.com/r/MachineLearning/comments/123nczy/approaches_to_add_logical_reasoning_into_llms_d/)
+- `reddit_fulltext_028` r/MachineLearning — [Discussion] How do I go from being a novice to building LLM agents for production? (4977 chars, https://old.reddit.com/r/MachineLearning/comments/18ghvax/discussion_how_do_i_go_from_being_a_novice_to/)
+- `reddit_fulltext_029` r/MachineLearning — [D] Microsoft Research's EvoPrompt – Evolutionary Algorithms Meets Prompt Engineering (3533 chars, https://old.reddit.com/r/MachineLearning/comments/1aji7np/d_microsoft_researchs_evoprompt_evolutionary/)
+- `reddit_fulltext_030` r/MachineLearning — [D] concerns about the series of works in reflexion(self-adjustment)-powered LLM agent (2360 chars, https://old.reddit.com/r/MachineLearning/comments/1am3ior/d_concerns_about_the_series_of_works_in/)
+- `reddit_fulltext_031` r/MachineLearning — [D] AI Agents: too early, too expensive, too unreliable (9206 chars, https://old.reddit.com/r/MachineLearning/comments/1cy1kn9/d_ai_agents_too_early_too_expensive_too_unreliable/)
+- `reddit_fulltext_032` r/MachineLearning — [D] How far can you push self-improving LLM systems? (4261 chars, https://old.reddit.com/r/MachineLearning/comments/1diszz1/d_how_far_can_you_push_selfimproving_llm_systems/)
+- `reddit_fulltext_033` r/MachineLearning — [Discussion]  Agentic AI: Yet another hyped interface or a paradigm shift? (4165 chars, https://old.reddit.com/r/MachineLearning/comments/1htbe7x/discussion_agentic_ai_yet_another_hyped_interface/)
+- `reddit_fulltext_034` r/MachineLearning — [N] RAGSys: Real-Time Self-Improvement for LLMs Without Retraining (2362 chars, https://old.reddit.com/r/MachineLearning/comments/1iyszck/n_ragsys_realtime_selfimprovement_for_llms/)
+- `reddit_fulltext_035` r/MachineLearning — [Discussion] Is the future of coding agents self-learning LLMs using KGs to shape their reward functions? (2999 chars, https://old.reddit.com/r/MachineLearning/comments/1k6ra2p/discussion_is_the_future_of_coding_agents/)
+- `reddit_fulltext_036` r/MachineLearning — [P] OpenEvolve: Open Source Implementation of DeepMind's AlphaEvolve System (6389 chars, https://old.reddit.com/r/MachineLearning/comments/1kr9w8l/p_openevolve_open_source_implementation_of/)
+- `reddit_fulltext_037` r/MachineLearning — [R] Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents (1193 chars, https://old.reddit.com/r/MachineLearning/comments/1kyst4a/r_darwin_godel_machine_openended_evolution_of/)
+- `reddit_fulltext_038` r/MachineLearning — [R] Large Language Models Can Self-Improve (3459 chars, https://old.reddit.com/r/MachineLearning/comments/ycipui/r_large_language_models_can_selfimprove/)
+- `reddit_fulltext_039` r/PromptEngineering — Prompt improvement techniques beyond DSPy and TextGrad? (1230 chars, https://old.reddit.com/r/PromptEngineering/comments/1pyc3c0/prompt_improvement_techniques_beyond_dspy_and/)
+- `reddit_fulltext_040` r/SideProject — Built an AI that will create curated newsletters for you - scribeagent.com (1351 chars, https://old.reddit.com/r/SideProject/comments/153kkt8/built_an_ai_that_will_create_curated_newsletters/)
+- `reddit_fulltext_041` r/agi — It's only recursive self-improvement if it's grown in the Récursive region of France. Otherwise it's just sparkling AI feedback loops. (2657 chars, https://old.reddit.com/r/agi/comments/1qbza0w/its_only_recursive_selfimprovement_if_its_grown/)
+- `reddit_fulltext_042` r/agi — someone built a SELF-EVOLVING AI agent that rewrites its own code, prompts, and identity AUTONOMOUSLY, with having a background consciousness (1821 chars, https://old.reddit.com/r/agi/comments/1rfb9ym/someone_built_a_selfevolving_ai_agent_that/)
+- `reddit_fulltext_043` r/aiagents — I built an AI Agent that creates and sends personalized newsletters (2457 chars, https://old.reddit.com/r/aiagents/comments/1k8qah2/i_built_an_ai_agent_that_creates_and_sends/)
+- `reddit_fulltext_044` r/automation — What are the best AI agent builders in 2026? (6142 chars, https://old.reddit.com/r/automation/comments/1rcfjfc/what_are_the_best_ai_agent_builders_in_2026/)
+- `reddit_fulltext_045` r/hackernews — We no longer use LangChain for building our AI agents (152 chars, https://old.reddit.com/r/hackernews/comments/1dkrke8/we_no_longer_use_langchain_for_building_our_ai/)
+- `reddit_fulltext_046` r/n8n — Built an AI agent that auto-posts to X/Twitter every 2 hours - here's how (with RSS feeds) (5816 chars, https://old.reddit.com/r/n8n/comments/1prxv82/built_an_ai_agent_that_autoposts_to_xtwitter/)
+- `reddit_fulltext_047` r/reinforcementlearning — Multi-agent Evolutionary strategies using PyTorch (1224 chars, https://old.reddit.com/r/reinforcementlearning/comments/orqy2q/multiagent_evolutionary_strategies_using_pytorch/)
+- `reddit_fulltext_048` r/selfhosted — Let's get a self-hosted Discord "replacement" thread going for 2026. (3499 chars, https://old.reddit.com/r/selfhosted/comments/1r08bd8/lets_get_a_selfhosted_discord_replacement_thread/)
+- `reddit_fulltext_049` r/singularity — Stack Overflow for AI Agents (3524 chars, https://old.reddit.com/r/singularity/comments/121lug2/stack_overflow_for_ai_agents/)
+- `reddit_fulltext_050` r/singularity — Researchers taught LLM Agents how to recursively self-improve (1613 chars, https://old.reddit.com/r/singularity/comments/1ed6fhk/researchers_taught_llm_agents_how_to_recursively/)
+- `reddit_fulltext_051` r/singularity — When will we get recursive-self-improvement and AI that can create equal or better versions of itself autonomously? (4116 chars, https://old.reddit.com/r/singularity/comments/1kgdho5/when_will_we_get_recursiveselfimprovement_and_ai/)
+- `reddit_fulltext_052` r/singularity — Recursive improvement (5991 chars, https://old.reddit.com/r/singularity/comments/1kozsd4/recursive_improvement/)
+- `reddit_fulltext_053` r/singularity — "Meta sees early signs of self-improving AI" (2356 chars, https://old.reddit.com/r/singularity/comments/1mdlqhi/meta_sees_early_signs_of_selfimproving_ai/)
+- `reddit_fulltext_054` r/singularity — Failed Fetches (2839 chars, https://old.reddit.com/r/singularity/comments/1p5kpfs/agent0_unleashing_selfevolving_agents_from_zero/)
+- `reddit_fulltext_055` r/singularity — Andrew Karpathy’s “autoresearch”: An autonomous loop where AI edits PyTorch, runs 5-min training experiments, and continuously lowers its own val_bpb. "Who knew early singularity could be this fun? :)" (4249 chars, https://old.reddit.com/r/singularity/comments/1roo6v0/andrew_karpathys_autoresearch_an_autonomous_loop/)
+## gBrain Temporal Metadata
+
+- content_timestamp: 2026-05
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: 2026-05
+- timestamp_confidence: derived
+- timestamp_source: extracted from markdown content/metadata
+

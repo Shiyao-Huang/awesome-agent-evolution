@@ -1,0 +1,35 @@
+{
+  "id": 130,
+  "name": "Multi-Agent Systems in OpenAI's Agents SDK | Full Tutorial - YouTube",
+  "url": "https://www.youtube.com/watch?v=2MYzc79Lj04",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=2MYzc79Lj04\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Multi-Agent Systems in OpenAI's Agents SDK | Full Tutorial OpenAI's Agents SDK provides various ways for building multi-agent systems. Here we focus on the agents-as-tools method to build an orchestrator-subagent system. Throughout the video we'll be using OpenAI's new gpt-4.1 and gpt-4.1-mini models while building a full multi-agent workflow capable of searching the web, using internal documents, and executing code. - 00:00 OpenAI's Agents SDK - 01:38 Python Setup - 02:51 Orchestrator Subagent - 05:57 Web Search Subagent - 11:40 RAG Subagent - 17:15 Code Execution Subagent - 23:44 Orchestrator Agent - 28:44 Evaluating our Multi-Agent Workflow - 39:31 Pros and Cons of Orchestrators Today we're going to be taking a look at multi- aent workflows in OpenAI's agents SDK. Now OpenAI's agents SDK is the production version of their earlier open-source package called Swarm. And what Swarm was fo",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, workflow",
+    "representative_works": [
+      "Multi-Agent Systems in OpenAI's Agents SDK | Full Tutorial - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

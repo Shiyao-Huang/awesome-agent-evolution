@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/AnthropicAI AI agent OR agents",
+  "search_rank": 1,
+  "name": "Anthropic (@AnthropicAI) / Posts / X - Twitter",
+  "url": "https://twitter.com/AnthropicAI",
+  "snippet": "We're an AI safety and research company that builds reliable, interpretable, and steerable AI systems. Talk to our AI assistant @claudeai on claude.ai.",
+  "id": 490,
+  "platform": "X/Twitter",
+  "content": "We're an AI safety and research company that builds reliable, interpretable, and steerable AI systems. Talk to our AI assistant @claudeai on claude.ai.",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

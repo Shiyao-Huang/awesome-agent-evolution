@@ -1,0 +1,68 @@
+{
+  "id": 613,
+  "name": "Auto-creation of agent SKILLs from observing your screen via Gemma 4 for any agent to execute and self-improve",
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sey6vv/autocreation_of_agent_skills_from_observing_your/",
+  "platform": "Reddit",
+  "subreddit": "LocalLLaMA",
+  "extraction_status": "ok",
+  "anysearch_extract_status": "failed:extract_upstream_error\nupstream returned error: HTTP 403 403 Forbidden",
+  "content_timestamp": "2026-04-07",
+  "collected_at": "2026-05-21T22:23:52+08:00",
+  "time_slice": "2026-04",
+  "query": "site:reddit.com/r/LocalLLaMA/comments agent self improve",
+  "source": "builder-b-raw-social-supplement-2026-05-21",
+  "score": 239,
+  "num_comments": 53,
+  "author": "Objective_River_5218",
+  "content": "# Auto-creation of agent SKILLs from observing your screen via Gemma 4 for any agent to execute and self-improve\n\nSource: https://www.reddit.com/r/LocalLLaMA/comments/1sey6vv/autocreation_of_agent_skills_from_observing_your/\nSubreddit: r/LocalLLaMA\nAuthor: u/Objective_River_5218\nScore: 239 | Comments: 53\nCreated: 2026-04-07\n\n## Post Body\nAgentHandover is an open-source Mac menu bar app that watches your screen through Gemma 4 (running locally via Ollama) and turns your repeated workflows into structured Skill files that any agent can follow.\n\nI built it because every time I wanted an agent to handle something for me I had to explain the whole process from scratch, even for stuff I do daily. So AgentHandover just watches instead. You can either hit record for a specific task (Focus Record) or let it run in the background where it starts picking up patterns after seeing you repeat something a few times (Passive Discovery).   \nSkills get sharper with every observation, updating steps, guardrails, and confidence scores as it learns more. The whole thing is an 11-stage pipeline running fully on-device, nothing leaves your machine, encrypted at rest. One-click agent integration through MCP so Claude Code, Cursor, OpenClaw or anything that speaks MCP can just pick up your Skills. Also has a CLI if you prefer terminal. \n\nSImple illustrative demo in the video, Apache 2.0, repo: [https://github.com/sandroandric/AgentHandover](https://github.com/sandroandric/AgentHandover)\n\nWould love feedback on the approach and curious if anyone has tried other local vision or OS models for screen understanding...thxxx\n\n## Top Comments\n\n### Comment 1 — u/Business-Weekend-537 (score 14)\nAny plans for support on windows/linux?\n\n### Comment 2 — u/InstaMatic80 (score 12)\nSo, how does it work? It’s taking screenshots every second or so? I guess you need a pretty decent GPU to process it fast enough\n\n### Comment 3 — u/GamerArceus (score 9)\ngreat work dude, this could be big if it actually learns how to do the work like myself - will check it out. Thank you for open-sourcing!!!\n\n### Comment 4 — u/Medical_Farm6787 (score 3)\nRemindMe! 2 weeks\n\n### Comment 5 — u/deejeycris (score 3)\nThat's actually something I hope it would exist one day, not mecessarily to automate but surely to document amd out in a knowledge base at least.\n\n### Comment 6 — u/Objective_River_5218 (score 2)\nIf you like it, pleaser consider supporting me by giving it a star - I would be grateful and motivated :)\n\n### Comment 7 — u/wu4d (score 2)\nGrrat work! hopefuly I find some time this weekend to try it out\n\n### Comment 8 — u/tvmaly (score 2)\nDo you do anything to compress the screenshot size?",
+  "top_comments": [
+    {
+      "author": "Business-Weekend-537",
+      "score": 14,
+      "created_utc": 1775573911.0,
+      "body": "Any plans for support on windows/linux?"
+    },
+    {
+      "author": "InstaMatic80",
+      "score": 12,
+      "created_utc": 1775573888.0,
+      "body": "So, how does it work? It’s taking screenshots every second or so? I guess you need a pretty decent GPU to process it fast enough"
+    },
+    {
+      "author": "GamerArceus",
+      "score": 9,
+      "created_utc": 1775573723.0,
+      "body": "great work dude, this could be big if it actually learns how to do the work like myself - will check it out. Thank you for open-sourcing!!!"
+    },
+    {
+      "author": "Medical_Farm6787",
+      "score": 3,
+      "created_utc": 1775574911.0,
+      "body": "RemindMe! 2 weeks"
+    },
+    {
+      "author": "deejeycris",
+      "score": 3,
+      "created_utc": 1775585888.0,
+      "body": "That's actually something I hope it would exist one day, not mecessarily to automate but surely to document amd out in a knowledge base at least."
+    },
+    {
+      "author": "Objective_River_5218",
+      "score": 2,
+      "created_utc": 1775575318.0,
+      "body": "If you like it, pleaser consider supporting me by giving it a star - I would be grateful and motivated :)"
+    },
+    {
+      "author": "wu4d",
+      "score": 2,
+      "created_utc": 1775576618.0,
+      "body": "Grrat work! hopefuly I find some time this weekend to try it out"
+    },
+    {
+      "author": "tvmaly",
+      "score": 2,
+      "created_utc": 1775589080.0,
+      "body": "Do you do anything to compress the screenshot size?"
+    }
+  ]
+}

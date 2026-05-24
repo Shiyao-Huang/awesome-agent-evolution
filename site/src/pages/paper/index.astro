@@ -1,0 +1,132 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const chapters = [
+  ['1', 'Introduction', 'Definition, scope, contributions, boundaries', 'Draft-complete'],
+  ['2', 'Taxonomy', 'Five evolution loops and formal design dimensions', 'Draft-complete'],
+  ['3', 'Methods', 'Inference-time and training-time self-improvement', 'Draft-complete'],
+  ['4', 'Evolutionary Systems', 'Code evolution, algorithm discovery, agent self-evolution', 'Draft-complete'],
+  ['5', 'Evaluation', 'Benchmarks, process metrics, disclosure standard', 'Needs evidence audit'],
+  ['6', 'Frameworks', 'Agent frameworks and infrastructure gaps', 'Draft-complete'],
+  ['7', 'Pain Points', 'User pain points and production constraints', 'Needs source cleanup'],
+  ['8', 'Future Directions', 'Open problems, roadmap, conclusion', 'Needs final tightening'],
+  ['Appendix', 'Tables', 'Projects, papers, benchmarks, star quality', 'Compiled, needs layout polish']
+];
+---
+
+<BaseLayout
+  title="Self-Evolving AI Survey Paper — Draft Status, Chapters, and Evidence Gates"
+  description="Self Evolve 论文页面：追踪 AI Self-Evolution 综述论文的主稿结构、章节状态、项目证据、benchmark 证据和发布门禁。"
+>
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Paper / 论文</div>
+      <h1 class="gradient-text">Self-Evolving AI 综述论文写作台账</h1>
+      <p class="lead">这不是单纯的资源列表。论文主稿已经被组织成可编译的章节结构并产出 PDF；GitHub 项目数据现在按 raw 收集、分析样本、进化相关子集和时间线进入论文。</p>
+      <div class="metrics">
+        <div class="metric"><strong>383</strong><span>raw GitHub captures</span></div>
+        <div class="metric"><strong>90</strong><span>项目 Model Cards 已接入</span></div>
+        <div class="metric"><strong>213</strong><span>页 PDF 已编译</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Figures</div>
+          <h2>论文当前最该先看的两张图</h2>
+        </div>
+      </div>
+      <div class="visual-grid">
+        <figure class="visual-panel">
+          <img src="/visuals/github-corpus-funnel.svg" alt="GitHub corpus funnel chart" loading="lazy" />
+          <figcaption>回答“原始收集有哪些、分析了哪些、进化相关有哪些”。</figcaption>
+        </figure>
+        <figure class="visual-panel">
+          <img src="/visuals/raw-theme-distribution.svg" alt="Raw theme distribution chart" loading="lazy" />
+          <figcaption>回答“当前 corpus 的主题结构是否偏科”。</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Status</div>
+          <h2>当前论文状态</h2>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>主稿已编译</h3>
+          <p><code>paper-drafts/main.tex</code> 现在统一加载 8 个章节和 appendix，并已通过 XeLaTeX + BibTeX 生成 <code>paper-drafts/main.pdf</code>。</p>
+        </article>
+        <article class="card">
+          <h3>引用先稳定</h3>
+          <p><code>paper-drafts/references-aliases.bib</code> 先补齐草稿中已使用的 cite key，当前 BibTeX 输出 62 个 bibliography items。</p>
+        </article>
+        <article class="card">
+          <h3>项目数据已入稿</h3>
+          <p><code>analysis/github-project-data-analysis.*</code> 现在给出 raw 383、严格 evolution 63、广义 evolution-related 157、分析项目 90 和时间线。</p>
+        </article>
+        <article class="card">
+          <h3>还不能假装完成</h3>
+          <p>最终发布前仍要做 benchmark 溯源、图表打磨、BibTeX 归一、术语统一和 PDF 警告清理。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Chapters</div>
+          <h2>章节完成度</h2>
+        </div>
+      </div>
+      <div class="timeline">
+        {chapters.map(([number, title, role, status]) => (
+          <article class="timeline-item">
+            <div class="year">{number}</div>
+            <div>
+              <h3>{title}</h3>
+              <p>{role}</p>
+              <div class="pill-row">
+                <span class="pill">{status}</span>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Release Gates</div>
+          <h2>发布前必须过的门</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {[
+          'Citation gate: merge aliases back into canonical BibTeX keys.',
+          'Evidence gate: every benchmark number points to a paper review, raw paper, or official source.',
+          'Figure gate: convert Mermaid/CSV assets into publication-grade figures.',
+          'Consistency gate: unify terminology across README, site, paper, and survey LaTeX.',
+          'Release gate: PDF compile now passes; next produce an arXiv source bundle after warning cleanup.'
+        ].map((item) => (
+          <article class="card">
+            <p>{item}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

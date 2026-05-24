@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/LangChainAI AI agent OR agents",
+  "search_rank": 4,
+  "name": "How to Solve the #1 AI Agent Production Blocker! LangChain CEO ...",
+  "url": "https://x.com/LangChainAI/status/1927398928548307297",
+  "snippet": "LangChain (@LangChain). 274 likes 7 replies. How to Solve the #1 AI Agent Production Blocker! LangChain CEO Harrison Chase reveals the ... date: May 27, 2025",
+  "id": 399,
+  "platform": "X/Twitter",
+  "content": "LangChain (@LangChain). 274 likes 7 replies. How to Solve the #1 AI Agent Production Blocker! LangChain CEO Harrison Chase reveals the ... date: May 27, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "May 27, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

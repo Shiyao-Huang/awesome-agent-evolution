@@ -1,0 +1,35 @@
+{
+  "id": 51,
+  "name": "AutoGen FULL Tutorial with Python (Step-By-Step) Build AI Agent ...",
+  "url": "https://www.youtube.com/watch?v=V2qZ_lgxTzg",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=V2qZ_lgxTzg\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "AutoGen FULL Tutorial with Python (Step-By-Step) 🤯 Build AI Agent Teams! This is an intermediate tutorial for installing and using AutoGen locally instead of Google Colab. I previously created a video giving a beginner overview of AutoGen and a quick Google Colab tutorial, but now we go deeper! I show you step-by-step how to install and use AutoGen in any application using Visual Studio Code, Anaconda, OpenAI, and AutoGen. so it didn't I didn't give it a very explicit it's but what it did was it you might want to put",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, AutoGen",
+    "representative_works": [
+      "AutoGen FULL Tutorial with Python (Step-By-Step) Build AI Agent ..."
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

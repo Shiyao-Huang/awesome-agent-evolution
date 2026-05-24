@@ -1,0 +1,35 @@
+{
+  "id": 127,
+  "name": "Microsoft Agent Framework: The Open-Source Engine for Intelligent ...",
+  "url": "https://www.youtube.com/watch?v=yOBcPuLLmuY",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=yOBcPuLLmuY\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Microsoft Agent Framework: The Open-Source Engine for Intelligent AI Agents - Channel: Microsoft Azure - Length: 01:03 - Views: 31.5K - Likes: 309 - Published: 2025-10-01T17:16:11-07:00 - Category: Science & Technology - Keywords: A2A, AI Agents, Agent Framework, Agentic AI, Agents, AutoGen, MCP, OpenAI, Semantic Kernel - Language: en ## Description Microsoft Agent Framework is an open-source SDK and runtime designed to let developers build, deploy, and manage sophisticated multi-agent systems with ease. It unifies the enterprise-ready foundations of Semantic Kernel with the innovative orchestration of AutoGen, so teams no longer have to choose between experimentation and production. Learn more at: https://msft.it/6054sQtDA #Microsoft #MicrosoftAzure #AgenticAI ## Transcript Developers have embraced two of the most popular open-source agent frameworks Semantic Kernel, known for enterpris",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, AutoGen, MCP",
+    "representative_works": [
+      "Microsoft Agent Framework: The Open-Source Engine for Intelligent ..."
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 93,
+  "name": "Gen AI Tutorial - Part 10 : AutoGen - How Multi-Agent AI Really Works",
+  "url": "https://www.youtube.com/watch?v=RhDqo4OyBQ4",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=RhDqo4OyBQ4\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Gen AI Tutorial - Part 10 : AutoGen - How Multi-Agent AI Really Works AutoGen is a powerful framework for building multi-agent AI systems where agents can reason, collaborate, and solve tasks together. In this video, I walk you through how AutoGen works, why multi-agent AI matters, and how you can start building intelligent agent workflows for real-world applications. Whether you're into AI automation, LLMs, agentic AI, or advanced AI frameworks, this tutorial will help you understand how AutoGen enables agents to communicate, plan, and execute tasks autonomously. Hello everyone, welcome back to the channel. So today we'll be talking about autogen. In our last session we talked about agenti framework and we touched based on the lang agenti framework. We use the langraph enables intelligent agents to automate the complex workflows in last session and in today's session we will grasp the c",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, AutoGen, workflow",
+    "representative_works": [
+      "Gen AI Tutorial - Part 10 : AutoGen - How Multi-Agent AI Really Works"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

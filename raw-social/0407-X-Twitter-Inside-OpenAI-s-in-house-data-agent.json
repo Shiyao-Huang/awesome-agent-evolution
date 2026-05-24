@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/OpenAIDevs AI agent OR agents",
+  "search_rank": 2,
+  "name": "Inside OpenAI's in-house data agent",
+  "url": "https://x.com/OpenAIDevs/status/2016943147239329872",
+  "snippet": "Inside our in-house AI data agent. It reasons over 600+ PB and 70k datasets, enabling natural language data analysis across Engineering, ... date: Jan 29, 2026",
+  "id": 407,
+  "platform": "X/Twitter",
+  "content": "Inside our in-house AI data agent. It reasons over 600+ PB and 70k datasets, enabling natural language data analysis across Engineering, ... date: Jan 29, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jan 29, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

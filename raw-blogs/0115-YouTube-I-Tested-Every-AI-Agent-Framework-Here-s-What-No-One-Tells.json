@@ -1,0 +1,35 @@
+{
+  "id": 115,
+  "name": "I Tested Every AI Agent Framework — Here's What No One Tells ...",
+  "url": "https://www.youtube.com/watch?v=ozu7evLZcGE",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=ozu7evLZcGE\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "I Tested Every AI Agent Framework — Here’s What No One Tells You (Full Build & Benchmark) This is a complete, end-to-end masterclass on building and benchmarking AI agentic systems, from raw Python code to today’s most powerful AI agent frameworks. We’ll build a fully functional, production-grade multi-agent architecture from absolute scratch, then recreate the exact same system using six of the most talked-about frameworks in the AI ecosystem: Each implementation is dissected, analyzed, and benchmarked to reveal what each framework truly offers — and what it hides beneath its abstractions. You’ll learn not just how to use them, but when to use them… and when you’re better off going framework-free. Hi everyone and welcome to what I believe is going to be one of the most high opening AI agents tutorial you ever watched. Today we are going on an incredible journey together diving deep into",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, benchmark",
+    "representative_works": [
+      "I Tested Every AI Agent Framework — Here's What No One Tells ..."
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

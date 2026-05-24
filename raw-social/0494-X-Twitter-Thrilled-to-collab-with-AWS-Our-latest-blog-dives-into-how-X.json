@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/crewAIInc AI agent OR agents",
+  "search_rank": 3,
+  "name": "Thrilled to collab with @AWS! Our latest blog dives into how ... - X",
+  "url": "https://twitter.com/crewAIInc/status/1906733510322258359",
+  "snippet": "Our latest blog dives into how CrewAI's multi-agent orchestration pairs with Amazon Bedrock's AI-driven LLMs to create intelligent, scalable systems. Learn ... ---",
+  "id": 494,
+  "platform": "X/Twitter",
+  "content": "Our latest blog dives into how CrewAI's multi-agent orchestration pairs with Amazon Bedrock's AI-driven LLMs to create intelligent, scalable systems. Learn ... ---",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

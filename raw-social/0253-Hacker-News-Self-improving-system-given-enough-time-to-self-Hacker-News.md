@@ -1,0 +1,13 @@
+# Self-improving system given enough time to self ... - Hacker News
+
+- URL: https://news.ycombinator.com/item?id=48002242
+- Platform: Hacker News
+- Extraction status: fallback_snippet
+- content_timestamp: unknown
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+- Query: site:news.ycombinator.com/item "self-improving AI"
+
+## Raw Content
+
+Self-improving system given enough time to self-improve doesn't beat non-self-im... | Hacker News Self-improving system given enough time to self-improve doesn't beat non-self-improving system? Humans are, each individually and aggregates collectively, self-improving systems. Much moreso than modern AI systems are. How do I individually and collectively increase my intelligence? Humans can certainly be self improving, both on an individual basis and in aggregate. In humans, it seems that improvement in a new domain seems to follow a logarithmic scale. Why wouldn’t this be the same for an AI? Currently that self-improving system isn’t so self-improving that it’s become better at any particular job than human beings, so I think the skepticism is warranted. Please show me this self improving AI. Why are human doctors non-self improving? If anything, using AI, they may improve more than before. This seems to produce skill atrophy. "It's okay because the AI will pick up the slack" is kinda true but doesn't exactly strengthen the human position though.

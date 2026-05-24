@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/LangChainAI AI agent OR agents",
+  "search_rank": 9,
+  "name": "LangGraph Updates 3 big quality-of-life improvements to ...",
+  "url": "https://twitter.com/LangChainAI/status/1765791966577799534?ref_src=twsrc%5Etfw",
+  "snippet": "If you haven't already checked out LangGraph, its our (relatively) new framework for building agent applications as state machines. Check it out ... date: Mar 7, 2024",
+  "id": 487,
+  "platform": "X/Twitter",
+  "content": "If you haven't already checked out LangGraph, its our (relatively) new framework for building agent applications as state machines. Check it out ... date: Mar 7, 2024",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Mar 7, 2024",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2024-Q1"
+}

@@ -1,0 +1,13 @@
+# Show HN: A context aware backend for AI coding agents
+
+- URL: https://news.ycombinator.com/item?id=45528161
+- Platform: Hacker News
+- Extraction status: fallback_snippet
+- content_timestamp: unknown
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+- Query: site:news.ycombinator.com/item "AI coding agents"
+
+## Raw Content
+
+Show HN: A context aware backend for AI coding agents | Hacker News | Hacker News new| past| comments| ask| show| jobs| submit | login | | --- | --- | Hey HN, I’m Hang. Today I’m open-sourcing InsForge, a context aware backend for AI coding agents. When using agents like Cursor or Claude to build applications, they often assume what the backend looks like instead of inspecting it. Without access to the actual backend state, they fall back on outdated information, which leads to concrete issues. For example: 1. Storage, edge functions, and database logic are closely connected. Without understanding how these parts interact, existing setups get overwritten and important flows break. 2. Database migrations conflict with foreign keys or miss functions because the agent never inspects the live schema. 3. Recreating tables or adding columns that already exist, which leads to conflicts and failed deploys. These problems are not about the agent’s ability to code. They happen because there’s no structured way for the agent to inspect and understand the actual backend before acting. To address this, I built InsForge, which exposes the backend in a structured way and gives the agent direct control: 1. Introspection endpoints for schema, relations, functions, triggers, policies, routes, storage, roles, documentation, logs and events 2. Control endpoints for operations usually done through CLI, dashboards or SQL editors InsForge is a full backend platform that includes: - Postgres - Authentication - Storage - Edge functions - Built in AI-model endpoints (via OpenRouter) On top of this, it exposes structured backend metadata and control capabilities through an MCP server and tools, providing a structured, self-describing interface for agents to inspect schemas, policies, triggers, and docs, and interact with the backend. It’s open source and can be self hosted (https://github.com/InsForge/InsForge) or try our cloud service at (https://insforge.dev/). We love feedback! | Show HN: A context aware backend for AI coding agents(insforge.dev) | | --- | | 10 points by ddmdd 5 months ago| hide| past| favorite| 1 comment | barrywang0706 5 months ago [–] wow, it looks great. supabase doesnt support ai functions well, but insforge looks designed for AI native projects | Guidelines| FAQ| Lists| API| Security| Legal| Apply to YC| Contact Search: | | --- |

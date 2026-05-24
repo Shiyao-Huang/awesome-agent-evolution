@@ -1,0 +1,35 @@
+{
+  "id": 65,
+  "name": "Build a Multi-Agent System with CrewAI | Agentic AI Tutorial - YouTube",
+  "url": "https://www.youtube.com/watch?v=qsrl2DHYi1Y",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=qsrl2DHYi1Y\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Build a Multi-Agent System with CrewAI | Agentic AI Tutorial | Generative AI In this step-by-step tutorial, learn how to build a powerful Multi-Agent System using CrewAI, a cutting-edge framework for creating collaborative AI agents. This video explores how Agentic AI works, how to coordinate tasks between multiple agents, and how to harness the potential of Generative AI in real-world use cases. Hello everyone, I'm Sedhartan. In this video, let's understand how we can build multi- aent system using crew AI. Crew AI is a Python framework that kind of streamlines the way we can build agents. And the very important aspect of crew AI is that you can easily build these multiple agent system which kind of like you know does several task and it can like orchestrate like all those processes between like all the agents and so on. So in this video we will discuss how you can get started with crew",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, CrewAI",
+    "representative_works": [
+      "Build a Multi-Agent System with CrewAI | Agentic AI Tutorial - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

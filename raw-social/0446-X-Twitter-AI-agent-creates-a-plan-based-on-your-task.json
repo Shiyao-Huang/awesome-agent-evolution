@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/bindureddy AI agent OR agents",
+  "search_rank": 1,
+  "name": "AI agent creates a plan based on your task",
+  "url": "https://x.com/bindureddy/status/1771369055305478654",
+  "snippet": "With these agents, you can automate a host of activities. Examples include document generation, on-demand dashboards, report generation, and ... date: Mar 23, 2024",
+  "id": 446,
+  "platform": "X/Twitter",
+  "content": "With these agents, you can automate a host of activities. Examples include document generation, on-demand dashboards, report generation, and ... date: Mar 23, 2024",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Mar 23, 2024",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2024-Q1"
+}

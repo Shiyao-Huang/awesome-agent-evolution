@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { projects, projectGroups } from '@/data/projects';
+const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const totalStars = projects.reduce((sum, project) => sum + Number(project.stars || 0), 0);
 const recentProjects = [...projects].sort((a,b)=>new Date(b.lastPushed).valueOf()-new Date(a.lastPushed).valueOf()).slice(0,4);
 ---
@@ -20,8 +21,18 @@ const recentProjects = [...projects].sort((a,b)=>new Date(b.lastPushed).valueOf(
   <section class="section">
     <div class="container">
       <div class="section-head"><div><div class="eyebrow">分组</div><h2>从代码进化到 Agent 组织进化</h2></div></div>
+      <figure class="visual-panel wide" style="margin-bottom: 24px">
+        <img src="/visuals/project-group-map.svg" alt="Project group coverage chart" loading="lazy" />
+        <figcaption>公开项目卡按技术路线分布：记忆/技能/harness 和真实评测正在成为新的重点层。</figcaption>
+      </figure>
       <div class="grid">
-        {projectGroups.map((group)=><article class="card"><h3>{group.title}</h3><p>{group.repos.join('、')}</p></article>)}
+        {projectGroups.map((group)=><article class="card">
+          <h3>{group.title}</h3>
+          <p>{group.repos.join('、')}</p>
+          <div class="pill-row">
+            {projects.filter((project)=>group.repos.map((repo)=>repo.toLowerCase()).includes(project.repo.toLowerCase())).slice(0,5).map((project)=><a class="pill" href={`/projects/${slugify(project.repo)}/`}>{project.name}</a>)}
+          </div>
+        </article>)}
       </div>
     </div>
   </section>
@@ -31,7 +42,7 @@ const recentProjects = [...projects].sort((a,b)=>new Date(b.lastPushed).valueOf(
       <div class="grid">
         {projects.map((project)=><article class="card">
           <div class="eyebrow">{project.category}</div>
-          <h3><a href={project.url}>{project.name}</a></h3>
+          <h3><a href={`/projects/${slugify(project.repo)}/`}>{project.name}</a></h3>
           <p><strong>{project.repo}</strong></p>
           <p>{project.description}</p>
           <p>Stars：{project.stars.toLocaleString()} · Forks：{project.forks} · 最近活跃：{project.lastPushed.slice(0,10)}</p>
@@ -40,7 +51,7 @@ const recentProjects = [...projects].sort((a,b)=>new Date(b.lastPushed).valueOf(
             <span class="pill">{project.license}</span>
             {project.tags.map((tag)=><span class="pill">{tag}</span>)}
           </div>
-          <p><a class="button" href={`/reports/${project.report}`}>读取分析报告</a></p>
+          <p><a class="button" href={`/projects/${slugify(project.repo)}/`}>打开 Model Card</a></p>
         </article>)}
       </div>
     </div>

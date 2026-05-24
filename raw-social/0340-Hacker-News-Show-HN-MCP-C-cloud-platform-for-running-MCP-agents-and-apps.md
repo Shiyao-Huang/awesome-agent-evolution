@@ -1,0 +1,13 @@
+# Show HN: MCP-C – cloud platform for running MCP agents and apps
+
+- URL: https://news.ycombinator.com/item?id=45735886
+- Platform: Hacker News
+- Extraction status: fallback_snippet
+- content_timestamp: unknown
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+- Query: site:news.ycombinator.com/item "MCP agents"
+
+## Raw Content
+
+Show HN: MCP-C – cloud platform for running MCP agents and apps | Hacker News Hello HN! Earlier this year, we shared mcp-agent (https://github.com/lastmile-ai/mcp-agent) [1][2], a lightweight framework for building agents with MCP. Since then we have tried to push the protocol to the limits, including hosting agents as long-running tools on MCP [3], and seen other creative approaches surface (mcp-ui, chatgpt apps sdk). Today, we are launching mcp-c – a cloud platform designed for hosting any kind of MCP server, including agents, ChatGPT apps, etc. We are in open beta and free to use, and would love your feedback. Here are some key choices we made: 1) Everything is MCP - Each application is deployed as a remote SSE endpoint, and implements the full MCP spec, including advanced features like elicitation, sampling, notifications and logging. 2) Durable execution via Temporal - We use Temporal as the runtime environment, allowing you to run long-running operations. This is especially critical for agents, which need to pause/resume, be fault-tolerant, and run for a long time. 3) Local to Cloud - we're fans of how easy it is to deploy a Next.js app to Vercel, so we've made it simple to take your local mcp-agent, mcp server, OpenAI app, etc. and deploy it to the cloud. We have several examples and even a handy CLI to get started quickly [4]. It's as simple as: - uvx mcp-agent init - uv init - uv add "mcp-agent[openai]" - uvx mcp-agent login # add your openai key to mcp_agent.secrets.yaml - uvx mcp-agent deploy You can also try out these hosted mcp servers to get an idea. These can be connected to any MCP client (ChatGPT, Claude Desktop/Code, Cursor, etc.) OpenAI Pizza App - https://18t536mliucyeuhkkcnjdavxtyg66pgl.deployments.mcp-age... Basic Agent Server - https://1m82g32x8nkoppinayx0k5ye12oar6vk.deployments.mcp-age... The HN community has been a big part of mcp-agent's growth, and we're super excited to share this with you as well. We would love to hear your thoughts and feedback!

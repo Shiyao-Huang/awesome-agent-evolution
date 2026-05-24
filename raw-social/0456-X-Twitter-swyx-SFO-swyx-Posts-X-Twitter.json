@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/swyx AI agent OR agents",
+  "search_rank": 1,
+  "name": "swyx SFO (@swyx) / Posts / X - Twitter",
+  "url": "https://twitter.com/swyx",
+  "snippet": "New @latentspacepod Essay: why Agent Labs are clearly emerging in 2025 as a complement to Model Labs' all becoming AI Cloud platforms.",
+  "id": 456,
+  "platform": "X/Twitter",
+  "content": "New @latentspacepod Essay: why Agent Labs are clearly emerging in 2025 as a complement to Model Labs' all becoming AI Cloud platforms.",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

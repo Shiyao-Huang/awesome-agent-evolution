@@ -1,0 +1,13 @@
+# DeepSeek and Tsinghua Developing Self-Improving AI Models
+
+- URL: https://news.ycombinator.com/item?id=43609301
+- Platform: Hacker News
+- Extraction status: fallback_snippet
+- content_timestamp: unknown
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+- Query: site:news.ycombinator.com/item "self-improving AI"
+
+## Raw Content
+
+DeepSeek and Tsinghua Developing Self-Improving AI Models | Hacker News | Hacker News new| past| comments| ask| show| jobs| submit | login | | --- | --- | | DeepSeek and Tsinghua Developing Self-Improving AI Models(bloomberg.com) | | --- | | 5 points by polrjoy 10 months ago| hide| past| favorite| 1 comment | successful23 10 months ago [–] Self-improving AI could accelerate innovation, but it also raises questions about control and safety. How do we ensure these models evolve in a way that aligns with human values? | Guidelines| FAQ| Lists| API| Security| Legal| Apply to YC| Contact Search: | | --- |

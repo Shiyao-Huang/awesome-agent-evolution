@@ -21,6 +21,7 @@ export const nav = [
   { href: '/#about', label: '关于' },
   { href: '/projects/', label: '项目' },
   { href: '/research/', label: '研究' },
+  { href: '/paper/', label: '论文' },
   { href: '/graph/', label: '图谱' },
   { href: '/blog/', label: '博客' },
   { href: '/star-analysis/', label: 'Star 分析' },

@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/OpenAIDevs AI agent OR agents",
+  "search_rank": 10,
+  "name": "OpenAI Developers",
+  "url": "https://x.com/OpenAIDevs/status/1910079596420333872",
+  "snippet": "... AI Maya, their friendly and engaging voice agent. The Realtime API's automatic voice detection and low latency enable them to offer 24/7 ... date: Apr 9, 2025 ---",
+  "id": 415,
+  "platform": "X/Twitter",
+  "content": "... AI Maya, their friendly and engaging voice agent. The Realtime API's automatic voice detection and low latency enable them to offer 24/7 ... date: Apr 9, 2025 ---",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Apr 9, 2025 ---",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

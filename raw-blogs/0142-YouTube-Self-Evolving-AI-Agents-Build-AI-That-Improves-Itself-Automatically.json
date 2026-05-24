@@ -1,0 +1,35 @@
+{
+  "id": 142,
+  "name": "Self-Evolving AI Agents: Build AI That Improves Itself Automatically",
+  "url": "https://www.youtube.com/watch?v=Q7aALlSScwc",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "self_evolving_agent",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=Q7aALlSScwc\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "🤖 In this video, I'm building Self-Evolving AI Agents - AI systems that automatically improve their own performance without any human intervention! Traditional AI agents remain static once deployed, but self-evolving agents use feedback loops to continuously optimize themselves. Watch as I demonstrate how these agents execute tasks, evaluate their own outputs, and generate improved strategies based on feedback. ✅ Automatic self-improvement through feedback loops Hey, how it's going guys? In this video, we going to look at self evolving agents. You would have been working with AI agents or in the field of agents and now we have moved from AI agents to agentic AI, right? But you know lately we have seen there's a there's a new technique that has been originated that basically uh you know we call self evolving agent or selfimproving agents. I already have a couple of videos that I created e",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, self-evolving",
+    "representative_works": [
+      "Self-Evolving AI Agents: Build AI That Improves Itself Automatically"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

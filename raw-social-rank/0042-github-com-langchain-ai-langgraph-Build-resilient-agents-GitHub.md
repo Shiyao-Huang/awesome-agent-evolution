@@ -1,0 +1,243 @@
+# langchain-ai/langgraph: Build resilient agents. - GitHub
+
+- URL: https://github.com/langchain-ai/langgraph
+- Platform: github.com
+- Extraction status: ok
+- content_timestamp: 2023-08
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: 2023-Q3
+- Query: site:x.com "LangGraph" "agent"
+
+## Raw Content
+
+## GitHub - langchain-ai/langgraph: Build resilient agents. · GitHub
+
+**Source**: https://github.com/langchain-ai/langgraph
+
+---
+
+[Skip to content](https://github.com/langchain-ai/langgraph#start-of-content)
+
+You signed in with another tab or window. Reload to refresh your session.
+
+You signed out in another tab or window. Reload to refresh your session.
+
+You switched accounts on another tab or window. Reload to refresh your session.
+Dismiss alert
+
+{{ message }}
+
+[langchain-ai](https://github.com/langchain-ai)
+
+/
+**[langgraph](https://github.com/langchain-ai/langgraph)**
+
+Public
+
+- [Notifications](https://github.com/login?return_to=%2Flangchain-ai%2Flanggraph)You must be signed in to change notification settings
+- [Fork
+    5.5k](https://github.com/login?return_to=%2Flangchain-ai%2Flanggraph)
+- 
+[Star
+          32.6k](https://github.com/login?return_to=%2Flangchain-ai%2Flanggraph)
+
+[https://github.com/langchain-ai/langgraph](https://github.com/langchain-ai/langgraph)
+
+[Branches](https://github.com/langchain-ai/langgraph/branches)[Tags](https://github.com/langchain-ai/langgraph/tags)
+
+[https://github.com/langchain-ai/langgraph/branches](https://github.com/langchain-ai/langgraph/branches)[https://github.com/langchain-ai/langgraph/tags](https://github.com/langchain-ai/langgraph/tags)
+
+Open more actions menu
+
+## Folders and files
+
+| Name | Name | Last commit message | Last commit date |
+|---|---|---|---|
+| Latest commit History6,870 Commits6,870 Commits |  |  |  |
+| .github | .github |  |  |
+| docs | docs |  |  |
+| examples | examples |  |  |
+| libs | libs |  |  |
+| .gitignore | .gitignore |  |  |
+| .markdownlint.json | .markdownlint.json |  |  |
+| AGENTS.md | AGENTS.md |  |  |
+| CLAUDE.md | CLAUDE.md |  |  |
+| LICENSE | LICENSE |  |  |
+| Makefile | Makefile |  |  |
+| README.md | README.md |  |  |
+| View all files |  |  |  |
+
+## Repository files navigation
+
+[https://www.langchain.com/langgraph](https://www.langchain.com/langgraph)
+
+### Low-level orchestration framework for building stateful agents.
+
+[https://github.com/langchain-ai/langgraph#low-level-orchestration-framework-for-building-stateful-agents](https://github.com/langchain-ai/langgraph#low-level-orchestration-framework-for-building-stateful-agents)
+
+[https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)[https://pypistats.org/packages/langgraph](https://pypistats.org/packages/langgraph)[https://pypi.org/project/langgraph/](https://pypi.org/project/langgraph/)[https://x.com/langchain_oss](https://x.com/langchain_oss)
+
+Trusted by companies shaping the future of agents – including Klarna, Replit, Elastic, and more – LangGraph is a low-level orchestration framework for building, managing, and deploying long-running, stateful agents.
+
+```
+pip install -U langgraph
+```
+
+Tip
+
+If you're looking to quickly build agents, check out **[Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview)** — a higher-level package built on LangGraph for agents that can plan, use subagents, and leverage file systems for complex tasks.
+
+For an equivalent JS/TS library, check out [LangGraph.js](https://github.com/langchain-ai/langgraphjs) and the [JS docs](https://docs.langchain.com/oss/javascript/langgraph/overview).
+
+## Why use LangGraph?
+
+[https://github.com/langchain-ai/langgraph#why-use-langgraph](https://github.com/langchain-ai/langgraph#why-use-langgraph)
+
+LangGraph provides low-level supporting infrastructure for *any* long-running, stateful workflow or agent:
+
+- **[Durable execution](https://docs.langchain.com/oss/python/langgraph/durable-execution)** — Build agents that persist through failures and can run for extended periods, automatically resuming from exactly where they left off.
+- **[Human-in-the-loop](https://docs.langchain.com/oss/python/langgraph/interrupts)** — Seamlessly incorporate human oversight by inspecting and modifying agent state at any point during execution.
+- **[Comprehensive memory](https://docs.langchain.com/oss/python/langgraph/memory)** — Create truly stateful agents with both short-term working memory for ongoing reasoning and long-term persistent memory across sessions.
+- **[Debugging with LangSmith](https://www.langchain.com/langsmith)** — Gain deep visibility into complex agent behavior with visualization tools that trace execution paths, capture state transitions, and provide detailed runtime metrics.
+- **[Production-ready deployment](https://docs.langchain.com/langsmith/deployments)** — Deploy sophisticated agent systems confidently with scalable infrastructure designed to handle the unique challenges of stateful, long-running workflows.
+
+Tip
+
+For developing, debugging, and deploying AI agents and LLM applications, see [LangSmith](https://docs.langchain.com/langsmith/home).
+
+## LangGraph ecosystem
+
+[https://github.com/langchain-ai/langgraph#langgraph-ecosystem](https://github.com/langchain-ai/langgraph#langgraph-ecosystem)
+
+While LangGraph can be used standalone, it also integrates seamlessly with any LangChain product, giving developers a full suite of tools for building agents.
+
+To improve your LLM application development, pair LangGraph with:
+
+- [Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview) – Build agents that can plan, use subagents, and leverage file systems for complex tasks.
+- [LangChain](https://docs.langchain.com/oss/python/langchain/overview) – Provides integrations and composable components to streamline LLM application development.
+- [LangSmith](https://www.langchain.com/langsmith) – Helpful for agent evals and observability. Debug poor-performing LLM app runs, evaluate agent trajectories, gain visibility in production, and improve performance over time.
+- [LangSmith Deployment](https://docs.langchain.com/langsmith/deployments) – Deploy and scale agents effortlessly with a purpose-built deployment platform for long-running, stateful workflows. Discover, reuse, configure, and share agents across teams – and iterate quickly with visual prototyping in [LangSmith Studio](https://docs.langchain.com/langsmith/studio).
+
+---
+
+## Documentation
+
+[https://github.com/langchain-ai/langgraph#documentation](https://github.com/langchain-ai/langgraph#documentation)
+
+- [docs.langchain.com](https://docs.langchain.com/oss/python/langgraph/overview) – Comprehensive documentation, including conceptual overviews and guides
+- [reference.langchain.com/python/langgraph](https://reference.langchain.com/python/langgraph) – API reference docs for LangGraph packages
+- [LangGraph Quickstart](https://docs.langchain.com/oss/python/langgraph/quickstart) – Get started building with LangGraph
+- [Chat LangChain](https://chat.langchain.com/) – Chat with the LangChain documentation and get answers to your questions
+
+**Discussions**: Visit the [LangChain Forum](https://forum.langchain.com) to connect with the community and share all of your technical questions, ideas, and feedback.
+
+## Additional resources
+
+[https://github.com/langchain-ai/langgraph#additional-resources](https://github.com/langchain-ai/langgraph#additional-resources)
+
+- **[Guides](https://docs.langchain.com/oss/python/learn)** – Quick, actionable code snippets for topics such as streaming, adding memory & persistence, and design patterns (e.g. branching, subgraphs, etc.).
+- **[LangChain Academy](https://academy.langchain.com/courses/intro-to-langgraph)** – Learn the basics of LangGraph in our free, structured course.
+- **[Case studies](https://www.langchain.com/built-with-langgraph)** – Hear how industry leaders use LangGraph to ship AI applications at scale.
+- [Contributing Guide](https://docs.langchain.com/oss/python/contributing/overview) – Learn how to contribute to LangChain projects and find good first issues.
+- [Code of Conduct](https://github.com/langchain-ai/langchain/?tab=coc-ov-file) – Our community guidelines and standards for participation.
+
+---
+
+## Acknowledgements
+
+[https://github.com/langchain-ai/langgraph#acknowledgements](https://github.com/langchain-ai/langgraph#acknowledgements)
+
+LangGraph is inspired by [Pregel](https://research.google/pubs/pub37252/) and [Apache Beam](https://beam.apache.org/). The public interface draws inspiration from [NetworkX](https://networkx.org/documentation/latest/). LangGraph is built by LangChain Inc, the creators of LangChain, but can be used without LangChain.
+
+## About
+
+         Build resilient agents.       
+
+[docs.langchain.com/oss/python/langgraph/](https://docs.langchain.com/oss/python/langgraph/)
+
+### Topics
+
+[python](https://github.com/topics/python)[open-source](https://github.com/topics/open-source)[enterprise](https://github.com/topics/enterprise)[framework](https://github.com/topics/framework)[ai](https://github.com/topics/ai)[gemini](https://github.com/topics/gemini)[openai](https://github.com/topics/openai)[multiagent](https://github.com/topics/multiagent)[agents](https://github.com/topics/agents)[ai-agents](https://github.com/topics/ai-agents)[rag](https://github.com/topics/rag)[pydantic](https://github.com/topics/pydantic)[llm](https://github.com/topics/llm)[generative-ai](https://github.com/topics/generative-ai)[chatgpt](https://github.com/topics/chatgpt)[langchain](https://github.com/topics/langchain)[langgraph](https://github.com/topics/langgraph)[deepagents](https://github.com/topics/deepagents)
+
+### Resources
+
+[Readme](https://github.com/langchain-ai/langgraph#readme-ov-file)
+
+### License
+
+[MIT license](https://github.com/langchain-ai/langgraph#MIT-1-ov-file)
+
+### Code of conduct
+
+[Code of conduct](https://github.com/langchain-ai/langgraph#coc-ov-file)
+
+### Contributing
+
+[Contributing](https://github.com/langchain-ai/langgraph#contributing-ov-file)
+
+### Security policy
+
+[Security policy](https://github.com/langchain-ai/langgraph#security-ov-file)
+
+###         Uh oh! 
+
+There was an error while loading. Please reload this page.
+
+[Activity](https://github.com/langchain-ai/langgraph/activity)
+
+[Custom properties](https://github.com/langchain-ai/langgraph/custom-properties)
+
+### Stars
+
+[32.6k
+        stars](https://github.com/langchain-ai/langgraph/stargazers)
+
+### Watchers
+
+[158
+        watching](https://github.com/langchain-ai/langgraph/watchers)
+
+### Forks
+
+[5.5k
+        forks](https://github.com/langchain-ai/langgraph/forks)
+
+[Report repository](https://github.com/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Flangchain-ai%2Flanggraph&report=langchain-ai+%28user%29)
+
+## [Releases
+      534](https://github.com/langchain-ai/langgraph/releases)
+
+[langgraph==1.2.0
+        
+          Latest
+      
+      May 12, 2026](https://github.com/langchain-ai/langgraph/releases/tag/1.2.0)
+[+ 533 releases](https://github.com/langchain-ai/langgraph/releases)
+
+###         Uh oh! 
+
+There was an error while loading. Please reload this page.
+
+## [Contributors](https://github.com/langchain-ai/langgraph/graphs/contributors)
+
+- 
+
+- 
+
+- 
+
+###         Uh oh! 
+
+There was an error while loading. Please reload this page.
+
+## Languages
+
+- [Python
+          99.4%](https://github.com/langchain-ai/langgraph/search?l=python)
+- 
+
+Other
+
+0.6%
+
+     You can’t perform that action at this time.

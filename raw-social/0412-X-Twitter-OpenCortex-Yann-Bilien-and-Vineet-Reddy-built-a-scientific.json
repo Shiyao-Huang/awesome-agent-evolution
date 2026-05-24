@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/OpenAIDevs AI agent OR agents",
+  "search_rank": 7,
+  "name": "OpenCortex • Yann Bilien and Vineet Reddy built a scientific ...",
+  "url": "https://x.com/OpenAIDevs/status/2019902219114672407",
+  "snippet": "OpenCortex • Yann Bilien and Vineet Reddy built a scientific collaboration platform where humans and AI agents submit research ideas. date: Feb 6, 2026",
+  "id": 412,
+  "platform": "X/Twitter",
+  "content": "OpenCortex • Yann Bilien and Vineet Reddy built a scientific collaboration platform where humans and AI agents submit research ideas. date: Feb 6, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Feb 6, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

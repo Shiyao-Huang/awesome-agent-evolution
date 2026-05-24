@@ -1,0 +1,35 @@
+{
+  "id": 105,
+  "name": "How to Build AI Agents | Simplilearn - YouTube",
+  "url": "https://www.youtube.com/watch?v=eFXPgpE1FlE",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=eFXPgpE1FlE\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "This AI Agents Full Course 2026 by Simplilearn offers a detailed learning journey to agentic AI. The AI Agents full course begins with foundational concepts like AI agents, environments, and LLMs (Large Language Models). It then explores Generative AI agents and their applications, followed by an agentic AI roadmap to guide your learning. You'll dive into the math behind it all with Linear Algebra for ML, before mastering the agentic workflow and learning to build AI agents from scratch, including voice agents. The course introduces hands-on tools like Manus AI, GANs, NLP, KNN, MCP, and platforms like Hugging Face. You'll also build Agentic RAG, compare Langchain vs Langgraph vs Langflow vs Langsmith, and explore advanced topics like transformers, multimodal AI, and stable diffusion. Practical tutorials include using N8N, Deepseek, and Meta’s new LLaMA 3.2. Finally, we discuss monetizing",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, LangGraph, MCP, workflow",
+    "representative_works": [
+      "How to Build AI Agents | Simplilearn - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

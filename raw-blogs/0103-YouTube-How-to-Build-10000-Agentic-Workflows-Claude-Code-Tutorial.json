@@ -1,0 +1,35 @@
+{
+  "id": 103,
+  "name": "How to Build $10000 Agentic Workflows (Claude Code Tutorial)",
+  "url": "https://www.youtube.com/watch?v=vFepZE_wrfg",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=vFepZE_wrfg\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "How to Build $10,000 Agentic Workflows (Claude Code Tutorial) - Length: 24 - Views: agentic workflows, how to build agentic workflows, $10000 agentic workflows, claude code, claude code tutorial, ai agents, build ai agents, agentic ai, ai automation, workflow automation, automation vs agentic workflows, wat framework, build workflows with claude, newsletter automation business process automation workflows for business how to sell I’ve genuinely never seen workflows scale like this before, and it all comes down to building $10,000 agentic workflows with Claude Code. In this video, I break down everything you need to know about how to build $10,000 agentic workflows, even if you’ve never created an agent or touched Claude Code before. I’ll explain what agentic workflows actually are, why they’re worth $10,000+, and exactly how they function behind the scenes. Then I’ll build an agentic wor",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, workflow",
+    "representative_works": [
+      "How to Build $10000 Agentic Workflows (Claude Code Tutorial)"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 152,
+  "name": "Tutorial: How to Build an AI Agent Workflow with Camunda - YouTube",
+  "url": "https://www.youtube.com/watch?v=E0BaMLL5Uf4",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=E0BaMLL5Uf4\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Tutorial: How to Build an AI Agent Workflow with Camunda How do you build an AI agent workflow that integrates human-in-the-loop and REST calls? Camunda Process Alchemist and Technical Evangelist Niall Deehan is here to show you how, using Camunda 8.8.0-alpha8 and BPMN (Business Process Model and Notation). In this tutorial, Niall uses Camunda 8.8.0-alpha8 and BPMN. Get started with Camunda today: https://bit.ly/46g8cEL See Agentic Orchestration with Camunda in action: https://bit.ly/4pwhjc5 more about how - 00:00 Welcome + Introduction - 00:24 How to build a BPMN diagram in Camunda Modeler - 01:16 How to add an AI agent in the form of a BPMN ad-hoc sub-process to your BPMN model - 01:49 How to configure an AI agent - 03:47 How to add a REST API, or any available tool, for your AI agent to use - 05:46 How to integrate human-in-the-loop, using a BPMN user task - 07:21 How to tell an AI ag",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, workflow",
+    "representative_works": [
+      "Tutorial: How to Build an AI Agent Workflow with Camunda - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 102,
+  "name": "How memory makes AI agents more effective - YouTube",
+  "url": "https://www.youtube.com/watch?v=52xTxeqT4ws",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=52xTxeqT4ws\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "How memory makes AI agents more effective Dive into the intricacies of memory for AI agents, moving beyond basic prompt engineering to advanced context engineering. In this episode of Real Terms for AI, we detail the function of working, short-term, and long-term memory, and how these are crucial for stateful agent interactions. We provide insights into how managing memory—from session data to persistent user attributes—significantly boosts agent effectiveness and utility. MEMORY FOR YOUR AGENT -Welcome Real Terms for AI -Today, we'll deep dive into sessions in the context of using them in agents and other types of memory and stateful things that we may want to include as a part of building a better agent. have stored in some place somewhere, we're actually creating a session with both your user information and things we're retrieving from the LLM. -This is where memory is actually one o",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, memory",
+    "representative_works": [
+      "How memory makes AI agents more effective - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

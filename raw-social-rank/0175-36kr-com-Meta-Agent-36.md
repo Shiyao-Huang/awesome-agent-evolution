@@ -1,0 +1,404 @@
+# Meta公布“超级智能”新进展：无需人类，软件Agent即可自我训练-36氪
+
+- URL: https://36kr.com/p/3612158628512771
+- Platform: 36kr.com
+- Extraction status: ok
+- content_timestamp: 2025-12
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: 2025-12
+- Query: site:36kr.com 智能体 自进化
+
+## Raw Content
+
+## Meta公布“超级智能”新进展：无需人类，软件Agent即可自我训练-36氪
+
+**Source**: https://36kr.com/p/3612158628512771
+
+---
+
+[https://36kr.com/usercenter/basicinfo](https://36kr.com/usercenter/basicinfo)[账号设置](https://36kr.com/usercenter/account-password)[我的关注](https://36kr.com/usercenter/follow)[我的收藏](https://36kr.com/usercenter/favorite)[申请的报道](https://36kr.com/seek-report-new?tabKey=2)退出登录
+
+登录
+
+搜索
+
+- 
+
+[36氪Auto](https://img.36krcdn.com/hsossms/20230605/v2_384be8e4c1e942a28cf13a2e427fe211@18900718_oswg78404oswg320oswg320_img_png)
+
+[数字时氪](https://img.36krcdn.com/hsossms/20230605/v2_636063907bdc44389b46e7db9c761a38@18900718_oswg62424oswg320oswg320_img_png)
+
+[未来消费](https://img.36krcdn.com/hsossms/20230210/v2_38d1cdabc8404b00806de58cbedb3b7b_oswg27031oswg320oswg320_img_png)
+
+[智能涌现](https://img.36krcdn.com/hsossms/20230605/v2_da74c43ba887426f8fbccaede691b844@18900718_oswg76573oswg320oswg320_img_png)
+
+[未来城市](https://img.36krcdn.com/hsossms/20230209/v2_8c2233c88a854c6496ff4f7842a9f9dd_oswg17629oswg320oswg320_img_png)
+
+[启动Power on](https://img.36krcdn.com/hsossms/20230605/v2_632f36f1c5904a539a1e57efe4497e3a@18900718_oswg63630oswg320oswg320_img_png)
+
+[36氪出海](http://letschuhai.com)
+
+[36氪研究院](https://img.36krcdn.com/hsossms/20230605/v2_89fa42090fae495ca5e45ba921ee42ff@18900718_oswg65306oswg320oswg320_img_png)
+
+[潮生TIDE](https://img.36krcdn.com/hsossms/20231204/v2_3b8447ffdda24a38a30fd839fd934baa@000000_oswg40121oswg430oswg430_img_jpeg)
+
+[36氪企服点评](https://img.36krcdn.com/hsossms/20230605/v2_c4720503500642d294b5be04064ef870@18900718_oswg58529oswg320oswg320_img_png)
+
+[36氪财经](https://img.36krcdn.com/hsossms/20230209/v2_d6d3f8b57fa04507915c48adf0f9620d_oswg16586oswg320oswg320_img_png)
+
+[职场bonus](https://img.36krcdn.com/hsossms/20230605/v2_efc94b0cce7043dbac883c1dfe00c810@18900718_oswg57046oswg320oswg320_img_png)
+
+[36碳](https://img.36krcdn.com/hsossms/20230209/v2_9eb02027be264174b61b9d49c391ca75_oswg15571oswg320oswg320_img_png)
+
+[后浪研究所](https://img.36krcdn.com/hsossms/20230605/v2_86f220b69e164751946d583b5472c857@18900718_oswg97988oswg320oswg320_img_png)
+
+[暗涌Waves](https://img.36krcdn.com/hsossms/20230209/v2_0c6a697748b54beea356d6e1f1fcec5f_oswg17066oswg320oswg320_img_png)
+
+[硬氪](https://img.36krcdn.com/hsossms/20230209/v2_2f845ed16244458d8887a5526c63c6d6_oswg17346oswg320oswg320_img_png)
+
+[氪睿研究院](https://img.36krcdn.com/hsossms/20251118/v2_d5e97c1ebb974011b0117c1338a9c747@000000_oswg146520oswg1280oswg1280_img_jpg)
+
+媒体品牌
+
+- 
+
+[企业号](https://q.36kr.com)
+
+[企服点评](https://www.36dianping.com/)
+
+[36Kr研究院](https://36kr.com/academe)
+
+[36Kr创新咨询](https://innovation.36kr.com)
+
+企业服务
+
+- 
+
+[核心服务](https://www.36kr.com/p/2492318105786505)
+
+[城市之窗](https://36kr.com/policy)
+
+政府服务
+
+- 
+
+[创投发布](https://topics.36kr.com/topic/1645523444931974)
+
+[LP源计划](https://36kr.com/LPlan)
+
+[VClub](https://36kr.com/VClub)
+
+[VClub投资机构库](https://36kr.com/organization/)
+
+[投资机构职位推介](https://36kr.com/topics/1620276089894403)
+
+[投资人认证](https://pitchhub.36kr.com/audit-investor)
+
+投资人服务
+
+- 
+
+[寻求报道](https://36kr.com/seek-report-new)
+
+[36氪Pro](https://img.36krcdn.com/hsossms/20230209/v2_95565530d4d94dc4ad904f3131c7b690_oswg23055oswg320oswg320_img_png)
+
+[创投氪堂](https://topics.36kr.com/topic/1961250130199045)
+
+[企业入驻](https://36kr.com/project-form/settled)
+
+创业者服务
+
+- 
+
+创投平台
+
+- 
+
+AI测评网
+
+[https://36kr.com/topics/799051634713857](https://36kr.com/topics/799051634713857)[http://www.bjjubao.org.cn/node_1606.html](http://www.bjjubao.org.cn/node_1606.html)[ttps://36kr.com/topics/799051634713857](ttps://36kr.com/topics/799051634713857)
+
+[https://36kr.com/](https://36kr.com/)
+
+- 
+[首页](https://36kr.com/)
+
+- 
+[快讯](https://36kr.com/newsflashes/)
+
+- 
+
+[资讯](https://36kr.com/information/web_news/)
+
+  - [推荐](https://36kr.com/information/web_recommend/)
+  - [财经](https://36kr.com/information/ccs/)
+  - [AI](https://36kr.com/information/AI/)
+  - [自助报道](https://36kr.com/information/aireport/)
+  - 城市
+
+  - [最新](https://36kr.com/information/web_news/latest/)
+  - [创投](https://36kr.com/information/contact/)
+  - [汽车](https://36kr.com/information/travel/)
+  - [科技](https://36kr.com/information/technology/)
+  - [专精特新](https://36kr.com/information/shuzihua/)
+
+- 
+[直播](https://36kr.com/live/channel)
+
+- 
+[视频](https://36kr.com/video/)
+
+- 
+[专题](https://36kr.com/topics/)
+
+- 
+[活动](https://36kr.com/activity)
+
+搜索
+
+[寻求报道](https://36kr.com/seek-report-new?t=1779339520992)
+
+我要入驻
+
+[城市合作](https://36kr.com/station-business)
+
+# Meta公布“超级智能”新进展：无需人类，软件Agent即可自我训练
+
+[账号已注销](https://36kr.com/user/175367)
+*·*2025年12月26日 18:18
+
+软件工程智能体训练范式的第一步
+
+近年来，基于大语言模型（LLMs）的软件工程智能体发展迅速，但其训练数据和训练环境仍高度依赖人类知识和人工策划，本质上是在复现人类开发轨迹，难以自主发现新的问题结构与解决策略，这从根本上制约了智能体迈向超级智能的能力。
+
+基于此，来自Meta、伊利诺伊大学厄巴纳-香槟分校的研究团队提出 Self-play SWE-RL（SSR），作为软件工程智能体训练范式的第一步。该方法对数据假设的要求极低，**仅需访问包含源代码和已安装依赖项的沙盒化代码仓库，无需任何人工标注的问题或测试用例**。
+
+研究表明，智能体可以从真实世界的软件仓库中自主获取学习经验，**有望催生在系统理解、解决全新问题以及从零开始自主创建软件等方面超越人类能力的超级智能系统**。
+
+![](https://img.36krcdn.com/hsossms/20251226/v2_33df569f69fa4311899f592bfcbf9519@000000_oswg110739oswg1080oswg406_img_000?x-oss-process=image/format,jpg/interlace,1)
+
+论文链接：https://arxiv.org/pdf/2512.18552
+
+## **Self-play SWE-RL 框架**
+
+SSR 的设计原则是**减少对代码库先验知识的依赖**，以提升方法的通用性与可扩展性。它不依赖于特定环境的预配置，智能体要通过与环境的交互，自主探索测试的运行方式并理解其结构。该极简输入设定使 SSR 几乎无需额外配置即可应用于不同代码库，显著降低了使用与迁移成本。
+
+SSR 的核心是**通过自博弈式的迭代循环，使智能体在不断生成与解决 Bug 的过程中实现自我提升**。在 SSR 中，同一 LLM 策略被划分为两个协同演化的角色，分别是智能体 Bug 注入与智能体 Bug 求解，二者共享参数但承担不同任务。
+
+![](https://img.36krcdn.com/hsossms/20251226/v2_652027c17ca341ff8897f04bae42339b@000000_oswg34422oswg1080oswg261_img_000?x-oss-process=image/format,jpg/interlace,1)
+
+图| SSR 的总体框架
+
+### **1.智能体 Bug 注入**
+
+智能体 Bug 注入通过**让模型扮演“破坏者”构建起自驱动的进化闭环**。
+
+在这一过程中，首先生成包含 Bug 补丁和弱化测试的 Bug 构件，将抽象错误转化为标准化的练习题；随后，运用“删除关键代码”或“回滚历史修复”等复杂生成策略，从真实工程逻辑中制造出极具挑战的高质量难题；为了确保逻辑严密，系统利用“逆向变异测试”进行严格的一致性验证，剔除无关干扰并确保错误可复现；最后，通过动态奖励机制将任务难度维持在“跳一跳才够得着”的区间，并将修复失败的尝试转化为高阶缺陷循环利用，从而在无需人类标注的情况下，驱动智能体在博弈中不断实现自我超越。
+
+![](https://img.36krcdn.com/hsossms/20251226/v2_27f1f56385ea4c9785c048abd9f4b8c1@000000_oswg226305oswg1080oswg364_img_000?x-oss-process=image/format,jpg/interlace,1)
+
+图| 智能体 Bug 注入中“删除关键代码”和“回滚历史修复”的策略
+
+### **2.智能体 Bug 修复**
+
+智能体 Bug 修复通过在沙盒中应用缺陷补丁并重置 Git 历史来构建防作弊的代码现场，确保模型无法走捷径。随后，以弱化测试的逆向补丁作为任务提示，取代人类的文字描述，迫使代理纯粹基于代码逻辑定位问题。在修复过程中，智能体通过“推理与工具调用”的交互循环，在模拟环境中自主进行补丁尝试与验证。最终，系统通过回滚原始测试文件的评估机制进行严苛复核，确保生成的 Bug 在真实测试下依然有效，从而完成从理解考题到提交正确答案的闭环。
+
+![](https://img.36krcdn.com/hsossms/20251226/v2_aa2a1b27b2b04674afc3652ab8e8e9a8@000000_oswg52206oswg1080oswg140_img_000?x-oss-process=image/format,jpg/interlace,1)
+
+图| 智能体 Bug 修复的流程
+
+## **实验结果**
+
+研究人员在 SWE-bench Verified 与 SWE-bench Pro 上，对基础模型、基线强化学习方法以及 SSR 进行了系统比较。
+
+实验结果表明，即使在完全不接触任务描述和测试数据的情况下，SSR 仍能在训练过程中持续实现性能提升，验证了 LLM 仅通过与真实代码库交互即可增强其软件工程能力。更重要的是，SSR 在整个训练轨迹上始终优于基线 RL，说明**由模型自主生成的任务相比人工构造的数据，能够提供更具信息量和有效性的学习信号**。
+
+![](https://img.36krcdn.com/hsossms/20251226/v2_a709e3f525db43b494bf61bdf113e3df@000000_oswg134469oswg1080oswg387_img_000?x-oss-process=image/format,jpg/interlace,1)
+
+图| 训练过程中的基线比较
+
+研究人员比较了完整的 SSR 与仅进行 Bug 注入或仅进行 Bug 修复的两种变体。
+
+实验结果表明，完整的自博弈框架性能最优，而单一注入或修复训练均表现不足，前者缺乏从修复过程中的学习，后者受限于静态任务分布。相比之下，自博弈通过同时生成与修复 Bug，使任务分布随训练动态演化，持续提供更丰富的学习信号，从而实现稳定的性能提升。
+
+![](https://img.36krcdn.com/hsossms/20251226/v2_5d9c880de6014a37b4bb5ec67f67b0a1@000000_oswg111864oswg1040oswg296_img_000?x-oss-process=image/format,jpg/interlace,1)
+
+图| Self-play Swe-RL的消融研究
+
+## **不足与未来展望**
+
+尽管 SSR 在减少人工依赖、实现自我提升方面展现出潜力，但仍处于早期阶段。当前方法依赖显式测试作为判定器，存在奖励投机的潜在风险。同时，验证机制主要基于单元测试，难以覆盖真实软件工程中的高层目标与复杂语义。此外，Bug 注入与修复角色共享同一模型配置，尚未系统探索模型规模、结构差异及角色分离对自博弈学习的影响。
+
+此外，研究人员还探索了若干未取得理想效果的方向，例如，自然语言 issue 生成受限于模型能力与奖励设计，难以保证质量与多样性；仓库专用训练因数据多样性不足未能带来收益；而训练不稳定性则成为限制 SSR 进一步扩展的重要瓶颈。
+
+展望未来，SSR 为自博弈驱动的软件工程智能体打开了多个研究方向，包括通过种子机制控制错误分布、合成更复杂的多步软件任务，以及设计适用于长周期软件开发的高效训练范式。尤其是在**奖励稀疏、决策链条极长的真实工程场景中，如何引入更密集、结构化的反馈，将是释放自博弈潜力、迈向更高层次智能的关键**。
+
+本文来自微信公众号 [“学术头条”（ID：SciTouTiao）](https://mp.weixin.qq.com/s?__biz=Mzg4MDE3OTA5NA==&mid=2247601592&idx=1&sn=4af68c6b92aa7f7d9439d963b141d056&chksm=cee9d74e58f57813b21a5a973c6638c03f96e26c635ab573d77423890533b44e65a72a823faf&scene=0&xtrack=1#rd)，整理：潇潇，36氪经授权发布。
+
+该文观点仅代表作者本人，36氪平台仅提供信息存储空间服务。
+
++1
+
+4
+
+好文章，需要你的鼓励
+
+[https://36kr.com/user/175367](https://36kr.com/user/175367)[账号已注销](https://36kr.com/user/175367)
+特邀作者
+
+**1***收  藏*
++1
+
+**0***评  论*
+
+*打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮*
+
+[微  博](https://service.weibo.com/share/share.php?appkey=595885820&url=https://36kr.com/p/3612158628512771&title=Meta公布“超级智能”新进展：无需人类，软件Agent即可自我训练)
+
+*沉浸阅读*
+
+*返回顶部*
+
+举报
+
+参与评论
+
+评论千万条，友善第一条
+
+登录后参与讨论
+
+提交评论
+
+0/1000
+
+你可能也喜欢这些文章
+
+[https://36kr.com/p/3818489485516801](https://36kr.com/p/3818489485516801)[谷歌的命门](https://36kr.com/p/3818489485516801)
+
+[https://36kr.com/p/3818431174909961](https://36kr.com/p/3818431174909961)[没有AI能力的药厂，将不再被称作药厂](https://36kr.com/p/3818431174909961)
+
+[https://36kr.com/p/3818450346738823](https://36kr.com/p/3818450346738823)[9亿次点击背后，AI应用的真实江湖｜2026中国AI应用全景图谱报告](https://36kr.com/p/3818450346738823)
+
+[https://36kr.com/p/3818419978765441](https://36kr.com/p/3818419978765441)[义乌老板们，正在把AI接进工厂](https://36kr.com/p/3818419978765441)
+
+[https://36kr.com/p/3818402638733573](https://36kr.com/p/3818402638733573)[Google I/O之后，AI的参照系变了](https://36kr.com/p/3818402638733573)
+
+[https://36kr.com/p/3818457345449989](https://36kr.com/p/3818457345449989)[中国AI，不想再活在CUDA里](https://36kr.com/p/3818457345449989)
+
+[https://36kr.com/p/3818355071484803](https://36kr.com/p/3818355071484803)[Token彻底火了，三大运营商终于出手](https://36kr.com/p/3818355071484803)
+
+[https://36kr.com/p/3818382148346116](https://36kr.com/p/3818382148346116)[楼上在骂AI，楼下在卖AI](https://36kr.com/p/3818382148346116)
+
+[https://36kr.com/p/3817383304152194](https://36kr.com/p/3817383304152194)[Altman拿Token换股权只够烧45天，20亿Token捐母校只值100块：Token真成“钱”了，谁更赚？](https://36kr.com/p/3817383304152194)
+
+## 最新文章推荐
+
+[switch、足疗卡、打欠条，这届年轻人爆改随份子](https://36kr.com/p/3818471481066374)[谷歌的命门](https://36kr.com/p/3818489485516801)[为什么餐厅都在劝你去买团购券？](https://36kr.com/p/3818465238048769)[梁文锋的学弟们，排队宣布融资](https://36kr.com/p/3818468203512965)[“打折”卖机器人冲进前四，乐聚智能要上市了](https://36kr.com/p/3818453125832712)[突发，马斯克递交史上最大IPO](https://36kr.com/p/3818516040352899)[没有AI能力的药厂，将不再被称作药厂](https://36kr.com/p/3818431174909961)[从ADHD到前额叶受损：年轻人热衷赛博确诊](https://36kr.com/p/3818427156137095)[英伟达：群雄逼宫、AI“堵点”生变，宇宙股也会“小失意”？](https://36kr.com/p/3818435292857480)[9亿次点击背后，AI应用的真实江湖｜2026中国AI应用全景图谱报告](https://36kr.com/p/3818450346738823)
+
+![](https://staticx.36krcdn.com/36kr-web/static/new_qr_img.72d61993.png?x-oss-process=image/resize,p_5/blur,r_3,s_2)
+
+[https://36kr.com/user/175367](https://36kr.com/user/175367)
+
+[账号已注销](https://36kr.com/user/175367)
+
+特邀作者
+
+致力于学术传播和科学普及。
+
+**
+发表文章600篇
+
+### 最近内容
+
+[何恺明团队“扩散模型”新作：在“最后一公里”离散解码](https://36kr.com/p/3807465382190852)
+
+2026-05-13
+
+[前OpenAI CTO创业后首个「交互」大模型：原生、实时处理人机协作](https://36kr.com/p/3806030780145414)
+
+2026-05-12
+
+[谷歌发布“AI协同数学家”：刷新最难数学基准SOTA，与牛津教授攻克数十年无解难题](https://36kr.com/p/3804373708775174)
+
+2026-05-11
+
+[阅读更多内容，狠戳这里](https://36kr.com/user/175367)
+
+### 下一篇
+
+[2025年AI的温柔转身：从颠覆行业到生活“缝补匠”](https://36kr.com/p/3612165190255621)
+
+AI 让公平与从容照进日常。
+
+2025-12-26
+
+### 热门标签
+
+[宋世雄](https://36kr.com/tags/753861)[詹俊](https://36kr.com/tags/753866)[工人阶级](https://36kr.com/tags/753884)[社会阶级](https://36kr.com/tags/753885)[项目总监](https://36kr.com/tags/753889)[鱼胶](https://36kr.com/tags/753910)[基金仓位](https://36kr.com/tags/753934)[范蠡](https://36kr.com/tags/753945)[优酸乳](https://36kr.com/tags/753949)[雷强](https://36kr.com/tags/753970)[新疆奶茶](https://36kr.com/tags/754018)[佟欣](https://36kr.com/tags/751586)[嘉能可](https://36kr.com/tags/751717)[镍矿](https://36kr.com/tags/751718)[李琳琳](https://36kr.com/tags/751736)[聂磊](https://36kr.com/tags/751742)[孝感北站](https://36kr.com/tags/751876)[老年机](https://36kr.com/tags/751912)[房地产投资信托基金](https://36kr.com/tags/751925)[热成像仪](https://36kr.com/tags/751994)[磷酸](https://36kr.com/tags/752066)[磷矿石](https://36kr.com/tags/752071)[金川公司](https://36kr.com/tags/752084)[产检](https://36kr.com/tags/752085)[宫缩](https://36kr.com/tags/752087)[58同城找工作](https://36kr.com/tags/752121)[羽生结弦](https://36kr.com/tags/752132)[深圳兼职](https://36kr.com/tags/752137)[上帝已死](https://36kr.com/tags/752164)[双良节能](https://36kr.com/tags/752172)
+
+关于36氪
+
+[城市合作](https://36kr.com/station-business)[寻求报道](https://36kr.com/seek-report-new)我要入驻[投资者关系](http://ir.36kr.com)
+
+商务合作[关于我们](https://36kr.com/pages/about)联系我们[加入我们](https://zhaopin.36kr.com)[36氪欧洲站](https://eu.36kr.com)[36氪欧洲站](https://eu.36kr.com/zh)[36氪欧洲站](https://eu.36kr.com/de)[Ai产品日报](https://www.aicpb.com)
+
+[网络谣言信息举报入口](https://36kr.com/refute-rumor-notice)
+
+热门推荐
+
+[热门资讯](https://36kr.com/hot-list/catalog)[热门产品](https://36kr.com/project)[文章标签](https://36kr.com/tags)[快讯标签](https://36kr.com/nftags)
+
+合作伙伴
+
+- [https://www.aliyun.com/](https://www.aliyun.com/)
+- [https://www.volcengine.cn/](https://www.volcengine.cn/)
+- 
+- [https://www.getui.com/cn/index.html](https://www.getui.com/cn/index.html)
+- [https://www.odaily.com](https://www.odaily.com)
+- [https://www.jingdata.com](https://www.jingdata.com)
+- [https://www.krspace.cn](https://www.krspace.cn)
+- [https://www.futunn.com/](https://www.futunn.com/)
+- [https://www.36dianping.com/pk/](https://www.36dianping.com/pk/)
+- [http://www.woshipm.com](http://www.woshipm.com)
+- [https://www.36linkr.com](https://www.36linkr.com)
+
+36氪APP下载
+![](https://staticx.36krcdn.com/36kr-web/static/code_production.72d61993.png)
+iOS & Android
+
+[https://36kr.com/](https://36kr.com/)
+
+本站由 
+[阿里云](https://www.aliyun.com/)提供计算与安全服务 违法和不良信息、未成年人保护举报电话：010-89650707 举报邮箱：jubao@36kr.com [网上有害信息举报](https://www.12377.cn)
+
+© 2011~2026 北京多氪信息科技有限公司 |
+
+[京ICP备12031756号-6](https://beian.miit.gov.cn/#/Integrated/index)|[京ICP证150143号](https://dxzhgl.miit.gov.cn/dxxzsp/xkz/xkzgl/resource/qiyesearch.jsp?num=%25E5%258C%2597%25E4%25BA%25AC%25E5%25A4%259A%25E6%25B0%25AA%25E4%25BF%25A1%25E6%2581%25AF%25E7%25A7%2591%25E6%258A%2580%25E6%259C%2589%25E9%2599%2590%25E5%2585%25AC%25E5%258F%25B8&type=xuke)|[京公网安备11010502057322号](http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502057322)
+
+[https://weibo.com/wow36kr](https://weibo.com/wow36kr)[https://36kr.com/rss-center](https://36kr.com/rss-center)
+
+[意见反馈](https://36kr.com/mform/1755983296602372)
+
+![](https://staticx.36krcdn.com/36kr-web/static/code_production.72d61993.png)
+
+36氪APP
+
+让一部分人先看到未来
+
+36氪
+
+鲸准
+
+氪空间
+
+![](https://staticx.36krcdn.com/36kr-web/static/kr.ad0c1158.jpg)
+
+推送和解读前沿、有料的科技创投资讯
+
+![](https://staticx.36krcdn.com/36kr-web/static/jingzhun.9a251862.jpg)
+
+一级市场金融信息和系统服务提供商
+
+![](https://staticx.36krcdn.com/36kr-web/static/krSpace.7efbe7d3.jpg)
+
+聚焦全球优秀创业者，项目融资率接近97%，领跑行业

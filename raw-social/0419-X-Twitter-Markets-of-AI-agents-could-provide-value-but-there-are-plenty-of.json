@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/AnthropicAI AI agent OR agents",
+  "search_rank": 4,
+  "name": "Markets of AI agents could provide value, but there are plenty of ...",
+  "url": "https://x.com/AnthropicAI/status/2047728384503939464",
+  "snippet": "Markets of AI agents could provide value, but there are plenty of rough edges. Access to higher-quality models conferred a real advantage ... date: Apr 24, 2026",
+  "id": 419,
+  "platform": "X/Twitter",
+  "content": "Markets of AI agents could provide value, but there are plenty of rough edges. Access to higher-quality models conferred a real advantage ... date: Apr 24, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Apr 24, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

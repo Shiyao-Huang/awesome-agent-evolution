@@ -1,0 +1,35 @@
+{
+  "id": 66,
+  "name": "Build an AI Agent That Can Use Any Tool (MCP in n8n Tutorial)",
+  "url": "https://www.youtube.com/watch?v=SVZe2rdhYmA",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=SVZe2rdhYmA\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Build an AI Agent That Can Use Any Tool (MCP in n8n Tutorial) - YouTube About Press Copyright Contact us Creators Advertise Developers Impressum Cancel Memberships Terms Privacy Policy & Safety How YouTube works Test new features",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, MCP",
+    "representative_works": [
+      "Build an AI Agent That Can Use Any Tool (MCP in n8n Tutorial)"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

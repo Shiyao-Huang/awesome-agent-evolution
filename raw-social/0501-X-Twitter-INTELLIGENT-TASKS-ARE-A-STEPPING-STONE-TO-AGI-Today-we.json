@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/bindureddy AI agent OR agents",
+  "search_rank": 4,
+  "name": "INTELLIGENT TASKS ARE A STEPPING STONE TO AGI Today, we ...",
+  "url": "https://twitter.com/bindureddy/status/1890210535926563224",
+  "snippet": "Today, we are launching ChatLLM Tasks. We have hooked up tools like web search, email, and web scrappers to mini-agents that can be triggered on a schedule.",
+  "id": 501,
+  "platform": "X/Twitter",
+  "content": "Today, we are launching ChatLLM Tasks. We have hooked up tools like web search, email, and web scrappers to mini-agents that can be triggered on a schedule.",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

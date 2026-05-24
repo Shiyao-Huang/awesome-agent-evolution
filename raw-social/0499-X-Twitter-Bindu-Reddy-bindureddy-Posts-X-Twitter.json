@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/bindureddy AI agent OR agents",
+  "search_rank": 2,
+  "name": "Bindu Reddy (@bindureddy) / Posts / X - Twitter",
+  "url": "https://twitter.com/bindureddy",
+  "snippet": "Bindu Reddy (@bindureddy) - Posts - CEO of @abacusai , the world's first AI super assistant and general-purpose agent - your AI control.",
+  "id": 499,
+  "platform": "X/Twitter",
+  "content": "Bindu Reddy (@bindureddy) - Posts - CEO of @abacusai , the world's first AI super assistant and general-purpose agent - your AI control.",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

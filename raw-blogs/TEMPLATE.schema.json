@@ -1,0 +1,36 @@
+{
+  "_comment": "raw-blogs entry template — updated 2026-05-21 with author_profile",
+  "_usage": "Each blog/article entry follows this schema. author_profile is REQUIRED for all new entries.",
+  "id": "INTEGER — sequential entry ID",
+  "name": "STRING — article/blog/product title",
+  "url": "STRING — canonical URL",
+  "platform": "STRING — YouTube / Product Hunt / Dev.to / Medium / Anthropic Blog / etc.",
+  "source_type": "STRING — blog_tutorial / product_discovery / video_podcast / academic / industry_report",
+  "category": "STRING — agent_self_evolution / agent_framework / benchmark / harness_engineering / etc.",
+  "source_dataset": "STRING — origin dataset filename",
+  "extraction_status": "STRING — ok / fallback_snippet / error",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "STRING — full extracted text content of the article/page",
+  "author_profile": {
+    "name_or_id": "unknown",
+    "title_position_company": "unknown",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "STRING — canonical URL",
+    "domains_expertise": "STRING — agent_self_evolution / agent_framework / benchmark / harness_engineering / etc.",
+    "representative_works": [
+      "STRING — article/blog/product title"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "unknown",
+    "confidence": "low",
+    "needs_enrichment": true
+  },
+  "content_timestamp": "2026-05-21",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05"
+}

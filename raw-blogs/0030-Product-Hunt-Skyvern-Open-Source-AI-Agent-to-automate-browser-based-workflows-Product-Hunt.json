@@ -1,0 +1,35 @@
+{
+  "id": 30,
+  "name": "Skyvern: Open Source AI Agent to automate browser-based workflows | Product Hunt",
+  "url": "https://www.producthunt.com/products/skyvern?launch=skyvern-2-0",
+  "platform": "Product Hunt",
+  "source_type": "product_discovery",
+  "category": "benchmark_or_competition",
+  "source_dataset": "rank-platforms-product-discovery-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "extract failed: HTTP 403: 403 Forbidden\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Y Combinator Launched in2024View2 launches /skyvern ## SkyvernLaunches Skyvern 2.0 Skyvern 2.0Build AI browser agents in plain english Launched onFebruary 3rd, 2025 Skyvern 2.0 Skyvern 2.0 This is the 2nd launch from Skyvern.View more ## Skyvern 2.0 Build AI browser agents in plain english Skyvern 2.0 was ranked #3 of the day for February 3rd, 2025 Skyvern is an open source Browser Agent Builder. You can build complex browser agents in plain english. Skyvern scores a state-of-the-art 85.8% on the WebVoyager benchmark, enabling companies to build automations for job apps, contact form filling, and more. 🚀🚀🚀We're excited to launch Skyvern 2.0: ",
+  "content_timestamp": "2025-02-03",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2025-02",
+  "author_profile": {
+    "name_or_id": "Product Hunt maker/team",
+    "title_position_company": "Product launch team",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.producthunt.com",
+    "domains_expertise": "agent, benchmark",
+    "representative_works": [
+      "Skyvern: Open Source AI Agent to automate browser-based workflows | Product Hunt"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "product_team_or_maker",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

@@ -1,0 +1,654 @@
+# SE-Agent: Self-Evolution Trajectory Optimization in Multi-Step Reasoning with LLM-Based Agents
+
+- URL: https://arxiv.org/html/2508.02085
+- Platform: arxiv.org
+- Extraction status: ok
+- content_timestamp: unknown
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+
+## Raw Content
+
+## SE-Agent: Self-Evolution Trajectory Optimization in Multi-Step Reasoning with LLM-Based Agents
+
+**Source**: https://arxiv.org/html/2508.02085
+
+---
+
+# SE-Agent: Self-Evolution Trajectory Optimization in Multi-Step Reasoning with LLM-Based Agents
+
+Jiaye Lin
+1,∗
+
+Yifu Guo
+2,∗
+
+Yuzhen Han
+3
+
+Sen Hu
+4
+
+Ziyi Ni
+5,6
+
+Licheng Wang
+5
+
+Mingguang Chen
+7
+
+Hongzhang Liu
+4,8
+
+Ronghao Chen
+4
+
+Yangfan He
+9
+
+Daxin Jiang
+2
+
+Binxing Jiao
+2
+
+Chen Hu
+2,†
+
+Huacan Wang
+5,†,
+
+1
+THU  
+2
+StepFun  
+3
+UofT  
+4
+PKU  
+5
+UCAS  
+6
+CASIA  
+7
+UCR  
+8
+USYD  
+9
+UMN   
+
+Equal Contribution. †Corresponding Authors.
+
+R [quantaalpha.ai@gmail.com](mailto:quantaalpha.ai@gmail.com)[JARVIS-Xs/SE-Agent](https://github.com/JARVIS-Xs/SE-Agent)
+
+![[Uncaptioned image]](https://arxiv.org/html/x1.png)
+
+{abstract2}
+
+Large Language Model (LLM)-based agents have recently shown impressive capabilities in complex reasoning and tool use via multi-step interactions with their environments. While these agents have the potential to tackle complicated tasks, their problem-solving process—agents’ interaction trajectory leading to task completion—remains underexploited. These trajectories contain rich feedback that can navigate agents toward the right directions for solving problems correctly. Although prevailing approaches, such as Monte Carlo Tree Search (MCTS), can effectively balance exploration and exploitation, they ignore the interdependence among various trajectories and lack the diversity of search spaces, which leads to redundant reasoning and suboptimal outcomes. To address these challenges, we propose SE-Agent, a 
+S
+elf-
+E
+volution framework that enables 
+Agents
+ to optimize their reasoning processes iteratively. Our approach revisits and enhances former pilot trajectories through three key operations: revision, recombination, and refinement. This evolutionary mechanism enables two critical advantages: (1) it expands the search space beyond local optima by intelligently exploring diverse solution paths guided by previous trajectories, and (2) it leverages cross-trajectory inspiration to efficiently enhance performance while mitigating the impact of suboptimal reasoning paths. Through these mechanisms, SE-Agent achieves continuous self-evolution that incrementally improves reasoning quality. We evaluate SE-Agent on SWE-bench Verified to resolve real-world GitHub issues. Experimental results across five strong LLMs show that integrating SE-Agent delivers up to 
+55%
+ relative improvement, achieving 
+state-of-the-art
+ performance among all open-source agents on SWE-bench Verified (61.2% with Claude-3.7-Sonnet and 80.0% with Claude-4-Sonnet
+1
+
+1
+1
+80.0% is achieved with Claude-4-Sonnet using the latest SWE-Agent (aligned with the May 22, 2025 SWE-bench Verified leaderboard; baseline 66.6% resolved) together with our SE-Agent.
+
+).
+
+## 
+1 
+Introduction
+
+Large Language Models (LLMs) have demonstrated remarkable capabilities across a wide range of domains, spanning from sophisticated natural language understanding to high-quality code generation [[1](https://arxiv.org/html/2508.02085v6#bib.bib1)]. Beyond their core linguistic and reasoning abilities, recent advances have shown that, when integrated with external tools and environmental interaction capabilities [[2](https://arxiv.org/html/2508.02085v6#bib.bib2); [3](https://arxiv.org/html/2508.02085v6#bib.bib3); [4](https://arxiv.org/html/2508.02085v6#bib.bib4); [5](https://arxiv.org/html/2508.02085v6#bib.bib5)], these models can evolve into autonomous agents that tackle increasingly complex real-world tasks.
+
+However, completing complex tasks rarely happens in a single step [[6](https://arxiv.org/html/2508.02085v6#bib.bib6); [7](https://arxiv.org/html/2508.02085v6#bib.bib7)]. In practice, most LLM-based agents employ multi-turn interactions with their environments, following frameworks like ReAct [[8](https://arxiv.org/html/2508.02085v6#bib.bib8)] that iteratively gather information, reason about the current state, and take actions. These interaction processes naturally form trajectories—sequences of states and actions that encode valuable problem-solving patterns and strategies [[9](https://arxiv.org/html/2508.02085v6#bib.bib9); [10](https://arxiv.org/html/2508.02085v6#bib.bib10)]. Each trajectory represents a complete attempt at solving a given problem, encompassing not just the final solution but also the reasoning path, environmental feedback, and decision-making process that led to the outcome [[11](https://arxiv.org/html/2508.02085v6#bib.bib11); [12](https://arxiv.org/html/2508.02085v6#bib.bib12); [13](https://arxiv.org/html/2508.02085v6#bib.bib13)].
+
+Despite the wealth of information contained in these interaction trajectories, current approaches to multi-step reasoning remain fundamentally limited [[14](https://arxiv.org/html/2508.02085v6#bib.bib14); [15](https://arxiv.org/html/2508.02085v6#bib.bib15)]. While methods such as Monte Carlo Tree Search (MCTS) effectively balance exploration and exploitation [[16](https://arxiv.org/html/2508.02085v6#bib.bib16); [17](https://arxiv.org/html/2508.02085v6#bib.bib17)], they treat trajectories as independent entities, ignoring the rich interdependencies and potential synergies among different solution paths [[18](https://arxiv.org/html/2508.02085v6#bib.bib18)]. Moreover, even when employing diverse sampling strategies (e.g., varying temperature parameters or prompts), agents tend to converge on structurally similar trajectories that differ only in surface-level expressions, leading to a critical phenomenon: despite generating multiple trajectories, the final outcomes remain surprisingly homogeneous [[19](https://arxiv.org/html/2508.02085v6#bib.bib19); [20](https://arxiv.org/html/2508.02085v6#bib.bib20); [21](https://arxiv.org/html/2508.02085v6#bib.bib21)]. This limitation stems from the inherent nature of probabilistic language models, which naturally gravitate toward high-probability solution patterns, thereby constraining the diversity of the search space [[22](https://arxiv.org/html/2508.02085v6#bib.bib22); [23](https://arxiv.org/html/2508.02085v6#bib.bib23); [24](https://arxiv.org/html/2508.02085v6#bib.bib24)].
+
+To overcome these limitations, we propose SE-Agent, a 
+S
+elf-
+E
+volution framework that enables 
+Agents
+ to iteratively optimize their reasoning processes through systematic trajectory manipulation. Our key insight is that by actively intervening at the trajectory level—rather than merely adjusting sampling strategies—we can guide agents to explore fundamentally different perspectives and solution approaches. Through three core operations (revision, recombination, and refinement), SE-Agent not only generates genuinely diverse trajectories but also produces correspondingly diverse outcomes, significantly expanding the candidate solution space. This trajectory-level intervention enables agents to discover novel problem-solving capabilities that may not emerge from conventional sampling methods, effectively allowing base models to transcend their initial performance boundaries. By strategically combining insights from multiple trajectories, our framework amplifies the likelihood of finding correct solutions to challenging problems that would remain unsolved through traditional multi-sampling approaches. Our contributions are summarized as follows:
+
+- 
+•
+
+We introduce a novel self-evolution framework that operates at the trajectory level to enhance reasoning capabilities. Importantly, our approach remains effective regardless of improvements in base model capabilities, as long as complex tasks continue to require multi-step reasoning—a requirement likely to persist in the foreseeable future. By manipulating trajectories rather than relying on sampling variations, we achieve genuine diversity in solution paths and final outcomes.
+
+- 
+•
+
+We conduct comprehensive experiments on SWE-bench Verified [[25](https://arxiv.org/html/2508.02085v6#bib.bib25)], one of the most challenging and widely-adopted benchmarks for code-related tasks. Our results demonstrate significant performance improvements of SE-Agent across different LLMs, validating the effectiveness in trajectory-level self-evolution for real-world software engineering scenarios.
+
+## 
+2 
+Related Works
+
+##### Code Agents
+
+Code agents represent a specialized class of LLM systems designed to understand, generate, and manipulate source code autonomously. Over time, these agents have evolved to handle increasingly complex software engineering tasks within large-scale codebases. Given repository-level objectives, they identify relevant files and code segments before implementing necessary modifications. In this work, we focus on the SWE-bench task, which involves resolving real-world GitHub issues by automatically applying functional bug fixes.  [[26](https://arxiv.org/html/2508.02085v6#bib.bib26)] introduces the concept of agent-computer interfaces through SWE-Agent, while OpenDevin [[27](https://arxiv.org/html/2508.02085v6#bib.bib27)] presents a collection of community-driven agents, including CodeAct [[28](https://arxiv.org/html/2508.02085v6#bib.bib28)]. Agentless [[29](https://arxiv.org/html/2508.02085v6#bib.bib29)] achieves competitive performance using a streamlined two-step process of localization and repair. AutoCodeRover [[30](https://arxiv.org/html/2508.02085v6#bib.bib30)] incorporates advanced code analysis techniques, including abstract syntax trees and spectrum-based fault localization. Alibaba LingmaAgent [[31](https://arxiv.org/html/2508.02085v6#bib.bib31)] proposes a search-based strategy for repository exploration followed by structured editing. Additionally, several studies [[32](https://arxiv.org/html/2508.02085v6#bib.bib32); [33](https://arxiv.org/html/2508.02085v6#bib.bib33); [34](https://arxiv.org/html/2508.02085v6#bib.bib34); [35](https://arxiv.org/html/2508.02085v6#bib.bib35)] demonstrate that repeated trajectory sampling, even under identical agent configurations, may lead to significant variance in outcomes. More recently, SWE-Search [[36](https://arxiv.org/html/2508.02085v6#bib.bib36)] proposes a multi-agent framework integrating MCTS with a self-improvement mechanism to enhance performance on such tasks.
+
+##### Agent Capability Enhancement
+
+Recent research has developed diverse approaches to enhance the performance of LLM-based agents. Planning frameworks like GoalAct [[37](https://arxiv.org/html/2508.02085v6#bib.bib37)] introduce global planning with hierarchical execution, reducing complexity and improving adaptability by 12.22% on LegalAgentBench [[38](https://arxiv.org/html/2508.02085v6#bib.bib38)]. For code generation, the RGD framework [[39](https://arxiv.org/html/2508.02085v6#bib.bib39)] leverages multi-agent debugging for iterative optimization, outperforming state-of-the-art methods by 9.8% on HumanEval and 16.2% on MBPP datasets. Collaborative approaches such as Collaborative Voyager [[40](https://arxiv.org/html/2508.02085v6#bib.bib40)] enable agents to communicate and learn from each other, effectively addressing hallucinations while enhancing task completion. Meta-planning optimization through MPO [[41](https://arxiv.org/html/2508.02085v6#bib.bib41)] provides high-level guidance and continuously optimizes plans based on execution feedback, significantly improving task efficiency and generalization. Agent enhancement methods like AutoGPT [[42](https://arxiv.org/html/2508.02085v6#bib.bib42)] and AgentGPT [[43](https://arxiv.org/html/2508.02085v6#bib.bib43)] integrate tool usage to expand agent capabilities, while retrieval-augmented frameworks such as MemGPT [[44](https://arxiv.org/html/2508.02085v6#bib.bib44)] and ReAct [[8](https://arxiv.org/html/2508.02085v6#bib.bib8)] enhance contextual understanding through memory mechanisms. Self-improvement techniques, including Reflexion [[10](https://arxiv.org/html/2508.02085v6#bib.bib10)] and CRITIC [[45](https://arxiv.org/html/2508.02085v6#bib.bib45)], enable agents to iteratively refine their reasoning through self-critique. While these methods show promise, our work introduces a novel approach within the ReAct paradigm that incorporates strategic reflection and mutation at critical steps, combining multiple trajectories to generate optimized execution paths without requiring extended computation time like Test-Time Scaling (TTS) techniques.
+
+## 
+3 
+Preliminaries and Problem Setup
+
+##### Task-Oriented Reasoning Environment
+
+We consider a general class of complex tasks that require multi-step reasoning and execution. Such tasks encompass a wide variety of domains, including software engineering challenges, mathematical problem-solving, strategic planning, and creative content generation. Formally, we model the reasoning environment as a tuple ℰ=(𝒯,𝒮,𝒜,𝒫,ℛ)\mathcal{E}=(\mathcal{T},\mathcal{S},\mathcal{A},\mathcal{P},\mathcal{R}). Here, 𝒯\mathcal{T} represents the space of all possible tasks that require multi-step reasoning, while 𝒮\mathcal{S} denotes the state space, with each state s∈𝒮s\in\mathcal{S} capturing the current progress toward solving a task. 𝒜\mathcal{A} is the action space available to the agent, which may include information gathering or direct task execution. 𝒫:𝒮×𝒜→𝒮\mathcal{P}:\mathcal{S}\times\mathcal{A}\rightarrow\mathcal{S} defines the transition dynamics that map a state-action pair to a new state, and ℛ:𝒮×𝒯→ℝ\mathcal{R}:\mathcal{S}\times\mathcal{T}\rightarrow\mathbb{R} is the reward function that evaluates the quality of a state for a given task.
+
+##### Reasoning Trajectories
+
+Central to SE-Agent is the concept of reasoning trajectories, which represent a sequential progression of states and actions as the agent works toward solving a task. Given a task t∈𝒯t\in\mathcal{T}, a reasoning trajectory is defined as an ordered sequence τ=(s0,a0,…,si,ai,…,sn)\tau=(s_{0},a_{0},\dots,s_{i},a_{i},\dots,s_{n}), where s0s_{0} is the initial state, aia_{i} is the action that sis_{i} takes at step ii, and sns_{n} is the final state. Each intermediate state is determined by the transition function si+1=𝒫​(si,ai)s_{i+1}=\mathcal{P}(s_{i},a_{i}). The trajectory τ\tau is generated by repeatedly applying a policy π:𝒮×𝒯→𝒜\pi:\mathcal{S}\times\mathcal{T}\rightarrow\mathcal{A}, which maps the current state and task to an appropriate action. The policy can incorporate various reasoning strategies, including decomposition, planning, and verification. The quality of a trajectory is measured by the final reward R​(τ,t)=R​(sn,t)R(\tau,t)=R(s_{n},t), which evaluates how well the final state sns_{n} satisfies the requirements of task tt.
+
+##### Objective of SE-Agent
+
+The primary objective of our work is to develop an agent capable of generating high-quality reasoning trajectories for complex tasks. More precisely, for any given task t∈𝒯t\in\mathcal{T}, our goal is to find a optimal policy π∗\pi^{*} that maximizes the expected reward π∗=arg⁡maxπ⁡𝔼t∼𝒯​[ℛ​(τπ​(t),t)]\pi^{*}=\arg\max_{\pi}\mathbb{E}_{t\sim\mathcal{T}}[\mathcal{R}(\tau^{\pi}(t),t)], where τπ​(t)\tau^{\pi}(t) denotes the trajectory generated by policy π\pi for task tt.
+
+## 
+4 
+SE-Agent
+
+In this section, we introduce SE-Agent, a novel yet self-evolution paradigm to tackle intricate tasks involving multi-step executions. To derive a high-rewarding trajectory, SE-Agent alternatively generates a series of improved trajectories in which the best one is chosen. Specifically, we design the trajectory evolution mechanism using pre-collected pilot trajectories, which generate references for imitation learning of the SE-Agent. Our main inspiration is to formulate the pilot trajectories as an “improvement operator” applied to the apprentice trajectory, which allows the agent to continuously evolve its reasoning paths through iterative refinement and cross-trajectory learning.
+
+![Refer to caption](https://arxiv.org/html/x2.png)
+Figure 1: 
+
+Overview of our proposed *SE-Agent* self-evolution framework.
+ Starting from an initial pool of diverse pilot trajectories, the agent iteratively performs three trajectory-level operators—*Revision*, *Recombination*, and *Refinement*—to harvest cross-trajectory insights, escape local optima, and converge to a high-reward solution path that robustly solves the target task.
+
+### 
+4.1 
+Overview of SE-Agent
+
+The core philosophy of SE-Agent lies in leveraging the collective intelligence embedded within multiple reasoning trajectories, thereby enabling the agent to transcend the limitations of isolated reasoning attempts. As illustrated in Figure [1](https://arxiv.org/html/2508.02085v6#S4.F1), SE-Agent operates through an evolutionary framework that systematically improves trajectory quality across iterations.
+
+Given a task t∈𝒯t\in\mathcal{T}, we first generate a pool of diverse initial trajectories Γ0={τ1,τ2,…,τj,…}\Gamma_{0}=\{\tau_{1},\tau_{2},\dots,\tau_{j},\dots\} through multi-dimensional planning and exploration. Each trajectory τj\tau_{j} represents a sequence of reasoning steps and actions taken by the agent to solve the task tt. Rather than selecting the best trajectory from this pool and terminating, as traditional approaches do, SE-Agent employs an iterative evolution process to derive increasingly improved solutions.
+
+Our SE-Agent repeats the following three fundamental operations:
+
+- 
+•
+
+Revision:
+ Enhancing individual trajectories through self-reflection and targeted improvement.
+
+- 
+•
+
+Recombination:
+ Creating new trajectories by combining strengths from existing paths.
+
+- 
+•
+
+Refinement:
+ Optimizing trajectories by eliminating redundancies and enhancing efficiency.
+
+Each iteration kk produces a new generation of trajectories Γk\Gamma_{k}, with the quality of solutions progressively improved (See Figure [5](https://arxiv.org/html/2508.02085v6#S5.F5) for a detailed case study that demonstrates this process in actual bug fixing). This process continues until the convergence criteria are met or a predetermined number of iterations is reached. The final output is the highest-rewarding trajectory τ∗\tau^{*} that most effectively solves the original task. The key innovation of SE-Agent is its ability to escape local optima by intelligently exploring the solution space guided by previous experiences while simultaneously leveraging cross-trajectory inspiration to efficiently enhance performance. This dual mechanism enables continuous self-evolution of the agent’s reasoning capabilities.
+
+One may interpret SE-Agent as a specialized form of genetic algorithm tailored for multi-step reasoning with LLM-based agents. From such a perspective, our approach shares conceptual similarities with evolutionary computation frameworks where reasoning trajectories serve as the genotypes, and the resulting problem-solving performance constitutes the phenotype expression. However, unlike traditional genetic algorithms that typically require numerous iterations to reach acceptable solutions, SE-Agent is engineered to deliver high-quality results with remarkably fewer evolutionary cycles. This efficiency stems from our targeted operations that leverage the inherent reasoning capabilities of LLMs in combination with structured mechanisms for evolution.
+
+Furthermore, SE-Agent bears resemblance to self-play and expert iteration approaches in reinforcement learning, where each trajectory optimization step serves as an improvement operator that guides subsequent reasoning through enhanced exploration and exploitation balance. The key distinction lies in our explicit manipulation of complete reasoning trajectories rather than isolated state-action pairs, enabling more holistic improvements across the entire problem-solving process.
+
+### 
+4.2 
+Revision Operation
+
+The revision operation forms the foundation of SE-Agent’s self-evolution capability, focusing on generating and improving individual trajectories through introspection and targeted enhancement.
+
+#### 
+4.2.1 
+Generating Initial Trajectories
+
+To establish a diverse starting point for evolution, we employ two complementary approaches.
+
+##### Multi-Planning Exploration
+
+To begin, we generate distinct trajectories Γ0p​l​a​n\Gamma_{0}^{plan} for the task tt by systematically varying our planning strategies, prompting techniques, and reasoning approaches. This process maximizes the dimensional diversity of our initial trajectory pool, thereby ensuring a broad and comprehensive coverage of the solution space. Each trajectory τpp​l​a​n∈Γ0p​l​a​n\tau_{p}^{plan}\in\Gamma_{0}^{plan} is generated as:
+
+|  | τpp​l​a​n=Plan​(θp,t),\tau_{p}^{plan}=\text{Plan}(\theta_{p},t), |  | (1) |
+|---|---|---|---|
+
+where θp\theta_{p} represents the different planning parameters and strategies for building τpp​l​a​n\tau_{p}^{plan}.
+
+##### Mutation-Based Diversification
+
+We further expand the trajectory pool by applying controlled mutations to existing trajectories, producing additional paths Γ0m​u​t​a​t​e\Gamma_{0}^{mutate}. These mutations introduce targeted variations in reasoning steps, action selections, or intermediate conclusions:
+
+|  | τmm​u​t​a​t​e=Mutate​(τpp​l​a​n,δm),\tau_{m}^{mutate}=\text{Mutate}(\tau_{p}^{plan},\delta_{m}), |  | (2) |
+|---|---|---|---|
+
+where δm\delta_{m} controls the degree and nature of mutations applied for generating τmm​u​t​a​t​e\tau_{m}^{mutate}.
+
+This dual approach results in an initial pool of diverse reasoning trajectories Γ0=Γ0p​l​a​n∪Γ0m​u​t​a​t​e={τ1,τ2,…,τj,…}\Gamma_{0}=\Gamma_{0}^{plan}\cup\Gamma_{0}^{mutate}=\{\tau_{1},\tau_{2},\dots,\tau_{j},\dots\}, which serve as the foundation for subsequent evolution.
+
+#### 
+4.2.2 
+Reflection and Revision
+
+For each trajectory τj∈Γ0\tau_{j}\in\Gamma_{0}, we conduct a critical reflection process that analyzes the trajectory’s strengths, weaknesses, and spaces with potential for improvement:
+
+|  | Rj=Reflect​(τj,t).R_{j}=\text{Reflect}(\tau_{j},t). |  | (3) |
+|---|---|---|---|
+
+This reflection process identifies logical inconsistencies and elaborates on underdeveloped reasoning steps. Building upon these insights, we derive revised trajectories through targeted improvements:
+
+|  | τj′=Revise​(τj,Rj).\tau_{j}^{\prime}=\text{Revise}(\tau_{j},R_{j}). |  | (4) |
+|---|---|---|---|
+
+During the revision process, redundant or circular reasoning is eliminated, and alternative perspectives or approaches are incorporated when they are likely to enhance the trajectory’s effectiveness. The revision operation embodies the principle of “planning origin and reflective evolution”, where initial plans serve as seeds that evolve through structured self-reflection and targeted improvement.
+
+### 
+4.3 
+Recombination Operation
+
+While the revision operation enhances individual trajectories, the recombination operation plays a crucial role in enabling collective evolution by facilitating cross-trajectory learning. Specifically, we implement three complementary recombination strategies to generate superior trajectories.
+
+##### Crossover
+
+We identify high-performing trajectory segments across different reasoning paths and combine them to create hybrid trajectories that inherit the strengths of multiple parents:
+
+|  | τn​e​wc​r​o​s​s=Crossover​(τj1,τj2,α),j1≠j2,\tau_{new}^{cross}=\text{Crossover}(\tau_{j_{1}},\tau_{j_{2}},\alpha),\;\;\;j_{1}\neq j_{2}, |  | (5) |
+|---|---|---|---|
+
+where α\alpha determines the precise crossover points and dictates the combination strategy.
+
+##### Transfer Learning
+
+Through transfer learning, knowledge and effective strategies from successful trajectories are systematically transferred to enhance less developed or suboptimal paths:
+
+|  | τn​e​wt​r​a​n​s​f​e​r=Transfer​(τj1,{τj2,τj3,…},β),j1≠j2≠j3≠…,\tau_{new}^{transfer}=\text{Transfer}(\tau_{j_{1}},\{\tau_{j_{2}},\tau_{j_{3}},\dots\},\beta),\;\;\;j_{1}\neq j_{2}\neq j_{3}\neq\dots, |  | (6) |
+|---|---|---|---|
+
+where β\beta controls the transfer learning mechanism and knowledge adaptation process.
+
+##### Restructuring
+
+Restructuring entails the systematic reorganization of reasoning trajectories, drawing upon collective insights and a comprehensive global analysis of the entire trajectory pool:
+
+|  | τn​e​wr​e​s​t​r​u​c​t​u​r​e=Restructure​(Γk,γ),\tau_{new}^{restructure}=\text{Restructure}(\Gamma_{k},\gamma), |  | (7) |
+|---|---|---|---|
+
+where γ\gamma guides the restructuring process by utilizing aggregated information from the whole pool.
+
+### 
+4.4 
+Refinement Operation
+
+The refinement phase represents the culmination of our self-evolution mechanism, focusing on trajectory optimization and final selection based on comprehensive evaluation metrics.
+
+#### 
+4.4.1 
+Evaluation Function
+
+To effectively guide the self-evolution process and select optimal trajectories, we design a multi-dimensional reward function that evaluates trajectory quality across several critical axes:
+
+|  | Reward​(τ,t)=w1⋅TaskCompletion​(τ,t)+w2⋅ReasoningQuality​(τ)+w3⋅Efficiency​(τ),\text{Reward}(\tau,t)=w_{1}\cdot\text{TaskCompletion}(\tau,t)+w_{2}\cdot\text{ReasoningQuality}(\tau)+w_{3}\cdot\text{Efficiency}(\tau), |  | (8) |
+|---|---|---|---|
+
+where TaskCompletion​(τ,t)\text{TaskCompletion}(\tau,t) measures how effectively trajectory τ\tau solves task tt through structural validation, e.g., non-empty patch files, sufficient code-editing steps, and a reasonable trajectory length. ReasoningQuality​(τ)\text{ReasoningQuality}(\tau) evaluates the logical coherence, depth and robustness of the reasoning process, and Efficiency​(τ)\text{Efficiency}(\tau) quantifies computational efficiency in terms of reasoning steps and resource utilization. The hyperparameters w1w_{1}, w2w_{2}, and w3w_{3} control the relative importance of each evaluation dimension, enabling customization based on specific task requirements.
+
+Moreover, we implement TaskCompletion​(τ,t)\text{TaskCompletion}(\tau,t) as a combination of automatic metrics and specialized evaluators that jointly analyze both the reasoning process and the final outcome of each trajectory:
+
+|  | TaskCompletion​(τ,t)=AutoEval​(τ,t)+λ⋅ExpertEval​(τ,t),\text{TaskCompletion}(\tau,t)=\text{AutoEval}(\tau,t)+\lambda\cdot\text{ExpertEval}(\tau,t), |  | (9) |
+|---|---|---|---|
+
+where AutoEval​(τ,t)\text{AutoEval}(\tau,t) consists of rule-based structural validation metrics, while ExpertEval​(τ,t)\text{ExpertEval}(\tau,t) incorporating LLM-based evaluation of solution quality. λ\lambda serves as the weight for ExpertEval.
+
+#### 
+4.4.2 
+Selection and Convergence
+
+Building upon our comprehensive evaluation function, we implement a strategic selection mechanism that balances trajectory quality and diversity to drive the self-evolution process forward:
+
+|  | Γk+1=Select​(Γk∪Γk′∪Γknew,o),\Gamma_{k+1}=\text{Select}(\Gamma_{k}\cup\Gamma_{k}^{\prime}\cup\Gamma_{k}^{\text{new}},o), |  | (10) |
+|---|---|---|---|
+
+where oo is the number of elite trajectories to maintain. This mechanism employs a hybrid approach to automatically retain the top-performing trajectories based on reward scores. Meanwhile, it ensures representation of distinct reasoning approaches by calculating trajectory dissimilarity metrics.
+
+This selection process continues iteratively until either a predefined number of evolution cycles is completed or convergence criteria are met (e.g., when the improvement of maximum reward falls below a threshold ϵ\epsilon for consecutive iterations). The final output is the highest-rewarding trajectory:
+
+|  | τ∗=arg⁡maxτ∈ΓK⁡Reward​(τ,t),\tau^{*}=\arg\max_{\tau\in\Gamma_{K}}\text{Reward}(\tau,t), |  | (11) |
+|---|---|---|---|
+
+where ΓK\Gamma_{K} is the final trajectory pool after all evolution cycles.
+
+This selection and convergence approach embodies the essence of “collective competition and genetic emergence”, where trajectories compete and collaborate through structured evolution. Through this mechanism, SE-Agent achieves two critical advantages: (1) exploring substantially larger solution spaces by systematically navigating beyond local optima, and (2) leveraging cross-trajectory inspiration to efficiently enhance performance while minimizing the impact of suboptimal reasoning paths. These advantages enable SE-Agent to tackle complex multi-step reasoning tasks with unprecedented effectiveness and efficiency, demonstrating the power of self-evolution.
+
+## 
+5 
+Experiments
+
+### 
+5.1 
+Experimental Setup
+
+Table 1: 
+Performance comparison of our proposed SE-Agent and other frameworks on SWE-bench Verified, evaluated with Pass@1 and Pass@5 across various LLMs. SWE-Agent is a CodeAct-based framework, and SWE-Search is MCTS-based. The best results are highlighted in 
+bold
+. 
+![[Uncaptioned image]](https://arxiv.org/html/Fig/open_source.png)
+ indicates open-source LLMs, while 
+![[Uncaptioned image]](https://arxiv.org/html/Fig/close_source.png)
+ indicates closed-source LLMs.
+
+| LLM | SWE-Agent | SWE-Search | SE-Agent |  |  |  |
+|---|---|---|---|---|---|---|
+| (CodeAct-Based) | (MCTS-Based) | (Ours) |  |  |  |  |
+| Pass@1 | Pass@5 | Pass@1 | Pass@5 | Pass@1 | Pass@5 |  |
+| DeepSeek-V3-0324 | 31.6% | 35.8% | 39.4% | 41.8% | 54.8% | 58.4% |
+| Qwen-2.5-72b-Instruct | 18.8% | 20.6% | 23.4% | 26.2% | 38.8% | 42.4% |
+| Llama-3.1-70b-Instruct | 15.4% | 17.8% | 21.8% | 23.6% | 32.6% | 35.2% |
+| GPT-4o | 22.4% | 25.4% | 32.6% | 35.8% | 40.4% | 44.8% |
+| Claude-3.7-Sonnet | 40.6% | 43.2% | 47.4% | 50.6% | 61.2% | 63.6% |
+
+##### Benchmark
+
+In our experiments, we utilize SWE-bench Verified, which is a curated subset of the larger SWE-bench benchmark, consisting of 500 real-world GitHub issues. This benchmark has been meticulously designed to provide a self-contained and controlled environment for evaluating the performance of various frameworks, with a specific focus on functional bug fixes. Each instance in the benchmark includes a natural language description of a GitHub issue and its corresponding code repository, serving as the sole input to the model under evaluation. To guarantee the rigor of evaluation, developer-written unit tests are employed to verify the correctness of model-generated patches. This combination of real-world scenarios and systematic validation establishes SWE-bench Verified as a robust and consistent benchmark for assessing the effectiveness of code agents.
+
+##### Evaluation Metrics
+
+To evaluate the performance of our proposed SE-Agent, we employ two key metrics, i.e., the resolution rate (Pass@1) and Pass@5. Pass@1 quantifies the percentage of issues that are successfully resolved on the first attempt, serving as an indicator of the system’s overall effectiveness in generating accurate solutions without requiring multiple iterations. In contrast, Pass@5 assesses the percentage of issues for which a correct solution is identified within five attempts, thereby providing insight into the agent’s search efficiency under constrained iteration budgets. Together, these metrics offer a comprehensive evaluation framework, capturing both the precision of the agent’s initial predictions and its ability to explore solution spaces efficiently.
+
+##### Baselines
+
+For a comprehensive and fair evaluation, we compare the performance of SE-Agent against two widely recognized baselines: SWE-Agent (CodeAct-based) and SWE-Search (MCTS-based). These baselines represent high-performing, open-source frameworks frequently utilized in recent research on automated software engineering tasks. Our comparison is conducted across multiple LLMs, encompassing both open-source and closed-source paradigms. Specifically, we evaluate three leading open-source models (DeepSeek-V3-0324, Qwen-2.5-72b-Instruct, and Llama-3.1-70b-Instruct) as well as two state-of-the-art closed-source models (GPT-4o and Claude-3.7-Sonnet). Notably, SE-Agent is designed to be seamlessly integrated as a plug-and-play module within existing frameworks. Here, we choose SWE-Agent as the basis for subsequent experiments.
+
+##### Implementation Details
+
+To ensure a fair comparison, we adopt identical prompt formats across all models evaluated in this paper. In our proposed SE-Agent, we set the number of candidate trajectories to 10 by default, striking a balance between exploration diversity and computational efficiency.
+
+We begin by employing 5 distinct planning strategies, as described in Appendix [A.1.1](https://arxiv.org/html/2508.02085v6#A1.SS1.SSS1), to generate a diverse set of initial trajectories that reflect varied reasoning patterns. These serve as the foundational seeds for further optimization. Next, we apply the reflection and revision operations (Appendix [A.1.2](https://arxiv.org/html/2508.02085v6#A1.SS1.SSS2)) to each initial trajectory. This process generates up to 10 trajectories by encouraging self-criticism and iterative improvement within the agent’s reasoning process. Following the generation of candidate trajectories, we perform the recombination operation (Appendix [A.2](https://arxiv.org/html/2508.02085v6#A1.SS2)), which enables the agent to integrate complementary insights from different trajectories, promoting information fusion and enhancing reasoning coherence. Subsequently, the refinement operation (Appendix [A.3](https://arxiv.org/html/2508.02085v6#A1.SS3)) is applied to finalize the optimized trajectories, ensuring logical consistency and code validity when applicable.
+
+For deployment, we run all open-source models locally, including DeepSeek-V3-0324, Qwen-2.5-72b-Instruct, and Llama-3.1-70b-Instruct, using NVIDIA A100 GPUs with 80GB of memory. For closed-source models such as GPT-4o and Claude-3.7-Sonnet, we access them via the official APIs provided by OpenAI and Anthropic, respectively. All experiments are conducted under the same evaluation setting on SWE-bench Verified to ensure consistency and reproducibility.
+
+### 
+5.2 
+Experimental Results
+
+##### Performance Comparison
+
+![Refer to caption](https://arxiv.org/html/x3.png)
+Figure 2: 
+Ablation study of SE-Agent on SWE-bench Verified with three variants.
+
+Table [1](https://arxiv.org/html/2508.02085v6#S5.T1) presents a performance comparison between our proposed SE-Agent and existing frameworks (SWE-Agent and SWE-Search) on SWE-bench Verified. The results indicate that SE-Agent consistently outperforms the baselines across all five evaluated LLMs. Compared with SWE-Agent, SE-Agent delivers a relative improvement of +112% (Llama-3.1-70b-Instruct), +80% (GPT-4o), and +51% (Claude-3.7-Sonnet). Against the stronger MCTS-based SWE-Search, the relative gains are still +30% on average. Notably, all five models demonstrate substantial and consistent performance gains when integrated with our proposed framework, highlighting the generalizability and effectiveness of SE-Agent across diverse model families.
+
+##### Ablation Study
+
+In this part, we conduct the ablation study to explore the contribution of each designed module in SE-Agent. Therefore, we compare SE-Agent with three different variants: (1) w/o Revision, i.e., the revision operation is removed, resulting in only multiple homogenized trajectories, (2) w/o Recombination, where we do not use the recombination operation for trajectory interaction, and (3) w/o All, which does not use any trajectory optimization operation. The results are presented in Figure [2](https://arxiv.org/html/2508.02085v6#S5.F2), which illustrates two facts: (1) all designed modules are important for SE-Agent, where if any module is removed, Pass@1 will decrease, and (2) revision is effective for the performance enhancement of SE-Agent because it provides a diverse set of trajectories for subsequent recombination. As illustrated in Figure [3](https://arxiv.org/html/2508.02085v6#S5.F3), we further conduct a detailed analysis of the overlap in successfully resolved issue instances across different frameworks on SWE-bench Verified, using a Venn diagram for visualization. The results reveal that our proposed SE-Agent uniquely solves 12 issue instances that none of the other models are able to address. In addition, SE-Agent exhibits substantial overlap with leading baselines in the set of resolved issues, further underscoring its competitive overall performance. This analysis highlights two key advantages of SE-Agent: (1) its competitive effectiveness in solving tasks tackled by state-of-the-art models, and (2) its distinct capability to address a broader range of difficult or previously unsolved issues, demonstrating robustness and complementary problem-solving strength.
+
+![Refer to caption](https://arxiv.org/html/x4.png)
+Figure 3: 
+Venn diagram of resolved issues on SWE-bench Verified.
+
+##### Hyperparameter Analysis
+
+In Figure [4](https://arxiv.org/html/2508.02085v6#S5.F4), we investigate the effect of two key hyperparameters on the performance of SE-Agent, i.e., the number of candidate trajectories and the maximum API cost. Results show SE-Agent reaches near-optimal performance with just 10 candidate trajectories, demonstrating our trajectory-based search strategy’s efficiency through inter-trajectory interactions. The maximum API cost reflects the exploration depth of SE-Agent. Under the same cost budgets, SE-Agent consistently outperforms baselines in terms of Pass@1, validating our self-evolution framework’s effectiveness.
+
+##### Case Study
+
+To better illustrate the concrete implementation of SE-Agent, Figure [5](https://arxiv.org/html/2508.02085v6#S5.F5) provides a complete case study demonstrating how SE-Agent progressively optimizes trajectories through its three core operations. Moreover, a case comparison is shown in Figure [6](https://arxiv.org/html/2508.02085v6#S5.F6), the crash surfaces inside 
+_validation.py
+, yet the root cause is that the wrapper in 
+multioutput.py
+ never stores the required 
+classes_
+ field after training. Traditional ReAct/MCTS-based agents cling to the stack trace: (1) they pose the bug too narrowly, (2) next-token prediction keeps every edit local, and (3) their rollouts are near-identical, so each patch merely tweaks 
+_validation.py
+. Our SE-Agent sidesteps this tunnel vision by iteratively interacting with and evolving entire trajectories. This trajectory-level evolution serves as an implicit regularizer, forcing the search to generate genuinely novel solutions rather than minor variants of the same fix. Figure [7](https://arxiv.org/html/2508.02085v6#S5.F7) provides a detailed comparison of the trajectories output by SE-Agent before and after optimization. Notably, none of the top three open-source frameworks on SWE-bench Verified can solve this case.
+
+![Refer to caption](https://arxiv.org/html/x5.png)
+
+![Refer to caption](https://arxiv.org/html/x6.png)
+
+Figure 4: 
+Performance of SE-Agent at different numbers of candidate trajectories (left) and its comparison with SWE-Agent and SWE-Search under different maximum API costs (right).![Refer to caption](https://arxiv.org/html/Fig/se-agent-case-study-viz-5.png)
+Figure 5: 
+A complete case study demonstrating how SE-Agent progressively optimizes trajectories through its three core operations.![Refer to caption](https://arxiv.org/html/x7.png)
+Figure 6: 
+
+SWE‑bench case 
+scikit‑learn
+ #14629.
+*Top (Traditional Agent).* Search paths are highly homogeneous: each rollout edits 
+_validation.py
+, yielding near-duplicate “quick-fix” patches that hide the visible error yet fail hidden tests. *Bottom (SE‑Agent).* By mixing and recombining whole trajectories, our agent explores diverse regions of the patch space, discovers 
+multioutput.py
+, and adds a one-line write of 
+classes_
+, providing a root-level repair that passes the full test suite.![Refer to caption](https://arxiv.org/html/x8.png)
+Figure 7: 
+A case analysis comparing the trajectories output by SE-Agent before and after optimization.
+
+## 
+6 
+Conclusion
+
+In this work, we introduce SE-Agent, a self-evolution framework designed to enhance the multi-step reasoning capabilities of LLM-based agents through iterative trajectory optimization. By revising, recombining, and refining previously generated trajectories, SE-Agent systematically expands the exploration space and leverages cross-trajectory insights to improve decision-making efficiency. Experimental evaluations on SWE-bench Verified demonstrate that SE-Agent consistently outperforms strong baselines across multiple LLMs. Our findings highlight the value of incorporating self-evolution principles into agent design, paving the way for more robust and adaptable reasoning frameworks in complex environments. Looking forward, we aim to extend the self-evolution paradigm of SE-Agent to a wider spectrum of path-search problems, including iterative search-reason frameworks such as DeepSearch and embodied Intelligence.
+
+## References
+
+- 
+[1]
+
+ K. Zhang, J. Li, G. Li, X. Shi, and Z. Jin, “Codeagent: Enhancing code generation with tool-integrated agent systems for real-world repo-level coding challenges,” *arXiv preprint arXiv:2401.07339*, 2024. 
+
+- 
+[2]
+
+ C. Qu, S. Dai, X. Wei, H. Cai, S. Wang, D. Yin, J. Xu, and J.-R. Wen, “Tool learning with large language models: A survey,” *Frontiers of Computer Science*, 2025. 
+
+- 
+[3]
+
+ Z. Wang, Z. Cheng, H. Zhu, D. Fried, and G. Neubig, “What are tools anyway? a survey from the language model perspective,” *arXiv preprint arXiv:2403.15452*, 2024. 
+
+- 
+[4]
+
+ Z. Wang, D. Fried, and G. Neubig, “Trove: Inducing verifiable and efficient toolboxes for solving programmatic tasks,” *arXiv preprint arXiv:2401.12869*, 2024. 
+
+- 
+[5]
+
+ T. Cai, X. Wang, T. Ma, X. Chen, and D. Zhou, “Large language models as tool makers,” *arXiv preprint arXiv:2305.17126*, 2023. 
+
+- 
+[6]
+
+ R. Nakano, J. Hilton, S. Balaji, J. Wu, L. Ouyang, C. Kim, C. Hesse, S. Jain, V. Kosaraju, and W. Saunders, “Webgpt: Browser-assisted question-answering with human feedback,” *arXiv preprint arXiv:2112.09332*, 2021. 
+
+- 
+[7]
+
+ J. Wei, X. Wang, D. Schuurmans, M. Bosma, F. Xia, E. Chi, Q. V. Le, and D. Zhou, “Chain-of-thought prompting elicits reasoning in large language models,” *Advances in Neural Information Processing Systems (NeurIPS)*, 2022. 
+
+- 
+[8]
+
+ S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao, “React: Synergizing reasoning and acting in language models,” in *International Conference on Learning Representations (ICLR)*, 2023. 
+
+- 
+[9]
+
+ G. Mialon, R. Dessì, M. Lomeli, C. Nalmpantis, R. Pasunuru, R. Raileanu, B. Rozière, T. Schick, J. Dwivedi-Yu, and A. Celikyilmaz, “Augmented language models: a survey,” *arXiv preprint arXiv:2302.07842*, 2023. 
+
+- 
+[10]
+
+ N. Shinn, F. Cassano, A. Gopinath, K. Narasimhan, and S. Yao, “Reflexion: Language agents with verbal reinforcement learning,” *Advances in Neural Information Processing Systems (NeurIPS)*, 2023. 
+
+- 
+[11]
+
+ M. Renze and E. Guven, “Self-reflection in llm agents: Effects on problem-solving performance,” *arXiv preprint arXiv:2405.06682*, 2024. 
+
+- 
+[12]
+
+ L. Gao, A. Madaan, S. Zhou, U. Alon, P. Liu, Y. Yang, J. Callan, and G. Neubig, “Pal: Program-aided language models,” in *International Conference on Machine Learning (ICML)*, 2023. 
+
+- 
+[13]
+
+ W. Huang, P. Abbeel, D. Pathak, and I. Mordatch, “Language models as zero-shot planners: Extracting actionable knowledge for embodied agents,” in *International Conference on Machine Learning (ICML)*, 2022. 
+
+- 
+[14]
+
+ C. B. Browne, E. Powley, D. Whitehouse, S. M. Lucas, P. I. Cowling, P. Rohlfshagen, S. Tavener, D. Perez, S. Samothrakis, and S. Colton, “A survey of monte carlo tree search methods,” *IEEE Transactions on Computational Intelligence and AI in Games (T-CIAIG)*, 2012. 
+
+- 
+[15]
+
+ Y. Pitanov, A. Skrynnik, A. Andreychuk, K. Yakovlev, and A. Panov, “Monte-carlo tree search for multi-agent pathfinding: Preliminary results,” in *International Conference on Hybrid Artificial Intelligence Systems (HAIS)*, 2023. 
+
+- 
+[16]
+
+ L. Kocsis and C. Szepesvári, “Bandit based monte-carlo planning,” in *European Conference on Machine Learning (ECML)*, 2006. 
+
+- 
+[17]
+
+ D. Silver, J. Schrittwieser, K. Simonyan, I. Antonoglou, A. Huang, A. Guez, T. Hubert, L. Baker, M. Lai, and A. Bolton, “Mastering the game of go without human knowledge,” *Nature*, 2017. 
+
+- 
+[18]
+
+ M. Painter, M. Baioumy, N. Hawes, and B. Lacerda, “Monte carlo tree search with boltzmann exploration,” *Advances in Neural Information Processing Systems (NeurIPS)*, 2023. 
+
+- 
+[19]
+
+ A. K. Vijayakumar, M. Cogswell, R. R. Selvaraju, Q. Sun, S. Lee, D. Crandall, and D. Batra, “Diverse beam search: Decoding diverse solutions from neural sequence models,” in *AAAI Conference on Artificial Intelligence (AAAI)*, 2018. 
+
+- 
+[20]
+
+ A. Holtzman, J. Buys, L. Du, M. Forbes, and Y. Choi, “The curious case of neural text degeneration,” *International Conference on Learning Representations (ICLR)*, 2020. 
+
+- 
+[21]
+
+ Y. Zhang, H. Diddee, S. Holm, H. Liu, X. Liu, V. Samuel, B. Wang, and D. Ippolito, “Noveltybench: Evaluating creativity and diversity in language models,” *arXiv preprint arXiv:2504.05228*, 2025. 
+
+- 
+[22]
+
+ A. Kalavasis, A. Mehrotra, and G. Velegkas, “On the limits of language generation: Trade-offs between hallucination and mode collapse,” *arXiv preprint arXiv:2411.09642*, 2024. 
+
+- 
+[23]
+
+ Y. Guo, G. Shang, M. Vazirgiannis, and C. Clavel, “The curious decline of linguistic diversity: Training language models on synthetic text,” in *The Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL)*, 2024. 
+
+- 
+[24]
+
+ S. Murthy, T. Ullman, and J. Hu, “One fish, two fish, but not the whole sea: Alignment reduces language models’ conceptual diversity,” in *The Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL)*, 2025. 
+
+- 
+[25]
+
+ C. E. Jimenez, J. Yang, A. Wettig, S. Yao, K. Pei, O. Press, and K. R. Narasimhan, “Swe-bench: Can language models resolve real-world github issues?” in *International Conference on Learning Representations (ICLR)*, 2024. 
+
+- 
+[26]
+
+ J. Yang, C. Jimenez, A. Wettig, K. Lieret, S. Yao, K. Narasimhan, and O. Press, “Swe-agent: Agent-computer interfaces enable automated software engineering,” *Advances in Neural Information Processing Systems (NeurIPS)*, 2024. 
+
+- 
+[27]
+
+ X. Wang, B. Li, Y. Song, F. F. Xu, X. Tang, M. Zhuge, J. Pan, Y. Song, B. Li, J. Singh, H. H. Tran, F. Li, R. Ma, M. Zheng, B. Qian, Y. Shao, N. Muennighoff, Y. Zhang, B. Hui, J. Lin, R. Brennan, H. Peng, H. Ji, and G. Neubig, “Opendevin: An open platform for ai software developers as agents,” in *International Conference on Learning Representations (ICLR)*, 2025. 
+
+- 
+[28]
+
+ X. Wang, Y. Chen, L. Yuan, Y. Zhang, Y. Li, H. Peng, and H. Ji, “Executable code actions elicit better llm agents,” in *International Conference on Machine Learning (ICML)*, 2024. 
+
+- 
+[29]
+
+ C. S. Xia, Y. Deng, S. Dunn, and L. Zhang, “Agentless: Demystifying llm-based software engineering agents,” *arXiv preprint arXiv:2407.01489*, 2024. 
+
+- 
+[30]
+
+ Y. Zhang, H. Ruan, Z. Fan, and A. Roychoudhury, “Autocoderover: Autonomous program improvement,” in *International Symposium on Software Testing and Analysis (ISSTA)*, 2024, pp. 1592–1604. 
+
+- 
+[31]
+
+ Y. Ma, Q. Yang, R. Cao, B. Li, F. Huang, and Y. Li, “Alibaba lingmaagent: Improving automated issue resolution via comprehensive repository exploration,” *arXiv preprint arXiv:2406.01422*, 2024. 
+
+- 
+[32]
+
+ X. Wang, J. Wei, D. Schuurmans, Q. Le, E. Chi, S. Narang, A. Chowdhery, and D. Zhou, “Self-consistency improves chain of thought reasoning in language models,” *arXiv preprint arXiv:2203.11171*, 2022. 
+
+- 
+[33]
+
+ Y. Xie, A. Goyal, W. Zheng, M.-Y. Kan, T. P. Lillicrap, K. Kawaguchi, and M. Shieh, “Monte carlo tree search boosts reasoning via iterative preference learning,” *arXiv preprint arXiv:2405.00451*, 2024. 
+
+- 
+[34]
+
+ M. Besta, N. Blach, A. Kubicek, R. Gerstenberger, M. Podstawski, L. Gianinazzi, J. Gajda, T. Lehmann, H. Niewiadomski, and P. Nyczyk, “Graph of thoughts: Solving elaborate problems with large language models,” in *AAAI Conference on Artificial Intelligence (AAAI)*, 2024. 
+
+- 
+[35]
+
+ S. Yao, D. Yu, J. Zhao, I. Shafran, T. Griffiths, Y. Cao, and K. Narasimhan, “Tree of thoughts: Deliberate problem solving with large language models,” *Advances in Neural Information Processing Systems (NeurIPS)*, 2023. 
+
+- 
+[36]
+
+ A. Antoniades, A. Örwall, K. Zhang, Y. Xie, A. Goyal, and W. Wang, “Swe-search: Enhancing software agents with monte carlo tree search and iterative refinement,” *arXiv preprint arXiv:2410.20285*, 2024. 
+
+- 
+[37]
+
+ J. Chen, H. Li, J. Yang, Y. Liu, and Q. Ai, “Enhancing llm-based agents via global planning and hierarchical execution,” *arXiv preprint arXiv:2504.16563*, 2025. 
+
+- 
+[38]
+
+ H. Li, J. Chen, J. Yang, Q. Ai, W. Jia, Y. Liu, K. Lin, Y. Wu, G. Yuan, and Y. Hu, “Legalagentbench: Evaluating llm agents in legal domain,” *arXiv preprint arXiv:2412.17259*, 2024. 
+
+- 
+[39]
+
+ H. Jin, Z. Sun, and H. Chen, “Rgd: Multi-llm based agent debugger via refinement and generation guidance,” in *International Conference on Agents (ICA)*, 2024. 
+
+- 
+[40]
+
+ G. Wang, Y. Xie, Y. Jiang, A. Mandlekar, C. Xiao, Y. Zhu, L. Fan, and A. Anandkumar, “Voyager: An open-ended embodied agent with large language models,” *arXiv preprint arXiv:2305.16291*, 2023. 
+
+- 
+[41]
+
+ W. Xiong, Y. Song, Q. Dong, B. Zhao, F. Song, X. Wang, and S. Li, “Mpo: Boosting llm agents with meta plan optimization,” *arXiv preprint arXiv:2503
+
+...(内容已截断)

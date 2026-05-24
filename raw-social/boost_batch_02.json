@@ -1,0 +1,47 @@
+[
+  {
+    "query": "reddit \"CrewAI\" \"agent\" \"pain\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "reddit \"AutoGen\" \"multi-agent\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "reddit \"MCP\" \"AI agents\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "reddit \"AI coding agents\" \"issues\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "reddit \"Claude Code\" \"agent\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  }
+]

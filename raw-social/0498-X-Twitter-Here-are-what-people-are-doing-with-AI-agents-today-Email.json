@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/bindureddy AI agent OR agents",
+  "search_rank": 1,
+  "name": "Here are what people are doing with AI agents today - Email ...",
+  "url": "https://twitter.com/bindureddy/status/1788721572028788836",
+  "snippet": "Here are what people are doing with AI agents today - Email automation, doc generation, on the fly dashboards, plot generator, script and code generation!",
+  "id": 498,
+  "platform": "X/Twitter",
+  "content": "Here are what people are doing with AI agents today - Email automation, doc generation, on the fly dashboards, plot generator, script and code generation!",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

@@ -1,0 +1,68 @@
+{
+  "id": 618,
+  "name": "Okay guys, I finally made a framework that can rewrite itself. Thus, it can be called self-improving AI. Thanks to LLAMA 3 that this can now be done locally.",
+  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1caos3i/okay_guys_i_finally_made_a_framework_that_can/",
+  "platform": "Reddit",
+  "subreddit": "LocalLLaMA",
+  "extraction_status": "ok",
+  "anysearch_extract_status": "failed:extract_upstream_error\nupstream returned error: HTTP 403 403 Forbidden",
+  "content_timestamp": "2024-04-23",
+  "collected_at": "2026-05-21T22:23:52+08:00",
+  "time_slice": "2024-04",
+  "query": "site:reddit.com/r/LocalLLaMA/comments framework rewrite itself",
+  "source": "builder-b-raw-social-supplement-2026-05-21",
+  "score": 32,
+  "num_comments": 18,
+  "author": "xSNYPSx",
+  "content": "# Okay guys, I finally made a framework that can rewrite itself. Thus, it can be called self-improving AI. Thanks to LLAMA 3 that this can now be done locally.\n\nSource: https://www.reddit.com/r/LocalLLaMA/comments/1caos3i/okay_guys_i_finally_made_a_framework_that_can/\nSubreddit: r/LocalLLaMA\nAuthor: u/xSNYPSx\nScore: 32 | Comments: 18\nCreated: 2024-04-23\n\n## Post Body\nhttps://github.com/xSNYPSx/self_improving_ai/\n\n## Top Comments\n\n### Comment 1 — u/Briskfall (score 47)\nSees tag \"Funny\" 🤨.\n\nTakes me back to the early days of GPT4 with people hyping up things like AutoGPT and babyagi that just ended up burning tokens.\n\n### Comment 2 — u/xSNYPSx (score 11)\nThis AI will follow the prompt and improve its code. It is recommended to use model LLAMA 3 70B or better. I used a local server using LM studio (PORT 1263 !!!) . This code does not contain a model or server; you must configure the server yourself.\n\nThis code uses the local API to instruct the agent to improve itself; the agent sees the log + initial prompt as a prompt. Thus, the agent sees the entire history of his own actions. The agent is instructed to use the command line, and the code in this repository formats the agent's response and executes it through the CMD. Before each run of the code, you must press ENTER (for your safety). Or you can simply remove the very bottom line in the format\\_answer.py file, which makes the self-improvement recursive and without any human intervention. To run just use the Run.py file The Start from scratch.py file will clear the log and the agent will start over, however, I intentionally took the log checkpoint when the agent has already read each of its code files and is ready to improve itself. Good luck ! I disclaim responsibility for any consequences of the singularity.\n\n### Comment 3 — u/abhuva79 (score 9)\nSo in what way do you define \"improvement\" for the agent?  \n\n\nIs it just making the code cleaner / more optimized for the task the code was intended to do in the first place?  \nOr does it go beyond that?\n\n### Comment 4 — u/Confident-Alarm-6911 (score 5)\nIt’s been 10 hours, do you have AGI now? Xd\n\n### Comment 5 — u/[deleted] (score 4)\n[removed]\n\n### Comment 6 — u/Any_Ad_8450 (score 2)\nvideo demo would be nice\n\n### Comment 7 — u/Any_Ad_8450 (score 2)\nthis is a self birbing agi test tho [https://krausunxp.itch.io/dabirb-ai](https://krausunxp.itch.io/dabirb-ai)\n\n### Comment 8 — u/Flying_Madlad (score 1)\nIs there tool integration like browsing, persistent memory, or tree/chain of though? I suspect those are going to need to be there before it will really function well.",
+  "top_comments": [
+    {
+      "author": "Briskfall",
+      "score": 47,
+      "created_utc": 1713829307.0,
+      "body": "Sees tag \"Funny\" 🤨.\n\nTakes me back to the early days of GPT4 with people hyping up things like AutoGPT and babyagi that just ended up burning tokens."
+    },
+    {
+      "author": "xSNYPSx",
+      "score": 11,
+      "created_utc": 1713826787.0,
+      "body": "This AI will follow the prompt and improve its code. It is recommended to use model LLAMA 3 70B or better. I used a local server using LM studio (PORT 1263 !!!) . This code does not contain a model or server; you must configure the server yourself.\n\nThis code uses the local API to instruct the agent to improve itself; the agent sees the log + initial prompt as a prompt. Thus, the agent sees the entire history of his own actions. The agent is instructed to use the command line, and the code in this repository formats the agent's response and executes it through the CMD. Before each run of the code, you must press ENTER (for your safety). Or you can simply remove the very bottom line in the format\\_answer.py file, which makes the self-improvement recursive and without any human intervention. To run just use the Run.py file The Start from scratch.py file will clear the log and the agent will start over, however, I intentionally took the log checkpoint when the agent has already read each of its code files and is ready to improve itself. Good luck ! I disclaim responsibility for any consequences of the singularity."
+    },
+    {
+      "author": "abhuva79",
+      "score": 9,
+      "created_utc": 1713829126.0,
+      "body": "So in what way do you define \"improvement\" for the agent?  \n\n\nIs it just making the code cleaner / more optimized for the task the code was intended to do in the first place?  \nOr does it go beyond that?"
+    },
+    {
+      "author": "Confident-Alarm-6911",
+      "score": 5,
+      "created_utc": 1713865378.0,
+      "body": "It’s been 10 hours, do you have AGI now? Xd"
+    },
+    {
+      "author": "[deleted]",
+      "score": 4,
+      "created_utc": 1713888741.0,
+      "body": "[removed]"
+    },
+    {
+      "author": "Any_Ad_8450",
+      "score": 2,
+      "created_utc": 1713830035.0,
+      "body": "video demo would be nice"
+    },
+    {
+      "author": "Any_Ad_8450",
+      "score": 2,
+      "created_utc": 1713830181.0,
+      "body": "this is a self birbing agi test tho [https://krausunxp.itch.io/dabirb-ai](https://krausunxp.itch.io/dabirb-ai)"
+    },
+    {
+      "author": "Flying_Madlad",
+      "score": 1,
+      "created_utc": 1713836141.0,
+      "body": "Is there tool integration like browsing, persistent memory, or tree/chain of though? I suspect those are going to need to be there before it will really function well."
+    }
+  ]
+}

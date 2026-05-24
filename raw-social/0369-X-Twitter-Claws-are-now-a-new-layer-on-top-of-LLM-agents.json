@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/karpathy AI agent OR agents",
+  "search_rank": 4,
+  "name": "Claws are now a new layer on top of LLM agents",
+  "url": "https://x.com/karpathy/status/2024987174077432126",
+  "snippet": "For example, /add-telegram instructs your AI agent how to modify the actual code to integrate Telegram. I haven't come across this yet and ... date: Feb 20, 2026",
+  "id": 369,
+  "platform": "X/Twitter",
+  "content": "For example, /add-telegram instructs your AI agent how to modify the actual code to integrate Telegram. I haven't come across this yet and ... date: Feb 20, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Feb 20, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

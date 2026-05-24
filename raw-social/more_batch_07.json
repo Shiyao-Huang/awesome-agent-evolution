@@ -1,0 +1,47 @@
+[
+  {
+    "query": "site:reddit.com/r/AutoGenAI \"agentic AI\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "site:reddit.com/r/AutoGenAI \"self-improving AI\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "site:reddit.com/r/OpenAI \"AI agents\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "site:reddit.com/r/OpenAI \"AI agent\" \"workflow\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "site:reddit.com/r/OpenAI \"agentic AI\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  }
+]

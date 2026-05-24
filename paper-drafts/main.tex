@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{fontspec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\setmainfont{Arial Unicode.ttf}[
+  Path=/System/Library/Fonts/Supplemental/
+]
+
+% Lightweight algorithm boxes for TeX Live Basic environments.
+\newenvironment{algorithm}[1][]{\begin{figure}[#1]}{\end{figure}}
+\newenvironment{algorithmic}[1][]{\begin{enumerate}}{\end{enumerate}}
+\newcommand{\Require}{\item[\textbf{Input:}]}
+\newcommand{\Ensure}{\item[\textbf{Output:}]}
+\newcommand{\State}{\item}
+\newcommand{\For}[1]{\item[\textbf{for}] #1 \textbf{do}}
+\newcommand{\ForAll}[1]{\item[\textbf{for all}] #1 \textbf{do}}
+\newcommand{\While}[1]{\item[\textbf{while}] #1 \textbf{do}}
+\newcommand{\If}[1]{\item[\textbf{if}] #1 \textbf{then}}
+\newcommand{\Else}{\item[\textbf{else}]}
+\newcommand{\Return}{\textbf{return} }
+\let\REQUIRE\Require
+\let\ENSURE\Ensure
+\let\STATE\State
+\let\FOR\For
+\let\FORALL\ForAll
+\let\WHILE\While
+\let\IF\If
+\let\ELSE\Else
+\let\RETURN\Return
+\newcommand{\EndFor}{}
+\newcommand{\EndIf}{}
+\newcommand{\EndWhile}{}
+\let\ENDFOR\EndFor
+\let\ENDIF\EndIf
+\let\ENDWHILE\EndWhile
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  citecolor=green!45!black,
+  urlcolor=blue!60!black,
+  pdftitle={Self-Evolving AI: A Unified Framework for Generation, Evaluation, Memory, and Improvement},
+  pdfauthor={Awesome Evolution Research Team}
+}
+
+\title{Self-Evolving AI: A Unified Framework for Generation, Evaluation, Memory, and Improvement}
+\author{Awesome Evolution Research Team}
+\date{Draft compiled from local research corpus, May 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Self-evolving AI systems modify prompts, memory, tools, code, workflows, data curricula, or model behavior through feedback-driven loops. This survey unifies the field across language-model self-improvement, evolutionary computation, AutoML, agent architectures, code repair, and production agent frameworks. We organize the literature into five evolution loops, compare representative papers and open-source systems, summarize benchmark evidence, analyze practical pain points, and identify safety and governance challenges for systems that learn to improve their own operational machinery.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\input{ch1-intro}
+\input{ch2-taxonomy}
+\input{ch3-methods}
+\input{ch4-evolutionary}
+\input{ch5-evaluation}
+\input{ch6-frameworks}
+\input{ch7-painpoints}
+\input{ch8-future}
+
+\appendix
+\input{appendix}
+
+\bibliographystyle{plain}
+\bibliography{references,references-aliases}
+
+\end{document}

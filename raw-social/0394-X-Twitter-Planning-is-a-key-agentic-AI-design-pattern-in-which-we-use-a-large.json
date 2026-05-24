@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/AndrewYNg AI agent OR agents",
+  "search_rank": 9,
+  "name": "Planning is a key agentic AI design pattern in which we use a large ...",
+  "url": "https://x.com/AndrewYNg/status/1779606380665803144",
+  "snippet": "Planning is a key agentic AI design pattern in which we use a large language model (LLM) to autonomously decide on what sequence of steps to execute to ... date: Apr 14, 2024",
+  "id": 394,
+  "platform": "X/Twitter",
+  "content": "Planning is a key agentic AI design pattern in which we use a large language model (LLM) to autonomously decide on what sequence of steps to execute to ... date: Apr 14, 2024",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Apr 14, 2024",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2024-Q1"
+}

@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/sama AI agent OR agents",
+  "search_rank": 3,
+  "name": "Chain of thought monitors are a key layer of defense against AI ...",
+  "url": "https://x.com/sama/status/2052853008674017288",
+  "snippet": "Chain of thought monitors are a key layer of defense against AI agent misalignment. To preserve monitorability, we avoid penalizing ... date: May 8, 2026",
+  "id": 378,
+  "platform": "X/Twitter",
+  "content": "Chain of thought monitors are a key layer of defense against AI agent misalignment. To preserve monitorability, we avoid penalizing ... date: May 8, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "May 8, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

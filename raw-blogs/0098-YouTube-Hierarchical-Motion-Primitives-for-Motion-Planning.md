@@ -1,0 +1,41 @@
+# Hierarchical Motion Primitives for Motion Planning
+
+- URL: https://www.youtube.com/watch/;?v=xJqXwKzxdEk&cbrd=1&ucbcb=1
+- Platform: YouTube
+- Source type: video
+- Category: tutorial_or_implementation
+- Source dataset: social-cn-youtube-blog-raw-2026-05-20.json
+- Extraction status: fallback_snippet
+- Collected at: 2026-05-21
+
+## gBrain Temporal Metadata
+
+- content_timestamp: 2026-05-20
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: 2026-05
+- timestamp_confidence: derived
+- timestamp_source: extracted from markdown content/metadata
+
+## Raw Content
+
+Hierarchical Motion Primitives for Motion Planning In this video, we demonstrate how hierarchy can be employed to build motion primitives for moving agents on a grid. This enables us to achieve significant reduction in computational complexity that scales well with the number of agents. It builds on our previous work that introduced feedback-based motion primitives. The idea is to recursively build more complex motion primitives from existing ones, taking care of concatenation constraints to ensure implementability. We build suitable higher level motion primitives for achieving formation flight, morphing between formations, and even switching between these modalities. The results are shown on quadrotor vehicles in cluttered spaces. safe an autonomous flight of quadrille cockers is a challenging task previously we developed basic motion primitives based on feedback control which could be 
+
+## Temporal Metadata
+
+- content_timestamp: 2026-05-20
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: 2026-05
+
+## Author Influence Profile
+
+- name_or_id: unknown
+- title_position_company: unknown
+- social_followers: X/Twitter=unknown; LinkedIn=unknown
+- blog_or_website: https://www.youtube.com/watch/;?v=xJqXwKzxdEk&cbrd=1&ucbcb=1
+- domains_expertise: tutorial_or_implementation
+- representative_works: []
+- h_index_academic_impact: unknown
+- github_stars_developer_impact: unknown
+- industry_influence_rating: unknown
+- profile_confidence: low
+- needs_enrichment: True

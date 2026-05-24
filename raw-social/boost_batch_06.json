@@ -1,0 +1,47 @@
+[
+  {
+    "query": "site:x.com \"CrewAI\" \"agent\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "site:x.com \"AutoGen\" \"agent\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "site:x.com \"MCP\" \"AI agents\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "site:twitter.com \"self-evolving agents\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  },
+  {
+    "query": "site:twitter.com \"self-improving AI agents\"",
+    "max_results": 20,
+    "content_timestamp": "unknown",
+    "timestamp_confidence": "unknown",
+    "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+    "collected_at": "2026-05-21T00:00:00+08:00",
+    "time_slice": "unknown"
+  }
+]

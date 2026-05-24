@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/karpathy AI agent OR agents",
+  "search_rank": 6,
+  "name": "There's a new kind of coding I call \"vibe coding\", where you fully give ...",
+  "url": "https://twitter.com/karpathy/status/1886192184808149383?ref_src=twsrc%5Etfw&ref=continue.ghost.io",
+  "snippet": "There's a new kind of coding I call \"vibe coding\", where you fully give in to the vibes, embrace exponentials, and forget that the code even exists. date: Feb 2, 2025",
+  "id": 468,
+  "platform": "X/Twitter",
+  "content": "There's a new kind of coding I call \"vibe coding\", where you fully give in to the vibes, embrace exponentials, and forget that the code even exists. date: Feb 2, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Feb 2, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "integer_or_source_id",
+  "name": "article_or_item_title",
+  "url": "https://example.com/article",
+  "platform": "source_platform_or_domain",
+  "source_type": "blog_article|product_discovery|youtube_video|newsletter|other",
+  "category": "agent_evolution_category",
+  "source_dataset": "source_index_file_name",
+  "extraction_status": "extracted|fallback_snippet|failed|manual_review_required",
+  "error": null,
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "published_at": "YYYY-MM-DD_or_null",
+  "time_slice": "unknown",
+  "author_profile": {
+    "name_or_id": "example.com",
+    "title_position_company": "unknown",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://example.com",
+    "domains_expertise": "agent_evolution_category",
+    "representative_works": [
+      "article_or_item_title"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "unknown",
+    "confidence": "medium",
+    "needs_enrichment": true
+  },
+  "content": "full extracted article/video/product raw text",
+  "content_timestamp": "unknown",
+  "timestamp_confidence": "unknown",
+  "timestamp_source": "no reliable publication/creation timestamp found in raw artifact"
+}

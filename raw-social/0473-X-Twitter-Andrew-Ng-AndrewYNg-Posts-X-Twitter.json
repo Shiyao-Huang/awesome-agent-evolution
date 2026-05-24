@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/AndrewYNg AI agent OR agents",
+  "search_rank": 2,
+  "name": "Andrew Ng (@AndrewYNg) / Posts / X - Twitter",
+  "url": "https://twitter.com/AndrewYNg",
+  "snippet": "New course: Build AI agents that generate images and videos -- an under-explored frontier. A key to performance is having the agent evaluate its own output ...",
+  "id": 473,
+  "platform": "X/Twitter",
+  "content": "New course: Build AI agents that generate images and videos -- an under-explored frontier. A key to performance is having the agent evaluate its own output ...",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

@@ -1,0 +1,80 @@
+{
+  "id": 622,
+  "name": "How are you preventing runaway AI agent behavior in production?",
+  "url": "https://www.reddit.com/r/LangChain/comments/1rhwz53/how_are_you_preventing_runaway_ai_agent_behavior/",
+  "platform": "Reddit",
+  "subreddit": "LangChain",
+  "extraction_status": "ok",
+  "anysearch_extract_status": "failed:extract_upstream_error\nupstream returned error: HTTP 403 403 Forbidden",
+  "content_timestamp": "2026-03-01",
+  "collected_at": "2026-05-21T22:23:52+08:00",
+  "time_slice": "2026-03",
+  "query": "site:reddit.com/r/LangChain/comments runaway AI agent production",
+  "source": "builder-b-raw-social-supplement-2026-05-21",
+  "score": 6,
+  "num_comments": 23,
+  "author": "LOGOSOSAI",
+  "content": "# How are you preventing runaway AI agent behavior in production?\n\nSource: https://www.reddit.com/r/LangChain/comments/1rhwz53/how_are_you_preventing_runaway_ai_agent_behavior/\nSubreddit: r/LangChain\nAuthor: u/LOGOSOSAI\nScore: 6 | Comments: 23\nCreated: 2026-03-01\n\n## Post Body\nCurious how people here are handling runtime control for AI agents.\nWhen agents run in production:\n– What prevents infinite retry loops?\n– What stops duplicate execution?\n– What enforces scope boundaries?\n– What caps spending?\nLogging tells you what happened after the fact.\nI’m interested in what prevents issues before they happen.\nWould love to hear how you’re solving this.\n\n## Top Comments\n\n### Comment 1 — u/Tall-Appearance-5835 (score 6)\nset a max retry? lol\n\n### Comment 2 — u/FragrantBox4293 (score 4)\nexplicit recursion limits at the graph level, hard token budgets per run, and idempotency on every tool call so duplicate execution doesn't break anything. the tricky one is scope, most agents expand their own authority silently if you don't enforce boundaries.\n\n### Comment 3 — u/Used-Knowledge-4421 (score 2)\nMost of the answers here are the right ideas (max retries, idempotency, budget caps) but you end up reimplementing the same boilerplate in every agent. I ran into the same set of problems and ended up packaging the solution into an open source library called [Aura Guard](https://github.com/auraguardhq/aura-guard).\n\nIt sits between your agent and its tools and handles exactly the four things you listed:\n\n* Retry loops: detects identical and near-identical tool calls (argument jitter), quarantines the tool after N repeats\n* Duplicate execution: idempotency ledger keyed by ticket + tool + args, blocks duplicate side effects even if the agent thinks the first call failed\n* Scope boundaries: per-tool access control (allow/deny/human-approval), required args enforcement, per-tool call caps\n* Spending caps: tracks cumulative cost per run (tool calls + tokens), warns at 80%, hard stops at limit\n\nZero dependencies, sub-millisecond overhead, no LLM calls in the decision path. Works with OpenAI, LangChain, or any custom agent loop.\n\n`pip install aura-guard`\n\n### Comment 4 — u/ar_tyom2000 (score 1)\nIt's similar to what I tackled with [LangGraphics](https://github.com/proactive-agent/langgraphics), which provides real-time visualization to help debug agents and understand their decision-making processes. Seeing how your agent interacts at each step can really clarify its behavior and help prevent those runaway scenarios.\n\n### Comment 5 — u/Enough-Blacksmith-80 (score 1)\nThe Governance Layer is responsible for managing these and other concerns related to control and use policies. This is one of the most important topics when we plan an AI based system in production..\n\n### Comment 6 — u/Guna1260 (score 1)\nWe built Vidai (Vidai.uk) address these.\n\n### Comment 7 — u/Outrageous_Hat_9852 (score 1)\nThe key is testing agent boundaries and goal adherence before production, not just hoping monitoring catches runaway behavior after it happens. We've found that simulating multi-turn conversations with adversarial scenarios (like goal drift, tool misuse, or permission boundary violations) catches most runaway patterns during development. The trick is testing not just \"does it work\" but \"does it fail gracefully when pushed beyond intended limits\"... things like maximum iteration counts, resource consumption limits, and clear stop conditions need to be validated systematically.\n\n### Comment 8 — u/reggzz (score 1)\nI think the biggest thing is treating budget limits as part of runtime policy, not something you inspect afterward. A few guardrails can matter a lot, like hard max steps per run, retry ceilings, idempotency keys for anything that mutates state, strict tool allowlists, and a hard token or dollar budget per task so the agent can stop before it keeps spiraling.   \nThe spend cap gets missed a lot because teams log usage after the fact instead of enforcing a stop condition before the next call. But once you have a rough idea of cost per task it gets easier to set sane ceilings and fail safely when the agent goes off path.\n\n### Comment 9 — u/nikunjverma11 (score 1)\nIn production the safest approach is putting strict guardrails around the agent runtime instead of letting the model freely loop. Most teams enforce limits like max tool calls, retry caps, and execution timeouts to stop infinite loops or runaway behavior. Idempotency checks and task state tracking also help prevent duplicate execution. Many developers combine orchestration frameworks like LangChain with workflow control tools such as Traycer AI to structure agent execution and enforce boundaries before things break.\n\n### Comment 10 — u/First_Appointment665 (score 1)\nFeels like most of these solutions are converging on the same set of guardrails — retry limits, idempotency, budgets, access control.  \n\n\nWhat I keep running into is that those controls end up spread across different layers (agent logic, tool code, DB checks, middleware), which makes them hard to reason about as a system.  \n  \nOnce tools have real side effects, it seems cleaner to treat execution safety as its own layer:  \n\\- agent decides what to do  \n\\- tool performs the action  \n\\- execution layer decides whether the action is allowed to run  \n  \nThat way retries, duplicate execution, and state consistency are enforced in one place instead of reimplemented per tool or per agent.",
+  "top_comments": [
+    {
+      "author": "Tall-Appearance-5835",
+      "score": 6,
+      "created_utc": 1772374381.0,
+      "body": "set a max retry? lol"
+    },
+    {
+      "author": "FragrantBox4293",
+      "score": 4,
+      "created_utc": 1772376947.0,
+      "body": "explicit recursion limits at the graph level, hard token budgets per run, and idempotency on every tool call so duplicate execution doesn't break anything. the tricky one is scope, most agents expand their own authority silently if you don't enforce boundaries."
+    },
+    {
+      "author": "Used-Knowledge-4421",
+      "score": 2,
+      "created_utc": 1772828544.0,
+      "body": "Most of the answers here are the right ideas (max retries, idempotency, budget caps) but you end up reimplementing the same boilerplate in every agent. I ran into the same set of problems and ended up packaging the solution into an open source library called [Aura Guard](https://github.com/auraguardhq/aura-guard).\n\nIt sits between your agent and its tools and handles exactly the four things you listed:\n\n* Retry loops: detects identical and near-identical tool calls (argument jitter), quarantines the tool after N repeats\n* Duplicate execution: idempotency ledger keyed by ticket + tool + args, blocks duplicate side effects even if the agent thinks the first call failed\n* Scope boundaries: per-tool access control (allow/deny/human-approval), required args enforcement, per-tool call caps\n* Spending caps: tracks cumulative cost per run (tool calls + tokens), warns at 80%, hard stops at limit\n\nZero dependencies, sub-millisecond overhead, no LLM calls in the decision path. Works with OpenAI, LangChain, or any custom agent loop.\n\n`pip install aura-guard`"
+    },
+    {
+      "author": "ar_tyom2000",
+      "score": 1,
+      "created_utc": 1772381441.0,
+      "body": "It's similar to what I tackled with [LangGraphics](https://github.com/proactive-agent/langgraphics), which provides real-time visualization to help debug agents and understand their decision-making processes. Seeing how your agent interacts at each step can really clarify its behavior and help prevent those runaway scenarios."
+    },
+    {
+      "author": "Enough-Blacksmith-80",
+      "score": 1,
+      "created_utc": 1772383020.0,
+      "body": "The Governance Layer is responsible for managing these and other concerns related to control and use policies. This is one of the most important topics when we plan an AI based system in production.."
+    },
+    {
+      "author": "Guna1260",
+      "score": 1,
+      "created_utc": 1772471603.0,
+      "body": "We built Vidai (Vidai.uk) address these."
+    },
+    {
+      "author": "Outrageous_Hat_9852",
+      "score": 1,
+      "created_utc": 1772486680.0,
+      "body": "The key is testing agent boundaries and goal adherence before production, not just hoping monitoring catches runaway behavior after it happens. We've found that simulating multi-turn conversations with adversarial scenarios (like goal drift, tool misuse, or permission boundary violations) catches most runaway patterns during development. The trick is testing not just \"does it work\" but \"does it fail gracefully when pushed beyond intended limits\"... things like maximum iteration counts, resource consumption limits, and clear stop conditions need to be validated systematically."
+    },
+    {
+      "author": "reggzz",
+      "score": 1,
+      "created_utc": 1772497584.0,
+      "body": "I think the biggest thing is treating budget limits as part of runtime policy, not something you inspect afterward. A few guardrails can matter a lot, like hard max steps per run, retry ceilings, idempotency keys for anything that mutates state, strict tool allowlists, and a hard token or dollar budget per task so the agent can stop before it keeps spiraling.   \nThe spend cap gets missed a lot because teams log usage after the fact instead of enforcing a stop condition before the next call. But once you have a rough idea of cost per task it gets easier to set sane ceilings and fail safely when the agent goes off path."
+    },
+    {
+      "author": "nikunjverma11",
+      "score": 1,
+      "created_utc": 1772937233.0,
+      "body": "In production the safest approach is putting strict guardrails around the agent runtime instead of letting the model freely loop. Most teams enforce limits like max tool calls, retry caps, and execution timeouts to stop infinite loops or runaway behavior. Idempotency checks and task state tracking also help prevent duplicate execution. Many developers combine orchestration frameworks like LangChain with workflow control tools such as Traycer AI to structure agent execution and enforce boundaries before things break."
+    },
+    {
+      "author": "First_Appointment665",
+      "score": 1,
+      "created_utc": 1773890179.0,
+      "body": "Feels like most of these solutions are converging on the same set of guardrails — retry limits, idempotency, budgets, access control.  \n\n\nWhat I keep running into is that those controls end up spread across different layers (agent logic, tool code, DB checks, middleware), which makes them hard to reason about as a system.  \n  \nOnce tools have real side effects, it seems cleaner to treat execution safety as its own layer:  \n\\- agent decides what to do  \n\\- tool performs the action  \n\\- execution layer decides whether the action is allowed to run  \n  \nThat way retries, duplicate execution, and state consistency are enforced in one place instead of reimplemented per tool or per agent."
+    }
+  ]
+}

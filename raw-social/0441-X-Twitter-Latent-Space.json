@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/latentspacepod AI agent OR agents",
+  "search_rank": 6,
+  "name": "Latent.Space",
+  "url": "https://x.com/latentspacepod/status/1948135360552423914",
+  "snippet": "AI is Eating Search. ChatGPT handles 2.5B prompts/day and is on track to match Google's daily searches by end of 2026. AI agents don't browse ... date: Jul 23, 2025",
+  "id": 441,
+  "platform": "X/Twitter",
+  "content": "AI is Eating Search. ChatGPT handles 2.5B prompts/day and is on track to match Google's daily searches by end of 2026. AI agents don't browse ... date: Jul 23, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jul 23, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

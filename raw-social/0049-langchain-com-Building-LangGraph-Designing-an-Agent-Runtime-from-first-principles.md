@@ -1,0 +1,396 @@
+# Building LangGraph: Designing an Agent Runtime from first principles
+
+- URL: https://www.langchain.com/blog/building-langgraph
+- Platform: langchain.com
+- Extraction status: ok
+- content_timestamp: unknown
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+
+## Raw Content
+
+## Building LangGraph: Designing an Agent Runtime from first principles
+
+**Source**: https://www.langchain.com/blog/building-langgraph
+
+---
+
+[https://www.langchain.com/](https://www.langchain.com/)
+
+[Try LangSmith](https://smith.langchain.com/)
+
+[Get a demo](https://www.langchain.com/contact-sales)
+
+LangGraph
+
+# Building LangGraph: Designing an Agent Runtime from first principles
+
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69d50051c5c24f19b81fd73a_Group%202147239256-2.svg)
+
+The LangChain Team
+
+September 4, 2025
+
+![](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69ce2c533137196179bae949_Icon-7.svg)
+
+21
+
+min
+
+[Go back to blog](https://www.langchain.com/blog)
+
+Create agents
+
+Share
+
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cbaa7ebf847dfe35ef1650_How-We-Built-LangGraph--1-.png)
+
+*By Nuno Campos*
+
+**Summary:** We launched LangGraph as a low level agent framework nearly two years ago, and have already seen companies like LinkedIn, Uber, and Klarna use it to build production ready agents. LangGraph builds upon feedback from the super popular LangChain framework, and rethinks how agent frameworks should work for production. We aimed to find the right abstraction for AI agents, and decided that was little to no abstraction at all. Instead, we focused on control and durability. This post shares our design principles and approach to designing LangGraph based on what we've learned about building reliable agents.
+
+LangGraph ALPHA
+
+We just launched an alpha version of LangGraph 1.0!
+
+[Try it out now](https://docs.langchain.com/oss/python/langgraph/overview?ref=blog.langchain.com)
+
+—
+
+We started [LangGraph](https://github.com/langchain-ai/langgraph?ref=blog.langchain.com) as a reboot of LangChain's super popular chains and agents more than two years ago. We decided that starting fresh would give us the most leeway to address all the feedback we had received since the launch of the original `langchain` open source library (in countless GitHub issues, discussions, Discord, Slack and Twitter posts). The main thing we heard was that `langchain` was easy to get started but hard to customize and scale.
+This time around, our top goal was to make LangGraph what you'd use to run your agents in production. When we had to make tradeoffs, we prioritized production-readiness over how easy it would be for people to get started.
+In this post, we'll share our process for scoping and designing LangGraph.
+
+- First: we cover what's different about building agents compared to traditional software.
+- Next: we discuss how we turned these differences into required features.
+- Finally: we show how we designed and tested our framework for these requirements.
+
+The result is a low-level, production ready agent framework that scales with both the size and throughput of your agents.
+
+## 1. What do agents need?
+
+The first two questions we asked were, “Do we actually need to build LangGraph?” And, “Why can’t we use an existing framework to put agents in production?” To answer these questions, we had to define what makes an agent different (or similar) to previous software. By building many agents ourselves and working with [teams like Uber, LinkedIn, Klarna, and Elastic](https://blog.langchain.com/top-5-langgraph-agents-in-production-2024/), we boiled these down to 3 key differences.
+
+- More latency makes it harder to keep users engaged
+- Retrying long-running tasks when they fail is expensive and time-consuming
+- The non-deterministic nature of AI requires checkpoints, approvals, and testing
+
+### Managing latency
+
+The first defining quality and challenge of LLM-based agents is **latency**. We used to measure the latency of our backend endpoints in milliseconds. Now, we need to measure agent run times in seconds, minutes, or soon hours.
+
+This is because LLMs themselves are slow and are becoming slower with test-time compute. It’s also because we often need multiple LLM calls to achieve our desired results, with looping agents, and chaining LLM prompts to fix earlier output. And, we usually need to add non-LLM steps before and after the LLM call. For instance, you might need to get database rows into the context or create guardrails and verifiers to check the LLM call for accuracy.
+
+All this latency enables building new things, but you do still need to keep end users engaged throughout. So, we identified two features that would come in handy when building agents:
+
+- **Parallelization.** Whenever there were multiple steps to your agent, when the next step doesn’t need the output of the previous one, then you could run them in parallel. But to do this reliably in production you want to avoid data races between your parallel steps.
+- **Streaming.** When you can’t reduce the actual latency of your agent any further without making it produce worse results, then you turn to perceived latency. Here the key unlock comes from showing useful information to the user while the agent is running, which can go all the way from a progress bar, or key actions taken by the agent, all the way to streaming LLM messages token-by-token in real-time to the end-user.
+
+### **Managing reliability**
+
+The slowness of LLM agents had other implications, too. As we all know all too well, inevitably all software bugs out. Long-running agents fail more often because, the longer they run, the more opportunity there is for something to go wrong.
+
+When traditional software bugs out, you usually want to retry. With AI agents? That may not be the best approach. If your agent fails on minute 9 of 10, going back to the beginning is pretty time consuming and also expensive.
+
+So we knew we had to add two more features to the list:
+
+- **Task queue.** Queues eliminate one common source of failure by disconnecting the running of the agent from the request that triggered it. They provide the primitives to retry the agent reliably and fairly when needed.
+- **Checkpointing.** This saves snapshots of the computation state at intermediate stages and makes it a lot cheaper to retry when it does fail.
+
+### Managing non-deterministic LLMs
+
+Next, the non-deterministic nature of LLMs creates two more challenges. When you write traditional software, you at least know what the code is supposed to do and what should result if you built it as you hoped. Generative AI obviously changes this.
+
+With LLMs, both input and their output is open-ended. You can imagine when you’ve used ChatGPT, and the same prompt you used a day before produces a different result, or, how easy it is to ask your question in many different ways and get back similar results.
+
+This is a very big part of what makes LLM agents so powerful compared other previous software, but it also introduces challenges when taking them to production.
+
+The testing you do while developing will almost certainly miss many surprising ways in which your users will use your agent. You truly can’t plan for all the ways users will interact with your agent or how the LLM will respond. And so, two more features then become very useful when going to production:
+
+- **Human-in-the-loop.** Having the tools to interrupt and resume the agent at any point, without having to redo work done until then, enables many essential UX patterns for AI agents. For example, you can approve or reject actions, edit the next action, ask clarifying questions, or even time travel to re-do things from a previous step.
+- **Tracing.** To build for scale, developers need clear visibility into what’s happening within the details of their agent loops. You need to see inputs, trajectories, and outputs of the agent, otherwise you won’t know what users are asking of it, how the agent is handling it, and if users are happy with the outcome.
+
+### What developers need to build agents
+
+This is how we built our shortlist of the six features most developers need when taking agents to production.
+
+- Parallelization – to save actual latency
+- Streaming – to save perceived latency
+- Task queue – to reduce number of retries
+- Checkpointing – to reduce the cost of each retry
+- Human-in-the-loop - to collaborate with the user
+- Tracing - to learn how users use it
+
+If the agent you’re building doesn’t need most of these features (eg. because it’s a very short agent without tools and a single prompt), then you might not need LangGraph, or any other framework.
+
+As we thought about building for each of these features, we also realized that developers wouldn’t adopt a framework that that provided all those features at the cost of making their LLM app perceivably slower to end users. Especially for agents deployed as chatbots. That made **low latency** our final overarching requirement.
+
+Next, we’ll cover how we built these capabilities into LangGraph.
+
+## 2. Why build LangGraph at all?
+
+Back to our existential question, should we build something new, or adopt one of the existing open source frameworks built before LLMs? Armed with our feature shortlist, it became pretty easy to make that decision.
+
+### Why was a new framework needed?
+
+Existing frameworks were mostly split between two categories:
+
+**DAG frameworks (made popular by Apache Airflow and many others)**
+
+These we had to exclude just based on the name, as LLM agents really benefit from looping, ie. the computation graph for an LLM agent is cyclical, and thus cannot be handled by DAG algorithms.
+
+**Durable execution engines (made popular by Temporal and others)**
+
+These options were closer, but in the end, as they were designed before LLM agents, so they were lacking some of those specific features — namely streaming. In addition, these engines introduced latency between steps which would have been noticeable to chatbot developers. Lastly, due to their design, the performance degrades the more steps there are in the history, which sounded like a bad bet to make as LLM agents get longer and more complicated.
+
+So in the end our answer was, yes LLMs are different enough that previous production infrastructure needed some new ideas injected into it to become relevant for the new era. And so we embarked on building LangGraph.
+
+## 3. Our design philosophy
+
+We designed LangGraph with two leading principles.
+
+- **We don’t know what the future holds for AI.** The fewer assumptions we make about the future the better. No one really knows what it will look like to build with LLMs one, two, three years from now, so the fewer assumptions we bake into the design of the framework, the more relevant it will be in the future. The only assumptions we wanted to bake into it were the realizations we talked about above, i.e. that **LLMs are slow, flaky, and open-ended.**
+- **It should feel like writing code.** The public API for the framework should be as close as possible to writing regular framework-less code. Every requirement we place on the developer’s code needs to be justified by enabling a really high-value feature. Otherwise the pull of skipping the framework altogether is just too strong. The biggest competitor to any code framework is always no framework.
+
+These principles impacted a few key design decisions that have stayed with us ever since.
+
+- **First, the runtime of the library is independent from the developer SDKs.** The SDKs are the public interfaces (classes, functions, methods, constants, etc) that developers use when building their agents. We currently offer two – **StateGraph** and the **imperative/functional API**. The runtime (which we call PregelLoop) implements each of the features listed earlier, plans the computation graph for each agent invocation, and executes it. This design enables us to evolve the developer APIs and the runtime independently. For instance, on the SDK side, it has allowed us to introduce the imperative SDK, and deprecate the very first SDK we offered, a Graph interface without shared state. On the runtime side, it has enabled us to implement many performance improvements over the last 2 years without any impact to the public APIs, and enabled experimentation with more radical changes to the runtime – more about this later when we get to distributed execution.
+- **Second, we wanted to provide each of the 6 features as building blocks, with the developer free to pick which to use in their agent at any point in time.** For instance, the ability to interrupt/resume for human-in-the-loop scenarios doesn’t get in your way until you reach for it (which is as easy as adding a call to the `interrupt()` function in one of your nodes). So LangGraph ended up as a uniquely low-level framework in a sea of other frameworks trying to convince developers to bet everything on the high-level abstraction du jour. We have seen these come and go, and LangGraph remaining relevant, so we’re happy with our approach so far.
+
+## 4. The LangGraph runtime
+
+With all this in mind, let’s look at how LangGraph implements each of the 6 features we wanted to have (as a reminder, these are parallelization, streaming, checkpointing, human-in-the-loop, tracing and a task queue).
+
+### **Structured agents with discrete steps**
+
+If there is one idea that informs every other architectural decision we’ve made, it is the idea of structured agents. There’s a long tradition of adding more structure to computer programs, trading some amount of flexibility for a host of new features. Once upon a time, basic constructs like [if statements and while loops](https://en.wikipedia.org/wiki/Structured_programming?ref=blog.langchain.com) were the new kid on the block. Agents too can be written directly as a single function with one big while loop. But when you do that, you lose the ability to implement features like checkpointing or human-in-the-loop. (Note: While it may technically be possible to interrupt execution of some kinds of subroutines, like generators, that execution state can’t be saved in a portable format that can be resumed from a different machine at a different time.)
+
+### **Execution algorithm**
+
+Once you make the choice to structure agents into multiple discrete steps, you need to choose some algorithm to organize its execution. Even if it’s a naive one that feels like "no algorithm," which is where LangGraph started before launch. The problem with using “no algorithm” is, while it may seem simpler, you’re making it up as you go along, and end up with unexpected results. (For instance, an early version of a precursor to LangGraph suffered from non-deterministic behavior with concurrent nodes). The usual DAG algorithms (topological sort and friends) are out of the picture, given we need loops. We ended up building on top of the [BSP](https://en.wikipedia.org/wiki/Bulk_synchronous_parallel?ref=blog.langchain.com)/ [Pregel](https://dl.acm.org/doi/10.1145/1807167.1807184?ref=blog.langchain.com) algorithm, because it provides deterministic concurrency, with full support for loops (cycles).
+
+Our execution algorithm works like this:
+
+- **Channels** contain data (any Python/JS data type), and have a name and current version (a monotonically increasing string)
+- **Nodes** are functions to run, which subscribe to one or more channels, and run whenever they change
+- One or more channels are mapped to **input**, ie. the starting input to the agent is written to those channels, and therefore triggers any nodes subscribed to them
+- One or more channels are mapped to **output**, ie. the return value of the agent is the value of those channels when execution halts
+
+The execution proceeds in a loop, where each iteration
+
+- Selects the 1 or more nodes to run, by comparing current channel versions and the last versions seen by each of their subscribers
+- Executes those nodes in parallel, with independent copies of the channel values (ie. the state, so they don’t affect each other while running)
+- Nodes modify their local copy of the state while running
+- Once all nodes finish, the updates from each copy of the state are applied to their respective channels, in a deterministic order (this is what guarantees no data races), and the channel versions are bumped
+
+The execution loop stops when there are no more nodes to run (ie. after comparing channels with their subscriptions we find all nodes have seen the most recent version of their subscribed channels), or when we run out of iteration steps (a constant the developer can set).
+
+### **Validating framework features**
+
+Let’s see how this maps to the 6 features we wanted to implement.
+
+- **Parallelization**. This algorithm is designed for safe parallelization without data races, it automatically selects parallel execution whenever the dependencies between the nodes allow, it executes parallel nodes with isolated state copies, and it applies updates from nodes in an order which doesn’t depend on which one started or finished first (as that can change between executions). This ensures that the execution order and latency of each node never influences the final output of the agent. Given LLMs are non-deterministic, we felt this was an important property, to ensure that variability in your outputs is never the fault of the agent framework, making it a lot easier to debug issues.
+- **Streaming**. Structured execution models (ie. where the computation is split into discrete steps and/or nodes) offer many more opportunities for emitting intermediate output and updates throughout. Our execution engine collects streaming output from inside nodes while they are running, as well as at the step boundaries, without requiring any custom developer code. This has enabled us to offer 6 distinct stream modes in LangGraph, values, updates, messages, tasks, checkpoints and custom. A streaming chatbot might use messages stream mode, while a longer running agent might use updates mode.
+- **Checkpointing**. Again, structured execution is what makes this feasible. We want to save checkpoints that can be resumed on any machine, an arbitrary amount of time after they were saved – ie. checkpoints that don’t rely on keeping a process running in a specific machine, or keeping any live data in memory. To enable this we record serialised channel values (by default serialised to MsgPack, optionally encrypted), their version strings, and a record of which channel versions each node has most recently seen.
+- **Human-in-the-loop**. The same checkpointing that enables fault tolerance can also be used to power “expected interruptions” of the agent, ie. giving the agent the ability to interrupt itself to ask the user or developer for input before continuing. Usually this capability is implemented by leaving the agent running while it waits for the input to arrive, but sadly that scales neither in time nor in volume. If you have many agents interrupted simultaneously, or if you want to wait several days (or months!) before replying, then actual interruption (powered by checkpointing to resume again from the same point) is the only way to go.
+- **Tracing**. Another nice property of using structured execution is you get very clear steps to inspect the progress of your agent, while it runs and after the fact. We had previously built [LangSmith](https://docs.langchain.com/langsmith/home?ref=blog.langchain.com) as the first [LLM observability platform](https://www.langchain.com/articles/llm-observability-tools), so naturally LangGraph integrates natively with it. Today we have also LangGraph Studio, where you can debug your agent while it’s running, and LangGraph can also emit OTEL traces for wider compatibility.
+- **Task queue**. This was out of scope for a Python library such as LangGraph, so we ended up creating LangGraph Platform to answer this need.
+
+All in all, this architecture delivers the 6 key features needed for agents. At the same time, it makes creating and debugging agents faster, thanks to the structured approach, and the tools to explore it. And finally, it does so with an excellent performance profile, which scales with the size of your agent, and the throughput you need in production –  more on this in the next section.
+
+## 5. Performance characteristics
+
+Like we mentioned earlier, developers want reliability, but not at the expense of latency. So we need to look at how our approach is working against these tradeoffs. LangGraph scales very gracefully with all size measures of the agents you build with it. This is a great place to be in for a future where agents are becoming ever longer, with more steps, more interruptions, larger state, etc.
+
+How is the execution of a LangGraph agent affected by the key variables that control its size?
+
+First, let’s list the key **size variables** in StateGraph, the most common LangGraph developer SDK:
+
+- The number of nodes (individual steps, usually functions)
+- The number of edges (or the connections between nodes, which can be fixed or conditional)
+- The number of channels (or the keys in your state object)
+- The number of active nodes (to be executed in parallel in a given step)
+- The length of invocation history (previous steps of the current invocation)
+- The number of threads (independent invocations on different inputs and context)
+
+Now, let’s list the key **moments in an invocation** of a LangGraph agent, and see how each scales with each variable:
+
+- Starting or resuming invocation, which consists of transferring from storage the most recent checkpoint for that thread, and deserializing it
+- Planning the next invocation step, where we decide which nodes to execute next, and prepare their inputs
+- Running the active nodes for a step, where we execute the code for each node, producing writes to channels and edges
+- Finishing an invocation step, which consists of applying updates to each channel (running channel reducers and bumping channel versions) and saving the latest checkpoint (serializing and transferring to storage)
+
+Note there is no 'finishing invocation' action as execution simply stops when the planning action returns no nodes to execute next.
+
+In summary, this is how each action scales with agent size:
+
+Metric / Action
+Starting invocation
+Planning a step
+Running a step
+Finishing a step
+
+Number of nodes
+O(n)
+O(1)
+O(1)
+O(n)
+
+Number of edges
+O(1)
+O(1)
+O(n)
+O(1)
+
+Number of channels
+O(n)
+O(n)
+O(n)
+O(n)
+
+Active nodes
+O(1)
+O(n)
+O(n)
+O(n)
+
+Length of history
+O(1)
+O(1)
+O(1)
+O(1)
+
+Number of threads
+O(1)
+O(1)
+O(1)
+O(1)
+
+Now, let’s look more in detail at some of these. First, starting an invocation:
+
+- Scales **linearly with number of nodes**, for each node there is one hidden control channel holding the current state of its incoming edges
+- **Constant on the number of edges** as the state of all edges for each destination node is collapsed into a single control channel
+- Scales **linearly with number of channels**, for each channel there is a serialized representation of its current value
+- **Constant on the number of active nodes**, there is no relation to this variable
+- **Constant on the length of history**, as we only fetch the latest checkpoint, and don’t need to replay steps before it
+- **Constant on number of threads**, as threads are completely independent, and each invocation only touches a single one
+
+Second, planning the next step:
+
+- **Constant on the number of nodes**, when finishing the previous step we store the list of updated channels, which lets us avoid iterating over all nodes when planning the next one
+- **Constant on the number of edges**, as all edges are collapsed into a single trigger channel per node
+- Scales **linearly with the number of channels**, when assembling the input for each node we loop over channels to check which are currently set
+- Scales **linearly with number of active nodes**, for each node to execute in this step we assemble the input and configuration to use for its invocation
+- **Constant on the length of history**, as we only deal with the latest checkpoint, which aggregates all previous writes
+- **Constant on number of threads**, as threads are completely independent, and each invocation only touches a single one
+
+Third, running a step:
+
+- **Constant on the number of nodes**, only nodes active in a step influence the running of that step
+- Scales **linearly on the number of edges** of the nodes active in this step, each active node publishes to each of its outgoing edges
+- Scales **linearly on the number of channels**, for each active node we check if the node returned an update to its value (when using a dictionary return value we optimize this to be constant on the number of channels, and just iterate over the keys of the return value)
+- Scales **linearly with the number of active nodes**, each active node is executed concurrently
+- **Constant on the length of history**, we don’t deal with history at this time
+- **Constant on number of threads**, as threads are completely independent, and each invocation only touches a single one
+
+Lastly, finishing a step:
+
+- Scales **linearly with number of nodes**, for each node there is one hidden control channel holding the current state of its incoming edges
+- **Constant on the number of edges** as the state of all edges for each destination node is collapsed into a single control channel
+- Scales **linearly with number of channels**, each channel is updated with the writes from the active nodes, and its version is bumped
+- Scales **linearly with number of active nodes**, as we collect writes from each active node
+- **Constant on the length of history**, as we only deal with the latest checkpoint, which aggregates all previous writes
+- **Constant on number of threads**, as threads are completely independent, and each invocation only touches a single one
+
+These performance characteristics have been the result of both our choice of design for the library, as well as numerous performance optimizations we have made over the past two years.
+
+## Getting started
+
+In summary, we thought deeply about what is different about building with LLMs and what it takes your agent to run in production. These ideas led us to build and iterate on LangGraph. LangGraph focuses on control and durability, so you have the best chance of your agent doing what you intended. 
+
+If you want to learn more about LangGraph and test it out for your own projects, head on over to the [docs](https://langchain-ai.github.io/langgraph/?ref=blog.langchain.com) to get started.
+
+### Related content
+
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a02945979ee92b3ee28b009_05.12%20delta%20channels.png)
+
+Deep Agents
+
+LangGraph
+
+#### Delta Channels: Evolving our Runtime for Long-Running Agents
+
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69dcee60745f0e15b18ad4d5_sydney-runkle.png)
+
+Sydney Runkle
+
+May 12, 2026
+
+![](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69cd1fd0002272ce39bf1241_Icon-6.svg)
+
+7
+
+min
+
+[https://www.langchain.com/blog/delta-channels-evolving-agent-runtime](https://www.langchain.com/blog/delta-channels-evolving-agent-runtime)
+
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cb92b0ec45aa6d7bc39a91_KEnsho.png)
+
+Case Studies
+
+LangGraph
+
+Observability & Evals
+
+#### How Kensho built a multi-agent framework with LangGraph to solve trusted financial data retrieval
+
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69d50051c5c24f19b81fd73a_Group%202147239256-2.svg)
+
+The LangChain Team
+
+March 26, 2026
+
+![](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69cd1fd0002272ce39bf1241_Icon-6.svg)
+
+4
+
+min
+
+[https://www.langchain.com/blog/customers-kensho](https://www.langchain.com/blog/customers-kensho)
+
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cbaa08cd1956c2e4f9ff39_Remote-case-study.png)
+
+Case Studies
+
+LangChain
+
+LangGraph
+
+#### How Remote uses LangChain and LangGraph to onboard thousands of customers with AI
+
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69d50051c5c24f19b81fd73a_Group%202147239256-2.svg)
+
+The LangChain Team
+
+January 19, 2026
+
+![](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69cd1fd0002272ce39bf1241_Icon-6.svg)
+
+5
+
+min
+
+[https://www.langchain.com/blog/customers-remote](https://www.langchain.com/blog/customers-remote)
+
+![](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69ce01ea562f8cc223cabf25_Frame%202147254328.svg)
+
+Thank you!
+ Your submission has been received!
+
+Oops! Something went wrong while submitting the form.
+
+### See what your agent is really doing
+
+LangSmith, our agent engineering platform, helps developers debug every agent decision, eval changes, and deploy in one click.
+
+[Try LangSmith](https://smith.langchain.com/)[Get a demo](https://www.langchain.com/contact-sales)

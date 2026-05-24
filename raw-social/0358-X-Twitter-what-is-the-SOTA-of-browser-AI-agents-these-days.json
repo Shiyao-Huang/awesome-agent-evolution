@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/swyx AI agent OR agents",
+  "search_rank": 3,
+  "name": "what is the SOTA of browser AI agents these days?",
+  "url": "https://x.com/swyx/status/1792602179431465447",
+  "snippet": "what is the SOTA of browser AI agents these days? - I have a crappy government website form to do that takes >60mins to fill out date: May 20, 2024",
+  "id": 358,
+  "platform": "X/Twitter",
+  "content": "what is the SOTA of browser AI agents these days? - I have a crappy government website form to do that takes >60mins to fill out date: May 20, 2024",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "May 20, 2024",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2024-Q1"
+}

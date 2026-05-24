@@ -1,0 +1,13 @@
+# Discuss – Do AI agents deserve all the hype they are getting?
+
+- URL: https://news.ycombinator.com/item?id=46923790
+- Platform: Hacker News
+- Extraction status: fallback_snippet
+- content_timestamp: unknown
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+- Query: site:news.ycombinator.com/item "AI agents" "comments"
+
+## Raw Content
+
+Discuss – Do AI agents deserve all the hype they are getting? | Hacker News I'm not really skeptical of AI agents and AI in general, it really is a force multiplier and I have used it a lot to learn and do weeks work in days. At the moment my setup as a wagie @ MAG7 is cursor and claude code. How are people using Agents in their work and is it actually useful? Have you guys seen any cool enough projects or blogs which explicate the extent of the agents usefulness? What the fuck is an agent anyway | Discuss – Do AI agents deserve all the hype they are getting? | | --- | | 4 points by MicroWagie 85 days ago| hide| past| favorite| 2 comments | You are already using agents - Claude Code and cursor are agents. Agent = loop_until( reasoning + tool-calls + mutate-state + verify ) -> expected_result Claude Code, Codex are all examples of cool agentic projects. They are going even further by taking over the world of Excel The hype is real but the infrastructure isn't there yet. I've spent 25+ years in enterprise security and the pattern is familiar — new capability ships fast, governance catches up slow. The actual hard problem with agents isn't intelligence, it's economic. When you give an agent access to APIs, who's tracking what it spends? Who enforces a budget? Right now most teams find out their agent burned through $10K in API calls after the invoice hits. Agents are useful. But until we solve identity, authorization, and cost control for machine-to-machine traffic the same way we solved it for human traffic, it's going to be the Wild West.

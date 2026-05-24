@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/OpenAIDevs AI agent OR agents",
+  "search_rank": 6,
+  "name": "We're introducing the Agentic Commerce Protocol, an open ...",
+  "url": "https://x.com/OpenAIDevs/status/1972712933080920451",
+  "snippet": "We're introducing the Agentic Commerce Protocol, an open standard co-developed with @Stripe that enables programmatic commerce flows between ... date: Sep 29, 2025",
+  "id": 411,
+  "platform": "X/Twitter",
+  "content": "We're introducing the Agentic Commerce Protocol, an open standard co-developed with @Stripe that enables programmatic commerce flows between ... date: Sep 29, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Sep 29, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

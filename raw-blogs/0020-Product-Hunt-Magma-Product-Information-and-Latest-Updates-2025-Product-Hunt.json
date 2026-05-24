@@ -1,0 +1,35 @@
+{
+  "id": 20,
+  "name": "Magma Product Information and Latest Updates (2025) | Product Hunt",
+  "url": "https://www.producthunt.com/products/magma",
+  "platform": "Product Hunt",
+  "source_type": "product_discovery",
+  "category": "agent_product_or_directory",
+  "source_dataset": "rank-platforms-product-discovery-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "extract failed: HTTP 403: 403 Forbidden\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Magma Foundation Model for Multimodal AI Agents. •1 review• 63 followers Visit websiteFollow Overview Launches Forums Reviews Team More Blog• Newsletter• Questions• Forums• Product Categories• Apps• About• FAQ• Terms• Privacy and Cookies• X.com• Facebook• Instagram• LinkedIn• YouTube• * Advertise ©2025Product Hunt Product status Unclaimed Links microsoft.github.io/Magma Social X.com ## What isMagma? Magma, the flagship project form Microsoft Research, is the first-ever foundation model for multimodal AI agents, designed to handle complex interactions across both virtual and real environments! ### Do you use Magma? I use thisI use something el",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "Product Hunt maker/team",
+    "title_position_company": "Product launch team",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.producthunt.com",
+    "domains_expertise": "agent",
+    "representative_works": [
+      "Magma Product Information and Latest Updates (2025) | Product Hunt"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "product_team_or_maker",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

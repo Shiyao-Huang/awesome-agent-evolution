@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/karpathy AI agent OR agents",
+  "search_rank": 7,
+  "name": "I'm being accused of overhyping the [site everyone heard too much ...",
+  "url": "https://x.com/karpathy/status/2017442712388309406",
+  "snippet": "We may also see all kinds of weird activity, e.g. viruses of text that spread across agents, a lot more gain of function on jailbreaks, weird ... date: Jan 31, 2026",
+  "id": 372,
+  "platform": "X/Twitter",
+  "content": "We may also see all kinds of weird activity, e.g. viruses of text that spread across agents, a lot more gain of function on jailbreaks, weird ... date: Jan 31, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jan 31, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

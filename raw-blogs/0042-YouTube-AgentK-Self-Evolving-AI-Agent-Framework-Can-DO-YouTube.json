@@ -1,0 +1,35 @@
+{
+  "id": 42,
+  "name": "AgentK: Self-Evolving AI Agent Framework Can DO ... - YouTube",
+  "url": "https://www.youtube.com/watch?v=POGsJd2TQhk",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "self_evolving_agent",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=POGsJd2TQhk\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "AgentK - a cutting-edge, self-evolving AI agent framework that can do anything from generating full-stack applications to coding complex algorithms. AgentK is not just another AI; it’s an autoagentic AGI that evolves by creating and collaborating with other agents to solve your tasks efficiently. AgentK is a modular, self-evolving AGI system that builds its own mind as it tackles new challenges. The \"K\" stands for kernel, representing the minimal core needed to bootstrap itself and expand its intelligence. AgentK’s mind comprises: Built on the powerful LangGraph and LangChain frameworks, AgentK evolves by developing new agents and tools, written as Python files, making it easy for you to track progress and even contribute to its development. - Self-Evolving: AgentK grows its capabilities by creating new agents and tools as needed. - Modular Design: Each agent has a specific role, ensurin",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, self-evolving, LangGraph",
+    "representative_works": [
+      "AgentK: Self-Evolving AI Agent Framework Can DO ... - YouTube"
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

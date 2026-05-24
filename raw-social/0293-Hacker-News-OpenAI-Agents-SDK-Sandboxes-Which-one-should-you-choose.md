@@ -1,0 +1,13 @@
+# OpenAI Agents SDK Sandboxes: Which one should you choose?
+
+- URL: https://news.ycombinator.com/item?id=48211198
+- Platform: Hacker News
+- Extraction status: fallback_snippet
+- content_timestamp: unknown
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: unknown
+- Query: site:news.ycombinator.com/item "OpenAI agents"
+
+## Raw Content
+
+OpenAI Agents SDK Sandboxes: Which one should you choose? | Hacker News I’m the founder of Superserve, so obviously I have a horse in the race here. We’ve spent a lot of time building infrastructure for agents and ended up doing a deep dive into the sandbox providers currently supported by OpenAI’s Agents SDK because the tradeoffs weren’t obvious from the docs. Compared E2B, Modal, Daytona, Cloudflare, Docker, Runloop, Vercel, Blaxel, and Docker across: - Isolation - Persistence - Pricing - GPU support - Data residency - Volume mounts I purposefully skipped benchmarking startup and snapshot/restore latency for two reasons: 1. There's dedicated teams building these now. ComputeSDK and 2027.dev are doing good work here. 2. It was more interesting to me that each provider has a very different mental model of what an “agent runtime” actually is. Any clarifications, questions, or feedback is most welcome. Hope it's helpful! Really interesting product. A ton of these sandbox companies recently but it feels like no one has really nailed the experience for application builders yet. Really excited to try this one out Do let us know what you think and how we can make the experience better for you

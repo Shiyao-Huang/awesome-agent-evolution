@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/bindureddy AI agent OR agents",
+  "search_rank": 2,
+  "name": "Announcing An AI Agent That Combines Software and QA ...",
+  "url": "https://x.com/bindureddy/status/2011176968054849737",
+  "snippet": "Bindu Reddy (@bindureddy). 334 likes 35 replies. Announcing An AI Agent That Combines Software and QA Engineering The best AI agents won't ... date: Jan 13, 2026",
+  "id": 447,
+  "platform": "X/Twitter",
+  "content": "Bindu Reddy (@bindureddy). 334 likes 35 replies. Announcing An AI Agent That Combines Software and QA Engineering The best AI agents won't ... date: Jan 13, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jan 13, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

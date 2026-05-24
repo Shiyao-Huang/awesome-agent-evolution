@@ -1,0 +1,35 @@
+{
+  "id": 119,
+  "name": "LangGraph:04 LangChain ReAct Agent with Custom Tool and Self ...",
+  "url": "https://www.youtube.com/watch?v=Lvrv9I276ps",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "tutorial_or_implementation",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=Lvrv9I276ps\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "LangGraph:04 LangChain ReAct Agent with Custom Tool and Self-Ask Agent with Search | AI Agents #llm In this video, we dive deep into the world of LangChain, focusing on two powerful agent types: the ReAct Agent with Custom Tool and the Self-Ask Agent with Search. Learn how to leverage these agents to build more intelligent, interactive, and efficient AI systems. ReAct Agent: We’ll explore how to create a custom tool within LangChain, enabling agents to react dynamically to the tasks at hand. Self-Ask Agent: Discover how this agent performs iterative self-questioning and integrates search functionalities to answer complex queries with precision. soon I will be creating a video on top of it as well but now after this particular video I will get one more video on top of the react I will show you the functionality how you can tweak it because it is very much important and then uh we'll direc",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, LangGraph",
+    "representative_works": [
+      "LangGraph:04 LangChain ReAct Agent with Custom Tool and Self ..."
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

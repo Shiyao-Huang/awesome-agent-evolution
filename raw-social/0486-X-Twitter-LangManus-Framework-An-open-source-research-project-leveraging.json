@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/LangChainAI AI agent OR agents",
+  "search_rank": 8,
+  "name": "LangManus Framework An open-source research project leveraging ...",
+  "url": "https://twitter.com/LangChainAI/status/1903506967533875538",
+  "snippet": "An open-source research project leveraging LangChain and LangGraph to create a powerful multi-agent system with seven specialized agents for ... date: Mar 22, 2025",
+  "id": 486,
+  "platform": "X/Twitter",
+  "content": "An open-source research project leveraging LangChain and LangGraph to create a powerful multi-agent system with seven specialized agents for ... date: Mar 22, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Mar 22, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

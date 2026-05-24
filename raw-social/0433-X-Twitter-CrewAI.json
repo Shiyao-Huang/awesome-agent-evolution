@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/crewAIInc AI agent OR agents",
+  "search_rank": 8,
+  "name": "CrewAI",
+  "url": "https://x.com/crewAIInc/status/1976020851079381225",
+  "snippet": "Join us to discover how innovators are building teams of AI agents to automate the impossible. If you're building with CrewAI or getting started ... date: Oct 8, 2025",
+  "id": 433,
+  "platform": "X/Twitter",
+  "content": "Join us to discover how innovators are building teams of AI agents to automate the impossible. If you're building with CrewAI or getting started ... date: Oct 8, 2025",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Oct 8, 2025",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2025-01"
+}

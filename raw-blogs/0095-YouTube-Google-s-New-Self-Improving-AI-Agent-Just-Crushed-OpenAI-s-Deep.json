@@ -1,0 +1,35 @@
+{
+  "id": 95,
+  "name": "Google's New Self Improving AI Agent Just Crushed OpenAI's Deep ...",
+  "url": "https://www.youtube.com/watch?v=p_BSAKedZaw",
+  "platform": "YouTube",
+  "source_type": "video",
+  "category": "self_evolving_agent",
+  "source_dataset": "social-cn-youtube-blog-raw-2026-05-20.json",
+  "extraction_status": "fallback_snippet",
+  "error": "**Source**: https://www.youtube.com/watch?v=p_BSAKedZaw\n\n---\n\n\n",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "content": "Something big is happening at Google. In just a few days, they dropped three breakthrough AI systems—one that outperforms OpenAI’s Deep Research, another that builds real ML pipelines better than Kaggle pros, and a third that maps the Earth without satellites. These aren’t upgrades. They’re game-changing agents designed to replace researchers, coders, and analysts—and they’re already winning. • Google’s TTD DR beats OpenAI on complex research benchmarks using a self-evolving AI agent • MLE STAR dominates Kaggle challenges by building and refining real machine learning pipelines • DeepMind’s AEF model creates satellite-free Earth maps using fused global data and AI precision • All three systems show how Google is quietly pulling ahead in multi-domain AI autonomy Even on data sets with short form answers, it still outperformed Open AI by close to 8% in some cases. It also ranked higher in ",
+  "content_timestamp": "2026-05-20",
+  "timestamp_confidence": "derived",
+  "timestamp_source": "extracted from raw content/title/metadata",
+  "time_slice": "2026-05",
+  "author_profile": {
+    "name_or_id": "YouTube creator/channel",
+    "title_position_company": "Video educator/creator",
+    "social_followers": {
+      "x_twitter": "unknown",
+      "linkedin": "unknown"
+    },
+    "blog_or_website": "https://www.youtube.com",
+    "domains_expertise": "agent, self-evolving, benchmark",
+    "representative_works": [
+      "Google's New Self Improving AI Agent Just Crushed OpenAI's Deep ..."
+    ],
+    "h_index_academic_impact": "unknown",
+    "github_stars_developer_impact": "unknown",
+    "industry_influence_rating": "creator",
+    "confidence": "medium",
+    "needs_enrichment": true
+  }
+}

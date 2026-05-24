@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/latentspacepod AI agent OR agents",
+  "search_rank": 4,
+  "name": "\"For the agents on Brex release, we've actually started using Mastra ...",
+  "url": "https://x.com/latentspacepod/status/2014427853467877643",
+  "snippet": "We sat down with James Reggio to unpack Brex's three-pillar AI strategy (corporate, operational, and product AI), how SOP-driven agents beat ... date: Jan 22, 2026",
+  "id": 439,
+  "platform": "X/Twitter",
+  "content": "We sat down with James Reggio to unpack Brex's three-pillar AI strategy (corporate, operational, and product AI), how SOP-driven agents beat ... date: Jan 22, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Jan 22, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}

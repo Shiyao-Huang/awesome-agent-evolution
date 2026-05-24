@@ -1,0 +1,15 @@
+{
+  "query": "site:twitter.com/swyx AI agent OR agents",
+  "search_rank": 4,
+  "name": "RT @pauliusztin_: Here is my free workshop on building multi-agent ...",
+  "url": "https://twitter.com/swyx/status/2042296406363279772",
+  "snippet": "Here is my free workshop on building multi-agent systems, I presented at the @aiDotEngineer London conference together with @Whats_AI.",
+  "id": 459,
+  "platform": "X/Twitter",
+  "content": "Here is my free workshop on building multi-agent systems, I presented at the @aiDotEngineer London conference together with @Whats_AI.",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "unknown",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
+}

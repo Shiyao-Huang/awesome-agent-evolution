@@ -1,0 +1,15 @@
+{
+  "query": "site:x.com/AndrewYNg AI agent OR agents",
+  "search_rank": 3,
+  "name": "As AI agents accelerate coding, what is the future of software ...",
+  "url": "https://x.com/AndrewYNg/status/2043742105852621052",
+  "snippet": "Among professions, AI is accelerating software engineering most, given the rise of coding agents. According to a new report by Citadel Research, ... date: Apr 13, 2026",
+  "id": 388,
+  "platform": "X/Twitter",
+  "content": "Among professions, AI is accelerating software engineering most, given the rise of coding agents. According to a new report by Citadel Research, ... date: Apr 13, 2026",
+  "extraction_status": "fallback_snippet",
+  "error": "x/twitter usually login-wall; snippet preserved",
+  "content_timestamp": "Apr 13, 2026",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "2026-01"
+}
