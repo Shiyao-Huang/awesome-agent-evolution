@@ -1,178 +1,500 @@
 % ====================================================================
-% 第1章：引言（LaTeX版本，含TikZ图）
+% Chapter 1: Introduction (expanded English version)
 % ====================================================================
 
-\section{引言}\label{ch:intro}
+\section{Introduction}\label{ch:intro}
 
-\subsection{本章概述}
+Artificial intelligence is moving from static inference toward systems that can improve through their own experience. The dominant public image of an AI system is still a model that receives a prompt and produces an answer. That image is no longer sufficient. Modern AI applications increasingly combine a foundation model with tools, memory, code execution, retrieval, evaluators, planners, critics, sandboxes, benchmarks, and multi-agent workflows. Once these components are assembled into an agent, the central question changes. The question is no longer only whether the model can answer one query. The question is whether the whole system can observe its failures, diagnose the cause, propose a modification, verify the modification, and retain the improvement without destroying previous capabilities.
 
-Agent Evolution，或称智能体自演化、自我改进与开放式智能体进化，正在成为大模型智能体研究中最重要的方向之一。它的核心问题不是"如何让一个模型在一次调用中回答得更好"，而是"如何让一个由大模型、工具、记忆、环境交互、评估器和执行代码组成的智能体系统，在运行过程中不断产生可验证的改进"。从本项目收集的 \texttt{raw-papers/}、\texttt{paper-reviews/} 与 \texttt{research/} 材料看，2022 年的 STaR 把推理链生成、筛选和微调组织成最早的自举闭环；2023 年的 Reflexion、Self-Refine、Voyager 和多智能体辩论把反思、反馈、技能库和协作引入 agent 层；2024 年的 Self-Rewarding、IterAlign、RISE、ADAS、Gödel Agent、EvoMAC 等工作将自评估、递归自修改、文本反向传播和自动化架构搜索推向系统化；2025--2026 年的 SICA、RAGEN、WebEvolver、Absolute Zero、DGM、AlphaEvolve、SPIRAL、ACE、EvolveR、ReasoningBank、Memory-R1 与 AriadneMem 则进一步把自演化扩展到代码级自修改、多轮强化学习、零数据自博弈、科学算法发现、上下文工程和长期记忆管理。
+We use the term \emph{AI self-evolution} to describe this family of feedback-driven, cumulative improvement processes. The term is intentionally broader than self-training and more operational than recursive self-improvement. It includes systems that update model weights, but it also includes systems that keep the model fixed and update external state: prompts, memory, skills, tools, code, agent topologies, evaluators, or archives. Reflexion, for example, improves behavior by storing verbal reflections rather than changing parameters \cite{reflexion2023}. Voyager accumulates reusable skills during open-ended interaction \cite{voyager2023}. ADAS searches over Python-level agent designs \cite{adas2024}. Darwin Godel Machine maintains an archive of self-modified coding agents \cite{dgm2025}. AlphaEvolve couples LLM-generated program variation with automatic evaluation and evolutionary selection \cite{alphaevolve2025}. These systems differ in mechanism, but they share a loop: generate candidate behavior, evaluate it, decide what should survive, and carry the surviving information forward.
 
-因此，本综述把 Agent Evolution 视为一个跨越机器学习、进化计算、自动程序合成、强化学习、元学习、认知架构和软件工程的综合研究方向。它关注的不只是模型权重是否更新，也包括提示词、工具、记忆、策略、执行代码、工作流、评估器、世界模型和多智能体组织结构能否在闭环中被生成、评估、选择、保留与复用。本章先界定 Agent Evolution 的定义与范畴，再解释研究背景与动机，最后给出全篇综述的结构与阅读指南。
+This survey treats self-evolution as an emerging systems discipline. It is not a single algorithm and not a single benchmark result. It is a design pattern that links machine learning, evolutionary computation, program synthesis, AutoML, reinforcement learning, online learning, memory systems, and software engineering. The field is young enough that terminology remains unstable. Papers speak of self-refinement, self-rewarding, self-play, lifelong learning, open-endedness, test-time improvement, agent optimization, and self-referential agents. We argue that these names become easier to compare when each method is analyzed along five questions: what part of the system is mutable, what feedback signal drives change, how variations are generated, how selection is performed, and how improvements are retained and audited.
 
-% ====================================================================
-% 图1.1: Agent Self-Evolution 研究全景图
-% ====================================================================
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}[
-  root/.style={rectangle, rounded corners=8pt, draw=cat1!70!black, fill=cat1!15,
-    text width=4.8cm, minimum height=1.2cm, align=center, font=\bfseries},
-  pillar/.style={rectangle, rounded corners=6pt, draw=#1!70!black, fill=#1!12,
-    text width=3.2cm, minimum height=1cm, align=center, font=\small\bfseries},
-  item/.style={rectangle, rounded corners=2pt, draw=gray!50, fill=gray!5,
-    text width=3cm, align=left, font=\scriptsize, inner sep=3pt},
-  arr/.style={-{Stealth[length=2.5mm]}, thick, color=gray!60},
-  timeline/.style={very thick, -{Stealth[length=3mm]}, color=cat4!60},
-]
-  % Central root
-  \node[root] (center) at (0,0) {Agent Self-Evolution\\研究全景};
+\subsection{Background: From Static AI to Self-Evolving AI}\label{sec:intro-background}
 
-  % Six pillars - top row
-  \node[pillar=cat1] (p1) at (-6.5,-2.5) {基于奖励\\的进化};
-  \node[pillar=cat2] (p2) at (-2.2,-2.5) {自博弈与\\自生成任务};
-  \node[pillar=cat3] (p3) at (2.2,-2.5) {提示词/上下文\\反思进化};
+The history of AI can be read as a gradual relocation of adaptation. In early symbolic systems, adaptation occurred almost entirely in the human designer. In statistical learning, adaptation moved into parameters trained on data. In online and reinforcement learning, adaptation moved into interaction with an environment. In modern agent systems, adaptation is beginning to move into the system architecture itself: the agent can revise the prompts, tools, memories, code, tasks, and evaluators that shape its future behavior. This relocation is the historical context for self-evolution.
 
-  % Six pillars - bottom row
-  \node[pillar=cat4] (p4) at (-6.5,-5.8) {架构搜索\\代码自修改};
-  \node[pillar=cat5] (p5) at (-2.2,-5.8) {记忆\\进化};
-  \node[pillar=cat6] (p6) at (2.2,-5.8) {混合\\方法};
+\subsubsection{Turing-era static intelligence}
 
-  % Item boxes below each pillar
-  \node[item, below=1.5mm of p1] (i1) {STaR, Self-Rewarding\\Meta-Rewarding\\RISE, RAGEN\\IterAlign, Agent-R};
-  \node[item, below=1.5mm of p2] (i2) {Absolute Zero\\SPIRAL\\Self-Play FT, MAE\\Agentic Self-Learning};
-  \node[item, below=1.5mm of p3] (i3) {Reflexion, ExpeL\\Self-Refine\\ACE, EvolveR\\符号学习};
-  \node[item, below=1.5mm of p4] (i4) {ADAS, Gödel Agent\\DGM, SICA\\AlphaEvolve\\EvoMAC};
-  \node[item, below=1.5mm of p5] (i5) {Voyager, Memory-R1\\ReasoningBank\\AriadneMem\\Generative Agents};
-  \node[item, below=1.5mm of p6] (i6) {WebEvolver\\多机制组合\\端到端闭环};
+Turing's imitation game made behavior, not inner mechanism, the operational test of machine intelligence. Early AI systems were therefore usually evaluated as fixed artifacts: a program was written, presented with a task, and judged by its output. This framing was productive because it separated intelligence from biology, yet it also made improvement external to the system. When a theorem prover, chess engine, or expert system failed, the human designer changed the representation, rules, or search procedure. The system could solve problems, but it did not normally convert failure into a durable modification of itself.
 
-  % Arrows from center to pillars
-  \foreach \p in {p1,p2,p3,p4,p5,p6} {
-    \draw[arr] (center) -- (\p);
-  }
+This stage contributes one layer to the present survey. It shows that self-evolution is not a sudden invention attached to large language models, but the convergence of older ideas under a new representational regime. What is new is the availability of models that can read traces, write code, summarize failures, generate tasks, critique strategies, and operate as mutation operators in spaces that were previously too semantic for automatic search. The resulting systems inherit the promise and the risks of every earlier tradition. They can adapt faster than hand-engineered pipelines, but they can also optimize the wrong signal, overfit a benchmark, accumulate misleading memory, or change behavior in ways that are difficult to audit.
 
-  % Timeline on the right side
-  \draw[timeline] (6.5,-0.5) -- (6.5,-7.5)
-    node[midway, right=3mm, font=\small, text=cat4!70!black, align=center, rotate=-90]
-    {技术演进};
+For this reason, the introduction of self-evolution requires a careful distinction between capability growth and trustworthy capability growth. A benchmark improvement is useful evidence, but it is not the whole story. A method must also explain how the candidate was generated, why the evaluator was independent enough to support selection, whether the change transfers, whether the cost is acceptable, whether regressions were checked, and whether the lineage can be inspected. These questions shape the rest of the paper.
 
-  \node[font=\scriptsize\bfseries, text=cat1!70!black] at (7.6,-0.5) {2022};
-  \node[font=\scriptsize, text=gray!70!black] at (8.5,-0.5) {STaR};
+\subsubsection{Cybernetics and adaptive control}
 
-  \node[font=\scriptsize\bfseries, text=cat2!70!black] at (7.6,-2.0) {2023};
-  \node[font=\scriptsize, text=gray!70!black, align=center] at (8.8,-2.0) {Reflexion, Voyager};
+Cybernetic and adaptive-control traditions introduced feedback as a central engineering principle. A controller observes the difference between a desired trajectory and an actual trajectory, then changes its action to reduce the error. This already resembles the loop that modern self-evolving agents use, but the mutable object was usually a low-dimensional policy or controller parameter rather than a language-mediated agent architecture. The intellectual inheritance is important: self-evolution is not merely a metaphor of biological change, but an engineering commitment that performance measurements should feed back into system state.
 
-  \node[font=\scriptsize\bfseries, text=cat3!70!black] at (7.6,-3.8) {2024};
-  \node[font=\scriptsize, text=gray!70!black, align=center] at (8.8,-3.8) {ADAS, DGM\\Self-Rewarding};
+This stage contributes one layer to the present survey. It shows that self-evolution is not a sudden invention attached to large language models, but the convergence of older ideas under a new representational regime. What is new is the availability of models that can read traces, write code, summarize failures, generate tasks, critique strategies, and operate as mutation operators in spaces that were previously too semantic for automatic search. The resulting systems inherit the promise and the risks of every earlier tradition. They can adapt faster than hand-engineered pipelines, but they can also optimize the wrong signal, overfit a benchmark, accumulate misleading memory, or change behavior in ways that are difficult to audit.
 
-  \node[font=\scriptsize\bfseries, text=cat5!70!black] at (7.6,-5.6) {2025--26};
-  \node[font=\scriptsize, text=gray!70!black, align=center] at (8.8,-5.6) {AlphaEvolve\\Absolute Zero};
+For this reason, the introduction of self-evolution requires a careful distinction between capability growth and trustworthy capability growth. A benchmark improvement is useful evidence, but it is not the whole story. A method must also explain how the candidate was generated, why the evaluator was independent enough to support selection, whether the change transfers, whether the cost is acceptable, whether regressions were checked, and whether the lineage can be inspected. These questions shape the rest of the paper.
 
-  % Reference to theory chapter
-  \node[rectangle, rounded corners=4pt, draw=cat5!60!black, fill=cat5!6,
-    text width=2.4cm, align=center, font=\scriptsize\bfseries, minimum height=8mm]
-    (theory) at (6.5,-7.5) {理论框架\\详见\ref{ch:theory}};
-  \draw[arr, dashed, cat5!50] (center.east) -- ++(1.2,0) |- (theory.north);
+\subsubsection{Evolutionary computation}
 
-\end{tikzpicture}
-\caption{Agent Self-Evolution 研究全景图。六大方法类别围绕核心定义展开，右侧时间轴展示 2022--2026 年间的关键里程碑。}
-\label{fig:ch1-landscape}
-\end{figure}
+Genetic algorithms, genetic programming, evolution strategies, novelty search, and quality-diversity methods moved adaptation into populations of candidate solutions. Instead of improving a single trajectory, they maintain variation, evaluate fitness, and retain useful variants. This tradition matters for AI self-evolution because the most important design spaces for agents are discrete, symbolic, and non-differentiable. Prompts, tool plans, memory policies, Python functions, workflow graphs, and multi-agent organizations cannot be optimized by ordinary gradient descent alone. They are closer to programs in an evolutionary archive than to weights in a differentiable layer.
 
-\subsection{Agent Evolution 的定义与范畴}\label{sec:intro-def}
+This stage contributes one layer to the present survey. It shows that self-evolution is not a sudden invention attached to large language models, but the convergence of older ideas under a new representational regime. What is new is the availability of models that can read traces, write code, summarize failures, generate tasks, critique strategies, and operate as mutation operators in spaces that were previously too semantic for automatic search. The resulting systems inherit the promise and the risks of every earlier tradition. They can adapt faster than hand-engineered pipelines, but they can also optimize the wrong signal, overfit a benchmark, accumulate misleading memory, or change behavior in ways that are difficult to audit.
 
-本文中的 Agent Evolution 指：以 LLM 或多模态基础模型为核心推理器，以环境反馈、任务奖励、人类偏好、程序化测试、同伴竞争、历史记忆或自生成数据为改进信号，通过可重复的生成--评估--选择--更新循环，使智能体系统在任务能力、泛化能力、效率、安全性或适应性上产生可验证变化的一类方法。这个定义包含四个必要要素。第一，系统必须具有可变化的状态或结构；变化对象可以是模型权重，也可以是提示词、记忆、工具调用策略、agent 代码、planner、critic、world model、协作拓扑或评估准则。第二，系统必须有反馈信号；反馈可以来自外部基准、程序测试、环境 reward、LLM-as-a-judge、自博弈对手、人工评价或历史任务表现。第三，系统必须有选择或更新机制；例如 DPO/RL、MCTS、archive selection、文本反向传播、反思写入、程序 patch、上下文 playbook 更新或课程生成。第四，改进必须可审计；仅仅"看起来回答更好"不足以构成自演化，必须有任务分数、迁移测试、消融、成本记录或失败分析支撑。
+For this reason, the introduction of self-evolution requires a careful distinction between capability growth and trustworthy capability growth. A benchmark improvement is useful evidence, but it is not the whole story. A method must also explain how the candidate was generated, why the evaluator was independent enough to support selection, whether the change transfers, whether the cost is acceptable, whether regressions were checked, and whether the lineage can be inspected. These questions shape the rest of the paper.
 
-这个定义故意比"自我训练"更宽，也比"递归自我改进"更实用。传统自训练主要关注模型从伪标签中学习，变化对象多为权重；而 Agent Evolution 允许智能体在不修改底层模型的情况下，通过外部记忆和程序结构获得行为层面的持续改进。Reflexion 使用自然语言反思作为情景记忆，ExpeL 从训练任务中抽取经验规则，ACE 把上下文组织成可演化策略手册，ReasoningBank 把成功与失败轨迹蒸馏为可检索推理策略，这些都属于"非参数自演化"。相反，RISE、Agent-R、RAGEN、Absolute Zero、SPIRAL、Self-Rewarding 与 IterAlign 涉及训练或偏好优化，属于"参数或策略级自演化"。DGM、SICA、Gödel Agent 与 AlphaEvolve 则把变化对象推进到代码和算法层面：智能体不仅选择动作，而且生成或修改执行自身行为的程序。
+\subsubsection{Self-reference and the Godel machine}
 
-Agent Evolution 也不同于普通 agent engineering。手工搭建 ReAct、planner-executor、tool-use workflow 或 multi-agent debate，并不自动构成自演化；只有当系统能在反馈中自动改写这些结构，或把经验转化为以后可用的策略，才进入本文的讨论范围。ADAS 的意义正在于把"设计 agent 架构"本身变成可搜索对象：元智能体用 Python 编写新 agent，评估其任务表现，再把有效设计纳入 archive。EvoMAC 把多智能体协作网络看作可学习结构，利用文本反向传播更新节点和连接。WebEvolver 让 web agent 与世界模型协同进化，解决自主学习中的探索不足。这样的工作说明，Agent Evolution 的核心不是某个固定架构，而是"让架构也成为被优化对象"。
+The Godel machine tradition raised a sharper question: can a system reason about modifications to itself and accept a change only when the change improves expected utility? The original vision relied on proof search and formal guarantees. Contemporary language-agent systems rarely achieve that level of proof, but they revive the self-referential structure in an empirical form. Godel Agent, Darwin Godel Machine, and related systems let an agent modify the code or procedure that will govern later attempts, while using sandboxed evaluation rather than formal proof as the acceptance gate \cite{dgm2025}.
 
-从范畴上，本文把相关方法划分为六类。第一是基于奖励或验证器的进化，包括强化学习、自奖励、程序化测试和 benchmark-driven archive。第二是自博弈与自生成任务，代表工作包括 Self-Play Fine-Tuning、Absolute Zero、SPIRAL、MAE 与 Agentic Self-Learning。第三是提示词、上下文与反思进化，包括 Self-Refine、Reflexion、RISE、ACE、EvolveR 与 ExpeL。第四是架构搜索与代码级自修改，包括 ADAS、Gödel Agent、SICA、DGM、AlphaEvolve、EvoMAC 与符号学习。第五是基于记忆的进化，包括 Voyager、Generative Agents、ReasoningBank、Memory-R1、AriadneMem、ELL 与 Lifelong Learning roadmap。第六是混合方法，即同时结合奖励、记忆、世界模型、课程、自博弈和架构修改的闭环系统。
+This stage contributes one layer to the present survey. It shows that self-evolution is not a sudden invention attached to large language models, but the convergence of older ideas under a new representational regime. What is new is the availability of models that can read traces, write code, summarize failures, generate tasks, critique strategies, and operate as mutation operators in spaces that were previously too semantic for automatic search. The resulting systems inherit the promise and the risks of every earlier tradition. They can adapt faster than hand-engineered pipelines, but they can also optimize the wrong signal, overfit a benchmark, accumulate misleading memory, or change behavior in ways that are difficult to audit.
 
-\subsection{研究背景与动机}\label{sec:intro-motivation}
+For this reason, the introduction of self-evolution requires a careful distinction between capability growth and trustworthy capability growth. A benchmark improvement is useful evidence, but it is not the whole story. A method must also explain how the candidate was generated, why the evaluator was independent enough to support selection, whether the change transfers, whether the cost is acceptable, whether regressions were checked, and whether the lineage can be inspected. These questions shape the rest of the paper.
 
-Agent Evolution 兴起的第一个背景，是基础模型能力增长与静态调用范式之间的矛盾。大模型已经具备推理、代码、工具使用和多模态理解能力，但一次性提示很难充分发挥这些能力。复杂任务需要试错、分解、检索、执行、失败恢复和经验复用。STaR 表明，模型可以从自己生成并筛选出的推理过程中学习；Reflexion 表明，自然语言反思可以把失败转化为下一次尝试的策略；Voyager 表明，持续探索与技能库可以让 LLM agent 在开放环境中积累能力。这些工作共同指出：真正有价值的智能体不是静态问答器，而是能把交互历史变成未来能力的学习系统。
+\subsubsection{AutoML and neural architecture search}
 
-第二个背景，是人工监督和专家设计的成本迅速上升。RLHF、人工标注、人工 prompt engineering 和手工 agent workflow 能带来强性能，但难以覆盖开放世界中的长尾任务。Self-Rewarding Language Models、Meta-Rewarding、IterAlign 与 Weak-to-Strong Generalization 探索如何用模型自身或弱监督者构造训练信号；Absolute Zero 与 Self-Challenging agents 进一步尝试在零外部数据条件下生成任务、验证答案并更新策略；ADAS、DGM 和 AlphaEvolve 则减少对人类架构设计和算法设计的依赖。动机很直接：如果智能体能够自己提出训练任务、自己生成候选解、自己评估并保留有效改进，那么 AI 系统的发展速度就不再完全受制于人工数据和人工设计。
+AutoML and neural architecture search made design itself an object of optimization. Rather than hand-selecting features, hyperparameters, or neural topologies, a controller searches over candidate pipelines and architectures. The shift from NAS to agent architecture search is a shift in representation. NAS searches differentiable or graph-structured neural modules; ADAS searches Python-level agent designs, where conditionals, loops, memory, critique, debate, retrieval, and tool use can be composed in arbitrary ways \cite{adas2024}.
 
-第三个背景，是真实应用场景要求长期适应。软件工程智能体要面对不断变化的代码库、依赖、测试和需求；网页智能体要适应动态网页、API 与用户目标；科研智能体要在开放问题空间中提出假设并执行实验；企业智能体要记住历史流程、合规要求与组织偏好。静态 benchmark 难以覆盖这些变化。SICA 和 DGM 把编码 agent 的自修改能力放到 SWE-Bench、Polyglot 等环境中验证；WebEvolver 面向 web 环境中的世界模型协同进化；Memory-R1、ReasoningBank 和 AriadneMem 则说明长期记忆不是附属模块，而是 agent 能否持续学习的核心基础设施。
+This stage contributes one layer to the present survey. It shows that self-evolution is not a sudden invention attached to large language models, but the convergence of older ideas under a new representational regime. What is new is the availability of models that can read traces, write code, summarize failures, generate tasks, critique strategies, and operate as mutation operators in spaces that were previously too semantic for automatic search. The resulting systems inherit the promise and the risks of every earlier tradition. They can adapt faster than hand-engineered pipelines, but they can also optimize the wrong signal, overfit a benchmark, accumulate misleading memory, or change behavior in ways that are difficult to audit.
 
-第四个背景，是安全与可控性问题变得更加尖锐。自演化系统可能修改自己的提示、代码、工具调用策略和记忆，因而不仅可能变强，也可能产生 reward hacking、benchmark overfitting、权限扩大、隐藏回归或错误自我强化。Gödel Agent、DGM 和 SICA 继承了 Gödel 机器关于递归自我改进的雄心，但它们用经验验证替代形式证明，也因此必须面对评估不完备、沙箱隔离、回滚机制和审计日志等工程问题。Agent Evolution 的研究动机并非无条件追求"让系统自己变强"，而是在可验证、可回滚、可解释、可约束的条件下，把自我改进转化为可工程化的能力增长。
+For this reason, the introduction of self-evolution requires a careful distinction between capability growth and trustworthy capability growth. A benchmark improvement is useful evidence, but it is not the whole story. A method must also explain how the candidate was generated, why the evaluator was independent enough to support selection, whether the change transfers, whether the cost is acceptable, whether regressions were checked, and whether the lineage can be inspected. These questions shape the rest of the paper.
 
-第五个背景，是进化计算与 LLM 的互补性越来越明显。进化算法擅长在非可微、离散、开放式空间中进行变异、选择和保持多样性，但传统进化搜索往往需要精心编码的基因表示和大量评估；LLM 擅长提出语义丰富的候选程序、策略、解释和工具组合，却容易缺乏稳定的外部选择压力。AlphaEvolve、FunSearch、ADAS 和 DGM 展示了二者结合的优势：LLM 负责生成高层候选，评估器负责选择，archive 负责保留 stepping stones，多轮迭代负责积累改进。这一范式使"进化"不再只是随机扰动参数，而成为对可读代码、自然语言策略和 agent 结构的语义搜索。
+\subsubsection{Large language models as semantic mutation operators}
 
-% ====================================================================
-% 图1.2: 数据收集统计柱状图
-% ====================================================================
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-  ybar,
-  bar width=26pt,
-  width=0.85\textwidth,
-  height=7cm,
-  ylabel={数量},
-  ylabel style={font=\small},
-  symbolic x coords={论文, 代码仓库, 痛点分析, 博客/技术报告},
-  xtick=data,
-  xticklabel style={font=\small},
-  yticklabel style={font=\small},
-  ymin=0, ymax=1500,
-  nodes near coords,
-  nodes near coords style={font=\bfseries\small, anchor=south},
-  every axis plot/.append style={fill opacity=0.85},
-  legend style={at={(0.98,0.95)}, anchor=north east, font=\small},
-  grid=major,
-  grid style={gray!20},
-  axis line style={gray!60},
-  tick style={gray!60},
-]
-\addplot[fill=cat1!60, draw=cat1] coordinates {
-  (论文, 88)
-};
-\addplot[fill=cat2!60, draw=cat2] coordinates {
-  (代码仓库, 348)
-};
-\addplot[fill=cat3!60, draw=cat3] coordinates {
-  (痛点分析, 97)
-};
-\addplot[fill=cat4!60, draw=cat4] coordinates {
-  (博客/技术报告, 1306)
-};
-\legend{论文, 代码仓库, 痛点分析, 博客/技术报告}
-\end{axis}
-\end{tikzpicture}
-\caption{本综述素材数据收集统计：88 篇论文、348 个代码仓库、97 个痛点分析、1306 篇博客与技术报告。}
-\label{fig:ch1-stats}
-\end{figure}
+The arrival of large language models changed the economics of search. Traditional mutations are often blind: they flip a token, perturb a number, or replace a subtree. LLMs can perform semantic mutation. Given a failure trace, they can propose a new prompt, add a test, refactor a planner, introduce a critic, summarize a memory, or patch code. This makes evolutionary search less dependent on hand-designed mutation operators. The model supplies high-level variations, and the evaluator supplies selection pressure.
+
+This stage contributes one layer to the present survey. It shows that self-evolution is not a sudden invention attached to large language models, but the convergence of older ideas under a new representational regime. What is new is the availability of models that can read traces, write code, summarize failures, generate tasks, critique strategies, and operate as mutation operators in spaces that were previously too semantic for automatic search. The resulting systems inherit the promise and the risks of every earlier tradition. They can adapt faster than hand-engineered pipelines, but they can also optimize the wrong signal, overfit a benchmark, accumulate misleading memory, or change behavior in ways that are difficult to audit.
+
+For this reason, the introduction of self-evolution requires a careful distinction between capability growth and trustworthy capability growth. A benchmark improvement is useful evidence, but it is not the whole story. A method must also explain how the candidate was generated, why the evaluator was independent enough to support selection, whether the change transfers, whether the cost is acceptable, whether regressions were checked, and whether the lineage can be inspected. These questions shape the rest of the paper.
+
+\subsubsection{The agent turn}
+
+The agent turn added tools, memory, execution, and environment interaction to language models. A static model call becomes one component in a larger system that can plan, act, observe, and retry. Once the system includes external state, there is a natural place for improvement to accumulate. Reflexion stores verbal lessons from failed attempts \cite{reflexion2023}. Voyager stores reusable skills discovered in an open-ended environment \cite{voyager2023}. ADAS stores discovered agent programs \cite{adas2024}. DGM stores a lineage of self-modified coding agents \cite{dgm2025}.
+
+This stage contributes one layer to the present survey. It shows that self-evolution is not a sudden invention attached to large language models, but the convergence of older ideas under a new representational regime. What is new is the availability of models that can read traces, write code, summarize failures, generate tasks, critique strategies, and operate as mutation operators in spaces that were previously too semantic for automatic search. The resulting systems inherit the promise and the risks of every earlier tradition. They can adapt faster than hand-engineered pipelines, but they can also optimize the wrong signal, overfit a benchmark, accumulate misleading memory, or change behavior in ways that are difficult to audit.
+
+For this reason, the introduction of self-evolution requires a careful distinction between capability growth and trustworthy capability growth. A benchmark improvement is useful evidence, but it is not the whole story. A method must also explain how the candidate was generated, why the evaluator was independent enough to support selection, whether the change transfers, whether the cost is acceptable, whether regressions were checked, and whether the lineage can be inspected. These questions shape the rest of the paper.
+
+\subsubsection{Algorithm discovery and infrastructure optimization}
+
+AlphaEvolve and related systems show that the same pattern can operate beyond conversational agents. A language model proposes code-level algorithmic changes, an automatic evaluator scores candidates, and an evolutionary process preserves high-performing variants. The reported use cases span mathematical discovery and infrastructure optimization, illustrating that self-evolution is not limited to chatbots or prompt loops. It is a general recipe for coupling generative models with external verification and cumulative search \cite{alphaevolve2025}.
+
+This stage contributes one layer to the present survey. It shows that self-evolution is not a sudden invention attached to large language models, but the convergence of older ideas under a new representational regime. What is new is the availability of models that can read traces, write code, summarize failures, generate tasks, critique strategies, and operate as mutation operators in spaces that were previously too semantic for automatic search. The resulting systems inherit the promise and the risks of every earlier tradition. They can adapt faster than hand-engineered pipelines, but they can also optimize the wrong signal, overfit a benchmark, accumulate misleading memory, or change behavior in ways that are difficult to audit.
+
+For this reason, the introduction of self-evolution requires a careful distinction between capability growth and trustworthy capability growth. A benchmark improvement is useful evidence, but it is not the whole story. A method must also explain how the candidate was generated, why the evaluator was independent enough to support selection, whether the change transfers, whether the cost is acceptable, whether regressions were checked, and whether the lineage can be inspected. These questions shape the rest of the paper.
+
+\subsubsection{Production pressure}
+
+The final historical pressure is operational. Organizations deploying agents need systems that adapt to changing codebases, websites, APIs, data distributions, compliance rules, and user preferences. One-off prompting cannot handle this burden. A production agent must remember failures, update procedures, rerun tests, detect regressions, and explain why a new behavior is safer or more useful than the old one. This pressure moves self-evolution from a speculative research theme to a concrete software-engineering requirement.
+
+This stage contributes one layer to the present survey. It shows that self-evolution is not a sudden invention attached to large language models, but the convergence of older ideas under a new representational regime. What is new is the availability of models that can read traces, write code, summarize failures, generate tasks, critique strategies, and operate as mutation operators in spaces that were previously too semantic for automatic search. The resulting systems inherit the promise and the risks of every earlier tradition. They can adapt faster than hand-engineered pipelines, but they can also optimize the wrong signal, overfit a benchmark, accumulate misleading memory, or change behavior in ways that are difficult to audit.
+
+For this reason, the introduction of self-evolution requires a careful distinction between capability growth and trustworthy capability growth. A benchmark improvement is useful evidence, but it is not the whole story. A method must also explain how the candidate was generated, why the evaluator was independent enough to support selection, whether the change transfers, whether the cost is acceptable, whether regressions were checked, and whether the lineage can be inspected. These questions shape the rest of the paper.
 
 
-% ====================================================================
-% 表1.1: 全文结构导航表
-% ====================================================================
+The empirical corpus behind this survey reflects the same convergence. The local project index includes hundreds of repositories, while the curated front-facing site highlights several dozen projects most closely connected to agent self-evolution. The paper notes cover self-refinement, verbal reinforcement, symbolic learning, Godel-style self-modification, ADAS, AlphaEvolve, RAGEN, RISE, SelfEvolve, and related systems. The author-network analysis identifies three major lineages: evolutionary computation and open-endedness, language-agent reasoning, and LLM self-improvement. The star-analysis report adds a practical lens by asking whether repository popularity corresponds to active, reusable, technically healthy software. These materials motivate a survey that is broader than a paper list: the goal is to reconstruct the field as a connected research and engineering landscape.
+
+\subsection{Core Definition: AI Self-Evolution}\label{sec:intro-definition}
+
+We define AI self-evolution as follows. An AI system exhibits self-evolution when it uses feedback from its own task attempts, environment interactions, generated artifacts, or evaluation history to produce, select, and retain modifications to some persistent part of the system, such that later behavior can be measurably different from earlier behavior under an auditable update process. This definition contains six necessary ideas: mutable state, feedback, variation, selection, retention, and auditability. It deliberately avoids requiring weight updates, because many important agent systems evolve through memory or code while using a fixed foundation model. It also avoids accepting mere repetition as evolution, because retrying the same prompt without persistent state does not create cumulative improvement.
+
+Formally, let an agent system at iteration $t$ be represented by a state
+\begin{equation}
+  z_t = (\theta_t, c_t, g_t, m_t, \mathcal{A}_t, \mathcal{V}_t),
+\end{equation}
+where $\theta_t$ denotes model parameters or trainable policy components, $c_t$ denotes prompts and context policies, $g_t$ denotes tools, code, control-flow graphs, or workflow topology, $m_t$ denotes memory, skills, principles, traces, and world models, $\mathcal{A}_t$ denotes an archive of candidates or lineages, and $\mathcal{V}_t$ denotes evaluators, tests, judges, and benchmark specifications. A task $\tau_t$ sampled from a task distribution $P(\tau)$ induces a trajectory $x_t$ under the current agent policy. An evaluator produces feedback
+\begin{equation}
+  y_t = V(x_t, \tau_t, z_t, \mathcal{E}),
+\end{equation}
+where $\mathcal{E}$ is the environment or execution context. A variation operator $U$ then proposes candidate states
+\begin{equation}
+  \{z'_{t,k}\}_{k=1}^{K} = \{U_k(z_t, x_t, y_t)\}_{k=1}^{K}.
+\end{equation}
+A selector $S$ chooses the next state or updates the archive according to quality, diversity, cost, and safety constraints:
+\begin{equation}
+  z_{t+1}, \mathcal{A}_{t+1} = S\left(\mathcal{A}_t \cup \{z'_{t,k}\}_{k=1}^{K}; V, C, D, B\right),
+\end{equation}
+where $C$ represents constraints, $D$ represents diversity or novelty, and $B$ represents resource budget. A system is self-evolving only if this process leaves a persistent trace that can affect future behavior.
+
+\subsubsection{Definition dimension: mutable state}
+
+A self-evolving agent must have a state that can change. The state may include model parameters, prompts, retrieval indexes, episodic memories, tool schemas, code modules, workflow graphs, judge instructions, benchmark suites, or archive metadata. If the system has no persistent mutable state, it may perform iterative inference, but it cannot accumulate evolution across tasks.
+
+This dimension also gives a diagnostic test for proposed self-evolution claims. When a paper reports improvement, we can ask whether the mutable object is explicit, whether the feedback signal is independent enough to justify trust, whether the variation operator can be reproduced, whether the selector uses held-out evidence or only self-approval, whether the retained artifact is visible, and whether a later researcher can audit the path from old state to new state. Claims that fail these tests may still describe useful iterative inference, but they should not be treated as full self-evolution.
+
+The distinction matters because the field is prone to semantic inflation. A model that writes a better second draft after being asked to critique the first draft performs self-refinement. It becomes self-evolution only when the lesson from that critique changes a future policy, memory, code path, or training distribution. Similarly, a coding agent that fixes one bug after reading a test failure is not necessarily self-evolving; it becomes self-evolving when it updates its debugging strategy, test-generation policy, repository-specific memory, or agent implementation so that later bugs are approached differently.
+
+\subsubsection{Definition dimension: feedback}
+
+A self-evolving agent must receive feedback. Feedback may be scalar reward, pass-or-fail unit tests, benchmark scores, human preference, LLM judgment, environmental observation, peer debate outcome, cost measurement, safety violation, or post-hoc failure analysis. The important property is not that feedback be perfect, but that it creates a selection pressure that is at least partially independent of the candidate being selected.
+
+This dimension also gives a diagnostic test for proposed self-evolution claims. When a paper reports improvement, we can ask whether the mutable object is explicit, whether the feedback signal is independent enough to justify trust, whether the variation operator can be reproduced, whether the selector uses held-out evidence or only self-approval, whether the retained artifact is visible, and whether a later researcher can audit the path from old state to new state. Claims that fail these tests may still describe useful iterative inference, but they should not be treated as full self-evolution.
+
+The distinction matters because the field is prone to semantic inflation. A model that writes a better second draft after being asked to critique the first draft performs self-refinement. It becomes self-evolution only when the lesson from that critique changes a future policy, memory, code path, or training distribution. Similarly, a coding agent that fixes one bug after reading a test failure is not necessarily self-evolving; it becomes self-evolving when it updates its debugging strategy, test-generation policy, repository-specific memory, or agent implementation so that later bugs are approached differently.
+
+\subsubsection{Definition dimension: variation}
+
+A self-evolving agent must generate variations of its current behavior or structure. Variations can be prompt rewrites, memory summaries, new tools, revised planners, changed code, updated weights, new tasks, altered curricula, or different collaboration topologies. LLMs make variation unusually expressive because they can propose semantically meaningful changes in natural language and executable code.
+
+This dimension also gives a diagnostic test for proposed self-evolution claims. When a paper reports improvement, we can ask whether the mutable object is explicit, whether the feedback signal is independent enough to justify trust, whether the variation operator can be reproduced, whether the selector uses held-out evidence or only self-approval, whether the retained artifact is visible, and whether a later researcher can audit the path from old state to new state. Claims that fail these tests may still describe useful iterative inference, but they should not be treated as full self-evolution.
+
+The distinction matters because the field is prone to semantic inflation. A model that writes a better second draft after being asked to critique the first draft performs self-refinement. It becomes self-evolution only when the lesson from that critique changes a future policy, memory, code path, or training distribution. Similarly, a coding agent that fixes one bug after reading a test failure is not necessarily self-evolving; it becomes self-evolving when it updates its debugging strategy, test-generation policy, repository-specific memory, or agent implementation so that later bugs are approached differently.
+
+\subsubsection{Definition dimension: selection}
+
+A self-evolving agent must select among variants. Selection can be greedy, archive-based, quality-diversity based, safety-gated, cost-aware, or human-in-the-loop. Without selection, repeated mutation is only drift. The system must decide which changes survive and under what evidence. Selection is also where many failures arise, because an unreliable evaluator produces unreliable evolution.
+
+This dimension also gives a diagnostic test for proposed self-evolution claims. When a paper reports improvement, we can ask whether the mutable object is explicit, whether the feedback signal is independent enough to justify trust, whether the variation operator can be reproduced, whether the selector uses held-out evidence or only self-approval, whether the retained artifact is visible, and whether a later researcher can audit the path from old state to new state. Claims that fail these tests may still describe useful iterative inference, but they should not be treated as full self-evolution.
+
+The distinction matters because the field is prone to semantic inflation. A model that writes a better second draft after being asked to critique the first draft performs self-refinement. It becomes self-evolution only when the lesson from that critique changes a future policy, memory, code path, or training distribution. Similarly, a coding agent that fixes one bug after reading a test failure is not necessarily self-evolving; it becomes self-evolving when it updates its debugging strategy, test-generation policy, repository-specific memory, or agent implementation so that later bugs are approached differently.
+
+\subsubsection{Definition dimension: retention}
+
+A self-evolving agent must retain useful changes. Retention can occur in model weights, a memory store, a repository commit, a skill library, a prompt book, a workflow template, or an experiment archive. Retention distinguishes durable self-evolution from temporary chain-of-thought refinement. If a lesson disappears after the current context window closes, it may be useful, but it is not yet a persistent evolutionary step.
+
+This dimension also gives a diagnostic test for proposed self-evolution claims. When a paper reports improvement, we can ask whether the mutable object is explicit, whether the feedback signal is independent enough to justify trust, whether the variation operator can be reproduced, whether the selector uses held-out evidence or only self-approval, whether the retained artifact is visible, and whether a later researcher can audit the path from old state to new state. Claims that fail these tests may still describe useful iterative inference, but they should not be treated as full self-evolution.
+
+The distinction matters because the field is prone to semantic inflation. A model that writes a better second draft after being asked to critique the first draft performs self-refinement. It becomes self-evolution only when the lesson from that critique changes a future policy, memory, code path, or training distribution. Similarly, a coding agent that fixes one bug after reading a test failure is not necessarily self-evolving; it becomes self-evolving when it updates its debugging strategy, test-generation policy, repository-specific memory, or agent implementation so that later bugs are approached differently.
+
+\subsubsection{Definition dimension: auditability}
+
+A self-evolving agent should be auditable. The system should record what changed, which feedback justified the change, what tests were run, what regressions were checked, and how rollback can occur. Auditability is not an optional administrative detail; it is a safety condition. A system that can modify its behavior but cannot explain its lineage is difficult to trust.
+
+This dimension also gives a diagnostic test for proposed self-evolution claims. When a paper reports improvement, we can ask whether the mutable object is explicit, whether the feedback signal is independent enough to justify trust, whether the variation operator can be reproduced, whether the selector uses held-out evidence or only self-approval, whether the retained artifact is visible, and whether a later researcher can audit the path from old state to new state. Claims that fail these tests may still describe useful iterative inference, but they should not be treated as full self-evolution.
+
+The distinction matters because the field is prone to semantic inflation. A model that writes a better second draft after being asked to critique the first draft performs self-refinement. It becomes self-evolution only when the lesson from that critique changes a future policy, memory, code path, or training distribution. Similarly, a coding agent that fixes one bug after reading a test failure is not necessarily self-evolving; it becomes self-evolving when it updates its debugging strategy, test-generation policy, repository-specific memory, or agent implementation so that later bugs are approached differently.
+
+\subsubsection{Definition dimension: bounded autonomy}
+
+A self-evolving agent needs bounded autonomy. It should be able to propose and test changes, but not necessarily to alter all constraints, permissions, or evaluators. Practical systems require immutable or separately governed layers, such as sandbox boundaries, approval gates, benchmark definitions, and security policies. Evolution without boundaries becomes uncontrolled self-modification rather than engineering.
+
+This dimension also gives a diagnostic test for proposed self-evolution claims. When a paper reports improvement, we can ask whether the mutable object is explicit, whether the feedback signal is independent enough to justify trust, whether the variation operator can be reproduced, whether the selector uses held-out evidence or only self-approval, whether the retained artifact is visible, and whether a later researcher can audit the path from old state to new state. Claims that fail these tests may still describe useful iterative inference, but they should not be treated as full self-evolution.
+
+The distinction matters because the field is prone to semantic inflation. A model that writes a better second draft after being asked to critique the first draft performs self-refinement. It becomes self-evolution only when the lesson from that critique changes a future policy, memory, code path, or training distribution. Similarly, a coding agent that fixes one bug after reading a test failure is not necessarily self-evolving; it becomes self-evolving when it updates its debugging strategy, test-generation policy, repository-specific memory, or agent implementation so that later bugs are approached differently.
+
+\subsubsection{Definition dimension: transfer}
+
+A strong self-evolving agent should transfer improvements. A change that only exploits one benchmark item is less valuable than a change that improves a family of tasks. Transfer can occur across tasks, domains, models, repositories, or users. ADAS emphasizes cross-domain and cross-model transfer of discovered designs, while memory-based systems emphasize transfer of lessons across episodes \cite{adas2024,reflexion2023}.
+
+This dimension also gives a diagnostic test for proposed self-evolution claims. When a paper reports improvement, we can ask whether the mutable object is explicit, whether the feedback signal is independent enough to justify trust, whether the variation operator can be reproduced, whether the selector uses held-out evidence or only self-approval, whether the retained artifact is visible, and whether a later researcher can audit the path from old state to new state. Claims that fail these tests may still describe useful iterative inference, but they should not be treated as full self-evolution.
+
+The distinction matters because the field is prone to semantic inflation. A model that writes a better second draft after being asked to critique the first draft performs self-refinement. It becomes self-evolution only when the lesson from that critique changes a future policy, memory, code path, or training distribution. Similarly, a coding agent that fixes one bug after reading a test failure is not necessarily self-evolving; it becomes self-evolving when it updates its debugging strategy, test-generation policy, repository-specific memory, or agent implementation so that later bugs are approached differently.
+
+
+The definition separates four strengths of evidence. The weakest evidence is within-episode improvement: the output improves during one attempt, but nothing persistent changes. Stronger evidence is cross-episode improvement: the agent uses retained lessons on later tasks from the same distribution. Stronger still is transfer: the retained change improves behavior on different tasks, repositories, domains, or underlying models. The strongest evidence is open-ended accumulation: an archive or memory continues to produce novel stepping stones rather than merely converging on one narrow solution. Much of the current literature demonstrates the first two levels; only a smaller group, including ADAS, DGM, Voyager, and AlphaEvolve, makes direct claims about transfer or open-ended accumulation \cite{voyager2023,adas2024,dgm2025,alphaevolve2025}.
+
+The formalization also clarifies the difference between self-evolution and autonomy. A highly autonomous agent can act for a long time without improving its own future behavior. Conversely, a narrow system can be self-evolving if it reliably updates a test-generation policy after each coding failure. Autonomy concerns how much the agent can do in the world; self-evolution concerns how much the agent can convert experience into durable change. The two often reinforce each other, because long-horizon autonomy creates more feedback and more need for adaptation, but they are not identical.
+
+\subsection{Related Concepts: Boundaries and Contrasts}\label{sec:intro-related}
+
+The vocabulary surrounding self-evolution overlaps with several established research areas. This overlap is beneficial because it supplies methods, theory, and evaluation tools. It is also confusing because terms are often used interchangeably. We therefore contrast AI self-evolution with related concepts before presenting the rest of the survey.
+
+\subsubsection{Self-evolution and continual learning}
+
+Continual learning studies how a model learns from a stream of tasks without catastrophic forgetting. AI self-evolution overlaps with this goal, but it is broader in the object of change. Continual learning usually focuses on parameter updates or replay mechanisms inside a model. Self-evolving agents may leave the base model frozen and instead update memory, code, prompts, benchmarks, or agent topology. The difference is practical: many deployed agents cannot fine-tune a frontier model, but they can revise their operating procedure after each task.
+
+The boundary can be stated in operational terms. The related field usually defines a primary object of study: a learner facing a stream, a model trained from self-supervised labels, a controller adapting online, or an algorithm searching a design space. Self-evolution treats the whole agent system as the object. It asks whether the design, memory, evaluation, and execution procedure can change under evidence. This system-level framing is why the same survey must discuss code agents, benchmark suites, skill libraries, self-play curricula, research networks, and repository activity rather than only model training algorithms.
+
+The overlap nevertheless provides useful evaluation questions. From continual learning we inherit concerns about forgetting. From online learning we inherit regret and adaptation under drift. From self-supervised learning we inherit data-generation and label-quality questions. From meta-learning we inherit transfer and fast adaptation. From reinforcement learning we inherit reward design and credit assignment. From AutoML and NAS we inherit search-space and controller-cost questions. From program synthesis we inherit executable specifications. From open-endedness we inherit diversity, stepping stones, and premature convergence.
+
+\subsubsection{Self-evolution and online learning}
+
+Online learning updates a predictor as data arrives. Self-evolution can be viewed as online learning over a richer state space, but the two should not be equated. Online learning often assumes a defined loss and a sequence of examples. Agent self-evolution often faces partial observability, delayed credit assignment, tool errors, environment drift, multi-objective constraints, and changes to the evaluator itself. The update may be a natural-language rule or code patch rather than a gradient step.
+
+The boundary can be stated in operational terms. The related field usually defines a primary object of study: a learner facing a stream, a model trained from self-supervised labels, a controller adapting online, or an algorithm searching a design space. Self-evolution treats the whole agent system as the object. It asks whether the design, memory, evaluation, and execution procedure can change under evidence. This system-level framing is why the same survey must discuss code agents, benchmark suites, skill libraries, self-play curricula, research networks, and repository activity rather than only model training algorithms.
+
+The overlap nevertheless provides useful evaluation questions. From continual learning we inherit concerns about forgetting. From online learning we inherit regret and adaptation under drift. From self-supervised learning we inherit data-generation and label-quality questions. From meta-learning we inherit transfer and fast adaptation. From reinforcement learning we inherit reward design and credit assignment. From AutoML and NAS we inherit search-space and controller-cost questions. From program synthesis we inherit executable specifications. From open-endedness we inherit diversity, stepping stones, and premature convergence.
+
+\subsubsection{Self-evolution and self-supervised learning}
+
+Self-supervised learning constructs training signals from data itself. It is a foundation of modern representation learning, but it is not automatically self-evolution. A masked-language-model objective can train a static model without any agentic feedback loop. The overlap appears when a system generates its own tasks, labels, rationales, tests, or critiques and then uses them to update future behavior. Absolute-zero style systems and self-generated test loops are examples of this bridge.
+
+The boundary can be stated in operational terms. The related field usually defines a primary object of study: a learner facing a stream, a model trained from self-supervised labels, a controller adapting online, or an algorithm searching a design space. Self-evolution treats the whole agent system as the object. It asks whether the design, memory, evaluation, and execution procedure can change under evidence. This system-level framing is why the same survey must discuss code agents, benchmark suites, skill libraries, self-play curricula, research networks, and repository activity rather than only model training algorithms.
+
+The overlap nevertheless provides useful evaluation questions. From continual learning we inherit concerns about forgetting. From online learning we inherit regret and adaptation under drift. From self-supervised learning we inherit data-generation and label-quality questions. From meta-learning we inherit transfer and fast adaptation. From reinforcement learning we inherit reward design and credit assignment. From AutoML and NAS we inherit search-space and controller-cost questions. From program synthesis we inherit executable specifications. From open-endedness we inherit diversity, stepping stones, and premature convergence.
+
+\subsubsection{Self-evolution and meta-learning}
+
+Meta-learning asks a system to learn how to learn. Self-evolution often instantiates meta-learning at the system level. Instead of only adapting a model to a new task, the agent may adapt the procedure by which it will approach future tasks. A reflection can be a small meta-update; a discovered planner can be a reusable meta-policy; an archive of agent programs can be a library of learned learning strategies.
+
+The boundary can be stated in operational terms. The related field usually defines a primary object of study: a learner facing a stream, a model trained from self-supervised labels, a controller adapting online, or an algorithm searching a design space. Self-evolution treats the whole agent system as the object. It asks whether the design, memory, evaluation, and execution procedure can change under evidence. This system-level framing is why the same survey must discuss code agents, benchmark suites, skill libraries, self-play curricula, research networks, and repository activity rather than only model training algorithms.
+
+The overlap nevertheless provides useful evaluation questions. From continual learning we inherit concerns about forgetting. From online learning we inherit regret and adaptation under drift. From self-supervised learning we inherit data-generation and label-quality questions. From meta-learning we inherit transfer and fast adaptation. From reinforcement learning we inherit reward design and credit assignment. From AutoML and NAS we inherit search-space and controller-cost questions. From program synthesis we inherit executable specifications. From open-endedness we inherit diversity, stepping stones, and premature convergence.
+
+\subsubsection{Self-evolution and reinforcement learning}
+
+Reinforcement learning provides the language of policies, rewards, trajectories, and credit assignment. Many self-evolving systems are not reinforcement learning in the strict gradient-based sense, yet they borrow its structure. Reflexion explicitly describes verbal reinforcement because natural-language reflections play the role of a semantic policy update \cite{reflexion2023}. Training-oriented systems use RL more directly, while code-evolution systems use external tests as a reward-like signal.
+
+The boundary can be stated in operational terms. The related field usually defines a primary object of study: a learner facing a stream, a model trained from self-supervised labels, a controller adapting online, or an algorithm searching a design space. Self-evolution treats the whole agent system as the object. It asks whether the design, memory, evaluation, and execution procedure can change under evidence. This system-level framing is why the same survey must discuss code agents, benchmark suites, skill libraries, self-play curricula, research networks, and repository activity rather than only model training algorithms.
+
+The overlap nevertheless provides useful evaluation questions. From continual learning we inherit concerns about forgetting. From online learning we inherit regret and adaptation under drift. From self-supervised learning we inherit data-generation and label-quality questions. From meta-learning we inherit transfer and fast adaptation. From reinforcement learning we inherit reward design and credit assignment. From AutoML and NAS we inherit search-space and controller-cost questions. From program synthesis we inherit executable specifications. From open-endedness we inherit diversity, stepping stones, and premature convergence.
+
+\subsubsection{Self-evolution and AutoML and NAS}
+
+AutoML and NAS automate design choices that humans previously tuned. Self-evolving agents inherit the same ambition but move the search space upward. The design subject is no longer only a neural architecture or hyperparameter set; it is an agent procedure with language, tools, memory, code, and evaluation. ADAS is the clearest example because it treats complete agent programs as searchable artifacts \cite{adas2024}.
+
+The boundary can be stated in operational terms. The related field usually defines a primary object of study: a learner facing a stream, a model trained from self-supervised labels, a controller adapting online, or an algorithm searching a design space. Self-evolution treats the whole agent system as the object. It asks whether the design, memory, evaluation, and execution procedure can change under evidence. This system-level framing is why the same survey must discuss code agents, benchmark suites, skill libraries, self-play curricula, research networks, and repository activity rather than only model training algorithms.
+
+The overlap nevertheless provides useful evaluation questions. From continual learning we inherit concerns about forgetting. From online learning we inherit regret and adaptation under drift. From self-supervised learning we inherit data-generation and label-quality questions. From meta-learning we inherit transfer and fast adaptation. From reinforcement learning we inherit reward design and credit assignment. From AutoML and NAS we inherit search-space and controller-cost questions. From program synthesis we inherit executable specifications. From open-endedness we inherit diversity, stepping stones, and premature convergence.
+
+\subsubsection{Self-evolution and program synthesis}
+
+Program synthesis generates code satisfying a specification. Self-evolving agents use program synthesis when they modify their tools, evaluators, or own implementation. The distinction is cumulative feedback. A single synthesized function solves one specification; an evolving agent stores the result, uses it as a stepping stone, and may later synthesize improved successors. DGM and AlphaEvolve both depend on this cumulative code-search interpretation \cite{dgm2025,alphaevolve2025}.
+
+The boundary can be stated in operational terms. The related field usually defines a primary object of study: a learner facing a stream, a model trained from self-supervised labels, a controller adapting online, or an algorithm searching a design space. Self-evolution treats the whole agent system as the object. It asks whether the design, memory, evaluation, and execution procedure can change under evidence. This system-level framing is why the same survey must discuss code agents, benchmark suites, skill libraries, self-play curricula, research networks, and repository activity rather than only model training algorithms.
+
+The overlap nevertheless provides useful evaluation questions. From continual learning we inherit concerns about forgetting. From online learning we inherit regret and adaptation under drift. From self-supervised learning we inherit data-generation and label-quality questions. From meta-learning we inherit transfer and fast adaptation. From reinforcement learning we inherit reward design and credit assignment. From AutoML and NAS we inherit search-space and controller-cost questions. From program synthesis we inherit executable specifications. From open-endedness we inherit diversity, stepping stones, and premature convergence.
+
+\subsubsection{Self-evolution and open-endedness}
+
+Open-endedness studies systems that keep producing novel and sometimes increasingly complex artifacts. Self-evolution is not always open-ended; many systems only optimize a fixed benchmark. However, the most ambitious line of work aims to preserve diverse stepping stones and avoid premature convergence. DGM's archive and AlphaEvolve's evolutionary search connect agent improvement to the open-ended AI tradition \cite{dgm2025,alphaevolve2025}.
+
+The boundary can be stated in operational terms. The related field usually defines a primary object of study: a learner facing a stream, a model trained from self-supervised labels, a controller adapting online, or an algorithm searching a design space. Self-evolution treats the whole agent system as the object. It asks whether the design, memory, evaluation, and execution procedure can change under evidence. This system-level framing is why the same survey must discuss code agents, benchmark suites, skill libraries, self-play curricula, research networks, and repository activity rather than only model training algorithms.
+
+The overlap nevertheless provides useful evaluation questions. From continual learning we inherit concerns about forgetting. From online learning we inherit regret and adaptation under drift. From self-supervised learning we inherit data-generation and label-quality questions. From meta-learning we inherit transfer and fast adaptation. From reinforcement learning we inherit reward design and credit assignment. From AutoML and NAS we inherit search-space and controller-cost questions. From program synthesis we inherit executable specifications. From open-endedness we inherit diversity, stepping stones, and premature convergence.
+
+
+A compact way to compare these concepts is to ask four questions: Does the system update a persistent state? Is the update based on feedback from its own behavior or generated artifacts? Can the updated state affect future tasks beyond the current sample? Is there an evaluation or audit path that separates genuine improvement from self-confirming noise? If the answer to all four questions is yes, the system belongs near the center of AI self-evolution. If one or more answers are no, the system may still be important background, but it occupies a boundary region.
+
 \begin{table}[htbp]
 \centering
 \small
-\caption{全文结构与核心阅读问题导航。}
-\label{tab:ch1-roadmap}
-\begin{tabular}{p{0.18\textwidth}p{0.34\textwidth}p{0.38\textwidth}}
+\caption{Self-evolution compared with related concepts.}
+\label{tab:intro-related}
+\begin{tabular}{p{0.20\textwidth}p{0.30\textwidth}p{0.38\textwidth}}
 \toprule
-章节 & 主题 & 核心问题 \\
+Concept & Primary mutable object & Difference from AI self-evolution \\
 \midrule
-第\ref{ch:theory}章 & 理论基础 & 为什么可把 agent 的提示、代码、记忆与评估器更新视为进化过程？ \\
-第\ref{ch:methods}章 & 方法分类 & 不同方法改变什么对象、依赖什么反馈、如何选择并保留改进？ \\
-第\ref{ch:systems}章 & 核心系统 & 代表性系统如何把自评估、自修改、archive 与沙箱执行组合成闭环？ \\
-第\ref{ch:evaluation}章 & 评估体系 & 如何防止 reward hacking、benchmark overfitting 与不可复现改进？ \\
-第\ref{ch:industry}章 & 工业实践 & GitHub 仓库与技术博客反映了哪些可落地框架、工程约束与采用路径？ \\
+Continual learning & Model parameters or replay memory & Usually narrower than agent-level prompt, code, tool, archive, and evaluator updates. \\
+Online learning & Predictor under streaming data & Assumes a clearer sequence of losses than many agent environments provide. \\
+Self-supervised learning & Representation from generated labels & May train a static model without an agentic feedback-and-retention loop. \\
+Meta-learning & Learning procedure or initialization & Often focuses on fast task adaptation; self-evolution includes system artifacts and audits. \\
+Reinforcement learning & Policy under reward & Provides reward and credit-assignment tools, but many self-evolving agents use non-gradient verbal or code updates. \\
+AutoML and NAS & Pipelines, hyperparameters, neural architectures & Precursor to agent architecture search; self-evolution expands the design object. \\
+Program synthesis & Code satisfying specifications & Becomes self-evolution when synthesized artifacts persist as stepping stones. \\
+Open-endedness & Novel artifacts and lineages & A high ambition for self-evolution, not a property of every benchmark-driven method. \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{综述结构与阅读指南}\label{sec:intro-guide}
+\subsection{Contributions of This Survey}\label{sec:intro-contributions}
 
-本综述的后续章节围绕"理论--方法--系统--评估--实践--风险--前沿"展开。第\ref{ch:theory}章讨论理论基础，包括进化计算与 LLM 的结合、自我指涉与 Gödel 机器、元学习与自我改进框架，以及自演化的数学形式化。读者如果关心"为什么这些系统可以被称为进化""递归自我改进与经验验证有什么差别""如何用统一符号描述 agent 更新闭环"，应优先阅读第\ref{ch:theory}章。
+This survey is motivated by a gap between scattered progress and field-level understanding. Individual papers show impressive loops: reflection memory, self-reward, agent architecture search, code self-modification, evolutionary algorithm discovery, and long-term memory. Individual repositories demonstrate tooling and adoption. Individual benchmarks report gains. Yet the field lacks a shared map that explains how these systems relate, which mechanisms are genuinely new, which claims are supported by evaluation, and which engineering constraints determine whether a method can survive outside a demo. We address that gap through five contributions.
 
-第\ref{ch:methods}章给出方法分类，是全篇最长的技术章节。它按照奖励、自博弈、提示词、架构搜索、记忆和混合方法组织材料，覆盖 STaR、Reflexion、Self-Refine、Self-Rewarding、RISE、Agent-R、RAGEN、ADAS、Gödel Agent、EvoMAC、SICA、DGM、AlphaEvolve、WebEvolver、Absolute Zero、SPIRAL、ACE、EvolveR、ReasoningBank、Memory-R1 与 AriadneMem 等代表性工作。读者如果希望快速了解各类方法的机制、适用场景和局限，应把第\ref{ch:methods}章作为主入口。
+\subsubsection{Contribution: a five-loop framework}
 
-后续章节将进一步分析核心系统、评估体系、工业实践、风险治理和未来方向。特别需要注意的是，Agent Evolution 文献跨越多个术语体系：有的论文称为 self-improvement，有的称为 self-evolution、lifelong learning、test-time learning、agent optimization、open-endedness、auto-curriculum、context engineering 或 recursive self-improvement。阅读时不应被名称差异干扰，而要问四个问题：系统改的是什么，信号来自哪里，如何选择并保留改进，改进是否经过独立验证。只要围绕这四个问题组织阅读，就能把看似分散的论文纳入同一张技术地图。
+The first contribution of this survey is a five-loop framework: observe, diagnose, vary, verify, and retain. The loop is deliberately simple because it must cover many implementations. An agent observes a trajectory and outcome; diagnoses a failure mode or opportunity; generates a variation; verifies the variation against tasks, tests, or constraints; and retains the change if evidence supports it. The five terms also expose missing pieces. A system that observes but does not diagnose is logging, not evolution. A system that varies but does not verify is speculation. A system that verifies but does not retain is episodic optimization, not cumulative learning.
+
+The contribution is designed to be useful for both researchers and builders. Researchers need conceptual clarity so that new methods can be compared against appropriate baselines rather than against a vague idea of agency. Builders need operational checklists so that an apparently clever loop can be turned into a maintainable system with logs, tests, rollbacks, and cost controls. The survey therefore alternates between theory, method, system, benchmark, and repository evidence.
+
+This also explains why project analysis is included in an academic survey. In self-evolution, the implementation is part of the claim. A method that depends on executing arbitrary code, maintaining a memory store, evaluating candidate agents, or preserving an archive cannot be evaluated only from pseudocode. Repository health, reproducibility, licensing, active maintenance, and community usage influence whether the method can become infrastructure for later research.
+
+\subsubsection{Contribution: a cross-domain taxonomy}
+
+The second contribution is a taxonomy that unifies work from language-model self-improvement, agent reasoning, evolutionary computation, AutoML, program synthesis, memory systems, and multi-agent orchestration. The field is fragmented by terminology: self-refine, self-reward, self-play, self-evolving agent, test-time learning, open-ended agent, Godel agent, and LLM optimizer often refer to overlapping structures. We organize them by mutable object, feedback source, variation operator, selection rule, and retention medium.
+
+The contribution is designed to be useful for both researchers and builders. Researchers need conceptual clarity so that new methods can be compared against appropriate baselines rather than against a vague idea of agency. Builders need operational checklists so that an apparently clever loop can be turned into a maintainable system with logs, tests, rollbacks, and cost controls. The survey therefore alternates between theory, method, system, benchmark, and repository evidence.
+
+This also explains why project analysis is included in an academic survey. In self-evolution, the implementation is part of the claim. A method that depends on executing arbitrary code, maintaining a memory store, evaluating candidate agents, or preserving an archive cannot be evaluated only from pseudocode. Repository health, reproducibility, licensing, active maintenance, and community usage influence whether the method can become infrastructure for later research.
+
+\subsubsection{Contribution: a project-level evidence layer}
+
+The third contribution is a project-level evidence layer covering more than nineteen core repositories and a broader set of hundreds of related repositories in the surrounding index. The goal is not only to cite papers, but to ask whether implementations are active, reproducible, maintained, and adopted. The star-quality analysis shows why raw popularity is insufficient: AutoGPT has very high star count but a low composite quality estimate, while OpenEvolve, DSPy, SWE-Agent, and OpenHands score better on indicators of organic use, community health, or technical depth.
+
+The contribution is designed to be useful for both researchers and builders. Researchers need conceptual clarity so that new methods can be compared against appropriate baselines rather than against a vague idea of agency. Builders need operational checklists so that an apparently clever loop can be turned into a maintainable system with logs, tests, rollbacks, and cost controls. The survey therefore alternates between theory, method, system, benchmark, and repository evidence.
+
+This also explains why project analysis is included in an academic survey. In self-evolution, the implementation is part of the claim. A method that depends on executing arbitrary code, maintaining a memory store, evaluating candidate agents, or preserving an archive cannot be evaluated only from pseudocode. Repository health, reproducibility, licensing, active maintenance, and community usage influence whether the method can become infrastructure for later research.
+
+\subsubsection{Contribution: a benchmark and evaluation synthesis}
+
+The fourth contribution is an evaluation synthesis. Self-evolving systems should not be judged by single-shot improvement claims. They require baselines, held-out tasks, ablations, cost reporting, regression checks, archive analysis, and safety gates. The survey therefore treats evaluation as a first-class object. We ask whether a method improves only the current episode, transfers to new tasks, maintains previous capabilities, avoids evaluator hacking, and produces auditable evidence.
+
+The contribution is designed to be useful for both researchers and builders. Researchers need conceptual clarity so that new methods can be compared against appropriate baselines rather than against a vague idea of agency. Builders need operational checklists so that an apparently clever loop can be turned into a maintainable system with logs, tests, rollbacks, and cost controls. The survey therefore alternates between theory, method, system, benchmark, and repository evidence.
+
+This also explains why project analysis is included in an academic survey. In self-evolution, the implementation is part of the claim. A method that depends on executing arbitrary code, maintaining a memory store, evaluating candidate agents, or preserving an archive cannot be evaluated only from pseudocode. Repository health, reproducibility, licensing, active maintenance, and community usage influence whether the method can become infrastructure for later research.
+
+\subsubsection{Contribution: a researcher-network map}
+
+The fifth contribution is a researcher-network map that clarifies how the field converged. The Clune, Stanley, Lehman, and Miikkulainen lineage contributes open-ended evolution and quality diversity. The Princeton and Northeastern agent-reasoning lineage contributes ReAct, Reflexion, Tree of Thoughts, SWE-bench, and related agent methods. The CMU, AI2, Google, DeepMind, Meta, ZJU, AIWaves, PKU, and UCSB clusters contribute self-refinement, symbolic learning, algorithm discovery, self-rewarding, and self-referential agents. Mapping these clusters makes the field legible as a convergence rather than a sequence of isolated papers.
+
+The contribution is designed to be useful for both researchers and builders. Researchers need conceptual clarity so that new methods can be compared against appropriate baselines rather than against a vague idea of agency. Builders need operational checklists so that an apparently clever loop can be turned into a maintainable system with logs, tests, rollbacks, and cost controls. The survey therefore alternates between theory, method, system, benchmark, and repository evidence.
+
+This also explains why project analysis is included in an academic survey. In self-evolution, the implementation is part of the claim. A method that depends on executing arbitrary code, maintaining a memory store, evaluating candidate agents, or preserving an archive cannot be evaluated only from pseudocode. Repository health, reproducibility, licensing, active maintenance, and community usage influence whether the method can become infrastructure for later research.
+
+
+The star-analysis report provides a concrete example of why evidence must be multi-dimensional. Raw stars measure attention, not necessarily durable quality. AutoGPT is historically important because it popularized autonomous agent loops, but its star-quality profile is different from projects such as OpenEvolve, SWE-Agent, DSPy, or OpenHands. The report uses dimensions such as star activity, contributor diversity, fork quality, issue quality, pull-request merge rate, growth pattern, and stars-per-contributor. These measures are imperfect, but they push the survey away from popularity-based narratives. A self-evolution ecosystem needs maintained evaluators, reproducible repositories, and active users, not only viral demonstrations.
+
+The researcher-network analysis provides a second example. It shows that AI self-evolution is not owned by a single community. The evolutionary computation lineage supplies open-ended search and quality diversity; the language-agent lineage supplies ReAct-style interaction, reflection, tree search, and software-engineering benchmarks; the LLM self-improvement lineage supplies self-refine, self-reward, self-play, and training-time bootstrapping; the DeepMind and Google lines supply algorithm-discovery and infrastructure optimization; Chinese and international agent groups supply symbolic learning, Godel-style agents, and multi-agent frameworks. The field is best understood as a convergence of lineages whose assumptions do not always match. That convergence creates creative tension: some researchers seek proof-like self-reference, some seek benchmark improvement, some seek open-ended discovery, and some seek production reliability.
+
+Our final contribution is a set of recurring design principles. First, freeze baselines before claiming improvement. Second, separate the mutable agent from the evaluator whenever possible. Third, preserve lineage information so that improvements can be traced and rolled back. Fourth, measure cost as well as reward. Fifth, test transfer rather than only within-task gain. Sixth, keep memory curated, because unfiltered experience can become noise. Seventh, treat safety constraints as part of the evolutionary environment, not as an afterthought. These principles recur across chapters because they define the difference between self-evolution as a research slogan and self-evolution as an engineering discipline.
+
+\subsubsection{Additional evidence base and scope clarifications}
+
+\paragraph{Why a long introduction is necessary.} The introduction is intentionally extensive because the field is unusually interdisciplinary. A short introduction could list Reflexion, ADAS, DGM, and AlphaEvolve as milestones, but it would not explain why these systems belong to the same conceptual family. The central difficulty is that self-evolution happens at different layers. In one paper the mutable object is a reflection buffer. In another it is a Python function. In another it is a reward model, a generated curriculum, a tool-use policy, a memory controller, or a repository-level coding agent. Without a long conceptual bridge, readers may mistake this diversity for fragmentation rather than recognizing a common systems pattern.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{The role of benchmarks.} Benchmarks play two roles in self-evolution. First, they provide a selection signal for candidate changes. A coding agent that proposes a patch needs tests; an algorithm-discovery system needs an evaluator; an agent-architecture search system needs validation tasks. Second, benchmarks provide evidence for the reader. They help separate plausible stories from measured improvement. The danger is that the same benchmark can become both the training environment and the proof of success. A mature self-evolution study must therefore distinguish inner-loop validation, outer-loop testing, transfer tasks, and regression tasks.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{The role of negative evidence.} Negative evidence is especially valuable. Self-evolving systems are tempting because successful examples are vivid: a reflection improves a second attempt, a code patch passes a benchmark, an archive discovers a better agent. But the failures are more informative for engineering. A reflection can misdiagnose the cause of failure. A generated test can be wrong. A memory can store a misleading rule. A judge can reward verbosity. An archive can preserve a brittle exploit. A code-modifying agent can improve one benchmark while making the codebase less maintainable. The introduction therefore emphasizes auditability and regression because these are the mechanisms by which negative evidence becomes useful rather than hidden.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{Repository evidence.} The repository evidence layer also changes how we read papers. A method with a clean algorithm but no maintained implementation may inspire future work, but it is harder to adopt. A repository with many stars but few active forks may represent attention rather than infrastructure. A smaller repository with active issues, recent commits, clear tests, and permissive licensing may be more valuable for the field. The star-analysis report should not be treated as a definitive ranking, but it demonstrates the kind of empirical caution required. Self-evolution is about accumulated improvement; the software ecosystem around the research should be evaluated with the same concern for accumulation.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{Open-source and closed-source tension.} The field also contains a tension between open-source reproducibility and closed-source scale. AlphaEvolve demonstrates a high-impact industrial pattern, but its full system depends on proprietary models and infrastructure \cite{alphaevolve2025}. OpenEvolve-style projects attempt to translate the pattern into a public, reusable form. ADAS is more reproducible because it releases code, yet it can still depend on proprietary LLM APIs and stochastic search behavior \cite{adas2024}. Reflexion is lightweight and easier to reproduce, but its reported performance can vary with model versions \cite{reflexion2023}. This tension is not incidental. Many self-evolving systems sit exactly at the boundary between research algorithms and large-scale engineering platforms.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{Human role.} Self-evolution does not remove the human role; it moves the human role upward. Humans define tasks, design evaluators, set constraints, approve risky changes, interpret lineage, and decide which metrics matter. In weak versions of the field, the human merely watches an agent improve a benchmark. In stronger versions, the human designs an evolutionary environment where beneficial changes are easier to discover and harmful changes are easier to reject. This is closer to institution design than to prompt writing. The designer shapes incentives, observability, permissions, and rollback paths.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{Safety as part of the loop.} Safety should be inside the loop, not outside it. If safety is only checked after a system has already evolved, the system may have learned to rely on behaviors that later become unacceptable. A safer architecture treats constraints as part of selection. Candidate changes are not accepted merely because they improve reward; they must also preserve permissions, pass regression tests, respect data boundaries, and avoid increasing hidden complexity. This is why the formal selector includes constraints and budgets. The self-evolving system should learn under the conditions in which it will be deployed.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{Memory governance.} Memory governance is a central problem. Memory can make an agent more capable by preserving lessons, but it can also preserve errors, outdated assumptions, private information, and spurious correlations. A memory update is therefore a kind of self-modification. It should be treated with provenance, confidence, scope, and expiration rules. Reflexion showed that even a small sliding window of reflections can change behavior \cite{reflexion2023}. More ambitious long-term memory systems require stronger curation: retrieval must be relevant, conflicts must be resolved, and old lessons must be revised when environments change.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{Archive governance.} Archives generalize memory from individual lessons to candidate systems. ADAS archives discovered agent programs; DGM archives self-improving agents; evolutionary algorithm-discovery systems archive program variants \cite{adas2024,dgm2025,alphaevolve2025}. Archive governance asks which variants are retained, how diversity is measured, how lineage is represented, and how a future searcher selects parents. A badly governed archive can become a museum of brittle hacks. A well-governed archive becomes a map of stepping stones, showing not only the best known solution but also alternative designs that may become useful under new tasks.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{Costs and ecological constraints.} Cost is part of the definition of useful improvement. A system that gains one percent on a benchmark while multiplying inference cost by ten may not be an improvement in deployment. Evolutionary loops are especially cost-sensitive because they can require many candidate generations and evaluations. The introduction therefore treats budgets as part of selection. A retained candidate should be judged by quality, safety, diversity, and cost together. This is also a research fairness issue: methods that require massive proprietary compute should be distinguished from methods that can be reproduced by smaller labs.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{Granularity of change.} The granularity of change varies widely. A micro-evolution changes one instruction in a prompt or one memory entry. A meso-evolution changes a workflow, adds a tool, or revises a planner. A macro-evolution modifies code, trains a new policy, changes the architecture, or creates a new curriculum. Granularity affects evaluation. Micro-changes may be easy to attribute but small in effect. Macro-changes may be powerful but difficult to explain. A mature system may combine both: frequent low-risk memory updates, periodic workflow revisions, and rare code-level self-modifications gated by heavier validation.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{Distribution shift.} Distribution shift is both the motivation and the enemy of self-evolution. Static systems fail because tasks, users, codebases, and environments change. Self-evolving systems promise to adapt. Yet the same shift can invalidate memories, benchmarks, and evaluators. A lesson learned from one repository can mislead another; a web-navigation strategy can break after a site redesign; a judge prompt can become outdated when a policy changes. Therefore transfer must be tested, and retained knowledge should carry scope. The agent should know where a lesson came from and when it should not be applied.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{The problem of self-evaluation.} Self-evaluation is useful but dangerous. LLM judges, self-critiques, generated tests, and model-written rewards can dramatically reduce dependence on human labels. They also create circularity. If the same model family generates candidates and judges them, the loop may amplify its own biases. The solution is not to reject self-evaluation, because many domains cannot afford constant human oversight. The solution is to combine it with independent checks: executable tests, held-out tasks, adversarial evaluation, cross-model judging, human audit samples, and regression suites.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{Why formal proof remains rare.} The Godel-machine ideal asks for proof that a self-modification improves expected utility. Modern agent systems rarely provide such proof because the environment, model, evaluator, and objective are too complex. Instead they rely on empirical gates. This does not make the Godel lineage irrelevant. It supplies the normative ideal: a system should not modify itself merely because a change is syntactically possible; it should require evidence that the change is beneficial under a trusted objective. Empirical self-evolution can be understood as a practical approximation to proof-based self-improvement under uncertainty.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{Terminology discipline.} Terminology discipline is needed. The phrase self-evolving AI can easily become marketing language. To avoid that, this survey uses operational criteria. If a system has no persistent mutable state, call it iterative inference. If it has mutable memory but no selection, call it logging or accumulation. If it has selection but no independent evaluation, call it self-preference or self-critique. If it has variation, evaluation, selection, and retention, call it self-evolution. If it also maintains diverse lineages and produces open-ended stepping stones, call it open-ended self-evolution.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{Implications for arXiv survey writing.} These distinctions shape the style of the paper. The survey does not merely narrate a chronological list of papers. It builds a vocabulary that can be reused by later chapters. The introduction defines the state vector, update loop, evidence levels, related boundaries, and contribution claims. Chapter 2 can then formalize these ideas. Chapter 3 can classify methods. Chapter 4 can analyze systems. Chapter 5 can judge evaluation. This staged structure is necessary because readers from different communities will enter with different assumptions about what learning, evolution, and agency mean.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+\paragraph{Limitations of this survey.} The survey itself has limitations. The field is moving quickly, repository statistics change, and paper titles often appear before stable implementations. Some results depend on proprietary models whose behavior changes over time. Some project metrics are estimates from public data rather than exact audits. Some research communities use different terminology for similar loops. We therefore present the survey as a structured map, not a final census. Its value lies in the framework: future work can add papers, projects, and benchmarks while preserving the same questions about mutable state, feedback, variation, selection, retention, and audit.
+
+In the five-loop vocabulary, this point clarifies one of the loop boundaries. It tells us whether an observation is reliable, whether a diagnosis is grounded, whether a variation is meaningful, whether verification is independent, or whether retention creates durable capability. The same vocabulary will recur throughout the survey because it allows results from different communities to be compared without forcing them into one narrow algorithmic template.
+
+It also gives practitioners a checklist. Before deploying a self-evolving mechanism, ask what artifact will change, who can inspect the change, which evidence is sufficient for acceptance, which regression suite protects prior behavior, what budget limits the search, and how rollback works. These questions may sound mundane, but they determine whether self-evolution becomes reliable infrastructure or merely an impressive demonstration.
+
+
+\subsubsection{Practical reading lenses for the evidence base}
+\paragraph{Lens one: mutable artifact.} Every paper and project in this survey can be read by first locating the artifact that changes. In Reflexion the artifact is a compact natural-language memory. In Voyager it is a skill library. In ADAS it is an agent program discovered by a meta agent. In DGM it is a self-modified coding agent stored in an archive. In AlphaEvolve it is executable algorithmic code evaluated by a domain-specific scorer. This lens prevents superficial comparisons. A method that updates a memory should not be evaluated exactly like a method that updates weights, and a method that edits code should not be judged only by prompt-optimization criteria.
+
+The mutable-artifact lens also exposes hidden dependencies. A memory-based system depends on retrieval quality, summarization quality, and conflict resolution. A code-based system depends on sandboxing, tests, repository isolation, and version control. A training-based system depends on data generation, reward quality, and compute. A multi-agent topology search system depends on communication protocols and role definitions. Therefore, when the survey later compares methods, it does not ask only which method has the highest score. It asks which artifact was changed, what infrastructure was required, and whether the retained artifact can be inspected and reused.
+
+\paragraph{Lens two: evaluator independence.} The second reading lens is evaluator independence. A self-evolving system becomes more credible when the evaluator is difficult for the generator to manipulate. Unit tests, hidden benchmarks, formally checked constraints, and external human audits provide stronger independence than self-written praise. However, independence is a spectrum. Self-generated tests can be useful if they are executed and filtered; LLM judges can be useful if calibrated and cross-checked; human ratings can be useful if sampled and blinded. The key is to avoid circular evidence in which the same agent proposes a change, declares the change good, and retains it without external pressure.
+
+Evaluator independence is especially important for agent self-modification. If the agent can modify its evaluator or the data used to judge it, the loop becomes vulnerable to reward hacking. Practical systems therefore separate mutable and immutable layers. The agent may modify its planner, memory, or code, but the acceptance tests, safety policies, and logging infrastructure should be protected by another authority. This principle is not merely a security convention. It is what makes the word improvement meaningful. Without a stable enough evaluator, the system may only be changing the definition of success.
+
+\paragraph{Lens three: retention medium.} The third reading lens is the retention medium. Retention determines how improvement survives context-window limits. A reflection stored in a prompt buffer is easy to inspect but limited in capacity. A vector memory scales better but may retrieve irrelevant lessons. A code commit is durable and executable but can introduce hidden coupling. A model-weight update can compress many examples but is hard to interpret and roll back. An archive can preserve diversity but requires metadata and selection policies. Each retention medium creates a different kind of future system.
+
+Retention also determines who can learn from the system. A retained natural-language reflection can be read by a developer. A retained code patch can be reviewed and tested. A retained weight update may only be evaluated behaviorally. A retained archive can be mined for design patterns. For a research survey, this matters because interpretability and reuse are part of scientific value. A method that produces inspectable artifacts can contribute design knowledge even when its raw score is not state of the art. ADAS is important partly because discovered agents are code that humans can inspect; Reflexion is important partly because its lessons are written in language \cite{reflexion2023,adas2024}.
+
+\paragraph{Lens four: regression surface.} The fourth lens is the regression surface. Any self-evolving system can improve one dimension while degrading another. A coding agent may pass more tasks while using more tokens, taking longer, or writing less maintainable patches. A memory system may solve repeated tasks while becoming biased by early failures. A self-rewarding model may satisfy its judge while becoming less helpful to humans. A multi-agent workflow may improve accuracy while increasing latency and coordination cost. The regression surface is the set of capabilities and constraints that must remain acceptable while the target score rises.
+
+This lens explains why the survey repeatedly emphasizes ablation and rollback. A change should be compared not only with the previous best score but also with cost, variance, failure modes, and previous capabilities. In software engineering terms, self-evolution needs continuous integration for behavior. The system should treat a new prompt, memory rule, code patch, or archive parent as a candidate commit. It should run the relevant tests, store the evidence, and revert if regressions exceed tolerance. This engineering framing is essential for turning research loops into trustworthy products.
+
+\paragraph{Lens five: social and institutional context.} The fifth lens is social. Self-evolution research is produced by communities with different incentives. Academic groups emphasize novelty, benchmarks, and theory. Industrial labs emphasize scale, proprietary infrastructure, and product impact. Open-source communities emphasize usability, documentation, licensing, and maintenance. Venture-backed projects may emphasize demos and growth. These incentives affect which systems are visible, reproducible, and durable. A survey that ignores this context may overvalue viral repositories or undervalue small but rigorous research code.
+
+The author-network and star-analysis materials therefore serve a methodological purpose. They remind the reader that ideas propagate through people, institutions, and software ecosystems. The Clune lineage makes archive-based open-endedness more visible; the Princeton lineage makes agent reasoning benchmarks central; DeepMind makes algorithm discovery and infrastructure optimization credible at scale; open-source projects translate closed patterns into reusable tools; community hype can accelerate adoption but also distort perceived quality. Understanding self-evolution requires understanding this ecosystem, because the field's future will depend as much on evaluators, repositories, and collaboration networks as on isolated algorithms.
+
+
+\paragraph{Lens six: the minimum viable self-evolution claim.} A final practical lens is the minimum viable claim. To claim that a system self-evolves, an author should specify the initial state, the mutable artifact, the feedback source, the variation operator, the selection rule, the retained artifact, and the evaluation split. The author should also report at least one negative or neutral result, because failed candidates reveal whether selection was meaningful. If all candidates are retained, there is no selection. If only successes are shown, there is no visible search. If the evaluator is changed during the loop, the comparison is unstable. If the retained artifact cannot be inspected or reproduced, the improvement cannot become cumulative scientific knowledge.
+
+This minimum claim is intentionally modest. It does not require proving recursive self-improvement, solving open-ended intelligence, or demonstrating indefinite capability growth. It requires only enough structure for another researcher to understand what changed and why the change should be believed. Establishing this modest standard is important because the phrase self-evolving AI will attract broad claims. A disciplined survey should make ambitious work possible by keeping the evidentiary threshold explicit. The field can then distinguish early but real self-evolution loops from speculative narratives about autonomous improvement.
+
+
+\paragraph{Transition to the remainder of the survey.} These lenses prepare the reader for the chapters that follow. The survey will repeatedly return to the same operational questions because they are the common denominator across otherwise different methods. Whether a system stores reflections, searches over agent code, evolves algorithms, trains from self-generated tasks, or curates long-term memory, the evidence must show how experience becomes a retained and testable change. That is the organizing principle of this paper.
+
+
+The introduction is therefore not a decorative preface. It is the contract for the survey: every later claim about improvement, autonomy, or evolution should be interpretable through these criteria, and every reader should be able to trace a method back to the loop that produced and retained its change.
+
+This contract guides interpretation.
+
+\subsection{Paper Structure}\label{sec:intro-structure}
+
+The remainder of the paper is organized to move from concepts to mechanisms, from mechanisms to systems, and from systems to evaluation and practice. The structure reflects the survey's central claim: AI self-evolution cannot be understood from one level alone. It requires formal definitions, method taxonomy, system architecture, benchmark analysis, repository evidence, user pain points, and governance considerations.
+
+\subsubsection{Chapter 2}
+
+develops the theoretical foundation. It formalizes the state of an evolving agent as parameters, context, code or graph, memory, and archive; then it analyzes update operators, selection pressure, safety constraints, and the gap between empirical self-modification and proof-based Godel machines. The chapter should be read with the five-loop framework in mind: observe, diagnose, vary, verify, and retain. Each chapter asks which part of the loop is well understood and which part remains fragile.
+
+\subsubsection{Chapter 3}
+
+organizes the method landscape. It compares reward-driven methods, self-play and self-generated curricula, reflection and prompt evolution, architecture search, memory evolution, and hybrid systems. The goal is to make the design space navigable by asking what changes, what signal drives the change, and how the change is retained. The chapter should be read with the five-loop framework in mind: observe, diagnose, vary, verify, and retain. Each chapter asks which part of the loop is well understood and which part remains fragile.
+
+\subsubsection{Chapter 4}
+
+studies representative systems. It examines how ADAS, DGM, AlphaEvolve, Reflexion, Voyager, and related frameworks instantiate the abstract loop in code, memory, archives, and evaluators. This chapter connects algorithms to system architecture. The chapter should be read with the five-loop framework in mind: observe, diagnose, vary, verify, and retain. Each chapter asks which part of the loop is well understood and which part remains fragile.
+
+\subsubsection{Chapter 5}
+
+focuses on evaluation. It synthesizes benchmark design, regression control, cost measurement, ablation, safety gates, and failure modes such as reward hacking, benchmark overfitting, brittle memory, and evaluator leakage. The chapter should be read with the five-loop framework in mind: observe, diagnose, vary, verify, and retain. Each chapter asks which part of the loop is well understood and which part remains fragile.
+
+\subsubsection{Chapter 6}
+
+moves to industrial practice. It uses GitHub projects, repository activity, community signals, and adoption patterns to separate durable engineering platforms from short-lived hype cycles. The star-quality analysis is used as one evidence source rather than as a final judgment. The chapter should be read with the five-loop framework in mind: observe, diagnose, vary, verify, and retain. Each chapter asks which part of the loop is well understood and which part remains fragile.
+
+\subsubsection{Chapter 7}
+
+examines user pain points and production constraints. It asks why impressive demos fail in production, emphasizing reliability, observability, permissioning, integration, latency, data governance, and organizational workflows. The chapter should be read with the five-loop framework in mind: observe, diagnose, vary, verify, and retain. Each chapter asks which part of the loop is well understood and which part remains fragile.
+
+\subsubsection{Chapter 8}
+
+identifies future directions, including safer self-modification, verified evaluators, open-ended archives, agent-scientist loops, multi-agent evolution, standardized benchmarks, and governance mechanisms for systems that can change their own behavior. The chapter should be read with the five-loop framework in mind: observe, diagnose, vary, verify, and retain. Each chapter asks which part of the loop is well understood and which part remains fragile.
+
+
+Readers primarily interested in theory should begin with Chapter~\ref{ch:theory}. Readers interested in algorithms should move from Chapter~\ref{ch:methods} to Chapter~\ref{ch:systems}. Readers building deployed systems should read Chapters~\ref{ch:evaluation},~\ref{ch:industry}, and~\ref{ch:painpoints} together, because evaluation, adoption, and user failure modes are tightly coupled. Readers interested in future research should use Chapter~\ref{ch:future} as a roadmap, but should treat its proposals through the constraints developed earlier: no self-evolution claim is complete without a mutable object, feedback, variation, selection, retention, and audit.
+
+The survey's central message is simple. AI systems will become more useful when they can improve from experience, but improvement is only valuable when it is evidenced, bounded, and retained in a way that humans and other systems can inspect. Self-evolution therefore should not be framed as uncontrolled autonomy. It should be framed as a disciplined feedback architecture for cumulative, verifiable adaptation. The rest of this paper develops that architecture in detail.

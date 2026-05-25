@@ -20,6 +20,7 @@ export const site = {
 export const nav = [
   { href: '/#about', label: '关于' },
   { href: '/projects/', label: '项目' },
+  { href: '/postcards/', label: '卡片' },
   { href: '/research/', label: '研究' },
   { href: '/paper/', label: '论文' },
   { href: '/graph/', label: '图谱' },

@@ -149,6 +149,38 @@ LLM 自我训练（Self-Training）是指大语言模型在不依赖外部人工
 - **仓库**：https://github.com/RLHFlow/ArmoRM
 - **方向**：多目标奖励模型
 
+### 13. 2026 新增项目
+
+#### DeepSeek-V3
+- **仓库**：https://github.com/deepseek-ai/DeepSeek-V3
+- **方向**：开源模型里程碑，多 token 预测 + MLA + DeepSeekMoE
+- **GitNexus**：324 nodes | 470 edges | 7 clusters
+
+#### EvoAgentX
+- **仓库**：https://github.com/EvoAgentX/EvoAgentX
+- **方向**：首个自进化 Agent 框架，Agent 自动优化自身架构和策略
+- **GitNexus**：15,963 nodes | 29,504 edges | 589 clusters
+
+#### XMUDeepLIT/Awesome-Self-Evolving-Agents
+- **仓库**：https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents
+- **方向**：厦门大学自进化 Agent 综述资源
+- **GitNexus**：59 nodes | 58 edges
+
+#### CharlesQ9/Self-Evolving-Agents
+- **仓库**：https://github.com/CharlesQ9/Self-Evolving-Agents
+- **方向**：自进化 Agent 项目精选（Mobile-Agent-E, WebRL 等）
+- **GitNexus**：33 nodes | 29 edges
+
+#### Zesearch/self-improvement-llm
+- **仓库**：https://github.com/Zesearch/self-improvement-llm
+- **方向**：自改进 LLM 全生命周期框架
+- **GitNexus**：84 nodes | 83 edges
+
+#### ryokamoi/llm-self-correction-papers
+- **仓库**：https://github.com/ryokamoi/llm-self-correction-papers
+- **方向**：LLM 自纠错论文精选
+- **GitNexus**：21 nodes | 20 edges
+
 ## 方向分类统计
 
 | 子方向 | 项目数 |
@@ -164,7 +196,10 @@ LLM 自我训练（Self-Training）是指大语言模型在不依赖外部人工
 | GRPO (Open R1) | 1 |
 | 推理自进化 | 4 |
 | Post-Training | 1 |
-| 其他 | 4 |
-| **总计** | **25+** |
+| DeepSeek 系列 | 2 |
+| Self-Evolving Agent 框架 | 3 |
+| 自改进/自纠错资源 | 2 |
+| 其他 | 2 |
+| **总计** | **31** |
 
 注：部分仓库可能不存在或克隆失败，最终数量以实际成功克隆为准。GitNexus 分析报告见 `projects/` 目录。
