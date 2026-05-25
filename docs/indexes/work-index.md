@@ -10,15 +10,14 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `paper-drafts` | present | 22 | 1 | 0 | 1.9 MB |
-| `paper` | present | 1 | 2 | 0 | 43 KB |
+| `paper-drafts` | present | 23 | 1 | 0 | 2.0 MB |
+| `paper` | present | 16 | 2 | 0 | 1.0 MB |
 | `latex` | present | 9 | 3 | 0 | 53 KB |
-| `site` | present | 874 | 330 | 0 | 24 MB |
-| `survey` | present | 51 | 4 | 0 | 1.3 MB |
-| `scripts` | present | 8 | 1 | 0 | 126 KB |
-| `data-engine` | present | 0 | 9 | 0 | 0 B |
+| `site` | present | 909 | 332 | 0 | 25 MB |
+| `survey` | present | 85 | 4 | 0 | 2.6 MB |
+| `scripts` | present | 11 | 1 | 0 | 176 KB |
+| `data-engine` | present | 479 | 21 | 0 | 5.9 MB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
-| `CURRENT_GOAL.md` | present | 0 | 0 | 0 | 0 B |
 
 ## Representative Files
 
@@ -30,14 +29,23 @@
 - `paper-drafts/ch1-intro.tex`
 - `paper-drafts/ch2-taxonomy.tex`
 - `paper-drafts/ch3-methods.tex`
+- `paper-drafts/ch3-methods.tex.bak`
 - `paper-drafts/ch4-evolutionary.tex`
 - `paper-drafts/ch5-evaluation.tex`
 - `paper-drafts/ch6-frameworks.tex`
-- `paper-drafts/ch7-painpoints.tex`
 
 ### `paper`
 
 - `paper/main.log`
+- `paper/main.pdf`
+- `paper/main.tex`
+- `paper/references.bib`
+- `paper/sections/benchmark_self_improvement.tex`
+- `paper/sections/sec10_conclusion.tex`
+- `paper/sections/sec1_intro.tex`
+- `paper/sections/sec2_taxonomy.tex`
+- `paper/sections/sec3-self-improvement.tex`
+- `paper/sections/sec3_methods.tex`
 
 ### `latex`
 
@@ -81,12 +89,27 @@
 
 - `scripts/analyze_github_project_data.mjs`
 - `scripts/enforce_raw_timestamps.py`
+- `scripts/generate-site-knowledge-graph.mjs`
 - `scripts/generate_blog_author_profiles.py`
 - `scripts/generate_charts.py`
 - `scripts/generate_project_indexes.mjs`
 - `scripts/generate_repo_classification.py`
 - `scripts/generate_survey_figures.py`
 - `scripts/generate_visual_assets.mjs`
+- `scripts/generate_viz_exports.mjs`
+
+### `data-engine`
+
+- `data-engine/README.md`
+- `data-engine/analysis/.keep`
+- `data-engine/analysis/__init__.py`
+- `data-engine/analysis/anomaly_detector.py`
+- `data-engine/analysis/daily_report.py`
+- `data-engine/analysis/hype_scorer.py`
+- `data-engine/analysis/propagation_rebuilder.py`
+- `data-engine/analysis/run.py`
+- `data-engine/analysis/run_analysis.py`
+- `data-engine/collectors/__init__.py`
 
 ### `wiki`
 

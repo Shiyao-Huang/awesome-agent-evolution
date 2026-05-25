@@ -23,6 +23,7 @@
 
 | Path | Type | Class | Cleanup Action |
 |---|---|---|---|
+| `.DS_Store` | file | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
 | `.aha` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
 | `.astro` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
 | `.claude` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
@@ -38,7 +39,6 @@
 | `CODE_OF_CONDUCT.md` | file | support release/legal | 开源发布必需，保留在根目录。 |
 | `CONTENT_INDEX.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `CONTRIBUTING.md` | file | support release/legal | 开源发布必需，保留在根目录。 |
-| `CURRENT_GOAL.md` | file | needs-review holding | 不删除；先放入待审清单，确认引用后再决定归层或迁入 docs/legacy。 |
 | `DELIVERY_SUMMARY.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `LICENSE-CODE` | file | support release/legal | 开源发布必需，保留在根目录。 |
 | `LICENSE-CONTENT` | file | support release/legal | 开源发布必需，保留在根目录。 |
@@ -66,6 +66,7 @@
 | `mom-test-findings.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
 | `node_modules` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
 | `raw-data-timestamp-standard.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
+| `raw-data-timestamp-validation-report.json` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
 | `raw-github-index.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
 | `repos` | dir | support mirrors | 外部镜像，不删除；不混入本项目治理，必要时只读引用。 |
 | `social-media-raw-data-ZH.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |

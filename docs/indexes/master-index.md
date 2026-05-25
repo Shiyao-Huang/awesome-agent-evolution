@@ -10,9 +10,9 @@ Self Evolve 的项目结构按 `raw -> processed -> work -> results` 管线治�
 
 | Metric | Value |
 |---|---:|
-| Raw GitHub captures | 490 |
-| Classified GitHub repositories | 490 |
-| Analyzed project/model-card reports | 208 |
+| Raw GitHub captures | 486 |
+| Classified GitHub repositories | 486 |
+| Analyzed project/model-card reports | 204 |
 | Strict evolution-related repositories | 79 |
 | Broad evolution-related repositories | 176 |
 | Raw paper files on disk | 199 |
@@ -25,11 +25,11 @@ Self Evolve 的项目结构按 `raw -> processed -> work -> results` 管线治�
 | Category | Present Paths | Files | Directories | Skipped | Size | Rule |
 |---|---:|---:|---:|---:|---:|---|
 | [Raw / 原始素材](./raw-index.md) | 8/8 | 3775 | 6 | 0 | 39 MB | 只保存采集原貌和最小元数据；除时间戳补齐、去重索引外，不在这里写分析结论。 |
-| [Processed / 加工分析](./processed-index.md) | 8/8 | 25690 | 2904 | 0 | 2.9 GB | 清洗、分类、交叉分析、深度项目卡、论文评审都归这里；内容必须能追溯到 raw 或外部 canonical source。 |
-| [Work / 工作产物](./work-index.md) | 9/9 | 973 | 352 | 0 | 32 MB | 论文草稿、站点源码、脚本、调查图表、工程中间件归这里；可以迭代，但要有构建或验证入口。 |
-| [Results / 结果输出](./results-index.md) | 6/6 | 801 | 306 | 0 | 18 MB | 可交付、可发布、可下载、可部署的输出归这里；生成物要说明来源和刷新命令。 |
+| [Processed / 加工分析](./processed-index.md) | 8/8 | 25863 | 2907 | 0 | 2.9 GB | 清洗、分类、交叉分析、深度项目卡、论文评审都归这里；内容必须能追溯到 raw 或外部 canonical source。 |
+| [Work / 工作产物](./work-index.md) | 8/8 | 1540 | 366 | 0 | 41 MB | 论文草稿、站点源码、脚本、调查图表、工程中间件归这里；可以迭代，但要有构建或验证入口。 |
+| [Results / 结果输出](./results-index.md) | 6/6 | 798 | 303 | 0 | 16 MB | 可交付、可发布、可下载、可部署的输出归这里；生成物要说明来源和刷新命令。 |
 | [Mirrors / 外部仓库镜像](./mirrors-index.md) | 4/4 | 210827 | 44757 | 192 | 19 GB | 外部仓库克隆、只读镜像和临时验证仓库归这里；不要把本项目治理文件混入镜像内部。 |
-| [Ops / 管理与协作](./ops-index.md) | 9/9 | 28 | 5 | 0 | 836 KB | 项目管理、Agent 手册、云部署、索引、发布规范归这里；任何新长期规则都要能从根 README 找到。 |
+| [Ops / 管理与协作](./ops-index.md) | 9/9 | 29 | 5 | 0 | 842 KB | 项目管理、Agent 手册、云部署、索引、发布规范归这里；任何新长期规则都要能从根 README 找到。 |
 
 ## Project Map
 

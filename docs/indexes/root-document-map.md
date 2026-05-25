@@ -12,7 +12,6 @@ Root only keeps entry points, legal/release files, and compatibility files still
 | `CODE_OF_CONDUCT.md` | release/legal |
 | `CONTENT_INDEX.md` | ops |
 | `CONTRIBUTING.md` | release/legal |
-| `CURRENT_GOAL.md` | uncategorized |
 | `DELIVERY_SUMMARY.md` | ops |
 | `LICENSE-CODE` | release/legal |
 | `LICENSE-CONTENT` | release/legal |
@@ -37,6 +36,7 @@ Root only keeps entry points, legal/release files, and compatibility files still
 | `mom-test-findings-x.md` | raw compatibility |
 | `mom-test-findings.md` | raw compatibility |
 | `raw-data-timestamp-standard.md` | raw compatibility |
+| `raw-data-timestamp-validation-report.json` | raw compatibility |
 | `raw-github-index.md` | raw compatibility |
 | `social-media-raw-data-ZH.md` | raw compatibility |
 | `social-media-raw-data.md` | raw compatibility |
