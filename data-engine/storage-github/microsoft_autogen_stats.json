@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "collection_timestamp": "2026-05-22T14:28:25.883953+00:00",
+    "repo": "microsoft/autogen",
+    "collector_name": "github_quick_stats"
+  },
+  "data": {
+    "full_name": "microsoft/autogen",
+    "description": "A programming framework for agentic AI",
+    "stars": 58291,
+    "forks": 8801,
+    "open_issues": 843,
+    "watchers": 522,
+    "language": "Python",
+    "license": "CC-BY-4.0",
+    "topics": [
+      "agentic",
+      "agentic-agi",
+      "agents",
+      "ai",
+      "autogen",
+      "autogen-ecosystem",
+      "chatgpt",
+      "framework",
+      "llm-agent",
+      "llm-framework"
+    ],
+    "created_at": "2023-08-18T11:43:45Z",
+    "updated_at": "2026-05-22T14:19:31Z",
+    "pushed_at": "2026-04-15T11:59:09Z",
+    "default_branch": "main",
+    "archived": false,
+    "network_count": 8801
+  }
+}

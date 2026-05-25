@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "collection_timestamp": "2026-05-22T14:42:52.695667+00:00",
+    "repo": "EvoAgentX/Awesome-Self-Evolving-Agents",
+    "collector_name": "github_quick_stats"
+  },
+  "data": {
+    "full_name": "EvoAgentX/Awesome-Self-Evolving-Agents",
+    "description": "[Survey] A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems",
+    "stars": 2168,
+    "forks": 155,
+    "open_issues": 37,
+    "watchers": 24,
+    "language": null,
+    "license": "MIT",
+    "topics": [
+      "agent",
+      "agentic-ai",
+      "ai",
+      "llms",
+      "multi-agent-systems",
+      "natural-language-processing",
+      "self-evolving"
+    ],
+    "created_at": "2025-05-08T14:38:46Z",
+    "updated_at": "2026-05-22T14:00:11Z",
+    "pushed_at": "2026-05-16T14:49:18Z",
+    "default_branch": "main",
+    "archived": false,
+    "network_count": 155
+  }
+}

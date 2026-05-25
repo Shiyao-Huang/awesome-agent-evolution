@@ -1,0 +1,176 @@
+{
+  "t": 17,
+  "r": [
+    {
+      "project": "MetaGPT",
+      "score": 91.2,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 68212
+        }
+      }
+    },
+    {
+      "project": "autogen",
+      "score": 89.9,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 58291
+        }
+      }
+    },
+    {
+      "project": "crewAI",
+      "score": 89.0,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 51963
+        }
+      }
+    },
+    {
+      "project": "openai-agents-python",
+      "score": 83.5,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 26574
+        }
+      }
+    },
+    {
+      "project": "agentscope",
+      "score": 83.1,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 25492
+        }
+      }
+    },
+    {
+      "project": "lerobot",
+      "score": 82.7,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 24242
+        }
+      }
+    },
+    {
+      "project": "Roo-Code",
+      "score": 82.7,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 24128
+        }
+      }
+    },
+    {
+      "project": "A2A",
+      "score": 82.6,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 23921
+        }
+      }
+    },
+    {
+      "project": "GenAI_Agents",
+      "score": 82.0,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 22167
+        }
+      }
+    },
+    {
+      "project": "swarm",
+      "score": 81.7,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 21519
+        }
+      }
+    },
+    {
+      "project": "devika",
+      "score": 80.9,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 19509
+        }
+      }
+    },
+    {
+      "project": "SWE-agent",
+      "score": 80.8,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 19267
+        }
+      }
+    },
+    {
+      "project": "camel",
+      "score": 79.8,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 17020
+        }
+      }
+    },
+    {
+      "project": "plandex",
+      "score": 79.0,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 15387
+        }
+      }
+    },
+    {
+      "project": "mcp-use",
+      "score": 75.4,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 9989
+        }
+      }
+    },
+    {
+      "project": "NeMo-Guardrails",
+      "score": 71.6,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 6210
+        }
+      }
+    },
+    {
+      "project": "reflexion",
+      "score": 66.0,
+      "class": "viral",
+      "info": {
+        "gh": {
+          "stars": 3158
+        }
+      }
+    }
+  ],
+  "ts": "2026-05-22T14:40:36.492378+00:00"
+}

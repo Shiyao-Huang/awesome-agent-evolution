@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "collection_timestamp": "2026-05-22T14:41:50.804975+00:00",
+    "repo": "zou-group/textgrad",
+    "collector_name": "github_quick_stats"
+  },
+  "data": {
+    "full_name": "zou-group/textgrad",
+    "description": "TextGrad: Automatic ''Differentiation'' via Text -- using large language models to backpropagate textual gradients. Published in Nature.",
+    "stars": 3556,
+    "forks": 290,
+    "open_issues": 65,
+    "watchers": 26,
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+      "ai-optimization",
+      "compound-systems",
+      "large-language-models",
+      "prompt-optimization",
+      "textual-gradients"
+    ],
+    "created_at": "2024-06-11T00:34:56Z",
+    "updated_at": "2026-05-21T08:17:10Z",
+    "pushed_at": "2025-07-25T14:30:39Z",
+    "default_branch": "main",
+    "archived": false,
+    "network_count": 290
+  }
+}

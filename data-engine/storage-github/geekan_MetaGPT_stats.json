@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "collection_timestamp": "2026-05-22T14:27:23.999142+00:00",
+    "repo": "geekan/MetaGPT",
+    "collector_name": "github_quick_stats"
+  },
+  "data": {
+    "full_name": "geekan/MetaGPT",
+    "description": "\ud83c\udf1f The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming",
+    "stars": 68212,
+    "forks": 8691,
+    "open_issues": 125,
+    "watchers": 913,
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+      "agent",
+      "gpt",
+      "llm",
+      "metagpt",
+      "multi-agent"
+    ],
+    "created_at": "2023-06-30T09:04:55Z",
+    "updated_at": "2026-05-22T14:23:25Z",
+    "pushed_at": "2026-01-21T10:12:33Z",
+    "default_branch": "main",
+    "archived": false,
+    "network_count": 8691
+  }
+}

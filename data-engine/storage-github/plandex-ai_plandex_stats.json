@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "collection_timestamp": "2026-05-22T14:25:19.931189+00:00",
+    "repo": "plandex-ai/plandex",
+    "collector_name": "github_quick_stats"
+  },
+  "data": {
+    "full_name": "plandex-ai/plandex",
+    "description": "Open source AI coding agent. Designed for large projects and real world tasks.",
+    "stars": 15387,
+    "forks": 1136,
+    "open_issues": 57,
+    "watchers": 107,
+    "language": "Go",
+    "license": "MIT",
+    "topics": [
+      "ai",
+      "ai-agents",
+      "ai-developer-tools",
+      "ai-tools",
+      "cli",
+      "command-line",
+      "developer-tools",
+      "git",
+      "golang",
+      "gpt-4",
+      "llm",
+      "openai",
+      "polyglot-programming",
+      "terminal",
+      "terminal-based",
+      "terminal-ui"
+    ],
+    "created_at": "2023-10-24T22:11:43Z",
+    "updated_at": "2026-05-22T11:05:08Z",
+    "pushed_at": "2025-10-03T21:49:58Z",
+    "default_branch": "main",
+    "archived": false,
+    "network_count": 1136
+  }
+}
