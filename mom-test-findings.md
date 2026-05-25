@@ -71,7 +71,7 @@ All findings follow The Mom Test principles:
 3. Identify workarounds as evidence of unmet needs
 4. Quote exact user language for authenticity
 
-## Implications for Awesome-Evolution List
+## Implications for awesome-agent-evolution list
 
 Based on these findings, the most valuable resources for users would be:
 1. **Production-ready frameworks** with proven deployment track records

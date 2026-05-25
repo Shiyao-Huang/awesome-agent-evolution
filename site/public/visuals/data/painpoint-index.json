@@ -1,0 +1,412 @@
+{
+  "generated_at": "2026-05-25T07:37:07.039Z",
+  "total_pain_points": 97,
+  "by_platform": [
+    {
+      "platform": "Reddit",
+      "count": 47,
+      "points": [
+        {
+          "id": "1",
+          "title": "Agent Reliability — Agents Are Too Unreliable for Production"
+        },
+        {
+          "id": "2",
+          "title": "Self-Improvement Is a Myth in Practice — Feedback Loops Require Manual Human Labor"
+        },
+        {
+          "id": "3",
+          "title": "Agent Drift — All Agents Degrade Over Time Without Constant Monitoring"
+        },
+        {
+          "id": "4",
+          "title": "Framework Opacity — No Visibility Into What Prompts Are Actually Being Sent"
+        },
+        {
+          "id": "5",
+          "title": "Framework Bloat and Deployment Complexity"
+        },
+        {
+          "id": "6",
+          "title": "Runaway Loops and Cost Spirals"
+        },
+        {
+          "id": "7",
+          "title": "Agent Evaluation Is Broken — No Good Way to Measure Agent Quality"
+        },
+        {
+          "id": "8",
+          "title": "Benchmarks Only Test Coding — 92% of Labor Is Ignored"
+        },
+        {
+          "id": "9",
+          "title": "Reflection and Self-Critique Introduce Latency Without Solving Edge Cases"
+        },
+        {
+          "id": "10",
+          "title": "RLAIF (AI Evaluating AI) Is Fragile in Real-World Conditions"
+        },
+        {
+          "id": "11",
+          "title": "Skill Acquisition by Agents Is Overhyped — They Stumble and Need Handholding"
+        },
+        {
+          "id": "12",
+          "title": "Framework Abstractions Fight You More Than They Help"
+        },
+        {
+          "id": "13",
+          "title": "Environment Isolation and Silent Sub-Agent Failures"
+        },
+        {
+          "id": "14",
+          "title": "\"Web Interaction Flakiness — APIs Change"
+        },
+        {
+          "id": "15",
+          "title": "Trace Accumulation Kills Context — Agents Hallucinate Fixes After 10-15 Runs"
+        },
+        {
+          "id": "16",
+          "title": "Maintaining the Optimization System Costs More Than Running the Agent"
+        },
+        {
+          "id": "17",
+          "title": "Self-Written Skills Drift and Break When Base Models Update"
+        },
+        {
+          "id": "18",
+          "title": "Unstructured Self-Modification Leads to Rapid Degradation"
+        },
+        {
+          "id": "19",
+          "title": "Source Control for Self-Modifying Systems Is Unsolved"
+        },
+        {
+          "id": "20",
+          "title": "Cost Is the Dominant Constraint for Self-Improving Systems"
+        },
+        {
+          "id": "21",
+          "title": "Self-Improvement Plateaus Quickly Without a Reliable Verifier"
+        },
+        {
+          "id": "22",
+          "title": "Goodharting Benchmarks — Optimizing the Harness Does Not Improve the Agent"
+        },
+        {
+          "id": "23",
+          "title": "Memory Architecture for Agents Is Unsettled — Operational vs. Learned Memory"
+        },
+        {
+          "id": "24",
+          "title": "\"Memory for Agent Evolution Requires Relationships"
+        },
+        {
+          "id": "25",
+          "title": "Safety and Security — Agents Can Be Hacked or Go Rogue"
+        },
+        {
+          "id": "26",
+          "title": "\"The Tooling Layer Is the Real Bottleneck"
+        },
+        {
+          "id": "27",
+          "title": "No Standard for Dynamic Context Selection in Unpredictable Workflows"
+        },
+        {
+          "id": "28",
+          "title": "Persistent Memory Without Drift Remains Unsolved"
+        },
+        {
+          "id": "29",
+          "title": "Non-Technical Stakeholders Force Bad Framework Choices"
+        },
+        {
+          "id": "30",
+          "title": "Code Agents Break When Inputs Become Unpredictable"
+        },
+        {
+          "id": "31",
+          "title": "No Good Way to Validate Improvement Claims — Cherry-Picked Results Are the Norm"
+        },
+        {
+          "id": "32",
+          "title": "LLMs Lack Intrinsic Logical Reasoning"
+        },
+        {
+          "id": "33",
+          "title": "Reward Functions for Self-Learning Agents Are Easy to Game"
+        },
+        {
+          "id": "34",
+          "title": "Users Have Unrealistic Expectations — They Think AI Is Magic"
+        },
+        {
+          "id": "35",
+          "title": "No Good Leaderboard or Trusted Metric for Agent Quality"
+        },
+        {
+          "id": "36",
+          "title": "MCP Is Too Constraining for General-Purpose Agents"
+        },
+        {
+          "id": "37",
+          "title": "State Management Becomes a Nightmare in Complex Agent Systems"
+        },
+        {
+          "id": "38",
+          "title": "The Overwhelming Pace of Tool and Framework Churn"
+        },
+        {
+          "id": "39",
+          "title": "Agents Stuck in Tool-Call Loops When Prompts Are Not Perfect"
+        },
+        {
+          "id": "40",
+          "title": "Regression Hell in Self-Improvement Loops"
+        },
+        {
+          "id": "41",
+          "title": "\"The Definition of \"\"Self-Improvement\"\" Is Undefined and Contested\""
+        },
+        {
+          "id": "42",
+          "title": "Claude Code Writes Against Deprecated APIs"
+        },
+        {
+          "id": "43",
+          "title": "AutoGPT-Style Agents Still Just Talk and Do Not Produce Useful Output"
+        },
+        {
+          "id": "44",
+          "title": "Custom Trained Models Become Obsolete When New Foundation Models Release"
+        },
+        {
+          "id": "45",
+          "title": "Security Vulnerabilities in Open Agent Platforms"
+        },
+        {
+          "id": "46",
+          "title": "Agents That Work in Demos Fail at Scale with Real Users"
+        },
+        {
+          "id": "47",
+          "title": "Open LLMs Produce Invalid Code for Evolutionary Systems"
+        }
+      ]
+    },
+    {
+      "platform": "HN",
+      "count": 36,
+      "points": [
+        {
+          "id": "1",
+          "title": "Agents Fabricate APIs and Cannot Self-Correct"
+        },
+        {
+          "id": "2",
+          "title": "LLMs Fail on Niche/Out-of-Distribution Code"
+        },
+        {
+          "id": "3",
+          "title": "Framework Abstractions Obfuscate Debugging (LangChain Problem)"
+        },
+        {
+          "id": "4",
+          "title": "Agents Cannot Do Long-Term Planning or Adjust on Failure"
+        },
+        {
+          "id": "5",
+          "title": "LLMs Are Terrible at Prompting Other LLMs"
+        },
+        {
+          "id": "6",
+          "title": "Agent Trajectory Improvement Is an Unsolved Problem"
+        },
+        {
+          "id": "7",
+          "title": "Evaluating Self-Improvement Is Circular and Unreliable"
+        },
+        {
+          "id": "8",
+          "title": "Prompt Optimization Search Space Is Too Large"
+        },
+        {
+          "id": "9",
+          "title": "Agents Rewrite Code from Memory Instead of Preserving It"
+        },
+        {
+          "id": "10",
+          "title": "Agents Only See a Fraction of the Codebase"
+        },
+        {
+          "id": "11",
+          "title": "Agents Require Extreme Babysitting for Even Minor Tasks"
+        },
+        {
+          "id": "12",
+          "title": "Unit Test Generation Wastes More Time Than It Saves"
+        },
+        {
+          "id": "13",
+          "title": "Agent Frameworks Get Abandoned When They Hit Production"
+        },
+        {
+          "id": "14",
+          "title": "The Edit/Harness Format Matters More Than the Model (But Nobody Invests in It)"
+        },
+        {
+          "id": "15",
+          "title": "\"Benchmarks Are Contaminated"
+        },
+        {
+          "id": "16",
+          "title": "Voice AI Cannot Distinguish Speech from Background Noise"
+        },
+        {
+          "id": "17",
+          "title": "Self-Generated Skills/Docs by LLMs Are Actively Harmful"
+        },
+        {
+          "id": "18",
+          "title": "\"The \"\"When to Use a Tool\"\" Problem Is Unsolved\""
+        },
+        {
+          "id": "19",
+          "title": "Every Agent Session Starts Cold with No Accumulated Knowledge"
+        },
+        {
+          "id": "20",
+          "title": "Self-Improving Agents Fabricate Their Own Evaluation Results"
+        },
+        {
+          "id": "21",
+          "title": "Context Bloat Kills Agent Performance Over Time"
+        },
+        {
+          "id": "22",
+          "title": "The Tautology Trap — Agents Writing Tests for Their Own Code"
+        },
+        {
+          "id": "23",
+          "title": "Cost and Speed Make Evolutionary Approaches Impractical at Scale"
+        },
+        {
+          "id": "24",
+          "title": "Code Review Is Broken and Agents Make It Worse"
+        },
+        {
+          "id": "25",
+          "title": "Agent Self-Modification Is a Security Nightmare"
+        },
+        {
+          "id": "26",
+          "title": "No One Can Demonstrate Real Production Success with Self-Improving Agents"
+        },
+        {
+          "id": "27",
+          "title": "Claude Code Ignores Its Own Configuration Files"
+        },
+        {
+          "id": "28",
+          "title": "Goodhart's Law Applies to Every Self-Improvement Metric"
+        },
+        {
+          "id": "29",
+          "title": "LLMs Write Bad Code Because of Misleading Variable Names in Existing Codebases"
+        },
+        {
+          "id": "30",
+          "title": "\"Voice AI Is Deployed to Avoid Problems"
+        },
+        {
+          "id": "31",
+          "title": "Tool Registries Accumulate Noise Over Time"
+        },
+        {
+          "id": "32",
+          "title": "Nobody Wants to Chat — They Want the Work Done"
+        },
+        {
+          "id": "33",
+          "title": "\"LLMs Cannot Actually \"\"Learn\"\" — RAG Is Not Learning\""
+        },
+        {
+          "id": "34",
+          "title": "Cost Governance for Autonomous Agents Is Unsolved"
+        },
+        {
+          "id": "35",
+          "title": "Writing Compliance Tests for Self-Modifying Code Is a Chicken-and-Egg Problem"
+        },
+        {
+          "id": "36",
+          "title": "Models Produce Invalid Code at Completion Boundaries"
+        }
+      ]
+    },
+    {
+      "platform": "X/Twitter",
+      "count": 14,
+      "points": [
+        {
+          "id": "1",
+          "title": "Static Agents Become Obsolete After Deployment"
+        },
+        {
+          "id": "2",
+          "title": "Catastrophic Forgetting in Continually Learning Agents"
+        },
+        {
+          "id": "3",
+          "title": "\"Misevolution — Agents Evolve in Unintended"
+        },
+        {
+          "id": "4",
+          "title": "Unstable Training on Complex Multi-Step Tasks"
+        },
+        {
+          "id": "5",
+          "title": "Benchmaxxing — Research Focus on Benchmarks Instead of Real-World Improvement"
+        },
+        {
+          "id": "6",
+          "title": "Expensive Data and Handcrafted Rewards Are Required Bottlenecks"
+        },
+        {
+          "id": "7",
+          "title": "No Standardized Enterprise Safety and Governance for Self-Evolving Agents"
+        },
+        {
+          "id": "8",
+          "title": "Agents Cannot Reliably Self-Diagnose Their Own Weaknesses"
+        },
+        {
+          "id": "9",
+          "title": "Self-Improvement Gains Are Modest Despite Significant Complexity Overhead"
+        },
+        {
+          "id": "10",
+          "title": "\"No Unified Architecture — Fragmented"
+        },
+        {
+          "id": "11",
+          "title": "Agents That Modify Their Own Code Create Expanded and Unpredictable Risk Surfaces"
+        },
+        {
+          "id": "12",
+          "title": "\"Real-World Practitioners Need Simple"
+        },
+        {
+          "id": "13",
+          "title": "Search Space Is Too Large for Single-Agent Exploration"
+        },
+        {
+          "id": "14",
+          "title": "Quality Control in Agent-Created Tools and Skills"
+        }
+      ]
+    }
+  ]
+}

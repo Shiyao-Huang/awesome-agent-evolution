@@ -1,0 +1,369 @@
+{
+  "generated_at": "2026-05-25T15:45:00+08:00",
+  "framework_version": "v1",
+  "description": "Radar profiles for key self-evolution systems, scored using the Rank/Judgment framework v1.",
+  "profiles": [
+    {
+      "system_id": "dgm-darwin-godel-machine",
+      "system_name": "Darwin Gödel Machine",
+      "dimensions": {
+        "D1": 9.0,
+        "D2": 7.5,
+        "D3": 7.0,
+        "D4": 6.0,
+        "D5": 5.0,
+        "U1": 4.0,
+        "U2": 7.0,
+        "U3": 8.5,
+        "U4": 7.0
+      },
+      "evidence": {
+        "D1": "SWE-bench 20%→50%, Polyglot 14.2%→30.7% (+30pp/+16.5pp gain)",
+        "D2": "Archive-based evaluation; multiple benchmarks; held-out reported",
+        "D3": "Cross-language transfer (Polyglot); cross-domain (SWE-bench + coding)",
+        "D4": "Sandbox mentioned; no detailed safety audit in paper",
+        "D5": "Large candidate population implied; budget not fully reported",
+        "U1": "Research artifact; requires significant compute and setup",
+        "U2": "Archive + lineage design is future-proof; tied to specific LLM backend",
+        "U3": "Strong publication; ablations on archive mechanisms; novel framework",
+        "U4": "Directly applicable to software engineering; production signal emerging"
+      },
+      "metadata": {
+        "evaluated_at": "2026-05-25T15:45:00Z",
+        "evaluator": "ranking-framework-v1",
+        "maturity_level": 4,
+        "tier": "A",
+        "composite_score": 6.78,
+        "confidence_factor": 0.90,
+        "notes": "Exceptional improvement magnitude. Academic rigor strong. Usability limited. The archive/lineage concept is a key contribution to the field."
+      }
+    },
+    {
+      "system_id": "reflexion",
+      "system_name": "Reflexion",
+      "dimensions": {
+        "D1": 8.0,
+        "D2": 6.5,
+        "D3": 5.0,
+        "D4": 5.0,
+        "D5": 7.0,
+        "U1": 7.0,
+        "U2": 6.0,
+        "U3": 7.5,
+        "U4": 6.5
+      },
+      "evidence": {
+        "D1": "HumanEval 91% pass@1 (GPT-3.5); ALFWorld 97% success; strong gains",
+        "D2": "Multiple tasks reported; limited seed variance reporting; some evaluator coupling",
+        "D3": "Works across code + embodied tasks; limited cross-domain evidence",
+        "D4": "No sandbox violations reported; memory-based system has inherent safety considerations",
+        "D5": "Low cost per improvement; verbal reflection is token-efficient",
+        "U1": "Simple API; well-documented; easy to integrate",
+        "U2": "Prompt-based; model-agnostic in principle; reflection pattern widely reusable",
+        "U3": "Well-cited; clear experimental design; limited ablations on memory decay",
+        "U4": "Widely adopted as baseline; limited production deployment evidence"
+      },
+      "metadata": {
+        "evaluated_at": "2026-05-25T15:45:00Z",
+        "evaluator": "ranking-framework-v1",
+        "maturity_level": 2,
+        "tier": "B",
+        "composite_score": 6.39,
+        "confidence_factor": 0.95,
+        "notes": "Classic Level 2 system (prompt/output refinement). High usability and cost efficiency. Transferability limited. Foundational work in the field."
+      }
+    },
+    {
+      "system_id": "alphaevolve",
+      "system_name": "AlphaEvolve",
+      "dimensions": {
+        "D1": 9.5,
+        "D2": 8.0,
+        "D3": 7.5,
+        "D4": 7.0,
+        "D5": 4.0,
+        "U1": 2.0,
+        "U2": 8.0,
+        "U3": 9.0,
+        "U4": 8.5
+      },
+      "evidence": {
+        "D1": "4x4 matrix mult improvement (56yr record); 75% SOTA recovery; Borg 0.7% compute recovery",
+        "D2": "Domain-specific validators; production deployment evidence; multiple domains",
+        "D3": "Math + scheduling + kernel optimization; broad domain coverage",
+        "D4": "Production infrastructure implies strong safety review; details not fully public",
+        "D5": "Implies massive compute budget; cost reporting limited",
+        "U1": "Google-internal; not publicly available as installable tool",
+        "U2": "Quality-diversity search + evolutionary database design is highly extensible",
+        "U3": "Exceptional results with domain-specific evaluators; some methodology gaps in public reporting",
+        "U4": "Directly recovered 0.7% worldwide compute; real production impact"
+      },
+      "metadata": {
+        "evaluated_at": "2026-05-25T15:45:00Z",
+        "evaluator": "ranking-framework-v1",
+        "maturity_level": 4,
+        "tier": "A",
+        "composite_score": 7.06,
+        "confidence_factor": 0.80,
+        "notes": "Highest improvement magnitude and practical value in the corpus. Usability score penalized by lack of public availability. Confidence reduced due to limited cost/safety disclosure."
+      }
+    },
+    {
+      "system_id": "self-refine",
+      "system_name": "Self-Refine",
+      "dimensions": {
+        "D1": 6.0,
+        "D2": 6.0,
+        "D3": 4.0,
+        "D4": 5.0,
+        "D5": 8.0,
+        "U1": 8.5,
+        "U2": 5.0,
+        "U3": 6.5,
+        "U4": 5.0
+      },
+      "evidence": {
+        "D1": "Math 56%→67%; dialogue improvement; modest but consistent gains",
+        "D2": "Multiple tasks; limited seed reporting; simple experimental design",
+        "D3": "Tested on narrow task set; limited cross-domain transfer evidence",
+        "D4": "No code execution or tool use; minimal safety surface",
+        "D5": "Very low cost; few additional tokens per refinement round",
+        "U1": "Extremely simple; zero additional dependencies; prompt-only technique",
+        "U2": "Tied to model capability; no persistent state; limited extensibility",
+        "U3": "Well-cited; clear methodology; limited ablations",
+        "U4": "Useful as building block; limited standalone practical value"
+      },
+      "metadata": {
+        "evaluated_at": "2026-05-25T15:45:00Z",
+        "evaluator": "ranking-framework-v1",
+        "maturity_level": 2,
+        "tier": "B",
+        "composite_score": 6.00,
+        "confidence_factor": 0.95,
+        "notes": "Minimal and effective. Best cost-efficiency in the corpus. Transferability and practical value limited. Foundational technique."
+      }
+    },
+    {
+      "system_id": "voyager",
+      "system_name": "Voyager (Minecraft)",
+      "dimensions": {
+        "D1": 7.5,
+        "D2": 6.0,
+        "D3": 4.5,
+        "D4": 5.5,
+        "D5": 6.5,
+        "U1": 5.0,
+        "U2": 6.5,
+        "U3": 7.0,
+        "U4": 5.5
+      },
+      "evidence": {
+        "D1": "3.3x unique items; 2.3x travel distance; faster tech-tree unlocking",
+        "D2": "Single environment; limited seed variance; Minecraft-specific metrics",
+        "D3": "Skills tested only in Minecraft; transfer to other environments not demonstrated",
+        "D4": "Sandboxed game environment; minimal real-world safety risk",
+        "D5": "Moderate LLM cost for skill generation; game environment is cheap to run",
+        "U1": "Requires Minecraft setup; JS code interpreter; moderate complexity",
+        "U2": "Skill library concept is generalizable; implementation is Minecraft-specific",
+        "U3": "Well-cited; novel skill library design; limited ablations on skill quality",
+        "U4": "Minecraft-specific; skill library concept transferable but not directly deployable"
+      },
+      "metadata": {
+        "evaluated_at": "2026-05-25T15:45:00Z",
+        "evaluator": "ranking-framework-v1",
+        "maturity_level": 3,
+        "tier": "B",
+        "composite_score": 5.89,
+        "confidence_factor": 0.90,
+        "notes": "Level 3: persistent skill accumulation. Strong within-domain improvement. Transferability is the key gap. Skill library concept is influential."
+      }
+    },
+    {
+      "system_id": "adas",
+      "system_name": "ADAS (Automated Design of Agentic Systems)",
+      "dimensions": {
+        "D1": 7.0,
+        "D2": 7.0,
+        "D3": 6.5,
+        "D4": 5.0,
+        "D5": 5.5,
+        "U1": 3.5,
+        "U2": 7.5,
+        "U3": 8.0,
+        "U4": 6.0
+      },
+      "evidence": {
+        "D1": "Discovered agent designs that outperform human-designed agents on benchmarks",
+        "D2": "Cross-domain testing; multiple benchmarks; clear baseline comparison",
+        "D3": "Designs discovered in one domain partially transfer to another",
+        "D4": "Code generation in sandbox; limited safety discussion",
+        "D5": "Meta-search over agent designs implies significant compute budget",
+        "U1": "Research codebase; requires setup; not packaged for general use",
+        "U2": "Meta-level design (designs agents) is inherently extensible",
+        "U3": "Novel framing; strong experiments; some reproducibility concerns",
+        "U4": "Research impact high; limited direct production deployment"
+      },
+      "metadata": {
+        "evaluated_at": "2026-05-25T15:45:00Z",
+        "evaluator": "ranking-framework-v1",
+        "maturity_level": 4,
+        "tier": "B",
+        "composite_score": 6.22,
+        "confidence_factor": 0.85,
+        "notes": "Level 4: modifies agent architecture. The meta-design approach is a key conceptual contribution. Usability limited by research-artifact status."
+      }
+    },
+    {
+      "system_id": "reveal",
+      "system_name": "ReVeal",
+      "dimensions": {
+        "D1": 6.5,
+        "D2": 7.5,
+        "D3": 5.5,
+        "D4": 6.0,
+        "D5": 5.0,
+        "U1": 4.0,
+        "U2": 6.5,
+        "U3": 8.0,
+        "U4": 6.0
+      },
+      "evidence": {
+        "D1": "LiveCodeBench 36.9→42.4 (+5.5pp over 19 turns)",
+        "D2": "Time-split benchmark (LiveCodeBench); turn-by-turn reporting; clear budget",
+        "D3": "Limited cross-domain evidence; focused on competitive programming",
+        "D4": "Self-verification co-evolution reduces risk; sandbox implied",
+        "D5": "19-turn inference is expensive; turn-level cost reported",
+        "U1": "Research artifact; requires training infrastructure",
+        "U2": "TAPO objective is generalizable; verification-aware training is transferable",
+        "U3": "Strong methodology; co-evolution of generation and verification; well-designed experiments",
+        "U4": "Relevant to production code verification; limited deployment evidence"
+      },
+      "metadata": {
+        "evaluated_at": "2026-05-25T15:45:00Z",
+        "evaluator": "ranking-framework-v1",
+        "maturity_level": 2,
+        "tier": "B",
+        "composite_score": 6.11,
+        "confidence_factor": 0.90,
+        "notes": "Notable for explicitly co-evolving generation and verification. Evidence strength is high due to time-split benchmark. Improvement magnitude is modest but well-measured."
+      }
+    },
+    {
+      "system_id": "absolute-zero",
+      "system_name": "Absolute Zero Reasoners",
+      "dimensions": {
+        "D1": 7.0,
+        "D2": 6.5,
+        "D3": 7.0,
+        "D4": 5.0,
+        "D5": 6.0,
+        "U1": 4.5,
+        "U2": 7.5,
+        "U3": 7.5,
+        "U4": 6.0
+      },
+      "evidence": {
+        "D1": "Self-play without external data; competitive with supervised methods on reasoning",
+        "D2": "Code self-play task design; multiple model sizes; some held-out testing",
+        "D3": "Code self-play induces math reasoning transfer; cross-domain signal",
+        "D4": "Self-play environment; limited safety surface beyond task design",
+        "D5": "Reasonable training cost; self-play generates own curriculum",
+        "U1": "Requires training infrastructure; not trivially deployable",
+        "U2": "Self-play paradigm is model-agnostic and task-extensible",
+        "U3": "Novel self-play formulation; clear experiments; some gaps in transfer validation",
+        "U4": "Relevant for reasoning-intensive applications; limited production evidence"
+      },
+      "metadata": {
+        "evaluated_at": "2026-05-25T15:45:00Z",
+        "evaluator": "ranking-framework-v1",
+        "maturity_level": 2,
+        "tier": "B",
+        "composite_score": 6.33,
+        "confidence_factor": 0.85,
+        "notes": "Important for the self-play-without-external-data paradigm. Transfer from code to math is a notable signal. Maturity level 2 because the evolving object is the model policy, not the agent itself."
+      }
+    },
+    {
+      "system_id": "funsearch",
+      "system_name": "FunSearch",
+      "dimensions": {
+        "D1": 8.5,
+        "D2": 7.5,
+        "D3": 6.0,
+        "D4": 6.5,
+        "D5": 5.0,
+        "U1": 3.0,
+        "U2": 7.0,
+        "U3": 8.5,
+        "U4": 7.0
+      },
+      "evidence": {
+        "D1": "New cap set constructions; improved bin packing heuristics; genuine discovery",
+        "D2": "Objective combinatorial score; independent verification possible; interpretable programs",
+        "D3": "Two domains demonstrated; limited broader transfer evidence",
+        "D4": "Program evaluation in sandbox; mathematical validation is inherently safe",
+        "D5": "Evolutionary search over many candidates; cost not fully reported",
+        "U1": "DeepMind-internal; not publicly available as tool",
+        "U2": "Program-search + evaluator pattern is generalizable",
+        "U3": "Published in Nature; interpretable artifacts; strong novelty verification",
+        "U4": "Genuine mathematical discovery; direct scientific value"
+      },
+      "metadata": {
+        "evaluated_at": "2026-05-25T15:45:00Z",
+        "evaluator": "ranking-framework-v1",
+        "maturity_level": 4,
+        "tier": "A",
+        "composite_score": 6.56,
+        "confidence_factor": 0.85,
+        "notes": "Pioneer of program-search self-evolution. Academic rigor is highest in the corpus. Practical value through genuine discovery. Usability limited by internal-only availability."
+      }
+    },
+    {
+      "system_id": "agent-symbolic-learning",
+      "system_name": "Agent Symbolic Learning",
+      "dimensions": {
+        "D1": 6.0,
+        "D2": 6.0,
+        "D3": 5.0,
+        "D4": 5.0,
+        "D5": 6.0,
+        "U1": 5.0,
+        "U2": 6.0,
+        "U3": 7.0,
+        "U4": 5.5
+      },
+      "evidence": {
+        "D1": "HumanEval 68.3→73.2; MATH 56→60.7; HotPotQA F1 36.2→39.1; consistent but modest",
+        "D2": "Multiple benchmarks; limited seed variance; prompt optimization may overfit",
+        "D3": "Multiple task types but frozen-agent transfer not tested",
+        "D4": "No code execution safety concerns discussed",
+        "D5": "Reasonable token budget for prompt optimization",
+        "U1": "Requires understanding of symbolic optimization; moderate setup",
+        "U2": "Symbolic gradient concept is novel but tied to specific pipeline",
+        "U3": "Novel theoretical framing; moderate experimental depth",
+        "U4": "Useful as technique; limited standalone product value"
+      },
+      "metadata": {
+        "evaluated_at": "2026-05-25T15:45:00Z",
+        "evaluator": "ranking-framework-v1",
+        "maturity_level": 2,
+        "tier": "C",
+        "composite_score": 5.72,
+        "confidence_factor": 0.90,
+        "notes": "Novel theoretical contribution (language gradients). Consistent moderate improvements across benchmarks. Not yet at strong self-evolution threshold."
+      }
+    }
+  ],
+  "ranking": [
+    {"rank": 1, "system_id": "alphaevolve", "composite": 7.06, "tier": "A", "maturity": 4},
+    {"rank": 2, "system_id": "dgm-darwin-godel-machine", "composite": 6.78, "tier": "A", "maturity": 4},
+    {"rank": 3, "system_id": "funsearch", "composite": 6.56, "tier": "A", "maturity": 4},
+    {"rank": 4, "system_id": "reflexion", "composite": 6.39, "tier": "B", "maturity": 2},
+    {"rank": 5, "system_id": "absolute-zero", "composite": 6.33, "tier": "B", "maturity": 2},
+    {"rank": 6, "system_id": "adas", "composite": 6.22, "tier": "B", "maturity": 4},
+    {"rank": 7, "system_id": "reveal", "composite": 6.11, "tier": "B", "maturity": 2},
+    {"rank": 8, "system_id": "self-refine", "composite": 6.00, "tier": "B", "maturity": 2},
+    {"rank": 9, "system_id": "voyager", "composite": 5.89, "tier": "B", "maturity": 3},
+    {"rank": 10, "system_id": "agent-symbolic-learning", "composite": 5.72, "tier": "C", "maturity": 2}
+  ]
+}

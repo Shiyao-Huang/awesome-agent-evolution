@@ -1,0 +1,232 @@
+---
+import { projectRankData } from './visualizationData';
+
+const projectsPayload = JSON.stringify(projectRankData);
+const categories = [...new Set(projectRankData.map(p => p.category))];
+const categoryOptions = categories.map(c => `<option value="${c}">${c}</option>`).join('');
+---
+
+<div class="viz-rank" id="viz-rank">
+  <div class="viz-rank-header">
+    <h3>Project Rankings</h3>
+    <p>Sortable, filterable comparison of all analyzed projects</p>
+  </div>
+  <div class="viz-rank-controls">
+    <input id="viz-rank-search" type="search" placeholder="Search projects..." aria-label="Search projects" />
+    <select id="viz-rank-category" aria-label="Filter by category">
+      <option value="">All Categories</option>
+      {categories.map(c => <option value={c}>{c}</option>)}
+    </select>
+    <select id="viz-rank-sort" aria-label="Sort by">
+      <option value="stars-desc">Stars (High→Low)</option>
+      <option value="stars-asc">Stars (Low→High)</option>
+      <option value="name-asc">Name (A→Z)</option>
+      <option value="updated-desc">Recently Updated</option>
+    </select>
+  </div>
+  <div class="viz-rank-count" id="viz-rank-count" aria-live="polite"></div>
+  <div class="viz-rank-table-wrap">
+    <table class="viz-rank-table" id="viz-rank-table" role="grid">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Project</th>
+          <th>Stars</th>
+          <th>Category</th>
+          <th>Mechanism</th>
+          <th>Updated</th>
+        </tr>
+      </thead>
+      <tbody id="viz-rank-tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<script is:inline define:vars={{ projectsPayload }}>
+  const allProjects = JSON.parse(projectsPayload);
+  const tbody = document.getElementById('viz-rank-tbody');
+  const searchInput = document.getElementById('viz-rank-search');
+  const categorySelect = document.getElementById('viz-rank-category');
+  const sortSelect = document.getElementById('viz-rank-sort');
+  const countEl = document.getElementById('viz-rank-count');
+  if (!tbody) throw new Error('Rank table body not found');
+
+  function renderTable() {
+    const query = (searchInput.value || '').trim().toLowerCase();
+    const category = categorySelect.value;
+    const sortKey = sortSelect.value;
+
+    let filtered = allProjects.filter(p => {
+      const matchSearch = !query || p.name.toLowerCase().includes(query) || p.repo.toLowerCase().includes(query) || p.pattern.toLowerCase().includes(query) || (p.tags || []).some(t => t.toLowerCase().includes(query));
+      const matchCategory = !category || p.category === category;
+      return matchSearch && matchCategory;
+    });
+
+    // Sort
+    if (sortKey === 'stars-desc') filtered.sort((a, b) => b.stars - a.stars);
+    else if (sortKey === 'stars-asc') filtered.sort((a, b) => a.stars - b.stars);
+    else if (sortKey === 'name-asc') filtered.sort((a, b) => a.name.localeCompare(b.name));
+    else if (sortKey === 'updated-desc') filtered.sort((a, b) => (b.lastPushed || '').localeCompare(a.lastPushed || ''));
+
+    countEl.textContent = `${filtered.length} of ${allProjects.length} projects`;
+
+    tbody.innerHTML = filtered.slice(0, 50).map((p, i) => {
+      const tags = (p.tags || []).slice(0, 3).map(t => `<span class="viz-rank-tag">${t}</span>`).join('');
+      const updated = p.lastPushed ? p.lastPushed.slice(0, 10) : '—';
+      return `<tr>
+        <td class="viz-rank-num">${i + 1}</td>
+        <td class="viz-rank-name">
+          <a href="${p.url}" target="_blank" rel="noopener">${p.name}</a>
+          <span class="viz-rank-repo">${p.repo}</span>
+        </td>
+        <td class="viz-rank-stars">${p.stars.toLocaleString()}</td>
+        <td class="viz-rank-category">${p.category}</td>
+        <td class="viz-rank-mechanism">${tags}</td>
+        <td class="viz-rank-date">${updated}</td>
+      </tr>`;
+    }).join('');
+  }
+
+  renderTable();
+  searchInput.addEventListener('input', renderTable);
+  categorySelect.addEventListener('change', renderTable);
+  sortSelect.addEventListener('change', renderTable);
+</script>
+
+<style>
+  .viz-rank {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-media);
+    background: var(--surface-card);
+    padding: 24px;
+  }
+  .viz-rank-header {
+    margin-bottom: 16px;
+  }
+  .viz-rank-header h3 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--fg);
+    line-height: 1.1;
+  }
+  .viz-rank-header p {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .viz-rank-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .viz-rank-controls input,
+  .viz-rank-controls select {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-cta);
+    background: var(--surface-1);
+    color: var(--fg);
+    padding: 8px 12px;
+    font: 600 13px/1.2 var(--font-body);
+  }
+  .viz-rank-controls input {
+    flex: 1;
+    min-width: 180px;
+  }
+  .viz-rank-controls input:focus,
+  .viz-rank-controls select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
+  }
+  .viz-rank-count {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 750;
+    margin-bottom: 10px;
+  }
+  .viz-rank-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .viz-rank-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .viz-rank-table th {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 2px solid var(--line);
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    white-space: nowrap;
+  }
+  .viz-rank-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .viz-rank-table tr:hover td {
+    background: var(--surface-2);
+  }
+  .viz-rank-num {
+    font-weight: 800;
+    color: var(--meta);
+    width: 36px;
+  }
+  .viz-rank-name a {
+    font-weight: 700;
+    color: var(--fg);
+    text-decoration: none;
+  }
+  .viz-rank-name a:hover {
+    color: var(--accent);
+  }
+  .viz-rank-repo {
+    display: block;
+    font-size: 11px;
+    color: var(--meta);
+    margin-top: 2px;
+  }
+  .viz-rank-stars {
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .viz-rank-category {
+    white-space: nowrap;
+    font-weight: 600;
+  }
+  .viz-rank-mechanism {
+    max-width: 220px;
+  }
+  .viz-rank-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    margin: 1px 2px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 650;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .viz-rank-date {
+    white-space: nowrap;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  @media (max-width: 760px) {
+    .viz-rank-controls {
+      flex-direction: column;
+    }
+    .viz-rank-table {
+      font-size: 12px;
+    }
+  }
+</style>

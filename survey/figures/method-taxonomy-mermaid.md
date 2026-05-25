@@ -1,6 +1,6 @@
 # 方法分类 Mermaid 图（论文全量快照）
 
-- generated_at: 2026-05-25T14:25:53+08:00
+- generated_at: 2026-05-25T15:25:19+08:00
 - paper_source: `output/raw-papers-timestamp-index.json` + `raw-papers/*.md`
 - current_papers_classified: 196
 - note: 这是自动关键词初分类，后续需由论文review #26-#88 的深度结论校正。

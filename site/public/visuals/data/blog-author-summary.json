@@ -1,0 +1,1286 @@
+{
+  "generated_at": "2026-05-25T07:37:07.039Z",
+  "total_records": 652,
+  "platform_distribution": [
+    {
+      "platform": "YouTube",
+      "count": 121
+    },
+    {
+      "platform": "Product Hunt",
+      "count": 39
+    },
+    {
+      "platform": "Medium/TDS",
+      "count": 39
+    },
+    {
+      "platform": "Zhihu",
+      "count": 30
+    },
+    {
+      "platform": "CSDN",
+      "count": 24
+    },
+    {
+      "platform": "GitHub Blog/Docs",
+      "count": 21
+    },
+    {
+      "platform": "Dev.to",
+      "count": 20
+    },
+    {
+      "platform": "Tencent Cloud Dev",
+      "count": 18
+    },
+    {
+      "platform": "Substack",
+      "count": 16
+    },
+    {
+      "platform": "CNBlogs",
+      "count": 15
+    },
+    {
+      "platform": "36Kr",
+      "count": 13
+    },
+    {
+      "platform": "Juejin",
+      "count": 13
+    },
+    {
+      "platform": "Alibaba Cloud Dev",
+      "count": 12
+    },
+    {
+      "platform": "arxiv.org",
+      "count": 12
+    },
+    {
+      "platform": "Anthropic Blog",
+      "count": 11
+    },
+    {
+      "platform": "OpenAI Blog",
+      "count": 11
+    },
+    {
+      "platform": "WeChat Official Accounts",
+      "count": 11
+    },
+    {
+      "platform": "InfoQ China",
+      "count": 10
+    },
+    {
+      "platform": "LangChain Blog",
+      "count": 10
+    },
+    {
+      "platform": "Leiphone",
+      "count": 10
+    },
+    {
+      "platform": "Machine Heart",
+      "count": 10
+    },
+    {
+      "platform": "QbitAI",
+      "count": 10
+    },
+    {
+      "platform": "SegmentFault",
+      "count": 10
+    },
+    {
+      "platform": "baijiahao.baidu.com",
+      "count": 10
+    },
+    {
+      "platform": "humanloop.com",
+      "count": 10
+    },
+    {
+      "platform": "thenewstack.io",
+      "count": 10
+    },
+    {
+      "platform": "modal.com",
+      "count": 9
+    },
+    {
+      "platform": "wandb.ai",
+      "count": 9
+    },
+    {
+      "platform": "hub.baai.ac.cn",
+      "count": 5
+    },
+    {
+      "platform": "alphaxiv.org",
+      "count": 3
+    },
+    {
+      "platform": "callsphere.ai",
+      "count": 3
+    },
+    {
+      "platform": "jishuzhan.net",
+      "count": 3
+    },
+    {
+      "platform": "agentconn.com",
+      "count": 2
+    },
+    {
+      "platform": "aws.amazon.com",
+      "count": 2
+    },
+    {
+      "platform": "chatpaper.ai",
+      "count": 2
+    },
+    {
+      "platform": "docs.bswen.com",
+      "count": 2
+    },
+    {
+      "platform": "docs.feishu.cn",
+      "count": 2
+    },
+    {
+      "platform": "openreview.net",
+      "count": 2
+    },
+    {
+      "platform": "sohu.com",
+      "count": 2
+    },
+    {
+      "platform": "tianpan.co",
+      "count": 2
+    },
+    {
+      "platform": "51cto.com",
+      "count": 1
+    },
+    {
+      "platform": "53ai.com",
+      "count": 1
+    },
+    {
+      "platform": "aas.net.cn",
+      "count": 1
+    },
+    {
+      "platform": "aclanthology.cn",
+      "count": 1
+    },
+    {
+      "platform": "aegismemory.com",
+      "count": 1
+    },
+    {
+      "platform": "aiorang.com",
+      "count": 1
+    },
+    {
+      "platform": "aipuzi.cn",
+      "count": 1
+    },
+    {
+      "platform": "andela.com",
+      "count": 1
+    },
+    {
+      "platform": "apxml.com",
+      "count": 1
+    },
+    {
+      "platform": "arize.com",
+      "count": 1
+    },
+    {
+      "platform": "bbs.wps.cn",
+      "count": 1
+    },
+    {
+      "platform": "betteryeah.com",
+      "count": 1
+    },
+    {
+      "platform": "blog.exit.st",
+      "count": 1
+    },
+    {
+      "platform": "blog.omnichat.ai",
+      "count": 1
+    },
+    {
+      "platform": "blog.pebblous.ai",
+      "count": 1
+    },
+    {
+      "platform": "blog.themenonlab.com",
+      "count": 1
+    },
+    {
+      "platform": "botpress.com",
+      "count": 1
+    },
+    {
+      "platform": "chenxutan.com",
+      "count": 1
+    },
+    {
+      "platform": "cloud.baidu.com",
+      "count": 1
+    },
+    {
+      "platform": "cloud.google.com",
+      "count": 1
+    },
+    {
+      "platform": "cloud.tencent.cn",
+      "count": 1
+    },
+    {
+      "platform": "co-r-e.com",
+      "count": 1
+    },
+    {
+      "platform": "contextual.ai",
+      "count": 1
+    },
+    {
+      "platform": "daiwk.net",
+      "count": 1
+    },
+    {
+      "platform": "datawhalechina.github.io",
+      "count": 1
+    },
+    {
+      "platform": "developer.volcengine.com",
+      "count": 1
+    },
+    {
+      "platform": "developersdigest.tech",
+      "count": 1
+    },
+    {
+      "platform": "digitalhabitats.global",
+      "count": 1
+    },
+    {
+      "platform": "docs.ag2.ai",
+      "count": 1
+    },
+    {
+      "platform": "eadst.com",
+      "count": 1
+    },
+    {
+      "platform": "emergentmind.com",
+      "count": 1
+    },
+    {
+      "platform": "fanyamin.com",
+      "count": 1
+    },
+    {
+      "platform": "focus.zhuanzhi.ai",
+      "count": 1
+    },
+    {
+      "platform": "frontend.modal.com",
+      "count": 1
+    },
+    {
+      "platform": "gair-nlp.github.io",
+      "count": 1
+    },
+    {
+      "platform": "github.blog",
+      "count": 1
+    },
+    {
+      "platform": "github.langchain.ac.cn",
+      "count": 1
+    },
+    {
+      "platform": "gptbots.ai",
+      "count": 1
+    },
+    {
+      "platform": "h3c.com",
+      "count": 1
+    },
+    {
+      "platform": "heyuan110.com",
+      "count": 1
+    },
+    {
+      "platform": "ibm.com",
+      "count": 1
+    },
+    {
+      "platform": "kkit.dev",
+      "count": 1
+    },
+    {
+      "platform": "llm-multiagent-ft.github.io",
+      "count": 1
+    },
+    {
+      "platform": "luml.ai",
+      "count": 1
+    },
+    {
+      "platform": "luochuanad.github.io",
+      "count": 1
+    },
+    {
+      "platform": "marktechpost.com",
+      "count": 1
+    },
+    {
+      "platform": "masterdai.blog",
+      "count": 1
+    },
+    {
+      "platform": "memagent-sialab.github.io",
+      "count": 1
+    },
+    {
+      "platform": "microsoft.com",
+      "count": 1
+    },
+    {
+      "platform": "mindstudio.ai",
+      "count": 1
+    },
+    {
+      "platform": "mittrchina.com",
+      "count": 1
+    },
+    {
+      "platform": "modelscope.cn",
+      "count": 1
+    },
+    {
+      "platform": "news.qq.com",
+      "count": 1
+    },
+    {
+      "platform": "newsletter.swirlai.com",
+      "count": 1
+    },
+    {
+      "platform": "nicoloboschi.com",
+      "count": 1
+    },
+    {
+      "platform": "openclawindex.com",
+      "count": 1
+    },
+    {
+      "platform": "oracle.com",
+      "count": 1
+    },
+    {
+      "platform": "oxagen.ai",
+      "count": 1
+    },
+    {
+      "platform": "patents.google.com",
+      "count": 1
+    },
+    {
+      "platform": "platform.papr.ai",
+      "count": 1
+    },
+    {
+      "platform": "podcasts.apple.com",
+      "count": 1
+    },
+    {
+      "platform": "promptingguide.ai",
+      "count": 1
+    },
+    {
+      "platform": "puppyagent.com",
+      "count": 1
+    },
+    {
+      "platform": "qnmlgb.tech",
+      "count": 1
+    },
+    {
+      "platform": "redis.io",
+      "count": 1
+    },
+    {
+      "platform": "runoob.com",
+      "count": 1
+    },
+    {
+      "platform": "sceneweaver.co.uk",
+      "count": 1
+    },
+    {
+      "platform": "shopclawmart.com",
+      "count": 1
+    },
+    {
+      "platform": "silenceboy.com",
+      "count": 1
+    },
+    {
+      "platform": "sparkco.ai",
+      "count": 1
+    },
+    {
+      "platform": "superlinear.academy",
+      "count": 1
+    },
+    {
+      "platform": "swiftscholar.net",
+      "count": 1
+    },
+    {
+      "platform": "sys-ele.com",
+      "count": 1
+    },
+    {
+      "platform": "tangshuang.net",
+      "count": 1
+    },
+    {
+      "platform": "themoonlight.io",
+      "count": 1
+    },
+    {
+      "platform": "tinyash.com",
+      "count": 1
+    },
+    {
+      "platform": "ui.adsabs.harvard.edu",
+      "count": 1
+    },
+    {
+      "platform": "view.inews.qq.com",
+      "count": 1
+    },
+    {
+      "platform": "vsdevelop.com",
+      "count": 1
+    },
+    {
+      "platform": "warpmetrics.com",
+      "count": 1
+    },
+    {
+      "platform": "weave-docs.wandb.ai",
+      "count": 1
+    },
+    {
+      "platform": "wqw547243068.github.io",
+      "count": 1
+    },
+    {
+      "platform": "yeyulingfeng.com",
+      "count": 1
+    },
+    {
+      "platform": "zhizaozhe.com",
+      "count": 1
+    },
+    {
+      "platform": "zhuanzhi.ai",
+      "count": 1
+    },
+    {
+      "platform": "zhuanzhiai.com",
+      "count": 1
+    },
+    {
+      "platform": "source_platform_or_domain",
+      "count": 1
+    },
+    {
+      "platform": "STRING — YouTube / Product Hunt / Dev.to / Medium / Anthropic Blog / etc.",
+      "count": 1
+    }
+  ],
+  "influence_distribution": [
+    {
+      "rating": "unknown",
+      "count": 133
+    },
+    {
+      "rating": "creator",
+      "count": 116
+    },
+    {
+      "rating": "expert_org",
+      "count": 56
+    },
+    {
+      "rating": "cn_developer",
+      "count": 52
+    },
+    {
+      "rating": "product_team_or_maker",
+      "count": 32
+    },
+    {
+      "rating": "cn_vendor_expert",
+      "count": 30
+    },
+    {
+      "rating": "cn_practitioner",
+      "count": 30
+    },
+    {
+      "rating": "cn_media",
+      "count": 23
+    },
+    {
+      "rating": "developer",
+      "count": 21
+    },
+    {
+      "rating": "practitioner_or_blogger",
+      "count": 21
+    },
+    {
+      "rating": "cn_ai_media",
+      "count": 20
+    },
+    {
+      "rating": "developer_blogger",
+      "count": 17
+    },
+    {
+      "rating": "newsletter_author",
+      "count": 15
+    },
+    {
+      "rating": "Medium/TDS author",
+      "count": 14
+    },
+    {
+      "rating": "academic",
+      "count": 14
+    },
+    {
+      "rating": "cn_media_or_kol",
+      "count": 11
+    },
+    {
+      "rating": "cn_media_or_expert",
+      "count": 10
+    },
+    {
+      "rating": "tech_media",
+      "count": 9
+    },
+    {
+      "rating": "and Reviews 2025 | Product Hunt\"",
+      "count": 5
+    },
+    {
+      "rating": "Product Hunt maker/team",
+      "count": 2
+    },
+    {
+      "rating": "and Best Practices\"",
+      "count": 1
+    },
+    {
+      "rating": "and REAL ...\"",
+      "count": 1
+    },
+    {
+      "rating": "Ollama ...\"",
+      "count": 1
+    },
+    {
+      "rating": "YouTube creator/channel",
+      "count": 1
+    },
+    {
+      "rating": "Cursor)\"",
+      "count": 1
+    },
+    {
+      "rating": "and ... - Anthropic\"",
+      "count": 1
+    },
+    {
+      "rating": "Dev.to author",
+      "count": 1
+    },
+    {
+      "rating": "and Small Verified Loops - DEV Community\"",
+      "count": 1
+    },
+    {
+      "rating": "and Rollbacks - DEV Community\"",
+      "count": 1
+    },
+    {
+      "rating": "LangChain",
+      "count": 1
+    },
+    {
+      "rating": "and Adaptation | by evoailabs | Medium\"",
+      "count": 1
+    },
+    {
+      "rating": "2026 | Medium\"",
+      "count": 1
+    },
+    {
+      "rating": "and Learn from Their Own Actions | by Swapnil Shekade | Mar",
+      "count": 1
+    },
+    {
+      "rating": "and the Voyager Paper | Towards Data Science\"",
+      "count": 1
+    },
+    {
+      "rating": "Substack author",
+      "count": 1
+    },
+    {
+      "rating": "and the Rise of Self-Improving Models - AgentConn Blog\"",
+      "count": 1
+    },
+    {
+      "rating": "执行",
+      "count": 1
+    },
+    {
+      "rating": "and a new TensorRT-LLM example\"",
+      "count": 1
+    },
+    {
+      "rating": "reflect: the three operations of agent memory | Getting stuff done\"",
+      "count": 1
+    },
+    {
+      "rating": "The New Stack",
+      "count": 1
+    },
+    {
+      "rating": "and ...\"",
+      "count": 1
+    }
+  ],
+  "top_authors": [
+    {
+      "id": "1",
+      "platform": "Product Hunt",
+      "name": "\"AgentCrew - Product Information",
+      "author": "Latest Updates",
+      "influence_rating": "and Reviews 2025 | Product Hunt\"",
+      "confidence": "Product Hunt maker/team",
+      "needs_enrichment": "product_team_or_maker",
+      "category": "medium",
+      "time_slice": "True",
+      "url": "agent_workflow_automation"
+    },
+    {
+      "id": "2",
+      "platform": "Product Hunt",
+      "name": "AgentGPT Product Information and Latest Updates (2025) | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_product_or_directory",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/agentgpt"
+    },
+    {
+      "id": "3",
+      "platform": "Product Hunt",
+      "name": "AgentNest.ai",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_workflow_automation",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/agentnest-ai"
+    },
+    {
+      "id": "4",
+      "platform": "Product Hunt",
+      "name": "AiAgent.app",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_product_or_directory",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/autogpt-by-aiagent-app"
+    },
+    {
+      "id": "5",
+      "platform": "Product Hunt",
+      "name": "AutoGPT - An Autonomous GPT-4",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "developer_framework",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/autogpt-an-autonomous-gpt-4"
+    },
+    {
+      "id": "6",
+      "platform": "Product Hunt",
+      "name": "BabyAGI Product Information and Latest Updates (2025) | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "benchmark_or_competition",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/babyagi"
+    },
+    {
+      "id": "7",
+      "platform": "Product Hunt",
+      "name": "Colab Agent",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_product_or_directory",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/colab-agent"
+    },
+    {
+      "id": "8",
+      "platform": "Product Hunt",
+      "name": "Convergence",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_workflow_automation",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/convergence-3"
+    },
+    {
+      "id": "9",
+      "platform": "Product Hunt",
+      "name": "Deep Lake - AI Knowledge Agent",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_product_or_directory",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/activeloop"
+    },
+    {
+      "id": "10",
+      "platform": "Product Hunt",
+      "name": "Ebay Live: Bid for rare collectibles in live auctions | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_product_or_directory",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/ebay-live?launch=ebay-ai-shopping-agent"
+    },
+    {
+      "id": "11",
+      "platform": "Product Hunt",
+      "name": "GPT Researcher",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "developer_framework",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/gpt-researcher"
+    },
+    {
+      "id": "12",
+      "platform": "Product Hunt",
+      "name": "\"Genspark: Reinvent Search",
+      "author": "the New AI Agent Engine | Product Hunt\"",
+      "influence_rating": "Product Hunt maker/team",
+      "confidence": "product_team_or_maker",
+      "needs_enrichment": "medium",
+      "category": "True",
+      "time_slice": "agent_product_or_directory",
+      "url": "2025-04"
+    },
+    {
+      "id": "13",
+      "platform": "Product Hunt",
+      "name": "Graphiti: Build personalized AI agents that learn from dynamic data | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "developer_framework",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/graphiti?launch=graphiti"
+    },
+    {
+      "id": "14",
+      "platform": "Product Hunt",
+      "name": "\"Gumloop - Product Information",
+      "author": "Latest Updates",
+      "influence_rating": "and Reviews 2025 | Product Hunt\"",
+      "confidence": "Product Hunt maker/team",
+      "needs_enrichment": "product_team_or_maker",
+      "category": "medium",
+      "time_slice": "True",
+      "url": "agent_workflow_automation"
+    },
+    {
+      "id": "15",
+      "platform": "Product Hunt",
+      "name": "Job for Agent",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "benchmark_or_competition",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/job-for-agent"
+    },
+    {
+      "id": "16",
+      "platform": "Product Hunt",
+      "name": "Knowly AI: Reliable AI that browses the web exactly like you do | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "benchmark_or_competition",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/knowly-ai"
+    },
+    {
+      "id": "17",
+      "platform": "Product Hunt",
+      "name": "Langflow Product Information and Latest Updates (2025) | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "developer_framework",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/langflow"
+    },
+    {
+      "id": "18",
+      "platform": "Product Hunt",
+      "name": "Lindy Product Information and Latest Updates (2025) | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_workflow_automation",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/lindy"
+    },
+    {
+      "id": "19",
+      "platform": "Product Hunt",
+      "name": "MGX (MetaGPT X)",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_product_or_directory",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/metagpt-x"
+    },
+    {
+      "id": "20",
+      "platform": "Product Hunt",
+      "name": "Magma Product Information and Latest Updates (2025) | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_product_or_directory",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/magma"
+    },
+    {
+      "id": "21",
+      "platform": "Product Hunt",
+      "name": "\"MindPal - Product Information",
+      "author": "Latest Updates",
+      "influence_rating": "and Reviews 2025 | Product Hunt\"",
+      "confidence": "Product Hunt maker/team",
+      "needs_enrichment": "product_team_or_maker",
+      "category": "medium",
+      "time_slice": "True",
+      "url": "investor_market_resource"
+    },
+    {
+      "id": "22",
+      "platform": "Product Hunt",
+      "name": "O-mega Product Information and Latest Updates (2025) | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "investor_market_resource",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/o-mega"
+    },
+    {
+      "id": "23",
+      "platform": "Product Hunt",
+      "name": "Portia AI Product Information and Latest Updates (2025) | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_workflow_automation",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/portia-ai"
+    },
+    {
+      "id": "24",
+      "platform": "Product Hunt",
+      "name": "Pulze: Create AI agents and workflows without engineers | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "benchmark_or_competition",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/pulze"
+    },
+    {
+      "id": "25",
+      "platform": "Product Hunt",
+      "name": "Questflow Product Information and Latest Updates (2025) | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "developer_framework",
+      "time_slice": "2024-Q1",
+      "url": "https://www.producthunt.com/products/questflow-2"
+    },
+    {
+      "id": "26",
+      "platform": "Product Hunt",
+      "name": "\"Retool: Build internal tools",
+      "author": "remarkably fast | Product Hunt\"",
+      "influence_rating": "Product Hunt maker/team",
+      "confidence": "product_team_or_maker",
+      "needs_enrichment": "medium",
+      "category": "True",
+      "time_slice": "developer_framework",
+      "url": "2026-05"
+    },
+    {
+      "id": "27",
+      "platform": "Product Hunt",
+      "name": "Runner H launches",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_workflow_automation",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/runner-h-1st-ai-agent/launches"
+    },
+    {
+      "id": "28",
+      "platform": "Product Hunt",
+      "name": "\"Scoopika - Product Information",
+      "author": "Latest Updates",
+      "influence_rating": "and Reviews 2025 | Product Hunt\"",
+      "confidence": "Product Hunt maker/team",
+      "needs_enrichment": "product_team_or_maker",
+      "category": "medium",
+      "time_slice": "True",
+      "url": "developer_framework"
+    },
+    {
+      "id": "29",
+      "platform": "Product Hunt",
+      "name": "\"Skyvern - Product Information",
+      "author": "Latest Updates",
+      "influence_rating": "and Reviews 2025 | Product Hunt\"",
+      "confidence": "Product Hunt maker/team",
+      "needs_enrichment": "product_team_or_maker",
+      "category": "medium",
+      "time_slice": "True",
+      "url": "benchmark_or_competition"
+    },
+    {
+      "id": "30",
+      "platform": "Product Hunt",
+      "name": "Skyvern: Open Source AI Agent to automate browser-based workflows | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "benchmark_or_competition",
+      "time_slice": "2025-02",
+      "url": "https://www.producthunt.com/products/skyvern?launch=skyvern-2-0"
+    },
+    {
+      "id": "31",
+      "platform": "Product Hunt",
+      "name": "Skyvern: Open Source AI Agent to automate browser-based workflows | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "benchmark_or_competition",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/skyvern?launch=skyvern"
+    },
+    {
+      "id": "32",
+      "platform": "Product Hunt",
+      "name": "String.com launches",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_workflow_automation",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/string-com/launches"
+    },
+    {
+      "id": "33",
+      "platform": "Product Hunt",
+      "name": "Suna AI General AI Agent",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "developer_framework",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/suna-ai-general-ai-agent"
+    },
+    {
+      "id": "34",
+      "platform": "Product Hunt",
+      "name": "Suna: Open Source Generalist AI Agent that Acts on Your Behalf | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "benchmark_or_competition",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/suna"
+    },
+    {
+      "id": "35",
+      "platform": "Product Hunt",
+      "name": "SuperAGI Cloud",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "investor_market_resource",
+      "time_slice": "2023-Q3",
+      "url": "https://www.producthunt.com/products/superagi-cloud"
+    },
+    {
+      "id": "36",
+      "platform": "Product Hunt",
+      "name": "SuperAgentX",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "developer_framework",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/superagentx"
+    },
+    {
+      "id": "37",
+      "platform": "Product Hunt",
+      "name": "Thunai: Human-like AI agents with real-time voice & screen assist | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "investor_market_resource",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/thunai"
+    },
+    {
+      "id": "38",
+      "platform": "Product Hunt",
+      "name": "Vy by Vercept launches",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_workflow_automation",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/vy-by-vercept/launches"
+    },
+    {
+      "id": "39",
+      "platform": "Product Hunt",
+      "name": "rtrvr.ai Product Information and Latest Updates (2025) | Product Hunt",
+      "author": "Product Hunt maker/team",
+      "influence_rating": "product_team_or_maker",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "agent_workflow_automation",
+      "time_slice": "2026-05",
+      "url": "https://www.producthunt.com/products/rtrvr-ai"
+    },
+    {
+      "id": "40",
+      "platform": "YouTube",
+      "name": "1. Build Your First Agentic AI Workflow in n8n (Step-by ... - YouTube",
+      "author": "YouTube creator/channel",
+      "influence_rating": "creator",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "tutorial_or_implementation",
+      "time_slice": "2026-05",
+      "url": "https://www.youtube.com/watch?v=nRMKB3eVErI"
+    },
+    {
+      "id": "41",
+      "platform": "YouTube",
+      "name": "AI Agent Memory: Building Self-Improving Agents - YouTube",
+      "author": "YouTube creator/channel",
+      "influence_rating": "creator",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "self_evolving_agent",
+      "time_slice": "2026-05",
+      "url": "https://www.youtube.com/watch?v=QrYbHesIxpw"
+    },
+    {
+      "id": "42",
+      "platform": "YouTube",
+      "name": "AgentK: Self-Evolving AI Agent Framework Can DO ... - YouTube",
+      "author": "YouTube creator/channel",
+      "influence_rating": "creator",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "self_evolving_agent",
+      "time_slice": "2026-05",
+      "url": "https://www.youtube.com/watch?v=POGsJd2TQhk"
+    },
+    {
+      "id": "43",
+      "platform": "YouTube",
+      "name": "Agentic AI Full Course 2026 | Simplilearn - YouTube",
+      "author": "YouTube creator/channel",
+      "influence_rating": "creator",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "tutorial_or_implementation",
+      "time_slice": "2026-05",
+      "url": "https://www.youtube.com/watch?v=2R-niMsB0QY"
+    },
+    {
+      "id": "44",
+      "platform": "YouTube",
+      "name": "Agentic AI With Autogen Crash Course Ft: @tech.mayankagg",
+      "author": "YouTube creator/channel",
+      "influence_rating": "creator",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "tutorial_or_implementation",
+      "time_slice": "2026-05",
+      "url": "https://www.youtube.com/watch?v=yDpV_jgO93c"
+    },
+    {
+      "id": "45",
+      "platform": "YouTube",
+      "name": "Agentic Context Engineering: Build Self Improving AI Agents",
+      "author": "YouTube creator/channel",
+      "influence_rating": "creator",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "self_evolving_agent",
+      "time_slice": "2026-05",
+      "url": "https://www.youtube.com/watch?v=4_G72EOwSrg"
+    },
+    {
+      "id": "46",
+      "platform": "YouTube",
+      "name": "Agents SDK from OpenAI! | Full Tutorial - YouTube",
+      "author": "YouTube creator/channel",
+      "influence_rating": "creator",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "tutorial_or_implementation",
+      "time_slice": "2026-05",
+      "url": "https://www.youtube.com/watch?v=35nxORG1mtg"
+    },
+    {
+      "id": "47",
+      "platform": "YouTube",
+      "name": "Agents Tutorial: Build Your First AI Agent from Scratch ... - YouTube",
+      "author": "YouTube creator/channel",
+      "influence_rating": "creator",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "tutorial_or_implementation",
+      "time_slice": "2026-05",
+      "url": "https://www.youtube.com/watch?v=PY44_vQFkR4"
+    },
+    {
+      "id": "48",
+      "platform": "YouTube",
+      "name": "Agentspan: Building Durable AI Agents in Python - YouTube",
+      "author": "YouTube creator/channel",
+      "influence_rating": "creator",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "self_evolving_agent",
+      "time_slice": "2026-04",
+      "url": "https://www.youtube.com/watch?v=mZEYUy1MhZI"
+    },
+    {
+      "id": "49",
+      "platform": "YouTube",
+      "name": "\"Architecting Agent Memory: Principles",
+      "author": "Patterns",
+      "influence_rating": "and Best Practices\"",
+      "confidence": "YouTube creator/channel",
+      "needs_enrichment": "creator",
+      "category": "medium",
+      "time_slice": "True",
+      "url": "tutorial_or_implementation"
+    },
+    {
+      "id": "50",
+      "platform": "YouTube",
+      "name": "AutoAgents: A Framework For Creating MULTIPLE Autonomous AI ...",
+      "author": "YouTube creator/channel",
+      "influence_rating": "creator",
+      "confidence": "medium",
+      "needs_enrichment": "True",
+      "category": "tutorial_or_implementation",
+      "time_slice": "2026-05",
+      "url": "https://www.youtube.com/watch?v=KpexNvmyVrE"
+    }
+  ]
+}

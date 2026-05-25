@@ -1,0 +1,233 @@
+{
+  "generated_at": "2026-05-25T07:37:07.039Z",
+  "stacks": [
+    {
+      "stack": "Markdown",
+      "count": 203
+    },
+    {
+      "stack": "Python",
+      "count": 175
+    },
+    {
+      "stack": "TypeScript",
+      "count": 17
+    },
+    {
+      "stack": "Unknown",
+      "count": 13
+    },
+    {
+      "stack": "Shell",
+      "count": 12
+    },
+    {
+      "stack": "TypeScript/JavaScript",
+      "count": 7
+    },
+    {
+      "stack": "Rust",
+      "count": 5
+    },
+    {
+      "stack": "Python/TypeScript",
+      "count": 3
+    },
+    {
+      "stack": "Python/JavaScript/Shell",
+      "count": 2
+    },
+    {
+      "stack": "TypeScript/Markdown",
+      "count": 2
+    },
+    {
+      "stack": "Agent Skills/Commands/Hooks",
+      "count": 1
+    },
+    {
+      "stack": "C#",
+      "count": 1
+    },
+    {
+      "stack": "C#/Python/PowerShell/Codex skills/Claude skills/GitHub Pages",
+      "count": 1
+    },
+    {
+      "stack": "Claude Code plugin/Agent teams/Skills/Architecture patterns/Validation",
+      "count": 1
+    },
+    {
+      "stack": "Codex CLI",
+      "count": 1
+    },
+    {
+      "stack": "Codex CLI/AGENTS.md/Skills/Shell tools/Profiles",
+      "count": 1
+    },
+    {
+      "stack": "HTML",
+      "count": 1
+    },
+    {
+      "stack": "HTML/Python/JavaScript/TypeScript",
+      "count": 1
+    },
+    {
+      "stack": "HTML/Shell/Python",
+      "count": 1
+    },
+    {
+      "stack": "JavaScript",
+      "count": 1
+    },
+    {
+      "stack": "JavaScript/HTML",
+      "count": 1
+    },
+    {
+      "stack": "JavaScript/Markdown/NPX",
+      "count": 1
+    },
+    {
+      "stack": "JavaScript/Plugins/Agents/Skills/Codex",
+      "count": 1
+    },
+    {
+      "stack": "JavaScript/PowerShell/Shell",
+      "count": 1
+    },
+    {
+      "stack": "JavaScript/Rust/Python/Shell/TypeScript",
+      "count": 1
+    },
+    {
+      "stack": "Jupyter Notebook",
+      "count": 1
+    },
+    {
+      "stack": "Markdown/Go",
+      "count": 1
+    },
+    {
+      "stack": "Markdown/Python/TypeScript",
+      "count": 1
+    },
+    {
+      "stack": "Markdown/Skill Protocol",
+      "count": 1
+    },
+    {
+      "stack": "Markdown/SKILL.md/OpenClaw/NanoClaw",
+      "count": 1
+    },
+    {
+      "stack": "Markdown/TOON/JEO/Codex CLI/Claude Code/Gemini CLI",
+      "count": 1
+    },
+    {
+      "stack": "OpenClaw/ACP/Agent teams/Skills/Sprint templates",
+      "count": 1
+    },
+    {
+      "stack": "Python/.agent folder/Memory/Skills/Adapters/Dashboard",
+      "count": 1
+    },
+    {
+      "stack": "Python/C++/HTML",
+      "count": 1
+    },
+    {
+      "stack": "Python/CSS/HTML/Shell/JavaScript/TypeScript",
+      "count": 1
+    },
+    {
+      "stack": "Python/HTML",
+      "count": 1
+    },
+    {
+      "stack": "Python/HTML/CSS",
+      "count": 1
+    },
+    {
+      "stack": "Python/HTML/Shell",
+      "count": 1
+    },
+    {
+      "stack": "Python/JavaScript/Shell/HTML/Makefile/Astro",
+      "count": 1
+    },
+    {
+      "stack": "Python/JavaScript/Shell/HTML/TypeScript/CSS",
+      "count": 1
+    },
+    {
+      "stack": "Python/Jericho/OpenRouter/OpenAI API/RAG/Cross-episode memory",
+      "count": 1
+    },
+    {
+      "stack": "Python/Markdown",
+      "count": 1
+    },
+    {
+      "stack": "Python/MCP/mem0/Agent Skills",
+      "count": 1
+    },
+    {
+      "stack": "Python/Shell",
+      "count": 1
+    },
+    {
+      "stack": "Python/Shell/Jinja",
+      "count": 1
+    },
+    {
+      "stack": "Python/Shell/PowerShell/TypeScript",
+      "count": 1
+    },
+    {
+      "stack": "Python/Skill Memory/CLI/GUI",
+      "count": 1
+    },
+    {
+      "stack": "Python/TypeScript/Rust",
+      "count": 1
+    },
+    {
+      "stack": "R/JavaScript/CSS/Shell",
+      "count": 1
+    },
+    {
+      "stack": "Rust/GUI/CLI/MCP/Plugin Manifest",
+      "count": 1
+    },
+    {
+      "stack": "Rust/TypeScript/Python",
+      "count": 1
+    },
+    {
+      "stack": "Rust/TypeScript/Shell",
+      "count": 1
+    },
+    {
+      "stack": "Shell/PowerShell/Markdown",
+      "count": 1
+    },
+    {
+      "stack": "TypeScript/Astro/JavaScript/Shell",
+      "count": 1
+    },
+    {
+      "stack": "TypeScript/Python/HTML/JavaScript",
+      "count": 1
+    },
+    {
+      "stack": "TypeScript/Python/JavaScript/Shell",
+      "count": 1
+    },
+    {
+      "stack": "TypeScript/Python/Shell/Markdown",
+      "count": 1
+    }
+  ]
+}

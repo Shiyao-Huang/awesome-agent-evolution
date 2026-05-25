@@ -28,7 +28,7 @@ Raw 是证据，不能混入分析。Processed 是解释，要能追溯 raw 或 
 
 ```mermaid
 flowchart TB
-  U["User direct input"] --> G["CURRENT_GOAL.md"]
+  U["Current conversation"] --> G["local-only user input memory"]
   RAW["raw-* evidence"] --> PROC["analysis / research / projects / paper-reviews"]
   MIRROR["repos mirrors"] --> PROC
   PROC --> PAPER["paper-drafts/main.tex"]

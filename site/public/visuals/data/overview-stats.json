@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-05-25T07:37:07.039Z",
+  "pipeline_version": "2.0",
+  "data_counts": {
+    "raw_github_repos": 486,
+    "raw_papers": 198,
+    "paper_reviews": 137,
+    "academic_reviews": 34,
+    "analyzed_projects": 204,
+    "evolution_focused": 90,
+    "raw_blog_records": 652,
+    "raw_social_records": 613,
+    "pain_points": 97,
+    "repo_cross_analysis_rows": 359
+  }
+}

@@ -1,0 +1,184 @@
+---
+import { radarAxes, radarSeries } from './visualizationData';
+
+const axesPayload = JSON.stringify(radarAxes);
+const seriesPayload = JSON.stringify(radarSeries);
+---
+
+<div class="viz-radar" id="viz-radar">
+  <div class="viz-radar-header">
+    <h3>Theme Coverage Radar</h3>
+    <p>How themes span across project categories</p>
+  </div>
+  <div class="viz-radar-container">
+    <svg id="viz-radar-svg" viewBox="0 0 500 500" role="img" aria-label="Theme coverage radar chart"></svg>
+    <div class="viz-radar-legend" id="viz-radar-legend"></div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ axesPayload, seriesPayload }}>
+  const axes = JSON.parse(axesPayload);
+  const series = JSON.parse(seriesPayload);
+  const svg = document.getElementById('viz-radar-svg');
+  const legend = document.getElementById('viz-radar-legend');
+  if (!svg || !legend) throw new Error('Radar elements not found');
+
+  const cx = 250, cy = 240;
+  const maxR = 180;
+  const n = axes.length;
+  const angleStep = (Math.PI * 2) / n;
+  const colors = ['#FF5B00', '#007AFF', '#2E6F4E', '#A56117', '#B83224', '#8B5CF6'];
+
+  // Find max value for scaling
+  let maxVal = 1;
+  series.forEach(s => s.values.forEach(v => { if (v > maxVal) maxVal = v; }));
+
+  function axisPoint(index, value) {
+    const angle = angleStep * index - Math.PI / 2;
+    const r = (value / maxVal) * maxR;
+    return { x: cx + Math.cos(angle) * r, y: cy + Math.sin(angle) * r };
+  }
+
+  // Grid rings
+  const rings = [0.2, 0.4, 0.6, 0.8, 1.0];
+  rings.forEach(ring => {
+    let points = '';
+    for (let i = 0; i < n; i++) {
+      const p = axisPoint(i, maxVal * ring);
+      points += `${p.x},${p.y} `;
+    }
+    const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+    polygon.setAttribute('points', points.trim());
+    polygon.setAttribute('fill', 'none');
+    polygon.setAttribute('stroke', 'rgba(26,26,26,0.1)');
+    polygon.setAttribute('stroke-width', '1');
+    svg.appendChild(polygon);
+  });
+
+  // Axis lines + labels
+  axes.forEach((axis, i) => {
+    const p = axisPoint(i, maxVal);
+    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    line.setAttribute('x1', cx);
+    line.setAttribute('y1', cy);
+    line.setAttribute('x2', p.x);
+    line.setAttribute('y2', p.y);
+    line.setAttribute('stroke', 'rgba(26,26,26,0.12)');
+    line.setAttribute('stroke-width', '1');
+    svg.appendChild(line);
+
+    const labelP = axisPoint(i, maxVal * 1.18);
+    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    text.setAttribute('x', labelP.x);
+    text.setAttribute('y', labelP.y);
+    text.setAttribute('text-anchor', 'middle');
+    text.setAttribute('dominant-baseline', 'middle');
+    text.setAttribute('fill', 'var(--muted)');
+    text.setAttribute('font-size', '11');
+    text.setAttribute('font-weight', '700');
+    text.textContent = axis.length > 16 ? axis.slice(0, 15) + '…' : axis;
+    svg.appendChild(text);
+  });
+
+  // Data polygons
+  series.forEach((s, si) => {
+    const color = colors[si % colors.length];
+    let points = '';
+    s.values.forEach((v, i) => {
+      const p = axisPoint(i, v);
+      points += `${p.x},${p.y} `;
+    });
+
+    const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+    polygon.setAttribute('points', points.trim());
+    polygon.setAttribute('fill', color + '20');
+    polygon.setAttribute('stroke', color);
+    polygon.setAttribute('stroke-width', '2');
+    polygon.setAttribute('stroke-linejoin', 'round');
+    svg.appendChild(polygon);
+
+    // Dots
+    s.values.forEach((v, i) => {
+      const p = axisPoint(i, v);
+      const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      circle.setAttribute('cx', p.x);
+      circle.setAttribute('cy', p.y);
+      circle.setAttribute('r', '3');
+      circle.setAttribute('fill', color);
+      svg.appendChild(circle);
+    });
+
+    // Legend entry
+    const item = document.createElement('div');
+    item.className = 'viz-radar-legend-item';
+    item.innerHTML = `<span class="viz-radar-dot" style="background:${color}"></span><span>${s.name}</span>`;
+    legend.appendChild(item);
+  });
+</script>
+
+<style>
+  .viz-radar {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-media);
+    background: var(--surface-card);
+    padding: 24px;
+  }
+  .viz-radar-header {
+    margin-bottom: 16px;
+  }
+  .viz-radar-header h3 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--fg);
+    line-height: 1.1;
+  }
+  .viz-radar-header p {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .viz-radar-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #viz-radar-svg {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+  }
+  .viz-radar-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 140px;
+  }
+  .viz-radar-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 650;
+    color: var(--fg);
+  }
+  .viz-radar-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  @media (max-width: 760px) {
+    .viz-radar-container {
+      flex-direction: column;
+    }
+    .viz-radar-legend {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>

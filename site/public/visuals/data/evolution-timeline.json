@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-05-25T07:37:07.039Z",
+  "total_papers": 196,
+  "unknown_time_slices": 0,
+  "timeline": [
+    {
+      "time_slice": "2022-03",
+      "count": 2
+    },
+    {
+      "time_slice": "2023-03",
+      "count": 4
+    },
+    {
+      "time_slice": "2023-04",
+      "count": 2
+    },
+    {
+      "time_slice": "2023-05",
+      "count": 4
+    },
+    {
+      "time_slice": "2023-08",
+      "count": 2
+    },
+    {
+      "time_slice": "2023-11",
+      "count": 2
+    },
+    {
+      "time_slice": "2023-12",
+      "count": 2
+    },
+    {
+      "time_slice": "2024-01",
+      "count": 7
+    },
+    {
+      "time_slice": "2024-02",
+      "count": 3
+    },
+    {
+      "time_slice": "2024-03",
+      "count": 2
+    },
+    {
+      "time_slice": "2024-04",
+      "count": 1
+    },
+    {
+      "time_slice": "2024-05",
+      "count": 2
+    },
+    {
+      "time_slice": "2024-06",
+      "count": 1
+    },
+    {
+      "time_slice": "2024-07",
+      "count": 3
+    },
+    {
+      "time_slice": "2024-08",
+      "count": 2
+    },
+    {
+      "time_slice": "2024-09",
+      "count": 6
+    },
+    {
+      "time_slice": "2024-10",
+      "count": 12
+    },
+    {
+      "time_slice": "2024-11",
+      "count": 1
+    },
+    {
+      "time_slice": "2024-12",
+      "count": 2
+    },
+    {
+      "time_slice": "2025-01",
+      "count": 10
+    },
+    {
+      "time_slice": "2025-02",
+      "count": 10
+    },
+    {
+      "time_slice": "2025-03",
+      "count": 1
+    },
+    {
+      "time_slice": "2025-04",
+      "count": 8
+    },
+    {
+      "time_slice": "2025-05",
+      "count": 16
+    },
+    {
+      "time_slice": "2025-06",
+      "count": 10
+    },
+    {
+      "time_slice": "2025-07",
+      "count": 4
+    },
+    {
+      "time_slice": "2025-08",
+      "count": 11
+    },
+    {
+      "time_slice": "2025-09",
+      "count": 9
+    },
+    {
+      "time_slice": "2025-10",
+      "count": 16
+    },
+    {
+      "time_slice": "2025-11",
+      "count": 7
+    },
+    {
+      "time_slice": "2025-12",
+      "count": 3
+    },
+    {
+      "time_slice": "2026-01",
+      "count": 1
+    },
+    {
+      "time_slice": "2026-02",
+      "count": 6
+    },
+    {
+      "time_slice": "2026-03",
+      "count": 7
+    },
+    {
+      "time_slice": "2026-04",
+      "count": 10
+    },
+    {
+      "time_slice": "2026-05",
+      "count": 6
+    },
+    {
+      "time_slice": "20pl-ac",
+      "count": 1
+    }
+  ]
+}

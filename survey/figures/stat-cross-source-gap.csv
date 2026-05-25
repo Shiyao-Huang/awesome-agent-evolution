@@ -1,0 +1,7 @@
+topic,paper_signal,repo_signal,painpoint_signal,blog_signal,total_signal,gap_ratio,signal_range,signal_std,dominant_source
+Reliability / production gap,2,131,19,43,195,0.6718,129,57.35,repo
+Evaluation / benchmark gap,6,85,10,28,129,0.6589,79,36.45,repo
+Memory / drift / forgetting,16,59,10,34,119,0.4958,49,22.01,repo
+Framework opacity / tooling,87,66,14,85,252,0.3452,73,34.01,paper
+Safety / governance / cost,4,86,11,6,107,0.8037,82,39.61,repo
+Self-improvement feasibility,60,59,12,116,247,0.4696,104,42.54,blog

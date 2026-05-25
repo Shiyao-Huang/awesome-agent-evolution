@@ -1,0 +1,69 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { projectReports, paperReports } from '@/data/reports';
+---
+<BaseLayout title="Self Evolve 研究报告 — 项目深度分析与论文解读" description="Self Evolve 公开研究报告：GitHub 项目 model card 深度分析、论文精读与跨领域研究整理。">
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Reports / 研究报告</div>
+      <h1 class="gradient-text">公开研究报告索引</h1>
+      <p class="lead">这里收录所有已落盘的项目 model card 深度分析和论文精读报告。每份报告都遵循证据链规范，从原始材料到分析结论全程可追溯。</p>
+      <div class="metrics">
+        <div class="metric"><strong>{projectReports.length}</strong><span>份项目分析报告</span></div>
+        <div class="metric"><strong>{paperReports.length}</strong><span>份论文报告</span></div>
+      </div>
+    </div>
+  </section>
+
+  {projectReports.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">项目报告</div>
+            <h2>GitHub 项目深度分析</h2>
+          </div>
+        </div>
+        <div class="grid">
+          {projectReports.map((report) => (
+            <article class="card">
+              <div class="eyebrow">{report.category}</div>
+              <h3><a href={report.href}>{report.title}</a></h3>
+              <p>{report.excerpt}</p>
+              <div class="pill-row">
+                <span class="pill">project</span>
+                <a class="pill" href={report.href}>阅读报告</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {paperReports.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">论文报告</div>
+            <h2>论文精读与交叉分析</h2>
+          </div>
+        </div>
+        <div class="grid">
+          {paperReports.map((report) => (
+            <article class="card">
+              <div class="eyebrow">{report.category}</div>
+              <h3><a href={report.href}>{report.title}</a></h3>
+              <p>{report.excerpt}</p>
+              <div class="pill-row">
+                <span class="pill">paper</span>
+                <a class="pill" href={report.href}>阅读报告</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>

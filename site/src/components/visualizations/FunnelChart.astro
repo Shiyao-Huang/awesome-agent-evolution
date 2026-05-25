@@ -1,0 +1,142 @@
+---
+import { funnelStages, summaryStats } from './visualizationData';
+
+const maxCount = Math.max(...funnelStages.map(s => s.count));
+const stagesPayload = JSON.stringify(funnelStages);
+---
+
+<div class="viz-funnel" id="viz-funnel">
+  <div class="viz-funnel-header">
+    <h3>Corpus Pipeline</h3>
+    <p>From raw GitHub captures to evolution-focused analysis</p>
+  </div>
+  <div class="viz-funnel-chart" id="viz-funnel-chart"></div>
+</div>
+
+<script is:inline define:vars={{ stagesPayload }}>
+  const stages = JSON.parse(stagesPayload);
+  const maxCount = Math.max(...stages.map(s => s.count));
+  const container = document.getElementById('viz-funnel-chart');
+  if (!container) throw new Error('Funnel container not found');
+
+  stages.forEach((stage, index) => {
+    const pct = (stage.count / maxCount) * 100;
+    const taper = 100 - (index * 8);
+    const row = document.createElement('div');
+    row.className = 'viz-funnel-row';
+    row.setAttribute('role', 'listitem');
+    row.setAttribute('aria-label', `${stage.label}: ${stage.count}`);
+
+    row.innerHTML = `
+      <div class="viz-funnel-label">
+        <span class="viz-funnel-name">${stage.label}</span>
+        <span class="viz-funnel-desc">${stage.description}</span>
+      </div>
+      <div class="viz-funnel-bar-track">
+        <div class="viz-funnel-bar" style="width:0%;max-width:${pct}%"></div>
+        <span class="viz-funnel-count">${stage.count.toLocaleString()}</span>
+      </div>
+    `;
+    container.appendChild(row);
+  });
+
+  // Animate bars on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bars = container.querySelectorAll('.viz-funnel-bar');
+        bars.forEach(bar => {
+          bar.style.width = bar.style.maxWidth;
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  observer.observe(container);
+</script>
+
+<style>
+  .viz-funnel {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-media);
+    background: var(--surface-card);
+    padding: 24px;
+  }
+  .viz-funnel-header {
+    margin-bottom: 20px;
+  }
+  .viz-funnel-header h3 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--fg);
+    line-height: 1.1;
+  }
+  .viz-funnel-header p {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .viz-funnel-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    role: list;
+  }
+  .viz-funnel-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 14px;
+    align-items: center;
+  }
+  .viz-funnel-label {
+    min-width: 0;
+  }
+  .viz-funnel-name {
+    display: block;
+    font-weight: 750;
+    font-size: 14px;
+    color: var(--fg);
+    line-height: 1.2;
+  }
+  .viz-funnel-desc {
+    display: block;
+    margin-top: 3px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.3;
+  }
+  .viz-funnel-bar-track {
+    position: relative;
+    height: 36px;
+    background: var(--surface-2);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .viz-funnel-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--brand2));
+    border-radius: 8px;
+    transition: width 1.2s cubic-bezier(.4, 0, .2, 1);
+  }
+  .viz-funnel-count {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--fg);
+    text-shadow: 0 0 8px var(--surface-card), 0 0 16px var(--surface-card);
+  }
+  @media (max-width: 760px) {
+    .viz-funnel-row {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+    .viz-funnel-bar-track {
+      height: 32px;
+    }
+  }
+</style>

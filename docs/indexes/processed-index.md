@@ -10,9 +10,9 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `analysis` | present | 15 | 1 | 0 | 2.1 MB |
-| `research` | present | 120 | 5 | 0 | 2.0 MB |
-| `projects` | present | 25298 | 2881 | 0 | 2.9 GB |
+| `analysis` | present | 18 | 1 | 0 | 2.1 MB |
+| `research` | present | 124 | 6 | 0 | 2.3 MB |
+| `projects` | present | 25294 | 2881 | 0 | 2.9 GB |
 | `paper-reviews` | present | 137 | 1 | 0 | 1.3 MB |
 | `academic-reviews` | present | 34 | 1 | 0 | 287 KB |
 | `papers` | present | 12 | 4 | 0 | 55 KB |
@@ -23,6 +23,8 @@
 
 ### `analysis`
 
+- `analysis/benchmark-comparison.md`
+- `analysis/discovery-report-2026-05-25.md`
 - `analysis/framework-painpoint-crosswalk.csv`
 - `analysis/framework-painpoint-crosswalk.md`
 - `analysis/github-analysis.tex`
@@ -31,8 +33,6 @@
 - `analysis/github-project-data-analysis.md`
 - `analysis/github-project-data-analysis.tex`
 - `analysis/paper-review-coverage-51-88-latest.md`
-- `analysis/paper-review-coverage.md`
-- `analysis/paper-review-progress-51-88.md`
 
 ### `research`
 

@@ -82,8 +82,7 @@ const categories = [
       'survey',
       'scripts',
       'data-engine',
-      'wiki',
-      'CURRENT_GOAL.md'
+      'wiki'
     ]
   },
   {
@@ -507,7 +506,7 @@ function generateRootDocumentMap() {
     .sort();
 
   const classify = (name) => {
-    if (['README.md', 'README-ZH.md', 'README-EN.md', 'CONTENT_INDEX.md', 'DELIVERY_SUMMARY.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md', 'CURRENT_GOAL.md'].includes(name)) return 'ops';
+    if (['README.md', 'README-ZH.md', 'README-EN.md', 'CONTENT_INDEX.md', 'DELIVERY_SUMMARY.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md'].includes(name)) return 'ops';
     if (name.startsWith('mom-test') || name.startsWith('social-media') || name.startsWith('raw-')) return 'raw compatibility';
     if (name.startsWith('awesome-') || name.startsWith('github-agent-evolution')) return 'processed compatibility';
     if (['PAPER_OUTLINE.md'].includes(name)) return 'work compatibility';
@@ -536,7 +535,7 @@ function topLevelClass(name) {
   const work = new Set(['paper-drafts', 'paper', 'latex', 'site', 'survey', 'scripts', 'data-engine', 'wiki']);
   const results = new Set(['reports', 'output']);
   const mirrors = new Set(['repos', 'all_hands_ai__openhands', 'stitionai__devika']);
-  const ops = new Set(['README.md', 'README-ZH.md', 'README-EN.md', 'CONTENT_INDEX.md', 'DELIVERY_SUMMARY.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md', 'CURRENT_GOAL.md', 'docs', '.gitignore']);
+  const ops = new Set(['README.md', 'README-ZH.md', 'README-EN.md', 'CONTENT_INDEX.md', 'DELIVERY_SUMMARY.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md', 'docs', '.gitignore']);
   const legal = new Set(['LICENSE-CODE', 'LICENSE-CONTENT', 'NOTICE', 'CONTRIBUTING.md', 'CODE_OF_CONDUCT.md', 'SECURITY.md']);
   const local = new Set(['.DS_Store', '.aha', '.astro', '.claude', '.genome', '.git', '.gitnexus', '.tmp', 'node_modules']);
 

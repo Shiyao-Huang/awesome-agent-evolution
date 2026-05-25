@@ -1,6 +1,6 @@
 # 数据覆盖仪表盘（当前快照）
 
-- generated_at: 2026-05-25T14:25:53+08:00
+- generated_at: 2026-05-25T15:25:19+08:00
 - scope: 仅基于当前仓库文件生成；基础数据仍在并行补齐，所有图表应在最终综述前重跑。
 - important discrepancy: `output/raw-papers-timestamp-index.json` 当前为 196 条，而 Master 消息称 raw-papers 88/100；`raw-blogs/` 当前为 1308 个文件、652 条 JSON item 记录，需区分“文件数”和“内容条目数”。
 

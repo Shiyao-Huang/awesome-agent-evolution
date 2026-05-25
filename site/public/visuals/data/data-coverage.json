@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-05-25T07:37:07.039Z",
+  "datasets": [
+    {
+      "dataset": "raw-papers timestamp index",
+      "current": 196,
+      "target": "100 target / Master said 88 currently",
+      "coverage_pct": "196.0%",
+      "status": "gap: count discrepancy vs Master message"
+    },
+    {
+      "dataset": "paper-reviews deep reviews",
+      "current": 137,
+      "target": "88 reviews",
+      "coverage_pct": "155.7%",
+      "status": "meets/exceeds 88 target"
+    },
+    {
+      "dataset": "academic-reviews supplemental",
+      "current": 34,
+      "target": "supporting reviews",
+      "coverage_pct": "supplemental",
+      "status": "partly duplicate ids possible"
+    },
+    {
+      "dataset": "raw-github repo README/code snapshots",
+      "current": 486,
+      "target": "348 repos",
+      "coverage_pct": "139.7%",
+      "status": "complete snapshot; cross-analysis exists"
+    },
+    {
+      "dataset": "repo techstack cross-analysis rows",
+      "current": 359,
+      "target": "348 repos",
+      "coverage_pct": "103.2%",
+      "status": "complete snapshot"
+    },
+    {
+      "dataset": "raw-blogs files",
+      "current": 1308,
+      "target": "1306 files mentioned by Master",
+      "coverage_pct": "100.2%",
+      "status": "files are json+md pairs; item records below"
+    },
+    {
+      "dataset": "raw-blogs JSON item records",
+      "current": 652,
+      "target": "1306 blog claim requires clarification",
+      "coverage_pct": "652 json records if paired files",
+      "status": "author_profile present but needs enrichment"
+    },
+    {
+      "dataset": "raw-social files",
+      "current": 1296,
+      "target": "300+ full posts / earlier 131",
+      "coverage_pct": "file count includes md+json pairs",
+      "status": "needs full-text status audit"
+    },
+    {
+      "dataset": "raw-social JSON item records",
+      "current": 613,
+      "target": "300+ posts",
+      "coverage_pct": "204.3%",
+      "status": "above 300 json records; quality varies"
+    },
+    {
+      "dataset": "Mom Test pain points",
+      "current": 97,
+      "target": "97 pain points",
+      "coverage_pct": "100.0%",
+      "status": "detailed platform files parse to 97"
+    }
+  ]
+}

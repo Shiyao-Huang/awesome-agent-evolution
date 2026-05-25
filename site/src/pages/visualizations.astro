@@ -1,0 +1,137 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FunnelChart from '@/components/visualizations/FunnelChart.astro';
+import TaxonomyTree from '@/components/visualizations/TaxonomyTree.astro';
+import RadarChart from '@/components/visualizations/RadarChart.astro';
+import TimelineHeatmap from '@/components/visualizations/TimelineHeatmap.astro';
+import RankTable from '@/components/visualizations/RankTable.astro';
+import { summaryStats } from '@/components/visualizations/visualizationData';
+---
+
+<BaseLayout title="Self Evolve Visualizations — Interactive Data Explorer" description="Explore the Self Evolve survey data through interactive visualizations: taxonomy tree, radar charts, timeline heatmaps, corpus pipeline funnel, and project rankings.">
+  <section class="section viz-section">
+    <div class="container">
+      <div class="section-head">
+        <h1>Visualizations</h1>
+        <p>Interactive data explorer for the Self Evolving AI survey — {summaryStats.totalProjects} projects, {summaryStats.categories} categories, {summaryStats.themes} themes</p>
+      </div>
+
+      <div class="viz-summary">
+        <div class="viz-metric">
+          <span class="viz-metric-value">{summaryStats.totalRaw}</span>
+          <span class="viz-metric-label">Raw Captures</span>
+        </div>
+        <div class="viz-metric">
+          <span class="viz-metric-value">{summaryStats.coreEvolution}</span>
+          <span class="viz-metric-label">Core Evolution</span>
+        </div>
+        <div class="viz-metric">
+          <span class="viz-metric-value">{summaryStats.broadEvolution}</span>
+          <span class="viz-metric-label">Broad Evolution</span>
+        </div>
+        <div class="viz-metric">
+          <span class="viz-metric-value">{summaryStats.topStars.toLocaleString()}</span>
+          <span class="viz-metric-label">Top Stars ({summaryStats.topProject})</span>
+        </div>
+      </div>
+
+      <div class="viz-grid">
+        <div class="viz-span-full">
+          <FunnelChart />
+        </div>
+        <div class="viz-span-half">
+          <TaxonomyTree />
+        </div>
+        <div class="viz-span-half">
+          <RadarChart />
+        </div>
+        <div class="viz-span-full">
+          <TimelineHeatmap />
+        </div>
+        <div class="viz-span-full">
+          <RankTable />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .viz-section {
+    padding: 24px 0 48px;
+  }
+  .section-head {
+    margin-bottom: 24px;
+  }
+  .section-head h1 {
+    font-family: var(--font-display);
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--fg);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+  .section-head p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 640px;
+  }
+  .viz-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .viz-metric {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-card);
+    padding: 16px 14px;
+    text-align: center;
+  }
+  .viz-metric-value {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--fg);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+  }
+  .viz-metric-label {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--muted);
+    line-height: 1.3;
+  }
+  .viz-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .viz-span-full {
+    grid-column: 1 / -1;
+  }
+  .viz-span-half {
+    grid-column: span 1;
+  }
+  @media (max-width: 980px) {
+    .viz-grid {
+      grid-template-columns: 1fr;
+    }
+    .viz-span-half {
+      grid-column: 1;
+    }
+    .section-head h1 {
+      font-size: 32px;
+    }
+  }
+  @media (max-width: 760px) {
+    .viz-summary {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

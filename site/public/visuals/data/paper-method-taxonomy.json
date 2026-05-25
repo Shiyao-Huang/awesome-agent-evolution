@@ -1,0 +1,447 @@
+{
+  "generated_at": "2026-05-25T07:37:07.039Z",
+  "total_papers": 196,
+  "taxonomy": [
+    {
+      "category": "reward/RL/self-play",
+      "paper_count": 49,
+      "percentage": "25.0",
+      "papers": [
+        {
+          "arxiv_id": "2203.14465",
+          "title": "Computer Science > Machine Learning",
+          "time_slice": "2022-03"
+        },
+        {
+          "arxiv_id": "2203.14465",
+          "title": "STaR: Bootstrapping Reasoning With Reasoning",
+          "time_slice": "2022-03"
+        },
+        {
+          "arxiv_id": "2303.11366",
+          "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+          "time_slice": "2023-03"
+        },
+        {
+          "arxiv_id": "2305.14325",
+          "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
+          "time_slice": "2023-05"
+        },
+        {
+          "arxiv_id": "2308.10144",
+          "title": "ExpeL: LLM Agents Are Experiential Learners",
+          "time_slice": "2023-08"
+        },
+        {
+          "arxiv_id": "2312.09390",
+          "title": "Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision",
+          "time_slice": "2023-12"
+        },
+        {
+          "arxiv_id": "2401.01335",
+          "title": "Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models",
+          "time_slice": "2024-01"
+        },
+        {
+          "arxiv_id": "2401.10020",
+          "title": "Self-Rewarding Language Models",
+          "time_slice": "2024-01"
+        },
+        {
+          "arxiv_id": "2401.10510",
+          "title": "When Large Language Models Meet Evolutionary Algorithms: Potential Enhancements and Challenges",
+          "time_slice": "2024-01"
+        },
+        {
+          "arxiv_id": "2407.18219",
+          "title": "Recursive Introspection: Teaching Language Model Agents How to Self-Improve",
+          "time_slice": "2024-07"
+        }
+      ],
+      "total_in_category": 49
+    },
+    {
+      "category": "prompt/search optimization",
+      "paper_count": 68,
+      "percentage": "34.7",
+      "papers": [
+        {
+          "arxiv_id": "2303.11366",
+          "title": "Computer Science > Artificial Intelligence",
+          "time_slice": "2023-03"
+        },
+        {
+          "arxiv_id": "2303.17651",
+          "title": "Computer Science > Computation and Language",
+          "time_slice": "2023-03"
+        },
+        {
+          "arxiv_id": "2304.03442",
+          "title": "Computer Science > Human-Computer Interaction",
+          "time_slice": "2023-04"
+        },
+        {
+          "arxiv_id": "2305.14325",
+          "title": "Computer Science > Computation and Language",
+          "time_slice": "2023-05"
+        },
+        {
+          "arxiv_id": "2305.16291",
+          "title": "Computer Science > Artificial Intelligence",
+          "time_slice": "2023-05"
+        },
+        {
+          "arxiv_id": "2308.10144",
+          "title": "Computer Science > Machine Learning",
+          "time_slice": "2023-08"
+        },
+        {
+          "arxiv_id": "2311.09336",
+          "title": "Computer Science > Computation and Language",
+          "time_slice": "2023-11"
+        },
+        {
+          "arxiv_id": "2311.09336",
+          "title": "LLMRefine: Pinpointing and Refining Large Language Models via Fine-Grained Actionable Feedback",
+          "time_slice": "2023-11"
+        },
+        {
+          "arxiv_id": "2312.09390",
+          "title": "Computer Science > Computation and Language",
+          "time_slice": "2023-12"
+        },
+        {
+          "arxiv_id": "2401.01335",
+          "title": "Computer Science > Machine Learning",
+          "time_slice": "2024-01"
+        }
+      ],
+      "total_in_category": 68
+    },
+    {
+      "category": "multi-agent reflection/debate",
+      "paper_count": 15,
+      "percentage": "7.7",
+      "papers": [
+        {
+          "arxiv_id": "2303.17651",
+          "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+          "time_slice": "2023-03"
+        },
+        {
+          "arxiv_id": "2405.06682",
+          "title": "Computer Science > Computation and Language",
+          "time_slice": "2024-05"
+        },
+        {
+          "arxiv_id": "2405.06682",
+          "title": "Self-Reflection in LLM Agents: Effects on Problem-Solving Performance",
+          "time_slice": "2024-05"
+        },
+        {
+          "arxiv_id": "2409.14051",
+          "title": "GroupDebate: Enhancing the Efficiency of Multi-Agent Debate Using Group Discussion",
+          "time_slice": "2024-09"
+        },
+        {
+          "arxiv_id": "2410.12853",
+          "title": "Computer Science > Computation and Language",
+          "time_slice": "2024-10"
+        },
+        {
+          "arxiv_id": "2410.12853",
+          "title": "Diversity of Thought Elicits Stronger Reasoning Capabilities in Multi-Agent Debate Frameworks",
+          "time_slice": "2024-10"
+        },
+        {
+          "arxiv_id": "2410.16946",
+          "title": "Self-Evolving Multi-Agent Collaboration Networks for Software Development",
+          "time_slice": "2024-10"
+        },
+        {
+          "arxiv_id": "2502.05605",
+          "title": "Evolving LLMs' Self-Refinement Capability via Iterative Preference Optimization",
+          "time_slice": "2025-02"
+        },
+        {
+          "arxiv_id": "2505.16475",
+          "title": "ReflectEvo: Improving Meta Introspection of Small LLMs by Learning Self-Reflection",
+          "time_slice": "2025-05"
+        },
+        {
+          "arxiv_id": "2506.09046",
+          "title": "Agentic Neural Networks: Self-Evolving Multi-Agent Systems via Textual Backpropagation",
+          "time_slice": "2025-06"
+        }
+      ],
+      "total_in_category": 15
+    },
+    {
+      "category": "web/tool/environment adaptation",
+      "paper_count": 13,
+      "percentage": "6.6",
+      "papers": [
+        {
+          "arxiv_id": "2304.03442",
+          "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+          "time_slice": "2023-04"
+        },
+        {
+          "arxiv_id": "2305.16291",
+          "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+          "time_slice": "2023-05"
+        },
+        {
+          "arxiv_id": "2401.13996",
+          "title": "Investigate-Consolidate-Exploit: A General Strategy for Inter-Task Agent Self-Evolution",
+          "time_slice": "2024-01"
+        },
+        {
+          "arxiv_id": "2406.18532",
+          "title": "Symbolic Learning Enables Self-Evolving Agents",
+          "time_slice": "2024-06"
+        },
+        {
+          "arxiv_id": "2504.21024",
+          "title": "Computer Science > Computation and Language",
+          "time_slice": "2025-04"
+        },
+        {
+          "arxiv_id": "2504.21024",
+          "title": "WebEvolver: Enhancing Web Agent Self-Improvement with Coevolving World Model",
+          "time_slice": "2025-04"
+        },
+        {
+          "arxiv_id": "2505.18646",
+          "title": "SEW: Self-Evolving Agentic Workflows for Automated Code Generation",
+          "time_slice": "2025-05"
+        },
+        {
+          "arxiv_id": "2506.04651",
+          "title": "Agents of Change: Self-Evolving LLM Agents for Strategic Planning",
+          "time_slice": "2025-06"
+        },
+        {
+          "arxiv_id": "2507.03616",
+          "title": "EvoAgentX: An Automated Framework for Evolving Agentic Workflows",
+          "time_slice": "2025-07"
+        },
+        {
+          "arxiv_id": "2511.16043",
+          "title": "Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning",
+          "time_slice": "2025-11"
+        }
+      ],
+      "total_in_category": 13
+    },
+    {
+      "category": "evaluation/safety/governance",
+      "paper_count": 4,
+      "percentage": "2.0",
+      "papers": [
+        {
+          "arxiv_id": "2403.18341",
+          "title": "IterAlign: Iterative Constitutional Alignment of Large Language Models",
+          "time_slice": "2024-03"
+        },
+        {
+          "arxiv_id": "2509.26354",
+          "title": "Your Agent May Misevolve: Emergent Risks in Self-evolving LLM Agents",
+          "time_slice": "2025-09"
+        },
+        {
+          "arxiv_id": "2602.09877",
+          "title": "The Devil Behind Moltbook: Anthropic Safety is Always Vanishing in Self-Evolving AI Societies",
+          "time_slice": "2026-02"
+        },
+        {
+          "arxiv_id": "2604.08988",
+          "title": "SEA-Eval: A Benchmark for Evaluating Self-Evolving Agents Beyond Episodic Assessment",
+          "time_slice": "2026-04"
+        }
+      ],
+      "total_in_category": 4
+    },
+    {
+      "category": "Iterative",
+      "paper_count": 1,
+      "percentage": "0.5",
+      "papers": [
+        {
+          "arxiv_id": "2409.12147",
+          "title": "\"MAgICoRe: Multi-Agent",
+          "time_slice": "multi-agent reflection/debate"
+        }
+      ],
+      "total_in_category": 1
+    },
+    {
+      "category": "code/self-modification",
+      "paper_count": 26,
+      "percentage": "13.3",
+      "papers": [
+        {
+          "arxiv_id": "2410.01215",
+          "title": "Computer Science > Computation and Language",
+          "time_slice": "2024-10"
+        },
+        {
+          "arxiv_id": "2410.01215",
+          "title": "From Code to Correctness: Closing the Last Mile of Code Generation with Hierarchical Debugging",
+          "time_slice": "2024-10"
+        },
+        {
+          "arxiv_id": "2410.04444",
+          "title": "Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement",
+          "time_slice": "2024-10"
+        },
+        {
+          "arxiv_id": "2412.01951",
+          "title": "Self-Improvement in Language Models: The Sharpening Mechanism",
+          "time_slice": "2024-12"
+        },
+        {
+          "arxiv_id": "2501.01264",
+          "title": "ProgCo: Program Helps Self-Correction of Large Language Models",
+          "time_slice": "2025-01"
+        },
+        {
+          "arxiv_id": "2501.12793",
+          "title": "Revisit Self-Debugging with Self-Generated Tests for Code Generation",
+          "time_slice": "2025-01"
+        },
+        {
+          "arxiv_id": "2502.05957",
+          "title": "AutoAgent: A Fully-Automated and Zero-Code Framework for LLM Agents",
+          "time_slice": "2025-02"
+        },
+        {
+          "arxiv_id": "2504.15228",
+          "title": "Computer Science > Artificial Intelligence",
+          "time_slice": "2025-04"
+        },
+        {
+          "arxiv_id": "2504.15228",
+          "title": "A Self-Improving Coding Agent",
+          "time_slice": "2025-04"
+        },
+        {
+          "arxiv_id": "2505.22954",
+          "title": "Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
+          "time_slice": "2025-05"
+        }
+      ],
+      "total_in_category": 26
+    },
+    {
+      "category": "memory/knowledge evolution",
+      "paper_count": 16,
+      "percentage": "8.2",
+      "papers": [
+        {
+          "arxiv_id": "2501.07278",
+          "title": "Lifelong Learning of Large Language Model based Agents: A Roadmap",
+          "time_slice": "2025-01"
+        },
+        {
+          "arxiv_id": "2502.12110",
+          "title": "A-Mem: Agentic Memory for LLM Agents",
+          "time_slice": "2025-02"
+        },
+        {
+          "arxiv_id": "2505.16067",
+          "title": "Computer Science > Artificial Intelligence",
+          "time_slice": "2025-05"
+        },
+        {
+          "arxiv_id": "2505.16067",
+          "title": "How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior",
+          "time_slice": "2025-05"
+        },
+        {
+          "arxiv_id": "2508.07407",
+          "title": "A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems",
+          "time_slice": "2025-08"
+        },
+        {
+          "arxiv_id": "2508.19005",
+          "title": "Building Self-Evolving Agents via Experience-Driven Lifelong Learning: A Framework and Benchmark",
+          "time_slice": "2025-08"
+        },
+        {
+          "arxiv_id": "2508.19828",
+          "title": "Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning",
+          "time_slice": "2025-08"
+        },
+        {
+          "arxiv_id": "2509.25140",
+          "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory",
+          "time_slice": "2025-09"
+        },
+        {
+          "arxiv_id": "2512.22716",
+          "title": "Memento-II: Learning by Stateful Reflective Memory",
+          "time_slice": "2025-12"
+        },
+        {
+          "arxiv_id": "2602.02474",
+          "title": "MemSkill: Learning and Evolving Memory Skills for Self-Evolving Agents",
+          "time_slice": "2026-02"
+        }
+      ],
+      "total_in_category": 16
+    },
+    {
+      "category": "Collaborative",
+      "paper_count": 1,
+      "percentage": "0.5",
+      "papers": [
+        {
+          "arxiv_id": "2504.01990",
+          "title": "\"Advances and Challenges in Foundation Agents: From Brain-Inspired Intelligence to Evolutionary",
+          "time_slice": "reward/RL/self-play"
+        }
+      ],
+      "total_in_category": 1
+    },
+    {
+      "category": "Synergies",
+      "paper_count": 1,
+      "percentage": "0.5",
+      "papers": [
+        {
+          "arxiv_id": "2505.15741",
+          "title": "\"Evolutionary Computation and Large Language Models: A Survey of Methods",
+          "time_slice": "code/self-modification"
+        }
+      ],
+      "total_in_category": 1
+    },
+    {
+      "category": "When",
+      "paper_count": 1,
+      "percentage": "0.5",
+      "papers": [
+        {
+          "arxiv_id": "2507.21046",
+          "title": "\"A Survey of Self-Evolving Agents: What",
+          "time_slice": "and Where to Evolve on the Path to Artificial Super Intelligence\""
+        }
+      ],
+      "total_in_category": 1
+    },
+    {
+      "category": "Reward-Free Self-Evolution via World Knowledge Exploration\"",
+      "paper_count": 1,
+      "percentage": "0.5",
+      "papers": [
+        {
+          "arxiv_id": "2604.18131",
+          "title": "\"Training LLM Agents for Spontaneous",
+          "time_slice": "2026-04-01"
+        }
+      ],
+      "total_in_category": 1
+    }
+  ]
+}

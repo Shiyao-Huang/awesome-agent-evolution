@@ -1,6 +1,6 @@
 # 博客/视频作者画像统计（当前快照）
 
-- generated_at: 2026-05-25T14:25:53+08:00
+- generated_at: 2026-05-25T15:25:19+08:00
 - raw_blog_files: 1308
 - json_item_records: 652
 - author_profiles_need_enrichment: 572 / 652

@@ -1,6 +1,6 @@
 # 领域发展时间线（论文 + Repo 活跃快照）
 
-- generated_at: 2026-05-25T14:25:53+08:00
+- generated_at: 2026-05-25T15:25:19+08:00
 - paper time source: raw-papers temporal metadata
 - repo time source: repo techstack cross-analysis `time_slice`
 

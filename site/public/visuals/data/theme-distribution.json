@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-05-25T07:37:07.039Z",
+  "themes": [
+    {
+      "theme": "memory",
+      "count": 92,
+      "percentage": "18.9"
+    },
+    {
+      "theme": "evaluation",
+      "count": 89,
+      "percentage": "18.3"
+    },
+    {
+      "theme": "evolution",
+      "count": 79,
+      "percentage": "16.3"
+    },
+    {
+      "theme": "skill",
+      "count": 60,
+      "percentage": "12.3"
+    },
+    {
+      "theme": "framework",
+      "count": 50,
+      "percentage": "10.3"
+    },
+    {
+      "theme": "education-list",
+      "count": 35,
+      "percentage": "7.2"
+    },
+    {
+      "theme": "research-agent",
+      "count": 31,
+      "percentage": "6.4"
+    },
+    {
+      "theme": "prompt-optimization",
+      "count": 26,
+      "percentage": "5.3"
+    },
+    {
+      "theme": "coding-agent",
+      "count": 17,
+      "percentage": "3.5"
+    },
+    {
+      "theme": "workflow-automation",
+      "count": 6,
+      "percentage": "1.2"
+    },
+    {
+      "theme": "safety",
+      "count": 1,
+      "percentage": "0.2"
+    }
+  ]
+}

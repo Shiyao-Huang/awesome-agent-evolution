@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-05-25T07:37:07.039Z",
+  "sources": [
+    "papers",
+    "repos",
+    "pain_points",
+    "blogs"
+  ],
+  "topics": [
+    {
+      "topic": "Reliability / production gap",
+      "signals": {
+        "papers": 2,
+        "repos": 131,
+        "pain_points": 19,
+        "blogs": 43
+      },
+      "interpretation": "strong mismatch risk"
+    },
+    {
+      "topic": "Evaluation / benchmark gap",
+      "signals": {
+        "papers": 6,
+        "repos": 85,
+        "pain_points": 10,
+        "blogs": 28
+      },
+      "interpretation": "strong mismatch risk"
+    },
+    {
+      "topic": "Memory / drift / forgetting",
+      "signals": {
+        "papers": 16,
+        "repos": 59,
+        "pain_points": 10,
+        "blogs": 34
+      },
+      "interpretation": "strong mismatch risk"
+    },
+    {
+      "topic": "Framework opacity / tooling",
+      "signals": {
+        "papers": 87,
+        "repos": 66,
+        "pain_points": 14,
+        "blogs": 85
+      },
+      "interpretation": "strong mismatch risk"
+    },
+    {
+      "topic": "Safety / governance / cost",
+      "signals": {
+        "papers": 4,
+        "repos": 86,
+        "pain_points": 11,
+        "blogs": 6
+      },
+      "interpretation": "strong mismatch risk"
+    },
+    {
+      "topic": "Self-improvement feasibility",
+      "signals": {
+        "papers": 60,
+        "repos": 59,
+        "pain_points": 12,
+        "blogs": 116
+      },
+      "interpretation": "strong mismatch risk"
+    }
+  ]
+}

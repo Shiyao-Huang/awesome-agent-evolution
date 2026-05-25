@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-05-25T07:37:07.039Z",
+  "axes": [
+    "adoption",
+    "observability",
+    "production_fit",
+    "self_evolution",
+    "governance"
+  ],
+  "frameworks": [
+    {
+      "framework": "LangChain/LangGraph",
+      "dimensions": {
+        "adoption": 5,
+        "observability": 3,
+        "production_fit": 5,
+        "self_evolution": 3,
+        "governance": 3
+      },
+      "signals": {
+        "repo_mentions": 13,
+        "pain_mentions": 1
+      }
+    },
+    {
+      "framework": "CrewAI",
+      "dimensions": {
+        "adoption": 5,
+        "observability": 4,
+        "production_fit": 4,
+        "self_evolution": 2,
+        "governance": 2
+      },
+      "signals": {
+        "repo_mentions": 4,
+        "pain_mentions": 0
+      }
+    },
+    {
+      "framework": "AutoGen",
+      "dimensions": {
+        "adoption": 5,
+        "observability": 4,
+        "production_fit": 4,
+        "self_evolution": 2,
+        "governance": 2
+      },
+      "signals": {
+        "repo_mentions": 5,
+        "pain_mentions": 0
+      }
+    },
+    {
+      "framework": "OpenAI Agents SDK",
+      "dimensions": {
+        "adoption": 5,
+        "observability": 1,
+        "production_fit": 5,
+        "self_evolution": 2,
+        "governance": 3
+      },
+      "signals": {
+        "repo_mentions": 82,
+        "pain_mentions": 28
+      }
+    },
+    {
+      "framework": "EvoAgentX",
+      "dimensions": {
+        "adoption": 5,
+        "observability": 4,
+        "production_fit": 4,
+        "self_evolution": 5,
+        "governance": 2
+      },
+      "signals": {
+        "repo_mentions": 5,
+        "pain_mentions": 0
+      }
+    },
+    {
+      "framework": "DGM/OpenEvolve",
+      "dimensions": {
+        "adoption": 5,
+        "observability": 4,
+        "production_fit": 5,
+        "self_evolution": 5,
+        "governance": 2
+      },
+      "signals": {
+        "repo_mentions": 14,
+        "pain_mentions": 0
+      }
+    },
+    {
+      "framework": "Letta/Graphiti",
+      "dimensions": {
+        "adoption": 5,
+        "observability": 4,
+        "production_fit": 4,
+        "self_evolution": 3,
+        "governance": 3
+      },
+      "signals": {
+        "repo_mentions": 4,
+        "pain_mentions": 0
+      }
+    },
+    {
+      "framework": "Browser-use",
+      "dimensions": {
+        "adoption": 4,
+        "observability": 4,
+        "production_fit": 3,
+        "self_evolution": 2,
+        "governance": 2
+      },
+      "signals": {
+        "repo_mentions": 3,
+        "pain_mentions": 0
+      }
+    },
+    {
+      "framework": "n8n",
+      "dimensions": {
+        "adoption": 5,
+        "observability": 4,
+        "production_fit": 4,
+        "self_evolution": 2,
+        "governance": 2
+      },
+      "signals": {
+        "repo_mentions": 4,
+        "pain_mentions": 0
+      }
+    }
+  ]
+}

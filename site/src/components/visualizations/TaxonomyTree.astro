@@ -1,0 +1,174 @@
+---
+import { taxonomyTree } from './visualizationData';
+
+const treePayload = JSON.stringify(taxonomyTree);
+---
+
+<div class="viz-taxonomy" id="viz-taxonomy">
+  <div class="viz-taxonomy-header">
+    <h3>Method Taxonomy</h3>
+    <p>Click to expand method families and explore mechanisms</p>
+  </div>
+  <div class="viz-taxonomy-tree" id="viz-taxonomy-tree"></div>
+</div>
+
+<script is:inline define:vars={{ treePayload }}>
+  const tree = JSON.parse(treePayload);
+  const container = document.getElementById('viz-taxonomy-tree');
+  if (!container) throw new Error('Taxonomy container not found');
+
+  const colors = ['#FF5B00', '#007AFF', '#2E6F4E', '#A56117', '#B83224', '#8B5CF6'];
+
+  function renderNode(node, depth, colorIdx) {
+    const color = depth === 0 ? colors[colorIdx % colors.length] : 'var(--muted)';
+    const el = document.createElement('div');
+    el.className = `viz-taxonomy-node depth-${depth}`;
+    el.setAttribute('role', 'treeitem');
+
+    const hasChildren = node.children && node.children.length > 0;
+    const header = document.createElement('div');
+    header.className = 'viz-taxonomy-node-header';
+    if (depth === 0) header.style.cursor = 'pointer';
+
+    const badge = document.createElement('span');
+    badge.className = 'viz-taxonomy-badge';
+    badge.style.background = depth === 0 ? color : 'var(--surface-3)';
+    badge.style.color = depth === 0 ? '#fff' : 'var(--fg)';
+    badge.textContent = node.count;
+
+    const label = document.createElement('span');
+    label.className = 'viz-taxonomy-label';
+    label.textContent = node.label;
+
+    const chevron = document.createElement('span');
+    chevron.className = 'viz-taxonomy-chevron';
+    if (hasChildren) {
+      chevron.textContent = '▸';
+      chevron.style.color = color;
+    }
+
+    header.appendChild(badge);
+    header.appendChild(label);
+    if (hasChildren) header.appendChild(chevron);
+    el.appendChild(header);
+
+    if (hasChildren) {
+      const childContainer = document.createElement('div');
+      childContainer.className = 'viz-taxonomy-children collapsed';
+      node.children.forEach(child => {
+        childContainer.appendChild(renderNode(child, depth + 1, colorIdx));
+      });
+      el.appendChild(childContainer);
+
+      header.addEventListener('click', () => {
+        const isCollapsed = childContainer.classList.contains('collapsed');
+        if (isCollapsed) {
+          childContainer.classList.remove('collapsed');
+          childContainer.classList.add('expanded');
+          chevron.textContent = '▾';
+        } else {
+          childContainer.classList.remove('expanded');
+          childContainer.classList.add('collapsed');
+          chevron.textContent = '▸';
+        }
+      });
+    }
+
+    return el;
+  }
+
+  tree.forEach((node, idx) => {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'viz-taxonomy-group';
+    wrapper.setAttribute('role', 'tree');
+    wrapper.appendChild(renderNode(node, 0, idx));
+    container.appendChild(wrapper);
+  });
+</script>
+
+<style>
+  .viz-taxonomy {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-media);
+    background: var(--surface-card);
+    padding: 24px;
+  }
+  .viz-taxonomy-header {
+    margin-bottom: 20px;
+  }
+  .viz-taxonomy-header h3 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--fg);
+    line-height: 1.1;
+  }
+  .viz-taxonomy-header p {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .viz-taxonomy-tree {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .viz-taxonomy-node-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    transition: background var(--transition);
+    user-select: none;
+  }
+  .viz-taxonomy-node-header:hover {
+    background: var(--surface-2);
+  }
+  .viz-taxonomy-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 28px;
+    padding: 0 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .viz-taxonomy-label {
+    font-size: 14px;
+    font-weight: 650;
+    color: var(--fg);
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .depth-1 .viz-taxonomy-label {
+    font-weight: 550;
+    font-size: 13px;
+  }
+  .viz-taxonomy-chevron {
+    font-size: 14px;
+    font-weight: 800;
+    flex-shrink: 0;
+    transition: transform var(--transition);
+  }
+  .viz-taxonomy-children {
+    display: grid;
+    gap: 2px;
+    padding-left: 24px;
+    border-left: 2px solid var(--line);
+    margin-left: 16px;
+  }
+  .viz-taxonomy-children.collapsed {
+    display: none;
+  }
+  .viz-taxonomy-children.expanded {
+    display: grid;
+  }
+</style>

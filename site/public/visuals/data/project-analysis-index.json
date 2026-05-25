@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-05-25T07:37:07.039Z",
+  "total_projects_analyzed": 204,
+  "evolution_focused": 90,
+  "core_evolution": 79,
+  "broad_evolution": 176,
+  "with_timestamps": 53,
+  "categories": [
+    {
+      "category": "框架/framework",
+      "count": 138
+    },
+    {
+      "category": "评测/evaluation",
+      "count": 98
+    },
+    {
+      "category": "教程/tutorial",
+      "count": 91
+    },
+    {
+      "category": "工具/tool",
+      "count": 82
+    },
+    {
+      "category": "应用/application",
+      "count": 47
+    },
+    {
+      "category": "论文代码/paper-code",
+      "count": 29
+    },
+    {
+      "category": "评测/benchmark",
+      "count": 1
+    }
+  ]
+}

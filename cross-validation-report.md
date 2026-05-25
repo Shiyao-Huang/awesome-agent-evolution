@@ -259,7 +259,7 @@ The community is acutely aware of this pattern. One HN commenter summarized it: 
 4. **Plan for human-in-the-loop**. Self-improvement loops require human review for the foreseeable future.
 5. **Budget for cost governance** before deploying any autonomous agent system.
 
-### For the Awesome-Evolution List
+### For the awesome-agent-evolution list
 The most valuable resources for users, based on cross-validation, would be:
 1. **Harness engineering guides** (edit formats, tool interfaces, context management)
 2. **Production deployment case studies** (not benchmark results)

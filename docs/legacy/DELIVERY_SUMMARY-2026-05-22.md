@@ -6,7 +6,7 @@
 
 ## 项目概述
 
-**Self Evolve（Awesome Evolution）** 是围绕"AI 自我进化"品牌构建的知识库、研究平台与 Landing Page。覆盖从原始数据采集、论文精读、开源项目分析、跨领域研究、到 SEO 博客和网站部署的完整链路。
+**Self Evolve（awesome-agent-evolution）** 是围绕"AI 自我进化"品牌构建的知识库、研究平台与 Landing Page。覆盖从原始数据采集、论文精读、开源项目分析、跨领域研究、到 SEO 博客和网站部署的完整链路。
 
 ### 核心目标
 

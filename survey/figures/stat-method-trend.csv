@@ -1,0 +1,27 @@
+year,method_category,annual_count,cumulative_total
+2022,reward/RL/self-play,1,1
+2023,multi-agent reflection/debate,1,1
+2023,prompt/search optimization,1,1
+2023,reward/RL/self-play,4,5
+2023,web/tool/environment adaptation,2,2
+2024,code/self-modification,3,3
+2024,evaluation/safety/governance,1,1
+2024,multi-agent reflection/debate,5,6
+2024,prompt/search optimization,4,5
+2024,reward/RL/self-play,10,15
+2024,web/tool/environment adaptation,2,4
+2025,code/self-modification,16,19
+2025,evaluation/safety/governance,1,2
+2025,memory/knowledge evolution,8,8
+2025,multi-agent reflection/debate,5,11
+2025,prompt/search optimization,4,9
+2025,reward/RL/self-play,22,37
+2025,web/tool/environment adaptation,5,9
+2026,code/self-modification,5,24
+2026,evaluation/safety/governance,2,4
+2026,memory/knowledge evolution,7,15
+2026,multi-agent reflection/debate,3,14
+2026,prompt/search optimization,1,10
+2026,reward/RL/self-play,9,46
+2026,web/tool/environment adaptation,3,12
+20pl,reward/RL/self-play,1,47

@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-05-25T07:37:07.039Z",
+  "total_repos": 486,
+  "categories": [
+    {
+      "category": "框架/framework",
+      "count": 138,
+      "percentage": "28.4"
+    },
+    {
+      "category": "评测/evaluation",
+      "count": 98,
+      "percentage": "20.2"
+    },
+    {
+      "category": "教程/tutorial",
+      "count": 91,
+      "percentage": "18.7"
+    },
+    {
+      "category": "工具/tool",
+      "count": 82,
+      "percentage": "16.9"
+    },
+    {
+      "category": "应用/application",
+      "count": 47,
+      "percentage": "9.7"
+    },
+    {
+      "category": "论文代码/paper-code",
+      "count": 29,
+      "percentage": "6.0"
+    },
+    {
+      "category": "评测/benchmark",
+      "count": 1,
+      "percentage": "0.2"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "generated_at": "2026-05-25T07:37:07.039Z",
+  "cross_tabulation": [
+    {
+      "category": "memory",
+      "stack": "Markdown",
+      "count": "43"
+    },
+    {
+      "category": "evaluation",
+      "stack": "Markdown",
+      "count": "41"
+    },
+    {
+      "category": "evaluation",
+      "stack": "Python",
+      "count": "37"
+    },
+    {
+      "category": "evolution",
+      "stack": "Markdown",
+      "count": "31"
+    },
+    {
+      "category": "evolution",
+      "stack": "Python",
+      "count": "26"
+    },
+    {
+      "category": "education-list",
+      "stack": "Markdown",
+      "count": "26"
+    },
+    {
+      "category": "framework",
+      "stack": "Markdown",
+      "count": "25"
+    },
+    {
+      "category": "research-agent",
+      "stack": "Python",
+      "count": "19"
+    },
+    {
+      "category": "prompt-optimization",
+      "stack": "Python",
+      "count": "13"
+    },
+    {
+      "category": "prompt-optimization",
+      "stack": "Markdown",
+      "count": "12"
+    },
+    {
+      "category": "framework",
+      "stack": "Python",
+      "count": "11"
+    },
+    {
+      "category": "memory",
+      "stack": "Python",
+      "count": "10"
+    },
+    {
+      "category": "coding-agent",
+      "stack": "Markdown",
+      "count": "8"
+    },
+    {
+      "category": "coding-agent",
+      "stack": "Python",
+      "count": "8"
+    },
+    {
+      "category": "research-agent",
+      "stack": "Markdown",
+      "count": "8"
+    },
+    {
+      "category": "education-list",
+      "stack": "Unknown",
+      "count": "8"
+    },
+    {
+      "category": "workflow-automation",
+      "stack": "Markdown",
+      "count": "4"
+    },
+    {
+      "category": "evaluation",
+      "stack": "TypeScript/JavaScript",
+      "count": "3"
+    },
+    {
+      "category": "memory",
+      "stack": "Shell",
+      "count": "3"
+    },
+    {
+      "category": "evaluation",
+      "stack": "Shell",
+      "count": "3"
+    },
+    {
+      "category": "research-agent",
+      "stack": "Unknown",
+      "count": "2"
+    },
+    {
+      "category": "workflow-automation",
+      "stack": "Python",
+      "count": "2"
+    },
+    {
+      "category": "framework",
+      "stack": "Unknown",
+      "count": "2"
+    },
+    {
+      "category": "safety",
+      "stack": "Markdown",
+      "count": "1"
+    },
+    {
+      "category": "evaluation",
+      "stack": "TypeScript",
+      "count": "1"
+    },
+    {
+      "category": "evolution",
+      "stack": "Jupyter Notebook",
+      "count": "1"
+    },
+    {
+      "category": "research-agent",
+      "stack": "Shell",
+      "count": "1"
+    },
+    {
+      "category": "memory",
+      "stack": "Unknown",
+      "count": "1"
+    },
+    {
+      "category": "education-list",
+      "stack": "TypeScript/JavaScript",
+      "count": "1"
+    },
+    {
+      "category": "prompt-optimization",
+      "stack": "TypeScript/JavaScript",
+      "count": "1"
+    },
+    {
+      "category": "education-list",
+      "stack": "Python",
+      "count": "1"
+    },
+    {
+      "category": "framework",
+      "stack": "TypeScript/JavaScript",
+      "count": "1"
+    },
+    {
+      "category": "coding-agent",
+      "stack": "Unknown",
+      "count": "1"
+    },
+    {
+      "category": "framework",
+      "stack": "TypeScript",
+      "count": "1"
+    },
+    {
+      "category": "memory",
+      "stack": "TypeScript",
+      "count": "1"
+    },
+    {
+      "category": "memory",
+      "stack": "Rust",
+      "count": "1"
+    },
+    {
+      "category": "evolution",
+      "stack": "TypeScript/JavaScript",
+      "count": "1"
+    }
+  ]
+}
