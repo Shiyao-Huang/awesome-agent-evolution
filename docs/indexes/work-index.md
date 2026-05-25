@@ -13,11 +13,12 @@
 | `paper-drafts` | present | 22 | 1 | 0 | 1.9 MB |
 | `paper` | present | 1 | 2 | 0 | 43 KB |
 | `latex` | present | 9 | 3 | 0 | 53 KB |
-| `site` | present | 853 | 320 | 0 | 22 MB |
-| `survey` | present | 51 | 4 | 0 | 1.3 MB |
-| `scripts` | present | 8 | 1 | 0 | 139 KB |
+| `site` | present | 864 | 328 | 0 | 21 MB |
+| `survey` | present | 44 | 4 | 0 | 1.3 MB |
+| `scripts` | present | 7 | 1 | 0 | 110 KB |
 | `data-engine` | present | 0 | 9 | 0 | 0 B |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
+| `CURRENT_GOAL.md` | present | 0 | 0 | 0 | 0 B |
 
 ## Representative Files
 
@@ -85,7 +86,6 @@
 - `scripts/generate_repo_classification.py`
 - `scripts/generate_survey_figures.py`
 - `scripts/generate_visual_assets.mjs`
-- `scripts/quantitative_statistical_analysis.py`
 
 ### `wiki`
 

@@ -1,0 +1,167 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { projects } from '@/data/projects';
+import FunnelChart from '@/components/visualizations/FunnelChart.astro';
+import TaxonomyTree from '@/components/visualizations/TaxonomyTree.astro';
+import RadarChart from '@/components/visualizations/RadarChart.astro';
+import TimelineHeatmap from '@/components/visualizations/TimelineHeatmap.astro';
+import RankTable from '@/components/visualizations/RankTable.astro';
+
+type ProjectData = (typeof projects)[number];
+
+const categories = (() => {
+  const map = new Map<string, { category: string; count: number; totalStars: number }>();
+  for (const p of projects) {
+    const ex = map.get(p.category);
+    if (ex) { ex.count++; ex.totalStars += Number(p.stars || 0); }
+    else { map.set(p.category, { category: p.category, count: 1, totalStars: Number(p.stars || 0) }); }
+  }
+  return [...map.values()].sort((a, b) => b.totalStars - a.totalStars);
+})();
+
+const languages = (() => {
+  const map = new Map<string, { language: string; count: number }>();
+  for (const p of projects) {
+    const ex = map.get(p.language);
+    if (ex) { ex.count++; } else { map.set(p.language, { language: p.language, count: 1 }); }
+  }
+  return [...map.values()].sort((a, b) => b.count - a.count);
+})();
+
+const tags = (() => {
+  const map = new Map<string, number>();
+  for (const p of projects) { for (const t of p.tags) { map.set(t, (map.get(t) || 0) + 1); } }
+  return [...map.entries()].map(([tag, count]) => ({ tag, count })).sort((a, b) => b.count - a.count).slice(0, 20);
+})();
+
+const totalStars: number = projects.reduce((sum: number, p: ProjectData) => sum + Number(p.stars || 0), 0);
+---
+<BaseLayout title="Self Evolve 可视化 — 项目数据图表与交互式分析" description="Self Evolve 项目可视化：按类别、语言、标签分布的 GitHub 项目数据分析图表。">
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Visualizations / 可视化</div>
+      <h1 class="gradient-text">项目数据可视化</h1>
+      <p class="lead">交互式图表与统计视图，帮助快速理解 Self Evolve 收录项目的分布、趋势与关系。</p>
+      <div class="metrics">
+        <div class="metric"><strong>{projects.length}</strong><span>个已分析仓库</span></div>
+        <div class="metric"><strong>{totalStars.toLocaleString()}</strong><span>GitHub Stars 合计</span></div>
+        <div class="metric"><strong>{categories.length}</strong><span>个进化模式分类</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Distribution -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">类别分布</div>
+          <h2>按进化模式分组</h2>
+        </div>
+      </div>
+      <div class="score-table-wrap">
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>类别</th>
+              <th>项目数</th>
+              <th>Stars 合计</th>
+              <th>占比</th>
+            </tr>
+          </thead>
+          <tbody>
+            {categories.map((cat: { category: string; count: number; totalStars: number }) => (
+              <tr>
+                <td><strong>{cat.category}</strong></td>
+                <td>{cat.count}</td>
+                <td>{cat.totalStars.toLocaleString()}</td>
+                <td>
+                  <div class="radar-bar-row">
+                    <span class="radar-label" />
+                    <div class="radar-bar-track">
+                      <div class="radar-bar-fill" style={`width: ${Math.round((cat.totalStars / totalStars) * 100)}%; background: var(--accent);`} />
+                    </div>
+                    <span class="radar-value">{Math.round((cat.totalStars / totalStars) * 100)}%</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Language Distribution -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">语言分布</div>
+          <h2>按主要编程语言</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {languages.slice(0, 6).map((lang: { language: string; count: number }) => (
+          <article class="card">
+            <h3>{lang.language}</h3>
+            <p>{lang.count} 个项目</p>
+            <div class="radar-bar-row">
+              <span class="radar-label" />
+              <div class="radar-bar-track">
+                <div class="radar-bar-fill" style={`width: ${Math.round((lang.count / projects.length) * 100)}%; background: var(--caret-blue);`} />
+              </div>
+              <span class="radar-value">{Math.round((lang.count / projects.length) * 100)}%</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Tags -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">热门标签</div>
+          <h2>出现频率最高的关键词</h2>
+        </div>
+      </div>
+      <div class="pill-row" style="gap: 6px;">
+        {tags.map((tag: { tag: string; count: number }) => (
+          <span class="pill" style={`font-size: ${Math.min(12 + tag.count, 20)}px;`}>{tag.tag} ({tag.count})</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Visualizations -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Interactive Charts</div>
+          <h2>交互式图表</h2>
+        </div>
+      </div>
+
+      <div class="viz-grid-2col">
+        <FunnelChart />
+        <TaxonomyTree />
+      </div>
+
+      <div class="viz-grid-2col">
+        <RadarChart />
+        <TimelineHeatmap />
+      </div>
+
+      <RankTable />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .viz-grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 980px) { .viz-grid-2col { grid-template-columns: 1fr; } }
+</style>

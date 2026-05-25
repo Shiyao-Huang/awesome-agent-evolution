@@ -1,0 +1,172 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { rankedProfiles, tierColors, maturityLabels } from '@/data/rankings';
+
+const tierGroups = new Map<string, typeof rankedProfiles>();
+for (const p of rankedProfiles) {
+  const tier = p.metadata.tier;
+  if (!tierGroups.has(tier)) tierGroups.set(tier, []);
+  tierGroups.get(tier)!.push(p);
+}
+---
+<BaseLayout title="Self Evolve 项目排名 — Top 20 自进化系统综合评估" description="Self Evolve 项目排名：基于 9 维评估框架（D1-D5 技术 + U1-U4 用户面）的 Top 20 自进化 AI 系统综合排名。">
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Rank / 排名</div>
+      <h1 class="gradient-text">Top 20 自进化系统排名</h1>
+      <p class="lead">基于 9 维 Rank/Judgment 评估框架，覆盖改进幅度、证据强度、可迁移性、安全性、成本效率、可用性、前瞻性、学术严谨性和实用价值。</p>
+      <div class="metrics">
+        <div class="metric"><strong>{rankedProfiles.length}</strong><span>个评估系统</span></div>
+        <div class="metric"><strong>{rankedProfiles[0]?.metadata.composite_score}</strong><span>最高综合分（AlphaEvolve）</span></div>
+        <div class="metric"><strong>9</strong><span>个评估维度</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tier Distribution -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">分级</div>
+          <h2>Tier 分布</h2>
+        </div>
+      </div>
+      <div class="grid" style="grid-template-columns: repeat(4, minmax(0, 1fr));">
+        {[...tierGroups.entries()].map(([tier, items]) => (
+          <article class="card" style="border-top: 3px solid {tierColors[tier] || 'var(--line)'};">
+            <h3 style="color: {tierColors[tier] || 'var(--fg)'};">Tier {tier}</h3>
+            <p>{items.length} 个项目</p>
+            <div class="pill-row" style="margin-top: 10px;">
+              {items.slice(0, 3).map((p) => <span class="pill">{p.system_name}</span>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Ranking Table -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">综合排名</div>
+          <h2>按综合分排序</h2>
+        </div>
+      </div>
+      <div class="score-table-wrap">
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>项目</th>
+              <th>Tier</th>
+              <th>综合分</th>
+              <th>成熟度</th>
+              <th>D1</th>
+              <th>D2</th>
+              <th>D3</th>
+              <th>U1</th>
+              <th>U2</th>
+              <th>U3</th>
+              <th>U4</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rankedProfiles.map((p, i) => (
+              <tr>
+                <td><strong>{i + 1}</strong></td>
+                <td><strong>{p.system_name}</strong></td>
+                <td>
+                  <span class="score-badge" style="background: {tierColors[p.metadata.tier] || 'var(--line)'}20; color: {tierColors[p.metadata.tier] || 'var(--muted)'};">
+                    {p.metadata.tier}
+                  </span>
+                </td>
+                <td><strong>{p.metadata.composite_score.toFixed(2)}</strong></td>
+                <td>
+                  <span class="org-badge" style="background: var(--surface-3);">
+                    L{p.metadata.maturity_level}
+                  </span>
+                </td>
+                <td>{p.dimensions.D1}</td>
+                <td>{p.dimensions.D2}</td>
+                <td>{p.dimensions.D3}</td>
+                <td>{p.dimensions.U1}</td>
+                <td>{p.dimensions.U2}</td>
+                <td>{p.dimensions.U3}</td>
+                <td>{p.dimensions.U4}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Radar Bars per Project -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">维度对比</div>
+          <h2>各项目 9 维雷达条形图</h2>
+        </div>
+      </div>
+      <div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+        {rankedProfiles.map((p) => (
+          <article class="card">
+            <div class="card-title-row">
+              <div>
+                <h3>{p.system_name}</h3>
+                <p>{p.summary}</p>
+              </div>
+              <span class="score-badge" style="background: {tierColors[p.metadata.tier] || 'var(--line)'}20; color: {tierColors[p.metadata.tier] || 'var(--muted)'};">
+                {p.metadata.tier} · {p.metadata.composite_score.toFixed(2)}
+              </span>
+            </div>
+            <div style="margin-top: 14px;">
+              {Object.entries(p.dimensions).map(([dim, val]) => (
+                <div class="radar-bar-row">
+                  <span class="radar-label">{dim}</span>
+                  <div class="radar-bar-track">
+                    <div class="radar-bar-fill" style={`width: ${(val / 10) * 100}%; background: ${Number(val) >= 7 ? 'var(--accent)' : Number(val) >= 5 ? 'var(--caret-blue)' : 'var(--muted)'};`} />
+                  </div>
+                  <span class="radar-value">{val}</span>
+                </div>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="eyebrow">方法论</div>
+        <h3>评估维度说明</h3>
+        <div class="score-table-wrap" style="margin-top: 16px;">
+          <table class="score-table">
+            <thead>
+              <tr><th>维度</th><th>含义</th><th>权重</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>D1</strong></td><td>改进幅度</td><td>0.15</td></tr>
+              <tr><td><strong>D2</strong></td><td>证据强度</td><td>0.20</td></tr>
+              <tr><td><strong>D3</strong></td><td>可迁移性</td><td>0.10</td></tr>
+              <tr><td><strong>D4</strong></td><td>安全性</td><td>0.10</td></tr>
+              <tr><td><strong>D5</strong></td><td>成本效率</td><td>0.05</td></tr>
+              <tr><td><strong>U1</strong></td><td>可用性</td><td>0.10</td></tr>
+              <tr><td><strong>U2</strong></td><td>前瞻性</td><td>0.10</td></tr>
+              <tr><td><strong>U3</strong></td><td>学术严谨性</td><td>0.10</td></tr>
+              <tr><td><strong>U4</strong></td><td>实用价值</td><td>0.10</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

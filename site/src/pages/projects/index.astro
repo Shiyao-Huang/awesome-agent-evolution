@@ -53,8 +53,23 @@ const groups = projectGroups.map((group) => {
   const groupStars = entries.reduce((sum, entry) => sum + (entry.type === 'project' ? Number(entry.project.stars || 0) : 0), 0);
   return { ...group, entries, groupStars };
 });
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Self Evolve GitHub 项目索引',
+  description: '自进化 AI 的 GitHub 实现图谱',
+  numberOfItems: projects.length,
+  itemListElement: rankedProjects.slice(0, 20).map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: p.name,
+    url: `https://shiyao-huang.github.io/awesome-agent-evolution/projects/${slugify(p.repo)}/`
+  }))
+};
 ---
 <BaseLayout title="Self Evolve 项目索引 — GitHub 自进化 AI 仓库" description="Self Evolve GitHub 项目索引，收录 OpenEvolve、AgentEvolver、Reflexion、Self-Refine 等自进化 AI 与 LLM 项目。">
+  <script type="application/ld+json" set:html={JSON.stringify(itemListLd)} is:inline />
   <section class="section">
     <div class="container">
       <div class="eyebrow">Projects / 项目索引</div>

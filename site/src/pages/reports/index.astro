@@ -25,7 +25,7 @@ import { projectReports, paperReports } from '@/data/reports';
           </div>
         </div>
         <div class="grid">
-          {projectReports.map((report) => (
+          {projectReports.slice(0, 30).map((report) => (
             <article class="card">
               <div class="eyebrow">{report.category}</div>
               <h3><a href={report.href}>{report.title}</a></h3>
@@ -37,6 +37,7 @@ import { projectReports, paperReports } from '@/data/reports';
             </article>
           ))}
         </div>
+        {projectReports.length > 30 && <p style="margin-top: 18px; color: var(--muted);">显示前 30 份，共 {projectReports.length} 份项目报告。</p>}
       </div>
     </section>
   )}

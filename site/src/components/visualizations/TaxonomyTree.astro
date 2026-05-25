@@ -1,174 +1,105 @@
 ---
-import { taxonomyTree } from './visualizationData';
+import { projects } from '@/data/projects';
 
-const treePayload = JSON.stringify(taxonomyTree);
+const categoryGroups = new Map<string, { count: number; tags: Map<string, number> }>();
+for (const project of projects) {
+  const existing = categoryGroups.get(project.category);
+  if (existing) {
+    existing.count++;
+    for (const tag of project.tags) existing.tags.set(tag, (existing.tags.get(tag) || 0) + 1);
+  } else {
+    const tags = new Map<string, number>();
+    for (const tag of project.tags) tags.set(tag, 1);
+    categoryGroups.set(project.category, { count: 1, tags });
+  }
+}
+
+const tree = [...categoryGroups.entries()]
+  .sort((a, b) => b[1].count - a[1].count)
+  .map(([category, data]) => ({
+    id: 'cat:' + category,
+    label: category,
+    count: data.count,
+    children: [...data.tags.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8).map(([tag, count]) => ({ id: 'tag:' + tag, label: tag, count }))
+  }));
+
+const treePayload = JSON.stringify(tree);
 ---
 
 <div class="viz-taxonomy" id="viz-taxonomy">
-  <div class="viz-taxonomy-header">
-    <h3>Method Taxonomy</h3>
-    <p>Click to expand method families and explore mechanisms</p>
+  <div class="viz-section-head">
+    <div class="eyebrow">Method Taxonomy</div>
+    <h2>方法分类体系</h2>
+    <p>点击展开方法族，探索进化机制</p>
   </div>
-  <div class="viz-taxonomy-tree" id="viz-taxonomy-tree"></div>
+  <div class="viz-tax-tree" id="viz-tax-tree"></div>
 </div>
 
 <script is:inline define:vars={{ treePayload }}>
   const tree = JSON.parse(treePayload);
-  const container = document.getElementById('viz-taxonomy-tree');
+  const container = document.getElementById('viz-tax-tree');
   if (!container) throw new Error('Taxonomy container not found');
+  const colors = ['#FF5B00', '#007AFF', '#2E6F4E', '#A56117', '#B83224', '#8B5CF6', '#0891B2', '#BE185D'];
 
-  const colors = ['#FF5B00', '#007AFF', '#2E6F4E', '#A56117', '#B83224', '#8B5CF6'];
-
-  function renderNode(node, depth, colorIdx) {
-    const color = depth === 0 ? colors[colorIdx % colors.length] : 'var(--muted)';
+  function renderNode(node, depth, ci) {
+    const color = depth === 0 ? colors[ci % colors.length] : 'var(--muted)';
     const el = document.createElement('div');
-    el.className = `viz-taxonomy-node depth-${depth}`;
-    el.setAttribute('role', 'treeitem');
-
-    const hasChildren = node.children && node.children.length > 0;
+    el.className = 'viz-tax-node depth-' + depth;
     const header = document.createElement('div');
-    header.className = 'viz-taxonomy-node-header';
+    header.className = 'viz-tax-header';
     if (depth === 0) header.style.cursor = 'pointer';
-
     const badge = document.createElement('span');
-    badge.className = 'viz-taxonomy-badge';
+    badge.className = 'viz-tax-badge';
     badge.style.background = depth === 0 ? color : 'var(--surface-3)';
     badge.style.color = depth === 0 ? '#fff' : 'var(--fg)';
     badge.textContent = node.count;
-
     const label = document.createElement('span');
-    label.className = 'viz-taxonomy-label';
+    label.className = 'viz-tax-label';
     label.textContent = node.label;
-
-    const chevron = document.createElement('span');
-    chevron.className = 'viz-taxonomy-chevron';
-    if (hasChildren) {
-      chevron.textContent = '▸';
-      chevron.style.color = color;
-    }
-
     header.appendChild(badge);
     header.appendChild(label);
-    if (hasChildren) header.appendChild(chevron);
-    el.appendChild(header);
 
-    if (hasChildren) {
-      const childContainer = document.createElement('div');
-      childContainer.className = 'viz-taxonomy-children collapsed';
-      node.children.forEach(child => {
-        childContainer.appendChild(renderNode(child, depth + 1, colorIdx));
-      });
-      el.appendChild(childContainer);
-
+    if (node.children && node.children.length > 0) {
+      const chevron = document.createElement('span');
+      chevron.className = 'viz-tax-chevron';
+      chevron.textContent = '\u25B8';
+      chevron.style.color = color;
+      header.appendChild(chevron);
+      const childBox = document.createElement('div');
+      childBox.className = 'viz-tax-children collapsed';
+      node.children.forEach(child => childBox.appendChild(renderNode(child, depth + 1, ci)));
+      el.appendChild(header);
+      el.appendChild(childBox);
       header.addEventListener('click', () => {
-        const isCollapsed = childContainer.classList.contains('collapsed');
-        if (isCollapsed) {
-          childContainer.classList.remove('collapsed');
-          childContainer.classList.add('expanded');
-          chevron.textContent = '▾';
-        } else {
-          childContainer.classList.remove('expanded');
-          childContainer.classList.add('collapsed');
-          chevron.textContent = '▸';
-        }
+        const c = childBox.classList.contains('collapsed');
+        childBox.classList.toggle('collapsed', !c);
+        childBox.classList.toggle('expanded', c);
+        chevron.textContent = c ? '\u25BE' : '\u25B8';
       });
+    } else {
+      el.appendChild(header);
     }
-
     return el;
   }
 
   tree.forEach((node, idx) => {
-    const wrapper = document.createElement('div');
-    wrapper.className = 'viz-taxonomy-group';
-    wrapper.setAttribute('role', 'tree');
-    wrapper.appendChild(renderNode(node, 0, idx));
-    container.appendChild(wrapper);
+    const g = document.createElement('div');
+    g.className = 'viz-tax-group';
+    g.appendChild(renderNode(node, 0, idx));
+    container.appendChild(g);
   });
 </script>
 
 <style>
-  .viz-taxonomy {
-    border: 1px solid var(--line);
-    border-radius: var(--radius-media);
-    background: var(--surface-card);
-    padding: 24px;
-  }
-  .viz-taxonomy-header {
-    margin-bottom: 20px;
-  }
-  .viz-taxonomy-header h3 {
-    font-family: var(--font-display);
-    font-size: 24px;
-    font-weight: 400;
-    color: var(--fg);
-    line-height: 1.1;
-  }
-  .viz-taxonomy-header p {
-    margin-top: 6px;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.4;
-  }
-  .viz-taxonomy-tree {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .viz-taxonomy-node-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 12px;
-    border-radius: var(--radius);
-    transition: background var(--transition);
-    user-select: none;
-  }
-  .viz-taxonomy-node-header:hover {
-    background: var(--surface-2);
-  }
-  .viz-taxonomy-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 32px;
-    height: 28px;
-    padding: 0 8px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 800;
-    flex-shrink: 0;
-  }
-  .viz-taxonomy-label {
-    font-size: 14px;
-    font-weight: 650;
-    color: var(--fg);
-    flex: 1;
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .depth-1 .viz-taxonomy-label {
-    font-weight: 550;
-    font-size: 13px;
-  }
-  .viz-taxonomy-chevron {
-    font-size: 14px;
-    font-weight: 800;
-    flex-shrink: 0;
-    transition: transform var(--transition);
-  }
-  .viz-taxonomy-children {
-    display: grid;
-    gap: 2px;
-    padding-left: 24px;
-    border-left: 2px solid var(--line);
-    margin-left: 16px;
-  }
-  .viz-taxonomy-children.collapsed {
-    display: none;
-  }
-  .viz-taxonomy-children.expanded {
-    display: grid;
-  }
+  .viz-taxonomy { margin-top: 40px; }
+  .viz-tax-tree { display: flex; flex-direction: column; gap: 6px; }
+  .viz-tax-header { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: var(--radius); transition: background var(--transition); user-select: none; }
+  .viz-tax-header:hover { background: var(--surface-2); }
+  .viz-tax-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; height: 28px; padding: 0 8px; border-radius: 6px; font-size: 12px; font-weight: 800; flex-shrink: 0; }
+  .viz-tax-label { font-size: 14px; font-weight: 650; color: var(--fg); flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .depth-1 .viz-tax-label { font-weight: 550; font-size: 13px; }
+  .viz-tax-chevron { font-size: 14px; font-weight: 800; flex-shrink: 0; }
+  .viz-tax-children { display: grid; gap: 2px; padding-left: 24px; border-left: 2px solid var(--line); margin-left: 16px; }
+  .viz-tax-children.collapsed { display: none; }
+  .viz-tax-children.expanded { display: grid; }
 </style>
