@@ -24,6 +24,8 @@
 
 | 类型 | 路径 | 状态 |
 |---|---|---|
+| README 主入口 | [README.md](README.md) | 中文优先，开头前置加工后的完整分类总览，并聚合综述、方法、benchmark、项目分类、核心链接和完整列表索取区 |
+| English i18n 入口 | [README-EN.md](README-EN.md) | 英文轻量入口，指向中文主 README 和主要成果 |
 | 当前目标 | [CURRENT_GOAL.md](CURRENT_GOAL.md) | 只收录用户直接输入，不混入 team 口吻 |
 | 用户原话参考 | [docs/project-management/user-direct-inputs.md](docs/project-management/user-direct-inputs.md) | AGENTS/CLAUDE 必读参考 |
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |

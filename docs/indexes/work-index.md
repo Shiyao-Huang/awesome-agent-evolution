@@ -1,6 +1,6 @@
 # Work / 工作产物 Index
 
-> Generated: 2026-05-24
+> Generated: 2026-05-25
 
 ## Rule
 
@@ -13,7 +13,7 @@
 | `paper-drafts` | present | 20 | 1 | 0 | 2.1 MB |
 | `paper` | present | 1 | 2 | 0 | 43 KB |
 | `latex` | present | 9 | 3 | 0 | 53 KB |
-| `site` | present | 773 | 294 | 0 | 20 MB |
+| `site` | present | 830 | 313 | 0 | 20 MB |
 | `survey` | present | 40 | 4 | 0 | 1.2 MB |
 | `scripts` | present | 7 | 1 | 0 | 107 KB |
 | `data-engine` | present | 0 | 9 | 0 | 0 B |

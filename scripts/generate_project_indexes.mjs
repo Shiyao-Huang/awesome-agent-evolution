@@ -17,7 +17,12 @@ import path from 'node:path';
 // @sm:evidence node scripts/generate_project_indexes.mjs
 
 const ROOT = process.cwd();
-const GENERATED_ON = '2026-05-24';
+const GENERATED_ON = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'Asia/Shanghai',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit'
+}).format(new Date());
 const INDEX_DIR = path.join(ROOT, 'docs', 'indexes');
 mkdirSync(INDEX_DIR, { recursive: true });
 
@@ -98,6 +103,8 @@ const categories = [
     rule: '项目管理、Agent 手册、云部署、索引、发布规范归这里；任何新长期规则都要能从根 README 找到。',
     entries: [
       'README.md',
+      'README-ZH.md',
+      'README-EN.md',
       'CONTENT_INDEX.md',
       'AGENTS.md',
       'CLAUDE.md',
@@ -428,7 +435,7 @@ function generateRootDocumentMap() {
     .sort();
 
   const classify = (name) => {
-    if (['README.md', 'CONTENT_INDEX.md', 'DELIVERY_SUMMARY.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md', 'CURRENT_GOAL.md'].includes(name)) return 'ops';
+    if (['README.md', 'README-ZH.md', 'README-EN.md', 'CONTENT_INDEX.md', 'DELIVERY_SUMMARY.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md', 'CURRENT_GOAL.md'].includes(name)) return 'ops';
     if (name.startsWith('mom-test') || name.startsWith('social-media') || name.startsWith('raw-')) return 'raw compatibility';
     if (name.startsWith('awesome-') || name.startsWith('github-agent-evolution')) return 'processed compatibility';
     if (['PAPER_OUTLINE.md'].includes(name)) return 'work compatibility';
@@ -457,7 +464,7 @@ function topLevelClass(name) {
   const work = new Set(['paper-drafts', 'paper', 'latex', 'site', 'survey', 'scripts', 'data-engine', 'wiki']);
   const results = new Set(['reports', 'output']);
   const mirrors = new Set(['repos', 'all_hands_ai__openhands', 'stitionai__devika']);
-  const ops = new Set(['README.md', 'CONTENT_INDEX.md', 'DELIVERY_SUMMARY.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md', 'CURRENT_GOAL.md', 'docs', '.gitignore']);
+  const ops = new Set(['README.md', 'README-ZH.md', 'README-EN.md', 'CONTENT_INDEX.md', 'DELIVERY_SUMMARY.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md', 'CURRENT_GOAL.md', 'docs', '.gitignore']);
   const legal = new Set(['LICENSE-CODE', 'LICENSE-CONTENT', 'NOTICE', 'CONTRIBUTING.md', 'CODE_OF_CONDUCT.md', 'SECURITY.md']);
   const local = new Set(['.DS_Store', '.aha', '.astro', '.claude', '.genome', '.git', '.gitnexus', '.tmp', 'node_modules']);
 

@@ -1,6 +1,6 @@
 # Root Document Map
 
-> Generated: 2026-05-24
+> Generated: 2026-05-25
 
 Root only keeps entry points, legal/release files, and compatibility files still referenced by scripts or research notes. New management documents belong in `docs/`.
 
@@ -18,7 +18,8 @@ Root only keeps entry points, legal/release files, and compatibility files still
 | `LICENSE-CONTENT` | release/legal |
 | `NOTICE` | release/legal |
 | `PAPER_OUTLINE.md` | work compatibility |
-| `README-ZH.md` | uncategorized |
+| `README-EN.md` | ops |
+| `README-ZH.md` | ops |
 | `README.md` | ops |
 | `SECURITY.md` | release/security |
 | `awesome-social-media-resources-ZH.md` | processed compatibility |

@@ -1,6 +1,6 @@
 # Noncanonical Cleanup Index
 
-> Generated: 2026-05-24
+> Generated: 2026-05-25
 
 ## 一句话
 
@@ -44,7 +44,8 @@
 | `LICENSE-CONTENT` | file | support release/legal | 开源发布必需，保留在根目录。 |
 | `NOTICE` | file | support release/legal | 开源发布必需，保留在根目录。 |
 | `PAPER_OUTLINE.md` | file | compatibility work-root | 论文工作兼容入口，不删；后续可迁入 paper-drafts 或 docs/legacy。 |
-| `README-ZH.md` | file | needs-review holding | 不删除；先放入待审清单，确认引用后再决定归层或迁入 docs/legacy。 |
+| `README-EN.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
+| `README-ZH.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `README.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `SECURITY.md` | file | support release/legal | 开源发布必需，保留在根目录。 |
 | `all_hands_ai__openhands` | dir | support mirrors | 外部镜像，不删除；不混入本项目治理，必要时只读引用。 |
