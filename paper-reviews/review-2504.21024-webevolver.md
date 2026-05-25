@@ -71,7 +71,7 @@ The framework has three interconnected components:
 | Novelty | 4/5 | Co-evolving world model for web agents is novel; dual-role design is elegant |
 | Rigor | 3/5 | EMNLP 2025 acceptance provides baseline rigor; 10% improvement is meaningful but full details require PDF access |
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **World models break self-improvement plateaus:** The most important insight is that self-evolving agents can get stuck in local optima due to limited exploration, and a learned world model provides the mechanism to break out. This pattern -- environment model + agent co-evolution -- is broadly applicable beyond web agents.
 

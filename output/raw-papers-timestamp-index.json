@@ -1,8 +1,8 @@
 {
   "generated_at": "2026-05-25T00:00:00+08:00",
-  "total": 194,
-  "updated_files": 194,
-  "unknown_content_timestamp": 1,
+  "total": 196,
+  "updated_files": 196,
+  "unknown_content_timestamp": 0,
   "records": [
     {
       "arxiv_id": "2203.14465",
@@ -235,6 +235,16 @@
       "timestamp_source": "arXiv submission history"
     },
     {
+      "arxiv_id": "2401.10510",
+      "title": "When Large Language Models Meet Evolutionary Algorithms: Potential Enhancements and Challenges",
+      "url": "https://arxiv.org/abs/2401.10510",
+      "file": "raw-papers/2401.10510.md",
+      "content_timestamp": "2024-01-19",
+      "collected_at": "2026-05-25T14:22:36+08:00",
+      "time_slice": "2024-01",
+      "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
       "arxiv_id": "2401.13996",
       "title": "# Investigate-Consolidate-Exploit: A General Strategy for Inter-Task Agent Self-Evolution",
       "url": "https://arxiv.org/abs/2401.13996",
@@ -293,6 +303,16 @@
       "collected_at": "2026-05-21",
       "time_slice": "2024-03",
       "timestamp_source": "arXiv submission history"
+    },
+    {
+      "arxiv_id": "2404.14387",
+      "title": "A Survey on Self-Evolution of Large Language Models",
+      "url": "https://arxiv.org/abs/2404.14387",
+      "file": "raw-papers/2404.14387.md",
+      "content_timestamp": "2024-04-22",
+      "collected_at": "2026-05-25T14:22:36+08:00",
+      "time_slice": "2024-04",
+      "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
       "arxiv_id": "2405.06682",
@@ -785,6 +805,16 @@
       "timestamp_source": "arXiv submission history"
     },
     {
+      "arxiv_id": "2503.12434",
+      "title": "A Survey on the Optimization of Large Language Model-based Agents",
+      "url": "https://arxiv.org/abs/2503.12434",
+      "file": "raw-papers/2503.12434.md",
+      "content_timestamp": "2025-03-16",
+      "collected_at": "2026-05-25T14:22:36+08:00",
+      "time_slice": "2025-03",
+      "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
       "arxiv_id": "2504.01990",
       "title": "Advances and Challenges in Foundation Agents: From Brain-Inspired Intelligence to Evolutionary, Collaborative, and Safe Systems",
       "url": "https://arxiv.org/abs/2504.01990",
@@ -963,6 +993,16 @@
       "collected_at": "2026-05-21",
       "time_slice": "2025-05",
       "timestamp_source": "arXiv submission history"
+    },
+    {
+      "arxiv_id": "2505.15741",
+      "title": "Evolutionary Computation and Large Language Models: A Survey of Methods, Synergies, and Applications",
+      "url": "https://arxiv.org/abs/2505.15741",
+      "file": "raw-papers/2505.15741.md",
+      "content_timestamp": "2025-05-21",
+      "collected_at": "2026-05-25T14:22:36+08:00",
+      "time_slice": "2025-05",
+      "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
       "arxiv_id": "2505.16067",
@@ -1915,16 +1955,6 @@
       "timestamp_source": "arXiv submission history"
     },
     {
-      "arxiv_id": "index",
-      "title": "# Agent Self-Evolution Papers — Raw Collection Index",
-      "url": "https://arxiv.org/abs/index",
-      "file": "raw-papers/index.md",
-      "content_timestamp": "20in-de-01",
-      "collected_at": "2026-05-21",
-      "time_slice": "20in-de",
-      "timestamp_source": "arXiv submission history"
-    },
-    {
       "arxiv_id": "placeholder.no-arxiv",
       "title": "# Papers Without arXiv IDs — Placeholder Index",
       "url": "https://arxiv.org/abs/placeholder.no-arxiv",
@@ -1933,16 +1963,6 @@
       "collected_at": "2026-05-21",
       "time_slice": "20pl-ac",
       "timestamp_source": "arXiv submission history"
-    },
-    {
-      "arxiv_id": "timestamp.audit",
-      "title": "unknown",
-      "url": "https://arxiv.org/abs/timestamp.audit",
-      "file": "raw-papers/timestamp-audit.md",
-      "content_timestamp": "unknown",
-      "collected_at": "unknown",
-      "time_slice": "unknown",
-      "timestamp_source": "unknown_not_present_in_raw_capture"
     }
   ]
 }

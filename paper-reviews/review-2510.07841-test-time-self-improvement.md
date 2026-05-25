@@ -127,7 +127,7 @@ A compelling contribution that demonstrates a practical, sample-efficient altern
 
 ---
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Uncertainty-driven targeting is dramatically more efficient than bulk training**: The 68x sample efficiency improvement demonstrates that knowing what you don't know -- and focusing training there -- is far more effective than training on everything. Self-awareness is a superpower for self-improvement.
 

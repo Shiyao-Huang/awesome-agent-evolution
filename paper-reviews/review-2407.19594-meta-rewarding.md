@@ -78,12 +78,12 @@ The method operates as an iterative training scheme with three interacting roles
 
 | Dimension | Score | Justification |
 |-----------|-------|---------------|
-| **Relevance to awesome-evolution** | 4/5 | Directly addresses self-improvement of LLMs through self-generated feedback loops. The meta-evaluation concept (improving the improver) is a core self-evolution pattern, though it operates at the weight-update level rather than the agent level. |
+| **Relevance to awesome-agent-evolution** | 4/5 | Directly addresses self-improvement of LLMs through self-generated feedback loops. The meta-evaluation concept (improving the improver) is a core self-evolution pattern, though it operates at the weight-update level rather than the agent level. |
 | **Practical Impact** | 3/5 | Strong results but limited to instruction-following benchmarks. The bias escalation problem limits practical deployment. Compute requirements for iterative self-play are substantial. |
 | **Novelty** | 4/5 | The meta-judge role is a clean conceptual contribution. The observation that judge quality is the bottleneck in self-rewarding is important. The length-control mechanism is practical if not theoretically novel. |
 | **Rigor** | 4/5 | Good experimental design with proper baselines (Self-Rewarding + LC as controlled comparison). The analysis of biases (Table 5, Figure 5) is honest and informative. Would benefit from more diverse evaluation benchmarks and longer iteration studies. |
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Improving the improver is essential**: Meta-Rewarding demonstrates that self-evolution systems must improve not just task performance but also the feedback/evaluation mechanism. A system with a stagnant internal judge will saturate quickly. This principle generalizes: any self-evolution loop needs to evolve its quality assessment alongside its task execution.
 

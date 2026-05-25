@@ -44,7 +44,7 @@ const enrichedProjects = projects.map((project) => ({
 }));
 const enrichedByRepo = new Map(enrichedProjects.map((project) => [project.repo.toLowerCase(), project]));
 const groups = projectGroups.map((group) => {
-  const entries = group.repos.map((repo) => {
+  const entries = group.repos.filter((repo): repo is string => typeof repo === 'string' && repo.length > 0).map((repo) => {
     const project = enrichedByRepo.get(repo.toLowerCase());
     return project
       ? { type: 'project' as const, repo, project }

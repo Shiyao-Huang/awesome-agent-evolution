@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://shiyao-huang.github.io',
-  base: '/awesome-Agent-evolution',
+  base: '/awesome-agent-evolution',
   output: 'static',
   integrations: [mdx(), sitemap()],
   markdown: {

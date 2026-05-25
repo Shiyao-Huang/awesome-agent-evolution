@@ -1,8 +1,59 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { knowledgeGraph, knowledgeGraphStats } from '@/data/knowledgeGraph';
+import { projects } from '@/data/projects';
+import { featuredResearch } from '@/data/research';
+import { site } from '@/data/site';
 
 const graphPayload = JSON.stringify(knowledgeGraph);
+const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const encodeId = (prefix: string, value: string) =>
+  `${prefix}:${encodeURIComponent(value.toLowerCase().trim().replace(/\s+/g, '-'))}`;
+const pdfHref = (url?: string) => {
+  if (!url) return '';
+  const arxiv = url.match(/arxiv\.org\/abs\/([^?#]+)/);
+  return arxiv ? `https://arxiv.org/pdf/${arxiv[1]}` : url;
+};
+const rankedProjects = [...projects].sort((a, b) => Number(b.stars || 0) - Number(a.stars || 0));
+const rankByRepo = new Map(rankedProjects.map((project, index) => [project.repo.toLowerCase(), index + 1]));
+const graphMetaPayload = JSON.stringify({
+  projects: Object.fromEntries(projects.map((project) => [
+    encodeId('project', project.repo),
+    {
+      kind: 'project',
+      name: project.name,
+      repo: project.repo,
+      url: project.url,
+      href: `/projects/${slugify(project.repo)}/`,
+      reportHref: `/reports/${project.report}`,
+      localPath: project.localPath,
+      stars: project.stars,
+      forks: project.forks,
+      rank: rankByRepo.get(project.repo.toLowerCase()),
+      category: project.category,
+      pattern: project.pattern,
+      tags: project.tags,
+      summary: project.description,
+      updated: project.lastPushed?.slice(0, 10)
+    }
+  ])),
+  papers: Object.fromEntries(featuredResearch.map((paper) => [
+    encodeId('paper', paper.slug || paper.title),
+    {
+      kind: 'paper',
+      title: paper.title,
+      url: paper.url,
+      pdfHref: pdfHref(paper.url),
+      href: paper.slug ? `/research/${paper.slug}/` : '',
+      year: paper.year,
+      cluster: paper.cluster,
+      relation: paper.relation,
+      tags: paper.tags,
+      summary: paper.insight
+    }
+  ]))
+});
+const siteBasePath = new URL(site.url).pathname.replace(/\/$/, '');
 ---
 <BaseLayout title="Self Evolve 知识图谱 — 项目、论文与机制关系" description="Self Evolve 知识图谱，把自进化 AI 项目、论文、机制标签和研究簇连接成可检索的关系网络。">
   <section class="section graph-section">
@@ -31,20 +82,38 @@ const graphPayload = JSON.stringify(knowledgeGraph);
         </div>
         <svg id="knowledge-graph" viewBox="0 0 1400 720" role="img" aria-label="Self Evolve knowledge graph"></svg>
       </div>
+      <aside class="graph-prompt-panel" id="graph-detail">
+        <div class="eyebrow">AI Research Prompt</div>
+        <h2 id="graph-prompt-title">点击节点生成调研 Prompt</h2>
+        <p id="graph-prompt-summary">选择 graph 中的项目、论文、概念或 cluster 后，这里会自动组装可复制给 AI 的继续调研提示词。</p>
+        <div class="graph-prompt-links" id="graph-prompt-links"></div>
+        <textarea id="graph-prompt" readonly rows="14" aria-label="AI research prompt"></textarea>
+        <div class="graph-prompt-actions">
+          <button class="button primary" id="copy-graph-prompt" type="button">Copy prompt</button>
+          <span id="copy-graph-prompt-status" aria-live="polite"></span>
+        </div>
+      </aside>
     </div>
   </section>
 
-  <script is:inline define:vars={{ graphPayload }}>
+  <script is:inline define:vars={{ graphPayload, graphMetaPayload, siteBasePath }}>
     /* @sm:node knowledge-graph-readable-radial-layout
      * Purpose: render the static Self Evolve knowledge graph as a readable, inspectable SVG.
      * Inputs: site/src/data/knowledgeGraph.ts payload.
      * Verification: /graph/ desktop and mobile screenshots plus `npm run build`.
      */
     const graph = JSON.parse(graphPayload);
+    const graphMeta = JSON.parse(graphMetaPayload);
     const svg = document.querySelector('#knowledge-graph');
     const search = document.querySelector('#graph-search');
     const typeSelect = document.querySelector('#graph-type');
     const graphCount = document.querySelector('#graph-count');
+    const promptTitle = document.querySelector('#graph-prompt-title');
+    const promptSummary = document.querySelector('#graph-prompt-summary');
+    const promptLinks = document.querySelector('#graph-prompt-links');
+    const promptTextarea = document.querySelector('#graph-prompt');
+    const copyPromptButton = document.querySelector('#copy-graph-prompt');
+    const copyPromptStatus = document.querySelector('#copy-graph-prompt-status');
     let selectedNodeId = null;
     let width = 1400;
     let height = 720;
@@ -58,6 +127,10 @@ const graphPayload = JSON.stringify(knowledgeGraph);
     };
 
     const byId = new Map(graph.nodes.map((node) => [node.id, node]));
+    const metaById = new Map([
+      ...Object.entries(graphMeta.projects),
+      ...Object.entries(graphMeta.papers)
+    ]);
     const adjacency = new Map(graph.nodes.map((node) => [node.id, new Set()]));
     const degree = new Map(graph.nodes.map((node) => [node.id, 0]));
     for (const edge of graph.edges) {
@@ -169,6 +242,115 @@ const graphPayload = JSON.stringify(knowledgeGraph);
       return base;
     }
 
+    function absoluteHref(value) {
+      if (!value) return '';
+      if (/^https?:\/\//.test(value)) return value;
+      const clean = value.startsWith('/') ? value : `/${value}`;
+      return `${location.origin}${siteBasePath}${clean}`;
+    }
+
+    function directRelations(id, limit = 18) {
+      return [...(adjacency.get(id) || [])]
+        .map((nodeId) => byId.get(nodeId))
+        .filter(Boolean)
+        .sort((a, b) => nodeRank(b) - nodeRank(a))
+        .slice(0, limit);
+    }
+
+    function materialLinksForNode(node) {
+      const meta = metaById.get(node.id);
+      const links = [];
+      if (meta?.kind === 'project') {
+        links.push({ label: `${meta.name} model card`, href: absoluteHref(meta.href), note: `rank #${String(meta.rank).padStart(3, '0')} · ${Number(meta.stars || 0).toLocaleString()} stars` });
+        links.push({ label: `${meta.repo} GitHub`, href: meta.url, note: `${meta.category} · ${meta.updated}` });
+        links.push({ label: `${meta.name} published report`, href: absoluteHref(meta.reportHref), note: meta.localPath ? `local: ${meta.localPath}` : 'site report' });
+      } else if (meta?.kind === 'paper') {
+        if (meta.href) links.push({ label: `${meta.title} research note`, href: absoluteHref(meta.href), note: `${meta.year}${meta.cluster ? ` · ${meta.cluster}` : ''}` });
+        if (meta.url) links.push({ label: `${meta.title} source`, href: meta.url, note: meta.relation || 'paper source' });
+        if (meta.pdfHref) links.push({ label: `${meta.title} PDF`, href: meta.pdfHref, note: 'paper PDF / publisher page' });
+      } else if (node.url) {
+        links.push({ label: `${node.label} source`, href: node.url, note: node.type });
+      }
+      return links;
+    }
+
+    function uniqueLinks(nodes) {
+      const seen = new Set();
+      const links = [];
+      for (const node of nodes) {
+        for (const link of materialLinksForNode(node)) {
+          if (!link.href || seen.has(link.href)) continue;
+          seen.add(link.href);
+          links.push(link);
+        }
+      }
+      return links.slice(0, 18);
+    }
+
+    function nodeLine(node) {
+      const meta = metaById.get(node.id);
+      if (meta?.kind === 'project') {
+        return `- project: ${meta.name} (${meta.repo}) | rank #${String(meta.rank).padStart(3, '0')} | stars ${Number(meta.stars || 0).toLocaleString()} | pattern: ${meta.pattern}`;
+      }
+      if (meta?.kind === 'paper') {
+        return `- paper: ${meta.title} (${meta.year}) | cluster: ${meta.cluster || 'unknown'} | relation: ${meta.relation || 'unknown'}`;
+      }
+      return `- ${node.type}: ${node.label}${node.summary ? ` | ${node.summary}` : ''}`;
+    }
+
+    function buildPrompt(selectedId, displayNodes) {
+      const selected = selectedId ? byId.get(selectedId) : null;
+      const focusNodes = selected ? [selected, ...directRelations(selected.id, 14)] : ranked(displayNodes).slice(0, 16);
+      const relationNodes = selected ? focusNodes.slice(1) : focusNodes;
+      const links = uniqueLinks(focusNodes);
+      const focusTitle = selected ? `${selected.label} (${selected.type})` : '当前 Self Evolve graph 视图';
+      const focusSummary = selected?.summary || '基于当前搜索/类型筛选结果，从项目、论文、概念和 cluster 中继续深挖。';
+      const linkLines = links.length
+        ? links.map((link) => `- ${link.label}: ${link.href}${link.note ? ` (${link.note})` : ''}`).join('\n')
+        : '- 当前节点没有直接 URL；请先使用下方关系节点作为检索入口。';
+      const relationLines = relationNodes.length
+        ? relationNodes.map(nodeLine).join('\n')
+        : '- 暂无直接关系。';
+      return `你是 Self Evolve / AI 自我进化研究助理。请基于下面的 graph 节点继续做深度调研，不要只总结网页，要沿着 GitHub、论文/PDF、站内报告交叉验证。
+
+焦点节点:
+- ${focusTitle}
+- 摘要: ${focusSummary}
+
+直接关系 / 当前候选:
+${relationLines}
+
+可继续打开的材料链接:
+${linkLines}
+
+请输出:
+1. 这个节点在 Self Evolve 中的机制位置：它改进 prompt、代码、记忆、工具、策略、数据、模型权重，还是 agent 组织？
+2. 证据质量 rank：按 GitHub stars/最近活跃、论文可信度、可复现实验、benchmark/评估器是否明确排序。
+3. 对应 GitHub 仓库和论文/PDF 的证据表：每条证据说明它支持了什么判断。
+4. 与相邻项目/论文的差异：哪些只是同名概念，哪些真正有新机制。
+5. 下一步研究计划：raw 要抓什么、processed 要抽取什么、work 中要画什么图、results 可以产出什么文章/报告。
+6. 风险与限制：数据缺口、过时仓库、不可复现实验、概念误连。`;
+    }
+
+    function updatePrompt(selectedId, displayNodes) {
+      const selected = selectedId ? byId.get(selectedId) : null;
+      const focusNodes = selected ? [selected, ...directRelations(selected.id, 14)] : ranked(displayNodes).slice(0, 16);
+      const links = uniqueLinks(focusNodes);
+      promptTitle.textContent = selected ? `${selected.label}` : '当前 graph 视图调研 Prompt';
+      promptSummary.textContent = selected?.summary || `${displayNodes.length} 个可见节点，可先点击具体项目/论文/cluster 生成更聚焦的 Prompt。`;
+      promptLinks.innerHTML = '';
+      for (const link of links.slice(0, 8)) {
+        const anchor = document.createElement('a');
+        anchor.href = link.href;
+        anchor.target = '_blank';
+        anchor.rel = 'noopener';
+        anchor.textContent = link.label;
+        promptLinks.append(anchor);
+      }
+      promptTextarea.value = buildPrompt(selectedId, displayNodes);
+      copyPromptStatus.textContent = '';
+    }
+
     function render(selectedId) {
       syncCanvas();
       const matched = matchIds();
@@ -263,6 +445,7 @@ const graphPayload = JSON.stringify(knowledgeGraph);
         }
         svg.append(group);
       }
+      updatePrompt(selectedId, displayNodes);
     }
 
     function selectNode(id) {
@@ -279,6 +462,17 @@ const graphPayload = JSON.stringify(knowledgeGraph);
       selectedNodeId = null;
       render();
     });
+    copyPromptButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(promptTextarea.value);
+        copyPromptStatus.textContent = 'Copied';
+      } catch (_error) {
+        promptTextarea.focus();
+        promptTextarea.select();
+        document.execCommand('copy');
+        copyPromptStatus.textContent = 'Copied';
+      }
+    });
     window.addEventListener('resize', () => render(selectedNodeId));
   </script>
 </BaseLayout>
@@ -291,6 +485,10 @@ const graphPayload = JSON.stringify(knowledgeGraph);
     width: min(calc(100% - 56px), 2140px);
     max-width: none;
     margin-inline: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+    gap: 14px;
+    align-items: stretch;
   }
   .graph-panel {
     border: 1px solid var(--line);
@@ -371,10 +569,76 @@ const graphPayload = JSON.stringify(knowledgeGraph);
       var(--surface-card);
     background-size: 44px 44px;
   }
+  .graph-prompt-panel {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-media);
+    background: var(--surface-card);
+    padding: 18px;
+    box-shadow: var(--shadow-mockup);
+  }
+  .graph-prompt-panel h2 {
+    margin-top: 12px;
+    color: var(--fg);
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.02;
+  }
+  .graph-prompt-panel p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .graph-prompt-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .graph-prompt-links a {
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: var(--surface-1);
+    color: var(--fg);
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.25;
+  }
+  .graph-prompt-links a:hover,
+  .graph-prompt-links a:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  #graph-prompt {
+    width: 100%;
+    min-height: 330px;
+    margin-top: 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-1);
+    color: var(--fg);
+    padding: 12px;
+    resize: vertical;
+    font: 12px/1.55 var(--font-mono);
+  }
+  .graph-prompt-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  #copy-graph-prompt-status {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 800;
+  }
   @media (max-width: 920px) {
     .graph-section { padding-top: 14px }
     .graph-shell {
       width: min(100% - 32px, 1160px);
+      grid-template-columns: 1fr;
     }
     .graph-toolbar { grid-template-columns: 1fr }
     .graph-title h1 { font-size: 30px }

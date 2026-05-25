@@ -32,7 +32,7 @@ The primary user intent is the raw -> processed -> work -> results chain for Sel
 - `curl https://api.github.com/rate_limit` failed with DNS resolution error: `Could not resolve host: api.github.com`.
 - `gh auth status` reports the active token for `Shiyao-Huang` is invalid; `gh api rate_limit` could not connect.
 - `gitnexus doctor` succeeded on GitNexus `1.6.5`.
-- `gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly .` failed with `EPERM: operation not permitted, open '/Users/copizzah/.gitnexus/registry.json'`.
+- `gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly .` failed with `EPERM: operation not permitted, open '/Users/copizzah/.gitnexus/registry.json'`.
 
 ## Working Principle
 

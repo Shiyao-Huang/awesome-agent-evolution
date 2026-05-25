@@ -1,11 +1,11 @@
 category,stack,count
 memory,Markdown,43
 evaluation,Markdown,41
-evaluation,Python,33
+evaluation,Python,37
 evolution,Markdown,31
 evolution,Python,26
-education-list,Markdown,25
-framework,Markdown,24
+education-list,Markdown,26
+framework,Markdown,25
 research-agent,Python,19
 prompt-optimization,Python,13
 prompt-optimization,Markdown,12
@@ -17,11 +17,11 @@ research-agent,Markdown,8
 education-list,Unknown,8
 workflow-automation,Markdown,4
 evaluation,TypeScript/JavaScript,3
+memory,Shell,3
 evaluation,Shell,3
 research-agent,Unknown,2
 workflow-automation,Python,2
 framework,Unknown,2
-memory,Shell,2
 safety,Markdown,1
 evaluation,TypeScript,1
 evolution,Jupyter Notebook,1
@@ -32,3 +32,7 @@ prompt-optimization,TypeScript/JavaScript,1
 education-list,Python,1
 framework,TypeScript/JavaScript,1
 coding-agent,Unknown,1
+framework,TypeScript,1
+memory,TypeScript,1
+memory,Rust,1
+evolution,TypeScript/JavaScript,1

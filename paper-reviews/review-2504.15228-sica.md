@@ -68,7 +68,7 @@ SICA (Self-Improving Coding Agent) demonstrates that an LLM-based coding agent c
 | Novelty | 5/5 | First truly self-referential agent (no meta/target distinction); full codebase editing |
 | Rigor | 3/5 | Single run, no statistical analysis, honest about limitations but limited experimental controls |
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Code-level self-modification works:** An agent editing its own Python codebase is a viable self-evolution mechanism that yields substantial performance gains (3x on SWE-Bench). This is the most direct form of agent self-improvement.
 

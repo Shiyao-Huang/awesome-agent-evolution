@@ -75,7 +75,7 @@ During evaluation, each new task is augmented with: (a) the full list of extract
 **Novelty**: ★★★★☆
 **Rigor**: ★★★★☆
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 - **Non-parametric self-evolution is viable**: ExpeL demonstrates that meaningful self-improvement does not require parameter updates -- agents can learn from experience purely through prompt engineering with insights and retrieved demonstrations. This is crucial for the many real-world scenarios where model weights are inaccessible.
 - **Dual learning modes are complementary**: The finding that abstract insights and concrete experience retrieval contribute differently across domains (reasoning-heavy vs. action-heavy) suggests that self-evolution systems should maintain both types of knowledge.
 - **Voting-based knowledge management**: The ADD/UPVOTE/DOWNVOTE/EDIT system for managing extracted insights is a practical pattern for maintaining a curated, evolving knowledge base. Insights that prove useful are reinforced; misleading ones are naturally pruned.

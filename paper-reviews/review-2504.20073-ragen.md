@@ -89,7 +89,7 @@ RAGEN extends the GRPO/PPO family from static single-turn tasks (DeepSeek-R1, Op
 
 RAGEN is highly relevant because it provides the first systematic characterization of training dynamics in multi-turn agent RL. The Echo Trap finding and the design principles for stable self-evolution are foundational for any project building self-improving agents.
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 - **Multi-turn agent RL is fundamentally different from single-turn RL**: The Echo Trap shows that naively extending single-turn RL methods to agents introduces new failure modes. Self-evolving agents require specifically designed training procedures, not just more compute.
 - **Reward diversity and rollout frequency are critical levers**: Diverse initial states, multiple responses per state, multiple actions per turn, and high rollout frequency are all necessary for stable self-evolution. Designing the rollout generation pipeline is as important as the optimization algorithm.

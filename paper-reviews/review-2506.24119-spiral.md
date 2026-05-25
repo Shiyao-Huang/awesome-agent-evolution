@@ -64,7 +64,7 @@ SPIRAL demonstrates that language models can develop transferable reasoning capa
 | Novelty | 5/5 | First to show game-to-reasoning transfer via self-play for LLMs; RAE is a genuine technical contribution |
 | Rigor | 4/5 | Strong ablations (RAE vs no-RAE, self-play vs fixed opponents, multi-game vs single-game), pattern analysis, 4 model families tested |
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Self-play as autonomous curriculum generation:** The most compelling demonstration that agents can create their own training signal. The automatic curriculum (stronger opponent = stronger training signal) is a fundamental self-evolution mechanism.
 

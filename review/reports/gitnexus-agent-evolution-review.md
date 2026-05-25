@@ -3,11 +3,11 @@
 Date: 2026-05-20  
 Task: `Av0awMJt6E4j` — project-wide GitNexus technical/code/domain extraction and review output.  
 Primary source: [`github-agent-evolution-repos.md`](../../github-agent-evolution-repos.md)  
-GitNexus evidence: `gitnexus analyze --skip-git --index-only --name awesome-evolution .` indexed this workspace as a non-git folder: **2 nodes, 1 edge, 0 clusters, 0 flows**.
+GitNexus evidence: `gitnexus analyze --skip-git --index-only --name awesome-agent-evolution .` indexed this workspace as a non-git folder: **2 nodes, 1 edge, 0 clusters, 0 flows**.
 
 ## L1 Verdict
 
-The current `awesome-evolution` workspace is a curated repository corpus rather than a code-heavy project, so the actionable output is a domain/technology taxonomy review of 107 agent-evolution repositories plus a gap list for deeper PDF/LaTeX review.
+The current `awesome-agent-evolution` workspace is a curated repository corpus rather than a code-heavy project, so the actionable output is a domain/technology taxonomy review of 107 agent-evolution repositories plus a gap list for deeper PDF/LaTeX review.
 
 ## L2 Evidence Summary
 
@@ -108,9 +108,9 @@ flowchart LR
 
 Self Mirror node map:
 
-- `awesome-evolution.corpus`: `github-agent-evolution-repos.md`; upstream search and GitHub metadata; downstream taxonomy review.
-- `awesome-evolution.gitnexus-index`: local GitNexus index of this workspace; evidence `2 nodes | 1 edges | 0 clusters | 0 flows`.
-- `awesome-evolution.review`: this report; downstream candidate PDF/LaTeX or manuscript production.
+- `awesome-agent-evolution.corpus`: `github-agent-evolution-repos.md`; upstream search and GitHub metadata; downstream taxonomy review.
+- `awesome-agent-evolution.gitnexus-index`: local GitNexus index of this workspace; evidence `2 nodes | 1 edges | 0 clusters | 0 flows`.
+- `awesome-agent-evolution.review`: this report; downstream candidate PDF/LaTeX or manuscript production.
 
 ## PDF / LaTeX Review Status
 
@@ -146,6 +146,6 @@ No `.pdf`, `.tex`, `.bib`, or local manuscript files exist in the current worksp
 ```bash
 find . -maxdepth 4 -type f -not -path './.git/*' -not -path './.aha/*' | sort
 gitnexus doctor
-gitnexus analyze --skip-git --index-only --name awesome-evolution .
+gitnexus analyze --skip-git --index-only --name awesome-agent-evolution .
 python3 /tmp/analyze_repos.py
 ```

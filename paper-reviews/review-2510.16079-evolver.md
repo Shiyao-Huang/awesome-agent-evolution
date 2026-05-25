@@ -75,14 +75,14 @@ The EvolveR architecture rests on three interconnected pillars:
 
 | Dimension | Score | Justification |
 |-----------|-------|---------------|
-| **Relevance to awesome-evolution** | 5/5 | Directly addresses the core thesis: agents that self-evolve from their own experiences. The closed-loop lifecycle is a canonical self-evolution pattern. |
+| **Relevance to awesome-agent-evolution** | 5/5 | Directly addresses the core thesis: agents that self-evolve from their own experiences. The closed-loop lifecycle is a canonical self-evolution pattern. |
 | **Practical Impact** | 3/5 | Currently limited to QA tasks with exact-match rewards. Transfer to broader agent domains is speculative. Compute cost is significant. |
 | **Novelty** | 4/5 | The combination of self-distillation + experience curation + RL policy evolution is novel. Individual components (principles, GRPO, deduplication) are known, but the integrated lifecycle is a genuine contribution. |
 | **Rigor** | 4/5 | Strong ablation studies across model scales. Multi-benchmark evaluation (7 datasets). But limited to a single task domain and the theoretical grounding for why self-distillation works is informal. |
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
-1. **Experience lifecycle as a design pattern**: EvolveR's offline-distillation / online-application / policy-evolution cycle is a concrete instantiation of the self-evolution paradigm that the awesome-evolution project should reference. The separation of "what to learn" (distillation) from "how to apply" (retrieval) and "how to internalize" (RL) is architecturally clean.
+1. **Experience lifecycle as a design pattern**: EvolveR's offline-distillation / online-application / policy-evolution cycle is a concrete instantiation of the self-evolution paradigm that the awesome-agent-evolution project should reference. The separation of "what to learn" (distillation) from "how to apply" (retrieval) and "how to internalize" (RL) is architecturally clean.
 
 2. **Self-distillation vs. external teaching**: The finding that self-distillation can outperform external-teacher distillation at sufficient model scale has important implications for autonomous self-evolution systems. It suggests that the "cognitive alignment" between learner and teacher matters -- a system evolving its own principles may be more coherent than one importing external knowledge.
 

@@ -67,12 +67,12 @@ Code is available at https://github.com/composable-models/llm_multiagent_debate.
 
 ## Impact Assessment
 
-- **Relevance to awesome-evolution**: 4/5 -- Multi-agent debate is a form of emergent collective intelligence that enables agents to exceed individual capabilities. However, it operates purely at inference time without any self-improvement or learning component.
+- **Relevance to awesome-agent-evolution**: 4/5 -- Multi-agent debate is a form of emergent collective intelligence that enables agents to exceed individual capabilities. However, it operates purely at inference time without any self-improvement or learning component.
 - **Practical applicability**: 3/5 -- The 6x inference cost and lack of learning limit practical deployment. Best suited for high-value queries where correctness matters more than latency.
 - **Novelty**: 4/5 -- The multi-round debate framework with cross-agent critique was novel at publication time and has spawned significant follow-up work.
 - **Rigor**: 3/5 -- Six evaluation tasks provide breadth, but small sample sizes (e.g., 20 problems for heterogeneous debate), lack of statistical significance tests, and reliance on a single model family limit confidence.
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Debate as a collective reasoning primitive.** Multi-agent debate demonstrates that agents can achieve capabilities beyond any individual through structured interaction. For self-evolving systems, debate-like mechanisms could serve as a quality control layer -- generating multiple candidate solutions, having them cross-examine each other, and selecting the most robust.
 

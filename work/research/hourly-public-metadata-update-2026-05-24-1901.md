@@ -32,6 +32,6 @@ User direct inputs require raw material, processed classification, model-card te
 
 ## GitNexus Evidence
 
-- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly .` succeeded incrementally.
+- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly .` succeeded incrementally.
 - Output: changed=15, added=14, 8,972 nodes, 9,227 edges, 30 clusters, 13 flows.
 - Blocker: FTS extension unavailable because extension.ladybugdb.com could not be reached. Graph/index evidence is usable without FTS.

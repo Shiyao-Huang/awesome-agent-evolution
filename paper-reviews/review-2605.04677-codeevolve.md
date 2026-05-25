@@ -66,7 +66,7 @@ CodeEvolve operates through a multi-stage pipeline:
 **Novelty**: ★★★☆☆
 **Rigor**: ★★★★☆
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 - **LLM-guided code evolution works at enterprise scale**: The 15.22x speedup demonstrates that evolutionary code optimization is not just an academic curiosity but can deliver substantial real-world improvements.
 - **Runtime profiling guides evolution**: The JFR-based target selection shows that self-evolving systems should use runtime data to guide where evolution effort is directed, not just static analysis.
 - **MCTS improves evolutionary search**: The structured search provided by MCTS consistently outperforms simpler search strategies, suggesting that sophisticated search algorithms are important for effective code evolution.

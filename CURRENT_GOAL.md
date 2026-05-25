@@ -4,7 +4,7 @@ Last updated: 2026-05-25
 
 ## Precision Rule
 
-This file is grounded only in direct user inputs for `/Users/copizzah/Desktop/work/awesome-evolution`.
+This file is grounded only in direct user inputs for `/Users/copizzah/Desktop/work/awesome-agent-evolution`.
 
 Excluded as target sources:
 
@@ -19,7 +19,7 @@ Inference is allowed only after the exact direct user inputs are separated first
 
 ## One-Sentence Compression
 
-把 `awesome-evolution` 做成一个可开源的、面向 AI Agents 自进化/自改进工程与论文的 Awesome 索引站和深度分析站：既有 README 分类索引，也有网站、知识图谱、论文/项目/benchmark 证据链，并且能让读者快速判断哪些东西真正可用、值得用、值得研究。
+把 `awesome-agent-evolution` 做成一个可开源的、面向 AI Agents 自进化/自改进工程与论文的 Awesome 索引站和深度分析站：既有 README 分类索引，也有网站、知识图谱、论文/项目/benchmark 证据链，并且能让读者快速判断哪些东西真正可用、值得用、值得研究。
 
 ## Three-Sentence Compression
 
@@ -75,7 +75,7 @@ Inference is allowed only after the exact direct user inputs are separated first
 - `全部都增加 ZH 版本!!!`
 - `-ZH 结尾`
 - `注意 使用subagent 并行`
-- `/Users/copizzah/Desktop/work/awesome-evolution/survey/latex Building成PDF。`
+- `/Users/copizzah/Desktop/work/awesome-agent-evolution/survey/latex Building成PDF。`
 - `继续`
 - `现在呢`
 - `你为什么下载得这么慢呀？什么问题？`
@@ -115,7 +115,7 @@ Inference is allowed only after the exact direct user inputs are separated first
 
 ## Source Boundary And Redaction Note
 
-- Primary sources used: `~/.claude/history.jsonl`, `~/.codex/sessions/**/rollout-*.jsonl` entries whose `cwd` is `/Users/copizzah/Desktop/work/awesome-evolution`.
+- Primary sources used: `~/.claude/history.jsonl`, `~/.codex/sessions/**/rollout-*.jsonl` entries whose `cwd` is `/Users/copizzah/Desktop/work/awesome-agent-evolution`.
 - Secondary Claude project JSONL files were inspected only to understand why naive filtering is dangerous. They are not target sources because they include team assignments, tool results, persisted outputs, and agent echoes under `role=user`.
 - The current target above is an inference from exact direct user inputs, not from team inputs.
 - No secrets or credentials were copied into this file.

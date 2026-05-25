@@ -142,7 +142,7 @@ A conceptually strong contribution with an elegant three-mechanism framework for
 
 ---
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **End-to-end optimization of the self-evolution pipeline is essential**: Optimizing individual stages (task generation, exploration, or reward assignment) in isolation misses the synergies between stages. The most effective self-evolution systems optimize the entire pipeline.
 

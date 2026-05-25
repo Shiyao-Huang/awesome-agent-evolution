@@ -68,7 +68,7 @@ The framework operates through a PPO agent that learns to refine prompts:
 **Novelty**: ★★★★☆
 **Rigor**: ★★★★☆
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 - **Prompt evolution as a self-evolution channel**: While not framed as a self-evolving agent system per se, the RL-based prompt optimization approach represents a form of automated prompt evolution that could be integrated into broader self-evolving agent frameworks.
 - **Test-driven optimization**: The use of unit-test feedback as the reward signal demonstrates a practical approach to grounding self-evolution in verifiable outcomes, relevant to the broader goal of self-improving systems.
 - **Hybrid action spaces**: The combination of generation, mutation, and rewriting actions is a design pattern that could be applied to other self-evolution domains beyond prompt optimization.

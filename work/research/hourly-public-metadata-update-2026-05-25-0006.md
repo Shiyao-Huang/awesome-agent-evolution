@@ -43,5 +43,5 @@ Direct user intent still ranks raw material, processed classification, public si
 - `node scripts/analyze_github_project_data.mjs` passed: raw=412, classified=412, analyzed_projects=123, strict_evolution=70, broad_evolution=165.
 - `node scripts/generate_visual_assets.mjs` regenerated four public SVG visualizations.
 - `(cd site && npm run build)` passed with 204 pages and existing Astro `z` deprecation hints.
-- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly .` passed: 9,476 nodes, 9,731 edges, 30 clusters, 13 flows; FTS unavailable due extension download connection failure.
+- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly .` passed: 9,476 nodes, 9,731 edges, 30 clusters, 13 flows; FTS unavailable due extension download connection failure.
 - `(cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex)` passed; `main.pdf` is 213 pages with existing font/overfull warnings.

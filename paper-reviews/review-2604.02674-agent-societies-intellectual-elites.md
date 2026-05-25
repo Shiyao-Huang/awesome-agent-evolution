@@ -58,7 +58,7 @@ The study operates at three levels:
 **Novelty**: ★★★★★
 **Rigor**: ★★★★☆
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 - **Scaling multi-agent systems is non-trivial**: The integration bottleneck explains why simply adding more agents does not proportionally improve performance -- a critical insight for self-evolving multi-agent architectures.
 - **Emergent specialization is real**: The intellectual elites finding suggests that self-organizing multi-agent systems will naturally develop specialization, which has both benefits (efficiency) and risks (single points of failure).
 - **Quantitative framework for coordination**: The power law characterization provides a mathematical language for analyzing and comparing multi-agent self-evolution strategies.

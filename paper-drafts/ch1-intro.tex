@@ -188,11 +188,11 @@ AI Self-Evolution overlaps with several established fields, but it is not identi
 
 \begin{table}[t]
 \centering
-\small
-\begin{tabular}{p{0.17\linewidth}p{0.21\linewidth}p{0.24\linewidth}p{0.27\linewidth}}
-\hline
+{\TableTight
+\begin{tabularx}{\textwidth}{@{}L{0.16\textwidth}L{0.20\textwidth}L{0.23\textwidth}Y@{}}
+\toprule
 \textbf{Concept} & \textbf{Primary object of change} & \textbf{Typical feedback} & \textbf{Difference from AI Self-Evolution} \\
-\hline
+\midrule
 Continual learning & Neural parameters over task streams & New data, task labels, replay losses & Usually uses a fixed update rule; may not modify prompts, tools, code, architecture, or curriculum. \\
 Online learning & Predictor state after each example & Immediate loss or reward & Focuses on regret under fixed algorithms; self-evolution can change the algorithmic machinery itself. \\
 Self-supervised learning & Representations and weights & Automatically generated labels & Supervision is automatic, but the system does not necessarily evaluate and modify its own operational components. \\
@@ -202,8 +202,8 @@ Reinforcement learning & Policy parameters & Environment rewards & RL is an opti
 RLHF/preference tuning & Model behavior and alignment & Human or AI preference labels & Usually externally orchestrated; self-evolution requires ongoing system-mediated modification. \\
 Agent memory & Episodic or semantic context & User interactions, reflections & Partial self-evolution if memory is feedback-derived and behaviorally active; otherwise only logging/personalization. \\
 Program synthesis/repair & Task-specific code & Specifications, tests, errors & Self-evolution when generated or repaired code changes the future agent/system, not just a one-off output. \\
-\hline
-\end{tabular}
+\bottomrule
+\end{tabularx}}
 \caption{AI Self-Evolution in relation to neighboring concepts. The boundaries are porous: many modern systems combine several rows, but self-evolution specifically requires feedback-driven modification of the system's own operational components.}
 \label{tab:related-concepts}
 \end{table}
@@ -243,18 +243,18 @@ with each loop differing in the representation modified and the verifier used. T
 
 \begin{table}[t]
 \centering
-\small
-\begin{tabular}{p{0.16\linewidth}p{0.20\linewidth}p{0.23\linewidth}p{0.30\linewidth}}
-\hline
+{\TableTight
+\begin{tabularx}{\textwidth}{@{}L{0.18\textwidth}L{0.19\textwidth}L{0.25\textwidth}Y@{}}
+\toprule
 \textbf{Loop} & \textbf{Mutable component} & \textbf{Representative systems} & \textbf{Typical failure modes} \\
-\hline
-Reflexive output/memory & Outputs, reflections, memory buffers & Self-Refine, Reflexion, ReAct-style agents & Generic critiques, memory bloat, context overfitting, local optima. \\
+ \midrule
+Reflexive output and memory & Outputs, reflections, memory buffers & Self-Refine, Reflexion, ReAct-style agents & Generic critiques, memory bloat, context overfitting, local optima. \\
 Symbolic component & Prompts, tools, pipelines, workflow nodes & Agent Symbolic Learning, DSPy, EvoMAC-like textual optimization & Prompt overfitting, unstable language gradients, high LLM-call cost. \\
 Verification-driven code & Candidate code, tests, repair patches & SelfEvolve, ReVeal, AlphaEvolve, code agents & Test overfitting, sandbox escape risk, verifier incompleteness. \\
-Architecture/agent design & Agent code, control flow, tool topology & ADAS, G{\"o}del Agent, DGM & Unsafe self-modification, irreproducible search, expensive evaluation. \\
-Curriculum/weight/population & Training tasks, policy weights, archives & RISE, RAGEN, Absolute Zero, DGM, AlphaEvolve & Reward hacking, echo trap, mode collapse, compute cost. \\
-\hline
-\end{tabular}
+Architecture and agent design & Agent code, control flow, tool topology & ADAS, G{\"o}del Agent, DGM & Unsafe self-modification, irreproducible search, expensive evaluation. \\
+Curriculum, weight, and population & Training tasks, policy weights, archives & RISE, RAGEN, Absolute Zero, DGM, AlphaEvolve & Reward hacking, echo trap, mode collapse, compute cost. \\
+\bottomrule
+\end{tabularx}}
 \caption{The Five Evolution Loops framework used throughout this survey. The loops classify mechanisms rather than mutually exclusive systems.}
 \label{tab:five-loops}
 \end{table}

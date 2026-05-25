@@ -82,14 +82,14 @@ The ACE framework is built around three core design principles:
 
 | Dimension | Score | Justification |
 |-----------|-------|---------------|
-| **Relevance to awesome-evolution** | 5/5 | ACE embodies context-level self-evolution -- a core paradigm where agents improve by refining their operational knowledge without weight updates. The "evolving playbook" concept maps directly to agent self-evolution. |
+| **Relevance to awesome-agent-evolution** | 5/5 | ACE embodies context-level self-evolution -- a core paradigm where agents improve by refining their operational knowledge without weight updates. The "evolving playbook" concept maps directly to agent self-evolution. |
 | **Practical Impact** | 5/5 | Surpassing GPT-4.1 agents with open-source models is practically significant. The 86.9% latency reduction and label-free adaptation make this deployable. Framework works in both offline and online settings. |
 | **Novelty** | 4/5 | Delta updates and the three-role architecture are novel. The brevity bias / context collapse formalization is a valuable conceptual contribution. But the overall approach builds directly on Dynamic Cheatsheet. |
 | **Rigor** | 4/5 | Strong ablation studies, multiple benchmark categories (agents + domain-specific), and an informative case study on context collapse. Could benefit from analysis of failure modes and de-duplication quality metrics. |
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
-1. **Context as the evolution substrate**: ACE demonstrates that meaningful self-evolution can occur entirely at the context level, without weight updates. This is a complementary paradigm to EvolveR's RL-based approach and may be more practical for many deployment scenarios. The awesome-evolution project should present both paradigms.
+1. **Context as the evolution substrate**: ACE demonstrates that meaningful self-evolution can occur entirely at the context level, without weight updates. This is a complementary paradigm to EvolveR's RL-based approach and may be more practical for many deployment scenarios. The awesome-agent-evolution project should present both paradigms.
 
 2. **Evolving playbooks, not static prompts**: The metaphor of contexts as "playbooks" that grow and refine over time is a powerful framing for self-evolution. It shifts the design goal from "find the optimal prompt" to "maintain a living knowledge base that adapts with experience."
 

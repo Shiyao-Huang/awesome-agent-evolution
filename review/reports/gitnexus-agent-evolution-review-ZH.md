@@ -3,11 +3,11 @@
 日期: 2026-05-20
 任务: `Av0awMJt6E4j` — 项目级 GitNexus 技术/代码/领域提取与评审输出。
 主要来源: [`github-agent-evolution-repos.md`](../../github-agent-evolution-repos.md)
-GitNexus 证据: `gitnexus analyze --skip-git --index-only --name awesome-evolution .` 将此工作区作为非 Git 文件夹进行索引: **2 个节点, 1 条边, 0 个集群, 0 条流**。
+GitNexus 证据: `gitnexus analyze --skip-git --index-only --name awesome-agent-evolution .` 将此工作区作为非 Git 文件夹进行索引: **2 个节点, 1 条边, 0 个集群, 0 条流**。
 
 ## L1 结论
 
-当前 `awesome-evolution` 工作区是一个策展型仓库语料库，而非代码密集型项目，因此可执行的输出是对 107 个智能体进化仓库的领域/技术分类评审，以及一份用于深入 PDF/LaTeX 评审的缺口清单。
+当前 `awesome-agent-evolution` 工作区是一个策展型仓库语料库，而非代码密集型项目，因此可执行的输出是对 107 个智能体进化仓库的领域/技术分类评审，以及一份用于深入 PDF/LaTeX 评审的缺口清单。
 
 ## L2 证据摘要
 
@@ -108,9 +108,9 @@ flowchart LR
 
 自镜像节点映射:
 
-- `awesome-evolution.corpus`: `github-agent-evolution-repos.md`; 上游搜索和 GitHub 元数据; 下游分类评审。
-- `awesome-evolution.gitnexus-index`: 此工作区的本地 GitNexus 索引; 证据 `2 个节点 | 1 条边 | 0 个集群 | 0 条流`。
-- `awesome-evolution.review`: 本报告; 下游候选 PDF/LaTeX 或稿件制作。
+- `awesome-agent-evolution.corpus`: `github-agent-evolution-repos.md`; 上游搜索和 GitHub 元数据; 下游分类评审。
+- `awesome-agent-evolution.gitnexus-index`: 此工作区的本地 GitNexus 索引; 证据 `2 个节点 | 1 条边 | 0 个集群 | 0 条流`。
+- `awesome-agent-evolution.review`: 本报告; 下游候选 PDF/LaTeX 或稿件制作。
 
 ## PDF / LaTeX 评审状态
 
@@ -146,6 +146,6 @@ flowchart LR
 ```bash
 find . -maxdepth 4 -type f -not -path './.git/*' -not -path './.aha/*' | sort
 gitnexus doctor
-gitnexus analyze --skip-git --index-only --name awesome-evolution .
+gitnexus analyze --skip-git --index-only --name awesome-agent-evolution .
 python3 /tmp/analyze_repos.py
 ```

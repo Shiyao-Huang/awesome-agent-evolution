@@ -1,18 +1,29 @@
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in]{geometry}
+\usepackage{iftex}
+\ifPDFTeX
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\fi
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{longtable}
-\usepackage{fontspec}
-\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{cite}
 \usepackage{xcolor}
 \usepackage{tikz}
+\usepackage{hyperref}
 
-\setmainfont{Arial Unicode.ttf}[
-  Path=/System/Library/Fonts/Supplemental/
-]
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcommand{\TableTight}{\footnotesize\setlength{\tabcolsep}{2pt}\renewcommand{\arraystretch}{1.10}}
 
 % Lightweight algorithm boxes for TeX Live Basic environments.
 \newenvironment{algorithm}[1][]{\begin{figure}[#1]}{\end{figure}}
@@ -47,20 +58,22 @@
   linkcolor=blue!60!black,
   citecolor=green!45!black,
   urlcolor=blue!60!black,
-  pdftitle={Self-Evolving AI: A Unified Framework for Generation, Evaluation, Memory, and Improvement},
+  pdftitle={Self-Evolving AI Agents: A Survey of Feedback-Driven Generation, Evaluation, Memory, and Self-Modification},
   pdfauthor={Awesome Evolution Research Team}
 }
 
-\title{Self-Evolving AI: A Unified Framework for Generation, Evaluation, Memory, and Improvement}
+\title{Self-Evolving AI Agents: A Survey of Feedback-Driven Generation, Evaluation, Memory, and Self-Modification}
 \author{Awesome Evolution Research Team}
-\date{Draft compiled from local research corpus, May 2026}
+\date{May 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Self-evolving AI systems modify prompts, memory, tools, code, workflows, data curricula, or model behavior through feedback-driven loops. This survey unifies the field across language-model self-improvement, evolutionary computation, AutoML, agent architectures, code repair, and production agent frameworks. We organize the literature into five evolution loops, compare representative papers and open-source systems, summarize benchmark evidence, analyze practical pain points, and identify safety and governance challenges for systems that learn to improve their own operational machinery.
+Self-evolving AI agents modify persistent components of their own operation--including prompts, memory, tools, code, workflows, data curricula, and sometimes model behavior--through feedback-driven improvement loops. This survey develops a unified framework for the field across language-model self-improvement, evolutionary computation, AutoML, agent architecture search, code repair, benchmark harnesses, and production agent frameworks. We organize the literature into five evolution loops, compare representative papers and open-source systems, summarize benchmark evidence, analyze user and production pain points, and identify safety and governance requirements for agents that learn to improve the machinery by which they act. The central thesis is that self-evolution should be evaluated as a controlled systems process: every claimed improvement must specify what changed, what feedback justified the change, what evaluator approved it, what it cost, what risks it introduced, and how it can be audited or rolled back.
 \end{abstract}
+
+\noindent\textbf{Keywords:} self-evolving AI; LLM agents; recursive self-improvement; agent evaluation; memory; code evolution; automated agent design; AI safety
 
 \tableofcontents
 \newpage
@@ -75,7 +88,7 @@ Self-evolving AI systems modify prompts, memory, tools, code, workflows, data cu
 \input{ch8-future}
 
 \appendix
-\input{appendix}
+\input{appendix-en}
 
 \bibliographystyle{plain}
 \bibliography{references,references-aliases}

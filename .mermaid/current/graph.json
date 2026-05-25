@@ -632,7 +632,7 @@
       "2026-05-25T12:21+08: HOME=/private/tmp/gitnexus-home /Users/copizzah/.local/bin/gitnexus analyze failed on reused temp HOME because FTS extension download failure left an unloaded index extension; fresh HOME=/private/tmp/gitnexus-home-1221 succeeded.",
       "2026-05-25T12:21+08: HOME=/private/tmp/gitnexus-home-1221 /Users/copizzah/.local/bin/gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded: 10,623 nodes, 11,534 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
       "2026-05-25T13:21+08: HOME=/private/tmp/gitnexus-home-1321 /Users/copizzah/.local/bin/gitnexus doctor passed; analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded with 10,730 nodes, 11,678 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
-      "2026-05-25T14:23+08: HOME=/private/tmp/gitnexus-home-1423 gitnexus doctor passed; analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded with 10,878 nodes, 12,530 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect."
+      "2026-05-25T14:23+08: HOME=/private/tmp/gitnexus-home-1423 gitnexus doctor passed; analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded with 10,878 nodes, 12,530 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect."
     ],
     "tests": [
       "2026-05-24T19:17+08: node scripts/generate_visual_assets.mjs regenerated four SVG charts from current analysis and project data.",

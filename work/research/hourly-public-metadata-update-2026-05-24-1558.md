@@ -18,7 +18,7 @@ Direct user intent still prioritizes raw -> processed -> work -> results traceab
 ## GitNexus / Freshness Notes
 
 - GitNexus 1.6.5 is installed and `gitnexus doctor` reports graph/full-text/vector capabilities.
-- Rechecked GitNexus with `HOME=/private/tmp/gitnexus-home`; registry EPERM was avoided, but `gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly .` still failed because the FTS extension could not be downloaded and LadybugDB reported `index extension is not loaded`.
+- Rechecked GitNexus with `HOME=/private/tmp/gitnexus-home`; registry EPERM was avoided, but `gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly .` still failed because the FTS extension could not be downloaded and LadybugDB reported `index extension is not loaded`.
 - GitHub API freshness is blocked: `curl https://api.github.com/rate_limit` cannot resolve host and gh has an invalid token.
 
 ## Added Repositories

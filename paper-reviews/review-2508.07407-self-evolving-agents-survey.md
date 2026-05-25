@@ -122,7 +122,7 @@ An essential reference for the self-evolving agent community. The four-component
 
 ---
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Self-evolution targets are multi-dimensional**: Agent evolution is not limited to model parameter updates. Prompts, memory, tools, and architecture are all evolvable components, and the most effective systems evolve multiple components simultaneously through coordinated optimization.
 

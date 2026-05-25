@@ -48,5 +48,5 @@
 - `node scripts/analyze_github_project_data.mjs`: passed, raw=400, classified=400, analyzed_projects=110, strict_evolution=69, broad_evolution=165.
 - `node scripts/generate_visual_assets.mjs`: passed, four SVG public visuals regenerated.
 - `(cd site && npm run build)`: passed, 191 pages built; existing Astro `z` deprecation hints remain.
-- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly .`: passed, 9,277 nodes / 9,532 edges / 30 clusters / 13 flows; FTS degraded by extension download failure.
+- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly .`: passed, 9,277 nodes / 9,532 edges / 30 clusters / 13 flows; FTS degraded by extension download failure.
 - `(cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex)`: passed, `main.pdf` 213 pages; existing font/overfull warnings remain.

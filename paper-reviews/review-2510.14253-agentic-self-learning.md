@@ -141,7 +141,7 @@ A strong contribution to the agent self-learning literature. The three-role co-e
 
 ---
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Co-evolution of tasks, policy, and rewards is essential**: Fixed task distributions and fixed reward models lead to plateau. Co-evolving all three components creates a self-reinforcing cycle that sustains improvement over multiple rounds.
 

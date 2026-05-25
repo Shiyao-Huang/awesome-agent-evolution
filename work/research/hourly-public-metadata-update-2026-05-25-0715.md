@@ -42,7 +42,7 @@ The direct user intent source remains `docs/project-management/user-direct-input
 - `curl -I --max-time 10 https://api.github.com`: failed DNS resolution, freshness not API-verified.
 - `gh auth status`: failed, default token invalid.
 - `HOME=/private/tmp/gitnexus-home gitnexus doctor`: passed, GitNexus 1.6.5 graph/full-text/vector capabilities reported available.
-- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly-0715 .`: passed with changed=12, added=14, deleted=0, 10,326 nodes, 10,752 edges, 33 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.
+- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly-0715 .`: passed with changed=12, added=14, deleted=0, 10,326 nodes, 10,752 edges, 33 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.
 - `node scripts/generate_project_indexes.mjs`: passed.
 - `python3 scripts/enforce_raw_timestamps.py`: passed, raw-github md=451, md_ok=451, missing_count=0.
 - `node scripts/analyze_github_project_data.mjs`: passed, raw=451, classified=451, analyzed_projects=165, strict_evolution=77, broad_evolution=171.

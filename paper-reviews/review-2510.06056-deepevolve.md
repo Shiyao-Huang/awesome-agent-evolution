@@ -141,7 +141,7 @@ A strong contribution that advances algorithm evolution by bridging the gap betw
 
 ---
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **External knowledge is essential for sustained evolution**: Pure evolution based on internal LLM knowledge quickly plateaus. External research provides the novelty injection needed for sustained improvement, especially in specialized scientific domains.
 

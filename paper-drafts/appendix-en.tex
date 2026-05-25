@@ -1,0 +1,283 @@
+% ====================================================================
+% Appendix for the English arXiv-facing manuscript.
+% The Chinese companion appendix remains in appendix.tex.
+% ====================================================================
+
+\section{Open-Source Project Evidence}
+\label{app:projects}
+
+This appendix records the evidence tables used by the survey. The tables are intentionally compact: they give readers a reproducible map of the local research corpus without turning the arXiv-facing manuscript into a directory dump. The full project model cards, raw captures, and public site reports remain in the repository indexes and website outputs.
+
+\subsection*{A.1 Core self-evolution systems}
+
+{\TableTight
+\begin{longtable}{@{}L{0.17\linewidth}r L{0.12\linewidth}L{0.12\linewidth}L{0.14\linewidth}L{0.27\linewidth}@{}}
+\toprule
+\textbf{Project} & \textbf{Stars} & \textbf{Language} & \textbf{Recent activity} & \textbf{Mode} & \textbf{Main contribution} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Project} & \textbf{Stars} & \textbf{Language} & \textbf{Recent activity} & \textbf{Mode} & \textbf{Main contribution} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+OpenEvolve & 6,358 & Python & 2026-03 & search + evaluation & Open implementation pattern for FunSearch-style evolutionary code optimization. \\
+Reflexion & 3,158 & Python & 2025-01 & reflection + memory & Verbal reinforcement through episodic reflections, including strong HumanEval and ALFWorld evidence. \\
+Agent Symbolic Learning & 5,928 & Python & 2024-09 & symbolic update & Textual backpropagation over prompts, tools, and agent pipelines. \\
+AgentEvolver & 1,441 & Python & 2026-04 & search + orchestration & Evolutionary optimization of agent tool use and task workflows. \\
+Self-Refine & 805 & Python & 2024-10 & feedback refinement & Generate--feedback--revise loop across multiple text and code tasks. \\
+SE-Agent & 274 & Python & 2025-09 & revision + recombination & Multi-trajectory revision and recombination for software-engineering agents. \\
+Science-CodeEvolve & 97 & Python & 2026-04 & search + evaluation & Evolutionary optimization for scientific code and algorithmic routines. \\
+SCOPE & 77 & Python & 2026-03 & search & Evolutionary search framework for agent improvement experiments. \\
+LLM-Self-Judge & 43 & Python & 2026-03 & self-judging & Self-judgment loop for data/model evolution and evaluation. \\
+DARWIN & 41 & Python & 2026-05 & safety-aware evolution & Safety-oriented self-evolving agent prototype. \\
+\end{longtable}}
+
+\subsection*{A.2 Agent infrastructure baselines}
+
+{\TableTight
+\begin{longtable}{@{}L{0.16\linewidth}r L{0.11\linewidth}L{0.12\linewidth}L{0.11\linewidth}L{0.17\linewidth}L{0.12\linewidth}@{}}
+\toprule
+\textbf{Project} & \textbf{Stars} & \textbf{Language} & \textbf{Recent activity} & \textbf{License} & \textbf{Stars per contributor} & \textbf{Quality score} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Project} & \textbf{Stars} & \textbf{Language} & \textbf{Recent activity} & \textbf{License} & \textbf{Stars per contributor} & \textbf{Quality score} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+AutoGPT & 175,000 & Python & 2026-05 & MIT & 213 & 28/100 \\
+MetaGPT & 50,000 & Python & 2026-04 & MIT & 143 & 56/100 \\
+AutoGen & 50,000 & Python & 2026-05 & MIT & 125 & 66/100 \\
+OpenHands & 55,000 & Python & 2026-05 & MIT & 145 & 68/100 \\
+CrewAI & 30,000 & Python & 2026-05 & MIT & 107 & 62/100 \\
+LangGraph & 20,000 & Python & 2026-05 & MIT & 89 & 67/100 \\
+DSPy & 25,000 & Python & 2026-05 & MIT & 62 & 73/100 \\
+SWE-Agent & 15,000 & Python & 2026-05 & MIT & 75 & 70/100 \\
+\end{longtable}}
+
+\subsection*{A.3 Landing-page and evidence-group taxonomy}
+
+\begin{itemize}
+\item \textbf{Evolutionary code and AlphaEvolve-like systems}: OpenEvolve, CodeEvolve, Science-CodeEvolve, and SE-Agent.
+\item \textbf{Agent self-evolution systems}: AgentEvolver, Agent Symbolic Learning, SCOPE, and related agent-optimization frameworks.
+\item \textbf{Reflection and refinement classics}: Reflexion and Self-Refine.
+\item \textbf{Safety, judging, and data/model self-evolution}: DARWIN, LLM-Self-Judge, Misevolution, OEP, and capability-erosion studies.
+\item \textbf{Agent frameworks and infrastructure}: AutoGPT, MetaGPT, AutoGen, CrewAI, DSPy, LangGraph, OpenHands, and SWE-Agent.
+\end{itemize}
+
+\section{Paper Corpus Index}
+\label{app:papers}
+
+The survey corpus tracks 108 detailed paper references across 2022--2026. Each paper is treated as method evidence: the project indexes extract the evolving object, feedback signal, update operator, evaluator, benchmark, limitation, and reproducibility status when available.
+
+{\TableTight
+\begin{longtable}{@{}L{0.22\linewidth}L{0.12\linewidth}L{0.58\linewidth}@{}}
+\toprule
+\textbf{Category} & \textbf{Count} & \textbf{Representative systems and claims} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Category} & \textbf{Count} & \textbf{Representative systems and claims} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Reward-based evolution & 14 & STaR, Self-Rewarding LM, Meta-Rewarding, IterAlign, RISE, Agent-R, RAGEN, SPIN, and preference/self-play training lines. \\
+Self-play evolution & 6 & Absolute Zero, SPIRAL, multi-agent debate, adversarial curriculum generation, and game-like proposer--solver loops. \\
+Prompt and context evolution & 16 & Self-Refine, Reflexion, ExpeL, SICA, ACE, Agent Symbolic Learning, EvoMAC, EvolveR, and automated prompt optimization. \\
+Architecture search and code self-modification & 12 & ADAS, G\"{o}del Agent, Darwin G\"{o}del Machine, AlphaEvolve, WebEvolver, FunSearch extensions, and self-modifying coding agents. \\
+Memory-based evolution & 10 & Voyager, Memory-R1, ReasoningBank, AriadneMem, self-evolving distributed memory, and memory governance studies. \\
+Hybrid methods and surveys & 12 & Lifelong learning roadmaps, open-ended evolution surveys, agent optimization surveys, and safety analyses. \\
+Late-2025 to 2026 additions & 19 & SAGE, Hyperagents, Autogenesis, GenericAgent, Capability Erosion, OEP, Misevolution, and recent memory/reward/safety papers. \\
+Other reviewed references & 19 & Benchmarks, tool-use systems, production agent frameworks, and background work used to connect the method families. \\
+\end{longtable}}
+
+\section{Benchmark Evidence}
+\label{app:benchmarks}
+
+Benchmark numbers in this appendix should be read as survey evidence rather than leaderboard claims. The main text argues that every self-evolution result needs a process report: initial artifact, update budget, evaluator, held-out test, cost, regressions, and safety boundary.
+
+\subsection*{C.1 Code generation and software engineering}
+
+{\TableTight
+\begin{longtable}{@{}L{0.18\linewidth}L{0.17\linewidth}L{0.19\linewidth}L{0.19\linewidth}L{0.22\linewidth}@{}}
+\toprule
+\textbf{Method} & \textbf{Benchmark} & \textbf{Baseline} & \textbf{Reported result} & \textbf{Interpretation} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Method} & \textbf{Benchmark} & \textbf{Baseline} & \textbf{Reported result} & \textbf{Interpretation} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Reflexion & HumanEval pass@1 & GPT-4 zero-shot: 80.1\% & 91.0\% with GPT-3.5 Reflexion & Strong reflection result, but evaluator scope is narrow. \\
+SelfEvolve & DS-1000 pass@1 & ChatGPT: 49.4 & 57.2 & Execution feedback improves API-heavy data-science code. \\
+SelfEvolve & HumanEval pass@1 & ChatGPT: 74.39\% & 85.98\% & Iterative debugging improves small code tasks. \\
+Darwin G\"{o}del Machine & SWE-bench Verified & 20.0\% & 50.0\% & Archive-based self-modifying coding agents. \\
+Darwin G\"{o}del Machine & Polyglot & 14.2\% & 30.7\% & Evidence for transfer beyond a single benchmark. \\
+SICA & SWE-bench Verified & 17.0\% & 53.0\% & Self-modifying coding agent with large reported gain. \\
+ReVeal & LiveCodeBench pass@1 & 36.9 at turn 1 & 42.4 at turn 19 & Verifier-aware multi-turn inference; budget must be reported. \\
+\end{longtable}}
+
+\subsection*{C.2 Reasoning, agents, and open-ended discovery}
+
+{\TableTight
+\begin{longtable}{@{}L{0.18\linewidth}L{0.17\linewidth}L{0.19\linewidth}L{0.22\linewidth}L{0.15\linewidth}@{}}
+\toprule
+\textbf{Method} & \textbf{Domain} & \textbf{Baseline} & \textbf{Reported result} & \textbf{Metric} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Method} & \textbf{Domain} & \textbf{Baseline} & \textbf{Reported result} & \textbf{Metric} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Self-Refine & Math reasoning & 56\% & 67\% & Accuracy \\
+Agent Symbolic Learning & MATH & Agent baseline: 56.0\%; DSPy: 48.4\% & 60.7\% & Accuracy \\
+RISE & GSM8K, Llama2-7B & about 14\% & about 24\% & Accuracy \\
+RISE & GSM8K, Mistral-7B & about 38\% & about 46\% & Accuracy \\
+Agent Symbolic Learning & HotPotQA & F1 36.2, EM 22.8 & F1 39.1, EM 25.6 & F1 / EM \\
+Reflexion & ALFWorld & 75\% base agent & 97\% & Success rate \\
+Voyager & Minecraft & Prior Minecraft agents & 3.3x unique items; 2.3x travel distance & Exploration \\
+AlphaEvolve & 4x4 complex matrix multiplication & Known construction & 48 multiplications & Algebraic verification \\
+AlphaEvolve & Borg scheduling & Production baseline & 0.7\% worldwide compute recovery & Operational metric \\
+AlphaEvolve & LLM training kernels & Existing kernels & 23\% and 32\% speedups in reported settings & Runtime speed \\
+\end{longtable}}
+
+\subsection*{C.3 Benchmark disclosure template}
+
+For arXiv-facing reproducibility, future revisions should attach this template to every benchmark claim:
+
+\begin{enumerate}
+\item \textbf{Evolving object}: output, prompt, memory, workflow, tool policy, code, weights, population, or data curriculum.
+\item \textbf{Evaluator}: unit tests, hidden tests, reward model, human judge, formal verifier, execution trace, or production metric.
+\item \textbf{Search budget}: turns, samples, candidates, tool calls, wall-clock time, tokens, dollars, and human review minutes.
+\item \textbf{Split discipline}: train, validation, hidden test, time split, new task family, and contamination-control statement.
+\item \textbf{Regression suite}: prior tasks, safety constraints, cost limits, permission boundaries, and negative-transfer cases.
+\item \textbf{Audit and rollback}: versioned artifacts, accepted/rejected candidate logs, evaluator version, and rollback path.
+\end{enumerate}
+
+\section{GitHub Star Quality and Hype Detection}
+\label{app:star-quality}
+
+GitHub stars are adoption signals, not quality labels. The project analysis therefore uses a multi-factor score to prevent viral attention from overwhelming engineering evidence. The score is not a universal truth; it is a triage aid for deciding which repositories deserve deeper model-card analysis.
+
+\subsection*{D.1 Scoring dimensions}
+
+\begin{table}[t]
+\centering
+\TableTight
+\caption{Star-quality dimensions used for repository triage.}
+\label{tab:star-quality-dimensions}
+\begin{tabular}{@{}L{0.24\linewidth}L{0.13\linewidth}L{0.50\linewidth}@{}}
+\toprule
+\textbf{Dimension} & \textbf{Weight} & \textbf{Rationale} \\
+\midrule
+Star activity & 20\% & Measures whether recent stargazers appear active rather than one-time viral accounts. \\
+Contributor diversity & 20\% & Penalizes projects dominated by one maintainer when the claimed ecosystem value is broad. \\
+Fork quality & 20\% & Counts forks with real commits or downstream work, not only passive copies. \\
+Issue quality & 20\% & Rewards concrete bug reports, usage questions, and design discussion over low-information issues. \\
+Pull-request merge rate & 20\% & Approximates maintainability, review throughput, and community integration. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{D.2 Representative quality ranking}
+
+{\TableTight
+\begin{longtable}{@{}L{0.18\linewidth}r L{0.12\linewidth}L{0.17\linewidth}L{0.34\linewidth}@{}}
+\toprule
+\textbf{Project} & \textbf{Stars} & \textbf{Score} & \textbf{Growth pattern} & \textbf{Interpretation} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Project} & \textbf{Stars} & \textbf{Score} & \textbf{Growth pattern} & \textbf{Interpretation} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+OpenEvolve & 6,358 & 74/100 & organic & Smaller but high-signal project for evolutionary code optimization. \\
+DSPy & 25,000 & 73/100 & organic & Strong academic and engineering footprint. \\
+SWE-Agent & 15,000 & 70/100 & organic & Research-backed software-engineering agent. \\
+OpenHands & 55,000 & 68/100 & organic & Large community with active development. \\
+LangGraph & 20,000 & 67/100 & steady & Strong workflow-graph infrastructure. \\
+AutoGen & 50,000 & 66/100 & organic & Large framework ecosystem with institutional support. \\
+FunSearch & 1,500 & 62/100 & organic & Under-starred relative to its scientific contribution. \\
+CrewAI & 30,000 & 62/100 & steady & Practical orchestration framework. \\
+Reflexion & 3,158 & 58/100 & steady & Classic research implementation. \\
+MetaGPT & 50,000 & 56/100 & viral & Broad recognition, but adoption quality should be inspected. \\
+AutoGPT & 175,000 & 28/100 & viral & Historically important but star count overstates current quality. \\
+Devika & 22,000 & 30/100 & suspicious & Me-too growth pattern with weak maintenance signal. \\
+\end{longtable}}
+
+\section{Research Groups and Intellectual Lineage}
+\label{app:researchers}
+
+Self-evolution work connects several communities: evolutionary computation, AutoML/NAS, program synthesis, reinforcement learning, language-agent engineering, tool-use benchmarks, and AI safety. The lineage map is useful because it prevents the field from being read as only a 2024--2026 LLM trend.
+
+\begin{itemize}
+\item \textbf{Evolutionary computation lineage}: Schmidhuber's G\"{o}del machine, Clune's open-ended evolution and AI-GA framing, quality-diversity methods, MAP-Elites, and modern LLM-guided program evolution.
+\item \textbf{Self-improvement and reasoning lineage}: STaR, Self-Refine, Reflexion, RISE, RAGEN, Absolute Zero, and related training-time or inference-time improvement loops.
+\item \textbf{Agent architecture lineage}: ADAS, Agent Symbolic Learning, EvoMAC, G\"{o}del Agent, DGM, SICA, and workflow/agent-topology search.
+\item \textbf{Code and algorithm discovery lineage}: FunSearch, AlphaEvolve, OpenEvolve, Science-CodeEvolve, and software-engineering agents evaluated on SWE-bench-like tasks.
+\item \textbf{Memory and lifelong-agent lineage}: Voyager, ExpeL, ReasoningBank, Memory-R1, AriadneMem, Mem0, LangMem, Graphiti, and benchmark work on long-context or stateful agents.
+\item \textbf{Safety and governance lineage}: evaluator tampering, reward hacking, memory poisoning, capability erosion, OEP, Misevolution, and production rollback/audit patterns.
+\end{itemize}
+
+\section{Method Lookup Table}
+\label{app:method-lookup}
+
+{\TableTight
+\begin{longtable}{@{}L{0.17\linewidth}L{0.16\linewidth}L{0.10\linewidth}L{0.25\linewidth}L{0.24\linewidth}@{}}
+\toprule
+\textbf{Method} & \textbf{Loop type} & \textbf{Train?} & \textbf{Feedback source} & \textbf{Best-fit tasks} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Method} & \textbf{Loop type} & \textbf{Train?} & \textbf{Feedback source} & \textbf{Best-fit tasks} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Self-Refine & reflection & no & self-feedback & generation, code, dialogue \\
+Reflexion & reflection + memory & no & environment feedback + verbal memory & decision tasks, code, ALFWorld-like tasks \\
+Self-Debug & evaluator loop & no & execution feedback & code generation \\
+STaR & rationale bootstrapping & yes & answer labels and rationale filtering & reasoning \\
+SPIN & self-play & yes & self-play preference signal & general language tasks \\
+ReST-EM & filtering + training & yes & self-generated candidates and filters & reasoning and code \\
+Constitutional AI & critique + preference & yes & AI feedback under a constitution & alignment and harmlessness \\
+OPRO & optimization & no & scoring function & prompt and program optimization \\
+FunSearch & search + evaluation & no & program evaluator & mathematical discovery and heuristic search \\
+AlphaEvolve & population + code evolution & no & programmatic and production evaluators & algorithm discovery and infrastructure optimization \\
+ADAS & architecture search & no & task benchmarks & agent design \\
+DGM & self-reference + population & no & isolated coding benchmarks & agent self-improvement \\
+G\"{o}del Agent & runtime self-modification & no & task validation & agent self-modification experiments \\
+Agent Symbolic Learning & symbolic search + reflection & no & language losses and gradients & multi-task agents \\
+Absolute Zero & self-play + RL & yes & self-generated verified tasks & reasoning and code \\
+RAGEN & trajectory RL & yes & multi-turn reward & interactive agents \\
+SICA & code self-modification & no & SWE-bench-like validation & software engineering \\
+ACE & context evolution & no & contextual feedback & agent workflows \\
+EvolveR & hybrid evolution & yes & offline distillation + online policy evolution & strategy improvement \\
+Memory-R1 & memory + RL & yes & memory-management reward & long-horizon memory tasks \\
+\end{longtable}}
+
+\section{Release and Bilingual Versioning Notes}
+\label{app:release-notes}
+
+The English manuscript built from \texttt{paper-drafts/main.tex} is the arXiv-facing version. It should remain English-only in compiled output, avoid local system-font dependencies, and include all tables needed to support the survey claims. The Chinese companion material is maintained separately in the Chinese survey tree and in the Chinese appendix source so that bilingual readers can inspect the same evidence without mixing languages inside the arXiv PDF.
+
+Before a public submission, the release bundle should pass the following gates:
+
+\begin{enumerate}
+\item Compile the English manuscript from a clean checkout with \texttt{xelatex}, \texttt{bibtex}, and two final \texttt{xelatex} passes.
+\item Confirm that the English source set used by \texttt{main.tex} contains no Chinese characters.
+\item Confirm that every benchmark number in Chapters 5 and Appendix~\ref{app:benchmarks} has a paper review, raw paper, or official report source.
+\item Remove duplicate BibTeX aliases once citation keys are normalized.
+\item Package only arXiv-needed sources: \texttt{main.tex}, English chapters, \texttt{appendix-en.tex}, bibliography files, and any figure assets actually referenced by the manuscript.
+\item Keep Chinese companion outputs linked from the repository and website, but do not include them in the arXiv source tarball unless submitting a separate Chinese note.
+\end{enumerate}

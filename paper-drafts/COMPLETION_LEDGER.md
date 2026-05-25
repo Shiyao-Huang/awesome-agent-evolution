@@ -1,19 +1,19 @@
 # Paper Completion Ledger
 
-Last updated: 2026-05-24
+Last updated: 2026-05-25
 
 ## One-Sentence Compression
 
-The English survey draft now compiles with a GitHub project corpus analysis section, but it still needs final citation normalization, figure polishing, benchmark provenance tightening, and copy editing before public arXiv release.
+The English survey draft is now the arXiv-facing manuscript entry, with an English-only appendix and no local system-font dependency; it still needs final citation normalization, benchmark provenance tightening, figure polish, and an arXiv source bundle before public release.
 
 ## Current Draft State
 
 | Component | Status | Evidence |
 |---|---|---|
-| Main manuscript wrapper | Fixed | `paper-drafts/main.tex` now assembles all draft chapters and appendix. |
+| Main manuscript wrapper | Fixed for arXiv-facing English build | `paper-drafts/main.tex` now assembles the English chapters and `appendix-en.tex`, and avoids local system-font paths. |
 | Citation compatibility | Fixed for local build | `paper-drafts/references-aliases.bib` covers citation keys already used by chapters. |
-| GitHub project corpus | Fixed for current draft | `analysis/github-project-data-analysis.json`, `.md`, and `.tex` summarize raw captures, analyzed projects, evolution-related subsets, and timeline evidence. |
-| Chapter coverage | Draft-complete | `ch1` through `ch8` plus appendix exist; local word counts show the English draft is substantial. |
+| GitHub project corpus | Fixed for current draft | `analysis/github-project-data-analysis.json` and `.md` summarize the full processed corpus; `paper-drafts/github-project-data-analysis-en.tex` is the English arXiv-facing LaTeX snapshot. |
+| Chapter coverage | Draft-complete | `ch1` through `ch8` plus English appendix exist; local word counts show the English draft is substantial. |
 | Project evidence | Fixed for website | All `site/src/data/projects.ts` report paths now resolve under `site/public/reports/projects/`. |
 | Website paper surface | Fixed | `/paper/` page exposes the manuscript state, chapters, and remaining gates for SEO/readers. |
 | Final publication quality | Not done | Needs human-level abstract polish, figure captions, reference dedupe, and benchmark source audit. |
@@ -30,7 +30,8 @@ The English survey draft now compiles with a GitHub project corpus analysis sect
 | 6 | `ch6-frameworks.tex` | Agent frameworks, infrastructure, and GitHub project corpus | Draft-complete; now includes project sampling funnel and timeline, still needs prose tightening. |
 | 7 | `ch7-painpoints.tex` | User pain points and production gaps | Draft-complete; needs Mom Test source appendix cleanup. |
 | 8 | `ch8-future.tex` | Open problems, roadmap, conclusion | Draft-complete; needs final argument tightening. |
-| Appendix | `appendix.tex` | Project tables, paper index, benchmarks, star quality | Draft-complete; needs generated table refresh from current site data. |
+| English appendix | `appendix-en.tex` | Project tables, paper index, benchmarks, star quality, release gates | Draft-complete for English arXiv build; needs generated table refresh from current site data. |
+| Chinese companion appendix | `appendix.tex` | Chinese project tables, paper index, benchmarks, star quality | Preserved as bilingual companion material; not included by the English arXiv main file. |
 
 ## Remaining Gates Before Public Paper Release
 
@@ -38,7 +39,7 @@ The English survey draft now compiles with a GitHub project corpus analysis sect
 2. Evidence gate: every benchmark number needs a source pointer to paper review, raw paper, or official paper.
 3. Figure gate: convert Mermaid/CSV figure assets into publication-grade figures.
 4. Consistency gate: unify terminology across README, site, paper, and survey LaTeX.
-5. Release gate: compile PDF, inspect warnings, and produce arXiv source bundle.
+5. Release gate: compile PDF, inspect warnings, verify English-only included sources, and produce arXiv source bundle.
 
 ## Work Priority
 

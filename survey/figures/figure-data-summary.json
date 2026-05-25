@@ -1,40 +1,40 @@
 {
-  "generated_at": "2026-05-21T22:21:49+08:00",
+  "generated_at": "2026-05-25T14:25:53+08:00",
   "counts": {
-    "paper_records_timestamp_index": 87,
-    "raw_paper_md_files": 171,
-    "paper_reviews": 88,
+    "paper_records_timestamp_index": 196,
+    "raw_paper_md_files": 198,
+    "paper_reviews": 137,
     "academic_reviews": 34,
-    "repo_records_timestamp_index": 348,
-    "raw_github_md_files": 348,
-    "repo_cross_analysis_rows": 348,
-    "raw_blog_files": 1306,
+    "repo_records_timestamp_index": 486,
+    "raw_github_md_files": 486,
+    "repo_cross_analysis_rows": 359,
+    "raw_blog_files": 1308,
     "raw_blog_json_records": 652,
-    "raw_social_files": 1291,
-    "raw_social_json_records": 612,
+    "raw_social_files": 1296,
+    "raw_social_json_records": 613,
     "raw_social_rank_json_records": 228,
     "pain_points_parsed": 97
   },
   "top_repo_categories": [
     [
       "evaluation",
-      81
+      85
     ],
     [
       "evolution",
-      58
+      59
     ],
     [
       "memory",
-      56
+      59
     ],
     [
       "framework",
-      38
+      40
     ],
     [
       "education-list",
-      35
+      36
     ],
     [
       "research-agent",
@@ -60,11 +60,11 @@
   "top_repo_languages": [
     [
       "Markdown",
-      197
+      199
     ],
     [
       "Python",
-      123
+      127
     ],
     [
       "Unknown",
@@ -72,18 +72,22 @@
     ],
     [
       "TypeScript/JavaScript",
-      6
+      7
     ],
     [
       "Shell",
-      6
+      7
     ],
     [
       "TypeScript",
-      1
+      3
     ],
     [
       "Jupyter Notebook",
+      1
+    ],
+    [
+      "Rust",
       1
     ]
   ],
@@ -152,11 +156,15 @@
   "blog_influence_counts": [
     [
       "unknown",
-      174
+      136
     ],
     [
       "creator",
       121
+    ],
+    [
+      "expert_org",
+      60
     ],
     [
       "cn_developer",
@@ -169,10 +177,6 @@
     [
       "practitioner_or_blogger",
       39
-    ],
-    [
-      "expert_org",
-      32
     ],
     [
       "cn_vendor_expert",
@@ -213,9 +217,13 @@
     [
       "cn_media_or_expert",
       10
+    ],
+    [
+      "tech_media",
+      10
     ]
   ],
-  "blog_needs_enrichment": 652,
+  "blog_needs_enrichment": 572,
   "pain_platform_counts": [
     [
       "Reddit",
@@ -232,32 +240,32 @@
   ],
   "method_counts": [
     [
+      "prompt/search optimization",
+      68
+    ],
+    [
       "reward/RL/self-play",
-      36
+      51
     ],
     [
       "code/self-modification",
-      16
+      28
     ],
     [
       "multi-agent reflection/debate",
-      10
+      16
     ],
     [
       "memory/knowledge evolution",
-      9
+      16
     ],
     [
       "web/tool/environment adaptation",
-      7
-    ],
-    [
-      "prompt/search optimization",
-      7
+      13
     ],
     [
       "evaluation/safety/governance",
-      2
+      4
     ]
   ]
 }

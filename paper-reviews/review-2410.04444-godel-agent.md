@@ -91,7 +91,7 @@ Godel Agent extends the lineage from Schmidhuber's Godel machine (2003) to the L
 
 Godel Agent represents the most radical vision of agent self-evolution in this review set: an agent that can rewrite any aspect of itself, including the rewriting logic. While conceptually groundbreaking, the practical applicability is limited by safety concerns and the lack of formal improvement guarantees.
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 - **Self-referential modification is the frontier of agent autonomy**: The three-tier taxonomy (hand-designed, meta-learning, self-referential) provides a useful framework for positioning self-evolution approaches. Godel Agent shows what the maximum degree of freedom looks like.
 - **Prompting-based self-modification can work without training**: Unlike RISE and RAGEN which require fine-tuning, Godel Agent achieves self-improvement purely through prompting and runtime code changes. This lowers the barrier to experimentation but raises questions about robustness.

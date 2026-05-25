@@ -1,0 +1,111 @@
+% English arXiv-facing snapshot derived from analysis/github-project-data-analysis.*
+% Keep this file English-only; the generated Chinese/bilingual analysis file remains in analysis/.
+
+\subsection{GitHub Project Corpus and Sampling Funnel}
+\label{subsec:github-project-corpus-sampling}
+
+The GitHub corpus is organized as a funnel rather than as a flat awesome list. The raw discovery layer contains 486 timestamp-indexed GitHub captures. The classification layer contains 486 repositories with category, theme, stack, and time-slice annotations. The paper-facing analysis layer currently contains 204 repositories that receive public project reports and model-card pages. Within the classified corpus, 79 repositories are strict evolution-theme repositories, while 176 match a broader evolution-related keyword set including self-improvement, reflection, recursive improvement, prompt evolution, and code evolution.
+
+\begin{table}[t]
+\centering
+\caption{GitHub project corpus funnel.}
+\label{tab:github-project-corpus-funnel}
+\begin{tabular}{lrp{0.55\linewidth}}
+\toprule
+Layer & Count & Meaning \\
+\midrule
+Raw captures & 486 & Timestamp-indexed records from \texttt{raw-github/}. \\
+Classified repositories & 486 & Rows with category, theme, stack, evidence, and time-slice fields. \\
+Analyzed model-card projects & 204 & Repositories promoted into site and paper-facing project analysis. \\
+Strict evolution theme & 79 & Classified rows whose base theme is \texttt{evolution}. \\
+Broad evolution-related & 176 & Rows matching evolution, self-improvement, reflection, or recursive-improvement signals. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Raw GitHub category and theme distribution.}
+\label{tab:github-category-theme-distribution}
+\begin{tabular}{lrlr}
+\toprule
+Category & Count & Theme & Count \\
+\midrule
+framework & 138 & memory & 92 \\
+evaluation & 98 & evaluation & 89 \\
+tutorial & 91 & evolution & 79 \\
+tool & 82 & skill & 60 \\
+application & 47 & framework & 50 \\
+paper-code & 29 & education-list & 35 \\
+benchmark & 1 & research-agent & 31 \\
+ &  & prompt-optimization & 26 \\
+ &  & coding-agent & 17 \\
+ &  & workflow-automation & 6 \\
+ &  & safety & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The time analysis deliberately separates repository creation from activity timestamps. The raw corpus time-slice field is an activity/content timestamp extracted from GitHub captures, so it measures when the captured page exposed recent activity. The analyzed-project timeline uses GitHub API \texttt{created\_at} where available. When GitHub API creation time is unavailable, the table marks a weaker \texttt{local\_git\_first\_commit} fallback; this is a first-observed mirror timestamp, not a release-date claim. In the current run, 53 of 204 analyzed projects have either verified creation time or a local fallback. Git metadata is also joined at the project level: 29 analyzed projects have GitHub API/cache metadata, 46 have local git mirror evidence, and 204 have a public report path.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{First 24 analyzed projects by verified creation month or local first-observed fallback.}
+\label{tab:analyzed-project-release-timeline}
+\begin{tabular}{lllp{0.22\linewidth}p{0.28\linewidth}}
+\toprule
+Month & Source & Repository & Category & Evolution pattern \\
+\midrule
+2022-09 & github\_api & \texttt{carperai/openelm} & evolutionary prompt optimization & search loop plus evaluator/scorer \\
+2023-01 & github\_api & \texttt{stanfordnlp/dspy} & declarative prompt optimization & feedback refinement plus search loop plus evaluator \\
+2023-03 & github\_api & \texttt{Significant-Gravitas/AutoGPT} & autonomous agent platform & agent orchestration \\
+2023-03 & github\_api & \texttt{camel-ai/camel} & role-playing agent framework & agent orchestration plus feedback refinement \\
+2023-03 & github\_api & \texttt{noahshinn/reflexion} & reflective memory & search loop plus reflective memory plus feedback refinement \\
+2023-03 & github\_api & \texttt{madaan/self-refine} & feedback refinement & feedback refinement \\
+2023-04 & local\_git\_first\_commit & \texttt{automl/auto-sklearn} & AutoML framework & search loop plus evaluator \\
+2023-04 & github\_api & \texttt{microsoft/CoML} & ML knowledge-driven agent & feedback refinement plus evaluator \\
+2023-06 & github\_api & \texttt{FoundationAgents/MetaGPT} & multi-agent collaboration framework & agent orchestration plus feedback refinement \\
+2023-07 & github\_api & \texttt{aiwaves-cn/agents} & data-driven agent evolution & search loop plus evaluator plus orchestration \\
+2023-08 & github\_api & \texttt{langchain-ai/langgraph} & graph-based agent orchestration & agent orchestration \\
+2023-08 & github\_api & \texttt{microsoft/autogen} & multi-agent conversation framework & agent orchestration \\
+2023-10 & github\_api & \texttt{google-deepmind/opro} & LLM as optimizer & search loop plus evaluator \\
+2023-10 & github\_api & \texttt{crewAIInc/crewAI} & multi-agent collaboration framework & agent orchestration \\
+2023-11 & github\_api & \texttt{google-deepmind/funsearch} & evolutionary mathematical discovery & search loop plus evaluator \\
+2024-03 & github\_api & \texttt{All-Hands-AI/OpenHands} & AI software-development platform & agent orchestration \\
+2024-04 & github\_api & \texttt{princeton-nlp/SWE-agent} & software-engineering agent & feedback refinement plus evaluator \\
+2024-07 & github\_api & \texttt{shengranhu/adas} & automated agent architecture search & search loop plus orchestration plus evaluator \\
+2024-08 & local\_git\_first\_commit & \texttt{alfa-group/tutorial\_gp\_llm} & GP plus LLM tutorial & search loop plus evaluator \\
+2024-09 & local\_git\_first\_commit & \texttt{OpenBMB/AgentVerse} & multi-agent simulation platform & agent orchestration plus reflective memory \\
+2024-10 & local\_git\_first\_commit & \texttt{siyuyuan/evoagent} & evolutionary multi-agent system & search loop plus orchestration \\
+2024-11 & local\_git\_first\_commit & \texttt{xiaofangxd/LLM\_EA} & LLM plus evolutionary algorithms survey & literature review \\
+2025-03 & local\_git\_first\_commit & \texttt{wuxingyu-ai/LLM4EC} & LLM plus evolutionary computation survey & literature review \\
+2025-05 & github\_api & \texttt{DeepAuto-AI/automl-agent} & multi-agent AutoML & orchestration plus search loop plus evaluator \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Top strict evolution-theme repositories by local star snapshot.}
+\label{tab:top-evolution-theme-repos}
+\begin{tabular}{lrrp{0.42\linewidth}}
+\toprule
+Repository & Stars & Time & Description \\
+\midrule
+\texttt{aiming-lab/AutoResearchClaw} & 12600 & 2026-05 & Autonomous and collaborative research-agent pipeline from idea to paper, with debate, sandboxed experiments, claim verification, HITL co-pilot behavior, MetaClaw cross-run learning, and ARC-Bench. \\
+\texttt{aden-hive/hive} & 10400 & 2026-05 & Production multi-agent harness emphasizing persistent state, crash recovery, cost control, audit traces, MCP integration, and failure-driven graph evolution. \\
+\texttt{HKUDS/OpenSpace} & 6300 & 2026-05 & Runtime that treats skills as selectable, executable, monitorable, analyzable, and evolvable entities across OpenClaw, nanobot, Claude Code, Codex, Cursor, and related agents. \\
+\texttt{kayba-ai/agentic-context-engine} & 2200 & 2026-05 & Persistent learning loop that reflects on traces, records strategies in a skillbook, and reinjects strategies into future runs across coding agents. \\
+\texttt{AMAP-ML/SkillClaw} & 1500 & 2026-05 & Extracts, deduplicates, validates, and shares reusable skills from real agent sessions so individual users and teams can turn experience into an evolution asset. \\
+\texttt{Memento-Teams/Memento-Skills} & 1400 & 2026-05 & Deployment-time learning framework that improves frozen-model agents through skill memory, failure reflection, and skill rewriting. \\
+\texttt{zylos-ai/zylos-core} & 1400 & 2026-05 & Self-evolving AI-team platform combining specialized agents, shared memory, tool marketplaces, and delivery surfaces. \\
+\texttt{metauto-ai/gptswarm} & 998 & 2026-05 & Early self-improving agent system focused on RL and prompt optimization. \\
+\texttt{sentient-agi/EvoSkill} & 798 & 2026-05 & Converts failure traces into reusable agent skills and prompt mutations, with held-out benchmark evaluation for agent-program evolution. \\
+\texttt{aiming-lab/SkillRL} & 765 & 2026-05 & Connects experience trajectories and policy improvement through automatic skill discovery, hierarchical skill libraries, and recursive skill-policy co-evolution. \\
+\texttt{adolfousier/opencrabs} & 755 & 2026-05 & Single-binary multi-channel AI agent inspired by OpenClaw, using local brain files, memory search, custom commands, background jobs, and self-update loops. \\
+\texttt{QuantaAlpha/QuantaAlpha} & 702 & 2026-05 & Repository-level evolutionary code agent aligned with SE-Agent, RepoMaster, and GitTaskBench-style self-improvement on real repository tasks. \\
+\bottomrule
+\end{tabular}
+\end{table}

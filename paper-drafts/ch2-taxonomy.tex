@@ -373,37 +373,41 @@ Cross-loop systems can be analyzed by the strongest evaluator in the composition
 
 Table~\ref{tab:method-loop-comparison} summarizes representative methods by loop type, trainability, feedback source, and tasks.  The categories are intentionally coarse.  Many systems span several loops, and implementations vary.  The goal is not to force a single label but to show which mechanism is primary.
 
-\begin{table}[t]
-\centering
-\small
-\begin{tabular}{p{2.8cm} p{3.2cm} p{2.0cm} p{3.4cm} p{3.2cm}}
-\hline
+{\TableTight
+\begin{longtable}{@{}L{0.15\textwidth}L{0.20\textwidth}L{0.14\textwidth}L{0.23\textwidth}L{0.19\textwidth}@{}}
+\caption{Representative methods mapped to loop type, trainability, feedback source, and task domain. Several methods compose multiple loops; the table lists the dominant interpretation for taxonomy purposes.}
+\label{tab:method-loop-comparison}\\
+\toprule
 \textbf{Method} & \textbf{Primary loop type} & \textbf{Trainable?} & \textbf{Feedback source} & \textbf{Representative tasks} \\
-\hline
+\midrule
+\endfirsthead
+\caption[]{Representative methods mapped to loop type, trainability, feedback source, and task domain (continued).}\\
+\toprule
+\textbf{Method} & \textbf{Primary loop type} & \textbf{Trainable?} & \textbf{Feedback source} & \textbf{Representative tasks} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
 AutoML-GPT & Specification-to-execution; search over ML pipeline choices & Usually no weight update; may call training jobs & Task cards, data cards, model cards, training logs, validation metrics & AutoML planning, preprocessing, model selection, hyperparameter choices \\
-AutoML-Agent & Specification-to-execution; evaluator; reflection across stages & Mostly agent/prompt/pipeline updates & Multi-stage validation, dataset metrics, deployment checks, agent critiques & Full-pipeline AutoML, data processing, model building, evaluation, deployment \\
-ADAS & Search over agent architectures; evaluator; possible population & Agent code/prompt/workflow trainability; usually no base-model training & Benchmark task performance, execution traces, success rates & Automated design of agentic systems, tool-using agents, task-specialized workflows \\
+AutoML-Agent & Specification-to-execution; evaluator; reflection across stages & Mostly agent, prompt, and pipeline updates & Multi-stage validation, dataset metrics, deployment checks, agent critiques & Full-pipeline AutoML, data processing, model building, evaluation, deployment \\
+ADAS & Search over agent architectures; evaluator; possible population & Agent code, prompt, and workflow trainability; usually no base-model training & Benchmark task performance, execution traces, success rates & Automated design of agentic systems, tool-using agents, task-specialized workflows \\
 OPRO & Search loop over textual candidates & No model training required & Scalar scores placed in optimization prompt & Prompt optimization, mathematical optimization, black-box objective tuning \\
-EvoPrompting & Search loop over architecture code & Candidate architectures trained/evaluated; LLM not necessarily trained & Task accuracy or benchmark performance of generated architectures & Code-level NAS, graph neural architectures, reasoning tasks \\
+EvoPrompting & Search loop over architecture code & Candidate architectures trained and evaluated; LLM not necessarily trained & Task accuracy or benchmark performance of generated architectures & Code-level NAS, graph neural architectures, reasoning tasks \\
 OpenEvolve & Search and evaluator loop over code artifacts & Code evolves; base model often fixed & Tests, benchmarks, execution results, performance metrics & Repository optimization, algorithm improvement, code repair \\
 AlphaEvolve & Search + population + evaluator & Code/archive evolves; model may be fixed & Executable evaluators, benchmark scores, archive comparisons & Algorithm discovery, code optimization, scientific or engineering programs \\
 FunSearch & Evaluator-driven program search with evolutionary archive & Program population evolves; base LLM fixed & Program execution and objective score & Mathematical discovery, combinatorial constructions, scientific programs \\
 Self-Debug & Evaluator + reflection for code repair & No necessary weight update; output/code revised & Execution errors, tests, examples, natural-language debugging feedback & Program synthesis, bug fixing, code explanation and repair \\
-CodeEvolve & Evaluator-guided code evolution & Code evolves; possible prompt/memory updates & Unit tests, integration tests, benchmark metrics, traces & Software repair, performance optimization, generated code improvement \\
+CodeEvolve & Evaluator-guided code evolution & Code evolves; possible prompt and memory updates & Unit tests, integration tests, benchmark metrics, traces & Software repair, performance optimization, generated code improvement \\
 SelfEvolve & General self-improvement loop; evaluator + reflection/search & Varies: prompt, memory, code, or weights & Task feedback, benchmark scores, validators, self-generated data & Agent improvement, reasoning, code, tool use, benchmark adaptation \\
 Reflexion & Reflection loop grounded in evaluator feedback & Memory update; no weight update required & Environment reward, task success/failure, verbal reflections & Agent tasks, reasoning, decision making, code generation \\
 Self-Refine & Inference-time reflection/revision & No weight update & LLM-generated critique or feedback prompts & Text generation, reasoning, code, dialogue, style refinement \\
-STaR & Reflection to rationale data; training loop & Yes, can fine-tune on rationales & Correct answers, generated rationales, filtering & Reasoning tasks, chain-of-thought improvement, rationale bootstrapping \\
-Agent Symbolic Learning & Reflection and search over symbolic agent components & Updates prompts/rules/modules, not necessarily weights & Textual feedback, task loss, component-level critiques & Multi-agent systems, prompt modules, agent architecture improvement \\
+STaR & Reflection to rationale data; training loop & Yes; can fine-tune on rationales & Correct answers, generated rationales, filtering & Reasoning tasks, chain-of-thought improvement, rationale bootstrapping \\
+Agent Symbolic Learning & Reflection and search over symbolic agent components & Updates prompts, rules, and modules, not necessarily weights & Textual feedback, task loss, component-level critiques & Multi-agent systems, prompt modules, agent architecture improvement \\
 LLaMEA & Population loop over meta-heuristic algorithms & Algorithm population evolves & Benchmark optimization performance & Automatic design of meta-heuristics and optimizers \\
 DGM & Population + search + evaluator with code self-modification & Agent code evolves; possible archive growth & Benchmarks, task success, code execution, lineage performance & Self-modifying coding agents, open-ended agent improvement \\
-SPIN & Self-play/training loop with population-like generated behavior & Yes, model fine-tuning & Self-play comparisons, generated responses, training objectives & Language-model improvement, preference-like self-play, reasoning behavior \\
-Absolute Zero & Self-play, self-generated tasks, evaluator, training & Yes, policy/model updates & Verifiable self-generated tasks, code execution or task validators & Zero-data reasoning/code improvement, curriculum generation, RL-style self-improvement \\
-\hline
-\end{tabular}
-\caption{Representative methods mapped to loop type, trainability, feedback source, and task domain.  Several methods compose multiple loops; the table lists the dominant interpretation for taxonomy purposes.}
-\label{tab:method-loop-comparison}
-\end{table}
+SPIN & Self-play/training loop with population-like generated behavior & Yes; model fine-tuning & Self-play comparisons, generated responses, training objectives & Language-model improvement, preference-like self-play, reasoning behavior \\
+Absolute Zero & Self-play, self-generated tasks, evaluator, training & Yes; policy/model updates & Verifiable self-generated tasks, code execution or task validators & Zero-data reasoning/code improvement, curriculum generation, RL-style self-improvement \\
+\end{longtable}}
 
 The table reveals several trends.  First, early and lightweight methods operate at prompt or output level.  Self-Refine and Reflexion require no model training and can be applied to many tasks, but their updates are limited to current outputs or memory.  Second, code and program-search methods gain power from executable evaluation.  FunSearch, Self-Debug, CodeEvolve, OpenEvolve, and AlphaEvolve can use tests or objective functions, making their feedback more reliable than self-critique alone.  Third, agent-design methods move the unit of evolution from answers to workflows.  ADAS and AutoML-Agent show that roles, tools, and control flow can be searched or revised.  Fourth, population and training methods increase persistence.  DGM and LLaMEA maintain archives; SPIN and Absolute Zero can update weights or policies.
 

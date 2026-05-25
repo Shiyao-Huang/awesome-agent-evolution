@@ -90,7 +90,7 @@ EvoMAC extends the MAC systems lineage (MetaGPT, ChatDev, AutoGen, MapCoder) by 
 
 EvoMAC is relevant for demonstrating self-evolution at the multi-agent system level, complementing the single-agent focus of RISE, RAGEN, and Godel Agent. Its practical applicability is stronger because it addresses a concrete application domain (software development) with measurable outcomes.
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 - **Multi-agent systems can evolve at the architecture level**: EvoMAC shows that self-evolution is not limited to individual agents but can operate on the structure of multi-agent networks, including adding/removing agents and restructuring workflows. This is a powerful paradigm for building adaptive agent systems.
 - **Objective environmental feedback is essential**: The ablation showing 12-21% performance drops when replacing the compiler with LLM self-critique provides strong evidence that objective feedback mechanisms are critical for reliable self-evolution. Any self-evolving system should prefer environment-grounded feedback over self-assessment.

@@ -284,9 +284,10 @@ function generateRawPapersTimestampIndex() {
   const outDir = path.join(ROOT, 'output');
   if (!existsSync(rawDir)) return;
   mkdirSync(outDir, { recursive: true });
+  const metadataFiles = new Set(['index.md', 'timestamp-audit.md']);
 
   const records = readdirSync(rawDir)
-    .filter((name) => name.endsWith('.md'))
+    .filter((name) => name.endsWith('.md') && !metadataFiles.has(name))
     .sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }))
     .map((name) => {
       const file = path.join('raw-papers', name);

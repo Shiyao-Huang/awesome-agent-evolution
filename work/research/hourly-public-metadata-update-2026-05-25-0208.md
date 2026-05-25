@@ -43,6 +43,6 @@ The user intent source remains `docs/project-management/user-direct-inputs.md` a
 - python3 scripts/enforce_raw_timestamps.py: passed, raw-github md=422, md_ok=422, missing_count=0
 - node scripts/analyze_github_project_data.mjs: passed, raw=422, classified=422, analyzed_projects=135, strict_evolution=72, broad_evolution=167
 - node scripts/generate_visual_assets.mjs: passed, 4 SVG assets regenerated
-- HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly .: passed with changed=17, added=27, deleted=0, 9,669 nodes, 9,954 edges, 30 clusters, 13 flows; FTS degraded
+- HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly .: passed with changed=17, added=27, deleted=0, 9,669 nodes, 9,954 edges, 30 clusters, 13 flows; FTS degraded
 - (cd site && npm run build): passed, 216 pages built with existing Astro z deprecation hints
 - (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex): passed, main.pdf 213 pages with existing font/overfull warnings

@@ -61,7 +61,7 @@ The native agency approach has two distinct phases:
 **Novelty**: ★★★★★
 **Rigor**: ★★★★☆
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 - **Self-evolution can be intrinsic**: The native agency concept challenges the assumption that self-evolution requires external mechanisms. If self-evolution capability can be trained into model parameters, it becomes a property of the model rather than the system architecture.
 - **Training objective matters**: Using knowledge utility rather than task correctness as the training reward produces fundamentally different behavior -- agents that generate understanding rather than just solving tasks.
 - **Scale vs. evolution trade-off**: The 14B model result suggests a new dimension in the scaling debate: self-evolution capability may be more cost-effective than raw parameter scaling.

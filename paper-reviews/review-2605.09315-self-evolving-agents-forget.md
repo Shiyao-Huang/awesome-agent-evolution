@@ -65,7 +65,7 @@ The study proceeds through identification, analysis, and mitigation:
 **Novelty**: ★★★★☆
 **Rigor**: ★★★★☆
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 - **Self-evolution is not monotonic**: This is a foundational insight for the survey. Every self-evolving system must address capability erosion -- it is not a bug but a fundamental property of continual adaptation.
 - **Four-channel erosion taxonomy**: The workflow/skill/model/memory erosion mapping directly corresponds to evolution channels in existing survey taxonomies and should be integrated as a risk dimension.
 - **CPE as a design principle**: Capability-preserving constraints should be a standard component of self-evolving system design, not an optional add-on.

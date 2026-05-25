@@ -161,17 +161,17 @@ id,platform,name,author,influence_rating,confidence,needs_enrichment,category,ti
 160,YouTube,颠覆传统AI智能体！AutoGen革命性创新GraphFlow技术 ... - YouTube,YouTube creator/channel,creator,medium,True,tutorial_or_implementation,2026-05,https://www.youtube.com/watch?v=q_IdxUGZsow
 161,51cto.com,构建AI工作流与智能体的信任：持续评估与优化指南 - 51CTO,51cto.com,unknown,medium,True,agent_framework,2026-05,https://www.51cto.com/article/824491.html
 162,53ai.com,自进化智能体的四维成长：模型、上下文、工具与架构如何自主迭代,53ai.com,unknown,medium,True,self_evolving_agent,2026-05,https://www.53ai.com/news/LargeLanguageModel/2025090474352.html
-163,Anthropic Blog,Building Effective AI Agents \ Anthropic,Anthropic,expert_org,medium,True,tutorial_or_implementation,2026-05,https://www.anthropic.com/engineering/building-effective-agents
-164,Anthropic Blog,Claude's extended thinking \ Anthropic,Anthropic,expert_org,medium,True,evaluation_benchmark,2026-05,https://www.anthropic.com/news/visible-extended-thinking
-165,Anthropic Blog,Developing a computer use model - Anthropic,Anthropic,expert_org,medium,True,agent_discussion_resource,2026-05,https://www.anthropic.com/news/developing-computer-use
-166,Anthropic Blog,Introducing Claude Sonnet 4.5 \ Anthropic,Anthropic,expert_org,medium,True,tutorial_or_implementation,2026-05,https://www.anthropic.com/news/claude-sonnet-4-5?library=true
-167,Anthropic Blog,Introducing Claude Sonnet 4.5 \ Anthropic,Anthropic,expert_org,medium,True,tutorial_or_implementation,2026-05,https://www.anthropic.com/news/claude-sonnet-4-5?939688b5_page=2
-168,Anthropic Blog,Introducing Sonnet 4.6 \ Anthropic,Anthropic,expert_org,medium,True,tutorial_or_implementation,2026-05,https://www.anthropic.com/news/claude-sonnet-4-6?ps_partner_key=ZGF2aWRsZXZpbm92NjA3NA&ps_xid=Z9sp46w9U8Fl1f
-169,Anthropic Blog,"Introducing computer use, a new Claude 3.5 Sonnet, and ... - Anthropic",Anthropic,expert_org,medium,True,agent_discussion_resource,2026-05,https://www.anthropic.com/news/3-5-models-and-computer-use
-170,Anthropic Blog,Mitigating the risk of prompt injections in browser use \ Anthropic,Anthropic,expert_org,medium,True,agent_discussion_resource,2026-05,https://www.anthropic.com/news/prompt-injection-defenses
-171,Anthropic Blog,New capabilities for building agents on the Anthropic API | Claude,Anthropic,expert_org,medium,True,tutorial_or_implementation,2026-05,https://www.anthropic.com/news/agent-capabilities-api/
-172,Anthropic Blog,Our framework for developing safe and trustworthy agents \ Anthropic,Anthropic,expert_org,medium,True,agent_framework,2026-05,https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents
-173,Anthropic Blog,Piloting Claude in Chrome | Claude,Anthropic,expert_org,medium,True,tutorial_or_implementation,2026-05,https://anthropic.com/news/claude-for-chrome
+163,Anthropic Blog,Building Effective AI Agents \ Anthropic,Anthropic,expert_org,high,False,tutorial_or_implementation,2026-05,https://www.anthropic.com/engineering/building-effective-agents
+164,Anthropic Blog,Claude's extended thinking \ Anthropic,Anthropic,expert_org,high,False,evaluation_benchmark,2026-05,https://www.anthropic.com/news/visible-extended-thinking
+165,Anthropic Blog,Developing a computer use model - Anthropic,Anthropic,expert_org,high,False,agent_discussion_resource,2026-05,https://www.anthropic.com/news/developing-computer-use
+166,Anthropic Blog,Introducing Claude Sonnet 4.5 \ Anthropic,Anthropic,expert_org,high,False,tutorial_or_implementation,2026-05,https://www.anthropic.com/news/claude-sonnet-4-5?library=true
+167,Anthropic Blog,Introducing Claude Sonnet 4.5 \ Anthropic,Anthropic,expert_org,high,False,tutorial_or_implementation,2026-05,https://www.anthropic.com/news/claude-sonnet-4-5?939688b5_page=2
+168,Anthropic Blog,Introducing Sonnet 4.6 \ Anthropic,Anthropic,expert_org,high,False,tutorial_or_implementation,2026-05,https://www.anthropic.com/news/claude-sonnet-4-6?ps_partner_key=ZGF2aWRsZXZpbm92NjA3NA&ps_xid=Z9sp46w9U8Fl1f
+169,Anthropic Blog,"Introducing computer use, a new Claude 3.5 Sonnet, and ... - Anthropic",Anthropic,expert_org,high,False,agent_discussion_resource,2026-05,https://www.anthropic.com/news/3-5-models-and-computer-use
+170,Anthropic Blog,Mitigating the risk of prompt injections in browser use \ Anthropic,Anthropic,expert_org,high,False,agent_discussion_resource,2026-05,https://www.anthropic.com/news/prompt-injection-defenses
+171,Anthropic Blog,New capabilities for building agents on the Anthropic API | Claude,Anthropic,expert_org,high,False,tutorial_or_implementation,2026-05,https://www.anthropic.com/news/agent-capabilities-api/
+172,Anthropic Blog,Our framework for developing safe and trustworthy agents \ Anthropic,Anthropic,expert_org,high,False,agent_framework,2026-05,https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents
+173,Anthropic Blog,Piloting Claude in Chrome | Claude,Anthropic,expert_org,high,False,tutorial_or_implementation,2026-05,https://anthropic.com/news/claude-for-chrome
 174,Dev.to,AION – Building an Autonomous AI Agent with Self-Improvement (Python + Web UI) - DEV Community,Dev.to author,developer_blogger,medium,True,self_evolving_agent,2026-05,https://dev.to/xynstr/aion-building-an-autonomous-ai-agent-with-self-improvement-python-web-ui-i85
 175,Dev.to,Anthropic's Agents Now Self-Improve Between Sessions. Here's How Dreaming Works. - DEV Community,Dev.to author,developer_blogger,medium,True,self_evolving_agent,2026-05,https://dev.to/evan-dong/anthropics-agents-now-self-improve-between-sessions-heres-how-dreaming-works-48l8
 176,Dev.to,"Building AI Agents with Python: A Practical, Open-Source First Guide - DEV Community",Dev.to author,developer_blogger,medium,True,tutorial_or_implementation,2026-05,https://dev.to/cheney_li_ad7c00bcc8edcb2/building-ai-agents-with-python-a-practical-open-source-first-guide-1klk
@@ -300,16 +300,16 @@ id,platform,name,author,influence_rating,confidence,needs_enrichment,category,ti
 299,Juejin,智能体来了：从 0 到 1 搭建高效 AI Agent 工作流全指南从“聊天机器人”到“数字化员工” 核心原理：智能体设 - 掘金,掘金作者,cn_developer,medium,True,self_evolving_agent,2026-05,https://juejin.cn/post/7600986495928123433
 300,Juejin,智能体诞生了：从0-1构建生产力工作流程,掘金作者,cn_developer,medium,True,agent_framework,2026-05,https://juejin.cn/post/7598418891401166902
 301,Juejin,让 AI Agent 自己进化，但绝不放飞自我 —— 这个开源项目有点东西先说一个让我纠结了很久的问题 AI Agent - 掘金,掘金作者,cn_developer,medium,True,self_evolving_agent,2026-05,https://juejin.cn/post/7631548637381951498
-302,LangChain Blog,"Announcing LangGraph v0.1 & LangGraph Cloud: Running agents at scale, reliably",LangChain,expert_org,medium,True,tutorial_or_implementation,2026-05,https://blog.langchain.com/langgraph-cloud
-303,LangChain Blog,Building LangGraph: Designing an Agent Runtime from first principles,LangChain,expert_org,medium,True,tutorial_or_implementation,2026-05,https://blog.langchain.com/building-langgraph
-304,LangChain Blog,Command: A new tool for building multi-agent architectures in LangGraph,LangChain,expert_org,medium,True,tutorial_or_implementation,2026-05,https://www.blog.langchain.com/command-a-new-tool-for-multi-agent-architectures-in-langgraph/
-305,LangChain Blog,How Exa built a Web Research Multi-Agent System with LangGraph and LangSmith,LangChain,expert_org,medium,True,tutorial_or_implementation,2026-05,https://blog.langchain.com/exa
-306,LangChain Blog,Introducing Assistant Editor for configuring agents in LangGraph Studio,LangChain,expert_org,medium,True,agent_framework,2026-05,https://blog.langchain.com/asssistant-editor
-307,LangChain Blog,Is LangGraph Used In Production?,LangChain,expert_org,medium,True,tutorial_or_implementation,2026-05,https://www.blog.langchain.com/is-langgraph-used-in-production/
-308,LangChain Blog,LangGraph 0.3 Release: Prebuilt Agents,LangChain,expert_org,medium,True,tutorial_or_implementation,2026-05,https://blog.langchain.com/langgraph-0-3-release-prebuilt-agents
-309,LangChain Blog,Plan-and-Execute Agents,LangChain,expert_org,medium,True,agent_framework,2026-05,https://blog.langchain.com/planning-agents
-310,LangChain Blog,Top 5 LangGraph Agents in Production 2024,LangChain,expert_org,medium,True,tutorial_or_implementation,2026-05,https://blog.langchain.com/top-5-langgraph-agents-in-production-2024
-311,LangChain Blog,Unify Launches Agents for Account Qualification using LangGraph and LangSmith,LangChain,expert_org,medium,True,tutorial_or_implementation,2026-05,https://blog.langchain.com/unify-launches-agents-for-account-qualification-using-langgraph-and-langsmith
+302,LangChain Blog,"Announcing LangGraph v0.1 & LangGraph Cloud: Running agents at scale, reliably",LangChain,expert_org,high,False,tutorial_or_implementation,2026-05,https://blog.langchain.com/langgraph-cloud
+303,LangChain Blog,Building LangGraph: Designing an Agent Runtime from first principles,LangChain,expert_org,high,False,tutorial_or_implementation,2026-05,https://blog.langchain.com/building-langgraph
+304,LangChain Blog,Command: A new tool for building multi-agent architectures in LangGraph,LangChain,expert_org,high,False,tutorial_or_implementation,2026-05,https://www.blog.langchain.com/command-a-new-tool-for-multi-agent-architectures-in-langgraph/
+305,LangChain Blog,How Exa built a Web Research Multi-Agent System with LangGraph and LangSmith,LangChain,expert_org,high,False,tutorial_or_implementation,2026-05,https://blog.langchain.com/exa
+306,LangChain Blog,Introducing Assistant Editor for configuring agents in LangGraph Studio,LangChain,expert_org,high,False,agent_framework,2026-05,https://blog.langchain.com/asssistant-editor
+307,LangChain Blog,Is LangGraph Used In Production?,LangChain,expert_org,high,False,tutorial_or_implementation,2026-05,https://www.blog.langchain.com/is-langgraph-used-in-production/
+308,LangChain Blog,LangGraph 0.3 Release: Prebuilt Agents,LangChain,expert_org,high,False,tutorial_or_implementation,2026-05,https://blog.langchain.com/langgraph-0-3-release-prebuilt-agents
+309,LangChain Blog,Plan-and-Execute Agents,LangChain,expert_org,high,False,agent_framework,2026-05,https://blog.langchain.com/planning-agents
+310,LangChain Blog,Top 5 LangGraph Agents in Production 2024,LangChain,expert_org,high,False,tutorial_or_implementation,2026-05,https://blog.langchain.com/top-5-langgraph-agents-in-production-2024
+311,LangChain Blog,Unify Launches Agents for Account Qualification using LangGraph and LangSmith,LangChain,expert_org,high,False,tutorial_or_implementation,2026-05,https://blog.langchain.com/unify-launches-agents-for-account-qualification-using-langgraph-and-langsmith
 312,Leiphone,DeepMind的智能体成精了，还学会“发脾气”了？ | 雷峰网,雷锋网作者,cn_media,medium,True,self_evolving_agent,2026-05,https://m.leiphone.com/category/yanxishe/mQYWYxBY2dskn8LT.html
 313,Leiphone,PC 正在「物种进化」：英特尔如何用混合 AI 制造你的数字分身？ | 雷峰网,雷锋网作者,cn_media,medium,True,self_evolving_agent,2026-05,https://m.leiphone.com/category/chips/qlFI2y6BTOx6TwAS.html
 314,Leiphone,Pokee.ai 朱哲清：用 RL 搭建智能体的「骨骼与神经」| AI 产品十人谈 | 雷峰网,雷锋网作者,cn_media,medium,True,self_evolving_agent,2026-05,https://m.leiphone.com/category/ai/vwGwJe9UAAQ6HRCJ.html
@@ -369,27 +369,27 @@ id,platform,name,author,influence_rating,confidence,needs_enrichment,category,ti
 368,Medium/TDS,"When AI Trains Itself: A Deep Dive into HyperAgents | by Addo Zhang | Apr, 2026 | Medium",Medium/TDS author,practitioner_or_blogger,medium,True,agent_framework,2026-05,https://addozhang.medium.com/when-ai-trains-itself-a-deep-dive-into-hyperagents-f1122c860d91
 369,Medium/TDS,"Why LLM agents must evolve in the wild using an AgentGym, not ...",Medium/TDS author,practitioner_or_blogger,medium,True,tutorial_or_implementation,2026-05,https://medium.com/data-science-collective/why-llm-agents-must-evolve-in-the-wild-not-just-imitate-experts-2bca5347164b
 370,Medium/TDS,Your AI Agent Makes the Same Mistake Twice. A Self-Evolving Agent Doesn’t | by kumaran srinivasan | Medium,Medium/TDS author,practitioner_or_blogger,medium,True,self_evolving_agent,2026-05,https://medium.com/@kumaran.isk/your-ai-agent-makes-the-same-mistake-twice-a-self-evolving-agent-doesnt-a77349e07f7d
-371,OpenAI Blog,15 lessons learned building ChatGPT Apps | OpenAI Developers,OpenAI,expert_org,medium,True,tutorial_or_implementation,2026-05,https://developers.openai.com/blog/15-lessons-building-chatgpt-apps
-372,OpenAI Blog,API blog posts | OpenAI Developers,OpenAI,expert_org,medium,True,tutorial_or_implementation,2026-05,https://developers.openai.com/blog/topic/api/
-373,OpenAI Blog,Apps SDK blog posts,OpenAI,expert_org,medium,True,tutorial_or_implementation,2026-05,https://developers.openai.com/blog/topic/apps-sdk/
-374,OpenAI Blog,Blog | OpenAI Developers,OpenAI,expert_org,medium,True,tutorial_or_implementation,2026-05,https://developers.openai.com/blog
-375,OpenAI Blog,Codex blog posts | OpenAI Developers,OpenAI,expert_org,medium,True,agent_framework,2026-05,https://developers.openai.com/blog/topic/codex
-376,OpenAI Blog,New models and developer products announced at DevDay | OpenAI,OpenAI,expert_org,medium,True,tutorial_or_implementation,2026-05,https://openai.com/blog/new-models-and-developer-products-announced-at-devday
-377,OpenAI Blog,Self-Evolving Agents - A Cookbook for Autonomous Agent Retraining,OpenAI,expert_org,medium,True,self_evolving_agent,2026-05,https://developers.openai.com/cookbook/examples/partners/self_evolving_agents/autonomous_agent_retraining/
-378,OpenAI Blog,Shell + Skills + Compaction: Tips for long-running agents that do ...,OpenAI,expert_org,medium,True,agent_framework,2026-05,https://developers.openai.com/blog/skills-shell-tips
-379,OpenAI Blog,Testing Agent Skills Systematically with Evals - OpenAI Developers,OpenAI,expert_org,medium,True,agent_framework,2026-05,https://developers.openai.com/blog/eval-skills
-380,OpenAI Blog,Using skills to accelerate OSS maintenance - OpenAI Developers,OpenAI,expert_org,medium,True,tutorial_or_implementation,2026-05,https://developers.openai.com/blog/skills-agents-sdk
-381,OpenAI Blog,What makes a great ChatGPT app | OpenAI Developers,OpenAI,expert_org,medium,True,tutorial_or_implementation,2026-05,https://developers.openai.com/blog/what-makes-a-great-chatgpt-app
-382,QbitAI,AI玩手机越玩越6！西湖大学发布新智能体：会自我进化的AppAgentX,量子位作者,cn_ai_media,medium,True,self_evolving_agent,2026-05,https://www.qbitai.com/2025/03/262790.html
-383,QbitAI,AI自己写代码让智能体进化！OpenAI的大模型有“人类思想”那味了 – 量子位,量子位作者,cn_ai_media,medium,True,self_evolving_agent,2026-05,https://www.qbitai.com/2022/06/35428.html
-384,QbitAI,Meta华人实习生搞出超级智能体！自己写代码实现自我进化 - 量子位,量子位作者,cn_ai_media,medium,True,self_evolving_agent,2026-05,https://www.qbitai.com/2026/03/393645.html
-385,QbitAI,养虾时代终结？免部署、7×24小时在线、自进化的“赛博骡子”来了！ – 量子位,量子位作者,cn_ai_media,medium,True,self_evolving_agent,2026-05,https://www.qbitai.com/2026/03/388071.html
-386,QbitAI,卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k,量子位作者,cn_ai_media,medium,True,self_evolving_agent,2026-05,https://www.qbitai.com/2026/03/384953.html
-387,QbitAI,字节Seed最新版原生智能体来了！一个模型搞定手机/电脑/浏览器自主操作 – 量子位,量子位作者,cn_ai_media,medium,True,self_evolving_agent,2026-05,https://www.qbitai.com/2025/09/328710.html
-388,QbitAI,官方揭秘ChatGPT Agent背后原理！通过强化学习让模型自主探索最佳工具组合 – 量子位,量子位作者,cn_ai_media,medium,True,self_evolving_agent,2026-05,https://www.qbitai.com/2025/07/312265.html
-389,QbitAI,性能提升84%-166%！L-Zero仅靠强化学习解锁大模型探索世界的能力 | 已开源 – 量子位,量子位作者,cn_ai_media,medium,True,self_evolving_agent,2026-05,https://www.qbitai.com/2025/07/303589.html
-390,QbitAI,浙大&中科院让Agent学会自我进化，玩德州扑克心机尽显 – 量子位,量子位作者,cn_ai_media,medium,True,self_evolving_agent,2026-05,https://www.qbitai.com/2024/03/127294.html
-391,QbitAI,突破Claude-4编程上限！自进化Agent框架拿下新SOTA，已开源,量子位作者,cn_ai_media,medium,True,self_evolving_agent,2026-05,https://www.qbitai.com/2025/08/324007.html
+371,OpenAI Blog,15 lessons learned building ChatGPT Apps | OpenAI Developers,OpenAI,expert_org,high,False,tutorial_or_implementation,2026-05,https://developers.openai.com/blog/15-lessons-building-chatgpt-apps
+372,OpenAI Blog,API blog posts | OpenAI Developers,OpenAI,expert_org,high,False,tutorial_or_implementation,2026-05,https://developers.openai.com/blog/topic/api/
+373,OpenAI Blog,Apps SDK blog posts,OpenAI,expert_org,high,False,tutorial_or_implementation,2026-05,https://developers.openai.com/blog/topic/apps-sdk/
+374,OpenAI Blog,Blog | OpenAI Developers,OpenAI,expert_org,high,False,tutorial_or_implementation,2026-05,https://developers.openai.com/blog
+375,OpenAI Blog,Codex blog posts | OpenAI Developers,OpenAI,expert_org,high,False,agent_framework,2026-05,https://developers.openai.com/blog/topic/codex
+376,OpenAI Blog,New models and developer products announced at DevDay | OpenAI,OpenAI,expert_org,high,False,tutorial_or_implementation,2026-05,https://openai.com/blog/new-models-and-developer-products-announced-at-devday
+377,OpenAI Blog,Self-Evolving Agents - A Cookbook for Autonomous Agent Retraining,OpenAI,expert_org,high,False,self_evolving_agent,2026-05,https://developers.openai.com/cookbook/examples/partners/self_evolving_agents/autonomous_agent_retraining/
+378,OpenAI Blog,Shell + Skills + Compaction: Tips for long-running agents that do ...,OpenAI,expert_org,high,False,agent_framework,2026-05,https://developers.openai.com/blog/skills-shell-tips
+379,OpenAI Blog,Testing Agent Skills Systematically with Evals - OpenAI Developers,OpenAI,expert_org,high,False,agent_framework,2026-05,https://developers.openai.com/blog/eval-skills
+380,OpenAI Blog,Using skills to accelerate OSS maintenance - OpenAI Developers,OpenAI,expert_org,high,False,tutorial_or_implementation,2026-05,https://developers.openai.com/blog/skills-agents-sdk
+381,OpenAI Blog,What makes a great ChatGPT app | OpenAI Developers,OpenAI,expert_org,high,False,tutorial_or_implementation,2026-05,https://developers.openai.com/blog/what-makes-a-great-chatgpt-app
+382,QbitAI,AI玩手机越玩越6！西湖大学发布新智能体：会自我进化的AppAgentX,QbitAI / 量子位,cn_ai_media,medium-high,False,self_evolving_agent,2026-05,https://www.qbitai.com/2025/03/262790.html
+383,QbitAI,AI自己写代码让智能体进化！OpenAI的大模型有“人类思想”那味了 – 量子位,QbitAI / 量子位,cn_ai_media,medium-high,False,self_evolving_agent,2026-05,https://www.qbitai.com/2022/06/35428.html
+384,QbitAI,Meta华人实习生搞出超级智能体！自己写代码实现自我进化 - 量子位,QbitAI / 量子位,cn_ai_media,medium-high,False,self_evolving_agent,2026-05,https://www.qbitai.com/2026/03/393645.html
+385,QbitAI,养虾时代终结？免部署、7×24小时在线、自进化的“赛博骡子”来了！ – 量子位,QbitAI / 量子位,cn_ai_media,medium-high,False,self_evolving_agent,2026-05,https://www.qbitai.com/2026/03/388071.html
+386,QbitAI,卡帕西开源Agent自进化训练框架，5分钟一轮实验，48h内揽星9.5k,QbitAI / 量子位,cn_ai_media,medium-high,False,self_evolving_agent,2026-05,https://www.qbitai.com/2026/03/384953.html
+387,QbitAI,字节Seed最新版原生智能体来了！一个模型搞定手机/电脑/浏览器自主操作 – 量子位,QbitAI / 量子位,cn_ai_media,medium-high,False,self_evolving_agent,2026-05,https://www.qbitai.com/2025/09/328710.html
+388,QbitAI,官方揭秘ChatGPT Agent背后原理！通过强化学习让模型自主探索最佳工具组合 – 量子位,QbitAI / 量子位,cn_ai_media,medium-high,False,self_evolving_agent,2026-05,https://www.qbitai.com/2025/07/312265.html
+389,QbitAI,性能提升84%-166%！L-Zero仅靠强化学习解锁大模型探索世界的能力 | 已开源 – 量子位,QbitAI / 量子位,cn_ai_media,medium-high,False,self_evolving_agent,2026-05,https://www.qbitai.com/2025/07/303589.html
+390,QbitAI,浙大&中科院让Agent学会自我进化，玩德州扑克心机尽显 – 量子位,QbitAI / 量子位,cn_ai_media,medium-high,False,self_evolving_agent,2026-05,https://www.qbitai.com/2024/03/127294.html
+391,QbitAI,突破Claude-4编程上限！自进化Agent框架拿下新SOTA，已开源,QbitAI / 量子位,cn_ai_media,medium-high,False,self_evolving_agent,2026-05,https://www.qbitai.com/2025/08/324007.html
 392,SegmentFault,GPT-5点赞！八大顶尖机构发布「自进化智能体」全面综述,segmentfault.com,unknown,medium,True,self_evolving_agent,2026-05,https://segmentfault.com/a/1190000047208153
 393,SegmentFault,人工智能 - AI Agent进化之路：从工具到伙伴，从自动化到自主决策 - 程序新知 - SegmentFault 思否,segmentfault.com,unknown,medium,True,self_evolving_agent,2026-05,https://segmentfault.com/a/1190000047575736
 394,SegmentFault,人工智能 - AI人格的创世蓝图：深度解构《自衍体》的意识架构设计 - 个人文章 - SegmentFault 思否,segmentfault.com,unknown,medium,True,self_evolving_agent,2026-05,https://segmentfault.com/a/1190000046904505
@@ -556,16 +556,16 @@ id,platform,name,author,influence_rating,confidence,needs_enrichment,category,ti
 555,hub.baai.ac.cn,Multi-Agent Evolve: LLM Self-Improve through Co-evolution - 智源社区,hub.baai.ac.cn,unknown,medium,True,self_evolving_agent,2026-05,https://hub.baai.ac.cn/paper/aba557c7-f7d2-47cd-948f-c59d42850904
 556,hub.baai.ac.cn,全球首个AI智能体「自进化」开源框架来了！一次部署，终生可用 - 智源社区,hub.baai.ac.cn,unknown,medium,True,self_evolving_agent,2026-05,https://hub.baai.ac.cn/view/46081
 557,hub.baai.ac.cn,周靖人署名，通义实验室开源智能体自进化系统：让模型学会“自我反思”，14B也能越级打怪 - 智源社区,hub.baai.ac.cn,unknown,medium,True,self_evolving_agent,2026-05,https://hub.baai.ac.cn/view/50505
-558,humanloop.com,5 LLM Evaluation Tools You Should Know in 2025 - Humanloop,humanloop.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://humanloop.com/blog/best-llm-evaluation-tools
-559,humanloop.com,A look back at 2024: How Humanloop has evolved,humanloop.com,unknown,medium,True,evaluation_benchmark,2026-05,https://humanloop.com/blog/how-humanloop-has-evolved
-560,humanloop.com,Building Reliable Agents with Ironclad - Humanloop,humanloop.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://humanloop.com/blog/building-agents-with-ironclad
-561,humanloop.com,Evaluating LLM Applications - Humanloop,humanloop.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://humanloop.com/blog/evaluating-llm-apps
-562,humanloop.com,Introducing Templates in Humanloop,humanloop.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://humanloop.com/blog/template-library-launch
-563,humanloop.com,OpenAI Agents SDK,humanloop.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://humanloop.com/blog/openai-agents-sdk
-564,humanloop.com,Prompt Caching,humanloop.com,unknown,medium,True,evaluation_benchmark,2026-05,https://humanloop.com/blog/prompt-caching
-565,humanloop.com,Retrieval Augmented Generation (RAG): Explained,humanloop.com,unknown,medium,True,evaluation_benchmark,2026-05,https://humanloop.com/blog/rag-explained
-566,humanloop.com,What is Prompt Management?,humanloop.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://humanloop.com/blog/prompt-management
-567,humanloop.com,Why Your AI Product Needs Evals with Hamel Husain,humanloop.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://humanloop.com/blog/why-your-product-needs-evals
+558,humanloop.com,5 LLM Evaluation Tools You Should Know in 2025 - Humanloop,Humanloop,expert_org,medium-high,False,tutorial_or_implementation,2026-05,https://humanloop.com/blog/best-llm-evaluation-tools
+559,humanloop.com,A look back at 2024: How Humanloop has evolved,Humanloop,expert_org,medium-high,False,evaluation_benchmark,2026-05,https://humanloop.com/blog/how-humanloop-has-evolved
+560,humanloop.com,Building Reliable Agents with Ironclad - Humanloop,Humanloop,expert_org,medium-high,False,tutorial_or_implementation,2026-05,https://humanloop.com/blog/building-agents-with-ironclad
+561,humanloop.com,Evaluating LLM Applications - Humanloop,Humanloop,expert_org,medium-high,False,tutorial_or_implementation,2026-05,https://humanloop.com/blog/evaluating-llm-apps
+562,humanloop.com,Introducing Templates in Humanloop,Humanloop,expert_org,medium-high,False,tutorial_or_implementation,2026-05,https://humanloop.com/blog/template-library-launch
+563,humanloop.com,OpenAI Agents SDK,Humanloop,expert_org,medium-high,False,tutorial_or_implementation,2026-05,https://humanloop.com/blog/openai-agents-sdk
+564,humanloop.com,Prompt Caching,Humanloop,expert_org,medium-high,False,evaluation_benchmark,2026-05,https://humanloop.com/blog/prompt-caching
+565,humanloop.com,Retrieval Augmented Generation (RAG): Explained,Humanloop,expert_org,medium-high,False,evaluation_benchmark,2026-05,https://humanloop.com/blog/rag-explained
+566,humanloop.com,What is Prompt Management?,Humanloop,expert_org,medium-high,False,tutorial_or_implementation,2026-05,https://humanloop.com/blog/prompt-management
+567,humanloop.com,Why Your AI Product Needs Evals with Hamel Husain,Humanloop,expert_org,medium-high,False,tutorial_or_implementation,2026-05,https://humanloop.com/blog/why-your-product-needs-evals
 568,ibm.com,什么是AI agent (AI 智能体)？ - IBM,ibm.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://www.ibm.com/cn-zh/think/topics/ai-agents
 569,jishuzhan.net,Hermes Agent 源码深度解析：自我进化的 AI Agent 框架架构设计 - 技术栈,jishuzhan.net,unknown,medium,True,self_evolving_agent,2026-05,https://jishuzhan.net/article/2043579718826524673
 570,jishuzhan.net,LangGraph 12. Learning & Adaptation，用 LangGraph 写一个会「改进自己」的智能体（含代码示例） - 技术栈,jishuzhan.net,unknown,medium,True,tutorial_or_implementation,2026-05,https://jishuzhan.net/article/2034431976166457346
@@ -580,15 +580,15 @@ id,platform,name,author,influence_rating,confidence,needs_enrichment,category,ti
 579,microsoft.com,Agent Lightning：零侵入强化学习，为任意AI智能体插上优化的翅膀,microsoft.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://www.microsoft.com/en-us/research/articles/agent-lightning/
 580,mindstudio.ai,How to Build Self-Improving AI Agents with Scheduled Tasks | MindStudio,mindstudio.ai,unknown,medium,True,self_evolving_agent,2026-05,https://www.mindstudio.ai/blog/how-to-build-self-improving-ai-agents-scheduled-tasks
 581,mittrchina.com,华人团队提出智能体自我进化框架，无需人类标注 - 麻省理工科技评论,mittrchina.com,unknown,medium,True,self_evolving_agent,2026-05,https://www.mittrchina.com/news/detail/15535
-582,modal.com,Autoscaling Autoresearch: Give your agents elastic GPUs on Modal,modal.com,unknown,medium,True,agent_framework,2026-05,https://modal.com/blog/autoscaling-autoresearch
-583,modal.com,Building with Modal and the OpenAI Agents SDK,modal.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://modal.com/blog/building-with-modal-and-the-openai-agent-sdk
-584,modal.com,How Ramp built a full context background coding agent on Modal,modal.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://modal.com/blog/how-ramp-built-a-full-context-background-coding-agent-on-modal
-585,modal.com,How to deploy LiveKit Agents on Modal,modal.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://modal.com/blog/livekit-modal
-586,modal.com,Introducing Claude Managed Agents with Modal Sandboxes,modal.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://modal.com/blog/introducing-claude-managed-agents-with-modal-sandboxes
-587,modal.com,Modal Sandboxes are generally available,modal.com,unknown,medium,True,agent_framework,2026-05,https://modal.com/blog/sandbox-launch
-588,modal.com,Open-source AI agents - Modal,modal.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://modal.com/blog/open-ai-agents
-589,modal.com,"Product updates: Running batch jobs with 1M inputs, ephemeral apps, and a new TensorRT-LLM example",modal.com,unknown,medium,True,agent_framework,2026-05,https://modal.com/blog/modal-product-updates-apr-2025
-590,modal.com,Top AI Code Sandbox Products in 2025,modal.com,unknown,medium,True,agent_framework,2026-05,https://modal.com/blog/top-code-agent-sandbox-products
+582,modal.com,Autoscaling Autoresearch: Give your agents elastic GPUs on Modal,Modal,expert_org,high,False,agent_framework,2026-05,https://modal.com/blog/autoscaling-autoresearch
+583,modal.com,Building with Modal and the OpenAI Agents SDK,Modal,expert_org,high,False,tutorial_or_implementation,2026-05,https://modal.com/blog/building-with-modal-and-the-openai-agent-sdk
+584,modal.com,How Ramp built a full context background coding agent on Modal,Modal,expert_org,high,False,tutorial_or_implementation,2026-05,https://modal.com/blog/how-ramp-built-a-full-context-background-coding-agent-on-modal
+585,modal.com,How to deploy LiveKit Agents on Modal,Modal,expert_org,high,False,tutorial_or_implementation,2026-05,https://modal.com/blog/livekit-modal
+586,modal.com,Introducing Claude Managed Agents with Modal Sandboxes,Modal,expert_org,high,False,tutorial_or_implementation,2026-05,https://modal.com/blog/introducing-claude-managed-agents-with-modal-sandboxes
+587,modal.com,Modal Sandboxes are generally available,Modal,expert_org,high,False,agent_framework,2026-05,https://modal.com/blog/sandbox-launch
+588,modal.com,Open-source AI agents - Modal,Modal,expert_org,high,False,tutorial_or_implementation,2026-05,https://modal.com/blog/open-ai-agents
+589,modal.com,"Product updates: Running batch jobs with 1M inputs, ephemeral apps, and a new TensorRT-LLM example",Modal,expert_org,high,False,agent_framework,2026-05,https://modal.com/blog/modal-product-updates-apr-2025
+590,modal.com,Top AI Code Sandbox Products in 2025,Modal,expert_org,high,False,agent_framework,2026-05,https://modal.com/blog/top-code-agent-sandbox-products
 591,modelscope.cn,AgentEvolver：让智能体系统学会「自我进化」 - ModelScope,modelscope.cn,unknown,medium,True,self_evolving_agent,2026-05,https://www.modelscope.cn/learn/2804
 592,news.qq.com,GPT-5点赞！八大顶尖机构发布「自进化智能体」全面综述 - QQ News,news.qq.com,unknown,medium,True,self_evolving_agent,2026-05,https://news.qq.com/rain/a/20250821A04QJZ00
 593,newsletter.swirlai.com,Building AI Agents from scratch - Part 2: Reflection and Working Memory,newsletter.swirlai.com,unknown,medium,True,tutorial_or_implementation,2026-05,https://www.newsletter.swirlai.com/p/building-ai-agents-from-scratch-part-8ca
@@ -617,31 +617,31 @@ id,platform,name,author,influence_rating,confidence,needs_enrichment,category,ti
 616,sys-ele.com,复杂任务下的多智能体协同进化算法,sys-ele.com,unknown,medium,True,self_evolving_agent,2026-05,https://www.sys-ele.com/CN/abstract/abstract7970.shtml
 617,tangshuang.net,AI智能体工作流，突破LLM代际差异，GPT-3.5干出4.0的效果,tangshuang.net,unknown,medium,True,agent_discussion_resource,2026-05,https://www.tangshuang.net/8905.html
 618,themoonlight.io,[论文评述] Long Term Memory: The Foundation of AI Self-Evolution,themoonlight.io,unknown,medium,True,self_evolving_agent,2026-05,https://www.themoonlight.io/zh/review/long-term-memory-the-foundation-of-ai-self-evolution
-619,thenewstack.io,A Developer's Guide to the AutoGen AI Agent Framework,thenewstack.io,unknown,medium,True,tutorial_or_implementation,2026-05,https://thenewstack.io/a-developers-guide-to-the-autogen-ai-agent-framework/
-620,thenewstack.io,A Guide To Building Scalable AI Agents - The New Stack,thenewstack.io,unknown,medium,True,tutorial_or_implementation,2026-05,https://thenewstack.io/a-guide-to-building-scalable-ai-agents/
-621,thenewstack.io,Developer Guide to the CrewAI Agent Framework for Python - The New Stack,thenewstack.io,unknown,medium,True,tutorial_or_implementation,2026-05,https://thenewstack.io/developer-guide-to-the-crewai-agent-framework-for-python/
-622,thenewstack.io,Google finally builds the AI and agent platform it's been describing for years - The New Stack,thenewstack.io,unknown,medium,True,tutorial_or_implementation,2026-05,https://thenewstack.io/google-gemini-agent-platform/
-623,thenewstack.io,Java Developers Get Multiple Paths To Building AI Agents,thenewstack.io,unknown,medium,True,tutorial_or_implementation,2026-05,https://thenewstack.io/java-developers-get-multiple-paths-to-building-ai-agents/
-624,thenewstack.io,Meet Embabel: A Framework for Building AI Agents With Java,thenewstack.io,unknown,medium,True,tutorial_or_implementation,2026-05,https://thenewstack.io/meet-embabel-a-framework-for-building-ai-agents-with-java/
-625,thenewstack.io,"Meet Kagent, Open Source Framework for AI Agents in Kubernetes - The New Stack",thenewstack.io,unknown,medium,True,tutorial_or_implementation,2026-05,https://thenewstack.io/meet-kagent-open-source-framework-for-ai-agents-in-kubernetes/
-626,thenewstack.io,Run AI Agents in the Browser With the Hashbrown Framework,thenewstack.io,unknown,medium,True,agent_framework,2026-05,https://thenewstack.io/run-ai-agents-in-the-browser-with-the-hashbrown-framework/
-627,thenewstack.io,What Is Google’s Agent Development Kit? An Architectural Tour - The New Stack,thenewstack.io,unknown,medium,True,tutorial_or_implementation,2026-05,https://thenewstack.io/what-is-googles-agent-development-kit-an-architectural-tour/
-628,thenewstack.io,Why Rancher's Founders Pivoted From Kubernetes to Agentic AI - The New Stack,thenewstack.io,unknown,medium,True,agent_framework,2026-05,https://thenewstack.io/why-ranchers-founders-pivoted-from-kubernetes-to-agentic-ai/
+619,thenewstack.io,A Developer's Guide to the AutoGen AI Agent Framework,The New Stack,tech_media,medium-high,False,tutorial_or_implementation,2026-05,https://thenewstack.io/a-developers-guide-to-the-autogen-ai-agent-framework/
+620,thenewstack.io,A Guide To Building Scalable AI Agents - The New Stack,The New Stack,tech_media,medium-high,False,tutorial_or_implementation,2026-05,https://thenewstack.io/a-guide-to-building-scalable-ai-agents/
+621,thenewstack.io,Developer Guide to the CrewAI Agent Framework for Python - The New Stack,The New Stack,tech_media,medium-high,False,tutorial_or_implementation,2026-05,https://thenewstack.io/developer-guide-to-the-crewai-agent-framework-for-python/
+622,thenewstack.io,Google finally builds the AI and agent platform it's been describing for years - The New Stack,The New Stack,tech_media,medium-high,False,tutorial_or_implementation,2026-05,https://thenewstack.io/google-gemini-agent-platform/
+623,thenewstack.io,Java Developers Get Multiple Paths To Building AI Agents,The New Stack,tech_media,medium-high,False,tutorial_or_implementation,2026-05,https://thenewstack.io/java-developers-get-multiple-paths-to-building-ai-agents/
+624,thenewstack.io,Meet Embabel: A Framework for Building AI Agents With Java,The New Stack,tech_media,medium-high,False,tutorial_or_implementation,2026-05,https://thenewstack.io/meet-embabel-a-framework-for-building-ai-agents-with-java/
+625,thenewstack.io,"Meet Kagent, Open Source Framework for AI Agents in Kubernetes - The New Stack",The New Stack,tech_media,medium-high,False,tutorial_or_implementation,2026-05,https://thenewstack.io/meet-kagent-open-source-framework-for-ai-agents-in-kubernetes/
+626,thenewstack.io,Run AI Agents in the Browser With the Hashbrown Framework,The New Stack,tech_media,medium-high,False,agent_framework,2026-05,https://thenewstack.io/run-ai-agents-in-the-browser-with-the-hashbrown-framework/
+627,thenewstack.io,What Is Google’s Agent Development Kit? An Architectural Tour - The New Stack,The New Stack,tech_media,medium-high,False,tutorial_or_implementation,2026-05,https://thenewstack.io/what-is-googles-agent-development-kit-an-architectural-tour/
+628,thenewstack.io,Why Rancher's Founders Pivoted From Kubernetes to Agentic AI - The New Stack,The New Stack,tech_media,medium-high,False,agent_framework,2026-05,https://thenewstack.io/why-ranchers-founders-pivoted-from-kubernetes-to-agentic-ai/
 629,tianpan.co,How Agents Teach Themselves: The Closed-Loop Self-Improvement Architecture,tianpan.co,unknown,medium,True,agent_discussion_resource,2026-04,https://tianpan.co/blog/2026-04-10-agents-teach-themselves-closed-loop-self-improvement
 630,tianpan.co,When Workflow Engines Beat LLM Agents: A Decision Framework for Deterministic Orchestration,tianpan.co,unknown,medium,True,agent_framework,2026-04,https://tianpan.co/blog/2026-04-20-workflow-engines-beat-llm-agents
 631,tinyash.com,从零开始构建 Agentic AI 工作流：多步骤任务自动化的完整实战指南 - 小灰灰的笔记,tinyash.com,unknown,medium,True,agent_framework,2026-05,https://www.tinyash.com/blog/agentic-ai-workflow-tutorial/
 632,ui.adsabs.harvard.edu,AgentEvolver: Towards Efficient Self-Evolving Agent System - ADS,ui.adsabs.harvard.edu,unknown,medium,True,self_evolving_agent,2026-05,https://ui.adsabs.harvard.edu/abs/2025arXiv251110395Z/abstract
 633,view.inews.qq.com,阿里团队揭露下一代AI路线：AgentEvolver如何实现智能体的自我进化,view.inews.qq.com,unknown,medium,True,self_evolving_agent,2026-05,https://view.inews.qq.com/a/20251118A047UU00
 634,vsdevelop.com,会成长的 AI Agent：当你的助手开始”记住”你是谁 – Ray.Lei Blog,vsdevelop.com,unknown,medium,True,self_evolving_agent,2026-05,https://vsdevelop.com/archives/371
-635,wandb.ai,A primer on building successful AI agents - Weights & Biases,wandb.ai,unknown,medium,True,tutorial_or_implementation,2026-05,https://wandb.ai/site/resources/whitepapers/building-successful-ai-agents/
-636,wandb.ai,Evaluating AI agent applications - Weights & Biases - Wandb,wandb.ai,unknown,medium,True,evaluation_benchmark,2026-05,https://wandb.ai/site/resources/whitepapers/evaluating-ai-agent-applications/
-637,wandb.ai,"Evaluating autonomous AI agents for performance, oversight, and ...",wandb.ai,unknown,medium,True,evaluation_benchmark,2026-05,https://wandb.ai/site/articles/evaluating-autonomous-ai-agents/
-638,wandb.ai,Mastering AI agent observability: From black-box to traceable systems - Weights & Biases,wandb.ai,unknown,medium,True,evaluation_benchmark,2026-05,https://wandb.ai/site/articles/ai-agent-observability/
-639,wandb.ai,Understanding guardrails for AI agents - Weights & Biases,wandb.ai,unknown,medium,True,tutorial_or_implementation,2026-05,https://wandb.ai/site/articles/guardrails-for-ai-agents/
-640,wandb.ai,W&B Weave Online Evaluations,wandb.ai,unknown,medium,True,agent_framework,2026-05,https://wandb.ai/site/online-evaluations
-641,wandb.ai,W&B Weave for AI Agent evaluation - Wandb,wandb.ai,unknown,medium,True,tutorial_or_implementation,2026-05,https://wandb.ai/site/agents/
-642,wandb.ai,Whitepaper: Deliver AI Agents with Confidence,wandb.ai,unknown,medium,True,evaluation_benchmark,2026-05,https://wandb.ai/site/resources/whitepapers/evaluating-ai-agent-applications/?e-filter-32fa548-course-category=wb-platform
-643,wandb.ai,[PDF] Evaluating AI agent applications - Wandb,wandb.ai,unknown,medium,True,tutorial_or_implementation,2026-05,https://wandb.ai/site/wp-content/uploads/2025/02/Evaluations-whitepaper.pdf
+635,wandb.ai,A primer on building successful AI agents - Weights & Biases,Weights & Biases,expert_org,high,False,tutorial_or_implementation,2026-05,https://wandb.ai/site/resources/whitepapers/building-successful-ai-agents/
+636,wandb.ai,Evaluating AI agent applications - Weights & Biases - Wandb,Weights & Biases,expert_org,high,False,evaluation_benchmark,2026-05,https://wandb.ai/site/resources/whitepapers/evaluating-ai-agent-applications/
+637,wandb.ai,"Evaluating autonomous AI agents for performance, oversight, and ...",Weights & Biases,expert_org,high,False,evaluation_benchmark,2026-05,https://wandb.ai/site/articles/evaluating-autonomous-ai-agents/
+638,wandb.ai,Mastering AI agent observability: From black-box to traceable systems - Weights & Biases,Weights & Biases,expert_org,high,False,evaluation_benchmark,2026-05,https://wandb.ai/site/articles/ai-agent-observability/
+639,wandb.ai,Understanding guardrails for AI agents - Weights & Biases,Weights & Biases,expert_org,high,False,tutorial_or_implementation,2026-05,https://wandb.ai/site/articles/guardrails-for-ai-agents/
+640,wandb.ai,W&B Weave Online Evaluations,Weights & Biases,expert_org,high,False,agent_framework,2026-05,https://wandb.ai/site/online-evaluations
+641,wandb.ai,W&B Weave for AI Agent evaluation - Wandb,Weights & Biases,expert_org,high,False,tutorial_or_implementation,2026-05,https://wandb.ai/site/agents/
+642,wandb.ai,Whitepaper: Deliver AI Agents with Confidence,Weights & Biases,expert_org,high,False,evaluation_benchmark,2026-05,https://wandb.ai/site/resources/whitepapers/evaluating-ai-agent-applications/?e-filter-32fa548-course-category=wb-platform
+643,wandb.ai,[PDF] Evaluating AI agent applications - Wandb,Weights & Biases,expert_org,high,False,tutorial_or_implementation,2026-05,https://wandb.ai/site/wp-content/uploads/2025/02/Evaluations-whitepaper.pdf
 644,warpmetrics.com,Building a Self-Improving AI Agent with Feedback Loops - Warpmetrics,warpmetrics.com,unknown,medium,True,self_evolving_agent,2026-05,https://warpmetrics.com/learn/self-improving-ai-agent
 645,weave-docs.wandb.ai,OpenAI Agents SDK - Weights & Biases Documentation,weave-docs.wandb.ai,unknown,medium,True,tutorial_or_implementation,2026-05,https://weave-docs.wandb.ai/guides/integrations/openai_agents
 646,wqw547243068.github.io,智能体记忆设计 Agent Memory,wqw547243068.github.io,unknown,medium,True,self_evolving_agent,2026-05,https://wqw547243068.github.io/agent_memory/

@@ -66,7 +66,7 @@ OEP exploits a specific vulnerability in the self-evolution pipeline:
 **Novelty**: ★★★★★
 **Rigor**: ★★★★☆
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 - **Self-evolution's strength is its vulnerability**: The reflective memory consolidation that enables self-improvement is exactly what OEP exploits. This is a fundamental tension in self-evolving system design.
 - **Clean attacks are the real threat**: As safety filters improve, attacks that use clean, locally correct content will become the primary threat vector. Self-evolving systems must be designed to resist subtle experience manipulation.
 - **Reflection needs skepticism**: Agents should not unconditionally trust their own reflections. Mechanisms for critical evaluation of self-generated rules are essential safety infrastructure.

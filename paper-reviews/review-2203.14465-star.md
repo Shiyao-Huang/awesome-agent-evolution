@@ -60,7 +60,7 @@ STaR operates as an iterative bootstrapping loop with two variants:
 **Novelty**: ★★★★☆
 **Rigor**: ★★★★☆
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 - **Foundational self-improvement loop**: STaR establishes the core pattern -- generate, filter by outcome, fine-tune, repeat -- that underlies nearly all subsequent self-evolution methods.
 - **Rationalization as a general principle**: Learning from failure by providing partial solutions (hints) is a powerful technique transferable to many self-evolution contexts beyond reasoning.
 - **Outcome-based filtering**: Using task performance as the selection mechanism for self-generated training data is a general principle that extends to code generation, tool use, and agent planning.

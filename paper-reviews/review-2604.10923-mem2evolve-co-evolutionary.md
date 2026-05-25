@@ -61,7 +61,7 @@ Mem2Evolve is built around a dual-memory co-evolutionary loop:
 **Novelty**: ★★★★☆
 **Rigor**: ★★★★☆
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 - **Evolution channels interact**: The key insight is that self-evolution is not just about accumulating experience OR creating tools -- these channels compound when allowed to interact. Survey taxonomies should reflect this interdependence.
 - **Dual-memory as a pattern**: The Experience Memory + Asset Memory architecture is a reusable design pattern for self-evolving systems.
 - **Co-evolution as a design principle**: The paper suggests that future self-evolving systems should be designed with explicit co-evolution mechanisms rather than treating different evolution channels as independent.

@@ -62,7 +62,7 @@ GA is organized around four tightly integrated components:
 **Novelty**: ★★★★☆
 **Rigor**: ★★★★☆
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 - **Token efficiency as a constraint on evolution**: Self-evolving systems that do not manage their context budget will hit practical cost barriers. GA's information density principle should be a design constraint for all self-evolving agents.
 - **SOPs as evolution output**: The SOP-based evolution mechanism is a practical alternative to raw trajectory storage, offering better generalization and lower token overhead.
 - **Hierarchical memory is essential**: For long-horizon self-evolution, flat memory architectures will fail. The hierarchical on-demand pattern should be a standard design choice.

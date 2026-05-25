@@ -65,7 +65,7 @@ The framework has two phases operating in a loop:
 | Novelty | 4/5 | Revision trajectory concept is novel; MCTS for training data construction is well-motivated |
 | Rigor | 3/5 | Solid experiments but limited model diversity, small test sets, no RL baselines |
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Revision trajectories as training data:** Teaching agents to recover from errors is more effective than training on expert-only trajectories. This is a foundational insight for self-evolving systems -- the model must learn from its own failure modes.
 

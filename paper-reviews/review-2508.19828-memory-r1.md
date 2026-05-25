@@ -53,12 +53,12 @@ The paper provides substantial implementation detail: model backbones (LLaMA-3.1
 
 ## Impact Assessment
 
-- **Relevance to awesome-evolution**: 5/5 -- Directly addresses how an agent can learn to self-manage its own memory through trial-and-error, a core self-evolution capability.
+- **Relevance to awesome-agent-evolution**: 5/5 -- Directly addresses how an agent can learn to self-manage its own memory through trial-and-error, a core self-evolution capability.
 - **Practical applicability**: 4/5 -- The data efficiency (152 pairs) and plug-in architecture make it immediately applicable, but the lack of code and unstructured memory limit deployment readiness.
 - **Novelty**: 4/5 -- The RL-for-memory framing is genuinely new, though the individual components (PPO/GRPO, RAG, CRUD operations) are well-established.
 - **Rigor**: 4/5 -- Strong ablation studies, cross-benchmark generalization tests, and scaling analysis. The reward design comparison (EM vs. J-based) is a nice touch. Missing: statistical significance tests, failure case analysis at scale.
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Memory management is a learnable skill.** The central insight is that deciding what to remember, update, or forget should not be hard-coded -- it should emerge from optimizing for downstream task performance via RL. This is directly applicable to any agent that must evolve its internal state over time.
 

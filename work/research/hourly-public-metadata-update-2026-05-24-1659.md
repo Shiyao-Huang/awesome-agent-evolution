@@ -18,7 +18,7 @@ Direct user intent still prioritizes raw -> processed -> work -> results traceab
 ## GitNexus / Freshness Notes
 
 - GitNexus 1.6.5 is installed and `gitnexus doctor` reports graph/full-text/vector capabilities.
-- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly .` succeeded: 8,654 nodes, 8,878 edges, 27 clusters, 9 flows.
+- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly .` succeeded: 8,654 nodes, 8,878 edges, 27 clusters, 9 flows.
 - GitNexus FTS is degraded: extension download could not connect, so exact graph/index evidence is available without FTS.
 - GitHub API freshness is blocked: `curl https://api.github.com/rate_limit` cannot resolve host and gh has an invalid token.
 

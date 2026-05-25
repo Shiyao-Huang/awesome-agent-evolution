@@ -130,7 +130,7 @@ A solid engineering contribution to the multi-agent self-evolution space. InfiAg
 
 ---
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Recursive decomposition scales agent complexity**: The agent-as-a-tool pattern provides a principled way to handle tasks of arbitrary complexity. Each level of the pyramid handles an appropriate level of abstraction, preventing any single agent from being overwhelmed.
 

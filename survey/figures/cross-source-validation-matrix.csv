@@ -1,7 +1,7 @@
 topic,paper_signal,repo_signal,painpoint_signal,blog_signal,interpretation
-Reliability / production gap,1,125,19,43,strong mismatch risk
-Evaluation / benchmark gap,3,81,10,28,strong mismatch risk
-Memory / drift / forgetting,9,56,10,34,strong mismatch risk
-Framework opacity / tooling,20,64,14,85,strong mismatch risk
-Safety / governance / cost,2,82,11,6,strong mismatch risk
-Self-improvement feasibility,38,58,12,116,strong mismatch risk
+Reliability / production gap,2,131,19,43,strong mismatch risk
+Evaluation / benchmark gap,6,85,10,28,strong mismatch risk
+Memory / drift / forgetting,16,59,10,34,strong mismatch risk
+Framework opacity / tooling,87,66,14,85,strong mismatch risk
+Safety / governance / cost,4,86,11,6,strong mismatch risk
+Self-improvement feasibility,60,59,12,116,strong mismatch risk

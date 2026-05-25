@@ -84,7 +84,7 @@ RISE builds on online imitation learning (DAgger-family methods) and reward-weig
 
 RISE is directly relevant to self-evolution because it addresses the fundamental question of whether agents can be trained to improve themselves at test time. The MDP formalization and iterative training paradigm provide a blueprint for building agents that get better with more computation.
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 - **Self-correction is a trainable capability, not an innate one**: The key insight is that self-improvement must be trained on the learner's own error distribution, not demonstrated by a teacher. This principle should guide any self-evolving agent design.
 - **Multi-turn MDP framing is powerful**: Converting single-turn tasks into multi-turn correction processes provides a principled framework for designing training objectives for self-evolution. This pattern could extend beyond reasoning to tool use, planning, and exploration.

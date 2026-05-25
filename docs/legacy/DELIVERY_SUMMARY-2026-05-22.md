@@ -135,7 +135,7 @@
 ## 文件结构总览
 
 ```
-awesome-evolution/
+awesome-agent-evolution/
 ├── README.md                          # 主文档（awesome-list + 索引）
 ├── CONTENT_INDEX.md                   # 全产出索引
 ├── DELIVERY_SUMMARY.md                # 交付摘要（本文件）

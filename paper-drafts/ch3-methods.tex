@@ -447,13 +447,21 @@ These verifier-centric methods suggest the direction of the field. Self-improvem
 
 Table~\ref{tab:self-improvement-comparison} compares the main methods along dimensions that matter for system design. ``Loop type'' indicates whether the update occurs at inference, across episodes, or through training. ``Training required'' distinguishes prompt-only methods from parameter-updating methods. ``Feedback source'' identifies the grounding signal. ``Applicable tasks'' summarizes the domains where the method is most natural. ``Key results'' reports representative numbers from the research corpus and primary papers.
 
-\begin{table*}[t]
-\centering
-\small
-\begin{tabular}{p{2.5cm}p{2.4cm}p{2.1cm}p{3.0cm}p{3.0cm}p{4.2cm}}
+{\TableTight
+\begin{longtable}{@{}L{0.12\textwidth}L{0.14\textwidth}L{0.11\textwidth}L{0.17\textwidth}L{0.16\textwidth}L{0.22\textwidth}@{}}
+\caption{Comparison of self-improvement methods by loop type, training requirement, feedback source, task domain, and representative results.}
+\label{tab:self-improvement-comparison}\\
 \toprule
-Method & Loop type & Training required & Feedback source & Applicable tasks & Key results / evidence \\
+\textbf{Method} & \textbf{Loop type} & \textbf{Training required} & \textbf{Feedback source} & \textbf{Applicable tasks} & \textbf{Key results / evidence} \\
 \midrule
+\endfirsthead
+\caption[]{Comparison of self-improvement methods (continued).}\\
+\toprule
+\textbf{Method} & \textbf{Loop type} & \textbf{Training required} & \textbf{Feedback source} & \textbf{Applicable tasks} & \textbf{Key results / evidence} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
 Self-Refine & Inference-time draft refinement & No & Same-model critique under rubric & Writing, code style, constrained generation, math reasoning, dialogue & Average $\sim20\%$ improvement across seven tasks; math $56\%\rightarrow67\%$; sentiment reversal $74\%\rightarrow86\%$; dialogue win rate $52\%\rightarrow68\%$ \\
 Reflexion & Cross-episode inference memory & No parameter update & Evaluator reward plus verbal reflection memory & Code generation, ALFWorld, WebShop, interactive agents & HumanEval pass@1 $91.0\%$; GPT-4 zero-shot reference $80.1\%$; Codex fine-tuned $67.0\%$; ALFWorld $97\%$ vs $75\%$ base \\
 Self-Debug / SelfEvolve & Inference-time execution repair & No for repair; optional training & Compiler, interpreter, tests, tracebacks & Code generation, data-science programming, translation between languages & SelfEvolve DS-1000 $49.4\rightarrow57.2$; HumanEval pass@1 $74.39\rightarrow85.98$; TransCoder accuracy $88.3\rightarrow90.4$ \\
@@ -465,11 +473,7 @@ RISE & Multi-turn RL for introspection & Yes & Final-answer reward over reasonin
 RAGEN & Trajectory-level agent RL & Yes & Step and trajectory rewards; echo filtering & Tool agents, multi-turn decision tasks & StarPO/StarPO-S improves multi-turn agent training and identifies Echo Trap / reasoning collapse \\
 Absolute Zero & Self-play task proposal and solving & Yes & Code executor verification & Code, math, logic with verifiable rewards & AZR-Coder-7B reported SOTA at 7B level on coding average; zero external training data \\
 ReVeal & Multi-turn code RL with self-verification & Yes & Generated tests, tool execution, turn-level reward & Code agents, LiveCodeBench & $20+$ inference turns despite training on $3$ turns; self-verification optimized explicitly \\
-\bottomrule
-\end{tabular}
-\caption{Comparison of self-improvement methods by loop type, training requirement, feedback source, task domain, and representative results.}
-\label{tab:self-improvement-comparison}
-\end{table*}
+\end{longtable}}
 
 The table reveals three recurring axes. The first is the state update axis: draft-only, memory-only, data-only, parameter, trajectory-policy, or code/agent architecture. The second is the feedback reliability axis: same-model critique is cheapest but weakest; execution and formal verification are strongest but narrowest; reward models and AI judges are broad but vulnerable to misspecification. The third is the amortization axis: inference-time methods pay at every query, while training-time methods pay up front and amortize later. A system designer should choose the method by matching these axes to the deployment setting. If tasks are rare and high value, inference-time refinement with verification may be best. If tasks are common and verifiable, training on self-generated verified traces can amortize cost. If tasks are safety-critical, self-generated feedback must be anchored to human principles, external audits, or conservative verifiers.
 

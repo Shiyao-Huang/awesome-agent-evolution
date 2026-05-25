@@ -69,7 +69,7 @@ AlphaEvolve orchestrates an autonomous pipeline built around an evolutionary alg
 **Novelty**: ★★★★☆
 **Rigor**: ★★★★☆
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 - **Evolutionary self-improvement with LLM mutation**: AlphaEvolve demonstrates that combining LLMs with evolutionary computation creates a system capable of genuine discovery, not just optimization of known approaches.
 - **Automated evaluation as the foundation**: The key insight is that any domain with programmable evaluation is amenable to LLM-guided evolutionary improvement. This defines the boundary of applicability for self-evolving systems.
 - **Self-referential improvement is real**: The fact that AlphaEvolve improved the training of its own underlying LLM is perhaps the most significant result for self-evolution research -- it demonstrates that self-improving AI systems can create positive feedback loops.

@@ -125,7 +125,7 @@ A strong contribution to the CUA self-evolution literature. SEAgent demonstrates
 
 ---
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Self-generated curricula enable zero-annotation learning**: When environments lack human annotations, agents can still learn by inventing their own task progressions. This is a general principle applicable beyond GUI agents to any domain where pre-existing benchmarks are unavailable.
 

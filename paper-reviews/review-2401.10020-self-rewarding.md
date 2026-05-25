@@ -68,7 +68,7 @@ The Self-Rewarding framework has four interconnected components:
 **Novelty**: ★★★★☆
 **Rigor**: ★★★★☆
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 - **Unified self-improvement across two axes**: The key insight is that when a model serves as both policy and reward model, both capabilities can improve simultaneously -- a virtuous cycle. This is the most direct demonstration of multi-dimensional self-evolution in language models.
 - **Breaking the human-feedback bottleneck**: By showing that self-generated preference data can produce models competitive with those trained on proprietary human annotations, this work points toward a path where models can continue improving without human data collection.
 - **Iterative DPO as a practical self-evolution mechanism**: The combination of self-evaluation + preference pair construction + DPO training is a clean, implementable framework for self-evolution that avoids the complexity of RL-based approaches.

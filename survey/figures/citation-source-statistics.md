@@ -1,28 +1,28 @@
 # 引用/来源统计图
 
-- generated_at: 2026-05-21T22:21:49+08:00
+- generated_at: 2026-05-25T14:25:53+08:00
 - use: 作为参考文献与附录覆盖率的统计入口。
 
 ```mermaid
 pie title 当前可引用/可追溯来源规模
-    "raw-papers timestamp records" : 87
-    "paper-reviews" : 88
+    "raw-papers timestamp records" : 196
+    "paper-reviews" : 137
     "academic-reviews" : 34
-    "raw-github repos" : 348
+    "raw-github repos" : 486
     "raw-blog json records" : 652
-    "raw-social json records" : 612
+    "raw-social json records" : 613
     "raw-social-rank json records" : 228
     "Mom Test pain points" : 97
 ```
 
 | Source bucket | Count |
 |---|---:|
-| raw-papers timestamp records | 87 |
-| paper-reviews | 88 |
+| raw-papers timestamp records | 196 |
+| paper-reviews | 137 |
 | academic-reviews | 34 |
-| raw-github repos | 348 |
+| raw-github repos | 486 |
 | raw-blog json records | 652 |
-| raw-social json records | 612 |
+| raw-social json records | 613 |
 | raw-social-rank json records | 228 |
 | Mom Test pain points | 97 |
 
@@ -30,23 +30,23 @@ pie title 当前可引用/可追溯来源规模
 
 | Time slice | Paper records |
 |---|---:|
-| 2025-10 | 8 |
-| 2025-05 | 8 |
-| 2024-Q4 | 8 |
-| 2024-Q3 | 7 |
-| 2025-08 | 6 |
-| 2024-Q1 | 6 |
-| 2025-06 | 5 |
-| 2025-01 | 5 |
-| 2025-02 | 5 |
-| 2025-09 | 5 |
-| 2025-11 | 4 |
-| 2023-Q2 | 3 |
-| 2025-04 | 3 |
-| 2023-Q4 | 2 |
-| 2023-Q1 | 2 |
-| 2025-12 | 2 |
-| 2024-Q2 | 2 |
-| early | 1 |
-| 2025-03 | 1 |
-| 2023-Q3 | 1 |
+| 2025-05 | 16 |
+| 2025-10 | 16 |
+| 2024-10 | 12 |
+| 2025-08 | 11 |
+| 2025-01 | 10 |
+| 2025-02 | 10 |
+| 2025-06 | 10 |
+| 2026-04 | 10 |
+| 2025-09 | 9 |
+| 2025-04 | 8 |
+| 2024-01 | 7 |
+| 2025-11 | 7 |
+| 2026-03 | 7 |
+| 2024-09 | 6 |
+| 2026-02 | 6 |
+| 2026-05 | 6 |
+| 2023-03 | 4 |
+| 2023-05 | 4 |
+| 2025-07 | 4 |
+| 2024-02 | 3 |

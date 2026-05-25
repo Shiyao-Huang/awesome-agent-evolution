@@ -4,7 +4,7 @@
 
 ## L1
 
-用户要把 `awesome-Agent-evolution` 做成 AI Agents 自进化领域的开源索引站、深度分析站、论文工程和 SEO 网站，并要求 raw、加工、work、结果全部分层、索引化、可追溯。
+用户要把 `awesome-agent-evolution` 做成 AI Agents 自进化领域的开源索引站、深度分析站、论文工程和 SEO 网站，并要求 raw、加工、work、结果全部分层、索引化、可追溯。
 
 ## L2
 

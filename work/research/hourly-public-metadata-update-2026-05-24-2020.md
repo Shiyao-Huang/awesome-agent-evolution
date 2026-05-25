@@ -45,5 +45,5 @@ User direct inputs require raw captures, processed classification, model-card te
 - `node scripts/analyze_github_project_data.mjs` passed: 389 raw captures, 389 classified repos, 97 analyzed projects, 65 strict evolution repos, 159 broad evolution-related repos.
 - `node scripts/generate_visual_assets.mjs` regenerated the public SVG charts.
 - `(cd site && npm run build)` passed with 178 pages; existing Astro `z` deprecation hints remain.
-- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly .` passed: changed=13, added=15, 9,079 nodes, 9,334 edges, 30 clusters, 13 flows; FTS extension download still unavailable.
+- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly .` passed: changed=13, added=15, 9,079 nodes, 9,334 edges, 30 clusters, 13 flows; FTS extension download still unavailable.
 - `(cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex)` passed; `main.pdf` remains 213 pages with existing font/overfull warnings.

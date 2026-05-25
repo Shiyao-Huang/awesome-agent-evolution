@@ -1,6 +1,6 @@
 # Architecture Patterns in Agent Self-Evolution
 
-A comprehensive analysis of 348 repositories from the awesome-evolution corpus, classifying each by architecture pattern, self-evolution implementation, memory architecture, and safety mechanisms.
+A comprehensive analysis of 348 repositories from the awesome-agent-evolution corpus, classifying each by architecture pattern, self-evolution implementation, memory architecture, and safety mechanisms.
 
 ---
 
@@ -830,4 +830,4 @@ No single repo implements all of these yet, but the trend is clear: the next gen
 
 ---
 
-*Analysis produced on 2026-05-22 from 348 repositories in the awesome-evolution corpus.*
+*Analysis produced on 2026-05-22 from 348 repositories in the awesome-agent-evolution corpus.*

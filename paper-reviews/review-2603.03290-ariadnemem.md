@@ -69,12 +69,12 @@ Code is publicly available at https://github.com/LLM-VLM-GSL/AriadneMem. The pap
 
 ## Impact Assessment
 
-- **Relevance to awesome-evolution**: 5/5 -- Directly addresses how an agent's memory representation can evolve over time, preserving state transitions and enabling multi-hop reasoning without external intervention.
+- **Relevance to awesome-agent-evolution**: 5/5 -- Directly addresses how an agent's memory representation can evolve over time, preserving state transitions and enabling multi-hop reasoning without external intervention.
 - **Practical applicability**: 4/5 -- The 77.8% runtime reduction and 497 average context tokens make it highly practical. The graph construction overhead is the main deployment cost.
 - **Novelty**: 4/5 -- The graph-based memory with conflict-aware coarsening and Steiner Tree retrieval is novel, though individual graph techniques are well-established.
 - **Rigor**: 3/5 -- Strong methodological contribution but limited by single-benchmark evaluation, missing sensitivity analysis, and no comparison with RL-based memory management approaches.
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Representation determines capability.** The core lesson is that the choice of memory representation (flat set vs. evolutionary graph) fundamentally determines what the agent can do. Flat representations force the LLM to reconstruct connections at inference time; graph representations encode connections explicitly, enabling efficient traversal. Self-evolving agents need structured, evolving representations.
 

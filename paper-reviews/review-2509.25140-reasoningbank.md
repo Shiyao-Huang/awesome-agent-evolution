@@ -90,12 +90,12 @@ This is the scaling contribution. The insight is that memory quality depends on 
 
 | Dimension | Score | Justification |
 |-----------|-------|---------------|
-| **Relevance to awesome-evolution** | 5/5 | Directly addresses agent self-evolution through accumulated reasoning memory. The framework captures the full self-evolution loop (experience -> reasoning -> memory -> application -> new experience) and introduces a scaling dimension for self-evolution. |
+| **Relevance to awesome-agent-evolution** | 5/5 | Directly addresses agent self-evolution through accumulated reasoning memory. The framework captures the full self-evolution loop (experience -> reasoning -> memory -> application -> new experience) and introduces a scaling dimension for self-evolution. |
 | **Practical Impact** | 4/5 | Demonstrated on two major, practical domains (web browsing, software engineering). The framework is model-agnostic and deployable. The MaTTS insight (investing compute in experience generation) has practical implications for agent deployment strategies. |
 | **Novelty** | 4/5 | Reasoning strategies as memory content, failure as contrastive signal, and MaTTS are all novel. The "memory as scaling dimension" framing is thought-provoking. Some individual ideas (learning from failure, test-time scaling) have precedents, but the synthesis is original. |
 | **Rigor** | 4/5 | ICLR 2026 acceptance indicates strong peer review. Evaluated on two diverse domains (web + code). Would benefit from more detailed analysis of memory content quality, retrieval effectiveness, and scaling efficiency curves. |
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Reasoning > Actions as memory content**: ReasoningBank demonstrates that storing *reasoning strategies* (abstract, transferable insights about why approaches succeed or fail) is more effective than storing raw trajectories or action sequences. For self-evolution systems, the unit of knowledge accumulation should be at the reasoning level, not the behavioral level.
 
@@ -107,7 +107,7 @@ This is the scaling contribution. The insight is that memory quality depends on 
 
 5. **The importance of self-judgment**: The system's ability to self-judge its own trajectories (determining success vs. failure) is a critical enabler. The quality of this self-judgment directly determines the quality of the memory bank. Investing in accurate self-evaluation mechanisms is essential for any self-evolution system.
 
-6. **Domain generality through abstraction**: By storing reasoning strategies at an abstract level, ReasoningBank achieves cross-task transfer within domains. The awesome-evolution project should consider whether cross-domain transfer of reasoning strategies is achievable -- can web browsing strategies inform software engineering, or vice versa?
+6. **Domain generality through abstraction**: By storing reasoning strategies at an abstract level, ReasoningBank achieves cross-task transfer within domains. The awesome-agent-evolution project should consider whether cross-domain transfer of reasoning strategies is achievable -- can web browsing strategies inform software engineering, or vice versa?
 
 ## Cross-Validation Addendum — Evolver #51-#88 Continuation (2026-05-22)
 

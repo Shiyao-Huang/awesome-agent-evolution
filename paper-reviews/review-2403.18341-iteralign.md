@@ -67,12 +67,12 @@ The paper provides clear descriptions of all four modules, including the prompts
 
 ## Impact Assessment
 
-- **Relevance to awesome-evolution**: 5/5 -- IterAlign embodies the self-evolution paradigm: identify weaknesses, learn from them, iterate. The core loop (detect failure -> abstract principle -> self-correct -> repeat) is a general template for agent self-improvement.
+- **Relevance to awesome-agent-evolution**: 5/5 -- IterAlign embodies the self-evolution paradigm: identify weaknesses, learn from them, iterate. The core loop (detect failure -> abstract principle -> self-correct -> repeat) is a general template for agent self-improvement.
 - **Practical applicability**: 4/5 -- The framework is straightforward to implement and does not require human annotation. The main practical barrier is the oracle model dependency.
 - **Novelty**: 3/5 -- The individual components (red-teaming, SFT, constitutional AI) are well-established. The contribution is in their composition into an automated iterative loop, not in any single component.
 - **Rigor**: 3/5 -- Multiple base models and benchmarks provide some generalization evidence. However, the absence of capability preservation analysis, constitutional quality assessment, and convergence studies limits the depth of evaluation.
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Self-evolution follows a detect-abstract-correct loop.** IterAlign's pipeline (red-team to find failures -> abstract constitutions from failure patterns -> self-correct based on principles) is a general template for agent self-improvement. This pattern can be applied beyond safety alignment to any domain where an agent needs to identify and address its own weaknesses.
 

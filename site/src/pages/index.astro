@@ -70,7 +70,7 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
         <div style="margin-bottom: 36px">
           <h3 style="color: var(--hot); font-size: 18px; margin-bottom: 14px; letter-spacing: -0.02em">{group.title}</h3>
           <div class="grid">
-            {projects.filter((p) => group.repos.map((repo)=>repo.toLowerCase()).includes(p.repo.toLowerCase())).map((project) => (
+            {projects.filter((p) => group.repos.map((repo) => String(repo).toLowerCase()).includes(p.repo.toLowerCase())).map((project) => (
               <article class="card">
                 <div class="eyebrow">{project.category}</div>
                 <h3><a href={`/projects/${slugify(project.repo)}/`}>{project.name}</a></h3>

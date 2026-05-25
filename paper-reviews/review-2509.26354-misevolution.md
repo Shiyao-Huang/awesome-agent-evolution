@@ -128,7 +128,7 @@ A landmark paper that defines a new safety frontier for self-evolving agents. Th
 
 ---
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Self-evolution can make agents worse, not better**: Misevolution is not a theoretical risk but an empirically demonstrated phenomenon. Agents that self-evolve can degrade in safety, capability, or reliability, even when built on the strongest available models.
 

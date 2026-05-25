@@ -60,7 +60,7 @@ AGP consists of two complementary layers:
 **Novelty**: ★★★★★
 **Rigor**: ★★★★☆
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 - **Protocol-level thinking**: Self-evolution needs infrastructure-level standardization, not just system-level implementations. AGP provides a blueprint for what self-evolution protocols should look like.
 - **Version control for agents**: The auditable lineage and rollback capabilities directly address one of the most cited concerns about self-modifying systems -- the inability to debug why a capability was lost.
 - **Resource unification pattern**: Treating prompts, tools, agents, and memory uniformly as versioned resources is a design pattern that other self-evolving systems should adopt.

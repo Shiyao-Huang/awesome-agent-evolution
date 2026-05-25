@@ -45,6 +45,6 @@ The user intent source remains `docs/project-management/user-direct-inputs.md` a
 - node scripts/generate_visual_assets.mjs: passed, 4 SVG assets regenerated
 - command -v codeflow: not found locally
 - HOME=/private/tmp/gitnexus-home gitnexus doctor: passed, GitNexus 1.6.5 graph/full-text/vector capabilities reported available
-- HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly .: passed with changed=13, added=14, deleted=0, 10,002 nodes, 10,343 edges, 31 clusters, 13 flows; FTS degraded because LadybugDB extension download could not connect
+- HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly .: passed with changed=13, added=14, deleted=0, 10,002 nodes, 10,343 edges, 31 clusters, 13 flows; FTS degraded because LadybugDB extension download could not connect
 - (cd site && npm run build): passed, 234 pages built with existing Astro z deprecation hints
 - (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex): passed, main.pdf 213 pages with existing font/overfull warnings

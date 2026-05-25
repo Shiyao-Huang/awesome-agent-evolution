@@ -79,7 +79,7 @@ The DGM automatically discovers several improvements:
 
 **Rigor**: ★★★★☆ — Good experimental design, appropriate baselines, open-source
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. The open-ended archive approach is a key pattern — don't just keep the best, keep diverse stepping stones
 2. Python-as-representation is a practical choice for agent self-modification

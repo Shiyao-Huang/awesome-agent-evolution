@@ -136,7 +136,7 @@ A conceptually rich contribution that advances the theoretical foundations of se
 
 ---
 
-## Key Takeaways for awesome-evolution
+## Key Takeaways for awesome-agent-evolution
 
 1. **Lifelong learning requires layered capability building**: Self-evolving agents must progress through distinct learning stages -- from raw exploration to skill abstraction to intuitive internalization. Systems that skip stages (e.g., trying to internalize without first building skills) will fail.
 

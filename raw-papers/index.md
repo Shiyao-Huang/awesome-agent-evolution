@@ -185,6 +185,10 @@ timestamp_source: "arXiv submission history"
 |---|-------|-------|------|
 | S1 | Path to ASI Survey | 2507.21046 | [2507.21046.md](2507.21046.md) |
 | S2 | Comprehensive Survey | 2508.07407 | [2508.07407.md](2508.07407.md) |
+| S3 | Self-Evolution of LLMs Survey | 2404.14387 | [2404.14387.md](2404.14387.md) |
+| S4 | LLM Agent Optimization Survey | 2503.12434 | [2503.12434.md](2503.12434.md) |
+| S5 | EC and LLMs Survey | 2505.15741 | [2505.15741.md](2505.15741.md) |
+| S6 | LLMs Meet Evolutionary Algorithms | 2401.10510 | [2401.10510.md](2401.10510.md) |
 
 ### O. 2026 New Papers (12 papers)
 | # | Title | arXiv | File | Category |
@@ -234,4 +238,3 @@ timestamp_source: "arXiv submission history"
 - time_slice: 2026-05
 - timestamp_confidence: derived
 - timestamp_source: extracted from markdown content/metadata
-

@@ -189,17 +189,18 @@ It is important to correct a common attribution confusion.  The first improvemen
 \centering
 \caption{Representative program-evolution discoveries.  The matrix-multiplication row is included because it is often discussed alongside FunSearch, but the reported result belongs to AlphaEvolve rather than the original FunSearch system.}
 \label{tab:funsearch-alphaevolve-results}
-\begin{tabular}{p{0.20\linewidth}p{0.20\linewidth}p{0.19\linewidth}p{0.31\linewidth}}
-\hline
-System & Domain & Reported result & Interpretation \\
-\hline
+{\TableTight
+\begin{tabularx}{\textwidth}{@{}L{0.16\textwidth}L{0.19\textwidth}L{0.20\textwidth}Y@{}}
+\toprule
+\textbf{System} & \textbf{Domain} & \textbf{Reported result} & \textbf{Interpretation} \\
+\midrule
 FunSearch & Cap set constructions & Better construction than previously known in the studied setting & Demonstrates that evolved programs can yield new mathematical objects rather than merely solve training instances. \\
 FunSearch & Bin packing & Improved heuristic rules & Shows that program evolution can discover practical algorithms with interpretable logic. \\
 FunSearch & Cyclic graphs and related combinatorics & New constructive programs in selected problems & Supports the claim that function-space search generalizes across mathematical domains with evaluators. \\
 AlphaEvolve & $4\times4$ complex matrix multiplication & 48 multiplications, reported as first improvement over Strassen-era baseline in 56 years & Successor system extends program evolution to broader algorithmic code and quality-diversity search. \\
 AlphaEvolve & 50+ mathematical problems & Recovered SOTA for roughly 75\% and improved roughly 20\% in local materials & Indicates breadth when evaluator design is available, but results are problem- and budget-dependent. \\
-\hline
-\end{tabular}
+\bottomrule
+\end{tabularx}}
 \end{table*}
 
 The methodological lesson is that mathematical discovery becomes possible when three conditions align.  First, the domain must admit a compact executable representation.  Second, the evaluator must be cheaper than the value of the discovery and reliable enough to guide search.  Third, the search system must preserve diversity because mathematical breakthroughs often require stepping stones.  FunSearch satisfies these conditions for several combinatorial problems.  It does not solve domains where evaluation is ambiguous, expensive, or dependent on human taste.
@@ -225,17 +226,18 @@ SE-Agent is different in substrate.  It evolves reasoning trajectories for multi
 \centering
 \caption{Comparison of representative open and semi-open evolutionary code or trajectory systems.  Public repository details can change; the table records the evidence available in the local research materials and web verification performed for this draft.}
 \label{tab:open-source-evolution-systems}
-\begin{tabular}{p{0.13\linewidth}p{0.17\linewidth}p{0.21\linewidth}p{0.17\linewidth}p{0.12\linewidth}p{0.10\linewidth}}
-\hline
-System & Evolved artifact & Search mechanism & Evaluator and benchmarks & License/status & Best use case \\
-\hline
-FunSearch & Single marked Python function inside a problem scaffold & Island model, program clusters by score signature, LLM completion of versioned functions & Sandboxed execution; cap set, bin packing, admissible/cyclic graph tasks & Apache-2.0 code, CC-BY materials in local notes & Interpretable mathematical program discovery \\
-OpenEvolve & Functions, programs, prompts, and optimization targets & MAP-Elites quality-diversity, islands, LLM ensemble, artifact feedback & User-defined evaluators; examples include circle packing, prompt optimization, sorting, scientific computing & Apache-2.0 repository & Practical AlphaEvolve-style experimentation with provider flexibility \\
-CodeEvolve & Code regions and algorithmic solutions & Islands-based genetic algorithm, context-aware recombination, adaptive meta-prompting, depth refinement, optional MAP-Elites & Sandboxed execution with task-specific metrics; AlphaEvolve-style algorithm-discovery tasks & Apache-2.0 repository & Reproducible multi-island code evolution and ablation studies \\
-SE-Agent & Multi-step reasoning trajectories for code agents & Revision, recombination, refinement across trajectories & SWE-bench Verified; repository reports 80\% Top-1 & MIT repository & Improving agent reasoning procedures over real software issues \\
-AlphaEvolve & Broader algorithmic code artifacts & Gemini Flash/Pro dual-model evolution with quality-diversity archive & Math problems, matrix multiplication, data-center scheduling, chip design, LLM training kernels & Not generally public in local notes & Large-scale evaluator-rich algorithm discovery \\
-\hline
-\end{tabular}
+{\TableTight
+\begin{tabularx}{\textwidth}{@{}L{0.12\textwidth}L{0.18\textwidth}L{0.34\textwidth}L{0.14\textwidth}Y@{}}
+\toprule
+\textbf{System} & \textbf{Evolved artifact} & \textbf{Search and evaluation mechanism} & \textbf{Status} & \textbf{Best use case} \\
+\midrule
+FunSearch & Single marked Python function inside a problem scaffold & Island model, program clusters by score signature, LLM completion of versioned functions, and sandboxed execution for cap set, bin packing, admissible/cyclic graph tasks. & Apache-2.0 code; CC-BY materials in local notes. & Interpretable mathematical program discovery. \\
+OpenEvolve & Functions, programs, prompts, and optimization targets & MAP-Elites quality-diversity, islands, LLM ensemble, artifact feedback, and user-defined evaluators for circle packing, prompt optimization, sorting, and scientific computing. & Apache-2.0 repository. & Practical AlphaEvolve-style experimentation with provider flexibility. \\
+CodeEvolve & Code regions and algorithmic solutions & Islands-based genetic algorithm, context-aware recombination, adaptive meta-prompting, optional MAP-Elites, and sandboxed task-specific metrics. & Apache-2.0 repository. & Reproducible multi-island code evolution and ablation studies. \\
+SE-Agent & Multi-step reasoning trajectories for code agents & Revision, recombination, and refinement across trajectories, evaluated on SWE-bench Verified with repository-reported 80\% Top-1. & MIT repository. & Improving agent reasoning procedures over real software issues. \\
+AlphaEvolve & Broader algorithmic code artifacts & Gemini Flash/Pro dual-model evolution with a quality-diversity archive for math problems, matrix multiplication, data-center scheduling, chip design, and LLM training kernels. & Not generally public in local notes. & Large-scale evaluator-rich algorithm discovery. \\
+\bottomrule
+\end{tabularx}}
 \end{table*}
 
 The comparison highlights three axes.  The first axis is artifact granularity.  FunSearch evolves one function; OpenEvolve and CodeEvolve can evolve larger code regions; SE-Agent evolves trajectories; AlphaEvolve targets broader algorithmic code.  Larger granularity increases expressive power but also increases failure modes.  A single function can be sandboxed and scored relatively cleanly.  A codebase-level agent may need dependency installation, compilation, integration tests, performance profiling, and security isolation.
@@ -320,14 +322,21 @@ Another unifying issue is containment.  Prompt and symbolic updates are relative
 
 Benchmark comparison in this area is difficult because systems optimize different substrates under different budgets.  OPRO optimizes prompts and black-box variables.  FunSearch optimizes mathematical programs.  AlphaEvolve optimizes algorithms and infrastructure code.  DGM and SE-Agent target software-engineering agents.  Agent Symbolic Learning updates agent components across question answering, math, code, software development, and creative writing.  Absolute Zero trains models through self-play.  A single leaderboard would obscure these differences.  A better comparison asks: What is the artifact?  What is the evaluator?  What baseline is used?  How much search or training budget is consumed?  Is the result held out, reproducible, and resistant to evaluator gaming?
 
-\begin{table*}[t]
-\centering
-\caption{Selected numeric results reported in the local research materials and verified web sources for open repositories where noted.  Values should be compared within rows, not across unrelated benchmarks.}
-\label{tab:numeric-benchmark-comparison}
-\begin{tabular}{p{0.15\linewidth}p{0.19\linewidth}p{0.18\linewidth}p{0.18\linewidth}p{0.20\linewidth}}
-\hline
-System & Benchmark or domain & Baseline & Reported evolved result & Notes \\
-\hline
+{\TableTight
+\begin{longtable}{@{}L{0.13\textwidth}L{0.18\textwidth}L{0.17\textwidth}L{0.18\textwidth}L{0.28\textwidth}@{}}
+\caption{Selected numeric results reported in the local research materials and verified web sources for open repositories where noted. Values should be compared within rows, not across unrelated benchmarks.}
+\label{tab:numeric-benchmark-comparison}\\
+\toprule
+\textbf{System} & \textbf{Benchmark or domain} & \textbf{Baseline} & \textbf{Reported evolved result} & \textbf{Notes} \\
+\midrule
+\endfirsthead
+\caption[]{Selected numeric benchmark results (continued).}\\
+\toprule
+\textbf{System} & \textbf{Benchmark or domain} & \textbf{Baseline} & \textbf{Reported evolved result} & \textbf{Notes} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
 OPRO & Instruction optimization on reasoning tasks & Initial or prior prompts & Improved prompt scores over iterative search & Exact numbers depend on dataset and prompt placement; key evidence is the optimization trajectory. \\
 OPRO & Linear regression/TSP optimization & Hand or heuristic initial candidates & Lower objective values through text-conditioned proposals & Demonstrates black-box optimization beyond prompts. \\
 FunSearch & Cap set & Prior constructions in studied setting & Better evolved construction & Scientific discovery through executable program search. \\
@@ -348,9 +357,7 @@ Absolute Zero & 7B coding average & Data-trained comparison methods & SOTA among
 SE-Agent & SWE-bench Verified & Base code agents & Up to 55\% relative improvement; repository reports 80\% Top-1 & Trajectory-level evolution; web-verified repository claim. \\
 OpenEvolve & Prompt optimization example & Baseline prompt & Repository reports +23\% HotpotQA accuracy in example & Open-source framework result, not a universal benchmark. \\
 CodeEvolve & Algorithm discovery tasks & Open/closed baselines & arXiv abstract reports SOTA on several tasks & Requires paper-specific tables for exact per-task values. \\
-\hline
-\end{tabular}
-\end{table*}
+\end{longtable}}
 
 The table deliberately mixes precise and qualitative entries because the source materials vary in granularity.  For some systems, the local notes provide exact before/after values.  For others, they provide claims such as ``competitive,'' ``SOTA,'' or ``outperforms hand-designed agents'' without a row-by-row numeric breakdown.  A rigorous meta-analysis should return to the original papers, extract task definitions, budgets, seeds, and confidence intervals, and separate training, validation, and test performance.  The goal here is to map the evidence landscape rather than to declare a universal winner.
 

@@ -45,7 +45,7 @@ The direct user intent source remains `docs/project-management/user-direct-input
 - `node scripts/analyze_github_project_data.mjs`: passed, raw=456, classified=456, analyzed_projects=174, strict_evolution=77, broad_evolution=172.
 - `node scripts/generate_visual_assets.mjs`: passed, 4 SVG assets regenerated.
 - `HOME=/private/tmp/gitnexus-home gitnexus doctor`: passed, GitNexus 1.6.5 graph/full-text/vector capabilities reported available.
-- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly-0818 .`: passed with changed=12, added=20, deleted=0, 10,524 nodes, 10,992 edges, 34 clusters, 16 flows; FTS degraded because LadybugDB extension download could not connect.
+- `HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly-0818 .`: passed with changed=12, added=20, deleted=0, 10,524 nodes, 10,992 edges, 34 clusters, 16 flows; FTS degraded because LadybugDB extension download could not connect.
 - `(cd site && npm run build)`: passed, 255 pages built with existing Astro `z` deprecation hints.
 - `(cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex)`: passed, `main.pdf` 213 pages with existing font/overfull/underfull warnings.
 

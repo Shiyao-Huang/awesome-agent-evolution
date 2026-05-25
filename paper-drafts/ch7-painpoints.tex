@@ -254,12 +254,14 @@ The Chinese supplement emphasizes practical deployment constraints and learning 
 \begin{table*}[t]
 \centering
 \scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.08}
 \caption{Cross-platform frequency comparison from manually coded findings. Counts are category-level within each source file and should not be summed as population prevalence.}
 \label{tab:platform-frequency}
-\begin{tabular}{p{0.22\linewidth}p{0.18\linewidth}p{0.18\linewidth}p{0.18\linewidth}p{0.16\linewidth}}
-\hline
+\begin{tabularx}{\textwidth}{@{}L{0.20\textwidth}L{0.18\textwidth}L{0.18\textwidth}L{0.18\textwidth}Y@{}}
+\toprule
 \textbf{Theme} & \textbf{HN signal} & \textbf{Reddit signal} & \textbf{Chinese community signal} & \textbf{Dominant severity} \\
-\hline
+\midrule
 Reliability, hallucination, loops & Reliability/hallucination cluster includes 6 pain points. & Agent reliability includes 6; loop failures recur separately. & Agent loop/control includes 4; hallucination propagation appears explicitly. & \sevcritical{}/\sevhigh{} \\
 Self-improvement feasibility & Fundamentals cluster includes prompt optimization, learning limits, cost, and compliance tests. & 7 pain points on feasibility, drift, plateau, regression, and cost. & 4 self-evolution/learning pain points, including missing closed loop. & \sevcritical{} \\
 Framework and tooling & 5 framework/tooling pain points, including abstraction and harness issues. & 6 framework limitations plus MCP and state complaints. & 3 framework/tool integration and 1 paradigm-selection category. & \sevhigh{} \\
@@ -268,8 +270,8 @@ Memory and context & 6 knowledge/memory persistence pain points. & 4 memory/cont
 Safety, security, and cost & 3 explicit security/cost pain points. & 4 safety/cost pain points plus cost as feasibility blocker. & 2 security/safety and 2 cost/token pain points. & \sevcritical{} \\
 Debugging and observability & Appears through framework opacity, false logs, and code review failures. & Appears through state management, trace bloat, and framework opacity. & 2 observability/debugging pain points; black box is top theme. & \sevhigh{} \\
 Production proof and scale & Production proof gap explicitly coded. & Demo-scale inadequacy and real-world deployment each recur. & Deployment concerns appear through cost, browser failures, and tutorials. & \sevhigh{} \\
-\hline
-\end{tabular}
+\bottomrule
+\end{tabularx}
 \end{table*}
 
 A frequency-only reading would miss one of the most important patterns: many pain points are coupled. Context overflow causes hallucination because constraints are forgotten. Hallucination worsens evaluation because tests or logs may be fabricated. Weak evaluation causes regression because bad changes are accepted. Regression increases debugging load because state changes are untracked. Debugging opacity causes framework abandonment. Framework abandonment forces teams to rebuild infrastructure, increasing cost. Cost pressure encourages cheaper models or fewer tests, which can reduce reliability. This coupling means that self-evolution systems need integrated controls. Solving only memory or only evaluation will not be enough if the other layers remain weak.
