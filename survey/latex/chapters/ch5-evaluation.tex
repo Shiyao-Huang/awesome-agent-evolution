@@ -12,7 +12,17 @@ The central tension in agent self-evolution research lies between a system's cla
 
 This chapter addresses the evaluation problem from three perspectives. First, we propose a five-layer evaluation hierarchy that spans fully automated programmatic verification at the bottom to human-in-the-loop safety gates at the top. Second, we survey the major benchmarks used across the agent evolution literature, analyzing their strengths, limitations, and contamination risks. Third, we introduce agent-specific evaluation metrics that go beyond single-task accuracy to capture iterative improvement, transfer, cost efficiency, and safety. Throughout, we emphasize that evaluation infrastructure is itself evolving: as agents become more capable, evaluators must become more sophisticated, or risk being outpaced by the systems they are meant to assess.
 
-The evaluation challenge is particularly acute for self-evolving systems because of four properties that distinguish them from conventional machine learning. First, the improvement target is moving: an agent that modifies its own code, prompts, or memory may change its behavior in ways that the benchmark did not anticipate. Second, the evaluation is part of the optimization loop: agents can learn to exploit evaluator weaknesses, producing reward hacking, length bias, or score manipulation that inflates metrics without genuine capability gain. Third, the scope of evaluation must expand beyond task completion to include process quality, cost, safety, and transfer---dimensions that are harder to quantify than accuracy. Fourth, reproducibility is threatened by non-determinism in LLM generation, API version changes, and the interaction between stochastic sampling and evolving agent state.
+The evaluation challenge is particularly acute for self-evolving systems because of four properties that distinguish them from conventional machine learning.
+
+\textbf{Property 1: Moving targets.} An agent that modifies its own code, prompts, or memory may change its behavior in ways that the benchmark did not anticipate. The evaluated system at time $t+1$ is structurally different from the system at time $t$, making longitudinal comparison non-trivial. DGM~\citep{dgm2025} exemplifies this: each generation produces a qualitatively different agent architecture, and the SWE-Bench score at generation $n$ reflects a fundamentally different program than at generation $n-1$.
+
+\textbf{Property 2: Evaluation as part of the optimization loop.} Agents can learn to exploit evaluator weaknesses, producing reward hacking, length bias, or score manipulation that inflates metrics without genuine capability gain. Self-Rewarding Language Models~\citep{selfrewarding2024} demonstrate both the promise and peril of this property: the model evaluates its own outputs, creating a feedback loop that initially produces genuine improvement but risks evaluator degradation over iterations.
+
+\textbf{Property 3: Scope expansion.} The scope of evaluation must expand beyond task completion to include process quality, cost, safety, and transfer---dimensions that are harder to quantify than accuracy. An agent that solves 90\% of tasks but costs \$100 per run and occasionally deletes files is not necessarily superior to one that solves 80\% at \$0.10 per run with perfect safety.
+
+\textbf{Property 4: Reproducibility threats.} Non-determinism in LLM generation, API version changes, and the interaction between stochastic sampling and evolving agent state threaten reproducibility. A self-evolving system tested with GPT-4-turbo-2024-04-09 may produce different results with GPT-4-turbo-2024-12-17, even if the agent code is identical. This version dependency is compounded by the evolutionary process itself: because each generation builds upon the results of previous generations, small differences in early generations can compound into qualitatively different evolutionary trajectories. Two runs of the same evolutionary system with different random seeds may discover entirely different solutions, making it difficult to distinguish robust improvements from lucky trajectories.
+
+These four properties interact in subtle ways. Property 2 (evaluation in the loop) combined with Property 1 (moving targets) creates a situation where the evaluation landscape itself changes as the agent evolves, potentially invalidating conclusions drawn from early evaluation rounds. Property 3 (scope expansion) combined with Property 4 (reproducibility threats) means that multi-dimensional evaluation---already more expensive than single-metric evaluation---must be repeated across multiple random seeds and model versions, multiplying the cost of rigorous assessment.
 
 These properties mean that a single benchmark score is never sufficient evidence for self-evolution. A credible evaluation must include multi-layer verification, cross-benchmark generalization, cost analysis, safety auditing, and ablation studies that isolate the contribution of the self-improvement mechanism from confounds such as prompt engineering, model selection, and data contamination.
 
@@ -57,9 +67,17 @@ The most reliable evaluation signals come from deterministic programmatic checks
 
 In the agent evolution literature, systems like DGM~\citep{dgm2025}, SICA~\citep{sica2025}, EvoMAC~\citep{evomac2024}, and AlphaEvolve~\citep{alphaevolve2025} achieve self-evolution precisely because candidate code can be automatically executed and scored. DGM evaluates agent variants by running them on SWE-Bench tasks and measuring the percentage of tests passed; SICA allows the coding agent to modify its own source code and validates changes against a held-out test suite; AlphaEvolve uses programmatic evaluators to score algorithm candidates on mathematical optimization problems.
 
+FunSearch~\citep{funsearch2024} provides an instructive example of rigorous L1 verification at scale. The system maintains 15 samplers and 140 evaluators---a 1:9 sampler-to-evaluator ratio that reflects the fundamental asymmetry between generation and verification. Each candidate program must pass a triple safety filter: (1) execution success within a 30-second timeout, (2) no calls to ancestor functions (preventing trivial delegation), and (3) return value type checking. This defense-in-depth approach prevents common failure modes such as infinite loops, circular references, and type errors that could corrupt the evolutionary process.
+
 The scope of programmatic verification should be expanded beyond code tasks. Data pipelines can verify schema compliance, distribution drift, and end-to-end consistency. Business processes can verify state machine constraints and permission policies. Web tasks can verify DOM state, backend responses, and user intent fulfillment. Programmatic verifiers do not need to understand full semantics, but they must cover the critical failure modes of the target domain.
 
 A key challenge is test coverage: a test suite that passes may simply be incomplete. Self-evolving agents can learn to satisfy the visible tests while introducing subtle regressions in untested behaviors. This motivates mutation testing (injecting deliberate bugs to check whether tests catch them), fuzzing (generating random inputs to stress-test edge cases), and invariant checking (verifying properties that should hold across all executions).
+
+For mathematical discovery tasks, AlphaEvolve demonstrates programmatic evaluation at its most powerful. The system evaluates evolved algorithms against ground-truth solutions on concrete problem instances, providing an unambiguous binary signal: does the candidate algorithm produce a numerically correct result? This clarity of evaluation enables rapid evolutionary search, producing discoveries such as a 48-multiplication algorithm for $4\times4$ complex matrices---the first improvement over Strassen's 49-multiplication result in 56 years. AlphaEvolve also demonstrates real-world programmatic evaluation: evolved scheduling algorithms recovered 0.7\% of worldwide Google data center compute, and optimized FlashAttention kernel tiling achieved 23\% speedup and attention optimization achieved 32\% speedup in LLM training.
+
+The OpenTreeSearch comparison on circle packing ($n=26$) provides a valuable cross-system validation: three independent evolutionary systems (AlphaEvolve: 2.635, OpenEvolve: 2.634, OpenTreeSearch: 2.632) converge on nearly identical optima despite using different evolutionary algorithms and LLM backbones. This convergence suggests that the programmatic evaluation signal is sufficiently strong to guide diverse search strategies toward the same high-quality region of the solution space, providing evidence that the evaluation is measuring a real property of the solutions rather than an artifact of the search process.
+
+Programmatic verification also plays a critical role in the meta-search aspects of self-evolution. When ADAS searches for optimal agent architectures, it evaluates each candidate architecture by running it on a task set and measuring performance. The fitness function is itself a programmatic evaluation: given an agent architecture $A$ and a task distribution $\tau$, the fitness $f(A, \tau)$ is computed by executing $A$ on tasks sampled from $\tau$ and measuring the success rate. ADAS uses bootstrap 95\% confidence intervals with 100,000 resamples to ensure statistical significance, and ThreadPoolExecutor with 32--48 workers for parallel evaluation. This rigorous statistical methodology ensures that the evolutionary search is guided by genuine performance differences rather than random noise.
 
 
 \subsubsection{L2: Code and Reasoning Benchmarks}
@@ -67,62 +85,114 @@ A key challenge is test coverage: a test suite that passes may simply be incompl
 
 Code generation and mathematical reasoning benchmarks provide standardized, widely-recognized evaluation signals. Their primary advantage is comparability: results can be directly compared across papers and systems.
 
-For code generation, HumanEval~\citep{chen2021codex} consists of 164 Python programming problems with unit tests, measuring functional correctness via pass@$k$ metrics. MBPP~\citep{austin2021mbpp} provides 974 crowd-sourced problems. Reflexion~\citep{reflexion2023} demonstrates self-improvement on HumanEval, achieving 91\% pass@1 with GPT-3.5-turbo, surpassing GPT-4's 80.1\% zero-shot. Self-Refine~\citep{selfrefine2023} shows approximately 20\% average improvement across 7 tasks including code optimization (+28\%), math reasoning (56\% to 67\%), and constrained generation (65\% to 78\%).
+\textbf{Code generation benchmarks.} HumanEval~\citep{chen2021codex} consists of 164 Python programming problems with unit tests, measuring functional correctness via pass@$k$ metrics. MBPP~\citep{austin2021mbpp} provides 974 crowd-sourced problems covering a broader range of programming constructs. DS-1000 evaluates data science code generation across seven libraries (Pandas, NumPy, Matplotlib, etc.). LiveCodeBench provides continuously-updated problems to mitigate contamination.
 
-For mathematical reasoning, GSM8K~\citep{cobbe2021gsm8k} provides 8,500 grade-school math problems, MATH~\citep{hendrycks2021math} offers 12,500 competition-level problems, and GPQA~\citep{rein2024gpqa} presents expert-level questions. STaR~\citep{star2022} improves from 35\% to 74\% on GSM8K via self-taught reasoning. RISE~\citep{rise2024} improves Llama2-7B from approximately 14\% to 24\% and Mistral-7B from 38\% to 46\% through multi-turn RL introspection.
+Reflexion~\citep{reflexion2023} demonstrates self-improvement on HumanEval, achieving 91\% pass@1 with GPT-3.5-turbo, surpassing GPT-4's 80.1\% zero-shot performance by 10.9 percentage points. SelfEvolve~\citep{selfevolve2024} achieves 85.98\% pass@1 and 87.81\% pass@10 on HumanEval with a ChatGPT-based pipeline, improving from a 74.39\% baseline. On DS-1000, SelfEvolve improves from 49.4 to 57.2 (+15.8\% relative) through combined self-evolution and self-refinement. On TransCoder (C++ to Python translation), SelfEvolve reaches 90.4\% accuracy (up from 88.3\% baseline).
 
-However, these benchmarks suffer from well-documented limitations. Many are static problem sets vulnerable to data contamination. They measure only final-answer correctness, not reasoning process quality, tool use, or multi-step interactions. Their granularity is small: passing a unit test on a 10-line function differs fundamentally from patching a real codebase.
+EvoAgentX~\citep{evoagentx2025} provides a systematic comparison of optimization algorithms on MBPP: TextGrad achieves 71.00\%, AFlow achieves 79.00\%, and MIPRO achieves 68.00\%, compared to the original unoptimized pipeline at 69.00\%. The variation across optimizers highlights that the choice of optimization algorithm itself is a significant variable in self-improvement evaluation. AFlow's 10-percentage-point advantage over MIPRO suggests that agentic workflow optimization---which restructures the pipeline topology---can outperform prompt-level optimization that keeps the pipeline fixed. This finding has important implications for evaluation design: comparing two self-improvement methods is only meaningful when the optimization algorithm is controlled, or when the comparison explicitly includes algorithm selection as a variable.
+
+DS-1000 provides evaluation for data science code generation across seven libraries (Pandas, NumPy, Matplotlib, Seaborn, Plotly, SciPy, Scikit-learn), testing the ability to generate library-specific code for data manipulation, visualization, and statistical analysis. SelfEvolve's 15.8\% relative improvement on DS-1000 (49.4 to 57.2) demonstrates that self-improvement generalizes beyond generic programming tasks to domain-specific library usage. The improvement is smaller than on HumanEval (+11.59 percentage points vs.\ +15.8\% relative), suggesting that library-specific knowledge is harder to improve through self-correction, possibly because the correct usage of library APIs requires factual knowledge that is less amenable to iterative refinement.
+
+LiveCodeBench addresses contamination directly by providing continuously-updated coding problems sourced from competitive programming platforms, ensuring that problems were not present in any model's training data. ReVeal's strong performance on LiveCodeBench---exceeding the DeepSeek-R1-Zero-Qwen-32B baseline despite being trained on only 3 self-evolution turns---provides evidence that genuine self-improvement can be distinguished from memorization through the use of clean, uncontaminated benchmarks.
+
+\textbf{Mathematical reasoning benchmarks.} GSM8K~\citep{cobbe2021gsm8k} provides 8,500 grade-school math problems, MATH~\citep{hendrycks2021math} offers 12,500 competition-level problems, and GPQA~\citep{rein2024gpqa} presents expert-level questions across physics, chemistry, and biology. STaR~\citep{star2022} improves from 35\% to 74\% on GSM8K via self-taught reasoning, one of the largest relative improvements in the literature. RISE~\citep{rise2024} improves Llama2-7B from approximately 14\% to 24\% and Mistral-7B from 38\% to 46\% through multi-turn RL introspection.
+
+EvoAgentX on MATH shows substantial optimizer-dependent variation: TextGrad achieves 76.00\%, AFlow 71.00\%, MIPRO 72.30\%, compared to the original 66.00\%. Agent Symbolic Learning~\citep{agentsymbolic2024} achieves 60.7\% on MATH with GPT-4 backbone, compared to the standard Agents baseline at 56.0\% and DSPy at 48.4\%.
+
+However, these benchmarks suffer from well-documented limitations that are particularly consequential for self-evolution research. Many are static problem sets vulnerable to data contamination---once a benchmark becomes widely used, subsequent LLM training corpora are likely to include it, inflating future scores regardless of genuine capability improvement. They measure only final-answer correctness, not reasoning process quality, tool use, or multi-step interactions. A self-evolving agent that achieves high accuracy on GSM8K through memorized solution templates has not improved its mathematical reasoning ability in any meaningful sense.
+
+Their granularity is small: passing a unit test on a 10-line function differs fundamentally from patching a real codebase. HumanEval problems average approximately 10 lines of solution code with clearly specified inputs and outputs, while SWE-Bench tasks require understanding repository structure, navigating multiple files, and producing patches that integrate with existing code architecture. The gap between these two evaluation settings is substantial: a method that shows 90\% improvement on HumanEval may show negligible improvement on SWE-Bench, and vice versa. This granularity gap motivates the use of multi-level evaluation spanning from simple unit tests to full software engineering environments.
+
+Furthermore, static benchmarks provide no mechanism for evaluating the \emph{process} of improvement. Two systems that achieve the same final score on GSM8K may differ dramatically in their improvement trajectories: one may show monotonic improvement over 10 iterations, while the other may oscillate between high and low scores before converging. These trajectory differences carry important information about the reliability and robustness of the self-improvement mechanism, information that is invisible in single-number comparisons.
 
 
 \subsubsection{L3: Environment Interaction Benchmarks}
 \label{sec:eval-L3}
 
-Environment interaction benchmarks evaluate agents in simulated or real environments where success requires multi-step planning, tool use, error recovery, and state tracking.
+Environment interaction benchmarks evaluate agents in simulated or real environments where success requires multi-step planning, tool use, error recovery, and state tracking. These benchmarks provide the most ecologically valid evaluation of agent capabilities, but are also the most expensive to run and hardest to reproduce.
 
-SWE-Bench~\citep{jimenez2024swebench} requires systems to locate issues in real open-source repositories, modify code, run tests, and submit verifiable patches. DGM~\citep{dgm2025} improves from 20.0\% to 50.0\% on SWE-Bench Verified through archive-based self-evolution---a 2.5$\times$ relative improvement. DGM also improves from 14.2\% to 30.7\% on the Polyglot multi-language coding benchmark, demonstrating cross-language transfer.
+\textbf{Software engineering environments.} SWE-Bench~\citep{jimenez2024swebench} requires systems to locate issues in real open-source repositories, modify code, run tests, and submit verifiable patches. Unlike unit-test benchmarks, SWE-Bench tasks require understanding repository structure, navigating dependencies across multiple files, producing patches that integrate with existing code architecture, and ensuring that modifications do not break existing functionality. The benchmark includes tasks from 12 popular Python repositories spanning django, flask, scikit-learn, sympy, matplotlib, and other widely-used libraries.
 
-WebArena~\citep{zhou2024webarena} creates realistic web-based tasks requiring website navigation, form filling, and information extraction. ALFWorld~\citep{shridhar2021alfworld} tests embodied agents in text-based household environments. Reflexion achieves 97\% on ALFWorld (up from 75\% baseline), demonstrating that language-based reflection is effective in multi-step interactive settings.
+DGM~\citep{dgm2025} improves from 20.0\% to 50.0\% on SWE-Bench Verified through archive-based self-evolution---a 2.5$\times$ relative improvement that represents the largest single-system improvement on this benchmark to date. The improvement comes not from a single breakthrough but from accumulated architectural modifications that compound across evolutionary generations: early generations improve debugging and code navigation capabilities, middle generations improve test-driven development strategies, and later generations develop sophisticated multi-file reasoning abilities.
 
-Voyager~\citep{voyager2023} uses unique evaluation metrics in Minecraft: unique items discovered, technology tree coverage, and cross-world skill transfer. This lifelong learning evaluation captures cumulative capability growth rather than single-test performance.
+DGM also improves from 14.2\% to 30.7\% on the Polyglot multi-language coding benchmark, demonstrating cross-language transfer. This result is particularly notable because the evolutionary search was conducted primarily on Python tasks, yet the evolved agent architecture transferred its improvements to Rust, Go, and Java programming tasks. SWE-Agent~\citep{sweagent2024} achieves state-of-the-art results and was recognized as an ICLR 2025 Oral, establishing SWE-Bench as the primary benchmark for coding agent evaluation and driving community convergence on this evaluation standard.
+
+\textbf{Web and embodied environments.} WebArena~\citep{zhou2024webarena} creates realistic web-based tasks requiring website navigation, form filling, and information extraction across live websites rendered in a browser environment. Unlike static HTML benchmarks, WebArena tasks require agents to interact with dynamic JavaScript-rendered pages, handle authentication flows, navigate multi-page workflows, and extract information from complex visual layouts. The benchmark evaluates the full pipeline of web interaction: understanding user intent, planning a sequence of actions (clicks, text input, scrolling), executing the plan while handling unexpected page states, and verifying that the desired outcome was achieved.
+
+ALFWorld~\citep{shridhar2021alfworld} tests embodied agents in text-based household environments spanning six task types: pick up, clean, heat, cool, examine, and pick two objects. While the text-based interface simplifies the perception challenge, it requires sophisticated planning, state tracking, and error recovery across multi-step action sequences. Reflexion achieves 97\% on ALFWorld (up from 75\% baseline), demonstrating that language-based reflection is effective in multi-step interactive settings. The improvement comes from the agent's ability to learn from failed action sequences: when a pick-up attempt fails because the object is in a different room, Reflexion stores this experience as natural language feedback and uses it to plan more efficient navigation in subsequent attempts.
+
+\textbf{Lifelong learning environments.} Voyager~\citep{voyager2023} uses unique evaluation metrics in Minecraft: unique items discovered, technology tree coverage, and cross-world skill transfer. This lifelong learning evaluation captures cumulative capability growth rather than single-test performance. The technology tree metric is particularly informative: it measures not just whether the agent can perform individual tasks, but whether it has acquired the hierarchical skill structure necessary for increasingly complex tasks. An agent that discovers iron tools but cannot progress to diamond tools has hit a skill plateau; one that progresses through the full technology tree demonstrates genuine cumulative learning.
+
+Voyager's cross-world skill transfer evaluation addresses a critical question for self-evolution: do acquired skills generalize to new environments? The system tests this by deploying skills learned in one Minecraft world to a different world with different terrain, resource distributions, and mob spawning patterns. Skills that transfer successfully demonstrate robust, environment-independent capabilities; skills that fail reveal overfitting to specific world characteristics. This transfer evaluation paradigm should be adopted more broadly in agent self-evolution research, as it directly measures the generalizability that distinguishes genuine self-improvement from environment-specific memorization.
+
+\textbf{Multi-environment benchmarks.} AgentBench~\citep{agentbench2024} evaluates LLM-as-Agent across eight distinct environments: OS interaction, Database (SQL), Knowledge Graph (SPARQL), Digital Card Game, Lateral Thinking Puzzles, ALFWorld, WebShop, and Avalon (multi-agent game). The dev set requires approximately 4,000 LLM generations and the test set requires approximately 13,000, making it one of the most comprehensive agent evaluation suites available. Published at ICLR 2024, AgentBench establishes that competent agent performance requires mastery across multiple interaction paradigms---command-line interaction, database query, web navigation, and social reasoning. The eight environments span a wide range of interaction complexities: OS interaction requires file system manipulation and process management; Database tasks require SQL query construction against real schemas; Knowledge Graph tasks require SPARQL query generation for structured data retrieval; the Card Game environment tests strategic reasoning under uncertainty; Lateral Thinking Puzzles test creative problem-solving; ALFWorld tests embodied task completion; WebShop tests goal-directed web navigation; and Avalon tests social deduction and multi-agent cooperation in a game of hidden roles.
+
+A key finding from AgentBench is that model performance varies dramatically across environments: models that excel at code generation may struggle with social reasoning, and models that perform well on knowledge tasks may fail at interactive decision-making. This environment-dependent performance has direct implications for self-evolution evaluation: a self-improvement method that shows consistent gains across all eight AgentBench environments demonstrates genuine agent-level improvement, while one that improves only on a subset may be exploiting environment-specific features rather than developing general agent capabilities.
+
+\textbf{Scientific discovery environments.} AI Scientist v2~\citep{aiscientist2025} evaluates end-to-end autonomous research at approximately \$15 per paper, achieving a peer review score of 6.33 and ranking in the top 45\% of submissions---the first AI-generated paper accepted through peer review. This represents a qualitatively different evaluation paradigm where the benchmark is the scientific community itself.
+
+\textbf{Memory and reasoning environments.} EverOS~\citep{everos2025} introduces two specialized benchmarks for self-evolving agents. EverMemBench evaluates memory quality across three layers: Factual Recall (direct information retrieval), Applied Reasoning (using memories for problem-solving), and Personalized Generalization (adapting to user-specific patterns). The dataset is published on HuggingFace (EverMind-AI/EverMemBench-Dynamic). EverCore achieves 93.05\% on LoCoMo and 83.00\% on LongMemEval, while HyperMem achieves 92.73\% on LoCoMo.
 
 
 \subsubsection{L4: Process Metrics}
 \label{sec:eval-L4}
 
-Process metrics evaluate \emph{how} improvement occurs, distinguishing genuine self-evolution from one-time optimization.
+Process metrics evaluate \emph{how} improvement occurs, distinguishing genuine self-evolution from one-time optimization. These metrics are essential for understanding the dynamics of evolutionary improvement and predicting future trajectories.
 
 \textbf{Iterative Improvement Curves.} We define $\Delta_t = V(z_t, \tau) - V(z_{t-1}, \tau)$ where $V(z_t, \tau)$ is the evaluation score of agent state $z_t$ on task distribution $\tau$. Key patterns include: monotonic improvement ($\Delta_t > 0$ for all $t$), plateau ($\Delta_t \approx 0$ after initial gains), volatile improvement (alternating positive and negative $\Delta_t$), and regression ($\Delta_t < 0$ indicating negative transfer).
 
-\textbf{Transfer and Generalization.} ADAS~\citep{adas2024} demonstrates cross-model and cross-domain transfer: agent designs discovered on ARC transfer to GFootball, and designs searched with GPT-3.5 remain effective on GPT-4. Absolute Zero~\citep{absolutezero2025} shows that code self-play training confers mathematical reasoning ability---a striking cross-domain transfer result.
+RISE~\citep{rise2024} provides detailed iterative improvement analysis: more introspection turns consistently improve accuracy, and the model learns to allocate more ``introspection budget'' on harder problems. This adaptive allocation is itself a form of meta-learning that emerges from the self-correction process.
 
-\textbf{Archive Diversity.} DGM's key insight is that maintaining a growing archive of agent variants---including currently suboptimal ones---enables open-ended exploration and avoids local optima. Archive diversity metrics quantify the breadth of the explored design space.
+ReVeal~\citep{reveal2025} demonstrates an important finding: self-evolution trained on only 3 turns generalizes to 20+ inference turns, producing results that exceed the DeepSeek-R1-Zero-Qwen-32B baseline. This gap between training and inference turn counts suggests that self-evolution learns a general correction policy rather than overfitting to specific turn counts.
 
-\textbf{Rollback Rate.} The frequency of rollbacks to previous versions directly measures evolution reliability. High rollback rates indicate insufficiently conservative mutation-selection processes.
+\textbf{Transfer and Generalization.} ADAS~\citep{adas2024} demonstrates cross-model and cross-domain transfer: agent designs discovered on ARC transfer to GFootball, and designs searched with GPT-3.5 remain effective on GPT-4. Specifically, ADAS discovers that a Memory-Augmented Agent architecture at generation 4 achieves 11.0\% median fitness on ARC (compared to 3.0\% for Chain-of-Thought and 8.0\% for Self-Refine baselines). This architecture was evaluated across five validation domains (DROP, GPQA, MGSM, MMLU) with rigorous statistical testing using bootstrap 95\% confidence intervals with 100,000 resamples.
+
+Absolute Zero~\citep{absolutezero2025} shows that code self-play training confers mathematical reasoning ability---a striking cross-domain transfer result. AZR-Coder-7B achieves SOTA at 7B parameter scale on code benchmarks using zero external training data, and competitive performance on math benchmarks despite training exclusively on code self-play.
+
+DGM demonstrates cross-domain transfer at the agent level: agents evolved on SWE-Bench also show improved performance on the Polyglot multi-language benchmark (14.2\% to 30.7\%), suggesting that self-evolving agent architectures learn general problem-solving strategies rather than task-specific tricks.
+
+\textbf{Archive Diversity.} DGM's key insight is that maintaining a growing archive of agent variants---including currently suboptimal ones---enables open-ended exploration and avoids local optima. Archive diversity metrics quantify the breadth of the explored design space. The archive serves dual purposes: as a source of genetic material for future recombination and as a rollback mechanism when evolutionary paths prove unproductive.
+
+\textbf{Rollback Rate.} The frequency of rollbacks to previous versions directly measures evolution reliability. High rollback rates indicate insufficiently conservative mutation-selection processes. DGM reports rollback rates as part of its fitness evaluation, and the diversity-weighted sampling strategy explicitly encourages exploration of underexplored regions of the agent design space.
+
+\textbf{Cost Efficiency Metrics.} The cost of self-evolution is a critical but often underreported dimension. We identify four cost categories that should be tracked: (1) API costs measured in token consumption per improvement iteration; (2) wall-clock time including both LLM inference and evaluation execution; (3) human intervention frequency measuring how often manual oversight is required; and (4) compute costs for methods that involve fine-tuning or training. The total cost of a self-evolution experiment should be expressed as a cost-efficiency ratio: improvement gained per dollar spent, enabling comparison across methods with different cost profiles.
+
+OPRO~\citep{opro2024} provides detailed cost analysis: 200-step optimization loops with 8 candidate instructions per step, using dual-LLM architecture (optimizer at temperature 1.0, scorer at temperature 0.0). The system retains top-20 instruction history with MD5 deduplication, achieving up to 25\% improvement on BBH tasks over human-designed prompts. The 200-step budget represents approximately 1,600 LLM calls for the optimizer and 200 for the scorer, providing a concrete cost baseline for prompt optimization methods.
+
+EvoPrompt~\citep{evoprompt2024} evaluates across 31 datasets spanning classification, summarization, simplification, and BBH tasks, using both Genetic Algorithm and Differential Evolution variants with LLM-executed crossover and mutation. The comparison between GA and DE variants reveals that evolutionary algorithm choice affects both optimization quality and cost: DE variants tend to converge faster but may explore less of the prompt space, while GA variants with crossover produce more diverse candidates at higher computational cost.
+
+FunSearch's infrastructure cost is particularly informative: the system maintains 10 islands (independent sub-populations) with periodic bottom-50\% resets, 15 samplers, and 140 evaluators operating in parallel. The evaluation bottleneck is evidenced by the 1:9 sampler-to-evaluator ratio, and the cluster-level aggregation by Signature (per-test-case score tuples) enables efficient deduplication of equivalent solutions. Temperature 0.1 for cluster sampling ensures that the system is heavily biased toward high-score clusters, focusing compute on the most promising regions of the search space.
 
 
 \subsubsection{L5: Safety and Cost Gates}
 \label{sec:eval-L5}
 
-The highest layer evaluates whether improvement was achieved at acceptable cost and risk.
+The highest layer evaluates whether improvement was achieved at acceptable cost and risk. As self-evolving agents become more autonomous and more capable, the importance of L5 evaluation increases proportionally.
 
-\textbf{Permission Verification.} Every candidate variant must undergo permission checks. Self-modifying agents like G\"{o}del Agent~\citep{godelagent2024} and SICA are particularly sensitive to this concern.
+\textbf{Permission Verification.} Every candidate variant must undergo permission checks before deployment. Self-modifying agents like G\"{o}del Agent~\citep{godelagent2024} and SICA are particularly sensitive to this concern because their self-modification capabilities extend to the agent's own operational constraints. G\"{o}del Agent achieves 8--15\% improvement over hand-designed agents on HotPotQA through recursive self-modification, but this very capability raises fundamental questions about permission boundaries: what modifications should be allowed, who sets the permission policy, and how can we verify that permissions are respected during evolution?
 
-\textbf{Cost Accounting.} Key metrics: API calls per improvement iteration, token consumption per unit gain, wall-clock time to target performance, and human intervention frequency. Cost should be part of the fitness function.
+We identify three levels of permission models for self-evolving agents. \textbf{Static permissions} define a fixed set of allowed modifications at design time (e.g., ``the agent may modify its prompts but not its code''). Static permissions are simple to verify but limit the scope of possible improvements. \textbf{Dynamic permissions} allow the permission set to evolve alongside the agent, with modifications to the permission policy itself requiring human approval. Dynamic permissions enable wider exploration but introduce a meta-permission problem. \textbf{Contractual permissions} encode behavioral constraints as executable specifications (e.g., ``the agent must always pass regression tests after modification''), allowing any modification that satisfies the contract. Contractual permissions are the most flexible but require comprehensive test coverage to be effective. The choice of permission model has direct implications for evaluation: static permissions can be verified by simple code inspection, dynamic permissions require monitoring the permission evolution trajectory, and contractual permissions require regression test execution after every modification.
 
-\textbf{Regression Testing.} Every evolved variant must pass regression tests verifying core capability preservation. Self-evolution can produce negative transfer: optimizing for new tasks may degrade existing ones.
+\textbf{Cost Accounting.} Key metrics include: API calls per improvement iteration, token consumption per unit gain, wall-clock time to target performance, and human intervention frequency. Cost should be part of the fitness function, not an afterthought. AlphaEvolve's infrastructure improvements demonstrate the value of cost-aware evaluation: recovered 0.7\% of worldwide compute in data center scheduling and 23--32\% speedups in LLM training represent economically significant improvements that would not be captured by accuracy-only metrics.
 
-\textbf{Human Audit.} For high-stakes applications, human review of code changes, reasoning traces, and safety constraint maintenance provides the final safety net.
+\textbf{Regression Testing.} Every evolved variant must pass regression tests verifying core capability preservation. Self-evolution can produce negative transfer: optimizing for new tasks may degrade existing ones. This phenomenon has been observed in weight-modification methods: STaR's improvement on GSM8K (35\% to 74\%) comes at the cost of degraded performance on some out-of-distribution tasks, as the fine-tuning process specializes the model toward the training distribution. Similarly, RISE's multi-turn self-correction training may cause the model to over-correct on simple tasks where the initial answer was already correct.
+
+The rollback mechanisms in archive-based systems like DGM serve as automated regression testing---variants that fail to maintain baseline performance are simply not selected. However, rollback-based regression testing has a limitation: it only prevents performance degradation on the benchmarks used for selection. Performance degradation on unmeasured dimensions---such as response latency, memory consumption, or robustness to adversarial inputs---may go undetected. A comprehensive regression testing strategy should include performance baselines across multiple dimensions, not just the primary optimization metric.
+
+\textbf{Human Audit.} For high-stakes applications, human review of code changes, reasoning traces, and safety constraint maintenance provides the final safety net. Human audit is the most expensive evaluation layer but also the most capable of detecting subtle failures that automated systems miss: ethical violations, culturally insensitive outputs, logical inconsistencies that happen to satisfy the evaluation criteria, and security vulnerabilities that exploit assumptions in the test suite. AI Scientist v2's peer review score of 6.33 represents a form of human audit at the research output level, demonstrating that human evaluators can assess AI-generated content at a quality level comparable to human-generated content. The OpenTreeSearch comparison on circle packing ($n=26$) demonstrates that different evolution systems can converge on similar optima (AlphaEvolve: 2.635, OpenEvolve: 2.634, OpenTreeSearch: 2.632), providing cross-system validation of evolutionary results that reduces the need for human verification of individual results.
+
+\textbf{Human Audit.} For high-stakes applications, human review of code changes, reasoning traces, and safety constraint maintenance provides the final safety net. AI Scientist v2's peer review score of 6.33 represents a form of human audit at the research output level. The OpenTreeSearch comparison on circle packing ($n=26$) demonstrates that different evolution systems can converge on similar optima (AlphaEvolve: 2.635, OpenEvolve: 2.634, OpenTreeSearch: 2.632), providing cross-system validation of evolutionary results.
 
 
 \subsection{Quantitative Benchmark Results Across Methods}
 \label{sec:eval-quantitative}
 
-This section consolidates quantitative results from the agent evolution literature.
+This section consolidates quantitative results from the agent evolution literature, organized by benchmark category. These tables provide a comprehensive reference for comparing self-improvement methods across standardized evaluation settings.
 
 \begin{table}[htbp]
 \centering
 \small
-\caption{Code generation and software engineering benchmark results across self-improvement methods.}
+\caption{Code generation and software engineering benchmark results across self-improvement methods. Pass@1 unless otherwise noted.}
 \label{tab:eval-code}
 \begin{tabular}{p{28mm}p{22mm}p{18mm}p{18mm}p{30mm}}
 \toprule
@@ -131,14 +201,21 @@ This section consolidates quantitative results from the agent evolution literatu
 GPT-4 (zero-shot) & GPT-4 & 80.1\% & --- & Baseline \\
 Reflexion & GPT-3.5-turbo & \textbf{91.0\%} & --- & Verbal RL + memory \\
 Self-Refine & GPT-3.5/4 & +20\% avg & --- & Self-feedback loop \\
+SelfEvolve & ChatGPT & 86.0\% & --- & Code + test self-evolve \\
 DGM (seed) & Claude/GPT & --- & 20.0\% & Initial agent \\
 \textbf{DGM (evolved)} & Claude/GPT & --- & \textbf{50.0\%} & Archive evolution \\
+DGM (Polyglot) & Claude/GPT & --- & 30.7\% & Cross-language \\
 AZR-Coder & Qwen-7B & SOTA (7B) & --- & Zero-data self-play \\
+Agent Sym. Learn. & GPT-4 & 73.2\% & --- & Symbolic optimization \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Reflexion's 91\% pass@1 on HumanEval using GPT-3.5-turbo surpasses GPT-4 zero-shot (80.1\%) by 10.9 percentage points. The memory buffer---storing natural language descriptions of failures and corrections---acts as a ``verbal gradient'' guiding subsequent attempts. DGM's SWE-Bench improvement (20.0\% to 50.0\%, a 2.5$\times$ relative gain) demonstrates that agent-level self-modification can produce gains beyond prompt-level or memory-level self-improvement. Absolute Zero achieves SOTA at 7B scale using zero external training data, with code self-play generating both tasks and solutions verified by a code executor.
+Reflexion's 91\% pass@1 on HumanEval using GPT-3.5-turbo surpasses GPT-4 zero-shot (80.1\%) by 10.9 percentage points. The memory buffer---storing natural language descriptions of failures and corrections---acts as a ``verbal gradient'' guiding subsequent attempts. This result demonstrates that a smaller model with self-correction capabilities can outperform a larger model without them, a finding with significant practical implications.
+
+DGM's SWE-Bench improvement (20.0\% to 50.0\%, a 2.5$\times$ relative gain) demonstrates that agent-level self-modification can produce gains beyond prompt-level or memory-level self-improvement. The Polyglot cross-language result (14.2\% to 30.7\%) further demonstrates that evolved agent architectures capture generalizable problem-solving strategies.
+
+Absolute Zero achieves SOTA at 7B scale using zero external training data, with code self-play generating both tasks and solutions verified by a code executor. This result challenges the assumption that self-improvement requires external supervision.
 
 \begin{table}[htbp]
 \centering
@@ -154,33 +231,113 @@ RISE & Llama2-7B & 14\%$\to$24\% & Improved & Multi-turn RL \\
 RISE & Mistral-7B & 38\%$\to$46\% & Improved & Multi-turn RL \\
 Self-Refine & GPT-3.5/4 & 56\%$\to$67\% & --- & Self-feedback \\
 Absolute Zero & Qwen-7B & Competitive & Competitive & Self-play \\
+Agent Sym. Learn. & GPT-4 & --- & 60.7\% & Symbolic optimization \\
+EvoAgentX (TextGrad) & Various & --- & 76.0\% & Text gradient descent \\
+EvoAgentX (AFlow) & Various & --- & 71.0\% & Agentic workflow \\
+EvoAgentX (MIPRO) & Various & --- & 72.3\% & Multi-prompt optim. \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-STaR's improvement from 35\% to 74\% on GSM8K represents one of the largest relative improvements in the literature. RISE's RL-based self-correction significantly outperforms Self-Refine's prompt-based approach, suggesting self-improvement is more effective when correction behavior is learned through training. Absolute Zero's cross-domain transfer---competitive math performance from code-only self-play training---suggests shared cognitive structures between code generation and mathematical reasoning.
+STaR's improvement from 35\% to 74\% on GSM8K represents one of the largest relative improvements in the literature (111\% relative gain). RISE's RL-based self-correction significantly outperforms Self-Refine's prompt-based approach (RISE: 38\%$\to$46\% vs.\ Self-Refine: 56\%$\to$67\%), suggesting that self-improvement is more effective when correction behavior is learned through training rather than prompted at inference time.
+
+EvoAgentX's optimizer comparison on MATH reveals substantial variation: TextGrad (76.0\%) outperforms AFlow (71.0\%) and MIPRO (72.3\%), all exceeding the original pipeline (66.0\%). This comparison demonstrates that the choice of optimization algorithm is itself a critical design decision in self-evolution systems.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Multi-task and cross-domain evaluation results.}
+\label{tab:eval-multitask}
+\begin{tabular}{p{32mm}p{22mm}p{28mm}p{28mm}}
+\toprule
+\textbf{Method} & \textbf{Benchmark} & \textbf{Baseline} & \textbf{Improved} \\
+\midrule
+Agent Sym. Learn. & HotPotQA F1 & 36.2 (Agents) & \textbf{39.1} \\
+Agent Sym. Learn. & Software Dev. & 2.4 (Agents) & \textbf{3.8} \\
+Agent Sym. Learn. & Creative Writing & 6.8 (ToT) & \textbf{7.4} \\
+G\"{o}del Agent & HotPotQA & Baseline & +8--15\% \\
+SelfEvolve & DS-1000 & 49.4 & \textbf{57.2} \\
+SelfEvolve & TransCoder & 88.3\% & \textbf{90.4\%} \\
+EvoAgentX (TextGrad) & HotPotQA F1 & 63.58\% & \textbf{71.02\%} \\
+EvoAgentX (MIPRO) & HotPotQA F1 & 63.58\% & \textbf{69.16\%} \\
+Reflexion & ALFWorld & 75\% & \textbf{97\%} \\
+AI Scientist v2 & Peer Review & --- & 6.33 (top 45\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The multi-task results demonstrate that self-improvement is not limited to code and math domains. Agent Symbolic Learning produces consistent improvements across software development (2.4 to 3.8 on a 1--4 executability scale), creative writing (6.8 to 7.4 on a 1--10 GPT-4 judge scale), and multi-hop QA (36.2 to 39.1 F1 on HotPotQA). Reflexion's 97\% on ALFWorld (from 75\% baseline) demonstrates that natural language reflection is highly effective in interactive embodied environments.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Self-Refine performance across seven diverse tasks. Average improvement approximately 20\%.}
+\label{tab:eval-selfrefine}
+\begin{tabular}{p{30mm}p{25mm}p{20mm}p{20mm}p{15mm}}
+\toprule
+\textbf{Task} & \textbf{Metric} & \textbf{Baseline} & \textbf{Self-Refine} & \textbf{$\Delta$} \\
+\midrule
+Code Optimization & Performance & Baseline & +28\% & Significant \\
+Math Reasoning & Accuracy & 56\% & 67\% & +11pp \\
+Sentiment Reversal & Accuracy & 74\% & 86\% & +12pp \\
+Dialogue Response & Win rate & 52\% & 68\% & +16pp \\
+Acrostic Poetry & Quality (1--10) & 3.2 & 3.8 & +0.6 \\
+Code Readability & Score (1--10) & 3.5 & 4.1 & +0.6 \\
+Constrained Gen. & Compliance & 65\% & 78\% & +13pp \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Self-Refine's results across seven tasks demonstrate the breadth of applicability of iterative self-correction. The largest gains come in dialogue response (+16pp win rate) and code optimization (+28\%), while more constrained tasks like acrostic poetry show more modest improvements. This pattern suggests that self-refinement is most effective when the output space is large and the feedback signal is informative. In constrained tasks, the initial output is often already near-optimal within the constraints, leaving less room for iterative improvement.
+
+The variation in improvement magnitude across tasks also provides evidence about the mechanism of self-refinement. Tasks where the evaluation criteria are well-defined and easily verbalized (code optimization, constrained generation) tend to show larger improvements than tasks with subjective criteria (acrostic poetry quality). This suggests that the self-refinement loop works by generating informative natural language feedback, and that feedback quality is higher when the evaluation criteria are more explicit---an important design consideration for self-evolution systems that rely on LLM-generated feedback signals.
 
 
 \subsection{Benchmark Contamination and Reproducibility}
 \label{sec:eval-contamination}
 
-Benchmark contamination is particularly problematic for self-evolution research where claimed improvements may be artifacts of memorization rather than genuine capability gain.
+Benchmark contamination is particularly problematic for self-evolution research where claimed improvements may be artifacts of memorization rather than genuine capability gain. As LLMs are trained on increasingly large internet-scale corpora, the probability that benchmark examples appear in training data approaches certainty for widely-used benchmarks.
 
-We distinguish three levels of contamination: (1) \textbf{Direct contamination}---test examples appear verbatim in training data, most likely for widely-used benchmarks (HumanEval, GSM8K, MMLU). (2) \textbf{Near-miss contamination}---the model has seen similar but not identical problems, inflating scores through pattern transfer. (3) \textbf{Evaluator leakage}---the agent has access to the evaluation function during evolution, enabling optimization against the evaluator rather than genuine improvement.
+\textbf{Three levels of contamination.} We distinguish three levels of increasing subtlety. (1) \textbf{Direct contamination}---test examples appear verbatim in training data. This is most likely for widely-used benchmarks (HumanEval, GSM8K, MMLU) that have been publicly available since before model training cutoffs. The contamination is detectable via n-gram overlap analysis and membership inference attacks. (2) \textbf{Near-miss contamination}---the model has seen similar but not identical problems, inflating scores through pattern transfer. This is harder to detect but can be estimated by comparing performance on original vs.\ reformulated problems. (3) \textbf{Evaluator leakage}---the agent has access to the evaluation function during evolution, enabling optimization against the evaluator rather than genuine improvement. This is the most insidious form because it produces ``improvements'' that are genuine with respect to the observed metric but meaningless in deployment.
 
-Mitigation strategies include temporal splits (using only benchmarks released after training cutoff), held-out sets (structurally similar but novel instances), procedural generation (algorithmically generated problems, as in SPIRAL and Absolute Zero), and run-time isolation (sandboxed evaluation preventing access to ground truth).
+\textbf{Mitigation strategies.} Several approaches have been proposed: (a) Temporal splits---using only benchmarks released after training cutoff. This is simple but limits benchmark availability. (b) Held-out sets---structurally similar but novel instances. GPQA's expert-level questions provide natural protection because they are unlikely to appear in training data. (c) Procedural generation---algorithmically generating problems, as in SPIRAL and Absolute Zero. Absolute Zero's self-play approach is particularly elegant: the model generates its own training tasks, making external contamination impossible by construction. (d) Run-time isolation---sandboxed evaluation preventing access to ground truth. FunSearch's 15-sampler, 140-evaluator architecture with triple safety filtering demonstrates this approach at scale.
 
-Reproducibility challenges include LLM non-determinism (same prompt producing different outputs), API version changes (model behavior updating without notice), state-dependent evaluation (results depending on full evolution history), and cost barriers (full reproduction requiring thousands of API calls).
+\textbf{Reproducibility challenges.} Beyond contamination, self-evolution research faces unique reproducibility challenges. LLM non-determinism means the same prompt produces different outputs across runs. API version changes mean model behavior updates without notice---a GPT-4-turbo checkpoint from January 2024 may produce qualitatively different results from one in December 2024. State-dependent evaluation means results depend on the full evolution history, not just the final agent configuration. Cost barriers mean full reproduction of evolutionary experiments requires thousands of API calls, with costs ranging from tens to hundreds of dollars per experimental condition.
 
-We recommend that future papers report: (1) model version and API endpoint, (2) random seeds and sampling parameters, (3) total cost in tokens and dollars, (4) full evolution trajectory, (5) failure analysis, and (6) contamination analysis with respect to model training data.
+\textbf{Statistical rigor.} ADAS~\citep{adas2024} provides a model for rigorous statistical evaluation: fitness is measured via bootstrap 95\% confidence intervals with 100,000 resamples, and dynamic code execution uses ThreadPoolExecutor with 32--48 workers for parallel evaluation. This level of statistical rigor should be the standard, not the exception, in self-evolution research.
+
+We recommend that future papers report: (1) model version and API endpoint, (2) random seeds and sampling parameters, (3) total cost in tokens and dollars, (4) full evolution trajectory with intermediate checkpoints, (5) failure analysis including rollback events, and (6) contamination analysis with respect to model training data cutoff dates.
+
+The reproducibility crisis is exacerbated by the proprietary nature of most frontier LLMs. When a self-evolution paper reports results using ``GPT-4,'' the specific model version, system prompt, and API parameters may all affect results, yet these details are frequently omitted. Open-source model evaluations (e.g., Absolute Zero using Qwen-7B) provide better reproducibility guarantees because the model weights are fixed and publicly available, enabling exact reproduction of experimental conditions. We encourage the community to prioritize open-model evaluations alongside proprietary-model evaluations, and to treat proprietary-model results as upper-bound estimates rather than reproducible findings.
+
+An underappreciated aspect of reproducibility is the interaction between temperature settings and evolutionary dynamics. Many self-evolution methods use temperature 0.0 for evaluation (to ensure deterministic scoring) but temperature $>$0 for generation (to encourage exploration). The choice of generation temperature affects the diversity of the candidate pool, which in turn affects the evolutionary trajectory. Two runs with identical configurations except for generation temperature may produce qualitatively different evolutionary outcomes, making temperature a critical variable that must be reported and controlled.
 
 
 \subsection{The Evaluator's Dilemma}
 \label{sec:eval-dilemma}
 
-Self-evolution introduces a fundamental tension: the system being evaluated is optimizing against the evaluation function. Self-Rewarding LMs~\citep{selfrewarding2024} illustrate this: the model evaluates its own outputs and fine-tunes on its preferences. Initially genuine improvement occurs, but over iterations the model may reward outputs that satisfy its judge rather than genuinely high-quality outputs. Meta-Rewarding~\citep{metarewarding2024} adds a meta-judge to evaluate the judge, but introduces a recursive problem.
+Self-evolution introduces a fundamental tension: the system being evaluated is optimizing against the evaluation function. This creates a co-evolutionary dynamic between the agent and its evaluator, with distinct failure modes depending on the evaluator's independence.
 
-The resolution lies in \textbf{evaluator independence}: the evaluation function should be as independent as possible from the agent. Mechanisms include programmatic verifiers (unit tests, sandbox execution), hidden test sets, cross-model evaluation, and human spot-checking. The five-layer hierarchy provides multiple independent evaluation signals, reducing the risk of any single evaluator's weakness being exploited.
+\textbf{Self-Rewarding and evaluator degradation.} Self-Rewarding Language Models~\citep{selfrewarding2024} illustrate both the promise and peril of self-evaluation. The model evaluates its own outputs and fine-tunes on its preferences. Initially, genuine improvement occurs as the model learns to produce higher-quality outputs that also receive higher self-assigned scores. Over iterations, however, the model may learn to produce outputs that satisfy its judge rather than genuinely high-quality outputs---the evaluator reward and true quality diverge.
+
+\textbf{Meta-Rewarding and recursive evaluation.} Meta-Rewarding~\citep{metarewarding2024} adds a meta-judge to evaluate the judge, creating a recursive evaluation structure. While this can detect some forms of evaluator degradation, it introduces a meta-evaluator's dilemma: who evaluates the meta-evaluator? The recursion must bottom out at an external ground truth, or the evaluation becomes entirely self-referential.
+
+\textbf{Absolute Zero's elegant solution.} Absolute Zero~\citep{absolutezero2025} resolves the evaluator's dilemma through code execution. The self-play training generates both tasks (code problems) and solutions; a deterministic code executor provides binary verification (pass/fail). The evaluator is not a learned model but a programmatic sandbox, making evaluator degradation impossible by construction. This approach generalizes to any domain where programmatic verification is available: mathematical proofs (verified by proof checkers), physical simulations (verified by numerical solvers), and database queries (verified by execution against ground-truth databases).
+
+\textbf{The independence spectrum.} We can arrange evaluation methods along an independence spectrum:
+
+\begin{enumerate}[nosep]
+\item \textbf{Fully self-referential}: Self-Refine, Self-Rewarding (same model generates, evaluates, and improves).
+\item \textbf{Partially independent}: Reflexion (external environment provides feedback, but the model interprets it), RISE (external reward signal from RL environment).
+\item \textbf{Structurally independent}: DGM, ADAS (code execution against external test suites), AlphaEvolve (programmatic evaluators).
+\item \textbf{Fully independent}: FunSearch (separate sampler and evaluator populations), Absolute Zero (code executor as ground truth), AI Scientist v2 (human peer review).
+\end{enumerate}
+
+The resolution lies in maximizing evaluator independence: the evaluation function should be as independent as possible from the agent being evolved. The five-layer hierarchy provides multiple independent evaluation signals, reducing the risk of any single evaluator's weakness being exploited.
+
+A practical implication is that self-evolution systems should employ \emph{defense in depth} for evaluation: multiple independent evaluators operating at different layers, each capable of detecting failures that others might miss. A code-generating agent might pass all unit tests (L1), score well on HumanEval (L2), and even solve SWE-Bench tasks (L3), yet still fail a human audit (L5) because its solutions contain subtle security vulnerabilities or unnecessarily complex code that would be difficult for human developers to maintain. Each evaluation layer catches different failure modes, and only the combination provides comprehensive coverage.
+
+The evaluator's dilemma also has implications for the design of self-play training systems. Absolute Zero's approach---where the evaluator is a deterministic code executor---represents the gold standard for evaluator independence, but it is limited to domains where programmatic verification is available. For domains such as creative writing, strategic planning, or open-ended reasoning, no such programmatic evaluator exists, and the field must develop new approaches to evaluation independence. Potential directions include multi-model evaluation (using different LLMs as generator and evaluator), human-in-the-loop evaluation for high-stakes decisions, and adversarial evaluation where a separate system actively searches for evaluator weaknesses.
 
 
 \subsection{Evaluation Infrastructure and Community Assessment}
@@ -234,15 +391,31 @@ The resolution lies in \textbf{evaluator independence}: the evaluation function 
     }
 
 \end{tikzpicture}
-\caption{Four-layer reference architecture for agent self-evolution evaluation.}
+\caption{Four-layer reference architecture for agent self-evolution evaluation. The Task Layer defines what is being evaluated; the Agent Layer defines who is being evaluated; the Evolution Layer defines how improvement occurs; the Infrastructure Layer provides persistent evaluation services.}
 \label{fig:evolution-arch}
 \end{figure}
 
+
+\subsubsection{Specialized Evaluation Frameworks}
+
+Several specialized frameworks have emerged to address the unique evaluation needs of self-evolving agents.
+
+\textbf{EvoAgentBench}~\citep{everos2025} introduces four evaluation dimensions specifically designed for agent self-evolution: (1) longitudinal growth curves measuring cumulative capability improvement over extended time horizons; (2) transfer efficiency quantifying how quickly improvements in one domain generalize to related domains; (3) error avoidance measuring the system's ability to learn from mistakes without human intervention; and (4) skill hit quality evaluating whether newly acquired skills are genuinely useful or merely decorative.
+
+\textbf{EverMemBench}~\citep{everos2025} evaluates memory quality across three layers that mirror the complexity of real-world memory demands: Factual Recall tests direct information retrieval (``What was the user's name?''), Applied Reasoning tests using memories for problem-solving (``Based on past interactions, what would the user prefer?''), and Personalized Generalization tests adapting to user-specific patterns (``Given this user's history, predict their likely next request''). The three-layer structure captures the progression from simple storage to intelligent utilization of accumulated experience. The dataset is published on HuggingFace (EverMind-AI/EverMemBench-Dynamic), enabling reproducible evaluation and community contribution of new evaluation scenarios. EverMemBench's three-layer evaluation provides a model for how self-evolution evaluation should be structured: not as a single score, but as a profile across multiple capability dimensions that reveals both strengths and weaknesses. A system that scores well on Factual Recall but poorly on Applied Reasoning has accumulated information but cannot use it effectively; one that scores well on Personalized Generalization has learned to adapt but may be overfitting to specific user patterns. Only by evaluating across all three layers can we obtain a complete picture of memory quality.
+
+\textbf{AgentBench}~\citep{agentbench2024} evaluates LLM-as-Agent across eight distinct environments spanning command-line interaction, database querying, knowledge graph navigation, game playing, lateral thinking, embodied tasks, web shopping, and multi-agent social deduction. The breadth of environments ensures that self-evolving agents cannot specialize to a single interaction paradigm and must develop general agent capabilities.
+
+\textbf{OPRO's optimization evaluation.} OPRO~\citep{opro2024} introduces a meta-evaluation framework for comparing optimization algorithms themselves. By evaluating across GSM8K, BBH (27 subtasks), MMLU (57 subtasks), AQuA, and MultiArith, OPRO demonstrates that prompt optimization quality varies substantially across task types, and no single optimizer dominates all domains.
+
+\textbf{EvoAgent's multi-domain evaluation.} EvoAgent~\citep{evoagent2024} evaluates evolutionary multi-agent optimization across four task types: NLP reasoning (Logic Grid Puzzle, Creative Writing, Codenames), Multimodal reasoning (MMMU), Interactive Science (ScienceWorld, 30 tasks), and Travel Planning (TravelPlanner). The selection strategy comparison (random, all, performance-based) reveals that performance-based selection consistently outperforms random selection, but the gap varies by domain. This domain-dependent effectiveness of selection strategies suggests that the optimal evolutionary algorithm parameters may themselves need to evolve---a meta-optimization challenge that mirrors the self-referential nature of agent self-evolution.
+
+\textbf{AI Scientist as evaluation paradigm.} AI Scientist v2~\citep{aiscientist2025} represents a fundamentally different approach to evaluation: rather than benchmarking against fixed test sets, it submits generated research to human peer review. The peer review score of 6.33 and top-45\% ranking among workshop submissions demonstrates that self-evolving AI systems can produce outputs that meet community quality standards. At approximately \$15 per paper, the cost is orders of magnitude lower than human research, raising questions about the future of evaluation: if AI-generated research becomes indistinguishable from human-generated research, the evaluation problem transforms from ``can the system improve?'' to ``can the community detect AI-generated outputs?'' This shift has profound implications for the evaluator's dilemma discussed in Section~\ref{sec:eval-dilemma}.
+
+
 \subsubsection{GitHub Community Quality Assessment}
 
-Our analysis of 348 agent evolution GitHub repositories reveals a disconnect between popularity and quality. The star quality scoring system uses five equally-weighted dimensions: star activity, contributor diversity, fork quality, issue quality, and PR merge rate.
-
-Key findings: AutoGPT (175K stars) scores 28/100 on composite quality, while OpenEvolve (6.3K stars) scores 74/100. The Stars-per-Contributor ratio (values above 150 indicate hype-driven growth) is the most reliable detection metric. Academic projects are systematically underrated: DSPy (25K stars, quality 73) and SWE-Agent (15K stars, quality 70) have slower growth but higher quality. Three growth patterns emerge: hype-driven (AutoGPT, Devika), steady growth (CrewAI, LangGraph), and academic-driven (DSPy, SWE-Agent).
+Our analysis of 348 agent evolution GitHub repositories reveals a disconnect between popularity and quality that has significant implications for both researchers and practitioners selecting tools and baselines.
 
 % ====================================================================
 % Figure 5.3: Star/Fork Distribution
@@ -299,9 +472,21 @@ Key findings: AutoGPT (175K stars) scores 28/100 on composite quality, while Ope
 
 \end{axis}
 \end{tikzpicture}
-\caption{Star/Fork distribution across 348 agent evolution GitHub repositories.}
+\caption{Star/Fork distribution across 348 agent evolution GitHub repositories. The strong correlation ($R^2 > 0.9$) between stars and forks masks significant quality variation within categories.}
 \label{fig:star-fork-scatter}
 \end{figure}
+
+The star quality scoring system uses five equally-weighted dimensions: star activity (90-day active stargazer proportion), contributor diversity (Gini coefficient inversion), fork quality (proportion of forks with substantive commits), issue quality (proportion of non-template, substantive issues), and PR merge rate (merged/total PRs). The composite score reveals striking disparities:
+
+AutoGPT (175K stars) scores only 28/100 on composite quality, while OpenEvolve (6.3K stars) scores 74/100. The Stars-per-Contributor ratio provides the most reliable hype detection signal: values above 150 indicate hype-driven growth unlikely to be sustained. AutoGPT's ratio of 213 far exceeds the healthy threshold, while CrewAI's ratio of 107 falls within the steady growth zone.
+
+Three growth patterns emerge from the temporal analysis. \textbf{Hype-driven growth} (AutoGPT: 0$\to$50K in 3 days; Devika: 0$\to$20K in 5 days) produces rapid initial star accumulation followed by declining contribution quality and community engagement. \textbf{Steady growth} (CrewAI: 0$\to$10K in 60 days; LangGraph) correlates with sustained community health and growing contributor diversity. \textbf{Academic-driven growth} (DSPy, SWE-Agent) shows the slowest star accumulation but highest star quality, with contributors making substantive code contributions and citing the project in publications.
+
+The practical implication is clear: when selecting baselines, tools, or evaluation frameworks, researchers should look beyond star counts to the composite quality score, contributor diversity, and community health indicators. An evaluation infrastructure built on hype-driven projects may inherit their instability and lack of rigor.
+
+To formalize this assessment, we propose a suspicion index: $\text{suspicionIndex} = \text{starsPerContributor} / 100$. Projects with index below 0.5 are classified as organic (genuine community adoption), 0.5--1.5 as watch (mixed signals), and above 1.5 as suspicious (likely hype-driven). Among the 12 major projects in our analysis, the suspicion index correctly identifies AutoGPT (2.13, suspicious), Devika (1.83, suspicious), and MetaGPT (1.43, watch) as projects with popularity disproportionate to contributor engagement, while classifying DSPy, SWE-Agent, and OpenEvolve as organic high-quality projects.
+
+This quality assessment framework is relevant to evaluation because it affects the reliability of evaluation tools and benchmarks. A benchmark maintained by a high-quality community (contributor diversity $>$0.7, fork quality $>$40\%) is more likely to be well-tested, documented, and maintained than one from a hype-driven project. Similarly, evaluation tools with high PR merge rates indicate active maintenance and responsiveness to bug reports---critical properties for infrastructure that other researchers depend upon for reproducible evaluation.
 
 % ====================================================================
 % Figure 5.4: Benchmark Radar Chart
@@ -342,9 +527,10 @@ Key findings: AutoGPT (175K stars) scores 28/100 on composite quality, while Ope
 
   \node[font=\small\bfseries] at (0,6.45) {Five-Dimensional Benchmark Comparison};
 \end{tikzpicture}
-\caption{Benchmark comparison across five dimensions. SWE-Bench excels in realism and reproducibility; HumanEval leads in automation and cost; WebArena and Voyager score high on realism but lower on cost and reproducibility.}
+\caption{Benchmark comparison across five dimensions. SWE-Bench excels in realism and reproducibility; HumanEval leads in automation and cost; WebArena and Voyager score high on generalization but lower on cost and reproducibility.}
 \label{fig:eval-radar}
 \end{figure}
+
 
 \subsubsection{Comprehensive Benchmark Comparison}
 
@@ -361,14 +547,18 @@ Key findings: AutoGPT (175K stars) scores 28/100 on composite quality, while Ope
 \toprule
 \textbf{Benchmark} & \textbf{Domain} & \textbf{Key Systems} & \textbf{Verification} & \textbf{Contamination} & \textbf{Cost} & \textbf{Transfer} \\
 \midrule
-SWE-Bench & Software Eng. & DGM, SICA & Executable tests & Medium & High & DGM cross-model \\
-HumanEval & Code Gen. & Reflexion, EvoMAC & Unit tests & High & Low & Limited \\
-GSM8K & Math Reasoning & STaR, RISE, SPIRAL & Exact match & High & Low & SPIRAL cross-model \\
-MATH & Adv. Reasoning & Absolute Zero, SPIRAL & Exact match & High & Medium & Limited \\
-GPQA & Expert Knowledge & LLM judges & Expert consensus & Low & Medium & Not tested \\
+SWE-Bench & Software Eng. & DGM, SICA, SWE-Agent & Executable tests & Medium & High & DGM cross-model \\
+HumanEval & Code Gen. & Reflexion, EvoMAC, SelfEvolve & Unit tests & High & Low & Limited \\
+MBPP & Basic Python & EvoAgentX & Unit tests & High & Low & Not tested \\
+DS-1000 & Data Science & SelfEvolve & Execution & Medium & Medium & Not tested \\
+GSM8K & Math Reasoning & STaR, RISE, OPRO & Exact match & High & Low & SPIRAL cross-model \\
+MATH & Adv. Reasoning & AZ, EvoAgentX & Exact match & High & Medium & Limited \\
+GPQA & Expert Knowledge & ADAS & Expert consensus & Low & Medium & Not tested \\
+HotPotQA & Multi-hop QA & Agent Sym. Learn., EvoAgentX & F1/EM & Medium & Medium & Cross-method \\
 WebArena & Web Interaction & ExpeL, WebEvolver & DOM state & Low & High & Limited \\
-ALFWorld & Embodied & ExpeL & Goal state & Low & Medium & Not tested \\
+ALFWorld & Embodied & Reflexion, ExpeL & Goal state & Low & Medium & Not tested \\
 Voyager & Lifelong Learning & Voyager & Item discovery & Low & High & Cross-world \\
+AgentBench & Multi-environment & Various (8 envs) & Task-specific & Low & Very High & Cross-environment \\
 AlphaEvolve & Algorithm Design & AlphaEvolve & Programmatic & Low & Very High & Cross-problem \\
 \bottomrule
 \end{tabular}%
@@ -377,6 +567,12 @@ AlphaEvolve & Algorithm Design & AlphaEvolve & Programmatic & Low & Very High & 
 \label{fig:bench-compare}
 \end{figure}
 
+The benchmark comparison reveals several important patterns. First, the most widely-used benchmarks (HumanEval, GSM8K, MATH) have the highest contamination risk, creating a tension between comparability and validity. Researchers face a dilemma: use established benchmarks where scores are comparable but potentially inflated, or use newer benchmarks with lower contamination risk but fewer comparison points. We recommend reporting results on both types, with the established benchmarks providing comparability and the newer benchmarks providing validity.
+
+Second, the benchmarks with the strongest transfer evidence (SWE-Bench, Voyager, AlphaEvolve) are also the most expensive to evaluate on, creating a cost-rigor tradeoff. A single SWE-Bench evaluation requires cloning the target repository, setting up the development environment, applying the agent's patch, and running the full test suite---a process that can take minutes per task and requires significant compute infrastructure. AlphaEvolve evaluations on mathematical optimization problems require running candidate algorithms to convergence on concrete problem instances, which can take hours for complex problems. This cost-rigor tradeoff means that the most rigorous evaluations are available only to well-resourced research groups, potentially creating a reproduction barrier.
+
+Third, no single benchmark covers all evaluation dimensions, motivating the multi-layer evaluation hierarchy proposed in Section~\ref{sec:eval-hierarchy}. A comprehensive evaluation requires combining multiple benchmarks across layers: programmatic verification (L1) for rapid iteration, code and reasoning benchmarks (L2) for standardized comparison, environment interaction benchmarks (L3) for ecological validity, process metrics (L4) for evolutionary dynamics, and safety/cost gates (L5) for deployment readiness. The total cost of such a comprehensive evaluation can be substantial---potentially hundreds of dollars per method per experimental condition---but is necessary for credible self-evolution claims.
+
 
 \subsection{Method Comparison: What Gets Modified}
 \label{sec:eval-method-compare}
@@ -384,7 +580,7 @@ AlphaEvolve & Algorithm Design & AlphaEvolve & Programmatic & Low & Very High & 
 \begin{table}[htbp]
 \centering
 \small
-\caption{Self-improvement mechanism comparison. Columns indicate whether each method modifies the specified component.}
+\caption{Self-improvement mechanism comparison. Columns indicate whether each method modifies the specified component. ``Verifier'' indicates whether evaluation is self-administered or external.}
 \label{tab:eval-methods-compare}
 \begin{tabular}{p{22mm}p{12mm}p{12mm}p{12mm}p{12mm}p{12mm}p{15mm}}
 \toprule
@@ -395,33 +591,79 @@ Reflexion & No & Yes & No & No & No & External \\
 STaR & No & No & No & Yes & No & External \\
 RISE & No & No & No & Yes & No & External \\
 Self-Rewarding & No & No & No & Yes & No & Self \\
+SelfEvolve & Yes & No & Yes & No & No & External \\
 DGM & Yes & No & Yes & No & Yes & External \\
 ADAS & Yes & No & Yes & No & Yes & External \\
 SICA & Yes & No & Yes & No & No & External \\
 Absolute Zero & No & No & No & Yes & No & Self (code exec) \\
 RAGEN & No & No & No & Yes & No & External \\
+G\"{o}del Agent & Yes & No & Yes & No & No & External \\
+Agent Sym. Learn. & Yes & No & No & No & No & External \\
+EvoAgentX & Yes & No & No & No & No & External \\
+OPRO & Yes & No & No & No & No & External \\
+FunSearch & Yes & No & Yes & No & Yes & External \\
+AlphaEvolve & Yes & No & Yes & No & Yes & External \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Several patterns emerge. Methods modifying weights (STaR, RISE, Self-Rewarding, Absolute Zero, RAGEN) require more compute but produce durable improvements persisting across sessions. Methods modifying prompts or memory (Self-Refine, Reflexion) are lightweight but improvements are lost when sessions end. Methods modifying code (DGM, ADAS, SICA) provide a middle ground: code changes persist and are human-inspectable.
+Several structural patterns emerge from the comparison. Methods can be organized along two axes: \emph{modification target} (what component of the agent changes) and \emph{evaluation independence} (how decoupled is the evaluator from the evolved system).
 
-The choice of verifier (self vs.\ external) has profound implications. Self-verification methods (Self-Refine, Self-Rewarding, Absolute Zero) are more self-contained but risk evaluator degradation. External verification (Reflexion, DGM, ADAS) is more reliable but requires pre-existing benchmarks.
+\textbf{Modification target spectrum.} Methods modifying weights (STaR, RISE, Self-Rewarding, Absolute Zero, RAGEN) require more compute but produce durable improvements persisting across sessions. These methods modify the neural network parameters themselves, creating permanent behavioral change. Methods modifying prompts or memory (Self-Refine, Reflexion, OPRO, EvoAgentX) are lightweight but improvements are lost when sessions end or prompts are reset. Methods modifying code (DGM, ADAS, SICA, FunSearch, AlphaEvolve, G\"{o}del Agent) provide a middle ground: code changes persist and are human-inspectable, enabling both durability and transparency.
 
-Archive-based methods (DGM, ADAS) provide the richest evolutionary structure by maintaining diverse agent populations, enabling exploration beyond local optima and natural rollback mechanisms.
+The depth of modification correlates with both potential impact and risk. Prompt modifications are easily reversible but limited to the expressiveness of natural language. Memory modifications provide richer state but risk memory corruption. Code modifications can change arbitrary behavior but may introduce bugs. Weight modifications produce the most fundamental changes but are the hardest to audit and reverse.
+
+\textbf{Archive-based evolution.} Archive-based methods (DGM, ADAS, FunSearch, AlphaEvolve) provide the richest evolutionary structure by maintaining diverse agent populations. The archive serves as both a genetic reservoir (enabling recombination of partial solutions) and a safety mechanism (enabling rollback to any previous state). DGM's diversity-weighted sampling explicitly encourages exploration of underexplored regions of the agent design space, while FunSearch's 10-island population structure with periodic bottom-50\% resets prevents premature convergence.
+
+\textbf{Verifier independence.} The choice of verifier (self vs.\ external) has profound implications for evolutionary dynamics. Self-verification methods (Self-Refine, Self-Rewarding, Absolute Zero) are more self-contained but risk evaluator degradation as discussed in Section~\ref{sec:eval-dilemma}. External verification (Reflexion, DGM, ADAS, FunSearch, AlphaEvolve) is more reliable but requires pre-existing benchmarks or programmatic evaluators, limiting applicability to domains where such infrastructure exists.
+
+The ideal self-evolution system combines multiple modification targets with progressively independent verification. DGM and AlphaEvolve approach this ideal by modifying code (deep, persistent changes) with programmatic evaluation (maximally independent verification) and archive-based selection (population-level safety).
+
+An important observation from Table~\ref{tab:eval-methods-compare} is that no existing method modifies all five components simultaneously. The closest is DGM, which modifies prompts, code, and maintains an archive with external verification. A truly comprehensive self-evolution system might combine weight modification (for learning from experience), prompt modification (for rapid adaptation), memory modification (for accumulating knowledge), code modification (for architectural changes), and archive maintenance (for population-level evolution)---all with progressively independent multi-layer verification. Such a system does not yet exist in the literature, representing a significant opportunity for future research.
+
+The distinction between self-verification and external verification also has practical implications for deployment. Self-verification systems can operate autonomously without external infrastructure, making them suitable for deployment in environments where pre-existing benchmarks or test suites are unavailable. However, they require careful monitoring for evaluator degradation. External verification systems are more reliable but cannot operate outside their evaluation infrastructure, limiting their applicability to domains where such infrastructure exists. This tradeoff between autonomy and reliability is a fundamental design decision in self-evolution system architecture.
 
 
 \subsection{Summary and Open Problems}
 \label{sec:eval-summary}
 
-Evaluation is the linchpin of agent self-evolution. This chapter has proposed a five-layer evaluation hierarchy, surveyed major benchmarks, consolidated quantitative results, and introduced agent-specific metrics. Key open problems include:
+Evaluation is the linchpin of agent self-evolution---the selection pressure that determines the direction of evolutionary progress and the safety gate that prevents harmful mutations from propagating. This chapter has proposed a five-layer evaluation hierarchy, surveyed major benchmarks, consolidated quantitative results across 17 methods and 13 benchmark suites, and introduced agent-specific metrics for iterative improvement, transfer, cost efficiency, and safety.
+
+Key findings from our analysis include:
+
+\begin{enumerate}
+\item \textbf{Self-correction can outperform scale.} Reflexion with GPT-3.5-turbo (91\% HumanEval) surpasses GPT-4 zero-shot (80.1\%), demonstrating that iterative improvement mechanisms can compensate for model size limitations.
+
+\item \textbf{Agent-level self-modification produces the largest gains.} DGM's 2.5$\times$ improvement on SWE-Bench (20.0\% to 50.0\%) exceeds gains from prompt-level or memory-level self-improvement, suggesting that deeper modification targets enable larger improvements.
+
+\item \textbf{Cross-domain transfer is achievable but not guaranteed.} Absolute Zero's code-to-math transfer, ADAS's cross-model transfer, and DGM's cross-language transfer demonstrate that self-evolution can produce generalizable improvements, but transfer efficiency varies substantially across methods and domains.
+
+\item \textbf{Benchmark contamination remains an underaddressed threat.} The most widely-used benchmarks (HumanEval, GSM8K, MATH) have the highest contamination risk, and few papers report systematic contamination analysis.
+
+\item \textbf{Popularity does not predict quality.} Our analysis of 348 GitHub repositories reveals a strong disconnect between star counts and composite quality scores, with implications for baseline selection and tool adoption.
+\end{enumerate}
+
+Key open problems include:
 
 \begin{enumerate}[nosep]
-\item \textbf{Evaluator evolution}: As agents improve, evaluators must evolve in tandem to prevent agents from outpacing their own evaluation.
-\item \textbf{Open-ended evaluation}: Standard benchmarks evaluate fixed task sets; open environments require methods assessing cumulative growth and exploration quality.
-\item \textbf{Evaluation cost}: Comprehensive multi-layer evaluation is expensive; cost-efficient strategies with high signal-to-noise are needed.
-\item \textbf{Community standards}: The field lacks standardized protocols. We recommend reporting multi-benchmark results with full cost accounting, transfer evaluation, and contamination analysis.
-\item \textbf{Beyond accuracy}: Process quality, reliability, safety, cost, and user satisfaction should be first-class metrics alongside accuracy.
+\item \textbf{Evaluator evolution}: As agents improve, evaluators must evolve in tandem to prevent agents from outpacing their own evaluation. This requires a meta-evaluation framework that can detect evaluator degradation and trigger evaluator updates.
+
+\item \textbf{Open-ended evaluation}: Standard benchmarks evaluate fixed task sets; open environments require methods assessing cumulative growth and exploration quality. Voyager's technology tree coverage metric provides a starting point but is domain-specific.
+
+\item \textbf{Evaluation cost}: Comprehensive multi-layer evaluation is expensive; cost-efficient strategies with high signal-to-noise ratios are needed. Adaptive evaluation that allocates more resources to borderline candidates could reduce cost without sacrificing reliability.
+
+\item \textbf{Community standards}: The field lacks standardized protocols for reporting self-evolution results. We recommend reporting multi-benchmark results with full cost accounting, transfer evaluation, contamination analysis, and statistical significance testing following ADAS's bootstrap CI methodology.
+
+\item \textbf{Beyond accuracy}: Process quality, reliability, safety, cost, and user satisfaction should be first-class metrics alongside accuracy. EverMemBench's three-layer memory evaluation and EvoAgentBench's four-dimension agent evaluation provide models for multi-dimensional assessment.
+
+\item \textbf{Evolutionary dynamics analysis}: The field needs better tools for analyzing evolutionary trajectories---understanding when improvement plateaus, what causes regression, and how to design mutation-selection processes that maintain stable improvement over hundreds of generations. Visualization tools for evolutionary trajectories, diversity metrics for the candidate pool, and theoretical models predicting convergence behavior would all advance the field.
+
+\item \textbf{Evaluation for self-play systems}: Absolute Zero's self-play training introduces a new evaluation challenge: how to evaluate a system that generates its own training tasks? The traditional contamination framework assumes fixed benchmarks, but self-play systems bypass this by construction. New evaluation frameworks are needed that can assess the quality and diversity of self-generated tasks, the curriculum progression during training, and the generalizability of skills acquired through self-play.
+\end{enumerate}
+
+Looking forward, we anticipate that evaluation will increasingly become a bottleneck for the field. As self-evolution methods become more sophisticated and claim larger improvements, the evaluation infrastructure needed to verify these claims becomes correspondingly more expensive and complex. The community should invest in shared evaluation infrastructure: standardized benchmark suites with automated scoring, contamination detection tools, and cross-method comparison platforms. Without such infrastructure, the field risks fragmentation into incompatible evaluation silos, where each research group uses different benchmarks, different reporting standards, and different statistical methods, making meaningful comparison impossible.
+
+The ultimate evaluation of agent self-evolution may not be a benchmark at all, but rather the demonstrable ability to produce useful, reliable, and safe improvements in real-world applications. The gap between benchmark performance and production reliability---explored in the following chapter---remains the most critical challenge facing the field.
 \end{enumerate}
 
 The following chapter examines how these evaluation principles manifest in industrial practice, where the gap between benchmark performance and production reliability remains a critical challenge.

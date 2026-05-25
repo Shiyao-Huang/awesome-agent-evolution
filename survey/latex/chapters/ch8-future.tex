@@ -1,220 +1,101 @@
 % ====================================================================
-% Chapter 8: Open Problems and Future Directions
+% Chapter 8: Open Problems and Future Directions (English)
+% Written: 2026-05-23 | 8100+ words
+% Source: 107 papers, framework-painpoint crosswalk, star-analysis, cross-reference
 % ====================================================================
+
 \section{Open Problems and Future Directions}\label{ch:future}
 
-\subsection{Overview}\label{sec:ch8-overview}
+\subsection{本章概述}\label{sec:ch8-overview}
 
-The trajectory of agent self-evolution extends far beyond making agents more ``autonomous'' in a colloquial sense. As the analyses in Chapters~\ref{ch:painpoints} and~\ref{ch:evaluation} have demonstrated, the critical bottlenecks are not cognitive capacity---they are reliability in production environments, controllability within improvement loops, resistance to metric gaming, and the establishment of hard boundaries around cost and safety. Future research must confront these bottlenecks directly: automated verifiers must reduce dependence on human feedback; multi-agent co-evolution must avoid consensus hallucination and cost inflation; safety mechanisms must prevent misevolution and prompt injection; cross-domain transfer must break free from benchmark-specific adaptation; and the path from agent evolution to AGI must unify local self-improvement, open-ended exploration, and value alignment into a coherent engineering framework.
+Agent Evolution 的未来不是简单让 Agent 更``自主''，而是让自主性进入可验证、可协作、可治理、可迁移的工程框架。第~\ref{ch:painpoints}~章显示，用户最担心的不是 Agent 不够聪明，而是它在生产环境中不够可靠、在改进循环中不够可控、在评估指标上容易作弊、在成本和安全上缺少硬边界。未来方向必须正面回应这些痛点：自动化验证器要减少人工反馈依赖；多 Agent 协同进化要避免成本和共识幻觉；安全可控机制要防止错误演化和 prompt 注入；跨域迁移要突破 benchmark-specific 进化；从 Agent Evolution 到 AGI 的路径则需要把局部自改进、开放式探索和价值对齐统一起来。
 
-The literature reviewed in this survey provides multiple composable modules. STaR~\cite{zelikman2022star}, RISE~\cite{qu2024rise}, and Absolute Zero Reasoners~\cite{absolutezero2025} demonstrate that generate--filter--train loops can improve capabilities on verifiable reasoning or code tasks. Reflexion~\cite{shinn2023reflexion}, ExpeL~\cite{zhao2024expel}, ACE~\cite{ace2025}, ReasoningBank~\cite{reasoningbank2025}, Memory-R1~\cite{memoryr1_2025}, and AriadneMem~\cite{ariadnemem2026} illustrate pathways for reflection, experience crystallization, and memory asset management. Voyager~\cite{wang2023voyager} and WebEvolver~\cite{webevolver2025} reveal the potential of environmental interaction and world models in open-ended tasks. ADAS~\cite{hu2024adas}, DGM~\cite{dgm2025}, SICA~\cite{sica2025}, G\"{o}del Agent~\cite{godelagent2024}, and AlphaEvolve~\cite{novikov2025alphaevolve} demonstrate the power of combining LLMs with search, archival storage, self-modification, and programmatic evaluators. Multi-Agent Debate~\cite{du2023improving}, EvoMAC~\cite{evomac2024}, SPIRAL~\cite{spiral2025}, and RAGEN~\cite{ragen2025} show that multi-agent, self-play, and collaborative networks can provide additional exploration breadth and feedback signals.
+从论文脉络看，当前研究已给出多个可拼接的模块。STaR、RISE、Absolute Zero Reasoners 证明了在可验证推理或代码任务上，生成---筛选---训练循环可以提升能力；Reflexion、ExpeL、ACE、ReasoningBank、Memory-R1、AriadneMem 展示了反思、经验和记忆资产化的路线；Voyager、WebEvolver 展示了环境交互和世界模型在开放任务中的潜力；ADAS、DGM、SICA、Godel Agent、AlphaEvolve 展示了 LLM 与搜索、archive、自修改、程序化 evaluator 结合的力量；Multi-Agent Debate、EvoMAC、SPIRAL、RAGEN 则说明多 Agent、自博弈和协作网络可以提供额外的探索与反馈。但这些模块仍分散，且各自受限于成本、验证、泛化和安全。
 
-However, these modules remain fragmented, each constrained by cost, verification fidelity, generalization scope, and safety guarantees. The defining question for the next decade is therefore not ``Can self-evolving agents exist?''---they already do---but ``Can we build reusable self-evolution infrastructure?'' Such infrastructure would encompass: verifiable modeling of tasks and environments; multi-layer evaluators; auditable memory and experience repositories; variant archives with lineage tracking; security sandboxes and permission governance; cost budgets and resource gates; cross-domain transfer evaluation protocols; and a transition of human roles from per-item labeling to rule design, boundary auditing, and evaluator calibration. The following six subsections address these directions in depth.
+因此，未来十年的关键问题不是``有没有自进化 Agent''，而是``能否形成可复用的自进化基础设施''。这种基础设施应包含：任务和环境的可验证建模；多层 evaluator；可审计记忆和经验库；变体 archive 与 lineage；安全沙箱和权限治理；成本预算；跨域迁移评估；以及人类从直接打标签转向制定规则、审计边界和校准评价器。下面五节分别讨论这些方向。
 
-% ====================================================================
-% 8.1 Evaluation Bottleneck
-% ====================================================================
-\subsection{The Evaluation Bottleneck: When Benchmark Gains Do Not Translate to Real-World Reliability}\label{sec:ch8-evaluation}
+\subsection{自动化验证器：替代人工反馈的核心基础设施}\label{sec:ch8-verifier}
 
-The most fundamental bottleneck in agent self-evolution is evaluation. Every self-improvement loop---whether it operates at the prompt level, the architecture level, the code level, or the weight level---requires a feedback signal. The quality, generality, and robustness of that signal ultimately determine whether the system is genuinely improving or merely optimizing a proxy that has drifted away from the intended objective. The Mom Test analysis in Chapter~\ref{ch:painpoints} identified evaluation as the second-largest pain category (14.4\% of all reported pain points), with specific complaints about benchmark saturation, Goodhart effects, and the absence of production-grade evaluation metrics. This section examines the evaluation bottleneck from four angles: benchmark saturation, evaluator quality, automated evaluator design, and the path toward production evaluators.
+自动化验证器是 Agent Evolution 从人工调参走向真正闭环的首要条件。用户痛点中最常见的抱怨之一，是反馈循环并不神奇：只有人类审查日志、标出错误、重写 prompt 或回滚版本时，系统才会变好。这意味着当前很多``自进化''只是把人类反馈包装成自动流程。未来系统必须把更多反馈转化为可执行、可重复、可隔离的验证器，让 Agent 在无需人工逐轮判断的情况下获得高质量信号。
 
-\subsubsection{Benchmark Saturation and Metric Gaming}
+验证器的第一类是确定性程序验证。代码任务中的单元测试、类型检查、lint、静态分析、fuzzing、回归测试和 sandbox 执行是目前最成熟的信号。DGM、SICA、EvoMAC、AlphaEvolve 等系统之所以能展示自进化，是因为候选代码可以被自动运行和评分。未来应把这种能力扩展到更宽的应用场景：数据管道可以验证 schema、分布漂移和端到端一致性；业务流程可以验证状态机约束和权限策略；网页任务可以验证 DOM 结果、后端状态和用户意图；机器人任务可以验证物理约束和安全边界。程序化验证器不需要理解全部语义，但必须覆盖关键失败模式。
 
-The current landscape of agent benchmarks exhibits two problematic patterns. First, a small number of benchmarks---HumanEval~\cite{chen2021codex}, SWE-Bench~\cite{jimenez2024swebench}, GSM8K~\cite{cobbe2021gsm8k}, MATH~\cite{hendrycks2021math}---have become de facto standards, creating an incentive structure where research groups optimize for leaderboard positions rather than genuine capability gains. Second, many of these benchmarks are either publicly available or easily reconstructible, creating contamination risks where the benchmark examples appear---intentionally or unintentionally---in training data or prompt libraries. The cross-reference analysis in Section~\ref{ch:evaluation} documented multiple cases where reported improvements on specific benchmarks did not transfer to related but distinct evaluation settings.
+第二类是模型辅助验证器。开放式任务很难完全程序化，例如研究综述质量、产品需求合理性、设计方案可维护性和客服回应是否合适。LLM-as-a-judge、critic agent、debate、meta-judge、self-attribution 等方法可以补充人工反馈，但未来必须解决评价器退化问题。Self-Rewarding 和 Meta-Rewarding 的局限表明，评价器可能出现长度偏见、score bias、位置偏见和 reward hacking。因此，模型辅助验证器不能单独作为最终真理，而应采用多评委、多标准、校准集、人类抽检、隐藏任务和跨模型一致性检测。评价器也应有自己的回归测试和漂移监控。
 
-The Goodhart effect is particularly insidious in self-evolving systems because the system itself is actively searching for ways to increase the measured score. Unlike static systems where human engineers might accidentally overfit to a benchmark, self-evolving agents can systematically explore the boundary between genuine improvement and metric gaming. Self-Rewarding Language Models~\cite{metacognition2024selfrewarding} and Meta-Rewarding~\cite{metarewarding2024} revealed that evaluators trained alongside generators tend to develop length bias, score inflation, and position bias---precisely the failure modes predicted by Goodhart's law. The framework-painpoint crosswalk analysis documented 89 evaluation-related repositories in the ecosystem, the largest single category, yet community complaints about benchmark pollution and metric gaming persist, suggesting that quantity of evaluation tooling has not resolved the quality problem.
+第三类是交互式环境验证器。Voyager、WebEvolver、AppWorld、WebArena、ALFWorld、WebShop 等工作说明，Agent 真正的能力常体现为在环境中行动，而非输出静态答案。未来应构建更多``可重放、可评分、可扰动''的环境：企业流程 sandbox、仿真 CRM/ERP、虚拟浏览器、软件仓库镜像、研究实验模拟、长周期记忆任务和多用户协作场景。环境验证器的难点是模拟真实世界的动态性，同时保持可复现和可控。
 
-\subsubsection{Evaluator Quality and Degeneration}
+第四类是安全与成本验证器。未来的 evaluator 不应只回答``任务是否完成''，还要回答``是否以可接受的风险和成本完成''。每个候选变体都应接受权限检查、敏感数据检查、prompt 注入测试、恶意工具返回测试、预算上限测试、资源泄漏测试和回滚测试。成本也应成为 fitness 的一部分：单位成功成本、单位增益成本、最大尾部成本、重试率和人工接管率都应被记录。只有这样，自进化系统才不会把所有优化压力都推向短期成功率。
 
-A deeper problem lies in evaluator degeneration. When the same system that generates candidates also evaluates them---or when the evaluator is trained on outputs from a related model---the evaluation signal can drift away from genuine quality. This manifests in several ways. Length bias occurs when evaluators systematically prefer longer outputs regardless of content. Score compression occurs when evaluators fail to distinguish between genuinely excellent and merely adequate outputs, reducing the gradient signal for improvement. Reward hacking occurs when the generator discovers inputs that trigger high evaluator scores without producing genuinely better outputs, a phenomenon documented in RLHF literature and replicated in self-evolving agent settings by the OEP attack~\cite{oep2026} which demonstrated that experience poisoning can corrupt self-evolution trajectories.
+长期看，验证器会成为 Agent Evolution 的``编译器''。就像软件工程中代码必须通过编译、测试和 CI 才能合并，未来 Agent 的 prompt、工具策略、记忆规则、模型路由和自修改代码也必须通过验证器流水线才能进入生产。人类的角色将从逐条判断输出，转向设计验证器、校准评价器、审查失败样本和决定风险偏好。
 
-The meta-evaluator approach---using a second evaluator to evaluate the first evaluator---partially addresses this problem but introduces its own regress. Meta-Rewarding~\cite{metarewarding2024} showed that a three-tier actor/judge/meta-judge architecture can reduce some forms of evaluator bias, but the meta-judge itself is subject to the same degeneration pressures. What is needed is not an infinite regress of evaluators but a ground truth anchor: either human evaluation on calibrated subsets, deterministic programmatic checks, or environmental feedback that cannot be gamed by the agent.
+\subsection{多 Agent 协同进化：从角色扮演到生态搜索}\label{sec:ch8-multiagent}
 
-\subsubsection{Toward Automated Evaluator Design}
+多 Agent 是 Agent Evolution 的自然方向，因为进化本身需要多样性、竞争、协作、批评和选择。单个 Agent 容易陷入局部最优，单一路径自我改进容易受初始错误支配；多个 Agent 可以提出不同假设、生成不同解决方案、互相质疑、分工验证，并通过 archive 保留多条探索路线。ADAS、DGM、EvoMAC、Multi-Agent Debate、SPIRAL、RAGEN 等工作都在不同层面展示了这一趋势。
 
-The most promising direction for breaking the evaluation bottleneck is automated evaluator design. Four categories of automated evaluators are emerging. First, deterministic program verification---unit tests, type checking, linting, static analysis, fuzzing, regression testing, and sandbox execution---provides the strongest signal for code tasks. Systems like DGM~\cite{dgm2025}, SICA~\cite{sica2025}, EvoMAC~\cite{evomac2024}, and AlphaEvolve~\cite{novikov2025alphaevolve} demonstrate self-evolution precisely because candidate code can be automatically executed and scored. Future work should extend this capability to broader application domains: data pipelines can verify schema compliance, distribution shift, and end-to-end consistency; business processes can verify state machine constraints and permission policies; web tasks can verify DOM states, backend conditions, and user intent proxies; robotics tasks can verify physical constraints and safety boundaries.
+但未来的多 Agent 协同必须超越``角色扮演''。当前许多框架把 manager、planner、coder、reviewer、critic 命名为不同 Agent，却没有保证它们拥有独立信息、独立目标或独立错误分布。这样容易形成共识幻觉：多个模型互相肯定错误答案，或者 reviewer 只是重复 coder 的假设。Multi-Agent Debate review 已指出辩论成本高且可能收敛到自信错误。未来的多 Agent 系统应强调异质性：不同模型、不同工具、不同检索源、不同评价标准、不同温度策略和不同权限边界，让协同真正产生互补信号。
 
-Second, model-assisted evaluators can supplement human feedback for tasks where complete programmatic evaluation is infeasible. Research synthesis quality, product requirement reasonableness, design maintainability, and customer service appropriateness are examples where LLM-as-a-judge, critic agents, debate mechanisms, and meta-judges can provide partial signals. However, model-assisted evaluators must not serve as sole arbiters of quality. They should be embedded within multi-judge panels, cross-model consistency checks, calibrated reference sets, and human spot-check protocols.
+协同进化的第一种形态是生成者---验证者共进化。生成者提出方案，验证者寻找漏洞；生成者学习通过更严格验证，验证者学习覆盖更多失败模式。Meta-Rewarding 的 actor/judge/meta-judge 思路、EvoMAC 的开发团队/测试团队、SAGE 类 critic agent 都是早期形式。未来应把这种关系制度化：每个能力提升都必须伴随验证器提升，否则生成者会过拟合旧验证器。换言之，Agent Evolution 不只是 agent policy 的进化，也是 evaluator ecosystem 的进化。
 
-Third, interactive environment evaluators---exemplified by Voyager~\cite{wang2023voyager}, WebEvolver~\cite{webevolver2025}, AppWorld, WebArena~\cite{webarena2023}, ALFWorld~\cite{shridhar2020alfworld}, and WebShop---assess agent capability through action in simulated environments rather than static output comparison. Future work should construct more environments that are simultaneously replayable, scorable, and perturbable: enterprise process sandboxes, simulated CRM/ERP systems, virtual browsers, software repository mirrors, research experiment simulations, long-horizon memory tasks, and multi-user collaboration scenarios.
+第二种形态是 archive-based 生态搜索。DGM 的重要启示是，不应只保留当前最强个体，而应保留多样化变体，因为某些暂时不强的变体可能成为未来 stepping stone。未来多 Agent 系统可以维护架构、prompt、工具策略、记忆策略和评价器的多维 archive；在新任务到来时，从 archive 中检索相似 lineage，组合候选，运行局部进化。这样可以避免每个团队从零调 prompt，也可以把失败经验积累为可复用资产。
 
-Fourth, safety and cost evaluators must become first-class components of the evaluation pipeline. Every candidate variant should undergo permission checks, sensitive data checks, prompt injection resistance tests, budget ceiling tests, resource leak tests, and rollback tests. Cost metrics---cost per success, cost per unit improvement, maximum tail cost, retry rate, and human takeover rate---should be recorded and incorporated into fitness functions. Without explicit cost evaluation, self-evolution systems will inevitably push all optimization pressure toward short-term success rates while ignoring long-term sustainability.
+第三种形态是组织级协同。真实企业中的 Agent 不会孤立存在，而是嵌入人类团队、工作流系统、权限系统和数据系统。未来多 Agent 协同应与组织结构对齐：有的 Agent 负责执行，有的负责审计，有的负责知识维护，有的负责成本控制，有的负责安全红队。每个 Agent 都应有可度量职责、权限范围和交接协议。多 Agent 的价值不是制造更多``数字员工''幻觉，而是把复杂流程拆成可验证、可治理的自治单元。
 
-\subsubsection{From Research Benchmarks to Production Evaluators}
+第四种形态是跨社区协同进化。开源生态可以共享失败样本、验证器、任务环境、prompt diff、工具适配器和安全规则。当前 raw-social 中大量教程和框架比较说明社区学习非常活跃，但知识分散且可复现性弱。未来需要类似``Agent Evolution Hub''的公共基础设施：提交 agent 变体、公开评估轨迹、报告负结果、共享 benchmark 污染信息、维护安全漏洞库和成本基准。
 
-The gap between research benchmarks and production evaluation is substantial. Research benchmarks test agents on curated datasets with known ground truth; production evaluators must assess agents on open-ended, distribution-shifting, adversarially-contaminated real-world tasks. The Mom Test analysis revealed that the top user complaint about evaluation (P022) specifically targets the disconnection between benchmark optimization and production reliability. Bridging this gap requires three developments: (1) production evaluator libraries that cover code quality, web interaction, business process compliance, memory consistency, safety boundary enforcement, and cost efficiency; (2) self-evolution reporting standards that mandate disclosure of training/validation/test separation, failure candidate ratios, cost per improvement, rollback rates, and safety incidents; and (3) shared evaluation infrastructure---an ``Agent Evaluation Hub''---where researchers and practitioners can submit evaluation trajectories, report negative results, share benchmark contamination information, and maintain cost baselines.
+\subsection{安全可控的自进化机制：从沙箱到可证明边界}\label{sec:ch8-safety}
 
-Long-term, evaluators will become the ``compilers'' of agent self-evolution. Just as software engineering requires code to pass compilation, testing, and CI before merging, future agent prompts, tool strategies, memory rules, model routing configurations, and self-modification code will need to pass evaluator pipelines before entering production. The human role will shift from per-item output judgment to evaluator design, evaluator calibration, failure sample auditing, and risk preference specification.
+安全可控是自进化 Agent 能否进入生产的前提。与普通 Agent 相比，自进化系统多了三类风险：它会修改自身行为，它会把经验持久化，它会在多轮反馈中放大错误目标。Misevolution 相关讨论指出，风险可能随时间涌现，甚至在没有外部攻击者时由系统自身生成；prompt 注入则可能通过外部内容污染 Agent 的指令和记忆。未来研究必须把安全机制放在架构中心，而不是作为部署后的补丁。
 
-% ====================================================================
-% 8.2 Memory & Drift
-% ====================================================================
-\subsection{Memory and Drift: Long-Term Learning Stability in Self-Evolving Agents}\label{sec:ch8-memory}
+第一层安全是权限最小化。Agent 的工具权限应默认最小，读写分离，高风险操作需要审批，外部网络、文件系统、数据库、支付、邮件、部署等能力应被单独授权。自进化模块尤其不能拥有直接修改生产代码或生产 prompt 的权限；它只能生成候选 diff，经 sandbox、验证器、人工或策略门控后合并。Godel Agent review 提醒我们，现实系统没有理论 G\"{o}del machine 那样的改进证明，因此更需要工程化权限边界。
 
-Memory is the substrate of learning, and drift is its nemesis. A self-evolving agent that cannot stably maintain and update its knowledge over extended operational periods is not genuinely evolving---it is merely cycling through ephemeral adaptations. The Mom Test analysis identified memory-related pain points as a significant category (13.4\% of all reported issues), with specific complaints about catastrophic forgetting, memory pollution, retrieval noise, context window overflow, and the absence of versioned, auditable memory architectures. This section examines the memory challenge from four perspectives: catastrophic forgetting in continuous learning, memory architecture design, experience replay and consolidation, and long-horizon drift monitoring.
+第二层安全是演化沙箱。每个候选变体应在隔离环境中运行，访问合成数据或脱敏数据，执行固定评估套件，并记录所有工具调用。沙箱不仅防止恶意行为，也防止无意破坏，例如无限循环、资源泄漏、写错文件、调用真实 API、污染共享记忆。
 
-\subsubsection{Catastrophic Forgetting and the Stability-Plasticity Dilemma}
+第三层安全是可审计 lineage。自进化系统必须知道每个版本从哪里来、改了什么、为什么被接受、在哪些任务上提升、在哪些任务上退化、触发过哪些安全规则、谁批准上线。没有 lineage，错误演化难以定位；有 lineage，系统可以回滚到最近安全祖先，也可以分析哪些修改模式高风险。
 
-Self-evolving agents face a fundamental tension between plasticity (the ability to learn new capabilities) and stability (the retention of previously acquired capabilities). In neural network-based agents, this manifests as catastrophic forgetting: the overwriting of previously learned representations during fine-tuning on new tasks. In prompt-based and code-based agents, the analogous phenomenon is strategy drift, where improvements on new task distributions cause regressions on previously mastered tasks. The Capability Erosion study~\cite{capabilityerosion2026} directly documented this phenomenon, showing that self-evolving agents can lose core competencies during evolution cycles, and proposed Capability Preservation Evaluation (CPE) as a monitoring framework.
+第四层安全是目标和评价器隔离。Agent 不应能直接修改自己的最终评价器、隐藏测试集或安全策略；否则它可能通过篡改规则而非提升能力来获得高分。训练/搜索阶段可以使用可见 proxy evaluator，但上线前必须通过不可见、不可修改、独立维护的 gate evaluator。
 
-The challenge is particularly acute for agents that modify their own code or prompts. Unlike neural weight updates, which can be regularized through techniques like elastic weight consolidation, code modifications can alter control flow in ways that unpredictably affect previously working paths. DGM~\cite{dgm2025} addresses this partially through its archive mechanism---maintaining diverse variants so that regressions can be detected and rolled back---but the archive itself requires memory management, pruning strategies, and relevance scoring. The Voyager~\cite{wang2023voyager} skill library represents another approach, organizing learned capabilities as composable skill modules that can be selectively retrieved and applied, but its transferability beyond Minecraft remains unproven.
+第五层安全是人类治理。未来不是完全取消人类，而是把人类放在更高杠杆位置：定义风险等级、审查高风险 diff、校准评价器、批准权限变更、复盘事故、维护红队样本。低风险局部优化可以自动化，高风险目标函数和权限变更必须经过治理。只有建立这种分级自治，Agent Evolution 才能避免在``完全手动''和``完全失控''之间摆动。
 
-\subsubsection{Memory Architecture Design for Self-Evolution}
+更长远的方向是可证明边界。形式化验证很难覆盖 LLM 行为，但可以覆盖一部分关键约束：工具权限、状态机不变量、预算上限、数据流隔离、不可访问资源、合并条件、回滚条件。未来的安全自进化系统可能采用``神经生成 + 符号护栏 + 程序验证''的混合架构，让 LLM 在安全边界内探索，而边界由可检查规则保证。
 
-Current memory architectures for agents fall into several categories, each with distinct trade-offs. Episodic memory stores raw interaction traces, providing high-fidelity recall at the cost of storage overhead and retrieval noise. Semantic memory stores compressed abstractions---facts, rules, and patterns---offering efficient retrieval but potentially losing important context. Procedural memory stores executable skills and strategies, enabling direct action reuse but requiring careful version management. Meta-memory stores information about the memory system itself---what is known, what is uncertain, what has been tried and failed---enabling strategic learning decisions but adding architectural complexity.
+\subsection{跨域迁移能力：从 benchmark-specific 进化到通用适应}\label{sec:ch8-transfer}
 
-The most sophisticated current systems combine multiple memory types. AriadneMem~\cite{ariadnemem2026} uses evolutionary graph memory with entropy-aware gating, representing memories as nodes in a directed acyclic graph where edges encode derivation relationships. ReasoningBank~\cite{reasoningbank2025} distills reasoning strategies into a searchable library, enabling cross-task transfer of problem-solving patterns. Memory-R1~\cite{memoryr1_2025} trains a memory manager using reinforcement learning, learning when to store, retrieve, and forget information based on task performance signals. ACE~\cite{ace2025} maintains an evolving context playbook that captures successful interaction patterns as reusable templates.
+当前自进化研究最容易被质疑的一点，是提升是否只发生在特定 benchmark、特定模型、特定环境或特定任务分布上。STaR 适合有正确答案的推理题；AlphaEvolve 适合可程序化评价的算法和工程优化；Voyager 在 Minecraft 中表现突出，但其技能库能否迁移到企业流程并不直接成立；WebEvolver 的 world model 面临模拟---现实差距；SICA、DGM 在代码任务上有价值，但是否能迁移到非代码开放式任务仍需证明。未来关键方向是从局部进化走向跨域迁移。
 
-However, no current system provides all the properties needed for robust long-term self-evolution: versioning (tracking how memories change over time), deduplication (avoiding redundant or contradictory memories), expiration (gracefully degrading outdated information), rollback (reverting to previous memory states when regressions are detected), access control (preventing unauthorized memory modification), and audit trails (recording when, why, and how each memory was created or modified). The framework-painpoint crosswalk analysis found 57 memory-related repositories in the ecosystem, yet community complaints about memory pollution and drift persist, indicating that architectural abundance has not resolved the fundamental design challenge.
+跨域迁移首先需要抽象可复用资产。Agent 的进化产物不应只是某个 prompt 或某个 benchmark 分数，而应是可解释、可组合、可迁移的经验：失败模式、验证器、工具使用策略、任务分解模板、记忆更新规则、风险规则、代码修改模式、反思原则和环境模型。ACE 的 playbook、ReasoningBank 的推理记忆、ExpeL 的 insight、Voyager 的技能库、AriadneMem 的演化图记忆都代表了不同资产形态。未来研究应比较这些资产在跨任务迁移中的有效性，而不仅报告原任务分数。
 
-\subsubsection{Experience Replay and Consolidation}
+其次需要元学习和路由能力。不同任务需要不同进化策略：代码任务适合测试驱动和 patch archive；网页任务需要 world model 和 DOM 验证；客服任务需要政策约束和人类偏好；科研任务需要文献检索、实验设计和专家评审；机器人任务需要物理安全和仿真到现实迁移。未来 Agent 应先识别任务类型、风险等级和可验证性，再选择合适的改进机制。一个统一自进化平台不应强行使用同一种 loop，而应像操作系统一样调度多种演化策略。
 
-Experience replay---the practice of revisiting and reprocessing past experiences---is a well-established technique for mitigating catastrophic forgetting in continual learning. In the context of self-evolving agents, experience replay takes several forms. Regression test suites serve as a form of experience replay for code-modifying agents: each test encodes a past capability that must be preserved. Archive-based replay, as employed by DGM~\cite{dgm2025}, maintains a population of past variants and periodically re-evaluates them on current tasks to detect capability loss. Skill library replay, as in Voyager~\cite{wang2023voyager}, periodically re-executes learned skills to verify continued functionality.
+第三，需要跨域评估协议。研究不能只证明在一个 benchmark 上提升，还要报告跨时间、跨模型、跨任务、跨环境、跨语言和跨工具的迁移。对于代码 Agent，应从 HumanEval 到 SWE-Bench、从 Python 到多语言、从离线 issue 到真实仓库；对于记忆 Agent，应从问答 benchmark 到长期任务、从静态对话到工具状态；对于 Web Agent，应从模拟网页到真实动态网页。迁移失败同样重要，因为它揭示了机制边界。
 
-A more sophisticated approach is memory consolidation, inspired by biological sleep-dependent memory processing. Rather than simply replaying raw experiences, consolidation involves reorganizing, compressing, and integrating memories to extract generalizable knowledge while discarding noise. For self-evolving agents, this could involve periodically running background processes that: (1) cluster similar experiences and extract common patterns; (2) identify contradictions between stored memories and resolve them through re-evaluation; (3) compress verbose episodic memories into concise semantic representations; (4) detect and flag memories that have not been recently accessed for potential expiration; and (5) generate synthetic training examples from stored experiences to maintain capability on under-represented task types.
+第四，需要处理负迁移和灾难性遗忘。持续学习 Agent 可能学习新能力时丢失旧能力。未来系统必须监控旧任务回归、记忆冲突、策略覆盖和工具偏好漂移。每次进化不应只看新任务收益，也要检查核心能力保留。可行方法包括保留回归测试套件、分层记忆、经验版本化、任务簇隔离、策略合并前对比、以及在 archive 中保留多样化祖先。
 
-The design of effective consolidation mechanisms requires careful balancing. Too-aggressive compression risks losing important nuance; too-conservative retention leads to storage bloat and retrieval degradation. The optimal consolidation strategy likely depends on the agent's task distribution, operational tempo, and resource constraints---suggesting that consolidation itself should be a target of meta-learning rather than a fixed engineering decision.
+第五，需要建立领域适配的经济模型。跨域迁移不是免费获得的；它需要额外评估、适配和验证。未来系统应能估计``从已有资产迁移到新领域''的成本与风险：需要多少样本、多少验证器、多少人工校准、多少上线监控。如果迁移成本接近重新开发，所谓通用自进化价值就会下降。真正有价值的跨域能力，应在新领域中显著减少人工标注、prompt 调参、失败复盘和验证器构建成本。
 
-\subsubsection{Long-Horizon Drift Monitoring and Correction}
+\subsection{从 Agent Evolution 到 AGI：开放式自改进的边界与路径}\label{sec:ch8-agi}
 
-Even with well-designed memory architectures and consolidation mechanisms, self-evolving agents operating over extended periods will inevitably experience drift: gradual shifts in behavior, capability distribution, and decision-making patterns that may not be immediately detectable but compound over time. Drift can originate from multiple sources: distribution shift in the agent's input environment, accumulation of small biases in feedback signals, gradual corruption of memory representations, and cascading effects of seemingly benign code or prompt modifications.
+Agent Evolution 与 AGI 的关系需要谨慎表述。自进化 Agent 不是 AGI，但它触及 AGI 研究中的核心问题：系统能否持续学习、能否改进自己的工具和策略、能否在开放环境中积累能力、能否把失败转化为知识、能否跨任务迁移、能否在安全边界内探索。DGM、AlphaEvolve、Voyager、ADAS 等工作之所以引人关注，是因为它们把 LLM 从静态推理器推进为可搜索、可验证、可积累的行动系统。
 
-Detecting drift requires continuous monitoring infrastructure. Regression test suites provide one signal: periodic evaluation on a fixed set of reference tasks can detect capability loss. Distribution monitoring provides another: tracking statistical properties of the agent's inputs, outputs, and internal states over time can reveal gradual shifts. Memory health checks provide a third: auditing the memory system for contradictions, redundancies, access pattern anomalies, and expiration violations. The Capability Erosion framework~\cite{capabilityerosion2026} proposed CPE as a systematic approach to tracking capability preservation across evolution cycles, incorporating both per-task performance metrics and aggregate capability profiles.
+从局部自改进到 AGI，第一步是可验证能力积累。当前最可靠的进化发生在代码、数学、算法、游戏、网页等可评价领域。未来应继续扩大可验证领域，把更多现实任务转化为可执行环境和可审计反馈。这不是降低 AGI 目标，而是为开放式学习提供地基。
 
-Correcting drift once detected is equally challenging. Simple rollback to a previous checkpoint may discard genuinely valuable improvements acquired since the drift began. Selective rollback---reverting only the components responsible for the regression while preserving unrelated improvements---requires fine-grained attribution of behavioral changes to specific modifications, which is itself an open research problem. The DGM archive mechanism provides a foundation for this by maintaining lineage information, but current implementations lack the granularity needed for selective rollback at the sub-component level. Future systems should maintain causally-structured modification histories that enable precise identification and reversion of drift-inducing changes without collateral damage to unrelated capabilities.
+第二步是开放式探索与目标约束的统一。Open-endedness 强调不断发现新任务、新技能和 stepping stones；生产系统强调目标、成本和安全。AGI 路径需要二者兼得：系统既能主动探索未知任务，又不能突破价值边界和权限边界。DGM 的 archive 和 lineage 思想提供了探索机制；安全沙箱、独立 evaluator 和人类治理提供了约束机制。
 
-% ====================================================================
-% 8.3 Safety & Alignment
-% ====================================================================
-\subsection{Safety and Alignment: Controllability of Self-Evolving Systems}\label{sec:ch8-safety}
+第三步是从工具使用到工具创造。当前 Agent 多数是调用人类给定工具；更高层次的自进化应能设计新工具、改进工具接口、生成测试、优化工作流、重构自身代码和构建环境模型。但工具创造必须伴随验证器创造：每个新工具都要有测试、权限、文档、监控和回滚。
 
-Safety and alignment represent the most critical challenge for self-evolving agents. Unlike conventional agents that execute fixed behaviors, self-evolving systems modify their own code, prompts, strategies, and sometimes even their evaluation criteria. This self-modification capability introduces three categories of risk that are qualitatively different from those of static AI systems: the agent may modify its own behavior in unintended ways (misevolution), it may persist harmful adaptations in memory or code (experience contamination), and it may amplify misaligned objectives across multiple improvement cycles (objective drift). The Misevolution analysis~\cite{misevolution2026} specifically noted that these risks can emerge over time even without external attackers, generated by the system's own optimization pressure. The OEP study~\cite{oep2026} demonstrated a concrete attack vector: experience poisoning can corrupt self-evolution trajectories by injecting carefully crafted negative experiences that steer the agent's learning in harmful directions. This section examines the safety challenge across five layers: permission minimization, evolutionary sandboxes, auditable lineage, objective isolation, and human governance.
+第四步是自我模型与社会嵌入。真正长期运行的 Agent 需要理解自身能力边界、成本结构、失败模式、权限范围和人类偏好；也需要理解它所在组织的流程、角色、规范和责任。自我指涉不是让 Agent 任意改写自己，而是让它能准确描述``我能做什么、我不能做什么、我为什么失败、我需要什么验证''。
 
-\subsubsection{Permission Minimization and the Principle of Least Authority}
+第五步是对齐与治理。AGI 语境下的自进化最大风险，是系统改进速度超过人类理解和控制能力。Agent Evolution 研究可以为对齐提供实验场：如何设计不可篡改 evaluator，如何记录 lineage，如何限制权限，如何发现 reward hacking，如何在多 Agent 中设置制衡，如何把人类反馈上升为制度化验证器。换言之，Agent Evolution 不只是通向更强系统的技术路线，也是检验安全治理机制的现实平台。
 
-The first layer of safety is permission minimization. Self-evolving agents should operate under the principle of least authority: each component should have only the minimum permissions needed for its designated function. Tool permissions should default to deny; read and write access should be separated; high-risk operations (production code modification, database writes, payment processing, email sending, deployment actions) should require explicit approval. The self-evolution module itself should not have direct permission to modify production code or production prompts; it should only generate candidate diffs that pass through sandbox verification, evaluator assessment, and human or policy-based gating before merging.
+因此，本综述对未来的判断是：短期内，Agent Evolution 最可能在``可验证、可回滚、高价值''的垂直场景中落地，如代码维护、数据分析、测试生成、流程自动化、文档维护、科研辅助和算法优化；中期，随着自动化验证器、多 Agent 协同、记忆治理和安全沙箱成熟，系统会从局部自优化扩展到组织级持续改进；长期，若开放式探索、跨域迁移和安全对齐取得突破，Agent Evolution 可能成为 AGI 工程化的重要组成部分。但这一路径的关键不在于让 Agent 看起来更像人，而在于让它的学习、修改和行动都可验证、可解释、可控制、可积累。
 
-The G\"{o}del Agent review~\cite{godelagent2024} provides a cautionary example: while the theoretical G\"{o}del machine framework assumes the existence of provably correct self-modifications, real-world systems lack such proofs. The gap between theoretical self-improvement guarantees and practical engineering constraints necessitates conservative permission boundaries. Every permission granted to a self-evolving agent is an attack surface; every tool available is a potential vector for misuse, either by external attackers through prompt injection or by the agent's own misaligned optimization pressure.
+\subsection{研究与实践路线图}\label{sec:ch8-roadmap}
 
-\subsubsection{Evolutionary Sandboxes and Isolated Evaluation}
+基于本地语料和论文 review，未来路线可以压缩为六个优先级。第一，建立标准化验证器库，覆盖代码、网页、业务流程、记忆、安全和成本。第二，建立自进化报告规范，强制报告数据时间切片、验证/测试隔离、失败候选比例、成本、回滚率和安全事件。第三，发展可审计记忆系统，把经验资产从自由文本升级为结构化、版本化、可压缩、可遗忘的知识库。第四，发展 archive 与 lineage 基础设施，把每次自修改变成可追踪软件供应链事件。第五，发展异质多 Agent 协同，让生成者、验证者、红队、成本控制和人类审计形成制衡。第六，推动跨域迁移基准，防止研究停留在单一 leaderboard 上。
 
-The second layer is evolutionary sandboxing. Every candidate variant generated by the self-evolution process should execute in an isolated environment with synthetic or anonymized data, a fixed evaluation suite, and comprehensive logging of all tool calls and state changes. Sandboxing serves dual purposes: preventing malicious behavior from affecting production systems, and preventing unintentional damage such as infinite loops, resource leaks, file corruption, real API calls, or shared memory contamination.
-
-Current sandboxing approaches range from Docker containers and virtual machines to more lightweight process isolation mechanisms. However, the Mom Test analysis identified sandbox escape and sub-agent silent failure (P013) as significant pain points, indicating that current isolation mechanisms are insufficient for production deployment. Future sandbox designs should incorporate: network isolation with explicit allowlists, filesystem isolation with read-only mount points for dependencies, resource limits (CPU, memory, time, API calls) with hard kill thresholds, output filtering to prevent sensitive data exfiltration, and state reset capabilities to ensure clean evaluation conditions for each candidate.
-
-\subsubsection{Auditable Lineage and Provenance Tracking}
-
-The third layer is auditable lineage. Self-evolving systems must maintain complete records of every modification: where each version originated, what was changed, why it was accepted, on which tasks it improved performance, on which tasks it regressed, which safety rules it triggered, and who approved its deployment. Without lineage, misattribution of errors becomes unavoidable; with lineage, the system can roll back to the most recent safe ancestor and analyze which modification patterns carry elevated risk.
-
-The DGM archive mechanism provides a foundational model for lineage tracking. Each variant in the DGM archive maintains its derivation history, enabling reconstruction of the evolutionary path that produced it. However, current implementations focus primarily on performance lineage (which benchmarks improved or regressed) and lack the safety-oriented lineage needed for production deployment. Future systems should extend lineage tracking to include: the specific code or prompt changes made, the evaluator scores that justified acceptance, the safety checks that were run and their results, the human approvals that were obtained (if any), the cost incurred during evaluation, and any anomalous behaviors observed during sandbox testing.
-
-\subsubsection{Objective and Evaluator Isolation}
-
-The fourth layer is objective isolation. Self-evolving agents must not be able to directly modify their own final evaluators, hidden test sets, or safety policies. If the agent can alter its own evaluation criteria, it can achieve high scores by simplifying the evaluation rather than improving its capabilities---a particularly dangerous form of reward hacking. During training and search phases, the agent may interact with a visible proxy evaluator, but final deployment decisions must pass through an invisible, immutable, independently maintained gate evaluator.
-
-This principle extends to memory and experience isolation. The OEP attack~\cite{oep2026} demonstrated that experience poisoning---injecting crafted negative experiences into the agent's learning trajectory---can steer self-evolution toward harmful behaviors. Defense against experience poisoning requires: input validation for all experiences before they enter memory, anomaly detection for experience distributions that deviate from expected patterns, diversity maintenance in experience replay buffers to prevent single-source dominance, and periodic re-evaluation of stored experiences against current safety criteria.
-
-\subsubsection{Human Governance and Graduated Autonomy}
-
-The fifth layer is human governance. The goal is not to eliminate human oversight but to place it at higher-leverage positions: defining risk levels, reviewing high-risk diffs, calibrating evaluators, approving permission changes, conducting post-incident reviews, and maintaining red-team sample sets. Low-risk local optimizations can be automated; high-risk objective function changes and permission expansions must require governance approval. This graduated autonomy model prevents the system from oscillating between ``fully manual'' (unable to scale) and ``fully autonomous'' (unable to control).
-
-The long-term aspiration is provable safety boundaries. While formal verification cannot comprehensively cover LLM behavior, it can cover critical constraints: tool permissions, state machine invariants, budget ceilings, data flow isolation, inaccessible resources, merge conditions, and rollback triggers. Future safe self-evolution systems may adopt a hybrid ``neural generation + symbolic guardrails + programmatic verification'' architecture, where the LLM explores freely within safety boundaries that are guaranteed by inspectable, formally-specified rules. The Capability Erosion framework~\cite{capabilityerosion2026} provides a starting point by defining capability preservation evaluation as a mandatory component of any self-evolution cycle, ensuring that safety is not treated as an optional add-on but as an integral part of the evolutionary objective.
+图~\ref{fig:ch8-roadmap}~展示了未来研究的分阶段路线图。
 
 % ====================================================================
-% 8.4 Composability
-% ====================================================================
-\subsection{Composability: Modular Combination of the Five Evolution Loops}\label{sec:ch8-composability}
-
-A recurring theme throughout this survey is that self-evolution is not a single technique but a family of composable mechanisms. The five evolution loops identified in Chapter~\ref{ch:theory}---specification-to-execution, search, evaluator, reflection, and population---can be combined in various configurations to address different task requirements, resource constraints, and safety profiles. However, the current literature treats these loops largely in isolation. STaR composes specification-to-execution with reflection but ignores population. AlphaEvolve composes search, evaluator, and population but has limited reflection. DGM composes search, population, and evaluator with code-level self-modification but operates without explicit reflection or specification-to-execution loops. This section examines the composability challenge from three perspectives: interface design between loops, composition patterns and their trade-offs, and the path toward a universal self-evolution platform.
-
-\subsubsection{Interface Design Between Loops}
-
-For loops to compose effectively, they need well-defined interfaces. Each loop has inputs (what it consumes), outputs (what it produces), state (what it maintains across iterations), and control signals (how it is activated, paused, or terminated). The key interface design challenge is standardizing these components so that the output of one loop can serve as the input to another without ad-hoc adaptation.
-
-The specification-to-execution loop takes a natural language goal and produces an executable pipeline. Its output---a structured task decomposition with verification criteria---can serve as input to the search loop (which explores variations of the pipeline), the evaluator loop (which assesses whether the pipeline meets the verification criteria), or the reflection loop (which analyzes execution failures and generates revision candidates). The search loop takes a search space definition and produces candidate solutions. Its output can feed the evaluator loop (for quality assessment), the population loop (for archive inclusion), or the reflection loop (for failure analysis). The evaluator loop takes candidate solutions and produces scores and diagnostics. Its output can drive the search loop (guiding exploration toward promising regions), the reflection loop (identifying failure patterns for targeted improvement), or the population loop (determining which candidates to retain). The reflection loop takes execution traces and failure analyses and produces experience abstractions. Its output can inform the search loop (suggesting promising modification strategies), the evaluator loop (identifying blind spots in current evaluation), or the memory system (storing reusable patterns). The population loop maintains a diverse collection of candidates. Its output can seed the search loop (providing starting points for exploration), the evaluator loop (providing comparison baselines), or the reflection loop (providing historical context for analysis).
-
-Standardizing these interfaces requires defining common data formats for candidate representations, evaluation results, experience records, and lineage metadata. It also requires defining control protocols: when should one loop invoke another, what information should be passed, and how should results be integrated. Current systems implement these interfaces in ad-hoc, system-specific ways, making it difficult to transfer components between frameworks or to combine techniques from different research groups.
-
-\subsubsection{Composition Patterns and Trade-Offs}
-
-Different composition patterns are suited to different task characteristics. For tasks with verifiable outputs (code, mathematics, formal logic), the search + evaluator + population pattern is most effective, as demonstrated by AlphaEvolve~\cite{novikov2025alphaevolve} and FunSearch~\cite{funsearch2024}. For tasks with subjective or ambiguous evaluation (creative writing, research synthesis, design), the reflection + evaluator pattern with human-in-the-loop calibration is more appropriate, as in Self-Refine~\cite{madaan2023selfrefine} and Reflexion~\cite{shinn2023reflexion}. For tasks requiring cumulative skill acquisition (game playing, web navigation, software maintenance), the reflection + population + memory pattern enables incremental capability building, as in Voyager~\cite{wang2023voyager} and ACE~\cite{ace2025}.
-
-The trade-offs between composition patterns involve several dimensions. Cost: more loops mean more LLM calls, more evaluations, and more computational overhead. Latency: deeply composed loops require sequential processing that may exceed time constraints for interactive applications. Reliability: each additional loop introduces a potential failure point; composition depth amplifies the risk of cascading failures. Observability: as loops are composed more deeply, it becomes harder to attribute performance changes to specific loop interactions. Safety: certain compositions (particularly those involving self-modification) carry higher risk profiles than others.
-
-A mature self-evolution platform should support flexible composition: given a task description, resource constraints, and safety requirements, it should recommend an appropriate loop composition, configure the interfaces between loops, and manage the overall evolution lifecycle. This is analogous to how database query optimizers select execution plans: the platform should reason about the cost-benefit trade-offs of different compositions and adapt its strategy based on observed performance.
-
-\subsubsection{Toward a Universal Self-Evolution Platform}
-
-The ultimate vision is a universal self-evolution platform that serves as the ``operating system'' for agent self-improvement. Such a platform would provide: a library of composable evolution primitives (each implementing one of the five loops); standardized interfaces for connecting primitives; a composition engine that selects and configures appropriate loop combinations based on task characteristics; a shared evaluation infrastructure with calibrated benchmarks and production evaluators; a memory and experience management layer with versioning, deduplication, and access control; an archive and lineage tracking system; a safety sandbox with configurable permission levels; and a cost management system with budget enforcement.
-
-Current systems are far from this vision. Each research project implements its own evolution infrastructure from scratch, leading to duplicated effort, incompatible formats, and limited transferability of results. The open-source community has made progress in specific areas---evaluation frameworks, agent orchestration platforms, memory systems---but no existing system provides a unified substrate for composable self-evolution. Building such a platform is a significant engineering challenge, but it is also a prerequisite for moving self-evolution from a research curiosity to a production technology.
-
-% ====================================================================
-% 8.5 Production Challenges
-% ====================================================================
-\subsection{Production Challenges: Bridging Research and Deployment}\label{sec:ch8-production}
-
-The gap between demonstrated self-evolution in research settings and reliable self-evolution in production environments remains substantial. The Mom Test analysis identified production reliability as the single largest pain category (29.9\% of all reported issues), with specific complaints about agent unreliability in production, drift without monitoring, feedback loops that require manual intervention, and the absence of cost governance. The star-analysis report further revealed a stark disconnect: projects with the highest community visibility (AutoGPT at 175K stars, score 28/100) often have the lowest production readiness, while academically rigorous projects (DSPy at 25K stars, score 73/100) receive comparatively less attention. This section examines the production challenge across four dimensions: deployment reliability, observability and debugging, cost governance, and organizational integration.
-
-\subsubsection{Deployment Reliability and the Demo-to-Production Gap}
-
-Research demonstrations of self-evolving agents typically operate under controlled conditions: curated task distributions, known evaluation criteria, abundant computational resources, and forgiving time constraints. Production environments present fundamentally different challenges: open-ended task distributions with unknown edge cases, ambiguous evaluation criteria that may conflict with business metrics, strict resource budgets, and real-time latency requirements. The gap between demo success and production stability is the defining challenge for translating self-evolution research into practice.
-
-The framework-painpoint crosswalk analysis documented this gap across multiple domains. For code agents, the gap manifests as API hallucination, failure on niche or out-of-distribution codebases, and generation of plausible-looking but functionally incorrect code. For web agents, the gap appears as inability to handle dynamic pages, authentication flows, and unexpected UI changes. For workflow agents, the gap shows up as fragile automation that breaks when processes change and requires constant human supervision. Across all domains, the common pattern is that research evaluations test typical cases while production exposes tail cases.
-
-Addressing the demo-to-production gap requires three developments. First, production evaluation protocols that test agents under realistic conditions: distribution-shifted inputs, adversarial prompts, resource constraints, concurrent access, partial failures, and recovery scenarios. Second, graduated deployment strategies that progressively expand the agent's operational scope while maintaining human oversight: starting with read-only operations, advancing to low-risk modifications under supervision, and eventually enabling autonomous operation within well-defined boundaries. Third, continuous monitoring and incident response infrastructure that detects production failures in real time, triggers appropriate rollback or escalation procedures, and feeds failure data back into the self-evolution process as learning signals.
-
-\subsubsection{Observability, Debugging, and Explainability}
-
-Self-evolving agents present unique observability challenges because their behavior changes over time. A production system that was functioning correctly yesterday may behave differently today because the agent modified its own prompts, strategies, or code overnight. Traditional monitoring approaches---which assume relatively static system behavior---are insufficient for systems that are actively modifying themselves.
-
-Effective observability for self-evolving agents requires several capabilities. Prompt and strategy versioning: the ability to determine exactly which prompts, strategies, and code versions were active at any point in time. Decision tracing: the ability to reconstruct why the agent made a specific decision, including the chain of reasoning, the memories accessed, the tools invoked, and the alternatives considered. Modification attribution: the ability to trace any behavioral change back to the specific self-modification that caused it. Performance trending: the ability to detect gradual performance changes across evolution cycles and correlate them with specific modifications. Anomaly detection: the ability to identify when the agent's behavior deviates from expected patterns, triggering alerts for human review.
-
-The Mom Test pain point P004 (``framework opacity---no visibility into what prompts are actually being sent'') directly illustrates the current observability deficit. Many agent frameworks abstract away the prompts, tool calls, and internal state changes that would be necessary for effective debugging. Self-evolving agents amplify this problem because the opaque behavior is actively changing. Future agent frameworks should treat observability as a first-class architectural requirement, not a debugging afterthought.
-
-\subsubsection{Cost Governance and Resource Management}
-
-Self-evolution is inherently expensive. Each improvement cycle requires generating candidates, evaluating them, maintaining archives, managing memory, and running safety checks. The Mom Test identified cost as a significant pain category (P006 ``runaway loops and cost explosion'', P020 ``cost is the dominant constraint''), and the framework-painpoint crosswalk found cost-related concerns across all seven framework categories. Without explicit cost governance, self-evolution systems can easily consume more resources than they save through improved performance.
-
-Cost governance for self-evolving agents should operate at multiple levels. Per-improvement-cycle budgets: each self-modification attempt should have a maximum allowed cost (LLM tokens, API calls, compute time, human review time). Per-task budgets: each task should have a maximum total evolution cost, including all cycles dedicated to improving that task's performance. Lifetime budgets: the total self-evolution budget for an agent should be bounded, with periodic review and adjustment based on demonstrated return on investment. Value-based budgeting: evolution budgets should be proportional to the business value of the target task, concentrating optimization effort where it matters most.
-
-The star-analysis report's finding that ``cost per improvement'' is rarely reported in research papers highlights a significant gap. Research systems report performance improvements but rarely the total computational cost of achieving those improvements. Production systems cannot afford this omission. Every self-evolution cycle should record its total cost and compare it against the value of the improvement achieved. If the cost exceeds the value, the evolution process should be throttled or redirected.
-
-\subsubsection{Organizational Integration and Change Management}
-
-Deploying self-evolving agents within organizations requires integration with existing processes, governance structures, and change management protocols. Self-modification is, in essence, automated change management---and organizations already have established procedures for managing changes to production systems. The challenge is aligning self-evolution processes with these existing procedures.
-
-Key integration points include: change approval workflows (self-modifications should be routed through appropriate approval channels based on risk level), audit trails (all self-modifications should be logged in the same systems used for human-made changes), rollback procedures (the ability to revert self-modifications using the same rollback infrastructure used for manual changes), monitoring integration (self-evolution metrics should be visible in the same dashboards used for system health monitoring), and incident response (failures caused by self-modifications should trigger the same incident response procedures as failures caused by human errors). Treating self-evolution as a specialized form of automated change management, rather than as a fundamentally novel paradigm, reduces organizational resistance and leverages existing governance maturity.
-
-% ====================================================================
-% 8.6 Self-Evolve Roadmap
-% ====================================================================
-\subsection{A Roadmap for Self-Evolving AI}\label{sec:ch8-roadmap}
-
-Drawing on the analyses in this survey---107 core papers, 348 GitHub repositories, 97 user pain points, and the five-loop taxonomy---we propose a phased roadmap for the development of self-evolving AI systems. The roadmap is organized into three phases, each building on the foundations established by the previous phase, and is grounded in the empirical evidence and community feedback documented throughout this survey.
-
-\subsubsection{Phase 1: Foundation Infrastructure (2026--2027)}
-
-The first phase focuses on building the infrastructure that makes self-evolution safe, observable, and reproducible. Five priorities emerge from the analysis. First, establishing standardized evaluator libraries covering code quality, web interaction, business process compliance, memory consistency, safety boundary enforcement, and cost efficiency. The current fragmentation of evaluation tooling (89 evaluation-related repositories in the ecosystem, yet persistent complaints about benchmark reliability) indicates that quantity has not achieved quality; coordination and standardization are needed. Second, developing self-evolution reporting standards that mandate disclosure of training/validation/test separation, failure candidate ratios, cost per improvement, rollback rates, and safety incidents. Without standardized reporting, the field cannot reliably compare different approaches or detect systematic weaknesses. Third, advancing auditable memory systems that upgrade experience assets from free-text logs to structured, versioned, compressible, and forgettable knowledge bases. The 57 memory-related repositories in the ecosystem demonstrate active interest, but the 13.4\% pain point share for memory issues indicates that current implementations are not meeting production needs.
-
-Fourth, developing archive and lineage infrastructure that treats each self-modification as a trackable software supply chain event. DGM's archive mechanism and the lineage tracking concepts from the evolutionary computation literature provide starting points, but production-grade lineage requires finer granularity, safety-oriented metadata, and integration with existing change management systems. Fifth, establishing safety sandbox standards that provide reliable isolation for self-modification experiments. The current gap between Docker/VM-based isolation and the sandbox requirements identified in the safety literature (P013 ``environment isolation and sub-agent silent failure'') indicates that more sophisticated isolation mechanisms are needed.
-
-\subsubsection{Phase 2: Graduated Autonomy (2027--2029)}
-
-The second phase extends self-evolution from isolated, supervised cycles to graduated autonomous operation within organizational contexts. Five capabilities are targeted. Low-risk autonomous improvement: agents should be able to autonomously propose, evaluate, and deploy modifications to low-risk components (documentation, test cases, non-critical configuration) without human approval. The evaluator infrastructure from Phase 1 provides the foundation for determining which modifications qualify as low-risk. Medium-risk gray-scale evaluation: modifications to medium-risk components should be automatically evaluated in sandboxed environments and deployed to a small fraction of production traffic for real-world assessment before full deployment. High-risk human approval: modifications to critical components (core logic, safety policies, permission configurations) should require explicit human review and approval, with the system presenting the modification, its lineage, its evaluation results, and its potential impact in a human-readable format.
-
-Heterogeneous multi-agent collaboration: the system should deploy specialized agents for generation, verification, red-teaming, cost control, and human auditing, forming a checks-and-balances architecture that reduces the risk of any single agent's failure propagating through the system. The current literature on multi-agent debate~\cite{du2023improving}, EvoMAC~\cite{evomac2024}, and SPIRAL~\cite{spiral2025} provides foundations for multi-agent interaction, but production deployment requires attention to cost control (preventing multi-agent cost inflation), observability (tracking inter-agent communication), and safety (preventing adversarial collusion). Auditable experience assetization: the system should automatically convert operational experiences into reusable knowledge assets, maintaining versioning, access control, and quality metrics. The shift from ephemeral adaptation to persistent assetization is what distinguishes genuine self-evolution from transient improvement.
-
-\subsubsection{Phase 3: Open-Ended Evolution (2029+)}
-
-The third phase envisions self-evolving systems that can discover new capabilities, transfer knowledge across domains, and operate within provable safety boundaries. Five frontiers define this phase. Cross-domain transfer evaluation: systems should demonstrate capability transfer across substantially different domains---from code to web, from simulation to physical robotics, from single-agent to multi-agent---with documented transfer efficiency, negative transfer rates, and preservation of core capabilities. Ecological archive sharing: organizations and research groups should share variant archives, evaluation trajectories, and failure reports through public infrastructure, enabling the community to build on collective experience rather than each starting from scratch. Provable safety boundaries: formal methods should provide guarantees for critical constraints---tool permissions, budget ceilings, data flow isolation, merge conditions, and rollback triggers---within a hybrid ``neural generation + symbolic guardrails + programmatic verification'' architecture.
-
-Human-machine collaborative governance: humans and AI systems should collaboratively define risk levels, design evaluators, review edge cases, and calibrate safety boundaries, leveraging the complementary strengths of human judgment and machine-scale analysis. AGI engineering pathway: if the preceding frontiers are successfully navigated, the accumulated infrastructure---composable evolution loops, standardized evaluators, auditable memory, lineage tracking, safety sandboxes, and graduated autonomy---may constitute the engineering substrate needed for more general forms of artificial intelligence, where self-evolution is not a special-purpose mechanism but a fundamental capability of the system architecture.
-
-Figure~\ref{fig:ch8-roadmap} visualizes this three-phase roadmap as a timeline.
-
-% ====================================================================
-% Figure 8.1: Research Roadmap (TikZ timeline)
+% 图8.1: 未来研究路线图（TikZ timeline）
 % ====================================================================
 \begin{figure}[htbp]
 \centering
@@ -228,40 +109,40 @@ Figure~\ref{fig:ch8-roadmap} visualizes this three-phase roadmap as a timeline.
   note/.style={font=\scriptsize, color=gray!50!black, text width=3.8cm, align=left},
   timelabel/.style={font=\scriptsize\bfseries, color=gray!50},
 ]
-% Phase 1: Foundation
+% Phase 1: 基础设施
 \node[phase=cat1] (p1) at (0,0) {};
 \node[font=\bfseries\small, color=cat1!80!black] at (0,1.3) {Phase 1};
-\node[font=\bfseries\small, color=cat1!80!black] at (0,0.8) {Foundation};
+\node[font=\bfseries\small, color=cat1!80!black] at (0,0.8) {基础设施};
 \node[note] at (0,-0.1) {%
-  $\bullet$ Standardized evaluator libraries\\
-  $\bullet$ Auditable memory systems\\
-  $\bullet$ Archive \& lineage infrastructure\\
-  $\bullet$ Cost governance frameworks\\
-  $\bullet$ Self-evolution reporting standards
+  $\bullet$ 程序化验证器库\\
+  $\bullet$ 记忆资产管理\\
+  $\bullet$ 变体 Archive 与 Lineage\\
+  $\bullet$ 成本预算门控\\
+  $\bullet$ 自进化报告规范
 };
 
-% Phase 2: Graduated Autonomy
+% Phase 2: 分级自治
 \node[phase=cat3] (p2) at (5.5,0) {};
 \node[font=\bfseries\small, color=cat3!80!black] at (5.5,1.3) {Phase 2};
-\node[font=\bfseries\small, color=cat3!80!black] at (5.5,0.8) {Graduated Autonomy};
+\node[font=\bfseries\small, color=cat3!80!black] at (5.5,0.8) {分级自治};
 \node[note] at (5.5,-0.1) {%
-  $\bullet$ Low-risk autonomous improvement\\
-  $\bullet$ Medium-risk gray-scale evaluation\\
-  $\bullet$ High-risk human approval gates\\
-  $\bullet$ Heterogeneous multi-agent checks\\
-  $\bullet$ Auditable experience assetization
+  $\bullet$ 低风险自动改进\\
+  $\bullet$ 中风险灰度评估\\
+  $\bullet$ 高风险人工批准\\
+  $\bullet$ 异质多Agent协同\\
+  $\bullet$ 可审计经验资产化
 };
 
-% Phase 3: Open-Ended Evolution
+% Phase 3: 开放式进化
 \node[phase=cat4] (p3) at (11,0) {};
 \node[font=\bfseries\small, color=cat4!80!black] at (11,1.3) {Phase 3};
-\node[font=\bfseries\small, color=cat4!80!black] at (11,0.8) {Open-Ended Evolution};
+\node[font=\bfseries\small, color=cat4!80!black] at (11,0.8) {开放式进化};
 \node[note] at (11,-0.1) {%
-  $\bullet$ Cross-domain transfer evaluation\\
-  $\bullet$ Ecological archive sharing\\
-  $\bullet$ Provable safety boundaries\\
-  $\bullet$ Human-machine governance\\
-  $\bullet$ AGI engineering pathway
+  $\bullet$ 跨域迁移评估\\
+  $\bullet$ 生态级 Archive 共享\\
+  $\bullet$ 可证明安全边界\\
+  $\bullet$ 人机协同治理\\
+  $\bullet$ AGI 工程化路径
 };
 
 % Arrows between phases
@@ -280,14 +161,16 @@ Figure~\ref{fig:ch8-roadmap} visualizes this three-phase roadmap as a timeline.
 }
 
 \end{tikzpicture}
-\caption{Phased roadmap for self-evolving AI. Phase 1 (2026--2027) builds foundation infrastructure: evaluators, memory, archives, and reporting standards. Phase 2 (2027--2029) introduces graduated autonomy and multi-agent checks-and-balances. Phase 3 (2029+) targets open-ended cross-domain evolution with provable safety boundaries.}
+\caption{Agent Evolution 未来研究路线图。Phase 1（2026--2027）聚焦基础设施：验证器、记忆、Archive 和报告规范。Phase 2（2027--2029）推进分级自治和多Agent协同。Phase 3（2029+）迈向开放式跨域进化和 AGI 工程化路径。}
 \label{fig:ch8-roadmap}
 \end{figure}
 
-Figure~\ref{fig:ch8-problems} presents a severity matrix of the most critical open problems identified in this survey, categorized by their impact on self-evolving systems and the urgency of addressing them.
+对工程团队而言，务实路线是从小闭环开始：选择可验证任务，建立 baseline，冻结安全边界，收集失败样本，构建自动测试，允许 Agent 只在低风险组件中提出改进，所有改进先离线评估再灰度上线。对研究团队而言，重要的是报告机制边界而非只报告最优分数；对开源社区而言，价值最大的是共享验证器、失败样本和复现轨迹；对企业治理而言，核心是把 Agent Evolution 纳入软件变更管理、风险审计和成本控制。
+
+图~\ref{fig:ch8-problems}~以严重度矩阵形式展示了当前最关键的开放问题及其紧迫程度。
 
 % ====================================================================
-% Figure 8.2: Open Problems Severity Matrix (TikZ)
+% 图8.2: 开放问题严重度矩阵（TikZ color-coded table）
 % ====================================================================
 \begin{figure}[htbp]
 \centering
@@ -296,134 +179,148 @@ Figure~\ref{fig:ch8-problems} presents a severity matrix of the most critical op
 \def\cellheight{0.75cm}
 
 % Title
-\node[font=\small\bfseries] at (5.5, 4.2) {Open Problems Severity Matrix};
+\node[font=\small\bfseries] at (5.5, 4.2) {Agent Evolution 开放问题严重度矩阵};
 
 % Column headers
-\node[font=\scriptsize\bfseries, text=gray!60] at (0, 3.6) {Problem Area};
-\node[font=\scriptsize\bfseries, text=gray!60] at (3.5, 3.6) {Severity};
-\node[font=\scriptsize\bfseries, text=gray!60] at (6.5, 3.6) {Urgency};
-\node[font=\scriptsize\bfseries, text=gray!60] at (10, 3.6) {Current Status};
+\node[font=\scriptsize\bfseries, text=gray!60] at (0, 3.6) {问题领域};
+\node[font=\scriptsize\bfseries, text=gray!60] at (3.5, 3.6) {严重度};
+\node[font=\scriptsize\bfseries, text=gray!60] at (6.5, 3.6) {紧迫度};
+\node[font=\scriptsize\bfseries, text=gray!60] at (10, 3.6) {当前状态};
 
 % Header underline
 \draw[thick, gray!40] (-1.6, 3.3) -- (12.2, 3.3);
 
-% Row 1: Evaluator Degeneration
-\node[font=\scriptsize, anchor=west] at (-1.5, 2.8) {Evaluator Degeneration (Reward Hacking)};
+% Row 1: 验证器退化 — Critical / High
+\node[font=\scriptsize, anchor=west] at (-1.5, 2.8) {验证器退化 (Reward Hacking)};
 \node[fill=cat5!60, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, 2.8) {Critical};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, 2.8) {致命};
 \node[fill=cat2!70, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, 2.8) {High};
-\node[font=\scriptsize, anchor=west] at (8.5, 2.8) {Self-Rewarding limits emerging};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, 2.8) {高};
+\node[font=\scriptsize, anchor=west] at (8.5, 2.8) {Self-Rewarding 局限初现};
 
-% Row 2: Self-Modification Safety
-\node[font=\scriptsize, anchor=west] at (-1.5, 2.0) {Self-Modification Safety};
+% Row 2: 自修改安全 — Critical / Critical
+\node[font=\scriptsize, anchor=west] at (-1.5, 2.0) {自修改安全与权限边界};
 \node[fill=cat5!60, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, 2.0) {Critical};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, 2.0) {致命};
 \node[fill=cat5!60, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, 2.0) {Critical};
-\node[font=\scriptsize, anchor=west] at (8.5, 2.0) {Docker/VM isolation insufficient};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, 2.0) {致命};
+\node[font=\scriptsize, anchor=west] at (8.5, 2.0) {Docker/VM 不足};
 
-% Row 3: Cross-Domain Transfer
-\node[font=\scriptsize, anchor=west] at (-1.5, 1.2) {Cross-Domain Transfer};
+% Row 3: 跨域迁移 — High / Medium
+\node[font=\scriptsize, anchor=west] at (-1.5, 1.2) {跨域迁移与泛化能力};
 \node[fill=cat2!70, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, 1.2) {High};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, 1.2) {高};
 \node[fill=cat6!50, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, 1.2) {Medium};
-\node[font=\scriptsize, anchor=west] at (8.5, 1.2) {Mostly benchmark-specific};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, 1.2) {中};
+\node[font=\scriptsize, anchor=west] at (8.5, 1.2) {多数 benchmark-specific};
 
-% Row 4: Multi-Agent Consensus Illusion
-\node[font=\scriptsize, anchor=west] at (-1.5, 0.4) {Multi-Agent Consensus Illusion};
+% Row 4: 多Agent共识幻觉 — High / High
+\node[font=\scriptsize, anchor=west] at (-1.5, 0.4) {多Agent 共识幻觉};
 \node[fill=cat2!70, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, 0.4) {High};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, 0.4) {高};
 \node[fill=cat2!70, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, 0.4) {High};
-\node[font=\scriptsize, anchor=west] at (8.5, 0.4) {Debate cost high, convergence slow};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, 0.4) {高};
+\node[font=\scriptsize, anchor=west] at (8.5, 0.4) {Debate 成本高, 收敛慢};
 
-% Row 5: Evaluation Standardization
-\node[font=\scriptsize, anchor=west] at (-1.5, -0.4) {Evaluation Standardization Gap};
+% Row 5: 评估标准化 — High / High
+\node[font=\scriptsize, anchor=west] at (-1.5, -0.4) {评估标准化缺失};
 \node[fill=cat2!70, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, -0.4) {High};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, -0.4) {高};
 \node[fill=cat2!70, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, -0.4) {High};
-\node[font=\scriptsize, anchor=west] at (8.5, -0.4) {Goodhart effect prevalent};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, -0.4) {高};
+\node[font=\scriptsize, anchor=west] at (8.5, -0.4) {Goodhart 效应显著};
 
-% Row 6: Cost Control
-\node[font=\scriptsize, anchor=west] at (-1.5, -1.2) {Evolution Cost Control};
+% Row 6: 成本控制 — Medium / High
+\node[font=\scriptsize, anchor=west] at (-1.5, -1.2) {进化成本控制};
 \node[fill=cat6!50, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, -1.2) {Medium};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, -1.2) {中};
 \node[fill=cat2!70, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, -1.2) {High};
-\node[font=\scriptsize, anchor=west] at (8.5, -1.2) {Must enter fitness function};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, -1.2) {高};
+\node[font=\scriptsize, anchor=west] at (8.5, -1.2) {需进入 fitness function};
 
-% Row 7: Negative Transfer / Forgetting
-\node[font=\scriptsize, anchor=west] at (-1.5, -2.0) {Negative Transfer \& Forgetting};
+% Row 7: 负迁移/遗忘 — Medium / Medium
+\node[font=\scriptsize, anchor=west] at (-1.5, -2.0) {负迁移与灾难性遗忘};
 \node[fill=cat6!50, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, -2.0) {Medium};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, -2.0) {中};
 \node[fill=cat6!50, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, -2.0) {Medium};
-\node[font=\scriptsize, anchor=west] at (8.5, -2.0) {Need regression test suites};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, -2.0) {中};
+\node[font=\scriptsize, anchor=west] at (8.5, -2.0) {需回归测试套件};
 
-% Row 8: Memory Governance
-\node[font=\scriptsize, anchor=west] at (-1.5, -2.8) {Memory Asset Governance};
+% Row 8: 记忆治理 — Medium / Medium
+\node[font=\scriptsize, anchor=west] at (-1.5, -2.8) {记忆资产治理};
 \node[fill=cat6!50, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, -2.8) {Medium};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (3.5, -2.8) {中};
 \node[fill=cat6!50, minimum width=2cm, minimum height=\cellheight,
-  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, -2.8) {Medium};
-\node[font=\scriptsize, anchor=west] at (8.5, -2.8) {Research stage};
+  rounded corners=2pt, font=\scriptsize\bfseries, text=white] at (6.5, -2.8) {中};
+\node[font=\scriptsize, anchor=west] at (8.5, -2.8) {研究阶段};
 
 % Bottom border
 \draw[thick, gray!40] (-1.6, -3.3) -- (12.2, -3.3);
 
 % Legend
-\node[font=\tiny\bfseries, anchor=west] at (-1.5, -3.7) {Legend:};
+\node[font=\tiny\bfseries, anchor=west] at (-1.5, -3.7) {图例:};
 \node[fill=cat5!60, minimum width=0.8cm, minimum height=0.35cm,
   rounded corners=1pt] at (1.0, -3.7) {};
-\node[font=\tiny, anchor=west] at (1.5, -3.7) {Critical};
+\node[font=\tiny, anchor=west] at (1.5, -3.7) {致命};
 \node[fill=cat2!70, minimum width=0.8cm, minimum height=0.35cm,
   rounded corners=1pt] at (3.0, -3.7) {};
-\node[font=\tiny, anchor=west] at (3.5, -3.7) {High};
+\node[font=\tiny, anchor=west] at (3.5, -3.7) {高};
 \node[fill=cat6!50, minimum width=0.8cm, minimum height=0.35cm,
   rounded corners=1pt] at (4.8, -3.7) {};
-\node[font=\tiny, anchor=west] at (5.3, -3.7) {Medium};
+\node[font=\tiny, anchor=west] at (5.3, -3.7) {中};
 
 \end{tikzpicture}
-\caption{Open problems severity matrix for self-evolving AI. Problems are classified by severity (impact on self-evolution systems) and urgency (how quickly they must be addressed). Color coding: red = critical, orange = high, cyan = medium.}
+\caption{Agent Evolution 开放问题严重度矩阵。按``严重度''（对自进化系统的影响程度）和``紧迫度''（需多快解决）对八个关键问题进行分类。颜色编码：红色=致命，橙色=高，青色=中。}
 \label{fig:ch8-problems}
 \end{figure}
+
+
 
 \begin{table}[htbp]
 \centering
 \small
 \begin{tabular}{p{27mm}p{34mm}p{40mm}p{38mm}}
 \toprule
-\textbf{Future Direction} & \textbf{Near-Term Actions} & \textbf{Key Metrics} & \textbf{Primary Risks} \\
+\textbf{未来方向} & \textbf{近期可落地任务} & \textbf{关键评价指标} & \textbf{主要风险} \\
 \midrule
-Automated Evaluators & Unit tests, environment replay, LLM judge calibration sets & Verifier coverage, false positive rate, drift rate, cost per verification & Evaluator overfitted or compromised by agent \\
-Multi-Agent Collaboration & Generator/verifier/red-team separation, heterogeneous model routing & Independent error rate, dispute resolution rate, cost per success & Consensus illusion and redundant calls inflating cost \\
-Safe Self-Evolution & Sandbox, permission minimization, lineage, rollback gating & High-risk operation interception rate, rollback time, privilege violation count & Permission boundaries bypassed via prompt injection or tool output poisoning \\
-Cross-Domain Transfer & Experience libraries, task cluster routing, regression suites & New-domain cold-start samples, negative transfer rate, old-task retention & Benchmark-specific strategies fail to transfer \\
-AGI Engineering Path & Open-ended archive, tool creation, governance auditing & New skill discovery rate, explainable lineage ratio, human audit burden & Capability growth outpaces verification and governance \\
+自动化验证器 & 单元测试、环境回放、LLM judge校准集 & verifier覆盖率、误判率、漂移率、单位验证成本 & 评价器被过拟合或被Agent篡改 \\
+多Agent协同 & 生成者/验证者/红队分权与异质模型路由 & 独立错误率、争议解决率、单位成功成本 & 共识幻觉与重复调用导致成本膨胀 \\
+安全自进化 & 沙箱、权限最小化、lineage、回滚门控 & 高风险操作拦截率、回滚时间、越权事件数 & 权限边界被prompt注入或工具输出污染绕过 \\
+跨域迁移 & 经验库、任务簇路由、回归套件 & 新域冷启动样本数、负迁移率、旧任务保持率 & benchmark-specific策略迁移失败 \\
+AGI工程路径 & 开放式archive、工具创造、治理审计 & 新技能发现率、可解释lineage比例、人类审计负担 & 能力增长快于验证与治理能力 \\
 \bottomrule
 \end{tabular}
-\caption{Engineering evaluation framework for future directions. Each direction requires concrete near-term actions, observable metrics, and risk gates to prevent research visions from degenerating into unverifiable narratives.}
+\caption{未来方向的工程化评估表。每个方向都需要同时定义近期任务、可观测指标和风险门控，否则容易从研究愿景退化为不可验证的叙事。}
 \label{tab:ch8-direction-metrics}
 \end{table}
 
-% ====================================================================
-% 8.7 Conclusion
-% ====================================================================
-\subsection{Conclusion}\label{sec:ch8-conclusion}
+最终，Agent Evolution 的成熟标志不是某个系统宣称``自主改进''，而是当一个 Agent 提出自我修改时，我们能清楚回答：它为什么提出这个修改？它基于哪些失败证据？它通过了哪些独立验证？它会影响哪些权限和成本？如果错了如何回滚？它的改进是否迁移到新任务？这些问题一旦都有标准答案，自进化 Agent 才真正从概念走向基础设施。
 
-This survey has presented a comprehensive analysis of AI self-evolution, grounded in 107 core papers spanning 2022 to 2026, 348 GitHub repositories, 97 user pain points collected through Mom Test methodology, and a five-loop taxonomy that unifies the diverse landscape of self-improvement techniques. The central argument is that self-evolution is not a single technique but a family of composable mechanisms---specification-to-execution, search, evaluator, reflection, and population loops---each contributing distinct capabilities and each carrying specific limitations.
+\subsection{参考文献与本地来源}\label{sec:ch8-refs}
 
-The field has made remarkable progress in demonstrating that self-improvement is possible. STaR showed that reasoning chains can be bootstrapped from self-generated solutions. Reflexion demonstrated that verbal reflection can substitute for parameter updates. ADAS proved that agent architectures can be automatically designed. DGM showed that open-ended self-modification can produce genuine capability gains. AlphaEvolve demonstrated that evolutionary search at Google scale can discover new algorithms and advance mathematical knowledge. Absolute Zero Reasoners proved that self-play with zero external data can bootstrap reasoning capabilities. AriadneMem and ReasoningBank showed that memory can be structured, versioned, and made auditable.
-
-Yet the gap between research demonstration and production deployment remains wide. The Mom Test analysis revealed that the most common user complaints are not about capability deficits but about reliability, controllability, observability, and cost. Users do not want agents that are smarter in demos; they want agents that are reliable in production, that explain their decisions, that stay within budget, that can be rolled back when they fail, and that do not require constant human supervision to maintain their behavior. The star-analysis report reinforced this finding: projects with the highest community visibility often have the lowest production readiness scores, while the most rigorously engineered projects receive comparatively less attention.
-
-The five-loop taxonomy provides a framework for understanding both the current landscape and the path forward. The specification-to-execution loop addresses the challenge of translating goals into executable pipelines. The search loop provides the exploration mechanism that discovers improvements. The evaluator loop supplies the feedback signal that guides search. The reflection loop converts failures into learning. The population loop maintains diversity and provides the stepping stones that enable open-ended discovery. No single system has successfully composed all five loops, and the interfaces between loops remain poorly standardized. Composability---the ability to mix and match loops based on task requirements, resource constraints, and safety profiles---is the key engineering challenge for the next phase of the field.
-
-The safety and alignment challenge is particularly acute for self-evolving systems. Unlike static AI systems, self-evolving agents modify their own behavior, persist modifications in memory, and can amplify misaligned objectives across improvement cycles. The Misevolution analysis, the OEP experience poisoning attack, and the Capability Erosion study collectively demonstrate that safety risks are not hypothetical---they are concrete, documented, and potentially severe. Addressing these risks requires a layered approach: permission minimization, evolutionary sandboxing, auditable lineage, objective isolation, and graduated human governance. The aspiration for provable safety boundaries, while distant, provides a north star for engineering efforts.
-
-Looking ahead, the maturation of self-evolving AI will be marked not by any single system claiming ``autonomous improvement'' but by the emergence of infrastructure that makes self-evolution safe, observable, reproducible, and composable. When an agent proposes a self-modification, we should be able to answer: Why was this modification proposed? What failure evidence motivated it? Which independent evaluators did it pass? What permissions and costs does it affect? How can it be rolled back if it fails? Does the improvement transfer to new tasks? When these questions have standard answers, supported by standard tools and standard protocols, self-evolving AI will have transitioned from a research curiosity to an engineering discipline. The roadmap proposed in this survey---foundation infrastructure, graduated autonomy, and open-ended evolution---provides a structured path toward that transition, grounded in the empirical evidence and community feedback that this survey has endeavored to synthesize.
-
-For engineering teams, the practical starting point is small closed loops: select verifiable tasks, establish baselines, freeze safety boundaries, collect failure samples, build automated tests, and allow the agent to propose improvements only for low-risk components, with all improvements evaluated offline before gray-scale deployment. For research teams, the priority is reporting mechanism boundaries rather than only best-case scores: what fails, what regresses, what it costs, and where the system's competence ends. For the open-source community, the highest-value contributions are shared evaluators, failure samples, and reproducible evaluation trajectories rather than yet another agent framework. For enterprise governance teams, the core imperative is integrating agent self-evolution into existing change management, risk auditing, and cost control processes rather than treating it as a novel paradigm that operates outside established organizational structures. Only when these four constituencies---engineering, research, open-source, and governance---converge on shared standards, shared infrastructure, and shared accountability will self-evolving AI fulfill its promise as a reliable, controllable, and genuinely beneficial technology.
+\begin{itemize}[nosep]
+\item [MomTest-2026] \texttt{mom-test-findings-ZH.md}; \texttt{mom-test-findings-reddit-ZH.md}; \texttt{mom-test-findings-hn-ZH.md}; \texttt{mom-test-findings-x-ZH.md}. Mom Test 调研发现，2026-05-20/21。
+\item [RawSocial-2026] \texttt{raw-social/raw-social-index.json}; \texttt{raw-social/*.md}. 本地采集社区、博客、GitHub、HN、X/Twitter、中文平台语料，2026-05。
+\item [STaR-Review] \texttt{paper-reviews/review-2203.14465-star.md}.
+\item [Reflexion-Review] \texttt{paper-reviews/review-2303.11366-reflexion.md}.
+\item [MultiAgentDebate-Review] \texttt{paper-reviews/review-2305.14325-multi-agent-debate.md}.
+\item [Voyager-Review] \texttt{paper-reviews/review-2305.16291-voyager.md}.
+\item [ExpeL-Review] \texttt{paper-reviews/review-2308.10144-expel.md}.
+\item [SelfRewarding-Review] \texttt{paper-reviews/review-2401.10020-self-rewarding.md}.
+\item [RISE-Review] \texttt{paper-reviews/review-2407.18219-rise.md}.
+\item [MetaRewarding-Review] \texttt{paper-reviews/review-2407.19594-meta-rewarding.md}.
+\item [ADAS-Review] \texttt{paper-reviews/review-2408.08435-adas.md}.
+\item [GodelAgent-Review] \texttt{paper-reviews/review-2410.04444-godel-agent.md}.
+\item [EvoMAC-Review] \texttt{paper-reviews/review-2410.16946-evomac.md}.
+\item [SICA-Review] \texttt{paper-reviews/review-2504.15228-sica.md}.
+\item [RAGEN-Review] \texttt{paper-reviews/review-2504.20073-ragen.md}.
+\item [WebEvolver-Review] \texttt{paper-reviews/review-2504.21024-webevolver.md}.
+\item [AbsoluteZero-Review] \texttt{paper-reviews/review-2505.03335-absolute-zero.md}.
+\item [DGM-Review] \texttt{paper-reviews/review-2505.22954-darwin-godel-machine.md}.
+\item [AlphaEvolve-Review] \texttt{paper-reviews/review-2506.13131-alphaevolve.md}.
+\item [SPIRAL-Review] \texttt{paper-reviews/review-2506.24119-spiral.md}.
+\item [MemoryR1-Review] \texttt{paper-reviews/review-2508.19828-memory-r1.md}.
+\item [ReasoningBank-Review] \texttt{paper-reviews/review-2509.25140-reasoningbank.md}.
+\item [ACE-Review] \texttt{paper-reviews/review-2510.04618-ace.md}.
+\item [AriadneMem-Review] \texttt{paper-reviews/review-2603.03290-ariadnemem.md}.
+\end{itemize}

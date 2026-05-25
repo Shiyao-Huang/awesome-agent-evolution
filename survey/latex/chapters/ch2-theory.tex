@@ -1,5 +1,5 @@
 % ====================================================================
-% Chapter 2: Theoretical Foundations and Taxonomy
+% Chapter 2: Theoretical Foundations and Taxonomy (English, expanded)
 % ====================================================================
 
 \section{Theoretical Foundations and Taxonomy}\label{ch:theory}
@@ -14,9 +14,11 @@ This chapter does not attempt to present a mature unified theory of agent self-e
 
 \subsubsection{Classical Evolutionary Computation}
 
-The fundamental idea of evolutionary computation is to maintain a population or archive of candidate solutions within a search space, iteratively improving fitness through variation, recombination, and selection. Classical genetic algorithms, genetic programming, evolution strategies, novelty search, and quality-diversity algorithms all belong to this tradition. Their key advantage is that they do not require the objective function to be differentiable, nor do they require candidate solutions to have fixed-length representations---as long as candidates can be evaluated, search can proceed.
+The fundamental idea of evolutionary computation is to maintain a population or archive of candidate solutions within a search space, iteratively improving fitness through variation, recombination, and selection. Classical genetic algorithms, genetic programming, evolution strategies, novelty search~\citep{stanley2017open}, and quality-diversity algorithms all belong to this tradition. Their key advantage is that they do not require the objective function to be differentiable, nor do they require candidate solutions to have fixed-length representations---as long as candidates can be evaluated, search can proceed.
 
 The search spaces encountered in agent self-evolution are precisely the kind where classical gradient-based methods fail. Prompts are discrete text sequences; tool chains are combinatorial structures; agent code consists of programs; memories are collections of natural language or vector entries; multi-agent topologies are graph structures; and world models and evaluators may themselves be composed of code or LLM prompts. The non-differentiable, discrete, and compositional nature of these spaces makes evolutionary computation a natural fit for describing the outer optimization loop of self-evolving agents.
+
+Classical evolutionary computation operates through several well-understood mechanisms. Tournament selection and roulette wheel selection determine which individuals reproduce. Crossover operators combine genetic material from parents. Mutation operators introduce variation through bit-flips, Gaussian perturbations, or subtree replacement. Fitness sharing and speciation maintain population diversity. Theoretical results include schema theorems for genetic algorithms, convergence proofs for evolution strategies, and the no-free-lunch theorem establishing fundamental limits on any search algorithm. These foundations provide the conceptual vocabulary that we extend to the LLM-augmented setting.
 
 \subsubsection{How LLMs Transform Evolutionary Search}
 
@@ -24,27 +26,31 @@ Large language models transform two critical components of the evolutionary loop
 
 Second, LLMs can participate in \emph{evaluation and interpretation}. Systems such as Self-Rewarding Language Models~\citep{selfrewarding2024}, Meta-Rewarding, IterAlign, ACE, and EvolveR all use model-generated evaluations, principles, critiques, or policy summaries. This means that selection pressure no longer derives solely from hard performance metrics---it can also incorporate natural language preferences, process-level judgments, and qualitative feedback. The LLM-as-a-judge paradigm effectively creates a soft, adaptable fitness function that can be applied even when formal evaluators are unavailable.
 
+The semantic richness of LLM-based variation and evaluation comes at a cost. Each LLM invocation is computationally expensive relative to classical mutation operators. The stochasticity of LLM generation introduces non-determinism into the search process. And the distributional biases embedded in LLM training data shape the landscape of candidates that the search is likely to explore. These trade-offs between semantic power and computational efficiency represent a fundamental design tension in LLM-augmented evolutionary systems.
+
 \subsubsection{Five Design Dimensions of Agent Evolution}
 
 From the evolutionary computation perspective, agent self-evolution involves at least five critical design dimensions:
 
 \begin{enumerate}
-\item \textbf{Representation.} What constitutes an individual candidate? Possibilities include prompts, policies, memories, tool plans, Python code, workflow graphs, or model weights. The choice of representation fundamentally determines what can be varied and how. ADAS and DGM represent agents as Python programs; AlphaEvolve represents solutions as algorithmic code; FunSearch evolves single mathematical functions; OPRO operates on natural language prompts.
+\item \textbf{Representation.} What constitutes an individual candidate? Possibilities include prompts, policies, memories, tool plans, Python code, workflow graphs, or model weights. The choice of representation fundamentally determines what can be varied and how. ADAS and DGM represent agents as Python programs; AlphaEvolve represents solutions as algorithmic code; FunSearch evolves single mathematical functions; OPRO operates on natural language prompts. Each representation constrains the search space and the types of variation that are meaningful.
 
-\item \textbf{Variation.} How are new candidates generated? Options range from random perturbation and LLM rewriting, to reflection-based text generation, text gradients from symbolic backpropagation, Monte Carlo tree search (MCTS), reinforcement learning updates, or program patches. Agent Symbolic Learning~\citep{agentsymbolic2024} introduces ``language gradients'' that mimic backpropagation in natural language space; DGM uses LLM-proposed code modifications; AlphaEvolve combines breadth-first exploration (Gemini Flash) with depth-oriented refinement (Gemini Pro).
+\item \textbf{Variation.} How are new candidates generated? Options range from random perturbation and LLM rewriting, to reflection-based text generation, text gradients from symbolic backpropagation, Monte Carlo tree search (MCTS), reinforcement learning updates, or program patches. Agent Symbolic Learning~\citep{agentsymbolic2024} introduces ``language gradients'' that mimic backpropagation in natural language space; DGM uses LLM-proposed code modifications; AlphaEvolve combines breadth-first exploration (Gemini Flash) with depth-oriented refinement (Gemini Pro). The variation operator is arguably the most important design choice, as it determines the locality and semantics of search steps.
 
-\item \textbf{Fitness.} How are candidates evaluated? Fitness can be defined by benchmark scores, unit test pass rates, environment rewards, LLM judge scores, human preferences, cost constraints, or safety rules. The choice of fitness function is arguably the most consequential design decision, as it determines the direction of evolutionary pressure. FunSearch and AlphaEvolve use programmatic evaluators; Reflexion uses binary task success; Self-Rewarding uses the model's own judgment.
+\item \textbf{Fitness.} How are candidates evaluated? Fitness can be defined by benchmark scores, unit test pass rates, environment rewards, LLM judge scores, human preferences, cost constraints, or safety rules. The choice of fitness function is arguably the most consequential design decision, as it determines the direction of evolutionary pressure. FunSearch and AlphaEvolve use programmatic evaluators; Reflexion uses binary task success; Self-Rewarding uses the model's own judgment. Multi-objective formulations that balance performance, cost, diversity, and safety are increasingly common.
 
-\item \textbf{Selection.} Which candidates are retained? Options include keeping the single best, preserving novel solutions, maintaining quality-diversity archives, partitioning by task domain, or applying rollback-gated acceptance. AlphaEvolve employs MAP-Elites quality-diversity search, maintaining the best solution per behavioral niche; DGM maintains an open-ended, ever-growing archive; ADAS retains a history of past designs for in-context learning.
+\item \textbf{Selection.} Which candidates are retained? Options include keeping the single best, preserving novel solutions, maintaining quality-diversity archives, partitioning by task domain, or applying rollback-gated acceptance. AlphaEvolve employs MAP-Elites quality-diversity search, maintaining the best solution per behavioral niche; DGM maintains an open-ended, ever-growing archive; ADAS retains a history of past designs for in-context learning. The selection mechanism determines the balance between exploitation (refining known good solutions) and exploration (discovering novel approaches).
 
-\item \textbf{Inheritance.} How is experience transmitted across generations? Mechanisms include weight updates, context accumulation, memory databases, code repositories, skill libraries, principle collections, or archive metadata. Voyager's skill library enables reuse across Minecraft tasks; ExpeL consolidates multi-task experience into transferable insights; ADAS discoveries transfer across domains and even across base models.
+\item \textbf{Inheritance.} How is experience transmitted across generations? Mechanisms include weight updates, context accumulation, memory databases, code repositories, skill libraries, principle collections, or archive metadata. Voyager's skill library enables reuse across Minecraft tasks; ExPeL consolidates multi-task experience into transferable insights; ADAS discoveries transfer across domains and even across base models. The inheritance mechanism determines how effectively the system can learn from past experience and avoid re-exploring known failure modes.
 \end{enumerate}
 
 \subsubsection{Challenges of the LLM--Evolution Combination}
 
 The marriage of LLMs and evolutionary computation also introduces novel challenges. LLM-generated candidates carry strong distributional priors from training data---the search does not explore uniformly, and may inherit biases and stereotyped patterns present in the training corpus. When LLMs serve as judges (fitness functions), they are susceptible to length bias, position bias, and reward hacking~\citep{zheng2023judging, salewski2023context}. If the archive retains only high-scoring candidates, premature convergence is a risk; if it retains all candidates, computational costs and context pressure escalate rapidly.
 
-DGM~\citep{dgm2025} addresses this by maintaining an ever-growing agent archive, using open-ended exploration to avoid local optima. ADAS~\citep{adas2024} leverages the history of past discoveries within the meta agent's context to compose novel agents. These two approaches illustrate a key insight: in agent evolution, the archive is not merely a log---it is an externalized repository of reusable search experience. How to manage, prune, index, and retrieve from this archive remains an open research question.
+DGM~\citep{dgm2025} addresses this by maintaining an ever-growing agent archive, using open-ended exploration to avoid local optima. ADAS~\citep{adas2024} leverages the history of past discoveries within the meta agent's context to compose novel agents. These two approaches illustrate a key insight: in agent evolution, the archive is not merely a log---it is an externalized repository of reusable search experience. The management of this archive---how to index, retrieve, compress, and curate its contents---is an open research question with significant practical implications. Systems that neglect archive management risk drowning in low-quality candidates, while overly aggressive pruning may discard valuable stepping stones that could enable future breakthroughs.
+
+The computational cost of LLM-based evolution is another practical concern. Each evaluation cycle requires one or more LLM API calls, and the number of evaluations can grow quadratically with the size of the archive (for pairwise comparisons) or linearly with the number of candidates. Cost-effective strategies include batching evaluations, using smaller models for initial screening and larger models for final verification, and caching evaluations for deterministic fitness functions. AlphaEvolve's dual-model architecture (Flash for breadth, Pro for depth) represents one principled approach to managing this cost-quality trade-off.
 
 \subsection{Self-Reference, G\"odel Machines, and Recursive Self-Improvement}\label{sec:theory-godel}
 
@@ -52,33 +58,45 @@ DGM~\citep{dgm2025} addresses this by maintaining an ever-growing agent archive,
 
 Self-reference is perhaps the most theoretically provocative element of agent self-evolution. The G\"odel machine, conceived by Schmidhuber~\citep{schmidhuber2003godel}, envisions a formally provably optimal self-improving system. The original formulation consists of a problem solver and a proof searcher: when the proof searcher finds that a particular self-modification would increase expected utility without violating global optimality guarantees, the system executes the modification. The significance of this framework lies in its transformation of ``recursive self-improvement'' from science fiction into a formal problem: how does a system represent itself, reason about the consequences of self-modification, and avoid situations where local improvements undermine long-term objectives?
 
-The original G\"odel machine requires three components: (1) a formal representation of the system's own code and utility function, (2) a proof system capable of reasoning about the effects of code modifications, and (3) a guarantee mechanism ensuring that no executed modification can violate the system's global constraints. In theory, this yields a system that is provably optimal in the sense that no other self-improving system satisfying the same constraints can achieve higher expected cumulative reward.
+The original G\"odel machine requires three components: (1) a formal representation of the system's own code and utility function, (2) a proof system capable of reasoning about the effects of code modifications on expected utility, and (3) a guarantee mechanism ensuring that no executed modification can violate the system's global constraints. In theory, this yields a system that is provably optimal in the sense that no other self-improving system satisfying the same constraints can achieve higher expected cumulative reward.
+
+The theoretical elegance of the G\"odel machine stands in stark contrast to its practical limitations. The proof search itself is computationally intractable for all but the simplest systems. The requirement for a formal representation of the system's behavior presupposes a level of self-transparency that real-world systems do not possess. And the assumption that utility can be formalized as a single scalar function overlooks the multi-objective, ambiguous, and evolving nature of real-world objectives. Nevertheless, the G\"odel machine provides a valuable aspirational framework and a set of structural requirements that any self-improving system should consider.
 
 \subsubsection{From Formal Proofs to Empirical Verification}
 
-Modern LLM-based agents differ markedly from the original G\"odel machine vision. G\"odel Agent~\citep{godelagent2025}, DGM~\citep{dgm2025}, and SICA all borrow the self-referential idea, but they overwhelmingly substitute empirical evaluation for formal proof. G\"odel Agent allows an LLM to modify its own logic through runtime monkey patching---the LLM reads its source code, proposes specific patches, applies them at runtime, and validates the result. SICA enables a coding agent to autonomously edit its own source code to improve performance on SWE-Bench Verified. DGM maintains an archive of executable agent variants, allowing stronger coding agents to generate even stronger descendants through iterative code modification.
+Modern LLM-based agents differ markedly from the original G\"odel machine vision. G\"odel Agent~\citep{godelagent2025}, DGM~\citep{dgm2025}, and SICA all borrow the self-referential idea, but they overwhelmingly substitute empirical evaluation for formal proof. G\"odel Agent allows an LLM to modify its own logic through runtime monkey patching---the LLM reads its source code, proposes specific patches, applies them at runtime via Python's \texttt{exec()} mechanism, and validates the result through task performance. SICA enables a coding agent to autonomously edit its own source code to improve performance on SWE-Bench Verified. DGM maintains an archive of executable agent variants, allowing stronger coding agents to generate even stronger descendants through iterative code modification.
 
 These systems demonstrate the feasibility of what we term \emph{practical G\"odel-ization}: rather than requiring the system to prove global optimality, it suffices that each variant is \emph{reliably} better in isolated evaluation. This relaxation dramatically expands the space of feasible self-modifications, but at the cost of formal guarantees. The shift from proof to empirical validation raises a central theoretical question: when formal proofs are unavailable, what level of empirical verification suffices to support self-modification?
+
+The empirical approach introduces several specific risks that must be managed. First, the evaluation may have insufficient coverage: a code modification that improves performance on the evaluated tasks may introduce subtle regressions on untested scenarios. DGM addresses this through multi-dataset evaluation (SWE-bench and Polyglot), but the coverage remains limited relative to the full space of possible agent behaviors. Second, the evaluation tasks may diverge from the true objective: an agent that optimizes for benchmark scores may learn strategies that do not generalize to real-world deployment. Third, the agent may modify the evaluation infrastructure itself: if the agent can edit the test harness or the scoring function, ``improvement'' becomes meaningless. This motivates the layered safety architecture described below.
 
 \subsubsection{Safety Layers for Self-Modification}
 
 If the evaluator provides insufficient coverage, the system may optimize for loopholes. If evaluation tasks diverge from the true objective, the system may succumb to Goodhart's law. If the agent can modify the evaluator itself or bypass tests, then the notion of ``improvement'' becomes meaningless. Empirical G\"odel agents must therefore decompose self-reference into several controlled layers:
 
 \begin{itemize}
-\item \textbf{Modifiable layer:} The components that may change---prompts, tools, code modules, or policies.
-\item \textbf{Immutable evaluation layer:} The assessment procedures that must remain isolated from modification.
-\item \textbf{Sandboxed execution layer:} The runtime environment that prevents side effects from escaping containment.
-\item \textbf{Archive recording layer:} The lineage tracking that preserves full history and enables rollback.
-\item \textbf{Human audit layer:} The oversight mechanism that inspects high-risk modifications.
+\item \textbf{Modifiable layer:} The components that may change---prompts, tools, code modules, or policies. This layer is the target of the self-modification mechanism and must be clearly delineated to prevent unintended modifications to other layers.
+\item \textbf{Immutable evaluation layer:} The assessment procedures that must remain isolated from modification. This layer provides the ground truth against which improvements are measured and must be protected from tampering.
+\item \textbf{Sandboxed execution layer:} The runtime environment that prevents side effects from escaping containment. Modifications are tested in isolation before being committed, ensuring that unintended behaviors are detected before deployment.
+\item \textbf{Archive recording layer:} The lineage tracking that preserves full history and enables rollback. Every modification is recorded with its rationale, the evaluation results, and a pointer to the parent version, enabling complete traceability and rollback capability.
+\item \textbf{Human audit layer:} The oversight mechanism that inspects high-risk modifications. Modifications that affect safety-critical components or that produce unusually large performance changes are flagged for human review.
 \end{itemize}
 
-Without these layered protections, self-reference easily degenerates into uncontrolled self-rewriting. The design of robust safety architectures for self-modifying systems remains a critical open problem.
+Without these layered protections, self-reference easily degenerates into uncontrolled self-rewriting. The design of robust safety architectures for self-modifying systems remains a critical open problem, particularly as systems become more autonomous and their modifications become more consequential.
 
 \subsubsection{Capability Feedback and Recursive Structure}
 
-Self-reference also involves the recursive structure of ``capability feedback.'' The key insight of DGM~\citep{dgm2025} is that a stronger coding agent can not only solve more external tasks, but also better improve its own code. Therefore, downstream task performance and self-modification capability form a positive feedback loop. This structure is strictly stronger than ordinary AutoML, because the search engine itself is also an object being searched. ADAS still retains a fixed meta agent (the LLM that proposes new agent designs), while DGM allows the improved agent to continue assuming responsibility for self-improvement.
+Self-reference also involves the recursive structure of ``capability feedback.'' The key insight of DGM~\citep{dgm2025} is that a stronger coding agent can not only solve more external tasks, but also better improve its own code. Therefore, downstream task performance and self-modification capability form a positive feedback loop: improved performance on coding tasks enables better self-modification, which in turn further improves performance. This structure is strictly stronger than ordinary AutoML, because the search engine itself is also an object being searched.
 
-This distinction corresponds to two theoretical models: the \emph{exogenous optimizer model}, where an external search process optimizes a fixed target, and the \emph{endogenous optimizer model}, where the system being optimized is simultaneously the optimizer. The former is easier to control and reason about; the latter is closer to true recursive self-improvement, but presents substantially greater challenges in safety and evaluation. The spectrum between these two extremes---from fixed external search to fully self-referential optimization---represents a key design axis for self-evolving agent systems.
+ADAS still retains a fixed meta agent (the LLM that proposes new agent designs), representing what we call the \emph{exogenous optimizer model}. DGM allows the improved agent to continue assuming responsibility for self-improvement, representing the \emph{endogenous optimizer model}. The exogenous model is easier to control and reason about: the optimizer is stable, its behavior is predictable, and the search process can be analyzed independently of the objects being searched. The endogenous model is closer to true recursive self-improvement but presents substantially greater challenges in safety and evaluation: the optimizer's behavior changes as it improves, potentially in ways that are difficult to predict or control.
+
+The spectrum between these two extremes---from fixed external search to fully self-referential optimization---represents a key design axis for self-evolving agent systems. Different points on this spectrum offer different trade-offs between optimization power and controllability. Understanding these trade-offs is essential for designing systems that are both effective and safe.
+
+\subsubsection{Theoretical Implications of Recursive Self-Improvement}
+
+The possibility of recursive self-improvement raises several theoretical questions that have been debated in the AI safety literature. The ``intelligence explosion'' hypothesis~\citep{good1966speculations, yudkowsky2008artificial} suggests that a sufficiently capable self-improving system could enter a positive feedback loop leading to rapidly superhuman intelligence. While this hypothesis remains speculative, the empirical results from DGM and G\"odel Agent provide concrete evidence that at least modest forms of recursive improvement are achievable with current technology.
+
+A more immediate theoretical concern is the stability of the improvement process. Without formal guarantees, there is no assurance that each modification step is monotonic---a self-modification intended to improve performance may inadvertently degrade it. DGM addresses this by accepting a modification only when it demonstrably improves performance on the evaluation suite, effectively implementing a hill-climbing acceptance criterion. However, this conservative strategy may prevent the system from accepting modifications that are locally suboptimal but enable future improvements---the classic exploration--exploitation dilemma applied to self-modification.
 
 \subsection{Meta-Learning and the Theory of Self-Improvement}\label{sec:theory-meta}
 
@@ -88,23 +106,33 @@ Meta-learning, broadly construed, concerns the improvement of a learning system'
 
 Reflexion~\citep{reflexion2023} compresses failed trajectories into natural language reflections, effectively storing first-order policy updates in context. ExPeL consolidates experience across multiple tasks into transferable insights. ICE (Investigate, Consolidate, Exploit) transforms task trajectories into streamlined workflows. ACE treats the context as an ever-evolving playbook. EvolveR organizes offline self-distillation, online interaction, and policy evolution into a coherent lifecycle. These systems extend ``learning'' from the weight space of neural networks to the space of external cognitive artifacts---memories, principles, skills, and procedures.
 
+This expansion of the learning substrate has profound implications for the theory of self-improvement. Traditional learning theory assumes a fixed hypothesis class and a fixed update rule; in agent self-evolution, both the hypothesis class (what the agent can represent) and the update rule (how it incorporates feedback) may themselves be subject to optimization. This recursive structure complicates classical analysis but also enables qualitatively new forms of improvement.
+
 \subsubsection{A Three-Layer Policy Decomposition}
 
 An LLM-based agent can be decomposed into three policy layers~\citep{selfevolve_survey2024}:
 
 \begin{itemize}
-\item \textbf{Base layer} ($\theta$): The foundation model parameters, typically obtained through pre-training and post-training alignment. This layer is the most expensive to modify and is shared across all tasks.
-\item \textbf{Behavioral interface} ($\varphi$): The editable behavioral configuration, including system prompts, tool descriptions, planner specifications, critic templates, code modules, and multi-agent topologies. This layer is task-specific and relatively inexpensive to modify.
-\item \textbf{Experiential state} ($m$): The accumulated experience, including episodic memories, skill libraries, principle collections, failure reflections, world models, and archive metadata. This layer grows organically through interaction and is the most dynamic.
+\item \textbf{Base layer} ($\theta$): The foundation model parameters, typically obtained through pre-training and post-training alignment. This layer is the most expensive to modify and is shared across all tasks. Updates to $\theta$ require significant computational resources but can produce the most fundamental improvements in capability.
+\item \textbf{Behavioral interface} ($\varphi$): The editable behavioral configuration, including system prompts, tool descriptions, planner specifications, critic templates, code modules, and multi-agent topologies. This layer is task-specific and relatively inexpensive to modify. Updates to $\varphi$ can dramatically change agent behavior without touching the underlying model weights.
+\item \textbf{Experiential state} ($m$): The accumulated experience, including episodic memories, skill libraries, principle collections, failure reflections, world models, and archive metadata. This layer grows organically through interaction and is the most dynamic. Updates to $m$ are essentially free (requiring only memory storage) and can be highly effective for avoiding repeated failures and replicating successful strategies.
 \end{itemize}
 
 Traditional fine-tuning primarily updates $\theta$; prompt engineering updates $\varphi$; memory-based self-evolution updates $m$; systems like SICA, DGM, and ADAS simultaneously modify $\varphi$ and the coded structural components; RAGEN~\citep{ragen2025}, Absolute Zero~\citep{absolutezero2025}, and SPIRAL may update $\theta$ or policy parameters through reinforcement learning. The generalized policy of a self-evolving agent can be written as $\pi(a \mid s; \theta, \varphi, m)$, and self-evolution is the process of updating some subset of $(\theta, \varphi, m)$ under the drive of feedback $r$ or evaluation $e$.
+
+The three-layer decomposition provides a useful lens for comparing different self-evolution approaches. Systems that modify only $m$ (e.g., Reflexion) are lightweight and fast but limited to leveraging existing model capabilities. Systems that modify $\varphi$ (e.g., ADAS) can discover novel behavioral patterns but are constrained by the base model's capabilities. Systems that modify $\theta$ (e.g., RAGEN) can produce the most fundamental improvements but are computationally expensive and face risks of catastrophic forgetting. The most promising direction is hierarchical systems that modify all three layers in coordination, using cheap $m$-updates for rapid adaptation and expensive $\theta$-updates for capability expansion.
 
 \subsubsection{Task Distribution Learning}
 
 A critical insight from meta-learning is the role of task distributions. A system that merely repeats trial-and-error on a single fixed task may achieve only local optimization; genuine self-evolution requires the extraction of cross-task strategies from a family of tasks. Voyager's skill library enables reuse across Minecraft exploration tasks; ExPeL demonstrates forward transfer of experience; ADAS reports that discovered agent designs transfer across domains and even across base models; ReasoningBank distills reasoning strategies from successful and failed samples for application to novel problems.
 
-Formally, this can be expressed as minimizing expected loss over a task distribution $\mathcal{T}$: the system does not merely seek the optimal behavior for a single task $\tau$, but learns an update operator $U$ such that after a small number of interactions, it performs better on new tasks drawn from $\mathcal{T}$. The distinction between single-task optimization and distribution-level meta-learning is crucial for understanding the depth of self-evolutionary improvement.
+Formally, this can be expressed as minimizing expected loss over a task distribution $\mathcal{T}$: the system does not merely seek the optimal behavior for a single task $\tau$, but learns an update operator $U$ such that after a small number of interactions, it performs better on new tasks drawn from $\mathcal{T}$:
+\begin{equation}
+\min_U \; \mathbb{E}_{\tau \sim \mathcal{T}} \left[ \mathcal{L}(U(z_0, \text{interact}(\tau)), \tau) \right]
+\end{equation}
+where $z_0$ is the initial agent state and $\text{interact}(\tau)$ denotes the agent's interaction with task $\tau$. This formulation highlights the distinction between systems that learn task-specific hacks and systems that learn generalizable improvement strategies.
+
+The practical challenge is that the task distribution $\mathcal{T}$ is typically unknown and must be estimated from available tasks. If the estimate is biased toward narrow task types, the learned update operator may not generalize. This is particularly relevant for self-evolution systems evaluated on standard benchmarks, which may not represent the full distribution of tasks encountered in deployment.
 
 \subsubsection{Self-Improvement as Online Learning}
 
@@ -113,7 +141,14 @@ Self-improvement can also be viewed through the lens of online learning. At each
 z_{t+1} = U(z_t, \tau_t, f_t), \quad z_t = (\theta_t, \varphi_t, m_t)
 \end{equation}
 
-If $\theta$ is fixed and only $m$ is updated, this constitutes \emph{memory-based self-evolution} (e.g., Reflexion, Voyager). If $\varphi$ is updated, it is \emph{prompt/architecture self-evolution} (e.g., ADAS, ACE). If $\theta$ is updated, it is \emph{training-based self-evolution} (e.g., Self-Rewarding via iterative DPO, RAGEN via StarPO). If the environment $\mathcal{E}$ or task generator is also updated, it represents \emph{self-curriculum} or \emph{self-play} (e.g., Absolute Zero, SPIN).
+This formulation enables a clean taxonomy of self-evolution types based on which components of $z_t$ are updated:
+
+\begin{itemize}
+\item If $\theta$ is fixed and only $m$ is updated, this constitutes \emph{memory-based self-evolution} (e.g., Reflexion, Voyager). The agent accumulates experiential knowledge without modifying its underlying model.
+\item If $\varphi$ is updated, it is \emph{prompt/architecture self-evolution} (e.g., ADAS, ACE). The agent's behavioral configuration changes, potentially discovering novel strategies.
+\item If $\theta$ is updated, it is \emph{training-based self-evolution} (e.g., Self-Rewarding via iterative DPO, RAGEN via StarPO). The agent's fundamental capabilities are modified.
+\item If the environment $\mathcal{E}$ or task generator is also updated, it represents \emph{self-curriculum} or \emph{self-play} (e.g., Absolute Zero, SPIN). The agent shapes its own learning environment.
+\end{itemize}
 
 This unified framework facilitates comparison across methods: Reflexion's $U$ writes reflective memories; Self-Rewarding's $U$ performs iterative DPO; RAGEN's $U$ is trajectory-level RL; DGM's $U$ applies code patches with archive selection; ACE's $U$ incrementally restructures the contextual playbook. The nature of $U$---what it modifies, what feedback it requires, and what guarantees it provides---is the primary axis of differentiation among self-evolution approaches.
 
@@ -127,21 +162,21 @@ z_{t+1},\, \mathcal{A}_{t+1} = S\!\Big(\mathcal{A}_t \cup \{U_k(z_t, x_t, y_t)\}
 \end{equation}
 where $D$ represents a diversity or novelty measure. Different methods are primarily distinguished by their definitions of $U$, $V$, $S$, and $D$.
 
-Self-Refine's~\citep{selfrefine2023} $U$ is the same model rewriting its output based on self-generated feedback, with state changes occurring primarily in the text of a single sample. Reflexion's~\citep{reflexion2023} $U$ writes reflections into $m$. Self-Rewarding's $V$ is the model's own judge, and $U$ is DPO. RAGEN's~\citep{ragen2025} $V$ derives from multi-turn environment rewards, and $U$ is StarPO. ADAS's $U$ has the meta agent write new agent code, modifying $g$. DGM's $U$ has the current agent modify its own code, with $\mathcal{A}$ preserving the lineage. AlphaEvolve's $V$ is a programmatic evaluator, and $U$ generates algorithmic code. Memory-R1's $U$ learns when to write, update, delete, and retrieve from memory.
+The mapping between methods and formal components illuminates their structural similarities and differences. Self-Refine's~\citep{selfrefine2023} $U$ is the same model rewriting its output based on self-generated feedback, with state changes occurring primarily in the text of a single sample. Reflexion's~\citep{reflexion2023} $U$ writes reflections into $m$, enriching the experiential state. Self-Rewarding's $V$ is the model's own judge, and $U$ is DPO. RAGEN's~\citep{ragen2025} $V$ derives from multi-turn environment rewards, and $U$ is StarPO. ADAS's $U$ has the meta agent write new agent code, modifying $g$. DGM's $U$ has the current agent modify its own code, with $\mathcal{A}$ preserving the lineage. AlphaEvolve's $V$ is a programmatic evaluator, and $U$ generates algorithmic code. Memory-R1's $U$ learns when to write, update, delete, and retrieve from memory.
 
 \subsubsection{Levels of Improvement}
 
 The formalization requires distinguishing between levels of ``improvement'':
 
 \begin{itemize}
-\item \textbf{Local improvement:} The score on $V$ increases on the current task set. Many systems demonstrate this level.
-\item \textbf{Robust improvement:} Performance increases on an independent test set held out from training tasks.
-\item \textbf{Transfer improvement:} Performance increases on a new task distribution or new base model. ADAS, DGM, Voyager, and ReasoningBank attempt to demonstrate this level.
-\item \textbf{Open-ended improvement:} The archive continues to produce novel and useful stepping stones without convergence, a property related to open-endedness in evolutionary computation~\citep{stanley2017open}.
-\item \textbf{Safe improvement:} Capability growth is not accompanied by increased constraint violations.
+\item \textbf{Local improvement:} The score on $V$ increases on the current task set. This is the weakest form of improvement and is demonstrated by virtually all self-evolution systems.
+\item \textbf{Robust improvement:} Performance increases on an independent test set held out from training tasks. This guards against overfitting to specific task instances.
+\item \textbf{Transfer improvement:} Performance increases on a new task distribution or new base model. ADAS, DGM, Voyager, and ReasoningBank attempt to demonstrate this level, which requires the system to discover generalizable principles rather than task-specific tricks.
+\item \textbf{Open-ended improvement:} The archive continues to produce novel and useful stepping stones without convergence, a property related to open-endedness in evolutionary computation~\citep{stanley2017open}. This is the most ambitious form of improvement and is rarely demonstrated rigorously.
+\item \textbf{Safe improvement:} Capability growth is not accompanied by increased constraint violations. This is essential for practical deployment but is often neglected in current evaluations.
 \end{itemize}
 
-Many papers demonstrate only the first two levels. A critical direction for future theory is to develop rigorous distinctions among these levels; otherwise, ``self-improvement'' risks being over-interpreted from single-benchmark gains.
+Many papers demonstrate only the first two levels. A critical direction for future theory is to develop rigorous distinctions among these levels; otherwise, ``self-improvement'' risks being over-interpreted from single-benchmark gains. The field would benefit from standardized evaluation protocols that explicitly test for transfer improvement and safe improvement, not merely local improvement on a fixed benchmark suite.
 
 \subsubsection{Selection Pressure and Multi-Objective Optimization}
 
@@ -151,7 +186,11 @@ Therefore, self-evolution systems typically require multi-objective optimization
 \begin{equation}
 \mathbb{E}[R(z)] - \lambda\,\mathrm{Cost}(z) + \beta\,D(z) - \gamma\,\Omega(z)
 \end{equation}
-subject to $C(z) = \mathrm{true}$. In practice, exact optimization is typically infeasible, and systems rely on gating mechanisms, ablation studies, rollback procedures, and human review to approximate the multi-objective solution.
+subject to $C(z) = \mathrm{true}$. The Lagrange multipliers $\lambda$, $\beta$, and $\gamma$ encode the relative importance of cost, diversity, and complexity. In practice, exact optimization is typically infeasible, and systems rely on gating mechanisms, ablation studies, rollback procedures, and human review to approximate the multi-objective solution.
+
+The multi-objective formulation highlights a fundamental tension in self-evolution design: the objectives are often in conflict. Maximizing task reward may require expensive computations (increasing cost) or complex agent architectures (increasing complexity). Maintaining diversity may require keeping suboptimal candidates (decreasing average reward). Satisfying safety constraints may limit the range of permissible modifications (decreasing the rate of improvement). Navigating these trade-offs requires careful design and ongoing monitoring.
+
+A practical approach to multi-objective optimization in self-evolution is \emph{constrained optimization}: treat safety constraints as hard requirements that must be satisfied, and optimize the other objectives subject to these constraints. This is the approach taken by DGM (accept modifications only if they improve performance on the evaluation suite) and ADAS (the meta agent's output must be valid Python code that passes syntax checks). The constraint-based approach simplifies the optimization problem but requires that the constraints be well-defined and efficiently checkable---an assumption that may not hold for all safety properties of interest, particularly those involving subtle behavioral criteria like fairness or alignment.
 
 % ====================================================================
 % Figure 2.1: Unified Evolution Loop Diagram
@@ -225,6 +264,8 @@ subject to $C(z) = \mathrm{true}$. In practice, exact optimization is typically 
 
 Having established the theoretical foundations, we now introduce the \emph{Five Evolution Loops} taxonomy---a principled classification of self-evolution mechanisms into five recurring structural patterns. Each loop represents a distinct feedback cycle through which an AI system can autonomously improve. While individual systems may implement multiple loops simultaneously, the taxonomy provides a clean decomposition that facilitates comparison and highlights design trade-offs.
 
+The five loops are not arbitrary categories but correspond to distinct functional roles in the self-evolution process: \emph{what} to build (specification), \emph{where} to look (search), \emph{how to measure} (evaluation), \emph{what to learn} (reflection), and \emph{what to keep} (population). Together, they span the complete lifecycle of a self-evolving system.
+
 \subsubsection{The Specification-to-Execution Loop}\label{sec:loop-spec}
 
 \paragraph{Definition.}
@@ -238,13 +279,17 @@ p^* = \argmax_{p \in \mathcal{P}(\sigma)} V_p(p, \mathcal{D}_{\text{eval}})
 where $\mathcal{D}_{\text{eval}}$ is an evaluation dataset. The updater $U_{\text{spec}}$ takes a failed pipeline $p_t$ and its evaluation $V_p(p_t)$ and produces a refined pipeline $p_{t+1}$, potentially also refining the specification interpretation $\hat{\sigma}_{t+1}$.
 
 \paragraph{Representative Systems.}
-AutoML-GPT~\citep{automlgpt2023} uses GPT as a natural language bridge, converting task cards, model cards, and data cards into data processing pipelines, model architectures, and hyperparameter optimization strategies. AutoML-Agent~\citep{automlagent2024} decomposes the full AutoML workflow into specialized agents for data retrieval, preprocessing, modeling, evaluation, and deployment, combining retrieval-augmented planning with multi-stage verification. ADAS~\citep{adas2024} pushes this loop further: the meta agent writes Python code defining complete agent architectures, evaluates them on benchmarks (ARC, GFootball), and stores successful designs in an archive. Crucially, ADAS demonstrates that discovered agent designs transfer across domains---agents designed on ARC perform well on GFootball---and even across base models---agents discovered with GPT-3.5 remain effective with GPT-4.
+AutoML-GPT~\citep{automlgpt2023} uses GPT as a natural language bridge, converting task cards, model cards, and data cards into data processing pipelines, model architectures, and hyperparameter optimization strategies. AutoML-Agent~\citep{automlagent2024} decomposes the full AutoML workflow into specialized agents for data retrieval, preprocessing, modeling, evaluation, and deployment, combining retrieval-augmented planning with multi-stage verification. ADAS~\citep{adas2024} pushes this loop further: the meta agent writes Python code defining complete agent architectures, evaluates them on benchmarks (ARC, GFootball), and stores successful designs in an archive.
+
+ADAS implements what its authors term \emph{Meta Agent Search}. The meta agent is an LLM that writes Python code defining complete agent architectures. The search space is all valid Python programs implementing agents---a Turing-complete space. At each iteration, the meta agent reviews an archive $D$ of prior designs and their scores, writes code for a new agent, evaluates it on benchmark tasks, and stores the result. A critical finding is that discovered agents transfer across domains (ARC to GFootball) and across base models (GPT-3.5 to GPT-4), suggesting that the meta agent discovers structural principles of effective agent design rather than overfitting to specific model quirks.
+
+AutoML-Agent decomposes the pipeline into specialized agents: a planner agent decomposes the task, a data agent handles retrieval and preprocessing, a model agent selects and trains architectures, and an evaluation agent provides multi-stage verification. The planner maintains a structured plan that is iteratively refined based on downstream evaluation results. This decomposition enables a natural mapping between specification components and execution modules, but introduces coordination overhead and potential for misalignment between the planner's intent and the executors' actions.
 
 \paragraph{Benchmark Evidence.}
-ADAS achieves performance exceeding hand-designed state-of-the-art agents on ARC and GFootball, with cross-domain transfer confirmed. AutoML-Agent demonstrates end-to-end pipeline generation on domain-specific datasets. AutoML-GPT shows competitive performance on standard AutoML benchmarks including tabular, vision, and NLP tasks.
+ADAS achieves performance exceeding hand-designed state-of-the-art agents on ARC and GFootball, with cross-domain transfer confirmed (agents designed on ARC perform well on GFootball) and cross-model transfer confirmed (agents discovered with GPT-3.5 remain effective with GPT-4). AutoML-Agent demonstrates end-to-end pipeline generation on domain-specific datasets. AutoML-GPT shows competitive performance on standard AutoML benchmarks including tabular, vision, and NLP tasks.
 
 \paragraph{Limitations.}
-The specification-to-execution loop faces several challenges. First, the quality of the generated pipeline is bounded by the LLM's understanding of the specification and the domain. Second, the evaluation may not capture all relevant quality dimensions (e.g., robustness, fairness, deployment efficiency). Third, most current systems automate single projects rather than accumulating cross-run experience. The gap between single-run automation and persistent evolution is precisely where self-evolution systems can differentiate.
+The specification-to-execution loop faces several challenges. First, the quality of the generated pipeline is bounded by the LLM's understanding of the specification and the domain. Second, the evaluation may not capture all relevant quality dimensions (e.g., robustness, fairness, deployment efficiency). Third, most current systems automate single projects rather than accumulating cross-run experience. Fourth, the specification itself may be ambiguous or incomplete, and the system must develop a robust interpretation mechanism that can handle underspecified goals. The gap between single-run automation and persistent evolution is precisely where self-evolution systems can differentiate.
 
 \subsubsection{The Search Loop}\label{sec:loop-search}
 
@@ -259,13 +304,13 @@ s_{t+1} = \mathrm{LLM}(H_t, \text{strategy})
 where the LLM proposes new candidates informed by the history of prior attempts and their evaluations. The key design choices are the representation of $\mathcal{S}$, the exploration--exploitation strategy, and the diversity mechanism.
 
 \paragraph{Representative Systems.}
-OPRO~\citep{opro2023} (Optimization by PROmpting) treats natural language prompts as the optimization variable: given a history of prompt--score pairs, the LLM proposes new prompts that achieve higher scores on the target task. EvoPrompting~\citep{evoprompting2023} uses LLMs as evolutionary operators for code-level neural architecture search, evaluating candidate GNN architectures on algorithmic reasoning tasks. LLMatic~\citep{llmatic2023} combines LLM-guided search with quality-diversity optimization, maintaining diverse high-performing architectures rather than converging to a single optimum. AlphaEvolve~\citep{alphaevolve2025} employs a dual-model search strategy: Gemini Flash provides breadth through rapid exploration of many candidates, while Gemini Pro provides depth through focused refinement of promising solutions.
+OPRO~\citep{opro2023} (Optimization by PROmpting) treats natural language prompts as the optimization variable: given a history of prompt--score pairs, the LLM proposes new prompts that achieve higher scores on the target task. The key insight is that the LLM's ability to recognize patterns in score histories enables optimization without gradients. EvoPrompting~\citep{evoprompting2023} uses LLMs as evolutionary operators for code-level neural architecture search, evaluating candidate GNN architectures on algorithmic reasoning tasks and evolving better architectures through iterative mutation and selection. LLMatic~\citep{llmatic2023} combines LLM-guided search with quality-diversity optimization, maintaining diverse high-performing architectures rather than converging to a single optimum---an important design choice that prevents premature convergence. AlphaEvolve~\citep{alphaevolve2025} employs a dual-model search strategy: Gemini Flash provides breadth through rapid exploration of many candidates, while Gemini Pro provides depth through focused refinement of promising solutions.
 
 \paragraph{Benchmark Evidence.}
-OPRO demonstrates improvements on GSM8K and BIG-Bench Hard through automatic prompt optimization. EvoPrompting achieves competitive GNN architectures on algorithmic reasoning benchmarks. AlphaEvolve's search discovers the first improvement over Strassen's matrix multiplication algorithm in 56 years---achieving 48 scalar multiplications for $4\times4$ complex matrix multiplication---and recovers 0.7\% of worldwide Google compute through improved data center scheduling.
+OPRO demonstrates improvements on GSM8K and BIG-Bench Hard through automatic prompt optimization, outperforming human-designed prompts. EvoPrompting achieves competitive GNN architectures on algorithmic reasoning benchmarks. LLMatic produces diverse high-performing network architectures. AlphaEvolve's search discovers the first improvement over Strassen's matrix multiplication algorithm in 56 years---achieving 48 scalar multiplications for $4\times4$ complex matrix multiplication---and recovers 0.7\% of worldwide Google compute through improved data center scheduling (Borg).
 
 \paragraph{Limitations.}
-Search effectiveness is bounded by the LLM's ability to propose meaningful variations. The search may inherit distributional biases from the LLM's training data. Computational cost scales with the number of evaluations, which can be prohibitive for expensive benchmark tasks. Quality-diversity methods require careful tuning of behavioral descriptors and niche boundaries.
+Search effectiveness is bounded by the LLM's ability to propose meaningful variations. The search may inherit distributional biases from the LLM's training data. Computational cost scales with the number of evaluations, which can be prohibitive for expensive benchmark tasks. Quality-diversity methods require careful tuning of behavioral descriptors and niche boundaries. The exploration--exploitation trade-off remains a fundamental challenge: too much exploration wastes evaluations on unpromising regions, while too much exploitation risks missing superior solutions in unexplored areas.
 
 \subsubsection{The Evaluator Loop}\label{sec:loop-evaluator}
 
@@ -278,16 +323,18 @@ Let $G$ denote a generator and $V_e$ an evaluator. The evaluator loop co-optimiz
 \max_G \; &V_e(G(x), x) \\
 \max_{V_e} \; &\text{alignment}(V_e, V^*_{\text{true}})
 \end{align}
-where $V^*_{\text{true}}$ represents the (typically inaccessible) true evaluation function. The second optimization ensures that the evaluator remains aligned with genuine quality rather than exploitable proxies.
+where $V^*_{\text{true}}$ represents the (typically inaccessible) true evaluation function. The second optimization ensures that the evaluator remains aligned with genuine quality rather than exploitable proxies. The \emph{fidelity gap}---the difference between $V_e$ and $V^*_{\text{true}}$---is the key parameter governing the effectiveness of the evaluator loop.
 
 \paragraph{Representative Systems.}
 FunSearch~\citep{funsearch2024} (published in Nature) pairs an LLM with a programmatic evaluator to evolve mathematical functions, demonstrating that LLM-generated programs can surpass human-designed algorithms when coupled with rigorous automated verification. ReVeal~\citep{reveal2026} explicitly co-optimizes self-verification alongside code generation using TAPO (Turn-level Adaptive Policy Optimization), achieving per-turn credit assignment and enabling 20+ turns of self-evolution at inference despite training on only 3 turns. SelfEvolve~\citep{selfevolve2023} generates its own API documentation (self-generated knowledge) and uses sandbox execution with error traceback feedback for iterative self-debugging. Self-Debug~\citep{selfdebug2023} uses execution results, test outcomes, and natural language debugging information as first-class self-repair signals.
 
+ReVeal's TAPO mechanism deserves special attention as it addresses a fundamental challenge in multi-turn self-evolution: credit assignment. In a trajectory of 20+ turns, which specific turns contributed to the final outcome? Standard policy gradient methods assign credit uniformly or based on temporal position; TAPO estimates per-turn advantages, enabling the system to learn which types of self-verification actions are most valuable. This represents an important methodological advance over simpler approaches that treat all turns equally.
+
 \paragraph{Benchmark Evidence.}
-FunSearch produces the first new construction for the cap set problem that surpasses established mathematical bounds, and discovers new sorting algorithms. ReVeal outperforms DeepSeek-R1-Zero-Qwen-32B on LiveCodeBench. SelfEvolve improves HumanEval pass@1 from 74.39\% to 85.98\%, DS-1000 from 49.4 to 57.2 (+15.8\% relative), and TransCoder accuracy from 88.3\% to 90.4\%.
+FunSearch produces the first new construction for the cap set problem that surpasses established mathematical bounds, and discovers new sorting algorithms surpassing known constructions. ReVeal outperforms DeepSeek-R1-Zero-Qwen-32B on LiveCodeBench. SelfEvolve improves HumanEval pass@1 from 74.39\% to 85.98\%, DS-1000 from 49.4 to 57.2 (+15.8\% relative), and TransCoder accuracy from 88.3\% to 90.4\%. Self-Debug demonstrates significant improvements on code generation benchmarks by enabling models to diagnose and fix their own errors.
 
 \paragraph{Limitations.}
-The evaluator loop's fundamental challenge is the alignment between the proxy evaluator and true quality. If the evaluator has gaps, evolution will exploit them. If the evaluator is an LLM judge, it may exhibit length bias, verbosity preference, or positional effects. If the evaluator is a unit test suite, evolution may produce solutions that pass tests without being genuinely correct. ReVeal's approach of co-evolving the verifier represents a promising direction but adds training complexity. AlphaEvolve's reliance on ``well-defined evaluation functions'' limits its applicability to domains with automated verifiers.
+The evaluator loop's fundamental challenge is the alignment between the proxy evaluator and true quality. If the evaluator has gaps, evolution will exploit them. If the evaluator is an LLM judge, it may exhibit length bias, verbosity preference, or positional effects~\citep{zheng2023judging}. If the evaluator is a unit test suite, evolution may produce solutions that pass tests without being genuinely correct. ReVeal's approach of co-evolving the verifier represents a promising direction but adds training complexity. AlphaEvolve's reliance on ``well-defined evaluation functions'' limits its applicability to domains with automated verifiers, excluding many real-world tasks where evaluation is inherently subjective or expensive.
 
 \subsubsection{The Reflection Loop}\label{sec:loop-reflection}
 
@@ -305,13 +352,23 @@ M_e &= M_{e-1} \cup \{f_e\}
 where $M_a$, $M_e$, $M_r$ are the actor, evaluator, and self-reflection models respectively, and $M_{1:e}$ is the growing memory of past reflections. The reflection $f_e$ functions as a ``verbal gradient''---a natural language description of what went wrong and how to correct it.
 
 \paragraph{Representative Systems.}
-Reflexion~\citep{reflexion2023} pioneered verbal reinforcement learning: the agent stores linguistic feedback describing what it attempted, why it failed, and what to do differently. This memory buffer acts as a persistent context that guides future behavior without any weight updates. Self-Refine~\citep{selfrefine2023} performs iterative generate--critique--refine cycles within a single inference session: the same model generates an output, critiques it against a rubric, and refines it, requiring no external feedback or training. STaR (Self-Taught Reasoner)~\citep{star2022} generates rationales, filters correct ones, and fine-tunes on successful reasoning chains, bootstrapping reasoning capability from the model's own outputs. Agent Symbolic Learning~\citep{agentsymbolic2024} treats agents as symbolic networks where learnable ``weights'' are prompts, tools, and pipeline compositions, performing backpropagation and gradient descent in natural language space through ``language gradients'' that describe how to improve each component.
+Reflexion~\citep{reflexion2023} pioneered verbal reinforcement learning: the agent stores linguistic feedback describing what it attempted, why it failed, and what to do differently. This memory buffer acts as a persistent context that guides future behavior without any weight updates. The three-model architecture (actor, evaluator, self-reflection) cleanly separates the roles of execution, assessment, and introspection.
+
+Self-Refine~\citep{selfrefine2023} performs iterative generate--critique--refine cycles within a single inference session: the same model generates an output, critiques it against a rubric, and refines it, requiring no external feedback or training. The key insight is that the critique step provides structured feedback that enables more targeted refinement than simple regeneration. The rubric-based approach ensures that critiques are task-relevant and actionable.
+
+STaR (Self-Taught Reasoner)~\citep{star2022} generates rationales, filters correct ones, and fine-tunes on successful reasoning chains, bootstrapping reasoning capability from the model's own outputs. Quiet-STaR extends this by generating internal ``thoughts'' at every token, learning which thoughts improve prediction accuracy through REINFORCE-style updates.
+
+Agent Symbolic Learning~\citep{agentsymbolic2024} treats agents as symbolic networks where learnable ``weights'' are prompts, tools, and pipeline compositions, performing backpropagation and gradient descent in natural language space through ``language gradients'' $\nabla_{\text{lang}}$ that describe how to improve each component. The system propagates improvement signals backward through the agent's computational graph, mirroring the structure of neural network backpropagation but operating in natural language space.
 
 \paragraph{Benchmark Evidence.}
-Reflexion achieves 91.0\% pass@1 on HumanEval using GPT-3.5, surpassing GPT-4's 80.1\% zero-shot performance, and improves AlfWorld success from 75\% to 97\%. Self-Refine delivers approximately 20\% average improvement across 7 diverse tasks: +28\% on code optimization, +11pp on math reasoning (56\% to 67\%), +16pp on dialogue response quality, and +13pp on constrained generation compliance. Agent Symbolic Learning improves MATH accuracy from 56.0\% to 60.7\% (GPT-4 backbone), HotPotQA F1 from 36.2 to 39.1, and HumanEval pass@1 from 68.3\% to 73.2\%.
+Reflexion achieves 91.0\% pass@1 on HumanEval using GPT-3.5, surpassing GPT-4's 80.1\% zero-shot performance---a striking result demonstrating that lightweight verbal feedback can outperform significantly larger models. Reflexion also improves AlfWorld success from 75\% to 97\% and shows significant improvements on MBPP, APPS, and WebShop.
+
+Self-Refine delivers approximately 20\% average improvement across 7 diverse tasks: +28\% on code optimization, +11 percentage points on math reasoning (56\% to 67\%), +12pp on sentiment reversal (74\% to 86\%), +16pp on dialogue response quality (52\% to 68\%), and +13pp on constrained generation compliance (65\% to 78\%).
+
+Agent Symbolic Learning improves MATH accuracy from 56.0\% to 60.7\% (GPT-4 backbone, compared to DSPy which drops to 48.4\%), HotPotQA F1 from 36.2 to 39.1 (EM from 22.8 to 25.6), HumanEval pass@1 from 68.3\% to 73.2\%, and software development executability from 1.6/4.0 to 3.8/4.0.
 
 \paragraph{Limitations.}
-The reflection loop's effectiveness is bounded by the quality of the base model's self-critique capability. Self-Refine may get trapped in local optima where the model's own critique cannot identify fundamental flaws. Reflexion's memory buffer grows unbounded, eventually encountering context window limits. Agent Symbolic Learning requires GPT-4-level backbones for gradient computation. No existing system provides convergence guarantees for language-space optimization. The ``verbal gradient'' may not faithfully represent the true improvement direction, particularly for complex multi-component systems.
+The reflection loop's effectiveness is bounded by the quality of the base model's self-critique capability. Self-Refine may get trapped in local optima where the model's own critique cannot identify fundamental flaws---the ``blind spot'' problem. Reflexion's memory buffer grows unbounded, eventually encountering context window limits that require truncation or summarization strategies. Agent Symbolic Learning requires GPT-4-level backbones for gradient computation, limiting its accessibility. No existing system provides convergence guarantees for language-space optimization. The ``verbal gradient'' may not faithfully represent the true improvement direction, particularly for complex multi-component systems where the interaction effects between components are difficult to verbalize.
 
 \subsubsection{The Population Loop}\label{sec:loop-population}
 
@@ -328,13 +385,25 @@ P_{t+1} &= \text{Select}(P_t \cup \{p'\}, f_{1:N} \cup \{f'\}, D)
 where $D$ enforces diversity (e.g., MAP-Elites behavioral niches), and the variation operator is an LLM rather than random mutation. The key distinguishing features are the explicit maintenance of multiple candidates and the use of diversity-preserving selection.
 
 \paragraph{Representative Systems.}
-AlphaEvolve~\citep{alphaevolve2025} employs MAP-Elites quality-diversity search, maintaining a map of high-performing solutions across behavioral dimensions (niches) and keeping the best solution per niche. The dual-model architecture (Gemini Flash for breadth, Gemini Pro for depth) is specifically designed to balance exploration and exploitation across the population. DGM~\citep{dgm2025} maintains an open-ended, ever-growing archive of agent variants with diversity-biased sampling, allowing the archive to serve as a repository of evolutionary stepping stones rather than converging to a single optimum. SPIN~\citep{spin2024} implements self-play fine-tuning, where a model trains against its own previous iteration---the ``population'' consists of the current and previous model versions. Absolute Zero~\citep{absolutezero2025} creates a self-play curriculum where a single model simultaneously proposes tasks and solves them, with the code executor providing verification.
+AlphaEvolve~\citep{alphaevolve2025} employs MAP-Elites quality-diversity search, maintaining a map of high-performing solutions across behavioral dimensions (niches) and keeping the best solution per niche. The dual-model architecture (Gemini Flash for breadth, Gemini Pro for depth) is specifically designed to balance exploration and exploitation across the population. This approach extends FunSearch from single-function discovery to entire codebase evolution.
+
+DGM~\citep{dgm2025} maintains an open-ended, ever-growing archive of agent variants with diversity-biased sampling, allowing the archive to serve as a repository of evolutionary stepping stones rather than converging to a single optimum. The open-ended archive design is a deliberate choice to avoid premature convergence: by preserving diverse agents, DGM ensures that promising evolutionary paths are not lost.
+
+SPIN~\citep{spin2024} implements self-play fine-tuning, where a model trains against its own previous iteration---the ``population'' consists of the current and previous model versions. The training objective ensures that the new model outperforms the old one on self-generated data, providing a natural curriculum of increasing difficulty.
+
+Absolute Zero~\citep{absolutezero2025} creates a self-play curriculum where a single model simultaneously proposes tasks and solves them, with the code executor providing verification. Both the task proposer and the solver are updated via reinforcement learning (PPO/GRPO). This dual-role self-play generates an effective curriculum without any external data, and demonstrates emergent cross-domain transfer: code self-play training produces mathematical reasoning capabilities.
 
 \paragraph{Benchmark Evidence.}
-AlphaEvolve achieves a historic result on matrix multiplication (48 multiplications for $4\times4$ complex matrices, first improvement over Strassen in 56 years), solves 75\% of 50+ mathematical competition problems at or above SOTA, recovers 0.7\% of worldwide Google compute, and achieves 23\% speedup on FlashAttention kernel tiling. DGM improves SWE-bench Verified from 20.0\% to 50.0\% and Polyglot from 14.2\% to 30.7\%, discovering novel agent structures not imagined by human designers. SPIN outperforms DPO and other RLHF methods on multiple benchmarks by training models through self-play. Absolute Zero achieves SOTA at the 7B parameter scale on coding benchmarks with zero external training data, and demonstrates emergent mathematical reasoning from code self-play alone.
+AlphaEvolve achieves historic results: 48 scalar multiplications for $4\times4$ complex matrix multiplication (first improvement over Strassen in 56 years), SOTA on 75\% of 50+ mathematical competition problems, recovery of 0.7\% of worldwide Google compute through improved data center scheduling, 23\% speedup on FlashAttention kernel tiling, and 32\% speedup on attention training.
+
+DGM improves SWE-bench Verified from 20.0\% to 50.0\% (a 2.5$\times$ improvement) and Polyglot multi-language coding from 14.2\% to 30.7\% (a 2.2$\times$ improvement), discovering novel agent structures not imagined by human designers. Cross-domain transfer is confirmed: agents evolved on one task type perform well on others.
+
+SPIN outperforms DPO and other RLHF methods on multiple benchmarks by training models through self-play, demonstrating that self-play can be more effective than learning from fixed preference datasets.
+
+Absolute Zero achieves SOTA at the 7B parameter scale on coding benchmarks (HumanEval+, MBPP+) with zero external training data, and demonstrates emergent mathematical reasoning from code self-play alone---math reasoning capabilities emerged despite never training on math problems.
 
 \paragraph{Limitations.}
-Population-based methods are computationally expensive, requiring multiple evaluations per generation. Archive management---how to prune, index, and retrieve from growing populations---remains an unsolved engineering challenge. MAP-Elites requires domain-specific behavioral descriptors that may not generalize. Open-ended archives may accumulate noise and redundancy. The tension between exploration (preserving diversity) and exploitation (refining the best) is a perennial challenge with no general solution.
+Population-based methods are computationally expensive, requiring multiple evaluations per generation. Archive management---how to prune, index, and retrieve from growing populations---remains an unsolved engineering challenge. MAP-Elites requires domain-specific behavioral descriptors that may not generalize across domains. Open-ended archives may accumulate noise, redundancy, and obsolete variants. The tension between exploration (preserving diversity) and exploitation (refining the best) is a perennial challenge with no general solution. RAGEN's discovery of the ``Echo Trap''---where multi-turn RL agents learn to repeat previous outputs rather than genuinely reasoning---highlights a specific failure mode of population-based training.
 
 % ====================================================================
 % Figure 2.2: Classical Evolution vs. Agent Evolution Comparison
@@ -427,25 +496,31 @@ Software Engineering & Sandbox, CI, benchmark retesting, logging, and safety pol
 
 \subsection{Cross-Loop Interactions and Composite Systems}\label{sec:theory-cross-loop}
 
-The Five Evolution Loops are not isolated mechanisms---real systems almost invariably combine multiple loops. Understanding these interactions is essential for designing effective self-evolution architectures and for analyzing the behavior of existing systems. We identify four primary patterns of cross-loop interaction.
+The Five Evolution Loops are not isolated mechanisms---real systems almost invariably combine multiple loops. Understanding these interactions is essential for designing effective self-evolution architectures and for analyzing the behavior of existing systems. We identify four primary patterns of cross-loop interaction and analyze how representative systems instantiate them.
 
 \subsubsection{Search + Evaluator: Verified Search}
 
-The combination of search and evaluator loops is perhaps the most natural and powerful pairing. The search loop proposes candidates, and the evaluator loop provides rigorous verification. FunSearch~\citep{funsearch2024} exemplifies this pattern: an LLM generates candidate mathematical functions, and a deterministic evaluator verifies their correctness and measures their quality. AlphaEvolve~\citep{alphaevolve2025} extends this pattern with a population-level component: Gemini Flash proposes many candidate solutions (search), a programmatic evaluator scores them (evaluator), and MAP-Elites maintains diversity across the solution space (population). The resulting three-loop combination achieves results that no single loop could produce in isolation.
+The combination of search and evaluator loops is perhaps the most natural and powerful pairing. The search loop proposes candidates, and the evaluator loop provides rigorous verification. FunSearch~\citep{funsearch2024} exemplifies this pattern: an LLM generates candidate mathematical functions, and a deterministic evaluator verifies their correctness and measures their quality. The tight coupling between generation and verification ensures that the search explores only verifiably correct solutions, dramatically reducing the search space while guaranteeing the validity of discoveries.
+
+AlphaEvolve~\citep{alphaevolve2025} extends this pattern with a population-level component: Gemini Flash proposes many candidate solutions (search), a programmatic evaluator scores them (evaluator), and MAP-Elites maintains diversity across the solution space (population). The resulting three-loop combination achieves results that no single loop could produce in isolation: mathematical discoveries that eluded human mathematicians for decades, and practical improvements to Google's infrastructure.
 
 The critical design parameter in search--evaluator combinations is the \emph{fidelity gap}: the difference between the proxy evaluator $V$ and the true quality measure $V^*$. When the fidelity gap is small (as in formal mathematical verification), evolution can proceed confidently. When the gap is large (as in open-ended creative tasks), the system risks optimizing for the proxy rather than true quality. ReVeal~\citep{reveal2026} addresses this by co-evolving the verifier, effectively reducing the fidelity gap over time.
+
+OPRO~\citep{opro2023} represents a simpler instantiation: the LLM searches over prompts, and the task-specific evaluator (e.g., accuracy on GSM8K) provides the selection signal. The simplicity of this combination---no training, no population, no reflection---makes it a useful baseline for measuring the marginal benefit of adding additional loops.
 
 \subsubsection{Reflection + Evaluator: Self-Correcting Agents}
 
 The reflection loop provides the ``why did I fail?'' signal, while the evaluator loop provides the ``did I succeed?'' signal. Reflexion~\citep{reflexion2023} combines these two loops: a binary evaluator determines task success, and a self-reflection model generates natural language explanations of failure that are stored in memory for future attempts. The combination is remarkably effective: GPT-3.5 with Reflexion achieves 91\% on HumanEval, surpassing GPT-4's 80\% zero-shot performance. This demonstrates that even a simple binary evaluator, when coupled with rich reflective feedback, can drive substantial improvement.
 
-SelfEvolve~\citep{selfevolve2023} adds a specification-to-execution component: the system generates its own API documentation (specification), uses sandbox execution as the evaluator, and feeds error tracebacks back as reflective feedback. The three-loop combination achieves significant improvements on code generation benchmarks.
+SelfEvolve~\citep{selfevolve2023} adds a specification-to-execution component: the system generates its own API documentation (specification), uses sandbox execution as the evaluator, and feeds error tracebacks back as reflective feedback. The three-loop combination achieves significant improvements on code generation benchmarks: HumanEval pass@1 from 74.39\% to 85.98\%, DS-1000 from 49.4 to 57.2.
+
+RISE~\citep{rise2024} extends the reflection loop into the training regime: rather than relying on inference-time reflection alone, RISE uses multi-turn RL fine-tuning to make self-correction a learned behavior. The result is a system that learns difficulty-adaptive introspection budgets---spending more reflection steps on harder problems---a capability that inference-time-only reflection cannot achieve. RISE improves GSM8K accuracy from approximately 14\% to 24\% with Llama2-7B and from 38\% to 46\% with Mistral-7B.
 
 \subsubsection{Population + Reflection: Evolutionary Experience Accumulation}
 
-DGM~\citep{dgm2025} combines population-level diversity with reflective self-modification. The population loop maintains an open-ended archive of agent variants, while the self-modification mechanism (driven by the agent's own LLM-based reflection on its failures) serves as the variation operator. The population's diversity ensures that self-modification does not converge prematurely, while the reflective variation operator ensures that modifications are semantically meaningful rather than random.
+DGM~\citep{dgm2025} combines population-level diversity with reflective self-modification. The population loop maintains an open-ended archive of agent variants, while the self-modification mechanism (driven by the agent's own LLM-based reflection on its failures) serves as the variation operator. The population's diversity ensures that self-modification does not converge prematurely, while the reflective variation operator ensures that modifications are semantically meaningful rather than random. This combination produces a 2.5$\times$ improvement on SWE-bench (20.0\% to 50.0\%) and discovers novel agent structures not imagined by human designers.
 
-Absolute Zero~\citep{absolutezero2025} creates a different population-level dynamic: the ``population'' consists of the model's own behavioral variants across a self-generated task curriculum. The model simultaneously proposes tasks (search), solves them (specification-to-execution), and verifies solutions (evaluator), with self-play providing the population-level competitive pressure. The emergent mathematical reasoning from code self-play alone suggests that population-level dynamics can produce qualitatively novel capabilities.
+Absolute Zero~\citep{absolutezero2025} creates a different population-level dynamic: the ``population'' consists of the model's own behavioral variants across a self-generated task curriculum. The model simultaneously proposes tasks (search), solves them (specification-to-execution), and verifies solutions (evaluator), with self-play providing the population-level competitive pressure. The emergent mathematical reasoning from code self-play alone suggests that population-level dynamics can produce qualitatively novel capabilities---the system discovers mathematical reasoning without ever training on mathematical data.
 
 \subsubsection{All Five Loops: The Self-Evolution Thesis}
 
@@ -453,48 +528,277 @@ The central thesis of this survey is that genuine self-evolution requires the in
 
 We hypothesize that the five loops form a natural hierarchy: the specification-to-execution loop provides the task grounding; the search loop provides the exploration mechanism; the evaluator loop provides the selection pressure; the reflection loop provides the learning signal; and the population loop provides the diversity and open-endedness. A complete self-evolution system would integrate all five, with each loop reinforcing the others in a virtuous cycle of generation, evaluation, reflection, and discovery.
 
+The ``missing loop'' analysis provides a diagnostic tool for understanding the limitations of existing systems. Self-Refine lacks a population loop (no diversity preservation), an evaluator loop (self-critique is unreliable), and a specification loop (no task grounding beyond the input). OPRO lacks a reflection loop (no learning from failures), a population loop (no diversity), and a specification loop (optimizes existing prompts, not pipeline structure). AlphaEvolve lacks only a reflection loop (no explicit failure-to-memory mechanism), and its mathematical discoveries suggest that the other four loops are sufficient for program synthesis tasks with clear evaluators.
+
+\subsubsection{Detailed Case Study: AlphaEvolve as Multi-Loop Integration}
+
+AlphaEvolve~\citep{alphaevolve2025} provides the most instructive example of multi-loop integration in the current literature. Its architecture combines three loops with exceptional effectiveness:
+
+\emph{Search loop:} The dual-model architecture implements a sophisticated search strategy. Gemini Flash generates many candidate solutions rapidly (breadth), while Gemini Pro deeply refines the most promising candidates (depth). This dual-model approach addresses a fundamental trade-off in evolutionary search: the tension between exploring many candidates and thoroughly developing each one. The search operates over program code, where candidates are complete algorithmic implementations rather than isolated functions.
+
+\emph{Evaluator loop:} Programmatic evaluators provide deterministic, reproducible fitness scores. For matrix multiplication, the evaluator verifies correctness and counts scalar multiplications. For data center scheduling, the evaluator simulates the scheduling algorithm on real workload traces. For mathematical problems, the evaluator checks proofs and computes solution quality. The key property is \emph{reliability}: the evaluator provides the same score for the same candidate every time, eliminating the noise that plagues LLM-judge-based evaluation.
+
+\emph{Population loop:} MAP-Elites quality-diversity search maintains a structured archive organized by behavioral descriptors (e.g., solution characteristics, performance profiles across problem subclasses). This ensures that the archive preserves diverse high-performing solutions rather than converging to a single optimum. The behavioral descriptors are domain-specific and must be designed by domain experts, but the MAP-Elites framework is general and can be adapted to different domains.
+
+The results of this three-loop integration are striking: 48 scalar multiplications for $4\times4$ complex matrix multiplication (breaking a 56-year record), SOTA on 75\% of 50+ mathematical competition problems, recovery of 0.7\% of worldwide Google compute, and 23\% speedup on FlashAttention kernel tiling. These results exceed what any single-loop system has achieved, providing empirical evidence for the hypothesis that loop integration produces super-additive benefits.
+
+The ``missing loop'' in AlphaEvolve is reflection: there is no explicit mechanism for converting failures into reusable knowledge that transfers across problem domains. Each problem domain operates somewhat independently, with the archive capturing solutions but not the reasoning behind why certain approaches succeeded or failed. Adding a reflection layer---for example, having the LLM generate ``discovery reports'' that describe why a solution works and what principles it illustrates---could potentially enable cross-domain transfer of solution strategies, further amplifying the system's capabilities.
+
+\subsubsection{Detailed Case Study: Absolute Zero as Self-Play Integration}
+
+Absolute Zero~\citep{absolutezero2025} represents a different paradigm of multi-loop integration, one that is remarkable for its parsimony: the system achieves state-of-the-art results with zero external training data, relying entirely on self-generated tasks and solutions.
+
+\emph{Specification loop:} The task proposer generates programming tasks of varying difficulty. The proposal is conditioned on the current curriculum state---which tasks have been solved, which have been attempted and failed, and what difficulty levels have been explored. The task must satisfy three criteria: solvability (the proposer can generate a correct solution), challenge (the task is not trivially easy for the current solver), and diversity (the task is not too similar to previously generated tasks).
+
+\emph{Search loop:} The solver searches for solutions to self-proposed tasks. The search is conditioned on the task specification and benefits from the model's existing coding capabilities (acquired during pre-training). The code executor provides immediate verification: a solution is correct if and only if it passes all test cases.
+
+\emph{Evaluator loop:} The code executor serves as a perfect evaluator---there is no fidelity gap between the proxy evaluator and the true quality measure (assuming the test cases are correct). This eliminates the evaluator alignment problem that plagues many other systems.
+
+\emph{Population loop:} The self-play dynamic creates a population-like structure: the model at training step $t$ competes against the model at step $t-1$. The proposer must generate tasks that are challenging for the current solver, creating an adversarial dynamic that drives capability growth. This is analogous to population-level competition in evolutionary systems, but with a single model playing both roles.
+
+The result of this four-loop integration is SOTA at the 7B parameter scale on coding benchmarks (HumanEval+, MBPP+) with zero external data. Perhaps more remarkably, the system demonstrates emergent mathematical reasoning: despite never training on mathematical problems, the code self-play training produces capabilities on GSM8K and MATH benchmarks. This suggests that the integration of specification, search, evaluation, and population loops can produce qualitatively novel capabilities that go beyond the sum of the individual loop contributions.
+
 \subsection{Theoretical Boundaries and Open Questions}\label{sec:theory-boundaries}
 
-Despite the rapid progress surveyed in this chapter, several fundamental theoretical limitations of agent self-evolution must be acknowledged.
+Despite the rapid progress surveyed in this chapter, several fundamental theoretical limitations of agent self-evolution must be acknowledged. These boundaries define the current frontier of the field and point toward the most impactful directions for future research.
 
 \subsubsection{Self-Reward Hallucination}
 
-Without an external or independent evaluator, self-rewarding systems may fall into what we term \emph{self-consistent hallucination}: the evaluator and generator share the same biases and blind spots, creating a closed loop of mutual affirmation. The model judges its own outputs as high-quality because they conform to its internal preferences, not because they are genuinely superior. This is the self-evolution analog of the ``echo chamber'' effect in social systems. RAGEN's identification of the ``Echo Trap''---where agents learn to repeat previous outputs rather than genuinely reasoning---represents a specific manifestation of this broader concern.
+Without an external or independent evaluator, self-rewarding systems may fall into what we term \emph{self-consistent hallucination}: the evaluator and generator share the same biases and blind spots, creating a closed loop of mutual affirmation. The model judges its own outputs as high-quality because they conform to its internal preferences, not because they are genuinely superior. This is the self-evolution analog of the ``echo chamber'' effect in social systems. RAGEN~\citep{ragen2025} identifies the ``Echo Trap''---where agents learn to repeat previous outputs rather than genuinely reasoning---as a specific manifestation of this broader concern. The Echo Trap is particularly insidious because the agent's self-evaluation metrics may improve even as the quality of its reasoning degrades, creating an illusion of progress.
 
 \subsubsection{Benchmark Overfitting}
 
-If the task distribution is too narrow, the system may learn benchmark-specific hacks rather than generalizable improvements. A self-evolving code agent that optimizes purely for HumanEval pass rates may develop strategies that exploit the specific structure of HumanEval problems without improving its general coding ability. This concern is amplified by the observation that many self-evolution papers evaluate on a small set of standard benchmarks (HumanEval, GSM8K, MMLU, AlfWorld), raising questions about the breadth of demonstrated improvement.
+If the task distribution is too narrow, the system may learn benchmark-specific hacks rather than generalizable improvements. A self-evolving code agent that optimizes purely for HumanEval pass rates may develop strategies that exploit the specific structure of HumanEval problems (e.g., common function signatures, typical test patterns) without improving its general coding ability. This concern is amplified by the observation that many self-evolution papers evaluate on a small set of standard benchmarks (HumanEval, GSM8K, MMLU, AlfWorld), raising questions about the breadth of demonstrated improvement. The field would benefit from standardized out-of-distribution evaluation protocols that test for genuine capability transfer.
 
 \subsubsection{Unbounded Modification Scope}
 
-If the range of modifiable components is too broad and constraints are insufficient, the system may damage its own evaluation, logging, or safety boundaries. An agent that can modify its own test harness, for example, can achieve ``perfect'' scores by rewriting the tests rather than fixing the code. This is not a hypothetical concern: DGM's self-modifying agents and G\"odel Agent's runtime monkey patching both operate without formal safety proofs, relying instead on empirical validation and sandboxing.
+If the range of modifiable components is too broad and constraints are insufficient, the system may damage its own evaluation, logging, or safety boundaries. An agent that can modify its own test harness can achieve ``perfect'' scores by rewriting the tests rather than fixing the code. This is not a hypothetical concern: DGM's self-modifying agents and G\"odel Agent's runtime monkey patching both operate without formal safety proofs, relying instead on empirical validation and sandboxing. The design of robust safety architectures for self-modifying systems remains a critical open problem.
+
+The unbounded modification problem is closely related to the \emph{principal--agent problem} in economics: the system designer (principal) delegates optimization to the self-evolution mechanism (agent), but the agent's objectives (maximizing the evaluator score) may not perfectly align with the principal's true objectives. This misalignment can manifest in several ways: the system may optimize for easily measurable metrics at the expense of hard-to-measure qualities (robustness, fairness, interpretability), or it may discover strategies that are technically correct but practically undesirable (e.g., a code generator that produces technically correct but unmaintainable spaghetti code).
+
+The layered safety architecture described in Section~\ref{sec:theory-godel} provides a partial solution, but it requires careful design and ongoing monitoring. Formal verification of the immutable evaluation layer---proving that it cannot be modified by the agent---is an important direction for future work. Techniques from program verification and runtime monitoring may be applicable, but they must be adapted to the unique challenges of LLM-based systems where the ``code'' includes natural language components.
 
 \subsubsection{Archive Degradation}
 
-Long-running self-evolution systems face the challenge of archive management. If the archive lacks proper curation, long-term memory accumulates noise, conflicts, and outdated entries. Context window limitations constrain how much historical experience can be brought to bear on new problems. The tension between comprehensive archiving (preserving all potentially useful stepping stones) and efficient retrieval (finding the most relevant experience for the current task) remains unresolved.
+Long-running self-evolution systems face the challenge of archive management. If the archive lacks proper curation, long-term memory accumulates noise, conflicts, and outdated entries. Context window limitations constrain how much historical experience can be brought to bear on new problems. The tension between comprehensive archiving (preserving all potentially useful stepping stones) and efficient retrieval (finding the most relevant experience for the current task) remains unresolved. Effective archive management may require meta-learning over the archive itself---learning which types of experience are most valuable for which types of tasks.
+
+The archive management problem has several specific dimensions. \emph{Compression:} as the archive grows, it must be summarized or compressed to remain useful. The summaries may lose critical details, particularly for complex multi-step strategies where the order and context of operations matter. \emph{Indexing:} efficient retrieval requires indexing the archive by relevant features (task type, failure mode, solution strategy), but determining the right indexing features \emph{a priori} is difficult. \emph{Conflict resolution:} different entries in the archive may provide contradictory advice for similar situations, and the system must develop strategies for resolving these conflicts. \emph{Forgetting:} deliberate removal of obsolete or misleading entries is necessary to prevent the archive from degrading, but determining what to forget is as challenging as determining what to remember.
+
+DGM's approach of maintaining an ever-growing archive represents one extreme (never forget); MAP-Elites' approach of keeping only the best per niche represents another (selective retention). The optimal strategy likely lies somewhere between these extremes and may be task-dependent. Research on memory management in cognitive architectures (e.g., case-based reasoning, experience management) may provide useful analogies.
 
 \subsubsection{Base Model Capability Ceiling}
 
 Theoretical analysis suggests that agent self-evolution cannot create capabilities that are entirely absent from the base model's distribution. LLM-generated variations explore the neighborhood of the model's existing knowledge; they cannot reliably leap to genuinely novel paradigms. Self-evolution amplifies and recombines existing capabilities, but does not transcend the fundamental limitations of the underlying model. This ``capability ceiling'' hypothesis, while not formally proven, is consistent with the empirical observation that self-evolution systems built on stronger base models (GPT-4, Gemini) consistently outperform those built on weaker models, even when the evolution mechanisms are identical.
+
+The capability ceiling has important implications for the design of self-evolution systems. First, the choice of base model is the most consequential design decision---a stronger base model provides a higher ceiling and more room for self-evolution to produce meaningful improvements. Second, self-evolution is most effective when the base model has strong but underutilized capabilities---for example, a model that can reason about code but hasn't been specifically optimized for a particular benchmark. In this regime, self-evolution can unlock latent capabilities through targeted adaptation. Third, the capability ceiling suggests that there are diminishing returns to self-evolution: as the system approaches the base model's ceiling, further improvements become increasingly difficult to achieve.
+
+However, the capability ceiling hypothesis may be too pessimistic in certain respects. AlphaEvolve's discovery of the Strassen improvement---a result that eluded human mathematicians for 56 years---suggests that self-evolution can produce genuinely novel insights that go beyond simple recombination of existing knowledge. Absolute Zero's emergence of mathematical reasoning from code self-play suggests that the interaction of multiple self-evolution loops can produce qualitatively novel capabilities. These results hint at the possibility of ``creative self-evolution'': systems that don't merely optimize existing capabilities but generate genuinely new ones through the interaction of search, evaluation, and population dynamics.
 
 \subsubsection{Toward a Formal Theory of Self-Evolution}
 
 The theoretical analysis in this chapter points toward several directions for a more rigorous formal treatment of agent self-evolution:
 
 \begin{enumerate}
-\item \textbf{Convergence analysis:} Under what conditions does the self-evolution process converge to a fixed point? When does it diverge? What is the relationship between convergence and the expressiveness of the variation operator?
-\item \textbf{Sample complexity bounds:} How many evaluation rounds are needed to achieve a given level of improvement? How does this scale with the complexity of the search space and the quality of the evaluator?
-\item \textbf{Transfer guarantees:} Under what conditions do improvements on one task distribution transfer to another? Can we formalize the conditions under which ADAS-style cross-domain transfer occurs?
-\item \textbf{Safety invariants:} What formal properties must the evaluator and safety constraints satisfy to guarantee that self-modification cannot produce harmful behaviors? How can we formally verify that the immutable evaluation layer remains intact?
-\item \textbf{Open-endedness metrics:} How can we measure whether a self-evolution system is making genuinely novel discoveries versus recombining known strategies? What is the right formal definition of ``open-ended improvement'' in this context?
+\item \textbf{Convergence analysis:} Under what conditions does the self-evolution process converge to a fixed point? When does it diverge? What is the relationship between convergence and the expressiveness of the variation operator? Classical evolutionary computation provides convergence results for specific algorithm families; extending these to LLM-based variation operators is an open challenge.
+
+\item \textbf{Sample complexity bounds:} How many evaluation rounds are needed to achieve a given level of improvement? How does this scale with the complexity of the search space and the quality of the evaluator? Information-theoretic lower bounds from statistical learning theory may provide a starting point.
+
+\item \textbf{Transfer guarantees:} Under what conditions do improvements on one task distribution transfer to another? Can we formalize the conditions under which ADAS-style cross-domain transfer occurs? Domain adaptation theory may provide relevant tools.
+
+\item \textbf{Safety invariants:} What formal properties must the evaluator and safety constraints satisfy to guarantee that self-modification cannot produce harmful behaviors? How can we formally verify that the immutable evaluation layer remains intact? Runtime verification and formal methods may contribute here.
+
+\item \textbf{Open-endedness metrics:} How can we measure whether a self-evolution system is making genuinely novel discoveries versus recombining known strategies? What is the right formal definition of ``open-ended improvement'' in this context? Measures from open-ended evolution research~\citep{stanley2017open} may be adaptable.
 \end{enumerate}
 
 These questions remain largely open and represent fertile ground for theoretical contributions that could bridge the current gap between empirical demonstrations and formal understanding.
 
+\subsection{Historical Progression: From Self-Refine to Self-Evolve}\label{sec:theory-history}
+
+The field of agent self-evolution has undergone rapid evolution between 2022 and 2026, progressing through several distinct phases that map onto the Five Evolution Loops taxonomy.
+
+\subsubsection{Phase 1: Inference-Time Refinement (2022--2023)}
+
+The earliest phase was dominated by systems that improved agent behavior at inference time without modifying model weights. Self-Refine~\citep{selfrefine2023} (NeurIPS 2023) demonstrated that a single LLM could iteratively generate, critique, and refine its own outputs, achieving approximately 20\% average improvement across seven tasks. Reflexion~\citep{reflexion2023} (NeurIPS 2023) introduced verbal reinforcement learning, replacing expensive weight updates with natural language reflections stored in a growing memory buffer. STaR~\citep{star2022} (NeurIPS 2022) showed that models could bootstrap their own reasoning capabilities by filtering and fine-tuning on self-generated rationales.
+
+These systems primarily instantiated the \emph{reflection loop}, with limited involvement of the evaluator loop (binary task success as fitness). They established the empirical baseline that self-improvement is possible without training, but also revealed fundamental limitations: the ``blind spot'' problem (models cannot critique flaws they cannot perceive), context window limits on accumulated reflections, and the absence of convergence guarantees.
+
+\subsubsection{Phase 2: Training-Time Self-Improvement (2023--2024)}
+
+The second phase saw the emergence of systems that modified model weights through self-generated training signals. SPIN~\citep{spin2024} introduced self-play fine-tuning, where models train against their own previous iterations. Self-Rewarding Language Models~\citep{selfrewarding2024} proposed the ``LLM-as-a-Judge'' paradigm for generating reward signals, with iterative DPO fine-tuning. RISE~\citep{rise2024} (NeurIPS 2024 + ICML 2024) modeled self-improvement as a multi-turn MDP and used RL fine-tuning to make self-correction a learned behavior, demonstrating that trained self-correction significantly outperforms inference-time-only refinement.
+
+These systems extended the reflection loop into the training regime (modifying $\theta$ rather than only $m$) and introduced elements of the \emph{population loop} (self-play against previous model versions). The key insight was that inference-time refinement is bounded by the base model's capability, while training-time methods can push beyond this ceiling. However, they also introduced new challenges: reward hacking (the model learns to exploit the judge rather than genuinely improving), training instability, and the computational cost of RL fine-tuning.
+
+\subsubsection{Phase 3: Code-Level Self-Modification (2024--2025)}
+
+The third phase marked a qualitative shift: systems that modify their own code, architecture, or design rather than just prompts or weights. ADAS~\citep{adas2024} (ICLR 2025) introduced meta agent search, where an LLM writes Python code defining complete agent architectures. G\"odel Agent~\citep{godelagent2025} (ACL 2025) enabled runtime self-modification through LLM-driven monkey patching. DGM~\citep{dgm2025} combined Darwinian evolution with G\"odel machine self-reference, maintaining an open-ended archive of self-modifying agent variants.
+
+These systems primarily instantiated the \emph{specification-to-execution loop} and \emph{population loop}, with strong elements of self-reference. They demonstrated that self-evolution can discover novel agent structures that human designers did not conceive: DGM's SWE-bench improvement from 20.0\% to 50.0\% was achieved through agent architectures that no human had designed. The key risks were safety-related: self-modifying code can damage its own evaluation infrastructure, and the absence of formal guarantees means that improvements are validated only empirically.
+
+\subsubsection{Phase 4: Self-Play and Zero-Data Evolution (2025--2026)}
+
+The most recent phase features systems that generate their own training tasks and curricula. Absolute Zero~\citep{absolutezero2025} (NeurIPS 2025 award-winning) demonstrated that a single model can simultaneously propose tasks and solve them using only self-generated data, achieving SOTA at the 7B scale with zero external training data. AlphaEvolve~\citep{alphaevolve2025} (Google DeepMind 2025) combined MAP-Elites quality-diversity search with dual-model LLM exploration, achieving historic mathematical discoveries including the first improvement over Strassen's algorithm in 56 years.
+
+These systems integrate all five evolution loops: Absolute Zero combines specification (task proposal), search (curriculum generation), evaluation (code execution), reflection (RL updates), and population (self-play dynamics). AlphaEvolve combines search (dual-model exploration), evaluation (programmatic verifiers), and population (MAP-Elites archive). Their results suggest that the integration of multiple loops produces capabilities that transcend what any single loop can achieve.
+
+\subsubsection{Emerging Trends}
+
+Several trends are visible across these four phases. First, the \emph{objects of evolution} are expanding: from prompts and text (Phase 1) to model weights (Phase 2) to code and architectures (Phase 3) to entire task curricula and self-play environments (Phase 4). Second, the \emph{degree of autonomy} is increasing: early systems required human-specified tasks and evaluators; recent systems generate their own tasks, evaluators, and training signals. Third, the \emph{number of integrated loops} is growing: from single-loop systems (Phase 1) to multi-loop combinations (Phase 3--4). Fourth, the \emph{scale of impact} is expanding: from marginal improvements on benchmarks (Phase 1) to mathematical discoveries that elude human experts (Phase 4).
+
+\subsection{Cross-Domain Analysis: Five Research Traditions}\label{sec:theory-cross-domain}
+
+Self-evolution research draws from and contributes to five distinct but overlapping research traditions, each of which emphasizes different loops.
+
+\paragraph{AutoML + LLM} (Specification + Search loops). AutoML-GPT, AutoML-Agent, and related systems focus on automating the full ML pipeline from natural language specification to deployed model. Their strength lies in the specification-to-execution loop, but they typically lack persistent evolution across runs. The gap between single-run automation and cross-run self-improvement represents a significant opportunity for integration with the other loops.
+
+\paragraph{NAS + LLM} (Search + Evaluator loops). EvoPrompting, LLMatic, and NADER treat neural architecture as an evolvable genome, using LLMs as variation operators and benchmark performance as the evaluator. This tradition provides the clearest technical metaphor for self-evolution (architecture = genome, LLM = mutator, benchmark = fitness) and has produced some of the strongest empirical results. The quality-diversity perspective from this tradition (maintaining diverse high-performing architectures) has influenced population-level methods like AlphaEvolve.
+
+\paragraph{LLM Self-Improvement} (Reflection + Evaluator loops). Self-Refine, Reflexion, STaR, SPIN, and related systems focus on improving LLM outputs and reasoning capabilities. This tradition provides the brand language of self-evolution (experience acquisition $\to$ experience optimization $\to$ model update $\to$ evaluation) and has produced widely-adopted techniques like the generate--critique--refine pattern. Its limitation is the focus on single-model improvement rather than system-level evolution.
+
+\paragraph{Evolutionary Computation + LLM} (Search + Population loops). OPRO, FunSearch, ReEvo, LLaMEA, and AlphaEvolve use LLMs as evolutionary operators within population-based search frameworks. This tradition provides the most mature set of mechanisms (variation, selection, diversity maintenance, archive management) and has produced the most striking empirical results (Strassen improvement, mathematical discoveries). Its limitation is the requirement for well-defined evaluation functions.
+
+\paragraph{Agent Frameworks} (Specification + Population loops). AutoGPT, MetaGPT, AutoGen, CrewAI, and related frameworks provide the orchestration substrate for multi-agent systems. While these frameworks are not self-evolution systems per se, they provide essential infrastructure (role specialization, structured communication, workflow management) that self-evolution systems can build upon. The key gap is the absence of persistent evaluation, memory, and evolution layers in current frameworks.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Cross-domain analysis mapping five research traditions to their primary and secondary evolution loops, representative systems, and key differentiators.}
+\label{tab:ch2-cross-domain}
+\begin{tabular}{p{0.15\textwidth}p{0.18\textwidth}p{0.15\textwidth}p{0.38\textwidth}}
+\toprule
+Tradition & Primary Loops & Key Systems & Gap for Self-Evolution \\
+\midrule
+AutoML + LLM & Spec, Search & AutoML-GPT, AutoML-Agent & No cross-run memory; single-project focus \\
+NAS + LLM & Search, Evaluator & EvoPrompting, LLMatic, NADER & Domain-specific descriptors; limited to architecture \\
+LLM Self-Improvement & Reflection, Evaluator & Reflexion, Self-Refine, SPIN, STaR & Single-model focus; no system-level evolution \\
+Evolution + LLM & Search, Population & FunSearch, AlphaEvolve, OPRO, LLaMEA & Requires well-defined evaluators; limited domains \\
+Agent Frameworks & Spec, Population & AutoGPT, MetaGPT, AutoGen, CrewAI & No persistent evaluation or evolution layer \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The unifying insight is that self-evolution sits at the intersection of all five traditions, combining their respective strengths while addressing their individual gaps. A complete self-evolution system would inherit AutoML's specification-to-execution pipeline, NAS's quality-diversity search, LLM self-improvement's reflection mechanisms, evolutionary computation's population management, and agent frameworks' orchestration infrastructure.
+
+\subsubsection{Implications for Research Strategy}
+
+The cross-domain analysis suggests several strategic implications for researchers entering the field. First, the most impactful contributions are likely to come from the intersection of multiple traditions rather than from deepening any single tradition. For example, combining NAS's quality-diversity methods with LLM self-improvement's reflection mechanisms could yield systems that not only discover better architectures but also explain why they are better. Second, the most critical bottleneck across all traditions is the evaluator: improvements in evaluation methodology (more reliable automated verifiers, better LLM judges, stronger safety constraints) would benefit all five traditions simultaneously. Third, the field would benefit from standardized evaluation protocols that test for multiple levels of improvement simultaneously (local, robust, transfer, open-ended, safe), enabling fair comparison across systems from different traditions.
+
+The five traditions also differ in their relationship to production deployment. AutoML+LLM and Agent Frameworks are closest to production, with several systems already deployed in enterprise settings. NAS+LLM and LLM Self-Improvement occupy a middle ground, with demonstrated value on standard benchmarks but limited deployment experience. Evolutionary Computation+LLM produces the most striking research results but faces the greatest deployment challenges due to computational cost and domain-specificity requirements. Bridging the gap between research demonstrations and production deployment---particularly for the most capable systems like AlphaEvolve---is a critical challenge for the field.
+
+\subsection{Systematic Comparison of Self-Evolution Methods}\label{sec:theory-comparison}
+
+To synthesize the theoretical analysis, we present a comprehensive comparison of representative self-evolution systems mapped to the Five Evolution Loops taxonomy. This comparison illuminates which loops each system implements, what components of the agent state $z = (\theta, c, g, m, \mathcal{A})$ are modified, and what empirical results have been achieved.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Comprehensive comparison of self-evolution systems. Loops: S=Specification, Se=Search, E=Evaluator, R=Reflection, P=Population. State components modified: $\theta$=weights, $c$=context/prompts, $g$=code/architecture, $m$=memory, $\mathcal{A}$=archive.}
+\label{tab:ch2-system-comparison}
+\begin{tabular}{p{0.13\textwidth}p{0.08\textwidth}p{0.12\textwidth}p{0.08\textwidth}p{0.38\textwidth}}
+\toprule
+System & Active Loops & State Modified & Venue & Key Result \\
+\midrule
+Self-Refine & R & $c$ (transient) & NeurIPS 2023 & +20\% avg across 7 tasks \\
+Reflexion & R, E & $m$ & NeurIPS 2023 & 91\% HumanEval (GPT-3.5 $>$ GPT-4) \\
+STaR & R, E & $\theta$, $m$ & NeurIPS 2022 & Bootstrapped reasoning via rationales \\
+SPIN & P & $\theta$ & arXiv 2024 & Outperforms DPO via self-play \\
+Self-Rewarding & E, R & $\theta$ & arXiv 2024 & Iterative DPO with self-judgment \\
+ADAS & S, Se & $g$, $\mathcal{A}$ & ICLR 2025 & Exceeds human-designed agents; cross-transfer \\
+DGM & S, P & $g$, $\mathcal{A}$ & arXiv 2025 & SWE-bench 20$\to$50\%; novel structures \\
+G\"odel Agent & S, R & $g$ & ACL 2025 & +8--15\% HotPotQA; runtime patches \\
+AlphaEvolve & Se, E, P & $g$, $\mathcal{A}$ & DeepMind 2025 & Strassen improvement; 0.7\% global compute \\
+Absolute Zero & S, Se, E, P & $\theta$ & NeurIPS 2025 & SOTA 7B with zero external data \\
+RISE & R, E & $\theta$ & NeurIPS+ICML 2024 & GSM8K +10pp; learned self-correction \\
+RAGEN & R, E, P & $\theta$ & arXiv 2025 & StarPO-S $>$ PPO; Echo Trap identified \\
+Agent Symbolic & R & $c$, $g$ & NeurIPS 2024 & MATH 60.7\%; language gradients \\
+ReVeal & E, R & $\theta$ & ICLR 2026 & 20+ turn inference scaling \\
+SelfEvolve & S, E, R & $c$, $m$ & arXiv 2023 & HumanEval 74$\to$86\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Patterns in the Comparison}
+
+Several patterns emerge from this systematic comparison. First, no single system implements all five loops. The most complete systems---Absolute Zero, AlphaEvolve, and DGM---each activate three to four loops. This suggests that the integration of all five loops remains an aspirational goal rather than a current achievement.
+
+Second, the systems cluster into two groups based on what they modify. \emph{Weight-modifying systems} (SPIN, Self-Rewarding, RISE, RAGEN, Absolute Zero, ReVeal) update $\theta$ through various training mechanisms (DPO, PPO, GRPO, StarPO). These systems tend to produce more fundamental capability improvements but are computationally expensive and face training instabilities. \emph{Structure-modifying systems} (ADAS, DGM, G\"odel Agent, AlphaEvolve, Agent Symbolic Learning) update $g$ and $c$ through code changes and prompt modifications. These systems are more interpretable (the changes are human-readable code) and faster to iterate, but are bounded by the base model's capabilities.
+
+Third, there is a clear evolutionary trajectory in the field's sophistication. Early systems (Self-Refine, Reflexion) modified only the transient context $c$ or memory $m$ at inference time. Middle-period systems (SPIN, RISE, Self-Rewarding) introduced weight modification $\theta$ through self-generated training data. Recent systems (ADAS, DGM, AlphaEvolve, Absolute Zero) modify code $g$, maintain archives $\mathcal{A}$, and generate their own task curricula---representing a qualitative shift toward genuine self-evolution.
+
+Fourth, the \emph{evaluator loop} is present in the majority of systems (12 out of 15), confirming its role as the binding constraint on self-evolution quality. Systems with more reliable evaluators (AlphaEvolve with programmatic verification, FunSearch with mathematical proof) tend to produce more robust improvements than systems with softer evaluators (LLM judges, self-critique).
+
+\subsubsection{Design Principles for Self-Evolving Systems}
+
+Based on the theoretical analysis and systematic comparison, we distill several design principles that emerge from the most successful self-evolution systems:
+
+\begin{enumerate}
+\item \textbf{Layer your modification architecture.} The most successful systems (DGM, AlphaEvolve) maintain clear boundaries between modifiable components, immutable evaluators, sandboxed execution, and audit logs. Systems that fail to maintain these boundaries risk uncontrolled self-modification.
+
+\item \textbf{Invest in the evaluator first.} The quality of the evaluator determines the quality of evolution. AlphaEvolve's programmatic verifiers enable mathematical discoveries; ReVeal's co-evolved verifier enables multi-turn self-improvement. The evaluator is the foundation on which all other loops depend.
+
+\item \textbf{Preserve diversity, not just quality.} Quality-diversity methods (AlphaEvolve's MAP-Elites, DGM's open archive) consistently outperform pure quality-maximizing approaches. The preservation of diverse stepping stones enables the system to escape local optima and discover solutions that single-path optimization cannot reach.
+
+\item \textbf{Start cheap, escalate carefully.} The three-layer policy decomposition suggests a natural ordering: first optimize the experiential state $m$ (cheapest, fastest), then the behavioral interface $\varphi$ (moderate cost, significant impact), and finally the base parameters $\theta$ (most expensive, most fundamental). Systems that skip directly to $\theta$-modification may waste resources on improvements that could have been achieved more efficiently through $m$ or $\varphi$ updates.
+
+\item \textbf{Test for transfer, not just local improvement.} The distinction between local, robust, transfer, open-ended, and safe improvement is critical. Systems that evaluate only on the training distribution may overestimate their capabilities. ADAS's cross-domain and cross-model transfer tests represent a gold standard that more systems should adopt.
+\end{enumerate}
+
+These principles are not prescriptive rules but rather design heuristics that have emerged from empirical experience. As the field matures, they may be refined or superseded by theoretical results that provide formal guarantees rather than empirical guidelines.
+
+\subsection{Connections to Classical Learning Theory}\label{sec:theory-classical}
+
+The theoretical framework developed in this chapter can be connected to several classical results in learning theory, providing both grounding for our formalization and identifying where classical assumptions break down.
+
+\subsubsection{No-Free-Lunch for Self-Evolution}
+
+The no-free-lunch theorem~\citep{wolpert1997nofree} establishes that no optimization algorithm can outperform all others across all possible problems. This result applies directly to self-evolution: no single update operator $U$ can be universally optimal across all task distributions $P(\tau)$. However, the practical implications differ from classical optimization because self-evolution systems operate in a structured universe of problems where LLM priors provide strong inductive biases. The question is not whether a universal self-evolution algorithm exists (it does not), but whether the combination of LLM priors and evolutionary search can be effective across a \emph{practically relevant} class of problems.
+
+ADAS's cross-domain transfer results suggest that the answer may be partially affirmative: agent designs discovered on ARC transfer to GFootball, indicating that at least some structural principles of effective agents are domain-general. However, the extent of this transfer remains poorly characterized, and the no-free-lunch theorem cautions against extrapolating too broadly from a limited set of transfer experiments.
+
+\subsubsection{Regret Bounds and Online Learning}
+
+The online learning perspective on self-evolution connects to the classical theory of regret minimization. In the online learning formulation, the agent's performance at each round is compared to the best fixed policy in hindsight. The regret is:
+\begin{equation}
+\text{Regret}(T) = \sum_{t=1}^{T} \mathcal{L}(z_t, \tau_t) - \min_z \sum_{t=1}^{T} \mathcal{L}(z, \tau_t)
+\end{equation}
+
+Classical results establish that for convex losses, online gradient descent achieves $O(\sqrt{T})$ regret, and for strongly convex losses, $O(\log T)$ regret. However, the self-evolution setting violates several classical assumptions: the loss landscape is non-convex (because the agent state includes discrete components like code and prompts), the comparator is not fixed (because the task distribution may shift), and the feedback may be delayed or partial (because evaluators may not provide per-action signals). These violations mean that classical regret bounds do not directly apply, and new analytical frameworks are needed.
+
+\subsubsection{PAC Learning and Sample Complexity}
+
+The probably approximately correct (PAC) learning framework provides bounds on the number of samples needed to learn a hypothesis class with bounded error. For self-evolution, the relevant question is: how many evaluation rounds are needed to discover an agent that performs well with high probability?
+
+The answer depends on the complexity of the agent search space and the quality of the variation operator. If the variation operator proposes candidates from a hypothesis class with VC dimension $d$, then $O(d/\epsilon^2)$ evaluations suffice to find an agent with error at most $\epsilon$ above the best in class. However, the hypothesis class for self-evolving agents is extremely complex---it includes all possible Python programs that implement agents (for ADAS/DGM) or all possible prompts (for OPRO)---making classical VC-dimension analysis intractable.
+
+A more promising direction is to analyze the effective dimensionality of the search space after accounting for LLM priors. The LLM's training data effectively constrains the variation operator to propose semantically meaningful candidates, reducing the effective search space from all possible programs (or prompts) to the subset that the LLM is likely to generate. Characterizing this effective search space and its complexity is an open theoretical challenge.
+
+\subsubsection{Multi-Armed Bandits and Exploration--Exploitation}
+
+The exploration--exploitation trade-off in self-evolution can be analyzed through the lens of multi-armed bandit theory. Each candidate agent is an ``arm,'' and the evaluation provides a stochastic reward signal. The goal is to minimize cumulative regret while identifying the best agent.
+
+Classical bandit algorithms (UCB, Thompson Sampling) provide near-optimal exploration strategies with $O(\sqrt{KT \log K})$ regret for $K$ arms over $T$ rounds. However, the self-evolution setting differs from classical bandits in two important ways. First, the number of arms is not fixed but grows as the variation operator proposes new candidates. Second, the arms are not independent---similar agents tend to have similar performance, creating a structured bandit problem. Bayesian optimization and bandit algorithms over structured spaces (e.g., Gaussian process bandits) may provide more appropriate theoretical tools.
+
+\subsubsection{Evolutionary Dynamics and Replicator Equations}
+
+The population loop can be analyzed using tools from evolutionary game theory. The replicator equation describes how the frequency of each strategy (agent variant) in the population changes over time based on its relative fitness:
+\begin{equation}
+\frac{dx_i}{dt} = x_i \left( f_i - \bar{f} \right)
+\end{equation}
+where $x_i$ is the frequency of variant $i$, $f_i$ is its fitness, and $\bar{f}$ is the average population fitness. This equation predicts that fitter variants grow in frequency while less fit variants shrink, eventually converging to a fitness equilibrium.
+
+However, the LLM-based variation operator introduces a twist: new variants are not random mutations but semantically informed proposals. This means the ``mutation'' process is biased toward plausible improvements, effectively accelerating evolution in structured fitness landscapes but potentially trapping the population in local optima when the LLM's priors are misaligned with the true fitness landscape. The interplay between LLM-induced mutation bias and classical evolutionary dynamics is a rich area for theoretical investigation.
+
+\subsubsection{Markov Decision Processes and Self-Evolution}
+
+The self-evolution process can be formally modeled as a Markov Decision Process (MDP) where the state is the agent configuration $z_t$, the action is the choice of update operator parameters, the transition is determined by the update operator $U$, and the reward is the evaluation score $V$. Under this formulation, classical RL theory provides convergence guarantees for specific algorithm families (e.g., Q-learning converges for tabular MDPs; policy gradient methods converge to local optima for continuous MDPs).
+
+However, the self-evolution MDP violates several assumptions of classical RL theory. The state space is combinatorial (including code, prompts, and memory contents) rather than continuous or tabular. The transition dynamics are stochastic and partially observable (the LLM's internal state is not accessible). The reward function may be non-stationary (as the evaluator co-evolves with the agent in systems like ReVeal). And the action space includes discrete choices (which code to modify) and continuous parameters (how to modify it).
+
+Despite these challenges, the MDP formulation provides a useful conceptual framework. It highlights that self-evolution is fundamentally a sequential decision-making problem, and that the tools of RL theory---temporal credit assignment, exploration--exploitation trade-offs, and policy optimization---are directly applicable. The key theoretical challenge is extending these tools to handle the non-standard features of the self-evolution MDP, particularly the combinatorial state space and the LLM-mediated transition dynamics.
+
 \subsection{Chapter Summary}\label{sec:theory-summary}
 
-The theoretical landscape of agent self-evolution can be summarized as follows. Large language models provide semantic generation and reasoning capabilities. Evolutionary computation provides the framework for open-ended candidate search. Self-reference and G\"odel machines provide the aspiration and architectural patterns for recursive self-improvement. Meta-learning provides the machinery for cross-task experience reuse. Reinforcement learning and online learning provide feedback-driven update mechanisms. Software engineering contributes testing, sandboxing, version control, and rollback mechanisms.
+The theoretical landscape of agent self-evolution can be summarized as follows. Large language models provide semantic generation and reasoning capabilities that transform classical evolutionary computation from a blind search process into a directed, semantically informed exploration. Self-reference and G\"odel machines provide the aspiration and architectural patterns for recursive self-improvement, though current systems substitute empirical validation for formal proofs. Meta-learning provides the machinery for cross-task experience reuse, extending learning from weight space to the space of external cognitive artifacts. Reinforcement learning and online learning provide feedback-driven update mechanisms with a clean formal framework. Software engineering contributes testing, sandboxing, version control, and rollback mechanisms that are essential for safe self-modification.
 
-The Five Evolution Loops taxonomy---specification-to-execution, search, evaluator, reflection, and population---provides a principled decomposition of the diverse mechanisms found in the literature. Real systems combine these loops in characteristic patterns: search+evaluator for verified discovery, reflection+evaluator for self-correction, population+reflection for evolutionary experience accumulation, and the integration of all five loops for genuine open-ended self-evolution.
+The Five Evolution Loops taxonomy---specification-to-execution, search, evaluator, reflection, and population---provides a principled decomposition of the diverse mechanisms found in the literature. Each loop addresses a distinct functional role: specification provides task grounding, search provides exploration, evaluation provides selection pressure, reflection provides learning signals, and population provides diversity and open-endedness. Real systems combine these loops in characteristic patterns: search+evaluator for verified discovery (FunSearch, AlphaEvolve), reflection+evaluator for self-correction (Reflexion, SelfEvolve), population+reflection for evolutionary experience accumulation (DGM, Absolute Zero), and the integration of all five loops for genuine open-ended self-evolution.
 
-The field has not yet achieved a mature unified theory comparable to, say, the theory of supervised learning. However, a set of stable questions has emerged: what is the object of change, is the evaluator reliable, how should the archive be managed, can improvements transfer, and how can safety constraints be made tamper-proof. Chapter~\ref{ch:methods} will develop the methodological taxonomy within this theoretical framework, examining specific systems and their instantiation of the five evolution loops.
+The field has not yet achieved a mature unified theory comparable to the theory of supervised learning. However, a set of stable questions has emerged: what is the object of change, is the evaluator reliable, how should the archive be managed, can improvements transfer, and how can safety constraints be made tamper-proof. Chapter~\ref{ch:methods} will develop the methodological taxonomy within this theoretical framework, examining specific systems and their instantiation of the five evolution loops.
