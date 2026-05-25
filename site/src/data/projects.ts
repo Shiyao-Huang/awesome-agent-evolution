@@ -5960,6 +5960,111 @@ export const projects: Project[] = [
                   "mcp",
                   "locomo"
         ]
+    },
+    {
+            "name": "Agent Replay",
+            "repo": "agentreplay/agentreplay",
+            "url": "https://github.com/agentreplay/agentreplay",
+            "stars": 0,
+            "forks": "2",
+            "language": "Rust",
+            "license": "Unknown",
+            "report": "projects/196-agentreplay-local-agent-observability-memory.md",
+            "pattern": "local traces -> evals -> memory retrieval -> agent debugging",
+            "description": "Agent Replay is a local-first desktop evals, observability and AI memory stack for coding agents, with traces, embedded storage, vector memory, MCP/Claude Code integration and no cloud dependency.",
+            "stack": [
+                    "Rust",
+                    "Python",
+                    "JavaScript",
+                    "MCP"
+            ],
+            "category": "Local Agent Evals and Memory Observability",
+            "lastPushed": "2026-05-25T00:00:00Z",
+            "localPath": "raw-github/agentreplay_agentreplay.md",
+            "status": "candidate",
+            "tags": [
+                    "agent memory",
+                    "observability",
+                    "evals",
+                    "mcp",
+                    "local-first"
+            ]
+    },
+    {
+            "name": "Awesome Agent Memory Papers",
+            "repo": "yyyujintang/Awesome-Agent-Memory-Papers",
+            "url": "https://github.com/yyyujintang/Awesome-Agent-Memory-Papers",
+            "stars": 0,
+            "forks": "0",
+            "language": "Markdown",
+            "license": "Unknown",
+            "report": "projects/197-awesome-agent-memory-papers.md",
+            "pattern": "memory papers -> methods/benchmarks/surveys -> research map",
+            "description": "Awesome Agent Memory Papers is a curated paper index for agent memory methods, benchmarks and surveys, giving the corpus a paper-facing bridge for memory substrate and evaluation claims.",
+            "stack": [
+                    "Markdown"
+            ],
+            "category": "Agent Memory Paper and Benchmark Index",
+            "lastPushed": "2026-05-25T00:00:00Z",
+            "localPath": "raw-github/yyyujintang_awesome-agent-memory-papers.md",
+            "status": "candidate",
+            "tags": [
+                    "agent memory",
+                    "papers",
+                    "benchmark",
+                    "survey"
+            ]
+    },
+    {
+            "name": "Memvid",
+            "repo": "memvid/memvid",
+            "url": "https://github.com/memvid/memvid",
+            "stars": 12400,
+            "forks": "1000",
+            "language": "Python",
+            "license": "Unknown",
+            "report": "projects/198-memvid-single-file-agent-memory.md",
+            "pattern": "documents/conversations -> single portable memory file -> fast retrieval",
+            "description": "Memvid packages AI-agent memory into a portable single-file layer, positioning itself as memory without external vector database/server infrastructure and publishing LoCoMo benchmark claims.",
+            "stack": [
+                    "Python",
+                    "Rust",
+                    "Video index"
+            ],
+            "category": "Single-File Agent Memory Layer",
+            "lastPushed": "2026-05-25T00:00:00Z",
+            "localPath": "raw-github/memvid_memvid.md",
+            "status": "candidate",
+            "tags": [
+                    "agent memory",
+                    "portable memory",
+                    "LoCoMo",
+                    "local-first"
+            ]
+    },
+    {
+            "name": "Awesome Agent Memory",
+            "repo": "tfatykhov/awesome-agent-memory",
+            "url": "https://github.com/tfatykhov/awesome-agent-memory",
+            "stars": 0,
+            "forks": "0",
+            "language": "Markdown",
+            "license": "Unknown",
+            "report": "projects/199-tfatykhov-awesome-agent-memory.md",
+            "pattern": "memory systems -> papers/projects -> typed memory taxonomy",
+            "description": "Awesome Agent Memory is a curated research list on memory systems for LLM agents and a useful cross-check against the larger memory substrate and benchmark trend in this corpus.",
+            "stack": [
+                    "Markdown"
+            ],
+            "category": "Agent Memory Research Index",
+            "lastPushed": "2026-05-25T00:00:00Z",
+            "localPath": "raw-github/tfatykhov_awesome-agent-memory.md",
+            "status": "candidate",
+            "tags": [
+                    "agent memory",
+                    "research index",
+                    "multi-store memory"
+            ]
     }
 ];
 
@@ -6231,7 +6336,11 @@ export const projectGroups = [
       "MoizIbnYousaf/Ai-Agent-Skills",
       "howells/arc",
       "Gentleman-Programming/Gentleman-Skills",
-      "togethercomputer/skills"
+      "togethercomputer/skills",
+      "agentreplay/agentreplay",
+      "yyyujintang/Awesome-Agent-Memory-Papers",
+      "memvid/memvid",
+      "tfatykhov/awesome-agent-memory"
     ]
   },
   {
@@ -6270,7 +6379,9 @@ export const projectGroups = [
       "CE0Alex/skill-hunter",
       "kitfunso/hippo-memory",
       "yf-he/EvoTest",
-      "MemTensor/HaluMem"
+      "MemTensor/HaluMem",
+      "agentreplay/agentreplay",
+      "memvid/memvid"
     ]
   },
   {

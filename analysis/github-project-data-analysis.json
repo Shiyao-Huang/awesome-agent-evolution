@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-25T06:49:29.927Z",
+  "generated_at": "2026-05-25T08:47:10.243Z",
   "counts": {
-    "raw_captures": 486,
-    "raw_files_on_disk": 486,
-    "classified_repos": 486,
-    "analyzed_projects": 204,
-    "analyzed_in_raw_timestamp_index": 172,
-    "analyzed_in_classification": 172,
+    "raw_captures": 490,
+    "raw_files_on_disk": 490,
+    "classified_repos": 490,
+    "analyzed_projects": 208,
+    "analyzed_in_raw_timestamp_index": 176,
+    "analyzed_in_classification": 176,
     "analyzed_evolution_focused": 90,
     "analyzed_with_created_at_or_fallback": 53,
     "analyzed_with_github_api_metadata": 29,
     "analyzed_with_local_git_mirror": 46,
-    "analyzed_with_public_report": 204,
+    "analyzed_with_public_report": 208,
     "raw_core_evolution": 79,
     "raw_broad_evolution": 176,
     "raw_unknown_time_slice": 109
@@ -23,15 +23,15 @@
     },
     {
       "key": "评测/evaluation",
-      "count": 98
+      "count": 99
     },
     {
       "key": "教程/tutorial",
-      "count": 91
+      "count": 93
     },
     {
       "key": "工具/tool",
-      "count": 82
+      "count": 83
     },
     {
       "key": "应用/application",
@@ -49,7 +49,7 @@
   "raw_theme_counts": [
     {
       "key": "memory",
-      "count": 92
+      "count": 96
     },
     {
       "key": "evaluation",
@@ -95,7 +95,7 @@
   "raw_stack_counts": [
     {
       "key": "Markdown",
-      "count": 203
+      "count": 205
     },
     {
       "key": "Python",
@@ -266,6 +266,10 @@
       "count": 1
     },
     {
+      "key": "Python/Rust/Video index",
+      "count": 1
+    },
+    {
       "key": "Python/Shell",
       "count": 1
     },
@@ -291,6 +295,10 @@
     },
     {
       "key": "Rust/GUI/CLI/MCP/Plugin Manifest",
+      "count": 1
+    },
+    {
+      "key": "Rust/Python/JavaScript/MCP",
       "count": 1
     },
     {
@@ -325,7 +333,7 @@
   "raw_time_slice_counts": [
     {
       "key": "2026-05",
-      "count": 326
+      "count": 330
     },
     {
       "key": "unknown",
@@ -407,7 +415,7 @@
     },
     {
       "key": "memory",
-      "count": 40
+      "count": 44
     },
     {
       "key": "evolution",
@@ -441,7 +449,7 @@
   "analyzed_created_month_counts": [
     {
       "key": "unknown",
-      "count": 151
+      "count": 155
     },
     {
       "key": "2026-05",
@@ -1957,6 +1965,21 @@
       "description": "[Up-To-Date] Awesome Agent Memory Paper Resource"
     },
     {
+      "repo": "agentreplay/agentreplay",
+      "url": "https://github.com/agentreplay/agentreplay",
+      "stars": "0",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Rust/Python/JavaScript/MCP",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web search/public GitHub page observed agentreplay/agentreplay as a local-first desktop evals, observability and AI memory project for Claude Code, Cursor, Windsurf, Cline, VS Code agents and custom SDK integrations; visible snippet listed fork count 2 and emphasized no Docker/server/cloud requirement.",
+      "description": "Agent Replay is a local-first desktop evals, observability and AI memory stack for coding agents, with traces, embedded storage, vector memory, MCP/Claude Code integration and no cloud dependency."
+    },
+    {
       "repo": "agentskills/agentskills",
       "url": "https://github.com/agentskills/agentskills",
       "stars": "19300",
@@ -3200,6 +3223,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 2,728 commits, Apache-2.0 license, 1.9k stars and 291 forks, 337 releases with v10.65.0 latest on 2026-05-24; README says it is a persistent shared memory backend with REST API, MCP, OAuth, CLI, dashboard, typed knowledge graph, local embeddings, 76 endpoints, and real-world multi-agent cluster use",
       "description": "MCP Memory Service 是面向 LangGraph、CrewAI、AutoGen、Claude、OpenCode、Codex CLI 等 agent 的共享记忆后端，提供 REST API、MCP、OAuth、dashboard、知识图谱和本地 embedding。"
+    },
+    {
+      "repo": "DSAIL-Memory/EvoMemBench",
+      "url": "https://github.com/DSAIL-Memory/EvoMemBench",
+      "stars": "0",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed public repository with 2 commits, Apache-2.0 license, 0 stars and 0 forks, README says Coming soon; arXiv 2605.18421 states the code is available at this repository and frames EvoMemBench as agent memory benchmarking from a self-evolving perspective.",
+      "description": "EvoMemBench 是 2026-05 arXiv 论文配套的 agent memory benchmark，按 in-episode/cross-episode 与 knowledge/execution 两条轴评估记忆机制是否支持自演化 agent。"
     },
     {
       "repo": "dsifry/metaswarm",
@@ -4462,6 +4500,21 @@
       "description": "Agent Teams 是面向 self-improving AI agent teams 的开放框架，用 meta-agent、auditor、structured feedback loops 和 git-backed history 管理团队角色、规则、关系和演化原因。"
     },
     {
+      "repo": "jcartu/rasputin-memory",
+      "url": "https://github.com/jcartu/rasputin-memory",
+      "stars": "33",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed MIT license, Python/JavaScript/Shell stack, 33 stars and 5 forks; README describes persistent conversation memory with LLM fact extraction, four-partition retrieval, Qwen3 reranker, HTTP API, MCP server, 33-question regression corpus and LoCoMo evaluation harness, while explicitly marking several future graph/temporal features as not integrated.",
+      "description": "RASPUTIN Memory 是面向 OpenClaw 和 Claude Code 的 self-hosted long-term memory backend，包含 fact/window/entity/event lane、hybrid search、Qwen reranker、MCP server 和 LoCoMo 评测记录。"
+    },
+    {
       "repo": "jdrhyne/agent-skills",
       "url": "https://github.com/jdrhyne/agent-skills",
       "stars": "230",
@@ -5452,6 +5505,21 @@
       "description": "Give git-like & traceable memory to OpenClaw and any coding agents. By https://memov.ai/ aka Entire CLI for every coding agents by MCP. Self-evolution for skills."
     },
     {
+      "repo": "MemPalace/mempalace",
+      "url": "https://github.com/MemPalace/mempalace",
+      "stars": "52800",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed MIT license, Python project, 52.8k stars and 7k forks; README claims verbatim local memory, ChromaDB-backed retrieval, knowledge graph, MCP tools, and reproducible benchmark files with 96.6% LongMemEval raw R@5 plus 98.4% held-out hybrid R@5. Treat benchmark numbers as project claims until independently rerun.",
+      "description": "MemPalace 是 local-first agent memory system，强调 verbatim storage、可插拔检索、知识图谱和 MCP tools，并公开 LongMemEval/LoCoMo/ConvoMem/MemBench 复现实验说明。"
+    },
+    {
       "repo": "MemTensor/HaluMem",
       "url": "https://github.com/MemTensor/HaluMem",
       "stars": "138",
@@ -5495,6 +5563,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "existing raw capture promoted; web GitHub page observed 76 commits, MIT license, Python primary language, HLE/BigCodeBench/ALFWorld/Lifelong Agent Bench runners, 117 stars and 10 forks",
       "description": "MemRL 是自进化 agent 的论文代码，用 episodic memory 上的 runtime reinforcement learning 代替参数微调，通过环境反馈筛选高效策略并在多个 benchmark 上验证持续改进。"
+    },
+    {
+      "repo": "memvid/memvid",
+      "url": "https://github.com/memvid/memvid",
+      "stars": "12400",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python/Rust/Video index",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web search observed memvid/memvid through public GitHub-adjacent and project pages as a single-file portable memory layer for AI agents; indexed snapshot reported 12.4k stars and 1.0k forks, and project benchmark page claims LoCoMo performance gains. Treat benchmark and count signals as web-observed, not API-verified.",
+      "description": "Memvid packages AI-agent memory into a portable single-file layer, positioning itself as memory without external vector database/server infrastructure and publishing LoCoMo benchmark claims."
     },
     {
       "repo": "metauto-ai/gptswarm",
@@ -7267,6 +7350,21 @@
       "description": "An open-source evaluation framework specifically for agentic systems — not just LLM outputs, but full agent behavior."
     },
     {
+      "repo": "Signet-AI/signetai",
+      "url": "https://github.com/Signet-AI/signetai",
+      "stars": "167",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 2,150 commits, Apache-2.0 license, 167 stars and 33 forks; README describes local-first identity, memory and secrets for AI agents, ambient memory, raw transcript provenance, SQLite/FTS/vector/graph retrieval, and 97.6% LongMemEval answer accuracy claim under its MemoryBench rules profile.",
+      "description": "Signet 是 local-first agent context layer，把 identity、memory、provenance、secrets、skills 和工作知识放在可检查的 SQLite/文件记录中，支持 Claude Code、OpenCode、OpenClaw、Codex、Gemini CLI 等 harness。"
+    },
+    {
       "repo": "significant-gravitas/autogpt",
       "url": "https://github.com/significant-gravitas/autogpt",
       "stars": "184",
@@ -7685,6 +7783,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed 1 commit, MIT license, OpenClaw cron evolution flow, 59 overnight exploration rounds claim, v1.0.0 latest on 2026-02-28, 4 stars and 0 forks",
       "description": "OpenClaw Evolution Framework 用 cron 触发、自选主题轮转、markdown insight 输出、HITL checkpoint 和 self-trigger next round 组成 OpenClaw agent 的连续学习实验框架。"
+    },
+    {
+      "repo": "tfatykhov/awesome-agent-memory",
+      "url": "https://github.com/tfatykhov/awesome-agent-memory",
+      "stars": "0",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "memory",
+      "stack": "Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web search/public GitHub page observed tfatykhov/awesome-agent-memory as curated research on memory systems for LLM agents, maintained alongside Nous, a cognitive AI agent with typed multi-store memory.",
+      "description": "Awesome Agent Memory is a curated research list on memory systems for LLM agents and a useful cross-check against the larger memory substrate and benchmark trend in this corpus."
     },
     {
       "repo": "thClaws/thClaws",
@@ -8602,6 +8715,21 @@
       "description": "Survey and paper list on efficiency-guided LLM agents (memory, tool learning, planning)."
     },
     {
+      "repo": "yyyujintang/Awesome-Agent-Memory-Papers",
+      "url": "https://github.com/yyyujintang/Awesome-Agent-Memory-Papers",
+      "stars": "0",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "memory",
+      "stack": "Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web search/public GitHub page observed yyyujintang/Awesome-Agent-Memory-Papers as an Awesome Papers repository for Agent Memory covering methods, benchmarks and surveys, with a companion website at yyyujintang.github.io/Awesome-Agent-Memory-Papers.",
+      "description": "Awesome Agent Memory Papers is a curated paper index for agent memory methods, benchmarks and surveys, giving the corpus a paper-facing bridge for memory substrate and evaluation claims."
+    },
+    {
       "repo": "zaixizhang/stella",
       "url": "https://github.com/zaixizhang/stella",
       "stars": "141",
@@ -8915,66 +9043,6 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[ACM Computing Surveys 2025] This repository collects awesome survey, resource, and paper for Lifelong Learning with Large Language Models. (Updated Regularly)"
-    },
-    {
-      "repo": "DSAIL-Memory/EvoMemBench",
-      "url": "https://github.com/DSAIL-Memory/EvoMemBench",
-      "stars": "0",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "评测/evaluation",
-      "function_tag": "benchmark-eval",
-      "base_theme": "memory",
-      "stack": "Markdown",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-25",
-      "evidence": "web GitHub page observed public repository with 2 commits, Apache-2.0 license, 0 stars and 0 forks, README says Coming soon; arXiv 2605.18421 states the code is available at this repository and frames EvoMemBench as agent memory benchmarking from a self-evolving perspective.",
-      "description": "EvoMemBench 是 2026-05 arXiv 论文配套的 agent memory benchmark，按 in-episode/cross-episode 与 knowledge/execution 两条轴评估记忆机制是否支持自演化 agent。"
-    },
-    {
-      "repo": "Signet-AI/signetai",
-      "url": "https://github.com/Signet-AI/signetai",
-      "stars": "167",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "工具/tool",
-      "function_tag": "memory-substrate",
-      "base_theme": "memory",
-      "stack": "TypeScript",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-25",
-      "evidence": "web GitHub page observed 2,150 commits, Apache-2.0 license, 167 stars and 33 forks; README describes local-first identity, memory and secrets for AI agents, ambient memory, raw transcript provenance, SQLite/FTS/vector/graph retrieval, and 97.6% LongMemEval answer accuracy claim under its MemoryBench rules profile.",
-      "description": "Signet 是 local-first agent context layer，把 identity、memory、provenance、secrets、skills 和工作知识放在可检查的 SQLite/文件记录中，支持 Claude Code、OpenCode、OpenClaw、Codex、Gemini CLI 等 harness。"
-    },
-    {
-      "repo": "MemPalace/mempalace",
-      "url": "https://github.com/MemPalace/mempalace",
-      "stars": "52800",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "工具/tool",
-      "function_tag": "memory-substrate",
-      "base_theme": "memory",
-      "stack": "Python",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-25",
-      "evidence": "web GitHub page observed MIT license, Python project, 52.8k stars and 7k forks; README claims verbatim local memory, ChromaDB-backed retrieval, knowledge graph, MCP tools, and reproducible benchmark files with 96.6% LongMemEval raw R@5 plus 98.4% held-out hybrid R@5. Treat benchmark numbers as project claims until independently rerun.",
-      "description": "MemPalace 是 local-first agent memory system，强调 verbatim storage、可插拔检索、知识图谱和 MCP tools，并公开 LongMemEval/LoCoMo/ConvoMem/MemBench 复现实验说明。"
-    },
-    {
-      "repo": "jcartu/rasputin-memory",
-      "url": "https://github.com/jcartu/rasputin-memory",
-      "stars": "33",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "工具/tool",
-      "function_tag": "memory-substrate",
-      "base_theme": "memory",
-      "stack": "Python",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-25",
-      "evidence": "web GitHub page observed MIT license, Python/JavaScript/Shell stack, 33 stars and 5 forks; README describes persistent conversation memory with LLM fact extraction, four-partition retrieval, Qwen3 reranker, HTTP API, MCP server, 33-question regression corpus and LoCoMo evaluation harness, while explicitly marking several future graph/temporal features as not integrated.",
-      "description": "RASPUTIN Memory 是面向 OpenClaw 和 Claude Code 的 self-hosted long-term memory backend，包含 fact/window/entity/event lane、hybrid search、Qwen reranker、MCP server 和 LoCoMo 评测记录。"
     }
   ],
   "raw_core_evolution_repositories": [
@@ -10796,6 +10864,21 @@
       "description": "A curated list of awesome LLM Inference-Time Self-Improvement (ITSI, pronounced \"itsy\") papers from our recent survey: A Survey on Large Language Model Inference-Time Self-Improvement."
     },
     {
+      "repo": "DSAIL-Memory/EvoMemBench",
+      "url": "https://github.com/DSAIL-Memory/EvoMemBench",
+      "stars": "0",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed public repository with 2 commits, Apache-2.0 license, 0 stars and 0 forks, README says Coming soon; arXiv 2605.18421 states the code is available at this repository and frames EvoMemBench as agent memory benchmarking from a self-evolving perspective.",
+      "description": "EvoMemBench 是 2026-05 arXiv 论文配套的 agent memory benchmark，按 in-episode/cross-episode 与 knowledge/execution 两条轴评估记忆机制是否支持自演化 agent。"
+    },
+    {
       "repo": "dsifry/metaswarm",
       "url": "https://github.com/dsifry/metaswarm",
       "stars": "272",
@@ -12789,21 +12872,6 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web search and public GitHub page evidence observed Apache-2.0 license, Python stack, 1.4k stars and 158 forks; project description positions Zylos as a self-evolving AI team platform for specialized agents, memory, automation, and marketplace-style extensibility",
       "description": "Zylos Core 是 self-evolving AI team platform，把专门化 agents、共享记忆、工具市场和交付界面组合成持续改进的团队运行时。"
-    },
-    {
-      "repo": "DSAIL-Memory/EvoMemBench",
-      "url": "https://github.com/DSAIL-Memory/EvoMemBench",
-      "stars": "0",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "评测/evaluation",
-      "function_tag": "benchmark-eval",
-      "base_theme": "memory",
-      "stack": "Markdown",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-25",
-      "evidence": "web GitHub page observed public repository with 2 commits, Apache-2.0 license, 0 stars and 0 forks, README says Coming soon; arXiv 2605.18421 states the code is available at this repository and frames EvoMemBench as agent memory benchmarking from a self-evolving perspective.",
-      "description": "EvoMemBench 是 2026-05 arXiv 论文配套的 agent memory benchmark，按 in-episode/cross-episode 与 knowledge/execution 两条轴评估记忆机制是否支持自演化 agent。"
     }
   ],
   "analyzed_projects": [
@@ -21630,6 +21698,174 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "memory",
       "evolution_focused": false
+    },
+    {
+      "name": "Agent Replay",
+      "repo": "agentreplay/agentreplay",
+      "normalized_repo": "agentreplay/agentreplay",
+      "url": "https://github.com/agentreplay/agentreplay",
+      "category": "Local Agent Evals and Memory Observability",
+      "pattern": "local traces -> evals -> memory retrieval -> agent debugging",
+      "tags": [
+        "agent memory",
+        "observability",
+        "evals",
+        "mcp",
+        "local-first"
+      ],
+      "site_stars": 0,
+      "site_forks": "2",
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/agentreplay_agentreplay.md",
+      "local_git": null,
+      "report": "projects/196-agentreplay-local-agent-observability-memory.md",
+      "public_report": "site/public/reports/projects/196-agentreplay-local-agent-observability-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/agentreplay_agentreplay.md",
+      "raw_collected_at": "2026-05-25T15:22:43+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web search/public GitHub page observed agentreplay/agentreplay as a local-first desktop evals, observability and AI memory project for Claude Code, Cursor, Windsurf, Cline, VS Code agents and custom SDK integrations; visible snippet listed fork count 2 and emphasized no Docker/server/cloud requirement.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "Awesome Agent Memory Papers",
+      "repo": "yyyujintang/Awesome-Agent-Memory-Papers",
+      "normalized_repo": "yyyujintang/awesome-agent-memory-papers",
+      "url": "https://github.com/yyyujintang/Awesome-Agent-Memory-Papers",
+      "category": "Agent Memory Paper and Benchmark Index",
+      "pattern": "memory papers -> methods/benchmarks/surveys -> research map",
+      "tags": [
+        "agent memory",
+        "papers",
+        "benchmark",
+        "survey"
+      ],
+      "site_stars": 0,
+      "site_forks": "0",
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/yyyujintang_awesome-agent-memory-papers.md",
+      "local_git": null,
+      "report": "projects/197-awesome-agent-memory-papers.md",
+      "public_report": "site/public/reports/projects/197-awesome-agent-memory-papers.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/yyyujintang_awesome-agent-memory-papers.md",
+      "raw_collected_at": "2026-05-25T15:22:43+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web search/public GitHub page observed yyyujintang/Awesome-Agent-Memory-Papers as an Awesome Papers repository for Agent Memory covering methods, benchmarks and surveys, with a companion website at yyyujintang.github.io/Awesome-Agent-Memory-Papers.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "Memvid",
+      "repo": "memvid/memvid",
+      "normalized_repo": "memvid/memvid",
+      "url": "https://github.com/memvid/memvid",
+      "category": "Single-File Agent Memory Layer",
+      "pattern": "documents/conversations -> single portable memory file -> fast retrieval",
+      "tags": [
+        "agent memory",
+        "portable memory",
+        "LoCoMo",
+        "local-first"
+      ],
+      "site_stars": 12400,
+      "site_forks": "1000",
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/memvid_memvid.md",
+      "local_git": null,
+      "report": "projects/198-memvid-single-file-agent-memory.md",
+      "public_report": "site/public/reports/projects/198-memvid-single-file-agent-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/memvid_memvid.md",
+      "raw_collected_at": "2026-05-25T15:22:43+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web search observed memvid/memvid through public GitHub-adjacent and project pages as a single-file portable memory layer for AI agents; indexed snapshot reported 12.4k stars and 1.0k forks, and project benchmark page claims LoCoMo performance gains. Treat benchmark and count signals as web-observed, not API-verified.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "Awesome Agent Memory",
+      "repo": "tfatykhov/awesome-agent-memory",
+      "normalized_repo": "tfatykhov/awesome-agent-memory",
+      "url": "https://github.com/tfatykhov/awesome-agent-memory",
+      "category": "Agent Memory Research Index",
+      "pattern": "memory systems -> papers/projects -> typed memory taxonomy",
+      "tags": [
+        "agent memory",
+        "research index",
+        "multi-store memory"
+      ],
+      "site_stars": 0,
+      "site_forks": "0",
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/tfatykhov_awesome-agent-memory.md",
+      "local_git": null,
+      "report": "projects/199-tfatykhov-awesome-agent-memory.md",
+      "public_report": "site/public/reports/projects/199-tfatykhov-awesome-agent-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/tfatykhov_awesome-agent-memory.md",
+      "raw_collected_at": "2026-05-25T15:22:43+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web search/public GitHub page observed tfatykhov/awesome-agent-memory as curated research on memory systems for LLM agents, maintained alongside Nous, a cognitive AI agent with typed multi-store memory.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
     }
   ],
   "analyzed_git_evidence": [
@@ -23070,6 +23306,48 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "evolution",
       "evolution_focused": true
+    },
+    {
+      "name": "Memvid",
+      "repo": "memvid/memvid",
+      "normalized_repo": "memvid/memvid",
+      "url": "https://github.com/memvid/memvid",
+      "category": "Single-File Agent Memory Layer",
+      "pattern": "documents/conversations -> single portable memory file -> fast retrieval",
+      "tags": [
+        "agent memory",
+        "portable memory",
+        "LoCoMo",
+        "local-first"
+      ],
+      "site_stars": 12400,
+      "site_forks": "1000",
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/memvid_memvid.md",
+      "local_git": null,
+      "report": "projects/198-memvid-single-file-agent-memory.md",
+      "public_report": "site/public/reports/projects/198-memvid-single-file-agent-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/memvid_memvid.md",
+      "raw_collected_at": "2026-05-25T15:22:43+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web search observed memvid/memvid through public GitHub-adjacent and project pages as a single-file portable memory layer for AI agents; indexed snapshot reported 12.4k stars and 1.0k forks, and project benchmark page claims LoCoMo performance gains. Treat benchmark and count signals as web-observed, not API-verified.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
     },
     {
       "name": "GenericAgent",
@@ -30332,6 +30610,49 @@
       "evolution_focused": true
     },
     {
+      "name": "Agent Replay",
+      "repo": "agentreplay/agentreplay",
+      "normalized_repo": "agentreplay/agentreplay",
+      "url": "https://github.com/agentreplay/agentreplay",
+      "category": "Local Agent Evals and Memory Observability",
+      "pattern": "local traces -> evals -> memory retrieval -> agent debugging",
+      "tags": [
+        "agent memory",
+        "observability",
+        "evals",
+        "mcp",
+        "local-first"
+      ],
+      "site_stars": 0,
+      "site_forks": "2",
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/agentreplay_agentreplay.md",
+      "local_git": null,
+      "report": "projects/196-agentreplay-local-agent-observability-memory.md",
+      "public_report": "site/public/reports/projects/196-agentreplay-local-agent-observability-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/agentreplay_agentreplay.md",
+      "raw_collected_at": "2026-05-25T15:22:43+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web search/public GitHub page observed agentreplay/agentreplay as a local-first desktop evals, observability and AI memory project for Claude Code, Cursor, Windsurf, Cline, VS Code agents and custom SDK integrations; visible snippet listed fork count 2 and emphasized no Docker/server/cloud requirement.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
       "name": "EvoMemBench",
       "repo": "DSAIL-Memory/EvoMemBench",
       "normalized_repo": "dsail-memory/evomembench",
@@ -30456,6 +30777,89 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "evolution",
       "evolution_focused": true
+    },
+    {
+      "name": "Awesome Agent Memory",
+      "repo": "tfatykhov/awesome-agent-memory",
+      "normalized_repo": "tfatykhov/awesome-agent-memory",
+      "url": "https://github.com/tfatykhov/awesome-agent-memory",
+      "category": "Agent Memory Research Index",
+      "pattern": "memory systems -> papers/projects -> typed memory taxonomy",
+      "tags": [
+        "agent memory",
+        "research index",
+        "multi-store memory"
+      ],
+      "site_stars": 0,
+      "site_forks": "0",
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/tfatykhov_awesome-agent-memory.md",
+      "local_git": null,
+      "report": "projects/199-tfatykhov-awesome-agent-memory.md",
+      "public_report": "site/public/reports/projects/199-tfatykhov-awesome-agent-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/tfatykhov_awesome-agent-memory.md",
+      "raw_collected_at": "2026-05-25T15:22:43+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web search/public GitHub page observed tfatykhov/awesome-agent-memory as curated research on memory systems for LLM agents, maintained alongside Nous, a cognitive AI agent with typed multi-store memory.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "Awesome Agent Memory Papers",
+      "repo": "yyyujintang/Awesome-Agent-Memory-Papers",
+      "normalized_repo": "yyyujintang/awesome-agent-memory-papers",
+      "url": "https://github.com/yyyujintang/Awesome-Agent-Memory-Papers",
+      "category": "Agent Memory Paper and Benchmark Index",
+      "pattern": "memory papers -> methods/benchmarks/surveys -> research map",
+      "tags": [
+        "agent memory",
+        "papers",
+        "benchmark",
+        "survey"
+      ],
+      "site_stars": 0,
+      "site_forks": "0",
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/yyyujintang_awesome-agent-memory-papers.md",
+      "local_git": null,
+      "report": "projects/197-awesome-agent-memory-papers.md",
+      "public_report": "site/public/reports/projects/197-awesome-agent-memory-papers.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/yyyujintang_awesome-agent-memory-papers.md",
+      "raw_collected_at": "2026-05-25T15:22:43+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web search/public GitHub page observed yyyujintang/Awesome-Agent-Memory-Papers as an Awesome Papers repository for Agent Memory covering methods, benchmarks and surveys, with a companion website at yyyujintang.github.io/Awesome-Agent-Memory-Papers.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
     }
   ],
   "analyzed_timeline": [
@@ -33187,6 +33591,49 @@
       "classification_evidence": "web GitHub page observed 23 commits, MIT license, 40 stars and 13 forks; README says it maintains 790+ skills, ships an NPX-first CLI, supports Claude Code, Gemini, Cursor, Kiro, Codex, Antigravity, OpenCode, AdaL and OpenClaw install targets, and treats skills as Markdown-based reasoning plugins",
       "raw_time_slice": "2026-05",
       "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
+      "name": "Agent Replay",
+      "repo": "agentreplay/agentreplay",
+      "normalized_repo": "agentreplay/agentreplay",
+      "url": "https://github.com/agentreplay/agentreplay",
+      "category": "Local Agent Evals and Memory Observability",
+      "pattern": "local traces -> evals -> memory retrieval -> agent debugging",
+      "tags": [
+        "agent memory",
+        "observability",
+        "evals",
+        "mcp",
+        "local-first"
+      ],
+      "site_stars": 0,
+      "site_forks": "2",
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/agentreplay_agentreplay.md",
+      "local_git": null,
+      "report": "projects/196-agentreplay-local-agent-observability-memory.md",
+      "public_report": "site/public/reports/projects/196-agentreplay-local-agent-observability-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/agentreplay_agentreplay.md",
+      "raw_collected_at": "2026-05-25T15:22:43+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web search/public GitHub page observed agentreplay/agentreplay as a local-first desktop evals, observability and AI memory project for Claude Code, Cursor, Windsurf, Cline, VS Code agents and custom SDK integrations; visible snippet listed fork count 2 and emphasized no Docker/server/cloud requirement.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
       "evolution_focused": false
     },
     {
@@ -36565,6 +37012,48 @@
       "evolution_focused": true
     },
     {
+      "name": "Memvid",
+      "repo": "memvid/memvid",
+      "normalized_repo": "memvid/memvid",
+      "url": "https://github.com/memvid/memvid",
+      "category": "Single-File Agent Memory Layer",
+      "pattern": "documents/conversations -> single portable memory file -> fast retrieval",
+      "tags": [
+        "agent memory",
+        "portable memory",
+        "LoCoMo",
+        "local-first"
+      ],
+      "site_stars": 12400,
+      "site_forks": "1000",
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/memvid_memvid.md",
+      "local_git": null,
+      "report": "projects/198-memvid-single-file-agent-memory.md",
+      "public_report": "site/public/reports/projects/198-memvid-single-file-agent-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/memvid_memvid.md",
+      "raw_collected_at": "2026-05-25T15:22:43+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web search observed memvid/memvid through public GitHub-adjacent and project pages as a single-file portable memory layer for AI agents; indexed snapshot reported 12.4k stars and 1.0k forks, and project benchmark page claims LoCoMo performance gains. Treat benchmark and count signals as web-observed, not API-verified.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
       "name": "Microsoft Skills",
       "repo": "microsoft/skills",
       "normalized_repo": "microsoft/skills",
@@ -38514,6 +39003,47 @@
       "evolution_focused": true
     },
     {
+      "name": "Awesome Agent Memory",
+      "repo": "tfatykhov/awesome-agent-memory",
+      "normalized_repo": "tfatykhov/awesome-agent-memory",
+      "url": "https://github.com/tfatykhov/awesome-agent-memory",
+      "category": "Agent Memory Research Index",
+      "pattern": "memory systems -> papers/projects -> typed memory taxonomy",
+      "tags": [
+        "agent memory",
+        "research index",
+        "multi-store memory"
+      ],
+      "site_stars": 0,
+      "site_forks": "0",
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/tfatykhov_awesome-agent-memory.md",
+      "local_git": null,
+      "report": "projects/199-tfatykhov-awesome-agent-memory.md",
+      "public_report": "site/public/reports/projects/199-tfatykhov-awesome-agent-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/tfatykhov_awesome-agent-memory.md",
+      "raw_collected_at": "2026-05-25T15:22:43+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web search/public GitHub page observed tfatykhov/awesome-agent-memory as curated research on memory systems for LLM agents, maintained alongside Nous, a cognitive AI agent with typed multi-store memory.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
       "name": "thClaws",
       "repo": "thClaws/thClaws",
       "normalized_repo": "thclaws/thclaws",
@@ -39195,6 +39725,48 @@
       "classification_evidence": "web GitHub page observed 14 commits, MIT license, HTML/Python stack, 415 stars and 49 forks; README states 200,000+ skills, retrieval and orchestration, March 2026 benchmark with 30 multi-format creative tasks across 5 categories, and modular architecture",
       "raw_time_slice": "2026-05",
       "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
+      "name": "Awesome Agent Memory Papers",
+      "repo": "yyyujintang/Awesome-Agent-Memory-Papers",
+      "normalized_repo": "yyyujintang/awesome-agent-memory-papers",
+      "url": "https://github.com/yyyujintang/Awesome-Agent-Memory-Papers",
+      "category": "Agent Memory Paper and Benchmark Index",
+      "pattern": "memory papers -> methods/benchmarks/surveys -> research map",
+      "tags": [
+        "agent memory",
+        "papers",
+        "benchmark",
+        "survey"
+      ],
+      "site_stars": 0,
+      "site_forks": "0",
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/yyyujintang_awesome-agent-memory-papers.md",
+      "local_git": null,
+      "report": "projects/197-awesome-agent-memory-papers.md",
+      "public_report": "site/public/reports/projects/197-awesome-agent-memory-papers.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/yyyujintang_awesome-agent-memory-papers.md",
+      "raw_collected_at": "2026-05-25T15:22:43+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web search/public GitHub page observed yyyujintang/Awesome-Agent-Memory-Papers as an Awesome Papers repository for Agent Memory covering methods, benchmarks and surveys, with a companion website at yyyujintang.github.io/Awesome-Agent-Memory-Papers.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
       "evolution_focused": false
     },
     {

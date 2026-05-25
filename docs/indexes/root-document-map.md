@@ -35,11 +35,8 @@ Root only keeps entry points, legal/release files, and compatibility files still
 | `mom-test-findings-x-ZH.md` | raw compatibility |
 | `mom-test-findings-x.md` | raw compatibility |
 | `mom-test-findings.md` | raw compatibility |
-| `raw-data-timestamp-enforcement-report.json` | raw compatibility |
 | `raw-data-timestamp-standard.md` | raw compatibility |
 | `raw-data-timestamp-validation-report.json` | raw compatibility |
 | `raw-github-index.md` | raw compatibility |
-| `raw-papers-timestamp-backfill-report.json` | raw compatibility |
-| `raw-papers-timestamp-validation-report.json` | raw compatibility |
 | `social-media-raw-data-ZH.md` | raw compatibility |
 | `social-media-raw-data.md` | raw compatibility |

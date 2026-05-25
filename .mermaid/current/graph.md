@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-25T14:23:21+08:00
+Generated: 2026-05-25T15:22:43+08:00
 
 ## Nodes
 
@@ -24,10 +24,8 @@ Generated: 2026-05-25T14:23:21+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: DSAIL-Memory/EvoMemBench, Signet-AI/signetai, MemPalace/mempalace, jcartu/rasputin-memory; arXiv 2605.18421 used for EvoMemBench paper/code linkage.
-- New raw files: raw-github/dsail-memory_evomembench.md, raw-github/signet-ai_signetai.md, raw-github/mempalace_mempalace.md, raw-github/jcartu_rasputin-memory.md.
-- New public model cards and site reports: projects/site reports 192-195 for EvoMemBench, Signet AI, MemPalace, and RASPUTIN Memory.
-- Shell GitHub API remains DNS-blocked: curl api.github.com failed with Could not resolve host; gh auth status reports invalid token for Shiyao-Huang.
-- GitNexus local binary 1.6.5 is available; fresh temp HOME analyze succeeded with 10,878 nodes, 12,530 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.
-- Post-analysis counts before final build: raw=486, classified=486, analyzed_projects=204, strict_evolution=79, broad_evolution=176, memory_theme=92, public_reports=229 expected after generated indexes.
+- Web-observed repos: agentreplay/agentreplay, yyyujintang/Awesome-Agent-Memory-Papers, memvid/memvid, tfatykhov/awesome-agent-memory.
+- New raw files: raw-github/agentreplay_agentreplay.md, raw-github/yyyujintang_awesome-agent-memory-papers.md, raw-github/memvid_memvid.md, raw-github/tfatykhov_awesome-agent-memory.md.
+- New public model cards and site reports: projects/site reports 196-199 for Agent Replay, Awesome Agent Memory Papers, Memvid, and Awesome Agent Memory.
+- Shell GitHub API freshness is checked separately; current metadata is not API-verified.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T14:23:21+08:00",
+  "generated_at": "2026-05-25T15:22:43+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -162,7 +162,11 @@
         "raw-github/dsail-memory_evomembench.md",
         "raw-github/signet-ai_signetai.md",
         "raw-github/mempalace_mempalace.md",
-        "raw-github/jcartu_rasputin-memory.md"
+        "raw-github/jcartu_rasputin-memory.md",
+        "raw-github/agentreplay_agentreplay.md",
+        "raw-github/yyyujintang_awesome-agent-memory-papers.md",
+        "raw-github/memvid_memvid.md",
+        "raw-github/tfatykhov_awesome-agent-memory.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -217,7 +221,8 @@
         "work/research/hourly-public-metadata-update-2026-05-25-0919.md",
         "work/research/hourly-public-metadata-update-2026-05-25-1120.md",
         "work/research/hourly-public-metadata-update-2026-05-25-1221.md",
-        "work/research/hourly-public-metadata-update-2026-05-25-1321.md"
+        "work/research/hourly-public-metadata-update-2026-05-25-1321.md",
+        "work/research/hourly-public-metadata-update-2026-05-25-1522.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -516,7 +521,15 @@
         "site/public/reports/projects/192-evomembench-self-evolving-memory-benchmark.md",
         "site/public/reports/projects/193-signet-agent-context-substrate.md",
         "site/public/reports/projects/194-mempalace-agent-memory-benchmark.md",
-        "site/public/reports/projects/195-rasputin-memory-openclaw-claude.md"
+        "site/public/reports/projects/195-rasputin-memory-openclaw-claude.md",
+        "projects/196-agentreplay-local-agent-observability-memory.md",
+        "site/public/reports/projects/196-agentreplay-local-agent-observability-memory.md",
+        "projects/197-awesome-agent-memory-papers.md",
+        "site/public/reports/projects/197-awesome-agent-memory-papers.md",
+        "projects/198-memvid-single-file-agent-memory.md",
+        "site/public/reports/projects/198-memvid-single-file-agent-memory.md",
+        "projects/199-tfatykhov-awesome-agent-memory.md",
+        "site/public/reports/projects/199-tfatykhov-awesome-agent-memory.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -728,5 +741,16 @@
     "GitNexus local binary 1.6.5 is available; fresh temp HOME analyze succeeded with 10,878 nodes, 12,530 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
     "Post-analysis counts before final build: raw=486, classified=486, analyzed_projects=204, strict_evolution=79, broad_evolution=176, memory_theme=92, public_reports=229 expected after generated indexes.",
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
-  ]
+  ],
+  "current_run": {
+    "run_at": "2026-05-25T15:22:43+08:00",
+    "added_repositories": [
+      "agentreplay/agentreplay",
+      "yyyujintang/Awesome-Agent-Memory-Papers",
+      "memvid/memvid",
+      "tfatykhov/awesome-agent-memory"
+    ],
+    "evidence_quality": "web_observed_public_pages_and_search; shell GitHub API not verified",
+    "graph_truth_source": ".mermaid/current/graph.json"
+  }
 }

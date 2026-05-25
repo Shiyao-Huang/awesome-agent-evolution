@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-25T00:00:00+08:00",
-  "total": 486,
-  "updated_files": 486,
+  "total": 490,
+  "updated_files": 490,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -165,6 +165,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "agentreplay/agentreplay",
+      "url": "https://github.com/agentreplay/agentreplay",
+      "file": "raw-github/agentreplay_agentreplay.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T15:22:43+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_search_and_public_github_page_2026_05_25"
     },
     {
       "repo": "agentskills/agentskills",
@@ -2318,6 +2327,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "memvid/memvid",
+      "url": "https://github.com/memvid/memvid",
+      "file": "raw-github/memvid_memvid.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T15:22:43+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_search_and_public_github_page_2026_05_25"
+    },
+    {
       "repo": "metauto-ai/gptswarm",
       "url": "https://github.com/metauto-ai/gptswarm",
       "file": "raw-github/metauto-ai_gptswarm.md",
@@ -3641,6 +3659,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "tfatykhov/awesome-agent-memory",
+      "url": "https://github.com/tfatykhov/awesome-agent-memory",
+      "file": "raw-github/tfatykhov_awesome-agent-memory.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T15:22:43+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_search_and_public_github_page_2026_05_25"
+    },
+    {
       "repo": "thClaws/thClaws",
       "url": "https://github.com/thClaws/thClaws",
       "file": "raw-github/thclaws_thclaws.md",
@@ -4188,6 +4215,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "yyyujintang/Awesome-Agent-Memory-Papers",
+      "url": "https://github.com/yyyujintang/Awesome-Agent-Memory-Papers",
+      "file": "raw-github/yyyujintang_awesome-agent-memory-papers.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T15:22:43+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_search_and_public_github_page_2026_05_25"
     },
     {
       "repo": "zaixizhang/stella",

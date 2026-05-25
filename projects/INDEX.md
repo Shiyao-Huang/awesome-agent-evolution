@@ -220,6 +220,11 @@
 | MemPalace | [MemPalace/mempalace](https://github.com/MemPalace/mempalace) | Benchmarked Agent Memory System | [projects/194-mempalace-agent-memory-benchmark.md](194-mempalace-agent-memory-benchmark.md) |
 | RASPUTIN Memory | [jcartu/rasputin-memory](https://github.com/jcartu/rasputin-memory) | Self-Hosted Agent Memory Backend | [projects/195-rasputin-memory-openclaw-claude.md](195-rasputin-memory-openclaw-claude.md) |
 
+| Agent Replay | [agentreplay/agentreplay](https://github.com/agentreplay/agentreplay) | Local Agent Evals and Memory Observability | [projects/196-agentreplay-local-agent-observability-memory.md](196-agentreplay-local-agent-observability-memory.md) |
+| Awesome Agent Memory Papers | [yyyujintang/Awesome-Agent-Memory-Papers](https://github.com/yyyujintang/Awesome-Agent-Memory-Papers) | Agent Memory Paper and Benchmark Index | [projects/197-awesome-agent-memory-papers.md](197-awesome-agent-memory-papers.md) |
+| Memvid | [memvid/memvid](https://github.com/memvid/memvid) | Single-File Agent Memory Layer | [projects/198-memvid-single-file-agent-memory.md](198-memvid-single-file-agent-memory.md) |
+| Awesome Agent Memory | [tfatykhov/awesome-agent-memory](https://github.com/tfatykhov/awesome-agent-memory) | Agent Memory Research Index | [projects/199-tfatykhov-awesome-agent-memory.md](199-tfatykhov-awesome-agent-memory.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.
