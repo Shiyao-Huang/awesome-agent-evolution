@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "collection_timestamp": "2026-05-22T13:38:41.608877+00:00",
+    "repo": "mem0ai/mem0",
+    "collector_name": "github_quick_stats"
+  },
+  "data": {
+    "full_name": "mem0ai/mem0",
+    "description": "Universal memory layer for AI Agents",
+    "stars": 56433,
+    "forks": 6433,
+    "open_issues": 405,
+    "watchers": 227,
+    "language": "Python",
+    "license": "Apache-2.0",
+    "topics": [
+      "agents",
+      "ai",
+      "ai-agents",
+      "application",
+      "chatbots",
+      "chatgpt",
+      "genai",
+      "llm",
+      "long-term-memory",
+      "memory",
+      "memory-management",
+      "python",
+      "rag",
+      "state-management"
+    ],
+    "created_at": "2023-06-20T08:58:36Z",
+    "updated_at": "2026-05-22T13:35:06Z",
+    "pushed_at": "2026-05-22T13:38:07Z",
+    "default_branch": "main",
+    "archived": false,
+    "network_count": 6433
+  }
+}

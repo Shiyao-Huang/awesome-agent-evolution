@@ -4,10 +4,9 @@ import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 
 export default defineConfig({
-  site: 'https://shiyao-huang.github.io',
-  base: '/awesome-agent-evolution',
+  site: 'https://x.mitbunny.ai',
   output: 'static',
-  integrations: [mdx(), react(), sitemap()],
+  integrations: [mdx(), sitemap(), react()],
   markdown: {
     shikiConfig: { theme: 'github-dark' }
   }

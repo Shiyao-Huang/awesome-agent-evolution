@@ -1,11 +1,9 @@
 """Shared utilities for GitHub data collectors."""
 import json, os, time, sys, argparse
 from datetime import datetime, timezone
-
 import requests
 
 API = "https://api.github.com"
-
 
 class GitHubClient:
     def __init__(self, token=None):
@@ -74,11 +72,11 @@ def save_json(output_dir, filename, repo, collector_name, data):
 
 
 def add_common_args(parser):
-    parser.add_argument("--token", default=None, help="GitHub PAT")
-    parser.add_argument("--output", default="./storage", help="Output directory")
-    parser.add_argument("--config", default="./config/projects.json", help="Projects config")
-    parser.add_argument("--repo", default=None, help="Single repo (owner/repo)")
-    parser.add_argument("--all", action="store_true", dest="all_projects", help="All projects")
+    parser.add_argument("--token", default=None)
+    parser.add_argument("--output", default="./storage-github")
+    parser.add_argument("--config", default="./config/projects.json")
+    parser.add_argument("--repo", default=None)
+    parser.add_argument("--all", action="store_true", dest="all_projects")
     parser.add_argument("--priority", default=None, choices=["critical", "high", "medium"])
 
 
@@ -92,8 +90,6 @@ def resolve_repos(args):
         projects = json.load(f)
     if args.priority:
         projects = [p for p in projects if p.get("priority") == args.priority]
-    if args.all_projects:
-        return [p["repo"] for p in projects]
-    if args.priority:
+    if args.all_projects or args.priority:
         return [p["repo"] for p in projects]
     return [p["repo"] for p in projects if p.get("priority") == "critical"]

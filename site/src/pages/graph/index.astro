@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { coreKnowledgeGraph, knowledgeGraph, knowledgeGraphStats } from '@/data/knowledgeGraph';
+import { researchCoverage } from '@/data/researchCoverage';
 
 const coreGraphPayload = JSON.stringify(coreKnowledgeGraph);
 const fullGraphPayload = JSON.stringify(knowledgeGraph);
@@ -10,11 +11,11 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
     <div class="container">
       <div class="eyebrow">Knowledge Graph / 知识图谱</div>
       <h1 class="gradient-text">项目、论文、机制和证据关系。</h1>
-      <p class="lead">图谱现在从 README 全量索引、135 篇 paper review、前台项目卡片和人工质量排序项目共同生成。默认展示核心视图，避免全量节点变成不可读毛球。</p>
+      <p class="lead">当前图谱不再只取少数代表论文：默认展示 Core 150，可切换到 Full corpus 查看项目、{researchCoverage.reviewFiles} 篇论文 review、raw paper 索引和待补主流论文缺口。</p>
       <div class="metrics">
         <div class="metric"><strong>{knowledgeGraphStats.nodes}</strong><span>nodes</span></div>
         <div class="metric"><strong>{knowledgeGraphStats.edges}</strong><span>edges</span></div>
-        <div class="metric"><strong>{knowledgeGraphStats.projects + knowledgeGraphStats.papers}</strong><span>projects + papers</span></div>
+        <div class="metric"><strong>{researchCoverage.identifiedCoverageGaps}</strong><span>paper gaps to review</span></div>
       </div>
     </div>
   </section>
@@ -23,6 +24,13 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
     <div class="container graph-shell">
       <div class="graph-panel">
         <div class="graph-toolbar">
+          <label>
+            <span>Scope</span>
+            <select id="graph-scope">
+              <option value="core">Core 150</option>
+              <option value="full">Full corpus</option>
+            </select>
+          </label>
           <label>
             <span>Search</span>
             <input id="graph-search" type="search" placeholder="openevolve, Reflexion, 评估器..." />
@@ -37,21 +45,36 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
               <option value="cluster">Clusters</option>
             </select>
           </label>
-          <label>
-            <span>Scope</span>
-            <select id="graph-scope">
-              <option value="core">Core 150</option>
-              <option value="full">Full corpus</option>
-            </select>
-          </label>
         </div>
         <svg id="knowledge-graph" viewBox="0 0 1100 680" role="img" aria-label="Self Evolve knowledge graph"></svg>
       </div>
       <aside class="graph-detail" id="graph-detail">
         <div class="eyebrow">Selected Node</div>
         <h2>点击节点查看关系</h2>
-        <p>搜索或选择类型后，图谱会高亮匹配节点及其直接关系。第一版使用静态生成数据，便于开源审计和后续替换为 Sigma.js 或 Cytoscape.js。</p>
+        <p>搜索或选择类型后，图谱会高亮匹配节点及其直接关系。Full corpus 可审计全量材料；Core 150 保留可读性。</p>
+        <h3>Paper coverage warning</h3>
+        <p>{researchCoverage.coverageWarning}</p>
       </aside>
+    </div>
+  </section>
+
+  <section class="section" id="coverage-debt">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Coverage Debt / 论文缺口</div>
+          <h2>论文这块还不够，必须公开追踪。</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {researchCoverage.coverageGaps.map((paper) => (
+          <article class="card">
+            <div class="eyebrow">{paper.year} · {paper.status}</div>
+            <h3><a href={paper.url} target="_blank" rel="noopener">{paper.title}</a></h3>
+            <p>{paper.reason}</p>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -63,9 +86,9 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
     let graph = graphs.core;
     const svg = document.querySelector('#knowledge-graph');
     const detail = document.querySelector('#graph-detail');
+    const scopeSelect = document.querySelector('#graph-scope');
     const search = document.querySelector('#graph-search');
     const typeSelect = document.querySelector('#graph-type');
-    const scopeSelect = document.querySelector('#graph-scope');
     const width = 1100;
     const height = 680;
     const center = { x: width / 2, y: height / 2 };
@@ -90,17 +113,15 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
     }
 
     function placeNodes() {
-      const grouped = Object.groupBy
-        ? Object.groupBy(graph.nodes, (node) => node.type)
-        : graph.nodes.reduce((acc, node) => {
-            acc[node.type] ||= [];
-            acc[node.type].push(node);
-            return acc;
-          }, {});
+      const grouped = graph.nodes.reduce((acc, node) => {
+        acc[node.type] ||= [];
+        acc[node.type].push(node);
+        return acc;
+      }, {});
 
       typeOrder.forEach((type, ring) => {
         const list = grouped[type] || [];
-        const radius = [70, 190, 310, 430][ring];
+        const radius = scopeSelect.value === 'full' ? [64, 170, 300, 435][ring] : [70, 190, 310, 420][ring];
         list.forEach((node, index) => {
           const angle = (Math.PI * 2 * index) / Math.max(list.length, 1) - Math.PI / 2 + ring * 0.34;
           node.x = center.x + Math.cos(angle) * radius;
@@ -167,22 +188,13 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
         if (active || related) circle.setAttribute('filter', 'url(#glow)');
         group.append(circle);
 
-        if (node.frontier) {
-          const frontierRing = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-          frontierRing.setAttribute('r', String(16 + node.weight * 1.7));
-          frontierRing.setAttribute('fill', 'none');
-          frontierRing.setAttribute('stroke', '#ffcf7c');
-          frontierRing.setAttribute('stroke-width', '2');
-          frontierRing.setAttribute('stroke-dasharray', '4 6');
-          group.append(frontierRing);
-        }
-
         const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        label.textContent = node.label.length > 28 ? `${node.label.slice(0, 27)}...` : node.label;
+        const maxLabel = scopeSelect.value === 'full' ? 18 : 28;
+        label.textContent = node.label.length > maxLabel ? `${node.label.slice(0, maxLabel - 1)}...` : node.label;
         label.setAttribute('y', String(25 + node.weight));
         label.setAttribute('text-anchor', 'middle');
         label.setAttribute('fill', visible ? '#f6f8ff' : 'rgba(246,248,255,.28)');
-        label.setAttribute('font-size', active || related || node.type === 'cluster' ? '13' : '11');
+        label.setAttribute('font-size', active || related || node.type === 'cluster' ? '13' : scopeSelect.value === 'full' ? '9' : '11');
         label.setAttribute('font-weight', active || node.type === 'cluster' ? '800' : '500');
         group.append(label);
         svg.append(group);
@@ -197,8 +209,6 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
         <div class="eyebrow">${node.type}</div>
         <h2>${node.label}</h2>
         <p>${node.summary || 'No summary yet.'}</p>
-        ${node.group ? `<p><strong>Group:</strong> ${node.group}</p>` : ''}
-        ${node.source ? `<p><strong>Source:</strong> ${node.source}</p>` : ''}
         ${node.url ? `<p><a class="button" href="${node.url}" target="_blank" rel="noopener">Open source</a></p>` : ''}
         <h3>Direct relations</h3>
         <ul>${neighbors.slice(0, 12).map((item) => `<li>${item.type}: ${item.label}</li>`).join('')}</ul>
@@ -213,15 +223,17 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
       detail.innerHTML = `
         <div class="eyebrow">Graph Scope</div>
         <h2>${scope === 'full' ? 'Full corpus' : 'Core 150'}</h2>
-        <p>${graph.nodes.length} nodes / ${graph.edges.length} edges. Search and filters operate inside the selected scope.</p>
+        <p>${graph.nodes.length} nodes and ${graph.edges.length} edges. Use search to inspect papers, projects, mechanisms, and coverage gaps.</p>
       `;
       render();
     }
 
-    setScope('core');
+    indexGraph();
+    placeNodes();
+    render();
+    scopeSelect.addEventListener('change', () => setScope(scopeSelect.value));
     search.addEventListener('input', () => render());
     typeSelect.addEventListener('change', () => render());
-    scopeSelect.addEventListener('change', () => setScope(scopeSelect.value));
   </script>
 </BaseLayout>
 
@@ -242,7 +254,7 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
   .graph-panel { overflow: hidden }
   .graph-toolbar {
     display: grid;
-    grid-template-columns: minmax(180px, 1fr) 180px 170px;
+    grid-template-columns: 150px minmax(180px, 1fr) 180px;
     gap: 12px;
     padding: 16px;
     border-bottom: 1px solid var(--line);

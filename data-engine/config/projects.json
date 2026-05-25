@@ -1,626 +1,69 @@
 [
-  {
-    "name": "Eliza",
-    "repo": "elizaOS/eliza",
-    "category": "evolution",
-    "priority": "critical"
-  },
-  {
-    "name": "SuperAGI",
-    "repo": "TransformerOptimus/SuperAGI",
-    "category": "evolution",
-    "priority": "critical"
-  },
-  {
-    "name": "Agent Zero",
-    "repo": "agent0ai/agent-zero",
-    "category": "evolution",
-    "priority": "critical"
-  },
-  {
-    "name": "OpenEvolve",
-    "repo": "algorithmicsuperintelligence/openevolve",
-    "category": "evolution",
-    "priority": "high"
-  },
-  {
-    "name": "Agents (aiwaves)",
-    "repo": "aiwaves-cn/agents",
-    "category": "evolution",
-    "priority": "high"
-  },
-  {
-    "name": "EvoAgentX",
-    "repo": "EvoAgentX/EvoAgentX",
-    "category": "evolution",
-    "priority": "high"
-  },
-  {
-    "name": "HyperAgents",
-    "repo": "facebookresearch/HyperAgents",
-    "category": "evolution",
-    "priority": "high"
-  },
-  {
-    "name": "evolver",
-    "repo": "EvoMap/evolver",
-    "category": "evolution",
-    "priority": "high"
-  },
-  {
-    "name": "Agent0",
-    "repo": "aiming-lab/Agent0",
-    "category": "evolution",
-    "priority": "high"
-  },
-  {
-    "name": "Ouroboros",
-    "repo": "razzant/ouroboros",
-    "category": "evolution",
-    "priority": "medium"
-  },
-  {
-    "name": "A-Evolve",
-    "repo": "A-EVO-Lab/a-evolve",
-    "category": "evolution",
-    "priority": "medium"
-  },
-  {
-    "name": "SEAgent",
-    "repo": "SunzeY/SEAgent",
-    "category": "evolution",
-    "priority": "medium"
-  },
-  {
-    "name": "Mem0",
-    "repo": "mem0ai/mem0",
-    "category": "memory",
-    "priority": "critical"
-  },
-  {
-    "name": "Letta",
-    "repo": "letta-ai/letta",
-    "category": "memory",
-    "priority": "critical"
-  },
-  {
-    "name": "Cognee",
-    "repo": "topoteretes/cognee",
-    "category": "memory",
-    "priority": "critical"
-  },
-  {
-    "name": "Memvid",
-    "repo": "memvid/memvid",
-    "category": "memory",
-    "priority": "critical"
-  },
-  {
-    "name": "memU",
-    "repo": "NevaMind-AI/memU",
-    "category": "memory",
-    "priority": "critical"
-  },
-  {
-    "name": "MemMachine",
-    "repo": "MemMachine/MemMachine",
-    "category": "memory",
-    "priority": "high"
-  },
-  {
-    "name": "EverMemOS",
-    "repo": "EverMind-AI/EverOS",
-    "category": "memory",
-    "priority": "high"
-  },
-  {
-    "name": "Acontext",
-    "repo": "memodb-io/Acontext",
-    "category": "memory",
-    "priority": "high"
-  },
-  {
-    "name": "ReMe",
-    "repo": "agentscope-ai/ReMe",
-    "category": "memory",
-    "priority": "high"
-  },
-  {
-    "name": "mcp-memory-service",
-    "repo": "doobidoo/mcp-memory-service",
-    "category": "memory",
-    "priority": "high"
-  },
-  {
-    "name": "nocturne_memory",
-    "repo": "Dataojitori/nocturne_memory",
-    "category": "memory",
-    "priority": "high"
-  },
-  {
-    "name": "Mem9",
-    "repo": "mem9-ai/mem9",
-    "category": "memory",
-    "priority": "high"
-  },
-  {
-    "name": "Awesome-AI-Memory",
-    "repo": "IAAR-Shanghai/Awesome-AI-Memory",
-    "category": "memory",
-    "priority": "medium"
-  },
-  {
-    "name": "TeleMem",
-    "repo": "TeleAI-UAGI/telemem",
-    "category": "memory",
-    "priority": "medium"
-  },
-  {
-    "name": "MemSkill",
-    "repo": "ViktorAxelsen/MemSkill",
-    "category": "memory",
-    "priority": "medium"
-  },
-  {
-    "name": "Awesome-Agent-Memory",
-    "repo": "TeleAI-UAGI/Awesome-Agent-Memory",
-    "category": "memory",
-    "priority": "medium"
-  },
-  {
-    "name": "Google A2A",
-    "repo": "a2aproject/A2A",
-    "category": "protocols",
-    "priority": "critical"
-  },
-  {
-    "name": "mcp-use",
-    "repo": "mcp-use/mcp-use",
-    "category": "protocols",
-    "priority": "high"
-  },
-  {
-    "name": "GEP MCP Server",
-    "repo": "EvoMap/gep-mcp-server",
-    "category": "protocols",
-    "priority": "medium"
-  },
-  {
-    "name": "LangChain",
-    "repo": "langchain-ai/langchain",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "OpenHands",
-    "repo": "OpenHands/OpenHands",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "AgenticSeek",
-    "repo": "Fosowl/agenticSeek",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "Coze Studio",
-    "repo": "coze-dev/coze-studio",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "Google ADK",
-    "repo": "google/adk-python",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "Parlant",
-    "repo": "emcie-co/parlant",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "OpenFang",
-    "repo": "RightNow-AI/openfang",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "PydanticAI",
-    "repo": "pydantic/pydantic-ai",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "CoPaw",
-    "repo": "agentscope-ai/QwenPaw",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "MS-Agent",
-    "repo": "modelscope/ms-agent",
-    "category": "platforms",
-    "priority": "high"
-  },
-  {
-    "name": "Claude Code",
-    "repo": "anthropics/claude-code",
-    "category": "coding",
-    "priority": "critical"
-  },
-  {
-    "name": "Codex",
-    "repo": "openai/codex",
-    "category": "coding",
-    "priority": "critical"
-  },
-  {
-    "name": "Aider",
-    "repo": "Aider-AI/aider",
-    "category": "coding",
-    "priority": "critical"
-  },
-  {
-    "name": "Roo Code",
-    "repo": "RooCodeInc/Roo-Code",
-    "category": "coding",
-    "priority": "critical"
-  },
-  {
-    "name": "Devika",
-    "repo": "stitionai/devika",
-    "category": "coding",
-    "priority": "critical"
-  },
-  {
-    "name": "SWE-Agent",
-    "repo": "SWE-agent/SWE-agent",
-    "category": "coding",
-    "priority": "critical"
-  },
-  {
-    "name": "Plandex",
-    "repo": "plandex-ai/plandex",
-    "category": "coding",
-    "priority": "critical"
-  },
-  {
-    "name": "Trae Agent",
-    "repo": "bytedance/trae-agent",
-    "category": "coding",
-    "priority": "critical"
-  },
-  {
-    "name": "Open SWE",
-    "repo": "langchain-ai/open-swe",
-    "category": "coding",
-    "priority": "high"
-  },
-  {
-    "name": "Mini-SWE-Agent",
-    "repo": "SWE-agent/mini-swe-agent",
-    "category": "coding",
-    "priority": "high"
-  },
-  {
-    "name": "Reflexion",
-    "repo": "noahshinn/reflexion",
-    "category": "coding",
-    "priority": "high"
-  },
-  {
-    "name": "Promptfoo",
-    "repo": "promptfoo/promptfoo",
-    "category": "prompt-optimization",
-    "priority": "critical"
-  },
-  {
-    "name": "TextGrad",
-    "repo": "zou-group/textgrad",
-    "category": "prompt-optimization",
-    "priority": "high"
-  },
-  {
-    "name": "NeMo Guardrails",
-    "repo": "NVIDIA-NeMo/Guardrails",
-    "category": "safety",
-    "priority": "high"
-  },
-  {
-    "name": "Open-AutoGLM",
-    "repo": "zai-org/Open-AutoGLM",
-    "category": "embodied",
-    "priority": "critical"
-  },
-  {
-    "name": "LeRobot",
-    "repo": "huggingface/lerobot",
-    "category": "embodied",
-    "priority": "critical"
-  },
-  {
-    "name": "Nanobrowser",
-    "repo": "nanobrowser/nanobrowser",
-    "category": "embodied",
-    "priority": "critical"
-  },
-  {
-    "name": "XcodeBuildMCP",
-    "repo": "getsentry/XcodeBuildMCP",
-    "category": "embodied",
-    "priority": "high"
-  },
-  {
-    "name": "Mobile MCP",
-    "repo": "mobile-next/mobile-mcp",
-    "category": "embodied",
-    "priority": "high"
-  },
-  {
-    "name": "ROS-LLM",
-    "repo": "Auromix/ROS-LLM",
-    "category": "embodied",
-    "priority": "medium"
-  },
-  {
-    "name": "Awesome-Self-Evolving-Agents",
-    "repo": "EvoAgentX/Awesome-Self-Evolving-Agents",
-    "category": "community",
-    "priority": "high"
-  },
-  {
-    "name": "dify",
-    "repo": "langgenius/dify",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "MetaGPT",
-    "repo": "FoundationAgents/MetaGPT",
-    "category": "multi-agent",
-    "priority": "critical"
-  },
-  {
-    "name": "autogen",
-    "repo": "microsoft/autogen",
-    "category": "multi-agent",
-    "priority": "critical"
-  },
-  {
-    "name": "crewAI",
-    "repo": "crewAIInc/crewAI",
-    "category": "multi-agent",
-    "priority": "critical"
-  },
-  {
-    "name": "goose",
-    "repo": "aaif-goose/goose",
-    "category": "coding",
-    "priority": "critical"
-  },
-  {
-    "name": "langgraph",
-    "repo": "langchain-ai/langgraph",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "haystack",
-    "repo": "deepset-ai/haystack",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "agentscope",
-    "repo": "agentscope-ai/agentscope",
-    "category": "multi-agent",
-    "priority": "critical"
-  },
-  {
-    "name": "mastra",
-    "repo": "mastra-ai/mastra",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "swarm",
-    "repo": "openai/swarm",
-    "category": "multi-agent",
-    "priority": "critical"
-  },
-  {
-    "name": "openai-agents-python",
-    "repo": "openai/openai-agents-python",
-    "category": "multi-agent",
-    "priority": "critical"
-  },
-  {
-    "name": "camel",
-    "repo": "camel-ai/camel",
-    "category": "multi-agent",
-    "priority": "critical"
-  },
-  {
-    "name": "ten-framework",
-    "repo": "TEN-framework/ten-framework",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "agents",
-    "repo": "livekit/agents",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "agent-framework",
-    "repo": "microsoft/agent-framework",
-    "category": "multi-agent",
-    "priority": "critical"
-  },
-  {
-    "name": "agent-skills",
-    "repo": "addyosmani/agent-skills",
-    "category": "coding",
-    "priority": "critical"
-  },
-  {
-    "name": "MindSearch",
-    "repo": "InternLM/MindSearch",
-    "category": "multi-agent",
-    "priority": "high"
-  },
-  {
-    "name": "PraisonAI",
-    "repo": "MervinPraison/PraisonAI",
-    "category": "multi-agent",
-    "priority": "high"
-  },
-  {
-    "name": "swarms",
-    "repo": "kyegomez/swarms",
-    "category": "multi-agent",
-    "priority": "high"
-  },
-  {
-    "name": "open-multi-agent",
-    "repo": "JackChen-me/open-multi-agent",
-    "category": "multi-agent",
-    "priority": "high"
-  },
-  {
-    "name": "agency-swarm",
-    "repo": "VRSEN/agency-swarm",
-    "category": "multi-agent",
-    "priority": "high"
-  },
-  {
-    "name": "BotSharp",
-    "repo": "SciSharp/BotSharp",
-    "category": "multi-agent",
-    "priority": "high"
-  },
-  {
-    "name": "LLMStack",
-    "repo": "trypromptly/LLMStack",
-    "category": "multi-agent",
-    "priority": "high"
-  },
-  {
-    "name": "agentUniverse",
-    "repo": "agentuniverse-ai/agentUniverse",
-    "category": "multi-agent",
-    "priority": "high"
-  },
-  {
-    "name": "GoClaw",
-    "repo": "nextlevelbuilder/goclaw",
-    "category": "multi-agent",
-    "priority": "high"
-  },
-  {
-    "name": "memgraph",
-    "repo": "memgraph/memgraph",
-    "category": "memory",
-    "priority": "high"
-  },
-  {
-    "name": "GenAI Agents",
-    "repo": "NirDiamant/GenAI_Agents",
-    "category": "multi-agent",
-    "priority": "critical"
-  },
-  {
-    "name": "PySpur",
-    "repo": "PySpur-Dev/pyspur",
-    "category": "platforms",
-    "priority": "high"
-  },
-  {
-    "name": "CowAgent",
-    "repo": "zhayujie/CowAgent",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "honcho",
-    "repo": "plastic-labs/honcho",
-    "category": "memory",
-    "priority": "high"
-  },
-  {
-    "name": "holaOS",
-    "repo": "holaboss-ai/holaOS",
-    "category": "memory",
-    "priority": "high"
-  },
-  {
-    "name": "Taste-Skill",
-    "repo": "Leonxlnx/taste-skill",
-    "category": "coding",
-    "priority": "critical"
-  },
-  {
-    "name": "Agent-Squad",
-    "repo": "2FastLabs/agent-squad",
-    "category": "platforms",
-    "priority": "high"
-  },
-  {
-    "name": "Sage",
-    "repo": "ZHangZHengEric/Sage",
-    "category": "multi-agent",
-    "priority": "high"
-  },
-  {
-    "name": "ChatLab",
-    "repo": "ChatLab/ChatLab",
-    "category": "memory",
-    "priority": "high"
-  },
-  {
-    "name": "Golutra",
-    "repo": "golutra/golutra",
-    "category": "multi-agent",
-    "priority": "high"
-  },
-  {
-    "name": "ViteMCP",
-    "repo": "punkpeye/fastmcp",
-    "category": "protocols",
-    "priority": "high"
-  },
-  {
-    "name": "Vibe-Trading",
-    "repo": "HKUDS/Vibe-Trading",
-    "category": "multi-agent",
-    "priority": "high"
-  },
-  {
-    "name": "agno",
-    "repo": "agno-agi/agno",
-    "category": "platforms",
-    "priority": "critical"
-  },
-  {
-    "name": "context-mode",
-    "repo": "mksglu/context-mode",
-    "category": "coding",
-    "priority": "critical"
-  },
-  {
-    "name": "openagent",
-    "repo": "the-open-agent/openagent",
-    "category": "protocols",
-    "priority": "high"
-  },
-  {
-    "name": "datachain",
-    "repo": "datachain-ai/datachain",
-    "category": "memory",
-    "priority": "high"
-  }
+  {"name":"AutoGPT","repo":"Significant-Gravitas/AutoGPT","category":"agent-framework","priority":"critical"},
+  {"name":"OpenClaw","repo":"openclaw/openclaw","category":"ai-assistant","priority":"critical"},
+  {"name":"Hermes Agent","repo":"NousResearch/hermes-agent","category":"ai-assistant","priority":"critical"},
+  {"name":"Claw Code","repo":"ultraworkers/claw-code","category":"coding-agent","priority":"critical"},
+  {"name":"BabyAGI","repo":"yoheinakajima/babyagi","category":"agent-framework","priority":"high"},
+  {"name":"FunSearch","repo":"google-deepmind/funsearch","category":"evolutionary","priority":"high"},
+  {"name":"OPRO","repo":"google-deepmind/opro","category":"evolutionary","priority":"medium"},
+  {"name":"DSPy","repo":"stanfordnlp/dspy","category":"prompt-optimization","priority":"high"},
+  {"name":"LLaMEA","repo":"AI-algorithms-Benchmarking/LLaMEA","category":"evolutionary","priority":"medium"},
+  {"name":"ReEvo","repo":"xiangwen-lee/ReEvo","category":"evolutionary","priority":"medium"},
+  {"name":"ADAS","repo":"ShengranHu/ADAS","category":"self-evolving","priority":"high"},
+  {"name":"TTRL","repo":"facebookresearch/TTRL","category":"self-training","priority":"medium"},
+  {"name":"Browser-Use","repo":"browser-use/browser-use","category":"web-agent","priority":"medium"},
+  {"name":"Flowise","repo":"FlowiseAI/Flowise","category":"ai-platform","priority":"high"},
+  {"name":"n8n","repo":"n8n-io/n8n","category":"workflow","priority":"high"},
+  {"name":"Ollama","repo":"ollama/ollama","category":"inference","priority":"high"},
+  {"name":"Open WebUI","repo":"open-webui/open-webui","category":"ai-platform","priority":"high"},
+  {"name":"Eliza","repo":"elizaOS/eliza","category":"evolution","priority":"critical"},
+  {"name":"Agent Zero","repo":"agent0ai/agent-zero","category":"evolution","priority":"critical"},
+  {"name":"OpenEvolve","repo":"algorithmicsuperintelligence/openevolve","category":"evolution","priority":"high"},
+  {"name":"EvoAgentX","repo":"EvoAgentX/EvoAgentX","category":"evolution","priority":"high"},
+  {"name":"evolver","repo":"EvoMap/evolver","category":"evolution","priority":"high"},
+  {"name":"SuperAGI","repo":"TransformerOptimus/SuperAGI","category":"evolution","priority":"high"},
+  {"name":"HyperAgents","repo":"facebookresearch/HyperAgents","category":"evolution","priority":"medium"},
+  {"name":"Mem0","repo":"mem0ai/mem0","category":"memory","priority":"critical"},
+  {"name":"Letta","repo":"letta-ai/letta","category":"memory","priority":"critical"},
+  {"name":"Cognee","repo":"topoteretes/cognee","category":"memory","priority":"high"},
+  {"name":"Memvid","repo":"memvid/memvid","category":"memory","priority":"high"},
+  {"name":"LangChain","repo":"langchain-ai/langchain","category":"platforms","priority":"critical"},
+  {"name":"OpenHands","repo":"All-Hands-AI/OpenHands","category":"platforms","priority":"critical"},
+  {"name":"dify","repo":"langgenius/dify","category":"platforms","priority":"critical"},
+  {"name":"AgenticSeek","repo":"Fosowl/agenticSeek","category":"platforms","priority":"high"},
+  {"name":"Google ADK","repo":"google/adk-python","category":"platforms","priority":"high"},
+  {"name":"PydanticAI","repo":"pydantic/pydantic-ai","category":"platforms","priority":"high"},
+  {"name":"Coze Studio","repo":"coze-dev/coze-studio","category":"platforms","priority":"high"},
+  {"name":"OpenFang","repo":"RightNow-AI/openfang","category":"platforms","priority":"high"},
+  {"name":"langgraph","repo":"langchain-ai/langgraph","category":"platforms","priority":"high"},
+  {"name":"haystack","repo":"deepset-ai/haystack","category":"platforms","priority":"high"},
+  {"name":"mastra","repo":"mastra-ai/mastra","category":"platforms","priority":"high"},
+  {"name":"CowAgent","repo":"zhayujie/chatgpt-on-wechat","category":"platforms","priority":"high"},
+  {"name":"agno","repo":"agno-agi/agno","category":"platforms","priority":"high"},
+  {"name":"Claude Code","repo":"anthropics/claude-code","category":"coding","priority":"critical"},
+  {"name":"Codex","repo":"openai/codex","category":"coding","priority":"critical"},
+  {"name":"Aider","repo":"Aider-AI/aider","category":"coding","priority":"critical"},
+  {"name":"goose","repo":"block/goose","category":"coding","priority":"critical"},
+  {"name":"agent-skills","repo":"addyosmani/agent-skills","category":"coding","priority":"high"},
+  {"name":"Roo Code","repo":"RooCodeInc/Roo-Code","category":"coding","priority":"high"},
+  {"name":"SWE-Agent","repo":"SWE-agent/SWE-agent","category":"coding","priority":"high"},
+  {"name":"Devika","repo":"stitionai/devika","category":"coding","priority":"high"},
+  {"name":"Plandex","repo":"plandex-ai/plandex","category":"coding","priority":"high"},
+  {"name":"Reflexion","repo":"noahshinn/reflexion","category":"coding","priority":"medium"},
+  {"name":"MetaGPT","repo":"geekan/MetaGPT","category":"multi-agent","priority":"critical"},
+  {"name":"autogen","repo":"microsoft/autogen","category":"multi-agent","priority":"critical"},
+  {"name":"crewAI","repo":"crewAIInc/crewAI","category":"multi-agent","priority":"critical"},
+  {"name":"openai-agents-python","repo":"openai/openai-agents-python","category":"multi-agent","priority":"high"},
+  {"name":"camel","repo":"camel-ai/camel","category":"multi-agent","priority":"high"},
+  {"name":"agentscope","repo":"modelscope/agentscope","category":"multi-agent","priority":"high"},
+  {"name":"swarm","repo":"openai/swarm","category":"multi-agent","priority":"high"},
+  {"name":"GenAI Agents","repo":"NirDiamant/GenAI_Agents","category":"multi-agent","priority":"high"},
+  {"name":"Google A2A","repo":"a2aproject/A2A","category":"protocols","priority":"high"},
+  {"name":"mcp-use","repo":"mcp-use/mcp-use","category":"protocols","priority":"high"},
+  {"name":"NeMo Guardrails","repo":"NVIDIA/NeMo-Guardrails","category":"safety","priority":"high"},
+  {"name":"LeRobot","repo":"huggingface/lerobot","category":"embodied","priority":"high"},
+  {"name":"Open-AutoGLM","repo":"zai-org/AutoGLM","category":"embodied","priority":"high"},
+  {"name":"Promptfoo","repo":"promptfoo/promptfoo","category":"prompt-optimization","priority":"high"},
+  {"name":"TextGrad","repo":"zou-group/textgrad","category":"prompt-optimization","priority":"medium"},
+  {"name":"Awesome-Self-Evolving-Agents","repo":"EvoAgentX/Awesome-Self-Evolving-Agents","category":"community","priority":"medium"}
 ]

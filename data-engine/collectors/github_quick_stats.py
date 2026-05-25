@@ -31,7 +31,7 @@ def collect_repo_stats(client, repo, output_dir):
 def main():
     parser = argparse.ArgumentParser(description="Quick GitHub repo stats (1 call/repo)")
     parser.add_argument("--token", default=None)
-    parser.add_argument("--output", default="./storage")
+    parser.add_argument("--output", default="./storage-github")
     parser.add_argument("--config", default="./config/projects.json")
     parser.add_argument("--repo", default=None)
     parser.add_argument("--all", action="store_true", dest="all_projects")
@@ -77,10 +77,10 @@ def main():
         "repos_total": len(repos), "success": ok, "failed": fail, "token_used": bool(token),
         "repos": sorted(all_data, key=lambda x: x.get("stars", 0), reverse=True),
     }
-    path = os.path.join(args.output, "_github_stats_summary.json")
-    with open(path, "w") as f:
+    os.makedirs(args.output, exist_ok=True)
+    with open(os.path.join(args.output, "_github_stats_summary.json"), "w") as f:
         json.dump(summary, f, indent=2, default=str)
-    print(f"\n📊 Done: {ok} ok, {fail} fail. Summary: {path}")
+    print(f"\n📊 Done: {ok} ok, {fail} fail. Summary saved.")
 
 
 if __name__ == "__main__":

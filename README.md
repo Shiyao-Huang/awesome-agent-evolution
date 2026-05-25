@@ -11,8 +11,8 @@
 - time_slice: 2026-05
 - brand: **Evolver — Agent Evolution Platform**
 - repo_records: 355 indexed public entries (348 core records + 6 AnySearch supplement records + 1 user-reported supplement)
-- paper_raw_records: 184 from `raw-papers/`
-- paper_unique_ids_listed: 113 (deduplicated for awesome-list readability; raw timestamp index keeps all 184 records)
+- paper_raw_records: 185 markdown files from `raw-papers/`
+- paper_unique_ids_listed: 115 local raw unique IDs (README keeps a smaller deduplicated awesome-list view for readability)
 - review_sources: `paper-reviews/`, `research/repo-classification.*`, `research/asset-processing-anysearch-supplement-2026-05-22.*`, `analysis/*`, `output/raw-papers-timestamp-index.json`
 
 ## Why Evolver? / 为什么做 Evolver？
@@ -110,19 +110,37 @@ These records were added after the first raw index generation via AnySearch beca
 
 Public supplement record / 公开补充记录: [`research/asset-processing-anysearch-supplement-2026-05-22.md`](research/asset-processing-anysearch-supplement-2026-05-22.md)
 
+### Paper coverage is not enough yet / 论文覆盖仍不够
+
+One sentence / 一句话：**the paper layer is useful but still under-collected; the public site must expose coverage debt instead of pretending 19 front-page papers are enough.** / **论文层已有价值，但收集仍不够；公开站必须暴露覆盖债务，不能把 19 篇前台代表论文包装成完整图谱。**
+
+Three sentences / 三句话：The repo currently has 184+ raw paper records and 135+ review files, but the landing site previously surfaced only a small featured subset. The next pass must prioritize mainstream survey, benchmark/evaluation, safety/governance, long-term memory, and experience-learning papers before adding more low-signal project cards. Coverage quality is tracked as a first-class artifact, not as a hidden TODO.
+
+| Priority gap / 优先缺口 | Role in README / README 角色 | Source |
+|---|---|---|
+| A Survey on Self-Evolution of Large Language Models | Top-down LLM self-evolution taxonomy / LLM 自进化总纲 | https://arxiv.org/abs/2404.14387 |
+| A Survey of Self-Evolving Agents | Agent-specific taxonomy anchor / Agent 自进化分类锚点 | https://arxiv.org/abs/2507.21046 |
+| A Comprehensive Survey of Self-Evolving AI Agents | Independent survey cross-check / 独立综述交叉校验 | https://arxiv.org/abs/2508.07407 |
+| Large Language Models Can Self-Improve At Web Agent Tasks | WebArena self-improvement benchmark / Web Agent 评测入口 | https://arxiv.org/abs/2405.20309 |
+| OPT-BENCH | Iterative self-optimization benchmark / 迭代自优化评测 | https://arxiv.org/abs/2605.08904 |
+| Experiential Reflective Learning for Self-Improving LLM Agents | Experience-to-heuristic learning / 经验反思学习 | https://arxiv.org/abs/2603.24639 |
+| Specification Self-Correction | Reward hacking as diagnostic signal / 规格自修正与防钻空子 | https://arxiv.org/abs/2507.18742 |
+| Inference-Time Reward Hacking in Large Language Models | Proxy reward over-optimization safety / 推理期奖励黑客安全基线 | https://arxiv.org/abs/2506.19248 |
+| Safety is Essential for Responsible Open-Ended Systems | Open-ended evolution governance / 开放式进化治理 | https://arxiv.org/abs/2502.04512 |
+
 ### Quality-ranked frontier projects / 质量优先前沿项目
 
-These entries are ranked by fit to the Self Evolve thesis, evidence quality, and usefulness as architectural anchors. This table intentionally does not rank by GitHub stars. / 以下条目按 Self Evolve 主题贴合度、证据质量和架构锚点价值排序，不按 GitHub star 排序。
+These entries are ranked by fit to Agent Evolution, evidence quality, and role clarity, not by GitHub stars. / 以下条目按主题贴合度、证据质量和角色清晰度排序，不按 GitHub star 排序。
 
-| Rank | Repo | Quality judgment / 质量判断 | README role / 放在 README 的角色 |
+| Rank | Repo | Quality judgment / 质量判断 | README role / 角色 |
 |---:|---|---|---|
-| 1 | [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | Most on-theme: fixed base model, evolving harness, Terminal-Bench 2 evidence. / 最贴主题：固定 base model，进化 harness，有 Terminal-Bench 2 指标。 | Harness evolution / 进化闭环 |
-| 2 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | Strongest ecosystem anchor and practical runtime/product surface; needs separate hype audit because star/fork signal is unusual. / 生态锚点最强，runtime/product 形态完整；star/fork 异常高，需要单独 hype audit。 | Runtime / 生态入口 |
-| 3 | [obra/superpowers](https://github.com/obra/superpowers) | High-quality methodology: Skill, TDD, debugging, review, and subagent workflows can become reusable operating manuals. / 方法论质量高，Skill、TDD、debug、review、subagent 工作流可沉淀为操作手册。 | Skill methodology |
-| 4 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | Good fit for growing personal agents and self-improving personal runtimes. / 和“会成长的个人 Agent”贴合，适合作为 self-improving personal agent 案例。 | Personal agent runtime |
-| 5 | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | Precise memory-layer entry; not a complete agent, but important as Evolver memory substrate. / 主题很准：持久记忆层。不是完整 Agent，但作为 Evolver memory substrate 很重要。 | Memory layer |
-| 6 | [pinchbench/skill](https://github.com/pinchbench/skill) | Valuable benchmark signal; currently tied to the OpenClaw ecosystem, so independence and maturity need continued observation. / 评测价值高，但范围偏 OpenClaw 生态，独立性和成熟度需要继续观察。 | Benchmark / Eval |
-| 7 | [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | Product and UX signal is useful, but it is closer to an application entry than a core evolution mechanism. / 产品化和 UX 信号不错，但相对更像应用入口。 | Product/application signal |
+| 1 | [agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | 最贴主题：固定 base model，进化 harness，并有 Terminal-Bench 2 指标。 | Harness evolution / 进化闭环 |
+| 2 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 生态锚点最强，runtime/product 形态完整；star/fork 异常高，需 hype audit。 | Runtime / 生态入口 |
+| 3 | [obra/superpowers](https://github.com/obra/superpowers) | 方法论质量高，Skill、TDD、debug、review、subagent 工作流可沉淀操作手册。 | Skill methodology |
+| 4 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 和“会成长的个人 Agent”贴合，适合作为 self-improving personal agent 案例。 | Personal agent runtime |
+| 5 | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | 主题很准：持久记忆层，是 Evolver 的 memory substrate。 | Memory layer |
+| 6 | [pinchbench/skill](https://github.com/pinchbench/skill) | 评测价值高，但偏 OpenClaw 生态，独立性和成熟度需继续观察。 | Benchmark / Eval |
+| 7 | [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | 产品化和 UX 信号不错，更像应用入口与采用信号。 | Product/application signal |
 
 ## Frameworks / 框架
 

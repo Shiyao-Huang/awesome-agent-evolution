@@ -1,75 +1,107 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-const nodes = [
-  { id: 'core', label: 'Self Evolve', role: 'index hub', x: 330, y: 258, size: 30, tone: '#7cf7d4' },
-  { id: 'memory', label: 'Memory', role: 'experience substrate', x: 188, y: 154, size: 18, tone: '#9f7cff' },
-  { id: 'eval', label: 'Evaluator', role: 'fitness signal', x: 468, y: 142, size: 22, tone: '#ffcf7c' },
-  { id: 'code', label: 'Code Repair', role: 'self modification', x: 510, y: 338, size: 17, tone: '#7cf7d4' },
-  { id: 'papers', label: 'Papers', role: 'evidence corpus', x: 154, y: 354, size: 20, tone: '#ff7cae' },
-  { id: 'agents', label: 'Agents', role: 'runtime systems', x: 330, y: 426, size: 16, tone: '#9f7cff' },
-  { id: 'bench', label: 'Benchmarks', role: 'regression gates', x: 326, y: 88, size: 15, tone: '#ffcf7c' },
-  { id: 'graph', label: 'Knowledge Graph', role: 'relations', x: 88, y: 246, size: 14, tone: '#7cf7d4' }
+type NodeItem = {
+  label: string;
+  x: number;
+  y: number;
+  kind: 'paper' | 'project' | 'memory' | 'eval' | 'safety';
+};
+
+const nodes: NodeItem[] = [
+  { label: 'Papers', x: 18, y: 22, kind: 'paper' },
+  { label: 'Harness', x: 56, y: 16, kind: 'project' },
+  { label: 'Memory', x: 82, y: 36, kind: 'memory' },
+  { label: 'Eval', x: 72, y: 72, kind: 'eval' },
+  { label: 'Safety', x: 30, y: 76, kind: 'safety' },
+  { label: 'Skills', x: 46, y: 48, kind: 'project' }
 ];
 
-const links = [
-  ['core', 'memory'], ['core', 'eval'], ['core', 'code'], ['core', 'papers'],
-  ['core', 'agents'], ['core', 'bench'], ['core', 'graph'], ['eval', 'bench'],
-  ['eval', 'code'], ['memory', 'papers'], ['agents', 'code'], ['graph', 'papers']
-] as const;
+const edges = [
+  [0, 5],
+  [1, 5],
+  [2, 5],
+  [3, 5],
+  [4, 3],
+  [0, 3],
+  [1, 3],
+  [2, 4]
+];
 
 export default function EvolutionNetwork() {
   const rootRef = useRef<HTMLDivElement>(null);
-  const [selectedId, setSelectedId] = useState('core');
-  const selected = useMemo(() => nodes.find((node) => node.id === selectedId) || nodes[0], [selectedId]);
-  const byId = useMemo(() => new Map(nodes.map((node) => [node.id, node])), []);
 
   useEffect(() => {
-    if (!rootRef.current || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const root = rootRef.current;
+    if (!root) return;
+
     const ctx = gsap.context(() => {
-      gsap.fromTo('.network-link', { strokeDashoffset: 60, opacity: 0 }, { strokeDashoffset: 0, opacity: 0.72, duration: 1.1, stagger: 0.04 });
-      gsap.fromTo('.network-node-group', { scale: 0.5, opacity: 0, transformOrigin: 'center center' }, { scale: 1, opacity: 1, duration: 0.65, stagger: 0.05, ease: 'back.out(1.8)' });
-      gsap.to('.network-link', { strokeDashoffset: -120, duration: 9, repeat: -1, ease: 'none' });
-      gsap.to('.network-node-group', { y: (_, target) => (target.dataset.float === 'up' ? -8 : 8), duration: 2.8, repeat: -1, yoyo: true, stagger: 0.16, ease: 'sine.inOut' });
-      gsap.to('.network-core-ring', { scale: 1.18, opacity: 0.18, duration: 1.8, repeat: -1, yoyo: true, transformOrigin: 'center center' });
-      gsap.to('.signal-bar', { scaleX: 0.24, duration: 1.2, repeat: -1, yoyo: true, stagger: 0.14, transformOrigin: 'left center' });
-    }, rootRef);
+      gsap.fromTo(
+        '.network-node',
+        { opacity: 0, scale: 0.72 },
+        { opacity: 1, scale: 1, duration: 0.7, stagger: 0.08, ease: 'back.out(1.5)' }
+      );
+      gsap.to('.network-node', {
+        y: (index) => (index % 2 === 0 ? -8 : 8),
+        duration: 2.8,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut',
+        stagger: 0.12
+      });
+      gsap.fromTo(
+        '.network-edge',
+        { strokeDashoffset: 160, opacity: 0.18 },
+        { strokeDashoffset: 0, opacity: 0.72, duration: 1.6, stagger: 0.06, ease: 'power2.out' }
+      );
+    }, root);
+
     return () => ctx.revert();
   }, []);
 
   return (
-    <div className="network-stage" ref={rootRef}>
-      <div className="network-topline"><span>Live mechanism map</span><span>{nodes.length} nodes / {links.length} edges</span></div>
-      <svg className="network-svg" viewBox="0 0 640 520" role="img" aria-label="Animated Self Evolve knowledge graph">
+    <div className="evolution-network" ref={rootRef} aria-label="Self Evolve knowledge network">
+      <svg viewBox="0 0 100 100" role="img">
         <defs>
-          <filter id="network-glow"><feGaussianBlur stdDeviation="4" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
-          <radialGradient id="network-core-fill"><stop offset="0%" stopColor="#f6f8ff" /><stop offset="42%" stopColor="#7cf7d4" /><stop offset="100%" stopColor="#9f7cff" /></radialGradient>
+          <radialGradient id="network-core" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#7cf7d4" />
+            <stop offset="55%" stopColor="#9f7cff" />
+            <stop offset="100%" stopColor="#050615" />
+          </radialGradient>
         </defs>
-        {links.map(([sourceId, targetId]) => {
-          const source = byId.get(sourceId);
-          const target = byId.get(targetId);
-          if (!source || !target) return null;
-          const active = sourceId === selectedId || targetId === selectedId;
-          return <line className="network-link" key={`${sourceId}-${targetId}`} x1={source.x} y1={source.y} x2={target.x} y2={target.y} stroke={active ? selected.tone : 'rgba(246,248,255,.24)'} strokeWidth={active ? 2.2 : 1.1} strokeDasharray="9 14" />;
-        })}
-        {nodes.map((node, index) => {
-          const active = node.id === selectedId;
-          const isCore = node.id === 'core';
+        {edges.map(([sourceIndex, targetIndex]) => {
+          const source = nodes[sourceIndex];
+          const target = nodes[targetIndex];
           return (
-            <g key={node.id} className="network-node-group" data-float={index % 2 === 0 ? 'up' : 'down'} transform={`translate(${node.x} ${node.y})`} onClick={() => setSelectedId(node.id)} onMouseEnter={() => setSelectedId(node.id)} tabIndex={0} role="button" aria-label={`${node.label}: ${node.role}`}>
-              {isCore && <circle className="network-core-ring" r="66" fill="none" stroke="#7cf7d4" strokeWidth="1.5" />}
-              <circle r={node.size + 12} fill={isCore ? 'url(#network-core-fill)' : node.tone} opacity={active ? 0.28 : 0.12} filter={active ? 'url(#network-glow)' : undefined} />
-              <circle r={node.size} fill={isCore ? 'url(#network-core-fill)' : '#090b1e'} stroke={node.tone} strokeWidth={active ? 3 : 1.5} filter={active ? 'url(#network-glow)' : undefined} />
-              <text y={node.size + 25} textAnchor="middle" className={active ? 'network-label active' : 'network-label'}>{node.label}</text>
-            </g>
+            <line
+              className="network-edge"
+              key={`${source.label}-${target.label}`}
+              x1={source.x}
+              y1={source.y}
+              x2={target.x}
+              y2={target.y}
+              pathLength="160"
+            />
           );
         })}
+        <circle className="network-core" cx="50" cy="50" r="13" fill="url(#network-core)" />
+        <text className="network-core-text" x="50" y="48">
+          Observe
+        </text>
+        <text className="network-core-text small" x="50" y="54">
+          Patch / Verify
+        </text>
+        {nodes.map((node) => (
+          <g className={`network-node ${node.kind}`} key={node.label} transform={`translate(${node.x} ${node.y})`}>
+            <circle r="6.8" />
+            <text y="13">{node.label}</text>
+          </g>
+        ))}
       </svg>
-      <div className="network-card">
-        <div><span className="network-card-kicker">Selected</span><h2>{selected.label}</h2><p>{selected.role}</p></div>
-        <div className="signal-stack" aria-hidden="true"><span className="signal-bar" /><span className="signal-bar" /><span className="signal-bar" /></div>
+      <div className="network-caption">
+        <strong>Full corpus graph</strong>
+        <span>papers, repos, skills, memory, eval, safety</span>
       </div>
     </div>
   );
 }
-

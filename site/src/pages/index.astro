@@ -4,6 +4,8 @@ import { projects, projectGroups } from '@/data/projects';
 import { featuredResearch } from '@/data/research';
 import { communityLinks } from '@/data/community';
 import { knowledgeGraphStats } from '@/data/knowledgeGraph';
+import { researchCoverage } from '@/data/researchCoverage';
+import { curatedFrontierProjects } from '@/data/curatedFrontier';
 import EvolutionNetwork from '@/components/EvolutionNetwork';
 import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf()).slice(0,3);
@@ -23,7 +25,7 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
           <a class="button" href="/star-analysis/">Star 质量分析</a>
         </div>
         <div class="metrics" aria-label="研究站点指标">
-          <div class="metric"><strong>{featuredResearch.length}</strong><span>篇代表论文进入前台</span></div>
+          <div class="metric"><strong>{researchCoverage.reviewFiles}</strong><span>篇论文 review 已入库</span></div>
           <div class="metric"><strong>{projects.length}</strong><span>个精选 GitHub 开源项目</span></div>
           <div class="metric"><strong>{knowledgeGraphStats.nodes}</strong><span>个图谱节点</span></div>
         </div>
@@ -87,6 +89,11 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
         </div>
         <a class="button" href="/research/">全部研究</a>
       </div>
+      <div class="notice-band">
+        <strong>论文收集仍不够。</strong>
+        <span>已有 {researchCoverage.rawUniqueIds} 个 raw unique paper ID 与 {researchCoverage.reviewFiles} 篇 review，但前台代表卡片只有 {featuredResearch.length} 篇；下一步优先补 survey、benchmark/eval、安全治理、经验学习与长期记忆。</span>
+        <a href="/graph/#coverage-debt">查看缺口</a>
+      </div>
       <div class="timeline">
         {featuredResearch.map((paper) => (
           <article class="timeline-item">
@@ -100,6 +107,28 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
                 {paper.tags.map((t) => <span class="pill">{t}</span>)}
               </div>
             </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="frontier">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Quality Ranked Frontier</div>
+          <h2>质量优先的前沿项目锚点</h2>
+        </div>
+        <a class="button" href="/star-analysis/">查看 hype audit</a>
+      </div>
+      <div class="grid">
+        {curatedFrontierProjects.map((item) => (
+          <article class="card">
+            <div class="eyebrow">Rank {item.rank} · {item.role}</div>
+            <h3><a href={item.url} target="_blank" rel="noopener">{item.name}</a></h3>
+            <p>{item.quality}</p>
+            {item.caution && <p style="color: var(--hot)">{item.caution}</p>}
           </article>
         ))}
       </div>

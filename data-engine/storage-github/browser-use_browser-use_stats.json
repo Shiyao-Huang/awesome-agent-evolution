@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "collection_timestamp": "2026-05-22T13:26:19.150507+00:00",
+    "repo": "browser-use/browser-use",
+    "collector_name": "github_quick_stats"
+  },
+  "data": {
+    "full_name": "browser-use/browser-use",
+    "description": "\ud83c\udf10 Make websites accessible for AI agents. Automate tasks online with ease.",
+    "stars": 95084,
+    "forks": 10713,
+    "open_issues": 228,
+    "watchers": 433,
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+      "ai-agents",
+      "ai-tools",
+      "browser-automation",
+      "browser-use",
+      "llm",
+      "playwright",
+      "python"
+    ],
+    "created_at": "2024-10-31T16:00:56Z",
+    "updated_at": "2026-05-22T13:01:32Z",
+    "pushed_at": "2026-05-21T17:15:47Z",
+    "default_branch": "main",
+    "archived": false,
+    "network_count": 10713
+  }
+}

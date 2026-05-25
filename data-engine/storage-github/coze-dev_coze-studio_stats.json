@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "collection_timestamp": "2026-05-22T13:49:01.341418+00:00",
+    "repo": "coze-dev/coze-studio",
+    "collector_name": "github_quick_stats"
+  },
+  "data": {
+    "full_name": "coze-dev/coze-studio",
+    "description": "An AI agent development platform with all-in-one visual tools, simplifying agent creation, debugging, and deployment like never before. Coze your way to AI Agent creation.",
+    "stars": 20810,
+    "forks": 3020,
+    "open_issues": 511,
+    "watchers": 123,
+    "language": "TypeScript",
+    "license": "Apache-2.0",
+    "topics": [
+      "agent",
+      "agent-platform",
+      "ai-plugins",
+      "chatbot",
+      "chatbot-framework",
+      "coze",
+      "coze-platform",
+      "generative-ai",
+      "go",
+      "kouzi",
+      "low-code-ai",
+      "multimodel-ai",
+      "no-code",
+      "rag",
+      "studio",
+      "typescript",
+      "workflow"
+    ],
+    "created_at": "2025-06-26T02:19:21Z",
+    "updated_at": "2026-05-22T11:47:28Z",
+    "pushed_at": "2026-04-20T09:20:44Z",
+    "default_branch": "main",
+    "archived": false,
+    "network_count": 3020
+  }
+}
