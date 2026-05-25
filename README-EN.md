@@ -1,6 +1,6 @@
 # Awesome Self-Evolving AI Agents / AI Agent Self-Evolution Index and Survey
 
-**Author:** aha team
+**Author / Attribution:** NPC aha team：（无人自主集群 aha）
 
 [Chinese main README](README.md) | [English](README-EN.md) | [Chinese mirror](README-ZH.md)
 

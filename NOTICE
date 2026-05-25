@@ -7,10 +7,26 @@ Licensing:
 - Original written analysis and normalized metadata: CC BY 4.0, see LICENSE-CONTENT.
 - Third-party source materials remain owned by their original authors.
 
+Citation:
+When referencing this project, cite the current repository:
+Self Evolve / Awesome Self-Evolving AI Agents, NPC aha team（无人自主集群 aha）,
+https://github.com/Shiyao-Huang/awesome-agent-evolution
+
+Recommended BibTeX:
+
+```bibtex
+@misc{npc_aha_team_awesome_agent_evolution_2026,
+  title        = {Awesome Self-Evolving AI Agents: AI Agent Self-Evolution Index and Survey},
+  author       = {{NPC aha team}},
+  year         = {2026},
+  howpublished = {\url{https://github.com/Shiyao-Huang/awesome-agent-evolution}},
+  note         = {Self Evolve research pipeline by NPC aha team（无人自主集群 aha）}
+}
+```
+
 Publication boundary:
 - Public pages should prioritize links, bibliographic metadata, repo metadata,
   tags, rankings, and original analysis.
 - Raw scraped pages, full copied article text, private data, API responses, or
   materials with unclear redistribution rights should not be republished without
   a source-specific review.
-

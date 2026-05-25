@@ -1,6 +1,6 @@
 # Awesome Self-Evolving AI Agents / AI Agent 自进化索引与综述
 
-**Author:** aha team
+**Author / 归属:** NPC aha team：（无人自主集群 aha）
 
 [中文主入口](README.md) | [English](README-EN.md) | [中文兼容镜像](README-ZH.md)
 
