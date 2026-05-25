@@ -1,0 +1,516 @@
+{
+  "project": "NeMo Guardrails",
+  "repo": "NVIDIA/NeMo-Guardrails",
+  "collected_at": "2026-05-22T11:18:50.482880+00:00",
+  "queries": [
+    "NeMo Guardrails",
+    "NeMo-Guardrails"
+  ],
+  "total_posts": 50,
+  "results": {
+    "NeMo Guardrails": [
+      {
+        "id": "1sztr62",
+        "subreddit": "SillyTavernAI",
+        "title": "The Director's Cut: Freaky Frankenstein 4 MAX and Freaky Frankenstein 4 BOLT [Presets] (Universal : DS, GLM, Claude, Gemini, Grok, Gemma, Qwen, MiMo) + DeepSeek V4 Compatibility. Hyper Dense Logic.",
+        "score": 476,
+        "num_comments": 423,
+        "author": "dptgreg",
+        "url": "https://reddit.com/r/SillyTavernAI/comments/1sztr62/the_directors_cut_freaky_frankenstein_4_max_and/",
+        "created_utc": 1777549652.0
+      },
+      {
+        "id": "1ryefp8",
+        "subreddit": "crowdstrike",
+        "title": "Secure Homegrown AI Agents with CrowdStrike Falcon AIDR and NVIDIA NeMo Guardrails",
+        "score": 6,
+        "num_comments": 1,
+        "author": "BradW-CS",
+        "url": "https://reddit.com/r/crowdstrike/comments/1ryefp8/secure_homegrown_ai_agents_with_crowdstrike/",
+        "created_utc": 1773958961.0
+      },
+      {
+        "id": "1n6udh2",
+        "subreddit": "LangChain",
+        "title": "Help with Implementing Embedding-Based Guardrails in NeMo Guardrails",
+        "score": 1,
+        "num_comments": 1,
+        "author": "FunTicket2371",
+        "url": "https://reddit.com/r/LangChain/comments/1n6udh2/help_with_implementing_embeddingbased_guardrails/",
+        "created_utc": 1756844350.0
+      },
+      {
+        "id": "1n4z2wh",
+        "subreddit": "LocalLLaMA",
+        "title": "Help with Implementing Embedding-Based Guardrails in NeMo Guardrails",
+        "score": 1,
+        "num_comments": 1,
+        "author": "FunTicket2371",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1n4z2wh/help_with_implementing_embeddingbased_guardrails/",
+        "created_utc": 1756657541.0
+      },
+      {
+        "id": "1n4z0ya",
+        "subreddit": "NvidiaJetson",
+        "title": "Help with Implementing Embedding-Based Guardrails in NeMo Guardrails",
+        "score": 0,
+        "num_comments": 0,
+        "author": "FunTicket2371",
+        "url": "https://reddit.com/r/NvidiaJetson/comments/1n4z0ya/help_with_implementing_embeddingbased_guardrails/",
+        "created_utc": 1756657410.0
+      },
+      {
+        "id": "1lujwql",
+        "subreddit": "LangChain",
+        "title": "NeMo Guardrails serialization error with HumanMessage in LangGraph agent",
+        "score": 1,
+        "num_comments": 2,
+        "author": "Aggravating_Pin_8922",
+        "url": "https://reddit.com/r/LangChain/comments/1lujwql/nemo_guardrails_serialization_error_with/",
+        "created_utc": 1751965914.0
+      },
+      {
+        "id": "1lq0z8r",
+        "subreddit": "LangChain",
+        "title": "Questinos about Langgraph + NeMo Guardrails",
+        "score": 3,
+        "num_comments": 2,
+        "author": "Aggravating_Pin_8922",
+        "url": "https://reddit.com/r/LangChain/comments/1lq0z8r/questinos_about_langgraph_nemo_guardrails/",
+        "created_utc": 1751475141.0
+      },
+      {
+        "id": "1lacviv",
+        "subreddit": "learnmachinelearning",
+        "title": "Azure OpenAI with latest version of NVIDIA'S Nemo Guardrails throwing error",
+        "score": 1,
+        "num_comments": 0,
+        "author": "snow_white-8",
+        "url": "https://reddit.com/r/learnmachinelearning/comments/1lacviv/azure_openai_with_latest_version_of_nvidias_nemo/",
+        "created_utc": 1749811916.0
+      },
+      {
+        "id": "1jt0maq",
+        "subreddit": "PromptEngineering",
+        "title": "How to bypass Prompt Hardener / NeMo guardrail in Broken_LLM_Integration_App",
+        "score": 5,
+        "num_comments": 0,
+        "author": "VertigoRoll",
+        "url": "https://reddit.com/r/PromptEngineering/comments/1jt0maq/how_to_bypass_prompt_hardener_nemo_guardrail_in/",
+        "created_utc": 1743963441.0
+      },
+      {
+        "id": "1jt0ma5",
+        "subreddit": "ChatGPTPromptGenius",
+        "title": "How to bypass Prompt Hardener / NeMo guardrail in Broken_LLM_Integration_App",
+        "score": 2,
+        "num_comments": 0,
+        "author": "VertigoRoll",
+        "url": "https://reddit.com/r/ChatGPTPromptGenius/comments/1jt0ma5/how_to_bypass_prompt_hardener_nemo_guardrail_in/",
+        "created_utc": 1743963440.0
+      },
+      {
+        "id": "1cv8qbp",
+        "subreddit": "snowflake",
+        "title": "Responsible AI on Snowflake: Snowflake Cortex LLM’s + Snowpark Container Services + Snowflake Arctic + NVIDIA NeMo Guardrails",
+        "score": 5,
+        "num_comments": 0,
+        "author": "fhoffa",
+        "url": "https://reddit.com/r/snowflake/comments/1cv8qbp/responsible_ai_on_snowflake_snowflake_cortex_llms/",
+        "created_utc": 1716070328.0
+      },
+      {
+        "id": "8g3umm",
+        "subreddit": "financialindependence",
+        "title": "Eleven Months Into Early Retirement",
+        "score": 1167,
+        "num_comments": 315,
+        "author": "jasonlong1212",
+        "url": "https://reddit.com/r/financialindependence/comments/8g3umm/eleven_months_into_early_retirement/",
+        "created_utc": 1525130114.0
+      },
+      {
+        "id": "1bhpz1v",
+        "subreddit": "LangChain",
+        "title": "Working with Nemo Guardrails",
+        "score": 2,
+        "num_comments": 0,
+        "author": "PollutionNo5879",
+        "url": "https://reddit.com/r/LangChain/comments/1bhpz1v/working_with_nemo_guardrails/",
+        "created_utc": 1710766329.0
+      },
+      {
+        "id": "1alpmmp",
+        "subreddit": "MachineLearning",
+        "title": "[D] How to use nemo-guardrails? how to know that is not policy violation and then to pass query to primary LLM?",
+        "score": 4,
+        "num_comments": 1,
+        "author": "HappyDataGuy",
+        "url": "https://reddit.com/r/MachineLearning/comments/1alpmmp/d_how_to_use_nemoguardrails_how_to_know_that_is/",
+        "created_utc": 1707374894.0
+      },
+      {
+        "id": "1alpn9v",
+        "subreddit": "LlamaIndex",
+        "title": "How to use nemo-guardrails? how to know that is not policy violation and then to pass query to primary LLM?",
+        "score": 4,
+        "num_comments": 0,
+        "author": "HappyDataGuy",
+        "url": "https://reddit.com/r/LlamaIndex/comments/1alpn9v/how_to_use_nemoguardrails_how_to_know_that_is_not/",
+        "created_utc": 1707374972.0
+      },
+      {
+        "id": "1alpm95",
+        "subreddit": "LangChain",
+        "title": "How to use nemo-guardrails? how to know that is not policy violation and then to pass query to primary LLM?",
+        "score": 2,
+        "num_comments": 0,
+        "author": "HappyDataGuy",
+        "url": "https://reddit.com/r/LangChain/comments/1alpm95/how_to_use_nemoguardrails_how_to_know_that_is_not/",
+        "created_utc": 1707374851.0
+      },
+      {
+        "id": "1alpkkl",
+        "subreddit": "deeplearning",
+        "title": "How to use nemo-guardrails? how to know that is not policy violation and then to pass query to primary LLM?",
+        "score": 2,
+        "num_comments": 0,
+        "author": "HappyDataGuy",
+        "url": "https://reddit.com/r/deeplearning/comments/1alpkkl/how_to_use_nemoguardrails_how_to_know_that_is_not/",
+        "created_utc": 1707374660.0
+      },
+      {
+        "id": "18dnxk6",
+        "subreddit": "deeplearning",
+        "title": "[D] Safeguarding Human-AI Conversations: NeMo Guardrails and Llama Guard",
+        "score": 0,
+        "num_comments": 2,
+        "author": "Fit_Maintenance_2455",
+        "url": "https://reddit.com/r/deeplearning/comments/18dnxk6/d_safeguarding_humanai_conversations_nemo/",
+        "created_utc": 1702045481.0
+      },
+      {
+        "id": "1alpn01",
+        "subreddit": "LLMDevs",
+        "title": "How to use nemo-guardrails? how to know that is not policy violation and then to pass query to primary LLM?",
+        "score": 1,
+        "num_comments": 0,
+        "author": "HappyDataGuy",
+        "url": "https://reddit.com/r/LLMDevs/comments/1alpn01/how_to_use_nemoguardrails_how_to_know_that_is_not/",
+        "created_utc": 1707374940.0
+      },
+      {
+        "id": "1rw05g5",
+        "subreddit": "openclaw",
+        "title": "NVIDIA just announced NemoClaw at GTC, built on OpenClaw",
+        "score": 113,
+        "num_comments": 71,
+        "author": "Creepy-Row970",
+        "url": "https://reddit.com/r/openclaw/comments/1rw05g5/nvidia_just_announced_nemoclaw_at_gtc_built_on/",
+        "created_utc": 1773733475.0
+      },
+      {
+        "id": "15ir9l0",
+        "subreddit": "LangChain",
+        "title": "\"Concerned About LLM Hallucinations!! Seeking Solution with Nemo Guardrails and Guardrails!",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Evening-Power-3302",
+        "url": "https://reddit.com/r/LangChain/comments/15ir9l0/concerned_about_llm_hallucinations_seeking/",
+        "created_utc": 1691228202.0
+      },
+      {
+        "id": "12ymk5v",
+        "subreddit": "AIandRobotics",
+        "title": "NVIDIA Introduces NeMo Guardrails: Open-Source Toolkit for Safe and Trustworthy AI Chatbots",
+        "score": 1,
+        "num_comments": 2,
+        "author": "AIandRobotics_Bot",
+        "url": "https://reddit.com/r/AIandRobotics/comments/12ymk5v/nvidia_introduces_nemo_guardrails_opensource/",
+        "created_utc": 1682436222.0
+      },
+      {
+        "id": "12ylksl",
+        "subreddit": "AIandRobotics",
+        "title": "Nvidia helps enterprises guide and control AI responses with NeMo Guardrails",
+        "score": 1,
+        "num_comments": 2,
+        "author": "AIandRobotics_Bot",
+        "url": "https://reddit.com/r/AIandRobotics/comments/12ylksl/nvidia_helps_enterprises_guide_and_control_ai/",
+        "created_utc": 1682434076.0
+      },
+      {
+        "id": "130ayqv",
+        "subreddit": "machinelearningnews",
+        "title": "NVIDIA Announces NeMo Guardrails: An Open-Source Tool Designed to Improve the Performance and Safety of AI-Powered Chatbots like ChatGPT",
+        "score": 9,
+        "num_comments": 1,
+        "author": "ai-lover",
+        "url": "https://reddit.com/r/machinelearningnews/comments/130ayqv/nvidia_announces_nemo_guardrails_an_opensource/",
+        "created_utc": 1682573329.0
+      },
+      {
+        "id": "12yp68p",
+        "subreddit": "NVDA_Stock",
+        "title": "Nvidia helps enterprises guide and control AI responses with NeMo Guardrails",
+        "score": 4,
+        "num_comments": 1,
+        "author": "norcalnatv",
+        "url": "https://reddit.com/r/NVDA_Stock/comments/12yp68p/nvidia_helps_enterprises_guide_and_control_ai/",
+        "created_utc": 1682441876.0
+      }
+    ],
+    "NeMo-Guardrails": [
+      {
+        "id": "1sztr62",
+        "subreddit": "SillyTavernAI",
+        "title": "The Director's Cut: Freaky Frankenstein 4 MAX and Freaky Frankenstein 4 BOLT [Presets] (Universal : DS, GLM, Claude, Gemini, Grok, Gemma, Qwen, MiMo) + DeepSeek V4 Compatibility. Hyper Dense Logic.",
+        "score": 474,
+        "num_comments": 423,
+        "author": "dptgreg",
+        "url": "https://reddit.com/r/SillyTavernAI/comments/1sztr62/the_directors_cut_freaky_frankenstein_4_max_and/",
+        "created_utc": 1777549652.0
+      },
+      {
+        "id": "1ryefp8",
+        "subreddit": "crowdstrike",
+        "title": "Secure Homegrown AI Agents with CrowdStrike Falcon AIDR and NVIDIA NeMo Guardrails",
+        "score": 6,
+        "num_comments": 1,
+        "author": "BradW-CS",
+        "url": "https://reddit.com/r/crowdstrike/comments/1ryefp8/secure_homegrown_ai_agents_with_crowdstrike/",
+        "created_utc": 1773958961.0
+      },
+      {
+        "id": "1n6udh2",
+        "subreddit": "LangChain",
+        "title": "Help with Implementing Embedding-Based Guardrails in NeMo Guardrails",
+        "score": 1,
+        "num_comments": 1,
+        "author": "FunTicket2371",
+        "url": "https://reddit.com/r/LangChain/comments/1n6udh2/help_with_implementing_embeddingbased_guardrails/",
+        "created_utc": 1756844350.0
+      },
+      {
+        "id": "1n4z2wh",
+        "subreddit": "LocalLLaMA",
+        "title": "Help with Implementing Embedding-Based Guardrails in NeMo Guardrails",
+        "score": 1,
+        "num_comments": 1,
+        "author": "FunTicket2371",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1n4z2wh/help_with_implementing_embeddingbased_guardrails/",
+        "created_utc": 1756657541.0
+      },
+      {
+        "id": "1n4z0ya",
+        "subreddit": "NvidiaJetson",
+        "title": "Help with Implementing Embedding-Based Guardrails in NeMo Guardrails",
+        "score": 0,
+        "num_comments": 0,
+        "author": "FunTicket2371",
+        "url": "https://reddit.com/r/NvidiaJetson/comments/1n4z0ya/help_with_implementing_embeddingbased_guardrails/",
+        "created_utc": 1756657410.0
+      },
+      {
+        "id": "1lujwql",
+        "subreddit": "LangChain",
+        "title": "NeMo Guardrails serialization error with HumanMessage in LangGraph agent",
+        "score": 1,
+        "num_comments": 2,
+        "author": "Aggravating_Pin_8922",
+        "url": "https://reddit.com/r/LangChain/comments/1lujwql/nemo_guardrails_serialization_error_with/",
+        "created_utc": 1751965914.0
+      },
+      {
+        "id": "1lq0z8r",
+        "subreddit": "LangChain",
+        "title": "Questinos about Langgraph + NeMo Guardrails",
+        "score": 3,
+        "num_comments": 2,
+        "author": "Aggravating_Pin_8922",
+        "url": "https://reddit.com/r/LangChain/comments/1lq0z8r/questinos_about_langgraph_nemo_guardrails/",
+        "created_utc": 1751475141.0
+      },
+      {
+        "id": "1jt0maq",
+        "subreddit": "PromptEngineering",
+        "title": "How to bypass Prompt Hardener / NeMo guardrail in Broken_LLM_Integration_App",
+        "score": 4,
+        "num_comments": 0,
+        "author": "VertigoRoll",
+        "url": "https://reddit.com/r/PromptEngineering/comments/1jt0maq/how_to_bypass_prompt_hardener_nemo_guardrail_in/",
+        "created_utc": 1743963441.0
+      },
+      {
+        "id": "1jt0ma5",
+        "subreddit": "ChatGPTPromptGenius",
+        "title": "How to bypass Prompt Hardener / NeMo guardrail in Broken_LLM_Integration_App",
+        "score": 2,
+        "num_comments": 0,
+        "author": "VertigoRoll",
+        "url": "https://reddit.com/r/ChatGPTPromptGenius/comments/1jt0ma5/how_to_bypass_prompt_hardener_nemo_guardrail_in/",
+        "created_utc": 1743963440.0
+      },
+      {
+        "id": "1cv8qbp",
+        "subreddit": "snowflake",
+        "title": "Responsible AI on Snowflake: Snowflake Cortex LLM’s + Snowpark Container Services + Snowflake Arctic + NVIDIA NeMo Guardrails",
+        "score": 7,
+        "num_comments": 0,
+        "author": "fhoffa",
+        "url": "https://reddit.com/r/snowflake/comments/1cv8qbp/responsible_ai_on_snowflake_snowflake_cortex_llms/",
+        "created_utc": 1716070328.0
+      },
+      {
+        "id": "8g3umm",
+        "subreddit": "financialindependence",
+        "title": "Eleven Months Into Early Retirement",
+        "score": 1168,
+        "num_comments": 315,
+        "author": "jasonlong1212",
+        "url": "https://reddit.com/r/financialindependence/comments/8g3umm/eleven_months_into_early_retirement/",
+        "created_utc": 1525130114.0
+      },
+      {
+        "id": "18dnxk6",
+        "subreddit": "deeplearning",
+        "title": "[D] Safeguarding Human-AI Conversations: NeMo Guardrails and Llama Guard",
+        "score": 0,
+        "num_comments": 2,
+        "author": "Fit_Maintenance_2455",
+        "url": "https://reddit.com/r/deeplearning/comments/18dnxk6/d_safeguarding_humanai_conversations_nemo/",
+        "created_utc": 1702045481.0
+      },
+      {
+        "id": "12ymk5v",
+        "subreddit": "AIandRobotics",
+        "title": "NVIDIA Introduces NeMo Guardrails: Open-Source Toolkit for Safe and Trustworthy AI Chatbots",
+        "score": 1,
+        "num_comments": 2,
+        "author": "AIandRobotics_Bot",
+        "url": "https://reddit.com/r/AIandRobotics/comments/12ymk5v/nvidia_introduces_nemo_guardrails_opensource/",
+        "created_utc": 1682436222.0
+      },
+      {
+        "id": "12ylksl",
+        "subreddit": "AIandRobotics",
+        "title": "Nvidia helps enterprises guide and control AI responses with NeMo Guardrails",
+        "score": 1,
+        "num_comments": 2,
+        "author": "AIandRobotics_Bot",
+        "url": "https://reddit.com/r/AIandRobotics/comments/12ylksl/nvidia_helps_enterprises_guide_and_control_ai/",
+        "created_utc": 1682434076.0
+      },
+      {
+        "id": "130ayqv",
+        "subreddit": "machinelearningnews",
+        "title": "NVIDIA Announces NeMo Guardrails: An Open-Source Tool Designed to Improve the Performance and Safety of AI-Powered Chatbots like ChatGPT",
+        "score": 9,
+        "num_comments": 1,
+        "author": "ai-lover",
+        "url": "https://reddit.com/r/machinelearningnews/comments/130ayqv/nvidia_announces_nemo_guardrails_an_opensource/",
+        "created_utc": 1682573329.0
+      },
+      {
+        "id": "12yp68p",
+        "subreddit": "NVDA_Stock",
+        "title": "Nvidia helps enterprises guide and control AI responses with NeMo Guardrails",
+        "score": 4,
+        "num_comments": 1,
+        "author": "norcalnatv",
+        "url": "https://reddit.com/r/NVDA_Stock/comments/12yp68p/nvidia_helps_enterprises_guide_and_control_ai/",
+        "created_utc": 1682441876.0
+      },
+      {
+        "id": "13yiamo",
+        "subreddit": "Multiplatform_AI",
+        "title": "NVIDIA Open Sources NeMo Guardrails",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Multiplatform_com",
+        "url": "https://reddit.com/r/Multiplatform_AI/comments/13yiamo/nvidia_open_sources_nemo_guardrails/",
+        "created_utc": 1685725377.0
+      },
+      {
+        "id": "133qmft",
+        "subreddit": "pcgames_news",
+        "title": "NeMo Guardrails Keep AI Chatbots on Track https://blogs.nvidia.com/wp-content/uploads/2023/04/NeMo-Guardrails-KV-x1280.jpg",
+        "score": 1,
+        "num_comments": 0,
+        "author": "GamingNews01",
+        "url": "https://reddit.com/r/pcgames_news/comments/133qmft/nemo_guardrails_keep_ai_chatbots_on_track/",
+        "created_utc": 1682861255.0
+      },
+      {
+        "id": "133qmlr",
+        "subreddit": "gamingnews01_daily",
+        "title": "NeMo Guardrails Keep AI Chatbots on Track https://blogs.nvidia.com/wp-content/uploads/2023/04/NeMo-Guardrails-KV-x1280.jpg",
+        "score": 1,
+        "num_comments": 0,
+        "author": "GamingNews01",
+        "url": "https://reddit.com/r/gamingnews01_daily/comments/133qmlr/nemo_guardrails_keep_ai_chatbots_on_track/",
+        "created_utc": 1682861261.0
+      },
+      {
+        "id": "130f71q",
+        "subreddit": "chatgpt_newtech",
+        "title": "NVIDIA Announces NeMo Guardrails: An Open-Source Tool Designed to Improve the Performance and Safety of AI-Powered Chatbots like ChatGPT https://qr.ae/py84Jc",
+        "score": 1,
+        "num_comments": 0,
+        "author": "LeadershipWide5531",
+        "url": "https://reddit.com/r/chatgpt_newtech/comments/130f71q/nvidia_announces_nemo_guardrails_an_opensource/",
+        "created_utc": 1682587354.0
+      },
+      {
+        "id": "12zyp8x",
+        "subreddit": "Multiplatform_AI",
+        "title": "Ensuring AI Safety with NVIDIA's NeMo Guardrails: A Breakthrough in Generative AI Development",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Multiplatform_com",
+        "url": "https://reddit.com/r/Multiplatform_AI/comments/12zyp8x/ensuring_ai_safety_with_nvidias_nemo_guardrails_a/",
+        "created_utc": 1682540865.0
+      },
+      {
+        "id": "1rr8nur",
+        "subreddit": "LLMDevs",
+        "title": "AI developer tools landscape - v3",
+        "score": 145,
+        "num_comments": 18,
+        "author": "Main-Fisherman-2075",
+        "url": "https://reddit.com/r/LLMDevs/comments/1rr8nur/ai_developer_tools_landscape_v3/",
+        "created_utc": 1773268078.0
+      },
+      {
+        "id": "1svebe9",
+        "subreddit": "AI_Agents",
+        "title": "ALL Agents deviate, fail and mess up because no enforcement is done at runtime.",
+        "score": 2,
+        "num_comments": 23,
+        "author": "Chinmay101202",
+        "url": "https://reddit.com/r/AI_Agents/comments/1svebe9/all_agents_deviate_fail_and_mess_up_because_no/",
+        "created_utc": 1777128836.0
+      },
+      {
+        "id": "1s9rlbt",
+        "subreddit": "AI_Governance",
+        "title": "The 3 layers most AI governance setups are missing (from building enforcement infrastructure)",
+        "score": 3,
+        "num_comments": 26,
+        "author": "inameandy",
+        "url": "https://reddit.com/r/AI_Governance/comments/1s9rlbt/the_3_layers_most_ai_governance_setups_are/",
+        "created_utc": 1775065278.0
+      },
+      {
+        "id": "1smey7y",
+        "subreddit": "automation",
+        "title": "What comes after automation? And is it really useful for local business owners ?",
+        "score": 8,
+        "num_comments": 16,
+        "author": "AkenPrime",
+        "url": "https://reddit.com/r/automation/comments/1smey7y/what_comes_after_automation_and_is_it_really/",
+        "created_utc": 1776278576.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,516 @@
+{
+  "project": "DSPy",
+  "repo": "stanfordnlp/dspy",
+  "collected_at": "2026-05-22T11:36:31.102569+00:00",
+  "queries": [
+    "DSPy",
+    "dspy"
+  ],
+  "total_posts": 50,
+  "results": {
+    "DSPy": [
+      {
+        "id": "1niocuw",
+        "subreddit": "LangChain",
+        "title": "Has anyone tried DsPy ?",
+        "score": 20,
+        "num_comments": 20,
+        "author": "1h3_fool",
+        "url": "https://reddit.com/r/LangChain/comments/1niocuw/has_anyone_tried_dspy/",
+        "created_utc": 1758044681.0
+      },
+      {
+        "id": "1pvk9fp",
+        "subreddit": "LLMDevs",
+        "title": "Langgraph, pydandicAI, dspy, or other ?",
+        "score": 12,
+        "num_comments": 16,
+        "author": "one-wandering-mind",
+        "url": "https://reddit.com/r/LLMDevs/comments/1pvk9fp/langgraph_pydandicai_dspy_or_other/",
+        "created_utc": 1766689404.0
+      },
+      {
+        "id": "1cplfph",
+        "subreddit": "LocalLLaMA",
+        "title": "Who is using DSPy?",
+        "score": 113,
+        "num_comments": 106,
+        "author": "purple_sack_lunch",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1cplfph/who_is_using_dspy/",
+        "created_utc": 1715445292.0
+      },
+      {
+        "id": "1ss1lwr",
+        "subreddit": "AI_Agents",
+        "title": "Open DSPy + GEPA + RLM agent skills for Claude, Codex, OpenClaw",
+        "score": 1,
+        "num_comments": 4,
+        "author": "intertwiner",
+        "url": "https://reddit.com/r/AI_Agents/comments/1ss1lwr/open_dspy_gepa_rlm_agent_skills_for_claude_codex/",
+        "created_utc": 1776807347.0
+      },
+      {
+        "id": "1s1n2g8",
+        "subreddit": "hackernews",
+        "title": "If DSPy is so great, why isn't anyone using it?",
+        "score": 2,
+        "num_comments": 1,
+        "author": "HNMod",
+        "url": "https://reddit.com/r/hackernews/comments/1s1n2g8/if_dspy_is_so_great_why_isnt_anyone_using_it/",
+        "created_utc": 1774286141.0
+      },
+      {
+        "id": "1m2hedt",
+        "subreddit": "LocalLLaMA",
+        "title": "Has anyone used DSPy for creative writing or story generation? Looking for examples",
+        "score": 3,
+        "num_comments": 2,
+        "author": "Dymaxion_VictorDeng",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1m2hedt/has_anyone_used_dspy_for_creative_writing_or/",
+        "created_utc": 1752781781.0
+      },
+      {
+        "id": "1q60lub",
+        "subreddit": "PromptEngineering",
+        "title": "Experiences from building enterprise agents with DSPy and GEPA",
+        "score": 6,
+        "num_comments": 2,
+        "author": "FreakedoutNeurotic98",
+        "url": "https://reddit.com/r/PromptEngineering/comments/1q60lub/experiences_from_building_enterprise_agents_with/",
+        "created_utc": 1767746492.0
+      },
+      {
+        "id": "1qwdro2",
+        "subreddit": "audiophile",
+        "title": "Introducing DSPi - A powerful, user friendly and open source DSP for less than a cup of coffee!",
+        "score": 103,
+        "num_comments": 58,
+        "author": "Haru-tan",
+        "url": "https://reddit.com/r/audiophile/comments/1qwdro2/introducing_dspi_a_powerful_user_friendly_and/",
+        "created_utc": 1770272639.0
+      },
+      {
+        "id": "1snsd71",
+        "subreddit": "diyaudio",
+        "title": "Dspi build (weeblabs)",
+        "score": 83,
+        "num_comments": 33,
+        "author": "Unlucky_Hope812",
+        "url": "https://reddit.com/r/diyaudio/comments/1snsd71/dspi_build_weeblabs/",
+        "created_utc": 1776405694.0
+      },
+      {
+        "id": "1mx3uwu",
+        "subreddit": "SBCGaming",
+        "title": "DSpi: Now with hinge",
+        "score": 330,
+        "num_comments": 32,
+        "author": "True_Shock5764",
+        "url": "https://reddit.com/r/SBCGaming/comments/1mx3uwu/dspi_now_with_hinge/",
+        "created_utc": 1755861971.0
+      },
+      {
+        "id": "1s3h1my",
+        "subreddit": "LocalLLaMA",
+        "title": "PSA: litellm PyPI package was compromised — if you use DSPy, Cursor, or any LLM project, check your dependencies",
+        "score": 12,
+        "num_comments": 23,
+        "author": "Remarkable-Dark2840",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1s3h1my/psa_litellm_pypi_package_was_compromised_if_you/",
+        "created_utc": 1774459195.0
+      },
+      {
+        "id": "1iwrrrd",
+        "subreddit": "Gunpla",
+        "title": "What’s everyone first MG? mine’s the full armor gundam! :D",
+        "score": 1488,
+        "num_comments": 487,
+        "author": "VillageCultural8617",
+        "url": "https://reddit.com/r/Gunpla/comments/1iwrrrd/whats_everyone_first_mg_mines_the_full_armor/",
+        "created_utc": 1740365168.0
+      },
+      {
+        "id": "1s3073z",
+        "subreddit": "DeepSeek",
+        "title": "PSA: litellm PyPI package was compromised — if you use DSPy, Cursor, or any LLM project, check your dependencies",
+        "score": 42,
+        "num_comments": 4,
+        "author": "Remarkable-Dark2840",
+        "url": "https://reddit.com/r/DeepSeek/comments/1s3073z/psa_litellm_pypi_package_was_compromised_if_you/",
+        "created_utc": 1774410733.0
+      },
+      {
+        "id": "1s37zkj",
+        "subreddit": "ChatGPT",
+        "title": "PSA: litellm PyPI package was compromised — if you use DSPy, Cursor, or any LLM project, check your dependencies",
+        "score": 30,
+        "num_comments": 3,
+        "author": "Remarkable-Dark2840",
+        "url": "https://reddit.com/r/ChatGPT/comments/1s37zkj/psa_litellm_pypi_package_was_compromised_if_you/",
+        "created_utc": 1774437893.0
+      },
+      {
+        "id": "1tdwxdh",
+        "subreddit": "LLMAgenticLearning",
+        "title": "DSPy vs Prompt Engineering: Stop Hand-Writing Prompts, Start Programming Them",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Fabulous-Art4440",
+        "url": "https://reddit.com/r/LLMAgenticLearning/comments/1tdwxdh/dspy_vs_prompt_engineering_stop_handwriting/",
+        "created_utc": 1778852913.0
+      },
+      {
+        "id": "1s304es",
+        "subreddit": "ArtificialInteligence",
+        "title": "PSA: litellm PyPI package was compromised — if you use DSPy, Cursor, or any LLM project, check your dependencies",
+        "score": 8,
+        "num_comments": 6,
+        "author": "Remarkable-Dark2840",
+        "url": "https://reddit.com/r/ArtificialInteligence/comments/1s304es/psa_litellm_pypi_package_was_compromised_if_you/",
+        "created_utc": 1774410512.0
+      },
+      {
+        "id": "1rsleiy",
+        "subreddit": "diyaudio",
+        "title": "Introducing DSPi - A powerful, user friendly and open source DSP for less than a cup of coffee!",
+        "score": 21,
+        "num_comments": 2,
+        "author": "hilldog4lyfe",
+        "url": "https://reddit.com/r/diyaudio/comments/1rsleiy/introducing_dspi_a_powerful_user_friendly_and/",
+        "created_utc": 1773403289.0
+      },
+      {
+        "id": "1s3h2y5",
+        "subreddit": "BlackboxAI_",
+        "title": "PSA: litellm PyPI package was compromised — if you use DSPy, Cursor, or any LLM project, check your dependencies",
+        "score": 1,
+        "num_comments": 2,
+        "author": "Remarkable-Dark2840",
+        "url": "https://reddit.com/r/BlackboxAI_/comments/1s3h2y5/psa_litellm_pypi_package_was_compromised_if_you/",
+        "created_utc": 1774459269.0
+      },
+      {
+        "id": "1p1m2g3",
+        "subreddit": "PromptEngineering",
+        "title": "Prompt Learning (prompt optimization technique) beats DSPy GEPA!",
+        "score": 27,
+        "num_comments": 13,
+        "author": "NumbNumbJuice21",
+        "url": "https://reddit.com/r/PromptEngineering/comments/1p1m2g3/prompt_learning_prompt_optimization_technique/",
+        "created_utc": 1763591479.0
+      },
+      {
+        "id": "1s1l27j",
+        "subreddit": "hypeurls",
+        "title": "If Dspy is so great, why isn't anyone using it?",
+        "score": 1,
+        "num_comments": 1,
+        "author": "TheStartupChime",
+        "url": "https://reddit.com/r/hypeurls/comments/1s1l27j/if_dspy_is_so_great_why_isnt_anyone_using_it/",
+        "created_utc": 1774281970.0
+      },
+      {
+        "id": "1rr2s3k",
+        "subreddit": "AI_Agents",
+        "title": "VizPy: automatic prompt optimizer that learns from your LLM failures – DSPy-compatible, no manual tweaking",
+        "score": 3,
+        "num_comments": 2,
+        "author": "se4u",
+        "url": "https://reddit.com/r/AI_Agents/comments/1rr2s3k/vizpy_automatic_prompt_optimizer_that_learns_from/",
+        "created_utc": 1773255391.0
+      },
+      {
+        "id": "1rr2rkq",
+        "subreddit": "PromptEngineering",
+        "title": "VizPy: automatic prompt optimizer for LLM pipelines – learns from failures, DSPy-compatible (ContraPrompt +29% HotPotQA vs GEPA)",
+        "score": 2,
+        "num_comments": 0,
+        "author": "se4u",
+        "url": "https://reddit.com/r/PromptEngineering/comments/1rr2rkq/vizpy_automatic_prompt_optimizer_for_llm/",
+        "created_utc": 1773255362.0
+      },
+      {
+        "id": "1rqkuou",
+        "subreddit": "chatgpt_promptDesign",
+        "title": "[P] VizPy: DSPy-compatible prompt optimizer that learns from failures automatically.",
+        "score": 1,
+        "num_comments": 0,
+        "author": "se4u",
+        "url": "https://reddit.com/r/chatgpt_promptDesign/comments/1rqkuou/p_vizpy_dspycompatible_prompt_optimizer_that/",
+        "created_utc": 1773205846.0
+      },
+      {
+        "id": "1oi1yii",
+        "subreddit": "WinWing",
+        "title": "EXEC and DSPY MSG FAIL OFST not lighting up",
+        "score": 11,
+        "num_comments": 12,
+        "author": "One-Passage5565",
+        "url": "https://reddit.com/r/WinWing/comments/1oi1yii/exec_and_dspy_msg_fail_ofst_not_lighting_up/",
+        "created_utc": 1761632045.0
+      },
+      {
+        "id": "1q6gunj",
+        "subreddit": "Python",
+        "title": "Turn Your Repo Into a Self-Improving DSPy Agent (v0.1.3 - Local-First Python AI Engineering)",
+        "score": 0,
+        "num_comments": 5,
+        "author": "WarmAd6505",
+        "url": "https://reddit.com/r/Python/comments/1q6gunj/turn_your_repo_into_a_selfimproving_dspy_agent/",
+        "created_utc": 1767796278.0
+      }
+    ],
+    "dspy": [
+      {
+        "id": "1niocuw",
+        "subreddit": "LangChain",
+        "title": "Has anyone tried DsPy ?",
+        "score": 22,
+        "num_comments": 20,
+        "author": "1h3_fool",
+        "url": "https://reddit.com/r/LangChain/comments/1niocuw/has_anyone_tried_dspy/",
+        "created_utc": 1758044681.0
+      },
+      {
+        "id": "1pvk9fp",
+        "subreddit": "LLMDevs",
+        "title": "Langgraph, pydandicAI, dspy, or other ?",
+        "score": 14,
+        "num_comments": 16,
+        "author": "one-wandering-mind",
+        "url": "https://reddit.com/r/LLMDevs/comments/1pvk9fp/langgraph_pydandicai_dspy_or_other/",
+        "created_utc": 1766689404.0
+      },
+      {
+        "id": "1cplfph",
+        "subreddit": "LocalLLaMA",
+        "title": "Who is using DSPy?",
+        "score": 116,
+        "num_comments": 106,
+        "author": "purple_sack_lunch",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1cplfph/who_is_using_dspy/",
+        "created_utc": 1715445292.0
+      },
+      {
+        "id": "1ss1lwr",
+        "subreddit": "AI_Agents",
+        "title": "Open DSPy + GEPA + RLM agent skills for Claude, Codex, OpenClaw",
+        "score": 1,
+        "num_comments": 4,
+        "author": "intertwiner",
+        "url": "https://reddit.com/r/AI_Agents/comments/1ss1lwr/open_dspy_gepa_rlm_agent_skills_for_claude_codex/",
+        "created_utc": 1776807347.0
+      },
+      {
+        "id": "1s1n2g8",
+        "subreddit": "hackernews",
+        "title": "If DSPy is so great, why isn't anyone using it?",
+        "score": 2,
+        "num_comments": 1,
+        "author": "HNMod",
+        "url": "https://reddit.com/r/hackernews/comments/1s1n2g8/if_dspy_is_so_great_why_isnt_anyone_using_it/",
+        "created_utc": 1774286141.0
+      },
+      {
+        "id": "1m2hedt",
+        "subreddit": "LocalLLaMA",
+        "title": "Has anyone used DSPy for creative writing or story generation? Looking for examples",
+        "score": 3,
+        "num_comments": 2,
+        "author": "Dymaxion_VictorDeng",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1m2hedt/has_anyone_used_dspy_for_creative_writing_or/",
+        "created_utc": 1752781781.0
+      },
+      {
+        "id": "1q60lub",
+        "subreddit": "PromptEngineering",
+        "title": "Experiences from building enterprise agents with DSPy and GEPA",
+        "score": 5,
+        "num_comments": 2,
+        "author": "FreakedoutNeurotic98",
+        "url": "https://reddit.com/r/PromptEngineering/comments/1q60lub/experiences_from_building_enterprise_agents_with/",
+        "created_utc": 1767746492.0
+      },
+      {
+        "id": "1qwdro2",
+        "subreddit": "audiophile",
+        "title": "Introducing DSPi - A powerful, user friendly and open source DSP for less than a cup of coffee!",
+        "score": 109,
+        "num_comments": 58,
+        "author": "Haru-tan",
+        "url": "https://reddit.com/r/audiophile/comments/1qwdro2/introducing_dspi_a_powerful_user_friendly_and/",
+        "created_utc": 1770272639.0
+      },
+      {
+        "id": "1snsd71",
+        "subreddit": "diyaudio",
+        "title": "Dspi build (weeblabs)",
+        "score": 83,
+        "num_comments": 33,
+        "author": "Unlucky_Hope812",
+        "url": "https://reddit.com/r/diyaudio/comments/1snsd71/dspi_build_weeblabs/",
+        "created_utc": 1776405694.0
+      },
+      {
+        "id": "1mx3uwu",
+        "subreddit": "SBCGaming",
+        "title": "DSpi: Now with hinge",
+        "score": 330,
+        "num_comments": 32,
+        "author": "True_Shock5764",
+        "url": "https://reddit.com/r/SBCGaming/comments/1mx3uwu/dspi_now_with_hinge/",
+        "created_utc": 1755861971.0
+      },
+      {
+        "id": "1s3h1my",
+        "subreddit": "LocalLLaMA",
+        "title": "PSA: litellm PyPI package was compromised — if you use DSPy, Cursor, or any LLM project, check your dependencies",
+        "score": 14,
+        "num_comments": 23,
+        "author": "Remarkable-Dark2840",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1s3h1my/psa_litellm_pypi_package_was_compromised_if_you/",
+        "created_utc": 1774459195.0
+      },
+      {
+        "id": "1iwrrrd",
+        "subreddit": "Gunpla",
+        "title": "What’s everyone first MG? mine’s the full armor gundam! :D",
+        "score": 1489,
+        "num_comments": 487,
+        "author": "VillageCultural8617",
+        "url": "https://reddit.com/r/Gunpla/comments/1iwrrrd/whats_everyone_first_mg_mines_the_full_armor/",
+        "created_utc": 1740365168.0
+      },
+      {
+        "id": "1s3073z",
+        "subreddit": "DeepSeek",
+        "title": "PSA: litellm PyPI package was compromised — if you use DSPy, Cursor, or any LLM project, check your dependencies",
+        "score": 45,
+        "num_comments": 4,
+        "author": "Remarkable-Dark2840",
+        "url": "https://reddit.com/r/DeepSeek/comments/1s3073z/psa_litellm_pypi_package_was_compromised_if_you/",
+        "created_utc": 1774410733.0
+      },
+      {
+        "id": "1s37zkj",
+        "subreddit": "ChatGPT",
+        "title": "PSA: litellm PyPI package was compromised — if you use DSPy, Cursor, or any LLM project, check your dependencies",
+        "score": 30,
+        "num_comments": 3,
+        "author": "Remarkable-Dark2840",
+        "url": "https://reddit.com/r/ChatGPT/comments/1s37zkj/psa_litellm_pypi_package_was_compromised_if_you/",
+        "created_utc": 1774437893.0
+      },
+      {
+        "id": "1tdwxdh",
+        "subreddit": "LLMAgenticLearning",
+        "title": "DSPy vs Prompt Engineering: Stop Hand-Writing Prompts, Start Programming Them",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Fabulous-Art4440",
+        "url": "https://reddit.com/r/LLMAgenticLearning/comments/1tdwxdh/dspy_vs_prompt_engineering_stop_handwriting/",
+        "created_utc": 1778852913.0
+      },
+      {
+        "id": "1s304es",
+        "subreddit": "ArtificialInteligence",
+        "title": "PSA: litellm PyPI package was compromised — if you use DSPy, Cursor, or any LLM project, check your dependencies",
+        "score": 8,
+        "num_comments": 6,
+        "author": "Remarkable-Dark2840",
+        "url": "https://reddit.com/r/ArtificialInteligence/comments/1s304es/psa_litellm_pypi_package_was_compromised_if_you/",
+        "created_utc": 1774410512.0
+      },
+      {
+        "id": "1rsleiy",
+        "subreddit": "diyaudio",
+        "title": "Introducing DSPi - A powerful, user friendly and open source DSP for less than a cup of coffee!",
+        "score": 22,
+        "num_comments": 2,
+        "author": "hilldog4lyfe",
+        "url": "https://reddit.com/r/diyaudio/comments/1rsleiy/introducing_dspi_a_powerful_user_friendly_and/",
+        "created_utc": 1773403289.0
+      },
+      {
+        "id": "1s3h2y5",
+        "subreddit": "BlackboxAI_",
+        "title": "PSA: litellm PyPI package was compromised — if you use DSPy, Cursor, or any LLM project, check your dependencies",
+        "score": 1,
+        "num_comments": 2,
+        "author": "Remarkable-Dark2840",
+        "url": "https://reddit.com/r/BlackboxAI_/comments/1s3h2y5/psa_litellm_pypi_package_was_compromised_if_you/",
+        "created_utc": 1774459269.0
+      },
+      {
+        "id": "1p1m2g3",
+        "subreddit": "PromptEngineering",
+        "title": "Prompt Learning (prompt optimization technique) beats DSPy GEPA!",
+        "score": 27,
+        "num_comments": 13,
+        "author": "NumbNumbJuice21",
+        "url": "https://reddit.com/r/PromptEngineering/comments/1p1m2g3/prompt_learning_prompt_optimization_technique/",
+        "created_utc": 1763591479.0
+      },
+      {
+        "id": "1s1l27j",
+        "subreddit": "hypeurls",
+        "title": "If Dspy is so great, why isn't anyone using it?",
+        "score": 1,
+        "num_comments": 1,
+        "author": "TheStartupChime",
+        "url": "https://reddit.com/r/hypeurls/comments/1s1l27j/if_dspy_is_so_great_why_isnt_anyone_using_it/",
+        "created_utc": 1774281970.0
+      },
+      {
+        "id": "1rr2s3k",
+        "subreddit": "AI_Agents",
+        "title": "VizPy: automatic prompt optimizer that learns from your LLM failures – DSPy-compatible, no manual tweaking",
+        "score": 3,
+        "num_comments": 2,
+        "author": "se4u",
+        "url": "https://reddit.com/r/AI_Agents/comments/1rr2s3k/vizpy_automatic_prompt_optimizer_that_learns_from/",
+        "created_utc": 1773255391.0
+      },
+      {
+        "id": "1rr2rkq",
+        "subreddit": "PromptEngineering",
+        "title": "VizPy: automatic prompt optimizer for LLM pipelines – learns from failures, DSPy-compatible (ContraPrompt +29% HotPotQA vs GEPA)",
+        "score": 2,
+        "num_comments": 0,
+        "author": "se4u",
+        "url": "https://reddit.com/r/PromptEngineering/comments/1rr2rkq/vizpy_automatic_prompt_optimizer_for_llm/",
+        "created_utc": 1773255362.0
+      },
+      {
+        "id": "1rqkuou",
+        "subreddit": "chatgpt_promptDesign",
+        "title": "[P] VizPy: DSPy-compatible prompt optimizer that learns from failures automatically.",
+        "score": 1,
+        "num_comments": 0,
+        "author": "se4u",
+        "url": "https://reddit.com/r/chatgpt_promptDesign/comments/1rqkuou/p_vizpy_dspycompatible_prompt_optimizer_that/",
+        "created_utc": 1773205846.0
+      },
+      {
+        "id": "1oi1yii",
+        "subreddit": "WinWing",
+        "title": "EXEC and DSPY MSG FAIL OFST not lighting up",
+        "score": 11,
+        "num_comments": 12,
+        "author": "One-Passage5565",
+        "url": "https://reddit.com/r/WinWing/comments/1oi1yii/exec_and_dspy_msg_fail_ofst_not_lighting_up/",
+        "created_utc": 1761632045.0
+      },
+      {
+        "id": "1q6gunj",
+        "subreddit": "Python",
+        "title": "Turn Your Repo Into a Self-Improving DSPy Agent (v0.1.3 - Local-First Python AI Engineering)",
+        "score": 0,
+        "num_comments": 5,
+        "author": "WarmAd6505",
+        "url": "https://reddit.com/r/Python/comments/1q6gunj/turn_your_repo_into_a_selfimproving_dspy_agent/",
+        "created_utc": 1767796278.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,736 @@
+{
+  "project": "OpenClaw",
+  "repo": "openclaw/openclaw",
+  "collected_at": "2026-05-22T11:29:41.715385+00:00",
+  "queries": [
+    "OpenClaw",
+    "openclaw"
+  ],
+  "total_hits": 80,
+  "results": {
+    "OpenClaw": [
+      {
+        "objectID": "47963204",
+        "title": "Claude Code refuses requests or charges extra if your commits mention \"OpenClaw\"",
+        "url": "https://twitter.com/theo/status/2049645973350363168",
+        "points": 1349,
+        "num_comments": 720,
+        "author": "elmean",
+        "created_at": "2026-04-30T14:36:58Z"
+      },
+      {
+        "objectID": "47633396",
+        "title": "Tell HN: Anthropic no longer allowing Claude Code subscriptions to use OpenClaw",
+        "url": "",
+        "points": 1099,
+        "num_comments": 827,
+        "author": "firloop",
+        "created_at": "2026-04-03T22:55:24Z"
+      },
+      {
+        "objectID": "47115805",
+        "title": "Google restricting Google AI Pro/Ultra subscribers for using OpenClaw",
+        "url": "https://discuss.ai.google.dev/t/account-restricted-without-warning-google-ai-ultra-oauth-via-openclaw/122778",
+        "points": 802,
+        "num_comments": 705,
+        "author": "srigi",
+        "created_at": "2026-02-22T23:07:55Z"
+      },
+      {
+        "objectID": "46820783",
+        "title": "OpenClaw – Moltbot Renamed Again",
+        "url": "https://openclaw.ai/blog/introducing-openclaw",
+        "points": 667,
+        "num_comments": 382,
+        "author": "ed",
+        "created_at": "2026-01-30T05:14:48Z"
+      },
+      {
+        "objectID": "46893970",
+        "title": "OpenClaw is what Apple intelligence should have been",
+        "url": "https://www.jakequist.com/thoughts/openclaw-is-what-apple-intelligence-should-have-been",
+        "points": 518,
+        "num_comments": 417,
+        "author": "jakequist",
+        "created_at": "2026-02-05T00:28:06Z"
+      },
+      {
+        "objectID": "47628608",
+        "title": "OpenClaw privilege escalation vulnerability",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33579",
+        "points": 514,
+        "num_comments": 256,
+        "author": "kykeonaut",
+        "created_at": "2026-04-03T16:21:32Z"
+      },
+      {
+        "objectID": "47844269",
+        "title": "Anthropic says OpenClaw-style Claude CLI usage is allowed again",
+        "url": "https://docs.openclaw.ai/providers/anthropic",
+        "points": 511,
+        "num_comments": 293,
+        "author": "jmsflknr",
+        "created_at": "2026-04-21T03:43:03Z"
+      },
+      {
+        "objectID": "47479962",
+        "title": "OpenClaw is a security nightmare dressed up as a daydream",
+        "url": "https://composio.dev/content/openclaw-security-and-vulnerabilities",
+        "points": 397,
+        "num_comments": 297,
+        "author": "fs_software",
+        "created_at": "2026-03-22T17:35:28Z"
+      },
+      {
+        "objectID": "47783940",
+        "title": "Ask HN: Who is using OpenClaw?",
+        "url": "",
+        "points": 342,
+        "num_comments": 383,
+        "author": "misterchocolat",
+        "created_at": "2026-04-15T19:22:10Z"
+      },
+      {
+        "objectID": "46931805",
+        "title": "OpenClaw is changing my life",
+        "url": "https://reorx.com/blog/openclaw-is-changing-my-life/",
+        "points": 340,
+        "num_comments": 513,
+        "author": "novoreorx",
+        "created_at": "2026-02-08T06:21:27Z"
+      },
+      {
+        "objectID": "47831437",
+        "title": "OpenClaw isn't fooling me. I remember MS-DOS",
+        "url": "https://www.flyingpenguin.com/build-an-openclaw-free-secure-always-on-local-ai-agent/",
+        "points": 307,
+        "num_comments": 334,
+        "author": "feigewalnuss",
+        "created_at": "2026-04-20T07:49:48Z"
+      },
+      {
+        "objectID": "46872465",
+        "title": "A sane but bull case on Clawdbot / OpenClaw",
+        "url": "https://brandon.wang/2026/clawdbot",
+        "points": 303,
+        "num_comments": 482,
+        "author": "brdd",
+        "created_at": "2026-02-03T15:47:10Z"
+      },
+      {
+        "objectID": "47217812",
+        "title": "OpenClaw surpasses React to become the most-starred software project on GitHub",
+        "url": "https://www.star-history.com/blog/openclaw-surpasses-react-most-starred-software",
+        "points": 291,
+        "num_comments": 370,
+        "author": "whit537",
+        "created_at": "2026-03-02T13:38:02Z"
+      },
+      {
+        "objectID": "46897737",
+        "title": "Nanobot: Ultra-Lightweight Alternative to OpenClaw",
+        "url": "https://github.com/HKUDS/nanobot",
+        "points": 257,
+        "num_comments": 128,
+        "author": "ms7892",
+        "created_at": "2026-02-05T09:39:11Z"
+      },
+      {
+        "objectID": "47129647",
+        "title": "You are not supposed to install OpenClaw on your personal computer",
+        "url": "https://twitter.com/BenjaminBadejo/status/2025987544853188836",
+        "points": 237,
+        "num_comments": 184,
+        "author": "bundie",
+        "created_at": "2026-02-23T22:05:27Z"
+      },
+      {
+        "objectID": "47602879",
+        "title": "StepFun 3.5 Flash is #1 cost-effective model for OpenClaw tasks (300 battles)",
+        "url": "https://app.uniclaw.ai/arena?tab=costEffectiveness&via=hn",
+        "points": 175,
+        "num_comments": 84,
+        "author": "skysniper",
+        "created_at": "2026-04-01T16:17:35Z"
+      },
+      {
+        "objectID": "47721955",
+        "title": "OpenClaw’s memory is unreliable, and you don’t know when it will break",
+        "url": "https://blog.nishantsoni.com/p/ive-seen-a-thousand-openclaw-deploys",
+        "points": 168,
+        "num_comments": 177,
+        "author": "sonink",
+        "created_at": "2026-04-10T18:35:29Z"
+      },
+      {
+        "objectID": "48159227",
+        "title": "OpenClaw Creator Spent $1.3M on OpenAI Tokens in 30 Days",
+        "url": "https://twitter.com/steipete/status/2055346265869721905",
+        "points": 162,
+        "num_comments": 205,
+        "author": "eamag",
+        "created_at": "2026-05-16T11:34:04Z"
+      },
+      {
+        "objectID": "47337249",
+        "title": "Show HN: Klaus – OpenClaw on a VM, batteries included",
+        "url": "https://klausai.com/",
+        "points": 160,
+        "num_comments": 91,
+        "author": "robthompson2018",
+        "created_at": "2026-03-11T15:54:23Z"
+      },
+      {
+        "objectID": "47309953",
+        "title": "Show HN: DenchClaw – Local CRM on Top of OpenClaw",
+        "url": "https://github.com/DenchHQ/DenchClaw",
+        "points": 147,
+        "num_comments": 124,
+        "author": "kumar_abhirup",
+        "created_at": "2026-03-09T14:55:42Z"
+      },
+      {
+        "objectID": "46838946",
+        "title": "Ask HN: Any real OpenClaw (Clawd Bot/Molt Bot) users? What's your experience?",
+        "url": "",
+        "points": 121,
+        "num_comments": 189,
+        "author": "cvhc",
+        "created_at": "2026-01-31T18:00:14Z"
+      },
+      {
+        "objectID": "47154803",
+        "title": "Sandboxes won't save you from OpenClaw",
+        "url": "https://tachyon.so/blog/sandboxes-wont-save-you",
+        "points": 112,
+        "num_comments": 103,
+        "author": "logicx24",
+        "created_at": "2026-02-25T17:37:04Z"
+      },
+      {
+        "objectID": "46875952",
+        "title": "OpenClaw is basically a cascade of LLMs in prime position to mess stuff up",
+        "url": "https://cacm.acm.org/blogcacm/openclaw-a-k-a-moltbot-is-everywhere-all-at-once-and-a-disaster-waiting-to-happen/",
+        "points": 110,
+        "num_comments": 69,
+        "author": "Beeroness",
+        "created_at": "2026-02-03T19:26:05Z"
+      },
+      {
+        "objectID": "47147183",
+        "title": "Ask HN: Share your productive usage of OpenClaw",
+        "url": "",
+        "points": 106,
+        "num_comments": 87,
+        "author": "aavci",
+        "created_at": "2026-02-25T04:03:26Z"
+      },
+      {
+        "objectID": "47183503",
+        "title": "Setting up OpenClaw on a cloud VM",
+        "url": "https://blog.skypilot.co/openclaw-on-skypilot/",
+        "points": 84,
+        "num_comments": 62,
+        "author": "hopechong",
+        "created_at": "2026-02-27T18:06:26Z"
+      },
+      {
+        "objectID": "47064470",
+        "title": "OpenClaw is dangerous",
+        "url": "https://12gramsofcarbon.com/p/tech-things-openclaw-is-dangerous",
+        "points": 83,
+        "num_comments": 93,
+        "author": "theahura",
+        "created_at": "2026-02-18T18:35:54Z"
+      },
+      {
+        "objectID": "47721255",
+        "title": "Show HN: Eve – Managed OpenClaw for work",
+        "url": "https://eve.new/login",
+        "points": 72,
+        "num_comments": 40,
+        "author": "zachdive",
+        "created_at": "2026-04-10T17:31:22Z"
+      },
+      {
+        "objectID": "47080785",
+        "title": "The #1 most downloaded skill on OpenClaw marketplace was malware",
+        "url": "https://twitter.com/chiefofautism/status/2024483631067021348",
+        "points": 66,
+        "num_comments": 7,
+        "author": "Umofomia",
+        "created_at": "2026-02-19T22:47:21Z"
+      },
+      {
+        "objectID": "46845296",
+        "title": "OpenClaw: When AI Agents Get Full System Access. Security nightmare?",
+        "url": "https://innfactory.ai:443/en/blog/openclaw-ai-agent-security/",
+        "points": 64,
+        "num_comments": 29,
+        "author": "i-blis",
+        "created_at": "2026-02-01T11:06:29Z"
+      },
+      {
+        "objectID": "47027907",
+        "title": "OpenClaw (ClawdBot) joins OpenAI",
+        "url": "https://twitter.com/sama/status/2023150230905159801",
+        "points": 62,
+        "num_comments": 34,
+        "author": "iSloth",
+        "created_at": "2026-02-15T21:44:18Z"
+      },
+      {
+        "objectID": "46906866",
+        "title": "Please stop using OpenClaw, formerly known as Moltbot",
+        "url": "https://www.xda-developers.com/please-stop-using-openclaw/",
+        "points": 61,
+        "num_comments": 25,
+        "author": "bandrami",
+        "created_at": "2026-02-05T23:22:11Z"
+      },
+      {
+        "objectID": "46842884",
+        "title": "OpenClaw security assessment [pdf]",
+        "url": "https://zeroleaks.ai/reports/openclaw-analysis.pdf",
+        "points": 61,
+        "num_comments": 20,
+        "author": "nreece",
+        "created_at": "2026-02-01T01:54:14Z"
+      },
+      {
+        "objectID": "47332649",
+        "title": "I'm going to build my own OpenClaw, with blackjack and bun",
+        "url": "https://github.com/rcarmo/piclaw",
+        "points": 53,
+        "num_comments": 69,
+        "author": "rcarmo",
+        "created_at": "2026-03-11T07:36:18Z"
+      },
+      {
+        "objectID": "47004203",
+        "title": "I ditched OpenClaw and built a more secure AI agent (Blink and Mac Mini)",
+        "url": "https://coder.com/blog/why-i-ditched-openclaw-and-built-a-more-secure-ai-agent-on-blink-mac-mini",
+        "points": 52,
+        "num_comments": 58,
+        "author": "ericpaulsen",
+        "created_at": "2026-02-13T16:00:29Z"
+      },
+      {
+        "objectID": "48172952",
+        "title": "Where OpenClaw Security Is Heading",
+        "url": "https://openclaw.ai/blog/where-openclaw-security-is-heading",
+        "points": 51,
+        "num_comments": 20,
+        "author": "paulofeliciano",
+        "created_at": "2026-05-17T20:32:21Z"
+      },
+      {
+        "objectID": "47227329",
+        "title": "OpenClaw Exposure Watchboard",
+        "url": "https://openclaw.allegro.earth/",
+        "points": 49,
+        "num_comments": 26,
+        "author": "fanweixiao",
+        "created_at": "2026-03-03T02:47:46Z"
+      },
+      {
+        "objectID": "46976845",
+        "title": "NanoClaw solves one of OpenClaw's biggest security issues",
+        "url": "https://venturebeat.com/orchestration/nanoclaw-solves-one-of-openclaws-biggest-security-issues-and-its-already",
+        "points": 46,
+        "num_comments": 28,
+        "author": "marsh_mellow",
+        "created_at": "2026-02-11T16:17:00Z"
+      },
+      {
+        "objectID": "46848552",
+        "title": "OpenClaw is everywhere all at once, and a disaster waiting to happen",
+        "url": "https://garymarcus.substack.com/p/openclaw-aka-moltbot-is-everywhere",
+        "points": 45,
+        "num_comments": 25,
+        "author": "geox",
+        "created_at": "2026-02-01T19:20:09Z"
+      },
+      {
+        "objectID": "48056003",
+        "title": "OpenClaw had a rough week",
+        "url": "https://openclaw.ai/blog/openclaw-rough-week",
+        "points": 43,
+        "num_comments": 69,
+        "author": "kevincortes",
+        "created_at": "2026-05-07T22:33:11Z"
+      },
+      {
+        "objectID": "47051866",
+        "title": "The OpenClaw bot that defamed an OSS maintainer is a human crypto bro [video]",
+        "url": "https://www.youtube.com/watch?v=xYFvi4hK7wI",
+        "points": 31,
+        "num_comments": 29,
+        "author": "pocksuppet",
+        "created_at": "2026-02-17T19:25:27Z"
+      }
+    ],
+    "openclaw": [
+      {
+        "objectID": "47963204",
+        "title": "Claude Code refuses requests or charges extra if your commits mention \"OpenClaw\"",
+        "url": "https://twitter.com/theo/status/2049645973350363168",
+        "points": 1349,
+        "num_comments": 720,
+        "author": "elmean",
+        "created_at": "2026-04-30T14:36:58Z"
+      },
+      {
+        "objectID": "47633396",
+        "title": "Tell HN: Anthropic no longer allowing Claude Code subscriptions to use OpenClaw",
+        "url": "",
+        "points": 1099,
+        "num_comments": 827,
+        "author": "firloop",
+        "created_at": "2026-04-03T22:55:24Z"
+      },
+      {
+        "objectID": "47115805",
+        "title": "Google restricting Google AI Pro/Ultra subscribers for using OpenClaw",
+        "url": "https://discuss.ai.google.dev/t/account-restricted-without-warning-google-ai-ultra-oauth-via-openclaw/122778",
+        "points": 802,
+        "num_comments": 705,
+        "author": "srigi",
+        "created_at": "2026-02-22T23:07:55Z"
+      },
+      {
+        "objectID": "46820783",
+        "title": "OpenClaw – Moltbot Renamed Again",
+        "url": "https://openclaw.ai/blog/introducing-openclaw",
+        "points": 667,
+        "num_comments": 382,
+        "author": "ed",
+        "created_at": "2026-01-30T05:14:48Z"
+      },
+      {
+        "objectID": "46893970",
+        "title": "OpenClaw is what Apple intelligence should have been",
+        "url": "https://www.jakequist.com/thoughts/openclaw-is-what-apple-intelligence-should-have-been",
+        "points": 518,
+        "num_comments": 417,
+        "author": "jakequist",
+        "created_at": "2026-02-05T00:28:06Z"
+      },
+      {
+        "objectID": "47628608",
+        "title": "OpenClaw privilege escalation vulnerability",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33579",
+        "points": 514,
+        "num_comments": 256,
+        "author": "kykeonaut",
+        "created_at": "2026-04-03T16:21:32Z"
+      },
+      {
+        "objectID": "47844269",
+        "title": "Anthropic says OpenClaw-style Claude CLI usage is allowed again",
+        "url": "https://docs.openclaw.ai/providers/anthropic",
+        "points": 511,
+        "num_comments": 293,
+        "author": "jmsflknr",
+        "created_at": "2026-04-21T03:43:03Z"
+      },
+      {
+        "objectID": "47479962",
+        "title": "OpenClaw is a security nightmare dressed up as a daydream",
+        "url": "https://composio.dev/content/openclaw-security-and-vulnerabilities",
+        "points": 397,
+        "num_comments": 297,
+        "author": "fs_software",
+        "created_at": "2026-03-22T17:35:28Z"
+      },
+      {
+        "objectID": "47783940",
+        "title": "Ask HN: Who is using OpenClaw?",
+        "url": "",
+        "points": 342,
+        "num_comments": 383,
+        "author": "misterchocolat",
+        "created_at": "2026-04-15T19:22:10Z"
+      },
+      {
+        "objectID": "46931805",
+        "title": "OpenClaw is changing my life",
+        "url": "https://reorx.com/blog/openclaw-is-changing-my-life/",
+        "points": 340,
+        "num_comments": 513,
+        "author": "novoreorx",
+        "created_at": "2026-02-08T06:21:27Z"
+      },
+      {
+        "objectID": "47831437",
+        "title": "OpenClaw isn't fooling me. I remember MS-DOS",
+        "url": "https://www.flyingpenguin.com/build-an-openclaw-free-secure-always-on-local-ai-agent/",
+        "points": 307,
+        "num_comments": 334,
+        "author": "feigewalnuss",
+        "created_at": "2026-04-20T07:49:48Z"
+      },
+      {
+        "objectID": "46872465",
+        "title": "A sane but bull case on Clawdbot / OpenClaw",
+        "url": "https://brandon.wang/2026/clawdbot",
+        "points": 303,
+        "num_comments": 482,
+        "author": "brdd",
+        "created_at": "2026-02-03T15:47:10Z"
+      },
+      {
+        "objectID": "47217812",
+        "title": "OpenClaw surpasses React to become the most-starred software project on GitHub",
+        "url": "https://www.star-history.com/blog/openclaw-surpasses-react-most-starred-software",
+        "points": 291,
+        "num_comments": 370,
+        "author": "whit537",
+        "created_at": "2026-03-02T13:38:02Z"
+      },
+      {
+        "objectID": "46897737",
+        "title": "Nanobot: Ultra-Lightweight Alternative to OpenClaw",
+        "url": "https://github.com/HKUDS/nanobot",
+        "points": 257,
+        "num_comments": 128,
+        "author": "ms7892",
+        "created_at": "2026-02-05T09:39:11Z"
+      },
+      {
+        "objectID": "47129647",
+        "title": "You are not supposed to install OpenClaw on your personal computer",
+        "url": "https://twitter.com/BenjaminBadejo/status/2025987544853188836",
+        "points": 237,
+        "num_comments": 184,
+        "author": "bundie",
+        "created_at": "2026-02-23T22:05:27Z"
+      },
+      {
+        "objectID": "47602879",
+        "title": "StepFun 3.5 Flash is #1 cost-effective model for OpenClaw tasks (300 battles)",
+        "url": "https://app.uniclaw.ai/arena?tab=costEffectiveness&via=hn",
+        "points": 175,
+        "num_comments": 84,
+        "author": "skysniper",
+        "created_at": "2026-04-01T16:17:35Z"
+      },
+      {
+        "objectID": "47721955",
+        "title": "OpenClaw’s memory is unreliable, and you don’t know when it will break",
+        "url": "https://blog.nishantsoni.com/p/ive-seen-a-thousand-openclaw-deploys",
+        "points": 168,
+        "num_comments": 177,
+        "author": "sonink",
+        "created_at": "2026-04-10T18:35:29Z"
+      },
+      {
+        "objectID": "48159227",
+        "title": "OpenClaw Creator Spent $1.3M on OpenAI Tokens in 30 Days",
+        "url": "https://twitter.com/steipete/status/2055346265869721905",
+        "points": 162,
+        "num_comments": 205,
+        "author": "eamag",
+        "created_at": "2026-05-16T11:34:04Z"
+      },
+      {
+        "objectID": "47337249",
+        "title": "Show HN: Klaus – OpenClaw on a VM, batteries included",
+        "url": "https://klausai.com/",
+        "points": 160,
+        "num_comments": 91,
+        "author": "robthompson2018",
+        "created_at": "2026-03-11T15:54:23Z"
+      },
+      {
+        "objectID": "47309953",
+        "title": "Show HN: DenchClaw – Local CRM on Top of OpenClaw",
+        "url": "https://github.com/DenchHQ/DenchClaw",
+        "points": 147,
+        "num_comments": 124,
+        "author": "kumar_abhirup",
+        "created_at": "2026-03-09T14:55:42Z"
+      },
+      {
+        "objectID": "46838946",
+        "title": "Ask HN: Any real OpenClaw (Clawd Bot/Molt Bot) users? What's your experience?",
+        "url": "",
+        "points": 121,
+        "num_comments": 189,
+        "author": "cvhc",
+        "created_at": "2026-01-31T18:00:14Z"
+      },
+      {
+        "objectID": "47154803",
+        "title": "Sandboxes won't save you from OpenClaw",
+        "url": "https://tachyon.so/blog/sandboxes-wont-save-you",
+        "points": 112,
+        "num_comments": 103,
+        "author": "logicx24",
+        "created_at": "2026-02-25T17:37:04Z"
+      },
+      {
+        "objectID": "46875952",
+        "title": "OpenClaw is basically a cascade of LLMs in prime position to mess stuff up",
+        "url": "https://cacm.acm.org/blogcacm/openclaw-a-k-a-moltbot-is-everywhere-all-at-once-and-a-disaster-waiting-to-happen/",
+        "points": 110,
+        "num_comments": 69,
+        "author": "Beeroness",
+        "created_at": "2026-02-03T19:26:05Z"
+      },
+      {
+        "objectID": "47147183",
+        "title": "Ask HN: Share your productive usage of OpenClaw",
+        "url": "",
+        "points": 106,
+        "num_comments": 87,
+        "author": "aavci",
+        "created_at": "2026-02-25T04:03:26Z"
+      },
+      {
+        "objectID": "47183503",
+        "title": "Setting up OpenClaw on a cloud VM",
+        "url": "https://blog.skypilot.co/openclaw-on-skypilot/",
+        "points": 84,
+        "num_comments": 62,
+        "author": "hopechong",
+        "created_at": "2026-02-27T18:06:26Z"
+      },
+      {
+        "objectID": "47064470",
+        "title": "OpenClaw is dangerous",
+        "url": "https://12gramsofcarbon.com/p/tech-things-openclaw-is-dangerous",
+        "points": 83,
+        "num_comments": 93,
+        "author": "theahura",
+        "created_at": "2026-02-18T18:35:54Z"
+      },
+      {
+        "objectID": "47721255",
+        "title": "Show HN: Eve – Managed OpenClaw for work",
+        "url": "https://eve.new/login",
+        "points": 72,
+        "num_comments": 40,
+        "author": "zachdive",
+        "created_at": "2026-04-10T17:31:22Z"
+      },
+      {
+        "objectID": "47080785",
+        "title": "The #1 most downloaded skill on OpenClaw marketplace was malware",
+        "url": "https://twitter.com/chiefofautism/status/2024483631067021348",
+        "points": 66,
+        "num_comments": 7,
+        "author": "Umofomia",
+        "created_at": "2026-02-19T22:47:21Z"
+      },
+      {
+        "objectID": "46845296",
+        "title": "OpenClaw: When AI Agents Get Full System Access. Security nightmare?",
+        "url": "https://innfactory.ai:443/en/blog/openclaw-ai-agent-security/",
+        "points": 64,
+        "num_comments": 29,
+        "author": "i-blis",
+        "created_at": "2026-02-01T11:06:29Z"
+      },
+      {
+        "objectID": "47027907",
+        "title": "OpenClaw (ClawdBot) joins OpenAI",
+        "url": "https://twitter.com/sama/status/2023150230905159801",
+        "points": 62,
+        "num_comments": 34,
+        "author": "iSloth",
+        "created_at": "2026-02-15T21:44:18Z"
+      },
+      {
+        "objectID": "46906866",
+        "title": "Please stop using OpenClaw, formerly known as Moltbot",
+        "url": "https://www.xda-developers.com/please-stop-using-openclaw/",
+        "points": 61,
+        "num_comments": 25,
+        "author": "bandrami",
+        "created_at": "2026-02-05T23:22:11Z"
+      },
+      {
+        "objectID": "46842884",
+        "title": "OpenClaw security assessment [pdf]",
+        "url": "https://zeroleaks.ai/reports/openclaw-analysis.pdf",
+        "points": 61,
+        "num_comments": 20,
+        "author": "nreece",
+        "created_at": "2026-02-01T01:54:14Z"
+      },
+      {
+        "objectID": "47332649",
+        "title": "I'm going to build my own OpenClaw, with blackjack and bun",
+        "url": "https://github.com/rcarmo/piclaw",
+        "points": 53,
+        "num_comments": 69,
+        "author": "rcarmo",
+        "created_at": "2026-03-11T07:36:18Z"
+      },
+      {
+        "objectID": "47004203",
+        "title": "I ditched OpenClaw and built a more secure AI agent (Blink and Mac Mini)",
+        "url": "https://coder.com/blog/why-i-ditched-openclaw-and-built-a-more-secure-ai-agent-on-blink-mac-mini",
+        "points": 52,
+        "num_comments": 58,
+        "author": "ericpaulsen",
+        "created_at": "2026-02-13T16:00:29Z"
+      },
+      {
+        "objectID": "48172952",
+        "title": "Where OpenClaw Security Is Heading",
+        "url": "https://openclaw.ai/blog/where-openclaw-security-is-heading",
+        "points": 51,
+        "num_comments": 20,
+        "author": "paulofeliciano",
+        "created_at": "2026-05-17T20:32:21Z"
+      },
+      {
+        "objectID": "47227329",
+        "title": "OpenClaw Exposure Watchboard",
+        "url": "https://openclaw.allegro.earth/",
+        "points": 49,
+        "num_comments": 26,
+        "author": "fanweixiao",
+        "created_at": "2026-03-03T02:47:46Z"
+      },
+      {
+        "objectID": "46976845",
+        "title": "NanoClaw solves one of OpenClaw's biggest security issues",
+        "url": "https://venturebeat.com/orchestration/nanoclaw-solves-one-of-openclaws-biggest-security-issues-and-its-already",
+        "points": 46,
+        "num_comments": 28,
+        "author": "marsh_mellow",
+        "created_at": "2026-02-11T16:17:00Z"
+      },
+      {
+        "objectID": "46848552",
+        "title": "OpenClaw is everywhere all at once, and a disaster waiting to happen",
+        "url": "https://garymarcus.substack.com/p/openclaw-aka-moltbot-is-everywhere",
+        "points": 45,
+        "num_comments": 25,
+        "author": "geox",
+        "created_at": "2026-02-01T19:20:09Z"
+      },
+      {
+        "objectID": "48056003",
+        "title": "OpenClaw had a rough week",
+        "url": "https://openclaw.ai/blog/openclaw-rough-week",
+        "points": 43,
+        "num_comments": 69,
+        "author": "kevincortes",
+        "created_at": "2026-05-07T22:33:11Z"
+      },
+      {
+        "objectID": "47051866",
+        "title": "The OpenClaw bot that defamed an OSS maintainer is a human crypto bro [video]",
+        "url": "https://www.youtube.com/watch?v=xYFvi4hK7wI",
+        "points": 31,
+        "num_comments": 29,
+        "author": "pocksuppet",
+        "created_at": "2026-02-17T19:25:27Z"
+      }
+    ]
+  }
+}

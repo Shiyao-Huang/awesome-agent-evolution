@@ -1,0 +1,736 @@
+{
+  "project": "Ollama",
+  "repo": "ollama/ollama",
+  "collected_at": "2026-05-22T11:31:57.042146+00:00",
+  "queries": [
+    "Ollama",
+    "ollama"
+  ],
+  "total_hits": 80,
+  "results": {
+    "Ollama": [
+      {
+        "objectID": "47582482",
+        "title": "Ollama is now powered by MLX on Apple Silicon in preview",
+        "url": "https://ollama.com/blog/mlx",
+        "points": 648,
+        "num_comments": 354,
+        "author": "redundantly",
+        "created_at": "2026-03-31T03:40:45Z"
+      },
+      {
+        "objectID": "47788385",
+        "title": "The local LLM ecosystem doesn’t need Ollama",
+        "url": "https://sleepingrobots.com/dreams/stop-using-ollama/",
+        "points": 648,
+        "num_comments": 209,
+        "author": "Zetaphor",
+        "created_at": "2026-04-16T03:35:11Z"
+      },
+      {
+        "objectID": "39718558",
+        "title": "Ollama now supports AMD graphics cards",
+        "url": "https://ollama.com/blog/amd-preview",
+        "points": 633,
+        "num_comments": 224,
+        "author": "tosh",
+        "created_at": "2024-03-15T17:47:20Z"
+      },
+      {
+        "objectID": "39125477",
+        "title": "Ollama releases Python and JavaScript Libraries",
+        "url": "https://ollama.ai/blog/python-javascript-libraries",
+        "points": 607,
+        "num_comments": 149,
+        "author": "adamhowell",
+        "created_at": "2024-01-25T02:17:35Z"
+      },
+      {
+        "objectID": "44739632",
+        "title": "Ollama's new app",
+        "url": "https://ollama.com/blog/new-app",
+        "points": 560,
+        "num_comments": 284,
+        "author": "BUFU",
+        "created_at": "2025-07-30T21:19:03Z"
+      },
+      {
+        "objectID": "44802414",
+        "title": "Ollama Turbo",
+        "url": "https://ollama.com/turbo",
+        "points": 430,
+        "num_comments": 243,
+        "author": "amram_art",
+        "created_at": "2025-08-05T18:46:18Z"
+      },
+      {
+        "objectID": "39409650",
+        "title": "Ollama is now available on Windows in preview",
+        "url": "https://ollama.com/blog/windows-preview",
+        "points": 374,
+        "num_comments": 153,
+        "author": "pentagrama",
+        "created_at": "2024-02-17T14:23:47Z"
+      },
+      {
+        "objectID": "44001087",
+        "title": "Ollama's new engine for multimodal models",
+        "url": "https://ollama.com/blog/multimodal-models",
+        "points": 353,
+        "num_comments": 84,
+        "author": "LorenDB",
+        "created_at": "2025-05-16T01:43:27Z"
+      },
+      {
+        "objectID": "45377641",
+        "title": "Ollama Web Search",
+        "url": "https://ollama.com/blog/web-search",
+        "points": 348,
+        "num_comments": 176,
+        "author": "jmorgan",
+        "created_at": "2025-09-25T19:21:52Z"
+      },
+      {
+        "objectID": "47624731",
+        "title": "April 2026 TLDR Setup for Ollama and Gemma 4 26B on a Mac mini",
+        "url": "https://gist.github.com/greenstevester/fc49b4e60a4fef9effc79066c1033ae5",
+        "points": 330,
+        "num_comments": 123,
+        "author": "greenstevester",
+        "created_at": "2026-04-03T09:35:16Z"
+      },
+      {
+        "objectID": "42796496",
+        "title": "Show HN: Trolling SMS spammers with Ollama",
+        "url": "https://evan.widloski.com/software/sms_llm/",
+        "points": 318,
+        "num_comments": 126,
+        "author": "Evidlo",
+        "created_at": "2025-01-22T19:23:48Z"
+      },
+      {
+        "objectID": "43296918",
+        "title": "Show HN: Open-Source DocumentAI with Ollama",
+        "url": "https://rlama.dev/",
+        "points": 295,
+        "num_comments": 33,
+        "author": "Dontizi",
+        "created_at": "2025-03-08T02:12:13Z"
+      },
+      {
+        "objectID": "42642971",
+        "title": "Phi 4 available on Ollama",
+        "url": "https://ollama.com/library/phi4",
+        "points": 291,
+        "num_comments": 135,
+        "author": "eadz",
+        "created_at": "2025-01-09T08:12:57Z"
+      },
+      {
+        "objectID": "44901853",
+        "title": "Show HN: OWhisper – Ollama for realtime speech-to-text",
+        "url": "https://docs.hyprnote.com/owhisper/what-is-this",
+        "points": 289,
+        "num_comments": 75,
+        "author": "yujonglee",
+        "created_at": "2025-08-14T15:47:43Z"
+      },
+      {
+        "objectID": "36802582",
+        "title": "Show HN: Ollama – Run LLMs on your Mac",
+        "url": "https://github.com/jmorganca/ollama",
+        "points": 284,
+        "num_comments": 94,
+        "author": "jmorgan",
+        "created_at": "2023-07-20T16:06:44Z"
+      },
+      {
+        "objectID": "42346344",
+        "title": "Structured Outputs with Ollama",
+        "url": "https://ollama.com/blog/structured-outputs",
+        "points": 265,
+        "num_comments": 70,
+        "author": "Patrick_Devine",
+        "created_at": "2024-12-07T01:12:32Z"
+      },
+      {
+        "objectID": "42772983",
+        "title": "Official DeepSeek R1 Now on Ollama",
+        "url": "https://ollama.com/library/deepseek-r1",
+        "points": 234,
+        "num_comments": 80,
+        "author": "excerionsforte",
+        "created_at": "2025-01-20T21:00:24Z"
+      },
+      {
+        "objectID": "44524544",
+        "title": "Show HN: Cactus – Ollama for Smartphones",
+        "url": "https://github.com/cactus-compute/cactus",
+        "points": 231,
+        "num_comments": 82,
+        "author": "HenryNdubuaku",
+        "created_at": "2025-07-10T19:20:59Z"
+      },
+      {
+        "objectID": "42323953",
+        "title": "Bringing K/V context quantisation to Ollama",
+        "url": "https://smcleod.net/2024/12/bringing-k/v-context-quantisation-to-ollama/",
+        "points": 220,
+        "num_comments": 32,
+        "author": "mchiang",
+        "created_at": "2024-12-05T01:40:30Z"
+      },
+      {
+        "objectID": "42886680",
+        "title": "Llama.cpp supports Vulkan. why doesn't Ollama?",
+        "url": "https://github.com/ollama/ollama/pull/5059",
+        "points": 217,
+        "num_comments": 228,
+        "author": "buyucu",
+        "created_at": "2025-01-31T11:30:48Z"
+      },
+      {
+        "objectID": "47212576",
+        "title": "Show HN: Timber – Ollama for classical ML models, 336x faster than Python",
+        "url": "https://github.com/kossisoroyce/timber",
+        "points": 207,
+        "num_comments": 33,
+        "author": "kossisoroyce",
+        "created_at": "2026-03-02T00:57:40Z"
+      },
+      {
+        "objectID": "44003741",
+        "title": "Ollama violating llama.cpp license for over a year",
+        "url": "https://github.com/ollama/ollama/issues/3185",
+        "points": 202,
+        "num_comments": 68,
+        "author": "Jabrov",
+        "created_at": "2025-05-16T10:36:38Z"
+      },
+      {
+        "objectID": "44845272",
+        "title": "Jan – Ollama alternative with local UI",
+        "url": "https://github.com/menloresearch/jan",
+        "points": 197,
+        "num_comments": 73,
+        "author": "maxloh",
+        "created_at": "2025-08-09T09:54:13Z"
+      },
+      {
+        "objectID": "37786525",
+        "title": "Ollama is now available as an official Docker image",
+        "url": "https://ollama.ai/blog/ollama-is-now-available-as-an-official-docker-image",
+        "points": 197,
+        "num_comments": 47,
+        "author": "alexzeitler",
+        "created_at": "2023-10-06T02:18:27Z"
+      },
+      {
+        "objectID": "40191723",
+        "title": "Ollama v0.1.33 with Llama 3, Phi 3, and Qwen 110B",
+        "url": "https://github.com/ollama/ollama/releases/tag/v0.1.33-rc5",
+        "points": 192,
+        "num_comments": 64,
+        "author": "ashvardanian",
+        "created_at": "2024-04-28T20:48:42Z"
+      },
+      {
+        "objectID": "42069453",
+        "title": "Ollama 0.4 is released with support for Meta's Llama 3.2 Vision models locally",
+        "url": "https://ollama.com/blog/llama3.2-vision",
+        "points": 182,
+        "num_comments": 25,
+        "author": "BUFU",
+        "created_at": "2024-11-06T21:10:39Z"
+      },
+      {
+        "objectID": "44867238",
+        "title": "Ollama and gguf",
+        "url": "https://github.com/ollama/ollama/issues/11714",
+        "points": 173,
+        "num_comments": 91,
+        "author": "indigodaddy",
+        "created_at": "2025-08-11T17:54:08Z"
+      },
+      {
+        "objectID": "37661755",
+        "title": "Ollama for Linux – Run LLMs on Linux with GPU Acceleration",
+        "url": "https://github.com/jmorganca/ollama/releases/tag/v0.1.0",
+        "points": 173,
+        "num_comments": 54,
+        "author": "jmorgan",
+        "created_at": "2023-09-26T16:29:56Z"
+      },
+      {
+        "objectID": "43110173",
+        "title": "Run structured extraction on documents/images locally with Ollama and Pydantic",
+        "url": "https://github.com/vlm-run/vlmrun-hub",
+        "points": 170,
+        "num_comments": 29,
+        "author": "EarlyOom",
+        "created_at": "2025-02-20T01:54:10Z"
+      },
+      {
+        "objectID": "40744293",
+        "title": "Show HN: Local voice assistant using Ollama, transformers and Coqui TTS toolkit",
+        "url": "https://github.com/mezbaul-h/june",
+        "points": 167,
+        "num_comments": 26,
+        "author": "mezba",
+        "created_at": "2024-06-20T22:48:40Z"
+      },
+      {
+        "objectID": "45113418",
+        "title": "Finding thousands of exposed Ollama instances using Shodan",
+        "url": "https://blogs.cisco.com/security/detecting-exposed-llm-servers-shodan-case-study-on-ollama",
+        "points": 166,
+        "num_comments": 72,
+        "author": "rldjbpin",
+        "created_at": "2025-09-03T08:18:07Z"
+      },
+      {
+        "objectID": "39456113",
+        "title": "Show HN: NotesOllama – I added local LLM support to Apple Notes (through Ollama)",
+        "url": "https://smallest.app/notesollama/",
+        "points": 156,
+        "num_comments": 31,
+        "author": "rexec",
+        "created_at": "2024-02-21T16:46:19Z"
+      },
+      {
+        "objectID": "41125919",
+        "title": "Building a Local Perplexity Alternative with Perplexica, Ollama, and SearXNG",
+        "url": "https://jointerminus.medium.com/building-a-local-perplexity-alternative-with-perplexica-ollama-and-searxng-71602523e256",
+        "points": 134,
+        "num_comments": 49,
+        "author": "flybird",
+        "created_at": "2024-08-01T03:36:54Z"
+      },
+      {
+        "objectID": "41810507",
+        "title": "Show HN: I made an Ollama summarizer for Firefox",
+        "url": "https://addons.mozilla.org/en-US/firefox/addon/spacellama/",
+        "points": 132,
+        "num_comments": 33,
+        "author": "tcsenpai",
+        "created_at": "2024-10-11T15:45:48Z"
+      },
+      {
+        "objectID": "43676084",
+        "title": "Quick Primer on MCP Using Ollama and LangChain",
+        "url": "https://www.polarsparc.com/xhtml/MCP.html",
+        "points": 131,
+        "num_comments": 20,
+        "author": "bswamina",
+        "created_at": "2025-04-13T21:43:36Z"
+      },
+      {
+        "objectID": "41578446",
+        "title": "Knowledge graphs using Ollama and Embeddings to answer and visualizing queries",
+        "url": "https://github.com/punnerud/Local_Knowledge_Graph",
+        "points": 122,
+        "num_comments": 9,
+        "author": "punnerud",
+        "created_at": "2024-09-18T11:37:09Z"
+      },
+      {
+        "objectID": "40692970",
+        "title": "Ollama v0.1.45",
+        "url": "https://github.com/ollama/ollama/releases/tag/v0.1.45-rc1",
+        "points": 111,
+        "num_comments": 64,
+        "author": "lijunhao",
+        "created_at": "2024-06-15T21:54:02Z"
+      },
+      {
+        "objectID": "40061831",
+        "title": "Ollama 0.1.32: WizardLM 2, Mixtral 8x22B, macOS CPU/GPU model split",
+        "url": "https://github.com/ollama/ollama/releases/tag/v0.1.32",
+        "points": 107,
+        "num_comments": 55,
+        "author": "tosh",
+        "created_at": "2024-04-17T08:15:36Z"
+      },
+      {
+        "objectID": "40426711",
+        "title": "Google announces Firebase Genkit with Ollama support",
+        "url": "https://ollama.com/blog/firebase-genkit",
+        "points": 102,
+        "num_comments": 31,
+        "author": "tosh",
+        "created_at": "2024-05-21T10:55:54Z"
+      },
+      {
+        "objectID": "43649711",
+        "title": "Nvidia on NixOS WSL – Ollama up 24/7 on your gaming PC",
+        "url": "https://yomaq.github.io/posts/nvidia-on-nixos-wsl-ollama-up-24-7-on-your-gaming-pc/",
+        "points": 95,
+        "num_comments": 49,
+        "author": "fangpenlin",
+        "created_at": "2025-04-11T01:50:09Z"
+      }
+    ],
+    "ollama": [
+      {
+        "objectID": "47582482",
+        "title": "Ollama is now powered by MLX on Apple Silicon in preview",
+        "url": "https://ollama.com/blog/mlx",
+        "points": 648,
+        "num_comments": 354,
+        "author": "redundantly",
+        "created_at": "2026-03-31T03:40:45Z"
+      },
+      {
+        "objectID": "47788385",
+        "title": "The local LLM ecosystem doesn’t need Ollama",
+        "url": "https://sleepingrobots.com/dreams/stop-using-ollama/",
+        "points": 648,
+        "num_comments": 209,
+        "author": "Zetaphor",
+        "created_at": "2026-04-16T03:35:11Z"
+      },
+      {
+        "objectID": "39718558",
+        "title": "Ollama now supports AMD graphics cards",
+        "url": "https://ollama.com/blog/amd-preview",
+        "points": 633,
+        "num_comments": 224,
+        "author": "tosh",
+        "created_at": "2024-03-15T17:47:20Z"
+      },
+      {
+        "objectID": "39125477",
+        "title": "Ollama releases Python and JavaScript Libraries",
+        "url": "https://ollama.ai/blog/python-javascript-libraries",
+        "points": 607,
+        "num_comments": 149,
+        "author": "adamhowell",
+        "created_at": "2024-01-25T02:17:35Z"
+      },
+      {
+        "objectID": "44739632",
+        "title": "Ollama's new app",
+        "url": "https://ollama.com/blog/new-app",
+        "points": 560,
+        "num_comments": 284,
+        "author": "BUFU",
+        "created_at": "2025-07-30T21:19:03Z"
+      },
+      {
+        "objectID": "44802414",
+        "title": "Ollama Turbo",
+        "url": "https://ollama.com/turbo",
+        "points": 430,
+        "num_comments": 243,
+        "author": "amram_art",
+        "created_at": "2025-08-05T18:46:18Z"
+      },
+      {
+        "objectID": "39409650",
+        "title": "Ollama is now available on Windows in preview",
+        "url": "https://ollama.com/blog/windows-preview",
+        "points": 374,
+        "num_comments": 153,
+        "author": "pentagrama",
+        "created_at": "2024-02-17T14:23:47Z"
+      },
+      {
+        "objectID": "44001087",
+        "title": "Ollama's new engine for multimodal models",
+        "url": "https://ollama.com/blog/multimodal-models",
+        "points": 353,
+        "num_comments": 84,
+        "author": "LorenDB",
+        "created_at": "2025-05-16T01:43:27Z"
+      },
+      {
+        "objectID": "45377641",
+        "title": "Ollama Web Search",
+        "url": "https://ollama.com/blog/web-search",
+        "points": 348,
+        "num_comments": 176,
+        "author": "jmorgan",
+        "created_at": "2025-09-25T19:21:52Z"
+      },
+      {
+        "objectID": "47624731",
+        "title": "April 2026 TLDR Setup for Ollama and Gemma 4 26B on a Mac mini",
+        "url": "https://gist.github.com/greenstevester/fc49b4e60a4fef9effc79066c1033ae5",
+        "points": 330,
+        "num_comments": 123,
+        "author": "greenstevester",
+        "created_at": "2026-04-03T09:35:16Z"
+      },
+      {
+        "objectID": "42796496",
+        "title": "Show HN: Trolling SMS spammers with Ollama",
+        "url": "https://evan.widloski.com/software/sms_llm/",
+        "points": 318,
+        "num_comments": 126,
+        "author": "Evidlo",
+        "created_at": "2025-01-22T19:23:48Z"
+      },
+      {
+        "objectID": "43296918",
+        "title": "Show HN: Open-Source DocumentAI with Ollama",
+        "url": "https://rlama.dev/",
+        "points": 295,
+        "num_comments": 33,
+        "author": "Dontizi",
+        "created_at": "2025-03-08T02:12:13Z"
+      },
+      {
+        "objectID": "42642971",
+        "title": "Phi 4 available on Ollama",
+        "url": "https://ollama.com/library/phi4",
+        "points": 291,
+        "num_comments": 135,
+        "author": "eadz",
+        "created_at": "2025-01-09T08:12:57Z"
+      },
+      {
+        "objectID": "44901853",
+        "title": "Show HN: OWhisper – Ollama for realtime speech-to-text",
+        "url": "https://docs.hyprnote.com/owhisper/what-is-this",
+        "points": 289,
+        "num_comments": 75,
+        "author": "yujonglee",
+        "created_at": "2025-08-14T15:47:43Z"
+      },
+      {
+        "objectID": "36802582",
+        "title": "Show HN: Ollama – Run LLMs on your Mac",
+        "url": "https://github.com/jmorganca/ollama",
+        "points": 284,
+        "num_comments": 94,
+        "author": "jmorgan",
+        "created_at": "2023-07-20T16:06:44Z"
+      },
+      {
+        "objectID": "42346344",
+        "title": "Structured Outputs with Ollama",
+        "url": "https://ollama.com/blog/structured-outputs",
+        "points": 265,
+        "num_comments": 70,
+        "author": "Patrick_Devine",
+        "created_at": "2024-12-07T01:12:32Z"
+      },
+      {
+        "objectID": "42772983",
+        "title": "Official DeepSeek R1 Now on Ollama",
+        "url": "https://ollama.com/library/deepseek-r1",
+        "points": 234,
+        "num_comments": 80,
+        "author": "excerionsforte",
+        "created_at": "2025-01-20T21:00:24Z"
+      },
+      {
+        "objectID": "44524544",
+        "title": "Show HN: Cactus – Ollama for Smartphones",
+        "url": "https://github.com/cactus-compute/cactus",
+        "points": 231,
+        "num_comments": 82,
+        "author": "HenryNdubuaku",
+        "created_at": "2025-07-10T19:20:59Z"
+      },
+      {
+        "objectID": "42323953",
+        "title": "Bringing K/V context quantisation to Ollama",
+        "url": "https://smcleod.net/2024/12/bringing-k/v-context-quantisation-to-ollama/",
+        "points": 220,
+        "num_comments": 32,
+        "author": "mchiang",
+        "created_at": "2024-12-05T01:40:30Z"
+      },
+      {
+        "objectID": "42886680",
+        "title": "Llama.cpp supports Vulkan. why doesn't Ollama?",
+        "url": "https://github.com/ollama/ollama/pull/5059",
+        "points": 217,
+        "num_comments": 228,
+        "author": "buyucu",
+        "created_at": "2025-01-31T11:30:48Z"
+      },
+      {
+        "objectID": "47212576",
+        "title": "Show HN: Timber – Ollama for classical ML models, 336x faster than Python",
+        "url": "https://github.com/kossisoroyce/timber",
+        "points": 207,
+        "num_comments": 33,
+        "author": "kossisoroyce",
+        "created_at": "2026-03-02T00:57:40Z"
+      },
+      {
+        "objectID": "44003741",
+        "title": "Ollama violating llama.cpp license for over a year",
+        "url": "https://github.com/ollama/ollama/issues/3185",
+        "points": 202,
+        "num_comments": 68,
+        "author": "Jabrov",
+        "created_at": "2025-05-16T10:36:38Z"
+      },
+      {
+        "objectID": "44845272",
+        "title": "Jan – Ollama alternative with local UI",
+        "url": "https://github.com/menloresearch/jan",
+        "points": 197,
+        "num_comments": 73,
+        "author": "maxloh",
+        "created_at": "2025-08-09T09:54:13Z"
+      },
+      {
+        "objectID": "37786525",
+        "title": "Ollama is now available as an official Docker image",
+        "url": "https://ollama.ai/blog/ollama-is-now-available-as-an-official-docker-image",
+        "points": 197,
+        "num_comments": 47,
+        "author": "alexzeitler",
+        "created_at": "2023-10-06T02:18:27Z"
+      },
+      {
+        "objectID": "40191723",
+        "title": "Ollama v0.1.33 with Llama 3, Phi 3, and Qwen 110B",
+        "url": "https://github.com/ollama/ollama/releases/tag/v0.1.33-rc5",
+        "points": 192,
+        "num_comments": 64,
+        "author": "ashvardanian",
+        "created_at": "2024-04-28T20:48:42Z"
+      },
+      {
+        "objectID": "42069453",
+        "title": "Ollama 0.4 is released with support for Meta's Llama 3.2 Vision models locally",
+        "url": "https://ollama.com/blog/llama3.2-vision",
+        "points": 182,
+        "num_comments": 25,
+        "author": "BUFU",
+        "created_at": "2024-11-06T21:10:39Z"
+      },
+      {
+        "objectID": "44867238",
+        "title": "Ollama and gguf",
+        "url": "https://github.com/ollama/ollama/issues/11714",
+        "points": 173,
+        "num_comments": 91,
+        "author": "indigodaddy",
+        "created_at": "2025-08-11T17:54:08Z"
+      },
+      {
+        "objectID": "37661755",
+        "title": "Ollama for Linux – Run LLMs on Linux with GPU Acceleration",
+        "url": "https://github.com/jmorganca/ollama/releases/tag/v0.1.0",
+        "points": 173,
+        "num_comments": 54,
+        "author": "jmorgan",
+        "created_at": "2023-09-26T16:29:56Z"
+      },
+      {
+        "objectID": "43110173",
+        "title": "Run structured extraction on documents/images locally with Ollama and Pydantic",
+        "url": "https://github.com/vlm-run/vlmrun-hub",
+        "points": 170,
+        "num_comments": 29,
+        "author": "EarlyOom",
+        "created_at": "2025-02-20T01:54:10Z"
+      },
+      {
+        "objectID": "40744293",
+        "title": "Show HN: Local voice assistant using Ollama, transformers and Coqui TTS toolkit",
+        "url": "https://github.com/mezbaul-h/june",
+        "points": 167,
+        "num_comments": 26,
+        "author": "mezba",
+        "created_at": "2024-06-20T22:48:40Z"
+      },
+      {
+        "objectID": "45113418",
+        "title": "Finding thousands of exposed Ollama instances using Shodan",
+        "url": "https://blogs.cisco.com/security/detecting-exposed-llm-servers-shodan-case-study-on-ollama",
+        "points": 166,
+        "num_comments": 72,
+        "author": "rldjbpin",
+        "created_at": "2025-09-03T08:18:07Z"
+      },
+      {
+        "objectID": "39456113",
+        "title": "Show HN: NotesOllama – I added local LLM support to Apple Notes (through Ollama)",
+        "url": "https://smallest.app/notesollama/",
+        "points": 156,
+        "num_comments": 31,
+        "author": "rexec",
+        "created_at": "2024-02-21T16:46:19Z"
+      },
+      {
+        "objectID": "41125919",
+        "title": "Building a Local Perplexity Alternative with Perplexica, Ollama, and SearXNG",
+        "url": "https://jointerminus.medium.com/building-a-local-perplexity-alternative-with-perplexica-ollama-and-searxng-71602523e256",
+        "points": 134,
+        "num_comments": 49,
+        "author": "flybird",
+        "created_at": "2024-08-01T03:36:54Z"
+      },
+      {
+        "objectID": "41810507",
+        "title": "Show HN: I made an Ollama summarizer for Firefox",
+        "url": "https://addons.mozilla.org/en-US/firefox/addon/spacellama/",
+        "points": 132,
+        "num_comments": 33,
+        "author": "tcsenpai",
+        "created_at": "2024-10-11T15:45:48Z"
+      },
+      {
+        "objectID": "43676084",
+        "title": "Quick Primer on MCP Using Ollama and LangChain",
+        "url": "https://www.polarsparc.com/xhtml/MCP.html",
+        "points": 131,
+        "num_comments": 20,
+        "author": "bswamina",
+        "created_at": "2025-04-13T21:43:36Z"
+      },
+      {
+        "objectID": "41578446",
+        "title": "Knowledge graphs using Ollama and Embeddings to answer and visualizing queries",
+        "url": "https://github.com/punnerud/Local_Knowledge_Graph",
+        "points": 122,
+        "num_comments": 9,
+        "author": "punnerud",
+        "created_at": "2024-09-18T11:37:09Z"
+      },
+      {
+        "objectID": "40692970",
+        "title": "Ollama v0.1.45",
+        "url": "https://github.com/ollama/ollama/releases/tag/v0.1.45-rc1",
+        "points": 111,
+        "num_comments": 64,
+        "author": "lijunhao",
+        "created_at": "2024-06-15T21:54:02Z"
+      },
+      {
+        "objectID": "40061831",
+        "title": "Ollama 0.1.32: WizardLM 2, Mixtral 8x22B, macOS CPU/GPU model split",
+        "url": "https://github.com/ollama/ollama/releases/tag/v0.1.32",
+        "points": 107,
+        "num_comments": 55,
+        "author": "tosh",
+        "created_at": "2024-04-17T08:15:36Z"
+      },
+      {
+        "objectID": "40426711",
+        "title": "Google announces Firebase Genkit with Ollama support",
+        "url": "https://ollama.com/blog/firebase-genkit",
+        "points": 102,
+        "num_comments": 31,
+        "author": "tosh",
+        "created_at": "2024-05-21T10:55:54Z"
+      },
+      {
+        "objectID": "43649711",
+        "title": "Nvidia on NixOS WSL – Ollama up 24/7 on your gaming PC",
+        "url": "https://yomaq.github.io/posts/nvidia-on-nixos-wsl-ollama-up-24-7-on-your-gaming-pc/",
+        "points": 95,
+        "num_comments": 49,
+        "author": "fangpenlin",
+        "created_at": "2025-04-11T01:50:09Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,709 @@
+{
+  "project": "Hermes Agent",
+  "repo": "NousResearch/hermes-agent",
+  "collected_at": "2026-05-22T11:29:50.885800+00:00",
+  "queries": [
+    "Hermes Agent",
+    "hermes-agent"
+  ],
+  "total_hits": 77,
+  "results": {
+    "Hermes Agent": [
+      {
+        "objectID": "47945426",
+        "title": "Tooling Up Hermes Agent",
+        "url": "https://nedkarlovich.com/writing/tooling-up-hermes-agent",
+        "points": 9,
+        "num_comments": 0,
+        "author": "birdwhistler",
+        "created_at": "2026-04-29T08:05:53Z"
+      },
+      {
+        "objectID": "48187581",
+        "title": "Nous Research edits GitHub issue to remove plagiarism claims about Hermes Agent",
+        "url": "https://github.com/NousResearch/hermes-agent/issues/10232",
+        "points": 7,
+        "num_comments": 0,
+        "author": "simonmysun",
+        "created_at": "2026-05-19T00:03:48Z"
+      },
+      {
+        "objectID": "48162360",
+        "title": "Show HN: Hermes-agentmemory, pull-model episodic memory with real deletes",
+        "url": "https://github.com/MukundaKatta/hermes-agentmemory",
+        "points": 6,
+        "num_comments": 0,
+        "author": "mukundakatta",
+        "created_at": "2026-05-16T18:00:38Z"
+      },
+      {
+        "objectID": "47644400",
+        "title": "Hermes Agent: The self-improving open source AI agent Complete Guide for 2026",
+        "url": "https://virtualuncle.com/hermes-agent-complete-guide-2026/",
+        "points": 5,
+        "num_comments": 1,
+        "author": "svrbvr",
+        "created_at": "2026-04-04T22:57:12Z"
+      },
+      {
+        "objectID": "47630901",
+        "title": "Hermes Agent by Nous Research",
+        "url": "https://hermes-agent.nousresearch.com",
+        "points": 5,
+        "num_comments": 0,
+        "author": "tomaskafka",
+        "created_at": "2026-04-03T19:17:48Z"
+      },
+      {
+        "objectID": "47264225",
+        "title": "NousResearch/hermes-agent: The agent that grows with you",
+        "url": "https://github.com/NousResearch/hermes-agent",
+        "points": 4,
+        "num_comments": 3,
+        "author": "simonpure",
+        "created_at": "2026-03-05T17:08:51Z"
+      },
+      {
+        "objectID": "47690234",
+        "title": "Show HN: Python like DSL for enterprise grade OpenClaw/hermes/paperclip agents",
+        "url": "https://github.com/aelaguiz/doctrine",
+        "points": 3,
+        "num_comments": 3,
+        "author": "aelaguiz",
+        "created_at": "2026-04-08T13:51:28Z"
+      },
+      {
+        "objectID": "48172619",
+        "title": "Use your Grok subscription in Hermes agent",
+        "url": "https://x.ai/news/grok-hermes",
+        "points": 3,
+        "num_comments": 1,
+        "author": "sheepscreek",
+        "created_at": "2026-05-17T19:50:17Z"
+      },
+      {
+        "objectID": "47865412",
+        "title": "Show HN: AI Hermes Agent – An independent Hermes Agent install guide",
+        "url": "https://ai-hermes-agent.com/install",
+        "points": 3,
+        "num_comments": 1,
+        "author": "ethanjamescolez",
+        "created_at": "2026-04-22T15:52:27Z"
+      },
+      {
+        "objectID": "47754556",
+        "title": "Hermes Agent (by Nous Hermes) quickly ranked #1 on OpenRouter",
+        "url": "https://twitter.com/Teknium/status/2043122514986139763",
+        "points": 3,
+        "num_comments": 1,
+        "author": "larodi",
+        "created_at": "2026-04-13T16:34:06Z"
+      },
+      {
+        "objectID": "47726913",
+        "title": "An Agent That Grows with You – Hermes Agent",
+        "url": "https://hermesagent.best/",
+        "points": 3,
+        "num_comments": 1,
+        "author": "luosix",
+        "created_at": "2026-04-11T03:06:40Z"
+      },
+      {
+        "objectID": "47341909",
+        "title": "Hermes Agent: The self-improving AI agent",
+        "url": "https://github.com/NousResearch/hermes-agent",
+        "points": 3,
+        "num_comments": 1,
+        "author": "danebalia",
+        "created_at": "2026-03-11T21:09:43Z"
+      },
+      {
+        "objectID": "48152951",
+        "title": "Connect Grok to Hermes Agent",
+        "url": "https://x.ai/news/grok-hermes",
+        "points": 3,
+        "num_comments": 0,
+        "author": "surprisetalk",
+        "created_at": "2026-05-15T19:45:14Z"
+      },
+      {
+        "objectID": "48102167",
+        "title": "Hermes Agent Background Computer Use on macOS via SkyLight Private SPIs",
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/computer-use",
+        "points": 3,
+        "num_comments": 0,
+        "author": "simonpure",
+        "created_at": "2026-05-11T23:29:43Z"
+      },
+      {
+        "objectID": "47821220",
+        "title": "Hermes Agent by Nous Research",
+        "url": "https://hermes-agent.nousresearch.com",
+        "points": 3,
+        "num_comments": 0,
+        "author": "dnw",
+        "created_at": "2026-04-19T02:03:59Z"
+      },
+      {
+        "objectID": "48231322",
+        "title": "Hermes: The Agent That Grows with You",
+        "url": "https://hermes-agent.nousresearch.com/",
+        "points": 2,
+        "num_comments": 1,
+        "author": "mooreds",
+        "created_at": "2026-05-22T02:36:43Z"
+      },
+      {
+        "objectID": "48134594",
+        "title": "Computer-Use in Hermes Agent v2.0 [video]",
+        "url": "https://www.youtube.com/watch?v=Gx2joHxUhgg",
+        "points": 2,
+        "num_comments": 0,
+        "author": "frabonacci",
+        "created_at": "2026-05-14T12:43:39Z"
+      },
+      {
+        "objectID": "48099194",
+        "title": "Hermes Agent surpassed OpenClaw as top app on OpenRouter leaderboard",
+        "url": "https://openrouter.ai/rankings",
+        "points": 2,
+        "num_comments": 0,
+        "author": "joeyhage",
+        "created_at": "2026-05-11T18:58:23Z"
+      },
+      {
+        "objectID": "47899616",
+        "title": "OpenClaw vs. Hermes Agent: The race to build AI assistants that never forget",
+        "url": "https://thenewstack.io/persistent-ai-agents-compared/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "thunderbong",
+        "created_at": "2026-04-25T08:01:15Z"
+      },
+      {
+        "objectID": "47785284",
+        "title": "Hermes Agent Self-Evolution System: A Detailed Similarity Analysis with Evolver",
+        "url": "https://evomap.ai/blog/hermes-agent-evolver-similarity-analysis",
+        "points": 2,
+        "num_comments": 0,
+        "author": "tamnd",
+        "created_at": "2026-04-15T21:11:25Z"
+      },
+      {
+        "objectID": "47700138",
+        "title": "How to Add Memory to Your Hermes Agent",
+        "url": "https://cortexdb.ai/blog/hermes-memory-tutorial",
+        "points": 2,
+        "num_comments": 0,
+        "author": "prmalik",
+        "created_at": "2026-04-09T06:49:27Z"
+      },
+      {
+        "objectID": "47580401",
+        "title": "Nous Research Hermes Agent launches Multi-agent",
+        "url": "https://twitter.com/nousresearch/status/2038688578201346513",
+        "points": 2,
+        "num_comments": 0,
+        "author": "grafda",
+        "created_at": "2026-03-30T22:16:57Z"
+      },
+      {
+        "objectID": "47163731",
+        "title": "Hermes Agent",
+        "url": "https://twitter.com/NousResearch/status/2026758996107898954",
+        "points": 2,
+        "num_comments": 0,
+        "author": "tosh",
+        "created_at": "2026-02-26T09:12:20Z"
+      },
+      {
+        "objectID": "47789149",
+        "title": "Who Tried Hermes Agent?",
+        "url": "https://github.com/aipoch/medical-research-skills",
+        "points": 1,
+        "num_comments": 1,
+        "author": "The_resa",
+        "created_at": "2026-04-16T05:51:28Z"
+      },
+      {
+        "objectID": "47919711",
+        "title": "Show HN: Web Client for Hermes Agent",
+        "url": "https://github.com/lotsoftick/hermes_client",
+        "points": 1,
+        "num_comments": 0,
+        "author": "lotsoftick",
+        "created_at": "2026-04-27T10:11:55Z"
+      },
+      {
+        "objectID": "47871176",
+        "title": "Hermes Agent – A self-improving AI agent",
+        "url": "https://hermes-agent.nousresearch.com",
+        "points": 1,
+        "num_comments": 0,
+        "author": "rob",
+        "created_at": "2026-04-23T01:00:49Z"
+      },
+      {
+        "objectID": "47740042",
+        "title": "Show HN: Agent-Notifications – Real-Time Alerts for OpenClaw and Hermes Agents",
+        "url": "https://github.com/Kuberwastaken/agent-notifications",
+        "points": 1,
+        "num_comments": 0,
+        "author": "kuberwastaken",
+        "created_at": "2026-04-12T14:23:09Z"
+      },
+      {
+        "objectID": "47692866",
+        "title": "Show HN: I build a hermes agent helper website",
+        "url": "https://hermes-agent.us",
+        "points": 1,
+        "num_comments": 0,
+        "author": "mixfox",
+        "created_at": "2026-04-08T16:53:37Z"
+      },
+      {
+        "objectID": "47579582",
+        "title": "Hermes Agent v0.6.0 solves its biggest weakness against OpenClaw",
+        "url": "https://efficienist.com/hermes-agent-v0-6-0-finally-solves-its-biggest-weakness-against-openclaw/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "jenic_",
+        "created_at": "2026-03-30T20:53:32Z"
+      },
+      {
+        "objectID": "47307301",
+        "title": "Hermes Agent",
+        "url": "https://github.com/NousResearch/hermes-agent",
+        "points": 1,
+        "num_comments": 0,
+        "author": "tosh",
+        "created_at": "2026-03-09T10:44:00Z"
+      },
+      {
+        "objectID": "47234855",
+        "title": "Hermes Agent",
+        "url": "https://nousresearch.com/hermes-agent/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "h34t",
+        "created_at": "2026-03-03T16:29:59Z"
+      },
+      {
+        "objectID": "47470156",
+        "title": "Show HN: Vessel Browser – An open-source browser built for AI agents, not humans",
+        "url": "https://quantaintellect.com/",
+        "points": 6,
+        "num_comments": 5,
+        "author": "unmodeledtyler",
+        "created_at": "2026-03-21T19:02:57Z"
+      },
+      {
+        "objectID": "47696273",
+        "title": "Show HN: CongaLine – Self-hosted isolated AI agent fleet (OpenClaw, Hermes)",
+        "url": "https://github.com/cruxdigital-llc/congaline",
+        "points": 4,
+        "num_comments": 0,
+        "author": "zhendershot",
+        "created_at": "2026-04-08T21:06:35Z"
+      },
+      {
+        "objectID": "48052476",
+        "title": "Show HN: Agent-data – a CLI for giving agents real-time, structured data",
+        "url": "https://agent-data.dev/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "jb_hn",
+        "created_at": "2026-05-07T17:50:14Z"
+      },
+      {
+        "objectID": "47406166",
+        "title": "Show HN: BonzAI – 1-click local AI inference and yield-bearing AI artifacts",
+        "url": "https://www.bonzai.sh/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "wilhempujar",
+        "created_at": "2026-03-16T22:56:21Z"
+      },
+      {
+        "objectID": "47793409",
+        "title": "A faster, cheaper Claude Code alternative with automatic provider failover",
+        "url": "https://www.surly.dev/articles/how-to-get-95-pct-claude-code-quality-at-half-the-cost-with-hermes-agent",
+        "points": 3,
+        "num_comments": 0,
+        "author": "thesurlydev",
+        "created_at": "2026-04-16T14:23:40Z"
+      },
+      {
+        "objectID": "47813903",
+        "title": "The agent that grows with you",
+        "url": "https://hermes-agent.nousresearch.com/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "sponno",
+        "created_at": "2026-04-18T07:27:54Z"
+      },
+      {
+        "objectID": "47747612",
+        "title": "Self-Improving AI Agent",
+        "url": "https://github.com/NousResearch/hermes-agent",
+        "points": 1,
+        "num_comments": 0,
+        "author": "granto",
+        "created_at": "2026-04-13T04:29:20Z"
+      },
+      {
+        "objectID": "48160310",
+        "title": "Rikkahub-agent OpenClaw/hermes for Android phones",
+        "url": "https://github.com/ExTV/rikkahub-agent",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ExTv",
+        "created_at": "2026-05-16T13:56:03Z"
+      },
+      {
+        "objectID": "47997255",
+        "title": "Show HN: My OSINT dashboard with 60+ feeds now has a pseudonymous P2P comms",
+        "url": "https://github.com/BigBodyCobain/Shadowbroker/tree/main",
+        "points": 5,
+        "num_comments": 0,
+        "author": "vancecookcobxin",
+        "created_at": "2026-05-03T14:24:31Z"
+      }
+    ],
+    "hermes-agent": [
+      {
+        "objectID": "47945426",
+        "title": "Tooling Up Hermes Agent",
+        "url": "https://nedkarlovich.com/writing/tooling-up-hermes-agent",
+        "points": 9,
+        "num_comments": 0,
+        "author": "birdwhistler",
+        "created_at": "2026-04-29T08:05:53Z"
+      },
+      {
+        "objectID": "48187581",
+        "title": "Nous Research edits GitHub issue to remove plagiarism claims about Hermes Agent",
+        "url": "https://github.com/NousResearch/hermes-agent/issues/10232",
+        "points": 7,
+        "num_comments": 0,
+        "author": "simonmysun",
+        "created_at": "2026-05-19T00:03:48Z"
+      },
+      {
+        "objectID": "48162360",
+        "title": "Show HN: Hermes-agentmemory, pull-model episodic memory with real deletes",
+        "url": "https://github.com/MukundaKatta/hermes-agentmemory",
+        "points": 6,
+        "num_comments": 0,
+        "author": "mukundakatta",
+        "created_at": "2026-05-16T18:00:38Z"
+      },
+      {
+        "objectID": "47644400",
+        "title": "Hermes Agent: The self-improving open source AI agent Complete Guide for 2026",
+        "url": "https://virtualuncle.com/hermes-agent-complete-guide-2026/",
+        "points": 5,
+        "num_comments": 1,
+        "author": "svrbvr",
+        "created_at": "2026-04-04T22:57:12Z"
+      },
+      {
+        "objectID": "47630901",
+        "title": "Hermes Agent by Nous Research",
+        "url": "https://hermes-agent.nousresearch.com",
+        "points": 5,
+        "num_comments": 0,
+        "author": "tomaskafka",
+        "created_at": "2026-04-03T19:17:48Z"
+      },
+      {
+        "objectID": "47264225",
+        "title": "NousResearch/hermes-agent: The agent that grows with you",
+        "url": "https://github.com/NousResearch/hermes-agent",
+        "points": 4,
+        "num_comments": 3,
+        "author": "simonpure",
+        "created_at": "2026-03-05T17:08:51Z"
+      },
+      {
+        "objectID": "48172619",
+        "title": "Use your Grok subscription in Hermes agent",
+        "url": "https://x.ai/news/grok-hermes",
+        "points": 3,
+        "num_comments": 1,
+        "author": "sheepscreek",
+        "created_at": "2026-05-17T19:50:17Z"
+      },
+      {
+        "objectID": "47865412",
+        "title": "Show HN: AI Hermes Agent – An independent Hermes Agent install guide",
+        "url": "https://ai-hermes-agent.com/install",
+        "points": 3,
+        "num_comments": 1,
+        "author": "ethanjamescolez",
+        "created_at": "2026-04-22T15:52:27Z"
+      },
+      {
+        "objectID": "47754556",
+        "title": "Hermes Agent (by Nous Hermes) quickly ranked #1 on OpenRouter",
+        "url": "https://twitter.com/Teknium/status/2043122514986139763",
+        "points": 3,
+        "num_comments": 1,
+        "author": "larodi",
+        "created_at": "2026-04-13T16:34:06Z"
+      },
+      {
+        "objectID": "47726913",
+        "title": "An Agent That Grows with You – Hermes Agent",
+        "url": "https://hermesagent.best/",
+        "points": 3,
+        "num_comments": 1,
+        "author": "luosix",
+        "created_at": "2026-04-11T03:06:40Z"
+      },
+      {
+        "objectID": "47341909",
+        "title": "Hermes Agent: The self-improving AI agent",
+        "url": "https://github.com/NousResearch/hermes-agent",
+        "points": 3,
+        "num_comments": 1,
+        "author": "danebalia",
+        "created_at": "2026-03-11T21:09:43Z"
+      },
+      {
+        "objectID": "48152951",
+        "title": "Connect Grok to Hermes Agent",
+        "url": "https://x.ai/news/grok-hermes",
+        "points": 3,
+        "num_comments": 0,
+        "author": "surprisetalk",
+        "created_at": "2026-05-15T19:45:14Z"
+      },
+      {
+        "objectID": "48102167",
+        "title": "Hermes Agent Background Computer Use on macOS via SkyLight Private SPIs",
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/computer-use",
+        "points": 3,
+        "num_comments": 0,
+        "author": "simonpure",
+        "created_at": "2026-05-11T23:29:43Z"
+      },
+      {
+        "objectID": "47821220",
+        "title": "Hermes Agent by Nous Research",
+        "url": "https://hermes-agent.nousresearch.com",
+        "points": 3,
+        "num_comments": 0,
+        "author": "dnw",
+        "created_at": "2026-04-19T02:03:59Z"
+      },
+      {
+        "objectID": "48134594",
+        "title": "Computer-Use in Hermes Agent v2.0 [video]",
+        "url": "https://www.youtube.com/watch?v=Gx2joHxUhgg",
+        "points": 2,
+        "num_comments": 0,
+        "author": "frabonacci",
+        "created_at": "2026-05-14T12:43:39Z"
+      },
+      {
+        "objectID": "48099194",
+        "title": "Hermes Agent surpassed OpenClaw as top app on OpenRouter leaderboard",
+        "url": "https://openrouter.ai/rankings",
+        "points": 2,
+        "num_comments": 0,
+        "author": "joeyhage",
+        "created_at": "2026-05-11T18:58:23Z"
+      },
+      {
+        "objectID": "47899616",
+        "title": "OpenClaw vs. Hermes Agent: The race to build AI assistants that never forget",
+        "url": "https://thenewstack.io/persistent-ai-agents-compared/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "thunderbong",
+        "created_at": "2026-04-25T08:01:15Z"
+      },
+      {
+        "objectID": "47785284",
+        "title": "Hermes Agent Self-Evolution System: A Detailed Similarity Analysis with Evolver",
+        "url": "https://evomap.ai/blog/hermes-agent-evolver-similarity-analysis",
+        "points": 2,
+        "num_comments": 0,
+        "author": "tamnd",
+        "created_at": "2026-04-15T21:11:25Z"
+      },
+      {
+        "objectID": "47700138",
+        "title": "How to Add Memory to Your Hermes Agent",
+        "url": "https://cortexdb.ai/blog/hermes-memory-tutorial",
+        "points": 2,
+        "num_comments": 0,
+        "author": "prmalik",
+        "created_at": "2026-04-09T06:49:27Z"
+      },
+      {
+        "objectID": "47580401",
+        "title": "Nous Research Hermes Agent launches Multi-agent",
+        "url": "https://twitter.com/nousresearch/status/2038688578201346513",
+        "points": 2,
+        "num_comments": 0,
+        "author": "grafda",
+        "created_at": "2026-03-30T22:16:57Z"
+      },
+      {
+        "objectID": "47163731",
+        "title": "Hermes Agent",
+        "url": "https://twitter.com/NousResearch/status/2026758996107898954",
+        "points": 2,
+        "num_comments": 0,
+        "author": "tosh",
+        "created_at": "2026-02-26T09:12:20Z"
+      },
+      {
+        "objectID": "47789149",
+        "title": "Who Tried Hermes Agent?",
+        "url": "https://github.com/aipoch/medical-research-skills",
+        "points": 1,
+        "num_comments": 1,
+        "author": "The_resa",
+        "created_at": "2026-04-16T05:51:28Z"
+      },
+      {
+        "objectID": "47919711",
+        "title": "Show HN: Web Client for Hermes Agent",
+        "url": "https://github.com/lotsoftick/hermes_client",
+        "points": 1,
+        "num_comments": 0,
+        "author": "lotsoftick",
+        "created_at": "2026-04-27T10:11:55Z"
+      },
+      {
+        "objectID": "47871176",
+        "title": "Hermes Agent – A self-improving AI agent",
+        "url": "https://hermes-agent.nousresearch.com",
+        "points": 1,
+        "num_comments": 0,
+        "author": "rob",
+        "created_at": "2026-04-23T01:00:49Z"
+      },
+      {
+        "objectID": "47740042",
+        "title": "Show HN: Agent-Notifications – Real-Time Alerts for OpenClaw and Hermes Agents",
+        "url": "https://github.com/Kuberwastaken/agent-notifications",
+        "points": 1,
+        "num_comments": 0,
+        "author": "kuberwastaken",
+        "created_at": "2026-04-12T14:23:09Z"
+      },
+      {
+        "objectID": "47692866",
+        "title": "Show HN: I build a hermes agent helper website",
+        "url": "https://hermes-agent.us",
+        "points": 1,
+        "num_comments": 0,
+        "author": "mixfox",
+        "created_at": "2026-04-08T16:53:37Z"
+      },
+      {
+        "objectID": "47579582",
+        "title": "Hermes Agent v0.6.0 solves its biggest weakness against OpenClaw",
+        "url": "https://efficienist.com/hermes-agent-v0-6-0-finally-solves-its-biggest-weakness-against-openclaw/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "jenic_",
+        "created_at": "2026-03-30T20:53:32Z"
+      },
+      {
+        "objectID": "47307301",
+        "title": "Hermes Agent",
+        "url": "https://github.com/NousResearch/hermes-agent",
+        "points": 1,
+        "num_comments": 0,
+        "author": "tosh",
+        "created_at": "2026-03-09T10:44:00Z"
+      },
+      {
+        "objectID": "47234855",
+        "title": "Hermes Agent",
+        "url": "https://nousresearch.com/hermes-agent/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "h34t",
+        "created_at": "2026-03-03T16:29:59Z"
+      },
+      {
+        "objectID": "47470156",
+        "title": "Show HN: Vessel Browser – An open-source browser built for AI agents, not humans",
+        "url": "https://quantaintellect.com/",
+        "points": 6,
+        "num_comments": 5,
+        "author": "unmodeledtyler",
+        "created_at": "2026-03-21T19:02:57Z"
+      },
+      {
+        "objectID": "47696273",
+        "title": "Show HN: CongaLine – Self-hosted isolated AI agent fleet (OpenClaw, Hermes)",
+        "url": "https://github.com/cruxdigital-llc/congaline",
+        "points": 4,
+        "num_comments": 0,
+        "author": "zhendershot",
+        "created_at": "2026-04-08T21:06:35Z"
+      },
+      {
+        "objectID": "48052476",
+        "title": "Show HN: Agent-data – a CLI for giving agents real-time, structured data",
+        "url": "https://agent-data.dev/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "jb_hn",
+        "created_at": "2026-05-07T17:50:14Z"
+      },
+      {
+        "objectID": "47406166",
+        "title": "Show HN: BonzAI – 1-click local AI inference and yield-bearing AI artifacts",
+        "url": "https://www.bonzai.sh/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "wilhempujar",
+        "created_at": "2026-03-16T22:56:21Z"
+      },
+      {
+        "objectID": "47793409",
+        "title": "A faster, cheaper Claude Code alternative with automatic provider failover",
+        "url": "https://www.surly.dev/articles/how-to-get-95-pct-claude-code-quality-at-half-the-cost-with-hermes-agent",
+        "points": 3,
+        "num_comments": 0,
+        "author": "thesurlydev",
+        "created_at": "2026-04-16T14:23:40Z"
+      },
+      {
+        "objectID": "48231322",
+        "title": "Hermes: The Agent That Grows with You",
+        "url": "https://hermes-agent.nousresearch.com/",
+        "points": 2,
+        "num_comments": 1,
+        "author": "mooreds",
+        "created_at": "2026-05-22T02:36:43Z"
+      },
+      {
+        "objectID": "47813903",
+        "title": "The agent that grows with you",
+        "url": "https://hermes-agent.nousresearch.com/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "sponno",
+        "created_at": "2026-04-18T07:27:54Z"
+      },
+      {
+        "objectID": "47747612",
+        "title": "Self-Improving AI Agent",
+        "url": "https://github.com/NousResearch/hermes-agent",
+        "points": 1,
+        "num_comments": 0,
+        "author": "granto",
+        "created_at": "2026-04-13T04:29:20Z"
+      }
+    ]
+  }
+}

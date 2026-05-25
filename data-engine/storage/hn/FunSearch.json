@@ -1,0 +1,412 @@
+{
+  "project": "FunSearch",
+  "repo": "google-deepmind/funsearch",
+  "collected_at": "2026-05-22T11:30:16.695692+00:00",
+  "queries": [
+    "FunSearch",
+    "funsearch"
+  ],
+  "total_hits": 44,
+  "results": {
+    "FunSearch": [
+      {
+        "objectID": "38643076",
+        "title": "FunSearch: Making new discoveries in mathematical sciences using LLMs",
+        "url": "https://deepmind.google/discover/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/",
+        "points": 388,
+        "num_comments": 100,
+        "author": "reqo",
+        "created_at": "2023-12-14T16:24:12Z"
+      },
+      {
+        "objectID": "38661335",
+        "title": "Math Models from Program Search (Google FunSearch) Using LLMs",
+        "url": "https://www.nature.com/articles/s41586-023-06924-6",
+        "points": 4,
+        "num_comments": 0,
+        "author": "pajop",
+        "created_at": "2023-12-16T02:58:23Z"
+      },
+      {
+        "objectID": "11284441",
+        "title": "Fun: Search for the 12345 sequences in this Pi API that stores 1B+ digits",
+        "url": "https://apidigits.apispark.net/v1/html/index.html",
+        "points": 4,
+        "num_comments": 0,
+        "author": "swannvichot",
+        "created_at": "2016-03-14T18:14:54Z"
+      },
+      {
+        "objectID": "1398149",
+        "title": "Python gives more fun search results than Ruby",
+        "url": "http://skitch.com/adamnelson/dgktq/python-range-google-search",
+        "points": 2,
+        "num_comments": 0,
+        "author": "AdamN",
+        "created_at": "2010-06-02T15:12:11Z"
+      },
+      {
+        "objectID": "38719943",
+        "title": "Sorry, but FunSearch probably isn't a milestone in scientific discovery",
+        "url": "https://garymarcus.substack.com/p/sorry-but-funsearch-probably-isnt",
+        "points": 1,
+        "num_comments": 0,
+        "author": "nsoonhui",
+        "created_at": "2023-12-21T13:07:33Z"
+      },
+      {
+        "objectID": "38650894",
+        "title": "Fun Search",
+        "url": "https://github.com/google-deepmind/funsearch",
+        "points": 1,
+        "num_comments": 0,
+        "author": "lawrenceyan",
+        "created_at": "2023-12-15T04:09:06Z"
+      },
+      {
+        "objectID": "38011802",
+        "title": "Show HN: An Embedding-Based Search Service over ShowHN, AskHN, GitHub, More",
+        "url": "https://payperrun.com/%3E/search",
+        "points": 7,
+        "num_comments": 4,
+        "author": "eneuman",
+        "created_at": "2023-10-25T11:53:48Z"
+      },
+      {
+        "objectID": "42090118",
+        "title": "\"Enable Google Play services. Phone won't work unless you enable Google Play \"",
+        "url": "",
+        "points": 3,
+        "num_comments": 5,
+        "author": "1vuio0pswjnm7",
+        "created_at": "2024-11-08T20:16:36Z"
+      },
+      {
+        "objectID": "38667484",
+        "title": "DeepMind's LLM Just Solved an Unsolvable Math Problem",
+        "url": "https://em360tech.com/tech-article/deepmind-funsearch-llm",
+        "points": 11,
+        "num_comments": 5,
+        "author": "elorant",
+        "created_at": "2023-12-16T20:42:30Z"
+      },
+      {
+        "objectID": "38664893",
+        "title": "A large language model finds new solutions to math problems",
+        "url": "https://www.zmescience.com/science/news-science/funsearch-deepmind-llm-math-discveory/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Brajeshwar",
+        "created_at": "2023-12-16T15:27:59Z"
+      },
+      {
+        "objectID": "45844438",
+        "title": "Agentic FinSearch vs. Bloomberg Terminal",
+        "url": "https://chromewebstore.google.com/detail/agentic-finsearch/aehnlpneoncdfioafiigiljmbghccami",
+        "points": 1,
+        "num_comments": 1,
+        "author": "yanglet",
+        "created_at": "2025-11-07T08:03:23Z"
+      },
+      {
+        "objectID": "38676563",
+        "title": "Fsearch, a fast file search utility for Unix-like systems",
+        "url": "https://github.com/cboxdoerfer/fsearch",
+        "points": 207,
+        "num_comments": 95,
+        "author": "karlicoss",
+        "created_at": "2023-12-17T21:19:26Z"
+      },
+      {
+        "objectID": "32469582",
+        "title": "FSearch, a fast file search utility for Unix-like systems",
+        "url": "https://github.com/cboxdoerfer/fsearch",
+        "points": 4,
+        "num_comments": 1,
+        "author": "phil294",
+        "created_at": "2022-08-15T13:43:41Z"
+      },
+      {
+        "objectID": "12733150",
+        "title": "FSearch, a fast file search utility for GNU/Linux",
+        "url": "https://cboxdoerfer.github.io/fsearch/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "tmkbry",
+        "created_at": "2016-10-18T09:52:49Z"
+      },
+      {
+        "objectID": "28661082",
+        "title": "Show HN: FSearch 0.1 released (A fast graphical file search utility)",
+        "url": "https://github.com/cboxdoerfer/fsearch/releases/tag/v0.1",
+        "points": 2,
+        "num_comments": 0,
+        "author": "wander_homer",
+        "created_at": "2021-09-26T14:19:28Z"
+      },
+      {
+        "objectID": "5116625",
+        "title": "StackCity - my first rails app eaten by FBSearch?",
+        "url": "http://www.stackcity.com",
+        "points": 1,
+        "num_comments": 0,
+        "author": "gdub01",
+        "created_at": "2013-01-25T17:44:07Z"
+      },
+      {
+        "objectID": "41395229",
+        "title": "FUNARCH 2024: International Workshop on Functional Software Architecture",
+        "url": "https://dl.acm.org/doi/proceedings/10.1145/3677998",
+        "points": 1,
+        "num_comments": 0,
+        "author": "matt_d",
+        "created_at": "2024-08-29T21:01:03Z"
+      },
+      {
+        "objectID": "32470150",
+        "title": "Show HN: FSearch 0.2 released (A graphical file search application)",
+        "url": "https://github.com/cboxdoerfer/fsearch/releases/tag/0.2",
+        "points": 1,
+        "num_comments": 0,
+        "author": "wander_homer",
+        "created_at": "2022-08-15T14:31:51Z"
+      },
+      {
+        "objectID": "29691814",
+        "title": "Ask HN: Programs on your laptop that saved you hundreds of hours?(2021)",
+        "url": "",
+        "points": 5,
+        "num_comments": 0,
+        "author": "philonoist",
+        "created_at": "2021-12-26T12:17:13Z"
+      },
+      {
+        "objectID": "1916940",
+        "title": "People who work for the TSA",
+        "url": "http://www.linkedin.com/search/fpsearch?companyId=830630&sortCriteria=R&keepFacets=&facet_CC=830630",
+        "points": 3,
+        "num_comments": 1,
+        "author": "geuis",
+        "created_at": "2010-11-18T04:58:21Z"
+      },
+      {
+        "objectID": "38512184",
+        "title": "First ACM Workshop on Functional Software Architecture: Videos and Papers",
+        "url": "https://www.functional-architecture.org/events/funarch-2023/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "matt_d",
+        "created_at": "2023-12-04T00:14:01Z"
+      },
+      {
+        "objectID": "33494041",
+        "title": "Fediverse Search",
+        "url": "https://fedsearch.io/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "doener",
+        "created_at": "2022-11-06T16:07:46Z"
+      },
+      {
+        "objectID": "39230132",
+        "title": "Ask HN: When to Start a Business?",
+        "url": "",
+        "points": 33,
+        "num_comments": 61,
+        "author": "funarchist",
+        "created_at": "2024-02-02T16:00:51Z"
+      }
+    ],
+    "funsearch": [
+      {
+        "objectID": "38643076",
+        "title": "FunSearch: Making new discoveries in mathematical sciences using LLMs",
+        "url": "https://deepmind.google/discover/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/",
+        "points": 388,
+        "num_comments": 100,
+        "author": "reqo",
+        "created_at": "2023-12-14T16:24:12Z"
+      },
+      {
+        "objectID": "38661335",
+        "title": "Math Models from Program Search (Google FunSearch) Using LLMs",
+        "url": "https://www.nature.com/articles/s41586-023-06924-6",
+        "points": 4,
+        "num_comments": 0,
+        "author": "pajop",
+        "created_at": "2023-12-16T02:58:23Z"
+      },
+      {
+        "objectID": "11284441",
+        "title": "Fun: Search for the 12345 sequences in this Pi API that stores 1B+ digits",
+        "url": "https://apidigits.apispark.net/v1/html/index.html",
+        "points": 4,
+        "num_comments": 0,
+        "author": "swannvichot",
+        "created_at": "2016-03-14T18:14:54Z"
+      },
+      {
+        "objectID": "1398149",
+        "title": "Python gives more fun search results than Ruby",
+        "url": "http://skitch.com/adamnelson/dgktq/python-range-google-search",
+        "points": 2,
+        "num_comments": 0,
+        "author": "AdamN",
+        "created_at": "2010-06-02T15:12:11Z"
+      },
+      {
+        "objectID": "38719943",
+        "title": "Sorry, but FunSearch probably isn't a milestone in scientific discovery",
+        "url": "https://garymarcus.substack.com/p/sorry-but-funsearch-probably-isnt",
+        "points": 1,
+        "num_comments": 0,
+        "author": "nsoonhui",
+        "created_at": "2023-12-21T13:07:33Z"
+      },
+      {
+        "objectID": "38650894",
+        "title": "Fun Search",
+        "url": "https://github.com/google-deepmind/funsearch",
+        "points": 1,
+        "num_comments": 0,
+        "author": "lawrenceyan",
+        "created_at": "2023-12-15T04:09:06Z"
+      },
+      {
+        "objectID": "38011802",
+        "title": "Show HN: An Embedding-Based Search Service over ShowHN, AskHN, GitHub, More",
+        "url": "https://payperrun.com/%3E/search",
+        "points": 7,
+        "num_comments": 4,
+        "author": "eneuman",
+        "created_at": "2023-10-25T11:53:48Z"
+      },
+      {
+        "objectID": "42090118",
+        "title": "\"Enable Google Play services. Phone won't work unless you enable Google Play \"",
+        "url": "",
+        "points": 3,
+        "num_comments": 5,
+        "author": "1vuio0pswjnm7",
+        "created_at": "2024-11-08T20:16:36Z"
+      },
+      {
+        "objectID": "38667484",
+        "title": "DeepMind's LLM Just Solved an Unsolvable Math Problem",
+        "url": "https://em360tech.com/tech-article/deepmind-funsearch-llm",
+        "points": 11,
+        "num_comments": 5,
+        "author": "elorant",
+        "created_at": "2023-12-16T20:42:30Z"
+      },
+      {
+        "objectID": "38664893",
+        "title": "A large language model finds new solutions to math problems",
+        "url": "https://www.zmescience.com/science/news-science/funsearch-deepmind-llm-math-discveory/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Brajeshwar",
+        "created_at": "2023-12-16T15:27:59Z"
+      },
+      {
+        "objectID": "45844438",
+        "title": "Agentic FinSearch vs. Bloomberg Terminal",
+        "url": "https://chromewebstore.google.com/detail/agentic-finsearch/aehnlpneoncdfioafiigiljmbghccami",
+        "points": 1,
+        "num_comments": 1,
+        "author": "yanglet",
+        "created_at": "2025-11-07T08:03:23Z"
+      },
+      {
+        "objectID": "38676563",
+        "title": "Fsearch, a fast file search utility for Unix-like systems",
+        "url": "https://github.com/cboxdoerfer/fsearch",
+        "points": 207,
+        "num_comments": 95,
+        "author": "karlicoss",
+        "created_at": "2023-12-17T21:19:26Z"
+      },
+      {
+        "objectID": "32469582",
+        "title": "FSearch, a fast file search utility for Unix-like systems",
+        "url": "https://github.com/cboxdoerfer/fsearch",
+        "points": 4,
+        "num_comments": 1,
+        "author": "phil294",
+        "created_at": "2022-08-15T13:43:41Z"
+      },
+      {
+        "objectID": "12733150",
+        "title": "FSearch, a fast file search utility for GNU/Linux",
+        "url": "https://cboxdoerfer.github.io/fsearch/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "tmkbry",
+        "created_at": "2016-10-18T09:52:49Z"
+      },
+      {
+        "objectID": "28661082",
+        "title": "Show HN: FSearch 0.1 released (A fast graphical file search utility)",
+        "url": "https://github.com/cboxdoerfer/fsearch/releases/tag/v0.1",
+        "points": 2,
+        "num_comments": 0,
+        "author": "wander_homer",
+        "created_at": "2021-09-26T14:19:28Z"
+      },
+      {
+        "objectID": "41395229",
+        "title": "FUNARCH 2024: International Workshop on Functional Software Architecture",
+        "url": "https://dl.acm.org/doi/proceedings/10.1145/3677998",
+        "points": 1,
+        "num_comments": 0,
+        "author": "matt_d",
+        "created_at": "2024-08-29T21:01:03Z"
+      },
+      {
+        "objectID": "32470150",
+        "title": "Show HN: FSearch 0.2 released (A graphical file search application)",
+        "url": "https://github.com/cboxdoerfer/fsearch/releases/tag/0.2",
+        "points": 1,
+        "num_comments": 0,
+        "author": "wander_homer",
+        "created_at": "2022-08-15T14:31:51Z"
+      },
+      {
+        "objectID": "29691814",
+        "title": "Ask HN: Programs on your laptop that saved you hundreds of hours?(2021)",
+        "url": "",
+        "points": 5,
+        "num_comments": 0,
+        "author": "philonoist",
+        "created_at": "2021-12-26T12:17:13Z"
+      },
+      {
+        "objectID": "1916940",
+        "title": "People who work for the TSA",
+        "url": "http://www.linkedin.com/search/fpsearch?companyId=830630&sortCriteria=R&keepFacets=&facet_CC=830630",
+        "points": 3,
+        "num_comments": 1,
+        "author": "geuis",
+        "created_at": "2010-11-18T04:58:21Z"
+      },
+      {
+        "objectID": "38512184",
+        "title": "First ACM Workshop on Functional Software Architecture: Videos and Papers",
+        "url": "https://www.functional-architecture.org/events/funarch-2023/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "matt_d",
+        "created_at": "2023-12-04T00:14:01Z"
+      },
+      {
+        "objectID": "39230132",
+        "title": "Ask HN: When to Start a Business?",
+        "url": "",
+        "points": 33,
+        "num_comments": 61,
+        "author": "funarchist",
+        "created_at": "2024-02-02T16:00:51Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,516 @@
+{
+  "project": "Open-AutoGLM",
+  "repo": "zai-org/AutoGLM",
+  "collected_at": "2026-05-22T11:19:14.982820+00:00",
+  "queries": [
+    "Open-AutoGLM",
+    "AutoGLM"
+  ],
+  "total_posts": 50,
+  "results": {
+    "Open-AutoGLM": [
+      {
+        "id": "1sknx6n",
+        "subreddit": "LocalLLaMA",
+        "title": "Best Local LLMs - Apr 2026",
+        "score": 520,
+        "num_comments": 368,
+        "author": "rm-rf-rm",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1sknx6n/best_local_llms_apr_2026/",
+        "created_utc": 1776114057.0
+      },
+      {
+        "id": "1s7vq7k",
+        "subreddit": "accelerate",
+        "title": "\"Here comes AutoClaw. We offer a new solution to run OpenClaw locally on your own machine. - Download and start immediately. No API key required. - Bring any model you like, or use GLM-5-Turbo, optimized for tool calling and multi-step tasks. - Fully local. Your data never leaves\"",
+        "score": 43,
+        "num_comments": 7,
+        "author": "stealthispost",
+        "url": "https://reddit.com/r/accelerate/comments/1s7vq7k/here_comes_autoclaw_we_offer_a_new_solution_to/",
+        "created_utc": 1774888604.0
+      },
+      {
+        "id": "1pi3aah",
+        "subreddit": "LocalLLaMA",
+        "title": "ZAI Open Source AutoGLM --A AI Phone Agent",
+        "score": 49,
+        "num_comments": 8,
+        "author": "External_Mood4719",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1pi3aah/zai_open_source_autoglm_a_ai_phone_agent/",
+        "created_utc": 1765272963.0
+      },
+      {
+        "id": "1pjys3w",
+        "subreddit": "ZaiGLM",
+        "title": "OMG! Open-sourcing AutoGLM",
+        "score": 52,
+        "num_comments": 6,
+        "author": "kinkvoid",
+        "url": "https://reddit.com/r/ZaiGLM/comments/1pjys3w/omg_opensourcing_autoglm/",
+        "created_utc": 1765463088.0
+      },
+      {
+        "id": "1qci565",
+        "subreddit": "ZaiGLM",
+        "title": "Zhipu AI GLM Image Open Source Release Hybrid Auto Regressive Diffusion Model",
+        "score": 9,
+        "num_comments": 1,
+        "author": "techspecsmart",
+        "url": "https://reddit.com/r/ZaiGLM/comments/1qci565/zhipu_ai_glm_image_open_source_release_hybrid/",
+        "created_utc": 1768379806.0
+      },
+      {
+        "id": "1qci3fz",
+        "subreddit": "aicuriosity",
+        "title": "Zhipu AI GLM Image Open Source Release Hybrid Auto Regressive Diffusion Model",
+        "score": 9,
+        "num_comments": 1,
+        "author": "techspecsmart",
+        "url": "https://reddit.com/r/aicuriosity/comments/1qci3fz/zhipu_ai_glm_image_open_source_release_hybrid/",
+        "created_utc": 1768379609.0
+      },
+      {
+        "id": "1pt2cm1",
+        "subreddit": "LangChain",
+        "title": "Integrate Open-AutoGLM's Android GUI automation into DeepAgents-CLI via LangChain Middleware",
+        "score": 2,
+        "num_comments": 0,
+        "author": "Cyanide_235",
+        "url": "https://reddit.com/r/LangChain/comments/1pt2cm1/integrate_openautoglms_android_gui_automation/",
+        "created_utc": 1766417268.0
+      },
+      {
+        "id": "1phy0s8",
+        "subreddit": "LocalLLaMA",
+        "title": "Phone Agent -- A mobile intelligent assistant framework built on AutoGLM [Open Source/Model]",
+        "score": 12,
+        "num_comments": 0,
+        "author": "Terrible_Scar_9890",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1phy0s8/phone_agent_a_mobile_intelligent_assistant/",
+        "created_utc": 1765253423.0
+      },
+      {
+        "id": "1phwq4d",
+        "subreddit": "EdgeAI_Hardware",
+        "title": "News: Open-AutoGLM just dropped. A fully local \"Phone Agent\" that bridges the mobile hardware gap.",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Mark2080",
+        "url": "https://reddit.com/r/EdgeAI_Hardware/comments/1phwq4d/news_openautoglm_just_dropped_a_fully_local_phone/",
+        "created_utc": 1765249599.0
+      },
+      {
+        "id": "1s0ywz6",
+        "subreddit": "openclaw",
+        "title": "I gave my home a brain. Here's what 50 days of self-hosted AI looks like. Built an AI that wakes me up, cleans my house, tracks my spending, and judges my sleep. It's self-hosted and it rules.",
+        "score": 476,
+        "num_comments": 108,
+        "author": "RelationDull2825",
+        "url": "https://reddit.com/r/openclaw/comments/1s0ywz6/i_gave_my_home_a_brain_heres_what_50_days_of/",
+        "created_utc": 1774217394.0
+      },
+      {
+        "id": "1q6x6cz",
+        "subreddit": "iosapps",
+        "title": "[TestFlight] Built an iOS app that runs LLMs, Vision Models, Stable Diffusion &amp; TTS completely offline - Looking for testers!",
+        "score": 70,
+        "num_comments": 352,
+        "author": "Living_Commercial_10",
+        "url": "https://reddit.com/r/iosapps/comments/1q6x6cz/testflight_built_an_ios_app_that_runs_llms_vision/",
+        "created_utc": 1767833007.0
+      },
+      {
+        "id": "1rmn4gx",
+        "subreddit": "LocalLLaMA",
+        "title": "Finally bought an RTX 6000 Max-Q: Pros, cons, notes and ramblings",
+        "score": 191,
+        "num_comments": 161,
+        "author": "AvocadoArray",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1rmn4gx/finally_bought_an_rtx_6000_maxq_pros_cons_notes/",
+        "created_utc": 1772824255.0
+      },
+      {
+        "id": "1s1rbav",
+        "subreddit": "SillyTavernAI",
+        "title": "Megumin Secret Sauce v4 + Megumin Suite — Every character gets its own preset. Automatically.",
+        "score": 268,
+        "num_comments": 114,
+        "author": "CallMeOniisan",
+        "url": "https://reddit.com/r/SillyTavernAI/comments/1s1rbav/megumin_secret_sauce_v4_megumin_suite_every/",
+        "created_utc": 1774295080.0
+      },
+      {
+        "id": "1sqlcan",
+        "subreddit": "LocalLLaMA",
+        "title": "Qwen 3.6 Max Preview just went live on the Qwen Chat website. It currently has the highest AA-Intelligence Index score among Chinese models (52) (Will it be open source?)",
+        "score": 273,
+        "num_comments": 94,
+        "author": "Nunki08",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1sqlcan/qwen_36_max_preview_just_went_live_on_the_qwen/",
+        "created_utc": 1776680803.0
+      },
+      {
+        "id": "1rv7kb3",
+        "subreddit": "ZaiGLM",
+        "title": "Absolute garbage, do not fall for it",
+        "score": 142,
+        "num_comments": 118,
+        "author": "NinjaWK",
+        "url": "https://reddit.com/r/ZaiGLM/comments/1rv7kb3/absolute_garbage_do_not_fall_for_it/",
+        "created_utc": 1773662678.0
+      },
+      {
+        "id": "1te1xgy",
+        "subreddit": "SillyTavernAI",
+        "title": "Freaky FrankenSIM: FF4 MAX+1d20 (and a Gun)",
+        "score": 119,
+        "num_comments": 94,
+        "author": "xdeadly_godx",
+        "url": "https://reddit.com/r/SillyTavernAI/comments/1te1xgy/freaky_frankensim_ff4_max1d20_and_a_gun/",
+        "created_utc": 1778863620.0
+      },
+      {
+        "id": "1rb65ak",
+        "subreddit": "opencodeCLI",
+        "title": "I made a TUI tool to use OpenCode basically for free using NVIDIA's NIM API's and finds the fastest available model in real-time.",
+        "score": 324,
+        "num_comments": 79,
+        "author": "AgeFirm4024",
+        "url": "https://reddit.com/r/opencodeCLI/comments/1rb65ak/i_made_a_tui_tool_to_use_opencode_basically_for/",
+        "created_utc": 1771717045.0
+      },
+      {
+        "id": "1plaumq",
+        "subreddit": "ClaudeAI",
+        "title": "Claude Opus 4.5 for $0",
+        "score": 406,
+        "num_comments": 86,
+        "author": "Jwadow",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1plaumq/claude_opus_45_for_0/",
+        "created_utc": 1765594683.0
+      },
+      {
+        "id": "1rjh5wg",
+        "subreddit": "LocalLLaMA",
+        "title": "Unsloth fixed version of Qwen3.5-35B-A3B is incredible at research tasks.",
+        "score": 305,
+        "num_comments": 75,
+        "author": "Daniel_H212",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1rjh5wg/unsloth_fixed_version_of_qwen3535ba3b_is/",
+        "created_utc": 1772516438.0
+      },
+      {
+        "id": "1qxqpdz",
+        "subreddit": "LocalLLaMA",
+        "title": "GLM 5 Is Being Tested On OpenRouter",
+        "score": 289,
+        "num_comments": 83,
+        "author": "Few_Painter_5588",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1qxqpdz/glm_5_is_being_tested_on_openrouter/",
+        "created_utc": 1770404723.0
+      },
+      {
+        "id": "1t4gaei",
+        "subreddit": "unsloth",
+        "title": "How to Use Local LLMs in Claude Code and Codex.",
+        "score": 274,
+        "num_comments": 44,
+        "author": "yoracale",
+        "url": "https://reddit.com/r/unsloth/comments/1t4gaei/how_to_use_local_llms_in_claude_code_and_codex/",
+        "created_utc": 1777989509.0
+      },
+      {
+        "id": "1s35bje",
+        "subreddit": "ClaudeAI",
+        "title": "Tested MiniMax M2.7 Against Claude Opus 4.6 - Here Are The Results",
+        "score": 159,
+        "num_comments": 74,
+        "author": "alokin_09",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1s35bje/tested_minimax_m27_against_claude_opus_46_here/",
+        "created_utc": 1774428574.0
+      },
+      {
+        "id": "1ssuze9",
+        "subreddit": "openclaw",
+        "title": "Trying OpenClaw for the first time? Here's the Dos and Don'ts",
+        "score": 323,
+        "num_comments": 38,
+        "author": "ShabzSparq",
+        "url": "https://reddit.com/r/openclaw/comments/1ssuze9/trying_openclaw_for_the_first_time_heres_the_dos/",
+        "created_utc": 1776884716.0
+      },
+      {
+        "id": "1t4kkwf",
+        "subreddit": "comfyui",
+        "title": "I hope this helps everyone....",
+        "score": 179,
+        "num_comments": 49,
+        "author": "kyahinaamrakhe-1",
+        "url": "https://reddit.com/r/comfyui/comments/1t4kkwf/i_hope_this_helps_everyone/",
+        "created_utc": 1777998673.0
+      },
+      {
+        "id": "1t5apre",
+        "subreddit": "opencodeCLI",
+        "title": "I'm loving OpenCode",
+        "score": 238,
+        "num_comments": 40,
+        "author": "Street-Preference-88",
+        "url": "https://reddit.com/r/opencodeCLI/comments/1t5apre/im_loving_opencode/",
+        "created_utc": 1778068661.0
+      }
+    ],
+    "AutoGLM": [
+      {
+        "id": "1t8jse1",
+        "subreddit": "ZaiGLM",
+        "title": "Beware of AutoClaw (autoglm.z.ai) no way to cancel subscription",
+        "score": 19,
+        "num_comments": 13,
+        "author": "hvlbki",
+        "url": "https://reddit.com/r/ZaiGLM/comments/1t8jse1/beware_of_autoclaw_autoglmzai_no_way_to_cancel/",
+        "created_utc": 1778357770.0
+      },
+      {
+        "id": "1sknx6n",
+        "subreddit": "LocalLLaMA",
+        "title": "Best Local LLMs - Apr 2026",
+        "score": 520,
+        "num_comments": 368,
+        "author": "rm-rf-rm",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1sknx6n/best_local_llms_apr_2026/",
+        "created_utc": 1776114057.0
+      },
+      {
+        "id": "1o67rpp",
+        "subreddit": "cursor",
+        "title": "GLM 4.6 &gt; Auto",
+        "score": 43,
+        "num_comments": 32,
+        "author": "FroyoAbject",
+        "url": "https://reddit.com/r/cursor/comments/1o67rpp/glm_46_auto/",
+        "created_utc": 1760422240.0
+      },
+      {
+        "id": "1s7vq7k",
+        "subreddit": "accelerate",
+        "title": "\"Here comes AutoClaw. We offer a new solution to run OpenClaw locally on your own machine. - Download and start immediately. No API key required. - Bring any model you like, or use GLM-5-Turbo, optimized for tool calling and multi-step tasks. - Fully local. Your data never leaves\"",
+        "score": 42,
+        "num_comments": 7,
+        "author": "stealthispost",
+        "url": "https://reddit.com/r/accelerate/comments/1s7vq7k/here_comes_autoclaw_we_offer_a_new_solution_to/",
+        "created_utc": 1774888604.0
+      },
+      {
+        "id": "1t68afk",
+        "subreddit": "SillyTavernAI",
+        "title": "The Director's Cut: RE-RELEASE: Freaky Frankenstein 4 MAX+ and Freaky Frankenstein 4 BOLT+ [Presets] (Universal : DS, GLM, Claude, Gemini, Grok, Gemma, Qwen, MiMo) Now a Dedicated DeepSeek V4 Preset. Community Frankenstein Update.",
+        "score": 348,
+        "num_comments": 332,
+        "author": "dptgreg",
+        "url": "https://reddit.com/r/SillyTavernAI/comments/1t68afk/the_directors_cut_rerelease_freaky_frankenstein_4/",
+        "created_utc": 1778154877.0
+      },
+      {
+        "id": "1onruh2",
+        "subreddit": "SillyTavernAI",
+        "title": "GLM 4.6 Reasoning Effort: Auto - Med - Max?",
+        "score": 19,
+        "num_comments": 21,
+        "author": "SepsisShock",
+        "url": "https://reddit.com/r/SillyTavernAI/comments/1onruh2/glm_46_reasoning_effort_auto_med_max/",
+        "created_utc": 1762212924.0
+      },
+      {
+        "id": "1s9rdpb",
+        "subreddit": "openclaw",
+        "title": "Kimi Claw vs AutoClaw (Z.ai/GLM)",
+        "score": 1,
+        "num_comments": 1,
+        "author": "DK_Tech",
+        "url": "https://reddit.com/r/openclaw/comments/1s9rdpb/kimi_claw_vs_autoclaw_zaiglm/",
+        "created_utc": 1775064834.0
+      },
+      {
+        "id": "1pi3aah",
+        "subreddit": "LocalLLaMA",
+        "title": "ZAI Open Source AutoGLM --A AI Phone Agent",
+        "score": 47,
+        "num_comments": 8,
+        "author": "External_Mood4719",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1pi3aah/zai_open_source_autoglm_a_ai_phone_agent/",
+        "created_utc": 1765272963.0
+      },
+      {
+        "id": "1qdqfo9",
+        "subreddit": "ZaiGLM",
+        "title": "Super custom Claude Code for GLM 4.7 with over 30 auto trigger agents !",
+        "score": 9,
+        "num_comments": 8,
+        "author": "Kitchen_Sympathy_344",
+        "url": "https://reddit.com/r/ZaiGLM/comments/1qdqfo9/super_custom_claude_code_for_glm_47_with_over_30/",
+        "created_utc": 1768499382.0
+      },
+      {
+        "id": "1s2c7re",
+        "subreddit": "SillyTavernAI",
+        "title": "Introducing Freaky Frankenstein 4.0 Fat Man and 3.5 Little Feller. Two for One [Presets] (Built for Claude, GLM, Gemini, DS, Grok, MiMo, Universal)",
+        "score": 297,
+        "num_comments": 358,
+        "author": "dptgreg",
+        "url": "https://reddit.com/r/SillyTavernAI/comments/1s2c7re/introducing_freaky_frankenstein_40_fat_man_and_35/",
+        "created_utc": 1774354901.0
+      },
+      {
+        "id": "1pjys3w",
+        "subreddit": "ZaiGLM",
+        "title": "OMG! Open-sourcing AutoGLM",
+        "score": 50,
+        "num_comments": 6,
+        "author": "kinkvoid",
+        "url": "https://reddit.com/r/ZaiGLM/comments/1pjys3w/omg_opensourcing_autoglm/",
+        "created_utc": 1765463088.0
+      },
+      {
+        "id": "1n2ghx4",
+        "subreddit": "LocalLLaMA",
+        "title": "AMA With Z.AI, The Lab Behind GLM Models",
+        "score": 586,
+        "num_comments": 348,
+        "author": "XMasterrrr",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1n2ghx4/ama_with_zai_the_lab_behind_glm_models/",
+        "created_utc": 1756397425.0
+      },
+      {
+        "id": "1qci565",
+        "subreddit": "ZaiGLM",
+        "title": "Zhipu AI GLM Image Open Source Release Hybrid Auto Regressive Diffusion Model",
+        "score": 9,
+        "num_comments": 1,
+        "author": "techspecsmart",
+        "url": "https://reddit.com/r/ZaiGLM/comments/1qci565/zhipu_ai_glm_image_open_source_release_hybrid/",
+        "created_utc": 1768379806.0
+      },
+      {
+        "id": "1qci3fz",
+        "subreddit": "aicuriosity",
+        "title": "Zhipu AI GLM Image Open Source Release Hybrid Auto Regressive Diffusion Model",
+        "score": 9,
+        "num_comments": 1,
+        "author": "techspecsmart",
+        "url": "https://reddit.com/r/aicuriosity/comments/1qci3fz/zhipu_ai_glm_image_open_source_release_hybrid/",
+        "created_utc": 1768379609.0
+      },
+      {
+        "id": "1phy0s8",
+        "subreddit": "LocalLLaMA",
+        "title": "Phone Agent -- A mobile intelligent assistant framework built on AutoGLM [Open Source/Model]",
+        "score": 13,
+        "num_comments": 0,
+        "author": "Terrible_Scar_9890",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1phy0s8/phone_agent_a_mobile_intelligent_assistant/",
+        "created_utc": 1765253423.0
+      },
+      {
+        "id": "1phwq4d",
+        "subreddit": "EdgeAI_Hardware",
+        "title": "News: Open-AutoGLM just dropped. A fully local \"Phone Agent\" that bridges the mobile hardware gap.",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Mark2080",
+        "url": "https://reddit.com/r/EdgeAI_Hardware/comments/1phwq4d/news_openautoglm_just_dropped_a_fully_local_phone/",
+        "created_utc": 1765249599.0
+      },
+      {
+        "id": "1s0ywz6",
+        "subreddit": "openclaw",
+        "title": "I gave my home a brain. Here's what 50 days of self-hosted AI looks like. Built an AI that wakes me up, cleans my house, tracks my spending, and judges my sleep. It's self-hosted and it rules.",
+        "score": 478,
+        "num_comments": 108,
+        "author": "RelationDull2825",
+        "url": "https://reddit.com/r/openclaw/comments/1s0ywz6/i_gave_my_home_a_brain_heres_what_50_days_of/",
+        "created_utc": 1774217394.0
+      },
+      {
+        "id": "6o6baf",
+        "subreddit": "ElsaGate",
+        "title": "What is ElsaGate?",
+        "score": 2809,
+        "num_comments": 523,
+        "author": "dornhoeschen",
+        "url": "https://reddit.com/r/ElsaGate/comments/6o6baf/what_is_elsagate/",
+        "created_utc": 1500440154.0
+      },
+      {
+        "id": "tdti6b",
+        "subreddit": "france",
+        "title": "Le budget de la subvention de 15 centimes sur le litre de carburant décidée par le gouvernement pour 4 mois est 40 fois plus élevé que celui du plan vélo national annuel",
+        "score": 1110,
+        "num_comments": 691,
+        "author": "ijic",
+        "url": "https://reddit.com/r/france/comments/tdti6b/le_budget_de_la_subvention_de_15_centimes_sur_le/",
+        "created_utc": 1647250145.0
+      },
+      {
+        "id": "1jptiw5",
+        "subreddit": "Sino",
+        "title": "China's Zhipu AI launches free AI agent, intensifying domestic tech race: While Manus charges users up to $199 monthly, Zhipu's AutoGLM Rumination will be available free of charge through the company's official channels",
+        "score": 43,
+        "num_comments": 3,
+        "author": "thrway137",
+        "url": "https://reddit.com/r/Sino/comments/1jptiw5/chinas_zhipu_ai_launches_free_ai_agent/",
+        "created_utc": 1743612854.0
+      },
+      {
+        "id": "1q6x6cz",
+        "subreddit": "iosapps",
+        "title": "[TestFlight] Built an iOS app that runs LLMs, Vision Models, Stable Diffusion &amp; TTS completely offline - Looking for testers!",
+        "score": 72,
+        "num_comments": 352,
+        "author": "Living_Commercial_10",
+        "url": "https://reddit.com/r/iosapps/comments/1q6x6cz/testflight_built_an_ios_app_that_runs_llms_vision/",
+        "created_utc": 1767833007.0
+      },
+      {
+        "id": "1rmn4gx",
+        "subreddit": "LocalLLaMA",
+        "title": "Finally bought an RTX 6000 Max-Q: Pros, cons, notes and ramblings",
+        "score": 193,
+        "num_comments": 161,
+        "author": "AvocadoArray",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1rmn4gx/finally_bought_an_rtx_6000_maxq_pros_cons_notes/",
+        "created_utc": 1772824255.0
+      },
+      {
+        "id": "1sttf81",
+        "subreddit": "SillyTavernAI",
+        "title": "Megumin Suite V6 Release: The \"Dream Team\" Engine, Story Planner, New Dev Mode, and UI Overhaul",
+        "score": 223,
+        "num_comments": 111,
+        "author": "CallMeOniisan",
+        "url": "https://reddit.com/r/SillyTavernAI/comments/1sttf81/megumin_suite_v6_release_the_dream_team_engine/",
+        "created_utc": 1776973867.0
+      },
+      {
+        "id": "1s1rbav",
+        "subreddit": "SillyTavernAI",
+        "title": "Megumin Secret Sauce v4 + Megumin Suite — Every character gets its own preset. Automatically.",
+        "score": 266,
+        "num_comments": 114,
+        "author": "CallMeOniisan",
+        "url": "https://reddit.com/r/SillyTavernAI/comments/1s1rbav/megumin_secret_sauce_v4_megumin_suite_every/",
+        "created_utc": 1774295080.0
+      },
+      {
+        "id": "1sqlcan",
+        "subreddit": "LocalLLaMA",
+        "title": "Qwen 3.6 Max Preview just went live on the Qwen Chat website. It currently has the highest AA-Intelligence Index score among Chinese models (52) (Will it be open source?)",
+        "score": 274,
+        "num_comments": 94,
+        "author": "Nunki08",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1sqlcan/qwen_36_max_preview_just_went_live_on_the_qwen/",
+        "created_utc": 1776680803.0
+      }
+    ]
+  }
+}

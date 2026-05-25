@@ -1,0 +1,516 @@
+{
+  "project": "Hermes Agent",
+  "repo": "NousResearch/hermes-agent",
+  "collected_at": "2026-05-22T11:35:46.715638+00:00",
+  "queries": [
+    "Hermes Agent",
+    "hermes-agent"
+  ],
+  "total_posts": 50,
+  "results": {
+    "Hermes Agent": [
+      {
+        "id": "1t29ogw",
+        "subreddit": "hermesagent",
+        "title": "One month with Hermes Agent – what I wish I knew earlier",
+        "score": 457,
+        "num_comments": 110,
+        "author": "itsdodobitch",
+        "url": "https://reddit.com/r/hermesagent/comments/1t29ogw/one_month_with_hermes_agent_what_i_wish_i_knew/",
+        "created_utc": 1777777170.0
+      },
+      {
+        "id": "1sqejvq",
+        "subreddit": "hermesagent",
+        "title": "Hermes agent setup guide",
+        "score": 368,
+        "num_comments": 43,
+        "author": "SelectionCalm70",
+        "url": "https://reddit.com/r/hermesagent/comments/1sqejvq/hermes_agent_setup_guide/",
+        "created_utc": 1776657774.0
+      },
+      {
+        "id": "1sj8hyw",
+        "subreddit": "hermesagent",
+        "title": "LLM cheatsheet for hermes agent",
+        "score": 657,
+        "num_comments": 58,
+        "author": "SelectionCalm70",
+        "url": "https://reddit.com/r/hermesagent/comments/1sj8hyw/llm_cheatsheet_for_hermes_agent/",
+        "created_utc": 1775981164.0
+      },
+      {
+        "id": "1tdw361",
+        "subreddit": "hermesagent",
+        "title": "What have you done with Hermes Agent this week? 5-15-26",
+        "score": 28,
+        "num_comments": 83,
+        "author": "Jonathan_Rivera",
+        "url": "https://reddit.com/r/hermesagent/comments/1tdw361/what_have_you_done_with_hermes_agent_this_week/",
+        "created_utc": 1778850984.0
+      },
+      {
+        "id": "1slqt5h",
+        "subreddit": "openclaw",
+        "title": "Is Hermes agent a new hype or is it genuinely worth migrating it over from Openclaw?",
+        "score": 77,
+        "num_comments": 106,
+        "author": "dooddyman",
+        "url": "https://reddit.com/r/openclaw/comments/1slqt5h/is_hermes_agent_a_new_hype_or_is_it_genuinely/",
+        "created_utc": 1776213544.0
+      },
+      {
+        "id": "1t83uju",
+        "subreddit": "hermesagent",
+        "title": "How do people use Hermes agent?",
+        "score": 1,
+        "num_comments": 37,
+        "author": "Existing_What",
+        "url": "https://reddit.com/r/hermesagent/comments/1t83uju/how_do_people_use_hermes_agent/",
+        "created_utc": 1778330228.0
+      },
+      {
+        "id": "1t5955y",
+        "subreddit": "better_claw",
+        "title": "Qhy everyone can't stop talking about Hermes Agent? Explained (Without hype)",
+        "score": 55,
+        "num_comments": 18,
+        "author": "ShabzSparq",
+        "url": "https://reddit.com/r/better_claw/comments/1t5955y/qhy_everyone_cant_stop_talking_about_hermes_agent/",
+        "created_utc": 1778064164.0
+      },
+      {
+        "id": "1t6gf4j",
+        "subreddit": "hermesagent",
+        "title": "MEGATHREAD: Hermes Agent Use Cases — What the Community is Building (May 2026)",
+        "score": 229,
+        "num_comments": 33,
+        "author": "Jonathan_Rivera",
+        "url": "https://reddit.com/r/hermesagent/comments/1t6gf4j/megathread_hermes_agent_use_cases_what_the/",
+        "created_utc": 1778173028.0
+      },
+      {
+        "id": "1si07o1",
+        "subreddit": "hermesagent",
+        "title": "What are your use cases for Hermes Agent?",
+        "score": 37,
+        "num_comments": 72,
+        "author": "smolpotat0_x",
+        "url": "https://reddit.com/r/hermesagent/comments/1si07o1/what_are_your_use_cases_for_hermes_agent/",
+        "created_utc": 1775857480.0
+      },
+      {
+        "id": "1tgsttq",
+        "subreddit": "LocalLLaMA",
+        "title": "Tried every Hermes Agent alternative so you don't have to (2026 roundup)",
+        "score": 0,
+        "num_comments": 48,
+        "author": "Straight_Stomach812",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1tgsttq/tried_every_hermes_agent_alternative_so_you_dont/",
+        "created_utc": 1779123739.0
+      },
+      {
+        "id": "1t9hh33",
+        "subreddit": "singularity",
+        "title": "Hermes Agent is now #1 most used globally in past 24 hours in Openrouter token metrics, above Claude Code and OpenClaw.",
+        "score": 548,
+        "num_comments": 88,
+        "author": "dogesator",
+        "url": "https://reddit.com/r/singularity/comments/1t9hh33/hermes_agent_is_now_1_most_used_globally_in_past/",
+        "created_utc": 1778443715.0
+      },
+      {
+        "id": "1tdcp2s",
+        "subreddit": "ProgrammerHumor",
+        "title": "broGonnaDeclareBankruptcy",
+        "score": 15439,
+        "num_comments": 256,
+        "author": "Major-Language8609",
+        "url": "https://reddit.com/r/ProgrammerHumor/comments/1tdcp2s/brogonnadeclarebankruptcy/",
+        "created_utc": 1778795952.0
+      },
+      {
+        "id": "1t7qqlx",
+        "subreddit": "hermesagent",
+        "title": "Hermes Agent is now #1 on the Global u/OpenRouter token rankings.",
+        "score": 428,
+        "num_comments": 45,
+        "author": "Dismal_Hair_6558",
+        "url": "https://reddit.com/r/hermesagent/comments/1t7qqlx/hermes_agent_is_now_1_on_the_global_uopenrouter/",
+        "created_utc": 1778289633.0
+      },
+      {
+        "id": "1t9chdk",
+        "subreddit": "hermesagent",
+        "title": "The AI Agent Setup That Finally Clicked for Me: Hermes + OpenAI Codex + Claude Code",
+        "score": 121,
+        "num_comments": 86,
+        "author": "kenduffy",
+        "url": "https://reddit.com/r/hermesagent/comments/1t9chdk/the_ai_agent_setup_that_finally_clicked_for_me/",
+        "created_utc": 1778432589.0
+      },
+      {
+        "id": "1sx4748",
+        "subreddit": "WebAfterAI",
+        "title": "Hermes Agent: The Open-Source Self-Improving AI Agent That Actually Learns, Remembers, and Grows With You (Self-Hosted by Nous Research)",
+        "score": 351,
+        "num_comments": 47,
+        "author": "ShilpaMitra",
+        "url": "https://reddit.com/r/WebAfterAI/comments/1sx4748/hermes_agent_the_opensource_selfimproving_ai/",
+        "created_utc": 1777297615.0
+      },
+      {
+        "id": "1sy36a7",
+        "subreddit": "hermesagent",
+        "title": "Which messaging channel do you use for your Hermes agent?",
+        "score": 54,
+        "num_comments": 104,
+        "author": "SelectionCalm70",
+        "url": "https://reddit.com/r/hermesagent/comments/1sy36a7/which_messaging_channel_do_you_use_for_your/",
+        "created_utc": 1777386829.0
+      },
+      {
+        "id": "1tekz6p",
+        "subreddit": "google_antigravity",
+        "title": "Antigravity last update was 1 month ago 16 April 2026, there are only 2 scenarios: scenario 1 - Google launch  a super powerful Antigravity beating OpenClaw, Hermes Agent, Claude code, Codex;  Scenario 2: Antigravity is proved sundown, no services will be offered after 31 May 2026.",
+        "score": 135,
+        "num_comments": 69,
+        "author": "AwayOpposite487",
+        "url": "https://reddit.com/r/google_antigravity/comments/1tekz6p/antigravity_last_update_was_1_month_ago_16_april/",
+        "created_utc": 1778911061.0
+      },
+      {
+        "id": "1s896jb",
+        "subreddit": "AO3",
+        "title": "Most Tagged Fandoms on AO3 in 2025 (plus the repost of most tagged ships for those who missed it)",
+        "score": 2290,
+        "num_comments": 678,
+        "author": "Agamar13",
+        "url": "https://reddit.com/r/AO3/comments/1s896jb/most_tagged_fandoms_on_ao3_in_2025_plus_the/",
+        "created_utc": 1774919216.0
+      },
+      {
+        "id": "1skl8le",
+        "subreddit": "hermesagent",
+        "title": "Hermes agent V0.9.0 update",
+        "score": 258,
+        "num_comments": 52,
+        "author": "SelectionCalm70",
+        "url": "https://reddit.com/r/hermesagent/comments/1skl8le/hermes_agent_v090_update/",
+        "created_utc": 1776108517.0
+      },
+      {
+        "id": "1thlp7q",
+        "subreddit": "hermesagent",
+        "title": "actually best hermes agent vps hosting ?",
+        "score": 27,
+        "num_comments": 83,
+        "author": "FunThen4634",
+        "url": "https://reddit.com/r/hermesagent/comments/1thlp7q/actually_best_hermes_agent_vps_hosting/",
+        "created_utc": 1779194304.0
+      },
+      {
+        "id": "1t66lhy",
+        "subreddit": "hermesagent",
+        "title": "My simplest yet effective hermes agent profile setup. Meet my \"Archiver\".",
+        "score": 114,
+        "num_comments": 61,
+        "author": "itsdodobitch",
+        "url": "https://reddit.com/r/hermesagent/comments/1t66lhy/my_simplest_yet_effective_hermes_agent_profile/",
+        "created_utc": 1778150026.0
+      },
+      {
+        "id": "1s4skdz",
+        "subreddit": "openclaw",
+        "title": "Just migrated my openclaw setup to Hermes agent and it works like a charm",
+        "score": 68,
+        "num_comments": 83,
+        "author": "SelectionCalm70",
+        "url": "https://reddit.com/r/openclaw/comments/1s4skdz/just_migrated_my_openclaw_setup_to_hermes_agent/",
+        "created_utc": 1774580791.0
+      },
+      {
+        "id": "1stm9h5",
+        "subreddit": "hermesagent",
+        "title": "Memory Management for Hermes agents",
+        "score": 21,
+        "num_comments": 81,
+        "author": "devino21",
+        "url": "https://reddit.com/r/hermesagent/comments/1stm9h5/memory_management_for_hermes_agents/",
+        "created_utc": 1776958566.0
+      },
+      {
+        "id": "1sslrcd",
+        "subreddit": "hermesagent",
+        "title": "Best local model for hermes agent is finally out",
+        "score": 152,
+        "num_comments": 50,
+        "author": "SelectionCalm70",
+        "url": "https://reddit.com/r/hermesagent/comments/1sslrcd/best_local_model_for_hermes_agent_is_finally_out/",
+        "created_utc": 1776865010.0
+      },
+      {
+        "id": "1ro9lph",
+        "subreddit": "LocalLLaMA",
+        "title": "Anybody who tried Hermes-Agent?",
+        "score": 51,
+        "num_comments": 88,
+        "author": "HaAtidChai",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1ro9lph/anybody_who_tried_hermesagent/",
+        "created_utc": 1772988317.0
+      }
+    ],
+    "hermes-agent": [
+      {
+        "id": "1t29ogw",
+        "subreddit": "hermesagent",
+        "title": "One month with Hermes Agent – what I wish I knew earlier",
+        "score": 454,
+        "num_comments": 110,
+        "author": "itsdodobitch",
+        "url": "https://reddit.com/r/hermesagent/comments/1t29ogw/one_month_with_hermes_agent_what_i_wish_i_knew/",
+        "created_utc": 1777777170.0
+      },
+      {
+        "id": "1sqejvq",
+        "subreddit": "hermesagent",
+        "title": "Hermes agent setup guide",
+        "score": 370,
+        "num_comments": 43,
+        "author": "SelectionCalm70",
+        "url": "https://reddit.com/r/hermesagent/comments/1sqejvq/hermes_agent_setup_guide/",
+        "created_utc": 1776657774.0
+      },
+      {
+        "id": "1sj8hyw",
+        "subreddit": "hermesagent",
+        "title": "LLM cheatsheet for hermes agent",
+        "score": 660,
+        "num_comments": 58,
+        "author": "SelectionCalm70",
+        "url": "https://reddit.com/r/hermesagent/comments/1sj8hyw/llm_cheatsheet_for_hermes_agent/",
+        "created_utc": 1775981164.0
+      },
+      {
+        "id": "1tdw361",
+        "subreddit": "hermesagent",
+        "title": "What have you done with Hermes Agent this week? 5-15-26",
+        "score": 29,
+        "num_comments": 83,
+        "author": "Jonathan_Rivera",
+        "url": "https://reddit.com/r/hermesagent/comments/1tdw361/what_have_you_done_with_hermes_agent_this_week/",
+        "created_utc": 1778850984.0
+      },
+      {
+        "id": "1slqt5h",
+        "subreddit": "openclaw",
+        "title": "Is Hermes agent a new hype or is it genuinely worth migrating it over from Openclaw?",
+        "score": 77,
+        "num_comments": 106,
+        "author": "dooddyman",
+        "url": "https://reddit.com/r/openclaw/comments/1slqt5h/is_hermes_agent_a_new_hype_or_is_it_genuinely/",
+        "created_utc": 1776213544.0
+      },
+      {
+        "id": "1t83uju",
+        "subreddit": "hermesagent",
+        "title": "How do people use Hermes agent?",
+        "score": 0,
+        "num_comments": 37,
+        "author": "Existing_What",
+        "url": "https://reddit.com/r/hermesagent/comments/1t83uju/how_do_people_use_hermes_agent/",
+        "created_utc": 1778330228.0
+      },
+      {
+        "id": "1t5955y",
+        "subreddit": "better_claw",
+        "title": "Qhy everyone can't stop talking about Hermes Agent? Explained (Without hype)",
+        "score": 53,
+        "num_comments": 18,
+        "author": "ShabzSparq",
+        "url": "https://reddit.com/r/better_claw/comments/1t5955y/qhy_everyone_cant_stop_talking_about_hermes_agent/",
+        "created_utc": 1778064164.0
+      },
+      {
+        "id": "1t6gf4j",
+        "subreddit": "hermesagent",
+        "title": "MEGATHREAD: Hermes Agent Use Cases — What the Community is Building (May 2026)",
+        "score": 229,
+        "num_comments": 33,
+        "author": "Jonathan_Rivera",
+        "url": "https://reddit.com/r/hermesagent/comments/1t6gf4j/megathread_hermes_agent_use_cases_what_the/",
+        "created_utc": 1778173028.0
+      },
+      {
+        "id": "1si07o1",
+        "subreddit": "hermesagent",
+        "title": "What are your use cases for Hermes Agent?",
+        "score": 40,
+        "num_comments": 72,
+        "author": "smolpotat0_x",
+        "url": "https://reddit.com/r/hermesagent/comments/1si07o1/what_are_your_use_cases_for_hermes_agent/",
+        "created_utc": 1775857480.0
+      },
+      {
+        "id": "1tgsttq",
+        "subreddit": "LocalLLaMA",
+        "title": "Tried every Hermes Agent alternative so you don't have to (2026 roundup)",
+        "score": 0,
+        "num_comments": 48,
+        "author": "Straight_Stomach812",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1tgsttq/tried_every_hermes_agent_alternative_so_you_dont/",
+        "created_utc": 1779123739.0
+      },
+      {
+        "id": "1t9hh33",
+        "subreddit": "singularity",
+        "title": "Hermes Agent is now #1 most used globally in past 24 hours in Openrouter token metrics, above Claude Code and OpenClaw.",
+        "score": 554,
+        "num_comments": 88,
+        "author": "dogesator",
+        "url": "https://reddit.com/r/singularity/comments/1t9hh33/hermes_agent_is_now_1_most_used_globally_in_past/",
+        "created_utc": 1778443715.0
+      },
+      {
+        "id": "1tdcp2s",
+        "subreddit": "ProgrammerHumor",
+        "title": "broGonnaDeclareBankruptcy",
+        "score": 15437,
+        "num_comments": 256,
+        "author": "Major-Language8609",
+        "url": "https://reddit.com/r/ProgrammerHumor/comments/1tdcp2s/brogonnadeclarebankruptcy/",
+        "created_utc": 1778795952.0
+      },
+      {
+        "id": "1t7qqlx",
+        "subreddit": "hermesagent",
+        "title": "Hermes Agent is now #1 on the Global u/OpenRouter token rankings.",
+        "score": 423,
+        "num_comments": 45,
+        "author": "Dismal_Hair_6558",
+        "url": "https://reddit.com/r/hermesagent/comments/1t7qqlx/hermes_agent_is_now_1_on_the_global_uopenrouter/",
+        "created_utc": 1778289633.0
+      },
+      {
+        "id": "1t9chdk",
+        "subreddit": "hermesagent",
+        "title": "The AI Agent Setup That Finally Clicked for Me: Hermes + OpenAI Codex + Claude Code",
+        "score": 124,
+        "num_comments": 86,
+        "author": "kenduffy",
+        "url": "https://reddit.com/r/hermesagent/comments/1t9chdk/the_ai_agent_setup_that_finally_clicked_for_me/",
+        "created_utc": 1778432589.0
+      },
+      {
+        "id": "1sx4748",
+        "subreddit": "WebAfterAI",
+        "title": "Hermes Agent: The Open-Source Self-Improving AI Agent That Actually Learns, Remembers, and Grows With You (Self-Hosted by Nous Research)",
+        "score": 346,
+        "num_comments": 47,
+        "author": "ShilpaMitra",
+        "url": "https://reddit.com/r/WebAfterAI/comments/1sx4748/hermes_agent_the_opensource_selfimproving_ai/",
+        "created_utc": 1777297615.0
+      },
+      {
+        "id": "1sy36a7",
+        "subreddit": "hermesagent",
+        "title": "Which messaging channel do you use for your Hermes agent?",
+        "score": 58,
+        "num_comments": 104,
+        "author": "SelectionCalm70",
+        "url": "https://reddit.com/r/hermesagent/comments/1sy36a7/which_messaging_channel_do_you_use_for_your/",
+        "created_utc": 1777386829.0
+      },
+      {
+        "id": "1tekz6p",
+        "subreddit": "google_antigravity",
+        "title": "Antigravity last update was 1 month ago 16 April 2026, there are only 2 scenarios: scenario 1 - Google launch  a super powerful Antigravity beating OpenClaw, Hermes Agent, Claude code, Codex;  Scenario 2: Antigravity is proved sundown, no services will be offered after 31 May 2026.",
+        "score": 138,
+        "num_comments": 69,
+        "author": "AwayOpposite487",
+        "url": "https://reddit.com/r/google_antigravity/comments/1tekz6p/antigravity_last_update_was_1_month_ago_16_april/",
+        "created_utc": 1778911061.0
+      },
+      {
+        "id": "1s896jb",
+        "subreddit": "AO3",
+        "title": "Most Tagged Fandoms on AO3 in 2025 (plus the repost of most tagged ships for those who missed it)",
+        "score": 2295,
+        "num_comments": 678,
+        "author": "Agamar13",
+        "url": "https://reddit.com/r/AO3/comments/1s896jb/most_tagged_fandoms_on_ao3_in_2025_plus_the/",
+        "created_utc": 1774919216.0
+      },
+      {
+        "id": "1skl8le",
+        "subreddit": "hermesagent",
+        "title": "Hermes agent V0.9.0 update",
+        "score": 259,
+        "num_comments": 52,
+        "author": "SelectionCalm70",
+        "url": "https://reddit.com/r/hermesagent/comments/1skl8le/hermes_agent_v090_update/",
+        "created_utc": 1776108517.0
+      },
+      {
+        "id": "1thlp7q",
+        "subreddit": "hermesagent",
+        "title": "actually best hermes agent vps hosting ?",
+        "score": 27,
+        "num_comments": 83,
+        "author": "FunThen4634",
+        "url": "https://reddit.com/r/hermesagent/comments/1thlp7q/actually_best_hermes_agent_vps_hosting/",
+        "created_utc": 1779194304.0
+      },
+      {
+        "id": "1t66lhy",
+        "subreddit": "hermesagent",
+        "title": "My simplest yet effective hermes agent profile setup. Meet my \"Archiver\".",
+        "score": 115,
+        "num_comments": 61,
+        "author": "itsdodobitch",
+        "url": "https://reddit.com/r/hermesagent/comments/1t66lhy/my_simplest_yet_effective_hermes_agent_profile/",
+        "created_utc": 1778150026.0
+      },
+      {
+        "id": "1s4skdz",
+        "subreddit": "openclaw",
+        "title": "Just migrated my openclaw setup to Hermes agent and it works like a charm",
+        "score": 69,
+        "num_comments": 83,
+        "author": "SelectionCalm70",
+        "url": "https://reddit.com/r/openclaw/comments/1s4skdz/just_migrated_my_openclaw_setup_to_hermes_agent/",
+        "created_utc": 1774580791.0
+      },
+      {
+        "id": "1stm9h5",
+        "subreddit": "hermesagent",
+        "title": "Memory Management for Hermes agents",
+        "score": 18,
+        "num_comments": 81,
+        "author": "devino21",
+        "url": "https://reddit.com/r/hermesagent/comments/1stm9h5/memory_management_for_hermes_agents/",
+        "created_utc": 1776958566.0
+      },
+      {
+        "id": "1sslrcd",
+        "subreddit": "hermesagent",
+        "title": "Best local model for hermes agent is finally out",
+        "score": 152,
+        "num_comments": 50,
+        "author": "SelectionCalm70",
+        "url": "https://reddit.com/r/hermesagent/comments/1sslrcd/best_local_model_for_hermes_agent_is_finally_out/",
+        "created_utc": 1776865010.0
+      },
+      {
+        "id": "1ro9lph",
+        "subreddit": "LocalLLaMA",
+        "title": "Anybody who tried Hermes-Agent?",
+        "score": 53,
+        "num_comments": 88,
+        "author": "HaAtidChai",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1ro9lph/anybody_who_tried_hermesagent/",
+        "created_utc": 1772988317.0
+      }
+    ]
+  }
+}

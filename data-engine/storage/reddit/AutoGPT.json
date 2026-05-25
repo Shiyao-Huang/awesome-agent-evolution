@@ -1,0 +1,264 @@
+{
+  "project": "AutoGPT",
+  "repo": "Significant-Gravitas/AutoGPT",
+  "collected_at": "2026-05-22T11:35:29.581353+00:00",
+  "queries": [
+    "AutoGPT",
+    "AutoGPT"
+  ],
+  "total_posts": 25,
+  "results": {
+    "AutoGPT": [
+      {
+        "id": "1o1obbo",
+        "subreddit": "AutoGPT",
+        "title": "What’s the outlook for AutoGPT as a platform?",
+        "score": 2,
+        "num_comments": 5,
+        "author": "sensitivehack",
+        "url": "https://reddit.com/r/AutoGPT/comments/1o1obbo/whats_the_outlook_for_autogpt_as_a_platform/",
+        "created_utc": 1759959886.0
+      },
+      {
+        "id": "1tfqdp7",
+        "subreddit": "apple",
+        "title": "Apple’s New ChatGPT-Like Siri App Will Have Auto-Deleting Chats (Gift Link)",
+        "score": 911,
+        "num_comments": 155,
+        "author": "pdfu",
+        "url": "https://reddit.com/r/apple/comments/1tfqdp7/apples_new_chatgptlike_siri_app_will_have/",
+        "created_utc": 1779026451.0
+      },
+      {
+        "id": "1olp9gl",
+        "subreddit": "ChatGPT",
+        "title": "ChatGPT deployed in Grand Theft Auto V — the future of NPCs.",
+        "score": 1031,
+        "num_comments": 331,
+        "author": "EssoEssex",
+        "url": "https://reddit.com/r/ChatGPT/comments/1olp9gl/chatgpt_deployed_in_grand_theft_auto_v_the_future/",
+        "created_utc": 1762007444.0
+      },
+      {
+        "id": "125qjqu",
+        "subreddit": "memes",
+        "title": "Using GPT-4 and Dalle2, I made a Python script that auto-generates memes without any input...",
+        "score": 10708,
+        "num_comments": 284,
+        "author": "NomNomNomNation",
+        "url": "https://reddit.com/r/memes/comments/125qjqu/using_gpt4_and_dalle2_i_made_a_python_script_that/",
+        "created_utc": 1680101512.0
+      },
+      {
+        "id": "1ovv0kg",
+        "subreddit": "ChatGPT",
+        "title": "They copied ChatGPT word-for-word and left the ending in. Wild.",
+        "score": 24411,
+        "num_comments": 737,
+        "author": "imfrom_mars_",
+        "url": "https://reddit.com/r/ChatGPT/comments/1ovv0kg/they_copied_chatgpt_wordforword_and_left_the/",
+        "created_utc": 1763019351.0
+      },
+      {
+        "id": "1p8tpne",
+        "subreddit": "conspiracy",
+        "title": "ChatGPT wtf???",
+        "score": 11797,
+        "num_comments": 903,
+        "author": "_sahdz",
+        "url": "https://reddit.com/r/conspiracy/comments/1p8tpne/chatgpt_wtf/",
+        "created_utc": 1764333144.0
+      },
+      {
+        "id": "1lnfcnt",
+        "subreddit": "ChatGPT",
+        "title": "After 147 failed ChatGPT prompts, I had a breakdown and accidentally discovered something",
+        "score": 22929,
+        "num_comments": 2414,
+        "author": "Prestigious-Fan118",
+        "url": "https://reddit.com/r/ChatGPT/comments/1lnfcnt/after_147_failed_chatgpt_prompts_i_had_a/",
+        "created_utc": 1751205554.0
+      },
+      {
+        "id": "1rlo4ws",
+        "subreddit": "BestofRedditorUpdates",
+        "title": "I was warned about my child's martial arts school. I should have listened.",
+        "score": 4740,
+        "num_comments": 509,
+        "author": "LucyAriaRose",
+        "url": "https://reddit.com/r/BestofRedditorUpdates/comments/1rlo4ws/i_was_warned_about_my_childs_martial_arts_school/",
+        "created_utc": 1772732668.0
+      },
+      {
+        "id": "1ps9vf3",
+        "subreddit": "automobil",
+        "title": "Gibt es gute Jeeps für &lt;8000€? Ich finde die mega cool! Mit \"Jeep\" meine ich nicht die Automarke, sondern diese Form von Auto, hört sich blöd an, aber ich glaube, die hat nicht mal einen Namen? (ChatGPT hat gesagt, dass es ein SUV ist, aber wenn ich danach suche finde ich alles, außer das...)",
+        "score": 68,
+        "num_comments": 185,
+        "author": "PeakAlienation",
+        "url": "https://reddit.com/r/automobil/comments/1ps9vf3/gibt_es_gute_jeeps_für_8000_ich_finde_die_mega/",
+        "created_utc": 1766332985.0
+      },
+      {
+        "id": "1r4losc",
+        "subreddit": "OpenAI",
+        "title": "Asking both ChatGPT and Claude the car wash question",
+        "score": 4140,
+        "num_comments": 587,
+        "author": "ihateredditors111111",
+        "url": "https://reddit.com/r/OpenAI/comments/1r4losc/asking_both_chatgpt_and_claude_the_car_wash/",
+        "created_utc": 1771078508.0
+      },
+      {
+        "id": "1rrmfqr",
+        "subreddit": "ChatGPT",
+        "title": "Apparently, clanker is a racial slur",
+        "score": 2763,
+        "num_comments": 746,
+        "author": "AdThen1521",
+        "url": "https://reddit.com/r/ChatGPT/comments/1rrmfqr/apparently_clanker_is_a_racial_slur/",
+        "created_utc": 1773309069.0
+      },
+      {
+        "id": "136vyj1",
+        "subreddit": "ChatGPT",
+        "title": "This is crazy. I ran a 100-agent-wide autonomous *simulation of a virtual world* as part of a research project for Forever Voices using nothing but autoGPT &amp; GPT-4. In the 2nd video, you’ll see that it decides (on its own) to bring forward an *economic crisis* among our 100 AI personas. (SEE VIDEOS)",
+        "score": 895,
+        "num_comments": 188,
+        "author": "Turbulent-Froyo7352",
+        "url": "https://reddit.com/r/ChatGPT/comments/136vyj1/this_is_crazy_i_ran_a_100agentwide_autonomous/",
+        "created_utc": 1683139897.0
+      },
+      {
+        "id": "1ouav55",
+        "subreddit": "ChatGPT",
+        "title": "GPT Auto-mod Hides Service Outage From Customers on Reddit",
+        "score": 277,
+        "num_comments": 101,
+        "author": "Professional-Ask1576",
+        "url": "https://reddit.com/r/ChatGPT/comments/1ouav55/gpt_automod_hides_service_outage_from_customers/",
+        "created_utc": 1762871396.0
+      },
+      {
+        "id": "1so9uta",
+        "subreddit": "ClaudeCode",
+        "title": "Opus 4.7 is legendarily bad. I cannot believe this.",
+        "score": 1945,
+        "num_comments": 863,
+        "author": "lemon07r",
+        "url": "https://reddit.com/r/ClaudeCode/comments/1so9uta/opus_47_is_legendarily_bad_i_cannot_believe_this/",
+        "created_utc": 1776451696.0
+      },
+      {
+        "id": "1syxq98",
+        "subreddit": "ChatGPT",
+        "title": "I asked ChatGPT to imagine r/ChatGPT the day AGI drops… the tiny details are insane",
+        "score": 3578,
+        "num_comments": 305,
+        "author": "bricks0fbollywood",
+        "url": "https://reddit.com/r/ChatGPT/comments/1syxq98/i_asked_chatgpt_to_imagine_rchatgpt_the_day_agi/",
+        "created_utc": 1777466633.0
+      },
+      {
+        "id": "1jdo893",
+        "subreddit": "conspiracy",
+        "title": "Auto Pen Conspiracy cover up. IN this sub??? ChatGPT knows",
+        "score": 119,
+        "num_comments": 277,
+        "author": "impresidentwu",
+        "url": "https://reddit.com/r/conspiracy/comments/1jdo893/auto_pen_conspiracy_cover_up_in_this_sub_chatgpt/",
+        "created_utc": 1742246555.0
+      },
+      {
+        "id": "1oobwau",
+        "subreddit": "NoStupidQuestions",
+        "title": "\"This is so obviously AI\" - a frequent comment made by Redditors on an OP",
+        "score": 2704,
+        "num_comments": 1236,
+        "author": "CrumpetsGalore",
+        "url": "https://reddit.com/r/NoStupidQuestions/comments/1oobwau/this_is_so_obviously_ai_a_frequent_comment_made/",
+        "created_utc": 1762274005.0
+      },
+      {
+        "id": "1qoucck",
+        "subreddit": "OpenAI",
+        "title": "Even when I select GPT-4o, it keeps switching to 5.2. I don’t want to be forced into Auto!",
+        "score": 87,
+        "num_comments": 85,
+        "author": "Calm-Hope3149",
+        "url": "https://reddit.com/r/OpenAI/comments/1qoucck/even_when_i_select_gpt4o_it_keeps_switching_to_52/",
+        "created_utc": 1769556352.0
+      },
+      {
+        "id": "1jxxzo0",
+        "subreddit": "WallStreetbetsELITE",
+        "title": "My post on China nuking the bond market hit 4.8M views. Mods deleted it with no reason. Here’s why that should terrify you. (Enhanced with ChatGPT &amp; Sources)",
+        "score": 6993,
+        "num_comments": 778,
+        "author": "TheMysteryCheese",
+        "url": "https://reddit.com/r/WallStreetbetsELITE/comments/1jxxzo0/my_post_on_china_nuking_the_bond_market_hit_48m/",
+        "created_utc": 1744512687.0
+      },
+      {
+        "id": "1q4e4zn",
+        "subreddit": "OpenAI",
+        "title": "Dont use gpt-5.2 auto/instant in chatgpt",
+        "score": 116,
+        "num_comments": 85,
+        "author": "shaman-warrior",
+        "url": "https://reddit.com/r/OpenAI/comments/1q4e4zn/dont_use_gpt52_autoinstant_in_chatgpt/",
+        "created_utc": 1767593885.0
+      },
+      {
+        "id": "12v0vda",
+        "subreddit": "MachineLearning",
+        "title": "[P] I built a tool that auto-generates scrapers for any website with GPT",
+        "score": 1075,
+        "num_comments": 92,
+        "author": "madredditscientist",
+        "url": "https://reddit.com/r/MachineLearning/comments/12v0vda/p_i_built_a_tool_that_autogenerates_scrapers_for/",
+        "created_utc": 1682156612.0
+      },
+      {
+        "id": "1pxo8sb",
+        "subreddit": "BrandNewSentence",
+        "title": "chatgpt virginity",
+        "score": 8425,
+        "num_comments": 191,
+        "author": "chillnecrophile",
+        "url": "https://reddit.com/r/BrandNewSentence/comments/1pxo8sb/chatgpt_virginity/",
+        "created_utc": 1766917740.0
+      },
+      {
+        "id": "1f04z3x",
+        "subreddit": "automobil",
+        "title": "Mein Auto wurde von ChatGPT geroasted",
+        "score": 531,
+        "num_comments": 98,
+        "author": "DearCopy427",
+        "url": "https://reddit.com/r/automobil/comments/1f04z3x/mein_auto_wurde_von_chatgpt_geroasted/",
+        "created_utc": 1724505198.0
+      },
+      {
+        "id": "1qtvtib",
+        "subreddit": "jobhunting",
+        "title": "It took 400+ applications and a near mental breakdown, but i finally got 3 offers. The market is trash, but here’s what actually worked.",
+        "score": 3862,
+        "num_comments": 253,
+        "author": "Educational-Egg-1401",
+        "url": "https://reddit.com/r/jobhunting/comments/1qtvtib/it_took_400_applications_and_a_near_mental/",
+        "created_utc": 1770040860.0
+      },
+      {
+        "id": "1t94cx6",
+        "subreddit": "TwentiesIndia",
+        "title": "My Dad saw video of me making out with my Ex from 2022.",
+        "score": 1385,
+        "num_comments": 427,
+        "author": "tbsm4I",
+        "url": "https://reddit.com/r/TwentiesIndia/comments/1t94cx6/my_dad_saw_video_of_me_making_out_with_my_ex_from/",
+        "created_utc": 1778412402.0
+      }
+    ]
+  }
+}

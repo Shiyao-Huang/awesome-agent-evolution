@@ -1,0 +1,736 @@
+{
+  "project": "Browser-Use",
+  "repo": "browser-use/browser-use",
+  "collected_at": "2026-05-22T11:31:28.021554+00:00",
+  "queries": [
+    "Browser-Use",
+    "browser-use"
+  ],
+  "total_hits": 80,
+  "results": {
+    "Browser-Use": [
+      {
+        "objectID": "16525559",
+        "title": "History of the browser user-agent string (2008)",
+        "url": "http://webaim.org/blog/user-agent-string-history/",
+        "points": 558,
+        "num_comments": 168,
+        "author": "jesperht",
+        "created_at": "2018-03-05T23:30:44Z"
+      },
+      {
+        "objectID": "29900496",
+        "title": "Ask HN: Why do new browsers use Chromium instead of Firefox as their base?",
+        "url": "",
+        "points": 301,
+        "num_comments": 183,
+        "author": "josemando",
+        "created_at": "2022-01-12T00:21:34Z"
+      },
+      {
+        "objectID": "43173378",
+        "title": "Launch HN: Browser Use (YC W25) – open-source web agents",
+        "url": "https://github.com/browser-use/browser-use",
+        "points": 259,
+        "num_comments": 100,
+        "author": "MagMueller",
+        "created_at": "2025-02-25T15:45:17Z"
+      },
+      {
+        "objectID": "13925238",
+        "title": "An advanced browser fingerprint calculator aimed mainly at Tor Browser users",
+        "url": "https://fpcentral.irisa.fr",
+        "points": 158,
+        "num_comments": 77,
+        "author": "jerheinze",
+        "created_at": "2017-03-21T19:11:44Z"
+      },
+      {
+        "objectID": "12852912",
+        "title": "Tor Browser User Manual",
+        "url": "https://blog.torproject.org/blog/announcing-tor-browser-user-manual",
+        "points": 134,
+        "num_comments": 18,
+        "author": "cheiVia0",
+        "created_at": "2016-11-02T07:43:04Z"
+      },
+      {
+        "objectID": "44349845",
+        "title": "Why do all browsers' user agents start with \"Mozilla/\"? (2008)",
+        "url": "https://stackoverflow.com/questions/1114254/why-do-all-browsers-user-agents-start-with-mozilla",
+        "points": 116,
+        "num_comments": 62,
+        "author": "nan60",
+        "created_at": "2025-06-22T20:04:33Z"
+      },
+      {
+        "objectID": "6674812",
+        "title": "History of the browser user-agent string",
+        "url": "http://webaim.org/blog/user-agent-string-history/",
+        "points": 100,
+        "num_comments": 32,
+        "author": "bhaisaab",
+        "created_at": "2013-11-05T13:08:45Z"
+      },
+      {
+        "objectID": "31246438",
+        "title": "History of the browser user-agent string",
+        "url": "https://webaim.org/blog/user-agent-string-history/",
+        "points": 87,
+        "num_comments": 20,
+        "author": "choult",
+        "created_at": "2022-05-03T09:47:24Z"
+      },
+      {
+        "objectID": "13559608",
+        "title": "Windows DRM Files Used to Decloak Tor Browser Users",
+        "url": "https://www.bleepingcomputer.com/news/security/windows-drm-files-used-to-decloak-tor-browser-users/",
+        "points": 79,
+        "num_comments": 32,
+        "author": "edgarvm",
+        "created_at": "2017-02-03T13:24:39Z"
+      },
+      {
+        "objectID": "21085388",
+        "title": "History of the browser user-agent string (2008)",
+        "url": "https://webaim.org/blog/user-agent-string-history/",
+        "points": 62,
+        "num_comments": 23,
+        "author": "tosh",
+        "created_at": "2019-09-26T20:49:16Z"
+      },
+      {
+        "objectID": "1755686",
+        "title": "Browsers used in 5500+ HN visits yesterday",
+        "url": "http://i.imgur.com/nXTkk.png",
+        "points": 58,
+        "num_comments": 32,
+        "author": "QuantumGood",
+        "created_at": "2010-10-04T14:17:06Z"
+      },
+      {
+        "objectID": "11693455",
+        "title": "History of the browser user-agent string (2008)",
+        "url": "http://webaim.org/blog/user-agent-string-history/",
+        "points": 38,
+        "num_comments": 12,
+        "author": "jtchang",
+        "created_at": "2016-05-13T21:54:23Z"
+      },
+      {
+        "objectID": "29061436",
+        "title": "Brave Browser uses 100% CPU when back end servers are down",
+        "url": "https://github.com/brave/brave-browser/issues/19125",
+        "points": 37,
+        "num_comments": 5,
+        "author": "rbdeveloper",
+        "created_at": "2021-10-31T23:20:48Z"
+      },
+      {
+        "objectID": "298844",
+        "title": "History of the browser user-agent string",
+        "url": "http://www.webaim.org/blog/user-agent-string-history/",
+        "points": 36,
+        "num_comments": 4,
+        "author": "spydez",
+        "created_at": "2008-09-08T22:07:23Z"
+      },
+      {
+        "objectID": "30088089",
+        "title": "Google introduces a new system for tracking Chrome browser users",
+        "url": "https://www.nytimes.com/2022/01/25/business/google-topics-chrome-tracking.html",
+        "points": 35,
+        "num_comments": 11,
+        "author": "dmitrygr",
+        "created_at": "2022-01-26T17:01:07Z"
+      },
+      {
+        "objectID": "40749211",
+        "title": "It seems routine to see a bunch of browser User-Agents from the same IP",
+        "url": "https://utcc.utoronto.ca/~cks/space/blog/web/MultipleUserAgentsSameIP",
+        "points": 31,
+        "num_comments": 29,
+        "author": "zerojames",
+        "created_at": "2024-06-21T13:05:21Z"
+      },
+      {
+        "objectID": "28161538",
+        "title": "Should the browser use all available memory?",
+        "url": "https://jmmv.dev/2021/08/using-all-memory-as-a-cache.html",
+        "points": 30,
+        "num_comments": 10,
+        "author": "todsacerdoti",
+        "created_at": "2021-08-12T21:12:04Z"
+      },
+      {
+        "objectID": "4847918",
+        "title": "Hack could let browsers use cloud to carry out big attacks on the cheap",
+        "url": "http://arstechnica.com/security/2012/11/hack-could-let-browsers-use-cloud-to-carry-out-big-attacks-on-the-cheap/",
+        "points": 23,
+        "num_comments": 3,
+        "author": "dsr12",
+        "created_at": "2012-11-29T14:44:48Z"
+      },
+      {
+        "objectID": "40671576",
+        "title": "Google's Privacy Sandbox accused of misleading Chrome browser users",
+        "url": "https://www.theregister.com/2024/06/13/noyb_gdpr_privacy_sandbox/",
+        "points": 23,
+        "num_comments": 2,
+        "author": "rntn",
+        "created_at": "2024-06-13T16:20:39Z"
+      },
+      {
+        "objectID": "46784676",
+        "title": "History of the browser user-agent string (2008)",
+        "url": "https://webaim.org/blog/user-agent-string-history/",
+        "points": 20,
+        "num_comments": 2,
+        "author": "smushy",
+        "created_at": "2026-01-27T19:03:45Z"
+      },
+      {
+        "objectID": "7233081",
+        "title": "Why do web browsers use such bad languages?",
+        "url": "http://www.deseret-tech.com/journal/why-do-web-browsers-use-such-bad-languages/",
+        "points": 13,
+        "num_comments": 9,
+        "author": "cookiecaper",
+        "created_at": "2014-02-13T18:24:53Z"
+      },
+      {
+        "objectID": "2224026",
+        "title": "History of the browser user-agent string (2008)",
+        "url": "http://webaim.org/blog/user-agent-string-history/",
+        "points": 11,
+        "num_comments": 0,
+        "author": "stanleydrew",
+        "created_at": "2011-02-15T23:51:18Z"
+      },
+      {
+        "objectID": "43517243",
+        "title": "Open-source browser-use/CUA equivalent for androids: mobile-use",
+        "url": "https://github.com/runablehq/mobile-use",
+        "points": 8,
+        "num_comments": 0,
+        "author": "Umesh110",
+        "created_at": "2025-03-29T17:52:05Z"
+      },
+      {
+        "objectID": "43983619",
+        "title": "Show HN: You know browser-use, here's human-use for LLMs to get info from humans",
+        "url": "https://github.com/RapidataAI/human-use",
+        "points": 7,
+        "num_comments": 4,
+        "author": "maalber",
+        "created_at": "2025-05-14T12:17:44Z"
+      },
+      {
+        "objectID": "46736978",
+        "title": "Show HN: 83 browser-use trajectories, visualized",
+        "url": "https://trails-red.vercel.app/viewer",
+        "points": 7,
+        "num_comments": 1,
+        "author": "wayy",
+        "created_at": "2026-01-23T19:50:03Z"
+      },
+      {
+        "objectID": "803165",
+        "title": "9.5mm Firefox browsers use Adblock Plus Daily",
+        "url": "https://addons.mozilla.org/en-US/statistics/addon/1865",
+        "points": 5,
+        "num_comments": 12,
+        "author": "darien",
+        "created_at": "2009-09-03T18:41:29Z"
+      },
+      {
+        "objectID": "43379473",
+        "title": "Show HN: Browser-Use MCP for Claude that works without an API key",
+        "url": "https://twitter.com/vortex_ape/status/1900953901588729864",
+        "points": 5,
+        "num_comments": 5,
+        "author": "vortex_ape",
+        "created_at": "2025-03-16T14:48:18Z"
+      },
+      {
+        "objectID": "521138",
+        "title": "History of the browser user-agent string ",
+        "url": "http://webaim.org/blog/user-agent-string-history/",
+        "points": 5,
+        "num_comments": 0,
+        "author": "signa11",
+        "created_at": "2009-03-18T03:51:57Z"
+      },
+      {
+        "objectID": "8224244",
+        "title": "Top secret firm awarded contract by Russians to expose Tor browser users",
+        "url": "http://www.networkworld.com/article/2598401/opensource-subnet/russias-bid-to-expose-users-highlights-law-enforcements-tricky-relationship-with.html#linkedin",
+        "points": 4,
+        "num_comments": 2,
+        "author": "stevep2007",
+        "created_at": "2014-08-25T21:04:39Z"
+      },
+      {
+        "objectID": "46089114",
+        "title": "Show HN: AI agent that rotates your passwords (browser-use and zero-knowledge)",
+        "url": "https://thepassword.app/",
+        "points": 4,
+        "num_comments": 2,
+        "author": "thepasswordapp",
+        "created_at": "2025-11-29T17:15:17Z"
+      },
+      {
+        "objectID": "47710327",
+        "title": "Perplexity computer is based on the OSS browser use library",
+        "url": "https://twitter.com/mamagnus00/status/2042339700082610345",
+        "points": 4,
+        "num_comments": 0,
+        "author": "whytai",
+        "created_at": "2026-04-09T21:22:05Z"
+      },
+      {
+        "objectID": "45235052",
+        "title": "The Bear Case on Browser Use",
+        "url": "https://www.lomondlabs.com/bear-case-on-browsers",
+        "points": 4,
+        "num_comments": 0,
+        "author": "isomierism",
+        "created_at": "2025-09-13T20:27:57Z"
+      },
+      {
+        "objectID": "43617033",
+        "title": "Show HN: Browser-Use MCP for Claude that works without an API key",
+        "url": "https://twitter.com/vortex_ape/status/1900953901588729864",
+        "points": 4,
+        "num_comments": 0,
+        "author": "vortex_ape",
+        "created_at": "2025-04-07T23:38:27Z"
+      },
+      {
+        "objectID": "43538465",
+        "title": "Amazon Nova Act Browser Use Model",
+        "url": "https://labs.amazon.science/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "ledwards",
+        "created_at": "2025-03-31T18:58:14Z"
+      },
+      {
+        "objectID": "42677425",
+        "title": "Browser Use – Simple Web AI Agents",
+        "url": "https://github.com/browser-use/browser-use",
+        "points": 4,
+        "num_comments": 0,
+        "author": "franze",
+        "created_at": "2025-01-12T22:04:51Z"
+      },
+      {
+        "objectID": "41808856",
+        "title": "History of the Browser User-Agent String (2008)",
+        "url": "https://webaim.org/blog/user-agent-string-history/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "Alfagun74",
+        "created_at": "2024-10-11T12:23:15Z"
+      },
+      {
+        "objectID": "23081910",
+        "title": "Few Brave Browser Users Take Advantage of Crypto Features, Says CEO",
+        "url": "https://cointelegraph.com/news/few-brave-browser-users-take-advantage-of-crypto-features-says-ceo",
+        "points": 4,
+        "num_comments": 0,
+        "author": "bryanrasmussen",
+        "created_at": "2020-05-05T16:40:08Z"
+      },
+      {
+        "objectID": "12871348",
+        "title": "Microsoft lost 300M browser users in 2016, tracking site shows",
+        "url": "http://www.businessinsider.com/300-million-users-ditched-microsoft-browsers-2016-11?utm_source=feedburner&utm_medium=referral",
+        "points": 4,
+        "num_comments": 0,
+        "author": "mnmlsm",
+        "created_at": "2016-11-04T09:49:51Z"
+      },
+      {
+        "objectID": "27425988",
+        "title": "Why do all browsers' user agents start with “Mozilla/”?",
+        "url": "https://stackoverflow.com/questions/1114254/why-do-all-browsers-user-agents-start-with-mozilla",
+        "points": 3,
+        "num_comments": 1,
+        "author": "woldemariam",
+        "created_at": "2021-06-07T18:12:29Z"
+      },
+      {
+        "objectID": "46543591",
+        "title": "History of the browser user-agent string",
+        "url": "https://webaim.org/blog/user-agent-string-history/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "LorenDB",
+        "created_at": "2026-01-08T17:16:54Z"
+      }
+    ],
+    "browser-use": [
+      {
+        "objectID": "16525559",
+        "title": "History of the browser user-agent string (2008)",
+        "url": "http://webaim.org/blog/user-agent-string-history/",
+        "points": 558,
+        "num_comments": 168,
+        "author": "jesperht",
+        "created_at": "2018-03-05T23:30:44Z"
+      },
+      {
+        "objectID": "29900496",
+        "title": "Ask HN: Why do new browsers use Chromium instead of Firefox as their base?",
+        "url": "",
+        "points": 301,
+        "num_comments": 183,
+        "author": "josemando",
+        "created_at": "2022-01-12T00:21:34Z"
+      },
+      {
+        "objectID": "43173378",
+        "title": "Launch HN: Browser Use (YC W25) – open-source web agents",
+        "url": "https://github.com/browser-use/browser-use",
+        "points": 259,
+        "num_comments": 100,
+        "author": "MagMueller",
+        "created_at": "2025-02-25T15:45:17Z"
+      },
+      {
+        "objectID": "13925238",
+        "title": "An advanced browser fingerprint calculator aimed mainly at Tor Browser users",
+        "url": "https://fpcentral.irisa.fr",
+        "points": 158,
+        "num_comments": 77,
+        "author": "jerheinze",
+        "created_at": "2017-03-21T19:11:44Z"
+      },
+      {
+        "objectID": "12852912",
+        "title": "Tor Browser User Manual",
+        "url": "https://blog.torproject.org/blog/announcing-tor-browser-user-manual",
+        "points": 134,
+        "num_comments": 18,
+        "author": "cheiVia0",
+        "created_at": "2016-11-02T07:43:04Z"
+      },
+      {
+        "objectID": "44349845",
+        "title": "Why do all browsers' user agents start with \"Mozilla/\"? (2008)",
+        "url": "https://stackoverflow.com/questions/1114254/why-do-all-browsers-user-agents-start-with-mozilla",
+        "points": 116,
+        "num_comments": 62,
+        "author": "nan60",
+        "created_at": "2025-06-22T20:04:33Z"
+      },
+      {
+        "objectID": "6674812",
+        "title": "History of the browser user-agent string",
+        "url": "http://webaim.org/blog/user-agent-string-history/",
+        "points": 100,
+        "num_comments": 32,
+        "author": "bhaisaab",
+        "created_at": "2013-11-05T13:08:45Z"
+      },
+      {
+        "objectID": "31246438",
+        "title": "History of the browser user-agent string",
+        "url": "https://webaim.org/blog/user-agent-string-history/",
+        "points": 87,
+        "num_comments": 20,
+        "author": "choult",
+        "created_at": "2022-05-03T09:47:24Z"
+      },
+      {
+        "objectID": "13559608",
+        "title": "Windows DRM Files Used to Decloak Tor Browser Users",
+        "url": "https://www.bleepingcomputer.com/news/security/windows-drm-files-used-to-decloak-tor-browser-users/",
+        "points": 79,
+        "num_comments": 32,
+        "author": "edgarvm",
+        "created_at": "2017-02-03T13:24:39Z"
+      },
+      {
+        "objectID": "21085388",
+        "title": "History of the browser user-agent string (2008)",
+        "url": "https://webaim.org/blog/user-agent-string-history/",
+        "points": 62,
+        "num_comments": 23,
+        "author": "tosh",
+        "created_at": "2019-09-26T20:49:16Z"
+      },
+      {
+        "objectID": "1755686",
+        "title": "Browsers used in 5500+ HN visits yesterday",
+        "url": "http://i.imgur.com/nXTkk.png",
+        "points": 58,
+        "num_comments": 32,
+        "author": "QuantumGood",
+        "created_at": "2010-10-04T14:17:06Z"
+      },
+      {
+        "objectID": "11693455",
+        "title": "History of the browser user-agent string (2008)",
+        "url": "http://webaim.org/blog/user-agent-string-history/",
+        "points": 38,
+        "num_comments": 12,
+        "author": "jtchang",
+        "created_at": "2016-05-13T21:54:23Z"
+      },
+      {
+        "objectID": "29061436",
+        "title": "Brave Browser uses 100% CPU when back end servers are down",
+        "url": "https://github.com/brave/brave-browser/issues/19125",
+        "points": 37,
+        "num_comments": 5,
+        "author": "rbdeveloper",
+        "created_at": "2021-10-31T23:20:48Z"
+      },
+      {
+        "objectID": "298844",
+        "title": "History of the browser user-agent string",
+        "url": "http://www.webaim.org/blog/user-agent-string-history/",
+        "points": 36,
+        "num_comments": 4,
+        "author": "spydez",
+        "created_at": "2008-09-08T22:07:23Z"
+      },
+      {
+        "objectID": "30088089",
+        "title": "Google introduces a new system for tracking Chrome browser users",
+        "url": "https://www.nytimes.com/2022/01/25/business/google-topics-chrome-tracking.html",
+        "points": 35,
+        "num_comments": 11,
+        "author": "dmitrygr",
+        "created_at": "2022-01-26T17:01:07Z"
+      },
+      {
+        "objectID": "40749211",
+        "title": "It seems routine to see a bunch of browser User-Agents from the same IP",
+        "url": "https://utcc.utoronto.ca/~cks/space/blog/web/MultipleUserAgentsSameIP",
+        "points": 31,
+        "num_comments": 29,
+        "author": "zerojames",
+        "created_at": "2024-06-21T13:05:21Z"
+      },
+      {
+        "objectID": "28161538",
+        "title": "Should the browser use all available memory?",
+        "url": "https://jmmv.dev/2021/08/using-all-memory-as-a-cache.html",
+        "points": 30,
+        "num_comments": 10,
+        "author": "todsacerdoti",
+        "created_at": "2021-08-12T21:12:04Z"
+      },
+      {
+        "objectID": "4847918",
+        "title": "Hack could let browsers use cloud to carry out big attacks on the cheap",
+        "url": "http://arstechnica.com/security/2012/11/hack-could-let-browsers-use-cloud-to-carry-out-big-attacks-on-the-cheap/",
+        "points": 23,
+        "num_comments": 3,
+        "author": "dsr12",
+        "created_at": "2012-11-29T14:44:48Z"
+      },
+      {
+        "objectID": "40671576",
+        "title": "Google's Privacy Sandbox accused of misleading Chrome browser users",
+        "url": "https://www.theregister.com/2024/06/13/noyb_gdpr_privacy_sandbox/",
+        "points": 23,
+        "num_comments": 2,
+        "author": "rntn",
+        "created_at": "2024-06-13T16:20:39Z"
+      },
+      {
+        "objectID": "46784676",
+        "title": "History of the browser user-agent string (2008)",
+        "url": "https://webaim.org/blog/user-agent-string-history/",
+        "points": 20,
+        "num_comments": 2,
+        "author": "smushy",
+        "created_at": "2026-01-27T19:03:45Z"
+      },
+      {
+        "objectID": "7233081",
+        "title": "Why do web browsers use such bad languages?",
+        "url": "http://www.deseret-tech.com/journal/why-do-web-browsers-use-such-bad-languages/",
+        "points": 13,
+        "num_comments": 9,
+        "author": "cookiecaper",
+        "created_at": "2014-02-13T18:24:53Z"
+      },
+      {
+        "objectID": "2224026",
+        "title": "History of the browser user-agent string (2008)",
+        "url": "http://webaim.org/blog/user-agent-string-history/",
+        "points": 11,
+        "num_comments": 0,
+        "author": "stanleydrew",
+        "created_at": "2011-02-15T23:51:18Z"
+      },
+      {
+        "objectID": "43517243",
+        "title": "Open-source browser-use/CUA equivalent for androids: mobile-use",
+        "url": "https://github.com/runablehq/mobile-use",
+        "points": 8,
+        "num_comments": 0,
+        "author": "Umesh110",
+        "created_at": "2025-03-29T17:52:05Z"
+      },
+      {
+        "objectID": "43983619",
+        "title": "Show HN: You know browser-use, here's human-use for LLMs to get info from humans",
+        "url": "https://github.com/RapidataAI/human-use",
+        "points": 7,
+        "num_comments": 4,
+        "author": "maalber",
+        "created_at": "2025-05-14T12:17:44Z"
+      },
+      {
+        "objectID": "46736978",
+        "title": "Show HN: 83 browser-use trajectories, visualized",
+        "url": "https://trails-red.vercel.app/viewer",
+        "points": 7,
+        "num_comments": 1,
+        "author": "wayy",
+        "created_at": "2026-01-23T19:50:03Z"
+      },
+      {
+        "objectID": "803165",
+        "title": "9.5mm Firefox browsers use Adblock Plus Daily",
+        "url": "https://addons.mozilla.org/en-US/statistics/addon/1865",
+        "points": 5,
+        "num_comments": 12,
+        "author": "darien",
+        "created_at": "2009-09-03T18:41:29Z"
+      },
+      {
+        "objectID": "43379473",
+        "title": "Show HN: Browser-Use MCP for Claude that works without an API key",
+        "url": "https://twitter.com/vortex_ape/status/1900953901588729864",
+        "points": 5,
+        "num_comments": 5,
+        "author": "vortex_ape",
+        "created_at": "2025-03-16T14:48:18Z"
+      },
+      {
+        "objectID": "521138",
+        "title": "History of the browser user-agent string ",
+        "url": "http://webaim.org/blog/user-agent-string-history/",
+        "points": 5,
+        "num_comments": 0,
+        "author": "signa11",
+        "created_at": "2009-03-18T03:51:57Z"
+      },
+      {
+        "objectID": "8224244",
+        "title": "Top secret firm awarded contract by Russians to expose Tor browser users",
+        "url": "http://www.networkworld.com/article/2598401/opensource-subnet/russias-bid-to-expose-users-highlights-law-enforcements-tricky-relationship-with.html#linkedin",
+        "points": 4,
+        "num_comments": 2,
+        "author": "stevep2007",
+        "created_at": "2014-08-25T21:04:39Z"
+      },
+      {
+        "objectID": "46089114",
+        "title": "Show HN: AI agent that rotates your passwords (browser-use and zero-knowledge)",
+        "url": "https://thepassword.app/",
+        "points": 4,
+        "num_comments": 2,
+        "author": "thepasswordapp",
+        "created_at": "2025-11-29T17:15:17Z"
+      },
+      {
+        "objectID": "47710327",
+        "title": "Perplexity computer is based on the OSS browser use library",
+        "url": "https://twitter.com/mamagnus00/status/2042339700082610345",
+        "points": 4,
+        "num_comments": 0,
+        "author": "whytai",
+        "created_at": "2026-04-09T21:22:05Z"
+      },
+      {
+        "objectID": "45235052",
+        "title": "The Bear Case on Browser Use",
+        "url": "https://www.lomondlabs.com/bear-case-on-browsers",
+        "points": 4,
+        "num_comments": 0,
+        "author": "isomierism",
+        "created_at": "2025-09-13T20:27:57Z"
+      },
+      {
+        "objectID": "43617033",
+        "title": "Show HN: Browser-Use MCP for Claude that works without an API key",
+        "url": "https://twitter.com/vortex_ape/status/1900953901588729864",
+        "points": 4,
+        "num_comments": 0,
+        "author": "vortex_ape",
+        "created_at": "2025-04-07T23:38:27Z"
+      },
+      {
+        "objectID": "43538465",
+        "title": "Amazon Nova Act Browser Use Model",
+        "url": "https://labs.amazon.science/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "ledwards",
+        "created_at": "2025-03-31T18:58:14Z"
+      },
+      {
+        "objectID": "42677425",
+        "title": "Browser Use – Simple Web AI Agents",
+        "url": "https://github.com/browser-use/browser-use",
+        "points": 4,
+        "num_comments": 0,
+        "author": "franze",
+        "created_at": "2025-01-12T22:04:51Z"
+      },
+      {
+        "objectID": "41808856",
+        "title": "History of the Browser User-Agent String (2008)",
+        "url": "https://webaim.org/blog/user-agent-string-history/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "Alfagun74",
+        "created_at": "2024-10-11T12:23:15Z"
+      },
+      {
+        "objectID": "23081910",
+        "title": "Few Brave Browser Users Take Advantage of Crypto Features, Says CEO",
+        "url": "https://cointelegraph.com/news/few-brave-browser-users-take-advantage-of-crypto-features-says-ceo",
+        "points": 4,
+        "num_comments": 0,
+        "author": "bryanrasmussen",
+        "created_at": "2020-05-05T16:40:08Z"
+      },
+      {
+        "objectID": "12871348",
+        "title": "Microsoft lost 300M browser users in 2016, tracking site shows",
+        "url": "http://www.businessinsider.com/300-million-users-ditched-microsoft-browsers-2016-11?utm_source=feedburner&utm_medium=referral",
+        "points": 4,
+        "num_comments": 0,
+        "author": "mnmlsm",
+        "created_at": "2016-11-04T09:49:51Z"
+      },
+      {
+        "objectID": "27425988",
+        "title": "Why do all browsers' user agents start with “Mozilla/”?",
+        "url": "https://stackoverflow.com/questions/1114254/why-do-all-browsers-user-agents-start-with-mozilla",
+        "points": 3,
+        "num_comments": 1,
+        "author": "woldemariam",
+        "created_at": "2021-06-07T18:12:29Z"
+      },
+      {
+        "objectID": "46543591",
+        "title": "History of the browser user-agent string",
+        "url": "https://webaim.org/blog/user-agent-string-history/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "LorenDB",
+        "created_at": "2026-01-08T17:16:54Z"
+      }
+    ]
+  }
+}

@@ -1,14 +1,122 @@
 {
   "project": "LangChain",
   "repo": "langchain-ai/langchain",
-  "collected_at": "2026-05-22T11:13:14.280383+00:00",
-  "queries": [
-    "LangChain"
-  ],
-  "total_papers": 0,
-  "total_citations": 0,
+  "collected_at": "2026-05-22T11:31:31.433840+00:00",
+  "total_papers": 5,
+  "total_citations": 10,
   "papers": {
-    "LangChain": []
+    "LangChain": [
+      {
+        "paperId": "c0aec04ee86c0724d61c976f19590fbe9c615723",
+        "title": "Creating Large Language Model Applications Utilizing LangChain: A Primer on Developing LLM Apps Fast",
+        "year": 2023,
+        "citationCount": 375,
+        "venue": "International Conference on Applied Engineering and Natural Sciences",
+        "url": "https://www.semanticscholar.org/paper/c0aec04ee86c0724d61c976f19590fbe9c615723",
+        "arxivId": ""
+      },
+      {
+        "paperId": "d0938a29e66ed605e71f979e9a14240a0e9aa731",
+        "title": "An integrated framework for ethical healthcare chatbots using LangChain and NeMo guardrails",
+        "year": 2025,
+        "citationCount": 6,
+        "venue": "AI and Ethics",
+        "url": "https://www.semanticscholar.org/paper/d0938a29e66ed605e71f979e9a14240a0e9aa731",
+        "arxivId": ""
+      },
+      {
+        "paperId": "529be5eef7767f2a793aa73f543aef8a67739a8a",
+        "title": "Revolutionizing Mental Health Care through LangChain: A Journey with a Large Language Model",
+        "year": 2024,
+        "citationCount": 29,
+        "venue": "Computing and Communication Workshop and Conference",
+        "url": "https://www.semanticscholar.org/paper/529be5eef7767f2a793aa73f543aef8a67739a8a",
+        "arxivId": "2403.05568"
+      },
+      {
+        "paperId": "5b1bab76f2bf9e4ef8d28f7f229ab2088a429c0b",
+        "title": "LangChain-Parsl: Connect Large Language Model Agents to High Performance Computing Resource",
+        "year": 2025,
+        "citationCount": 4,
+        "venue": "SC25-W: Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis",
+        "url": "https://www.semanticscholar.org/paper/5b1bab76f2bf9e4ef8d28f7f229ab2088a429c0b",
+        "arxivId": ""
+      },
+      {
+        "paperId": "56016d4fd4c6a9cd5a58d8c84bb0fa01ec77d85d",
+        "title": "Efficiency-Driven Custom Chatbot Development: Unleashing LangChain, RAG, and Performance-Optimized LLM Fusion",
+        "year": 2024,
+        "citationCount": 38,
+        "venue": "Computers, Materials &amp; Continua",
+        "url": "https://www.semanticscholar.org/paper/56016d4fd4c6a9cd5a58d8c84bb0fa01ec77d85d",
+        "arxivId": ""
+      }
+    ]
   },
-  "citations": {}
+  "citations": {
+    "c0aec04ee86c0724d61c976f19590fbe9c615723": [
+      {
+        "paperId": "fdec8992febcbdc50ef81cbf0372a903c6c706a1",
+        "title": "ChatCEA: a knowledge-driven intelligent service agent for controlled environment agriculture",
+        "year": 2026,
+        "citationCount": 1
+      },
+      {
+        "paperId": "96032850178b141e36175ce893992df3d1bdd830",
+        "title": "LLM-S2KG: LLM-Based Semantic–Structural Dual Knowledge Graph",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "e170387841959b9870e94c7d9f1326b4bb5a4eca",
+        "title": "SimReg: Achieving Higher Performance in the Pretraining via Embedding Similarity Regularization",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "a1c6bd195b58832076e8537986816ccb052b8a71",
+        "title": "ReTools: Reflection-Enhanced Tool Invocation for Domain-Specific QA",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "22cda574b6e233a05e2cf3de80bc981f39a7147a",
+        "title": "Graph Construction and Matching for Imperative Programs using Neural and Structural Methods",
+        "year": 2026,
+        "citationCount": 0
+      }
+    ],
+    "d0938a29e66ed605e71f979e9a14240a0e9aa731": [
+      {
+        "paperId": "0934498cffb86e660e95dcab4d872f6e331f0298",
+        "title": "A Unified Multimodal Framework for Dataset Construction and Model-Based Diagnosis of Ameloblastoma",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "59934a37b959d0021e652e7609503797eda3b8e3",
+        "title": "An Explainable Two Stage Deep Learning Framework for Pericoronitis Assessment in Panoramic Radiographs Using YOLOv8 and ResNet-50",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "fcf46d503a4410842145f092f875af65cdb49898",
+        "title": "SmartOR-AI: An Intelligent Predictive Analytics and Decision Support System for Anesthesia Equipped with Perioperative Risk Management",
+        "year": 2025,
+        "citationCount": 0
+      },
+      {
+        "paperId": "b7b3ad44e6f379456e75bd4b7c88b2f449bbf7c0",
+        "title": "Multi-Modal Oral Cancer Detection Using Weighted Ensemble Convolutional Neural Networks",
+        "year": 2025,
+        "citationCount": 1
+      },
+      {
+        "paperId": "8a0b1acfc2d27c4c9e4cb00700c656541070c148",
+        "title": "Critical conversations: a user-centric approach to chatbots for history taking in the pediatric intensive care unit",
+        "year": 2025,
+        "citationCount": 1
+      }
+    ]
+  }
 }

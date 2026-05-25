@@ -16,12 +16,7 @@ HN_API = "https://hn.algolia.com/api/v1/search"
 def search_hn(query, max_pages=2, hits_per_page=20):
     results = []
     for page in range(max_pages):
-        params = {
-            "query": query,
-            "tags": "story",
-            "page": page,
-            "hitsPerPage": hits_per_page,
-        }
+        params = {"query": query, "tags": "story", "page": page, "hitsPerPage": hits_per_page}
         try:
             resp = requests.get(HN_API, params=params, timeout=15)
             resp.raise_for_status()
@@ -29,26 +24,19 @@ def search_hn(query, max_pages=2, hits_per_page=20):
         except (requests.RequestException, ValueError) as e:
             print(f"  [WARN] HN page {page} for '{query}': {e}", file=sys.stderr)
             break
-
         hits = data.get("hits", [])
         if not hits:
             break
-
         for h in hits:
             results.append({
-                "objectID": h.get("objectID"),
-                "title": h.get("title", ""),
-                "url": h.get("url", ""),
-                "points": h.get("points", 0),
-                "num_comments": h.get("num_comments", 0),
-                "author": h.get("author", ""),
+                "objectID": h.get("objectID"), "title": h.get("title", ""),
+                "url": h.get("url", ""), "points": h.get("points", 0),
+                "num_comments": h.get("num_comments", 0), "author": h.get("author", ""),
                 "created_at": h.get("created_at", ""),
             })
-
         if len(hits) < hits_per_page:
             break
         time.sleep(0.4)
-
     return results
 
 
@@ -66,36 +54,24 @@ def load_projects(config_path, all_projects=False, priority=None):
 def collect_project(project, output_dir):
     name = project["name"]
     repo = project.get("repo", name)
-    out_name = name.replace("/", "_")
-    out_path = os.path.join(output_dir, "hn", f"{out_name}.json")
+    out_path = os.path.join(output_dir, "hn", f"{name.replace('/', '_')}.json")
     if os.path.exists(out_path):
-        print(f"  [SKIP] {out_path} already exists")
         return 0
-
-    query_parts = [name]
+    queries = [name]
     if "/" in repo:
-        query_parts.append(repo.split("/")[1])
-
+        queries.append(repo.split("/")[1])
     all_results = {}
-    for q in query_parts:
-        print(f"  HN searching: '{q}'")
+    for q in queries:
         hits = search_hn(q, max_pages=2)
         all_results[q] = hits
         time.sleep(0.5)
-
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     total = sum(len(v) for v in all_results.values())
-    payload = {
-        "project": name,
-        "repo": repo,
-        "collected_at": datetime.now(timezone.utc).isoformat(),
-        "queries": query_parts,
-        "total_hits": total,
-        "results": all_results,
-    }
+    payload = {"project": name, "repo": repo, "collected_at": datetime.now(timezone.utc).isoformat(),
+               "queries": queries, "total_hits": total, "results": all_results}
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
-    print(f"  -> {out_path} ({total} hits)")
+    print(f"  {name}: {total} hits")
     return total
 
 
@@ -107,20 +83,13 @@ def main():
     parser.add_argument("--priority", choices=["critical", "high", "medium"])
     parser.add_argument("--query", type=str, help="Single query test")
     args = parser.parse_args()
-
     if args.query:
-        hits = search_hn(args.query)
-        print(json.dumps(hits, indent=2, ensure_ascii=False))
+        print(json.dumps(search_hn(args.query), indent=2, ensure_ascii=False))
         return
-
     projects = load_projects(args.config, args.all, args.priority)
-    print(f"HN collection: {len(projects)} projects")
-    total = 0
-    for i, proj in enumerate(projects):
-        print(f"[{i+1}/{len(projects)}] {proj['name']}")
-        total += collect_project(proj, args.output)
-
-    print(f"\nHN done: {total} total hits across {len(projects)} projects")
+    print(f"HN: {len(projects)} projects")
+    total = sum(collect_project(p, args.output) for p in projects)
+    print(f"HN done: {total} hits")
 
 
 if __name__ == "__main__":

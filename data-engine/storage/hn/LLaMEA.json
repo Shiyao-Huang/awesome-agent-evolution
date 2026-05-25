@@ -1,0 +1,374 @@
+{
+  "project": "LLaMEA",
+  "repo": "AI-algorithms-Benchmarking/LLaMEA",
+  "collected_at": "2026-05-22T11:30:50.282236+00:00",
+  "queries": [
+    "LLaMEA",
+    "LLaMEA"
+  ],
+  "total_hits": 40,
+  "results": {
+    "LLaMEA": [
+      {
+        "objectID": "36774627",
+        "title": "Llama 2",
+        "url": "https://ai.meta.com/llama/",
+        "points": 2268,
+        "num_comments": 820,
+        "author": "friggeri",
+        "created_at": "2023-07-18T16:01:49Z"
+      },
+      {
+        "objectID": "40077533",
+        "title": "Meta Llama 3",
+        "url": "https://llama.meta.com/llama3/",
+        "points": 2199,
+        "num_comments": 923,
+        "author": "bratao",
+        "created_at": "2024-04-18T15:57:22Z"
+      },
+      {
+        "objectID": "39890262",
+        "title": "LLaMA now goes faster on CPUs",
+        "url": "https://justine.lol/matmul/",
+        "points": 1372,
+        "num_comments": 451,
+        "author": "lawrencechen",
+        "created_at": "2024-04-01T02:17:05Z"
+      },
+      {
+        "objectID": "35393284",
+        "title": "Llama.cpp 30B runs with only 6GB of RAM now",
+        "url": "https://github.com/ggerganov/llama.cpp/pull/613",
+        "points": 1311,
+        "num_comments": 414,
+        "author": "msoad",
+        "created_at": "2023-03-31T20:37:50Z"
+      },
+      {
+        "objectID": "43595585",
+        "title": "The Llama 4 herd",
+        "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+        "points": 1235,
+        "num_comments": 658,
+        "author": "georgehill",
+        "created_at": "2025-04-05T18:33:56Z"
+      },
+      {
+        "objectID": "38464057",
+        "title": "Llamafile lets you distribute and run LLMs with a single file",
+        "url": "https://github.com/Mozilla-Ocho/llamafile",
+        "points": 1075,
+        "num_comments": 288,
+        "author": "tfinch",
+        "created_at": "2023-11-29T19:29:49Z"
+      },
+      {
+        "objectID": "40408880",
+        "title": "Llama3 implemented from scratch",
+        "url": "https://github.com/naklecha/llama3-from-scratch",
+        "points": 1041,
+        "num_comments": 269,
+        "author": "Hadi7546",
+        "created_at": "2024-05-19T18:42:06Z"
+      },
+      {
+        "objectID": "35100086",
+        "title": "Llama.cpp: Port of Facebook's LLaMA model in C/C++, with Apple Silicon support",
+        "url": "https://github.com/ggerganov/llama.cpp",
+        "points": 989,
+        "num_comments": 284,
+        "author": "mrtksn",
+        "created_at": "2023-03-10T20:01:54Z"
+      },
+      {
+        "objectID": "37248494",
+        "title": "Code Llama, a state-of-the-art large language model for coding",
+        "url": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
+        "points": 970,
+        "num_comments": 501,
+        "author": "marcopicentini",
+        "created_at": "2023-08-24T13:26:45Z"
+      },
+      {
+        "objectID": "37484135",
+        "title": "Fine-tune your own Llama 2 to replace GPT-3.5/4",
+        "url": "",
+        "points": 955,
+        "num_comments": 181,
+        "author": "kcorbitt",
+        "created_at": "2023-09-12T16:53:51Z"
+      },
+      {
+        "objectID": "41649763",
+        "title": "Llama 3.2: Revolutionizing edge AI and vision with open, customizable models",
+        "url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/?_fb_noscript=1",
+        "points": 924,
+        "num_comments": 328,
+        "author": "nmwnmw",
+        "created_at": "2024-09-25T17:29:27Z"
+      },
+      {
+        "objectID": "35007978",
+        "title": "Facebook LLAMA is being openly distributed via torrents",
+        "url": "https://github.com/facebookresearch/llama/pull/73/files",
+        "points": 909,
+        "num_comments": 693,
+        "author": "micro_charm",
+        "created_at": "2023-03-03T10:46:33Z"
+      },
+      {
+        "objectID": "35600860",
+        "title": "RedPajama: Reproduction of LLaMA with friendly license",
+        "url": "https://www.together.xyz/blog/redpajama",
+        "points": 864,
+        "num_comments": 216,
+        "author": "tim_sw",
+        "created_at": "2023-04-17T14:05:09Z"
+      },
+      {
+        "objectID": "35127020",
+        "title": "Dalai: Automatically install, run, and play with LLaMA on your computer",
+        "url": "https://cocktailpeanut.github.io/dalai/",
+        "points": 848,
+        "num_comments": 282,
+        "author": "cocktailpeanut",
+        "created_at": "2023-03-12T22:17:40Z"
+      },
+      {
+        "objectID": "35504428",
+        "title": "The LLama Effect: Leak Sparked a Series of Open Source Alternatives to ChatGPT",
+        "url": "https://thesequence.substack.com/p/the-llama-effect-how-an-accidental",
+        "points": 791,
+        "num_comments": 504,
+        "author": "gardenfelder",
+        "created_at": "2023-04-09T16:57:31Z"
+      },
+      {
+        "objectID": "36304143",
+        "title": "Llama.cpp: Full CUDA GPU Acceleration",
+        "url": "https://github.com/ggerganov/llama.cpp/pull/1827",
+        "points": 728,
+        "num_comments": 310,
+        "author": "gzer0",
+        "created_at": "2023-06-13T01:55:08Z"
+      },
+      {
+        "objectID": "36973584",
+        "title": "Run Llama 2 uncensored locally",
+        "url": "https://ollama.ai/blog/run-llama2-uncensored-locally",
+        "points": 722,
+        "num_comments": 212,
+        "author": "jmorgan",
+        "created_at": "2023-08-02T17:00:49Z"
+      },
+      {
+        "objectID": "36838051",
+        "title": "Llama2.c: Inference llama 2 in one file of pure C",
+        "url": "https://github.com/karpathy/llama2.c",
+        "points": 707,
+        "num_comments": 165,
+        "author": "anjneymidha",
+        "created_at": "2023-07-23T18:13:54Z"
+      },
+      {
+        "objectID": "37140013",
+        "title": "How Is LLaMa.cpp Possible?",
+        "url": "https://finbarr.ca/how-is-llama-cpp-possible/",
+        "points": 685,
+        "num_comments": 227,
+        "author": "birriel",
+        "created_at": "2023-08-15T22:18:17Z"
+      },
+      {
+        "objectID": "36865495",
+        "title": "Guide to running Llama 2 locally",
+        "url": "https://replicate.com/blog/run-llama-locally",
+        "points": 683,
+        "num_comments": 170,
+        "author": "bfirsh",
+        "created_at": "2023-07-25T16:58:42Z"
+      },
+      {
+        "objectID": "37248844",
+        "title": "Code Llama, a state-of-the-art large language model for coding",
+        "url": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
+        "points": 673,
+        "num_comments": 2,
+        "author": "nickthegreek",
+        "created_at": "2023-08-24T13:57:57Z"
+      },
+      {
+        "objectID": "35937505",
+        "title": "Run Llama 13B with a 6GB graphics card",
+        "url": "https://gist.github.com/rain-1/8cc12b4b334052a21af8029aa9c4fafc",
+        "points": 618,
+        "num_comments": 266,
+        "author": "rain1",
+        "created_at": "2023-05-14T12:35:24Z"
+      },
+      {
+        "objectID": "35122689",
+        "title": "Using LLaMA with M1 Mac and Python 3.11",
+        "url": "https://dev.l1x.be/posts/2023/12/08/using-llama-with-m1-mac/",
+        "points": 617,
+        "num_comments": 165,
+        "author": "datadeft",
+        "created_at": "2023-03-12T17:00:50Z"
+      },
+      {
+        "objectID": "40766791",
+        "title": "Llama.ttf: A font which is also an LLM",
+        "url": "https://fuglede.github.io/llama.ttf/",
+        "points": 608,
+        "num_comments": 154,
+        "author": "fuglede_",
+        "created_at": "2024-06-23T12:01:45Z"
+      },
+      {
+        "objectID": "39178886",
+        "title": "Meta AI releases Code Llama 70B",
+        "url": "https://twitter.com/AIatMeta/status/1752013879532782075",
+        "points": 598,
+        "num_comments": 294,
+        "author": "albert_e",
+        "created_at": "2024-01-29T17:11:34Z"
+      },
+      {
+        "objectID": "35349608",
+        "title": "Gpt4all: A chatbot trained on ~800k GPT-3.5-Turbo Generations based on LLaMa",
+        "url": "https://github.com/nomic-ai/gpt4all",
+        "points": 593,
+        "num_comments": 301,
+        "author": "qeternity",
+        "created_at": "2023-03-28T23:31:09Z"
+      },
+      {
+        "objectID": "42208383",
+        "title": "Show HN: Llama 3.2 Interpretability with Sparse Autoencoders",
+        "url": "https://github.com/PaulPauls/llama3_interpretability_sae",
+        "points": 579,
+        "num_comments": 99,
+        "author": "PaulPauls",
+        "created_at": "2024-11-21T20:37:56Z"
+      },
+      {
+        "objectID": "36933452",
+        "title": "Show HN: Khoj – Chat offline with your second brain using Llama 2",
+        "url": "https://github.com/khoj-ai/khoj",
+        "points": 565,
+        "num_comments": 150,
+        "author": "110",
+        "created_at": "2023-07-30T17:14:22Z"
+      },
+      {
+        "objectID": "43943047",
+        "title": "Vision Now Available in Llama.cpp",
+        "url": "https://github.com/ggml-org/llama.cpp/blob/master/docs/multimodal.md",
+        "points": 550,
+        "num_comments": 104,
+        "author": "redman25",
+        "created_at": "2025-05-10T03:39:46Z"
+      },
+      {
+        "objectID": "40252569",
+        "title": "Show HN: I built a free in-browser Llama 3 chatbot powered by WebGPU",
+        "url": "https://github.com/abi/secret-llama",
+        "points": 547,
+        "num_comments": 139,
+        "author": "abi",
+        "created_at": "2024-05-03T21:26:46Z"
+      },
+      {
+        "objectID": "42806328",
+        "title": "Llama.vim – Local LLM-assisted text completion",
+        "url": "https://github.com/ggml-org/llama.vim",
+        "points": 530,
+        "num_comments": 108,
+        "author": "kgwgk",
+        "created_at": "2025-01-23T18:06:42Z"
+      },
+      {
+        "objectID": "37059479",
+        "title": "Llama from scratch, or how to implement a paper without crying",
+        "url": "https://blog.briankitano.com/llama-from-scratch/",
+        "points": 513,
+        "num_comments": 52,
+        "author": "bkitano19",
+        "created_at": "2023-08-09T06:54:31Z"
+      },
+      {
+        "objectID": "41938473",
+        "title": "Quantized Llama models with increased speed and a reduced memory footprint",
+        "url": "https://ai.meta.com/blog/meta-llama-quantized-lightweight-models/?_fb_noscript=1",
+        "points": 508,
+        "num_comments": 122,
+        "author": "egnehots",
+        "created_at": "2024-10-24T18:52:44Z"
+      },
+      {
+        "objectID": "41630913",
+        "title": "We fine-tuned Llama 405B on AMD GPUs",
+        "url": "https://publish.obsidian.md/felafax/pages/Tune+Llama3+405B+on+AMD+MI300x+(our+journey)",
+        "points": 495,
+        "num_comments": 101,
+        "author": "felarof",
+        "created_at": "2024-09-23T21:42:26Z"
+      },
+      {
+        "objectID": "35798888",
+        "title": "OpenLLaMA: An Open Reproduction of LLaMA",
+        "url": "https://github.com/openlm-research/open_llama",
+        "points": 484,
+        "num_comments": 180,
+        "author": "sadiq",
+        "created_at": "2023-05-03T06:43:41Z"
+      },
+      {
+        "objectID": "40378499",
+        "title": "Llama 3 implemented in pure NumPy",
+        "url": "https://docs.likejazz.com/llama3.np/",
+        "points": 476,
+        "num_comments": 50,
+        "author": "orixilus",
+        "created_at": "2024-05-16T13:53:22Z"
+      },
+      {
+        "objectID": "38110072",
+        "title": "Talk-Llama",
+        "url": "https://github.com/ggerganov/whisper.cpp/tree/master/examples/talk-llama",
+        "points": 474,
+        "num_comments": 140,
+        "author": "plurby",
+        "created_at": "2023-11-02T07:32:33Z"
+      },
+      {
+        "objectID": "40505099",
+        "title": "Llama 3-V: Matching GPT4-V with a 100x smaller model and 500 dollars",
+        "url": "https://aksh-garg.medium.com/llama-3v-building-an-open-source-gpt-4v-competitor-in-under-500-7dd8f1f6c9ee",
+        "points": 459,
+        "num_comments": 77,
+        "author": "minimaxir",
+        "created_at": "2024-05-28T20:16:19Z"
+      },
+      {
+        "objectID": "35256769",
+        "title": "Show HN: Finetune LLaMA-7B on commodity GPUs using your own text",
+        "url": "https://github.com/lxe/simple-llama-finetuner",
+        "points": 449,
+        "num_comments": 98,
+        "author": "lxe",
+        "created_at": "2023-03-22T04:15:29Z"
+      },
+      {
+        "objectID": "41046540",
+        "title": "Llama 3.1",
+        "url": "https://llama.meta.com/",
+        "points": 437,
+        "num_comments": 269,
+        "author": "luiscosio",
+        "created_at": "2024-07-23T14:47:52Z"
+      }
+    ]
+  }
+}

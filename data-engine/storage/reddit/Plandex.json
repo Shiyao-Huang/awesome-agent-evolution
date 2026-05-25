@@ -1,7 +1,7 @@
 {
   "project": "Plandex",
   "repo": "plandex-ai/plandex",
-  "collected_at": "2026-05-22T11:16:20.314390+00:00",
+  "collected_at": "2026-05-22T11:28:13.533340+00:00",
   "queries": [
     "Plandex",
     "plandex"
@@ -13,7 +13,7 @@
         "id": "1jgmbsa",
         "subreddit": "ChatGPTCoding",
         "title": "Plandex v2: an open source AI coding agent with diff review sandbox, full auto mode, and 2M token effective context",
-        "score": 45,
+        "score": 44,
         "num_comments": 42,
         "author": "danenania",
         "url": "https://reddit.com/r/ChatGPTCoding/comments/1jgmbsa/plandex_v2_an_open_source_ai_coding_agent_with/",
@@ -133,7 +133,7 @@
         "id": "1cy0pcn",
         "subreddit": "OpenAI",
         "title": "Building Pong in the terminal with AI using GPT-4o and Plandex",
-        "score": 9,
+        "score": 7,
         "num_comments": 1,
         "author": "danenania",
         "url": "https://reddit.com/r/OpenAI/comments/1cy0pcn/building_pong_in_the_terminal_with_ai_using_gpt4o/",
@@ -143,259 +143,7 @@
         "id": "1ca0kpt",
         "subreddit": "phonk",
         "title": "Rate 1/10 🚶 complete here: https://linktr.ee/plandex",
-        "score": 4,
-        "num_comments": 2,
-        "author": "Plandemia57h",
-        "url": "https://reddit.com/r/phonk/comments/1ca0kpt/rate_110_complete_here_httpslinktreeplandex/",
-        "created_utc": 1713755995.0
-      },
-      {
-        "id": "1ciji4o",
-        "subreddit": "Anthropic",
-        "title": "Fixing a real-world bug with AI using Claude Opus 3 and Plandex",
-        "score": 1,
-        "num_comments": 1,
-        "author": "danenania",
-        "url": "https://reddit.com/r/Anthropic/comments/1ciji4o/fixing_a_realworld_bug_with_ai_using_claude_opus/",
-        "created_utc": 1714666027.0
-      },
-      {
-        "id": "1azx4sc",
-        "subreddit": "phonk",
-        "title": "Name: Plandex - Distructor",
-        "score": 4,
-        "num_comments": 2,
-        "author": "Plandemia57h",
-        "url": "https://reddit.com/r/phonk/comments/1azx4sc/name_plandex_distructor/",
-        "created_utc": 1708890849.0
-      },
-      {
-        "id": "1bv44kb",
-        "subreddit": "hackernews",
-        "title": "Show HN: Plandex – an AI coding engine for complex tasks",
-        "score": 1,
-        "num_comments": 1,
-        "author": "qznc_bot2",
-        "url": "https://reddit.com/r/hackernews/comments/1bv44kb/show_hn_plandex_an_ai_coding_engine_for_complex/",
-        "created_utc": 1712178005.0
-      },
-      {
-        "id": "1bu4927",
-        "subreddit": "codegen",
-        "title": "GitHub - plandex-ai/plandex: An AI coding engine for complex tasks",
-        "score": 2,
-        "num_comments": 0,
-        "author": "eg312",
-        "url": "https://reddit.com/r/codegen/comments/1bu4927/github_plandexaiplandex_an_ai_coding_engine_for/",
-        "created_utc": 1712078165.0
-      },
-      {
-        "id": "1bvpfjt",
-        "subreddit": "Multiplatform_AI",
-        "title": "Unlocking the Future of Software Development with Plandex: An AI-Powered Coding Engine",
-        "score": 1,
-        "num_comments": 0,
-        "author": "Multiplatform_com",
-        "url": "https://reddit.com/r/Multiplatform_AI/comments/1bvpfjt/unlocking_the_future_of_software_development_with/",
-        "created_utc": 1712242974.0
-      },
-      {
-        "id": "1bv15p4",
-        "subreddit": "hypeurls",
-        "title": "Show HN: Plandex – an AI coding engine for complex tasks",
-        "score": 1,
-        "num_comments": 0,
-        "author": "TheStartupChime",
-        "url": "https://reddit.com/r/hypeurls/comments/1bv15p4/show_hn_plandex_an_ai_coding_engine_for_complex/",
-        "created_utc": 1712171167.0
-      },
-      {
-        "id": "1rjs83j",
-        "subreddit": "ClaudeCode",
-        "title": "Anthropic gave Claude Code a product spec and walked away for the weekend. The result was so good they shipped it",
-        "score": 0,
-        "num_comments": 123,
-        "author": "Unfair-Marsupial-956",
-        "url": "https://reddit.com/r/ClaudeCode/comments/1rjs83j/anthropic_gave_claude_code_a_product_spec_and/",
-        "created_utc": 1772551617.0
-      },
-      {
-        "id": "1egqr1s",
-        "subreddit": "LocalLLaMA",
-        "title": "Gemma 2 2B Release - a Google Collection",
-        "score": 373,
-        "num_comments": 158,
-        "author": "Dark_Fire_12",
-        "url": "https://reddit.com/r/LocalLLaMA/comments/1egqr1s/gemma_2_2b_release_a_google_collection/",
-        "created_utc": 1722441424.0
-      },
-      {
-        "id": "1gbf9mc",
-        "subreddit": "ChatGPTCoding",
-        "title": "Cline + New Sonnet 3.5 + Openrouter = AMAZING",
-        "score": 181,
-        "num_comments": 88,
-        "author": "stonedoubt",
-        "url": "https://reddit.com/r/ChatGPTCoding/comments/1gbf9mc/cline_new_sonnet_35_openrouter_amazing/",
-        "created_utc": 1729809021.0
-      },
-      {
-        "id": "1kzf9nl",
-        "subreddit": "LocalLLaMA",
-        "title": "Deepseek is cool, but is there an alternative to Claude Code I can use with it?",
-        "score": 93,
-        "num_comments": 70,
-        "author": "BITE_AU_CHOCOLAT",
-        "url": "https://reddit.com/r/LocalLLaMA/comments/1kzf9nl/deepseek_is_cool_but_is_there_an_alternative_to/",
-        "created_utc": 1748638615.0
-      },
-      {
-        "id": "1onfjk6",
-        "subreddit": "LocalLLaMA",
-        "title": "multi-model coding agents hitting 76% on swe-bench. could we replicate this with local models?",
-        "score": 39,
-        "num_comments": 44,
-        "author": "rwhitman05",
-        "url": "https://reddit.com/r/LocalLLaMA/comments/1onfjk6/multimodel_coding_agents_hitting_76_on_swebench/",
-        "created_utc": 1762185503.0
-      }
-    ],
-    "plandex": [
-      {
-        "id": "1jgmbsa",
-        "subreddit": "ChatGPTCoding",
-        "title": "Plandex v2: an open source AI coding agent with diff review sandbox, full auto mode, and 2M token effective context",
-        "score": 46,
-        "num_comments": 42,
-        "author": "danenania",
-        "url": "https://reddit.com/r/ChatGPTCoding/comments/1jgmbsa/plandex_v2_an_open_source_ai_coding_agent_with/",
-        "created_utc": 1742577984.0
-      },
-      {
-        "id": "1hok4h4",
-        "subreddit": "LocalLLaMA",
-        "title": "Best terminal-based AI pair programmers in 2024 - Aider vs Plandex vs OpenHands",
-        "score": 25,
-        "num_comments": 22,
-        "author": "Chipbugatti",
-        "url": "https://reddit.com/r/LocalLLaMA/comments/1hok4h4/best_terminalbased_ai_pair_programmers_in_2024/",
-        "created_utc": 1735433734.0
-      },
-      {
-        "id": "1bq5ui0",
-        "subreddit": "OpenAI",
-        "title": "Plandex: an open source, terminal-based AI programming tool for building complex features with GPT-4",
-        "score": 117,
-        "num_comments": 23,
-        "author": "danenania",
-        "url": "https://reddit.com/r/OpenAI/comments/1bq5ui0/plandex_an_open_source_terminalbased_ai/",
-        "created_utc": 1711657869.0
-      },
-      {
-        "id": "1fxwgi4",
-        "subreddit": "LocalLLaMA",
-        "title": "The hype vs reality of AI Code Assistant OSS - Cody, Void, Continue, Tabby, Plandex, CodeRabbit, Blinky...",
-        "score": 0,
-        "num_comments": 23,
-        "author": "opensourcecolumbus",
-        "url": "https://reddit.com/r/LocalLLaMA/comments/1fxwgi4/the_hype_vs_reality_of_ai_code_assistant_oss_cody/",
-        "created_utc": 1728265146.0
-      },
-      {
-        "id": "1k9oind",
-        "subreddit": "nocode",
-        "title": "Aider vs plandex",
-        "score": 1,
-        "num_comments": 3,
-        "author": "Firm_Curve8659",
-        "url": "https://reddit.com/r/nocode/comments/1k9oind/aider_vs_plandex/",
-        "created_utc": 1745819865.0
-      },
-      {
-        "id": "1cij8rt",
-        "subreddit": "ChatGPTCoding",
-        "title": "Fixing a real-world bug with AI using Claude Opus 3 and Plandex",
-        "score": 12,
-        "num_comments": 20,
-        "author": "danenania",
-        "url": "https://reddit.com/r/ChatGPTCoding/comments/1cij8rt/fixing_a_realworld_bug_with_ai_using_claude_opus/",
-        "created_utc": 1714665441.0
-      },
-      {
-        "id": "1k19m3n",
-        "subreddit": "hackernews",
-        "title": "Show HN: Plandex v2 – open source AI coding agent for large projects and tasks",
-        "score": 1,
-        "num_comments": 1,
-        "author": "HNMod",
-        "url": "https://reddit.com/r/hackernews/comments/1k19m3n/show_hn_plandex_v2_open_source_ai_coding_agent/",
-        "created_utc": 1744886281.0
-      },
-      {
-        "id": "1k1a2jw",
-        "subreddit": "hypeurls",
-        "title": "Show HN: Plandex v2 – open source AI coding agent for large projects and tasks",
-        "score": 1,
-        "num_comments": 0,
-        "author": "TheStartupChime",
-        "url": "https://reddit.com/r/hypeurls/comments/1k1a2jw/show_hn_plandex_v2_open_source_ai_coding_agent/",
-        "created_utc": 1744887982.0
-      },
-      {
-        "id": "1jm98h7",
-        "subreddit": "FutureTechFinds",
-        "title": "Plandex - Tool for Software development",
-        "score": 1,
-        "num_comments": 0,
-        "author": "EssYouJAyEn",
-        "url": "https://reddit.com/r/FutureTechFinds/comments/1jm98h7/plandex_tool_for_software_development/",
-        "created_utc": 1743205729.0
-      },
-      {
-        "id": "1dylqnf",
-        "subreddit": "LocalLLaMA",
-        "title": "Plandex - AI driven development in the terminal",
-        "score": 25,
-        "num_comments": 10,
-        "author": "sammcj",
-        "url": "https://reddit.com/r/LocalLLaMA/comments/1dylqnf/plandex_ai_driven_development_in_the_terminal/",
-        "created_utc": 1720476672.0
-      },
-      {
-        "id": "1cy0kqs",
-        "subreddit": "ChatGPTCoding",
-        "title": "Building Pong in the terminal with AI using GPT-4o and Plandex",
-        "score": 6,
-        "num_comments": 3,
-        "author": "danenania",
-        "url": "https://reddit.com/r/ChatGPTCoding/comments/1cy0kqs/building_pong_in_the_terminal_with_ai_using_gpt4o/",
-        "created_utc": 1716385416.0
-      },
-      {
-        "id": "1cy0nvm",
-        "subreddit": "commandline",
-        "title": "Building Pong in the terminal with AI using GPT-4o and Plandex",
-        "score": 0,
-        "num_comments": 2,
-        "author": "danenania",
-        "url": "https://reddit.com/r/commandline/comments/1cy0nvm/building_pong_in_the_terminal_with_ai_using_gpt4o/",
-        "created_utc": 1716385651.0
-      },
-      {
-        "id": "1cy0pcn",
-        "subreddit": "OpenAI",
-        "title": "Building Pong in the terminal with AI using GPT-4o and Plandex",
-        "score": 8,
-        "num_comments": 1,
-        "author": "danenania",
-        "url": "https://reddit.com/r/OpenAI/comments/1cy0pcn/building_pong_in_the_terminal_with_ai_using_gpt4o/",
-        "created_utc": 1716385761.0
-      },
-      {
-        "id": "1ca0kpt",
-        "subreddit": "phonk",
-        "title": "Rate 1/10 🚶 complete here: https://linktr.ee/plandex",
-        "score": 4,
+        "score": 3,
         "num_comments": 2,
         "author": "Plandemia57h",
         "url": "https://reddit.com/r/phonk/comments/1ca0kpt/rate_110_complete_here_httpslinktreeplandex/",
@@ -475,7 +223,7 @@
         "id": "1egqr1s",
         "subreddit": "LocalLLaMA",
         "title": "Gemma 2 2B Release - a Google Collection",
-        "score": 374,
+        "score": 377,
         "num_comments": 158,
         "author": "Dark_Fire_12",
         "url": "https://reddit.com/r/LocalLLaMA/comments/1egqr1s/gemma_2_2b_release_a_google_collection/",
@@ -485,7 +233,7 @@
         "id": "1gbf9mc",
         "subreddit": "ChatGPTCoding",
         "title": "Cline + New Sonnet 3.5 + Openrouter = AMAZING",
-        "score": 183,
+        "score": 180,
         "num_comments": 88,
         "author": "stonedoubt",
         "url": "https://reddit.com/r/ChatGPTCoding/comments/1gbf9mc/cline_new_sonnet_35_openrouter_amazing/",
@@ -505,7 +253,259 @@
         "id": "1onfjk6",
         "subreddit": "LocalLLaMA",
         "title": "multi-model coding agents hitting 76% on swe-bench. could we replicate this with local models?",
-        "score": 37,
+        "score": 40,
+        "num_comments": 44,
+        "author": "rwhitman05",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1onfjk6/multimodel_coding_agents_hitting_76_on_swebench/",
+        "created_utc": 1762185503.0
+      }
+    ],
+    "plandex": [
+      {
+        "id": "1jgmbsa",
+        "subreddit": "ChatGPTCoding",
+        "title": "Plandex v2: an open source AI coding agent with diff review sandbox, full auto mode, and 2M token effective context",
+        "score": 45,
+        "num_comments": 42,
+        "author": "danenania",
+        "url": "https://reddit.com/r/ChatGPTCoding/comments/1jgmbsa/plandex_v2_an_open_source_ai_coding_agent_with/",
+        "created_utc": 1742577984.0
+      },
+      {
+        "id": "1hok4h4",
+        "subreddit": "LocalLLaMA",
+        "title": "Best terminal-based AI pair programmers in 2024 - Aider vs Plandex vs OpenHands",
+        "score": 25,
+        "num_comments": 22,
+        "author": "Chipbugatti",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1hok4h4/best_terminalbased_ai_pair_programmers_in_2024/",
+        "created_utc": 1735433734.0
+      },
+      {
+        "id": "1bq5ui0",
+        "subreddit": "OpenAI",
+        "title": "Plandex: an open source, terminal-based AI programming tool for building complex features with GPT-4",
+        "score": 116,
+        "num_comments": 23,
+        "author": "danenania",
+        "url": "https://reddit.com/r/OpenAI/comments/1bq5ui0/plandex_an_open_source_terminalbased_ai/",
+        "created_utc": 1711657869.0
+      },
+      {
+        "id": "1fxwgi4",
+        "subreddit": "LocalLLaMA",
+        "title": "The hype vs reality of AI Code Assistant OSS - Cody, Void, Continue, Tabby, Plandex, CodeRabbit, Blinky...",
+        "score": 0,
+        "num_comments": 23,
+        "author": "opensourcecolumbus",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1fxwgi4/the_hype_vs_reality_of_ai_code_assistant_oss_cody/",
+        "created_utc": 1728265146.0
+      },
+      {
+        "id": "1k9oind",
+        "subreddit": "nocode",
+        "title": "Aider vs plandex",
+        "score": 1,
+        "num_comments": 3,
+        "author": "Firm_Curve8659",
+        "url": "https://reddit.com/r/nocode/comments/1k9oind/aider_vs_plandex/",
+        "created_utc": 1745819865.0
+      },
+      {
+        "id": "1cij8rt",
+        "subreddit": "ChatGPTCoding",
+        "title": "Fixing a real-world bug with AI using Claude Opus 3 and Plandex",
+        "score": 13,
+        "num_comments": 20,
+        "author": "danenania",
+        "url": "https://reddit.com/r/ChatGPTCoding/comments/1cij8rt/fixing_a_realworld_bug_with_ai_using_claude_opus/",
+        "created_utc": 1714665441.0
+      },
+      {
+        "id": "1k19m3n",
+        "subreddit": "hackernews",
+        "title": "Show HN: Plandex v2 – open source AI coding agent for large projects and tasks",
+        "score": 1,
+        "num_comments": 1,
+        "author": "HNMod",
+        "url": "https://reddit.com/r/hackernews/comments/1k19m3n/show_hn_plandex_v2_open_source_ai_coding_agent/",
+        "created_utc": 1744886281.0
+      },
+      {
+        "id": "1k1a2jw",
+        "subreddit": "hypeurls",
+        "title": "Show HN: Plandex v2 – open source AI coding agent for large projects and tasks",
+        "score": 1,
+        "num_comments": 0,
+        "author": "TheStartupChime",
+        "url": "https://reddit.com/r/hypeurls/comments/1k1a2jw/show_hn_plandex_v2_open_source_ai_coding_agent/",
+        "created_utc": 1744887982.0
+      },
+      {
+        "id": "1jm98h7",
+        "subreddit": "FutureTechFinds",
+        "title": "Plandex - Tool for Software development",
+        "score": 1,
+        "num_comments": 0,
+        "author": "EssYouJAyEn",
+        "url": "https://reddit.com/r/FutureTechFinds/comments/1jm98h7/plandex_tool_for_software_development/",
+        "created_utc": 1743205729.0
+      },
+      {
+        "id": "1dylqnf",
+        "subreddit": "LocalLLaMA",
+        "title": "Plandex - AI driven development in the terminal",
+        "score": 26,
+        "num_comments": 10,
+        "author": "sammcj",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1dylqnf/plandex_ai_driven_development_in_the_terminal/",
+        "created_utc": 1720476672.0
+      },
+      {
+        "id": "1cy0kqs",
+        "subreddit": "ChatGPTCoding",
+        "title": "Building Pong in the terminal with AI using GPT-4o and Plandex",
+        "score": 6,
+        "num_comments": 3,
+        "author": "danenania",
+        "url": "https://reddit.com/r/ChatGPTCoding/comments/1cy0kqs/building_pong_in_the_terminal_with_ai_using_gpt4o/",
+        "created_utc": 1716385416.0
+      },
+      {
+        "id": "1cy0nvm",
+        "subreddit": "commandline",
+        "title": "Building Pong in the terminal with AI using GPT-4o and Plandex",
+        "score": 0,
+        "num_comments": 2,
+        "author": "danenania",
+        "url": "https://reddit.com/r/commandline/comments/1cy0nvm/building_pong_in_the_terminal_with_ai_using_gpt4o/",
+        "created_utc": 1716385651.0
+      },
+      {
+        "id": "1cy0pcn",
+        "subreddit": "OpenAI",
+        "title": "Building Pong in the terminal with AI using GPT-4o and Plandex",
+        "score": 7,
+        "num_comments": 1,
+        "author": "danenania",
+        "url": "https://reddit.com/r/OpenAI/comments/1cy0pcn/building_pong_in_the_terminal_with_ai_using_gpt4o/",
+        "created_utc": 1716385761.0
+      },
+      {
+        "id": "1ca0kpt",
+        "subreddit": "phonk",
+        "title": "Rate 1/10 🚶 complete here: https://linktr.ee/plandex",
+        "score": 3,
+        "num_comments": 2,
+        "author": "Plandemia57h",
+        "url": "https://reddit.com/r/phonk/comments/1ca0kpt/rate_110_complete_here_httpslinktreeplandex/",
+        "created_utc": 1713755995.0
+      },
+      {
+        "id": "1ciji4o",
+        "subreddit": "Anthropic",
+        "title": "Fixing a real-world bug with AI using Claude Opus 3 and Plandex",
+        "score": 1,
+        "num_comments": 1,
+        "author": "danenania",
+        "url": "https://reddit.com/r/Anthropic/comments/1ciji4o/fixing_a_realworld_bug_with_ai_using_claude_opus/",
+        "created_utc": 1714666027.0
+      },
+      {
+        "id": "1azx4sc",
+        "subreddit": "phonk",
+        "title": "Name: Plandex - Distructor",
+        "score": 4,
+        "num_comments": 2,
+        "author": "Plandemia57h",
+        "url": "https://reddit.com/r/phonk/comments/1azx4sc/name_plandex_distructor/",
+        "created_utc": 1708890849.0
+      },
+      {
+        "id": "1bv44kb",
+        "subreddit": "hackernews",
+        "title": "Show HN: Plandex – an AI coding engine for complex tasks",
+        "score": 1,
+        "num_comments": 1,
+        "author": "qznc_bot2",
+        "url": "https://reddit.com/r/hackernews/comments/1bv44kb/show_hn_plandex_an_ai_coding_engine_for_complex/",
+        "created_utc": 1712178005.0
+      },
+      {
+        "id": "1bu4927",
+        "subreddit": "codegen",
+        "title": "GitHub - plandex-ai/plandex: An AI coding engine for complex tasks",
+        "score": 2,
+        "num_comments": 0,
+        "author": "eg312",
+        "url": "https://reddit.com/r/codegen/comments/1bu4927/github_plandexaiplandex_an_ai_coding_engine_for/",
+        "created_utc": 1712078165.0
+      },
+      {
+        "id": "1bvpfjt",
+        "subreddit": "Multiplatform_AI",
+        "title": "Unlocking the Future of Software Development with Plandex: An AI-Powered Coding Engine",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Multiplatform_com",
+        "url": "https://reddit.com/r/Multiplatform_AI/comments/1bvpfjt/unlocking_the_future_of_software_development_with/",
+        "created_utc": 1712242974.0
+      },
+      {
+        "id": "1bv15p4",
+        "subreddit": "hypeurls",
+        "title": "Show HN: Plandex – an AI coding engine for complex tasks",
+        "score": 1,
+        "num_comments": 0,
+        "author": "TheStartupChime",
+        "url": "https://reddit.com/r/hypeurls/comments/1bv15p4/show_hn_plandex_an_ai_coding_engine_for_complex/",
+        "created_utc": 1712171167.0
+      },
+      {
+        "id": "1rjs83j",
+        "subreddit": "ClaudeCode",
+        "title": "Anthropic gave Claude Code a product spec and walked away for the weekend. The result was so good they shipped it",
+        "score": 0,
+        "num_comments": 123,
+        "author": "Unfair-Marsupial-956",
+        "url": "https://reddit.com/r/ClaudeCode/comments/1rjs83j/anthropic_gave_claude_code_a_product_spec_and/",
+        "created_utc": 1772551617.0
+      },
+      {
+        "id": "1egqr1s",
+        "subreddit": "LocalLLaMA",
+        "title": "Gemma 2 2B Release - a Google Collection",
+        "score": 372,
+        "num_comments": 158,
+        "author": "Dark_Fire_12",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1egqr1s/gemma_2_2b_release_a_google_collection/",
+        "created_utc": 1722441424.0
+      },
+      {
+        "id": "1gbf9mc",
+        "subreddit": "ChatGPTCoding",
+        "title": "Cline + New Sonnet 3.5 + Openrouter = AMAZING",
+        "score": 182,
+        "num_comments": 88,
+        "author": "stonedoubt",
+        "url": "https://reddit.com/r/ChatGPTCoding/comments/1gbf9mc/cline_new_sonnet_35_openrouter_amazing/",
+        "created_utc": 1729809021.0
+      },
+      {
+        "id": "1kzf9nl",
+        "subreddit": "LocalLLaMA",
+        "title": "Deepseek is cool, but is there an alternative to Claude Code I can use with it?",
+        "score": 94,
+        "num_comments": 70,
+        "author": "BITE_AU_CHOCOLAT",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1kzf9nl/deepseek_is_cool_but_is_there_an_alternative_to/",
+        "created_utc": 1748638615.0
+      },
+      {
+        "id": "1onfjk6",
+        "subreddit": "LocalLLaMA",
+        "title": "multi-model coding agents hitting 76% on swe-bench. could we replicate this with local models?",
+        "score": 36,
         "num_comments": 44,
         "author": "rwhitman05",
         "url": "https://reddit.com/r/LocalLLaMA/comments/1onfjk6/multimodel_coding_agents_hitting_76_on_swebench/",

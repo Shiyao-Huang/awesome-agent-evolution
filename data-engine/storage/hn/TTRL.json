@@ -1,0 +1,374 @@
+{
+  "project": "TTRL",
+  "repo": "facebookresearch/TTRL",
+  "collected_at": "2026-05-22T11:31:18.727720+00:00",
+  "queries": [
+    "TTRL",
+    "TTRL"
+  ],
+  "total_hits": 40,
+  "results": {
+    "TTRL": [
+      {
+        "objectID": "47736476",
+        "title": "Anthropic downgraded cache TTL on March 6th",
+        "url": "https://github.com/anthropics/claude-code/issues/46829",
+        "points": 552,
+        "num_comments": 420,
+        "author": "lsdmtme",
+        "created_at": "2026-04-12T05:45:52Z"
+      },
+      {
+        "objectID": "21436448",
+        "title": "Stop using low DNS TTLs",
+        "url": "https://00f.net/2019/11/03/stop-using-low-dns-ttls/",
+        "points": 318,
+        "num_comments": 143,
+        "author": "fanf2",
+        "created_at": "2019-11-03T20:43:04Z"
+      },
+      {
+        "objectID": "26620730",
+        "title": "Problems with low DNS TTLs",
+        "url": "https://00f.net/2019/11/03/stop-using-low-dns-ttls/",
+        "points": 185,
+        "num_comments": 158,
+        "author": "JimWestergren",
+        "created_at": "2021-03-29T12:46:21Z"
+      },
+      {
+        "objectID": "22599224",
+        "title": "Looking inside a vintage Soviet TTL logic integrated circuit",
+        "url": "http://www.righto.com/2020/03/looking-inside-vintage-soviet-ttl-logic.html",
+        "points": 155,
+        "num_comments": 18,
+        "author": "sohkamyung",
+        "created_at": "2020-03-16T23:06:41Z"
+      },
+      {
+        "objectID": "33527642",
+        "title": "Stop using low DNS TTLs (2019)",
+        "url": "https://blog.apnic.net/2019/11/12/stop-using-ridiculously-low-dns-ttls/",
+        "points": 148,
+        "num_comments": 106,
+        "author": "doublepg23",
+        "created_at": "2022-11-09T04:54:24Z"
+      },
+      {
+        "objectID": "26409076",
+        "title": "Staying Out of TTL Hell",
+        "url": "http://calpaterson.com/ttl-hell.html",
+        "points": 134,
+        "num_comments": 48,
+        "author": "todsacerdoti",
+        "created_at": "2021-03-10T08:24:57Z"
+      },
+      {
+        "objectID": "39418536",
+        "title": "secd chews up CPU cycles and Watch battery life goes in the terlet (2022)",
+        "url": "https://arstechnica.com/civis/threads/secd-chews-up-cpu-cycles-and-watch-battery-life-goes-in-the-terlet.1485088/",
+        "points": 121,
+        "num_comments": 31,
+        "author": "tosh",
+        "created_at": "2024-02-18T12:35:37Z"
+      },
+      {
+        "objectID": "48049828",
+        "title": "The Serial TTL connector we deserve",
+        "url": "https://kohlschuetter.github.io/blog/posts/2026/05/07/serial-ttl-connector/",
+        "points": 106,
+        "num_comments": 79,
+        "author": "kohlschuetter",
+        "created_at": "2026-05-07T14:19:55Z"
+      },
+      {
+        "objectID": "45285562",
+        "title": "INapGPU: Text-mode graphics card, using only TTL gates",
+        "url": "https://github.com/Leoneq/iNapGPU",
+        "points": 92,
+        "num_comments": 15,
+        "author": "userbinator",
+        "created_at": "2025-09-18T04:53:03Z"
+      },
+      {
+        "objectID": "43332184",
+        "title": "Espressif's Response to Undocumented Commands in ESP32 Bluetooth by Tarlogic",
+        "url": "https://www.espressif.com/en/news/response_esp32_bluetooth",
+        "points": 85,
+        "num_comments": 28,
+        "author": "flockonus",
+        "created_at": "2025-03-11T13:23:03Z"
+      },
+      {
+        "objectID": "44394386",
+        "title": "PJ5 TTL CPU",
+        "url": "https://pj5cpu.wordpress.com/",
+        "points": 85,
+        "num_comments": 4,
+        "author": "doener",
+        "created_at": "2025-06-27T07:05:58Z"
+      },
+      {
+        "objectID": "29596399",
+        "title": "Ask HN: Is there a “wall of shame” for ISPs that don't respect DNS TTLs?",
+        "url": "",
+        "points": 68,
+        "num_comments": 14,
+        "author": "anderspitman",
+        "created_at": "2021-12-17T18:42:17Z"
+      },
+      {
+        "objectID": "46825302",
+        "title": "Stop using low DNS TTLs",
+        "url": "https://blog.apnic.net/2019/11/12/stop-using-ridiculously-low-dns-ttls/",
+        "points": 66,
+        "num_comments": 45,
+        "author": "swills",
+        "created_at": "2026-01-30T15:12:06Z"
+      },
+      {
+        "objectID": "10587512",
+        "title": "My Home-Built TTL Computer Processor",
+        "url": "http://cpuville.com",
+        "points": 62,
+        "num_comments": 27,
+        "author": "ch",
+        "created_at": "2015-11-18T13:22:36Z"
+      },
+      {
+        "objectID": "22461680",
+        "title": "A Minimal TTL Processor for Architecture Exploration (1994)",
+        "url": "https://www.bradrodriguez.com/papers/piscedu2.htm",
+        "points": 59,
+        "num_comments": 19,
+        "author": "petrohi",
+        "created_at": "2020-03-02T04:31:06Z"
+      },
+      {
+        "objectID": "43764122",
+        "title": "Show HN: I built a Ruby gem that handles memoization with a ttl",
+        "url": "https://github.com/mishalzaman/memo_ttl",
+        "points": 48,
+        "num_comments": 26,
+        "author": "hp_hovercraft84",
+        "created_at": "2025-04-22T16:51:24Z"
+      },
+      {
+        "objectID": "26827988",
+        "title": "Segcache: A memory-efficient, scalable cache for small objects with TTL",
+        "url": "https://twitter.github.io/pelikan/2021/segcache.html",
+        "points": 28,
+        "num_comments": 0,
+        "author": "1a1a11a",
+        "created_at": "2021-04-16T00:43:15Z"
+      },
+      {
+        "objectID": "28990852",
+        "title": "Novasaur CP/M TTL Retrocomputer",
+        "url": "https://hackaday.io/project/164212-novasaur-cpm-ttl-retrocomputer",
+        "points": 18,
+        "num_comments": 2,
+        "author": "rolph",
+        "created_at": "2021-10-25T17:46:23Z"
+      },
+      {
+        "objectID": "26496387",
+        "title": "BMOW 1: Homemade CPU using TTLs described in 100 blog posts",
+        "url": "https://www.bigmessowires.com/bmow1/",
+        "points": 17,
+        "num_comments": 0,
+        "author": "azhenley",
+        "created_at": "2021-03-17T20:29:02Z"
+      },
+      {
+        "objectID": "43671351",
+        "title": "The Essential Reading List for TTRPGs",
+        "url": "https://thealexandrian.net/wordpress/52329/roleplaying-games/rpgs-the-essential-reading-list",
+        "points": 16,
+        "num_comments": 4,
+        "author": "BerislavLopac",
+        "created_at": "2025-04-13T09:19:43Z"
+      },
+      {
+        "objectID": "741639",
+        "title": "Homebuilt CPU of 74 Series TTL chips Web Server",
+        "url": "http://www.homebrewcpu.com/",
+        "points": 15,
+        "num_comments": 0,
+        "author": "mhb",
+        "created_at": "2009-08-04T17:24:24Z"
+      },
+      {
+        "objectID": "33207997",
+        "title": "Gigatron: An 8-bit CPU built from 34 74LS TTL logic chips",
+        "url": "https://hackaday.io/project/20781-gigatron-ttl-microcomputer",
+        "points": 14,
+        "num_comments": 6,
+        "author": "caned",
+        "created_at": "2022-10-14T19:45:12Z"
+      },
+      {
+        "objectID": "47744585",
+        "title": "Distilling 100B+ Models 40x Faster with TRL",
+        "url": "https://huggingface.co/spaces/HuggingFaceTB/trl-distillation-trainer",
+        "points": 13,
+        "num_comments": 0,
+        "author": "kashifr",
+        "created_at": "2026-04-12T21:15:30Z"
+      },
+      {
+        "objectID": "32807920",
+        "title": "Helm Release Time-to-Live(TTL) for Temporary Environments",
+        "url": "https://dev.to/rtpro/helm-release-time-to-livettl-for-temporary-environments-1239",
+        "points": 13,
+        "num_comments": 0,
+        "author": "rtpro",
+        "created_at": "2022-09-12T09:58:27Z"
+      },
+      {
+        "objectID": "46549158",
+        "title": "My Electronics Blog Article: Why I Loathe TTL",
+        "url": "https://mecrisp-stellaris-folkdoc.sourceforge.io/ttl-7400-series.html",
+        "points": 12,
+        "num_comments": 3,
+        "author": "oldguy101",
+        "created_at": "2026-01-09T01:46:57Z"
+      },
+      {
+        "objectID": "44665352",
+        "title": "Show HN: Quite Fast, sharded cache for Go with LRU/LFU, TTL and object pooling",
+        "url": "https://github.com/unkn0wn-root/kioshun",
+        "points": 12,
+        "num_comments": 1,
+        "author": "unkn0wn_root",
+        "created_at": "2025-07-23T23:54:07Z"
+      },
+      {
+        "objectID": "41333005",
+        "title": "Fallen London TTRPG scheduled for 2025",
+        "url": "https://www.failbettergames.com/news/fallen-london-the-roleplaying-game",
+        "points": 12,
+        "num_comments": 0,
+        "author": "Pamar",
+        "created_at": "2024-08-23T20:52:10Z"
+      },
+      {
+        "objectID": "1602296",
+        "title": "Ask HN: DNS TTL - Why Not Small?",
+        "url": "",
+        "points": 11,
+        "num_comments": 5,
+        "author": "pdx",
+        "created_at": "2010-08-13T21:07:57Z"
+      },
+      {
+        "objectID": "43661461",
+        "title": "TTRPG Roots in the Game Battleship",
+        "url": "http://playingattheworld.blogspot.com/2018/10/subterranean-chainmail-mines-and.html",
+        "points": 10,
+        "num_comments": 2,
+        "author": "CaesarA",
+        "created_at": "2025-04-12T04:53:39Z"
+      },
+      {
+        "objectID": "22975330",
+        "title": "Gigatron TTL-Based kit computer",
+        "url": "https://youtu.be/_2uXqTi42LI",
+        "points": 10,
+        "num_comments": 1,
+        "author": "bane",
+        "created_at": "2020-04-25T03:35:27Z"
+      },
+      {
+        "objectID": "10594696",
+        "title": "A Minimal TTL Processor for Architecture Exploration (2008)",
+        "url": "http://www.bradrodriguez.com/papers/piscedu2.htm",
+        "points": 10,
+        "num_comments": 1,
+        "author": "ch",
+        "created_at": "2015-11-19T13:47:21Z"
+      },
+      {
+        "objectID": "18126915",
+        "title": "Gigatron, TTL computer kit without a CPU",
+        "url": "https://gigatron.io/",
+        "points": 9,
+        "num_comments": 3,
+        "author": "FullyFunctional",
+        "created_at": "2018-10-03T01:02:47Z"
+      },
+      {
+        "objectID": "23014812",
+        "title": "Tarlz – Archiver with multimember lzip compression",
+        "url": "https://www.nongnu.org/lzip/tarlz.html",
+        "points": 9,
+        "num_comments": 2,
+        "author": "LeoPanthera",
+        "created_at": "2020-04-29T03:00:21Z"
+      },
+      {
+        "objectID": "19970950",
+        "title": "Show HN: ttl.sh – Anonymous, ephemeral (& free) Docker image registry",
+        "url": "https://ttl.sh",
+        "points": 9,
+        "num_comments": 1,
+        "author": "grantlmiller",
+        "created_at": "2019-05-21T15:23:30Z"
+      },
+      {
+        "objectID": "44317465",
+        "title": "ttl.sh – anonymous and ephemeral Docker image registry",
+        "url": "https://ttl.sh/",
+        "points": 9,
+        "num_comments": 0,
+        "author": "gjvc",
+        "created_at": "2025-06-19T11:06:51Z"
+      },
+      {
+        "objectID": "24436229",
+        "title": "Numan Türle adds every Gitlab user to project",
+        "url": "https://gitlab.com/numanturle/tetete/-/issues/1",
+        "points": 8,
+        "num_comments": 5,
+        "author": "aaron-santos",
+        "created_at": "2020-09-10T20:25:28Z"
+      },
+      {
+        "objectID": "3913845",
+        "title": "How to build an 8-bit TTL computer from scratch",
+        "url": "http://www.extremetech.com/computing/128035-how-to-build-an-8-bit-computer-from-scratch",
+        "points": 8,
+        "num_comments": 4,
+        "author": "mrsebastian",
+        "created_at": "2012-05-01T11:38:09Z"
+      },
+      {
+        "objectID": "42097657",
+        "title": "Ask HN: Why does news.Y Combinator.com use a DNS TTL of 1s?",
+        "url": "",
+        "points": 8,
+        "num_comments": 3,
+        "author": "500ktc",
+        "created_at": "2024-11-09T23:54:53Z"
+      },
+      {
+        "objectID": "29184453",
+        "title": "Xkcd: Ttsltswbd",
+        "url": "https://xkcd.com/2540/",
+        "points": 7,
+        "num_comments": 3,
+        "author": "authed",
+        "created_at": "2021-11-11T04:35:17Z"
+      },
+      {
+        "objectID": "47749757",
+        "title": "Claude Code – Disabling telemetry also disables 1-hour prompt cache TTL",
+        "url": "https://github.com/anthropics/claude-code/issues/45381",
+        "points": 7,
+        "num_comments": 0,
+        "author": "dsr12",
+        "created_at": "2026-04-13T09:38:59Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "project": "langgraph",
+  "repo": "langchain-ai/langgraph",
+  "collected_at": "2026-05-22T11:36:40.186095+00:00",
+  "total_papers": 5,
+  "total_citations": 10,
+  "papers": {
+    "langgraph": [
+      {
+        "paperId": "305a54897c5dcc39ca9d4b266990b13c5d0fc97a",
+        "title": "Exploration of LLM Multi-Agent Application Implementation Based on LangGraph+CrewAI",
+        "year": 2024,
+        "citationCount": 48,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/305a54897c5dcc39ca9d4b266990b13c5d0fc97a",
+        "arxivId": "2411.18241"
+      },
+      {
+        "paperId": "559ded41f255c57e75fe13e7cf8427e286db63d4",
+        "title": "Implementing traffic agent based on LangGraph",
+        "year": 2025,
+        "citationCount": 10,
+        "venue": "Other Conferences",
+        "url": "https://www.semanticscholar.org/paper/559ded41f255c57e75fe13e7cf8427e286db63d4",
+        "arxivId": ""
+      },
+      {
+        "paperId": "e3d16e07a04487c6a4b71e3172ca15f4f7032c51",
+        "title": "Agent AI with LangGraph: A Modular Framework for Enhancing Machine Translation Using Large Language Models",
+        "year": 2024,
+        "citationCount": 40,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/e3d16e07a04487c6a4b71e3172ca15f4f7032c51",
+        "arxivId": "2412.03801"
+      },
+      {
+        "paperId": "8eea3be65ffe23873cf75d82520b830801266a4f",
+        "title": "Empirical Research on Utilizing LLM-based Agents for Automated Bug Fixing via LangGraph",
+        "year": 2025,
+        "citationCount": 4,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/8eea3be65ffe23873cf75d82520b830801266a4f",
+        "arxivId": "2502.18465"
+      },
+      {
+        "paperId": "786aad3526bac2acf99f682bdfeafdd7a55a5132",
+        "title": "Building Generative AI Agents: Using LangGraph, AutoGen, and CrewAI",
+        "year": 2025,
+        "citationCount": 6,
+        "venue": "",
+        "url": "https://www.semanticscholar.org/paper/786aad3526bac2acf99f682bdfeafdd7a55a5132",
+        "arxivId": ""
+      }
+    ]
+  },
+  "citations": {
+    "305a54897c5dcc39ca9d4b266990b13c5d0fc97a": [
+      {
+        "paperId": "3a0c8c9fb98cf2ccf73f9dd16d0201badb7b1bc7",
+        "title": "SHM-Agents: A Generalist-Specialist Integrated Agent System for Structural Health Monitoring",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "23eadba60d37545f581ca60f9128b7efc9663e71",
+        "title": "AAFLOW: Scalable Patterns for Agentic AI Workflows",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "bb7ac50bcca09e26e3b273cc2e8da0656f37150c",
+        "title": "A Review of Large Language Models for Stock Price Forecasting from a Hedge-Fund Perspective",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "9d44b99991b37e851e3476d1f8574d4900f175e9",
+        "title": "Can LLM Agents Identify Spoken Dialects like a Linguist?",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "47a001004b508e3fe38ef9221b9d70826ae97dfb",
+        "title": "Personalized Learning in AI-Driven Smart Environments for Inclusive Education",
+        "year": 2026,
+        "citationCount": 0
+      }
+    ],
+    "559ded41f255c57e75fe13e7cf8427e286db63d4": [
+      {
+        "paperId": "f7bf69d524c6560bcdef29656957182e1ea8d10c",
+        "title": "Neuro-Symbolic Agents for Hallucination-Free Requirements Reuse",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "06b986049c440d6978b28903e99117dcabeaac18",
+        "title": "Approaches and emerging trends in multi-agent autonomous AI systems for education innovation in Vietnam",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "7cedca9ed6f2cd867c753140ec3813727af58b65",
+        "title": "Hierarchical Molecular Language Models (HMLMs)",
+        "year": 2025,
+        "citationCount": 5
+      },
+      {
+        "paperId": "466c82f043e22302fa97316bd3f4153b1c4406b7",
+        "title": "ARIMA Forecasting with LLM-Powered Multi-Agent Coordination for Omnichannel Retail KPIs",
+        "year": 2025,
+        "citationCount": 0
+      },
+      {
+        "paperId": "95004f6e70636dcd5ab81190360c5e40cc5af1cf",
+        "title": "Defending Large Language Models Against Jailbreak Exploits with Responsible AI Considerations",
+        "year": 2025,
+        "citationCount": 0
+      }
+    ]
+  }
+}

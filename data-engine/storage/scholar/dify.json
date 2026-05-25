@@ -1,14 +1,57 @@
 {
   "project": "dify",
   "repo": "langgenius/dify",
-  "collected_at": "2026-05-22T11:14:28.454677+00:00",
-  "queries": [
-    "dify"
-  ],
-  "total_papers": 0,
+  "collected_at": "2026-05-22T11:32:19.350399+00:00",
+  "total_papers": 5,
   "total_citations": 0,
   "papers": {
-    "dify": []
+    "dify": [
+      {
+        "paperId": "32593eabfd820a2832ecd87ced803ae20e12faaa",
+        "title": "Low-Code GPT-4 Workflow for Indonesian Sentiment Analysis with Dify",
+        "year": 2025,
+        "citationCount": 0,
+        "venue": "Proceedings of the 2025 International conference on AI-Driven Business Transformation and Data Science Innovation",
+        "url": "https://www.semanticscholar.org/paper/32593eabfd820a2832ecd87ced803ae20e12faaa",
+        "arxivId": ""
+      },
+      {
+        "paperId": "33ad427d301bd0609279be35ef27882d36688a2c",
+        "title": "Development and Application of Dify-Powered Intelligent Assignment Grading Workflows",
+        "year": 2025,
+        "citationCount": 0,
+        "venue": "Proceedings of the 2025 3rd International Conference on Information Education and Artificial Intelligence",
+        "url": "https://www.semanticscholar.org/paper/33ad427d301bd0609279be35ef27882d36688a2c",
+        "arxivId": ""
+      },
+      {
+        "paperId": "00b60202c978faa0015b07f6139c6d3a7f74ff9b",
+        "title": "Design of On-Premises Version of RAG with AI Agent for Framework Selection Together with Dify and DSL as Well as Ollama for LLM",
+        "year": 2024,
+        "citationCount": 5,
+        "venue": "International Journal of Advanced Computer Science and Applications",
+        "url": "https://www.semanticscholar.org/paper/00b60202c978faa0015b07f6139c6d3a7f74ff9b",
+        "arxivId": ""
+      },
+      {
+        "paperId": "2f36521a3d9556d64c98745fec5c168b2227555f",
+        "title": "Design, Implementation and Performance Optimization of Health Consultation Agent Based on GPUStack-RAG-Dify-MCP Collaborative Architecture",
+        "year": 2026,
+        "citationCount": 0,
+        "venue": "2026 9th International Conference on Advanced Electronic Technology, Computers and Software Engineering (AETCSE)",
+        "url": "https://www.semanticscholar.org/paper/2f36521a3d9556d64c98745fec5c168b2227555f",
+        "arxivId": ""
+      },
+      {
+        "paperId": "84d2801fd830e0bd83dd98138665f72ea8e88d6c",
+        "title": "ID: 213463 Dynamic Brain Imaging Response to SCS Differential Frequencies: (DIFY SCS-PET), A Pilot Double-Blind Clinical Trial",
+        "year": 2023,
+        "citationCount": 0,
+        "venue": "Neuromodulation (Malden, Mass.)",
+        "url": "https://www.semanticscholar.org/paper/84d2801fd830e0bd83dd98138665f72ea8e88d6c",
+        "arxivId": ""
+      }
+    ]
   },
   "citations": {}
 }

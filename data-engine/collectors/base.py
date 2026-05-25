@@ -1,7 +1,6 @@
 """Shared utilities for GitHub data collectors."""
 import json, os, time, sys, argparse
 from datetime import datetime, timezone
-from pathlib import Path
 
 import requests
 

@@ -1,0 +1,374 @@
+{
+  "project": "n8n",
+  "repo": "n8n-io/n8n",
+  "collected_at": "2026-05-22T11:31:47.732709+00:00",
+  "queries": [
+    "n8n",
+    "n8n"
+  ],
+  "total_hits": 40,
+  "results": {
+    "n8n": [
+      {
+        "objectID": "21191676",
+        "title": "N8n.io – Workflow automation alternative to Zapier",
+        "url": "https://n8n.io/",
+        "points": 728,
+        "num_comments": 196,
+        "author": "tablet",
+        "created_at": "2019-10-08T12:53:04Z"
+      },
+      {
+        "objectID": "46234186",
+        "title": "Show HN: Sim – Apache-2.0 n8n alternative",
+        "url": "https://github.com/simstudioai/sim",
+        "points": 240,
+        "num_comments": 61,
+        "author": "waleedlatif1",
+        "created_at": "2025-12-11T17:20:11Z"
+      },
+      {
+        "objectID": "37274052",
+        "title": "n8n.io - A powerful workflow automation tool",
+        "url": "https://n8n.io",
+        "points": 237,
+        "num_comments": 99,
+        "author": "sacrosanct",
+        "created_at": "2023-08-26T16:06:42Z"
+      },
+      {
+        "objectID": "45525336",
+        "title": "N8n raises $180M",
+        "url": "https://blog.n8n.io/series-c/",
+        "points": 235,
+        "num_comments": 184,
+        "author": "doppp",
+        "created_at": "2025-10-09T09:19:18Z"
+      },
+      {
+        "objectID": "43879282",
+        "title": "N8n – Flexible AI workflow automation for technical teams",
+        "url": "https://n8n.io/",
+        "points": 195,
+        "num_comments": 99,
+        "author": "XCSme",
+        "created_at": "2025-05-03T14:31:52Z"
+      },
+      {
+        "objectID": "45450044",
+        "title": "N8n added native persistent storage with DataTables",
+        "url": "https://community.n8n.io/t/data-tables-are-here/192256",
+        "points": 174,
+        "num_comments": 106,
+        "author": "XCSme",
+        "created_at": "2025-10-02T14:26:23Z"
+      },
+      {
+        "objectID": "25632892",
+        "title": "Fair-Code Automation with n8n.io",
+        "url": "https://tech.davidfield.co.uk/opensourced-ifttt-with-n8n-io/",
+        "points": 132,
+        "num_comments": 38,
+        "author": "lebaux",
+        "created_at": "2021-01-04T15:54:25Z"
+      },
+      {
+        "objectID": "38956857",
+        "title": "Effortless AI: No-Code Automation Using N8n Cloud and OpenAI Vision API",
+        "url": "https://n8n-automation.com/2024/01/11/open-ai-vision-api/",
+        "points": 50,
+        "num_comments": 15,
+        "author": "crazytest",
+        "created_at": "2024-01-11T18:50:34Z"
+      },
+      {
+        "objectID": "46425716",
+        "title": "n8n-Oidc",
+        "url": "https://cweagans.net/2025/12/announcing-n8n-oidc/",
+        "points": 47,
+        "num_comments": 11,
+        "author": "cweagans",
+        "created_at": "2025-12-29T21:08:41Z"
+      },
+      {
+        "objectID": "46079605",
+        "title": "Open-Source n8n Alternative for Workflow Building (GUI and Docker Included)",
+        "url": "https://github.com/empowerd-cms/nyno",
+        "points": 41,
+        "num_comments": 11,
+        "author": "theyogadev",
+        "created_at": "2025-11-28T15:44:04Z"
+      },
+      {
+        "objectID": "44703298",
+        "title": "Show HN: Flyde 1.0 – Like n8n, but in your codebase",
+        "url": "https://github.com/flydelabs/flyde",
+        "points": 39,
+        "num_comments": 6,
+        "author": "gabigrin",
+        "created_at": "2025-07-27T18:16:01Z"
+      },
+      {
+        "objectID": "32797853",
+        "title": "N8n is not open source and your project is gaslighting its users",
+        "url": "https://github.com/n8n-io/n8n/issues/40",
+        "points": 34,
+        "num_comments": 13,
+        "author": "wilsonfiifi",
+        "created_at": "2022-09-11T08:32:28Z"
+      },
+      {
+        "objectID": "44592006",
+        "title": "N8n vs. node-red",
+        "url": "https://daniel-payne-keldan-systems.medium.com/n8n-vs-node-red-485e8382b971",
+        "points": 33,
+        "num_comments": 68,
+        "author": "daniel-payne",
+        "created_at": "2025-07-17T11:19:53Z"
+      },
+      {
+        "objectID": "45534012",
+        "title": "N8n vs. Windmill vs. Temporal",
+        "url": "https://blog.arcbjorn.com/workflow-automation",
+        "points": 33,
+        "num_comments": 13,
+        "author": "arcbjorn",
+        "created_at": "2025-10-09T23:16:18Z"
+      },
+      {
+        "objectID": "31590197",
+        "title": "N8n: Automate Without Limits",
+        "url": "https://n8n.io/",
+        "points": 21,
+        "num_comments": 2,
+        "author": "memorable",
+        "created_at": "2022-06-02T01:16:28Z"
+      },
+      {
+        "objectID": "26945153",
+        "title": "N8n raises $12m to build out fair-code workflow automation",
+        "url": "https://n8n.io/blog/series-a-announcement/",
+        "points": 20,
+        "num_comments": 0,
+        "author": "sirdavidoff",
+        "created_at": "2021-04-26T17:18:24Z"
+      },
+      {
+        "objectID": "47743174",
+        "title": "Bringing Observability to Your N8n Workflows: OpenTelemetry in Action",
+        "url": "https://signoz.io/blog/n8n-monitoring-with-opentelemetry/",
+        "points": 17,
+        "num_comments": 2,
+        "author": "gkarthi2800",
+        "created_at": "2026-04-12T19:04:03Z"
+      },
+      {
+        "objectID": "46633520",
+        "title": "New Vulnerability in n8n – CVE-2026-21858",
+        "url": "https://www.schneier.com/blog/archives/2026/01/new-vulnerability-in-n8n.html",
+        "points": 13,
+        "num_comments": 0,
+        "author": "882542F3884314B",
+        "created_at": "2026-01-15T15:05:07Z"
+      },
+      {
+        "objectID": "44495265",
+        "title": "N8n AI Workflows – 3,400 Workflows and an LLM Prototype",
+        "url": "",
+        "points": 12,
+        "num_comments": 3,
+        "author": "sayedev",
+        "created_at": "2025-07-07T22:29:57Z"
+      },
+      {
+        "objectID": "37765778",
+        "title": "Show HN: N8n’s LangChain integration makes it easy to build AI apps",
+        "url": "https://n8n.io/langchain/",
+        "points": 11,
+        "num_comments": 0,
+        "author": "raelmiu",
+        "created_at": "2023-10-04T14:33:24Z"
+      },
+      {
+        "objectID": "43893394",
+        "title": "N8n is not open source and your project is gaslighting its users (2019)",
+        "url": "https://github.com/n8n-io/n8n/issues/40",
+        "points": 9,
+        "num_comments": 2,
+        "author": "neya",
+        "created_at": "2025-05-05T10:06:41Z"
+      },
+      {
+        "objectID": "47455217",
+        "title": "Breaking n8n's Expression Sandbox into RCE (CVE-2026-27577) with striga.ai",
+        "url": "https://www.striga.ai/research/breaking-n8n-expression-sandbox",
+        "points": 9,
+        "num_comments": 1,
+        "author": "redfr0g",
+        "created_at": "2026-03-20T14:38:33Z"
+      },
+      {
+        "objectID": "45026289",
+        "title": "Automating Bug Bounty with N8n",
+        "url": "https://www.lampysecurity.com/post/automating-bug-bounty-with-n8n",
+        "points": 8,
+        "num_comments": 3,
+        "author": "lampysecurity",
+        "created_at": "2025-08-26T13:30:14Z"
+      },
+      {
+        "objectID": "45187435",
+        "title": "How to Scrape Google Maps Reviews with N8n and Google Sheets",
+        "url": "https://serpapi.com/blog/how-to-scrape-google-maps-reviews-with-n8n-and-google-sheets/",
+        "points": 8,
+        "num_comments": 0,
+        "author": "barron35",
+        "created_at": "2025-09-09T19:26:37Z"
+      },
+      {
+        "objectID": "41099780",
+        "title": "Making a Hotel Price Tracker with Google Hotels and N8n",
+        "url": "https://serpapi.com/blog/making-a-hotel-price-tracker-with-google-hotels-and-n8n/",
+        "points": 7,
+        "num_comments": 0,
+        "author": "barron35",
+        "created_at": "2024-07-29T12:05:50Z"
+      },
+      {
+        "objectID": "32508478",
+        "title": "Launch HN: Self-hosted n8n on AWS with Microtica 2.0",
+        "url": "",
+        "points": 7,
+        "num_comments": 0,
+        "author": "savovaleks",
+        "created_at": "2022-08-18T12:12:03Z"
+      },
+      {
+        "objectID": "48100204",
+        "title": "Show HN: n8n like workflows for AI agents that control a real VM",
+        "url": "https://github.com/aadya940/orbit-ui",
+        "points": 6,
+        "num_comments": 1,
+        "author": "aadyachinubhai",
+        "created_at": "2026-05-11T20:24:10Z"
+      },
+      {
+        "objectID": "46263371",
+        "title": "N8n vs. Nyno for Python Automation:The Benchmarks and Why Nyno Is Much Faster",
+        "url": "https://nyno.dev/n8n-vs-nyno-for-python-code-execution-the-benchmarks-and-why-nyno-is-much-faster",
+        "points": 6,
+        "num_comments": 1,
+        "author": "theyogadev",
+        "created_at": "2025-12-14T14:45:12Z"
+      },
+      {
+        "objectID": "46123481",
+        "title": "Show HN: Floww – A code-first alternative to n8n",
+        "url": "https://github.com/usefloww/floww-sdk",
+        "points": 6,
+        "num_comments": 0,
+        "author": "ToonDN",
+        "created_at": "2025-12-02T17:07:06Z"
+      },
+      {
+        "objectID": "46623071",
+        "title": "N8n Feels Fast Until You Need to Explain It",
+        "url": "https://hashrocket.substack.com/p/n8n-feels-fastuntil-you-need-to-explain",
+        "points": 5,
+        "num_comments": 1,
+        "author": "thehashrocket",
+        "created_at": "2026-01-14T20:47:26Z"
+      },
+      {
+        "objectID": "46463362",
+        "title": "Show HN: Self-hosted video clipper architecture (Next.js, N8N, FFmpeg, Docker)",
+        "url": "https://suryaelidanto.gumroad.com/l/ai-video-saas",
+        "points": 5,
+        "num_comments": 1,
+        "author": "suryaelidanto",
+        "created_at": "2026-01-02T10:18:52Z"
+      },
+      {
+        "objectID": "43335507",
+        "title": "My Claude 3.7 n8n AI Researcher agent capable using scattered internet data",
+        "url": "https://www.youtube.com/watch?v=U13Xm7Wz7bE",
+        "points": 5,
+        "num_comments": 0,
+        "author": "penkow",
+        "created_at": "2025-03-11T18:23:05Z"
+      },
+      {
+        "objectID": "42540686",
+        "title": "N8n",
+        "url": "https://github.com/n8n-io/n8n",
+        "points": 5,
+        "num_comments": 0,
+        "author": "Brajeshwar",
+        "created_at": "2024-12-29T15:59:00Z"
+      },
+      {
+        "objectID": "24224571",
+        "title": "Show HN: Nodemaker, automatic node generator for n8n",
+        "url": "",
+        "points": 5,
+        "num_comments": 0,
+        "author": "ivov_dev",
+        "created_at": "2020-08-20T15:56:52Z"
+      },
+      {
+        "objectID": "40940887",
+        "title": "Ask HN: What's your favorite n8n use case?",
+        "url": "",
+        "points": 4,
+        "num_comments": 2,
+        "author": "spikey_sanju",
+        "created_at": "2024-07-11T21:46:58Z"
+      },
+      {
+        "objectID": "44872910",
+        "title": "I Built Revenue‑Generating SaaS with Loveable, N8n, and Helpful Freelancers",
+        "url": "",
+        "points": 4,
+        "num_comments": 1,
+        "author": "emmanol",
+        "created_at": "2025-08-12T06:01:49Z"
+      },
+      {
+        "objectID": "44681166",
+        "title": "N8n vs Make vs Zapier – Discussion",
+        "url": "https://parsera.org/",
+        "points": 4,
+        "num_comments": 1,
+        "author": "vitalioren",
+        "created_at": "2025-07-25T09:08:09Z"
+      },
+      {
+        "objectID": "44546616",
+        "title": "Show HN: N8n AI Assistant – N8n Workflow Generator",
+        "url": "https://chromewebstore.google.com/detail/n8n-ai-assistant-n8n-work/jhoiggagfoakmjjajgmkcagpnkeikeon",
+        "points": 4,
+        "num_comments": 1,
+        "author": "qwikhost",
+        "created_at": "2025-07-13T01:08:20Z"
+      },
+      {
+        "objectID": "47519527",
+        "title": "CISA warns max-severity n8n bug is being exploited in the wild",
+        "url": "https://www.theregister.com/2026/03/12/cisa_n8n_rce/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "driftnode",
+        "created_at": "2026-03-25T16:25:05Z"
+      },
+      {
+        "objectID": "46548032",
+        "title": "Ni8mare – Unauthenticated Remote Code Execution in N8n",
+        "url": "https://www.cyera.com/research-labs/ni8mare-unauthenticated-remote-code-execution-in-n8n-cve-2026-21858",
+        "points": 4,
+        "num_comments": 0,
+        "author": "beny23",
+        "created_at": "2026-01-08T23:31:09Z"
+      }
+    ]
+  }
+}

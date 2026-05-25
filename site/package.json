@@ -12,10 +12,13 @@
   "dependencies": {
     "@astrojs/check": "latest",
     "@astrojs/mdx": "latest",
+    "@astrojs/react": "^5.0.5",
     "@astrojs/rss": "latest",
     "@astrojs/sitemap": "latest",
     "astro": "latest",
+    "gsap": "^3.15.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "typescript": "latest"
-  },
-  "devDependencies": {}
+  }
 }

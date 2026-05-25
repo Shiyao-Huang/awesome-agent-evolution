@@ -1,0 +1,516 @@
+{
+  "project": "Promptfoo",
+  "repo": "promptfoo/promptfoo",
+  "collected_at": "2026-05-22T11:19:26.850893+00:00",
+  "queries": [
+    "Promptfoo",
+    "promptfoo"
+  ],
+  "total_posts": 50,
+  "results": {
+    "Promptfoo": [
+      {
+        "id": "1rpxnmz",
+        "subreddit": "AI_Agents",
+        "title": "OpenAI just acquired Promptfoo for $86M. What does this mean for teams using non-OpenAI models?",
+        "score": 7,
+        "num_comments": 10,
+        "author": "Revolutionary-Bet-58",
+        "url": "https://reddit.com/r/AI_Agents/comments/1rpxnmz/openai_just_acquired_promptfoo_for_86m_what_does/",
+        "created_utc": 1773151109.0
+      },
+      {
+        "id": "1mwstpx",
+        "subreddit": "PromptEngineering",
+        "title": "Why isn't Promptfoo more popular? It's an open-source tool for testing LLM prompts.",
+        "score": 14,
+        "num_comments": 15,
+        "author": "Accomplished_Put5104",
+        "url": "https://reddit.com/r/PromptEngineering/comments/1mwstpx/why_isnt_promptfoo_more_popular_its_an_opensource/",
+        "created_utc": 1755824679.0
+      },
+      {
+        "id": "1s2fxko",
+        "subreddit": "deeplearning",
+        "title": "PromptFoo + AutoResearch = AutoPrompter. Autonomous closed-loop prompt optimization.",
+        "score": 10,
+        "num_comments": 5,
+        "author": "gvij",
+        "url": "https://reddit.com/r/deeplearning/comments/1s2fxko/promptfoo_autoresearch_autoprompter_autonomous/",
+        "created_utc": 1774363844.0
+      },
+      {
+        "id": "1myxqlp",
+        "subreddit": "PromptEngineering",
+        "title": "Why isn't Promptfoo more popular? It's an open-source tool for testing LLM prompts",
+        "score": 17,
+        "num_comments": 4,
+        "author": "BleedKagax",
+        "url": "https://reddit.com/r/PromptEngineering/comments/1myxqlp/why_isnt_promptfoo_more_popular_its_an_opensource/",
+        "created_utc": 1756047373.0
+      },
+      {
+        "id": "1s41acd",
+        "subreddit": "ArtificialInteligence",
+        "title": "AutoResearch + PromptFoo = AutoPrompter. Open source tool for closed-loop prompt optimization.",
+        "score": 8,
+        "num_comments": 14,
+        "author": "gvij",
+        "url": "https://reddit.com/r/ArtificialInteligence/comments/1s41acd/autoresearch_promptfoo_autoprompter_open_source/",
+        "created_utc": 1774511947.0
+      },
+      {
+        "id": "1rp7xif",
+        "subreddit": "artificial",
+        "title": "OpenAI are acquiring Promptfoo, an AI security platform that helps enterprises identify and remediate vulnerabilities in AI systems during development",
+        "score": 6,
+        "num_comments": 11,
+        "author": "tekz",
+        "url": "https://reddit.com/r/artificial/comments/1rp7xif/openai_are_acquiring_promptfoo_an_ai_security/",
+        "created_utc": 1773079995.0
+      },
+      {
+        "id": "1rjadb3",
+        "subreddit": "Pentesting",
+        "title": "LLM Testing - Garak vs Promptfoo",
+        "score": 5,
+        "num_comments": 9,
+        "author": "lacroixdrinker1337",
+        "url": "https://reddit.com/r/Pentesting/comments/1rjadb3/llm_testing_garak_vs_promptfoo/",
+        "created_utc": 1772497599.0
+      },
+      {
+        "id": "1rp629a",
+        "subreddit": "OpenAI",
+        "title": "OpenAI to acquire Promptfoo",
+        "score": 28,
+        "num_comments": 4,
+        "author": "TheTopObserver",
+        "url": "https://reddit.com/r/OpenAI/comments/1rp629a/openai_to_acquire_promptfoo/",
+        "created_utc": 1773076142.0
+      },
+      {
+        "id": "1sqyqb3",
+        "subreddit": "hackerworkspace",
+        "title": "LLM as a Judge Evaluation Guide | Promptfoo",
+        "score": 1,
+        "num_comments": 0,
+        "author": "sacx",
+        "url": "https://reddit.com/r/hackerworkspace/comments/1sqyqb3/llm_as_a_judge_evaluation_guide_promptfoo/",
+        "created_utc": 1776710971.0
+      },
+      {
+        "id": "1sm84lq",
+        "subreddit": "NieuwsvoorOndernemer",
+        "title": "OpenAI zet de laatste tijd een aantal grote stappen om bedrijven te voorzien van veilige AI-agents, waaronder het aankopen van Promptfoo, een organisatie die ondernemingen ondersteunt bij het oplossen van problemen met AI-systemen.",
+        "score": 1,
+        "num_comments": 0,
+        "author": "BrixxsNL",
+        "url": "https://reddit.com/r/NieuwsvoorOndernemer/comments/1sm84lq/openai_zet_de_laatste_tijd_een_aantal_grote/",
+        "created_utc": 1776264274.0
+      },
+      {
+        "id": "1s2fvkz",
+        "subreddit": "LLMDevs",
+        "title": "AutoResearch + PromptFoo = AutoPrompter. Closed-loop prompt optimization, no manual iteration.",
+        "score": 8,
+        "num_comments": 2,
+        "author": "gvij",
+        "url": "https://reddit.com/r/LLMDevs/comments/1s2fvkz/autoresearch_promptfoo_autoprompter_closedloop/",
+        "created_utc": 1774363720.0
+      },
+      {
+        "id": "1rptikp",
+        "subreddit": "pwnhub",
+        "title": "OpenAI Acquires Promptfoo to Enhance Security Testing for AI Systems",
+        "score": 3,
+        "num_comments": 3,
+        "author": "_cybersecurity_",
+        "url": "https://reddit.com/r/pwnhub/comments/1rptikp/openai_acquires_promptfoo_to_enhance_security/",
+        "created_utc": 1773139309.0
+      },
+      {
+        "id": "1rr2jgw",
+        "subreddit": "pwnhub",
+        "title": "OpenAI to Acquire AI Security Startup Promptfoo",
+        "score": 1,
+        "num_comments": 2,
+        "author": "_cybersecurity_",
+        "url": "https://reddit.com/r/pwnhub/comments/1rr2jgw/openai_to_acquire_ai_security_startup_promptfoo/",
+        "created_utc": 1773254889.0
+      },
+      {
+        "id": "1rphx1s",
+        "subreddit": "AIGuild",
+        "title": "OpenAI Is Buying Promptfoo to Lock Down AI Agents",
+        "score": 2,
+        "num_comments": 2,
+        "author": "Such-Run-4412",
+        "url": "https://reddit.com/r/AIGuild/comments/1rphx1s/openai_is_buying_promptfoo_to_lock_down_ai_agents/",
+        "created_utc": 1773102375.0
+      },
+      {
+        "id": "1rqpjx9",
+        "subreddit": "AgentsOfAI",
+        "title": "OpenAI to acquire Promptfoo",
+        "score": 3,
+        "num_comments": 1,
+        "author": "ExtensionSuccess8539",
+        "url": "https://reddit.com/r/AgentsOfAI/comments/1rqpjx9/openai_to_acquire_promptfoo/",
+        "created_utc": 1773223133.0
+      },
+      {
+        "id": "1rpghb3",
+        "subreddit": "pwnhub",
+        "title": "OpenAI Acquires Promptfoo to Enhance AI Agent Security",
+        "score": 2,
+        "num_comments": 1,
+        "author": "_cybersecurity_",
+        "url": "https://reddit.com/r/pwnhub/comments/1rpghb3/openai_acquires_promptfoo_to_enhance_ai_agent/",
+        "created_utc": 1773098839.0
+      },
+      {
+        "id": "1rp8wrz",
+        "subreddit": "NBCauto",
+        "title": "[National] - OpenAI to buy cybersecurity startup Promptfoo to better safeguard AI agents",
+        "score": 1,
+        "num_comments": 1,
+        "author": "AutoNewsAdmin",
+        "url": "https://reddit.com/r/NBCauto/comments/1rp8wrz/national_openai_to_buy_cybersecurity_startup/",
+        "created_utc": 1773082070.0
+      },
+      {
+        "id": "1rp8ust",
+        "subreddit": "NBCauto",
+        "title": "[Tech] - OpenAI to buy cybersecurity startup Promptfoo to better safeguard AI agents",
+        "score": 1,
+        "num_comments": 1,
+        "author": "AutoNewsAdmin",
+        "url": "https://reddit.com/r/NBCauto/comments/1rp8ust/tech_openai_to_buy_cybersecurity_startup/",
+        "created_utc": 1773081949.0
+      },
+      {
+        "id": "1rpxnuk",
+        "subreddit": "LangChain",
+        "title": "OpenAI just acquired Promptfoo for $86M. What does this mean for teams using non-OpenAI models?",
+        "score": 0,
+        "num_comments": 1,
+        "author": "Revolutionary-Bet-58",
+        "url": "https://reddit.com/r/LangChain/comments/1rpxnuk/openai_just_acquired_promptfoo_for_86m_what_does/",
+        "created_utc": 1773151122.0
+      },
+      {
+        "id": "1rjssls",
+        "subreddit": "netsec",
+        "title": "Red Teaming LLM Web Apps with Promptfoo: Writing a Custom Provider for Real-World Pentesting",
+        "score": 6,
+        "num_comments": 1,
+        "author": "adrian_rt",
+        "url": "https://reddit.com/r/netsec/comments/1rjssls/red_teaming_llm_web_apps_with_promptfoo_writing_a/",
+        "created_utc": 1772552938.0
+      },
+      {
+        "id": "1rp6s8y",
+        "subreddit": "aicuriosity",
+        "title": "OpenAI Acquires Promptfoo to Boost AI Security and Safety Testing",
+        "score": 0,
+        "num_comments": 1,
+        "author": "techspecsmart",
+        "url": "https://reddit.com/r/aicuriosity/comments/1rp6s8y/openai_acquires_promptfoo_to_boost_ai_security/",
+        "created_utc": 1773077647.0
+      },
+      {
+        "id": "1rrlyw3",
+        "subreddit": "TugaTech",
+        "title": "OpenAI adquire Promptfoo para reforçar a segurança dos seus agentes de IA",
+        "score": 1,
+        "num_comments": 0,
+        "author": "tugatech",
+        "url": "https://reddit.com/r/TugaTech/comments/1rrlyw3/openai_adquire_promptfoo_para_reforçar_a/",
+        "created_utc": 1773307304.0
+      },
+      {
+        "id": "1rr88xh",
+        "subreddit": "cybersecurity",
+        "title": "Enterprise AI Redteam application. Combines Promptfoo, Garak, PyRIT, and DeepTeam into a single app.",
+        "score": 1,
+        "num_comments": 0,
+        "author": "ENT-AI-RT",
+        "url": "https://reddit.com/r/cybersecurity/comments/1rr88xh/enterprise_ai_redteam_application_combines/",
+        "created_utc": 1773267147.0
+      },
+      {
+        "id": "1rpsbb8",
+        "subreddit": "Agent_AI",
+        "title": "OpenAI to acquire Promptfoo an AI security platform",
+        "score": 2,
+        "num_comments": 0,
+        "author": "Money-Ranger-6520",
+        "url": "https://reddit.com/r/Agent_AI/comments/1rpsbb8/openai_to_acquire_promptfoo_an_ai_security/",
+        "created_utc": 1773135014.0
+      },
+      {
+        "id": "1rp9tuc",
+        "subreddit": "actutech",
+        "title": "OpenAI rachète Promptfoo - La sécurité des agents IA devient une priorité",
+        "score": 2,
+        "num_comments": 0,
+        "author": "romain34230",
+        "url": "https://reddit.com/r/actutech/comments/1rp9tuc/openai_rachète_promptfoo_la_sécurité_des_agents/",
+        "created_utc": 1773084051.0
+      }
+    ],
+    "promptfoo": [
+      {
+        "id": "1rpxnmz",
+        "subreddit": "AI_Agents",
+        "title": "OpenAI just acquired Promptfoo for $86M. What does this mean for teams using non-OpenAI models?",
+        "score": 6,
+        "num_comments": 10,
+        "author": "Revolutionary-Bet-58",
+        "url": "https://reddit.com/r/AI_Agents/comments/1rpxnmz/openai_just_acquired_promptfoo_for_86m_what_does/",
+        "created_utc": 1773151109.0
+      },
+      {
+        "id": "1s2fxko",
+        "subreddit": "deeplearning",
+        "title": "PromptFoo + AutoResearch = AutoPrompter. Autonomous closed-loop prompt optimization.",
+        "score": 9,
+        "num_comments": 5,
+        "author": "gvij",
+        "url": "https://reddit.com/r/deeplearning/comments/1s2fxko/promptfoo_autoresearch_autoprompter_autonomous/",
+        "created_utc": 1774363844.0
+      },
+      {
+        "id": "1mwstpx",
+        "subreddit": "PromptEngineering",
+        "title": "Why isn't Promptfoo more popular? It's an open-source tool for testing LLM prompts.",
+        "score": 14,
+        "num_comments": 15,
+        "author": "Accomplished_Put5104",
+        "url": "https://reddit.com/r/PromptEngineering/comments/1mwstpx/why_isnt_promptfoo_more_popular_its_an_opensource/",
+        "created_utc": 1755824679.0
+      },
+      {
+        "id": "1myxqlp",
+        "subreddit": "PromptEngineering",
+        "title": "Why isn't Promptfoo more popular? It's an open-source tool for testing LLM prompts",
+        "score": 16,
+        "num_comments": 4,
+        "author": "BleedKagax",
+        "url": "https://reddit.com/r/PromptEngineering/comments/1myxqlp/why_isnt_promptfoo_more_popular_its_an_opensource/",
+        "created_utc": 1756047373.0
+      },
+      {
+        "id": "1s41acd",
+        "subreddit": "ArtificialInteligence",
+        "title": "AutoResearch + PromptFoo = AutoPrompter. Open source tool for closed-loop prompt optimization.",
+        "score": 8,
+        "num_comments": 14,
+        "author": "gvij",
+        "url": "https://reddit.com/r/ArtificialInteligence/comments/1s41acd/autoresearch_promptfoo_autoprompter_open_source/",
+        "created_utc": 1774511947.0
+      },
+      {
+        "id": "1rp7xif",
+        "subreddit": "artificial",
+        "title": "OpenAI are acquiring Promptfoo, an AI security platform that helps enterprises identify and remediate vulnerabilities in AI systems during development",
+        "score": 6,
+        "num_comments": 11,
+        "author": "tekz",
+        "url": "https://reddit.com/r/artificial/comments/1rp7xif/openai_are_acquiring_promptfoo_an_ai_security/",
+        "created_utc": 1773079995.0
+      },
+      {
+        "id": "1rjadb3",
+        "subreddit": "Pentesting",
+        "title": "LLM Testing - Garak vs Promptfoo",
+        "score": 6,
+        "num_comments": 9,
+        "author": "lacroixdrinker1337",
+        "url": "https://reddit.com/r/Pentesting/comments/1rjadb3/llm_testing_garak_vs_promptfoo/",
+        "created_utc": 1772497599.0
+      },
+      {
+        "id": "1rp629a",
+        "subreddit": "OpenAI",
+        "title": "OpenAI to acquire Promptfoo",
+        "score": 29,
+        "num_comments": 4,
+        "author": "TheTopObserver",
+        "url": "https://reddit.com/r/OpenAI/comments/1rp629a/openai_to_acquire_promptfoo/",
+        "created_utc": 1773076142.0
+      },
+      {
+        "id": "1sqyqb3",
+        "subreddit": "hackerworkspace",
+        "title": "LLM as a Judge Evaluation Guide | Promptfoo",
+        "score": 1,
+        "num_comments": 0,
+        "author": "sacx",
+        "url": "https://reddit.com/r/hackerworkspace/comments/1sqyqb3/llm_as_a_judge_evaluation_guide_promptfoo/",
+        "created_utc": 1776710971.0
+      },
+      {
+        "id": "1sm84lq",
+        "subreddit": "NieuwsvoorOndernemer",
+        "title": "OpenAI zet de laatste tijd een aantal grote stappen om bedrijven te voorzien van veilige AI-agents, waaronder het aankopen van Promptfoo, een organisatie die ondernemingen ondersteunt bij het oplossen van problemen met AI-systemen.",
+        "score": 1,
+        "num_comments": 0,
+        "author": "BrixxsNL",
+        "url": "https://reddit.com/r/NieuwsvoorOndernemer/comments/1sm84lq/openai_zet_de_laatste_tijd_een_aantal_grote/",
+        "created_utc": 1776264274.0
+      },
+      {
+        "id": "1s2fvkz",
+        "subreddit": "LLMDevs",
+        "title": "AutoResearch + PromptFoo = AutoPrompter. Closed-loop prompt optimization, no manual iteration.",
+        "score": 7,
+        "num_comments": 2,
+        "author": "gvij",
+        "url": "https://reddit.com/r/LLMDevs/comments/1s2fvkz/autoresearch_promptfoo_autoprompter_closedloop/",
+        "created_utc": 1774363720.0
+      },
+      {
+        "id": "1rptikp",
+        "subreddit": "pwnhub",
+        "title": "OpenAI Acquires Promptfoo to Enhance Security Testing for AI Systems",
+        "score": 3,
+        "num_comments": 3,
+        "author": "_cybersecurity_",
+        "url": "https://reddit.com/r/pwnhub/comments/1rptikp/openai_acquires_promptfoo_to_enhance_security/",
+        "created_utc": 1773139309.0
+      },
+      {
+        "id": "1rr2jgw",
+        "subreddit": "pwnhub",
+        "title": "OpenAI to Acquire AI Security Startup Promptfoo",
+        "score": 1,
+        "num_comments": 2,
+        "author": "_cybersecurity_",
+        "url": "https://reddit.com/r/pwnhub/comments/1rr2jgw/openai_to_acquire_ai_security_startup_promptfoo/",
+        "created_utc": 1773254889.0
+      },
+      {
+        "id": "1rphx1s",
+        "subreddit": "AIGuild",
+        "title": "OpenAI Is Buying Promptfoo to Lock Down AI Agents",
+        "score": 2,
+        "num_comments": 2,
+        "author": "Such-Run-4412",
+        "url": "https://reddit.com/r/AIGuild/comments/1rphx1s/openai_is_buying_promptfoo_to_lock_down_ai_agents/",
+        "created_utc": 1773102375.0
+      },
+      {
+        "id": "1rqpjx9",
+        "subreddit": "AgentsOfAI",
+        "title": "OpenAI to acquire Promptfoo",
+        "score": 3,
+        "num_comments": 1,
+        "author": "ExtensionSuccess8539",
+        "url": "https://reddit.com/r/AgentsOfAI/comments/1rqpjx9/openai_to_acquire_promptfoo/",
+        "created_utc": 1773223133.0
+      },
+      {
+        "id": "1rpghb3",
+        "subreddit": "pwnhub",
+        "title": "OpenAI Acquires Promptfoo to Enhance AI Agent Security",
+        "score": 2,
+        "num_comments": 1,
+        "author": "_cybersecurity_",
+        "url": "https://reddit.com/r/pwnhub/comments/1rpghb3/openai_acquires_promptfoo_to_enhance_ai_agent/",
+        "created_utc": 1773098839.0
+      },
+      {
+        "id": "1rp8wrz",
+        "subreddit": "NBCauto",
+        "title": "[National] - OpenAI to buy cybersecurity startup Promptfoo to better safeguard AI agents",
+        "score": 1,
+        "num_comments": 1,
+        "author": "AutoNewsAdmin",
+        "url": "https://reddit.com/r/NBCauto/comments/1rp8wrz/national_openai_to_buy_cybersecurity_startup/",
+        "created_utc": 1773082070.0
+      },
+      {
+        "id": "1rp8ust",
+        "subreddit": "NBCauto",
+        "title": "[Tech] - OpenAI to buy cybersecurity startup Promptfoo to better safeguard AI agents",
+        "score": 1,
+        "num_comments": 1,
+        "author": "AutoNewsAdmin",
+        "url": "https://reddit.com/r/NBCauto/comments/1rp8ust/tech_openai_to_buy_cybersecurity_startup/",
+        "created_utc": 1773081949.0
+      },
+      {
+        "id": "1rpxnuk",
+        "subreddit": "LangChain",
+        "title": "OpenAI just acquired Promptfoo for $86M. What does this mean for teams using non-OpenAI models?",
+        "score": 0,
+        "num_comments": 1,
+        "author": "Revolutionary-Bet-58",
+        "url": "https://reddit.com/r/LangChain/comments/1rpxnuk/openai_just_acquired_promptfoo_for_86m_what_does/",
+        "created_utc": 1773151122.0
+      },
+      {
+        "id": "1rjssls",
+        "subreddit": "netsec",
+        "title": "Red Teaming LLM Web Apps with Promptfoo: Writing a Custom Provider for Real-World Pentesting",
+        "score": 7,
+        "num_comments": 1,
+        "author": "adrian_rt",
+        "url": "https://reddit.com/r/netsec/comments/1rjssls/red_teaming_llm_web_apps_with_promptfoo_writing_a/",
+        "created_utc": 1772552938.0
+      },
+      {
+        "id": "1rp6s8y",
+        "subreddit": "aicuriosity",
+        "title": "OpenAI Acquires Promptfoo to Boost AI Security and Safety Testing",
+        "score": 0,
+        "num_comments": 1,
+        "author": "techspecsmart",
+        "url": "https://reddit.com/r/aicuriosity/comments/1rp6s8y/openai_acquires_promptfoo_to_boost_ai_security/",
+        "created_utc": 1773077647.0
+      },
+      {
+        "id": "1rrlyw3",
+        "subreddit": "TugaTech",
+        "title": "OpenAI adquire Promptfoo para reforçar a segurança dos seus agentes de IA",
+        "score": 1,
+        "num_comments": 0,
+        "author": "tugatech",
+        "url": "https://reddit.com/r/TugaTech/comments/1rrlyw3/openai_adquire_promptfoo_para_reforçar_a/",
+        "created_utc": 1773307304.0
+      },
+      {
+        "id": "1rr88xh",
+        "subreddit": "cybersecurity",
+        "title": "Enterprise AI Redteam application. Combines Promptfoo, Garak, PyRIT, and DeepTeam into a single app.",
+        "score": 1,
+        "num_comments": 0,
+        "author": "ENT-AI-RT",
+        "url": "https://reddit.com/r/cybersecurity/comments/1rr88xh/enterprise_ai_redteam_application_combines/",
+        "created_utc": 1773267147.0
+      },
+      {
+        "id": "1rpsbb8",
+        "subreddit": "Agent_AI",
+        "title": "OpenAI to acquire Promptfoo an AI security platform",
+        "score": 2,
+        "num_comments": 0,
+        "author": "Money-Ranger-6520",
+        "url": "https://reddit.com/r/Agent_AI/comments/1rpsbb8/openai_to_acquire_promptfoo_an_ai_security/",
+        "created_utc": 1773135014.0
+      },
+      {
+        "id": "1rp9tuc",
+        "subreddit": "actutech",
+        "title": "OpenAI rachète Promptfoo - La sécurité des agents IA devient une priorité",
+        "score": 2,
+        "num_comments": 0,
+        "author": "romain34230",
+        "url": "https://reddit.com/r/actutech/comments/1rp9tuc/openai_rachète_promptfoo_la_sécurité_des_agents/",
+        "created_utc": 1773084051.0
+      }
+    ]
+  }
+}

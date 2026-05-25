@@ -1,0 +1,520 @@
+{
+  "project": "Claw Code",
+  "repo": "ultraworkers/claw-code",
+  "collected_at": "2026-05-22T11:29:58.131482+00:00",
+  "queries": [
+    "Claw Code",
+    "claw-code"
+  ],
+  "total_hits": 56,
+  "results": {
+    "Claw Code": [
+      {
+        "objectID": "47601010",
+        "title": "Claw code reaches 100k stars on GitHub in 1 day",
+        "url": "https://smileplease.mataroa.blog/blog/claw-code-reaches-100k-stars-on-github/",
+        "points": 13,
+        "num_comments": 1,
+        "author": "Imustaskforhelp",
+        "created_at": "2026-04-01T14:01:20Z"
+      },
+      {
+        "objectID": "47613215",
+        "title": "Claw Code Architecture Explained",
+        "url": "",
+        "points": 5,
+        "num_comments": 1,
+        "author": "suprab",
+        "created_at": "2026-04-02T11:56:21Z"
+      },
+      {
+        "objectID": "47620602",
+        "title": "Rewrite of the Claw Code project aimed at significantly reducing token usage",
+        "url": "https://github.com/deepreinforce-ai/Tokenless-Claw-Code",
+        "points": 4,
+        "num_comments": 1,
+        "author": "kathyxiao",
+        "created_at": "2026-04-02T21:46:25Z"
+      },
+      {
+        "objectID": "48000722",
+        "title": "Claude Code Leak: 8100 Takedown Requests and the Birth of Claw-Code",
+        "url": "https://www.heise.de/en/news/Claude-Code-Leak-8100-Takedown-Requests-and-the-Birth-of-Claw-Code-11279674.html",
+        "points": 4,
+        "num_comments": 0,
+        "author": "smartmic",
+        "created_at": "2026-05-03T19:52:04Z"
+      },
+      {
+        "objectID": "47598539",
+        "title": "Rewriting Project Claw Code",
+        "url": "https://github.com/instructkr/claw-code",
+        "points": 4,
+        "num_comments": 0,
+        "author": "vismit2000",
+        "created_at": "2026-04-01T09:06:11Z"
+      },
+      {
+        "objectID": "47596701",
+        "title": "Claw-Code Rust Implementation",
+        "url": "https://github.com/instructkr/claw-code/tree/main/rust",
+        "points": 4,
+        "num_comments": 0,
+        "author": "beatthatflight",
+        "created_at": "2026-04-01T04:09:11Z"
+      },
+      {
+        "objectID": "47261245",
+        "title": "Ask HN: Is claw-generated code copyright-able?",
+        "url": "",
+        "points": 3,
+        "num_comments": 1,
+        "author": "g-clef",
+        "created_at": "2026-03-05T13:17:29Z"
+      },
+      {
+        "objectID": "5829882",
+        "title": "Fedora's Schrödinger's Cat Linux gives coders claws for thought",
+        "url": "http://www.theregister.co.uk/2013/05/31/fedora_19_beta_review/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "stevewillensky",
+        "created_at": "2013-06-06T01:46:47Z"
+      },
+      {
+        "objectID": "47623778",
+        "title": "ClawCode – a Rust rewrite of Claude Code with 100% behavioral parity",
+        "url": "https://github.com/StartripAI/claw_code",
+        "points": 2,
+        "num_comments": 1,
+        "author": "AlfredHua1",
+        "created_at": "2026-04-03T06:28:06Z"
+      },
+      {
+        "objectID": "47904616",
+        "title": "ClawCodex – Claw Code with Upgrades",
+        "url": "https://github.com/Skynet-Pro-Plus/ClawCodex",
+        "points": 2,
+        "num_comments": 0,
+        "author": "skynetproplus",
+        "created_at": "2026-04-25T21:17:08Z"
+      },
+      {
+        "objectID": "47108559",
+        "title": "Mini Claw Code – Write your own mini coding agent",
+        "url": "https://github.com/odysa/mini-claw-code",
+        "points": 2,
+        "num_comments": 0,
+        "author": "agentforce",
+        "created_at": "2026-02-22T05:45:46Z"
+      },
+      {
+        "objectID": "47615235",
+        "title": "Claw Code – A Full Rewrite of Claude Code in Python",
+        "url": "https://github.com/ultraworkers/claw-code",
+        "points": 1,
+        "num_comments": 3,
+        "author": "redbell",
+        "created_at": "2026-04-02T14:47:27Z"
+      },
+      {
+        "objectID": "47624190",
+        "title": "What Claw Code Reveals About AI Coding Agent Architecture (5-Part Series)",
+        "url": "https://tolearn.blog/blog/2026-04-02-claw-code-ai-coding-agent-architecture",
+        "points": 1,
+        "num_comments": 0,
+        "author": "nikeyang",
+        "created_at": "2026-04-03T07:49:32Z"
+      },
+      {
+        "objectID": "47290816",
+        "title": "Show HN: I Made OpenClaw for Coding – ClawCode",
+        "url": "https://clawcode.app",
+        "points": 1,
+        "num_comments": 0,
+        "author": "pvisilias",
+        "created_at": "2026-03-07T19:43:10Z"
+      },
+      {
+        "objectID": "45640187",
+        "title": "Claw Code",
+        "url": "https://github.com/jamesrochabrun/Claw",
+        "points": 1,
+        "num_comments": 0,
+        "author": "handfuloflight",
+        "created_at": "2025-10-20T04:28:59Z"
+      },
+      {
+        "objectID": "47717892",
+        "title": "Show HN: Zeroclawed: Secure Agent Gateway",
+        "url": "https://github.com/bglusman/zeroclawed",
+        "points": 8,
+        "num_comments": 3,
+        "author": "bglusman",
+        "created_at": "2026-04-10T13:32:40Z"
+      },
+      {
+        "objectID": "47876210",
+        "title": "Ask HN: Open-Source Coding Model and Harness at Claude Sonnet / Opus Level Perf?",
+        "url": "",
+        "points": 3,
+        "num_comments": 3,
+        "author": "connecteev",
+        "created_at": "2026-04-23T14:31:20Z"
+      },
+      {
+        "objectID": "47588467",
+        "title": "Someone just converted Claude Leark from TypeScript to 100% Python",
+        "url": "https://github.com/instructkr/claw-code",
+        "points": 27,
+        "num_comments": 7,
+        "author": "iamsyr",
+        "created_at": "2026-03-31T15:07:51Z"
+      },
+      {
+        "objectID": "48014643",
+        "title": "LLxprt Code Is the Anti-Claw",
+        "url": "https://vybestack.dev/blog/rendered/2026-02-20-anti-claw.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "mooreds",
+        "created_at": "2026-05-04T20:38:37Z"
+      },
+      {
+        "objectID": "46938916",
+        "title": "Show HN: WrapClaw – a managed SaaS wrapper around Open Claw",
+        "url": "",
+        "points": 6,
+        "num_comments": 3,
+        "author": "kushagraagent",
+        "created_at": "2026-02-08T21:53:46Z"
+      },
+      {
+        "objectID": "8516527",
+        "title": "Ask HN: Have you been able to leave Google's claws altogether?",
+        "url": "",
+        "points": 4,
+        "num_comments": 7,
+        "author": "geekam",
+        "created_at": "2014-10-27T16:37:35Z"
+      },
+      {
+        "objectID": "47307215",
+        "title": "Gyro-Claw – Secure execution runtime for AI agents",
+        "url": "",
+        "points": 4,
+        "num_comments": 1,
+        "author": "gyroscape",
+        "created_at": "2026-03-09T10:34:35Z"
+      },
+      {
+        "objectID": "47182142",
+        "title": "Show HN: Clappie – Claude Code remote but more fun and useful",
+        "url": "https://clappie.ai/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "TIPSIO",
+        "created_at": "2026-02-27T16:06:47Z"
+      },
+      {
+        "objectID": "47135796",
+        "title": "Show HN: Claw Cash – Money agents can trust, and verify. Stablecoins in. BTC out",
+        "url": "https://clw.cash/",
+        "points": 2,
+        "num_comments": 2,
+        "author": "tierotiero",
+        "created_at": "2026-02-24T11:32:10Z"
+      },
+      {
+        "objectID": "46857751",
+        "title": "Open Claw Clone and Dev Containers",
+        "url": "",
+        "points": 2,
+        "num_comments": 1,
+        "author": "afspear",
+        "created_at": "2026-02-02T16:17:41Z"
+      },
+      {
+        "objectID": "47308454",
+        "title": "Streaming My Vitals to Dr. Claw",
+        "url": "https://zach.codes/p/streaming-my-vitals-to-dr-claw",
+        "points": 2,
+        "num_comments": 0,
+        "author": "zackify",
+        "created_at": "2026-03-09T12:59:37Z"
+      },
+      {
+        "objectID": "47255852",
+        "title": "Show HN: A rec.us CLI for your Claw",
+        "url": "https://github.com/jakajancar/recus",
+        "points": 2,
+        "num_comments": 0,
+        "author": "JakaJancar",
+        "created_at": "2026-03-05T00:18:55Z"
+      },
+      {
+        "objectID": "47216532",
+        "title": "Show HN: Claw – Let your AI agent operate any machine as if it were local",
+        "url": "https://github.com/opsyhq/claw",
+        "points": 2,
+        "num_comments": 0,
+        "author": "d36ugger",
+        "created_at": "2026-03-02T11:21:30Z"
+      },
+      {
+        "objectID": "7152531",
+        "title": "Why managed code is safer.",
+        "url": "http://slashdot.org/topic/bi/yes-managed-code-is-safer/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Ragged_Claw",
+        "created_at": "2014-01-30T18:48:47Z"
+      },
+      {
+        "objectID": "47251699",
+        "title": "Show HN: AutosClaw – security first *claw with live chat to any agent session",
+        "url": "https://github.com/BreuerFlorian/autosclaw",
+        "points": 1,
+        "num_comments": 0,
+        "author": "fbreuer",
+        "created_at": "2026-03-04T18:27:18Z"
+      },
+      {
+        "objectID": "46859697",
+        "title": "Show HN: Yaoclaw (Yet Another Open Claw)AI agent that runs cmds in macOS sandbox",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ezulabs",
+        "created_at": "2026-02-02T18:53:26Z"
+      },
+      {
+        "objectID": "16937836",
+        "title": "ESP32 IoT Joytick  to Play Online Claw Machines",
+        "url": "https://medium.com/@codeyourventurefree/diy-iot-joytick-to-play-online-claw-machines-175206679fc9",
+        "points": 1,
+        "num_comments": 0,
+        "author": "kiostech",
+        "created_at": "2018-04-27T01:46:17Z"
+      },
+      {
+        "objectID": "65327",
+        "title": "Why to Apply to YCombinator",
+        "url": "",
+        "points": 113,
+        "num_comments": 36,
+        "author": "palish",
+        "created_at": "2007-10-09T17:05:40Z"
+      },
+      {
+        "objectID": "30275629",
+        "title": "Ask HN: Is the state of mail user agents that sad?",
+        "url": "",
+        "points": 19,
+        "num_comments": 24,
+        "author": "s5806533",
+        "created_at": "2022-02-09T17:49:51Z"
+      },
+      {
+        "objectID": "47774344",
+        "title": "Show HN: Make sure your OpenClaw isn't doing things it's not supposed to",
+        "url": "https://claw.armoriq.ai/",
+        "points": 18,
+        "num_comments": 5,
+        "author": "vaibhavb007",
+        "created_at": "2026-04-15T03:26:03Z"
+      },
+      {
+        "objectID": "46840707",
+        "title": "Show HN: Pinchwork – A task marketplace where AI agents hire each other",
+        "url": "https://github.com/anneschuth/pinchwork",
+        "points": 12,
+        "num_comments": 8,
+        "author": "aschuth",
+        "created_at": "2026-01-31T20:51:42Z"
+      },
+      {
+        "objectID": "47950752",
+        "title": "Show HN: AgentPort – Open-source Security Gateway For Agents",
+        "url": "https://agentport.sh/",
+        "points": 8,
+        "num_comments": 3,
+        "author": "yakkomajuri",
+        "created_at": "2026-04-29T16:33:38Z"
+      },
+      {
+        "objectID": "47490244",
+        "title": "Ask HN: If there has been no prompt injection, is it safe?",
+        "url": "",
+        "points": 7,
+        "num_comments": 8,
+        "author": "sayYayToLife",
+        "created_at": "2026-03-23T14:43:31Z"
+      },
+      {
+        "objectID": "47939096",
+        "title": "Show HN: SlopIt – A dead-simple CMS for your AI agent",
+        "url": "https://slopit.io/",
+        "points": 5,
+        "num_comments": 0,
+        "author": "asenna",
+        "created_at": "2026-04-28T19:09:50Z"
+      },
+      {
+        "objectID": "47426704",
+        "title": "Show HN: PlanckClaw an AI agent in 6832 bytes of x86-64 assembly",
+        "url": "https://github.com/frntn/planckclaw",
+        "points": 4,
+        "num_comments": 4,
+        "author": "frntn",
+        "created_at": "2026-03-18T15:07:09Z"
+      }
+    ],
+    "claw-code": [
+      {
+        "objectID": "47601010",
+        "title": "Claw code reaches 100k stars on GitHub in 1 day",
+        "url": "https://smileplease.mataroa.blog/blog/claw-code-reaches-100k-stars-on-github/",
+        "points": 13,
+        "num_comments": 1,
+        "author": "Imustaskforhelp",
+        "created_at": "2026-04-01T14:01:20Z"
+      },
+      {
+        "objectID": "47613215",
+        "title": "Claw Code Architecture Explained",
+        "url": "",
+        "points": 5,
+        "num_comments": 1,
+        "author": "suprab",
+        "created_at": "2026-04-02T11:56:21Z"
+      },
+      {
+        "objectID": "47620602",
+        "title": "Rewrite of the Claw Code project aimed at significantly reducing token usage",
+        "url": "https://github.com/deepreinforce-ai/Tokenless-Claw-Code",
+        "points": 4,
+        "num_comments": 1,
+        "author": "kathyxiao",
+        "created_at": "2026-04-02T21:46:25Z"
+      },
+      {
+        "objectID": "48000722",
+        "title": "Claude Code Leak: 8100 Takedown Requests and the Birth of Claw-Code",
+        "url": "https://www.heise.de/en/news/Claude-Code-Leak-8100-Takedown-Requests-and-the-Birth-of-Claw-Code-11279674.html",
+        "points": 4,
+        "num_comments": 0,
+        "author": "smartmic",
+        "created_at": "2026-05-03T19:52:04Z"
+      },
+      {
+        "objectID": "47598539",
+        "title": "Rewriting Project Claw Code",
+        "url": "https://github.com/instructkr/claw-code",
+        "points": 4,
+        "num_comments": 0,
+        "author": "vismit2000",
+        "created_at": "2026-04-01T09:06:11Z"
+      },
+      {
+        "objectID": "47596701",
+        "title": "Claw-Code Rust Implementation",
+        "url": "https://github.com/instructkr/claw-code/tree/main/rust",
+        "points": 4,
+        "num_comments": 0,
+        "author": "beatthatflight",
+        "created_at": "2026-04-01T04:09:11Z"
+      },
+      {
+        "objectID": "47623778",
+        "title": "ClawCode – a Rust rewrite of Claude Code with 100% behavioral parity",
+        "url": "https://github.com/StartripAI/claw_code",
+        "points": 2,
+        "num_comments": 1,
+        "author": "AlfredHua1",
+        "created_at": "2026-04-03T06:28:06Z"
+      },
+      {
+        "objectID": "47904616",
+        "title": "ClawCodex – Claw Code with Upgrades",
+        "url": "https://github.com/Skynet-Pro-Plus/ClawCodex",
+        "points": 2,
+        "num_comments": 0,
+        "author": "skynetproplus",
+        "created_at": "2026-04-25T21:17:08Z"
+      },
+      {
+        "objectID": "47108559",
+        "title": "Mini Claw Code – Write your own mini coding agent",
+        "url": "https://github.com/odysa/mini-claw-code",
+        "points": 2,
+        "num_comments": 0,
+        "author": "agentforce",
+        "created_at": "2026-02-22T05:45:46Z"
+      },
+      {
+        "objectID": "47615235",
+        "title": "Claw Code – A Full Rewrite of Claude Code in Python",
+        "url": "https://github.com/ultraworkers/claw-code",
+        "points": 1,
+        "num_comments": 3,
+        "author": "redbell",
+        "created_at": "2026-04-02T14:47:27Z"
+      },
+      {
+        "objectID": "47624190",
+        "title": "What Claw Code Reveals About AI Coding Agent Architecture (5-Part Series)",
+        "url": "https://tolearn.blog/blog/2026-04-02-claw-code-ai-coding-agent-architecture",
+        "points": 1,
+        "num_comments": 0,
+        "author": "nikeyang",
+        "created_at": "2026-04-03T07:49:32Z"
+      },
+      {
+        "objectID": "47290816",
+        "title": "Show HN: I Made OpenClaw for Coding – ClawCode",
+        "url": "https://clawcode.app",
+        "points": 1,
+        "num_comments": 0,
+        "author": "pvisilias",
+        "created_at": "2026-03-07T19:43:10Z"
+      },
+      {
+        "objectID": "45640187",
+        "title": "Claw Code",
+        "url": "https://github.com/jamesrochabrun/Claw",
+        "points": 1,
+        "num_comments": 0,
+        "author": "handfuloflight",
+        "created_at": "2025-10-20T04:28:59Z"
+      },
+      {
+        "objectID": "47717892",
+        "title": "Show HN: Zeroclawed: Secure Agent Gateway",
+        "url": "https://github.com/bglusman/zeroclawed",
+        "points": 8,
+        "num_comments": 3,
+        "author": "bglusman",
+        "created_at": "2026-04-10T13:32:40Z"
+      },
+      {
+        "objectID": "47876210",
+        "title": "Ask HN: Open-Source Coding Model and Harness at Claude Sonnet / Opus Level Perf?",
+        "url": "",
+        "points": 3,
+        "num_comments": 3,
+        "author": "connecteev",
+        "created_at": "2026-04-23T14:31:20Z"
+      },
+      {
+        "objectID": "47588467",
+        "title": "Someone just converted Claude Leark from TypeScript to 100% Python",
+        "url": "https://github.com/instructkr/claw-code",
+        "points": 27,
+        "num_comments": 7,
+        "author": "iamsyr",
+        "created_at": "2026-03-31T15:07:51Z"
+      }
+    ]
+  }
+}

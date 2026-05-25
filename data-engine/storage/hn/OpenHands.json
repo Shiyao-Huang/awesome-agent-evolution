@@ -1,7 +1,7 @@
 {
   "project": "OpenHands",
   "repo": "All-Hands-AI/OpenHands",
-  "collected_at": "2026-05-22T11:00:54.754078+00:00",
+  "collected_at": "2026-05-22T11:25:29.611942+00:00",
   "queries": [
     "OpenHands",
     "OpenHands"
@@ -352,22 +352,22 @@
         "created_at": "2025-01-27T00:11:27Z"
       },
       {
-        "objectID": "17248095",
-        "title": "Java: \"+=\" applied to String operands can provoke side effects",
-        "url": "https://bugs.openjdk.java.net/browse/JDK-8204322",
-        "points": 240,
-        "num_comments": 96,
-        "author": "javinpaul",
-        "created_at": "2018-06-06T15:49:35Z"
+        "objectID": "27773",
+        "title": "Ad software maker OpenAds girds to take on Google",
+        "url": "http://www.reuters.com/article/internetNews/idUSN1231267320070613",
+        "points": 8,
+        "num_comments": 3,
+        "author": "gibsonf1",
+        "created_at": "2007-06-13T11:59:15Z"
       },
       {
-        "objectID": "20195155",
-        "title": "OpenMandriva, the first Clang-built Linux distribution",
-        "url": "https://www.openmandriva.org/en/news/article/the-best-until-openmandriva-does-better-released-omlx-4-0",
-        "points": 148,
-        "num_comments": 131,
-        "author": "Conan_Kudo",
-        "created_at": "2019-06-16T12:32:17Z"
+        "objectID": "8244988",
+        "title": "Negative shift operands in C++",
+        "url": "http://bertolami.com/index.php?engine=blog&content=posts&detail=negative-shift-operands-cpp",
+        "points": 6,
+        "num_comments": 0,
+        "author": "platunit2",
+        "created_at": "2014-08-29T23:25:04Z"
       }
     ]
   }

@@ -1,0 +1,374 @@
+{
+  "project": "ADAS",
+  "repo": "ShengranHu/ADAS",
+  "collected_at": "2026-05-22T11:31:09.137235+00:00",
+  "queries": [
+    "ADAS",
+    "ADAS"
+  ],
+  "total_hits": 40,
+  "results": {
+    "ADAS": [
+      {
+        "objectID": "34920760",
+        "title": "Google search for a local restaurant returns scammer’s ad as top result",
+        "url": "https://twitter.com/doctorow/status/1628948906657878016",
+        "points": 430,
+        "num_comments": 225,
+        "author": "rasz",
+        "created_at": "2023-02-24T04:28:52Z"
+      },
+      {
+        "objectID": "17797003",
+        "title": "What Did Ada Lovelace’s Program Actually Do?",
+        "url": "https://twobithistory.org/2018/08/18/ada-lovelace-note-g.html",
+        "points": 410,
+        "num_comments": 52,
+        "author": "weebst",
+        "created_at": "2018-08-20T00:29:44Z"
+      },
+      {
+        "objectID": "42432867",
+        "title": "What did Ada Lovelace's program actually do? (2018)",
+        "url": "https://twobithistory.org/2018/08/18/ada-lovelace-note-g.html",
+        "points": 355,
+        "num_comments": 129,
+        "author": "mitchbob",
+        "created_at": "2024-12-16T16:58:57Z"
+      },
+      {
+        "objectID": "20930652",
+        "title": "Why Ada Is the Language You Want to Be Programming Your Systems With",
+        "url": "https://hackaday.com/2019/09/10/why-ada-is-the-language-you-want-to-be-programming-your-systems-with/",
+        "points": 301,
+        "num_comments": 324,
+        "author": "fogus",
+        "created_at": "2019-09-10T17:19:09Z"
+      },
+      {
+        "objectID": "45473861",
+        "title": "A comparison of Ada and Rust, using solutions to the Advent of Code",
+        "url": "https://github.com/johnperry-math/AoC2023/blob/master/More_Detailed_Comparison.md",
+        "points": 290,
+        "num_comments": 253,
+        "author": "andsoitis",
+        "created_at": "2025-10-04T15:10:49Z"
+      },
+      {
+        "objectID": "47803844",
+        "title": "Ada, its design, and the language that built the languages",
+        "url": "https://www.iqiipi.com/the-quiet-colossus.html",
+        "points": 286,
+        "num_comments": 224,
+        "author": "mpweiher",
+        "created_at": "2026-04-17T08:51:38Z"
+      },
+      {
+        "objectID": "28344885",
+        "title": "Summary After Four Months with Ada",
+        "url": "https://pyjarrett.github.io/programming-with-ada/four-months-summary.html",
+        "points": 286,
+        "num_comments": 175,
+        "author": "thindil",
+        "created_at": "2021-08-29T07:22:01Z"
+      },
+      {
+        "objectID": "42528302",
+        "title": "Ada's dependent types, and its types as a whole",
+        "url": "https://nytpu.com/gemlog/2024-12-27",
+        "points": 256,
+        "num_comments": 139,
+        "author": "nytpu",
+        "created_at": "2024-12-28T03:22:29Z"
+      },
+      {
+        "objectID": "24488986",
+        "title": "Airbus Chooses GNAT Pro Ada for Development of Unmanned Aerial System",
+        "url": "https://www.manufacturing.net/aerospace/news/21175187/airbus-chooses-gnat-pro-ada-for-development-of-unmanned-aerial-system",
+        "points": 212,
+        "num_comments": 194,
+        "author": "jayp1418",
+        "created_at": "2020-09-16T02:32:19Z"
+      },
+      {
+        "objectID": "24360310",
+        "title": "Introduction to Ada",
+        "url": "https://learn.adacore.com/courses/intro-to-ada/index.html",
+        "points": 206,
+        "num_comments": 184,
+        "author": "jayp1418",
+        "created_at": "2020-09-03T02:28:43Z"
+      },
+      {
+        "objectID": "30726471",
+        "title": "Justice Department Issues Web Accessibility Guidance Under the ADA",
+        "url": "https://www.justice.gov/opa/pr/justice-department-issues-web-accessibility-guidance-under-americans-disabilities-act",
+        "points": 202,
+        "num_comments": 275,
+        "author": "greenie_beans",
+        "created_at": "2022-03-18T19:30:05Z"
+      },
+      {
+        "objectID": "40132373",
+        "title": "Show HN: Getada: rustup-like installer for Ada's toolchain/package manager",
+        "url": "https://getada.dev",
+        "points": 194,
+        "num_comments": 115,
+        "author": "ajdude",
+        "created_at": "2024-04-23T14:26:26Z"
+      },
+      {
+        "objectID": "45106314",
+        "title": "Introduction to Ada: a project-based exploration with rosettas",
+        "url": "https://blog.adacore.com/introduction-to-ada-a-project-based-exploration-with-rosettas",
+        "points": 194,
+        "num_comments": 51,
+        "author": "jaypatelani",
+        "created_at": "2025-09-02T17:32:08Z"
+      },
+      {
+        "objectID": "26302344",
+        "title": "Giving Ada a Chance",
+        "url": "https://ajxs.me/blog/Giving_Ada_a_chance.html",
+        "points": 177,
+        "num_comments": 254,
+        "author": "jayp1418",
+        "created_at": "2021-03-01T13:01:18Z"
+      },
+      {
+        "objectID": "19510074",
+        "title": "Learning Ada",
+        "url": "https://words.steveklabnik.com/learning-ada",
+        "points": 176,
+        "num_comments": 129,
+        "author": "weinzierl",
+        "created_at": "2019-03-28T07:30:57Z"
+      },
+      {
+        "objectID": "31804843",
+        "title": "What's New in Ada 2022",
+        "url": "https://learn.adacore.com/courses/whats-new-in-ada-2022/index.html",
+        "points": 175,
+        "num_comments": 41,
+        "author": "skibz",
+        "created_at": "2022-06-20T00:14:13Z"
+      },
+      {
+        "objectID": "42998061",
+        "title": "The state of Rust trying to catch up with Ada [video]",
+        "url": "https://fosdem.org/2025/schedule/event/fosdem-2025-5356-the-state-of-rust-trying-to-catch-up-with-ada/",
+        "points": 170,
+        "num_comments": 192,
+        "author": "pjmlp",
+        "created_at": "2025-02-10T08:30:54Z"
+      },
+      {
+        "objectID": "24152339",
+        "title": "Epic will mock Apple’s most iconic ad as possible revenge for App Store ban",
+        "url": "https://www.theverge.com/2020/8/13/21367904/epic-parody-apple-1984-ad-fortnite-removal-app-store",
+        "points": 168,
+        "num_comments": 125,
+        "author": "pseudolus",
+        "created_at": "2020-08-14T02:01:10Z"
+      },
+      {
+        "objectID": "42996831",
+        "title": "How does Ada's memory safety compare against Rust?",
+        "url": "https://ajxs.me/blog/How_Does_Adas_Memory_Safety_Compare_Against_Rust.html",
+        "points": 166,
+        "num_comments": 158,
+        "author": "pabs3",
+        "created_at": "2025-02-10T04:07:32Z"
+      },
+      {
+        "objectID": "38498775",
+        "title": "Is Ada safer than Rust?",
+        "url": "https://old.reddit.com/r/rust/comments/17miqiu/is_ada_safer_than_rust/",
+        "points": 166,
+        "num_comments": 112,
+        "author": "ajdude",
+        "created_at": "2023-12-02T14:22:34Z"
+      },
+      {
+        "objectID": "10709730",
+        "title": "Untangling the Tale of Ada Lovelace",
+        "url": "http://blog.stephenwolfram.com/2015/12/untangling-the-tale-of-ada-lovelace/",
+        "points": 157,
+        "num_comments": 35,
+        "author": "lispython",
+        "created_at": "2015-12-10T09:27:55Z"
+      },
+      {
+        "objectID": "47280352",
+        "title": "Ada 2022",
+        "url": "https://www.adaic.org/ada-resources/standards/ada22/",
+        "points": 154,
+        "num_comments": 39,
+        "author": "tosh",
+        "created_at": "2026-03-06T20:03:48Z"
+      },
+      {
+        "objectID": "26609060",
+        "title": "Ada for the C++ and Java Developer [pdf]",
+        "url": "https://learn.adacore.com/pdf_books/courses/Ada_For_The_CPP_Java_Developer.pdf",
+        "points": 152,
+        "num_comments": 70,
+        "author": "pjmlp",
+        "created_at": "2021-03-28T09:39:34Z"
+      },
+      {
+        "objectID": "8250646",
+        "title": "Boeing Flies on 99% Ada",
+        "url": "http://archive.adaic.com/projects/atwork/boeing.html",
+        "points": 150,
+        "num_comments": 157,
+        "author": "galapago",
+        "created_at": "2014-08-31T22:39:48Z"
+      },
+      {
+        "objectID": "30638542",
+        "title": "Lessons Learnt Moving a GTK Application from Go to Ada",
+        "url": "https://github.com/SMerrony/dashera/blob/10ab6e4ece8ea1c16ad055c063c5e743d89cd6bc/Docs/LessonsLearnt.md",
+        "points": 146,
+        "num_comments": 50,
+        "author": "ajdude",
+        "created_at": "2022-03-11T11:10:20Z"
+      },
+      {
+        "objectID": "22231096",
+        "title": "Crema Coffee in San Jose Closes Due to ADA Lawsuit",
+        "url": "https://sanjosespotlight.com/access-v-abuse-crema-coffee-in-san-jose-closes-due-to-ada-lawsuit/",
+        "points": 145,
+        "num_comments": 237,
+        "author": "fortran77",
+        "created_at": "2020-02-04T00:42:18Z"
+      },
+      {
+        "objectID": "12331743",
+        "title": "Learning from Ada",
+        "url": "http://www.monkeysnatchbanana.com/2016/02/22/learning-from-ada/",
+        "points": 144,
+        "num_comments": 99,
+        "author": "rspivak",
+        "created_at": "2016-08-21T17:25:07Z"
+      },
+      {
+        "objectID": "36787473",
+        "title": "Use pytorch2+cu118 with ADA hardware for 50%+ speedup",
+        "url": "https://gpux.ai/blog/sdxl_50_faster",
+        "points": 141,
+        "num_comments": 35,
+        "author": "vans554",
+        "created_at": "2023-07-19T14:55:54Z"
+      },
+      {
+        "objectID": "21211682",
+        "title": "VxWorks now with C++17 and Rust support, alongside Ada and SPARK",
+        "url": "https://www.windriver.com/news/press/pr.html?ID=22444",
+        "points": 140,
+        "num_comments": 61,
+        "author": "pjmlp",
+        "created_at": "2019-10-10T06:55:43Z"
+      },
+      {
+        "objectID": "28477046",
+        "title": "Clearing up Myths about Ada",
+        "url": "https://pyjarrett.github.io/programming-with-ada/clearing-the-air.html",
+        "points": 138,
+        "num_comments": 115,
+        "author": "jayp1418",
+        "created_at": "2021-09-10T02:19:31Z"
+      },
+      {
+        "objectID": "39567780",
+        "title": "Ada 95: The Craft of Object-Oriented Programming",
+        "url": "https://adaic.org/resources/add_content/docs/craft/html/contents.htm",
+        "points": 138,
+        "num_comments": 75,
+        "author": "stefankuehnel",
+        "created_at": "2024-03-01T22:52:57Z"
+      },
+      {
+        "objectID": "33691635",
+        "title": "Introduction to Embedded Systems Programming (Ada)",
+        "url": "https://learn.adacore.com/courses/intro-to-embedded-sys-prog/index.html",
+        "points": 135,
+        "num_comments": 19,
+        "author": "gusthoff",
+        "created_at": "2022-11-21T12:03:05Z"
+      },
+      {
+        "objectID": "37288446",
+        "title": "Writing Linux Modules in Ada (2016)",
+        "url": "http://www.nihamkin.com/2016/10/23/writing-linux-modules-in-ada-part-1/#writing-linux-modules-in-ada-part-1",
+        "points": 134,
+        "num_comments": 84,
+        "author": "slondr",
+        "created_at": "2023-08-28T01:05:24Z"
+      },
+      {
+        "objectID": "28653496",
+        "title": "TheseToonsDoNotExist: StyleGAN2-ADA trained on CG cartoon faces",
+        "url": "http://www.thesetoonsdonotexist.com/",
+        "points": 131,
+        "num_comments": 71,
+        "author": "codetrotter",
+        "created_at": "2021-09-25T14:33:45Z"
+      },
+      {
+        "objectID": "14209685",
+        "title": "Ada: a C Developer's Perspective",
+        "url": "http://www.methodsandtools.com/archive/ada.php",
+        "points": 127,
+        "num_comments": 151,
+        "author": "wtracy",
+        "created_at": "2017-04-27T06:52:07Z"
+      },
+      {
+        "objectID": "26761464",
+        "title": "Court rules grocery store’s inaccessible website isn’t an ADA violation",
+        "url": "https://arstechnica.com/tech-policy/2021/04/appeals-court-rules-stores-dont-need-to-make-their-websites-accessible/",
+        "points": 123,
+        "num_comments": 137,
+        "author": "Tomte",
+        "created_at": "2021-04-10T13:47:09Z"
+      },
+      {
+        "objectID": "12850919",
+        "title": "A Random Walk Through Ada (2014)",
+        "url": "http://cowlark.com/2014-04-27-ada/index.html",
+        "points": 123,
+        "num_comments": 88,
+        "author": "akalin",
+        "created_at": "2016-11-01T23:02:07Z"
+      },
+      {
+        "objectID": "27576959",
+        "title": "Going Beyond Ada 2022",
+        "url": "https://blog.adacore.com/going-beyond-ada-2022",
+        "points": 123,
+        "num_comments": 67,
+        "author": "pjmlp",
+        "created_at": "2021-06-21T07:03:10Z"
+      },
+      {
+        "objectID": "44889163",
+        "title": "Writing a competitive BZip2 encoder in Ada from scratch in a few days – part 2",
+        "url": "https://gautiersblog.blogspot.com/2025/07/writing-bzip2-encoder-in-ada-from.html",
+        "points": 121,
+        "num_comments": 8,
+        "author": "ajdude",
+        "created_at": "2025-08-13T14:47:01Z"
+      },
+      {
+        "objectID": "7824570",
+        "title": "Why Ada isn't Popular (1998)",
+        "url": "http://www.adapower.com/index.php?Command=Class&ClassID=Advocacy&CID=39",
+        "points": 118,
+        "num_comments": 112,
+        "author": "Jtsummers",
+        "created_at": "2014-05-30T23:06:38Z"
+      }
+    ]
+  }
+}

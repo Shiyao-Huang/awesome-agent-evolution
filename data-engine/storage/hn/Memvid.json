@@ -1,12 +1,12 @@
 {
   "project": "Memvid",
   "repo": "memvid/memvid",
-  "collected_at": "2026-05-22T11:00:35.465122+00:00",
+  "collected_at": "2026-05-22T11:25:09.022498+00:00",
   "queries": [
     "Memvid",
     "memvid"
   ],
-  "total_hits": 59,
+  "total_hits": 60,
   "results": {
     "Memvid": [
       {
@@ -260,6 +260,15 @@
         "num_comments": 2,
         "author": "J3L2404",
         "created_at": "2010-05-10T00:05:44Z"
+      },
+      {
+        "objectID": "21846396",
+        "title": "Eagle Mode Zoomable GUI [video]",
+        "url": "http://eaglemode.sourceforge.net/emvideo.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "juancampa",
+        "created_at": "2019-12-20T18:37:27Z"
       },
       {
         "objectID": "11259535",

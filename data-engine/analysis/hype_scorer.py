@@ -1,260 +1,330 @@
 #!/usr/bin/env python3
-"""
-Hype Scorer — Star Quality & Hype Detection Engine
-
-Scores projects using available cross-platform data:
-  - HN engagement (points, comments)
-  - GitHub stars/contributors (when available)
-  - Community engagement signals
-
-Suspicion Index = stars_per_contributor / 100 (when GH data available)
-Fallback: HN engagement ratio as proxy.
-"""
+"""Score projects by cross-platform hype using HN, Reddit, GitHub, Scholar data."""
 
 import argparse
 import json
 import os
-from datetime import datetime, timedelta
-from pathlib import Path
-
-try:
-    import numpy as np
-except ImportError:
-    np = None
+import sys
+from datetime import datetime, timezone
+from collections import defaultdict
 
 
-def load_json(path: str):
-    if not os.path.exists(path):
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def load_json(path):
+    """Load a JSON file, returning {} on any failure."""
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data if isinstance(data, dict) else {}
+    except (json.JSONDecodeError, FileNotFoundError, OSError):
+        return {}
+
+
+def parse_date(value):
+    """Parse ISO string or Unix timestamp (int/float) into a datetime, or return None."""
+    if value is None:
         return None
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def discover_projects(storage_dir: str) -> dict:
-    """Discover all projects from storage subdirectories."""
-    projects = {}
-    # Scan all subdirectories (hn/, reddit/, github/, social/, etc.)
-    for subdir in os.listdir(storage_dir):
-        sub_path = os.path.join(storage_dir, subdir)
-        if not os.path.isdir(sub_path) or subdir in ("analysis", "propagation"):
-            continue
-        for fname in os.listdir(sub_path):
-            if not fname.endswith(".json"):
+    # Unix timestamp — int or float
+    if isinstance(value, (int, float)):
+        try:
+            return datetime.fromtimestamp(value, tz=timezone.utc)
+        except (OSError, OverflowError, ValueError):
+            return None
+    # ISO string
+    if isinstance(value, str):
+        for fmt in (
+            "%Y-%m-%dT%H:%M:%S.%f%z",
+            "%Y-%m-%dT%H:%M:%S%z",
+            "%Y-%m-%dT%H:%M:%S.%f",
+            "%Y-%m-%dT%H:%M:%S",
+            "%Y-%m-%d %H:%M:%S",
+            "%Y-%m-%d",
+        ):
+            try:
+                return datetime.strptime(value, fmt).replace(tzinfo=timezone.utc)
+            except ValueError:
                 continue
-            proj_name = fname.replace(".json", "")
-            fpath = os.path.join(sub_path, fname)
-            data = load_json(fpath)
-            if data:
-                projects.setdefault(proj_name, {})[subdir] = data
-    # Also check flat files in storage_dir
-    for fname in os.listdir(storage_dir):
-        if fname.endswith(".json"):
-            proj_name = fname.replace(".json", "")
-            fpath = os.path.join(storage_dir, fname)
-            data = load_json(fpath)
-            if data:
-                projects.setdefault(proj_name, {})["root"] = data
-    return projects
+    return None
 
 
-def score_hn_engagement(hn_data: dict) -> dict:
-    """Score HN engagement: points and comments distribution."""
-    if not hn_data or not hn_data.get("results"):
-        return {"score": 0.5, "total_hits": 0, "avg_points": 0, "avg_comments": 0}
+def discover_projects(storage_dir):
+    """Return set of project names found across all storage subdirectories.
 
-    all_items = []
-    results = hn_data["results"]
-    if isinstance(results, dict):
-        for query, items in results.items():
-            if isinstance(items, list):
-                all_items.extend(items)
-    elif isinstance(results, list):
-        all_items = results
+    Skips ``analysis/`` and ``propagation/`` directories.
+    """
+    projects = set()
+    skip = {"analysis", "propagation"}
+    try:
+        entries = os.listdir(storage_dir)
+    except OSError:
+        return projects
+    for entry in entries:
+        if entry in skip:
+            continue
+        subdir = os.path.join(storage_dir, entry)
+        if not os.path.isdir(subdir):
+            continue
+        for fname in os.listdir(subdir):
+            if fname.endswith(".json"):
+                projects.add(fname[:-5])
+    return sorted(projects)
 
-    if not all_items:
-        return {"score": 0.5, "total_hits": hn_data.get("total_hits", 0),
-                "avg_points": 0, "avg_comments": 0}
 
-    points = [item.get("points", 0) for item in all_items]
-    comments = [item.get("num_comments", 0) for item in all_items]
+# ---------------------------------------------------------------------------
+# Scoring helpers — per-platform
+# ---------------------------------------------------------------------------
 
-    avg_points = sum(points) / len(points) if points else 0
-    avg_comments = sum(comments) / len(comments) if comments else 0
+def _score_hn(data):
+    """Return (points, info_dict) from HN data."""
+    info = {"total_hits": data.get("total_hits", 0), "avg_points": 0, "avg_comments": 0}
+    all_points, all_comments = [], []
+    results = data.get("results", {})
+    for _query, hits in results.items():
+        for hit in hits if isinstance(hits, list) else []:
+            p = hit.get("points") or hit.get("score") or 0
+            c = hit.get("num_comments") or 0
+            all_points.append(int(p))
+            all_comments.append(int(c))
+    if all_points:
+        info["avg_points"] = sum(all_points) / len(all_points)
+        info["avg_comments"] = sum(all_comments) / len(all_comments)
+    # HN component: 0-30 points, logarithmic scaling
+    score = min(30, 5 * (1 + len(all_points)) ** 0.5)
+    if all_points:
+        score += min(15, sum(all_points) / max(len(all_points), 1) / 10)
+    score = min(30, score)
+    return score, info
 
-    # Score: higher avg_points + more items = better engagement
-    # Normalize: avg_points > 100 = 1.0, > 50 = 0.7, > 20 = 0.5, else lower
-    if avg_points > 100:
-        score = 1.0
-    elif avg_points > 50:
-        score = 0.8
-    elif avg_points > 20:
-        score = 0.6
-    elif avg_points > 5:
-        score = 0.4
+
+def _score_reddit(data):
+    """Return (points, info_dict) from Reddit data."""
+    info = {"total_posts": data.get("total_posts", 0), "avg_score": 0, "avg_comments": 0}
+    all_scores, all_comments = [], []
+    results = data.get("results", {})
+    for _query, posts in results.items():
+        for post in posts if isinstance(posts, list) else []:
+            s = post.get("score") or post.get("ups") or 0
+            c = post.get("num_comments") or 0
+            all_scores.append(int(s))
+            all_comments.append(int(c))
+    if all_scores:
+        info["avg_score"] = sum(all_scores) / len(all_scores)
+        info["avg_comments"] = sum(all_comments) / len(all_comments)
+    # Reddit component: 0-25 points
+    score = min(25, 4 * (1 + len(all_scores)) ** 0.5)
+    if all_scores:
+        score += min(10, sum(all_scores) / max(len(all_scores), 1) / 20)
+    score = min(25, score)
+    return score, info
+
+
+def _score_github(data):
+    """Return (points, info_dict) from GitHub data."""
+    # Handle both flat metadata+data layout and direct fields
+    if "data" in data and isinstance(data["data"], dict):
+        gh = data["data"]
     else:
-        score = 0.2
+        gh = data
 
-    return {
-        "score": score,
-        "total_hits": hn_data.get("total_hits", len(all_items)),
-        "total_items": len(all_items),
-        "avg_points": round(avg_points, 1),
-        "avg_comments": round(avg_comments, 1),
-        "max_points": max(points) if points else 0,
-    }
+    stars = gh.get("stargazers_count") or gh.get("stars") or gh.get("watchers") or 0
+    forks = gh.get("forks_count") or gh.get("forks") or 0
+    contributors = gh.get("contributors_count") or gh.get("contributors") or 0
+    subscribers = gh.get("subscribers_count") or 0
 
-
-def score_github_data(gh_data: dict) -> dict:
-    """Score GitHub metrics when available."""
-    if not gh_data:
-        return {"score": 0.5, "stars": 0, "contributors": 0}
-
-    stars = gh_data.get("stargazers_count", gh_data.get("stars", 0))
-    contributors = gh_data.get("contributors_count",
-                               len(gh_data.get("contributors", [])))
-    forks_count = gh_data.get("forks_count", 0)
-    open_issues = gh_data.get("open_issues_count", 0)
-
-    # Fork quality
-    forks = gh_data.get("forks", [])
-    if forks:
-        fork_quality = sum(1 for f in forks if f.get("commits", 0) > 0) / len(forks)
-    else:
-        fork_quality = 0.5
-
-    # PR merge rate
-    prs = gh_data.get("pull_requests", [])
-    if prs:
-        pr_merge_rate = sum(1 for p in prs if p.get("merged_at")) / len(prs)
-    else:
-        pr_merge_rate = 0.5
-
-    # Suspicion index
-    suspicion = (stars / contributors / 100) if contributors > 0 else 10.0
-
-    return {
-        "score": 0.5,  # placeholder
+    info = {
         "stars": stars,
+        "forks": forks,
         "contributors": contributors,
-        "forks_count": forks_count,
-        "fork_quality": round(fork_quality, 3),
-        "pr_merge_rate": round(pr_merge_rate, 3),
-        "suspicion_index": round(suspicion, 3),
-        "stars_per_contributor": round(stars / contributors, 1) if contributors > 0 else None,
+        "subscribers": subscribers,
     }
+    # GitHub component: 0-30 points
+    import math
+    star_score = min(20, math.log10(max(stars, 1)) * 5)
+    contrib_score = min(10, math.log10(max(contributors, 1)) * 3.3)
+    score = min(30, star_score + contrib_score)
+    return score, info
 
 
-def compute_composite(project_name: str, data_sources: dict) -> dict:
-    """Compute composite hype score for a project."""
-    dims = {}
-    platform_data = {}
+def _score_scholar(data):
+    """Return (points, info_dict) from Semantic Scholar data."""
+    papers = data.get("papers", {})
+    total_papers = data.get("total_papers", 0)
+    total_citations = data.get("total_citations", 0)
+    # Also count from dict if papers is a dict of lists
+    if isinstance(papers, dict):
+        total_papers = total_papers or sum(len(v) for v in papers.values() if isinstance(v, list))
+    info = {"total_papers": total_papers, "total_citations": total_citations}
+    # Scholar component: 0-15 points
+    import math
+    paper_score = min(8, math.log10(max(total_papers, 1)) * 2.5)
+    citation_score = min(7, math.log10(max(total_citations, 1)) * 2)
+    score = min(15, paper_score + citation_score)
+    return score, info
 
-    # HN engagement (weight: 30% when no GH data, 15% when GH available)
-    if "hn" in data_sources:
-        hn_score = score_hn_engagement(data_sources["hn"])
-        dims["hn_engagement"] = hn_score["score"]
-        platform_data["hn"] = hn_score
 
-    # GitHub data (weight: 50% when available)
-    for gh_key in ("github", "github_stars", "root"):
-        if gh_key in data_sources:
-            gh_score = score_github_data(data_sources[gh_key])
-            dims["github"] = gh_score["score"]
-            platform_data["github"] = gh_score
-            break
+# ---------------------------------------------------------------------------
+# Classification
+# ---------------------------------------------------------------------------
 
-    # Reddit data (weight: 20% when available)
-    if "reddit" in data_sources:
-        reddit_data = data_sources["reddit"]
-        items = reddit_data if isinstance(reddit_data, list) else reddit_data.get("results", [])
-        if isinstance(items, dict):
-            items = [v for vals in items.values() if isinstance(vals, list) for v in vals]
-        if items:
-            avg_ups = sum(i.get("ups", i.get("score", 0)) for i in items) / len(items)
-            dims["reddit_engagement"] = min(1.0, avg_ups / 200)
-        platform_data["reddit"] = {"items": len(items) if isinstance(items, list) else 0}
+def classify(score, details):
+    """Classify project hype profile.
 
-    # Compute composite
-    if dims:
-        composite = sum(dims.values()) / len(dims) * 100
+    Returns one of: organic, steady, viral, suspicious.
+    """
+    # Suspicious: high score but very few unique authors / single-source
+    hn_results = details.get("hn", {}).get("results", {})
+    reddit_results = details.get("reddit", {}).get("results", {})
+    authors = set()
+    for _q, hits in hn_results.items():
+        for h in (hits if isinstance(hits, list) else []):
+            a = h.get("author")
+            if a:
+                authors.add(a)
+    for _q, posts in reddit_results.items():
+        for p in (posts if isinstance(posts, list) else []):
+            a = p.get("author")
+            if a:
+                authors.add(a)
+
+    total_posts = sum(
+        len(v) for v in hn_results.values() if isinstance(v, list)
+    ) + sum(
+        len(v) for v in reddit_results.values() if isinstance(v, list)
+    )
+
+    if score >= 65:
+        if total_posts > 0 and len(authors) <= 2:
+            return "suspicious"
+        return "viral"
+    if score >= 35:
+        return "steady"
+    return "organic"
+
+
+# ---------------------------------------------------------------------------
+# Main scorer
+# ---------------------------------------------------------------------------
+
+def score_project(name, storage_dir):
+    """Return (composite_score, breakdown_dict) for a single project."""
+    paths = {
+        "hn": os.path.join(storage_dir, "hn", f"{name}.json"),
+        "reddit": os.path.join(storage_dir, "reddit", f"{name}.json"),
+        "github": os.path.join(storage_dir, "github", f"{name}.json"),
+        "scholar": os.path.join(storage_dir, "scholar", f"{name}.json"),
+    }
+    # Also try *_stars.json pattern for GitHub
+    stars_path = os.path.join(storage_dir, f"{name}_stars.json")
+
+    breakdown = {}
+    total = 0.0
+
+    hn_data = load_json(paths["hn"])
+    if hn_data:
+        s, info = _score_hn(hn_data)
+        breakdown["hn"] = {"score": round(s, 2), **info, "raw": hn_data}
+        total += s
     else:
-        composite = 0
+        breakdown["hn"] = {"score": 0, "note": "no data"}
 
-    # Classify
-    gh = platform_data.get("github", {})
-    suspicion = gh.get("suspicion_index", None)
-    if suspicion is not None:
-        if suspicion < 0.5:
-            growth_class = "organic"
-        elif suspicion < 1.5:
-            growth_class = "watch"
-        else:
-            growth_class = "suspicious"
+    reddit_data = load_json(paths["reddit"])
+    if reddit_data:
+        s, info = _score_reddit(reddit_data)
+        breakdown["reddit"] = {"score": round(s, 2), **info, "raw": reddit_data}
+        total += s
     else:
-        # Use HN engagement as proxy
-        hn = platform_data.get("hn", {})
-        if hn.get("avg_points", 0) > 100 and hn.get("total_items", 0) > 10:
-            growth_class = "viral"
-        elif hn.get("avg_points", 0) > 30:
-            growth_class = "steady"
-        else:
-            growth_class = "organic"
+        breakdown["reddit"] = {"score": 0, "note": "no data"}
 
-    return {
-        "project": project_name,
-        "composite_score": round(composite, 1),
-        "growth_class": growth_class,
-        "suspicion_index": suspicion,
-        "dimensions": {k: round(v, 3) for k, v in dims.items()},
-        "platforms": platform_data,
-        "data_sources": list(data_sources.keys()),
+    gh_data = load_json(paths["github"]) or load_json(stars_path)
+    if gh_data:
+        s, info = _score_github(gh_data)
+        breakdown["github"] = {"score": round(s, 2), **info, "raw": gh_data}
+        total += s
+    else:
+        breakdown["github"] = {"score": 0, "note": "no data"}
+
+    scholar_data = load_json(paths["scholar"])
+    if scholar_data:
+        s, info = _score_scholar(scholar_data)
+        breakdown["scholar"] = {"score": round(s, 2), **info, "raw": scholar_data}
+        total += s
+    else:
+        breakdown["scholar"] = {"score": 0, "note": "no data"}
+
+    composite = min(100, round(total, 1))
+
+    # Add classification context
+    detail_for_classify = {}
+    for platform in ("hn", "reddit", "github", "scholar"):
+        raw = breakdown.get(platform, {}).get("raw")
+        if raw:
+            detail_for_classify[platform] = raw
+
+    label = classify(composite, detail_for_classify)
+
+    result = {
+        "project": name,
+        "composite_score": composite,
+        "classification": label,
+        "breakdown": {
+            k: {kk: vv for kk, vv in v.items() if kk != "raw"}
+            for k, v in breakdown.items()
+        },
+        "scored_at": datetime.now(timezone.utc).isoformat(),
     }
+    return result
 
 
-def run_hype_scoring(input_dir: str, output_dir: str):
-    """Main entry: score all projects."""
-    os.makedirs(output_dir, exist_ok=True)
-    projects = discover_projects(input_dir)
-
-    if not projects:
-        print("[hype_scorer] No project data found")
-        return {"generated_at": datetime.utcnow().isoformat() + "Z",
-                "total_projects": 0, "results": []}
-
-    results = []
-    for proj_name, sources in sorted(projects.items()):
-        result = compute_composite(proj_name, sources)
-        results.append(result)
-
-    results.sort(key=lambda r: r.get("composite_score", 0), reverse=True)
-
-    output = {
-        "generated_at": datetime.utcnow().isoformat() + "Z",
-        "total_projects": len(results),
-        "results": results,
-    }
-
-    out_path = os.path.join(output_dir, "hype_scores.json")
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(output, f, indent=2, ensure_ascii=False)
-
-    print(f"[hype_scorer] Scored {len(results)} projects → {out_path}")
-    print("\n=== Hype Score Rankings ===")
-    for i, r in enumerate(results[:20], 1):
-        gh = r["platforms"].get("github", {})
-        stars = gh.get("stars", "?")
-        print(f"  {i:2d}. {r['project']:<25s} score={r['composite_score']:>5}  "
-              f"class={r['growth_class']:<10s}  stars={stars}")
-
-    return output
-
+# ---------------------------------------------------------------------------
+# CLI
+# ---------------------------------------------------------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="Hype Scorer")
-    parser.add_argument("--input", default="./storage")
-    parser.add_argument("--output", default="./storage/analysis")
+    parser = argparse.ArgumentParser(description="Score projects by cross-platform hype")
+    parser.add_argument("--input", default="./storage", help="Storage root directory")
+    parser.add_argument("--output", default="./storage/analysis/hype_scores.json",
+                        help="Output JSON path")
     args = parser.parse_args()
-    run_hype_scoring(args.input, args.output)
+
+    storage_dir = os.path.abspath(args.input)
+    output_path = os.path.abspath(args.output)
+    if os.path.isdir(output_path):
+        output_path = os.path.join(output_path, "hype_scores.json")
+
+    projects = discover_projects(storage_dir)
+    if not projects:
+        print("No projects discovered in", storage_dir)
+        return
+
+    scores = []
+    for name in projects:
+        result = score_project(name, storage_dir)
+        scores.append(result)
+
+    scores.sort(key=lambda x: x["composite_score"], reverse=True)
+
+    payload = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "total_projects": len(scores),
+        "scores": scores,
+    }
+
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2, ensure_ascii=False)
+
+    # Summary
+    print(f"\n{'='*60}")
+    print(f"HYPE SCORES  ({len(scores)} projects)")
+    print(f"{'='*60}")
+    print(f"{'Project':<40} {'Score':>6} {'Class':<12}")
+    print(f"{'-'*40} {'-'*6} {'-'*12}")
+    for s in scores:
+        print(f"{s['project']:<40} {s['composite_score']:>6} {s['classification']:<12}")
+    print(f"\nOutput written to {output_path}")
 
 
 if __name__ == "__main__":

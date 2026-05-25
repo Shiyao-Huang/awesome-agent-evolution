@@ -1,0 +1,14 @@
+{
+  "project": "crewAI",
+  "repo": "crewAIInc/crewAI",
+  "collected_at": "2026-05-22T11:19:24.080744+00:00",
+  "queries": [
+    "crewAI"
+  ],
+  "total_papers": 0,
+  "total_citations": 0,
+  "papers": {
+    "crewAI": []
+  },
+  "citations": {}
+}

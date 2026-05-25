@@ -1,0 +1,516 @@
+{
+  "project": "BabyAGI",
+  "repo": "yoheinakajima/babyagi",
+  "collected_at": "2026-05-22T11:36:05.018815+00:00",
+  "queries": [
+    "BabyAGI",
+    "babyagi"
+  ],
+  "total_posts": 50,
+  "results": {
+    "BabyAGI": [
+      {
+        "id": "1rp24wy",
+        "subreddit": "notmycat",
+        "title": "I have met Agi’s baby daddy! He is very shy 🥰",
+        "score": 1765,
+        "num_comments": 34,
+        "author": "undiagnosed_dyslexic",
+        "url": "https://reddit.com/r/notmycat/comments/1rp24wy/i_have_met_agis_baby_daddy_he_is_very_shy/",
+        "created_utc": 1773067551.0
+      },
+      {
+        "id": "jyfx8m",
+        "subreddit": "PeopleFuckingDying",
+        "title": "sICk mAgiCIaN uSes EvIL MAgIC aND hyPNoTizES a BAbY",
+        "score": 15916,
+        "num_comments": 113,
+        "author": "ricrdvc",
+        "url": "https://reddit.com/r/PeopleFuckingDying/comments/jyfx8m/sick_magician_uses_evil_magic_and_hypnotizes_a/",
+        "created_utc": 1605983811.0
+      },
+      {
+        "id": "146ly0y",
+        "subreddit": "ProgrammerHumor",
+        "title": "BabyAGI = !MiddleManagement = Leaner company",
+        "score": 1655,
+        "num_comments": 101,
+        "author": "Ved_invinciblezombie",
+        "url": "https://reddit.com/r/ProgrammerHumor/comments/146ly0y/babyagi_middlemanagement_leaner_company/",
+        "created_utc": 1686463005.0
+      },
+      {
+        "id": "1p5zemw",
+        "subreddit": "Gamingcirclejerk",
+        "title": "😧😧😧",
+        "score": 11153,
+        "num_comments": 253,
+        "author": "MucaGamesBR",
+        "url": "https://reddit.com/r/Gamingcirclejerk/comments/1p5zemw/_/",
+        "created_utc": 1764033908.0
+      },
+      {
+        "id": "1hlytp2",
+        "subreddit": "todayilearned",
+        "title": "TIL Rudy Kurniawan sold an estimated $150 million worth of fraudulent wine between 2002-2012, which he produced himself in his California home. His scheme started to unravel when wine producer Domaine Ponsot caught him selling Ponsot wines that were never made. He was sentenced to 10 years in prison",
+        "score": 21300,
+        "num_comments": 765,
+        "author": "tyrion2024",
+        "url": "https://reddit.com/r/todayilearned/comments/1hlytp2/til_rudy_kurniawan_sold_an_estimated_150_million/",
+        "created_utc": 1735124767.0
+      },
+      {
+        "id": "12diapw",
+        "subreddit": "ChatGPT",
+        "title": "GPT-4 Week 3. Chatbots are yesterdays news. AI Agents are the future. The beginning of the proto-agi era is here",
+        "score": 13167,
+        "num_comments": 2116,
+        "author": "lostlifon",
+        "url": "https://reddit.com/r/ChatGPT/comments/12diapw/gpt4_week_3_chatbots_are_yesterdays_news_ai/",
+        "created_utc": 1680783039.0
+      },
+      {
+        "id": "12by8mj",
+        "subreddit": "singularity",
+        "title": "I used Auto-GPT and BabyAGI today. We are not ready for this.",
+        "score": 320,
+        "num_comments": 147,
+        "author": "manubfr",
+        "url": "https://reddit.com/r/singularity/comments/12by8mj/i_used_autogpt_and_babyagi_today_we_are_not_ready/",
+        "created_utc": 1680645706.0
+      },
+      {
+        "id": "1r96647",
+        "subreddit": "vibecoding",
+        "title": "GPT 5.3 Codex wiped my entire F: drive with a single character escaping bug",
+        "score": 1121,
+        "num_comments": 395,
+        "author": "Former-Airport-1099",
+        "url": "https://reddit.com/r/vibecoding/comments/1r96647/gpt_53_codex_wiped_my_entire_f_drive_with_a/",
+        "created_utc": 1771523686.0
+      },
+      {
+        "id": "1k1z4td",
+        "subreddit": "artificial",
+        "title": "Sam Altman tacitly admits AGI isnt coming",
+        "score": 2040,
+        "num_comments": 608,
+        "author": "ShalashashkaOcelot",
+        "url": "https://reddit.com/r/artificial/comments/1k1z4td/sam_altman_tacitly_admits_agi_isnt_coming/",
+        "created_utc": 1744961237.0
+      },
+      {
+        "id": "12o29gl",
+        "subreddit": "ChatGPT",
+        "title": "GPT-4 Week 4. The rise of Agents and the beginning of the Simulation era",
+        "score": 3945,
+        "num_comments": 416,
+        "author": "lostlifon",
+        "url": "https://reddit.com/r/ChatGPT/comments/12o29gl/gpt4_week_4_the_rise_of_agents_and_the_beginning/",
+        "created_utc": 1681636411.0
+      },
+      {
+        "id": "1t7qx6i",
+        "subreddit": "BabyAGI",
+        "title": "Finally sandboxing BabyAGI locally. I built a Docker control plane for agent safety.",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Conscious_Chapter_93",
+        "url": "https://reddit.com/r/BabyAGI/comments/1t7qx6i/finally_sandboxing_babyagi_locally_i_built_a/",
+        "created_utc": 1778290151.0
+      },
+      {
+        "id": "12ka38r",
+        "subreddit": "singularity",
+        "title": "Introducing here BASI: like BabyAGI, but Autonomous and Self-Improving",
+        "score": 213,
+        "num_comments": 67,
+        "author": "MacacoNu",
+        "url": "https://reddit.com/r/singularity/comments/12ka38r/introducing_here_basi_like_babyagi_but_autonomous/",
+        "created_utc": 1681356001.0
+      },
+      {
+        "id": "1pk8tjm",
+        "subreddit": "programare",
+        "title": "Wake up baby, new ARC-AGI-2 SOTA just dropped.",
+        "score": 10,
+        "num_comments": 17,
+        "author": "bonfraier",
+        "url": "https://reddit.com/r/programare/comments/1pk8tjm/wake_up_baby_new_arcagi2_sota_just_dropped/",
+        "created_utc": 1765486765.0
+      },
+      {
+        "id": "1t2usa3",
+        "subreddit": "localseo",
+        "title": "Why BabyAGI Will Replace Your Team in 2026 (The Ultimate AI Agent Guide) | Interconnected",
+        "score": 2,
+        "num_comments": 0,
+        "author": "Ok_pettech",
+        "url": "https://reddit.com/r/localseo/comments/1t2usa3/why_babyagi_will_replace_your_team_in_2026_the/",
+        "created_utc": 1777836051.0
+      },
+      {
+        "id": "1oxkhkf",
+        "subreddit": "newAIParadigms",
+        "title": "Father of RL and Dwarkesh discuss what is still missing for AGI. What do babies tell us?",
+        "score": 35,
+        "num_comments": 17,
+        "author": "Tobio-Star",
+        "url": "https://reddit.com/r/newAIParadigms/comments/1oxkhkf/father_of_rl_and_dwarkesh_discuss_what_is_still/",
+        "created_utc": 1763187832.0
+      },
+      {
+        "id": "1kjs74j",
+        "subreddit": "PoliticalCompassMemes",
+        "title": "I didn't know saving Babies was so controversial? /s",
+        "score": 913,
+        "num_comments": 505,
+        "author": "Stormclamp",
+        "url": "https://reddit.com/r/PoliticalCompassMemes/comments/1kjs74j/i_didnt_know_saving_babies_was_so_controversial_s/",
+        "created_utc": 1746936076.0
+      },
+      {
+        "id": "18ovzjc",
+        "subreddit": "singularity",
+        "title": "What are you betting on? \"AGI achieved internally,\" or Google's baby intelligence explosion",
+        "score": 125,
+        "num_comments": 69,
+        "author": "HalfSecondWoe",
+        "url": "https://reddit.com/r/singularity/comments/18ovzjc/what_are_you_betting_on_agi_achieved_internally/",
+        "created_utc": 1703300185.0
+      },
+      {
+        "id": "1qn4s4j",
+        "subreddit": "anarcho_primitivism",
+        "title": "Anyone else freaked out when talking to agi (artifical general intelligence) supporters, realizing they unironically wanted to be treated like babies.",
+        "score": 20,
+        "num_comments": 6,
+        "author": "orange1414141414",
+        "url": "https://reddit.com/r/anarcho_primitivism/comments/1qn4s4j/anyone_else_freaked_out_when_talking_to_agi/",
+        "created_utc": 1769398153.0
+      },
+      {
+        "id": "1p0fqhy",
+        "subreddit": "OpenAI",
+        "title": "Gemini 3 pro passes the finger test",
+        "score": 1057,
+        "num_comments": 164,
+        "author": "DigSignificant1419",
+        "url": "https://reddit.com/r/OpenAI/comments/1p0fqhy/gemini_3_pro_passes_the_finger_test/",
+        "created_utc": 1763481698.0
+      },
+      {
+        "id": "1qrpjsm",
+        "subreddit": "ChatGPT",
+        "title": "Crazy 1 guy invented Baby AGI years before Sam Altman could make GPT profitable. And its pretty terrifying honestly. Especially since this is now malware at this point",
+        "score": 3,
+        "num_comments": 5,
+        "author": "xaljiemxhaj",
+        "url": "https://reddit.com/r/ChatGPT/comments/1qrpjsm/crazy_1_guy_invented_baby_agi_years_before_sam/",
+        "created_utc": 1769825484.0
+      },
+      {
+        "id": "135m7d9",
+        "subreddit": "transhumanism",
+        "title": "Baby AGI &amp; AutoGPT",
+        "score": 519,
+        "num_comments": 21,
+        "author": "arnolds112",
+        "url": "https://reddit.com/r/transhumanism/comments/135m7d9/baby_agi_autogpt/",
+        "created_utc": 1683036373.0
+      },
+      {
+        "id": "g29ik5",
+        "subreddit": "wallstreetbets",
+        "title": "Stimulus checks being given to foreign exchange students",
+        "score": 2854,
+        "num_comments": 875,
+        "author": "OkSlice",
+        "url": "https://reddit.com/r/wallstreetbets/comments/g29ik5/stimulus_checks_being_given_to_foreign_exchange/",
+        "created_utc": 1587018051.0
+      },
+      {
+        "id": "1pya28y",
+        "subreddit": "IfYouNeedAI",
+        "title": "we could have had a baby AGI",
+        "score": 1,
+        "num_comments": 0,
+        "author": "mlrunlisted1",
+        "url": "https://reddit.com/r/IfYouNeedAI/comments/1pya28y/we_could_have_had_a_baby_agi/",
+        "created_utc": 1766975386.0
+      },
+      {
+        "id": "1ssmjl3",
+        "subreddit": "OkBuddyPersona",
+        "title": "the baby",
+        "score": 2176,
+        "num_comments": 23,
+        "author": "CoolPeter9",
+        "url": "https://reddit.com/r/OkBuddyPersona/comments/1ssmjl3/the_baby/",
+        "created_utc": 1776866767.0
+      },
+      {
+        "id": "1b207rq",
+        "subreddit": "singularity",
+        "title": "‘Baby AGI’ could be a reality in early 2025: Ben Goertzel",
+        "score": 110,
+        "num_comments": 34,
+        "author": "Apprehensive-Part979",
+        "url": "https://reddit.com/r/singularity/comments/1b207rq/baby_agi_could_be_a_reality_in_early_2025_ben/",
+        "created_utc": 1709105253.0
+      }
+    ],
+    "babyagi": [
+      {
+        "id": "146ly0y",
+        "subreddit": "ProgrammerHumor",
+        "title": "BabyAGI = !MiddleManagement = Leaner company",
+        "score": 1650,
+        "num_comments": 101,
+        "author": "Ved_invinciblezombie",
+        "url": "https://reddit.com/r/ProgrammerHumor/comments/146ly0y/babyagi_middlemanagement_leaner_company/",
+        "created_utc": 1686463005.0
+      },
+      {
+        "id": "12diapw",
+        "subreddit": "ChatGPT",
+        "title": "GPT-4 Week 3. Chatbots are yesterdays news. AI Agents are the future. The beginning of the proto-agi era is here",
+        "score": 13166,
+        "num_comments": 2116,
+        "author": "lostlifon",
+        "url": "https://reddit.com/r/ChatGPT/comments/12diapw/gpt4_week_3_chatbots_are_yesterdays_news_ai/",
+        "created_utc": 1680783039.0
+      },
+      {
+        "id": "12by8mj",
+        "subreddit": "singularity",
+        "title": "I used Auto-GPT and BabyAGI today. We are not ready for this.",
+        "score": 315,
+        "num_comments": 147,
+        "author": "manubfr",
+        "url": "https://reddit.com/r/singularity/comments/12by8mj/i_used_autogpt_and_babyagi_today_we_are_not_ready/",
+        "created_utc": 1680645706.0
+      },
+      {
+        "id": "1k1z4td",
+        "subreddit": "artificial",
+        "title": "Sam Altman tacitly admits AGI isnt coming",
+        "score": 2041,
+        "num_comments": 608,
+        "author": "ShalashashkaOcelot",
+        "url": "https://reddit.com/r/artificial/comments/1k1z4td/sam_altman_tacitly_admits_agi_isnt_coming/",
+        "created_utc": 1744961237.0
+      },
+      {
+        "id": "12o29gl",
+        "subreddit": "ChatGPT",
+        "title": "GPT-4 Week 4. The rise of Agents and the beginning of the Simulation era",
+        "score": 3944,
+        "num_comments": 416,
+        "author": "lostlifon",
+        "url": "https://reddit.com/r/ChatGPT/comments/12o29gl/gpt4_week_4_the_rise_of_agents_and_the_beginning/",
+        "created_utc": 1681636411.0
+      },
+      {
+        "id": "1t7qx6i",
+        "subreddit": "BabyAGI",
+        "title": "Finally sandboxing BabyAGI locally. I built a Docker control plane for agent safety.",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Conscious_Chapter_93",
+        "url": "https://reddit.com/r/BabyAGI/comments/1t7qx6i/finally_sandboxing_babyagi_locally_i_built_a/",
+        "created_utc": 1778290151.0
+      },
+      {
+        "id": "1t2usa3",
+        "subreddit": "localseo",
+        "title": "Why BabyAGI Will Replace Your Team in 2026 (The Ultimate AI Agent Guide) | Interconnected",
+        "score": 2,
+        "num_comments": 0,
+        "author": "Ok_pettech",
+        "url": "https://reddit.com/r/localseo/comments/1t2usa3/why_babyagi_will_replace_your_team_in_2026_the/",
+        "created_utc": 1777836051.0
+      },
+      {
+        "id": "1lzilye",
+        "subreddit": "AgentsOfAI",
+        "title": "BabyAGI",
+        "score": 1,
+        "num_comments": 3,
+        "author": "UnityDever",
+        "url": "https://reddit.com/r/AgentsOfAI/comments/1lzilye/babyagi/",
+        "created_utc": 1752488020.0
+      },
+      {
+        "id": "1lz8ttz",
+        "subreddit": "LLM",
+        "title": "BabyAGI",
+        "score": 1,
+        "num_comments": 0,
+        "author": "UnityDever",
+        "url": "https://reddit.com/r/LLM/comments/1lz8ttz/babyagi/",
+        "created_utc": 1752454148.0
+      },
+      {
+        "id": "1lz8t45",
+        "subreddit": "csharp",
+        "title": "BabyAGI",
+        "score": 0,
+        "num_comments": 0,
+        "author": "UnityDever",
+        "url": "https://reddit.com/r/csharp/comments/1lz8t45/babyagi/",
+        "created_utc": 1752454091.0
+      },
+      {
+        "id": "12j4cly",
+        "subreddit": "CryptoCurrency",
+        "title": "GPT-4 apps BabyAGI and AutoGPT could have disruptive implications for crypto",
+        "score": 2,
+        "num_comments": 39,
+        "author": "lordrognoth",
+        "url": "https://reddit.com/r/CryptoCurrency/comments/12j4cly/gpt4_apps_babyagi_and_autogpt_could_have/",
+        "created_utc": 1681260958.0
+      },
+      {
+        "id": "1k95mi9",
+        "subreddit": "HyperAIHub",
+        "title": "Mastering Task Automation Using AI: How AutoGPT and BabyAGI Are Creating a Remarkable 360° Transformation in How We Get Things Done",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Adorable_Ground4076",
+        "url": "https://reddit.com/r/HyperAIHub/comments/1k95mi9/mastering_task_automation_using_ai_how_autogpt/",
+        "created_utc": 1745765206.0
+      },
+      {
+        "id": "1gek3wk",
+        "subreddit": "AI_Agents",
+        "title": "Building AI That Builds Itself with Yohei Nakajima, Creator of BabyAGI",
+        "score": 4,
+        "num_comments": 2,
+        "author": "Gold-Courage8937",
+        "url": "https://reddit.com/r/AI_Agents/comments/1gek3wk/building_ai_that_builds_itself_with_yohei/",
+        "created_utc": 1730168416.0
+      },
+      {
+        "id": "1ghn5b7",
+        "subreddit": "AutoGPT",
+        "title": "Building AI That Builds Itself with Yohei Nakajima, Creator of BabyAGI and Ditto",
+        "score": 3,
+        "num_comments": 1,
+        "author": "Gold-Courage8937",
+        "url": "https://reddit.com/r/AutoGPT/comments/1ghn5b7/building_ai_that_builds_itself_with_yohei/",
+        "created_utc": 1730516358.0
+      },
+      {
+        "id": "1gekb3u",
+        "subreddit": "ChatGPT",
+        "title": "Building AI That Builds Itself with Yohei Nakajima, Creator of BabyAGI and Ditto",
+        "score": 1,
+        "num_comments": 1,
+        "author": "Gold-Courage8937",
+        "url": "https://reddit.com/r/ChatGPT/comments/1gekb3u/building_ai_that_builds_itself_with_yohei/",
+        "created_utc": 1730169045.0
+      },
+      {
+        "id": "15noaym",
+        "subreddit": "singularity",
+        "title": "List of Awesome AI Agents like AutoGPT and BabyAGI / Many open-source Agents with code included!",
+        "score": 26,
+        "num_comments": 14,
+        "author": "Singularian2501",
+        "url": "https://reddit.com/r/singularity/comments/15noaym/list_of_awesome_ai_agents_like_autogpt_and/",
+        "created_utc": 1691701285.0
+      },
+      {
+        "id": "1gekjq6",
+        "subreddit": "BabyAGI",
+        "title": "Building AI That Builds Itself with Yohei Nakajima, Creator of BabyAGI and Ditto ",
+        "score": 2,
+        "num_comments": 0,
+        "author": "Gold-Courage8937",
+        "url": "https://reddit.com/r/BabyAGI/comments/1gekjq6/building_ai_that_builds_itself_with_yohei/",
+        "created_utc": 1730169794.0
+      },
+      {
+        "id": "1fgoa5a",
+        "subreddit": "coolguides",
+        "title": "A cool guide to ai agents market landscape map (Sept 2024)",
+        "score": 729,
+        "num_comments": 135,
+        "author": "DifficultNerve6992",
+        "url": "https://reddit.com/r/coolguides/comments/1fgoa5a/a_cool_guide_to_ai_agents_market_landscape_map/",
+        "created_utc": 1726326692.0
+      },
+      {
+        "id": "12l3uq7",
+        "subreddit": "Oobabooga",
+        "title": "Integration with BabyAGI",
+        "score": 9,
+        "num_comments": 13,
+        "author": "psycubus",
+        "url": "https://reddit.com/r/Oobabooga/comments/12l3uq7/integration_with_babyagi/",
+        "created_utc": 1681419235.0
+      },
+      {
+        "id": "12w6tal",
+        "subreddit": "AutoGPT",
+        "title": "Auto-GPT and BabyAGI Are AI’s New Hotness, But They Suck Right Now",
+        "score": 33,
+        "num_comments": 9,
+        "author": "danmvi",
+        "url": "https://reddit.com/r/AutoGPT/comments/12w6tal/autogpt_and_babyagi_are_ais_new_hotness_but_they/",
+        "created_utc": 1682252662.0
+      },
+      {
+        "id": "1d9wdr1",
+        "subreddit": "BabyAGI",
+        "title": "New to BabyAGI",
+        "score": 2,
+        "num_comments": 0,
+        "author": "Fresh-Art-1211",
+        "url": "https://reddit.com/r/BabyAGI/comments/1d9wdr1/new_to_babyagi/",
+        "created_utc": 1717716438.0
+      },
+      {
+        "id": "18kgi6h",
+        "subreddit": "ChatGPT",
+        "title": "What's the ACTUAL status of tools such as BabyAGI or Auto-GPT?",
+        "score": 2,
+        "num_comments": 4,
+        "author": "memory_moves",
+        "url": "https://reddit.com/r/ChatGPT/comments/18kgi6h/whats_the_actual_status_of_tools_such_as_babyagi/",
+        "created_utc": 1702816736.0
+      },
+      {
+        "id": "12hgtcz",
+        "subreddit": "ChatGPT",
+        "title": "Roundup of some of the latest advancements in the field (with links)",
+        "score": 815,
+        "num_comments": 176,
+        "author": "North-Ad6756",
+        "url": "https://reddit.com/r/ChatGPT/comments/12hgtcz/roundup_of_some_of_the_latest_advancements_in_the/",
+        "created_utc": 1681128367.0
+      },
+      {
+        "id": "12vf8x1",
+        "subreddit": "ChatGPTPro",
+        "title": "AutoGPT, BabyAGI and Jarvis: Are autonomous agents the next big leap in AI? - Tech Unofficial",
+        "score": 6,
+        "num_comments": 7,
+        "author": "techberg_",
+        "url": "https://reddit.com/r/ChatGPTPro/comments/12vf8x1/autogpt_babyagi_and_jarvis_are_autonomous_agents/",
+        "created_utc": 1682189165.0
+      },
+      {
+        "id": "135yukv",
+        "subreddit": "webdev",
+        "title": "Do you think AI agents like AutoGPT and babyAGI are a fad?",
+        "score": 0,
+        "num_comments": 7,
+        "author": "default-username-2",
+        "url": "https://reddit.com/r/webdev/comments/135yukv/do_you_think_ai_agents_like_autogpt_and_babyagi/",
+        "created_utc": 1683058355.0
+      }
+    ]
+  }
+}

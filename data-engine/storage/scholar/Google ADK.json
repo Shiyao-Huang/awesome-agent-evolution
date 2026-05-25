@@ -1,0 +1,91 @@
+{
+  "project": "Google ADK",
+  "repo": "google/adk-python",
+  "collected_at": "2026-05-22T11:33:44.291927+00:00",
+  "total_papers": 5,
+  "total_citations": 5,
+  "papers": {
+    "Google ADK": [],
+    "adk-python": [
+      {
+        "paperId": "b4019f73759d9616940c121b88279756c2f85edd",
+        "title": "Python, performance, and natural language processing",
+        "year": 2015,
+        "citationCount": 5,
+        "venue": "Workshop on Python for High-Performance and Scientific Computing",
+        "url": "https://www.semanticscholar.org/paper/b4019f73759d9616940c121b88279756c2f85edd",
+        "arxivId": ""
+      },
+      {
+        "paperId": "acdc4e328735bfde03f99d09731c7a025c96e655",
+        "title": "Code Broker: A Multi-Agent System for Automated Code Quality Assessment",
+        "year": 2026,
+        "citationCount": 0,
+        "venue": "",
+        "url": "https://www.semanticscholar.org/paper/acdc4e328735bfde03f99d09731c7a025c96e655",
+        "arxivId": "2604.23088"
+      },
+      {
+        "paperId": "45070044f49da4c4a315ea8a3764775c8936b559",
+        "title": "The M3 architecture for smart spaces: Overview of semantic information broker implementations",
+        "year": 2016,
+        "citationCount": 15,
+        "venue": "Conference of the Open Innovations Association",
+        "url": "https://www.semanticscholar.org/paper/45070044f49da4c4a315ea8a3764775c8936b559",
+        "arxivId": ""
+      },
+      {
+        "paperId": "d7b17ea2a15f217ff21c87fb82189da0c521c5fe",
+        "title": "IMPLEMENTASI SPEECH RECOGNITION SEBAGAI SISTEM KONTROL PADA SMART HOME BERBASIS MIKROKONTROLER MENGGUNAKAN METODE HIDDENMARKOV MODEL (HMM)",
+        "year": 2014,
+        "citationCount": 1,
+        "venue": "",
+        "url": "https://www.semanticscholar.org/paper/d7b17ea2a15f217ff21c87fb82189da0c521c5fe",
+        "arxivId": ""
+      },
+      {
+        "paperId": "854eca61a57d2c1ea1019663caf022bc8fd0b909",
+        "title": "SciPy 1.0: fundamental algorithms for scientific computing in Python",
+        "year": 2019,
+        "citationCount": 31691,
+        "venue": "Nature Methods",
+        "url": "https://www.semanticscholar.org/paper/854eca61a57d2c1ea1019663caf022bc8fd0b909",
+        "arxivId": ""
+      }
+    ]
+  },
+  "citations": {
+    "b4019f73759d9616940c121b88279756c2f85edd": [
+      {
+        "paperId": "5e4be9e7e21e23d8f064d2acf65423204c84c969",
+        "title": "Different valuable tools for Arabic sentiment analysis: a comparative evaluation",
+        "year": 2021,
+        "citationCount": 15
+      },
+      {
+        "paperId": "686b52953471a9d7a515215ba54ad0350c6b0472",
+        "title": "Word Embeddings, Analogies, and Machine Learning: Beyond king - man + woman = queen",
+        "year": 2016,
+        "citationCount": 171
+      },
+      {
+        "paperId": "e463c58b48da45386ebcfe0767089f52e7182c30",
+        "title": "Intrinsic Evaluations of Word Embeddings: What Can We Do Better?",
+        "year": 2016,
+        "citationCount": 93
+      },
+      {
+        "paperId": "3f31c4e394d5f5623b95b832d182996c622c75cd",
+        "title": "Analogy-based detection of morphological and semantic relations with word embeddings: what works and what doesn’t.",
+        "year": 2016,
+        "citationCount": 272
+      },
+      {
+        "paperId": "f2abf35601c5dba013d1ddfd0386ad9151dde3ff",
+        "title": "Using Python for Improved Productivity in HPC and Data Science Applications: the Time is Now",
+        "year": 2020,
+        "citationCount": 0
+      }
+    ]
+  }
+}

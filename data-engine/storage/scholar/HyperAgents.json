@@ -1,0 +1,84 @@
+{
+  "project": "HyperAgents",
+  "repo": "facebookresearch/HyperAgents",
+  "collected_at": "2026-05-22T11:28:30.080949+00:00",
+  "total_papers": 5,
+  "total_citations": 4,
+  "papers": {
+    "HyperAgents": [
+      {
+        "paperId": "2168fbeaff546e94c495e7021ab8bfe7eb85bc33",
+        "title": "Hyperagents",
+        "year": 2026,
+        "citationCount": 2,
+        "venue": "",
+        "url": "https://www.semanticscholar.org/paper/2168fbeaff546e94c495e7021ab8bfe7eb85bc33",
+        "arxivId": "2603.19461"
+      },
+      {
+        "paperId": "4a4bc6591075ccc21559fcaf7c596a459273b9a6",
+        "title": "Hyperagents: Migrating Host Agents to the Hypervisor",
+        "year": 2018,
+        "citationCount": 4,
+        "venue": "Conference on Data and Application Security and Privacy",
+        "url": "https://www.semanticscholar.org/paper/4a4bc6591075ccc21559fcaf7c596a459273b9a6",
+        "arxivId": ""
+      },
+      {
+        "paperId": "6367ea4fd90fdb486cf77f72b2c30827eed518ed",
+        "title": "First Workshop on Hypermedia Multi-Agent Systems (HyperAgents 2019) Workshop Chairs' Welcome & Organization Listing",
+        "year": 2019,
+        "citationCount": 0,
+        "venue": "The Web Conference",
+        "url": "https://www.semanticscholar.org/paper/6367ea4fd90fdb486cf77f72b2c30827eed518ed",
+        "arxivId": ""
+      },
+      {
+        "paperId": "5a3f24a499944f6608bd923d82aab2432fc3b93b",
+        "title": "Hyperagent Smart Factories Based on Fractal Petri Nets: Ensuring Elasticity and Sustainability",
+        "year": 2024,
+        "citationCount": 0,
+        "venue": "International Conference on Control, Decision and Information Technologies",
+        "url": "https://www.semanticscholar.org/paper/5a3f24a499944f6608bd923d82aab2432fc3b93b",
+        "arxivId": ""
+      },
+      {
+        "paperId": "fa802159cfa0c52e359c2d3626ca822af34ad18b",
+        "title": "The Business Leaders Behind the Foundations: Understanding India’s Emerging Philanthropists",
+        "year": 2015,
+        "citationCount": 14,
+        "venue": "",
+        "url": "https://www.semanticscholar.org/paper/fa802159cfa0c52e359c2d3626ca822af34ad18b",
+        "arxivId": ""
+      }
+    ]
+  },
+  "citations": {
+    "4a4bc6591075ccc21559fcaf7c596a459273b9a6": [
+      {
+        "paperId": "b081bb2cb73e35b854a18d9f46fb0f77589c617c",
+        "title": "KVMIveggur: Flexible, secure, and efficient support for self-service virtual machine introspection",
+        "year": 2022,
+        "citationCount": 3
+      },
+      {
+        "paperId": "8a44119b866d881006a51ca8020c14bbd0ab15ae",
+        "title": "TwinPorter - An Architecture For Enabling the Live Migration of VMI-Based Monitored Virtual Machines",
+        "year": 2019,
+        "citationCount": 1
+      },
+      {
+        "paperId": "baeb264223f05b84d980f5adaf0ce464a98ad4f7",
+        "title": "High-Speed File Transferring Over Linux Bridge for QGA Enhancement in Cyber Range",
+        "year": 2019,
+        "citationCount": 2
+      },
+      {
+        "paperId": "c386d1052e5002788e9db681ade40f5d57ce6664",
+        "title": "Secure and Trusted Execution Framework for Virtualized Workloads",
+        "year": null,
+        "citationCount": 0
+      }
+    ]
+  }
+}

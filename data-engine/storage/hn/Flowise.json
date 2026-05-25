@@ -1,0 +1,374 @@
+{
+  "project": "Flowise",
+  "repo": "FlowiseAI/Flowise",
+  "collected_at": "2026-05-22T11:31:37.397618+00:00",
+  "queries": [
+    "Flowise",
+    "Flowise"
+  ],
+  "total_hits": 40,
+  "results": {
+    "Flowise": [
+      {
+        "objectID": "44905403",
+        "title": "Workday Acquires Flowise",
+        "url": "https://newsroom.workday.com/2025-08-14-Workday-Acquires-Flowise,-Bringing-Powerful-AI-Agent-Builder-Capabilities-to-the-Workday-Platform",
+        "points": 10,
+        "num_comments": 0,
+        "author": "riemannzeta",
+        "created_at": "2025-08-14T20:36:46Z"
+      },
+      {
+        "objectID": "41766152",
+        "title": "Show HN: Quick AI Agent Deployment with Flowise and Qdrant",
+        "url": "https://qubinets.com/how-to-build-an-ai-agent-with-qubinets/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "nix_95",
+        "created_at": "2024-10-07T14:05:55Z"
+      },
+      {
+        "objectID": "47703569",
+        "title": "Max severity Flowise RCE vulnerability now exploited in attacks",
+        "url": "https://www.bleepingcomputer.com/news/security/max-severity-flowise-rce-vulnerability-now-exploited-in-attacks/",
+        "points": 3,
+        "num_comments": 1,
+        "author": "andreadev",
+        "created_at": "2026-04-09T13:36:10Z"
+      },
+      {
+        "objectID": "43159822",
+        "title": "Show HN: A faster way to set up Flowise and Qdrant for AI agent development",
+        "url": "",
+        "points": 3,
+        "num_comments": 0,
+        "author": "nix_95",
+        "created_at": "2025-02-24T14:20:20Z"
+      },
+      {
+        "objectID": "42911328",
+        "title": "Show HN: Pactory – AI Agents Marketplace integrated with Flowise and Langflow",
+        "url": "https://pactory.ai/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "makosst",
+        "created_at": "2025-02-02T20:08:22Z"
+      },
+      {
+        "objectID": "37467750",
+        "title": "Employee Search with OpenAI, Flowise, and LangChain",
+        "url": "https://betterprogramming.pub/employee-search-with-openai-flowise-and-langchain-c61cbea42f9c",
+        "points": 2,
+        "num_comments": 1,
+        "author": "ftkftk",
+        "created_at": "2023-09-11T14:24:57Z"
+      },
+      {
+        "objectID": "44181892",
+        "title": "Show HN: One-Command Installer for N8N and Flowise and PostgreSQL and Monitoring",
+        "url": "https://github.com/kossakovsky/n8n-installer",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ikossakovsky",
+        "created_at": "2025-06-04T15:35:41Z"
+      },
+      {
+        "objectID": "42511724",
+        "title": "Flowise – Low Code LLM Apps Builder",
+        "url": "https://flowiseai.com/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ulrischa",
+        "created_at": "2024-12-25T22:50:14Z"
+      },
+      {
+        "objectID": "35825516",
+        "title": "Flowise – Drag and drop UI to build your customized LLM flow using LangchainJS",
+        "url": "https://github.com/FlowiseAI/Flowise",
+        "points": 2,
+        "num_comments": 0,
+        "author": "flurly",
+        "created_at": "2023-05-05T05:27:05Z"
+      },
+      {
+        "objectID": "35579504",
+        "title": "Flowise – Node-RED alternative for LLMs application",
+        "url": "https://github.com/FlowiseAI/Flowise",
+        "points": 2,
+        "num_comments": 0,
+        "author": "HenryHengZJ",
+        "created_at": "2023-04-15T11:09:41Z"
+      },
+      {
+        "objectID": "45518035",
+        "title": "Show HN: Autocache – Cut Claude API costs 90% (for n8n, Flowise, etc.)",
+        "url": "https://github.com/montevive/autocache",
+        "points": 1,
+        "num_comments": 1,
+        "author": "jmrobles",
+        "created_at": "2025-10-08T16:38:44Z"
+      },
+      {
+        "objectID": "44075951",
+        "title": "Flowise – Build AI Agents, Visually",
+        "url": "https://flowiseai.com/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "zhengiszen",
+        "created_at": "2025-05-23T19:43:58Z"
+      },
+      {
+        "objectID": "36076047",
+        "title": "FlowiseAI – Build LLMs Apps Easily",
+        "url": "https://flowiseai.com/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "jonbaer",
+        "created_at": "2023-05-25T20:51:27Z"
+      },
+      {
+        "objectID": "46470115",
+        "title": "Show HN: Open-source AI workflows with read-only auth scopes",
+        "url": "https://github.com/seer-engg/seer",
+        "points": 12,
+        "num_comments": 0,
+        "author": "akshay326",
+        "created_at": "2026-01-02T22:16:12Z"
+      },
+      {
+        "objectID": "45721704",
+        "title": "Bugbunny: Securing VibeCoded Apps",
+        "url": "",
+        "points": 6,
+        "num_comments": 0,
+        "author": "zaddyzaddy",
+        "created_at": "2025-10-27T14:55:57Z"
+      },
+      {
+        "objectID": "39028306",
+        "title": "Ask HN: Why YC accepted so many teams doing duplicated topics",
+        "url": "",
+        "points": 3,
+        "num_comments": 2,
+        "author": "pinglin",
+        "created_at": "2024-01-17T14:40:05Z"
+      },
+      {
+        "objectID": "47256655",
+        "title": "Show HN: Shinobi – 10-second security scanner for developers",
+        "url": "https://github.com/AkrijSama/Shinobi",
+        "points": 2,
+        "num_comments": 0,
+        "author": "SolidDark",
+        "created_at": "2026-03-05T02:15:07Z"
+      },
+      {
+        "objectID": "46578498",
+        "title": "Ask HN: Why are there always new agent platforms?",
+        "url": "",
+        "points": 1,
+        "num_comments": 1,
+        "author": "ZeroAurora",
+        "created_at": "2026-01-11T18:49:46Z"
+      },
+      {
+        "objectID": "44780519",
+        "title": "Ask HN: Can no-code AI workflow tools replace runbooks?",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "rkalahasty",
+        "created_at": "2025-08-03T22:52:13Z"
+      },
+      {
+        "objectID": "45627692",
+        "title": "Flowistry: An IDE plugin for Rust that focuses on relevant code",
+        "url": "https://github.com/willcrichton/flowistry",
+        "points": 280,
+        "num_comments": 35,
+        "author": "Bogdanp",
+        "created_at": "2025-10-18T14:33:22Z"
+      },
+      {
+        "objectID": "28686443",
+        "title": "Flowistry helps you understand Rust programs with program analysis",
+        "url": "https://github.com/willcrichton/flowistry",
+        "points": 153,
+        "num_comments": 18,
+        "author": "ibraheemdev",
+        "created_at": "2021-09-28T19:25:21Z"
+      },
+      {
+        "objectID": "44116412",
+        "title": "FlowTSE: Target Speaker Extraction with Flow Matching",
+        "url": "https://arxiv.org/abs/2505.14465",
+        "points": 25,
+        "num_comments": 2,
+        "author": "agold97",
+        "created_at": "2025-05-28T14:30:33Z"
+      },
+      {
+        "objectID": "21376850",
+        "title": "FlowSense: A Natural Language Interface for Visual Data Exploration",
+        "url": "https://arxiv.org/abs/1908.00681",
+        "points": 4,
+        "num_comments": 1,
+        "author": "ArtWomb",
+        "created_at": "2019-10-28T13:38:48Z"
+      },
+      {
+        "objectID": "45864688",
+        "title": "Show HN: SharpFocus – A Flowistry-inspired data flow analysis tool for C#",
+        "url": "https://github.com/trrahul/SharpFocus",
+        "points": 2,
+        "num_comments": 0,
+        "author": "trrahul",
+        "created_at": "2025-11-09T11:02:54Z"
+      },
+      {
+        "objectID": "38692435",
+        "title": "India's First Self-Hosted Payments Orchestration Platform – FlowWise by Cashfree",
+        "url": "https://www.cashfree.com/news-room/cashfree-payments-launches-indias-first-self-hosted-payments-orchestration-platform-flowwise/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Raj__",
+        "created_at": "2023-12-19T06:11:10Z"
+      },
+      {
+        "objectID": "23889971",
+        "title": "Show HN: Flowie – A Better GitHub Workflow",
+        "url": "https://github.com/Xtremilicious/flowie",
+        "points": 1,
+        "num_comments": 1,
+        "author": "Xtremilicious",
+        "created_at": "2020-07-19T15:25:23Z"
+      },
+      {
+        "objectID": "47790812",
+        "title": "Flowsery – cookie-free analytics with revenue tracking built in",
+        "url": "https://flowsery.com/en",
+        "points": 1,
+        "num_comments": 0,
+        "author": "tarasshyn",
+        "created_at": "2026-04-16T09:44:33Z"
+      },
+      {
+        "objectID": "4385524",
+        "title": "Flowsee : Not just another social networking site.",
+        "url": "http://www.flowsee.com",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Hrry",
+        "created_at": "2012-08-15T12:06:30Z"
+      },
+      {
+        "objectID": "4421757",
+        "title": "Does a new networking website make any sense?",
+        "url": "",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ChrisFish",
+        "created_at": "2012-08-23T10:55:39Z"
+      },
+      {
+        "objectID": "38649868",
+        "title": "An IDE plugin for Rust that helps you focus on relevant code",
+        "url": "https://github.com/willcrichton/flowistry",
+        "points": 2,
+        "num_comments": 0,
+        "author": "wspeirs",
+        "created_at": "2023-12-15T01:15:12Z"
+      },
+      {
+        "objectID": "11577899",
+        "title": "IDE-Caliber Support for Flow in Sublime Text",
+        "url": "https://github.com/tptee/FlowIDE",
+        "points": 2,
+        "num_comments": 0,
+        "author": "tptee",
+        "created_at": "2016-04-27T04:53:10Z"
+      },
+      {
+        "objectID": "47778929",
+        "title": "So I Decided to Build My Own Analytics, This Is How It Went",
+        "url": "https://flowsery.com/en",
+        "points": 1,
+        "num_comments": 1,
+        "author": "tarasshyn",
+        "created_at": "2026-04-15T13:48:38Z"
+      },
+      {
+        "objectID": "4937508",
+        "title": "Online platform to support artists",
+        "url": "http://www.kickstarter.com/projects/1327612778/flowsee-magazine",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ChrisFish",
+        "created_at": "2012-12-18T14:05:54Z"
+      },
+      {
+        "objectID": "4539477",
+        "title": "Future of the internet: moving content (Javascript)",
+        "url": "http://flowsee.com",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ChrisFish",
+        "created_at": "2012-09-18T17:45:33Z"
+      },
+      {
+        "objectID": "4443351",
+        "title": "Better than Twitter. Try it now",
+        "url": "http://flowsee.com",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ChrisFish",
+        "created_at": "2012-08-28T12:42:32Z"
+      },
+      {
+        "objectID": "41456069",
+        "title": "Sustainable Procurement Policy: Definition and Implementation",
+        "url": "https://www.get-flowie.com/en/blog/sustainable-procurement-policy-definition-and-implementation",
+        "points": 1,
+        "num_comments": 0,
+        "author": "mooreds",
+        "created_at": "2024-09-05T12:42:32Z"
+      },
+      {
+        "objectID": "1227052",
+        "title": "Power Tools",
+        "url": "http://opinionator.blogs.nytimes.com/2010/03/28/power-tools/?hp",
+        "points": 27,
+        "num_comments": 1,
+        "author": "flowseeker",
+        "created_at": "2010-03-29T17:40:10Z"
+      },
+      {
+        "objectID": "3053645",
+        "title": "Happy and You Know It? So Are Millions on Twitter",
+        "url": "http://www.nytimes.com/2011/09/30/science/30twitter.html?hp",
+        "points": 22,
+        "num_comments": 9,
+        "author": "flowseeker",
+        "created_at": "2011-09-29T18:30:10Z"
+      },
+      {
+        "objectID": "1205508",
+        "title": "The 100 Best Business Books of All Time",
+        "url": "http://100bestbiz.com/more-on-the-100-best/",
+        "points": 18,
+        "num_comments": 12,
+        "author": "flowseeker",
+        "created_at": "2010-03-19T22:53:46Z"
+      },
+      {
+        "objectID": "1229725",
+        "title": "10 Golden Principles of Successful Web Apps",
+        "url": "http://www.avc.com/a_vc/2010/03/10-golden-principles-of-successful-web-apps.html",
+        "points": 12,
+        "num_comments": 0,
+        "author": "flowseeker",
+        "created_at": "2010-03-30T17:51:36Z"
+      }
+    ]
+  }
+}

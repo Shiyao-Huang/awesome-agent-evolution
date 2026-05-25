@@ -1,7 +1,7 @@
 {
   "project": "Plandex",
   "repo": "plandex-ai/plandex",
-  "collected_at": "2026-05-22T11:03:36.075474+00:00",
+  "collected_at": "2026-05-22T11:28:29.722348+00:00",
   "queries": [
     "Plandex",
     "plandex"
@@ -507,6 +507,15 @@
         "created_at": "2020-10-06T16:25:17Z"
       },
       {
+        "objectID": "28888561",
+        "title": "Pandexit, please: The need for a Covid end date – Bournbrook Magazine",
+        "url": "https://www.bournbrookmag.com/home/pandexit-please-the-need-for-a-covid-end-date",
+        "points": 5,
+        "num_comments": 0,
+        "author": "mrfusion",
+        "created_at": "2021-10-16T15:34:49Z"
+      },
+      {
         "objectID": "23119473",
         "title": "If You Found That ‘Plandemic’ Video Convincing, Read This Too",
         "url": "https://vitals.lifehacker.com/if-you-found-that-plandemic-video-convincing-read-th-1843339002",
@@ -721,15 +730,6 @@
         "num_comments": 208,
         "author": "walterbell",
         "created_at": "2020-05-22T18:27:33Z"
-      },
-      {
-        "objectID": "103286",
-        "title": "MIT Lisp lecture from '86. wow.",
-        "url": "http://video.google.com/videoplay?docid=5546836985338782440&q=google+lectures&total=7924&start=10&num=10&so=0&type=search&plindex=0",
-        "points": 43,
-        "num_comments": 24,
-        "author": "gregp",
-        "created_at": "2008-01-24T04:15:52Z"
       }
     ]
   }

@@ -1,16 +1,58 @@
 {
   "project": "Agent Zero",
   "repo": "agent0ai/agent-zero",
-  "collected_at": "2026-05-22T11:11:23.486725+00:00",
-  "queries": [
-    "Agent Zero",
-    "agent-zero"
-  ],
-  "total_papers": 0,
+  "collected_at": "2026-05-22T11:25:45.764900+00:00",
+  "total_papers": 5,
   "total_citations": 0,
   "papers": {
     "Agent Zero": [],
-    "agent-zero": []
+    "agent-zero": [
+      {
+        "paperId": "16dad7e64183374af1ba3ce6db82a76299f0cfcb",
+        "title": "AMAZe: A Multi-Agent Zero-shot Index Advisor for Relational Databases",
+        "year": 2025,
+        "citationCount": 1,
+        "venue": "",
+        "url": "https://www.semanticscholar.org/paper/16dad7e64183374af1ba3ce6db82a76299f0cfcb",
+        "arxivId": "2508.16044"
+      },
+      {
+        "paperId": "0b4fe767a365cc38015ecd935b3009b76af098dc",
+        "title": "DAO-Agent: Zero Knowledge-Verified Incentives for Decentralized Multi-Agent Coordination",
+        "year": 2025,
+        "citationCount": 1,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/0b4fe767a365cc38015ecd935b3009b76af098dc",
+        "arxivId": "2512.20973"
+      },
+      {
+        "paperId": "6ac8d8bfc7cf6dd6ad6cbc764cedffe673aef346",
+        "title": "SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning",
+        "year": 2025,
+        "citationCount": 57,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/6ac8d8bfc7cf6dd6ad6cbc764cedffe673aef346",
+        "arxivId": "2506.24119"
+      },
+      {
+        "paperId": "442d19cab3035cafedaaf0294eccaf479248fbbc",
+        "title": "ZSC-Eval: An Evaluation Toolkit and Benchmark for Multi-agent Zero-shot Coordination",
+        "year": 2023,
+        "citationCount": 24,
+        "venue": "Neural Information Processing Systems",
+        "url": "https://www.semanticscholar.org/paper/442d19cab3035cafedaaf0294eccaf479248fbbc",
+        "arxivId": "2310.05208"
+      },
+      {
+        "paperId": "2718ea2fdbf60511a6bdcd00307755dda6417595",
+        "title": "Exploring LLM-Based Multi-Agent Situation Awareness for Zero-Trust Space-Air-Ground Integrated Network",
+        "year": 2025,
+        "citationCount": 44,
+        "venue": "IEEE Journal on Selected Areas in Communications",
+        "url": "https://www.semanticscholar.org/paper/2718ea2fdbf60511a6bdcd00307755dda6417595",
+        "arxivId": ""
+      }
+    ]
   },
   "citations": {}
 }

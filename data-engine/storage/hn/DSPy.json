@@ -1,0 +1,736 @@
+{
+  "project": "DSPy",
+  "repo": "stanfordnlp/dspy",
+  "collected_at": "2026-05-22T11:30:39.930712+00:00",
+  "queries": [
+    "DSPy",
+    "dspy"
+  ],
+  "total_hits": 80,
+  "results": {
+    "DSPy": [
+      {
+        "objectID": "47490365",
+        "title": "If DSPy is so great, why isn't anyone using it?",
+        "url": "https://skylarbpayne.com/posts/dspy-engineering-patterns/",
+        "points": 227,
+        "num_comments": 120,
+        "author": "sbpayne",
+        "created_at": "2026-03-23T14:52:52Z"
+      },
+      {
+        "objectID": "42343692",
+        "title": "DSPy – Programming–not prompting–LMs",
+        "url": "https://dspy.ai/",
+        "points": 189,
+        "num_comments": 45,
+        "author": "ulrischa",
+        "created_at": "2024-12-06T19:59:49Z"
+      },
+      {
+        "objectID": "37417698",
+        "title": "DSPy: Framework for programming with foundation models",
+        "url": "https://github.com/stanfordnlp/dspy",
+        "points": 141,
+        "num_comments": 52,
+        "author": "okhat",
+        "created_at": "2023-09-07T12:04:02Z"
+      },
+      {
+        "objectID": "41213561",
+        "title": "Betting on DSPy for Systems of LLMs",
+        "url": "https://blog.isaacmiller.dev/posts/dspy",
+        "points": 83,
+        "num_comments": 18,
+        "author": "wavelander",
+        "created_at": "2024-08-11T02:11:47Z"
+      },
+      {
+        "objectID": "44773992",
+        "title": "Using Dspy to Detect Document Boundaries",
+        "url": "https://kmad.ai/Using-DSPy-to-Detect-Document-Boundaries",
+        "points": 14,
+        "num_comments": 1,
+        "author": "aberoham",
+        "created_at": "2025-08-03T04:01:13Z"
+      },
+      {
+        "objectID": "44525365",
+        "title": "[video] Context engineering with DSPy (13min)",
+        "url": "https://www.youtube.com/watch?v=1I9PoXzvWcs",
+        "points": 13,
+        "num_comments": 0,
+        "author": "jeffchuber",
+        "created_at": "2025-07-10T20:43:35Z"
+      },
+      {
+        "objectID": "42370277",
+        "title": "Attribute Extraction from Images Using DSPy",
+        "url": "https://www.langtrace.ai/blog/attribute-extraction-from-images-using-dspy",
+        "points": 9,
+        "num_comments": 0,
+        "author": "kakaly0403",
+        "created_at": "2024-12-09T20:33:47Z"
+      },
+      {
+        "objectID": "41214540",
+        "title": "Why I bet on DSPy",
+        "url": "https://blog.isaacbmiller.com/posts/dspy",
+        "points": 8,
+        "num_comments": 1,
+        "author": "isaacbmiller",
+        "created_at": "2024-08-11T07:30:07Z"
+      },
+      {
+        "objectID": "44793246",
+        "title": "Show HN: Using DSPy to enrich a dataset of the Nobel laureate network",
+        "url": "https://blog.kuzudb.com/post/graph-data-enrichment-using-dspy/",
+        "points": 8,
+        "num_comments": 0,
+        "author": "laminarflow027",
+        "created_at": "2025-08-05T01:09:29Z"
+      },
+      {
+        "objectID": "39595866",
+        "title": "Building a chess playing agent using DSPy",
+        "url": "https://medium.com/thoughts-on-machine-learning/building-a-chess-playing-agent-using-dspy-9b87c868f71e",
+        "points": 7,
+        "num_comments": 0,
+        "author": "muggermuch",
+        "created_at": "2024-03-04T20:49:51Z"
+      },
+      {
+        "objectID": "46331945",
+        "title": "Contra DSPy and GEPA",
+        "url": "https://benanderson.work/blog/contra-dspy-gepa/",
+        "points": 5,
+        "num_comments": 0,
+        "author": "mecameron",
+        "created_at": "2025-12-19T22:57:43Z"
+      },
+      {
+        "objectID": "42463758",
+        "title": "LangWatch: A UI for DSPy",
+        "url": "https://langwatch.ai/",
+        "points": 5,
+        "num_comments": 0,
+        "author": "rchaves",
+        "created_at": "2024-12-19T17:32:57Z"
+      },
+      {
+        "objectID": "42355866",
+        "title": "LangWatch: A UI for DSPy",
+        "url": "https://github.com/langwatch/langwatch",
+        "points": 5,
+        "num_comments": 0,
+        "author": "rchaves",
+        "created_at": "2024-12-08T08:33:17Z"
+      },
+      {
+        "objectID": "45969676",
+        "title": "Show HN: DSPy on a Pi: Cheap Prompt Optimization with GEPA and Qwen3",
+        "url": "https://leebutterman.com/2025/11/01/prompt-optimization-on-a-raspberry-pi.html",
+        "points": 4,
+        "num_comments": 1,
+        "author": "lsb",
+        "created_at": "2025-11-18T17:54:04Z"
+      },
+      {
+        "objectID": "44284498",
+        "title": "Let the Model Write the Prompt: Using DSPy to Decouple Your Task from the LLM",
+        "url": "https://www.dbreunig.com/2025/06/10/let-the-model-write-the-prompt.html",
+        "points": 4,
+        "num_comments": 0,
+        "author": "dbreunig",
+        "created_at": "2025-06-15T19:37:33Z"
+      },
+      {
+        "objectID": "44157351",
+        "title": "DSPy in Elixir",
+        "url": "https://github.com/arthurcolle/dspy.ex",
+        "points": 4,
+        "num_comments": 0,
+        "author": "Dowwie",
+        "created_at": "2025-06-02T10:20:28Z"
+      },
+      {
+        "objectID": "46289313",
+        "title": "Achieving 20%+ improvement in structured extraction using DSPy and GEPA",
+        "url": "https://kmad.ai/DSPy-Optimization",
+        "points": 3,
+        "num_comments": 1,
+        "author": "kmad",
+        "created_at": "2025-12-16T14:58:41Z"
+      },
+      {
+        "objectID": "44993668",
+        "title": "I tried DSPy and now I get why everyone won't shut up about it",
+        "url": "https://pedramnavid.com/blog/dspy-part-one/",
+        "points": 3,
+        "num_comments": 1,
+        "author": "pinkbeanz",
+        "created_at": "2025-08-23T06:15:00Z"
+      },
+      {
+        "objectID": "40025501",
+        "title": "DSPy on Databricks",
+        "url": "https://www.databricks.com/blog/dspy-databricks",
+        "points": 3,
+        "num_comments": 1,
+        "author": "jamesblonde",
+        "created_at": "2024-04-13T19:48:25Z"
+      },
+      {
+        "objectID": "46163535",
+        "title": "DSPy Parallel Chunk Streaming",
+        "url": "https://www.elicited.blog/posts/dspy-parallel-chunk-streaming/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "justanotheratom",
+        "created_at": "2025-12-05T16:29:58Z"
+      },
+      {
+        "objectID": "45551465",
+        "title": "The Alien Artifact: DSPy and the Cargo Cult of LLM Optimization",
+        "url": "https://www.data-monger.com/syndeblog/the-alien-artifact-dspy-and-the-cargo-cult-of-llm-optimization",
+        "points": 3,
+        "num_comments": 0,
+        "author": "valgaze",
+        "created_at": "2025-10-11T18:31:58Z"
+      },
+      {
+        "objectID": "45401290",
+        "title": "What Problem Is DSPy Solving?",
+        "url": "https://www.gojiberries.io/what-problemdspy-fixed-budgets-and-what-were-really-optimizing/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "neehao",
+        "created_at": "2025-09-28T02:35:27Z"
+      },
+      {
+        "objectID": "45016370",
+        "title": "DSPy GEPA Example: Listwise Reranker",
+        "url": "",
+        "points": 3,
+        "num_comments": 0,
+        "author": "CShorten",
+        "created_at": "2025-08-25T17:29:35Z"
+      },
+      {
+        "objectID": "44054874",
+        "title": "Correcting Bias in LLMs with DSPy",
+        "url": "https://askrally.com/article/correcting-bias-in-llms-with-dspy",
+        "points": 3,
+        "num_comments": 0,
+        "author": "virtual_rf",
+        "created_at": "2025-05-21T18:53:32Z"
+      },
+      {
+        "objectID": "42211257",
+        "title": "DSPy – open-source framework for programming not prompting LMs",
+        "url": "https://dspy.ai/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "AnhTho_FR",
+        "created_at": "2024-11-22T04:41:50Z"
+      },
+      {
+        "objectID": "39616789",
+        "title": "Self-Discover DSPy with Chris Dossman",
+        "url": "",
+        "points": 3,
+        "num_comments": 0,
+        "author": "CShorten",
+        "created_at": "2024-03-06T15:12:24Z"
+      },
+      {
+        "objectID": "39001718",
+        "title": "DSPy and ColBERT with Omar Khattab",
+        "url": "",
+        "points": 3,
+        "num_comments": 0,
+        "author": "CShorten",
+        "created_at": "2024-01-15T15:02:54Z"
+      },
+      {
+        "objectID": "37258825",
+        "title": "Dspy",
+        "url": "https://github.com/stanfordnlp/dspy",
+        "points": 3,
+        "num_comments": 0,
+        "author": "nothrowaways",
+        "created_at": "2023-08-25T06:44:01Z"
+      },
+      {
+        "objectID": "42654013",
+        "title": "Show HN: Experiment with DSPy optimzers, track performance of LLM-features",
+        "url": "https://github.com/langwatch/langwatch",
+        "points": 2,
+        "num_comments": 2,
+        "author": "draismaa",
+        "created_at": "2025-01-10T09:16:34Z"
+      },
+      {
+        "objectID": "44825724",
+        "title": "Replacing Agent Prompt Templates with Trainable Control Modules in DSPy",
+        "url": "https://viksit.substack.com/p/behavioral-optimization-for-multi",
+        "points": 2,
+        "num_comments": 1,
+        "author": "viksit",
+        "created_at": "2025-08-07T15:26:01Z"
+      },
+      {
+        "objectID": "44637431",
+        "title": "Show HN: SuperOptiX – Evaluate, Optimize, Orchestrate DSPy AI Agents – BDD Style",
+        "url": "https://superoptix.ai/",
+        "points": 2,
+        "num_comments": 1,
+        "author": "Shashikant86",
+        "created_at": "2025-07-21T16:53:56Z"
+      },
+      {
+        "objectID": "44554665",
+        "title": "Differentiable Programming for Learnable Graphs: Optimizing LLM Workflows W DSPy",
+        "url": "https://viksit.substack.com/p/differentiable-programming-for-learnable",
+        "points": 2,
+        "num_comments": 1,
+        "author": "viksit",
+        "created_at": "2025-07-13T23:14:55Z"
+      },
+      {
+        "objectID": "39648577",
+        "title": "Dspyt-CodeVerse – Fostering Innovation and Education in Web3 Technologies",
+        "url": "https://github.com/BadmWe/dspyt-webpage",
+        "points": 2,
+        "num_comments": 1,
+        "author": "fedorovn19",
+        "created_at": "2024-03-09T01:31:24Z"
+      },
+      {
+        "objectID": "38720642",
+        "title": "Dspyt – CodeVerse",
+        "url": "https://dspyt.com/",
+        "points": 2,
+        "num_comments": 1,
+        "author": "pfedprog",
+        "created_at": "2023-12-21T14:17:11Z"
+      },
+      {
+        "objectID": "48005200",
+        "title": "DSPy – Programming – not prompting – LMs",
+        "url": "https://dspy.ai/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "sakompella",
+        "created_at": "2026-05-04T06:10:44Z"
+      },
+      {
+        "objectID": "47718797",
+        "title": "Show HN: I wrote a practical guide to DSPy after 2 years of production use",
+        "url": "https://harmlessdspy.com",
+        "points": 2,
+        "num_comments": 0,
+        "author": "aliirz",
+        "created_at": "2026-04-10T14:34:40Z"
+      },
+      {
+        "objectID": "47700206",
+        "title": "DSPy: Programming – Not Prompting – Language Models",
+        "url": "https://www.akashtandon.in/interactive-explainers/dspy/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "akashtndn",
+        "created_at": "2026-04-09T06:59:50Z"
+      },
+      {
+        "objectID": "47649668",
+        "title": "We optimized Dash's relevance judge with DSPy",
+        "url": "https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy",
+        "points": 2,
+        "num_comments": 0,
+        "author": "gmays",
+        "created_at": "2026-04-05T14:13:13Z"
+      },
+      {
+        "objectID": "47427537",
+        "title": "We optimized Dropbox Dash's relevance judge with DSPy",
+        "url": "https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy",
+        "points": 2,
+        "num_comments": 0,
+        "author": "winterturtle",
+        "created_at": "2026-03-18T16:09:19Z"
+      },
+      {
+        "objectID": "47421493",
+        "title": "We optimized Dash's relevance judge with DSPy",
+        "url": "https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy",
+        "points": 2,
+        "num_comments": 0,
+        "author": "handfuloflight",
+        "created_at": "2026-03-18T04:05:53Z"
+      }
+    ],
+    "dspy": [
+      {
+        "objectID": "47490365",
+        "title": "If DSPy is so great, why isn't anyone using it?",
+        "url": "https://skylarbpayne.com/posts/dspy-engineering-patterns/",
+        "points": 227,
+        "num_comments": 120,
+        "author": "sbpayne",
+        "created_at": "2026-03-23T14:52:52Z"
+      },
+      {
+        "objectID": "42343692",
+        "title": "DSPy – Programming–not prompting–LMs",
+        "url": "https://dspy.ai/",
+        "points": 189,
+        "num_comments": 45,
+        "author": "ulrischa",
+        "created_at": "2024-12-06T19:59:49Z"
+      },
+      {
+        "objectID": "37417698",
+        "title": "DSPy: Framework for programming with foundation models",
+        "url": "https://github.com/stanfordnlp/dspy",
+        "points": 141,
+        "num_comments": 52,
+        "author": "okhat",
+        "created_at": "2023-09-07T12:04:02Z"
+      },
+      {
+        "objectID": "41213561",
+        "title": "Betting on DSPy for Systems of LLMs",
+        "url": "https://blog.isaacmiller.dev/posts/dspy",
+        "points": 83,
+        "num_comments": 18,
+        "author": "wavelander",
+        "created_at": "2024-08-11T02:11:47Z"
+      },
+      {
+        "objectID": "44773992",
+        "title": "Using Dspy to Detect Document Boundaries",
+        "url": "https://kmad.ai/Using-DSPy-to-Detect-Document-Boundaries",
+        "points": 14,
+        "num_comments": 1,
+        "author": "aberoham",
+        "created_at": "2025-08-03T04:01:13Z"
+      },
+      {
+        "objectID": "44525365",
+        "title": "[video] Context engineering with DSPy (13min)",
+        "url": "https://www.youtube.com/watch?v=1I9PoXzvWcs",
+        "points": 13,
+        "num_comments": 0,
+        "author": "jeffchuber",
+        "created_at": "2025-07-10T20:43:35Z"
+      },
+      {
+        "objectID": "42370277",
+        "title": "Attribute Extraction from Images Using DSPy",
+        "url": "https://www.langtrace.ai/blog/attribute-extraction-from-images-using-dspy",
+        "points": 9,
+        "num_comments": 0,
+        "author": "kakaly0403",
+        "created_at": "2024-12-09T20:33:47Z"
+      },
+      {
+        "objectID": "41214540",
+        "title": "Why I bet on DSPy",
+        "url": "https://blog.isaacbmiller.com/posts/dspy",
+        "points": 8,
+        "num_comments": 1,
+        "author": "isaacbmiller",
+        "created_at": "2024-08-11T07:30:07Z"
+      },
+      {
+        "objectID": "44793246",
+        "title": "Show HN: Using DSPy to enrich a dataset of the Nobel laureate network",
+        "url": "https://blog.kuzudb.com/post/graph-data-enrichment-using-dspy/",
+        "points": 8,
+        "num_comments": 0,
+        "author": "laminarflow027",
+        "created_at": "2025-08-05T01:09:29Z"
+      },
+      {
+        "objectID": "39595866",
+        "title": "Building a chess playing agent using DSPy",
+        "url": "https://medium.com/thoughts-on-machine-learning/building-a-chess-playing-agent-using-dspy-9b87c868f71e",
+        "points": 7,
+        "num_comments": 0,
+        "author": "muggermuch",
+        "created_at": "2024-03-04T20:49:51Z"
+      },
+      {
+        "objectID": "46331945",
+        "title": "Contra DSPy and GEPA",
+        "url": "https://benanderson.work/blog/contra-dspy-gepa/",
+        "points": 5,
+        "num_comments": 0,
+        "author": "mecameron",
+        "created_at": "2025-12-19T22:57:43Z"
+      },
+      {
+        "objectID": "42463758",
+        "title": "LangWatch: A UI for DSPy",
+        "url": "https://langwatch.ai/",
+        "points": 5,
+        "num_comments": 0,
+        "author": "rchaves",
+        "created_at": "2024-12-19T17:32:57Z"
+      },
+      {
+        "objectID": "42355866",
+        "title": "LangWatch: A UI for DSPy",
+        "url": "https://github.com/langwatch/langwatch",
+        "points": 5,
+        "num_comments": 0,
+        "author": "rchaves",
+        "created_at": "2024-12-08T08:33:17Z"
+      },
+      {
+        "objectID": "45969676",
+        "title": "Show HN: DSPy on a Pi: Cheap Prompt Optimization with GEPA and Qwen3",
+        "url": "https://leebutterman.com/2025/11/01/prompt-optimization-on-a-raspberry-pi.html",
+        "points": 4,
+        "num_comments": 1,
+        "author": "lsb",
+        "created_at": "2025-11-18T17:54:04Z"
+      },
+      {
+        "objectID": "44284498",
+        "title": "Let the Model Write the Prompt: Using DSPy to Decouple Your Task from the LLM",
+        "url": "https://www.dbreunig.com/2025/06/10/let-the-model-write-the-prompt.html",
+        "points": 4,
+        "num_comments": 0,
+        "author": "dbreunig",
+        "created_at": "2025-06-15T19:37:33Z"
+      },
+      {
+        "objectID": "44157351",
+        "title": "DSPy in Elixir",
+        "url": "https://github.com/arthurcolle/dspy.ex",
+        "points": 4,
+        "num_comments": 0,
+        "author": "Dowwie",
+        "created_at": "2025-06-02T10:20:28Z"
+      },
+      {
+        "objectID": "46289313",
+        "title": "Achieving 20%+ improvement in structured extraction using DSPy and GEPA",
+        "url": "https://kmad.ai/DSPy-Optimization",
+        "points": 3,
+        "num_comments": 1,
+        "author": "kmad",
+        "created_at": "2025-12-16T14:58:41Z"
+      },
+      {
+        "objectID": "44993668",
+        "title": "I tried DSPy and now I get why everyone won't shut up about it",
+        "url": "https://pedramnavid.com/blog/dspy-part-one/",
+        "points": 3,
+        "num_comments": 1,
+        "author": "pinkbeanz",
+        "created_at": "2025-08-23T06:15:00Z"
+      },
+      {
+        "objectID": "40025501",
+        "title": "DSPy on Databricks",
+        "url": "https://www.databricks.com/blog/dspy-databricks",
+        "points": 3,
+        "num_comments": 1,
+        "author": "jamesblonde",
+        "created_at": "2024-04-13T19:48:25Z"
+      },
+      {
+        "objectID": "46163535",
+        "title": "DSPy Parallel Chunk Streaming",
+        "url": "https://www.elicited.blog/posts/dspy-parallel-chunk-streaming/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "justanotheratom",
+        "created_at": "2025-12-05T16:29:58Z"
+      },
+      {
+        "objectID": "45551465",
+        "title": "The Alien Artifact: DSPy and the Cargo Cult of LLM Optimization",
+        "url": "https://www.data-monger.com/syndeblog/the-alien-artifact-dspy-and-the-cargo-cult-of-llm-optimization",
+        "points": 3,
+        "num_comments": 0,
+        "author": "valgaze",
+        "created_at": "2025-10-11T18:31:58Z"
+      },
+      {
+        "objectID": "45401290",
+        "title": "What Problem Is DSPy Solving?",
+        "url": "https://www.gojiberries.io/what-problemdspy-fixed-budgets-and-what-were-really-optimizing/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "neehao",
+        "created_at": "2025-09-28T02:35:27Z"
+      },
+      {
+        "objectID": "45016370",
+        "title": "DSPy GEPA Example: Listwise Reranker",
+        "url": "",
+        "points": 3,
+        "num_comments": 0,
+        "author": "CShorten",
+        "created_at": "2025-08-25T17:29:35Z"
+      },
+      {
+        "objectID": "44054874",
+        "title": "Correcting Bias in LLMs with DSPy",
+        "url": "https://askrally.com/article/correcting-bias-in-llms-with-dspy",
+        "points": 3,
+        "num_comments": 0,
+        "author": "virtual_rf",
+        "created_at": "2025-05-21T18:53:32Z"
+      },
+      {
+        "objectID": "42211257",
+        "title": "DSPy – open-source framework for programming not prompting LMs",
+        "url": "https://dspy.ai/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "AnhTho_FR",
+        "created_at": "2024-11-22T04:41:50Z"
+      },
+      {
+        "objectID": "39616789",
+        "title": "Self-Discover DSPy with Chris Dossman",
+        "url": "",
+        "points": 3,
+        "num_comments": 0,
+        "author": "CShorten",
+        "created_at": "2024-03-06T15:12:24Z"
+      },
+      {
+        "objectID": "39001718",
+        "title": "DSPy and ColBERT with Omar Khattab",
+        "url": "",
+        "points": 3,
+        "num_comments": 0,
+        "author": "CShorten",
+        "created_at": "2024-01-15T15:02:54Z"
+      },
+      {
+        "objectID": "37258825",
+        "title": "Dspy",
+        "url": "https://github.com/stanfordnlp/dspy",
+        "points": 3,
+        "num_comments": 0,
+        "author": "nothrowaways",
+        "created_at": "2023-08-25T06:44:01Z"
+      },
+      {
+        "objectID": "42654013",
+        "title": "Show HN: Experiment with DSPy optimzers, track performance of LLM-features",
+        "url": "https://github.com/langwatch/langwatch",
+        "points": 2,
+        "num_comments": 2,
+        "author": "draismaa",
+        "created_at": "2025-01-10T09:16:34Z"
+      },
+      {
+        "objectID": "44825724",
+        "title": "Replacing Agent Prompt Templates with Trainable Control Modules in DSPy",
+        "url": "https://viksit.substack.com/p/behavioral-optimization-for-multi",
+        "points": 2,
+        "num_comments": 1,
+        "author": "viksit",
+        "created_at": "2025-08-07T15:26:01Z"
+      },
+      {
+        "objectID": "44637431",
+        "title": "Show HN: SuperOptiX – Evaluate, Optimize, Orchestrate DSPy AI Agents – BDD Style",
+        "url": "https://superoptix.ai/",
+        "points": 2,
+        "num_comments": 1,
+        "author": "Shashikant86",
+        "created_at": "2025-07-21T16:53:56Z"
+      },
+      {
+        "objectID": "44554665",
+        "title": "Differentiable Programming for Learnable Graphs: Optimizing LLM Workflows W DSPy",
+        "url": "https://viksit.substack.com/p/differentiable-programming-for-learnable",
+        "points": 2,
+        "num_comments": 1,
+        "author": "viksit",
+        "created_at": "2025-07-13T23:14:55Z"
+      },
+      {
+        "objectID": "39648577",
+        "title": "Dspyt-CodeVerse – Fostering Innovation and Education in Web3 Technologies",
+        "url": "https://github.com/BadmWe/dspyt-webpage",
+        "points": 2,
+        "num_comments": 1,
+        "author": "fedorovn19",
+        "created_at": "2024-03-09T01:31:24Z"
+      },
+      {
+        "objectID": "38720642",
+        "title": "Dspyt – CodeVerse",
+        "url": "https://dspyt.com/",
+        "points": 2,
+        "num_comments": 1,
+        "author": "pfedprog",
+        "created_at": "2023-12-21T14:17:11Z"
+      },
+      {
+        "objectID": "48005200",
+        "title": "DSPy – Programming – not prompting – LMs",
+        "url": "https://dspy.ai/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "sakompella",
+        "created_at": "2026-05-04T06:10:44Z"
+      },
+      {
+        "objectID": "47718797",
+        "title": "Show HN: I wrote a practical guide to DSPy after 2 years of production use",
+        "url": "https://harmlessdspy.com",
+        "points": 2,
+        "num_comments": 0,
+        "author": "aliirz",
+        "created_at": "2026-04-10T14:34:40Z"
+      },
+      {
+        "objectID": "47700206",
+        "title": "DSPy: Programming – Not Prompting – Language Models",
+        "url": "https://www.akashtandon.in/interactive-explainers/dspy/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "akashtndn",
+        "created_at": "2026-04-09T06:59:50Z"
+      },
+      {
+        "objectID": "47649668",
+        "title": "We optimized Dash's relevance judge with DSPy",
+        "url": "https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy",
+        "points": 2,
+        "num_comments": 0,
+        "author": "gmays",
+        "created_at": "2026-04-05T14:13:13Z"
+      },
+      {
+        "objectID": "47427537",
+        "title": "We optimized Dropbox Dash's relevance judge with DSPy",
+        "url": "https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy",
+        "points": 2,
+        "num_comments": 0,
+        "author": "winterturtle",
+        "created_at": "2026-03-18T16:09:19Z"
+      },
+      {
+        "objectID": "47421493",
+        "title": "We optimized Dash's relevance judge with DSPy",
+        "url": "https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy",
+        "points": 2,
+        "num_comments": 0,
+        "author": "handfuloflight",
+        "created_at": "2026-03-18T04:05:53Z"
+      }
+    ]
+  }
+}

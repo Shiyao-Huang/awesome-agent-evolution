@@ -1,0 +1,736 @@
+{
+  "project": "BabyAGI",
+  "repo": "yoheinakajima/babyagi",
+  "collected_at": "2026-05-22T11:30:08.241529+00:00",
+  "queries": [
+    "BabyAGI",
+    "babyagi"
+  ],
+  "total_hits": 80,
+  "results": {
+    "BabyAGI": [
+      {
+        "objectID": "35581443",
+        "title": "BabyAGI: An Autonomous and Self-Improving Agent",
+        "url": "https://github.com/oliveirabruno01/babyagi-asi",
+        "points": 68,
+        "num_comments": 80,
+        "author": "headalgorithm",
+        "created_at": "2023-04-15T15:23:59Z"
+      },
+      {
+        "objectID": "35532509",
+        "title": "AutoGPT vs. BabyAGI vs. LangChain",
+        "url": "https://dsdaily.substack.com/p/say-hello-to-the-fastest-growing",
+        "points": 6,
+        "num_comments": 0,
+        "author": "RAFisherman",
+        "created_at": "2023-04-11T22:29:30Z"
+      },
+      {
+        "objectID": "35592734",
+        "title": "BabyAGI: Initial Thoughts",
+        "url": "https://www.demandsphere.com/blog/babyagi-initial-thoughts/",
+        "points": 5,
+        "num_comments": 0,
+        "author": "rgrieselhuber",
+        "created_at": "2023-04-16T18:19:39Z"
+      },
+      {
+        "objectID": "35423239",
+        "title": "Baby AGI",
+        "url": "https://github.com/yoheinakajima/babyagi",
+        "points": 5,
+        "num_comments": 0,
+        "author": "tosh",
+        "created_at": "2023-04-03T13:31:20Z"
+      },
+      {
+        "objectID": "35473207",
+        "title": "Babyagi: An example of an AI-powered task management system",
+        "url": "https://github.com/yoheinakajima/babyagi",
+        "points": 4,
+        "num_comments": 2,
+        "author": "mkmk",
+        "created_at": "2023-04-06T19:27:58Z"
+      },
+      {
+        "objectID": "41883622",
+        "title": "Babyagi-2o: the simplest self-building general autonomous agent",
+        "url": "https://github.com/yoheinakajima/babyagi-2o",
+        "points": 3,
+        "num_comments": 0,
+        "author": "simonpure",
+        "created_at": "2024-10-18T21:23:42Z"
+      },
+      {
+        "objectID": "35669724",
+        "title": "BabyAGI: AI-powered task management system",
+        "url": "https://babyagi.org/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "madmax108",
+        "created_at": "2023-04-22T18:48:43Z"
+      },
+      {
+        "objectID": "35541856",
+        "title": "BabyAGI for JavaScript (Built with Langchain and Supabase)",
+        "url": "https://twitter.com/ericciarla/status/1646172047356092416",
+        "points": 3,
+        "num_comments": 0,
+        "author": "ericciarla",
+        "created_at": "2023-04-12T15:58:45Z"
+      },
+      {
+        "objectID": "35523422",
+        "title": "BabyAGI: Autonomous and Self-Improving Agent",
+        "url": "https://github.com/oliveirabruno01/babyagi-asi",
+        "points": 2,
+        "num_comments": 2,
+        "author": "amacasubstack",
+        "created_at": "2023-04-11T11:09:39Z"
+      },
+      {
+        "objectID": "36771151",
+        "title": "Weaviate as Vector Database in BabyAGI",
+        "url": "https://github.com/yoheinakajima/babyagi",
+        "points": 2,
+        "num_comments": 1,
+        "author": "edichief",
+        "created_at": "2023-07-18T12:30:18Z"
+      },
+      {
+        "objectID": "36763265",
+        "title": "BabyAGI",
+        "url": "https://github.com/yoheinakajima/babyagi",
+        "points": 2,
+        "num_comments": 0,
+        "author": "lkajslkjdd",
+        "created_at": "2023-07-17T20:01:31Z"
+      },
+      {
+        "objectID": "35624260",
+        "title": "What Are BabyAGI and AutoGPT?",
+        "url": "https://fortune.com/2023/04/15/babyagi-autogpt-openai-gpt-4-autonomous-assistant-agi/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "swyx",
+        "created_at": "2023-04-19T04:32:25Z"
+      },
+      {
+        "objectID": "35586312",
+        "title": "BabyAGI-ts: An NPM module to easily install, run, and play with BabyAGI locally",
+        "url": "https://github.com/context-labs/babyagi-ts",
+        "points": 2,
+        "num_comments": 0,
+        "author": "funfunfunction",
+        "created_at": "2023-04-16T01:09:40Z"
+      },
+      {
+        "objectID": "35528858",
+        "title": "BabyAGI User Guide",
+        "url": "https://python.langchain.com/en/latest/use_cases/agents/baby_agi.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "jdkee",
+        "created_at": "2023-04-11T18:08:02Z"
+      },
+      {
+        "objectID": "42397138",
+        "title": "Babyagi-2o: the simplest self-building autonomous agent",
+        "url": "https://github.com/yoheinakajima/babyagi-2o",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ralphsebastian",
+        "created_at": "2024-12-12T07:48:44Z"
+      },
+      {
+        "objectID": "36382124",
+        "title": "There is a non-zero chance BabyAGI will self-replicate inside Replit",
+        "url": "https://twitter.com/amasad/status/1670473919504220160",
+        "points": 1,
+        "num_comments": 0,
+        "author": "doener",
+        "created_at": "2023-06-18T17:10:11Z"
+      },
+      {
+        "objectID": "35797711",
+        "title": "BabyAGI4All",
+        "url": "https://twitter.com/detlefkroll/status/1653277363596034048",
+        "points": 1,
+        "num_comments": 0,
+        "author": "nico",
+        "created_at": "2023-05-03T03:50:44Z"
+      },
+      {
+        "objectID": "35646292",
+        "title": "BabyAGI in a Single GPT4 Call",
+        "url": "https://github.com/Methexis-Inc/OneStepBabyAGI",
+        "points": 1,
+        "num_comments": 0,
+        "author": "bryan0",
+        "created_at": "2023-04-20T21:03:18Z"
+      },
+      {
+        "objectID": "35619066",
+        "title": "BabyAGI in Your Pocket",
+        "url": "https://github.com/steamship-packages/autogpt-telegram-chatbot",
+        "points": 1,
+        "num_comments": 0,
+        "author": "EniasCailliau",
+        "created_at": "2023-04-18T19:46:34Z"
+      },
+      {
+        "objectID": "37052979",
+        "title": "Show HN: Agentflow – Run Complex LLM Workflows from Simple JSON",
+        "url": "https://github.com/simonmesmith/agentflow",
+        "points": 51,
+        "num_comments": 23,
+        "author": "simonmesmith",
+        "created_at": "2023-08-08T17:57:13Z"
+      },
+      {
+        "objectID": "40493026",
+        "title": "I spent a year and $5,700 to see if ChatGPT can beat the market (S&P 500)",
+        "url": "",
+        "points": 39,
+        "num_comments": 42,
+        "author": "ishtiaqrahman",
+        "created_at": "2024-05-27T17:56:48Z"
+      },
+      {
+        "objectID": "35742845",
+        "title": "Show HN: Camel AGI – Role playing AGENTs(open-source)",
+        "url": "https://github.com/SamurAIGPT/Camel-AutoGPT",
+        "points": 10,
+        "num_comments": 4,
+        "author": "anks_ncode",
+        "created_at": "2023-04-28T15:50:00Z"
+      },
+      {
+        "objectID": "35718916",
+        "title": "Show HN: Agent Actors – Plan-Do-Check-Adjust with Parallelized LLM Agent Trees",
+        "url": "https://github.com/shaman-ai/agent-actors",
+        "points": 8,
+        "num_comments": 3,
+        "author": "knrz",
+        "created_at": "2023-04-26T19:42:19Z"
+      },
+      {
+        "objectID": "37001319",
+        "title": "Ask HN: Have you successfully made any AI agent do useful work for you?",
+        "url": "",
+        "points": 7,
+        "num_comments": 3,
+        "author": "romanzubenko",
+        "created_at": "2023-08-04T15:25:57Z"
+      },
+      {
+        "objectID": "36868185",
+        "title": "Ask HN: Name an AI agent that you find useful",
+        "url": "",
+        "points": 4,
+        "num_comments": 5,
+        "author": "itamarcode",
+        "created_at": "2023-07-25T19:39:19Z"
+      },
+      {
+        "objectID": "35691687",
+        "title": "Ask HN: AutoGPT never does something useful. Is it a cool useless idea?",
+        "url": "",
+        "points": 3,
+        "num_comments": 2,
+        "author": "behnamoh",
+        "created_at": "2023-04-24T19:01:34Z"
+      },
+      {
+        "objectID": "36761442",
+        "title": "AI-powered task management system in JavaScript",
+        "url": "https://github.com/ericciarla/babyagijs",
+        "points": 2,
+        "num_comments": 0,
+        "author": "RadixDLT",
+        "created_at": "2023-07-17T17:45:42Z"
+      },
+      {
+        "objectID": "35701719",
+        "title": "The Rise of Autonomous Agents",
+        "url": "https://autogpt.net/autonomous-agents-the-future-of-ai-with-auto-gpt-babyagi-and-jarvis/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "synergy20",
+        "created_at": "2023-04-25T15:21:21Z"
+      },
+      {
+        "objectID": "18328945",
+        "title": "BabyAI: First Steps Towards Grounded Language Learning with a Human in the Loop",
+        "url": "https://arxiv.org/abs/1810.08272",
+        "points": 3,
+        "num_comments": 1,
+        "author": "jonbaer",
+        "created_at": "2018-10-29T16:49:38Z"
+      },
+      {
+        "objectID": "18317208",
+        "title": "BabyAI: Towards Grounded Language Learning with a Human in the Loop [pdf]",
+        "url": "https://export.arxiv.org/abs/1810.08272",
+        "points": 3,
+        "num_comments": 0,
+        "author": "stablemap",
+        "created_at": "2018-10-27T19:04:50Z"
+      },
+      {
+        "objectID": "19349955",
+        "title": "Bengio at Tsinghua University on Maturing Deep Learning and BabyAI",
+        "url": "https://medium.com/syncedreview/bengio-at-tsinghua-university-on-maturing-deep-learning-and-babyai-aa0be56e4098",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Yuqing7",
+        "created_at": "2019-03-10T03:16:22Z"
+      },
+      {
+        "objectID": "41958224",
+        "title": "Teens Want Less Sex in Movies and TV Shows, Study Finds",
+        "url": "https://variety.com/2024/film/news/teens-sex-movies-tv-shows-study-preferences-babygirl-tell-me-lies-1236189703/",
+        "points": 48,
+        "num_comments": 42,
+        "author": "Michelangelo11",
+        "created_at": "2024-10-26T22:35:41Z"
+      },
+      {
+        "objectID": "48233965",
+        "title": "Baby Magic – AI baby images, videos, and family memories",
+        "url": "https://www.babymagic.app",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Follow_Cloud",
+        "created_at": "2026-05-22T10:14:13Z"
+      },
+      {
+        "objectID": "44951017",
+        "title": "Baby Age Calculator",
+        "url": "https://babyagecalculator.com/",
+        "points": 1,
+        "num_comments": 1,
+        "author": "pushmetop",
+        "created_at": "2025-08-19T13:00:53Z"
+      },
+      {
+        "objectID": "9028102",
+        "title": "William Wynne Ryland  – Hanged for Forgery",
+        "url": "https://georgianera.wordpress.com/2015/02/10/william-wynne-ryland-hanged-for-forgery/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "babygirl1001",
+        "created_at": "2015-02-10T16:22:49Z"
+      },
+      {
+        "objectID": "1771361",
+        "title": "Babbage's heart-warming message for the middle-aged",
+        "url": "http://blog.jgc.org/2010/10/babbages-heart-warming-message-for.html",
+        "points": 153,
+        "num_comments": 68,
+        "author": "jgrahamc",
+        "created_at": "2010-10-08T12:10:24Z"
+      },
+      {
+        "objectID": "5156447",
+        "title": "Babbage: A Clojure library for accumulation and graph computation",
+        "url": "https://github.com/ReadyForZero/babbage",
+        "points": 89,
+        "num_comments": 8,
+        "author": "ithayer",
+        "created_at": "2013-02-02T16:46:10Z"
+      },
+      {
+        "objectID": "47074671",
+        "title": "How I launched 3 consoles and found true love at Babbage's store no. 9 (2013)",
+        "url": "https://arstechnica.com/gadgets/2013/01/how-i-launched-3-consoles-and-found-true-love-at-babbages-store-no-9/",
+        "points": 79,
+        "num_comments": 33,
+        "author": "zepearl",
+        "created_at": "2026-02-19T15:14:18Z"
+      },
+      {
+        "objectID": "31547810",
+        "title": "Charles Babbage’s Difference Engine Turns 200",
+        "url": "https://spectrum.ieee.org/charles-babbage-difference-engine",
+        "points": 74,
+        "num_comments": 13,
+        "author": "pseudolus",
+        "created_at": "2022-05-29T09:39:21Z"
+      },
+      {
+        "objectID": "24856235",
+        "title": "The programming architecture of Babbage's Analytical Engine [video]",
+        "url": "https://media.ccc.de/v/vcfb20_-_137_-_de_-_202010101600_-_the_programming_architecture_of_babbages_analytical_engine_-_prof_dr_raul_rojas",
+        "points": 61,
+        "num_comments": 6,
+        "author": "doener",
+        "created_at": "2020-10-22T09:25:56Z"
+      }
+    ],
+    "babyagi": [
+      {
+        "objectID": "35581443",
+        "title": "BabyAGI: An Autonomous and Self-Improving Agent",
+        "url": "https://github.com/oliveirabruno01/babyagi-asi",
+        "points": 68,
+        "num_comments": 80,
+        "author": "headalgorithm",
+        "created_at": "2023-04-15T15:23:59Z"
+      },
+      {
+        "objectID": "35532509",
+        "title": "AutoGPT vs. BabyAGI vs. LangChain",
+        "url": "https://dsdaily.substack.com/p/say-hello-to-the-fastest-growing",
+        "points": 6,
+        "num_comments": 0,
+        "author": "RAFisherman",
+        "created_at": "2023-04-11T22:29:30Z"
+      },
+      {
+        "objectID": "35592734",
+        "title": "BabyAGI: Initial Thoughts",
+        "url": "https://www.demandsphere.com/blog/babyagi-initial-thoughts/",
+        "points": 5,
+        "num_comments": 0,
+        "author": "rgrieselhuber",
+        "created_at": "2023-04-16T18:19:39Z"
+      },
+      {
+        "objectID": "35423239",
+        "title": "Baby AGI",
+        "url": "https://github.com/yoheinakajima/babyagi",
+        "points": 5,
+        "num_comments": 0,
+        "author": "tosh",
+        "created_at": "2023-04-03T13:31:20Z"
+      },
+      {
+        "objectID": "35473207",
+        "title": "Babyagi: An example of an AI-powered task management system",
+        "url": "https://github.com/yoheinakajima/babyagi",
+        "points": 4,
+        "num_comments": 2,
+        "author": "mkmk",
+        "created_at": "2023-04-06T19:27:58Z"
+      },
+      {
+        "objectID": "41883622",
+        "title": "Babyagi-2o: the simplest self-building general autonomous agent",
+        "url": "https://github.com/yoheinakajima/babyagi-2o",
+        "points": 3,
+        "num_comments": 0,
+        "author": "simonpure",
+        "created_at": "2024-10-18T21:23:42Z"
+      },
+      {
+        "objectID": "35669724",
+        "title": "BabyAGI: AI-powered task management system",
+        "url": "https://babyagi.org/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "madmax108",
+        "created_at": "2023-04-22T18:48:43Z"
+      },
+      {
+        "objectID": "35541856",
+        "title": "BabyAGI for JavaScript (Built with Langchain and Supabase)",
+        "url": "https://twitter.com/ericciarla/status/1646172047356092416",
+        "points": 3,
+        "num_comments": 0,
+        "author": "ericciarla",
+        "created_at": "2023-04-12T15:58:45Z"
+      },
+      {
+        "objectID": "35523422",
+        "title": "BabyAGI: Autonomous and Self-Improving Agent",
+        "url": "https://github.com/oliveirabruno01/babyagi-asi",
+        "points": 2,
+        "num_comments": 2,
+        "author": "amacasubstack",
+        "created_at": "2023-04-11T11:09:39Z"
+      },
+      {
+        "objectID": "36771151",
+        "title": "Weaviate as Vector Database in BabyAGI",
+        "url": "https://github.com/yoheinakajima/babyagi",
+        "points": 2,
+        "num_comments": 1,
+        "author": "edichief",
+        "created_at": "2023-07-18T12:30:18Z"
+      },
+      {
+        "objectID": "36763265",
+        "title": "BabyAGI",
+        "url": "https://github.com/yoheinakajima/babyagi",
+        "points": 2,
+        "num_comments": 0,
+        "author": "lkajslkjdd",
+        "created_at": "2023-07-17T20:01:31Z"
+      },
+      {
+        "objectID": "35624260",
+        "title": "What Are BabyAGI and AutoGPT?",
+        "url": "https://fortune.com/2023/04/15/babyagi-autogpt-openai-gpt-4-autonomous-assistant-agi/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "swyx",
+        "created_at": "2023-04-19T04:32:25Z"
+      },
+      {
+        "objectID": "35586312",
+        "title": "BabyAGI-ts: An NPM module to easily install, run, and play with BabyAGI locally",
+        "url": "https://github.com/context-labs/babyagi-ts",
+        "points": 2,
+        "num_comments": 0,
+        "author": "funfunfunction",
+        "created_at": "2023-04-16T01:09:40Z"
+      },
+      {
+        "objectID": "35528858",
+        "title": "BabyAGI User Guide",
+        "url": "https://python.langchain.com/en/latest/use_cases/agents/baby_agi.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "jdkee",
+        "created_at": "2023-04-11T18:08:02Z"
+      },
+      {
+        "objectID": "42397138",
+        "title": "Babyagi-2o: the simplest self-building autonomous agent",
+        "url": "https://github.com/yoheinakajima/babyagi-2o",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ralphsebastian",
+        "created_at": "2024-12-12T07:48:44Z"
+      },
+      {
+        "objectID": "36382124",
+        "title": "There is a non-zero chance BabyAGI will self-replicate inside Replit",
+        "url": "https://twitter.com/amasad/status/1670473919504220160",
+        "points": 1,
+        "num_comments": 0,
+        "author": "doener",
+        "created_at": "2023-06-18T17:10:11Z"
+      },
+      {
+        "objectID": "35797711",
+        "title": "BabyAGI4All",
+        "url": "https://twitter.com/detlefkroll/status/1653277363596034048",
+        "points": 1,
+        "num_comments": 0,
+        "author": "nico",
+        "created_at": "2023-05-03T03:50:44Z"
+      },
+      {
+        "objectID": "35646292",
+        "title": "BabyAGI in a Single GPT4 Call",
+        "url": "https://github.com/Methexis-Inc/OneStepBabyAGI",
+        "points": 1,
+        "num_comments": 0,
+        "author": "bryan0",
+        "created_at": "2023-04-20T21:03:18Z"
+      },
+      {
+        "objectID": "35619066",
+        "title": "BabyAGI in Your Pocket",
+        "url": "https://github.com/steamship-packages/autogpt-telegram-chatbot",
+        "points": 1,
+        "num_comments": 0,
+        "author": "EniasCailliau",
+        "created_at": "2023-04-18T19:46:34Z"
+      },
+      {
+        "objectID": "37052979",
+        "title": "Show HN: Agentflow – Run Complex LLM Workflows from Simple JSON",
+        "url": "https://github.com/simonmesmith/agentflow",
+        "points": 51,
+        "num_comments": 23,
+        "author": "simonmesmith",
+        "created_at": "2023-08-08T17:57:13Z"
+      },
+      {
+        "objectID": "40493026",
+        "title": "I spent a year and $5,700 to see if ChatGPT can beat the market (S&P 500)",
+        "url": "",
+        "points": 39,
+        "num_comments": 42,
+        "author": "ishtiaqrahman",
+        "created_at": "2024-05-27T17:56:48Z"
+      },
+      {
+        "objectID": "35742845",
+        "title": "Show HN: Camel AGI – Role playing AGENTs(open-source)",
+        "url": "https://github.com/SamurAIGPT/Camel-AutoGPT",
+        "points": 10,
+        "num_comments": 4,
+        "author": "anks_ncode",
+        "created_at": "2023-04-28T15:50:00Z"
+      },
+      {
+        "objectID": "35718916",
+        "title": "Show HN: Agent Actors – Plan-Do-Check-Adjust with Parallelized LLM Agent Trees",
+        "url": "https://github.com/shaman-ai/agent-actors",
+        "points": 8,
+        "num_comments": 3,
+        "author": "knrz",
+        "created_at": "2023-04-26T19:42:19Z"
+      },
+      {
+        "objectID": "37001319",
+        "title": "Ask HN: Have you successfully made any AI agent do useful work for you?",
+        "url": "",
+        "points": 7,
+        "num_comments": 3,
+        "author": "romanzubenko",
+        "created_at": "2023-08-04T15:25:57Z"
+      },
+      {
+        "objectID": "36868185",
+        "title": "Ask HN: Name an AI agent that you find useful",
+        "url": "",
+        "points": 4,
+        "num_comments": 5,
+        "author": "itamarcode",
+        "created_at": "2023-07-25T19:39:19Z"
+      },
+      {
+        "objectID": "35691687",
+        "title": "Ask HN: AutoGPT never does something useful. Is it a cool useless idea?",
+        "url": "",
+        "points": 3,
+        "num_comments": 2,
+        "author": "behnamoh",
+        "created_at": "2023-04-24T19:01:34Z"
+      },
+      {
+        "objectID": "36761442",
+        "title": "AI-powered task management system in JavaScript",
+        "url": "https://github.com/ericciarla/babyagijs",
+        "points": 2,
+        "num_comments": 0,
+        "author": "RadixDLT",
+        "created_at": "2023-07-17T17:45:42Z"
+      },
+      {
+        "objectID": "35701719",
+        "title": "The Rise of Autonomous Agents",
+        "url": "https://autogpt.net/autonomous-agents-the-future-of-ai-with-auto-gpt-babyagi-and-jarvis/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "synergy20",
+        "created_at": "2023-04-25T15:21:21Z"
+      },
+      {
+        "objectID": "18328945",
+        "title": "BabyAI: First Steps Towards Grounded Language Learning with a Human in the Loop",
+        "url": "https://arxiv.org/abs/1810.08272",
+        "points": 3,
+        "num_comments": 1,
+        "author": "jonbaer",
+        "created_at": "2018-10-29T16:49:38Z"
+      },
+      {
+        "objectID": "18317208",
+        "title": "BabyAI: Towards Grounded Language Learning with a Human in the Loop [pdf]",
+        "url": "https://export.arxiv.org/abs/1810.08272",
+        "points": 3,
+        "num_comments": 0,
+        "author": "stablemap",
+        "created_at": "2018-10-27T19:04:50Z"
+      },
+      {
+        "objectID": "19349955",
+        "title": "Bengio at Tsinghua University on Maturing Deep Learning and BabyAI",
+        "url": "https://medium.com/syncedreview/bengio-at-tsinghua-university-on-maturing-deep-learning-and-babyai-aa0be56e4098",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Yuqing7",
+        "created_at": "2019-03-10T03:16:22Z"
+      },
+      {
+        "objectID": "41958224",
+        "title": "Teens Want Less Sex in Movies and TV Shows, Study Finds",
+        "url": "https://variety.com/2024/film/news/teens-sex-movies-tv-shows-study-preferences-babygirl-tell-me-lies-1236189703/",
+        "points": 48,
+        "num_comments": 42,
+        "author": "Michelangelo11",
+        "created_at": "2024-10-26T22:35:41Z"
+      },
+      {
+        "objectID": "48233965",
+        "title": "Baby Magic – AI baby images, videos, and family memories",
+        "url": "https://www.babymagic.app",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Follow_Cloud",
+        "created_at": "2026-05-22T10:14:13Z"
+      },
+      {
+        "objectID": "44951017",
+        "title": "Baby Age Calculator",
+        "url": "https://babyagecalculator.com/",
+        "points": 1,
+        "num_comments": 1,
+        "author": "pushmetop",
+        "created_at": "2025-08-19T13:00:53Z"
+      },
+      {
+        "objectID": "9028102",
+        "title": "William Wynne Ryland  – Hanged for Forgery",
+        "url": "https://georgianera.wordpress.com/2015/02/10/william-wynne-ryland-hanged-for-forgery/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "babygirl1001",
+        "created_at": "2015-02-10T16:22:49Z"
+      },
+      {
+        "objectID": "1771361",
+        "title": "Babbage's heart-warming message for the middle-aged",
+        "url": "http://blog.jgc.org/2010/10/babbages-heart-warming-message-for.html",
+        "points": 153,
+        "num_comments": 68,
+        "author": "jgrahamc",
+        "created_at": "2010-10-08T12:10:24Z"
+      },
+      {
+        "objectID": "45242788",
+        "title": "Vibe coding has turned senior devs into 'AI babysitters'",
+        "url": "https://techcrunch.com/2025/09/14/vibe-coding-has-turned-senior-devs-into-ai-babysitters-but-they-say-its-worth-it/",
+        "points": 127,
+        "num_comments": 114,
+        "author": "CharlesW",
+        "created_at": "2025-09-14T20:04:44Z"
+      },
+      {
+        "objectID": "10995055",
+        "title": "Computer Museum bids farewell to Babbage engine",
+        "url": "http://www.mv-voice.com/print/story/2016/01/29/computer-museum-bids-farewell-to-babbage-engine",
+        "points": 126,
+        "num_comments": 53,
+        "author": "jgrahamc",
+        "created_at": "2016-01-29T13:34:48Z"
+      },
+      {
+        "objectID": "12181650",
+        "title": "The Babysitters Club",
+        "url": "http://reallifemag.com/the-babysitters-club/",
+        "points": 95,
+        "num_comments": 41,
+        "author": "haldean",
+        "created_at": "2016-07-28T17:26:07Z"
+      },
+      {
+        "objectID": "5156447",
+        "title": "Babbage: A Clojure library for accumulation and graph computation",
+        "url": "https://github.com/ReadyForZero/babbage",
+        "points": 89,
+        "num_comments": 8,
+        "author": "ithayer",
+        "created_at": "2013-02-02T16:46:10Z"
+      }
+    ]
+  }
+}

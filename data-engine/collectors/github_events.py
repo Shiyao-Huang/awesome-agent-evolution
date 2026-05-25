@@ -10,12 +10,10 @@ import argparse
 def collect_events(client, repo, output_dir):
     owner, name = repo.split("/")
     print(f"📊 Collecting events for {repo}")
-
     events = client.paginate(f"/repos/{owner}/{name}/events", max_pages=3)
 
     type_dist = Counter(e.get("type", "unknown") for e in events)
     actors = Counter(e.get("actor", {}).get("login", "unknown") for e in events)
-
     daily = Counter()
     for e in events:
         ts = e.get("created_at", "")[:10]
@@ -27,25 +25,15 @@ def collect_events(client, repo, output_dir):
     pr_events = [e for e in events if e.get("type") == "PullRequestEvent"][:10]
 
     data = {
-        "full_name": repo,
-        "events_sampled": len(events),
+        "full_name": repo, "events_sampled": len(events),
         "type_distribution": dict(type_dist.most_common()),
         "top_actors": dict(actors.most_common(15)),
         "daily_activity": dict(sorted(daily.items())),
-        "recent_pushes": [
-            {"actor": e.get("actor", {}).get("login"), "created_at": e.get("created_at")}
-            for e in pushes
-        ],
-        "recent_releases": [
-            {"created_at": e.get("created_at")} for e in releases
-        ],
-        "recent_pr_events": [
-            {"actor": e.get("actor", {}).get("login"), "created_at": e.get("created_at")}
-            for e in pr_events
-        ],
+        "recent_pushes": [{"actor": e.get("actor", {}).get("login"), "created_at": e.get("created_at")} for e in pushes],
+        "recent_releases": [{"created_at": e.get("created_at")} for e in releases],
+        "recent_pr_events": [{"actor": e.get("actor", {}).get("login"), "created_at": e.get("created_at")} for e in pr_events],
     }
-    safe = repo.replace("/", "_")
-    save_json(output_dir, f"{safe}_events.json", repo, "github_events", data)
+    save_json(output_dir, f"{repo.replace('/', '_')}_events.json", repo, "github_events", data)
     return data
 
 
@@ -54,11 +42,7 @@ def main():
     add_common_args(parser)
     args = parser.parse_args()
     client = GitHubClient(args.token)
-    repos = resolve_repos(args)
-    if not repos:
-        print("No repos to process", file=sys.stderr)
-        return
-    for repo in repos:
+    for repo in resolve_repos(args):
         collect_events(client, repo, args.output)
         client.throttle()
 

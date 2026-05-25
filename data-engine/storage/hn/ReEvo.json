@@ -1,0 +1,374 @@
+{
+  "project": "ReEvo",
+  "repo": "xiangwen-lee/ReEvo",
+  "collected_at": "2026-05-22T11:30:59.973061+00:00",
+  "queries": [
+    "ReEvo",
+    "ReEvo"
+  ],
+  "total_hits": 40,
+  "results": {
+    "ReEvo": [
+      {
+        "objectID": "42873819",
+        "title": "The Reevo Hubless Bicycle Is a Total Nightmare [video]",
+        "url": "https://www.youtube.com/watch?v=AB7pBrudFbg",
+        "points": 4,
+        "num_comments": 0,
+        "author": "fortran77",
+        "created_at": "2025-01-30T01:47:34Z"
+      },
+      {
+        "objectID": "42994539",
+        "title": "What's Inside the Worst EBike? Reevo Teardown [video]",
+        "url": "https://www.youtube.com/watch?v=MgPUpccQ_mw",
+        "points": 2,
+        "num_comments": 0,
+        "author": "lisper",
+        "created_at": "2025-02-09T22:03:29Z"
+      },
+      {
+        "objectID": "3042725",
+        "title": "Reevoo anounces it's manifesto",
+        "url": "http://b2b.reevoo.com/about-us/manifesto",
+        "points": 1,
+        "num_comments": 0,
+        "author": "s_syedali",
+        "created_at": "2011-09-27T10:49:04Z"
+      },
+      {
+        "objectID": "1471929",
+        "title": "Reevoo Secures Series B Round To Expand Into Europe",
+        "url": "http://techcrunch.com/2010/06/29/reevoo-secures-series-b-round-to-expand-into-europe/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Techcrunch+%28TechCrunch%29",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Concours",
+        "created_at": "2010-06-29T16:34:56Z"
+      },
+      {
+        "objectID": "2147463",
+        "title": "Latest Android phones overtake iPhone 4 in user reviews",
+        "url": "http://blog.reevoo.com/2011/01/android-overtakes-iphone-in-user-reviews/",
+        "points": 27,
+        "num_comments": 34,
+        "author": "will_critchlow",
+        "created_at": "2011-01-27T11:49:53Z"
+      },
+      {
+        "objectID": "1987890",
+        "title": "Predicting Christmas sales with real data",
+        "url": "http://blog.reevoo.com/2010/12/datamining-santas-grotto-predicting-christmas-sales-with-real-data/",
+        "points": 3,
+        "num_comments": 1,
+        "author": "will_critchlow",
+        "created_at": "2010-12-09T16:02:44Z"
+      },
+      {
+        "objectID": "2309642",
+        "title": "Fixing Chaotic character encoding in MySQL databases (65Gb dataset)",
+        "url": "http://www.reevoo.com/labs/2011/03/utopian-text-format-number-8/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ebr",
+        "created_at": "2011-03-10T16:26:28Z"
+      },
+      {
+        "objectID": "425175",
+        "title": "detenc: a fast low-memory character-encoding detector",
+        "url": "http://labs.reevoo.com/2009/1/8/detenc-a-fast-low-memory-character-encoding-detector",
+        "points": 1,
+        "num_comments": 0,
+        "author": "soundsop",
+        "created_at": "2009-01-08T17:03:54Z"
+      },
+      {
+        "objectID": "266511",
+        "title": "Fixing uneven load balancing between Apache and Mongrel for Ruby on Rails applications ",
+        "url": "http://labs.reevoo.com/2008/7/30/fixing-uneven-load-balancing-between-apache-and-mongrel-for-ruby-on-rails-applications",
+        "points": 1,
+        "num_comments": 0,
+        "author": "nickb",
+        "created_at": "2008-08-04T17:47:46Z"
+      },
+      {
+        "objectID": "644619",
+        "title": "Ask HN: S-Corp/C-Corp/LLC",
+        "url": "",
+        "points": 19,
+        "num_comments": 12,
+        "author": "reevo",
+        "created_at": "2009-06-06T08:14:13Z"
+      },
+      {
+        "objectID": "520596",
+        "title": "Ask HN: Help me become a great hacker",
+        "url": "",
+        "points": 14,
+        "num_comments": 13,
+        "author": "reevo",
+        "created_at": "2009-03-17T20:55:35Z"
+      },
+      {
+        "objectID": "19763413",
+        "title": "Docker Hub Hacked – 190k accounts, GitHub tokens revoked, builds disabled",
+        "url": "",
+        "points": 1146,
+        "num_comments": 257,
+        "author": "lugg",
+        "created_at": "2019-04-27T02:36:01Z"
+      },
+      {
+        "objectID": "41649763",
+        "title": "Llama 3.2: Revolutionizing edge AI and vision with open, customizable models",
+        "url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/?_fb_noscript=1",
+        "points": 924,
+        "num_comments": 328,
+        "author": "nmwnmw",
+        "created_at": "2024-09-25T17:29:27Z"
+      },
+      {
+        "objectID": "16698932",
+        "title": "Au Revoir",
+        "url": "https://blog.docker.com/2018/03/au-revoir/",
+        "points": 898,
+        "num_comments": 287,
+        "author": "zapita",
+        "created_at": "2018-03-28T16:11:30Z"
+      },
+      {
+        "objectID": "7339092",
+        "title": "The Indian sanitary pad revolutionary",
+        "url": "http://www.bbc.co.uk/news/magazine-26260978",
+        "points": 835,
+        "num_comments": 261,
+        "author": "debugunit",
+        "created_at": "2014-03-04T08:29:06Z"
+      },
+      {
+        "objectID": "43277918",
+        "title": "Revolt: Open-Source Alternative to Discord",
+        "url": "https://revolt.chat",
+        "points": 729,
+        "num_comments": 539,
+        "author": "OuterVale",
+        "created_at": "2025-03-06T08:47:32Z"
+      },
+      {
+        "objectID": "33939491",
+        "title": "Base editing: Revolutionary therapy clears girl's incurable cancer",
+        "url": "https://www.bbc.com/news/health-63859184",
+        "points": 722,
+        "num_comments": 211,
+        "author": "sonabinu",
+        "created_at": "2022-12-11T02:35:47Z"
+      },
+      {
+        "objectID": "25222243",
+        "title": "How io_uring and eBPF Will Revolutionize Programming in Linux",
+        "url": "https://www.scylladb.com/2020/05/05/how-io_uring-and-ebpf-will-revolutionize-programming-in-linux/",
+        "points": 709,
+        "num_comments": 320,
+        "author": "harporoeder",
+        "created_at": "2020-11-26T18:08:16Z"
+      },
+      {
+        "objectID": "20261823",
+        "title": "I just had over a thousand Euros stolen and Revolut is siding with the thief",
+        "url": "https://www.stavros.io/posts/revolut-doesnt-care-about-you/",
+        "points": 705,
+        "num_comments": 352,
+        "author": "jstanley",
+        "created_at": "2019-06-24T09:41:37Z"
+      },
+      {
+        "objectID": "45826995",
+        "title": "New gel restores dental enamel and could revolutionise tooth repair",
+        "url": "https://www.nottingham.ac.uk/news/new-gel-restores-dental-enamel-and-could-revolutionise-tooth-repair",
+        "points": 685,
+        "num_comments": 258,
+        "author": "CGMthrowaway",
+        "created_at": "2025-11-05T19:44:49Z"
+      },
+      {
+        "objectID": "28434012",
+        "title": "Revolt: Open-source alternative to Discord",
+        "url": "https://revolt.chat/",
+        "points": 642,
+        "num_comments": 395,
+        "author": "adamnemecek",
+        "created_at": "2021-09-06T14:29:30Z"
+      },
+      {
+        "objectID": "11410650",
+        "title": "How an Army of Ocean Farmers Are Starting an Economic Revolution",
+        "url": "https://medium.com/invironment/an-army-of-ocean-farmers-on-the-frontlines-of-the-blue-green-economic-revolution-d5ae171285a3",
+        "points": 585,
+        "num_comments": 116,
+        "author": "DiabloD3",
+        "created_at": "2016-04-02T07:41:04Z"
+      },
+      {
+        "objectID": "24758772",
+        "title": "The Serverless Revolution Has Stalled",
+        "url": "https://www.infoq.com/articles/serverless-stalled/",
+        "points": 575,
+        "num_comments": 648,
+        "author": "simonpure",
+        "created_at": "2020-10-12T19:57:23Z"
+      },
+      {
+        "objectID": "30165564",
+        "title": "The Casio employee behind the “Sleng Teng” riddim that revolutionized reggae",
+        "url": "https://www.nippon.com/en/japan-topics/g02027/",
+        "points": 575,
+        "num_comments": 210,
+        "author": "robinhouston",
+        "created_at": "2022-02-01T17:03:57Z"
+      },
+      {
+        "objectID": "36312122",
+        "title": "Apollo’s Christian Selig explains his fight with Reddit – and why users revolted",
+        "url": "https://www.theverge.com/2023/6/13/23759180/reddit-protest-private-apollo-christian-selig-subreddit",
+        "points": 561,
+        "num_comments": 573,
+        "author": "tedivm",
+        "created_at": "2023-06-13T15:55:32Z"
+      },
+      {
+        "objectID": "41534474",
+        "title": "OpenAI threatens to revoke o1 access for asking it about its chain of thought",
+        "url": "https://twitter.com/SmokeAwayyy/status/1834641370486915417",
+        "points": 538,
+        "num_comments": 305,
+        "author": "jsheard",
+        "created_at": "2024-09-13T19:43:34Z"
+      },
+      {
+        "objectID": "32607187",
+        "title": "Why no Roman industrial revolution?",
+        "url": "https://acoup.blog/2022/08/26/collections-why-no-roman-industrial-revolution/",
+        "points": 509,
+        "num_comments": 516,
+        "author": "Tomte",
+        "created_at": "2022-08-26T13:25:09Z"
+      },
+      {
+        "objectID": "7124139",
+        "title": "Revolution in Kiev",
+        "url": "http://zyalt.livejournal.com/984735.html",
+        "points": 496,
+        "num_comments": 364,
+        "author": "eigenvector",
+        "created_at": "2014-01-26T06:34:59Z"
+      },
+      {
+        "objectID": "24288821",
+        "title": "The potentially revolutionary Celera 500L aircraft",
+        "url": "https://www.thedrive.com/the-war-zone/36016/the-potentially-revolutionary-celera-500l-officially-breaks-cover",
+        "points": 490,
+        "num_comments": 246,
+        "author": "tomohawk",
+        "created_at": "2020-08-27T00:16:51Z"
+      },
+      {
+        "objectID": "4088572",
+        "title": "Neal Stephenson wants to revolutionize sword fighting video games",
+        "url": "http://www.kickstarter.com/projects/260688528/clang",
+        "points": 485,
+        "num_comments": 183,
+        "author": "SoapSeller",
+        "created_at": "2012-06-09T17:31:31Z"
+      },
+      {
+        "objectID": "17821181",
+        "title": "Apple and Google Face Growing Revolt Over App Store ‘Tax’",
+        "url": "https://www.bloomberg.com/news/articles/2018-08-22/apple-and-google-face-growing-revolt-over-app-store-tax",
+        "points": 457,
+        "num_comments": 457,
+        "author": "tareqak",
+        "created_at": "2018-08-22T19:17:13Z"
+      },
+      {
+        "objectID": "25810427",
+        "title": "The values of Emacs, the Neovim revolution, and the VSCode gorilla",
+        "url": "https://www.murilopereira.com/the-values-of-emacs-the-neovim-revolution-and-the-vscode-gorilla/",
+        "points": 429,
+        "num_comments": 343,
+        "author": "mpereira",
+        "created_at": "2021-01-17T13:18:56Z"
+      },
+      {
+        "objectID": "12155273",
+        "title": "The Raspberry Pi Has Revolutionized Emulation",
+        "url": "https://blog.codinghorror.com/the-raspberry-pi-has-revolutionized-emulation/",
+        "points": 426,
+        "num_comments": 114,
+        "author": "dwaxe",
+        "created_at": "2016-07-24T22:44:12Z"
+      },
+      {
+        "objectID": "16883633",
+        "title": "Susan Kare designed the suite of icons that made the Macintosh revolutionary",
+        "url": "https://www.newyorker.com/culture/cultural-comment/the-woman-who-gave-the-macintosh-a-smile",
+        "points": 423,
+        "num_comments": 74,
+        "author": "matt4077",
+        "created_at": "2018-04-20T10:29:42Z"
+      },
+      {
+        "objectID": "6517553",
+        "title": "Lavabit SSL Cert Revoked",
+        "url": "https://lavabit.com/?8-oct-2013",
+        "points": 420,
+        "num_comments": 304,
+        "author": "_ouxp",
+        "created_at": "2013-10-08T20:19:00Z"
+      },
+      {
+        "objectID": "27422610",
+        "title": "“AI promised to revolutionize radiology but so far its failing”",
+        "url": "https://statmodeling.stat.columbia.edu/2021/06/07/ai-promised-to-revolutionize-radiology-but-so-far-its-failing/",
+        "points": 405,
+        "num_comments": 387,
+        "author": "macleginn",
+        "created_at": "2021-06-07T13:53:03Z"
+      },
+      {
+        "objectID": "36433842",
+        "title": "Revolt: FOSS Discord Alternative",
+        "url": "https://revolt.chat/",
+        "points": 402,
+        "num_comments": 191,
+        "author": "hyperific",
+        "created_at": "2023-06-22T15:38:47Z"
+      },
+      {
+        "objectID": "9057996",
+        "title": "The Software Revolution",
+        "url": "http://blog.samaltman.com/the-software-revolution",
+        "points": 400,
+        "num_comments": 388,
+        "author": "ggonweb",
+        "created_at": "2015-02-16T17:33:40Z"
+      },
+      {
+        "objectID": "40545436",
+        "title": "Napster sparked a file-sharing revolution 25 years ago",
+        "url": "https://torrentfreak.com/napster-sparked-a-file-sharing-revolution-25-years-ago-250601/",
+        "points": 389,
+        "num_comments": 334,
+        "author": "luuurker",
+        "created_at": "2024-06-01T13:08:47Z"
+      },
+      {
+        "objectID": "2681554",
+        "title": "Revolutionary \"Light Field\" camera tech - shoot-first, focus-later",
+        "url": "http://allthingsd.com/20110621/meet-the-stealthy-start-up-that-aims-to-sharpen-focus-of-entire-camera-industry/",
+        "points": 385,
+        "num_comments": 91,
+        "author": "hugorodgerbrown",
+        "created_at": "2011-06-22T03:22:26Z"
+      }
+    ]
+  }
+}

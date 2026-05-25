@@ -1,7 +1,7 @@
 {
   "project": "CowAgent",
   "repo": "zhayujie/chatgpt-on-wechat",
-  "collected_at": "2026-05-22T11:04:27.143471+00:00",
+  "collected_at": "2026-05-22T11:26:53.188666+00:00",
   "queries": [
     "CowAgent",
     "chatgpt-on-wechat"
@@ -190,6 +190,105 @@
         "created_at": "2025-07-14T16:37:48Z"
       },
       {
+        "objectID": "30568929",
+        "title": "Internet backbone Cogent cuts Russia connectivity",
+        "url": "https://www.theregister.com/2022/03/04/cogent_cuts_off_russia/",
+        "points": 8,
+        "num_comments": 1,
+        "author": "zinekeller",
+        "created_at": "2022-03-05T16:36:24Z"
+      },
+      {
+        "objectID": "31462135",
+        "title": "Synthesis of γ-graphyne using dynamic covalent chemistry",
+        "url": "https://www.nature.com/articles/s44160-022-00068-7",
+        "points": 8,
+        "num_comments": 0,
+        "author": "rntn",
+        "created_at": "2022-05-21T21:39:33Z"
+      },
+      {
+        "objectID": "12129358",
+        "title": "Covalent: An Open-Source Angular 2.0 Material UI Platform by Teradata",
+        "url": "https://medium.com/covalent-ui/announcing-covalent-an-open-source-angular-2-0-material-ui-platform-by-teradata-ea77776e75cd#.hjhnjqkzr",
+        "points": 8,
+        "num_comments": 0,
+        "author": "alwaysunday",
+        "created_at": "2016-07-20T14:43:39Z"
+      },
+      {
+        "objectID": "30579714",
+        "title": "Cogent is cutting internet access to Russian customers",
+        "url": "https://mashable.com/article/cogent-communications-isp-russia-ukraine",
+        "points": 7,
+        "num_comments": 0,
+        "author": "themerone",
+        "created_at": "2022-03-06T18:24:52Z"
+      },
+      {
+        "objectID": "30562179",
+        "title": "Internet service provider Cogent cutting off access to Russian customers",
+        "url": "https://www.zdnet.com/article/internet-service-provider-cogent-cutting-off-access-to-russian-customers/",
+        "points": 6,
+        "num_comments": 2,
+        "author": "Nyr",
+        "created_at": "2022-03-04T23:48:26Z"
+      },
+      {
+        "objectID": "40391136",
+        "title": "Cogent De-Peering TATA",
+        "url": "https://old.reddit.com/r/networking/comments/1cu13bv/cogent_depeering_tata/",
+        "points": 6,
+        "num_comments": 1,
+        "author": "betaby",
+        "created_at": "2024-05-17T15:46:11Z"
+      },
+      {
+        "objectID": "33530534",
+        "title": "Show HN: Covalent – distributed computing for ML, HPC and Quantum (open source)",
+        "url": "https://github.com/AgnostiqHQ/covalent",
+        "points": 5,
+        "num_comments": 1,
+        "author": "elliotmac",
+        "created_at": "2022-11-09T12:21:54Z"
+      },
+      {
+        "objectID": "32758468",
+        "title": "T-Mobile sells Sprint fiber assets to Cogent for $1",
+        "url": "https://www.fiercetelecom.com/telecom/t-mobile-strikes-1-deal-sell-sprint-fiber-assets-cogent",
+        "points": 5,
+        "num_comments": 1,
+        "author": "greyface-",
+        "created_at": "2022-09-07T23:11:45Z"
+      },
+      {
+        "objectID": "8567710",
+        "title": "Cogent Admits They Slowed Netflix’s Traffic, Creating a Fast Lane and Slow Lane",
+        "url": "http://blog.streamingmedia.com/2014/11/cogent-now-admits-slowed-netflixs-traffic-creating-fast-lane-slow-lane.html",
+        "points": 5,
+        "num_comments": 0,
+        "author": "jlgaddis",
+        "created_at": "2014-11-06T16:19:39Z"
+      },
+      {
+        "objectID": "41930848",
+        "title": "Carbon dioxide capture from open air using covalent organic frameworks",
+        "url": "https://www.nature.com/articles/s41586-024-08080-x",
+        "points": 4,
+        "num_comments": 1,
+        "author": "amacbride",
+        "created_at": "2024-10-24T00:59:02Z"
+      },
+      {
+        "objectID": "41110430",
+        "title": "Cogent Core: A New Cross-platform GUI Framework for Go",
+        "url": "https://www.cogentcore.org/",
+        "points": 4,
+        "num_comments": 1,
+        "author": "samuell",
+        "created_at": "2024-07-30T15:53:31Z"
+      },
+      {
         "objectID": "12933093",
         "title": "A cogent defence of the recent marginalisation of US right wing views",
         "url": "https://www.quora.com/How-did-Donald-Trump-win-the-2016-US-Presidential-Election/answer/Jon-Davis-10?srid=JOr&share=5c9baf97",
@@ -244,6 +343,15 @@
         "created_at": "2024-10-31T22:31:17Z"
       },
       {
+        "objectID": "41109935",
+        "title": "Cogent Core: A New GUI Framework for Go",
+        "url": "https://www.cogentcore.org/blog/initial-release/",
+        "points": 3,
+        "num_comments": 1,
+        "author": "bamazizi",
+        "created_at": "2024-07-30T15:12:59Z"
+      },
+      {
         "objectID": "7724427",
         "title": "Comcast is the one who should pay for network connections, Cogent claims",
         "url": "http://arstechnica.com/tech-policy/2014/05/comcast-is-the-one-who-should-pay-for-network-connections-cogent-claims/",
@@ -253,121 +361,13 @@
         "created_at": "2014-05-10T03:51:39Z"
       },
       {
-        "objectID": "13615806",
-        "title": "Internet Backbone Provider Cogent Blocks Pirate Bay and Other “Pirate” Sites",
-        "url": "https://torrentfreak.com/internet-backbone-provider-cogent-blocks-pirate-bay-and-other-pirate-sites-170209/",
+        "objectID": "40253924",
+        "title": "Cogent Announces IPv4 Address Securitization Offering",
+        "url": "https://www.cogentco.com/en/about-cogent/press-releases/4443-cogent-announces-ipv4-address-securitization-offering",
         "points": 3,
         "num_comments": 0,
-        "author": "davidgerard",
-        "created_at": "2017-02-10T15:03:47Z"
-      },
-      {
-        "objectID": "10643601",
-        "title": "The Uncertainty Principle and Covalent Bonding (2005) [pdf]",
-        "url": "http://www.fh.huji.ac.il/~ronnie/Papers/guy2005.pdf",
-        "points": 3,
-        "num_comments": 0,
-        "author": "brian-armstrong",
-        "created_at": "2015-11-29T03:25:41Z"
-      },
-      {
-        "objectID": "5802674",
-        "title": "Direct Imaging of Covalent Bond Structure in Single-Molecule Chemical Reactions",
-        "url": "http://www.sciencemag.org/content/early/2013/05/29/science.1238187",
-        "points": 2,
-        "num_comments": 1,
-        "author": "0x1997",
-        "created_at": "2013-06-01T04:31:36Z"
-      },
-      {
-        "objectID": "42283445",
-        "title": "Carbon dioxide capture from open air using covalent organic frameworks",
-        "url": "https://www.nature.com/articles/s41586-024-08080-x",
-        "points": 2,
-        "num_comments": 1,
-        "author": "macleginn",
-        "created_at": "2024-11-30T19:25:22Z"
-      },
-      {
-        "objectID": "38070084",
-        "title": "Super cogent points on issues of managing spaceship earth – Dan Schmachtenberger [video]",
-        "url": "https://www.youtube.com/watch?v=4kBoLVvoqVY",
-        "points": 2,
-        "num_comments": 1,
-        "author": "gooob",
-        "created_at": "2023-10-30T14:47:13Z"
-      },
-      {
-        "objectID": "13654085",
-        "title": "Cogent confirms null route of the Pirate Bay",
-        "url": "https://mailman.nanog.org/pipermail/nanog/2017-February/090180.html",
-        "points": 2,
-        "num_comments": 1,
-        "author": "Libre___",
-        "created_at": "2017-02-15T18:18:26Z"
-      },
-      {
-        "objectID": "9516095",
-        "title": "Neutrality Rules Helped Calm Verizon, Level 3, Cogent Interconnection Feud",
-        "url": "https://www.techdirt.com/blog/netneutrality/articles/20150505/09051330890/mere-threat-real-neutrality-rules-appears-to-have-helped-calm-verizon-level-3-cogent-interconnection-feud.shtml",
-        "points": 2,
-        "num_comments": 0,
-        "author": "DiabloD3",
-        "created_at": "2015-05-09T11:29:48Z"
-      },
-      {
-        "objectID": "45518494",
-        "title": "Mechanochemically Synthesized Covalent Organic Framework Captures PFAS",
-        "url": "https://onlinelibrary.wiley.com/doi/10.1002/smll.202509275",
-        "points": 2,
-        "num_comments": 0,
-        "author": "PaulHoule",
-        "created_at": "2025-10-08T17:25:19Z"
-      },
-      {
-        "objectID": "42122128",
-        "title": "Carbon dioxide capture from open air using covalent organic frameworks",
-        "url": "https://www.nature.com/articles/s41586-024-08080-x",
-        "points": 2,
-        "num_comments": 0,
-        "author": "tedd4u",
-        "created_at": "2024-11-13T01:54:43Z"
-      },
-      {
-        "objectID": "41970962",
-        "title": "Carbon dioxide capture from open air using covalent organic frameworks",
-        "url": "https://www.nature.com/articles/s41586-024-08080-x",
-        "points": 2,
-        "num_comments": 0,
-        "author": "doener",
-        "created_at": "2024-10-28T13:46:29Z"
-      },
-      {
-        "objectID": "40144202",
-        "title": "Covalent: Simplifying Cloud HPC for Computational Chemistry",
-        "url": "https://www.covalent.xyz/computational-chemistry-using-cloud-hpc/",
-        "points": 2,
-        "num_comments": 0,
-        "author": "elliotmac",
-        "created_at": "2024-04-24T13:34:08Z"
-      },
-      {
-        "objectID": "3496157",
-        "title": "Cogent shares fall 19% ($160M) the day after Megaupload shutdown",
-        "url": "http://www.bloomberg.com/news/2012-01-20/cogent-slumps-after-megaupload-com-is-shut-washington-mover.html?cmpid=yhoo",
-        "points": 2,
-        "num_comments": 0,
-        "author": "SyneRyder",
-        "created_at": "2012-01-22T09:46:01Z"
-      },
-      {
-        "objectID": "32725678",
-        "title": "Constructing covalent organic nanoarchitectures via scanning probe manipulation",
-        "url": "https://www.nature.com/articles/s41557-021-00773-4",
-        "points": 2,
-        "num_comments": 0,
-        "author": "simonebrunozzi",
-        "created_at": "2022-09-05T15:50:19Z"
+        "author": "greyface-",
+        "created_at": "2024-05-04T00:56:35Z"
       }
     ],
     "chatgpt-on-wechat": []

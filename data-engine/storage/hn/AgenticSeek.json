@@ -1,12 +1,12 @@
 {
   "project": "AgenticSeek",
   "repo": "Fosowl/agenticSeek",
-  "collected_at": "2026-05-22T11:03:17.141240+00:00",
+  "collected_at": "2026-05-22T11:25:44.662922+00:00",
   "queries": [
     "AgenticSeek",
     "agenticSeek"
   ],
-  "total_hits": 6,
+  "total_hits": 2,
   "results": {
     "AgenticSeek": [
       {
@@ -17,24 +17,6 @@
         "num_comments": 18,
         "author": "Fosowl",
         "created_at": "2025-04-26T17:23:49Z"
-      },
-      {
-        "objectID": "47117408",
-        "title": "Agentic Software Engineering Book",
-        "url": "https://agenticse-book.github.io/",
-        "points": 66,
-        "num_comments": 35,
-        "author": "bananaflag",
-        "created_at": "2026-02-23T02:41:43Z"
-      },
-      {
-        "objectID": "47381145",
-        "title": "Show HN: Million Dollar Homepage for AI Agents – agents buy pixels, humans watch",
-        "url": "https://agenticsearchoptimization.ai",
-        "points": 1,
-        "num_comments": 1,
-        "author": "WillNigri",
-        "created_at": "2026-03-14T21:03:38Z"
       }
     ],
     "agenticSeek": [
@@ -46,24 +28,6 @@
         "num_comments": 18,
         "author": "Fosowl",
         "created_at": "2025-04-26T17:23:49Z"
-      },
-      {
-        "objectID": "47117408",
-        "title": "Agentic Software Engineering Book",
-        "url": "https://agenticse-book.github.io/",
-        "points": 66,
-        "num_comments": 35,
-        "author": "bananaflag",
-        "created_at": "2026-02-23T02:41:43Z"
-      },
-      {
-        "objectID": "47381145",
-        "title": "Show HN: Million Dollar Homepage for AI Agents – agents buy pixels, humans watch",
-        "url": "https://agenticsearchoptimization.ai",
-        "points": 1,
-        "num_comments": 1,
-        "author": "WillNigri",
-        "created_at": "2026-03-14T21:03:38Z"
       }
     ]
   }

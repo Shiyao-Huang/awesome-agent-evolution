@@ -10,18 +10,15 @@ import argparse
 def collect_forks(client, repo, output_dir):
     owner, name = repo.split("/")
     print(f"🍴 Collecting forks for {repo}")
-
     r = client.get(f"/repos/{owner}/{name}")
     if r.status_code != 200:
         print(f"  ❌ HTTP {r.status_code} for {repo}", file=sys.stderr)
         return None
     fork_count = r.json().get("forks_count", 0)
-
     forks = client.paginate(f"/repos/{owner}/{name}/forks", max_pages=3)
 
     top_by_stars = sorted(forks, key=lambda f: f.get("stargazers_count", 0), reverse=True)[:10]
     recent = sorted(forks, key=lambda f: f.get("created_at", ""), reverse=True)[:10]
-
     monthly = Counter()
     for f in forks:
         ts = f.get("created_at", "")[:7]
@@ -29,21 +26,12 @@ def collect_forks(client, repo, output_dir):
             monthly[ts] += 1
 
     data = {
-        "full_name": repo,
-        "forks_count": fork_count,
-        "forks_sampled": len(forks),
-        "top_forks": [
-            {"full_name": f.get("full_name"), "stars": f.get("stargazers_count", 0)}
-            for f in top_by_stars
-        ],
-        "recent_forks": [
-            {"full_name": f.get("full_name"), "created_at": f.get("created_at")}
-            for f in recent
-        ],
+        "full_name": repo, "forks_count": fork_count, "forks_sampled": len(forks),
+        "top_forks": [{"full_name": f.get("full_name"), "stars": f.get("stargazers_count", 0)} for f in top_by_stars],
+        "recent_forks": [{"full_name": f.get("full_name"), "created_at": f.get("created_at")} for f in recent],
         "monthly_counts": dict(sorted(monthly.items())),
     }
-    safe = repo.replace("/", "_")
-    save_json(output_dir, f"{safe}_forks.json", repo, "github_forks", data)
+    save_json(output_dir, f"{repo.replace('/', '_')}_forks.json", repo, "github_forks", data)
     return data
 
 
@@ -52,11 +40,7 @@ def main():
     add_common_args(parser)
     args = parser.parse_args()
     client = GitHubClient(args.token)
-    repos = resolve_repos(args)
-    if not repos:
-        print("No repos to process", file=sys.stderr)
-        return
-    for repo in repos:
+    for repo in resolve_repos(args):
         collect_forks(client, repo, args.output)
         client.throttle()
 

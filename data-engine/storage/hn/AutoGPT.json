@@ -1,0 +1,374 @@
+{
+  "project": "AutoGPT",
+  "repo": "Significant-Gravitas/AutoGPT",
+  "collected_at": "2026-05-22T11:29:31.993210+00:00",
+  "queries": [
+    "AutoGPT",
+    "AutoGPT"
+  ],
+  "total_hits": 40,
+  "results": {
+    "AutoGPT": [
+      {
+        "objectID": "35413054",
+        "title": "Auto-GPT: An Autonomous GPT-4 Experiment",
+        "url": "https://github.com/Torantulino/Auto-GPT",
+        "points": 153,
+        "num_comments": 174,
+        "author": "keithba",
+        "created_at": "2023-04-02T17:39:36Z"
+      },
+      {
+        "objectID": "37825155",
+        "title": "Why AutoGPT engineers ditched vector databases",
+        "url": "https://dariuszsemba.com/blog/why-autogpt-engineers-ditched-vector-databases/",
+        "points": 109,
+        "num_comments": 58,
+        "author": "DSemba",
+        "created_at": "2023-10-09T20:34:05Z"
+      },
+      {
+        "objectID": "35562821",
+        "title": "Auto-GPT Unmasked: The Hype and Hard Truths of Its Production Pitfalls",
+        "url": "https://jina.ai/news/auto-gpt-unmasked-hype-hard-truths-production-pitfalls",
+        "points": 90,
+        "num_comments": 55,
+        "author": "artex_xh",
+        "created_at": "2023-04-13T22:11:43Z"
+      },
+      {
+        "objectID": "36186348",
+        "title": "AI Report #4: AutoGPT And Open-source lags behind Part 2",
+        "url": "https://theaireport.substack.com/p/ai-report-4-autogpt-and-open-source",
+        "points": 60,
+        "num_comments": 36,
+        "author": "primordialsoup",
+        "created_at": "2023-06-04T15:26:08Z"
+      },
+      {
+        "objectID": "35631328",
+        "title": "Auto-GPT: An experimental open-source attempt to make GPT-4 fully autonomous",
+        "url": "https://github.com/Significant-Gravitas/Auto-GPT",
+        "points": 46,
+        "num_comments": 19,
+        "author": "TimTheTinker",
+        "created_at": "2023-04-19T18:06:03Z"
+      },
+      {
+        "objectID": "35509378",
+        "title": "Can GPT 4 Prompt Itself? MemoryGPT, AutoGPT, Jarvis, Claude-Next [10x GPT 4!]",
+        "url": "https://www.youtube.com/watch?v=6NoTuqDAkfg",
+        "points": 30,
+        "num_comments": 1,
+        "author": "ogogmad",
+        "created_at": "2023-04-10T05:11:41Z"
+      },
+      {
+        "objectID": "36535458",
+        "title": "AutoGPT is the most popular useless project on GitHub",
+        "url": "https://news.agpt.co/",
+        "points": 13,
+        "num_comments": 0,
+        "author": "behnamoh",
+        "created_at": "2023-06-30T14:23:03Z"
+      },
+      {
+        "objectID": "35796176",
+        "title": "Show HN: AutoGPT Made Easy",
+        "url": "https://www.agenthub.dev/?fuel_source_id=15cb1357-ae09-498c-97b0-390cbe8a4d38",
+        "points": 10,
+        "num_comments": 1,
+        "author": "murb",
+        "created_at": "2023-05-03T00:28:28Z"
+      },
+      {
+        "objectID": "36006461",
+        "title": "Ask HN: How dangerous is Auto-GPT?",
+        "url": "",
+        "points": 8,
+        "num_comments": 6,
+        "author": "manx",
+        "created_at": "2023-05-19T20:26:58Z"
+      },
+      {
+        "objectID": "35603119",
+        "title": "AutoGPT on the Browser",
+        "url": "https://autogpt.thesamur.ai",
+        "points": 8,
+        "num_comments": 3,
+        "author": "anks_ncode",
+        "created_at": "2023-04-17T16:32:39Z"
+      },
+      {
+        "objectID": "35627610",
+        "title": "Show HN: Lean customer development methodology simulated by AutoGPT",
+        "url": "https://epiphany.fireproof.storage",
+        "points": 7,
+        "num_comments": 4,
+        "author": "jchrisa",
+        "created_at": "2023-04-19T13:02:03Z"
+      },
+      {
+        "objectID": "35614289",
+        "title": "One click Auto-GPT Telegram bot with source",
+        "url": "https://www.steamship.com/build/auto-gpt",
+        "points": 6,
+        "num_comments": 0,
+        "author": "eob",
+        "created_at": "2023-04-18T14:11:52Z"
+      },
+      {
+        "objectID": "35606630",
+        "title": "AutoGPT used to create ransomware, mutation, save, and repeat",
+        "url": "https://twitter.com/alexbilz/status/1647729282741940224",
+        "points": 6,
+        "num_comments": 0,
+        "author": "catalan",
+        "created_at": "2023-04-17T21:09:45Z"
+      },
+      {
+        "objectID": "35532509",
+        "title": "AutoGPT vs. BabyAGI vs. LangChain",
+        "url": "https://dsdaily.substack.com/p/say-hello-to-the-fastest-growing",
+        "points": 6,
+        "num_comments": 0,
+        "author": "RAFisherman",
+        "created_at": "2023-04-11T22:29:30Z"
+      },
+      {
+        "objectID": "36521032",
+        "title": "Hacking Auto-GPT and escaping its Docker container",
+        "url": "https://positive.security/blog/auto-gpt-rce",
+        "points": 4,
+        "num_comments": 2,
+        "author": "tiarafawn",
+        "created_at": "2023-06-29T14:42:45Z"
+      },
+      {
+        "objectID": "35944533",
+        "title": "Autogpt",
+        "url": "https://autogpt.thesamur.ai/",
+        "points": 4,
+        "num_comments": 1,
+        "author": "AbhiAmbad",
+        "created_at": "2023-05-15T06:39:52Z"
+      },
+      {
+        "objectID": "35685639",
+        "title": "I built a completely Local AutoGPT with the help of GPT-llama running Vicuna-13B",
+        "url": "https://twitter.com/AdamPaigge/status/1650427355272208384",
+        "points": 4,
+        "num_comments": 1,
+        "author": "supernovalabs",
+        "created_at": "2023-04-24T10:13:51Z"
+      },
+      {
+        "objectID": "35577445",
+        "title": "How to Install Auto-GPT on Mac",
+        "url": "https://agi-sphere.com/auto-gpt-install-mac/",
+        "points": 4,
+        "num_comments": 1,
+        "author": "andrewon",
+        "created_at": "2023-04-15T03:44:18Z"
+      },
+      {
+        "objectID": "35606301",
+        "title": "AutoGPT from the Browser",
+        "url": "https://godmode.space/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "franze",
+        "created_at": "2023-04-17T20:39:40Z"
+      },
+      {
+        "objectID": "35413793",
+        "title": "AutoGPTs",
+        "url": "https://twitter.com/karpathy/status/1642598890573819905",
+        "points": 4,
+        "num_comments": 0,
+        "author": "tosh",
+        "created_at": "2023-04-02T18:46:40Z"
+      },
+      {
+        "objectID": "35793142",
+        "title": "Query Hacker News Using Auto-GPT",
+        "url": "https://hn.ossinsight.io",
+        "points": 3,
+        "num_comments": 3,
+        "author": "mylittlekeyb",
+        "created_at": "2023-05-02T19:49:22Z"
+      },
+      {
+        "objectID": "35630393",
+        "title": "Show HN: Run Auto-GPT locally in 2 lines",
+        "url": "https://github.com/kurtosis-tech/autogpt-package",
+        "points": 3,
+        "num_comments": 3,
+        "author": "break_the_bank",
+        "created_at": "2023-04-19T16:48:20Z"
+      },
+      {
+        "objectID": "37878277",
+        "title": "AutoGPT Secures $12M Funding Round from Redpoint Ventures",
+        "url": "https://twitter.com/Auto_GPT/status/1713009267194974333",
+        "points": 3,
+        "num_comments": 2,
+        "author": "meetpateltech",
+        "created_at": "2023-10-14T05:22:15Z"
+      },
+      {
+        "objectID": "35691687",
+        "title": "Ask HN: AutoGPT never does something useful. Is it a cool useless idea?",
+        "url": "",
+        "points": 3,
+        "num_comments": 2,
+        "author": "behnamoh",
+        "created_at": "2023-04-24T19:01:34Z"
+      },
+      {
+        "objectID": "35655931",
+        "title": "On AutoGPT",
+        "url": "https://www.lesswrong.com/posts/566kBoPi76t8KAkoD/on-autogpt",
+        "points": 3,
+        "num_comments": 1,
+        "author": "surprisetalk",
+        "created_at": "2023-04-21T16:11:34Z"
+      },
+      {
+        "objectID": "38446685",
+        "title": "Show HN: AutoGPT Agent as a Custom GPT",
+        "url": "https://chat.openai.com/g/g-POb5UhhJ6-autogpt-agent",
+        "points": 3,
+        "num_comments": 0,
+        "author": "DotSauce",
+        "created_at": "2023-11-28T15:27:58Z"
+      },
+      {
+        "objectID": "36778142",
+        "title": "Comparison between llama.cpp, AutoGPTQ, ExLlama, etc. perplexities",
+        "url": "https://oobabooga.github.io/blog/posts/perplexities/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "lostmsu",
+        "created_at": "2023-07-18T19:42:37Z"
+      },
+      {
+        "objectID": "35730833",
+        "title": "Auto-GPT Added to OSSChat",
+        "url": "https://osschat.io/chat?project=Auto-GPT",
+        "points": 3,
+        "num_comments": 0,
+        "author": "yujian",
+        "created_at": "2023-04-27T16:44:16Z"
+      },
+      {
+        "objectID": "35701442",
+        "title": "AutoGPT Tracing: Prompts, Costs, Latency, Compute",
+        "url": "https://graphsignal.com/blog/auto-gpt-tracing-prompts-costs-latency-compute/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "npgraph",
+        "created_at": "2023-04-25T15:02:26Z"
+      },
+      {
+        "objectID": "35694850",
+        "title": "AutoGPT and other GPT and AI tools written in Golang",
+        "url": "https://github.com/igolaizola/igogpt",
+        "points": 3,
+        "num_comments": 0,
+        "author": "ngaut",
+        "created_at": "2023-04-24T23:58:32Z"
+      },
+      {
+        "objectID": "35594892",
+        "title": "AutoGPT surpasses PyTorch in number of GitHub stars",
+        "url": "https://twitter.com/drjimfan/status/1647616587199815684",
+        "points": 3,
+        "num_comments": 0,
+        "author": "tim_sw",
+        "created_at": "2023-04-16T22:42:09Z"
+      },
+      {
+        "objectID": "35585937",
+        "title": "Show HN: Godmode – Modern frontend for Auto-GPT agents",
+        "url": "https://godmode.space",
+        "points": 3,
+        "num_comments": 0,
+        "author": "follgad",
+        "created_at": "2023-04-16T00:09:57Z"
+      },
+      {
+        "objectID": "35584954",
+        "title": "User-Agent: AutoGPT",
+        "url": "https://github.com/Significant-Gravitas/Auto-GPT/issues/1724",
+        "points": 3,
+        "num_comments": 0,
+        "author": "bary12",
+        "created_at": "2023-04-15T21:55:54Z"
+      },
+      {
+        "objectID": "35496041",
+        "title": "GPT-4 goes a little AGI with Auto-GPT",
+        "url": "https://the-decoder.com/gpt-4-goes-a-little-agi-with-auto-gpt/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "wseqyrku",
+        "created_at": "2023-04-08T18:13:52Z"
+      },
+      {
+        "objectID": "35899775",
+        "title": "Show HN: AutoGPT for Ethereum",
+        "url": "https://www.etherpal.xyz/",
+        "points": 2,
+        "num_comments": 3,
+        "author": "amineelqaraoui",
+        "created_at": "2023-05-11T09:25:11Z"
+      },
+      {
+        "objectID": "36070115",
+        "title": "Debugging the Internet with AI Agents – With Itamar Friedman of AutoGPT",
+        "url": "https://www.latent.space/p/codium-agents#details",
+        "points": 2,
+        "num_comments": 2,
+        "author": "eallam",
+        "created_at": "2023-05-25T12:54:44Z"
+      },
+      {
+        "objectID": "35703522",
+        "title": "Is anyone getting any value-add out of AutoGPT?",
+        "url": "https://twitter.com/jachiam0/status/1650842399550341120",
+        "points": 2,
+        "num_comments": 2,
+        "author": "jytechdevops",
+        "created_at": "2023-04-25T17:11:02Z"
+      },
+      {
+        "objectID": "36410456",
+        "title": "AI Leader Proposes a New Kind of Turing Test for Chatbots (The Auto-GPT Way)",
+        "url": "https://www.bloomberg.com/news/newsletters/2023-06-20/ai-turing-test-for-chatgpt-or-bard-proposed-by-mustafa-suleyman",
+        "points": 2,
+        "num_comments": 1,
+        "author": "RafelMri",
+        "created_at": "2023-06-20T20:57:22Z"
+      },
+      {
+        "objectID": "35668096",
+        "title": "Technical Dive into AutoGPT",
+        "url": "https://sudoapps.substack.com/p/technical-dive-into-autogpt",
+        "points": 2,
+        "num_comments": 1,
+        "author": "sudoapps",
+        "created_at": "2023-04-22T16:19:25Z"
+      },
+      {
+        "objectID": "46878552",
+        "title": "AutoGPT is an open-source autonomous software agent that uses OpenAI's LLMs",
+        "url": "https://en.wikipedia.org/wiki/AutoGPT",
+        "points": 2,
+        "num_comments": 0,
+        "author": "doener",
+        "created_at": "2026-02-03T22:52:48Z"
+      }
+    ]
+  }
+}

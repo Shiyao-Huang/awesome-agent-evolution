@@ -1,0 +1,12 @@
+{
+  "project": "PydanticAI",
+  "repo": "pydantic/pydantic-ai",
+  "collected_at": "2026-05-22T11:34:58.260025+00:00",
+  "total_papers": 0,
+  "total_citations": 0,
+  "papers": {
+    "PydanticAI": [],
+    "pydantic-ai": []
+  },
+  "citations": {}
+}

@@ -1,0 +1,264 @@
+{
+  "project": "TTRL",
+  "repo": "facebookresearch/TTRL",
+  "collected_at": "2026-05-22T11:37:05.296234+00:00",
+  "queries": [
+    "TTRL",
+    "TTRL"
+  ],
+  "total_posts": 25,
+  "results": {
+    "TTRL": [
+      {
+        "id": "1r5hp5b",
+        "subreddit": "pics",
+        "title": "[OC] TURN THE FILES INTO TRIALS - Cleveland",
+        "score": 66541,
+        "num_comments": 156,
+        "author": "LKM_44122",
+        "url": "https://reddit.com/r/pics/comments/1r5hp5b/oc_turn_the_files_into_trials_cleveland/",
+        "created_utc": 1771170108.0
+      },
+      {
+        "id": "1qxxhwi",
+        "subreddit": "arcraiderscirclejerk",
+        "title": "New spawn tech discovered",
+        "score": 2020,
+        "num_comments": 181,
+        "author": "exlivingghost",
+        "url": "https://reddit.com/r/arcraiderscirclejerk/comments/1qxxhwi/new_spawn_tech_discovered/",
+        "created_utc": 1770420411.0
+      },
+      {
+        "id": "1tcshmc",
+        "subreddit": "czech",
+        "title": "TTRL hľadá pilotov na season one v F1 25 Game !",
+        "score": 0,
+        "num_comments": 1,
+        "author": "OneFar3983",
+        "url": "https://reddit.com/r/czech/comments/1tcshmc/ttrl_hľadá_pilotov_na_season_one_v_f1_25_game/",
+        "created_utc": 1778749301.0
+      },
+      {
+        "id": "1tfguls",
+        "subreddit": "F1leaguefinder",
+        "title": "[F1 25 ] TTRL (Turbo Tribe Racing League) – Tier 1 Drivers Wanted",
+        "score": 1,
+        "num_comments": 0,
+        "author": "wizard_0f_oz",
+        "url": "https://reddit.com/r/F1leaguefinder/comments/1tfguls/f1_25_ttrl_turbo_tribe_racing_league_tier_1/",
+        "created_utc": 1778997401.0
+      },
+      {
+        "id": "1ro2w6y",
+        "subreddit": "Ultrakill",
+        "title": "8-1 first half recreated in Minecraft",
+        "score": 999,
+        "num_comments": 57,
+        "author": "GotaShoe",
+        "url": "https://reddit.com/r/Ultrakill/comments/1ro2w6y/81_first_half_recreated_in_minecraft/",
+        "created_utc": 1772970437.0
+      },
+      {
+        "id": "1k5v938",
+        "subreddit": "accelerate",
+        "title": "LLMs Can Now Learn without Labels: Researchers from Tsinghua University and Shanghai AI Lab Introduce Test-Time Reinforcement Learning (TTRL) to Enable Self-Evolving Language Models Using Unlabeled Data",
+        "score": 49,
+        "num_comments": 3,
+        "author": "Creative-robot",
+        "url": "https://reddit.com/r/accelerate/comments/1k5v938/llms_can_now_learn_without_labels_researchers/",
+        "created_utc": 1745401954.0
+      },
+      {
+        "id": "1k5x101",
+        "subreddit": "mlscaling",
+        "title": "LLMs Can Now Learn without Labels: Researchers from Tsinghua University and Shanghai AI Lab Introduce Test-Time Reinforcement Learning (TTRL) to Enable Self-Evolving Language Models Using Unlabeled Data",
+        "score": 27,
+        "num_comments": 5,
+        "author": "luchadore_lunchables",
+        "url": "https://reddit.com/r/mlscaling/comments/1k5x101/llms_can_now_learn_without_labels_researchers/",
+        "created_utc": 1745408557.0
+      },
+      {
+        "id": "1k5ruv8",
+        "subreddit": "machinelearningnews",
+        "title": "LLMs Can Now Learn without Labels: Researchers from Tsinghua University and Shanghai AI Lab Introduce Test-Time Reinforcement Learning (TTRL) to Enable Self-Evolving Language Models Using Unlabeled Data",
+        "score": 63,
+        "num_comments": 1,
+        "author": "ai-lover",
+        "url": "https://reddit.com/r/machinelearningnews/comments/1k5ruv8/llms_can_now_learn_without_labels_researchers/",
+        "created_utc": 1745387357.0
+      },
+      {
+        "id": "1k5tdt7",
+        "subreddit": "comfyui",
+        "title": "LLMs Can Now Learn without Labels: Researchers from Tsinghua University and Shanghai AI Lab Introduce Test-Time Reinforcement Learning (TTRL) to Enable Self-Evolving Language Models Using Unlabeled Data",
+        "score": 0,
+        "num_comments": 5,
+        "author": "Justify_87",
+        "url": "https://reddit.com/r/comfyui/comments/1k5tdt7/llms_can_now_learn_without_labels_researchers/",
+        "created_utc": 1745393768.0
+      },
+      {
+        "id": "t7x9yu",
+        "subreddit": "ClassroomOfTheElite",
+        "title": "'Classroom of the Elite' Season 2 PV",
+        "score": 1605,
+        "num_comments": 313,
+        "author": "MarvelsGrantMan136",
+        "url": "https://reddit.com/r/ClassroomOfTheElite/comments/t7x9yu/classroom_of_the_elite_season_2_pv/",
+        "created_utc": 1646567773.0
+      },
+      {
+        "id": "1mu9eyq",
+        "subreddit": "EhBuddyHoser",
+        "title": "He's back 🫠  #PierrePoutine",
+        "score": 919,
+        "num_comments": 91,
+        "author": "MooseTracs",
+        "url": "https://reddit.com/r/EhBuddyHoser/comments/1mu9eyq/hes_back_pierrepoutine/",
+        "created_utc": 1755580286.0
+      },
+      {
+        "id": "1k5rqs7",
+        "subreddit": "gpt5",
+        "title": "Tsinghua and Shanghai AI Lab Introduce TTRL for Self-Learning Language Models",
+        "score": 1,
+        "num_comments": 1,
+        "author": "Alan-Foster",
+        "url": "https://reddit.com/r/gpt5/comments/1k5rqs7/tsinghua_and_shanghai_ai_lab_introduce_ttrl_for/",
+        "created_utc": 1745386906.0
+      },
+      {
+        "id": "1ikk5yq",
+        "subreddit": "PrideAndPinion",
+        "title": "What do you think about Double-wristing",
+        "score": 285,
+        "num_comments": 391,
+        "author": "Technical_Stress_245",
+        "url": "https://reddit.com/r/PrideAndPinion/comments/1ikk5yq/what_do_you_think_about_doublewristing/",
+        "created_utc": 1739009363.0
+      },
+      {
+        "id": "1i4lmq6",
+        "subreddit": "Dirtbikes",
+        "title": "TTRL 125 timing issues ",
+        "score": 2,
+        "num_comments": 1,
+        "author": "k9nan",
+        "url": "https://reddit.com/r/Dirtbikes/comments/1i4lmq6/ttrl_125_timing_issues/",
+        "created_utc": 1737246428.0
+      },
+      {
+        "id": "c1w8fw",
+        "subreddit": "nosleep",
+        "title": "No Matter What They Tell You, Chernobyl Still Isn’t Safe, Pictures Included",
+        "score": 2880,
+        "num_comments": 163,
+        "author": "WorchesterStreet",
+        "url": "https://reddit.com/r/nosleep/comments/c1w8fw/no_matter_what_they_tell_you_chernobyl_still_isnt/",
+        "created_utc": 1560822590.0
+      },
+      {
+        "id": "1recpp2",
+        "subreddit": "Sovereigncitizen",
+        "title": "Sovcit wants to know where to file this form.",
+        "score": 184,
+        "num_comments": 114,
+        "author": "Existing-Face-6322",
+        "url": "https://reddit.com/r/Sovereigncitizen/comments/1recpp2/sovcit_wants_to_know_where_to_file_this_form/",
+        "created_utc": 1772024832.0
+      },
+      {
+        "id": "1nu7dj7",
+        "subreddit": "Roland",
+        "title": "You want to see the TR-1000 ? :)",
+        "score": 138,
+        "num_comments": 210,
+        "author": "Alarmed-Somewhere-28",
+        "url": "https://reddit.com/r/Roland/comments/1nu7dj7/you_want_to_see_the_tr1000/",
+        "created_utc": 1759219592.0
+      },
+      {
+        "id": "1anxjsy",
+        "subreddit": "ShrugLifeSyndicate",
+        "title": "Ttrl Itm",
+        "score": 5,
+        "num_comments": 4,
+        "author": "DavidGolich",
+        "url": "https://reddit.com/r/ShrugLifeSyndicate/comments/1anxjsy/ttrl_itm/",
+        "created_utc": 1707619466.0
+      },
+      {
+        "id": "1tidva4",
+        "subreddit": "China_irl",
+        "title": "1989年6月1到5日人民日报头版",
+        "score": 105,
+        "num_comments": 71,
+        "author": "Inevitable_Wait4623",
+        "url": "https://reddit.com/r/China_irl/comments/1tidva4/1989年6月1到5日人民日报头版/",
+        "created_utc": 1779260513.0
+      },
+      {
+        "id": "4i030f",
+        "subreddit": "Toontown",
+        "title": "An official statement from TTRL Web Developer, @Brownzilla",
+        "score": 0,
+        "num_comments": 48,
+        "author": "BloxxyCraze",
+        "url": "https://reddit.com/r/Toontown/comments/4i030f/an_official_statement_from_ttrl_web_developer/",
+        "created_utc": 1462457800.0
+      },
+      {
+        "id": "1bjcpn8",
+        "subreddit": "F1leaguefinder",
+        "title": "TTRL",
+        "score": 2,
+        "num_comments": 0,
+        "author": "Feisty-Support",
+        "url": "https://reddit.com/r/F1leaguefinder/comments/1bjcpn8/ttrl/",
+        "created_utc": 1710939190.0
+      },
+      {
+        "id": "1ap3wau",
+        "subreddit": "F1leaguefinder",
+        "title": "TTRL",
+        "score": 2,
+        "num_comments": 0,
+        "author": "Feisty-Support",
+        "url": "https://reddit.com/r/F1leaguefinder/comments/1ap3wau/ttrl/",
+        "created_utc": 1707755069.0
+      },
+      {
+        "id": "191pch2",
+        "subreddit": "F1Leagues1",
+        "title": "TTRL",
+        "score": 2,
+        "num_comments": 1,
+        "author": "Feisty-Support",
+        "url": "https://reddit.com/r/F1Leagues1/comments/191pch2/ttrl/",
+        "created_utc": 1704731891.0
+      },
+      {
+        "id": "1r61ith",
+        "subreddit": "GrandCherokee",
+        "title": "what color jeep is this?",
+        "score": 210,
+        "num_comments": 60,
+        "author": "binarypower",
+        "url": "https://reddit.com/r/GrandCherokee/comments/1r61ith/what_color_jeep_is_this/",
+        "created_utc": 1771221167.0
+      },
+      {
+        "id": "10wtmdy",
+        "subreddit": "F1leaguefinder",
+        "title": "TTRL IS RECRUITING!",
+        "score": 1,
+        "num_comments": 3,
+        "author": "JoshB1029",
+        "url": "https://reddit.com/r/F1leaguefinder/comments/10wtmdy/ttrl_is_recruiting/",
+        "created_utc": 1675853331.0
+      }
+    ]
+  }
+}

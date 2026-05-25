@@ -1,0 +1,736 @@
+{
+  "project": "OPRO",
+  "repo": "google-deepmind/opro",
+  "collected_at": "2026-05-22T11:30:29.002454+00:00",
+  "queries": [
+    "OPRO",
+    "opro"
+  ],
+  "total_hits": 80,
+  "results": {
+    "OPRO": [
+      {
+        "objectID": "7029955",
+        "title": "Ask HN: Is it the time to introduce OProfile like OAuth ",
+        "url": "",
+        "points": 2,
+        "num_comments": 2,
+        "author": "santoshmaharshi",
+        "created_at": "2014-01-09T11:56:22Z"
+      },
+      {
+        "objectID": "3789833",
+        "title": "Yet another oprofile tutorial",
+        "url": "http://ssvb.github.com/2011/08/23/yet-another-oprofile-tutorial.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "octopus",
+        "created_at": "2012-04-02T20:09:25Z"
+      },
+      {
+        "objectID": "10972528",
+        "title": "OProfile: Full Linux Profiler",
+        "url": "http://oprofile.sourceforge.net/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "vmorgulis",
+        "created_at": "2016-01-26T09:10:35Z"
+      },
+      {
+        "objectID": "5424217",
+        "title": "Profiling JIT-ted Ruby code with OProfile on Rubinius",
+        "url": "http://rubini.us/2013/03/20/profiling-jitted-ruby-code-with-oprofile/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "bakkdoor",
+        "created_at": "2013-03-22T17:17:23Z"
+      },
+      {
+        "objectID": "27037695",
+        "title": "OProfile",
+        "url": "https://oprofile.sourceforge.io/about/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "todsacerdoti",
+        "created_at": "2021-05-04T14:03:45Z"
+      },
+      {
+        "objectID": "4316756",
+        "title": "What is this kind of spam trying to do?",
+        "url": "",
+        "points": 7,
+        "num_comments": 3,
+        "author": "Juniper",
+        "created_at": "2012-07-31T11:55:19Z"
+      },
+      {
+        "objectID": "21537625",
+        "title": "Most Popular Languages on GitHub",
+        "url": "https://github.com/oprogramador/github-languages",
+        "points": 17,
+        "num_comments": 5,
+        "author": "conexions",
+        "created_at": "2019-11-14T17:54:35Z"
+      },
+      {
+        "objectID": "5699759",
+        "title": "Meet the Woman Who Kicked Off Anonymous' Anti-Rape Operations",
+        "url": "http://www.motherjones.com/politics/2013/05/anonymous-rape-steubenville-rehtaeh-parsons-oprollredroll-opjustice4rehtaeh",
+        "points": 3,
+        "num_comments": 0,
+        "author": "DiabloD3",
+        "created_at": "2013-05-13T16:50:43Z"
+      },
+      {
+        "objectID": "3296167",
+        "title": "'Operation Robin Hood' cracks two banks",
+        "url": "http://www.itworld.com/security/229141/team-poison-anonymous-campaigners-claim-first-victims-oprobinhood",
+        "points": 2,
+        "num_comments": 2,
+        "author": "jfruh",
+        "created_at": "2011-11-30T18:38:30Z"
+      },
+      {
+        "objectID": "34469639",
+        "title": "Get Your Own Free IPTV with Your Extream IPTV",
+        "url": "https://o-pro.online/2023/01/08/profit-from-the-field-of-saving-data/",
+        "points": 2,
+        "num_comments": 1,
+        "author": "youcef95",
+        "created_at": "2023-01-21T19:49:06Z"
+      },
+      {
+        "objectID": "8136896",
+        "title": "Go code completion plugin for Kate editor",
+        "url": "http://oproj.tuxfamily.org/go/golang/kde/2014/08/04/gocode.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Tsiolkovsky",
+        "created_at": "2014-08-05T13:59:12Z"
+      },
+      {
+        "objectID": "7880807",
+        "title": "[Free webinar] Training Intelligent Camera Systems with Python and OpenCV",
+        "url": "http://pl.python.org/darmowe,webinarium,,oprogramowywanie,kamer,z,pythonem,i,opencv.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ppcg",
+        "created_at": "2014-06-11T22:27:48Z"
+      },
+      {
+        "objectID": "18607291",
+        "title": "Missing key-value objects validation in Aproba",
+        "url": "https://github.com/dsheiko/oproba",
+        "points": 2,
+        "num_comments": 0,
+        "author": "dsheiko",
+        "created_at": "2018-12-05T11:13:06Z"
+      },
+      {
+        "objectID": "3750182",
+        "title": "Why Is There A Lack Of Innovation In Educational Technology For Children?",
+        "url": "http://www.forbes.com/sites/quora/2012/03/23/why-is-there-a-lack-of-innovation-in-educational-technology-for-children/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "oprostrednik",
+        "created_at": "2012-03-24T18:30:46Z"
+      },
+      {
+        "objectID": "23703367",
+        "title": "Oppose the Earn IT Act",
+        "url": "https://foundation.mozilla.org/en/campaigns/oppose-earn-it-act/",
+        "points": 2229,
+        "num_comments": 543,
+        "author": "joeyespo",
+        "created_at": "2020-07-01T16:34:24Z"
+      },
+      {
+        "objectID": "27255561",
+        "title": "Belarus 'diverts Ryanair flight to arrest journalist', opposition says",
+        "url": "https://www.bbc.co.uk/news/world-europe-57219860",
+        "points": 1037,
+        "num_comments": 829,
+        "author": "cjnicholls",
+        "created_at": "2021-05-23T15:18:34Z"
+      },
+      {
+        "objectID": "36857032",
+        "title": "Mozilla Standards Positions Opposes Web Integrity API",
+        "url": "https://github.com/mozilla/standards-positions/issues/852",
+        "points": 885,
+        "num_comments": 323,
+        "author": "danShumway",
+        "created_at": "2023-07-25T02:14:27Z"
+      },
+      {
+        "objectID": "25495480",
+        "title": "Russian opposition leader Navalny dupes spy into revealing how he was poisoned",
+        "url": "https://www.cnn.com/2020/12/21/europe/russia-navalny-poisoning-underpants-ward/index.html",
+        "points": 783,
+        "num_comments": 248,
+        "author": "antfarm",
+        "created_at": "2020-12-21T15:01:36Z"
+      },
+      {
+        "objectID": "19155826",
+        "title": "Nasa’s Mars Rover Opportunity Concludes a 15-Year Mission",
+        "url": "https://www.nytimes.com/2019/02/13/science/mars-opportunity-rover-dead.html",
+        "points": 728,
+        "num_comments": 221,
+        "author": "jimktrains2",
+        "created_at": "2019-02-13T19:16:54Z"
+      },
+      {
+        "objectID": "34996552",
+        "title": "Germany opposes EU plans for client-side scanning",
+        "url": "https://tutanota.com/blog/posts/germany-against-client-side-scanning-csam",
+        "points": 673,
+        "num_comments": 252,
+        "author": "CharlesW",
+        "created_at": "2023-03-02T15:08:10Z"
+      },
+      {
+        "objectID": "47959463",
+        "title": "Mozilla's opposition to Chrome's Prompt API",
+        "url": "https://github.com/mozilla/standards-positions/issues/1213#issuecomment-4347988313",
+        "points": 663,
+        "num_comments": 231,
+        "author": "jaffathecake",
+        "created_at": "2026-04-30T07:43:55Z"
+      },
+      {
+        "objectID": "13576236",
+        "title": "Ask HN: What is the biggest untapped opportunity for startups?",
+        "url": "",
+        "points": 657,
+        "num_comments": 1002,
+        "author": "seahckr",
+        "created_at": "2017-02-06T03:12:30Z"
+      },
+      {
+        "objectID": "35729558",
+        "title": "Colorado governor signs tractor right-to-repair law opposed by John Deere",
+        "url": "https://arstechnica.com/tech-policy/2023/04/colorado-governor-signs-tractor-right-to-repair-law-opposed-by-john-deere/",
+        "points": 619,
+        "num_comments": 193,
+        "author": "FridayoLeary",
+        "created_at": "2023-04-27T15:26:59Z"
+      },
+      {
+        "objectID": "31220422",
+        "title": "Internet Archive joins opposition to the “SMART Copyright Act”",
+        "url": "http://blog.archive.org/2022/03/29/internet-archive-joins-opposition-to-the-smart-copyright-act/",
+        "points": 616,
+        "num_comments": 171,
+        "author": "raybb",
+        "created_at": "2022-04-30T23:16:44Z"
+      },
+      {
+        "objectID": "45783114",
+        "title": "Chat Control proposal fails again after public opposition",
+        "url": "https://andreafortuna.org/2025/11/01/chat-control-proposal-fails-again-after-massive-public-opposition/",
+        "points": 595,
+        "num_comments": 157,
+        "author": "speckx",
+        "created_at": "2025-11-01T16:42:57Z"
+      },
+      {
+        "objectID": "31732048",
+        "title": "Thank HN: Five months ago, I was feeling like a loser, now I am opposite",
+        "url": "",
+        "points": 564,
+        "num_comments": 213,
+        "author": "ac2022",
+        "created_at": "2022-06-13T21:32:36Z"
+      },
+      {
+        "objectID": "27065738",
+        "title": "Opposition to net neutrality was faked, New York says",
+        "url": "https://www.nytimes.com/2021/05/06/technology/internet-providers-fake-comments-net-neutrality-new-york.html",
+        "points": 549,
+        "num_comments": 260,
+        "author": "u678u",
+        "created_at": "2021-05-06T16:33:08Z"
+      },
+      {
+        "objectID": "18379943",
+        "title": "As women have more equal opportunity, the more their preferences differ from men",
+        "url": "http://science.sciencemag.org/content/362/6412/eaas9899",
+        "points": 534,
+        "num_comments": 502,
+        "author": "seagullz",
+        "created_at": "2018-11-05T04:51:12Z"
+      },
+      {
+        "objectID": "24354265",
+        "title": "Russia opposition leader poisoned with Novichok",
+        "url": "https://www.bbc.com/news/world-europe-54002880",
+        "points": 515,
+        "num_comments": 306,
+        "author": "amai",
+        "created_at": "2020-09-02T15:39:19Z"
+      },
+      {
+        "objectID": "24400691",
+        "title": "Belarus opposition leader Maria Kolesnikova 'snatched from street' in Minsk",
+        "url": "https://www.theguardian.com/world/2020/sep/07/belarus-opposition-leader-maria-kolesnikova-snatched-from-street-in-minsk-reports",
+        "points": 479,
+        "num_comments": 114,
+        "author": "RealityVoid",
+        "created_at": "2020-09-07T16:51:52Z"
+      },
+      {
+        "objectID": "16355454",
+        "title": "Slack is the opposite of organizational memory",
+        "url": "https://abe-winter.github.io/plea%27s/help/2018/02/11/slack.html",
+        "points": 461,
+        "num_comments": 250,
+        "author": "awinter-py",
+        "created_at": "2018-02-11T23:35:41Z"
+      },
+      {
+        "objectID": "3250330",
+        "title": "Nancy Pelosi, Ron Paul join SOPA opposition",
+        "url": "http://arstechnica.com/tech-policy/news/2011/11/strange-bedfellows-nancy-pelosi-ron-paul-join-sopa-opposition.ars",
+        "points": 461,
+        "num_comments": 76,
+        "author": "ajaymehta",
+        "created_at": "2011-11-18T02:36:54Z"
+      },
+      {
+        "objectID": "45214908",
+        "title": "Claude’s memory architecture is the opposite of ChatGPT’s",
+        "url": "https://www.shloked.com/writing/claude-memory",
+        "points": 448,
+        "num_comments": 236,
+        "author": "shloked",
+        "created_at": "2025-09-11T18:55:50Z"
+      },
+      {
+        "objectID": "12652660",
+        "title": "Opposition to Galileo was scientific, not just religious",
+        "url": "https://aeon.co/ideas/opposition-to-galileo-was-scientific-not-just-religious",
+        "points": 447,
+        "num_comments": 217,
+        "author": "rfreytag",
+        "created_at": "2016-10-06T14:23:46Z"
+      },
+      {
+        "objectID": "11395835",
+        "title": "Erdogan’s Attempt to Suppress German Satire Has the Opposite Effect",
+        "url": "http://www.nytimes.com/2016/03/31/world/europe/recep-tayyip-erdogan-turkey-suppress-german-satire.html?partner=IFTTT",
+        "points": 444,
+        "num_comments": 238,
+        "author": "bresc",
+        "created_at": "2016-03-31T08:53:16Z"
+      },
+      {
+        "objectID": "19209262",
+        "title": "Netherlands, Finland, Luxembourg, Poland and Italy Oppose EU Copyright Directive",
+        "url": "https://www.permanentrepresentations.nl/permanent-representations/pr-eu-brussels/documents/policy-notes/2019/02/20/joint-statement-regarding-the-copyright-directive",
+        "points": 439,
+        "num_comments": 155,
+        "author": "pasiaj",
+        "created_at": "2019-02-20T16:36:37Z"
+      },
+      {
+        "objectID": "9845122",
+        "title": "Code Specialists Oppose U.S. and British Access to Encrypted Communication",
+        "url": "http://www.nytimes.com/2015/07/08/technology/code-specialists-oppose-us-and-british-government-access-to-encrypted-communication.html",
+        "points": 417,
+        "num_comments": 217,
+        "author": "conover",
+        "created_at": "2015-07-07T13:04:51Z"
+      },
+      {
+        "objectID": "20212453",
+        "title": "Facebook Cryptocurrency Plan Faces Opposition in France",
+        "url": "https://www.bloomberg.com/news/articles/2019-06-18/france-calls-for-central-bank-review-of-facebook-cryptocurrency",
+        "points": 409,
+        "num_comments": 132,
+        "author": "velcro",
+        "created_at": "2019-06-18T12:58:40Z"
+      },
+      {
+        "objectID": "19536375",
+        "title": "Researchers trick Tesla autopilot into driving into opposing traffic",
+        "url": "https://twitter.com/ashk4n/status/1112025340644196352",
+        "points": 405,
+        "num_comments": 434,
+        "author": "ve55",
+        "created_at": "2019-03-31T16:20:44Z"
+      },
+      {
+        "objectID": "37704760",
+        "title": "Show HN: RISC-V assembly tabletop board game (hack your opponent)",
+        "url": "https://punkx.org/overflow/",
+        "points": 400,
+        "num_comments": 54,
+        "author": "jackdoe",
+        "created_at": "2023-09-29T14:25:35Z"
+      }
+    ],
+    "opro": [
+      {
+        "objectID": "7029955",
+        "title": "Ask HN: Is it the time to introduce OProfile like OAuth ",
+        "url": "",
+        "points": 2,
+        "num_comments": 2,
+        "author": "santoshmaharshi",
+        "created_at": "2014-01-09T11:56:22Z"
+      },
+      {
+        "objectID": "3789833",
+        "title": "Yet another oprofile tutorial",
+        "url": "http://ssvb.github.com/2011/08/23/yet-another-oprofile-tutorial.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "octopus",
+        "created_at": "2012-04-02T20:09:25Z"
+      },
+      {
+        "objectID": "10972528",
+        "title": "OProfile: Full Linux Profiler",
+        "url": "http://oprofile.sourceforge.net/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "vmorgulis",
+        "created_at": "2016-01-26T09:10:35Z"
+      },
+      {
+        "objectID": "5424217",
+        "title": "Profiling JIT-ted Ruby code with OProfile on Rubinius",
+        "url": "http://rubini.us/2013/03/20/profiling-jitted-ruby-code-with-oprofile/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "bakkdoor",
+        "created_at": "2013-03-22T17:17:23Z"
+      },
+      {
+        "objectID": "27037695",
+        "title": "OProfile",
+        "url": "https://oprofile.sourceforge.io/about/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "todsacerdoti",
+        "created_at": "2021-05-04T14:03:45Z"
+      },
+      {
+        "objectID": "4316756",
+        "title": "What is this kind of spam trying to do?",
+        "url": "",
+        "points": 7,
+        "num_comments": 3,
+        "author": "Juniper",
+        "created_at": "2012-07-31T11:55:19Z"
+      },
+      {
+        "objectID": "21537625",
+        "title": "Most Popular Languages on GitHub",
+        "url": "https://github.com/oprogramador/github-languages",
+        "points": 17,
+        "num_comments": 5,
+        "author": "conexions",
+        "created_at": "2019-11-14T17:54:35Z"
+      },
+      {
+        "objectID": "5699759",
+        "title": "Meet the Woman Who Kicked Off Anonymous' Anti-Rape Operations",
+        "url": "http://www.motherjones.com/politics/2013/05/anonymous-rape-steubenville-rehtaeh-parsons-oprollredroll-opjustice4rehtaeh",
+        "points": 3,
+        "num_comments": 0,
+        "author": "DiabloD3",
+        "created_at": "2013-05-13T16:50:43Z"
+      },
+      {
+        "objectID": "3296167",
+        "title": "'Operation Robin Hood' cracks two banks",
+        "url": "http://www.itworld.com/security/229141/team-poison-anonymous-campaigners-claim-first-victims-oprobinhood",
+        "points": 2,
+        "num_comments": 2,
+        "author": "jfruh",
+        "created_at": "2011-11-30T18:38:30Z"
+      },
+      {
+        "objectID": "34469639",
+        "title": "Get Your Own Free IPTV with Your Extream IPTV",
+        "url": "https://o-pro.online/2023/01/08/profit-from-the-field-of-saving-data/",
+        "points": 2,
+        "num_comments": 1,
+        "author": "youcef95",
+        "created_at": "2023-01-21T19:49:06Z"
+      },
+      {
+        "objectID": "8136896",
+        "title": "Go code completion plugin for Kate editor",
+        "url": "http://oproj.tuxfamily.org/go/golang/kde/2014/08/04/gocode.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Tsiolkovsky",
+        "created_at": "2014-08-05T13:59:12Z"
+      },
+      {
+        "objectID": "7880807",
+        "title": "[Free webinar] Training Intelligent Camera Systems with Python and OpenCV",
+        "url": "http://pl.python.org/darmowe,webinarium,,oprogramowywanie,kamer,z,pythonem,i,opencv.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ppcg",
+        "created_at": "2014-06-11T22:27:48Z"
+      },
+      {
+        "objectID": "18607291",
+        "title": "Missing key-value objects validation in Aproba",
+        "url": "https://github.com/dsheiko/oproba",
+        "points": 2,
+        "num_comments": 0,
+        "author": "dsheiko",
+        "created_at": "2018-12-05T11:13:06Z"
+      },
+      {
+        "objectID": "3750182",
+        "title": "Why Is There A Lack Of Innovation In Educational Technology For Children?",
+        "url": "http://www.forbes.com/sites/quora/2012/03/23/why-is-there-a-lack-of-innovation-in-educational-technology-for-children/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "oprostrednik",
+        "created_at": "2012-03-24T18:30:46Z"
+      },
+      {
+        "objectID": "23703367",
+        "title": "Oppose the Earn IT Act",
+        "url": "https://foundation.mozilla.org/en/campaigns/oppose-earn-it-act/",
+        "points": 2229,
+        "num_comments": 543,
+        "author": "joeyespo",
+        "created_at": "2020-07-01T16:34:24Z"
+      },
+      {
+        "objectID": "27255561",
+        "title": "Belarus 'diverts Ryanair flight to arrest journalist', opposition says",
+        "url": "https://www.bbc.co.uk/news/world-europe-57219860",
+        "points": 1037,
+        "num_comments": 829,
+        "author": "cjnicholls",
+        "created_at": "2021-05-23T15:18:34Z"
+      },
+      {
+        "objectID": "36857032",
+        "title": "Mozilla Standards Positions Opposes Web Integrity API",
+        "url": "https://github.com/mozilla/standards-positions/issues/852",
+        "points": 885,
+        "num_comments": 323,
+        "author": "danShumway",
+        "created_at": "2023-07-25T02:14:27Z"
+      },
+      {
+        "objectID": "25495480",
+        "title": "Russian opposition leader Navalny dupes spy into revealing how he was poisoned",
+        "url": "https://www.cnn.com/2020/12/21/europe/russia-navalny-poisoning-underpants-ward/index.html",
+        "points": 783,
+        "num_comments": 248,
+        "author": "antfarm",
+        "created_at": "2020-12-21T15:01:36Z"
+      },
+      {
+        "objectID": "19155826",
+        "title": "Nasa’s Mars Rover Opportunity Concludes a 15-Year Mission",
+        "url": "https://www.nytimes.com/2019/02/13/science/mars-opportunity-rover-dead.html",
+        "points": 728,
+        "num_comments": 221,
+        "author": "jimktrains2",
+        "created_at": "2019-02-13T19:16:54Z"
+      },
+      {
+        "objectID": "34996552",
+        "title": "Germany opposes EU plans for client-side scanning",
+        "url": "https://tutanota.com/blog/posts/germany-against-client-side-scanning-csam",
+        "points": 673,
+        "num_comments": 252,
+        "author": "CharlesW",
+        "created_at": "2023-03-02T15:08:10Z"
+      },
+      {
+        "objectID": "47959463",
+        "title": "Mozilla's opposition to Chrome's Prompt API",
+        "url": "https://github.com/mozilla/standards-positions/issues/1213#issuecomment-4347988313",
+        "points": 663,
+        "num_comments": 231,
+        "author": "jaffathecake",
+        "created_at": "2026-04-30T07:43:55Z"
+      },
+      {
+        "objectID": "13576236",
+        "title": "Ask HN: What is the biggest untapped opportunity for startups?",
+        "url": "",
+        "points": 657,
+        "num_comments": 1002,
+        "author": "seahckr",
+        "created_at": "2017-02-06T03:12:30Z"
+      },
+      {
+        "objectID": "35729558",
+        "title": "Colorado governor signs tractor right-to-repair law opposed by John Deere",
+        "url": "https://arstechnica.com/tech-policy/2023/04/colorado-governor-signs-tractor-right-to-repair-law-opposed-by-john-deere/",
+        "points": 619,
+        "num_comments": 193,
+        "author": "FridayoLeary",
+        "created_at": "2023-04-27T15:26:59Z"
+      },
+      {
+        "objectID": "31220422",
+        "title": "Internet Archive joins opposition to the “SMART Copyright Act”",
+        "url": "http://blog.archive.org/2022/03/29/internet-archive-joins-opposition-to-the-smart-copyright-act/",
+        "points": 616,
+        "num_comments": 171,
+        "author": "raybb",
+        "created_at": "2022-04-30T23:16:44Z"
+      },
+      {
+        "objectID": "45783114",
+        "title": "Chat Control proposal fails again after public opposition",
+        "url": "https://andreafortuna.org/2025/11/01/chat-control-proposal-fails-again-after-massive-public-opposition/",
+        "points": 595,
+        "num_comments": 157,
+        "author": "speckx",
+        "created_at": "2025-11-01T16:42:57Z"
+      },
+      {
+        "objectID": "31732048",
+        "title": "Thank HN: Five months ago, I was feeling like a loser, now I am opposite",
+        "url": "",
+        "points": 564,
+        "num_comments": 213,
+        "author": "ac2022",
+        "created_at": "2022-06-13T21:32:36Z"
+      },
+      {
+        "objectID": "27065738",
+        "title": "Opposition to net neutrality was faked, New York says",
+        "url": "https://www.nytimes.com/2021/05/06/technology/internet-providers-fake-comments-net-neutrality-new-york.html",
+        "points": 549,
+        "num_comments": 260,
+        "author": "u678u",
+        "created_at": "2021-05-06T16:33:08Z"
+      },
+      {
+        "objectID": "18379943",
+        "title": "As women have more equal opportunity, the more their preferences differ from men",
+        "url": "http://science.sciencemag.org/content/362/6412/eaas9899",
+        "points": 534,
+        "num_comments": 502,
+        "author": "seagullz",
+        "created_at": "2018-11-05T04:51:12Z"
+      },
+      {
+        "objectID": "24354265",
+        "title": "Russia opposition leader poisoned with Novichok",
+        "url": "https://www.bbc.com/news/world-europe-54002880",
+        "points": 515,
+        "num_comments": 306,
+        "author": "amai",
+        "created_at": "2020-09-02T15:39:19Z"
+      },
+      {
+        "objectID": "24400691",
+        "title": "Belarus opposition leader Maria Kolesnikova 'snatched from street' in Minsk",
+        "url": "https://www.theguardian.com/world/2020/sep/07/belarus-opposition-leader-maria-kolesnikova-snatched-from-street-in-minsk-reports",
+        "points": 479,
+        "num_comments": 114,
+        "author": "RealityVoid",
+        "created_at": "2020-09-07T16:51:52Z"
+      },
+      {
+        "objectID": "16355454",
+        "title": "Slack is the opposite of organizational memory",
+        "url": "https://abe-winter.github.io/plea%27s/help/2018/02/11/slack.html",
+        "points": 461,
+        "num_comments": 250,
+        "author": "awinter-py",
+        "created_at": "2018-02-11T23:35:41Z"
+      },
+      {
+        "objectID": "3250330",
+        "title": "Nancy Pelosi, Ron Paul join SOPA opposition",
+        "url": "http://arstechnica.com/tech-policy/news/2011/11/strange-bedfellows-nancy-pelosi-ron-paul-join-sopa-opposition.ars",
+        "points": 461,
+        "num_comments": 76,
+        "author": "ajaymehta",
+        "created_at": "2011-11-18T02:36:54Z"
+      },
+      {
+        "objectID": "45214908",
+        "title": "Claude’s memory architecture is the opposite of ChatGPT’s",
+        "url": "https://www.shloked.com/writing/claude-memory",
+        "points": 448,
+        "num_comments": 236,
+        "author": "shloked",
+        "created_at": "2025-09-11T18:55:50Z"
+      },
+      {
+        "objectID": "12652660",
+        "title": "Opposition to Galileo was scientific, not just religious",
+        "url": "https://aeon.co/ideas/opposition-to-galileo-was-scientific-not-just-religious",
+        "points": 447,
+        "num_comments": 217,
+        "author": "rfreytag",
+        "created_at": "2016-10-06T14:23:46Z"
+      },
+      {
+        "objectID": "11395835",
+        "title": "Erdogan’s Attempt to Suppress German Satire Has the Opposite Effect",
+        "url": "http://www.nytimes.com/2016/03/31/world/europe/recep-tayyip-erdogan-turkey-suppress-german-satire.html?partner=IFTTT",
+        "points": 444,
+        "num_comments": 238,
+        "author": "bresc",
+        "created_at": "2016-03-31T08:53:16Z"
+      },
+      {
+        "objectID": "19209262",
+        "title": "Netherlands, Finland, Luxembourg, Poland and Italy Oppose EU Copyright Directive",
+        "url": "https://www.permanentrepresentations.nl/permanent-representations/pr-eu-brussels/documents/policy-notes/2019/02/20/joint-statement-regarding-the-copyright-directive",
+        "points": 439,
+        "num_comments": 155,
+        "author": "pasiaj",
+        "created_at": "2019-02-20T16:36:37Z"
+      },
+      {
+        "objectID": "9845122",
+        "title": "Code Specialists Oppose U.S. and British Access to Encrypted Communication",
+        "url": "http://www.nytimes.com/2015/07/08/technology/code-specialists-oppose-us-and-british-government-access-to-encrypted-communication.html",
+        "points": 417,
+        "num_comments": 217,
+        "author": "conover",
+        "created_at": "2015-07-07T13:04:51Z"
+      },
+      {
+        "objectID": "20212453",
+        "title": "Facebook Cryptocurrency Plan Faces Opposition in France",
+        "url": "https://www.bloomberg.com/news/articles/2019-06-18/france-calls-for-central-bank-review-of-facebook-cryptocurrency",
+        "points": 409,
+        "num_comments": 132,
+        "author": "velcro",
+        "created_at": "2019-06-18T12:58:40Z"
+      },
+      {
+        "objectID": "19536375",
+        "title": "Researchers trick Tesla autopilot into driving into opposing traffic",
+        "url": "https://twitter.com/ashk4n/status/1112025340644196352",
+        "points": 405,
+        "num_comments": 434,
+        "author": "ve55",
+        "created_at": "2019-03-31T16:20:44Z"
+      },
+      {
+        "objectID": "37704760",
+        "title": "Show HN: RISC-V assembly tabletop board game (hack your opponent)",
+        "url": "https://punkx.org/overflow/",
+        "points": 400,
+        "num_comments": 54,
+        "author": "jackdoe",
+        "created_at": "2023-09-29T14:25:35Z"
+      }
+    ]
+  }
+}

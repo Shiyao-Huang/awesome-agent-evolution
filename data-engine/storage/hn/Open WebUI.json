@@ -1,0 +1,736 @@
+{
+  "project": "Open WebUI",
+  "repo": "open-webui/open-webui",
+  "collected_at": "2026-05-22T11:32:07.344203+00:00",
+  "queries": [
+    "Open WebUI",
+    "open-webui"
+  ],
+  "total_hits": 80,
+  "results": {
+    "Open WebUI": [
+      {
+        "objectID": "24099037",
+        "title": "Show HN: Kowl – An Open Source WebUI for Apache Kafka with a good UI and UX",
+        "url": "https://github.com/cloudhut/kowl",
+        "points": 164,
+        "num_comments": 32,
+        "author": "weeco",
+        "created_at": "2020-08-09T12:04:42Z"
+      },
+      {
+        "objectID": "45798193",
+        "title": "OSS Alternative to Open WebUI – ChatGPT-Like UI, API and CLI",
+        "url": "https://github.com/ServiceStack/llms",
+        "points": 101,
+        "num_comments": 32,
+        "author": "mythz",
+        "created_at": "2025-11-03T12:05:28Z"
+      },
+      {
+        "objectID": "43901575",
+        "title": "Open WebUI changed license from BSD-3 to Open WebUI license with CLA",
+        "url": "https://docs.openwebui.com/license/",
+        "points": 73,
+        "num_comments": 59,
+        "author": "nirv",
+        "created_at": "2025-05-06T03:28:52Z"
+      },
+      {
+        "objectID": "44430286",
+        "title": "Nimtable: Open-source web UI to browse and manage Apache Iceberg tables",
+        "url": "https://github.com/nimtable/nimtable",
+        "points": 44,
+        "num_comments": 8,
+        "author": "Sheldon_fun",
+        "created_at": "2025-07-01T03:27:09Z"
+      },
+      {
+        "objectID": "42893411",
+        "title": "How to run 1.58bit DeepSeek R1 with Open WebUI",
+        "url": "https://docs.openwebui.com/tutorials/integrations/deepseekr1-dynamic",
+        "points": 37,
+        "num_comments": 9,
+        "author": "danielhanchen",
+        "created_at": "2025-01-31T23:02:08Z"
+      },
+      {
+        "objectID": "39415771",
+        "title": "Open WebUI: ChatGPT-Style WebUI for Ollama",
+        "url": "https://github.com/open-webui/open-webui",
+        "points": 29,
+        "num_comments": 3,
+        "author": "thunderbong",
+        "created_at": "2024-02-18T03:04:17Z"
+      },
+      {
+        "objectID": "40693299",
+        "title": "A practical guide to starting out with Ollama LLM and Open WebUI",
+        "url": "https://www.theregister.com/2024/06/15/ai_rag_guide/",
+        "points": 10,
+        "num_comments": 2,
+        "author": "rntn",
+        "created_at": "2024-06-15T22:52:52Z"
+      },
+      {
+        "objectID": "45780726",
+        "title": "OSS Alternative to Open WebUI – ChatGPT-Like UI, API and CLI",
+        "url": "https://github.com/ServiceStack/llms",
+        "points": 9,
+        "num_comments": 0,
+        "author": "mythz",
+        "created_at": "2025-11-01T10:58:40Z"
+      },
+      {
+        "objectID": "43353462",
+        "title": "Open WebUI creator about his life purpose",
+        "url": "https://jryng.com/thoughts/my-purpose",
+        "points": 8,
+        "num_comments": 1,
+        "author": "nasvay_factory",
+        "created_at": "2025-03-13T14:01:44Z"
+      },
+      {
+        "objectID": "46122045",
+        "title": "Show HN: CoChat – Group chats with multi-model AI, built on OpenWebUI",
+        "url": "",
+        "points": 6,
+        "num_comments": 4,
+        "author": "mfolaron",
+        "created_at": "2025-12-02T15:18:06Z"
+      },
+      {
+        "objectID": "44478339",
+        "title": "Open WebUI Changed Its License to Open WebUI License with a CLA",
+        "url": "https://github.com/open-webui/docs/blob/main/docs/license.mdx",
+        "points": 6,
+        "num_comments": 0,
+        "author": "Bogdanp",
+        "created_at": "2025-07-06T06:31:23Z"
+      },
+      {
+        "objectID": "46667266",
+        "title": "Show HN: RqLui – A free open-source webui for Rqlite written in Quasar",
+        "url": "https://github.com/Suleman-Elahi/rqLui",
+        "points": 4,
+        "num_comments": 2,
+        "author": "isuleman",
+        "created_at": "2026-01-18T12:25:07Z"
+      },
+      {
+        "objectID": "43901567",
+        "title": "Open WebUI License Change",
+        "url": "https://github.com/open-webui/open-webui/commit/f0447b24ab5c8e3de7d84221823f948ec5c2b013",
+        "points": 4,
+        "num_comments": 2,
+        "author": "pabs3",
+        "created_at": "2025-05-06T03:26:51Z"
+      },
+      {
+        "objectID": "42785697",
+        "title": "Running Generative AI Models Locally with Ollama and Open WebUI",
+        "url": "https://fedoramagazine.org/running-generative-ai-models-locally-with-ollama-and-open-webui/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "billybuckwheat",
+        "created_at": "2025-01-21T22:09:10Z"
+      },
+      {
+        "objectID": "42068426",
+        "title": "How to install and use Open WebUI",
+        "url": "https://allthingsopen.org/articles/how-to-install-and-utilize-open-webui",
+        "points": 4,
+        "num_comments": 0,
+        "author": "devonnull",
+        "created_at": "2024-11-06T20:00:59Z"
+      },
+      {
+        "objectID": "43914391",
+        "title": "Open WebUI's Gamble: \"Your BSD code is ours unless you say no\"",
+        "url": "",
+        "points": 3,
+        "num_comments": 2,
+        "author": "halifaxbeard",
+        "created_at": "2025-05-07T11:37:06Z"
+      },
+      {
+        "objectID": "46832904",
+        "title": "Show HN: Lightweight Ollama / Open Web UI Alternative",
+        "url": "https://github.com/contactwajeeh/ollamagoweb-v2",
+        "points": 3,
+        "num_comments": 0,
+        "author": "mwze",
+        "created_at": "2026-01-31T02:53:36Z"
+      },
+      {
+        "objectID": "39832062",
+        "title": "Steering vectors for LLMs, now in the largest open source webUI",
+        "url": "https://github.com/Hellisotherpeople/llm_steer-oobabooga",
+        "points": 3,
+        "num_comments": 0,
+        "author": "Der_Einzige",
+        "created_at": "2024-03-26T19:48:48Z"
+      },
+      {
+        "objectID": "39415763",
+        "title": "Announcing the New Era of 'open-webui'",
+        "url": "https://github.com/open-webui/open-webui/discussions/764",
+        "points": 3,
+        "num_comments": 0,
+        "author": "thunderbong",
+        "created_at": "2024-02-18T03:03:03Z"
+      },
+      {
+        "objectID": "35000026",
+        "title": "Show HN: ChatGPT-web, an open-source web UI for the OpenAI ChatGPT API",
+        "url": "https://niek.github.io/chatgpt-web/",
+        "points": 2,
+        "num_comments": 4,
+        "author": "NiekvdMaas",
+        "created_at": "2023-03-02T18:51:13Z"
+      },
+      {
+        "objectID": "43180599",
+        "title": "Open WebUI Website Temporarily Inaccessible",
+        "url": "https://github.com/open-webui/open-webui/discussions/10780",
+        "points": 2,
+        "num_comments": 2,
+        "author": "nomilk",
+        "created_at": "2025-02-26T04:29:07Z"
+      },
+      {
+        "objectID": "47111402",
+        "title": "FORTHought: Self hosted AI stack for physics labs (and more) built on OpenWebUI",
+        "url": "https://github.com/MariosAdamidis/FORTHought",
+        "points": 2,
+        "num_comments": 1,
+        "author": "MariosAdamidis",
+        "created_at": "2026-02-22T14:44:51Z"
+      },
+      {
+        "objectID": "46687238",
+        "title": "NATS Console – Open-Source Web UI for Managing NATS JetStream",
+        "url": "https://github.com/KLogicHQ/nats-console",
+        "points": 2,
+        "num_comments": 1,
+        "author": "makilan",
+        "created_at": "2026-01-20T02:36:51Z"
+      },
+      {
+        "objectID": "47859633",
+        "title": "Open WebUI v0.9.0 adds desktop app with task scheduling",
+        "url": "https://github.com/open-webui/open-webui/releases/tag/v0.9.0",
+        "points": 2,
+        "num_comments": 0,
+        "author": "simonjgreen",
+        "created_at": "2026-04-22T05:59:25Z"
+      },
+      {
+        "objectID": "46274472",
+        "title": "Show HN: AgentContainers – Open-source web UI for AI dev environments on Docker",
+        "url": "https://agentcontainers.com",
+        "points": 2,
+        "num_comments": 0,
+        "author": "shake-n-fries",
+        "created_at": "2025-12-15T13:47:34Z"
+      },
+      {
+        "objectID": "43925698",
+        "title": "OpenWebUI is not open source anymore",
+        "url": "https://github.com/open-webui/open-webui/discussions/13580",
+        "points": 2,
+        "num_comments": 0,
+        "author": "bzg",
+        "created_at": "2025-05-08T13:00:56Z"
+      },
+      {
+        "objectID": "42669560",
+        "title": "Why I'm Building Open WebUI: On Autonomy, Diversity, and the Future of Humanity",
+        "url": "https://jryng.com/thoughts/why-open-webui",
+        "points": 2,
+        "num_comments": 0,
+        "author": "aberoham",
+        "created_at": "2025-01-11T22:46:10Z"
+      },
+      {
+        "objectID": "42637183",
+        "title": "Ollama and Open WebUI Setup Simplified with Rancher Desktop Open WebUI Extension",
+        "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/tag/v1.17.0",
+        "points": 2,
+        "num_comments": 0,
+        "author": "matamagu",
+        "created_at": "2025-01-08T18:46:50Z"
+      },
+      {
+        "objectID": "41622951",
+        "title": "Code execution utilities for Open WebUI and Ollama",
+        "url": "https://github.com/EtiennePerot/open-webui-code-execution",
+        "points": 2,
+        "num_comments": 0,
+        "author": "todsacerdoti",
+        "created_at": "2024-09-23T06:36:15Z"
+      },
+      {
+        "objectID": "40757535",
+        "title": "Mix and match local and online LLMs with Open WebUI",
+        "url": "https://twitter.com/KarimJDDA/status/1804438255443517678",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ilovefood",
+        "created_at": "2024-06-22T09:01:02Z"
+      },
+      {
+        "objectID": "39549066",
+        "title": "SoraFlows – Open-Source WebUi Video Creation Platform",
+        "url": "https://www.soraflows.com",
+        "points": 1,
+        "num_comments": 2,
+        "author": "flytoagi",
+        "created_at": "2024-02-29T13:33:14Z"
+      },
+      {
+        "objectID": "47735797",
+        "title": "Show HN: Posse – Open-Source Web UI for Anthropic Managed Agents",
+        "url": "https://github.com/oguzbilgic/posse",
+        "points": 1,
+        "num_comments": 1,
+        "author": "obilgic",
+        "created_at": "2026-04-12T03:00:29Z"
+      },
+      {
+        "objectID": "47243851",
+        "title": "Oval – Native macOS client for Open WebUI with on-device voice mode",
+        "url": "https://github.com/shreyaspapi/Oval",
+        "points": 1,
+        "num_comments": 1,
+        "author": "shreyaspapi",
+        "created_at": "2026-03-04T06:23:56Z"
+      },
+      {
+        "objectID": "43530231",
+        "title": "Fix for Missing custom models bug in Open WebUI",
+        "url": "https://www.lucasaguiar.xyz/posts/fix-custom-models-open-webui/",
+        "points": 1,
+        "num_comments": 1,
+        "author": "isfttr",
+        "created_at": "2025-03-31T02:35:33Z"
+      },
+      {
+        "objectID": "48164221",
+        "title": "Open WebUI: Jupyter code execution works despite ENABLE_CODE_EXECUTION=false",
+        "url": "https://github.com/open-webui/open-webui/security/advisories/GHSA-482j-2pq6-q5w4",
+        "points": 1,
+        "num_comments": 0,
+        "author": "logickkk1",
+        "created_at": "2026-05-16T22:12:33Z"
+      },
+      {
+        "objectID": "47749907",
+        "title": "Build a Sovereign Local AI Stack: Ollama and Open WebUI and Pgvector 2026",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "anju-kushwaha",
+        "created_at": "2026-04-13T10:00:56Z"
+      },
+      {
+        "objectID": "43367137",
+        "title": "Script to Automate Deploying Open WebUI on macOS",
+        "url": "https://pilledtexts.com/script-to-deploy-open-web-ui-mac-os/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Fred34",
+        "created_at": "2025-03-14T20:48:23Z"
+      },
+      {
+        "objectID": "42016815",
+        "title": "Private AI Chat with OpenWebUI",
+        "url": "https://pietro.in/en/posts/openwebui/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "skar3",
+        "created_at": "2024-11-01T13:39:20Z"
+      },
+      {
+        "objectID": "41172217",
+        "title": "Guide to extending OpenWebUI using Pipelines",
+        "url": "https://zohaib.me/extending-openwebui-using-pipelines/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "zabi_rauf",
+        "created_at": "2024-08-06T16:07:41Z"
+      },
+      {
+        "objectID": "40343927",
+        "title": "Show HN: The open source webui for AI tool of viggle AI video",
+        "url": "https://github.com/ai-aigc-studio/Viggle-AI-WebUI",
+        "points": 1,
+        "num_comments": 0,
+        "author": "animegirlstudio",
+        "created_at": "2024-05-13T14:44:23Z"
+      }
+    ],
+    "open-webui": [
+      {
+        "objectID": "45798193",
+        "title": "OSS Alternative to Open WebUI – ChatGPT-Like UI, API and CLI",
+        "url": "https://github.com/ServiceStack/llms",
+        "points": 101,
+        "num_comments": 32,
+        "author": "mythz",
+        "created_at": "2025-11-03T12:05:28Z"
+      },
+      {
+        "objectID": "43901575",
+        "title": "Open WebUI changed license from BSD-3 to Open WebUI license with CLA",
+        "url": "https://docs.openwebui.com/license/",
+        "points": 73,
+        "num_comments": 59,
+        "author": "nirv",
+        "created_at": "2025-05-06T03:28:52Z"
+      },
+      {
+        "objectID": "42893411",
+        "title": "How to run 1.58bit DeepSeek R1 with Open WebUI",
+        "url": "https://docs.openwebui.com/tutorials/integrations/deepseekr1-dynamic",
+        "points": 37,
+        "num_comments": 9,
+        "author": "danielhanchen",
+        "created_at": "2025-01-31T23:02:08Z"
+      },
+      {
+        "objectID": "39415771",
+        "title": "Open WebUI: ChatGPT-Style WebUI for Ollama",
+        "url": "https://github.com/open-webui/open-webui",
+        "points": 29,
+        "num_comments": 3,
+        "author": "thunderbong",
+        "created_at": "2024-02-18T03:04:17Z"
+      },
+      {
+        "objectID": "40693299",
+        "title": "A practical guide to starting out with Ollama LLM and Open WebUI",
+        "url": "https://www.theregister.com/2024/06/15/ai_rag_guide/",
+        "points": 10,
+        "num_comments": 2,
+        "author": "rntn",
+        "created_at": "2024-06-15T22:52:52Z"
+      },
+      {
+        "objectID": "45780726",
+        "title": "OSS Alternative to Open WebUI – ChatGPT-Like UI, API and CLI",
+        "url": "https://github.com/ServiceStack/llms",
+        "points": 9,
+        "num_comments": 0,
+        "author": "mythz",
+        "created_at": "2025-11-01T10:58:40Z"
+      },
+      {
+        "objectID": "43353462",
+        "title": "Open WebUI creator about his life purpose",
+        "url": "https://jryng.com/thoughts/my-purpose",
+        "points": 8,
+        "num_comments": 1,
+        "author": "nasvay_factory",
+        "created_at": "2025-03-13T14:01:44Z"
+      },
+      {
+        "objectID": "46122045",
+        "title": "Show HN: CoChat – Group chats with multi-model AI, built on OpenWebUI",
+        "url": "",
+        "points": 6,
+        "num_comments": 4,
+        "author": "mfolaron",
+        "created_at": "2025-12-02T15:18:06Z"
+      },
+      {
+        "objectID": "44478339",
+        "title": "Open WebUI Changed Its License to Open WebUI License with a CLA",
+        "url": "https://github.com/open-webui/docs/blob/main/docs/license.mdx",
+        "points": 6,
+        "num_comments": 0,
+        "author": "Bogdanp",
+        "created_at": "2025-07-06T06:31:23Z"
+      },
+      {
+        "objectID": "43901567",
+        "title": "Open WebUI License Change",
+        "url": "https://github.com/open-webui/open-webui/commit/f0447b24ab5c8e3de7d84221823f948ec5c2b013",
+        "points": 4,
+        "num_comments": 2,
+        "author": "pabs3",
+        "created_at": "2025-05-06T03:26:51Z"
+      },
+      {
+        "objectID": "42785697",
+        "title": "Running Generative AI Models Locally with Ollama and Open WebUI",
+        "url": "https://fedoramagazine.org/running-generative-ai-models-locally-with-ollama-and-open-webui/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "billybuckwheat",
+        "created_at": "2025-01-21T22:09:10Z"
+      },
+      {
+        "objectID": "42068426",
+        "title": "How to install and use Open WebUI",
+        "url": "https://allthingsopen.org/articles/how-to-install-and-utilize-open-webui",
+        "points": 4,
+        "num_comments": 0,
+        "author": "devonnull",
+        "created_at": "2024-11-06T20:00:59Z"
+      },
+      {
+        "objectID": "43914391",
+        "title": "Open WebUI's Gamble: \"Your BSD code is ours unless you say no\"",
+        "url": "",
+        "points": 3,
+        "num_comments": 2,
+        "author": "halifaxbeard",
+        "created_at": "2025-05-07T11:37:06Z"
+      },
+      {
+        "objectID": "46832904",
+        "title": "Show HN: Lightweight Ollama / Open Web UI Alternative",
+        "url": "https://github.com/contactwajeeh/ollamagoweb-v2",
+        "points": 3,
+        "num_comments": 0,
+        "author": "mwze",
+        "created_at": "2026-01-31T02:53:36Z"
+      },
+      {
+        "objectID": "39415763",
+        "title": "Announcing the New Era of 'open-webui'",
+        "url": "https://github.com/open-webui/open-webui/discussions/764",
+        "points": 3,
+        "num_comments": 0,
+        "author": "thunderbong",
+        "created_at": "2024-02-18T03:03:03Z"
+      },
+      {
+        "objectID": "43180599",
+        "title": "Open WebUI Website Temporarily Inaccessible",
+        "url": "https://github.com/open-webui/open-webui/discussions/10780",
+        "points": 2,
+        "num_comments": 2,
+        "author": "nomilk",
+        "created_at": "2025-02-26T04:29:07Z"
+      },
+      {
+        "objectID": "47111402",
+        "title": "FORTHought: Self hosted AI stack for physics labs (and more) built on OpenWebUI",
+        "url": "https://github.com/MariosAdamidis/FORTHought",
+        "points": 2,
+        "num_comments": 1,
+        "author": "MariosAdamidis",
+        "created_at": "2026-02-22T14:44:51Z"
+      },
+      {
+        "objectID": "47859633",
+        "title": "Open WebUI v0.9.0 adds desktop app with task scheduling",
+        "url": "https://github.com/open-webui/open-webui/releases/tag/v0.9.0",
+        "points": 2,
+        "num_comments": 0,
+        "author": "simonjgreen",
+        "created_at": "2026-04-22T05:59:25Z"
+      },
+      {
+        "objectID": "43925698",
+        "title": "OpenWebUI is not open source anymore",
+        "url": "https://github.com/open-webui/open-webui/discussions/13580",
+        "points": 2,
+        "num_comments": 0,
+        "author": "bzg",
+        "created_at": "2025-05-08T13:00:56Z"
+      },
+      {
+        "objectID": "42669560",
+        "title": "Why I'm Building Open WebUI: On Autonomy, Diversity, and the Future of Humanity",
+        "url": "https://jryng.com/thoughts/why-open-webui",
+        "points": 2,
+        "num_comments": 0,
+        "author": "aberoham",
+        "created_at": "2025-01-11T22:46:10Z"
+      },
+      {
+        "objectID": "42637183",
+        "title": "Ollama and Open WebUI Setup Simplified with Rancher Desktop Open WebUI Extension",
+        "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/tag/v1.17.0",
+        "points": 2,
+        "num_comments": 0,
+        "author": "matamagu",
+        "created_at": "2025-01-08T18:46:50Z"
+      },
+      {
+        "objectID": "41622951",
+        "title": "Code execution utilities for Open WebUI and Ollama",
+        "url": "https://github.com/EtiennePerot/open-webui-code-execution",
+        "points": 2,
+        "num_comments": 0,
+        "author": "todsacerdoti",
+        "created_at": "2024-09-23T06:36:15Z"
+      },
+      {
+        "objectID": "40757535",
+        "title": "Mix and match local and online LLMs with Open WebUI",
+        "url": "https://twitter.com/KarimJDDA/status/1804438255443517678",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ilovefood",
+        "created_at": "2024-06-22T09:01:02Z"
+      },
+      {
+        "objectID": "47243851",
+        "title": "Oval – Native macOS client for Open WebUI with on-device voice mode",
+        "url": "https://github.com/shreyaspapi/Oval",
+        "points": 1,
+        "num_comments": 1,
+        "author": "shreyaspapi",
+        "created_at": "2026-03-04T06:23:56Z"
+      },
+      {
+        "objectID": "43530231",
+        "title": "Fix for Missing custom models bug in Open WebUI",
+        "url": "https://www.lucasaguiar.xyz/posts/fix-custom-models-open-webui/",
+        "points": 1,
+        "num_comments": 1,
+        "author": "isfttr",
+        "created_at": "2025-03-31T02:35:33Z"
+      },
+      {
+        "objectID": "48164221",
+        "title": "Open WebUI: Jupyter code execution works despite ENABLE_CODE_EXECUTION=false",
+        "url": "https://github.com/open-webui/open-webui/security/advisories/GHSA-482j-2pq6-q5w4",
+        "points": 1,
+        "num_comments": 0,
+        "author": "logickkk1",
+        "created_at": "2026-05-16T22:12:33Z"
+      },
+      {
+        "objectID": "47749907",
+        "title": "Build a Sovereign Local AI Stack: Ollama and Open WebUI and Pgvector 2026",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "anju-kushwaha",
+        "created_at": "2026-04-13T10:00:56Z"
+      },
+      {
+        "objectID": "43367137",
+        "title": "Script to Automate Deploying Open WebUI on macOS",
+        "url": "https://pilledtexts.com/script-to-deploy-open-web-ui-mac-os/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Fred34",
+        "created_at": "2025-03-14T20:48:23Z"
+      },
+      {
+        "objectID": "42016815",
+        "title": "Private AI Chat with OpenWebUI",
+        "url": "https://pietro.in/en/posts/openwebui/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "skar3",
+        "created_at": "2024-11-01T13:39:20Z"
+      },
+      {
+        "objectID": "41172217",
+        "title": "Guide to extending OpenWebUI using Pipelines",
+        "url": "https://zohaib.me/extending-openwebui-using-pipelines/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "zabi_rauf",
+        "created_at": "2024-08-06T16:07:41Z"
+      },
+      {
+        "objectID": "41968366",
+        "title": "Ask HN: Local RAG with private knowledge base",
+        "url": "",
+        "points": 108,
+        "num_comments": 39,
+        "author": "zephodb",
+        "created_at": "2024-10-28T06:53:20Z"
+      },
+      {
+        "objectID": "42784373",
+        "title": "Show HN: Chat with multiple LLMs: o1-high-effort, Sonnet 3.5, GPT-4o, and more",
+        "url": "https://polychat.co",
+        "points": 62,
+        "num_comments": 33,
+        "author": "cr4zy",
+        "created_at": "2025-01-21T19:40:44Z"
+      },
+      {
+        "objectID": "45885750",
+        "title": "Show HN: Gerbil – an open source desktop app for running LLMs locally",
+        "url": "https://github.com/lone-cloud/gerbil",
+        "points": 37,
+        "num_comments": 12,
+        "author": "lone-cloud",
+        "created_at": "2025-11-11T10:03:57Z"
+      },
+      {
+        "objectID": "44955424",
+        "title": "Show HN: Lemonade: Run LLMs Locally with GPU and NPU Acceleration",
+        "url": "https://github.com/lemonade-sdk/lemonade",
+        "points": 15,
+        "num_comments": 0,
+        "author": "ramkrishna2910",
+        "created_at": "2025-08-19T19:35:16Z"
+      },
+      {
+        "objectID": "44345471",
+        "title": "Show HN: LLMOne – Deploy LLMs from bare metal to production in hours",
+        "url": "https://github.com/EM-GeekLab/LLMOne",
+        "points": 5,
+        "num_comments": 0,
+        "author": "pescn",
+        "created_at": "2025-06-22T09:44:37Z"
+      },
+      {
+        "objectID": "48180667",
+        "title": "The Oats Protocol – Open Agent Tools for Local Coding Agents",
+        "url": "",
+        "points": 4,
+        "num_comments": 0,
+        "author": "dsdevjay",
+        "created_at": "2026-05-18T14:48:57Z"
+      },
+      {
+        "objectID": "44794916",
+        "title": "Show HN: FlexLLama – Run multiple local LLMs at once with a simple dashboard",
+        "url": "https://github.com/yazon/flexllama",
+        "points": 4,
+        "num_comments": 0,
+        "author": "yazon",
+        "created_at": "2025-08-05T06:30:54Z"
+      },
+      {
+        "objectID": "40171030",
+        "title": "What is a good machine to run LLM's on?",
+        "url": "",
+        "points": 3,
+        "num_comments": 4,
+        "author": "rabbitofdeath",
+        "created_at": "2024-04-26T16:01:28Z"
+      },
+      {
+        "objectID": "44931525",
+        "title": "Show HN: LlamaPen – An open-source web-GUI for Ollama",
+        "url": "https://github.com/ImDarkTom/LlamaPen",
+        "points": 3,
+        "num_comments": 2,
+        "author": "ImDarkTom",
+        "created_at": "2025-08-17T13:48:13Z"
+      },
+      {
+        "objectID": "40562669",
+        "title": "Show HN: Make your AI conversations private. ProtonMail equivalent of ChatGPT",
+        "url": "",
+        "points": 3,
+        "num_comments": 2,
+        "author": "kisamoto",
+        "created_at": "2024-06-03T13:55:37Z"
+      }
+    ]
+  }
+}

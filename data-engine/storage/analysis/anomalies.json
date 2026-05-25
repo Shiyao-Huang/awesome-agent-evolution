@@ -1,0 +1,303 @@
+{
+  "generated_at": "2026-05-22T11:25:56.251430+00:00",
+  "total_projects": 26,
+  "total_anomalies": 15,
+  "results": [
+    {
+      "project": "Agent Zero",
+      "anomaly_count": 3,
+      "anomalies": [
+        {
+          "type": "hn_burst",
+          "severity": "medium",
+          "description": "6 HN posts within 24h window",
+          "window_start": "2026-02-24T22:02:47+00:00",
+          "count": 6
+        },
+        {
+          "type": "duplicate_content",
+          "severity": "medium",
+          "description": "2 duplicated titles on hn (max repeats: 10)",
+          "platform": "hn",
+          "duplicate_count": 2,
+          "max_repeats": 10
+        },
+        {
+          "type": "duplicate_content",
+          "severity": "medium",
+          "description": "1 duplicated titles on reddit (max repeats: 4)",
+          "platform": "reddit",
+          "duplicate_count": 1,
+          "max_repeats": 4
+        }
+      ],
+      "analyzed_at": "2026-05-22T11:25:56.223760+00:00"
+    },
+    {
+      "project": "Eliza",
+      "anomaly_count": 3,
+      "anomalies": [
+        {
+          "type": "low_engagement_ratio",
+          "severity": "medium",
+          "description": "2 hn posts with high score but near-zero comments",
+          "platform": "hn",
+          "examples": [
+            {
+              "title": "Queen Elizabeth II has died",
+              "score": 129,
+              "comments": 1
+            },
+            {
+              "title": "Queen Elizabeth II has died",
+              "score": 129,
+              "comments": 1
+            }
+          ]
+        },
+        {
+          "type": "duplicate_content",
+          "severity": "medium",
+          "description": "1 duplicated titles on hn (max repeats: 4)",
+          "platform": "hn",
+          "duplicate_count": 1,
+          "max_repeats": 4
+        },
+        {
+          "type": "duplicate_content",
+          "severity": "medium",
+          "description": "1 duplicated titles on reddit (max repeats: 6)",
+          "platform": "reddit",
+          "duplicate_count": 1,
+          "max_repeats": 6
+        }
+      ],
+      "analyzed_at": "2026-05-22T11:25:56.229737+00:00"
+    },
+    {
+      "project": "AgenticSeek",
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "type": "duplicate_content",
+          "severity": "medium",
+          "description": "2 duplicated titles on reddit (max repeats: 4)",
+          "platform": "reddit",
+          "duplicate_count": 2,
+          "max_repeats": 4
+        }
+      ],
+      "analyzed_at": "2026-05-22T11:25:56.224162+00:00"
+    },
+    {
+      "project": "Cognee",
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "type": "duplicate_content",
+          "severity": "medium",
+          "description": "3 duplicated titles on reddit (max repeats: 4)",
+          "platform": "reddit",
+          "duplicate_count": 3,
+          "max_repeats": 4
+        }
+      ],
+      "analyzed_at": "2026-05-22T11:25:56.227022+00:00"
+    },
+    {
+      "project": "Google A2A",
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "type": "duplicate_content",
+          "severity": "medium",
+          "description": "4 duplicated titles on reddit (max repeats: 3)",
+          "platform": "reddit",
+          "duplicate_count": 4,
+          "max_repeats": 3
+        }
+      ],
+      "analyzed_at": "2026-05-22T11:25:56.230290+00:00"
+    },
+    {
+      "project": "LeRobot",
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "type": "duplicate_content",
+          "severity": "medium",
+          "description": "1 duplicated titles on reddit (max repeats: 3)",
+          "platform": "reddit",
+          "duplicate_count": 1,
+          "max_repeats": 3
+        }
+      ],
+      "analyzed_at": "2026-05-22T11:25:56.235913+00:00"
+    },
+    {
+      "project": "Memvid",
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "type": "duplicate_content",
+          "severity": "medium",
+          "description": "3 duplicated titles on reddit (max repeats: 8)",
+          "platform": "reddit",
+          "duplicate_count": 3,
+          "max_repeats": 8
+        }
+      ],
+      "analyzed_at": "2026-05-22T11:25:56.243597+00:00"
+    },
+    {
+      "project": "NeMo Guardrails",
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "type": "duplicate_content",
+          "severity": "medium",
+          "description": "4 duplicated titles on reddit (max repeats: 6)",
+          "platform": "reddit",
+          "duplicate_count": 4,
+          "max_repeats": 6
+        }
+      ],
+      "analyzed_at": "2026-05-22T11:25:56.243840+00:00"
+    },
+    {
+      "project": "Open-AutoGLM",
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "type": "duplicate_content",
+          "severity": "medium",
+          "description": "1 duplicated titles on reddit (max repeats: 4)",
+          "platform": "reddit",
+          "duplicate_count": 1,
+          "max_repeats": 4
+        }
+      ],
+      "analyzed_at": "2026-05-22T11:25:56.244052+00:00"
+    },
+    {
+      "project": "OpenEvolve",
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "type": "duplicate_content",
+          "severity": "medium",
+          "description": "1 duplicated titles on reddit (max repeats: 4)",
+          "platform": "reddit",
+          "duplicate_count": 1,
+          "max_repeats": 4
+        }
+      ],
+      "analyzed_at": "2026-05-22T11:25:56.245101+00:00"
+    },
+    {
+      "project": "Promptfoo",
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "type": "duplicate_content",
+          "severity": "medium",
+          "description": "2 duplicated titles on reddit (max repeats: 4)",
+          "platform": "reddit",
+          "duplicate_count": 2,
+          "max_repeats": 4
+        }
+      ],
+      "analyzed_at": "2026-05-22T11:25:56.246762+00:00"
+    },
+    {
+      "project": "Awesome-Self-Evolving-Agents",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.224318+00:00"
+    },
+    {
+      "project": "EvoAgentX",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.230066+00:00"
+    },
+    {
+      "project": "Google ADK",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.232098+00:00"
+    },
+    {
+      "project": "HyperAgents",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.232757+00:00"
+    },
+    {
+      "project": "LangChain",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.235654+00:00"
+    },
+    {
+      "project": "Letta",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.238639+00:00"
+    },
+    {
+      "project": "Mem0",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.241282+00:00"
+    },
+    {
+      "project": "OpenHands",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.246523+00:00"
+    },
+    {
+      "project": "SuperAGI",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.248318+00:00"
+    },
+    {
+      "project": "TextGrad",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.248547+00:00"
+    },
+    {
+      "project": "autogen",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.248567+00:00"
+    },
+    {
+      "project": "crewAI",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.248580+00:00"
+    },
+    {
+      "project": "dify",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.249943+00:00"
+    },
+    {
+      "project": "evolver",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.251291+00:00"
+    },
+    {
+      "project": "mcp-use",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "analyzed_at": "2026-05-22T11:25:56.251424+00:00"
+    }
+  ]
+}
