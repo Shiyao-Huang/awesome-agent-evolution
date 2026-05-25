@@ -1,0 +1,516 @@
+{
+  "project": "Open WebUI",
+  "repo": "open-webui/open-webui",
+  "collected_at": "2026-05-22T11:37:49.159509+00:00",
+  "queries": [
+    "Open WebUI",
+    "open-webui"
+  ],
+  "total_posts": 50,
+  "results": {
+    "Open WebUI": [
+      {
+        "id": "1srhnvn",
+        "subreddit": "LocalLLaMA",
+        "title": "Open WebUI Desktop Released!",
+        "score": 290,
+        "num_comments": 105,
+        "author": "My_Unbiased_Opinion",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1srhnvn/open_webui_desktop_released/",
+        "created_utc": 1776760287.0
+      },
+      {
+        "id": "1t5j2si",
+        "subreddit": "LocalLLM",
+        "title": "Open WebUI is dead to me, now time to recode",
+        "score": 30,
+        "num_comments": 43,
+        "author": "Old-Sprinkles-8287",
+        "url": "https://reddit.com/r/LocalLLM/comments/1t5j2si/open_webui_is_dead_to_me_now_time_to_recode/",
+        "created_utc": 1778087251.0
+      },
+      {
+        "id": "1t8ii11",
+        "subreddit": "hermesagent",
+        "title": "The best UI? (no OpenWebUI pls)",
+        "score": 35,
+        "num_comments": 52,
+        "author": "SavaStone",
+        "url": "https://reddit.com/r/hermesagent/comments/1t8ii11/the_best_ui_no_openwebui_pls/",
+        "created_utc": 1778356770.0
+      },
+      {
+        "id": "1p1dlx0",
+        "subreddit": "LocalLLaMA",
+        "title": "if open-webui is trash, whats the next best thing available to use?",
+        "score": 95,
+        "num_comments": 166,
+        "author": "Tricky_Reflection_75",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1p1dlx0/if_openwebui_is_trash_whats_the_next_best_thing/",
+        "created_utc": 1763572636.0
+      },
+      {
+        "id": "1rmplvs",
+        "subreddit": "LocalLLaMA",
+        "title": "Open WebUI’s New Open Terminal + “Native” Tool Calling + Qwen3.5 35b = Holy Sh!t!!!",
+        "score": 919,
+        "num_comments": 208,
+        "author": "Porespellar",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1rmplvs/open_webuis_new_open_terminal_native_tool_calling/",
+        "created_utc": 1772829874.0
+      },
+      {
+        "id": "1qzrl2g",
+        "subreddit": "LocalLLaMA",
+        "title": "Are there any alternatives to Open WebUI that don't have terrible UX?",
+        "score": 52,
+        "num_comments": 49,
+        "author": "lostmsu",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1qzrl2g/are_there_any_alternatives_to_open_webui_that/",
+        "created_utc": 1770602701.0
+      },
+      {
+        "id": "1oy053m",
+        "subreddit": "LocalLLaMA",
+        "title": "Why do (some) people hate Open WebUI?",
+        "score": 100,
+        "num_comments": 152,
+        "author": "liviuberechet",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1oy053m/why_do_some_people_hate_open_webui/",
+        "created_utc": 1763233931.0
+      },
+      {
+        "id": "1sk757s",
+        "subreddit": "hermesagent",
+        "title": "Hermes + Open WebUI = stuff of dreams",
+        "score": 63,
+        "num_comments": 63,
+        "author": "VonDenBerg",
+        "url": "https://reddit.com/r/hermesagent/comments/1sk757s/hermes_open_webui_stuff_of_dreams/",
+        "created_utc": 1776077089.0
+      },
+      {
+        "id": "1svf84n",
+        "subreddit": "OpenWebUI",
+        "title": "Which OpenWebUI setup actually unlocks all LLM features?",
+        "score": 30,
+        "num_comments": 25,
+        "author": "lord_zunami",
+        "url": "https://reddit.com/r/OpenWebUI/comments/1svf84n/which_openwebui_setup_actually_unlocks_all_llm/",
+        "created_utc": 1777130982.0
+      },
+      {
+        "id": "1srkszc",
+        "subreddit": "hermesagent",
+        "title": "Using Open Web Ui creates few sessions each time",
+        "score": 2,
+        "num_comments": 3,
+        "author": "parich15",
+        "url": "https://reddit.com/r/hermesagent/comments/1srkszc/using_open_web_ui_creates_few_sessions_each_time/",
+        "created_utc": 1776770730.0
+      },
+      {
+        "id": "1tbyyee",
+        "subreddit": "LocalLLaMA",
+        "title": "TextGen is now a native desktop app. Open-source alternative to LM Studio (formerly text-generation-webui).",
+        "score": 681,
+        "num_comments": 232,
+        "author": "oobabooga4",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/",
+        "created_utc": 1778677232.0
+      },
+      {
+        "id": "1rw9jmf",
+        "subreddit": "LocalLLaMA",
+        "title": "Introducing Unsloth Studio: A new open-source web UI to train and run LLMs",
+        "score": 955,
+        "num_comments": 149,
+        "author": "danielhanchen",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1rw9jmf/introducing_unsloth_studio_a_new_opensource_web/",
+        "created_utc": 1773760884.0
+      },
+      {
+        "id": "1nlkwr3",
+        "subreddit": "LocalLLaMA",
+        "title": "OpenWebUI is the most bloated piece of s**t on earth, not only that but it's not even truly open source anymore, now it just pretends it is because you can't remove their branding from a single part of their UI. Suggestions for new front end?",
+        "score": 739,
+        "num_comments": 338,
+        "author": "Striking_Wedding_461",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1nlkwr3/openwebui_is_the_most_bloated_piece_of_st_on/",
+        "created_utc": 1758330486.0
+      },
+      {
+        "id": "1srhg6j",
+        "subreddit": "OpenWebUI",
+        "title": "Open WebUI v0.9.0 IS HERE — I don't even know where to start! NATIVE DESKTOP, SCHEDULED AUTOMATIONS, TASK MANAGEMENT, CALENDAR AND THE LARGEST PERFORMANCE OVERHAUL EVER",
+        "score": 288,
+        "num_comments": 163,
+        "author": "ClassicMain",
+        "url": "https://reddit.com/r/OpenWebUI/comments/1srhg6j/open_webui_v090_is_here_i_dont_even_know_where_to/",
+        "created_utc": 1776759523.0
+      },
+      {
+        "id": "1nw52ad",
+        "subreddit": "LocalLLaMA",
+        "title": "Introducing Onyx - a fully open source chat UI with RAG, web search, deep research, and MCP",
+        "score": 504,
+        "num_comments": 157,
+        "author": "Weves11",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1nw52ad/introducing_onyx_a_fully_open_source_chat_ui_with/",
+        "created_utc": 1759414685.0
+      },
+      {
+        "id": "1j6dzai",
+        "subreddit": "LocalLLaMA",
+        "title": "Real-time token graph in Open WebUI",
+        "score": 1215,
+        "num_comments": 92,
+        "author": "Everlier",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1j6dzai/realtime_token_graph_in_open_webui/",
+        "created_utc": 1741427818.0
+      },
+      {
+        "id": "1rx42qt",
+        "subreddit": "selfhosted",
+        "title": "Introducing Unsloth Studio: an open-source web UI for local LLMs",
+        "score": 337,
+        "num_comments": 90,
+        "author": "yoracale",
+        "url": "https://reddit.com/r/selfhosted/comments/1rx42qt/introducing_unsloth_studio_an_opensource_web_ui/",
+        "created_utc": 1773840945.0
+      },
+      {
+        "id": "1df1zjr",
+        "subreddit": "LocalLLaMA",
+        "title": "If you haven’t checked out the Open WebUI Github in a couple of weeks, you need to like right effing now!! ",
+        "score": 760,
+        "num_comments": 200,
+        "author": "Porespellar",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1df1zjr/if_you_havent_checked_out_the_open_webui_github/",
+        "created_utc": 1718293158.0
+      },
+      {
+        "id": "1kfhkal",
+        "subreddit": "opensource",
+        "title": "Open WebUI is no longer open source",
+        "score": 693,
+        "num_comments": 108,
+        "author": "imbev",
+        "url": "https://reddit.com/r/opensource/comments/1kfhkal/open_webui_is_no_longer_open_source/",
+        "created_utc": 1746466288.0
+      },
+      {
+        "id": "1dh1hcp",
+        "subreddit": "LocalLLaMA",
+        "title": "OpenWebUI is absolutely amazing. ",
+        "score": 458,
+        "num_comments": 258,
+        "author": "klippers",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1dh1hcp/openwebui_is_absolutely_amazing/",
+        "created_utc": 1718519352.0
+      },
+      {
+        "id": "1occan8",
+        "subreddit": "LocalLLaMA",
+        "title": "vLLM + OpenWebUI + Tailscale = private, portable AI",
+        "score": 311,
+        "num_comments": 92,
+        "author": "zhambe",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1occan8/vllm_openwebui_tailscale_private_portable_ai/",
+        "created_utc": 1761051613.0
+      },
+      {
+        "id": "1mo9w3t",
+        "subreddit": "selfhosted",
+        "title": "Built a native OpenWebUI client for iOS &amp; Android (Open Source) — smoother than the PWA, privacy‑first",
+        "score": 263,
+        "num_comments": 124,
+        "author": "cogwheel0",
+        "url": "https://reddit.com/r/selfhosted/comments/1mo9w3t/built_a_native_openwebui_client_for_ios_android/",
+        "created_utc": 1755008078.0
+      },
+      {
+        "id": "1r3a2ck",
+        "subreddit": "OpenWebUI",
+        "title": "🚀 Open WebUI v0.8.0 IS HERE! The LARGEST Release EVER (+30k LOC!) 🤯 OpenResponses, Analytics Dashboard, Skills, A BOAT LOAD of Performance Improvements, Rich Action UI, Async Search &amp; MORE!",
+        "score": 301,
+        "num_comments": 57,
+        "author": "ClassicMain",
+        "url": "https://reddit.com/r/OpenWebUI/comments/1r3a2ck/open_webui_v080_is_here_the_largest_release_ever/",
+        "created_utc": 1770941398.0
+      },
+      {
+        "id": "ylrop5",
+        "subreddit": "StableDiffusion",
+        "title": "AUTOMATIC1111 \"There is no requirement to make this software legally usable.\" Reminder, the webui is not open source.",
+        "score": 403,
+        "num_comments": 457,
+        "author": "isthatpossibl",
+        "url": "https://reddit.com/r/StableDiffusion/comments/ylrop5/automatic1111_there_is_no_requirement_to_make/",
+        "created_utc": 1667546459.0
+      },
+      {
+        "id": "1sqzwzh",
+        "subreddit": "OpenWebUI",
+        "title": "THIS SHOULD NOT BE POSSIBLE IN OPEN WEBUI: LIVE VISUALIZATION RENDERING - Inline Visualizer v2 is HERE!",
+        "score": 173,
+        "num_comments": 56,
+        "author": "ClassicMain",
+        "url": "https://reddit.com/r/OpenWebUI/comments/1sqzwzh/this_should_not_be_possible_in_open_webui_live/",
+        "created_utc": 1776713120.0
+      }
+    ],
+    "open-webui": [
+      {
+        "id": "1srhnvn",
+        "subreddit": "LocalLLaMA",
+        "title": "Open WebUI Desktop Released!",
+        "score": 293,
+        "num_comments": 105,
+        "author": "My_Unbiased_Opinion",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1srhnvn/open_webui_desktop_released/",
+        "created_utc": 1776760287.0
+      },
+      {
+        "id": "1t5j2si",
+        "subreddit": "LocalLLM",
+        "title": "Open WebUI is dead to me, now time to recode",
+        "score": 28,
+        "num_comments": 43,
+        "author": "Old-Sprinkles-8287",
+        "url": "https://reddit.com/r/LocalLLM/comments/1t5j2si/open_webui_is_dead_to_me_now_time_to_recode/",
+        "created_utc": 1778087251.0
+      },
+      {
+        "id": "1p1dlx0",
+        "subreddit": "LocalLLaMA",
+        "title": "if open-webui is trash, whats the next best thing available to use?",
+        "score": 93,
+        "num_comments": 166,
+        "author": "Tricky_Reflection_75",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1p1dlx0/if_openwebui_is_trash_whats_the_next_best_thing/",
+        "created_utc": 1763572636.0
+      },
+      {
+        "id": "1qzrl2g",
+        "subreddit": "LocalLLaMA",
+        "title": "Are there any alternatives to Open WebUI that don't have terrible UX?",
+        "score": 50,
+        "num_comments": 49,
+        "author": "lostmsu",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1qzrl2g/are_there_any_alternatives_to_open_webui_that/",
+        "created_utc": 1770602701.0
+      },
+      {
+        "id": "1sk757s",
+        "subreddit": "hermesagent",
+        "title": "Hermes + Open WebUI = stuff of dreams",
+        "score": 65,
+        "num_comments": 63,
+        "author": "VonDenBerg",
+        "url": "https://reddit.com/r/hermesagent/comments/1sk757s/hermes_open_webui_stuff_of_dreams/",
+        "created_utc": 1776077089.0
+      },
+      {
+        "id": "1rmplvs",
+        "subreddit": "LocalLLaMA",
+        "title": "Open WebUI’s New Open Terminal + “Native” Tool Calling + Qwen3.5 35b = Holy Sh!t!!!",
+        "score": 922,
+        "num_comments": 208,
+        "author": "Porespellar",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1rmplvs/open_webuis_new_open_terminal_native_tool_calling/",
+        "created_utc": 1772829874.0
+      },
+      {
+        "id": "1oy053m",
+        "subreddit": "LocalLLaMA",
+        "title": "Why do (some) people hate Open WebUI?",
+        "score": 101,
+        "num_comments": 152,
+        "author": "liviuberechet",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1oy053m/why_do_some_people_hate_open_webui/",
+        "created_utc": 1763233931.0
+      },
+      {
+        "id": "1srkszc",
+        "subreddit": "hermesagent",
+        "title": "Using Open Web Ui creates few sessions each time",
+        "score": 2,
+        "num_comments": 3,
+        "author": "parich15",
+        "url": "https://reddit.com/r/hermesagent/comments/1srkszc/using_open_web_ui_creates_few_sessions_each_time/",
+        "created_utc": 1776770730.0
+      },
+      {
+        "id": "1tbyyee",
+        "subreddit": "LocalLLaMA",
+        "title": "TextGen is now a native desktop app. Open-source alternative to LM Studio (formerly text-generation-webui).",
+        "score": 680,
+        "num_comments": 232,
+        "author": "oobabooga4",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/",
+        "created_utc": 1778677232.0
+      },
+      {
+        "id": "1srhg6j",
+        "subreddit": "OpenWebUI",
+        "title": "Open WebUI v0.9.0 IS HERE — I don't even know where to start! NATIVE DESKTOP, SCHEDULED AUTOMATIONS, TASK MANAGEMENT, CALENDAR AND THE LARGEST PERFORMANCE OVERHAUL EVER",
+        "score": 286,
+        "num_comments": 163,
+        "author": "ClassicMain",
+        "url": "https://reddit.com/r/OpenWebUI/comments/1srhg6j/open_webui_v090_is_here_i_dont_even_know_where_to/",
+        "created_utc": 1776759523.0
+      },
+      {
+        "id": "1j6dzai",
+        "subreddit": "LocalLLaMA",
+        "title": "Real-time token graph in Open WebUI",
+        "score": 1216,
+        "num_comments": 92,
+        "author": "Everlier",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1j6dzai/realtime_token_graph_in_open_webui/",
+        "created_utc": 1741427818.0
+      },
+      {
+        "id": "1df1zjr",
+        "subreddit": "LocalLLaMA",
+        "title": "If you haven’t checked out the Open WebUI Github in a couple of weeks, you need to like right effing now!! ",
+        "score": 760,
+        "num_comments": 200,
+        "author": "Porespellar",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1df1zjr/if_you_havent_checked_out_the_open_webui_github/",
+        "created_utc": 1718293158.0
+      },
+      {
+        "id": "1kfhkal",
+        "subreddit": "opensource",
+        "title": "Open WebUI is no longer open source",
+        "score": 685,
+        "num_comments": 108,
+        "author": "imbev",
+        "url": "https://reddit.com/r/opensource/comments/1kfhkal/open_webui_is_no_longer_open_source/",
+        "created_utc": 1746466288.0
+      },
+      {
+        "id": "1r3a2ck",
+        "subreddit": "OpenWebUI",
+        "title": "🚀 Open WebUI v0.8.0 IS HERE! The LARGEST Release EVER (+30k LOC!) 🤯 OpenResponses, Analytics Dashboard, Skills, A BOAT LOAD of Performance Improvements, Rich Action UI, Async Search &amp; MORE!",
+        "score": 302,
+        "num_comments": 57,
+        "author": "ClassicMain",
+        "url": "https://reddit.com/r/OpenWebUI/comments/1r3a2ck/open_webui_v080_is_here_the_largest_release_ever/",
+        "created_utc": 1770941398.0
+      },
+      {
+        "id": "ylrop5",
+        "subreddit": "StableDiffusion",
+        "title": "AUTOMATIC1111 \"There is no requirement to make this software legally usable.\" Reminder, the webui is not open source.",
+        "score": 404,
+        "num_comments": 457,
+        "author": "isthatpossibl",
+        "url": "https://reddit.com/r/StableDiffusion/comments/ylrop5/automatic1111_there_is_no_requirement_to_make/",
+        "created_utc": 1667546459.0
+      },
+      {
+        "id": "1sqzwzh",
+        "subreddit": "OpenWebUI",
+        "title": "THIS SHOULD NOT BE POSSIBLE IN OPEN WEBUI: LIVE VISUALIZATION RENDERING - Inline Visualizer v2 is HERE!",
+        "score": 171,
+        "num_comments": 56,
+        "author": "ClassicMain",
+        "url": "https://reddit.com/r/OpenWebUI/comments/1sqzwzh/this_should_not_be_possible_in_open_webui_live/",
+        "created_utc": 1776713120.0
+      },
+      {
+        "id": "1rrizj9",
+        "subreddit": "OpenWebUI",
+        "title": "Open UI — a native iOS Open WebUI client — is now live on the App Store (open source)",
+        "score": 123,
+        "num_comments": 80,
+        "author": "Zealousideal_Fox6426",
+        "url": "https://reddit.com/r/OpenWebUI/comments/1rrizj9/open_ui_a_native_ios_open_webui_client_is_now/",
+        "created_utc": 1773295987.0
+      },
+      {
+        "id": "1kfebga",
+        "subreddit": "LocalLLaMA",
+        "title": "Open WebUI license change : no longer OSI approved ?",
+        "score": 217,
+        "num_comments": 150,
+        "author": "CroquetteLauncher",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1kfebga/open_webui_license_change_no_longer_osi_approved/",
+        "created_utc": 1746458592.0
+      },
+      {
+        "id": "1fyaij3",
+        "subreddit": "LocalLLaMA",
+        "title": "Open WebUI 0.3.31 adds Claude-like ‘Artifacts’, OpenAI-like Live Code Iteration, and the option to drop full docs in context (instead of chunking / embedding them).",
+        "score": 555,
+        "num_comments": 102,
+        "author": "Porespellar",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1fyaij3/open_webui_0331_adds_claudelike_artifacts/",
+        "created_utc": 1728315131.0
+      },
+      {
+        "id": "1l9nkvk",
+        "subreddit": "OpenWebUI",
+        "title": "I’m the Maintainer (and Team) behind Open WebUI – AMA 2025 Q2",
+        "score": 202,
+        "num_comments": 134,
+        "author": "openwebui",
+        "url": "https://reddit.com/r/OpenWebUI/comments/1l9nkvk/im_the_maintainer_and_team_behind_open_webui_ama/",
+        "created_utc": 1749737716.0
+      },
+      {
+        "id": "12qkejm",
+        "subreddit": "StableDiffusion",
+        "title": "My free Unity project for posing an IK rigged character and generating OpenPose ControlNet images with WebUI",
+        "score": 1126,
+        "num_comments": 96,
+        "author": "lkewis",
+        "url": "https://reddit.com/r/StableDiffusion/comments/12qkejm/my_free_unity_project_for_posing_an_ik_rigged/",
+        "created_utc": 1681818283.0
+      },
+      {
+        "id": "1gjziqm",
+        "subreddit": "OpenWebUI",
+        "title": "I’m the Sole Maintainer of Open WebUI — AMA!",
+        "score": 358,
+        "num_comments": 135,
+        "author": "openwebui",
+        "url": "https://reddit.com/r/OpenWebUI/comments/1gjziqm/im_the_sole_maintainer_of_open_webui_ama/",
+        "created_utc": 1730784234.0
+      },
+      {
+        "id": "1oi63n6",
+        "subreddit": "LocalLLaMA",
+        "title": "OSS alternative to Open WebUI - ChatGPT-like UI, API and CLI",
+        "score": 73,
+        "num_comments": 113,
+        "author": "mythz",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1oi63n6/oss_alternative_to_open_webui_chatgptlike_ui_api/",
+        "created_utc": 1761648629.0
+      },
+      {
+        "id": "1rjo4eg",
+        "subreddit": "OpenWebUI",
+        "title": "Open Terminal just made Open WebUI a coding agent",
+        "score": 91,
+        "num_comments": 63,
+        "author": "Existing-Wallaby-444",
+        "url": "https://reddit.com/r/OpenWebUI/comments/1rjo4eg/open_terminal_just_made_open_webui_a_coding_agent/",
+        "created_utc": 1772541177.0
+      },
+      {
+        "id": "1rdwur7",
+        "subreddit": "OpenWebUI",
+        "title": "I built a native iOS client for Open WebUI — voice calls with AI, knowledge bases, web search, tools, and more",
+        "score": 74,
+        "num_comments": 66,
+        "author": "Zealousideal_Fox6426",
+        "url": "https://reddit.com/r/OpenWebUI/comments/1rdwur7/i_built_a_native_ios_client_for_open_webui_voice/",
+        "created_utc": 1771976487.0
+      }
+    ]
+  }
+}

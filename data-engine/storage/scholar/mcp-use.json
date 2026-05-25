@@ -1,0 +1,122 @@
+{
+  "project": "mcp-use",
+  "repo": "mcp-use/mcp-use",
+  "collected_at": "2026-05-22T11:51:47.782338+00:00",
+  "total_papers": 5,
+  "total_citations": 10,
+  "papers": {
+    "mcp-use": [
+      {
+        "paperId": "028f0b8c02e54cea02e9299d640cd8a615adaa3e",
+        "title": "MCPMark: A Benchmark for Stress-Testing Realistic and Comprehensive MCP Use",
+        "year": 2025,
+        "citationCount": 15,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/028f0b8c02e54cea02e9299d640cd8a615adaa3e",
+        "arxivId": "2509.24002"
+      },
+      {
+        "paperId": "153e3227cdc8e8b54034b6166a468bd751e117cc",
+        "title": "MCPToolBench++: A Large Scale AI Agent Model Context Protocol MCP Tool Use Benchmark",
+        "year": 2025,
+        "citationCount": 24,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/153e3227cdc8e8b54034b6166a468bd751e117cc",
+        "arxivId": "2508.07575"
+      },
+      {
+        "paperId": "05e933101fe8e57d25d61703a95362499dc45e9c",
+        "title": "MCP-RADAR: A Multi-Dimensional Benchmark for Evaluating Tool Use Capabilities in Large Language Models",
+        "year": 2025,
+        "citationCount": 41,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/05e933101fe8e57d25d61703a95362499dc45e9c",
+        "arxivId": "2505.16700"
+      },
+      {
+        "paperId": "9a1c52f41d78a58d03e41e99353401354c4429e1",
+        "title": "1-MCP use on Prunus spp. to maintain fruit quality and to extend shelf life during storage : A comparative study",
+        "year": 2005,
+        "citationCount": 20,
+        "venue": "",
+        "url": "https://www.semanticscholar.org/paper/9a1c52f41d78a58d03e41e99353401354c4429e1",
+        "arxivId": ""
+      },
+      {
+        "paperId": "59fc74abfc134648270e1317d53ad7eb5f8205ba",
+        "title": "MCP-Bench: Benchmarking Tool-Using LLM Agents with Complex Real-World Tasks via MCP Servers",
+        "year": 2025,
+        "citationCount": 58,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/59fc74abfc134648270e1317d53ad7eb5f8205ba",
+        "arxivId": "2508.20453"
+      }
+    ]
+  },
+  "citations": {
+    "028f0b8c02e54cea02e9299d640cd8a615adaa3e": [
+      {
+        "paperId": "264a608e22f072193c412fb6579dcfdc4e07f7c0",
+        "title": "ClawMark: A Living-World Benchmark for Multi-Turn, Multi-Day, Multimodal Coworker Agents",
+        "year": 2026,
+        "citationCount": 1
+      },
+      {
+        "paperId": "fd90aae8495022d00a65f765ae2758cc48e1f29a",
+        "title": "From Language to Action: Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "72d9cd8e3a354349df15118a9efcf0385373d944",
+        "title": "OccuBench: Evaluating AI Agents on Real-World Professional Tasks via Language Environment Simulation",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "f49f506731d755254ea33599847cafb5b2aa6f15",
+        "title": "MCP-DPT: A Defense-Placement Taxonomy and Coverage Analysis for Model Context Protocol Security",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "bb3825c998daa4f70d9547ddfebd1c279032c6a5",
+        "title": "PHMForge: Evaluating LLM Agents on Industrial Prognostics through MCP-Native, Algorithm-Grounded Tools",
+        "year": 2026,
+        "citationCount": 0
+      }
+    ],
+    "153e3227cdc8e8b54034b6166a468bd751e117cc": [
+      {
+        "paperId": "f21afa6bc50abad42dd82ab44c5cc7bba7979237",
+        "title": "PAGER: Bridging the Semantic-Execution Gap in Point-Precise Geometric GUI Control",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "fd90aae8495022d00a65f765ae2758cc48e1f29a",
+        "title": "From Language to Action: Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "a7956233731d8117de4ab3455fde756ff882c6c0",
+        "title": "Bounded Autonomy for Enterprise AI: Typed Action Contracts and Consumer-Side Execution",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "1eec13fc5bf12a91b85709a72eaf2e7cd2090cbc",
+        "title": "From a News Article to Cards: Supporting Card News Production in Student Newsrooms via Model Context Protocol",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "ac2f3d8c85bba6af5eee26841a4d449036d4af49",
+        "title": "ClawsBench: Evaluating Capability and Safety of LLM Productivity Agents in Simulated Workspaces",
+        "year": 2026,
+        "citationCount": 6
+      }
+    ]
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "project": "Flowise",
+  "repo": "FlowiseAI/Flowise",
+  "collected_at": "2026-05-22T11:37:22.960482+00:00",
+  "queries": [
+    "Flowise",
+    "Flowise"
+  ],
+  "total_posts": 25,
+  "results": {
+    "Flowise": [
+      {
+        "id": "1rek5yy",
+        "subreddit": "ollama",
+        "title": "Flowise alternatives?",
+        "score": 2,
+        "num_comments": 4,
+        "author": "warlocc_",
+        "url": "https://reddit.com/r/ollama/comments/1rek5yy/flowise_alternatives/",
+        "created_utc": 1772041487.0
+      },
+      {
+        "id": "1j90joa",
+        "subreddit": "n8n",
+        "title": "n8n vs flowise",
+        "score": 14,
+        "num_comments": 12,
+        "author": "Charming-Speech4519",
+        "url": "https://reddit.com/r/n8n/comments/1j90joa/n8n_vs_flowise/",
+        "created_utc": 1741724435.0
+      },
+      {
+        "id": "1rku6he",
+        "subreddit": "flowise",
+        "title": "is flowise what I need?",
+        "score": 1,
+        "num_comments": 7,
+        "author": "jeanto12",
+        "url": "https://reddit.com/r/flowise/comments/1rku6he/is_flowise_what_i_need/",
+        "created_utc": 1772650747.0
+      },
+      {
+        "id": "1nppggn",
+        "subreddit": "flowise",
+        "title": "iOS App for Flowise AI",
+        "score": 1,
+        "num_comments": 1,
+        "author": "Different-Pizza-7591",
+        "url": "https://reddit.com/r/flowise/comments/1nppggn/ios_app_for_flowise_ai/",
+        "created_utc": 1758751370.0
+      },
+      {
+        "id": "1l38u76",
+        "subreddit": "n8n",
+        "title": "One-command installer for N8N + Flowise + PostgreSQL + Monitoring and more",
+        "score": 95,
+        "num_comments": 66,
+        "author": "NoBeginning9026",
+        "url": "https://reddit.com/r/n8n/comments/1l38u76/onecommand_installer_for_n8n_flowise_postgresql/",
+        "created_utc": 1749051710.0
+      },
+      {
+        "id": "12o29gl",
+        "subreddit": "ChatGPT",
+        "title": "GPT-4 Week 4. The rise of Agents and the beginning of the Simulation era",
+        "score": 3938,
+        "num_comments": 416,
+        "author": "lostlifon",
+        "url": "https://reddit.com/r/ChatGPT/comments/12o29gl/gpt4_week_4_the_rise_of_agents_and_the_beginning/",
+        "created_utc": 1681636411.0
+      },
+      {
+        "id": "1tjj7tc",
+        "subreddit": "udemyfreebies",
+        "title": "Build AI Agents with Flowise AI. Easy and No-Code AI",
+        "score": 1,
+        "num_comments": 0,
+        "author": "smartybrome",
+        "url": "https://reddit.com/r/udemyfreebies/comments/1tjj7tc/build_ai_agents_with_flowise_ai_easy_and_nocode_ai/",
+        "created_utc": 1779367037.0
+      },
+      {
+        "id": "1tjj7ss",
+        "subreddit": "udemyfreebies",
+        "title": "Build AI Agents with Flowise AI. Easy and No-Code AI",
+        "score": 1,
+        "num_comments": 0,
+        "author": "smartybrome",
+        "url": "https://reddit.com/r/udemyfreebies/comments/1tjj7ss/build_ai_agents_with_flowise_ai_easy_and_nocode_ai/",
+        "created_utc": 1779367036.0
+      },
+      {
+        "id": "1t7704v",
+        "subreddit": "Udemies",
+        "title": "Build AI Agents with Flowise AI. Easy and No-Code AI ($19.99 to FREE)",
+        "score": 1,
+        "num_comments": 1,
+        "author": "Noledgebase",
+        "url": "https://reddit.com/r/Udemies/comments/1t7704v/build_ai_agents_with_flowise_ai_easy_and_nocode/",
+        "created_utc": 1778244637.0
+      },
+      {
+        "id": "1t72sft",
+        "subreddit": "udemyfreebies",
+        "title": "[FREE] Build AI Agents with Flowise AI. Easy and No-Code AI",
+        "score": 1,
+        "num_comments": 0,
+        "author": "RespectFar1668",
+        "url": "https://reddit.com/r/udemyfreebies/comments/1t72sft/free_build_ai_agents_with_flowise_ai_easy_and/",
+        "created_utc": 1778232260.0
+      },
+      {
+        "id": "1sgmby8",
+        "subreddit": "flowise",
+        "title": "Used Claude + Flowise to build a 5-agent marketing team that researches, writes, reviews and outputs campaign content",
+        "score": 7,
+        "num_comments": 2,
+        "author": "Cautious-Curve-2085",
+        "url": "https://reddit.com/r/flowise/comments/1sgmby8/used_claude_flowise_to_build_a_5agent_marketing/",
+        "created_utc": 1775732272.0
+      },
+      {
+        "id": "1sxf1cs",
+        "subreddit": "SecOpsDaily",
+        "title": "Flowise (CVE-2026-40933) &amp; Upsonic (CVE-2026-30625): What to do when best practice isn’t enough?",
+        "score": 1,
+        "num_comments": 0,
+        "author": "falconupkid",
+        "url": "https://reddit.com/r/SecOpsDaily/comments/1sxf1cs/flowise_cve202640933_upsonic_cve202630625_what_to/",
+        "created_utc": 1777320346.0
+      },
+      {
+        "id": "1seskzy",
+        "subreddit": "ArtificialInteligence",
+        "title": "Flowise AI Agent Builder Under Active CVSS 10.0 RCE Exploitation; 12,000+ Instances Exposed",
+        "score": 4,
+        "num_comments": 2,
+        "author": "shikizen",
+        "url": "https://reddit.com/r/ArtificialInteligence/comments/1seskzy/flowise_ai_agent_builder_under_active_cvss_100/",
+        "created_utc": 1775559250.0
+      },
+      {
+        "id": "1q1dgg3",
+        "subreddit": "n8n",
+        "title": "Can anyone compare n8n vs. Langflow vs. Dify vs. SimAI &amp; Flowise?",
+        "score": 17,
+        "num_comments": 12,
+        "author": "OsicKwon",
+        "url": "https://reddit.com/r/n8n/comments/1q1dgg3/can_anyone_compare_n8n_vs_langflow_vs_dify_vs/",
+        "created_utc": 1767297604.0
+      },
+      {
+        "id": "1sthce1",
+        "subreddit": "udemyfreebies",
+        "title": "Build AI Agents with Flowise AI. Easy and No-Code AI",
+        "score": 1,
+        "num_comments": 0,
+        "author": "smartybrome",
+        "url": "https://reddit.com/r/udemyfreebies/comments/1sthce1/build_ai_agents_with_flowise_ai_easy_and_nocode_ai/",
+        "created_utc": 1776947313.0
+      },
+      {
+        "id": "1stcq9h",
+        "subreddit": "udemyfreebies",
+        "title": "[FREE] Build AI Agents with Flowise AI. Easy and No-Code AI",
+        "score": 1,
+        "num_comments": 0,
+        "author": "RespectFar1668",
+        "url": "https://reddit.com/r/udemyfreebies/comments/1stcq9h/free_build_ai_agents_with_flowise_ai_easy_and/",
+        "created_utc": 1776932669.0
+      },
+      {
+        "id": "1sesllm",
+        "subreddit": "cybersecurity",
+        "title": "Flowise AI Agent Builder Under Active CVSS 10.0 RCE Exploitation; 12,000+ Instances Exposed",
+        "score": 0,
+        "num_comments": 2,
+        "author": "shikizen",
+        "url": "https://reddit.com/r/cybersecurity/comments/1sesllm/flowise_ai_agent_builder_under_active_cvss_100/",
+        "created_utc": 1775559302.0
+      },
+      {
+        "id": "1sivojp",
+        "subreddit": "aiagents",
+        "title": "The dominant story on Moltbook today is a cluster of overlapping security and governance findings — a maximum-severity vulnerability in the Flowise agent-builder platform, a claimed Anthropic zero-day discovery study, and continuing circulation of the Berkeley peer-preservation",
+        "score": 3,
+        "num_comments": 1,
+        "author": "Rough-Leather-6820",
+        "url": "https://reddit.com/r/aiagents/comments/1sivojp/the_dominant_story_on_moltbook_today_is_a_cluster/",
+        "created_utc": 1775943387.0
+      },
+      {
+        "id": "1sfz5zz",
+        "subreddit": "pwnhub",
+        "title": "Critical Flowise Vulnerability Exposes Thousands of AI Workflows to Hackers",
+        "score": 3,
+        "num_comments": 1,
+        "author": "_cybersecurity_",
+        "url": "https://reddit.com/r/pwnhub/comments/1sfz5zz/critical_flowise_vulnerability_exposes_thousands/",
+        "created_utc": 1775668527.0
+      },
+      {
+        "id": "1sf42lu",
+        "subreddit": "pwnhub",
+        "title": "Critical Flowise Vulnerability Exposed to Attackers",
+        "score": 3,
+        "num_comments": 1,
+        "author": "_cybersecurity_",
+        "url": "https://reddit.com/r/pwnhub/comments/1sf42lu/critical_flowise_vulnerability_exposed_to/",
+        "created_utc": 1775585770.0
+      },
+      {
+        "id": "1sktc0u",
+        "subreddit": "TugaTech",
+        "title": "Flowise sob ataque: falha máxima expõe milhares de plataformas e o perigo é real",
+        "score": 1,
+        "num_comments": 0,
+        "author": "tugatech",
+        "url": "https://reddit.com/r/TugaTech/comments/1sktc0u/flowise_sob_ataque_falha_máxima_expõe_milhares_de/",
+        "created_utc": 1776127118.0
+      },
+      {
+        "id": "1r80jsp",
+        "subreddit": "AiBuilders",
+        "title": "Flowise review",
+        "score": 4,
+        "num_comments": 6,
+        "author": "austermel",
+        "url": "https://reddit.com/r/AiBuilders/comments/1r80jsp/flowise_review/",
+        "created_utc": 1771414227.0
+      },
+      {
+        "id": "1sivkxv",
+        "subreddit": "Moltbook",
+        "title": "Flowise CVSS 10.0 Vulnerability Exposes 12,000 Agent Instances as @Starfish Publishes Third Security Warning While Berkeley Peer-Preservation Story Circulates Without Source Verification",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Rough-Leather-6820",
+        "url": "https://reddit.com/r/Moltbook/comments/1sivkxv/flowise_cvss_100_vulnerability_exposes_12000/",
+        "created_utc": 1775943135.0
+      },
+      {
+        "id": "1sgn0xp",
+        "subreddit": "NoCodeProject",
+        "title": "Used Claude + Flowise to build a 5-agent marketing team that researches, writes, reviews and outputs campaign content",
+        "score": 3,
+        "num_comments": 0,
+        "author": "Cautious-Curve-2085",
+        "url": "https://reddit.com/r/NoCodeProject/comments/1sgn0xp/used_claude_flowise_to_build_a_5agent_marketing/",
+        "created_utc": 1775734387.0
+      },
+      {
+        "id": "1sgmnfe",
+        "subreddit": "NoCodeProject",
+        "title": "Used Claude + Flowise to build a 5-agent marketing team that researches, writes, reviews and outputs campaign content",
+        "score": 3,
+        "num_comments": 0,
+        "author": "Cautious-Curve-2085",
+        "url": "https://reddit.com/r/NoCodeProject/comments/1sgmnfe/used_claude_flowise_to_build_a_5agent_marketing/",
+        "created_utc": 1775733249.0
+      }
+    ]
+  }
+}

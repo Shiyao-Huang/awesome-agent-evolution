@@ -1,0 +1,114 @@
+{
+  "project": "Open-AutoGLM",
+  "repo": "zai-org/AutoGLM",
+  "collected_at": "2026-05-22T11:53:53.641382+00:00",
+  "total_papers": 4,
+  "total_citations": 10,
+  "papers": {
+    "Open-AutoGLM": [],
+    "AutoGLM": [
+      {
+        "paperId": "31de86aa5372567ccd95981fc2cd17cf8244aba9",
+        "title": "AutoGLM: Autonomous Foundation Agents for GUIs",
+        "year": 2024,
+        "citationCount": 77,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/31de86aa5372567ccd95981fc2cd17cf8244aba9",
+        "arxivId": "2411.00820"
+      },
+      {
+        "paperId": "9f4757a2603c3e34c60c6fda659d6d5209babd55",
+        "title": "From Assistants to Adversaries: Exploring the Security Risks of Mobile LLM Agents",
+        "year": 2025,
+        "citationCount": 16,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/9f4757a2603c3e34c60c6fda659d6d5209babd55",
+        "arxivId": "2505.12981"
+      },
+      {
+        "paperId": "c4060d004efb85967d6c3f3fd38de437589ce2af",
+        "title": "AgentRL: Scaling Agentic Reinforcement Learning with a Multi-Turn, Multi-Task Framework",
+        "year": 2025,
+        "citationCount": 24,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/c4060d004efb85967d6c3f3fd38de437589ce2af",
+        "arxivId": "2510.04206"
+      },
+      {
+        "paperId": "40a7e877cb4d60599a6dafef5487d75018a70fd7",
+        "title": "ComputerRL: Scaling End-to-End Online Reinforcement Learning for Computer Use Agents",
+        "year": 2025,
+        "citationCount": 22,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/40a7e877cb4d60599a6dafef5487d75018a70fd7",
+        "arxivId": "2508.14040"
+      }
+    ]
+  },
+  "citations": {
+    "31de86aa5372567ccd95981fc2cd17cf8244aba9": [
+      {
+        "paperId": "eee8faff5574297ba169d11e9b94a8bff3a4d622",
+        "title": "ToolCUA: Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "b7e7878e486eb122bcbf6e492f1dfd245f2b77a6",
+        "title": "Safe, or Simply Incapable? Rethinking Safety Evaluation for Phone-Use Agents",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "862e60cbeff5abea96697c9b2273acb5c4dbcf2e",
+        "title": "VLAA-GUI: Knowing When to Stop, Recover, and Search, A Modular Framework for GUI Automation",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "7d5756679d40ae4e27cd04b2d6865571f838f46c",
+        "title": "CORA: Conformal Risk-Controlled Agents for Safeguarded Mobile GUI Automation",
+        "year": 2026,
+        "citationCount": 1
+      },
+      {
+        "paperId": "20ed7167867bbb6bf8d5ba64bb7e3230778a286d",
+        "title": "Do Phone-Use Agents Respect Your Privacy?",
+        "year": 2026,
+        "citationCount": 0
+      }
+    ],
+    "9f4757a2603c3e34c60c6fda659d6d5209babd55": [
+      {
+        "paperId": "946e4e64ef25d3e3558c5dc54219fdad9d310d69",
+        "title": "Blind Gods and Broken Screens: Architecting a Secure, Intent-Centric Mobile Agent Operating System",
+        "year": 2026,
+        "citationCount": 1
+      },
+      {
+        "paperId": "ec6596a8ee997f8281911cb8af55db6c353d73a7",
+        "title": "Zero-Permission Manipulation: Can We Trust Large Multimodal Model Powered GUI Agents?",
+        "year": 2026,
+        "citationCount": 3
+      },
+      {
+        "paperId": "68bc2da992a093ad5023b3c781554ff889cd007d",
+        "title": "Source code vulnerability detection based on deep learning: a review",
+        "year": 2026,
+        "citationCount": 1
+      },
+      {
+        "paperId": "cac95f7c2fabddad44e8da3b4885965e3a45d304",
+        "title": "Don’t Mess with Bro’s Cheese! An Empirical Study of Resource Conflict in Android Multi-window",
+        "year": 2025,
+        "citationCount": 0
+      },
+      {
+        "paperId": "2ff8ef638397c81cd408840793c829f40f66796f",
+        "title": "Measuring the Security of Mobile LLM Agents under Adversarial Prompts from Untrusted Third-Party Channels",
+        "year": 2025,
+        "citationCount": 1
+      }
+    ]
+  }
+}

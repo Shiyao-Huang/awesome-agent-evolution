@@ -1,0 +1,57 @@
+{
+  "project": "Devika",
+  "repo": "stitionai/devika",
+  "collected_at": "2026-05-22T11:44:34.322059+00:00",
+  "total_papers": 5,
+  "total_citations": 0,
+  "papers": {
+    "Devika": [
+      {
+        "paperId": "9801ef2fe9433eea9113b0188d27ce8eceecb27c",
+        "title": "Devika AI: An Open-Source Revolution In AI-Powered Code Generation",
+        "year": 2024,
+        "citationCount": 1,
+        "venue": "IOSR Journal of Computer Engineering",
+        "url": "https://www.semanticscholar.org/paper/9801ef2fe9433eea9113b0188d27ce8eceecb27c",
+        "arxivId": ""
+      },
+      {
+        "paperId": "0e4aef0c81d89e7e5b7af3479b1c70f5f08a3394",
+        "title": "5 Questions for Devika Rege",
+        "year": 2024,
+        "citationCount": 0,
+        "venue": "World literature today",
+        "url": "https://www.semanticscholar.org/paper/0e4aef0c81d89e7e5b7af3479b1c70f5f08a3394",
+        "arxivId": ""
+      },
+      {
+        "paperId": "9e653cd92e49d88f5e992bd1352933c55b83ef83",
+        "title": "Nilai Pendidikan dalam Antologi Geguritan Piweling Karya Devika Herfianingtyas",
+        "year": 2023,
+        "citationCount": 1,
+        "venue": "Sabdasastra : Jurnal Pendidikan Bahasa Jawa",
+        "url": "https://www.semanticscholar.org/paper/9e653cd92e49d88f5e992bd1352933c55b83ef83",
+        "arxivId": ""
+      },
+      {
+        "paperId": "759978e7cfa23831f846f966cca94b2d3817343b",
+        "title": "Book review: Devika Sethi, War over Words: Censorship in India, 1930–1960",
+        "year": 2022,
+        "citationCount": 1,
+        "venue": "Indian economic and social history review",
+        "url": "https://www.semanticscholar.org/paper/759978e7cfa23831f846f966cca94b2d3817343b",
+        "arxivId": ""
+      },
+      {
+        "paperId": "008271d7b084325e5c0db660cbc1c23d7bbb6a78",
+        "title": "Theorizing or Negotiating the Law?: A Response to Devika Hovell",
+        "year": 2016,
+        "citationCount": 4,
+        "venue": "AJIL Unbound",
+        "url": "https://www.semanticscholar.org/paper/008271d7b084325e5c0db660cbc1c23d7bbb6a78",
+        "arxivId": ""
+      }
+    ]
+  },
+  "citations": {}
+}

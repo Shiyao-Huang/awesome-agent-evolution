@@ -1,0 +1,516 @@
+{
+  "project": "Ollama",
+  "repo": "ollama/ollama",
+  "collected_at": "2026-05-22T11:37:40.756602+00:00",
+  "queries": [
+    "Ollama",
+    "ollama"
+  ],
+  "total_posts": 50,
+  "results": {
+    "Ollama": [
+      {
+        "id": "1t4b4c7",
+        "subreddit": "LocalLLM",
+        "title": "Why is Ollama hated so much?",
+        "score": 117,
+        "num_comments": 96,
+        "author": "ZB_Virus24",
+        "url": "https://reddit.com/r/LocalLLM/comments/1t4b4c7/why_is_ollama_hated_so_much/",
+        "created_utc": 1777975888.0
+      },
+      {
+        "id": "1pvjpmb",
+        "subreddit": "LocalLLaMA",
+        "title": "Why I quit using Ollama",
+        "score": 515,
+        "num_comments": 229,
+        "author": "SoLoFaRaDi",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1pvjpmb/why_i_quit_using_ollama/",
+        "created_utc": 1766687916.0
+      },
+      {
+        "id": "1t5hilz",
+        "subreddit": "ollama",
+        "title": "I'm cancelling my ollama subscription",
+        "score": 299,
+        "num_comments": 125,
+        "author": "GryphticonPrime",
+        "url": "https://reddit.com/r/ollama/comments/1t5hilz/im_cancelling_my_ollama_subscription/",
+        "created_utc": 1778084014.0
+      },
+      {
+        "id": "1rm7nq1",
+        "subreddit": "LocalLLaMA",
+        "title": "To everyone using still ollama/lm-studio... llama-swap is the real deal",
+        "score": 450,
+        "num_comments": 123,
+        "author": "TooManyPascals",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1rm7nq1/to_everyone_using_still_ollamalmstudio_llamaswap/",
+        "created_utc": 1772782652.0
+      },
+      {
+        "id": "1qvq0xe",
+        "subreddit": "LocalLLaMA",
+        "title": "Bashing Ollama isn’t just a pleasure, it’s a duty",
+        "score": 1058,
+        "num_comments": 200,
+        "author": "jacek2023",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1qvq0xe/bashing_ollama_isnt_just_a_pleasure_its_a_duty/",
+        "created_utc": 1770215388.0
+      },
+      {
+        "id": "1spscsi",
+        "subreddit": "ollama",
+        "title": "Trying to understand the Ollama debate. What’s actually going on?",
+        "score": 504,
+        "num_comments": 169,
+        "author": "pmv143",
+        "url": "https://reddit.com/r/ollama/comments/1spscsi/trying_to_understand_the_ollama_debate_whats/",
+        "created_utc": 1776603650.0
+      },
+      {
+        "id": "1sifdhm",
+        "subreddit": "LocalLLM",
+        "title": "Is ollama a good choice?",
+        "score": 1,
+        "num_comments": 11,
+        "author": "fuck_rsf",
+        "url": "https://reddit.com/r/LocalLLM/comments/1sifdhm/is_ollama_a_good_choice/",
+        "created_utc": 1775903010.0
+      },
+      {
+        "id": "1t9vxkb",
+        "subreddit": "LocalLLM",
+        "title": "Why one should use alternatives to Ollama",
+        "score": 103,
+        "num_comments": 19,
+        "author": "alberto-m-dev",
+        "url": "https://reddit.com/r/LocalLLM/comments/1t9vxkb/why_one_should_use_alternatives_to_ollama/",
+        "created_utc": 1778483950.0
+      },
+      {
+        "id": "1s7nr5k",
+        "subreddit": "ollama",
+        "title": "Ollama Cloud is a hidden gem",
+        "score": 58,
+        "num_comments": 42,
+        "author": "t4a8945",
+        "url": "https://reddit.com/r/ollama/comments/1s7nr5k/ollama_cloud_is_a_hidden_gem/",
+        "created_utc": 1774869694.0
+      },
+      {
+        "id": "1t4de4n",
+        "subreddit": "ollama",
+        "title": "Should I subscribe to ollama cloud? I need your honest opinion!",
+        "score": 1,
+        "num_comments": 16,
+        "author": "pacmanpill",
+        "url": "https://reddit.com/r/ollama/comments/1t4de4n/should_i_subscribe_to_ollama_cloud_i_need_your/",
+        "created_utc": 1777982511.0
+      },
+      {
+        "id": "1sl6931",
+        "subreddit": "LocalLLaMA",
+        "title": "24/7 Headless AI Server on Xiaomi 12 Pro (Snapdragon 8 Gen 1 + Ollama/Gemma4)",
+        "score": 1195,
+        "num_comments": 290,
+        "author": "Aromatic_Ad_7557",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1sl6931/247_headless_ai_server_on_xiaomi_12_pro/",
+        "created_utc": 1776167060.0
+      },
+      {
+        "id": "1szd3gm",
+        "subreddit": "ollama",
+        "title": "Setting up Ollama on dual RTX PRO 6000 Blackwells looking for tips",
+        "score": 907,
+        "num_comments": 337,
+        "author": "AmanNonZero",
+        "url": "https://reddit.com/r/ollama/comments/1szd3gm/setting_up_ollama_on_dual_rtx_pro_6000_blackwells/",
+        "created_utc": 1777500082.0
+      },
+      {
+        "id": "1mncrqp",
+        "subreddit": "LocalLLaMA",
+        "title": "ollama",
+        "score": 1920,
+        "num_comments": 315,
+        "author": "jacek2023",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1mncrqp/ollama/",
+        "created_utc": 1754918342.0
+      },
+      {
+        "id": "1p0u8hd",
+        "subreddit": "LocalLLaMA",
+        "title": "ollama's enshitification has begun! open-source is not their priority anymore, because they're YC-backed and must become profitable for VCs... Meanwhile llama.cpp remains free, open-source, and easier-than-ever to run! No more ollama",
+        "score": 1341,
+        "num_comments": 273,
+        "author": "nderstand2grow",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1p0u8hd/ollamas_enshitification_has_begun_opensource_is/",
+        "created_utc": 1763515613.0
+      },
+      {
+        "id": "1ktx15j",
+        "subreddit": "LocalLLaMA",
+        "title": "Guys! I managed to build a 100% fully local voice AI with Ollama that can have full conversations, control all my smart devices AND now has both short term + long term memory. 🤘",
+        "score": 2483,
+        "num_comments": 190,
+        "author": "RoyalCities",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1ktx15j/guys_i_managed_to_build_a_100_fully_local_voice/",
+        "created_utc": 1748041002.0
+      },
+      {
+        "id": "1s8m3wz",
+        "subreddit": "apple",
+        "title": "Ollama Now Runs Faster on Macs Thanks to Apple's MLX Framework",
+        "score": 1037,
+        "num_comments": 94,
+        "author": "Few_Baseball_3835",
+        "url": "https://reddit.com/r/apple/comments/1s8m3wz/ollama_now_runs_faster_on_macs_thanks_to_apples/",
+        "created_utc": 1774960351.0
+      },
+      {
+        "id": "1se91tz",
+        "subreddit": "ollama",
+        "title": "I built a full desktop AI assistant that runs on Ollama, and it's free",
+        "score": 316,
+        "num_comments": 197,
+        "author": "unstoppableXHD",
+        "url": "https://reddit.com/r/ollama/comments/1se91tz/i_built_a_full_desktop_ai_assistant_that_runs_on/",
+        "created_utc": 1775504088.0
+      },
+      {
+        "id": "1l8pem0",
+        "subreddit": "LocalLLaMA",
+        "title": "I finally got rid of Ollama!",
+        "score": 627,
+        "num_comments": 289,
+        "author": "relmny",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1l8pem0/i_finally_got_rid_of_ollama/",
+        "created_utc": 1749638572.0
+      },
+      {
+        "id": "1if4p38",
+        "subreddit": "ollama",
+        "title": "Been messing around with DeepSeek R1 + Ollama, and honestly, it's kinda wild how much you can do locally with free open-source tools. No cloud, no API keys, just your machine and some cool AI magic.",
+        "score": 1015,
+        "num_comments": 172,
+        "author": "hasan_py",
+        "url": "https://reddit.com/r/ollama/comments/1if4p38/been_messing_around_with_deepseek_r1_ollama_and/",
+        "created_utc": 1738410604.0
+      },
+      {
+        "id": "1r3liuv",
+        "subreddit": "ollama",
+        "title": "llm-checker 3.1.0 scans your hardware and tells you which Ollama models to run",
+        "score": 921,
+        "num_comments": 57,
+        "author": "pzarevich",
+        "url": "https://reddit.com/r/ollama/comments/1r3liuv/llmchecker_310_scans_your_hardware_and_tells_you/",
+        "created_utc": 1770977667.0
+      },
+      {
+        "id": "1i8ifxd",
+        "subreddit": "LocalLLaMA",
+        "title": "Ollama is confusing people by pretending that the little distillation models are \"R1\"",
+        "score": 782,
+        "num_comments": 185,
+        "author": "blahblahsnahdah",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1i8ifxd/ollama_is_confusing_people_by_pretending_that_the/",
+        "created_utc": 1737678007.0
+      },
+      {
+        "id": "1k25876",
+        "subreddit": "LocalLLaMA",
+        "title": "Google QAT - optimized int4 Gemma 3 slash VRAM needs (54GB -&gt; 14.1GB) while maintaining quality - llama.cpp, lmstudio, MLX, ollama",
+        "score": 763,
+        "num_comments": 141,
+        "author": "Nunki08",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1k25876/google_qat_optimized_int4_gemma_3_slash_vram/",
+        "created_utc": 1744983707.0
+      },
+      {
+        "id": "1kz0kqi",
+        "subreddit": "LocalLLaMA",
+        "title": "Ollama continues tradition of misnaming models",
+        "score": 500,
+        "num_comments": 185,
+        "author": "profcuck",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1kz0kqi/ollama_continues_tradition_of_misnaming_models/",
+        "created_utc": 1748600010.0
+      },
+      {
+        "id": "1ko1iob",
+        "subreddit": "LocalLLaMA",
+        "title": "Ollama violating llama.cpp license for over a year",
+        "score": 575,
+        "num_comments": 165,
+        "author": "op_loves_boobs",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1ko1iob/ollama_violating_llamacpp_license_for_over_a_year/",
+        "created_utc": 1747403858.0
+      },
+      {
+        "id": "1icta5y",
+        "subreddit": "LocalLLaMA",
+        "title": "Why do people like Ollama more than LM Studio?",
+        "score": 357,
+        "num_comments": 346,
+        "author": "Intelligent-Gift4519",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1icta5y/why_do_people_like_ollama_more_than_lm_studio/",
+        "created_utc": 1738155857.0
+      }
+    ],
+    "ollama": [
+      {
+        "id": "1t4b4c7",
+        "subreddit": "LocalLLM",
+        "title": "Why is Ollama hated so much?",
+        "score": 117,
+        "num_comments": 96,
+        "author": "ZB_Virus24",
+        "url": "https://reddit.com/r/LocalLLM/comments/1t4b4c7/why_is_ollama_hated_so_much/",
+        "created_utc": 1777975888.0
+      },
+      {
+        "id": "1pvjpmb",
+        "subreddit": "LocalLLaMA",
+        "title": "Why I quit using Ollama",
+        "score": 515,
+        "num_comments": 229,
+        "author": "SoLoFaRaDi",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1pvjpmb/why_i_quit_using_ollama/",
+        "created_utc": 1766687916.0
+      },
+      {
+        "id": "1t5hilz",
+        "subreddit": "ollama",
+        "title": "I'm cancelling my ollama subscription",
+        "score": 296,
+        "num_comments": 125,
+        "author": "GryphticonPrime",
+        "url": "https://reddit.com/r/ollama/comments/1t5hilz/im_cancelling_my_ollama_subscription/",
+        "created_utc": 1778084014.0
+      },
+      {
+        "id": "1rm7nq1",
+        "subreddit": "LocalLLaMA",
+        "title": "To everyone using still ollama/lm-studio... llama-swap is the real deal",
+        "score": 443,
+        "num_comments": 123,
+        "author": "TooManyPascals",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1rm7nq1/to_everyone_using_still_ollamalmstudio_llamaswap/",
+        "created_utc": 1772782652.0
+      },
+      {
+        "id": "1qvq0xe",
+        "subreddit": "LocalLLaMA",
+        "title": "Bashing Ollama isn’t just a pleasure, it’s a duty",
+        "score": 1057,
+        "num_comments": 200,
+        "author": "jacek2023",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1qvq0xe/bashing_ollama_isnt_just_a_pleasure_its_a_duty/",
+        "created_utc": 1770215388.0
+      },
+      {
+        "id": "1spscsi",
+        "subreddit": "ollama",
+        "title": "Trying to understand the Ollama debate. What’s actually going on?",
+        "score": 504,
+        "num_comments": 169,
+        "author": "pmv143",
+        "url": "https://reddit.com/r/ollama/comments/1spscsi/trying_to_understand_the_ollama_debate_whats/",
+        "created_utc": 1776603650.0
+      },
+      {
+        "id": "1sifdhm",
+        "subreddit": "LocalLLM",
+        "title": "Is ollama a good choice?",
+        "score": 1,
+        "num_comments": 11,
+        "author": "fuck_rsf",
+        "url": "https://reddit.com/r/LocalLLM/comments/1sifdhm/is_ollama_a_good_choice/",
+        "created_utc": 1775903010.0
+      },
+      {
+        "id": "1t9vxkb",
+        "subreddit": "LocalLLM",
+        "title": "Why one should use alternatives to Ollama",
+        "score": 103,
+        "num_comments": 19,
+        "author": "alberto-m-dev",
+        "url": "https://reddit.com/r/LocalLLM/comments/1t9vxkb/why_one_should_use_alternatives_to_ollama/",
+        "created_utc": 1778483950.0
+      },
+      {
+        "id": "1s7nr5k",
+        "subreddit": "ollama",
+        "title": "Ollama Cloud is a hidden gem",
+        "score": 61,
+        "num_comments": 42,
+        "author": "t4a8945",
+        "url": "https://reddit.com/r/ollama/comments/1s7nr5k/ollama_cloud_is_a_hidden_gem/",
+        "created_utc": 1774869694.0
+      },
+      {
+        "id": "1t4de4n",
+        "subreddit": "ollama",
+        "title": "Should I subscribe to ollama cloud? I need your honest opinion!",
+        "score": 1,
+        "num_comments": 16,
+        "author": "pacmanpill",
+        "url": "https://reddit.com/r/ollama/comments/1t4de4n/should_i_subscribe_to_ollama_cloud_i_need_your/",
+        "created_utc": 1777982511.0
+      },
+      {
+        "id": "1sl6931",
+        "subreddit": "LocalLLaMA",
+        "title": "24/7 Headless AI Server on Xiaomi 12 Pro (Snapdragon 8 Gen 1 + Ollama/Gemma4)",
+        "score": 1192,
+        "num_comments": 290,
+        "author": "Aromatic_Ad_7557",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1sl6931/247_headless_ai_server_on_xiaomi_12_pro/",
+        "created_utc": 1776167060.0
+      },
+      {
+        "id": "1szd3gm",
+        "subreddit": "ollama",
+        "title": "Setting up Ollama on dual RTX PRO 6000 Blackwells looking for tips",
+        "score": 914,
+        "num_comments": 337,
+        "author": "AmanNonZero",
+        "url": "https://reddit.com/r/ollama/comments/1szd3gm/setting_up_ollama_on_dual_rtx_pro_6000_blackwells/",
+        "created_utc": 1777500082.0
+      },
+      {
+        "id": "1mncrqp",
+        "subreddit": "LocalLLaMA",
+        "title": "ollama",
+        "score": 1927,
+        "num_comments": 315,
+        "author": "jacek2023",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1mncrqp/ollama/",
+        "created_utc": 1754918342.0
+      },
+      {
+        "id": "1p0u8hd",
+        "subreddit": "LocalLLaMA",
+        "title": "ollama's enshitification has begun! open-source is not their priority anymore, because they're YC-backed and must become profitable for VCs... Meanwhile llama.cpp remains free, open-source, and easier-than-ever to run! No more ollama",
+        "score": 1334,
+        "num_comments": 273,
+        "author": "nderstand2grow",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1p0u8hd/ollamas_enshitification_has_begun_opensource_is/",
+        "created_utc": 1763515613.0
+      },
+      {
+        "id": "1ktx15j",
+        "subreddit": "LocalLLaMA",
+        "title": "Guys! I managed to build a 100% fully local voice AI with Ollama that can have full conversations, control all my smart devices AND now has both short term + long term memory. 🤘",
+        "score": 2476,
+        "num_comments": 190,
+        "author": "RoyalCities",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1ktx15j/guys_i_managed_to_build_a_100_fully_local_voice/",
+        "created_utc": 1748041002.0
+      },
+      {
+        "id": "1s8m3wz",
+        "subreddit": "apple",
+        "title": "Ollama Now Runs Faster on Macs Thanks to Apple's MLX Framework",
+        "score": 1041,
+        "num_comments": 94,
+        "author": "Few_Baseball_3835",
+        "url": "https://reddit.com/r/apple/comments/1s8m3wz/ollama_now_runs_faster_on_macs_thanks_to_apples/",
+        "created_utc": 1774960351.0
+      },
+      {
+        "id": "1se91tz",
+        "subreddit": "ollama",
+        "title": "I built a full desktop AI assistant that runs on Ollama, and it's free",
+        "score": 314,
+        "num_comments": 197,
+        "author": "unstoppableXHD",
+        "url": "https://reddit.com/r/ollama/comments/1se91tz/i_built_a_full_desktop_ai_assistant_that_runs_on/",
+        "created_utc": 1775504088.0
+      },
+      {
+        "id": "1l8pem0",
+        "subreddit": "LocalLLaMA",
+        "title": "I finally got rid of Ollama!",
+        "score": 627,
+        "num_comments": 289,
+        "author": "relmny",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1l8pem0/i_finally_got_rid_of_ollama/",
+        "created_utc": 1749638572.0
+      },
+      {
+        "id": "1if4p38",
+        "subreddit": "ollama",
+        "title": "Been messing around with DeepSeek R1 + Ollama, and honestly, it's kinda wild how much you can do locally with free open-source tools. No cloud, no API keys, just your machine and some cool AI magic.",
+        "score": 1015,
+        "num_comments": 172,
+        "author": "hasan_py",
+        "url": "https://reddit.com/r/ollama/comments/1if4p38/been_messing_around_with_deepseek_r1_ollama_and/",
+        "created_utc": 1738410604.0
+      },
+      {
+        "id": "1r3liuv",
+        "subreddit": "ollama",
+        "title": "llm-checker 3.1.0 scans your hardware and tells you which Ollama models to run",
+        "score": 925,
+        "num_comments": 57,
+        "author": "pzarevich",
+        "url": "https://reddit.com/r/ollama/comments/1r3liuv/llmchecker_310_scans_your_hardware_and_tells_you/",
+        "created_utc": 1770977667.0
+      },
+      {
+        "id": "1i8ifxd",
+        "subreddit": "LocalLLaMA",
+        "title": "Ollama is confusing people by pretending that the little distillation models are \"R1\"",
+        "score": 780,
+        "num_comments": 185,
+        "author": "blahblahsnahdah",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1i8ifxd/ollama_is_confusing_people_by_pretending_that_the/",
+        "created_utc": 1737678007.0
+      },
+      {
+        "id": "1k25876",
+        "subreddit": "LocalLLaMA",
+        "title": "Google QAT - optimized int4 Gemma 3 slash VRAM needs (54GB -&gt; 14.1GB) while maintaining quality - llama.cpp, lmstudio, MLX, ollama",
+        "score": 762,
+        "num_comments": 141,
+        "author": "Nunki08",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1k25876/google_qat_optimized_int4_gemma_3_slash_vram/",
+        "created_utc": 1744983707.0
+      },
+      {
+        "id": "1kz0kqi",
+        "subreddit": "LocalLLaMA",
+        "title": "Ollama continues tradition of misnaming models",
+        "score": 499,
+        "num_comments": 185,
+        "author": "profcuck",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1kz0kqi/ollama_continues_tradition_of_misnaming_models/",
+        "created_utc": 1748600010.0
+      },
+      {
+        "id": "1ko1iob",
+        "subreddit": "LocalLLaMA",
+        "title": "Ollama violating llama.cpp license for over a year",
+        "score": 581,
+        "num_comments": 165,
+        "author": "op_loves_boobs",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1ko1iob/ollama_violating_llamacpp_license_for_over_a_year/",
+        "created_utc": 1747403858.0
+      },
+      {
+        "id": "1icta5y",
+        "subreddit": "LocalLLaMA",
+        "title": "Why do people like Ollama more than LM Studio?",
+        "score": 366,
+        "num_comments": 346,
+        "author": "Intelligent-Gift4519",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1icta5y/why_do_people_like_ollama_more_than_lm_studio/",
+        "created_utc": 1738155857.0
+      }
+    ]
+  }
+}

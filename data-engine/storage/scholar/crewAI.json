@@ -1,14 +1,122 @@
 {
   "project": "crewAI",
   "repo": "crewAIInc/crewAI",
-  "collected_at": "2026-05-22T11:19:24.080744+00:00",
-  "queries": [
-    "crewAI"
-  ],
-  "total_papers": 0,
-  "total_citations": 0,
+  "collected_at": "2026-05-22T11:46:41.720473+00:00",
+  "total_papers": 5,
+  "total_citations": 10,
   "papers": {
-    "crewAI": []
+    "crewAI": [
+      {
+        "paperId": "305a54897c5dcc39ca9d4b266990b13c5d0fc97a",
+        "title": "Exploration of LLM Multi-Agent Application Implementation Based on LangGraph+CrewAI",
+        "year": 2024,
+        "citationCount": 48,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/305a54897c5dcc39ca9d4b266990b13c5d0fc97a",
+        "arxivId": "2411.18241"
+      },
+      {
+        "paperId": "786aad3526bac2acf99f682bdfeafdd7a55a5132",
+        "title": "Building Generative AI Agents: Using LangGraph, AutoGen, and CrewAI",
+        "year": 2025,
+        "citationCount": 6,
+        "venue": "",
+        "url": "https://www.semanticscholar.org/paper/786aad3526bac2acf99f682bdfeafdd7a55a5132",
+        "arxivId": ""
+      },
+      {
+        "paperId": "8f608d24353ba35995f448b6b39baa75c501b8d4",
+        "title": "AI-Driven Multi-Agent Demand Response Framework for Residential Load Optimization Using CrewAi",
+        "year": 2025,
+        "citationCount": 3,
+        "venue": "2025 IEEE 20th Conference on Industrial Electronics and Applications (ICIEA)",
+        "url": "https://www.semanticscholar.org/paper/8f608d24353ba35995f448b6b39baa75c501b8d4",
+        "arxivId": ""
+      },
+      {
+        "paperId": "f17c5b4bc435f7ad7714290797036250717bcaec",
+        "title": "A SURVEY ON STOCK INVESTMENT RISK ANALYSIS USING CREWAI MULTI- AGENT SYSTEM",
+        "year": 2025,
+        "citationCount": 2,
+        "venue": "International Research Journal of Modernization in Engineering Technology and Science",
+        "url": "https://www.semanticscholar.org/paper/f17c5b4bc435f7ad7714290797036250717bcaec",
+        "arxivId": ""
+      },
+      {
+        "paperId": "c64fe088fb488d77353968c07f5f27d78766174b",
+        "title": "Unlocking AI Creativity: A Multi-Agent Approach with CrewAI",
+        "year": 2024,
+        "citationCount": 16,
+        "venue": "Journal of Trends in Computer Science and Smart Technology",
+        "url": "https://www.semanticscholar.org/paper/c64fe088fb488d77353968c07f5f27d78766174b",
+        "arxivId": ""
+      }
+    ]
   },
-  "citations": {}
+  "citations": {
+    "305a54897c5dcc39ca9d4b266990b13c5d0fc97a": [
+      {
+        "paperId": "3a0c8c9fb98cf2ccf73f9dd16d0201badb7b1bc7",
+        "title": "SHM-Agents: A Generalist-Specialist Integrated Agent System for Structural Health Monitoring",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "23eadba60d37545f581ca60f9128b7efc9663e71",
+        "title": "AAFLOW: Scalable Patterns for Agentic AI Workflows",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "bb7ac50bcca09e26e3b273cc2e8da0656f37150c",
+        "title": "A Review of Large Language Models for Stock Price Forecasting from a Hedge-Fund Perspective",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "9d44b99991b37e851e3476d1f8574d4900f175e9",
+        "title": "Can LLM Agents Identify Spoken Dialects like a Linguist?",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "47a001004b508e3fe38ef9221b9d70826ae97dfb",
+        "title": "Personalized Learning in AI-Driven Smart Environments for Inclusive Education",
+        "year": 2026,
+        "citationCount": 0
+      }
+    ],
+    "786aad3526bac2acf99f682bdfeafdd7a55a5132": [
+      {
+        "paperId": "065e534beb712392fde3ee6a42f143e32a43fc22",
+        "title": "BCI-Inspired Adaptive Agents in Human–Robot Interaction: A Structural Framework for Coordinated Interaction Design",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "87427c8a5772396989e339ce25ed1fd279fcdcbd",
+        "title": "AgoraAI: An Open-Source Voice-to-Voice Framework for Multi-Persona and Multi-Human Interaction",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "2b0842bc442634e763a127e99dc46ba0dda6ee4c",
+        "title": "Secure Enterprise AI Agent for Procurement Insights across SAP and Ariba Systems using RAG and Apigee X",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "44c152e0dfeb193f42a2abed90d99b74585fa3a4",
+        "title": "Towards Trustworthy AI Agents in Geriatric Medicine: A Secure and Assistive Architectural Blueprint",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "6a45ed5c560f60b1f38582b0fc78e09c33a1db9b",
+        "title": "TECHNOLOGY FOR DEVELOPING INTELLIGENT INFORMATION SYSTEMS BASED ON THE COMMUNICATIVE CAPABILITIES OF LARGE LANGUAGE MODELS",
+        "year": 2025,
+        "citationCount": 0
+      }
+    ]
+  }
 }

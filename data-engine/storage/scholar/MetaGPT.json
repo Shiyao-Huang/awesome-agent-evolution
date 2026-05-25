@@ -1,14 +1,122 @@
 {
   "project": "MetaGPT",
   "repo": "geekan/MetaGPT",
-  "collected_at": "2026-05-22T11:18:10.232577+00:00",
-  "queries": [
-    "MetaGPT"
-  ],
-  "total_papers": 0,
-  "total_citations": 0,
+  "collected_at": "2026-05-22T11:45:53.933892+00:00",
+  "total_papers": 5,
+  "total_citations": 10,
   "papers": {
-    "MetaGPT": []
+    "MetaGPT": [
+      {
+        "paperId": "703035b483c181953de1b55b5fd59cd4cd4cf211",
+        "title": "MetaGPT: Meta Programming for Multi-Agent Collaborative Framework",
+        "year": 2023,
+        "citationCount": 1789,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/703035b483c181953de1b55b5fd59cd4cd4cf211",
+        "arxivId": "2308.00352"
+      },
+      {
+        "paperId": "652344ac5269e90105d6af9e7bd72665577fe8e6",
+        "title": "MetaGPT: Merging Large Language Models Using Model Exclusive Task Arithmetic",
+        "year": 2024,
+        "citationCount": 52,
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "url": "https://www.semanticscholar.org/paper/652344ac5269e90105d6af9e7bd72665577fe8e6",
+        "arxivId": "2406.11385"
+      },
+      {
+        "paperId": "99a15c7dd01aa3c7e40bb21ea499769a6fcd37fb",
+        "title": "MetaGPT: A Large Vision-Language Model for Meme Metaphor Understanding",
+        "year": 2026,
+        "citationCount": 0,
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "url": "https://www.semanticscholar.org/paper/99a15c7dd01aa3c7e40bb21ea499769a6fcd37fb",
+        "arxivId": ""
+      },
+      {
+        "paperId": "792fd55d79d120173e0a944ce6bfe4787239c1d2",
+        "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework",
+        "year": 2023,
+        "citationCount": 0,
+        "venue": "International Conference on Learning Representations",
+        "url": "https://www.semanticscholar.org/paper/792fd55d79d120173e0a944ce6bfe4787239c1d2",
+        "arxivId": ""
+      },
+      {
+        "paperId": "4740a5403d308fea74f7d4f9667d07acacc19190",
+        "title": "Agentic AI Frameworks: Architectures, Protocols, and Design Challenges",
+        "year": 2025,
+        "citationCount": 22,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/4740a5403d308fea74f7d4f9667d07acacc19190",
+        "arxivId": "2508.10146"
+      }
+    ]
   },
-  "citations": {}
+  "citations": {
+    "703035b483c181953de1b55b5fd59cd4cd4cf211": [
+      {
+        "paperId": "1a1351b5f6ff16b53885ba989ee7a4bb7f65484b",
+        "title": "CPDTeam: A KG-RAG-CoT dual-driven and deep reinforcement learning-augmented multi-agent framework for intelligent collaborative product development",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "ecc10554b156343166cc6412881ca89d93957045",
+        "title": "See Before You Code: Learning Visual Priors for Spatially Aware Educational Animation Generation",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "26fe6451584b5e1e2354639350e253ef3c067c9e",
+        "title": "Argus: Evidence Assembly for Scalable Deep Research Agents",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "ed531d4c8514beb3d8c9e36183beafa4ad3cb469",
+        "title": "LEMON: Learning Executable Multi-Agent Orchestration via Counterfactual Reinforcement Learning",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "6af1ec7fec62b9cbad5c7e2a7a82909c1fba5f7e",
+        "title": "MetaAgent-X : Breaking the Ceiling of Automatic Multi-Agent Systems via End-to-End Reinforcement Learning",
+        "year": 2026,
+        "citationCount": 0
+      }
+    ],
+    "652344ac5269e90105d6af9e7bd72665577fe8e6": [
+      {
+        "paperId": "199c9b61e5abb1e8c33f3682669265752af6959e",
+        "title": "Label-Free Cross-Task LoRA Merging with Null-Space Compression",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "03031b90ccd9fb74b508955dc29e5f8f1dc91009",
+        "title": "Preference-Aligned LoRA Merging: Preserving Subspace Coverage and Addressing Directional Anisotropy",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "ab9438226e1eb91f6ba8d9c19f36b6ac8b52a6c7",
+        "title": "A Step Toward Federated Pretraining of Multimodal Large Language Models",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "4e1c03424604d609a381d9401404c040f3eeb368",
+        "title": "MPU: Towards Secure and Privacy-Preserving Knowledge Unlearning for Large Language Models",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "a3601aa2a7627dd8f6de10e8cedea2191e6970c9",
+        "title": "Bus-Conditioned Zero-Shot Trajectory Generation via Task Arithmetic",
+        "year": 2026,
+        "citationCount": 0
+      }
+    ]
+  }
 }

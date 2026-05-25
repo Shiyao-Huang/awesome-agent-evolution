@@ -1,14 +1,122 @@
 {
   "project": "Aider",
   "repo": "Aider-AI/aider",
-  "collected_at": "2026-05-22T11:16:56.308740+00:00",
-  "queries": [
-    "Aider"
-  ],
-  "total_papers": 0,
-  "total_citations": 0,
+  "collected_at": "2026-05-22T11:42:01.162108+00:00",
+  "total_papers": 5,
+  "total_citations": 10,
   "papers": {
-    "Aider": []
+    "Aider": [
+      {
+        "paperId": "2a2693a4d8c9f65ff4117330d9e2f95748b528da",
+        "title": "c 2 AIDER : cognitive cloud exoskeleton system and its applications",
+        "year": 2019,
+        "citationCount": 7,
+        "venue": "Cognitive Computation and Systems",
+        "url": "https://www.semanticscholar.org/paper/2a2693a4d8c9f65ff4117330d9e2f95748b528da",
+        "arxivId": ""
+      },
+      {
+        "paperId": "6edcf36549b531c1a2e042d3d3cb9ee69513bd62",
+        "title": "Exploring Youth Mental Health First Aider Training Outcomes by Workforce Affiliation: A Survey of Project AWARE Participants",
+        "year": 2018,
+        "citationCount": 31,
+        "venue": "School Mental Health",
+        "url": "https://www.semanticscholar.org/paper/6edcf36549b531c1a2e042d3d3cb9ee69513bd62",
+        "arxivId": ""
+      },
+      {
+        "paperId": "86f6f5e2089035888f6c9c0253306c24c1b82780",
+        "title": "AIDER: A model for social accountability in medical education and practice",
+        "year": 2013,
+        "citationCount": 29,
+        "venue": "Medical Teacher",
+        "url": "https://www.semanticscholar.org/paper/86f6f5e2089035888f6c9c0253306c24c1b82780",
+        "arxivId": ""
+      },
+      {
+        "paperId": "62d965ceea58d66b761b4a1990756ccd59ec3c73",
+        "title": "Douleurs et travail : aider le patient à garder un emploi",
+        "year": 2014,
+        "citationCount": 7,
+        "venue": "",
+        "url": "https://www.semanticscholar.org/paper/62d965ceea58d66b761b4a1990756ccd59ec3c73",
+        "arxivId": ""
+      },
+      {
+        "paperId": "f23f2400765ca58915db35ebc9848a9373f162b9",
+        "title": "Effects of elastic band orthosis (aider) on balance and gait in chronic stroke patients",
+        "year": 2013,
+        "citationCount": 14,
+        "venue": "",
+        "url": "https://www.semanticscholar.org/paper/f23f2400765ca58915db35ebc9848a9373f162b9",
+        "arxivId": ""
+      }
+    ]
   },
-  "citations": {}
+  "citations": {
+    "2a2693a4d8c9f65ff4117330d9e2f95748b528da": [
+      {
+        "paperId": "e305432f5b3338839d16f203b5b0406d2b438f80",
+        "title": "Integration of cloud computing in BCI: A review",
+        "year": 2024,
+        "citationCount": 21
+      },
+      {
+        "paperId": "87d2c3720ac9f3f9d5ee716655039361f65a6acd",
+        "title": "MCSNet: Channel Synergy-Based Human-Exoskeleton Interface With Surface Electromyogram",
+        "year": 2021,
+        "citationCount": 9
+      },
+      {
+        "paperId": "4944b9703929e1dfd9aa00ed6736e7a9317786b3",
+        "title": "Design and analysis of a lightweight lower extremity exoskeleton with novel compliant ankle joints",
+        "year": 2021,
+        "citationCount": 11
+      },
+      {
+        "paperId": "0f1e92436a7925ecb363671dc6c8a67a117dfe0a",
+        "title": "Exoskeleton cloud-brain platform and its application in safety assessment",
+        "year": 2021,
+        "citationCount": 0
+      },
+      {
+        "paperId": "7ef2913fd432ee9e595ba80bf0c19791f8fa91a3",
+        "title": "An Interactive Perception Method for Warehouse Automation in Smart Cities",
+        "year": 2021,
+        "citationCount": 24
+      }
+    ],
+    "6edcf36549b531c1a2e042d3d3cb9ee69513bd62": [
+      {
+        "paperId": "b6d6d397f61ca0c73af508f872c6cc2a8a1de9a1",
+        "title": "An Examination of Secondary Teachers’ Perceptions of Personal Mental Health and the Recognition and Referral of Adolescent Anxiety Disorders",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "de6e8972e36f27e8b38c9e9d5746e338e6745990",
+        "title": "Effects of Advancing Wellness and Resiliency in Education Grants on Low-Income Children's Mental Health-care Utilization and Outcomes.",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "69935193248e80a2768fcc73454330b19fb8dfa9",
+        "title": "A scoping review of Youth Mental Health First Aid for adolescents in school, community, and healthcare settings",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "06cf0ac7200fd4521d64f46ad7dfdaa49f67b914",
+        "title": "Enhancing Professional Competencies to Tackle Depression and Suicidal Ideation: Outcomes of the EAAD 4-Level Intervention Across Seven European Countries",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "a73271124947b1da05c020d6f0dc7dddb12554d3",
+        "title": "Youth mental health first aid training outcomes among public safety professionals serving high-risk youth",
+        "year": 2025,
+        "citationCount": 0
+      }
+    ]
+  }
 }

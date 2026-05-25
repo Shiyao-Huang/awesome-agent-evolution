@@ -1,10 +1,7 @@
 {
   "project": "goose",
   "repo": "block/goose",
-  "collected_at": "2026-05-22T11:17:33.360191+00:00",
-  "queries": [
-    "goose"
-  ],
+  "collected_at": "2026-05-22T11:42:37.435896+00:00",
   "total_papers": 0,
   "total_citations": 0,
   "papers": {

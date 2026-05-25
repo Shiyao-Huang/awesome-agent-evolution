@@ -1,0 +1,123 @@
+{
+  "project": "NeMo Guardrails",
+  "repo": "NVIDIA/NeMo-Guardrails",
+  "collected_at": "2026-05-22T11:52:33.501736+00:00",
+  "total_papers": 5,
+  "total_citations": 10,
+  "papers": {
+    "NeMo Guardrails": [],
+    "NeMo-Guardrails": [
+      {
+        "paperId": "b428e9e0e8ac36b3ae29a7ab9b9554c39cedb283",
+        "title": "NeMo Guardrails: A Toolkit for Controllable and Safe LLM Applications with Programmable Rails",
+        "year": 2023,
+        "citationCount": 335,
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "url": "https://www.semanticscholar.org/paper/b428e9e0e8ac36b3ae29a7ab9b9554c39cedb283",
+        "arxivId": "2310.10501"
+      },
+      {
+        "paperId": "d0938a29e66ed605e71f979e9a14240a0e9aa731",
+        "title": "An integrated framework for ethical healthcare chatbots using LangChain and NeMo guardrails",
+        "year": 2025,
+        "citationCount": 6,
+        "venue": "AI and Ethics",
+        "url": "https://www.semanticscholar.org/paper/d0938a29e66ed605e71f979e9a14240a0e9aa731",
+        "arxivId": ""
+      },
+      {
+        "paperId": "0501d58cab78471e1bbc05cf6aac2b7051c2a20d",
+        "title": "NEMO GUARDRAILS FOR SAFE AND SECURE INSURANCE AI",
+        "year": 2025,
+        "citationCount": 0,
+        "venue": "International Journal on Cybernetics &amp; Informatics",
+        "url": "https://www.semanticscholar.org/paper/0501d58cab78471e1bbc05cf6aac2b7051c2a20d",
+        "arxivId": ""
+      },
+      {
+        "paperId": "786e4b2dfbfd16e3785b6b5a72b1f8d16551b118",
+        "title": "Avaliação do NeMo Guardrails como um Firewall para a Interação Usuário-LLM",
+        "year": 2025,
+        "citationCount": 0,
+        "venue": "Anais do XXV Simpósio Brasileiro de Cibersegurança (SBSeg 2025)",
+        "url": "https://www.semanticscholar.org/paper/786e4b2dfbfd16e3785b6b5a72b1f8d16551b118",
+        "arxivId": ""
+      },
+      {
+        "paperId": "56dc3a66b7e594da2af1bd96cb93e3adf3b9e181",
+        "title": "Evaluation of NeMo Guardrails as a Firewall for User–LLM Interaction",
+        "year": 2026,
+        "citationCount": 0,
+        "venue": "Future Internet",
+        "url": "https://www.semanticscholar.org/paper/56dc3a66b7e594da2af1bd96cb93e3adf3b9e181",
+        "arxivId": ""
+      }
+    ]
+  },
+  "citations": {
+    "b428e9e0e8ac36b3ae29a7ab9b9554c39cedb283": [
+      {
+        "paperId": "57c9a6743672531a4115424bb475c0adbe51a0b0",
+        "title": "Beyond Red-Teaming: Formal Guarantees of LLM Guardrail Classifiers",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "1c4909005f5a2c7d5e79658808e103e235793cdb",
+        "title": "The Semantic Training Gap: Ontology-Grounded Tool Architectures for Industrial AI Agent Systems",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "fae8ae937c449cb0a368c7131b12b3e88ac16127",
+        "title": "PRISM: Generation-Time Detection and Mitigation of Secret Leakage in Multi-Agent LLM Pipelines",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "56dc3a66b7e594da2af1bd96cb93e3adf3b9e181",
+        "title": "Evaluation of NeMo Guardrails as a Firewall for User–LLM Interaction",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "93d8f04eeb2d3fb53de9d2594fa075b2fa3cfb69",
+        "title": "AgentTrust: Runtime Safety Evaluation and Interception for AI Agent Tool Use",
+        "year": 2026,
+        "citationCount": 0
+      }
+    ],
+    "d0938a29e66ed605e71f979e9a14240a0e9aa731": [
+      {
+        "paperId": "0934498cffb86e660e95dcab4d872f6e331f0298",
+        "title": "A Unified Multimodal Framework for Dataset Construction and Model-Based Diagnosis of Ameloblastoma",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "59934a37b959d0021e652e7609503797eda3b8e3",
+        "title": "An Explainable Two Stage Deep Learning Framework for Pericoronitis Assessment in Panoramic Radiographs Using YOLOv8 and ResNet-50",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "fcf46d503a4410842145f092f875af65cdb49898",
+        "title": "SmartOR-AI: An Intelligent Predictive Analytics and Decision Support System for Anesthesia Equipped with Perioperative Risk Management",
+        "year": 2025,
+        "citationCount": 0
+      },
+      {
+        "paperId": "b7b3ad44e6f379456e75bd4b7c88b2f449bbf7c0",
+        "title": "Multi-Modal Oral Cancer Detection Using Weighted Ensemble Convolutional Neural Networks",
+        "year": 2025,
+        "citationCount": 1
+      },
+      {
+        "paperId": "8a0b1acfc2d27c4c9e4cb00700c656541070c148",
+        "title": "Critical conversations: a user-centric approach to chatbots for history taking in the pediatric intensive care unit",
+        "year": 2025,
+        "citationCount": 1
+      }
+    ]
+  }
+}

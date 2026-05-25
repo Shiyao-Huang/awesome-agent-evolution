@@ -1,0 +1,122 @@
+{
+  "project": "agent-skills",
+  "repo": "addyosmani/agent-skills",
+  "collected_at": "2026-05-22T11:42:54.027650+00:00",
+  "total_papers": 5,
+  "total_citations": 10,
+  "papers": {
+    "agent-skills": [
+      {
+        "paperId": "64d23577d2a98b29dd80949c5fbb3b6d44d44a84",
+        "title": "Agent Skills Enable a New Class of Realistic and Trivially Simple Prompt Injections",
+        "year": 2025,
+        "citationCount": 16,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/64d23577d2a98b29dd80949c5fbb3b6d44d44a84",
+        "arxivId": "2510.26328"
+      },
+      {
+        "paperId": "1f09ae8491805852a18c386104ee2539d43e29d9",
+        "title": "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks",
+        "year": 2026,
+        "citationCount": 58,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/1f09ae8491805852a18c386104ee2539d43e29d9",
+        "arxivId": "2602.12670"
+      },
+      {
+        "paperId": "017083cfa88785e0a5dbddf6b5027caa281bc881",
+        "title": "Agent Skills in the Wild: An Empirical Study of Security Vulnerabilities at Scale",
+        "year": 2026,
+        "citationCount": 36,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/017083cfa88785e0a5dbddf6b5027caa281bc881",
+        "arxivId": "2601.10338"
+      },
+      {
+        "paperId": "bf86e00706a418cfc040dbe841edda8b8a1301af",
+        "title": "Agent Skills for Large Language Models: Architecture, Acquisition, Security, and the Path Forward",
+        "year": 2026,
+        "citationCount": 37,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/bf86e00706a418cfc040dbe841edda8b8a1301af",
+        "arxivId": "2602.12430"
+      },
+      {
+        "paperId": "24ed8f5a3aefad668f9b8d51569d3af559557c60",
+        "title": "Malicious Agent Skills in the Wild: A Large-Scale Security Empirical Study",
+        "year": 2026,
+        "citationCount": 24,
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/24ed8f5a3aefad668f9b8d51569d3af559557c60",
+        "arxivId": "2602.06547"
+      }
+    ]
+  },
+  "citations": {
+    "64d23577d2a98b29dd80949c5fbb3b6d44d44a84": [
+      {
+        "paperId": "59fd489825bcfc1c6eb13133b0dcf29715ce00a5",
+        "title": "SkillScope: Toward Fine-Grained Least-Privilege Enforcement for Agent Skills",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "81ab7e0372087bbd6c0bdd2b80ab7bfc2ca0e0ec",
+        "title": "Safe Bilevel Delegation (SBD): A Formal Framework for Runtime Delegation Safety in Multi-Agent Systems",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "b94a772e576bf8d0149ccd07c5597689527cb8b1",
+        "title": "Structured Security Auditing and Robustness Enhancement for Untrusted Agent Skills",
+        "year": 2026,
+        "citationCount": 2
+      },
+      {
+        "paperId": "423b2b47f48f739865856baf85c286e941b53609",
+        "title": "ClawTrace: Cost-Aware Tracing for LLM Agent Skill Distillation",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "75bab9ef9305cb93a438bb51a38bf53718cdcad8",
+        "title": "SkillAttack: Automated Red Teaming of Agent Skills through Attack Path Refinement",
+        "year": 2026,
+        "citationCount": 4
+      }
+    ],
+    "1f09ae8491805852a18c386104ee2539d43e29d9": [
+      {
+        "paperId": "229b241936bf60a7076a11ce6db2dcaef28efad4",
+        "title": "SkillSafetyBench: Evaluating Agent Safety under Skill-Facing Attack Surfaces",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "8a2ca851188bd9a6380a0ac8395c45fedb48a022",
+        "title": "Counterfactual Trace Auditing of LLM Agent Skills",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "d54fb47cb1bc0643d6126e96506537f9297737fc",
+        "title": "SkillEvolver: Skill Learning as a Meta-Skill",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "bd91da9d56398d541c2210e1dc3dfbd3ce6845fd",
+        "title": "SkillRAE: Agent Skill-Based Context Compilation for Retrieval-Augmented Execution",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "365d1edb2c7346bfd624df1ed675683abbe2f59f",
+        "title": "The Agent Use of Agent Beings: Agent Cybernetics Is the Missing Science of Foundation Agents",
+        "year": 2026,
+        "citationCount": 0
+      }
+    ]
+  }
+}

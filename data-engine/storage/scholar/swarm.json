@@ -1,0 +1,11 @@
+{
+  "project": "swarm",
+  "repo": "openai/swarm",
+  "collected_at": "2026-05-22T11:49:01.473421+00:00",
+  "total_papers": 0,
+  "total_citations": 0,
+  "papers": {
+    "swarm": []
+  },
+  "citations": {}
+}

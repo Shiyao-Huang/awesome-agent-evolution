@@ -1,1600 +1,990 @@
 {
-  "generated_at": "2026-05-22T11:30:46.390968+00:00",
-  "total_projects": 58,
+  "generated_at": "2026-05-22T11:58:08.318408+00:00",
+  "total_projects": 54,
   "scores": [
     {
       "project": "Agent Zero",
-      "composite_score": 56.7,
+      "composite_score": 50.0,
       "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 62,
-          "avg_points": 7.67741935483871,
-          "avg_comments": 4.064516129032258
-        },
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
         "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 4513.72,
-          "avg_comments": 348.16
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 1.75,
-          "total_papers": 5,
-          "total_citations": 0
+          "items": 50,
+          "avg_ups": 4513.6
         }
       },
-      "scored_at": "2026-05-22T11:30:46.364456+00:00"
-    },
-    {
-      "project": "Aider",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 31.45,
-          "avg_comments": 14.525
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 7869.9,
-          "avg_comments": 279.56
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.365604+00:00"
-    },
-    {
-      "project": "Claude Code",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 862.05,
-          "avg_comments": 471.7625
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 6249.06,
-          "avg_comments": 585.72
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.366924+00:00"
-    },
-    {
-      "project": "Codex",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 389.725,
-          "avg_comments": 209.725
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 4254.3,
-          "avg_comments": 943.44
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.367896+00:00"
-    },
-    {
-      "project": "Cognee",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 4.525,
-          "avg_comments": 1.45
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 9.72,
-          "avg_comments": 4.72
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0.0,
-          "total_papers": 0,
-          "total_citations": 0
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.368712+00:00"
-    },
-    {
-      "project": "CowAgent",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 29.6,
-          "avg_comments": 26.025
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 5448.4,
-          "avg_comments": 863.14
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.369251+00:00"
-    },
-    {
-      "project": "Coze Studio",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 51,
-          "avg_points": 302.5098039215686,
-          "avg_comments": 148.88235294117646
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 68.64,
-          "avg_comments": 9.32
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.369829+00:00"
-    },
-    {
-      "project": "Devika",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 157.1,
-          "avg_comments": 82.875
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 673.38,
-          "avg_comments": 91.26
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.370787+00:00"
-    },
-    {
-      "project": "Eliza",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 322.425,
-          "avg_comments": 226.7
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 7885.78,
-          "avg_comments": 625.44
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0.0,
-          "total_papers": 0,
-          "total_citations": 0
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.371560+00:00"
-    },
-    {
-      "project": "Google ADK",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 44,
-          "avg_points": 7.409090909090909,
-          "avg_comments": 1.9318181818181819
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 553.4,
-          "avg_comments": 94.7
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.373144+00:00"
-    },
-    {
-      "project": "LangChain",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 116.725,
-          "avg_comments": 44.0
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 550.78,
-          "avg_comments": 118.28
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.374587+00:00"
-    },
-    {
-      "project": "Letta",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 218.025,
-          "avg_comments": 105.525
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 956.08,
-          "avg_comments": 161.72
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0.0,
-          "total_papers": 0,
-          "total_citations": 0
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.375476+00:00"
-    },
-    {
-      "project": "Mem0",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 11.25,
-          "avg_comments": 3.625
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 111.8,
-          "avg_comments": 29.56
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0.0,
-          "total_papers": 0,
-          "total_citations": 0
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.376259+00:00"
-    },
-    {
-      "project": "Memvid",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 60,
-          "avg_points": 6.133333333333334,
-          "avg_comments": 2.2333333333333334
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 100.9,
-          "avg_comments": 31.84
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.376872+00:00"
-    },
-    {
-      "project": "MetaGPT",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 37.975,
-          "avg_comments": 9.375
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 6268.8,
-          "avg_comments": 493.72
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.377470+00:00"
-    },
-    {
-      "project": "OpenFang",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 61,
-          "avg_points": 254.80327868852459,
-          "avg_comments": 133.4262295081967
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 1016.94,
-          "avg_comments": 156.3
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.380153+00:00"
-    },
-    {
-      "project": "OpenHands",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 21.8,
-          "avg_comments": 5.975
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 11156.72,
-          "avg_comments": 395.08
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.380642+00:00"
-    },
-    {
-      "project": "Plandex",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 28.1125,
-          "avg_comments": 15.125
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 37.76,
-          "avg_comments": 25.56
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.381331+00:00"
-    },
-    {
-      "project": "PydanticAI",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 8.85,
-          "avg_comments": 2.05
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 63.04,
-          "avg_comments": 23.3
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.382058+00:00"
-    },
-    {
-      "project": "Reflexion",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 7.35,
-          "avg_comments": 5.4
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 1961.22,
-          "avg_comments": 239.72
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.382589+00:00"
-    },
-    {
-      "project": "Roo Code",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 79,
-          "avg_points": 3.5443037974683542,
-          "avg_comments": 1.5063291139240507
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 1024.12,
-          "avg_comments": 138.96
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.383097+00:00"
-    },
-    {
-      "project": "SWE-Agent",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 19.775,
-          "avg_comments": 8.025
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 1142.02,
-          "avg_comments": 295.44
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.383659+00:00"
-    },
-    {
-      "project": "SuperAGI",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 34.55,
-          "avg_comments": 21.175
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 2733.64,
-          "avg_comments": 190.76
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0.0,
-          "total_papers": 0,
-          "total_citations": 0
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.384356+00:00"
-    },
-    {
-      "project": "agent-skills",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 47.325,
-          "avg_comments": 20.15
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 2468.6,
-          "avg_comments": 342.72
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.385154+00:00"
-    },
-    {
-      "project": "agno",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 141.75,
-          "avg_comments": 56.95
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 597.08,
-          "avg_comments": 88.6
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.386201+00:00"
-    },
-    {
-      "project": "autogen",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 32.35,
-          "avg_comments": 7.275
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 6687.64,
-          "avg_comments": 246.76
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0.0,
-          "total_papers": 0,
-          "total_citations": 0
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.386695+00:00"
-    },
-    {
-      "project": "crewAI",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 4.025,
-          "avg_comments": 1.7
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 3071.16,
-          "avg_comments": 204.08
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0.0,
-          "total_papers": 0,
-          "total_citations": 0
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.387579+00:00"
-    },
-    {
-      "project": "dify",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 352.1,
-          "avg_comments": 90.75
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 1831.2,
-          "avg_comments": 185.04
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.387953+00:00"
-    },
-    {
-      "project": "evolver",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 8.65,
-          "avg_comments": 4.45
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 16198.76,
-          "avg_comments": 1257.6
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0.0,
-          "total_papers": 0,
-          "total_citations": 0
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.388457+00:00"
-    },
-    {
-      "project": "goose",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 65.7,
-          "avg_comments": 36.375
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 9619.36,
-          "avg_comments": 528.32
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.388842+00:00"
-    },
-    {
-      "project": "haystack",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 78.175,
-          "avg_comments": 36.95
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 7404.56,
-          "avg_comments": 311.0
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.389233+00:00"
-    },
-    {
-      "project": "mastra",
-      "composite_score": 55.0,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 32.575,
-          "avg_comments": 10.925
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 282.4,
-          "avg_comments": 55.04
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.390216+00:00"
-    },
-    {
-      "project": "langgraph",
-      "composite_score": 53.3,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 12.55,
-          "avg_comments": 3.075
-        },
-        "reddit": {
-          "score": 23.31,
-          "total_posts": 25,
-          "avg_score": 58.2,
-          "avg_comments": 32.08
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.389615+00:00"
-    },
-    {
-      "project": "OpenEvolve",
-      "composite_score": 51.2,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 26.19,
-          "total_hits": 25,
-          "avg_points": 6.96,
-          "avg_comments": 1.2
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 1856.8,
-          "avg_comments": 252.66
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0.0,
-          "total_papers": 0,
-          "total_citations": 0
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.379525+00:00"
-    },
-    {
-      "project": "HyperAgents",
-      "composite_score": 48.7,
-      "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 20.79,
-          "total_hits": 13,
-          "avg_points": 20.846153846153847,
-          "avg_comments": 7.384615384615385
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 5081.88,
-          "avg_comments": 550.96
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 2.95,
-          "total_papers": 5,
-          "total_citations": 4
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.374029+00:00"
+      "data_sources": [
+        "reddit"
+      ]
     },
     {
       "project": "AgenticSeek",
-      "composite_score": 45.9,
+      "composite_score": 50.0,
       "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 20.86,
-          "total_hits": 2,
-          "avg_points": 122.0,
-          "avg_comments": 18.0
-        },
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
         "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 5873.46,
-          "avg_comments": 512.52
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
+          "items": 50,
+          "avg_ups": 5873.0
         }
       },
-      "scored_at": "2026-05-22T11:30:46.364968+00:00"
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "Eliza",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
+        "reddit": {
+          "items": 50,
+          "avg_ups": 7885.8
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
     },
     {
       "project": "EvoAgentX",
-      "composite_score": 37.5,
+      "composite_score": 50.0,
       "classification": "steady",
-      "breakdown": {
-        "hn": {
-          "score": 12.49,
-          "total_hits": 5,
-          "avg_points": 2.4,
-          "avg_comments": 1.0
-        },
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
         "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 1127.96,
-          "avg_comments": 546.16
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0.0,
-          "total_papers": 0,
-          "total_citations": 0
+          "items": 25,
+          "avg_ups": 1127.6
         }
       },
-      "scored_at": "2026-05-22T11:30:46.372021+00:00"
+      "data_sources": [
+        "reddit"
+      ]
     },
     {
-      "project": "AutoGPT",
-      "composite_score": 30.0,
-      "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 40,
-          "avg_points": 15.75,
-          "avg_comments": 9.55
-        },
+      "project": "Google ADK",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
         "reddit": {
-          "score": 0,
-          "note": "no data"
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
+          "items": 50,
+          "avg_ups": 553.3
         }
       },
-      "scored_at": "2026-05-22T11:30:46.365811+00:00"
+      "data_sources": [
+        "reddit"
+      ]
     },
     {
-      "project": "BabyAGI",
-      "composite_score": 30.0,
-      "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 20.575,
-          "avg_comments": 10.425
-        },
+      "project": "HyperAgents",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
         "reddit": {
-          "score": 0,
-          "note": "no data"
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
+          "items": 25,
+          "avg_ups": 5079.7
         }
       },
-      "scored_at": "2026-05-22T11:30:46.366374+00:00"
+      "data_sources": [
+        "reddit"
+      ]
     },
     {
-      "project": "Claw Code",
-      "composite_score": 30.0,
-      "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 56,
-          "avg_points": 6.946428571428571,
-          "avg_comments": 2.5535714285714284
-        },
+      "project": "LangChain",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
         "reddit": {
-          "score": 0,
-          "note": "no data"
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
+          "items": 50,
+          "avg_ups": 550.9
         }
       },
-      "scored_at": "2026-05-22T11:30:46.367224+00:00"
+      "data_sources": [
+        "reddit"
+      ]
     },
     {
-      "project": "DSPy",
-      "composite_score": 30.0,
-      "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 19.65,
-          "avg_comments": 6.2
-        },
+      "project": "Letta",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
         "reddit": {
-          "score": 0,
-          "note": "no data"
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
+          "items": 50,
+          "avg_ups": 956.5
         }
       },
-      "scored_at": "2026-05-22T11:30:46.370083+00:00"
+      "data_sources": [
+        "reddit"
+      ]
     },
     {
-      "project": "FunSearch",
-      "composite_score": 30.0,
-      "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 44,
-          "avg_points": 31.15909090909091,
-          "avg_comments": 12.409090909090908
-        },
+      "project": "Ollama",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
         "reddit": {
-          "score": 0,
-          "note": "no data"
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
+          "items": 50,
+          "avg_ups": 713.9
         }
       },
-      "scored_at": "2026-05-22T11:30:46.372208+00:00"
+      "data_sources": [
+        "reddit"
+      ]
     },
     {
-      "project": "Hermes Agent",
-      "composite_score": 30.0,
-      "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 77,
-          "avg_points": 2.8181818181818183,
-          "avg_comments": 0.45454545454545453
-        },
+      "project": "OpenEvolve",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
         "reddit": {
-          "score": 0,
-          "note": "no data"
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
+          "items": 50,
+          "avg_ups": 1858.0
         }
       },
-      "scored_at": "2026-05-22T11:30:46.373421+00:00"
+      "data_sources": [
+        "reddit"
+      ]
     },
     {
-      "project": "OPRO",
-      "composite_score": 30.0,
-      "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 412.575,
-          "avg_comments": 189.675
-        },
+      "project": "OpenFang",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
         "reddit": {
-          "score": 0,
-          "note": "no data"
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
+          "items": 50,
+          "avg_ups": 1016.9
         }
       },
-      "scored_at": "2026-05-22T11:30:46.378084+00:00"
+      "data_sources": [
+        "reddit"
+      ]
     },
     {
-      "project": "OpenClaw",
-      "composite_score": 30.0,
-      "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 30,
-          "total_hits": 80,
-          "avg_points": 252.95,
-          "avg_comments": 201.35
-        },
+      "project": "OpenHands",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
         "reddit": {
-          "score": 0,
-          "note": "no data"
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
+          "items": 25,
+          "avg_ups": 11156.0
         }
       },
-      "scored_at": "2026-05-22T11:30:46.378904+00:00"
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "SuperAGI",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
+        "reddit": {
+          "items": 25,
+          "avg_ups": 2734.4
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "dify",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
+        "reddit": {
+          "items": 25,
+          "avg_ups": 1831.2
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "evolver",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
+        "reddit": {
+          "items": 25,
+          "avg_ups": 16196.4
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "haystack",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
+        "reddit": {
+          "items": 25,
+          "avg_ups": 7404.8
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "n8n",
+      "composite_score": 50.0,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 25
+      },
+      "platforms": {
+        "reddit": {
+          "items": 25,
+          "avg_ups": 669.7
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "Open WebUI",
+      "composite_score": 47.6,
+      "classification": "steady",
+      "platform_scores": {
+        "reddit": 23.8
+      },
+      "platforms": {
+        "reddit": {
+          "items": 50,
+          "avg_ups": 371.5
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "Flowise",
+      "composite_score": 41.1,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 20.5
+      },
+      "platforms": {
+        "reddit": {
+          "items": 25,
+          "avg_ups": 164.3
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "Aider",
+      "composite_score": 38.5,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 25,
+        "scholar": 0.0
+      },
+      "platforms": {
+        "reddit": {
+          "items": 50,
+          "avg_ups": 7869.7
+        },
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "Claude Code",
+      "composite_score": 38.5,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 25,
+        "scholar": 0.0
+      },
+      "platforms": {
+        "reddit": {
+          "items": 50,
+          "avg_ups": 6249.1
+        },
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "Codex",
+      "composite_score": 38.5,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 25,
+        "scholar": 0.0
+      },
+      "platforms": {
+        "reddit": {
+          "items": 50,
+          "avg_ups": 4253.1
+        },
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "CowAgent",
+      "composite_score": 38.5,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 25,
+        "scholar": 0.0
+      },
+      "platforms": {
+        "reddit": {
+          "items": 50,
+          "avg_ups": 5448.7
+        },
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "Roo Code",
+      "composite_score": 38.5,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 25,
+        "scholar": 0.0
+      },
+      "platforms": {
+        "reddit": {
+          "items": 50,
+          "avg_ups": 1024.0
+        },
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "agent-skills",
+      "composite_score": 38.5,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 25,
+        "scholar": 0.0
+      },
+      "platforms": {
+        "reddit": {
+          "items": 25,
+          "avg_ups": 2468.2
+        },
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "agno",
+      "composite_score": 38.5,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 25,
+        "scholar": 0.0
+      },
+      "platforms": {
+        "reddit": {
+          "items": 25,
+          "avg_ups": 597.3
+        },
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "goose",
+      "composite_score": 38.5,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 25,
+        "scholar": 0.0
+      },
+      "platforms": {
+        "reddit": {
+          "items": 25,
+          "avg_ups": 9618.2
+        },
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "Mem0",
+      "composite_score": 38.0,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 19.0
+      },
+      "platforms": {
+        "reddit": {
+          "items": 50,
+          "avg_ups": 111.7
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "Memvid",
+      "composite_score": 37.2,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 18.6
+      },
+      "platforms": {
+        "reddit": {
+          "items": 50,
+          "avg_ups": 101.0
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "mastra",
+      "composite_score": 34.9,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 22.7,
+        "scholar": 0.0
+      },
+      "platforms": {
+        "reddit": {
+          "items": 25,
+          "avg_ups": 281.8
+        },
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "Coze Studio",
+      "composite_score": 34.1,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 17.1
+      },
+      "platforms": {
+        "reddit": {
+          "items": 50,
+          "avg_ups": 68.5
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "PydanticAI",
+      "composite_score": 33.5,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 16.7
+      },
+      "platforms": {
+        "reddit": {
+          "items": 50,
+          "avg_ups": 63.1
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "langgraph",
+      "composite_score": 32.7,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 16.4
+      },
+      "platforms": {
+        "reddit": {
+          "items": 25,
+          "avg_ups": 57.6
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "Cognee",
+      "composite_score": 19.0,
+      "classification": "organic",
+      "platform_scores": {
+        "reddit": 9.5
+      },
+      "platforms": {
+        "reddit": {
+          "items": 50,
+          "avg_ups": 9.6
+        }
+      },
+      "data_sources": [
+        "reddit"
+      ]
     },
     {
       "project": "Awesome-Self-Evolving-Agents",
-      "composite_score": 25.0,
+      "composite_score": 0.0,
       "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 0,
-          "note": "no data"
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 314.28,
-          "avg_comments": 70.8
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
+      "platform_scores": {},
+      "platforms": {},
+      "data_sources": [
+        "reddit"
+      ]
+    },
+    {
+      "project": "Devika",
+      "composite_score": 0.0,
+      "classification": "organic",
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
         "scholar": {
-          "score": 0,
-          "note": "no data"
+          "papers": 1,
+          "citations": 0
         }
       },
-      "scored_at": "2026-05-22T11:30:46.366127+00:00"
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
     },
     {
       "project": "GenAI Agents",
-      "composite_score": 25.0,
+      "composite_score": 0.0,
       "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 0,
-          "note": "no data"
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 1754.26,
-          "avg_comments": 198.32
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
         "scholar": {
-          "score": 0,
-          "note": "no data"
+          "papers": 1,
+          "citations": 0
         }
       },
-      "scored_at": "2026-05-22T11:30:46.372445+00:00"
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
     },
     {
       "project": "Google A2A",
-      "composite_score": 25.0,
+      "composite_score": 0.0,
       "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 0,
-          "note": "no data"
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 1917.06,
-          "avg_comments": 116.3
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
         "scholar": {
-          "score": 0,
-          "note": "no data"
+          "papers": 1,
+          "citations": 0
         }
       },
-      "scored_at": "2026-05-22T11:30:46.372692+00:00"
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
     },
     {
       "project": "LeRobot",
-      "composite_score": 25.0,
+      "composite_score": 0.0,
       "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 0,
-          "note": "no data"
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 1142.24,
-          "avg_comments": 137.84
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
         "scholar": {
-          "score": 0,
-          "note": "no data"
+          "papers": 1,
+          "citations": 0
         }
       },
-      "scored_at": "2026-05-22T11:30:46.374928+00:00"
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "MetaGPT",
+      "composite_score": 0.0,
+      "classification": "organic",
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
     },
     {
       "project": "NeMo Guardrails",
-      "composite_score": 25.0,
+      "composite_score": 0.0,
       "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 0,
-          "note": "no data"
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 73.14,
-          "avg_comments": 33.22
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
         "scholar": {
-          "score": 0,
-          "note": "no data"
+          "papers": 1,
+          "citations": 0
         }
       },
-      "scored_at": "2026-05-22T11:30:46.377718+00:00"
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
     },
     {
       "project": "Open-AutoGLM",
-      "composite_score": 25.0,
+      "composite_score": 0.0,
       "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 0,
-          "note": "no data"
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 244.28,
-          "avg_comments": 113.22
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
         "scholar": {
-          "score": 0,
-          "note": "no data"
+          "papers": 1,
+          "citations": 0
         }
       },
-      "scored_at": "2026-05-22T11:30:46.378588+00:00"
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "Plandex",
+      "composite_score": 0.0,
+      "classification": "organic",
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
     },
     {
       "project": "Promptfoo",
-      "composite_score": 25.0,
+      "composite_score": 0.0,
       "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 0,
-          "note": "no data"
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 5.18,
-          "avg_comments": 3.52
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
         "scholar": {
-          "score": 0,
-          "note": "no data"
+          "papers": 1,
+          "citations": 0
         }
       },
-      "scored_at": "2026-05-22T11:30:46.381639+00:00"
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "Reflexion",
+      "composite_score": 0.0,
+      "classification": "organic",
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "SWE-Agent",
+      "composite_score": 0.0,
+      "classification": "organic",
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
     },
     {
       "project": "TextGrad",
-      "composite_score": 25.0,
+      "composite_score": 0.0,
       "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 0,
-          "note": "no data"
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 50,
-          "avg_score": 3810.96,
-          "avg_comments": 630.5
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
         "scholar": {
-          "score": 0,
-          "note": "no data"
+          "papers": 1,
+          "citations": 0
         }
       },
-      "scored_at": "2026-05-22T11:30:46.384678+00:00"
-    },
-    {
-      "project": "camel",
-      "composite_score": 25.0,
-      "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 0,
-          "note": "no data"
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 22261.48,
-          "avg_comments": 723.64
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.386952+00:00"
-    },
-    {
-      "project": "mcp-use",
-      "composite_score": 25.0,
-      "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 0,
-          "note": "no data"
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 1169.64,
-          "avg_comments": 213.16
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.390495+00:00"
-    },
-    {
-      "project": "openai-agents-python",
-      "composite_score": 25.0,
-      "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 0,
-          "note": "no data"
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 585.08,
-          "avg_comments": 108.64
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.390675+00:00"
-    },
-    {
-      "project": "swarm",
-      "composite_score": 25.0,
-      "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 0,
-          "note": "no data"
-        },
-        "reddit": {
-          "score": 25,
-          "total_posts": 25,
-          "avg_score": 13257.52,
-          "avg_comments": 1152.36
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
-        "scholar": {
-          "score": 0,
-          "note": "no data"
-        }
-      },
-      "scored_at": "2026-05-22T11:30:46.390953+00:00"
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
     },
     {
       "project": "agentscope",
-      "composite_score": 24.2,
+      "composite_score": 0.0,
       "classification": "organic",
-      "breakdown": {
-        "hn": {
-          "score": 0,
-          "note": "no data"
-        },
-        "reddit": {
-          "score": 24.17,
-          "total_posts": 25,
-          "avg_score": 75.44,
-          "avg_comments": 17.56
-        },
-        "github": {
-          "score": 0,
-          "note": "no data"
-        },
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
         "scholar": {
-          "score": 0,
-          "note": "no data"
+          "papers": 1,
+          "citations": 0
         }
       },
-      "scored_at": "2026-05-22T11:30:46.385535+00:00"
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "autogen",
+      "composite_score": 0.0,
+      "classification": "organic",
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "camel",
+      "composite_score": 0.0,
+      "classification": "organic",
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "crewAI",
+      "composite_score": 0.0,
+      "classification": "organic",
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "mcp-use",
+      "composite_score": 0.0,
+      "classification": "organic",
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "openai-agents-python",
+      "composite_score": 0.0,
+      "classification": "organic",
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
+    },
+    {
+      "project": "swarm",
+      "composite_score": 0.0,
+      "classification": "organic",
+      "platform_scores": {
+        "scholar": 0.0
+      },
+      "platforms": {
+        "scholar": {
+          "papers": 1,
+          "citations": 0
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "scholar"
+      ]
     }
   ]
 }

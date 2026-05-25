@@ -1,7 +1,7 @@
 {
   "project": "Cognee",
   "repo": "topoteretes/cognee",
-  "collected_at": "2026-05-22T11:25:02.358889+00:00",
+  "collected_at": "2026-05-22T11:39:16.940503+00:00",
   "queries": [
     "Cognee",
     "cognee"
@@ -13,7 +13,7 @@
         "id": "1mlnvob",
         "subreddit": "LocalLLaMA",
         "title": "Comparing agent memory kits (Letta, MemOS, Cognee, etc)",
-        "score": 13,
+        "score": 11,
         "num_comments": 15,
         "author": "nostriluu",
         "url": "https://reddit.com/r/LocalLLaMA/comments/1mlnvob/comparing_agent_memory_kits_letta_memos_cognee_etc/",
@@ -23,7 +23,7 @@
         "id": "1iptj8g",
         "subreddit": "LLMDevs",
         "title": "cognee - open-source memory framework for AI Agents",
-        "score": 53,
+        "score": 52,
         "num_comments": 22,
         "author": "Short-Honeydew-7000",
         "url": "https://reddit.com/r/LLMDevs/comments/1iptj8g/cognee_opensource_memory_framework_for_ai_agents/",
@@ -43,7 +43,7 @@
         "id": "1s42kmu",
         "subreddit": "AI_Agents",
         "title": "Some thoughts on working with memory systems",
-        "score": 5,
+        "score": 6,
         "num_comments": 13,
         "author": "blakeyuk",
         "url": "https://reddit.com/r/AI_Agents/comments/1s42kmu/some_thoughts_on_working_with_memory_systems/",
@@ -63,259 +63,7 @@
         "id": "1thtqyo",
         "subreddit": "openclaw",
         "title": "Memory - Cognee/Neo4j/LanceDB/Graphiti",
-        "score": 4,
-        "num_comments": 5,
-        "author": "jake-n-elwood",
-        "url": "https://reddit.com/r/openclaw/comments/1thtqyo/memory_cogneeneo4jlancedbgraphiti/",
-        "created_utc": 1779211387.0
-      },
-      {
-        "id": "1ri66c5",
-        "subreddit": "ShittyVeganFoodPorn",
-        "title": "Cognee",
-        "score": 25,
-        "num_comments": 3,
-        "author": "tired-tiramasu",
-        "url": "https://reddit.com/r/ShittyVeganFoodPorn/comments/1ri66c5/cognee/",
-        "created_utc": 1772392577.0
-      },
-      {
-        "id": "1qgbn8e",
-        "subreddit": "AI_Agents",
-        "title": "What's better for GraphRAG? Graphiti, Cognee, Mem0?",
-        "score": 2,
-        "num_comments": 3,
-        "author": "Imaginary-Bee-8770",
-        "url": "https://reddit.com/r/AI_Agents/comments/1qgbn8e/whats_better_for_graphrag_graphiti_cognee_mem0/",
-        "created_utc": 1768750577.0
-      },
-      {
-        "id": "1p3e70m",
-        "subreddit": "AIMemory",
-        "title": "Cognee VS Code extension tests",
-        "score": 3,
-        "num_comments": 4,
-        "author": "Crashbox3000",
-        "url": "https://reddit.com/r/AIMemory/comments/1p3e70m/cognee_vs_code_extension_tests/",
-        "created_utc": 1763768643.0
-      },
-      {
-        "id": "1pnoeq2",
-        "subreddit": "AIMemory",
-        "title": "Cognee.ai Information",
-        "score": 6,
-        "num_comments": 1,
-        "author": "_RemyLeBeau_",
-        "url": "https://reddit.com/r/AIMemory/comments/1pnoeq2/cogneeai_information/",
-        "created_utc": 1765846428.0
-      },
-      {
-        "id": "1pvw608",
-        "subreddit": "gluk",
-        "title": "Self-Hosting Cognee: LLM Performance Tests - Rost Glukhov",
-        "score": 1,
-        "num_comments": 0,
-        "author": "rosaccord",
-        "url": "https://reddit.com/r/gluk/comments/1pvw608/selfhosting_cognee_llm_performance_tests_rost/",
-        "created_utc": 1766725619.0
-      },
-      {
-        "id": "1pu9mq4",
-        "subreddit": "gluk",
-        "title": "Choosing the Right LLM for Cognee: Local Ollama Setup - Rost Glukhov",
-        "score": 1,
-        "num_comments": 0,
-        "author": "rosaccord",
-        "url": "https://reddit.com/r/gluk/comments/1pu9mq4/choosing_the_right_llm_for_cognee_local_ollama/",
-        "created_utc": 1766536000.0
-      },
-      {
-        "id": "1p21n1b",
-        "subreddit": "PresenceEngine",
-        "title": "Edge AI Memory for Phones, Wearables &amp; IoT Devices | cognee-RS",
-        "score": 2,
-        "num_comments": 3,
-        "author": "nrdsvg",
-        "url": "https://reddit.com/r/PresenceEngine/comments/1p21n1b/edge_ai_memory_for_phones_wearables_iot_devices/",
-        "created_utc": 1763640966.0
-      },
-      {
-        "id": "1pb9pyt",
-        "subreddit": "AIMemory",
-        "title": "Graph and vector memory extension for Github Copilot (uses Cognee) - Beta",
-        "score": 1,
-        "num_comments": 0,
-        "author": "Crashbox3000",
-        "url": "https://reddit.com/r/AIMemory/comments/1pb9pyt/graph_and_vector_memory_extension_for_github/",
-        "created_utc": 1764586145.0
-      },
-      {
-        "id": "1p1cpcn",
-        "subreddit": "AIFromChina",
-        "title": "6 Lines, Lifelong Memory: Cognee Tested",
-        "score": 1,
-        "num_comments": 0,
-        "author": "ExternalNo2722",
-        "url": "https://reddit.com/r/AIFromChina/comments/1p1cpcn/6_lines_lifelong_memory_cognee_tested/",
-        "created_utc": 1763570650.0
-      },
-      {
-        "id": "1moavay",
-        "subreddit": "LocalLLaMA",
-        "title": "Cognee Embedding Model Choice",
-        "score": 2,
-        "num_comments": 7,
-        "author": "Infamous_Jaguar_2151",
-        "url": "https://reddit.com/r/LocalLLaMA/comments/1moavay/cognee_embedding_model_choice/",
-        "created_utc": 1755010334.0
-      },
-      {
-        "id": "1oa08yt",
-        "subreddit": "AgentsOfAI",
-        "title": "Agent memory that works: LangGraph for agent framework, cognee for graphs and embeddings and OpenAI for memory processing",
-        "score": 12,
-        "num_comments": 0,
-        "author": "Short-Honeydew-7000",
-        "url": "https://reddit.com/r/AgentsOfAI/comments/1oa08yt/agent_memory_that_works_langgraph_for_agent/",
-        "created_utc": 1760804837.0
-      },
-      {
-        "id": "1nksx7d",
-        "subreddit": "ClaudeAI",
-        "title": "Is possible to combine Serena, Code Grapher and Cognee for context awareness?",
-        "score": 1,
-        "num_comments": 3,
-        "author": "robto09",
-        "url": "https://reddit.com/r/ClaudeAI/comments/1nksx7d/is_possible_to_combine_serena_code_grapher_and/",
-        "created_utc": 1758252673.0
-      },
-      {
-        "id": "1nkswv7",
-        "subreddit": "claude",
-        "title": "Is possible to combine Serena, Code Grapher and Cognee for context awareness?",
-        "score": 1,
-        "num_comments": 0,
-        "author": "robto09",
-        "url": "https://reddit.com/r/claude/comments/1nkswv7/is_possible_to_combine_serena_code_grapher_and/",
-        "created_utc": 1758252646.0
-      },
-      {
-        "id": "1meh5x3",
-        "subreddit": "machinelearningnews",
-        "title": "A Coding Guide to Build an Intelligent Conversational AI Agent with Agent Memory Using Cognee and Free Hugging Face Models",
-        "score": 7,
-        "num_comments": 2,
-        "author": "ai-lover",
-        "url": "https://reddit.com/r/machinelearningnews/comments/1meh5x3/a_coding_guide_to_build_an_intelligent/",
-        "created_utc": 1754005182.0
-      },
-      {
-        "id": "1m6f3xd",
-        "subreddit": "AIMemory",
-        "title": "Cognee MCP is my new AI Memory for making rules",
-        "score": 15,
-        "num_comments": 2,
-        "author": "brianllamar",
-        "url": "https://reddit.com/r/AIMemory/comments/1m6f3xd/cognee_mcp_is_my_new_ai_memory_for_making_rules/",
-        "created_utc": 1753193392.0
-      },
-      {
-        "id": "1j28cxi",
-        "subreddit": "CLine",
-        "title": "Cline + cognee to index your codebase into a GraphRag",
-        "score": 34,
-        "num_comments": 9,
-        "author": "Short-Honeydew-7000",
-        "url": "https://reddit.com/r/CLine/comments/1j28cxi/cline_cognee_to_index_your_codebase_into_a/",
-        "created_utc": 1740969014.0
-      },
-      {
-        "id": "1mnjfvu",
-        "subreddit": "AIMemory",
-        "title": "cognee wrapped up the Github Secure Open Source Program",
-        "score": 9,
-        "num_comments": 0,
-        "author": "Short-Honeydew-7000",
-        "url": "https://reddit.com/r/AIMemory/comments/1mnjfvu/cognee_wrapped_up_the_github_secure_open_source/",
-        "created_utc": 1754933436.0
-      },
-      {
-        "id": "1meh64p",
-        "subreddit": "OpenSourceeAI",
-        "title": "A Coding Guide to Build an Intelligent Conversational AI Agent with Agent Memory Using Cognee and Free Hugging Face Models",
-        "score": 2,
-        "num_comments": 1,
-        "author": "ai-lover",
-        "url": "https://reddit.com/r/OpenSourceeAI/comments/1meh64p/a_coding_guide_to_build_an_intelligent/",
-        "created_utc": 1754005197.0
-      },
-      {
-        "id": "1l2dru6",
-        "subreddit": "AIMemory",
-        "title": "New paper from cognee - hyperparam optimization for AI memory",
-        "score": 13,
-        "num_comments": 2,
-        "author": "Short-Honeydew-7000",
-        "url": "https://reddit.com/r/AIMemory/comments/1l2dru6/new_paper_from_cognee_hyperparam_optimization_for/",
-        "created_utc": 1748961934.0
-      }
-    ],
-    "cognee": [
-      {
-        "id": "1iptj8g",
-        "subreddit": "LLMDevs",
-        "title": "cognee - open-source memory framework for AI Agents",
-        "score": 52,
-        "num_comments": 22,
-        "author": "Short-Honeydew-7000",
-        "url": "https://reddit.com/r/LLMDevs/comments/1iptj8g/cognee_opensource_memory_framework_for_ai_agents/",
-        "created_utc": 1739593392.0
-      },
-      {
-        "id": "1mlnvob",
-        "subreddit": "LocalLLaMA",
-        "title": "Comparing agent memory kits (Letta, MemOS, Cognee, etc)",
-        "score": 13,
-        "num_comments": 15,
-        "author": "nostriluu",
-        "url": "https://reddit.com/r/LocalLLaMA/comments/1mlnvob/comparing_agent_memory_kits_letta_memos_cognee_etc/",
-        "created_utc": 1754741362.0
-      },
-      {
-        "id": "1qgbptg",
-        "subreddit": "AIMemory",
-        "title": "Which one is better for GraphRAG?: Cognee vs Graphiti vs Mem0",
-        "score": 19,
-        "num_comments": 14,
-        "author": "Imaginary-Bee-8770",
-        "url": "https://reddit.com/r/AIMemory/comments/1qgbptg/which_one_is_better_for_graphrag_cognee_vs/",
-        "created_utc": 1768750757.0
-      },
-      {
-        "id": "1s42kmu",
-        "subreddit": "AI_Agents",
-        "title": "Some thoughts on working with memory systems",
         "score": 5,
-        "num_comments": 13,
-        "author": "blakeyuk",
-        "url": "https://reddit.com/r/AI_Agents/comments/1s42kmu/some_thoughts_on_working_with_memory_systems/",
-        "created_utc": 1774516857.0
-      },
-      {
-        "id": "1qgbm8d",
-        "subreddit": "Rag",
-        "title": "Which one is better for GraphRAG?: Cognee vs Graphiti vs Mem0",
-        "score": 18,
-        "num_comments": 9,
-        "author": "Imaginary-Bee-8770",
-        "url": "https://reddit.com/r/Rag/comments/1qgbm8d/which_one_is_better_for_graphrag_cognee_vs/",
-        "created_utc": 1768750507.0
-      },
-      {
-        "id": "1thtqyo",
-        "subreddit": "openclaw",
-        "title": "Memory - Cognee/Neo4j/LanceDB/Graphiti",
-        "score": 4,
         "num_comments": 5,
         "author": "jake-n-elwood",
         "url": "https://reddit.com/r/openclaw/comments/1thtqyo/memory_cogneeneo4jlancedbgraphiti/",
@@ -465,6 +213,258 @@
         "id": "1m6f3xd",
         "subreddit": "AIMemory",
         "title": "Cognee MCP is my new AI Memory for making rules",
+        "score": 15,
+        "num_comments": 2,
+        "author": "brianllamar",
+        "url": "https://reddit.com/r/AIMemory/comments/1m6f3xd/cognee_mcp_is_my_new_ai_memory_for_making_rules/",
+        "created_utc": 1753193392.0
+      },
+      {
+        "id": "1j28cxi",
+        "subreddit": "CLine",
+        "title": "Cline + cognee to index your codebase into a GraphRag",
+        "score": 31,
+        "num_comments": 9,
+        "author": "Short-Honeydew-7000",
+        "url": "https://reddit.com/r/CLine/comments/1j28cxi/cline_cognee_to_index_your_codebase_into_a/",
+        "created_utc": 1740969014.0
+      },
+      {
+        "id": "1mnjfvu",
+        "subreddit": "AIMemory",
+        "title": "cognee wrapped up the Github Secure Open Source Program",
+        "score": 9,
+        "num_comments": 0,
+        "author": "Short-Honeydew-7000",
+        "url": "https://reddit.com/r/AIMemory/comments/1mnjfvu/cognee_wrapped_up_the_github_secure_open_source/",
+        "created_utc": 1754933436.0
+      },
+      {
+        "id": "1meh64p",
+        "subreddit": "OpenSourceeAI",
+        "title": "A Coding Guide to Build an Intelligent Conversational AI Agent with Agent Memory Using Cognee and Free Hugging Face Models",
+        "score": 2,
+        "num_comments": 1,
+        "author": "ai-lover",
+        "url": "https://reddit.com/r/OpenSourceeAI/comments/1meh64p/a_coding_guide_to_build_an_intelligent/",
+        "created_utc": 1754005197.0
+      },
+      {
+        "id": "1l2dru6",
+        "subreddit": "AIMemory",
+        "title": "New paper from cognee - hyperparam optimization for AI memory",
+        "score": 12,
+        "num_comments": 2,
+        "author": "Short-Honeydew-7000",
+        "url": "https://reddit.com/r/AIMemory/comments/1l2dru6/new_paper_from_cognee_hyperparam_optimization_for/",
+        "created_utc": 1748961934.0
+      }
+    ],
+    "cognee": [
+      {
+        "id": "1iptj8g",
+        "subreddit": "LLMDevs",
+        "title": "cognee - open-source memory framework for AI Agents",
+        "score": 52,
+        "num_comments": 22,
+        "author": "Short-Honeydew-7000",
+        "url": "https://reddit.com/r/LLMDevs/comments/1iptj8g/cognee_opensource_memory_framework_for_ai_agents/",
+        "created_utc": 1739593392.0
+      },
+      {
+        "id": "1mlnvob",
+        "subreddit": "LocalLLaMA",
+        "title": "Comparing agent memory kits (Letta, MemOS, Cognee, etc)",
+        "score": 11,
+        "num_comments": 15,
+        "author": "nostriluu",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1mlnvob/comparing_agent_memory_kits_letta_memos_cognee_etc/",
+        "created_utc": 1754741362.0
+      },
+      {
+        "id": "1qgbptg",
+        "subreddit": "AIMemory",
+        "title": "Which one is better for GraphRAG?: Cognee vs Graphiti vs Mem0",
+        "score": 18,
+        "num_comments": 14,
+        "author": "Imaginary-Bee-8770",
+        "url": "https://reddit.com/r/AIMemory/comments/1qgbptg/which_one_is_better_for_graphrag_cognee_vs/",
+        "created_utc": 1768750757.0
+      },
+      {
+        "id": "1s42kmu",
+        "subreddit": "AI_Agents",
+        "title": "Some thoughts on working with memory systems",
+        "score": 6,
+        "num_comments": 13,
+        "author": "blakeyuk",
+        "url": "https://reddit.com/r/AI_Agents/comments/1s42kmu/some_thoughts_on_working_with_memory_systems/",
+        "created_utc": 1774516857.0
+      },
+      {
+        "id": "1qgbm8d",
+        "subreddit": "Rag",
+        "title": "Which one is better for GraphRAG?: Cognee vs Graphiti vs Mem0",
+        "score": 18,
+        "num_comments": 9,
+        "author": "Imaginary-Bee-8770",
+        "url": "https://reddit.com/r/Rag/comments/1qgbm8d/which_one_is_better_for_graphrag_cognee_vs/",
+        "created_utc": 1768750507.0
+      },
+      {
+        "id": "1thtqyo",
+        "subreddit": "openclaw",
+        "title": "Memory - Cognee/Neo4j/LanceDB/Graphiti",
+        "score": 3,
+        "num_comments": 5,
+        "author": "jake-n-elwood",
+        "url": "https://reddit.com/r/openclaw/comments/1thtqyo/memory_cogneeneo4jlancedbgraphiti/",
+        "created_utc": 1779211387.0
+      },
+      {
+        "id": "1ri66c5",
+        "subreddit": "ShittyVeganFoodPorn",
+        "title": "Cognee",
+        "score": 24,
+        "num_comments": 3,
+        "author": "tired-tiramasu",
+        "url": "https://reddit.com/r/ShittyVeganFoodPorn/comments/1ri66c5/cognee/",
+        "created_utc": 1772392577.0
+      },
+      {
+        "id": "1qgbn8e",
+        "subreddit": "AI_Agents",
+        "title": "What's better for GraphRAG? Graphiti, Cognee, Mem0?",
+        "score": 2,
+        "num_comments": 3,
+        "author": "Imaginary-Bee-8770",
+        "url": "https://reddit.com/r/AI_Agents/comments/1qgbn8e/whats_better_for_graphrag_graphiti_cognee_mem0/",
+        "created_utc": 1768750577.0
+      },
+      {
+        "id": "1p3e70m",
+        "subreddit": "AIMemory",
+        "title": "Cognee VS Code extension tests",
+        "score": 3,
+        "num_comments": 4,
+        "author": "Crashbox3000",
+        "url": "https://reddit.com/r/AIMemory/comments/1p3e70m/cognee_vs_code_extension_tests/",
+        "created_utc": 1763768643.0
+      },
+      {
+        "id": "1pnoeq2",
+        "subreddit": "AIMemory",
+        "title": "Cognee.ai Information",
+        "score": 5,
+        "num_comments": 1,
+        "author": "_RemyLeBeau_",
+        "url": "https://reddit.com/r/AIMemory/comments/1pnoeq2/cogneeai_information/",
+        "created_utc": 1765846428.0
+      },
+      {
+        "id": "1pvw608",
+        "subreddit": "gluk",
+        "title": "Self-Hosting Cognee: LLM Performance Tests - Rost Glukhov",
+        "score": 1,
+        "num_comments": 0,
+        "author": "rosaccord",
+        "url": "https://reddit.com/r/gluk/comments/1pvw608/selfhosting_cognee_llm_performance_tests_rost/",
+        "created_utc": 1766725619.0
+      },
+      {
+        "id": "1pu9mq4",
+        "subreddit": "gluk",
+        "title": "Choosing the Right LLM for Cognee: Local Ollama Setup - Rost Glukhov",
+        "score": 1,
+        "num_comments": 0,
+        "author": "rosaccord",
+        "url": "https://reddit.com/r/gluk/comments/1pu9mq4/choosing_the_right_llm_for_cognee_local_ollama/",
+        "created_utc": 1766536000.0
+      },
+      {
+        "id": "1p21n1b",
+        "subreddit": "PresenceEngine",
+        "title": "Edge AI Memory for Phones, Wearables &amp; IoT Devices | cognee-RS",
+        "score": 2,
+        "num_comments": 3,
+        "author": "nrdsvg",
+        "url": "https://reddit.com/r/PresenceEngine/comments/1p21n1b/edge_ai_memory_for_phones_wearables_iot_devices/",
+        "created_utc": 1763640966.0
+      },
+      {
+        "id": "1pb9pyt",
+        "subreddit": "AIMemory",
+        "title": "Graph and vector memory extension for Github Copilot (uses Cognee) - Beta",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Crashbox3000",
+        "url": "https://reddit.com/r/AIMemory/comments/1pb9pyt/graph_and_vector_memory_extension_for_github/",
+        "created_utc": 1764586145.0
+      },
+      {
+        "id": "1p1cpcn",
+        "subreddit": "AIFromChina",
+        "title": "6 Lines, Lifelong Memory: Cognee Tested",
+        "score": 1,
+        "num_comments": 0,
+        "author": "ExternalNo2722",
+        "url": "https://reddit.com/r/AIFromChina/comments/1p1cpcn/6_lines_lifelong_memory_cognee_tested/",
+        "created_utc": 1763570650.0
+      },
+      {
+        "id": "1moavay",
+        "subreddit": "LocalLLaMA",
+        "title": "Cognee Embedding Model Choice",
+        "score": 2,
+        "num_comments": 7,
+        "author": "Infamous_Jaguar_2151",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1moavay/cognee_embedding_model_choice/",
+        "created_utc": 1755010334.0
+      },
+      {
+        "id": "1oa08yt",
+        "subreddit": "AgentsOfAI",
+        "title": "Agent memory that works: LangGraph for agent framework, cognee for graphs and embeddings and OpenAI for memory processing",
+        "score": 11,
+        "num_comments": 0,
+        "author": "Short-Honeydew-7000",
+        "url": "https://reddit.com/r/AgentsOfAI/comments/1oa08yt/agent_memory_that_works_langgraph_for_agent/",
+        "created_utc": 1760804837.0
+      },
+      {
+        "id": "1nksx7d",
+        "subreddit": "ClaudeAI",
+        "title": "Is possible to combine Serena, Code Grapher and Cognee for context awareness?",
+        "score": 1,
+        "num_comments": 3,
+        "author": "robto09",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1nksx7d/is_possible_to_combine_serena_code_grapher_and/",
+        "created_utc": 1758252673.0
+      },
+      {
+        "id": "1nkswv7",
+        "subreddit": "claude",
+        "title": "Is possible to combine Serena, Code Grapher and Cognee for context awareness?",
+        "score": 1,
+        "num_comments": 0,
+        "author": "robto09",
+        "url": "https://reddit.com/r/claude/comments/1nkswv7/is_possible_to_combine_serena_code_grapher_and/",
+        "created_utc": 1758252646.0
+      },
+      {
+        "id": "1meh5x3",
+        "subreddit": "machinelearningnews",
+        "title": "A Coding Guide to Build an Intelligent Conversational AI Agent with Agent Memory Using Cognee and Free Hugging Face Models",
+        "score": 9,
+        "num_comments": 2,
+        "author": "ai-lover",
+        "url": "https://reddit.com/r/machinelearningnews/comments/1meh5x3/a_coding_guide_to_build_an_intelligent/",
+        "created_utc": 1754005182.0
+      },
+      {
+        "id": "1m6f3xd",
+        "subreddit": "AIMemory",
+        "title": "Cognee MCP is my new AI Memory for making rules",
         "score": 14,
         "num_comments": 2,
         "author": "brianllamar",
@@ -475,7 +475,7 @@
         "id": "1j28cxi",
         "subreddit": "CLine",
         "title": "Cline + cognee to index your codebase into a GraphRag",
-        "score": 28,
+        "score": 31,
         "num_comments": 9,
         "author": "Short-Honeydew-7000",
         "url": "https://reddit.com/r/CLine/comments/1j28cxi/cline_cognee_to_index_your_codebase_into_a/",
@@ -505,7 +505,7 @@
         "id": "1l2dru6",
         "subreddit": "AIMemory",
         "title": "New paper from cognee - hyperparam optimization for AI memory",
-        "score": 13,
+        "score": 14,
         "num_comments": 2,
         "author": "Short-Honeydew-7000",
         "url": "https://reddit.com/r/AIMemory/comments/1l2dru6/new_paper_from_cognee_hyperparam_optimization_for/",
