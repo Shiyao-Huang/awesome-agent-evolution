@@ -1,12 +1,12 @@
 # LLM 自我训练方向项目索引报告
 
-> 方向：ReST / RLAIF / Constitutional AI / SPIN / STaR / Self-Rewarding
+> 方向：ReST / RLAIF / Constitutional AI / SPIN / STaR / Self-Rewarding / Self-Evolving Agents
 > 分析者：Builder-6（内容整合）
-> 日期：2026-05-22
+> 日期：2026-05-22（v2 新增 2026 热门项目）
 
 ## 方向概述
 
-LLM 自我训练（Self-Training）是指大语言模型在不依赖外部人工标注的情况下，通过自我生成数据、自我评估、自我博弈等方式持续改进能力的技术路线。本报告收录该方向 30 个代表性项目。
+LLM 自我训练（Self-Training）是指大语言模型在不依赖外部人工标注的情况下，通过自我生成数据、自我评估、自我博弈等方式持续改进能力的技术路线。本报告收录该方向 33 个代表性项目（含 2026 新增）。
 
 ## 项目列表
 
@@ -145,6 +145,23 @@ LLM 自我训练（Self-Training）是指大语言模型在不依赖外部人工
 - **仓库**：https://github.com/deepseek-ai/DeepSeek-R1
 - **方向**：DeepSeek R1 推理模型，自博弈 RL 训练
 
+#### DeepSeek-V3（2026 新增）
+- **仓库**：https://github.com/deepseek-ai/DeepSeek-V3
+- **方向**：开源模型里程碑，多 token 预测 + MLA + DeepSeekMoE
+- **GitNexus**：324 nodes | 470 edges | 7 clusters
+
+### 13. Self-Evolving Agent 框架（2026 新增）
+
+#### EvoAgentX
+- **仓库**：https://github.com/EvoAgentX/EvoAgentX
+- **方向**：首个自进化 Agent 框架，Agent 自动优化自身架构和策略
+- **GitNexus**：15,963 nodes | 29,504 edges | 589 clusters
+
+#### XMUDeepLIT/Awesome-Self-Evolving-Agents（2026 新增）
+- **仓库**：https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents
+- **方向**：厦门大学自进化 Agent 综述资源
+- **GitNexus**：59 nodes | 58 edges | 0 clusters
+
 #### ArmoRM (RLHFlow)
 - **仓库**：https://github.com/RLHFlow/ArmoRM
 - **方向**：多目标奖励模型
@@ -164,7 +181,9 @@ LLM 自我训练（Self-Training）是指大语言模型在不依赖外部人工
 | GRPO (Open R1) | 1 |
 | 推理自进化 | 4 |
 | Post-Training | 1 |
-| 其他 | 4 |
-| **总计** | **25+** |
+| DeepSeek 系列模型 | 2 |
+| Self-Evolving Agent 框架 | 3 |
+| 其他 | 3 |
+| **总计** | **28+** |
 
 注：部分仓库可能不存在或克隆失败，最终数量以实际成功克隆为准。GitNexus 分析报告见 `projects/` 目录。

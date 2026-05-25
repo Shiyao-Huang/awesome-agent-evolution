@@ -1,6 +1,6 @@
 # 代码生成+进化 项目索引表
 
-> 30 个项目 | Researcher-2 | 2026-05-22
+> 38 个项目（含 8 个 2025-2026 新增） | Researcher-2 | 2026-05-22 | 紧急补充 2025-2026 最新项目
 
 | # | 项目 | 仓库 | 方向 | Self Evolve | 克隆状态 |
 |---|------|------|------|-------------|----------|
@@ -35,18 +35,33 @@
 | 29 | **LLM_EA** | xiaofangxd/LLM_EA | LLM+EA 论文集 | ⭐⭐ | ✅ |
 | 30 | **Awesome-Code-LLM** | codefuse-ai/Awesome-Code-LLM | 代码 LLM 综合索引 (TMLR) | ⭐ | ✅ |
 
+### 2025-2026 新增 (8 个)
+
+| # | 项目 | 仓库 | 方向 | 年份 | Self Evolve | 克隆状态 |
+|---|------|------|------|------|-------------|----------|
+| 31 | **EvoAgentX** | EvoAgentX/EvoAgentX | 自进化 Agent 框架 (EMNLP'25) | 2025 | ⭐⭐⭐ | ✅ |
+| 32 | **DeepEvolve** | liugangcode/DeepEvolve | 科学算法发现 Agent | 2025 | ⭐⭐⭐ | ✅ |
+| 33 | **OUROBOROS** | razzant/ouroboros | 自修改 AI Agent (Born 2026-02-16) | 2026 | ⭐⭐⭐ | ✅ |
+| 34 | **AFlow** | FoundationAgents/AFlow | Agent 工作流 MCTS 进化 (ICLR'25 Oral) | 2025 | ⭐⭐⭐ | ✅ |
+| 35 | **SelfImprovingAgent** | NullLabTests/SelfImprovingAgent | 轻量自改进代码 Agent | 2025 | ⭐⭐ | ✅ |
+| 36 | **XMU 自进化综述** | XMUDeepLIT/Awesome-Self-Evolving-Agents | 厦门大学综述 (2026) | 2026 | ⭐⭐⭐ | ✅ |
+| 37 | **EvoAgentX 综述** | EvoAgentX/Awesome-Self-Evolving-Agents | EvoAgentX 综述 (arXiv:2508.07407) | 2025 | ⭐⭐⭐ | ✅ |
+| 38 | **PyDay BCN 工作坊** | camilochs/pydaybcn2025-workshop-code-evolution | 自改进代码教学 (2025) | 2025 | ⭐⭐ | ✅ |
+
 ## 方向分布
 
 ```
-进化代码优化 (6): OpenEvolve, CodeEvolve, ReEvo, LLaMEA, FunSearch, EvoPrompt
-代码生成 RL (2):  CodeRL, CodeT5
-代码生成模型 (8):  CodeGen, Magicoder, WizardCoder, DeepSeek-Coder, StarCoder2, CodeGeeX, CodeBERT, SQLCoder
-代码 Agent (6):    OpenCodeInterpreter, CodeAct, Aider, Sweep, GPT-Engineer, Continue
-评测基准 (3):      CodeContests, Tabby, EvoCodeBench
-综述资源 (5):      Self-Evolving-Agents, LLM4EC, LLM4Opt, LLM_EA, Awesome-Code-LLM
+进化代码优化 (6):    OpenEvolve, CodeEvolve, ReEvo, LLaMEA, FunSearch, EvoPrompt
+代码生成 RL (2):     CodeRL, CodeT5
+代码生成模型 (8):    CodeGen, Magicoder, WizardCoder, DeepSeek-Coder, StarCoder2, CodeGeeX, CodeBERT, SQLCoder
+代码 Agent (6):      OpenCodeInterpreter, CodeAct, Aider, Sweep, GPT-Engineer, Continue
+评测基准 (3):        CodeContests, Tabby, EvoCodeBench
+综述资源 (5+2):      Self-Evolving-Agents, LLM4EC, LLM4Opt, LLM_EA, Awesome-Code-LLM, XMU 综述, EvoAgentX 综述
+2025-2026 框架 (4):  EvoAgentX, DeepEvolve, OUROBOROS, AFlow
+2025-2026 教学 (1):  PyDay BCN
 ```
 
-## 新克隆仓库 (本次新增)
+## 新克隆仓库 (初始 17 个)
 
 - salesforce__coderl, salesforce__codet5, salesforce__codegen
 - ise_uiuc__magicoder, nlpxucan__wizardlm, deepseek_ai__deepseek_coder
@@ -55,6 +70,17 @@
 - sweepai__sweep, gpt_engineer_org__gpt_engineer
 - microsoft__codebert, defog_ai__sqlcoder, thudm__codegeex
 - seketeam/EvoCodeBench (evocodebench3)
+
+## 2025-2026 补充克隆 (8 个)
+
+- evoagentx__evoagentx (已有)
+- liugangcode__deepevolve
+- razzant__ouroboros
+- foundation_agents__aflow
+- nulllabtests__selfimproving
+- xmudeplit__awesome_self_evolving
+- evoagentx__awesome_survey
+- pydaybcn2025__code_evolution
 
 ## 已有仓库 (复用)
 

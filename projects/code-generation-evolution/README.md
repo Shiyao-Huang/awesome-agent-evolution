@@ -3,7 +3,7 @@
 > 研究方向：LLM 驱动的代码生成、进化优化、自我改进编程系统
 > 分析人：Researcher-2
 > 日期：2026-05-22
-> 项目总数：30
+> 项目总数：38（含 8 个 2025-2026 紧急补充）
 
 ---
 
@@ -16,7 +16,8 @@
 | 代码生成模型 | 8 | 基础代码 LLM |
 | 代码 Agent 工具 | 6 | AI 编程助手/Agent |
 | 评测基准 | 3 | 代码生成评测数据集 |
-| 综述/资源库 | 5 | 论文索引、综述、工具集合 |
+| 综述/资源库 | 7 | 论文索引、综述、工具集合 |
+| **2025-2026 新增** | **8** | **EvoAgentX, OUROBOROS, AFlow 等最新项目** |
 
 ---
 
@@ -24,7 +25,7 @@
 
 | 等级 | 项目 |
 |------|------|
-| **核心 (HIGH)** | OpenEvolve, CodeEvolve, ReEvo, LLaMEA, FunSearch, WizardCoder, OpenCodeInterpreter, CodeAct, CodeRL, EvoPrompt, Self-Evolving-Agents |
+| **核心 (HIGH)** | OpenEvolve, CodeEvolve, ReEvo, LLaMEA, FunSearch, WizardCoder, OpenCodeInterpreter, CodeAct, CodeRL, EvoPrompt, Self-Evolving-Agents, **EvoAgentX, DeepEvolve, OUROBOROS, AFlow** |
 | **相关 (MEDIUM)** | Magicoder, DeepSeek-Coder, CodeT5, CodeContests, Aider, LLM4EC, LLM4Opt, Continue, Sweep, GPT-Engineer |
 | **基础 (LOW)** | CodeGen, StarCoder2, Tabby, CodeGeeX, CodeBERT, SQLCoder, LLM_EA, Awesome-Code-LLM, EvoCodeBench |
 
@@ -40,6 +41,7 @@
 - [04-代码Agent工具](./04-code-agent-tools.md) — OpenCodeInterpreter, CodeAct, Aider, Sweep, GPT-Engineer, Continue
 - [05-评测基准](./05-benchmarks.md) — CodeContests/AlphaCode, EvoCodeBench, Tabby
 - [06-综述资源](./06-surveys-resources.md) — Self-Evolving-Agents, LLM4EC, LLM4Opt, LLM_EA, Awesome-Code-LLM
+- **[07-2025-2026 新增](./07-2025-2026-new-projects.md)** — EvoAgentX, DeepEvolve, OUROBOROS, AFlow, SelfImprovingAgent, XMU 综述, EvoAgentX 综述, PyDay BCN
 
 ---
 
