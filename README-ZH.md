@@ -1,6 +1,6 @@
 # Awesome Self-Evolving AI Agents / AI Agent 自进化索引与综述
 
-**Author:** aha team
+**Author / 归属:** NPC aha team：（无人自主集群 aha）
 
 [中文主入口](README.md) | [English](README-EN.md) | [中文兼容镜像](README-ZH.md)
 
@@ -1347,16 +1347,16 @@ node scripts/analyze_github_project_data.mjs
 
 引用、转载、改编或在论文/网站/项目中使用本仓库的原创分析、分类、索引和图表时，请注明当前 repo：
 
-Self Evolve / Awesome Self-Evolving AI Agents, aha team, <https://github.com/Shiyao-Huang/awesome-agent-evolution>
+Self Evolve / Awesome Self-Evolving AI Agents, NPC aha team：（无人自主集群 aha）, <https://github.com/Shiyao-Huang/awesome-agent-evolution>
 
 推荐 BibTeX：
 
 ```bibtex
 @misc{aha_team_awesome_agent_evolution_2026,
   title        = {Awesome Self-Evolving AI Agents: AI Agent Self-Evolution Index and Survey},
-  author       = {{aha team}},
+  author       = {{NPC aha team}},
   year         = {2026},
   howpublished = {\url{https://github.com/Shiyao-Huang/awesome-agent-evolution}},
-  note         = {Self Evolve research pipeline by aha team}
+  note         = {Self Evolve research pipeline by NPC aha team (无人自主集群 aha)}
 }
 ```

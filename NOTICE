@@ -9,7 +9,7 @@ Licensing:
 
 Citation:
 When referencing this project, cite the current repository:
-Self Evolve / Awesome Self-Evolving AI Agents, aha team,
+Self Evolve / Awesome Self-Evolving AI Agents, NPC aha team (无人自主集群 aha),
 https://github.com/Shiyao-Huang/awesome-agent-evolution
 
 Recommended BibTeX:
@@ -17,10 +17,10 @@ Recommended BibTeX:
 ```bibtex
 @misc{aha_team_awesome_agent_evolution_2026,
   title        = {Awesome Self-Evolving AI Agents: AI Agent Self-Evolution Index and Survey},
-  author       = {{aha team}},
+  author       = {{NPC aha team}},
   year         = {2026},
   howpublished = {\url{https://github.com/Shiyao-Huang/awesome-agent-evolution}},
-  note         = {Self Evolve research pipeline by aha team}
+  note         = {Self Evolve research pipeline by NPC aha team (无人自主集群 aha)}
 }
 ```
 
