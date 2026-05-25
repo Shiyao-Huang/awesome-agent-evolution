@@ -1,214 +1,258 @@
-\section{论文索引附录}
-\label{app:papers}
-
-本附录列出raw-papers/中收集的全部88篇Agent Self-Evolution相关论文，按方法类别归类。每篇论文标注arXiv编号、年份和主要贡献。
-
 % ====================================================================
-% A.1 基于奖励的进化 (14篇)
+% Appendices A--D: project, paper, benchmark, and author-network evidence
 % ====================================================================
-\subsection*{A.1 基于奖励的进化}
 
-\begin{longtable}{llp{7cm}}
+\section{Appendices: Evidence Tables for AI Self-Evolution}\label{app:evidence}
+
+These appendices provide compact, auditable tables used by the survey.  The tables prioritize local evidence collected in \texttt{projects/}, \texttt{research/projects/}, \texttt{research/papers/}, and \texttt{research/author-network.md}.  Missing license or activity metadata is marked as \emph{Unknown} rather than inferred.
+
+\subsection{Appendix A: Open-Source Project Comparison}\label{app:projects}
+\scriptsize
+\begin{longtable}{p{25mm}p{39mm}r p{32mm}p{18mm}p{18mm}p{18mm}p{52mm}}
+\caption{Representative open-source projects related to self-evolving agents, agent frameworks, evolutionary search, and evaluation.}\\
 \toprule
-\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\textbf{Project} & \textbf{Repository} & \textbf{Stars} & \textbf{Evolution mode} & \textbf{Stack} & \textbf{License} & \textbf{Activity} & \textbf{Role in survey} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\textbf{Project} & \textbf{Repository} & \textbf{Stars} & \textbf{Evolution mode} & \textbf{Stack} & \textbf{License} & \textbf{Activity} & \textbf{Role in survey} \\
 \midrule
 \endhead
-2203.14465 & 2022 & STaR: 推理链自举闭环（生成-筛选-微调） \\
-2401.10020 & 2024 & Self-Rewarding LM: 自评+Iterative DPO偏好优化 \\
-2407.19594 & 2024 & Meta-Rewarding: actor/judge/meta-judge三层评价 \\
-2403.18341 & 2024 & IterAlign: 宪法原则驱动迭代对齐 \\
-2407.18219 & 2024 & RISE: 多轮MDP自省修正策略 \\
-2501.11425 & 2025 & Agent-R: MCTS从错误轨迹恢复 \\
-2504.20073 & 2025 & RAGEN: StarPO轨迹级RL框架 \\
-2502.05605 & 2025 & 自博弈微调提升弱模型 \\
-2401.01335 & 2024 & Weak-to-Strong Generalization \\
-2402.17574 & 2024 & Self-Play Fine-Tuning \\
-2501.07278 & 2025 & Agentic Self-Learning \\
-2502.00593 & 2025 & Self-Challenging Agent \\
-2504.01990 & 2025 & 训练信号自动化方法 \\
-2509.20562 & 2025 & RL训练agent优化 \\
-2509.25541 & 2025 & 偏好学习新框架 \\
+OpenEvolve & algorithmicsuperintelligence/openevolve & 6358 & Evolutionary code search & Python & Unknown & 2026-03-18 & Evaluator-driven program evolution in the AlphaEvolve/FunSearch family \\
+AIWaves Agents & aiwaves-cn/agents & 5928 & Agent orchestration + symbolic learning & Python & Unknown & 2024-09-26 & Framework connected to Agent Symbolic Learning and textual backpropagation \\
+Reflexion & noahshinn/reflexion & 3158 & Verbal reflection memory & Python & Unknown & 2025-01-14 & Canonical repository for memory-based verbal reinforcement learning \\
+AgentEvolver & modelscope/AgentEvolver & 1441 & Agent self-evolution & Python & Unknown & 2026-04-01 & Search/evaluator loop for evolving agent behavior \\
+Self-Refine & madaan/self-refine & 805 & Feedback-refine loop & Python & Unknown & 2024-10-04 & Generate--critique--refine prompting baseline \\
+SE-Agent & JARVIS-Xs/SE-Agent & 274 & Software-engineering agent evolution & Python & Unknown & 2025-09-23 & Evaluator-driven coding-agent improvement \\
+Science-CodeEvolve & inter-co/science-codeevolve & 97 & Scientific code evolution & Python & Unknown & 2026-04-08 & Program search for scientific computing tasks \\
+SCOPE & JarvisPei/SCOPE & 77 & Evolutionary search & Python & Unknown & 2026-03-26 & Self-evolution project from local project index \\
+LLM-Self-Judge & OPPO-Mente-Lab/LLM-Self-Judge & 43 & Self-evaluation / judge training & Python & Unknown & 2026-03-24 & Judge/evaluator component for self-improvement loops \\
+DARWIN & ZJU-LLM-Safety/DARWIN & 41 & Safety-oriented self-evolution & Python & Unknown & 2026-05-07 & Safety-oriented self-evolution and reflective memory \\
+OPRO & google-deepmind/opro & Unknown & LLM as optimizer & Python & Unknown & Unknown & Optimization by generated natural-language/program proposals \\
+OpenELM & CarperAI/OpenELM & Unknown & Evolution through large models & Python & Unknown & Unknown & Evolutionary large-model search system \\
+ADAS & ShengranHu/ADAS & Unknown & Automated design of agentic systems & Python & Unknown & Unknown & Architecture search over agent designs \\
+FunSearch & google-deepmind/funsearch & Unknown & Evolutionary program discovery & Python & Unknown & Unknown & LLM plus evolutionary search for mathematical discoveries \\
+MetaGPT & FoundationAgents/MetaGPT & Unknown & Multi-agent software organization & Python & Unknown & Unknown & Role-based multi-agent software framework \\
+AutoGPT & Significant-Gravitas/AutoGPT & Unknown & Autonomous task agent & Python/TypeScript & Unknown & Unknown & Long-running autonomous agent platform \\
+CrewAI & crewAIInc/crewAI & Unknown & Multi-agent workflow framework & Python & Unknown & Unknown & Lightweight role/task orchestration \\
+DSPy & stanfordnlp/dspy & Unknown & Declarative LLM programming & Python & Unknown & Unknown & Prompt/program optimization with metric-driven compilation \\
+AutoGen & microsoft/autogen & Unknown & Multi-agent conversations & Python & Unknown & Unknown & Conversational multi-agent orchestration framework \\
+CAMEL-AI & camel-ai/camel & Unknown & Communicative agents & Python & Unknown & Unknown & Role-playing and society-style multi-agent infrastructure \\
+LangGraph & langchain-ai/langgraph & Unknown & Stateful agent workflows & Python/TypeScript & Unknown & Unknown & Graph/state-machine approach to agent workflows \\
+SWE-Agent & princeton-nlp/SWE-agent & Unknown & Software-engineering agent & Python & Unknown & Unknown & Agent for issue resolution and SWE-style benchmarks \\
+OpenHands & All-Hands-AI/OpenHands & Unknown & AI software developer & Python/TypeScript & Unknown & Unknown & End-to-end software engineering agent platform \\
+EvoAgentX & evoagentx/evoagentx & 3023 & Agent construction/evaluation/evolution & Python & Unknown & Unknown & Open ecosystem for building and evolving LLM agents \\
+EverOS & evermind-ai/everos & 5128 & Long-term memory OS / benchmark & Unknown & Unknown & Unknown & Self-evolving agent operating system and evaluation substrate \\
 \bottomrule
 \end{longtable}
+\normalsize
 
-% ====================================================================
-% A.2 自博弈进化 (6篇)
-% ====================================================================
-\subsection*{A.2 自博弈进化}
-
-\begin{longtable}{llp{7cm}}
+\subsection{Appendix B: Core Paper Citation Index}\label{app:paper-index}
+\scriptsize
+\begin{longtable}{p{22mm}p{13mm}p{39mm}p{72mm}}
+\caption{Collected core paper index (107 entries) grouped by method family.  The short note is the local extraction note used for survey drafting.}\\
 \toprule
-\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\textbf{ID} & \textbf{Year} & \textbf{Family} & \textbf{Short contribution note} \\
 \midrule
-2505.03335 & 2025 & Absolute Zero: 零外部数据自博弈 \\
-2506.24119 & 2025 & SPIRAL: 零和游戏自博弈发现推理能力 \\
-2305.14325 & 2023 & Multi-Agent Debate: 多实例辩论提升事实性 \\
-2505.18646 & 2025 & 自博弈课程生成 \\
-2510.06056 & 2025 & 多角色对抗进化 \\
-2406.18532 & 2024 & 对抗训练新范式 \\
-\bottomrule
-\end{longtable}
-
-% ====================================================================
-% A.3 提示词进化 (16篇)
-% ====================================================================
-\subsection*{A.3 提示词/上下文进化}
-
-\begin{longtable}{llp{7cm}}
+\endfirsthead
 \toprule
-\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\textbf{ID} & \textbf{Year} & \textbf{Family} & \textbf{Short contribution note} \\
 \midrule
-2303.17651 & 2023 & Self-Refine: 迭代自反馈精炼 \\
-2303.11366 & 2023 & Reflexion: 语言反思作为情景记忆 \\
-2308.10144 & 2024 & ExpeL: 经验提炼与跨任务迁移 \\
-2504.15228 & 2025 & SICA: 自修改coding agent \\
-2510.04618 & 2025 & ACE: 可演化上下文playbook \\
-2311.09336 & 2023 & 符号学习: 文本反向传播 \\
-2410.16946 & 2024 & EvoMAC: 多Agent文本BP \\
-2501.01264 & 2025 & ICE: Investigate-Consolidate-Exploit \\
-2502.05957 & 2025 & EvolveR: 离线自蒸馏+在线策略演化 \\
-2502.12110 & 2025 & Prompt优化自动化 \\
-2410.01215 & 2024 & 文本梯度方法 \\
-2510.07841 & 2025 & 上下文工程框架 \\
-2409.12147 & 2024 & Agent自评估改进 \\
-2505.08827 & 2025 & 自反思策略优化 \\
-2409.14051 & 2024 & 工具调用策略进化 \\
-2411.02337 & 2024 & 策略蒸馏新方法 \\
+\endhead
+2203.14465 & 2022 & Reward-driven evolution & STaR: bootstrapping reasoning with self-generated rationales. \\
+2401.10020 & 2024 & Reward-driven evolution & Self-Rewarding LM: iterative DPO with an LLM-as-judge reward model. \\
+2407.19594 & 2024 & Reward-driven evolution & Meta-Rewarding: actor, judge, and meta-judge self-improvement. \\
+2403.18341 & 2024 & Reward-driven evolution & Collected core work in the Reward-driven evolution family; see raw paper metadata and review notes for details. \\
+2407.18219 & 2024 & Reward-driven evolution & RISE: recursive introspection for multi-turn self-correction. \\
+2501.11425 & 2025 & Reward-driven evolution & Collected core work in the Reward-driven evolution family; see raw paper metadata and review notes for details. \\
+2504.20073 & 2025 & Reward-driven evolution & Collected core work in the Reward-driven evolution family; see raw paper metadata and review notes for details. \\
+2502.05605 & 2025 & Reward-driven evolution & Collected core work in the Reward-driven evolution family; see raw paper metadata and review notes for details. \\
+2401.01335 & 2024 & Reward-driven evolution & SPIN: self-play fine-tuning from weak to stronger language models. \\
+2402.17574 & 2024 & Reward-driven evolution & Collected core work in the Reward-driven evolution family; see raw paper metadata and review notes for details. \\
+2501.07278 & 2025 & Reward-driven evolution & Collected core work in the Reward-driven evolution family; see raw paper metadata and review notes for details. \\
+2502.00593 & 2025 & Reward-driven evolution & Collected core work in the Reward-driven evolution family; see raw paper metadata and review notes for details. \\
+2504.01990 & 2025 & Reward-driven evolution & Collected core work in the Reward-driven evolution family; see raw paper metadata and review notes for details. \\
+2509.20562 & 2025 & Reward-driven evolution & Collected core work in the Reward-driven evolution family; see raw paper metadata and review notes for details. \\
+2509.25541 & 2025 & Reward-driven evolution & Collected core work in the Reward-driven evolution family; see raw paper metadata and review notes for details. \\
+2505.03335 & 2025 & Self-play evolution & Absolute Zero: reinforced self-play reasoning without external data. \\
+2506.24119 & 2025 & Self-play evolution & Collected core work in the Self-play evolution family; see raw paper metadata and review notes for details. \\
+2305.14325 & 2023 & Self-play evolution & Collected core work in the Self-play evolution family; see raw paper metadata and review notes for details. \\
+2505.18646 & 2025 & Self-play evolution & Collected core work in the Self-play evolution family; see raw paper metadata and review notes for details. \\
+2510.06056 & 2025 & Self-play evolution & Collected core work in the Self-play evolution family; see raw paper metadata and review notes for details. \\
+2406.18532 & 2024 & Self-play evolution & Collected core work in the Self-play evolution family; see raw paper metadata and review notes for details. \\
+2303.17651 & 2023 & Prompt/context evolution & Self-Refine: generate, critique, and refine with self-feedback. \\
+2303.11366 & 2023 & Prompt/context evolution & Reflexion: verbal reinforcement learning through episodic memory. \\
+2308.10144 & 2024 & Prompt/context evolution & ExpeL: extracting natural-language experience for transfer. \\
+2504.15228 & 2025 & Prompt/context evolution & Collected core work in the Prompt/context evolution family; see raw paper metadata and review notes for details. \\
+2510.04618 & 2025 & Prompt/context evolution & Collected core work in the Prompt/context evolution family; see raw paper metadata and review notes for details. \\
+2311.09336 & 2023 & Prompt/context evolution & Collected core work in the Prompt/context evolution family; see raw paper metadata and review notes for details. \\
+2410.16946 & 2024 & Prompt/context evolution & Collected core work in the Prompt/context evolution family; see raw paper metadata and review notes for details. \\
+2501.01264 & 2025 & Prompt/context evolution & Collected core work in the Prompt/context evolution family; see raw paper metadata and review notes for details. \\
+2502.05957 & 2025 & Prompt/context evolution & Collected core work in the Prompt/context evolution family; see raw paper metadata and review notes for details. \\
+2502.12110 & 2025 & Prompt/context evolution & Collected core work in the Prompt/context evolution family; see raw paper metadata and review notes for details. \\
+2410.01215 & 2024 & Prompt/context evolution & Collected core work in the Prompt/context evolution family; see raw paper metadata and review notes for details. \\
+2510.07841 & 2025 & Prompt/context evolution & Collected core work in the Prompt/context evolution family; see raw paper metadata and review notes for details. \\
+2409.12147 & 2024 & Prompt/context evolution & Collected core work in the Prompt/context evolution family; see raw paper metadata and review notes for details. \\
+2505.08827 & 2025 & Prompt/context evolution & Collected core work in the Prompt/context evolution family; see raw paper metadata and review notes for details. \\
+2409.14051 & 2024 & Prompt/context evolution & Collected core work in the Prompt/context evolution family; see raw paper metadata and review notes for details. \\
+2411.02337 & 2024 & Prompt/context evolution & Collected core work in the Prompt/context evolution family; see raw paper metadata and review notes for details. \\
+2408.08435 & 2024 & Architecture search and code-level self-modification & ADAS: automated design of agentic systems via architecture search. \\
+2410.04444 & 2024 & Architecture search and code-level self-modification & Goedel Agent: self-referential recursive agent self-improvement. \\
+2505.22954 & 2025 & Architecture search and code-level self-modification & DGM: open-ended evolution of self-improving coding agents. \\
+2506.13131 & 2025 & Architecture search and code-level self-modification & AlphaEvolve: Gemini-powered algorithm discovery and optimization. \\
+2504.21024 & 2025 & Architecture search and code-level self-modification & Collected core work in the Architecture search and code-level self-modification family; see raw paper metadata and review notes for details. \\
+2505.14970 & 2025 & Architecture search and code-level self-modification & Collected core work in the Architecture search and code-level self-modification family; see raw paper metadata and review notes for details. \\
+2510.16079 & 2025 & Architecture search and code-level self-modification & Collected core work in the Architecture search and code-level self-modification family; see raw paper metadata and review notes for details. \\
+2410.12853 & 2024 & Architecture search and code-level self-modification & Collected core work in the Architecture search and code-level self-modification family; see raw paper metadata and review notes for details. \\
+2410.15639 & 2024 & Architecture search and code-level self-modification & Collected core work in the Architecture search and code-level self-modification family; see raw paper metadata and review notes for details. \\
+2510.14253 & 2025 & Architecture search and code-level self-modification & Collected core work in the Architecture search and code-level self-modification family; see raw paper metadata and review notes for details. \\
+2510.23595 & 2025 & Architecture search and code-level self-modification & Collected core work in the Architecture search and code-level self-modification family; see raw paper metadata and review notes for details. \\
+2506.04651 & 2025 & Architecture search and code-level self-modification & Collected core work in the Architecture search and code-level self-modification family; see raw paper metadata and review notes for details. \\
+2305.16291 & 2023 & Memory-based evolution & Voyager: skill-library memory and open-ended Minecraft exploration. \\
+2508.19828 & 2025 & Memory-based evolution & Collected core work in the Memory-based evolution family; see raw paper metadata and review notes for details. \\
+2509.25140 & 2025 & Memory-based evolution & Collected core work in the Memory-based evolution family; see raw paper metadata and review notes for details. \\
+2603.03290 & 2026 & Memory-based evolution & Collected core work in the Memory-based evolution family; see raw paper metadata and review notes for details. \\
+2505.16475 & 2025 & Memory-based evolution & Collected core work in the Memory-based evolution family; see raw paper metadata and review notes for details. \\
+2508.02085 & 2025 & Memory-based evolution & Collected core work in the Memory-based evolution family; see raw paper metadata and review notes for details. \\
+2508.04700 & 2025 & Memory-based evolution & Collected core work in the Memory-based evolution family; see raw paper metadata and review notes for details. \\
+2511.06449 & 2025 & Memory-based evolution & Collected core work in the Memory-based evolution family; see raw paper metadata and review notes for details. \\
+2304.03442 & 2023 & Memory-based evolution & Generative Agents: memory retrieval, reflection, and social simulation. \\
+2510.18327 & 2025 & Memory-based evolution & Collected core work in the Memory-based evolution family; see raw paper metadata and review notes for details. \\
+2312.09390 & 2023 & Hybrid methods, safety, and surveys & Collected core work in the Hybrid methods, safety, and surveys family; see raw paper metadata and review notes for details. \\
+2401.13996 & 2024 & Hybrid methods, safety, and surveys & Collected core work in the Hybrid methods, safety, and surveys family; see raw paper metadata and review notes for details. \\
+2405.06682 & 2024 & Hybrid methods, safety, and surveys & Collected core work in the Hybrid methods, safety, and surveys family; see raw paper metadata and review notes for details. \\
+2409.12917 & 2024 & Hybrid methods, safety, and surveys & Safety analysis for agent self-improvement and self-correction. \\
+2409.18382 & 2024 & Hybrid methods, safety, and surveys & Collected core work in the Hybrid methods, safety, and surveys family; see raw paper metadata and review notes for details. \\
+2410.23912 & 2024 & Hybrid methods, safety, and surveys & Collected core work in the Hybrid methods, safety, and surveys family; see raw paper metadata and review notes for details. \\
+2501.12793 & 2025 & Hybrid methods, safety, and surveys & Self-debugging revisit: self-generated tests for code generation. \\
+2501.13011 & 2025 & Hybrid methods, safety, and surveys & Collected core work in the Hybrid methods, safety, and surveys family; see raw paper metadata and review notes for details. \\
+2502.13550 & 2025 & Hybrid methods, safety, and surveys & Collected core work in the Hybrid methods, safety, and surveys family; see raw paper metadata and review notes for details. \\
+2505.16067 & 2025 & Hybrid methods, safety, and surveys & Collected core work in the Hybrid methods, safety, and surveys family; see raw paper metadata and review notes for details. \\
+2505.23060 & 2025 & Hybrid methods, safety, and surveys & Collected core work in the Hybrid methods, safety, and surveys family; see raw paper metadata and review notes for details. \\
+2506.01716 & 2025 & Hybrid methods, safety, and surveys & Collected core work in the Hybrid methods, safety, and surveys family; see raw paper metadata and review notes for details. \\
+2506.09046 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2507.21046 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2508.07407 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2508.09586 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2508.19005 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2509.04575 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2509.22502 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2510.17498 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2511.10395 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2511.16043 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2511.23473 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2512.09108 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2512.22716 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2412.01951 & 2024 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2410.09336 & 2024 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2505.06449 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2503.06449 & 2025 & Supplemental 2025 papers & Collected core work in the Supplemental 2025 papers family; see raw paper metadata and review notes for details. \\
+2603.03290 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2603.07970 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2603.15255 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2603.19461 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2603.25928 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2603.28990 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2604.01658 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2604.02674 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2604.10923 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2604.15034 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2604.17091 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2604.18131 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2605.04677 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2605.09315 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2605.18930 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2605.19102 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2509.26354 & 2025/2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2603.15255 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
+2603.19461 & 2026 & 2026 additions & Collected core work in the 2026 additions family; see raw paper metadata and review notes for details. \\
 \bottomrule
 \end{longtable}
+\normalsize
 
-% ====================================================================
-% A.4 架构搜索 (12篇)
-% ====================================================================
-\subsection*{A.4 架构搜索与代码级自修改}
-
-\begin{longtable}{llp{7cm}}
+\subsection{Appendix C: Benchmark Data Summary}\label{app:benchmarks}
+\scriptsize
+\begin{longtable}{p{27mm}p{27mm}p{21mm}p{42mm}p{32mm}p{53mm}}
+\caption{Benchmark and evaluation numbers used in the survey.}\\
 \toprule
-\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\textbf{Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Baseline} & \textbf{Reported result} & \textbf{Interpretation} \\
 \midrule
-2408.08435 & 2024 & ADAS: 自动化Agent架构搜索 \\
-2410.04444 & 2024 & G\"{o}del Agent: 运行时自修改逻辑 \\
-2505.22954 & 2025 & DGM: Darwin G\"{o}del Machine开放式进化 \\
-2506.13131 & 2025 & AlphaEvolve: 科学算法发现 \\
-2504.21024 & 2025 & WebEvolver: Web Agent+世界模型协同进化 \\
-2505.14970 & 2025 & FunSearch扩展: LLM+进化搜索程序 \\
-2510.16079 & 2025 & Evolver: GEP-powered自进化引擎 \\
-2410.12853 & 2024 & Agent架构自动设计 \\
-2410.15639 & 2024 & 多Agent拓扑搜索 \\
-2510.14253 & 2025 & 代码级自修改框架 \\
-2510.23595 & 2025 & 自动化工具生成 \\
-2506.04651 & 2025 & 架构搜索与NAS结合 \\
-\bottomrule
-\end{longtable}
-
-% ====================================================================
-% A.5 记忆进化 (10篇)
-% ====================================================================
-\subsection*{A.5 基于记忆的进化}
-
-\begin{longtable}{llp{7cm}}
+\endfirsthead
 \toprule
-\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\textbf{Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Baseline} & \textbf{Reported result} & \textbf{Interpretation} \\
 \midrule
-2305.16291 & 2023 & Voyager: Minecraft技能库+自动课程 \\
-2508.19828 & 2025 & Memory-R1: RL训练记忆管理器 \\
-2509.25140 & 2025 & ReasoningBank: 推理策略蒸馏库 \\
-2603.03290 & 2026 & AriadneMem: 演化图记忆+熵感知门控 \\
-2505.16475 & 2025 & SEDM: 自演化分布式记忆 \\
-2508.02085 & 2025 & 长期记忆管理框架 \\
-2508.04700 & 2025 & 记忆压缩与去重 \\
-2511.06449 & 2025 & 经验库自动维护 \\
-2304.03442 & 2023 & Generative Agents: 记忆检索与反思 \\
-2510.18327 & 2025 & 记忆治理与安全 \\
+\endhead
+Reflexion & HumanEval & pass@1 & GPT-4 zero-shot 80.1\%; Codex fine-tuned 67.0\% & 91.0\% & Verbal reflection memory can outperform reported GPT-4 zero-shot \\
+Reflexion & ALFWorld & success & Base agent 75\% & 97\% & Interactive environment benefit from reflection memory \\
+Self-Refine & Seven tasks & task-specific score & One-step generation & \textasciitilde{}20\% absolute average improvement & Broad test-time refinement without weight updates \\
+Self-Debug & TransCoder & pass@1 & Codex 80.4; GPT-4 77.3 & Codex 92.5; GPT-4 90.4 & Execution and explanation feedback repair code translation \\
+Self-Debug & MBPP & accuracy & GPT-4 72.8; GPT-3.5 67.6; StarCoder 47.2 & 80.6 / 74.2 / 53.2 & Self-generated tests and traces improve Python generation \\
+Self-Debug & Spider & dev accuracy & Codex 81.3 & 84.1 & SQL improvements are modest overall but larger on extra-hard cases \\
+STaR & GSM8K & test accuracy & GPT-J direct fine-tuned 5.8\%; few-shot CoT 3.1\% & 10.7\% & Early rationale bootstrapping result; low absolute score by modern standards \\
+STaR & CommonsenseQA & dev accuracy & GPT-J direct fine-tuned 60.0\%; LaMDA CoT 55.6\% & 72.5\% & Small GPT-J model approaches GPT-3 direct fine-tuned baseline of 73.0\% \\
+SPIN & Open LLM Leaderboard & average score & Zephyr-7B-SFT-full 58.14 & 63.16 & Self-play fine-tuning improves without extra preference data \\
+SPIN & GSM8K & accuracy & 26.76 & 38.97 & Largest reported SPIN task gain in local extraction \\
+SPIN & MT-Bench & score & 5.94 & 6.78 & Instruction-following improves through iterations \\
+Self-Rewarding LM & AlpacaEval 2.0 & win rate vs GPT-4 Turbo & M1 9.94\% & M3 20.44\% & Correct source for AlpacaEval self-rewarding result, not SPIN \\
+ReST & IWSLT 2014 De-En & average reward & BC 70.9; online RL 71.6 & ReST G=2,I=3 83.1 & Filtered self-training beats supervised and online RL \\
+ReST-EM & MATH & pass@1 gain & PaLM 2-S / 2-L base & +5.94 pp / +6.34 pp & Binary-feedback EM self-training improves advanced math \\
+ReST-EM & APPS & pass@1 gain & PaLM 2-S* / 2-L base & +5.6 pp / +6.4 pp & Model-generated correct solutions can outperform human-written SFT \\
+DGM & SWE-bench & verified issue resolution & 20.0\% & 50.0\% & Open-ended code-agent evolution with archive selection \\
+DGM & Polyglot & score & 14.2\% & 30.7\% & Cross-benchmark coding improvement \\
+Agent Symbolic Learning & HotPotQA & accuracy & Agents 56.0\%; DSPy 48.4\% & 60.7\% & Textual backpropagation improves QA agent \\
+Agent Symbolic Learning & HumanEval & pass@1 & Agents 68.3\% & 73.2\% & Symbolic learning improves code generation \\
+SelfEvolve & DS-1000 & pass@1 & GPT-3.5 49.4 & 57.2 & Code evolution framework improves data-science code \\
+AlphaEvolve & Mathematical discovery & problem outcomes & 50+ math problems & 75\% rediscovered SOTA; 20\% improved SOTA & Algorithm-discovery evidence from DeepMind report \\
+AlphaEvolve & Systems optimization & efficiency & Baseline production systems & 0.7\% Borg compute recovery; 23\% kernel tiling speedup; 32\% attention speedup & Shows evaluator-driven evolution can affect real infrastructure \\
+AI Scientist-v2 & Peer review & review score/rank & Workshop review baseline & 6.33; top 45\% & Automated science loop reaches workshop-level acceptance signal \\
 \bottomrule
 \end{longtable}
+\normalsize
 
-% ====================================================================
-% A.6 混合/其他 (12篇)
-% ====================================================================
-\subsection*{A.6 混合方法与综述}
+\subsection{Appendix D: Researcher Relationship Network}\label{app:author-network}
 
-\begin{longtable}{llp{7cm}}
+The author network is organized around three foundational lineages: evolutionary computation, language-agent reasoning, and LLM self-improvement.  Their convergence explains why modern self-evolving agents combine archive search, reflection memory, program synthesis, evaluator design, and self-training.
+
+\scriptsize
+\begin{longtable}{p{34mm}p{55mm}p{42mm}p{55mm}}
+\caption{Researcher and institution lineages behind the Self Evolve field.}\\
 \toprule
-\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\textbf{Lineage / cluster} & \textbf{Representative researchers} & \textbf{Representative works} & \textbf{Conceptual contribution} \\
 \midrule
-2312.09390 & 2023 & 终身学习路线图 \\
-2401.13996 & 2024 & Agent优化综述 \\
-2405.06682 & 2024 & 开放式进化系统 \\
-2409.12917 & 2024 & Agent自改进安全分析 \\
-2409.18382 & 2024 & 自演化评估框架 \\
-2410.23912 & 2024 & Agent进化综述 \\
-2501.12793 & 2025 & 多Agent协作进化 \\
-2501.13011 & 2025 & 开放式探索新方法 \\
-2502.13550 & 2025 & Agent系统安全 \\
-2505.16067 & 2025 & 自演化Agent综合分析 \\
-2505.23060 & 2025 & 进化计算+LLM综述 \\
-2506.01716 & 2025 & 开放式搜索与进化 \\
-\bottomrule
-\end{longtable}
-
-% ====================================================================
-% A.7 补充论文 (18篇)
-% ====================================================================
-\subsection*{A.7 补充论文（2025下半年—2026年新增）}
-
-\begin{longtable}{llp{7cm}}
+\endfirsthead
 \toprule
-\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
+\textbf{Lineage / cluster} & \textbf{Representative researchers} & \textbf{Representative works} & \textbf{Conceptual contribution} \\
 \midrule
-2506.09046 & 2025 & Agent学习率优化 \\
-2507.21046 & 2025 & 自修改Agent新架构 \\
-2508.07407 & 2025 & 记忆增强推理 \\
-2508.09586 & 2025 & Agent自评估系统 \\
-2508.19005 & 2025 & 进化策略改进 \\
-2509.04575 & 2025 & 自博弈课程扩展 \\
-2509.22502 & 2025 & Agent优化新方法 \\
-2510.17498 & 2025 & 多Agent协同新范式 \\
-2511.10395 & 2025 & 进化计算新应用 \\
-2511.16043 & 2025 & 安全约束进化 \\
-2511.23473 & 2025 & 自修改代码安全 \\
-2512.09108 & 2025 & Agent能力评估 \\
-2512.22716 & 2025 & 长期进化稳定性 \\
-2412.01951 & 2024 & 自改进Agent回顾 \\
-2410.09336 & 2024 & 策略自修改框架 \\
-2505.06449 & 2025 & 记忆系统综述 \\
-2503.06449 & 2025 & 开放式Agent设计 \\
+\endhead
+Evolutionary computation & Kenneth O. Stanley -> Joel Lehman -> Jeff Clune -> Shengran Hu / Cong Lu & NEAT, novelty search, POET, ADAS, DGM & Open-endedness, quality diversity, archive-based evolution \\
+Language-agent reasoning & Karthik Narasimhan -> Shunyu Yao / collaborators -> Noah Shinn & ReAct, Reflexion, Tree of Thoughts, SWE-agent & Verbal reflection, tool use, environment feedback, agent benchmarks \\
+LLM self-improvement & Aman Madaan / Peter Clark / Sean Welleck / Eric Zelikman & Self-Refine, STaR, RISE, related bootstrapping & Generate-filter-train and generate-critique-refine loops \\
+Google DeepMind program search & Alexander Novikov / Matej Balog / DeepMind teams & FunSearch, AlphaEvolve, ReST & LLM-guided program search and self-training at scale \\
+Meta self-rewarding & Weizhe Yuan / Jason Weston / Meta FAIR & Self-Rewarding LM, Meta-Rewarding & LLM-as-judge, actor/judge/meta-judge training \\
+Anthropic safety self-critique & Yuntao Bai / Ethan Perez / Anthropic team & Constitutional AI, RLAIF & Self-critique and AI feedback for harmlessness \\
+Chinese agent-evolution cluster & AIWaves + Zhejiang University; Peking University + UCSB; Tsinghua groups & Agent Symbolic Learning, Goedel Agent, ChatDev-like systems & Textual backpropagation, self-referential agents, multi-agent software development \\
 \bottomrule
 \end{longtable}
+\normalsize
 
-% ====================================================================
-% A.8 2026年新增论文 (19篇)
-% ====================================================================
-\subsection*{A.8 2026年新增论文}
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[node distance=9mm and 10mm, every node/.style={font=\scriptsize, align=center}]
+\node[draw, rounded corners, fill=cat1!12] (evo) {Evolutionary\\Computation\\Stanley--Lehman--Clune};
+\node[draw, rounded corners, fill=cat2!12, right=of evo] (agent) {Language-Agent\\Reasoning\\Narasimhan--Yao--Shinn};
+\node[draw, rounded corners, fill=cat3!12, right=of agent] (self) {LLM Self-Improvement\\Zelikman--Madaan--Clark};
+\node[draw, rounded corners, fill=cat4!12, below=of agent] (field) {AI Self-Evolution\\Search + Reflection + Memory + Evaluation};
+\draw[->, thick] (evo) -- (field);
+\draw[->, thick] (agent) -- (field);
+\draw[->, thick] (self) -- (field);
+\node[draw, rounded corners, fill=cat5!10, below left=of field] (industry) {Industrial Scaling\\DeepMind, Meta, Anthropic};
+\node[draw, rounded corners, fill=cat6!10, below right=of field] (safety) {Safety and Governance\\Misevolution, OEP, Capability Erosion};
+\draw[->] (field) -- (industry);
+\draw[->] (field) -- (safety);
+\end{tikzpicture}
+\caption{High-level researcher lineage graph.  The field emerges from evolutionary computation, language-agent reasoning, and LLM self-improvement, then branches into industrial scaling and safety governance.}
+\label{fig:appendix-author-lineage}
+\end{figure}
 
-\begin{longtable}{llp{7cm}}
-\toprule
-\textbf{arXiv ID} & \textbf{年份} & \textbf{主要贡献} \\
-\midrule
-2603.03290 & 2026 & AriadneMem: 演化图记忆+熵感知门控 \\
-2603.07970 & 2026 & Agent架构新范式 \\
-2603.15255 & 2026 & SAGE: 四Agent闭环自进化推理 \\
-2603.19461 & 2026 & Hyperagents: 元认知自修改Agent \\
-2603.25928 & 2026 & Agent进化新方法 \\
-2603.28990 & 2026 & 自演化系统新架构 \\
-2604.01658 & 2026 & Agent系统改进 \\
-2604.02674 & 2026 & 记忆管理优化 \\
-2604.10923 & 2026 & 多Agent协作优化 \\
-2604.15034 & 2026 & Autogenesis: 自进化Agent协议(RSPL+SEPL) \\
-2604.17091 & 2026 & GenericAgent: Token高效自进化Agent \\
-2604.18131 & 2026 & 奖励无关自进化探索 \\
-2605.04677 & 2026 & 进化策略新进展 \\
-2605.09315 & 2026 & Capability Erosion: 自进化遗忘+CPE保留 \\
-2605.18930 & 2026 & OEP: 自进化Agent经验投毒攻击 \\
-2605.19102 & 2026 & 安全治理新方法 \\
-2509.26354 & 2025/2026 & Misevolution: 自进化Agent安全风险（ICLR 2026） \\
-2603.15255 & 2026 & SAGE: 多Agent自进化推理框架 \\
-2603.19461 & 2026 & Hyperagents: DGM扩展，元认知自修改 \\
-\bottomrule
-\end{longtable}
-
-\textbf{总计}: 107篇论文（88+19新增），覆盖2022—2026年Agent Self-Evolution领域主要工作。其中2026年论文16篇，安全/治理方向3篇（Misevolution, OEP, Capability Erosion），标志着该领域从性能优化向安全治理的重要转型。
+\paragraph{Appendix summary.}
+Appendix A lists representative projects and operational metadata; Appendix B preserves the 107-paper collected index; Appendix C consolidates benchmark evidence across code, math, agent, and self-training tasks; Appendix D maps the researcher lineages and institutional clusters that connect these methods.

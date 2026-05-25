@@ -449,18 +449,18 @@ This lens explains why the survey repeatedly emphasizes ablation and rollback. A
 
 The author-network and star-analysis materials therefore serve a methodological purpose. They remind the reader that ideas propagate through people, institutions, and software ecosystems. The Clune lineage makes archive-based open-endedness more visible; the Princeton lineage makes agent reasoning benchmarks central; DeepMind makes algorithm discovery and infrastructure optimization credible at scale; open-source projects translate closed patterns into reusable tools; community hype can accelerate adoption but also distort perceived quality. Understanding self-evolution requires understanding this ecosystem, because the field's future will depend as much on evaluators, repositories, and collaboration networks as on isolated algorithms.
 
-
 \paragraph{Lens six: the minimum viable self-evolution claim.} A final practical lens is the minimum viable claim. To claim that a system self-evolves, an author should specify the initial state, the mutable artifact, the feedback source, the variation operator, the selection rule, the retained artifact, and the evaluation split. The author should also report at least one negative or neutral result, because failed candidates reveal whether selection was meaningful. If all candidates are retained, there is no selection. If only successes are shown, there is no visible search. If the evaluator is changed during the loop, the comparison is unstable. If the retained artifact cannot be inspected or reproduced, the improvement cannot become cumulative scientific knowledge.
 
 This minimum claim is intentionally modest. It does not require proving recursive self-improvement, solving open-ended intelligence, or demonstrating indefinite capability growth. It requires only enough structure for another researcher to understand what changed and why the change should be believed. Establishing this modest standard is important because the phrase self-evolving AI will attract broad claims. A disciplined survey should make ambitious work possible by keeping the evidentiary threshold explicit. The field can then distinguish early but real self-evolution loops from speculative narratives about autonomous improvement.
 
-
 \paragraph{Transition to the remainder of the survey.} These lenses prepare the reader for the chapters that follow. The survey will repeatedly return to the same operational questions because they are the common denominator across otherwise different methods. Whether a system stores reflections, searches over agent code, evolves algorithms, trains from self-generated tasks, or curates long-term memory, the evidence must show how experience becomes a retained and testable change. That is the organizing principle of this paper.
-
 
 The introduction is therefore not a decorative preface. It is the contract for the survey: every later claim about improvement, autonomy, or evolution should be interpretable through these criteria, and every reader should be able to trace a method back to the loop that produced and retained its change.
 
 This contract guides interpretation.
+
+
+The threshold matters because an introduction to this topic must do more than motivate a narrow contribution. It must make a new field readable across communities that normally use different assumptions. A machine-learning reader may expect training curves and generalization bounds. A software-engineering reader may expect tests, commits, and rollbacks. An evolutionary-computation reader may expect populations, diversity, and fitness. A safety reader may expect immutable constraints and threat models. A product builder may expect latency, maintenance, and user trust. AI self-evolution sits at the intersection of all these expectations. The remainder of the survey therefore uses the introduction as a shared vocabulary layer. When later chapters describe a method, the reader should be able to ask the same questions each time: what changed, what signal justified the change, what evidence was independent, what was retained, what could regress, and who can audit the result.
 
 \subsection{Paper Structure}\label{sec:intro-structure}
 

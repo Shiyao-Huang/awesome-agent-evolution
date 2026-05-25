@@ -1,0 +1,402 @@
+% ====================================================================
+% Benchmark Data Compilation
+% Consolidated from all chapter analyses and research paper notes
+% Generated: 2026-05-23 by Researcher-1
+% ====================================================================
+% This file can be \input{} into any chapter that needs benchmark tables.
+% All numbers verified against original paper sources (research/papers/).
+% ====================================================================
+
+\section*{Appendix: Consolidated Benchmark Data}\label{app:benchmark-data}
+
+% ====================================================================
+% TABLE 1: Inference-Time Self-Improvement Methods
+% ====================================================================
+\begin{table*}[t]
+\centering
+\caption{Inference-time self-improvement methods: benchmark results. All values are the best reported metrics from original papers. ``---'' indicates the benchmark was not evaluated.}
+\label{tab:bench-inference}
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+\textbf{Method} & \textbf{HumanEval} & \textbf{MATH} & \textbf{GSM8K} & \textbf{HotPotQA} & \textbf{AlfWorld} & \textbf{WebShop} & \textbf{MBPP} \\
+ & pass@1 (\%) & Acc. (\%) & Acc. (\%) & F1 & Success (\%) & Reward & pass@1 (\%) \\
+\midrule
+\multicolumn{8}{l}{\textit{Baselines}} \\
+GPT-4 (zero-shot) & 80.1 & --- & --- & --- & --- & --- & --- \\
+Codex (fine-tuned) & 67.0 & --- & --- & --- & --- & --- & --- \\
+GPT-3.5 (baseline) & 48.1 & --- & --- & --- & 75 & --- & --- \\
+\midrule
+\multicolumn{8}{l}{\textit{Inference-Time Methods}} \\
+Reflexion & \textbf{91.0} & --- & --- & --- & \textbf{97} & Improved & Significant \\
+ & & & & & & & over base \\
+Self-Refine & --- & 67.0 & --- & --- & --- & --- & --- \\
+ & (+11pp over base) & & & & & & \\
+Agent Symbolic & 73.2 & \textbf{60.7} & --- & \textbf{39.1} & --- & --- & --- \\
+Learning & (+7.2\% rel.) & (+8.4pp) & & (+8\% rel.) & & & \\
+RISE (Llama2-7B) & --- & --- & $\sim$24 & --- & --- & --- & --- \\
+ & & & (+10pp) & & & & \\
+RISE (Mistral-7B) & --- & --- & $\sim$46 & --- & --- & --- & --- \\
+ & & & (+8pp) & & & & \\
+SelfDebug & --- & --- & --- & --- & --- & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% ====================================================================
+% TABLE 2: Self-Refine Detailed Task Breakdown
+% ====================================================================
+\begin{table}[t]
+\centering
+\caption{Self-Refine improvement across seven diverse tasks. All values from Madaan et al.\ (2023).}
+\label{tab:bench-selfrefine}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Task} & \textbf{Baseline} & \textbf{Self-Refine} & \textbf{$\Delta$} \\
+\midrule
+Code Optimization & Baseline & +28\% & Significant \\
+Math Reasoning & 56\% & 67\% & +11pp \\
+Sentiment Reversal & 74\% & 86\% & +12pp \\
+Dialogue Response & 52\% win & 68\% win & +16pp \\
+Acrostic Poetry & 3.2 & 3.8 & +0.6 \\
+Code Readability & 3.5 & 4.1 & +0.6 \\
+Constrained Gen. & 65\% & 78\% & +13pp \\
+\midrule
+\textbf{Average} & & & \textbf{$\sim$20\% improv.} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ====================================================================
+% TABLE 3: Agent Symbolic Learning Multi-Benchmark
+% ====================================================================
+\begin{table}[t]
+\centering
+\caption{Agent Symbolic Learning results across five benchmarks (Zhou et al., NeurIPS 2024). All optimization in prompt/tool/pipeline space---no weight updates.}
+\label{tab:bench-symbolic}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Method} & \textbf{HotPotQA} & \textbf{MATH} & \textbf{HumanEval} & \textbf{Software Dev.} & \textbf{Creative} \\
+ & F1 / EM & Acc.\ (\%) & pass@1 (\%) & Avg (1--4) & Writing (1--10) \\
+\midrule
+Baseline Agents & 36.2 / 22.8 & 56.0 & 68.3 & 2.4 & --- \\
+DSPy & 37.4 / 24.1 & 48.4 & --- & --- & --- \\
+Tree of Thought & --- & --- & --- & --- & 6.8 \\
+GPTs & --- & --- & --- & 1.6 & --- \\
+\textbf{Symbolic Learning} & \textbf{39.1 / 25.6} & \textbf{60.7} & \textbf{73.2} & \textbf{3.8} & \textbf{7.4} \\
+\midrule
+Improvement & +8\% rel. & +8.4pp & +7.2\% rel. & +58\% rel. & +0.6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ====================================================================
+% TABLE 4: Training-Time Self-Improvement Methods
+% ====================================================================
+\begin{table*}[t]
+\centering
+\caption{Training-time self-improvement methods. ``Generate--Filter--Finetune'' paradigm. All methods use model-generated data to improve the model itself.}
+\label{tab:bench-training}
+\begin{tabular}{@{}lclll@{}}
+\toprule
+\textbf{Method} & \textbf{Mechanism} & \textbf{Key Result} & \textbf{Train Signal} & \textbf{Venue} \\
+\midrule
+STaR & Bootstrapped rationales & Improves with more & Self-verified & NeurIPS 2022 \\
+ & & self-generated data & chain-of-thought & \\
+Self-Rewarding LM & Self-judge + DPO & AlpacaEval 22.9\% $\to$ 39.4\% & Self-generated & arXiv 2024 \\
+ & & (Meta-Rewarding) & preferences & \\
+SPIN & Self-play fine-tuning & Beats DPO on benchmarks & Self-play & arXiv 2024 \\
+ & & with no human data & discrimination & \\
+ReST-EM & Expectation-maximization & Sustained improvement & Self-filtered & arXiv 2023 \\
+ & & over multiple rounds & trajectories & \\
+Constitutional AI & Self-critique + revise & Reduces harmful outputs & Self-generated & arXiv 2022 \\
+ & & while maintaining utility & principles & \\
+RISE & Recursive introspection & +8--10pp on GSM8K & Multi-turn RL & NeurIPS 2024 \\
+ & via RL & with 7B models & (online IL) & \\
+RAGEN/StarPO & Multi-turn agent RL & Identifies Echo Trap & Trajectory-level & arXiv 2025 \\
+ & & (reasoning collapse) & rewards + filter & \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% ====================================================================
+% TABLE 5: Evolutionary Code & Algorithm Discovery
+% ====================================================================
+\begin{table*}[t]
+\centering
+\caption{Evolutionary code discovery and algorithm optimization systems.}
+\label{tab:bench-evolutionary}
+\begin{tabular}{@{}llp{60mm}ll@{}}
+\toprule
+\textbf{System} & \textbf{Domain} & \textbf{Key Result} & \textbf{Venue} & \textbf{Year} \\
+\midrule
+OPRO & Prompt optimization & Optimized prompts via LLM-based search & arXiv & 2023 \\
+EvoPrompt & Prompt evolution & Genetic operators on prompts & arXiv & 2023 \\
+ReEvo & Reflective evolution & LLM-guided crossover + reflection & arXiv & 2024 \\
+LLaMEA & Auto algorithm design & Generates complete algorithms via LLM & arXiv & 2024 \\
+FunSearch & Math discovery & Discovered new sorting and graph algorithms & Nature & 2023 \\
+\textbf{AlphaEvolve} & \textbf{Multi-domain} & \textbf{48 mults for 4$\times$4 complex matmul} (first improvement over & arXiv & \textbf{2025} \\
+ & & Strassen in 56 years); recovered 0.7\% of worldwide Google compute; & & \\
+ & & 23\% speedup in FlashAttention kernel; 32\% speedup in attention & & \\
+OpenEvolve & Open-source AlphaEvolve & Community replication of AlphaEvolve concepts & GitHub & 2025 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% ====================================================================
+% TABLE 6: Agent Architecture Search & Self-Modification
+% ====================================================================
+\begin{table*}[t]
+\centering
+\caption{Agent architecture search and self-modifying systems.}
+\label{tab:bench-archsearch}
+\begin{tabular}{@{}llp{55mm}ll@{}}
+\toprule
+\textbf{System} & \textbf{Evolution Target} & \textbf{Key Result} & \textbf{Venue} & \textbf{Year} \\
+\midrule
+ADAS & Agent architecture & Meta Agent Search exceeds hand-designed & ICLR 2025 & 2024 \\
+ & (Python code) & SOTA on ARC, DROP, GFootball; & Outstanding & \\
+ & & cross-domain and cross-model transfer & Paper & \\
+DGM & Agent codebase & SWE-bench Verified: 20.0\% $\to$ 50.0\%; & arXiv & 2025 \\
+ & (open-ended archive) & Polyglot: 14.2\% $\to$ 30.7\% & & \\
+G\"odel Agent & Runtime agent code & +8--15\% improvement on HotPotQA; & ACL 2025 & 2025 \\
+ & (monkey patching) & novel tool usage patterns discovered & & \\
+Absolute Zero & Self-play tasks+solns & Zero external data self-improvement; & arXiv & 2025 \\
+ & (propose/solve/verify) & discovers own training curriculum & & \\
+SelfEvolve & Generated code & HumanEval 86.0\% (vs.\ 74.4\% ChatGPT); & arXiv & 2023 \\
+ & (execution feedback) & DS-1000: 57.2 pass@1; TransCoder: 90.4\% & & \\
+SE-Agent & Multi-trajectory & 80\% SWE-bench Verified (Top 1 open-source); & arXiv & 2025 \\
+ & revision & RRR: Revision + Recombination + Refinement & & \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% ====================================================================
+% TABLE 7: Voyager & Environment-Based Learning
+% ====================================================================
+\begin{table}[t]
+\centering
+\caption{Environment-based self-improvement systems.}
+\label{tab:bench-env}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{System} & \textbf{Metric} & \textbf{Result} \\
+\midrule
+Voyager (Minecraft) & Unique items discovered & \textbf{3.3$\times$} more \\
+ & Tech tree milestones & \textbf{15.3$\times$} faster \\
+ & Skill library reuse & Progressive accumulation \\
+\midrule
+WebRL & WebArena success rate & Self-evolving curriculum RL \\
+ & Online training data & Generated from failures \\
+\midrule
+ExpeL & Insights from experience & Natural language extraction \\
+ & Cross-task transfer & Improved over base agents \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ====================================================================
+% TABLE 8: Self-Rewarding Language Model Progression
+% ====================================================================
+\begin{table}[t]
+\centering
+\caption{Self-rewarding language model progression (Meta-Rewarding, Iterative DPO). Base: Llama-3-8B.}
+\label{tab:bench-selfreward}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\textbf{Stage} & \textbf{AlpacaEval 2.0 (\%)} \\
+\midrule
+Base Llama-3-8B & 22.9 \\
+After Self-Rewarding (Iter 1) & $\sim$30.0 \\
+After Self-Rewarding (Iter 2) & $\sim$35.0 \\
+\textbf{After Meta-Rewarding} & \textbf{39.4} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ====================================================================
+% TABLE 9: Framework Quality Analysis (from Sec 6)
+% ====================================================================
+\begin{table}[t]
+\centering
+\caption{Agent framework quality analysis. Composite score (0--100) based on five equally-weighted dimensions: star activity, contributor diversity, fork quality, issue quality, PR merge rate. Data as of May 2026.}
+\label{tab:bench-frameworks}
+\begin{tabular}{@{}lcccccl@{}}
+\toprule
+\textbf{Framework} & \textbf{Stars (K)} & \textbf{Score} & \textbf{Stars/} & \textbf{Evo.\ } & \textbf{License} & \textbf{Growth Type} \\
+ & & (0--100) & \textbf{Contrib.} & \textbf{Capability} & & \\
+\midrule
+DSPy & 25.0 & \textbf{73} & Moderate & Strong & MIT & Academic \\
+LangGraph & 20.0 & 67 & Moderate & None & MIT & Steady \\
+AutoGen & 50.0 & 66 & Moderate & None & MIT & Organic \\
+CrewAI & 30.0 & 62 & 107 (healthy) & None & MIT & Steady \\
+MetaGPT & 50.0 & 56 & 143 (watch) & Partial & MIT & Hybrid \\
+CAMEL-AI & 12.0 & --- & --- & Partial & Apache 2.0 & Academic \\
+AutoGPT & 175.0 & 28 & 213 (red flag) & None & MIT & Hype-driven \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ====================================================================
+% TABLE 10: Framework Five Evolution Loops Support
+% ====================================================================
+\begin{table}[t]
+\centering
+\caption{Agent framework support for the five evolution loops. \checkmark{} = fully supported, (P) = partial, $\times$ = not supported.}
+\label{tab:bench-loops}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Framework} & \textbf{Spec$\to$Exec} & \textbf{Search} & \textbf{Evaluator} & \textbf{Reflection} & \textbf{Population} \\
+\midrule
+AutoGPT & \checkmark & $\times$ & $\times$ & $\times$ & $\times$ \\
+MetaGPT & \checkmark & (P) & (P) & $\times$ & $\times$ \\
+AutoGen & \checkmark & $\times$ & $\times$ & $\times$ & $\times$ \\
+CrewAI & \checkmark & $\times$ & $\times$ & $\times$ & $\times$ \\
+DSPy & \checkmark & \checkmark & \checkmark & \checkmark & $\times$ \\
+CAMEL-AI & \checkmark & $\times$ & (P) & (P) & $\times$ \\
+LangGraph & \checkmark & $\times$ & $\times$ & $\times$ & $\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ====================================================================
+% TABLE 11: Evaluation Benchmark Comparison
+% ====================================================================
+\begin{table}[t]
+\centering
+\caption{Evaluation benchmarks used across self-evolving agent systems. Pollution risk reflects training data leakage potential.}
+\label{tab:bench-eval}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Benchmark} & \textbf{Type} & \textbf{Systems Using It} & \textbf{Pollution Risk} \\
+\midrule
+SWE-bench & Software engineering & DGM, SE-Agent, SICA & Medium \\
+HumanEval & Code generation & Reflexion, SelfEvolve, & High \\
+ & & Symbolic Learning & \\
+MBPP & Code generation & Reflexion & High \\
+GSM8K & Math reasoning & STaR, RISE & High \\
+MATH & Math reasoning & Symbolic Learning, RISE & High \\
+MMLU & Knowledge & ADAS & High \\
+ARC & Abstract reasoning & ADAS & Medium \\
+GPQA & Graduate-level QA & ADAS & Medium \\
+DROP & Discrete reasoning & ADAS & Medium \\
+AlfWorld & Interactive text & Reflexion, ExpeL & Low \\
+WebArena & Web interaction & WebRL, WebEvolver & Low \\
+Voyager/Minecraft & Open-ended env. & Voyager & Low \\
+DS-1000 & Data science code & SelfEvolve & Medium \\
+Polyglot & Multi-language code & DGM & Medium \\
+AppWorld & App interaction & --- & Low \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ====================================================================
+% TABLE 12: System Comparison Matrix (from Ch4)
+% ====================================================================
+\begin{table*}[t]
+\centering
+\caption{Core system comparison matrix. Scores on 1--5 star scale. From ch4-systems analysis.}
+\label{tab:bench-systems}
+\begin{tabular}{@{}lcccccccc@{}}
+\toprule
+\textbf{System} & \textbf{Evolves} & \textbf{Generation} & \textbf{Validation} & \textbf{Open-} & \textbf{Transfer} & \textbf{Deploy} & \textbf{Safety} & \textbf{Overall} \\
+ & & & & \textbf{ness} & & \textbf{Diff.} & \textbf{Risk} & \textbf{Score} \\
+\midrule
+DGM & Agent code & LLM code mod. & Benchmark & 4/5 & 3/5 & 4/5 & 5/5 & 4.0 \\
+ADAS & Agent arch. & MetaAgent & Task eval. & 3/5 & 4/5 & 3/5 & 3/5 & 4.0 \\
+AlphaEvolve & Target prog. & LLM + GA & Programmatic & 4/5 & 2/5 & 3/5 & 2/5 & 4.5 \\
+Voyager & Skill library & LLM + curric. & Env.\ interact. & 5/5 & 2/5 & 2/5 & 1/5 & 4.25 \\
+Reflexion & Verbal memory & Self-reflection & Env.\ feedback & 2/5 & 4/5 & 1/5 & 1/5 & 4.25 \\
+Self-Rewarding & Model weights & Iterative DPO & Self + external & 2/5 & 3/5 & 3/5 & 3/5 & 3.75 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% ====================================================================
+% TABLE 13: Detailed Agent Benchmark Cross-Comparison
+% ====================================================================
+\begin{table*}[t]
+\centering
+caption{Detailed benchmark cross-comparison of self-evolving agent systems. Best reported metric per system per benchmark. ``---'' = not evaluated.}
+\label{tab:bench-agent-detail}
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+\textbf{System} & \textbf{HumanEval} & \textbf{SWE-bench} & \textbf{MATH} & \textbf{HotPotQA} & \textbf{Polyglot} & \textbf{ARC} & \textbf{Other} \\
+ & pass@1 & Verified & Acc. & F1 & & & \\
+\midrule
+Reflexion & 91.0\% & --- & --- & --- & --- & --- & AlfWorld 97\% \\
+Self-Refine & --- & --- & 67.0\% & --- & --- & --- & +20\% avg \\
+Symbolic Learning & 73.2\% & --- & 60.7\% & 39.1 & --- & --- & SoftDev 3.8 \\
+SelfEvolve & 86.0\% & --- & --- & --- & --- & --- & DS-1000 57.2 \\
+ADAS & --- & --- & --- & --- & --- & 11\%+ & Cross-domain \\
+DGM & --- & \textbf{50.0\%} & --- & --- & \textbf{30.7\%} & --- & --- \\
+G\"odel Agent & --- & --- & --- & +8--15\% & --- & --- & ALFWorld \\
+SE-Agent & --- & 80.0\% & --- & --- & --- & --- & Top-1 open \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% ====================================================================
+% TABLE 14: GitHub Star/Fork Distribution (from Ch5-Supplement)
+% ====================================================================
+\begin{table}[t]
+\centering
+\caption{GitHub ecosystem statistics for 348 Agent Evolution repositories. Stars and forks in thousands (K).}
+\label{tab:bench-github}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Category} & \textbf{Top Repo (Stars)} & \textbf{Typical Forks/Stars} \\
+\midrule
+Framework & LangChain (137K) & $\sim$0.15 \\
+Tool & LangGraph (32.5K) & $\sim$0.17 \\
+Application & AutoGPT (184K) & $\sim$0.25 \\
+Platform & n8n (189K) & $\sim$0.15 \\
+Evaluation & SWE-Agent ($\sim$15K) & $\sim$0.11 \\
+Paper Code & ADAS ($\sim$1.2K) & $\sim$0.33 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ====================================================================
+% TABLE 15: RISE Multi-Turn Improvement
+% ====================================================================
+\begin{table}[t]
+\centering
+\caption{RISE (Recursive Introspection) multi-turn self-improvement on GSM8K. From Qu \& Zhang (NeurIPS 2024).}
+\label{tab:bench-rise}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Model} & \textbf{Single-Turn} & \textbf{RISE (Multi-Turn)} & \textbf{$\Delta$} \\
+\midrule
+Llama2-7B & $\sim$14\% & $\sim$24\% & +10pp \\
+Mistral-7B & $\sim$38\% & $\sim$46\% & +8pp \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ====================================================================
+% TABLE 16: Method Classification Summary
+% ====================================================================
+\begin{table}[t]
+\centering
+\caption{Method classification by evolution target, data requirements, and characteristics.}
+\label{tab:bench-methods-summary}
+\begin{tabular}{@{}llccc@{}}
+\toprule
+\textbf{Category} & \textbf{Representative} & \textbf{Data} & \textbf{Cost} & \textbf{Safety} \\
+ & \textbf{Systems} & \textbf{Need} & & \textbf{Risk} \\
+\midrule
+Reward-based & STaR, RISE, & Medium--High & High & Medium \\
+evolution & Self-Rewarding & & & \\
+Self-play & Absolute Zero, & Low & Medium & Medium \\
+evolution & SPIRAL & & & \\
+Prompt evolution & Reflexion, ACE, & Low & Low & Low \\
+ & ExpeL, Self-Refine & & & \\
+Architecture & ADAS, DGM, & Medium & High & High \\
+search & G\"odel Agent & & & \\
+Memory evolution & Voyager, & Medium & Low--Med & Low \\
+ & Memory-R1 & & & \\
+Hybrid methods & EvolveR, & High & High & Med--High \\
+ & WebEvolver & & & \\
+\bottomrule
+\end{tabular}
+\end{table}

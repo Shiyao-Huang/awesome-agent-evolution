@@ -27,23 +27,7 @@ The main evolution loop, implemented in \texttt{opt\_utils.py} (lines 338--1035)
 
 \subsubsection{Prompt Architecture}
 
-OPRO employs a carefully designed two-layer prompt architecture. The outer meta-prompt presents the optimization history in a structured format:
-
-\begin{quote}
-\small\texttt{Your task is to generate the instruction <INS>. Below are some previous instructions with their scores. The score ranges from 0 to 100.\\
-\\
-text: [lowest-scoring instruction]\\
-score: [score]\\
-\\
-...\\
-\\
-text: [highest-scoring instruction]\\
-score: [score]\\
-\\
-Generate an instruction that is different from all the instructions <INS> above, and has a higher score.}
-\end{quote}
-
-Several design choices are notable. First, instructions are sorted from lowest to highest score, so the LLM reads the best solutions last---anchoring its generation on the most successful patterns. Second, the meta-prompt includes few-shot task examples selected using an error-driven strategy: examples where the current best instruction fails most frequently are prioritized via a \texttt{wrong\_questions\_from\_start\_counter}, creating a curriculum that focuses the optimizer on its weakest cases. Third, the delimiter tags (\texttt{<INS>} and \texttt{</INS>} for GPT models, brackets for PaLM) enable reliable extraction of generated instructions.
+OPRO employs a carefully designed two-layer prompt architecture. The outer meta-prompt presents the optimization history in a structured format. Instructions are sorted from lowest to highest score, so the LLM reads the best solutions last---anchoring its generation on the most successful patterns. The meta-prompt includes few-shot task examples selected using an error-driven strategy: examples where the current best instruction fails most frequently are prioritized via a \texttt{wrong\_questions\_from\_start\_counter}, creating a curriculum that focuses the optimizer on its weakest cases. The delimiter tags (\texttt{<INS>} and \texttt{</INS>} for GPT models, brackets for PaLM) enable reliable extraction of generated instructions.
 
 The inner task prompt wraps the candidate instruction around the actual problem instance in one of four positions: before the question (\texttt{before\_Q}), at the question start (\texttt{Q\_begin}), at the question end (\texttt{Q\_end}), or at the answer start (\texttt{A\_begin}). The optimal position is determined empirically per dataset, highlighting that instruction placement---not just instruction content---significantly affects performance.
 
@@ -53,15 +37,15 @@ OPRO demonstrates that the same optimization framework applies across qualitativ
 
 \textbf{Prompt optimization}. On GSM8K (grade-school math), OPRO discovers the now-famous prompt ``Take a deep breath and work on this problem step-by-step,'' which achieves 80\% accuracy---an 18 percentage point improvement over the initial human-written prompt (62\%). On BIG-Bench Hard (BBH), improvements reach up to 25 percentage points across the 27 subtasks. On MMLU (57 subtasks), OPRO-optimized prompts consistently outperform both zero-shot and manually engineered few-shot baselines.
 
-\textbf{Continuous optimization}. For linear regression $f(w,b) = \|y - (Xw + b)\|^2$, the LLM proposes new $(w,b)$ pairs guided by a history of (parameters, objective value) pairs in textual format (e.g., ``input: w=15, b=14, value: 50.0''). The system converges to near-optimal solutions within 500 steps, demonstrating that LLMs can perform numerical optimization through natural language reasoning alone.
+\textbf{Continuous optimization}. For linear regression $f(w,b) = \|y - (Xw + b)\|^2$, the LLM proposes new $(w,b)$ pairs guided by a history of (parameters, objective value) pairs in textual format. The system converges to near-optimal solutions within 500 steps, demonstrating that LLMs can perform numerical optimization through natural language reasoning alone.
 
-\textbf{Combinatorial optimization}. For the Traveling Salesman Problem (TSP), the LLM generates candidate routes in trace format (\texttt{<trace> 0,1,2,3,... </trace>}), with solutions competitive against nearest-neighbor and farthest-insertion initialization heuristics. This result is particularly notable because TSP is a classic NP-hard problem where traditional approaches rely on domain-specific algorithm design.
+\textbf{Combinatorial optimization}. For the Traveling Salesman Problem (TSP), the LLM generates candidate routes in trace format, with solutions competitive against nearest-neighbor and farthest-insertion initialization heuristics. This result is particularly notable because TSP is a classic NP-hard problem where traditional approaches rely on domain-specific algorithm design.
 
 \subsubsection{Limitations and Significance}
 
-OPRO's approach has several constraints. Optimization quality is bounded by the LLM's ability to reason about numerical patterns from textual score histories---a task for which language models are not inherently designed. The search is limited to the instruction space and cannot modify model weights or architecture. Each optimization step requires $N$ LLM calls for generation plus $|\mathcal{T}_{\text{train}}|$ calls for scoring, making the process expensive. Finally, the method lacks convergence guarantees: there is no formal proof that the optimization loop will find global optima or even monotonically improve.
+OPRO's approach has several constraints. Optimization quality is bounded by the LLM's ability to reason about numerical patterns from textual score histories---a task for which language models are not inherently designed. The search is limited to the instruction space and cannot modify model weights or architecture. Each optimization step requires $N$ LLM calls for generation plus $|\mathcal{T}_{\text{train}}|$ calls for scoring, making the process expensive. The method lacks convergence guarantees: there is no formal proof that the optimization loop will find global optima or even monotonically improve.
 
-Despite these limitations, OPRO established the paradigm of ``LLM as optimizer'' that subsequent systems would extend. Its key contribution is demonstrating that the same LLM can serve as optimizer across qualitatively different problem types---from discrete prompt optimization to continuous numerical optimization to combinatorial search---without any problem-specific adaptation. This universality is a direct consequence of formulating optimization in natural language space.
+Despite these limitations, OPRO established the paradigm of ``LLM as optimizer'' that subsequent systems would extend. Its key contribution is demonstrating universality: the same LLM can serve as optimizer across qualitatively different problem types without any problem-specific adaptation.
 
 \subsection{LLMs as Evolutionary Operators}
 \label{sec:llm-evolutionary}
@@ -76,251 +60,99 @@ In the GA mode, an initial population of prompts is created (either hand-written
 
 In the DE mode, for each prompt $p$, the system generates a candidate $p'$ using LLM-guided differential evolution templates (with three variant designs), replacing $p$ only if $p'$ achieves higher performance. This greedy update strategy provides more stable convergence than the generational replacement used in GA mode.
 
-EvoPrompt explicitly separates the roles of two language models: an ``evolution model'' (recommended GPT-4 class) that executes crossover and mutation operators, and a ``task model'' (any LLM) that uses the prompts to perform the target task. This separation allows the optimization to work with any task model, including models too small to perform meaningful self-improvement.
-
-Evaluated on 31 datasets spanning classification, summarization, simplification, and BIG-Bench Hard reasoning, EvoPrompt significantly outperforms human-designed prompts and prior automatic prompt optimization methods (APE, LM-BFF). On BBH tasks, improvements reach up to 25\%, demonstrating that evolutionary search in prompt space can discover strategies that human prompt engineers miss.
+EvoPrompt explicitly separates the roles of two language models: an ``evolution model'' (recommended GPT-4 class) that executes crossover and mutation operators, and a ``task model'' (any LLM) that uses the prompts to perform the target task. Evaluated on 31 datasets spanning classification, summarization, simplification, and BIG-Bench Hard reasoning, EvoPrompt significantly outperforms human-designed prompts and prior automatic prompt optimization methods. On BBH tasks, improvements reach up to 25\%.
 
 \subsubsection{The OpenELM Framework}
 
 OpenELM~\citep{openelm2023} (Open-source Evolution through Large Models), developed by CarperAI (Stability AI), provides a general-purpose framework for LLM-driven evolutionary search that extends beyond prompt optimization to full program evolution. It replaces traditional mutation and crossover operators with LLM-based counterparts that understand the semantics of the programs they modify.
 
-The architecture follows a four-layer hierarchy:
-\begin{enumerate}
-\item \textbf{ELM} (main controller): Orchestrates the overall evolution process via Hydra configuration.
-\item \textbf{MAP-Elites} (selection algorithm): Maintains a quality-diversity grid that maps programs by behavioral descriptors and retains the highest-performing program per cell.
-\item \textbf{Environment} (fitness evaluation): Problem-specific evaluation functions with sandboxed execution.
-\item \textbf{MutationModel} (LLM variation): Generates candidate modifications through prompting, including a specialized diff model for precise code mutations.
-\end{enumerate}
+The architecture follows a four-layer hierarchy: ELM (main controller) orchestrates the overall evolution process via Hydra configuration; MAP-Elites (selection algorithm) maintains a quality-diversity grid that maps programs by behavioral descriptors and retains the highest-performing program per cell; Environment (fitness evaluation) provides problem-specific evaluation functions with sandboxed execution; and MutationModel (LLM variation) generates candidate modifications through prompting, including a specialized diff model for precise code mutations.
 
-For mutation, the LLM receives the parent program and an instruction to ``modify this solution while preserving functionality but trying a different approach.'' For crossover, the LLM receives two parent programs and is asked to ``combine the strengths of both solutions, generating a new solution that inherits their advantages.'' This semantic crossover is qualitatively different from traditional genetic crossover, which typically operates on token or AST-node boundaries without understanding program meaning. The diff model further enables surgical code changes rather than wholesale rewrites.
+For mutation, the LLM receives the parent program and an instruction to ``modify this solution while preserving functionality but trying a different approach.'' For crossover, the LLM receives two parent programs and is asked to ``combine the strengths of both solutions, generating a new solution that inherits their advantages.'' This semantic crossover is qualitatively different from traditional genetic crossover, which typically operates on token or AST-node boundaries without understanding program meaning.
 
-OpenELM supports three quality-diversity algorithms---standard MAP-Elites, CVT-MAP-Elites (continuous Voronoi tessellation), and Deep Grid MAP-Elites---across five built-in environments: 2D physics simulation (Sodarace), image evolution, programming puzzles, prompt evolution, and poetry generation. All code execution occurs within gVisor sandbox containers for security. The framework is designed for extensibility: new environments can be added by implementing a standard interface for evaluation and feature extraction.
-
-The GitNexus knowledge graph analysis of OpenELM's codebase reveals 3,596 symbol nodes, 6,639 dependency edges, 157 clusters, and 139 flows---a complex system that nonetheless maintains clean module boundaries. Core execution flows follow the pattern \texttt{Main $\rightarrow$ Mutate\_code $\rightarrow$ Evaluate $\rightarrow$ Pool\_exec\_processes}, with fitness values feeding back into the MAP-Elites grid update.
+OpenELM supports three quality-diversity algorithms---standard MAP-Elites, CVT-MAP-Elites (continuous Voronoi tessellation), and Deep Grid MAP-Elites---across five built-in environments: 2D physics simulation (Sodarace), image evolution, programming puzzles, prompt evolution, and poetry generation. All code execution occurs within gVisor sandbox containers for security.
 
 \subsubsection{ReEvo: Reflective Evolution as Language Hyper-Heuristics}
 
-ReEvo~\citep{reevo2024} (NeurIPS 2024, from the AI4CO community) extends the LLM-as-evolutionary-operator paradigm with a dual-layer reflection mechanism that mimics human expert design processes. The paper introduces the concept of \emph{language hyper-heuristics} (LHHs): rather than searching within a fixed set of low-level heuristics (as traditional hyper-heuristics do), LHHs leverage the LLM's internet-scale knowledge to explore an open-ended space of heuristic designs.
+ReEvo~\citep{reevo2024} (NeurIPS 2024) extends the LLM-as-evolutionary-operator paradigm with a dual-layer reflection mechanism that mimics human expert design processes. The paper introduces the concept of \emph{language hyper-heuristics} (LHHs): rather than searching within a fixed set of low-level heuristics, LHHs leverage the LLM's internet-scale knowledge to explore an open-ended space of heuristic designs.
 
-Beyond standard mutation and crossover, ReEvo introduces two reflection layers:
-\begin{itemize}
-\item \textbf{Short-term reflection}: After evaluating a candidate heuristic on test instances, the LLM analyzes its performance, generating specific textual feedback about strengths, weaknesses, and potential improvements. This feedback directly informs the next mutation step.
-\item \textbf{Long-term reflection}: Across iterations, the system accumulates structured domain knowledge in a growing text buffer (\texttt{long\_term\_reflection\_str}). This buffer serves as a persistent memory of ``what works and what doesn't,'' encoding lessons like ``exponential decay outperforms linear decay for this problem class'' or ``adding a diversification term prevents premature convergence.'' This accumulated knowledge accelerates convergence on subsequent iterations.
-\end{itemize}
+Beyond standard mutation and crossover, ReEvo introduces two reflection layers: short-term reflection (analyzing current heuristic performance and generating specific improvement suggestions) and long-term reflection (accumulating structured domain knowledge in a growing text buffer that serves as persistent memory of ``what works and what doesn't''). ReEvo supports four configurable LLMs for different roles: generator, short-term reflector, long-term reflector, and separate crossover/mutation LLMs. This multi-model architecture allows practitioners to allocate expensive model calls selectively.
 
-ReEvo supports four configurable LLMs for different roles: a generator LLM (proposing new heuristics), a short-term reflector, a long-term reflector, and separate crossover/mutation LLMs. This multi-model architecture allows practitioners to allocate expensive model calls selectively---using a strong model for generation and reflection, while delegating simpler crossover operations to a cheaper model.
-
-On combinatorial optimization benchmarks---TSP, CVRP (Capacitated Vehicle Routing Problem), OP (Orienteering Problem), MKP (Multiple Knapsack Problem), BPP (Bin Packing Problem), and DPP---ReEvo discovers heuristics that outperform human-designed baselines in both white-box and black-box settings. The framework operates across multiple algorithm types: neural combinatorial optimization (NCO), genetic algorithms (GA), ant colony optimization (ACO), guided local search (GLS), and constructive heuristics. Its slogan ``5 minutes for a SOTA algorithm'' captures the efficiency of the approach: with default settings of population size 4 and 20 function evaluations, ReEvo can find competitive solutions in minutes.
-
-The modular design allows new problems to be integrated by defining three components: a problem configuration (Hydra YAML), an evaluation pipeline (Python script), and prompt templates. This three-layer abstraction separates domain specification from the evolutionary machinery, enabling rapid application to new problem domains.
+On combinatorial optimization benchmarks---TSP, CVRP, OP, MKP, BPP, and DPP---ReEvo discovers heuristics that outperform human-designed baselines in both white-box and black-box settings, with the slogan ``5 minutes for a SOTA algorithm.'' The modular design allows new problems to be integrated by defining three components: problem configuration, evaluation pipeline, and prompt templates.
 
 \subsubsection{LLaMEA: Automated Algorithm Discovery}
 
-LLaMEA~\citep{llamea2025} (Large Language Model Evolutionary Algorithm), published in IEEE Transactions on Evolutionary Computation (TEVC 2025) and winner of the GECCO 2025 Silver Humies Award, positions itself as the ``fully open-source successor to AlphaEvolve.'' It provides an end-to-end framework for automatically discovering metaheuristic optimization algorithms using LLM-driven evolution.
+LLaMEA~\citep{llamea2025} (IEEE TEVC 2025, GECCO 2025 Silver Humies Award) provides an end-to-end framework for automatically discovering metaheuristic optimization algorithms. The core innovation is LLaMEA-HPO, which separates structural algorithm design (handled by the LLM) from numerical hyperparameter optimization (handled by SMAC Bayesian optimization). This addresses a key limitation: LLMs are good at structural innovation but poor at precise numerical tuning.
 
-The core innovation of LLaMEA is its layered optimization architecture. Rather than having the LLM handle all aspects of algorithm design, LLaMEA-HPO separates structural algorithm design (handled by the LLM) from numerical hyperparameter optimization (handled by SMAC, a Bayesian optimization framework). This separation addresses a key limitation of pure LLM-based approaches: LLMs are good at proposing structural changes to algorithms but poor at precise numerical tuning. By offloading hyperparameter optimization to SMAC, the LLM can focus on what it does best---creative structural innovation---while SMAC handles the numerical optimization that requires systematic exploration.
-
-LLaMEA supports SEARCH/REPLACE diff editing mode, where the LLM returns code patches rather than complete programs. This reduces token consumption to 10--20\% of full code rewrites, significantly lowering API costs and enabling longer evolution runs within fixed budgets. The system also provides multiple diversity maintenance mechanisms: fitness sharing, clearing (a niching strategy), and MAP-Elites-style behavioral descriptors.
-
-Code Evolution Graphs, introduced alongside LLaMEA, visualize the algorithm evolution process as a directed graph where each node represents a complete algorithm version and each edge represents a mutation operation. This visualization enables analysis of structural changes during evolution---identifying which modifications led to breakthroughs and which represented dead ends.
-
-The framework has been applied to black-box optimization (BBOB benchmarks), Bayesian optimization algorithm discovery, and machine learning pipeline auto-generation, demonstrating broad applicability of the LLM-driven algorithm discovery paradigm.
+LLaMEA supports SEARCH/REPLACE diff editing mode, reducing token consumption to 10--20\% of full code rewrites. The system provides multiple diversity mechanisms: fitness sharing, clearing, and MAP-Elites-style behavioral descriptors. Code Evolution Graphs visualize the algorithm evolution process as a directed graph where each node represents a complete algorithm version and each edge represents a mutation operation.
 
 \subsection{Program Evolution and Mathematical Discovery}
 \label{sec:funsearch}
 
-The systems discussed so far optimize prompts or discover heuristics for known problems. A more ambitious goal is to use LLM-driven evolution to make genuinely new mathematical discoveries---to find solutions that human mathematicians have sought for decades without success. FunSearch~\citep{romera2024mathematical}, published in Nature in 2023 by Google DeepMind, achieved exactly this: the first instance of an LLM-based system making novel scientific contributions.
+A more ambitious goal is to use LLM-driven evolution to make genuinely new mathematical discoveries. FunSearch~\citep{romera2024mathematical}, published in Nature in 2023 by Google DeepMind, achieved exactly this: the first instance of an LLM-based system making novel scientific contributions.
 
 \subsubsection{Searching Function Space, Not Solution Space}
 
-The core architectural insight of FunSearch is to search the space of \emph{programs that generate solutions}, rather than the space of solutions directly. This distinction is critical: solution spaces for combinatorial problems are typically enormous and unstructured, while program spaces admit semantic operations that the LLM can meaningfully navigate. A program that generates a cap set construction, for instance, is far more structured than the cap set itself---it contains function names, variable names, control flow, and comments that the LLM can leverage for meaningful variation.
+The core architectural insight of FunSearch is to search the space of \emph{programs that generate solutions}, rather than the space of solutions directly. This distinction is critical: solution spaces for combinatorial problems are typically enormous and unstructured, while program spaces admit semantic operations that the LLM can meaningfully navigate.
 
-Concretely, FunSearch operates on Python functions decorated with two markers:
-\begin{itemize}
-\item \texttt{@funsearch.run}: The evaluation entry point (returns a numerical score).
-\item \texttt{@funsearch.evolve}: The target function to be evolved by the LLM.
-\end{itemize}
-
-The user marks which function should be evolved and which should serve as the evaluation criterion. FunSearch handles the rest: evolving the marked function through LLM-driven mutation, evaluating candidates through the scoring function, and maintaining a population of diverse high-performing programs.
+Concretely, FunSearch operates on Python functions decorated with two markers: \texttt{@funsearch.run} (evaluation entry point, returns a numerical score) and \texttt{@funsearch.evolve} (target function to be evolved by the LLM). The evolution loop involves three parallel components: a Programs Database (population), Samplers (LLM invocations), and Evaluators (sandbox execution).
 
 \subsubsection{Island Model with Signature Clustering}
 
-FunSearch employs a three-tier population structure implemented in \texttt{programs\_database.py}: the Programs Database contains multiple Islands (independent sub-populations), each containing Clusters (groups of programs with identical score signatures), which in turn contain individual Programs.
+FunSearch employs a three-tier population structure: the Programs Database contains multiple Islands (independent sub-populations), each containing Clusters (groups of programs with identical score signatures), which in turn contain individual Programs.
 
-\textbf{Island model}. Ten independent islands evolve in parallel, each with its own sub-population. Every 14,400 seconds (4 hours), the bottom 50\% of islands---those with the lowest best scores---are reset. New founding programs are drawn from the top-performing islands. This migration mechanism, reminiscent of island models in genetic programming, prevents premature convergence by periodically injecting genetic material from successful lineages into underperforming ones. The reset is implemented by sorting islands by score and reinitializing weak islands with programs randomly selected from strong islands:
-\begin{verbatim}
-indices_sorted_by_score = np.argsort(self._best_score_per_island)
-for island_id in reset_islands_ids:
-    founder = self._best_program_per_island[
-        np.random.choice(keep_islands_ids)]
-    self._register_program_in_island(founder, island_id, ...)
-\end{verbatim}
+\textbf{Island model}: Ten independent islands evolve in parallel. Every 14,400 seconds (4 hours), the bottom 50\% of islands are reset, with new founding programs drawn from the top-performing islands. This migration mechanism prevents premature convergence.
 
-\textbf{Signature clustering}. Programs are grouped by their score tuple across all test cases (their ``signature''). Two programs that score identically on every test case belong to the same cluster, even if their code is syntactically different. Within each cluster, shorter programs are preferred---an Occam's razor principle implemented as a secondary sorting criterion that encourages simplicity and avoids bloat (a well-known problem in genetic programming).
+\textbf{Signature clustering}: Programs are grouped by their score tuple across all test cases. Within each cluster, shorter programs are preferred---an Occam's razor principle that encourages simplicity and avoids bloat.
 
-\textbf{Temperature-based sampling}. A softmax function with initial temperature 0.1 heavily biases selection toward high-scoring clusters. At this low temperature, the sampling probability concentrates on the top-performing clusters, but maintains a small probability of exploring lower-scoring regions. This creates a natural exploration-exploitation tradeoff controlled by a single hyperparameter.
+\textbf{Temperature-based sampling}: A softmax with initial temperature 0.1 heavily biases selection toward high-scoring clusters, creating a natural exploration-exploitation tradeoff.
 
 \subsubsection{Prompt Engineering for Evolution}
 
-The prompt design in FunSearch, implemented in \texttt{Island.\_generate\_prompt()}, is one of its most influential contributions. Each prompt presents the LLM with a versioned evolution history showing how the target function has evolved:
-
-\begin{verbatim}
-"""Finds large cap sets."""
-import numpy as np
-import utils_capset
-
-def priority_v0(element, n):
-  """Returns the priority with which we want to add `element`."""
-  priority = element
-  return ...
-
-def priority_v1(element, n):
-  """Improved version of `priority_v0`."""
-  priority = element ** 2
-  return ...
-
-def priority_v2(element, n):
-  """Improved version of `priority_v1`."""
-\end{verbatim}
-
-Six design patterns underlie this prompt structure:
-
-\begin{enumerate}
-\item \textbf{Versioned naming} (\texttt{v0}, \texttt{v1}, \texttt{v2}): Shows the LLM the evolution chain, making the iterative improvement process explicit and providing a naming convention that the LLM naturally continues.
-
-\item \textbf{Progressive docstrings} (``Improved version of \texttt{priority\_v1}''): Clearly communicates the improvement task to the LLM, framing generation as ``make this better'' rather than ``write something new.''
-
-\item \textbf{Score-ordered presentation} (worst first, best last): The LLM sees weaker versions first and strongest versions last, anchoring its generation on the most successful patterns (consistent with recency bias in transformer architectures).
-
-\item \textbf{Empty function body} for the latest version: \texttt{priority\_v2} has only a signature and docstring, signaling that the LLM should complete the function body. This turns the open-ended generation problem into a more constrained code completion task.
-
-\item \textbf{Tokenizer-level function renaming}: \texttt{rename\_function\_calls()} uses Python's tokenize module (not string replacement) to ensure that function references are correctly updated across the codebase, avoiding subtle bugs that arise from naive string substitution.
-
-\item \textbf{Context preservation}: Complete imports and helper functions are included in every prompt, ensuring that the LLM has access to the full computational context when proposing modifications.
-\end{enumerate}
-
-These patterns have been widely adopted by subsequent systems (OpenEvolve, LLaMEA, AlphaEvolve), establishing FunSearch's prompt design as a de facto standard for LLM-driven code evolution.
+Each prompt presents the LLM with a versioned evolution history. Six design patterns underlie this structure: (1) versioned naming (\texttt{v0}, \texttt{v1}, \texttt{v2}) showing the evolution chain; (2) progressive docstrings (``Improved version of \texttt{priority\_v1}'') communicating the improvement task; (3) score-ordered presentation (worst first, best last) anchoring generation on the most successful patterns; (4) empty function body for the latest version, turning open-ended generation into constrained code completion; (5) tokenizer-level function renaming for correct reference updates; and (6) context preservation with complete imports and helper functions. These patterns have been widely adopted by subsequent systems, establishing FunSearch's prompt design as a de facto standard.
 
 \subsubsection{Evaluation Framework}
 
-The evaluator architecture, implemented in \texttt{evaluator.py}, employs a three-tier safety filter on generated programs:
+The evaluator employs a three-tier safety filter: (1) execution success (sandboxed environment, 30-second timeout); (2) ancestor call detection (rejecting programs that directly call parent implementations); and (3) return type validation (must return numerical values). Code post-processing uses Python's AST module to iteratively trim malformed LLM output until syntactically valid.
 
-\begin{enumerate}
-\item \textbf{Execution success} (\texttt{runs\_ok}): Programs must execute without errors in a sandboxed environment with a 30-second timeout. This catches syntax errors, runtime exceptions, and infinite loops.
-
-\item \textbf{Ancestor call detection} (\texttt{\_calls\_ancestor}): Programs that directly call their parent's implementation are rejected. This prevents ``cheating'' where the LLM simply wraps the parent function call without making meaningful modifications. The detection uses AST analysis to trace function call chains.
-
-\item \textbf{Return type validation}: Programs must return numerical values (int or float). This ensures compatibility with the scoring system and catches programs that return non-evaluable outputs.
-\end{enumerate}
-
-Code post-processing uses Python's AST module to iteratively trim malformed LLM output until it becomes syntactically valid. This is critical because LLMs frequently generate code with unmatched parentheses, incomplete statements, or mixed indentation---problems that would crash a standard Python interpreter. The \texttt{\_trim\_function\_body()} function repeatedly parses and truncates until a valid AST is obtained.
-
-The system runs 15 samplers and 140 evaluators in parallel---a 1:9 ratio reflecting that evaluation (running programs on test cases) is the computational bottleneck, not LLM generation. This parallelism is essential for achieving the throughput needed to explore the solution space within reasonable wall-clock time.
+The system runs 15 samplers and 140 evaluators in parallel---a 1:9 ratio reflecting that evaluation is the computational bottleneck.
 
 \subsubsection{Mathematical Discoveries}
 
-FunSearch produced three notable mathematical results:
-
-\textbf{Cap set problem}. A cap set in $\mathbb{F}_3^n$ is a subset with no three elements in arithmetic progression. Finding large cap sets has been an open problem in additive combinatorics for over two decades. FunSearch discovered new constructions exceeding the best previously known bounds, representing the first computational advance on this problem in years. The discovered construction uses a priority function that assigns different weights to elements based on their position in the search order---a strategy that no human mathematician had explored.
-
-\textbf{Bin packing}. The online bin packing problem requires packing items of varying sizes into the minimum number of fixed-capacity bins, without knowledge of future items. FunSearch discovered a new heuristic that outperforms all previously known constructive heuristics (including First Fit Decreasing, Best Fit, and the harmonic-based algorithms) on standard benchmarks. The heuristic uses a scoring function that evaluates items differently based on their size relative to bin capacity.
-
-\textbf{Cyclic graph independent sets}. For cyclic graphs, finding large independent sets (subsets of vertices with no edges between them) is a classic NP-hard problem. FunSearch found new constructive methods that improve upon previously known bounds for specific graph sizes.
-
-These discoveries demonstrate that LLM-driven evolutionary search can contribute to mathematical research, not merely replicate known results.
+FunSearch produced three notable mathematical results: new constructions for cap sets in $\mathbb{F}_3^n$ exceeding previously known bounds (the first computational advance in over two decades); a new heuristic for online bin packing that outperforms all previously known constructive heuristics; and new constructions for independent sets in cyclic graphs.
 
 \subsection{AlphaEvolve: Full-Codebase Evolution at Scale}
 \label{sec:alphaevolve}
 
-AlphaEvolve~\citep{novikov2025alphaevolve}, also from Google DeepMind, extends the FunSearch paradigm from evolving individual functions to evolving entire codebases. Powered by Gemini Flash (for breadth of exploration) and Gemini Pro (for depth of insight), it combines MAP-Elites quality-diversity search with an evolutionary database of candidate programs to tackle problems at Google's operational scale.
+AlphaEvolve~\citep{novikov2025alphaevolve} extends FunSearch from evolving individual functions to evolving entire codebases. Powered by Gemini Flash (breadth) and Gemini Pro (depth), it combines MAP-Elites quality-diversity search with an evolutionary database.
 
 \subsubsection{Dual-Model Architecture}
 
-The system employs two complementary LLM tiers in a principled division of labor:
-\begin{itemize}
-\item \textbf{Gemini Flash}: Generates many diverse candidate modifications quickly, exploring a wide range of possible improvements. This corresponds to the ``breadth'' component---rapid, diverse exploration of the mutation space.
-\item \textbf{Gemini Pro}: Analyzes promising candidates in depth, proposing sophisticated refinements that require deeper reasoning about program semantics. This corresponds to the ``depth'' component---careful, targeted improvement of high-potential candidates.
-\end{itemize}
-
-The evolutionary database maintains a population of candidate programs, each annotated with fitness scores and behavioral descriptors. At each step, parents are selected with probability weighted by both fitness and novelty (to maintain diversity). The LLM proposes mutations or crossovers to produce child programs, which are evaluated by automated scoring functions. The MAP-Elites update rule replaces the existing elite in a behavioral niche if the child achieves a higher fitness:
+Gemini Flash generates many diverse candidate modifications quickly (breadth), while Gemini Pro analyzes promising candidates in depth (depth). The MAP-Elites update rule replaces the existing elite in a behavioral niche if the child achieves higher fitness:
 \begin{equation}
 \text{Archive}[b(p_{\text{child}})] = \begin{cases} p_{\text{child}} & \text{if } f(p_{\text{child}}) > f(\text{Archive}[b(p_{\text{child}})]) \\ \text{Archive}[b(p_{\text{child}})] & \text{otherwise} \end{cases}
 \end{equation}
-where $b(\cdot)$ maps a program to its behavioral niche descriptor. Unlike single-objective optimization that seeks one best solution, MAP-Elites maintains a map of high-performing solutions across behavioral dimensions, illuminating the solution landscape rather than collapsing it to a single point.
 
 \subsubsection{Results Across Domains}
 
-AlphaEvolve's results span three categories, each demonstrating different aspects of the system's capability:
+\textbf{Mathematical discoveries}: Found a $4\times 4$ complex matrix multiplication algorithm using only \textbf{48 multiplications}---the first improvement over Strassen's 1969 algorithm in 56 years. Re-discovered SOTA for 75\% of 50+ problems, found improvements for 20\%.
 
-\textbf{Mathematical discoveries}:
-\begin{itemize}
-\item Found a $4\times 4$ complex matrix multiplication algorithm using only \textbf{48 multiplications}, the first improvement over Strassen's 1969 algorithm in 56 years. This is perhaps the single most striking result in LLM-driven scientific discovery.
-\item Re-discovered state-of-the-art solutions for 75\% of 50+ mathematical problems, validating the system against known results.
-\item Found improvements over existing best-known results for 20\% of problems, demonstrating genuine discovery capability.
-\end{itemize}
+\textbf{Google infrastructure}: Data center scheduling recovered \textbf{0.7\%} of worldwide Google compute. Hardware accelerator design achieved functionally equivalent simplifications.
 
-\textbf{Google infrastructure improvements}:
-\begin{itemize}
-\item Data center scheduling (Borg system): Recovered \textbf{0.7\%} of worldwide Google compute capacity. At Google's scale, even fractional efficiency gains translate to massive cost savings.
-\item Hardware accelerator design: Achieved functionally equivalent designs with simplified implementations, reducing design complexity without sacrificing correctness.
-\end{itemize}
+\textbf{LLM training optimization}: FlashAttention kernel tiling: \textbf{23\% speedup}. Attention computation: \textbf{32\% speedup}.
 
-\textbf{LLM training optimization}:
-\begin{itemize}
-\item FlashAttention kernel tiling: Achieved a \textbf{23\% speedup} in a critical component of modern transformer training.
-\item Attention computation: Achieved a \textbf{32\% speedup} in attention operations, directly reducing the cost of training and inference.
-\end{itemize}
+\subsubsection{Open-Source Replications}
 
-These results demonstrate that LLM-driven evolutionary search can produce practical value at industrial scale. The mathematical discoveries validate the system's creative capability; the infrastructure improvements demonstrate real-world impact; and the LLM training optimizations show that the approach can improve its own substrate.
-
-\subsubsection{Open-Source Replication and Extensions}
-
-\textbf{OpenEvolve} is a community-driven open-source implementation of AlphaEvolve's core concepts. While it cannot replicate Google's infrastructure (Gemini models, massive compute), it provides the evolutionary loop, MAP-Elites archive, and LLM-driven mutation operators in an accessible package. OpenEvolve enables researchers to experiment with the AlphaEvolve paradigm on smaller-scale problems and with alternative LLM backends.
-
-\textbf{OpenTreeSearch}~\citep{opentreesearch2025} (from Genentech) takes a different approach to the same problem. Rather than using island-based evolution (as in FunSearch and OpenEvolve), it employs PUCT (Predictor + UCB for Trees) tree search---the algorithm behind AlphaGo's Monte Carlo tree search. Each node in the tree represents a program version, and the PUCT selection strategy balances exploration of unvisited branches with exploitation of promising ones.
-
-OpenTreeSearch's most striking design feature is its simplicity: it replaces OpenEvolve's 9+ island evolution hyperparameters with a single parameter (\texttt{puct\_exploration\_constant}, default 1.0). On the circle packing problem ($n=26$), it achieves a score of 2.632 in 121 iterations---comparable to AlphaEvolve's 2.635 and OpenEvolve's 2.634 (in 200 iterations). The tree structure provides complete traceability: every program has a clear lineage, and interactive HTML visualizations make the evolution process inspectable and debuggable.
-
-A virtual loss mechanism prevents multiple parallel workers from simultaneously selecting the same parent node, improving parallel efficiency without requiring the coordination overhead of island migration. When a worker selects a node for expansion, it temporarily increments the node's visit count (applying a ``virtual loss'' that makes the node less attractive to other workers), then corrects the count after evaluation completes.
-
-\subsection{Agent Architecture Search and Self-Modification}
-\label{sec:agent-arch-search}
-
-A natural extension of evolutionary code discovery is the evolution of agent architectures themselves. Rather than evolving programs that solve specific problems, these systems evolve the \emph{design of agents}---their prompts, tool compositions, reasoning strategies, and even their own source code.
-
-\subsubsection{ADAS: Automated Design of Agentic Systems}
-
-ADAS~\citep{hu2024adas} (ICLR 2025 Outstanding Paper) defines the research area of automated agent design through Meta Agent Search. The key insight is that programming languages are Turing-complete: the space of all valid Python programs implementing agents encompasses \emph{every possible agent architecture}.
-
-The Meta Agent operates as an LLM that reviews previously discovered agent designs and their scores, then writes code for a new agent: $a_{\text{new}} = \text{LLM}(D, \text{history})$, where $D$ is the archive. The best agent is returned as $a^* = \arg\max_{a \in D} \text{score}(a)$. Meta Agent Search discovered agents that outperform hand-designed SOTA on ARC and GFootball, with cross-domain transfer (ARC designs transfer to GFootball; GPT-3.5-discovered designs work with GPT-4).
-
-\subsubsection{Darwin G\"odel Machine: Open-Ended Evolution}
-
-The Darwin G\"odel Machine (DGM)~\citep{zhang2025dgm} extends ADAS with open-ended evolution. It maintains a diverse archive $A = \{a_1, \ldots, a_n\}$ with diversity-biased sampling: $P(a_i) \propto f(a_i) \times \text{diversity\_bonus}(a_i, A)$. The LLM proposes code modifications: $a_{\text{child}} = \text{LLM}(a_{\text{parent}}.\text{code}, \text{edit\_instruction})$, and improved versions are retained.
-
-DGM achieved SWE-bench 20.0\% $\rightarrow$ \textbf{50.0\%} Verified (2.5$\times$ improvement) and Polyglot 14.2\% $\rightarrow$ \textbf{30.7\%} (2.2$\times$). It discovered novel agent structures not imagined by human designers, demonstrating the creative potential of open-ended evolutionary search. DGM is inspired by Schmidhuber's G\"odel Machine~\citep{schmidhuber2003godel} but operates without formal proof guarantees.
-
-\subsubsection{G\"odel Agent: Runtime Self-Modification}
-
-G\"odel Agent~\citep{yin2025godelagent} (ACL 2025) takes a different approach: it modifies its own running code through Python monkey patching. The agent reads its own source code, analyzes performance, and proposes patches: $A' = \text{LLM}(A.\text{code}, \text{feedback}, \text{objective})$. Changes are accepted only if $\text{score}(A') > \text{score}(A)$; otherwise rollback occurs.
-
-G\"odel Agent outperforms hand-designed agents on HotPotQA (+8--15\%) and ALFWorld, with monotonically increasing performance over experience. Unlike DGM's population-level evolution, G\"odel Agent operates at the individual level---better suited for rapid incremental improvement in deployment.
-
-\subsubsection{Absolute Zero: Zero-Data Self-Play}
-
-Absolute Zero~\citep{zhao2025absolutezero} eliminates the data dependency entirely: a single model simultaneously proposes tasks and solves them. The Task Proposer generates reasoning tasks, the Task Solver attempts them, and a Code Executor verifies solutions. The proposer reward $R_{\text{proposer}} \propto \text{difficulty}(t) \times \text{solvability}(t)$ creates an automatic curriculum.
-
-AZR-Coder-7B, trained with \textbf{zero external data}, achieves SOTA among 7B models on HumanEval+, MBPP+, and LiveCodeBench. The principle ``stronger models are better at making themselves stronger'' suggests an autocatalytic positive feedback loop characteristic of open-ended evolution.
-
+OpenEvolve provides a community-driven open-source implementation. OpenTreeSearch~\citep{opentreesearch2025} (Genentech) uses PUCT tree search instead of island-based evolution, replacing 9+ hyperparameters with a single parameter (\texttt{puct\_exploration\_constant}). On circle packing ($n{=}26$), it achieves 2.632 in 121 iterations---comparable to AlphaEvolve's 2.635. A virtual loss mechanism prevents parallel workers from selecting the same parent node.
 
 \subsection{Comparative Analysis}
 \label{sec:evo-comparison}
 
-Table~\ref{tab:evo-comparison} provides a systematic comparison of the major LLM-driven evolutionary systems discussed in this section.
+Table~\ref{tab:evo-comparison} provides a systematic comparison of the major LLM-driven evolutionary systems.
 
 \begin{table*}[t]
 \centering
-\caption{Comparison of LLM-driven evolutionary code systems. ``Search space'' indicates what the system evolves; ``Evolution operators'' describes how variation is performed; ``Diversity mechanism'' shows how population diversity is maintained.}
+\caption{Comparison of LLM-driven evolutionary code systems.}
 \label{tab:evo-comparison}
 \small
 \begin{tabular}{@{}llllcc@{}}
@@ -339,33 +171,29 @@ OpenTreeSearch & Programs & PUCT tree mutation & Tree exploration & 1 + eval & 1
 \end{tabular}
 \end{table*}
 
-Several patterns emerge from this comparison:
+Several patterns emerge:
 
-\textbf{Convergence toward quality-diversity.} Nearly all systems use some form of quality-diversity maintenance---MAP-Elites (OpenELM, AlphaEvolve, LLaMEA), island models (FunSearch), elite preservation (ReEvo), or PUCT tree exploration (OpenTreeSearch). This reflects a recognition that single-objective search is prone to local optima, and that maintaining a diverse population of high-quality solutions is essential for open-ended discovery. The particular diversity mechanism varies: MAP-Elites provides a structured grid, island models provide independent sub-populations, and tree search provides a navigable genealogy.
+\textbf{Convergence toward quality-diversity.} Nearly all systems use quality-diversity maintenance---MAP-Elites, island models, elite preservation, or PUCT tree exploration. This reflects recognition that single-objective search is prone to local optima.
 
-\textbf{Separation of generation and evaluation.} All systems cleanly separate the LLM's role as a generator of candidates from the automated evaluation of those candidates. This separation is critical: it allows the search to scale without requiring human evaluation at each step, while ensuring that selection pressure is applied by objective criteria rather than the LLM's own judgment. The ratio of generation to evaluation varies dramatically---from 1:1 in simple systems to 15:140 in FunSearch---reflecting the relative costs of LLM inference versus program execution.
+\textbf{Separation of generation and evaluation.} All systems cleanly separate the LLM's generator role from automated evaluation, enabling scalable search without human evaluation.
 
-\textbf{Increasing sophistication of operators.} The evolutionary operators have grown increasingly sophisticated over time. OPRO uses single-step generation; EvoPrompt adds LLM-driven crossover and mutation; ReEvo introduces reflective operators; LLaMEA adds HPO-guided variation; and AlphaEvolve employs dual-model operators with breadth-depth tradeoff. This progression suggests that the design space for LLM-based evolutionary operators is far from exhausted.
+\textbf{Increasing operator sophistication.} Operators have evolved from single-step generation (OPRO) through crossover/mutation (EvoPrompt), reflective operators (ReEvo), HPO-guided variation (LLaMEA), to dual-model breadth-depth operators (AlphaEvolve).
 
-\textbf{Prompt evolution as a meta-pattern.} Even systems that evolve code (rather than prompts) rely heavily on carefully engineered prompts to guide the LLM's variation operators. FunSearch's six-pattern prompt design (versioned naming, progressive docstrings, score ordering, empty bodies, tokenizer renaming, context preservation) has become a de facto standard. The prompt construction---showing versioned histories, ordering by score, providing task context---is itself a form of ``meta-evolution'' that determines the efficiency of the search.
+\textbf{Prompt evolution as meta-pattern.} FunSearch's six-pattern prompt design has become a de facto standard, with versioned naming, progressive docstrings, and score-ordered presentation adopted by subsequent systems.
 
 \subsection{Limitations and Open Challenges}
 \label{sec:evo-limitations}
 
-Despite the impressive results surveyed above, LLM-driven evolutionary code discovery faces several fundamental challenges:
+\textbf{Evaluation bottleneck.} All systems require well-defined evaluation functions. For mathematical problems, these are readily available; for open-ended tasks, the evaluation bottleneck becomes the limiting factor. AlphaEvolve's infrastructure speedups rely on benchmark-defined objectives that may not capture all production quality dimensions.
 
-\textbf{Evaluation bottleneck.} All systems require well-defined evaluation functions. For mathematical problems and benchmark tasks, such functions are readily available. For open-ended creative tasks, real-world software engineering, or domains where correctness is hard to formalize, the evaluation bottleneck becomes the limiting factor. AlphaEvolve's 23--32\% speedups in LLM training rely on benchmark-defined objectives that may not capture all aspects of production quality (maintainability, readability, edge case handling, security). FunSearch's mathematical discoveries rely on exact verification that is only available for certain problem classes.
+\textbf{Computational cost.} FunSearch defaults to 15 samplers and 140 evaluators running continuously; AlphaEvolve leverages Google-scale compute. LLaMEA's diff editing mode (10--20\% token reduction) represents one approach to cost reduction, but more efficient strategies are needed.
 
-\textbf{Computational cost.} Evolutionary search with LLM-based operators is expensive. FunSearch defaults to 15 samplers and 140 evaluators running continuously; AlphaEvolve leverages Google-scale compute infrastructure; even smaller systems like LLaMEA require hundreds of LLM API calls per evolution run. OpenELM and ReEvo reduce costs by using smaller LLMs and shorter evolution horizons, but at the cost of discovery quality. LLaMEA's diff editing mode (reducing token consumption to 10--20\% of full rewrites) represents one approach to cost reduction, but more efficient search strategies are needed to democratize these methods.
+\textbf{LLM dependence.} Solution quality is bounded by the LLM's capability to propose meaningful variations. The dual-model approach partially addresses this by allocating expensive calls selectively, but the tradeoff remains.
 
-\textbf{LLM dependence.} The quality of evolved solutions is fundamentally bounded by the LLM's capability to propose meaningful variations. Weak LLMs produce shallow mutations; strong LLMs are expensive. The dual-model approach (AlphaEvolve's Flash+Pro) partially addresses this by allocating expensive model calls selectively, but the tradeoff remains. An open question is whether the evolutionary loop itself can be used to discover better prompting strategies for the LLM, creating a form of meta-evolution.
+\textbf{Safety and verification.} Self-modifying code introduces safety risks not fully addressed by current systems. FunSearch's three-tier filter catches obvious issues but cannot guarantee absence of subtle bugs or security vulnerabilities.
 
-\textbf{Scalability of search.} FunSearch's island model with periodic reset and signature clustering is one approach to managing large populations. AlphaEvolve's MAP-Elites archive grows with the number of behavioral niches. OpenTreeSearch's PUCT tree provides a more structured alternative with built-in exploration-exploitation balance. As search spaces grow (from single functions to full codebases to multi-file projects), the population management problem becomes increasingly complex. The relative merits of these approaches---island models, quality-diversity grids, tree search---for different problem scales remain poorly understood.
+\textbf{Reproducibility.} FunSearch and AlphaEvolve use proprietary infrastructure. Open-source alternatives (OpenEvolve, OpenTreeSearch, LLaMEA) narrow but do not close the gap.
 
-\textbf{Safety and verification.} Self-modifying code introduces safety risks that are not fully addressed by current systems. FunSearch's three-tier filter (execution success, ancestor call detection, return type validation) catches obvious issues but cannot guarantee the absence of subtle bugs, security vulnerabilities, or unintended behaviors in evolved programs. As these systems move from mathematical discovery to infrastructure optimization, the consequences of undetected bugs increase dramatically.
+These limitations point toward important research directions: surrogate evaluation models, multi-objective optimization, standardized benchmarks, and theoretical analysis of LLM-driven search. We return to these themes in Section~\ref{sec:open-problems}.
 
-\textbf{Reproducibility.} Both FunSearch and AlphaEvolve use proprietary infrastructure (Google's LLMs and compute) that is not publicly available. OpenEvolve, OpenTreeSearch, and LLaMEA provide open-source alternatives, but cannot replicate the scale of the original results. The gap between published results and reproducible science remains significant, though the rapid development of open-source alternatives is narrowing it.
-
-These limitations point toward important research directions: developing more efficient evaluation methods (e.g., surrogate models that approximate expensive evaluations), exploring multi-objective optimization that balances multiple quality criteria, creating standardized benchmarks for fair comparison, and investigating the theoretical properties of LLM-driven evolutionary search. We return to these themes in Section~\ref{sec:open-problems} when discussing future directions.
-
-The evolutionary code paradigm described in this section provides one axis of self-evolution---improving the \emph{programs} that AI systems execute. The next section examines a complementary axis: improving the \emph{agents} themselves---their architectures, workflows, and learning mechanisms.
+The evolutionary code paradigm provides one axis of self-evolution---improving the \emph{programs} that AI systems execute. The next section examines a complementary axis: improving the \emph{agents} themselves---their architectures, workflows, and learning mechanisms.

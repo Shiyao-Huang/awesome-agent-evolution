@@ -1,166 +1,843 @@
 % ====================================================================
-% 第3章：方法分类（LaTeX版本，含TikZ图）
+% Chapter 3: Methods for Agent Self-Evolution
 % ====================================================================
 
-\section{方法分类}\label{ch:methods}
+\section{Methods for Agent Self-Evolution}
+\label{ch:methods}
 
-\subsection{本章概述}
+\subsection{Chapter Overview: From Isolated Tricks to Evolutionary Loops}
+\label{sec:methods-overview}
 
-Agent Evolution 方法众多，名称也不统一。本章按"主要选择压力与主要可变对象"进行分类：基于奖励的进化主要优化策略或行为分布；自博弈进化主要生成任务、对手和验证信号；提示词进化主要改变上下文、反思、原则和输出修订流程；架构搜索主要改变代码、工具、控制流和多智能体拓扑；基于记忆的进化主要改变长期经验、技能库和检索策略；混合方法则把多种机制组合成端到端闭环。
+The preceding chapters established the conceptual foundation of agent self-evolution: an agentic system becomes evolutionary when some part of the system is mutable, when feedback exposes the consequences of that mutation, when a selection or update rule preserves better variants, and when the resulting change can be audited. This chapter moves from definition to method. Its goal is not to list every named system in chronological order, because the field already contains too many overlapping labels. Instead, it asks a more structural question: what kind of loop is being closed, what object changes inside the loop, what feedback signal drives the change, and what evidence shows that the change improves behavior rather than merely changing the surface form of the output?
 
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}[
-  level 1/.style={sibling distance=42mm, level distance=22mm},
-  level 2/.style={sibling distance=22mm, level distance=20mm},
-  root/.style={rectangle, rounded corners, draw=cat1, fill=cat1!10,
-    text width=60mm, align=center, font=\bfseries, minimum height=10mm},
-  cat/.style={rectangle, rounded corners, draw=#1, fill=#1!8,
-    text width=30mm, align=center, font=\small\bfseries, minimum height=8mm},
-  paper/.style={rectangle, rounded corners, draw=gray!60, fill=gray!5,
-    text width=26mm, align=left, font=\scriptsize, inner sep=2pt},
-  edge from parent/.style={draw, -Stealth, thick, gray!70}
-]
-\node[root] {Agent Self-Evolution\\方法分类}
-  child {
-    node[cat=cat5] {3.1 基于奖励\\的进化}
-    child { node[paper] {STaR, Self-Rewarding\\Meta-Rewarding\\RISE, Agent-R} }
-    child { node[paper] {RAGEN, IterAlign\\SICA, DGM} }
-  }
-  child {
-    node[cat=cat2] {3.2 自博弈\\进化}
-    child { node[paper] {Absolute Zero\\SPIRAL} }
-    child { node[paper] {Multi-Agent Debate\\Self-Play FT} }
-  }
-  child {
-    node[cat=cat3] {3.3 提示词\\进化}
-    child { node[paper] {Reflexion, ExpeL\\Self-Refine} }
-    child { node[paper] {ACE, ICE, EvolveR\\ReasoningBank} }
-  }
-  child {
-    node[cat=cat4] {3.4 架构\\搜索}
-    child { node[paper] {ADAS, Gödel Agent\\DGM, SICA} }
-    child { node[paper] {EvoMAC, AlphaEvolve\\FunSearch} }
-  }
-  child {
-    node[cat=cat5] {3.5 记忆\\进化}
-    child { node[paper] {Voyager, Memory-R1\\AriadneMem} }
-    child { node[paper] {SEDM, A-Mem\\Memento} }
-  }
-  child {
-    node[cat=cat6] {3.6 混合\\方法}
-    child { node[paper] {EvolveR (全生命周期)\\WebEvolver} }
-    child { node[paper] {HyperAgents\\EvoAgentX} }
-  };
-\end{tikzpicture}
-\caption{Agent Self-Evolution 方法分类体系。六大类别按主要选择压力和可变对象划分。}
-\label{fig:ch3-taxonomy}
-\end{figure}
+The literature on self-improving language models and agents can look fragmented. Self-Refine asks a model to critique and revise its own output without weight updates \cite{selfrefine2023}. Reflexion stores verbal feedback in memory and reuses it across attempts \cite{reflexion2023}. Self-Debug lets a model inspect and repair code through execution traces. STaR generates rationales, filters correct ones, and fine-tunes on the resulting reasoning traces \cite{star2022}. ReST and ReST-EM generate candidate completions, score them with a reward model, and update on the high-reward subset \cite{rest2023}. Constitutional AI uses principles to produce self-critiques, revised responses, AI preference labels, and RLAIF training \cite{constitutionalai2022}. SPIN converts the previous model into an opponent and trains the next model to distinguish self-generated responses from human demonstrations \cite{spin2024}. RISE treats recursive introspection as a multi-turn MDP \cite{rise2024}. RAGEN and ReVeal extend reinforcement learning to multi-turn agent trajectories and code verification \cite{ragen2025,reveal2026}. Absolute Zero removes external task data by making the model propose, solve, and verify its own tasks \cite{absolutezero2025}. These systems differ in implementation, but they share a small number of loop patterns.
 
-\subsection{基于奖励的进化}\label{sec:reward}
+For the purposes of this chapter, the core distinction is between \emph{inference-time self-improvement} and \emph{training-time self-improvement}. Inference-time methods leave model weights fixed. They improve a current attempt by adding critique, execution feedback, memory, search, or revision inside the context window. They are attractive because they can be deployed immediately on top of existing models and because their intermediate artifacts are often legible. Their limitation is that improvement is local, bounded by context length, and sometimes brittle: a model may revise fluently without discovering the real error. Training-time methods change a policy, reward model, preference model, verifier, or data distribution. They can amortize learning across future tasks and sometimes produce durable capability gains, but they require more infrastructure, clearer evaluation boundaries, and stronger safeguards against overfitting or reward hacking.
 
-基于奖励的进化是最接近传统强化学习和后训练的一类方法。核心思想是：把智能体交互轨迹、推理过程或输出结果映射为标量或偏好信号，再通过策略优化、偏好学习、筛选微调或archive selection使后续行为更可能获得高奖励。
+This chapter is organized around four requirements from the task definition. Section~\ref{sec:methods-inference} analyzes inference-time self-improvement through Self-Refine, Reflexion, Self-Debug, and related recursive introspection methods. Section~\ref{sec:methods-training} analyzes training-time self-improvement through STaR, SPIN, ReST-EM, Constitutional AI, RISE, RAGEN, Absolute Zero, and ReVeal. Section~\ref{sec:methods-comparison} provides a comparative taxonomy table crossing methods with loop type, training need, feedback source, mutable object, and suitable tasks. Section~\ref{sec:methods-benchmarks} summarizes benchmark evidence on HumanEval, GSM8K, BBH, MMLU, and adjacent benchmarks, while explicitly distinguishing numbers present in the local source notes from numbers that are reported only qualitatively.
 
-\subsubsection{代表系统}
-
-\textbf{STaR}（Self-Taught Reasoner）是早期代表。它把"模型自己生成可学习材料"组织成闭环：生成、验证、训练、再生成。虽然它主要作用于推理链和模型权重，但其bootstrapping逻辑成为后续自演化研究的基础模板。
-
-\textbf{Self-Rewarding Language Models} 把奖励信号进一步内生化。系统让同一个模型既生成候选回答，又作为judge评价候选，并用Iterative DPO进行多轮偏好优化。\textbf{Meta-Rewarding}进一步区分actor、judge和meta-judge，让模型不仅评价回答，还评价评价本身。
-
-\textbf{RISE}将单轮问题改写为多轮MDP，让模型学习在测试时递归自省和修正。其关键是把"再想一轮"从prompt trick变成可训练策略。
+The chapter also reframes the earlier six-category taxonomy of reward evolution, self-play, prompt evolution, architecture search, memory evolution, and hybrid methods. That taxonomy remains useful for mapping the broad field, but the present chapter focuses on methods most directly connected to self-improving language models. A single method may participate in multiple categories. Reflexion is both inference-time improvement and memory evolution. STaR is both reward-filtered self-training and reasoning-rationale evolution. SPIN is both training-time self-play and preference-like discrimination. ReVeal is both code-agent reinforcement learning and verifier co-evolution. Therefore the taxonomy here should be read as a functional decomposition rather than a set of mutually exclusive boxes.
 
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[
-  box/.style={rectangle, rounded corners=3pt, draw=#1, fill=#1!10,
-    text width=35mm, align=center, font=\small, minimum height=12mm},
-  arr/.style={-Stealth, thick, gray!60}
+  node distance=12mm,
+  box/.style={rectangle, rounded corners=4pt, draw=#1!75!black, fill=#1!10,
+    text width=33mm, align=center, font=\small, minimum height=10mm},
+  smallbox/.style={rectangle, rounded corners=3pt, draw=#1!70!black, fill=#1!7,
+    text width=31mm, align=center, font=\scriptsize, minimum height=8mm},
+  arr/.style={-{Stealth[length=2.5mm]}, thick, color=gray!65},
+  dasharr/.style={-{Stealth[length=2.5mm]}, thick, dashed, color=gray!55}
 ]
-\node[box=cat1] (gen) at (0,0) {生成候选\\(Actor)};
-\node[box=cat2] (judge) at (4.5,0) {自评/外部评估\\(Judge/Meta-Judge)};
-\node[box=cat3] (train) at (9,0) {偏好优化\\(DPO/GRPO)};
-\node[box=cat4] (iter) at (4.5,-2.2) {迭代更新\\(权重/策略)};
 
-\draw[arr] (gen) -- (judge);
-\draw[arr] (judge) -- (train);
-\draw[arr] (train) -- (iter);
-\draw[arr] (iter.west) -| (gen.south);
+\node[box=cat1] (task) {Task or Environment};
+\node[box=cat3, right=of task] (actor) {Actor / Solver};
+\node[box=cat2, right=of actor] (feedback) {Feedback Source};
+\node[box=cat4, below=of actor] (update) {Selection or Update};
+\node[box=cat5, below=of task] (state) {Mutable State};
+\node[box=cat6, below=of feedback] (evidence) {Audit Evidence};
 
-\node[font=\scriptsize, text=gray] at (2.2, 0.6) {候选+分数};
-\node[font=\scriptsize, text=gray] at (6.7, 0.6) {偏好对};
-\node[font=\scriptsize, text=gray] at (4.5, -1.0) {更新后模型};
+\draw[arr] (task) -- (actor);
+\draw[arr] (actor) -- (feedback);
+\draw[arr] (feedback) -- (update);
+\draw[arr] (update) -- (state);
+\draw[arr] (state) -- (task);
+\draw[dasharr] (feedback) -- (evidence);
+\draw[dasharr] (update) -- (evidence);
+
+\node[smallbox=cat3, above=8mm of actor] (inf) {Inference-time: revise context, memory, search path};
+\node[smallbox=cat1, below=8mm of update] (train) {Training-time: update weights, reward, policy, data};
+\draw[dasharr] (inf) -- (actor);
+\draw[dasharr] (train) -- (update);
+
 \end{tikzpicture}
-\caption{基于奖励的进化通用闭环：Actor生成候选，Judge（自评或外部）评分，DPO/GRPO优化偏好，迭代更新模型权重。}
-\label{fig:ch3-reward-loop}
+\caption{Generic self-evolution loop. A task induces behavior, behavior receives feedback, feedback drives selection or update, and the update changes some mutable state. Inference-time methods mainly change context, memory, or search state; training-time methods change model parameters, policies, reward models, or data distributions.}
+\label{fig:ch3-generic-loop}
 \end{figure}
 
-\subsubsection{核心挑战}
+\subsection{Inference-Time Self-Improvement: Critique, Reflection, Debugging, and Search}
+\label{sec:methods-inference}
 
-基于奖励的方法面临\textbf{Goodhart风险}：模型可能学会迎合评分规则而非真正提升能力。\textbf{样本效率}问题突出——RL训练需要大量交互轨迹，成本高昂。\textbf{泛化不确定}——在特定benchmark上的改进不一定迁移到真实场景。
+Inference-time self-improvement methods operate under a strong constraint: the base model is not retrained. The method must therefore improve performance by changing the information presented to the model, the sequence of internal calls, the external tools invoked, or the memory used across attempts. This makes inference-time methods especially important for agent engineering. They can be inserted into products without collecting new training data, without running expensive reinforcement learning, and without waiting for a new model release. They also expose intermediate artifacts--critiques, reflections, tests, traces, and revised plans--that humans can inspect.
 
-\subsection{自博弈进化}\label{sec:selfplay}
+The common structure can be written as follows. Given an input $x$, a model $M$ produces an initial candidate $y_0$. A feedback process $F$ produces a critique, error signal, or execution trace $c_t = F(x,y_t,e_t)$, where $e_t$ may be an environment result such as a compiler error, unit-test failure, or evaluator score. A refinement operator $R$ produces a new candidate:
+\[
+  y_{t+1} = R_M(x, y_t, c_t, h_t),
+\]
+where $h_t$ is the history of previous attempts. The loop stops when a verifier accepts the result, a maximum number of iterations is reached, or the critique process reports that no useful improvement remains. The important point is that $M$ is reused rather than updated. Improvement is mediated by the context and by external state.
 
-自博弈进化把"数据从哪里来"这个问题推到系统内部。\textbf{Absolute Zero}提出在零外部数据条件下，由同一个模型提出最大化自身学习进度的任务并尝试解决。\textbf{SPIRAL}让语言模型在零和游戏中自我博弈，发现可迁移的推理能力。
+\subsubsection{Self-Refine: Generate, Critique, Refine}
+\label{sec:methods-self-refine}
 
-\begin{figure}[htbp]
+Self-Refine is the canonical minimal loop for inference-time self-improvement \cite{selfrefine2023}. It uses the same model in three roles: generator, critic, and refiner. First, the model produces an output $y_0$ for input $x$. Second, the model critiques $y_0$ against task instructions, rubric, or desired properties. Third, the model revises $y_0$ using the critique. The loop repeats until a stopping rule is met. The method is simple, but its conceptual importance is large because it demonstrates that a single frozen model can exploit its own latent evaluative knowledge when that knowledge is elicited in a different interaction pattern.
+
+A compact formalization is:
+\[
+\begin{aligned}
+  y_0 &= M_{\text{gen}}(x, I), \\
+  f_t &= M_{\text{crit}}(x, y_t, C), \\
+  y_{t+1} &= M_{\text{revise}}(x, y_t, f_t, I), \\
+  \text{stop} &\leftarrow \mathbb{1}[f_t \in \mathcal{F}_{\text{done}}] \vee (t \geq T).
+\end{aligned}
+\]
+Here $I$ is the task instruction, $C$ is the critique rubric, $f_t$ is feedback, and $T$ is the maximum number of refinement rounds. The subscripts do not necessarily denote different models; in Self-Refine they typically denote different prompts or roles for the same underlying LLM.
+
+The local source notes report that Self-Refine was evaluated on seven diverse tasks and produced roughly a 20\% average improvement across them. Examples include mathematical reasoning improving from 56\% to 67\%, sentiment reversal from 74\% to 86\%, dialogue response win rate from 52\% to 68\%, and constrained generation compliance from 65\% to 78\%. These numbers should be interpreted as task-specific improvements under the paper's experimental setup rather than universal guarantees. The method works best when the model can identify a local defect in the output and when the task instruction supplies enough structure to guide revision. It works less well when the first answer is fundamentally wrong for reasons the model cannot diagnose, when the critique becomes generic, or when the task rewards diversity that refinement may inadvertently erase.
+
+Self-Refine is important for agent evolution because it turns a single model call into a small within-episode evolutionary process. The candidate output is the mutable object. The critique is the feedback signal. The refinement prompt is the variation operator. The stopping rule is the selection gate. Unlike biological or population-based evolution, the loop is serial and local, but the abstraction is the same: generate a variant, evaluate it, keep the improved variant, and iterate.
+
+\begin{table}[htbp]
 \centering
-\begin{tikzpicture}[
-  role/.style={circle, draw=#1, fill=#1!15, minimum size=16mm,
-    font=\small\bfseries, align=center},
-  arr/.style={-Stealth, thick, #1}
-]
-\node[role=cat2] (prop) at (0,0) {Proposer\\(出题)};
-\node[role=cat1] (solve) at (5,0) {Solver\\(解题)};
-\node[role=cat3] (verif) at (2.5,-2.5) {Verifier\\(验证)};
-
-\draw[arr=cat2] (prop) -- node[above, font=\scriptsize]{任务} (solve);
-\draw[arr=cat1] (solve) -- node[right, font=\scriptsize, align=left]{解答\\+反馈} (verif);
-\draw[arr=cat3] (verif) -- node[left, font=\scriptsize, align=right]{学习\\进度信号} (prop);
-
-\node[font=\scriptsize, text=gray, align=center] at (2.5, 1.2)
-  {关键：任务难度需位于能力边界\\太易无训练价值，太难无有效反馈};
-\end{tikzpicture}
-\caption{自博弈进化三元角色：Proposer生成任务，Solver尝试求解，Verifier提供反馈信号。三者可由同一模型不同prompt承担。}
-\label{fig:ch3-selfplay}
-\end{figure}
-
-\subsection{提示词进化}\label{sec:prompt}
-
-提示词进化是最轻量、最容易部署的一类Agent Evolution。\textbf{Reflexion}把稀疏reward转化为"语义梯度"：相比仅告诉模型失败，反思文本能指出失败原因和改进方向。\textbf{ExpeL}从训练任务中自主收集经验，抽取自然语言insights。\textbf{ACE}把上下文工程定义为可演化playbook，使用结构化增量更新避免上下文坍缩。
-
-\subsection{架构搜索}\label{sec:arch}
-
-架构搜索关注agent结构本身的自动设计。\textbf{ADAS}让meta agent用Python编写新agent architecture，在任务上评估后把有效设计加入archive。\textbf{DGM}和\textbf{SICA}把架构搜索推向自我指涉——被改进对象参与改进自身。
-
-\subsection{记忆进化}\label{sec:memory}
-
-记忆进化关注长期经验的积累与检索。\textbf{Voyager}通过自动课程和技能库实现开放世界终身学习。\textbf{Memory-R1}用RL训练记忆管理器（ADD/UPDATE/DELETE/NOOP）。\textbf{AriadneMem}提出演化图表示，用熵感知门控和冲突感知粗化管理记忆。
-
-\subsection{方法对比矩阵}\label{sec:method-compare}
-
-\begin{figure}[htbp]
-\centering
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{l
-  >{\centering\arraybackslash}p{22mm}
-  >{\centering\arraybackslash}p{22mm}
-  >{\centering\arraybackslash}p{16mm}
-  >{\centering\arraybackslash}p{16mm}
-  >{\centering\arraybackslash}p{16mm}
-  >{\centering\arraybackslash}p{16mm}
-  >{\centering\arraybackslash}p{20mm}}
+\small
+\caption{State transition view of Self-Refine.}
+\label{tab:self-refine-transition}
+\begin{tabular}{p{0.18\textwidth}p{0.25\textwidth}p{0.25\textwidth}p{0.22\textwidth}}
 \toprule
-\textbf{方法类别} & \textbf{进化对象} & \textbf{数据需求} & \textbf{评估可靠性} & \textbf{成本} & \textbf{安全风险} & \textbf{可迁移性} & \textbf{典型系统} \\
+\textbf{Stage} & \textbf{Input state} & \textbf{Operation} & \textbf{Output state} \\
 \midrule
-奖励进化 & 策略/权重 & 中-高 & 中 & 高 & 中 & 中 & STaR, RISE \\
-自博弈 & 任务+策略 & 低 & 高 & 中 & 中 & 中 & AbsZero, SPIRAL \\
-提示词进化 & 提示/上下文 & 低 & 低-中 & 低 & 低 & 高 & Reflexion, ACE \\
-架构搜索 & 代码/结构 & 中 & 中-高 & 高 & 高 & 中 & ADAS, DGM \\
-记忆进化 & 经验/技能 & 中 & 中 & 低-中 & 低 & 高 & Voyager, Mem-R1 \\
-混合方法 & 多层组合 & 高 & 中-高 & 高 & 中-高 & 中 & EvolveR, WebEvolver \\
+Generate & Task $x$, instruction $I$ & Produce initial answer $y_0$ & Candidate output \\
+Critique & $x$, $y_t$, rubric $C$ & Identify omissions, errors, violations & Feedback $f_t$ \\
+Refine & $x$, $y_t$, $f_t$ & Rewrite answer under feedback & Candidate $y_{t+1}$ \\
+Select/stop & $y_{t+1}$, $f_t$, verifier & Accept, continue, or stop & Final output or next state \\
 \bottomrule
-\end{tabular}%
-}
-\caption{六大方法类别对比矩阵。评估可靠性、成本、安全风险和可迁移性的相对水平。}
-\label{fig:ch3-method-compare}
-\end{figure}
+\end{tabular}
+\end{table}
+
+A common engineering mistake is to treat Self-Refine as a magic ``try harder'' prompt. In practice, the critique must be specific, grounded, and connected to a verification channel. A critique such as ``improve the answer'' often produces stylistic churn. A critique such as ``the program fails test case 3 because the loop excludes the final element'' can produce real correction. Therefore Self-Refine is strongest when paired with task-specific rubrics, unit tests, formal constraints, or examples of acceptable feedback.
+
+\subsubsection{Reflexion: Verbal Reinforcement Learning and Episodic Memory}
+\label{sec:methods-reflexion}
+
+Reflexion extends inference-time self-improvement from a single output to an agent episode \cite{reflexion2023}. The agent acts in an environment, receives success or failure feedback, generates a natural-language reflection, stores that reflection in memory, and conditions future attempts on the memory. The key idea is that natural language can function as a ``verbal gradient.'' Instead of computing parameter gradients, the system stores an explanation of what went wrong and what to do differently.
+
+The local note describes a three-model architecture: an actor $M_a$, an evaluator $M_e$, and a self-reflection model $M_r$. In many implementations these may be the same underlying model with different prompts, but the roles are conceptually distinct:
+\[
+\begin{aligned}
+  a_e &= M_a(x, \mathcal{M}_{e-1}), \\
+  r_e &= M_e(x, a_e), \\
+  f_e &= M_r(x, a_e, r_e), \\
+  \mathcal{M}_e &= \mathcal{M}_{e-1} \cup \{f_e\}.
+\end{aligned}
+\]
+The memory $\mathcal{M}$ is the evolving state. The actor's policy at episode $e+1$ is not changed in weights, but its effective behavior changes because it observes the accumulated reflections.
+
+Reflexion's benchmark evidence is one of the strongest early demonstrations of inference-time agent improvement. The local notes report 91\% pass@1 on HumanEval, compared with a GPT-4 zero-shot reference of about 80.1\%, and interactive task gains such as 97\% success on AlfWorld versus a 75\% base. The exact interpretation depends on model, prompting, and evaluation protocol, but the qualitative conclusion is robust: a memory of specific failures can be more valuable than another independent sample from the same model.
+
+The method also clarifies a design principle for self-evolving agents: memory should store lessons, not just transcripts. A transcript says what happened. A reflection says why it happened and how the next attempt should change. This distinction is essential for long-horizon agents. Storing every observation creates context bloat; storing distilled failure modes creates reusable knowledge. However, the same distinction introduces risk. If the reflection is wrong, the error becomes persistent. If the memory grows without pruning, retrieval becomes noisy. If an adversarial environment can inject instructions into the memory, the agent can carry compromised behavior into future tasks. Reflexion therefore motivates the memory-governance issues discussed later in the paper.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{State transition view of Reflexion.}
+\label{tab:reflexion-transition}
+\begin{tabular}{p{0.18\textwidth}p{0.25\textwidth}p{0.25\textwidth}p{0.22\textwidth}}
+\toprule
+\textbf{Stage} & \textbf{Input state} & \textbf{Operation} & \textbf{Output state} \\
+\midrule
+Act & Task, environment, memory & Actor generates action or answer & Trajectory or output \\
+Evaluate & Output, environment result & Score success, failure, reward, or test result & Scalar or symbolic feedback \\
+Reflect & Output plus feedback & Produce natural-language lesson & Reflection entry \\
+Store/retrieve & Reflection buffer & Add, rank, and retrieve lessons & Updated memory context \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Reflexion is often described as reinforcement learning without weight updates. This phrase is useful but incomplete. Traditional RL changes a policy by optimizing expected return under an environment transition model. Reflexion changes behavior by modifying the information state supplied to the policy. It is therefore closer to episodic meta-learning through language. The agent learns at the episode level, but the learning is stored outside the model. This makes it cheap and interpretable, but also dependent on the quality and retrieval of memory.
+
+\subsubsection{Self-Debug: Execution Feedback as a Stronger Critic}
+\label{sec:methods-self-debug}
+
+Self-Debug specializes inference-time improvement to code. Instead of asking the model to critique itself in the abstract, it gives the model access to execution feedback: compiler errors, runtime exceptions, failed tests, counterexamples, or traces. The model explains the program, identifies likely defects, and revises the code. This is one of the clearest cases where external feedback dramatically strengthens self-improvement. A model may be unreliable at judging whether a program is correct from text alone, but a compiler or test suite can expose concrete failures.
+
+A general Self-Debug loop can be written as:
+\[
+\begin{aligned}
+  p_0 &= M(x), \\
+  z_t &= \mathrm{Exec}(p_t, \mathcal{T}), \\
+  d_t &= M_{\text{debug}}(x, p_t, z_t), \\
+  p_{t+1} &= M_{\text{repair}}(x, p_t, z_t, d_t).
+\end{aligned}
+\]
+Here $p_t$ is a program, $\mathcal{T}$ is a test set or execution environment, $z_t$ is the observed execution result, and $d_t$ is a natural-language diagnosis. The mutable object is executable code, the feedback source is the runtime environment, and the selection rule is pass/fail or score improvement.
+
+The local notes report improvements for Self-Debug on multiple programming tasks: up to roughly 12\% accuracy improvement on TransCoder and MBPP, and about 9\% improvement in a harder text-to-SQL or code-explanation setting depending on the experimental condition. More important than the exact value is the pattern: execution feedback is higher quality than ungrounded self-critique. It collapses ambiguity. If a function returns the wrong value on a counterexample, the model can reason about a concrete discrepancy rather than guess whether the answer ``looks'' correct.
+
+Self-Debug also anticipates later code-evolution systems. AlphaEvolve, DGM, ReVeal, and many coding agents depend on the same principle: the model proposes code, the environment tests code, and the feedback becomes the basis for mutation. The difference is scale and persistence. Self-Debug usually repairs a single program at inference time. Code-evolution systems may maintain archives of programs, train policies, generate tests, or modify the agent's own implementation. But the seed mechanism is the same.
+
+The main limitation is verifier coverage. Passing visible tests does not prove correctness. A model can overfit to given tests, introduce hidden regressions, or produce code that is efficient on examples but wrong in general. Therefore Self-Debug should be combined with test generation, hidden tests, static analysis, and regression suites when used in production. In evolutionary terms, the fitness function must cover the real environment, not merely the visible sandbox.
+
+\subsubsection{RISE at the Boundary: Learned Introspection Used at Test Time}
+\label{sec:methods-rise-boundary}
+
+RISE occupies a boundary position between inference-time and training-time methods \cite{rise2024}. Its behavior at test time resembles recursive self-improvement: the model inspects its reasoning, decides whether to continue, revise, or terminate, and allocates more introspection to harder problems. However, the ability is trained through an RL formulation. The method therefore belongs in both sections: it is a training-time method for learning a test-time introspection policy.
+
+The local notes model RISE as a multi-turn MDP. A state contains the problem and the current reasoning trajectory, an action may continue or revise, and the final reward depends on answer correctness:
+\[
+  s_t = (x, \tau_{1:t}), \qquad
+  a_t \in \{\text{continue}, \text{revise}, \text{terminate}\}, \qquad
+  R = \mathbb{1}[\hat{y}=y].
+\]
+The policy objective can be written in regularized RL form:
+\[
+  \max_\theta \; \mathbb{E}_{\pi_\theta}\left[\sum_{t=1}^{T} \gamma^t r_t\right]
+  - \beta \, \mathrm{KL}(\pi_\theta \Vert \pi_{\mathrm{ref}}).
+\]
+Reported examples include GSM8K improvements from approximately 14\% to 24\% for a Llama2-7B setting and from approximately 38\% to 46\% for a Mistral-7B setting. These values illustrate a broader lesson: prompting a model to self-correct is not the same as training it to allocate correction budget effectively. The latter can become a learned behavior.
+
+RISE also exposes a subtle failure mode of inference-time improvement: more rounds are not automatically better. Additional reasoning can discover errors, but it can also amplify confusion, rationalize wrong answers, or change correct answers into incorrect ones. A robust introspection policy must decide not only how to revise, but whether revision is needed. This is a key difference between naive self-refinement and learned recursive introspection.
+
+\subsubsection{Inference-Time Methods as Local Evolution}
+\label{sec:methods-inference-summary}
+
+The inference-time family can be summarized as local evolution over a small set of artifacts: answers, plans, programs, traces, critiques, and memory entries. Its strengths are deployment speed, interpretability, low infrastructure cost, and compatibility with proprietary or frozen foundation models. Its weaknesses are context-window limits, lack of durable parameter learning, dependence on critique quality, and vulnerability to self-confirming errors.
+
+The most reliable inference-time systems share four design choices. First, they use concrete feedback whenever possible: tests, tools, environment scores, or verifiable constraints. Second, they store compressed lessons rather than raw transcripts. Third, they limit iteration and define stopping criteria. Fourth, they keep a record of attempts so that a human or downstream evaluator can inspect how the final answer emerged. These choices turn self-improvement from a prompt trick into an auditable process.
+
+\subsection{Training-Time Self-Improvement: Self-Training, Self-Play, RLAIF, and Agent RL}
+\label{sec:methods-training}
+
+Training-time self-improvement changes the model or policy so that successful behavior can be amortized across future tasks. The mutable object may be the model weights, a reward model, a preference model, an actor policy, a verifier policy, a task generator, or a trajectory filter. Training-time methods are more expensive and risky than inference-time methods, but they can produce stronger and more persistent improvements. They also connect agent evolution to the older traditions of self-training, reinforcement learning, curriculum learning, and evolutionary search.
+
+A general training-time loop can be expressed as:
+\[
+\begin{aligned}
+  \mathcal{D}_t &= \mathrm{Generate}(\pi_t, \mathcal{X}_t), \\
+  \mathcal{S}_t &= \mathrm{Score}(\mathcal{D}_t, R_t, V_t), \\
+  \mathcal{D}_t^+ &= \mathrm{Select}(\mathcal{D}_t, \mathcal{S}_t, \tau), \\
+  \pi_{t+1} &= \mathrm{Update}(\pi_t, \mathcal{D}_t^+).
+\end{aligned}
+\]
+Here $\pi_t$ is the current policy, $\mathcal{X}_t$ is a task distribution or prompt set, $R_t$ is a reward function, $V_t$ is a verifier, and $\tau$ is a threshold or selection rule. Different methods instantiate these operators differently.
+
+\subsubsection{STaR: Generate, Filter, Rationalize, Fine-Tune}
+\label{sec:methods-star}
+
+STaR is one of the earliest and clearest training-time self-improvement methods for reasoning \cite{star2022}. Given questions with known answers and a small number of rationale demonstrations, the model generates rationales and answers. Correct answers are retained. For incorrect answers, the model is given the correct answer and asked to rationalize a reasoning chain that leads to it. The retained rationales are then used to fine-tune the model, and the loop repeats.
+
+The method can be formalized as:
+\[
+\begin{aligned}
+  (r_i, \hat{y}_i) &\sim p_{\theta_t}(r,y \mid x_i, F), \\
+  \mathcal{D}_{\text{correct}} &= \{(x_i,r_i,y_i) : \hat{y}_i = y_i\}, \\
+  r_i' &\sim p_{\theta_t}(r \mid x_i, y_i, F) \quad \text{for incorrect } \hat{y}_i, \\
+  \theta_{t+1} &= \arg\max_\theta \sum_{(x,r,y)\in \mathcal{D}_{\text{correct}}} \log p_\theta(r,y\mid x).
+\end{aligned}
+\]
+The rationalization step is the distinctive move. It prevents the dataset from shrinking to only initially solved examples and lets the model learn from mistakes by reconstructing a plausible path to the known answer.
+
+The local notes report that STaR improved a 540M-parameter model on CommonsenseQA from 53.3\% direct prediction and 55.6\% few-shot chain-of-thought to 72.5\%, approaching a much larger 175B model at roughly 73\%. The exact benchmark is not one of the four requested in Section~\ref{sec:methods-benchmarks}, but it is crucial historically because it shows the core generate--filter--finetune pattern. It also reveals a limitation: STaR needs answer labels and can produce rationalizations that fit the answer without faithfully representing the true reasoning process.
+
+From an evolutionary perspective, STaR's population consists of rationales. The evaluator is answer correctness. The selection rule keeps rationales associated with correct answers. The mutation operator is the model's next generation pass after fine-tuning. The archive is the filtered dataset. This is why STaR appears repeatedly in later agent-evolution discussions even though it predates many modern agent frameworks.
+
+\subsubsection{ReST and ReST-EM: Reward-Filtered Self-Training}
+\label{sec:methods-rest}
+
+ReST generalizes the generate--filter--finetune pattern with a reward model \cite{rest2023}. In the E-step, the current policy generates multiple candidates for each input. In the M-step, a reward model scores the candidates, the system filters high-scoring samples, and the model is fine-tuned on the filtered subset. ReST-EM makes the expectation-maximization analogy explicit.
+
+The local note gives the following formulation:
+\[
+\begin{aligned}
+  y_{ij} &\sim \pi_{\theta_t}(\cdot \mid x_i), \quad j=1,\ldots,N, \\
+  s_{ij} &= R(x_i,y_{ij}), \\
+  \mathcal{D}_{\text{filtered}} &= \{(x_i,y_{ij}) : s_{ij} > \tau\}, \\
+  \theta_{t+1} &= \arg\max_\theta \sum_{(x,y)\in \mathcal{D}_{\text{filtered}}} \log \pi_\theta(y\mid x).
+\end{aligned}
+\]
+Unlike PPO-style online RL, ReST can be implemented as batch generation plus supervised fine-tuning. This often makes it more stable and easier to scale. The local notes report gains in machine translation on automatic metrics and human evaluation, with improvements on the order of 1--3 BLEU depending on iteration and setting. They also note that related ReST-EM variants have been applied to reasoning tasks such as MATH and GSM8K.
+
+The central vulnerability is reward-model bias. If the reward model prefers fluent but wrong answers, the training set will amplify fluency over correctness. If the filtering threshold is too low, noisy samples enter the dataset; if too high, the dataset becomes too small or too narrow. ReST therefore demonstrates the power and danger of evaluator-mediated evolution. The evaluator is the environment that defines fitness. If it is mis-specified, evolution faithfully optimizes the wrong target.
+
+\subsubsection{SPIN: Self-Play Fine-Tuning as Distribution Matching}
+\label{sec:methods-spin}
+
+SPIN introduces a self-play view of language-model fine-tuning \cite{spin2024}. Starting from a supervised fine-tuned model, the current model generates responses. The next model is trained to distinguish human demonstrations from the previous model's generated responses. The previous model functions as an opponent, and the training process repeats until the model distribution becomes difficult to distinguish from the target data distribution.
+
+A simplified objective from the local notes is:
+\[
+  L_{\mathrm{SPIN}}(\theta) =
+  \mathbb{E}_{x\sim D}\left[
+  \mathbb{E}_{y\sim p_{\mathrm{data}}}
+  \log \sigma\left(\lambda\left(h_\theta(x,y)-h_\theta(x,\tilde{y})\right)\right)
+  \right],
+\]
+where $h_\theta(x,y)=\log p_\theta(y\mid x)$ and $\tilde{y}\sim p_{\theta_t}(\cdot\mid x)$ is generated by the previous model. The theoretical claim reported in the local notes is that the global optimum is reached when the model distribution matches the target data distribution.
+
+SPIN is important because it transforms self-improvement into an adversarial discrimination problem without requiring new preference labels. The opponent is the model's own past self. This resembles self-play in game AI, but the game is not Go or chess; it is the distinction between human-like demonstrations and model-generated responses. The local notes report improvements on HuggingFace Open LLM Leaderboard tasks, MT-Bench, and Big-Bench-style datasets, with convergence after roughly three iterations in the studied setting. They do not provide precise MMLU or BBH values, so Section~\ref{sec:methods-benchmarks} treats those benchmarks qualitatively unless external result tables are integrated by the bibliography/data agent.
+
+The limitation is that SPIN still needs a supervised data distribution as the target. It can extract more value from SFT data, but it does not eliminate the need for demonstrations. Once the model matches the available data distribution, further improvement requires either new data, a new evaluator, a richer task distribution, or a different objective. In evolutionary terms, SPIN is powerful within a bounded niche but not inherently open-ended.
+
+\subsubsection{Constitutional AI: Self-Critique as Scalable Supervision}
+\label{sec:methods-cai}
+
+Constitutional AI applies self-critique and AI feedback to alignment \cite{constitutionalai2022}. The method has two stages. In the supervised stage, the model responds to prompts, critiques its own response using a written constitution of principles, revises the response, and is fine-tuned on the revised data. In the reinforcement stage, an AI evaluator uses the constitution to choose between response pairs; those preferences train a preference model; and the policy is optimized by RL using that preference model.
+
+The supervised critique-revision stage can be written as:
+\[
+\begin{aligned}
+  r_0 &= M(x), \\
+  c &= M(x,r_0,C), \\
+  r' &= M(x,r_0,c,C), \\
+  \mathcal{L}_{\mathrm{SL}} &= -\log p_\theta(r'\mid x).
+\end{aligned}
+\]
+The RLAIF stage can be written as:
+\[
+\begin{aligned}
+  \mathrm{pref}(r_A,r_B) &= M_{\mathrm{eval}}(x,r_A,r_B,C), \\
+  R(r) &= \mathrm{PM}(x,r), \\
+  \max_\theta \; &\mathbb{E}_{r\sim p_\theta}[R(r)] - \beta\,\mathrm{KL}(p_\theta\Vert p_{\mathrm{ref}}).
+\end{aligned}
+\]
+Here $C$ is the constitution, and $\mathrm{PM}$ is a preference model trained from AI-generated preferences.
+
+Constitutional AI contributes to agent self-evolution in two ways. First, it shows how critique can become training data rather than only inference-time context. Second, it shows how high-level principles can serve as constraints on an evolutionary process. In self-evolving agents, constitutions or policy rules can define which mutations are allowed, which outputs are acceptable, and which evaluator judgments should be considered valid. However, the method does not remove humans from the loop entirely. Humans still design the principles, choose the training setup, evaluate high-risk behavior, and decide what value tradeoffs the constitution encodes.
+
+\subsubsection{RAGEN and Multi-Turn Agent RL}
+\label{sec:methods-ragen}
+
+RAGEN extends training-time self-improvement to multi-turn agent settings \cite{ragen2025}. Its StarPO framework decomposes trajectories into State, Thinking, Actions, and Reward. A trajectory can be represented as:
+\[
+  \tau = \{(s_1,t_1,a_1,r_1),\ldots,(s_T,t_T,a_T,r_T)\},
+\]
+where $t_i$ is the model's internal reasoning or thinking trace and $a_i$ is an external action. A simplified objective from the local notes is:
+\[
+  \max_\theta \; \mathbb{E}\left[\sum_{t=1}^{T}\gamma^t r_t \log \pi_\theta(a_t\mid s_t,t_t)\right].
+\]
+The important empirical observation is the ``Echo Trap'': during multi-turn RL, agents may learn to repeat or echo their own previous thoughts rather than reason productively. RAGEN proposes trajectory filtering, such as removing trajectories with high similarity between successive thoughts:
+\[
+  \mathrm{cos\_sim}(t_t,t_{t-1}) > \delta \Rightarrow \text{echo candidate}.
+\]
+
+RAGEN's contribution is methodological. It warns that training-time self-improvement can create deceptive internal dynamics. A trajectory may receive reward while the reasoning process collapses into repetition. This matters for agent evolution because many agent systems expose thoughts, plans, or reflections as part of their loop. If those internal artifacts are optimized without safeguards, they can become reward-hacking surfaces. Therefore method design must evaluate not only final task success, but also the diversity, usefulness, and faithfulness of intermediate reasoning states.
+
+\subsubsection{Absolute Zero: Self-Generated Tasks and Verifiable Rewards}
+\label{sec:methods-absolute-zero}
+
+Absolute Zero pushes training-time self-improvement toward zero external data \cite{absolutezero2025}. The model plays two roles: task proposer and task solver. The proposer generates tasks intended to be solvable, challenging, and diverse. The solver attempts them. A code executor verifies the solution. The reward updates both the proposer and solver.
+
+The loop can be written as:
+\[
+\begin{aligned}
+  q_t &\sim \pi_{\theta}^{\mathrm{prop}}(\cdot\mid c_t), \\
+  s_t &\sim \pi_{\theta}^{\mathrm{solve}}(\cdot\mid q_t), \\
+  r_t &= \mathrm{Execute}(q_t,s_t) \in \{0,1\}, \\
+  R_{\mathrm{prop}}(q_t) &\propto \mathrm{difficulty}(q_t)\cdot \mathrm{solvability}(q_t)\cdot \mathrm{diversity}(q_t).
+\end{aligned}
+\]
+The executor is crucial because it prevents the proposer and solver from colluding through unverifiable tasks. The local notes report that AZR-Coder-7B achieves state-of-the-art or competitive performance among 7B coding models on HumanEval+, MBPP+, LiveCodeBench, and aggregate coding averages, while also showing cross-domain transfer to mathematical reasoning despite using code self-play.
+
+Absolute Zero is one of the most important methods for the open-endedness question. If agents can generate their own curricula, they may reduce reliance on human-labeled datasets. However, the method also concentrates risk in curriculum quality. Too-easy tasks produce no learning. Too-hard tasks produce no signal. Narrow tasks produce mode collapse. Incorrect verifiers produce false progress. The ``zero data'' claim should therefore be understood as zero external task data under a strong verifier, not zero supervision in the philosophical sense. The executor still defines what counts as success.
+
+\subsubsection{ReVeal: Co-Evolving Code Generation and Self-Verification}
+\label{sec:methods-reveal}
+
+ReVeal focuses on self-evolving code agents through reliable self-verification \cite{reveal2026}. It treats verification not as a byproduct of generation, but as an explicit target of optimization. The agent generates code, generates or selects tests, executes verification, receives turn-level rewards, and updates through TAPO, a turn-level adaptive policy optimization method.
+
+A simplified trajectory is:
+\[
+  \tau = \{(c_1,v_1,r_1),\ldots,(c_T,v_T,r_T)\},
+\]
+where $c_t$ is code, $v_t$ is a verification attempt, and $r_t$ is a turn-level reward. The loss can be described as:
+\[
+  \mathcal{L} = \mathcal{L}_{\mathrm{generation}} + \lambda \mathcal{L}_{\mathrm{verification}}.
+\]
+The local notes emphasize that ReVeal trains on only a small number of reasoning turns but can run for 20+ turns at inference on LiveCodeBench-style tasks, outperforming a strong DeepSeek-R1-Zero-Qwen-32B baseline under the reported setting.
+
+ReVeal's broader lesson is that future self-evolving agents may need to co-evolve generators and evaluators. A code generator without test-generation skill remains dependent on external tests. A verifier without a strong generator can find errors but not fix them. Co-evolution is promising, but it also creates evaluator-drift risk: if generator and verifier adapt together without independent gates, they may agree on flawed standards. For production, co-evolved self-verification should still be checked by hidden tests or independent evaluators.
+
+\subsection{Comparative Analysis: Methods, Loops, Feedback, and Task Fit}
+\label{sec:methods-comparison}
+
+The methods above differ along several dimensions that matter more than their names. The first dimension is the mutable object. Some methods mutate the answer or program inside a single episode; others mutate memory, rationales, datasets, policies, reward models, or task generators. The second dimension is feedback source. Feedback may be self-critique, execution results, answer labels, reward models, human demonstrations, constitutional principles, previous model opponents, or external environments. The third dimension is amortization. Inference-time loops improve a current attempt; training-time loops improve future behavior. The fourth dimension is evaluator independence. A compiler or hidden unit test is more independent than an LLM judging its own answer. The fifth dimension is transfer. A method may improve a benchmark but fail to produce reusable knowledge.
+
+\begin{longtable}{p{0.15\textwidth}p{0.14\textwidth}p{0.13\textwidth}p{0.17\textwidth}p{0.18\textwidth}p{0.16\textwidth}}
+\caption{Comparison of representative self-improvement methods.}\label{tab:methods-comparison}\\
+\toprule
+\textbf{Method} & \textbf{Loop type} & \textbf{Training need} & \textbf{Feedback source} & \textbf{Mutable object} & \textbf{Best-fit tasks} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Method} & \textbf{Loop type} & \textbf{Training need} & \textbf{Feedback source} & \textbf{Mutable object} & \textbf{Best-fit tasks} \\
+\midrule
+\endhead
+Self-Refine & Inference critique-refine & None & Self-critique, rubric & Candidate output and critique history & Writing, reasoning, constrained generation, local repair \\
+Reflexion & Inference memory-reflection & None & Evaluator reward or environment success & Episodic verbal memory & Agent tasks, coding, web/shop tasks, interactive environments \\
+Self-Debug & Inference execution-repair & None & Compiler, tests, traces, runtime errors & Program text and diagnosis & Code generation, translation, SQL, program repair \\
+RISE & Trained introspection used at inference & RL fine-tuning & Final answer correctness and trajectory reward & Introspection policy & Math reasoning, multi-step reasoning \\
+STaR & Generate-filter-finetune & Supervised fine-tuning & Answer labels & Rationale dataset and model weights & QA and reasoning with known answers \\
+ReST/ReST-EM & Reward-filtered self-training & Fine-tuning & Reward model or rule scorer & Filtered dataset and policy & Translation, alignment, reasoning with reward models \\
+Constitutional AI & Critique-revise plus RLAIF & SL plus RL & Constitutional principles and AI preferences & Revised data, preference model, policy & Safety alignment, harmlessness, principle-guided assistants \\
+SPIN & Self-play discrimination & Iterative fine-tuning & Human demonstrations vs previous-model outputs & Policy distribution & Alignment from SFT data, instruction following \\
+RAGEN & Multi-turn agent RL & RL & Step and trajectory rewards; echo filters & Multi-turn policy and reasoning traces & Tool agents, interactive RL environments \\
+Absolute Zero & Self-generated curriculum RL & RL & Code executor and curriculum reward & Task proposer and solver policies & Verifiable code/math/logical tasks \\
+ReVeal & Generation-verification co-evolution & RL & Tests, self-verification rewards, TAPO credit & Code generator and verifier behavior & Live coding, code agents, test-driven repair \\
+\bottomrule
+\end{longtable}
+
+This table suggests several design heuristics. If a task has no reliable external verifier, begin with inference-time critique and human review rather than RL. If a task has a cheap deterministic verifier, exploit execution feedback before using subjective LLM judges. If improvements must persist across many users or tasks, convert successful inference-time traces into training data, memory entries, or reusable skills. If the system is safety-critical, separate the generator from the evaluator and prevent the evolving agent from editing the final gate. If cost is constrained, prefer local refinement and small filtered datasets before open-ended population search.
+
+\subsubsection{Algorithmic Templates}
+\label{sec:methods-algorithms}
+
+The following pseudocode templates make the comparison operational. They are written without relying on a specialized LaTeX algorithm package so that the chapter remains compatible with the current manuscript preamble.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Template A: inference-time refinement.}
+\label{tab:algo-inference-refinement}
+\begin{tabular}{p{0.95\textwidth}}
+\toprule
+\textbf{Input}: task $x$, model $M$, verifier $V$, maximum rounds $T$, optional memory $\mathcal{M}$.
+\newline
+1. Generate candidate $y_0 = M(x,\mathcal{M})$.
+\newline
+2. For $t=0$ to $T-1$: evaluate $e_t=V(x,y_t)$; if accepted, return $y_t$.
+\newline
+3. Produce critique $c_t=M(\mathrm{critique};x,y_t,e_t,\mathcal{M})$.
+\newline
+4. Produce revision $y_{t+1}=M(\mathrm{revise};x,y_t,c_t,e_t,\mathcal{M})$.
+\newline
+5. Optionally store compressed lesson $m_t=\mathrm{compress}(x,y_t,e_t,c_t)$ in memory.
+\newline
+6. Return the best accepted candidate or the best-scoring candidate under $V$.
+\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Template B: reward-filtered self-training.}
+\label{tab:algo-reward-filtered}
+\begin{tabular}{p{0.95\textwidth}}
+\toprule
+\textbf{Input}: prompt distribution $\mathcal{X}$, policy $\pi_\theta$, reward/verifier $R$, sampling count $N$, threshold $\tau$.
+\newline
+1. For each $x\in\mathcal{X}$, sample $N$ candidates $y_{1:N}\sim\pi_\theta(\cdot\mid x)$.
+\newline
+2. Score each candidate $s_j=R(x,y_j)$.
+\newline
+3. Select $\mathcal{D}^+=\{(x,y_j):s_j>\tau\}$ or top-$k$ candidates per prompt.
+\newline
+4. Update $\theta$ by supervised fine-tuning or preference optimization on $\mathcal{D}^+$.
+\newline
+5. Re-evaluate on held-out tasks and stop if gains saturate or regressions appear.
+\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Template C: self-play curriculum with executable verification.}
+\label{tab:algo-self-play-curriculum}
+\begin{tabular}{p{0.95\textwidth}}
+\toprule
+\textbf{Input}: proposer policy $\pi_p$, solver policy $\pi_s$, verifier $V$, curriculum state $c$.
+\newline
+1. Proposer samples task $q\sim\pi_p(\cdot\mid c)$.
+\newline
+2. Solver samples solution $a\sim\pi_s(\cdot\mid q)$.
+\newline
+3. Verifier computes $r=V(q,a)$ and auxiliary measures of difficulty, novelty, and solvability.
+\newline
+4. Update solver to increase probability of verified solutions.
+\newline
+5. Update proposer to produce tasks near the solver's learning frontier, not trivial or impossible tasks.
+\newline
+6. Add accepted tasks, failures, and verifier traces to the curriculum archive.
+\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These templates show that many named methods differ by substituting one component. Self-Refine uses an LLM critique as $V$ or feedback. Self-Debug uses execution as $V$. STaR uses answer labels. ReST uses a reward model. SPIN replaces $R$ with a discriminator-like objective against past-model outputs. Constitutional AI uses principles to generate revisions and preferences. Absolute Zero adds a proposer update. ReVeal adds explicit verifier optimization and turn-level credit assignment.
+
+\subsubsection{Failure Modes by Method Class}
+\label{sec:methods-failure-modes}
+
+Inference-time critique methods fail when critiques are generic, self-serving, or disconnected from verifiable errors. They may also degrade correct answers by over-editing. Memory-based methods fail when wrong reflections persist, when retrieval surfaces irrelevant lessons, or when context bloat reduces signal-to-noise ratio. Execution-based methods fail when tests are incomplete or when the model overfits visible counterexamples. Reward-filtered training fails when the reward model is biased, stale, or exploitable. Self-play fails when the game becomes degenerate, when task generation collapses to narrow patterns, or when the opponent is too weak to provide useful pressure. Multi-turn RL fails when internal reasoning collapses into echoes, when reward assignment is too sparse, or when trajectory length increases cost faster than accuracy.
+
+A robust method section must therefore report negative evidence. How many candidates were rejected? What kinds of failures survived the loop? Did old capabilities regress? Did the method improve hidden tests or only visible tests? Did the model learn to produce better reasoning or merely longer reasoning? Did the method increase cost per solved task? Did performance persist across prompts, models, and domains? These questions are part of the method, not post-hoc criticism.
+
+\subsection{Benchmark Evidence: HumanEval, GSM8K, BBH, MMLU, and Adjacent Tasks}
+\label{sec:methods-benchmarks}
+
+Benchmark evidence for self-improvement methods is heterogeneous. Some methods report standard coding benchmarks such as HumanEval, MBPP, TransCoder, APPS, LiveCodeBench, or SWE-Bench. Others report math benchmarks such as GSM8K or MATH. Alignment methods report helpfulness, harmlessness, MT-Bench, TruthfulQA, or human preference. Self-play methods may report HuggingFace Open LLM Leaderboard tasks, Big-Bench-style tasks, or custom game environments. This heterogeneity makes direct comparison difficult. The same method may look strong on code, moderate on math, and untested on MMLU.
+
+\begin{longtable}{p{0.16\textwidth}p{0.2\textwidth}p{0.22\textwidth}p{0.3\textwidth}}
+\caption{Benchmark examples reported in local notes or primary paper summaries. Values are included only where the available notes provide concrete numbers; otherwise the table records qualitative coverage.}\label{tab:benchmark-evidence}\\
+\toprule
+\textbf{Benchmark} & \textbf{Method/system} & \textbf{Reported value or trend} & \textbf{Interpretation and caveat} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Benchmark} & \textbf{Method/system} & \textbf{Reported value or trend} & \textbf{Interpretation and caveat} \\
+\midrule
+\endhead
+HumanEval & Reflexion & 91\% pass@1; GPT-4 reference about 80.1\% in notes & Strong evidence that verbal memory plus retry improves coding success under the reported protocol. \\
+HumanEval+ & Absolute Zero & SOTA or competitive among 7B-level coding models in notes & Demonstrates zero-external-data self-play potential, but notes do not provide the exact table values. \\
+MBPP / MBPP+ & Self-Debug; Absolute Zero & Self-Debug up to about +12\%; Absolute Zero SOTA/competitive in notes & Execution feedback and self-generated curricula are especially suitable for verifiable code tasks. \\
+TransCoder & Self-Debug & Up to about +12\% accuracy improvement in notes & Shows transfer of debugging loop to code translation. \\
+GSM8K & Self-Refine & 56\% to 67\% on math reasoning example in notes & Demonstrates inference-time critique benefit for mathematical reasoning. \\
+GSM8K & RISE & Llama2-7B about 14\% to 24\%; Mistral-7B about 38\% to 46\% in notes & Trained introspection improves multi-step reasoning, but exact values are setting-specific. \\
+GSM8K & SPIN & Significant improvement reported qualitatively in notes & SPIN evaluates leaderboard tasks including GSM8K, but local notes do not provide exact numbers. \\
+BBH / Big-Bench-style tasks & SPIN & Improvement reported qualitatively; paper summary mentions Big-Bench datasets & Evidence supports broad improvement, but this chapter avoids unsupported exact BBH values. \\
+MMLU & Self-improvement family & Not consistently reported in the provided local notes & MMLU should be included in future unified evaluation, but local materials do not justify a precise value here. \\
+CommonsenseQA & STaR & 540M direct 53.3\%, few-shot CoT 55.6\%, STaR 72.5\%, 175B reference about 73\% & Not one of the four requested benchmarks, but historically central for self-training rationales. \\
+AlfWorld & Reflexion & 97\% success versus 75\% base in notes & Shows reflection memory can help interactive agents, not only static QA. \\
+LiveCodeBench & ReVeal; Absolute Zero & ReVeal surpasses strong baseline qualitatively; Absolute Zero competitive in notes & Multi-turn verification and self-play matter for modern coding evaluation. \\
+\bottomrule
+\end{longtable}
+
+This table deliberately includes caveats. It would be misleading to force precise BBH or MMLU values when the provided local notes do not contain them. A unified runner for this survey should therefore include a benchmark-normalization appendix with source-specific values, model versions, prompt settings, and evaluation dates. Until then, the safest claim is methodological: self-improvement gains are strongest and most reproducible where feedback is verifiable, such as code execution or answer-labeled math; they are harder to interpret where evaluation depends on broad knowledge benchmarks or subjective preferences.
+
+\subsubsection{HumanEval and Code Benchmarks}
+\label{sec:methods-humaneval}
+
+HumanEval is a natural benchmark for self-improvement because generated programs can be executed. Reflexion's reported 91\% pass@1 is therefore especially salient. It suggests that a model can fail once, receive a failure signal or reflection, and then solve tasks it would not solve in a single zero-shot attempt. Self-Debug extends the same idea by making execution traces explicit. ReVeal extends it further by training the agent to generate and use verification across multiple turns. Absolute Zero uses code execution as the verifier for self-generated curricula.
+
+The shared lesson is that code creates a tight feedback loop. The output is executable. The verifier is cheap relative to human review. The failure is often localizable. The improvement can be measured by pass rate. This is why coding agents are likely to remain a leading domain for agent self-evolution. However, code benchmarks also expose the danger of overfitting. A method may pass HumanEval but fail on LiveCodeBench, real repositories, or hidden tests. Production coding agents should therefore use layered evaluation: public benchmarks for comparability, generated tests for exploration, hidden tests for anti-overfitting, and repository-specific CI for deployment.
+
+\subsubsection{GSM8K, MATH, and Mathematical Reasoning}
+\label{sec:methods-gsm8k}
+
+Math reasoning is another natural domain because many problems have exact answers. Self-Refine's improvement from 56\% to 67\% in the local notes shows that critique and revision can help even without weight updates. RISE's reported GSM8K improvements show that training a model to introspect can further improve reasoning behavior. STaR's rationale filtering also belongs to this family, even though the highlighted local result is on CommonsenseQA.
+
+The difficulty is that mathematical self-improvement can produce rationalization. A model may write a plausible chain of thought that happens to end at the correct answer, or it may revise a correct solution into a wrong one because the critique sounds convincing. Therefore math benchmarks should evaluate final correctness, but method analysis should also examine reasoning faithfulness, sensitivity to prompt changes, and the rate at which revision flips correct answers to incorrect answers. A useful metric is not only $\Delta \mathrm{accuracy}$ but also:
+\[
+  \mathrm{harm\_rate} = \Pr[y_0 = y^\star \;\wedge\; y_T \neq y^\star],
+\]
+which measures how often self-improvement damages an already correct solution.
+
+\subsubsection{BBH, MMLU, and Broad Knowledge Benchmarks}
+\label{sec:methods-bbh-mmlu}
+
+BBH and MMLU are broader and less directly verifiable at inference time. They test multi-domain knowledge, reasoning, and sometimes pattern generalization. SPIN's local notes mention Big-Bench-style evaluation and leaderboard improvements, but they do not provide exact BBH or MMLU numbers. This absence is informative. Many self-improvement methods are first validated on tasks with clearer feedback: code, math, translation, or interactive environments. Broad knowledge benchmarks require careful interpretation because improvements may reflect better instruction following, better calibration, or benchmark-specific adaptation rather than a general self-evolution mechanism.
+
+For a future unified evaluation, BBH and MMLU should be included for three reasons. First, they test whether self-improvement transfers beyond the domain used for feedback. Second, they expose whether methods over-specialize to code or math. Third, they provide comparability with broader LLM literature. But they should not be the only measures. A self-evolving agent may improve tool use, memory, or workflow reliability without moving MMLU. Conversely, an MMLU gain may not imply better agentic adaptation.
+
+\subsubsection{Metrics Beyond Accuracy}
+\label{sec:methods-metrics-beyond-accuracy}
+
+Accuracy, pass@1, and win rate are necessary but incomplete. Agent self-evolution also needs metrics for cost, stability, transfer, and safety. Let $S_0$ and $S_T$ be task success before and after self-improvement, and let $C_T$ be total cost in tokens, tool calls, wall-clock time, or dollars. A simple efficiency metric is:
+\[
+  \mathrm{gain\_per\_cost} = \frac{S_T - S_0}{C_T}.
+\]
+For training-time methods, cost should include data generation, scoring, filtering, training, evaluation, and failed candidates. For inference-time methods, cost should include repeated model calls and tool execution. A method that improves accuracy by three points while increasing cost by ten times may be inappropriate for production.
+
+Regression should also be measured. Let $\mathcal{T}_{\mathrm{old}}$ be a suite of tasks the agent could already solve and $\mathcal{T}_{\mathrm{new}}$ be the target improvement suite. A safe update should satisfy:
+\[
+  \Delta_{\mathrm{new}} > 0 \quad \text{and} \quad \Delta_{\mathrm{old}} \geq -\epsilon,
+\]
+where $\epsilon$ is an explicit tolerance. This is especially important for memory updates and fine-tuning. Self-improvement that erases old capabilities is not cumulative evolution; it is capability replacement.
+
+Finally, evaluator independence should be recorded. A result verified by hidden tests or human blind review is stronger than a result judged by the same model that generated it. A useful reporting field is:
+\[
+  \mathrm{independence}(V) \in \{\text{self-judge}, \text{peer-judge}, \text{reward model}, \text{programmatic}, \text{hidden external}, \text{human blind}\}.
+\]
+This field makes clear how vulnerable a result is to evaluator gaming.
+
+
+\subsection{A Unified State-Space View of Self-Improvement Methods}
+\label{sec:methods-state-space}
+
+A useful way to compare the methods in this chapter is to treat each of them as a state-space process. The state is not merely the hidden state of a neural network. It is the complete set of artifacts that can influence future behavior: the current prompt, the scratchpad, retrieved memory, visible tests, hidden evaluator, tool outputs, training dataset, reward model, previous model checkpoint, archive of candidates, and policy parameters. A self-improvement method is then a transition operator over this augmented state:
+\[
+  \mathcal{S}_{t+1} = \Phi(\mathcal{S}_t, x_t, y_t, e_t, u_t),
+\]
+where $x_t$ is the task, $y_t$ is the agent's output or trajectory, $e_t$ is evidence from a verifier or critic, and $u_t$ is an update action. In Self-Refine, $\mathcal{S}_t$ mainly contains the current draft and critique history. In Reflexion, it contains episodic memory. In Self-Debug, it contains program text and execution traces. In STaR, it contains a rationale dataset and model parameters. In SPIN, it contains the current policy and previous-policy generated responses. In Absolute Zero, it contains a curriculum archive and proposer/solver states.
+
+This view is valuable because it prevents a false dichotomy between ``prompting'' and ``training.'' Both are state updates. The difference is where the update is stored and how long it persists. A prompt update persists for one call or session. A memory update persists across episodes but may be retrieved selectively. A dataset update persists until retraining or pruning. A weight update persists in every subsequent call. A code update persists at the software level and can change the agent's own future update rules. These persistence levels imply different safety requirements. The more persistent and globally applied the update, the stronger the evidence needed before accepting it.
+
+We can define a persistence hierarchy:
+\[
+  \text{candidate} < \text{context} < \text{session memory} < \text{long-term memory} < \text{dataset} < \text{weights} < \text{code} < \text{evaluator}.
+\]
+Updates near the left side are cheap to try and easy to discard. Updates near the right side can affect many future tasks and should require stronger validation. This hierarchy explains why inference-time methods are attractive for rapid experimentation and why self-modifying code or evaluator evolution is governance-intensive. It also explains why a mature agent-evolution platform should support graduated promotion: a lesson first appears as a reflection, then becomes a memory entry, then becomes a test or training example, and only after repeated validation becomes a policy update.
+
+Another useful abstraction is the separation between \emph{variation}, \emph{evaluation}, and \emph{inheritance}. Variation creates candidates. Evaluation assigns evidence. Inheritance decides what persists. In Self-Refine, variation is revision, evaluation is critique or task scoring, and inheritance is keeping the revised output. In ReST, variation is sampling candidate responses, evaluation is reward-model scoring, and inheritance is fine-tuning on filtered samples. In SPIN, variation is previous-model generation, evaluation is discrimination against human data, and inheritance is the next model. In Absolute Zero, variation occurs both in task generation and in solution generation; evaluation is code execution; inheritance updates both proposer and solver. This decomposition is simple, but it is the clearest bridge between LLM methods and evolutionary computation.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Persistence levels for self-improvement artifacts.}
+\label{tab:persistence-levels}
+\begin{tabular}{p{0.16\textwidth}p{0.3\textwidth}p{0.24\textwidth}p{0.2\textwidth}}
+\toprule
+\textbf{Level} & \textbf{Example artifacts} & \textbf{Benefit} & \textbf{Risk} \\
+\midrule
+Candidate & Draft answer, candidate program & Cheap exploration & No durable learning \\
+Context & Critique, plan, scratchpad & Immediate adaptation & Context bloat, prompt sensitivity \\
+Session memory & Recent reflections, retry history & Multi-attempt learning & Wrong lesson persistence \\
+Long-term memory & Skills, rules, failure summaries & Cross-task reuse & Poisoning, privacy, stale knowledge \\
+Dataset & Filtered rationales, preference pairs & Amortized training & Data contamination, bias amplification \\
+Weights & Fine-tuned policy or reward model & Durable capability gain & Regression, overfitting, hard rollback \\
+Code/workflow & Agent architecture, tool policy & Structural improvement & Supply-chain and permission risk \\
+Evaluator & Reward model, hidden tests, judge prompt & Defines selection pressure & Goodhart, self-serving metrics \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This state-space framing also reveals a missing piece in many papers: the update log. If the state changes, a serious self-evolution system should record what changed, why it changed, what evidence justified the change, and how to revert it. A model checkpoint without a data lineage is difficult to audit. A memory entry without provenance is difficult to trust. A code patch without tests is unsafe. A reward-model update without held-out evaluator checks is a Goodhart risk. Therefore method design should include a minimal lineage schema:
+\[
+  \ell = (\text{ancestor},\text{mutation},\text{evidence},\text{acceptance rule},\text{cost},\text{rollback pointer}).
+\]
+Even inference-time systems benefit from such a schema. A Reflexion agent can store not only ``avoid this error,'' but also the task that produced the lesson, the evaluator outcome, and the date or version of the environment. A Self-Debug agent can store the failed test that motivated a repair. A ReST pipeline can store reward thresholds and rejected-sample statistics. These details turn self-improvement from anecdote into reproducible method.
+
+\subsection{Input-Output Semantics of the Major Loops}
+\label{sec:methods-io-semantics}
+
+The methods differ not only in update mechanism but also in input-output semantics. This matters because an apparently small semantic difference changes what kinds of tasks the method can solve. Self-Refine accepts a task and an initial output, and returns a revised output. It assumes the output can be improved by local editing. Reflexion accepts an episode history and returns a memory item that influences later episodes. It assumes failures can be summarized as portable lessons. Self-Debug accepts a program and execution evidence, and returns a repaired program. It assumes the environment can expose actionable traces. STaR accepts labeled questions and returns a trained reasoner. It assumes labels are available and rationales are learnable. SPIN accepts demonstrations and previous-model outputs, and returns a policy closer to the demonstration distribution. It assumes the target distribution is represented by SFT data. Absolute Zero accepts a verifier and a base model, and returns both generated tasks and a stronger solver. It assumes the verifier can reject invalid self-generated tasks.
+
+These semantic assumptions should be made explicit before choosing a method. If a task cannot be locally edited, Self-Refine may produce superficial rewrites. If failures cannot be compressed into natural-language lessons, Reflexion may create misleading memory. If no deterministic or semi-deterministic verifier exists, Self-Debug and Absolute Zero lose their strongest advantage. If labels are unavailable, STaR is not directly applicable. If the demonstration distribution is narrow, SPIN may converge to a narrow imitation. If the task requires persistent tool creation or workflow changes, output-level methods are insufficient.
+
+The following table summarizes the input-output contracts of representative methods.
+
+\begin{longtable}{p{0.14\textwidth}p{0.23\textwidth}p{0.23\textwidth}p{0.3\textwidth}}
+\caption{Input-output semantics of representative methods.}\label{tab:io-semantics}\\
+\toprule
+\textbf{Method} & \textbf{Primary input} & \textbf{Primary output} & \textbf{Hidden assumption} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Method} & \textbf{Primary input} & \textbf{Primary output} & \textbf{Hidden assumption} \\
+\midrule
+\endhead
+Self-Refine & Task, draft, rubric & Revised answer & Critique can identify repairable local defects \\
+Reflexion & Episode, reward, failure trace & Memory lesson & Natural language can encode reusable policy advice \\
+Self-Debug & Program, tests, execution trace & Repaired program & Tests expose errors that the model can diagnose \\
+RISE & Problem, reasoning trajectory & Revised/continued reasoning & Introspection policy can learn when to revise \\
+STaR & Labeled QA data, rationale prompts & Fine-tuned reasoner & Correct answers can select useful rationales \\
+ReST & Prompt set, reward model & Fine-tuned policy & Reward model ranks true quality sufficiently well \\
+SPIN & SFT demonstrations, previous-policy samples & Improved policy & Matching demonstration distribution is the target \\
+Constitutional AI & Principles, responses, preference pipeline & Safer assistant policy & Principles encode desired behavior sufficiently well \\
+RAGEN & Multi-turn trajectories & Agent RL policy & Trajectory rewards can be assigned without reasoning collapse \\
+Absolute Zero & Base model, executor/verifier & Proposer and solver policies & Verifier prevents degenerate self-generated curricula \\
+ReVeal & Code tasks, verification turns & Code agent with verifier behavior & Self-verification can be trained without drifting from correctness \\
+\bottomrule
+\end{longtable}
+
+This contract perspective also helps explain why benchmark results transfer unevenly. HumanEval and MBPP fit Self-Debug and ReVeal because their outputs are executable. GSM8K fits RISE and Self-Refine because final answers are checkable and intermediate reasoning can be revised. CommonsenseQA fits STaR because labels can filter rationales. Broad instruction-following tasks fit SPIN and Constitutional AI because demonstrations and principles can define target behavior. Web navigation and embodied tasks fit Reflexion because episodes produce failures that can be summarized and retried. No method is universally best because no single input-output contract matches every domain.
+
+\subsection{Inference-Time Methods in Greater Detail}
+\label{sec:methods-inference-details}
+
+Inference-time methods are often dismissed as ``just prompting,'' but this is too shallow. A robust inference-time self-improvement pipeline contains several design choices: critique role design, evidence injection, history management, stopping criteria, candidate selection, and memory promotion. Each choice changes performance and risk.
+
+Critique role design determines what the model is asked to notice. A general critic may identify style issues but miss correctness errors. A domain critic can check invariants, constraints, citations, edge cases, or API contracts. For coding tasks, a critic might inspect failed assertions, complexity bounds, and type errors. For mathematical reasoning, a critic might verify each algebraic transformation. For writing, a critic might check whether claims are supported by sources and whether the structure matches the thesis. Self-Refine's success depends heavily on such rubrics.
+
+Evidence injection determines whether the critique is grounded. Without evidence, a critic may hallucinate flaws or praise incorrect answers. With evidence, the critic can connect revisions to observable failures. The best inference-time pipelines therefore place evidence before critique. For code, run tests before asking for a diagnosis. For web tasks, show the DOM state and failed action. For retrieval tasks, show the retrieved passage and the unsupported claim. For math, show the final answer check. This design reduces the probability of self-confirming critique.
+
+History management determines how much previous context to include. Including all previous attempts can help the model avoid repeated mistakes, but it also increases token cost and may anchor the model to bad hypotheses. A better strategy is to summarize history into a structured record: attempted approach, failure evidence, rejected hypothesis, and next constraint. Reflexion-style memory is one form of this strategy. Another is a small table of failed tests and corresponding fixes. A third is a plan diff showing how the next attempt differs from the previous attempt.
+
+Stopping criteria are essential. Naive self-refinement can continue indefinitely, especially when the critic always finds another stylistic issue. Practical systems stop when a verifier accepts the output, when improvement falls below a threshold, when a fixed budget is exhausted, or when revisions begin to oscillate. For tasks with deterministic tests, stopping is simple. For subjective tasks, stopping may require a confidence threshold, a human review gate, or a cost limit. A method paper should report the stopping rule because iteration count directly affects both accuracy and cost.
+
+Candidate selection determines whether the system keeps the latest revision or the best revision seen so far. Keeping the latest revision is simple but unsafe if later edits degrade the answer. Keeping the best-scoring candidate is better when a verifier exists. For subjective outputs, systems can keep a small beam of candidates and ask a separate judge to compare them. This turns single-chain refinement into local search. However, beam search increases cost and may reduce diversity if the judge shares the generator's biases.
+
+Memory promotion determines which inference-time lessons become long-term assets. Not every critique should be stored. A lesson should be promoted only if it is specific, evidence-backed, and likely to recur. A useful memory item might say: ``When generating Python solutions for interval problems, include boundary tests for empty intervals and adjacent endpoints; this failure occurred on task X and was fixed by condition Y.'' A poor memory item says: ``Be more careful.'' Promotion rules should include provenance, expiration, and conflict handling. Otherwise, memory becomes a landfill of vague advice.
+
+These design choices show that inference-time self-improvement is an engineering discipline. It is not enough to add ``reflect on your answer'' to a prompt. The system must decide what evidence to collect, what critique to request, how to represent failed attempts, how to choose revisions, and what to remember. This is why inference-time methods remain relevant even as training-time methods become stronger: they provide the operational layer where agents encounter real tasks, real tools, and real failures.
+
+\subsection{Training-Time Methods in Greater Detail}
+\label{sec:methods-training-details}
+
+Training-time methods introduce additional degrees of freedom: data generation strategy, scoring function, selection rule, optimization algorithm, evaluation split, and rollback policy. Each degree of freedom can improve capability or introduce bias. A training-time method is therefore not merely a loop; it is a data pipeline and governance pipeline.
+
+Data generation strategy defines the candidate distribution. STaR samples rationales conditioned on questions and few-shot demonstrations. ReST samples multiple completions per prompt. SPIN samples from the previous model. Absolute Zero samples tasks from a proposer. RAGEN samples multi-turn trajectories. ReVeal samples code-verification turns. The candidate distribution matters because selection can only choose among generated candidates. If the generator never proposes a correct or novel solution, filtering cannot create one. If the generator proposes many low-quality candidates, evaluation cost rises.
+
+The scoring function defines selection pressure. Answer labels, unit tests, reward models, AI judges, human preferences, constitutional principles, and trajectory rewards all score different aspects of behavior. A programmatic verifier is precise but narrow. A reward model is broad but vulnerable to bias. A human judge is flexible but expensive. A self-judge is cheap but correlated with the generator's blind spots. The scoring function should be chosen according to task risk. Low-risk stylistic tasks may tolerate self-judgment. Code deployment should require tests. Safety alignment should require independent review and adversarial evaluation.
+
+The selection rule determines which candidates enter the next generation. Top-$k$ selection, threshold filtering, rejection sampling, preference-pair construction, and archive selection all create different data distributions. Strict selection improves average quality but may reduce diversity and cause overfitting. Loose selection preserves diversity but admits noise. Archive-based selection can preserve stepping stones that are not immediately best but may lead to future improvements. This is one reason evolutionary computation concepts are useful: the best immediate candidate is not always the best ancestor.
+
+The optimization algorithm determines how selected evidence affects the policy. Supervised fine-tuning on filtered outputs is stable but may not optimize long-term reward. DPO and preference optimization use comparisons but depend on preference quality. PPO/GRPO-style RL can optimize reward directly but is sensitive to reward hacking, KL control, and training stability. Turn-level methods such as TAPO attempt to assign credit more precisely in multi-turn tasks. The choice should reflect the feedback granularity. If only final success is known, trajectory-level RL may be needed. If high-quality outputs are available, supervised fine-tuning may suffice.
+
+Evaluation splits determine whether improvement is real. A training-time loop should separate visible selection data, validation data used for development, and hidden test data used for final claims. It should also evaluate old capabilities. The local notes on RAGEN's Echo Trap illustrate why final reward alone may be insufficient: reasoning can collapse even while apparent performance improves on some training signals. Evaluation should therefore include behavioral metrics, reasoning-diversity metrics, and failure-mode analysis.
+
+Rollback policy determines whether a bad update can be undone. This is often absent from research papers but central to production. Fine-tuned checkpoints should preserve ancestors. Memory migrations should be reversible. Reward-model updates should be versioned. Agent workflow changes should be canaried. A self-evolving system without rollback is not a safe learning system; it is an irreversible experiment.
+
+Training-time self-improvement is most valuable when the same task pattern will recur many times. If the task is one-off, inference-time refinement may be cheaper. If the task distribution is stable and feedback is reliable, training-time updates can amortize cost. If the task distribution changes, continuous or periodic updates may be required, but then the risk of drift increases. The engineering problem is to decide when a local lesson deserves promotion to a global policy update.
+
+\subsection{Method Compositionality: From Single Loops to Multi-Loop Agents}
+\label{sec:methods-compositionality}
+
+Real agent systems increasingly combine loops. A coding agent might use Self-Debug inside each attempt, Reflexion across attempts, ReST-like filtering to build a training set, and ReVeal-like RL to improve verification. A research agent might use Self-Refine for draft writing, retrieval-grounded critique for citations, memory for project lessons, and a human review gate for publication claims. A web agent might use Reflexion for failed actions, world-model learning for environment prediction, and RL for policy improvement. The method taxonomy should therefore support composition.
+
+A compositional agent can be represented as a stack:
+\[
+  \mathcal{A} = (\pi, \mathcal{M}, \mathcal{T}, \mathcal{V}, \mathcal{U}, \mathcal{G}),
+\]
+where $\pi$ is the policy, $\mathcal{M}$ memory, $\mathcal{T}$ tools, $\mathcal{V}$ verifiers, $\mathcal{U}$ update rules, and $\mathcal{G}$ governance constraints. Each component can evolve at a different cadence. The policy may update weekly. Memory may update after each task. Tools may update after tests pass. Verifiers may update rarely and under human review. Governance constraints should update most conservatively.
+
+Composition creates synergies. A Self-Debug loop can generate new tests that strengthen future ReST filtering. Reflexion memory can guide task proposal in Absolute Zero-like curricula. Constitutional principles can constrain Self-Refine critiques and RLAIF rewards. SPIN can improve a base model that later serves as the actor in Reflexion. RAGEN-style trajectory filters can protect multi-turn agents from reasoning collapse while ReVeal-style verification improves code tasks.
+
+Composition also creates interaction risks. A memory loop may store lessons from a biased evaluator. A training loop may amplify those lessons. A self-play loop may generate tasks tailored to the current verifier's weaknesses. A code-evolution loop may modify tools that the evaluator relies on. A constitutional loop may be bypassed by a workflow change. Therefore compositional systems need dependency tracking. When one component evolves, the system should know which other components depend on it.
+
+A practical compositional protocol is staged promotion. Stage 1: use inference-time loops to solve tasks and collect traces. Stage 2: convert successful traces and failures into structured examples, tests, and memory. Stage 3: run offline evaluation to decide whether examples should enter training. Stage 4: fine-tune or optimize under independent validation. Stage 5: deploy through canary and rollback. Stage 6: monitor long-term outcomes and update the memory or training corpus. This protocol turns ad hoc self-improvement into a software lifecycle.
+
+\subsection{Benchmark Normalization and Reporting Protocol}
+\label{sec:methods-reporting-protocol}
+
+Because self-improvement papers report different benchmarks, a survey chapter should propose a normalization protocol. The protocol should not force every method onto every benchmark, but it should make results comparable where possible. At minimum, each result should report the base model, model size, update type, data source, feedback source, number of iterations, inference budget, training budget, evaluator independence, and whether the test set was visible during selection.
+
+For HumanEval-like code benchmarks, reports should include pass@1, pass@k if used, number of repair rounds, whether tests were public or hidden, whether generated tests were allowed, and whether the final solution was selected by visible tests. For GSM8K and MATH, reports should include answer accuracy, number of reasoning or refinement rounds, whether final-answer checking was used during generation, and harm rate on initially correct answers. For BBH and MMLU, reports should include prompt format, few-shot examples, whether self-improvement used benchmark questions directly, and whether improvements persist under paraphrased prompts. For alignment tasks, reports should include human preference evaluation, AI-judge agreement, harmlessness/helpfulness tradeoff, and refusal behavior.
+
+A compact reporting schema is:
+\[
+\begin{aligned}
+  \mathrm{Report} = (&\mathrm{Model}, \mathrm{Task}, \mathrm{Loop}, \mathrm{MutableObject},
+  \mathrm{Feedback}, \\
+  &\mathrm{Iterations}, \mathrm{Cost}, \mathrm{SelectionData}, \mathrm{ValidationData}, \\
+  &\mathrm{HiddenTest}, \mathrm{RegressionSuite}, \mathrm{SafetyGate}, \mathrm{Lineage}).
+\end{aligned}
+\]
+This schema makes it harder to hide important differences behind a single score. For example, a HumanEval result achieved by five repair rounds with visible tests is not directly comparable to a one-shot result without tests. A GSM8K result with answer checking during refinement is not directly comparable to one without checking. A MMLU result after training on similar questions must be separated from zero-shot generalization.
+
+The local source notes are already partially aligned with this protocol because they record method mechanism, formulas, benchmarks, authors, and limitations. However, they also show gaps: some benchmark values are qualitative, some exact tables are missing, and some broad benchmarks such as MMLU are not consistently reported. This is not a failure of the notes; it reflects the field's reporting heterogeneity. A future version of the survey should include a dedicated benchmark appendix with normalized rows and source links for every numeric value.
+
+\subsection{Safety and Governance Implications of Method Choice}
+\label{sec:methods-governance}
+
+Method choice determines safety posture. Inference-time critique is low persistence but can still leak sensitive context or produce misleading explanations. Memory-based reflection is more persistent and can store private, false, or adversarial content. Reward-filtered training can amplify evaluator bias. Self-play can create degenerate curricula. Code self-modification can alter the agent's permissions or tool behavior. Evaluator evolution can undermine the very mechanism that detects failure.
+
+The governance principle is proportional control: the stronger the update, the stronger the gate. A local output revision may need only the task verifier. A long-term memory update should need provenance and retrieval constraints. A dataset update should need deduplication, contamination checks, and quality filters. A weight update should need held-out evaluation and regression tests. A code update should need sandboxing, static analysis, CI, and human approval for high-risk files. An evaluator update should be treated as a governance event, not a routine optimization.
+
+A second principle is evaluator non-self-modification. The agent may propose improvements to evaluators, but it should not unilaterally weaken or replace the final gate evaluator used to accept its own changes. This principle follows directly from Goodhart's law. If the evolving system can edit the definition of success, it can achieve success by moving the target. Production systems should separate proxy evaluators used during search from independent gate evaluators used for acceptance.
+
+A third principle is memory quarantine. New reflections or lessons should not immediately become globally trusted. They can enter a quarantine state, be used only for similar tasks, and be promoted after repeated validation. This protects against experience poisoning and one-off false lessons. The same principle applies to generated tests: a model-generated test should be useful, but it should not be the only gate for accepting the model's own code.
+
+A fourth principle is cost containment. Open-ended methods can generate many candidates, tasks, or trajectories. Without budget constraints, self-improvement can become an expensive search with marginal gains. Cost should be included in the update objective, and reports should include failed-candidate ratios. An agent that solves a task after 50 expensive attempts may be less useful than a simpler agent that solves slightly fewer tasks cheaply and predictably.
+
+These governance principles do not reject self-evolution. They make it deployable. The goal is not to prevent agents from learning, but to ensure that learning remains observable, reversible, and aligned with real task value.
+
+\subsection{Open Methodological Questions}
+\label{sec:methods-open-questions}
+
+Several methodological questions remain open. The first is how to measure the quality of a reflection. A reflection can be specific, plausible, and still wrong. Future work needs reflection benchmarks that test whether stored lessons improve later tasks and whether they introduce negative transfer. A reflection should be evaluated not by eloquence but by downstream behavioral effect.
+
+The second question is how to train verifiers without making them exploitable. ReVeal and Constitutional AI show that verifier behavior can be optimized or learned, but a learned verifier may share biases with the generator. Research needs protocols for verifier diversity, verifier adversarial testing, and verifier versioning. In self-evolving systems, the evaluator is as important as the actor.
+
+The third question is how to preserve diversity. Generate-filter-finetune loops can collapse to narrow high-reward patterns. Self-play curricula can collapse to tasks the solver already handles. Memory retrieval can overemphasize recent lessons. Evolutionary archives, novelty rewards, and task-cluster balancing may help, but they need adaptation to language-agent artifacts.
+
+The fourth question is how to distinguish true learning from better search. Inference-time methods may improve pass rates by spending more attempts rather than by becoming more capable. Training-time methods may improve on the training distribution without changing general reasoning. Reports should therefore separate compute-scaling effects from learned-update effects. A fair comparison should ask: if another baseline received the same number of samples, tool calls, or tokens, would the self-improvement method still win?
+
+The fifth question is how to handle contradictory feedback. In real environments, tests may be flaky, human preferences may disagree, reward models may conflict, and memory lessons may point in opposite directions. Agent-evolution methods need conflict resolution: weighting by source reliability, recency, task similarity, and risk. Without conflict management, self-improvement can oscillate or accumulate incoherent rules.
+
+The sixth question is how to report negative results. Many loops will fail on some tasks. Those failures are valuable because they reveal method boundaries. A mature field should publish when self-refinement harms performance, when self-play collapses, when reward filters select bad samples, and when memory causes regressions. Negative results are not embarrassing in an evolutionary field; they are the map of the fitness landscape.
+
+
+\subsection{Synthesis: How to Choose a Method}
+\label{sec:methods-synthesis}
+
+The practical question for researchers and engineers is not which named method is most fashionable, but which loop matches the task. If the task has a deterministic checker, use execution or programmatic verification. If the task has answer labels but no interactive environment, use STaR-like rationale filtering or reward-filtered self-training. If the task has no labels but has human demonstrations, SPIN-like self-play discrimination can extract additional signal. If the task is safety-sensitive, use Constitutional-AI-style principles and independent preference modeling. If the task is long-horizon and interactive, use Reflexion-like memory plus environment evaluation. If the task requires code repair, use Self-Debug or ReVeal-style verification. If the task distribution is missing, consider Absolute-Zero-style task generation only when a verifier can prevent degenerate curricula.
+
+A second design question is where to store improvement. For one-off tasks, store improvement in the answer or program. For repeated tasks, store it in memory or a playbook. For many users and many tasks, store it in a trained policy or reusable skill. For open-ended search, store it in an archive with lineage. The same feedback event can feed multiple storage layers: a failed program can produce a repaired program, a unit test, a memory lesson, a dataset example, and a policy update. Mature systems will likely use layered storage rather than a single mechanism.
+
+A third design question is how to prevent self-improvement from becoming self-deception. The answer is evaluator separation, hidden tests, regression suites, cost accounting, memory provenance, and human escalation for high-risk changes. The stronger the update, the stronger the gate must be. A prompt revision can be reverted easily; a model fine-tune, memory migration, or self-modifying code patch requires more governance.
+
+The chapter's main conclusion is that self-improvement methods form a continuum. At one end are cheap inference-time loops that revise outputs, store reflections, and debug programs. At the other end are training-time loops that update policies, generate curricula, and co-evolve verifiers. The best systems will combine them: use inference-time loops to gather experience, convert high-quality experience into training or memory assets, validate changes through independent evaluators, and preserve lineage so that improvements can be audited and reversed. This is the methodological core of agent self-evolution.
+
+
+\subsection{From Method Families to Design Patterns}
+\label{sec:methods-design-patterns}
+
+The survey of method families can be reduced to a compact set of design patterns. These patterns are useful because they cut across paper names and make implementation decisions explicit.
+
+\textbf{Pattern 1: Critique-and-revise.} The agent produces a draft, critiques it, and revises it. This is the Self-Refine pattern. It is best when the task has enough structure that a local critique can identify improvements. Typical examples include writing, summarization, constrained generation, answer refinement, and shallow reasoning tasks. The main engineering variable is critique quality. If the critique is specific, the revision is targeted. If it is vague, the model drifts.
+
+\textbf{Pattern 2: Experience-and-reuse.} The agent acts in the world, distills a lesson, and reuses that lesson later. This is the Reflexion pattern. It is best when the environment is episodic, when failure states recur, and when the lesson can be expressed in a compact rule or strategy. The main engineering variable is retrieval quality. A perfect lesson that is never retrieved is useless.
+
+\textbf{Pattern 3: Execute-and-repair.} The agent generates code, runs it, observes the failure, and repairs the code. This is the Self-Debug pattern. It is best when the environment provides deterministic execution feedback. The main engineering variable is test coverage. A repair on one failing case can still fail elsewhere.
+
+\textbf{Pattern 4: Generate-filter-finetune.} The agent or policy generates candidates, an evaluator filters them, and the system fine-tunes on the accepted subset. This is STaR and ReST. It is best when a reward or label signal can cheaply separate useful candidates from noise. The main engineering variable is the tradeoff between diversity and quality.
+
+\textbf{Pattern 5: Self-play discrimination.} The current model plays against its previous self or against its own generated data, and the next model learns to distinguish or improve. This is SPIN. It is best when human demonstrations already exist and one wants to extract more value from them without collecting fresh preferences. The main engineering variable is the gap between self-generated responses and the target distribution. If the gap is too small, learning saturates.
+
+\textbf{Pattern 6: Principle-guided self-alignment.} The model critiques and revises itself using explicit rules. This is Constitutional AI. It is best when one can articulate behavioral constraints as principles. The main engineering variable is principle quality and coverage. If the constitution is incomplete, the model may remain misaligned in unmodeled regions.
+
+\textbf{Pattern 7: Task-generation self-play.} The model creates tasks, solves them, and uses verification to update both sides. This is Absolute Zero. It is best when a strong executor can judge correctness. The main engineering variable is curriculum balance. Self-generated tasks must be hard enough to teach but not so hard that they stall.
+
+\textbf{Pattern 8: Multi-turn agent RL.} The model learns to reason and act over many steps, with reward assigned to the trajectory rather than to one answer. This is RISE, RAGEN, and ReVeal in different forms. It is best when the task itself is sequential and when the agent must choose when to think, when to act, and when to stop. The main engineering variable is credit assignment.
+
+These patterns can be composed. A practical coding agent may start with execute-and-repair, then add critique-and-revise, then add generate-filter-finetune from successful patches, then add multi-turn RL on a richer task set. A practical research agent may start with critique-and-revise, then add experience-and-reuse, then add principle-guided self-alignment for citations and claims. The design pattern language is thus more useful than paper-by-paper memorization.
+
+\subsection{Ablation Protocol for Self-Improvement Systems}
+\label{sec:methods-ablation}
+
+Because self-improvement methods are often modular, ablation is particularly important. A model may improve because of better prompts, better retrieval, better tests, better reward models, or more compute. A careful ablation protocol should isolate the contribution of each mechanism.
+
+The first ablation is the \emph{no-loop} baseline. Run the base model once with the same token budget, but without critique, memory, or training. This measures the benefit of looping itself. If the loop adds no value, the method is not worth the engineering complexity.
+
+The second ablation is the \emph{no-evidence} baseline. Keep the loop but remove tests, environment traces, or reward signals where possible. For instance, ask a code model to self-critique without running tests. If performance drops sharply, the method depends on grounded feedback rather than on generic self-talk. This is a useful result.
+
+The third ablation is the \emph{no-memory} baseline. Keep the critique and revision loop but do not store reflections across episodes. This separates within-episode correction from cross-episode learning. Reflexion-style systems should show a clear difference here if memory matters.
+
+The fourth ablation is the \emph{no-training} baseline. For methods that produce training data, compare frozen-model inference-time use to fine-tuned use. This reveals whether the method's gains are transient or amortized. STaR-like methods should show a large gap between using rationales only as context and using them to fine-tune.
+
+The fifth ablation is the \emph{no-filter} baseline. Generate candidates but train on all of them rather than the filtered subset. This is especially important for ReST, Absolute Zero, and self-generated curricula. If filtering matters, then quality selection is not just a convenience; it is the heart of the method.
+
+The sixth ablation is the \emph{no-verifier-independence} baseline. Use the same model for generation and evaluation, then compare with an independent verifier or hidden test suite. If the self-judged version looks much better than the independent version, the method is likely exploiting correlated blind spots.
+
+The seventh ablation is the \emph{budget-matched} baseline. Ensure that competing methods receive comparable numbers of samples, token budget, tool calls, and wall-clock time. Many self-improvement systems look better simply because they spend more compute on retries. A fair ablation must ask whether the method improves efficiency or merely expands search.
+
+The eighth ablation is the \emph{regression suite} baseline. Measure not only target-task improvement but also retention on old tasks. If the method improves a new benchmark but harms old competence, the method is not cumulative. This is especially important for memory, fine-tuning, and code mutation.
+
+A useful ablation table can be expressed as:
+\[
+  \Delta_{\text{loop}},\; \Delta_{\text{evidence}},\; \Delta_{\text{memory}},\; \Delta_{\text{training}},\; \Delta_{\text{filter}},\; \Delta_{\text{verifier}},\; \Delta_{\text{budget}},\; \Delta_{\text{retention}}.
+\]
+A mature paper should report at least several of these terms. Without them, a self-improvement method is difficult to interpret.
+
+\subsection{Why the Field Needs a Shared Taxonomy}
+\label{sec:methods-taxonomy-need}
+
+A final methodological point concerns terminology. The field currently uses many overlapping labels: self-refinement, self-correction, verbal RL, self-training, self-play, self-rewarding, self-alignment, recursive introspection, self-debugging, self-evolving agents, autonomous task generation, and more. Some of these names emphasize the object that changes. Others emphasize the feedback source. Others emphasize the training regime. The result is terminological drift.
+
+A shared taxonomy is needed for three reasons. First, it enables meaningful comparison. A reviewer should immediately know whether a result comes from inference-time critique, supervised self-training, reward-filtered self-training, self-play, or multi-turn RL. Second, it clarifies reproducibility. If two papers use the same label but different mutable objects, their results should not be conflated. Third, it helps practitioners choose methods. A production team does not need to memorize every paper; it needs to know which pattern matches its available feedback, budget, and safety constraints.
+
+The taxonomy in this chapter is therefore intentionally functional. It does not ask whether a paper is fashionable, novel, or architecturally grand. It asks what loop it closes. This is the most stable way to compare methods in a field where model families, tool APIs, benchmark suites, and release dates change rapidly. A loop-based taxonomy also scales naturally. As the field creates new hybrid systems, they can be decomposed into the same few primitives: generate, critique, verify, select, store, reuse, and update.
+
+
+
+\subsection{Worked Method Selection Examples}
+\label{sec:methods-worked-examples}
+
+To make the taxonomy concrete, consider four representative deployment scenarios. Each scenario has a different feedback structure, and therefore calls for a different self-improvement loop.
+
+\textbf{Example 1: repository-level bug fixing.} The task is to repair a software issue in a real repository. The system has access to tests, logs, type checkers, and code search. The best first loop is execute-and-repair: generate a patch, run tests, inspect failures, and revise. Reflexion-style memory can store repository-specific lessons, such as fragile APIs or known test fixtures. If many similar issues accumulate, successful patches and failing tests can become a filtered dataset for training or retrieval. Training-time RL should be delayed until there is a stable evaluator and a representative issue distribution. The main risks are overfitting to visible tests, editing unrelated files, and passing tests while violating maintainability constraints.
+
+\textbf{Example 2: mathematical tutoring.} The task is to solve and explain math problems. The system has final-answer checks for many problems but may not have formal proof verification. Self-Refine can improve explanations by critiquing missing steps. RISE-style learned introspection can help allocate more reasoning to harder problems. STaR-style rationale filtering can turn correctly solved problems into training examples. The main risks are rationalized chains of thought and harm to initially correct answers. A good system should measure final accuracy, explanation faithfulness, and harm rate.
+
+\textbf{Example 3: safe customer-support assistants.} The task is to answer user questions under policy constraints. The feedback is partly human preference, partly policy compliance, and partly user satisfaction. Constitutional-AI-style critique is appropriate because explicit principles matter. Reflexion memory can store organization-specific policy lessons, but memory promotion must be conservative because wrong policy advice can persist. Self-play may be useful for adversarial policy tests, but final acceptance should involve independent policy evaluators and human review for high-risk cases. The main risks are over-refusal, under-refusal, hidden policy drift, and self-judged compliance.
+
+\textbf{Example 4: open-ended code or algorithm discovery.} The task is to discover faster programs, better prompts, or new algorithms. The system has a programmatic evaluator but the search space is large. ReST-like filtering, Absolute-Zero-style task generation, and evolutionary archives become more important. The method should preserve diverse stepping stones rather than only the current best candidate. The main risks are evaluator overfitting, compute blowup, and archive bloat. Lineage is essential because future improvements may depend on understanding which ancestors produced which gains.
+
+These examples show that method choice is constrained by feedback. A method that is excellent in one scenario can be inappropriate in another. The practical recipe is: identify the verifier, identify the mutable object, choose the least persistent update that can solve the problem, and promote updates only after evidence accumulates.
+
+
+
+\subsection{Interpreting Reported Gains Without Overclaiming}
+\label{sec:methods-interpretation}
+
+The final methodological caution concerns interpretation of reported gains. Self-improvement results are especially easy to overclaim because the phrase ``the model improves itself'' can hide many forms of external scaffolding. A system may use answer labels, reward models, curated demonstrations, hand-written constitutions, unit tests, hidden evaluators, or human-designed prompts. These are not disqualifying; they are the infrastructure that makes improvement measurable. But they should be named precisely. STaR is self-improving with respect to rationales generated by the model, but it still uses answer labels. ReST is self-training with model-generated candidates, but it still depends on a reward model. Constitutional AI reduces human labeling of harmful outputs, but humans still write the principles. Absolute Zero removes external task data, but it still relies on an executable verifier. Reflexion avoids weight updates, but it depends on an evaluator and on memory retrieval.
+
+A second caution is that improvement may be local to the evaluation budget. If a method uses five attempts and a baseline uses one attempt, part of the gain may come from search. This is not necessarily bad. Search is a legitimate agent capability. However, the paper should report both success rate and cost so that readers can compare against budget-matched sampling. In a production setting, the relevant metric is often not maximum success but expected value per unit cost.
+
+A third caution is that self-improvement may change the distribution of errors. A method can reduce obvious mistakes while increasing subtle ones. For example, self-refinement may make prose more polished while weakening factual support. Code repair may pass tests while introducing complexity. RLAIF may reduce harmfulness while increasing evasiveness. Self-play may improve benchmark responses while narrowing diversity. Therefore qualitative error analysis remains necessary even when aggregate scores improve.
+
+A fourth caution is that benchmark contamination and data leakage are unusually difficult in self-evolution. A model that generates its own tasks may inadvertently reproduce known benchmark patterns. A memory system may store test items. A training loop may select candidates using a validation set too often. A repository-level coding agent may learn project-specific quirks that do not transfer. The correct response is not to abandon benchmarks, but to maintain time-sliced data, hidden tests, and transparent lineage for every training and selection step.
+
+A fifth caution is that ``no external data'' does not mean ``no external structure.'' Verifiers, programming languages, compilers, mathematical notation, reward functions, and constitutions are all external structures. The most impressive self-evolution systems often succeed because they couple LLM generation with strong external structure. This coupling is the field's strength. It also means that future progress will depend as much on better evaluators, environments, and governance layers as on larger base models.
+
+These cautions support the chapter's central thesis. The methods are real and increasingly powerful, but their claims must be stated in terms of loops, feedback, mutable state, cost, and evaluator independence. When those details are explicit, self-improvement becomes a scientific and engineering object rather than a slogan.
+
+
+\subsection{Connection to the Rest of the Paper}
+\label{sec:methods-connection}
+
+This methods chapter prepares the system analysis in the next section. DGM, ADAS, AlphaEvolve, Voyager, Self-Rewarding LM, WebEvolver, and related systems can be understood as compositions of the loops described here. DGM and ADAS extend from output mutation to architecture mutation. AlphaEvolve and FunSearch extend from code repair to program search under evaluators. Voyager extends Reflexion-style experience into open-world skill accumulation. Self-Rewarding LM and Meta-Rewarding extend reward-filtered training by internalizing judge roles. WebEvolver combines world-model learning, self-generated tasks, and agent adaptation. ReVeal turns verification into a first-class trainable component.
+
+The evaluation chapter will return to the benchmark caveats raised here. The industry chapter will return to method-selection heuristics: production systems usually need the smallest reliable loop, not the most open-ended loop. The pain-point chapter will return to the failure modes: users complain about demo-to-production gaps because many methods optimize local traces without durable governance. The conclusion will return to the broader claim: agent self-evolution is promising precisely because improvement can occur outside the base model, but it is risky precisely because every new mutable object becomes another surface for drift, overfitting, and unsafe optimization.
