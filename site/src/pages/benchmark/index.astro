@@ -1,0 +1,164 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const benchmarks = [
+  {
+    domain: 'Code Generation',
+    items: [
+      { name: 'HumanEval', tasks: 164, metric: 'pass@k', topSystem: 'Reflexion (91%)', baseline: 'GPT-4 zero-shot (80.1%)' },
+      { name: 'MBPP', tasks: 974, metric: 'pass@k', topSystem: 'Self-Refine', baseline: 'Base model' },
+      { name: 'DS-1000', tasks: 1000, metric: 'pass@1', topSystem: 'SelfEvolve (49.4→57.2)', baseline: 'GPT-4 (49.4%)' },
+      { name: 'SWE-bench', tasks: 2294, metric: '% resolved', topSystem: 'DGM (20→50%)', baseline: 'SWE-agent (20%)' },
+      { name: 'LiveCodeBench', tasks: '800+', metric: 'pass@1', topSystem: 'ReVeal (36.9→42.4)', baseline: 'Base (36.9%)' },
+    ]
+  },
+  {
+    domain: 'Mathematical Reasoning',
+    items: [
+      { name: 'GSM8K', tasks: 8500, metric: '% accuracy', topSystem: 'SPIN Zephyr (26.8→39.0)', baseline: 'Zephyr-7B (26.8%)' },
+      { name: 'MATH', tasks: 5000, metric: '% accuracy', topSystem: 'Agent Symbolic Learning (60.7%)', baseline: 'GPT-4 (~50%)' },
+      { name: 'MiniF2F', tasks: 488, metric: '% proved', topSystem: 'AlphaProof', baseline: 'Prior SOTA' },
+      { name: 'IMO 2024', tasks: 6, metric: '/6 solved', topSystem: 'AlphaProof+AlphaGeometry (4/6)', baseline: 'Human gold (6/6)' },
+    ]
+  },
+  {
+    domain: 'Agent Tasks',
+    items: [
+      { name: 'ALFWorld', tasks: 134, metric: '% success', topSystem: 'Reflexion (97%)', baseline: 'ReAct (75%)' },
+      { name: 'WebArena', tasks: 812, metric: '% success', topSystem: 'GPT-4 (~14.4%)', baseline: 'Random (~1%)' },
+      { name: 'HotPotQA', tasks: '113K', metric: 'F1/EM', topSystem: 'Reflexion', baseline: 'CoT baseline' },
+      { name: 'Voyager (Minecraft)', tasks: 'open-ended', metric: 'unique items', topSystem: 'Voyager (3.3x)', baseline: 'AutoGPT (1x)' },
+    ]
+  },
+  {
+    domain: 'Open-Ended Discovery',
+    items: [
+      { name: 'Matrix Multiplication', tasks: '4×4 complex', metric: '# multiplications', topSystem: 'AlphaEvolve (48 mul)', baseline: 'Strassen (56, 1969)' },
+      { name: 'Cap Set', tasks: 'n=6,8,...', metric: 'cap size', topSystem: 'FunSearch (new records)', baseline: 'Prior SOTA' },
+      { name: 'Borg Scheduling', tasks: 'Google cluster', metric: '% compute recovery', topSystem: 'AlphaEvolve (+0.7%)', baseline: 'Hand-tuned heuristics' },
+      { name: 'AI Scientist v2', tasks: 'paper generation', metric: 'review score', topSystem: 'AI Scientist v2 (6.33)', baseline: 'Average workshop paper (~5)' },
+    ]
+  }
+];
+
+const evalDimensions = [
+  { dim: 'Correctness', desc: 'Does the evolved artifact actually work?', weight: 'Primary' },
+  { dim: 'Efficiency', desc: 'What did the improvement cost (tokens, compute, time)?', weight: 'Required' },
+  { dim: 'Transfer', desc: 'Does improvement generalize to unseen tasks?', weight: 'Critical' },
+  { dim: 'Robustness', desc: 'Does performance hold across distributions?', weight: 'Required' },
+  { dim: 'Safety', desc: 'Does the change introduce new risks?', weight: 'Mandatory' },
+  { dim: 'Cost', desc: 'Total resource consumption per improvement unit', weight: 'Required' },
+];
+---
+
+<BaseLayout
+  title="Benchmark & Evaluation — AI 自进化评估体系"
+  description="AI 自进化领域的 Benchmark 对比和评估框架：覆盖代码生成、数学推理、Agent 任务、开放发现四个领域，六维评估体系。"
+>
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Evaluation / 评估</div>
+      <h1 class="gradient-text">Benchmark 对比与评估体系</h1>
+      <p class="lead">自进化系统的评估不能只看 single-number accuracy。本页汇总四大领域的 benchmark 对比，并提出六维评估框架。</p>
+      <div class="metrics">
+        <div class="metric"><strong>4</strong><span>评估领域</span></div>
+        <div class="metric"><strong>17+</strong><span>Benchmark</span></div>
+        <div class="metric"><strong>6</strong><span>评估维度</span></div>
+        <div class="metric"><strong>11</strong><span>自进化方法</span></div>
+      </div>
+    </div>
+  </section>
+
+  {benchmarks.map((section) => (
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">{section.domain}</div>
+            <h2>{section.domain}</h2>
+          </div>
+        </div>
+        <div class="score-table-wrap">
+          <table class="score-table">
+            <thead>
+              <tr>
+                <th>Benchmark</th>
+                <th>规模</th>
+                <th>指标</th>
+                <th>最优自进化系统</th>
+                <th>基线</th>
+              </tr>
+            </thead>
+            <tbody>
+              {section.items.map((b) => (
+                <tr>
+                  <td><strong>{b.name}</strong></td>
+                  <td>{b.tasks}</td>
+                  <td><span class="pill">{b.metric}</span></td>
+                  <td>{b.topSystem}</td>
+                  <td style="color: var(--muted);">{b.baseline}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Six-Dimension Evaluation Framework -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Framework</div>
+          <h2>六维评估框架</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {evalDimensions.map((d) => (
+          <article class="card">
+            <h3>{d.dim}</h3>
+            <p>{d.desc}</p>
+            <div class="pill-row">
+              <span class="pill">{d.weight}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p style="margin-top: 16px; color: var(--muted);">每个维度同时适用于最终产物和进化过程本身。详见论文 Chapter 5。</p>
+    </div>
+  </section>
+
+  <!-- Eight-Point Protocol -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Protocol</div>
+          <h2>八点评估协议</h2>
+        </div>
+      </div>
+      <div class="timeline">
+        {[
+          ['1', 'Define Evolving Object', '明确声明什么在被修改（prompt、code、architecture、weights）'],
+          ['2', 'Freeze Evaluator', '评估器必须在实验开始前冻结，不能随进化过程变化'],
+          ['3', 'Report Adaptation Budget', '报告总 token、计算量、时间、API 调用次数'],
+          ['4', 'Train/Val/Test Separation', '进化用数据和最终评估数据必须分离'],
+          ['5', 'Measure Regressions', '不只报告改进，还要报告是否有任务变差'],
+          ['6', 'Evaluate Transfer & Robustness', '在新任务、新环境、新模型上验证迁移能力'],
+          ['7', 'Publish Process Traces', '发布完整进化轨迹，包括失败候选'],
+          ['8', 'Normalize by Cost', '所有改进必须按成本归一化：每美元/每 token 的收益'],
+        ].map(([num, title, desc]) => (
+          <article class="timeline-item">
+            <div class="year">{num}</div>
+            <div>
+              <h3>{title}</h3>
+              <p>{desc}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
