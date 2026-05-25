@@ -1,7 +1,7 @@
 # GitHub 明星项目传播链分析报告
 
 > **Star Quality Scoring · Propagation Chain Reconstruction · Hype vs Organic Detection · Competitive Matrix**
-> Self Evolve Research Network — 2026-05-22
+> aha team — 2026-05-22
 > 本报告将作为 arXiv 论文「Self Evolving AI: A Survey」的补充材料
 
 ---
@@ -216,4 +216,4 @@ suspicionIndex = starsPerContributor / 100
 
 ---
 
-*Self Evolve Research Network · 2026-05-22*
+*aha team · 2026-05-22*

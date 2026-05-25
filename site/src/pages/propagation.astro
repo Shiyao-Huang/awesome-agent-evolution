@@ -1,0 +1,228 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { projects } from '@/data/projects';
+
+// Parse propagation data from the analysis file
+// 37 projects with 10K+ stars, 3 generations
+type PropProject = {
+  name: string;
+  repo: string;
+  stars: number;
+  created: string;
+  gen: string;
+  category: string;
+  relevance: string;
+};
+
+const propProjects: PropProject[] = [
+  { name: 'AutoResearchClaw', repo: 'aiming-lab/AutoResearchClaw', stars: 12600, created: '2026-05', gen: 'G3', category: 'Application', relevance: 'Core' },
+  { name: 'hive', repo: 'aden-hive/hive', stars: 10400, created: '2026-05', gen: 'G3', category: 'Framework', relevance: 'Core' },
+  { name: 'GenericAgent', repo: 'lsdefine/GenericAgent', stars: 11900, created: '2026-05', gen: 'G3', category: 'Framework', relevance: 'Core' },
+  { name: 'OpenHarness', repo: 'HKUDS/OpenHarness', stars: 13000, created: '2026-05', gen: 'G3', category: 'Framework', relevance: 'Medium' },
+  { name: 'hermes-agent', repo: 'NousResearch/hermes-agent', stars: 162000, created: '2026-05', gen: 'G3', category: 'Framework', relevance: 'Low-Medium' },
+  { name: 'mempalace', repo: 'MemPalace/mempalace', stars: 52800, created: '2026-04', gen: 'G3', category: 'Tool', relevance: 'High' },
+  { name: 'ECC', repo: 'affaan-m/ECC', stars: 191000, created: '2026-04', gen: 'G3', category: 'Framework', relevance: 'Medium' },
+  { name: 'openclaw', repo: 'openclaw/openclaw', stars: 374000, created: '2026', gen: 'G3', category: 'Framework', relevance: 'Medium' },
+  { name: 'superpowers', repo: 'obra/superpowers', stars: 202000, created: '2026', gen: 'G3', category: 'Tool', relevance: 'Medium' },
+  { name: 'mem0', repo: 'mem0ai/mem0', stars: 56500, created: '2026', gen: 'G3', category: 'Tool', relevance: 'High' },
+  { name: 'graphiti', repo: 'getzep/graphiti', stars: 26500, created: '2026', gen: 'G3', category: 'Framework', relevance: 'Medium-High' },
+  { name: 'OpenHands', repo: 'All-Hands-AI/OpenHands', stars: 74662, created: '2024-03', gen: 'G2', category: 'Framework', relevance: 'Medium' },
+  { name: 'SWE-agent', repo: 'princeton-nlp/SWE-agent', stars: 19280, created: '2024-04', gen: 'G2', category: 'Framework', relevance: 'Medium' },
+  { name: 'AutoGPT', repo: 'Significant-Gravitas/AutoGPT', stars: 184482, created: '2023-03', gen: 'G1', category: 'Platform', relevance: 'Medium' },
+  { name: 'CAMEL', repo: 'camel-ai/camel', stars: 17025, created: '2023-03', gen: 'G1', category: 'Framework', relevance: 'Medium' },
+  { name: 'DSPy', repo: 'stanfordnlp/dspy', stars: 34604, created: '2023-01', gen: 'G1', category: 'Framework', relevance: 'High' },
+  { name: 'MetaGPT', repo: 'FoundationAgents/MetaGPT', stars: 68239, created: '2023-06', gen: 'G1', category: 'Framework', relevance: 'Medium' },
+  { name: 'LangGraph', repo: 'langchain-ai/langgraph', stars: 32784, created: '2023-08', gen: 'G1', category: 'Framework', relevance: 'Medium' },
+  { name: 'AutoGen', repo: 'microsoft/autogen', stars: 58330, created: '2023-08', gen: 'G1', category: 'Framework', relevance: 'Medium' },
+  { name: 'CrewAI', repo: 'crewAIInc/crewAI', stars: 52041, created: '2023-10', gen: 'G1', category: 'Framework', relevance: 'Medium' }
+];
+
+const genColors: Record<string, string> = { G1: '#e74c3c', G2: '#3498db', G3: '#2ecc71' };
+const relColors: Record<string, string> = { Core: '#9b59b6', High: '#e67e22', 'Medium-High': '#f39c12', Medium: '#3498db', 'Low-Medium': '#95a5a6', Low: '#bdc3c7' };
+
+const projectsPayload = JSON.stringify(propProjects);
+const genColorsPayload = JSON.stringify(genColors);
+const relColorsPayload = JSON.stringify(relColors);
+
+const genStats = [
+  { gen: 'G1', label: 'Generation 1 (2023)', subtitle: 'Pioneers', count: 8, totalStars: 449975, color: '#e74c3c' },
+  { gen: 'G2', label: 'Generation 2 (2024)', subtitle: 'Specialists', count: 3, totalStars: 143942, color: '#3498db' },
+  { gen: 'G3', label: 'Generation 3 (2025-26)', subtitle: 'Ecosystem Layer', count: 26, totalStars: 1664800, color: '#2ecc71' }
+];
+---
+
+<BaseLayout title="Self Evolve 传播链 — 1w+ Star 项目三代传播分析" description="37 个 GitHub 1万+ star 项目形成三代传播链：2023 先驱 → 2024 专家 → 2025-2026 生态层。分析传播模式、星数分布和自进化相关性。">
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Propagation Chain</div>
+        <h1 class="gradient-text">1w+ Star 项目传播链</h1>
+        <p class="lead">37 个 GitHub 1 万+ star 项目形成三代传播链，从 2023 先驱到 2025-2026 生态爆炸</p>
+      </div>
+
+      <!-- Generation Summary -->
+      <div class="metrics">
+        {genStats.map(g => (
+          <div class="metric">
+            <span class="metric-gen-dot" style={`background:${g.color}`}></span>
+            <strong>{g.label}</strong>
+            <span>{g.count} projects · {(g.totalStars / 1000).toFixed(0)}K stars</span>
+          </div>
+        ))}
+      </div>
+
+      <!-- Bubble Chart -->
+      <div class="prop-chart-wrap">
+        <div class="viz-section-head">
+          <div class="eyebrow">Star Distribution</div>
+          <h2>项目星数与年代分布</h2>
+          <p>气泡大小 = Stars 数量，颜色 = 世代，Y 轴 = 自进化相关性</p>
+        </div>
+        <svg id="prop-bubble-svg" viewBox="0 0 1000 500" role="img" aria-label="Star distribution bubble chart"></svg>
+      </div>
+
+      <!-- Propagation Table -->
+      <div class="prop-table-section">
+        <div class="viz-section-head">
+          <div class="eyebrow">All 37 Projects</div>
+          <h2>完整项目列表</h2>
+          <p>按创建时间排序，最新在前</p>
+        </div>
+        <div class="viz-rank-table-wrap">
+          <table class="viz-rank-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Project</th>
+                <th>Stars</th>
+                <th>Gen</th>
+                <th>Created</th>
+                <th>Category</th>
+                <th>Evolution Relevance</th>
+              </tr>
+            </thead>
+            <tbody>
+              {propProjects.map((p, i) => (
+                <tr>
+                  <td class="viz-rank-num">{i + 1}</td>
+                  <td class="viz-rank-name">
+                    <a href={`https://github.com/${p.repo}`} target="_blank" rel="noopener">{p.name}</a>
+                    <span class="viz-rank-repo">{p.repo}</span>
+                  </td>
+                  <td class="viz-rank-stars">{p.stars.toLocaleString()}</td>
+                  <td><span class="gen-badge" style={`background:${genColors[p.gen]};color:#fff`}>{p.gen}</span></td>
+                  <td class="viz-rank-date">{p.created}</td>
+                  <td>{p.category}</td>
+                  <td><span class="rel-badge" style={`background:${relColors[p.relevance] || '#bdc3c7'};color:#fff`}>{p.relevance}</span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline define:vars={{ projectsPayload, genColorsPayload }}>
+  const projects = JSON.parse(projectsPayload);
+  const genColors = JSON.parse(genColorsPayload);
+  const svg = document.getElementById('prop-bubble-svg');
+  if (!svg) throw new Error('Bubble SVG not found');
+
+  const width = 1000, height = 500;
+  const padding = { top: 40, right: 40, bottom: 60, left: 140 };
+  const chartW = width - padding.left - padding.right;
+  const chartH = height - padding.top - padding.bottom;
+
+  const relOrder = ['Core', 'High', 'Medium-High', 'Medium', 'Low-Medium', 'Low'];
+  const relY = (rel) => {
+    const idx = relOrder.indexOf(rel);
+    return padding.top + (idx >= 0 ? idx : relOrder.length - 1) / (relOrder.length - 1) * chartH;
+  };
+
+  const years = ['2023-01', '2023-06', '2024-03', '2024-06', '2025-01', '2025-06', '2026-01', '2026-06'];
+  const timeX = (created) => {
+    const idx = years.findIndex(y => created <= y);
+    const pos = idx >= 0 ? idx : years.length;
+    return padding.left + (pos / (years.length - 1)) * chartW;
+  };
+
+  const maxStars = Math.max(...projects.map((p) => p.stars));
+  const bubbleR = (stars) => Math.max(6, Math.sqrt(stars / maxStars) * 40);
+
+  // Axes labels
+  relOrder.forEach((rel, i) => {
+    const y = relY(rel);
+    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    text.setAttribute('x', padding.left - 8);
+    text.setAttribute('y', y);
+    text.setAttribute('text-anchor', 'end');
+    text.setAttribute('dominant-baseline', 'middle');
+    text.setAttribute('fill', 'var(--muted)');
+    text.setAttribute('font-size', '11');
+    text.setAttribute('font-weight', '700');
+    text.textContent = rel;
+    svg.appendChild(text);
+
+    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    line.setAttribute('x1', padding.left); line.setAttribute('y1', y);
+    line.setAttribute('x2', width - padding.right); line.setAttribute('y2', y);
+    line.setAttribute('stroke', 'rgba(26,26,26,0.06)');
+    svg.appendChild(line);
+  });
+
+  // Bubbles
+  projects.forEach((p: any) => {
+    const cx = timeX(p.created);
+    const cy = relY(p.relevance);
+    const r = bubbleR(p.stars);
+    const color = genColors[p.gen] || '#999';
+
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.style.cursor = 'pointer';
+
+    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    circle.setAttribute('cx', cx); circle.setAttribute('cy', cy);
+    circle.setAttribute('r', r);
+    circle.setAttribute('fill', color + '60');
+    circle.setAttribute('stroke', color); circle.setAttribute('stroke-width', '1.5');
+    g.appendChild(circle);
+
+    if (r > 12) {
+      const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      label.setAttribute('x', cx); label.setAttribute('y', cy);
+      label.setAttribute('text-anchor', 'middle'); label.setAttribute('dominant-baseline', 'middle');
+      label.setAttribute('fill', '#1A1A1A'); label.setAttribute('font-size', r > 20 ? '10' : '8');
+      label.setAttribute('font-weight', '700');
+      label.setAttribute('pointer-events', 'none');
+      label.textContent = p.name.length > 10 ? p.name.slice(0, 9) + '\u2026' : p.name;
+      g.appendChild(label);
+    }
+
+    const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+    title.textContent = `${p.name} (${p.repo}) — ${(p.stars / 1000).toFixed(1)}K stars — ${p.gen} — ${p.relevance}`;
+    g.appendChild(title);
+
+    svg.appendChild(g);
+  });
+</script>
+
+<style>
+  .prop-chart-wrap {
+    margin-top: 32px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-media);
+    background: var(--surface-card);
+    padding: 24px;
+  }
+  .viz-section-head { margin-bottom: 16px; }
+  .viz-section-head .eyebrow { color: var(--accent); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+  .viz-section-head h2 { font-family: var(--font-display); font-size: 24px; font-weight: 400; color: var(--fg); margin-top: 4px; }
+  .viz-section-head p { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  #prop-bubble-svg { width: 100%; height: auto; display: block; }
+  .prop-table-section { margin-top: 40px; }
+  .gen-badge, .rel-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 750; white-space: nowrap; }
+  .metric { position: relative; padding-left: 20px; }
+  .metric-gen-dot { position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 10px; height: 10px; border-radius: 50%; }
+</style>

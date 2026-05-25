@@ -458,6 +458,53 @@ A final practical implication is that self-evolution should be reported with eno
 
 This process view also changes how the field should discuss failure. Failed modifications are not merely noise to be hidden; they reveal the search landscape, evaluator weaknesses, and constraints that shape future designs. A system that fails safely and records why it failed may be more scientifically valuable than a system that reports only cherry-picked successes. For self-evolving AI to mature, negative evidence, regressions, and rejected patches should be shared alongside successful improvements.
 
+\subsection{Survey Methodology}
+\label{subsec:intro-methodology}
+
+This survey follows a systematic literature collection and classification protocol adapted from PRISMA guidelines for scoping reviews \cite{moher2009preferred}. The methodology consists of four stages: source identification, screening, eligibility assessment, and classification.
+
+\paragraph{Source identification.} We searched five electronic databases (arXiv, Semantic Scholar, Google Scholar, ACL Anthology, and NeurIPS/ICML/ICLR proceedings) using the query string: \texttt{("self-evolving" OR "self-improving" OR "self-modifying" OR "self-refining" OR "recursive self-improvement") AND ("AI agent" OR "LLM" OR "language model" OR "agentic system")}. The search covered publications from January 2022 to May 2026, capturing the emergence of the field after the widespread deployment of instruction-tuned LLMs. We additionally performed backward snowball sampling from included papers and forward citation tracking via Semantic Scholar. To complement academic sources, we collected 486 GitHub repositories tagged with agent, self-evolution, or self-improving keywords, yielding 204 analyzed projects with model-card documentation.
+
+\paragraph{Screening.} After removing duplicates, we screened 327 candidate papers against the following inclusion criteria: (1) the system modifies one or more of its own operational components (prompts, memory, tools, code, architecture, data curriculum, or weights); (2) modification is driven by feedback from interaction, evaluation, or verification; (3) the system retains or accumulates modifications across episodes; and (4) sufficient technical detail is available to classify the evolution mechanism. We excluded papers that describe only static prompting, conventional fine-tuning with fixed datasets, or agent orchestration without feedback-driven self-modification.
+
+\paragraph{Eligibility and classification.} Eligible papers were classified along five dimensions: mutable component (what evolves), feedback source (what drives change), verification mechanism (what validates change), retention topology (how change persists), and temporal scope (when evolution occurs). Each paper received at least two independent classifications by the authors, with disagreements resolved by discussion. The resulting taxonomy produces the Five Evolution Loops framework described in Section~\ref{subsec:intro-contributions}. We further classified open-source projects by their self-evolution coverage: projects that implement feedback-driven modification loops were labeled as ``core evolution,'' projects that host or enable such loops were labeled as ``evolution infrastructure,'' and projects that provide agent capabilities without feedback-driven modification were labeled as ``static orchestration.''
+
+\paragraph{Evidence synthesis.} Quantitative evidence was extracted from benchmark results reported in original papers, with attention to evaluation protocol, sample size, base model, and reproducibility. Qualitative evidence was drawn from architecture analysis, code inspection, and community feedback (Hacker News, Reddit, X/Twitter discussions). We do not treat benchmark numbers as permanent rankings; instead, we use them as evidence for mechanism effectiveness under specific conditions. All classification data and project metadata are maintained in a versioned repository to support updates and corrections.
+
+\subsection{Relation to Existing Surveys}
+\label{subsec:intro-survey-comparison}
+
+Several surveys touch on aspects of AI self-evolution, but none provides the cross-domain unification and mechanism-level taxonomy offered here. We distinguish our work along four dimensions.
+
+\paragraph{Self-evolving LLM agents.} Wang et al.\ \cite{wang2025selfevolving} survey self-evolving LLM-based agents with a focus on feedback-driven improvement loops. Their taxonomy organizes methods by evolution stage (experience acquisition, refinement, updating), while our Five Evolution Loops framework classifies by the mechanism through which feedback becomes retained change. Our survey additionally covers evolutionary computation, AutoML/NAS, and production frameworks that their LLM-centric scope excludes. CharlesQ9/Self-Evolving-Agents \cite{charlesq9selfevolving} provides a GitHub-indexed resource list but without formal analysis or cross-domain comparison. YoungDubbyDu/LLM-Agent-Optimization \cite{youngdubbydu2026optimization} surveys optimization methods for LLM agents, focusing on prompt and pipeline tuning rather than the full spectrum of mutable components.
+
+\paragraph{AutoML and neural architecture search.} Classical AutoML surveys \cite{he2021automl,yao2018taking} cover automated pipeline construction and hyperparameter optimization but do not address post-deployment self-modification, agent architectures, or code-level evolution. NAS surveys \cite{elsken2019neural,ren2021comprehensive} focus on neural network topology search rather than agent software, prompts, or multi-modal architectures. Our survey bridges AutoML/NAS with agent research by treating ADAS \cite{hu2024automated} and DGM \cite{zhang2025darwin} as descendants of NAS applied to agent programs.
+
+\paragraph{Evolutionary computation and LLMs.} Surveys on LLM-augmented evolutionary algorithms \cite{yang2024large,liu2024large} cover LLMs as variation operators within evolutionary frameworks but do not address self-referential agent systems, reflection memory, or production deployment concerns. LLM4EC \cite{wuxingyu2025llm4ec} focuses on the intersection of LLMs and evolutionary computation for combinatorial optimization. Our survey treats evolutionary computation as one of several contributing traditions, alongside RL, program synthesis, and agent reasoning, unified under the self-evolution abstraction.
+
+\paragraph{LLM agents and reasoning.} Recent surveys on LLM agents \cite{xi2025riseagent,wang2024surveyagent} cover tool use, planning, and multi-agent coordination but classify methods by capability rather than by evolution mechanism. Surveys on self-improving reasoning \cite{huang2025selfimprove} address chain-of-thought refinement but do not cover code-level or architecture-level self-modification. Our survey's distinguishing contribution is the mechanism-level taxonomy that compares methods across all seven mutable component types (prompts, memory, tools, code, architecture, data, weights) and the explicit treatment of safety, governance, and production deployment as integral to the self-evolution definition.
+
+\begin{table}[t]
+\centering
+{\TableTight
+\begin{tabularx}{\textwidth}{@{}L{0.22\textwidth}cccc@{}}
+\toprule
+\textbf{Dimension} & \textbf{This survey} & \textbf{Wang et al.\ 2025} & \textbf{AutoML surveys} & \textbf{EC+LLM surveys} \\
+\midrule
+Mutable components & 7 types & 3--4 types & 1--2 types & 1 type \\
+Evolution mechanisms & 5 loops & Stage-based & Pipeline-based & Operator-based \\
+Post-deployment self-modification & Yes & Partial & No & No \\
+Agent architectures & Yes & Yes & No & No \\
+Code-level evolution & Yes & Limited & No & Yes \\
+Production frameworks & Yes & No & No & No \\
+Safety and governance & Core definition & Separate section & Minimal & Minimal \\
+Cross-domain unification & AutoML+NAS+EC+RL+agents & LLM agents only & AutoML only & EC only \\
+\bottomrule
+\end{tabularx}}
+\caption{Comparison of this survey with related surveys along key dimensions. Our survey uniquely covers all seven mutable component types, five evolution loop mechanisms, production frameworks, and treats safety as part of the self-evolution definition.}
+\label{tab:survey-comparison}
+\end{table}
+
 \subsection{Paper Structure}
 \label{subsec:intro-structure}
 

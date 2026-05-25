@@ -234,7 +234,7 @@ This section is intentionally placed first and contains only processed informati
 |---|---:|---|---|
 | Self-evolution loops | 79 strict / 176 broad repos | [OpenEvolve](projects/algorithmicsuperintelligence__openevolve.md), [AgentEvolver](projects/modelscope__agentevolver.md), [EvoAgentX](site/public/reports/projects/22-evoagentx-agent-evolution-framework.md), [A-Evolve](projects/115-a-evolve-universal-agent-evolution.md), [OpenSpace](projects/162-openspace-self-evolving-skills.md) | Read the evolvable object, evaluator, archive, rollback, cost, and cross-task transfer. |
 | Harness engineering | 138 framework repos | [Agentic Harness Engineering](site/public/reports/projects/43-agentic-harness-engineering.md), [OpenClaw](site/public/reports/projects/48-openclaw.md), [Aden Hive](projects/68-aden-hive.md), [OpenHarness](projects/146-openharness-agent-harness-ohmo.md), [CORAL](projects/89-coral-multi-agent-evolution.md) | Read tools, permissions, state, sub-agents, evaluator, and audit chain. |
-| Memory substrate | 92 memory-theme repos | [Mem0](projects/58-mem0-agent-memory.md), [LangMem](projects/70-langmem-agent-memory.md), [Graphiti](projects/71-graphiti-temporal-context-graphs.md), [Memoria](projects/110-memoria-git-for-agent-memory.md), [Hindsight](projects/174-hindsight-agent-memory-that-learns.md) | Inspect write/retrieval/merge/delete/conflict/versioning, not just vector databases. |
+| Memory substrate | 96 memory-theme repos | [Mem0](projects/58-mem0-agent-memory.md), [LangMem](projects/70-langmem-agent-memory.md), [Graphiti](projects/71-graphiti-temporal-context-graphs.md), [Memoria](projects/110-memoria-git-for-agent-memory.md), [Hindsight](projects/174-hindsight-agent-memory-that-learns.md) | Inspect write/retrieval/merge/delete/conflict/versioning, not just vector databases. |
 | Skills / reusable know-how | 60 skill-theme repos | [Anthropic Skills](projects/64-anthropic-skills.md), [OpenAI Skills](projects/121-openai-skills-codex-catalog.md), [AgentSkills](projects/157-agentskills-open-standard.md), [SkillRL](projects/148-skillrl-recursive-skill-rl.md), [Superpowers](site/public/reports/projects/49-superpowers.md) | Inspect format, install targets, validation, safety, transfer, and cross-agent compatibility. |
 | Evaluation / benchmarks | 89 evaluation-theme repos | [AgentBench](site/public/reports/projects/38-agentbench.md), [OSWorld](projects/73-osworld-computer-agent-benchmark.md), [BrowserGym](projects/75-browsergym-web-agent-benchmark.md), [Claw-Eval](projects/55-claw-eval-agent-evaluation.md), [HaluMem](projects/177-halumem-agent-memory-hallucination-benchmark.md) | Check whether it measures real tasks, controls Goodharting, has hidden tests, and keeps traces. |
 | Agent frameworks | 138 framework repos | [AutoGPT](projects/08-autogpt-autonomous-agent.md), [MetaGPT](projects/07-metagpt-multi-agent-framework.md), [AutoGen](site/public/reports/projects/11-autogen-multi-agent-conversation.md), [LangGraph](projects/16-langgraph-agent-workflow.md), [OpenHands](projects/19-openhands-dev-agent.md) | Check whether it is only a runtime or can form an evaluation-driven improvement loop. |
@@ -278,7 +278,7 @@ This section is intentionally placed first and contains only processed informati
 |---|---:|---|---|
 | Raw GitHub captures | 490 | Original `raw-github/*.md` captures and timestamp index | [raw timestamp index](output/raw-github-timestamp-index.md), [raw-github/](raw-github/) |
 | Classified repositories | 490 | Classification rows with category, theme, function, and time slice | [repo classification](research/repo-classification.md), [classification JSON](research/repo-classification.json) |
-| Site/paper model-card projects | 204 | Key projects that entered site data and project reports | [site/src/data/projects.ts](site/src/data/projects.ts), [projects/INDEX.md](projects/INDEX.md) |
+| Site/paper model-card projects | 208 | Key projects that entered site data and project reports | [site/src/data/projects.ts](site/src/data/projects.ts), [projects/INDEX.md](projects/INDEX.md) |
 | Public project report files | 233 | Project report files in the site public reports layer | [site/public/reports/projects/INDEX.md](site/public/reports/projects/INDEX.md) |
 | Strict evolution-theme repos | 79 | Strict theme repositories where `base_theme = evolution` | [GitHub analysis](analysis/github-project-data-analysis.md) |
 | Broad evolution-related repos | 176 | Broad set matching evolution/self-improvement/reflection/search/improvement-loop signals | [GitHub analysis](analysis/github-project-data-analysis.md) |
@@ -334,88 +334,88 @@ These lists are embedded directly in README so readers can copy, search, and com
 
 | # | Project | Repository | Role | Stars | Report |
 |---:|---|---|---|---:|---|
-| 1 | openevolve | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 进化式代码优化 | 6358 | [Report](site/public/reports/projects/algorithmicsuperintelligence__openevolve.md) |
-| 2 | agents | [aiwaves-cn/agents](https://github.com/aiwaves-cn/agents) | 数据驱动 Agent 进化 | 5928 | [Report](site/public/reports/projects/aiwaves_cn__agents.md) |
-| 3 | reflexion | [noahshinn/reflexion](https://github.com/noahshinn/reflexion) | 反思记忆 | 3158 | [Report](site/public/reports/projects/noahshinn__reflexion.md) |
-| 4 | AgentEvolver | [modelscope/AgentEvolver](https://github.com/modelscope/AgentEvolver) | Agent 进化框架 | 1441 | [Report](site/public/reports/projects/modelscope__agentevolver.md) |
-| 5 | self-refine | [madaan/self-refine](https://github.com/madaan/self-refine) | 反馈精炼 | 805 | [Report](site/public/reports/projects/madaan__self_refine.md) |
-| 6 | SE-Agent | [JARVIS-Xs/SE-Agent](https://github.com/JARVIS-Xs/SE-Agent) | 代码智能体自进化 | 274 | [Report](site/public/reports/projects/jarvis_xs__se_agent.md) |
-| 7 | science-codeevolve | [inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve) | 科学代码进化 | 97 | [Report](site/public/reports/projects/inter_co__science_codeevolve.md) |
-| 8 | SCOPE | [JarvisPei/SCOPE](https://github.com/JarvisPei/SCOPE) | 上下文/Prompt 进化 | 77 | [Report](site/public/reports/projects/jarvispei__scope.md) |
-| 9 | LLM-Self-Judge | [OPPO-Mente-Lab/LLM-Self-Judge](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge) | 自评判训练 | 43 | [Report](site/public/reports/projects/oppo_mente_lab__llm_self_judge.md) |
-| 10 | DARWIN | [ZJU-LLM-Safety/DARWIN](https://github.com/ZJU-LLM-Safety/DARWIN) | 安全策略进化 | 41 | [Report](site/public/reports/projects/zju_llm_safety__darwin.md) |
-| 11 | OPRO | [google-deepmind/opro](https://github.com/google-deepmind/opro) | LLM 作为优化器 | 2500 | [Report](site/public/reports/projects/01-opro-llm-as-optimizer.md) |
-| 12 | OpenELM | [carperai/openelm](https://github.com/carperai/openelm) | 进化式 Prompt 优化 | 1800 | [Report](site/public/reports/projects/02-openelm-evolution-large-models.md) |
-| 13 | ADAS | [shengranhu/adas](https://github.com/ShengranHu/ADAS) | Agent 架构自动搜索 | 1200 | [Report](site/public/reports/projects/03-adas-automated-design-agentic-systems.md) |
-| 14 | FunSearch | [google-deepmind/funsearch](https://github.com/google-deepmind/funsearch) | 进化式数学发现 | 1500 | [Report](site/public/reports/projects/04-funsearch-mathematical-discoveries.md) |
-| 15 | AutoML-Agent | [DeepAuto-AI/automl-agent](https://github.com/DeepAuto-AI/automl-agent) | 多 Agent AutoML | 500 | [Report](site/public/reports/projects/05-automl-agent-multi-agent.md) |
-| 16 | CoML | [microsoft/CoML](https://github.com/microsoft/CoML) | ML 知识库驱动 | 300 | [Report](site/public/reports/projects/06-coml-mlcopilot.md) |
-| 17 | MetaGPT | [FoundationAgents/MetaGPT](https://github.com/FoundationAgents/MetaGPT) | 多 Agent 协作框架 | 50000 | [Report](site/public/reports/projects/07-metagpt-multi-agent-framework.md) |
-| 18 | AutoGPT | [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | 自主 Agent 平台 | 175000 | [Report](site/public/reports/projects/08-autogpt-autonomous-agent.md) |
-| 19 | CrewAI | [crewAIInc/crewAI](https://github.com/crewAIInc/crewAI) | 多 Agent 协作框架 | 30000 | [Report](site/public/reports/projects/09-crewai-multi-agent-framework.md) |
-| 20 | DSPy | [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) | 声明式 Prompt 优化 | 25000 | [Report](site/public/reports/projects/10-dspy-declarative-llm-programming.md) |
-| 21 | AutoGen | [microsoft/autogen](https://github.com/microsoft/autogen) | 多 Agent 对话框架 | 50000 | [Report](site/public/reports/projects/11-autogen-multi-agent-conversation.md) |
-| 22 | CAMEL-AI | [camel-ai/camel](https://github.com/camel-ai/camel) | 角色扮演 Agent 框架 | 12000 | [Report](site/public/reports/projects/12-camel-ai-communicative-agents.md) |
-| 23 | LangGraph | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | 图式 Agent 编排 | 20000 | [Report](site/public/reports/projects/13-langgraph-agent-workflows.md) |
-| 24 | SWE-Agent | [princeton-nlp/SWE-agent](https://github.com/princeton-nlp/SWE-agent) | 软件工程 Agent | 15000 | [Report](site/public/reports/projects/14-swe-agent-software-engineering.md) |
-| 25 | OpenHands | [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) | AI 软件开发平台 | 55000 | [Report](site/public/reports/projects/15-openhands-ai-software-dev.md) |
-| 26 | Devika | [stitionai/devika](https://github.com/stitionai/devika) | AI 软件工程师 | 22000 | [Report](site/public/reports/projects/16-devika-ai-software-engineer.md) |
-| 27 | AgentVerse | [OpenBMB/AgentVerse](https://github.com/OpenBMB/AgentVerse) | 多 Agent 仿真平台 | 5000 | [Report](site/public/reports/projects/17-agentverse-multi-agent-platform.md) |
-| 28 | ReEvo | [ai4co/reevo](https://github.com/ai4co/reevo) | 反射式进化搜索 | 500 | [Report](site/public/reports/projects/18-reevo-reflective-evolution.md) |
-| 29 | LLaMEA | [xai-liacs/LLaMEA](https://github.com/XAI-liacs/LLaMEA) | LLM 驱动算法自动发现 | 1200 | [Report](site/public/reports/projects/19-llamea-llm-evolutionary-algorithm.md) |
-| 30 | EvoPrompt | [beeevita/EvoPrompt](https://github.com/beeevita/EvoPrompt) | 进化式 Prompt 优化 | 300 | [Report](site/public/reports/projects/20-evoprompt-prompt-optimization.md) |
-| 31 | EvoAgent | [siyuyuan/evoagent](https://github.com/siyuyuan/evoagent) | 进化式多 Agent 系统 | 200 | [Report](site/public/reports/projects/21-evoagent-evolutionary-multi-agent.md) |
-| 32 | EvoAgentX | [EvoAgentX/EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | 自进化 Agent 生态系统 | 1000 | [Report](site/public/reports/projects/22-evoagentx-agent-evolution-framework.md) |
+| 1 | openevolve | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | Evolutionary code optimization | 6358 | [Report](site/public/reports/projects/algorithmicsuperintelligence__openevolve.md) |
+| 2 | agents | [aiwaves-cn/agents](https://github.com/aiwaves-cn/agents) | Data-driven agent evolution | 5928 | [Report](site/public/reports/projects/aiwaves_cn__agents.md) |
+| 3 | reflexion | [noahshinn/reflexion](https://github.com/noahshinn/reflexion) | Reflective memory | 3158 | [Report](site/public/reports/projects/noahshinn__reflexion.md) |
+| 4 | AgentEvolver | [modelscope/AgentEvolver](https://github.com/modelscope/AgentEvolver) | Agent evolution framework | 1441 | [Report](site/public/reports/projects/modelscope__agentevolver.md) |
+| 5 | self-refine | [madaan/self-refine](https://github.com/madaan/self-refine) | Feedback refinement | 805 | [Report](site/public/reports/projects/madaan__self_refine.md) |
+| 6 | SE-Agent | [JARVIS-Xs/SE-Agent](https://github.com/JARVIS-Xs/SE-Agent) | Code-agent self-evolution | 274 | [Report](site/public/reports/projects/jarvis_xs__se_agent.md) |
+| 7 | science-codeevolve | [inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve) | Scientific code evolution | 97 | [Report](site/public/reports/projects/inter_co__science_codeevolve.md) |
+| 8 | SCOPE | [JarvisPei/SCOPE](https://github.com/JarvisPei/SCOPE) | Context / prompt evolution | 77 | [Report](site/public/reports/projects/jarvispei__scope.md) |
+| 9 | LLM-Self-Judge | [OPPO-Mente-Lab/LLM-Self-Judge](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge) | Self-judging training | 43 | [Report](site/public/reports/projects/oppo_mente_lab__llm_self_judge.md) |
+| 10 | DARWIN | [ZJU-LLM-Safety/DARWIN](https://github.com/ZJU-LLM-Safety/DARWIN) | Safety-policy evolution | 41 | [Report](site/public/reports/projects/zju_llm_safety__darwin.md) |
+| 11 | OPRO | [google-deepmind/opro](https://github.com/google-deepmind/opro) | LLM-as-optimizer | 2500 | [Report](site/public/reports/projects/01-opro-llm-as-optimizer.md) |
+| 12 | OpenELM | [carperai/openelm](https://github.com/carperai/openelm) | Evolutionary prompt optimization | 1800 | [Report](site/public/reports/projects/02-openelm-evolution-large-models.md) |
+| 13 | ADAS | [shengranhu/adas](https://github.com/ShengranHu/ADAS) | Automated agent architecture search | 1200 | [Report](site/public/reports/projects/03-adas-automated-design-agentic-systems.md) |
+| 14 | FunSearch | [google-deepmind/funsearch](https://github.com/google-deepmind/funsearch) | Evolutionary mathematical discovery | 1500 | [Report](site/public/reports/projects/04-funsearch-mathematical-discoveries.md) |
+| 15 | AutoML-Agent | [DeepAuto-AI/automl-agent](https://github.com/DeepAuto-AI/automl-agent) | Multi-agent AutoML | 500 | [Report](site/public/reports/projects/05-automl-agent-multi-agent.md) |
+| 16 | CoML | [microsoft/CoML](https://github.com/microsoft/CoML) | ML knowledge-base driven | 300 | [Report](site/public/reports/projects/06-coml-mlcopilot.md) |
+| 17 | MetaGPT | [FoundationAgents/MetaGPT](https://github.com/FoundationAgents/MetaGPT) | Multi-agent collaboration framework | 50000 | [Report](site/public/reports/projects/07-metagpt-multi-agent-framework.md) |
+| 18 | AutoGPT | [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | Autonomous agent platform | 175000 | [Report](site/public/reports/projects/08-autogpt-autonomous-agent.md) |
+| 19 | CrewAI | [crewAIInc/crewAI](https://github.com/crewAIInc/crewAI) | Multi-agent collaboration framework | 30000 | [Report](site/public/reports/projects/09-crewai-multi-agent-framework.md) |
+| 20 | DSPy | [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) | Declarative prompt optimization | 25000 | [Report](site/public/reports/projects/10-dspy-declarative-llm-programming.md) |
+| 21 | AutoGen | [microsoft/autogen](https://github.com/microsoft/autogen) | Multi-agent conversation framework | 50000 | [Report](site/public/reports/projects/11-autogen-multi-agent-conversation.md) |
+| 22 | CAMEL-AI | [camel-ai/camel](https://github.com/camel-ai/camel) | Role-playing agent framework | 12000 | [Report](site/public/reports/projects/12-camel-ai-communicative-agents.md) |
+| 23 | LangGraph | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | Graph-based agent orchestration | 20000 | [Report](site/public/reports/projects/13-langgraph-agent-workflows.md) |
+| 24 | SWE-Agent | [princeton-nlp/SWE-agent](https://github.com/princeton-nlp/SWE-agent) | Software engineering agent | 15000 | [Report](site/public/reports/projects/14-swe-agent-software-engineering.md) |
+| 25 | OpenHands | [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) | AI software development platform | 55000 | [Report](site/public/reports/projects/15-openhands-ai-software-dev.md) |
+| 26 | Devika | [stitionai/devika](https://github.com/stitionai/devika) | AI software engineer | 22000 | [Report](site/public/reports/projects/16-devika-ai-software-engineer.md) |
+| 27 | AgentVerse | [OpenBMB/AgentVerse](https://github.com/OpenBMB/AgentVerse) | Multi-agent simulation platform | 5000 | [Report](site/public/reports/projects/17-agentverse-multi-agent-platform.md) |
+| 28 | ReEvo | [ai4co/reevo](https://github.com/ai4co/reevo) | Reflective evolutionary search | 500 | [Report](site/public/reports/projects/18-reevo-reflective-evolution.md) |
+| 29 | LLaMEA | [xai-liacs/LLaMEA](https://github.com/XAI-liacs/LLaMEA) | LLM-driven automated algorithm discovery | 1200 | [Report](site/public/reports/projects/19-llamea-llm-evolutionary-algorithm.md) |
+| 30 | EvoPrompt | [beeevita/EvoPrompt](https://github.com/beeevita/EvoPrompt) | Evolutionary prompt optimization | 300 | [Report](site/public/reports/projects/20-evoprompt-prompt-optimization.md) |
+| 31 | EvoAgent | [siyuyuan/evoagent](https://github.com/siyuyuan/evoagent) | Evolutionary multi-agent system | 200 | [Report](site/public/reports/projects/21-evoagent-evolutionary-multi-agent.md) |
+| 32 | EvoAgentX | [EvoAgentX/EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | Self-evolving agent ecosystem | 1000 | [Report](site/public/reports/projects/22-evoagentx-agent-evolution-framework.md) |
 | 33 | EverOS | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | Self-Evolving Agent Memory OS | 5600 | [Report](site/public/reports/projects/79-everos-self-evolving-memory-os.md) |
-| 34 | OpenTreeSearch | [Genentech/OpenTreeSearch](https://github.com/Genentech/opentreesearch) | LLM 引导代码进化 | 200 | [Report](site/public/reports/projects/24-opentreesearch-llm-code-evolution.md) |
-| 35 | pyribs | [icaros-usc/pyribs](https://github.com/icaros-usc/pyribs) | 质量多样性优化 | 800 | [Report](site/public/reports/projects/25-pyribs-quality-diversity.md) |
-| 36 | LLM4EC | [wuxingyu-ai/LLM4EC](https://github.com/wuxingyu-ai/LLM4EC) | LLM+EC 交叉综述 | 200 | [Report](site/public/reports/projects/26-llm4ec-llm-evolutionary-computation.md) |
-| 37 | LLM4Opt | [FeiLiu36/LLM4Opt](https://github.com/FeiLiu36/LLM4Opt) | LLM 驱动算法设计综述 | 400 | [Report](site/public/reports/projects/27-llm4opt-llm-optimization.md) |
-| 38 | Nevergrad | [facebookresearch/nevergrad](https://github.com/facebookresearch/nevergrad) | 无梯度优化框架 | 4000 | [Report](site/public/reports/projects/28-nevergrad-derivative-free.md) |
-| 39 | DEAP | [DEAP/deap](https://github.com/DEAP/deap) | 经典进化算法框架 | 6000 | [Report](site/public/reports/projects/29-deap-evolutionary-framework.md) |
-| 40 | pycma | [CMA-ES/pycma](https://github.com/CMA-ES/pycma) | 经典进化策略 | 1000 | [Report](site/public/reports/projects/30-pycma-cma-es.md) |
-| 41 | auto-sklearn | [automl/auto-sklearn](https://github.com/automl/auto-sklearn) | AutoML 框架 | 7500 | [Report](site/public/reports/projects/31-autosklearn-automl.md) |
-| 42 | Self-Evolving-Agents | [CharlesQ9/Self-Evolving-Agents](https://github.com/CharlesQ9/Self-Evolving-Agents) | 自进化 Agent 综述 | 300 | [Report](site/public/reports/projects/32-self-evolving-agents.md) |
-| 43 | self-improvement-llm | [Zesearch/self-improvement-llm](https://github.com/Zesearch/self-improvement-llm) | LLM 自改进综述 | 200 | [Report](site/public/reports/projects/33-self-improvement-llm.md) |
-| 44 | LLM-EA-Survey | [xiaofangxd/LLM_EA](https://github.com/xiaofangxd/LLM_EA) | LLM+EA 交叉综述 | 300 | [Report](site/public/reports/projects/34-llm-ea-survey.md) |
-| 45 | Tutorial-GP-LLM | [alfa-group/tutorial_gp_llm](https://github.com/alfa-group/tutorial_gp_llm) | GP+LLM 教学 | 50 | [Report](site/public/reports/projects/35-tutorial-gp-llm.md) |
-| 46 | LLM-Agent-Optimization | [YoungDubbyDu/LLM-Agent-Optimization](https://github.com/YoungDubbyDu/LLM-Agent-Optimization) | LLM Agent 优化综述 | 500 | [Report](site/public/reports/projects/36-llm-agent-optimization.md) |
-| 47 | Awesome-Code-LLM | [CodeFuse-ML/awesome-code-llm](https://github.com/CodeFuse-ML/awesome-code-llm) | 代码 LLM 综述 | 2000 | [Report](site/public/reports/projects/37-awesome-code-llm.md) |
-| 48 | AgentBench | [THUDM/AgentBench](https://github.com/THUDM/AgentBench) | Agent 评测基准 | 3000 | [Report](site/public/reports/projects/38-agentbench.md) |
-| 49 | RL4CO | [ai4co/rl4co](https://github.com/ai4co/rl4co) | RL 组合优化基准 | 1200 | [Report](site/public/reports/projects/39-rl4co-reinforcement-learning.md) |
-| 50 | Awesome-FM4CO | [ai4co/awesome-fm4co](https://github.com/ai4co/awesome-fm4co) | 基础模型+组合优化综述 | 500 | [Report](site/public/reports/projects/40-awesome-fm4co.md) |
-| 51 | OpenDevin | [OpenDevin/OpenDevin](https://github.com/OpenDevin/OpenDevin) | AI 软件开发平台 | 50000 | [Report](site/public/reports/projects/41-opendevin-ai-software.md) |
-| 52 | GP-LLM-Code-Evolution | [pureples/pureples](https://github.com/pureples/pureples) | GP+LLM 代码进化 | 100 | [Report](site/public/reports/projects/42-gp-llm-code-evolution.md) |
-| 53 | Agentic Harness Engineering | [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | Harness 进化工程 | 391 | [Report](site/public/reports/projects/43-agentic-harness-engineering.md) |
-| 54 | Hermes Agent | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 自改进个人 Agent 运行时 | 162000 | [Report](site/public/reports/projects/44-hermes-agent.md) |
-| 55 | Hermes Agent Self-Evolution | [NousResearch/hermes-agent-self-evolution](https://github.com/NousResearch/hermes-agent-self-evolution) | 技能与提示进化 | 3400 | [Report](site/public/reports/projects/45-hermes-agent-self-evolution.md) |
-| 56 | EvoMap Evolver | [EvoMap/evolver](https://github.com/EvoMap/evolver) | 可审计 Agent 演化引擎 | 7507 | [Report](site/public/reports/projects/46-evomap-evolver.md) |
-| 57 | GenericAgent | [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | Token 高效自进化 Agent | 11900 | [Report](site/public/reports/projects/47-genericagent.md) |
-| 58 | OpenClaw | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 个人 Agent 产品运行时 | 374000 | [Report](site/public/reports/projects/48-openclaw.md) |
-| 59 | Superpowers | [obra/superpowers](https://github.com/obra/superpowers) | Agentic 技能方法论 | 202000 | [Report](site/public/reports/projects/49-superpowers.md) |
-| 60 | agentmemory | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | Agent 持久记忆层 | 16000 | [Report](site/public/reports/projects/50-agentmemory.md) |
-| 61 | PinchBench Skill | [pinchbench/skill](https://github.com/pinchbench/skill) | 真实 Agent 任务基准 | 1200 | [Report](site/public/reports/projects/51-pinchbench-skill.md) |
-| 62 | OpenHuman | [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | 个人 Agent 产品与记忆系统 | 25100 | [Report](site/public/reports/projects/52-openhuman.md) |
-| 63 | Claw Bench | [claw-bench/claw-bench](https://github.com/claw-bench/claw-bench) | 真实 Agent 任务基准 | 171 | [Report](site/public/reports/projects/53-claw-bench-agent-benchmark.md) |
-| 64 | OpenClaw ClawBench | [openclaw/clawbench](https://github.com/openclaw/clawbench) | Agent Harness 评测诊断 | 97 | [Report](site/public/reports/projects/54-openclaw-clawbench.md) |
-| 65 | Claw-Eval | [claw-eval/claw-eval](https://github.com/claw-eval/claw-eval) | 可信 Agent 评测 | 606 | [Report](site/public/reports/projects/55-claw-eval-agent-evaluation.md) |
-| 66 | Harness Evolver | [raphaelchristi/harness-evolver](https://github.com/raphaelchristi/harness-evolver) | Harness 自进化工具 | 21 | [Report](site/public/reports/projects/56-harness-evolver.md) |
-| 67 | Awesome Harness Engineering | [ai-boost/awesome-harness-engineering](https://github.com/ai-boost/awesome-harness-engineering) | Harness Engineering 资源索引 | 1100 | [Report](site/public/reports/projects/57-awesome-harness-engineering.md) |
-| 68 | Mem0 | [mem0ai/mem0](https://github.com/mem0ai/mem0) | Agent 通用记忆层 | 56500 | [Report](site/public/reports/projects/58-mem0-agent-memory.md) |
-| 69 | TiMem | [TiMEM-AI/timem](https://github.com/TiMEM-AI/timem) | 长程 Agent 时间记忆 | 134 | [Report](site/public/reports/projects/59-timem-temporal-memory.md) |
-| 70 | AMA-Bench | [AMA-Bench/AMA-Bench](https://github.com/AMA-Bench/AMA-Bench) | Agent 长程记忆基准 | 40 | [Report](site/public/reports/projects/60-ama-bench-memory-evaluation.md) |
-| 71 | Agent Skills Directory | [dmgrok/agent_skills_directory](https://github.com/dmgrok/agent_skills_directory) | Agent 技能发现索引 | 16 | [Report](site/public/reports/projects/61-agent-skills-directory.md) |
-| 72 | AceForge | [sudokrang/aceforge](https://github.com/sudokrang/aceforge) | OpenClaw 技能自进化引擎 | 1 | [Report](site/public/reports/projects/62-aceforge-skill-evolution.md) |
-| 73 | EvoCUA | [meituan/EvoCUA](https://github.com/meituan/EvoCUA) | Computer Use Agent 进化模型 | 317 | [Report](site/public/reports/projects/63-evocua-computer-use-agent.md) |
-| 74 | Anthropic Skills | [anthropics/skills](https://github.com/anthropics/skills) | 官方 Agent Skills 标准样例库 | 140000 | [Report](site/public/reports/projects/64-anthropic-skills.md) |
-| 75 | Awesome Claude Skills | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | Agent Skills 社区资源索引 | 61500 | [Report](site/public/reports/projects/65-awesome-claude-skills.md) |
-| 76 | Microsoft Agent Skills | [MicrosoftDocs/Agent-Skills](https://github.com/MicrosoftDocs/Agent-Skills) | 企业文档驱动 Agent Skills | 557 | [Report](site/public/reports/projects/66-microsoft-agent-skills.md) |
-| 77 | Scientific Agent Skills | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | 科研 Agent Skills 工作流库 | 25500 | [Report](site/public/reports/projects/67-scientific-agent-skills.md) |
-| 78 | Aden Hive | [aden-hive/hive](https://github.com/aden-hive/hive) | 生产级 Multi-Agent Harness | 10400 | [Report](site/public/reports/projects/68-aden-hive.md) |
-| 79 | SWE-Skills-Bench | [GeniusHTX/SWE-Skills-Bench](https://github.com/GeniusHTX/SWE-Skills-Bench) | Agent Skills 效果基准 | 42 | [Report](site/public/reports/projects/69-swe-skills-bench.md) |
-| 80 | LangMem | [langchain-ai/langmem](https://github.com/langchain-ai/langmem) | Agent 长期记忆 SDK | 1500 | [Report](site/public/reports/projects/70-langmem-agent-memory.md) |
+| 34 | OpenTreeSearch | [Genentech/OpenTreeSearch](https://github.com/Genentech/opentreesearch) | LLM-guided code evolution | 200 | [Report](site/public/reports/projects/24-opentreesearch-llm-code-evolution.md) |
+| 35 | pyribs | [icaros-usc/pyribs](https://github.com/icaros-usc/pyribs) | Quality-diversity optimization | 800 | [Report](site/public/reports/projects/25-pyribs-quality-diversity.md) |
+| 36 | LLM4EC | [wuxingyu-ai/LLM4EC](https://github.com/wuxingyu-ai/LLM4EC) | LLM + evolutionary computation survey | 200 | [Report](site/public/reports/projects/26-llm4ec-llm-evolutionary-computation.md) |
+| 37 | LLM4Opt | [FeiLiu36/LLM4Opt](https://github.com/FeiLiu36/LLM4Opt) | LLM-driven algorithm design survey | 400 | [Report](site/public/reports/projects/27-llm4opt-llm-optimization.md) |
+| 38 | Nevergrad | [facebookresearch/nevergrad](https://github.com/facebookresearch/nevergrad) | Derivative-free optimization framework | 4000 | [Report](site/public/reports/projects/28-nevergrad-derivative-free.md) |
+| 39 | DEAP | [DEAP/deap](https://github.com/DEAP/deap) | Classic evolutionary algorithm framework | 6000 | [Report](site/public/reports/projects/29-deap-evolutionary-framework.md) |
+| 40 | pycma | [CMA-ES/pycma](https://github.com/CMA-ES/pycma) | Classic evolutionary strategy | 1000 | [Report](site/public/reports/projects/30-pycma-cma-es.md) |
+| 41 | auto-sklearn | [automl/auto-sklearn](https://github.com/automl/auto-sklearn) | AutoML framework | 7500 | [Report](site/public/reports/projects/31-autosklearn-automl.md) |
+| 42 | Self-Evolving-Agents | [CharlesQ9/Self-Evolving-Agents](https://github.com/CharlesQ9/Self-Evolving-Agents) | Self-evolving agent survey | 300 | [Report](site/public/reports/projects/32-self-evolving-agents.md) |
+| 43 | self-improvement-llm | [Zesearch/self-improvement-llm](https://github.com/Zesearch/self-improvement-llm) | LLM self-improvement survey | 200 | [Report](site/public/reports/projects/33-self-improvement-llm.md) |
+| 44 | LLM-EA-Survey | [xiaofangxd/LLM_EA](https://github.com/xiaofangxd/LLM_EA) | LLM + evolutionary algorithms survey | 300 | [Report](site/public/reports/projects/34-llm-ea-survey.md) |
+| 45 | Tutorial-GP-LLM | [alfa-group/tutorial_gp_llm](https://github.com/alfa-group/tutorial_gp_llm) | GP + LLM tutorial | 50 | [Report](site/public/reports/projects/35-tutorial-gp-llm.md) |
+| 46 | LLM-Agent-Optimization | [YoungDubbyDu/LLM-Agent-Optimization](https://github.com/YoungDubbyDu/LLM-Agent-Optimization) | LLM agent optimization survey | 500 | [Report](site/public/reports/projects/36-llm-agent-optimization.md) |
+| 47 | Awesome-Code-LLM | [CodeFuse-ML/awesome-code-llm](https://github.com/CodeFuse-ML/awesome-code-llm) | Code LLM survey | 2000 | [Report](site/public/reports/projects/37-awesome-code-llm.md) |
+| 48 | AgentBench | [THUDM/AgentBench](https://github.com/THUDM/AgentBench) | Agent evaluation benchmark | 3000 | [Report](site/public/reports/projects/38-agentbench.md) |
+| 49 | RL4CO | [ai4co/rl4co](https://github.com/ai4co/rl4co) | RL combinatorial optimization benchmark | 1200 | [Report](site/public/reports/projects/39-rl4co-reinforcement-learning.md) |
+| 50 | Awesome-FM4CO | [ai4co/awesome-fm4co](https://github.com/ai4co/awesome-fm4co) | Foundation models + combinatorial optimization survey | 500 | [Report](site/public/reports/projects/40-awesome-fm4co.md) |
+| 51 | OpenDevin | [OpenDevin/OpenDevin](https://github.com/OpenDevin/OpenDevin) | AI software development platform | 50000 | [Report](site/public/reports/projects/41-opendevin-ai-software.md) |
+| 52 | GP-LLM-Code-Evolution | [pureples/pureples](https://github.com/pureples/pureples) | GP + LLM code evolution | 100 | [Report](site/public/reports/projects/42-gp-llm-code-evolution.md) |
+| 53 | Agentic Harness Engineering | [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | Harness evolution engineering | 391 | [Report](site/public/reports/projects/43-agentic-harness-engineering.md) |
+| 54 | Hermes Agent | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | Self-improving personal agent runtime | 162000 | [Report](site/public/reports/projects/44-hermes-agent.md) |
+| 55 | Hermes Agent Self-Evolution | [NousResearch/hermes-agent-self-evolution](https://github.com/NousResearch/hermes-agent-self-evolution) | Skill and prompt evolution | 3400 | [Report](site/public/reports/projects/45-hermes-agent-self-evolution.md) |
+| 56 | EvoMap Evolver | [EvoMap/evolver](https://github.com/EvoMap/evolver) | Auditable agent evolution engine | 7507 | [Report](site/public/reports/projects/46-evomap-evolver.md) |
+| 57 | GenericAgent | [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | Token-efficient self-evolving agent | 11900 | [Report](site/public/reports/projects/47-genericagent.md) |
+| 58 | OpenClaw | [openclaw/openclaw](https://github.com/openclaw/openclaw) | Personal agent product runtime | 374000 | [Report](site/public/reports/projects/48-openclaw.md) |
+| 59 | Superpowers | [obra/superpowers](https://github.com/obra/superpowers) | Agentic skills methodology | 202000 | [Report](site/public/reports/projects/49-superpowers.md) |
+| 60 | agentmemory | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | Persistent agent memory layer | 16000 | [Report](site/public/reports/projects/50-agentmemory.md) |
+| 61 | PinchBench Skill | [pinchbench/skill](https://github.com/pinchbench/skill) | Real-world agent task benchmark | 1200 | [Report](site/public/reports/projects/51-pinchbench-skill.md) |
+| 62 | OpenHuman | [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | Personal agent product and memory system | 25100 | [Report](site/public/reports/projects/52-openhuman.md) |
+| 63 | Claw Bench | [claw-bench/claw-bench](https://github.com/claw-bench/claw-bench) | Real-world agent task benchmark | 171 | [Report](site/public/reports/projects/53-claw-bench-agent-benchmark.md) |
+| 64 | OpenClaw ClawBench | [openclaw/clawbench](https://github.com/openclaw/clawbench) | Agent harness evaluation diagnostics | 97 | [Report](site/public/reports/projects/54-openclaw-clawbench.md) |
+| 65 | Claw-Eval | [claw-eval/claw-eval](https://github.com/claw-eval/claw-eval) | Trustworthy agent evaluation | 606 | [Report](site/public/reports/projects/55-claw-eval-agent-evaluation.md) |
+| 66 | Harness Evolver | [raphaelchristi/harness-evolver](https://github.com/raphaelchristi/harness-evolver) | Harness self-evolution tool | 21 | [Report](site/public/reports/projects/56-harness-evolver.md) |
+| 67 | Awesome Harness Engineering | [ai-boost/awesome-harness-engineering](https://github.com/ai-boost/awesome-harness-engineering) | Harness engineering resource index | 1100 | [Report](site/public/reports/projects/57-awesome-harness-engineering.md) |
+| 68 | Mem0 | [mem0ai/mem0](https://github.com/mem0ai/mem0) | General-purpose agent memory layer | 56500 | [Report](site/public/reports/projects/58-mem0-agent-memory.md) |
+| 69 | TiMem | [TiMEM-AI/timem](https://github.com/TiMEM-AI/timem) | Long-horizon temporal agent memory | 134 | [Report](site/public/reports/projects/59-timem-temporal-memory.md) |
+| 70 | AMA-Bench | [AMA-Bench/AMA-Bench](https://github.com/AMA-Bench/AMA-Bench) | Long-horizon agent memory benchmark | 40 | [Report](site/public/reports/projects/60-ama-bench-memory-evaluation.md) |
+| 71 | Agent Skills Directory | [dmgrok/agent_skills_directory](https://github.com/dmgrok/agent_skills_directory) | Agent skill discovery index | 16 | [Report](site/public/reports/projects/61-agent-skills-directory.md) |
+| 72 | AceForge | [sudokrang/aceforge](https://github.com/sudokrang/aceforge) | OpenClaw skill self-evolution engine | 1 | [Report](site/public/reports/projects/62-aceforge-skill-evolution.md) |
+| 73 | EvoCUA | [meituan/EvoCUA](https://github.com/meituan/EvoCUA) | Computer-use agent evolution model | 317 | [Report](site/public/reports/projects/63-evocua-computer-use-agent.md) |
+| 74 | Anthropic Skills | [anthropics/skills](https://github.com/anthropics/skills) | Official Agent Skills reference examples | 140000 | [Report](site/public/reports/projects/64-anthropic-skills.md) |
+| 75 | Awesome Claude Skills | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | Agent Skills community resource index | 61500 | [Report](site/public/reports/projects/65-awesome-claude-skills.md) |
+| 76 | Microsoft Agent Skills | [MicrosoftDocs/Agent-Skills](https://github.com/MicrosoftDocs/Agent-Skills) | Enterprise documentation-driven Agent Skills | 557 | [Report](site/public/reports/projects/66-microsoft-agent-skills.md) |
+| 77 | Scientific Agent Skills | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | Scientific Agent Skills workflow library | 25500 | [Report](site/public/reports/projects/67-scientific-agent-skills.md) |
+| 78 | Aden Hive | [aden-hive/hive](https://github.com/aden-hive/hive) | Production-grade multi-agent harness | 10400 | [Report](site/public/reports/projects/68-aden-hive.md) |
+| 79 | SWE-Skills-Bench | [GeniusHTX/SWE-Skills-Bench](https://github.com/GeniusHTX/SWE-Skills-Bench) | Agent Skills effectiveness benchmark | 42 | [Report](site/public/reports/projects/69-swe-skills-bench.md) |
+| 80 | LangMem | [langchain-ai/langmem](https://github.com/langchain-ai/langmem) | Agent long-term memory SDK | 1500 | [Report](site/public/reports/projects/70-langmem-agent-memory.md) |
 | 81 | Graphiti | [getzep/graphiti](https://github.com/getzep/graphiti) | Temporal Context Graph Agent Memory | 26500 | [Report](site/public/reports/projects/71-graphiti-temporal-context-graphs.md) |
-| 82 | Memobase | [memodb-io/memobase](https://github.com/memodb-io/memobase) | 用户画像长期记忆后端 | 2700 | [Report](site/public/reports/projects/72-memobase-user-profile-memory.md) |
+| 82 | Memobase | [memodb-io/memobase](https://github.com/memodb-io/memobase) | Long-term user-profile memory backend | 2700 | [Report](site/public/reports/projects/72-memobase-user-profile-memory.md) |
 | 83 | OSWorld | [xlang-ai/OSWorld](https://github.com/xlang-ai/OSWorld) | Computer-use Agent OS Benchmark | 2900 | [Report](site/public/reports/projects/73-osworld-computer-agent-benchmark.md) |
 | 84 | WindowsAgentArena | [microsoft/WindowsAgentArena](https://github.com/microsoft/WindowsAgentArena) | Windows OS Agent Benchmark | 861 | [Report](site/public/reports/projects/74-windows-agent-arena.md) |
 | 85 | BrowserGym | [ServiceNow/BrowserGym](https://github.com/ServiceNow/BrowserGym) | Web Agent Benchmark Gym | 1200 | [Report](site/public/reports/projects/75-browsergym-web-agent-benchmark.md) |

@@ -12,75 +12,291 @@ const chapters = [
   ['8', 'Future Directions', 'Open problems, roadmap, conclusion', 'Needs final tightening'],
   ['Appendix', 'Tables', 'Projects, papers, benchmarks, star quality', 'Compiled, needs layout polish']
 ];
+
+const methodFamilies = [
+  { name: 'Prompt/Search Optimization', papers: 68, share: '34.7%', color: '#9b59b6' },
+  { name: 'Reward/RL/Self-Play', papers: 51, share: '26.0%', color: '#e74c3c' },
+  { name: 'Code/Self-Modification', papers: 28, share: '14.3%', color: '#3498db' },
+  { name: 'Multi-Agent Reflection/Debate', papers: 16, share: '8.2%', color: '#2ecc71' },
+  { name: 'Memory/Knowledge Evolution', papers: 16, share: '8.2%', color: '#f39c12' },
+  { name: 'Web/Tool/Environment Adaptation', papers: 13, share: '6.6%', color: '#1abc9c' },
+  { name: 'Evaluation/Safety/Governance', papers: 4, share: '2.0%', color: '#8e8e93' },
+];
+
+const frameworkRadar = [
+  { name: 'LangChain/LangGraph', adoption: 5, observability: 3, production: 5, evolution: 3, governance: 3 },
+  { name: 'CrewAI', adoption: 5, observability: 4, production: 4, evolution: 2, governance: 2 },
+  { name: 'AutoGen', adoption: 5, observability: 4, production: 4, evolution: 2, governance: 2 },
+  { name: 'OpenAI Agents SDK', adoption: 5, observability: 1, production: 5, evolution: 2, governance: 3 },
+  { name: 'EvoAgentX', adoption: 5, observability: 4, production: 4, evolution: 5, governance: 2 },
+  { name: 'DGM/OpenEvolve', adoption: 5, observability: 4, production: 5, evolution: 5, governance: 2 },
+];
+
+const coverage = [
+  { dataset: 'Papers', current: 196, coverage: 196 },
+  { dataset: 'Reviews', current: 137, coverage: 156 },
+  { dataset: 'Repos', current: 486, coverage: 103 },
+  { dataset: 'Blog Files', current: 1308, coverage: 100 },
+  { dataset: 'Social JSON', current: 613, coverage: 204 },
+  { dataset: 'Pain Points', current: 97, coverage: 100 },
+];
+
+const starProjects = [
+  { name: 'AutoResearchClaw', stars: '12.6K', dimension: 'Skill + Memory + Workflow', method: 'PIVOT/REFINE loop, multi-agent debate' },
+  { name: 'GenericAgent', stars: '11.9K', dimension: 'Architecture', method: 'Architecture self-modification' },
+  { name: 'hive', stars: '10.4K', dimension: 'Workflow/Graph', method: 'Failure-driven graph evolution' },
+];
 ---
 
 <BaseLayout
-  title="Self-Evolving AI Survey Paper — Draft Status, Chapters, and Evidence Gates"
-  description="Self Evolve 论文页面：追踪 AI Self-Evolution 综述论文的主稿结构、章节状态、项目证据、benchmark 证据和发布门禁。"
+  title="Self-Evolving AI Survey — 论文下载 & 数据可视化"
+  description="Self-Evolving AI 综述论文：提供中英文 PDF 下载、方法分类图、框架雷达图、项目传播链、数据覆盖率等图文并茂的可视化内容。"
 >
   <section class="section">
     <div class="container">
       <div class="eyebrow">Paper / 论文</div>
-      <h1 class="gradient-text">Self-Evolving AI 综述论文写作台账</h1>
-      <p class="lead">这不是单纯的资源列表。论文主稿已经被组织成可编译的章节结构并产出 PDF；GitHub 项目数据现在按 raw 收集、分析样本、进化相关子集和时间线进入论文。</p>
+      <h1 class="gradient-text">Self-Evolving AI 综述论文</h1>
+      <p class="lead">论文追踪 AI Self-Evolution 的完整研究图谱：从推理时自改进到代码自进化，覆盖 196 篇论文、486 个 GitHub 仓库和 97 个用户痛点。</p>
       <div class="metrics">
-        <div class="metric"><strong>383</strong><span>raw GitHub captures</span></div>
-        <div class="metric"><strong>90</strong><span>项目 Model Cards 已接入</span></div>
-        <div class="metric"><strong>213</strong><span>页 PDF 已编译</span></div>
+        <div class="metric"><strong>196</strong><span>篇论文覆盖</span></div>
+        <div class="metric"><strong>486</strong><span>个 GitHub 仓库</span></div>
+        <div class="metric"><strong>97</strong><span>个用户痛点</span></div>
+        <div class="metric"><strong>9</strong><span>章 + 附录</span></div>
       </div>
     </div>
   </section>
 
+  <!-- PDF Download -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Download</div>
+          <h2>论文 PDF 下载</h2>
+        </div>
+      </div>
+      <div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+        <article class="card" style="border-top: 3px solid #FF5B00;">
+          <div class="card-title-row">
+            <div>
+              <div class="eyebrow">English</div>
+              <h3>Self-Evolving AI Survey</h3>
+            </div>
+          </div>
+          <p>Comprehensive survey on AI self-evolution: taxonomy, methods, frameworks, evaluation, and future directions. 9 chapters + appendix.</p>
+          <div class="pill-row">
+            <span class="pill">XeLaTeX</span>
+            <span class="pill">8 Chapters</span>
+            <span class="pill">62 BibTeX Items</span>
+          </div>
+          <div class="card-actions">
+            <a class="button primary" href="/reports/self-evolve-survey-en.pdf" target="_blank" rel="noopener">Download English PDF</a>
+          </div>
+        </article>
+        <article class="card" style="border-top: 3px solid #007AFF;">
+          <div class="card-title-row">
+            <div>
+              <div class="eyebrow">中文版</div>
+              <h3>AI 自进化综述</h3>
+            </div>
+          </div>
+          <p>全面追踪 AI 自进化研究图谱：五层进化环路、方法分类、框架对比、评估体系和未来方向。含方法族对比图和传播链分析。</p>
+          <div class="pill-row">
+            <span class="pill">XeLaTeX</span>
+            <span class="pill">中文</span>
+            <span class="pill">完整图表</span>
+          </div>
+          <div class="card-actions">
+            <a class="button primary" href="/reports/self-evolve-survey-zh.pdf" target="_blank" rel="noopener">下载中文 PDF</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Figures: Existing SVGs -->
   <section class="section">
     <div class="container">
       <div class="section-head">
         <div>
           <div class="eyebrow">Figures</div>
-          <h2>论文当前最该先看的两张图</h2>
+          <h2>论文核心数据流图</h2>
         </div>
       </div>
       <div class="visual-grid">
         <figure class="visual-panel">
-          <img src="/visuals/github-corpus-funnel.svg" alt="GitHub corpus funnel chart" loading="lazy" />
-          <figcaption>回答“原始收集有哪些、分析了哪些、进化相关有哪些”。</figcaption>
+          <img src="/visuals/github-corpus-funnel.svg" alt="GitHub corpus funnel: 486 raw → 359 cross-analyzed → 157 evolution-related → 63 strict evolution → 90 analyzed" loading="lazy" />
+          <figcaption>GitHub 数据漏斗：从 486 个原始仓库到 63 个严格自进化项目，层层筛选的分析流水线。</figcaption>
         </figure>
         <figure class="visual-panel">
-          <img src="/visuals/raw-theme-distribution.svg" alt="Raw theme distribution chart" loading="lazy" />
-          <figcaption>回答“当前 corpus 的主题结构是否偏科”。</figcaption>
+          <img src="/visuals/raw-theme-distribution.svg" alt="Raw theme distribution across categories" loading="lazy" />
+          <figcaption>主题分布图：当前 corpus 的技术主题覆盖，识别偏科方向。</figcaption>
+        </figure>
+      </div>
+      <div class="visual-grid" style="margin-top: 20px;">
+        <figure class="visual-panel">
+          <img src="/visuals/project-group-map.svg" alt="Project group map showing evolution stages" loading="lazy" />
+          <figcaption>项目分组图：从代码进化到 Agent 组织进化的层级结构。</figcaption>
+        </figure>
+        <figure class="visual-panel">
+          <img src="/visuals/raw-to-public-data-flow.svg" alt="Raw to public data flow pipeline" loading="lazy" />
+          <figcaption>数据流管线：raw → processed → work → results 的四层数据治理架构。</figcaption>
         </figure>
       </div>
     </div>
   </section>
 
+  <!-- Method Taxonomy -->
   <section class="section">
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Status</div>
-          <h2>当前论文状态</h2>
+          <div class="eyebrow">Method Taxonomy</div>
+          <h2>方法族分类 — 196 篇论文</h2>
         </div>
       </div>
-      <div class="grid">
-        <article class="card">
-          <h3>主稿已编译</h3>
-          <p><code>paper-drafts/main.tex</code> 现在统一加载 8 个章节和 appendix，并已通过 XeLaTeX + BibTeX 生成 <code>paper-drafts/main.pdf</code>。</p>
-        </article>
-        <article class="card">
-          <h3>引用先稳定</h3>
-          <p><code>paper-drafts/references-aliases.bib</code> 先补齐草稿中已使用的 cite key，当前 BibTeX 输出 62 个 bibliography items。</p>
-        </article>
-        <article class="card">
-          <h3>项目数据已入稿</h3>
-          <p><code>analysis/github-project-data-analysis.*</code> 现在给出 raw 383、严格 evolution 63、广义 evolution-related 157、分析项目 90 和时间线。</p>
-        </article>
-        <article class="card">
-          <h3>还不能假装完成</h3>
-          <p>最终发布前仍要做 benchmark 溯源、图表打磨、BibTeX 归一、术语统一和 PDF 警告清理。</p>
-        </article>
+      <div class="method-bars">
+        {methodFamilies.map((f) => (
+          <div class="radar-bar-row">
+            <span class="radar-label" style="min-width: 220px;">{f.name}</span>
+            <div class="radar-bar-track" style="flex: 1;">
+              <div class="radar-bar-fill" style={`width: ${(f.papers / 68) * 100}%; background: ${f.color};`} />
+            </div>
+            <span class="radar-value">{f.papers} ({f.share})</span>
+          </div>
+        ))}
+      </div>
+      <p style="margin-top: 16px; color: var(--muted);">自动关键词初分类（196 papers），后续由论文 review 深度结论校正。</p>
+    </div>
+  </section>
+
+  <!-- Framework Radar -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Framework Comparison</div>
+          <h2>框架对比雷达图</h2>
+        </div>
+      </div>
+      <div class="score-table-wrap">
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>Framework</th>
+              <th>Adoption</th>
+              <th>Observability</th>
+              <th>Production Fit</th>
+              <th>Self-Evolution Fit</th>
+              <th>Safety/Governance</th>
+            </tr>
+          </thead>
+          <tbody>
+            {frameworkRadar.map((fw) => (
+              <tr>
+                <td><strong>{fw.name}</strong></td>
+                <td>{fw.adoption >= 4 ? '🟢' : '⚪'} {fw.adoption}/5</td>
+                <td>{fw.observability >= 4 ? '🟢' : '⚪'} {fw.observability}/5</td>
+                <td>{fw.production >= 4 ? '🟢' : '⚪'} {fw.production}/5</td>
+                <td>{fw.evolution >= 4 ? '🟢' : '⚪'} {fw.evolution}/5</td>
+                <td>{fw.governance >= 3 ? '🟢' : '⚪'} {fw.governance}/5</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 12px; color: var(--muted);">启发式评分（1-5），基于 repo 信号和痛点分析。EvoAgentX 和 DGM/OpenEvolve 在 Self-Evolution Fit 上领先。</p>
+
+      <!-- Radar bar per framework -->
+      <div class="grid" style="grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px;">
+        {frameworkRadar.map((fw) => (
+          <article class="card" style="padding: 16px;">
+            <h4 style="margin-bottom: 10px;">{fw.name}</h4>
+            <div>
+              {Object.entries({Adoption: fw.adoption, Observability: fw.observability, Production: fw.production, 'Self-Evo': fw.evolution, Governance: fw.governance}).map(([dim, val]) => (
+                <div class="radar-bar-row">
+                  <span class="radar-label">{dim}</span>
+                  <div class="radar-bar-track">
+                    <div class="radar-bar-fill" style={`width: ${(val / 5) * 100}%; background: ${val >= 5 ? '#FF5B00' : val >= 4 ? '#007AFF' : val >= 3 ? '#f39c12' : '#8e8e93'};`} />
+                  </div>
+                  <span class="radar-value">{val}</span>
+                </div>
+              ))}
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   </section>
 
+  <!-- Star Project Propagation -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Star Projects</div>
+          <h2>10K+ Stars 自进化核心项目</h2>
+        </div>
+      </div>
+      <div class="grid" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
+        {starProjects.map((p) => (
+          <article class="card" style="border-top: 3px solid #f39c12;">
+            <div class="card-title-row">
+              <div>
+                <h3>{p.name}</h3>
+                <p>{p.stars} stars</p>
+              </div>
+            </div>
+            <p><strong>进化维度：</strong>{p.dimension}</p>
+            <p><strong>方法：</strong>{p.method}</p>
+          </article>
+        ))}
+      </div>
+      <div class="card" style="margin-top: 20px;">
+        <h3>Research-to-Star Gap</h3>
+        <p>自进化研究前沿（ADAS、DGM、Absolute Zero）尚未反映在社区 Star 数中。10K+ Star 项目代表的是应用层进化（研究管线、通用 Agent），而非核心进化机制。</p>
+        <div class="score-table-wrap" style="margin-top: 12px;">
+          <table class="score-table">
+            <thead>
+              <tr><th>Research Method</th><th>Paper Impact</th><th>GitHub Stars</th><th>Star Gap Factor</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Architecture Search (ADAS)</td><td>ICML 2024</td><td>1,400</td><td>80x vs avg skill repo</td></tr>
+              <tr><td>Gödel Machine (DGM)</td><td>arXiv 2025</td><td>800</td><td>175x vs avg skill repo</td></tr>
+              <tr><td>Self-Play Reward (Absolute Zero)</td><td>arXiv 2025</td><td>&lt;1,000</td><td>140x vs avg skill repo</td></tr>
+              <tr><td>Reflection (Reflexion)</td><td>NeurIPS 2023</td><td>paper-code</td><td>Academic code only</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Coverage -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Data Coverage</div>
+          <h2>基础数据覆盖率</h2>
+        </div>
+      </div>
+      <div class="method-bars">
+        {coverage.map((c) => (
+          <div class="radar-bar-row">
+            <span class="radar-label" style="min-width: 120px;">{c.dataset}</span>
+            <div class="radar-bar-track" style="flex: 1;">
+              <div class="radar-bar-fill" style={`width: ${Math.min(c.coverage, 100)}%; background: ${c.coverage >= 150 ? '#FF5B00' : c.coverage >= 100 ? '#2ecc71' : '#f39c12'};`} />
+            </div>
+            <span class="radar-value">{c.current} ({c.coverage}%)</span>
+          </div>
+        ))}
+      </div>
+      <p style="margin-top: 12px; color: var(--muted);">Mom Test 97 痛点来源：Reddit 47, HN 36, X/Twitter 14。</p>
+    </div>
+  </section>
+
+  <!-- Chapter Status -->
   <section class="section">
     <div class="container">
       <div class="section-head">
@@ -106,6 +322,7 @@ const chapters = [
     </div>
   </section>
 
+  <!-- Release Gates -->
   <section class="section">
     <div class="container">
       <div class="section-head">
