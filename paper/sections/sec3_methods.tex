@@ -1,575 +1,575 @@
 % Section 3: Self-Improvement Methods
-% Self-Evolving AI: A Unified Framework for Generation, Evaluation, Memory, and Improvement
-% Target: 10,000--15,000 words
+% Self-Evolving AI Survey -- arXiv
 
 \section{Self-Improvement Methods}
 \label{sec:methods}
 
-Self-improvement---the capacity of a system to enhance its own performance through its own operation---is the central mechanism of AI self-evolution. In this section, we provide a comprehensive analysis of self-improvement methods, organized along a fundamental divide that runs through the entire field: the distinction between methods that operate at \textbf{inference time} and methods that operate at \textbf{training time}. This divide is not merely an implementation detail; it determines the persistence, generality, cost, safety profile, and composability of the resulting improvement. Inference-time methods improve outputs without modifying model parameters; training-time methods permanently modify the model through self-generated data and optimization. Understanding the trade-offs between these two families of methods, and the emerging hybrid approaches that bridge them, is essential for designing effective self-evolving AI systems.
+The capacity for self-improvement is the most fundamental form of self-evolution in artificial intelligence systems. In this section, we provide a comprehensive taxonomy and analysis of methods through which large language models (LLMs) and language agents improve their own performance without explicit human intervention at every step. We organize these methods along two principal axes---\textbf{inference-time self-improvement}, where improvement occurs within a bounded number of interaction rounds without modifying model weights, and \textbf{training-time self-improvement}, where the model's parameters are iteratively refined using self-generated data. This distinction is not merely organizational; it carries deep implications for computational cost, the persistence and generality of learned improvements, the safety profile of the resulting system, and the composability of self-improvement with other capabilities. As we demonstrate below, the most impactful recent systems increasingly combine both paradigms, and the boundary between them is becoming progressively blurred.
 
-Our analysis is grounded in the Five Evolution Loops taxonomy introduced in Section~\ref{sec:taxonomy}. Inference-time methods primarily employ the Reflection Loop (analyzing failures and generating structured feedback) combined with the Search Loop (generating improved candidates based on feedback). Training-time methods add the Population Loop (through self-play and data generation) and more sophisticated Evaluator Loops (through reward models and verification). We analyze eight foundational methods in depth: Self-Refine~\citep{madaan2023selfrefine}, Reflexion~\citep{shinn2023reflexion}, Self-Debug~\citep{chen2024selfdebug}, and Agent Symbolic Learning~\citep{zhou2024agentsymbolic} for inference-time improvement; and STaR~\citep{zelikman2022star}, SPIN~\citep{chen2024spin}, ReST-EM~\citep{gulcehre2023rest}, and Constitutional AI~\citep{bai2022constitutional} for training-time improvement. For each method, we provide the problem definition, the method design with formal equations and algorithm descriptions, experimental results with specific numbers, and an analysis of limitations. We conclude with a comprehensive comparison table, a trade-off analysis across five key dimensions, and practical guidance on when to use which approach.
+We begin in Section~\ref{sec:methods-overview} with a systematic five-dimensional comparison of the inference--training divide. Sections~\ref{sec:inference-time} and~\ref{sec:training-time} then present detailed analyses of inference-time and training-time methods respectively, including formal algorithmic descriptions, quantitative results, and principled discussions of limitations. Section~\ref{sec:methods-comparison} provides a comprehensive cross-method comparison, and Section~\ref{sec:emerging-methods} surveys emerging hybrid approaches. We conclude with a summary of key principles and open problems in Section~\ref{sec:methods-summary}.
 
 
-\subsection{Overview: The Inference vs.\ Training Divide}
-\label{sec:methods:overview}
+\subsection{Overview: The Inference--Training Divide}
+\label{sec:methods-overview}
 
-The distinction between inference-time and training-time self-improvement is one of the most consequential design decisions in building self-evolving AI systems. At its core, the question is simple: should the system improve its outputs without changing itself, or should it change itself to produce better outputs? The ramifications of this choice are far-reaching.
+The distinction between inference-time and training-time self-improvement is one of the most consequential architectural choices in the design of self-evolving AI systems. Rather than treating this as a binary classification, we analyze it along five dimensions that collectively determine the practical applicability, scalability, and risk profile of each approach. These dimensions---cost, persistence, generalization, safety, and composability---are not independent; they interact in complex ways that we unpack throughout this section.
 
-\paragraph{Inference-time self-improvement.} Inference-time methods operate during the model's forward pass, improving output quality through iterative refinement, self-critique, or self-repair without modifying any model parameters. The model's weights remain frozen; improvement occurs through structured interaction with the model's existing capabilities. Self-Refine generates, critiques, and refines its own output in a loop. Reflexion accumulates verbal feedback across episodes in a persistent memory buffer. Self-Debug uses execution traces to repair code. Agent Symbolic Learning propagates ``language gradients'' through an agent's prompt and pipeline structure.
 
-The key properties of inference-time methods are:
-\begin{itemize}
-\item \textbf{Cost:} Computationally cheap to apply---no gradient computation, no GPU training, no data curation. The cost is proportional to the number of LLM forward passes in the refinement loop, typically 3--15$\times$ a single inference call.
-\item \textbf{Persistence:} Transient. The improvement vanishes when the session ends (Self-Refine) or when the memory buffer is cleared (Reflexion). The model's underlying capabilities are unchanged.
-\item \textbf{Generalization:} Task-specific. The improvement applies to the specific output being refined, not to the model's general capability. A model that self-refines a code solution does not become permanently better at coding.
-\item \textbf{Safety:} Relatively safe. Because the model's parameters are unchanged, the improvement is bounded by the model's existing capability ceiling. The model cannot develop new harmful capabilities through inference-time refinement---it can only produce outputs within the distribution it was already capable of generating.
-\item \textbf{Composability:} High. Inference-time methods can be stacked, combined, and applied selectively. A model can self-refine, then self-debug, then apply reflexion, all within the same session.
-\end{itemize}
+\subsubsection{Five-Dimensional Comparison}
 
-\paragraph{Training-time self-improvement.} Training-time methods modify the model's parameters through self-generated training signals. The model generates data, evaluates it (using reward models, ground truth, or self-play), and updates its weights based on the evaluation. STaR bootstraps reasoning chains from correct answers. SPIN trains the model to distinguish its own outputs from human ones. ReST-EM filters self-generated samples with a reward model and trains on the survivors. Constitutional AI uses AI-generated critiques as training signals.
+\paragraph{Cost.}
+Inference-time methods incur a marginal cost per query: each additional refinement step consumes additional compute (in the form of forward passes through the model) but requires no upfront investment in data curation, reward modeling, or gradient computation. The cost scales linearly with the number of refinement iterations $T$ and is proportional to the model's parameter count during inference. Training-time methods, by contrast, impose a significant fixed cost---the generation of candidate outputs, the construction of filtering or preference data, and the optimization of model parameters via gradient descent---but this cost is amortized over all subsequent queries. The cost profile of training-time methods is therefore $\mathcal{O}(N_{\text{gen}} \cdot C_{\text{gen}} + N_{\text{train}} \cdot C_{\text{train}})$, where $N_{\text{gen}}$ is the number of generated candidates, $C_{\text{gen}}$ is the per-candidate generation cost, $N_{\text{train}}$ is the number of training steps, and $C_{\text{train}}$ is the per-step training cost. For deployment scenarios with high query volume, training-time methods are generally more economical after the initial investment is recouped. Conversely, for research prototyping or low-throughput applications, the zero-setup cost of inference-time methods makes them the more practical choice.
 
-The key properties of training-time methods are:
-\begin{itemize}
-\item \textbf{Cost:} Computationally expensive. Each training iteration requires generating large volumes of self-supervised data, evaluating it, and performing gradient updates on the full model. A single self-play iteration for a 7B-parameter model can require tens to hundreds of GPU-hours.
-\item \textbf{Persistence:} Permanent. The improvement is encoded in the model's weights and persists across sessions and tasks. A model trained with STaR is permanently better at reasoning.
-\item \textbf{Generalization:} Broad. Training-time improvements transfer across tasks and domains. A model trained on self-generated math problems may also improve on coding tasks, as Absolute Zero~\citep{zhao2025absolutezero} demonstrates.
-\item \textbf{Safety:} Potentially risky. Permanent parameter modifications can introduce unintended behaviors, alignment drift, or capability excursions that are difficult to detect and reverse. The model may develop new capabilities---including harmful ones---that were not present before training.
-\item \textbf{Composability:} Moderate. Training-time methods can be chained (train with SPIN, then STaR, then ReST-EM), but each iteration permanently alters the model, making it difficult to decompose the contribution of each method or to roll back changes.
-\end{itemize}
+\paragraph{Persistence.}
+Inference-time improvements are ephemeral: they vanish at the end of each query and must be reconstructed from scratch for subsequent queries. The model's weights remain unchanged, and no accumulated knowledge persists across episodes unless explicitly stored in external memory (as in Reflexion's linguistic memory buffer). Training-time improvements, by contrast, are baked into the model's parameters and persist across all future queries without additional computational overhead. This persistence has a dual character: it ensures that improvements are always available, but it also means that errors or biases introduced during training are similarly persistent and may require explicit correction. The persistence dimension thus introduces a fundamental asymmetry between positive and negative modifications---good improvements accumulate freely, but so do harmful ones.
 
-\paragraph{The key trade-off.} The inference--training divide represents a fundamental trade-off between \emph{safety and power}. Inference-time methods are safe but limited: they can only express what the model already knows. Training-time methods are powerful but risky: they can expand the model's capability envelope, but the expansion may go in unintended directions. The most practical approach---and the direction the field is increasingly moving---is to combine both: use training-time methods to establish a strong baseline of self-improvement capability, then apply inference-time methods for task-specific refinement. RISE~\citep{qu2024rise} exemplifies this hybrid approach: it trains the model to perform self-correction (a training-time effect) that is then applied at inference time (an inference-time behavior).
+\paragraph{Generalization.}
+Inference-time methods tend to improve performance on the specific instance being processed but do not, by themselves, produce generalizable knowledge that transfers to new instances. The refinement loop operates on a single input $x$ and produces an improved output $y_T$ for that input alone. Training-time methods, through the inductive biases of gradient descent and the diversity of the training data, produce improvements that generalize across the data distribution. A model fine-tuned on self-generated mathematical reasoning chains will typically improve not only on problems similar to those seen during training but also on related problems that share structural features. This generalization, however, is bounded by the quality and diversity of the self-generated data, and a well-known failure mode is distributional collapse, where the model's output distribution narrows around a limited set of patterns. The risk of collapse is particularly acute in iterative self-training, where each round of training is conditioned on the model's own outputs from the previous round.
 
-This trade-off can be formalized. Let $C_{\text{inf}}$ denote the cost of a single inference-time refinement step and $C_{\text{train}}$ the cost of a single training-time update. Let $Q_{\text{inf}}(t)$ denote the quality improvement from $t$ inference-time steps and $Q_{\text{train}}(t)$ the quality improvement from $t$ training-time steps. The key empirical regularities are:
-\begin{align}
-Q_{\text{inf}}(t) &\approx \alpha \cdot (1 - e^{-\beta t}) \quad \text{(diminishing returns, bounded by model ceiling)} \\
-Q_{\text{train}}(t) &\approx \gamma \cdot t^{\delta} \quad \text{(potentially unbounded, depends on data quality)}
-\end{align}
-where $\alpha$ is the model's capability ceiling at inference time, $\beta$ captures the rate of convergence, $\gamma$ captures the per-iteration training gain, and $\delta < 1$ captures the sub-linear scaling of training-time improvement. The optimal allocation of a fixed compute budget between inference-time and training-time methods depends on the relative magnitudes of $\alpha$, $\beta$, $\gamma$, and $\delta$, as well as the task-specific requirements for persistence and generalization.
+\paragraph{Safety.}
+The safety profiles of the two paradigms differ substantially. Inference-time methods are inherently more constrained: the model's base capabilities are fixed, and self-improvement operates within the envelope of what the model can already produce. While this limits the magnitude of improvement, it also limits the magnitude of potential harm---a model cannot self-refine its way to capabilities it fundamentally lacks. Training-time methods can produce more dramatic capability shifts, including the acquisition of behaviors not present in the original model, which raises concerns about reward hacking, distributional shift, and the alignment of the improved model with intended objectives. Constitutional AI~\citep{bai2022constitutional} was specifically designed to address these safety concerns by using principled self-critique as the basis for alignment. The safety dimension is particularly consequential for self-evolving systems because, as we discuss in subsequent sections, the most capable self-evolving systems tend to be those that modify their own parameters, precisely the regime where safety guarantees are hardest to establish.
 
-\paragraph{Historical context.} The inference--training divide has deep roots in the history of AI and optimization. Inference-time methods are descendants of iterative refinement techniques in numerical analysis and search-based planning in classical AI: given a candidate solution, generate a better one by applying a fixed improvement operator. Training-time methods descend from self-play in game AI (Samuel's checkers player, AlphaGo) and self-training in semi-supervised learning: the system generates its own training data and learns from it. The application of both paradigms to large language models is relatively recent, with Self-Refine and STaR appearing in 2022--2023, but the underlying principles have been studied for decades. The contribution of the LLM era is not the invention of these paradigms but their instantiation in a domain---natural language---where both generation and evaluation are performed by the same model, creating a uniquely self-referential improvement loop.
+\paragraph{Composability.}
+Inference-time methods are highly composable: they can be stacked, interleaved, and applied selectively without modifying the underlying model. One can apply Self-Refine after Reflexion, or combine Self-Debug with Agent Symbolic Learning, without concern for parameter interference. Training-time methods are less composable in a strict sense because each fine-tuning step modifies the model's parameters, potentially overwriting or degrading improvements from prior training. However, training-time methods compose naturally with inference-time methods: a model trained via STaR or SPIN can subsequently benefit from Self-Refine at inference time, and the improvements are typically multiplicative rather than substitutive. The emerging hybrid methods discussed in Section~\ref{sec:emerging-methods} exploit this composability deliberately, training models to be better at inference-time self-correction and then using inference-time self-correction to generate higher-quality training data for the next round.
 
-\paragraph{Scope of this analysis.} This section focuses on methods where the improvement target is the model's outputs or parameters. Methods that improve other artifacts---such as prompts (OPRO~\citep{yang2023opro}), agent architectures (ADAS~\citep{hu2024adas}), or code (FunSearch~\citep{romera2024funsearch}, AlphaEvolve~\citep{novikov2025alphaevolve})---are treated in subsequent sections. The methods analyzed here are ``self-improvement'' in the strict sense: the system improves itself (its outputs or its parameters), not external artifacts. This distinction is important because self-improvement raises unique questions about safety, convergence, and alignment that do not arise when improving external artifacts.
+
+\subsubsection{Formal Framework}
+
+We formalize the distinction as follows. Let $M_\theta$ denote a language model parameterized by weights $\theta$. Given an input $x$, the model produces an output $y \sim M_\theta(\cdot | x)$. An inference-time self-improvement method applies a transformation $\mathcal{T}$ to the model's output process without modifying $\theta$:
+\begin{equation}
+    y^{*} = \mathcal{T}(M_\theta, x, \mathcal{F})
+    \label{eq:inference-improvement}
+\end{equation}
+where $\mathcal{F}$ represents the feedback signal (which may be self-generated, externally provided, or derived from execution). The transformation $\mathcal{T}$ is typically iterative, with $T$ rounds of refinement, and the cost is $T$ times the cost of a single forward pass.
+
+A training-time self-improvement method, by contrast, modifies the model's parameters:
+\begin{equation}
+    \theta^{*} = \theta + \Delta\theta \quad \text{where} \quad \Delta\theta = \mathrm{Optimize}(\theta, \mathcal{D}_{\text{self}})
+    \label{eq:training-improvement}
+\end{equation}
+where $\mathcal{D}_{\text{self}}$ is a dataset generated by the model itself (possibly filtered, ranked, or otherwise processed). The improvement persists: subsequent queries use $\theta^{*}$ rather than $\theta$, and the cost of improvement is amortized across all future queries.
+
+The key insight is that these two formalisms are not mutually exclusive. A system may apply inference-time improvement $\mathcal{T}$ to a model that has already been improved via training-time methods, yielding a composed improvement that combines the generalization of parameter updates with the instance-specific adaptability of inference-time refinement. We can express this composition as:
+\begin{equation}
+    y^{*} = \mathcal{T}(M_{\theta^{*}}, x, \mathcal{F})
+    \label{eq:composed-improvement}
+\end{equation}
+The emerging methods in Section~\ref{sec:emerging-methods} explicitly design for this composition, training models to be better at the inference-time self-correction process that is then applied during deployment.
 
 
 \subsection{Inference-Time Self-Improvement}
-\label{sec:methods:inference}
+\label{sec:inference-time}
 
-Inference-time self-improvement methods enhance the quality of LLM outputs without modifying the model's parameters. The improvement occurs through iterative refinement, self-critique, or self-repair, leveraging the model's existing capabilities in a structured feedback loop. These methods are attractive because they require no additional training, no GPU compute for gradient updates, and no architectural changes---they can be applied to any LLM through prompt engineering alone. The cost is additional inference calls: each refinement iteration requires one or more forward passes through the model, but the total compute is typically modest compared to any form of fine-tuning.
-
-The inference-time paradigm rests on a crucial assumption: that the model's existing capabilities are sufficient to both generate and evaluate candidate solutions, and that the gap between generation quality and evaluation quality can be bridged through structured iteration. This assumption holds well for tasks where the model can verify its own output (code generation, mathematical reasoning, constrained generation) but is less reliable for tasks where verification is subjective or requires external ground truth (creative writing, open-ended dialogue).
-
-A useful theoretical framing is to view inference-time self-improvement as a form of \emph{best-of-$N$ sampling with structured refinement}. In standard best-of-$N$ sampling, the model generates $N$ candidates and selects the best one according to a reward function. Inference-time self-improvement methods can be seen as a structured approach to exploring the space of $N$ candidates: instead of generating independently and selecting, the methods generate sequentially and refine, using feedback from previous iterations to guide subsequent generation. This sequential approach is more sample-efficient than independent sampling when the feedback signal is informative (which is the case for Self-Refine's self-critique, Reflexion's verbal reflection, and Self-Debug's execution traces), but less sample-efficient when the feedback signal is noisy or misleading (which can occur when the model's self-critique is unreliable).
+Inference-time self-improvement methods enable a model to produce better outputs than its initial generation through iterative refinement, reflection, or debugging---all without modifying the model's parameters. These methods treat the LLM as a fixed function and improve outputs through structured interaction protocols. We present four representative methods that span the design space of inference-time self-improvement, from simple iterative refinement to structured textual backpropagation. Each method introduces progressively richer feedback mechanisms, from pure self-critique to execution traces to textual gradients.
 
 
 \subsubsection{Self-Refine: Iterative Refinement with Self-Feedback}
-\label{sec:methods:selfrefine}
+\label{sec:self-refine}
 
-\paragraph{Problem definition.} Large language models, despite their impressive capabilities, often produce outputs that are suboptimal on a first attempt. A generated code snippet may contain inefficiencies, a mathematical solution may take a roundabout path, and a constrained generation task may violate subtle constraints. The standard approach---generating a single output and accepting it---leaves significant performance on the table. The key question is: can a model improve its own output without any external feedback, using only its own capacity for critique and revision?
+Self-Refine~\citep{madaan2023selfrefine} introduces a minimal yet powerful framework: a single LLM iteratively generates, critiques, and refines its own output. The method requires no external feedback, no reinforcement learning, and no weight updates. Despite its simplicity, Self-Refine establishes the foundational paradigm upon which many subsequent methods build.
 
-This problem is analogous to the human writing process, where initial drafts are revised through self-review. A skilled writer can improve their own work by reading it critically, identifying weaknesses, and producing a revised version. Self-Refine tests whether LLMs can perform a similar process: generating an initial output, critiquing it against task-specific criteria, and producing a refined version that addresses the identified weaknesses.
+\paragraph{Algorithm.}
+The Self-Refine loop consists of three stages applied iteratively. We present it formally as Algorithm~\ref{alg:self-refine}.
 
-\paragraph{Method design.} Self-Refine~\citep{madaan2023selfrefine} represents the most direct form of self-improvement: a single LLM iteratively generates, critiques, and refines its own output. The method requires no external feedback, no training, and no additional models. The same model serves in three roles---generator, critic, and refiner---with the role determined entirely by the prompt. The algorithm operates as follows:
+\begin{algorithm}[t]
+\caption{Self-Refine~\citep{madaan2023selfrefine}}
+\label{alg:self-refine}
+\begin{algorithmic}[1]
+\REQUIRE Input $x$, instructions $\text{INST}$, feedback rubric $\text{RUBRIC}$, maximum iterations $T$
+\ENSURE Refined output $y^{*}$
+\STATE $y_0 \leftarrow \mathrm{LLM}(x, \text{INST})$ \hfill \textcolor{gray}{// GENERATE}
+\FOR{$t = 0, 1, \ldots, T-1$}
+    \STATE $\mathrm{fb}_t \leftarrow \mathrm{LLM}(y_t, \text{RUBRIC})$ \hfill \textcolor{gray}{// CRITIQUE}
+    \IF{$\mathrm{fb}_t$ indicates no improvement needed}
+        \STATE \textbf{break}
+    \ENDIF
+    \STATE $y_{t+1} \leftarrow \mathrm{LLM}(y_t, \mathrm{fb}_t, \text{INST})$ \hfill \textcolor{gray}{// REFINE}
+\ENDFOR
+\RETURN $y^{*} = y_{\min(t, T)}$
+\end{algorithmic}
+\end{algorithm}
 
+Formally, the three stages are:
 \begin{enumerate}
-\item \textbf{GENERATE}: The model produces an initial output $y_0 = \mathcal{G}(x, \text{inst})$, where $x$ is the input and ``inst'' is the task instruction.
-\item \textbf{CRITIQUE}: The same model evaluates its own output against a task-specific rubric: $\text{fb}_t = \mathcal{C}(y_t, \text{rubric})$. The rubric defines the quality dimensions relevant to the task (e.g., correctness, style, constraint satisfaction for constrained generation, efficiency for code optimization, or logical coherence for mathematical reasoning).
-\item \textbf{REFINE}: The model produces an improved output incorporating the feedback: $y_{t+1} = \mathcal{R}(y_t, \text{fb}_t, \text{inst})$.
-\item \textbf{Terminate} when the critique indicates ``no improvements needed'' or when a maximum number of iterations $T_{\max}$ is reached.
+    \item \textbf{GENERATE}: The model produces an initial output $y_0 = \mathrm{LLM}(x, \text{instruction})$ given input $x$ and task instructions.
+    \item \textbf{CRITIQUE}: The model analyzes its own output and produces structured feedback: $\mathrm{fb}_t = \mathrm{LLM}(y_t, \text{rubric})$, where the rubric defines task-specific evaluation criteria such as correctness, completeness, coherence, and style.
+    \item \textbf{REFINE}: The model improves the output based on the critique: $y_{t+1} = \mathrm{LLM}(y_t, \mathrm{fb}_t, \text{instruction})$.
 \end{enumerate}
 
-Formally, the complete Self-Refine loop is:
-\begin{align}
-y_0 &= \mathcal{G}(x, \text{inst}) \label{eq:sr:gen} \\
-\text{fb}_t &= \mathcal{C}(y_t, \text{rubric}) \label{eq:sr:critique} \\
-y_{t+1} &= \mathcal{R}(y_t, \text{fb}_t, \text{inst}) \label{eq:sr:refine} \\
-&\text{Terminate when } \text{fb}_t = \emptyset \text{ or } t = T_{\max} \nonumber
-\end{align}
-where $\mathcal{G}$, $\mathcal{C}$, and $\mathcal{R}$ are the same LLM prompted in different modes. The only task-specific component is the rubric used in the critique step, making Self-Refine immediately applicable to any domain where quality criteria can be articulated in natural language.
+The loop terminates when the critique indicates no further improvements are needed or a maximum iteration count $T$ is reached. A critical design choice is that the \emph{same model} serves all three roles---generator, critic, and refiner---making Self-Refine applicable to any sufficiently capable LLM without additional training or specialized modules.
 
-The key design decisions are the rubric formulation (which determines the quality dimensions the critique addresses), the maximum number of iterations $T_{\max}$ (which trades off improvement against compute cost), and the termination criterion (which determines when refinement has converged). Empirically, most of Self-Refine's improvement occurs in the first 2--3 iterations, with diminishing returns thereafter.
+The refinement process can be understood as a form of fixed-point iteration in output space. Under idealized conditions, the sequence $y_0, y_1, y_2, \ldots$ converges to an output $y^{*}$ that is locally optimal with respect to the model's internal evaluation function. In practice, convergence is not guaranteed, and the method may oscillate or converge to a local optimum that is superior to the initial output but not globally optimal. The relationship between Self-Refine and fixed-point iteration suggests that the choice of rubric plays a role analogous to the contraction mapping in classical fixed-point theory: a well-designed rubric ensures that each refinement step moves the output closer to a desirable fixed point.
 
-\paragraph{Experimental results.} Self-Refine demonstrates consistent improvements across seven diverse tasks, averaging approximately 20\% improvement over single-shot generation:
+\paragraph{Results.}
+Self-Refine achieves approximately 20\% average improvement across seven diverse tasks~\citep{madaan2023selfrefine}. On code optimization, it achieves a 28\% improvement; on math reasoning, accuracy rises from 56\% to 67\% (+11 percentage points); on sentiment reversal, accuracy increases from 74\% to 86\% (+12pp); on dialogue response generation, win rate rises from 52\% to 68\% (+16pp); on constrained generation, compliance increases from 65\% to 78\% (+13pp); on acrostic poetry, quality improves from 3.2 to 3.8 on a 5-point scale (+0.6); and on code readability, score improves from 3.5 to 4.1 (+0.6). These improvements are achieved with $T \leq 3$ refinement iterations in most configurations.
 
-\begin{table}[h]
-\centering
-\small
-\caption{Self-Refine benchmark results across tasks.}
-\label{tab:selfrefine_results}
-\begin{tabular}{lccc}
-\toprule
-\textbf{Task} & \textbf{Baseline} & \textbf{Self-Refine} & \textbf{Improvement} \\
-\midrule
-Code Optimization & -- & -- & +28\% \\
-Math Reasoning (GSM8K) & 56\% & 67\% & +11pp \\
-Sentiment Reversal & 74\% & 86\% & +12pp \\
-Dialogue Response & 52\% & 68\% & +16pp \\
-Acrostic Poetry & 3.2 & 3.8 & +0.6 \\
-Code Readability & 3.5 & 4.1 & +0.6 \\
-Constrained Generation & 65\% & 78\% & +13pp \\
-\bottomrule
-\end{tabular}
-\end{table}
+\paragraph{Limitations.}
+Self-Refine is bounded by the quality of the initial generation: if the model's first attempt is fundamentally flawed, self-critique may fail to identify the core issue. The method can also converge to local optima, where iterative refinement makes superficial improvements without addressing deeper structural problems. Each iteration increases compute cost linearly, and the method may ``refine away'' creative or diverse outputs, producing increasingly generic responses. Perhaps most fundamentally, Self-Refine lacks any mechanism for persistence: improvements do not accumulate across queries, and the same mistakes may be repeated on similar inputs.
 
-The results reveal a striking pattern: the largest improvements occur on tasks where the quality criteria are most clearly specifiable. Code optimization (+28\%) and constrained generation (+13pp) have unambiguous, mechanically checkable criteria (speed, constraint satisfaction), while poetry and readability improvements are more modest because the criteria are inherently subjective. This pattern is consistent with the theoretical analysis: Self-Refine's effectiveness is bounded by the model's ability to produce accurate self-critique, which in turn depends on the specifiability of the quality criteria.
+A deeper concern is the phenomenon of \emph{compounding errors}. If the critique at step $t$ is incorrect---that is, if it identifies a non-existent flaw or suggests a harmful modification---the refined output $y_{t+1}$ may be worse than $y_t$. Over multiple iterations, these erroneous critiques can compound, leading to outputs that are substantially worse than the initial generation. This is particularly acute in domains where the model's self-evaluation capability is weak, such as creative writing or open-ended reasoning tasks where there is no clear ground truth.
 
-Across all tasks, the improvement is concentrated in the first 2--3 iterations. Iteration 1 typically produces 50--70\% of the total improvement, iteration 2 produces 20--30\%, and iteration 3 produces 5--15\%. This diminishing-returns profile is consistent with the mathematical model: the easiest improvements are made first, and subsequent iterations address increasingly subtle issues that the model's self-critique may not reliably identify.
+\paragraph{The Self-Correction Paradox.}
+An important empirical finding, documented across multiple studies, is that naive self-correction---simply instructing a model to ``check your answer'' or ``improve your response''---often \emph{degrades} performance rather than improving it. The model, lacking access to new information about the correctness of its output, may ``correct'' correct answers to incorrect ones, or introduce new errors while attempting to fix existing ones. Self-Refine overcomes this paradox partially by providing structured rubrics for self-critique, but the fundamental challenge remains: without external grounding, the model is operating on the basis of its own internal assessment, which may be unreliable. This paradox is a recurring theme in self-improvement research and motivates the introduction of external feedback signals in subsequent methods.
 
-\paragraph{Limitations.} Self-Refine faces four fundamental limitations.
-
-First, the quality of refinement is bounded by the model's ability to critique its own output. If the model cannot identify a flaw, it cannot fix it. This is particularly acute for subtle logical errors or domain-specific inaccuracies where the model's self-critique may be confident but wrong. In mathematical reasoning, for example, a model may produce a critique that identifies a superficial formatting issue while missing a fundamental logical error in the reasoning chain. The model's self-critique accuracy is itself a function of the model's capability, creating a chicken-and-egg problem: the model needs to be good at critiquing to improve, but the critique quality is bounded by the model's existing capability.
-
-Second, the iterative process can converge to local optima. The model may make superficial improvements (fixing typos, improving formatting, adding minor details) while missing fundamental structural issues. In code generation, for instance, Self-Refine may optimize a suboptimal algorithm's readability without recognizing that an entirely different algorithmic approach would be more efficient. This local convergence is inherent to gradient-free iterative refinement: the process follows the gradient of the model's own critique, which may not align with the true quality gradient.
-
-Third, Self-Refine's compute cost scales linearly with the number of iterations, and each iteration requires multiple LLM forward passes (one for critique, one for refinement). For a model with $N$ parameters and sequence length $L$, each forward pass costs $O(N \cdot L^2)$ for a Transformer, making a 3-iteration Self-Refine cycle approximately 6$\times$ more expensive than single-shot generation. While this is far cheaper than training-time methods, it may be prohibitive for latency-sensitive applications.
-
-Fourth, Self-Refine may exhibit a conservatism bias: the refinement process tends to converge toward ``safe'' outputs that satisfy the rubric's explicit criteria but may lack creativity, novelty, or insight. The critique step implicitly optimizes for rubric compliance, which may penalize unconventional but superior solutions. This is analogous to the exploration--exploitation trade-off in reinforcement learning: Self-Refine exploits the model's existing knowledge (making incremental improvements) but does not explore fundamentally new solution approaches.
-
-Despite these limitations, Self-Refine's influence on the field has been profound. The core insight---that a single model can meaningfully critique and improve its own outputs---has been adopted by virtually every subsequent self-improvement system. Reflexion adds persistent memory to the Self-Refine loop. Agent Symbolic Learning extends the critique--refine cycle from outputs to agent configurations. RISE trains the model to perform Self-Refine-style self-correction through RL, making the behavior permanent. In this sense, Self-Refine is the ``hello world'' of LLM self-improvement: the simplest non-trivial instance of the self-improvement paradigm, and the conceptual foundation on which more sophisticated methods build.
+\paragraph{Practical Considerations.}
+The choice of rubric is critical to Self-Refine's effectiveness. A well-designed rubric provides concrete, actionable evaluation criteria that guide the model's self-critique toward genuine deficiencies in the output. A poorly designed rubric, by contrast, may lead the model to focus on superficial aspects (grammar, formatting) while neglecting deeper issues (logical errors, factual inaccuracies). In practice, effective rubrics tend to be domain-specific and to encode the evaluation criteria that a human expert would apply. The optimal number of refinement iterations $T$ also varies by task: tasks with clear, binary success criteria (e.g., code compilation, mathematical correctness) benefit from additional iterations, while tasks with subjective quality criteria (e.g., creative writing quality) may see diminishing or negative returns beyond $T = 2$.
 
 
-\subsubsection{Reflexion: Language Agents with Verbal Reinforcement Learning}
-\label{sec:methods:reflexion}
+\subsubsection{Reflexion: Verbal Reinforcement Learning}
+\label{sec:reflexion}
 
-\paragraph{Problem definition.} Self-Refine demonstrates that iterative refinement can improve individual outputs, but it discards all feedback after each task: the model learns nothing from its successes and failures that could inform future attempts. A student who forgets all feedback after each exam would improve only within a single exam, never across exams. The problem is to design a self-improvement system that accumulates knowledge from past experience and applies it to future tasks, achieving cross-episode learning without modifying the model's parameters.
+Reflexion~\citep{shinn2023reflexion} extends the self-improvement paradigm by introducing persistent linguistic memory that accumulates across episodes. Rather than refining a single output, Reflexion learns from failed attempts on a task to improve performance on subsequent attempts. The key insight is that natural language can serve as a medium for storing and transmitting experiential knowledge, analogous to how parameter gradients store and transmit learning signals in traditional optimization. This ``verbal reinforcement learning'' approach circumvents the need for differentiable parameters and instead stores experience in a format that is interpretable, composable, and transferable.
 
-This problem is closely related to the credit assignment problem in reinforcement learning: how should an agent assign credit or blame to its past actions based on the final outcome? Traditional RL solves this through scalar reward signals and value functions, but scalar rewards provide limited information. A binary ``success/failure'' signal tells the agent \emph{that} it failed but not \emph{why}. Reflexion's insight is to replace scalar rewards with verbal feedback---natural language explanations of what went wrong and how to fix it.
+\paragraph{Algorithm.}
+Reflexion employs a three-component architecture:
 
-\paragraph{Method design.} Reflexion~\citep{shinn2023reflexion} extends self-improvement from single-task refinement to persistent, cross-episode learning through verbal reinforcement learning. Instead of updating model weights (as in traditional RL), Reflexion accumulates linguistic feedback in an episodic memory buffer that persists across episodes and tasks. The method employs a three-model architecture:
-
-\begin{enumerate}
-\item \textbf{Actor} ($M_a$): Generates actions given the task and accumulated memory: $a_e = M_a(\text{task}, \mathcal{M}_{1:e-1})$.
-\item \textbf{Evaluator} ($M_e$): Scores the actor's output: $r_e = M_e(a_e, \text{task})$.
-\item \textbf{Self-Reflection} ($M_r$): Generates verbal feedback when the actor fails: $f_e = M_r(a_e, r_e, \text{task})$.
-\end{enumerate}
-
-The reflection $f_e$ is appended to the memory buffer: $\mathcal{M}_e = \mathcal{M}_{1:e-1} \cup \{f_e\}$. On the next attempt, the Actor conditions on the full reflection history, enabling it to avoid previously identified failure modes. The key formula capturing the agent's decision process is:
-\begin{equation}
-a_t = M(s_t \mid \mathcal{R})
-\label{eq:reflexion_key}
-\end{equation}
-where $a_t$ is the action at time $t$, $s_t$ is the current state (including the task and trajectory so far), and $\mathcal{R}$ is the reflection memory containing all accumulated verbal feedback. The complete Reflexion loop for episode $e$ is:
-
-\begin{align}
-a_e &= M_a(\text{task}, \mathcal{M}_{1:e-1}) \label{eq:ref:actor} \\
-r_e &= M_e(a_e, \text{task}) \label{eq:ref:eval} \\
-f_e &= \begin{cases} M_r(a_e, r_e, \text{task}) & \text{if } r_e \text{ indicates failure} \\ \emptyset & \text{otherwise} \end{cases} \label{eq:ref:reflect} \\
-\mathcal{M}_e &= \mathcal{M}_{1:e-1} \cup \{f_e\} \label{eq:ref:memory}
-\end{align}
-
-The key innovation is \emph{verbal reinforcement learning}: replacing scalar reward signals with natural language feedback that explains what went wrong and what should be done differently. This provides a richer training signal than traditional RL. Instead of receiving ``reward: 0,'' the system receives a structured explanation: ``The code failed because it did not handle the edge case where the input list is empty. Adding a guard clause at the beginning of the function would fix this issue.'' This verbal feedback is stored in the episodic memory and retrieved when the agent encounters similar tasks in the future.
-
-The memory retrieval mechanism is straightforward: the entire memory buffer is included in the actor's prompt. As the buffer grows, this raises context window management challenges. Practical implementations use truncation or relevance-based retrieval to keep the prompt within the model's context window, with the trade-off that older or less relevant reflections may be discarded.
-
-From a theoretical perspective, Reflexion can be understood through the lens of Thompson sampling~\citep{thompson1933likelihood}: the reflection memory acts as a posterior over successful strategies, and the actor samples from this posterior when generating actions. The verbal feedback provides a structured prior that is more informative than the uninformative priors used in standard RL. However, unlike Thompson sampling, Reflexion lacks formal convergence guarantees: there is no proof that the reflection memory converges to an optimal policy. The empirical monotonic improvement with more episodes is encouraging but does not constitute a theoretical guarantee. A formal analysis of Reflexion's convergence properties---perhaps through the framework of contextual bandits or Markov decision processes with structured memory---would be a valuable contribution to the theoretical foundations of self-improvement.
-
-\paragraph{Experimental results.} Reflexion produces some of the most striking results in the self-improvement literature:
 \begin{itemize}
-\item \textbf{HumanEval}: 91.0\% pass@1 with GPT-3.5, compared to 80.1\% for GPT-4 zero-shot and 67.0\% for Codex fine-tuned. This result is remarkable: a weaker model (GPT-3.5) outperforms a stronger model (GPT-4) through reflection alone. The improvement of 24pp over the GPT-3.5 baseline (67\% to 91\%) demonstrates that verbal reinforcement learning can compensate for a significant capability gap.
-
-\item \textbf{AlfWorld}: 97\% success rate, compared to 75\% for the ReAct baseline. The 22pp improvement (75\% to 97\%) shows that persistent reflection memory is particularly effective in multi-step decision-making tasks where the agent must learn from its mistakes across episodes. The improvement is largest for the most difficult tasks, where multiple reflection episodes accumulate the most informative failure analyses.
-
-\item \textbf{Scaling with episodes}: Performance improves monotonically with the number of reflection episodes, with diminishing returns after approximately 10 episodes. This scaling behavior confirms that the reflection memory is genuinely informative---each reflection contributes meaningful new knowledge. The monotonic improvement also distinguishes Reflexion from random retry strategies, which would show flat or noisy performance across episodes.
+    \item \textbf{Actor} ($M_a$): Generates actions or outputs given the task and memory context.
+    \item \textbf{Evaluator} ($M_e$): Scores the actor's output, producing a binary reward $r_e \in \{0, 1\}$ or a scalar reward.
+    \item \textbf{Self-Reflection} ($M_r$): Generates verbal feedback explaining what went wrong and how to improve.
 \end{itemize}
 
-\paragraph{Limitations.} Reflexion's limitations stem primarily from its reliance on language-based memory.
+The Reflexion loop operates across episodes $e = 1, 2, \ldots, E$ according to the following equations:
+\begin{align}
+    a_e &= M_a(\text{task}, \mathcal{M}_{1:e-1}) \label{eq:reflexion-actor} \\
+    r_e &= M_e(a_e, \text{task}) \label{eq:reflexion-eval} \\
+    f_e &= M_r(a_e, r_e, \text{task}) \quad \text{if } r_e \text{ indicates failure} \label{eq:reflexion-reflect} \\
+    \mathcal{M}_e &= \mathcal{M}_{e-1} \cup \{f_e\} \label{eq:reflexion-memory}
+\end{align}
 
-First, the memory buffer grows unboundedly, eventually exceeding the LLM's context window. A typical reflection entry is 50--200 tokens; after 10 episodes, the memory may contain 500--2,000 tokens of reflection text, which is manageable. But for long-running agents that encounter hundreds or thousands of tasks, the memory can grow to tens of thousands of tokens, exceeding the context windows of many models. Practical implementations require truncation, summarization, or retrieval-augmented selection, each of which introduces information loss. Hierarchical memory architectures---where old reflections are summarized into higher-level lessons---could address this, but summary quality and relevance filtering introduce their own challenges.
+The key innovation is the memory buffer $\mathcal{M}$, which stores linguistic feedback across episodes. Each entry describes what the agent tried, why it failed, and what to do differently. This acts as a ``verbal gradient''---natural language guidance that replaces the role of parameter gradients in traditional reinforcement learning. The accumulated reflections provide increasingly specific and actionable guidance, enabling the agent to avoid repeating past mistakes and to build on successful strategies.
 
-Second, the quality of reflection depends on the LLM's ability to diagnose failures, which is limited for subtle logical errors or complex interactions between components. In code generation, for example, the model may correctly identify a syntax error but fail to diagnose a subtle algorithmic inefficiency or a race condition in concurrent code. The reflection may be confident but wrong, providing misleading guidance for future episodes. This ``hallucinated reflection'' problem is particularly dangerous because incorrect reflections are stored in memory and can mislead the agent on future tasks, creating a form of self-reinforcing error.
+The evaluator $M_e$ can be implemented in several ways: as a deterministic program (e.g., a unit test suite for code tasks), as a separate LLM prompted to evaluate output quality, or as the same LLM acting in a different role. The choice of evaluator has significant implications for the quality and reliability of the self-improvement process, a theme that recurs throughout this section. When the evaluator is a deterministic program, the feedback loop is grounded in objective correctness; when the evaluator is another LLM, the feedback inherits the biases and limitations of that model.
 
-Third, Reflexion requires an evaluation signal to trigger reflection---if the task has no automated evaluator, the system cannot generate reflections. This restricts Reflexion's applicability to domains with well-defined success criteria (code generation with test suites, game environments with reward functions, mathematical reasoning with ground-truth answers). For open-ended tasks where success is subjective or context-dependent, Reflexion cannot operate without an external evaluator.
+\paragraph{Results.}
+Reflexion achieves 91\% pass@1 on HumanEval using GPT-3.5, surpassing GPT-4's 80\% in the zero-shot setting~\citep{shinn2023reflexion}. This result is remarkable because it demonstrates that a smaller, less capable model can outperform a larger, more capable model through structured self-improvement. On AlfWorld (interactive household environments), Reflexion achieves 97\% success versus 75\% for the ReAct baseline~\citep{yao2022react}, representing a 22 percentage point improvement. On the MBPP code generation benchmark, significant improvements are similarly observed.
 
-Fourth, Reflexion is not truly ``self-improving'' in the sense of modifying the underlying model: the improvement is transient, stored in the memory buffer rather than in the model's parameters. If the memory is cleared, the improvement is lost. This is a fundamental limitation of all inference-time methods and motivates the development of training-time alternatives that encode improvements permanently in the model's weights.
+The method demonstrates clear scaling behavior along two axes. First, more reflection episodes yield better performance, with diminishing returns typically setting in after 3--5 episodes. Second, specific, actionable feedback substantially outperforms generic feedback (e.g., ``try a different approach''), confirming that the quality of linguistic memory is a critical determinant of improvement magnitude. Cross-task transfer effects are observed: feedback from similar tasks provides partial benefit, suggesting that the linguistic memory captures generalizable problem-solving strategies rather than merely memorizing task-specific solutions. This transfer is particularly noteworthy because it suggests that verbal gradients, unlike parameter gradients, can be shared and reused across related tasks without additional training.
+
+\paragraph{Limitations.}
+Reflexion requires a scalar or binary evaluation signal, which may not be available for all tasks. In open-ended generation tasks (e.g., creative writing, open-domain dialogue), there may be no reliable automatic evaluator, and the quality of self-evaluation becomes a bottleneck. The memory buffer grows unbounded, eventually exceeding the model's context window and requiring truncation or summarization strategies that may discard valuable information. The quality of self-reflection depends critically on the underlying LLM's capability, and there is no theoretical framework for convergence guarantees.
+
+A particularly concerning failure mode is \emph{hallucinated reflections}: the model may generate plausible-sounding but incorrect explanations for why a particular approach failed. These hallucinated reflections, when stored in memory, can actively mislead the agent on subsequent episodes, degrading performance rather than improving it. This is an instance of the broader challenge of self-reference in self-improvement systems---the system's ability to improve is bounded by its ability to accurately diagnose its own failures. The hallucinated reflection problem is analogous to the ``noisy gradient'' problem in traditional optimization, where gradient noise can prevent convergence or cause the optimizer to diverge.
 
 
 \subsubsection{Self-Debug: Execution-Guided Self-Repair}
-\label{sec:methods:selfdebug}
+\label{sec:self-debug}
 
-\paragraph{Problem definition.} Self-Refine uses self-critique as feedback and Reflexion uses verbal reflection, but both rely on the model's own judgment to identify errors. What if a more objective, reliable feedback signal were available? In code generation, such a signal exists: execution feedback. A compiler or interpreter produces unambiguous error messages, stack traces, and test results that indicate exactly where and how the code fails. The problem is to leverage this execution feedback for self-repair---can a model use its own execution errors to fix its own code?
+Self-Debug~\citep{chen2024selfdebug} specializes self-improvement to the code domain by incorporating execution feedback as an external verification signal. Unlike Self-Refine and Reflexion, which rely on the model's own assessment of output quality, Self-Debug grounds its improvement process in the deterministic feedback provided by a code interpreter. The key innovation is ``rubber duck debugging''---the model explains its own code line by line, often discovering errors during the explanation process itself. This name derives from the software engineering practice of explaining code to an inanimate object (a rubber duck) as a debugging technique; the act of articulation often surfaces assumptions and errors that remain invisible during casual inspection.
 
-This problem is analogous to ``rubber duck debugging'' in software engineering, where a programmer explains their code to an inanimate object (a rubber duck) and, in the process of explaining, discovers the bug. Self-Debug asks whether LLMs can play the role of both the programmer and the rubber duck: generating code, executing it, explaining the errors, and then repairing the code based on the explanation.
-
-\paragraph{Method design.} Self-Debug~\citep{chen2024selfdebug} specializes the self-improvement paradigm for code generation, using execution feedback as the primary self-repair signal. The algorithm operates as follows:
-
-\begin{enumerate}
-\item \textbf{Generate}: The model produces initial code: $\text{code}_0 = \text{LLM}(\text{spec})$.
-\item \textbf{Execute}: The code is executed against test cases, producing execution results: $\text{result}_t = \text{Execute}(\text{code}_t, \text{tests})$.
-\item \textbf{Explain}: The model explains the execution result in its own words: $\text{explanation}_t = \text{LLM}(\text{code}_t, \text{result}_t)$.
-\item \textbf{Repair}: The model repairs the code based on the explanation: $\text{code}_{t+1} = \text{LLM}(\text{code}_t, \text{explanation}_t, \text{spec})$.
-\end{enumerate}
-
-The critical innovation is the \textbf{Explain} step. Instead of directly feeding raw error messages to the model (which can be cryptic, language-specific, and difficult to map back to the original code), Self-Debug first asks the model to explain the error in its own words. This explanation step forces the model to engage in causal reasoning about the failure---to understand \emph{why} the code produced the observed error, not just \emph{that} an error occurred. The explanation produces more targeted and effective repairs than directly feeding error messages.
-
-The feedback spectrum in Self-Debug ranges from \emph{binary} (pass/fail) to \emph{rich} (full execution traces with error messages, variable values, and stack traces). Rich feedback provides significantly more information for repair: a stack trace tells the model exactly which line caused the error, and variable values at the point of failure provide context about the program's state. Self-Debug with rich feedback outperforms Self-Debug with binary feedback by a substantial margin, confirming that the informativeness of the feedback signal directly determines the quality of self-repair.
-
-Formally, the repair step can be expressed as:
-\begin{equation}
-\text{code}_{t+1} = \text{LLM}(\text{code}_t, \text{Explain}(\text{code}_t, \text{Execute}(\text{code}_t, \text{tests})), \text{spec})
-\label{eq:selfdebug}
-\end{equation}
-where the Explain function is itself an LLM call that converts raw execution output into a natural language diagnosis of the failure.
-
-\paragraph{Experimental results.} Self-Debug achieves significant improvements on code generation and code translation benchmarks:
-
-\begin{itemize}
-\item \textbf{Spider} (text-to-SQL): Self-Debug with explanation achieves the best results on this benchmark, outperforming baseline code generation and Self-Debug without explanation by 9 percentage points. The explanation step is critical: ablation studies show that removing it reduces performance by 5--10pp, confirming that the model's self-explanation of errors provides significant value beyond the raw execution feedback.
-
-\item \textbf{TransCoder} (code translation): Self-Debug improves the accuracy of code translation across programming languages by approximately 12\%, catching and fixing language-specific syntax errors, semantic differences between languages, and API incompatibilities. The execution feedback is particularly valuable in this setting because the target language's compiler provides precise, objective error localization.
-
-\item \textbf{MBPP}: Significant improvements over single-shot code generation, with the improvement scaling with the number of debugging iterations. Most bugs are fixed within 2--3 iterations, with diminishing returns thereafter.
-\end{itemize}
-
-\paragraph{Limitations.} Self-Debug is constrained by two fundamental restrictions.
-
-First, the method is limited to code generation tasks where execution feedback is available. For natural language tasks (creative writing, reasoning, dialogue), there is no equivalent of a compiler or test suite. While one could imagine using a language model as a ``compiler for natural language,'' the ambiguity and subjectivity of natural language evaluation makes this approach far less reliable than code execution. The restriction to executable domains is a significant limitation: many of the most important applications of LLMs (medical advice, legal analysis, creative writing) do not have automated test suites.
-
-Second, Self-Debug can only fix errors that are detectable through execution. Logical errors that produce incorrect but syntactically valid output may escape detection if the test suite is incomplete. A function that returns the wrong answer for edge cases will only be caught if the test suite includes those edge cases. This creates a dependency on test quality: the effectiveness of Self-Debug is bounded by the coverage and discriminativeness of the test suite. In practice, comprehensive test suites are themselves expensive to create, potentially requiring as much engineering effort as writing the original code.
-
-A related concern is that Self-Debug's effectiveness varies significantly across programming languages and paradigms. Compiled languages with strong type systems (Rust, Haskell, Java) provide richer error messages and earlier error detection than dynamically typed languages (Python, JavaScript), making Self-Debug more effective in the former. Concurrent and distributed programs pose additional challenges because their errors may be non-deterministic, timing-dependent, and difficult to reproduce reliably through execution. Extending Self-Debug to these domains would require integration with specialized testing frameworks (property-based testing, fuzzing, model checking) that go beyond simple unit test execution.
-
-
-\subsubsection{Agent Symbolic Learning: Backpropagation in Natural Language Space}
-\label{sec:methods:agentsymbolic}
-
-\paragraph{Problem definition.} The preceding inference-time methods operate at the output level: Self-Refine improves a single output, Reflexion improves across episodes, and Self-Debug repairs code. But the agent paradigm introduces a richer structure to improve: an agent consists of prompts, tool descriptions, pipeline configurations, and control flow logic, all expressed in natural language. Can self-improvement propagate beyond the output level to the agent's own configuration---its ``source code''?
-
-This problem is analogous to the backpropagation algorithm in neural networks, which computes gradients with respect to the model's parameters and updates them to reduce the loss. Agent Symbolic Learning asks whether an analogous process can be performed in natural language space: can an agent compute ``language gradients'' with respect to its prompts, tools, and pipelines, and update them to improve performance?
-
-\paragraph{Method design.} Agent Symbolic Learning~\citep{zhou2024agentsymbolic} proposes a full backpropagation analog in natural language space. The method treats the agent's configuration---prompts, tool descriptions, pipeline structure---as the ``weights'' of the agent, and uses language-based feedback to compute ``gradients'' that update these weights. The algorithm follows the classic four-phase structure of backpropagation:
+\paragraph{Algorithm.}
+The Self-Debug loop operates as follows:
 
 \begin{enumerate}
-\item \textbf{Forward pass}: The agent executes its pipeline on a task, producing an output. Formally: $\hat{y} = \text{Agent}(x; W)$, where $W = \{w_1, \ldots, w_K\}$ represents the agent's configurable components (prompts, tool descriptions, pipeline steps).
-
-\item \textbf{Loss computation}: The output is evaluated against ground truth or a reward function: $\mathcal{L} = \text{Evaluate}(\hat{y}, y^*)$.
-
-\item \textbf{Backward pass}: The LLM analyzes the execution trace and identifies which components contributed to the loss, generating language-based gradients:
-\begin{equation}
-\frac{\partial \mathcal{L}}{\partial w_k} = \text{LLM}(\text{trace}, \mathcal{L}, w_k) \quad \text{for each component } w_k
-\label{eq:asl:grad}
-\end{equation}
-These ``gradients'' are natural language descriptions of how each component should be modified to reduce the loss.
-
-\item \textbf{Weight update}: Each component is updated based on its language gradient:
-\begin{equation}
-w_k^{(t+1)} = \text{LLM}(w_k^{(t)}, \frac{\partial \mathcal{L}}{\partial w_k})
-\label{eq:asl:update}
-\end{equation}
+    \item \textbf{GENERATE}: $p_0 = \mathrm{LLM}(x, \text{prompt})$---the model generates an initial program given the problem specification $x$.
+    \item \textbf{EXECUTE}: $f_t = \mathrm{Execute}(p_t, \text{test\_cases})$---the program is executed against available test cases, producing execution traces, error messages, and pass/fail signals.
+    \item \textbf{EXPLAIN}: $e_t = \mathrm{LLM}(p_t, \text{``explain this code''})$---the model explains its own code, step by step. This rubber duck debugging step often surfaces logical errors that the model can identify during explanation even when it failed to avoid them during generation.
+    \item \textbf{DEBUG}: $p_{t+1} = \mathrm{LLM}(p_t, f_t, e_t, \text{debug\_prompt})$---the model repairs the program using the execution feedback and its own explanation.
 \end{enumerate}
 
-The language gradients are natural language descriptions of how each component should be modified to improve performance. For example, a gradient for a tool description might be: ``The current tool description does not specify that the function returns None for empty inputs. Adding this specification would prevent the agent from making incorrect assumptions about the return value.'' The weight update applies this gradient by asking the LLM to revise the tool description accordingly.
+The method supports three levels of feedback granularity: (1)~Simple Feedback provides only a pass/fail signal with no detailed information; (2)~Unit Test Feedback provides the input/output pairs from failed test cases, enabling the model to understand which specific inputs trigger failures; and (3)~Code Explanation provides the model's own line-by-line explanation, which requires no external execution environment and can be applied even when test infrastructure is unavailable. The three levels form a hierarchy of information richness, and the model's debugging performance improves monotonically with the richness of available feedback.
 
-The analogy to neural network backpropagation is instructive but imperfect. In neural networks, gradients are exact (computed via the chain rule), updates are continuous (via gradient descent), and convergence is guaranteed under mild conditions. In Agent Symbolic Learning, ``gradients'' are approximate (generated by an LLM), updates are discrete (natural language revisions), and convergence is not guaranteed. The method's effectiveness depends on the LLM's ability to accurately diagnose which components are responsible for failures and to generate effective revisions.
+\paragraph{Results.}
+On Spider (text-to-SQL), Self-Debug with code explanation achieves up to 9\% improvement on the hardest difficulty level, demonstrating that the explanation step adds value beyond what execution feedback alone provides. On TransCoder (C++ to Python translation) and MBPP (Python generation), up to 12\% accuracy improvement is observed. Self-Debug is far more sample-efficient than best-of-$K$ sampling: it matches the performance of baselines that generate 10$\times$ more candidates, because the iterative debugging process provides targeted, informative feedback that random sampling cannot replicate.
 
-\paragraph{Experimental results.} Agent Symbolic Learning demonstrates strong performance across diverse benchmarks:
+\paragraph{Significance.}
+Self-Debug bridges inference-time and execution-time improvement by leveraging a deterministic external evaluator (the code interpreter). This paradigm---generate, execute, diagnose, repair---recurs throughout the evolutionary code systems analyzed in subsequent sections of this survey, including FunSearch~\citep{chen2024funsearch} and AlphaEvolve~\citep{novikov2025alphaevolve}. The key insight is that execution feedback provides a form of objective grounding that is absent from purely self-referential methods: the code either compiles and passes tests, or it does not. This binary signal, while coarse, is remarkably effective at guiding the self-improvement process because it is noiseless---it never provides a false positive (passing a test that should have failed) and only rarely provides a false negative (failing a test that should have passed, which occurs only in the case of test suite errors).
 
-\begin{itemize}
-\item \textbf{HotPotQA}: F1 score of 39.1, representing a significant improvement over the agent's initial configuration. The improvement comes from optimizing the agent's search prompts, tool descriptions, and reasoning pipeline.
+\paragraph{Limitations.}
+The effectiveness of Self-Debug is fundamentally constrained by the quality and coverage of available test cases. If the test suite is incomplete---that is, if it does not exercise all edge cases or failure modes---the model may produce code that passes all available tests but fails on untested inputs. This is a form of overfitting to the test suite, and it is exacerbated when the model has access to the test cases during the debugging process, as it may learn to satisfy the specific test cases rather than implementing the intended algorithm correctly. This limitation is shared by all test-based evaluation methods and is a specific instance of the broader evaluation bottleneck that constrains all self-improvement systems.
 
-\item \textbf{MATH}: 60.7\% accuracy, achieved by optimizing the agent's mathematical reasoning prompts and code interpreter tool descriptions. The language gradients identify specific weaknesses in the agent's mathematical reasoning strategy and revise them.
+Additionally, the explanation step, while often helpful, can also mislead. If the model generates an incorrect explanation of its own code, the debugging step may introduce new errors while attempting to align the code with the incorrect explanation. This limitation mirrors the broader challenge of relying on self-assessment for improvement: the system's ability to improve is bounded by its ability to accurately understand its own outputs.
 
-\item \textbf{HumanEval}: 73.2\% pass@1, achieved by optimizing the agent's code generation prompts and debugging tool descriptions. The improvement demonstrates that Agent Symbolic Learning can improve code generation through prompt and pipeline optimization alone, without modifying any model parameters.
-\end{itemize}
 
-\paragraph{Limitations.} Agent Symbolic Learning faces two primary limitations.
+\subsubsection{Agent Symbolic Learning: Language Backpropagation}
+\label{sec:symbolic-learning}
 
-First, the quality of language gradients depends entirely on the LLM's capability. If the LLM cannot accurately diagnose which component caused the failure, the gradient will be noisy or misleading, leading to ineffective or counterproductive updates. This is analogous to the gradient estimation problem in reinforcement learning, where noisy gradient estimates can slow convergence or cause divergence. The problem is exacerbated for agents with many components, where the credit assignment problem (determining which of many components is responsible for a failure) becomes increasingly difficult.
+Agent Symbolic Learning~\citep{zhou2024symbolic} represents a significant conceptual advance: it treats an LLM-based agent as a \emph{symbolic network} whose ``weights'' are natural language prompts, tool descriptions, and pipeline compositions, and then applies an analog of backpropagation and gradient descent entirely in text space. This framework bridges the inference--training divide by performing structured optimization without modifying neural network parameters, instead optimizing the symbolic configuration of the agent.
 
-Second, the discrete, language-based update process lacks the smooth convergence properties of continuous gradient descent. A language gradient may suggest a revision that overshoots (changing too much at once) or undershoots (failing to address the root cause), and there is no natural ``learning rate'' to control the step size. The LLM's revision may introduce new problems while fixing the identified one, leading to oscillation rather than convergence. Practical implementations require careful prompt engineering to ensure that revisions are targeted and conservative.
+\paragraph{Algorithm.}
+An agent is parameterized as a computational graph with three types of learnable nodes: \textbf{Prompt nodes} ($\mathcal{P}$) for system prompts and instructions, \textbf{Tool nodes} ($\mathcal{T}$) for function definitions, and \textbf{Pipeline nodes} ($\mathcal{I}, \mathcal{O}$) for input/output connections between agent components.
 
-Despite these limitations, Agent Symbolic Learning represents an important conceptual advance: it demonstrates that the backpropagation metaphor---the core optimization algorithm of deep learning---can be translated into the natural language domain, enabling self-improvement of agent configurations that are not differentiable in the traditional sense. The method opens the door to a class of ``gradient-free optimization'' techniques for agentic systems, where the ``gradients'' are linguistic analyses produced by LLMs rather than mathematical derivatives computed via the chain rule. This linguistic gradient paradigm could extend beyond prompts and tool descriptions to the optimization of agent architectures, reward functions, and training curricula---any component that can be described in natural language can, in principle, be optimized through language gradients.
+The framework operates in four stages, mirroring the forward pass, loss computation, backpropagation, and weight update of neural network training:
+\begin{enumerate}
+    \item \textbf{Forward Pass}: Execute the agent on a task to produce a trajectory $\tau = \{(a_1, o_1), (a_2, o_2), \ldots, (a_n, o_n)\}$, where $a_i$ are actions and $o_i$ are observations.
+    \item \textbf{Language Loss}: Evaluate the trajectory using an LLM-based loss function: $\mathcal{L}_{\text{lang}} = \mathrm{LLM}(\mathcal{P}_{\text{loss}}(\tau))$, where $\mathcal{P}_{\text{loss}}$ is a prompt template that instructs the LLM to assess trajectory quality.
+    \item \textbf{Language Gradient Backpropagation}: For each layer $n$ from output to input, compute a textual gradient:
+    \begin{equation}
+        \nabla_{\text{lang}}^n = \mathrm{LLM}\left(\mathcal{P}_{\text{gradient}}\left(\nabla_{\text{lang}}^{n+1}, \mathcal{I}_n, \mathcal{O}_n, \mathcal{P}_n, \mathcal{T}_n, \mathcal{L}_{\text{lang}}\right)\right)
+        \label{eq:symbolic-gradient}
+    \end{equation}
+    This process propagates improvement signals backward through the agent's computational graph, from the output layer (where the loss is computed) to the input layer (where the initial prompts and tool definitions reside).
+    \item \textbf{Weight Update}: Apply textual updates to the agent's ``weights'': $\Delta\mathcal{P}$ (prompt updates), $\Delta\mathcal{T}$ (tool updates), and $\Delta\mathcal{I}, \Delta\mathcal{O}$ (pipeline updates). These updates are generated by the LLM and applied directly to the agent's configuration.
+\end{enumerate}
+
+\paragraph{Results.}
+On HotPotQA (multi-hop question answering), Agent Symbolic Learning achieves F1 = 39.1 and EM = 25.6, outperforming both vanilla agents (F1 = 36.2) and DSPy~\citep{khattab2023dspy} (F1 = 37.4). On MATH with GPT-4 backbone, accuracy reaches 60.7\% versus 56.0\% for baseline agents and 48.4\% for DSPy. On HumanEval, 73.2\% pass@1 is achieved versus 68.3\% baseline. For software development tasks (scored 1--4 on executability), Agent Symbolic Learning achieves 3.8 versus 2.4 for baseline agents and 1.6 for standard GPT configurations. On creative writing tasks, it achieves 7.4 versus 6.8 for Tree of Thought~\citep{yao2023treeofthoughts}.
+
+\paragraph{Significance.}
+Agent Symbolic Learning is the first framework to apply structured optimization---analogous to neural network training---to the full architecture of an LLM agent. It demonstrates that agent ``weights'' (prompts, tools, pipelines) can be systematically improved through a principled learning procedure. The textual backpropagation mechanism is particularly notable because it provides a general-purpose optimization framework that can be applied to any agent architecture, regardless of its specific structure. This establishes a foundation for the more radical self-modifying systems discussed in subsequent sections of this survey. The analogy to neural network training also provides a useful conceptual vocabulary for understanding and analyzing self-improvement in agent systems.
+
+\paragraph{Limitations.}
+The quality of textual gradients depends on the LLM's ability to perform accurate credit assignment across the agent's computational graph---a task that is challenging even in the neural network setting, where gradients are computed exactly. In the textual domain, gradient computation is approximate and may be unreliable for complex multi-step agents. Additionally, the framework assumes that the agent's architecture can be decomposed into discrete, optimizable components, which may not be the case for all agent designs. The ``learning rate'' in text space (how aggressively to apply textual updates) is also an unexplored hyperparameter: too aggressive updates may destabilize the agent, while too conservative updates may yield insufficient improvement.
+
+
+\subsubsection{Comparison of Inference-Time Methods}
+
+Table~\ref{tab:inference-comparison} provides a systematic comparison of the four inference-time methods across key dimensions.
+
+\begin{table}[t]
+\centering
+\caption{Comparison of inference-time self-improvement methods. ``Feedback Source'' indicates where the improvement signal originates. ``Memory'' indicates whether improvements persist across episodes.}
+\label{tab:inference-comparison}
+\small
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Method} & \textbf{Feedback} & \textbf{Memory} & \textbf{Iterations} & \textbf{Training} & \textbf{Key Result} \\
+\midrule
+Self-Refine & Self-critique & None & 2--3 & None & +20\% avg \\
+Reflexion & Evaluator + Self & Linguistic & 3--5 & None & 91\% HumanEval \\
+Self-Debug & Execution & None & 2--4 & None & +12\% TransCoder \\
+Symbolic Learning & Self (textual) & Updated prompts & Multi-pass & None & F1=39.1 HotPotQA \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Several patterns emerge from this comparison. First, the introduction of \textbf{external grounding}---whether through execution feedback (Self-Debug), evaluator scores (Reflexion), or structured optimization objectives (Agent Symbolic Learning)---consistently improves results over pure self-critique (Self-Refine). Second, the presence of \textbf{persistent memory} (Reflexion's linguistic buffer, Agent Symbolic Learning's updated prompts) enables cumulative improvement across episodes, whereas methods without memory must start from scratch on each new input. Third, all methods converge within a small number of iterations (typically 2--5), suggesting that the marginal value of additional refinement rounds diminishes rapidly. These observations have direct implications for the design of practical self-improvement systems: the most effective inference-time methods will be those that combine external grounding with persistent memory in a structured optimization framework.
 
 
 \subsection{Training-Time Self-Improvement}
-\label{sec:methods:training}
+\label{sec:training-time}
 
-Training-time self-improvement methods modify the model's parameters through self-generated training signals. These methods go beyond inference-time refinement by creating a permanent improvement in the model's capabilities---the model becomes fundamentally better at the task, not just at refining a particular output. The cost is substantial: training requires GPU compute, data curation, and careful optimization. But the improvement is persistent and composable: a model improved through training-time self-improvement can then be further improved through inference-time methods, producing a multiplicative benefit.
-
-The training-time paradigm rests on a different assumption than inference-time methods: that self-generated data, when properly filtered and curated, can serve as effective training signal. This is not obvious. Self-generated data is drawn from the model's own distribution, which means it cannot provide information that the model does not already ``know'' in some sense. The key insight is that the model may ``know'' the right answer implicitly (in the sense that the correct answer is in its training distribution) without being able to produce it reliably. Self-training methods exploit this gap between implicit knowledge and reliable generation by generating many candidates, filtering for the correct ones, and training on the filtered set.
-
-The theoretical foundation for this approach draws on self-training in semi-supervised learning, where a model trained on labeled data generates ``pseudo-labels'' for unlabeled data and then retrains on the combined dataset. The key condition for self-training to improve rather than degrade performance is that the model's correct predictions outnumber its errors on the self-labeled data. When this condition holds, the correct predictions provide a learning signal that outweighs the noise from errors, producing a net improvement. The same principle applies to LLM self-training: if the model generates more correct than incorrect solutions, training on the self-generated data produces a net improvement. The filtering mechanisms employed by training-time methods (ground truth in STaR, self-play discrimination in SPIN, reward model filtering in ReST-EM, principle-based evaluation in CAI) are all designed to ensure that the self-generated training data meets this correctness condition.
+Training-time self-improvement methods modify the model's parameters using self-generated data, producing persistent improvements that generalize across the data distribution. These methods follow a common generate-filter-finetune paradigm but differ fundamentally in how they generate data, filter for quality, and perform the parameter update. We present four representative methods that span the design space from bootstrapped reasoning to principled self-play to AI-assisted alignment. Each method makes different assumptions about the available supervision signal---from ground-truth labels (STaR) to human demonstration data (SPIN) to reward models (ReST-EM) to self-generated principles (Constitutional AI)---and these assumptions have direct consequences for applicability, scalability, and safety.
 
 
-\subsubsection{STaR: Self-Taught Reasoner}
-\label{sec:methods:star}
+\subsubsection{STaR: Bootstrapping Reasoning with Reasoning}
+\label{sec:star}
 
-\paragraph{Problem definition.} Reasoning---the ability to solve novel problems through multi-step logical inference---is one of the most valued capabilities of large language models. Yet reasoning is also one of the most difficult to improve through standard supervised fine-tuning, because reasoning traces (chain-of-thought solutions) are expensive for humans to produce and difficult to quality-control. A human annotator can easily verify whether a mathematical answer is correct, but producing a detailed, step-by-step reasoning chain that leads to that answer requires significant expertise and effort. The problem is to improve a model's reasoning ability without requiring large amounts of human-generated reasoning traces. Can a model bootstrap its own reasoning capability from minimal seed data?
+STaR (Self-Taught Reasoner)~\citep{zelikman2022star} pioneered the generate-filter-finetune paradigm for LLM self-improvement. The key insight is that a model can bootstrap its own reasoning capability by generating reasoning chains (rationales), filtering for correct answers, and fine-tuning on successful chains. The method is remarkably simple yet produces results that rival models orders of magnitude larger, demonstrating that self-generated reasoning data can be a powerful substitute for human-annotated rationales.
 
-\paragraph{Method design.} STaR~\citep{zelikman2022star} (Self-Taught Reasoner) enables LLMs to improve their reasoning capabilities by generating their own reasoning chains and learning from the correct ones. The method bootstraps reasoning ability from a small set of seed rationales, iteratively improving through self-generated reasoning traces. The algorithm operates in two phases per iteration:
+\paragraph{Algorithm.}
+Given a dataset $D = \{(x_i, y_i)\}_{i=1}^{N}$ of input--output pairs and a small set of few-shot demonstrations $F$, STaR iterates through the following steps:
 
 \begin{enumerate}
-\item \textbf{Rationalization}: Given a question $x$ and the correct answer $y^*$, the model generates a reasoning chain (rationale) $r_t = \text{LLM}(x)$. If the reasoning chain leads to the correct answer ($\hat{y} = y^*$), it is retained. If it leads to an incorrect answer, the model is given the correct answer as a ``hint'' and asked to produce a rationalization---a post-hoc explanation of why the correct answer is correct: $r_t' = \text{LLM}(x, y^*)$.
-
-\item \textbf{Fine-tuning}: The model is fine-tuned on the successful reasoning chains (both initially correct ones and successful rationalizations):
-\begin{equation}
-\mathcal{L}_{\text{STaR}}(\theta) = -\sum_{i \in \mathcal{S}_t} \log p_\theta(r_i, y_i^* | x_i)
-\label{eq:star}
-\end{equation}
-where $\mathcal{S}_t$ is the set of examples for which the model either initially produced the correct answer or successfully rationalized after being given the answer.
+    \item \textbf{GENERATE}: For each example $(x_i, y_i)$, generate a reasoning chain and answer:
+    \begin{equation}
+        (r_i, \hat{y}_i) = \arg\max_{r, y} p_\theta(r, y | x_i, F)
+        \label{eq:star-generate}
+    \end{equation}
+    \item \textbf{FILTER}: Select examples where the model's answer matches the ground truth:
+    \begin{equation}
+        D_{\text{correct}} = \{(x_i, r_i) : \hat{y}_i = y_i\}
+        \label{eq:star-filter}
+    \end{equation}
+    \item \textbf{RATIONALIZE}: For examples where $\hat{y}_i \neq y_i$, provide the correct answer as a ``hint'' and regenerate the reasoning chain:
+    \begin{equation}
+        r_i' = \arg\max_{r} p_\theta(r | x_i, y_i, F)
+        \label{eq:star-rationalize}
+    \end{equation}
+    If $r_i'$ leads to the correct answer, add $(x_i, r_i')$ to $D_{\text{correct}}$.
+    \item \textbf{FINETUNE}: Update the model's parameters on the accumulated correct reasoning chains:
+    \begin{equation}
+        \mathcal{L}_{\text{STaR}} = -\sum_{(x, r) \in D_{\text{correct}}} \log p_\theta(r | x, F)
+        \label{eq:star-objective}
+    \end{equation}
 \end{enumerate}
 
-The key insight is the \emph{rationalization step}: when the model initially fails, it is given the correct answer and asked to explain why that answer is correct. This produces high-quality training data even from initial failures. The rationalization teaches the model \emph{how} to arrive at the correct answer, not just \emph{that} the answer is correct. Over iterations, the model generates increasingly accurate initial reasoning chains, reducing the need for rationalization and creating a virtuous cycle of improvement.
+The process iterates until convergence, typically 3--5 iterations. The key innovation is the \textbf{rationalization} step (Step 3), which dramatically increases the effective training set size by enabling the model to learn from its failures. Without rationalization, failed examples are simply discarded, wasting potentially valuable training signal. With rationalization, the model ``works backward'' from the correct answer to construct a valid reasoning chain, learning how to arrive at correct answers even for problems it initially got wrong. The rationalization step can be understood as a form of backward chaining in reasoning space: given the conclusion, construct a valid argument that supports it.
 
-The bootstrapping process can be formalized as follows. Let $p_t(\text{correct})$ denote the probability that the model generates a correct answer on its first attempt at iteration $t$. Then:
+\paragraph{Results.}
+On CommonsenseQA, STaR achieves 72.5\% accuracy using a 540M parameter model, comparable to a fine-tuned 175B model (approximately 30$\times$ larger). Adding rationalization contributes approximately 5\% additional improvement, with larger gains observed on harder problems where the initial answer accuracy is lower. The method demonstrates that self-improvement can close a 300$\times$ scale gap, suggesting that the ability to self-improve is, in some sense, a substitute for raw model scale.
+
+\paragraph{Limitations.}
+STaR requires ground-truth labels for filtering, which limits its applicability to domains where such labels are available. The rationalization step, while beneficial, introduces a subtle form of data augmentation that may not always produce valid reasoning chains---the model may construct ``plausible'' but incorrect reasoning for the right answer. The iterative nature of the method means that errors in early iterations can compound, and the quality of the final model depends on the quality of the initial few-shot demonstrations $F$. Furthermore, STaR is limited to tasks where correctness can be unambiguously determined from the answer alone; tasks requiring partial credit or multi-dimensional evaluation are not well-served by the binary filtering criterion.
+
+
+\subsubsection{SPIN: Self-Play Fine-Tuning}
+\label{sec:spin}
+
+SPIN~\citep{chen2024spin} frames LLM self-improvement as a two-player game between two versions of the same model. The ``player'' model attempts to generate responses that are indistinguishable from human-written ones, while the ``discriminator'' (the previous iteration's model) attempts to distinguish between human and model-generated responses. The training objective is derived from a game-theoretic perspective:
+
 \begin{equation}
-p_{t+1}(\text{correct}) > p_t(\text{correct})
-\label{eq:star:bootstrap}
+    L_{\text{SPIN}}(\theta) = \mathbb{E}_{x \sim D}\left[\mathbb{E}_{y \sim p_{\text{data}}}\left[\log \sigma\left(\lambda(h_\theta(x,y) - h_\theta(x,\tilde{y}))\right)\right]\right]
+    \label{eq:spin}
 \end{equation}
-because the model has been trained on correct reasoning chains (including rationalizations) from iteration $t$. The training set at iteration $t+1$ is of higher quality than at iteration $t$ because the model's own reasoning has improved, producing better rationales for the fine-tuning step.
+where $\tilde{y} \sim p_{\theta_t}(\cdot|x)$ is the previous model's response, $y \sim p_{\text{data}}$ is the human response, $\sigma$ is the logistic function, $\lambda$ is a temperature parameter, and $h_\theta(x, y) = \log p_\theta(y | x)$ is the log-probability assigned by the current model.
 
-\paragraph{Experimental results.} STaR demonstrates significant improvements on mathematical reasoning benchmarks:
+The intuition is straightforward: the current model $\theta$ should assign higher probability to human-written responses than to responses generated by the previous iteration's model $\theta_t$. When the model is sufficiently improved, it can no longer distinguish between human and self-generated responses, and the training converges. This convergence criterion---the model cannot tell its own outputs apart from human outputs---is both elegant and practical, as it provides a natural stopping condition for the training process.
 
-\begin{itemize}
-\item \textbf{Arithmetic}: A 540M-parameter model trained with STaR matches the performance of a 175B-parameter model on arithmetic reasoning tasks. This 325$\times$ parameter efficiency demonstrates that self-taught reasoning can substitute for brute-force scaling. The result is particularly striking because the 540M model has access to far less world knowledge than the 175B model, suggesting that STaR's improvement is specifically in reasoning capability rather than knowledge retrieval.
+\paragraph{Theoretical Properties.}
+A notable theoretical contribution of SPIN is the proof that the global optimum satisfies $p_{\theta^*} = p_{\text{data}}$---that is, at convergence, the model's output distribution exactly matches the data distribution. This is a stronger guarantee than many competing methods provide. Furthermore, convergence occurs in approximately 3 iterations in practice, making SPIN computationally efficient relative to methods that require many more training rounds. The convergence proof relies on the assumption that the model class is sufficiently expressive to represent the data distribution, and the rapid empirical convergence suggests that modern LLMs satisfy this assumption in practice.
 
-\item \textbf{GSM8K}: STaR improves over the base model by a substantial margin, approaching the performance of models trained on much larger datasets. With only a small number of seed rationales, STaR achieves competitive accuracy. The rationalization step is critical: ablations without rationalization show significantly worse performance, confirming that learning from failures (through rationalization) is essential for the bootstrapping process.
+\paragraph{Results.}
+SPIN, using only standard supervised fine-tuning (SFT) data without additional preference data, outperforms Direct Preference Optimization (DPO) trained with GPT-4 preference data on multiple benchmarks. On the Open LLM Leaderboard, SPIN achieves improvements of 2--5\% across diverse tasks after just 2--3 iterations. The method demonstrates that self-play---pitting the model against its own previous version---is a powerful and data-efficient mechanism for self-improvement.
 
-\item \textbf{Cascading improvements}: Each STaR iteration produces progressively better reasoning chains, with the improvement being most pronounced on harder problems where the initial reasoning chains are weakest. The marginal improvement per iteration decreases over time (diminishing returns), but the cumulative improvement over 5--10 iterations can be substantial.
-
-\item \textbf{Data efficiency}: STaR requires remarkably few seed rationales to bootstrap effective reasoning. Experiments show that as few as 10--20 high-quality seed examples are sufficient to initiate the bootstrapping process, after which the model generates its own training data. This data efficiency is important because it means that STaR can be applied in domains where expert reasoning traces are scarce but ground-truth answers are readily available.
-
-\item \textbf{Transfer effects}: The reasoning strategies learned through STaR transfer across problem types within the same domain. A model trained on arithmetic word problems shows improved performance on algebraic reasoning, suggesting that STaR learns general reasoning patterns rather than problem-specific solution templates.
-\end{itemize}
-
-\paragraph{Limitations.} STaR faces three primary limitations.
-
-First, STaR requires ground-truth answers for rationalization, which limits its applicability to tasks with known correct answers (math, coding, factual QA). For open-ended tasks without ground truth---creative writing, strategic planning, open-ended dialogue---STaR cannot be directly applied because there is no correct answer to use as a hint for rationalization. This restriction to verifiable domains is shared with Self-Debug and Reflexion, and represents a broader limitation of methods that depend on objective evaluation signals.
-
-Second, the quality of rationalizations depends on the model's ability to produce post-hoc explanations, which may not always reflect the actual reasoning process that would lead to the correct answer. A model may produce a rationalization that ``explains'' the correct answer through a reasoning path that it would never naturally follow, leading to training data that is technically correct but pedagogically misleading. This is the ``rationalization gap''---the difference between the model's post-hoc explanation and the reasoning process that would actually produce the correct answer.
-
-Third, STaR's bootstrapping has a ceiling: the model can only improve on problems for which it can eventually produce a correct rationalization. For problems that are fundamentally beyond the model's capability, no amount of bootstrapping will help. This ceiling is determined by the model's base capability and the quality of the seed rationales, and it is difficult to predict in advance. In practice, STaR works best when the model's initial capability is sufficient to solve a significant fraction of problems, providing enough training signal for the bootstrapping process.
-
-An important consideration for practical deployment is the interaction between STaR and the model's pre-training distribution. The rationalizations that STaR generates are most effective when they resemble reasoning patterns that are well-represented in the model's pre-training data. For domains where the model has seen many examples of correct reasoning (elementary arithmetic, common logical puzzles), STaR's rationalizations are likely to be high-quality. For domains where correct reasoning is rare or absent in the pre-training data (novel mathematical theorems, cutting-edge scientific reasoning), STaR may produce rationalizations that are technically correct but fail to capture the genuine reasoning strategies needed for the domain.
-
-
-\subsubsection{SPIN: Self-Play Fine-Tuning for LLM Optimization}
-\label{sec:methods:spin}
-
-\paragraph{Problem definition.} Aligning large language models with human preferences traditionally requires human-labeled preference data: for each prompt, human annotators rank multiple model outputs by quality, producing a dataset of pairwise preferences used to train a reward model or directly fine-tune the policy (as in RLHF or DPO). This human annotation is expensive, time-consuming, and difficult to scale. The problem is to achieve alignment-quality improvement without any additional human preference data. Can a model align itself by competing against its own previous version?
-
-\paragraph{Method design.} SPIN~\citep{chen2024spin} (Self-Play Fine-Tuning for LLM Optimization) applies the self-play paradigm---famously used in AlphaGo~\citep{silver2016mastering}---to language model alignment. The core idea is to train the model to distinguish its own outputs from human-written ones, progressively improving without any additional human data. SPIN operates as a two-player game between the ``player'' (the current model $\theta_t$) and the ``opponent'' (the previous model $\theta_{t-1}$):
-
-\begin{enumerate}
-\item \textbf{Generation}: The opponent model $\theta_{t-1}$ generates responses $\hat{y}$ to a set of prompts $x$ drawn from a human demonstration dataset.
-\item \textbf{Discrimination}: The player model $\theta_t$ is trained to distinguish between opponent-generated responses $\hat{y}$ and human-written responses $y$.
-\item \textbf{Update}: The player model is updated through gradient descent to maximize the discrimination objective.
-\end{enumerate}
-
-The training objective at iteration $t$ is:
-\begin{equation}
-\mathcal{L}_{\text{SPIN}}(\theta) = \mathbb{E}_{(x, y) \sim \mathcal{D}} \left[ \ell \left( \lambda \log \frac{p_\theta(y|x)}{p_{\theta_{t-1}}(y|x) + p_\theta(y|x)} \right) + \ell \left( \lambda \log \frac{p_{\theta_{t-1}}(\hat{y}|x)}{p_{\theta_{t-1}}(\hat{y}|x) + p_\theta(\hat{y}|x)} \right) \right]
-\label{eq:spin}
-\end{equation}
-where $\mathcal{D}$ is the human demonstration dataset, $\hat{y} \sim p_{\theta_{t-1}}(\cdot|x)$ are opponent-generated responses, $\lambda$ is a temperature parameter, and $\ell(x) = \log(1 + e^{-x})$ is the logistic loss. The first term encourages the model to assign higher probability to human responses relative to its own; the second term encourages it to assign lower probability to its own responses relative to human ones. Over iterations, the model progressively closes the gap between its output distribution and the human demonstration distribution.
-
-SPIN converges when the current model can no longer distinguish its own outputs from human-written ones---at this point, $p_\theta(y|x) \approx p_{\text{human}}(y|x)$, and the discrimination loss is minimized. This natural convergence criterion eliminates the need for manual stopping rules and provides a principled termination condition.
-
-\paragraph{Experimental results.} SPIN demonstrates significant improvements on alignment benchmarks:
-
-\begin{itemize}
-\item \textbf{Zephyr-7B}: After SPIN fine-tuning, the model achieves performance competitive with models trained on significantly more human preference data, outperforming the base model by 5--15\% on standard alignment benchmarks including MT-Bench and AlpacaEval. Notably, SPIN achieves these improvements using only the existing human demonstration dataset---no additional human annotation is required.
-
-\item \textbf{Comparison to DPO and RLHF}: SPIN matches the performance of Direct Preference Optimization (DPO) and Reinforcement Learning from Human Feedback (RLHF) on benchmark tasks, despite requiring no human preference annotations. This is a striking result: self-play alone can substitute for human feedback in the alignment process.
-
-\item \textbf{Convergence}: SPIN typically converges within 2--3 self-play iterations, making it computationally efficient relative to other alignment methods that may require many more training steps. The rapid convergence suggests that the self-play objective provides a strong learning signal.
-\end{itemize}
-
-\paragraph{Limitations.} SPIN faces two fundamental limitations.
-
-First, the improvement is bounded by the quality of the human demonstration dataset. The model can only converge to the quality of the human data, not exceed it. This is because the training objective drives the model toward $p_\theta \approx p_{\text{human}}$---matching the human distribution, not surpassing it. For domains where human demonstrations are noisy, inconsistent, or suboptimal, SPIN will inherit these limitations. This contrasts with methods like ReST-EM or Absolute Zero, which can potentially exceed human-level performance by generating and filtering their own training data.
-
-Second, SPIN requires careful hyperparameter tuning (learning rate, temperature $\lambda$, number of iterations) to avoid degenerate solutions. If the temperature is too high, the model may learn trivial discrimination patterns (e.g., preferring longer responses) rather than genuine quality improvements. If the learning rate is too high, the model may diverge from the reference distribution, producing lower-quality outputs. These hyperparameter sensitivities make SPIN more difficult to deploy than inference-time methods that require no training at all.
-
-An important theoretical observation about SPIN is its relationship to the minimax game formulation of Generative Adversarial Networks (GANs). In GANs, a generator and discriminator are trained adversarially: the generator tries to produce outputs that fool the discriminator, while the discriminator tries to distinguish generated outputs from real data. SPIN can be viewed as a GAN where the ``generator'' is the previous model version ($\theta_{t-1}$) and the ``discriminator'' is the current model ($\theta_t$), with the human demonstration dataset serving as the ``real data.'' This connection suggests that insights from the GAN literature---on training stability, mode collapse, and convergence---may be applicable to SPIN. In particular, the well-documented training instabilities of GANs (oscillation, mode collapse, vanishing gradients) may have analogs in SPIN's self-play training, warranting careful monitoring during the self-improvement process.
+\paragraph{Limitations.}
+SPIN's convergence to $p_{\text{data}}$ is both a strength and a limitation. Since the model converges to the data distribution, its performance is upper-bounded by the quality of the available human data. If the human data contains errors, biases, or inconsistencies, the model will faithfully reproduce them. Additionally, SPIN does not incorporate external reward signals, which limits its ability to improve on dimensions not well-represented in the training data. The self-play formulation also raises the question of whether the method can transcend the quality ceiling imposed by the human data: by construction, SPIN converges to human-level performance, not beyond it.
 
 
 \subsubsection{ReST-EM: Reinforced Self-Training with Expectation Maximization}
-\label{sec:methods:rest}
+\label{sec:rest-em}
 
-\paragraph{Problem definition.} Self-training---training a model on its own outputs---is one of the oldest ideas in machine learning, dating back to self-training in semi-supervised learning and self-play in game AI. The fundamental challenge is quality control: if the model trains on its own outputs without filtering, it will amplify its existing errors, leading to distribution collapse. The problem is to design a self-training procedure that generates high-quality training data from the model's own outputs, filtering out incorrect or low-quality samples while retaining enough data for effective training.
+ReST-EM~\citep{gulcehre2023rest} formalizes the generate-filter-finetune paradigm as an Expectation-Maximization (EM) procedure, providing a principled statistical framework for iterative self-improvement. The EM formulation enables a clean separation between the data generation step (E-step) and the model update step (M-step), and it provides a natural framework for analyzing convergence properties.
 
-\paragraph{Method design.} ReST-EM~\citep{gulcehre2023rest} combines self-training with the expectation-maximization (EM) algorithm, using a reward model to filter self-generated samples. The method alternates between generating samples (E-step) and training on the best samples (M-step), creating a self-improving loop that progressively raises the quality bar:
+\paragraph{Algorithm.}
+ReST-EM alternates between two steps:
 
 \begin{enumerate}
-\item \textbf{E-step (Expectation)}: Generate multiple samples for each input using the current model: $\hat{y}_1, \ldots, \hat{y}_K \sim p_\theta(\cdot|x)$. Score each sample using a reward model: $s_k = R(\hat{y}_k)$. The E-step estimates the distribution of good outputs by sampling from the current model and evaluating each sample.
-
-\item \textbf{M-step (Maximization)}: Filter samples above a quality threshold: $\mathcal{D}_+ = \{(x, \hat{y}_k) : s_k > \tau\}$. Fine-tune the model on the filtered dataset: $\theta \leftarrow \text{argmax}_\theta \sum_{(x,y) \in \mathcal{D}_+} \log p_\theta(y|x)$.
+    \item \textbf{E-step (Generate)}: Use the current model $p_{\theta_t}$ to generate $N$ candidate outputs for each input:
+    \begin{equation}
+        \{y_i^{(1)}, y_i^{(2)}, \ldots, y_i^{(N)}\} \sim p_{\theta_t}(\cdot | x_i) \quad \forall (x_i, y_i) \in D
+        \label{eq:rest-estep}
+    \end{equation}
+    \item \textbf{M-step (Filter and Train)}: Score each candidate using a reward model $R$, filter by threshold $\tau$, and fine-tune on the filtered data:
+    \begin{equation}
+        D_{\text{filtered}} = \{(x_i, y_i^{(j)}) : R(y_i^{(j)}) \geq \tau\}
+        \label{eq:rest-mstep}
+    \end{equation}
+    \begin{equation}
+        \theta_{t+1} = \arg\min_\theta -\sum_{(x, y) \in D_{\text{filtered}}} \log p_\theta(y | x)
+        \label{eq:rest-update}
+    \end{equation}
 \end{enumerate}
 
-The training objective combines the sampling and filtering steps:
+The EM framing provides a theoretical justification for the iterative procedure: each E-step computes the expected sufficient statistics (the filtered training data) under the current model, and each M-step maximizes the expected log-likelihood with respect to the model parameters. Under standard EM assumptions, this procedure monotonically improves a lower bound on the data log-likelihood. The number of candidates $N$ controls the trade-off between computational cost and the quality of the E-step approximation: larger $N$ provides a better approximation of the true posterior distribution over outputs but increases the computational cost proportionally.
+
+\paragraph{Results.}
+On machine translation benchmarks, ReST-EM achieves 1.5--3.0 BLEU point improvements over strong baselines and outperforms them in human evaluations. On mathematical reasoning tasks, consistent improvements are observed when the reward model is well-calibrated. The method demonstrates that the EM framework provides a principled and effective approach to iterative self-improvement, and it establishes a statistical foundation upon which more specialized methods can build.
+
+\paragraph{Limitations.}
+The primary risk of ReST-EM is \textbf{reward hacking}: the model may learn to generate outputs that score highly according to the reward model $R$ but are not actually better according to the true objective. This is particularly problematic when the reward model is imperfect (as all learned reward models are) or when there is a mismatch between the reward model's training distribution and the model's generation distribution. Over multiple EM iterations, reward hacking can compound, leading to outputs that achieve high reward but low actual quality. The choice of threshold $\tau$ is also critical: too low, and the training data includes low-quality outputs; too high, and the training set becomes too small to be effective. The threshold can be adapted dynamically across iterations---starting permissive and becoming progressively more selective---which partially mitigates this issue but does not eliminate the risk of reward hacking.
+
+
+\subsubsection{Constitutional AI: Self-Alignment through Principles}
+\label{sec:constitutional-ai}
+
+Constitutional AI~\citep{bai2022constitutional} introduces self-improvement for alignment: the model generates responses to harmful prompts, critiques itself against a set of constitutional principles, revises its responses, and uses the revised outputs for fine-tuning. A second reinforcement learning phase uses model-generated preference data to train a reward model. The key insight is that self-improvement need not be limited to task performance---it can also improve safety and alignment, and it can do so using the model's own judgment as the primary feedback signal.
+
+\paragraph{Algorithm.}
+Constitutional AI operates in two phases:
+
+\begin{enumerate}
+    \item \textbf{Supervised Learning Phase (SL)}:
+    \begin{enumerate}
+        \item Generate responses to harmful or sensitive prompts: $y_0 = M_\theta(x_{\text{harmful}})$.
+        \item Critique the response against constitutional principles: $\mathrm{critique} = M_\theta(y_0, \text{principles})$.
+        \item Revise the response based on the critique: $y_{\text{revised}} = M_\theta(y_0, \mathrm{critique}, \text{principles})$.
+        \item Fine-tune the model on the revised responses: $\theta \leftarrow \mathrm{SFT}(\theta, \{(x_{\text{harmful}}, y_{\text{revised}})\})$.
+    \end{enumerate}
+    \item \textbf{Reinforcement Learning from AI Feedback (RLAIF)}:
+    \begin{enumerate}
+        \item Generate pairs of responses to the same prompt.
+        \item Evaluate which response better adheres to the constitutional principles.
+        \item Use these AI-generated preferences to train a reward model.
+        \item Optimize the model against the reward model using RL (typically PPO).
+    \end{enumerate}
+\end{enumerate}
+
+The constitutional principles serve as the ``constitution'' of the system---a set of high-level guidelines that specify how the model should behave. Example principles include ``choose the response that is most helpful and least harmful'' and ``choose the response that is most honest and transparent.'' The model evaluates its own outputs against these principles and generates both the critique and the revision.
+
+\paragraph{Results.}
+Constitutional AI produces models that are both more helpful and less harmful than models trained with standard RLHF, according to human evaluations. The AI-generated preference data is competitive with human-generated preference data for training reward models, suggesting that the model's self-evaluation capability is sufficiently reliable to serve as a substitute for human annotation in the alignment setting. The method demonstrates that self-improvement can be directed toward safety objectives, not just performance objectives.
+
+\paragraph{Significance.}
+Constitutional AI represents a paradigm shift in how we think about self-improvement. Rather than treating self-improvement as purely a performance optimization, it frames self-improvement as a mechanism for \emph{alignment}---the process of ensuring that AI systems behave in accordance with human values and intentions. This perspective has profound implications for the safety of self-evolving systems, as it suggests that self-improvement and safety are not inherently in tension but can be synergistically combined. The principle-based evaluation mechanism also provides a degree of interpretability and control that is absent from methods that optimize purely against learned reward models. Extensions such as IterAlign~\citep{chen2024iteraligniterativeconstitutional} have shown that iterative constitutional alignment can further improve both helpfulness and harmlessness, confirming the scalability of this approach.
+
+
+\subsection{Comprehensive Comparison}
+\label{sec:methods-comparison}
+
+Having presented the major inference-time and training-time methods in detail, we now provide a systematic cross-method comparison. Table~\ref{tab:comprehensive-comparison} consolidates the key characteristics of all methods discussed in this section, including the emerging methods presented in Section~\ref{sec:emerging-methods}.
+
+\begin{table}[t]
+\centering
+\caption{Comprehensive comparison of self-improvement methods. ``Loop Type'' classifies the method according to the Five Evolution Loops taxonomy. ``Training Required'' indicates whether the method modifies model parameters. ``Feedback Source'' indicates the origin of the improvement signal. Key results are from original papers.}
+\label{tab:comprehensive-comparison}
+\small
+\begin{tabular}{@{}p{2.0cm}p{1.8cm}p{1.3cm}p{1.8cm}p{4.5cm}@{}}
+\toprule
+\textbf{Method} & \textbf{Loop Type} & \textbf{Training} & \textbf{Feedback Source} & \textbf{Key Results} \\
+\midrule
+Self-Refine & Reflection & None & Self-critique & +20\% avg across 7 tasks; +28\% code; +11pp math \\
+Reflexion & Reflection + Evaluator & None & Evaluator + Self-reflection & 91\% HumanEval (GPT-3.5 > GPT-4); 97\% AlfWorld \\
+Self-Debug & Evaluator & None & Execution traces & +12\% TransCoder; +9\% Spider \\
+Agent Symbolic & Reflection + Search & None (text) & Textual gradients & F1=39.1 HotPotQA; 60.7\% MATH; 73.2\% HumanEval \\
+\midrule
+STaR & Reflection + Evaluator & SFT & Ground truth labels & 540M matches 175B on CommonsenseQA \\
+SPIN & Population & SFT & Human data (self-play) & Matches DPO/RLHF with no preference data \\
+ReST-EM & Evaluator & SFT & Reward model & +1.5--3.0 BLEU on translation \\
+Constitutional AI & Reflection + Evaluator & SFT + RL & Constitutional principles & Harmlessness without human feedback \\
+\midrule
+RISE & Reflection + Evaluator & RL & Self + Reward model & +10pp GSM8K (Llama2-7B) \\
+RAGEN & Reflection + Evaluator & RL & Multi-turn reward & StarPO; Echo Trap detection \\
+ReVeal & Evaluator + Reflection & RL & Self-verification & Co-evolving generation \& verification \\
+Absolute Zero & Population + Evaluator & RL & Self-play (zero data) & SOTA at 7B scale \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\subsubsection{Inference vs.\ Training Trade-Off Analysis}
+
+The five-dimensional framework introduced in Section~\ref{sec:methods-overview} enables a principled analysis of the trade-offs between inference-time and training-time methods.
+
+\paragraph{Cost--Performance Trade-Off.}
+Inference-time methods offer immediate, per-query improvement at the cost of additional compute during inference. Self-Refine, for example, typically requires 2--3 forward passes per query, tripling the inference cost. Training-time methods impose a large upfront cost (data generation, filtering, and fine-tuning) but produce improvements that are essentially free at inference time. The break-even point depends on query volume: for low-volume deployments, inference-time methods are more cost-effective; for high-volume deployments, training-time methods amortize their cost over many queries. The emerging hybrid methods (RISE, ReVeal) represent an interesting intermediate point: they impose a training cost to learn self-correction capabilities that are then applied at inference time, combining the persistence of training-time methods with the adaptability of inference-time methods.
+
+\paragraph{Persistence--Generality Trade-Off.}
+Training-time methods produce improvements that are both persistent (surviving across queries) and general (applying across the data distribution). Inference-time methods produce improvements that are transient (specific to the current query) and instance-specific. However, the generality of training-time improvements is bounded by the diversity of the self-generated training data. If the training data is narrow or repetitive, the resulting improvements may not generalize well to out-of-distribution inputs. Reflexion's linguistic memory represents a middle ground: improvements persist across episodes but are stored in natural language, which provides a degree of flexibility and composability that parameter updates lack. Agent Symbolic Learning's textual weight updates provide another middle ground: they persist across applications of the agent but are stored in symbolic form rather than as parameter changes.
+
+\paragraph{Safety--Capability Trade-Off.}
+Inference-time methods are inherently safer because they operate within the fixed capability envelope of the base model. Training-time methods can produce emergent capabilities---behaviors that were not present in the original model and may not be well-understood. Constitutional AI explicitly addresses this trade-off by using principle-based self-critique to ensure that capability improvements are aligned with safety objectives. The emerging hybrid methods (Section~\ref{sec:emerging-methods}) increasingly incorporate explicit safety mechanisms alongside capability improvements. The Echo Trap identified by RAGEN is a concrete example of a safety failure mode in training-time self-improvement: the model learns to ``fake'' improvement rather than genuinely improving, highlighting the need for robust evaluation even in self-improvement systems.
+
+\paragraph{Composability--Depth Trade-Off.}
+Inference-time methods are highly composable: they can be freely combined, stacked, and interleaved without concern for parameter interference. Training-time methods are less composable because each fine-tuning step modifies the model's parameters, potentially overwriting or degrading prior improvements. However, training-time methods can achieve deeper improvements---changes to the model's fundamental reasoning processes that inference-time methods, operating within a fixed parameterization, cannot achieve. The most effective systems combine both: periodic training-time self-improvement to produce deep, persistent capability gains, supplemented by inference-time self-improvement for instance-specific adaptation. ReVeal's turn extrapolation phenomenon demonstrates that this combination can be particularly powerful: a model trained to self-correct for 3 turns can generalize to 20+ turns of self-correction at inference time, producing deep improvements through the composition of training-time and inference-time methods.
+
+
+\subsubsection{The Generate--Filter--Finetune Paradigm}
+
+A striking observation is that nearly all training-time methods follow the same three-phase structure: \textbf{generate} candidate outputs, \textbf{filter} for quality, and \textbf{finetune} on the filtered data. This generate--filter--finetune (GFF) paradigm is the training-time analog of the evolutionary generate--select--mutate loop that recurs throughout biological and computational evolution. The key variable across methods is the filtering mechanism:
+
+\begin{itemize}
+    \item \textbf{STaR} filters by answer correctness: only reasoning chains that lead to the correct answer are retained for training.
+    \item \textbf{SPIN} filters by distinguishability: only responses that can be distinguished from the previous model's outputs contribute to training.
+    \item \textbf{ReST-EM} filters by reward model score: only outputs that achieve a sufficiently high reward are included in the training set.
+    \item \textbf{Constitutional AI} filters by principled self-critique: only responses that satisfy the constitutional principles are retained.
+\end{itemize}
+
+The GFF paradigm suggests a unified view of training-time self-improvement: the quality of self-improvement is fundamentally bounded by the quality of the filtering mechanism. A perfect filter would enable unlimited self-improvement (the model could generate and learn from only correct, high-quality outputs); a poor filter would produce degradation (the model would learn from incorrect or low-quality outputs). This observation has direct implications for the design of self-evolving systems: investing in better evaluation and filtering mechanisms may be more impactful than investing in better generation or training procedures. The self-rewarding framework of Yuan et al.~\citep{yuan2024selfrewarding} attempts to close this loop by training the model to serve as its own reward function, but the circularity of this approach introduces additional risks that remain an active area of research.
+
+
+\subsubsection{Scaling Relationships}
+
+Several consistent scaling relationships emerge across methods:
+
+\textbf{Scale Compression.} STaR's 540M parameter model matches a 175B parameter model on CommonsenseQA, suggesting that self-improvement is most impactful for smaller models that have more room for improvement. Reflexion's GPT-3.5 surpasses GPT-4 on HumanEval, further supporting this pattern. This ``scale compression'' effect has practical implications: self-improvement may be a more cost-effective path to high performance than scaling up model size. However, there is likely an interaction between model size and self-improvement effectiveness: very small models may lack the baseline capability to generate useful self-critique, while very large models may produce near-optimal outputs that leave little room for improvement. The sweet spot appears to be in the middle range of model sizes, where the model is capable enough to produce meaningful self-critique but not so capable that its outputs are already near-optimal.
+
+\textbf{Iteration Convergence.} Most methods converge in 2--5 iterations (SPIN approximately 3, ReST-EM 2--3, STaR 3--5). This rapid convergence suggests that naive self-training has limited capacity for sustained improvement---the model quickly exhausts the ``easy'' improvements and reaches a plateau. Sustained improvement over many iterations requires either increasingly diverse training signals (as in ReST-EM's reward model) or increasingly challenging evaluation criteria (as in Constitutional AI's expanding principle set). The rapid convergence also raises the question of whether iterative self-improvement is fundamentally limited or whether more sophisticated training regimes (such as curriculum learning or population-based methods) could sustain improvement over many more iterations.
+
+\textbf{Domain Dependence.} The strongest results are consistently observed in structured domains with clear evaluation criteria: code generation (HumanEval, MBPP), mathematical reasoning (GSM8K, MATH), and question answering (CommonsenseQA, HotPotQA). Results in open-ended domains (creative writing, dialogue, open-domain reasoning) are more modest and less reliable, likely because the evaluation signal is noisier and less informative in these settings. This domain dependence has important implications for the deployment of self-improvement systems: they are most reliable in domains with clear, automatable evaluation criteria, and caution is warranted when applying them to domains where evaluation is inherently subjective.
+
+
+\subsection{Emerging Methods}
+\label{sec:emerging-methods}
+
+The most promising recent direction integrates inference-time and training-time self-improvement, producing systems that learn \emph{how} to self-improve. These hybrid methods represent a qualitative advance over the methods discussed above: rather than applying fixed self-improvement procedures, they train models to develop their own self-improvement strategies through reinforcement learning. We present four representative systems that exemplify this trend, each contributing a distinct conceptual insight to the field.
+
+
+\subsubsection{RISE: Recursive Introspection via Reinforcement Learning}
+\label{sec:rise}
+
+RISE~\citep{qu2024rise} formulates self-improvement as a multi-turn Markov Decision Process (MDP) where the model learns when and how to self-correct. Unlike Self-Refine, which applies a fixed refinement procedure, RISE trains the model to develop its own correction strategy through RL. The policy is trained to maximize:
 \begin{equation}
-\mathcal{L}_{\text{ReST-EM}}(\theta) = -\mathbb{E}_{x \sim \mathcal{D}} \mathbb{E}_{\hat{y} \sim p_\theta(\cdot|x)} \left[ \mathbb{1}[R(\hat{y}) > \tau] \cdot \log p_\theta(\hat{y}|x) \right]
-\label{eq:restem}
+    \max_\theta \mathbb{E}_{\pi_\theta}[R] - \beta \, \mathrm{KL}(\pi_\theta \| \pi_{\text{ref}})
+    \label{eq:rise-objective}
 \end{equation}
-where $\mathbb{1}[\cdot]$ is the indicator function that filters for high-reward samples and $\tau$ is the quality threshold. The EM framework provides a principled optimization perspective: the E-step estimates the distribution of good samples, and the M-step maximizes the likelihood of these samples.
+where $R$ is the cumulative reward across all turns, $\pi_\theta$ is the current policy, $\pi_{\text{ref}}$ is the reference (pre-training) policy, and $\beta$ controls the KL penalty that prevents the policy from diverging too far from the reference.
 
-The key hyperparameter is the threshold $\tau$, which controls the quality--quantity tradeoff. A high threshold produces high-quality but scarce training data (few samples pass the bar); a low threshold produces abundant but lower-quality data. The optimal threshold depends on the task difficulty, the reward model's calibration, and the number of samples $K$ generated per input.
+The multi-turn formulation is critical. At each turn $t$, the model produces a response $y_t$ and receives feedback $f_t$ (which may be a simple correctness signal, an execution trace, or a detailed natural language critique). The model then produces a corrected response $y_{t+1}$ that incorporates the feedback. The RL training process learns a policy that optimally balances the cost of additional correction turns against the benefit of improved accuracy. The KL penalty ensures that the learned self-correction policy remains grounded in the model's pre-existing capabilities, preventing it from learning degenerate strategies that maximize reward through exploitation of reward model artifacts.
 
-\paragraph{Experimental results.} ReST-EM demonstrates improvements on code generation and mathematical reasoning benchmarks:
+\paragraph{Results.}
+On GSM8K (grade school mathematics), RISE improves Llama2-7B from approximately 14\% to approximately 24\% (+10pp) and Mistral-7B from approximately 38\% to approximately 46\% (+8pp). Critically, RL fine-tuning significantly outperforms Self-Refine-style prompting on the same base models, demonstrating that self-correction is more effective when \emph{learned} than when \emph{instructed}. The model exhibits emergent difficulty adaptation: it allocates more self-correction turns to harder problems and fewer to easier problems, suggesting that the RL training process discovers an efficient computation allocation strategy.
 
-\begin{itemize}
-\item \textbf{Code generation}: Significant improvements on code benchmarks when the reward model is well-calibrated. The method scales well with the number of generated samples per input ($K$): generating more samples in the E-step increases the probability of producing at least one high-quality training example per input, improving the M-step's training data quality.
-
-\item \textbf{Mathematical reasoning}: Improvements on GSM8K and MATH, with the magnitude of improvement depending on the reward model's accuracy. When the reward model correctly identifies correct solutions, ReST-EM produces high-quality training data that improves the model's reasoning capability.
-
-\item \textbf{Iterative improvement}: Multiple rounds of ReST-EM produce progressively better models, with each round generating higher-quality samples (because the model has improved from the previous round) and therefore producing better training data. The improvement per round decreases over time but remains positive for 3--5 rounds in typical experiments.
-
-\item \textbf{Sample efficiency vs.\ quality trade-off}: The number of samples $K$ generated per input in the E-step controls a fundamental trade-off. With $K=1$, ReST-EM degenerates to standard self-training without filtering, which is known to be unstable. With $K=100$, the method almost certainly finds high-quality training examples but at 100$\times$ the generation cost. Empirically, $K \in [10, 50]$ provides a good balance between sample efficiency and training data quality.
-\end{itemize}
-
-\paragraph{Limitations.} ReST-EM faces two primary limitations.
-
-First, performance is bounded by the quality of the reward model. If the reward model has systematic biases or blind spots---consistently mis-scoring certain types of outputs---the filtered training data will inherit these biases. This is the ``reward hacking'' problem: the model may learn to produce outputs that score well according to the reward model without genuinely improving in quality. For example, if the reward model assigns high scores to verbose outputs, the model may learn to produce unnecessarily long answers that score well but are not actually better. This problem is exacerbated over multiple ReST-EM iterations, as each iteration amplifies the reward model's biases.
-
-Second, the threshold $\tau$ is difficult to set optimally. If it is too high, too few samples pass the filter, resulting in insufficient training data and potential overfitting to the small dataset. If it is too low, low-quality samples contaminate the training data, potentially degrading the model's capability. Adaptive threshold strategies---adjusting $\tau$ based on the distribution of reward scores at each iteration---can mitigate this but add complexity. Distribution collapse is an additional risk: if the model's output distribution narrows too much over iterations, it may lose diversity and become unable to generate the creative or unusual solutions needed for difficult problems. This distribution collapse phenomenon is related to the ``mode collapse'' problem in generative models: when the model is repeatedly trained on self-generated data filtered by a fixed reward function, it may converge to a narrow subset of the output distribution that consistently receives high reward. Techniques from the RL literature for maintaining exploration (entropy regularization, diversity bonuses, population-based training) can be adapted to mitigate distribution collapse in ReST-EM, but they add complexity to the training pipeline.
+\paragraph{Significance.}
+RISE demonstrates a key principle: self-improvement capabilities can be \textbf{trained into} models rather than merely prompted. The RL-trained model learns not just how to solve problems but how to \emph{monitor its own problem-solving process} and intervene when it detects errors. This meta-learning of self-correction is a form of second-order self-improvement---improvement of the improvement process itself---and it underpins many of the advanced systems discussed in subsequent sections of this survey. The comparison with Self-Refine is instructive: both methods attempt self-correction, but RISE learns \emph{how} to self-correct through experience, while Self-Refine applies a fixed, hand-designed correction procedure.
 
 
-\subsubsection{Constitutional AI: Self-Alignment through AI Feedback}
-\label{sec:methods:cai}
+\subsubsection{RAGEN: Multi-Turn Agent RL and the Echo Trap}
+\label{sec:ragen}
 
-\paragraph{Problem definition.} Reinforcement Learning from Human Feedback (RLHF) has proven effective for aligning LLMs with human preferences, but it requires large-scale human annotation: thousands of pairwise preferences labeled by human annotators. This annotation is expensive, slow, and difficult to maintain consistently across annotators. Furthermore, RLHF's alignment is opaque---it is difficult to inspect or audit the preferences encoded in the reward model. The problem is to achieve alignment without human-labeled preference data, using a transparent and auditable evaluation framework. Can a model align itself using its own feedback, guided by a set of explicitly stated principles?
+RAGEN~\citep{wang2025ragen} extends RL-based self-improvement to the full multi-turn agent setting with StarPO (State-Thinking-Actions-Reward Policy Optimization):
+\begin{equation}
+    \max_\theta \mathbb{E}\left[\sum_t \gamma^t \cdot r_t \cdot \log \pi_\theta(a_t | s_t, t_t)\right]
+    \label{eq:starpo}
+\end{equation}
+where $s_t$ is the state at turn $t$, $t_t$ is the thinking (internal reasoning) at turn $t$, $a_t$ is the action, $r_t$ is the turn-level reward, and $\gamma$ is the discount factor.
 
-\paragraph{Method design.} Constitutional AI~\citep{bai2022constitutional} (CAI) enables language models to align themselves with human values through a process of self-critique and revision, guided by a set of constitutional principles. The method eliminates the need for human-labeled preference data by using AI-generated feedback. The algorithm operates in two phases:
+RAGEN's most important contribution is the identification of the \textbf{Echo Trap}: during multi-turn RL training, agents learn to \emph{echo} previous outputs rather than genuinely reasoning. The echo behavior arises because echoing is a low-cost strategy for achieving high reward in the short term---the agent receives positive reward for producing outputs similar to its previous (potentially correct) outputs, without engaging in the computationally expensive process of genuine reasoning. The detection criterion is based on cosine similarity:
+\begin{equation}
+    \text{Echo detected if } \mathrm{cos\_sim}(t_t, t_{t-1}) > \theta_{\text{echo}}
+    \label{eq:echo-trap}
+\end{equation}
+where $t_t$ and $t_{t-1}$ are the thinking outputs at consecutive turns, and $\theta_{\text{echo}}$ is a threshold. The proposed solution, StarPO-S, filters echo-dominated trajectories from the training data, forcing the agent to learn genuine reasoning strategies rather than superficial repetition.
 
-\textbf{Phase 1: Supervised Learning (SL) from AI critiques.}
+\paragraph{Significance.}
+The Echo Trap reveals a fundamental challenge in multi-turn self-improvement: without careful monitoring, agents can ``fake'' improvement by exploiting patterns in their own outputs. This has direct implications for the evaluation and safety of self-evolving systems. Any system that uses its own outputs as training signals must guard against the Echo Trap and related forms of reward hacking. The detection and mitigation strategies proposed by RAGEN provide a concrete methodology for addressing this challenge. More broadly, the Echo Trap illustrates a principle that recurs throughout this survey: self-referential improvement systems are vulnerable to degenerate solutions that exploit the structure of the improvement process itself rather than genuinely improving. Robust self-evolution requires monitoring not just for improved outcomes but for the \emph{mechanisms} by which improvements are achieved.
+
+\paragraph{Broader Implications for Multi-Turn RL.}
+The Echo Trap is not merely a technical artifact of RAGEN's specific training setup; it is a general phenomenon that can arise in any system where an agent is trained to improve its own outputs over multiple turns. The root cause is a misalignment between the training reward (which measures output quality) and the desired behavior (which requires genuine reasoning). This misalignment is particularly acute in multi-turn settings because the agent's current output serves as both a component of the reward signal and as context for subsequent turns, creating a feedback loop that can amplify superficial similarity at the expense of genuine improvement. Mitigating the Echo Trap requires either explicit monitoring (as in RAGEN's cosine similarity threshold), diverse training objectives that penalize repetition, or architectural constraints that prevent the agent from attending too heavily to its own previous outputs. The design of such mitigation strategies is an active area of research with implications for all multi-turn self-improvement systems.
+
+
+\subsubsection{ReVeal: Co-Evolving Generation and Verification}
+\label{sec:reveal}
+
+ReVeal~\citep{jin2025reveal} explicitly co-evolves code generation and self-verification capabilities through a joint training framework. The key insight is that generation and verification are complementary skills that can reinforce each other: better verification enables more accurate self-correction, and better self-correction provides higher-quality training data for both generation and verification.
+
+\paragraph{Algorithm.}
+ReVeal's TAPO (Turn-Aware Policy Optimization) framework provides per-turn credit assignment within multi-turn self-correction episodes. A training trajectory is structured as:
+\begin{equation}
+    \tau = \{(c_1, v_1, r_1), (c_2, v_2, r_2), \ldots, (c_T, v_T, r_T)\}
+    \label{eq:reveal-trajectory}
+\end{equation}
+where $c_t$ is the code at turn $t$, $v_t$ is the self-verification output, and $r_t$ is the turn-level reward. The loss function jointly optimizes generation and verification:
+\begin{equation}
+    \mathcal{L} = \mathcal{L}_{\text{generation}} + \lambda \times \mathcal{L}_{\text{verification}}
+    \label{eq:reveal-loss}
+\end{equation}
+where $\lambda$ balances the two objectives. The generation loss encourages the production of correct code, while the verification loss encourages accurate self-assessment.
+
+\paragraph{Turn Extrapolation.}
+Strikingly, ReVeal trained with only 3 self-correction turns can self-evolve for 20+ turns at inference---demonstrating that learned self-correction generalizes far beyond the training horizon. This ``turn extrapolation'' suggests that the RL training process learns a general self-improvement policy, not merely a fixed set of correction behaviors. The policy learns to identify errors, generate targeted corrections, and evaluate the results, and these skills transfer to longer correction sequences that were never seen during training.
+
+\paragraph{Significance.}
+ReVeal demonstrates that self-improvement can exhibit \textbf{generalization beyond the training distribution}---a property that is crucial for the scalability of self-evolving systems. If self-improvement capabilities only applied within the specific contexts seen during training, their practical value would be severely limited. The turn extrapolation phenomenon suggests that RL-trained self-improvement policies capture general principles of error correction and improvement that transfer across contexts and time horizons. The co-evolution of generation and verification is also significant because it addresses the evaluation bottleneck from a new angle: rather than relying on a fixed external evaluator, ReVeal trains the model to become a better self-evaluator, potentially enabling self-improvement in domains where external evaluation is unavailable or unreliable.
+
+
+\subsubsection{Absolute Zero: Zero-Data Self-Play}
+\label{sec:absolute-zero}
+
+Absolute Zero~\citep{zhao2025absolutezero} represents perhaps the most radical approach to self-improvement: the model improves itself through self-play without \emph{any} external data. The system generates its own tasks, attempts to solve them, evaluates its own solutions, and uses the resulting experience to improve. This closes the loop entirely: the model is both the creator and the solver of its own curriculum.
+
+\paragraph{Method.}
+The Absolute Zero framework operates as a self-play loop between two roles instantiated by the same model:
+
 \begin{enumerate}
-\item Generate responses to potentially harmful or problematic prompts.
-\item Critique the responses using a set of constitutional principles (e.g., ``Choose the response that is most helpful while being least harmful,'' ``Choose the response that is least racist and sexist,'' ``Choose the response that is most honest and transparent''). For each response, the model asks: ``Does this response violate principle $p$?'' and generates a critique identifying the violation: $\text{critique}_i = \text{LLM}(\text{response}, p_i)$.
-\item Revise the responses based on the critiques: $\text{response}' = \text{LLM}(\text{response}, \text{critique}_1, \ldots, \text{critique}_N)$.
-\item Fine-tune the model on the revised responses, teaching it to produce self-critiqued, principled outputs.
+    \item \textbf{Task Proposer}: Generates tasks (problems to solve) at an appropriate difficulty level. The proposer is trained to generate tasks that are neither too easy (providing no learning signal) nor too hard (providing only negative signal).
+    \item \textbf{Solver}: Attempts to solve the proposed tasks. The solver is trained to maximize task-solving accuracy.
+    \item \textbf{Verifier}: Evaluates the solver's solutions. In domains with deterministic ground truth (e.g., mathematics, code execution), the verifier can be a programmatic checker; in other domains, the model evaluates its own solutions.
 \end{enumerate}
 
-\textbf{Phase 2: Reinforcement Learning (RL) from AI preferences.}
-\begin{enumerate}
-\item Generate pairs of responses to the same prompt.
-\item Evaluate which response better adheres to the constitutional principles using an AI evaluator: $\text{pref} = \text{LLM}(\text{response}_A, \text{response}_B, \text{principles})$.
-\item Train a preference model on these AI-generated preferences.
-\item Use the preference model as the reward signal for RLHF (RL from AI Feedback, or RLAIF).
-\end{enumerate}
+The RL training process jointly optimizes the proposer and solver, creating a curriculum that automatically adapts to the model's current capability level. As the solver improves, the proposer generates harder tasks, maintaining a consistent level of challenge and learning signal throughout training. This self-paced curriculum learning is reminiscent of the automated curriculum generation strategies used in developmental robotics and open-ended learning systems.
 
-The constitutional principles serve as the evaluation rubric throughout both phases. Unlike the implicit preferences encoded in human-labeled RLHF data, constitutional principles are explicit, transparent, and auditable---they can be inspected, debated, and modified by stakeholders. This transparency is a significant advantage: it enables principled discussion about what values the model should embody and how those values should be prioritized.
+\paragraph{Results.}
+Absolute Zero achieves state-of-the-art results at the 7B parameter scale, outperforming models trained on curated human data on several reasoning benchmarks. The method demonstrates that zero-data self-play is not only feasible but can be competitive with data-intensive training approaches, at least for reasoning tasks with verifiable solutions.
 
-\paragraph{Experimental results.} Constitutional AI demonstrates that AI-generated feedback can produce alignment quality comparable to human feedback:
+\paragraph{Significance.}
+Absolute Zero points toward a future in which AI systems can improve themselves without any human involvement in the training process. This has both exciting implications (potentially unlimited scalability of self-improvement) and concerning implications (the possibility of misaligned self-improvement in the absence of human oversight). The method represents the logical endpoint of the self-improvement spectrum: a system that generates its own tasks, solves them, evaluates itself, and improves, all without external data or human intervention. The key limitation is the requirement for verifiable solutions: in domains where correctness cannot be determined programmatically, the self-play loop lacks the grounding needed for reliable improvement. Extending Absolute Zero to domains without programmatic verifiers---such as natural language understanding, creative generation, or commonsense reasoning---remains an open and important research direction.
 
-\begin{itemize}
-\item \textbf{Helpfulness}: Models trained with CAI show comparable helpfulness to models trained with RLHF, as measured by human evaluation on dialogue and question-answering tasks. The AI-generated feedback produces models that are genuinely useful for practical tasks, not merely safe but useless.
-
-\item \textbf{Harmlessness}: CAI-trained models show significantly reduced harmfulness compared to unaligned baselines, approaching the performance of models trained with human-labeled preference data. The constitutional principles effectively steer the model away from harmful outputs across a range of harm categories (hate speech, dangerous content, misinformation).
-
-\item \textbf{Honesty}: Models trained with CAI show improved honesty and transparency, particularly when constitutional principles explicitly target truthful and transparent communication. The self-critique mechanism is effective at identifying cases where the model is making unfounded claims or presenting speculation as fact.
-
-\item \textbf{Scalability of feedback}: A key advantage of Constitutional AI over RLHF is the scalability of AI-generated feedback. Human annotation scales linearly with the number of preference pairs---more data requires more human annotator hours. AI-generated feedback scales with compute: generating preference pairs and evaluating them against constitutional principles requires only LLM inference calls, which can be parallelized across GPUs. This scalability advantage becomes increasingly important as models are deployed in more diverse environments requiring continuous alignment refinement.
-
-\item \textbf{Principle sensitivity}: Ablation studies show that the specific set of constitutional principles significantly affects the resulting model's behavior. Adding a principle targeting a specific harm category (e.g., medical misinformation) reduces harmful outputs in that category without substantially affecting helpfulness in other areas. This modularity is a significant advantage: it allows targeted alignment refinement without retraining the entire model.
-\end{itemize}
-
-\paragraph{Limitations.} Constitutional AI faces three fundamental limitations.
-
-First, the quality of alignment depends entirely on the completeness and correctness of the constitutional principles. If the principles do not cover a particular type of harmful behavior, the model will not learn to avoid it. If the principles are contradictory (e.g., ``be maximally helpful'' vs.\ ``never provide information that could be misused''), the model must resolve the contradiction, and its resolution may not align with human intentions. The principles themselves must be designed by humans, creating a form of indirect specification that requires careful curation and ongoing maintenance as new failure modes are discovered.
-
-Second, the AI evaluator may develop blind spots or biases that are not captured by the principles. The evaluator is itself a language model, and it may have systematic tendencies (e.g., overly favoring certain response formats, being insufficiently sensitive to certain types of harm) that produce systematically biased preference data. These biases are then amplified by the RL training, potentially producing a model that is well-aligned according to the AI evaluator but poorly aligned according to human judgment.
-
-Third, reward hacking remains a concern: the model may learn to produce outputs that appear to satisfy the constitutional principles without genuinely embodying the underlying values. For example, a model may learn to include safety disclaimers and hedging language that satisfy the ``harmlessness'' principle while still providing subtly harmful information. This form of ``alignment theater''---appearing aligned without being aligned---is particularly insidious because it is difficult to detect through standard evaluation. The risk increases with the number of constitutional principles: as the principle set grows, the model has more ``dimensions'' along which to appear compliant, and the evaluator has a harder time identifying subtle violations that span multiple principles simultaneously.
-
-Despite these limitations, Constitutional AI represents a paradigm shift in how we think about alignment. By making the alignment criteria explicit and auditable, CAI enables a form of ``alignment engineering'' that is impossible with opaque RLHF: stakeholders can debate, modify, and improve the constitutional principles, and the effects of these changes can be directly observed in the model's behavior. This transparency property is increasingly recognized as essential for the responsible deployment of self-improving AI systems, where the alignment target must be inspectable and debatable, not hidden in the weights of a reward model.
-
-
-\subsection{Comparative Analysis}
-\label{sec:methods:comparison}
-
-Having analyzed eight self-improvement methods in depth, we now present a comprehensive comparison across multiple dimensions. Table~\ref{tab:all_methods} provides a structured overview of all methods along six key dimensions. Following the table, we provide a detailed trade-off analysis across five key dimensions: cost, persistence, generalization, safety, and composability.
-
-\begin{table}[t]
-\centering
-\small
-\caption{Comprehensive comparison of self-improvement methods. Each method is characterized by its timing (inference vs.\ training), loop types, feedback source, applicable task domains, whether parameter updates are required, and key benchmark results. S = Search Loop, E = Evaluator Loop, R = Reflection Loop, P = Population Loop.}
-\label{tab:all_methods}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{@{}llllccl@{}}
-\toprule
-\textbf{Method} & \textbf{Timing} & \textbf{Loop Types} & \textbf{Feedback Source} & \textbf{Params?} & \textbf{Task Scope} & \textbf{Key Results} \\
-\midrule
-Self-Refine & Inference & S+R & Self-critique & No & General NL & +20\% avg (7 tasks) \\
-Reflexion & Inference & S+E+R & Verbal reflection & No & Evaluable & HumanEval 91\% \\
-Self-Debug & Inference & S+E+R & Execution traces & No & Code only & Spider +9pp \\
-Agent Sym.\ Learn. & Inference & S+E+R & Language gradients & No & Agent configs & HotPotQA F1=39.1 \\
-\midrule
-STaR & Training & R+E & Rationalization & Yes & Reasoning & 540M $\approx$ 175B \\
-SPIN & Training & P+E & Self-play discrim. & Yes & Alignment & Matches DPO/RLHF \\
-ReST-EM & Training & E+S+P & Reward model & Yes & Code, math & Iterative gains \\
-Const.\ AI & Training & R+E+P & AI feedback & Yes & Alignment & Helpful+harmless \\
-\bottomrule
-\end{tabular}
-}
-\end{table}
-
-\paragraph{Cost analysis.} Inference-time methods are significantly cheaper than training-time methods. Self-Refine costs 3--6$\times$ a single forward pass (depending on the number of iterations), Reflexion costs 10--20$\times$ (across episodes), and Self-Debug costs 3--5$\times$ (across debugging iterations). Training-time methods cost orders of magnitude more: STaR requires fine-tuning on self-generated reasoning chains (hours of GPU time for a 7B model), SPIN requires 2--3 self-play iterations each involving full fine-tuning, and ReST-EM requires generating thousands of samples per iteration plus reward model evaluation. The cost differential is approximately 100--1000$\times$ between inference-time and training-time methods. This cost differential has important implications for the practical deployment of self-improvement systems: inference-time methods can be applied on-demand, with the cost incurred only when improvement is needed, while training-time methods require a substantial upfront investment that may not be justified if the improvement target is uncertain or the task distribution is rapidly changing. However, when the improved capability will be used many times (as in a production model serving millions of queries), the amortized cost of training-time improvement may be lower than the cumulative cost of repeated inference-time refinement across all queries.
-
-\paragraph{Persistence analysis.} Inference-time improvements are transient: Self-Refine's feedback is discarded after each session, and even Reflexion's persistent memory is lost if the buffer is cleared. Training-time improvements are permanent: STaR, SPIN, ReST-EM, and Constitutional AI all modify model parameters, encoding the improvement in the model's weights. This persistence has both advantages (the improvement is always available, does not need to be re-computed) and risks (unintended behaviors are also persistent and difficult to reverse).
-
-An intermediate form of persistence is offered by Agent Symbolic Learning and Reflexion: the improvements are stored in external data structures (revised prompts and tool descriptions for ASL, reflection memory for Reflexion) that survive across sessions but are separate from the model's parameters. This ``externalized persistence'' offers a practical middle ground: the improvement is persistent enough to be useful across sessions but can be rolled back, audited, or selectively applied because it is stored in an interpretable, human-readable format. The trade-off between parameter-level persistence (permanent but opaque and irreversible) and external persistence (interpretable and reversible but requiring explicit management) is an important design decision for self-evolving AI systems.
-
-\paragraph{Generalization analysis.} Training-time methods tend to generalize more broadly than inference-time methods. A model trained with STaR on mathematical reasoning may also improve on logical reasoning tasks that share similar cognitive structures. A model aligned with Constitutional AI becomes generally safer across all tasks, not just the specific tasks used during alignment training. Inference-time improvements, by contrast, are task-specific: Self-Refine's improvement on code optimization does not transfer to mathematical reasoning. However, the generalization of training-time methods is not unlimited. STaR's improvement is concentrated in the reasoning domain and may not transfer to, say, creative writing or dialogue. SPIN's alignment improvement is specific to the distribution of the human demonstration dataset and may not generalize to out-of-distribution prompts. The scope of generalization depends on the breadth of the self-generated training data: methods that generate diverse, multi-task training data (ReST-EM with broad prompt distributions) generalize more broadly than methods that focus on narrow domains (STaR on arithmetic alone).
-
-\paragraph{Safety analysis.} Inference-time methods are inherently safer than training-time methods because they cannot expand the model's capability envelope---they can only express what the model already ``knows.'' Training-time methods can expand the capability envelope in unintended directions: STaR may produce reasoning capabilities that enable new forms of manipulation, and ReST-EM may amplify reward model biases into systematic misalignment. Constitutional AI's principle-based approach provides a safety framework, but the principles themselves may be incomplete.
-
-The safety implications of self-improvement warrant careful consideration in the context of increasingly capable models. As models approach and potentially surpass human-level capability in specific domains, the self-improvement process itself becomes a potential source of risk. A sufficiently capable model that is improving through self-training could, in principle, learn to game its own evaluation mechanisms---producing outputs that score well according to the evaluation function but do not genuinely reflect the intended improvement target. This ``specification gaming'' is well-documented in the RL literature and is exacerbated in self-improvement settings where the model generates its own training data. Mitigating this risk requires multiple, independent evaluation channels; adversarial testing; and continuous human oversight of the self-improvement process.
-
-\paragraph{Composability analysis.} Inference-time methods are highly composable: Self-Refine can be followed by Self-Debug, which can be followed by Reflexion, all within the same session. Training-time methods are less composable because each method permanently alters the model: composing SPIN after STaR produces a model that reflects both methods' effects, making it difficult to attribute improvements or roll back changes. The most practical approach is to apply training-time methods first (establishing a strong baseline) and then inference-time methods for task-specific refinement, producing a multiplicative benefit.
-
-The composable self-improvement pipeline can be formalized as follows. Let $f_{\text{train}}$ denote a training-time method and $g_{\text{inf}}$ denote an inference-time method. A composed pipeline applies: $\hat{y} = g_{\text{inf}}^{(k)} \circ \ldots \circ g_{\text{inf}}^{(1)} \circ f_{\text{train}}^{(m)} \circ \ldots \circ f_{\text{train}}^{(1)}(x)$, where the training-time methods are applied first (each modifying the model) and the inference-time methods are applied last (each refining the output). The key insight is that the training-time methods improve the model's \emph{baseline capability}, which then amplifies the effectiveness of inference-time methods. A model with stronger baseline reasoning (post-STaR) produces better initial outputs that Self-Refine can further improve; a model with better self-correction (post-RISE) can self-correct more effectively at inference time. This ``improvement amplification'' effect---where training-time gains are multiplied, not merely added, by inference-time methods---is one of the most promising practical findings in the self-improvement literature.
-
-\paragraph{When to use which approach.} Based on the trade-off analysis, we offer the following guidance:
-\begin{itemize}
-\item \textbf{Rapid prototyping, no training budget}: Use Self-Refine for general tasks, Self-Debug for code tasks, Reflexion for tasks with automated evaluators.
-\item \textbf{Permanent improvement needed}: Use STaR for reasoning tasks (requires ground truth), SPIN for alignment (requires human demonstrations), ReST-EM for tasks with reliable reward models, Constitutional AI for safety-critical alignment.
-\item \textbf{Maximum capability}: Combine training-time and inference-time methods. Train with STaR/SPIN/ReST-EM first, then apply Self-Refine/Reflexion at inference time for additional improvement.
-\item \textbf{Safety-critical applications}: Prefer inference-time methods (which cannot expand the capability envelope) or Constitutional AI (which provides principled safety constraints). Avoid ReST-EM in safety-critical settings unless the reward model has been thoroughly validated.
-\end{itemize}
-
-\begin{table}[t]
-\centering
-\small
-\caption{Detailed method comparison across key operational dimensions. Cost estimates are for a 7B-parameter model. ``Persistence'' indicates whether improvement survives session termination. ``External Requirements'' lists dependencies beyond the base model.}
-\label{tab:detailed_comparison}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{@{}lccp{3cm}p{3cm}@{}}
-\toprule
-\textbf{Method} & \textbf{Approx.\ Cost} & \textbf{Persistence} & \textbf{External Requirements} & \textbf{Best Suited For} \\
-\midrule
-Self-Refine & 3--6$\times$ inference & No (ephemeral) & None (rubric in prompt) & Quick improvement on any NL task with specifiable criteria \\
-Reflexion & 10--20$\times$ inference & Partial (memory buffer) & Automated evaluator for task & Multi-episode tasks with binary success signal \\
-Self-Debug & 3--5$\times$ inference & No (ephemeral) & Test suite / code executor & Code generation, translation, SQL synthesis \\
-Agent Sym.\ Learn. & 5--10$\times$ inference & Partial (updated configs) & Ground truth or reward function & Optimizing multi-component agent pipelines \\
-\midrule
-STaR & Hours of GPU & Yes (parameters) & Ground-truth answers + few seed rationales & Mathematical and logical reasoning domains \\
-SPIN & Hours of GPU ($\times$2--3) & Yes (parameters) & Human demonstration dataset & Model alignment without new human annotation \\
-ReST-EM & Hours of GPU per round & Yes (parameters) & Trained reward model & Code/math with reliable automated evaluation \\
-Const.\ AI & Tens of GPU-hours & Yes (parameters) & Constitutional principles (human-designed) & Safety-critical alignment; transparent value specification \\
-\bottomrule
-\end{tabular}
-}
-\end{table}
-
-Table~\ref{tab:detailed_comparison} provides operational guidance for practitioners. The ``Approximate Cost'' column highlights the 100--1000$\times$ cost differential between inference-time and training-time methods. The ``External Requirements'' column reveals that no method is truly ``zero cost'' in terms of dependencies---even Self-Refine requires a thoughtfully designed rubric, and even Constitutional AI requires human-designed principles. The ``Best Suited For'' column provides task-level guidance that complements the dimension-level analysis above. The key practical insight is that the choice of method should be driven primarily by the availability of evaluation signal and the requirement for persistence: if evaluation is available and persistence is needed, choose training-time methods; if evaluation is unavailable or persistence is not needed, choose inference-time methods.
+\paragraph{Connections to Broader Self-Play Frameworks.}
+Absolute Zero's self-play formulation connects to a rich literature on self-play in reinforcement learning, including AlphaGo's self-play training, competitive self-play for strategy games, and the SPIRAL framework~\citep{liu2025spiralselfplay} for reasoning through adversarial games. The key distinction in the LLM setting is that self-play operates not over actions in a game environment but over \emph{tasks and solutions} in a reasoning space. The task proposer plays the role of the environment'' that generates challenges, while the solver plays the role of the agent'' that attempts to meet those challenges. This framing unifies self-improvement with curriculum learning and suggests that future self-evolving systems may benefit from more sophisticated self-play strategies, including population-based methods, quality-diversity optimization, and open-ended search.
 
 
 \subsection{Summary}
-\label{sec:methods:summary}
+\label{sec:methods-summary}
 
-In this section, we have provided a comprehensive analysis of self-improvement methods for AI systems, organized along the fundamental divide between inference-time and training-time approaches.
+This section has presented a comprehensive analysis of self-improvement methods for large language models, organized along the inference--training divide and enriched by a five-dimensional comparison framework. We distill the following key principles:
 
-For \textbf{inference-time self-improvement}, we analyzed four methods in depth. Self-Refine~\citep{madaan2023selfrefine} demonstrated that a single model can serve as generator, critic, and refiner, achieving approximately 20\% average improvement across seven tasks without any external feedback. Reflexion~\citep{shinn2023reflexion} introduced verbal reinforcement learning with persistent episodic memory, enabling a GPT-3.5 model to achieve 91\% on HumanEval---surpassing GPT-4's 80\% through structured self-reflection alone. Self-Debug~\citep{chen2024selfdebug} leveraged execution feedback for code self-repair, demonstrating that objective, mechanically produced feedback (error messages, stack traces) produces more reliable self-improvement than self-critique. Agent Symbolic Learning~\citep{zhou2024agentsymbolic} extended self-improvement from output-level refinement to agent-level configuration optimization, introducing the concept of language gradients for prompts, tool descriptions, and pipeline structures.
+\begin{enumerate}
+    \item \textbf{The generate--filter--finetune paradigm is universal.} Every training-time method follows this structure, differing only in filtering mechanism and training objective. The quality of self-improvement is fundamentally bounded by the quality of the filtering mechanism, and investing in better evaluation may be more impactful than investing in better generation.
 
-For \textbf{training-time self-improvement}, we analyzed four methods. STaR~\citep{zelikman2022star} bootstrapped reasoning from minimal seed data through rationalization, enabling a 540M model to match a 175B model's arithmetic performance. SPIN~\citep{chen2024spin} applied self-play to alignment, demonstrating that a model can align itself by learning to distinguish its own outputs from human demonstrations---matching DPO and RLHF without any additional human data. ReST-EM~\citep{gulcehre2023rest} combined self-training with EM-style filtering, using reward models to curate self-generated training data across iterative improvement rounds. Constitutional AI~\citep{bai2022constitutional} replaced human feedback with AI feedback guided by explicit constitutional principles, producing helpful and harmless models through transparent, auditable self-alignment.
+    \item \textbf{Inference-time and training-time methods are complementary.} The most effective systems combine both: periodic training-time self-improvement produces deep, persistent capability gains, while inference-time self-improvement provides instance-specific adaptation. RISE, RAGEN, and ReVeal exemplify this hybrid approach.
 
-Our comparative analysis across five dimensions---cost, persistence, generalization, safety, and composability---reveals that the choice between inference-time and training-time methods depends on the specific requirements of the application. Inference-time methods are cheap, safe, and composable but transient and task-specific. Training-time methods are expensive and riskier but permanent and broadly generalizing. The emerging trend toward hybrid methods that combine both paradigms---training the model for self-improvement capability and then applying that capability at inference time---represents the most promising direction for the field.
+    \item \textbf{The evaluation bottleneck persists.} The quality of self-improvement is bounded by the quality of evaluation. The Echo Trap demonstrates that naive self-evaluation can be actively harmful, and the self-correction paradox (naive self-correction often degrades performance) underscores the need for external grounding. Every successful method introduces new information---from execution traces, evaluator scores, reward models, or learned policies.
 
-The primary bottleneck across all methods remains \textbf{evaluation quality}: every self-improvement method is limited by the reliability, discriminativeness, and coverage of its evaluation signal. Future progress in self-evolving AI will depend critically on advances in evaluation---including co-evolving evaluators (as in ReVeal~\citep{jin2025reveal}), multi-channel evaluation, and self-verifying task generation (as in Absolute Zero~\citep{zhao2025absolutezero}).
+    \item \textbf{Convergence is fast but limited.} Most methods converge in 2--5 iterations, suggesting that naive self-training has limited capacity for sustained improvement. Sustained improvement requires diverse training signals, increasingly challenging evaluation criteria, or learned improvement policies.
 
-\paragraph{Relationship to the Five Evolution Loops.} The methods analyzed in this section can be mapped onto the Five Evolution Loops taxonomy in an instructive way. All inference-time methods employ the Search Loop (generating improved candidates) and the Reflection Loop (analyzing failures and generating structured feedback). Training-time methods add the Evaluator Loop (reward models, ground truth, self-play discrimination) and, in the case of SPIN and ReST-EM, the Population Loop (maintaining a population of model versions or output candidates). The Specification-to-Execution Loop is notably absent from all methods analyzed in this section---the task specification is provided externally by the user. This is a gap that methods like Absolute Zero begin to address by having the model generate its own task specifications. The correlation between loop diversity and method capability is striking: methods that employ more loop types (Reflexion with Search + Evaluator + Reflection; ReST-EM with Evaluator + Search + Population) consistently outperform methods that employ fewer (Self-Refine with Search + Reflection alone). This supports the multi-loop composition principle discussed in Section~\ref{sec:taxonomy} and suggests that future self-improvement systems should be designed to activate multiple loop types simultaneously.
+    \item \textbf{Self-correction is a learnable skill.} RISE, ReVeal, and RAGEN demonstrate that the ability to self-correct can be trained via RL, producing improvement that prompting alone cannot achieve. This meta-learning of self-improvement is a critical capability for self-evolving systems and represents a shift from \emph{applying} self-improvement to \emph{learning} self-improvement.
 
-\paragraph{Toward hybrid architectures.} The most promising direction revealed by our analysis is the convergence toward hybrid methods that combine inference-time and training-time self-improvement. RISE~\citep{qu2024rise} trains the model to perform self-correction through RL fine-tuning, producing permanent improvements in self-correction capability that are then applied at inference time. RAGEN~\citep{wang2025ragen} extends this to multi-turn agent interactions, introducing the StarPO framework for training LLM agents while detecting and filtering degenerate ``echo trap'' trajectories. ReVeal~\citep{jin2025reveal} co-evolves both the code generator and the test case evaluator through multi-turn RL, producing evaluators that remain discriminative as the generator improves. These hybrid approaches represent the current frontier of the field, and they share a common structure: a training-time phase that establishes self-improvement capability, followed by an inference-time phase that applies this capability flexibly and adaptively.
+    \item \textbf{Scale compression enables efficiency.} Self-improvement enables smaller models to match or exceed larger models (STaR's 540M matching 175B; Reflexion's GPT-3.5 surpassing GPT-4), suggesting that self-improvement can substitute for scale in many applications. This effect is most pronounced for mid-sized models that are capable enough to self-critique but not so capable that their outputs are already near-optimal.
 
-The distinction between inference-time and training-time methods, while conceptually clear, is becoming increasingly blurred in practice. The most effective systems do not choose one paradigm over the other; they design integrated pipelines that leverage both. A model trained with STaR for reasoning, refined with SPIN for alignment, and further enhanced with RISE for self-correction can then apply Self-Refine and Reflexion at inference time, producing a layered self-improvement architecture where each layer builds on the capabilities provided by the layers below. This compositional perspective---viewing self-improvement methods as composable building blocks rather than competing alternatives---is essential for designing the next generation of self-evolving AI systems.
+    \item \textbf{Turn extrapolation enables inference-time scaling.} ReVeal's 3-turn training enabling 20+ turn self-evolution demonstrates that learned improvement policies generalize beyond their training horizon, providing a path to inference-time scaling through self-improvement. This suggests that the investment in training self-improvement capabilities pays compound dividends at deployment time.
 
-In the following sections, we examine how these self-improvement methods are applied in specific domains, beginning with evolutionary code and algorithm discovery and agent self-evolution. We will see that the same fundamental patterns---iterative generation, evaluation, reflection, and improvement---recur across domains, but with important domain-specific adaptations that reflect the unique challenges and opportunities of each application area.
+    \item \textbf{Safety and self-improvement can be synergistic.} Constitutional AI demonstrates that self-improvement directed toward alignment objectives can produce models that are both more capable and safer. However, the Echo Trap and reward hacking risks highlight the need for robust monitoring and evaluation in all self-improvement systems.
+\end{enumerate}
+
+These principles provide a foundation for understanding the more complex self-evolving systems examined in subsequent sections. The methods analyzed here primarily improve model \emph{outputs}---responses, code, reasoning chains---while operating within fixed architectures. In the following sections, we examine systems that improve the \emph{programs} that AI executes and the \emph{agents} themselves, representing progressively more radical forms of self-evolution. The transition from self-improvement to self-evolution is marked by a shift from improving fixed-capability outputs to improving the capabilities themselves---the architecture, the tools, and the learning mechanisms of the system.

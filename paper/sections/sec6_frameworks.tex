@@ -18,9 +18,9 @@ The agent framework landscape has undergone rapid evolution since early 2023. Un
 
 \subsubsection{The Pre-Framework Era (Pre-2023)}
 
-Before 2023, LLM-based agents were constructed ad hoc, with each research group building custom orchestration logic. Early systems such as ReAct~\citep{yao2023react} and Reflexion~\citep{shinn2023reflexion} demonstrated that LLMs could engage in multi-step reasoning and self-correction, but they lacked reusable infrastructure for agent construction. Researchers reimplemented common patterns---tool integration, memory management, conversation tracking---in each project, leading to significant duplication of effort.
+Before 2023, LLM-based agents were constructed ad hoc, with each research group building custom orchestration logic. Early systems such as ReAct and Reflexion demonstrated that LLMs could engage in multi-step reasoning and self-correction, but they lacked reusable infrastructure for agent construction. Researchers reimplemented common patterns---tool integration, memory management, conversation tracking---in each project, leading to significant duplication of effort.
 
-The pre-framework era also saw the emergence of LangChain~\citep{chase2022langchain} as a ``model I/O'' abstraction layer, but LangChain was primarily a library for chaining LLM calls rather than a framework for autonomous agents. It provided the building blocks (prompt templates, output parsers, retrievers) but not the architectural patterns for agent-level orchestration.
+The pre-framework era also saw the emergence of LangChain as a ``model I/O'' abstraction layer, but LangChain was primarily a library for chaining LLM calls rather than a framework for autonomous agents. It provided the building blocks (prompt templates, output parsers, retrievers) but not the architectural patterns for agent-level orchestration.
 
 \subsubsection{The AutoGPT Catalyst (March 2023)}
 
@@ -47,9 +47,24 @@ By late 2024, a growing community of researchers began asking whether agent fram
 
 The self-evolution question exposed a fundamental limitation: current frameworks were designed for task execution, not task improvement. They provided excellent infrastructure for running agents but almost no infrastructure for improving agents. This gap---between the demonstrated capability of self-evolution techniques and the absence of framework-level support---is the central finding of this section.
 
+\subsubsection{From Frameworks to Self-Evolution Platforms}
+
+The historical trajectory suggests a natural evolution path for agent frameworks:
+
+\begin{enumerate}
+    \item \textbf{Stage 1: Task Execution} (current state). Frameworks focus on executing tasks reliably: translating user goals into agent actions, managing tools and memory, and handling errors. All seven surveyed frameworks are at this stage.
+
+    \item \textbf{Stage 2: Task Evaluation} (emerging). Frameworks add automated evaluation: measuring task performance, tracking metrics over time, and identifying degradation. DSPy is the closest to this stage with its \texttt{Evaluate} class, but even DSPy's evaluation is coupled to optimization rather than continuous monitoring.
+
+    \item \textbf{Stage 3: Task Improvement} (future). Frameworks add automated improvement: using evaluation results to modify agent configurations, accumulating improvement knowledge in structured memory, and applying learned strategies to new tasks. The Evolution Layer proposed in this section would enable this stage.
+
+    \item \textbf{Stage 4: Autonomous Evolution} (aspirational). Frameworks support fully autonomous self-evolution: agents continuously improve without human intervention, maintain diverse populations of configurations, discover novel strategies through exploration, and safely self-modify within bounded constraints. No current framework approaches this stage.
+\end{enumerate}
+
+The transition from Stage 1 to Stage 4 is not simply a matter of adding features; it requires fundamental architectural changes in how frameworks treat agent configurations, evaluation, memory, and optimization. The analysis in the following subsections details these requirements for each framework.
+
 
 \subsection{Framework Overview}
-\label{sec:frameworks:overview}
 
 Table~\ref{tab:framework_overview} provides a high-level comparison of the seven frameworks along key dimensions. We evaluate each framework's orchestration paradigm, memory architecture, tool integration, evaluation support, and evolutionary capabilities.
 
@@ -81,9 +96,8 @@ In the following subsections, we analyze each framework in detail, focusing on i
 
 
 \subsection{AutoGPT: The Autonomous Agent Pioneer}
-\label{sec:frameworks:autogpt}
 
-AutoGPT~\citep{richards2023autogpt} is the project that ignited the autonomous AI agent wave in March 2023. With 175,000+ GitHub stars, it is the most-starred agent project, though our star quality analysis (Section~\ref{sec:frameworks:quality}) reveals that its star count significantly overstates its architectural substance.
+AutoGPT is the project that ignited the autonomous AI agent wave in March 2023. With 175,000+ GitHub stars, it is the most-starred agent project, though our star quality analysis (Section~\ref{sec:frameworks:quality}) reveals that its star count significantly overstates its architectural substance.
 
 \subsubsection{Architecture}
 
@@ -108,19 +122,13 @@ AutoGPT has \textbf{no native self-evolution mechanism}. It focuses on autonomou
 
 The Forge SDK's benchmark integration provides a potential foundation for self-evolution: agents could be evaluated, and their configurations could be optimized based on benchmark performance. However, this optimization loop is not automated---it requires human intervention to interpret benchmark results and modify agent configurations.
 
-\subsubsection{Analysis}
-
-AutoGPT's primary contribution to the self-evolution landscape is conceptual: it demonstrated that autonomous AI agents are feasible and desirable, catalyzing the entire agent framework ecosystem. Its TAO loop pattern is the foundation upon which more sophisticated frameworks build. However, as a platform for self-evolving agents, AutoGPT is limited by its basic memory system, lack of automated evaluation, and absence of optimization mechanisms.
-
 \subsubsection{Five Loops Analysis}
-
-We analyze AutoGPT's support for each evolution loop:
 
 \paragraph{Specification-to-Execution Loop.}
 AutoGPT provides strong support: users specify a goal in natural language, and the TAO loop decomposes it into a sequence of thoughts, actions, and observations. The Block architecture extends this further by allowing visual composition of goal-to-action workflows. However, the specification is one-shot: the user provides a goal at the start, and the agent executes toward it without refining the specification based on intermediate results.
 
 \paragraph{Search Loop.}
-Absent. AutoGPT does not explore alternative strategies for achieving a goal. The TAO loop follows a single trajectory: each thought determines the next action, with no backtracking or parallel exploration of alternative approaches. When the agent encounters a dead end, it simply tries a different action in the next iteration rather than maintaining a population of candidate strategies.
+Absent. AutoGPT does not explore alternative strategies for achieving a goal. The TAO loop follows a single trajectory: each thought determines the next action, with no backtracking or parallel exploration of alternative approaches.
 
 \paragraph{Evaluator Loop.}
 Absent. AutoGPT has no automated performance measurement. The agent relies on the user to assess whether the goal has been achieved. The Forge SDK includes benchmark integration, but this is used for external evaluation of agent capabilities, not for internal self-evaluation during task execution.
@@ -129,13 +137,22 @@ Absent. AutoGPT has no automated performance measurement. The agent relies on th
 Absent. The TAO loop processes observations but does not generate meta-level reflections on the quality of the agent's reasoning or action selection. When an action fails, the agent observes the failure and tries something else, but it does not analyze \emph{why} the failure occurred or extract generalizable lessons for future tasks.
 
 \paragraph{Population Loop.}
-Absent. AutoGPT maintains a single agent instance per task. There is no mechanism for maintaining a population of agent configurations, comparing their performance, or applying evolutionary selection pressure. The Agent Market allows sharing agent configurations, but this is a social mechanism (human curation) rather than an evolutionary one (automated selection).
+Absent. AutoGPT maintains a single agent instance per task. The Agent Market allows sharing agent configurations, but this is a social mechanism (human curation) rather than an evolutionary one (automated selection).
+
+\subsubsection{Analysis}
+
+AutoGPT's primary contribution to the self-evolution landscape is conceptual: it demonstrated that autonomous AI agents are feasible and desirable, catalyzing the entire agent framework ecosystem. Its TAO loop pattern is the foundation upon which more sophisticated frameworks build. However, as a platform for self-evolving agents, AutoGPT is limited by its basic memory system, lack of automated evaluation, and absence of optimization mechanisms.
+
+\paragraph{Evolution path.}
+Despite its limitations, AutoGPT's Block architecture provides an interesting foundation for self-evolution. Blocks are composable, typed units with defined inputs and outputs---precisely the kind of structured, searchable representation that self-evolution requires. If the Block configurations (their connections, parameters, and prompt templates) were exposed to an automated optimizer, AutoGPT could potentially support a form of workflow-level self-evolution. The Agent Market, which currently relies on human curation, could serve as a population archive where high-performing Block configurations are automatically promoted. This evolution from ``human-curated marketplace'' to ``evolutionary archive'' represents a natural extension of AutoGPT's platform vision.
+
+\paragraph{Lessons for self-evolution.}
+AutoGPT's trajectory teaches an important lesson: viral popularity does not ensure architectural depth. The project accumulated 175K stars based on an exciting demo, but the underlying architecture remained relatively shallow. Self-evolution requires deep infrastructure (evaluation, optimization, memory), not surface-level appeal. Future frameworks should prioritize architectural depth over marketing, even at the cost of slower adoption.
 
 
 \subsection{MetaGPT: SOP-Driven Multi-Agent Collaboration}
-\label{sec:frameworks:metagpt}
 
-MetaGPT~\citep{hong2024metagpt} (50,000+ stars, MIT license) applies software engineering standard operating procedures (SOPs) to LLM-based agent teams. Its core philosophy is ``Code = SOP(Team)'': a well-organized team of agents, following structured procedures, can produce complex software artifacts from a single natural-language input.
+MetaGPT (50,000+ stars, MIT license) applies software engineering standard operating procedures (SOPs) to LLM-based agent teams. Its core philosophy is ``Code = SOP(Team)'': a well-organized team of agents, following structured procedures, can produce complex software artifacts from a single natural-language input.
 
 \subsubsection{Architecture}
 
@@ -167,37 +184,42 @@ The multi-layer memory architecture provides a foundation for self-evolution: th
 MetaGPT is notable for including two self-evolution mechanisms:
 
 \paragraph{SELA (Self-Evolving Learning with MCTS).}
-SELA~\citep{metagpt2024sela} represents ML pipeline configurations as a tree structure and uses Monte Carlo Tree Search to explore the configuration space. Agents iteratively improve their ML strategies based on experimental feedback: they propose configurations, execute them, observe the results, and use MCTS to guide the search toward better configurations. This implements the Search Loop and Evaluator Loop from our taxonomy.
+SELA represents ML pipeline configurations as a tree structure and uses Monte Carlo Tree Search to explore the configuration space. Agents iteratively improve their ML strategies based on experimental feedback: they propose configurations, execute them, observe the results, and use MCTS to guide the search toward better configurations. This implements the Search Loop and Evaluator Loop from our taxonomy.
 
 \paragraph{AFlow (Automating Agentic Workflow Generation).}
 AFlow, accepted as an ICLR 2025 Oral (top 1.8\%), automatically generates agent workflows. Instead of requiring human designers to specify the workflow structure, AFlow searches over the space of possible workflow configurations and discovers effective designs automatically. This is a direct application of the Search Loop to the workflow design problem.
 
-\subsubsection{Analysis}
-
-MetaGPT's SOP-driven architecture is well-suited for structured tasks where the workflow can be decomposed into clear stages. The SELA and AFlow mechanisms demonstrate that self-evolution can be integrated into multi-agent frameworks. However, the evolution is limited to specific domains (ML pipeline configuration, workflow generation) and does not extend to the general improvement of agent behaviors, prompts, or tool usage across tasks.
-
 \subsubsection{Five Loops Analysis}
 
 \paragraph{Specification-to-Execution Loop.}
-Strong support. MetaGPT's SOP pipeline is a direct implementation of the Spec-to-Exec Loop: a natural-language requirement is transformed into a structured software artifact through a sequence of specialized agent stages. The ProductManager creates a PRD (specification), the Architect designs the system (architecture), the ProjectManager decomposes tasks (planning), and the Engineer writes code (execution). Each stage produces structured output that serves as input to the next, creating a traceable chain from specification to execution.
+Strong support. MetaGPT's SOP pipeline is a direct implementation: a natural-language requirement is transformed into a structured software artifact through a sequence of specialized agent stages. Each stage produces structured output that serves as input to the next, creating a traceable chain from specification to execution.
 
 \paragraph{Search Loop.}
-Partial support through SELA's MCTS-based exploration of ML pipeline configurations and AFlow's search over workflow designs. However, this search is limited to specific domains. MetaGPT does not provide a general-purpose search mechanism for optimizing agent prompts, tool configurations, or communication patterns across arbitrary tasks.
+Partial support through SELA's MCTS-based exploration and AFlow's workflow search. However, this search is limited to specific domains (ML pipelines, workflow designs). MetaGPT does not provide a general-purpose search mechanism for optimizing agent prompts, tool configurations, or communication patterns across arbitrary tasks.
 
 \paragraph{Evaluator Loop.}
-Partial support. The SOP pipeline includes implicit evaluation: each agent's output is structured and can be validated against expected formats. The \texttt{agbenchmark} integration provides explicit evaluation on standardized tasks. However, there is no continuous evaluation loop that monitors agent performance over time and triggers improvement.
+Partial support. The SOP pipeline includes implicit evaluation: each agent's output is structured and can be validated against expected formats. The \texttt{agbenchmark} integration provides explicit evaluation on standardized tasks.
 
 \paragraph{Reflection Loop.}
-Absent. MetaGPT's agents follow the SOP pipeline linearly (or with simple iteration). When an agent produces suboptimal output, the pipeline does not include a reflection step that analyzes the failure and generates improvement strategies. The skill loader (\texttt{skill\_loader.py}) could theoretically store learned skills, but there is no mechanism for automatically extracting skills from execution experience.
+Absent. MetaGPT's agents follow the SOP pipeline linearly. When an agent produces suboptimal output, the pipeline does not include a reflection step that analyzes the failure and generates improvement strategies.
 
 \paragraph{Population Loop.}
-Absent. MetaGPT maintains a single team configuration per task. There is no mechanism for maintaining a population of team configurations, comparing their performance across tasks, or applying evolutionary operators (mutation, crossover, selection) to team structures.
+Absent. MetaGPT maintains a single team configuration per task. There is no mechanism for maintaining a population of team configurations or applying evolutionary operators.
+
+\subsubsection{Analysis}
+
+MetaGPT's SOP-driven architecture is well-suited for structured tasks. The SELA and AFlow mechanisms demonstrate that self-evolution can be integrated into multi-agent frameworks, but evolution is limited to specific domains and does not extend to general improvement of agent behaviors across tasks.
+
+\paragraph{The skill memory opportunity.}
+MetaGPT's skill memory system (\texttt{skill\_loader.py}) is an underexploited resource for self-evolution. Skills are accumulated capabilities that can be loaded and reused across tasks---a form of procedural memory. In a self-evolving system, skills would not just be loaded; they would be \emph{generated} through experience: when an agent discovers an effective strategy for a class of tasks, it could be automatically encoded as a skill and added to the skill library. Future iterations of MetaGPT could automate this skill extraction process, creating a continuously growing skill library that represents the system's accumulated learning.
+
+\paragraph{Pipeline-level evolution.}
+MetaGPT's fixed SOP pipeline (ProductManager $\to$ Architect $\to$ ProjectManager $\to$ Engineer) is both a strength and a limitation. The fixed structure provides clear role boundaries and structured outputs, but it prevents the pipeline itself from evolving. AFlow addresses this for workflow generation, but the general principle extends to all SOP pipelines: the pipeline structure---which roles exist, what order they execute in, how information flows between them---should itself be subject to evolutionary optimization. This would require treating the pipeline as a first-class evolvable structure, with mutation operators that can add, remove, or reorder pipeline stages.
 
 
 \subsection{AutoGen: Multi-Agent Conversation Framework}
-\label{sec:frameworks:autogen}
 
-AutoGen~\citep{wu2023autogen} (50,000+ stars, MIT license, Microsoft Research) is a multi-agent conversation framework centered on agent-to-agent dialogue. The latest architecture (v0.4+) uses a layered design with an Actor model core.
+AutoGen (50,000+ stars, MIT license, Microsoft Research) is a multi-agent conversation framework centered on agent-to-agent dialogue. The latest architecture (v0.4+) uses a layered design with an Actor model core.
 
 \subsubsection{Architecture}
 
@@ -207,7 +229,7 @@ AutoGen's three-layer architecture provides increasing levels of abstraction:
 The foundation uses the Actor model for message-passing: \texttt{BaseAgent} (abstract base class with \texttt{on\_message}), \texttt{AgentRuntime} (message routing and agent lifecycle), and \texttt{Topic/Subscription} (publish/subscribe messaging). This layer provides the fundamental abstraction for multi-agent communication.
 
 \paragraph{AgentChat layer (autogen-agentchat).}
-The high-level dialogue API provides specialized agent types: \texttt{AssistantAgent} (LLM-driven), \texttt{UserProxyAgent} (human proxy), \texttt{CodeExecutorAgent}, \texttt{SocietyOfMindAgent} (nested multi-agent), and \texttt{MessageFilterAgent}. Orchestration patterns include Round-Robin Team (agents take turns), Group Chat (a Manager Agent selects the next speaker), and Handoff (agents transfer conversation control).
+The high-level dialogue API provides specialized agent types: \texttt{AssistantAgent} (LLM-driven), \texttt{UserProxyAgent} (human proxy), \texttt{CodeExecutorAgent}, \texttt{SocietyOfMindAgent} (nested multi-agent), and \texttt{MessageFilterAgent}. Orchestration patterns include Round-Robin Team, Group Chat (a Manager Agent selects the next speaker), and Handoff (agents transfer conversation control).
 
 \paragraph{Extensions layer (autogen-ext).}
 Concrete LLM and tool implementations, enabling integration with diverse model providers and tool services.
@@ -218,36 +240,41 @@ AutoGen's memory is list-based (\texttt{ListMemory}) with unbounded chat complet
 
 \subsubsection{Evolutionary Capabilities}
 
-AutoGen has \textbf{no native self-evolution mechanism}. The framework provides powerful orchestration infrastructure (Actor model, publish/subscribe, nested multi-agent) but expects the user to define any improvement logic. The \texttt{Magentic-One} general-purpose agent demonstrates broad tool-use capabilities (web browsing, code execution, file operations) but does not include a self-improvement loop.
+AutoGen has \textbf{no native self-evolution mechanism}. The framework provides powerful orchestration infrastructure (Actor model, publish/subscribe, nested multi-agent) but expects the user to define any improvement logic. The \texttt{Magentic-One} general-purpose agent demonstrates broad tool-use capabilities but does not include a self-improvement loop.
 
-The Actor model's message-passing architecture could theoretically support self-evolution: agents could be designed to observe their own performance and modify their behavior based on accumulated experience. However, this would require a dedicated ``Evolution Agent'' that monitors other agents, evaluates their performance, and proposes modifications---a pattern that is not built into the framework.
-
-\subsubsection{Analysis}
-
-AutoGen's strength is its flexible, actor-based architecture that can model arbitrary multi-agent communication patterns. Its weakness for self-evolution is the absence of built-in evaluation, optimization, or memory-based learning. The framework provides the ``plumbing'' for multi-agent systems but not the ``intelligence'' for self-improvement. Adding self-evolution would require extending the framework with evaluation hooks, optimization operators, and persistent memory for improvement strategies.
+The Actor model's message-passing architecture could theoretically support self-evolution: agents could be designed to observe their own performance and modify their behavior based on accumulated experience. However, this would require a dedicated ``Evolution Agent'' that monitors other agents, evaluates their performance, and proposes modifications---a pattern not built into the framework.
 
 \subsubsection{Five Loops Analysis}
 
 \paragraph{Specification-to-Execution Loop.}
-Strong support. AutoGen's conversational paradigm translates user goals into multi-agent dialogues that progressively solve tasks. The Group Chat pattern, where a Manager Agent selects the next speaker based on conversation context, is a flexible implementation of goal-directed task decomposition. The Handoff mechanism allows agents to transfer control, enabling dynamic task allocation.
+Strong support. AutoGen's conversational paradigm translates user goals into multi-agent dialogues that progressively solve tasks. The Group Chat pattern, where a Manager Agent selects the next speaker, is a flexible goal-directed task decomposition mechanism. The Handoff mechanism enables dynamic task allocation.
 
 \paragraph{Search Loop.}
-Absent. AutoGen does not explore alternative multi-agent configurations. The user defines the team structure, agent roles, and communication patterns before execution begins. There is no mechanism for searching over the space of possible multi-agent configurations during or after task execution.
+Absent. AutoGen does not explore alternative multi-agent configurations. The user defines the team structure before execution begins.
 
 \paragraph{Evaluator Loop.}
-Absent. The \texttt{agbench} benchmark suite provides external evaluation but is not integrated into the runtime. There is no automated evaluation of agent performance during task execution, and no mechanism for using evaluation results to trigger improvement.
+Absent. The \texttt{agbench} benchmark suite provides external evaluation but is not integrated into the runtime.
 
 \paragraph{Reflection Loop.}
-Absent. AutoGen's agents engage in dialogue but do not reflect on the quality of their contributions. The \texttt{SocietyOfMindAgent} pattern, which nests multi-agent conversations within a single agent, could theoretically implement a form of self-reflection (an inner dialogue that evaluates and improves the outer dialogue), but this pattern has not been applied to self-improvement.
+Absent. AutoGen's agents engage in dialogue but do not reflect on the quality of their contributions. The \texttt{SocietyOfMindAgent} pattern could theoretically implement self-reflection through inner dialogue, but this has not been applied to self-improvement.
 
 \paragraph{Population Loop.}
-Absent. AutoGen maintains a single team per task. While the \texttt{SocietyOfMindAgent} creates hierarchical team structures, there is no mechanism for maintaining multiple team configurations, comparing their performance, or applying evolutionary selection.
+Absent. AutoGen maintains a single team per task with no evolutionary selection.
+
+\subsubsection{Analysis}
+
+AutoGen's strength is its flexible, actor-based architecture that can model arbitrary multi-agent communication patterns. Its weakness for self-evolution is the absence of built-in evaluation, optimization, or memory-based learning. The framework provides the ``plumbing'' for multi-agent systems but not the ``intelligence'' for self-improvement.
+
+\paragraph{The SocietyOfMind opportunity.}
+AutoGen's \texttt{SocietyOfMindAgent}---which encapsulates an entire multi-agent conversation within a single agent---is a potentially powerful building block for hierarchical self-evolution. Imagine a SocietyOfMindAgent that contains an inner dialogue between a ``Worker Agent'' and a ``Critic Agent.'' The Critic evaluates the Worker's performance and proposes modifications to its behavior. This inner dialogue constitutes a self-improvement loop at the individual agent level. Now imagine a SocietyOfMindAgent that contains an entire team of self-improving agents, with a meta-level critic that evaluates the team's coordination and proposes modifications to the team structure. This hierarchical composition---self-improving agents within self-improving teams---is a natural application of AutoGen's nested architecture.
+
+\paragraph{Event-driven evolution.}
+AutoGen's publish/subscribe messaging system could support a form of ``event-driven evolution.'' An Evolution Agent subscribes to task completion events, evaluates the results, and publishes improvement suggestions. Other agents subscribe to improvement events and modify their behavior accordingly. This decouples the evolution logic from the task execution logic, enabling ``plug-in'' self-evolution without modifying the task-executing agents.
 
 
 \subsection{CrewAI: Lightweight Multi-Agent Automation}
-\label{sec:frameworks:crewai}
 
-CrewAI~\citep{crewai2024} (30,000+ stars, MIT license) is a lightweight, high-performance multi-agent framework built entirely from scratch with zero external dependencies. It has certified 100,000+ developers through official courses.
+CrewAI (30,000+ stars, MIT license) is a lightweight, high-performance multi-agent framework built entirely from scratch with zero external dependencies. It has certified 100,000+ developers through official courses.
 
 \subsubsection{Architecture}
 
@@ -274,34 +301,37 @@ The three-layer memory is notable because it mirrors the memory architecture use
 
 CrewAI has \textbf{no explicit self-evolution mechanism}. The three-layer memory system provides a foundation for experience accumulation, but there is no automated loop that evaluates agent performance, identifies improvement opportunities, and modifies agent configurations. The memory stores experience but does not drive improvement.
 
-The \texttt{Reset\_memories\_command} identified in the codebase suggests that memory management is a first-class concern, but it is used for administrative purposes (clearing stale data) rather than for self-improvement.
-
-\subsubsection{Analysis}
-
-CrewAI's strength is its simplicity and production-readiness. The zero-dependency approach makes it easy to deploy, and the dual Crew+Flow architecture handles both collaborative and orchestrated use cases. Its three-layer memory architecture provides the best foundation for self-evolution among the ``no native evolution'' frameworks. Adding self-evolution would require an optimization loop that evaluates task outcomes, extracts improvement strategies from long-term memory, and modifies agent configurations accordingly.
-
 \subsubsection{Five Loops Analysis}
 
 \paragraph{Specification-to-Execution Loop.}
-Strong support. The Crew abstraction directly maps user goals to agent teams: the user specifies agents (with roles, goals, and backstories) and tasks (with descriptions and expected outputs), and the Crew orchestrates their execution. The hierarchical process mode, where a Manager Agent distributes tasks, provides a sophisticated goal decomposition mechanism. The Flow architecture extends this further with event-driven control over individual LLM calls.
+Strong support. The Crew abstraction maps user goals to agent teams: the user specifies agents (with roles, goals, backstories) and tasks (with descriptions and expected outputs), and the Crew orchestrates their execution. The hierarchical process mode, where a Manager Agent distributes tasks, provides a sophisticated goal decomposition mechanism.
 
 \paragraph{Search Loop.}
-Absent. CrewAI does not explore alternative agent or task configurations. The user defines the crew structure before execution, and there is no mechanism for automatically searching over the space of possible crew compositions, role assignments, or task decompositions.
+Absent. CrewAI does not explore alternative agent or task configurations. The user defines the crew structure before execution.
 
 \paragraph{Evaluator Loop.}
-Absent. CrewAI includes a testing suite for validating agent behavior, but this is a development-time tool rather than a runtime evaluation mechanism. There is no automated evaluation of task outcomes during execution, and no feedback loop from evaluation to configuration.
+Absent. CrewAI includes a testing suite for validating agent behavior, but this is a development-time tool rather than a runtime evaluation mechanism.
 
 \paragraph{Reflection Loop.}
-Absent. CrewAI's agents execute tasks and store results in memory, but they do not analyze the quality of their performance or extract improvement strategies from execution experience. The long-term memory stores task outcomes but not failure analyses or improvement lessons.
+Absent. CrewAI's agents execute tasks and store results in memory, but they do not analyze the quality of their performance or extract improvement strategies.
 
 \paragraph{Population Loop.}
-Absent. CrewAI maintains a single crew per execution. There is no mechanism for maintaining multiple crew configurations, comparing their performance, or applying evolutionary operators. However, the three-layer memory architecture (short-term, long-term, entity) provides a natural foundation for a population manager: the long-term memory could store diverse crew configurations, and the entity memory could track the performance of individual agents across crews.
+Absent. CrewAI maintains a single crew per execution. However, the three-layer memory architecture provides a natural foundation for a population manager.
+
+\subsubsection{Analysis}
+
+CrewAI's strength is its simplicity and production-readiness. The zero-dependency approach makes it easy to deploy, and the dual Crew+Flow architecture handles both collaborative and orchestrated use cases. Its three-layer memory architecture provides the best foundation for self-evolution among the ``no native evolution'' frameworks.
+
+\paragraph{The memory-to-improvement bridge.}
+CrewAI's three-layer memory architecture is the closest to what self-evolution requires among the non-DSPy frameworks. The key insight is that the memory layers can be repurposed for improvement: short-term memory holds the current improvement context (what task was attempted, what went wrong); long-term memory stores accumulated improvement strategies (which modifications helped on similar tasks in the past); entity memory tracks the performance history of specific agent configurations. The missing piece is a ``Memory-to-Improvement Bridge''---a module that reads from long-term and entity memory, identifies patterns in successful and failed strategies, and generates concrete configuration modifications. This bridge would transform CrewAI's passive memory (storing experiences) into active memory (driving improvement).
+
+\paragraph{Flow-level optimization.}
+CrewAI's Flow architecture provides a natural unit of optimization for self-evolution. A Flow is a sequence of LLM calls with defined inputs, outputs, and control flow---precisely the kind of structured program that DSPy optimizes. Applying DSPy-style optimization to CrewAI Flows (optimizing the prompts, few-shot examples, and control flow decisions within each Flow) would be a practical first step toward framework-level self-evolution. The combination of CrewAI's production-ready architecture with DSPy's optimization capabilities represents a promising research direction.
 
 
 \subsection{DSPy: Declarative LLM Programming with Automated Optimization}
-\label{sec:frameworks:dspy}
 
-DSPy~\citep{khattab2024dspy} (25,000+ stars, MIT license, Stanford NLP) is the most architecturally distinct framework in our survey. Its core innovation is treating LLM prompts as \emph{optimizable program parameters} rather than hand-crafted strings, enabling automated prompt optimization through a family of optimizers (``Teleprompters''). DSPy represents the paradigm shift from ``Prompt Engineering'' to ``Prompt Programming.''
+DSPy (25,000+ stars, MIT license, Stanford NLP) is the most architecturally distinct framework in our survey. Its core innovation is treating LLM prompts as \emph{optimizable program parameters} rather than hand-crafted strings, enabling automated prompt optimization through a family of optimizers (``Teleprompters''). DSPy represents the paradigm shift from ``Prompt Engineering'' to ``Prompt Programming.''
 
 \subsubsection{Architecture}
 
@@ -341,7 +371,7 @@ SIMBA implements a five-step self-improvement cycle:
 This loop directly implements the Reflection Loop (self-reflection on failures), the Search Loop (exploring the space of improvement rules), and the Evaluator Loop (metric-driven evaluation) from our taxonomy. It is the only framework that provides an automated, metric-driven self-improvement loop.
 
 \paragraph{BootstrapFewShot core loop.}
-The BootstrapFewShot optimizer implements a generate-filter-finetune cycle: a teacher model executes the program, collects trajectories, checks success via the evaluation metric, and successful trajectories become few-shot examples for the student model. This is analogous to the STaR~\citep{zelikman2022star} method analyzed in Section~\ref{sec:selfimprovement:star}.
+The BootstrapFewShot optimizer implements a generate-filter-finetune cycle: a teacher model executes the program, collects trajectories, checks success via the evaluation metric, and successful trajectories become few-shot examples for the student model. This is analogous to the STaR method analyzed in Section~\ref{sec:selfimprovement:star}.
 
 \paragraph{GroundedProposer.}
 The GroundedProposer analyzes execution traces to generate improvement proposals based on patterns in successful and failed cases. This implements a form of reflection: the system examines what worked and what didn't, and proposes targeted modifications.
@@ -349,36 +379,39 @@ The GroundedProposer analyzes execution traces to generate improvement proposals
 \paragraph{Evaluation framework.}
 DSPy's \texttt{Evaluate} class provides formal evaluation with parallel execution, metric thresholds for filtering, and automatic tracking of LM call history and token usage. The tight coupling between evaluation and optimization ensures that every improvement is grounded in measurable performance gains.
 
-\subsubsection{Analysis}
-
-DSPy's primary contribution to the self-evolution landscape is the demonstration that LLM programs can be automatically optimized through structured search and reflection. The SIMBA optimizer is the closest existing framework mechanism to the self-evolution paradigm we describe in this survey.
-
-However, DSPy's self-evolution is limited to prompt and few-shot optimization. It does not support code evolution (modifying the program's code), architecture evolution (modifying the module structure), or workflow evolution (modifying the composition of modules). These extensions would require treating the module structure itself as optimizable---a natural extension of DSPy's current design philosophy but one that has not been implemented.
-
-Additionally, DSPy's focus on single-agent programs (as opposed to multi-agent systems) means that it does not address the coordination and communication challenges that arise in multi-agent self-evolution. A self-evolving multi-agent system built on DSPy would need to extend the optimization framework to handle inter-agent communication patterns and role assignments.
-
 \subsubsection{Five Loops Analysis}
 
 \paragraph{Specification-to-Execution Loop.}
 Strong support. DSPy's Signature abstraction provides a formal specification of input-output relationships, and the Module composition system translates these specifications into executable LLM programs. Unlike other frameworks where the specification is a natural-language goal, DSPy's specification is a typed, structured contract that can be automatically verified and optimized.
 
 \paragraph{Search Loop.}
-Strong support through the optimizer family. SIMBA's stochastic mini-batch search explores the space of prompt configurations by sampling data, identifying failure modes, and generating targeted improvements. MIPROv2 jointly searches over instruction and few-shot spaces using Bayesian optimization (via Optuna). COPRO searches over candidate instructions, evaluating each against the metric. This multi-strategy search capability makes DSPy the only framework with comprehensive search infrastructure.
+Strong support through the optimizer family. SIMBA's stochastic mini-batch search explores the space of prompt configurations by sampling data, identifying failure modes, and generating targeted improvements. MIPROv2 jointly searches over instruction and few-shot spaces using Bayesian optimization. COPRO searches over candidate instructions.
 
 \paragraph{Evaluator Loop.}
-Strong support through the \texttt{Evaluate} class. DSPy provides: (a) parallel evaluation with configurable thread count, (b) metric functions that return numerical scores, (c) automatic tracking of LM call history and token usage, (d) threshold-based filtering of bootstrap data, and (e) display of example-level results for error analysis. This evaluation infrastructure is tightly coupled with the optimization loop, ensuring that every improvement is grounded in measurable performance gains.
+Strong support through the \texttt{Evaluate} class, which provides parallel evaluation, metric functions, automatic tracking of LM call history, and threshold-based filtering. This evaluation infrastructure is tightly coupled with the optimization loop.
 
 \paragraph{Reflection Loop.}
-Strong support through SIMBA's self-reflection mechanism. SIMBA identifies high-variance samples where the current program underperforms, then prompts the LLM to reflect on these failures and generate improvement rules. The GroundedProposer extends this by analyzing execution traces to identify patterns in successful and failed cases, generating targeted improvement proposals. This is the only framework with an automated, structured reflection mechanism.
+Strong support through SIMBA's self-reflection mechanism and the GroundedProposer, which analyzes execution traces to identify patterns in successful and failed cases.
 
 \paragraph{Population Loop.}
-Absent. Despite its strength in the other four loops, DSPy does not maintain a population of diverse program configurations. Each optimization run produces a single best configuration. The \texttt{Ensemble} optimizer creates an ensemble of configurations, but this is for prediction aggregation rather than evolutionary diversity maintenance. There is no lineage tracking, no explicit diversity preservation, and no evolutionary selection pressure across optimization runs.
+Absent. Despite its strength in the other four loops, DSPy does not maintain a population of diverse program configurations. The \texttt{Ensemble} optimizer creates an ensemble for prediction aggregation rather than evolutionary diversity maintenance.
+
+\subsubsection{Analysis}
+
+DSPy's primary contribution is demonstrating that LLM programs can be automatically optimized through structured search and reflection. However, DSPy's self-evolution is limited to prompt and few-shot optimization---it does not support code evolution, architecture evolution, or workflow evolution. Additionally, DSPy's focus on single-agent programs means it does not address multi-agent coordination challenges in self-evolution.
+
+\paragraph{From prompt optimization to program evolution.}
+A natural extension of DSPy's architecture is to treat the Module composition structure itself as optimizable, not just the prompts within each Module. Currently, DSPy optimizes the ``content'' of each Module (its instructions and demonstrations) but not the ``structure'' (which Modules are composed, in what order, with what branching logic). Extending the optimizer to search over Module compositions would enable architecture-level self-evolution: the system could discover that a ChainOfThought $\to$ ReAct composition outperforms a single ReAct module for certain tasks, or that a BestOfN with $N=5$ provides the best cost-quality tradeoff.
+
+This extension would require a Module-level search space representation that supports structural variation (adding, removing, or replacing Modules in the composition), a fitness function that evaluates entire Module compositions, and a search algorithm that efficiently explores the combinatorial space of possible compositions. The SIMBA framework provides a template: its stochastic mini-batch approach could be extended from prompt-level to Module-level search, using execution traces to identify which Modules contribute most to success and which are bottlenecks.
+
+\paragraph{The multi-agent extension.}
+DSPy's single-agent focus is a significant limitation for multi-agent self-evolution. Extending DSPy to multi-agent systems would require: (a) representing inter-agent communication as optimizable parameters (who talks to whom, in what format, with what information), (b) credit assignment across agents (which agent's contribution was most important for task success), and (c) coordinated optimization (improving agents simultaneously without breaking their coordination). These extensions are non-trivial but build naturally on DSPy's existing architecture: inter-agent communication can be represented as Signatures, credit assignment can use the GroundedProposer's trace analysis, and coordinated optimization can use SIMBA's mini-batch approach with multi-agent traces.
 
 
 \subsection{CAMEL-AI: Communicative Agents with Role-Playing}
-\label{sec:frameworks:camel}
 
-CAMEL-AI~\citep{li2023camel} (12,000+ stars, Apache 2.0) originated from the ``Communicative Agents for Mind Exploration of Large Language Models'' research paper. It pioneered multi-agent role-playing dialogue and has evolved into a comprehensive agent framework with rich tool and storage capabilities.
+CAMEL-AI (12,000+ stars, Apache 2.0) originated from the ``Communicative Agents for Mind Exploration of Large Language Models'' research paper. It pioneered multi-agent role-playing dialogue and has evolved into a comprehensive agent framework.
 
 \subsubsection{Architecture}
 
@@ -410,42 +443,47 @@ Storage backends span four paradigms: vector databases (semantic search), graph 
 CAMEL-AI provides \textbf{partial} self-evolution support:
 
 \paragraph{Critic-in-the-loop.}
-The built-in \texttt{CriticAgent} automatically evaluates intermediate outputs and suggests improvements during multi-agent dialogue. This implements a form of the Reflection Loop: the critic analyzes failures and generates structured feedback. However, the feedback is ephemeral---it guides the current dialogue but is not stored for future improvement.
+The built-in \texttt{CriticAgent} automatically evaluates intermediate outputs and suggests improvements during multi-agent dialogue. This implements a form of the Reflection Loop. However, the feedback is ephemeral---it guides the current dialogue but is not stored for future improvement.
 
 \paragraph{Self-Instruct data generation.}
-The \texttt{self\_instruct\_generator.py} module automatically generates training data, representing a form of self-improvement through self-generated data. This is analogous to the STaR~\citep{zelikman2022star} paradigm: the system generates training examples that can be used to improve future performance.
+The \texttt{self\_instruct\_generator.py} module automatically generates training data, representing a form of self-improvement through self-generated data, analogous to the STaR paradigm.
 
 \paragraph{Verifiers.}
-Math and Python verifiers (\texttt{math\_verifier.py}, \texttt{python\_verifier.py}) provide automated evaluation of agent outputs. These verifiers implement the Evaluator Loop: they assess output quality and provide binary (correct/incorrect) signals that could drive self-improvement.
-
-\subsubsection{Analysis}
-
-CAMEL-AI's critic-in-the-loop pattern is a promising building block for self-evolution: it demonstrates that multi-agent dialogue can incorporate evaluation and feedback without disrupting the task execution flow. The rich storage backends (vector, graph, key-value, object) provide the infrastructure needed for persistent memory.
-
-The gap between CAMEL-AI's current capabilities and full self-evolution is the absence of an optimization loop that connects the critic's feedback to systematic improvement of the agent's configuration, prompts, or tool usage. The critic provides feedback, but the system does not learn from this feedback across tasks.
+Math and Python verifiers provide automated evaluation of agent outputs, implementing the Evaluator Loop for structured domains.
 
 \subsubsection{Five Loops Analysis}
 
 \paragraph{Specification-to-Execution Loop.}
-Strong support through the RolePlaying pipeline. The \texttt{TaskSpecifyAgent} refines the user's natural-language goal, the \texttt{TaskPlannerAgent} decomposes it into steps, and the Assistant/User dialogue loop executes each step. The Workforce orchestration extends this to multi-agent teams with distributed task execution.
+Strong support through the RolePlaying pipeline and Workforce orchestration.
 
 \paragraph{Search Loop.}
-Absent. CAMEL-AI does not explore alternative dialogue strategies, role assignments, or tool configurations. The role-playing structure is fixed by the user before execution begins.
+Absent. CAMEL-AI does not explore alternative dialogue strategies or role assignments.
 
 \paragraph{Evaluator Loop.}
-Partial support through the verifier system. The math and Python verifiers provide automated evaluation of specific output types, implementing a form of the Evaluator Loop for structured domains. However, there is no general-purpose evaluation framework for assessing dialogue quality or task completion across arbitrary domains.
+Partial support through the verifier system for structured domains, but no general-purpose evaluation framework.
 
 \paragraph{Reflection Loop.}
-Partial support through the \texttt{CriticAgent}. The critic evaluates intermediate outputs and generates structured feedback during dialogue, implementing a form of reflection. However, this reflection is transient: the feedback guides the current dialogue but is not stored or aggregated across dialogues to improve future performance.
+Partial support through the \texttt{CriticAgent}, but feedback is transient and not aggregated across dialogues.
 
 \paragraph{Population Loop.}
-Absent. CAMEL-AI maintains a single agent configuration per role. There is no mechanism for maintaining multiple role configurations, comparing their performance, or applying evolutionary operators to the role-playing structure.
+Absent. CAMEL-AI maintains a single agent configuration per role.
+
+\subsubsection{Analysis}
+
+CAMEL-AI's critic-in-the-loop pattern is a promising building block for self-evolution: it demonstrates that multi-agent dialogue can incorporate evaluation and feedback without disrupting task execution. The rich storage backends provide infrastructure for persistent memory. The gap is the absence of an optimization loop connecting the critic's feedback to systematic improvement.
+
+\paragraph{From transient feedback to persistent learning.}
+The critical gap in CAMEL-AI's self-evolution potential is the transience of the CriticAgent's feedback. Currently, the critic evaluates intermediate outputs and generates structured suggestions, but these suggestions are consumed within the current dialogue and then discarded. A self-evolving version of CAMEL-AI would persist the critic's feedback in the memory system, creating a growing corpus of ``what went wrong and how to fix it'' entries. Over time, this corpus would become a rich source of improvement knowledge: the system could retrieve relevant past feedback when encountering similar tasks, avoiding the repetition of known failure modes.
+
+The storage backend diversity (vector, graph, key-value, object) is well-suited for this persistent feedback: vector databases for semantic similarity retrieval (``find past feedback on tasks similar to this one''), graph databases for relational patterns (``this failure is related to that past failure through a common cause''), and key-value stores for fast lookup of specific improvement rules. The infrastructure exists; what is missing is the glue that connects the CriticAgent's output to the storage system and retrieves it for future use.
+
+\paragraph{Self-Instruct as self-improvement.}
+CAMEL-AI's Self-Instruct data generation capability is an underexplored self-evolution mechanism. By automatically generating training data, the system creates a form of self-produced improvement resource. In the STaR paradigm, self-generated reasoning chains (filtered by correctness) serve as training data for future reasoning. Similarly, CAMEL-AI could use Self-Instruct to generate task-specific training examples that improve the performance of its agents on recurring task types. The key requirement is a quality filter (only retain high-quality generated examples) and a feedback loop (measure whether the generated examples actually improve agent performance).
 
 
 \subsection{LangGraph: Stateful Graph-Based Workflows}
-\label{sec:frameworks:langgraph}
 
-LangGraph~\citep{langgraph2024} (20,000+ stars, MIT license, LangChain team) models agent workflows as directed graphs, using a stateful execution model based on Google's Pregel graph computation framework.
+LangGraph (20,000+ stars, MIT license, LangChain team) models agent workflows as directed graphs, using a stateful execution model based on Google's Pregel graph computation framework.
 
 \subsubsection{Architecture}
 
@@ -467,36 +505,45 @@ LangGraph's memory is integrated into the channel and checkpoint system. State I
 
 \subsubsection{Evolutionary Capabilities}
 
-LangGraph has \textbf{no native self-evolution mechanism}. The graph abstraction is powerful for workflow definition and state management, but it does not include automated optimization, evaluation, or self-improvement. Theoretically, the graph structure could encode evolutionary workflows (graphs with cycles that implement generate-evaluate-select loops), but this is not a built-in capability.
-
-The checkpoint system provides a potential foundation for self-evolution: checkpointed states could be compared to evaluate improvement over time. However, implementing this would require a dedicated evaluation layer that compares checkpoint quality and modifies the graph structure accordingly.
-
-\subsubsection{Analysis}
-
-LangGraph's graph abstraction is the most general orchestration model among the surveyed frameworks: any agent workflow can be expressed as a directed graph with appropriate state management. This generality makes LangGraph a good foundation for self-evolving systems, as the graph structure can represent arbitrary evolutionary loops.
-
-The limitation is the absence of built-in evolution mechanisms. LangGraph provides the ``skeleton'' (graph structure, state management, checkpoint persistence) but not the ``muscle'' (evaluation, optimization, improvement). Adding self-evolution would require implementing evolutionary operators as graph transformations: mutation (modifying nodes or edges), crossover (combining subgraphs from different workflows), and selection (choosing the best-performing graph configurations).
+LangGraph has \textbf{no native self-evolution mechanism}. The graph abstraction is powerful for workflow definition and state management, but it does not include automated optimization, evaluation, or self-improvement.
 
 \subsubsection{Five Loops Analysis}
 
 \paragraph{Specification-to-Execution Loop.}
-Strong support. The graph abstraction provides a powerful mechanism for translating specifications into executable workflows: nodes represent processing steps, edges represent control flow, and conditional edges enable dynamic branching based on intermediate results. The \texttt{StateGraph} class makes the specification-to-execution mapping explicit and traceable.
+Strong support. The graph abstraction provides a powerful mechanism for translating specifications into executable workflows: nodes represent processing steps, edges represent control flow, and conditional edges enable dynamic branching.
 
 \paragraph{Search Loop.}
-Absent. LangGraph does not provide mechanisms for searching over graph configurations. The graph structure is defined by the developer before execution. While the graph \emph{could} encode a search process (a subgraph that generates and evaluates candidate solutions), this would be a user-implemented pattern rather than a framework feature.
+Absent. LangGraph does not provide mechanisms for searching over graph configurations. The graph structure is defined by the developer before execution.
 
 \paragraph{Evaluator Loop.}
-Absent. LangGraph has no built-in evaluation infrastructure. The checkpoint system persists execution state, which could be used for post-hoc evaluation, but there is no automated metric computation, performance tracking, or regression detection.
+Absent. LangGraph has no built-in evaluation infrastructure. The checkpoint system persists execution state, which could be used for post-hoc evaluation, but there is no automated metric computation.
 
 \paragraph{Reflection Loop.}
-Absent. LangGraph's state channels propagate information between nodes but do not support meta-level reflection on the quality of node outputs. The interrupt mechanism enables human-in-the-loop feedback, but this requires manual intervention rather than automated self-reflection.
+Absent. LangGraph's state channels propagate information between nodes but do not support meta-level reflection on the quality of node outputs.
 
 \paragraph{Population Loop.}
-Absent. LangGraph executes a single graph per invocation. The checkpoint system could theoretically store multiple graph configurations (each with its own checkpoint history), enabling comparison and selection, but this capability has not been implemented.
+Absent. LangGraph executes a single graph per invocation.
+
+\subsubsection{Analysis}
+
+LangGraph's graph abstraction is the most general orchestration model among the surveyed frameworks: any agent workflow can be expressed as a directed graph with appropriate state management. This generality makes LangGraph a good foundation for self-evolving systems, as the graph structure can represent arbitrary evolutionary loops. The limitation is the absence of built-in evolution mechanisms. LangGraph provides the ``skeleton'' (graph structure, state management, checkpoint persistence) but not the ``muscle'' (evaluation, optimization, improvement).
+
+\paragraph{Graph-level evolutionary operators.}
+LangGraph's graph representation enables a particularly elegant formulation of evolutionary operators as graph transformations:
+
+\begin{itemize}
+    \item \textbf{Mutation}: Modifying a node (changing its prompt, replacing its LLM, adjusting its parameters) or an edge (changing the condition for a conditional branch, adding a new transition). This is directly analogous to genetic programming's subtree mutation, applied at the workflow level.
+    \item \textbf{Crossover}: Combining subgraphs from two high-performing workflows. For example, taking the ``research'' subgraph from Workflow A and the ``writing'' subgraph from Workflow B to create a new hybrid workflow. The channel system ensures that state types are compatible between the grafted subgraphs.
+    \item \textbf{Selection}: Evaluating graph fitness (task completion rate, output quality, execution cost) and retaining the highest-fitness graphs in an archive. The checkpoint system provides the execution history needed for fitness evaluation.
+\end{itemize}
+
+These operators can be implemented without modifying LangGraph's core: they are external functions that read graph definitions, apply transformations, and produce new graph definitions. The checkpoint system provides the evaluation data, and the Pregel execution engine provides the execution environment. The missing component is the ``Evolution Driver''---the meta-level process that decides which operators to apply, when, and to which graphs.
+
+\paragraph{Checkpoint-based fitness evaluation.}
+LangGraph's checkpoint system provides a natural foundation for fitness evaluation. Each checkpoint captures the complete state of a graph execution at a given point in time. By comparing checkpoints across multiple executions of the same graph (or different graphs on the same task), the system can compute fitness metrics: execution cost (tokens used, wall-clock time), output quality (evaluated against task-specific metrics), and reliability (success rate across multiple runs). The PostgreSQL backend enables efficient querying of checkpoint histories, making it feasible to maintain long-term performance records for graph populations.
 
 
 \subsection{Comparative Analysis: Evolution Capability Gap}
-\label{sec:frameworks:gap}
 
 Our analysis reveals a clear gap between what agent frameworks provide and what self-evolving agents require. We characterize this gap using the Five Evolution Loops taxonomy.
 
@@ -522,10 +569,10 @@ LangGraph & \checkmark & $\times$ & $\times$ & $\times$ & $\times$ \\
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:loop_support} reveals that:
+Table~\ref{tab:loop_support} reveals four critical observations:
 
 \begin{enumerate}
-    \item \textbf{All frameworks support the Specification-to-Execution Loop}---this is their core function: translating user goals into agent actions. This is the most mature loop type across the ecosystem.
+    \item \textbf{All frameworks support the Specification-to-Execution Loop}---this is their core function. This is the most mature loop type across the ecosystem.
 
     \item \textbf{DSPy is the only framework with strong support for Search, Evaluator, and Reflection loops.} Its optimizer family provides search over prompt configurations, metric-driven evaluation, and self-reflection for improvement rule generation.
 
@@ -539,13 +586,13 @@ Table~\ref{tab:loop_support} reveals that:
 Based on our analysis, we identify three layers that must be added to existing agent frameworks to enable self-evolution:
 
 \paragraph{Layer 1: Persistent Evaluation Layer.}
-A dedicated evaluation infrastructure that automatically assesses agent performance on tasks, tracks performance over time, and identifies degradation. This layer requires: (a) task-specific metrics (accuracy, completion rate, efficiency), (b) regression testing (ensuring that improvements don't break existing capabilities), and (c) performance dashboards (visualizing improvement trajectories). Currently, only DSPy provides a formal \texttt{Evaluate} class; other frameworks rely on ad-hoc testing.
+A dedicated evaluation infrastructure that automatically assesses agent performance on tasks, tracks performance over time, and identifies degradation. This requires: (a) task-specific metrics, (b) regression testing, and (c) performance dashboards. Currently, only DSPy provides a formal \texttt{Evaluate} class; other frameworks rely on ad-hoc testing.
 
 \paragraph{Layer 2: Memory-for-Improvement Layer.}
-A structured memory system that stores not just task experiences (what the agent did) but improvement experiences (what worked, what failed, why). This requires: (a) episodic memory for specific failure analyses, (b) semantic memory for generalized improvement strategies, and (c) procedural memory for learned optimization rules. CrewAI's three-layer memory (short-term/long-term/entity) is the closest existing implementation, but it stores task experiences rather than improvement experiences.
+A structured memory system that stores not just task experiences but improvement experiences (what worked, what failed, why). This requires: (a) episodic memory for specific failure analyses, (b) semantic memory for generalized improvement strategies, and (c) procedural memory for learned optimization rules. CrewAI's three-layer memory is the closest existing implementation, but it stores task experiences rather than improvement experiences.
 
 \paragraph{Layer 3: Optimization Layer.}
-An automated optimization system that uses evaluation results and improvement memory to modify agent configurations. This requires: (a) configuration search (exploring the space of agent prompts, tool configurations, and workflow structures), (b) selection pressure (retaining configurations that improve performance), and (c) diversity preservation (maintaining a population of diverse configurations to avoid premature convergence). DSPy's SIMBA optimizer is the closest existing implementation, but it is limited to prompt optimization.
+An automated optimization system that uses evaluation results and improvement memory to modify agent configurations. This requires: (a) configuration search, (b) selection pressure, and (c) diversity preservation. DSPy's SIMBA optimizer is the closest existing implementation, but it is limited to prompt optimization.
 
 \subsubsection{The Evolution Layer Architecture}
 
@@ -556,81 +603,44 @@ We propose the \textbf{Evolution Layer} architecture: a modular self-evolution l
 
     \item \textbf{Improvement Memory}: A structured knowledge base that stores failure analyses, successful strategies, and optimization rules. The memory supports retrieval by task type, failure mode, and improvement strategy.
 
-    \item \textbf{Configuration Optimizer}: A search system that explores the space of agent configurations (prompts, tool assignments, workflow structures) guided by evaluation feedback and improvement memory. The optimizer can use LLM-based search (as in OPRO), evolutionary search (as in AlphaEvolve), or gradient-based optimization (as in DSPy).
+    \item \textbf{Configuration Optimizer}: A search system that explores the space of agent configurations guided by evaluation feedback and improvement memory. The optimizer can use LLM-based search (as in OPRO), evolutionary search (as in AlphaEvolve), or gradient-based optimization (as in DSPy).
 
-    \item \textbf{Population Manager}: Maintains a diverse population of agent configurations, applies selection and variation operators, and preserves lineage information. The population manager enables parallel exploration of the configuration space and prevents premature convergence to a single optimum.
+    \item \textbf{Population Manager}: Maintains a diverse population of agent configurations, applies selection and variation operators, and preserves lineage information. The population manager enables parallel exploration and prevents premature convergence.
 \end{enumerate}
 
-The Evolution Layer is designed to be framework-agnostic: it interfaces with the host framework through a thin adaptation layer that translates framework-specific operations (task execution, configuration management, state persistence) into the Evolution Layer's generic operations (evaluate, remember, optimize, evolve).
+\paragraph{Integration patterns.}
+The Evolution Layer can be integrated through three patterns: (1)~\emph{Wrapper}---wraps the entire framework, intercepting task execution for evaluation and logging; (2)~\emph{Middleware}---inserted into the execution pipeline for finer-grained control over individual agent actions; (3)~\emph{Native}---implemented as a first-class framework component with deep access to the agent lifecycle. The choice depends on the host framework's architecture and desired control level. The Wrapper pattern requires the least framework-specific code but provides only coarse-grained evolution control (per-task rather than per-action). The Middleware pattern requires more adaptation but enables action-level evaluation and improvement. The Native pattern provides the best integration but requires modifying the framework itself.
+
+\paragraph{Framework-specific integration points.}
+Each framework has natural integration points for the Evolution Layer:
+
+\begin{itemize}
+    \item \textbf{AutoGPT}: The Block architecture's typed inputs and outputs provide natural evaluation hooks. The Agent Market serves as the Population Manager's archive, with automated quality scoring replacing human curation.
+    \item \textbf{MetaGPT}: The SOP pipeline's structured outputs enable evaluation at each stage boundary. The multi-layer memory system serves as the Improvement Memory backend, with the skill loader providing procedural memory for optimization rules.
+    \item \textbf{AutoGen}: The Actor model's publish/subscribe system routes evaluation results to a dedicated Optimization Agent. The \texttt{SocietyOfMindAgent} enables hierarchical evolution (self-improving agents within self-improving teams).
+    \item \textbf{CrewAI}: The Flow architecture provides natural optimization units (sequences of LLM calls). The three-layer memory (short-term, long-term, entity) serves as the Improvement Memory backend with minimal adaptation.
+    \item \textbf{DSPy}: The existing optimizer family and \texttt{Evaluate} class serve as the Configuration Optimizer and Evaluation Engine. The missing component is the Population Manager for maintaining diverse program configurations.
+    \item \textbf{CAMEL-AI}: The CriticAgent provides evaluation signals, and the rich storage backends (vector, graph, key-value, object) serve as the Improvement Memory. The Self-Instruct generator can be extended to produce improvement knowledge.
+    \item \textbf{LangGraph}: Graph transformations implement evolutionary operators (mutation, crossover, selection). The checkpoint system provides the Population Manager's archive and the evaluation data for fitness computation.
+\end{itemize}
+
+\subsubsection{Cross-Framework Technical Comparison}
+
+Beyond the Five Evolution Loops analysis, several technical dimensions reveal important differences across frameworks that affect their suitability as platforms for self-evolution.
+
+\paragraph{Orchestration flexibility.}
+LangGraph provides the highest orchestration flexibility: any computable workflow can be expressed as a directed graph. DSPy's Module composition is similarly flexible but restricted to single-agent programs. AutoGen's Actor model is highly flexible for multi-agent communication patterns but does not natively support graph-structured workflows. MetaGPT's SOP pipeline is the most rigid: it enforces a specific agent sequence. CrewAI's dual Crew+Flow architecture balances flexibility with structure. AutoGPT's Block architecture provides visual workflow construction but with less programmatic flexibility.
+
+\paragraph{State persistence.}
+LangGraph's checkpoint system (with PostgreSQL and SQLite backends) provides the most robust state persistence, enabling long-running workflows with pause/resume capabilities. CrewAI's three-layer memory provides persistent storage across tasks but not across execution runs. DSPy's program state is persisted through the optimizer's save/load mechanism, capturing only the optimized program. AutoGen's list-based memory is ephemeral unless explicitly persisted. The robustness of state persistence directly affects the feasibility of long-term self-evolution: a self-evolving system must maintain performance records across many execution runs.
+
+\paragraph{Production readiness.}
+CrewAI and LangGraph are the most production-ready, with enterprise-grade deployment support, monitoring, and error handling. AutoGen benefits from Microsoft's enterprise infrastructure. DSPy is research-oriented but has a clean architecture that could be productionized. Production readiness matters for self-evolution because self-evolving agents in production need robust error handling, monitoring, and rollback capabilities that research prototypes may lack.
+
+\paragraph{LLM provider diversity.}
+All frameworks support multiple LLM providers through LiteLLM or custom adapters. This diversity affects self-evolution because different LLMs may have different strengths for specific tasks, and a self-evolving system should be able to optimize not just the prompts but also the choice of LLM for each component.
 
 Implementing the Evolution Layer would transform any agent framework from a static orchestration platform into a self-evolving system. Agents would not just execute tasks---they would improve at executing tasks, accumulating expertise over time and adapting to new challenges.
-
-\subsubsection{Formal Specification}
-
-We provide a formal specification of the Evolution Layer interface. Let $\mathcal{F}$ denote a host framework, $\mathcal{C}$ the space of agent configurations, $\mathcal{T}$ the space of tasks, and $\mathcal{M}$ the space of evaluation metrics. The Evolution Layer $\mathcal{E}$ is a tuple:
-
-\begin{equation}
-\mathcal{E} = \langle \text{Eval}, \text{Mem}, \text{Opt}, \text{Pop} \rangle
-\end{equation}
-
-where:
-
-\paragraph{Evaluation Engine ($\text{Eval}$).}
-$\text{Eval}: \mathcal{C} \times \mathcal{T} \to \mathbb{R}^k$ maps a configuration and task to a $k$-dimensional evaluation vector. The evaluation engine wraps the framework's task execution with metric computation, producing structured performance records that feed into the optimization layer.
-
-\paragraph{Improvement Memory ($\text{Mem}$).}
-$\text{Mem} = \langle \text{Episodic}, \text{Semantic}, \text{Procedural} \rangle$ maintains three types of improvement knowledge:
-\begin{itemize}
-    \item \textbf{Episodic}: Specific failure analyses $\langle c_i, t_j, \text{failure\_mode}, \text{diagnosis} \rangle$ that record what went wrong and why.
-    \item \textbf{Semantic}: Generalized improvement strategies $\langle \text{strategy}, \text{applicability\_conditions}, \text{expected\_impact} \rangle$ that abstract from specific episodes.
-    \item \textbf{Procedural}: Learned optimization rules $\langle \text{context} \to \text{action}, \text{confidence} \rangle$ that map task contexts to configuration modifications.
-\end{itemize}
-
-\paragraph{Configuration Optimizer ($\text{Opt}$).}
-$\text{Opt}: 2^{\mathcal{C}} \times \text{Mem} \to 2^{\mathcal{C}}$ takes a set of candidate configurations and improvement memory, and produces a new set of improved configurations. The optimizer supports multiple search strategies:
-\begin{itemize}
-    \item \textbf{LLM-based search}: Use the LLM itself as a proposal generator, conditioned on evaluation feedback and improvement memory (analogous to OPRO).
-    \item \textbf{Evolutionary search}: Apply mutation and crossover operators to configurations, guided by fitness evaluation (analogous to AlphaEvolve).
-    \item \textbf{Gradient-based search}: Use differentiable metrics and gradient-based optimization (analogous to DSPy's SIMBA).
-\end{itemize}
-
-\paragraph{Population Manager ($\text{Pop}$).}
-$\text{Pop}: 2^{\mathcal{C}} \times \mathbb{R}^{|\mathcal{C}| \times k} \to 2^{\mathcal{C}}$ maintains a diverse population of configurations, applying selection pressure (retaining high-performing configurations) and diversity preservation (maintaining behavioral diversity through novelty metrics or archive-based approaches such as MAP-Elites). The population manager tracks lineage information: each configuration records its parent(s), the variation operator that produced it, and its fitness trajectory.
-
-\subsubsection{Integration Patterns}
-
-The Evolution Layer can be integrated with host frameworks through three patterns:
-
-\paragraph{Wrapper pattern.}
-The Evolution Layer wraps the entire framework, intercepting task execution calls to add evaluation, logging the results to improvement memory, and periodically running optimization. This is the simplest integration but provides the coarsest control.
-
-\paragraph{Middleware pattern.}
-The Evolution Layer is inserted as middleware in the framework's execution pipeline, evaluating each agent action, logging improvement opportunities, and modifying configurations between actions. This provides finer-grained control but requires framework-specific adaptation.
-
-\paragraph{Native pattern.}
-The Evolution Layer is implemented as a first-class component of the framework, with deep integration into the agent lifecycle, memory system, and configuration management. This provides the best performance and user experience but requires modifying the framework itself.
-
-The choice of integration pattern depends on the host framework's architecture and the desired level of self-evolution control. DSPy's current optimizers follow a pattern closest to the Wrapper pattern; extending DSPy to support the Middleware or Native pattern would enable more fine-grained self-evolution.
-
-\subsubsection{Mapping to Existing Frameworks}
-
-We sketch how the Evolution Layer would integrate with each surveyed framework:
-
-\begin{itemize}
-    \item \textbf{AutoGPT}: The Wrapper pattern wraps the Block execution engine, evaluating block outputs and optimizing block configurations. The Agent Market serves as the Population Manager's archive, with automated quality scoring replacing human curation.
-
-    \item \textbf{MetaGPT}: The Middleware pattern integrates between the SOP pipeline stages, evaluating each agent's output and modifying its behavior before the next stage. The multi-layer memory system serves as the Improvement Memory backend, with the skill loader providing procedural memory.
-
-    \item \textbf{AutoGen}: The Native pattern extends the Actor model with evaluation messages and optimization messages. The publish/subscribe system routes evaluation results to a dedicated Optimization Agent that modifies other agents' configurations.
-
-    \item \textbf{CrewAI}: The Middleware pattern integrates into the Flow architecture, evaluating each LLM call and modifying agent configurations between calls. The three-layer memory (short-term, long-term, entity) provides the Improvement Memory backend.
-
-    \item \textbf{DSPy}: The Native pattern extends the existing optimizer family with Population Loop support. The current optimizers (SIMBA, MIPROv2, BootstrapFewShot) serve as the Configuration Optimizer, and the \texttt{Evaluate} class serves as the Evaluation Engine. The missing component is the Population Manager.
-
-    \item \textbf{CAMEL-AI}: The Middleware pattern extends the CriticAgent to produce structured improvement memory entries. The verifier system provides the Evaluation Engine, and the rich storage backends (vector, graph, key-value, object) provide the Improvement Memory.
-
-    \item \textbf{LangGraph}: The Native pattern implements evolutionary operators as graph transformations: mutation (modifying nodes or edges), crossover (combining subgraphs from different workflows), and selection (choosing the best-performing graph configurations). The checkpoint system provides the Population Manager's archive.
-\end{itemize}
 
 
 \subsection{Star Quality Analysis: GitHub Metrics as a Proxy for Framework Quality}
@@ -647,7 +657,7 @@ We assess star quality using five equally-weighted dimensions: (1) star activity
 \begin{table}[t]
 \centering
 \small
-\caption{Star quality analysis of agent frameworks. Composite score is on a 0--100 scale.}
+\caption{Star quality analysis of agent frameworks. Composite score is on a 0--100 scale. Stars/Contributor ratio thresholds: healthy $<$ 120, watch 120--180, red $>$ 180.}
 \label{tab:star_quality}
 \begin{tabular}{lcccl}
 \toprule
@@ -664,99 +674,100 @@ AutoGPT & 175,000 & 28 & 213 (red) & Hype-driven \\
 \end{tabular}
 \end{table}
 
+The composite scores span a wide range (28 to 73), revealing that the most popular frameworks are not necessarily the highest quality. The Stars/Contributor ratio provides a particularly telling signal: frameworks with healthy ratios (below 120) have engaged communities that translate popularity into contributions, while frameworks with red-zone ratios (above 180) have attracted passive observers who star but do not contribute.
+
 The analysis reveals three critical findings:
 
 \paragraph{Finding 1: Star count inversely correlates with quality.}
-AutoGPT, with the highest star count (175K), has the lowest composite quality score (28). Its star growth was hype-driven: 50,000 stars in 3 days, with 90\%+ stargazers showing no subsequent GitHub activity. The Stars/Contributor ratio of 213 (red zone) indicates that the vast majority of stars came from passive observers rather than engaged users.
+AutoGPT, with the highest star count (175K), has the lowest composite quality score (28). Its star growth was hype-driven: 50,000 stars in 3 days, with 90\%+ stargazers showing no subsequent GitHub activity. The Stars/Contributor ratio of 213 (red zone) indicates that the vast majority of stars came from passive observers rather than engaged users. In contrast, DSPy (25K stars, score 73) demonstrates that lower star counts can accompany higher quality through genuine engineering utility and academic reputation.
 
 \paragraph{Finding 2: Academic-driven projects have the highest quality.}
-DSPy, with the highest composite score (73), grew through academic citations and genuine engineering utility rather than social media virality. Its star growth was slow but sustained, with a healthy contributor base. Similarly, SWE-Agent (not a framework but an evaluation tool) scored 70 despite having only 15,000 stars.
+DSPy, with the highest composite score (73), grew through academic citations and genuine engineering utility. Its star growth was slow but sustained, with a healthy contributor base. The academic growth pattern produces more durable and higher-quality projects than the hype-driven pattern, because they are designed to support research experimentation rather than to capture media attention.
 
 \paragraph{Finding 3: Evolution capability does not correlate with popularity.}
-DSPy, the framework with the strongest self-evolution capabilities (SIMBA optimizer), has fewer stars than AutoGPT, MetaGPT, AutoGen, and CrewAI---all of which have weaker or no self-evolution mechanisms. This suggests that the market has not yet recognized self-evolution as a critical framework feature, prioritizing ease of use and marketing over architectural sophistication.
+DSPy, the framework with the strongest self-evolution capabilities (SIMBA optimizer), has fewer stars than AutoGPT, MetaGPT, AutoGen, and CrewAI---all of which have weaker or no self-evolution mechanisms. This suggests that the market has not yet recognized self-evolution as a critical framework feature.
 
 \subsubsection{Implications}
 
 The disconnect between star count and quality has practical implications for researchers and practitioners selecting agent frameworks:
 
 \begin{itemize}
-    \item \textbf{For self-evolution research}: DSPy is the clear choice, as it is the only framework with native optimization capabilities. Its PyTorch-like architecture is well-suited for implementing custom evolution loops.
-
-    \item \textbf{For production self-evolving agents}: CrewAI or LangGraph provide the best foundation, due to their production-grade memory (CrewAI) and state management (LangGraph). Adding the Evolution Layer to these frameworks would be the most practical path to production self-evolution.
-
-    \item \textbf{For multi-agent self-evolution}: AutoGen's Actor model provides the most flexible communication infrastructure for coordinating self-improving agents, despite lacking native evolution mechanisms.
+    \item \textbf{For self-evolution research}: DSPy is the clear choice, as it is the only framework with native optimization capabilities.
+    \item \textbf{For production self-evolving agents}: CrewAI or LangGraph provide the best foundation, due to their production-grade memory (CrewAI) and state management (LangGraph).
+    \item \textbf{For multi-agent self-evolution}: AutoGen's Actor model provides the most flexible communication infrastructure.
 \end{itemize}
+
+\subsubsection{The Road Ahead for Framework Quality}
+
+The inverse correlation between star count and quality raises important questions about the incentives driving agent framework development. The current incentive structure---where star count drives visibility, which drives adoption, which drives contributions---favors projects that are easy to demo and quick to generate social media engagement over projects that invest in deep architectural foundations. Self-evolution is inherently difficult to demo: its benefits accumulate over time, not in a single screenshot.
+
+To shift the incentive structure, the community needs better metrics for framework quality that go beyond star count. Our five-dimensional star quality framework (activity, diversity, fork quality, issue quality, PR merge rate) is a step in this direction, but more work is needed to develop quality metrics that specifically capture self-evolution readiness: the framework's ability to support automated evaluation, structured improvement memory, configuration optimization, and population management. A ``Self-Evolution Readiness Score'' for agent frameworks would help researchers and practitioners select appropriate platforms and incentivize framework developers to invest in evolution infrastructure.
 
 
 \subsection{Design Principles for Self-Evolving Agent Frameworks}
-\label{sec:frameworks:principles}
 
-Based on our comparative analysis, we propose design principles for agent frameworks that support self-evolution:
+Based on our comparative analysis, we propose eight design principles for agent frameworks that support self-evolution:
 
 \paragraph{Principle 1: Make all components optimizable.}
-Every configurable aspect of the agent---prompts, tool assignments, workflow structure, communication patterns---should be represented as a parameter that can be automatically optimized. DSPy's approach of treating prompts as optimizable parameters should be extended to all agent components. This requires a unified configuration representation that can be searched, varied, and evaluated by automated optimization algorithms.
+Every configurable aspect of the agent---prompts, tool assignments, workflow structure, communication patterns---should be represented as a parameter that can be automatically optimized. DSPy's approach of treating prompts as optimizable parameters should be extended to all agent components.
 
 \paragraph{Principle 2: Build evaluation into the execution loop.}
-Every agent action should produce an evaluation signal, not just a task output. The framework should provide hooks for automated evaluation at the action, task, and workflow levels, enabling continuous performance monitoring. DSPy's \texttt{Evaluate} class demonstrates that tight evaluation-optimization coupling is both feasible and effective.
+Every agent action should produce an evaluation signal, not just a task output. The framework should provide hooks for automated evaluation at the action, task, and workflow levels.
 
 \paragraph{Principle 3: Separate task memory from improvement memory.}
-Task memory stores what the agent did (execution traces, outputs, user interactions). Improvement memory stores what the agent learned (failure analyses, successful strategies, optimization rules). These two types of memory serve different purposes and should be managed independently. CrewAI's three-layer memory (short-term, long-term, entity) provides a template, but the layers should be repurposed: short-term for current improvement context, long-term for accumulated improvement strategies, and entity for domain-specific improvement knowledge.
+Task memory stores what the agent did; improvement memory stores what the agent learned. These two types of memory serve different purposes and should be managed independently.
 
 \paragraph{Principle 4: Support population-level configuration management.}
-The framework should maintain a population of agent configurations, not just a single configuration. This enables parallel exploration, diversity preservation, and evolutionary search over the configuration space. The population manager should track lineage information (parent configurations, variation operators, fitness trajectories) to support analysis and debugging of the evolution process.
+The framework should maintain a population of agent configurations, not just a single configuration. This enables parallel exploration, diversity preservation, and evolutionary search.
 
 \paragraph{Principle 5: Provide standardized interfaces for evolution operators.}
-The framework should define interfaces for mutation (modifying a configuration), crossover (combining configurations), and selection (choosing configurations based on fitness). These interfaces enable plug-and-play evolution strategies without modifying the framework core. The interface design should be inspired by genetic programming libraries (DEAP, PyGMO) and quality-diversity frameworks (Pyribs, QDax).
+The framework should define interfaces for mutation, crossover, and selection. These interfaces enable plug-and-play evolution strategies without modifying the framework core.
 
 \paragraph{Principle 6: Enable safe self-modification.}
-The framework must include safeguards against harmful self-modification: rollback mechanisms (restoring previous configurations), validation checks (ensuring modified configurations are safe and functional), and human oversight hooks (pausing self-evolution for human review when performance degrades unexpectedly). LangGraph's checkpoint system provides a foundation for rollback, but validation and oversight hooks would need to be added.
+The framework must include safeguards: rollback mechanisms, validation checks, and human oversight hooks for when performance degrades unexpectedly.
 
 \paragraph{Principle 7: Enable cross-task transfer of improvement knowledge.}
-Improvement knowledge gained on one task should transfer to related tasks. The Improvement Memory should support retrieval by task similarity, not just exact task match. This requires task representations that capture structural similarity (similar task types, similar failure modes) rather than surface-level similarity (similar task descriptions).
+Improvement knowledge gained on one task should transfer to related tasks, supported by task representations that capture structural similarity rather than surface-level similarity.
 
 \paragraph{Principle 8: Make evolution cost controllable.}
-Self-evolution is computationally expensive. The framework should expose cost-quality tradeoff knobs that allow users to control the intensity of self-evolution based on their computational budget. These knobs should control: (a) the number of candidate configurations evaluated per improvement cycle, (b) the frequency of improvement cycles (after every task, every $N$ tasks, or on-demand), and (c) the computational budget for each optimization step.
+The framework should expose cost-quality tradeoff knobs that allow users to control the intensity of self-evolution based on their computational budget.
 
 
 \subsection{Open Problems in Framework-Level Self-Evolution}
-\label{sec:frameworks:openproblems}
 
 \paragraph{Problem 1: The configuration representation challenge.}
-Self-evolution requires a searchable representation of agent configurations. Current frameworks use diverse representations: DSPy uses Signatures and Modules; LangGraph uses graph definitions; CrewAI uses Crew/Task/Agent configurations; AutoGen uses Actor specifications. A unified configuration representation that supports search, variation, and evaluation across frameworks does not yet exist.
+Self-evolution requires a searchable representation of agent configurations. Current frameworks use diverse representations: DSPy uses Signatures and Modules; LangGraph uses graph definitions; CrewAI uses Crew/Task/Agent configurations. A unified configuration representation that supports search, variation, and evaluation across frameworks does not yet exist. Recent work on ADAS suggests that representing agent configurations as code may be a viable approach, as code is naturally compositional and supports variation through LLM-based mutation. However, code-based representations face challenges in ensuring that mutated configurations remain safe and functional.
 
-The configuration representation must satisfy several requirements simultaneously: (a) it must be expressive enough to represent the full range of agent behaviors (prompts, tool assignments, workflow structures, communication patterns), (b) it must be compositional (complex configurations built from simpler ones), (c) it must support variation operators (mutation, crossover) that produce valid offspring, and (d) it must be evaluable (the fitness of a configuration can be computed efficiently). Finding a representation that satisfies all four requirements is an open research challenge.
-
-Recent work on ADAS~\citep{hu2024adas} (analyzed in Section~\ref{sec:agents}) suggests that representing agent configurations as code (Python functions) may be a viable approach, as code is naturally compositional, supports variation through LLM-based mutation, and can be evaluated by execution. However, code-based representations face challenges in ensuring that mutated configurations remain safe and functional.
+The configuration representation must satisfy four simultaneous requirements: (a) expressiveness (representing the full range of agent behaviors including prompts, tool assignments, workflow structures, and communication patterns), (b) compositionality (complex configurations built from simpler ones through well-defined composition operators), (c) variational soundness (variation operators produce valid offspring that can be executed without error), and (d) evaluability (the fitness of a configuration can be computed efficiently). Finding a representation satisfying all four requirements remains an open research challenge.
 
 \paragraph{Problem 2: Multi-agent credit assignment.}
-In multi-agent systems, attributing credit (or blame) for task outcomes to individual agents is a fundamental challenge. When a multi-agent task succeeds, which agent's contribution was most important? When it fails, which agent's behavior caused the failure? Without accurate credit assignment, the optimization layer cannot effectively improve individual agents.
+In multi-agent systems, attributing credit or blame for task outcomes to individual agents is a fundamental challenge. When a multi-agent task succeeds, which agent's contribution was most important? Without accurate credit assignment, the optimization layer cannot effectively improve individual agents. Ablation-based credit assignment (removing or replacing individual agents and measuring impact) is a promising but computationally expensive approach.
 
-This problem is particularly acute in frameworks like MetaGPT and AutoGen, where complex multi-agent pipelines produce composite outputs. The SOP pipeline structure in MetaGPT partially addresses this by assigning clear responsibilities to each agent, but when the Engineer writes buggy code, the root cause may be in the Architect's design rather than the Engineer's implementation. Ablation-based credit assignment (removing or replacing individual agents and measuring the impact on task outcome) is a promising approach but is computationally expensive.
+This problem is particularly acute in frameworks like MetaGPT and AutoGen, where complex multi-agent pipelines produce composite outputs. The SOP pipeline structure in MetaGPT partially addresses this by assigning clear responsibilities to each agent, but when the Engineer writes buggy code, the root cause may be in the Architect's design rather than the Engineer's implementation. Causal credit assignment methods---which distinguish between direct and indirect contributions---offer a more principled approach but require detailed execution traces that most frameworks do not currently capture.
 
 \paragraph{Problem 3: Safe self-modification in production.}
-Self-modifying agents in production environments pose safety risks: a configuration change that improves one metric may degrade another, introduce biases, or create security vulnerabilities. Mechanisms for safe self-modification---sandboxes, canary deployments, automated regression testing, and human-in-the-loop approval---are essential but not yet implemented in any framework.
-
-The safety challenge is compounded by the unpredictability of LLM-based agents: a small change in prompt wording can cause significant behavioral changes, making it difficult to predict the impact of configuration modifications. Formal verification of agent behavior is an active research area, but current techniques are limited to simple behavioral specifications and do not scale to the complex, open-ended tasks that agent frameworks are designed to handle.
+Self-modifying agents in production environments pose safety risks: a configuration change that improves one metric may degrade another, introduce biases, or create security vulnerabilities. Mechanisms for safe self-modification---sandboxes, canary deployments, automated regression testing, and human-in-the-loop approval---are essential but not yet implemented.
 
 \paragraph{Problem 4: Cross-task transfer.}
-Self-evolution is most valuable when improvement on one task transfers to related tasks. A self-evolving code agent that has optimized its configuration for Python tasks should transfer some of that learning to JavaScript tasks, even if the specific configurations differ. Current frameworks do not support cross-task transfer of improvement knowledge.
-
-Cross-task transfer requires a task representation that captures structural similarity, a transfer mechanism that maps improvement knowledge from source tasks to target tasks, and a negative transfer detection mechanism that prevents harmful knowledge transfer (when source and target tasks are dissimilar). These components are well-studied in the transfer learning literature but have not been adapted to the agent self-evolution setting.
+Self-evolution is most valuable when improvement on one task transfers to related tasks. Current frameworks do not support cross-task transfer of improvement knowledge. This requires a task representation capturing structural similarity, a transfer mechanism, and a negative transfer detection mechanism.
 
 \paragraph{Problem 5: The cost-quality tradeoff.}
-Self-evolution is computationally expensive: it requires evaluating many configurations, maintaining population archives, and running optimization loops. In production settings, this cost must be balanced against the quality improvement gained. Frameworks need cost-quality knobs that allow users to control the intensity of self-evolution based on their computational budget and quality requirements.
-
-The cost-quality tradeoff is particularly challenging for LLM-based agents, where each configuration evaluation may require multiple LLM API calls. A single optimization cycle that evaluates 100 configurations, each requiring 10 LLM calls, would cost 1,000 LLM calls---potentially hundreds of dollars at current API pricing. Techniques from efficient NAS (Neural Architecture Search), such as weight sharing, early stopping, and surrogate models, may provide insights for reducing the cost of configuration search in agent frameworks.
+Self-evolution is computationally expensive: evaluating many configurations, maintaining population archives, and running optimization loops. Frameworks need cost-quality knobs that allow users to control self-evolution intensity. Techniques from efficient NAS (weight sharing, early stopping, surrogate models) may provide insights for reducing configuration search costs.
 
 \paragraph{Problem 6: Evaluation metric design.}
-The effectiveness of self-evolution depends critically on the quality of the evaluation metric. A poorly designed metric can lead to reward hacking~\citep{skalse2022reward}, where the agent optimizes for the metric rather than the intended behavior. For example, an agent that optimizes for task completion speed may produce superficially fast but low-quality outputs. Designing evaluation metrics that capture the true objective of agent behavior---especially for open-ended, creative, or exploratory tasks---remains a fundamental challenge.
+The effectiveness of self-evolution depends critically on evaluation metric quality. A poorly designed metric can lead to reward hacking, where agents optimize for the metric rather than intended behavior. For example, an agent that optimizes for task completion speed may produce superficially fast but low-quality outputs. Designing evaluation metrics that capture the true objective of agent behavior---especially for open-ended, creative, or exploratory tasks where ground truth is unavailable---remains a fundamental challenge. Composite metrics that combine multiple quality dimensions (accuracy, coherence, relevance, safety) with learned metric models offer a promising direction, but introduce their own challenges in metric reliability and calibration.
 
 \paragraph{Problem 7: Long-term stability and catastrophic forgetting.}
-Self-evolving agents that continuously modify their configurations face the risk of catastrophic forgetting: improving on new tasks at the expense of previously mastered tasks. Unlike neural networks (where catastrophic forgetting is a well-studied phenomenon in continual learning), agent forgetting occurs at the configuration level---a new prompt configuration that improves performance on task B may degrade performance on task A. Ensuring long-term stability (monotonic improvement or, at minimum, non-degradation across all task types) requires multi-objective optimization and regression testing that is not supported by any current framework.
+Self-evolving agents that continuously modify their configurations face the risk of catastrophic forgetting: improving on new tasks at the expense of previously mastered tasks. Unlike neural networks (where this is well-studied in continual learning), agent forgetting occurs at the configuration level. Ensuring long-term stability requires multi-objective optimization and regression testing not supported by any current framework.
+
+\paragraph{Problem 8: The ``cold start'' problem.}
+A newly deployed self-evolving agent starts with zero improvement memory---it has no record of past failures, no accumulated improvement strategies, and no learned optimization rules. This ``cold start'' problem means that the first iterations of self-evolution are essentially random search, which may produce poor initial results that discourage users from continuing. Bootstrapping the improvement memory from external sources---transfer learning from other agents, human-provided examples, or pre-computed optimization rules---could accelerate the cold start phase. However, no framework currently supports bootstrapping improvement knowledge from external sources.
+
+\paragraph{Problem 9: Interoperability across frameworks.}
+As the agent framework landscape continues to diversify, improvement knowledge gained in one framework does not transfer to another. A self-evolving CrewAI agent's improvement strategies are encoded in CrewAI-specific configuration formats and memory structures that are meaningless to an AutoGen agent. A universal improvement representation---an ``interlingua'' for self-evolution knowledge---would enable cross-framework transfer, allowing improvement knowledge to accumulate across the ecosystem rather than within individual frameworks. The Evolution Layer's framework-agnostic interface is a step in this direction, but a full interlingua would require standardization across the field.
 
 
 \subsection{Summary}
-\label{sec:frameworks:summary}
 
 In this section, we have surveyed seven major agent frameworks and assessed their support for self-evolution. Our analysis reveals a significant gap between what current frameworks provide and what self-evolving agents require:
 
@@ -771,5 +782,21 @@ In this section, we have surveyed seven major agent frameworks and assessed thei
 \end{enumerate}
 
 We propose the Evolution Layer architecture---a modular self-evolution layer that can be added to any existing framework---as a practical path toward framework-level self-evolution. The Evolution Layer implements the three missing layers (persistent evaluation, memory-for-improvement, optimization) through four components (evaluation engine, improvement memory, configuration optimizer, population manager).
+
+\subsubsection{Concluding Analysis: The Self-Evolution Imperative}
+
+The analysis in this section leads to a clear conclusion: the agent framework ecosystem is at an inflection point. The current generation of frameworks has solved the task execution problem---they provide sophisticated infrastructure for orchestrating agents, managing state, integrating tools, and handling errors. But the next frontier is task improvement---frameworks must evolve from platforms that \emph{run} agents to platforms that \emph{improve} agents.
+
+Several converging trends make this inflection point timely:
+
+\begin{enumerate}
+    \item \textbf{Demonstrated capability of self-evolution methods.} The self-improvement methods analyzed in Section~\ref{sec:selfimprovement} and the evolutionary code systems analyzed in Section~\ref{sec:evolutionary} demonstrate that LLM-based systems can improve themselves when given appropriate infrastructure. The ``appropriate infrastructure'' requirement points directly to the framework layer.
+
+    \item \textbf{Maturation of the agent framework ecosystem.} The seven frameworks surveyed in this section have reached a level of maturity where adding new features is more about integration and optimization than fundamental architecture decisions. The time is right to add self-evolution as a first-class feature rather than a post-hoc extension.
+
+    \item \textbf{Growing demand for production self-evolution.} As agents move from research demos to production systems, the need for continuous improvement becomes acute. Production agents encounter edge cases, distribution shifts, and new user requirements that were not anticipated during development. Self-evolution at the framework level provides a systematic response to these challenges.
+
+    \item \textbf{Cross-pollination from evolutionary computation.} The quality-diversity algorithms (MAP-Elites, CMA-ES) and genetic programming techniques that have proven effective in evolutionary code discovery (Section~\ref{sec:evolutionary}) provide ready-made algorithms for the Population Manager component of the Evolution Layer. Adapting these algorithms to the agent configuration space is a tractable engineering challenge rather than a fundamental research question.
+\end{enumerate}
 
 The next generation of agent frameworks will need to incorporate self-evolution as a first-class feature, not an afterthought. As self-evolving agents become more capable, the frameworks that support them will need to provide the infrastructure for safe, efficient, and effective autonomous improvement. The analysis in this section provides a roadmap for this evolution.
