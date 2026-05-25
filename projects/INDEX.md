@@ -187,6 +187,33 @@
 | OpenClaw Harness Engineering | [guixiang123124/openclaw-harness](https://github.com/guixiang123124/openclaw-harness) | OpenClaw Harness Engineering | [projects/170-openclaw-harness-engineering-factory.md](170-openclaw-harness-engineering-factory.md) |
 | Codex CLI 1UP | [regenrek/codex-1up](https://github.com/regenrek/codex-1up) | Codex CLI Upgrade Kit | [projects/171-codex-1up-codex-cli-upgrade-kit.md](171-codex-1up-codex-cli-upgrade-kit.md) |
 | dotnet-skills | [managedcode/dotnet-skills](https://github.com/managedcode/dotnet-skills) | .NET Agent Skill Catalog | [projects/172-dotnet-skills-agent-skill-catalog.md](172-dotnet-skills-agent-skill-catalog.md) |
+| Honcho | [plastic-labs/honcho](https://github.com/plastic-labs/honcho) | Agent Memory Infrastructure | [projects/173-honcho-stateful-agent-memory.md](173-honcho-stateful-agent-memory.md) |
+| Hindsight | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | Learning Agent Memory System | [projects/174-hindsight-agent-memory-that-learns.md](174-hindsight-agent-memory-that-learns.md) |
+| Agentic Context Engine | [kayba-ai/agentic-context-engine](https://github.com/kayba-ai/agentic-context-engine) | Agent Experience Learning Loop | [projects/175-agentic-context-engine-experience-learning.md](175-agentic-context-engine-experience-learning.md) |
+| TrustGraph | [trustgraph-ai/trustgraph](https://github.com/trustgraph-ai/trustgraph) | Context Graph Agent Runtime | [projects/176-trustgraph-context-graph-agent-runtime.md](176-trustgraph-context-graph-agent-runtime.md) |
+| HaluMem | [MemTensor/HaluMem](https://github.com/MemTensor/HaluMem) | Agent Memory Hallucination Benchmark | [projects/177-halumem-agent-memory-hallucination-benchmark.md](177-halumem-agent-memory-hallucination-benchmark.md) |
+
+| Planning with Files | [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) | Persistent Agent Planning Skill | [projects/178-planning-with-files-agent-planning-skill.md](178-planning-with-files-agent-planning-skill.md) |
+
+| ECC | [affaan-m/ECC](https://github.com/affaan-m/ECC) | Agent Harness Optimization System | [projects/179-ecc-agent-harness-optimization-system.md](179-ecc-agent-harness-optimization-system.md) |
+
+| vibe-codex | [kks0488/vibe-codex](https://github.com/kks0488/vibe-codex) | Codex Skills and Agent Teams Kit | [projects/180-vibe-codex-codex-skills-teams.md](180-vibe-codex-codex-skills-teams.md) |
+
+| OpenCode Skills | [farmage/opencode-skills](https://github.com/farmage/opencode-skills) | OpenCode Agent Skills and Workflow Commands | [projects/181-opencode-skills-workflow-commands.md](181-opencode-skills-workflow-commands.md) |
+
+| Agent Smith | [cyijun/agent-smith](https://github.com/cyijun/agent-smith) | Directory-Isolated Multi-Agent Protocol | [projects/182-agent-smith-directory-isolated-multi-agent.md](182-agent-smith-directory-isolated-multi-agent.md) |
+
+| Galyarder Framework | [galyarderlabs/galyarder-framework](https://github.com/galyarderlabs/galyarder-framework) | Agentic Skills Orchestration Framework | [projects/183-galyarder-agentic-skills-orchestration.md](183-galyarder-agentic-skills-orchestration.md) |
+
+| Thesis Skills | [quzhiii/thesis-skills](https://github.com/quzhiii/thesis-skills) | Paper Workflow Agent Skills | [projects/184-thesis-skills-paper-workflow-skills.md](184-thesis-skills-paper-workflow-skills.md) |
+
+| PRB Agent Skills | [PaulRBerg/agent-skills](https://github.com/PaulRBerg/agent-skills) | Personal Codex Agent Skills Pack | [projects/185-prb-agent-skills-personal-codex-skill-pack.md](185-prb-agent-skills-personal-codex-skill-pack.md) |
+| Awesome Codex Skills | [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) | Codex Skills Automation Catalog | [projects/186-awesome-codex-skills-automation-catalog.md](186-awesome-codex-skills-automation-catalog.md) |
+| Eigent Agent Skills | [eigent-ai/agent-skills](https://github.com/eigent-ai/agent-skills) | Cowork Agent Skills Collection | [projects/187-eigent-agent-skills-cowork-collection.md](187-eigent-agent-skills-cowork-collection.md) |
+| AI Agent Skills | [MoizIbnYousaf/Ai-Agent-Skills](https://github.com/MoizIbnYousaf/Ai-Agent-Skills) | Curated Agent Skills Library and CLI | [projects/188-ai-agent-skills-curated-library-cli.md](188-ai-agent-skills-curated-library-cli.md) |
+| Arc | [howells/arc](https://github.com/howells/arc) | Agent Workflow Plugin | [projects/189-arc-agent-workflow-plugin.md](189-arc-agent-workflow-plugin.md) |
+| Gentleman Skills | [Gentleman-Programming/Gentleman-Skills](https://github.com/Gentleman-Programming/Gentleman-Skills) | Community Agent Skills Patterns | [projects/190-gentleman-skills-community-agent-patterns.md](190-gentleman-skills-community-agent-patterns.md) |
+| Together AI Skills | [togethercomputer/skills](https://github.com/togethercomputer/skills) | Provider API Agent Skills Pack | [projects/191-together-ai-skills-provider-api-pack.md](191-together-ai-skills-provider-api-pack.md) |
 
 ## Data Use
 

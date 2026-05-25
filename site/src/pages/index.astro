@@ -12,16 +12,15 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
   <!-- Hero -->
   <section class="hero">
     <div class="container hero-grid">
-      <div>
+      <div class="hero-copy">
         <div class="eyebrow">Self Evolve AI · AI 自我进化</div>
-        <h1>索引那些让 <span class="gradient-text">AI 学会自我改进</span> 的系统。</h1>
+        <h1>AI Agent 自进化索引与证据库。</h1>
         <p class="lead">Self Evolve 是自进化智能体的中文入口：汇集论文、GitHub 实现、Benchmark、代码自我改进循环，以及 LLM 迭代优化的工程实践。</p>
         <div class="hero-actions">
-          <a class="button primary" href="#projects">浏览项目</a>
-          <a class="button" href="/research/">阅读研究图谱</a>
-          <a class="button" href="/paper/">论文写作台账</a>
-          <a class="button" href="/graph/">打开知识图谱</a>
-          <a class="button" href="/star-analysis/">Star 质量分析</a>
+          <a class="button primary" href="/blog/">阅读博客</a>
+          <a class="text-link" href="#projects">浏览项目</a>
+          <a class="text-link" href="/research/">研究图谱</a>
+          <a class="text-link" href="/graph/">知识图谱</a>
         </div>
         <div class="metrics" aria-label="研究站点指标">
           <div class="metric"><strong>{featuredResearch.length}</strong><span>篇代表论文进入前台</span></div>
@@ -29,9 +28,16 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
           <div class="metric"><strong>{knowledgeGraphStats.nodes}</strong><span>个图谱节点</span></div>
         </div>
       </div>
-      <figure class="hero-visual" aria-label="Self Evolve 数据流视觉地图">
-        <img src="/visuals/self-evolve-og.png" alt="Self Evolve AI raw evidence to public research output system map" loading="eager" />
-      </figure>
+      <aside class="hero-evidence" aria-label="Self Evolve evidence pipeline">
+        <div class="eyebrow">证据链</div>
+        <ol>
+          <li><span>Raw</span><strong>GitHub / 论文 / 博客 / 社交信号</strong></li>
+          <li><span>Processed</span><strong>分类、时间线、Benchmark 与交叉分析</strong></li>
+          <li><span>Model cards</span><strong>项目机制、可用性、限制和教学用法</strong></li>
+          <li><span>Results</span><strong>SEO 文章、知识图谱、论文和公开报告</strong></li>
+        </ol>
+        <p>不是装饰图，而是从原始材料到可公开阅读成果的研究管线。</p>
+      </aside>
     </div>
   </section>
 
@@ -45,37 +51,6 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
       <div class="card">
         <p>Self Evolve 把 AI 自我进化视为一门工程学：智能体观察结果、诊断差距、修改提示词/工具/记忆/代码/策略，再用评测确认改动确实提升目标能力且没有回归。</p>
         <p>本站面向研究者、开发者与产品团队，提供可搜索的机制图谱、证据链和实现索引。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Visual Evidence -->
-  <section class="section" id="visual-evidence">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">可视化</div>
-          <h2>先看数据流，再读项目卡。</h2>
-        </div>
-        <p>图表由当前仓库数据生成；imagegen 负责系统地图，SVG 负责精确数字。</p>
-      </div>
-      <div class="visual-grid">
-        <figure class="visual-panel wide">
-          <img src="/visuals/raw-to-public-evidence-art.png" alt="Raw to public evidence flow artwork" loading="lazy" />
-          <figcaption>Imagegen 生成的 raw、processed、work、results、public site 证据流视觉入口。</figcaption>
-        </figure>
-        <figure class="visual-panel wide">
-          <img src="/visuals/raw-to-public-data-flow.svg" alt="Raw to public data flow diagram" loading="lazy" />
-          <figcaption>脚本生成的 Raw、processed、work、results 四层治理流。</figcaption>
-        </figure>
-        <figure class="visual-panel">
-          <img src="/visuals/github-corpus-funnel.svg" alt="GitHub corpus funnel chart" loading="lazy" />
-          <figcaption>GitHub 证据从 raw 捕获进入公开 model-card 分析。</figcaption>
-        </figure>
-        <figure class="visual-panel">
-          <img src="/visuals/raw-theme-distribution.svg" alt="Raw theme distribution chart" loading="lazy" />
-          <figcaption>当前 raw corpus 的主题结构。</figcaption>
-        </figure>
       </div>
     </div>
   </section>

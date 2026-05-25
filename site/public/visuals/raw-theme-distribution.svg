@@ -32,27 +32,27 @@
   </g>
 
   <g>
-    <rect x="176" y="150" width="58" height="280" rx="14" fill="url(#amber)" filter="url(#softShadow)"/>
-    <text x="205" y="138" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#f6f8ff">83</text>
+    <rect x="176" y="133" width="58" height="297" rx="14" fill="url(#amber)" filter="url(#softShadow)"/>
+    <text x="205" y="121" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#f6f8ff">88</text>
     <text x="205" y="465" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#aab4d4">memory</text>
   </g>
 
   <g>
-    <rect x="272" y="170" width="58" height="260" rx="14" fill="#9f7cff" filter="url(#softShadow)"/>
-    <text x="301" y="158" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#f6f8ff">77</text>
+    <rect x="272" y="164" width="58" height="266" rx="14" fill="#9f7cff" filter="url(#softShadow)"/>
+    <text x="301" y="152" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#f6f8ff">79</text>
     <text x="301" y="465" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#aab4d4">evolution</text>
   </g>
 
   <g>
-    <rect x="368" y="268" width="58" height="162" rx="14" fill="url(#teal)" filter="url(#softShadow)"/>
-    <text x="397" y="256" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#f6f8ff">48</text>
-    <text x="397" y="465" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#aab4d4">framework</text>
+    <rect x="368" y="228" width="58" height="202" rx="14" fill="url(#teal)" filter="url(#softShadow)"/>
+    <text x="397" y="216" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#f6f8ff">60</text>
+    <text x="397" y="465" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#aab4d4">skill</text>
   </g>
 
   <g>
-    <rect x="464" y="285" width="58" height="145" rx="14" fill="url(#amber)" filter="url(#softShadow)"/>
-    <text x="493" y="273" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#f6f8ff">43</text>
-    <text x="493" y="465" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#aab4d4">skill</text>
+    <rect x="464" y="261" width="58" height="169" rx="14" fill="url(#amber)" filter="url(#softShadow)"/>
+    <text x="493" y="249" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#f6f8ff">50</text>
+    <text x="493" y="465" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#aab4d4">framework</text>
   </g>
 
   <g>

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T09:19:32+08:00",
+  "generated_at": "2026-05-25T13:21:00+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -139,7 +139,26 @@
         "raw-github/akillness_oh-my-skills.md",
         "raw-github/guixiang123124_openclaw-harness.md",
         "raw-github/regenrek_codex-1up.md",
-        "raw-github/managedcode_dotnet-skills.md"
+        "raw-github/managedcode_dotnet-skills.md",
+        "raw-github/plastic-labs_honcho.md",
+        "raw-github/vectorize-io_hindsight.md",
+        "raw-github/kayba-ai_agentic-context-engine.md",
+        "raw-github/trustgraph-ai_trustgraph.md",
+        "raw-github/memtensor_halumem.md",
+        "raw-github/othmanadi_planning-with-files.md",
+        "raw-github/affaan-m_ecc.md",
+        "raw-github/kks0488_vibe-codex.md",
+        "raw-github/farmage_opencode-skills.md",
+        "raw-github/cyijun_agent-smith.md",
+        "raw-github/galyarderlabs_galyarder-framework.md",
+        "raw-github/quzhiii_thesis-skills.md",
+        "raw-github/paulrberg_agent-skills.md",
+        "raw-github/composiohq_awesome-codex-skills.md",
+        "raw-github/eigent-ai_agent-skills.md",
+        "raw-github/moizibnyousaf_ai-agent-skills.md",
+        "raw-github/howells_arc.md",
+        "raw-github/gentleman-programming_gentleman-skills.md",
+        "raw-github/togethercomputer_skills.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -191,7 +210,10 @@
         "work/research/hourly-public-metadata-update-2026-05-25-0613.md",
         "work/research/hourly-public-metadata-update-2026-05-25-0715.md",
         "work/research/hourly-public-metadata-update-2026-05-25-0818.md",
-        "work/research/hourly-public-metadata-update-2026-05-25-0919.md"
+        "work/research/hourly-public-metadata-update-2026-05-25-0919.md",
+        "work/research/hourly-public-metadata-update-2026-05-25-1120.md",
+        "work/research/hourly-public-metadata-update-2026-05-25-1221.md",
+        "work/research/hourly-public-metadata-update-2026-05-25-1321.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -444,7 +466,45 @@
         "projects/171-codex-1up-codex-cli-upgrade-kit.md",
         "site/public/reports/projects/171-codex-1up-codex-cli-upgrade-kit.md",
         "projects/172-dotnet-skills-agent-skill-catalog.md",
-        "site/public/reports/projects/172-dotnet-skills-agent-skill-catalog.md"
+        "site/public/reports/projects/172-dotnet-skills-agent-skill-catalog.md",
+        "projects/173-honcho-stateful-agent-memory.md",
+        "site/public/reports/projects/173-honcho-stateful-agent-memory.md",
+        "projects/174-hindsight-agent-memory-that-learns.md",
+        "site/public/reports/projects/174-hindsight-agent-memory-that-learns.md",
+        "projects/175-agentic-context-engine-experience-learning.md",
+        "site/public/reports/projects/175-agentic-context-engine-experience-learning.md",
+        "projects/176-trustgraph-context-graph-agent-runtime.md",
+        "site/public/reports/projects/176-trustgraph-context-graph-agent-runtime.md",
+        "projects/177-halumem-agent-memory-hallucination-benchmark.md",
+        "site/public/reports/projects/177-halumem-agent-memory-hallucination-benchmark.md",
+        "projects/178-planning-with-files-agent-planning-skill.md",
+        "projects/179-ecc-agent-harness-optimization-system.md",
+        "projects/180-vibe-codex-codex-skills-teams.md",
+        "projects/181-opencode-skills-workflow-commands.md",
+        "projects/182-agent-smith-directory-isolated-multi-agent.md",
+        "projects/183-galyarder-agentic-skills-orchestration.md",
+        "projects/184-thesis-skills-paper-workflow-skills.md",
+        "site/public/reports/projects/178-planning-with-files-agent-planning-skill.md",
+        "site/public/reports/projects/179-ecc-agent-harness-optimization-system.md",
+        "site/public/reports/projects/180-vibe-codex-codex-skills-teams.md",
+        "site/public/reports/projects/181-opencode-skills-workflow-commands.md",
+        "site/public/reports/projects/182-agent-smith-directory-isolated-multi-agent.md",
+        "site/public/reports/projects/183-galyarder-agentic-skills-orchestration.md",
+        "site/public/reports/projects/184-thesis-skills-paper-workflow-skills.md",
+        "projects/185-prb-agent-skills-personal-codex-skill-pack.md",
+        "projects/186-awesome-codex-skills-automation-catalog.md",
+        "projects/187-eigent-agent-skills-cowork-collection.md",
+        "projects/188-ai-agent-skills-curated-library-cli.md",
+        "projects/189-arc-agent-workflow-plugin.md",
+        "projects/190-gentleman-skills-community-agent-patterns.md",
+        "projects/191-together-ai-skills-provider-api-pack.md",
+        "site/public/reports/projects/185-prb-agent-skills-personal-codex-skill-pack.md",
+        "site/public/reports/projects/186-awesome-codex-skills-automation-catalog.md",
+        "site/public/reports/projects/187-eigent-agent-skills-cowork-collection.md",
+        "site/public/reports/projects/188-ai-agent-skills-curated-library-cli.md",
+        "site/public/reports/projects/189-arc-agent-workflow-plugin.md",
+        "site/public/reports/projects/190-gentleman-skills-community-agent-patterns.md",
+        "site/public/reports/projects/191-together-ai-skills-provider-api-pack.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -519,7 +579,9 @@
       "2026-05-24T23:06+08: GitHub pages opened through browser/search tool for Randroids-Dojo/skills, MemoriLabs/Memori, 803/skills-supply, iii-experimental/agentos, TheQtCompanyRnD/agent-skills, and chriscox/agent-skills.",
       "2026-05-25T00:06+08: GitHub pages opened through browser/search tool for rendro/sediment, princeton-pli/hal-harness, matrixorigin/Memoria, HUST-AI-HYZ/MemoryAgentBench, pjt222/agent-almanac, psenger/ai-agent-skills, OpenHands/benchmarks.",
       "2026-05-25T02:08+08: GitHub pages opened through browser/search tool for openai/skills, sentient-agi/EvoSkill, rtk-ai/icm, callstackincubator/agent-skills, CodeAlive-AI/ai-driven-development, jakenuts/agent-skills.",
-      "2026-05-25T05:11+08: GitHub pages opened through browser/search tool for wanxingai/LightAgent, agent-skills-hub/agent-skills-hub, thClaws/thClaws, Memento-Teams/Memento-Skills, FreedomIntelligence/OpenClaw-Medical-Skills, agent-sh/agentsys."
+      "2026-05-25T05:11+08: GitHub pages opened through browser/search tool for wanxingai/LightAgent, agent-skills-hub/agent-skills-hub, thClaws/thClaws, Memento-Teams/Memento-Skills, FreedomIntelligence/OpenClaw-Medical-Skills, agent-sh/agentsys.",
+      "2026-05-25T12:21+08: GitHub pages opened through browser/search tool for OthmanAdi/planning-with-files, affaan-m/ECC, kks0488/vibe-codex, farmage/opencode-skills, cyijun/agent-smith, galyarderlabs/galyarder-framework, and quzhiii/thesis-skills.",
+      "2026-05-25T13:21+08: GitHub pages opened through browser/search tool for PaulRBerg/agent-skills, ComposioHQ/awesome-codex-skills, eigent-ai/agent-skills, MoizIbnYousaf/Ai-Agent-Skills, howells/arc, Gentleman-Programming/Gentleman-Skills, togethercomputer/skills."
     ],
     "shell_network": [
       "curl https://api.github.com/rate_limit failed: Could not resolve host: api.github.com.",
@@ -535,7 +597,9 @@
       "2026-05-25T00:06+08: curl https://api.github.com/rate_limit failed: Could not resolve host: api.github.com; gh auth status reported invalid token.",
       "2026-05-25T02:08+08: curl/gh GitHub API freshness remains blocked pending validation; current metadata is web-observed, not API-verified.",
       "2026-05-25T02:09+08: curl -I --max-time 15 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
-      "2026-05-25T05:11+08: curl -I --max-time 10 https://api.github.com failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang."
+      "2026-05-25T05:11+08: curl -I --max-time 10 https://api.github.com failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
+      "2026-05-25T12:21+08: curl -I -L --max-time 12 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
+      "2026-05-25T13:21+08: curl -I -L --max-time 12 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang."
     ],
     "gitnexus": [
       "gitnexus doctor succeeded with GitNexus 1.6.5 and graph/full-text/vector capabilities available.",
@@ -549,7 +613,11 @@
       "2026-05-24T23:09+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded incrementally: changed=12, added=13, deleted=0, 9,371 nodes, 9,626 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
       "2026-05-25T00:11+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded incrementally: changed=13, added=15, deleted=0, 9,476 nodes, 9,731 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
       "2026-05-25T02:10+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded incrementally: changed=17, added=27, deleted=0, 9,669 nodes, 9,954 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
-      "2026-05-25T05:30+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded incrementally: changed=13, added=14, deleted=0, 10,002 nodes, 10,343 edges, 31 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect."
+      "2026-05-25T05:30+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded incrementally: changed=13, added=14, deleted=0, 10,002 nodes, 10,343 edges, 31 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
+      "2026-05-25T12:21+08: npx gitnexus status failed under HOME=/private/tmp/gitnexus-home because npm could not resolve registry.npmjs.org; local binary /Users/copizzah/.local/bin/gitnexus version 1.6.5 was available.",
+      "2026-05-25T12:21+08: HOME=/private/tmp/gitnexus-home /Users/copizzah/.local/bin/gitnexus analyze failed on reused temp HOME because FTS extension download failure left an unloaded index extension; fresh HOME=/private/tmp/gitnexus-home-1221 succeeded.",
+      "2026-05-25T12:21+08: HOME=/private/tmp/gitnexus-home-1221 /Users/copizzah/.local/bin/gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded: 10,623 nodes, 11,534 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
+      "2026-05-25T13:21+08: HOME=/private/tmp/gitnexus-home-1321 /Users/copizzah/.local/bin/gitnexus doctor passed; analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded with 10,730 nodes, 11,678 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect."
     ],
     "tests": [
       "2026-05-24T19:17+08: node scripts/generate_visual_assets.mjs regenerated four SVG charts from current analysis and project data.",
@@ -608,7 +676,21 @@
       "2026-05-25T05:30+08: HOME=/private/tmp/gitnexus-home gitnexus doctor: passed, GitNexus 1.6.5 graph/full-text/vector capabilities reported available",
       "2026-05-25T05:30+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly .: passed with changed=13, added=14, deleted=0, 10,002 nodes, 10,343 edges, 31 clusters, 13 flows; FTS degraded because LadybugDB extension download could not connect",
       "2026-05-25T05:30+08: (cd site && npm run build): passed, 234 pages built with existing Astro z deprecation hints",
-      "2026-05-25T05:30+08: (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex): passed, main.pdf 213 pages with existing font/overfull warnings"
+      "2026-05-25T05:30+08: (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex): passed, main.pdf 213 pages with existing font/overfull warnings",
+      "2026-05-25T12:21+08: jq empty research/repo-classification.json .mermaid/current/graph.json: passed; node --check site/src/data/projects.ts and scripts/generate_project_indexes.mjs: passed.",
+      "2026-05-25T12:21+08: node scripts/generate_project_indexes.mjs: passed after README count refresh.",
+      "2026-05-25T12:21+08: python3 scripts/enforce_raw_timestamps.py: passed, raw-github md=475, md_ok=475, missing_count=0.",
+      "2026-05-25T12:21+08: node scripts/analyze_github_project_data.mjs: passed, raw=475, classified=475, analyzed_projects=193, strict_evolution=79, broad_evolution=175.",
+      "2026-05-25T12:21+08: node scripts/generate_visual_assets.mjs: passed, 4 SVG assets regenerated.",
+      "2026-05-25T12:21+08: (cd site && npm run build): passed, 274 pages built with existing Astro z deprecation hints.",
+      "2026-05-25T12:21+08: (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex): passed, main.pdf 213 pages with existing font/overfull/underfull warnings.",
+      "2026-05-25T13:21+08: JSON checks passed for research/repo-classification.json and .mermaid/current/graph.json; ad hoc tsc check was blocked by TypeScript 6 moduleResolution deprecation, then Astro check covered site/src/data/projects.ts successfully.",
+      "2026-05-25T13:21+08: node scripts/generate_project_indexes.mjs passed after data, README, and graph refresh.",
+      "2026-05-25T13:21+08: python3 scripts/enforce_raw_timestamps.py passed with raw-github md=482, md_ok=482, missing_count=0.",
+      "2026-05-25T13:21+08: node scripts/analyze_github_project_data.mjs passed with raw=482, classified=482, analyzed_projects=200, strict_evolution=79, broad_evolution=175.",
+      "2026-05-25T13:21+08: node scripts/generate_visual_assets.mjs passed, 4 SVG assets regenerated.",
+      "2026-05-25T13:21+08: (cd site && npm run build) passed, 281 pages built with existing Astro z deprecation hints.",
+      "2026-05-25T13:21+08: (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex) passed, main.pdf 213 pages with existing font/overfull/underfull warnings."
     ],
     "notes": [
       "work/research/hourly-public-metadata-update-2026-05-24-2105.md",
@@ -616,22 +698,18 @@
       "work/research/hourly-public-metadata-update-2026-05-24-2306.md",
       "work/research/hourly-public-metadata-update-2026-05-25-0006.md",
       "work/research/hourly-public-metadata-update-2026-05-25-0208.md",
-      "work/research/hourly-public-metadata-update-2026-05-25-0511.md"
+      "work/research/hourly-public-metadata-update-2026-05-25-0511.md",
+      "work/research/hourly-public-metadata-update-2026-05-25-1221.md",
+      "work/research/hourly-public-metadata-update-2026-05-25-1321.md"
     ]
   },
   "current_run_evidence": [
-    "Web-observed repos: yf-he/EvoTest, codejunkie99/agentic-stack, revfactory/harness, akillness/oh-my-skills, guixiang123124/openclaw-harness, regenrek/codex-1up, managedcode/dotnet-skills",
-    "New raw files: raw-github/yf-he_evotest.md, raw-github/codejunkie99_agentic-stack.md, raw-github/revfactory_harness.md, raw-github/akillness_oh-my-skills.md, raw-github/guixiang123124_openclaw-harness.md, raw-github/regenrek_codex-1up.md, raw-github/managedcode_dotnet-skills.md",
-    "Shell GitHub API remains DNS-blocked: curl -I --max-time 10 https://api.github.com failed with Could not resolve host; gh api rate_limit could not connect.",
-    "jq empty research/repo-classification.json .mermaid/current/graph.json passed; node --check site/src/data/projects.ts and the 0919 generator passed.",
-    "node scripts/generate_project_indexes.mjs passed after data and analysis refresh.",
-    "python3 scripts/enforce_raw_timestamps.py passed with raw-github md=463, md_ok=463, missing_count=0.",
-    "node scripts/analyze_github_project_data.mjs passed with raw=463, classified=463, analyzed_projects=181, strict_evolution=78, broad_evolution=173.",
-    "node scripts/generate_visual_assets.mjs regenerated four SVG assets.",
-    "command -v codeflow returned no command; CodeFlow is unavailable on PATH in this environment.",
-    "HOME=/private/tmp/gitnexus-home gitnexus doctor passed; analyze passed with changed=14, added=16, deleted=0, 10,690 nodes, 11,498 edges, 36 clusters, 16 flows; FTS degraded because LadybugDB extension download could not connect.",
-    "(cd site && npm run build) passed with 262 pages built and existing Astro z deprecation hints.",
-    "(cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex) passed; main.pdf remains 213 pages with existing font/overfull/underfull warnings.",
+    "Web-observed repos: PaulRBerg/agent-skills, ComposioHQ/awesome-codex-skills, eigent-ai/agent-skills, MoizIbnYousaf/Ai-Agent-Skills, howells/arc, Gentleman-Programming/Gentleman-Skills, togethercomputer/skills",
+    "New raw files: raw-github/paulrberg_agent-skills.md, raw-github/composiohq_awesome-codex-skills.md, raw-github/eigent-ai_agent-skills.md, raw-github/moizibnyousaf_ai-agent-skills.md, raw-github/howells_arc.md, raw-github/gentleman-programming_gentleman-skills.md, raw-github/togethercomputer_skills.md",
+    "Shell GitHub API remains DNS-blocked: curl -I -L --max-time 12 https://api.github.com/rate_limit failed with Could not resolve host; gh auth status reports invalid token for Shiyao-Huang.",
+    "GitNexus local binary 1.6.5 is available; fresh temp HOME analyze succeeded with 10,730 nodes, 11,678 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
+    "Validation passed: JSON checks, project indexes, raw timestamp enforcement, GitHub project analysis, visual asset generation, site build, and paper build. Direct tsc probe hit TS5107 deprecation, but Astro check/build passed.",
+    "Final counts: raw=482, classified=482, analyzed_projects=200, strict_evolution=79, broad_evolution=175, skill_theme=60, framework_category=138, public_reports=225, site_pages=281.",
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ]
 }

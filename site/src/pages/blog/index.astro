@@ -2,7 +2,71 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog')).filter((p)=>!p.data.draft).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+const featuredPost = posts[0];
+const otherPosts = posts.slice(1);
 ---
 <BaseLayout title="Self Evolve 博客 — AI 自我进化实践笔记" description="围绕自进化智能体、LLM 迭代优化、代码自我改进与评测闭环的中文 SEO 文章。">
-  <section class="section"><div class="container"><div class="eyebrow">博客</div><h1 class="gradient-text">Self Evolve 实践笔记</h1><p class="lead">支持 MDX、代码高亮、标签、RSS 与结构化 SEO 元数据，方便持续发布研究与工程内容。</p><div class="grid">{posts.map((post)=><article class="card"><div class="eyebrow">{post.data.pubDate.toISOString().slice(0,10)} · {post.data.author}</div><h2><a href={`/blog/${post.id}/`}>{post.data.title}</a></h2><p>{post.data.description}</p><div class="pill-row">{post.data.tags.map((tag)=><a class="pill" href={`/blog/tag/${encodeURIComponent(tag)}`}>{tag}</a>)}</div></article>)}</div></div></section>
+  <section class="section blog-index-hero">
+    <div class="container">
+      <div>
+        <div class="eyebrow">博客</div>
+        <h1>Self Evolve 实践笔记</h1>
+        <p class="lead">把自进化智能体、LLM 迭代优化、代码自我改进和评测闭环写成可搜索、可引用、能继续生长的中文研究笔记。</p>
+      </div>
+      <aside class="blog-note">
+        <p>博客是这个站点的阅读入口：先用短文章建立概念，再进入项目 model card、论文精读和知识图谱。</p>
+        <div class="pill-row">
+          <a class="pill" href="/rss.xml">RSS</a>
+          <a class="pill" href="/research/">研究图谱</a>
+          <a class="pill" href="/projects/">项目索引</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  {featuredPost && (
+    <section class="section" style="padding-top: 20px">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">最新文章</div>
+            <h2>从最新一篇开始读</h2>
+          </div>
+        </div>
+        <article class="post-card">
+          <div class="post-number">01</div>
+          <div>
+            <h2><a href={`/blog/${featuredPost.id}/`}>{featuredPost.data.title}</a></h2>
+            <p>{featuredPost.data.description}</p>
+            <div class="pill-row">{featuredPost.data.tags.map((tag)=><a class="pill" href={`/blog/tag/${encodeURIComponent(tag)}`}>{tag}</a>)}</div>
+          </div>
+          <div class="post-meta">{featuredPost.data.pubDate.toISOString().slice(0,10)}<br />{featuredPost.data.author}</div>
+        </article>
+      </div>
+    </section>
+  )}
+
+  <section class="section" style="padding-top: 20px">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">全部文章</div>
+          <h2>按发布时间继续阅读</h2>
+        </div>
+      </div>
+      <div class="post-stack">
+        {otherPosts.map((post, index)=>
+          <article class="post-card">
+            <div class="post-number">{String(index + 2).padStart(2, '0')}</div>
+            <div>
+              <h2><a href={`/blog/${post.id}/`}>{post.data.title}</a></h2>
+              <p>{post.data.description}</p>
+              <div class="pill-row">{post.data.tags.map((tag)=><a class="pill" href={`/blog/tag/${encodeURIComponent(tag)}`}>{tag}</a>)}</div>
+            </div>
+            <div class="post-meta">{post.data.pubDate.toISOString().slice(0,10)}<br />{post.data.author}</div>
+          </article>
+        )}
+      </div>
+    </div>
+  </section>
 </BaseLayout>

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-24T00:00:00+08:00",
-  "total": 463,
-  "updated_files": 463,
+  "generated_at": "2026-05-25T00:00:00+08:00",
+  "total": 482,
+  "updated_files": 482,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -102,6 +102,15 @@
       "collected_at": "2026-05-24T20:20:00+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_github_page_open_2026-05-24"
+    },
+    {
+      "repo": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "file": "raw-github/affaan-m_ecc.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T12:21:31+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T12:21:31+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
       "repo": "agent-ecosystem/skill-validator",
@@ -788,6 +797,15 @@
       "timestamp_source": "web_github_page_open_2026-05-24"
     },
     {
+      "repo": "ComposioHQ/awesome-codex-skills",
+      "url": "https://github.com/ComposioHQ/awesome-codex-skills",
+      "file": "raw-github/composiohq_awesome-codex-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T13:21:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid"
+    },
+    {
       "repo": "crewaiinc/crewai",
       "url": "https://github.com/crewaiinc/crewai",
       "file": "raw-github/crewaiinc_crewai.md",
@@ -804,6 +822,15 @@
       "collected_at": "2026-05-24T17:06:44Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "cyijun/agent-smith",
+      "url": "https://github.com/cyijun/agent-smith",
+      "file": "raw-github/cyijun_agent-smith.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T12:21:31+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T12:21:31+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
       "repo": "darkrishabh/agent-skills-eval",
@@ -921,6 +948,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "eigent-ai/agent-skills",
+      "url": "https://github.com/eigent-ai/agent-skills",
+      "file": "raw-github/eigent-ai_agent-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T13:21:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
       "repo": "elastic/agent-skills",
@@ -1094,6 +1130,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "farmage/opencode-skills",
+      "url": "https://github.com/farmage/opencode-skills",
+      "file": "raw-github/farmage_opencode-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T12:21:31+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T12:21:31+08:00; shell DNS for api.github.com failed and gh token was invalid"
+    },
+    {
       "repo": "faveos8758/reflexion-agent-ts",
       "url": "https://github.com/faveos8758/reflexion-agent-ts",
       "file": "raw-github/faveos8758_reflexion-agent-ts.md",
@@ -1166,6 +1211,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "galyarderlabs/galyarder-framework",
+      "url": "https://github.com/galyarderlabs/galyarder-framework",
+      "file": "raw-github/galyarderlabs_galyarder-framework.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T12:21:31+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T12:21:31+08:00; shell DNS for api.github.com failed and gh token was invalid"
+    },
+    {
       "repo": "garrus800-stack/genesis-agent",
       "url": "https://github.com/garrus800-stack/genesis-agent",
       "file": "raw-github/garrus800-stack_genesis-agent.md",
@@ -1191,6 +1245,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "Gentleman-Programming/Gentleman-Skills",
+      "url": "https://github.com/Gentleman-Programming/Gentleman-Skills",
+      "file": "raw-github/gentleman-programming_gentleman-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T13:21:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
       "repo": "george-salafatinos/tictactoe-self-play",
@@ -1389,6 +1452,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "howells/arc",
+      "url": "https://github.com/howells/arc",
+      "file": "raw-github/howells_arc.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T13:21:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
       "repo": "huggingface/agents-course",
@@ -1679,6 +1751,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "kayba-ai/agentic-context-engine",
+      "url": "https://github.com/kayba-ai/agentic-context-engine",
+      "file": "raw-github/kayba-ai_agentic-context-engine.md",
+      "content_timestamp": "2026-05-07",
+      "collected_at": "2026-05-25T11:20:46+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T11:20:46+08:00; shell DNS for api.github.com failed and gh token was invalid"
+    },
+    {
       "repo": "kayba-ai/recursive-improve",
       "url": "https://github.com/kayba-ai/recursive-improve",
       "file": "raw-github/kayba-ai_recursive-improve.md",
@@ -1713,6 +1794,15 @@
       "collected_at": "2026-05-25T00:18:20Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page_or_search_result"
+    },
+    {
+      "repo": "kks0488/vibe-codex",
+      "url": "https://github.com/kks0488/vibe-codex",
+      "file": "raw-github/kks0488_vibe-codex.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T12:21:31+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T12:21:31+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
       "repo": "knightnemo/awesome-world-models",
@@ -2174,6 +2264,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "MemTensor/HaluMem",
+      "url": "https://github.com/MemTensor/HaluMem",
+      "file": "raw-github/memtensor_halumem.md",
+      "content_timestamp": "2025-11-01",
+      "collected_at": "2026-05-25T11:20:46+08:00",
+      "time_slice": "2025-11",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T11:20:46+08:00; shell DNS for api.github.com failed and gh token was invalid"
+    },
+    {
       "repo": "memtensor/memos",
       "url": "https://github.com/memtensor/memos",
       "file": "raw-github/memtensor_memos.md",
@@ -2289,6 +2388,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "MoizIbnYousaf/Ai-Agent-Skills",
+      "url": "https://github.com/MoizIbnYousaf/Ai-Agent-Skills",
+      "file": "raw-github/moizibnyousaf_ai-agent-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T13:21:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
       "repo": "mwasifanwar/meta-cognitive-learning-system",
@@ -2633,6 +2741,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "OthmanAdi/planning-with-files",
+      "url": "https://github.com/OthmanAdi/planning-with-files",
+      "file": "raw-github/othmanadi_planning-with-files.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T12:21:31+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T12:21:31+08:00; shell DNS for api.github.com failed and gh token was invalid"
+    },
+    {
       "repo": "oxen-ai/self-rewarding-language-models",
       "url": "https://github.com/oxen-ai/self-rewarding-language-models",
       "file": "raw-github/oxen-ai_self-rewarding-language-models.md",
@@ -2658,6 +2775,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "PaulRBerg/agent-skills",
+      "url": "https://github.com/PaulRBerg/agent-skills",
+      "file": "raw-github/paulrberg_agent-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T13:21:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
       "repo": "pgg3/evotoolkit",
@@ -2712,6 +2838,15 @@
       "collected_at": "2026-05-24T16:06:00Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "plastic-labs/honcho",
+      "url": "https://github.com/plastic-labs/honcho",
+      "file": "raw-github/plastic-labs_honcho.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T11:20:46+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T11:20:46+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
       "repo": "polarseeker/openseeker",
@@ -2793,6 +2928,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2024-Q2",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "quzhiii/thesis-skills",
+      "url": "https://github.com/quzhiii/thesis-skills",
+      "file": "raw-github/quzhiii_thesis-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T12:21:31+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T12:21:31+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
       "repo": "r4stin/kg-research-agent",
@@ -3560,6 +3704,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "togethercomputer/skills",
+      "url": "https://github.com/togethercomputer/skills",
+      "file": "raw-github/togethercomputer_skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T13:21:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid"
+    },
+    {
       "repo": "trillskillz/clawdmarket",
       "url": "https://github.com/trillskillz/clawdmarket",
       "file": "raw-github/trillskillz_clawdmarket.md",
@@ -3567,6 +3720,15 @@
       "collected_at": "2026-05-24T14:08:00Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "trustgraph-ai/trustgraph",
+      "url": "https://github.com/trustgraph-ai/trustgraph",
+      "file": "raw-github/trustgraph-ai_trustgraph.md",
+      "content_timestamp": "2026-05-11",
+      "collected_at": "2026-05-25T11:20:46+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T11:20:46+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
       "repo": "tsinghua-fib-lab/awesome-ai-scientists",
@@ -3648,6 +3810,15 @@
       "collected_at": "2026-05-24T19:01:37+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_github_page_open_2026-05-24"
+    },
+    {
+      "repo": "vectorize-io/hindsight",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "file": "raw-github/vectorize-io_hindsight.md",
+      "content_timestamp": "2026-05-14",
+      "collected_at": "2026-05-25T11:20:46+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T11:20:46+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
       "repo": "ventr1c/memma",

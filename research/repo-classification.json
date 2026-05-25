@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T09:19:32+08:00",
+  "generated_at": "2026-05-25T13:21:00+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -165,6 +165,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed MIT license, Rust primary language, 121 releases with v0.3.27 latest on 2026-05-23, local brain/memory/command self-improvement mechanics, 755 stars and 72 forks",
       "description": "OpenCrabs 是受 OpenClaw 启发的单二进制多渠道 AI agent，强调本地 brain files、memory search、custom commands、cron/background jobs 和 self-update 组成的自改进循环。"
+    },
+    {
+      "repo": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "stars": "191000",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "skill",
+      "stack": "JavaScript/Rust/Python/Shell/TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 1,976 commits, MIT license, JavaScript/Rust/Python/Shell/TypeScript stack, 191k stars and 29.5k forks; README describes skills, instincts, memory, security, research-first development, context monitor, strategic compaction and v1.10.0 release on 2026-04-05",
+      "description": "ECC is an agent harness optimization system that packages skills, instincts, memory, security review, context monitoring and research-first workflows for Claude Code, Codex, OpenCode, Cursor and related coding agents."
     },
     {
       "repo": "agent-ecosystem/skill-validator",
@@ -1307,6 +1322,21 @@
       "description": "Composio 维护的 Claude Skills/agent skills 大型索引，覆盖生产技能、插件、SaaS workflow、MCP/Rube 集成和跨 coding agent 复用场景。"
     },
     {
+      "repo": "ComposioHQ/awesome-codex-skills",
+      "url": "https://github.com/ComposioHQ/awesome-codex-skills",
+      "stars": "11500",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Python/Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 45 commits, 11.5k stars and 1.1k forks; README describes a curated list of practical Codex skills, a Python skill installer path, and categories spanning development, productivity, communication, data and meta utilities.",
+      "description": "Awesome Codex Skills is a high-signal catalog of practical Codex skill folders for workflow automation, including Composio-backed actions across external services."
+    },
+    {
       "repo": "crewaiinc/crewai",
       "url": "https://github.com/crewaiinc/crewai",
       "stars": "51",
@@ -1335,6 +1365,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 5 commits, MIT license, Python stack, 21 stars and 2 forks; README states 20 skill-dependent tasks, 15 sub-domains, 100 verified instances, Docker requirement, task success/skill quality/trajectory quality metrics, and arXiv 2604.20087",
       "description": "SkillLearnBench 是面向自动生成 agent skills 的 continual learning benchmark，覆盖真实任务、技能质量、轨迹质量和 task success。"
+    },
+    {
+      "repo": "cyijun/agent-smith",
+      "url": "https://github.com/cyijun/agent-smith",
+      "stars": "18",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Markdown/Skill Protocol",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 20 commits, MIT license, 18 stars and 2 forks; README describes recursive self-similar multi-agent execution, directory isolation, Claude Code skill entry, OpenCode/OpenClaw topics, max depth 3 and max 5 children constraints",
+      "description": "Agent Smith is a self-similar multi-agent collaboration protocol that decomposes work recursively while isolating each agent through inbox/private/outbox/children directories."
     },
     {
       "repo": "darkrishabh/agent-skills-eval",
@@ -1530,6 +1575,21 @@
       "content_timestamp": "unknown",
       "evidence": "tool/module/memory/prompt/coding signal",
       "description": "A lightweight implementation of the GEPA (Genetic-Pareto) prompt optimization method for large language models."
+    },
+    {
+      "repo": "eigent-ai/agent-skills",
+      "url": "https://github.com/eigent-ai/agent-skills",
+      "stars": "10",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "Markdown/Python/TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page/search evidence observed skill categories for recent-discussion research, SEO audit, ML failure audit, PDF/DOCX/XLSX/PPTX work, media generation and internal communications; search result observed open-source cowork agent skills collection and npx install flows.",
+      "description": "Eigent Agent Skills is an open cowork-agent skill collection that packages research, marketing, document, analytics, image/video and communication workflows as reusable agent skills."
     },
     {
       "repo": "elastic/agent-skills",
@@ -1817,6 +1877,21 @@
       "description": "Self improving agentic rag pipeline"
     },
     {
+      "repo": "farmage/opencode-skills",
+      "url": "https://github.com/farmage/opencode-skills",
+      "stars": "28",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "Python/JavaScript/Shell/HTML/Makefile/Astro",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 158 commits, MIT license, Python/JavaScript/Shell/HTML/Makefile/Astro stack, 28 stars and 6 forks; README describes 66 skills, 9-10 workflow commands, OpenCode adaptation, installer, validation and Atlassian MCP command flows",
+      "description": "OpenCode Skills adapts a Claude-style skill library into 66 OpenCode skills plus workflow commands, installer, validation tooling, decision trees and Jira/Confluence MCP command workflows."
+    },
+    {
       "repo": "faveos8758/reflexion-agent-ts",
       "url": "https://github.com/faveos8758/reflexion-agent-ts",
       "stars": "20",
@@ -1937,6 +2012,21 @@
       "description": "Metacognitive Core Ontology (MCog Core): A domain-agnostic, foundational ontology for representing metacognitive constructs. Designed for AI systems, cognitive architectures, and applications requiring a metacognitive la"
     },
     {
+      "repo": "galyarderlabs/galyarder-framework",
+      "url": "https://github.com/galyarderlabs/galyarder-framework",
+      "stars": "11",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "skill",
+      "stack": "Agent Skills/Commands/Hooks",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 278 commits, 11 stars and 2 forks; README describes agentic skills framework orchestration, .codex/.opencode support, marketplace plugin installation, universal plugin architecture, verified logic, context economy and 8 high-integrity department silos",
+      "description": "Galyarder Framework organizes agentic skills, commands, hooks and departments into a universal plugin architecture for Claude, Codex, OpenCode, Gemini and adjacent developer agents."
+    },
+    {
       "repo": "garrus800-stack/genesis-agent",
       "url": "https://github.com/garrus800-stack/genesis-agent",
       "stars": "24",
@@ -1980,6 +2070,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "The official codebase for our paper, FLEX: Continuous Agent Evolution via Forward Learning from Experience."
+    },
+    {
+      "repo": "Gentleman-Programming/Gentleman-Skills",
+      "url": "https://github.com/Gentleman-Programming/Gentleman-Skills",
+      "stars": "522",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 33 commits, MIT license, 522 stars and 79 forks; README distinguishes curated and community skills, exposes a SKILL_TEMPLATE, and lists patterns such as GitHub PR, skill creation and frontend framework skills.",
+      "description": "Gentleman Skills is a community-driven set of AI agent skills for Claude Code, OpenCode, Gemini CLI, Cursor, VS Code Copilot, Codex and other assistants."
     },
     {
       "repo": "george-salafatinos/tictactoe-self-play",
@@ -2310,6 +2415,21 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[EMNLP2025] From Automation to Autonomy: A Survey on Large Language Models in Scientific Discovery"
+    },
+    {
+      "repo": "howells/arc",
+      "url": "https://github.com/howells/arc",
+      "stars": "22",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "TypeScript/Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 531 commits, MIT license, 22 stars and 2 forks; README describes .codex-plugin, .claude-plugin, .agents/skills, installer paths, and workflow stages from vision and ideation through implementation, audit, testing and commit.",
+      "description": "Arc is a self-contained software development lifecycle for coding agents, exposing Claude plugin commands and Codex skills/plugins for ideation, implementation, review, testing, launch readiness and commits."
     },
     {
       "repo": "huggingface/agents-course",
@@ -2792,6 +2912,21 @@
       "description": "Reflexion Agent implementation based on the smolagents library"
     },
     {
+      "repo": "kayba-ai/agentic-context-engine",
+      "url": "https://github.com/kayba-ai/agentic-context-engine",
+      "stars": "2200",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-07",
+      "evidence": "web GitHub page observed 931 commits, 2.2k stars and 273 forks, v0.12.0 latest on 2026-05-07; README says ACE makes agents learn from experience, uses trace reflection, SkillManager and Skillbook updates, supports Claude Code/browser-use/LangChain runners, and reports Tau2 and Claude Code translation benchmark signals",
+      "description": "Agentic Context Engine adds a persistent learning loop for agents: it reflects on traces, records strategies in a skillbook and reinjects those strategies into future runs across CLI, browser and LangChain-style agents."
+    },
+    {
       "repo": "kayba-ai/recursive-improve",
       "url": "https://github.com/kayba-ai/recursive-improve",
       "stars": "194",
@@ -2850,6 +2985,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 535 commits, MIT license, 675 stars, 34 forks, 105 releases with v1.12.10 latest on 2026-05-24, TypeScript primary language, LongMemEval benchmark details, sequential-learning benchmark, and explicit retraction notes for non-reproduced magnitude claims",
       "description": "Hippo Memory 是偏研究/工程混合的 agent memory 系统，重点在衰减、强化检索、巩固和可审计 benchmark，尤其适合比较 memory 是否带来随任务序列改进。"
+    },
+    {
+      "repo": "kks0488/vibe-codex",
+      "url": "https://github.com/kks0488/vibe-codex",
+      "stars": "10",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "JavaScript/PowerShell/Shell",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 69 commits, JavaScript/PowerShell/Shell stack, 10 stars and 0 forks; README describes Codex-first skills, retry/self-healing/completion proof, vc teams commands, JSON mailboxes, MCP docs setup, and v0.4.1 release on 2026-02-09",
+      "description": "vibe-codex is a Codex-first skill bundle with retry, self-healing, completion proof, MCP docs setup and Codex-native agent team mailboxes for parallel research and implementation workflows."
     },
     {
       "repo": "knightnemo/awesome-world-models",
@@ -3617,6 +3767,21 @@
       "description": "Give git-like & traceable memory to OpenClaw and any coding agents. By https://memov.ai/ aka Entire CLI for every coding agents by MCP. Self-evolution for skills."
     },
     {
+      "repo": "MemTensor/HaluMem",
+      "url": "https://github.com/MemTensor/HaluMem",
+      "stars": "138",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2025-11",
+      "content_timestamp": "2025-11-01",
+      "evidence": "web GitHub page observed 19 commits, Python stack, 138 stars and 14 forks; README describes HaluMem as a comprehensive operation-level hallucination benchmark for memory systems, evaluating extraction, updating and QA across Mem0, Memobase, MemOS, Supermemory and Zep",
+      "description": "HaluMem is an operation-level benchmark for hallucinations in memory systems, decomposing memory evaluation into extraction, update and question answering tasks with leaderboard comparisons."
+    },
+    {
       "repo": "memtensor/memos",
       "url": "https://github.com/memtensor/memos",
       "stars": "9400",
@@ -3810,6 +3975,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Cutting-edge platform for LLM agent tuning. Deliver RL tuning with flexibility, reliability, speed, multi-agent optimization and realtime community benchmarking."
+    },
+    {
+      "repo": "MoizIbnYousaf/Ai-Agent-Skills",
+      "url": "https://github.com/MoizIbnYousaf/Ai-Agent-Skills",
+      "stars": "1100",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "JavaScript/HTML",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 148 commits, MIT license, 1.1k stars and 122 forks; README says it ships a curated library plus CLI/TUI tooling, with 17 house copies and 103 cataloged upstream items visible in the page snapshot.",
+      "description": "AI Agent Skills packages a curated skill library plus CLI/TUI workflows for building and managing smaller, provenance-aware agent skill shelves."
     },
     {
       "repo": "mwasifanwar/meta-cognitive-learning-system",
@@ -4382,6 +4562,21 @@
       "description": "SkillWeaver is a framework to enable web agent self-improvement through environment exploration and skill synthesis."
     },
     {
+      "repo": "OthmanAdi/planning-with-files",
+      "url": "https://github.com/OthmanAdi/planning-with-files",
+      "stars": "22000",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "Python/Shell/PowerShell/TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 239 commits, MIT license, Python/Shell/PowerShell/TypeScript stack, 22k stars and 2k forks; README describes persistent markdown planning, session recovery, platform hooks, Codex setup, OpenClaw/Hermes support, and v2.41.0 release on 2026-05-24",
+      "description": "Planning with Files is a cross-agent skill for persistent markdown planning, session recovery, plan attestation and platform-specific hooks across Claude Code, Codex, OpenCode, Gemini, Kiro and other agent runtimes."
+    },
+    {
       "repo": "oxen-ai/self-rewarding-language-models",
       "url": "https://github.com/oxen-ai/self-rewarding-language-models",
       "stars": "134",
@@ -4425,6 +4620,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "Deep Reinforcement Learning with Self-Play"
+    },
+    {
+      "repo": "PaulRBerg/agent-skills",
+      "url": "https://github.com/PaulRBerg/agent-skills",
+      "stars": "59",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "Shell",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 141 commits, MIT license, Shell/Just stack, 59 stars and 2 forks; README lists npx skills add installation plus skills for code review, simplification, docs, commits, release, Vitest, Tailwind and end-to-end work.",
+      "description": "PRB Agent Skills is a compact personal skill pack for Claude Code and Codex, with executable workflow guidance for review, commits, docs, release work and task execution."
     },
     {
       "repo": "pgg3/evotoolkit",
@@ -4515,6 +4725,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 462 commits, MIT license, R/JavaScript/CSS/Shell stack, .claude-plugin/skills/agents/teams/viz folders, 350-skill and 72-agent README claims from search snippet, release v1.3.0 latest May 4 2026, 17 stars and 2 forks",
       "description": "Agent Almanac 是 executable skills、specialist agents 和 pre-built teams 的索引库，用技能目录、agent/team 编排和交互可视化帮助 AI-assisted development 复用操作流程。"
+    },
+    {
+      "repo": "plastic-labs/honcho",
+      "url": "https://github.com/plastic-labs/honcho",
+      "stars": "4200",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 527 commits, AGPL-3.0 license, Python/TypeScript stack, 4.2k stars and 488 forks; README describes memory infrastructure for stateful agents, peer/session/message primitives, MCP/OpenCode/OpenClaw/Hermes integrations and self-hosted FastAPI deployment",
+      "description": "Honcho is memory infrastructure for stateful agents, modeling peers, sessions, messages, representations and background reasoning so agents can carry durable context across conversations and tools."
     },
     {
       "repo": "polarseeker/openseeker",
@@ -4650,6 +4875,21 @@
       "content_timestamp": "2024-05-13",
       "evidence": "application/self-evolving-agent signal",
       "description": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search"
+    },
+    {
+      "repo": "quzhiii/thesis-skills",
+      "url": "https://github.com/quzhiii/thesis-skills",
+      "stars": "71",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "Python/HTML/CSS",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 148 commits, MIT license, Python/HTML/CSS stack, 71 stars and 6 forks; README lists Word-to-LaTeX, reference, language, format, compile, readiness, hallucination-risk and claim-citation skill modules, plus v1.0.0 release on 2026-04-30",
+      "description": "Thesis Skills is a deterministic paper workflow skill repository for Word-to-LaTeX migration, citation integrity, language checks, format validation, compile readiness and defense package preparation."
     },
     {
       "repo": "r4stin/kg-research-agent",
@@ -5927,6 +6167,21 @@
       "description": "Autonomous Agents (LLMs) research papers. Updated Daily."
     },
     {
+      "repo": "togethercomputer/skills",
+      "url": "https://github.com/togethercomputer/skills",
+      "stars": "28",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "Python/TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 137 commits, MIT license, 28 stars and 5 forks; README says the skills are compatible with Claude Code, Cursor, Codex and Gemini CLI and include SKILL.md routing, references, scripts and OpenAI/Codex UI metadata.",
+      "description": "Together AI Skills packages provider-specific API and SDK knowledge into 12 agent skills covering inference, training, embeddings, audio, video, images, function calling and infrastructure."
+    },
+    {
       "repo": "trillskillz/clawdmarket",
       "url": "https://github.com/trillskillz/clawdmarket",
       "stars": "2",
@@ -5940,6 +6195,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed 457 commits, MIT license, TypeScript/Next.js app, Karpathy loop self-improvement, MPP/x402/A2A marketplace contracts, 2 stars and 0 forks",
       "description": "ClawdMarket 是 agent-to-agent marketplace，把机器支付、A2A messaging、public proof、seller benchmark 和 Karpathy-style recursive self-improvement loop 放进同一个生产系统叙事。"
+    },
+    {
+      "repo": "trustgraph-ai/trustgraph",
+      "url": "https://github.com/trustgraph-ai/trustgraph",
+      "stars": "2100",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-11",
+      "evidence": "web GitHub page observed 1,379 commits, Apache-2.0 license, Python stack, 2.1k stars and 242 forks; README positions TrustGraph as an agent runtime platform powered by context graphs with memory, retrieval, orchestration and inference for grounded private deployments",
+      "description": "TrustGraph is an agent runtime platform built around context graphs, combining knowledge graphs, memory, retrieval, orchestration and inference for precision-critical deployments."
     },
     {
       "repo": "tsinghua-fib-lab/awesome-ai-scientists",
@@ -6075,6 +6345,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed 29 commits, Python/Vue stack, benchmark topics, reproducibility claims, uv CLI commands, 43 stars and 15 forks",
       "description": "AMB 是面向 agent memory 的公开 benchmark，强调可复现的评测 harness、judge prompts、answer prompts 和结果，并同时跟踪 accuracy、speed、token cost。"
+    },
+    {
+      "repo": "vectorize-io/hindsight",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "stars": "14400",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-14",
+      "evidence": "web GitHub page observed 1,408 commits, MIT license, Python/TypeScript/Rust stack, 14.4k stars and 821 forks, v0.6.2 latest on 2026-05-14; README describes retain/recall/reflect, memory banks, semantic/keyword/graph/temporal retrieval, LongMemEval claims and coding-agent documentation skill support",
+      "description": "Hindsight is an agent memory system focused on agents that learn over time, with retain/recall/reflect APIs, memory banks, hybrid retrieval and LongMemEval-style performance claims."
     },
     {
       "repo": "ventr1c/memma",

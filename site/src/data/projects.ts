@@ -5065,217 +5065,792 @@ export const projects: Project[] = [
         ]
     },
     {
-            "name": "EVOTEST",
-            "repo": "yf-he/EvoTest",
-            "url": "https://github.com/yf-he/EvoTest",
-            "stars": 19,
-            "forks": "1",
-            "language": "Python",
-            "license": "MIT",
-            "report": "projects/166-evotest-evolutionary-test-time-learning.md",
-            "pattern": "episode rollout -> failure/success memory -> evolver rewrites prompt/state extractor/hyperparameters -> next episode evaluation",
-            "description": "EVOTEST 是面向 self-improving agentic systems 的 test-time evolution 框架，用 Jericho repeated episodes 检验无梯度、无微调条件下的 prompt、memory、state extractor 与工具策略演化。",
-            "stack": [
-                    "Python",
-                    "Jericho",
-                    "OpenRouter/OpenAI API",
-                    "RAG",
-                    "Cross-episode memory"
-            ],
-            "category": "Evolutionary Test-Time Learning",
-            "lastPushed": "2026-05-25T00:00:00Z",
-            "localPath": "raw-github/yf-he_evotest.md",
-            "status": "verified",
-            "tags": [
-                    "Test-time evolution",
-                    "Self-improving agents",
-                    "Jericho",
-                    "Cross-episode memory",
-                    "Benchmark"
-            ]
+        "name": "EVOTEST",
+        "repo": "yf-he/EvoTest",
+        "url": "https://github.com/yf-he/EvoTest",
+        "stars": 19,
+        "forks": "1",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/166-evotest-evolutionary-test-time-learning.md",
+        "pattern": "episode rollout -> failure/success memory -> evolver rewrites prompt/state extractor/hyperparameters -> next episode evaluation",
+        "description": "EVOTEST 是面向 self-improving agentic systems 的 test-time evolution 框架，用 Jericho repeated episodes 检验无梯度、无微调条件下的 prompt、memory、state extractor 与工具策略演化。",
+        "stack": [
+            "Python",
+            "Jericho",
+            "OpenRouter/OpenAI API",
+            "RAG",
+            "Cross-episode memory"
+        ],
+        "category": "Evolutionary Test-Time Learning",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/yf-he_evotest.md",
+        "status": "verified",
+        "tags": [
+            "Test-time evolution",
+            "Self-improving agents",
+            "Jericho",
+            "Cross-episode memory",
+            "Benchmark"
+        ]
     },
     {
-            "name": "agentic-stack",
-            "repo": "codejunkie99/agentic-stack",
-            "url": "https://github.com/codejunkie99/agentic-stack",
-            "stars": 2000,
-            "forks": "254",
-            "language": "Python",
-            "license": "Apache-2.0",
-            "report": "projects/167-agentic-stack-portable-agent-memory-skills.md",
-            "pattern": "portable .agent workspace -> adapters for agent harnesses -> local data layer -> memory/skills/protocol transfer -> flywheel artifacts",
-            "description": "agentic-stack 把 memory、skills、protocols 和 harness adapters 放进可迁移的 `.agent/` 层，让 Claude Code、Cursor、OpenClaw、Codex、Gemini、Hermes 等工具共享同一套经验与技能。",
-            "stack": [
-                    "Python",
-                    ".agent folder",
-                    "Memory",
-                    "Skills",
-                    "Adapters",
-                    "Dashboard"
-            ],
-            "category": "Portable Agent Memory and Skills Layer",
-            "lastPushed": "2026-05-25T00:00:00Z",
-            "localPath": "raw-github/codejunkie99_agentic-stack.md",
-            "status": "verified",
-            "tags": [
-                    "Agent memory",
-                    "Agent skills",
-                    "Portable harness",
-                    "Codex",
-                    "Flywheel artifacts"
-            ]
+        "name": "agentic-stack",
+        "repo": "codejunkie99/agentic-stack",
+        "url": "https://github.com/codejunkie99/agentic-stack",
+        "stars": 2000,
+        "forks": "254",
+        "language": "Python",
+        "license": "Apache-2.0",
+        "report": "projects/167-agentic-stack-portable-agent-memory-skills.md",
+        "pattern": "portable .agent workspace -> adapters for agent harnesses -> local data layer -> memory/skills/protocol transfer -> flywheel artifacts",
+        "description": "agentic-stack 把 memory、skills、protocols 和 harness adapters 放进可迁移的 `.agent/` 层，让 Claude Code、Cursor、OpenClaw、Codex、Gemini、Hermes 等工具共享同一套经验与技能。",
+        "stack": [
+            "Python",
+            ".agent folder",
+            "Memory",
+            "Skills",
+            "Adapters",
+            "Dashboard"
+        ],
+        "category": "Portable Agent Memory and Skills Layer",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/codejunkie99_agentic-stack.md",
+        "status": "verified",
+        "tags": [
+            "Agent memory",
+            "Agent skills",
+            "Portable harness",
+            "Codex",
+            "Flywheel artifacts"
+        ]
     },
     {
-            "name": "Harness",
-            "repo": "revfactory/harness",
-            "url": "https://github.com/revfactory/harness",
-            "stars": 3500,
-            "forks": "525",
-            "language": "Markdown",
-            "license": "Apache-2.0",
-            "report": "projects/168-revfactory-harness-team-architecture-factory.md",
-            "pattern": "domain sentence -> six team patterns -> generated agent definitions + generated skills -> validation and A/B harness comparison",
-            "description": "revfactory/harness 是面向 Claude Code 的 team-architecture factory，把领域描述转成 agent team、skills、orchestration protocol 和验证流程，是 harness-as-meta-factory 的代表。",
-            "stack": [
-                    "Claude Code plugin",
-                    "Agent teams",
-                    "Skills",
-                    "Architecture patterns",
-                    "Validation"
-            ],
-            "category": "Team-Architecture Harness Factory",
-            "lastPushed": "2026-05-25T00:00:00Z",
-            "localPath": "raw-github/revfactory_harness.md",
-            "status": "verified",
-            "tags": [
-                    "Harness factory",
-                    "Claude Code",
-                    "Agent teams",
-                    "Skills",
-                    "Meta-factory"
-            ]
+        "name": "Harness",
+        "repo": "revfactory/harness",
+        "url": "https://github.com/revfactory/harness",
+        "stars": 3500,
+        "forks": "525",
+        "language": "Markdown",
+        "license": "Apache-2.0",
+        "report": "projects/168-revfactory-harness-team-architecture-factory.md",
+        "pattern": "domain sentence -> six team patterns -> generated agent definitions + generated skills -> validation and A/B harness comparison",
+        "description": "revfactory/harness 是面向 Claude Code 的 team-architecture factory，把领域描述转成 agent team、skills、orchestration protocol 和验证流程，是 harness-as-meta-factory 的代表。",
+        "stack": [
+            "Claude Code plugin",
+            "Agent teams",
+            "Skills",
+            "Architecture patterns",
+            "Validation"
+        ],
+        "category": "Team-Architecture Harness Factory",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/revfactory_harness.md",
+        "status": "verified",
+        "tags": [
+            "Harness factory",
+            "Claude Code",
+            "Agent teams",
+            "Skills",
+            "Meta-factory"
+        ]
     },
     {
-            "name": "oh-my-skills",
-            "repo": "akillness/oh-my-skills",
-            "url": "https://github.com/akillness/oh-my-skills",
-            "stars": 16,
-            "forks": "1",
-            "language": "Markdown",
-            "license": "Unknown",
-            "report": "projects/169-oh-my-skills-cross-agent-skill-collection.md",
-            "pattern": "local skill folders -> TOON/JEO orchestration protocol -> plan/execute/verify/cleanup skills -> cross-agent install prompts",
-            "description": "oh-my-skills 是跨 Claude Code、Gemini CLI、Codex CLI 和 OpenCode 的技能集合，用 JEO 编排协议把 plan、execute、verify、cleanup、多 agent team coordination 变成可复用技能层。",
-            "stack": [
-                    "Markdown",
-                    "TOON",
-                    "JEO",
-                    "Codex CLI",
-                    "Claude Code",
-                    "Gemini CLI"
-            ],
-            "category": "Cross-Agent Skill Collection",
-            "lastPushed": "2026-05-25T00:00:00Z",
-            "localPath": "raw-github/akillness_oh-my-skills.md",
-            "status": "verified",
-            "tags": [
-                    "Agent Skills",
-                    "Codex CLI",
-                    "Claude Code",
-                    "JEO",
-                    "Skill collection"
-            ]
+        "name": "oh-my-skills",
+        "repo": "akillness/oh-my-skills",
+        "url": "https://github.com/akillness/oh-my-skills",
+        "stars": 16,
+        "forks": "1",
+        "language": "Markdown",
+        "license": "Unknown",
+        "report": "projects/169-oh-my-skills-cross-agent-skill-collection.md",
+        "pattern": "local skill folders -> TOON/JEO orchestration protocol -> plan/execute/verify/cleanup skills -> cross-agent install prompts",
+        "description": "oh-my-skills 是跨 Claude Code、Gemini CLI、Codex CLI 和 OpenCode 的技能集合，用 JEO 编排协议把 plan、execute、verify、cleanup、多 agent team coordination 变成可复用技能层。",
+        "stack": [
+            "Markdown",
+            "TOON",
+            "JEO",
+            "Codex CLI",
+            "Claude Code",
+            "Gemini CLI"
+        ],
+        "category": "Cross-Agent Skill Collection",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/akillness_oh-my-skills.md",
+        "status": "verified",
+        "tags": [
+            "Agent Skills",
+            "Codex CLI",
+            "Claude Code",
+            "JEO",
+            "Skill collection"
+        ]
     },
     {
-            "name": "OpenClaw Harness Engineering",
-            "repo": "guixiang123124/openclaw-harness",
-            "url": "https://github.com/guixiang123124/openclaw-harness",
-            "stars": 3,
-            "forks": "0",
-            "language": "Markdown",
-            "license": "MIT",
-            "report": "projects/170-openclaw-harness-engineering-factory.md",
-            "pattern": "lead agent scouts repo -> SPRINT.md contract -> ACP builder agents -> weighted review -> iterate until pass -> ship/report",
-            "description": "OpenClaw Harness Engineering 把 OpenClaw agent 包装成工程团队：Lead 规划 sprint，ACP Builder 实现，Lead/Reviewer 按功能、质量、安全、边界条件评分并迭代到可交付。",
-            "stack": [
-                    "OpenClaw",
-                    "ACP",
-                    "Agent teams",
-                    "Skills",
-                    "Sprint templates"
-            ],
-            "category": "OpenClaw Harness Engineering",
-            "lastPushed": "2026-05-25T00:00:00Z",
-            "localPath": "raw-github/guixiang123124_openclaw-harness.md",
-            "status": "verified",
-            "tags": [
-                    "OpenClaw",
-                    "Harness engineering",
-                    "ACP",
-                    "Agent team",
-                    "Review loop"
-            ]
+        "name": "OpenClaw Harness Engineering",
+        "repo": "guixiang123124/openclaw-harness",
+        "url": "https://github.com/guixiang123124/openclaw-harness",
+        "stars": 3,
+        "forks": "0",
+        "language": "Markdown",
+        "license": "MIT",
+        "report": "projects/170-openclaw-harness-engineering-factory.md",
+        "pattern": "lead agent scouts repo -> SPRINT.md contract -> ACP builder agents -> weighted review -> iterate until pass -> ship/report",
+        "description": "OpenClaw Harness Engineering 把 OpenClaw agent 包装成工程团队：Lead 规划 sprint，ACP Builder 实现，Lead/Reviewer 按功能、质量、安全、边界条件评分并迭代到可交付。",
+        "stack": [
+            "OpenClaw",
+            "ACP",
+            "Agent teams",
+            "Skills",
+            "Sprint templates"
+        ],
+        "category": "OpenClaw Harness Engineering",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/guixiang123124_openclaw-harness.md",
+        "status": "verified",
+        "tags": [
+            "OpenClaw",
+            "Harness engineering",
+            "ACP",
+            "Agent team",
+            "Review loop"
+        ]
     },
     {
-            "name": "Codex CLI 1UP",
-            "repo": "regenrek/codex-1up",
-            "url": "https://github.com/regenrek/codex-1up",
-            "stars": 430,
-            "forks": "18",
-            "language": "TypeScript/JavaScript",
-            "license": "Unknown",
-            "report": "projects/171-codex-1up-codex-cli-upgrade-kit.md",
-            "pattern": "Codex install/update -> shell tool bootstrap -> AGENTS.md template -> config profiles -> bundled skills and ongoing maintenance commands",
-            "description": "codex-1up 是 Codex CLI 增强包，把 Codex 安装/更新、常用 shell 工具、AGENTS.md、配置 profiles、通知和 skills 管理整合成可重复的 agent workstation bootstrap。",
-            "stack": [
-                    "Codex CLI",
-                    "AGENTS.md",
-                    "Skills",
-                    "Shell tools",
-                    "Profiles"
-            ],
-            "category": "Codex CLI Upgrade Kit",
-            "lastPushed": "2026-05-25T00:00:00Z",
-            "localPath": "raw-github/regenrek_codex-1up.md",
-            "status": "verified",
-            "tags": [
-                    "Codex CLI",
-                    "AGENTS.md",
-                    "Skills",
-                    "Bootstrap",
-                    "Developer tools"
-            ]
+        "name": "Codex CLI 1UP",
+        "repo": "regenrek/codex-1up",
+        "url": "https://github.com/regenrek/codex-1up",
+        "stars": 430,
+        "forks": "18",
+        "language": "TypeScript/JavaScript",
+        "license": "Unknown",
+        "report": "projects/171-codex-1up-codex-cli-upgrade-kit.md",
+        "pattern": "Codex install/update -> shell tool bootstrap -> AGENTS.md template -> config profiles -> bundled skills and ongoing maintenance commands",
+        "description": "codex-1up 是 Codex CLI 增强包，把 Codex 安装/更新、常用 shell 工具、AGENTS.md、配置 profiles、通知和 skills 管理整合成可重复的 agent workstation bootstrap。",
+        "stack": [
+            "Codex CLI",
+            "AGENTS.md",
+            "Skills",
+            "Shell tools",
+            "Profiles"
+        ],
+        "category": "Codex CLI Upgrade Kit",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/regenrek_codex-1up.md",
+        "status": "verified",
+        "tags": [
+            "Codex CLI",
+            "AGENTS.md",
+            "Skills",
+            "Bootstrap",
+            "Developer tools"
+        ]
     },
     {
-            "name": "dotnet-skills",
-            "repo": "managedcode/dotnet-skills",
-            "url": "https://github.com/managedcode/dotnet-skills",
-            "stars": 403,
-            "forks": "31",
-            "language": "C#",
-            "license": "MIT",
-            "report": "projects/172-dotnet-skills-agent-skill-catalog.md",
-            "pattern": "catalog packages -> SKILL.md/AGENT.md folders -> CLI recommend/install/update -> upstream watch -> daily catalog/site/tool release",
-            "description": "dotnet-skills 是面向 Codex、Claude Code、GitHub Copilot、Gemini、Junie 的 .NET skill catalog 和 CLI，把现代 .NET 官方文档、包、agents 与 upstream watch 组合成可安装技能供应链。",
-            "stack": [
-                    "C#",
-                    "Python",
-                    "PowerShell",
-                    "Codex skills",
-                    "Claude skills",
-                    "GitHub Pages"
-            ],
-            "category": ".NET Agent Skill Catalog",
-            "lastPushed": "2026-05-25T00:00:00Z",
-            "localPath": "raw-github/managedcode_dotnet-skills.md",
-            "status": "verified",
-            "tags": [
-                    ".NET",
-                    "Agent Skills",
-                    "Codex",
-                    "Claude Code",
-                    "Upstream watch"
-            ]
+        "name": "dotnet-skills",
+        "repo": "managedcode/dotnet-skills",
+        "url": "https://github.com/managedcode/dotnet-skills",
+        "stars": 403,
+        "forks": "31",
+        "language": "C#",
+        "license": "MIT",
+        "report": "projects/172-dotnet-skills-agent-skill-catalog.md",
+        "pattern": "catalog packages -> SKILL.md/AGENT.md folders -> CLI recommend/install/update -> upstream watch -> daily catalog/site/tool release",
+        "description": "dotnet-skills 是面向 Codex、Claude Code、GitHub Copilot、Gemini、Junie 的 .NET skill catalog 和 CLI，把现代 .NET 官方文档、包、agents 与 upstream watch 组合成可安装技能供应链。",
+        "stack": [
+            "C#",
+            "Python",
+            "PowerShell",
+            "Codex skills",
+            "Claude skills",
+            "GitHub Pages"
+        ],
+        "category": ".NET Agent Skill Catalog",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/managedcode_dotnet-skills.md",
+        "status": "verified",
+        "tags": [
+            ".NET",
+            "Agent Skills",
+            "Codex",
+            "Claude Code",
+            "Upstream watch"
+        ]
+    },
+    {
+        "name": "Honcho",
+        "repo": "plastic-labs/honcho",
+        "url": "https://github.com/plastic-labs/honcho",
+        "stars": 4200,
+        "forks": "488",
+        "language": "Python",
+        "license": "AGPL-3.0",
+        "report": "projects/173-honcho-stateful-agent-memory.md",
+        "pattern": "messages/events -> background reasoning -> peer/session representations -> context/search/chat endpoints -> agent injection",
+        "description": "Honcho is memory infrastructure for stateful agents, modeling peers, sessions, messages, representations and background reasoning so agents can carry durable context across conversations and tools.",
+        "stack": [
+            "Python",
+            "TypeScript",
+            "FastAPI",
+            "PostgreSQL",
+            "MCP"
+        ],
+        "category": "Agent Memory Infrastructure",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/plastic-labs_honcho.md",
+        "status": "verified",
+        "tags": [
+            "Agent memory",
+            "Stateful agents",
+            "Context engineering",
+            "MCP",
+            "Self-hosted"
+        ]
+    },
+    {
+        "name": "Hindsight",
+        "repo": "vectorize-io/hindsight",
+        "url": "https://github.com/vectorize-io/hindsight",
+        "stars": 14400,
+        "forks": "821",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/174-hindsight-agent-memory-that-learns.md",
+        "pattern": "retain -> fact/entity/time extraction -> hybrid semantic/keyword/graph/temporal recall -> reflect -> learned mental models",
+        "description": "Hindsight is an agent memory system focused on agents that learn over time, with retain/recall/reflect APIs, memory banks, hybrid retrieval and LongMemEval-style performance claims.",
+        "stack": [
+            "Python",
+            "TypeScript",
+            "Rust",
+            "Docker",
+            "BM25/vector/graph retrieval"
+        ],
+        "category": "Learning Agent Memory System",
+        "lastPushed": "2026-05-14T00:00:00Z",
+        "localPath": "raw-github/vectorize-io_hindsight.md",
+        "status": "verified",
+        "tags": [
+            "Agent memory",
+            "Learning loop",
+            "Hybrid retrieval",
+            "LongMemEval",
+            "Reflect"
+        ]
+    },
+    {
+        "name": "Agentic Context Engine",
+        "repo": "kayba-ai/agentic-context-engine",
+        "url": "https://github.com/kayba-ai/agentic-context-engine",
+        "stars": 2200,
+        "forks": "273",
+        "language": "Python",
+        "license": "View license",
+        "report": "projects/175-agentic-context-engine-experience-learning.md",
+        "pattern": "task trace -> reflector -> skill manager -> skillbook update -> strategies injected into future agent runs",
+        "description": "Agentic Context Engine adds a persistent learning loop for agents: it reflects on traces, records strategies in a skillbook and reinjects those strategies into future runs across CLI, browser and LangChain-style agents.",
+        "stack": [
+            "Python",
+            "PydanticAI",
+            "LiteLLM",
+            "MCP",
+            "browser-use"
+        ],
+        "category": "Agent Experience Learning Loop",
+        "lastPushed": "2026-05-07T00:00:00Z",
+        "localPath": "raw-github/kayba-ai_agentic-context-engine.md",
+        "status": "verified",
+        "tags": [
+            "Self-improvement",
+            "Trace learning",
+            "Skillbook",
+            "Claude Code",
+            "Benchmark"
+        ]
+    },
+    {
+        "name": "TrustGraph",
+        "repo": "trustgraph-ai/trustgraph",
+        "url": "https://github.com/trustgraph-ai/trustgraph",
+        "stars": 2100,
+        "forks": "242",
+        "language": "Python",
+        "license": "Apache-2.0",
+        "report": "projects/176-trustgraph-context-graph-agent-runtime.md",
+        "pattern": "private domain data -> context graph -> memory/retrieval/orchestration/inference -> explainable grounded agent answers",
+        "description": "TrustGraph is an agent runtime platform built around context graphs, combining knowledge graphs, memory, retrieval, orchestration and inference for precision-critical deployments.",
+        "stack": [
+            "Python",
+            "RDF",
+            "SPARQL",
+            "Knowledge graph",
+            "Agent runtime"
+        ],
+        "category": "Context Graph Agent Runtime",
+        "lastPushed": "2026-05-11T00:00:00Z",
+        "localPath": "raw-github/trustgraph-ai_trustgraph.md",
+        "status": "verified",
+        "tags": [
+            "Context graph",
+            "Agent runtime",
+            "Knowledge graph",
+            "Memory",
+            "Retrieval"
+        ]
+    },
+    {
+        "name": "HaluMem",
+        "repo": "MemTensor/HaluMem",
+        "url": "https://github.com/MemTensor/HaluMem",
+        "stars": 138,
+        "forks": "14",
+        "language": "Python",
+        "license": "Unknown",
+        "report": "projects/177-halumem-agent-memory-hallucination-benchmark.md",
+        "pattern": "persona/life timeline -> synthetic sessions with distractors -> memory extraction/update/QA tasks -> hallucination leaderboard",
+        "description": "HaluMem is an operation-level benchmark for hallucinations in memory systems, decomposing memory evaluation into extraction, update and question answering tasks with leaderboard comparisons.",
+        "stack": [
+            "Python",
+            "Benchmark",
+            "Memory extraction",
+            "Memory update",
+            "QA evaluation"
+        ],
+        "category": "Agent Memory Hallucination Benchmark",
+        "lastPushed": "2025-11-01T00:00:00Z",
+        "localPath": "raw-github/memtensor_halumem.md",
+        "status": "verified",
+        "tags": [
+            "Benchmark",
+            "Agent memory",
+            "Hallucination evaluation",
+            "Memory extraction",
+            "Leaderboard"
+        ]
+    },
+    {
+        "name": "Planning with Files",
+        "repo": "OthmanAdi/planning-with-files",
+        "url": "https://github.com/OthmanAdi/planning-with-files",
+        "stars": 22000,
+        "forks": "2000",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/178-planning-with-files-agent-planning-skill.md",
+        "pattern": "persistent markdown plan -> hook/session recovery -> attestation -> agent skill routing",
+        "description": "Planning with Files is a cross-agent skill for persistent markdown planning, session recovery, plan attestation and platform-specific hooks across Claude Code, Codex, OpenCode, Gemini, Kiro and other agent runtimes.",
+        "stack": [
+            "Python",
+            "Shell",
+            "PowerShell",
+            "TypeScript",
+            "Agent Skills",
+            "Hooks"
+        ],
+        "category": "Persistent Agent Planning Skill",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/othmanadi_planning-with-files.md",
+        "status": "verified",
+        "tags": [
+            "Agent Skills",
+            "Planning",
+            "Context engineering",
+            "Session recovery",
+            "Codex hooks"
+        ]
+    },
+    {
+        "name": "ECC",
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "stars": 191000,
+        "forks": "29500",
+        "language": "JavaScript",
+        "license": "MIT",
+        "report": "projects/179-ecc-agent-harness-optimization-system.md",
+        "pattern": "skills + instincts + memory + hooks + context monitor -> coding-agent performance governance",
+        "description": "ECC is an agent harness optimization system that packages skills, instincts, memory, security review, context monitoring and research-first workflows for Claude Code, Codex, OpenCode, Cursor and related coding agents.",
+        "stack": [
+            "JavaScript",
+            "Rust",
+            "Python",
+            "Shell",
+            "TypeScript",
+            "Agent harness"
+        ],
+        "category": "Agent Harness Optimization System",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/affaan-m_ecc.md",
+        "status": "verified",
+        "tags": [
+            "Agent harness",
+            "Skills",
+            "Memory",
+            "Security",
+            "Context management"
+        ]
+    },
+    {
+        "name": "vibe-codex",
+        "repo": "kks0488/vibe-codex",
+        "url": "https://github.com/kks0488/vibe-codex",
+        "stars": 10,
+        "forks": "0",
+        "language": "JavaScript",
+        "license": "Unknown",
+        "report": "projects/180-vibe-codex-codex-skills-teams.md",
+        "pattern": "Codex skills -> retry/self-heal loops -> agent teams JSON mailboxes -> completion proof",
+        "description": "vibe-codex is a Codex-first skill bundle with retry, self-healing, completion proof, MCP docs setup and Codex-native agent team mailboxes for parallel research and implementation workflows.",
+        "stack": [
+            "JavaScript",
+            "PowerShell",
+            "Shell",
+            "Codex Skills",
+            "JSON mailboxes"
+        ],
+        "category": "Codex Skills and Agent Teams Kit",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/kks0488_vibe-codex.md",
+        "status": "verified",
+        "tags": [
+            "Codex",
+            "Agent Skills",
+            "Agent teams",
+            "Self-healing",
+            "Completion proof"
+        ]
+    },
+    {
+        "name": "OpenCode Skills",
+        "repo": "farmage/opencode-skills",
+        "url": "https://github.com/farmage/opencode-skills",
+        "stars": 28,
+        "forks": "6",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/181-opencode-skills-workflow-commands.md",
+        "pattern": "skill directories + workflow commands + validation tooling -> OpenCode execution surface",
+        "description": "OpenCode Skills adapts a Claude-style skill library into 66 OpenCode skills plus workflow commands, installer, validation tooling, decision trees and Jira/Confluence MCP command workflows.",
+        "stack": [
+            "Python",
+            "JavaScript",
+            "Shell",
+            "HTML",
+            "Makefile",
+            "Astro",
+            "OpenCode"
+        ],
+        "category": "OpenCode Agent Skills and Workflow Commands",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/farmage_opencode-skills.md",
+        "status": "verified",
+        "tags": [
+            "OpenCode",
+            "Agent Skills",
+            "Workflow commands",
+            "MCP",
+            "Validation"
+        ]
+    },
+    {
+        "name": "Agent Smith",
+        "repo": "cyijun/agent-smith",
+        "url": "https://github.com/cyijun/agent-smith",
+        "stars": 18,
+        "forks": "2",
+        "language": "Markdown",
+        "license": "MIT",
+        "report": "projects/182-agent-smith-directory-isolated-multi-agent.md",
+        "pattern": "root task inbox -> recursive child agents -> directory isolation -> outbox aggregation",
+        "description": "Agent Smith is a self-similar multi-agent collaboration protocol that decomposes work recursively while isolating each agent through inbox/private/outbox/children directories.",
+        "stack": [
+            "Markdown",
+            "Claude Code Skill",
+            "Directory protocol",
+            "OpenCode",
+            "OpenClaw"
+        ],
+        "category": "Directory-Isolated Multi-Agent Protocol",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/cyijun_agent-smith.md",
+        "status": "verified",
+        "tags": [
+            "Multi-agent",
+            "Directory isolation",
+            "Task decomposition",
+            "Agent Skills",
+            "OpenClaw"
+        ]
+    },
+    {
+        "name": "Galyarder Framework",
+        "repo": "galyarderlabs/galyarder-framework",
+        "url": "https://github.com/galyarderlabs/galyarder-framework",
+        "stars": 11,
+        "forks": "2",
+        "language": "Agent Skills",
+        "license": "Unknown",
+        "report": "projects/183-galyarder-agentic-skills-orchestration.md",
+        "pattern": "department skills + commands + hooks -> universal plugin architecture -> mission execution",
+        "description": "Galyarder Framework organizes agentic skills, commands, hooks and departments into a universal plugin architecture for Claude, Codex, OpenCode, Gemini and adjacent developer agents.",
+        "stack": [
+            "Agent Skills",
+            "Commands",
+            "Hooks",
+            "Codex",
+            "OpenCode",
+            "Claude plugin"
+        ],
+        "category": "Agentic Skills Orchestration Framework",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/galyarderlabs_galyarder-framework.md",
+        "status": "verified",
+        "tags": [
+            "Agent Skills",
+            "Orchestration",
+            "Codex",
+            "OpenCode",
+            "Plugin architecture"
+        ]
+    },
+    {
+        "name": "Thesis Skills",
+        "repo": "quzhiii/thesis-skills",
+        "url": "https://github.com/quzhiii/thesis-skills",
+        "stars": 71,
+        "forks": "6",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/184-thesis-skills-paper-workflow-skills.md",
+        "pattern": "paper workflow skill modules -> reference/language/format checks -> compile/readiness gates",
+        "description": "Thesis Skills is a deterministic paper workflow skill repository for Word-to-LaTeX migration, citation integrity, language checks, format validation, compile readiness and defense package preparation.",
+        "stack": [
+            "Python",
+            "HTML",
+            "CSS",
+            "LaTeX",
+            "Agent Skills"
+        ],
+        "category": "Paper Workflow Agent Skills",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/quzhiii_thesis-skills.md",
+        "status": "verified",
+        "tags": [
+            "Agent Skills",
+            "Paper workflow",
+            "LaTeX",
+            "Citation checks",
+            "Readiness gates"
+        ]
+    },
+    {
+        "name": "PRB Agent Skills",
+        "repo": "PaulRBerg/agent-skills",
+        "url": "https://github.com/PaulRBerg/agent-skills",
+        "stars": 59,
+        "forks": "2",
+        "language": "Shell",
+        "license": "MIT",
+        "report": "projects/185-prb-agent-skills-personal-codex-skill-pack.md",
+        "pattern": "personal skill modules -> progressive disclosure -> repeatable coding workflows",
+        "description": "PRB Agent Skills is a compact personal skill pack for Claude Code and Codex, with executable workflow guidance for review, commits, docs, release work and task execution.",
+        "stack": [
+            "Shell",
+            "Just",
+            "Agent Skills",
+            "Codex",
+            "Claude Code"
+        ],
+        "category": "Personal Codex Agent Skills Pack",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/paulrberg_agent-skills.md",
+        "status": "verified",
+        "tags": [
+            "Agent Skills",
+            "Codex",
+            "Claude Code",
+            "Personal workflow",
+            "Skill supply"
+        ]
+    },
+    {
+        "name": "Awesome Codex Skills",
+        "repo": "ComposioHQ/awesome-codex-skills",
+        "url": "https://github.com/ComposioHQ/awesome-codex-skills",
+        "stars": 11500,
+        "forks": "1.1k",
+        "language": "Python",
+        "license": "Not observed",
+        "report": "projects/186-awesome-codex-skills-automation-catalog.md",
+        "pattern": "skill catalog -> installer path -> automation workflows across external tools",
+        "description": "Awesome Codex Skills is a high-signal catalog of practical Codex skill folders for workflow automation, including Composio-backed actions across external services.",
+        "stack": [
+            "Python",
+            "Markdown",
+            "Codex Skills",
+            "Composio",
+            "Automation"
+        ],
+        "category": "Codex Skills Automation Catalog",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/composiohq_awesome-codex-skills.md",
+        "status": "verified",
+        "tags": [
+            "Codex",
+            "Agent Skills",
+            "Automation",
+            "Workflow catalog",
+            "Composio"
+        ]
+    },
+    {
+        "name": "Eigent Agent Skills",
+        "repo": "eigent-ai/agent-skills",
+        "url": "https://github.com/eigent-ai/agent-skills",
+        "stars": 10,
+        "forks": "0",
+        "language": "Markdown",
+        "license": "Not observed",
+        "report": "projects/187-eigent-agent-skills-cowork-collection.md",
+        "pattern": "skill catalog -> category taxonomy -> agent cowork workflows",
+        "description": "Eigent Agent Skills is an open cowork-agent skill collection that packages research, marketing, document, analytics, image/video and communication workflows as reusable agent skills.",
+        "stack": [
+            "Markdown",
+            "Python",
+            "TypeScript",
+            "Agent Skills",
+            "Workflow Skills"
+        ],
+        "category": "Cowork Agent Skills Collection",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/eigent-ai_agent-skills.md",
+        "status": "verified",
+        "tags": [
+            "Agent Skills",
+            "Research",
+            "Marketing",
+            "Documents",
+            "Workflow catalog"
+        ]
+    },
+    {
+        "name": "AI Agent Skills",
+        "repo": "MoizIbnYousaf/Ai-Agent-Skills",
+        "url": "https://github.com/MoizIbnYousaf/Ai-Agent-Skills",
+        "stars": 1100,
+        "forks": "122",
+        "language": "JavaScript",
+        "license": "MIT",
+        "report": "projects/188-ai-agent-skills-curated-library-cli.md",
+        "pattern": "curated shelves -> provenance notes -> CLI/TUI install and library management",
+        "description": "AI Agent Skills packages a curated skill library plus CLI/TUI workflows for building and managing smaller, provenance-aware agent skill shelves.",
+        "stack": [
+            "JavaScript",
+            "HTML",
+            "CLI",
+            "TUI",
+            "Agent Skills"
+        ],
+        "category": "Curated Agent Skills Library and CLI",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/moizibnyousaf_ai-agent-skills.md",
+        "status": "verified",
+        "tags": [
+            "Agent Skills",
+            "CLI",
+            "TUI",
+            "Provenance",
+            "Skill curation"
+        ]
+    },
+    {
+        "name": "Arc",
+        "repo": "howells/arc",
+        "url": "https://github.com/howells/arc",
+        "stars": 22,
+        "forks": "2",
+        "language": "TypeScript",
+        "license": "MIT",
+        "report": "projects/189-arc-agent-workflow-plugin.md",
+        "pattern": "vision/spec -> implementation/testing -> review/audit/refactor -> commit/launch",
+        "description": "Arc is a self-contained software development lifecycle for coding agents, exposing Claude plugin commands and Codex skills/plugins for ideation, implementation, review, testing, launch readiness and commits.",
+        "stack": [
+            "TypeScript",
+            "Markdown",
+            "Codex plugin",
+            "Claude plugin",
+            "Agent Skills"
+        ],
+        "category": "Agent Workflow Plugin",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/howells_arc.md",
+        "status": "verified",
+        "tags": [
+            "Codex",
+            "Claude Code",
+            "Workflow plugin",
+            "Agent Skills",
+            "TDD"
+        ]
+    },
+    {
+        "name": "Gentleman Skills",
+        "repo": "Gentleman-Programming/Gentleman-Skills",
+        "url": "https://github.com/Gentleman-Programming/Gentleman-Skills",
+        "stars": 522,
+        "forks": "79",
+        "language": "Markdown",
+        "license": "MIT",
+        "report": "projects/190-gentleman-skills-community-agent-patterns.md",
+        "pattern": "curated/community skills -> SKILL template -> framework-specific coding patterns",
+        "description": "Gentleman Skills is a community-driven set of AI agent skills for Claude Code, OpenCode, Gemini CLI, Cursor, VS Code Copilot, Codex and other assistants.",
+        "stack": [
+            "Markdown",
+            "Agent Skills",
+            "Claude Code",
+            "OpenCode",
+            "Codex"
+        ],
+        "category": "Community Agent Skills Patterns",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/gentleman-programming_gentleman-skills.md",
+        "status": "verified",
+        "tags": [
+            "Agent Skills",
+            "Community",
+            "Frontend patterns",
+            "Skill creation",
+            "Codex"
+        ]
+    },
+    {
+        "name": "Together AI Skills",
+        "repo": "togethercomputer/skills",
+        "url": "https://github.com/togethercomputer/skills",
+        "stars": 28,
+        "forks": "5",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/191-together-ai-skills-provider-api-pack.md",
+        "pattern": "provider API references -> runnable scripts -> agent skill routing for SDK usage",
+        "description": "Together AI Skills packages provider-specific API and SDK knowledge into 12 agent skills covering inference, training, embeddings, audio, video, images, function calling and infrastructure.",
+        "stack": [
+            "Python",
+            "TypeScript",
+            "Together AI SDK",
+            "Agent Skills",
+            "API examples"
+        ],
+        "category": "Provider API Agent Skills Pack",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/togethercomputer_skills.md",
+        "status": "verified",
+        "tags": [
+            "Agent Skills",
+            "Provider API",
+            "Codex",
+            "Claude Code",
+            "SDK examples"
+        ]
     }
 ];
 
@@ -5526,7 +6101,25 @@ export const projectGroups = [
       "elastic/agent-skills",
       "hashgraph-online/registry-broker-skills",
       "huytieu/COG-second-brain",
-      "sundial-org/awesome-openclaw-skills"
+      "sundial-org/awesome-openclaw-skills",
+      "plastic-labs/honcho",
+      "vectorize-io/hindsight",
+      "kayba-ai/agentic-context-engine",
+      "trustgraph-ai/trustgraph",
+      "OthmanAdi/planning-with-files",
+      "affaan-m/ECC",
+      "kks0488/vibe-codex",
+      "farmage/opencode-skills",
+      "cyijun/agent-smith",
+      "galyarderlabs/galyarder-framework",
+      "quzhiii/thesis-skills",
+      "PaulRBerg/agent-skills",
+      "ComposioHQ/awesome-codex-skills",
+      "eigent-ai/agent-skills",
+      "MoizIbnYousaf/Ai-Agent-Skills",
+      "howells/arc",
+      "Gentleman-Programming/Gentleman-Skills",
+      "togethercomputer/skills"
     ]
   },
   {
@@ -5563,7 +6156,8 @@ export const projectGroups = [
       "darkrishabh/agent-skills-eval",
       "CE0Alex/skill-hunter",
       "kitfunso/hippo-memory",
-      "yf-he/EvoTest"
+      "yf-he/EvoTest",
+      "MemTensor/HaluMem"
     ]
   },
   {

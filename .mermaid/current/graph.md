@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-25T09:19:32+08:00
+Generated: 2026-05-25T13:21:00+08:00
 
 ## Nodes
 
@@ -24,16 +24,10 @@ Generated: 2026-05-25T09:19:32+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: yf-he/EvoTest, codejunkie99/agentic-stack, revfactory/harness, akillness/oh-my-skills, guixiang123124/openclaw-harness, regenrek/codex-1up, managedcode/dotnet-skills
-- New raw files: raw-github/yf-he_evotest.md, raw-github/codejunkie99_agentic-stack.md, raw-github/revfactory_harness.md, raw-github/akillness_oh-my-skills.md, raw-github/guixiang123124_openclaw-harness.md, raw-github/regenrek_codex-1up.md, raw-github/managedcode_dotnet-skills.md
-- Shell GitHub API remains DNS-blocked: curl -I --max-time 10 https://api.github.com failed with Could not resolve host; gh api rate_limit could not connect.
-- jq empty research/repo-classification.json .mermaid/current/graph.json passed; node --check site/src/data/projects.ts and the 0919 generator passed.
-- node scripts/generate_project_indexes.mjs passed after data and analysis refresh.
-- python3 scripts/enforce_raw_timestamps.py passed with raw-github md=463, md_ok=463, missing_count=0.
-- node scripts/analyze_github_project_data.mjs passed with raw=463, classified=463, analyzed_projects=181, strict_evolution=78, broad_evolution=173.
-- node scripts/generate_visual_assets.mjs regenerated four SVG assets.
-- command -v codeflow returned no command; CodeFlow is unavailable on PATH in this environment.
-- HOME=/private/tmp/gitnexus-home gitnexus doctor passed; analyze passed with changed=14, added=16, deleted=0, 10,690 nodes, 11,498 edges, 36 clusters, 16 flows; FTS degraded because LadybugDB extension download could not connect.
-- (cd site && npm run build) passed with 262 pages built and existing Astro z deprecation hints.
-- (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex) passed; main.pdf remains 213 pages with existing font/overfull/underfull warnings.
+- Web-observed repos: PaulRBerg/agent-skills, ComposioHQ/awesome-codex-skills, eigent-ai/agent-skills, MoizIbnYousaf/Ai-Agent-Skills, howells/arc, Gentleman-Programming/Gentleman-Skills, togethercomputer/skills
+- New raw files: raw-github/paulrberg_agent-skills.md, raw-github/composiohq_awesome-codex-skills.md, raw-github/eigent-ai_agent-skills.md, raw-github/moizibnyousaf_ai-agent-skills.md, raw-github/howells_arc.md, raw-github/gentleman-programming_gentleman-skills.md, raw-github/togethercomputer_skills.md
+- Shell GitHub API remains DNS-blocked: curl -I -L --max-time 12 https://api.github.com/rate_limit failed with Could not resolve host; gh auth status reports invalid token for Shiyao-Huang.
+- GitNexus local binary 1.6.5 is available; fresh temp HOME analyze succeeded with 10,730 nodes, 11,678 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.
+- Validation passed: JSON checks, project indexes, raw timestamp enforcement, GitHub project analysis, visual asset generation, site build, and paper build. Direct tsc probe hit TS5107 deprecation, but Astro check/build passed.
+- Final counts: raw=482, classified=482, analyzed_projects=200, strict_evolution=79, broad_evolution=175, skill_theme=60, framework_category=138, public_reports=225, site_pages=281.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

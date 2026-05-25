@@ -5,23 +5,14 @@ import { knowledgeGraph, knowledgeGraphStats } from '@/data/knowledgeGraph';
 const graphPayload = JSON.stringify(knowledgeGraph);
 ---
 <BaseLayout title="Self Evolve 知识图谱 — 项目、论文与机制关系" description="Self Evolve 知识图谱，把自进化 AI 项目、论文、机制标签和研究簇连接成可检索的关系网络。">
-  <section class="section">
-    <div class="container">
-      <div class="eyebrow">Knowledge Graph / 知识图谱</div>
-      <h1 class="gradient-text">项目、论文、机制和证据关系。</h1>
-      <p class="lead">第一版图谱由现有项目卡片和代表论文自动生成，用于发现 Self Evolve 领域的核心机制：反馈、评估、反思记忆、自博弈、代码自修改和 Agent 架构搜索。</p>
-      <div class="metrics">
-        <div class="metric"><strong>{knowledgeGraphStats.nodes}</strong><span>nodes</span></div>
-        <div class="metric"><strong>{knowledgeGraphStats.edges}</strong><span>edges</span></div>
-        <div class="metric"><strong>{knowledgeGraphStats.projects + knowledgeGraphStats.papers}</strong><span>projects + papers</span></div>
-      </div>
-    </div>
-  </section>
-
   <section class="section graph-section">
-    <div class="container graph-shell">
+    <div class="graph-shell">
       <div class="graph-panel">
         <div class="graph-toolbar">
+          <div class="graph-title">
+            <h1>Knowledge graph</h1>
+            <p>{knowledgeGraphStats.nodes} nodes · {knowledgeGraphStats.edges} edges · {knowledgeGraphStats.projects + knowledgeGraphStats.papers} projects + papers</p>
+          </div>
           <label>
             <span>Search</span>
             <input id="graph-search" type="search" placeholder="openevolve, Reflexion, 评估器..." />
@@ -36,99 +27,206 @@ const graphPayload = JSON.stringify(knowledgeGraph);
               <option value="cluster">Clusters</option>
             </select>
           </label>
+          <p id="graph-count" class="graph-count" aria-live="polite"></p>
         </div>
-        <svg id="knowledge-graph" viewBox="0 0 1100 680" role="img" aria-label="Self Evolve knowledge graph"></svg>
+        <svg id="knowledge-graph" viewBox="0 0 1400 720" role="img" aria-label="Self Evolve knowledge graph"></svg>
       </div>
-      <aside class="graph-detail" id="graph-detail">
-        <div class="eyebrow">Selected Node</div>
-        <h2>点击节点查看关系</h2>
-        <p>搜索或选择类型后，图谱会高亮匹配节点及其直接关系。第一版使用静态生成数据，便于开源审计和后续替换为 Sigma.js 或 Cytoscape.js。</p>
-      </aside>
     </div>
   </section>
 
   <script is:inline define:vars={{ graphPayload }}>
+    /* @sm:node knowledge-graph-readable-radial-layout
+     * Purpose: render the static Self Evolve knowledge graph as a readable, inspectable SVG.
+     * Inputs: site/src/data/knowledgeGraph.ts payload.
+     * Verification: /graph/ desktop and mobile screenshots plus `npm run build`.
+     */
     const graph = JSON.parse(graphPayload);
     const svg = document.querySelector('#knowledge-graph');
-    const detail = document.querySelector('#graph-detail');
     const search = document.querySelector('#graph-search');
     const typeSelect = document.querySelector('#graph-type');
-    const width = 1100;
-    const height = 680;
-    const center = { x: width / 2, y: height / 2 };
+    const graphCount = document.querySelector('#graph-count');
+    let selectedNodeId = null;
+    let width = 1400;
+    let height = 720;
+    let center = { x: width / 2, y: height / 2 };
     const typeOrder = ['cluster', 'concept', 'paper', 'project'];
     const typeColor = {
-      project: '#7cf7d4',
-      paper: '#ffcf7c',
-      concept: '#9f7cff',
-      cluster: '#f6f8ff'
+      project: '#1A1A1A',
+      paper: '#FFB347',
+      concept: '#007AFF',
+      cluster: '#FF5B00'
     };
 
     const byId = new Map(graph.nodes.map((node) => [node.id, node]));
     const adjacency = new Map(graph.nodes.map((node) => [node.id, new Set()]));
+    const degree = new Map(graph.nodes.map((node) => [node.id, 0]));
     for (const edge of graph.edges) {
       adjacency.get(edge.source)?.add(edge.target);
       adjacency.get(edge.target)?.add(edge.source);
+      degree.set(edge.source, (degree.get(edge.source) || 0) + 1);
+      degree.set(edge.target, (degree.get(edge.target) || 0) + 1);
     }
 
-    function placeNodes() {
+    function stableHash(value) {
+      let hash = 0;
+      for (let index = 0; index < value.length; index += 1) {
+        hash = (hash * 31 + value.charCodeAt(index)) >>> 0;
+      }
+      return hash;
+    }
+
+    function nodeRank(node) {
+      return (node.weight || 1) * 8 + (degree.get(node.id) || 0);
+    }
+
+    function ranked(nodes) {
+      return [...nodes].sort((a, b) => nodeRank(b) - nodeRank(a));
+    }
+
+    function syncCanvas() {
+      const box = svg.getBoundingClientRect();
+      width = Math.max(320, Math.round(box.width || width));
+      height = Math.max(420, Math.round(box.height || height));
+      center = { x: width / 2, y: height / 2 };
+      svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    }
+
+    const prominentLabelIds = new Set([
+      ...ranked(graph.nodes.filter((node) => node.type === 'cluster')).slice(0, 8).map((node) => node.id),
+      ...ranked(graph.nodes.filter((node) => node.type === 'concept')).slice(0, 6).map((node) => node.id)
+    ]);
+
+    function defaultVisibleIds() {
+      const groups = graph.nodes.reduce((acc, node) => {
+        acc[node.type] ||= [];
+        acc[node.type].push(node);
+        return acc;
+      }, {});
+      const limit = width < 700
+        ? { concept: 34, paper: 18, project: 48 }
+        : width < 1100
+          ? { concept: 62, paper: 28, project: 84 }
+          : { concept: 88, paper: 36, project: 126 };
+      return new Set([
+        ...ranked(groups.cluster || []).map((node) => node.id),
+        ...ranked(groups.concept || []).slice(0, limit.concept).map((node) => node.id),
+        ...ranked(groups.paper || []).slice(0, limit.paper).map((node) => node.id),
+        ...ranked(groups.project || []).slice(0, limit.project).map((node) => node.id)
+      ]);
+    }
+
+    function matchIds() {
+      const q = search.value.trim().toLowerCase();
+      const type = typeSelect.value;
+      const direct = graph.nodes.filter((node) => {
+        const typeOk = type === 'all' || node.type === type;
+        const textOk = !q || `${node.label} ${node.summary || ''}`.toLowerCase().includes(q);
+        return typeOk && textOk;
+      });
+
+      if (!q && type === 'all') return defaultVisibleIds();
+
+      const visible = new Set(ranked(direct).slice(0, q ? 120 : 220).map((node) => node.id));
+      for (const node of direct.slice(0, q ? 48 : 120)) {
+        for (const neighbor of adjacency.get(node.id) || []) visible.add(neighbor);
+      }
+      return visible;
+    }
+
+    function placeNodes(displayNodes) {
       const grouped = Object.groupBy
-        ? Object.groupBy(graph.nodes, (node) => node.type)
-        : graph.nodes.reduce((acc, node) => {
+        ? Object.groupBy(displayNodes, (node) => node.type)
+        : displayNodes.reduce((acc, node) => {
             acc[node.type] ||= [];
             acc[node.type].push(node);
             return acc;
           }, {});
 
       typeOrder.forEach((type, ring) => {
-        const list = grouped[type] || [];
-        const radius = [70, 190, 310, 430][ring];
+        const list = ranked(grouped[type] || []);
+        const maxRadius = Math.min(width * .38, height * .43);
+        const radius = maxRadius * [.18, .44, .68, .92][ring];
+        const xStretch = Math.min(1.85, Math.max(1.05, (width / height) * .74));
         list.forEach((node, index) => {
           const angle = (Math.PI * 2 * index) / Math.max(list.length, 1) - Math.PI / 2 + ring * 0.34;
-          node.x = center.x + Math.cos(angle) * radius;
-          node.y = center.y + Math.sin(angle) * radius;
+          const jitter = ((stableHash(node.id) % 100) / 100 - .5) * 24;
+          node.x = center.x + Math.cos(angle) * (radius * xStretch + jitter);
+          node.y = center.y + Math.sin(angle) * (radius + jitter * .6);
         });
       });
     }
 
-    function matches(node) {
-      const q = search.value.trim().toLowerCase();
-      const type = typeSelect.value;
-      const typeOk = type === 'all' || node.type === type;
-      const textOk = !q || `${node.label} ${node.summary || ''}`.toLowerCase().includes(q);
-      return typeOk && textOk;
+    function shouldLabel(node, active, related) {
+      const q = search.value.trim();
+      if (width < 700 && !q) return active || related;
+      return active || related || prominentLabelIds.has(node.id) || (q && node.type !== 'project');
+    }
+
+    function nodeRadius(node, active, related) {
+      const base = 4.5 + Math.min(10, Math.sqrt(Math.max(1, nodeRank(node))) * 1.1);
+      if (active) return base + 5;
+      if (related) return base + 2;
+      return base;
     }
 
     function render(selectedId) {
-      const matched = new Set(graph.nodes.filter(matches).map((node) => node.id));
+      syncCanvas();
+      const matched = matchIds();
       const selectedNeighbors = selectedId ? adjacency.get(selectedId) || new Set() : new Set();
+      if (selectedId) {
+        matched.add(selectedId);
+        for (const neighbor of selectedNeighbors) matched.add(neighbor);
+      }
+      const displayNodes = graph.nodes.filter((node) => matched.has(node.id));
+      const displayIds = new Set(displayNodes.map((node) => node.id));
+      placeNodes(displayNodes);
+      const selectedNode = selectedId ? byId.get(selectedId) : null;
+      graphCount.textContent = selectedNode
+        ? `${selectedNode.label} · ${selectedNeighbors.size} relations`
+        : `${displayNodes.length} of ${graph.nodes.length} nodes`;
       svg.innerHTML = '';
 
       const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
-      defs.innerHTML = '<filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>';
+      defs.innerHTML = `
+        <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <radialGradient id="paper-wash" cx="50%" cy="45%" r="58%">
+          <stop offset="0%" stop-color="#FFF8F0"/>
+          <stop offset="100%" stop-color="#FFF0E0"/>
+        </radialGradient>
+      `;
       svg.append(defs);
 
+      const maxRadius = Math.min(width * .38, height * .43);
+      const xStretch = Math.min(1.85, Math.max(1.05, (width / height) * .74));
+      const wash = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse');
+      wash.setAttribute('cx', center.x);
+      wash.setAttribute('cy', center.y);
+      wash.setAttribute('rx', String(maxRadius * xStretch * 1.05));
+      wash.setAttribute('ry', String(maxRadius * 1.08));
+      wash.setAttribute('fill', 'url(#paper-wash)');
+      wash.setAttribute('opacity', '.82');
+      svg.append(wash);
+
       for (const edge of graph.edges) {
+        if (!displayIds.has(edge.source) || !displayIds.has(edge.target)) continue;
         const source = byId.get(edge.source);
         const target = byId.get(edge.target);
         if (!source || !target) continue;
         const active = selectedId && (edge.source === selectedId || edge.target === selectedId);
-        const visible = matched.has(edge.source) || matched.has(edge.target) || active;
         const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
         line.setAttribute('x1', source.x);
         line.setAttribute('y1', source.y);
         line.setAttribute('x2', target.x);
         line.setAttribute('y2', target.y);
-        line.setAttribute('stroke', active ? '#7cf7d4' : 'rgba(255,255,255,.18)');
+        line.setAttribute('stroke', active ? '#FF5B00' : 'rgba(26,26,26,.20)');
         line.setAttribute('stroke-width', active ? '2.5' : '1');
-        line.setAttribute('opacity', visible ? '1' : '.14');
+        line.setAttribute('opacity', active ? '1' : '.38');
         svg.append(line);
       }
 
-      for (const node of graph.nodes) {
+      for (const node of displayNodes) {
         const active = node.id === selectedId;
         const related = selectedNeighbors.has(node.id);
-        const visible = matched.has(node.id) || active || related;
         const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
         group.setAttribute('transform', `translate(${node.x}, ${node.y})`);
         group.setAttribute('tabindex', '0');
@@ -141,69 +239,91 @@ const graphPayload = JSON.stringify(knowledgeGraph);
         });
 
         const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        circle.setAttribute('r', String(7 + node.weight * 1.5));
+        circle.setAttribute('r', String(nodeRadius(node, active, related)));
         circle.setAttribute('fill', typeColor[node.type]);
-        circle.setAttribute('opacity', visible ? '1' : '.18');
-        circle.setAttribute('stroke', active ? '#ffffff' : 'rgba(255,255,255,.55)');
+        circle.setAttribute('opacity', active || related ? '1' : '.86');
+        circle.setAttribute('stroke', active ? '#1A1A1A' : 'rgba(26,26,26,.28)');
         circle.setAttribute('stroke-width', active ? '3' : '1');
         if (active || related) circle.setAttribute('filter', 'url(#glow)');
         group.append(circle);
 
-        const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        label.textContent = node.label.length > 28 ? `${node.label.slice(0, 27)}...` : node.label;
-        label.setAttribute('y', String(25 + node.weight));
-        label.setAttribute('text-anchor', 'middle');
-        label.setAttribute('fill', visible ? '#f6f8ff' : 'rgba(246,248,255,.28)');
-        label.setAttribute('font-size', active || related || node.type === 'cluster' ? '13' : '11');
-        label.setAttribute('font-weight', active || node.type === 'cluster' ? '800' : '500');
-        group.append(label);
+        if (shouldLabel(node, active, related)) {
+          const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+          label.textContent = node.label.length > 32 ? `${node.label.slice(0, 31)}...` : node.label;
+          label.setAttribute('y', String(nodeRadius(node, active, related) + 16));
+          label.setAttribute('text-anchor', 'middle');
+          label.setAttribute('fill', '#1A1A1A');
+          label.setAttribute('font-size', active || related || node.type === 'cluster' ? '14' : '11');
+          label.setAttribute('font-weight', active || node.type === 'cluster' ? '800' : '650');
+          label.setAttribute('paint-order', 'stroke');
+          label.setAttribute('stroke', '#FFF8F0');
+          label.setAttribute('stroke-width', '5');
+          label.setAttribute('stroke-linejoin', 'round');
+          group.append(label);
+        }
         svg.append(group);
       }
     }
 
     function selectNode(id) {
-      const node = byId.get(id);
-      if (!node) return;
-      const neighbors = [...(adjacency.get(id) || [])].map((neighborId) => byId.get(neighborId)).filter(Boolean);
-      detail.innerHTML = `
-        <div class="eyebrow">${node.type}</div>
-        <h2>${node.label}</h2>
-        <p>${node.summary || 'No summary yet.'}</p>
-        ${node.url ? `<p><a class="button" href="${node.url}" target="_blank" rel="noopener">Open source</a></p>` : ''}
-        <h3>Direct relations</h3>
-        <ul>${neighbors.slice(0, 12).map((item) => `<li>${item.type}: ${item.label}</li>`).join('')}</ul>
-      `;
-      render(id);
+      selectedNodeId = id;
+      render(selectedNodeId);
     }
 
-    placeNodes();
     render();
-    search.addEventListener('input', () => render());
-    typeSelect.addEventListener('change', () => render());
+    search.addEventListener('input', () => {
+      selectedNodeId = null;
+      render();
+    });
+    typeSelect.addEventListener('change', () => {
+      selectedNodeId = null;
+      render();
+    });
+    window.addEventListener('resize', () => render(selectedNodeId));
   </script>
 </BaseLayout>
 
 <style>
-  .graph-section { padding-top: 12px }
-  .graph-shell {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 330px;
-    gap: 18px;
-    align-items: stretch;
+  .graph-section {
+    padding: 18px 0 42px;
   }
-  .graph-panel,
-  .graph-detail {
+  .graph-shell {
+    width: min(calc(100% - 56px), 2140px);
+    max-width: none;
+    margin-inline: auto;
+  }
+  .graph-panel {
     border: 1px solid var(--line);
-    background: var(--card-bg);
-    border-radius: var(--radius);
+    background: var(--surface-1);
+    border-radius: var(--radius-media);
   }
   .graph-panel { overflow: hidden }
   .graph-toolbar {
     display: grid;
-    grid-template-columns: minmax(180px, 1fr) 180px;
-    gap: 12px;
-    padding: 16px;
+    grid-template-columns: minmax(190px, .72fr) minmax(260px, 1fr) 180px auto;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
     border-bottom: 1px solid var(--line);
+  }
+  .graph-title {
+    min-width: 0;
+  }
+  .graph-title h1 {
+    color: var(--fg);
+    font-family: var(--font-display);
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .graph-title p {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
   }
   .graph-toolbar label {
     display: grid;
@@ -218,34 +338,50 @@ const graphPayload = JSON.stringify(knowledgeGraph);
   .graph-toolbar select {
     width: 100%;
     border: 1px solid var(--line);
-    border-radius: 14px;
-    background: rgba(5, 6, 21, .8);
+    border-radius: var(--radius-cta);
+    background: var(--surface-card);
     color: var(--text);
     padding: 12px 14px;
-    font: inherit;
+    font: 650 14px/1.1 var(--font-body);
     letter-spacing: 0;
+  }
+  .graph-toolbar input:focus,
+  .graph-toolbar select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
+  }
+  .graph-count {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--meta);
+    font-size: 13px;
+    font-weight: 750;
+    white-space: nowrap;
   }
   #knowledge-graph {
     display: block;
     width: 100%;
-    min-height: 620px;
+    height: clamp(560px, calc(100vh - 206px), 820px);
+    min-height: 560px;
     background:
-      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      linear-gradient(rgba(26,26,26,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26,26,26,.035) 1px, transparent 1px),
+      var(--surface-card);
     background-size: 44px 44px;
   }
-  .graph-detail {
-    padding: 22px;
-    min-height: 620px;
-  }
-  .graph-detail h2 { font-size: 28px; line-height: 1.1; margin: 12px 0 }
-  .graph-detail h3 { margin-top: 22px; font-size: 16px }
-  .graph-detail ul { margin: 12px 0 0 18px; color: var(--muted); line-height: 1.7 }
-
   @media (max-width: 920px) {
-    .graph-shell { grid-template-columns: 1fr }
+    .graph-section { padding-top: 14px }
+    .graph-shell {
+      width: min(100% - 32px, 1160px);
+    }
     .graph-toolbar { grid-template-columns: 1fr }
-    #knowledge-graph { min-height: 430px }
-    .graph-detail { min-height: auto }
+    .graph-title h1 { font-size: 30px }
+    .graph-count { justify-content: flex-start }
+    #knowledge-graph {
+      height: 430px;
+      min-height: 430px;
+    }
   }
 </style>

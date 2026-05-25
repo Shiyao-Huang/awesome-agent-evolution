@@ -30,33 +30,33 @@
     <rect x="270" y="156" width="760" height="34" rx="12" fill="#7cf7d4"/>
   </g>
   <text x="78" y="180" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="750" fill="#f6f8ff">Raw captures</text>
-  <text x="1050" y="180" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#f6f8ff">456</text>
+  <text x="1050" y="180" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#f6f8ff">482</text>
 
   <g filter="url(#softShadow)">
     <rect x="48" y="222" width="1000" height="54" rx="18" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.14)"/>
     <rect x="270" y="232" width="760" height="34" rx="12" fill="#5fb4ff"/>
   </g>
   <text x="78" y="256" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="750" fill="#f6f8ff">Classified repos</text>
-  <text x="1050" y="256" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#f6f8ff">456</text>
+  <text x="1050" y="256" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#f6f8ff">482</text>
 
   <g filter="url(#softShadow)">
     <rect x="48" y="298" width="1000" height="54" rx="18" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.14)"/>
-    <rect x="270" y="308" width="290" height="34" rx="12" fill="#ffcf7c"/>
+    <rect x="270" y="308" width="315" height="34" rx="12" fill="#ffcf7c"/>
   </g>
   <text x="78" y="332" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="750" fill="#f6f8ff">Site model cards</text>
-  <text x="580" y="332" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#f6f8ff">174</text>
+  <text x="605" y="332" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#f6f8ff">200</text>
 
   <g filter="url(#softShadow)">
     <rect x="48" y="374" width="1000" height="54" rx="18" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.14)"/>
-    <rect x="270" y="384" width="145" height="34" rx="12" fill="#ff8f70"/>
+    <rect x="270" y="384" width="140" height="34" rx="12" fill="#ff8f70"/>
   </g>
   <text x="78" y="408" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="750" fill="#f6f8ff">Evolution-focused projects</text>
-  <text x="435" y="408" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#f6f8ff">87</text>
+  <text x="430" y="408" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#f6f8ff">89</text>
 
   <g filter="url(#softShadow)">
     <rect x="48" y="450" width="1000" height="54" rx="18" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.14)"/>
-    <rect x="270" y="460" width="128" height="34" rx="12" fill="#9f7cff"/>
+    <rect x="270" y="460" width="125" height="34" rx="12" fill="#9f7cff"/>
   </g>
   <text x="78" y="484" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="750" fill="#f6f8ff">Strict evolution raw</text>
-  <text x="418" y="484" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#f6f8ff">77</text>
+  <text x="415" y="484" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#f6f8ff">79</text>
 </svg>
