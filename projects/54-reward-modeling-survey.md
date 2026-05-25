@@ -4,7 +4,7 @@
 
 | 字段 | 内容 |
 |------|------|
-| 仓库 | RLHFlow/RLHF-Reward-Modeling (包含综述内容) |
+| 仓库 | RLHFlow/RLHF-Reward-Modeling |
 | GitHub URL | https://github.com/RLHFlow/RLHF-Reward-Modeling |
 | Stars | ~1,500 |
 | 语言 | Python |

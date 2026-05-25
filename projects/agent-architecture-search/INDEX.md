@@ -1,8 +1,7 @@
 # Agent 架构搜索 + 自进化方向：GitHub 项目索引
 
-> 生成日期: 2026-05-22 | 更新: 2026-05-22 (补充 2025-2026 新项目) | 覆盖: 40+ 项目
-> 方向负责人: Researcher-1
-> 搜索范围: ADAS, DGM, Gödel Agent, Agent 自进化框架, 架构搜索, 技能进化, 2026 新项目
+> 生成日期: 2026-05-22 | 更新: 2026-05-22 | 覆盖: 29+ 项目 | 方向负责人: Researcher-1
+> 搜索范围: ADAS, DGM, Gödel Agent, Agent 自进化框架, 架构搜索, 技能进化, 2026 生态
 
 ---
 
@@ -73,43 +72,23 @@
 |---|------|-------|------|----------|
 | 20 | [DARWIN](./20-darwin.md) | 100+ | Python | 自进化越狱攻击池, 遗传算法+自反思 |
 
-### 八、Survey 列表 (Curated Lists)
+### 八、2026 生态项目 (2026 Ecosystem Projects)
+
+| # | 项目 | Stars | 语言 | 机构 | 核心定位 |
+|---|------|-------|------|------|----------|
+| 22 | [Claw Code](./22-claw-code.md) | 192K+ | Rust+Python | UltraWorkers | Claude Code Rust 开源实现, 终端 Agent |
+| 23 | [Gemini CLI](./23-gemini-cli.md) | 新 | TypeScript | Google | Gemini 官方终端 Agent, 1M 上下文 |
+| 24 | [DeepSeek-V3](./24-deepseek-v3.md) | 高 | Python | DeepSeek | 671B MoE 模型, FP8 训练, 极低成本 |
+| 25 | [n8n](./25-n8n.md) | 80K+ | TypeScript | n8n GmbH | 400+ 集成工作流自动化, AI 原生 |
+| 26 | [Langflow](./26-langflow.md) | 60K+ | Python+TS | Langflow AI | AI Agent 可视化构建, MCP 部署 |
+
+### 九、Survey 列表 (Curated Lists)
 
 | # | 项目 | Stars | 覆盖范围 |
 |---|------|-------|----------|
-| 21 | [Awesome-Self-Evolving-Agents](./surveys.md) | 300+ | 最全的自进化 Agent 论文索引 |
-| 22 | [Self-Evolving-Agents](./surveys.md) | 200+ | 自进化 Agent 分类综述 |
-| 23 | [Awesome-Agent-Evolution](./surveys.md) | 113 | Agent 进化资源列表 |
-
----
-
-### 九、2025-2026 新增项目 (New & Trending)
-
-| # | 项目 | Stars | 语言 | 时间 | 核心机制 |
-|---|------|-------|------|------|----------|
-| 21 | [2026 新增项目集](./21-2026-new-projects.md) | — | 多种 | 2025-2026 | 见下方详情 |
-
-#### 重点新增项目
-
-| 项目 | Stars | 核心创新 |
-|------|-------|----------|
-| **Hermes Agent** (完整版) | 64K+ | 自 Curating Skills + Memory，无需人类介入 |
-| **Claw Code** | 48K+ | Claude Code 的 Rust+Python 开源重写，经验进化 |
-| **Agent S2** (Simular AI) | 5K+ | 通才-专家组合框架，超越 OpenAI CUA，COLM 2025 |
-| **SEW** | 集成于 EvoAgentX | 工作流结构 + 提示联合进化 |
-| **Self-Improving Coding Agent** | 100+ | 极简元改进——Agent 改进自身代码 |
-| **Controlled Self-Evolution** | 论文 | 生成-验证-精炼循环 (arXiv:2601.07348) |
-| **Software Self-Extension** | 论文 | Agent 架构实现软件自扩展 (arXiv:2604.16314) |
-| **AG2 自改进路线图** | — | 主流框架正式规划自进化能力 |
-
-#### 新增 Survey 列表
-
-| 列表 | 维护方 | 特点 |
-|------|--------|------|
-| **XMUDeepLIT/Awesome-Self-Evolving-Agents** | 厦门大学 | 含论文、基准、开源项目 |
-| **IBM/awesome-agentic-workflow-optimization** | IBM | 工作流优化专题 |
-| **awesome-ai-agents-2026** | 社区 | 300+ 资源，20+ 分类，月更 |
-| **Datawhale hello-agents** | Datawhale | 中文教程，Extra10 自进化章节 |
+| 27 | [Awesome-Self-Evolving-Agents](./surveys.md) | 300+ | 最全的自进化 Agent 论文索引 |
+| 28 | [Self-Evolving-Agents](./surveys.md) | 200+ | 自进化 Agent 分类综述 |
+| 29 | [Awesome-Agent-Evolution](./surveys.md) | 113 | Agent 进化资源列表 |
 
 ---
 
@@ -117,10 +96,11 @@
 
 | 语言 | 项目数 | 代表项目 |
 |------|--------|----------|
-| **Python** | 22 | ADAS, GenericAgent, Agent0, SE-Agent, EvoAgentX, Hermes |
+| **Python** | 20 | ADAS, GenericAgent, Agent0, SE-Agent, EvoAgentX |
+| **TypeScript** | 3 | Gemini CLI, n8n, Langflow(前端) |
 | **Rust** | 1 | Claw Code |
 | **Node.js** | 1 | EvoMap Evolver |
-| **混合** | 3 | Agent Zero (Python+Docker), Hermes (Python+DSPy), Claw Code (Rust+Python) |
+| **混合** | 2 | Agent Zero (Python+Docker), Hermes (Python+DSPy) |
 
 ## 进化机制分类
 
@@ -128,24 +108,22 @@
 |------|------|------|
 | **元搜索** | ADAS, EvoAgentX | LLM 作为元编程器搜索最优架构 |
 | **自引用修改** | Gödel Agent, DGM | Agent 修改自身运行时代码 |
-| **技能结晶** | GenericAgent, ELL, Hermes | 经验抽象为可复用技能 |
-| **技能自管理** | **Hermes (64K★)** | 自动评级、裁剪、整合 Skills |
+| **技能结晶** | GenericAgent, ELL | 经验抽象为可复用技能 |
 | **零数据自博弈** | Agent0, Absolute Zero | 无外部数据, 自生成课程 |
 | **轨迹进化** | SE-Agent, AgentEvolver | 多轨迹间信息交换 |
-| **进化提示优化** | Hermes Self-Evo, EvoMap | DSPy/GEPA 优化提示和技能 |
+| **进化提示优化** | Hermes, EvoMap | DSPy/GEPA 优化提示和技能 |
 | **在线课程 RL** | WebRL | 失败任务生成新训练数据 |
-| **工作流联合进化** | **SEW** | 工作流结构 + 提示同步优化 |
-| **代码自扩展** | **SelfEvolve (arXiv:2604)** | Agent 架构实现软件自扩展 |
+| **工作流编排** | n8n, Langflow | 可视化 Agent 工作流构建+部署 |
+| **CLI Agent** | Claw Code, Gemini CLI | 终端 AI Agent, MCP 支持 |
 
 ## 自进化成熟度评估
 
 ```
-Level 6 (生产部署): Hermes Agent (64K★) — 自 Curating Skills+Memory，无需人类
 Level 5 (自主进化):  DGM, Gödel Agent — 修改自身架构和代码
 Level 4 (技能进化):  GenericAgent, ELL, STELLA — 自动积累可复用技能
 Level 3 (轨迹优化):  SE-Agent, AgentEvolver, WebRL — 经验驱动的策略优化
-Level 2 (工作流进化): EvoAgentX, EvoAgent, SEW — 自动优化多 Agent 工作流
-Level 1 (提示优化):  Hermes Self-Evo, EvoMap — 进化式提示/工具描述优化
+Level 2 (工作流进化): EvoAgentX, EvoAgent — 自动优化多 Agent 工作流
+Level 1 (提示优化):  Hermes, EvoMap — 进化式提示/工具描述优化
 ```
 
 ---
@@ -159,22 +137,9 @@ Level 1 (提示优化):  Hermes Self-Evo, EvoMap — 进化式提示/工具描�
 5. **EvoMap 的 GEP 协议值得关注** — 将 Agent 经验编码为"基因", 7.3K stars 说明社区接受度高
 6. **Hermes 用 DSPy+GEPA 做进化提示优化** — ICLR 2026 Oral, 无需 GPU 训练
 7. **DGM 暂未开源** — 论文引用最高的自进化架构方法, 缺乏代码复现
-8. **2026 标志：自进化从学术走向生产** — Hermes (64K★) 和 Claw Code (48K★) 证明商业化可行性
-9. **AG2 (原 AutoGen) 正式规划自进化** — 主流框架采纳自进化，将成为行业标准
-10. **中国团队活跃度上升** — EvoAgentX, AgentEvolver (阿里), WebRL (清华), Datawhale 教程
-
----
-
-## 2025-2026 关键趋势
-
-| 2024 关键词 | 2026 新关键词 | 代表项目 |
-|-------------|--------------|----------|
-| self-refine | **self-curate** | Hermes Agent |
-| self-reflection | **self-challenge** | SCA (Self-Challenging Agent) |
-| self-debug | **self-extension** | SelfEvolve (arXiv:2604) |
-| evolution | **gene-based evolution** | EvoMap GEP |
-| prompt optimization | **workflow co-evolution** | SEW |
-| framework | **production deployment** | Hermes 64K★, Claw Code 48K★ |
+8. **2026 CLI Agent 三巨头** — Claude Code + Gemini CLI + Claw Code 构成终端 Agent 格局
+9. **n8n + Langflow 构成工作流基础设施** — 400+/900+ 模板, AI 原生, MCP 支持
+10. **DeepSeek-V3 证明开源模型成本极限** — 671B MoE 仅需 2.788M GPU 小时, FP8 训练首创
 
 ---
 

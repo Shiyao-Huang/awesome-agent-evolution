@@ -4,7 +4,7 @@
 
 | 字段 | 内容 |
 |------|------|
-| 仓库 | PKU-Alignment/safe-rlhf (已迁移至 PKU-Alignment/alignment) |
+| 仓库 | PKU-Alignment/alignment |
 | GitHub URL | https://github.com/PKU-Alignment/alignment |
 | Stars | ~2,500 |
 | 语言 | Python |

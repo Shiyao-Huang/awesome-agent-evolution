@@ -1,85 +1,113 @@
-# Awesome Agent Papers: LLM 智能体研究论文综合集
+# Awesome Agent Papers: LLM Agent 研究论文综合集
 
 ## 基本信息
 
 | 字段 | 内容 |
 |------|------|
 | GitHub | https://github.com/luo-junyu/Awesome-Agent-Papers |
-| Star | 500+ |
-| 技术栈 | Markdown, 学术论文索引, 文献综述 |
-| 许可证 | 学术共享 |
-| 开发者 | Luo Junyu (罗俊宇) |
+| Star | 1,500+ |
+| 技术栈 | Markdown, LaTeX, ArXiv API |
+| 许可证 | 未明确指定 |
+| 开发者 | luo-junyu (罗俊宇) |
 
 ## 项目简介
 
-Awesome Agent Papers 是一个 LLM 智能体研究论文的综合收集与分类项目,系统性地整理了智能体构建、协作机制、进化、工具使用、安全、基准测试和应用等关键领域的学术文献。项目附带一篇权威综述论文 (arXiv:2503.21460),提供了从架构基础到实际应用的结构化知识框架,是理解 LLM 智能体研究全貌的重要学术资源。该项目连接了碎片化的研究线索,突出了智能体设计原则与涌现行为之间的关联。
+Awesome Agent Papers 是一个系统性的 LLM Agent 研究论文收集项目，由罗俊宇维护，配套综述论文《The Landscape of LLM Agent Research》发布于 arXiv（arxiv.org/abs/2503.21460）。该项目按照 Agent 构建（Construction）、协作（Collaboration）、进化（Evolution）、工具（Tools）、安全（Security）、基准测试（Benchmarks）、应用（Applications）等核心维度对论文进行分类整理，形成了目前最全面的 LLM Agent 研究知识图谱之一。
+
+该仓库的核心价值在于其系统化的分类体系。不同于一般的论文列表，Awesome Agent Papers 建立了一个多维度的 Agent 研究分类框架，从架构基础到实际应用，从单 Agent 到多 Agent 协作，从工具集成到安全防护，覆盖了 LLM Agent 研究的完整技术栈。每篇论文都附有简要摘要，按发表年份排序，并标注了发表会议（如 ICML、NeurIPS、ICLR、ACL、Nature 等），方便研究者快速定位相关工作。仓库还提供了统计图表，包括年份分布图和关键词词云，直观展示了领域发展趋势。
+
+对于 Self-Evolve 研究项目而言，该仓库特别值得关注的是 Agent Evolution 分类，它收集了关于 Agent 自我改进、自适应学习、记忆管理等方向的最新研究成果，包括 Memory-R1、A-MEM、Agents of Change 等直接相关的前沿工作。这些论文为 Self-Evolve 的理论基础和技术路线提供了重要的参考依据。仓库的配套综述论文还提供了一个系统的 Agent 研究分类学，将 Self-Evolve 所关注的"Agent 自我进化"定位为整个 Agent 研究图谱中的关键方向之一。
 
 ## 目录结构
 
 ```
 luo_junyu__awesome_agent_papers/
-├── README.md                         # 项目主文档 (核心内容)
-│   ├── Overview                      # 项目概述与综述论文链接
-│   ├── Statistics & Trends           # 统计数据与发展趋势
-│   ├── Key Categories               # 九大分类说明
-│   ├── Resource List                 # 分类论文详细列表
-│   │   ├── Agent Collaboration       # 智能体协作
-│   │   ├── Agent Construction        # 智能体构建
-│   │   ├── Agent Evolution           # 智能体进化
-│   │   ├── Applications             # 应用研究
-│   │   ├── Datasets & Benchmarks     # 数据集与基准
-│   │   ├── Ethics                   # 伦理研究
-│   │   ├── Security                 # 安全研究
-│   │   ├── Survey                   # 综述论文
-│   │   └── Tools                    # 工具研究
-│   └── Contributing                 # 贡献指南
-├── figs/                             # 图表资源
-│   ├── fig-overview-agent-survey.png # 智能体研究全景概览图
-│   ├── wordcloud.png                # 关键词词云图
-│   └── year_distribution.png        # 论文发表年份分布图
+├── README.md                 # 主文档（论文列表与分类）
+│   ├── Overview              # 项目概述与统计
+│   ├── Key Categories        # 七大分类说明
+│   ├── Agent Collaboration   # 多 Agent 协作论文 (30+ 篇)
+│   │   ├── 2023: AutoGen, Multi-Agent Debate
+│   │   ├── 2024: MetaGPT, ChatDev, ReConcile, AgentVerse
+│   │   └── 2025: Chain-of-Agents, C2C, Thought Communication
+│   ├── Agent Construction    # Agent 构建论文 (30+ 篇)
+│   │   ├── 架构设计: UMM, SPeCtrum
+│   │   ├── 记忆系统: A-MEM, CAIM, Memory-R1
+│   │   └── 推理优化: BudgetThinker, ATLaS
+│   ├── Agent Evolution       # Agent 进化论文
+│   │   ├── 自我改进: Agents of Change
+│   │   ├── 拓扑优化: Adaptive Graph Pruning
+│   │   └── 反思强化: DPSDP, MUA-RL
+│   ├── Tools                 # 工具集成论文
+│   ├── Security              # 安全研究论文
+│   ├── Datasets & Benchmarks # 基准与数据集
+│   ├── Applications          # 应用案例论文
+│   ├── Ethics                # 伦理研究论文
+│   └── Survey                # 综述论文集合
+├── figs/                     # 概览图与统计图表
+│   ├── fig-overview-agent-survey.png  # Agent 研究全景图
+│   ├── wordcloud.png                  # 关键词词云
+│   └── year_distribution.png          # 年份分布图
+└── .gitignore
 ```
-
-注: 本项目为文献索引项目,核心内容集中在 README.md 中的结构化论文列表。
 
 ## 核心模块分析
 
-### 1. 智能体构建 (Agent Construction)
+### 1. Agent Collaboration 分类
 
-收集了关于 LLM 智能体构建方法论和系统架构的核心研究论文。涵盖智能体的规划模块设计 (任务分解、路径规划)、记忆系统 (短期记忆、长期记忆、工作记忆)、工具调用接口 (API 集成、代码执行) 和行动执行器的构建方法。这些论文从系统工程角度回答了"如何设计和实现一个功能完整的 AI 智能体"这一基础问题,是智能体开发的入门必读。
+该分类收录了 30+ 篇多 Agent 协作相关的论文，是仓库中最大的分类之一。涵盖了经典框架（MetaGPT、AutoGen、ChatDev、AgentVerse）和最新进展（Chain of Agents、Cache-to-Cache、Thought Communication）。按时间线来看，2023 年主要关注基础多 Agent 框架，2024 年聚焦于协作策略优化（辩论、投票、共识），2025 年则出现了语义通信（C2C 直接传递 KV-cache）、思想通信（Thought Communication）等突破性工作。这些论文展示了多 Agent 协作从简单的对话交互向深层认知协同演进的趋势。
 
-### 2. 智能体协作 (Agent Collaboration)
+### 2. Agent Construction 分类
 
-聚焦多智能体交互、协作与竞争的前沿研究。代表性工作包括: Foam-Agent (CFD 工作流自动化的多智能体框架)、MAST (多智能体失败分类法与 LLM-as-Judge 评估管线)、MultiAgentBench (LLM 多智能体协作竞争基准评估)、AgentRxiv (协作自主研究预印本服务器框架) 等。这些论文深入探讨了多智能体系统中的通信协议、任务分配策略、冲突解决机制和协调模式。
+Agent 构建分类覆盖了 LLM Agent 的架构设计方法论。从 2023 年的基础框架到 2025 年的 Unified Mind Model（UMM），展示了 Agent 架构从"LLM + 工具调用"向"认知架构"演进的路径。关键论文包括 ATLaS（通过学习关键步骤进行 Agent 微调）、A-MEM（基于 Zettelkasten 的 Agent 记忆系统）、BudgetThinker（预算感知推理）等。这些工作直接关联 Self-Evolve 的 Agent 自适应学习研究方向。
 
-### 3. 智能体进化 (Agent Evolution)
+### 3. Agent Evolution 分类
 
-关注智能体的自我改进和持续学习能力,是本项目与 Self-Evolve 项目关联最紧密的分类。核心工作包括 Multiagent Finetuning (通过多智能体生成的多样化推理链进行微调,保留推理多样性以实现更好的自我改进)、MUA-RL (将 LLM 模拟用户集成到强化学习循环中实现工具使用的动态多轮交互学习) 等。这些论文探索了智能体如何通过经验积累、反馈吸收和策略调整来持续提升性能。
+这是与 Self-Evolve 最直接相关的分类。收录了 Agents of Change（自进化 Agent 的战略规划）、Memory-R1（通过强化学习增强 Agent 记忆管理）、Adaptive Graph Pruning（自适应多 Agent 拓扑优化）等前沿论文。这些研究探索了 Agent 如何通过经验积累、自我反思和环境反馈来持续改进自身能力，是 Self-Evolve 项目核心研究目标的理论基础。值得特别关注的是，该分类中的论文普遍采用了强化学习（RL）作为 Agent 进化的核心机制。
 
-### 4. 工具、安全与评估 (Tools, Security, Benchmarks)
+### 4. Tools、Security 与 Benchmarks 分类
 
-工具分类研究外部工具和 API 与 LLM 智能体的集成方法,包括工具选择、组合和错误恢复策略。安全分类关注 LLM 智能体系统的安全威胁 (提示注入、数据泄露、权限滥用) 和防护措施。基准分类提供评估智能体能力的标准化框架和数据集,如 MultiAgentBench 和各类单智能体评估基准。伦理分类则探讨智能体部署的道德和社会影响。
+工具分类收集了 Agent 与外部工具/API 集成的相关研究；安全分类关注 Agent 系统的安全威胁与防护机制；基准测试分类提供了评估 Agent 能力的标准化方法。这三个分类共同构成了 Agent 从研究到落地的工程化基础设施。安全分类中特别值得关注的是针对多 Agent 系统的攻击与防御研究，这对 Self-Evolve 的安全设计有直接参考价值。
+
+### 5. Applications 与 Survey 分类
+
+应用分类展示了 Agent 在软件开发（ChatDev）、科学研究（Coscientist）、金融交易（TradingAgents）、医学决策（MDAgents）等领域的实际落地案例。综述分类包含了多篇 Agent 领域的系统性综述，为本项目自身也提供了定位参考。从论文年份分布来看，2023 年是 Agent 研究爆发元年，2024 年进入框架完善期，2025 年则出现了向自我进化、认知架构等深层问题探索的趋势。
+
+### 6. 关键论文深度解读
+
+仓库中有多篇论文与 Self-Evolve 高度相关，值得深入分析。**Memory-R1** 提出了一种双 Agent 强化学习框架，一个 Agent 负责记忆管理决策，另一个负责任务执行，通过 RL 训练 Agent 主动决定何时存储、检索和遗忘信息，为 Agent 的经验积累机制提供了新思路。**Agents of Change** 将 LLM Agent 放入策略博弈环境（Catan 游戏）中，通过多 Agent 架构实现自我改进，展示了 Agent 在竞争环境中自主进化的可能性。**Adaptive Graph Pruning** 则提出了一种任务自适应的多 Agent 框架，通过两阶段策略联合优化 Agent 数量和通信拓扑，为多 Agent 系统的架构自动优化提供了方法论。
 
 ## 技术亮点
 
-1. **九大分类体系**: 将 LLM 智能体研究系统化划分为构建、协作、进化、工具、安全、基准、应用、伦理和综述九大类别,提供了清晰的知识导航结构和学科全景图
-2. **配属权威综述论文**: 不仅仅是一个论文索引列表,还附带了完整的综述论文 (arXiv:2503.21460),深入分析了各研究方向之间的内在联系和发展趋势
-3. **前沿研究覆盖**: 收录了 2025 年最新的顶级会议论文 (ICML, ACL, NAACL 等) 和 arXiv 预印本,保持与领域最前沿同步更新
-4. **年份分布与趋势分析**: 通过年份分布图清晰展示了 2023 年以来 LLM 智能体研究的爆发式增长态势,帮助研究者理解领域发展脉络
-5. **社区驱动更新**: 欢迎通过 PR 贡献新论文,采用 Markdown 格式便于维护和版本追踪,确保内容的持续更新和社区参与
-
-## 适用人群
-
-- 从事 LLM 智能体研究的研究者和博士生,需要快速了解领域全貌
-- 构建 AI 智能体系统的工程师,需要获取最新的架构设计和方法论
-- 关注 AI 安全和伦理的研究者,需要了解智能体系统的安全威胁模型
-- 产品经理和技术决策者,需要评估智能体技术的发展趋势和应用潜力
+1. **系统化七维分类框架**：建立了一个覆盖 Agent 全生命周期（构建-协作-进化-工具-安全-评估-应用）的七维分类体系，为碎片化的 Agent 研究提供了统一的知识组织框架，每个分类下按年份倒序排列，清晰展示研究方向的时间演进
+2. **配套综述论文**：不仅仅是论文列表，还产出了一篇高质量的综述论文（arXiv:2503.21460），将仓库内容升华为学术贡献，综述本身也成为 Agent 研究领域的引用参考
+3. **会议级别标注**：每篇论文标注了发表会议级别（ICML/NeurIPS/ICLR/ACL/Nature 等），帮助研究者快速区分工作的影响力和可信度，ArXiv 预印本与顶会论文清晰区分
+4. **高密度摘要**：每篇论文附有 1-2 句精炼摘要，快速传达核心贡献，避免了需要逐一点击原始链接的信息检索成本
+5. **跨分类关联**：部分论文在多个分类中具有相关性（如 MetaGPT 同时涉及协作与构建），分类体系的设计体现了对 Agent 研究不同维度间交叉关系的理解
+6. **前沿覆盖度高**：持续更新，收录了 2025 年最新发表的 Memory-R1、Cache-to-Cache、Thought Communication 等突破性工作，紧跟领域最前沿
 
 ## 与 Self-Evolve 关联
 
 | 维度 | 贡献 |
 |------|------|
-| 进化理论基石 | Agent Evolution 分类的论文集合为 Self-Evolve 的自我进化机制提供了坚实的学术理论支撑,包括多智能体微调、自我改进推理链和持续学习等前沿方法 |
-| 多智能体协作理论 | Agent Collaboration 分类中关于多智能体通信协议、任务分配和协调机制的研究,为 Self-Evolve 的多智能体进化系统设计提供理论指导 |
-| 安全防护参考 | Security 分类的安全威胁分析和防护措施研究,帮助 Self-Evolve 识别和防范自我进化过程中可能引入的安全风险和不可预测行为 |
-| 评估标准指引 | Benchmarks 分类提供的评估框架、数据集和方法论,为 Self-Evolve 设计进化效果的标准化评测方案提供参考基准 |
-| 领域全景导航 | 九大分类体系构成 LLM 智能体研究的全景地图,帮助 Self-Evolve 项目准确定位自身在学术生态中的位置,发现交叉创新机会和前沿研究方向 |
+| 理论基础 | Agent Evolution 分类为 Self-Evolve 提供了自我改进 Agent 的理论文献基础，包括 RL 驱动的进化机制和记忆增强方法 |
+| 多 Agent 协作 | Agent Collaboration 分类中的多 Agent 协议和编排策略为 Self-Evolve 的多 Agent 系统设计提供了丰富的参考方案 |
+| 记忆与学习 | Memory-R1、A-MEM、CAIM 等论文为 Self-Evolve 的 Agent 记忆管理和经验积累机制提供了具体的技术路径 |
+| 安全与评估 | Security 和 Benchmarks 分类为 Self-Evolve 的安全边界设计和能力评估提供了方法论和基准 |
+| 研究定位 | 该仓库的七维分类体系帮助 Self-Evolve 明确自身在 Agent 研究版图中的定位——聚焦于 Agent 进化维度 |
+| 社区跟踪 | 通过持续追踪该仓库的更新，Self-Evolve 可以保持对 Agent 进化领域最新进展的敏感度，避免重复研究 |
+| 工具集成 | Tools 分类中的 Agent 工具使用研究为 Self-Evolve 设计工具调用机制提供了理论和实验依据 |
+
+## 参考资料
+
+- [Awesome Agent Papers GitHub 仓库](https://github.com/luo-junyu/Awesome-Agent-Papers)
+- [配套综述论文: The Landscape of LLM Agent Research](https://arxiv.org/abs/2503.21460)
+- [MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework](https://arxiv.org/abs/2308.00352)
+- [AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation](https://arxiv.org/abs/2308.08155)
+- [Memory-R1: Enhancing LLM Agents to Manage and Utilize Memories via RL](https://arxiv.org/abs/2508.19828)
+- [A-MEM: Agentic Memory for LLM Agents](https://arxiv.org/abs/2502.12110)
+- [Awesome Agent Papers 统计图表](https://github.com/luo-junyu/Awesome-Agent-Papers/tree/main/figs)
+
+## GitNexus 深度架构分析
+
+- **源码位置**：`projects/repos/luo_junyu__awesome_agent_papers`
+- **分析命令**：`gitnexus analyze repos/luo_junyu__awesome_agent_papers --index-only --skip-git --name Awesome Agent Papers`

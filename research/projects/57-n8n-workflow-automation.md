@@ -78,7 +78,11 @@ n8n__n8n/
 
 n8n 内置了 400+ 集成节点，覆盖数据库、消息队列、云服务、社交媒体等各个领域。每个节点遵循统一的接口规范（INodeType），定义了属性描述、凭据管理和执行逻辑。节点开发工具（node-dev）和扩展 SDK 降低了自定义节点的开发门槛。这种插件化架构使 n8n 能够快速扩展集成能力，形成了强大的网络效应。
 
-### 5. 企业级基础设施 (`@n8n/`)
+### 5. Instance AI 助手 (`@n8n/instance-ai/`)
+
+Instance AI 是 n8n 内置的 AI 助手功能，在代码中称为"Instance AI"，为用户提供智能辅助。它可以在工作流编辑过程中提供上下文感知的建议，帮助用户选择合适的节点、配置参数和调试工作流。该模块有独立的架构文档和开发工作流（`pnpm dev:ai`），体现了 n8n 对 AI 能力的重视程度。
+
+### 6. 企业级基础设施 (`@n8n/`)
 
 n8n 提供了完善的企业级支持：配置管理（@n8n/config）实现了集中化的环境变量和配置项管理；权限系统（@n8n/permissions）支持细粒度的访问控制；依赖注入（@n8n/di）实现了 IoC 容器，确保模块间的松耦合；Task Runner 机制将节点执行隔离在独立进程中，Python Task Runner 更是扩展了 Python 代码节点的执行能力。
 
@@ -100,6 +104,8 @@ n8n 提供了完善的企业级支持：配置管理（@n8n/config）实现了�
 | 插件生态 | 400+ 集成节点的插件化架构展示了如何构建可扩展的工具生态 |
 | 自我改进 | Instance AI 助手展示了工作流平台如何集成 AI 能力实现自我优化和智能辅助 |
 | 测试体系 | Janitor 架构守护工具和 TCR（Test-Commit-Revert）工作流为大规模项目的质量保障提供了方法论 |
+| MCP 集成 | MCP 浏览器扩展展示了如何将工作流平台融入 AI 工具生态，为 Self-Evolve 的外部集成提供了模式参考 |
+| 安全设计 | 安全修复规范（不在公开仓库暴露漏洞细节）为 Self-Evolve 的安全开发生命周期提供了实践指南 |
 
 ## 参考资料
 
@@ -108,6 +114,8 @@ n8n 提供了完善的企业级支持：配置管理（@n8n/config）实现了�
 - [n8n AI & LangChain 指南](https://docs.n8n.io/advanced-ai/)
 - [n8n 社区模板](https://n8n.io/workflows)
 - [n8n 集成列表](https://n8n.io/integrations)
+- [n8n 可持续使用许可证说明](https://docs.n8n.io/sustainable-use-license/)
+- [n8n 社区论坛](https://community.n8n.io)
 
 ## GitNexus 深度架构分析
 

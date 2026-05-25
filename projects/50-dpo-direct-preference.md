@@ -4,7 +4,7 @@
 
 | 字段 | 内容 |
 |------|------|
-| 仓库 | eric-mitchell/direct-preference-optimization (参考实现) |
+| 仓库 | eric-mitchell/direct-preference-optimization |
 | GitHub URL | https://github.com/eric-mitchell/direct-preference-optimization |
 | Stars | ~900 |
 | 语言 | Python |

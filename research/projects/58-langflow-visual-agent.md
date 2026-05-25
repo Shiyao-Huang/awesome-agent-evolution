@@ -80,7 +80,11 @@ Langflow 的组件系统是其最强大的能力来源。内置了 100+ 组件�
 
 FastAPI 路由层提供了完整的 REST API，支持 Flow 的 CRUD 操作、执行触发、日志查询等。更重要的是，Langflow 可以将任何 Flow 部署为 MCP Server，使其成为其他 AI 客户端（如 Claude Desktop、Cursor）可直接调用的工具。这种"Flow as a Tool"的设计模式使得 Langflow 工作流可以被组合和嵌套，形成更复杂的自动化链路。API 版本化策略确保了向后兼容性。
 
-### 5. 自定义组件与扩展 (`src/backend/base/langflow/custom/`)
+### 5. 平台服务层 (`src/backend/base/langflow/`)
+
+langflow-base 包提供了完整的平台基础设施。FastAPI 路由层处理认证（Auth）、持久化（通过 Alembic 管理数据库迁移）、服务层业务逻辑。agentic 模块包含 Agent 的核心编排逻辑，graph 模块定义了 Flow 的数据结构。CLI 模块支持命令行启动和管理，memory.py 实现了会话和长期记忆管理。中间件层（middleware）处理请求拦截和错误处理，事件系统（events）支持异步通知和状态变更传播。
+
+### 6. 自定义组件与扩展 (`src/backend/base/langflow/custom/`)
 
 Langflow 支持用户通过 Python 代码编写自定义组件，在画布中直接使用。自定义组件遵循与内置组件相同的接口规范，可以使用 LangChain 的所有工具和集成。项目还提供了 LFX_DEV 环境变量支持动态组件加载，方便开发者调试和迭代。这种"可视化 + 代码"的双模态开发体验是 Langflow 区别于纯无代码平台的核心竞争力。
 
@@ -102,6 +106,7 @@ Langflow 支持用户通过 Python 代码编写自定义组件，在画布中直
 | MCP 生态 | MCP Server 部署模式展示了如何将 Agent 工作流标准化为可复用工具，对 Self-Evolve 的工具生态建设有启发 |
 | 自我改进 | 组件接口冻结和 `legacy` 标记机制展示了如何在系统进化过程中保持向后兼容 |
 | 可观测性 | Playground 逐步调试和日志流式输出为 Agent 执行过程的可观测性提供了 UI 层面的最佳实践 |
+| 自定义扩展 | 自定义组件机制展示了如何平衡可视化易用性与代码灵活性，为 Self-Evolve 的扩展设计提供了参考 |
 
 ## 参考资料
 
@@ -110,6 +115,8 @@ Langflow 支持用户通过 Python 代码编写自定义组件，在画布中直
 - [Langflow 文档](https://docs.langflow.org)
 - [Langflow Desktop 下载](https://langflow.org/desktop)
 - [LangChain 官方文档](https://python.langchain.com/)
+- [Langflow 设计哲学文档](https://github.com/langflow-ai/langflow/blob/main/docs/agents/PHILOSOPHY.md)
+- [Langflow 架构文档](https://github.com/langflow-ai/langflow/blob/main/docs/agents/ARCHITECTURE.md)
 
 ## GitNexus 深度架构分析
 
