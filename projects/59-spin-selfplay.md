@@ -1,26 +1,27 @@
-# SPIN - 自我对弈微调方法
+# SPIN - 自博弈微调
 - **仓库**: uclaml/SPIN
 - **GitHub**: https://github.com/uclaml/SPIN
-- **Stars**: ~1.2K
+- **Stars**: 800
 - **语言**: Python
 - **许可**: Apache-2.0
-- **最近活跃**: 2024-09
-- **模式**: 进化/搜索循环
+- **最近活跃**: 2024-08
+- **模式**: 进化/搜索循环 → 训练/数据循环
 
 ## 概述
-UCLA提出的Self-Play Fine-Tuning(SPIN)方法，利用模型与自身先前版本的对弈来实现对齐。SPIN无需额外的人类偏好数据或奖励模型，通过让当前模型区分自己生成的响应和人类标注数据来实现自我改进。
+UCLA 提出的 Self-Play Fine-Tuning 方法，让 LLM 与自己前一轮的生成进行博弈，无需额外人类标注数据即可实现对齐，理论上可从弱到强持续改进。
 
 ## 核心特性
-- 无需人类偏好数据和奖励模型的对齐方法
-- 基于自我对弈的训练范式，模型与前版本进行博弈
-- 理论上证明了SPIN等价于KL正则化的RLHF目标函数
+- 自博弈（Self-Play）微调范式
+- 无需人类偏好数据
+- 弱到强（Weak-to-Strong）改进路径
+- 理论收敛性保证
 
 ## 技术栈
-- Python, PyTorch, DeepSpeed, Hugging Face Transformers
+- Python, PyTorch, Transformers, DeepSpeed
 
 ## 与 Self Evolve 的关联
-SPIN展示了自我对弈作为自我进化机制的强大潜力，通过模型与自身历史版本的博弈实现持续进化，为不依赖外部反馈的纯内生自我进化提供了理论保障和实践方案。
+SPIN 的自博弈机制是自我进化的另一种范式：通过与自身历史版本对抗来驱动改进，类似 AlphaGo 的自我对弈训练。
 
 ## 分类
-- **类别**: 自我对齐/自我奖励
-- **标签**: self-play, alignment, dpo, fine-tuning, spin, no-reward-model
+- **类别**: 自博弈对齐
+- **标签**: spin, self-play, alignment, weak-to-strong

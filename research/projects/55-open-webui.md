@@ -21,8 +21,7 @@ Open WebUI 的核心设计哲学是"功能全面、开箱即用、完全离线"�
 ```
 open-webui/
 ├── backend/                 ★ Python FastAPI 后端
-│   ├── open_webui/          后端核心模块
-│   └── dev.sh               开发启动脚本
+│   └── open_webui/          后端核心模块
 ├── src/                     ★ SvelteKit 前端源码
 │   ├── lib/                 前端核心库与组件
 │   ├── routes/              页面路由
@@ -46,7 +45,7 @@ open-webui/
 原生支持 Ollama 和 OpenAI 兼容 API 两大 LLM 运行器，可无缝连接 LMStudio、GroqCloud、Mistral、OpenRouter 等第三方服务。支持多模型并行对话，用户可在同一会话中同时调用不同模型并对比输出。Model Builder 功能允许用户通过 Web UI 直接创建和导入自定义 Ollama 模型。
 
 ### 2. RAG 与知识管理
-内置完整的 RAG 流水线，支持 ChromaDB、PGVector、Qdrant、Milvus、Elasticsearch、Pinecone 等 9 种向量数据库。文档可通过拖拽直接加载到对话或文档库中，使用 `#` 命令触发检索。支持 Tika、Docling、Document Intelligence、Mistral OCR 等多种内容提取引擎。
+内置完整的 RAG 流水线，支持 ChromaDB、PGVector、Qdrant、Milvus、Elasticsearch、Pinecone 等 9 种向量数据库。文档可通过拖拽直接加载到对话或文档库中，使用 # 命令触发检索。支持 Tika、Docling、Document Intelligence、Mistral OCR 等多种内容提取引擎。
 
 ### 3. Pipelines 插件框架
 Open WebUI Pipelines 是一个强大的插件框架，允许用户将自定义 Python 逻辑集成到平台中。通过 Pipelines 可以实现函数调用、速率限制、使用监控（Langfuse 集成）、实时翻译、消息过滤等扩展功能。Pipelines 实例作为独立的 OpenAI 兼容服务运行。

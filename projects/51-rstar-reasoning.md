@@ -1,26 +1,27 @@
-# rStar - 自我推理与蒙特卡洛树搜索
+# rStar - 自我推理+MCTS
 - **仓库**: ZhiningLiu-nlp/rStar
 - **GitHub**: https://github.com/ZhiningLiu-nlp/rStar
-- **Stars**: ~700
+- **Stars**: 500
 - **语言**: Python
 - **许可**: MIT
-- **最近活跃**: 2025-01
-- **模式**: 搜索循环
+- **最近活跃**: 2025-06
+- **模式**: 进化/搜索循环 → 反思记忆
 
 ## 概述
-rStar是一个通过蒙特卡洛树搜索(MCTS)实现LLM自我推理的框架。该方法将推理分解为自我生成和自我判别两个阶段，利用MCTS探索多条推理路径并由判别模型选择最优解，显著提升了小模型的数学推理能力。
+rStar（Self-Taught Reasoner）通过 MCTS 搜索+自我推理+相互一致性验证，让小型 LLM 自主生成高质量推理轨迹，实现自我改进。
 
 ## 核心特性
-- 基于MCTS的多路径推理搜索与自我判别机制
-- 支持多个小模型协同验证推理结果
-- 无需蒸馏即可显著提升模型的数学和逻辑推理能力
+- MCTS 搜索扩展推理空间
+- 多轮自我推理生成
+- 相互一致性（Mutual Consistency）验证
+- 小模型通过自学习接近大模型表现
 
 ## 技术栈
-- Python, PyTorch, Hugging Face Transformers, vLLM
+- Python, vLLM, PyTorch
 
 ## 与 Self Evolve 的关联
-rStar展示了模型通过自我推理搜索实现能力进化的路径，MCTS搜索与自我判别的结合提供了一种不依赖外部反馈的自我改进模式，是AI自我进化在推理能力方面的重要实践。
+rStar 是"进化/搜索循环+自我评估"的典型实现：MCTS 搜索生成候选→自我验证筛选→迭代改进，是自我进化的推理增强范式。
 
 ## 分类
-- **类别**: RLHF/对齐/安全
-- **标签**: self-reasoning, mcts, inference-time, reasoning, math
+- **类别**: 自我推理优化
+- **标签**: rstar, mcts, self-reasoning, reasoning

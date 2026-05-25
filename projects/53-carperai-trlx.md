@@ -1,26 +1,27 @@
-# CarperAI trlx - RLHF训练库
+# trlx - CarperAI RLHF 训练库
 - **仓库**: CarperAI/trlx
 - **GitHub**: https://github.com/CarperAI/trlx
-- **Stars**: ~4.5K
+- **Stars**: 3800
 - **语言**: Python
 - **许可**: MIT
-- **最近活跃**: 2024-08
+- **最近活跃**: 2024-09
 - **模式**: 训练/数据循环
 
 ## 概述
-trlx是CarperAI开发的RLHF训练库，提供从零开始的强化学习人类反馈训练能力。该库支持多种RL算法包括PPO、ILQL等，并集成了DeepSpeed和Accelerate进行分布式训练，是早期RLHF研究的重要工具之一。
+CarperAI（Stability AI 旗下）开发的 RLHF 训练库，提供 PPO/ILQL 等算法的实现，专注于大语言模型的强化学习对齐训练，是早期开源 RLHF 的先驱项目。
 
 ## 核心特性
-- 支持PPO、ILQL等多种RLHF训练算法
-- 集成DeepSpeed和Accelerate的分布式训练支持
-- 提供从奖励模型训练到策略优化的完整流水线
+- PPO/ILQL/Nuclear-norm 等算法
+- 支持奖励模型训练和 RL 微调
+- DeepSpeed + Accelerate 分布式后端
+- 与 Hugging Face 集成
 
 ## 技术栈
-- Python, PyTorch, DeepSpeed, Hugging Face Transformers, Accelerate
+- Python, PyTorch, DeepSpeed, Transformers
 
 ## 与 Self Evolve 的关联
-trlx为RLHF训练提供了早期的完整工具链，其设计理念影响了后续多个RLHF框架的开发，为基于人类反馈的模型自我进化训练奠定了实践基础。
+trlx 是早期探索"LLM+RL"自我改进训练的开源工具，为后续 RLHF 生态的发展奠定了基础。
 
 ## 分类
-- **类别**: RLHF/对齐/安全
-- **标签**: rlhf, ppo, ilql, training, reinforcement-learning, alignment
+- **类别**: RLHF 训练库
+- **标签**: trlx, rlhf, ppo, carperai

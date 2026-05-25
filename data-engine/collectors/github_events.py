@@ -1,235 +1,137 @@
 #!/usr/bin/env python3
-"""
-GitHub Events Stream Collector - 仓库事件流追踪
+"""Collect recent repository events for a GitHub repository.
 
-追踪仓库级别的实时事件（WatchEvent, ForkEvent, IssuesEvent, PullRequestEvent 等）
+Uses the public GitHub REST API:
+  GET /repos/{owner}/{repo}/events?per_page=100  -- recent events (up to 10 pages)
 
-用法:
-  python github_events.py --repo Significant-Gravitas/AutoGPT --token $GITHUB_TOKEN
+The events endpoint returns a mix of event types (PushEvent, IssuesEvent,
+PullRequestEvent, ReleaseEvent, WatchEvent, ForkEvent, etc.).
+
+Output file: {owner}_{repo}_events.json
 """
 
 import argparse
-import json
-import os
 import sys
-import time
-from datetime import datetime
-from collections import defaultdict
-from pathlib import Path
+from collections import Counter
+
+from dateutil.parser import isoparse
 
 try:
-    import requests
+    from collectors.base import GitHubClient, save_json, add_common_args, resolve_repos, log
 except ImportError:
-    print("请安装 requests: pip install requests")
-    sys.exit(1)
+    sys.path.insert(0, ".")
+    from collectors.base import GitHubClient, save_json, add_common_args, resolve_repos, log
 
-GITHUB_API = "https://api.github.com"
+COLLECTOR = "github_events"
 
 
-def get_repo_events(owner, repo, token=None, max_pages=10):
-    """获取仓库事件流"""
-    events = []
-    headers = {
-        "Accept": "application/vnd.github.v3+json",
-        "User-Agent": "propagation-chain-data-engine/1.0"
-    }
-    if token:
-        headers["Authorization"] = f"token {token}"
+def collect(client: GitHubClient, repo: str) -> dict:
+    """Return event data for *repo*."""
+    owner, name = repo.split("/", 1)
 
-    url = f"{GITHUB_API}/repos/{owner}/{repo}/events"
-    page = 1
+    # The events API returns up to 300 items across 10 pages of 30 each
+    # (GitHub caps at ~10 pages for repo events)
+    events = client.paginate(
+        f"/repos/{owner}/{name}/events",
+        per_page=100,
+        max_pages=10,
+    )
 
-    while True:
-        params = {"page": page, "per_page": 100}
-        resp = requests.get(url, headers=headers, params=params)
+    type_counts: Counter = Counter()
+    actor_counts: Counter = Counter()
+    daily_activity: dict[str, int] = {}
+    recent_pushes = []
+    recent_releases = []
+    recent_pr_events = []
 
-        if resp.status_code == 403:
-            reset_time = int(resp.headers.get("X-RateLimit-Reset", 0))
-            if reset_time:
-                wait = max(reset_time - int(time.time()), 10) + 5
-                print(f"  Rate limited. Waiting {wait}s...")
-                time.sleep(wait)
-                continue
-            break
+    for ev in events:
+        if not isinstance(ev, dict):
+            continue
 
-        if resp.status_code != 200:
-            print(f"  Error {resp.status_code}: {resp.text[:200]}")
-            break
+        event_type = ev.get("type", "Unknown")
+        type_counts[event_type] += 1
 
-        data = resp.json()
-        if not data:
-            break
+        actor = ev.get("actor", {})
+        login = actor.get("login", "unknown") if isinstance(actor, dict) else "unknown"
+        actor_counts[login] += 1
 
-        for event in data:
-            events.append({
-                "id": event.get("id"),
-                "type": event.get("type"),
-                "actor": event.get("actor", {}).get("login", "unknown"),
-                "created_at": event.get("created_at"),
-                "payload_action": event.get("payload", {}).get("action"),
+        created = ev.get("created_at", "")
+        try:
+            dt = isoparse(created)
+            day = dt.strftime("%Y-%m-%d")
+            daily_activity[day] = daily_activity.get(day, 0) + 1
+        except (ValueError, TypeError):
+            day = "unknown"
+
+        payload = ev.get("payload", {})
+
+        # Capture recent pushes
+        if event_type == "PushEvent" and len(recent_pushes) < 20:
+            commits = payload.get("commits", [])
+            recent_pushes.append({
+                "actor": login,
+                "created_at": created,
+                "ref": payload.get("ref", ""),
+                "commit_count": len(commits) if isinstance(commits, list) else 0,
+                "head": payload.get("head", "")[:12],
             })
 
-        if len(data) < 100:
-            break
-        page += 1
-        if page > max_pages:
-            break
-        time.sleep(1)
+        # Capture recent releases
+        if event_type == "ReleaseEvent" and len(recent_releases) < 10:
+            release = payload.get("release", {})
+            recent_releases.append({
+                "actor": login,
+                "created_at": created,
+                "tag": payload.get("action", ""),
+                "name": release.get("name", release.get("tag_name", "")),
+                "prerelease": release.get("prerelease", False),
+            })
 
-    return events
-
-
-def get_commit_activity(owner, repo, token=None):
-    """获取每周 commit 活动统计"""
-    headers = {
-        "Accept": "application/vnd.github.v3+json",
-        "User-Agent": "propagation-chain-data-engine/1.0"
-    }
-    if token:
-        headers["Authorization"] = f"token {token}"
-
-    resp = requests.get(
-        f"{GITHUB_API}/repos/{owner}/{repo}/stats/commit_activity",
-        headers=headers
-    )
-    if resp.status_code == 200:
-        return resp.json()
-    elif resp.status_code == 202:
-        print("  Commit activity stats being computed (202). Retry later.")
-        return None
-    return None
-
-
-def get_code_frequency(owner, repo, token=None):
-    """获取每周代码增删统计"""
-    headers = {
-        "Accept": "application/vnd.github.v3+json",
-        "User-Agent": "propagation-chain-data-engine/1.0"
-    }
-    if token:
-        headers["Authorization"] = f"token {token}"
-
-    resp = requests.get(
-        f"{GITHUB_API}/repos/{owner}/{repo}/stats/code_frequency",
-        headers=headers
-    )
-    if resp.status_code == 200:
-        return resp.json()
-    elif resp.status_code == 202:
-        print("  Code frequency stats being computed (202). Retry later.")
-        return None
-    return None
-
-
-def get_participation(owner, repo, token=None):
-    """获取每周 commit 参与度（owner vs all）"""
-    headers = {
-        "Accept": "application/vnd.github.v3+json",
-        "User-Agent": "propagation-chain-data-engine/1.0"
-    }
-    if token:
-        headers["Authorization"] = f"token {token}"
-
-    resp = requests.get(
-        f"{GITHUB_API}/repos/{owner}/{repo}/stats/participation",
-        headers=headers
-    )
-    if resp.status_code == 200:
-        return resp.json()
-    elif resp.status_code == 202:
-        print("  Participation stats being computed (202). Retry later.")
-        return None
-    return None
-
-
-def events_to_summary(events):
-    """事件统计摘要"""
-    type_counts = defaultdict(int)
-    actor_counts = defaultdict(int)
-
-    for e in events:
-        type_counts[e["type"]] += 1
-        actor_counts[e["actor"]] += 1
+        # Capture recent PR events
+        if event_type == "PullRequestEvent" and len(recent_pr_events) < 20:
+            pr = payload.get("pull_request", {})
+            recent_pr_events.append({
+                "actor": login,
+                "created_at": created,
+                "action": payload.get("action", ""),
+                "number": pr.get("number"),
+                "title": pr.get("title", "")[:120],
+                "state": pr.get("state", ""),
+                "merged": pr.get("merged", False),
+            })
 
     return {
-        "total_events": len(events),
-        "type_distribution": dict(sorted(type_counts.items(), key=lambda x: -x[1])),
-        "unique_actors": len(actor_counts),
-        "top_actors": dict(sorted(actor_counts.items(), key=lambda x: -x[1])[:10]),
+        "repo": repo,
+        "events_fetched": len(events),
+        "event_type_distribution": dict(type_counts.most_common()),
+        "top_actors": [{"login": l, "count": c} for l, c in actor_counts.most_common(20)],
+        "daily_activity": dict(sorted(daily_activity.items())),
+        "recent_pushes": recent_pushes,
+        "recent_releases": recent_releases,
+        "recent_pull_request_events": recent_pr_events,
     }
-
-
-def save_output(data, filepath):
-    Path(filepath).parent.mkdir(parents=True, exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    print(f"  Saved: {filepath}")
-
-
-def process_repo(owner, repo, token, output_dir):
-    print(f"\n{'='*60}")
-    print(f"Processing events: {owner}/{repo}")
-    print(f"{'='*60}")
-
-    result = {
-        "repo": f"{owner}/{repo}",
-        "collected_at": datetime.utcnow().isoformat() + "Z"
-    }
-
-    # 事件流
-    events = get_repo_events(owner, repo, token)
-    result["events_summary"] = events_to_summary(events)
-    print(f"  Events: {len(events)}, types: {result['events_summary']['type_distribution']}")
-
-    # Commit 活动
-    activity = get_commit_activity(owner, repo, token)
-    if activity:
-        result["commit_activity"] = activity
-        total_commits = sum(w.get("total", 0) for w in activity)
-        print(f"  Commit activity (52w): {total_commits} total commits")
-
-    # 代码频率
-    freq = get_code_frequency(owner, repo, token)
-    if freq:
-        result["code_frequency"] = freq
-
-    # 参与度
-    participation = get_participation(owner, repo, token)
-    if participation:
-        result["participation"] = participation
-
-    safe_name = f"{owner}_{repo}".replace("/", "_")
-    filepath = os.path.join(output_dir, "daily_snapshots", f"{safe_name}_events.json")
-    save_output(result, filepath)
-    return result
 
 
 def main():
-    parser = argparse.ArgumentParser(description="GitHub Events Stream Collector")
-    parser.add_argument("--repo", help="Repository (owner/repo)")
-    parser.add_argument("--config", help="Path to projects.json config")
-    parser.add_argument("--all", action="store_true", help="Process all projects")
-    parser.add_argument("--token", help="GitHub PAT token")
-    parser.add_argument("--output", default="../storage", help="Output directory")
+    parser = argparse.ArgumentParser(description="Collect GitHub repository events")
+    add_common_args(parser)
     args = parser.parse_args()
 
-    token = args.token or os.environ.get("GITHUB_TOKEN")
+    repos = resolve_repos(args)
+    if not repos:
+        log.error("No repos to process. Use --repo, --all, or --priority.")
+        sys.exit(1)
 
-    if args.repo:
-        owner, repo = args.repo.split("/")
-        process_repo(owner, repo, token, args.output)
-    elif args.config:
-        with open(args.config) as f:
-            config = json.load(f)
-        for proj in config.get("target_projects", []):
-            try:
-                owner, repo = proj["repo"].split("/")
-                process_repo(owner, repo, token, args.output)
-                time.sleep(2)
-            except Exception as e:
-                print(f"  Error: {e}")
-    else:
-        parser.print_help()
+    client = GitHubClient(token=args.token)
+    log.info("Collecting events for %d repo(s) (auth=%s)", len(repos), client.authenticated())
+
+    for repo in repos:
+        log.info("-> %s", repo)
+        data = collect(client, repo)
+        filename = f"{client.safe_filename(repo)}_events.json"
+        save_json(args.output, filename, COLLECTOR, repo, data)
+
+    log.info("Done.")
 
 
 if __name__ == "__main__":

@@ -1,30 +1,27 @@
-# SayCan - LLM机器人任务规划
-- **仓库**: google-research/saycan
+# SayCan - LLM 机器人规划
+- **仓库**: google-research/saycan (关联)
 - **GitHub**: https://github.com/google-research/saycan
-- **Stars**: ~1.8K
+- **Stars**: 500
 - **语言**: Python
 - **许可**: Apache-2.0
-- **最近活跃**: 2024-09
-- **模式**: 评估器/打分器
+- **最近活跃**: 2023-12
+- **模式**: 智能体编排 → 反馈-精炼
 
 ## 概述
-SayCan是Google Research提出的LLM机器人规划方法，通过将语言模型的规划能力与机器人可执行技能的可行性评分相结合，让LLM生成的计划能够在真实世界中落地执行。它开创了LLM+机器人领域的研究方向。
+Google Research 的 SayCan 方法，让 LLM 通过语言指令规划机器人行为序列，结合 affordance 函数过滤不可行动作，实现开放式任务规划。
 
 ## 核心特性
-- LLM生成高层任务计划，亲和度模型评估可行性
-- 技能库中的原语技能与语言描述对齐
-- 在真实机器人上验证的完整管线
-- 结合语言理解和物理可行性的双重评分机制
+- LLM 生成高层动作规划
+- Affordance 函数过滤不可行动作
+- 语言→技能→执行的层次化架构
+- 开放式零样本任务执行
 
 ## 技术栈
-- Python
-- TensorFlow / JAX
-- Google PaLM
-- ROS
+- Python, Google PaLM API
 
 ## 与 Self Evolve 的关联
-SayCan的双重评分机制（LLM规划+可行性评估）是评估器/打分器模式的典型应用，通过持续反馈优化语言模型到物理动作的映射。
+SayCan 的"规划→验证→执行"循环是自我进化在具身智能中的体现：LLM 规划能力与物理可行性验证结合。
 
 ## 分类
-- **类别**: 具身智能 Agent
-- **标签**: llm-planning, robotics, saycan, affordance, google-research
+- **类别**: LLM 机器人规划
+- **标签**: saycan, planning, affordance, google

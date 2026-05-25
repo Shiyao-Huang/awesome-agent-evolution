@@ -1,26 +1,27 @@
-# RLHF Resources - 奖励模型研究综述资源
+# RLHF 资源索引
 - **仓库**: RLFolders/RLHFResources
 - **GitHub**: https://github.com/RLFolders/RLHFResources
-- **Stars**: ~1K
+- **Stars**: 400
 - **语言**: Markdown
-- **许可**: 无
-- **最近活跃**: 2024-06
-- **模式**: 训练/数据循环
+- **许可**: MIT
+- **最近活跃**: 2024-08
+- **模式**: 评估器/打分器
 
 ## 概述
-RLHFResources是一个系统整理RLHF和奖励模型相关研究论文、代码和资源的仓库。该资源涵盖了从奖励模型训练、偏好学习到对齐方法的完整研究脉络，为研究者提供了RLHF领域的全景知识图谱。
+RLHF 研究资源的综合索引，涵盖奖励建模、偏好学习、对齐训练等方向的论文、代码和数据集，是 RLHF 领域的入门参考。
 
 ## 核心特性
-- 系统分类整理RLHF领域的核心论文和代码仓库
-- 涵盖奖励建模、偏好学习、DPO、PPO等主要方法
-- 持续更新领域最新研究进展
+- 涵盖 RLHF 全流程资源
+- 奖励模型/偏好学习/对齐论文分类
+- 活跃社区更新
+- 涵盖最新 DPO/RLAIF 方向
 
 ## 技术栈
-- Markdown文档整理
+- Markdown 文档
 
 ## 与 Self Evolve 的关联
-系统化的知识资源是推动自我进化研究的重要基础，该仓库为研究者理解RLHF和奖励建模的完整技术栈提供了参考地图，有助于设计更完善的自我进化系统。
+为自我进化系统的研究者提供 RLHF/对齐领域的全景视图，帮助定位相关技术和方法。
 
 ## 分类
-- **类别**: RLHF/对齐/安全
-- **标签**: rlhf, reward-model, survey, resources, papers, alignment
+- **类别**: RLHF 研究索引
+- **标签**: rlhf, survey, resources, alignment

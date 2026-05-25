@@ -1,30 +1,27 @@
-# Voyager - LLM驱动的Minecraft具身智能体
+# Voyager - LLM 驱动 Minecraft 智能体
 - **仓库**: MineDojo/Voyager
 - **GitHub**: https://github.com/MineDojo/Voyager
-- **Stars**: ~5.6K
+- **Stars**: 5600
 - **语言**: Python
 - **许可**: MIT
 - **最近活跃**: 2025-06
-- **模式**: 进化/搜索循环
+- **模式**: 进化/搜索循环 → 反思记忆 → 反馈-精炼
 
 ## 概述
-Voyager是一个由大语言模型驱动的Minecraft具身智能体，通过自动课程、技能库和迭代式反馈循环实现开放式探索与终身学习。它是LLM在游戏环境中作为自主具身智能体的标志性项目。
+NVIDIA 研究院开发的 LLM 驱动 Minecraft 智能体，通过自动课程、技能库和迭代反馈三个组件实现开放世界中的终身学习，是具身智能+LLM 的里程碑项目。
 
 ## 核心特性
-- 自动课程生成：LLM根据当前状态自动提出探索任务
-- 技能库：将成功执行的技能存储为可复用代码，实现持续积累
-- 迭代式提示：通过环境反馈自动修正错误代码，形成进化循环
-- 终身学习：不断扩展技能库，支持开放式任务探索
+- 自动课程（Automatic Curriculum）驱动探索
+- 技能库（Skill Library）积累可复用技能
+- 迭代反馈（Iterative Refinement）修正行为
+- 终身学习无需人类干预
 
 ## 技术栈
-- Python
-- Minecraft API (MineDojo)
-- OpenAI GPT-4
-- JavaScript (技能代码生成)
+- Python, OpenAI API, MineDojo, Minecraft
 
 ## 与 Self Evolve 的关联
-Voyager的技能库机制和迭代式代码修正循环是AI自我进化的典型范式，智能体通过不断生成、验证和积累技能实现自我提升。
+Voyager 的"技能库+自动课程+迭代反馈"架构是自我进化的完整范式：观察→学习→积累→改进，技能库即进化记忆。
 
 ## 分类
-- **类别**: 具身智能 Agent
-- **标签**: embodied-ai, minecraft, llm-agent, lifelong-learning, skill-library
+- **类别**: LLM 具身智能体
+- **标签**: voyager, minecraft, embodied, lifelong-learning, skill-library

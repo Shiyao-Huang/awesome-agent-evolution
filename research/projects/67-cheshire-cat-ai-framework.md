@@ -1,128 +1,161 @@
-# Cheshire Cat AI: 模块化可插件扩展的 AI 聊天机器人框架
+# Cheshire Cat: 模块化 AI 聊天机器人微服务框架
 
 ## 基本信息
 
 | 字段 | 内容 |
 |------|------|
 | GitHub | https://github.com/cheshire-cat-ai/core |
-| Star | 3k+ |
-| 技术栈 | Python, FastAPI, LangChain, Qdrant, Docker, WebSocket |
-| 许可证 | GPL-3.0 License |
-| 开发者 | Piero Savastano (创始人) 及 Cheshire Cat AI 社区 |
+| Star | 3,500+ |
+| 技术栈 | Python, FastAPI, LangChain, Qdrant, WebSocket, Docker, Pydantic |
+| 许可证 | GPL-3.0 |
+| 开发者 | Piero Savastano 及 Cheshire Cat AI 社区 |
 
 ## 项目简介
 
-Cheshire Cat AI 是一个以 API 为核心的模块化 AI 聊天机器人框架，定位为"AI Agent 即微服务"。它为开发者提供了一整套构建自定义 AI 助手所需的工具：内置 RAG（检索增强生成）管道、基于 Qdrant 的向量存储、灵活的插件系统、事件回调机制、工具调用（Function Calling）支持，以及会话式表单（Conversational Forms）。整个框架 100% Docker 化，一条命令即可启动完整的 AI 后端服务。
+Cheshire Cat 是一个生产就绪的 AI Agent 微服务框架，以 API-First 的设计理念为现有应用添加可对话的 AI 助手层。项目的核心定位是"AI agent as a microservice"——通过 REST API 和 WebSocket 提供标准化的对话接口，开发者可以将 AI 助手能力嵌入到任何应用中，而无需关心 LLM 调用、记忆管理、工具集成等底层复杂性。框架内置了基于 Qdrant 的 RAG（检索增强生成）系统，支持多用户和细粒度权限控制，通过插件机制实现高度可扩展性。
 
-框架的核心设计理念是"可插件化扩展"。通过 Mad Hatter 插件系统，开发者可以用简单的 Python 装饰器注册 Hook（事件回调）、Tool（工具函数）和 Form（会话表单），无需修改核心代码即可深度定制 Agent 的行为。框架支持通过 LangChain 接入任意 LLM（OpenAI、Ollama、HuggingFace 等），同时提供 WebSocket 实时通信和完整的 REST API，方便嵌入到 Web 应用、移动端和物联网设备中。
+项目的技术架构围绕"疯帽子"（Mad Hatter）插件系统展开。所有 AI 助手的能力——包括对话策略、工具定义、记忆钩子、提示词模板——都可以通过插件扩展。每个插件可以注册 Hook（事件回调）来拦截和修改 Agent 行为的各个阶段，注册 Tool（函数调用工具）让 Agent 能够执行外部操作，注册 Form（对话式表单）实现目标导向的结构化对话。框架还提供了"兔子洞"（Rabbit Hole）机制，用于将文档和网页内容摄入到 RAG 知识库中。
 
-Cheshire Cat AI 还注重企业级特性，包括多用户支持、细粒度权限控制、与任意身份提供商（IdP）的兼容性。项目拥有活跃的 Discord 社区和完善的官方文档，在意大利和欧洲的 AI 开发者社区中具有较高影响力，是一个将学术研究与工程实践良好结合的开源项目。
+Cheshire Cat 的 Agent 系统采用了分层架构：`MainAgent` 是默认的对话 Agent，`MemoryAgent` 处理记忆检索和注入，`FormAgent` 管理结构化表单对话，`ProceduresAgent` 负责工具调度。`StrayCat` 是每用户会话的上下文对象，封装了用户信息、工作记忆、对话历史和 Agent 访问接口。整个系统 100% Docker 化，一条 `docker run` 命令即可启动完整服务，包含管理面板和 API 文档。
 
 ## 目录结构
 
 ```
 cheshire_cat_ai__core/
-├── core/                     # ★ 核心框架包
-│   ├── cat/                  # ★ 主模块（Cheshire Cat 核心）
-│   │   ├── agents/           # ★ Agent 实现
-│   │   │   ├── base_agent.py       # Agent 基类
-│   │   │   ├── main_agent.py       # 主 Agent 逻辑
-│   │   │   ├── memory_agent.py     # 记忆管理 Agent
-│   │   │   ├── form_agent.py       # 表单 Agent
-│   │   │   └── procedures_agent.py # 流程 Agent
-│   │   ├── mad_hatter/       # ★ 插件系统（Mad Hatter）
-│   │   │   ├── decorators.py       # Hook/Tool/Form 装饰器
-│   │   │   ├── plugin.py           # 插件加载与管理
-│   │   │   ├── registry.py         # 插件注册表
-│   │   │   ├── core_plugin/        # 内置核心插件
-│   │   │   └── plugin_extractor.py # 插件提取器
-│   │   ├── routes/           # ★ REST API 路由
-│   │   │   ├── websocket/          # WebSocket 端点
-│   │   │   ├── llm.py             # LLM 配置 API
-│   │   │   ├── embedder.py        # Embedding 配置 API
-│   │   │   ├── memory/            # 记忆管理 API
-│   │   │   ├── plugins.py         # 插件管理 API
-│   │   │   ├── auth.py            # 认证授权 API
-│   │   │   └── users.py           # 用户管理 API
-│   │   ├── memory/           # ★ 记忆系统
-│   │   │   ├── working_memory.py       # 工作记忆（短期）
-│   │   │   ├── long_term_memory.py     # 长期记忆
-│   │   │   ├── vector_memory.py        # 向量记忆
-│   │   │   └── vector_memory_collection.py # 向量集合
-│   │   ├── looking_glass/    # ★ 推理引擎
-│   │   │   ├── cheshire_cat.py   # Cat 核心实例
-│   │   │   ├── stray_cat.py      # 用户会话 Cat
-│   │   │   ├── prompts.py        # Prompt 模板
-│   │   │   ├── output_parser.py  # 输出解析器
-│   │   │   └── white_rabbit.py   # 调度器
-│   │   ├── experimental/     # 实验性功能
-│   │   │   └── form/              # Conversational Forms
-│   │   ├── rabbit_hole.py    # ★ RAG 文档摄入管道
-│   │   ├── db/               # 数据库层
-│   │   ├── auth/             # 认证模块
-│   │   ├── convo/            # 对话管理
-│   │   ├── cache/            # 缓存层
-│   │   ├── main.py           # 应用入口
-│   │   └── startup.py        # 启动初始化
-│   ├── tests/                # 测试套件
-│   └── pyproject.toml        # Python 项目配置
-├── compose.yml               # ★ Docker Compose 编排
-├── ROADMAP.md                # 开发路线图
-├── CODE-OF-ETHICS.md         # 伦理准则
-└── CONTRIBUTING.md           # 贡献指南
+├── core/                       # ★ 核心框架
+│   ├── cat/                        # ★ 核心逻辑
+│   │   ├── main.py                     # ★ 框架入口
+│   │   ├── startup.py                  # 启动初始化
+│   │   ├── env.py                      # 环境配置
+│   │   ├── log.py                      # 日志
+│   │   ├── utils.py                    # 工具函数
+│   │   ├── rabbit_hole.py              # ★ 文档摄入（Rabbit Hole）
+│   │   ├── welcome.txt                 # 欢迎消息
+│   │   ├── agents/                     # ★ Agent 系统
+│   │   │   ├── base_agent.py               # Agent 基类
+│   │   │   ├── main_agent.py               # ★ 主对话 Agent
+│   │   │   ├── memory_agent.py             # 记忆 Agent
+│   │   │   ├── form_agent.py               # 表单 Agent
+│   │   │   └── procedures_agent.py         # 工具调度 Agent
+│   │   ├── mad_hatter/                # ★ 插件系统（Mad Hatter）
+│   │   │   ├── mad_hatter.py              # ★ 插件管理器
+│   │   │   ├── decorators.py              # ★ Hook/Tool/Form 装饰器
+│   │   │   ├── plugin.py                  # 插件定义
+│   │   │   ├── registry.py                # 插件注册表
+│   │   │   ├── plugin_extractor.py        # 插件包解压
+│   │   │   └── core_plugin/               # ★ 核心内置插件
+│   │   ├── looking_glass/             # ★ Agent 编排核心
+│   │   │   ├── cheshire_cat.py            # ★ Cheshire Cat 主类
+│   │   │   ├── stray_cat.py              # ★ 用户会话上下文
+│   │   │   ├── white_rabbit.py            # 白兔（定时任务）
+│   │   │   ├── callbacks.py               # 回调处理
+│   │   │   ├── output_parser.py           # 输出解析
+│   │   │   └── prompts.py                 # 提示词模板
+│   │   ├── memory/                    # ★ 记忆系统
+│   │   │   ├── working_memory.py          # ★ 工作记忆
+│   │   │   ├── long_term_memory.py        # ★ 长期记忆
+│   │   │   ├── vector_memory.py           # ★ 向量记忆（Qdrant）
+│   │   │   └── vector_memory_collection.py # 向量记忆集合
+│   │   ├── routes/                    # ★ API 路由
+│   │   │   ├── base.py                    # 基础路由
+│   │   │   ├── websocket/                 # ★ WebSocket 对话接口
+│   │   │   ├── embedder.py                # 嵌入模型配置
+│   │   │   ├── llm.py                     # LLM 配置
+│   │   │   ├── memory/                    # 记忆管理 API
+│   │   │   ├── plugins.py                 # 插件管理 API
+│   │   │   ├── settings.py                # 设置 API
+│   │   │   ├── upload.py                  # 文件上传（Rabbit Hole）
+│   │   │   ├── users.py                   # 用户管理
+│   │   │   └── auth.py                    # 认证路由
+│   │   ├── auth/                      # 认证系统
+│   │   ├── cache/                     # 缓存
+│   │   ├── convo/                     # 对话管理
+│   │   ├── data/                      # 数据管理
+│   │   ├── db/                        # 数据库
+│   │   ├── factory/                   # 工厂模式（LLM/Embedder 实例化）
+│   │   ├── experimental/              # 实验性功能
+│   │   │   └── form/                      # 对话式表单
+│   │   ├── plugins/                   # 运行时插件目录
+│   │   └── static/                    # 静态文件（管理面板）
+│   └── tests/                       # 测试套件
+│       ├── agents/
+│       ├── cache/
+│       ├── looking_glass/
+│       ├── mad_hatter/
+│       ├── memory/
+│       ├── mocks/
+│       └── routes/
+├── compose.yml                 # Docker Compose 配置
+├── README.md
+├── ROADMAP.md
+├── CODE-OF-ETHICS.md
+└── CONTRIBUTING.md
 ```
 
 ## 核心模块分析
 
-### 1. Mad Hatter 插件系统（mad_hatter/）
+### 1. Agent 分层系统 (`core/cat/agents/`)
 
-Mad Hatter 是 Cheshire Cat 的灵魂模块，实现了一个零侵入的插件架构。开发者只需使用 `@hook`、`@tool`、`@form` 三个装饰器即可扩展 Agent 能力：Hook 装饰器注册事件回调，拦截和修改 Agent 的 Prompt、回复、记忆检索等环节；Tool 装饰器注册 LLM 可调用的工具函数（Function Calling）；Form 装饰器创建会话式表单，引导用户逐步填写结构化数据。插件系统自动发现和加载插件目录下的 Python 模块，支持插件的动态安装、卸载和热更新。
+Cheshire Cat 的 Agent 系统采用分层架构，每层负责对话的不同方面。`base_agent.py` 定义了 Agent 基类，包含 LangChain Agent 的创建和执行逻辑。`MainAgent` 是默认的对话 Agent，负责理解用户意图、选择工具、生成回复。`MemoryAgent` 专门处理记忆检索——它根据用户输入从长期记忆（Qdrant 向量数据库）中检索相关上下文，并将其注入到 Agent 的提示词中。`FormAgent` 管理结构化表单对话，用于引导用户提供特定格式的信息（如订单表单、预约表单）。`ProceduresAgent` 负责工具调度，执行 Agent 选择的工具（函数调用）。这种分层设计使得每个 Agent 的职责清晰，便于独立测试和扩展。
 
-### 2. Agent 架构（agents/）
+### 2. Mad Hatter 插件系统 (`core/cat/mad_hatter/`)
 
-Cheshire Cat 采用分层 Agent 架构。`base_agent.py` 定义了 Agent 的抽象基类，包含 Prompt 构建、LLM 调用和回复生成的标准流程。`main_agent.py` 实现了主对话 Agent，负责处理用户输入并生成回复。`memory_agent.py` 专注于记忆的召回和管理，`form_agent.py` 处理会话式表单的状态流转，`procedures_agent.py` 管理预定义的流程执行。这种分层设计使每个 Agent 职责清晰，便于通过 Hook 在不同阶段注入自定义逻辑。
+Mad Hatter 是 Cheshire Cat 的核心扩展机制，名称源自《爱丽丝漫游仙境》中的"疯帽子"。插件系统提供三种扩展原语：**Hook**（事件回调）允许插件在 Agent 行为的特定阶段（如提示词构建前、记忆检索后、回复生成后）插入自定义逻辑；**Tool**（工具函数）让 Agent 获得执行外部操作的能力（如搜索、API 调用、数据库查询）；**Form**（对话式表单）实现目标导向的结构化对话。`decorators.py` 提供了 `@hook`、`@tool`、`@form` 装饰器，开发者只需用装饰器标注函数即可将其注册到框架中。`mad_hatter.py` 管理插件的生命周期——发现、加载、初始化和卸载。
 
-### 3. 记忆系统（memory/ + looking_glass/）
+### 3. 记忆系统 (`core/cat/memory/`)
 
-框架实现了完整的多层记忆架构：`working_memory.py` 维护当前对话的短期上下文，`long_term_memory.py` 通过向量数据库存储跨会话的长期记忆，`vector_memory.py` 基于 Qdrant 实现语义检索。`stray_cat.py` 为每个用户会话创建独立的 Cat 实例，隔离不同用户的记忆和状态。`cheshire_cat.py` 作为全局核心实例管理共享资源。White Rabbit 调度器负责协调各模块的执行顺序。
+Cheshire Cat 实现了三层记忆架构。`WorkingMemory` 是短期工作记忆，存储当前对话的临时状态（用户信息、活跃表单、对话变量等）。`LongTermMemory` 是长期记忆接口，管理对话历史和用户偏好的持久化存储。`VectorMemory` 是向量记忆层，基于 Qdrant 向量数据库实现语义检索——所有对话消息和摄入的文档都被转换为向量嵌入并存储，Agent 在回复时可以检索相关的历史记忆和知识。`VectorMemoryCollection` 封装了 Qdrant 的集合操作，支持按用户、按类型筛选记忆。
 
-### 4. Rabbit Hole RAG 管道（rabbit_hole.py）
+### 4. Rabbit Hole 文档摄入 (`core/cat/rabbit_hole.py`)
 
-Rabbit Hole 是 Cheshire Cat 的内置 RAG 管道，负责将外部文档摄入到向量数据库中。它支持 PDF、DOCX、TXT、CSV、网页等多种文档格式的自动解析和分块，通过配置的 Embedding 模型将文档块向量化后存入 Qdrant。在对话过程中，Agent 会自动检索相关的文档片段作为上下文补充。管道的每个环节（文档解析、分块策略、Embedding 模型、检索参数）都可通过 Hook 进行定制。
+Rabbit Hole（兔子洞）是 Cheshire Cat 的 RAG 文档摄入子系统，名称同样取自《爱丽丝漫游仙境》。它支持将 PDF、TXT、Markdown、网页等格式的文档摄入到知识库中。摄入流程包括：文件解析 -> 文本分块 -> 嵌入生成 -> 向量存储到 Qdrant。文档摄入过程深度集成了 Hook 系统，插件可以在文本分块、嵌入生成等阶段插入自定义逻辑（如自定义分块策略、元数据增强等）。用户可以通过 REST API 或管理面板上传文档，也可以通过 URL 直接摄入网页内容。
 
-### 5. API 层与多用户支持（routes/）
+### 5. API 与 WebSocket 接口 (`core/cat/routes/`)
 
-API 层基于 FastAPI 构建，提供完整的 REST API 和 WebSocket 端点。REST API 覆盖了 LLM 配置、Embedding 设置、插件管理、用户管理、记忆操作等所有管理功能。WebSocket 端点支持实时流式对话。认证模块实现了 JWT Token 认证和细粒度的权限控制，支持与外部身份提供商（LDAP、OAuth2 等）集成。多用户隔离确保不同用户的对话、记忆和配置相互独立。
+Cheshire Cat 提供了完整的 REST API 和 WebSocket 接口。WebSocket 路由（`routes/websocket/`）实现了实时双向对话，支持流式响应输出。REST API 覆盖了所有管理功能：LLM 和嵌入模型配置（`llm.py`、`embedder.py`）、记忆管理（`memory/`）、插件管理（`plugins.py`）、文件上传（`upload.py`）、用户管理（`users.py`）和设置（`settings.py`）。所有路由基于 FastAPI 构建，自动生成 OpenAPI 文档（`/docs`）。`StrayCat` 对象是 API 层的核心——每个 WebSocket 连接创建一个 StrayCat 实例，封装了用户会话的所有上下文。
+
+### 6. Looking Glass 编排核心 (`core/cat/looking_glass/`)
+
+Looking Glass（镜子屋）是 Cheshire Cat 的核心编排层。`cheshire_cat.py` 是框架的主类，初始化并协调所有子系统（Agent、记忆、插件、工厂）。`stray_cat.py` 定义了每用户会话上下文对象，提供了 Agent 交互的统一接口——包括发送消息、检索记忆、调用工具、管理对话状态等。`white_rabbit.py` 实现了定时任务调度（以《爱丽丝》中的白兔命名），支持定期执行维护任务。`prompts.py` 管理提示词模板，`callbacks.py` 处理 LangChain 的回调事件，`output_parser.py` 解析 Agent 的输出。
 
 ## 技术亮点
 
-1. **声明式插件扩展**：通过 `@hook`、`@tool`、`@form` 三个 Python 装饰器实现零侵入扩展，开发者无需理解核心架构即可深度定制 Agent 行为
-2. **内置完整 RAG 管道**：开箱即用的 Rabbit Hole 管道支持多格式文档摄入、自动分块、Qdrant 向量存储和语义检索，大幅降低 RAG 应用开发门槛
-3. **Conversational Forms 创新**：通过 `@form` 装饰器创建会话式表单，引导 LLM 以自然对话方式逐步收集结构化数据，将表单填写转化为愉快的聊天体验
-4. **Agent 即微服务**：以 API-First 设计构建，100% Docker 化部署，通过 REST/WebSocket 接口轻松嵌入到任何应用中作为 AI 后端
-5. **多层记忆架构**：短期工作记忆 + 向量长期记忆的双层设计，结合 Qdrant 的语义检索能力，实现跨会话的智能记忆召回
-6. **多用户与权限控制**：内置用户隔离、JWT 认证和细粒度权限管理，支持外部 IdP 集成，满足企业级部署需求
+1. **API-First 微服务架构**：以 REST API 和 WebSocket 为核心接口，任何应用都可通过 HTTP/WebSocket 接入 AI 助手能力，实现了"AI as a Service"的部署模式
+2. **Hook/Tool/Form 三原语插件系统**：三种互补的扩展原语覆盖了 Agent 定制的所有场景——行为拦截（Hook）、能力扩展（Tool）、结构化对话（Form）
+3. **三层记忆架构**：工作记忆 + 长期记忆 + 向量记忆的分层设计，既保证了对话的即时性，又实现了知识的持久化和语义检索
+4. **Rabbit Hole RAG 子系统**：开箱即用的文档摄入和检索增强生成，支持多种文档格式，深度集成了插件 Hook 机制
+5. **StrayCat 会话上下文**：每用户独立的会话对象，封装了完整的对话状态和 Agent 访问接口，天然支持多用户隔离
+6. **Alice in Wonderland 命名体系**：所有核心组件以《爱丽丝漫游仙境》角色命名（Cheshire Cat、Mad Hatter、Rabbit Hole、White Rabbit、Stray Cat），既有趣味性又增强了代码的可记忆性
+7. **100% Docker 化部署**：一条 `docker run` 命令启动完整服务，管理面板和 API 文档开箱即用
 
 ## 与 Self-Evolve 关联
 
 | 维度 | 贡献 |
 |------|------|
-| 插件化架构 | Mad Hatter 的装饰器驱动插件系统为自演化系统的能力扩展提供了模块化范式 |
-| Hook 事件系统 | 基于事件回调的 Hook 机制可用于自演化系统中的行为注入和流程控制 |
-| 记忆系统设计 | 多层记忆架构（短期 + 向量长期）为自演化 Agent 的经验积累和知识管理提供参考 |
-| RAG 管道设计 | Rabbit Hole 的可定制 RAG 管道为自演化系统获取外部知识提供了完整方案 |
-| Agent 即微服务 | API-First + Docker 化的部署模式，适合作为自演化系统的可组合 AI 服务组件 |
-| 会话式表单 | Conversational Forms 的设计理念可用于自演化系统与用户的交互式配置和引导 |
+| Agent 分层架构 | Cheshire Cat 的 MainAgent/MemoryAgent/FormAgent/ProceduresAgent 分层设计为 Self-Evolve 的 Agent 架构提供了经过验证的分层模式 |
+| 插件扩展机制 | Hook/Tool/Form 三原语系统展示了如何通过简洁的装饰器接口实现高度可扩展的 Agent 框架，对 Self-Evolve 的能力注册机制有直接启发 |
+| 记忆系统设计 | 三层记忆架构（工作/长期/向量）为 Self-Evolve 的进化历史存储和知识检索提供了成熟的设计模式 |
+| RAG 知识管理 | Rabbit Hole 文档摄入系统展示了如何将外部知识整合到 Agent 的工作流中，对 Self-Evolve 的上下文注入机制有参考价值 |
+| 微服务部署 | API-First 设计和 Docker 化部署为 Self-Evolve 作为微服务集成到现有系统提供了部署模式参考 |
+| 对话式表单 | Form 机制展示了如何通过结构化对话引导用户提供特定信息，对 Self-Evolve 的交互式进化流程设计有启发 |
 
 ## 参考资料
 
-- Cheshire Cat AI 官网：https://cheshirecat.ai
-- 官方文档：https://cheshire-cat-ai.github.io/docs/
-- 插件开发教程：https://cheshirecat.ai/write-your-first-plugin/
-- GitHub 仓库：https://github.com/cheshire-cat-ai/core
-- Discord 社区：https://discord.gg/bHX5sNFCYU
+- [Cheshire Cat AI 官方网站](https://cheshirecat.ai)
+- [Cheshire Cat GitHub 仓库](https://github.com/cheshire-cat-ai/core)
+- [Cheshire Cat 官方文档](https://cheshire-cat-ai.github.io/docs/)
+- [Cheshire Cat 插件开发教程](https://cheshirecat.ai/write-your-first-plugin/)
+- [Cheshire Cat Discord 社区](https://discord.gg/bHX5sNFCYU)
+- [Qdrant 向量数据库](https://qdrant.tech)
+- [LangChain 官方文档](https://python.langchain.com/)
 
 ## GitNexus 深度架构分析
 
 - **源码位置**：`projects/repos/cheshire_cat_ai__core`
 - **分析命令**：`gitnexus analyze repos/cheshire_cat_ai__core --index-only --skip-git --name CheshireCat`
+- **知识图谱规模**：待分析
+- **查询语句**：`mad_hatter plugin hook tool; stray_cat session context; vector_memory qdrant RAG; rabbit_hole document ingestion; main_agent langchain agent; form_agent structured conversation; white_rabbit scheduler`
+- **核心执行流程候选**：WebSocket 消息到达 -> `StrayCat` 会话上下文 -> `MainAgent` 执行 -> Hook 链触发（`mad_hatter`）-> `MemoryAgent` 检索 -> 提示词构建 -> LLM 调用 -> `ProceduresAgent` 工具执行 -> 响应流式返回；Rabbit Hole -> 文件上传 -> 解析分块 -> 嵌入生成 -> Qdrant 存储
+- **关键符号/文件**：`core/cat/looking_glass/cheshire_cat.py`（主类）、`core/cat/looking_glass/stray_cat.py`（会话上下文）、`core/cat/mad_hatter/mad_hatter.py`（插件管理器）、`core/cat/mad_hatter/decorators.py`（装饰器）、`core/cat/agents/main_agent.py`（主 Agent）、`core/cat/memory/vector_memory.py`（向量记忆）、`core/cat/rabbit_hole.py`（文档摄入）、`core/cat/routes/websocket/`（WebSocket 接口）
+- **调用关系上下文**：API/WebSocket 请求 -> StrayCat 上下文创建 -> Mad Hatter 加载插件 -> Agent 分层执行（MainAgent -> MemoryAgent -> ProceduresAgent）-> Hook 链拦截 -> LLM 调用 -> Tool 执行 -> 记忆更新 -> 响应返回；Rabbit Hole -> 文档解析 -> 分块 -> 嵌入 -> Qdrant 写入
+- **架构结论**：该图谱结果用于把报告中的"Agent 编排 / 插件系统 / 记忆架构 / RAG 摄入 / 微服务部署"定位到具体符号、文件和流程

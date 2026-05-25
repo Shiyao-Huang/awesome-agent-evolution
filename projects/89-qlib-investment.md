@@ -1,31 +1,27 @@
-# QLib - AI投资科学平台
+# QLib - AI 投资科学平台
 - **仓库**: microsoft/QLib
 - **GitHub**: https://github.com/microsoft/QLib
-- **Stars**: ~16K
-- **语言**: Python / C++
+- **Stars**: 16000
+- **语言**: Python
 - **许可**: MIT
 - **最近活跃**: 2026-05
-- **模式**: 训练/数据循环
+- **模式**: 进化/搜索循环 → 评估器/打分器
 
 ## 概述
-QLib是微软亚洲研究院推出的AI量化投资平台，涵盖了从数据获取、因子挖掘、模型训练到回测分析的全流程。它提供了丰富的预置模型（Alpha因子、树模型、深度学习等）和标准化回测框架。
+微软的 AI 量化投资平台，提供从数据处理到模型训练到回测分析的完整工具链，支持 Alpha 因子挖掘和自动化策略优化。
 
 ## 核心特性
-- 完整的量化投资全流程框架（数据-因子-模型-回测）
-- 丰富的预置AI模型（LightGBM、Transformer、TabNet等）
-- 自动化Alpha因子挖掘引擎
-- 高性能C++数据处理引擎和标准回测框架
+- Alpha 因子自动挖掘
+- 丰富的模型库（LightGBM, LSTM, Transformer 等）
+- 完整的回测和评估框架
+- 自动化工作流（AutoQLib）
 
 ## 技术栈
-- Python
-- C++
-- PyTorch
-- LightGBM
-- Pandas / NumPy
+- Python, PyTorch, Pandas, NumPy
 
 ## 与 Self Evolve 的关联
-QLib的自动因子挖掘和模型训练循环体现了训练/数据循环模式，通过持续的市场反馈驱动策略迭代进化。
+QLib 的"因子挖掘→回测验证→策略优化"循环是自我进化在金融领域的实践：自动搜索→评估→改进。
 
 ## 分类
-- **类别**: AI4Science
-- **标签**: quantitative-investment, machine-learning, alpha-mining, microsoft, finance
+- **类别**: AI 量化投资
+- **标签**: qlib, investment, alpha, quantitative, microsoft

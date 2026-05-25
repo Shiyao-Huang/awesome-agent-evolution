@@ -1,261 +1,263 @@
 #!/usr/bin/env python3
 """
-Propagation Chain Rebuilder - 传播链重建引擎
+Propagation Rebuilder — Cross-platform propagation chain reconstruction.
 
-将多源数据（GitHub stars, HN, Reddit, 中文媒体, 论文引用）
-合并为统一的传播链时间线
+Reconstructs how a project/idea spreads across:
+  - GitHub (stars, forks, issues)
+  - Hacker News (submissions, comments)
+  - Reddit (posts, upvotes)
+  - Semantic Scholar (citations)
+  - Chinese media (blog posts, news)
 
-用法:
-  python propagation_rebuilder.py --repo Significant-Gravitas/AutoGPT --input ../storage/
-  python propagation_rebuilder.py --all --input ../storage/
+Outputs a timeline of propagation events with source→target edges.
 """
 
 import argparse
 import json
 import os
-import sys
 from datetime import datetime
-from collections import defaultdict
 from pathlib import Path
 
 
-def load_json(filepath):
-    try:
-        with open(filepath, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
+def load_json(path: str):
+    if not os.path.exists(path):
         return None
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
-def merge_daily_data(star_data=None, fork_data=None, issue_data=None,
-                     hn_data=None, reddit_data=None, chinese_data=None):
-    """合并多源日级数据为统一时间线"""
-
-    # 收集所有日期
-    all_dates = set()
-
-    if star_data and star_data.get("daily_history"):
-        for d in star_data["daily_history"]:
-            all_dates.add(d["date"])
-
-    if fork_data and fork_data.get("daily_history"):
-        for d in fork_data["daily_history"]:
-            all_dates.add(d["date"])
-
-    if hn_data and hn_data.get("daily_summary"):
-        for d in hn_data["daily_summary"]:
-            all_dates.add(d["date"])
-
-    if reddit_data and reddit_data.get("daily_summary"):
-        for d in reddit_data["daily_summary"]:
-            all_dates.add(d["date"])
-
-    if not all_dates:
-        return []
-
-    # 建立索引
-    star_by_date = {}
-    if star_data and star_data.get("daily_history"):
-        for d in star_data["daily_history"]:
-            star_by_date[d["date"]] = d
-
-    fork_by_date = {}
-    if fork_data and fork_data.get("daily_history"):
-        for d in fork_data["daily_history"]:
-            fork_by_date[d["date"]] = d
-
-    issue_by_date = {}
-    if issue_data and issue_data.get("daily_timeline"):
-        for d in issue_data["daily_timeline"]:
-            issue_by_date[d["date"]] = d
-
-    hn_by_date = {}
-    if hn_data and hn_data.get("daily_summary"):
-        for d in hn_data["daily_summary"]:
-            hn_by_date[d["date"]] = d
-
-    reddit_by_date = {}
-    if reddit_data and reddit_data.get("daily_summary"):
-        for d in reddit_data["daily_summary"]:
-            reddit_by_date[d["date"]] = d
-
-    # 合并时间线
-    timeline = []
-    for date in sorted(all_dates):
-        entry = {"date": date}
-
-        if date in star_by_date:
-            s = star_by_date[date]
-            entry["stars_new"] = s.get("stars_new", 0)
-            entry["stars_cumulative"] = s.get("stars_cumulative", 0)
-
-        if date in fork_by_date:
-            f = fork_by_date[date]
-            entry["forks_new"] = f.get("forks_new", 0)
-            entry["forks_cumulative"] = f.get("forks_cumulative", 0)
-
-        if date in issue_by_date:
-            i = issue_by_date[date]
-            entry["issues_opened"] = i.get("issues_opened", 0)
-            entry["issues_closed"] = i.get("issues_closed", 0)
-            entry["prs_opened"] = i.get("prs_opened", 0)
-
-        if date in hn_by_date:
-            h = hn_by_date[date]
-            entry["hn_posts"] = h.get("posts", 0)
-            entry["hn_points"] = h.get("total_points", 0)
-
-        if date in reddit_by_date:
-            r = reddit_by_date[date]
-            entry["reddit_posts"] = r.get("posts", 0)
-            entry["reddit_score"] = r.get("total_score", 0)
-
-        timeline.append(entry)
-
-    return timeline
+def parse_date(s: str) -> str:
+    """Normalize date to ISO format string."""
+    if not s:
+        return ""
+    try:
+        dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
+        return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+    except (ValueError, AttributeError):
+        return s[:19]
 
 
-def detect_propagation_events(timeline):
-    """检测传播关键事件"""
+def load_github_events(storage_dir: str, project_name: str) -> list:
+    """Load GitHub events (stars, forks, issues) for a project."""
     events = []
 
-    if not timeline:
-        return events
+    # Try daily snapshots
+    snapshots_dir = os.path.join(storage_dir, "daily_snapshots")
+    if os.path.isdir(snapshots_dir):
+        for date_dir in sorted(os.listdir(snapshots_dir)):
+            fpath = os.path.join(snapshots_dir, date_dir, f"{project_name}.json")
+            data = load_json(fpath)
+            if data:
+                events.append({"source": "github", "date": date_dir,
+                               "type": "snapshot", "data": data})
 
-    prev_stars = 0
-    for i, day in enumerate(timeline):
-        stars_cum = day.get("stars_cumulative", prev_stars)
-        stars_new = day.get("stars_new", 0)
-
-        # 里程碑
-        milestones = [1000, 5000, 10000, 25000, 50000, 100000, 175000]
-        for m in milestones:
-            if prev_stars < m <= stars_cum:
-                events.append({
-                    "date": day["date"],
-                    "type": "milestone",
-                    "detail": f"达到 {m:,} stars",
-                    "stars": stars_cum,
-                })
-
-        # 异常增长（单日新增 > 前 7 天日均的 5 倍）
-        if i >= 7 and stars_new > 0:
-            prev_7_avg = sum(timeline[j].get("stars_new", 0) for j in range(i - 7, i)) / 7
-            if prev_7_avg > 0 and stars_new > prev_7_avg * 5:
-                events.append({
-                    "date": day["date"],
-                    "type": "anomaly_spike",
-                    "detail": f"单日 +{stars_new} stars（7日均值 {prev_7_avg:.0f} 的 {stars_new/prev_7_avg:.1f}x）",
-                    "stars_new": stars_new,
-                })
-
-        # HN 爆发
-        if day.get("hn_points", 0) > 200:
-            events.append({
-                "date": day["date"],
-                "type": "hn_surge",
-                "detail": f"HN {day['hn_posts']} 帖，{day['hn_points']} pts",
-                "hn_points": day["hn_points"],
-            })
-
-        # Reddit 讨论
-        if day.get("reddit_posts", 0) >= 5:
-            events.append({
-                "date": day["date"],
-                "type": "reddit_discussion",
-                "detail": f"Reddit {day['reddit_posts']} 帖，{day.get('reddit_score', 0)} pts",
-            })
-
-        prev_stars = stars_cum
+    # Try flat file
+    fpath = os.path.join(storage_dir, f"{project_name}.json")
+    data = load_json(fpath)
+    if data:
+        events.append({"source": "github", "date": "latest",
+                       "type": "snapshot", "data": data})
 
     return events
 
 
-def compute_propagation_metrics(timeline):
-    """计算传播指标"""
-    if not timeline:
-        return {}
+def load_social_events(storage_dir: str, project_name: str) -> list:
+    """Load HN/Reddit/S2/media events for a project."""
+    events = []
+    social_dir = os.path.join(storage_dir, "social")
+    if not os.path.isdir(social_dir):
+        return events
 
-    total_days = len(timeline)
-    days_with_hn = sum(1 for d in timeline if d.get("hn_posts", 0) > 0)
-    days_with_reddit = sum(1 for d in timeline if d.get("reddit_posts", 0) > 0)
-
-    # 计算各阶段速度
-    star_data = [(d["date"], d.get("stars_cumulative", 0)) for d in timeline
-                 if d.get("stars_cumulative")]
-
-    return {
-        "total_days": total_days,
-        "first_date": timeline[0]["date"],
-        "last_date": timeline[-1]["date"],
-        "days_with_hn_discussion": days_with_hn,
-        "days_with_reddit_discussion": days_with_reddit,
-        "hn_penetration": round(days_with_hn / total_days * 100, 1) if total_days else 0,
-        "reddit_penetration": round(days_with_reddit / total_days * 100, 1) if total_days else 0,
+    # Try loading from various social collector outputs
+    social_files = {
+        "hn_search": f"hn_{project_name}.json",
+        "reddit_search": f"reddit_{project_name}.json",
+        "semantic_scholar": f"s2_{project_name}.json",
+        "chinese_media": f"cn_media_{project_name}.json",
     }
+
+    for source, fname in social_files.items():
+        fpath = os.path.join(social_dir, fname)
+        data = load_json(fpath)
+        if data:
+            items = data if isinstance(data, list) else data.get("results", [data])
+            for item in items:
+                events.append({
+                    "source": source,
+                    "date": parse_date(item.get("created_at", item.get("date", ""))),
+                    "type": item.get("type", "mention"),
+                    "data": item,
+                })
+
+    return events
+
+
+def extract_github_timeline(github_data: dict) -> list:
+    """Extract key GitHub milestone events."""
+    timeline = []
+
+    # Repository creation
+    created = github_data.get("created_at", "")
+    if created:
+        timeline.append({
+            "date": parse_date(created),
+            "event": "repo_created",
+            "platform": "github",
+            "detail": "Repository created",
+        })
+
+    # Star milestones
+    stars = github_data.get("stars", github_data.get("stargazers_count", 0))
+    milestones = [100, 500, 1000, 5000, 10000, 25000, 50000, 100000, 175000]
+    for m in milestones:
+        if stars >= m:
+            timeline.append({
+                "date": "",  # would need star history for exact dates
+                "event": f"stars_{m}",
+                "platform": "github",
+                "detail": f"Reached {m:,} stars",
+            })
+
+    # Fork milestones
+    forks = github_data.get("forks_count", 0)
+    if forks >= 100:
+        timeline.append({
+            "date": "",
+            "event": f"forks_{forks}",
+            "platform": "github",
+            "detail": f"{forks:,} forks",
+        })
+
+    return timeline
+
+
+def build_propagation_chain(project_name: str, storage_dir: str) -> dict:
+    """Build full cross-platform propagation chain for a project."""
+    chain = {
+        "project": project_name,
+        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "timeline": [],
+        "platforms": {},
+        "edges": [],
+    }
+
+    # Load GitHub data
+    github_events = load_github_events(storage_dir, project_name)
+    if github_events:
+        latest_gh = github_events[-1].get("data", {})
+        gh_timeline = extract_github_timeline(latest_gh)
+        chain["timeline"].extend(gh_timeline)
+        chain["platforms"]["github"] = {
+            "stars": latest_gh.get("stars", latest_gh.get("stargazers_count", 0)),
+            "forks": latest_gh.get("forks_count", 0),
+            "events_count": len(github_events),
+        }
+
+    # Load social data
+    social_events = load_social_events(storage_dir, project_name)
+    for evt in social_events:
+        chain["timeline"].append({
+            "date": evt["date"],
+            "event": f"{evt['source']}_mention",
+            "platform": evt["source"],
+            "detail": evt.get("data", {}).get("title", evt.get("type", "")),
+        })
+        chain["platforms"].setdefault(evt["source"], {"events": 0})
+        chain["platforms"][evt["source"]]["events"] += 1
+
+    # Build propagation edges (source → target)
+    platforms_with_data = list(chain["platforms"].keys())
+    for i, source in enumerate(platforms_with_data):
+        for target in platforms_with_data[i+1:]:
+            chain["edges"].append({
+                "source": source,
+                "target": target,
+                "type": "cross_platform_propagation",
+            })
+
+    # Sort timeline by date
+    chain["timeline"].sort(key=lambda e: e.get("date", ""))
+
+    return chain
+
+
+def run_propagation_rebuild(input_dir: str, output_dir: str,
+                            projects: list = None, all_projects: bool = False):
+    """Main entry: rebuild propagation chains for all or specified projects."""
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Discover projects
+    if not projects:
+        projects = set()
+        # From daily_snapshots
+        snapshots_dir = os.path.join(input_dir, "daily_snapshots")
+        if os.path.isdir(snapshots_dir):
+            for date_dir in os.listdir(snapshots_dir):
+                date_path = os.path.join(snapshots_dir, date_dir)
+                if os.path.isdir(date_path):
+                    for f in os.listdir(date_path):
+                        if f.endswith(".json"):
+                            projects.add(f.replace(".json", ""))
+        # From flat files
+        for f in os.listdir(input_dir):
+            if f.endswith(".json"):
+                projects.add(f.replace(".json", ""))
+        # From social dir
+        social_dir = os.path.join(input_dir, "social")
+        if os.path.isdir(social_dir):
+            for f in os.listdir(social_dir):
+                if f.endswith(".json"):
+                    # Strip prefix (hn_, reddit_, s2_, cn_media_)
+                    name = f.replace(".json", "")
+                    for prefix in ["hn_", "reddit_", "s2_", "cn_media_"]:
+                        if name.startswith(prefix):
+                            projects.add(name[len(prefix):])
+                            break
+
+    chains = []
+    for proj_name in sorted(projects):
+        chain = build_propagation_chain(proj_name, input_dir)
+        chains.append(chain)
+
+    output = {
+        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "total_projects": len(chains),
+        "chains": chains,
+    }
+
+    out_path = os.path.join(output_dir, "propagation_chains.json")
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(output, f, indent=2, ensure_ascii=False)
+
+    print(f"[propagation_rebuilder] Built chains for {len(chains)} projects → {out_path}")
+
+    # Summary
+    for c in chains:
+        platforms = list(c["platforms"].keys())
+        events = len(c["timeline"])
+        print(f"  {c['project']:<25s} platforms={platforms}  events={events}")
+
+    return output
 
 
 def main():
     parser = argparse.ArgumentParser(description="Propagation Chain Rebuilder")
-    parser.add_argument("--repo", help="Repository (owner/repo)")
-    parser.add_argument("--all", action="store_true", help="Process all repos with data")
-    parser.add_argument("--input", default="../storage", help="Input directory")
-    parser.add_argument("--output", default="../storage/propagation", help="Output directory")
+    parser.add_argument("--input", default="./storage",
+                        help="Input storage directory")
+    parser.add_argument("--output", default="./storage/propagation",
+                        help="Output directory for propagation chains")
+    parser.add_argument("--all", action="store_true",
+                        help="Process all discovered projects")
+    parser.add_argument("--projects", nargs="*", default=None,
+                        help="Specific projects to process")
     args = parser.parse_args()
 
-    input_dir = Path(args.input)
-    snapshots_dir = input_dir / "daily_snapshots"
-    propagation_dir = input_dir / "propagation"
-    output_dir = Path(args.output)
-    output_dir.mkdir(parents=True, exist_ok=True)
+    if not args.all and not args.projects:
+        args.all = True
 
-    if args.repo:
-        repos = [args.repo]
-    elif args.all:
-        # 发现所有有 star 数据的仓库
-        repos = []
-        if snapshots_dir.exists():
-            for f in snapshots_dir.glob("*_stars.json"):
-                repo_name = f.stem.replace("_stars", "").replace("_", "/", 1)
-                repos.append(repo_name)
-    else:
-        parser.print_help()
-        return
-
-    for repo in repos:
-        safe_name = repo.replace("/", "_")
-        print(f"\nRebuilding: {repo}")
-
-        # 加载数据
-        star_data = load_json(snapshots_dir / f"{safe_name}.json") if snapshots_dir.exists() else None
-        fork_data = load_json(snapshots_dir / f"{safe_name}_forks.json") if snapshots_dir.exists() else None
-        issue_data = load_json(snapshots_dir / f"{safe_name}_issues.json") if snapshots_dir.exists() else None
-        hn_data = load_json(propagation_dir / f"{safe_name}_hn.json") if propagation_dir.exists() else None
-        reddit_data = load_json(propagation_dir / f"{safe_name}_reddit.json") if propagation_dir.exists() else None
-
-        # 合并
-        timeline = merge_daily_data(star_data, fork_data, issue_data, hn_data, reddit_data)
-        events = detect_propagation_events(timeline)
-        metrics = compute_propagation_metrics(timeline)
-
-        result = {
-            "repo": repo,
-            "collected_at": datetime.utcnow().isoformat() + "Z",
-            "timeline_days": len(timeline),
-            "events_detected": len(events),
-            "metrics": metrics,
-            "key_events": events,
-            "timeline": timeline,
-        }
-
-        print(f"  Timeline: {len(timeline)} days, {len(events)} key events")
-        for e in events[:5]:
-            print(f"    [{e['date']}] {e['type']}: {e['detail']}")
-
-        output_file = output_dir / f"{safe_name}_chain.json"
-        with open(output_file, "w", encoding="utf-8") as f:
-            json.dump(result, f, indent=2, ensure_ascii=False)
-        print(f"  Saved: {output_file}")
+    run_propagation_rebuild(args.input, args.output,
+                           projects=args.projects,
+                           all_projects=args.all)
 
 
 if __name__ == "__main__":

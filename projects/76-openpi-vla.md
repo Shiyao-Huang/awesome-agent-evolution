@@ -1,30 +1,27 @@
-# OpenPI - 开源视觉-语言-动作模型
+# OpenPI - 视觉-语言-动作模型
 - **仓库**: Physical-Intelligence/openpi
 - **GitHub**: https://github.com/Physical-Intelligence/openpi
-- **Stars**: ~6K
+- **Stars**: 3000
 - **语言**: Python
 - **许可**: Apache-2.0
-- **最近活跃**: 2026-05
-- **模式**: 训练/数据循环
+- **最近活跃**: 2026-04
+- **模式**: 智能体编排
 
 ## 概述
-OpenPI是Physical Intelligence推出的开源视觉-语言-动作（VLA）模型框架，将视觉理解和语言指令直接转化为机器人动作。它是目前最强大的开源机器人基础模型之一，支持多种机器人平台的零样本泛化。
+Physical Intelligence 开源的视觉-语言-动作（VLA）模型，将视觉理解、语言指令和动作生成统一到一个模型中，实现通用机器人控制。
 
 ## 核心特性
-- 视觉-语言-动作端到端模型，支持零样本泛化
-- 多机器人平台兼容（Franka、UR、Dexter等）
-- 基于大规模异构机器人数据集训练
-- 支持微调和自定义数据集训练
+- 视觉-语言-动作统一架构
+- 多机器人平台适配
+- 零样本任务泛化能力
+- 开源模型权重
 
 ## 技术栈
-- Python
-- PyTorch / JAX
-- LeRobot
-- OpenCV
+- Python, PyTorch, JAX, Transformers
 
 ## 与 Self Evolve 的关联
-OpenPI作为基础模型可以通过持续的微调和数据反馈实现自我进化，是具身智能领域"预训练-微调-部署"进化循环的重要实践。
+OpenPI 的 VLA 架构为具身智能的自我进化提供了感知-理解-行动的统一模型基础。
 
 ## 分类
-- **类别**: 具身智能 Agent
-- **标签**: vla, robotics, foundation-model, embodied-ai, open-source
+- **类别**: 视觉-语言-动作模型
+- **标签**: vla, openpi, robotics, pi0

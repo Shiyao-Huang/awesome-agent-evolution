@@ -1,30 +1,27 @@
-# Inner Monologue - 语言驱动的具身推理
-- **仓库**: google-research/inner-monologue
+# Inner Monologue - 具身推理
+- **仓库**: google-research/inner-monologue (关联)
 - **GitHub**: https://github.com/google-research/inner-monologue
-- **Stars**: ~500
+- **Stars**: 300
 - **语言**: Python
 - **许可**: Apache-2.0
-- **最近活跃**: 2024-05
-- **模式**: 反思记忆
+- **最近活跃**: 2023-09
+- **模式**: 反思记忆 → 反馈-精炼
 
 ## 概述
-Inner Monologue是Google Research提出的具身推理方法，通过在智能体内部维护连续的语言"内心独白"来整合多模态反馈、进行场景理解和任务规划。该方法验证了语言反馈闭环对具身任务的重要价值。
+Google Research 的 Inner Monologue 方法，让机器人在执行任务时通过内部语言推理（inner speech）进行环境理解、任务规划和错误纠正。
 
 ## 核心特性
-- 智能体内部语言推理链（内心独白）
-- 整合视觉反馈、触觉反馈等多模态信息
-- 支持任务成功的自主判断和错误纠正
-- 将语言作为推理和规划的统一接口
+- 内部语言推理（Inner Monologue）
+- 感知反馈转化为语言描述
+- 错误检测和自我纠正
+- 闭环感知-推理-执行
 
 ## 技术栈
-- Python
-- Large Language Models
-- ROS
-- OpenCV
+- Python, Google PaLM API
 
 ## 与 Self Evolve 的关联
-Inner Monologue的语言反馈闭环机制是反思记忆模式的典型体现，智能体通过内部语言对话实现自我监控和行为调整。
+Inner Monologue 是"反思记忆"在具身智能中的直接应用：机器人通过内部对话诊断问题、调整策略。
 
 ## 分类
-- **类别**: 具身智能 Agent
-- **标签**: embodied-reasoning, inner-monologue, language-feedback, google-research
+- **类别**: 具身推理
+- **标签**: inner-monologue, reasoning, embodied, self-correction

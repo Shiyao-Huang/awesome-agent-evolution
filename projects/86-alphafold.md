@@ -1,31 +1,27 @@
 # AlphaFold - 蛋白质结构预测
 - **仓库**: google-deepmind/alphafold
 - **GitHub**: https://github.com/google-deepmind/alphafold
-- **Stars**: ~13K
+- **Stars**: 13000
 - **语言**: Python
 - **许可**: Apache-2.0
-- **最近活跃**: 2025-10
-- **模式**: 训练/数据循环
+- **最近活跃**: 2025-03
+- **模式**: 进化/搜索循环 → 评估器/打分器
 
 ## 概述
-AlphaFold是DeepMind开发的蛋白质三维结构预测系统，通过深度学习从氨基酸序列预测蛋白质的精确三维构象。它在CASP14竞赛中达到原子级精度，被认为是AI在生命科学领域最具影响力的突破之一。
+DeepMind 的 AlphaFold2 蛋白质三维结构预测系统，通过 Evoformer 注意力机制和结构模块实现原子级精度的蛋白质结构预测，是 AI4Science 的里程碑成果。
 
 ## 核心特性
-- 从氨基酸序列预测蛋白质三维结构
-- 基于Evoformer和Structure Module的端到端架构
-- 多序列比对（MSA）和模板信息融合
-- 提供完整的推理管线和预训练模型权重
+- Evoformer 注意力架构处理 MSA + pairwise
+- Structure Module 生成 3D 坐标
+- 原子级精度蛋白质结构预测
+- CASP14 竞赛大幅领先
 
 ## 技术栈
-- Python
-- JAX
-- Haiku
-- TensorFlow
-- CUDA
+- Python, JAX, Haiku, NumPy
 
 ## 与 Self Evolve 的关联
-AlphaFold展示了AI系统如何通过训练/数据循环在科学发现中持续进化，从数据中学习生物学规律并不断突破预测精度极限。
+AlphaFold 的迭代精炼机制（回收循环）是自我进化中"反馈-精炼"在科学领域的体现：多次迭代逐步逼近精确结构。
 
 ## 分类
-- **类别**: AI4Science
-- **标签**: protein-structure, deep-learning, biology, alphafold, deepmind
+- **类别**: 蛋白质结构预测
+- **标签**: alphafold, protein, structure, deepmind

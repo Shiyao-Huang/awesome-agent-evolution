@@ -1,26 +1,27 @@
 # Sheared LLaMA - 数据剪枝与对齐
 - **仓库**: facebookresearch/sheared-llama
 - **GitHub**: https://github.com/facebookresearch/sheared-llama
-- **Stars**: ~600
+- **Stars**: 600
 - **语言**: Python
-- **许可**: BSD-3-Clause
-- **最近活跃**: 2024-03
+- **许可**: MIT
+- **最近活跃**: 2024-06
 - **模式**: 训练/数据循环
 
 ## 概述
-Meta提出的Sheared LLaMA项目通过数据剪枝和模型剪枝技术，从大型LLaMA模型中高效提取高性能的小型模型。该方法结合了动态数据加载和结构化模型剪枝，在大幅减少计算成本的同时保持了对齐质量。
+Meta Research 发布的数据高效对齐方法，通过定向数据剪枝从大型模型中高效提取小型高性能模型，在保持性能的同时大幅降低训练成本。
 
 ## 核心特性
-- 结构化模型剪枝：从大模型中提取高效小模型
-- 动态数据加载策略：根据模型训练需求智能调整数据分布
-- 在1.3B和2.7B参数规模上达到同级别最优性能
+- 定向数据剪枝（Targeted Pruning）
+- 从 LLaMA-2 70B 高效剪枝至 2.7B/1.3B
+- 剪枝后继续预训练恢复性能
+- 对齐后性能接近原始大模型
 
 ## 技术栈
-- Python, PyTorch, Hugging Face Transformers, Fairseq
+- Python, PyTorch, FairScale
 
 ## 与 Self Evolve 的关联
-数据剪枝和模型剪枝是自我进化中资源优化的重要方向，Sheared LLaMA展示了如何通过智能数据选择和模型压缩实现高效的模型进化，为自我进化系统的资源管理提供了参考方案。
+Sheared LLaMA 展示了数据驱动的自我优化路径：通过智能选择训练数据实现模型进化，是自我进化系统中"数据循环"的重要实践。
 
 ## 分类
-- **类别**: RLHF/对齐/安全
-- **标签**: data-pruning, model-pruning, alignment, efficient-training, llama
+- **类别**: 模型压缩与对齐
+- **标签**: sheared-llama, pruning, alignment, meta

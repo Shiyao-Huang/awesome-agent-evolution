@@ -1,243 +1,277 @@
 #!/usr/bin/env python3
 """
-Anomaly Detector - 异常增长检测
+Anomaly Detector — Suspicious Growth Pattern Detection
 
-检测 Star/Fork/Issue 的异常增长模式：
-- 单日爆发（>5x 7日均值）
-- 周末异常（周末 star 暴增，通常为机器人行为）
-- 脉冲式增长（短期暴增后快速衰减）
-- 同步增长（多个项目同时暴增，说明是外部事件驱动）
-
-用法:
-  python anomaly_detector.py --input ../storage/ --output ../storage/analysis/
+Detects:
+  1. Burst growth: >10K stars gained in <7 days
+  2. Low fork quality: <20% forks with commits
+  3. High star/contributor ratio: >150:1
+  4. Issue spam: >50% template/duplicate issues
+  5. Sudden activity drop: >80% decline in 30 days
+  6. Bot-like star patterns: uniform star timestamps
 """
 
 import argparse
 import json
 import os
 import sys
-from datetime import datetime
-from collections import defaultdict
+from datetime import datetime, timedelta
 from pathlib import Path
 
 
-def load_json(filepath):
+def load_json(path: str):
+    if not os.path.exists(path):
+        return None
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def parse_date(s: str) -> datetime:
     try:
-        with open(filepath, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return None
+        return datetime.fromisoformat(s.replace("Z", "+00:00")).replace(tzinfo=None)
+    except (ValueError, AttributeError):
+        return datetime(2000, 1, 1)
 
 
-def detect_daily_anomalies(daily_history, window=7, threshold=5.0):
-    """检测日级异常增长"""
-    anomalies = []
+def load_all_data(storage_dir: str):
+    """Load all project data from storage."""
+    data = {}
+    # Try daily_snapshots first
+    snapshots_dir = os.path.join(storage_dir, "daily_snapshots")
+    if os.path.isdir(snapshots_dir):
+        for date_dir in sorted(os.listdir(snapshots_dir)):
+            date_path = os.path.join(snapshots_dir, date_dir)
+            if not os.path.isdir(date_path):
+                continue
+            for fname in os.listdir(date_path):
+                if not fname.endswith(".json"):
+                    continue
+                proj = fname.replace(".json", "")
+                entry = load_json(os.path.join(date_path, fname))
+                if entry:
+                    data.setdefault(proj, []).append({"date": date_dir, "data": entry})
 
-    for i, day in enumerate(daily_history):
-        if i < window:
-            continue
+    # Fallback: flat files in storage_dir
+    if not data:
+        for fname in os.listdir(storage_dir):
+            if fname.endswith(".json"):
+                proj = fname.replace(".json", "")
+                entry = load_json(os.path.join(storage_dir, fname))
+                if entry:
+                    data[proj] = [{"date": "latest", "data": entry}]
 
-        new_stars = day.get("stars_new", 0)
-        if new_stars <= 0:
-            continue
-
-        # 前 N 天均值
-        prev_avg = sum(daily_history[j].get("stars_new", 0)
-                       for j in range(i - window, i)) / window
-
-        if prev_avg > 0:
-            ratio = new_stars / prev_avg
-            if ratio >= threshold:
-                anomalies.append({
-                    "date": day["date"],
-                    "type": "daily_spike",
-                    "stars_new": new_stars,
-                    "prev_avg": round(prev_avg, 1),
-                    "ratio": round(ratio, 1),
-                    "severity": "critical" if ratio >= 10 else "high" if ratio >= 7 else "medium",
-                })
-
-    return anomalies
+    return data
 
 
-def detect_weekend_anomalies(daily_history):
-    """检测周末异常（周六日 star 占比过高）"""
-    weekday_stars = []
-    weekend_stars = []
+def detect_burst_growth(star_history: list, threshold_days: int = 7,
+                        threshold_stars: int = 10000) -> dict:
+    """Detect if a project gained threshold_stars in threshold_days."""
+    if not star_history or len(star_history) < 2:
+        return {"detected": False, "detail": "insufficient star history"}
 
-    for day in daily_history:
-        try:
-            dt = datetime.strptime(day["date"], "%Y-%m-%d")
-            new = day.get("stars_new", 0)
-            if dt.weekday() < 5:
-                weekday_stars.append(new)
-            else:
-                weekend_stars.append(new)
-        except:
-            continue
+    timestamps = sorted([parse_date(s.get("starred_at", "")) for s in star_history])
+    for i in range(len(timestamps)):
+        window_end = timestamps[i] + timedelta(days=threshold_days)
+        stars_in_window = sum(1 for t in timestamps[i:] if t <= window_end)
+        if stars_in_window >= threshold_stars:
+            return {
+                "detected": True,
+                "detail": f"{stars_in_window} stars in {threshold_days} days",
+                "start_date": timestamps[i].isoformat(),
+            }
+    return {"detected": False, "detail": "growth within normal range"}
 
-    if not weekday_stars or not weekend_stars:
-        return None
 
-    weekday_avg = sum(weekday_stars) / len(weekday_stars)
-    weekend_avg = sum(weekend_stars) / len(weekend_stars)
-
-    if weekday_avg > 0:
-        ratio = weekend_avg / weekday_avg
-    else:
-        ratio = 0
-
-    # 正常情况下周末 star 应少于工作日
-    # 如果周末 > 工作日，可能是机器人
-    is_anomalous = ratio > 1.3
-
+def detect_low_fork_quality(forks: list, threshold: float = 0.2) -> dict:
+    """Detect if fork quality is below threshold."""
+    if not forks:
+        return {"detected": False, "detail": "no fork data"}
+    with_commits = sum(1 for f in forks if f.get("commits", 0) > 0)
+    ratio = with_commits / len(forks)
     return {
-        "weekday_avg": round(weekday_avg, 1),
-        "weekend_avg": round(weekend_avg, 1),
-        "weekend_weekday_ratio": round(ratio, 2),
-        "is_anomalous": is_anomalous,
-        "note": "周末 star 高于工作日，可能为机器人行为" if is_anomalous else "正常模式",
+        "detected": ratio < threshold,
+        "detail": f"fork_quality={ratio:.2%} (threshold={threshold:.0%})",
+        "fork_quality": round(ratio, 3),
     }
 
 
-def detect_pulse_pattern(daily_history, window=14):
-    """检测脉冲式增长（暴增后快速衰减）"""
-    pulses = []
-
-    for i in range(window, len(daily_history) - window):
-        before = sum(daily_history[j].get("stars_new", 0)
-                     for j in range(i - window, i)) / window
-        during = daily_history[i].get("stars_new", 0)
-        after = sum(daily_history[j].get("stars_new", 0)
-                    for j in range(i + 1, min(i + window + 1, len(daily_history)))) / window
-
-        if during > before * 5 and after < during * 0.3:
-            pulses.append({
-                "date": daily_history[i]["date"],
-                "peak_stars": during,
-                "before_avg": round(before, 1),
-                "after_avg": round(after, 1),
-                "decay_ratio": round(after / during, 2) if during else 0,
-            })
-
-    return pulses
+def detect_high_star_contributor_ratio(stars: int, contributors: int,
+                                        threshold: int = 150) -> dict:
+    """Detect abnormally high star/contributor ratio."""
+    if contributors <= 0:
+        return {"detected": True, "detail": f"ratio=inf (0 contributors)", "ratio": None}
+    ratio = stars / contributors
+    return {
+        "detected": ratio > threshold,
+        "detail": f"ratio={ratio:.0f}:1 (threshold={threshold}:1)",
+        "ratio": round(ratio, 1),
+    }
 
 
-def detect_synchronized_growth(all_repos_data):
-    """检测多个项目同步增长（外部事件驱动）"""
-    # 收集所有日期的增长
-    date_growth = defaultdict(list)
+def detect_issue_spam(issues: list, threshold: float = 0.5) -> dict:
+    """Detect if >threshold of issues are spam/template."""
+    if not issues:
+        return {"detected": False, "detail": "no issue data"}
+    spam_labels = {"question", "duplicate", "invalid", "wontfix", "spam"}
+    spam_count = 0
+    for issue in issues:
+        labels = {l.get("name", "").lower() for l in issue.get("labels", [])}
+        if labels & spam_labels:
+            spam_count += 1
+    ratio = spam_count / len(issues)
+    return {
+        "detected": ratio > threshold,
+        "detail": f"spam_ratio={ratio:.2%} (threshold={threshold:.0%})",
+        "spam_ratio": round(ratio, 3),
+    }
 
-    for repo_name, data in all_repos_data.items():
-        for day in data.get("daily_history", []):
-            if day.get("stars_new", 0) > 0:
-                date_growth[day["date"]].append({
-                    "repo": repo_name,
-                    "stars_new": day["stars_new"],
-                })
 
-    # 找出多个项目同时增长的日期
-    sync_events = []
-    for date, repos in sorted(date_growth.items()):
-        if len(repos) >= 3:  # 3+ 项目同时增长
-            total = sum(r["stars_new"] for r in repos)
-            sync_events.append({
-                "date": date,
-                "repos_count": len(repos),
-                "total_new_stars": total,
-                "repos": repos,
-            })
+def detect_activity_drop(records: list, threshold: float = 0.8) -> dict:
+    """Detect >threshold decline in activity over last 30 days."""
+    if len(records) < 2:
+        return {"detected": False, "detail": "insufficient history"}
 
-    return sorted(sync_events, key=lambda x: x["repos_count"], reverse=True)[:20]
+    # Compare recent activity vs previous
+    def activity_score(rec):
+        d = rec.get("data", {})
+        return d.get("commit_count", 0) + d.get("issue_count", 0) + d.get("pr_count", 0)
+
+    recent_score = activity_score(records[-1])
+    baseline_score = max(activity_score(r) for r in records[:-1])
+
+    if baseline_score <= 0:
+        return {"detected": False, "detail": "zero baseline activity"}
+
+    drop = 1.0 - (recent_score / baseline_score)
+    return {
+        "detected": drop > threshold,
+        "detail": f"drop={drop:.0%} (threshold={threshold:.0%})",
+        "drop_percent": round(drop, 3),
+    }
+
+
+def detect_bot_stars(star_history: list) -> dict:
+    """Detect bot-like uniform star timestamp patterns."""
+    if not star_history or len(star_history) < 100:
+        return {"detected": False, "detail": "insufficient stars for pattern analysis"}
+
+    timestamps = sorted([parse_date(s.get("starred_at", "")) for s in star_history])
+    # Check intervals between consecutive stars
+    intervals = []
+    for i in range(1, min(len(timestamps), 1000)):
+        delta = (timestamps[i] - timestamps[i-1]).total_seconds()
+        intervals.append(delta)
+
+    if not intervals:
+        return {"detected": False, "detail": "no intervals"}
+
+    # If std deviation of intervals is very low, stars are suspiciously uniform
+    mean_interval = sum(intervals) / len(intervals)
+    variance = sum((x - mean_interval) ** 2 for x in intervals) / len(intervals)
+    std_dev = variance ** 0.5
+    cv = std_dev / mean_interval if mean_interval > 0 else 0  # coefficient of variation
+
+    # Very low CV = bot-like pattern
+    return {
+        "detected": cv < 0.1 and mean_interval < 3600,
+        "detail": f"cv={cv:.3f}, mean_interval={mean_interval:.0f}s",
+        "coefficient_of_variation": round(cv, 4),
+    }
+
+
+def analyze_project(project_name: str, records: list) -> dict:
+    """Run all anomaly detectors on one project."""
+    if not records:
+        return {"project": project_name, "anomalies": [], "anomaly_count": 0,
+                "status": "no_data"}
+
+    latest = records[-1]["data"]
+    stars = latest.get("stars", latest.get("stargazers_count", 0))
+    contributors = latest.get("contributors", [])
+    contributors_count = latest.get("contributors_count", len(contributors))
+    forks = latest.get("forks", [])
+    issues = latest.get("issues", [])
+    prs = latest.get("pull_requests", [])
+    star_history = latest.get("star_history", [])
+
+    anomalies = []
+
+    checks = [
+        ("burst_growth", detect_burst_growth(star_history)),
+        ("low_fork_quality", detect_low_fork_quality(forks)),
+        ("high_star_contributor_ratio",
+         detect_high_star_contributor_ratio(stars, contributors_count)),
+        ("issue_spam", detect_issue_spam(issues)),
+        ("activity_drop", detect_activity_drop(records)),
+        ("bot_like_stars", detect_bot_stars(star_history)),
+    ]
+
+    for check_name, result in checks:
+        anomalies.append({
+            "check": check_name,
+            **result,
+        })
+
+    detected = [a for a in anomalies if a.get("detected")]
+
+    return {
+        "project": project_name,
+        "stars": stars,
+        "anomaly_count": len(detected),
+        "anomalies": anomalies,
+        "status": "flagged" if detected else "clean",
+    }
+
+
+def run_anomaly_detection(input_dir: str, output_dir: str):
+    """Main entry: detect anomalies across all projects."""
+    os.makedirs(output_dir, exist_ok=True)
+
+    all_data = load_all_data(input_dir)
+
+    results = []
+    for proj_name, records in sorted(all_data.items()):
+        result = analyze_project(proj_name, records)
+        results.append(result)
+
+    # Sort by anomaly count descending
+    results.sort(key=lambda r: r.get("anomaly_count", 0), reverse=True)
+
+    flagged = [r for r in results if r["status"] == "flagged"]
+
+    output = {
+        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "total_projects": len(results),
+        "flagged_projects": len(flagged),
+        "results": results,
+    }
+
+    out_path = os.path.join(output_dir, "anomaly_report.json")
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(output, f, indent=2, ensure_ascii=False)
+
+    print(f"[anomaly_detector] Checked {len(results)} projects, "
+          f"{len(flagged)} flagged → {out_path}")
+
+    if flagged:
+        print("\n=== Flagged Projects ===")
+        for r in flagged:
+            checks = [a["check"] for a in r["anomalies"] if a.get("detected")]
+            print(f"  ⚠ {r['project']:<25s} anomalies={r['anomaly_count']} "
+                  f"({', '.join(checks)})")
+
+    return output
 
 
 def main():
     parser = argparse.ArgumentParser(description="Anomaly Detector")
-    parser.add_argument("--input", default="../storage/daily_snapshots",
-                        help="Input directory with snapshot JSONs")
-    parser.add_argument("--output", default="../storage/analysis",
-                        help="Output directory")
-    parser.add_argument("--repo", help="Specific repo to analyze")
+    parser.add_argument("--input", default="./storage",
+                        help="Input storage directory")
+    parser.add_argument("--output", default="./storage/analysis",
+                        help="Output directory for anomaly report")
     args = parser.parse_args()
 
-    input_dir = Path(args.input)
-    output_dir = Path(args.output)
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    all_repos = {}
-    star_files = sorted(input_dir.glob("*.json")) if input_dir.exists() else []
-    # 排除非 star 数据文件
-    star_files = [f for f in star_files
-                  if not f.stem.endswith("_forks")
-                  and not f.stem.endswith("_issues")
-                  and not f.stem.endswith("_events")]
-
-    for star_file in star_files:
-        data = load_json(star_file)
-        if not data:
-            continue
-
-        repo_name = data.get("repo", star_file.stem)
-        if args.repo and repo_name != args.repo:
-            continue
-
-        all_repos[repo_name] = data
-        daily = data.get("daily_history", [])
-        if not daily:
-            continue
-
-        print(f"\n{'='*60}")
-        print(f"Anomaly Analysis: {repo_name}")
-        print(f"{'='*60}")
-
-        # 日级异常
-        daily_anomalies = detect_daily_anomalies(daily)
-        print(f"  Daily spikes: {len(daily_anomalies)}")
-        for a in daily_anomalies[:5]:
-            print(f"    [{a['date']}] +{a['stars_new']} ({a['ratio']}x avg, {a['severity']})")
-
-        # 周末异常
-        weekend = detect_weekend_anomalies(daily)
-        if weekend:
-            print(f"  Weekend pattern: {weekend['note']}")
-            print(f"    Weekday avg: {weekend['weekday_avg']}, Weekend avg: {weekend['weekend_avg']}")
-
-        # 脉冲检测
-        pulses = detect_pulse_pattern(daily)
-        print(f"  Pulse events: {len(pulses)}")
-        for p in pulses[:3]:
-            print(f"    [{p['date']}] Peak {p['peak_stars']}, decay to {p['after_avg']} ({p['decay_ratio']})")
-
-        # 保存
-        result = {
-            "repo": repo_name,
-            "analyzed_at": datetime.utcnow().isoformat() + "Z",
-            "daily_anomalies": daily_anomalies,
-            "weekend_analysis": weekend,
-            "pulse_events": pulses,
-        }
-
-        safe_name = repo_name.replace("/", "_")
-        output_file = output_dir / f"{safe_name}_anomalies.json"
-        with open(output_file, "w", encoding="utf-8") as f:
-            json.dump(result, f, indent=2, ensure_ascii=False)
-        print(f"  Saved: {output_file}")
-
-    # 同步增长检测
-    if len(all_repos) >= 3:
-        print(f"\n{'='*60}")
-        print("Synchronized Growth Detection")
-        print(f"{'='*60}")
-        sync = detect_synchronized_growth(all_repos)
-        print(f"  Found {len(sync)} synchronized dates")
-        for s in sync[:5]:
-            repos_str = ", ".join(r["repo"].split("/")[-1] for r in s["repos"])
-            print(f"    [{s['date']}] {s['repos_count']} repos, {s['total_new_stars']} total stars: {repos_str}")
-
-        sync_file = output_dir / "synchronized_growth.json"
-        with open(sync_file, "w", encoding="utf-8") as f:
-            json.dump(sync, f, indent=2, ensure_ascii=False)
-        print(f"  Saved: {sync_file}")
+    run_anomaly_detection(args.input, args.output)
 
 
 if __name__ == "__main__":

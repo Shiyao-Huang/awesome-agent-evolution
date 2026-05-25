@@ -13,7 +13,7 @@
 
 E2B Code Interpreter 是一个开源的安全代码执行沙箱基础设施，专为 AI 生成代码的安全运行而设计。它允许开发者在云端的安全隔离环境中运行 AI 生成的任意代码，通过 Python SDK 或 JavaScript SDK 提供简洁的沙箱创建和代码执行接口。
 
-E2B 的核心价值在于解决了 AI Agent 执行代码时的安全性问题：通过轻量级沙箱隔离机制，确保 AI 生成的代码不会影响宿主系统。每个沙箱都是一个独立的运行环境，拥有自己的文件系统、进程空间和网络命名空间。沙箱支持有状态执行——可以在多次 `run_code` 调用之间保持变量状态，非常适合需要迭代执行的 AI 编程场景。
+E2B 的核心价值在于解决了 AI Agent 执行代码时的安全性问题：通过轻量级沙箱隔离机制，确保 AI 生成的代码不会影响宿主系统。每个沙箱都是一个独立的运行环境，拥有自己的文件系统、进程空间和网络命名空间。沙箱支持有状态执行——可以在多次 run_code 调用之间保持变量状态，非常适合需要迭代执行的 AI 编程场景。
 
 E2B 已成为众多 AI 编程 Agent 的核心执行基础设施，包括 OpenHands (原 OpenDevin)、Cursor、GPT Engineer 等主流 AI 编程工具均采用或参考了 E2B 的沙箱方案。
 
@@ -35,10 +35,10 @@ e2b_code_interpreter/
 ## 核心模块分析
 
 ### 1. Python SDK (python/)
-提供 `e2b-code-interpreter` PyPI 包，核心接口为 `Sandbox.create()` 和 `sandbox.run_code()`。支持有状态代码执行，变量在多次调用间持久化。支持安装自定义依赖包、文件上传/下载、执行结果结构化输出（文本、图表、错误信息）。
+提供 e2b-code-interpreter PyPI 包，核心接口为 Sandbox.create() 和 sandbox.run_code()。支持有状态代码执行，变量在多次调用间持久化。支持安装自定义依赖包、文件上传/下载、执行结果结构化输出（文本、图表、错误信息）。
 
 ### 2. JavaScript/TypeScript SDK (js/)
-提供 `@e2b/code-interpreter` NPM 包，API 设计与 Python 版保持一致。支持异步操作和 TypeScript 类型推断，执行结果包含 text、error、results 等结构化字段，便于前端集成和结果展示。
+提供 @e2b/code-interpreter NPM 包，API 设计与 Python 版保持一致。支持异步操作和 TypeScript 类型推断，执行结果包含 text、error、results 等结构化字段，便于前端集成和结果展示。
 
 ### 3. 沙箱隔离引擎
 基于轻量级虚拟化技术构建的隔离运行环境。每个沙箱拥有独立的文件系统、进程树和网络栈，确保 AI 生成代码的安全执行。沙箱支持快速创建和销毁（毫秒级启动），适合高频 Agent 交互场景。
@@ -51,7 +51,7 @@ E2B 提供了丰富的 Cookbook 示例，展示了与不同 LLM（OpenAI、Anthr
 
 ## 技术亮点
 1. **毫秒级沙箱启动**：轻量级虚拟化技术实现沙箱的快速创建和销毁，适合高频 Agent 交互
-2. **有状态执行**：支持在多次 `run_code` 调用间保持变量和运行时状态，完美匹配 AI Agent 的迭代编程模式
+2. **有状态执行**：支持在多次 run_code 调用间保持变量和运行时状态，完美匹配 AI Agent 的迭代编程模式
 3. **双语言 SDK**：同时提供 Python 和 JavaScript SDK，覆盖服务端和前端两大开发场景
 4. **结构化结果输出**：执行结果包含 text、error、results 等结构化字段，便于下游处理和展示
 5. **行业广泛采用**：被 OpenHands、Cursor、GPT Engineer 等主流 AI 编程工具采用为执行基础设施

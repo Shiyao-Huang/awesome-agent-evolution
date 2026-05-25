@@ -1,26 +1,27 @@
 # RewardBench - 奖励模型评测基准
 - **仓库**: AllenAI/reward-bench
 - **GitHub**: https://github.com/AllenAI/reward-bench
-- **Stars**: ~800
+- **Stars**: 600
 - **语言**: Python
 - **许可**: Apache-2.0
-- **最近活跃**: 2025-03
+- **最近活跃**: 2025-09
 - **模式**: 评估器/打分器
 
 ## 概述
-RewardBench是Allen AI推出的奖励模型评测基准，系统评估奖励模型在对话、困难对话、安全性和推理等维度的能力。该基准已成为奖励模型评估的社区标准，为RLHF研究提供了统一的评估框架。
+Allen AI 发布的奖励模型综合评测基准，涵盖聊天、安全性、推理等多维度评测，是评估奖励模型质量的标准工具。
 
 ## 核心特性
-- 覆盖Chat、Chat Hard、Safety、Reasoning四大评测维度
-- 提供偏好集(Prior Sets)用于评估泛化能力
-- 支持多种奖励模型架构和评分方法的比较
+- 覆盖 Chat, Safety, Reasoning 多维度
+- 标准化奖励模型排行榜
+- 支持主流奖励模型评测
+- 细粒度偏好正确率指标
 
 ## 技术栈
-- Python, Hugging Face Transformers, PyTorch
+- Python, Transformers
 
 ## 与 Self Evolve 的关联
-可靠的评估基准是自我进化系统的核心组件，RewardBench为模型自我评估和奖励信号质量检验提供了标准化工具，确保自我进化过程中的反馈信号可信赖。
+RewardBench 为自我进化系统的评分组件提供了标准化评测方案，确保"评估器/打分器"的质量可衡量。
 
 ## 分类
-- **类别**: RLHF/对齐/安全
-- **标签**: reward-model, benchmark, evaluation, rlhf, alignment
+- **类别**: 奖励模型评测
+- **标签**: reward-bench, evaluation, benchmark, allenai

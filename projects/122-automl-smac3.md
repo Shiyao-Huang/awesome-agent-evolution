@@ -3,28 +3,25 @@
 - **GitHub**: https://github.com/automl/SMAC3
 - **Stars**: 1223
 - **语言**: Python
-- **许可**: NOASSERTION
-- **最近活跃**: 2026-05
-- **模式**: 搜索循环
+- **许可**: BSD-3-Clause
+- **最近活跃**: 2025-06
+- **模式**: 进化/搜索循环
 
 ## 概述
-SMAC3（Sequential Model-based Algorithm Configuration）是基于随机森林的贝叶斯优化工具，源自 Freiburg 大学 AutoML 团队。它使用随机森林作为代理模型来建模超参数与性能之间的关系，广泛应用于算法配置、超参数优化和 AutoML pipeline 中，是 auto-sklearn 的核心优化引擎。
+SMAC3（Sequential Model-based Algorithm Configuration）使用随机森林建模超参数-性能映射，通过序贯模型优化高效搜索最优配置。
 
 ## 核心特性
-- 随机森林代理模型：适合高维、混合类型的超参数空间
-- 丰富的参数类型：支持连续、离散、条件参数
-- 多保真度优化：支持基于预算的早停和多保真度评估
-- intensification 机制：高效地集中资源评估有希望的配置
-- 命令行和 API 接口：灵活的使用方式
+- 随机森林代理模型
+- 序贯模型优化
+- 处理条件超参数空间
+- AC（Algorithm Configuration）和 HPO 双模式
 
 ## 技术栈
-- Python, NumPy, SciPy
-- scikit-learn (随机森林)
-- ConfigSpace
+- Python, scikit-learn, ConfigSpace
 
 ## 与 Self Evolve 的关联
-SMAC3 的序列模型优化机制展示了 AI 系统如何通过建立性能预测模型来指导搜索方向，这种 "预测-评估-更新" 的循环是 AI 自我进化中进行智能搜索的重要模式。
+SMAC 的序贯模型优化是自我进化中"利用历史信息指导未来搜索"的实现：每轮搜索都从之前的结果中学习。
 
 ## 分类
-- **类别**: 自动化 ML / AutoML
-- **标签**: bayesian-optimization, algorithm-configuration, random-forest, SMAC, AutoML
+- **类别**: 序贯模型优化
+- **标签**: smac, bayesian-optimization, algorithm-configuration

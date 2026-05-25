@@ -1,184 +1,170 @@
 #!/usr/bin/env python3
 """
-Daily Report Generator - 每日数据报告生成
+Daily Report Generator — Comprehensive analysis report.
 
-汇总所有采集数据，生成日级/周级/月级报告
-
-用法:
-  python daily_report.py --input ../storage/ --output ../storage/analysis/
-  python daily_report.py --input ../storage/ --format markdown
+Aggregates outputs from hype_scorer, anomaly_detector, and propagation_rebuilder
+into a unified Markdown report for the team.
 """
 
 import argparse
 import json
 import os
-import sys
 from datetime import datetime
 from pathlib import Path
 
 
-def load_json(filepath):
-    try:
-        with open(filepath, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
+def load_json(path: str):
+    if not os.path.exists(path):
         return None
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
-def generate_daily_digest(storage_dir, output_dir, report_date=None):
-    """生成每日摘要报告"""
-    snapshots_dir = storage_dir / "daily_snapshots"
-    propagation_dir = storage_dir / "propagation"
+def render_hype_section(hype_data: dict) -> str:
+    """Render hype score rankings as Markdown table."""
+    if not hype_data or not hype_data.get("results"):
+        return "## Hype Scores\n\nNo hype score data available.\n"
 
-    if not report_date:
-        report_date = datetime.utcnow().strftime("%Y-%m-%d")
-
-    repos = {}
-
-    # 收集 star 数据
-    if snapshots_dir.exists():
-        for f in snapshots_dir.glob("*.json"):
-            if any(f.stem.endswith(s) for s in ["_forks", "_issues", "_events"]):
-                continue
-            data = load_json(f)
-            if data:
-                repo = data.get("repo", f.stem)
-                meta = data.get("metadata", {})
-                summary = data.get("summary", {})
-                repos[repo] = {
-                    "stars": meta.get("stars", 0),
-                    "forks": meta.get("forks", 0),
-                    "language": meta.get("language"),
-                    "days_to_1k": summary.get("days_to_1k"),
-                    "days_to_10k": summary.get("days_to_10k"),
-                    "days_to_100k": summary.get("days_to_100k"),
-                    "peak_day": summary.get("peak_day", {}).get("date") if summary.get("peak_day") else None,
-                    "collected_at": data.get("collected_at"),
-                }
-
-    # 收集 fork 数据
-    if snapshots_dir.exists():
-        for f in snapshots_dir.glob("*_forks.json"):
-            data = load_json(f)
-            if data:
-                repo = data.get("repo", "")
-                if repo in repos:
-                    q = data.get("fork_quality", {})
-                    repos[repo]["fork_push_pct"] = q.get("forks_with_push_pct")
-                    repos[repo]["fork_active_30d_pct"] = q.get("forks_active_30d_pct")
-
-    # 收集 issue 数据
-    if snapshots_dir.exists():
-        for f in snapshots_dir.glob("*_issues.json"):
-            data = load_json(f)
-            if data:
-                repo = data.get("repo", "")
-                if repo in repos:
-                    iq = data.get("issue_quality", {})
-                    repos[repo]["issue_comment_rate"] = iq.get("comment_rate")
-                    repos[repo]["pr_merge_rate"] = data.get("pr_stats", {}).get("pr_merge_rate")
-
-    # 收集 HN 数据
-    if propagation_dir.exists():
-        for f in propagation_dir.glob("*_hn.json"):
-            data = load_json(f)
-            if data:
-                repo = data.get("repo", "")
-                if repo in repos:
-                    s = data.get("summary", {})
-                    repos[repo]["hn_total_mentions"] = data.get("total_mentions", 0)
-                    repos[repo]["hn_total_points"] = s.get("total_points_all") if s else None
-
-    # 排名
-    ranked_by_stars = sorted(repos.items(), key=lambda x: x[1].get("stars", 0), reverse=True)
-
-    # 生成报告
-    report = {
-        "report_date": report_date,
-        "generated_at": datetime.utcnow().isoformat() + "Z",
-        "total_projects": len(repos),
-        "top_by_stars": [(r, d.get("stars")) for r, d in ranked_by_stars[:20]],
-        "projects": repos,
-    }
-
-    return report
-
-
-def generate_markdown_report(report):
-    """生成 Markdown 报告"""
     lines = [
-        f"# 传播链数据引擎 — 每日报告",
-        f"",
-        f"> **日期**: {report['report_date']}",
-        f"> **项目数**: {report['total_projects']}",
-        f"> **生成时间**: {report['generated_at']}",
-        f"",
-        f"## Star 排名 Top 20",
-        f"",
-        f"| # | 项目 | Stars | Forks | Fork质量 | PR合并率 | HN提及 |",
-        f"|---|------|-------|-------|---------|---------|--------|",
+        "## Hype Score Rankings\n",
+        f"**Total projects scored**: {hype_data['total_projects']}  ",
+        f"**Generated**: {hype_data.get('generated_at', 'N/A')}\n",
+        "| # | Project | Stars | Score | Suspicion | Growth Class |",
+        "|---|---------|-------|-------|-----------|-------------|",
     ]
 
-    for i, (repo, data) in enumerate(report.get("projects", {}).items(), 1):
-        if i > 20:
-            break
-        stars = f"{data.get('stars', 0):,}" if data.get('stars') else "-"
-        forks = f"{data.get('forks', 0):,}" if data.get('forks') else "-"
-        fork_q = f"{data.get('fork_push_pct', '-')}%" if data.get('fork_push_pct') is not None else "-"
-        pr_rate = f"{data.get('pr_merge_rate', '-')}%" if data.get('pr_merge_rate') is not None else "-"
-        hn = str(data.get('hn_total_mentions', '-'))
-        lines.append(f"| {i} | {repo} | {stars} | {forks} | {fork_q} | {pr_rate} | {hn} |")
+    for i, r in enumerate(hype_data["results"], 1):
+        score = r.get("composite_score", "N/A")
+        suspicion = r.get("suspicion_index", "N/A")
+        growth = r.get("growth_class", "N/A")
+        stars = r.get("stars", "N/A")
+        lines.append(
+            f"| {i} | {r['project']} | {stars} | {score} | {suspicion} | {growth} |"
+        )
 
-    lines.extend([
-        "",
-        "## 里程碑分析",
-        "",
-        "| 项目 | →1K天 | →10K天 | →100K天 | 峰值日 |",
-        "|------|-------|--------|---------|--------|",
-    ])
+    return "\n".join(lines) + "\n"
 
-    for repo, data in report.get("projects", {}).items():
-        d1k = str(data.get("days_to_1k", "-"))
-        d10k = str(data.get("days_to_10k", "-"))
-        d100k = str(data.get("days_to_100k", "-"))
-        peak = data.get("peak_day", "-")
-        if any(v != "-" for v in [d1k, d10k, d100k]):
-            lines.append(f"| {repo} | {d1k} | {d10k} | {d100k} | {peak} |")
 
-    lines.extend([
-        "",
-        "---",
-        f"*传播链数据引擎 · {report['report_date']}*",
-    ])
+def render_anomaly_section(anomaly_data: dict) -> str:
+    """Render anomaly detection results."""
+    if not anomaly_data or not anomaly_data.get("results"):
+        return "## Anomaly Detection\n\nNo anomaly data available.\n"
+
+    flagged = [r for r in anomaly_data["results"] if r.get("status") == "flagged"]
+    lines = [
+        "## Anomaly Detection\n",
+        f"**Total checked**: {anomaly_data['total_projects']}  ",
+        f"**Flagged**: {anomaly_data['flagged_projects']}\n",
+    ]
+
+    if not flagged:
+        lines.append("No anomalies detected. All projects appear clean.\n")
+        return "\n".join(lines)
+
+    lines.append("### Flagged Projects\n")
+    for r in flagged:
+        lines.append(f"#### {r['project']}")
+        lines.append(f"- Stars: {r.get('stars', 'N/A')}")
+        lines.append(f"- Anomaly count: {r['anomaly_count']}\n")
+        for a in r.get("anomalies", []):
+            if a.get("detected"):
+                lines.append(f"- **{a['check']}**: {a.get('detail', '')}")
+        lines.append("")
 
     return "\n".join(lines)
 
 
+def render_propagation_section(prop_data: dict) -> str:
+    """Render propagation chain summaries."""
+    if not prop_data or not prop_data.get("chains"):
+        return "## Propagation Chains\n\nNo propagation data available.\n"
+
+    lines = [
+        "## Propagation Chains\n",
+        f"**Total projects**: {prop_data['total_projects']}\n",
+    ]
+
+    for c in prop_data["chains"]:
+        platforms = ", ".join(c["platforms"].keys()) if c["platforms"] else "none"
+        events = len(c["timeline"])
+        lines.append(f"### {c['project']}")
+        lines.append(f"- Platforms: {platforms}")
+        lines.append(f"- Timeline events: {events}")
+        if c["timeline"]:
+            lines.append("\n**Key events:**\n")
+            for evt in c["timeline"][:10]:  # Top 10 events
+                date = evt.get("date", "?")[:10]
+                lines.append(f"- {date} [{evt['platform']}] {evt.get('detail', evt.get('event', ''))}")
+            if events > 10:
+                lines.append(f"- ... and {events - 10} more events")
+        lines.append("")
+
+    return "\n".join(lines)
+
+
+def generate_daily_report(storage_dir: str, output_dir: str) -> str:
+    """Generate the full daily report."""
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Load analysis results
+    hype_data = load_json(os.path.join(output_dir, "hype_scores.json"))
+    anomaly_data = load_json(os.path.join(output_dir, "anomaly_report.json"))
+
+    # Load propagation chains
+    propagation_dir = os.path.join(storage_dir, "propagation")
+    prop_data = load_json(os.path.join(propagation_dir, "propagation_chains.json"))
+
+    now = datetime.utcnow()
+    date_str = now.strftime("%Y-%m-%d")
+
+    report = f"""# Data Engine Daily Report
+
+> **Generated**: {now.isoformat()}Z
+> **Date**: {date_str}
+
+---
+
+{render_hype_section(hype_data)}
+
+---
+
+{render_anomaly_section(anomaly_data)}
+
+---
+
+{render_propagation_section(prop_data)}
+
+---
+
+## Methodology
+
+- **Hype Scoring**: 5-dimension weighted score (star activity, contributor diversity, fork quality, issue quality, PR merge rate)
+- **Anomaly Detection**: 6 checks (burst growth, low fork quality, high star/contributor ratio, issue spam, activity drop, bot-like stars)
+- **Propagation Chains**: Cross-platform timeline reconstruction (GitHub, HN, Reddit, Semantic Scholar, Chinese media)
+
+---
+
+*Self Evolve Data Engine — {date_str}*
+"""
+
+    # Write report
+    report_path = os.path.join(output_dir, f"daily_report_{date_str}.md")
+    with open(report_path, "w", encoding="utf-8") as f:
+        f.write(report)
+
+    print(f"[daily_report] Generated → {report_path}")
+    return report_path
+
+
 def main():
     parser = argparse.ArgumentParser(description="Daily Report Generator")
-    parser.add_argument("--input", default="../storage", help="Storage directory")
-    parser.add_argument("--output", default="../storage/analysis", help="Output directory")
-    parser.add_argument("--date", help="Report date (YYYY-MM-DD)")
-    parser.add_argument("--format", choices=["json", "markdown"], default="markdown")
+    parser.add_argument("--input", default="./storage",
+                        help="Input storage directory")
+    parser.add_argument("--output", default="./storage/analysis",
+                        help="Output directory for report")
     args = parser.parse_args()
 
-    storage_dir = Path(args.input)
-    output_dir = Path(args.output)
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    report = generate_daily_digest(storage_dir, output_dir, args.date)
-
-    if args.format == "markdown":
-        md = generate_markdown_report(report)
-        report_file = output_dir / f"daily_report_{report['report_date']}.md"
-        with open(report_file, "w", encoding="utf-8") as f:
-            f.write(md)
-        print(f"Report saved: {report_file}")
-    else:
-        report_file = output_dir / f"daily_report_{report['report_date']}.json"
-        with open(report_file, "w", encoding="utf-8") as f:
-            json.dump(report, f, indent=2, ensure_ascii=False)
-        print(f"Report saved: {report_file}")
+    generate_daily_report(args.input, args.output)
 
 
 if __name__ == "__main__":

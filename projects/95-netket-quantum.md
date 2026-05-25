@@ -1,31 +1,27 @@
-# NetKet - 量子物理机器学习框架
+# NetKet - 量子物理机器学习
 - **仓库**: netket/netket
 - **GitHub**: https://github.com/netket/netket
-- **Stars**: ~1.5K
-- **语言**: Python / Julia / C++
+- **Stars**: 1500
+- **语言**: Python, Julia
 - **许可**: Apache-2.0
-- **最近活跃**: 2026-04
+- **最近活跃**: 2026-05
 - **模式**: 训练/数据循环
 
 ## 概述
-NetKet是一个专注于量子物理系统的机器学习框架，提供基于神经网络的量子态变分方法（Neural Quantum States）。它支持多种神经网络架构用于求解多体量子系统的基态和动力学问题。
+NetKet 是量子多体物理的机器学习库，使用神经量子态（Neural Quantum States）方法求解量子系统的基态和动力学性质。
 
 ## 核心特性
-- 神经网络量子态（NQS）变分蒙特卡洛
-- 支持多种网络架构（RBM、FFNN、Jastrow、CNN等）
-- 自动微分和高效采样器
-- 丰富的量子系统模型库（Ising、Heisenberg、Bose-Hubbard等）
+- 神经网络量子态表示
+- VMC（变分蒙特卡洛）优化
+- 支持多种神经网络架构
+- 丰富的量子系统 Hamiltonian 库
 
 ## 技术栈
-- Python
-- JAX
-- NumPy
-- MPI (分布式计算)
-- NetworkX
+- Python, JAX, Flax, NumPy
 
 ## 与 Self Evolve 的关联
-NetKet通过变分优化循环让神经网络不断逼近量子系统的精确解，是训练/数据循环在量子物理领域的前沿应用。
+NetKet 的变分优化是"训练/数据循环"在量子物理中的应用：通过蒙特卡洛采样和梯度优化持续改进量子态表示。
 
 ## 分类
-- **类别**: AI4Science
-- **标签**: quantum-physics, machine-learning, neural-quantum-states, variational-methods
+- **类别**: 量子物理 ML
+- **标签**: netket, quantum, neural-quantum-state, vmc

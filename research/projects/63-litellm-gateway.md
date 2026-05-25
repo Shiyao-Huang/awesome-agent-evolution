@@ -65,7 +65,7 @@ litellm/
 支持 Agent-to-Agent (A2A) 协议，可调用 LangGraph、Vertex AI Agent Engine、Azure AI Foundry 等 Agent 平台。支持 MCP（Model Context Protocol）工具网关，可连接 MCP 服务器并通过标准 API 调用工具。MCP 网关支持 Cursor IDE 集成和 OAuth 认证。
 
 ## 技术亮点
-1. **100+ Provider 统一接口**：一个 `completion()` 函数调用所有 LLM，所有 Provider 特定逻辑封装在转换层
+1. **100+ Provider 统一接口**：一个 completion() 函数调用所有 LLM，所有 Provider 特定逻辑封装在转换层
 2. **8ms P95 延迟**：在 1k RPS 负载下实现极低延迟，适合生产环境
 3. **Router 容错系统**：多部署重试/回退、成本/延迟感知路由、连接池管理
 4. **虚拟密钥管理**：完整的 API 密钥生命周期管理，支持按项目/用户的预算控制和权限管理

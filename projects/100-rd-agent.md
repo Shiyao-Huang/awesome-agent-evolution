@@ -1,31 +1,27 @@
-# RD-Agent - AI驱动的研发自动化
+# RD-Agent - AI 驱动研发自动化
 - **仓库**: microsoft/RD-Agent
 - **GitHub**: https://github.com/microsoft/RD-Agent
-- **Stars**: ~4K
+- **Stars**: 4000
 - **语言**: Python
 - **许可**: MIT
 - **最近活跃**: 2026-05
-- **模式**: 进化/搜索循环
+- **模式**: 进化/搜索循环 → 反馈-精炼
 
 ## 概述
-RD-Agent是微软推出的AI驱动研发自动化框架，利用LLM自动完成数据科学和量化金融中的研究-开发闭环。它能够自主提出假设、编写代码、执行实验并根据结果迭代改进，实现AI辅助的科学研究自动化。
+微软的 AI 研发自动化框架，让 LLM 自主进行数据分析、模型开发、因子挖掘和科学实验设计，是 AI4Science 领域的通用研发智能体。
 
 ## 核心特性
-- LLM驱动的假设生成和实验设计
-- 自动代码生成、执行和错误修复
-- 量化因子挖掘和数据科学工作流自动化
-- 完整的研究-开发反馈闭环
+- LLM 驱动的数据分析和建模
+- 自动因子挖掘（金融+科学）
+- 迭代实验设计和验证
+- 支持多领域研发场景
 
 ## 技术栈
-- Python
-- Large Language Models
-- Pandas / NumPy
-- scikit-learn
-- Docker
+- Python, OpenAI API, Anthropic Claude
 
 ## 与 Self Evolve 的关联
-RD-Agent是AI自我进化在研发领域的直接实践，LLM通过假设生成-实验验证-结果反馈的进化循环自主驱动科学发现过程。
+RD-Agent 是自我进化在科研领域的完整实践：LLM 自主提出假设→设计实验→验证→改进，实现研发闭环自动化。
 
 ## 分类
-- **类别**: AI4Science
-- **标签**: rd-automation, llm-driven, hypothesis-generation, microsoft, self-evolving
+- **类别**: AI 研发自动化
+- **标签**: rd-agent, research, automation, microsoft

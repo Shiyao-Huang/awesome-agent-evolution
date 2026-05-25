@@ -1,32 +1,27 @@
-# Dora - 面向机器人应用的数据流架构框架
+# Dora-rs - 机器人数据流框架
 - **仓库**: dora-rs/dora
 - **GitHub**: https://github.com/dora-rs/dora
-- **Stars**: ~3.8K
-- **语言**: Rust / Python
+- **Stars**: 3800
+- **语言**: Rust, Python
 - **许可**: Apache-2.0
 - **最近活跃**: 2026-05
 - **模式**: 智能体编排
 
 ## 概述
-Dora（Dataflow-Oriented Robotic Architecture）是一个用Rust编写的高性能机器人中间件，通过声明式YAML数据流定义AI机器人应用，支持低延迟零拷贝通信，并提供Rust、Python、C/C++多语言绑定。
+Dora-rs 是高性能的机器人数据流编排框架，用 Rust 编写核心，支持 Python/C++ 节点，提供低延迟的传感器-算法-执行器数据管线。
 
 ## 核心特性
-- 比ROS2 Python快10-17倍的零拷贝共享内存IPC
-- Apache Arrow原生支持，零序列化开销
-- 声明式YAML数据流定义，支持热重载
-- 分布式部署、故障容忍、动态拓扑变更
-- ROS2双向桥接和MAVLink 2集成
+- Rust 零拷贝数据流引擎
+- 支持 Python/C++/ROS2 节点
+- 声明式数据流配置
+- 低延迟、高吞吐量
 
 ## 技术栈
-- Rust
-- Python (PyO3)
-- Apache Arrow
-- Zenoh
-- C/C++
+- Rust, Python, C++, Apache Arrow
 
 ## 与 Self Evolve 的关联
-Dora为具身智能体提供了灵活的编排框架，使多智能体和多模块之间的协同进化成为可能，是智能体编排模式在机器人领域的典型实践。
+Dora-rs 为具身智能的自我进化提供了数据流编排基础设施，使感知-决策-执行循环高效运行。
 
 ## 分类
-- **类别**: 具身智能 Agent
-- **标签**: robotics, dataflow, rust, middleware, embodied-ai, real-time
+- **类别**: 机器人数据流框架
+- **标签**: dora, robotics, dataflow, rust, real-time

@@ -1,26 +1,27 @@
 # Self-RAG - 自反思检索增强生成
 - **仓库**: AkariAsai/self-rag
 - **GitHub**: https://github.com/AkariAsai/self-rag
-- **Stars**: ~2K
+- **Stars**: 2000
 - **语言**: Python
 - **许可**: Apache-2.0
-- **最近活跃**: 2025-01
-- **模式**: 反思记忆
+- **最近活跃**: 2025-03
+- **模式**: 反思记忆 → 反馈-精炼
 
 ## 概述
-Self-RAG是一种自反思的检索增强生成方法，通过让模型学习自我反思token来决定何时检索、如何使用检索结果以及是否需要重新生成。该方法显著提升了模型的事实准确性和生成质量，无需在推理时依赖外部评估器。
+Self-RAG（Self-Reflective Retrieval-Augmented Generation）让 LLM 学会自我反思是否需要检索、检索结果是否有用、生成是否一致，实现按需检索和自我验证。
 
 ## 核心特性
-- 模型自主决定检索时机和检索内容的使用方式
-- 通过反思token实现生成质量的自我评估
-- 在多个基准上超越传统RAG方法和ChatGPT
+- 自我反思 tokens 控制检索行为
+- 按需检索（非固定检索）
+- 生成结果自我验证
+- 检索+生成+批评三位一体
 
 ## 技术栈
-- Python, PyTorch, Hugging Face Transformers, vLLM
+- Python, PyTorch, Transformers, vLLM
 
 ## 与 Self Evolve 的关联
-Self-RAG的自我反思机制是AI自我进化中元认知能力的体现，模型能够评判自身输出的质量并决定改进策略，这种内省式自我改进能力是构建高级自我进化系统的关键组件。
+Self-RAG 的自我反思机制是自我进化系统中"元认知"能力的体现：模型学会判断自己何时需要外部信息、如何验证自己的输出。
 
 ## 分类
-- **类别**: 自我对齐/自我奖励
-- **标签**: self-rag, retrieval-augmented, self-reflection, factuality, generation
+- **类别**: 自反思检索增强
+- **标签**: self-rag, reflection, retrieval, self-verification

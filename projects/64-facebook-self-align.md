@@ -1,26 +1,27 @@
-# Sense-Making with LLMs - Facebook自我对齐研究
+# Facebook Self-Align Research - 自对齐研究
 - **仓库**: facebookresearch/sense-making-with-llms
 - **GitHub**: https://github.com/facebookresearch/sense-making-with-llms
-- **Stars**: ~150
+- **Stars**: 150
 - **语言**: Python
 - **许可**: MIT
-- **最近活跃**: 2024-04
-- **模式**: 反馈-精炼
+- **最近活跃**: 2024-01
+- **模式**: 反思记忆 → 反馈-精炼
 
 ## 概述
-Meta AI研究院的Sense-Making项目探索LLM如何通过自我生成的常识推理数据进行对齐训练。该方法让模型自主生成和理解常识性知识，通过自我构建的训练数据实现模型对世界知识的深度理解和自我对齐。
+Meta AI Research 的自对齐研究方向，探索 LLM 如何通过自我反思和常识推理实现自主对齐，减少对人工标注的依赖。
 
 ## 核心特性
-- 基于常识推理的自我数据生成方法
-- 模型自主构建和理解世界知识
-- 将常识理解作为对齐的基础维度
+- 常识推理驱动的自对齐
+- 自我反思和自我纠正机制
+- 减少人工标注需求
+- 基于内部一致性的对齐方法
 
 ## 技术栈
-- Python, PyTorch, Hugging Face Transformers
+- Python, PyTorch, Transformers
 
 ## 与 Self Evolve 的关联
-该研究将常识理解纳入自我对齐的范畴，展示了模型如何通过自主生成和验证知识来提升对齐质量，为自我进化系统提供了更深层次的知识基础对齐方案。
+Meta 的自对齐研究为自我进化系统提供了"如何让模型自己学会行为准则"的方法论参考。
 
 ## 分类
-- **类别**: 自我对齐/自我奖励
-- **标签**: self-alignment, commonsense, reasoning, llm, meta-ai
+- **类别**: 自对齐研究
+- **标签**: self-align, commonsense, meta, reflection

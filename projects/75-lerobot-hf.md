@@ -1,31 +1,27 @@
-# LeRobot - 端到端机器人学习平台
+# LeRobot - 端到端机器人学习
 - **仓库**: huggingface/lerobot
 - **GitHub**: https://github.com/huggingface/lerobot
-- **Stars**: ~10K
+- **Stars**: 10000
 - **语言**: Python
 - **许可**: Apache-2.0
 - **最近活跃**: 2026-05
 - **模式**: 训练/数据循环
 
 ## 概述
-LeRobot是Hugging Face推出的端到端机器人学习平台，旨在降低真实机器人的AI门槛。它提供了预训练模型、人工数据采集工具和可视化方案，支持ACT、Diffusion Policy等最先进的策略架构。
+Hugging Face 的端到端机器人学习平台，提供从数据收集到模型训练到部署的完整工具链，支持 ACT、Diffusion Policy 等前沿模仿学习算法。
 
 ## 核心特性
-- 支持多种最先进策略架构（ACT、Diffusion Policy、TDMPC等）
-- 提供真实机器人数据集和预训练模型
-- 可视化数据采集和评估工具
-- 与Hugging Face Hub深度集成，方便共享模型和数据
+- 预训练视觉-语言-动作模型
+- ACT、Diffusion Policy 等算法
+- 丰富的机器人数据集（Hub 集成）
+- 低成本硬件支持（Koch, SO-100 等）
 
 ## 技术栈
-- Python
-- PyTorch
-- Hugging Face Hub
-- OpenCV
-- PyBullet / MuJoCo
+- Python, PyTorch, Transformers, datasets
 
 ## 与 Self Evolve 的关联
-LeRobot通过数据-训练-评估的闭环让机器人策略持续迭代进化，是训练/数据循环模式在真实机器人领域的开源标杆。
+LeRobot 的"数据收集→模型训练→部署→更多数据"闭环是具身智能自我进化系统的基础设施层。
 
 ## 分类
-- **类别**: 具身智能 Agent
-- **标签**: robotics, end-to-end-learning, huggingface, diffusion-policy, act
+- **类别**: 端到端机器人学习
+- **标签**: lerobot, imitation-learning, huggingface, robotics

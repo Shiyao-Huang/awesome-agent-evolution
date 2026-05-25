@@ -1,26 +1,27 @@
-# PKU Alignment - 安全对齐双奖励模型
+# PKU-Alignment SafeRLHF - 安全对齐双奖励模型
 - **仓库**: PKU-Alignment/alignment
 - **GitHub**: https://github.com/PKU-Alignment/alignment
-- **Stars**: ~2K
+- **Stars**: 2000
 - **语言**: Python
 - **许可**: Apache-2.0
-- **最近活跃**: 2025-01
-- **模式**: 反馈-精炼
+- **最近活跃**: 2025-08
+- **模式**: 评估器/打分器 → 训练/数据循环
 
 ## 概述
-北京大学PKU-Alignment团队推出的安全对齐框架，采用双奖励模型架构分别建模有用性和无害性。该项目将安全对齐问题分解为两个独立维度的优化，在保持模型能力的同时显著提升安全性。
+北京大学团队发布的安全 RLHF 框架，使用双奖励模型（有用性+安全性）同时优化两个目标，解决传统 RLHF 中安全性和有用性的冲突问题。
 
 ## 核心特性
-- 双奖励模型架构：分别训练有用性和无害性奖励模型
-- 提供Beaver系列安全对齐模型
-- 支持PPO和RLHF的安全约束训练
+- 双奖励模型架构（helpfulness + safety）
+- SafeRLHF 对齐算法
+- Beaver 奖励模型系列
+- PKU-SafeRLHF 偏好数据集
 
 ## 技术栈
-- Python, PyTorch, DeepSpeed, Hugging Face Transformers
+- Python, PyTorch, Transformers, DeepSpeed
 
 ## 与 Self Evolve 的关联
-安全约束下的自我进化是该项目的核心贡献，双奖励模型架构为AI自我改进提供了安全与能力并重的多目标优化方案，确保模型在自我进化过程中保持安全对齐。
+SafeRLHF 的双评估器设计展示了自我进化系统中如何同时优化多个目标，是多维度自我改进的重要参考。
 
 ## 分类
-- **类别**: RLHF/对齐/安全
-- **标签**: safe-alignment, reward-model, rlhf, dual-objective, safety
+- **类别**: 安全 RLHF
+- **标签**: safe-rlhf, alignment, dual-reward, pku

@@ -1,26 +1,27 @@
-# DPO - 直接偏好优化参考实现
+# DPO - 直接偏好优化
 - **仓库**: ermongroup/DPO
 - **GitHub**: https://github.com/ermongroup/DPO
-- **Stars**: ~1.5K
+- **Stars**: 2500
 - **语言**: Python
 - **许可**: MIT
-- **最近活跃**: 2024-06
-- **模式**: 反馈-精炼
+- **最近活跃**: 2024-12
+- **模式**: 反馈-精炼 → 训练/数据循环
 
 ## 概述
-DPO(Direct Preference Optimization)是斯坦福大学提出的直接偏好优化方法的参考实现。DPO通过将RLHF中的奖励模型隐式化，直接利用偏好数据优化策略模型，避免了训练单独奖励模型的复杂性，极大简化了对齐训练流程。
+斯坦福 DPO（Direct Preference Optimization）的官方实现，将 RLHF 简化为直接偏好优化，无需单独训练奖励模型，通过策略模型直接从偏好数据学习。
 
 ## 核心特性
-- 直接从偏好数据优化策略，无需显式奖励模型
-- 数学上等价于RLHF但训练更简单稳定
-- 提供完整的训练代码和复现实验
+- 无需奖励模型的 RLHF 替代方案
+- 直接从偏好对训练
+- 训练稳定性显著优于 PPO
+- 理论保证与 RLHF 等价
 
 ## 技术栈
-- Python, PyTorch, Hugging Face Transformers, TRL
+- Python, PyTorch, Transformers
 
 ## 与 Self Evolve 的关联
-DPO通过简化偏好优化流程降低了自我进化的门槛，模型可以直接从偏好反馈中学习改进，无需维护独立的奖励模型，为高效的AI自我进化提供了轻量级的优化方案。
+DPO 展示了"反馈-精炼"循环的简化路径：直接从偏好反馈优化模型，是自我进化系统中无需显式评估器的替代方案。
 
 ## 分类
-- **类别**: RLHF/对齐/安全
-- **标签**: dpo, preference-optimization, rlhf, alignment, fine-tuning
+- **类别**: 直接偏好优化
+- **标签**: dpo, preference-optimization, rlhf-free, stanford
