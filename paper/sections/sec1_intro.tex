@@ -1,3 +1,7 @@
+% Section 1: Introduction
+% Self-Evolving AI: A Unified Framework for Generation, Evaluation, Memory, and Improvement
+% Target: 10,000-15,000 words
+
 \section{Introduction}
 \label{sec:intro}
 
@@ -11,34 +15,108 @@ This paper presents a comprehensive survey of AI self-evolution, drawing from an
 
 
 \subsection{From Static to Self-Evolving AI}
+\label{sec:intro:static-to-evolving}
 
-To understand the emergence of AI self-evolution, it is instructive to trace the historical trajectory from static to adaptive to self-improving systems.
+To understand the emergence of AI self-evolution, it is instructive to trace the historical trajectory from static to adaptive to self-improving systems. Each transition represents not merely an incremental improvement in capability but a qualitative shift in the relationship between the system and its own improvement process.
 
-\paragraph{Static AI systems.}
-Traditional AI systems are designed, trained, and deployed as fixed artifacts. A rule-based expert system encodes knowledge at design time. A supervised learning model is trained once on a fixed dataset and deployed without further modification. Even sophisticated deep learning systems---from ResNet to GPT-4---follow this pattern: the training phase produces a static set of parameters that are frozen at deployment. Performance improvement requires a new training run, typically initiated by human engineers who curate new data, design new architectures, or adjust hyperparameters. The system itself has no mechanism for autonomous improvement.
+\subsubsection{Static AI Systems}
 
-\paragraph{Adaptive AI systems.}
-The notion of adaptation introduces feedback into the deployed system. Online learning algorithms update model parameters in response to new data streams. Reinforcement learning agents adjust their policies based on reward signals from the environment. Continual learning systems attempt to acquire new knowledge without catastrophically forgetting old knowledge. These systems exhibit a form of improvement, but it is tightly circumscribed: the adaptation mechanism itself (the learning algorithm, the reward function, the replay buffer) is designed and fixed by human engineers. The system adapts \emph{within} its designed mechanism but cannot improve the mechanism itself.
+Traditional AI systems are designed, trained, and deployed as fixed artifacts. A rule-based expert system encodes knowledge at design time---the famous MYCIN system for bacterial infection diagnosis contained approximately 600 rules, each hand-crafted by domain experts~\cite{shortliffe1976mycin}. A supervised learning model is trained once on a fixed dataset and deployed without further modification. Even sophisticated deep learning systems---from ResNet~\cite{he2016deep} to GPT-4~\cite{achiam2023gpt4}---follow this pattern: the training phase produces a static set of parameters that are frozen at deployment. Performance improvement requires a new training run, typically initiated by human engineers who curate new data, design new architectures, or adjust hyperparameters. The system itself has no mechanism for autonomous improvement.
 
-\paragraph{Self-evolving AI systems.}
+The static paradigm has been enormously successful. Deep learning models now surpass human performance on specific benchmarks: image classification on ImageNet~\cite{he2016deep}, protein structure prediction~\cite{jumper2021alphafold}, and strategic game playing~\cite{silver2016mastering}. However, each of these achievements required years of human engineering---designing architectures, collecting and curating datasets, implementing training pipelines, and tuning hyperparameters. The cost of this engineering is substantial: training a frontier language model like GPT-4 is estimated to require tens of millions of dollars in compute, plus an even larger investment in human expertise.
+
+The fundamental limitation of static systems is their inability to adapt after deployment. A language model trained in 2023 cannot incorporate knowledge from 2024 without retraining. A code generation model cannot learn from its mistakes on a specific codebase. A game-playing agent cannot discover new strategies beyond those encoded in its training data. This rigidity creates a persistent gap between system capability and problem complexity, a gap that can only be closed through additional human engineering.
+
+\subsubsection{Adaptive AI Systems}
+
+The notion of adaptation introduces feedback into the deployed system, creating a first-order improvement loop. Online learning algorithms~\cite{cesa2006prediction} update model parameters in response to new data streams. Reinforcement learning agents~\cite{sutton2018rl} adjust their policies based on reward signals from the environment. Continual learning systems~\cite{parisi2019continual} attempt to acquire new knowledge without catastrophically forgetting old knowledge. These systems exhibit a form of improvement, but it is tightly circumscribed: the adaptation mechanism itself (the learning algorithm, the reward function, the replay buffer) is designed and fixed by human engineers. The system adapts \emph{within} its designed mechanism but cannot improve the mechanism itself.
+
+Adaptive systems represent a significant advance over static ones. Recommendation systems that adapt to user behavior, fraud detection systems that update their models daily, and game agents that learn from self-play all demonstrate that adaptation can produce substantial performance gains without human intervention in the adaptation loop. However, the scope of adaptation is constrained by the design choices made by human engineers: the learning rate, the reward structure, the state and action representations, and the model architecture are all fixed at design time.
+
+The critical distinction is between \emph{first-order} adaptation (modifying outputs or parameters within a fixed framework) and \emph{second-order} improvement (modifying the framework itself). Adaptive systems perform first-order adaptation; self-evolving systems perform second-order improvement.
+
+\subsubsection{Self-Evolving AI Systems}
+
 Self-evolving AI systems represent a qualitative leap beyond adaptation. A self-evolving system can modify not only its parameters or outputs but also the \emph{processes} by which it generates, evaluates, and refines its own artifacts. Concretely, a self-evolving AI system exhibits one or more of the following capabilities:
+
 \begin{itemize}
-    \item \textbf{Self-generation}: The system can propose novel candidate solutions, architectures, prompts, or strategies without explicit human instruction for each candidate.
-    \item \textbf{Self-evaluation}: The system can assess the quality of its own outputs through automated testing, benchmarking, or reward modeling, without requiring human judgment for every evaluation.
-    \item \textbf{Self-reflection}: The system can analyze its own failures and successes, extract lessons, and incorporate those lessons into future attempts.
-    \item \textbf{Self-composition}: The system can combine, recombine, and modularize its own components to explore a combinatorial space of possible improvements.
+    \item \textbf{Self-generation}: The system can propose novel candidate solutions, architectures, prompts, or strategies without explicit human instruction for each candidate. The generation process is guided by accumulated experience rather than predetermined templates.
+    \item \textbf{Self-evaluation}: The system can assess the quality of its own outputs through automated testing, benchmarking, or reward modeling, without requiring human judgment for every evaluation. The evaluation criteria may themselves evolve as the system gains experience.
+    \item \textbf{Self-reflection}: The system can analyze its own failures and successes, extract lessons, and incorporate those lessons into future attempts. The reflection produces structured, actionable knowledge rather than scalar scores.
+    \item \textbf{Self-composition}: The system can combine, recombine, and modularize its own components to explore a combinatorial space of possible improvements. The composition may produce artifacts that were not anticipated by the system's designers.
 \end{itemize}
 
-The key distinction from merely adaptive systems is that self-evolving systems can modify the \emph{search strategy} itself, not just the \emph{search result}. When Reflexion~\citep{shinn2023reflexion} stores linguistic feedback in a memory buffer and uses it to guide future attempts, it is not merely adapting to a new data point---it is building an explicit, queryable representation of its own failure modes. When AlphaEvolve~\citep{novikov2025alphaevolve} maintains a population of candidate algorithms and uses MAP-Elites quality-diversity search to explore the algorithmic landscape, it is not merely finding a good solution---it is evolving the evolutionary process itself. When ADAS~\citep{hu2024adas} searches over the space of agent architectures rather than the space of agent outputs, it is performing meta-optimization over the system's own structure.
+The key distinction from merely adaptive systems is that self-evolving systems can modify the \emph{search strategy} itself, not just the \emph{search result}. When Reflexion~\citep{shinn2023reflexion} stores linguistic feedback in a memory buffer and uses it to guide future attempts, it is not merely adapting to a new data point---it is building an explicit, queryable representation of its own failure modes. When AlphaEvolve~\citep{novikov2025alphaevolve} maintains a population of candidate algorithms and uses MAP-Elites quality-diversity search to explore the algorithmic landscape, it is not merely finding a good solution---it is evolving the evolutionary process itself. When ADAS~\citep{hu2024adas} searches over the space of agent architectures rather than the space of agent outputs, it is performing meta-optimization over the system's own structure. When the Darwin G\"odel Machine~\citep{zhang2025dgm} maintains an open-ended archive of agent implementations and iteratively modifies their code, it discovers agent architectures that human designers did not conceive.
 
-\paragraph{The LLM catalyst.}
+\subsubsection{The Spectrum of Self-Evolution}
+
+Self-evolving systems exist on a spectrum of complexity and autonomy. At one end are simple iterative refinement systems like Self-Refine~\citep{madaan2023selfrefine}, where a single LLM generates, critiques, and revises its own output in a short loop with no persistent memory. At the other end are complex evolutionary systems like the Darwin G\"odel Machine~\citep{zhang2025dgm} or AlphaEvolve~\citep{novikov2025alphaevolve}, which maintain populations of candidates, apply sophisticated evolutionary operators, and discover novel solutions that exceed human capability. Between these extremes lie systems like Reflexion~\citep{shinn2023reflexion} (verbal reinforcement learning with episodic memory), STaR~\citep{zelikman2022star} (self-taught reasoning through rationalization), ADAS~\citep{hu2024adas} (automated agent design through meta-agent search), and Absolute Zero~\citep{zhao2025absolutezero} (zero-data self-play reasoning), each representing different points on the spectrum.
+
+This spectrum can be characterized along several dimensions that we will use throughout this survey:
+\begin{itemize}
+\item \textbf{Scope of modification}: What aspects of the system can be modified? Prompts and outputs (Self-Refine), tool descriptions and pipelines (Agent Symbolic Learning), program code (FunSearch, OpenEvolve), neural network architectures (EvoPrompting), agent architectures (ADAS, G\"odel Agent), or neural weights (STaR, SPIN, ReST-EM).
+\item \textbf{Persistence of improvement}: Do improvements persist across sessions? Ephemeral improvements last only within a single interaction (Self-Refine), episodic improvements persist across related attempts (Reflexion), and permanent improvements involve parameter or code changes that endure indefinitely (STaR, SPIN, ADAS-discovered architectures).
+\item \textbf{Source of feedback}: Where does evaluation signal come from? Internal self-critique (Self-Refine, Constitutional AI), external execution (Self-Debug, FunSearch), reward models (ReST-EM, RISE), or human-provided ground truth (STaR).
+\item \textbf{Complexity of memory}: How is past experience stored? Context window only (Self-Refine), episodic buffer (Reflexion), population archive with fitness scores (AlphaEvolve), self-generated training data (STaR), or gradient updates to neural weights (SPIN).
+\item \textbf{Level of autonomy}: How much human involvement is required? Fully autonomous systems operate without any human intervention after initialization (AlphaEvolve, Absolute Zero), human-in-the-loop systems require periodic guidance (Constitutional AI), and human-initiated systems require human specification of each improvement target (most current AutoML systems).
+\end{itemize}
+
+\subsubsection{The LLM Catalyst}
+
 Why has this vision become actionable now? The answer lies in the unique properties of large language models as general-purpose reasoning, generation, and evaluation engines. Traditional self-improving systems required hand-crafted search spaces, domain-specific mutation operators, and manually designed fitness functions. LLMs collapse these requirements into a single, flexible interface: natural language. A language model can generate code without a hand-coded code generator, critique its own output without a hand-coded evaluator, and propose novel strategies without a hand-coded search operator. This universality is what enables the cross-domain convergence we observe.
+
+The LLM's role as a universal cognitive engine manifests in several ways:
+
+\paragraph{Universal generation.} The same LLM can generate Python functions for mathematical optimization (as in FunSearch~\citep{romera2024funsearch}), propose neural network architectures in code (as in EvoPrompting~\citep{chen2023evoprompting}), create agent system prompts (as in Agent Symbolic Learning~\citep{zhou2024agentsymbolic}), and design multi-step reasoning strategies (as in Self-Refine~\citep{madaan2023selfrefine}). The generation mechanism is always the same---predict the next token given a context---but the outputs span fundamentally different artifact types.
+
+\paragraph{Universal evaluation.} LLMs can evaluate their own outputs through self-critique (Self-Refine), through execution feedback interpretation (Self-Debug~\citep{chen2023selfdebug}), through comparison with demonstrations (STaR~\citep{zelikman2022star}), and through principle-based assessment (Constitutional AI~\citep{bai2022constitutional}). This evaluative flexibility eliminates the need for task-specific evaluation modules.
+
+\paragraph{Universal memory.} LLMs can store experience as natural language narratives in context windows (Reflexion), as structured program archives (AlphaEvolve), as population databases with fitness scores (LLaMEA~\citep{van2024llaMEA}), or as parameter updates through self-generated training data (STaR, SPIN~\citep{chen2024spin}). The same underlying model can read and reason about all of these memory formats.
 
 Consider the OPRO system~\citep{yang2023opro}, which uses an LLM as a general-purpose optimizer: the optimization problem is specified in natural language, the optimizer reads a history of past solutions and scores, and proposes new candidates. The same framework applies to prompt optimization, linear regression, and combinatorial optimization---the only change is the natural language description of the objective. This generality would be impossible with traditional optimization algorithms, which require mathematical formulations and gradient access.
 
 Similarly, FunSearch~\citep{romera2024funsearch} demonstrated that an LLM coupled with an automated evaluator could evolve programs that discover new mathematical knowledge, including the first improvement over Strassen's matrix multiplication algorithm in 56 years. The LLM serves as the variation operator (proposing new programs based on prior attempts), while the evaluator provides selection pressure. The system evolved not just a solution but a \emph{method of discovery}.
 
+The Absolute Zero paradigm~\citep{zhao2025absolutezero} pushes this universality further: a single model simultaneously proposes tasks and solves them, using only self-generated data. A code executor provides verification. The AZR-Coder-7B model achieves state-of-the-art performance at the 7B parameter scale for both coding average and total average benchmarks, demonstrating that self-evolution can bootstrap from nothing---no human-curated data, no external evaluation, no hand-designed curriculum.
+
+\subsubsection{Levels of Self-Evolution}
+
+Not all self-evolving systems are created equal. We observe a natural hierarchy of self-evolution capabilities, ranging from systems that improve their outputs to systems that improve the processes by which they improve themselves. This hierarchy provides a useful lens for understanding the current state of the field and its trajectory.
+
+\paragraph{Level 1: Output Evolution.}
+At the most basic level, a system improves its own outputs through iterative refinement. Self-Refine exemplifies this level: the same model generates, critiques, and refines its output without any changes to the model itself or its prompts. The improvement is transient---it exists only within the current inference session and does not persist across sessions. Nevertheless, even this basic level can produce substantial gains: Self-Refine achieves approximately 20\% improvement across seven diverse tasks, including 28\% improvement in code optimization and 12 percentage points improvement in mathematical reasoning.
+
+Output evolution requires no architectural changes and can be applied to any sufficiently capable LLM. The cost is additional inference compute---each refinement iteration consumes tokens proportional to the output length and critique complexity. The benefit is improved quality without any training or fine-tuning. This level corresponds to a purely reflective loop without persistent memory.
+
+\paragraph{Level 2: Prompt and Context Evolution.}
+At the second level, the system improves not just its current output but the prompts, instructions, or context that guide its future behavior. Reflexion exemplifies this level: linguistic feedback is stored in an episodic memory buffer and used to guide future attempts on the same or similar tasks. The improvement persists across episodes because the memory buffer accumulates over time. OPRO also operates at this level: the optimization history (a form of prompt) is iteratively refined to improve the quality of proposed solutions.
+
+Prompt evolution introduces a memory component that output evolution lacks. The system's improvement is cumulative: each episode adds to the memory, potentially making future episodes more effective. This introduces the challenge of memory management---determining which feedback to retain, how to retrieve relevant past experiences, and how to avoid interference between accumulated lessons.
+
+\paragraph{Level 3: Code and Program Evolution.}
+At the third level, the system evolves executable code, programs, or algorithms. FunSearch~\citep{romera2024funsearch} operates at this level: it evolves Python functions that are evaluated by automated testers, and the best-performing functions are retained and mutated. AlphaEvolve~\citep{novikov2025alphaevolve} extends this to entire codebases, using MAP-Elites quality-diversity search to maintain a population of high-performing algorithm variants.
+
+Code evolution introduces the need for reliable automated evaluation---a program either passes its test cases or it does not. This binary verification provides stronger selection pressure than the softer judgments of LLM-based critics. The artifacts produced are also more durable than textual outputs or prompts: a discovered algorithm can be independently verified, distributed, and composed with other algorithms.
+
+\paragraph{Level 4: Architecture Evolution.}
+At the fourth level, the system evolves its own architecture---the structure of its components, their connections, and their interactions. ADAS~\citep{hu2024adas} searches over the space of all valid Python programs implementing agent architectures, discovering novel designs that outperform human-crafted ones. The G\"odel Agent~\citep{yin2025godelagent} goes further, using LLM-driven monkey patching to dynamically modify its own running source code. The Darwin G\"odel Machine~\citep{zhang2025dgm} maintains an open-ended archive of agent implementations, iteratively modifying their code and retaining improved versions.
+
+Architecture evolution represents a meta-level improvement: the system is not just finding better solutions but finding better \emph{solution-finding strategies}. The search space is vastly larger than at lower levels---the space of all possible agent architectures is effectively infinite---which makes efficient search strategies (evolutionary search, quality-diversity optimization, reflection-guided exploration) essential.
+
+\paragraph{Level 5: System-Level Evolution.}
+At the highest level, the system evolves the entire ecosystem in which it operates: its objectives, its evaluation criteria, its relationship to other agents, and its environment. The AI Scientist~\citep{lu2024aiscientist} operates at this level: it proposes research ideas, designs and executes experiments, writes manuscripts, and even conducts automated peer review---the entire scientific process. Absolute Zero~\citep{zhao2025absolutezero} approaches this level by having the model generate its own tasks and curricula, effectively defining its own objectives.
+
+System-level evolution is the most ambitious and most risky form of self-evolution. It raises fundamental questions about alignment (how to ensure the system's self-generated objectives remain beneficial), about evaluation (how to assess systems that define their own success criteria), and about safety (how to contain systems that can modify their own operating parameters).
+
+\paragraph{Implications of the Hierarchy.}
+
+This five-level hierarchy has several important implications. First, higher levels subsume lower levels: a system capable of architecture evolution (Level 4) typically also performs output evolution (Level 1) as part of its improvement process. Second, higher levels require more sophisticated evaluation mechanisms: output quality can be assessed by human judges or LLM critics, but architecture quality requires benchmark suites and automated testing. Third, higher levels introduce greater safety concerns: a system that can modify its own code or objectives is harder to constrain than one that merely refines its outputs. We revisit these implications in Section~\ref{sec:openproblems}.
+
+The current state of the field spans all five levels, but with uneven maturity. Levels 1--2 (output and prompt evolution) are well-established with multiple production-ready systems. Level 3 (code evolution) has demonstrated transformative results (FunSearch, AlphaEvolve) but remains primarily in research settings. Levels 4--5 (architecture and system evolution) are actively being explored (ADAS, DGM, Absolute Zero) but face significant challenges in reliability, safety, and evaluation.
+
+
 \subsection{Defining AI Self-Evolution}
+\label{sec:intro:definition}
 
 We define AI self-evolution as follows:
 
@@ -47,6 +125,33 @@ We define AI self-evolution as follows:
 \end{definition}
 
 This definition is deliberately broad. It encompasses systems that improve their outputs (e.g., Self-Refine~\citep{madaan2023selfrefine}), systems that improve their internal representations (e.g., SPIN~\citep{chen2024spin}), systems that improve their architectural structure (e.g., ADAS~\citep{hu2024adas}), and systems that improve their collective behavior (e.g., multi-agent systems with evolving role assignments). The unifying principle is the presence of a closed-loop improvement cycle in which the system's own outputs serve as inputs to its own improvement process.
+
+\subsubsection{The GEMI Framework}
+
+We can formalize self-evolution through the \textbf{GEMI framework} (Generation, Evaluation, Memory, Improvement), which identifies four essential components:
+
+\begin{enumerate}
+\item \textbf{Generation} ($\mathcal{G}$): The mechanism by which the system produces candidate solutions, behaviors, architectures, or modifications. In LLM-based systems, generation is typically performed by prompting the model with a task description, historical context, and improvement directives. In evolutionary systems, generation involves mutation and crossover operators applied to existing candidates.
+
+\item \textbf{Evaluation} ($\mathcal{E}$): The mechanism by which the system assesses the quality of generated candidates. This may involve automated test suites (Self-Debug), benchmark datasets (ADAS), mathematical verification (FunSearch, AlphaEvolve), reward models (ReST-EM~\citep{gulcehre2023rest}), or LLM-based judges (Constitutional AI).
+
+\item \textbf{Memory} ($\mathcal{M}$): The mechanism by which the system stores and retrieves information about past attempts. This may be episodic memory buffers (Reflexion), population archives with fitness scores (AlphaEvolve, LLaMEA), self-generated training data (STaR, SPIN), trajectory logs (RISE~\citep{qu2024rise}), or structured knowledge bases (Agent Symbolic Learning).
+
+\item \textbf{Improvement} ($\mathcal{I}$): The mechanism by which accumulated experience modifies the system's behavior or structure. This may involve prompt updates (Self-Refine), code modifications (Self-Debug), weight updates through self-generated data (STaR, SPIN), architectural changes (ADAS, G\"odel Agent~\citep{yin2025godelagent}), or workflow restructuring (AgentEvolver).
+\end{enumerate}
+
+Formally, a self-evolving system $\mathcal{S}$ can be described as a tuple $\mathcal{S} = (\mathcal{G}, \mathcal{E}, \mathcal{M}, \mathcal{I})$ operating over iterations $t = 1, 2, \ldots, T$:
+
+\begin{align}
+c_t &= \mathcal{G}(\theta_t, \mathcal{M}_{<t}, \text{context}_t) \label{eq:gen} \\
+r_t &= \mathcal{E}(c_t, \text{task}) \label{eq:eval} \\
+\mathcal{M}_t &= \mathcal{M}_{t-1} \cup \{(c_t, r_t, \text{meta}_t)\} \label{eq:mem} \\
+\theta_{t+1} &= \mathcal{I}(\theta_t, \mathcal{M}_t) \label{eq:improve}
+\end{align}
+
+where $c_t$ is a candidate generated at iteration $t$, $r_t$ is the evaluation result, $\mathcal{M}_t$ is the accumulated memory, $\theta_t$ represents the system's configurable parameters (which may include prompts, code, architectures, or neural weights), and $\text{meta}_t$ captures additional metadata such as execution traces, error messages, or comparative analyses.
+
+\subsubsection{Five Fundamental Evolution Loops}
 
 We identify five fundamental types of evolutionary loops that recur across the literature:
 
@@ -60,30 +165,98 @@ We identify five fundamental types of evolutionary loops that recur across the l
 
 These loops are not mutually exclusive. Indeed, the most powerful self-evolving systems combine multiple loop types: AlphaEvolve employs search, evaluator, reflection, and population loops simultaneously; Agent Symbolic Learning~\citep{zhou2024agentsymbolic} combines generation, evaluation, and reflection in a unified backpropagation-inspired framework; and the Self-Evolve pipeline~\citep{jiang2024selfevolve} chains specification, execution, evaluation, and reflection into a single automated flow.
 
+\subsubsection{Motivating Examples}
+
+To ground these abstract definitions, we present three concrete examples that illustrate the range and power of self-evolving AI systems.
+
+\paragraph{Example 1: Reflexion---Learning from Mistakes through Language.}
+Consider an agent tasked with writing code to solve programming challenges. A standard LLM generates a solution, which may or may not be correct. In Reflexion~\citep{shinn2023reflexion}, the agent executes its solution, observes the result (pass or fail plus any error messages), and then generates a natural language \emph{reflection} on what went wrong and how to improve. This reflection is stored in a memory buffer. On the next attempt at the same or a similar problem, the agent retrieves relevant reflections from memory and uses them as additional context for generation.
+
+The key insight is that the reflection serves as a ``verbal gradient''---a natural language description of how to improve, analogous to the gradient in gradient descent but operating in language space rather than parameter space. After multiple episodes, the memory buffer accumulates a rich set of failure-mode descriptions and correction strategies. Reflexion achieves 91\% pass@1 on HumanEval using GPT-3.5, surpassing GPT-4's 80\%, demonstrating that iterative self-improvement through linguistic feedback can compensate for a less capable base model.
+
+The improvement mechanism operates at Level 2 (prompt/context evolution): the model's weights are not modified, but its behavior is progressively improved through accumulating experience stored as text. Each reflection is a structured, actionable lesson---not just a scalar reward signal but a rich, interpretable explanation of what went wrong and how to fix it.
+
+\paragraph{Example 2: AlphaEvolve---Evolving Algorithms that Beat Human Records.}
+FunSearch~\citep{romera2024funsearch}, published in Nature in 2023, paired an LLM with an automated evaluator to evolve programs for mathematical discovery. The system discovered the first improvement over Strassen's matrix multiplication algorithm in 56 years---a result that had eluded human mathematicians. AlphaEvolve~\citep{novikov2025alphaevolve}, its successor, extended this approach to entire codebases using a dual-model architecture: Gemini Flash for breadth of exploration and Gemini Pro for depth of insight. The system uses MAP-Elites quality-diversity search to maintain not just the single best solution but a diverse map of high-performing solutions across behavioral dimensions.
+
+AlphaEvolve operates at Level 3 (code/program evolution) with elements of Level 4 (the evolved programs can themselves be viewed as algorithmic architectures). The improvement mechanism is population-level evolutionary search: candidate solutions are generated, evaluated by automated verifiers, selected based on performance, and iteratively refined. The MAP-Elites algorithm ensures diversity---the system does not converge to a single optimum but maintains a spectrum of solutions, each excelling along different dimensions.
+
+The practical impact is significant: AlphaEvolve achieved 23\% speedup in FlashAttention kernels, 32\% speedup in LLM attention mechanisms, and recovered 0.7\% of Google's worldwide data center compute through improved scheduling. These are not benchmark improvements but real-world infrastructure optimizations discovered autonomously.
+
+\paragraph{Example 3: The Darwin G\"odel Machine---Self-Modifying Agent Code.}
+The Darwin G\"odel Machine (DGM)~\citep{zhang2025dgm} represents perhaps the most ambitious form of self-evolution currently realized. It maintains an open-ended archive of agent implementations, each represented as executable Python code. At each iteration, the system samples a parent agent from the archive (with probability proportional to fitness and diversity bonus), uses a foundation model (Claude or GPT) to propose code modifications, evaluates the modified agent on a benchmark suite, and retains the child agent if it outperforms its parent.
+
+This is Level 4 self-evolution---the system modifies its own source code. The ``G\"odel'' designation refers to the self-referential nature of the system: the agent's code is both the object being evolved and the instrument of evolution. The ``Darwin'' designation refers to the evolutionary selection mechanism: only agents that demonstrably improve survive in the archive.
+
+The results are striking: DGM improved SWE-bench performance from 20.0\% to 50.0\% and Polyglot performance from 14.2\% to 30.7\%. Moreover, the discovered agent architectures transfer across domains and even across different backbone LLMs, suggesting that DGM discovers generalizable agent design principles rather than overfitting to specific benchmarks.
+
+These three examples illustrate the progression from output refinement (Reflexion, Level 2) through program evolution (AlphaEvolve, Level 3) to architectural self-modification (DGM, Level 4). Each level introduces new capabilities and new challenges, forming the trajectory that this survey traces across the broader field.
+
+\subsubsection{What Self-Evolution Is Not}
+
+To further clarify the boundaries of self-evolution, it is useful to enumerate several things that self-evolution is \emph{not}:
+
+\begin{itemize}
+    \item \textbf{Self-evolution is not simply fine-tuning.} Fine-tuning a model on new data improves its parameters but does not modify the fine-tuning process itself. A self-evolving system would modify its own training data generation, loss function, or optimization procedure.
+
+    \item \textbf{Self-evolution is not simply reinforcement learning.} Standard RL optimizes a fixed policy within a fixed environment using a fixed reward function. Self-evolving systems may modify the policy architecture (ADAS), the environment (Absolute Zero generates its own tasks), or the reward function (Constitutional AI generates its own principles).
+
+    \item \textbf{Self-evolution is not simply prompt engineering.} While prompt engineering improves model outputs through better instructions, it is a one-shot, human-driven process. Self-evolving systems iteratively improve their prompts through automated feedback loops (OPRO, EvoPrompting).
+
+    \item \textbf{Self-evolution is not simply ensembling.} Ensembling combines multiple fixed models for better predictions. Self-evolving systems maintain populations of candidates that undergo selection, mutation, and recombination---the population itself evolves, not just the aggregation method.
+
+    \item \textbf{Self-evolution is not simply AutoML.} Traditional AutoML automates the design of ML pipelines for a specific project. Self-evolving systems extend this automation to ongoing, persistent improvement that spans projects, incorporates reflection, and modifies the improvement process itself.
+\end{itemize}
+
 
 \subsection{Distinguishing Self-Evolution from Related Concepts}
+\label{sec:intro:distinctions}
 
-AI self-evolution intersects with several established research areas but differs from each in important ways. We clarify these distinctions to delimit the scope of this survey.
+AI self-evolution intersects with several established research areas but differs from each in important ways. We clarify these distinctions to delimit the scope of this survey and position our contribution.
 
-\paragraph{Continual learning.}
-Continual learning~\citep{thrun1998lifelong, parisicontinual2019} addresses the challenge of learning from a non-stationary stream of data without catastrophic forgetting. It is concerned with the \emph{stability} of learning over time. Self-evolution is complementary: it is concerned not merely with maintaining performance on old tasks while learning new ones, but with the \emph{mechanism} by which the system improves. A continually learning system adapts its parameters to new data; a self-evolving system may adapt its learning algorithm, its evaluation criteria, its search strategy, or its architectural structure. Continual learning is a component that self-evolving systems may employ, but it is not synonymous with self-evolution.
+\subsubsection{Continual Learning}
 
-\paragraph{Online learning.}
-Online learning refers to the paradigm of updating models incrementally as new data arrives. Like continual learning, online learning is a \emph{mechanism} for adaptation, typically operating at the parameter level. Self-evolution subsumes online learning as one possible improvement modality but extends to non-parametric improvements (e.g., prompt evolution, code evolution, architectural changes) and meta-level improvements (e.g., evolving the online learning algorithm itself).
+Continual learning~\citep{thrun1998lifelong, parisicontinual2019} addresses the challenge of learning from a non-stationary stream of data without catastrophic forgetting~\citep{mccloskey1989catastrophic}. Research in this area has produced techniques such as elastic weight consolidation~\citep{kirkpatrick2017ewc}, which constrains important weight changes; progressive neural networks~\citep{rusu2016progressive}, which add new columns for new tasks; and replay-based methods~\citep{rebuffi2017icarl}, which interleave training on new data with rehearsal of old data.
 
-\paragraph{Self-supervised learning.}
-Self-supervised learning~\citep{liu2021selfsupervised} generates training signals from the structure of unlabeled data itself (e.g., masked language modeling, next-token prediction). It is a \emph{training paradigm} that has been enormously successful for pre-training large language models. Self-evolution differs in scope: while self-supervised learning creates the training signal from data structure, self-evolution creates the improvement signal from the system's own operational experience, including task performance, execution traces, reflection narratives, and population-level dynamics. Self-supervised learning is typically a one-shot pre-training procedure; self-evolution is an ongoing, iterative process.
+Continual learning and self-evolution share a concern with cumulative knowledge acquisition but differ in critical respects. First, continual learning assumes a fixed model architecture and learning algorithm: the system learns new tasks but does not modify its own learning process. Self-evolving systems, by contrast, may modify their architectures, algorithms, prompts, or workflows---the Darwin G\"odel Machine modifies its own source code, and ADAS searches over the space of possible agent architectures. Second, continual learning is primarily concerned with the stability-plasticity dilemma at the level of neural weights, while self-evolution operates at multiple levels simultaneously, from prompt optimization to code mutation to architectural redesign. Third, continual learning typically processes a predefined sequence of tasks, while self-evolving systems may generate their own tasks (as in Absolute Zero~\citep{zhao2025absolutezero}) or define their own objectives.
 
-\paragraph{Meta-learning.}
-Meta-learning~\citep{hospedales2024metalearning}, or ``learning to learn,'' aims to discover learning algorithms that generalize across tasks. It operates at a meta-level, optimizing the learning process itself. Self-evolution shares meta-learning's concern with improving the improvement process, but differs in its mechanisms and scope. Meta-learning typically requires a distribution of training tasks and uses gradient-based optimization at the meta-level. Self-evolution employs a broader range of improvement mechanisms---including language-based reflection, evolutionary search, population-level selection, and agent-level architectural modification---and can operate without a predefined task distribution. Agent Symbolic Learning's language backpropagation~\citep{zhou2024agentsymbolic}, for instance, performs a form of meta-learning entirely in natural language space, without gradients.
+The relationship is complementary: a fully realized self-evolving system would benefit from continual learning mechanisms to avoid forgetting useful strategies as it discovers new ones, but continual learning alone does not constitute self-evolution.
 
-\paragraph{Automated Machine Learning (AutoML).}
+\subsubsection{Online Learning}
+
+Online learning~\citep{cesa2006prediction, shalev2012online} studies algorithms that process data sequentially, updating models one sample at a time. This paradigm is relevant to settings where data arrives in a stream and models must adapt in real time---recommendation systems, financial trading, and network anomaly detection.
+
+Online learning differs from self-evolution in its scope and objectives. Online learning algorithms minimize regret---the gap between the algorithm's cumulative loss and the best fixed predictor in hindsight. The learning algorithm itself is fixed. Self-evolving systems may modify the learning algorithm, the feature representation, the model architecture, or even the evaluation criteria. Furthermore, online learning operates on a fixed problem formulation, while self-evolving systems may reformulate the problem itself.
+
+However, online learning provides important technical foundations: sequential decision-making, regret analysis, and adaptive learning rates all contribute to our understanding of improvement in non-stationary environments. Multi-armed bandit algorithms~\citep{auer2002finite}, which balance exploration and exploitation, are particularly relevant to the search and selection mechanisms in self-evolving systems.
+
+\subsubsection{Self-Supervised Learning}
+
+Self-supervised learning~\citep{liu2021selfsupervised, radford2019language} has become the dominant paradigm for training large language models, where models learn by predicting masked tokens, next tokens, or other automatically generated supervisory signals from raw text data. The key innovation is the elimination of human-annotated labels.
+
+Self-supervised learning is a component of many self-evolving systems but is not sufficient for self-evolution. The self-supervised learning process is typically a one-shot procedure: a model is trained on a fixed dataset with a fixed objective, and the resulting model is deployed without further modification. The training objective (e.g., next-token prediction) is predetermined and does not change during training. Self-evolving systems, by contrast, may generate their own training objectives, create their own training data, and iteratively refine their objectives based on performance feedback.
+
+The Absolute Zero paradigm~\citep{zhao2025absolutezero} represents a convergence of self-supervised learning and self-evolution: the system simultaneously proposes tasks and solves them, extending self-supervised learning from passive data processing to active curriculum design.
+
+\subsubsection{Meta-Learning}
+
+Meta-learning, or ``learning to learn''~\citep{hospedales2024metalearning, finn2017maml}, aims to develop models that can quickly adapt to new tasks with minimal data by learning generalizable learning strategies. Model-Agnostic Meta-Learning (MAML)~\citep{finn2017maml} learns initialization parameters that enable rapid adaptation, while other approaches learn optimizers~\citep{andrychowicz2016learning} or entire learning algorithms~\citep{chen2021discovering}.
+
+Meta-learning shares with self-evolution the goal of improving the learning process itself, but the two differ in scope and mechanism. Meta-learning typically operates within a fixed framework: the meta-learning algorithm is applied to a distribution of tasks, and the improvement is in the form of better initial parameters for that specific distribution. Self-evolving systems may modify their entire architecture, create new learning strategies through evolutionary search, or explore task distributions not anticipated by their designers. The ADAS system~\citep{hu2024adas} exemplifies this distinction: rather than meta-learning a fixed architecture space, it searches over the space of all possible Python programs implementing agents.
+
+Furthermore, meta-learning is typically gradient-based, requiring differentiable components. Self-evolution employs a broader range of mechanisms, including language-based reflection (Reflexion), evolutionary search (AlphaEvolve), and symbolic optimization (Agent Symbolic Learning), none of which require gradients.
+
+\subsubsection{Automated Machine Learning (AutoML)}
+
 AutoML~\citep{he2021automl} automates the design of machine learning pipelines, including feature engineering, model selection, and hyperparameter optimization. It is a direct precursor to several self-evolution approaches: AutoML-GPT~\citep{zhang2023automlgpt} uses LLMs as the planning layer for AutoML, while AutoML-Agent~\citep{chen2024automlagent} decomposes AutoML into a multi-agent workflow. Self-evolution extends AutoML by (1)~making the improvement cycle persistent and ongoing rather than project-scoped, (2)~incorporating reflection and memory across runs, and (3)~expanding the scope from ML pipelines to arbitrary AI artifacts including agent architectures and code.
 
-\paragraph{Evolutionary computation.}
-Evolutionary computation~\citep{eiben2015ea} provides the oldest and most well-developed framework for self-improvement through population-level search. Genetic algorithms, evolution strategies, and genetic programming maintain populations of candidate solutions that undergo selection, mutation, and recombination. Modern LLM-enhanced evolutionary systems (OPRO, FunSearch, AlphaEvolve, LLaMEA) replace hand-coded variation operators with LLM-based generation while retaining the population-level evolutionary framework. Self-evolution both builds on and extends classical evolutionary computation by incorporating language-based reflection, multi-agent coordination, and architectural self-modification.
+\subsubsection{Evolutionary Computation}
 
-We summarize these distinctions in Table~\ref{tab:related_concepts}.
+Evolutionary computation~\citep{eiben2015ea} provides the oldest and most well-developed framework for self-improvement through population-level search. Genetic algorithms, evolution strategies, and genetic programming maintain populations of candidate solutions that undergo selection, mutation, and recombination. Modern LLM-enhanced evolutionary systems replace hand-coded variation operators with LLM-based generation while retaining the population-level evolutionary framework. Self-evolution both builds on and extends classical evolutionary computation by incorporating language-based reflection, multi-agent coordination, and architectural self-modification.
+
+\subsubsection{Summary of Distinctions}
+
+We summarize these distinctions in Table~\ref{tab:related_concepts}. Each paradigm is evaluated across five properties: self-generation (the ability to produce novel candidates), self-evaluation (the ability to assess candidate quality), reflection (the ability to analyze failures and extract lessons), population management (the ability to maintain diverse candidate sets), and meta-level improvement (the ability to improve the improvement process itself). AI self-evolution is unique in exhibiting all five properties simultaneously.
 
 \begin{table}[t]
 \centering
@@ -106,14 +279,125 @@ Evolutionary Computation & \checkmark & \checkmark & $\times$ & \checkmark & $\t
 \end{table}
 
 
+\subsection{The Convergence Landscape}
+\label{sec:intro:convergence}
+
+A striking feature of the current research landscape is the convergence of five previously independent research communities on the same set of fundamental mechanisms. Researchers in AutoML, neural architecture search, LLM self-improvement, evolutionary computation, and agent frameworks are all building systems that exhibit the same basic pattern: autonomous generation of candidates, automated evaluation, structured memory, and iterative refinement. This convergence is not coincidental---it is driven by the common enabling technology of large language models, which provide a universal interface for generation, evaluation, and reflection.
+
+\subsubsection{Five Communities, One Pattern}
+
+We identify five research communities that are converging on the self-evolution paradigm:
+
+\paragraph{AutoML $+$ LLM.}
+The AutoML community has long sought to automate the design of machine learning pipelines. Traditional AutoML systems like Auto-WEKA, TPOT, and auto-sklearn use search algorithms (Bayesian optimization, evolutionary algorithms, random search) to explore spaces of preprocessing steps, model architectures, and hyperparameters. The advent of LLMs has transformed this landscape: systems like AutoML-GPT~\citep{zhang2023automlgpt} use LLMs as planning layers that translate natural language task descriptions into executable ML pipelines, while AutoML-Agent~\citep{chen2024automlagent} decomposes the AutoML process into a multi-agent workflow with specialized agents for data retrieval, preprocessing, modeling, and evaluation.
+
+The self-evolution connection is direct: these systems implement specification-to-execution loops that convert goals into working pipelines, evaluate them on data, and refine them based on performance. The key limitation is that current AutoML$+$LLM systems are project-scoped---they optimize a single pipeline for a single dataset---rather than engaging in ongoing, persistent self-improvement.
+
+\paragraph{NAS $+$ LLM.}
+Neural architecture search (NAS) has traditionally relied on hand-designed search spaces and expensive evaluation procedures (training each candidate architecture from scratch). LLMs have transformed NAS by enabling code-level search: systems like EvoPrompting~\citep{chen2023evoprompting} represent neural architectures as code and use LLMs as mutation operators, LLMatic combines LLM-guided search with quality-diversity optimization, and NADER~\citep{chen2024nader} represents architecture design as multi-agent collaboration.
+
+The self-evolution connection is that architectures are treated as evolvable genomes---programs that can be generated, evaluated, selected, and refined. The quality-diversity perspective (maintaining diverse high-performing solutions rather than a single optimum) is particularly relevant: it provides a principled framework for population-level evolution that avoids premature convergence.
+
+\paragraph{LLM Self-Improvement.}
+The LLM self-improvement community focuses on methods by which language models improve their own capabilities. This community has produced inference-time methods (Self-Refine, Reflexion, Self-Debug) that improve outputs without weight updates, and training-time methods (STaR, SPIN, ReST-EM, Constitutional AI) that use self-generated data for fine-tuning. The key insight is that the same model can serve as both the producer of improvement data and the consumer of that data.
+
+The self-evolution connection is direct: these methods implement the generation-evaluation-memory-improvement cycle. STaR generates reasoning chains, filters for correctness, and fine-tunes on correct chains---a generate-filter-finetune loop. SPIN frames improvement as self-play, where the model learns to distinguish its own outputs from human-written text. Constitutional AI uses self-critique based on constitutional principles to improve alignment.
+
+\paragraph{Evolutionary Computation $+$ LLM.}
+The evolutionary computation community has a long history of developing population-based search algorithms. LLMs have revolutionized this field by replacing hand-coded variation operators (mutation, crossover) with LLM-based generation. OPRO~\citep{yang2023opro} uses LLMs as general-purpose optimizers, reading histories of past solutions to propose new candidates. FunSearch~\citep{romera2024funsearch} evolves programs for mathematical discovery. LLaMEA~\citep{van2024llaMEA} evolves metaheuristic algorithms---the optimizer itself is evolved, not just the solution.
+
+The self-evolution connection is strongest at the population level: these systems maintain archives of candidate solutions, apply selection pressure, and use LLMs to propose novel variations. The key insight is that evolutionary computation provides a well-developed theoretical framework for self-evolving systems, including convergence guarantees, diversity preservation mechanisms, and multi-objective optimization.
+
+\paragraph{Agent Frameworks.}
+The agent framework community has produced systems like AutoGPT, MetaGPT, AutoGen, CrewAI, DSPy, CAMEL, and LangGraph that provide orchestration, memory, tool use, and multi-agent coordination. These frameworks are evolving from static systems (fixed prompts, fixed workflows) toward self-improving systems: AutoAgents dynamically generates and coordinates specialized agents, MetaGPT encodes software engineering workflows as standard operating procedures, and DSPy provides a declarative programming framework for LLM pipelines with automated optimization.
+
+The self-evolution connection is that agent frameworks provide the infrastructure on which self-evolution can be built: memory systems, tool registries, evaluation hooks, and workflow engines. However, most current frameworks lack dedicated self-evolution mechanisms---they are \emph{containers} for self-evolution, not self-evolving systems themselves.
+
+\subsubsection{Cross-Domain Mapping}
+
+Table~\ref{tab:cross_domain} maps the shared structure across these five communities, showing that each community addresses the same four core components (generation, evaluation, memory, improvement) but with different artifacts, mechanisms, and terminology.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Cross-domain mapping of self-evolution mechanisms. Each row represents a research community; columns show how each community implements the four GEMI components.}
+\label{tab:cross_domain}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllll}
+\toprule
+\textbf{Community} & \textbf{Generation} & \textbf{Evaluation} & \textbf{Memory} & \textbf{Improvement} \\
+\midrule
+AutoML + LLM & Pipeline synthesis & Dataset metrics & Pipeline history & Prompt/code refinement \\
+NAS + LLM & Architecture code & NAS benchmarks, accuracy/cost & Candidate lineage & Architecture mutation \\
+LLM Self-Improve & Reasoning chains & Task feedback & Reflection/trajectories & Weight/prompt updates \\
+Evo Comp + LLM & Programs, heuristics & Objective functions & Population archives & Selection + variation \\
+Agent Frameworks & Agent roles, workflows & Task completion & SOPs, logs & Role/tool refinement \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+This mapping reveals both the unity and the gaps in the current landscape. The unity is clear: all five communities are building systems that generate, evaluate, remember, and improve. The gaps are equally revealing: insights from one community have not always been transferred to others. For example, the quality-diversity optimization used in NAS (LLMatic) has not been widely adopted in agent architecture search (ADAS), despite its potential benefits. The self-play framework of SPIN has not been applied to agent self-improvement, despite the obvious analogy. The structured memory mechanisms of Reflexion have not been incorporated into AutoML systems, despite the potential for cross-run learning.
+
+One of the goals of this survey is to make these gaps visible and to facilitate the transfer of insights across communities. By providing a unified taxonomy (the Five Evolution Loops) and a common language (the GEMI framework), we hope to accelerate the convergence that is already underway.
+
+\subsubsection{Theoretical Underpinnings}
+
+The concept of self-evolving AI systems draws on several deep theoretical traditions. We briefly survey these connections to provide a richer conceptual foundation for the systems analyzed in subsequent sections.
+
+\paragraph{G\"odel machines and self-reference.}
+Schmidhuber's G\"odel machine~\citep{schmidhuber2003godel} provides a theoretical framework for self-improving systems that can provably improve their own code. A G\"odel machine contains a proof searcher that can modify any part of the machine's software, including the proof searcher itself, but only if it can first prove that the modification will be beneficial. This self-referential structure---a system that reasons about and modifies its own reasoning---directly inspires the G\"odel Agent~\citep{yin2025godelagent} and Darwin G\"odel Machine~\citep{zhang2025dgm}. The theoretical appeal is that G\"odel machines are optimal in a formal sense: any modification that survives the proof check is guaranteed to be an improvement. The practical limitation is that formal proofs of improvement are intractable for real-world systems; modern self-evolving systems relax this requirement to empirical validation (running benchmarks) rather than formal verification.
+
+\paragraph{Evolutionary theory and open-endedness.}
+Biological evolution provides the most familiar example of a self-improving system: populations of organisms improve their fitness through variation, selection, and inheritance. The modern synthesis of evolutionary theory, combined with insights from evolutionary developmental biology, provides concepts that are directly applicable to AI self-evolution: quality-diversity optimization (maintaining diverse high-performing solutions), novelty search (exploring novel regions of the search space regardless of immediate fitness), and open-ended evolution (continuing to discover novel solutions without converging).
+
+The concept of open-endedness is particularly relevant. Most optimization algorithms converge to a single optimum and then stop. Open-ended evolutionary systems, by contrast, continue to discover novel solutions indefinitely---they do not have a fixed objective function but instead explore an expanding landscape of possibilities. The Darwin G\"odel Machine's open-ended archive, which continuously adds new agent implementations without a fixed convergence criterion, embodies this principle.
+
+\paragraph{Reinforcement learning and self-play.}
+The success of AlphaGo Zero~\citep{silver2017alphagozero}, which learned to play Go at superhuman levels through self-play with no human data, provides a powerful demonstration that systems can improve through self-generated experience. This paradigm has been directly transferred to LLM self-improvement: SPIN~\citep{chen2024spin} frames LLM training as self-play between a main player and an opponent, while Absolute Zero~\citep{zhao2025absolutezero} extends the self-play paradigm to task generation. The theoretical appeal is that self-play provides an inexhaustible source of training data---the system generates its own curriculum, progressively increasing difficulty as it improves.
+
+\paragraph{Meta-learning and learning-to-learn.}
+Meta-learning~\citep{hospedales2024metalearning}, or ``learning to learn,'' provides the theoretical framework for systems that improve their own learning process. MAML~\citep{finn2017maml} learns initial parameters that enable rapid adaptation; learned optimizers~\citep{andrychowicz2016learning} replace hand-designed optimization algorithms with learned ones. Self-evolving systems extend meta-learning by operating over broader search spaces (not just parameters but also architectures, code, and workflows) and using more diverse improvement mechanisms (not just gradient descent but also evolutionary search, language-based reflection, and symbolic optimization).
+
+\paragraph{Complex systems and emergence.}
+Self-evolving AI systems are complex systems in the technical sense: they consist of many interacting components whose collective behavior is not easily predicted from individual component behavior. Concepts from complex systems theory---phase transitions, emergent behavior, power-law scaling, and self-organized criticality---provide tools for understanding the dynamics of self-evolution. For example, the observation that self-evolving systems can exhibit qualitative jumps in capability (as when AlphaEvolve discovers a fundamentally new algorithm) rather than smooth, incremental improvement is reminiscent of phase transitions in physical systems.
+
+The theoretical diversity of these underpinnings reflects the interdisciplinary nature of self-evolving AI. No single theoretical framework fully captures the phenomenon; instead, insights from G\"odel machines, evolutionary theory, reinforcement learning, meta-learning, and complex systems each illuminate different aspects. This theoretical richness is both a strength (many conceptual tools are available) and a challenge (no unified theory yet exists).
+
+\subsubsection{Why This Survey, Why Now}
+
+Several factors make this survey timely and necessary.
+
+First, the pace of publication has accelerated dramatically. The number of papers on LLM self-improvement, evolutionary code discovery, and self-evolving agents has grown from a handful in 2022 to dozens per month in 2025. Researchers entering the field face a fragmented literature with no common taxonomy or systematic comparison. This survey provides that organizing framework.
+
+Second, the convergence across communities has reached a critical point where cross-pollination is essential for progress. Researchers in evolutionary computation are rediscovering ideas that were developed independently in the LLM self-improvement community, and vice versa. A unified taxonomy makes these connections explicit and prevents duplicated effort.
+
+Third, the practical implications of self-evolving AI are becoming significant. AlphaEvolve's optimization of Google's data center scheduling, the AI Scientist's generation of peer-reviewed publications, and the commercial deployment of self-improving coding agents all demonstrate that self-evolution is no longer merely an academic curiosity. Understanding the mechanisms, limitations, and safety implications of these systems is becoming a practical necessity.
+
+Fourth, safety and alignment concerns become more acute as self-evolving systems become more capable. A system that can modify its own code, architecture, or objectives is fundamentally harder to control than a static system. The alignment community has begun to engage with these challenges (Constitutional AI's self-critique mechanism is one approach), but a systematic understanding of the risks and mitigations is lacking. This survey provides a foundation for that understanding by cataloging the mechanisms through which self-evolving systems can modify themselves and identifying the points at which human oversight can be maintained.
+
+\subsubsection{Practical Implications}
+
+Beyond the academic and research communities, self-evolving AI has immediate practical implications for software engineering, data science, and AI product development.
+
+In software engineering, self-evolving code agents represent a paradigm shift from static code generation to continuous code improvement. Systems like SelfEvolve~\citep{jiang2024selfevolve} and ReVeal~\citep{jin2026reveal} demonstrate that code can be iteratively generated, executed, debugged, and refined without human intervention. The practical promise is a development workflow where human engineers specify high-level objectives and the system autonomously generates, tests, and improves the implementation. Current results are promising but limited: HumanEval pass@1 rates of 85--91\% on curated benchmarks do not yet translate to reliable performance on complex, real-world codebases.
+
+In data science and ML engineering, AutoML$+$LLM systems promise to democratize model development. Systems like AutoML-GPT and AutoML-Agent can synthesize entire ML pipelines from natural language descriptions, reducing the expertise barrier for building ML systems. Self-evolution adds a persistence layer: the system can learn from past projects, reuse successful pipeline patterns, and progressively improve its recommendations. This is the vision of ``machine learning that learns to do machine learning.''
+
+In AI product development, self-evolving agents represent a path toward systems that improve with use rather than degrading. Current AI products often suffer from drift---performance degrades as the world changes and the training data becomes stale. Self-evolving systems can potentially adapt to changing conditions, learn from user interactions, and continuously improve without requiring periodic retraining campaigns. The challenge is ensuring that this adaptation is beneficial rather than harmful: the system must improve on dimensions that users care about while maintaining safety and reliability.
+
+The gap between current capabilities and practical deployment is significant. Most self-evolving systems operate in controlled environments with well-defined evaluation metrics. Real-world deployment introduces noise, ambiguity, adversarial inputs, and the need to balance multiple competing objectives. Bridging this gap is one of the key challenges for the field, and one that we discuss in detail in Section~\ref{sec:openproblems}.
+
+
 \subsection{Contributions of This Survey}
+\label{sec:intro:contributions}
 
 This survey makes the following contributions:
 
 \begin{enumerate}
     \item \textbf{A unified taxonomic framework.} We propose the Five Evolution Loops taxonomy (Section~\ref{sec:taxonomy}), which identifies five fundamental types of evolutionary cycles---Specification-to-Execution, Search, Evaluator, Reflection, and Population---that recur across AutoML, NAS, LLM self-improvement, evolutionary computation, and agent frameworks. This taxonomy provides a common language for a currently fragmented research landscape and enables systematic comparison of methods from different communities.
 
-    \item \textbf{Systematic analysis of 19+ open-source projects.} We provide detailed technical analyses of open-source implementations spanning evolutionary code optimization (OpenEvolve, FunSearch, CodeEvolve, SE-Agent), agent architecture search (ADAS, Gödel Agent, Darwin Gödel Machine), agent frameworks (AutoGPT, MetaGPT, AutoGen, CrewAI, DSPy, CAMEL, LangGraph), AutoML systems (AutoML-Agent, CoML/MLCopilot), and evaluation benchmarks (SWE-bench, OSWorld, WebArena). For each project, we analyze the implementation of evolutionary loops, the evaluation framework, and the relationship to the self-evolution paradigm.
+    \item \textbf{Systematic analysis of 19+ open-source projects.} We provide detailed technical analyses of open-source implementations spanning evolutionary code optimization (OpenEvolve, FunSearch, CodeEvolve, SE-Agent), agent architecture search (ADAS, G\"odel Agent, Darwin G\"odel Machine), agent frameworks (AutoGPT, MetaGPT, AutoGen, CrewAI, DSPy, CAMEL, LangGraph), AutoML systems (AutoML-Agent, CoML/MLCopilot), and evaluation benchmarks (SWE-bench, OSWorld, WebArena). For each project, we analyze the implementation of evolutionary loops, the evaluation framework, and the relationship to the self-evolution paradigm.
 
     \item \textbf{Cross-domain unification.} We demonstrate that research communities in AutoML~$+$~LLM, NAS~$+$~LLM, LLM self-improvement, evolutionary computation~$+$~LLM, and agent frameworks are converging on the same set of fundamental mechanisms, despite using different terminology and publishing in different venues. Our cross-domain analysis (Section~\ref{sec:taxonomy}) maps the shared structure across these five fields and identifies gaps where insights from one community have not yet been transferred to others.
 
@@ -121,20 +405,161 @@ This survey makes the following contributions:
 
     \item \textbf{Research landscape mapping.} We trace the intellectual lineage and collaboration networks of the researchers driving this field, from the Stanford/Peter Clark/Aman Madaan line (Self-Refine) to the Princeton NLP/Karthik Narasimhan/Shunyu Yao line (Reflexion, ReAct) to the Google DeepMind line (OPRO, FunSearch, AlphaEvolve) to the UCLA/Quanquan Gu line (SPIN) to the Anthropic line (Constitutional AI). This mapping reveals both the concentration of innovation in a small number of research groups and the cross-pollination between them.
 
-    \item \textbf{Open problems and future directions.} We identify key challenges that currently limit the practical deployment of self-evolving AI systems: evaluation bottlenecks (benchmark performance does not guarantee real-world reliability), memory and drift (long-term stability of self-improvement), safety and alignment (controllability of autonomous self-modifying systems), composability (modular combination of evolutionary loops), and the gap between research prototypes and production systems.
+    \item \textbf{Open problems and future directions.} We identify key challenges that currently limit the practical deployment of self-evolving AI systems: evaluation bottlenecks, memory and drift, safety and alignment, composability of evolution loops, and the gap between research prototypes and production systems.
 \end{enumerate}
+
+\subsubsection{Comparison with Related Surveys}
+
+Several recent surveys have addressed topics adjacent to self-evolving AI. We distinguish our work from each:
+
+\paragraph{Zhan et al.\ (2024): ``A Survey on Self-Evolution of Large Language Models''~\citep{zhan2024selfevolution}.}
+This survey focuses specifically on LLM self-evolution through four phases: experience acquisition, experience refinement, model updating, and evaluation. They organize the literature around the evolution of model capabilities through training, covering methods such as self-play fine-tuning, self-generated reasoning, and iterative self-training. While we adopt their four-phase decomposition as useful for understanding training-time improvement, our survey differs in three key ways. First, we extend beyond LLM weight updates to include prompt-based, code-based, and architecture-based evolution, recognizing that self-evolution operates at multiple levels beyond neural parameters. Second, we incorporate the evolutionary computation and agent systems perspectives, which their survey does not address---our analysis includes systems like AlphaEvolve, FunSearch, ADAS, and the Darwin G\"odel Machine that evolve artifacts other than model weights. Third, we provide a five-loop taxonomy that classifies evolution mechanisms by their structural properties rather than their position in a single pipeline, enabling comparison across fundamentally different approaches.
+
+\paragraph{Wang et al.\ (2024): ``A Survey on Large Language Model based Generative Agents''~\citep{wang2024generative_agents}.}
+This comprehensive overview of LLM-based agents covers architectures, memory systems, planning mechanisms, and applications but does not focus specifically on self-improvement mechanisms or provide a taxonomy of evolution loops. Their survey treats agents as systems that use LLMs for perception, reasoning, and action in environments, whereas we focus on how such agents can autonomously improve their own performance and architecture over time. Our survey complements this work by providing the self-improvement layer that their architecture survey does not address.
+
+\paragraph{Wu et al.\ (2024): ``Evolutionary Computation in the Era of Large Language Models''~\citep{wu2024llm4ec}.}
+Published in IEEE Transactions on Evolutionary Computation, this survey systematically categorizes the intersection of LLMs and evolutionary computation across three dimensions: LLM-enhanced EC (using LLMs as variation operators, surrogates, or controllers), EC-enhanced LLMs (using evolutionary methods for prompt optimization, architecture search, or model merging), and joint LLM-EC applications. Our survey differs by treating LLM-EC interaction as one component of a broader self-evolution framework that also includes reflection-based improvement, agent architecture evolution, training-time self-improvement, and specification-to-execution loops. We argue that evolutionary computation provides the search and population management mechanisms for self-evolving systems, but it is not the only mechanism: reflection-based and RL-based improvement are equally important.
+
+\paragraph{Pan et al.\ (2024): ``Survey on Retrieval-Augmented Generation''~\citep{pan2024rag}.}
+RAG addresses how LLMs leverage external knowledge from fixed corpora. Self-evolving systems differ fundamentally in that their knowledge bases are continuously updated by the system's own experience and structured to support improvement rather than merely factual recall. While RAG retrieves existing knowledge, self-evolving systems generate new knowledge through their improvement cycles and store it in evolving memory structures. The memory component of self-evolving systems (episodic buffers, population archives, training data) serves a different purpose than RAG's retrieval index.
+
+\paragraph{Mialon et al.\ (2023): ``Augmented Language Models: A Survey''~\citep{mialon2023alm}.}
+This survey covers reasoning, tool use, and augmentation of language models but does not address self-improvement cycles or evolutionary mechanisms. Their framework treats augmentation as a way to extend model capabilities at inference time, while our survey focuses on how augmented capabilities can feed back into improvement cycles that permanently enhance the system. The combination of augmentation (their focus) with self-evolution (our focus) represents a powerful paradigm: systems that can both augment their current capabilities and improve their future capabilities.
+
+\paragraph{He et al.\ (2021): ``Automated Machine Learning: Methods, Systems, and Challenges''~\citep{he2021automl}.}
+This comprehensive AutoML survey covers neural architecture search, hyperparameter optimization, and pipeline synthesis. While AutoML is a direct precursor to several self-evolution approaches, the survey does not address LLM-based methods, reflection mechanisms, or population-level evolution of agent architectures. Our survey extends the AutoML perspective by showing how LLMs enable new forms of automated design that go beyond traditional search spaces.
+
+We summarize these distinctions in Table~\ref{tab:survey_comparison}.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Comparison with related surveys. Columns indicate major topics covered by each survey.}
+\label{tab:survey_comparison}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Survey} & \textbf{LLM Self-Improve} & \textbf{Agent Evo.} & \textbf{Evo.\ Comp.} & \textbf{AutoML/NAS} & \textbf{Frameworks} & \textbf{5-Loop Taxonomy} \\
+\midrule
+Zhan et al.\ 2024 & \checkmark & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ \\
+Wang et al.\ 2024 & $\times$ & Partial & $\times$ & $\times$ & \checkmark & $\times$ \\
+Wu et al.\ 2024 & $\times$ & $\times$ & \checkmark & $\times$ & $\times$ & $\times$ \\
+Pan et al.\ 2024 & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ \\
+Mialon et al.\ 2023 & Partial & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ \\
+He et al.\ 2021 & $\times$ & $\times$ & $\times$ & \checkmark & $\times$ & $\times$ \\
+\textbf{This survey} & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\subsection{The Emergence of Self-Evolution Research}
+\label{sec:intro:emergence}
+
+The field of AI self-evolution has emerged rapidly over the past three years, driven by the convergence of advances in LLM capabilities, evolutionary computation, and agent systems. We trace the key milestones that define this emerging field.
+
+\subsubsection{Timeline of Key Developments}
+
+The modern era of self-evolving AI can be traced through several key milestones:
+
+\paragraph{2022: Foundations.}
+The Self-Taught Reasoner (STaR)~\citep{zelikman2022star} demonstrated that language models could bootstrap their own reasoning capabilities by generating rationales, filtering for correctness, and fine-tuning on successful chains. This established the generate-filter-finetune paradigm that underpins many subsequent training-time self-improvement methods. Constitutional AI~\citep{bai2022constitutional} introduced the concept of self-alignment through principle-based self-critique, showing that models could improve their own safety and helpfulness without human-labeled preference data.
+
+\paragraph{2023: Inference-time methods.}
+Self-Refine~\citep{madaan2023selfrefine} and Reflexion~\citep{shinn2023reflexion}, both published at NeurIPS 2023, demonstrated that LLMs could improve their own outputs at inference time without any weight updates. Self-Refine achieved approximately 20\% improvement across seven tasks through iterative self-critique, while Reflexion achieved 91\% pass@1 on HumanEval using GPT-3.5---surpassing GPT-4's 80\%---through verbal reinforcement learning. Self-Debug~\citep{chen2023selfdebug} introduced execution-guided code repair, and SelfEvolve~\citep{jiang2024selfevolve} combined self-generated knowledge with iterative debugging for code evolution.
+
+FunSearch~\citep{romera2024funsearch}, published in Nature, demonstrated that LLM-guided evolutionary search could discover new mathematical knowledge, including the first improvement over Strassen's matrix multiplication algorithm in 56 years. This result showed that self-evolving systems could exceed human capability in specific domains.
+
+OPRO~\citep{yang2023opro} demonstrated that LLMs could serve as general-purpose optimizers, reading histories of past solutions and scores to propose better candidates. AutoML-GPT~\citep{zhang2023automlgpt} showed that LLMs could serve as planning layers for automated machine learning.
+
+\paragraph{2024: Architecture and agent evolution.}
+The year 2024 saw a dramatic expansion of the self-evolution paradigm from output improvement to architecture and agent evolution. ADAS~\citep{hu2024adas}, accepted at ICLR 2025 and recognized with the NeurIPS 2024 Open-World Agent Workshop Outstanding Paper Award, demonstrated that meta-agent search over the space of all possible Python agent implementations could discover architectures that outperform hand-designed ones.
+
+Agent Symbolic Learning~\citep{zhou2024agentsymbolic}, published at NeurIPS 2024, introduced the metaphor of textual backpropagation: treating agent prompts, tools, and pipelines as learnable ``weights'' and applying analogs of gradient descent entirely in natural language space. RISE~\citep{qu2024rise}, also at NeurIPS 2024, showed that self-correction could be learned through RL fine-tuning rather than merely prompted.
+
+SPIN~\citep{chen2024spin} demonstrated self-play fine-tuning, where a model improves by learning to distinguish its own outputs from human-written text. ReST-EM formalized the generate-filter-finetune paradigm as an expectation-maximization procedure. The Darwin G\"odel Machine~\citep{zhang2025dgm} combined Darwinian evolution with G\"odel machine self-reference to create open-ended agent evolution.
+
+\paragraph{2025: Scale and convergence.}
+AlphaEvolve~\citep{novikov2025alphaevolve} from Google DeepMind demonstrated the power of combining Gemini Flash and Pro models for algorithm discovery, finding the first improvement over Strassen in 56 years and achieving 23-32\% speedups in LLM training components. The system applied MAP-Elites quality-diversity search at unprecedented scale.
+
+Absolute Zero~\citep{zhao2025absolutezero}, an award-winning paper, demonstrated that a single model could simultaneously propose tasks and solve them, achieving state-of-the-art performance with zero external training data. RAGEN~\citep{wang2025ragen} identified the ``Echo Trap'' phenomenon in multi-turn agent RL, revealing a fundamental failure mode in self-evolving systems.
+
+ReVeal~\citep{jin2026reveal}, accepted as an ICLR 2026 poster, demonstrated self-evolving code agents through multi-turn RL with co-evolved verification, achieving 20+ turn self-evolution at inference despite being trained on only 3 turns.
+
+\paragraph{2026: Productization and beyond.}
+The AI Scientist~\citep{lu2024aiscientist} system achieved the first AI-generated paper accepted through peer review, demonstrating the potential and limitations of fully automated scientific discovery. Open-source projects like OpenEvolve, OpenTreeSearch, EverOS, and numerous agent frameworks are making self-evolution capabilities accessible to practitioners, moving the field from research prototypes toward practical deployment.
+
+\subsubsection{Projects and Systems Analyzed}
+
+Table~\ref{tab:projects_overview} provides a high-level overview of the key projects and systems analyzed in this survey, organized by domain and evolution type.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Overview of key self-evolution projects and systems analyzed in this survey.}
+\label{tab:projects_overview}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllll}
+\toprule
+\textbf{System} & \textbf{Year} & \textbf{Domain} & \textbf{Primary Loop(s)} & \textbf{Key Result} \\
+\midrule
+Self-Refine & 2023 & LLM Self-Improve & Reflection & +20\% across 7 tasks \\
+Reflexion & 2023 & LLM Self-Improve & Reflection, Evaluator & 91\% HumanEval (GPT-3.5) \\
+Self-Debug & 2023 & Code Generation & Evaluator, Reflection & +12\% on TransCoder \\
+FunSearch & 2023 & Math Discovery & Search, Evaluator, Population & Beat Strassen's algorithm \\
+OPRO & 2023 & General Optimization & Search & LLM as universal optimizer \\
+STaR & 2022 & LLM Self-Improve & Reflection & 540M matches 175B \\
+SPIN & 2024 & LLM Self-Improve & Population, Reflection & Outperforms DPO+GPT-4 \\
+ADAS & 2025 & Agent Architecture & Search & Surpasses hand-designed agents \\
+Agent Symbolic Learning & 2024 & Agent Learning & Reflection, Search & 60.7\% MATH, SOTA \\
+AlphaEvolve & 2025 & Algorithm Discovery & Search, Evaluator, Population & 48 mults (4x4 complex) \\
+Darwin G\"odel Machine & 2025 & Agent Evolution & Search, Population, Reflection & 50\% SWE-bench \\
+G\"odel Agent & 2025 & Agent Architecture & Search, Reflection & +8--15\% HotPotQA \\
+Absolute Zero & 2025 & LLM Self-Improve & Search, Evaluator, Reflection & SOTA 7B coding avg \\
+RISE & 2024 & LLM Self-Improve & Reflection, Search & +10pp GSM8K (Llama2) \\
+RAGEN & 2025 & Agent RL & Search, Reflection & Echo Trap discovery \\
+ReVeal & 2026 & Code Generation & Search, Evaluator & 20+ turn self-evolution \\
+AI Scientist & 2024 & Scientific Discovery & Spec, Search, Evaluator & First peer-reviewed AI paper \\
+Constitutional AI & 2022 & Alignment & Reflection & Self-alignment via principles \\
+SelfEvolve & 2023 & Code Generation & Evaluator, Reflection & 85.98\% HumanEval \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+This timeline reveals several important patterns. First, the field has moved from improving outputs (2022--2023) to improving architectures and agents (2024--2025) to improving the improvement process itself (2025--2026). Second, the convergence across domains is accelerating: methods developed for code generation (self-debugging) are now applied to agent architecture (ADAS), mathematical discovery (FunSearch), and scientific research (AI Scientist). Third, the increasing scale and ambition of systems---from single-model refinement to population-level evolution of agent architectures---suggests that self-evolving AI is on a trajectory toward increasingly autonomous and capable systems.
 
 
 \subsection{Paper Organization}
+\label{sec:intro:organization}
 
-The remainder of this paper is organized as follows. Section~\ref{sec:taxonomy} presents our unified taxonomic framework, defining the Five Evolution Loops and their relationships. Section~\ref{sec:selfimprovement} provides a detailed analysis of self-improvement methods, covering both inference-time approaches (Self-Refine, Reflexion, Self-Debug) and training-time approaches (SPIN, STaR, ReST-EM, Constitutional AI). Section~\ref{sec:evolutionary} examines evolutionary code and algorithm discovery systems (OPRO, FunSearch, AlphaEvolve, OpenEvolve, LLaMEA). Section~\ref{sec:agents} surveys self-evolving agent systems (ADAS, Gödel Agent, Darwin Gödel Machine, Agent Symbolic Learning, Absolute Zero, AgentEvolver). Section~\ref{sec:frameworks} analyzes agent frameworks and their evolutionary capabilities (AutoGPT, MetaGPT, AutoGen, CrewAI, DSPy, LangGraph). Section~\ref{sec:automl} explores the intersection of AutoML, NAS, and LLMs. Section~\ref{sec:landscape} maps the research landscape, including institutional networks and citation patterns. Section~\ref{sec:openproblems} discusses open problems and future directions. Section~\ref{sec:conclusion} concludes with a summary of the unified framework and its implications for the future of AI self-evolution.
+The remainder of this paper is organized as follows.
+
+\textbf{Section~\ref{sec:taxonomy}} presents our unified taxonomic framework, defining the Five Evolution Loops and their relationships. For each loop---Specification-to-Execution, Search, Evaluator, Reflection, and Population---we provide formal definitions, identify representative systems, analyze their mechanisms and limitations, and map their interactions with other loops. We include a TikZ diagram illustrating loop relationships and a cross-domain mapping table showing how each loop manifests across the five research communities.
+
+\textbf{Section~\ref{sec:selfimprovement}} provides a detailed analysis of self-improvement methods, organized along the inference-time versus training-time axis. For inference-time methods (Self-Refine, Reflexion, Self-Debug, Agent Symbolic Learning, RISE, RAGEN), we present formal descriptions of each method's algorithm, key formulas, benchmark results, and limitations. For training-time methods (STaR, SPIN, ReST-EM, Constitutional AI), we similarly present algorithms, theoretical properties (including SPIN's convergence guarantee), and empirical results. A comprehensive comparison table synthesizes the methods across multiple dimensions.
+
+\textbf{Section~\ref{sec:evolutionary}} examines evolutionary code and algorithm discovery systems. We cover LLM-as-optimizer (OPRO), LLM-as-evolutionary-operator (AlphaEvolve), program evolution for mathematical discovery (FunSearch), metaheuristic evolution (LLaMEA), and open-source implementations (OpenEvolve, OpenTreeSearch). For each system, we present the evolutionary architecture, variation operators, selection mechanisms, and key discoveries.
+
+\textbf{Section~\ref{sec:agents}} surveys self-evolving agent systems, covering agent architecture evolution (ADAS, G\"odel Agent, Darwin G\"odel Machine), workflow evolution (AgentEvolver), symbolic learning (Agent Symbolic Learning), zero-data self-training (Absolute Zero), and integrated pipelines (SelfEvolve, ReVeal). We analyze the spectrum from human-designed to self-designed agent architectures.
+
+\textbf{Section~\ref{sec:frameworks}} analyzes agent frameworks and their evolutionary capabilities, comparing AutoGPT, MetaGPT, AutoGen, CrewAI, DSPy, CAMEL, and LangGraph along dimensions of orchestration, memory, tool use, evaluation, and extensibility. We identify the evolution capability gap in current frameworks.
+
+\textbf{Section~\ref{sec:automl}} explores the intersection of AutoML, NAS, and LLMs, including AutoML-GPT, AutoML-Agent, EvoPrompting, LLMatic, NADER, and quality-diversity optimization for architecture search.
+
+\textbf{Section~\ref{sec:landscape}} maps the research landscape, including core research groups (Google DeepMind, Stanford, Princeton NLP, AI2/CMU, UCLA, Anthropic), academic lineages, citation networks, and the open-source ecosystem with Stars/activity/license analysis.
+
+\textbf{Section~\ref{sec:openproblems}} discusses open problems and future directions, covering evaluation bottlenecks, memory and drift, safety and alignment, composability of evolution loops, and the gap between research and production.
+
+\textbf{Section~\ref{sec:conclusion}} concludes with a summary of the unified framework and its implications.
 
 Appendix~\ref{sec:projects} provides a comprehensive comparison table of the 19+ open-source projects analyzed in this survey. Appendix~\ref{sec:citations} lists the full citation information for all referenced papers. Appendix~\ref{sec:benchmarks} compiles benchmark data across methods. Appendix~\ref{sec:relationships} presents the researcher relationship network as a TikZ diagram.
 
 
 \subsection{Scope and Limitations}
+\label{sec:intro:scope}
 
-This survey focuses on systems that exhibit autonomous self-improvement capabilities, as defined in Section~\ref{sec:intro}. We include systems that use LLMs as generators, evaluators, or optimizers within self-improvement loops, as well as systems that evolve agent architectures, code, or machine learning pipelines. We exclude systems that are purely adaptive without a generative improvement component (e.g., simple fine-tuning on new data) and systems that improve only through human-provided feedback without any autonomous generation or reflection capability.
+This survey focuses on systems that exhibit autonomous self-improvement capabilities, as defined in Section~\ref{sec:intro:definition}. We include systems that use LLMs as generators, evaluators, or optimizers within self-improvement loops, as well as systems that evolve agent architectures, code, or machine learning pipelines. We exclude systems that are purely adaptive without a generative improvement component (e.g., simple fine-tuning on new data) and systems that improve only through human-provided feedback without any autonomous generation or reflection capability.
 
 The field is moving rapidly. Our analysis is based on publications and open-source projects available as of May 2026. New systems and results are appearing at an accelerating pace, particularly in the areas of agent self-evolution and evolutionary code optimization. We have endeavored to be comprehensive but acknowledge that some recent work may have escaped our attention.
 

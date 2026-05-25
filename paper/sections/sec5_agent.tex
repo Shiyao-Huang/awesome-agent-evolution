@@ -1,96 +1,137 @@
 \section{Self-Evolving Agent Systems}
 \label{sec:agent-evolution}
 
-The evolutionary code systems of Section~\ref{sec:evolutionary-code} optimize programs---functions, heuristics, algorithms---within fixed architectural frameworks. A more radical form of self-evolution targets the \emph{agents} themselves: their architectures, workflows, tool configurations, and learning mechanisms. This section surveys the emerging landscape of self-evolving agent systems, from automated agent design to self-referential architectures, symbolic learning, and zero-data self-training.
+The evolutionary code systems of Section~\ref{sec:evolutionary-code} optimize programs---functions, heuristics, algorithms---within fixed architectural frameworks. The evolutionary operators mutate code, but the agent that wields this code remains static: its architecture, its tool selection, its reasoning flow, and its learning mechanisms are all hand-designed. A more radical form of self-evolution targets the \emph{agents} themselves: their architectures, workflows, tool configurations, and learning mechanisms. This section surveys the emerging landscape of self-evolving agent systems, organized along two axes---what evolves and how it evolves. We progress from automated agent architecture search, through self-referential architectures that modify their own code at runtime, to symbolic learning frameworks that optimize agent components through language-space backpropagation, zero-data self-training paradigms, and foundational work on reflective self-improvement that established the intellectual basis for the field.
 
 \subsection{Automated Agent Architecture Search}
 \label{sec:adas}
 
-The design of agent architectures---prompting strategies, tool compositions, multi-step reasoning chains---has traditionally been a manual, intuition-driven process. ADAS~\citep{hu2024adas} (Automated Design of Agentic Systems) formalizes this as a search problem: given a space of possible agent architectures (expressed as Python programs) and an evaluation function, automatically discover high-performing designs.
+The design of agent architectures---prompting strategies, tool compositions, multi-step reasoning chains, and control flow---has traditionally been a manual, intuition-driven process. Researchers draw on experience and heuristics to design Chain-of-Thought prompting, Self-Consistency voting, ReAct-style reasoning-acting loops, and multi-agent debate protocols. ADAS~\citep{hu2024adas} (Automated Design of Agentic Systems) formalizes this as a search problem: given a space of possible agent architectures (expressed as Python programs) and an evaluation function, automatically discover high-performing designs without human architectural intuition.
 
-\subsubsection{Meta Agent Search}
+\subsubsection{Meta Agent Search Algorithm}
 
-ADAS introduces the Meta Agent Search algorithm, in which a ``meta agent'' (an LLM, typically GPT-4o) iteratively proposes new agent architectures in code. The search space encompasses all valid Python programs that implement agents using a provided base class (\texttt{LLMAgentBase}), making it Turing-complete: any computable agent architecture can, in principle, be discovered.
+ADAS introduces the Meta Agent Search algorithm, in which a ``meta agent'' (an LLM, typically GPT-4o at temperature 0.8 for high creativity) iteratively proposes new agent architectures in code. The search space encompasses all valid Python programs that implement agents using a provided base class (\texttt{LLMAgentBase}), making it Turing-complete: any computable agent architecture can, in principle, be discovered.
 
-The algorithm proceeds as follows:
-\begin{enumerate}
-\item \textbf{Initialization}: Seed the archive with known agent architectures (Chain-of-Thought, Self-Refine, LLM Debate, CoT with Self-Consistency, Quality-Diversity).
-\item \textbf{Proposal}: The meta agent reviews the entire archive of previously discovered designs and their performance scores, then proposes a new agent architecture.
-\item \textbf{Reflexion}: The proposal undergoes two rounds of self-reflection: first assessing novelty and identifying implementation errors, then correcting against a library of 10 common failure patterns.
-\item \textbf{Evaluation}: The proposed architecture is dynamically loaded via \texttt{exec()} and evaluated on benchmark tasks with multi-threaded parallel execution.
-\item \textbf{Archive update}: The new architecture and its score are added to the growing archive.
-\end{enumerate}
+The algorithm proceeds through four stages:
 
-The meta agent prompt includes the complete API specification of \texttt{LLMAgentBase}, the full history of discovered architectures, task examples, and explicit encouragement to ``think outside the box.'' The output format requires three fields: a structured \texttt{thought} section (insights + overall idea), a descriptive \texttt{name}, and the complete \texttt{code} implementation.
+\textbf{Initialization}. The archive is seeded with five known agent architectures:
+\begin{itemize}
+\item \textbf{Chain-of-Thought}: Single-step thinking followed by code generation.
+\item \textbf{Self-Refine (Reflexion)}: Iterative self-correction through self-critique.
+\item \textbf{LLM Debate}: Multi-role debate between a ``puzzle designer'' and a ``logic expert.''
+\item \textbf{CoT-SC (Self-Consistency)}: $N{=}5$ parallel Chain-of-Thought runs with majority voting.
+\item \textbf{Quality-Diversity}: Generate diverse candidate solutions and rank the top-$K$.
+\end{itemize}
 
-\subsubsection{Results and Cross-Domain Transfer}
+These seeds provide initial architectural diversity and establish baseline performance. On ARC, they score 3--8\%, setting a low bar that subsequent generations quickly surpass.
 
-On the ARC (Abstraction and Reasoning Corpus) benchmark, ADAS-discovered agents outperform all hand-designed baselines. The evolution trajectory shows clear architectural innovation: from initial seeds scoring 3--8\%, the system discovers a ``Memory-Augmented Agent'' at generation 4 that achieves 11\% by introducing a memory buffer---a design pattern not present in any seed architecture.
+\textbf{Proposal}. The meta agent receives a prompt containing: (1) the complete API specification of \texttt{LLMAgentBase}, including all methods and their signatures; (2) the full archive of previously discovered architectures, each annotated with its performance score; (3) task-specific examples; (4) a library of 10 common failure patterns in agent design; and (5) explicit encouragement to ``think outside the box'' and propose genuinely novel designs. The meta agent outputs a JSON object with three fields: a structured \texttt{thought} section (analyzing insights from the archive and articulating a design rationale), a descriptive \texttt{name}, and the complete \texttt{code} implementation.
 
-A striking finding is \textbf{cross-domain transfer}: architectures discovered on ARC transfer effectively to DROP, GPQA, MGSM, and MMLU, even without domain-specific adaptation. Moreover, architectures discovered using GPT-3.5 as the inner agent remain effective when GPT-4 serves as the backbone, demonstrating that the discovered designs encode general reasoning patterns rather than model-specific exploits.
+\textbf{Reflexion}. The proposal undergoes two rounds of self-reflection before evaluation. The first round assesses novelty (``is this truly different from existing designs?''), identifies potential implementation errors, and proposes improvements. The second round checks against the library of 10 predefined failure patterns (e.g., ``calling the LLM without providing task information,'' ``not handling empty responses,'' ``hardcoding answers instead of reasoning'') and applies corrections. This two-stage reflexion catches many obvious bugs before expensive evaluation, reducing wasted compute.
 
-ADAS was accepted at ICLR 2025 and received the NeurIPS 2024 Open-World Agent Workshop Outstanding Paper Award, with over 414 citations, establishing automated agent design as a recognized research direction.
+\textbf{Evaluation and debugging}. The proposed architecture is dynamically loaded via Python's \texttt{exec()} function---literally injecting the LLM-generated code into a running agent framework. Multi-threaded parallel evaluation (32--48 workers) runs the agent on benchmark tasks using GPT-3.5-turbo as the inner agent (the LLM that executes the discovered architecture). If evaluation raises an exception, the system enters a debugging loop (up to 3 attempts) where the error message is fed back to the LLM for code correction. Fitness is measured using bootstrap 95\% confidence intervals over 100,000 resamples, providing statistically robust performance estimates.
+
+\subsubsection{Results and Evolution Trajectory}
+
+On the ARC (Abstraction and Reasoning Corpus) benchmark, ADAS-discovered agents outperform all hand-designed baselines. The evolution trajectory shows clear architectural innovation:
+
+\begin{itemize}
+\item \textbf{Generation 0 (seeds)}: Chain-of-Thought (3.0\%), Self-Refine (8.0\%), Quality-Diversity (6.0\%).
+\item \textbf{Generation 4}: \textbf{Memory-Augmented Agent} (11.0\%)---introduces a memory buffer that stores intermediate reasoning steps, a design pattern not present in any seed architecture. This represents genuine architectural discovery: the meta agent identified the value of persistent memory for multi-step reasoning tasks without being explicitly told to do so.
+\item \textbf{Generation 5}: Domain-Specific Reasoning (8.0\%)---attempts domain-adaptive strategies, showing exploration of different architectural directions.
+\end{itemize}
+
+The cumulative archive grows monotonically (no pruning), which means later-generation proposals can draw on a richer history of successful and failed designs. This growing context is both a strength (more information for the meta agent) and a weakness (increasing token consumption in the meta prompt).
+
+A striking finding is \textbf{cross-domain transfer}: architectures discovered on ARC transfer effectively to DROP (reading comprehension, F1 score), GPQA (graduate-level QA), MGSM (multilingual math), and MMLU (knowledge QA), even without domain-specific adaptation. This suggests that ADAS discovers general reasoning strategies---not task-specific tricks.
+
+Moreover, \textbf{cross-model transfer} is observed: architectures discovered using GPT-3.5 as the inner agent remain effective when GPT-4 serves as the backbone. This demonstrates that the discovered designs encode general control-flow patterns (when to call the LLM, how to aggregate responses, when to self-correct) rather than exploiting model-specific quirks.
+
+ADAS was accepted at ICLR 2025 and received the NeurIPS 2024 Open-World Agent Workshop Outstanding Paper Award, with over 414 citations. It established automated agent design as a recognized research direction and directly inspired subsequent work on the Darwin G\"odel Machine (Section~\ref{sec:dgm}).
+
+\subsubsection{Implementation Details}
+
+The ADAS implementation is remarkably compact---approximately 500 lines of core code per domain, organized as:
+\begin{itemize}
+\item \texttt{search.py}: The main search loop with proposal, reflexion, evaluation, and debugging stages.
+\item \texttt{arc\_prompt.py} (and domain equivalents): The meta agent prompt, including \texttt{LLMAgentBase} API documentation, seed architectures, failure pattern library, and output format specification.
+\item \texttt{utils.py}: Evaluation utilities, bootstrap confidence interval computation, and example formatting.
+\end{itemize}
+
+Each domain (ARC, DROP, GPQA, MGSM, MMLU) is self-contained with the same structure, enabling easy addition of new evaluation domains. The system's simplicity---a single LLM generating Python code, evaluated via dynamic execution---belies the sophistication of the discovered architectures.
 
 \subsubsection{Limitations}
 
-The computational cost of Meta Agent Search is substantial: each proposed architecture requires full benchmark evaluation, and the reflexion and debugging stages add multiple LLM calls per proposal. The archive grows indefinitely (no pruning), which can overwhelm the meta agent's context window at later generations. The approach is also limited to architectures expressible as Python programs using \texttt{LLMAgentBase}, excluding designs that require custom neural components, external memory systems, or non-textual modalities.
+The computational cost of Meta Agent Search is substantial: each proposed architecture requires full benchmark evaluation with multi-threaded execution, and the reflexion and debugging stages add multiple LLM calls per proposal. The archive grows indefinitely (no pruning), which can overwhelm the meta agent's context window at later generations, though this has not been a practical problem in reported experiments. The approach is limited to architectures expressible as Python programs using \texttt{LLMAgentBase}, excluding designs that require custom neural components, external memory systems, or non-textual modalities. Finally, the search is guided only by benchmark performance; there is no mechanism for incorporating human preferences about agent behavior (e.g., interpretability, safety, efficiency).
 
 \subsection{Self-Referential Agent Architectures}
 \label{sec:self-referential}
 
-Beyond searching for agent architectures, a more radical approach allows agents to directly modify their own code at runtime. Two recent systems---the Darwin G\"odel Machine and G\"odel Agent---explore this direction, inspired by Schmidhuber's theoretical G\"odel Machine~\citep{schmidhuber2003godel}.
+Beyond searching for agent architectures through a meta-agent, a more radical approach allows agents to directly modify their own code at runtime. This direction draws inspiration from Schmidhuber's theoretical G\"odel Machine~\citep{schmidhuber2003godel}---a hypothetical self-referential system that can provably modify itself to improve performance. Two recent systems explore this direction with practical implementations.
 
 \subsubsection{Darwin G\"odel Machine (DGM)}
+\label{sec:dgm}
 
-DGM~\citep{zhang2025dgm} combines Darwinian evolution with G\"odel machine self-reference. It maintains an open-ended archive of agent implementations, where each entry is a complete agent codebase paired with performance metrics. The evolution loop proceeds as follows:
+DGM~\citep{zhang2025dgm} (University of British Columbia + Vector Institute) combines Darwinian evolution with G\"odel machine self-reference. It maintains an open-ended archive of agent implementations, where each entry is a complete agent codebase paired with performance metrics. The evolution loop proceeds as follows:
 
 \begin{enumerate}
-\item \textbf{Sampling}: A parent agent is selected from the archive with probability proportional to fitness multiplied by a diversity bonus (favoring underexplored regions of the design space).
-\item \textbf{Self-modification}: A foundation model (Claude or GPT) proposes code-level modifications to the parent agent, producing a child agent.
-\item \textbf{Evaluation}: The child agent is evaluated on coding benchmarks.
-\item \textbf{Selection}: If the child improves over the parent, it is added to the archive. Optionally, non-improving children may be retained for diversity.
+\item \textbf{Sampling}: A parent agent is selected from the archive with probability proportional to:
+\begin{equation}
+P(a_i) \propto f(a_i) \times \text{diversity\_bonus}(a_i, A)
+\end{equation}
+where $f(a_i)$ is the fitness score and the diversity bonus favors agents in underexplored regions of the design space.
+
+\item \textbf{Self-modification}: A foundation model (Claude or GPT) proposes code-level modifications to the parent agent, producing a child agent. The modifications can target any aspect of the agent: its prompting strategy, tool selection logic, reasoning flow, or internal state management.
+
+\item \textbf{Evaluation}: The child agent is evaluated on coding benchmarks (SWE-bench, Polyglot) using the full task suite, not a proxy metric.
+
+\item \textbf{Selection}: If the child improves over the parent, it is added to the archive. Optionally, non-improving children may be retained for diversity, preventing loss of potentially useful genetic material.
 \end{enumerate}
 
-The ``open-ended'' nature of DGM distinguishes it from standard evolutionary algorithms that converge to a single optimum. By maintaining a diverse archive, DGM enables exploration of qualitatively different agent architectures and discovery of unexpected strategies.
+The ``open-ended'' nature of DGM distinguishes it from standard evolutionary algorithms that converge to a single optimum. By maintaining a diverse archive, DGM enables exploration of qualitatively different agent architectures and discovery of unexpected strategies. The archive grows indefinitely, and each new entry enriches the search space for future iterations.
 
 \textbf{Key results}:
 \begin{itemize}
-\item \textbf{SWE-bench}: Improved verified resolution from \textbf{20.0\% to 50.0\%}---a 150\% relative improvement on the canonical software engineering benchmark.
-\item \textbf{Polyglot}: Improved multi-language coding score from \textbf{14.2\% to 30.7\%}---a 116\% relative improvement.
-\item Discovered novel agent structures not imagined by human designers.
-\item Agents show cross-domain transfer: improvements learned on one benchmark benefit performance on others.
+\item \textbf{SWE-bench} (software engineering): Improved verified resolution from \textbf{20.0\% to 50.0\%}---a 150\% relative improvement on the canonical benchmark for autonomous software engineering. This is particularly significant because SWE-bench requires agents to understand large codebases, locate bugs, and generate correct patches---skills that are central to real-world software engineering.
+\item \textbf{Polyglot} (multi-language coding): Improved score from \textbf{14.2\% to 30.7\%}---a 116\% relative improvement, demonstrating that evolved strategies transfer across programming languages.
+\item Discovered novel agent structures not imagined by human designers, including multi-stage verification protocols and adaptive tool selection mechanisms.
+\item Agents show cross-domain transfer: improvements learned on one benchmark benefit performance on others, suggesting that the evolved strategies encode general problem-solving patterns.
 \end{itemize}
 
-The same research group (UBC + Vector Institute, led by Jeff Clune) produced both ADAS and DGM, with DGM extending ADAS's search paradigm by adding open-ended archive evolution and removing the constraint of a fixed meta-agent architecture.
+The same research group (UBC + Vector Institute, led by Jeff Clune) produced both ADAS and DGM. DGM extends ADAS's search paradigm by adding open-ended archive evolution (no fixed number of generations), removing the constraint of a single meta-agent architecture (the foundation model that proposes modifications is not itself being evolved), and introducing diversity-weighted sampling that explicitly balances exploration and exploitation.
 
 \subsubsection{G\"odel Agent}
 
-G\"odel Agent~\citep{yin2025godelagent} (ACL 2025, Peking University + UCSB) takes a more direct approach to self-reference: it uses Python monkey patching to dynamically modify its own methods at runtime. Unlike DGM's archive-based evolution, G\"odel Agent modifies a single running instance.
+G\"odel Agent~\citep{yin2025godelagent} (ACL 2025, Peking University + UCSB) takes a more direct approach to self-reference: it uses Python monkey patching to dynamically modify its own methods at runtime. Unlike DGM's archive-based evolution (which generates complete new agent instances), G\"odel Agent modifies a single running instance through surgical code changes.
 
 The self-referential loop operates as:
 \begin{enumerate}
-\item \textbf{Runtime introspection}: The agent reads its own source code and current state.
-\item \textbf{Modification proposal}: The LLM proposes specific code changes (monkey patches) guided by high-level objectives and recent performance feedback.
-\item \textbf{Safe application}: Patches are applied at runtime via Python's \texttt{exec()} mechanism.
-\item \textbf{Validation}: Modified code is tested on a validation set. If performance improves, the modification is accepted; otherwise, it is rolled back.
+\item \textbf{Runtime introspection}: The agent reads its own source code and current state, building a complete self-model. This includes all methods, their implementations, and the agent's current task performance.
+\item \textbf{Modification proposal}: The LLM proposes specific code changes (monkey patches) guided by high-level objectives and recent performance feedback. The modification is expressed as a Python code snippet that will be executed via \texttt{exec()} to redefine one or more methods.
+\item \textbf{Safe application}: Patches are applied at runtime via Python's monkey patching mechanism, which allows replacing methods on live objects without restarting the agent.
+\item \textbf{Validation}: Modified code is tested on a held-out validation set. If performance improves according to the acceptance criterion $\text{score}(A') > \text{score}(A)$, the modification is accepted; otherwise, it is rolled back using a stored copy of the original code.
 \end{enumerate}
 
-\textbf{Key results}: On HotPotQA (multi-hop QA), G\"odel Agent achieves 8--15\% improvement over hand-designed agents. On ALFWorld (interactive text environments), improvement is significant. The agent demonstrates continuous improvement across task batches and discovers strategies that human designers did not anticipate.
+This approach is more lightweight than DGM's archive-based evolution: it does not require maintaining a population of agents, running full benchmarks for each candidate, or managing a complex archive. Instead, it makes targeted, incremental modifications to a single running agent, accepting only those that demonstrably improve performance.
 
-\textbf{Safety mechanisms} include rollback capability for failed modifications, a validation step before committing changes, and high-level objective constraints that prevent drift. However, runtime self-modification introduces non-determinism, and the theoretical guarantees are weaker than formal G\"odel machine proofs. The approach is also Python-specific, limiting portability.
+\textbf{Key results}: On HotPotQA (multi-hop question answering), G\"odel Agent achieves 8--15\% improvement over hand-designed agents. On ALFWorld (interactive text environments), improvement is significant. The agent demonstrates continuous improvement across task batches and discovers strategies that human designers did not anticipate---for example, learning to decompose multi-hop questions differently based on the types of entities involved.
+
+A notable extension is \textbf{Polaris} (arXiv: 2603.23129), which applies the G\"odel Agent framework to small language models. This is significant because self-modification capability has been primarily demonstrated with large, expensive models; extending it to smaller models would make the approach more accessible and deployable.
+
+\textbf{Safety mechanisms} include rollback capability for failed modifications (each change is applied atomically with a stored reverse patch), a validation step before committing changes (performance must improve on a held-out set), and high-level objective constraints that prevent drift (the agent's core goal is preserved across modifications). However, runtime self-modification introduces non-determinism (the agent's behavior depends on its modification history), and the theoretical guarantees are weaker than formal G\"odel machine proofs. The approach is also Python-specific, limiting portability to other programming languages.
 
 \subsubsection{Comparing DGM and G\"odel Agent}
 
-While both systems draw inspiration from the G\"odel machine concept, they differ fundamentally in their approach:
+While both systems draw inspiration from the G\"odel machine concept, they differ fundamentally:
 
 \begin{itemize}
-\item \textbf{Population vs.\ single agent}: DGM maintains an archive of agents (population-based search), while G\"odel Agent modifies a single running instance (individual self-modification).
-\item \textbf{Offline vs.\ online}: DGM evaluates candidate modifications offline (run, evaluate, then decide), while G\"odel Agent applies changes online at runtime.
-\item \textbf{Code mechanism}: DGM generates complete agent implementations, while G\"odel Agent applies targeted monkey patches.
-\item \textbf{Open-endedness}: DGM's archive enables open-ended exploration; G\"odel Agent's single-instance modification is more focused but potentially faster.
+\item \textbf{Population vs.\ single agent}: DGM maintains an archive of agents (population-based search with diversity maintenance), while G\"odel Agent modifies a single running instance (individual self-modification). DGM's population approach is more robust to failed modifications (the archive always contains the best-performing agents) but more expensive.
+\item \textbf{Offline vs.\ online}: DGM evaluates candidate modifications offline (generate a complete agent, run it on benchmarks, then decide whether to keep it), while G\"odel Agent applies changes online at runtime (modify a live agent, test on validation tasks, rollback if needed). DGM's offline approach provides stronger guarantees but requires more compute.
+\item \textbf{Code mechanism}: DGM generates complete agent implementations (the LLM writes a full agent from scratch, conditioned on the parent's code), while G\"odel Agent applies targeted monkey patches (the LLM writes a small code snippet that modifies specific methods). G\"odel Agent's approach is more token-efficient but may miss architectural changes that require coordinated modifications across multiple methods.
+\item \textbf{Open-endedness}: DGM's archive enables open-ended exploration (the search space grows as new architectures are discovered), while G\"odel Agent's single-instance modification is more focused but potentially faster for incremental improvements.
 \end{itemize}
 
-Both approaches share the limitation that self-modification safety is addressed through engineering safeguards (rollback, validation) rather than formal verification. The question of how to provide rigorous guarantees for self-modifying systems remains open.
+Both approaches share the fundamental limitation that self-modification safety is addressed through engineering safeguards (rollback, validation) rather than formal verification. The question of how to provide rigorous guarantees for self-modifying systems---ensuring that an agent cannot modify itself into a harmful state---remains open.
 
 \subsection{Agent Symbolic Learning}
 \label{sec:symbolic-learning}
@@ -101,142 +142,175 @@ Agent Symbolic Learning~\citep{zhou2024symbolic} (NeurIPS 2024, AIWaves + Zhejia
 
 An agent is parameterized as a computational graph with three types of learnable nodes:
 \begin{itemize}
-\item \textbf{Prompt nodes} ($\mathcal{P}$): System prompts, persona descriptions, task instructions.
-\item \textbf{Tool nodes} ($\mathcal{T}$): Function definitions and tool descriptions.
-\item \textbf{Pipeline nodes} ($\mathcal{I}, \mathcal{O}$): Input/output connections between nodes that define the agent's computational flow.
+\item \textbf{Prompt nodes} ($\mathcal{P}$): System prompts, persona descriptions, task instructions---the textual parameters that guide the agent's behavior at each step.
+\item \textbf{Tool nodes} ($\mathcal{T}$): Function definitions and tool descriptions---the specifications of what tools are available and how they should be used.
+\item \textbf{Pipeline nodes} ($\mathcal{I}, \mathcal{O}$): Input/output connections between nodes---the computational flow that defines how information moves through the agent.
 \end{itemize}
 
-The learning procedure mirrors neural network training:
+This parameterization enables a learning procedure that directly mirrors neural network training:
 
-\textbf{Forward pass}: The agent executes on a task, producing a trajectory $\tau$ of actions and observations.
+\textbf{Forward pass}. The agent executes on a task, producing a trajectory $\tau$ of actions, observations, and intermediate results. This trajectory captures the complete computational history of the agent's reasoning process.
 
-\textbf{Language loss}: An LLM evaluates the trajectory and produces a natural language description of what went wrong:
+\textbf{Language loss}. An LLM evaluates the trajectory and produces a natural language description of what went wrong---a ``loss'' in text form:
 \begin{equation}
 \mathcal{L}_{\text{lang}} = \text{LLM}(\mathcal{P}_{\text{loss}}(\tau))
 \end{equation}
+where $\mathcal{P}_{\text{loss}}$ is a prompt template that instructs the LLM to analyze the trajectory and identify specific failure modes.
 
-\textbf{Language gradient backpropagation}: Working backward from the output layer to the input, the system computes a ``language gradient'' for each layer---a natural language description of how to improve that component:
+\textbf{Language gradient backpropagation}. Working backward from the output layer to the input, the system computes a ``language gradient'' for each layer---a natural language description of how to improve that component:
 \begin{equation}
 \nabla_{\text{lang}}^n = \text{LLM}(\mathcal{P}_{\text{gradient}}(\nabla_{\text{lang}}^{n+1}, \mathcal{I}_n, \mathcal{O}_n, \mathcal{P}_n, \mathcal{T}_n, \mathcal{L}_{\text{lang}}))
 \end{equation}
+The language gradient propagates through the computational graph, with each node receiving specific improvement guidance conditioned on both the upstream gradient (what went wrong downstream) and the node's own parameters (what it currently does). This is directly analogous to the chain rule in neural network backpropagation, but the ``gradient'' is a textual description rather than a vector of partial derivatives.
 
-\textbf{Weight update}: Three specialized optimizers update different components:
+\textbf{Weight update}. Three specialized optimizers update different components:
 \begin{itemize}
-\item \textbf{PromptOptimizer}: $\Delta\mathcal{P} = \text{LLM}(\mathcal{P}_{\text{update}}(\mathcal{P}, \nabla_{\text{lang}}))$
-\item \textbf{ToolOptimizer}: $\Delta\mathcal{T} = \text{LLM}(\mathcal{P}_{\text{update}}(\mathcal{T}, \nabla_{\text{lang}}))$
-\item \textbf{PipelineOptimizer}: $\Delta\mathcal{I}, \Delta\mathcal{O} = \text{LLM}(\mathcal{P}_{\text{update}}(\mathcal{I}, \mathcal{O}, \nabla_{\text{lang}}))$
+\item \textbf{PromptOptimizer}: $\Delta\mathcal{P} = \text{LLM}(\mathcal{P}_{\text{update}}(\mathcal{P}, \nabla_{\text{lang}}))$---rewrites prompts based on gradient guidance.
+\item \textbf{ToolOptimizer}: $\Delta\mathcal{T} = \text{LLM}(\mathcal{P}_{\text{update}}(\mathcal{T}, \nabla_{\text{lang}}))$---revises tool descriptions and specifications.
+\item \textbf{PipelineOptimizer}: $\Delta\mathcal{I}, \Delta\mathcal{O} = \text{LLM}(\mathcal{P}_{\text{update}}(\mathcal{I}, \mathcal{O}, \nabla_{\text{lang}}))$---restructures the computational flow.
 \end{itemize}
 
-The ``language gradient'' $\nabla_{\text{lang}}$ is a textual description propagated through the agent's computational graph, analogous to gradients in neural networks but operating in the space of natural language.
+The ``language gradient'' $\nabla_{\text{lang}}$ is a textual description propagated through the agent's computational graph, analogous to gradients in neural networks but operating in the space of natural language. For example, if the agent fails at a math reasoning task, the loss might be ``The agent did not verify its intermediate calculation steps,'' the gradient for the reasoning layer might be ``Add a verification step after each calculation,'' and the prompt update might change the system prompt from ``Solve the problem step by step'' to ``Solve the problem step by step, verifying each intermediate result before proceeding.''
 
 \subsubsection{Results}
 
 Agent Symbolic Learning demonstrates broad effectiveness across diverse benchmarks:
 
 \begin{itemize}
-\item \textbf{HotPotQA}: F1 of 39.1 (vs.\ 37.4 for DSPy, 36.2 for baseline agents)
-\item \textbf{MATH}: 60.7\% accuracy (vs.\ 56.0\% for baseline, 48.4\% for DSPy), using GPT-4 backbone
-\item \textbf{HumanEval}: 73.2\% pass@1 (vs.\ 68.3\% baseline)
-\item \textbf{Software Development}: Average score 3.8 on 1--4 executability scale (vs.\ 2.4 for agents, 1.6 for GPTs)
-\item \textbf{Creative Writing}: 7.4 on 1--10 scale (vs.\ 6.8 for Tree of Thought)
+\item \textbf{HotPotQA} (multi-hop QA): F1 of \textbf{39.1} (vs.\ 37.4 for DSPy, 36.2 for baseline agents)---a 2.9 point improvement over the best competing method.
+\item \textbf{MATH} (mathematical reasoning, GPT-4 backbone): \textbf{60.7\%} accuracy (vs.\ 56.0\% for baseline agents, 48.4\% for DSPy)---a 4.7 point improvement, demonstrating that symbolic optimization of the agent's computational flow is more effective than prompt-only optimization.
+\item \textbf{HumanEval} (code generation): \textbf{73.2\%} pass@1 (vs.\ 68.3\% baseline)---a 4.9 point improvement, showing that the approach transfers to code generation tasks.
+\item \textbf{Software Development} (1--4 executability score): Average \textbf{3.8} (vs.\ 2.4 for agents, 1.6 for GPTs)---a dramatic improvement on a complex multi-step task.
+\item \textbf{Creative Writing} (GPT-4 judge, 1--10 scale): \textbf{7.4} (vs.\ 6.8 for Tree of Thought)---demonstrating applicability to subjective, open-ended tasks.
 \end{itemize}
 
-These improvements are achieved without any weight updates to the underlying LLM---all optimization occurs in the space of prompts, tools, and pipeline connections.
+These improvements are achieved without any weight updates to the underlying LLM---all optimization occurs in the space of prompts, tools, and pipeline connections. The symbolic approach enables optimization of dimensions (like pipeline structure and tool specifications) that pure prompt optimization methods cannot address.
 
 \subsubsection{Relationship to Other Paradigms}
 
-Agent Symbolic Learning extends DSPy's prompt optimization concept to the full agent architecture, including tools and pipeline structure. It is related to Reflexion's verbal reinforcement learning but uses structured backpropagation through a computational graph rather than episode-level reflection. The approach precedes and informs code-level self-modification methods (DGM, G\"odel Agent) by demonstrating that agents can be meaningfully optimized through natural language ``gradients.''
+Agent Symbolic Learning sits at the intersection of several research threads:
+
+\textbf{Extension of DSPy}. DSPy~\citep{khattab2024dspy} optimizes prompts through automated search. Agent Symbolic Learning extends this concept from individual prompts to the full agent architecture, including tools and pipeline structure. The language gradient mechanism provides a principled way to compute improvement directions for each component.
+
+\textbf{Structured Reflexion}. The approach is related to Reflexion's verbal reinforcement learning but uses structured backpropagation through a computational graph rather than episode-level reflection. Reflexion accumulates general lessons in a memory buffer; Agent Symbolic Learning computes specific gradients for each node, enabling more targeted optimization.
+
+\textbf{Precursor to code-level modification}. Agent Symbolic Learning precedes and informs code-level self-modification methods (DGM, G\"odel Agent) by demonstrating that agents can be meaningfully optimized through natural language ``gradients''---providing the theoretical bridge between prompt optimization and code evolution.
 
 \subsubsection{Limitations}
 
-The method requires a strong LLM backbone (GPT-4 level) for gradient computation---weaker models produce less informative language gradients. The quality of optimization depends on the design of loss, gradient, and update prompt templates, introducing a manual engineering component. There are no theoretical convergence guarantees for optimization in language space. Finally, each training step requires multiple LLM calls (forward + loss + backpropagation through all layers + weight update), making it computationally expensive.
+The method requires a strong LLM backbone (GPT-4 level) for gradient computation---weaker models produce less informative language gradients, leading to noisy optimization. The quality of optimization depends on the design of loss, gradient, and update prompt templates, introducing a manual engineering component that partially contradicts the goal of autonomous optimization. There are no theoretical convergence guarantees for optimization in language space---unlike gradient descent, where convergence properties are well understood, the language gradient procedure may oscillate or diverge without detection. Finally, each training step requires multiple LLM calls (forward pass + loss computation + backpropagation through all layers + weight updates), making it computationally expensive, particularly for agents with deep computational graphs.
 
 \subsection{Self-Evolving Code Generation Pipelines}
 \label{sec:selfevolve}
 
-SelfEvolve~\citep{jiang2023selfevolve} (Shanghai Jiao Tong University + Shanghai AI Lab) demonstrates a simpler but effective form of self-evolution for code generation: a two-stage pipeline where the LLM first generates its own API documentation, then iteratively debugs its generated code using execution feedback.
+SelfEvolve~\citep{jiang2023selfevolve} (Shanghai Jiao Tong University + Shanghai AI Lab) demonstrates a simpler but practically effective form of self-evolution for code generation: a two-stage pipeline where the LLM first generates its own API documentation, then iteratively debugs its generated code using execution feedback. While less architecturally ambitious than ADAS or DGM, SelfEvolve's simplicity and effectiveness make it an important baseline.
 
 \subsubsection{Self-Generated Knowledge}
 
-Stage 1 addresses a common failure mode in LLM code generation: hallucinated API usage. Rather than relying on external documentation (which may be incomplete, outdated, or poorly matched to the task), SelfEvolve prompts the LLM to generate its own API documentation from its parametric knowledge. This self-generated knowledge $K$ conditions the subsequent code generation:
+Stage 1 addresses a common failure mode in LLM code generation: hallucinated API usage. LLMs often generate code that calls non-existent functions, uses incorrect parameter names, or misunderstands library behavior---errors that stem from the gap between parametric knowledge (what the model memorized during training) and actual API specifications (what the library actually provides).
+
+Rather than relying on external documentation (which may be incomplete, outdated, or poorly matched to the task), SelfEvolve prompts the LLM to generate its own API documentation from its parametric knowledge:
+\begin{equation}
+p(K) = \prod p_\theta(K_i | X, K_{<i})
+\end{equation}
+where $X$ is the task description and $K$ is the self-generated documentation. This documentation conditions the subsequent code generation:
 \begin{equation}
 P(Y|K) = \prod p_\theta(Y_i | Y_{<i}, X, K)
 \end{equation}
-where $X$ is the task description and $K$ is the self-generated documentation.
+
+The key insight is that the LLM's own understanding of an API, while potentially imperfect, is at least consistent with how it will use that API in the code generation stage. External documentation, even when accurate, may use terminology or conventions that the LLM interprets differently than intended.
+
+A more sophisticated variant uses decomposed extraction: the LLM first generates a trial solution, extracts the API calls it would need, then generates focused documentation for those specific APIs. This targeted approach produces more relevant and accurate documentation than asking the LLM to document an entire library upfront.
 
 \subsubsection{Iterative Self-Refinement}
 
 Stage 2 implements a sandbox-based feedback loop:
 \begin{enumerate}
 \item Generated code is executed in a Python interpreter sandbox with test cases derived from the problem description.
-\item If execution fails, the full error traceback is fed back to the LLM.
-\item The LLM revises the code based on the error message.
-\item Steps 1--3 repeat until the code passes or a maximum iteration count is reached.
+\item If execution fails, the full error traceback (including exception type, message, and line numbers) is fed back to the LLM.
+\item The LLM revises the code based on the error message, producing a corrected version.
+\item Steps 1--3 repeat until the code passes all test cases or a maximum iteration count is reached.
 \end{enumerate}
 
 The revision probability is:
 \begin{equation}
 P(Y'|X,Y,K,e) = p_\theta(Y'|X,Y,e) \times p_\theta(Y|X,K)
 \end{equation}
-where $e$ is the error message from the previous execution attempt.
+where $e$ is the error message from the previous execution attempt. The LLM sees both the original code and the specific error that occurred, enabling targeted fixes rather than blind regeneration.
 
 \subsubsection{Results}
 
-On DS-1000 (data science code), SelfEvolve achieves 57.2 pass@1, a 15.8\% relative improvement over the ChatGPT baseline (49.4). On HumanEval, it reaches 85.98 pass@1 (vs.\ 74.39 for ChatGPT), approaching GPT-4's 89.95. On TransCoder (C++ to Python), it achieves 90.4\% accuracy (vs.\ 88.3\% for ChatGPT).
+On DS-1000 (data science code generation), SelfEvolve achieves \textbf{57.2 pass@1}, a 15.8\% relative improvement over the ChatGPT baseline (49.4). The self-generated knowledge stage contributes 3.5 points, and the iterative refinement stage contributes the remaining 4.3 points, suggesting that both stages provide complementary value.
 
-SelfEvolve represents an early but important form of self-evolution: the system improves its own output through feedback from its own execution environment, without external evaluation or human intervention. It is a direct precursor to later, more sophisticated self-evolution frameworks.
+On HumanEval, SelfEvolve reaches \textbf{85.98 pass@1} (vs.\ 74.39 for ChatGPT), approaching GPT-4's 89.95---a remarkable result given that SelfEvolve uses the same base model (ChatGPT) with only self-generated knowledge and iterative debugging. On TransCoder (C++ to Python translation), it achieves \textbf{90.4\%} accuracy (vs.\ 88.3\% for ChatGPT).
+
+SelfEvolve represents an early but important form of self-evolution: the system improves its own output through feedback from its own execution environment, without external evaluation or human intervention. It is a direct precursor to later, more sophisticated self-evolution frameworks (Reflexion, DGM) and establishes the principle that execution feedback is a powerful training signal for code generation.
 
 \subsection{Zero-Data Self-Training: Absolute Zero}
 \label{sec:absolute-zero}
 
-The most extreme form of self-evolution eliminates all external dependencies: no human-curated training data, no external evaluation functions, no hand-designed curricula. Absolute Zero~\citep{zhao2025absolutezero} (NeurIPS 2025 award-winning, Tsinghua University / LeapLabTHU) achieves this through self-play reinforcement learning.
+The most extreme form of self-evolution eliminates all external dependencies: no human-curated training data, no external evaluation functions, no hand-designed curricula, no human feedback of any kind. Absolute Zero~\citep{zhao2025absolutezero} (NeurIPS 2025 award-winning, Tsinghua University / LeapLabTHU) achieves this through self-play reinforcement learning, drawing inspiration from AlphaGo Zero's demonstration that a system can surpass human performance using only self-generated experience.
 
 \subsubsection{Self-Play RLVR}
 
 Absolute Zero introduces the Self-Play Reinforced Learning with Verifiable Rewards (Self-Play RLVR) paradigm. A single model simultaneously serves two roles:
 
-\textbf{Task Proposer}: Generates new reasoning tasks (code, math, logic puzzles) based on the current curriculum state. The proposer is rewarded for generating tasks that are solvable but challenging:
+\textbf{Task Proposer}. The model generates new reasoning tasks (code problems, math puzzles, logic challenges) based on the current curriculum state. The proposer is rewarded for generating tasks that satisfy two criteria:
 \begin{equation}
 R_{\text{proposer}} \propto \text{difficulty}(t) \times \text{solvability}(t)
 \end{equation}
+Tasks must be \emph{solvable} (not trivially impossible, ensuring the solver receives meaningful training signal) but \emph{challenging} (not trivially easy, ensuring the solver develops genuine reasoning ability). This dual constraint prevents two failure modes: proposing impossible tasks (which provide no learning signal) and proposing trivial tasks (which provide no challenge).
 
-\textbf{Task Solver}: Attempts to solve the proposed tasks. Solutions are verified by a code executor, providing a binary reward signal.
+\textbf{Task Solver}. The model attempts to solve the proposed tasks. Solutions are verified by a code executor that runs the generated code and checks whether it produces correct outputs for given inputs. This provides a binary reward signal $r \in \{0, 1\}$ that is objective and requires no human judgment.
 
-Both roles are updated via reinforcement learning (PPO/GRPO), creating a self-improving loop: better tasks $\rightarrow$ better training signal $\rightarrow$ better solver $\rightarrow$ better proposer (via reward for proposing solvable-but-hard tasks).
+Both roles are updated via reinforcement learning (PPO or GRPO), creating a self-improving loop:
+\begin{equation}
+\text{Better tasks} \xrightarrow{\text{better training signal}} \text{Better solver} \xrightarrow{\text{higher solvability}} \text{Better proposer}
+\end{equation}
 
-The dual-role architecture ensures that the system does not degenerate into trivial self-agreement. The proposer must generate tasks that the solver can verify (not trivially impossible) but finds challenging (not trivially easy), while the solver must develop genuine reasoning ability to handle tasks of increasing difficulty.
+The dual-role architecture ensures that the system does not degenerate into trivial self-agreement. If the proposer generates only easy tasks, the proposer reward drops (low difficulty). If the proposer generates impossible tasks, the solver reward drops (low solvability), and the proposer reward also drops (tasks are not solvable). This creates a natural equilibrium where the proposer generates tasks calibrated to the solver's current capability level---a form of automatic curriculum design.
 
 \subsubsection{Results}
 
-AZR-Coder-7B, trained with zero external data, achieves state-of-the-art results among 7B-parameter models on:
+AZR-Coder-7B, trained with zero external data, achieves state-of-the-art results among 7B-parameter models:
+
 \begin{itemize}
-\item \textbf{HumanEval+}: SOTA at 7B scale
-\item \textbf{MBPP+}: SOTA at 7B scale
-\item \textbf{Overall average}: SOTA at 7B scale across coding and math benchmarks
+\item \textbf{HumanEval+}: SOTA at 7B scale, surpassing models trained on curated code datasets.
+\item \textbf{MBPP+}: SOTA at 7B scale.
+\item \textbf{LiveCodeBench}: Competitive with models trained on substantially more data.
+\item \textbf{Overall average}: SOTA at 7B scale across coding and math benchmarks combined.
 \end{itemize}
 
-A striking finding is \textbf{cross-domain transfer}: training only on self-generated code tasks produces competitive mathematical reasoning on GSM8K and MATH, despite zero mathematical training data. This suggests that the self-play process develops general reasoning capabilities, not domain-specific tricks.
+A striking finding is \textbf{cross-domain transfer}: training only on self-generated code tasks produces competitive mathematical reasoning on GSM8K and MATH, despite zero mathematical training data. This suggests that the self-play process develops general reasoning capabilities---decomposition, pattern matching, verification---that transfer across domains. The transfer is not perfect (math performance is below coding performance), but the mere existence of transfer from code-only self-training to mathematical reasoning is remarkable.
 
-The scaling behavior follows a clear pattern: ``stronger models are better at making themselves stronger''---larger or more capable base models produce better self-play dynamics and achieve higher final performance.
+The scaling behavior follows a clear pattern: ``stronger models are better at making themselves stronger.'' Larger or more capable base models produce better self-play dynamics (more diverse task proposals, more informative training signal) and achieve higher final performance. This positive feedback loop---capability begets self-improvement which begets more capability---has important implications for the future of AI self-evolution.
+
+Another notable finding is that both pass@1 and pass@128 improve continuously throughout training, with no signs of saturation within the compute budget tested. This suggests that the self-play process has not exhausted its curriculum---there are still harder tasks to propose and learn from---though whether this trend continues indefinitely is an open question.
 
 \subsubsection{Limitations and Risks}
 
-Task quality depends on the proposer's current capability, creating a bootstrapping challenge (early training may produce trivial or unsolvable tasks). The code executor limits task types to verifiable programming problems, excluding domains without automated verification. Mode collapse---where the proposer and solver converge to trivial agreements---is a risk, though the dual-role reward structure mitigates it. The computational cost of dual-role RL training is significant.
+\textbf{Bootstrapping challenge}. Task quality depends on the proposer's current capability. At the start of training, the proposer may generate trivial or unsolvable tasks, providing weak training signal. The system must bootstrap from this weak start, and early training may be inefficient.
 
-\subsection{Reflective and Iterative Self-Improvement}
+\textbf{Domain limitation}. The code executor limits task types to verifiable programming problems. While mathematical reasoning shows some transfer, the system cannot currently self-train on tasks that lack automated verification (creative writing, open-ended reasoning, subjective evaluation).
+
+\textbf{Mode collapse risk}. There is a risk that the proposer and solver converge to trivial agreements---the proposer generates easy tasks, the solver solves them, and both receive high rewards without developing genuine capability. The dual-role reward structure (rewarding difficulty) mitigates this, but mode collapse remains a theoretical concern.
+
+\textbf{Computational cost}. Dual-role RL training is expensive: each training step requires task generation, solution generation, code execution for verification, and RL updates for both roles. The compute cost scales with model size, making self-play training of larger models progressively more expensive.
+
+\subsection{Reflective and Iterative Self-Improvement: Foundations}
 \label{sec:reflection-agents}
 
-Before the systems described above, the foundational work on agent self-improvement established the paradigm of iterative refinement through self-feedback. Two papers are particularly important for understanding the intellectual lineage of self-evolving agents.
+Before the systems described above, foundational work on agent self-improvement established the paradigm of iterative refinement through self-feedback. Two papers---Reflexion and Self-Refine---are particularly important for understanding the intellectual lineage of self-evolving agents.
 
 \subsubsection{Reflexion: Verbal Reinforcement Learning}
 
-Reflexion~\citep{shinn2023reflexion} (NeurIPS 2023, Northeastern University + MIT/Princeton) introduces verbal reinforcement learning: agents learn from linguistic feedback stored in a growing memory buffer, without any weight updates.
+Reflexion~\citep{shinn2023reflexion} (NeurIPS 2023, Northeastern University + MIT/Princeton) introduces verbal reinforcement learning: agents learn from linguistic feedback stored in a growing memory buffer, without any weight updates. This work established the paradigm of ``learning from verbal feedback'' that underpins all subsequent self-evolution systems.
 
 The architecture comprises three specialized models:
 \begin{itemize}
-\item \textbf{Actor} ($M_a$): Generates actions given the task and accumulated memory.
-\item \textbf{Evaluator} ($M_e$): Scores the actor's output (binary or scalar reward).
-\item \textbf{Self-Reflection} ($M_r$): Generates verbal feedback explaining what went wrong and what to do differently.
+\item \textbf{Actor} ($M_a$): Generates actions given the task and accumulated memory context. The actor sees all previous reflection entries and uses them to avoid repeating mistakes.
+\item \textbf{Evaluator} ($M_e$): Scores the actor's output, providing either a binary reward (success/failure) or a scalar quality score.
+\item \textbf{Self-Reflection} ($M_r$): Generates verbal feedback explaining what went wrong and what to do differently. The feedback is specific and actionable---not just ``that was wrong'' but ``the second reasoning step incorrectly assumed that the entity mentioned in paragraph 3 was the same as the one in paragraph 1.''
 \end{itemize}
 
 The reflexion loop stores failure analyses in a memory buffer $M$ that grows across episodes:
@@ -244,19 +318,38 @@ The reflexion loop stores failure analyses in a memory buffer $M$ that grows acr
 M_e = M_{e-1} \cup \{f_e\}, \quad f_e = M_r(a_e, r_e, \text{task})
 \end{equation}
 
-This memory acts as a ``verbal gradient''---natural language guidance for future attempts, analogous to parameter gradients in neural network training but operating in text space.
+This memory acts as a ``verbal gradient''---natural language guidance for future attempts, analogous to parameter gradients in neural network training but operating in text space. The key insight is that verbal feedback can capture types of information that numerical gradients cannot: causal explanations (``this failed because...''), strategic recommendations (``next time, try...''), and comparative analysis (``approach A failed because of X, so approach B should...'').
 
-On HumanEval, Reflexion achieves \textbf{91\% pass@1} using GPT-3.5, surpassing GPT-4's 80\%---a striking demonstration that iterative self-reflection with a weaker model can outperform single-pass generation with a stronger model. On AlfWorld, Reflexion reaches 97\% success (vs.\ 75\% baseline).
+On HumanEval, Reflexion achieves \textbf{91\% pass@1} using GPT-3.5, surpassing GPT-4's 80\%---a striking demonstration that iterative self-reflection with a weaker model can outperform single-pass generation with a stronger model. On AlfWorld (interactive text environments), Reflexion reaches 97\% success (vs.\ 75\% baseline). On MBPP (code generation), improvements are significant. These results established that verbal self-reflection is a powerful mechanism for capability amplification.
 
-Reflexion's key insight---that episodic memory of failures can serve as a training signal for language agents---directly influenced all subsequent work on self-evolving agents, from Agent Symbolic Learning's structured backpropagation to DGM's archive-based evolution.
+The scaling behavior of Reflexion is instructive: more reflection episodes lead to better performance, but with diminishing returns. Memory quality matters: specific, actionable feedback outperforms generic feedback (``check your calculations'' vs.\ ``try harder''). Cross-task transfer is observed: feedback from similar tasks helps, but feedback from dissimilar tasks can hurt (introducing irrelevant advice).
 
 \subsubsection{Self-Refine: Iterative Refinement with Self-Feedback}
 
 Self-Refine~\citep{madaan2023selfrefine} (NeurIPS 2023, AI2 + Google + CMU) demonstrates that a single LLM can iteratively generate, critique, and refine its own output across seven diverse tasks, achieving approximately 20\% average improvement with no external feedback, no training, and no reinforcement learning.
 
-The three-step loop (GENERATE $\rightarrow$ CRITIQUE $\rightarrow$ REFINE) repeats until the critique identifies no further improvements or a maximum iteration count is reached. The same model serves all three roles. On sentiment reversal (74\% $\rightarrow$ 86\%), dialogue response (52\% $\rightarrow$ 68\% win rate), and constrained generation (65\% $\rightarrow$ 78\% compliance), Self-Refine produces consistent improvements.
+The three-step loop operates as:
+\begin{enumerate}
+\item \textbf{GENERATE}: The model produces initial output given the input and task instruction.
+\item \textbf{CRITIQUE}: The model analyzes its own output against a task-specific rubric, identifying specific issues (``the second paragraph does not address the user's question about pricing'').
+\item \textbf{REFINE}: The model improves the output based on the critique, producing a revised version.
+\end{enumerate}
 
-Self-Refine establishes the principle that self-feedback is a viable alternative to external feedback, a foundational assumption underlying all subsequent self-evolution systems.
+The loop repeats until the critique identifies no further improvements or a maximum iteration count is reached. The same model serves all three roles, and no external feedback or additional training is required.
+
+Results across seven tasks demonstrate consistent improvements:
+
+\begin{itemize}
+\item \textbf{Sentiment Reversal}: 74\% $\rightarrow$ \textbf{86\%} (+12pp)
+\item \textbf{Dialogue Response}: 52\% $\rightarrow$ \textbf{68\%} win rate (+16pp)
+\item \textbf{Constrained Generation}: 65\% $\rightarrow$ \textbf{78\%} compliance (+13pp)
+\item \textbf{Math Reasoning}: 56\% $\rightarrow$ \textbf{67\%} accuracy (+11pp)
+\item \textbf{Code Optimization}: +28\% performance improvement
+\item \textbf{Acrostic Poetry}: 3.2 $\rightarrow$ \textbf{3.8} quality score (+0.6)
+\item \textbf{Code Readability}: 3.5 $\rightarrow$ \textbf{4.1} readability score (+0.6)
+\end{itemize}
+
+Self-Refine establishes the principle that self-feedback is a viable alternative to external feedback---a foundational assumption underlying all subsequent self-evolution systems. Its simplicity (same model, no training, no external tools) and generality (works across seven diverse tasks with the same framework) make it a practical baseline that many later systems improve upon.
 
 \subsection{Synthesis: A Taxonomy of Agent Self-Evolution}
 \label{sec:agent-taxonomy}
@@ -274,55 +367,57 @@ Table~\ref{tab:agent-evo-comparison} provides a structured comparison.
 \toprule
 \textbf{System} & \textbf{What Evolves} & \textbf{Mechanism} & \textbf{External Data} & \textbf{Venue} & \textbf{Key Result} \\
 \midrule
-ADAS & Agent architecture code & Meta Agent Search & Benchmarks only & ICLR 2025 & SOTA on ARC \\
-DGM & Agent codebase & Open-ended archive evolution & Benchmarks only & Preprint 2025 & SWE-bench 20$\rightarrow$50\% \\
-G\"odel Agent & Runtime agent code & Monkey patching & Task feedback & ACL 2025 & +8--15\% on HotPotQA \\
-Symbolic Learning & Prompts, tools, pipeline & Language backpropagation & Task examples & NeurIPS 2024 & 60.7\% on MATH \\
-SelfEvolve & Generated code & Execution feedback loop & Task examples & Preprint 2023 & 86\% on HumanEval \\
-Absolute Zero & Model weights & Self-play RL & None & NeurIPS 2025 & SOTA 7B on coding \\
-Reflexion & Memory buffer & Verbal RL & Task examples & NeurIPS 2023 & 91\% on HumanEval \\
-Self-Refine & Output text & Iterative self-critique & None & NeurIPS 2023 & +20\% avg across 7 tasks \\
+ADAS & Architecture code & Meta Agent Search & Benchmarks & ICLR 2025 & SOTA on ARC \\
+DGM & Agent codebase & Archive evolution & Benchmarks & Preprint 2025 & SWE-bench 20$\rightarrow$50\% \\
+G\"odel Agent & Runtime code & Monkey patching & Task feedback & ACL 2025 & +8--15\% HotPotQA \\
+Symbolic Learning & Prompts/tools/pipeline & Language backprop & Task examples & NeurIPS 2024 & 60.7\% MATH \\
+SelfEvolve & Generated code & Execution feedback & Task examples & Preprint 2023 & 86\% HumanEval \\
+Absolute Zero & Model weights & Self-play RL & None & NeurIPS 2025 & SOTA 7B coding \\
+Reflexion & Memory buffer & Verbal RL & Task examples & NeurIPS 2023 & 91\% HumanEval \\
+Self-Refine & Output text & Self-critique loop & None & NeurIPS 2023 & +20\% avg 7 tasks \\
 \bottomrule
 \end{tabular}
 \end{table*}
 
 \subsubsection{Evolution Targets}
 
-\textbf{Architecture evolution} (ADAS, DGM, G\"odel Agent) modifies the structural design of the agent itself---its reasoning flow, tool usage patterns, and control logic. This is the most ambitious target, as it can discover entirely novel agent designs that human engineers did not conceive.
+\textbf{Architecture evolution} (ADAS, DGM, G\"odel Agent) modifies the structural design of the agent itself---its reasoning flow, tool usage patterns, and control logic. This is the most ambitious target, as it can discover entirely novel agent designs that human engineers did not conceive. DGM's SWE-bench improvement from 20\% to 50\% was achieved by evolving agents with multi-stage verification and adaptive tool selection---architectures that no human had designed for this benchmark.
 
-\textbf{Workflow evolution} optimizes the sequence of operations an agent performs---which tools to use, in what order, with what parameters. This is less ambitious than architecture evolution but more tractable and directly applicable to production systems.
+\textbf{Workflow evolution} optimizes the sequence of operations an agent performs---which tools to use, in what order, with what parameters. This is less ambitious than architecture evolution but more tractable and directly applicable to production systems. Agent Symbolic Learning's PipelineOptimizer addresses this target by modifying the connections between nodes in the agent's computational graph.
 
-\textbf{Knowledge evolution} (Agent Symbolic Learning, SelfEvolve) modifies the agent's prompts, tool descriptions, and internal knowledge representations. This is the most fine-grained target and can be applied within fixed architectures.
+\textbf{Knowledge evolution} (Agent Symbolic Learning, SelfEvolve) modifies the agent's prompts, tool descriptions, and internal knowledge representations. This is the most fine-grained target and can be applied within fixed architectures. SelfEvolve's self-generated knowledge stage is a form of knowledge evolution: the agent generates and refines its own documentation, improving its understanding of the APIs it uses.
 
-\textbf{Memory evolution} (Reflexion) accumulates experiential knowledge in a growing memory buffer. Rather than modifying the agent's structure or parameters, it enriches the agent's context with lessons from past failures.
+\textbf{Memory evolution} (Reflexion) accumulates experiential knowledge in a growing memory buffer. Rather than modifying the agent's structure or parameters, it enriches the agent's context with lessons from past failures. This is the simplest form of self-evolution but provides diminishing returns as the memory buffer grows (eventually, the agent has ``seen it all'' and additional reflections provide no new information).
 
-\textbf{Weight evolution} (Absolute Zero) modifies the underlying model parameters through self-play reinforcement learning. This is the only target that changes the model's internal representations, as opposed to its external behavior.
+\textbf{Weight evolution} (Absolute Zero) modifies the underlying model parameters through self-play reinforcement learning. This is the only target that changes the model's internal representations, as opposed to its external behavior. Weight evolution is the most resource-intensive (requiring gradient computation and parameter updates) but potentially the most powerful, as it can develop capabilities that no amount of prompt engineering or architecture search can achieve.
 
 \subsubsection{Evolution Mechanisms}
 
-\textbf{Search-based} (ADAS, DGM): A meta-agent or evolutionary algorithm proposes candidate designs, which are evaluated and selected. This approach explores a broad space but is computationally expensive.
+\textbf{Search-based} (ADAS, DGM): A meta-agent or evolutionary algorithm proposes candidate designs, which are evaluated and selected. This approach explores a broad space but is computationally expensive. The quality of search depends critically on the meta-agent's LLM: stronger LLMs propose better candidates but cost more per iteration.
 
-\textbf{Gradient-based} (Agent Symbolic Learning): Language-space gradients guide optimization through the agent's computational graph. This is more targeted than search but depends on the quality of language gradient computation.
+\textbf{Gradient-based} (Agent Symbolic Learning): Language-space gradients guide optimization through the agent's computational graph. This is more targeted than search but depends on the quality of language gradient computation. The ``learning rate'' is implicit in the LLM's tendency to make conservative or aggressive changes based on the gradient prompt.
 
-\textbf{Self-play} (Absolute Zero): The agent generates its own training data and evaluation signal through a dual-role setup. This eliminates external dependencies but is limited to verifiable domains.
+\textbf{Self-play} (Absolute Zero): The agent generates its own training data and evaluation signal through a dual-role setup. This eliminates external dependencies but is limited to verifiable domains (where automated evaluation is possible). The approach draws on AlphaGo Zero's self-play paradigm but extends it from game-playing to general reasoning.
 
-\textbf{Reflexive} (Reflexion, Self-Refine): The agent reflects on its own failures and generates improvement guidance. This is the simplest mechanism but may not discover fundamentally novel strategies.
+\textbf{Reflexive} (Reflexion, Self-Refine): The agent reflects on its own failures and generates improvement guidance. This is the simplest mechanism but may not discover fundamentally novel strategies---it can only improve within the space of behaviors the agent already knows about.
 
 \subsection{Limitations and Open Challenges for Agent Self-Evolution}
 \label{sec:agent-limitations}
 
 Despite rapid progress, self-evolving agent systems face significant challenges that the current literature has not fully addressed:
 
-\textbf{Evaluation reliability.} All systems rely on benchmark-based evaluation to guide evolution. However, benchmark improvement does not necessarily correlate with genuine capability gain. Agents may evolve to exploit benchmark-specific patterns (e.g., answer distribution biases, prompt format regularities) rather than developing general reasoning ability. DGM's SWE-bench improvement from 20\% to 50\% is impressive, but the generalizability of the evolved strategies to real-world software engineering tasks remains an open question.
+\textbf{Evaluation reliability}. All systems rely on benchmark-based evaluation to guide evolution. However, benchmark improvement does not necessarily correlate with genuine capability gain. Agents may evolve to exploit benchmark-specific patterns (answer distribution biases, prompt format regularities, common error patterns) rather than developing general reasoning ability. DGM's SWE-bench improvement from 20\% to 50\% is impressive, but the generalizability of the evolved strategies to real-world software engineering tasks (with ambiguous requirements, incomplete test suites, and evolving codebases) remains an open question.
 
-\textbf{Stability of self-modification.} Self-modifying systems risk destabilization: a sequence of individually beneficial modifications may collectively degrade performance. G\"odel Agent's rollback mechanism addresses this locally, but there is no guarantee against gradual drift. DGM's archive-based approach is more robust (each modification is evaluated against the parent), but the computational cost grows with archive size.
+\textbf{Stability of self-modification}. Self-modifying systems risk destabilization: a sequence of individually beneficial modifications may collectively degrade performance. G\"odel Agent's rollback mechanism addresses this locally (each modification is tested individually), but there is no guarantee against gradual drift across many modifications. DGM's archive-based approach is more robust (each modification is evaluated against the parent), but the computational cost grows with archive size.
 
-\textbf{Scalability.} Current evaluations are limited to relatively narrow benchmarks. ADAS uses ARC, DROP, GPQA, MGSM, and MMLU; DGM uses SWE-bench and Polyglot. Whether these approaches scale to the complexity of real-world agent applications---multi-day workflows, large codebases, ambiguous objectives---is unclear.
+\textbf{Scalability}. Current evaluations are limited to relatively narrow benchmarks. ADAS uses ARC, DROP, GPQA, MGSM, and MMLU; DGM uses SWE-bench and Polyglot; Agent Symbolic Learning uses HotPotQA, MATH, and HumanEval. Whether these approaches scale to the complexity of real-world agent applications---multi-day workflows, large codebases, ambiguous objectives, multi-stakeholder interactions---is unclear.
 
-\textbf{Safety and alignment.} Self-evolving agents that modify their own code raise fundamental safety questions. A system that can rewrite its own behavior is, by definition, harder to constrain. Current safety mechanisms (rollbacks, validation sets, objective constraints) are engineering-level mitigations, not formal guarantees. As agent self-evolution moves toward practical deployment, alignment between evolved behavior and human intent becomes increasingly critical.
+\textbf{Safety and alignment}. Self-evolving agents that modify their own code raise fundamental safety questions. A system that can rewrite its own behavior is, by definition, harder to constrain. Current safety mechanisms (rollbacks, validation sets, objective constraints) are engineering-level mitigations, not formal guarantees. As agent self-evolution moves toward practical deployment, alignment between evolved behavior and human intent becomes increasingly critical. The risk is not that agents will deliberately circumvent safety constraints, but that the evolutionary pressure toward benchmark performance may select for behaviors that are effective but undesirable (e.g., generating plausible-looking but incorrect code, or exploiting test suite gaps).
 
-\textbf{Theoretical foundations.} The field lacks formal frameworks for reasoning about self-evolving systems. Under what conditions does agent self-modification converge to improved behavior? What are the theoretical limits of open-ended agent evolution? These questions remain largely unaddressed.
+\textbf{Theoretical foundations}. The field lacks formal frameworks for reasoning about self-evolving systems. Under what conditions does agent self-modification converge to improved behavior? What are the theoretical limits of open-ended agent evolution? Are there fundamental tradeoffs between the breadth of self-modification (what the agent can change) and the reliability of the improvement? These questions remain largely unaddressed, making the field's rapid empirical progress theoretically underconstrained.
 
-\textbf{Resource requirements.} All systems surveyed require significant compute: ADAS and DGM use GPT-4 class models for the meta agent; Absolute Zero requires dual-role RL training; Agent Symbolic Learning needs multiple LLM calls per training step. Democratizing agent self-evolution requires more efficient methods.
+\textbf{Resource requirements}. All systems surveyed require significant compute: ADAS and DGM use GPT-4 class models for the meta agent; Absolute Zero requires dual-role RL training; Agent Symbolic Learning needs multiple LLM calls per training step. This creates an access barrier: only well-resourced laboratories can experiment with self-evolving agent systems. Democratizing agent self-evolution requires more efficient methods---either smaller models that can perform effective self-modification, or algorithms that require fewer evaluation calls.
 
-These limitations connect to the broader open problems discussed in Section~\ref{sec:open-problems}, particularly the evaluation bottleneck (Section~\ref{sec:evo-limitations}), the safety challenge, and the gap between benchmark performance and real-world utility. The transition from evolutionary code discovery (Section~\ref{sec:evolutionary-code}) to agent self-evolution represents a shift from optimizing the \emph{tools} that AI uses to optimizing the \emph{agents} that use them---a shift that amplifies both the potential and the risks of self-evolving AI.
+\textbf{Composability}. The systems surveyed address different aspects of self-evolution (architecture, prompts, memory, weights). A key open question is whether these approaches can be composed: can an agent that evolves its architecture (DGM) also benefit from language-space optimization (Agent Symbolic Learning) and self-play training (Absolute Zero)? Or do different evolution mechanisms interfere with each other? The composability of self-evolution mechanisms is a frontier research direction that no current system addresses.
+
+These limitations connect to the broader open problems discussed in Section~\ref{sec:open-problems}, particularly the evaluation bottleneck (Section~\ref{sec:evo-limitations}), the safety challenge, and the gap between benchmark performance and real-world utility. The transition from evolutionary code discovery (Section~\ref{sec:evolutionary-code}) to agent self-evolution represents a shift from optimizing the \emph{tools} that AI uses to optimizing the \emph{agents} that use them---a shift that amplifies both the potential benefits and the risks of self-evolving AI.

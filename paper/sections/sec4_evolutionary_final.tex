@@ -283,6 +283,36 @@ OpenTreeSearch's most striking design feature is its simplicity: it replaces Ope
 
 A virtual loss mechanism prevents multiple parallel workers from simultaneously selecting the same parent node, improving parallel efficiency without requiring the coordination overhead of island migration. When a worker selects a node for expansion, it temporarily increments the node's visit count (applying a ``virtual loss'' that makes the node less attractive to other workers), then corrects the count after evaluation completes.
 
+\subsection{Agent Architecture Search and Self-Modification}
+\label{sec:agent-arch-search}
+
+A natural extension of evolutionary code discovery is the evolution of agent architectures themselves. Rather than evolving programs that solve specific problems, these systems evolve the \emph{design of agents}---their prompts, tool compositions, reasoning strategies, and even their own source code.
+
+\subsubsection{ADAS: Automated Design of Agentic Systems}
+
+ADAS~\citep{hu2024adas} (ICLR 2025 Outstanding Paper) defines the research area of automated agent design through Meta Agent Search. The key insight is that programming languages are Turing-complete: the space of all valid Python programs implementing agents encompasses \emph{every possible agent architecture}.
+
+The Meta Agent operates as an LLM that reviews previously discovered agent designs and their scores, then writes code for a new agent: $a_{\text{new}} = \text{LLM}(D, \text{history})$, where $D$ is the archive. The best agent is returned as $a^* = \arg\max_{a \in D} \text{score}(a)$. Meta Agent Search discovered agents that outperform hand-designed SOTA on ARC and GFootball, with cross-domain transfer (ARC designs transfer to GFootball; GPT-3.5-discovered designs work with GPT-4).
+
+\subsubsection{Darwin G\"odel Machine: Open-Ended Evolution}
+
+The Darwin G\"odel Machine (DGM)~\citep{zhang2025dgm} extends ADAS with open-ended evolution. It maintains a diverse archive $A = \{a_1, \ldots, a_n\}$ with diversity-biased sampling: $P(a_i) \propto f(a_i) \times \text{diversity\_bonus}(a_i, A)$. The LLM proposes code modifications: $a_{\text{child}} = \text{LLM}(a_{\text{parent}}.\text{code}, \text{edit\_instruction})$, and improved versions are retained.
+
+DGM achieved SWE-bench 20.0\% $\rightarrow$ \textbf{50.0\%} Verified (2.5$\times$ improvement) and Polyglot 14.2\% $\rightarrow$ \textbf{30.7\%} (2.2$\times$). It discovered novel agent structures not imagined by human designers, demonstrating the creative potential of open-ended evolutionary search. DGM is inspired by Schmidhuber's G\"odel Machine~\citep{schmidhuber2003godel} but operates without formal proof guarantees.
+
+\subsubsection{G\"odel Agent: Runtime Self-Modification}
+
+G\"odel Agent~\citep{yin2025godelagent} (ACL 2025) takes a different approach: it modifies its own running code through Python monkey patching. The agent reads its own source code, analyzes performance, and proposes patches: $A' = \text{LLM}(A.\text{code}, \text{feedback}, \text{objective})$. Changes are accepted only if $\text{score}(A') > \text{score}(A)$; otherwise rollback occurs.
+
+G\"odel Agent outperforms hand-designed agents on HotPotQA (+8--15\%) and ALFWorld, with monotonically increasing performance over experience. Unlike DGM's population-level evolution, G\"odel Agent operates at the individual level---better suited for rapid incremental improvement in deployment.
+
+\subsubsection{Absolute Zero: Zero-Data Self-Play}
+
+Absolute Zero~\citep{zhao2025absolutezero} eliminates the data dependency entirely: a single model simultaneously proposes tasks and solves them. The Task Proposer generates reasoning tasks, the Task Solver attempts them, and a Code Executor verifies solutions. The proposer reward $R_{\text{proposer}} \propto \text{difficulty}(t) \times \text{solvability}(t)$ creates an automatic curriculum.
+
+AZR-Coder-7B, trained with \textbf{zero external data}, achieves SOTA among 7B models on HumanEval+, MBPP+, and LiveCodeBench. The principle ``stronger models are better at making themselves stronger'' suggests an autocatalytic positive feedback loop characteristic of open-ended evolution.
+
+
 \subsection{Comparative Analysis}
 \label{sec:evo-comparison}
 
