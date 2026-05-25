@@ -1,5 +1,6 @@
 % ====================================================================
 % Chapter 4: Evolutionary Systems for Self-Improving AI
+% EXPANDED ENGLISH VERSION — DO NOT OVERWRITE
 % ====================================================================
 
 \section{Evolutionary Systems for Self-Improving AI}
@@ -11,51 +12,82 @@ The emergence of large language models (LLMs) as general-purpose reasoning and c
 
 The systems surveyed in this chapter share a common architectural pattern that we term the \textbf{Generate--Evaluate--Select} loop. At each iteration, a generator (typically an LLM) proposes one or more candidate solutions or modifications; an evaluator (which may be a program, a benchmark suite, or another LLM) assigns scores to these candidates; and a selection mechanism retains the best performers for the next round. What distinguishes these systems from classical evolutionary computation is the role of the LLM: rather than applying fixed mutation or crossover operators, the LLM leverages its vast parametric knowledge to propose semantically meaningful changes, effectively conducting \emph{informed search} over the space of programs, prompts, or agent architectures.
 
-We organize our analysis into five thematic sections. Section~\ref{sec:ch4-llm-optimizer} examines systems that use LLMs as optimizers in prompt and hyperparameter spaces, with OPRO as the flagship example. Section~\ref{sec:ch4-evo-operator} covers systems that employ LLMs as evolutionary operators for code and algorithm discovery, including AlphaEvolve, FunSearch, and their open-source counterparts. Section~\ref{sec:ch4-agent-evo} analyzes systems that extend evolution to the agent level, where the target of improvement is the agent's own architecture or behavior, exemplified by DGM, ADAS, and the G\"{o}del Agent. Section~\ref{sec:ch4-opensource} provides a detailed comparison of open-source implementations that make these paradigms accessible to the broader research community. Section~\ref{sec:ch4-benchmark} synthesizes benchmark results across all systems and identifies cross-cutting patterns, limitations, and future directions.
+\paragraph{Historical Context.}
+The idea of using automated search to improve AI systems has deep roots. Neural Architecture Search (NAS) demonstrated that the architecture of neural networks could be discovered rather than designed by human experts. AutoML systems automated the selection and configuration of machine learning pipelines. Quality-Diversity algorithms showed how to maintain diverse populations of high-performing solutions across behavioral dimensions. The systems surveyed in this chapter build on these foundations but introduce a transformative element: the LLM as an intelligent mutation operator. Unlike the random or semi-random perturbations used in classical NAS and evolutionary computation, LLM-driven mutations are \emph{semantically informed}---the model draws on vast pre-training data to propose changes that are likely to be beneficial, dramatically accelerating the search process.
 
+\paragraph{The Evolutionary Intelligence Paradigm.}
 A unifying theme across these systems is the tension between \emph{exploration} and \emph{exploitation}. Classical evolutionary algorithms address this tension through mechanisms like fitness sharing, niching, and island models. The systems we survey inherit these mechanisms but augment them with LLM-specific capabilities: the ability to reason about \emph{why} a particular change might improve performance, to incorporate domain knowledge from pre-training, and to generate novel solutions that would be unlikely under random mutation. This combination of evolutionary search with LLM-driven intelligence represents what we identify as the \textbf{Evolutionary Intelligence} paradigm---a key pillar of self-evolving AI.
+
+\paragraph{Chapter Roadmap.}
+We organize our analysis into five thematic sections. Section~\ref{sec:ch4-llm-optimizer} examines systems that use LLMs as optimizers in prompt and hyperparameter spaces, with OPRO and EvoPrompt as flagship examples. Section~\ref{sec:ch4-evo-operator} covers systems that employ LLMs as evolutionary operators for code and algorithm discovery, including AlphaEvolve, FunSearch, and their open-source counterparts. Section~\ref{sec:ch4-agent-evo} analyzes systems that extend evolution to the agent level, where the target of improvement is the agent's own architecture or behavior, exemplified by DGM, ADAS, and the G\"{o}del Agent. Section~\ref{sec:ch4-opensource} provides a detailed comparison of open-source implementations. Section~\ref{sec:ch4-benchmark} synthesizes benchmark results and identifies cross-cutting patterns, limitations, and future directions.
 
 
 \subsection{LLM as Optimizer}
 \label{sec:ch4-llm-optimizer}
+
+This section examines systems that use LLMs as general-purpose optimizers, where the optimization target is typically a natural language object (a prompt, an instruction, or a configuration). These systems represent the simplest form of the Evolutionary Intelligence paradigm, as the search space is discrete, human-readable, and relatively easy to evaluate.
 
 \subsubsection{OPRO: Optimization by PROmpting}
 
 OPRO~\citep{yang2023opro}, proposed by Google DeepMind, represents the foundational insight that LLMs can serve as general-purpose optimizers when the optimization problem is expressed in natural language. The key innovation is the \textbf{meta-prompt}: instead of designing task-specific optimization algorithms, OPRO presents the LLM with a history of previous solution--score pairs and asks it to generate a new solution that achieves a higher score.
 
 \paragraph{Algorithmic Framework.}
-The OPRO optimization loop proceeds as follows. Given an objective function $f$ and an initial set of solution--score pairs $\{(s_i, f(s_i))\}_{i=1}^{k}$, the meta-prompt $\mathcal{M}$ is constructed as:
+The OPRO optimization loop proceeds as follows. Given an objective function $f$ and an initial set of solution--score pairs $\{(s_i, f(s_i))\}_{i=1}^{k}$, the meta-prompt $\mathcal{M}$ is constructed by formatting these pairs in ascending order of score, so the LLM encounters the best solutions last:
 \begin{equation}
 \mathcal{M} = \text{Format}\left(\{(s_1, f(s_1)), \ldots, (s_k, f(s_k))\}, \text{task\_description}\right)
 \end{equation}
-where solutions are sorted by score in ascending order so the LLM reads the best solutions last (a recency bias exploitation). The optimizer LLM then generates $m$ new candidate solutions:
+The optimizer LLM then generates $m$ new candidate solutions at high temperature:
 \begin{equation}
 \{s'_1, \ldots, s'_m\} = \text{LLM}_{\theta}(\mathcal{M}), \quad \text{temperature}=1.0
 \end{equation}
-Each candidate is evaluated and the history is updated:
+Each candidate is evaluated by a separate scorer LLM at zero temperature for deterministic assessment, and the history is updated with top-$K$ selection:
 \begin{equation}
 \mathcal{H} \leftarrow \text{TopK}\left(\mathcal{H} \cup \{(s'_j, f(s'_j))\}_{j=1}^{m}, K\right)
 \end{equation}
-where $K$ is the maximum history size (default 20). The process repeats for $T$ iterations (default 200).
+where $K$ is the maximum history size (default 20). The process repeats for $T$ iterations (default 200), with each iteration producing 8 new candidates.
 
 \paragraph{Prompt Optimization as Primary Application.}
-The most impactful application of OPRO is prompt optimization: the ``solutions'' are natural language instructions, and the objective function is task accuracy on a training set. OPRO discovered that the prompt ``\textit{Take a deep breath and work on this problem step by step}'' achieves 80\% accuracy on GSM8K with PaLM 2, compared to 34\% with a naive baseline prompt. This result demonstrated that LLMs can discover non-obvious prompting strategies through iterative search.
+The most impactful application of OPRO is prompt optimization: the ``solutions'' are natural language instructions, and the objective function is task accuracy on a training set. OPRO discovered that the prompt ``\textit{Take a deep breath and work on this problem step by step}'' achieves 80\% accuracy on GSM8K with PaLM 2, compared to 34\% with a naive baseline prompt. This result demonstrated that LLMs can discover non-obvious prompting strategies through iterative search, and it fundamentally changed how researchers think about prompt engineering---from a manual art to an automated optimization problem.
 
 \paragraph{Key Design Decisions.}
 Several engineering choices are critical to OPRO's success:
 
 \begin{enumerate}
-    \item \textbf{Score bucketization}: Continuous accuracy scores are discretized into 100 buckets to prevent the LLM from over-focusing on small numerical differences.
+    \item \textbf{Score bucketization}: Continuous accuracy scores are discretized into 100 buckets via the \texttt{\_bucketize\_float} function to prevent the LLM from over-focusing on small numerical differences. A score of 0.847 becomes bucket 85, making the optimization landscape smoother for the LLM.
     \item \textbf{High-temperature generation}: The optimizer LLM uses temperature 1.0 to encourage diversity in proposed solutions, while the scorer LLM uses temperature 0.0 for deterministic evaluation.
-    \item \textbf{Error-driven few-shot selection}: The system tracks which training examples are most frequently misclassified and uses these as few-shot examples in subsequent meta-prompts, focusing the optimizer on the hardest cases.
-    \item \textbf{Multi-position instruction placement}: Four instruction positions are evaluated (before question, at question start, at question end, at answer start) to find the optimal placement.
+    \item \textbf{Error-driven few-shot selection}: The system tracks which training examples are most frequently misclassified using \texttt{wrong\_questions\_from\_start\_counter} and uses these as few-shot examples in subsequent meta-prompts. This focuses the optimizer on the hardest cases---the analog of curriculum learning in the prompt optimization setting.
+    \item \textbf{Multi-position instruction placement}: Four instruction positions are evaluated (before question, at question start, at question end, at answer start) to find the optimal placement for each task.
+    \item \textbf{Deduplication}: MD5 hashing prevents the same solution from being evaluated twice, and filters skip solutions longer than 500 characters or containing suspicious patterns.
 \end{enumerate}
 
-\paragraph{Beyond Prompts: Mathematical Optimization.}
-OPRO generalizes beyond prompt optimization to continuous and combinatorial optimization. For linear regression, the meta-prompt presents $(w, b, f(w,b))$ tuples and asks the LLM to propose new parameter vectors, achieving convergence on simple 2D problems. For the Traveling Salesman Problem (TSP), the LLM proposes city orderings given previous route--length pairs. While not competitive with specialized solvers on large instances, these results demonstrate the generality of the LLM-as-optimizer paradigm.
+\paragraph{Beyond Prompts: Mathematical and Combinatorial Optimization.}
+OPRO generalizes beyond prompt optimization to continuous and combinatorial optimization. For linear regression, the meta-prompt presents $(w, b, f(w,b))$ tuples and asks the LLM to propose new parameter vectors:
+\begin{equation}
+\text{Meta-prompt: } \text{``input: w=15, b=14 \textbackslash n value: 50.0''} \rightarrow \text{LLM proposes } (w', b')
+\end{equation}
+For the Traveling Salesman Problem (TSP), the LLM proposes city orderings given previous route--length pairs. While not competitive with specialized solvers on large instances, these results demonstrate the generality of the LLM-as-optimizer paradigm and suggest that the approach may become competitive as LLMs improve.
 
-\paragraph{Limitations and Analysis.}
-OPRO's primary limitation is scalability: each iteration requires evaluating all candidates on the full training set, making the cost proportional to $T \times m \times |\mathcal{D}_{\text{train}}|$ LLM inferences. For GSM8K with 200 steps, 8 candidates per step, and the full training set, this amounts to hundreds of thousands of LLM calls. Additionally, the quality of optimization degrades for tasks where the solution space is not well-described in natural language, and the method provides no convergence guarantees. Nevertheless, OPRO established the foundational paradigm that subsequent systems build upon.
+\paragraph{Scaling Analysis.}
+OPRO's primary limitation is scalability: each iteration requires evaluating all candidates on the full training set, making the cost proportional to $T \times m \times |\mathcal{D}_{\text{train}}|$ LLM inferences. For GSM8K with 200 steps, 8 candidates per step, and the full training set, this amounts to hundreds of thousands of LLM calls. The system was tested primarily with PaLM 2 and GPT-3.5, and the quality of optimization depends on the optimizer LLM's ability to reason about the relationship between solution structure and score---a capability that improves with model scale but remains imperfect.
+
+\paragraph{Summary of Quantitative Results.}
+Table~\ref{tab:opro-results} summarizes OPRO's key results across benchmarks.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llcc}
+\toprule
+\textbf{Benchmark} & \textbf{Best Discovered Prompt} & \textbf{Baseline} & \textbf{OPRO} \\
+\midrule
+GSM8K (PaLM 2) & ``Take a deep breath...'' & 34\% & \textbf{80\%} \\
+BBH (multiple subtasks) & Task-specific & varies & +5--25\% \\
+MMLU & Task-specific & varies & consistent gains \\
+Linear Regression & Parameter proposals & random & convergence \\
+\bottomrule
+\end{tabular}
+\caption{OPRO results across benchmarks. The ``Take a deep breath'' prompt became one of the most cited findings in prompt optimization research.}
+\label{tab:opro-results}
+\end{table}
 
 
 \subsubsection{EvoPrompt: Evolutionary Prompt Optimization}
@@ -63,23 +95,19 @@ OPRO's primary limitation is scalability: each iteration requires evaluating all
 EvoPrompt~\citep{guo2023evoprompt}, published at ICLR 2024, extends the LLM-as-optimizer paradigm by explicitly framing prompt optimization as an evolutionary computation problem. Rather than relying on a single meta-prompt as in OPRO, EvoPrompt instantiates two classical evolutionary algorithms---Genetic Algorithms (GA) and Differential Evolution (DE)---with LLMs serving as the crossover and mutation operators.
 
 \paragraph{GA Instantiation.}
-In the GA variant, a population of $N$ prompts is maintained. At each generation:
-\begin{enumerate}
-    \item \textbf{Selection}: Parents are selected via tournament, roulette wheel, or random selection.
-    \item \textbf{Crossover}: Two parent prompts $p_1, p_2$ are provided to the LLM with a crossover template asking it to ``combine the strengths of both prompts'' into a child prompt $p_c$.
-    \item \textbf{Mutation}: A single parent prompt $p$ is provided with a mutation template asking the LLM to ``make a small change to improve'' it, producing $p_m$.
-    \item \textbf{Evaluation}: Each new prompt is evaluated on a validation set.
-    \item \textbf{Replacement}: The worst $N$ prompts in the combined parent+offspring population are removed.
-\end{enumerate}
+In the GA variant, a population of $N$ prompts is maintained. At each generation, parents are selected via tournament, roulette wheel, or random selection. Two parent prompts $p_1, p_2$ are provided to the LLM with a crossover template asking it to ``combine the strengths of both prompts'' into a child prompt $p_c$. Mutation is performed by providing a single parent with a template asking the LLM to ``make a small change to improve'' it, producing $p_m$. The worst $N$ prompts in the combined parent+offspring population are removed (elitist replacement).
 
 \paragraph{DE Instantiation.}
-The DE variant follows a different update strategy. For each prompt $p_i$ in the population, a donor prompt $p_d$ is constructed by combining three distinct prompts via an LLM-guided template. A trial prompt $p_t$ is generated by recombining $p_d$ with $p_i$. The replacement rule is greedy: $p_t$ replaces $p_i$ only if $f(p_t) > f(p_i)$.
+The DE variant follows a different update strategy. For each prompt $p_i$ in the population, a donor prompt $p_d$ is constructed by combining three distinct prompts via an LLM-guided template. A trial prompt $p_t$ is generated by recombining $p_d$ with $p_i$. The replacement rule is greedy: $p_t$ replaces $p_i$ only if $f(p_t) > f(p_i)$, ensuring monotonic improvement.
+
+\paragraph{Dual-Model Architecture.}
+EvoPrompt explicitly separates the \textbf{evolution model} (which executes crossover and mutation) from the \textbf{task model} (which uses the prompt to perform the target task). This separation allows using a more capable (and expensive) model for evolution while using any LLM for task execution, providing flexibility in cost--performance trade-offs.
 
 \paragraph{Results.}
-EvoPrompt was evaluated on 31 datasets spanning language understanding (classification), text generation (summarization, simplification), and BIG-Bench Hard reasoning tasks. Key results include up to 25\% improvement over human-designed prompts on BBH tasks, consistent superiority over APE (Automatic Prompt Engineer) and LM-BFF baselines, and the finding that GA outperforms DE on classification tasks while DE is competitive on generation tasks.
+EvoPrompt was evaluated on 31 datasets spanning language understanding (classification), text generation (summarization, simplification), and BIG-Bench Hard reasoning tasks. Key results include up to 25\% improvement over human-designed prompts on BBH tasks, consistent superiority over APE (Automatic Prompt Engineer) and LM-BFF baselines, and the finding that GA outperforms DE on classification tasks while DE is competitive on generation tasks. The approach demonstrated that classical EA frameworks can be effectively combined with LLMs for discrete optimization.
 
-\paragraph{Contribution to Self-Evolution.}
-EvoPrompt's primary contribution is demonstrating that classical evolutionary algorithm frameworks can be effectively combined with LLMs to optimize discrete objects in natural language space. This ``LLM + EC'' paradigm directly informs subsequent work on evolutionary code discovery and agent self-evolution, where the targets of optimization are programs and agent architectures rather than prompts.
+\paragraph{Transition to Code Evolution.}
+EvoPrompt established the ``LLM + EC'' paradigm that directly informs subsequent work on evolutionary code discovery and agent self-evolution. The key insight---that LLMs can serve as intelligent crossover and mutation operators in natural language space---generalizes naturally to code space, where the operations become more powerful because code has formal syntax and semantics that the LLM can exploit. This transition from prompt evolution to code evolution is the subject of the next section.
 
 
 \subsection{LLM as Evolutionary Operator: Code and Algorithm Discovery}
@@ -106,12 +134,12 @@ FunSearch uses 10 independent islands, each evolving its own sub-population. Wit
 \begin{equation}
 P(\text{cluster } c) = \frac{\exp(\text{score}(c) / \tau)}{\sum_{c'} \exp(\text{score}(c') / \tau)}
 \end{equation}
-where $\tau$ starts at 0.1 (heavily favoring high-score clusters) and may decay further.
+where $\tau$ starts at 0.1 (heavily favoring high-score clusters).
 
-Periodically (every 14,400 seconds), the bottom 50\% of islands are reset and re-initialized with the best program from a randomly chosen top island, implementing a migration mechanism that prevents premature convergence while maintaining diversity.
+Periodically (every 14,400 seconds), the bottom 50\% of islands are reset and re-initialized with the best program from a randomly chosen top island. This implements a migration mechanism that prevents premature convergence while maintaining diversity---analogous to the island migration operator in parallel genetic algorithms.
 
 \paragraph{Prompt Engineering.}
-The prompt design is a critical innovation. For each evolution target, the prompt presents a chain of programs with versioned names:
+The prompt design is a critical innovation that contributes significantly to FunSearch's success. For each evolution target, the prompt presents a chain of programs with versioned names:
 \begin{verbatim}
 def priority_v0(element, n):
     """Returns the priority."""
@@ -126,13 +154,16 @@ def priority_v1(element, n):
 def priority_v2(element, n):
     """Improved version of priority_v1."""
 \end{verbatim}
-Programs are ordered from lowest to highest score, so the LLM reads the best implementations last. The target function body is left empty for the LLM to complete. This versioned naming scheme, combined with progressive docstrings (``Improved version of \ldots''), provides the LLM with a clear evolutionary narrative.
+Programs are ordered from lowest to highest score, so the LLM reads the best implementations last. The target function body is left empty for the LLM to complete. This versioned naming scheme, combined with progressive docstrings (``Improved version of \ldots''), provides the LLM with a clear evolutionary narrative. Additionally, the \texttt{rename\_function\_calls()} utility operates at the tokenizer level to ensure that function references are updated consistently across versions.
 
 \paragraph{Safety Filtering.}
-The evaluator applies three levels of filtering: (1) execution success with a 30-second timeout; (2) ancestor-call detection to prevent ``cheating'' by directly invoking a high-scoring predecessor; and (3) return-type validation ensuring numerical output. Failed candidates are silently discarded.
+The evaluator applies three levels of filtering: (1) execution success with a 30-second timeout; (2) ancestor-call detection to prevent ``cheating'' by directly invoking a high-scoring predecessor; and (3) return-type validation ensuring numerical output. The code post-processing pipeline uses Python AST parsing to repeatedly trim incomplete code until it is syntactically correct, handling the common case of LLMs generating partial function bodies.
 
 \paragraph{Key Discoveries.}
-FunSearch discovered new cap set bounds that exceeded the best previously known constructions for $n \geq 8$ in $\mathbb{F}_3^n$, found improved bin-packing heuristics that outperform First Fit Decreasing and Best Fit Decreasing, and discovered new constructions for independent sets in cyclic graphs. The cap set result is particularly notable: it represents the first improvement on this problem in over 20 years, and was achieved by a machine rather than a human mathematician.
+FunSearch discovered new cap set bounds that exceeded the best previously known constructions for $n \geq 8$ in $\mathbb{F}_3^n$, found improved bin-packing heuristics that outperform First Fit Decreasing and Best Fit Decreasing on standard benchmark instances, and discovered new constructions for independent sets in cyclic graphs. The cap set result is particularly notable: it represents the first improvement on this problem in over 20 years, and was achieved by a machine rather than a human mathematician.
+
+\paragraph{Computational Requirements.}
+FunSearch's default configuration uses 15 samplers and 140 evaluators (a 1:9 ratio), indicating that evaluation is the primary computational bottleneck. Each sampler generates 4 samples per prompt, resulting in approximately 60 LLM calls per iteration across all samplers. The island reset period of 14,400 seconds (4 hours) suggests that typical runs span multiple hours to days.
 
 
 \subsubsection{AlphaEvolve: Gemini-Powered Algorithm Discovery at Scale}
@@ -145,50 +176,52 @@ AlphaEvolve employs two LLMs with complementary roles:
     \item \textbf{Gemini Flash}: A faster, cheaper model used for \emph{breadth}---generating many diverse candidate modifications in parallel, exploring a wide range of possible improvements.
     \item \textbf{Gemini Pro}: A more capable model used for \emph{depth}---generating targeted, high-quality modifications to the most promising candidates identified by Flash.
 \end{itemize}
-This dual-model approach creates a two-phase search: Flash casts a wide net to identify promising regions of the solution space, while Pro performs focused exploitation within those regions.
+This dual-model approach creates a two-phase search: Flash casts a wide net to identify promising regions of the solution space, while Pro performs focused exploitation within those regions. The Flash model handles the majority of candidate generation (estimated 80-90\% of total LLM calls), while Pro is reserved for critical improvements on top candidates.
 
 \paragraph{MAP-Elites Quality-Diversity Search.}
 The population is maintained using the MAP-Elites algorithm~\citep{mouret2015illuminating}, which organizes solutions in a grid defined by \textbf{behavioral descriptors}---measurable characteristics of a solution beyond its scalar fitness score. For each cell in this grid, only the highest-fitness solution is retained:
 \begin{equation}
 \text{Archive}[\mathbf{b}(p)] \leftarrow p \quad \text{if } f(p) > f(\text{Archive}[\mathbf{b}(p)])
 \end{equation}
-where $\mathbf{b}(p)$ maps program $p$ to its behavioral descriptor, and $f(p)$ is its fitness score. This quality-diversity approach ensures that the population maintains diverse solution strategies rather than converging to a single optimum.
+where $\mathbf{b}(p)$ maps program $p$ to its behavioral descriptor vector, and $f(p)$ is its fitness score. This quality-diversity approach ensures that the population maintains diverse solution strategies rather than converging to a single optimum. The behavioral descriptors are problem-specific: for matrix multiplication, they might include the number of multiplications, additions, and memory accesses; for scheduling, they might include throughput, latency, and resource utilization.
 
 \paragraph{Evolution Context Adaptation.}
-Unlike FunSearch's relatively static prompt construction, AlphaEvolve dynamically adapts the evolution context based on the history of successful and failed attempts. The system maintains a growing record of which types of modifications have led to improvements, which have failed, and what patterns emerge across the evolution trajectory. This adaptive context enables the LLM to learn from its own search history and avoid repeating unproductive strategies.
+Unlike FunSearch's relatively static prompt construction, AlphaEvolve dynamically adapts the evolution context based on the history of successful and failed attempts. The system maintains a growing record of which types of modifications have led to improvements, which have failed, and what patterns emerge across the evolution trajectory. This adaptive context enables the LLM to learn from its own search history and avoid repeating unproductive strategies---a form of meta-learning within the evolution loop.
 
 \paragraph{Landmark Results.}
-AlphaEvolve achieved several headline results:
+AlphaEvolve achieved several headline results that demonstrate the power of combining LLM-driven search with quality-diversity optimization:
+
 \begin{itemize}
-    \item \textbf{Matrix multiplication}: Discovered an algorithm for $4 \times 4$ complex matrix multiplication using only \textbf{48 scalar multiplications}, the first improvement over Strassen's algorithm in 56 years (Strassen's bound was 49 for this case).
+    \item \textbf{Matrix multiplication}: Discovered an algorithm for $4 \times 4$ complex matrix multiplication using only \textbf{48 scalar multiplications}, the first improvement over Strassen's algorithm in 56 years (Strassen's bound was 49 for this case). This result was achieved for the specific case of multiplying two $4 \times 4$ complex matrices, improving upon the $4 \times 4$ case of Strassen's recursively applied algorithm.
     \item \textbf{Data center scheduling}: Applied to Google's Borg system, recovering \textbf{0.7\%} of worldwide compute resources---a seemingly small percentage that translates to millions of dollars in savings at Google's scale.
-    \item \textbf{Hardware design}: Discovered functionally equivalent but structurally simpler circuit designs.
-    \item \textbf{LLM training optimization}: Achieved a \textbf{23\% speedup} in FlashAttention kernel tiling and a \textbf{32\% speedup} in attention computation.
-    \item \textbf{Mathematical discovery}: Re-discovered state-of-the-art solutions for 75\% of 50+ benchmark problems and found strictly better solutions for 20\%.
+    \item \textbf{Hardware design}: Discovered functionally equivalent but structurally simpler circuit designs, reducing the complexity of hardware verification.
+    \item \textbf{LLM training optimization}: Achieved a \textbf{23\% speedup} in FlashAttention kernel tiling and a \textbf{32\% speedup} in attention computation---directly improving the efficiency of training the next generation of LLMs.
+    \item \textbf{Mathematical discovery}: Re-discovered state-of-the-art solutions for 75\% of 50+ benchmark problems and found strictly better solutions for 20\%, demonstrating both the reliability and creativity of the system.
 \end{itemize}
 
-\paragraph{Limitations.}
-AlphaEvolve is not publicly available (academic early access only), requires well-defined automated evaluation functions, and the dual-model approach necessitates access to multiple LLM tiers. These limitations have motivated the development of open-source alternatives discussed in Section~\ref{sec:ch4-opensource}.
+\paragraph{Comparison with FunSearch.}
+AlphaEvolve extends FunSearch in three key ways: (1) from single-function to whole-program evolution, enabling the modification of auxiliary functions, data structures, and control flow; (2) from a single LLM to a dual-model architecture that separates breadth and depth of search; and (3) from static to adaptive evolution context that learns from search history. These extensions come at the cost of requiring access to multiple LLM tiers (Flash + Pro) and more sophisticated evaluation infrastructure.
 
 
 \subsubsection{ReEvo: Reflective Evolution for Combinatorial Optimization}
 
-ReEvo~\citep{ye2024reevo}, published at NeurIPS 2024, introduces a \textbf{dual-layer reflection} mechanism that significantly enhances the quality of LLM-driven evolutionary search. While FunSearch and AlphaEvolve rely on relatively implicit learning through population management, ReEvo explicitly structures the reflection process.
+ReEvo~\citep{ye2024reevo}, published at NeurIPS 2024, introduces a \textbf{dual-layer reflection} mechanism that significantly enhances the quality of LLM-driven evolutionary search. While FunSearch and AlphaEvolve rely on relatively implicit learning through population management, ReEvo explicitly structures the reflection process to mimic how human experts design heuristics.
 
 \paragraph{Short-term Reflection.}
-After evaluating a candidate heuristic, the LLM analyzes the specific strengths and weaknesses of the current solution, generating concrete improvement suggestions. This is analogous to a human expert looking at a failed attempt and identifying exactly what went wrong.
+After evaluating a candidate heuristic, the LLM analyzes the specific strengths and weaknesses of the current solution, generating concrete improvement suggestions. The short-term reflection produces a textual analysis of what worked, what failed, and what specific modifications might improve the heuristic for the evaluated instances.
 
 \paragraph{Long-term Reflection.}
-Across iterations, the system accumulates a structured text document of learned principles---which strategies tend to work, which patterns to avoid, and what trade-offs are important for the problem domain. This long-term reflection acts as a growing knowledge base that informs all future generations:
+Across iterations, the system accumulates a structured text document $\mathcal{R}_{\text{long}}$ of learned principles---which strategies tend to work, which patterns to avoid, and what trade-offs are important for the problem domain. This long-term reflection is updated at each iteration:
 \begin{equation}
 \mathcal{R}_{\text{long}}^{(t)} = \text{LLM}\left(\mathcal{R}_{\text{long}}^{(t-1)}, \{\text{results at iteration } t\}\right)
 \end{equation}
+This mechanism acts as a growing knowledge base that informs all future generations, enabling the system to avoid repeating mistakes and build on accumulated insights.
 
 \paragraph{Multi-LLM Operator Architecture.}
-ReEvo supports different LLMs for each evolutionary operator: one for initial generation, one for short-term reflection, one for long-term reflection, one for crossover, and one for mutation. This separation allows practitioners to use cheaper models for high-volume operations (mutation) and more capable models for critical operations (reflection).
+ReEvo supports different LLMs for each evolutionary operator: one for initial generation, one for short-term reflection, one for long-term reflection, one for crossover, and one for mutation. This separation allows practitioners to use cheaper models for high-volume operations (mutation) and more capable models for critical operations (reflection), optimizing the cost--performance trade-off.
 
 \paragraph{Results.}
-On combinatorial optimization benchmarks including TSP, CVRP, orienteering (OP), multiple knapsack (MKP), and bin packing (BPP), ReEvo discovered heuristics that outperform human-designed baselines in both black-box and white-box settings. The dual-layer reflection mechanism was shown through ablation studies to be critical: removing either short-term or long-term reflection significantly degrades performance.
+On combinatorial optimization benchmarks including TSP, CVRP, orienteering (OP), multiple knapsack (MKP), and bin packing (BPP), ReEvo discovered heuristics that outperform human-designed baselines in both black-box (no problem structure visible to the LLM) and white-box (problem structure provided) settings. The dual-layer reflection mechanism was shown through ablation studies to be critical: removing either short-term or long-term reflection significantly degrades performance, with long-term reflection contributing more to sustained improvement across generations.
 
 
 \subsubsection{OpenELM: Open-Source Evolution through Large Models}
@@ -199,27 +232,54 @@ OpenELM~\citep{carperai2023openelm}, developed by CarperAI (a Stability AI subsi
 \text{ELM} \rightarrow \text{MAP-Elites} \rightarrow \text{Environment} \rightarrow \text{MutationModel}
 \end{equation}
 
-\paragraph{MAP-Elites Implementation.}
-OpenELM supports three quality-diversity algorithms: standard MAP-Elites with grid-based behavioral descriptors, CVT-MAP-Elites using continuous Voronoi tessellation for higher-dimensional descriptor spaces, and Deep Grid MAP-Elites combining learned descriptors with grid-based archiving.
+\paragraph{Quality-Diversity Algorithms.}
+OpenELM supports three quality-diversity algorithms: standard MAP-Elites with grid-based behavioral descriptors, CVT-MAP-Elites using continuous Voronoi tessellation for higher-dimensional descriptor spaces, and Deep Grid MAP-Elites combining learned descriptors with grid-based archiving. This flexibility allows users to choose the appropriate level of sophistication for their problem.
 
 \paragraph{Diverse Environments.}
-The framework includes environments for 2D physical simulation (Sodaracer robots), image evolution, programming puzzles, prompt optimization, and even poetry generation. This diversity demonstrates the generality of the LLM-as-evolutionary-operator paradigm.
+The framework includes environments for 2D physical simulation (Sodaracer robots that evolve locomotion strategies), image evolution, programming puzzles, prompt optimization, and even poetry generation. This diversity demonstrates the generality of the LLM-as-evolutionary-operator paradigm across creative and technical domains.
 
 \paragraph{Sandboxed Execution.}
-A key engineering contribution is the gVisor-based sandbox for safe code execution, isolating evolved programs from the host system while allowing them to be evaluated on arbitrary inputs.
+A key engineering contribution is the gVisor-based sandbox for safe code execution, isolating evolved programs from the host system while allowing them to be evaluated on arbitrary inputs. This is particularly important when evolving programs that could potentially contain malicious code or cause system instability.
 
 
 \subsection{Agent-Level Self-Evolution}
 \label{sec:ch4-agent-evo}
 
-The systems discussed thus far evolve programs or prompts. A more ambitious target is the evolution of \emph{agent architectures}---the very code that defines how an AI agent perceives, reasons, and acts. This section examines systems that extend self-evolution to the agent level.
+The systems discussed thus far evolve programs or prompts---objects that are \emph{used by} agents but do not define the agent itself. A more ambitious target is the evolution of \emph{agent architectures}---the very code that defines how an AI agent perceives, reasons, and acts. This section examines systems that extend self-evolution to the agent level, representing the most advanced form of the Evolutionary Intelligence paradigm currently achieved in practice.
 
 \subsubsection{DGM: Darwin G\"{o}del Machine}
 
-The Darwin G\"{o}del Machine~\citep{zhang2025dgm}, from the University of British Columbia and Vector Institute, combines Darwinian evolution with the theoretical ideal of Schmidhuber's G\"{o}del machine~\citep{schmidhuber2003godel}. The G\"{o}del machine is a theoretical construct that can provably self-modify to improve its own performance; DGM approximates this ideal by replacing formal proofs with empirical benchmark evaluation.
+The Darwin G\"{o}del Machine~\citep{zhang2025dgm}, from the University of British Columbia and Vector Institute (Jeff Clune's lab), combines Darwinian evolution with the theoretical ideal of Schmidhuber's G\"{o}del machine. The G\"{o}del machine is a theoretical construct that can provably self-modify to improve its own performance; DGM approximates this ideal by replacing formal proofs with empirical benchmark evaluation.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  box/.style={rectangle, rounded corners=4pt, draw=#1, fill=#1!10,
+    text width=32mm, align=center, font=\small\bfseries,
+    minimum height=14mm},
+  arr/.style={-Stealth, thick, #1},
+  lbl/.style={font=\scriptsize, text=gray!70, align=center}
+]
+\node[box=blue!60] (archive) at (0,0) {Agent Archive\\(variant library)};
+\node[box=teal!60] (sample) at (4.5,0) {Sample Parent\\(selection pressure)};
+\node[box=green!60] (modify) at (9,0) {LLM Generate\\Variant (code edit)};
+\node[box=orange!60] (eval) at (9,-3.5) {Sandbox Eval\\(Benchmark)};
+\node[box=red!60] (filter) at (4.5,-3.5) {Filter \& Archive\\(quality gate)};
+\node[box=purple!60] (meta) at (0,-3.5) {Experience\\Distillation};
+
+\draw[arr=blue!60] (archive) -- node[above, lbl]{sampling strategy} (sample);
+\draw[arr=teal!60] (sample) -- node[above, lbl]{code diff} (modify);
+\draw[arr=green!60] (modify) -- node[right, lbl]{isolated\\execution} (eval);
+\draw[arr=orange!60] (eval) -- node[above, lbl]{accept/discard} (filter);
+\draw[arr=red!60] (filter) -- node[above, lbl]{archive update} (meta);
+\draw[arr=purple!60] (meta) -- node[left, lbl]{strategy\\feedback} (archive);
+\end{tikzpicture}
+\caption{DGM self-evolution loop. Parent agents are sampled from the archive, modified by an LLM, evaluated in a sandbox, and successful variants are archived with distilled experience feeding back into future iterations.}
+\label{fig:ch4-dgm-loop}
+\end{figure}
 
 \paragraph{Open-Ended Archive.}
-The core data structure is an \textbf{open-ended archive} $\mathcal{A} = \{a_1, a_2, \ldots, a_n\}$ of agent implementations, each annotated with its fitness scores on benchmark tasks. Unlike standard evolutionary algorithms that maintain a fixed-size population, DGM's archive grows monotonically---agents are never deleted, only added. This preserves \emph{stepping stones}: intermediate agents that may not be globally optimal but contain useful components or strategies.
+The core data structure is an \textbf{open-ended archive} $\mathcal{A} = \{a_1, a_2, \ldots, a_n\}$ of agent implementations, each annotated with its fitness scores on benchmark tasks. Unlike standard evolutionary algorithms that maintain a fixed-size population, DGM's archive grows monotonically---agents are never deleted, only added. This preserves \emph{stepping stones}: intermediate agents that may not be globally optimal but contain useful components or strategies that could be valuable for future evolution. The archive design is inspired by Quality-Diversity algorithms and the POET system~\citep{wang2019poet} for open-ended learning.
 
 \paragraph{Evolution Loop.}
 At each iteration, DGM performs the following steps:
@@ -229,20 +289,21 @@ At each iteration, DGM performs the following steps:
     \begin{equation}
     P(a_i) \propto f(a_i) \times \exp\left(-\beta \cdot \text{similarity}(a_i, \mathcal{A})\right)
     \end{equation}
-    where $f(a_i)$ is the fitness score and the similarity term encourages selecting parents that are different from the majority of the archive.
-    \item \textbf{Modification}: A foundation model (Claude or GPT-4) reads the parent agent's source code and proposes specific modifications:
+    where $f(a_i)$ is the fitness score and the similarity term encourages selecting parents that are different from the majority of the archive, promoting exploration of diverse architectural strategies.
+    \item \textbf{Modification}: A foundation model (Claude or GPT-4) reads the parent agent's source code and proposes specific modifications via code diff:
     \begin{equation}
     a_{\text{child}} = \text{LLM}(\text{code}(a_p), \text{edit\_instruction}, \text{performance\_history})
     \end{equation}
-    \item \textbf{Evaluation}: The modified agent is executed in a sandboxed environment on coding benchmarks (SWE-bench, Polyglot).
-    \item \textbf{Selection}: If the child improves over the parent on at least one benchmark, it is added to the archive. Otherwise, it is discarded (but the parent remains).
+    The LLM sees the full agent code, previous performance scores, and a natural language description of what to improve, enabling it to make targeted, semantically informed changes.
+    \item \textbf{Evaluation}: The modified agent is executed in a sandboxed environment on coding benchmarks (SWE-bench for real-world software engineering, Polyglot for multi-language coding).
+    \item \textbf{Selection}: If the child improves over the parent on at least one benchmark, it is added to the archive. Otherwise, it is discarded (but the parent remains, preserving the stepping stone).
 \end{enumerate}
 
 \paragraph{Results.}
-DGM achieved dramatic improvements on coding benchmarks: SWE-bench verified accuracy increased from \textbf{20.0\% to 50.0\%} (a 150\% relative improvement) and Polyglot from \textbf{14.2\% to 30.7\%}. These results were achieved by agents that discovered novel code patterns and strategies not anticipated by human designers. Importantly, agents trained on one benchmark showed transfer to others, demonstrating that the learned strategies generalize.
+DGM achieved dramatic improvements on coding benchmarks: SWE-bench verified accuracy increased from \textbf{20.0\% to 50.0\%} (a 150\% relative improvement) and Polyglot from \textbf{14.2\% to 30.7\%} (a 116\% relative improvement). These improvements were achieved through agents that discovered novel code patterns and strategies not anticipated by human designers. Importantly, agents trained on one benchmark showed transfer to others, demonstrating that the learned strategies generalize across task types.
 
 \paragraph{Safety Considerations.}
-The open-ended nature of DGM raises significant safety concerns. Since agents can modify their own code in arbitrary ways, there is no guarantee that modifications preserve alignment with human intentions. The current implementation relies on sandboxed evaluation to prevent direct harm, but does not address the broader alignment challenge of ensuring that self-modifying agents remain beneficial as they become more capable.
+The open-ended nature of DGM raises significant safety concerns. Since agents can modify their own code in arbitrary ways, there is no guarantee that modifications preserve alignment with human intentions. The current implementation relies on sandboxed evaluation to prevent direct harm, but does not address the broader alignment challenge of ensuring that self-modifying agents remain beneficial as they become more capable. The authors acknowledge this limitation and suggest that constrained modification spaces and formal verification of code changes are necessary for deployed systems.
 
 
 \subsubsection{ADAS: Automated Design of Agentic Systems}
@@ -255,14 +316,14 @@ ADAS employs a single \textbf{meta agent}---an LLM tasked with writing Python co
 \begin{enumerate}
     \item The meta agent reviews previously discovered agents and their performance scores.
     \item It writes code for a new agent architecture $a_{\text{new}}$.
-    \item The new agent is evaluated on benchmark tasks (ARC, GFootball).
-    \item Performance results are recorded and fed back to the meta agent.
+    \item The new agent is evaluated on benchmark tasks (ARC for abstract reasoning, GFootball for multi-agent gaming).
+    \item Performance results are recorded and fed back to the meta agent for the next iteration.
 \end{enumerate}
 
-The search space $\mathcal{S} = \{a \mid a \text{ is a valid Python program implementing an agent}\}$ is theoretically unbounded, encompassing novel prompting strategies, tool compositions, multi-step reasoning chains, recursive patterns, and any computable agent architecture.
+The search space $\mathcal{S} = \{a \mid a \text{ is a valid Python program implementing an agent}\}$ is theoretically unbounded, encompassing novel prompting strategies, tool compositions, multi-step reasoning chains, recursive self-referential patterns, and any computable agent architecture.
 
 \paragraph{Transfer Results.}
-A key finding of ADAS is that discovered architectures exhibit strong \textbf{cross-domain transfer}: agents designed for ARC (abstraction and reasoning) perform well on GFootball (multi-agent gaming), and agents designed using GPT-3.5 remain effective when executed with GPT-4. This transferability suggests that the meta-agent is learning general principles of agent design rather than overfitting to specific tasks or models.
+A key finding of ADAS is that discovered architectures exhibit strong \textbf{cross-domain transfer}: agents designed for ARC (abstraction and reasoning) perform well on GFootball (multi-agent gaming), and agents designed using GPT-3.5 remain effective when executed with GPT-4. This transferability suggests that the meta-agent is learning general principles of agent design rather than overfitting to specific tasks or models. The cross-model transfer result is particularly encouraging for practical deployment, as it means that search conducted with cheaper models can yield architectures that remain effective when executed with more capable (and expensive) models.
 
 
 \subsubsection{G\"{o}del Agent: Runtime Self-Modification}
@@ -273,17 +334,17 @@ The G\"{o}del Agent~\citep{yin2025godelagent}, from Peking University and UCSB, 
 The agent's code includes explicit self-inspection and self-modification capabilities:
 
 \begin{enumerate}
-    \item \textbf{Runtime introspection}: The agent reads its own source code and examines its current state.
-    \item \textbf{Improvement planning}: An LLM analyzes the code, execution history, and task feedback to propose specific code changes.
-    \item \textbf{Safe application}: Changes are applied via Python's \texttt{exec()} function, modifying the agent's methods at runtime.
-    \item \textbf{Validation}: The modified agent is tested on a validation batch; if performance degrades, changes are rolled back.
+    \item \textbf{Runtime introspection}: The agent reads its own source code and examines its current state, including method definitions, instance variables, and configuration parameters.
+    \item \textbf{Improvement planning}: An LLM analyzes the code, execution history, and task feedback to propose specific code changes that would improve performance.
+    \item \textbf{Safe application}: Changes are applied via Python's \texttt{exec()} function, modifying the agent's methods at runtime. This is the monkey patching mechanism that gives the system its self-referential character.
+    \item \textbf{Validation}: The modified agent is tested on a validation batch; if performance degrades, changes are rolled back to the previous version.
 \end{enumerate}
 
 \paragraph{Comparison with DGM.}
-While DGM maintains an external archive of agent versions and uses evolutionary selection, the G\"{o}del Agent performs \emph{in-place} modification of a single agent instance. This approach is more lightweight but offers less exploration diversity. DGM's open-ended archive preserves all intermediate solutions, while the G\"{o}del Agent only retains the current version (with rollback capability). Both approaches are inspired by Schmidhuber's G\"{o}del machine but approximate it differently: DGM through Darwinian evolution, G\"{o}del Agent through runtime self-modification.
+While DGM maintains an external archive of agent versions and uses evolutionary selection across multiple agents, the G\"{o}del Agent performs \emph{in-place} modification of a single agent instance. This approach is more lightweight and requires less computational infrastructure, but offers less exploration diversity. DGM's open-ended archive preserves all intermediate solutions, enabling the system to revisit and build upon previously discovered strategies, while the G\"{o}del Agent only retains the current version (with rollback capability). Both approaches are inspired by Schmidhuber's G\"{o}del machine but approximate it differently: DGM through Darwinian evolution with empirical evaluation, G\"{o}del Agent through direct runtime self-modification with validation.
 
 \paragraph{Results.}
-The G\"{o}del Agent demonstrated improvements on HotPotQA (multi-hop QA, +8--15\%), ALFWorld (text interaction), and multiple other domains, discovering strategies not anticipated by human designers. A follow-up work, Polaris, extended the framework to smaller language models.
+The G\"{o}del Agent demonstrated improvements on HotPotQA (multi-hop QA, +8--15\% over fixed-agent baselines), ALFWorld (text interaction environment, significant improvement), and multiple other domains, discovering strategies not anticipated by human designers. A follow-up work, Polaris, extended the framework to smaller language models, demonstrating that self-modification is not solely the province of large frontier models.
 
 
 \subsubsection{Agent Symbolic Learning: Language-Space Backpropagation}
@@ -302,58 +363,55 @@ An agent is decomposed into learnable symbolic ``weights'':
 The optimization process mirrors neural network training but operates entirely in text:
 
 \begin{enumerate}
-    \item \textbf{Forward pass}: Execute the agent on a task, collecting trajectory $\tau$.
-    \item \textbf{Language loss}: $\mathcal{L}_{\text{lang}} = \text{LLM}(\mathcal{P}_{\text{loss}}(\tau))$---the LLM evaluates the trajectory and produces a textual loss description.
+    \item \textbf{Forward pass}: Execute the agent on a task, collecting the full execution trajectory $\tau$.
+    \item \textbf{Language loss}: $\mathcal{L}_{\text{lang}} = \text{LLM}(\mathcal{P}_{\text{loss}}(\tau))$---the LLM evaluates the trajectory and produces a textual loss description identifying what went wrong and where.
     \item \textbf{Language gradient backpropagation}: For each layer $n$ from output to input:
     \begin{equation}
     \nabla_{\text{lang}}^{(n)} = \text{LLM}\left(\mathcal{P}_{\text{gradient}}\left(\nabla_{\text{lang}}^{(n+1)}, \mathcal{I}_n, \mathcal{O}_n, \mathcal{P}_n, \mathcal{T}_n, \mathcal{L}_{\text{lang}}\right)\right)
     \end{equation}
-    This ``language gradient'' is a natural language description of how to improve each component, propagated backward through the agent's computational graph.
-    \item \textbf{Weight update}: Symbolic optimizers (PromptOptimizer, ToolOptimizer, PipelineOptimizer) update each component based on its language gradient.
+    This ``language gradient'' is a natural language description of how to improve each component, propagated backward through the agent's computational graph---analogous to backpropagation but operating entirely in text space.
+    \item \textbf{Weight update}: Three symbolic optimizers update the agent's components: PromptOptimizer updates $\mathcal{P}$, ToolOptimizer updates $\mathcal{T}$, and PipelineOptimizer updates $\mathcal{I}$ and $\mathcal{O}$, each based on its language gradient.
 \end{enumerate}
 
 \paragraph{Results.}
-Agent Symbolic Learning achieved consistent improvements across HotPotQA (F1: 36.2 $\rightarrow$ 39.1), MATH (accuracy: 56.0\% $\rightarrow$ 60.7\%), HumanEval (pass@1: 68.3\% $\rightarrow$ 73.2\%), and software development (score: 2.4 $\rightarrow$ 3.8 on 1--4 executability scale). The approach outperforms DSPy on all benchmarks, demonstrating the value of structured backpropagation over simpler prompt optimization.
-
-\paragraph{Limitations.}
-The framework requires a strong LLM backbone (GPT-4 level) for gradient computation, as the quality of language gradients directly determines the quality of updates. Multiple LLM calls per training step (forward + loss + backprop + update) make the approach computationally expensive, with no theoretical convergence guarantees for language-space optimization.
+Agent Symbolic Learning achieved consistent improvements across HotPotQA (F1: 36.2 $\rightarrow$ 39.1, EM: 22.8 $\rightarrow$ 25.6), MATH (accuracy: 56.0\% $\rightarrow$ 60.7\%), HumanEval (pass@1: 68.3\% $\rightarrow$ 73.2\%), software development (score: 2.4 $\rightarrow$ 3.8 on 1--4 executability scale), and creative writing (score: 6.8 $\rightarrow$ 7.4 on 1--10 GPT-4 judge scale). The approach outperforms DSPy on all benchmarks, demonstrating the value of structured backpropagation over simpler prompt optimization.
 
 
 \subsubsection{SelfEvolve: Execution-Feedback Code Evolution}
 
-SelfEvolve~\citep{jiang2023selfevolve}, from Shanghai Jiao Tong University and Shanghai AI Laboratory, introduces a two-stage pipeline for code self-improvement:
+SelfEvolve~\citep{jiang2023selfevolve}, from Shanghai Jiao Tong University and Shanghai AI Laboratory, introduces a two-stage pipeline for code self-improvement that eliminates the need for external knowledge retrieval.
 
 \paragraph{Stage 1: Self-Generated Knowledge.}
-Rather than retrieving documentation from external sources, the LLM generates its own API documentation or algorithm descriptions from its parametric knowledge:
+Rather than retrieving documentation from external sources (which suffer from domain mismatch), the LLM generates its own API documentation or algorithm descriptions from its parametric knowledge:
 \begin{equation}
 p(K) = \prod_i p_\theta(K_i \mid X, K_{<i})
 \end{equation}
-where $K$ is the self-generated knowledge and $X$ is the task description.
+where $K$ is the self-generated knowledge and $X$ is the task description. This self-generated knowledge is then used as context for code generation.
 
 \paragraph{Stage 2: Iterative Self-Refinement.}
-Generated code is executed in a sandboxed interpreter; error messages are fed back to the LLM for revision:
+Generated code is executed in a sandboxed Python interpreter; error messages (tracebacks) are fed back to the LLM for revision:
 \begin{equation}
 P(Y' \mid X, Y, K, e) = p_\theta(Y' \mid X, Y, e) \times p_\theta(Y \mid X, K)
 \end{equation}
 where $e$ is the error traceback. This loop continues until the code passes all test cases or reaches a maximum iteration limit.
 
 \paragraph{Results.}
-SelfEvolve achieved 85.98\% pass@1 on HumanEval (vs.\ 74.39\% baseline), 57.2 on DS-1000 (vs.\ 49.4 baseline), and 90.4\% accuracy on TransCoder (vs.\ 88.3\% baseline). These results demonstrate that even simple execution-feedback loops can yield substantial improvements.
+SelfEvolve achieved 85.98\% pass@1 on HumanEval (vs.\ 74.39\% baseline, a 15.6\% relative improvement), 57.2 on DS-1000 (vs.\ 49.4 baseline, a 15.8\% relative improvement), and 90.4\% accuracy on TransCoder (vs.\ 88.3\% baseline). These results demonstrate that even simple execution-feedback loops can yield substantial improvements in code generation quality.
 
 
 \subsubsection{Absolute Zero: Self-Play Reinforcement Learning}
 
-Absolute Zero~\citep{zhao2025absolutezero}, from Tsinghua University, represents the extreme of the self-evolution spectrum: a system that improves entirely through self-play, requiring zero external training data.
+Absolute Zero~\citep{zhao2025absolutezero}, from Tsinghua University's LeapLab, represents the extreme of the self-evolution spectrum: a system that improves entirely through self-play, requiring zero external training data. Published at NeurIPS 2025 and recognized with awards, it is the first system to demonstrate that LLMs can achieve state-of-the-art performance without any human-curated training data.
 
 \paragraph{Dual-Role Architecture.}
-A single model simultaneously serves as both \textbf{task proposer} and \textbf{task solver}. The task proposer generates reasoning challenges; the task solver attempts to solve them; a code executor provides verification; and the resulting reward signal drives RL training for both roles:
+A single model simultaneously serves as both \textbf{task proposer} and \textbf{task solver}. The task proposer generates reasoning challenges (code, math, logic problems); the task solver attempts to solve them; a code executor provides automated verification; and the resulting reward signal drives RL training for both roles:
 \begin{equation}
 R_{\text{proposer}} \propto \text{difficulty}(t) \times \text{solvability}(t)
 \end{equation}
 This reward ensures that the proposer generates tasks that are neither trivially easy nor impossibly hard---the key challenge of self-play curriculum design.
 
 \paragraph{Results.}
-AZR-Coder-7B achieved state-of-the-art results among 7B-parameter models on coding benchmarks (HumanEval+, MBPP+, LiveCodeBench) using zero external training data. Remarkably, training only on code self-play tasks transferred to mathematical reasoning: the model achieved competitive performance on GSM8K and MATH without any math-specific training data, demonstrating emergent cross-domain transfer from code to mathematical reasoning.
+AZR-Coder-7B achieved state-of-the-art results among 7B-parameter models on coding benchmarks (HumanEval+, MBPP+, LiveCodeBench) using zero external training data. Remarkably, training only on code self-play tasks transferred to mathematical reasoning: the model achieved competitive performance on GSM8K and MATH without any math-specific training data, demonstrating emergent cross-domain transfer from code to mathematical reasoning. The system also exhibited continuous improvement: pass@1 and pass@128 metrics continued to improve throughout training, suggesting that the self-play mechanism has not yet saturated.
 
 
 \subsection{Open-Source Implementations}
@@ -363,10 +421,7 @@ The commercial and academic systems discussed above have inspired a growing ecos
 
 \subsubsection{LLaMEA: Large Language Model Evolutionary Algorithm}
 
-LLaMEA~\citep{chen2025llamea}, published in IEEE TEVC 2025 and recipient of a GECCO 2025 Silver Humies Award, positions itself as the ``fully open-source successor to AlphaEvolve.'' It automates the discovery of metaheuristic algorithms through an LLM-driven evolutionary loop.
-
-\paragraph{Core Architecture.}
-LLaMEA implements a generate--evaluate--feedback--mutate loop where the LLM generates algorithm code, an evaluation function provides performance feedback, and the loop iterates. The framework supports multiple advanced features:
+LLaMEA~\citep{chen2025llamea}, published in IEEE TEVC 2025 and recipient of a GECCO 2025 Silver Humies Award, positions itself as the ``fully open-source successor to AlphaEvolve.'' It automates the discovery of metaheuristic algorithms through an LLM-driven evolutionary loop with several advanced features:
 
 \begin{itemize}
     \item \textbf{In-the-loop HPO (LLaMEA-HPO)}: SMAC-based hyperparameter optimization that offloads numerical tuning from the LLM, allowing it to focus on structural algorithm innovations. This separation reduces LLM query costs by 3--5$\times$ compared to having the LLM tune its own hyperparameters.
@@ -378,23 +433,29 @@ LLaMEA implements a generate--evaluate--feedback--mutate loop where the LLM gene
 \paragraph{Code Evolution Graphs.}
 LLaMEA introduces the concept of \textbf{code evolution graphs}---directed acyclic graphs where each node represents a complete algorithm version and each edge represents a mutation operation. This representation enables systematic analysis of structural changes during the evolution process and helps identify which types of modifications are most productive.
 
+\paragraph{LLM Backend Support.}
+The framework supports multiple LLM backends through a unified interface: OpenAI (GPT-4, GPT-3.5), Google Gemini, Ollama for local deployment, and a dummy LLM for testing. This flexibility allows researchers to use the most appropriate model for their budget and performance requirements.
+
 
 \subsubsection{OpenTreeSearch: PUCT-Based Code Evolution}
 
-OpenTreeSearch~\citep{genentech2025opentreesearch}, released by Genentech, replaces the island-model evolution of FunSearch/OpenEvolve with a \textbf{PUCT (Predictor + Upper Confidence Bound for Trees)} tree search algorithm, requiring only a single hyperparameter.
+OpenTreeSearch~\citep{genentech2025opentreesearch}, released by Genentech, replaces the island-model evolution of FunSearch/OpenEvolve with a \textbf{PUCT (Predictor + Upper Confidence Bound for Trees)} tree search algorithm, requiring only a single hyperparameter: the exploration constant $C$.
 
 \paragraph{PUCT Selection.}
 The tree search treats each program version as a node in a tree, with parent--child relationships representing mutations. The selection policy balances exploration and exploitation:
 \begin{equation}
 \text{PUCT}(\text{parent}) = \text{normalized\_score}(\text{child}) + C \cdot \sqrt{\frac{\ln(\text{parent.visits})}{\text{child.visits}}}
 \end{equation}
-where $C$ is the exploration constant (default 1.0). After each evaluation, visit counts are propagated back from the leaf to the root.
+where $C$ is the exploration constant (default 1.0). After each evaluation, visit counts are propagated back from the leaf to the root, enabling the tree to accumulate statistics about which branches are most promising.
 
 \paragraph{Virtual Loss for Parallelism.}
-In parallel execution, a \textbf{virtual loss} mechanism prevents multiple workers from simultaneously selecting the same parent node: when a worker selects a node, its visit count is temporarily incremented, making it less attractive to other workers.
+In parallel execution, a \textbf{virtual loss} mechanism prevents multiple workers from simultaneously selecting the same parent node: when a worker selects a node, its visit count is temporarily incremented, making it less attractive to other workers. This ensures that parallel workers explore different branches of the tree, maximizing the efficiency of parallel computation.
 
 \paragraph{Results.}
 On the circle packing problem ($n=26$), OpenTreeSearch achieved a score of 2.632 in 121 iterations, compared to AlphaEvolve's 2.635 (200 iterations) and OpenEvolve's 2.634. This near-parity with substantially fewer iterations demonstrates the efficiency of tree search over island models for this class of problems.
+
+\paragraph{Visualization and Explainability.}
+OpenTreeSearch provides an interactive HTML tree visualization tool that displays the full evolution tree, including node scores, visit counts, and parent--child relationships. An optional LLM-based node summary generator produces natural language descriptions of each program variant, making the evolution process fully traceable and explainable.
 
 
 \subsubsection{Comparative Analysis of Open-Source Systems}
@@ -420,7 +481,7 @@ ReEvo & Reflective ES & Population & Reflective & Moderate & MIT & Dual-layer re
 \label{tab:opensource-compare}
 \end{table}
 
-A clear trend emerges: the evolutionary computation community is progressively simplifying the configuration burden. FunSearch requires 9+ hyperparameters for its island model; LLaMEA reduces this to 6; and OpenTreeSearch achieves competitive results with a single exploration constant. This ``less is more'' philosophy reflects the broader insight that LLM-driven search is sufficiently intelligent that complex evolutionary machinery may be unnecessary.
+A clear trend emerges: the evolutionary computation community is progressively simplifying the configuration burden. FunSearch requires 9+ hyperparameters for its island model; LLaMEA reduces this to 6; and OpenTreeSearch achieves competitive results with a single exploration constant. This ``less is more'' philosophy reflects the broader insight that LLM-driven search is sufficiently intelligent that complex evolutionary machinery may be unnecessary---the LLM's ability to propose semantically meaningful mutations compensates for simpler search strategies.
 
 
 \subsection{Benchmark Comparison and Cross-Cutting Analysis}
@@ -471,51 +532,10 @@ The systems surveyed operate at four levels of abstraction, forming a clear hier
 
 This hierarchy suggests a natural progression: as systems mature, the target of evolution moves from peripheral (prompts) to core (code, algorithms, architectures), increasingly approximating the ideal of fully self-improving AI.
 
-\subsubsection{Search Strategy Analysis}
 
-The search strategies employed by these systems can be categorized along two axes: \textbf{population structure} and \textbf{selection mechanism}.
+\subsubsection{Self-Evolution Capability Levels}
 
-\begin{table}[htbp]
-\centering
-\begin{tabular}{lcc}
-\toprule
-& \textbf{Single candidate} & \textbf{Population-based} \\
-\midrule
-\textbf{Gradient-free} & OPRO, SelfEvolve & FunSearch, AlphaEvolve, LLaMEA \\
-\textbf{Reflection-augmented} & G\"{o}del Agent, Self-Refine & ReEvo, DGM \\
-\textbf{RL-based} & Absolute Zero & (underexplored) \\
-\bottomrule
-\end{tabular}
-\caption{Search strategy taxonomy. ``Single candidate'' systems maintain one current solution; ``Population-based'' systems maintain multiple candidates simultaneously.}
-\label{tab:search-strategy}
-\end{table}
-
-A notable gap exists in the population-based RL approach: while RL-based self-play has proven highly effective in single-candidate settings (Absolute Zero), combining population-based search with RL training remains largely unexplored. This gap represents a promising direction for future research.
-
-\subsubsection{The Evaluation Bottleneck}
-
-Across all systems, the \textbf{evaluator} emerges as the critical bottleneck. FunSearch requires 140 evaluators per 15 samplers (a 9:1 ratio), indicating that evaluation is the computational bottleneck. AlphaEvolve's success on data center scheduling and hardware design relied on Google's ability to construct domain-specific automated evaluators. DGM's improvements on SWE-bench depend on the existence of standardized coding benchmarks with automated verification.
-
-This creates a fundamental tension: systems that can verify their own improvements (through automated tests, code execution, or mathematical proof) can scale their self-evolution, while systems that require human evaluation are bottlenecked by human time and attention. The most promising direction is the development of \textbf{self-evaluating systems} that can construct their own evaluation functions, a direction explored by Absolute Zero's self-play approach.
-
-\subsubsection{Cross-Cutting Observations}
-
-\paragraph{1. The LLM Quality Matters More Than the Search Algorithm.}
-Comparing FunSearch (island model + signature clustering, 9+ hyperparameters) with OpenTreeSearch (PUCT tree search, 1 hyperparameter), both achieve similar performance on shared benchmarks. This suggests that the LLM's ability to propose high-quality mutations is more important than the sophistication of the population management scheme. A powerful LLM with simple search can match or exceed a weaker LLM with sophisticated search.
-
-\paragraph{2. Transfer is the Key Differentiator.}
-ADAS demonstrates the strongest cross-domain transfer: agents designed for one task generalize to entirely different domains. This transfer ability is crucial for practical self-evolution, as it means the ``cost'' of evolutionary search can be amortized across many downstream applications. Systems that overfit to specific benchmarks (as some FunSearch results arguably do) offer less practical value despite impressive per-task performance.
-
-\paragraph{3. Safety Scales with Evolution Target.}
-As the target of evolution moves from prompts to agent architectures, the potential for harmful self-modification increases correspondingly. DGM and G\"{o}del Agent can modify their own code in arbitrary ways, creating risks of reward hacking, goal drift, and unintended behaviors. Current safety mechanisms (sandboxed execution, rollback) are necessary but insufficient for deployed systems.
-
-\paragraph{4. The Open-Source Ecosystem is Rapidly Converging.}
-The open-source community has rapidly replicated and extended the capabilities of proprietary systems. LLaMEA provides functionality comparable to AlphaEvolve; OpenTreeSearch simplifies the search strategy while maintaining competitive performance; ReEvo adds structured reflection. This convergence suggests that the core ideas are well-understood and that future innovation will come from novel applications and scaling rather than fundamental architectural changes.
-
-
-\subsubsection{Evolution Capability Levels}
-
-Building on the analysis above, we propose a taxonomy of self-evolution capability levels:
+Building on the evolution target taxonomy, we propose a comprehensive taxonomy of self-evolution capability levels:
 
 \begin{figure}[htbp]
 \centering
@@ -525,8 +545,8 @@ Building on the analysis above, we propose a taxonomy of self-evolution capabili
   arr/.style={-Stealth, thick, gray!40}
 ]
 \node[level=gray] (l0) at (0, 0) {\textbf{Level 0:} Frozen Agent --- No self-improvement capability};
-\node[level=blue!70] (l1) at (0, 1.6) {\textbf{Level 1:} Prompt Evolution --- Self-Refine, Reflexion, EvoPrompt};
-\node[level=green!70] (l2) at (0, 3.2) {\textbf{Level 2:} Code/Algorithm Evolution --- FunSearch, AlphaEvolve, LLaMEA};
+\node[level=blue!70] (l1) at (0, 1.6) {\textbf{Level 1:} Prompt Evolution --- Self-Refine, Reflexion, EvoPrompt, OPRO};
+\node[level=green!70] (l2) at (0, 3.2) {\textbf{Level 2:} Code/Algorithm Evolution --- FunSearch, AlphaEvolve, LLaMEA, ReEvo};
 \node[level=orange!70] (l3) at (0, 4.8) {\textbf{Level 3:} Agent Architecture Evolution --- ADAS, DGM, G\"{o}del Agent};
 \node[level=red!70] (l4) at (0, 6.4) {\textbf{Level 4:} Recursive Self-Evolution --- Self-referential + open-ended (theoretical)};
 
@@ -545,7 +565,130 @@ Building on the analysis above, we propose a taxonomy of self-evolution capabili
 \label{fig:ch4-levels}
 \end{figure}
 
-Figure~\ref{fig:ch4-levels} illustrates the progression from frozen agents (Level 0) through prompt evolution (Level 1), code/algorithm evolution (Level 2), and agent architecture evolution (Level 3) to the theoretical ideal of recursive self-evolution (Level 4). Each level subsumes the capabilities of lower levels: an agent capable of Level 3 evolution can also evolve its prompts and code. The safety risk increases with each level, as the agent's ability to modify itself becomes more fundamental.
+Figure~\ref{fig:ch4-levels} illustrates the progression from frozen agents (Level 0) through prompt evolution (Level 1), code/algorithm evolution (Level 2), and agent architecture evolution (Level 3) to the theoretical ideal of recursive self-evolution (Level 4). Each level subsumes the capabilities of lower levels: an agent capable of Level 3 evolution can also evolve its prompts and code. The safety risk increases with each level, as the agent's ability to modify itself becomes more fundamental and the potential for misalignment grows.
+
+
+\subsubsection{Search Strategy Analysis}
+
+The search strategies employed by these systems can be categorized along two axes: \textbf{population structure} and \textbf{selection mechanism}.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lcc}
+\toprule
+& \textbf{Single candidate} & \textbf{Population-based} \\
+\midrule
+\textbf{Gradient-free} & OPRO, SelfEvolve & FunSearch, AlphaEvolve, LLaMEA \\
+\textbf{Reflection-augmented} & G\"{o}del Agent & ReEvo, DGM \\
+\textbf{RL-based} & Absolute Zero & (underexplored) \\
+\bottomrule
+\end{tabular}
+\caption{Search strategy taxonomy. ``Single candidate'' systems maintain one current solution; ``Population-based'' systems maintain multiple candidates simultaneously.}
+\label{tab:search-strategy}
+\end{table}
+
+A notable gap exists in the population-based RL approach: while RL-based self-play has proven highly effective in single-candidate settings (Absolute Zero), combining population-based search with RL training remains largely unexplored. This gap represents a promising direction for future research, as population-based methods could provide the diversity that RL training often lacks, while RL could provide the gradient signal that population-based methods lack.
+
+
+\subsubsection{The Evaluation Bottleneck}
+
+Across all systems, the \textbf{evaluator} emerges as the critical bottleneck. FunSearch requires 140 evaluators per 15 samplers (a 9:1 ratio), indicating that evaluation is the computational bottleneck. AlphaEvolve's success on data center scheduling and hardware design relied on Google's ability to construct domain-specific automated evaluators. DGM's improvements on SWE-bench depend on the existence of standardized coding benchmarks with automated verification.
+
+This creates a fundamental tension: systems that can verify their own improvements (through automated tests, code execution, or mathematical proof) can scale their self-evolution, while systems that require human evaluation are bottlenecked by human time and attention. The most promising direction is the development of \textbf{self-evaluating systems} that can construct their own evaluation functions, a direction explored by Absolute Zero's self-play approach.
+
+
+\subsubsection{Technical Evolution Timeline}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  yearnode/.style={circle, draw=blue!60, fill=blue!10, font=\small\bfseries,
+    minimum size=10mm, inner sep=0pt},
+  eventnode/.style={rectangle, rounded corners=2pt, draw=gray!50, fill=white,
+    text width=30mm, align=center, font=\scriptsize, inner sep=3pt},
+  conn/.style={-Stealth, thick, gray!50}
+]
+\draw[very thick, gray!30] (0,0) -- (14,0);
+
+\foreach \x/\yr in {0/2023, 2.5/2024, 5/2024.5, 7.5/2025, 10/2025.5, 12.5/2026} {
+  \node[yearnode] at (\x, 0) {\yr};
+}
+
+\node[eventnode, above=8mm] at (0, 0) {Reflexion\\91\% HumanEval};
+\node[eventnode, above=8mm] at (2.5, 0) {OPRO/EvoPrompt\\LLM as Optimizer};
+\node[eventnode, above=8mm] at (5, 0) {FunSearch\\Nature paper};
+\node[eventnode, above=8mm] at (7.5, 0) {ADAS/ReEvo\\Agent search};
+\node[eventnode, above=8mm] at (10, 0) {AlphaEvolve\\Strassen improv.};
+\node[eventnode, above=8mm] at (12.5, 0) {DGM\\SWE-bench 50\%};
+
+\foreach \x in {0, 2.5, 5, 7.5, 10, 12.5} {
+  \draw[conn] (\x, 0.5) -- (\x, 0.15);
+}
+
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}]
+  (-0.5, -0.8) -- (3.5, -0.8) node[midway, below=6pt, font=\scriptsize]
+  {Phase 1: Reflection \& Prompt Optimization};
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}]
+  (4, -0.8) -- (9, -0.8) node[midway, below=6pt, font=\scriptsize]
+  {Phase 2: Code \& Algorithm Discovery};
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}]
+  (9.5, -0.8) -- (13.5, -0.8) node[midway, below=6pt, font=\scriptsize]
+  {Phase 3: Agent-Level Self-Evolution};
+\end{tikzpicture}
+\caption{Evolution of self-evolving AI systems (2023--2026). The field has progressed from prompt-level optimization through code discovery to agent-level self-modification.}
+\label{fig:ch4-timeline}
+\end{figure}
+
+Figure~\ref{fig:ch4-timeline} illustrates the progression of the field across three phases: Phase 1 (2023--early 2024) focused on reflection and prompt optimization, establishing the basic Generate--Evaluate--Select loop. Phase 2 (mid-2024--early 2025) extended the paradigm to code and algorithm discovery, with FunSearch's Nature publication demonstrating that LLM-driven evolution can make new mathematical discoveries. Phase 3 (2025--2026) has pushed into agent-level self-evolution, with DGM, ADAS, and AlphaEvolve demonstrating that the target of evolution can be the agent's own architecture.
+
+
+\subsubsection{Cross-Cutting Observations}
+
+\paragraph{1. The LLM Quality Matters More Than the Search Algorithm.}
+Comparing FunSearch (island model + signature clustering, 9+ hyperparameters) with OpenTreeSearch (PUCT tree search, 1 hyperparameter), both achieve similar performance on shared benchmarks. This suggests that the LLM's ability to propose high-quality mutations is more important than the sophistication of the population management scheme. A powerful LLM with simple search can match or exceed a weaker LLM with sophisticated search. This insight has practical implications: investing in better LLMs may yield higher returns than investing in more complex evolutionary algorithms.
+
+\paragraph{2. Transfer is the Key Differentiator.}
+ADAS demonstrates the strongest cross-domain transfer: agents designed for one task generalize to entirely different domains. This transfer ability is crucial for practical self-evolution, as it means the ``cost'' of evolutionary search can be amortized across many downstream applications. Systems that overfit to specific benchmarks (as some FunSearch results arguably do) offer less practical value despite impressive per-task performance. The emergence of transfer also suggests that the meta-agent is learning genuine design principles rather than merely memorizing solutions.
+
+\paragraph{3. Safety Scales with Evolution Target.}
+As the target of evolution moves from prompts to agent architectures, the potential for harmful self-modification increases correspondingly. DGM and G\"{o}del Agent can modify their own code in arbitrary ways, creating risks of reward hacking, goal drift, and unintended behaviors. Current safety mechanisms (sandboxed execution, rollback) are necessary but insufficient for deployed systems. The development of formal verification methods for self-modifying code and alignment-aware evaluation functions is an urgent research priority.
+
+\paragraph{4. The Open-Source Ecosystem is Rapidly Converging.}
+The open-source community has rapidly replicated and extended the capabilities of proprietary systems. LLaMEA provides functionality comparable to AlphaEvolve; OpenTreeSearch simplifies the search strategy while maintaining competitive performance; ReEvo adds structured reflection. This convergence suggests that the core ideas are well-understood and that future innovation will come from novel applications and scaling rather than fundamental architectural changes.
+
+\paragraph{5. The Evaluation Function is the True Bottleneck.}
+Perhaps the most important cross-cutting observation is that the \textbf{evaluation function}, not the generation mechanism, is the primary bottleneck for self-evolution. All systems that achieve impressive results do so in domains where evaluation can be automated: mathematical proofs, code correctness, benchmark performance. Extending self-evolution to domains without clear evaluation criteria (creative writing, strategic decision-making, social interaction) remains an open challenge that may require fundamentally different approaches.
+
+
+\subsubsection{Mapping to the Five Evolution Loops}
+
+We conclude our analysis by mapping the systems surveyed in this chapter to the Five Evolution Loops taxonomy introduced in Section~\ref{sec:taxonomy}:
+
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\toprule
+\textbf{System} & \textbf{Spec Loop} & \textbf{Search Loop} & \textbf{Evaluator Loop} & \textbf{Reflection Loop} & \textbf{Population Loop} \\
+\midrule
+OPRO & $\checkmark$ & $\checkmark$ & $\checkmark$ & & \\
+EvoPrompt & & $\checkmark$ & $\checkmark$ & & $\checkmark$ \\
+FunSearch & & $\checkmark$ & $\checkmark$ & & $\checkmark$ \\
+AlphaEvolve & & $\checkmark$ & $\checkmark$ & & $\checkmark$ \\
+ReEvo & & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+DGM & & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+ADAS & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & \\
+G\"{o}del Agent & & $\checkmark$ & $\checkmark$ & $\checkmark$ & \\
+Symbolic Learning & & $\checkmark$ & $\checkmark$ & $\checkmark$ & \\
+Absolute Zero & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & \\
+\bottomrule
+\end{tabular}
+}
+\caption{Mapping of evolutionary systems to the Five Evolution Loops taxonomy. All systems employ Search and Evaluator loops; the more sophisticated systems add Reflection and Population loops.}
+\label{tab:loop-mapping}
+\end{table}
+
+Table~\ref{tab:loop-mapping} reveals a clear pattern: all systems employ the Search Loop and Evaluator Loop as fundamental mechanisms. The more advanced systems (ReEvo, DGM, ADAS, G\"{o}del Agent, Symbolic Learning, Absolute Zero) add a Reflection Loop that enables learning from failures. The Population Loop is employed by systems that maintain multiple candidates (EvoPrompt, FunSearch, AlphaEvolve, ReEvo, DGM). The Specification Loop appears in systems that translate natural language goals into executable artifacts (OPRO, ADAS, Absolute Zero). Notably, no single system employs all five loops, suggesting that the integration of all loop types into a single system represents a frontier for future research.
 
 
 \subsubsection{Future Directions}
@@ -553,14 +696,14 @@ Figure~\ref{fig:ch4-levels} illustrates the progression from frozen agents (Leve
 Based on our analysis, we identify five promising directions for future research:
 
 \begin{enumerate}
-    \item \textbf{Self-constructing evaluators}: Current systems depend on pre-defined evaluation functions. Future systems should be able to \emph{construct} their own evaluators, enabling self-evolution in domains without automated verification. Absolute Zero's self-play approach is an early step in this direction.
+    \item \textbf{Self-constructing evaluators}: Current systems depend on pre-defined evaluation functions. Future systems should be able to \emph{construct} their own evaluators, enabling self-evolution in domains without automated verification. Absolute Zero's self-play approach is an early step in this direction, but more general approaches are needed.
 
-    \item \textbf{Hierarchical evolution}: Rather than evolving at a single level (prompts, code, or architectures), future systems should perform evolution at multiple levels simultaneously, using lower-level improvements to inform higher-level search and vice versa.
+    \item \textbf{Hierarchical evolution}: Rather than evolving at a single level (prompts, code, or architectures), future systems should perform evolution at multiple levels simultaneously, using lower-level improvements to inform higher-level search and vice versa. The five-loop integration gap identified in Table~\ref{tab:loop-mapping} suggests that combining all loop types could yield synergistic improvements.
 
-    \item \textbf{Sample-efficient evolution}: Current evolutionary systems require thousands of LLM calls. Techniques from Bayesian optimization (e.g., surrogate models), active learning (selective evaluation), and transfer learning (reusing evolution history across tasks) could dramatically reduce this cost.
+    \item \textbf{Sample-efficient evolution}: Current evolutionary systems require thousands of LLM calls. Techniques from Bayesian optimization (e.g., surrogate models that predict which mutations are likely to succeed), active learning (selective evaluation of the most informative candidates), and transfer learning (reusing evolution history across tasks) could dramatically reduce this cost.
 
-    \item \textbf{Safe self-modification}: As agents gain the ability to modify their own code, ensuring that modifications remain aligned with human intentions becomes critical. Formal verification, constrained code generation, and alignment-aware evaluation functions are promising approaches.
+    \item \textbf{Safe self-modification}: As agents gain the ability to modify their own code, ensuring that modifications remain aligned with human intentions becomes critical. Formal verification of self-modifying code, constrained code generation that prevents certain classes of modifications, and alignment-aware evaluation functions that penalize misaligned improvements are promising approaches.
 
-    \item \textbf{Open-ended evolution}: DGM's open-ended archive is a step toward the goal of systems that improve without bound, but current implementations still rely on fixed benchmark suites. Truly open-ended systems would need to autonomously discover new tasks, challenges, and evaluation criteria---a capability that remains firmly in the realm of future research.
+    \item \textbf{Open-ended evolution}: DGM's open-ended archive is a step toward the goal of systems that improve without bound, but current implementations still rely on fixed benchmark suites. Truly open-ended systems would need to autonomously discover new tasks, challenges, and evaluation criteria---a capability that remains firmly in the realm of future research but represents the ultimate goal of the self-evolving AI paradigm.
 \end{enumerate}
 

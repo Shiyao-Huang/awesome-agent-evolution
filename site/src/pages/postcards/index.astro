@@ -1,131 +1,241 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
 import { projects } from '@/data/projects';
 import { featuredResearch } from '@/data/research';
+import { getCollection } from 'astro:content';
 
-const blogPosts = (await getCollection('blog'))
-  .filter((post) => !post.data.draft)
+const posts = (await getCollection('blog'))
+  .filter((p) => !p.data.draft)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const researchNotes = (await getCollection('research')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
 
-const formatNumber = (value: number | string) => Number(value || 0).toLocaleString();
-const formatDate = (value: Date | string) => new Date(value).toISOString().slice(0, 10);
-const projectCount = projects.length;
-const articleCount = blogPosts.length + researchNotes.length + featuredResearch.length;
-const totalCards = projectCount + articleCount;
+const allCards = [
+  ...projects.map((p) => ({
+    type: 'project' as const,
+    title: p.name,
+    description: p.description,
+    meta: `${p.stars.toLocaleString()} ★ · ${p.language} · ${p.license}`,
+    tags: p.tags.slice(0, 3),
+    url: p.url,
+    category: p.category,
+    date: p.lastPushed?.slice(0, 10) || '',
+  })),
+  ...featuredResearch.map((r) => ({
+    type: 'research' as const,
+    title: r.title,
+    description: r.insight,
+    meta: r.year,
+    tags: r.tags.slice(0, 3),
+    url: r.url || '#',
+    category: r.cluster || '研究',
+    date: r.year,
+  })),
+  ...posts.map((post) => ({
+    type: 'blog' as const,
+    title: post.data.title,
+    description: post.data.description || '',
+    meta: post.data.pubDate.toString().slice(0, 10),
+    tags: (post.data.tags || []).slice(0, 3),
+    url: `/blog/${post.id}/`,
+    category: '博客',
+    date: post.data.pubDate.toString().slice(0, 10),
+  })),
+];
+
+const typeIcons: Record<string, string> = {
+  project: '📦',
+  research: '🔬',
+  blog: '📝',
+};
+
+const typeColors: Record<string, string> = {
+  project: 'var(--accent, #6366f1)',
+  research: 'var(--accent-secondary, #8b5cf6)',
+  blog: 'var(--accent-tertiary, #06b6d4)',
+};
 ---
 
-<BaseLayout
-  title="Self Evolve Postcards — 文章、论文与项目卡片墙"
-  description="Self Evolve 网站的 postcard card wall：汇总全部博客文章、研究笔记、代表论文与 GitHub 项目，便于分享、扫描与进入详情页。"
->
-  <section class="section postcard-hero">
-    <div class="container split">
-      <div>
-        <div class="eyebrow">Postcard Wall</div>
-        <h1 class="gradient-text">每个项目和文章都有一张可分享卡片。</h1>
-        <p class="lead">将 Self Evolve 的博客、论文、研究笔记和 GitHub 仓库统一成 postcard 视图：一眼看到主题、证据、指标、标签和下一步入口。</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#articles">浏览文章卡片</a>
-          <a class="button" href="#projects">浏览项目卡片</a>
-        </div>
-      </div>
-      <div class="postcard-stats card" aria-label="Postcard coverage metrics">
-        <div class="metric"><strong>{totalCards}</strong><span>张 postcard</span></div>
-        <div class="metric"><strong>{articleCount}</strong><span>文章/论文/研究卡</span></div>
-        <div class="metric"><strong>{projectCount}</strong><span>GitHub 项目卡</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="articles">
+<BaseLayout title="卡片墙 — Self Evolve AI" description="所有项目、研究和博客文章的卡片索引。">
+  <section class="section">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Articles</div>
-          <h2>文章与研究 postcard</h2>
-        </div>
-        <p>覆盖博客 MDX、研究 MDX 与代表论文索引；每张卡片保留来源、日期、状态和标签。</p>
+      <div class="eyebrow">Card Wall / 卡片墙</div>
+      <h1 class="gradient-text">项目 × 研究 × 博客</h1>
+      <p class="lead">一张卡片代表一个项目、一篇研究笔记或一篇博客文章。点击浏览详情。</p>
+      <div class="metrics">
+        <div class="metric"><strong>{projects.length}</strong><span>个项目</span></div>
+        <div class="metric"><strong>{featuredResearch.length}</strong><span>篇研究</span></div>
+        <div class="metric"><strong>{posts.length}</strong><span>篇博客</span></div>
+        <div class="metric"><strong>{allCards.length}</strong><span>张卡片</span></div>
       </div>
 
+      <!-- Filter tabs -->
+      <div class="postcard-filters">
+        <button class="filter-btn active" data-filter="all">全部 ({allCards.length})</button>
+        <button class="filter-btn" data-filter="project">项目 ({projects.length})</button>
+        <button class="filter-btn" data-filter="research">研究 ({featuredResearch.length})</button>
+        <button class="filter-btn" data-filter="blog">博客 ({posts.length})</button>
+      </div>
+
+      <!-- Card grid -->
       <div class="postcard-grid">
-        {blogPosts.map((post) => (
-          <article class="postcard postcard-article">
-            <div class="postcard-topline">
-              <span>Blog</span>
-              <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+        {allCards.map((card) => (
+          <a href={card.url} class={`postcard postcard-${card.type}`} data-type={card.type}>
+            <div class="postcard-header">
+              <span class="postcard-type-badge" style={`background: ${typeColors[card.type]}`}>
+                {typeIcons[card.type]} {card.type === 'project' ? '项目' : card.type === 'research' ? '研究' : '博客'}
+              </span>
+              {card.category && <span class="postcard-category">{card.category}</span>}
             </div>
-            <h3><a href={`/blog/${post.id}/`}>{post.data.title}</a></h3>
-            <p>{post.data.description}</p>
-            <div class="postcard-meta">作者：{post.data.author}</div>
-            <div class="pill-row">{post.data.tags.slice(0, 5).map((tag) => <span class="pill">{tag}</span>)}</div>
-            <a class="postcard-link" href={`/blog/${post.id}/`}>阅读全文 →</a>
-          </article>
-        ))}
-
-        {researchNotes.map((note) => (
-          <article class="postcard postcard-research-note">
-            <div class="postcard-topline">
-              <span>Research Note</span>
-              <time datetime={note.data.pubDate.toISOString()}>{formatDate(note.data.pubDate)}</time>
+            <h3 class="postcard-title">{card.title}</h3>
+            <p class="postcard-desc">{card.description}</p>
+            <div class="postcard-footer">
+              <span class="postcard-meta">{card.meta}</span>
+              <div class="postcard-tags">
+                {card.tags.map((tag) => <span class="pill">{tag}</span>)}
+              </div>
             </div>
-            <h3><a href={`/research/${note.id}/`}>{note.data.title}</a></h3>
-            <p>{note.data.description}</p>
-            <div class="postcard-meta">状态：{note.data.status}{note.data.arxiv ? ` · arXiv: ${note.data.arxiv}` : ''}</div>
-            <div class="pill-row">{note.data.tags.slice(0, 5).map((tag) => <span class="pill">{tag}</span>)}</div>
-            <a class="postcard-link" href={`/research/${note.id}/`}>查看研究笔记 →</a>
-          </article>
-        ))}
-
-        {featuredResearch.map((paper) => (
-          <article class="postcard postcard-paper">
-            <div class="postcard-topline"><span>Featured Paper</span><span>{paper.year}</span></div>
-            <h3>{paper.url ? <a href={paper.url} target="_blank" rel="noopener">{paper.title}</a> : paper.title}</h3>
-            <p>{paper.insight}</p>
-            <div class="postcard-meta">{paper.cluster}{paper.relation ? ` · ${paper.relation}` : ''}</div>
-            <div class="pill-row">{paper.tags.slice(0, 5).map((tag) => <span class="pill">{tag}</span>)}</div>
-            {paper.url && <a class="postcard-link" href={paper.url} target="_blank" rel="noopener">打开论文来源 →</a>}
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Projects</div>
-          <h2>项目 postcard</h2>
-        </div>
-        <p>每个仓库卡片显示 stars、forks、语言、协议、活跃度、进化模式与分析报告入口。</p>
-      </div>
-
-      <div class="postcard-grid">
-        {projects.map((project) => (
-          <article class="postcard postcard-project">
-            <div class="postcard-topline"><span>{project.category}</span><span>{project.status}</span></div>
-            <h3><a href={project.url} target="_blank" rel="noopener">{project.name}</a></h3>
-            <p class="postcard-repo">{project.repo}</p>
-            <p>{project.description}</p>
-            <div class="postcard-metrics">
-              <span>★ {formatNumber(project.stars)}</span>
-              <span>⑂ {project.forks}</span>
-              <span>{project.language}</span>
-              <span>{project.license}</span>
-            </div>
-            <div class="postcard-meta">进化模式：{project.pattern} · 最近活跃：{project.lastPushed.slice(0, 10)}</div>
-            <div class="pill-row">{project.tags.slice(0, 5).map((tag) => <span class="pill">{tag}</span>)}</div>
-            <div class="postcard-actions">
-              <a class="postcard-link" href={project.url} target="_blank" rel="noopener">GitHub →</a>
-              <a class="postcard-link" href={`/reports/${project.report}`}>分析报告 →</a>
-            </div>
-          </article>
+          </a>
         ))}
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .postcard-filters {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1.5rem 0 2rem;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 2rem;
+    background: transparent;
+    color: var(--text-secondary, #94a3b8);
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+  }
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: var(--accent, #6366f1);
+    color: #fff;
+    border-color: var(--accent, #6366f1);
+  }
+
+  .postcard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .postcard {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    gap: 0.75rem;
+  }
+  .postcard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    border-color: rgba(255,255,255,0.2);
+  }
+
+  .postcard-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .postcard-type-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    color: #fff;
+    font-weight: 600;
+  }
+  .postcard-category {
+    font-size: 0.75rem;
+    color: var(--text-secondary, #94a3b8);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .postcard-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .postcard-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary, #94a3b8);
+    margin: 0;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  .postcard-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .postcard-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary, #64748b);
+    white-space: nowrap;
+  }
+  .postcard-tags {
+    display: flex;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+  }
+  .postcard-tags .pill {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .postcard-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.postcard');
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      buttons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+      cards.forEach((card) => {
+        const el = card as HTMLElement;
+        if (filter === 'all' || el.dataset.type === filter) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
