@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-25T00:00:00+08:00",
-  "total": 490,
-  "updated_files": 490,
+  "generated_at": "2026-05-26T00:00:00+08:00",
+  "total": 496,
+  "updated_files": 496,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -833,6 +833,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "cxxz/awesome-agent-memory",
+      "url": "https://github.com/cxxz/awesome-agent-memory",
+      "file": "raw-github/cxxz_awesome-agent-memory.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T23:35:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_search_and_public_github_page_2026_05_25"
+    },
+    {
       "repo": "cyijun/agent-smith",
       "url": "https://github.com/cyijun/agent-smith",
       "file": "raw-github/cyijun_agent-smith.md",
@@ -858,6 +867,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "2025-07",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "DEEP-PolyU/Awesome-GraphMemory",
+      "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
+      "file": "raw-github/deep-polyu_awesome-graphmemory.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T23:35:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_search_and_public_github_page_2026_05_25"
     },
     {
       "repo": "deep-polyu/awesome-graphrag",
@@ -1328,6 +1346,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "file": "raw-github/google-gemini_gemini-cli.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T23:35:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_search_and_public_github_page_2026_05_25"
+    },
+    {
       "repo": "graph-rag/graphrag",
       "url": "https://github.com/graph-rag/graphrag",
       "file": "raw-github/graph-rag_graphrag.md",
@@ -1794,6 +1821,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "Kenotic-Labs/ATANT",
+      "url": "https://github.com/Kenotic-Labs/ATANT",
+      "file": "raw-github/kenotic-labs_atant.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T23:35:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_search_and_public_github_page_2026_05_25"
     },
     {
       "repo": "keskival/recursive-self-improvement-suite",
@@ -2640,6 +2676,15 @@
       "collected_at": "2026-05-24T19:01:37+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_github_page_open_2026-05-24"
+    },
+    {
+      "repo": "open-gitagent/gitagent",
+      "url": "https://github.com/open-gitagent/gitagent",
+      "file": "raw-github/open-gitagent_gitagent.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T23:35:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_search_and_public_github_page_2026_05_25"
     },
     {
       "repo": "openai/skills",
@@ -4287,6 +4332,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "zhangfengcdt/memoir",
+      "url": "https://github.com/zhangfengcdt/memoir",
+      "file": "raw-github/zhangfengcdt_memoir.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T23:35:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_search_and_public_github_page_2026_05_25"
     },
     {
       "repo": "zhangyiqun018/agent-for-debate",

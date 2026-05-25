@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T15:22:43+08:00",
+  "generated_at": "2026-05-25T23:35:00+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -166,7 +166,13 @@
         "raw-github/agentreplay_agentreplay.md",
         "raw-github/yyyujintang_awesome-agent-memory-papers.md",
         "raw-github/memvid_memvid.md",
-        "raw-github/tfatykhov_awesome-agent-memory.md"
+        "raw-github/tfatykhov_awesome-agent-memory.md",
+        "raw-github/cxxz_awesome-agent-memory.md",
+        "raw-github/zhangfengcdt_memoir.md",
+        "raw-github/deep-polyu_awesome-graphmemory.md",
+        "raw-github/kenotic-labs_atant.md",
+        "raw-github/open-gitagent_gitagent.md",
+        "raw-github/google-gemini_gemini-cli.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -222,7 +228,8 @@
         "work/research/hourly-public-metadata-update-2026-05-25-1120.md",
         "work/research/hourly-public-metadata-update-2026-05-25-1221.md",
         "work/research/hourly-public-metadata-update-2026-05-25-1321.md",
-        "work/research/hourly-public-metadata-update-2026-05-25-1522.md"
+        "work/research/hourly-public-metadata-update-2026-05-25-1522.md",
+        "work/research/hourly-public-metadata-update-2026-05-25-2335.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -529,7 +536,19 @@
         "projects/198-memvid-single-file-agent-memory.md",
         "site/public/reports/projects/198-memvid-single-file-agent-memory.md",
         "projects/199-tfatykhov-awesome-agent-memory.md",
-        "site/public/reports/projects/199-tfatykhov-awesome-agent-memory.md"
+        "site/public/reports/projects/199-tfatykhov-awesome-agent-memory.md",
+        "projects/209-cxxz-awesome-agent-memory.md",
+        "site/public/reports/projects/209-cxxz-awesome-agent-memory.md",
+        "projects/210-memoir-agent-auto-memory.md",
+        "site/public/reports/projects/210-memoir-agent-auto-memory.md",
+        "projects/211-awesome-graphmemory.md",
+        "site/public/reports/projects/211-awesome-graphmemory.md",
+        "projects/212-atant-agent-continuity-eval.md",
+        "site/public/reports/projects/212-atant-agent-continuity-eval.md",
+        "projects/213-gitagent-git-native-agent-framework.md",
+        "site/public/reports/projects/213-gitagent-git-native-agent-framework.md",
+        "projects/214-gemini-cli-auto-memory-skills.md",
+        "site/public/reports/projects/214-gemini-cli-auto-memory-skills.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -743,14 +762,17 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-25T15:22:43+08:00",
+    "run_at": "2026-05-25T23:35:00+08:00",
     "added_repositories": [
-      "agentreplay/agentreplay",
-      "yyyujintang/Awesome-Agent-Memory-Papers",
-      "memvid/memvid",
-      "tfatykhov/awesome-agent-memory"
+      "cxxz/awesome-agent-memory",
+      "zhangfengcdt/memoir",
+      "DEEP-PolyU/Awesome-GraphMemory",
+      "Kenotic-Labs/ATANT",
+      "open-gitagent/gitagent",
+      "google-gemini/gemini-cli"
     ],
-    "evidence_quality": "web_observed_public_pages_and_search; shell GitHub API not verified",
-    "graph_truth_source": ".mermaid/current/graph.json"
+    "evidence_quality": "web_observed_public_pages_and_search; shell GitHub API DNS failed and gh token invalid",
+    "graph_truth_source": ".mermaid/current/graph.json",
+    "gitnexus_status": "available; npx gitnexus status reports stale index at current commit ea0e5e6 and recommends re-running gitnexus analyze"
   }
 }

@@ -225,6 +225,13 @@
 | Memvid | [memvid/memvid](https://github.com/memvid/memvid) | Single-File Agent Memory Layer | [projects/198-memvid-single-file-agent-memory.md](198-memvid-single-file-agent-memory.md) |
 | Awesome Agent Memory | [tfatykhov/awesome-agent-memory](https://github.com/tfatykhov/awesome-agent-memory) | Agent Memory Research Index | [projects/199-tfatykhov-awesome-agent-memory.md](199-tfatykhov-awesome-agent-memory.md) |
 
+| Awesome Agent Memory by cxxz | [cxxz/awesome-agent-memory](https://github.com/cxxz/awesome-agent-memory) | Agent Memory Resource Index | [projects/209-cxxz-awesome-agent-memory.md](209-cxxz-awesome-agent-memory.md) |
+| Memoir | [zhangfengcdt/memoir](https://github.com/zhangfengcdt/memoir) | Git-like Agent Auto-Memory | [projects/210-memoir-agent-auto-memory.md](210-memoir-agent-auto-memory.md) |
+| Awesome GraphMemory | [DEEP-PolyU/Awesome-GraphMemory](https://github.com/DEEP-PolyU/Awesome-GraphMemory) | Graph-Based Agent Memory Index | [projects/211-awesome-graphmemory.md](211-awesome-graphmemory.md) |
+| ATANT | [Kenotic-Labs/ATANT](https://github.com/Kenotic-Labs/ATANT) | Agent Continuity Evaluation | [projects/212-atant-agent-continuity-eval.md](212-atant-agent-continuity-eval.md) |
+| Gitagent | [open-gitagent/gitagent](https://github.com/open-gitagent/gitagent) | Git-Native Agent Framework | [projects/213-gitagent-git-native-agent-framework.md](213-gitagent-git-native-agent-framework.md) |
+| Gemini CLI Auto Memory | [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | Agent CLI Auto-Memory and Skills | [projects/214-gemini-cli-auto-memory-skills.md](214-gemini-cli-auto-memory-skills.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

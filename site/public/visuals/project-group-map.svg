@@ -25,51 +25,51 @@
   <text x="46" y="58" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#f6f8ff">Project Group Coverage</text>
   <text x="46" y="88" font-family="Inter, Arial, sans-serif" font-size="14" fill="#aab4d4">How current public model cards distribute across self-evolution implementation routes.</text>
   
-  <text x="58" y="149" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">Harness / 技能 / 记忆进化</text>
+  <text x="58" y="149" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">多 Agent 协作平台 (Round 4)</text>
   <rect x="410" y="132" width="420" height="22" rx="8" fill="url(#teal)"/>
-  <text x="850" y="149" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">105</text>
+  <text x="850" y="149" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">6</text>
 
-  <text x="58" y="183" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">个人 Agent 产品与真实评测</text>
-  <rect x="410" y="166" width="144" height="22" rx="8" fill="url(#amber)"/>
-  <text x="574" y="183" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">36</text>
+  <text x="58" y="183" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">Agent 框架 (Round 4)</text>
+  <rect x="410" y="166" width="420" height="22" rx="8" fill="url(#amber)"/>
+  <text x="850" y="183" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">6</text>
 
-  <text x="58" y="217" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">Harness 进化与方法索引</text>
-  <rect x="410" y="200" width="44" height="22" rx="8" fill="url(#teal)"/>
-  <text x="474" y="217" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">11</text>
+  <text x="58" y="217" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">多 Agent 协作框架</text>
+  <rect x="410" y="200" width="350" height="22" rx="8" fill="url(#teal)"/>
+  <text x="780" y="217" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">5</text>
 
-  <text x="58" y="251" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">多 Agent 协作框架</text>
-  <rect x="410" y="234" width="36" height="22" rx="8" fill="url(#amber)"/>
-  <text x="466" y="251" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">5</text>
+  <text x="58" y="251" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">AI 软件工程</text>
+  <rect x="410" y="234" width="350" height="22" rx="8" fill="url(#amber)"/>
+  <text x="780" y="251" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">5</text>
 
-  <text x="58" y="285" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">AI 软件工程</text>
-  <rect x="410" y="268" width="36" height="22" rx="8" fill="url(#teal)"/>
-  <text x="466" y="285" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">5</text>
+  <text x="58" y="285" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">LLM 驱动进化计算</text>
+  <rect x="410" y="268" width="350" height="22" rx="8" fill="url(#teal)"/>
+  <text x="780" y="285" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">5</text>
 
-  <text x="58" y="319" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">LLM 驱动进化计算</text>
-  <rect x="410" y="302" width="36" height="22" rx="8" fill="url(#amber)"/>
-  <text x="466" y="319" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">5</text>
+  <text x="58" y="319" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">LLM 应用开发平台</text>
+  <rect x="410" y="302" width="350" height="22" rx="8" fill="url(#amber)"/>
+  <text x="780" y="319" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">5</text>
 
-  <text x="58" y="353" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">Agent 自进化系统</text>
-  <rect x="410" y="336" width="36" height="22" rx="8" fill="url(#teal)"/>
-  <text x="466" y="353" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">4</text>
+  <text x="58" y="353" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">Agent 评测基准</text>
+  <rect x="410" y="336" width="350" height="22" rx="8" fill="url(#teal)"/>
+  <text x="780" y="353" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">5</text>
 
-  <text x="58" y="387" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">进化式多 Agent 系统</text>
-  <rect x="410" y="370" width="36" height="22" rx="8" fill="url(#amber)"/>
-  <text x="466" y="387" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">4</text>
+  <text x="58" y="387" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">LLM 基础设施</text>
+  <rect x="410" y="370" width="350" height="22" rx="8" fill="url(#amber)"/>
+  <text x="780" y="387" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">5</text>
 
   <text x="58" y="421" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">代码模型与评测</text>
-  <rect x="410" y="404" width="36" height="22" rx="8" fill="url(#teal)"/>
-  <text x="466" y="421" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">4</text>
+  <rect x="410" y="404" width="280" height="22" rx="8" fill="url(#teal)"/>
+  <text x="710" y="421" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">4</text>
 
   <text x="58" y="455" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">进化式代码 / AlphaEvolve 类</text>
-  <rect x="410" y="438" width="36" height="22" rx="8" fill="url(#amber)"/>
-  <text x="466" y="455" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">3</text>
+  <rect x="410" y="438" width="210" height="22" rx="8" fill="url(#amber)"/>
+  <text x="640" y="455" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">3</text>
 
   <text x="58" y="489" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">LLM 作为优化器</text>
-  <rect x="410" y="472" width="36" height="22" rx="8" fill="url(#teal)"/>
-  <text x="466" y="489" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">3</text>
+  <rect x="410" y="472" width="210" height="22" rx="8" fill="url(#teal)"/>
+  <text x="640" y="489" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">3</text>
 
-  <text x="58" y="523" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">经典进化算法框架</text>
-  <rect x="410" y="506" width="36" height="22" rx="8" fill="url(#amber)"/>
-  <text x="466" y="523" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">3</text>
+  <text x="58" y="523" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">Agent 自进化系统</text>
+  <rect x="410" y="506" width="210" height="22" rx="8" fill="url(#amber)"/>
+  <text x="640" y="523" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">3</text>
 </svg>

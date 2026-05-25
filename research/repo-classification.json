@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T15:22:43+08:00",
+  "generated_at": "2026-05-25T23:35:00+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -1382,6 +1382,21 @@
       "description": "SkillLearnBench 是面向自动生成 agent skills 的 continual learning benchmark，覆盖真实任务、技能质量、轨迹质量和 task success。"
     },
     {
+      "repo": "cxxz/awesome-agent-memory",
+      "url": "https://github.com/cxxz/awesome-agent-memory",
+      "stars": "10",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "memory",
+      "stack": "Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed MIT license, 10 stars, 3 forks, 16 commits, and an MCP-centric memory server/tool list covering Basic Memory, OpenMemory MCP, graph memory servers and vector-backed memory tools; counts were not API-verified in this shell-blocked run.",
+      "description": "A curated agent-memory resource index that helps separate memory tools, patterns and research signals from runtime claims."
+    },
+    {
       "repo": "cyijun/agent-smith",
       "url": "https://github.com/cyijun/agent-smith",
       "stars": "18",
@@ -1425,6 +1440,21 @@
       "content_timestamp": "2025-07-17",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[EMNLP 2025] Awesome RAG Reasoning Resources"
+    },
+    {
+      "repo": "DEEP-PolyU/Awesome-GraphMemory",
+      "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
+      "stars": "273",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "memory",
+      "stack": "Markdown/Graph memory papers",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed 108 commits, 273 stars, 15 forks and a graph-based agent memory survey/resource list covering taxonomy, memory extraction/storage/retrieval/evolution, benchmarks and projects.",
+      "description": "Awesome GraphMemory is a paper-facing index for graph-based agent memory, giving the corpus a bridge from memory substrates to graph knowledge structures."
     },
     {
       "repo": "deep-polyu/awesome-graphrag",
@@ -2207,6 +2237,21 @@
       "description": "Deep Agents CLI Codex Skill 把 LangChain Deep Agents CLI 的命令、provider、memory、sandbox、streaming、SDK customization 和 Agent Client Protocol 知识封装成 Codex 可加载 skill。"
     },
     {
+      "repo": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "stars": "105000",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "memory",
+      "stack": "TypeScript/CLI/Auto-memory/Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed Apache-2.0 license, 105k stars, 13.9k forks, 6,224 commits, memory-tests/evals directories, v0.43.0 latest release on 2026-05-22, and README claims for an open-source terminal AI agent; Auto Memory docs say it mines past sessions for durable memory and reusable Agent Skills, drafts patches or SKILL.md files, and never applies them without approval.",
+      "description": "Gemini CLI is a major open-source terminal agent; its Auto Memory docs add a mainstream implementation path for mining past sessions into reviewable durable memory and reusable Agent Skills."
+    },
+    {
       "repo": "graph-rag/graphrag",
       "url": "https://github.com/graph-rag/graphrag",
       "stars": "574",
@@ -2985,6 +3030,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "🪞 Make your agents recursively self-improve"
+    },
+    {
+      "repo": "Kenotic-Labs/ATANT",
+      "url": "https://github.com/Kenotic-Labs/ATANT",
+      "stars": "3",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/Evaluation framework",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed 15 commits, 3 stars, 0 forks, Python language, continuity benchmark topics, 250 narrative stories, 1,835 verification questions, 10 checkpoints, no LLM in the evaluation loop, arXiv links and Hugging Face corpus link.",
+      "description": "ATANT adds an agent-continuity evaluation angle: memory is not only retrieval quality, but whether an agent maintains narrative state and checkpoint continuity."
     },
     {
       "repo": "keskival/recursive-self-improvement-suite",
@@ -4395,6 +4455,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed 19 commits, MIT license, 162 skills claim, agent-army/agent-swarm folders, install instructions, 154 stars and 23 forks",
       "description": "OneWave Claude Skills 是 production-ready Claude Code skills 库，覆盖业务、销售、工程、咨询和 AI agent architecture，并包含 agent-army 等多 agent 并行执行技能。"
+    },
+    {
+      "repo": "open-gitagent/gitagent",
+      "url": "https://github.com/open-gitagent/gitagent",
+      "stars": "404",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "TypeScript/Git-native agent runtime",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed MIT license, 404 stars, 82 forks, 123 commits, and described a universal git-native AI agent framework with agent.yaml, SOUL.md, RULES.md, git-committed memory, declarative tools, composable skills, hooks, plugins, compliance audit logs and OpenTelemetry instrumentation.",
+      "description": "Gitagent treats an agent as a Git repository: identity, rules, memory, tools, skills, hooks, plugins and audit state all live in version-controlled files."
     },
     {
       "repo": "openai/skills",
@@ -7140,6 +7215,21 @@
       "content_timestamp": "unknown",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "[MLSys 2026] AccelOpt: Self-improving Agents for AI Accelerator Kernel Optimization"
+    },
+    {
+      "repo": "zhangfengcdt/memoir",
+      "url": "https://github.com/zhangfengcdt/memoir",
+      "stars": "549",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python/Git-like memory",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed 155 commits, Apache-2.0 license, 549 stars, 35 forks, Python/Shell/TypeScript stack, v0.2.0 release on 2026-05-11, Codex/Claude plugin install paths, and README language about Git-like branching/commit/merge/rollback for AI memory; no benchmark was rerun.",
+      "description": "Memoir frames agent memory as declarative, hierarchical and Git-like, making memory state inspectable through commits and branches instead of only vector retrieval."
     },
     {
       "repo": "zhangyiqun018/agent-for-debate",

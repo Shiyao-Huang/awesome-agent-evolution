@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-05-25T14:51:27.990Z",
+  "generated_at": "2026-05-25T16:11:43.293Z",
   "counts": {
-    "raw_captures": 490,
-    "raw_files_on_disk": 490,
-    "classified_repos": 490,
-    "analyzed_projects": 82,
-    "analyzed_in_raw_timestamp_index": 27,
-    "analyzed_in_classification": 27,
+    "raw_captures": 496,
+    "raw_files_on_disk": 496,
+    "classified_repos": 496,
+    "analyzed_projects": 87,
+    "analyzed_in_raw_timestamp_index": 33,
+    "analyzed_in_classification": 33,
     "analyzed_evolution_focused": 49,
     "analyzed_with_created_at_or_fallback": 80,
     "analyzed_with_github_api_metadata": 25,
     "analyzed_with_local_git_mirror": 77,
-    "analyzed_with_public_report": 51,
+    "analyzed_with_public_report": 57,
     "raw_core_evolution": 79,
-    "raw_broad_evolution": 176,
+    "raw_broad_evolution": 178,
     "raw_unknown_time_slice": 109
   },
   "raw_category_counts": [
     {
       "key": "框架/framework",
-      "count": 138
+      "count": 139
     },
     {
       "key": "评测/evaluation",
-      "count": 99
+      "count": 100
     },
     {
       "key": "教程/tutorial",
-      "count": 93
+      "count": 95
     },
     {
       "key": "工具/tool",
-      "count": 83
+      "count": 85
     },
     {
       "key": "应用/application",
@@ -49,11 +49,11 @@
   "raw_theme_counts": [
     {
       "key": "memory",
-      "count": 96
+      "count": 100
     },
     {
       "key": "evaluation",
-      "count": 89
+      "count": 90
     },
     {
       "key": "evolution",
@@ -65,7 +65,7 @@
     },
     {
       "key": "framework",
-      "count": 50
+      "count": 51
     },
     {
       "key": "education-list",
@@ -95,7 +95,7 @@
   "raw_stack_counts": [
     {
       "key": "Markdown",
-      "count": 205
+      "count": 206
     },
     {
       "key": "Python",
@@ -202,6 +202,10 @@
       "count": 1
     },
     {
+      "key": "Markdown/Graph memory papers",
+      "count": 1
+    },
+    {
       "key": "Markdown/Python/TypeScript",
       "count": 1
     },
@@ -231,6 +235,14 @@
     },
     {
       "key": "Python/CSS/HTML/Shell/JavaScript/TypeScript",
+      "count": 1
+    },
+    {
+      "key": "Python/Evaluation framework",
+      "count": 1
+    },
+    {
+      "key": "Python/Git-like memory",
       "count": 1
     },
     {
@@ -318,6 +330,14 @@
       "count": 1
     },
     {
+      "key": "TypeScript/CLI/Auto-memory/Skills",
+      "count": 1
+    },
+    {
+      "key": "TypeScript/Git-native agent runtime",
+      "count": 1
+    },
+    {
       "key": "TypeScript/Python/HTML/JavaScript",
       "count": 1
     },
@@ -333,7 +353,7 @@
   "raw_time_slice_counts": [
     {
       "key": "2026-05",
-      "count": 330
+      "count": 336
     },
     {
       "key": "unknown",
@@ -411,7 +431,7 @@
   "analyzed_theme_counts": [
     {
       "key": "not-classified",
-      "count": 55
+      "count": 54
     },
     {
       "key": "evolution",
@@ -419,7 +439,11 @@
     },
     {
       "key": "evaluation",
-      "count": 6
+      "count": 7
+    },
+    {
+      "key": "memory",
+      "count": 5
     },
     {
       "key": "education-list",
@@ -427,15 +451,11 @@
     },
     {
       "key": "framework",
-      "count": 3
+      "count": 4
     },
     {
       "key": "prompt-optimization",
       "count": 3
-    },
-    {
-      "key": "memory",
-      "count": 1
     },
     {
       "key": "research-agent",
@@ -450,6 +470,10 @@
     {
       "key": "2026-05",
       "count": 27
+    },
+    {
+      "key": "unknown",
+      "count": 7
     },
     {
       "key": "2026-03",
@@ -501,10 +525,6 @@
     },
     {
       "key": "2025-10",
-      "count": 2
-    },
-    {
-      "key": "unknown",
       "count": 2
     },
     {
@@ -958,6 +978,21 @@
     }
   ],
   "raw_broad_evolution_top": [
+    {
+      "repo": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "stars": "105000",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "memory",
+      "stack": "TypeScript/CLI/Auto-memory/Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed Apache-2.0 license, 105k stars, 13.9k forks, 6,224 commits, memory-tests/evals directories, v0.43.0 latest release on 2026-05-22, and README claims for an open-source terminal AI agent; Auto Memory docs say it mines past sessions for durable memory and reusable Agent Skills, drafts patches or SKILL.md files, and never applies them without approval.",
+      "description": "Gemini CLI is a major open-source terminal agent; its Auto Memory docs add a mainstream implementation path for mining past sessions into reviewable durable memory and reusable Agent Skills."
+    },
     {
       "repo": "aiming-lab/AutoResearchClaw",
       "url": "https://github.com/aiming-lab/AutoResearchClaw",
@@ -1589,6 +1624,21 @@
       "description": "Guided Evolutionary Strategies"
     },
     {
+      "repo": "DEEP-PolyU/Awesome-GraphMemory",
+      "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
+      "stars": "273",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "memory",
+      "stack": "Markdown/Graph memory papers",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed 108 commits, 273 stars, 15 forks and a graph-based agent memory survey/resource list covering taxonomy, memory extraction/storage/retrieval/evolution, benchmarks and projects.",
+      "description": "Awesome GraphMemory is a paper-facing index for graph-based agent memory, giving the corpus a bridge from memory substrates to graph knowledge structures."
+    },
+    {
       "repo": "dsifry/metaswarm",
       "url": "https://github.com/dsifry/metaswarm",
       "stars": "272",
@@ -1677,36 +1727,6 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "A comprehensive 0-to-1 guide for building self-improving LLM applications with DSPy framework"
-    },
-    {
-      "repo": "deepelementlab/clawcode",
-      "url": "https://github.com/deepelementlab/clawcode",
-      "stars": "199",
-      "prior_category": "框架",
-      "prior_unclassified": "false",
-      "final_category": "框架/framework",
-      "function_tag": "framework-runtime",
-      "base_theme": "coding-agent",
-      "stack": "Python",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-21",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "ClawCode is claude code inspired implementation in python and Rust focused on agents and experience-based evolution, and is an Open-source coding-agent CLI for Anthropic, OpenAI, Gemini, DeepSeek, GLM, Kimit, Ollama, Cod"
-    },
-    {
-      "repo": "kayba-ai/recursive-improve",
-      "url": "https://github.com/kayba-ai/recursive-improve",
-      "stars": "194",
-      "prior_category": "应用",
-      "prior_unclassified": "false",
-      "final_category": "应用/application",
-      "function_tag": "benchmark-eval",
-      "base_theme": "evolution",
-      "stack": "Python",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-21",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "🪞 Make your agents recursively self-improve"
     }
   ],
   "raw_classified_repositories": [
@@ -3091,6 +3111,21 @@
       "description": "SkillLearnBench 是面向自动生成 agent skills 的 continual learning benchmark，覆盖真实任务、技能质量、轨迹质量和 task success。"
     },
     {
+      "repo": "cxxz/awesome-agent-memory",
+      "url": "https://github.com/cxxz/awesome-agent-memory",
+      "stars": "10",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "memory",
+      "stack": "Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed MIT license, 10 stars, 3 forks, 16 commits, and an MCP-centric memory server/tool list covering Basic Memory, OpenMemory MCP, graph memory servers and vector-backed memory tools; counts were not API-verified in this shell-blocked run.",
+      "description": "A curated agent-memory resource index that helps separate memory tools, patterns and research signals from runtime claims."
+    },
+    {
       "repo": "cyijun/agent-smith",
       "url": "https://github.com/cyijun/agent-smith",
       "stars": "18",
@@ -3134,6 +3169,21 @@
       "content_timestamp": "2025-07-17",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[EMNLP 2025] Awesome RAG Reasoning Resources"
+    },
+    {
+      "repo": "DEEP-PolyU/Awesome-GraphMemory",
+      "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
+      "stars": "273",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "memory",
+      "stack": "Markdown/Graph memory papers",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed 108 commits, 273 stars, 15 forks and a graph-based agent memory survey/resource list covering taxonomy, memory extraction/storage/retrieval/evolution, benchmarks and projects.",
+      "description": "Awesome GraphMemory is a paper-facing index for graph-based agent memory, giving the corpus a bridge from memory substrates to graph knowledge structures."
     },
     {
       "repo": "deep-polyu/awesome-graphrag",
@@ -3916,6 +3966,21 @@
       "description": "Deep Agents CLI Codex Skill 把 LangChain Deep Agents CLI 的命令、provider、memory、sandbox、streaming、SDK customization 和 Agent Client Protocol 知识封装成 Codex 可加载 skill。"
     },
     {
+      "repo": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "stars": "105000",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "memory",
+      "stack": "TypeScript/CLI/Auto-memory/Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed Apache-2.0 license, 105k stars, 13.9k forks, 6,224 commits, memory-tests/evals directories, v0.43.0 latest release on 2026-05-22, and README claims for an open-source terminal AI agent; Auto Memory docs say it mines past sessions for durable memory and reusable Agent Skills, drafts patches or SKILL.md files, and never applies them without approval.",
+      "description": "Gemini CLI is a major open-source terminal agent; its Auto Memory docs add a mainstream implementation path for mining past sessions into reviewable durable memory and reusable Agent Skills."
+    },
+    {
       "repo": "graph-rag/graphrag",
       "url": "https://github.com/graph-rag/graphrag",
       "stars": "574",
@@ -4694,6 +4759,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "🪞 Make your agents recursively self-improve"
+    },
+    {
+      "repo": "Kenotic-Labs/ATANT",
+      "url": "https://github.com/Kenotic-Labs/ATANT",
+      "stars": "3",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/Evaluation framework",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed 15 commits, 3 stars, 0 forks, Python language, continuity benchmark topics, 250 narrative stories, 1,835 verification questions, 10 checkpoints, no LLM in the evaluation loop, arXiv links and Hugging Face corpus link.",
+      "description": "ATANT adds an agent-continuity evaluation angle: memory is not only retrieval quality, but whether an agent maintains narrative state and checkpoint continuity."
     },
     {
       "repo": "keskival/recursive-self-improvement-suite",
@@ -6104,6 +6184,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed 19 commits, MIT license, 162 skills claim, agent-army/agent-swarm folders, install instructions, 154 stars and 23 forks",
       "description": "OneWave Claude Skills 是 production-ready Claude Code skills 库，覆盖业务、销售、工程、咨询和 AI agent architecture，并包含 agent-army 等多 agent 并行执行技能。"
+    },
+    {
+      "repo": "open-gitagent/gitagent",
+      "url": "https://github.com/open-gitagent/gitagent",
+      "stars": "404",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "TypeScript/Git-native agent runtime",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed MIT license, 404 stars, 82 forks, 123 commits, and described a universal git-native AI agent framework with agent.yaml, SOUL.md, RULES.md, git-committed memory, declarative tools, composable skills, hooks, plugins, compliance audit logs and OpenTelemetry instrumentation.",
+      "description": "Gitagent treats an agent as a Git repository: identity, rules, memory, tools, skills, hooks, plugins and audit state all live in version-controlled files."
     },
     {
       "repo": "openai/skills",
@@ -8851,6 +8946,21 @@
       "description": "[MLSys 2026] AccelOpt: Self-improving Agents for AI Accelerator Kernel Optimization"
     },
     {
+      "repo": "zhangfengcdt/memoir",
+      "url": "https://github.com/zhangfengcdt/memoir",
+      "stars": "549",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python/Git-like memory",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed 155 commits, Apache-2.0 license, 549 stars, 35 forks, Python/Shell/TypeScript stack, v0.2.0 release on 2026-05-11, Codex/Claude plugin install paths, and README language about Git-like branching/commit/merge/rollback for AI memory; no benchmark was rerun.",
+      "description": "Memoir frames agent memory as declarative, hierarchical and Git-like, making memory state inspectable through commits and branches instead of only vector retrieval."
+    },
+    {
       "repo": "zhangyiqun018/agent-for-debate",
       "url": "https://github.com/zhangyiqun018/agent-for-debate",
       "stars": "38",
@@ -10835,6 +10945,21 @@
       "description": "Agent Smith is a self-similar multi-agent collaboration protocol that decomposes work recursively while isolating each agent through inbox/private/outbox/children directories."
     },
     {
+      "repo": "DEEP-PolyU/Awesome-GraphMemory",
+      "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
+      "stars": "273",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "memory",
+      "stack": "Markdown/Graph memory papers",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed 108 commits, 273 stars, 15 forks and a graph-based agent memory survey/resource list covering taxonomy, memory extraction/storage/retrieval/evolution, benchmarks and projects.",
+      "description": "Awesome GraphMemory is a paper-facing index for graph-based agent memory, giving the corpus a bridge from memory substrates to graph knowledge structures."
+    },
+    {
       "repo": "deepelementlab/clawcode",
       "url": "https://github.com/deepelementlab/clawcode",
       "stars": "199",
@@ -11313,6 +11438,21 @@
       "content_timestamp": "unknown",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "ACM CAIS'26 Artifact — GEPA"
+    },
+    {
+      "repo": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "stars": "105000",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "memory",
+      "stack": "TypeScript/CLI/Auto-memory/Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web-observed GitHub page showed Apache-2.0 license, 105k stars, 13.9k forks, 6,224 commits, memory-tests/evals directories, v0.43.0 latest release on 2026-05-22, and README claims for an open-source terminal AI agent; Auto Memory docs say it mines past sessions for durable memory and reusable Agent Skills, drafts patches or SKILL.md files, and never applies them without approval.",
+      "description": "Gemini CLI is a major open-source terminal agent; its Auto Memory docs add a mainstream implementation path for mining past sessions into reviewable durable memory and reusable Agent Skills."
     },
     {
       "repo": "greyhaven-ai/autocontext",
@@ -15846,21 +15986,23 @@
       "evolution_focused": false
     },
     {
-      "name": "gemini-cli",
+      "name": "Gemini CLI Auto Memory",
       "repo": "google-gemini/gemini-cli",
       "normalized_repo": "google-gemini/gemini-cli",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "category": "CLI AI Agent",
-      "pattern": "CLI Agent → 终端操作 → MCP 扩展",
+      "category": "Agent CLI Auto-Memory and Skills",
+      "pattern": "session transcripts -> auto-memory mining -> reviewable patches / SKILL.md drafts -> approved durable memory or skill assets",
       "tags": [
         "CLI Agent",
         "Google Gemini",
-        "MCP"
+        "MCP",
+        "agent memory",
+        "skills"
       ],
-      "site_stars": 45000,
-      "site_forks": "3000",
+      "site_stars": 105000,
+      "site_forks": "13900",
       "license": "Apache-2.0",
-      "lastPushed": "2026-05-20T00:00:00Z",
+      "lastPushed": "2026-05-25T00:00:00Z",
       "localPath": "repos/google_gemini__gemini_cli",
       "local_git": {
         "path": "repos/google_gemini__gemini_cli",
@@ -15870,26 +16012,26 @@
         "branch": "main",
         "head": "ba04e99"
       },
-      "report": "research/projects/56-gemini-cli-agent.md",
-      "public_report": "site/public/reports/research/projects/56-gemini-cli-agent.md",
-      "public_report_exists": false,
+      "report": "projects/214-gemini-cli-auto-memory-skills.md",
+      "public_report": "site/public/reports/projects/214-gemini-cli-auto-memory-skills.md",
+      "public_report_exists": true,
       "created_at": "2026-05-22T00:33:52-06:00",
       "created_at_source": "local_git_first_commit",
       "github_source": "github_api_403",
       "github_api_stars": null,
       "github_api_forks": null,
       "github_pushed_at": null,
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
-      "in_classification": false,
-      "classification_category": null,
-      "classification_function_tag": null,
-      "classification_evidence": null,
-      "raw_time_slice": "unknown",
-      "classified_theme": "not-classified",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/google-gemini_gemini-cli.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "agent-evolution-infra",
+      "classification_evidence": "web-observed GitHub page showed Apache-2.0 license, 105k stars, 13.9k forks, 6,224 commits, memory-tests/evals directories, v0.43.0 latest release on 2026-05-22, and README claims for an open-source terminal AI agent; Auto Memory docs say it mines past sessions for durable memory and reusable Agent Skills, drafts patches or SKILL.md files, and never applies them without approval.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
       "evolution_focused": false
     },
     {
@@ -16643,6 +16785,212 @@
       "raw_time_slice": "unknown",
       "classified_theme": "education-list",
       "evolution_focused": false
+    },
+    {
+      "name": "Awesome Agent Memory by cxxz",
+      "repo": "cxxz/awesome-agent-memory",
+      "normalized_repo": "cxxz/awesome-agent-memory",
+      "url": "https://github.com/cxxz/awesome-agent-memory",
+      "category": "Agent Memory Resource Index",
+      "pattern": "memory systems -> tools/patterns/research -> agent memory taxonomy",
+      "tags": [
+        "agent memory",
+        "research index",
+        "taxonomy"
+      ],
+      "site_stars": 10,
+      "site_forks": 3,
+      "license": "MIT",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/cxxz_awesome-agent-memory.md",
+      "local_git": null,
+      "report": "projects/209-cxxz-awesome-agent-memory.md",
+      "public_report": "site/public/reports/projects/209-cxxz-awesome-agent-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/cxxz_awesome-agent-memory.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web-observed GitHub page showed MIT license, 10 stars, 3 forks, 16 commits, and an MCP-centric memory server/tool list covering Basic Memory, OpenMemory MCP, graph memory servers and vector-backed memory tools; counts were not API-verified in this shell-blocked run.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "Memoir",
+      "repo": "zhangfengcdt/memoir",
+      "normalized_repo": "zhangfengcdt/memoir",
+      "url": "https://github.com/zhangfengcdt/memoir",
+      "category": "Git-like Agent Auto-Memory",
+      "pattern": "agent activity -> hierarchical memory paths -> Git-like commits/branches -> recoverable continuity",
+      "tags": [
+        "agent memory",
+        "versioned memory",
+        "continuity"
+      ],
+      "site_stars": 549,
+      "site_forks": 35,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/zhangfengcdt_memoir.md",
+      "local_git": null,
+      "report": "projects/210-memoir-agent-auto-memory.md",
+      "public_report": "site/public/reports/projects/210-memoir-agent-auto-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/zhangfengcdt_memoir.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web-observed GitHub page showed 155 commits, Apache-2.0 license, 549 stars, 35 forks, Python/Shell/TypeScript stack, v0.2.0 release on 2026-05-11, Codex/Claude plugin install paths, and README language about Git-like branching/commit/merge/rollback for AI memory; no benchmark was rerun.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "Awesome GraphMemory",
+      "repo": "DEEP-PolyU/Awesome-GraphMemory",
+      "normalized_repo": "deep-polyu/awesome-graphmemory",
+      "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
+      "category": "Graph-Based Agent Memory Index",
+      "pattern": "graph memory papers -> techniques/applications -> memory substrate map",
+      "tags": [
+        "graph memory",
+        "agent memory",
+        "paper index"
+      ],
+      "site_stars": 273,
+      "site_forks": 15,
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/deep-polyu_awesome-graphmemory.md",
+      "local_git": null,
+      "report": "projects/211-awesome-graphmemory.md",
+      "public_report": "site/public/reports/projects/211-awesome-graphmemory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/deep-polyu_awesome-graphmemory.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web-observed GitHub page showed 108 commits, 273 stars, 15 forks and a graph-based agent memory survey/resource list covering taxonomy, memory extraction/storage/retrieval/evolution, benchmarks and projects.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "ATANT",
+      "repo": "Kenotic-Labs/ATANT",
+      "normalized_repo": "kenotic-labs/atant",
+      "url": "https://github.com/Kenotic-Labs/ATANT",
+      "category": "Agent Continuity Evaluation",
+      "pattern": "agent narrative checkpoints -> continuity tests -> self/identity drift evidence",
+      "tags": [
+        "agent continuity",
+        "evaluation",
+        "memory benchmark"
+      ],
+      "site_stars": 3,
+      "site_forks": 0,
+      "license": "License visible",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/kenotic-labs_atant.md",
+      "local_git": null,
+      "report": "projects/212-atant-agent-continuity-eval.md",
+      "public_report": "site/public/reports/projects/212-atant-agent-continuity-eval.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/kenotic-labs_atant.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 15 commits, 3 stars, 0 forks, Python language, continuity benchmark topics, 250 narrative stories, 1,835 verification questions, 10 checkpoints, no LLM in the evaluation loop, arXiv links and Hugging Face corpus link.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
+      "name": "Gitagent",
+      "repo": "open-gitagent/gitagent",
+      "normalized_repo": "open-gitagent/gitagent",
+      "url": "https://github.com/open-gitagent/gitagent",
+      "category": "Git-Native Agent Framework",
+      "pattern": "git repository -> agent identity/rules/memory/tools/skills/hooks -> auditable agent runtime",
+      "tags": [
+        "git-native agent",
+        "agent memory",
+        "skills",
+        "audit"
+      ],
+      "site_stars": 404,
+      "site_forks": 82,
+      "license": "MIT",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/open-gitagent_gitagent.md",
+      "local_git": null,
+      "report": "projects/213-gitagent-git-native-agent-framework.md",
+      "public_report": "site/public/reports/projects/213-gitagent-git-native-agent-framework.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/open-gitagent_gitagent.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed MIT license, 404 stars, 82 forks, 123 commits, and described a universal git-native AI agent framework with agent.yaml, SOUL.md, RULES.md, git-committed memory, declarative tools, composable skills, hooks, plugins, compliance audit logs and OpenTelemetry instrumentation.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "framework",
+      "evolution_focused": false
     }
   ],
   "analyzed_git_evidence": [
@@ -16786,6 +17134,55 @@
       "classification_evidence": null,
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
+      "evolution_focused": false
+    },
+    {
+      "name": "Gemini CLI Auto Memory",
+      "repo": "google-gemini/gemini-cli",
+      "normalized_repo": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "category": "Agent CLI Auto-Memory and Skills",
+      "pattern": "session transcripts -> auto-memory mining -> reviewable patches / SKILL.md drafts -> approved durable memory or skill assets",
+      "tags": [
+        "CLI Agent",
+        "Google Gemini",
+        "MCP",
+        "agent memory",
+        "skills"
+      ],
+      "site_stars": 105000,
+      "site_forks": "13900",
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "repos/google_gemini__gemini_cli",
+      "local_git": {
+        "path": "repos/google_gemini__gemini_cli",
+        "first_commit_at": "2026-05-22T00:33:52-06:00",
+        "last_commit_at": "2026-05-22T00:33:52-06:00",
+        "commit_count": 1,
+        "branch": "main",
+        "head": "ba04e99"
+      },
+      "report": "projects/214-gemini-cli-auto-memory-skills.md",
+      "public_report": "site/public/reports/projects/214-gemini-cli-auto-memory-skills.md",
+      "public_report_exists": true,
+      "created_at": "2026-05-22T00:33:52-06:00",
+      "created_at_source": "local_git_first_commit",
+      "github_source": "github_api_403",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/google-gemini_gemini-cli.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "agent-evolution-infra",
+      "classification_evidence": "web-observed GitHub page showed Apache-2.0 license, 105k stars, 13.9k forks, 6,224 commits, memory-tests/evals directories, v0.43.0 latest release on 2026-05-22, and README claims for an open-source terminal AI agent; Auto Memory docs say it mines past sessions for durable memory and reusable Agent Skills, drafts patches or SKILL.md files, and never applies them without approval.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
       "evolution_focused": false
     },
     {
@@ -17162,53 +17559,6 @@
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
       "evolution_focused": true
-    },
-    {
-      "name": "gemini-cli",
-      "repo": "google-gemini/gemini-cli",
-      "normalized_repo": "google-gemini/gemini-cli",
-      "url": "https://github.com/google-gemini/gemini-cli",
-      "category": "CLI AI Agent",
-      "pattern": "CLI Agent → 终端操作 → MCP 扩展",
-      "tags": [
-        "CLI Agent",
-        "Google Gemini",
-        "MCP"
-      ],
-      "site_stars": 45000,
-      "site_forks": "3000",
-      "license": "Apache-2.0",
-      "lastPushed": "2026-05-20T00:00:00Z",
-      "localPath": "repos/google_gemini__gemini_cli",
-      "local_git": {
-        "path": "repos/google_gemini__gemini_cli",
-        "first_commit_at": "2026-05-22T00:33:52-06:00",
-        "last_commit_at": "2026-05-22T00:33:52-06:00",
-        "commit_count": 1,
-        "branch": "main",
-        "head": "ba04e99"
-      },
-      "report": "research/projects/56-gemini-cli-agent.md",
-      "public_report": "site/public/reports/research/projects/56-gemini-cli-agent.md",
-      "public_report_exists": false,
-      "created_at": "2026-05-22T00:33:52-06:00",
-      "created_at_source": "local_git_first_commit",
-      "github_source": "github_api_403",
-      "github_api_stars": null,
-      "github_api_forks": null,
-      "github_pushed_at": null,
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
-      "in_classification": false,
-      "classification_category": null,
-      "classification_function_tag": null,
-      "classification_evidence": null,
-      "raw_time_slice": "unknown",
-      "classified_theme": "not-classified",
-      "evolution_focused": false
     },
     {
       "name": "flowise",
@@ -19478,6 +19828,47 @@
       "evolution_focused": true
     },
     {
+      "name": "Memoir",
+      "repo": "zhangfengcdt/memoir",
+      "normalized_repo": "zhangfengcdt/memoir",
+      "url": "https://github.com/zhangfengcdt/memoir",
+      "category": "Git-like Agent Auto-Memory",
+      "pattern": "agent activity -> hierarchical memory paths -> Git-like commits/branches -> recoverable continuity",
+      "tags": [
+        "agent memory",
+        "versioned memory",
+        "continuity"
+      ],
+      "site_stars": 549,
+      "site_forks": 35,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/zhangfengcdt_memoir.md",
+      "local_git": null,
+      "report": "projects/210-memoir-agent-auto-memory.md",
+      "public_report": "site/public/reports/projects/210-memoir-agent-auto-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/zhangfengcdt_memoir.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web-observed GitHub page showed 155 commits, Apache-2.0 license, 549 stars, 35 forks, Python/Shell/TypeScript stack, v0.2.0 release on 2026-05-11, Codex/Claude plugin install paths, and README language about Git-like branching/commit/merge/rollback for AI memory; no benchmark was rerun.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
       "name": "Awesome-FM4CO",
       "repo": "ai4co/awesome-fm4co",
       "normalized_repo": "ai4co/awesome-fm4co",
@@ -19657,6 +20048,48 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "education-list",
       "evolution_focused": true
+    },
+    {
+      "name": "Gitagent",
+      "repo": "open-gitagent/gitagent",
+      "normalized_repo": "open-gitagent/gitagent",
+      "url": "https://github.com/open-gitagent/gitagent",
+      "category": "Git-Native Agent Framework",
+      "pattern": "git repository -> agent identity/rules/memory/tools/skills/hooks -> auditable agent runtime",
+      "tags": [
+        "git-native agent",
+        "agent memory",
+        "skills",
+        "audit"
+      ],
+      "site_stars": 404,
+      "site_forks": 82,
+      "license": "MIT",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/open-gitagent_gitagent.md",
+      "local_git": null,
+      "report": "projects/213-gitagent-git-native-agent-framework.md",
+      "public_report": "site/public/reports/projects/213-gitagent-git-native-agent-framework.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/open-gitagent_gitagent.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed MIT license, 404 stars, 82 forks, 123 commits, and described a universal git-native AI agent framework with agent.yaml, SOUL.md, RULES.md, git-committed memory, declarative tools, composable skills, hooks, plugins, compliance audit logs and OpenTelemetry instrumentation.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "framework",
+      "evolution_focused": false
     },
     {
       "name": "LLM4Opt",
@@ -19880,6 +20313,47 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
       "evolution_focused": true
+    },
+    {
+      "name": "Awesome GraphMemory",
+      "repo": "DEEP-PolyU/Awesome-GraphMemory",
+      "normalized_repo": "deep-polyu/awesome-graphmemory",
+      "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
+      "category": "Graph-Based Agent Memory Index",
+      "pattern": "graph memory papers -> techniques/applications -> memory substrate map",
+      "tags": [
+        "graph memory",
+        "agent memory",
+        "paper index"
+      ],
+      "site_stars": 273,
+      "site_forks": 15,
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/deep-polyu_awesome-graphmemory.md",
+      "local_git": null,
+      "report": "projects/211-awesome-graphmemory.md",
+      "public_report": "site/public/reports/projects/211-awesome-graphmemory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/deep-polyu_awesome-graphmemory.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web-observed GitHub page showed 108 commits, 273 stars, 15 forks and a graph-based agent memory survey/resource list covering taxonomy, memory extraction/storage/retrieval/evolution, benchmarks and projects.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
     },
     {
       "name": "OpenTreeSearch",
@@ -20398,6 +20872,88 @@
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
       "evolution_focused": true
+    },
+    {
+      "name": "Awesome Agent Memory by cxxz",
+      "repo": "cxxz/awesome-agent-memory",
+      "normalized_repo": "cxxz/awesome-agent-memory",
+      "url": "https://github.com/cxxz/awesome-agent-memory",
+      "category": "Agent Memory Resource Index",
+      "pattern": "memory systems -> tools/patterns/research -> agent memory taxonomy",
+      "tags": [
+        "agent memory",
+        "research index",
+        "taxonomy"
+      ],
+      "site_stars": 10,
+      "site_forks": 3,
+      "license": "MIT",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/cxxz_awesome-agent-memory.md",
+      "local_git": null,
+      "report": "projects/209-cxxz-awesome-agent-memory.md",
+      "public_report": "site/public/reports/projects/209-cxxz-awesome-agent-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/cxxz_awesome-agent-memory.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web-observed GitHub page showed MIT license, 10 stars, 3 forks, 16 commits, and an MCP-centric memory server/tool list covering Basic Memory, OpenMemory MCP, graph memory servers and vector-backed memory tools; counts were not API-verified in this shell-blocked run.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "ATANT",
+      "repo": "Kenotic-Labs/ATANT",
+      "normalized_repo": "kenotic-labs/atant",
+      "url": "https://github.com/Kenotic-Labs/ATANT",
+      "category": "Agent Continuity Evaluation",
+      "pattern": "agent narrative checkpoints -> continuity tests -> self/identity drift evidence",
+      "tags": [
+        "agent continuity",
+        "evaluation",
+        "memory benchmark"
+      ],
+      "site_stars": 3,
+      "site_forks": 0,
+      "license": "License visible",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/kenotic-labs_atant.md",
+      "local_git": null,
+      "report": "projects/212-atant-agent-continuity-eval.md",
+      "public_report": "site/public/reports/projects/212-atant-agent-continuity-eval.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/kenotic-labs_atant.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 15 commits, 3 stars, 0 forks, Python language, continuity benchmark topics, 250 narrative stories, 1,835 verification questions, 10 checkpoints, no LLM in the evaluation loop, arXiv links and Hugging Face corpus link.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
     }
   ],
   "analyzed_timeline": [
@@ -23845,21 +24401,23 @@
       "evolution_focused": true
     },
     {
-      "name": "gemini-cli",
+      "name": "Gemini CLI Auto Memory",
       "repo": "google-gemini/gemini-cli",
       "normalized_repo": "google-gemini/gemini-cli",
       "url": "https://github.com/google-gemini/gemini-cli",
-      "category": "CLI AI Agent",
-      "pattern": "CLI Agent → 终端操作 → MCP 扩展",
+      "category": "Agent CLI Auto-Memory and Skills",
+      "pattern": "session transcripts -> auto-memory mining -> reviewable patches / SKILL.md drafts -> approved durable memory or skill assets",
       "tags": [
         "CLI Agent",
         "Google Gemini",
-        "MCP"
+        "MCP",
+        "agent memory",
+        "skills"
       ],
-      "site_stars": 45000,
-      "site_forks": "3000",
+      "site_stars": 105000,
+      "site_forks": "13900",
       "license": "Apache-2.0",
-      "lastPushed": "2026-05-20T00:00:00Z",
+      "lastPushed": "2026-05-25T00:00:00Z",
       "localPath": "repos/google_gemini__gemini_cli",
       "local_git": {
         "path": "repos/google_gemini__gemini_cli",
@@ -23869,26 +24427,26 @@
         "branch": "main",
         "head": "ba04e99"
       },
-      "report": "research/projects/56-gemini-cli-agent.md",
-      "public_report": "site/public/reports/research/projects/56-gemini-cli-agent.md",
-      "public_report_exists": false,
+      "report": "projects/214-gemini-cli-auto-memory-skills.md",
+      "public_report": "site/public/reports/projects/214-gemini-cli-auto-memory-skills.md",
+      "public_report_exists": true,
       "created_at": "2026-05-22T00:33:52-06:00",
       "created_at_source": "local_git_first_commit",
       "github_source": "github_api_403",
       "github_api_stars": null,
       "github_api_forks": null,
       "github_pushed_at": null,
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
-      "in_classification": false,
-      "classification_category": null,
-      "classification_function_tag": null,
-      "classification_evidence": null,
-      "raw_time_slice": "unknown",
-      "classified_theme": "not-classified",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/google-gemini_gemini-cli.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "agent-evolution-infra",
+      "classification_evidence": "web-observed GitHub page showed Apache-2.0 license, 105k stars, 13.9k forks, 6,224 commits, memory-tests/evals directories, v0.43.0 latest release on 2026-05-22, and README claims for an open-source terminal AI agent; Auto Memory docs say it mines past sessions for durable memory and reusable Agent Skills, drafts patches or SKILL.md files, and never applies them without approval.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
       "evolution_focused": false
     },
     {
@@ -24117,6 +24675,171 @@
       "evolution_focused": true
     },
     {
+      "name": "Awesome Agent Memory by cxxz",
+      "repo": "cxxz/awesome-agent-memory",
+      "normalized_repo": "cxxz/awesome-agent-memory",
+      "url": "https://github.com/cxxz/awesome-agent-memory",
+      "category": "Agent Memory Resource Index",
+      "pattern": "memory systems -> tools/patterns/research -> agent memory taxonomy",
+      "tags": [
+        "agent memory",
+        "research index",
+        "taxonomy"
+      ],
+      "site_stars": 10,
+      "site_forks": 3,
+      "license": "MIT",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/cxxz_awesome-agent-memory.md",
+      "local_git": null,
+      "report": "projects/209-cxxz-awesome-agent-memory.md",
+      "public_report": "site/public/reports/projects/209-cxxz-awesome-agent-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/cxxz_awesome-agent-memory.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web-observed GitHub page showed MIT license, 10 stars, 3 forks, 16 commits, and an MCP-centric memory server/tool list covering Basic Memory, OpenMemory MCP, graph memory servers and vector-backed memory tools; counts were not API-verified in this shell-blocked run.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "Awesome GraphMemory",
+      "repo": "DEEP-PolyU/Awesome-GraphMemory",
+      "normalized_repo": "deep-polyu/awesome-graphmemory",
+      "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
+      "category": "Graph-Based Agent Memory Index",
+      "pattern": "graph memory papers -> techniques/applications -> memory substrate map",
+      "tags": [
+        "graph memory",
+        "agent memory",
+        "paper index"
+      ],
+      "site_stars": 273,
+      "site_forks": 15,
+      "license": "Unknown",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/deep-polyu_awesome-graphmemory.md",
+      "local_git": null,
+      "report": "projects/211-awesome-graphmemory.md",
+      "public_report": "site/public/reports/projects/211-awesome-graphmemory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/deep-polyu_awesome-graphmemory.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web-observed GitHub page showed 108 commits, 273 stars, 15 forks and a graph-based agent memory survey/resource list covering taxonomy, memory extraction/storage/retrieval/evolution, benchmarks and projects.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "ATANT",
+      "repo": "Kenotic-Labs/ATANT",
+      "normalized_repo": "kenotic-labs/atant",
+      "url": "https://github.com/Kenotic-Labs/ATANT",
+      "category": "Agent Continuity Evaluation",
+      "pattern": "agent narrative checkpoints -> continuity tests -> self/identity drift evidence",
+      "tags": [
+        "agent continuity",
+        "evaluation",
+        "memory benchmark"
+      ],
+      "site_stars": 3,
+      "site_forks": 0,
+      "license": "License visible",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/kenotic-labs_atant.md",
+      "local_git": null,
+      "report": "projects/212-atant-agent-continuity-eval.md",
+      "public_report": "site/public/reports/projects/212-atant-agent-continuity-eval.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/kenotic-labs_atant.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 15 commits, 3 stars, 0 forks, Python language, continuity benchmark topics, 250 narrative stories, 1,835 verification questions, 10 checkpoints, no LLM in the evaluation loop, arXiv links and Hugging Face corpus link.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
+      "name": "Gitagent",
+      "repo": "open-gitagent/gitagent",
+      "normalized_repo": "open-gitagent/gitagent",
+      "url": "https://github.com/open-gitagent/gitagent",
+      "category": "Git-Native Agent Framework",
+      "pattern": "git repository -> agent identity/rules/memory/tools/skills/hooks -> auditable agent runtime",
+      "tags": [
+        "git-native agent",
+        "agent memory",
+        "skills",
+        "audit"
+      ],
+      "site_stars": 404,
+      "site_forks": 82,
+      "license": "MIT",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/open-gitagent_gitagent.md",
+      "local_git": null,
+      "report": "projects/213-gitagent-git-native-agent-framework.md",
+      "public_report": "site/public/reports/projects/213-gitagent-git-native-agent-framework.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/open-gitagent_gitagent.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed MIT license, 404 stars, 82 forks, 123 commits, and described a universal git-native AI agent framework with agent.yaml, SOUL.md, RULES.md, git-committed memory, declarative tools, composable skills, hooks, plugins, compliance audit logs and OpenTelemetry instrumentation.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "framework",
+      "evolution_focused": false
+    },
+    {
       "name": "GP-LLM-Code-Evolution",
       "repo": "pureples/pureples",
       "normalized_repo": "pureples/pureples",
@@ -24153,6 +24876,47 @@
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
       "evolution_focused": true
+    },
+    {
+      "name": "Memoir",
+      "repo": "zhangfengcdt/memoir",
+      "normalized_repo": "zhangfengcdt/memoir",
+      "url": "https://github.com/zhangfengcdt/memoir",
+      "category": "Git-like Agent Auto-Memory",
+      "pattern": "agent activity -> hierarchical memory paths -> Git-like commits/branches -> recoverable continuity",
+      "tags": [
+        "agent memory",
+        "versioned memory",
+        "continuity"
+      ],
+      "site_stars": 549,
+      "site_forks": 35,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/zhangfengcdt_memoir.md",
+      "local_git": null,
+      "report": "projects/210-memoir-agent-auto-memory.md",
+      "public_report": "site/public/reports/projects/210-memoir-agent-auto-memory.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/zhangfengcdt_memoir.md",
+      "raw_collected_at": "2026-05-25T23:35:00+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_search_and_public_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web-observed GitHub page showed 155 commits, Apache-2.0 license, 549 stars, 35 forks, Python/Shell/TypeScript stack, v0.2.0 release on 2026-05-11, Codex/Claude plugin install paths, and README language about Git-like branching/commit/merge/rollback for AI memory; no benchmark was rerun.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
     }
   ]
 }

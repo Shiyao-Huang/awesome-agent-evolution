@@ -1,6 +1,6 @@
 # Ops / 管理与协作 Index
 
-> Generated: 2026-05-25
+> Generated: 2026-05-26
 
 ## Rule
 
@@ -10,9 +10,9 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `README.md` | present | 1 | 0 | 0 | 196 KB |
-| `README-ZH.md` | present | 1 | 0 | 0 | 196 KB |
-| `README-EN.md` | present | 1 | 0 | 0 | 196 KB |
+| `README.md` | present | 1 | 0 | 0 | 172 KB |
+| `README-ZH.md` | present | 1 | 0 | 0 | 172 KB |
+| `README-EN.md` | present | 1 | 0 | 0 | 171 KB |
 | `CONTENT_INDEX.md` | present | 1 | 0 | 0 | 3.2 KB |
 | `AGENTS.md` | present | 1 | 0 | 0 | 7.4 KB |
 | `CLAUDE.md` | present | 1 | 0 | 0 | 2.5 KB |

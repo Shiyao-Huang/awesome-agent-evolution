@@ -1282,22 +1282,22 @@ export const projects: Project[] = [
     "tags": ["自托管", "多 LLM", "RAG", "插件"]
   }
   ,{
-    "name": "gemini-cli",
+    "name": "Gemini CLI Auto Memory",
     "repo": "google-gemini/gemini-cli",
     "url": "https://github.com/google-gemini/gemini-cli",
-    "stars": 45000,
-    "forks": "3000",
+    "stars": 105000,
+    "forks": "13900",
     "language": "TypeScript",
     "license": "Apache-2.0",
-    "report": "research/projects/56-gemini-cli-agent.md",
-    "pattern": "CLI Agent → 终端操作 → MCP 扩展",
-    "description": "Gemini CLI Google 开源终端 AI Agent，支持 Gemini 3 模型、MCP 扩展和内置工具。",
-    "stack": ["TypeScript", "Node.js", "MCP"],
-    "category": "CLI AI Agent",
-    "lastPushed": "2026-05-20T00:00:00Z",
+    "report": "projects/214-gemini-cli-auto-memory-skills.md",
+    "pattern": "session transcripts -> auto-memory mining -> reviewable patches / SKILL.md drafts -> approved durable memory or skill assets",
+    "description": "Gemini CLI 是 Google 开源终端 AI Agent；Auto Memory 路线把历史会话挖掘成可审核的 durable memory 和 Agent Skills 草稿。",
+    "stack": ["TypeScript", "Node.js", "MCP", "Auto Memory", "Agent Skills"],
+    "category": "Agent CLI Auto-Memory and Skills",
+    "lastPushed": "2026-05-25T00:00:00Z",
     "localPath": "repos/google_gemini__gemini_cli",
     "status": "candidate",
-    "tags": ["CLI Agent", "Google Gemini", "MCP"]
+    "tags": ["CLI Agent", "Google Gemini", "MCP", "agent memory", "skills"]
   }
   ,{
     "name": "n8n",
@@ -1586,7 +1586,132 @@ export const projects: Project[] = [
     "localPath": "repos/zijian_ni__awesome_ai_agents_2026",
     "status": "candidate",
     "tags": ["综述", "2026 Agent", "项目追踪"]
-  }
+  },
+    {
+            "name": "Awesome Agent Memory by cxxz",
+            "repo": "cxxz/awesome-agent-memory",
+            "url": "https://github.com/cxxz/awesome-agent-memory",
+            "stars": 10,
+            "forks": 3,
+            "language": "Markdown",
+            "license": "MIT",
+            "report": "projects/209-cxxz-awesome-agent-memory.md",
+            "pattern": "memory systems -> tools/patterns/research -> agent memory taxonomy",
+            "description": "A curated agent-memory resource index that helps separate memory tools, patterns and research signals from runtime claims.",
+            "stack": [
+                    "Markdown"
+            ],
+            "category": "Agent Memory Resource Index",
+            "lastPushed": "2026-05-25T00:00:00Z",
+            "localPath": "raw-github/cxxz_awesome-agent-memory.md",
+            "status": "candidate",
+            "tags": [
+                    "agent memory",
+                    "research index",
+                    "taxonomy"
+            ]
+    },
+    {
+            "name": "Memoir",
+            "repo": "zhangfengcdt/memoir",
+            "url": "https://github.com/zhangfengcdt/memoir",
+            "stars": 549,
+            "forks": 35,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/210-memoir-agent-auto-memory.md",
+            "pattern": "agent activity -> hierarchical memory paths -> Git-like commits/branches -> recoverable continuity",
+            "description": "Memoir frames agent memory as declarative, hierarchical and Git-like, making memory state inspectable through commits and branches instead of only vector retrieval.",
+            "stack": [
+                    "Python",
+                    "Git-like memory"
+            ],
+            "category": "Git-like Agent Auto-Memory",
+            "lastPushed": "2026-05-25T00:00:00Z",
+            "localPath": "raw-github/zhangfengcdt_memoir.md",
+            "status": "candidate",
+            "tags": [
+                    "agent memory",
+                    "versioned memory",
+                    "continuity"
+            ]
+    },
+    {
+            "name": "Awesome GraphMemory",
+            "repo": "DEEP-PolyU/Awesome-GraphMemory",
+            "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
+            "stars": 273,
+            "forks": 15,
+            "language": "Markdown",
+            "license": "Unknown",
+            "report": "projects/211-awesome-graphmemory.md",
+            "pattern": "graph memory papers -> techniques/applications -> memory substrate map",
+            "description": "Awesome GraphMemory is a paper-facing index for graph-based agent memory, giving the corpus a bridge from memory substrates to graph knowledge structures.",
+            "stack": [
+                    "Markdown",
+                    "Graph memory papers"
+            ],
+            "category": "Graph-Based Agent Memory Index",
+            "lastPushed": "2026-05-25T00:00:00Z",
+            "localPath": "raw-github/deep-polyu_awesome-graphmemory.md",
+            "status": "candidate",
+            "tags": [
+                    "graph memory",
+                    "agent memory",
+                    "paper index"
+            ]
+    },
+    {
+            "name": "ATANT",
+            "repo": "Kenotic-Labs/ATANT",
+            "url": "https://github.com/Kenotic-Labs/ATANT",
+            "stars": 3,
+            "forks": 0,
+            "language": "Python",
+            "license": "License visible",
+            "report": "projects/212-atant-agent-continuity-eval.md",
+            "pattern": "agent narrative checkpoints -> continuity tests -> self/identity drift evidence",
+            "description": "ATANT adds an agent-continuity evaluation angle: memory is not only retrieval quality, but whether an agent maintains narrative state and checkpoint continuity.",
+            "stack": [
+                    "Python",
+                    "Evaluation framework"
+            ],
+            "category": "Agent Continuity Evaluation",
+            "lastPushed": "2026-05-25T00:00:00Z",
+            "localPath": "raw-github/kenotic-labs_atant.md",
+            "status": "candidate",
+            "tags": [
+                    "agent continuity",
+                    "evaluation",
+                    "memory benchmark"
+            ]
+    },
+    {
+            "name": "Gitagent",
+            "repo": "open-gitagent/gitagent",
+            "url": "https://github.com/open-gitagent/gitagent",
+            "stars": 404,
+            "forks": 82,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/213-gitagent-git-native-agent-framework.md",
+            "pattern": "git repository -> agent identity/rules/memory/tools/skills/hooks -> auditable agent runtime",
+            "description": "Gitagent treats an agent as a Git repository: identity, rules, memory, tools, skills, hooks, plugins and audit state all live in version-controlled files.",
+            "stack": [
+                    "TypeScript",
+                    "Git-native agent runtime"
+            ],
+            "category": "Git-Native Agent Framework",
+            "lastPushed": "2026-05-25T00:00:00Z",
+            "localPath": "raw-github/open-gitagent_gitagent.md",
+            "status": "candidate",
+            "tags": [
+                    "git-native agent",
+                    "agent memory",
+                    "skills",
+                    "audit"
+            ]
+    }
 ];
 
 export const projectGroups = [

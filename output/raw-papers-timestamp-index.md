@@ -1,6 +1,6 @@
 # Raw Papers Timestamp Index
 
-Generated: 2026-05-25T00:00:00+08:00
+Generated: 2026-05-26T00:00:00+08:00
 
 - Total raw paper captures: 196
 - Unknown content_timestamp: 0
