@@ -173,7 +173,6 @@ body::before {
   animation: pulse-glow 4s ease-in-out infinite;
 }
 
-/* ========== React + GSAP network visual ========== */
 .network-stage {
   position: relative;
   min-height: 520px;
@@ -218,16 +217,9 @@ body::before {
   width: 100%;
   height: 520px;
 }
-.network-node-group {
-  cursor: pointer;
-  outline: none;
-}
-.network-node-group:focus .network-label,
-.network-node-group:hover .network-label {
-  fill: #fff;
-}
+.network-node-group { cursor: pointer; outline: none }
 .network-label {
-  fill: rgba(246,248,255,.64);
+  fill: rgba(246,248,255,.66);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0;
@@ -235,9 +227,9 @@ body::before {
   stroke: rgba(3,0,20,.8);
   stroke-width: 4px;
 }
-.network-label.active {
-  fill: #f6f8ff;
-}
+.network-label.active,
+.network-node-group:hover .network-label,
+.network-node-group:focus .network-label { fill: #fff }
 .network-card {
   position: absolute;
   z-index: 2;

@@ -50,7 +50,8 @@ for (const node of generatedKnowledgeGraph.nodes) {
     summary: 'summary' in node ? node.summary : undefined,
     weight: node.weight,
     source: 'source' in node ? node.source : undefined,
-    group: 'group' in node ? node.group : undefined
+    group: 'group' in node ? node.group : undefined,
+    frontier: 'frontier' in node ? Boolean(node.frontier) : undefined
   });
 }
 

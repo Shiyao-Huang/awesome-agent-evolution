@@ -1,7 +1,7 @@
 {
   "project": "dify",
   "repo": "langgenius/dify",
-  "collected_at": "2026-05-22T12:14:23.388689+00:00",
+  "collected_at": "2026-05-22T12:43:36.434300+00:00",
   "total_hits": 40,
   "results": {
     "dify": [
@@ -10,7 +10,6 @@
         "title": "Dify, a visual workflow to build/test LLM applications",
         "points": 185,
         "num_comments": 38,
-        "author": "mountainview",
         "created_at": "2024-04-22T21:32:30Z"
       },
       {
@@ -18,7 +17,6 @@
         "title": "Show HN: Dify.ai – Open-source platform for LLMOps, define your AI-native apps",
         "points": 4,
         "num_comments": 1,
-        "author": "pinkbanana",
         "created_at": "2023-05-24T03:21:20Z"
       },
       {
@@ -26,7 +24,6 @@
         "title": "Dify vs. LangChain: Make the Choice Betweet Low Code and Python Library",
         "points": 3,
         "num_comments": 1,
-        "author": "sqlvectordb",
         "created_at": "2024-07-18T03:14:58Z"
       },
       {
@@ -34,7 +31,6 @@
         "title": "Midjourney and Suno v4 and Veo 3.1 chained in one Dify workflow for $0.35 per ad",
         "points": 3,
         "num_comments": 0,
-        "author": "yujunjie",
         "created_at": "2026-04-21T16:10:41Z"
       },
       {
@@ -42,7 +38,6 @@
         "title": "Dify vs. LangChain",
         "points": 3,
         "num_comments": 0,
-        "author": "Bella-Xiang",
         "created_at": "2024-06-19T01:24:14Z"
       },
       {
@@ -50,7 +45,6 @@
         "title": "I built a Steam plugin for Dify (now listed on the official plugin marketplace)",
         "points": 2,
         "num_comments": 1,
-        "author": "bdim404",
         "created_at": "2025-07-11T06:53:43Z"
       },
       {
@@ -58,7 +52,6 @@
         "title": "Interesting LLMOps Tools Dify.ai",
         "points": 2,
         "num_comments": 1,
-        "author": "pinkbanana",
         "created_at": "2023-07-11T01:46:25Z"
       },
       {
@@ -66,7 +59,6 @@
         "title": "Dify 1.0",
         "points": 2,
         "num_comments": 0,
-        "author": "mountainview",
         "created_at": "2025-03-01T12:37:04Z"
       },
       {
@@ -74,7 +66,6 @@
         "title": "Dify, an end-to-end, visualized workflow to build/test LLM applications",
         "points": 2,
         "num_comments": 0,
-        "author": "mountainview",
         "created_at": "2024-04-22T00:44:18Z"
       },
       {
@@ -82,7 +73,6 @@
         "title": "N8n vs. Dify for AI",
         "points": 1,
         "num_comments": 1,
-        "author": "cyprien_g",
         "created_at": "2025-10-15T09:44:58Z"
       },
       {
@@ -90,7 +80,6 @@
         "title": "Dify's Open Source License",
         "points": 1,
         "num_comments": 1,
-        "author": "l2dy",
         "created_at": "2025-03-26T14:27:42Z"
       },
       {
@@ -98,7 +87,6 @@
         "title": "Dify: Production-ready platform for agentic workflow development",
         "points": 1,
         "num_comments": 0,
-        "author": "saikatsg",
         "created_at": "2026-03-09T18:53:46Z"
       },
       {
@@ -106,7 +94,6 @@
         "title": "Awesome-Dify-Workflow – Share and Discover Useful Dify Workflows",
         "points": 1,
         "num_comments": 0,
-        "author": "sarkory",
         "created_at": "2025-05-13T06:53:35Z"
       },
       {
@@ -114,7 +101,6 @@
         "title": "Dify 1.0: Plugins, Marketplace, a New Agent Node, Optimized RAG and Memory",
         "points": 1,
         "num_comments": 0,
-        "author": "mountainview",
         "created_at": "2025-03-03T11:13:30Z"
       },
       {
@@ -122,7 +108,6 @@
         "title": "Build a Podcast with Dify and Google NotebookLM",
         "points": 1,
         "num_comments": 0,
-        "author": "jinqueeny",
         "created_at": "2024-10-29T09:41:20Z"
       },
       {
@@ -130,7 +115,6 @@
         "title": "Getting Started with Dify: No-Code AI Application Development",
         "points": 1,
         "num_comments": 0,
-        "author": "carlual",
         "created_at": "2024-08-01T06:55:09Z"
       },
       {
@@ -138,7 +122,6 @@
         "title": "Deploy Production-Ready AIGC Apps on Kubernetes Using KubeBlocks and Dify",
         "points": 1,
         "num_comments": 0,
-        "author": "michellezzz",
         "created_at": "2024-07-31T14:47:12Z"
       },
       {
@@ -146,7 +129,6 @@
         "title": "DIFY",
         "points": 1,
         "num_comments": 0,
-        "author": "herbertl",
         "created_at": "2021-07-22T12:12:49Z"
       },
       {
@@ -154,7 +136,6 @@
         "title": "Dify: Free payment solution for online shopping founded by Opera",
         "points": 1,
         "num_comments": 0,
-        "author": "alexrustic",
         "created_at": "2021-02-17T11:38:46Z"
       },
       {
@@ -162,7 +143,6 @@
         "title": "Ask HN: How would you architect a RAG system for 10M+ documents today?",
         "points": 23,
         "num_comments": 9,
-        "author": "Ftrea",
         "created_at": "2025-11-21T01:10:53Z"
       },
       {
@@ -170,7 +150,6 @@
         "title": "Show HN: LLMOne – Deploy LLMs from bare metal to production in hours",
         "points": 5,
         "num_comments": 0,
-        "author": "pescn",
         "created_at": "2025-06-22T09:44:37Z"
       },
       {
@@ -178,7 +157,6 @@
         "title": "Ask HN: MCP/API search vs. vector search – what's winning for you?",
         "points": 4,
         "num_comments": 1,
-        "author": "ngkw",
         "created_at": "2025-08-20T01:04:40Z"
       },
       {
@@ -186,7 +164,6 @@
         "title": "Show HN: Shinobi – 10-second security scanner for developers",
         "points": 2,
         "num_comments": 0,
-        "author": "SolidDark",
         "created_at": "2026-03-05T02:15:07Z"
       },
       {
@@ -194,7 +171,6 @@
         "title": "Show HN: Generate 100 recipes with images using Tablepilot",
         "points": 2,
         "num_comments": 0,
-        "author": "Yiling-J",
         "created_at": "2025-04-24T15:23:29Z"
       },
       {
@@ -202,7 +178,6 @@
         "title": "Ask HN: Is building a company around an open-source AI agent platform realistic?",
         "points": 1,
         "num_comments": 2,
-        "author": "dimitrismrtzs",
         "created_at": "2026-04-07T06:40:12Z"
       },
       {
@@ -210,7 +185,6 @@
         "title": "Ask HN: Why are there always new agent platforms?",
         "points": 1,
         "num_comments": 1,
-        "author": "ZeroAurora",
         "created_at": "2026-01-11T18:49:46Z"
       },
       {
@@ -218,7 +192,6 @@
         "title": "Show HN: Java Advent Calendar",
         "points": 1,
         "num_comments": 0,
-        "author": "cdman",
         "created_at": "2012-11-25T08:10:53Z"
       },
       {
@@ -226,7 +199,6 @@
         "title": "Show HN: OneManCompany The first AI company with real corporate org structure",
         "points": 1,
         "num_comments": 0,
-        "author": "yuzhengxu",
         "created_at": "2026-04-07T14:46:18Z"
       },
       {
@@ -234,7 +206,6 @@
         "title": "I built workflowhub AI for helping creators to monetize their automations",
         "points": 1,
         "num_comments": 0,
-        "author": "workflowhubai",
         "created_at": "2025-05-28T13:01:49Z"
       },
       {
@@ -242,7 +213,6 @@
         "title": "Opera: World’s first browser to give users cashback for online shopping",
         "points": 2,
         "num_comments": 1,
-        "author": "alexrustic",
         "created_at": "2021-02-17T11:35:50Z"
       },
       {
@@ -250,7 +220,6 @@
         "title": "Software specialization is reversing – and it's raising the bar, not lowering it",
         "points": 1,
         "num_comments": 0,
-        "author": "jinqueeny",
         "created_at": "2026-04-04T08:36:21Z"
       },
       {
@@ -258,7 +227,6 @@
         "title": "Riffusion – Stable Diffusion fine-tuned to generate music",
         "points": 2421,
         "num_comments": 465,
-        "author": "MitPitt",
         "created_at": "2022-12-15T13:26:04Z"
       },
       {
@@ -266,7 +234,6 @@
         "title": "Apple's plan to “think different” about encryption opens a backdoor to your life",
         "points": 2260,
         "num_comments": 824,
-        "author": "bbatsell",
         "created_at": "2021-08-05T20:20:59Z"
       },
       {
@@ -274,7 +241,6 @@
         "title": "A guide to difficult conversations",
         "points": 1829,
         "num_comments": 400,
-        "author": "davesuperman",
         "created_at": "2019-03-26T10:35:34Z"
       },
       {
@@ -282,7 +248,6 @@
         "title": "Stable Diffusion 2.0",
         "points": 1368,
         "num_comments": 493,
-        "author": "hardmaru",
         "created_at": "2022-11-24T01:28:02Z"
       },
       {
@@ -290,7 +255,6 @@
         "title": "Stable Video Diffusion",
         "points": 1330,
         "num_comments": 302,
-        "author": "roborovskis",
         "created_at": "2023-11-21T19:01:29Z"
       },
       {
@@ -298,7 +262,6 @@
         "title": "Diffie and Hellman Win Turing Award",
         "points": 1272,
         "num_comments": 78,
-        "author": "matt_d",
         "created_at": "2016-03-01T18:39:54Z"
       },
       {
@@ -306,7 +269,6 @@
         "title": "Difftastic, a structural diff tool that understands syntax",
         "points": 1188,
         "num_comments": 200,
-        "author": "frankjr",
         "created_at": "2024-03-21T13:42:46Z"
       },
       {
@@ -314,7 +276,6 @@
         "title": "Diffusion models are real-time game engines",
         "points": 1149,
         "num_comments": 409,
-        "author": "jmorgan",
         "created_at": "2024-08-28T02:59:40Z"
       },
       {
@@ -322,7 +283,6 @@
         "title": "Run Stable Diffusion on Your M1 Mac’s GPU",
         "points": 1007,
         "num_comments": 401,
-        "author": "bfirsh",
         "created_at": "2022-09-01T16:19:25Z"
       }
     ]

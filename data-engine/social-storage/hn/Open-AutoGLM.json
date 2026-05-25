@@ -1,0 +1,628 @@
+{
+  "project": "Open-AutoGLM",
+  "repo": "zai-org/AutoGLM",
+  "collected_at": "2026-05-22T12:21:08.995677+00:00",
+  "total_hits": 77,
+  "results": {
+    "Open-AutoGLM": [
+      {
+        "objectID": "47125052",
+        "title": "Open-AutoGLM: Zhipu AI's Open-Source Framework for Phone Agents (23k Stars)",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Ross00781",
+        "created_at": "2026-02-23T17:01:51Z"
+      },
+      {
+        "objectID": "47112620",
+        "title": "Open-AutoGLM: Zhipu AI Open-Sources a Framework for Autonomous Phone Agents",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Ross00781",
+        "created_at": "2026-02-22T17:01:15Z"
+      },
+      {
+        "objectID": "46298907",
+        "title": "Open source - phone agent automation",
+        "points": 2,
+        "num_comments": 0,
+        "author": "impact_sy",
+        "created_at": "2025-12-17T06:36:53Z"
+      },
+      {
+        "objectID": "46203937",
+        "title": "AutoGLM – an open-source AI agent for full phone operation from Zhipu AI",
+        "points": 2,
+        "num_comments": 0,
+        "author": "nekofneko",
+        "created_at": "2025-12-09T11:56:58Z"
+      },
+      {
+        "objectID": "11304628",
+        "title": "Carl's Jr. wants to open automated location",
+        "points": 55,
+        "num_comments": 133,
+        "author": "Jerry2",
+        "created_at": "2016-03-17T14:46:13Z"
+      },
+      {
+        "objectID": "7945467",
+        "title": "Open Automotive Alliance",
+        "points": 55,
+        "num_comments": 29,
+        "author": "Zikes",
+        "created_at": "2014-06-25T17:30:48Z"
+      },
+      {
+        "objectID": "7015136",
+        "title": "Introducing the Open Automotive Alliance",
+        "points": 29,
+        "num_comments": 11,
+        "author": "dded",
+        "created_at": "2014-01-07T03:20:57Z"
+      },
+      {
+        "objectID": "9657784",
+        "title": "Open Automotive Alliance",
+        "points": 11,
+        "num_comments": 7,
+        "author": "ghosh",
+        "created_at": "2015-06-04T07:07:33Z"
+      },
+      {
+        "objectID": "16801442",
+        "title": "Kayenta: An open automated canary analysis tool from Google and Netflix",
+        "points": 9,
+        "num_comments": 0,
+        "author": "rey12rey",
+        "created_at": "2018-04-10T14:06:25Z"
+      },
+      {
+        "objectID": "39910339",
+        "title": "Microsoft wants to make Windows Copilot open automatically on cursor hover",
+        "points": 4,
+        "num_comments": 2,
+        "author": "nabakin",
+        "created_at": "2024-04-02T20:10:27Z"
+      },
+      {
+        "objectID": "16814587",
+        "title": "Kayenta: An open automated canary analysis tool from Google and Netflix",
+        "points": 4,
+        "num_comments": 0,
+        "author": "antoncohen",
+        "created_at": "2018-04-11T19:23:52Z"
+      },
+      {
+        "objectID": "7015883",
+        "title": "Google launches Open Automotive Alliance with Audi, Honda, GM, and more",
+        "points": 2,
+        "num_comments": 0,
+        "author": "nRike",
+        "created_at": "2014-01-07T05:54:27Z"
+      },
+      {
+        "objectID": "7015149",
+        "title": "Open Automotive Alliance",
+        "points": 2,
+        "num_comments": 0,
+        "author": "mikeevans",
+        "created_at": "2014-01-07T03:23:03Z"
+      },
+      {
+        "objectID": "22285506",
+        "title": "Open Autonomous Vehicle Datasets",
+        "points": 1,
+        "num_comments": 1,
+        "author": "klintcho",
+        "created_at": "2020-02-10T00:50:51Z"
+      },
+      {
+        "objectID": "16915709",
+        "title": "Open Autonomous Safety from Voyage",
+        "points": 1,
+        "num_comments": 0,
+        "author": "thauburger",
+        "created_at": "2018-04-24T19:21:03Z"
+      },
+      {
+        "objectID": "32728850",
+        "title": "Ask HN: Compiling VSCode project substantially faster with Panel closed",
+        "points": 16,
+        "num_comments": 6,
+        "author": "tmpfile",
+        "created_at": "2022-09-05T20:08:57Z"
+      },
+      {
+        "objectID": "46387010",
+        "title": "Show HN: Later – Schedule URLs to open later",
+        "points": 1,
+        "num_comments": 2,
+        "author": "adagradschool",
+        "created_at": "2025-12-25T21:00:18Z"
+      },
+      {
+        "objectID": "47177445",
+        "title": "Show HN: Got tired of writing promos so I made it one-click",
+        "points": 1,
+        "num_comments": 1,
+        "author": "minsingjin",
+        "created_at": "2026-02-27T07:02:24Z"
+      },
+      {
+        "objectID": "1314433",
+        "title": "Monitis Introduces a New SSH/Telnet Server Management Tool",
+        "points": 1,
+        "num_comments": 0,
+        "author": "monitis",
+        "created_at": "2010-05-03T10:05:03Z"
+      },
+      {
+        "objectID": "10848935",
+        "title": "Show HN: AutoTempest's new homepage",
+        "points": 1,
+        "num_comments": 0,
+        "author": "tempestn",
+        "created_at": "2016-01-06T06:13:07Z"
+      },
+      {
+        "objectID": "7966704",
+        "title": "Automotive Grade Linux Delivers Open Automotive Software Stack",
+        "points": 1,
+        "num_comments": 0,
+        "author": "wyclif",
+        "created_at": "2014-06-30T18:32:52Z"
+      },
+      {
+        "objectID": "39027189",
+        "title": "Copilot to open automatically upon Windows startup",
+        "points": 1,
+        "num_comments": 0,
+        "author": "laktak",
+        "created_at": "2024-01-17T13:14:59Z"
+      },
+      {
+        "objectID": "16915709",
+        "title": "Open Autonomous Safety from Voyage",
+        "points": 1,
+        "num_comments": 0,
+        "author": "thauburger",
+        "created_at": "2018-04-24T19:21:03Z"
+      },
+      {
+        "objectID": "13213043",
+        "title": "BlackBerry Opens Autonomous Vehicle Research Lab in Ottawa, Canada",
+        "points": 1,
+        "num_comments": 0,
+        "author": "uladzislau",
+        "created_at": "2016-12-19T17:22:13Z"
+      },
+      {
+        "objectID": "47742437",
+        "title": "Show HN: Revdiff – TUI diff reviewer with inline annotations for AI agents",
+        "points": 17,
+        "num_comments": 4,
+        "author": "bumpa",
+        "created_at": "2026-04-12T17:52:48Z"
+      },
+      {
+        "objectID": "32728850",
+        "title": "Ask HN: Compiling VSCode project substantially faster with Panel closed",
+        "points": 16,
+        "num_comments": 6,
+        "author": "tmpfile",
+        "created_at": "2022-09-05T20:08:57Z"
+      },
+      {
+        "objectID": "46387010",
+        "title": "Show HN: Later – Schedule URLs to open later",
+        "points": 1,
+        "num_comments": 2,
+        "author": "adagradschool",
+        "created_at": "2025-12-25T21:00:18Z"
+      },
+      {
+        "objectID": "42389255",
+        "title": "Ask HN: An executable-Markdown for laptop automation",
+        "points": 1,
+        "num_comments": 2,
+        "author": "oulipo",
+        "created_at": "2024-12-11T16:13:08Z"
+      },
+      {
+        "objectID": "47177445",
+        "title": "Show HN: Got tired of writing promos so I made it one-click",
+        "points": 1,
+        "num_comments": 1,
+        "author": "minsingjin",
+        "created_at": "2026-02-27T07:02:24Z"
+      },
+      {
+        "objectID": "1314433",
+        "title": "Monitis Introduces a New SSH/Telnet Server Management Tool",
+        "points": 1,
+        "num_comments": 0,
+        "author": "monitis",
+        "created_at": "2010-05-03T10:05:03Z"
+      },
+      {
+        "objectID": "10848935",
+        "title": "Show HN: AutoTempest's new homepage",
+        "points": 1,
+        "num_comments": 0,
+        "author": "tempestn",
+        "created_at": "2016-01-06T06:13:07Z"
+      },
+      {
+        "objectID": "7973345",
+        "title": "Automotive Grade Linux Delivers ... Software Stack for the Connected Car",
+        "points": 4,
+        "num_comments": 0,
+        "author": "privong",
+        "created_at": "2014-07-01T20:34:21Z"
+      },
+      {
+        "objectID": "16914471",
+        "title": "Voyage – Open-Sourcing Autonomous Safety",
+        "points": 3,
+        "num_comments": 0,
+        "author": "samcampbell",
+        "created_at": "2018-04-24T17:08:09Z"
+      },
+      {
+        "objectID": "20509218",
+        "title": "Lyft makes public autonomous driving data set from its L5 self-driving fleet",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ryan_j_naughton",
+        "created_at": "2019-07-23T18:56:28Z"
+      },
+      {
+        "objectID": "17393126",
+        "title": "JD.com automated warehouse – 4 employees, fulfills 200,000 packages daily",
+        "points": 2,
+        "num_comments": 0,
+        "author": "vezycash",
+        "created_at": "2018-06-25T15:26:47Z"
+      },
+      {
+        "objectID": "11314023",
+        "title": "Carl's Jr. CEO Readies Robot Workforce to Counter Rising Wages",
+        "points": 2,
+        "num_comments": 0,
+        "author": "sergiotapia",
+        "created_at": "2016-03-18T18:59:27Z"
+      },
+      {
+        "objectID": "7150335",
+        "title": "Google's AOO Platform Will Change Local Search",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ysekand",
+        "created_at": "2014-01-30T12:50:02Z"
+      }
+    ],
+    "AutoGLM": [
+      {
+        "objectID": "46232208",
+        "title": "AutoGLM-Phone-9B-Multilingual: Vision-language model for automated mobile agents",
+        "points": 3,
+        "num_comments": 0,
+        "author": "mudkipdev",
+        "created_at": "2025-12-11T15:01:06Z"
+      },
+      {
+        "objectID": "47125052",
+        "title": "Open-AutoGLM: Zhipu AI's Open-Source Framework for Phone Agents (23k Stars)",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Ross00781",
+        "created_at": "2026-02-23T17:01:51Z"
+      },
+      {
+        "objectID": "46232190",
+        "title": "AutoGLM-Phone-9B-Multilingual: Vision-language model for automated mobile agents",
+        "points": 2,
+        "num_comments": 0,
+        "author": "mudkipdev",
+        "created_at": "2025-12-11T15:00:28Z"
+      },
+      {
+        "objectID": "46203937",
+        "title": "AutoGLM – an open-source AI agent for full phone operation from Zhipu AI",
+        "points": 2,
+        "num_comments": 0,
+        "author": "nekofneko",
+        "created_at": "2025-12-09T11:56:58Z"
+      },
+      {
+        "objectID": "47112620",
+        "title": "Open-AutoGLM: Zhipu AI Open-Sources a Framework for Autonomous Phone Agents",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Ross00781",
+        "created_at": "2026-02-22T17:01:15Z"
+      },
+      {
+        "objectID": "47073173",
+        "title": "Show HN: Claude Code for Mobile GUI Automation",
+        "points": 1,
+        "num_comments": 0,
+        "author": "UgOrange",
+        "created_at": "2026-02-19T12:44:18Z"
+      },
+      {
+        "objectID": "47576192",
+        "title": "AutoClaw: AI assistant, right inside your chats",
+        "points": 2,
+        "num_comments": 0,
+        "author": "pretext",
+        "created_at": "2026-03-30T16:15:06Z"
+      },
+      {
+        "objectID": "46298907",
+        "title": "Open source - phone agent automation",
+        "points": 2,
+        "num_comments": 0,
+        "author": "impact_sy",
+        "created_at": "2025-12-17T06:36:53Z"
+      },
+      {
+        "objectID": "3825060",
+        "title": "Show HN: AutoGlance",
+        "points": 68,
+        "num_comments": 30,
+        "author": "kapkapkap",
+        "created_at": "2012-04-10T23:33:58Z"
+      },
+      {
+        "objectID": "3484875",
+        "title": "Show HN: AutoGlance is the Hipmunk for Used Car Searches",
+        "points": 52,
+        "num_comments": 30,
+        "author": "kapgoals",
+        "created_at": "2012-01-19T15:34:44Z"
+      },
+      {
+        "objectID": "38126764",
+        "title": "What's the difference between LangChain, llama indexand others like autollm?",
+        "points": 31,
+        "num_comments": 13,
+        "author": "johhns4",
+        "created_at": "2023-11-03T10:41:26Z"
+      },
+      {
+        "objectID": "22034657",
+        "title": "AutoGluon: AutoML Toolkit for Deep Learning",
+        "points": 5,
+        "num_comments": 0,
+        "author": "ArtWomb",
+        "created_at": "2020-01-13T14:23:27Z"
+      },
+      {
+        "objectID": "22515426",
+        "title": "Show HN: Accurate image classification in 3 lines of code with AutoGluon",
+        "points": 4,
+        "num_comments": 0,
+        "author": "_jonas",
+        "created_at": "2020-03-08T00:47:56Z"
+      },
+      {
+        "objectID": "22052308",
+        "title": "Amazon’s AutoGluon produces AI models with as little as 3 lines of code",
+        "points": 4,
+        "num_comments": 0,
+        "author": "gatorbait83",
+        "created_at": "2020-01-15T07:23:14Z"
+      },
+      {
+        "objectID": "22048289",
+        "title": "AWS Introduces Open Source AutoML Toolkit ‘AutoGluon’",
+        "points": 4,
+        "num_comments": 0,
+        "author": "Yuqing7",
+        "created_at": "2020-01-14T19:23:45Z"
+      },
+      {
+        "objectID": "47622120",
+        "title": "AutoGameStudio – Autoresearch for Game Development",
+        "points": 3,
+        "num_comments": 0,
+        "author": "Optl",
+        "created_at": "2026-04-03T00:50:48Z"
+      },
+      {
+        "objectID": "42313092",
+        "title": "Fast and accurate zero-shot forecasting with Chronos-Bolt and AutoGluon",
+        "points": 3,
+        "num_comments": 0,
+        "author": "abdulfatir",
+        "created_at": "2024-12-04T00:01:03Z"
+      },
+      {
+        "objectID": "46573225",
+        "title": "Amazon Redshift AutoWLM and SQA internals plus commentary (and a bit on CSC)",
+        "points": 2,
+        "num_comments": 1,
+        "author": "Max-Ganz-II",
+        "created_at": "2026-01-11T06:42:38Z"
+      },
+      {
+        "objectID": "23275261",
+        "title": "Amazons AutoGluon helps deploy deep learning models with jst a few lines of code",
+        "points": 2,
+        "num_comments": 0,
+        "author": "wanderer42",
+        "created_at": "2020-05-22T18:23:02Z"
+      },
+      {
+        "objectID": "19607336",
+        "title": "Autoglyphs, Generative Art Born on the Blockchain",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Shrugs",
+        "created_at": "2019-04-08T17:42:35Z"
+      },
+      {
+        "objectID": "19604856",
+        "title": "Autoglyphs, Generative Art Born on the Blockchain",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Artnome",
+        "created_at": "2019-04-08T13:15:38Z"
+      },
+      {
+        "objectID": "11103009",
+        "title": "​Autoglass launches global #startup accelerator",
+        "points": 2,
+        "num_comments": 0,
+        "author": "pressat12",
+        "created_at": "2016-02-15T12:41:30Z"
+      },
+      {
+        "objectID": "38601064",
+        "title": "AutoGluon 1.0: AutoML at Your Fingertips",
+        "points": 1,
+        "num_comments": 0,
+        "author": "monkeydust",
+        "created_at": "2023-12-11T14:45:29Z"
+      },
+      {
+        "objectID": "23892897",
+        "title": "AutoGluon Tabular: Automatic Machine Learning for Tabular Data",
+        "points": 1,
+        "num_comments": 0,
+        "author": "rweckel",
+        "created_at": "2020-07-19T22:15:33Z"
+      },
+      {
+        "objectID": "22042135",
+        "title": "Amazon’s AutoGluon produces AI models with as little as 3 lines of code",
+        "points": 1,
+        "num_comments": 0,
+        "author": "riter",
+        "created_at": "2020-01-14T05:32:14Z"
+      },
+      {
+        "objectID": "20866518",
+        "title": "Should You Enable Amazon Redshift's AutoWLM?",
+        "points": 1,
+        "num_comments": 0,
+        "author": "sokolmkd",
+        "created_at": "2019-09-03T14:02:14Z"
+      },
+      {
+        "objectID": "42647343",
+        "title": "Show HN: TabPFN v2 – A SOTA foundation model for small tabular data",
+        "points": 153,
+        "num_comments": 44,
+        "author": "onasta",
+        "created_at": "2025-01-09T16:38:26Z"
+      },
+      {
+        "objectID": "45838540",
+        "title": "Show HN: TabPFN-2.5 – SOTA foundation model for tabular data",
+        "points": 73,
+        "num_comments": 13,
+        "author": "onasta",
+        "created_at": "2025-11-06T18:26:53Z"
+      },
+      {
+        "objectID": "37719218",
+        "title": "Redshift Research Project: Amazon Redshift Serverless [pdf]",
+        "points": 4,
+        "num_comments": 4,
+        "author": "Max-Ganz-II",
+        "created_at": "2023-09-30T20:03:49Z"
+      },
+      {
+        "objectID": "46031558",
+        "title": "Show HN: Norma – build good datasets (using an objective)",
+        "points": 3,
+        "num_comments": 0,
+        "author": "noelfranthomas",
+        "created_at": "2025-11-24T08:11:10Z"
+      },
+      {
+        "objectID": "26165192",
+        "title": "Show HN: Compare AutoML frameworks on 10 Tabular Kaggle competitions",
+        "points": 2,
+        "num_comments": 1,
+        "author": "pplonski86",
+        "created_at": "2021-02-17T11:22:11Z"
+      },
+      {
+        "objectID": "45909608",
+        "title": "Show HN: LimiX-2M – The super-light foundation model redefining tabular learning",
+        "points": 1,
+        "num_comments": 0,
+        "author": "cedge",
+        "created_at": "2025-11-13T02:08:09Z"
+      },
+      {
+        "objectID": "26224194",
+        "title": "Compare AutoML frameworks on 10 Tabular Kaggle competitions",
+        "points": 1,
+        "num_comments": 0,
+        "author": "pplonski86",
+        "created_at": "2021-02-22T13:24:48Z"
+      },
+      {
+        "objectID": "3544781",
+        "title": "Saving money with Regular Gas in your Premium car?...Better do the math.",
+        "points": 9,
+        "num_comments": 5,
+        "author": "kapgoals",
+        "created_at": "2012-02-02T22:24:15Z"
+      },
+      {
+        "objectID": "36033925",
+        "title": "ArXiv Digest: Use GPT3.5 to Personalize Your ArXiv Email Notifications",
+        "points": 4,
+        "num_comments": 0,
+        "author": "vamiller12",
+        "created_at": "2023-05-22T17:03:21Z"
+      },
+      {
+        "objectID": "3551914",
+        "title": "For 9 out of 10 used cars, there’s a better deal to be found.",
+        "points": 3,
+        "num_comments": 1,
+        "author": "kapgoals",
+        "created_at": "2012-02-04T20:01:47Z"
+      },
+      {
+        "objectID": "36023532",
+        "title": "Use GPT-3.5 to personalize your ArXiv paper newsletter",
+        "points": 2,
+        "num_comments": 0,
+        "author": "vamiller12",
+        "created_at": "2023-05-21T18:29:05Z"
+      },
+      {
+        "objectID": "42356534",
+        "title": "Show HN: Auto Gmail – writes 80% of your emails, for you",
+        "points": 1,
+        "num_comments": 4,
+        "author": "nathanganser",
+        "created_at": "2024-12-08T11:27:09Z"
+      },
+      {
+        "objectID": "36283153",
+        "title": "Show HN: Auto-Gmail: Let ChatGPT answer your inbox",
+        "points": 1,
+        "num_comments": 0,
+        "author": "nathanganser",
+        "created_at": "2023-06-11T17:01:58Z"
+      },
+      {
+        "objectID": "17927020",
+        "title": "Surprise Search",
+        "points": 1,
+        "num_comments": 0,
+        "author": "optimalsolver",
+        "created_at": "2018-09-06T15:37:40Z"
+      }
+    ]
+  }
+}

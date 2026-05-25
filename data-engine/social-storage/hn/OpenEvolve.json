@@ -1,8 +1,8 @@
 {
   "project": "OpenEvolve",
   "repo": "algorithmicsuperintelligence/openevolve",
-  "collected_at": "2026-05-22T12:11:56.613373+00:00",
-  "total_hits": 25,
+  "collected_at": "2026-05-22T12:35:01.529138+00:00",
+  "total_hits": 30,
   "results": {
     "OpenEvolve": [
       {
@@ -10,7 +10,6 @@
         "title": "OpenEvolve: Teaching LLMs to Discover Algorithms Through Evolution",
         "points": 53,
         "num_comments": 9,
-        "author": "codelion",
         "created_at": "2025-12-09T22:54:33Z"
       },
       {
@@ -18,7 +17,6 @@
         "title": "Show HN: OpenEvolve – open-source implementation of DeepMind's AlphaEvolve",
         "points": 8,
         "num_comments": 3,
-        "author": "codelion",
         "created_at": "2025-05-20T16:57:44Z"
       },
       {
@@ -26,7 +24,6 @@
         "title": "Automated Discovery of High-Performance GPU Kernels with OpenEvolve",
         "points": 4,
         "num_comments": 0,
-        "author": "codelion",
         "created_at": "2025-06-28T01:03:46Z"
       },
       {
@@ -34,7 +31,6 @@
         "title": "Levi: Outperforming GEPA/OpenEvolve/AlphaEvolve with 7x cost savings",
         "points": 2,
         "num_comments": 1,
-        "author": "ttanveer",
         "created_at": "2026-03-31T14:07:58Z"
       },
       {
@@ -42,7 +38,6 @@
         "title": "Levi: Beating GEPA/OpenEvolve/AlphaEvolve at a fraction of the cost",
         "points": 2,
         "num_comments": 0,
-        "author": "ttanveer",
         "created_at": "2026-03-19T13:32:17Z"
       },
       {
@@ -50,7 +45,6 @@
         "title": "Openevolve: Open-Source Implementation of AlphaEvolve",
         "points": 1,
         "num_comments": 0,
-        "author": "simonpure",
         "created_at": "2025-07-06T12:26:54Z"
       },
       {
@@ -58,7 +52,6 @@
         "title": "Show HN: Optimize_anything: A Universal API for Optimizing Any Text Parameter",
         "points": 8,
         "num_comments": 0,
-        "author": "LakshyAAAgrawal",
         "created_at": "2026-02-20T04:19:04Z"
       },
       {
@@ -66,7 +59,6 @@
         "title": "Show HN: Karpathy's Autoresearch with Evolutionary Database",
         "points": 1,
         "num_comments": 0,
-        "author": "hgarud",
         "created_at": "2026-03-14T19:30:42Z"
       },
       {
@@ -74,7 +66,6 @@
         "title": "Show HN: Optiverse – Evolving Code with LLMs",
         "points": 1,
         "num_comments": 0,
-        "author": "larose",
         "created_at": "2025-07-10T15:34:32Z"
       },
       {
@@ -82,7 +73,6 @@
         "title": "AI models can do useful work",
         "points": 2,
         "num_comments": 0,
-        "author": "taqpos",
         "created_at": "2025-10-25T23:41:05Z"
       },
       {
@@ -90,7 +80,6 @@
         "title": "Releasing OpenResolve – Docker Image for Domain Information as a REST-like API",
         "points": 3,
         "num_comments": 0,
-        "author": "philip1209",
         "created_at": "2014-12-04T22:51:21Z"
       },
       {
@@ -98,7 +87,6 @@
         "title": "Show HN: OpenVole – VoleNet Distributed AI Agent Networking",
         "points": 2,
         "num_comments": 1,
-        "author": "flabberghasted",
         "created_at": "2026-04-02T22:13:50Z"
       },
       {
@@ -106,7 +94,6 @@
         "title": "Show HN: OpenResolve",
         "points": 1,
         "num_comments": 2,
-        "author": "philip1209",
         "created_at": "2014-12-05T00:22:26Z"
       },
       {
@@ -114,7 +101,6 @@
         "title": "Open DNS Resolver Project",
         "points": 2,
         "num_comments": 1,
-        "author": "jgrahamc",
         "created_at": "2013-03-25T18:17:19Z"
       },
       {
@@ -122,7 +108,6 @@
         "title": "Open Recursive Project",
         "points": 2,
         "num_comments": 0,
-        "author": "zoowar",
         "created_at": "2013-03-28T16:17:56Z"
       }
     ],
@@ -132,7 +117,6 @@
         "title": "OpenEvolve: Teaching LLMs to Discover Algorithms Through Evolution",
         "points": 53,
         "num_comments": 9,
-        "author": "codelion",
         "created_at": "2025-12-09T22:54:33Z"
       },
       {
@@ -140,7 +124,6 @@
         "title": "Show HN: OpenEvolve – open-source implementation of DeepMind's AlphaEvolve",
         "points": 8,
         "num_comments": 3,
-        "author": "codelion",
         "created_at": "2025-05-20T16:57:44Z"
       },
       {
@@ -148,7 +131,6 @@
         "title": "Automated Discovery of High-Performance GPU Kernels with OpenEvolve",
         "points": 4,
         "num_comments": 0,
-        "author": "codelion",
         "created_at": "2025-06-28T01:03:46Z"
       },
       {
@@ -156,7 +138,6 @@
         "title": "Levi: Outperforming GEPA/OpenEvolve/AlphaEvolve with 7x cost savings",
         "points": 2,
         "num_comments": 1,
-        "author": "ttanveer",
         "created_at": "2026-03-31T14:07:58Z"
       },
       {
@@ -164,7 +145,6 @@
         "title": "Levi: Beating GEPA/OpenEvolve/AlphaEvolve at a fraction of the cost",
         "points": 2,
         "num_comments": 0,
-        "author": "ttanveer",
         "created_at": "2026-03-19T13:32:17Z"
       },
       {
@@ -172,7 +152,6 @@
         "title": "Openevolve: Open-Source Implementation of AlphaEvolve",
         "points": 1,
         "num_comments": 0,
-        "author": "simonpure",
         "created_at": "2025-07-06T12:26:54Z"
       },
       {
@@ -180,7 +159,6 @@
         "title": "Show HN: Optimize_anything: A Universal API for Optimizing Any Text Parameter",
         "points": 8,
         "num_comments": 0,
-        "author": "LakshyAAAgrawal",
         "created_at": "2026-02-20T04:19:04Z"
       },
       {
@@ -188,7 +166,6 @@
         "title": "Show HN: Karpathy's Autoresearch with Evolutionary Database",
         "points": 1,
         "num_comments": 0,
-        "author": "hgarud",
         "created_at": "2026-03-14T19:30:42Z"
       },
       {
@@ -196,7 +173,6 @@
         "title": "Show HN: Optiverse – Evolving Code with LLMs",
         "points": 1,
         "num_comments": 0,
-        "author": "larose",
         "created_at": "2025-07-10T15:34:32Z"
       },
       {
@@ -204,8 +180,42 @@
         "title": "AI models can do useful work",
         "points": 2,
         "num_comments": 0,
-        "author": "taqpos",
         "created_at": "2025-10-25T23:41:05Z"
+      },
+      {
+        "objectID": "8702213",
+        "title": "Releasing OpenResolve – Docker Image for Domain Information as a REST-like API",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2014-12-04T22:51:21Z"
+      },
+      {
+        "objectID": "47620865",
+        "title": "Show HN: OpenVole – VoleNet Distributed AI Agent Networking",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-04-02T22:13:50Z"
+      },
+      {
+        "objectID": "8702496",
+        "title": "Show HN: OpenResolve",
+        "points": 1,
+        "num_comments": 2,
+        "created_at": "2014-12-05T00:22:26Z"
+      },
+      {
+        "objectID": "5438629",
+        "title": "Open DNS Resolver Project",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2013-03-25T18:17:19Z"
+      },
+      {
+        "objectID": "5455730",
+        "title": "Open Recursive Project",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2013-03-28T16:17:56Z"
       }
     ]
   }

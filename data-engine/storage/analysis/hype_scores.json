@@ -1,76 +1,75 @@
 {
-  "generated_at": "2026-05-22T12:17:23.810793+00:00",
-  "total_projects": 21,
+  "generated_at": "2026-05-22T12:40:22.066983+00:00",
+  "total": 36,
   "scores": [
     {
-      "project": "openclaw",
-      "composite_score": 100.0,
+      "project": "n8n",
+      "composite_score": 99.5,
       "classification": "viral",
-      "platform_scores": {
-        "github": 25
-      },
       "platforms": {
         "github": {
-          "stars": 373880,
-          "forks": 77688,
-          "watchers": 1811,
-          "repo": "openclaw/openclaw"
+          "stars": 189218,
+          "forks": 57905,
+          "repo": "n8n-io/n8n"
         }
       },
       "data_sources": [
-        "openclaw_openclaw_stats.json"
+        "n8n-io_n8n_stats.json"
       ]
     },
     {
-      "project": "claw-code",
-      "composite_score": 99.7,
+      "project": "ollama",
+      "composite_score": 98.8,
       "classification": "viral",
-      "platform_scores": {
-        "github": 24.9
-      },
       "platforms": {
         "github": {
-          "stars": 192223,
-          "forks": 109962,
-          "watchers": 2197,
-          "repo": "ultraworkers/claw-code"
+          "stars": 172002,
+          "forks": 16235,
+          "repo": "ollama/ollama"
         }
       },
       "data_sources": [
-        "ultraworkers_claw-code_stats.json"
+        "ollama_ollama_stats.json"
       ]
     },
     {
-      "project": "hermes-agent",
-      "composite_score": 98.3,
+      "project": "dify",
+      "composite_score": 97.2,
       "classification": "viral",
-      "platform_scores": {
-        "github": 24.6
-      },
       "platforms": {
         "github": {
-          "stars": 162449,
-          "forks": 26493,
-          "watchers": 637,
-          "repo": "NousResearch/hermes-agent"
+          "stars": 142248,
+          "forks": 22369,
+          "repo": "langgenius/dify"
         }
       },
       "data_sources": [
-        "NousResearch_hermes-agent_stats.json"
+        "langgenius_dify_stats.json"
+      ]
+    },
+    {
+      "project": "open-webui",
+      "composite_score": 97.0,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 138204,
+          "forks": 19766,
+          "repo": "open-webui/open-webui"
+        }
+      },
+      "data_sources": [
+        "open-webui_open-webui_stats.json"
       ]
     },
     {
       "project": "langchain",
       "composite_score": 96.9,
       "classification": "viral",
-      "platform_scores": {
-        "github": 24.2
-      },
       "platforms": {
         "github": {
           "stars": 137380,
           "forks": 22723,
-          "watchers": 872,
           "repo": "langchain-ai/langchain"
         }
       },
@@ -79,36 +78,43 @@
       ]
     },
     {
-      "project": "browser-use",
-      "composite_score": 93.9,
+      "project": "claude-code",
+      "composite_score": 96.2,
       "classification": "viral",
-      "platform_scores": {
-        "github": 23.5
-      },
       "platforms": {
         "github": {
-          "stars": 95082,
-          "forks": 10713,
-          "watchers": 433,
-          "repo": "browser-use/browser-use"
+          "stars": 125688,
+          "forks": 20638,
+          "repo": "anthropics/claude-code"
         }
       },
       "data_sources": [
-        "browser-use_browser-use_stats.json"
+        "anthropics_claude-code_stats.json"
+      ]
+    },
+    {
+      "project": "codex",
+      "composite_score": 93.0,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 84606,
+          "forks": 12323,
+          "repo": "openai/codex"
+        }
+      },
+      "data_sources": [
+        "openai_codex_stats.json"
       ]
     },
     {
       "project": "OpenHands",
       "composite_score": 91.9,
       "classification": "viral",
-      "platform_scores": {
-        "github": 23.0
-      },
       "platforms": {
         "github": {
           "stars": 74504,
           "forks": 9441,
-          "watchers": 444,
           "repo": "All-Hands-AI/OpenHands"
         }
       },
@@ -120,14 +126,10 @@
       "project": "mem0",
       "composite_score": 89.6,
       "classification": "viral",
-      "platform_scores": {
-        "github": 22.4
-      },
       "platforms": {
         "github": {
-          "stars": 56425,
+          "stars": 56428,
           "forks": 6431,
-          "watchers": 227,
           "repo": "mem0ai/mem0"
         }
       },
@@ -136,36 +138,148 @@
       ]
     },
     {
-      "project": "dspy",
-      "composite_score": 85.6,
+      "project": "goose",
+      "composite_score": 87.9,
       "classification": "viral",
-      "platform_scores": {
-        "github": 21.4
-      },
       "platforms": {
         "github": {
-          "stars": 34584,
-          "forks": 2913,
-          "watchers": 195,
-          "repo": "stanfordnlp/dspy"
+          "stars": 45672,
+          "forks": 4688,
+          "repo": "block/goose"
         }
       },
       "data_sources": [
-        "stanfordnlp_dspy_stats.json"
+        "block_goose_stats.json"
+      ]
+    },
+    {
+      "project": "chatgpt-on-wechat",
+      "composite_score": 87.7,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 44715,
+          "forks": 10120,
+          "repo": "zhayujie/chatgpt-on-wechat"
+        }
+      },
+      "data_sources": [
+        "zhayujie_chatgpt-on-wechat_stats.json"
+      ]
+    },
+    {
+      "project": "agent-skills",
+      "composite_score": 87.7,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 44785,
+          "forks": 4947,
+          "repo": "addyosmani/agent-skills"
+        }
+      },
+      "data_sources": [
+        "addyosmani_agent-skills_stats.json"
+      ]
+    },
+    {
+      "project": "agno",
+      "composite_score": 86.9,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 40299,
+          "forks": 5413,
+          "repo": "agno-agi/agno"
+        }
+      },
+      "data_sources": [
+        "agno-agi_agno_stats.json"
+      ]
+    },
+    {
+      "project": "langgraph",
+      "composite_score": 85.2,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 32688,
+          "forks": 5532,
+          "repo": "langchain-ai/langgraph"
+        }
+      },
+      "data_sources": [
+        "langchain-ai_langgraph_stats.json"
+      ]
+    },
+    {
+      "project": "agenticSeek",
+      "composite_score": 83.4,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 26392,
+          "forks": 2957,
+          "repo": "Fosowl/agenticSeek"
+        }
+      },
+      "data_sources": [
+        "Fosowl_agenticSeek_stats.json"
+      ]
+    },
+    {
+      "project": "haystack",
+      "composite_score": 83.1,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 25341,
+          "forks": 2802,
+          "repo": "deepset-ai/haystack"
+        }
+      },
+      "data_sources": [
+        "deepset-ai_haystack_stats.json"
+      ]
+    },
+    {
+      "project": "mastra",
+      "composite_score": 82.7,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 24197,
+          "forks": 2105,
+          "repo": "mastra-ai/mastra"
+        }
+      },
+      "data_sources": [
+        "mastra-ai_mastra_stats.json"
+      ]
+    },
+    {
+      "project": "Roo-Code",
+      "composite_score": 82.7,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 24129,
+          "forks": 3262,
+          "repo": "RooCodeInc/Roo-Code"
+        }
+      },
+      "data_sources": [
+        "RooCodeInc_Roo-Code_stats.json"
       ]
     },
     {
       "project": "letta",
       "composite_score": 82.2,
       "classification": "viral",
-      "platform_scores": {
-        "github": 20.6
-      },
       "platforms": {
         "github": {
           "stars": 22886,
           "forks": 2437,
-          "watchers": 136,
           "repo": "letta-ai/letta"
         }
       },
@@ -174,36 +288,88 @@
       ]
     },
     {
-      "project": "babyagi",
-      "composite_score": 82.0,
+      "project": "coze-studio",
+      "composite_score": 81.5,
       "classification": "viral",
-      "platform_scores": {
-        "github": 20.5
-      },
       "platforms": {
         "github": {
-          "stars": 22271,
-          "forks": 2854,
-          "watchers": 317,
-          "repo": "yoheinakajima/babyagi"
+          "stars": 20810,
+          "forks": 3020,
+          "repo": "coze-dev/coze-studio"
         }
       },
       "data_sources": [
-        "yoheinakajima_babyagi_stats.json"
+        "coze-dev_coze-studio_stats.json"
+      ]
+    },
+    {
+      "project": "adk-python",
+      "composite_score": 81.1,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 19796,
+          "forks": 3435,
+          "repo": "google/adk-python"
+        }
+      },
+      "data_sources": [
+        "google_adk-python_stats.json"
+      ]
+    },
+    {
+      "project": "devika",
+      "composite_score": 80.9,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 19509,
+          "forks": 2590,
+          "repo": "stitionai/devika"
+        }
+      },
+      "data_sources": [
+        "stitionai_devika_stats.json"
+      ]
+    },
+    {
+      "project": "SWE-agent",
+      "composite_score": 80.8,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 19268,
+          "forks": 2092,
+          "repo": "SWE-agent/SWE-agent"
+        }
+      },
+      "data_sources": [
+        "SWE-agent_SWE-agent_stats.json"
+      ]
+    },
+    {
+      "project": "eliza",
+      "composite_score": 80.5,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 18428,
+          "forks": 5545,
+          "repo": "elizaOS/eliza"
+        }
+      },
+      "data_sources": [
+        "elizaOS_eliza_stats.json"
       ]
     },
     {
       "project": "agent-zero",
       "composite_score": 80.2,
       "classification": "viral",
-      "platform_scores": {
-        "github": 20.0
-      },
       "platforms": {
         "github": {
           "stars": 17763,
           "forks": 3625,
-          "watchers": 288,
           "repo": "agent0ai/agent-zero"
         }
       },
@@ -215,14 +381,10 @@
       "project": "SuperAGI",
       "composite_score": 80.1,
       "classification": "viral",
-      "platform_scores": {
-        "github": 20.0
-      },
       "platforms": {
         "github": {
           "stars": 17533,
           "forks": 2215,
-          "watchers": 176,
           "repo": "TransformerOptimus/SuperAGI"
         }
       },
@@ -231,17 +393,28 @@
       ]
     },
     {
+      "project": "openfang",
+      "composite_score": 80.1,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 17614,
+          "forks": 2252,
+          "repo": "RightNow-AI/openfang"
+        }
+      },
+      "data_sources": [
+        "RightNow-AI_openfang_stats.json"
+      ]
+    },
+    {
       "project": "cognee",
       "composite_score": 80.0,
       "classification": "viral",
-      "platform_scores": {
-        "github": 20.0
-      },
       "platforms": {
         "github": {
           "stars": 17444,
           "forks": 1827,
-          "watchers": 71,
           "repo": "topoteretes/cognee"
         }
       },
@@ -250,17 +423,28 @@
       ]
     },
     {
+      "project": "pydantic-ai",
+      "composite_score": 79.9,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 17211,
+          "forks": 2111,
+          "repo": "pydantic/pydantic-ai"
+        }
+      },
+      "data_sources": [
+        "pydantic_pydantic-ai_stats.json"
+      ]
+    },
+    {
       "project": "memvid",
       "composite_score": 79.1,
       "classification": "viral",
-      "platform_scores": {
-        "github": 19.8
-      },
       "platforms": {
         "github": {
           "stars": 15549,
           "forks": 1338,
-          "watchers": 114,
           "repo": "memvid/memvid"
         }
       },
@@ -269,17 +453,28 @@
       ]
     },
     {
+      "project": "plandex",
+      "composite_score": 79.0,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 15387,
+          "forks": 1136,
+          "repo": "plandex-ai/plandex"
+        }
+      },
+      "data_sources": [
+        "plandex-ai_plandex_stats.json"
+      ]
+    },
+    {
       "project": "evolver",
       "composite_score": 73.1,
       "classification": "viral",
-      "platform_scores": {
-        "github": 18.3
-      },
       "platforms": {
         "github": {
           "stars": 7530,
           "forks": 763,
-          "watchers": 37,
           "repo": "EvoMap/evolver"
         }
       },
@@ -291,14 +486,10 @@
       "project": "openevolve",
       "composite_score": 71.8,
       "classification": "viral",
-      "platform_scores": {
-        "github": 17.9
-      },
       "platforms": {
         "github": {
           "stars": 6361,
           "forks": 1018,
-          "watchers": 58,
           "repo": "algorithmicsuperintelligence/openevolve"
         }
       },
@@ -307,17 +498,28 @@
       ]
     },
     {
+      "project": "reflexion",
+      "composite_score": 66.0,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 3158,
+          "forks": 306,
+          "repo": "noahshinn/reflexion"
+        }
+      },
+      "data_sources": [
+        "noahshinn_reflexion_stats.json"
+      ]
+    },
+    {
       "project": "EvoAgentX",
       "composite_score": 65.7,
       "classification": "viral",
-      "platform_scores": {
-        "github": 16.4
-      },
       "platforms": {
         "github": {
           "stars": 3029,
           "forks": 265,
-          "watchers": 23,
           "repo": "EvoAgentX/EvoAgentX"
         }
       },
@@ -329,76 +531,15 @@
       "project": "HyperAgents",
       "composite_score": 64.1,
       "classification": "steady",
-      "platform_scores": {
-        "github": 16.0
-      },
       "platforms": {
         "github": {
           "stars": 2513,
           "forks": 324,
-          "watchers": 29,
           "repo": "facebookresearch/HyperAgents"
         }
       },
       "data_sources": [
         "facebookresearch_HyperAgents_stats.json"
-      ]
-    },
-    {
-      "project": "ADAS",
-      "composite_score": 60.3,
-      "classification": "steady",
-      "platform_scores": {
-        "github": 15.1
-      },
-      "platforms": {
-        "github": {
-          "stars": 1579,
-          "forks": 236,
-          "watchers": 34,
-          "repo": "ShengranHu/ADAS"
-        }
-      },
-      "data_sources": [
-        "ShengranHu_ADAS_stats.json"
-      ]
-    },
-    {
-      "project": "funsearch",
-      "composite_score": 57.1,
-      "classification": "steady",
-      "platform_scores": {
-        "github": 14.3
-      },
-      "platforms": {
-        "github": {
-          "stars": 1064,
-          "forks": 177,
-          "watchers": 19,
-          "repo": "google-deepmind/funsearch"
-        }
-      },
-      "data_sources": [
-        "google-deepmind_funsearch_stats.json"
-      ]
-    },
-    {
-      "project": "opro",
-      "composite_score": 54.2,
-      "classification": "steady",
-      "platform_scores": {
-        "github": 13.6
-      },
-      "platforms": {
-        "github": {
-          "stars": 746,
-          "forks": 91,
-          "watchers": 8,
-          "repo": "google-deepmind/opro"
-        }
-      },
-      "data_sources": [
-        "google-deepmind_opro_stats.json"
       ]
     }
   ]

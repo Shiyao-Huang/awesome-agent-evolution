@@ -1,7 +1,7 @@
 {
   "project": "PydanticAI",
   "repo": "pydantic/pydantic-ai",
-  "collected_at": "2026-05-22T12:14:47.312593+00:00",
+  "collected_at": "2026-05-22T12:41:00.981148+00:00",
   "total_hits": 80,
   "results": {
     "PydanticAI": [
@@ -10,7 +10,6 @@
         "title": "Building your own CLI coding agent with Pydantic-AI",
         "points": 197,
         "num_comments": 40,
-        "author": "vinhnx",
         "created_at": "2025-08-28T18:34:29Z"
       },
       {
@@ -18,7 +17,6 @@
         "title": "Show HN: AI-powered web service combining FastAPI, Pydantic-AI, and MCP servers",
         "points": 46,
         "num_comments": 24,
-        "author": "Aherontas",
         "created_at": "2025-09-14T21:17:56Z"
       },
       {
@@ -26,7 +24,6 @@
         "title": "HN Research Agent (Fenic and PydanticAI) with typed, citation-backed answers",
         "points": 12,
         "num_comments": 0,
-        "author": "Stephen_Oladele",
         "created_at": "2025-10-15T16:33:08Z"
       },
       {
@@ -34,7 +31,6 @@
         "title": "PydanticAI Agent: Framework to Use Pydantic with LLMs",
         "points": 12,
         "num_comments": 0,
-        "author": "DannyPage",
         "created_at": "2024-12-02T11:57:22Z"
       },
       {
@@ -42,7 +38,6 @@
         "title": "Show HN: Pydantic-AI-stream – Structured event streaming for pydantic-AI agents",
         "points": 6,
         "num_comments": 3,
-        "author": "sbargaoui",
         "created_at": "2026-01-08T18:01:48Z"
       },
       {
@@ -50,7 +45,6 @@
         "title": "PydanticAI",
         "points": 5,
         "num_comments": 1,
-        "author": "BerislavLopac",
         "created_at": "2025-01-02T09:18:33Z"
       },
       {
@@ -58,7 +52,6 @@
         "title": "Pydantic AI reaches V1",
         "points": 5,
         "num_comments": 0,
-        "author": "DouweM",
         "created_at": "2025-09-05T00:39:43Z"
       },
       {
@@ -66,7 +59,6 @@
         "title": "Pydantic-AI Deepagents",
         "points": 4,
         "num_comments": 2,
-        "author": "kacper-vstorm",
         "created_at": "2025-12-09T11:17:30Z"
       },
       {
@@ -74,7 +66,6 @@
         "title": "Pydantic AI Durable Execution",
         "points": 4,
         "num_comments": 0,
-        "author": "qianli_cs",
         "created_at": "2025-09-12T19:15:12Z"
       },
       {
@@ -82,7 +73,6 @@
         "title": "PydanticAI",
         "points": 4,
         "num_comments": 0,
-        "author": "jonbaer",
         "created_at": "2025-03-02T04:25:48Z"
       },
       {
@@ -90,7 +80,6 @@
         "title": "PydanticAI is a Python agent framework by the Pydantic Team",
         "points": 4,
         "num_comments": 0,
-        "author": "rob",
         "created_at": "2025-01-14T00:08:18Z"
       },
       {
@@ -98,7 +87,6 @@
         "title": "Deep Agent Framework, the Pydantic AI Way",
         "points": 3,
         "num_comments": 1,
-        "author": "jonbaer",
         "created_at": "2025-12-16T04:27:32Z"
       },
       {
@@ -106,7 +94,6 @@
         "title": "Pydantic AI V1",
         "points": 3,
         "num_comments": 0,
-        "author": "scolvin",
         "created_at": "2025-09-06T00:17:56Z"
       },
       {
@@ -114,7 +101,6 @@
         "title": "AI Workflow Patterns with PydanticAI (based on Anthropic agents guide)",
         "points": 3,
         "num_comments": 0,
-        "author": "myszon",
         "created_at": "2025-01-13T07:01:32Z"
       },
       {
@@ -122,7 +108,6 @@
         "title": "PydanticAI vs. LangChain: A Tale of Two AI Frameworks",
         "points": 3,
         "num_comments": 0,
-        "author": "edanm",
         "created_at": "2024-12-17T09:15:27Z"
       },
       {
@@ -130,7 +115,6 @@
         "title": "Pydantic AI – Agent Framework / Shim to Use Pydantic with LLMs",
         "points": 3,
         "num_comments": 0,
-        "author": "gemanor",
         "created_at": "2024-12-05T05:13:46Z"
       },
       {
@@ -138,7 +122,6 @@
         "title": "Pydantic AI",
         "points": 3,
         "num_comments": 0,
-        "author": "talboren",
         "created_at": "2024-12-03T21:12:00Z"
       },
       {
@@ -146,7 +129,6 @@
         "title": "PydanticAI",
         "points": 3,
         "num_comments": 0,
-        "author": "royka118",
         "created_at": "2024-12-03T15:35:19Z"
       },
       {
@@ -154,7 +136,6 @@
         "title": "PydanticAI using Ollama (llama3.2) running locally",
         "points": 2,
         "num_comments": 3,
-        "author": "scolvin",
         "created_at": "2024-12-06T21:56:08Z"
       },
       {
@@ -162,7 +143,6 @@
         "title": "Build your own custom AI CLI with Pydantic AI",
         "points": 2,
         "num_comments": 2,
-        "author": "frankwiles",
         "created_at": "2026-02-24T14:34:31Z"
       },
       {
@@ -170,7 +150,6 @@
         "title": "An Open Protocol Uniting LangGraph, CrewAI, and Pydantic AI Agents",
         "points": 2,
         "num_comments": 1,
-        "author": "snasan",
         "created_at": "2026-01-20T15:02:53Z"
       },
       {
@@ -178,7 +157,6 @@
         "title": "PydanticAI-DeepAgents – Build powerful AI agents",
         "points": 2,
         "num_comments": 1,
-        "author": "kacper-vstorm",
         "created_at": "2025-12-13T00:52:47Z"
       },
       {
@@ -186,7 +164,6 @@
         "title": "Pydantic-Deep: Production Deep Agents for Pydantic AI – Vstorm",
         "points": 2,
         "num_comments": 0,
-        "author": "rbanffy",
         "created_at": "2026-03-21T10:14:33Z"
       },
       {
@@ -194,7 +171,6 @@
         "title": "Turning 4,668 comments into AGENTS.md rules to automate Pydantic AI reviews",
         "points": 2,
         "num_comments": 0,
-        "author": "yoredana",
         "created_at": "2026-03-03T21:50:21Z"
       },
       {
@@ -202,7 +178,6 @@
         "title": "Show HN: Server for Pydantic-AI Agents",
         "points": 2,
         "num_comments": 0,
-        "author": "binalpatel",
         "created_at": "2026-01-12T16:33:35Z"
       },
       {
@@ -210,7 +185,6 @@
         "title": "Show HN: I got tired of \"Reliability Spaghetti,\" so I monkeypatched PydanticAI",
         "points": 2,
         "num_comments": 0,
-        "author": "steer_dev",
         "created_at": "2026-01-12T13:59:57Z"
       },
       {
@@ -218,7 +192,6 @@
         "title": "Pydantic AI Gateway",
         "points": 2,
         "num_comments": 0,
-        "author": "alexmorley",
         "created_at": "2025-09-11T09:20:52Z"
       },
       {
@@ -226,7 +199,6 @@
         "title": "Build Better Agents in Java Than Python: Embabel vs. Pydantic AI",
         "points": 2,
         "num_comments": 0,
-        "author": "mooreds",
         "created_at": "2025-09-03T16:42:13Z"
       },
       {
@@ -234,7 +206,6 @@
         "title": "Building Effective Agents with Pydantic AI",
         "points": 2,
         "num_comments": 0,
-        "author": "intellectronica",
         "created_at": "2024-12-22T23:40:33Z"
       },
       {
@@ -242,7 +213,6 @@
         "title": "PydanticAI: Model-Agnostic, Production-Ready Agent Framework for LLM",
         "points": 2,
         "num_comments": 0,
-        "author": "codezerox",
         "created_at": "2024-12-06T19:38:12Z"
       },
       {
@@ -250,7 +220,6 @@
         "title": "Pydantic-AI-production-ready-template",
         "points": 1,
         "num_comments": 2,
-        "author": "pydantic",
         "created_at": "2025-12-01T18:42:45Z"
       },
       {
@@ -258,7 +227,6 @@
         "title": "Same Chat App, 4 Frameworks: Pydantic AI vs. LangChain vs. LangGraph vs. CrewAI",
         "points": 1,
         "num_comments": 1,
-        "author": "kacper-vstorm",
         "created_at": "2026-03-13T06:49:15Z"
       },
       {
@@ -266,7 +234,6 @@
         "title": "PydanticAI-DeepAgents – AI Agent Framework planning, filesystem, and subagents",
         "points": 1,
         "num_comments": 1,
-        "author": "kacper-vstorm",
         "created_at": "2025-12-13T13:48:08Z"
       },
       {
@@ -274,7 +241,6 @@
         "title": "Building AI Agents in Python with Pydantic AI",
         "points": 1,
         "num_comments": 0,
-        "author": "eigenBasis",
         "created_at": "2026-04-29T12:18:36Z"
       },
       {
@@ -282,7 +248,6 @@
         "title": "Hack Monty, Win $5k: Inside PydanticAI's Challenge",
         "points": 1,
         "num_comments": 0,
-        "author": "v-mdev",
         "created_at": "2026-04-20T17:06:05Z"
       },
       {
@@ -290,7 +255,6 @@
         "title": "We orchestrate our internal AI agent (PydanticAI, Gemini, Jinja2 prompts)",
         "points": 1,
         "num_comments": 0,
-        "author": "meryll_dindin",
         "created_at": "2026-04-09T14:56:07Z"
       },
       {
@@ -298,7 +262,6 @@
         "title": "VibeSDK: I ported all features of Pydantic AI to TypeScript in 5hrs",
         "points": 1,
         "num_comments": 0,
-        "author": "atulanand94",
         "created_at": "2026-03-16T01:31:26Z"
       },
       {
@@ -306,7 +269,6 @@
         "title": "Pydantic AI Gateway: Open Beta",
         "points": 1,
         "num_comments": 0,
-        "author": "vorticalbox",
         "created_at": "2025-11-13T19:26:42Z"
       },
       {
@@ -314,7 +276,6 @@
         "title": "We Built an AI Data Team with Pydantic AI",
         "points": 1,
         "num_comments": 0,
-        "author": "mritchie712",
         "created_at": "2025-06-02T11:24:05Z"
       },
       {
@@ -322,7 +283,6 @@
         "title": "Building a Data Team That Never Sleeps with Pydantic AI",
         "points": 1,
         "num_comments": 0,
-        "author": "mritchie712",
         "created_at": "2025-05-28T15:45:29Z"
       }
     ],
@@ -332,7 +292,6 @@
         "title": "Building your own CLI coding agent with Pydantic-AI",
         "points": 197,
         "num_comments": 40,
-        "author": "vinhnx",
         "created_at": "2025-08-28T18:34:29Z"
       },
       {
@@ -340,7 +299,6 @@
         "title": "Show HN: AI-powered web service combining FastAPI, Pydantic-AI, and MCP servers",
         "points": 46,
         "num_comments": 24,
-        "author": "Aherontas",
         "created_at": "2025-09-14T21:17:56Z"
       },
       {
@@ -348,7 +306,6 @@
         "title": "HN Research Agent (Fenic and PydanticAI) with typed, citation-backed answers",
         "points": 12,
         "num_comments": 0,
-        "author": "Stephen_Oladele",
         "created_at": "2025-10-15T16:33:08Z"
       },
       {
@@ -356,7 +313,6 @@
         "title": "PydanticAI Agent: Framework to Use Pydantic with LLMs",
         "points": 12,
         "num_comments": 0,
-        "author": "DannyPage",
         "created_at": "2024-12-02T11:57:22Z"
       },
       {
@@ -364,7 +320,6 @@
         "title": "Show HN: Pydantic-AI-stream – Structured event streaming for pydantic-AI agents",
         "points": 6,
         "num_comments": 3,
-        "author": "sbargaoui",
         "created_at": "2026-01-08T18:01:48Z"
       },
       {
@@ -372,7 +327,6 @@
         "title": "PydanticAI",
         "points": 5,
         "num_comments": 1,
-        "author": "BerislavLopac",
         "created_at": "2025-01-02T09:18:33Z"
       },
       {
@@ -380,7 +334,6 @@
         "title": "Pydantic AI reaches V1",
         "points": 5,
         "num_comments": 0,
-        "author": "DouweM",
         "created_at": "2025-09-05T00:39:43Z"
       },
       {
@@ -388,7 +341,6 @@
         "title": "Pydantic-AI Deepagents",
         "points": 4,
         "num_comments": 2,
-        "author": "kacper-vstorm",
         "created_at": "2025-12-09T11:17:30Z"
       },
       {
@@ -396,7 +348,6 @@
         "title": "Pydantic AI Durable Execution",
         "points": 4,
         "num_comments": 0,
-        "author": "qianli_cs",
         "created_at": "2025-09-12T19:15:12Z"
       },
       {
@@ -404,7 +355,6 @@
         "title": "PydanticAI",
         "points": 4,
         "num_comments": 0,
-        "author": "jonbaer",
         "created_at": "2025-03-02T04:25:48Z"
       },
       {
@@ -412,7 +362,6 @@
         "title": "PydanticAI is a Python agent framework by the Pydantic Team",
         "points": 4,
         "num_comments": 0,
-        "author": "rob",
         "created_at": "2025-01-14T00:08:18Z"
       },
       {
@@ -420,7 +369,6 @@
         "title": "Deep Agent Framework, the Pydantic AI Way",
         "points": 3,
         "num_comments": 1,
-        "author": "jonbaer",
         "created_at": "2025-12-16T04:27:32Z"
       },
       {
@@ -428,7 +376,6 @@
         "title": "Pydantic AI V1",
         "points": 3,
         "num_comments": 0,
-        "author": "scolvin",
         "created_at": "2025-09-06T00:17:56Z"
       },
       {
@@ -436,7 +383,6 @@
         "title": "AI Workflow Patterns with PydanticAI (based on Anthropic agents guide)",
         "points": 3,
         "num_comments": 0,
-        "author": "myszon",
         "created_at": "2025-01-13T07:01:32Z"
       },
       {
@@ -444,7 +390,6 @@
         "title": "PydanticAI vs. LangChain: A Tale of Two AI Frameworks",
         "points": 3,
         "num_comments": 0,
-        "author": "edanm",
         "created_at": "2024-12-17T09:15:27Z"
       },
       {
@@ -452,7 +397,6 @@
         "title": "Pydantic AI – Agent Framework / Shim to Use Pydantic with LLMs",
         "points": 3,
         "num_comments": 0,
-        "author": "gemanor",
         "created_at": "2024-12-05T05:13:46Z"
       },
       {
@@ -460,7 +404,6 @@
         "title": "Pydantic AI",
         "points": 3,
         "num_comments": 0,
-        "author": "talboren",
         "created_at": "2024-12-03T21:12:00Z"
       },
       {
@@ -468,7 +411,6 @@
         "title": "PydanticAI",
         "points": 3,
         "num_comments": 0,
-        "author": "royka118",
         "created_at": "2024-12-03T15:35:19Z"
       },
       {
@@ -476,7 +418,6 @@
         "title": "PydanticAI using Ollama (llama3.2) running locally",
         "points": 2,
         "num_comments": 3,
-        "author": "scolvin",
         "created_at": "2024-12-06T21:56:08Z"
       },
       {
@@ -484,7 +425,6 @@
         "title": "Build your own custom AI CLI with Pydantic AI",
         "points": 2,
         "num_comments": 2,
-        "author": "frankwiles",
         "created_at": "2026-02-24T14:34:31Z"
       },
       {
@@ -492,7 +432,6 @@
         "title": "An Open Protocol Uniting LangGraph, CrewAI, and Pydantic AI Agents",
         "points": 2,
         "num_comments": 1,
-        "author": "snasan",
         "created_at": "2026-01-20T15:02:53Z"
       },
       {
@@ -500,7 +439,6 @@
         "title": "PydanticAI-DeepAgents – Build powerful AI agents",
         "points": 2,
         "num_comments": 1,
-        "author": "kacper-vstorm",
         "created_at": "2025-12-13T00:52:47Z"
       },
       {
@@ -508,7 +446,6 @@
         "title": "Pydantic-Deep: Production Deep Agents for Pydantic AI – Vstorm",
         "points": 2,
         "num_comments": 0,
-        "author": "rbanffy",
         "created_at": "2026-03-21T10:14:33Z"
       },
       {
@@ -516,7 +453,6 @@
         "title": "Turning 4,668 comments into AGENTS.md rules to automate Pydantic AI reviews",
         "points": 2,
         "num_comments": 0,
-        "author": "yoredana",
         "created_at": "2026-03-03T21:50:21Z"
       },
       {
@@ -524,7 +460,6 @@
         "title": "Show HN: Server for Pydantic-AI Agents",
         "points": 2,
         "num_comments": 0,
-        "author": "binalpatel",
         "created_at": "2026-01-12T16:33:35Z"
       },
       {
@@ -532,7 +467,6 @@
         "title": "Show HN: I got tired of \"Reliability Spaghetti,\" so I monkeypatched PydanticAI",
         "points": 2,
         "num_comments": 0,
-        "author": "steer_dev",
         "created_at": "2026-01-12T13:59:57Z"
       },
       {
@@ -540,7 +474,6 @@
         "title": "Pydantic AI Gateway",
         "points": 2,
         "num_comments": 0,
-        "author": "alexmorley",
         "created_at": "2025-09-11T09:20:52Z"
       },
       {
@@ -548,7 +481,6 @@
         "title": "Build Better Agents in Java Than Python: Embabel vs. Pydantic AI",
         "points": 2,
         "num_comments": 0,
-        "author": "mooreds",
         "created_at": "2025-09-03T16:42:13Z"
       },
       {
@@ -556,7 +488,6 @@
         "title": "Building Effective Agents with Pydantic AI",
         "points": 2,
         "num_comments": 0,
-        "author": "intellectronica",
         "created_at": "2024-12-22T23:40:33Z"
       },
       {
@@ -564,7 +495,6 @@
         "title": "PydanticAI: Model-Agnostic, Production-Ready Agent Framework for LLM",
         "points": 2,
         "num_comments": 0,
-        "author": "codezerox",
         "created_at": "2024-12-06T19:38:12Z"
       },
       {
@@ -572,7 +502,6 @@
         "title": "Pydantic-AI-production-ready-template",
         "points": 1,
         "num_comments": 2,
-        "author": "pydantic",
         "created_at": "2025-12-01T18:42:45Z"
       },
       {
@@ -580,7 +509,6 @@
         "title": "Same Chat App, 4 Frameworks: Pydantic AI vs. LangChain vs. LangGraph vs. CrewAI",
         "points": 1,
         "num_comments": 1,
-        "author": "kacper-vstorm",
         "created_at": "2026-03-13T06:49:15Z"
       },
       {
@@ -588,7 +516,6 @@
         "title": "PydanticAI-DeepAgents – AI Agent Framework planning, filesystem, and subagents",
         "points": 1,
         "num_comments": 1,
-        "author": "kacper-vstorm",
         "created_at": "2025-12-13T13:48:08Z"
       },
       {
@@ -596,7 +523,6 @@
         "title": "Building AI Agents in Python with Pydantic AI",
         "points": 1,
         "num_comments": 0,
-        "author": "eigenBasis",
         "created_at": "2026-04-29T12:18:36Z"
       },
       {
@@ -604,7 +530,6 @@
         "title": "Hack Monty, Win $5k: Inside PydanticAI's Challenge",
         "points": 1,
         "num_comments": 0,
-        "author": "v-mdev",
         "created_at": "2026-04-20T17:06:05Z"
       },
       {
@@ -612,7 +537,6 @@
         "title": "We orchestrate our internal AI agent (PydanticAI, Gemini, Jinja2 prompts)",
         "points": 1,
         "num_comments": 0,
-        "author": "meryll_dindin",
         "created_at": "2026-04-09T14:56:07Z"
       },
       {
@@ -620,7 +544,6 @@
         "title": "VibeSDK: I ported all features of Pydantic AI to TypeScript in 5hrs",
         "points": 1,
         "num_comments": 0,
-        "author": "atulanand94",
         "created_at": "2026-03-16T01:31:26Z"
       },
       {
@@ -628,7 +551,6 @@
         "title": "Pydantic AI Gateway: Open Beta",
         "points": 1,
         "num_comments": 0,
-        "author": "vorticalbox",
         "created_at": "2025-11-13T19:26:42Z"
       },
       {
@@ -636,7 +558,6 @@
         "title": "We Built an AI Data Team with Pydantic AI",
         "points": 1,
         "num_comments": 0,
-        "author": "mritchie712",
         "created_at": "2025-06-02T11:24:05Z"
       },
       {
@@ -644,7 +565,6 @@
         "title": "Building a Data Team That Never Sleeps with Pydantic AI",
         "points": 1,
         "num_comments": 0,
-        "author": "mritchie712",
         "created_at": "2025-05-28T15:45:29Z"
       }
     ]

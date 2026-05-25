@@ -1,0 +1,652 @@
+{
+  "project": "Google A2A",
+  "repo": "a2aproject/A2A",
+  "collected_at": "2026-05-22T12:20:21.397110+00:00",
+  "total_hits": 80,
+  "results": {
+    "Google A2A": [
+      {
+        "objectID": "44368499",
+        "title": "Any Agent v0.21.0: Multi-turn conversations between AI agents via Google's A2A",
+        "points": 8,
+        "num_comments": 0,
+        "author": "AMeckes",
+        "created_at": "2025-06-24T17:19:26Z"
+      },
+      {
+        "objectID": "45766384",
+        "title": "OpenAI rejects 1,200-line community PR for Google's A2A agent protocol",
+        "points": 6,
+        "num_comments": 3,
+        "author": "sascha_heyer",
+        "created_at": "2025-10-30T22:57:30Z"
+      },
+      {
+        "objectID": "47457888",
+        "title": "Google's A2A Protocol Has Zero Defenses Against Prompt Injection",
+        "points": 4,
+        "num_comments": 1,
+        "author": "edf13",
+        "created_at": "2026-03-20T17:34:47Z"
+      },
+      {
+        "objectID": "43697705",
+        "title": "Why Google's A2A Protocol Doesn't Make Sense When We Have MCP",
+        "points": 3,
+        "num_comments": 0,
+        "author": "fka",
+        "created_at": "2025-04-15T20:04:29Z"
+      },
+      {
+        "objectID": "47923422",
+        "title": "Google's A2A Protocol: How AI Agents Will Talk to Each Other",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ismats",
+        "created_at": "2026-04-27T16:07:58Z"
+      },
+      {
+        "objectID": "45064434",
+        "title": "Orchestrating Multi-Agent Systems: Google ADK, A2A, and Temporal",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Myrmornis",
+        "created_at": "2025-08-29T14:15:34Z"
+      },
+      {
+        "objectID": "43690600",
+        "title": "Google A2A: API Framework for AI Assistants",
+        "points": 2,
+        "num_comments": 0,
+        "author": "manupati",
+        "created_at": "2025-04-15T09:13:30Z"
+      },
+      {
+        "objectID": "43650059",
+        "title": "Google A2a Protocol Collection",
+        "points": 2,
+        "num_comments": 0,
+        "author": "zoudong376",
+        "created_at": "2025-04-11T02:53:55Z"
+      },
+      {
+        "objectID": "43676444",
+        "title": "Ask HN: Can someone ELI5 how Google's A2A is different from MCP?",
+        "points": 1,
+        "num_comments": 3,
+        "author": "tuyguntn",
+        "created_at": "2025-04-13T22:52:43Z"
+      },
+      {
+        "objectID": "45209068",
+        "title": "What Happened to Google's A2A?",
+        "points": 1,
+        "num_comments": 0,
+        "author": "fka",
+        "created_at": "2025-09-11T08:02:06Z"
+      },
+      {
+        "objectID": "43696958",
+        "title": "When Anthropic's MCP Met Google's A2A",
+        "points": 1,
+        "num_comments": 0,
+        "author": "amrrs",
+        "created_at": "2025-04-15T18:52:59Z"
+      },
+      {
+        "objectID": "43650326",
+        "title": "Ask HN: Do you think Google's A2A protocol will catch on?",
+        "points": 1,
+        "num_comments": 0,
+        "author": "r_thambapillai",
+        "created_at": "2025-04-11T03:46:21Z"
+      },
+      {
+        "objectID": "47536761",
+        "title": "Show HN: I put an AI agent on a $7/month VPS with IRC as its transport layer",
+        "points": 340,
+        "num_comments": 96,
+        "author": "j0rg3",
+        "created_at": "2026-03-26T22:41:25Z"
+      },
+      {
+        "objectID": "44426210",
+        "title": "Show HN: Attach Gateway – one-command OIDC/DID auth for local LLMs",
+        "points": 7,
+        "num_comments": 0,
+        "author": "hammadtariq",
+        "created_at": "2025-06-30T18:08:23Z"
+      },
+      {
+        "objectID": "47736402",
+        "title": "Show HN: MCP is for tools. A2A is for agents. What's for websites?",
+        "points": 5,
+        "num_comments": 0,
+        "author": "quarkcarbon279",
+        "created_at": "2026-04-12T05:30:17Z"
+      },
+      {
+        "objectID": "46122882",
+        "title": "Show HN: I built an open-source Rust/TS AI agent runtime with a Next.js-style DX",
+        "points": 5,
+        "num_comments": 0,
+        "author": "solsol94",
+        "created_at": "2025-12-02T16:25:41Z"
+      },
+      {
+        "objectID": "47352986",
+        "title": "Show HN: A2Apex – Test, certify, and discover trusted A2A agents",
+        "points": 4,
+        "num_comments": 2,
+        "author": "Hauk307",
+        "created_at": "2026-03-12T16:10:35Z"
+      },
+      {
+        "objectID": "43887912",
+        "title": "Thoughts on AI Agents and Tools",
+        "points": 3,
+        "num_comments": 1,
+        "author": "cshou",
+        "created_at": "2025-05-04T17:05:29Z"
+      },
+      {
+        "objectID": "47011510",
+        "title": "Show HN: Verify-before-release x402 gateway for AI agent transactions",
+        "points": 2,
+        "num_comments": 2,
+        "author": "settlddotwork",
+        "created_at": "2026-02-14T04:17:17Z"
+      },
+      {
+        "objectID": "47375622",
+        "title": "AsterPay – EUR Settlement for AI Agent Payments (USDC → EUR via SEPA Instant)",
+        "points": 2,
+        "num_comments": 1,
+        "author": "asterpay",
+        "created_at": "2026-03-14T11:37:39Z"
+      },
+      {
+        "objectID": "47793245",
+        "title": "Show HN: EDDI – Multi-agent AI engine where agent logic lives in JSON, not code",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ginccc",
+        "created_at": "2026-04-16T14:11:37Z"
+      },
+      {
+        "objectID": "47242324",
+        "title": "Oscar Six Radar – vulnerability scanner with native A2A (agent-to-agent) support",
+        "points": 1,
+        "num_comments": 0,
+        "author": "oscarsixsecllc",
+        "created_at": "2026-03-04T02:40:41Z"
+      },
+      {
+        "objectID": "47138591",
+        "title": "Show HN: Tacit – The missing Layer 3 of the AI agent stack (open source)",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ms170888",
+        "created_at": "2026-02-24T15:46:34Z"
+      },
+      {
+        "objectID": "47138064",
+        "title": "Show HN: Waggle – A search engine for A2A protocol agents",
+        "points": 1,
+        "num_comments": 0,
+        "author": "enmerk4r",
+        "created_at": "2026-02-24T15:05:12Z"
+      },
+      {
+        "objectID": "47001873",
+        "title": "Show HN: Ziran, security testing for AI agents",
+        "points": 1,
+        "num_comments": 0,
+        "author": "leoneperdigao",
+        "created_at": "2026-02-13T12:18:09Z"
+      },
+      {
+        "objectID": "43679962",
+        "title": "Google launches (horribly named) A2A for AI to AI integration",
+        "points": 5,
+        "num_comments": 0,
+        "author": "anymouse123456",
+        "created_at": "2025-04-14T10:55:21Z"
+      },
+      {
+        "objectID": "43652105",
+        "title": "A2A versus MCP: Start of AI Protocol War?",
+        "points": 2,
+        "num_comments": 0,
+        "author": "riadsila",
+        "created_at": "2025-04-11T09:40:17Z"
+      },
+      {
+        "objectID": "44359139",
+        "title": "Google Cloud Donates A2A to Linux Foundation",
+        "points": 6,
+        "num_comments": 1,
+        "author": "afshinmeh",
+        "created_at": "2025-06-23T19:23:28Z"
+      },
+      {
+        "objectID": "44382228",
+        "title": "Google Cloud Donates A2A to Linux Foundation",
+        "points": 2,
+        "num_comments": 0,
+        "author": "mooreds",
+        "created_at": "2025-06-25T22:05:59Z"
+      },
+      {
+        "objectID": "44181486",
+        "title": "Show HN: Awesome-A2A – curated resources for Google's Agent2Agent protocol",
+        "points": 5,
+        "num_comments": 1,
+        "author": "aiboost",
+        "created_at": "2025-06-04T15:06:50Z"
+      },
+      {
+        "objectID": "46986940",
+        "title": "Show HN: SuperLocalMemory– Local-first AI memory for Claude, Cursor and 16+tools",
+        "points": 1,
+        "num_comments": 0,
+        "author": "varunpratap369",
+        "created_at": "2026-02-12T10:11:31Z"
+      },
+      {
+        "objectID": "44367587",
+        "title": "Google Donates Agent2Agent Project to Linux Foundation",
+        "points": 2,
+        "num_comments": 2,
+        "author": "amrrs",
+        "created_at": "2025-06-24T15:57:07Z"
+      },
+      {
+        "objectID": "44748803",
+        "title": "Google Cloud Agent2Agent Protocol Updates for Developers",
+        "points": 1,
+        "num_comments": 0,
+        "author": "lleinbach",
+        "created_at": "2025-07-31T18:47:13Z"
+      },
+      {
+        "objectID": "44044091",
+        "title": "What's New with Agents: ADK, Agent Engine, and A2A Enhancements",
+        "points": 1,
+        "num_comments": 0,
+        "author": "mrry",
+        "created_at": "2025-05-20T17:52:10Z"
+      },
+      {
+        "objectID": "44323060",
+        "title": "Online A2A Client for Google Agent to Agent Protocol",
+        "points": 3,
+        "num_comments": 1,
+        "author": "vishyouluck",
+        "created_at": "2025-06-19T22:20:28Z"
+      },
+      {
+        "objectID": "47850788",
+        "title": "Show HN: DialtoneApp Network, card payments for bot commerce",
+        "points": 2,
+        "num_comments": 0,
+        "author": "fcpguru",
+        "created_at": "2026-04-21T16:09:14Z"
+      },
+      {
+        "objectID": "45915424",
+        "title": "Show HN: Radkit – Build reliable AI agents with Rust",
+        "points": 2,
+        "num_comments": 0,
+        "author": "irshadnilam",
+        "created_at": "2025-11-13T14:41:23Z"
+      },
+      {
+        "objectID": "43643455",
+        "title": "Collaborative, agent to agent scenarios",
+        "points": 23,
+        "num_comments": 3,
+        "author": "tarasyarema",
+        "created_at": "2025-04-10T13:15:14Z"
+      },
+      {
+        "objectID": "45359944",
+        "title": "Show HN: Synced.it – A2A group scheduling (10k students using it)",
+        "points": 1,
+        "num_comments": 0,
+        "author": "nickharty",
+        "created_at": "2025-09-24T13:20:57Z"
+      },
+      {
+        "objectID": "46484496",
+        "title": "A2UI: Google's declarative UI protocol for AI agents",
+        "points": 4,
+        "num_comments": 2,
+        "author": "czmilo",
+        "created_at": "2026-01-04T03:17:20Z"
+      }
+    ],
+    "A2A": [
+      {
+        "objectID": "43631381",
+        "title": "The Agent2Agent Protocol (A2A)",
+        "points": 450,
+        "num_comments": 280,
+        "author": "meetpateltech",
+        "created_at": "2025-04-09T12:38:20Z"
+      },
+      {
+        "objectID": "45989394",
+        "title": "Show HN: An A2A-compatible, open-source framework for multi-agent networks",
+        "points": 42,
+        "num_comments": 42,
+        "author": "snasan",
+        "created_at": "2025-11-20T05:52:43Z"
+      },
+      {
+        "objectID": "43639875",
+        "title": "A2A Protocol – Agent-to-Agent Communication",
+        "points": 14,
+        "num_comments": 3,
+        "author": "Sienna1990",
+        "created_at": "2025-04-10T01:51:51Z"
+      },
+      {
+        "objectID": "43982291",
+        "title": "Show HN: Convert existing agent projects from different framewrks to A2A servers",
+        "points": 11,
+        "num_comments": 0,
+        "author": "richardblythman",
+        "created_at": "2025-05-14T08:39:56Z"
+      },
+      {
+        "objectID": "44368499",
+        "title": "Any Agent v0.21.0: Multi-turn conversations between AI agents via Google's A2A",
+        "points": 8,
+        "num_comments": 0,
+        "author": "AMeckes",
+        "created_at": "2025-06-24T17:19:26Z"
+      },
+      {
+        "objectID": "47703972",
+        "title": "Show HN: AgentDM – Agent to agent messaging over MCP and A2A",
+        "points": 6,
+        "num_comments": 4,
+        "author": "alxstn",
+        "created_at": "2026-04-09T14:06:53Z"
+      },
+      {
+        "objectID": "45766384",
+        "title": "OpenAI rejects 1,200-line community PR for Google's A2A agent protocol",
+        "points": 6,
+        "num_comments": 3,
+        "author": "sascha_heyer",
+        "created_at": "2025-10-30T22:57:30Z"
+      },
+      {
+        "objectID": "44569064",
+        "title": "A2A Protocol ADK guide – hands-on demo for building agents",
+        "points": 6,
+        "num_comments": 1,
+        "author": "zhangchengzc",
+        "created_at": "2025-07-15T08:17:28Z"
+      },
+      {
+        "objectID": "44359139",
+        "title": "Google Cloud Donates A2A to Linux Foundation",
+        "points": 6,
+        "num_comments": 1,
+        "author": "afshinmeh",
+        "created_at": "2025-06-23T19:23:28Z"
+      },
+      {
+        "objectID": "43761641",
+        "title": "Show HN: A2A agent to verify information counter party's credentials",
+        "points": 6,
+        "num_comments": 0,
+        "author": "madhavanmalolan",
+        "created_at": "2025-04-22T13:07:28Z"
+      },
+      {
+        "objectID": "44181486",
+        "title": "Show HN: Awesome-A2A – curated resources for Google's Agent2Agent protocol",
+        "points": 5,
+        "num_comments": 1,
+        "author": "aiboost",
+        "created_at": "2025-06-04T15:06:50Z"
+      },
+      {
+        "objectID": "47736402",
+        "title": "Show HN: MCP is for tools. A2A is for agents. What's for websites?",
+        "points": 5,
+        "num_comments": 0,
+        "author": "quarkcarbon279",
+        "created_at": "2026-04-12T05:30:17Z"
+      },
+      {
+        "objectID": "47266223",
+        "title": "Show HN: A2A protocol for Elixir with GenServer-like ergonomics",
+        "points": 5,
+        "num_comments": 0,
+        "author": "maxekman",
+        "created_at": "2026-03-05T19:36:49Z"
+      },
+      {
+        "objectID": "43679962",
+        "title": "Google launches (horribly named) A2A for AI to AI integration",
+        "points": 5,
+        "num_comments": 0,
+        "author": "anymouse123456",
+        "created_at": "2025-04-14T10:55:21Z"
+      },
+      {
+        "objectID": "47352986",
+        "title": "Show HN: A2Apex – Test, certify, and discover trusted A2A agents",
+        "points": 4,
+        "num_comments": 2,
+        "author": "Hauk307",
+        "created_at": "2026-03-12T16:10:35Z"
+      },
+      {
+        "objectID": "46932327",
+        "title": "Show HN: A2A Protocol – Infrastructure for an Agent-to-Agent Economy",
+        "points": 4,
+        "num_comments": 2,
+        "author": "swimmingkiim",
+        "created_at": "2026-02-08T08:03:53Z"
+      },
+      {
+        "objectID": "47457888",
+        "title": "Google's A2A Protocol Has Zero Defenses Against Prompt Injection",
+        "points": 4,
+        "num_comments": 1,
+        "author": "edf13",
+        "created_at": "2026-03-20T17:34:47Z"
+      },
+      {
+        "objectID": "46209497",
+        "title": "Cisco AI's A2A Scanner – New OSS Tool to Detect Threats in A2A Eco-System",
+        "points": 4,
+        "num_comments": 1,
+        "author": "sanket-msd",
+        "created_at": "2025-12-09T19:36:14Z"
+      },
+      {
+        "objectID": "44517075",
+        "title": "A2A Protocol site adds tag filtering with fresh Python examples",
+        "points": 4,
+        "num_comments": 1,
+        "author": "zhangchengzc",
+        "created_at": "2025-07-10T04:08:05Z"
+      },
+      {
+        "objectID": "43669218",
+        "title": "A2A Protocol Simply Explained: Here are 3 key differences to MCP",
+        "points": 4,
+        "num_comments": 1,
+        "author": "zh2408",
+        "created_at": "2025-04-13T01:12:29Z"
+      },
+      {
+        "objectID": "43668984",
+        "title": "A2A Sample Methods and JSON Responses",
+        "points": 4,
+        "num_comments": 1,
+        "author": "Sienna1990",
+        "created_at": "2025-04-13T00:16:08Z"
+      },
+      {
+        "objectID": "45070120",
+        "title": "ACP Joins Forces with A2A Under the Linux Foundation's LF AI and Data",
+        "points": 4,
+        "num_comments": 0,
+        "author": "mindcrime",
+        "created_at": "2025-08-29T22:28:52Z"
+      },
+      {
+        "objectID": "44073674",
+        "title": "Why Are Agent Protocols Like MCP and A2A Needed?",
+        "points": 4,
+        "num_comments": 0,
+        "author": "sylvainkalache",
+        "created_at": "2025-05-23T15:21:28Z"
+      },
+      {
+        "objectID": "43918735",
+        "title": "Empowering multi-agent apps with the open Agent2Agent (A2A) protocol",
+        "points": 4,
+        "num_comments": 0,
+        "author": "thm",
+        "created_at": "2025-05-07T17:55:50Z"
+      },
+      {
+        "objectID": "43749428",
+        "title": "MCP vs. A2A Protocol",
+        "points": 3,
+        "num_comments": 2,
+        "author": "gargigupta",
+        "created_at": "2025-04-21T08:04:15Z"
+      },
+      {
+        "objectID": "46990650",
+        "title": "Show HN: Agent Tools – 136 deterministic data tools for AI agents (MCP/A2A/REST)",
+        "points": 3,
+        "num_comments": 1,
+        "author": "sathish-mg",
+        "created_at": "2026-02-12T16:17:13Z"
+      },
+      {
+        "objectID": "44670688",
+        "title": "AgentUp: Config-driven framework for building A2A compatible agents",
+        "points": 3,
+        "num_comments": 1,
+        "author": "playcache",
+        "created_at": "2025-07-24T13:51:35Z"
+      },
+      {
+        "objectID": "44499655",
+        "title": "A2A Protocol goes Linux Foundation – comprehensive dev blog",
+        "points": 3,
+        "num_comments": 1,
+        "author": "zhangchengzc",
+        "created_at": "2025-07-08T13:13:50Z"
+      },
+      {
+        "objectID": "44323060",
+        "title": "Online A2A Client for Google Agent to Agent Protocol",
+        "points": 3,
+        "num_comments": 1,
+        "author": "vishyouluck",
+        "created_at": "2025-06-19T22:20:28Z"
+      },
+      {
+        "objectID": "43677653",
+        "title": "A2A Directory – AgentCards, Servers, Clients, Docs",
+        "points": 3,
+        "num_comments": 1,
+        "author": "zhangchengzc",
+        "created_at": "2025-04-14T02:53:01Z"
+      },
+      {
+        "objectID": "43649242",
+        "title": "A2A vs. MCP: The Protocol Revolution in AI Architecture",
+        "points": 3,
+        "num_comments": 1,
+        "author": "Sienna1990",
+        "created_at": "2025-04-11T00:29:17Z"
+      },
+      {
+        "objectID": "48140727",
+        "title": "Show HW: Everest – A2A customer support for agents",
+        "points": 3,
+        "num_comments": 0,
+        "author": "yolandac",
+        "created_at": "2026-05-14T20:22:20Z"
+      },
+      {
+        "objectID": "48062479",
+        "title": "First async A2A framework, needs someone who cares",
+        "points": 3,
+        "num_comments": 0,
+        "author": "GiulioSurya",
+        "created_at": "2026-05-08T13:02:25Z"
+      },
+      {
+        "objectID": "48037303",
+        "title": "Agent Exchange – A2A discovery with real-time bidding for AI agents",
+        "points": 3,
+        "num_comments": 0,
+        "author": "parlakisik",
+        "created_at": "2026-05-06T15:22:30Z"
+      },
+      {
+        "objectID": "47810052",
+        "title": "Show HN: Agents.ml – a public identity page and A2A card for your AI agent",
+        "points": 3,
+        "num_comments": 0,
+        "author": "bayff",
+        "created_at": "2026-04-17T20:10:25Z"
+      },
+      {
+        "objectID": "47534787",
+        "title": "Try it now – A2A Editor",
+        "points": 3,
+        "num_comments": 0,
+        "author": "yogananda",
+        "created_at": "2026-03-26T19:42:41Z"
+      },
+      {
+        "objectID": "47249680",
+        "title": "Show HN: Nexus – Agent economy protocol built on A2A and MCP",
+        "points": 3,
+        "num_comments": 0,
+        "author": "francosimon",
+        "created_at": "2026-03-04T16:16:17Z"
+      },
+      {
+        "objectID": "45493411",
+        "title": "Show HN: Hector – Pure A2A-Native Declarative AI Agent Platform (Go)",
+        "points": 3,
+        "num_comments": 0,
+        "author": "kadirpekel",
+        "created_at": "2025-10-06T16:58:46Z"
+      },
+      {
+        "objectID": "44625490",
+        "title": "Agent-dir: push A2A agent cards to Git, get a lightweight agent catalog",
+        "points": 3,
+        "num_comments": 0,
+        "author": "jacksensi",
+        "created_at": "2025-07-20T14:23:17Z"
+      },
+      {
+        "objectID": "44332842",
+        "title": "MCP vs. A2A (In 6 Minutes)",
+        "points": 3,
+        "num_comments": 0,
+        "author": "_josh_meyer_",
+        "created_at": "2025-06-20T22:50:46Z"
+      }
+    ]
+  }
+}

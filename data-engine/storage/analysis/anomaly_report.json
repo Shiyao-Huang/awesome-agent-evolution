@@ -1,10 +1,27 @@
 {
-  "generated_at": "2026-05-22T12:17:23.811452+00:00",
-  "total": 21,
-  "flagged": 0,
+  "generated_at": "2026-05-22T12:40:22.069000+00:00",
+  "total": 36,
   "results": [
     {
       "project": "EvoAgentX",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "eliza",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "SWE-agent",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "dify",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
@@ -16,25 +33,25 @@
       "status": "clean"
     },
     {
+      "project": "reflexion",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "adk-python",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "mastra",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
       "project": "openevolve",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "openclaw",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "babyagi",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "funsearch",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
@@ -46,19 +63,37 @@
       "status": "clean"
     },
     {
-      "project": "browser-use",
+      "project": "Roo-Code",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "claw-code",
+      "project": "open-webui",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "hermes-agent",
+      "project": "goose",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "n8n",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "openfang",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "chatgpt-on-wechat",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
@@ -70,7 +105,31 @@
       "status": "clean"
     },
     {
+      "project": "pydantic-ai",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "haystack",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
       "project": "HyperAgents",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "ollama",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "codex",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
@@ -88,7 +147,25 @@
       "status": "clean"
     },
     {
-      "project": "opro",
+      "project": "langgraph",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "agent-skills",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "agenticSeek",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "claude-code",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
@@ -100,19 +177,19 @@
       "status": "clean"
     },
     {
+      "project": "devika",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "coze-studio",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
       "project": "mem0",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "dspy",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "ADAS",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
@@ -124,7 +201,19 @@
       "status": "clean"
     },
     {
+      "project": "agno",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
       "project": "letta",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "plandex",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"

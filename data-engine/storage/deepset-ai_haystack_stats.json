@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "collection_timestamp": "2026-05-22T12:25:15.965791+00:00",
+    "repo": "deepset-ai/haystack",
+    "collector_name": "github_quick_stats"
+  },
+  "data": {
+    "full_name": "deepset-ai/haystack",
+    "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, m",
+    "stars": 25341,
+    "forks": 2802,
+    "open_issues": 114,
+    "watchers": 160,
+    "language": "MDX",
+    "license": "Apache-2.0",
+    "topics": [
+      "agent",
+      "agents",
+      "ai",
+      "gemini",
+      "generative-ai",
+      "gpt-4",
+      "information-retrieval",
+      "large-language-models",
+      "llm",
+      "machine-learning",
+      "nlp",
+      "orchestration",
+      "python",
+      "pytorch",
+      "question-answering",
+      "rag",
+      "retrieval-augmented-generation",
+      "semantic-search",
+      "summarization",
+      "transformers"
+    ],
+    "created_at": "2019-11-14T09:05:28Z",
+    "updated_at": "2026-05-22T12:00:27Z",
+    "pushed_at": "2026-05-22T11:43:41Z",
+    "default_branch": "main",
+    "archived": false,
+    "network_count": 2802
+  }
+}

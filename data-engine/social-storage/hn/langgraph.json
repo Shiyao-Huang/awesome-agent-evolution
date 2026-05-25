@@ -1,7 +1,7 @@
 {
   "project": "langgraph",
   "repo": "langchain-ai/langgraph",
-  "collected_at": "2026-05-22T12:15:30.754138+00:00",
+  "collected_at": "2026-05-22T12:43:58.818700+00:00",
   "total_hits": 40,
   "results": {
     "langgraph": [
@@ -10,7 +10,6 @@
         "title": "LangManus: An Open-Source Manus Agent with LangChain + LangGraph",
         "points": 127,
         "num_comments": 14,
-        "author": "gfortaine",
         "created_at": "2025-03-21T11:01:00Z"
       },
       {
@@ -18,7 +17,6 @@
         "title": "We chose LangGraph to build our coding agent",
         "points": 83,
         "num_comments": 20,
-        "author": "jimminyx",
         "created_at": "2025-03-25T05:50:36Z"
       },
       {
@@ -26,7 +24,6 @@
         "title": "LangGraph Engineer",
         "points": 63,
         "num_comments": 38,
-        "author": "gfortaine",
         "created_at": "2024-08-09T16:28:43Z"
       },
       {
@@ -34,7 +31,6 @@
         "title": "Basic ReAct webapp using FastHTML and LangGraph",
         "points": 29,
         "num_comments": 6,
-        "author": "jankar",
         "created_at": "2024-08-07T13:09:54Z"
       },
       {
@@ -42,7 +38,6 @@
         "title": "Should I Use a Framework to Build an Agent? Code vs. LangGraph vs. Workflows",
         "points": 21,
         "num_comments": 6,
-        "author": "jgilhuly",
         "created_at": "2024-10-02T16:23:36Z"
       },
       {
@@ -50,7 +45,6 @@
         "title": "Building Agentic Flows with LangGraph and Model Context Protocol",
         "points": 18,
         "num_comments": 1,
-        "author": "gronky_",
         "created_at": "2025-03-18T17:49:56Z"
       },
       {
@@ -58,7 +52,6 @@
         "title": "Why we chose LangGraph to build our coding agent",
         "points": 17,
         "num_comments": 9,
-        "author": "timbilt",
         "created_at": "2025-03-24T11:04:27Z"
       },
       {
@@ -66,7 +59,6 @@
         "title": "Show HN: LangGraph architecture that scales (hexagonal pattern, 110 tests)",
         "points": 12,
         "num_comments": 2,
-        "author": "cleverhoods",
         "created_at": "2026-01-20T07:56:29Z"
       },
       {
@@ -74,7 +66,6 @@
         "title": "Agno Agents startup 5000x faster than Langgraph, use 50x less memory",
         "points": 11,
         "num_comments": 0,
-        "author": "bediashpreet",
         "created_at": "2025-01-30T18:12:07Z"
       },
       {
@@ -82,7 +73,6 @@
         "title": "LangGraph and Composio Achieved 48.6% on SWE Bench",
         "points": 9,
         "num_comments": 0,
-        "author": "alt-glitch",
         "created_at": "2024-11-13T13:31:55Z"
       },
       {
@@ -90,7 +80,6 @@
         "title": "Show HN: Librarian – Cut token costs by up to 85% for LangGraph and OpenClaw",
         "points": 8,
         "num_comments": 7,
-        "author": "Pinkert",
         "created_at": "2026-02-26T18:11:35Z"
       },
       {
@@ -98,7 +87,6 @@
         "title": "Show HN: HyperFlow – A self-improving agent framework built on LangGraph",
         "points": 8,
         "num_comments": 1,
-        "author": "lablnet",
         "created_at": "2026-04-11T04:01:03Z"
       },
       {
@@ -106,7 +94,6 @@
         "title": "Show HN: Agent-contracts, contract-based LangGraph agents",
         "points": 8,
         "num_comments": 0,
-        "author": "yatarousan",
         "created_at": "2026-01-09T16:48:08Z"
       },
       {
@@ -114,7 +101,6 @@
         "title": "Show HN: Agentic AI Frameworks on AWS (LangGraph,Strands,CrewAI,Arize,Mem0)",
         "points": 7,
         "num_comments": 0,
-        "author": "thinkagenticai",
         "created_at": "2025-08-02T00:20:11Z"
       },
       {
@@ -122,7 +108,6 @@
         "title": "LangGraph Checkpointer on KurrentDB",
         "points": 7,
         "num_comments": 0,
-        "author": "zilato",
         "created_at": "2025-05-14T22:11:36Z"
       },
       {
@@ -130,7 +115,6 @@
         "title": "An Open Source Computer Tool for your Langgraph AI Agents",
         "points": 6,
         "num_comments": 1,
-        "author": "graphllama",
         "created_at": "2024-12-28T15:34:17Z"
       },
       {
@@ -138,7 +122,6 @@
         "title": "Porting LangGraph to Java in One Weekend? (With Claude Code)",
         "points": 5,
         "num_comments": 0,
-        "author": "nfcampos",
         "created_at": "2025-03-05T21:53:24Z"
       },
       {
@@ -146,7 +129,6 @@
         "title": "Ask HN: For a team experienced with LLMs – Any concrete reason to use LangGraph?",
         "points": 4,
         "num_comments": 3,
-        "author": "pinter69",
         "created_at": "2025-06-19T14:28:12Z"
       },
       {
@@ -154,7 +136,6 @@
         "title": "Show HN: Drop-In Checkpointer for LangGraph (No DB Setup Required)",
         "points": 4,
         "num_comments": 1,
-        "author": "raunaqvaisoha",
         "created_at": "2025-07-18T14:28:56Z"
       },
       {
@@ -162,7 +143,6 @@
         "title": "Eino: A Golang AI Application Development Framework Like Langchain/Langgraph",
         "points": 4,
         "num_comments": 1,
-        "author": "wdz1002",
         "created_at": "2025-04-09T04:15:13Z"
       },
       {
@@ -170,7 +150,6 @@
         "title": "Show HN: Simple Graph Framework for Workflow Orchestration (LangGraph Alt.)",
         "points": 4,
         "num_comments": 1,
-        "author": "truetaurus",
         "created_at": "2025-02-11T15:28:49Z"
       },
       {
@@ -178,7 +157,6 @@
         "title": "HMLR: Open-source memory layer passing Hydra9. LangGraph drop in availble",
         "points": 3,
         "num_comments": 1,
-        "author": "svanwinkle-dev",
         "created_at": "2025-12-29T21:14:50Z"
       },
       {
@@ -186,7 +164,6 @@
         "title": "I built a tool to chat with research papers using LangGraph and RAPTOR",
         "points": 3,
         "num_comments": 1,
-        "author": "scraper01",
         "created_at": "2025-08-18T12:01:16Z"
       },
       {
@@ -194,7 +171,6 @@
         "title": "Guide to Implementing a GraphRAG Workflow with FalkorDB, LangChain and LangGraph",
         "points": 3,
         "num_comments": 0,
-        "author": "eamag",
         "created_at": "2025-08-10T20:36:27Z"
       },
       {
@@ -202,7 +178,6 @@
         "title": "Big improvements to checkpoint performance in latest LangGraph Python",
         "points": 3,
         "num_comments": 0,
-        "author": "aviramha",
         "created_at": "2025-03-28T20:15:40Z"
       },
       {
@@ -210,7 +185,6 @@
         "title": "LangGraph Builder",
         "points": 3,
         "num_comments": 0,
-        "author": "gfortaine",
         "created_at": "2025-03-18T17:28:01Z"
       },
       {
@@ -218,7 +192,6 @@
         "title": "LangGraph Multi-Agent Swarm",
         "points": 3,
         "num_comments": 0,
-        "author": "gfortaine",
         "created_at": "2025-02-26T17:50:13Z"
       },
       {
@@ -226,7 +199,6 @@
         "title": "Building the same AI agents with 3 frameworks: LangGraph vs. CrewAI vs. Swarm",
         "points": 3,
         "num_comments": 0,
-        "author": "antonap",
         "created_at": "2024-11-26T16:06:55Z"
       },
       {
@@ -234,7 +206,6 @@
         "title": "Langgraph.js: Building language agents as graphs",
         "points": 3,
         "num_comments": 0,
-        "author": "punkpeye",
         "created_at": "2024-10-16T15:50:26Z"
       },
       {
@@ -242,7 +213,6 @@
         "title": "Launching LangGraph Templates",
         "points": 3,
         "num_comments": 0,
-        "author": "gfortaine",
         "created_at": "2024-09-19T20:54:10Z"
       },
       {
@@ -250,7 +220,6 @@
         "title": "Learnings Comparing AI Agent Frameworks LangGraph, CrewAI, AG, Semantic Kernel",
         "points": 2,
         "num_comments": 2,
-        "author": "danfuya",
         "created_at": "2024-12-18T11:47:56Z"
       },
       {
@@ -258,7 +227,6 @@
         "title": "The Complete LangGraph Blueprint – Build 50 AI Agents for Business Success",
         "points": 2,
         "num_comments": 2,
-        "author": "breakingnewsai",
         "created_at": "2024-12-03T06:21:36Z"
       },
       {
@@ -266,7 +234,6 @@
         "title": "The Nexus: Open-Source Local AI Workspace (LangGraph/Next.js)",
         "points": 2,
         "num_comments": 1,
-        "author": "VibeShiftAI",
         "created_at": "2026-03-21T15:03:04Z"
       },
       {
@@ -274,7 +241,6 @@
         "title": "An Open Protocol Uniting LangGraph, CrewAI, and Pydantic AI Agents",
         "points": 2,
         "num_comments": 1,
-        "author": "snasan",
         "created_at": "2026-01-20T15:02:53Z"
       },
       {
@@ -282,7 +248,6 @@
         "title": "Show HN: Open-source reference architecture for AI Agents (LangGraph, Pydantic)",
         "points": 2,
         "num_comments": 1,
-        "author": "arizen",
         "created_at": "2025-12-09T16:03:58Z"
       },
       {
@@ -290,7 +255,6 @@
         "title": "Tune self-correct SQL agent with RL: AgentLightning+verl+vLLM+AgentOps+LangGraph",
         "points": 2,
         "num_comments": 1,
-        "author": "ultmaster",
         "created_at": "2025-08-11T07:59:40Z"
       },
       {
@@ -298,7 +262,6 @@
         "title": "Node-Edge Based Graph GUI Editor for LangGraph",
         "points": 2,
         "num_comments": 1,
-        "author": "HomunMage",
         "created_at": "2024-07-02T12:24:57Z"
       },
       {
@@ -306,7 +269,6 @@
         "title": "LangGraph Cloud",
         "points": 2,
         "num_comments": 1,
-        "author": "gfortaine",
         "created_at": "2024-06-27T17:18:11Z"
       },
       {
@@ -314,7 +276,6 @@
         "title": "LangGraph and Cosmos DB: one back end for agents, memory, and RAG",
         "points": 2,
         "num_comments": 0,
-        "author": "jcodella",
         "created_at": "2026-05-01T16:58:52Z"
       },
       {
@@ -322,7 +283,6 @@
         "title": "Show HN: Graph-flow – LangGraph-inspired AI agent workflows in Rust",
         "points": 2,
         "num_comments": 0,
-        "author": "alonagmon",
         "created_at": "2026-04-27T18:42:41Z"
       }
     ]

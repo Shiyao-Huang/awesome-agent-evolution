@@ -1,7 +1,7 @@
 {
   "project": "Cognee",
   "repo": "topoteretes/cognee",
-  "collected_at": "2026-05-22T12:13:24.580869+00:00",
+  "collected_at": "2026-05-22T12:36:53.613580+00:00",
   "total_hits": 80,
   "results": {
     "Cognee": [
@@ -10,7 +10,6 @@
         "title": "Show HN: Cognee – Open-Source AI Memory Layer That Remembers Context",
         "points": 9,
         "num_comments": 2,
-        "author": "vasa_",
         "created_at": "2025-06-03T13:05:15Z"
       },
       {
@@ -18,7 +17,6 @@
         "title": "Show HN: Cognee – Turn RAG and GraphRAG into custom dynamic semantic memory",
         "points": 6,
         "num_comments": 1,
-        "author": "vasa_",
         "created_at": "2025-02-13T01:59:26Z"
       },
       {
@@ -26,7 +24,6 @@
         "title": "Cognee+Memgraph: How to Build Intelligent Knowledge Graph Using Hacker News Data",
         "points": 2,
         "num_comments": 0,
-        "author": "taubek",
         "created_at": "2025-06-06T08:12:30Z"
       },
       {
@@ -34,7 +31,6 @@
         "title": "Cognee: Reliable LLM Memory for AI Applications and AI Agents",
         "points": 2,
         "num_comments": 0,
-        "author": "gk1",
         "created_at": "2025-01-13T12:30:15Z"
       },
       {
@@ -42,7 +38,6 @@
         "title": "Cognee: AI Memory Engine",
         "points": 2,
         "num_comments": 0,
-        "author": "handfuloflight",
         "created_at": "2024-11-18T19:30:50Z"
       },
       {
@@ -50,7 +45,6 @@
         "title": "Show HN: Null0 – AI Clone; Open-source CLI that gives AI your personal context",
         "points": 1,
         "num_comments": 1,
-        "author": "amaarc",
         "created_at": "2026-02-06T18:34:50Z"
       },
       {
@@ -58,7 +52,6 @@
         "title": "Ask HN: What are challenges for enterprise level Knowledge Graph adoption in AI",
         "points": 1,
         "num_comments": 0,
-        "author": "adityashukla_",
         "created_at": "2026-02-14T19:39:56Z"
       },
       {
@@ -66,7 +59,6 @@
         "title": "Show HN: Auto-optimizing deterministic LLM outputs using knowledge graphs",
         "points": 7,
         "num_comments": 0,
-        "author": "vasa_",
         "created_at": "2024-04-22T18:25:59Z"
       },
       {
@@ -74,7 +66,6 @@
         "title": "Legal Support Services and Legal Process Outsourcing",
         "points": 3,
         "num_comments": 0,
-        "author": "Cogneesol",
         "created_at": "2015-04-02T10:22:47Z"
       },
       {
@@ -82,7 +73,6 @@
         "title": "Trend of Outsourcing Accounting Services Growing Rapidly These Days",
         "points": 2,
         "num_comments": 0,
-        "author": "Cogneesol",
         "created_at": "2015-03-30T07:59:04Z"
       },
       {
@@ -90,7 +80,6 @@
         "title": "Accounts Payable Process",
         "points": 2,
         "num_comments": 0,
-        "author": "Cogneesol",
         "created_at": "2015-03-17T09:10:23Z"
       },
       {
@@ -98,7 +87,6 @@
         "title": "Show HN: I got Claude Code to run in Binary",
         "points": 2,
         "num_comments": 0,
-        "author": "vasa_",
         "created_at": "2026-04-02T16:37:11Z"
       },
       {
@@ -106,7 +94,6 @@
         "title": "We need better ways to evaluate how AI memory systems perform",
         "points": 1,
         "num_comments": 1,
-        "author": "vasa_",
         "created_at": "2025-08-08T18:09:08Z"
       },
       {
@@ -114,7 +101,6 @@
         "title": "Memory for AI agents in 6 lines of code",
         "points": 1,
         "num_comments": 0,
-        "author": "wawhal",
         "created_at": "2026-02-06T05:20:10Z"
       },
       {
@@ -122,7 +108,6 @@
         "title": "Brad Rukstales, CEO of Cognesia, Arrested at U.S. Capitol Riot",
         "points": 43,
         "num_comments": 36,
-        "author": "cromwellian",
         "created_at": "2021-01-08T07:26:50Z"
       },
       {
@@ -130,7 +115,6 @@
         "title": "The Melting Pot Symphony of Chinese American Congee",
         "points": 23,
         "num_comments": 6,
-        "author": "prismatic",
         "created_at": "2024-11-23T23:36:14Z"
       },
       {
@@ -138,7 +122,6 @@
         "title": "MIT Cogeneration Project website hacked",
         "points": 4,
         "num_comments": 1,
-        "author": "kamkha",
         "created_at": "2013-01-14T04:51:57Z"
       },
       {
@@ -146,7 +129,6 @@
         "title": "Just crossed 2k NPM downloads and shipped the biggest Cognetivy upgrade yet",
         "points": 2,
         "num_comments": 2,
-        "author": "meitarbe",
         "created_at": "2026-03-09T08:36:54Z"
       },
       {
@@ -154,7 +136,6 @@
         "title": "MIT Cogeneration Project Hacked by Anonymous",
         "points": 2,
         "num_comments": 0,
-        "author": "sinak",
         "created_at": "2014-01-11T05:34:06Z"
       },
       {
@@ -162,7 +143,6 @@
         "title": "Cogeneration",
         "points": 2,
         "num_comments": 0,
-        "author": "simonebrunozzi",
         "created_at": "2025-03-24T17:34:03Z"
       },
       {
@@ -170,7 +150,6 @@
         "title": "Cogeneration (Energy Production)",
         "points": 2,
         "num_comments": 0,
-        "author": "jka",
         "created_at": "2022-05-22T20:37:59Z"
       },
       {
@@ -178,7 +157,6 @@
         "title": "IBM Watson Acquires Artificial Intelligence Startup Cognea",
         "points": 1,
         "num_comments": 0,
-        "author": "intull",
         "created_at": "2014-05-20T14:28:54Z"
       },
       {
@@ -186,7 +164,6 @@
         "title": "Cogeneration Takes Flight at JFK Airport Hotel",
         "points": 1,
         "num_comments": 0,
-        "author": "howard941",
         "created_at": "2019-05-23T14:55:30Z"
       },
       {
@@ -194,7 +171,6 @@
         "title": "CogNet: How MIT Press Built a Foundation for Scalable Digital Products",
         "points": 1,
         "num_comments": 0,
-        "author": "JohnHammersley",
         "created_at": "2017-11-20T22:33:50Z"
       },
       {
@@ -202,7 +178,6 @@
         "title": "Context Engineering as Code – Systematic approach to reliable AI development",
         "points": 4,
         "num_comments": 0,
-        "author": "cogeet_io",
         "created_at": "2025-07-05T19:48:02Z"
       },
       {
@@ -210,7 +185,6 @@
         "title": "Show HN: I made an open source Idea to App WebApp",
         "points": 2,
         "num_comments": 0,
-        "author": "rohitghumare",
         "created_at": "2025-04-22T14:17:22Z"
       },
       {
@@ -218,7 +192,6 @@
         "title": "Give every tool LLM wiki and bypass Claude Code SSH Throttle",
         "points": 1,
         "num_comments": 0,
-        "author": "jakemattison",
         "created_at": "2026-05-17T15:18:17Z"
       },
       {
@@ -226,7 +199,6 @@
         "title": "Show HN: Simple web tool for Bayesian optimization",
         "points": 1,
         "num_comments": 0,
-        "author": "dspub99",
         "created_at": "2022-09-23T13:33:09Z"
       },
       {
@@ -234,7 +206,6 @@
         "title": "Show HN: Colleagues built free Tableau connector for Adobe Analytics, FB and more",
         "points": 18,
         "num_comments": 3,
-        "author": "ioanarebeca",
         "created_at": "2017-07-25T13:16:36Z"
       },
       {
@@ -242,7 +213,6 @@
         "title": "How to Use Machine Learning to Repair an Image with Broken or Missing Pixels",
         "points": 8,
         "num_comments": 2,
-        "author": "ioanarebeca",
         "created_at": "2017-10-24T16:09:05Z"
       },
       {
@@ -250,7 +220,6 @@
         "title": "Linearity is killing the Living Web: Blogs don't work anymore, Google search is useless",
         "points": 6,
         "num_comments": 1,
-        "author": "danw",
         "created_at": "2008-02-04T00:01:03Z"
       },
       {
@@ -258,7 +227,6 @@
         "title": "Revealing the Cognitive Sorcery of Human Intelligence",
         "points": 3,
         "num_comments": 0,
-        "author": "laurex",
         "created_at": "2020-01-08T14:07:49Z"
       },
       {
@@ -266,7 +234,6 @@
         "title": "Solution to track scroll depth for variable height pages",
         "points": 2,
         "num_comments": 1,
-        "author": "ioanarebeca",
         "created_at": "2018-03-21T12:42:09Z"
       },
       {
@@ -274,7 +241,6 @@
         "title": "Beta: Free tool to migrate analytics and ad data to various databases",
         "points": 2,
         "num_comments": 1,
-        "author": "ioanarebeca",
         "created_at": "2017-10-19T22:37:21Z"
       },
       {
@@ -282,7 +248,6 @@
         "title": "Wicked Prolems [pdf]",
         "points": 2,
         "num_comments": 0,
-        "author": "mmariani",
         "created_at": "2013-04-22T18:04:19Z"
       },
       {
@@ -290,7 +255,6 @@
         "title": "This is not your father's telecom industry, Part 1: The future of connecting people",
         "points": 2,
         "num_comments": 0,
-        "author": "danw",
         "created_at": "2007-09-04T20:36:29Z"
       },
       {
@@ -298,7 +262,6 @@
         "title": "Instructor PHP – structured data extraction in PHP, powered by LLMs",
         "points": 2,
         "num_comments": 0,
-        "author": "statusredaudio",
         "created_at": "2024-06-05T07:04:36Z"
       },
       {
@@ -306,7 +269,6 @@
         "title": "The Volcano in China They Thought Was Extinct",
         "points": 2,
         "num_comments": 0,
-        "author": "oedmarap",
         "created_at": "2020-06-17T15:07:20Z"
       },
       {
@@ -314,7 +276,6 @@
         "title": "How to Use MParticle's SDK to Collect and Activate App Customer Engagement Data",
         "points": 2,
         "num_comments": 0,
-        "author": "ioanarebeca",
         "created_at": "2019-02-20T16:12:28Z"
       },
       {
@@ -322,7 +283,6 @@
         "title": "Self-Transcendence Correlates with Brain Function Impairment [pdf]",
         "points": 2,
         "num_comments": 0,
-        "author": "dpflan",
         "created_at": "2017-04-23T19:08:58Z"
       }
     ],
@@ -332,7 +292,6 @@
         "title": "Show HN: Cognee – Open-Source AI Memory Layer That Remembers Context",
         "points": 9,
         "num_comments": 2,
-        "author": "vasa_",
         "created_at": "2025-06-03T13:05:15Z"
       },
       {
@@ -340,7 +299,6 @@
         "title": "Show HN: Cognee – Turn RAG and GraphRAG into custom dynamic semantic memory",
         "points": 6,
         "num_comments": 1,
-        "author": "vasa_",
         "created_at": "2025-02-13T01:59:26Z"
       },
       {
@@ -348,7 +306,6 @@
         "title": "Cognee+Memgraph: How to Build Intelligent Knowledge Graph Using Hacker News Data",
         "points": 2,
         "num_comments": 0,
-        "author": "taubek",
         "created_at": "2025-06-06T08:12:30Z"
       },
       {
@@ -356,7 +313,6 @@
         "title": "Cognee: Reliable LLM Memory for AI Applications and AI Agents",
         "points": 2,
         "num_comments": 0,
-        "author": "gk1",
         "created_at": "2025-01-13T12:30:15Z"
       },
       {
@@ -364,7 +320,6 @@
         "title": "Cognee: AI Memory Engine",
         "points": 2,
         "num_comments": 0,
-        "author": "handfuloflight",
         "created_at": "2024-11-18T19:30:50Z"
       },
       {
@@ -372,7 +327,6 @@
         "title": "Show HN: Null0 – AI Clone; Open-source CLI that gives AI your personal context",
         "points": 1,
         "num_comments": 1,
-        "author": "amaarc",
         "created_at": "2026-02-06T18:34:50Z"
       },
       {
@@ -380,7 +334,6 @@
         "title": "Ask HN: What are challenges for enterprise level Knowledge Graph adoption in AI",
         "points": 1,
         "num_comments": 0,
-        "author": "adityashukla_",
         "created_at": "2026-02-14T19:39:56Z"
       },
       {
@@ -388,7 +341,6 @@
         "title": "Show HN: Auto-optimizing deterministic LLM outputs using knowledge graphs",
         "points": 7,
         "num_comments": 0,
-        "author": "vasa_",
         "created_at": "2024-04-22T18:25:59Z"
       },
       {
@@ -396,7 +348,6 @@
         "title": "Legal Support Services and Legal Process Outsourcing",
         "points": 3,
         "num_comments": 0,
-        "author": "Cogneesol",
         "created_at": "2015-04-02T10:22:47Z"
       },
       {
@@ -404,7 +355,6 @@
         "title": "Trend of Outsourcing Accounting Services Growing Rapidly These Days",
         "points": 2,
         "num_comments": 0,
-        "author": "Cogneesol",
         "created_at": "2015-03-30T07:59:04Z"
       },
       {
@@ -412,7 +362,6 @@
         "title": "Accounts Payable Process",
         "points": 2,
         "num_comments": 0,
-        "author": "Cogneesol",
         "created_at": "2015-03-17T09:10:23Z"
       },
       {
@@ -420,7 +369,6 @@
         "title": "Show HN: I got Claude Code to run in Binary",
         "points": 2,
         "num_comments": 0,
-        "author": "vasa_",
         "created_at": "2026-04-02T16:37:11Z"
       },
       {
@@ -428,7 +376,6 @@
         "title": "We need better ways to evaluate how AI memory systems perform",
         "points": 1,
         "num_comments": 1,
-        "author": "vasa_",
         "created_at": "2025-08-08T18:09:08Z"
       },
       {
@@ -436,7 +383,6 @@
         "title": "Memory for AI agents in 6 lines of code",
         "points": 1,
         "num_comments": 0,
-        "author": "wawhal",
         "created_at": "2026-02-06T05:20:10Z"
       },
       {
@@ -444,7 +390,6 @@
         "title": "Brad Rukstales, CEO of Cognesia, Arrested at U.S. Capitol Riot",
         "points": 43,
         "num_comments": 36,
-        "author": "cromwellian",
         "created_at": "2021-01-08T07:26:50Z"
       },
       {
@@ -452,7 +397,6 @@
         "title": "The Melting Pot Symphony of Chinese American Congee",
         "points": 23,
         "num_comments": 6,
-        "author": "prismatic",
         "created_at": "2024-11-23T23:36:14Z"
       },
       {
@@ -460,7 +404,6 @@
         "title": "MIT Cogeneration Project website hacked",
         "points": 4,
         "num_comments": 1,
-        "author": "kamkha",
         "created_at": "2013-01-14T04:51:57Z"
       },
       {
@@ -468,7 +411,6 @@
         "title": "Just crossed 2k NPM downloads and shipped the biggest Cognetivy upgrade yet",
         "points": 2,
         "num_comments": 2,
-        "author": "meitarbe",
         "created_at": "2026-03-09T08:36:54Z"
       },
       {
@@ -476,7 +418,6 @@
         "title": "MIT Cogeneration Project Hacked by Anonymous",
         "points": 2,
         "num_comments": 0,
-        "author": "sinak",
         "created_at": "2014-01-11T05:34:06Z"
       },
       {
@@ -484,7 +425,6 @@
         "title": "Cogeneration",
         "points": 2,
         "num_comments": 0,
-        "author": "simonebrunozzi",
         "created_at": "2025-03-24T17:34:03Z"
       },
       {
@@ -492,7 +432,6 @@
         "title": "Cogeneration (Energy Production)",
         "points": 2,
         "num_comments": 0,
-        "author": "jka",
         "created_at": "2022-05-22T20:37:59Z"
       },
       {
@@ -500,7 +439,6 @@
         "title": "IBM Watson Acquires Artificial Intelligence Startup Cognea",
         "points": 1,
         "num_comments": 0,
-        "author": "intull",
         "created_at": "2014-05-20T14:28:54Z"
       },
       {
@@ -508,7 +446,6 @@
         "title": "Cogeneration Takes Flight at JFK Airport Hotel",
         "points": 1,
         "num_comments": 0,
-        "author": "howard941",
         "created_at": "2019-05-23T14:55:30Z"
       },
       {
@@ -516,7 +453,6 @@
         "title": "CogNet: How MIT Press Built a Foundation for Scalable Digital Products",
         "points": 1,
         "num_comments": 0,
-        "author": "JohnHammersley",
         "created_at": "2017-11-20T22:33:50Z"
       },
       {
@@ -524,7 +460,6 @@
         "title": "Context Engineering as Code – Systematic approach to reliable AI development",
         "points": 4,
         "num_comments": 0,
-        "author": "cogeet_io",
         "created_at": "2025-07-05T19:48:02Z"
       },
       {
@@ -532,7 +467,6 @@
         "title": "Show HN: I made an open source Idea to App WebApp",
         "points": 2,
         "num_comments": 0,
-        "author": "rohitghumare",
         "created_at": "2025-04-22T14:17:22Z"
       },
       {
@@ -540,7 +474,6 @@
         "title": "Give every tool LLM wiki and bypass Claude Code SSH Throttle",
         "points": 1,
         "num_comments": 0,
-        "author": "jakemattison",
         "created_at": "2026-05-17T15:18:17Z"
       },
       {
@@ -548,7 +481,6 @@
         "title": "Show HN: Simple web tool for Bayesian optimization",
         "points": 1,
         "num_comments": 0,
-        "author": "dspub99",
         "created_at": "2022-09-23T13:33:09Z"
       },
       {
@@ -556,7 +488,6 @@
         "title": "Show HN: Colleagues built free Tableau connector for Adobe Analytics, FB and more",
         "points": 18,
         "num_comments": 3,
-        "author": "ioanarebeca",
         "created_at": "2017-07-25T13:16:36Z"
       },
       {
@@ -564,7 +495,6 @@
         "title": "How to Use Machine Learning to Repair an Image with Broken or Missing Pixels",
         "points": 8,
         "num_comments": 2,
-        "author": "ioanarebeca",
         "created_at": "2017-10-24T16:09:05Z"
       },
       {
@@ -572,7 +502,6 @@
         "title": "Linearity is killing the Living Web: Blogs don't work anymore, Google search is useless",
         "points": 6,
         "num_comments": 1,
-        "author": "danw",
         "created_at": "2008-02-04T00:01:03Z"
       },
       {
@@ -580,7 +509,6 @@
         "title": "Revealing the Cognitive Sorcery of Human Intelligence",
         "points": 3,
         "num_comments": 0,
-        "author": "laurex",
         "created_at": "2020-01-08T14:07:49Z"
       },
       {
@@ -588,7 +516,6 @@
         "title": "Solution to track scroll depth for variable height pages",
         "points": 2,
         "num_comments": 1,
-        "author": "ioanarebeca",
         "created_at": "2018-03-21T12:42:09Z"
       },
       {
@@ -596,7 +523,6 @@
         "title": "Beta: Free tool to migrate analytics and ad data to various databases",
         "points": 2,
         "num_comments": 1,
-        "author": "ioanarebeca",
         "created_at": "2017-10-19T22:37:21Z"
       },
       {
@@ -604,7 +530,6 @@
         "title": "Wicked Prolems [pdf]",
         "points": 2,
         "num_comments": 0,
-        "author": "mmariani",
         "created_at": "2013-04-22T18:04:19Z"
       },
       {
@@ -612,7 +537,6 @@
         "title": "This is not your father's telecom industry, Part 1: The future of connecting people",
         "points": 2,
         "num_comments": 0,
-        "author": "danw",
         "created_at": "2007-09-04T20:36:29Z"
       },
       {
@@ -620,7 +544,6 @@
         "title": "Instructor PHP – structured data extraction in PHP, powered by LLMs",
         "points": 2,
         "num_comments": 0,
-        "author": "statusredaudio",
         "created_at": "2024-06-05T07:04:36Z"
       },
       {
@@ -628,7 +551,6 @@
         "title": "The Volcano in China They Thought Was Extinct",
         "points": 2,
         "num_comments": 0,
-        "author": "oedmarap",
         "created_at": "2020-06-17T15:07:20Z"
       },
       {
@@ -636,7 +558,6 @@
         "title": "How to Use MParticle's SDK to Collect and Activate App Customer Engagement Data",
         "points": 2,
         "num_comments": 0,
-        "author": "ioanarebeca",
         "created_at": "2019-02-20T16:12:28Z"
       },
       {
@@ -644,7 +565,6 @@
         "title": "Self-Transcendence Correlates with Brain Function Impairment [pdf]",
         "points": 2,
         "num_comments": 0,
-        "author": "dpflan",
         "created_at": "2017-04-23T19:08:58Z"
       }
     ]

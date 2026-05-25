@@ -1,0 +1,572 @@
+{
+  "project": "Mobile MCP",
+  "repo": "mobile-next/mobile-mcp",
+  "collected_at": "2026-05-22T12:43:17.744120+00:00",
+  "total_hits": 80,
+  "results": {
+    "Mobile MCP": [
+      {
+        "objectID": "47177770",
+        "title": "Mobile-MCP: Letting LLMs autonomously discover Android app capabilities",
+        "points": 1,
+        "num_comments": 4,
+        "created_at": "2026-02-27T07:49:01Z"
+      },
+      {
+        "objectID": "42804961",
+        "title": "Show HN: libmodulor – An opinionated TS library to build multi-platform apps",
+        "points": 51,
+        "num_comments": 26,
+        "created_at": "2025-01-23T15:30:12Z"
+      },
+      {
+        "objectID": "44909687",
+        "title": "Show HN: Search Podcasts, Court Hearings, and Earnings Calls via Claude's MCP",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-08-15T07:54:03Z"
+      },
+      {
+        "objectID": "45165168",
+        "title": "Ask HN: Experience automating E2E manual testing with AI",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-09-08T06:22:19Z"
+      },
+      {
+        "objectID": "43559394",
+        "title": "Show HN: MCP server to automate your mobile",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2025-04-02T17:57:17Z"
+      },
+      {
+        "objectID": "43573918",
+        "title": "Show HN: I wrote MCP server to control your mobile",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-04-03T19:02:37Z"
+      },
+      {
+        "objectID": "45584454",
+        "title": "Show HN: Pathwave.io – MCP and mobile app to manually approve AI actions",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-10-14T20:31:28Z"
+      },
+      {
+        "objectID": "45995394",
+        "title": "Launch HN: Poly (YC S22) – Cursor for Files",
+        "points": 66,
+        "num_comments": 68,
+        "created_at": "2025-11-20T17:47:06Z"
+      },
+      {
+        "objectID": "47750449",
+        "title": "MCP Apps on Mobile: The Iframe Scroll Problem Nobody Talks About",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-04-13T11:18:28Z"
+      },
+      {
+        "objectID": "47211750",
+        "title": "Show HN: Joey – MCP client that runs on your phone",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-03-01T23:08:14Z"
+      },
+      {
+        "objectID": "45767954",
+        "title": "Show HN: Approve your AI agent's actions on the go",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-10-31T03:13:11Z"
+      },
+      {
+        "objectID": "45347914",
+        "title": "Launch HN: Strata (YC X25) – One MCP server for AI to handle thousands of tools",
+        "points": 133,
+        "num_comments": 66,
+        "created_at": "2025-09-23T14:52:07Z"
+      },
+      {
+        "objectID": "44583014",
+        "title": "Show HN: An MCP server that gives LLMs temporal awareness and time calculation",
+        "points": 91,
+        "num_comments": 55,
+        "created_at": "2025-07-16T14:55:31Z"
+      },
+      {
+        "objectID": "47676044",
+        "title": "Show HN: Finalrun – Spec-driven testing using English and vision for mobile apps",
+        "points": 28,
+        "num_comments": 15,
+        "created_at": "2026-04-07T14:33:48Z"
+      },
+      {
+        "objectID": "44386882",
+        "title": "Show HN: Anytype – a local and collaborative database with API and MCP server",
+        "points": 20,
+        "num_comments": 0,
+        "created_at": "2025-06-26T12:44:15Z"
+      },
+      {
+        "objectID": "44327937",
+        "title": "Show HN: MCP to log your AI agents progress",
+        "points": 10,
+        "num_comments": 0,
+        "created_at": "2025-06-20T14:13:28Z"
+      },
+      {
+        "objectID": "47220211",
+        "title": "Show HN: MCP server ONLY app for personal finances",
+        "points": 4,
+        "num_comments": 2,
+        "created_at": "2026-03-02T16:32:05Z"
+      },
+      {
+        "objectID": "46693373",
+        "title": "Show HN: Preloop – An MCP proxy for human-in-the-loop tool approvals",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2026-01-20T16:04:35Z"
+      },
+      {
+        "objectID": "48233125",
+        "title": "Show HN: I threw away my analytics dashboard and replaced it with 42 MCP tools",
+        "points": 3,
+        "num_comments": 4,
+        "created_at": "2026-05-22T07:42:53Z"
+      },
+      {
+        "objectID": "44237950",
+        "title": "Show HN: I built an AI agent for a mobile robot",
+        "points": 3,
+        "num_comments": 3,
+        "created_at": "2025-06-10T15:20:47Z"
+      },
+      {
+        "objectID": "45886377",
+        "title": "Show HN: Siri for Sites Using MCP",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-11-11T12:05:11Z"
+      },
+      {
+        "objectID": "45753972",
+        "title": "Show HN: AINativeKit-UI – Turn MCP JSON into ChatGPT App UIs",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-10-29T22:34:05Z"
+      },
+      {
+        "objectID": "47118863",
+        "title": "Show HN: Mobile IPs for AI agents that keep getting blocked",
+        "points": 1,
+        "num_comments": 5,
+        "created_at": "2026-02-23T06:39:08Z"
+      },
+      {
+        "objectID": "44253707",
+        "title": "Android-MCP: Bridging AI Agents and Android Devices",
+        "points": 1,
+        "num_comments": 2,
+        "created_at": "2025-06-12T02:13:46Z"
+      },
+      {
+        "objectID": "47692889",
+        "title": "Show HN: MCP-fence – MCP firewall I built and tried to break (6 audit rounds)",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-04-08T16:55:08Z"
+      },
+      {
+        "objectID": "48114436",
+        "title": "Show HN: Fast, reliable MCP for LinkedIn, Uber, Venmo (r/w)",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-05-12T20:56:28Z"
+      },
+      {
+        "objectID": "47263466",
+        "title": "Show HN: Todoglow – Keyboard-first todo app for macOS with MCP support",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-03-05T16:14:16Z"
+      },
+      {
+        "objectID": "46649876",
+        "title": "Show HN: MobAI – AI-first mobile automation for iOS and Android",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-01-16T18:21:23Z"
+      },
+      {
+        "objectID": "46273416",
+        "title": "I built a remote MCP server so Claude can access my Whoop data from my phone",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-12-15T12:07:13Z"
+      },
+      {
+        "objectID": "47794514",
+        "title": "Launch HN: Kampala (YC W26) – Reverse-Engineer Apps into APIs",
+        "points": 100,
+        "num_comments": 83,
+        "created_at": "2026-04-16T15:19:54Z"
+      },
+      {
+        "objectID": "46363870",
+        "title": "Show HN: GeneGuessr – a daily biology web puzzle",
+        "points": 88,
+        "num_comments": 20,
+        "created_at": "2025-12-23T09:40:37Z"
+      },
+      {
+        "objectID": "47889110",
+        "title": "Show HN: Atomic – Local-first, AI-augmented personal knowledge base",
+        "points": 62,
+        "num_comments": 43,
+        "created_at": "2026-04-24T12:07:30Z"
+      },
+      {
+        "objectID": "44143244",
+        "title": "Show HN: I built an AI agent that turns ROS 2's turtlesim into a digital artist",
+        "points": 30,
+        "num_comments": 9,
+        "created_at": "2025-05-31T10:17:17Z"
+      },
+      {
+        "objectID": "45951753",
+        "title": "Show HN: YourGPT 2.0 – Complete AI platform for support, sales, and operations",
+        "points": 11,
+        "num_comments": 3,
+        "created_at": "2025-11-17T08:17:36Z"
+      },
+      {
+        "objectID": "44758089",
+        "title": "Show HN: IsAgent – Detect agents like ChatGPT Agent on your website",
+        "points": 7,
+        "num_comments": 1,
+        "created_at": "2025-08-01T15:17:04Z"
+      },
+      {
+        "objectID": "46915813",
+        "title": "Show HN: Latch – Open-source security middleware for AI agents",
+        "points": 5,
+        "num_comments": 5,
+        "created_at": "2026-02-06T17:41:53Z"
+      },
+      {
+        "objectID": "46952450",
+        "title": "Show HN: Autonomo – AI developing while E2E testing",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2026-02-09T22:28:22Z"
+      },
+      {
+        "objectID": "45305835",
+        "title": "Show HN: Summoner – Python SDK and Rust relay for live agent-to-agent networking",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2025-09-19T19:58:14Z"
+      },
+      {
+        "objectID": "44028680",
+        "title": "Show HN: Sherlog Canvas – AI powered notebooks for debugging incidents",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2025-05-19T11:33:31Z"
+      },
+      {
+        "objectID": "44862957",
+        "title": "Show HN: Spooky Planning. Full-feature Planning Poker free forever",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2025-08-11T11:20:21Z"
+      }
+    ],
+    "mobile-mcp": [
+      {
+        "objectID": "47177770",
+        "title": "Mobile-MCP: Letting LLMs autonomously discover Android app capabilities",
+        "points": 1,
+        "num_comments": 4,
+        "created_at": "2026-02-27T07:49:01Z"
+      },
+      {
+        "objectID": "45165168",
+        "title": "Ask HN: Experience automating E2E manual testing with AI",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-09-08T06:22:19Z"
+      },
+      {
+        "objectID": "43559394",
+        "title": "Show HN: MCP server to automate your mobile",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2025-04-02T17:57:17Z"
+      },
+      {
+        "objectID": "43573918",
+        "title": "Show HN: I wrote MCP server to control your mobile",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-04-03T19:02:37Z"
+      },
+      {
+        "objectID": "11292717",
+        "title": "Offline mobile maps from Mapbox",
+        "points": 103,
+        "num_comments": 25,
+        "created_at": "2016-03-15T20:29:37Z"
+      },
+      {
+        "objectID": "3788926",
+        "title": "NYC & Company and CityMaps Team Up to Launch Free Mobile Map App",
+        "points": 6,
+        "num_comments": 0,
+        "created_at": "2012-04-02T16:45:26Z"
+      },
+      {
+        "objectID": "2012819",
+        "title": "The next generation of mobile maps",
+        "points": 5,
+        "num_comments": 1,
+        "created_at": "2010-12-16T17:31:05Z"
+      },
+      {
+        "objectID": "2013014",
+        "title": "The next generation of mobile maps",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2010-12-16T18:18:51Z"
+      },
+      {
+        "objectID": "621711",
+        "title": "3d NYC Mobile Map for iPhone",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2009-05-22T07:26:06Z"
+      },
+      {
+        "objectID": "2012962",
+        "title": "The next generation of mobile maps",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2010-12-16T18:05:00Z"
+      },
+      {
+        "objectID": "4550044",
+        "title": "[Nokia] Benchmarking Mobile Maps",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2012-09-20T18:47:45Z"
+      },
+      {
+        "objectID": "25810525",
+        "title": "The Mobile Map App Part II: Pivoting and Flopping",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2021-01-17T13:36:55Z"
+      },
+      {
+        "objectID": "10984094",
+        "title": "Native Mobile Maps from Telerik and Mapbox",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2016-01-27T22:33:49Z"
+      },
+      {
+        "objectID": "4127875",
+        "title": "Apple and Google Go Head to Head Over Mobile Maps",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2012-06-18T18:47:05Z"
+      },
+      {
+        "objectID": "26322123",
+        "title": "Open Mobile Maps-The Lightweight and Modern Map SDK for Android and iOS (10)",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2021-03-02T22:41:25Z"
+      },
+      {
+        "objectID": "48144262",
+        "title": "Show HN: Trailmaps.app – Mobile maps that match the trail",
+        "points": 1,
+        "num_comments": 2,
+        "created_at": "2026-05-15T03:35:22Z"
+      },
+      {
+        "objectID": "26306802",
+        "title": "Open Mobile Maps: Lightweight and Modern Map SDK for Android / iOS",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2021-03-01T19:09:30Z"
+      },
+      {
+        "objectID": "8264094",
+        "title": "Nokia Plans to Unfurl New Mobile Map App",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2014-09-03T17:14:45Z"
+      },
+      {
+        "objectID": "7811057",
+        "title": "Mapbox Android SDK Released: Open Source Mobile Maps",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2014-05-28T16:16:10Z"
+      },
+      {
+        "objectID": "7346798",
+        "title": "California Court Rules Okay for Drivers to Check Mobile Maps",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2014-03-05T13:31:44Z"
+      },
+      {
+        "objectID": "6187414",
+        "title": "Google Maps adds Ads into Mobile Maps soon",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2013-08-09T18:27:47Z"
+      },
+      {
+        "objectID": "6011914",
+        "title": "Ask HN: Mobile map server",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2013-07-09T10:16:33Z"
+      },
+      {
+        "objectID": "5475449",
+        "title": "Mapkin, Founded by Nuance Alums, Mobile Maps",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2013-04-01T19:52:54Z"
+      },
+      {
+        "objectID": "5473313",
+        "title": "Mapkin, Founded by Nuance Alums, Helps You Create Personalized Mobile Maps",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2013-04-01T14:45:16Z"
+      },
+      {
+        "objectID": "4640042",
+        "title": "How to create mobile maps",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2012-10-11T08:48:50Z"
+      },
+      {
+        "objectID": "4615488",
+        "title": "Benchmarking mobile maps",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2012-10-05T03:00:51Z"
+      },
+      {
+        "objectID": "4559527",
+        "title": "Apple and Google Expand Their Battle to Mobile Maps",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2012-09-23T00:47:01Z"
+      },
+      {
+        "objectID": "4525458",
+        "title": "Tidepools, a re-skinnable collaborative mobile mapping platform (slides)",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2012-09-15T05:52:34Z"
+      },
+      {
+        "objectID": "4171648",
+        "title": "Show HN: mobile map for HTML5 sites",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2012-06-28T13:45:50Z"
+      },
+      {
+        "objectID": "4067114",
+        "title": "Apple and Google Expand Their Battle to Mobile Maps",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2012-06-05T03:08:40Z"
+      },
+      {
+        "objectID": "3540780",
+        "title": "UpNext 3d Cities: The Future of Mobile Maps",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2012-02-02T00:09:54Z"
+      },
+      {
+        "objectID": "23315123",
+        "title": "Ask HN: Ultralight CMS with Mobile MCE?",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2020-05-26T19:00:58Z"
+      },
+      {
+        "objectID": "2237103",
+        "title": "Mobile Maps Need a Zoom Out Button",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2011-02-18T20:27:26Z"
+      },
+      {
+        "objectID": "2012940",
+        "title": "The next generation of mobile maps",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2010-12-16T17:59:59Z"
+      },
+      {
+        "objectID": "16867344",
+        "title": "Indoor Mobile Mapping System with 6D SLAM and photo-realistic point clouds",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2018-04-18T13:49:24Z"
+      },
+      {
+        "objectID": "1092308",
+        "title": "Free mobile map app 'shut down by' Nokia",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2010-02-01T13:40:10Z"
+      },
+      {
+        "objectID": "10698805",
+        "title": "Custom Mobile Maps with Mapbox Studio and Twitter Fabric",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2015-12-08T19:36:34Z"
+      },
+      {
+        "objectID": "3295048",
+        "title": "Google's maps go indoors with new mobile feature",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2011-11-30T14:09:42Z"
+      },
+      {
+        "objectID": "2343954",
+        "title": "Location bookmark",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2011-03-19T16:24:43Z"
+      },
+      {
+        "objectID": "15847774",
+        "title": "12/6 Mapbox Webinar:Add maps and location to your consumer app",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2017-12-04T21:39:10Z"
+      }
+    ]
+  }
+}

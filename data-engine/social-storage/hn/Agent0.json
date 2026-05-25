@@ -1,0 +1,290 @@
+{
+  "project": "Agent0",
+  "repo": "aiming-lab/Agent0",
+  "collected_at": "2026-05-22T12:35:46.244309+00:00",
+  "total_hits": 40,
+  "results": {
+    "Agent0": [
+      {
+        "objectID": "19550035",
+        "title": "AGENT0 Interpreter: Agent-Oriented Programming (1991)",
+        "points": 22,
+        "num_comments": 2,
+        "created_at": "2019-04-02T00:56:44Z"
+      },
+      {
+        "objectID": "43212499",
+        "title": "Active Agent 0.2: Making Ruby and Rails the Best Choice for AI Development",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-02-28T22:27:12Z"
+      },
+      {
+        "objectID": "30066694",
+        "title": "Agent0 – A Simple Agent Language and Its Interpreter (1991) [pdf]",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2022-01-25T01:29:37Z"
+      },
+      {
+        "objectID": "22618887",
+        "title": "Grafana Cloud Agent 0.1 Released",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2020-03-18T17:12:53Z"
+      },
+      {
+        "objectID": "8029167",
+        "title": "Buildbox Agent 0.2 Release: Now with Artifact Downloading and Build Metadata",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2014-07-14T01:18:09Z"
+      },
+      {
+        "objectID": "713315",
+        "title": "Ask HN: What's the Browser Distribution for your site?",
+        "points": 48,
+        "num_comments": 67,
+        "created_at": "2009-07-19T19:54:01Z"
+      },
+      {
+        "objectID": "40110828",
+        "title": "Show HN: Open-source multi-modal LLM chat agent",
+        "points": 3,
+        "num_comments": 2,
+        "created_at": "2024-04-22T01:48:22Z"
+      },
+      {
+        "objectID": "44739505",
+        "title": "\"Intelligenza Artificiale for Artificial Intelligence Research and Development\"",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-07-30T21:08:13Z"
+      },
+      {
+        "objectID": "44838856",
+        "title": "Agent Zero AI Framework",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-08-08T16:26:47Z"
+      },
+      {
+        "objectID": "43706716",
+        "title": "Xata Agent v0.2.0: Powered-up chat, custom playbooks, GCP support and more",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-04-16T15:31:33Z"
+      },
+      {
+        "objectID": "5337247",
+        "title": "An Introduction to Differential Evolution",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2013-03-07T12:23:37Z"
+      },
+      {
+        "objectID": "32100524",
+        "title": "Ask HN: What makes you optimistic about the future?",
+        "points": 128,
+        "num_comments": 209,
+        "created_at": "2022-07-14T19:31:57Z"
+      },
+      {
+        "objectID": "28785222",
+        "title": "Retired Husband Syndrome",
+        "points": 116,
+        "num_comments": 133,
+        "created_at": "2021-10-07T12:13:43Z"
+      },
+      {
+        "objectID": "40050388",
+        "title": "Ask HN: What older games are you playing through?",
+        "points": 33,
+        "num_comments": 75,
+        "created_at": "2024-04-16T10:33:17Z"
+      },
+      {
+        "objectID": "43993833",
+        "title": "Ask HN: Email Provider for Main Account?",
+        "points": 27,
+        "num_comments": 27,
+        "created_at": "2025-05-15T11:19:55Z"
+      },
+      {
+        "objectID": "37998984",
+        "title": "Ask HN: Anyone lost a lot of money with NFTs/Cryptos? What's your story?",
+        "points": 24,
+        "num_comments": 36,
+        "created_at": "2023-10-24T13:35:43Z"
+      },
+      {
+        "objectID": "36045351",
+        "title": "Ask HN: What are you excited about / looking forward to?",
+        "points": 18,
+        "num_comments": 31,
+        "created_at": "2023-05-23T15:05:02Z"
+      },
+      {
+        "objectID": "21563872",
+        "title": "Ask HN: How should a 60-year-old get started with programming?",
+        "points": 16,
+        "num_comments": 18,
+        "created_at": "2019-11-18T12:47:06Z"
+      },
+      {
+        "objectID": "20497308",
+        "title": "Ask HN: Is it just me or is the IT field becoming discriminatory?",
+        "points": 14,
+        "num_comments": 16,
+        "created_at": "2019-07-22T12:25:56Z"
+      },
+      {
+        "objectID": "31518494",
+        "title": "Ask HN: What are the first things you do with a new Android phone?",
+        "points": 5,
+        "num_comments": 6,
+        "created_at": "2022-05-26T14:07:20Z"
+      },
+      {
+        "objectID": "31952443",
+        "title": "Unschooling by David D Friedman [pdf]",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2022-07-01T20:32:41Z"
+      },
+      {
+        "objectID": "34313369",
+        "title": "EU has had similar excess mortality in 2022 as 2021 and 2020",
+        "points": 3,
+        "num_comments": 2,
+        "created_at": "2023-01-09T17:54:26Z"
+      },
+      {
+        "objectID": "33342229",
+        "title": "Finding and Funding a Good Life [pdf]",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2022-10-26T11:37:50Z"
+      },
+      {
+        "objectID": "34455175",
+        "title": "Ask HN: If you enjoy parties, why?",
+        "points": 2,
+        "num_comments": 6,
+        "created_at": "2023-01-20T16:15:13Z"
+      },
+      {
+        "objectID": "37665952",
+        "title": "Ask HN: How would I go about selling my small B2B business?",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2023-09-26T21:19:51Z"
+      },
+      {
+        "objectID": "36892402",
+        "title": "Ask HN: How much do you save?",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2023-07-27T12:25:53Z"
+      },
+      {
+        "objectID": "30841116",
+        "title": "Do a cost-benefit analysis of your technology usage",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2022-03-29T11:16:39Z"
+      },
+      {
+        "objectID": "44022039",
+        "title": "Ask HN: Setting up custom domain for email",
+        "points": 1,
+        "num_comments": 3,
+        "created_at": "2025-05-18T15:22:46Z"
+      },
+      {
+        "objectID": "24303346",
+        "title": "Ask HN: Death Stranding Any Good?",
+        "points": 1,
+        "num_comments": 2,
+        "created_at": "2020-08-28T10:36:39Z"
+      },
+      {
+        "objectID": "46990729",
+        "title": "An AI agent published a hit piece on me",
+        "points": 2346,
+        "num_comments": 951,
+        "created_at": "2026-02-12T16:23:24Z"
+      },
+      {
+        "objectID": "13932226",
+        "title": "Onedrive is slow on Linux but fast with a “Windows” user-agent (2016)",
+        "points": 1423,
+        "num_comments": 469,
+        "created_at": "2017-03-22T16:26:28Z"
+      },
+      {
+        "objectID": "21772610",
+        "title": "Huginn: Create agents that monitor and act on your behalf",
+        "points": 1303,
+        "num_comments": 143,
+        "created_at": "2019-12-12T15:31:51Z"
+      },
+      {
+        "objectID": "47460525",
+        "title": "OpenCode – Open source AI coding agent",
+        "points": 1274,
+        "num_comments": 619,
+        "created_at": "2026-03-20T21:03:52Z"
+      },
+      {
+        "objectID": "47792764",
+        "title": "Qwen3.6-35B-A3B: Agentic coding power, now open to all",
+        "points": 1274,
+        "num_comments": 532,
+        "created_at": "2026-04-16T13:36:27Z"
+      },
+      {
+        "objectID": "45619329",
+        "title": "Andrej Karpathy – It will take a decade to work through the issues with agents",
+        "points": 1212,
+        "num_comments": 1115,
+        "created_at": "2025-10-17T17:24:18Z"
+      },
+      {
+        "objectID": "45840088",
+        "title": "You should write an agent",
+        "points": 1070,
+        "num_comments": 395,
+        "created_at": "2025-11-06T20:37:06Z"
+      },
+      {
+        "objectID": "44560662",
+        "title": "Kiro: A new agentic IDE",
+        "points": 1063,
+        "num_comments": 462,
+        "created_at": "2025-07-14T14:24:40Z"
+      },
+      {
+        "objectID": "43985489",
+        "title": "AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms",
+        "points": 1036,
+        "num_comments": 270,
+        "created_at": "2025-05-14T15:10:15Z"
+      },
+      {
+        "objectID": "42388783",
+        "title": "Gemini 2.0: our new AI model for the agentic era",
+        "points": 1015,
+        "num_comments": 490,
+        "created_at": "2024-12-11T15:33:54Z"
+      },
+      {
+        "objectID": "25339510",
+        "title": "Agents raid home of fired Florida data scientist who built Covid-19 dashboard",
+        "points": 969,
+        "num_comments": 635,
+        "created_at": "2020-12-07T23:59:57Z"
+      }
+    ]
+  }
+}

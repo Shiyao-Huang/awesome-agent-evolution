@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "collection_timestamp": "2026-05-22T12:09:47.470176+00:00",
+    "collection_timestamp": "2026-05-22T12:27:18.889051+00:00",
     "repo": "TransformerOptimus/SuperAGI",
     "collector_name": "github_quick_stats"
   },
@@ -9,7 +9,7 @@
     "description": "<\u26a1\ufe0f> SuperAGI - A dev-first open source autonomous AI agent framework. Enabling developers to build, manage & run useful autonomous agents quickly and reliably.",
     "stars": 17533,
     "forks": 2215,
-    "open_issues": 256,
+    "open_issues": 255,
     "watchers": 176,
     "language": "Python",
     "license": "MIT",

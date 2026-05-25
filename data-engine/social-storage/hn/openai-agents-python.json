@@ -1,0 +1,66 @@
+{
+  "project": "openai-agents-python",
+  "repo": "openai/openai-agents-python",
+  "collected_at": "2026-05-22T12:19:22.667853+00:00",
+  "total_hits": 7,
+  "results": {
+    "openai-agents-python": [
+      {
+        "objectID": "43765467",
+        "title": "Show HN: LMM for LLMs – A mental model for building LLM apps",
+        "points": 6,
+        "num_comments": 2,
+        "author": "honorable_judge",
+        "created_at": "2025-04-22T19:32:26Z"
+      },
+      {
+        "objectID": "43345172",
+        "title": "Show HN: MCP-Compatible OpenAI Agents SDK",
+        "points": 5,
+        "num_comments": 2,
+        "author": "saqadri",
+        "created_at": "2025-03-12T16:50:10Z"
+      },
+      {
+        "objectID": "45634471",
+        "title": "Show HN: Elliot – my coding agent that helps me code, and sometimes helps itself",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Sai_Praneeth",
+        "created_at": "2025-10-19T14:39:02Z"
+      },
+      {
+        "objectID": "43485566",
+        "title": "OpenAI adds MCP support to Agents SDK",
+        "points": 807,
+        "num_comments": 267,
+        "author": "gronky_",
+        "created_at": "2025-03-26T18:55:29Z"
+      },
+      {
+        "objectID": "45766384",
+        "title": "OpenAI rejects 1,200-line community PR for Google's A2A agent protocol",
+        "points": 6,
+        "num_comments": 3,
+        "author": "sascha_heyer",
+        "created_at": "2025-10-30T22:57:30Z"
+      },
+      {
+        "objectID": "43334818",
+        "title": "OpenAI Agents SDK",
+        "points": 6,
+        "num_comments": 1,
+        "author": "dphuang2",
+        "created_at": "2025-03-11T17:19:46Z"
+      },
+      {
+        "objectID": "43337110",
+        "title": "OpenAI Agents SDK",
+        "points": 3,
+        "num_comments": 1,
+        "author": "gfortaine",
+        "created_at": "2025-03-11T21:20:11Z"
+      }
+    ]
+  }
+}

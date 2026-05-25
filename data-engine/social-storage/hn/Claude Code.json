@@ -1,7 +1,7 @@
 {
   "project": "Claude Code",
   "repo": "anthropics/claude-code",
-  "collected_at": "2026-05-22T12:16:33.905232+00:00",
+  "collected_at": "2026-05-22T12:41:39.591842+00:00",
   "total_hits": 80,
   "results": {
     "Claude Code": [
@@ -10,7 +10,6 @@
         "title": "Claude 3.7 Sonnet and Claude Code",
         "points": 2127,
         "num_comments": 963,
-        "author": "bakugo",
         "created_at": "2025-02-24T18:28:59Z"
       },
       {
@@ -18,7 +17,6 @@
         "title": "Claude Code's source code has been leaked via a map file in their NPM registry",
         "points": 2095,
         "num_comments": 1022,
-        "author": "treexs",
         "created_at": "2026-03-31T09:00:40Z"
       },
       {
@@ -26,7 +24,6 @@
         "title": "The Claude Code Source Leak: fake tools, frustration regexes, undercover mode",
         "points": 1376,
         "num_comments": 578,
-        "author": "alex000kim",
         "created_at": "2026-03-31T13:04:30Z"
       },
       {
@@ -34,7 +31,6 @@
         "title": "Issue: Claude Code is unusable for complex engineering tasks with Feb updates",
         "points": 1364,
         "num_comments": 753,
-        "author": "StanAngeloff",
         "created_at": "2026-04-06T13:50:35Z"
       },
       {
@@ -42,7 +38,6 @@
         "title": "Claude Code refuses requests or charges extra if your commits mention \"OpenClaw\"",
         "points": 1349,
         "num_comments": 720,
-        "author": "elmean",
         "created_at": "2026-04-30T14:36:58Z"
       },
       {
@@ -50,7 +45,6 @@
         "title": "Cowork: Claude Code for the rest of your work",
         "points": 1298,
         "num_comments": 565,
-        "author": "adocomplete",
         "created_at": "2026-01-12T19:27:19Z"
       },
       {
@@ -58,7 +52,6 @@
         "title": "Claude Code Unpacked : A visual guide",
         "points": 1128,
         "num_comments": 400,
-        "author": "autocracy101",
         "created_at": "2026-04-01T05:15:37Z"
       },
       {
@@ -66,7 +59,6 @@
         "title": "Tell HN: Anthropic no longer allowing Claude Code subscriptions to use OpenClaw",
         "points": 1099,
         "num_comments": 827,
-        "author": "firloop",
         "created_at": "2026-04-03T22:55:24Z"
       },
       {
@@ -74,7 +66,6 @@
         "title": "Tell HN: I'm 60 years old. Claude Code has re-ignited a passion",
         "points": 1086,
         "num_comments": 988,
-        "author": "shannoncc",
         "created_at": "2026-03-07T00:05:06Z"
       },
       {
@@ -82,7 +73,6 @@
         "title": "Claude Code is being dumbed down?",
         "points": 1085,
         "num_comments": 701,
-        "author": "WXLCKNO",
         "created_at": "2026-02-11T18:23:39Z"
       },
       {
@@ -90,7 +80,6 @@
         "title": "Warcraft III Peon Voice Notifications for Claude Code",
         "points": 1006,
         "num_comments": 301,
-        "author": "doppp",
         "created_at": "2026-02-12T05:18:49Z"
       },
       {
@@ -98,7 +87,6 @@
         "title": "How I use Claude Code: Separation of planning and execution",
         "points": 976,
         "num_comments": 591,
-        "author": "vinhnx",
         "created_at": "2026-02-22T00:29:05Z"
       },
       {
@@ -106,7 +94,6 @@
         "title": "An update on recent Claude Code quality reports",
         "points": 942,
         "num_comments": 732,
-        "author": "mfiguiere",
         "created_at": "2026-04-23T17:48:38Z"
       },
       {
@@ -114,7 +101,6 @@
         "title": "Using Claude Code to modernize a 25-year-old kernel driver",
         "points": 929,
         "num_comments": 318,
-        "author": "dmitrybrant",
         "created_at": "2025-09-07T23:53:47Z"
       },
       {
@@ -122,7 +108,6 @@
         "title": "Claude Code is all you need",
         "points": 851,
         "num_comments": 504,
-        "author": "sixhobbits",
         "created_at": "2025-08-11T14:03:46Z"
       },
       {
@@ -130,7 +115,6 @@
         "title": "Claude Code 2.0",
         "points": 842,
         "num_comments": 413,
-        "author": "polyrand",
         "created_at": "2025-09-29T17:12:13Z"
       },
       {
@@ -138,7 +122,6 @@
         "title": "How to code Claude Code in 200 lines of code",
         "points": 816,
         "num_comments": 239,
-        "author": "nutellalover",
         "created_at": "2026-01-08T19:54:26Z"
       },
       {
@@ -146,7 +129,6 @@
         "title": "Claude Code IDE integration for Emacs",
         "points": 782,
         "num_comments": 266,
-        "author": "kgwgk",
         "created_at": "2025-08-06T13:17:38Z"
       },
       {
@@ -154,7 +136,6 @@
         "title": "Claude Code daily benchmarks for degradation tracking",
         "points": 760,
         "num_comments": 354,
-        "author": "qwesr123",
         "created_at": "2026-01-29T13:59:07Z"
       },
       {
@@ -162,7 +143,6 @@
         "title": "Claude Code Routines",
         "points": 720,
         "num_comments": 413,
-        "author": "matthieu_bl",
         "created_at": "2026-04-14T16:54:33Z"
       },
       {
@@ -170,7 +150,6 @@
         "title": "Claude Code Cheat Sheet",
         "points": 699,
         "num_comments": 188,
-        "author": "phasE89",
         "created_at": "2026-03-23T21:44:20Z"
       },
       {
@@ -178,7 +157,6 @@
         "title": "Claude Code to be removed from Anthropic's Pro plan?",
         "points": 683,
         "num_comments": 642,
-        "author": "JamesMcMinn",
         "created_at": "2026-04-21T21:03:04Z"
       },
       {
@@ -186,7 +164,6 @@
         "title": "Claude Code: Now in Beta in Zed",
         "points": 683,
         "num_comments": 406,
-        "author": "meetpateltech",
         "created_at": "2025-09-03T15:07:20Z"
       },
       {
@@ -194,7 +171,6 @@
         "title": "DeepClaude – Claude Code agent loop with DeepSeek V4 Pro",
         "points": 678,
         "num_comments": 281,
-        "author": "alattaran",
         "created_at": "2026-05-03T22:13:20Z"
       },
       {
@@ -202,7 +178,6 @@
         "title": "Anthropic blocks third-party use of Claude Code subscriptions",
         "points": 625,
         "num_comments": 513,
-        "author": "sergiotapia",
         "created_at": "2026-01-09T03:44:35Z"
       },
       {
@@ -210,7 +185,6 @@
         "title": "Show HN: Browser MCP – Automate your browser using Cursor, Claude, VS Code",
         "points": 616,
         "num_comments": 217,
-        "author": "namuorg",
         "created_at": "2025-04-07T16:25:45Z"
       },
       {
@@ -218,7 +192,6 @@
         "title": "Claude Code: Best practices for agentic coding",
         "points": 614,
         "num_comments": 257,
-        "author": "sqs",
         "created_at": "2025-04-19T10:48:30Z"
       },
       {
@@ -226,7 +199,6 @@
         "title": "What Claude Code chooses",
         "points": 611,
         "num_comments": 235,
-        "author": "tin7in",
         "created_at": "2026-02-26T18:12:26Z"
       },
       {
@@ -234,7 +206,6 @@
         "title": "Claude Code weekly rate limits",
         "points": 609,
         "num_comments": 705,
-        "author": "thebestmoshe",
         "created_at": "2025-07-28T18:27:51Z"
       },
       {
@@ -242,7 +213,6 @@
         "title": "6 weeks of Claude Code",
         "points": 581,
         "num_comments": 590,
-        "author": "mike1o1",
         "created_at": "2025-07-31T15:25:49Z"
       },
       {
@@ -250,7 +220,6 @@
         "title": "Claude Code on the web",
         "points": 578,
         "num_comments": 390,
-        "author": "adocomplete",
         "created_at": "2025-10-20T18:12:23Z"
       },
       {
@@ -258,7 +227,6 @@
         "title": "MCP server that reduces Claude Code context consumption by 98%",
         "points": 570,
         "num_comments": 107,
-        "author": "mksglu",
         "created_at": "2026-02-28T10:01:20Z"
       },
       {
@@ -266,7 +234,6 @@
         "title": "The creator of Claude Code's Claude setup",
         "points": 568,
         "num_comments": 403,
-        "author": "KothuRoti",
         "created_at": "2026-01-02T22:07:50Z"
       },
       {
@@ -274,7 +241,6 @@
         "title": "Who owns the code Claude Code wrote?",
         "points": 557,
         "num_comments": 530,
-        "author": "senaevren",
         "created_at": "2026-04-28T11:24:52Z"
       },
       {
@@ -282,7 +248,6 @@
         "title": "A staff engineer's journey with Claude Code",
         "points": 550,
         "num_comments": 396,
-        "author": "kmelve",
         "created_at": "2025-09-02T19:34:24Z"
       },
       {
@@ -290,7 +255,6 @@
         "title": "Claude Code Remote Control",
         "points": 544,
         "num_comments": 313,
-        "author": "empressplay",
         "created_at": "2026-02-25T07:22:56Z"
       },
       {
@@ -298,7 +262,6 @@
         "title": "Claude Code On-the-Go",
         "points": 543,
         "num_comments": 335,
-        "author": "todsacerdoti",
         "created_at": "2026-01-04T19:48:20Z"
       },
       {
@@ -306,7 +269,6 @@
         "title": "How I use every Claude Code feature",
         "points": 534,
         "num_comments": 188,
-        "author": "sshh12",
         "created_at": "2025-11-02T00:13:27Z"
       },
       {
@@ -314,7 +276,6 @@
         "title": "Using Claude Code: The unreasonable effectiveness of HTML",
         "points": 528,
         "num_comments": 274,
-        "author": "pretext",
         "created_at": "2026-05-09T04:53:52Z"
       },
       {
@@ -322,7 +283,6 @@
         "title": "We put Claude Code in Rollercoaster Tycoon",
         "points": 526,
         "num_comments": 288,
-        "author": "iamwil",
         "created_at": "2026-01-12T14:28:17Z"
       }
     ],
@@ -332,7 +292,6 @@
         "title": "Claude 3.7 Sonnet and Claude Code",
         "points": 2127,
         "num_comments": 963,
-        "author": "bakugo",
         "created_at": "2025-02-24T18:28:59Z"
       },
       {
@@ -340,7 +299,6 @@
         "title": "Claude Code's source code has been leaked via a map file in their NPM registry",
         "points": 2095,
         "num_comments": 1022,
-        "author": "treexs",
         "created_at": "2026-03-31T09:00:40Z"
       },
       {
@@ -348,7 +306,6 @@
         "title": "The Claude Code Source Leak: fake tools, frustration regexes, undercover mode",
         "points": 1376,
         "num_comments": 578,
-        "author": "alex000kim",
         "created_at": "2026-03-31T13:04:30Z"
       },
       {
@@ -356,7 +313,6 @@
         "title": "Issue: Claude Code is unusable for complex engineering tasks with Feb updates",
         "points": 1364,
         "num_comments": 753,
-        "author": "StanAngeloff",
         "created_at": "2026-04-06T13:50:35Z"
       },
       {
@@ -364,7 +320,6 @@
         "title": "Claude Code refuses requests or charges extra if your commits mention \"OpenClaw\"",
         "points": 1349,
         "num_comments": 720,
-        "author": "elmean",
         "created_at": "2026-04-30T14:36:58Z"
       },
       {
@@ -372,7 +327,6 @@
         "title": "Cowork: Claude Code for the rest of your work",
         "points": 1298,
         "num_comments": 565,
-        "author": "adocomplete",
         "created_at": "2026-01-12T19:27:19Z"
       },
       {
@@ -380,7 +334,6 @@
         "title": "Claude Code Unpacked : A visual guide",
         "points": 1128,
         "num_comments": 400,
-        "author": "autocracy101",
         "created_at": "2026-04-01T05:15:37Z"
       },
       {
@@ -388,7 +341,6 @@
         "title": "Tell HN: Anthropic no longer allowing Claude Code subscriptions to use OpenClaw",
         "points": 1099,
         "num_comments": 827,
-        "author": "firloop",
         "created_at": "2026-04-03T22:55:24Z"
       },
       {
@@ -396,7 +348,6 @@
         "title": "Tell HN: I'm 60 years old. Claude Code has re-ignited a passion",
         "points": 1086,
         "num_comments": 988,
-        "author": "shannoncc",
         "created_at": "2026-03-07T00:05:06Z"
       },
       {
@@ -404,7 +355,6 @@
         "title": "Claude Code is being dumbed down?",
         "points": 1085,
         "num_comments": 701,
-        "author": "WXLCKNO",
         "created_at": "2026-02-11T18:23:39Z"
       },
       {
@@ -412,7 +362,6 @@
         "title": "Warcraft III Peon Voice Notifications for Claude Code",
         "points": 1006,
         "num_comments": 301,
-        "author": "doppp",
         "created_at": "2026-02-12T05:18:49Z"
       },
       {
@@ -420,7 +369,6 @@
         "title": "How I use Claude Code: Separation of planning and execution",
         "points": 976,
         "num_comments": 591,
-        "author": "vinhnx",
         "created_at": "2026-02-22T00:29:05Z"
       },
       {
@@ -428,7 +376,6 @@
         "title": "An update on recent Claude Code quality reports",
         "points": 942,
         "num_comments": 732,
-        "author": "mfiguiere",
         "created_at": "2026-04-23T17:48:38Z"
       },
       {
@@ -436,7 +383,6 @@
         "title": "Using Claude Code to modernize a 25-year-old kernel driver",
         "points": 929,
         "num_comments": 318,
-        "author": "dmitrybrant",
         "created_at": "2025-09-07T23:53:47Z"
       },
       {
@@ -444,7 +390,6 @@
         "title": "Claude Code is all you need",
         "points": 851,
         "num_comments": 504,
-        "author": "sixhobbits",
         "created_at": "2025-08-11T14:03:46Z"
       },
       {
@@ -452,7 +397,6 @@
         "title": "Claude Code 2.0",
         "points": 842,
         "num_comments": 413,
-        "author": "polyrand",
         "created_at": "2025-09-29T17:12:13Z"
       },
       {
@@ -460,7 +404,6 @@
         "title": "How to code Claude Code in 200 lines of code",
         "points": 816,
         "num_comments": 239,
-        "author": "nutellalover",
         "created_at": "2026-01-08T19:54:26Z"
       },
       {
@@ -468,7 +411,6 @@
         "title": "Claude Code IDE integration for Emacs",
         "points": 782,
         "num_comments": 266,
-        "author": "kgwgk",
         "created_at": "2025-08-06T13:17:38Z"
       },
       {
@@ -476,7 +418,6 @@
         "title": "Claude Code daily benchmarks for degradation tracking",
         "points": 760,
         "num_comments": 354,
-        "author": "qwesr123",
         "created_at": "2026-01-29T13:59:07Z"
       },
       {
@@ -484,7 +425,6 @@
         "title": "Claude Code Routines",
         "points": 720,
         "num_comments": 413,
-        "author": "matthieu_bl",
         "created_at": "2026-04-14T16:54:33Z"
       },
       {
@@ -492,7 +432,6 @@
         "title": "Claude Code Cheat Sheet",
         "points": 699,
         "num_comments": 188,
-        "author": "phasE89",
         "created_at": "2026-03-23T21:44:20Z"
       },
       {
@@ -500,7 +439,6 @@
         "title": "Claude Code to be removed from Anthropic's Pro plan?",
         "points": 683,
         "num_comments": 642,
-        "author": "JamesMcMinn",
         "created_at": "2026-04-21T21:03:04Z"
       },
       {
@@ -508,7 +446,6 @@
         "title": "Claude Code: Now in Beta in Zed",
         "points": 683,
         "num_comments": 406,
-        "author": "meetpateltech",
         "created_at": "2025-09-03T15:07:20Z"
       },
       {
@@ -516,7 +453,6 @@
         "title": "DeepClaude – Claude Code agent loop with DeepSeek V4 Pro",
         "points": 678,
         "num_comments": 281,
-        "author": "alattaran",
         "created_at": "2026-05-03T22:13:20Z"
       },
       {
@@ -524,7 +460,6 @@
         "title": "Anthropic blocks third-party use of Claude Code subscriptions",
         "points": 625,
         "num_comments": 513,
-        "author": "sergiotapia",
         "created_at": "2026-01-09T03:44:35Z"
       },
       {
@@ -532,7 +467,6 @@
         "title": "Claude Code: Best practices for agentic coding",
         "points": 614,
         "num_comments": 257,
-        "author": "sqs",
         "created_at": "2025-04-19T10:48:30Z"
       },
       {
@@ -540,7 +474,6 @@
         "title": "What Claude Code chooses",
         "points": 611,
         "num_comments": 235,
-        "author": "tin7in",
         "created_at": "2026-02-26T18:12:26Z"
       },
       {
@@ -548,7 +481,6 @@
         "title": "Claude Code weekly rate limits",
         "points": 609,
         "num_comments": 705,
-        "author": "thebestmoshe",
         "created_at": "2025-07-28T18:27:51Z"
       },
       {
@@ -556,7 +488,6 @@
         "title": "6 weeks of Claude Code",
         "points": 581,
         "num_comments": 590,
-        "author": "mike1o1",
         "created_at": "2025-07-31T15:25:49Z"
       },
       {
@@ -564,7 +495,6 @@
         "title": "Claude Code on the web",
         "points": 578,
         "num_comments": 390,
-        "author": "adocomplete",
         "created_at": "2025-10-20T18:12:23Z"
       },
       {
@@ -572,7 +502,6 @@
         "title": "MCP server that reduces Claude Code context consumption by 98%",
         "points": 570,
         "num_comments": 107,
-        "author": "mksglu",
         "created_at": "2026-02-28T10:01:20Z"
       },
       {
@@ -580,7 +509,6 @@
         "title": "The creator of Claude Code's Claude setup",
         "points": 568,
         "num_comments": 403,
-        "author": "KothuRoti",
         "created_at": "2026-01-02T22:07:50Z"
       },
       {
@@ -588,7 +516,6 @@
         "title": "Who owns the code Claude Code wrote?",
         "points": 557,
         "num_comments": 530,
-        "author": "senaevren",
         "created_at": "2026-04-28T11:24:52Z"
       },
       {
@@ -596,7 +523,6 @@
         "title": "A staff engineer's journey with Claude Code",
         "points": 550,
         "num_comments": 396,
-        "author": "kmelve",
         "created_at": "2025-09-02T19:34:24Z"
       },
       {
@@ -604,7 +530,6 @@
         "title": "Claude Code Remote Control",
         "points": 544,
         "num_comments": 313,
-        "author": "empressplay",
         "created_at": "2026-02-25T07:22:56Z"
       },
       {
@@ -612,7 +537,6 @@
         "title": "Claude Code On-the-Go",
         "points": 543,
         "num_comments": 335,
-        "author": "todsacerdoti",
         "created_at": "2026-01-04T19:48:20Z"
       },
       {
@@ -620,7 +544,6 @@
         "title": "How I use every Claude Code feature",
         "points": 534,
         "num_comments": 188,
-        "author": "sshh12",
         "created_at": "2025-11-02T00:13:27Z"
       },
       {
@@ -628,7 +551,6 @@
         "title": "Using Claude Code: The unreasonable effectiveness of HTML",
         "points": 528,
         "num_comments": 274,
-        "author": "pretext",
         "created_at": "2026-05-09T04:53:52Z"
       },
       {
@@ -636,7 +558,6 @@
         "title": "We put Claude Code in Rollercoaster Tycoon",
         "points": 526,
         "num_comments": 288,
-        "author": "iamwil",
         "created_at": "2026-01-12T14:28:17Z"
       },
       {
@@ -644,7 +565,6 @@
         "title": "Show HN: I used Claude Code to discover connections between 100 books",
         "points": 524,
         "num_comments": 146,
-        "author": "pmaze",
         "created_at": "2026-01-10T16:56:55Z"
       }
     ]

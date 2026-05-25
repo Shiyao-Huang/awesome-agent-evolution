@@ -1,7 +1,7 @@
 {
   "project": "mastra",
   "repo": "mastra-ai/mastra",
-  "collected_at": "2026-05-22T12:15:58.505600+00:00",
+  "collected_at": "2026-05-22T12:44:28.176858+00:00",
   "total_hits": 40,
   "results": {
     "mastra": [
@@ -10,7 +10,6 @@
         "title": "Show HN: Mastra – Open-source JS agent framework, by the developers of Gatsby",
         "points": 442,
         "num_comments": 154,
-        "author": "calcsam",
         "created_at": "2025-02-19T15:25:08Z"
       },
       {
@@ -18,7 +17,6 @@
         "title": "Show HN: Mastra 1.0, open-source JavaScript agent framework from the Gatsby devs",
         "points": 213,
         "num_comments": 70,
-        "author": "calcsam",
         "created_at": "2026-01-20T16:38:56Z"
       },
       {
@@ -26,7 +24,6 @@
         "title": "Building AI Agents with Mastra and Deno",
         "points": 5,
         "num_comments": 1,
-        "author": "sebg",
         "created_at": "2025-04-09T17:06:45Z"
       },
       {
@@ -34,7 +31,6 @@
         "title": "Mastra is now Apache 2.0 licensed",
         "points": 4,
         "num_comments": 0,
-        "author": "codekarate",
         "created_at": "2025-07-11T13:44:04Z"
       },
       {
@@ -42,7 +38,6 @@
         "title": "Mastra: The TypeScript AI Framework",
         "points": 4,
         "num_comments": 0,
-        "author": "handfuloflight",
         "created_at": "2024-12-06T21:35:17Z"
       },
       {
@@ -50,7 +45,6 @@
         "title": "Mastra 101",
         "points": 3,
         "num_comments": 1,
-        "author": "nbbaier",
         "created_at": "2025-06-05T03:33:16Z"
       },
       {
@@ -58,7 +52,6 @@
         "title": "The TypeScript AI Framework – Mastra",
         "points": 3,
         "num_comments": 0,
-        "author": "fagnerbrack",
         "created_at": "2026-04-30T03:00:22Z"
       },
       {
@@ -66,7 +59,6 @@
         "title": "Mastra Cloud",
         "points": 3,
         "num_comments": 0,
-        "author": "AnhTho_FR",
         "created_at": "2025-06-26T22:50:01Z"
       },
       {
@@ -74,7 +66,6 @@
         "title": "Ask HN: Views on Mastra's SOTA Memory?",
         "points": 2,
         "num_comments": 1,
-        "author": "manthangupta109",
         "created_at": "2026-02-12T17:59:17Z"
       },
       {
@@ -82,7 +73,6 @@
         "title": "Mastra Code",
         "points": 2,
         "num_comments": 0,
-        "author": "alex7o",
         "created_at": "2026-04-22T08:50:04Z"
       },
       {
@@ -90,7 +80,6 @@
         "title": "Agent Skills Support in Mastra",
         "points": 2,
         "num_comments": 0,
-        "author": "alaeddine-13",
         "created_at": "2026-01-24T10:56:28Z"
       },
       {
@@ -98,7 +87,6 @@
         "title": "Mastra is now Apache 2.0 licensed",
         "points": 2,
         "num_comments": 0,
-        "author": "calcsam",
         "created_at": "2025-07-17T12:49:12Z"
       },
       {
@@ -106,7 +94,6 @@
         "title": "Mastra",
         "points": 1,
         "num_comments": 1,
-        "author": "blufish",
         "created_at": "2026-01-17T07:30:50Z"
       },
       {
@@ -114,7 +101,6 @@
         "title": "I reimplemented Mastra workflows with my own durable functions and I regret it",
         "points": 1,
         "num_comments": 1,
-        "author": "ianhmacartney",
         "created_at": "2025-04-03T05:34:58Z"
       },
       {
@@ -122,7 +108,6 @@
         "title": "Feedback on a runtime-agnostic AI agent workflow spec (LangGraph/Mastra)",
         "points": 1,
         "num_comments": 0,
-        "author": "philiparxist",
         "created_at": "2026-05-15T11:53:25Z"
       },
       {
@@ -130,7 +115,6 @@
         "title": "Announcing Mastra's Agent Studio",
         "points": 1,
         "num_comments": 0,
-        "author": "calcsam",
         "created_at": "2025-10-30T18:40:18Z"
       },
       {
@@ -138,7 +122,6 @@
         "title": "Monitoring Safari Park Camera Feeds with Mastra.ai",
         "points": 1,
         "num_comments": 0,
-        "author": "jmarbach",
         "created_at": "2025-09-17T14:08:07Z"
       },
       {
@@ -146,7 +129,6 @@
         "title": "How to deploy a containerized Mastra AI app with Cloudflare Containers",
         "points": 1,
         "num_comments": 0,
-        "author": "slawton3",
         "created_at": "2025-08-21T22:03:16Z"
       },
       {
@@ -154,7 +136,6 @@
         "title": "Mastra is now Apache 2.0 licensed",
         "points": 1,
         "num_comments": 0,
-        "author": "calcsam",
         "created_at": "2025-07-10T19:46:20Z"
       },
       {
@@ -162,7 +143,6 @@
         "title": "Reimplementing Mastra Workflows: Lessons Learned",
         "points": 1,
         "num_comments": 0,
-        "author": "handfuloflight",
         "created_at": "2025-04-07T12:09:55Z"
       },
       {
@@ -170,7 +150,6 @@
         "title": "Optimizing Mastra for Seamless Edge Deployments",
         "points": 1,
         "num_comments": 0,
-        "author": "sebg",
         "created_at": "2025-03-25T21:02:36Z"
       },
       {
@@ -178,7 +157,6 @@
         "title": "Mastra – Open-source JavaScript agent framework",
         "points": 1,
         "num_comments": 0,
-        "author": "javatuts",
         "created_at": "2025-02-24T11:35:04Z"
       },
       {
@@ -186,7 +164,6 @@
         "title": "Mastra: TypeScript AI Framework",
         "points": 1,
         "num_comments": 0,
-        "author": "AnhTho_FR",
         "created_at": "2025-01-31T01:29:40Z"
       },
       {
@@ -194,7 +171,6 @@
         "title": "Show HN: A “Course” as an MCP Server",
         "points": 213,
         "num_comments": 32,
-        "author": "codekarate",
         "created_at": "2025-06-10T20:36:55Z"
       },
       {
@@ -202,7 +178,6 @@
         "title": "Launch HN: Trigger.dev (YC W23) – Open-source platform to build reliable AI apps",
         "points": 162,
         "num_comments": 65,
-        "author": "eallam",
         "created_at": "2025-09-15T15:20:18Z"
       },
       {
@@ -210,7 +185,6 @@
         "title": "Show HN: Inkeep (YC W23) – Agent Builder to create agents in code or visually",
         "points": 79,
         "num_comments": 49,
-        "author": "engomez",
         "created_at": "2025-10-16T12:50:08Z"
       },
       {
@@ -218,7 +192,6 @@
         "title": "Show HN: Open-Source Article 12 Logging Infrastructure for the EU AI Act",
         "points": 42,
         "num_comments": 10,
-        "author": "systima",
         "created_at": "2026-03-03T10:11:44Z"
       },
       {
@@ -226,7 +199,6 @@
         "title": "Show HN: I built a database for AI agents",
         "points": 12,
         "num_comments": 10,
-        "author": "Kappa90",
         "created_at": "2026-04-07T16:43:51Z"
       },
       {
@@ -234,7 +206,6 @@
         "title": "Show HN: Advanced Chunking in JavaScript/TypeScript with Chonkie",
         "points": 10,
         "num_comments": 6,
-        "author": "snyy",
         "created_at": "2025-05-23T20:03:41Z"
       },
       {
@@ -242,7 +213,6 @@
         "title": "60–70% of YC X25 Agent Startups Are Using TypeScript",
         "points": 7,
         "num_comments": 17,
-        "author": "Arindam1729",
         "created_at": "2025-06-07T20:50:04Z"
       },
       {
@@ -250,7 +220,6 @@
         "title": "Show HN: Principles of Building AI Agents book [pdf]",
         "points": 5,
         "num_comments": 0,
-        "author": "calcsam",
         "created_at": "2025-08-06T14:17:58Z"
       },
       {
@@ -258,7 +227,6 @@
         "title": "Ask HN: Agent / workflow frameworks or roll your own?",
         "points": 4,
         "num_comments": 4,
-        "author": "dennisy",
         "created_at": "2025-05-22T18:48:54Z"
       },
       {
@@ -266,7 +234,6 @@
         "title": "Show HN: Better Agents CLI",
         "points": 3,
         "num_comments": 0,
-        "author": "jangletown",
         "created_at": "2025-11-26T13:28:43Z"
       },
       {
@@ -274,7 +241,6 @@
         "title": "Show HN: Tired of fixing broken LLM agents? Automate it",
         "points": 3,
         "num_comments": 0,
-        "author": "yuto_1192",
         "created_at": "2025-07-04T00:13:45Z"
       },
       {
@@ -282,7 +248,6 @@
         "title": "Show HN: Toolbase – Build reliable AI teammates by example, not instruction",
         "points": 2,
         "num_comments": 1,
-        "author": "David1238",
         "created_at": "2025-05-02T15:58:20Z"
       },
       {
@@ -290,7 +255,6 @@
         "title": "Show HN: Residuum | Agentic AI with continuous context",
         "points": 1,
         "num_comments": 0,
-        "author": "BearFlinn",
         "created_at": "2026-03-04T23:40:51Z"
       },
       {
@@ -298,7 +262,6 @@
         "title": "Show HN: Agent-Oriented Programming next programming paradigm",
         "points": 1,
         "num_comments": 0,
-        "author": "gurvinderd",
         "created_at": "2025-06-03T04:35:31Z"
       },
       {
@@ -306,7 +269,6 @@
         "title": "Firefox Wayland Development in 2021",
         "points": 47,
         "num_comments": 13,
-        "author": "mfilion",
         "created_at": "2021-10-01T14:00:41Z"
       },
       {
@@ -314,7 +276,6 @@
         "title": "Firefox and Linux in 2025",
         "points": 9,
         "num_comments": 0,
-        "author": "TangerineDream",
         "created_at": "2026-01-23T12:38:02Z"
       },
       {
@@ -322,7 +283,6 @@
         "title": "The MCP Registry Registry",
         "points": 7,
         "num_comments": 1,
-        "author": "codekarate",
         "created_at": "2025-04-10T15:20:44Z"
       }
     ]

@@ -1,7 +1,7 @@
 {
   "project": "Agent Zero",
   "repo": "agent0ai/agent-zero",
-  "collected_at": "2026-05-22T12:11:48.726578+00:00",
+  "collected_at": "2026-05-22T12:34:54.301638+00:00",
   "total_hits": 62,
   "results": {
     "Agent Zero": [
@@ -10,7 +10,6 @@
         "title": "One Developer, Two Dozen Agents, Zero Alignment",
         "points": 9,
         "num_comments": 3,
-        "author": "andrem",
         "created_at": "2026-04-14T14:32:16Z"
       },
       {
@@ -18,7 +17,6 @@
         "title": "Show HN: AILA – Local-first autonomous agent with zero-remote-override",
         "points": 5,
         "num_comments": 5,
-        "author": "marcoheigl",
         "created_at": "2026-02-16T14:46:56Z"
       },
       {
@@ -26,7 +24,6 @@
         "title": "Show HN: Mnemosyne – Cognitive memory OS for AI agents (zero LLM calls)",
         "points": 5,
         "num_comments": 1,
-        "author": "mnemosy",
         "created_at": "2026-02-24T22:02:47Z"
       },
       {
@@ -34,7 +31,6 @@
         "title": "Kookoo cloud call center. Zero agent rental",
         "points": 5,
         "num_comments": 1,
-        "author": "nutanc",
         "created_at": "2017-03-09T02:26:38Z"
       },
       {
@@ -42,7 +38,6 @@
         "title": "Show HN: CyberGym/BountyBench-AI agents find zero-days and solve bug bounties",
         "points": 5,
         "num_comments": 0,
-        "author": "riya_dulepet",
         "created_at": "2025-06-20T15:01:56Z"
       },
       {
@@ -50,7 +45,6 @@
         "title": "Show HN: Pilot Protocol – UDP overlay network stack for AI agents(Go, zero deps)",
         "points": 4,
         "num_comments": 6,
-        "author": "teocalin37",
         "created_at": "2026-02-08T17:45:46Z"
       },
       {
@@ -58,7 +52,6 @@
         "title": "Show HN: Adversarial Code Review paired agents, zero noise,validated findings",
         "points": 3,
         "num_comments": 1,
-        "author": "rainmod",
         "created_at": "2026-03-13T05:15:47Z"
       },
       {
@@ -66,7 +59,6 @@
         "title": "One Developer, Two Dozen Agents, Zero Alignment",
         "points": 3,
         "num_comments": 0,
-        "author": "facundo_olano",
         "created_at": "2026-04-14T23:52:32Z"
       },
       {
@@ -74,7 +66,6 @@
         "title": "Show HN: VebGen – Autonomous AI agent with zero-token AST intelligence",
         "points": 3,
         "num_comments": 0,
-        "author": "vebgen",
         "created_at": "2025-10-20T12:34:01Z"
       },
       {
@@ -82,7 +73,6 @@
         "title": "Agent Zero AI Framework",
         "points": 3,
         "num_comments": 0,
-        "author": "indigodaddy",
         "created_at": "2025-08-08T16:26:47Z"
       },
       {
@@ -90,7 +80,6 @@
         "title": "Agent Zero AI Framework",
         "points": 3,
         "num_comments": 0,
-        "author": "baxtr",
         "created_at": "2024-10-18T12:05:40Z"
       },
       {
@@ -98,7 +87,6 @@
         "title": "Agent Zero AI Framework",
         "points": 3,
         "num_comments": 0,
-        "author": "sabrina_ramonov",
         "created_at": "2024-07-30T13:57:16Z"
       },
       {
@@ -106,7 +94,6 @@
         "title": "Zero Agent Gate: Agent-to-Service Auth That Keeps Secrets Out of the LLM",
         "points": 2,
         "num_comments": 0,
-        "author": "shivekkhurana",
         "created_at": "2026-02-18T17:44:39Z"
       },
       {
@@ -114,7 +101,6 @@
         "title": "AgentZero++: Modeling Fear-Based Behavior",
         "points": 2,
         "num_comments": 0,
-        "author": "PaulHoule",
         "created_at": "2025-10-16T16:38:56Z"
       },
       {
@@ -122,7 +108,6 @@
         "title": "Tethyr Cloud: Open Agent discovery, zero vendor lock-in (AIdeas Semi-finalist)",
         "points": 1,
         "num_comments": 3,
-        "author": "walmsles",
         "created_at": "2026-03-14T04:22:03Z"
       },
       {
@@ -130,7 +115,6 @@
         "title": "An autonomous newspaper run by 18 AI agents, zero humans",
         "points": 1,
         "num_comments": 3,
-        "author": "jpisanu",
         "created_at": "2026-03-13T15:42:45Z"
       },
       {
@@ -138,7 +122,6 @@
         "title": "One Developer, Two Dozen Agents, Zero Alignment",
         "points": 1,
         "num_comments": 1,
-        "author": "herbertl",
         "created_at": "2026-04-25T21:28:06Z"
       },
       {
@@ -146,7 +129,6 @@
         "title": "Agent Zero AI: open-source agentic framework and computer assistant",
         "points": 1,
         "num_comments": 1,
-        "author": "quinncom",
         "created_at": "2026-02-15T21:02:22Z"
       },
       {
@@ -154,7 +136,6 @@
         "title": "One Developer, Two Dozen Agents, Zero Alignment",
         "points": 1,
         "num_comments": 0,
-        "author": "maxua",
         "created_at": "2026-05-01T10:01:38Z"
       },
       {
@@ -162,7 +143,6 @@
         "title": "One Developer, Two Dozen Agents, Zero Alignment",
         "points": 1,
         "num_comments": 0,
-        "author": "romac",
         "created_at": "2026-04-29T18:31:00Z"
       },
       {
@@ -170,7 +150,6 @@
         "title": "Show HN: ClawMoat – Open-source runtime security for AI agents (zero deps, <1ms)",
         "points": 1,
         "num_comments": 0,
-        "author": "ildar",
         "created_at": "2026-02-25T07:31:07Z"
       },
       {
@@ -178,7 +157,6 @@
         "title": "Build Your Own Coding Agent: A Zero-Magic Guide to AI Agents in Pure Python",
         "points": 1,
         "num_comments": 0,
-        "author": "owenthereal",
         "created_at": "2026-02-10T16:06:38Z"
       },
       {
@@ -186,7 +164,6 @@
         "title": "Show HN: Zero Agent – agentless PC inventory → offline HTML/CSV reports",
         "points": 1,
         "num_comments": 0,
-        "author": "kuni_ops",
         "created_at": "2025-12-15T05:14:30Z"
       },
       {
@@ -194,7 +171,6 @@
         "title": "Show HN: Trust Protocols for Anthropic/OpenAI/Gemini",
         "points": 40,
         "num_comments": 33,
-        "author": "alexgarden",
         "created_at": "2026-02-18T16:33:56Z"
       },
       {
@@ -202,7 +178,6 @@
         "title": "Show HN: My agents are building a secure fork of OpenClaw",
         "points": 9,
         "num_comments": 0,
-        "author": "stcredzero",
         "created_at": "2026-02-13T17:59:34Z"
       },
       {
@@ -210,7 +185,6 @@
         "title": "Show HN: Vibe Remote – Code from your bed or the park with Claude Code/Codex",
         "points": 7,
         "num_comments": 4,
-        "author": "amarkdown",
         "created_at": "2026-03-18T04:24:48Z"
       },
       {
@@ -218,7 +192,6 @@
         "title": "Show HN: Agent from Scratch – Bootstrap an agent from a copy-paste, no framework",
         "points": 3,
         "num_comments": 0,
-        "author": "brotchie",
         "created_at": "2026-03-03T19:08:34Z"
       },
       {
@@ -226,7 +199,6 @@
         "title": "Show HN: Oc-mnemoria – Persistent memory for AI coding agents",
         "points": 3,
         "num_comments": 0,
-        "author": "one-bit",
         "created_at": "2026-03-02T11:46:38Z"
       },
       {
@@ -234,7 +206,6 @@
         "title": "Show HN: OnGarde – Runtime content security proxy for self-hosted AI agents",
         "points": 2,
         "num_comments": 1,
-        "author": "antimaterial",
         "created_at": "2026-02-26T17:04:08Z"
       },
       {
@@ -242,7 +213,6 @@
         "title": "Show HN: I Built \"Vercel for Stateful AI Agents\" – open-source, cost-efficient",
         "points": 2,
         "num_comments": 1,
-        "author": "cyw",
         "created_at": "2025-07-28T23:15:36Z"
       },
       {
@@ -250,7 +220,6 @@
         "title": "Show HN: Domscribe – Deterministic DOM-to-source mapping for AI coding agents",
         "points": 2,
         "num_comments": 0,
-        "author": "NarratorTD",
         "created_at": "2026-03-31T18:26:14Z"
       },
       {
@@ -258,7 +227,6 @@
         "title": "Show HN: Tentacle – Local-first note taking app that organizes itself",
         "points": 2,
         "num_comments": 0,
-        "author": "nicoleao",
         "created_at": "2026-02-25T18:16:34Z"
       },
       {
@@ -266,7 +234,6 @@
         "title": "Show HN: A simple hardened AI Docker cluster",
         "points": 1,
         "num_comments": 1,
-        "author": "kummap",
         "created_at": "2026-03-11T09:11:14Z"
       },
       {
@@ -274,7 +241,6 @@
         "title": "Show HN: H-CLI – Manage network infrastructure with natural language",
         "points": 1,
         "num_comments": 1,
-        "author": "h-network",
         "created_at": "2026-02-28T11:43:46Z"
       },
       {
@@ -282,7 +248,6 @@
         "title": "Hey HN – Metrx, scorecard for AI agents to understand and optimize their worth",
         "points": 1,
         "num_comments": 0,
-        "author": "ckpark123",
         "created_at": "2026-03-12T18:04:08Z"
       },
       {
@@ -290,7 +255,6 @@
         "title": "Show HN: Evalcraft – cassette-based testing for AI agents (pytest, $0/run)",
         "points": 1,
         "num_comments": 0,
-        "author": "beyhang",
         "created_at": "2026-03-06T10:52:47Z"
       },
       {
@@ -298,7 +262,6 @@
         "title": "I built orKa-reasoning: a modular orchestration layer for explainable AI agents",
         "points": 1,
         "num_comments": 0,
-        "author": "marcosomma-orka",
         "created_at": "2025-06-24T14:22:25Z"
       },
       {
@@ -306,7 +269,6 @@
         "title": "Show HN: Minimalist framework for building POC AI agents",
         "points": 1,
         "num_comments": 0,
-        "author": "gabrigooo",
         "created_at": "2025-03-10T03:52:20Z"
       },
       {
@@ -314,7 +276,6 @@
         "title": "Teams of LLM Agents Can Exploit Zero-Day Vulnerabilities",
         "points": 105,
         "num_comments": 75,
-        "author": "belter",
         "created_at": "2024-06-09T14:15:06Z"
       },
       {
@@ -322,7 +283,6 @@
         "title": "Show HN: Zeroclawed: Secure Agent Gateway",
         "points": 8,
         "num_comments": 3,
-        "author": "bglusman",
         "created_at": "2026-04-10T13:32:40Z"
       }
     ],
@@ -332,7 +292,6 @@
         "title": "One Developer, Two Dozen Agents, Zero Alignment",
         "points": 9,
         "num_comments": 3,
-        "author": "andrem",
         "created_at": "2026-04-14T14:32:16Z"
       },
       {
@@ -340,7 +299,6 @@
         "title": "Show HN: Mnemosyne – Cognitive memory OS for AI agents (zero LLM calls)",
         "points": 5,
         "num_comments": 1,
-        "author": "mnemosy",
         "created_at": "2026-02-24T22:02:47Z"
       },
       {
@@ -348,7 +306,6 @@
         "title": "Show HN: Adversarial Code Review paired agents, zero noise,validated findings",
         "points": 3,
         "num_comments": 1,
-        "author": "rainmod",
         "created_at": "2026-03-13T05:15:47Z"
       },
       {
@@ -356,7 +313,6 @@
         "title": "One Developer, Two Dozen Agents, Zero Alignment",
         "points": 3,
         "num_comments": 0,
-        "author": "facundo_olano",
         "created_at": "2026-04-14T23:52:32Z"
       },
       {
@@ -364,7 +320,6 @@
         "title": "Agent Zero AI Framework",
         "points": 3,
         "num_comments": 0,
-        "author": "indigodaddy",
         "created_at": "2025-08-08T16:26:47Z"
       },
       {
@@ -372,7 +327,6 @@
         "title": "Agent Zero AI Framework",
         "points": 3,
         "num_comments": 0,
-        "author": "baxtr",
         "created_at": "2024-10-18T12:05:40Z"
       },
       {
@@ -380,7 +334,6 @@
         "title": "Agent Zero AI Framework",
         "points": 3,
         "num_comments": 0,
-        "author": "sabrina_ramonov",
         "created_at": "2024-07-30T13:57:16Z"
       },
       {
@@ -388,7 +341,6 @@
         "title": "AgentZero++: Modeling Fear-Based Behavior",
         "points": 2,
         "num_comments": 0,
-        "author": "PaulHoule",
         "created_at": "2025-10-16T16:38:56Z"
       },
       {
@@ -396,7 +348,6 @@
         "title": "An autonomous newspaper run by 18 AI agents, zero humans",
         "points": 1,
         "num_comments": 3,
-        "author": "jpisanu",
         "created_at": "2026-03-13T15:42:45Z"
       },
       {
@@ -404,7 +355,6 @@
         "title": "One Developer, Two Dozen Agents, Zero Alignment",
         "points": 1,
         "num_comments": 1,
-        "author": "herbertl",
         "created_at": "2026-04-25T21:28:06Z"
       },
       {
@@ -412,7 +362,6 @@
         "title": "Agent Zero AI: open-source agentic framework and computer assistant",
         "points": 1,
         "num_comments": 1,
-        "author": "quinncom",
         "created_at": "2026-02-15T21:02:22Z"
       },
       {
@@ -420,7 +369,6 @@
         "title": "One Developer, Two Dozen Agents, Zero Alignment",
         "points": 1,
         "num_comments": 0,
-        "author": "maxua",
         "created_at": "2026-05-01T10:01:38Z"
       },
       {
@@ -428,7 +376,6 @@
         "title": "One Developer, Two Dozen Agents, Zero Alignment",
         "points": 1,
         "num_comments": 0,
-        "author": "romac",
         "created_at": "2026-04-29T18:31:00Z"
       },
       {
@@ -436,7 +383,6 @@
         "title": "Show HN: ClawMoat – Open-source runtime security for AI agents (zero deps, <1ms)",
         "points": 1,
         "num_comments": 0,
-        "author": "ildar",
         "created_at": "2026-02-25T07:31:07Z"
       },
       {
@@ -444,7 +390,6 @@
         "title": "Show HN: OnGarde – Runtime content security proxy for self-hosted AI agents",
         "points": 2,
         "num_comments": 1,
-        "author": "antimaterial",
         "created_at": "2026-02-26T17:04:08Z"
       },
       {
@@ -452,7 +397,6 @@
         "title": "Show HN: Tentacle – Local-first note taking app that organizes itself",
         "points": 2,
         "num_comments": 0,
-        "author": "nicoleao",
         "created_at": "2026-02-25T18:16:34Z"
       },
       {
@@ -460,7 +404,6 @@
         "title": "I built orKa-reasoning: a modular orchestration layer for explainable AI agents",
         "points": 1,
         "num_comments": 0,
-        "author": "marcosomma-orka",
         "created_at": "2025-06-24T14:22:25Z"
       },
       {
@@ -468,7 +411,6 @@
         "title": "When zero cost abstractions aren't zero cost",
         "points": 166,
         "num_comments": 97,
-        "author": "harporoeder",
         "created_at": "2021-08-09T19:17:27Z"
       },
       {
@@ -476,7 +418,6 @@
         "title": "When Zero Cost Abstractions Aren't Zero Cost",
         "points": 6,
         "num_comments": 0,
-        "author": "herbstein",
         "created_at": "2021-08-09T08:55:58Z"
       },
       {
@@ -484,7 +425,6 @@
         "title": "Zero-cost exceptions aren't zero cost",
         "points": 4,
         "num_comments": 0,
-        "author": "signa11",
         "created_at": "2022-03-01T05:46:56Z"
       },
       {
@@ -492,7 +432,6 @@
         "title": "Zero-cost exceptions aren’t zero cost",
         "points": 3,
         "num_comments": 0,
-        "author": "ingve",
         "created_at": "2022-02-28T17:44:10Z"
       },
       {
@@ -500,7 +439,6 @@
         "title": "Zero-cost exceptions aren’t zero cost",
         "points": 2,
         "num_comments": 0,
-        "author": "DeathArrow",
         "created_at": "2022-04-22T15:03:41Z"
       }
     ]

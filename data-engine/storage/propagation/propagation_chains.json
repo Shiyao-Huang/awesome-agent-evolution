@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-22T12:17:23.811820+00:00",
-  "total_projects": 21,
+  "generated_at": "2026-05-22T12:40:22.069624+00:00",
+  "total": 36,
   "chains": [
     {
       "project": "EvoAgentX",
@@ -9,6 +9,48 @@
           "date": "2025-04-15T21:48:15Z",
           "platform": "github",
           "title": "Stars: 3,029"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "eliza",
+      "timeline": [
+        {
+          "date": "2024-07-09T07:55:40Z",
+          "platform": "github",
+          "title": "Stars: 18,428"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "SWE-agent",
+      "timeline": [
+        {
+          "date": "2024-04-02T04:09:47Z",
+          "platform": "github",
+          "title": "Stars: 19,268"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "dify",
+      "timeline": [
+        {
+          "date": "2023-04-12T07:40:24Z",
+          "platform": "github",
+          "title": "Stars: 142,248"
         }
       ],
       "platforms": {
@@ -31,54 +73,54 @@
       "total_events": 1
     },
     {
+      "project": "reflexion",
+      "timeline": [
+        {
+          "date": "2023-03-22T06:38:53Z",
+          "platform": "github",
+          "title": "Stars: 3,158"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "adk-python",
+      "timeline": [
+        {
+          "date": "2025-04-01T20:44:40Z",
+          "platform": "github",
+          "title": "Stars: 19,796"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "mastra",
+      "timeline": [
+        {
+          "date": "2024-08-06T20:44:31Z",
+          "platform": "github",
+          "title": "Stars: 24,197"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
       "project": "openevolve",
       "timeline": [
         {
           "date": "2025-05-15T11:46:52Z",
           "platform": "github",
           "title": "Stars: 6,361"
-        }
-      ],
-      "platforms": {
-        "github": 1
-      },
-      "total_events": 1
-    },
-    {
-      "project": "openclaw",
-      "timeline": [
-        {
-          "date": "2025-11-24T10:16:47Z",
-          "platform": "github",
-          "title": "Stars: 373,880"
-        }
-      ],
-      "platforms": {
-        "github": 1
-      },
-      "total_events": 1
-    },
-    {
-      "project": "babyagi",
-      "timeline": [
-        {
-          "date": "2023-04-03T00:40:27Z",
-          "platform": "github",
-          "title": "Stars: 22,271"
-        }
-      ],
-      "platforms": {
-        "github": 1
-      },
-      "total_events": 1
-    },
-    {
-      "project": "funsearch",
-      "timeline": [
-        {
-          "date": "2023-11-23T11:33:50Z",
-          "platform": "github",
-          "title": "Stars: 1,064"
         }
       ],
       "platforms": {
@@ -101,12 +143,12 @@
       "total_events": 1
     },
     {
-      "project": "browser-use",
+      "project": "Roo-Code",
       "timeline": [
         {
-          "date": "2024-10-31T16:00:56Z",
+          "date": "2024-10-31T17:56:50Z",
           "platform": "github",
-          "title": "Stars: 95,082"
+          "title": "Stars: 24,129"
         }
       ],
       "platforms": {
@@ -115,12 +157,12 @@
       "total_events": 1
     },
     {
-      "project": "claw-code",
+      "project": "open-webui",
       "timeline": [
         {
-          "date": "2026-03-31T08:58:08Z",
+          "date": "2023-10-06T22:08:27Z",
           "platform": "github",
-          "title": "Stars: 192,223"
+          "title": "Stars: 138,204"
         }
       ],
       "platforms": {
@@ -129,12 +171,54 @@
       "total_events": 1
     },
     {
-      "project": "hermes-agent",
+      "project": "goose",
       "timeline": [
         {
-          "date": "2025-07-22T22:22:28Z",
+          "date": "2024-08-23T19:03:36Z",
           "platform": "github",
-          "title": "Stars: 162,449"
+          "title": "Stars: 45,672"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "n8n",
+      "timeline": [
+        {
+          "date": "2019-06-22T09:24:21Z",
+          "platform": "github",
+          "title": "Stars: 189,218"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "openfang",
+      "timeline": [
+        {
+          "date": "2026-02-24T23:12:38Z",
+          "platform": "github",
+          "title": "Stars: 17,614"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "chatgpt-on-wechat",
+      "timeline": [
+        {
+          "date": "2022-08-07T08:33:41Z",
+          "platform": "github",
+          "title": "Stars: 44,715"
         }
       ],
       "platforms": {
@@ -157,12 +241,68 @@
       "total_events": 1
     },
     {
+      "project": "pydantic-ai",
+      "timeline": [
+        {
+          "date": "2024-06-21T15:55:04Z",
+          "platform": "github",
+          "title": "Stars: 17,211"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "haystack",
+      "timeline": [
+        {
+          "date": "2019-11-14T09:05:28Z",
+          "platform": "github",
+          "title": "Stars: 25,341"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
       "project": "HyperAgents",
       "timeline": [
         {
           "date": "2026-03-19T17:24:07Z",
           "platform": "github",
           "title": "Stars: 2,513"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "ollama",
+      "timeline": [
+        {
+          "date": "2023-06-26T19:39:32Z",
+          "platform": "github",
+          "title": "Stars: 172,002"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "codex",
+      "timeline": [
+        {
+          "date": "2025-04-13T05:37:54Z",
+          "platform": "github",
+          "title": "Stars: 84,606"
         }
       ],
       "platforms": {
@@ -199,12 +339,54 @@
       "total_events": 1
     },
     {
-      "project": "opro",
+      "project": "langgraph",
       "timeline": [
         {
-          "date": "2023-10-02T04:30:31Z",
+          "date": "2023-08-09T18:33:12Z",
           "platform": "github",
-          "title": "Stars: 746"
+          "title": "Stars: 32,688"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "agent-skills",
+      "timeline": [
+        {
+          "date": "2026-02-15T20:20:26Z",
+          "platform": "github",
+          "title": "Stars: 44,785"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "agenticSeek",
+      "timeline": [
+        {
+          "date": "2025-02-19T18:03:06Z",
+          "platform": "github",
+          "title": "Stars: 26,392"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "claude-code",
+      "timeline": [
+        {
+          "date": "2025-02-22T17:41:21Z",
+          "platform": "github",
+          "title": "Stars: 125,688"
         }
       ],
       "platforms": {
@@ -227,40 +409,40 @@
       "total_events": 1
     },
     {
+      "project": "devika",
+      "timeline": [
+        {
+          "date": "2024-03-21T03:03:21Z",
+          "platform": "github",
+          "title": "Stars: 19,509"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "coze-studio",
+      "timeline": [
+        {
+          "date": "2025-06-26T02:19:21Z",
+          "platform": "github",
+          "title": "Stars: 20,810"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
       "project": "mem0",
       "timeline": [
         {
           "date": "2023-06-20T08:58:36Z",
           "platform": "github",
-          "title": "Stars: 56,425"
-        }
-      ],
-      "platforms": {
-        "github": 1
-      },
-      "total_events": 1
-    },
-    {
-      "project": "dspy",
-      "timeline": [
-        {
-          "date": "2023-01-09T21:01:51Z",
-          "platform": "github",
-          "title": "Stars: 34,584"
-        }
-      ],
-      "platforms": {
-        "github": 1
-      },
-      "total_events": 1
-    },
-    {
-      "project": "ADAS",
-      "timeline": [
-        {
-          "date": "2024-07-31T16:08:55Z",
-          "platform": "github",
-          "title": "Stars: 1,579"
+          "title": "Stars: 56,428"
         }
       ],
       "platforms": {
@@ -283,12 +465,40 @@
       "total_events": 1
     },
     {
+      "project": "agno",
+      "timeline": [
+        {
+          "date": "2022-05-04T15:23:02Z",
+          "platform": "github",
+          "title": "Stars: 40,299"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
       "project": "letta",
       "timeline": [
         {
           "date": "2023-10-11T07:38:37Z",
           "platform": "github",
           "title": "Stars: 22,886"
+        }
+      ],
+      "platforms": {
+        "github": 1
+      },
+      "total_events": 1
+    },
+    {
+      "project": "plandex",
+      "timeline": [
+        {
+          "date": "2023-10-24T22:11:43Z",
+          "platform": "github",
+          "title": "Stars: 15,387"
         }
       ],
       "platforms": {

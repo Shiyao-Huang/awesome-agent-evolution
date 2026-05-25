@@ -1,7 +1,7 @@
 {
   "project": "evolver",
   "repo": "EvoMap/evolver",
-  "collected_at": "2026-05-22T12:12:18.909311+00:00",
+  "collected_at": "2026-05-22T12:35:34.793453+00:00",
   "total_hits": 40,
   "results": {
     "evolver": [
@@ -10,7 +10,6 @@
         "title": "Evolver.com automates 3D Avatar and digital clone creation",
         "points": 2,
         "num_comments": 0,
-        "author": "jpirkola",
         "created_at": "2009-08-02T18:55:21Z"
       },
       {
@@ -18,7 +17,6 @@
         "title": "Hermes Agent Self-Evolution System: A Detailed Similarity Analysis with Evolver",
         "points": 2,
         "num_comments": 0,
-        "author": "tamnd",
         "created_at": "2026-04-15T21:11:25Z"
       },
       {
@@ -26,7 +24,6 @@
         "title": "Get Your Bleeding Psychedelic A-Life Evolver",
         "points": 1,
         "num_comments": 2,
-        "author": "brilanon",
         "created_at": "2010-12-21T16:19:14Z"
       },
       {
@@ -34,7 +31,6 @@
         "title": "Evolver: VLSI for High Throughput Growth Experiments in Systems Biology",
         "points": 1,
         "num_comments": 1,
-        "author": "ArtWomb",
         "created_at": "2018-07-10T11:26:55Z"
       },
       {
@@ -42,7 +38,6 @@
         "title": "Corewar Tiny Evolver",
         "points": 1,
         "num_comments": 0,
-        "author": "edw519",
         "created_at": "2009-06-11T00:42:57Z"
       },
       {
@@ -50,7 +45,6 @@
         "title": "The Eatery + Fitocracy = Evolver",
         "points": 1,
         "num_comments": 0,
-        "author": "jbermudez5",
         "created_at": "2013-05-14T20:45:34Z"
       },
       {
@@ -58,7 +52,6 @@
         "title": "Twitter Music Trends Reveals Most-Discussed Artists | Evolver.fm",
         "points": 1,
         "num_comments": 0,
-        "author": "th0ma5",
         "created_at": "2011-12-06T19:14:46Z"
       },
       {
@@ -66,7 +59,6 @@
         "title": "Patient Evolver",
         "points": 1,
         "num_comments": 0,
-        "author": "sfisci",
         "created_at": "2017-10-22T04:15:59Z"
       },
       {
@@ -74,7 +66,6 @@
         "title": "Ask HN: Name my crazy idea",
         "points": 6,
         "num_comments": 13,
-        "author": "andrewljohnson",
         "created_at": "2009-11-06T22:46:54Z"
       },
       {
@@ -82,7 +73,6 @@
         "title": "Staff Consultant- Network Engineer",
         "points": 1,
         "num_comments": 0,
-        "author": "julia_tain",
         "created_at": "2012-02-23T20:07:21Z"
       },
       {
@@ -90,7 +80,6 @@
         "title": "10 Years of iPod Commercials (in one playlist)",
         "points": 1,
         "num_comments": 0,
-        "author": "kalebaskew",
         "created_at": "2012-01-09T01:07:22Z"
       },
       {
@@ -98,7 +87,6 @@
         "title": "How A 17-Year-Old Girl Won a Hackathon",
         "points": 68,
         "num_comments": 80,
-        "author": "njl",
         "created_at": "2013-04-30T20:17:02Z"
       },
       {
@@ -106,7 +94,6 @@
         "title": "Beyond Oblivion: How a Promising Music Startup Imploded",
         "points": 68,
         "num_comments": 24,
-        "author": "masonhensley",
         "created_at": "2012-03-03T00:45:04Z"
       },
       {
@@ -114,7 +101,6 @@
         "title": "Songkick (YC S07) iPhone app: 100,000 concerts in your pocket",
         "points": 42,
         "num_comments": 5,
-        "author": "ian",
         "created_at": "2011-06-08T19:08:13Z"
       },
       {
@@ -122,7 +108,6 @@
         "title": "SXSW: Pitivi Aims To Bring Real Video Editing to Linux",
         "points": 39,
         "num_comments": 28,
-        "author": "yiedyie",
         "created_at": "2014-03-11T09:31:20Z"
       },
       {
@@ -130,7 +115,6 @@
         "title": "The Uninterrupter: GPS that sings along with your car stereo",
         "points": 38,
         "num_comments": 9,
-        "author": "ashearer",
         "created_at": "2010-10-21T13:44:48Z"
       },
       {
@@ -138,7 +122,6 @@
         "title": "Former Google engineer builds Turntable clone",
         "points": 14,
         "num_comments": 9,
-        "author": "kraymer",
         "created_at": "2011-08-03T08:23:26Z"
       },
       {
@@ -146,7 +129,6 @@
         "title": "Surprise: You Can’t Make Apps on an iPad",
         "points": 10,
         "num_comments": 3,
-        "author": "tilt",
         "created_at": "2011-10-28T13:34:29Z"
       },
       {
@@ -154,7 +136,6 @@
         "title": "Online Listening Rooms Spring Music Fans From Their Cocoons",
         "points": 6,
         "num_comments": 0,
-        "author": "ivankirigin",
         "created_at": "2011-06-07T18:23:30Z"
       },
       {
@@ -162,7 +143,6 @@
         "title": "LLM-Based Evolution as a Universal Optimizer",
         "points": 5,
         "num_comments": 0,
-        "author": "miohtama",
         "created_at": "2026-02-27T21:13:41Z"
       },
       {
@@ -170,7 +150,6 @@
         "title": "We built Instapaper for Music at Music Hack Day Sydney",
         "points": 4,
         "num_comments": 0,
-        "author": "taybenlor",
         "created_at": "2012-05-04T00:01:47Z"
       },
       {
@@ -178,7 +157,6 @@
         "title": "Data Visualizations: How Songs Go Viral on Turntable.fm",
         "points": 3,
         "num_comments": 0,
-        "author": "dandelany",
         "created_at": "2013-02-22T17:20:25Z"
       },
       {
@@ -186,7 +164,6 @@
         "title": "3D Facial Scanning and Historical Morphing on the iPad",
         "points": 3,
         "num_comments": 0,
-        "author": "ynniv",
         "created_at": "2012-12-19T17:40:14Z"
       },
       {
@@ -194,7 +171,6 @@
         "title": "6 Reasons Grooveshark’s CEO Thinks Recorded Music Should Be Free",
         "points": 2,
         "num_comments": 3,
-        "author": "daegloe",
         "created_at": "2012-04-20T02:55:55Z"
       },
       {
@@ -202,7 +178,6 @@
         "title": "To understand how societies evolve, read the problem pages",
         "points": 2,
         "num_comments": 1,
-        "author": "e15ctr0n",
         "created_at": "2015-12-16T22:11:54Z"
       },
       {
@@ -210,7 +185,6 @@
         "title": "People Consume 10x More Music Than Sports, So Why Does Sports Make 6x the Cash?",
         "points": 2,
         "num_comments": 0,
-        "author": "r0h1n",
         "created_at": "2013-10-14T17:20:42Z"
       },
       {
@@ -218,7 +192,6 @@
         "title": "Show HN: Reviews Checker for Android Developers",
         "points": 2,
         "num_comments": 0,
-        "author": "evolverie",
         "created_at": "2013-06-07T21:55:18Z"
       },
       {
@@ -226,7 +199,6 @@
         "title": "Gammification of Healthy Eating",
         "points": 2,
         "num_comments": 0,
-        "author": "jbermudez5",
         "created_at": "2013-05-14T14:43:49Z"
       },
       {
@@ -234,7 +206,6 @@
         "title": "Radio Reddit: Homespun Hits, Crowdsourced Curation, Melodious Memes",
         "points": 2,
         "num_comments": 0,
-        "author": "mfcalvanese",
         "created_at": "2012-09-27T22:54:04Z"
       },
       {
@@ -242,7 +213,6 @@
         "title": "Show HN: Widgeton - 4 ways to be faster with your device (android widget)",
         "points": 2,
         "num_comments": 0,
-        "author": "evolverie",
         "created_at": "2012-09-19T17:10:34Z"
       },
       {
@@ -250,7 +220,6 @@
         "title": "Inside the Project to Immortalize John Peel's Record Collection",
         "points": 2,
         "num_comments": 0,
-        "author": "soulclap",
         "created_at": "2012-06-26T18:18:01Z"
       },
       {
@@ -258,7 +227,6 @@
         "title": "Something Is Broken If Internet Radio Has to Charge Bands to Make Money",
         "points": 2,
         "num_comments": 0,
-        "author": "daegloe",
         "created_at": "2012-03-29T18:47:48Z"
       },
       {
@@ -266,7 +234,6 @@
         "title": "DJ Spooky on Apps, WiFi Music Parties, and the ‘Post-Playlist Era’",
         "points": 2,
         "num_comments": 0,
-        "author": "DrewDev",
         "created_at": "2012-03-03T05:33:02Z"
       },
       {
@@ -274,7 +241,6 @@
         "title": "Amazon Cloud Music Player Deleted from Apple App Store due to ‘Legal Issues'",
         "points": 2,
         "num_comments": 0,
-        "author": "nextparadigms",
         "created_at": "2011-11-01T19:13:59Z"
       },
       {
@@ -282,7 +248,6 @@
         "title": "Songcoin Wants To Be Music’s Alternative Currency",
         "points": 1,
         "num_comments": 0,
-        "author": "spillywillly",
         "created_at": "2014-02-25T22:47:46Z"
       },
       {
@@ -290,7 +255,6 @@
         "title": "Turn a crowd and their devices into a huge stereo system",
         "points": 1,
         "num_comments": 0,
-        "author": "paul7986",
         "created_at": "2014-02-01T07:19:44Z"
       },
       {
@@ -298,7 +262,6 @@
         "title": "Reasons why teen hackathons need to exist.",
         "points": 1,
         "num_comments": 0,
-        "author": "karlcoelho1",
         "created_at": "2013-11-22T11:22:55Z"
       },
       {
@@ -306,7 +269,6 @@
         "title": "Google Moto X - First Smartphone Built In America",
         "points": 1,
         "num_comments": 0,
-        "author": "mindcrime",
         "created_at": "2013-05-31T18:43:12Z"
       },
       {
@@ -314,7 +276,6 @@
         "title": "How a fake heart attack led to building an app",
         "points": 1,
         "num_comments": 0,
-        "author": "jbermudez5",
         "created_at": "2013-05-14T08:08:20Z"
       },
       {
@@ -322,7 +283,6 @@
         "title": "Anthm reborn as Jukio after Rush (the band) takedown",
         "points": 1,
         "num_comments": 0,
-        "author": "codezy",
         "created_at": "2013-05-10T16:41:53Z"
       }
     ]

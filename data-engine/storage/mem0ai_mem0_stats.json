@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "collection_timestamp": "2026-05-22T12:11:51.204482+00:00",
+    "collection_timestamp": "2026-05-22T12:29:22.633573+00:00",
     "repo": "mem0ai/mem0",
     "collector_name": "github_quick_stats"
   },
   "data": {
     "full_name": "mem0ai/mem0",
     "description": "Universal memory layer for AI Agents",
-    "stars": 56425,
+    "stars": 56428,
     "forks": 6431,
     "open_issues": 406,
     "watchers": 227,
@@ -30,7 +30,7 @@
       "state-management"
     ],
     "created_at": "2023-06-20T08:58:36Z",
-    "updated_at": "2026-05-22T12:11:49Z",
+    "updated_at": "2026-05-22T12:26:56Z",
     "pushed_at": "2026-05-22T10:04:07Z",
     "default_branch": "main",
     "archived": false,

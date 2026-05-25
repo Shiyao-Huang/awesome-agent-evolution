@@ -1,0 +1,115 @@
+{
+  "project": "MindSearch",
+  "repo": "InternLM/MindSearch",
+  "collected_at": "2026-05-22T12:45:50.449760+00:00",
+  "total_hits": 15,
+  "results": {
+    "MindSearch": [
+      {
+        "objectID": "41127273",
+        "title": "MindSearch: LLM-Based Web Search Engine Similar to Perplexity.ai and SearchGPT",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2024-08-01T08:53:45Z"
+      },
+      {
+        "objectID": "9307199",
+        "title": "Mental Models: The Mind’s Search Algorithm",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2015-04-01T21:53:15Z"
+      },
+      {
+        "objectID": "9263148",
+        "title": "Mental Models: The Mind's Search Algorithm",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2015-03-25T14:29:40Z"
+      },
+      {
+        "objectID": "1946092",
+        "title": "Ask HN: mad search bots?",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2010-11-27T22:52:47Z"
+      },
+      {
+        "objectID": "19439975",
+        "title": "Do you think a navigator extension can change the behavior of a search engine?",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2019-03-20T08:11:59Z"
+      },
+      {
+        "objectID": "37885752",
+        "title": "Show HN: MiniSearch, a minimalist search engine with integrated browser-based AI",
+        "points": 17,
+        "num_comments": 6,
+        "created_at": "2023-10-15T00:50:08Z"
+      },
+      {
+        "objectID": "19075291",
+        "title": "Show HN: MiniSearch, a client-side full-text search engine",
+        "points": 10,
+        "num_comments": 0,
+        "created_at": "2019-02-04T10:48:20Z"
+      },
+      {
+        "objectID": "33192285",
+        "title": "Minisearch: Tiny, powerful JavaScript full-text search engine for browser, Node",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2022-10-13T15:23:11Z"
+      },
+      {
+        "objectID": "41932378",
+        "title": "MiniSearch: Self-hosted web-search platform with AI assistant in the browser",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2024-10-24T06:01:04Z"
+      },
+      {
+        "objectID": "45955528",
+        "title": "MiniSearch: Self-hosted web-search platform with AI assistant in the browser",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-11-17T17:04:22Z"
+      },
+      {
+        "objectID": "33595788",
+        "title": "MiniSearch – fuzzy match search in TypeScript",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2022-11-14T15:52:45Z"
+      },
+      {
+        "objectID": "43167959",
+        "title": "Show HN: Mayo – A lightweight, web-based audio player that works offline",
+        "points": 26,
+        "num_comments": 2,
+        "created_at": "2025-02-25T03:50:53Z"
+      },
+      {
+        "objectID": "34782230",
+        "title": "Show HN: My personal medical knowledge system",
+        "points": 7,
+        "num_comments": 1,
+        "created_at": "2023-02-13T23:03:15Z"
+      },
+      {
+        "objectID": "41832057",
+        "title": "Show HN: Self-hosteable browser-based minimalist web-searching platform",
+        "points": 5,
+        "num_comments": 3,
+        "created_at": "2024-10-13T22:00:24Z"
+      },
+      {
+        "objectID": "17879578",
+        "title": "MindsMatch-Expand your professional network via 1-on-1 conversations",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2018-08-30T18:49:17Z"
+      }
+    ]
+  }
+}

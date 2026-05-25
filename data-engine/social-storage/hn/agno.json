@@ -1,7 +1,7 @@
 {
   "project": "agno",
   "repo": "agno-agi/agno",
-  "collected_at": "2026-05-22T12:16:17.117804+00:00",
+  "collected_at": "2026-05-22T12:49:18.489450+00:00",
   "total_hits": 40,
   "results": {
     "agno": [
@@ -10,7 +10,6 @@
         "title": "Ask HN: What language-agnostic programming books should I read?",
         "points": 927,
         "num_comments": 337,
-        "author": "robschia",
         "created_at": "2017-06-05T11:03:18Z"
       },
       {
@@ -18,7 +17,6 @@
         "title": "Kubernetes Academy, a free product-agnostic education platform",
         "points": 285,
         "num_comments": 66,
-        "author": "frostmatthew",
         "created_at": "2019-08-28T11:56:46Z"
       },
       {
@@ -26,7 +24,6 @@
         "title": "Mini.css – Minimal, responsive, style-agnostic CSS framework",
         "points": 253,
         "num_comments": 121,
-        "author": "zoria",
         "created_at": "2017-05-04T13:05:53Z"
       },
       {
@@ -34,7 +31,6 @@
         "title": "Being confidently programming language agnostic",
         "points": 235,
         "num_comments": 127,
-        "author": "ergot",
         "created_at": "2017-01-22T16:25:01Z"
       },
       {
@@ -42,7 +38,6 @@
         "title": "GPU vendor-agnostic fluid dynamics solver in Julia",
         "points": 224,
         "num_comments": 104,
-        "author": "moelf",
         "created_at": "2023-05-08T13:44:16Z"
       },
       {
@@ -50,7 +45,6 @@
         "title": "The Language Agnostic, All-Purpose, Incredible, Makefile",
         "points": 216,
         "num_comments": 118,
-        "author": "tannhaeuser",
         "created_at": "2019-11-18T18:05:22Z"
       },
       {
@@ -58,7 +52,6 @@
         "title": "HTML-first, framework-agnostic implementation of shadcn/UI – franken/UI",
         "points": 213,
         "num_comments": 84,
-        "author": "sveltecult",
         "created_at": "2024-04-22T22:18:42Z"
       },
       {
@@ -66,7 +59,6 @@
         "title": "OpenFeature – a vendor-agnostic, community-driven API for feature flagging",
         "points": 194,
         "num_comments": 64,
-        "author": "gjvc",
         "created_at": "2024-10-25T01:26:45Z"
       },
       {
@@ -74,7 +66,6 @@
         "title": "Mini.css: Minimal, responsive, style-agnostic CSS framework",
         "points": 189,
         "num_comments": 95,
-        "author": "zoria",
         "created_at": "2017-04-15T14:19:04Z"
       },
       {
@@ -82,7 +73,6 @@
         "title": "Exploring Weight Agnostic Neural Networks",
         "points": 179,
         "num_comments": 64,
-        "author": "lamchob",
         "created_at": "2019-08-28T05:37:57Z"
       },
       {
@@ -90,7 +80,6 @@
         "title": "Show HN: Way.js – Simple, persistent, framework-agnostic two-way databinding",
         "points": 162,
         "num_comments": 60,
-        "author": "ges",
         "created_at": "2014-08-14T09:29:26Z"
       },
       {
@@ -98,7 +87,6 @@
         "title": "Weight-Agnostic Neural Networks",
         "points": 158,
         "num_comments": 37,
-        "author": "hardmaru",
         "created_at": "2019-06-12T00:15:03Z"
       },
       {
@@ -106,7 +94,6 @@
         "title": "OpenAutoComplete: Shell-agnostic, cross-platform autocomplete specification",
         "points": 138,
         "num_comments": 26,
-        "author": "GamePad64",
         "created_at": "2020-05-21T03:02:46Z"
       },
       {
@@ -114,7 +101,6 @@
         "title": "Hyper – Hypervisor-agnostic Docker engine",
         "points": 125,
         "num_comments": 78,
-        "author": "tbronchain",
         "created_at": "2015-05-29T02:04:18Z"
       },
       {
@@ -122,7 +108,6 @@
         "title": "Show HN: AdminJS, the Backend-Agnostic Administration Framework",
         "points": 119,
         "num_comments": 26,
-        "author": "ghempton",
         "created_at": "2013-08-25T01:04:54Z"
       },
       {
@@ -130,7 +115,6 @@
         "title": "Ask HN: Language-agnostic concepts a Backend Engineer should know?",
         "points": 107,
         "num_comments": 59,
-        "author": "nicksont",
         "created_at": "2021-07-02T11:22:09Z"
       },
       {
@@ -138,7 +122,6 @@
         "title": "Show HN: CalDOM: An agnostic, reactive and minimalist JavaScript UI library",
         "points": 107,
         "num_comments": 57,
-        "author": "dumindaxsb",
         "created_at": "2021-07-17T17:25:54Z"
       },
       {
@@ -146,7 +129,6 @@
         "title": "Adaptive Cards: Platform-agnostic snippets of UI, authored in JSON",
         "points": 100,
         "num_comments": 45,
-        "author": "kaypee901",
         "created_at": "2024-02-07T21:11:05Z"
       },
       {
@@ -154,7 +136,6 @@
         "title": "Smoke.js - A framework-agnostic styled alert/confirm system for javascript",
         "points": 100,
         "num_comments": 27,
-        "author": "js4all",
         "created_at": "2011-07-10T13:06:03Z"
       },
       {
@@ -162,7 +143,6 @@
         "title": "Ask HN: Will there ever be a vendor agnostic GPU interface?",
         "points": 97,
         "num_comments": 100,
-        "author": "slmjkdbtl",
         "created_at": "2021-10-31T17:36:24Z"
       },
       {
@@ -170,7 +150,6 @@
         "title": "OpenHAB – vendor and tech agnostic open source automation software for your home",
         "points": 94,
         "num_comments": 34,
-        "author": "pabs3",
         "created_at": "2022-03-14T02:15:42Z"
       },
       {
@@ -178,7 +157,6 @@
         "title": "Show HN: A backend agnostic Ruby framework for building reactive desktop apps",
         "points": 92,
         "num_comments": 34,
-        "author": "zero-st4rs",
         "created_at": "2025-05-09T16:01:11Z"
       },
       {
@@ -186,7 +164,6 @@
         "title": "Enhance WASM: Back End Agnostic SSR for Web Components",
         "points": 90,
         "num_comments": 71,
-        "author": "robin_reala",
         "created_at": "2024-04-10T06:56:40Z"
       },
       {
@@ -194,7 +171,6 @@
         "title": "Mozilla is looking for help for its browser-agnostic Web documentation",
         "points": 83,
         "num_comments": 23,
-        "author": "lillycat",
         "created_at": "2012-03-20T06:55:33Z"
       },
       {
@@ -202,7 +178,6 @@
         "title": "Eca: Editor Code Assistant – AI pair programming capabilities agnostic of editor",
         "points": 81,
         "num_comments": 3,
-        "author": "simonpure",
         "created_at": "2025-08-13T20:54:51Z"
       },
       {
@@ -210,7 +185,6 @@
         "title": "Show HN: Torii – a framework agnostic authentication library for Rust",
         "points": 80,
         "num_comments": 38,
-        "author": "cmackenzie1",
         "created_at": "2025-02-28T23:16:16Z"
       },
       {
@@ -218,7 +192,6 @@
         "title": "Language-agnostic schemas based on Haskell's type system",
         "points": 80,
         "num_comments": 15,
-        "author": "setra",
         "created_at": "2017-05-20T08:37:07Z"
       },
       {
@@ -226,7 +199,6 @@
         "title": "IBM Adds POWER9 AIO, Pushes for an Open Memory-Agnostic Interface",
         "points": 79,
         "num_comments": 41,
-        "author": "rbanffy",
         "created_at": "2019-11-04T11:34:41Z"
       },
       {
@@ -234,7 +206,6 @@
         "title": "Dbmate: A lightweight, framework-agnostic database migration tool",
         "points": 79,
         "num_comments": 13,
-        "author": "thunderbong",
         "created_at": "2024-06-16T18:40:50Z"
       },
       {
@@ -242,7 +213,6 @@
         "title": "Immortal – A cross-platform, OS-agnostic supervisor for Unix-like platforms",
         "points": 78,
         "num_comments": 35,
-        "author": "tete",
         "created_at": "2017-03-30T12:14:58Z"
       },
       {
@@ -250,7 +220,6 @@
         "title": "The case for language agnostic hiring",
         "points": 77,
         "num_comments": 122,
-        "author": "datanerd613",
         "created_at": "2022-09-01T08:12:59Z"
       },
       {
@@ -258,7 +227,6 @@
         "title": "Show HN: Agno – A full-stack framework for building Multi-Agent Systems",
         "points": 76,
         "num_comments": 19,
-        "author": "bediashpreet",
         "created_at": "2025-06-02T01:18:40Z"
       },
       {
@@ -266,7 +234,6 @@
         "title": "Language-Agnostic Bert Sentence Embedding",
         "points": 74,
         "num_comments": 35,
-        "author": "theafh",
         "created_at": "2020-08-18T19:50:46Z"
       },
       {
@@ -274,7 +241,6 @@
         "title": "GoCircuit: Simple language-agnostic cluster programming",
         "points": 74,
         "num_comments": 4,
-        "author": "whatupdave",
         "created_at": "2014-05-17T22:58:16Z"
       },
       {
@@ -282,7 +248,6 @@
         "title": "Language-Agnostic Sentence Representations",
         "points": 72,
         "num_comments": 11,
-        "author": "sahin-boydas",
         "created_at": "2019-01-24T15:28:37Z"
       },
       {
@@ -290,7 +255,6 @@
         "title": "IronFunctions: language agnostic open-source alternative to AWS Lambda",
         "points": 71,
         "num_comments": 22,
-        "author": "martinpinto",
         "created_at": "2016-11-15T19:24:23Z"
       },
       {
@@ -298,7 +262,6 @@
         "title": "Show HN: Nebula – A network agnostic DHT crawler",
         "points": 68,
         "num_comments": 22,
-        "author": "dennis-tra",
         "created_at": "2024-03-20T10:54:08Z"
       },
       {
@@ -306,7 +269,6 @@
         "title": "Manifold: A model-agnostic visual debugging tool for machine learning (2019)",
         "points": 68,
         "num_comments": 5,
-        "author": "pplonski86",
         "created_at": "2020-02-07T20:20:38Z"
       },
       {
@@ -314,7 +276,6 @@
         "title": "OpenCensus – Vendor-agnostic libraries to provide metrics collection and tracing",
         "points": 64,
         "num_comments": 20,
-        "author": "mooreds",
         "created_at": "2018-11-09T22:45:21Z"
       },
       {
@@ -322,7 +283,6 @@
         "title": "Sixpack: Language-Agnostic A/B Testing",
         "points": 62,
         "num_comments": 16,
-        "author": "zackkitzmiller",
         "created_at": "2013-08-28T14:55:59Z"
       }
     ]

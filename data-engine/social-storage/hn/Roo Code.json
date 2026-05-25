@@ -1,7 +1,7 @@
 {
   "project": "Roo Code",
   "repo": "RooCodeInc/Roo-Code",
-  "collected_at": "2026-05-22T12:17:43.676523+00:00",
+  "collected_at": "2026-05-22T12:42:19.516048+00:00",
   "total_hits": 79,
   "results": {
     "Roo Code": [
@@ -10,7 +10,6 @@
         "title": "Roo code shuts down, Team will focus on roomote agent",
         "points": 28,
         "num_comments": 2,
-        "author": "buster",
         "created_at": "2026-04-21T17:21:10Z"
       },
       {
@@ -18,7 +17,6 @@
         "title": "Poe accounts can now be used to power Cursor, Cline, Roo Code",
         "points": 12,
         "num_comments": 0,
-        "author": "tosh",
         "created_at": "2025-07-31T17:25:45Z"
       },
       {
@@ -26,7 +24,6 @@
         "title": "Open-source plugin brings Roo Code to JetBrains IDEs",
         "points": 3,
         "num_comments": 1,
-        "author": "qdaxb",
         "created_at": "2025-08-03T12:17:40Z"
       },
       {
@@ -34,7 +31,6 @@
         "title": "Free AI Coding Assistant: Setup Roo Code with Free LLM Models",
         "points": 3,
         "num_comments": 0,
-        "author": "hybrid11",
         "created_at": "2025-06-12T17:25:37Z"
       },
       {
@@ -42,7 +38,6 @@
         "title": "RooFlow – Memory Bank System for Roo Code with Footgun Power",
         "points": 3,
         "num_comments": 0,
-        "author": "rahimnathwani",
         "created_at": "2025-04-12T21:22:54Z"
       },
       {
@@ -50,7 +45,6 @@
         "title": "Roo Code 3.7 – Yes, we support Claude Sonnet 3.7",
         "points": 2,
         "num_comments": 1,
-        "author": "hrudolph",
         "created_at": "2025-02-25T06:16:50Z"
       },
       {
@@ -58,7 +52,6 @@
         "title": "Roo Code pivots to cloud-based agent, says IDEs aren't the future of coding",
         "points": 2,
         "num_comments": 0,
-        "author": "Brajeshwar",
         "created_at": "2026-04-23T14:24:04Z"
       },
       {
@@ -66,7 +59,6 @@
         "title": "Sunsetting Roo Code (Extension, Cloud, and Router)",
         "points": 2,
         "num_comments": 0,
-        "author": "fabi0",
         "created_at": "2026-04-22T18:27:49Z"
       },
       {
@@ -74,7 +66,6 @@
         "title": "HexStrike AI on Kali with Roo Code",
         "points": 2,
         "num_comments": 0,
-        "author": "h0ek",
         "created_at": "2026-01-11T10:55:53Z"
       },
       {
@@ -82,7 +73,6 @@
         "title": "Installing the BMAD Method for Roo Code",
         "points": 2,
         "num_comments": 0,
-        "author": "DigitalCoreNZ",
         "created_at": "2025-08-11T11:58:18Z"
       },
       {
@@ -90,7 +80,6 @@
         "title": "Roo Code Workflow: An Advanced LLM-Powered Development Setup",
         "points": 2,
         "num_comments": 0,
-        "author": "indigodaddy",
         "created_at": "2025-08-09T23:27:04Z"
       },
       {
@@ -98,7 +87,6 @@
         "title": "Kilo Code: Open-Source VS Code AI Agent- Merged Features from Roo Code and Cline",
         "points": 2,
         "num_comments": 0,
-        "author": "indigodaddy",
         "created_at": "2025-08-09T22:40:51Z"
       },
       {
@@ -106,7 +94,6 @@
         "title": "RooCode: Add Gemini CLI provider for free access to Gemini models",
         "points": 2,
         "num_comments": 0,
-        "author": "sysoleg",
         "created_at": "2025-06-27T04:38:44Z"
       },
       {
@@ -114,7 +101,6 @@
         "title": "Roo Code experimental code indexing",
         "points": 2,
         "num_comments": 0,
-        "author": "srigi",
         "created_at": "2025-05-28T15:59:53Z"
       },
       {
@@ -122,7 +108,6 @@
         "title": "Roo Code 3.43.0 – Intelligent Context Condensation v2 – Settings Cleanup",
         "points": 1,
         "num_comments": 2,
-        "author": "hrudolph",
         "created_at": "2026-01-27T03:40:55Z"
       },
       {
@@ -130,7 +115,6 @@
         "title": "Roo Code 3.44 Release Updates – Worktrees (new) – Parallel tool calls",
         "points": 1,
         "num_comments": 1,
-        "author": "hrudolph",
         "created_at": "2026-01-27T23:36:30Z"
       },
       {
@@ -138,7 +122,6 @@
         "title": "Roo Code 3.42.0 – ChatGPT usage tracking – Grey Screen Fix and more",
         "points": 1,
         "num_comments": 1,
-        "author": "hrudolph",
         "created_at": "2026-01-23T06:31:35Z"
       },
       {
@@ -146,7 +129,6 @@
         "title": "AI Coding Stack That Isn't Complete Garbage: VSCode, Roocode, Augment (May 2025)",
         "points": 1,
         "num_comments": 1,
-        "author": "e2e4",
         "created_at": "2025-07-23T22:55:17Z"
       },
       {
@@ -154,7 +136,6 @@
         "title": "One of the more meta ways we've used the Roo Code and SlackHQ feature this week",
         "points": 1,
         "num_comments": 0,
-        "author": "hrudolph",
         "created_at": "2026-01-22T22:56:27Z"
       },
       {
@@ -162,7 +143,6 @@
         "title": "Show HN: Roo Code Slack: end to end agentic workflow in Slack",
         "points": 1,
         "num_comments": 0,
-        "author": "hrudolph",
         "created_at": "2026-01-22T03:40:22Z"
       },
       {
@@ -170,7 +150,6 @@
         "title": "Roo Code: AI-powered autonomous coding agent for Visual Studio Code",
         "points": 1,
         "num_comments": 0,
-        "author": "thunderbong",
         "created_at": "2025-07-28T12:26:26Z"
       },
       {
@@ -178,7 +157,6 @@
         "title": "I Effectively Use Roo Code for AI-Assisted Development",
         "points": 1,
         "num_comments": 0,
-        "author": "philk10",
         "created_at": "2025-04-01T18:16:42Z"
       },
       {
@@ -186,7 +164,6 @@
         "title": "Roo Code is an open-source AI-powered coding assistant that runs in VS Code",
         "points": 1,
         "num_comments": 0,
-        "author": "danboarder",
         "created_at": "2025-04-01T04:43:27Z"
       },
       {
@@ -194,7 +171,6 @@
         "title": "Roo Code: Popular Fork of Cline",
         "points": 1,
         "num_comments": 0,
-        "author": "amosjyng",
         "created_at": "2025-04-01T00:52:24Z"
       },
       {
@@ -202,7 +178,6 @@
         "title": "Show HN: A Daily Bible Game",
         "points": 49,
         "num_comments": 64,
-        "author": "egglemonsoup",
         "created_at": "2026-01-08T15:07:37Z"
       },
       {
@@ -210,7 +185,6 @@
         "title": "Ask HN: What is your current LLM-assisted coding tool?",
         "points": 11,
         "num_comments": 4,
-        "author": "HiPHInch",
         "created_at": "2025-06-02T16:06:17Z"
       },
       {
@@ -218,7 +192,6 @@
         "title": "Claude Code Alternatives?",
         "points": 6,
         "num_comments": 6,
-        "author": "pozzy",
         "created_at": "2025-04-18T22:10:50Z"
       },
       {
@@ -226,7 +199,6 @@
         "title": "Show HN: FlexLLama – Run multiple local LLMs at once with a simple dashboard",
         "points": 4,
         "num_comments": 0,
-        "author": "yazon",
         "created_at": "2025-08-05T06:30:54Z"
       },
       {
@@ -234,7 +206,6 @@
         "title": "Show HN: Ridvay Code – An AI Coding Assistant for VS Code",
         "points": 3,
         "num_comments": 2,
-        "author": "Tom-G",
         "created_at": "2025-05-05T13:25:32Z"
       },
       {
@@ -242,7 +213,6 @@
         "title": "Show HN: Non-Custodial Cryptocurrency Payment Gateway",
         "points": 2,
         "num_comments": 2,
-        "author": "cranberryturkey",
         "created_at": "2025-11-27T03:28:03Z"
       },
       {
@@ -250,7 +220,6 @@
         "title": "Show HN: OpenBrowser MCP: Give your AI agent a real efficient browser",
         "points": 2,
         "num_comments": 0,
-        "author": "billy-enrizky-1",
         "created_at": "2026-02-22T13:57:23Z"
       },
       {
@@ -258,7 +227,6 @@
         "title": "Show HN: Freshstuff.net – Stream of Projects Releases",
         "points": 2,
         "num_comments": 0,
-        "author": "raphinou",
         "created_at": "2025-05-15T15:00:33Z"
       },
       {
@@ -266,7 +234,6 @@
         "title": "Show HN: A Code Agent that can do runtime debugging by walking the call stack",
         "points": 1,
         "num_comments": 2,
-        "author": "zentara_code",
         "created_at": "2025-06-09T17:42:22Z"
       },
       {
@@ -274,7 +241,6 @@
         "title": "Ask HN: Which agentic AI code assistant is more future proof?",
         "points": 1,
         "num_comments": 1,
-        "author": "behnamoh",
         "created_at": "2025-11-02T18:55:48Z"
       },
       {
@@ -282,7 +248,6 @@
         "title": "Ask HN: How do I found OSS project that don't commerical backing?",
         "points": 1,
         "num_comments": 1,
-        "author": "mattfrommars",
         "created_at": "2025-10-09T02:15:43Z"
       },
       {
@@ -290,7 +255,6 @@
         "title": "Show HN: CCP, a CLI proxy that trims terminal output without changing commands",
         "points": 1,
         "num_comments": 0,
-        "author": "SuppieRK",
         "created_at": "2026-03-08T12:54:38Z"
       },
       {
@@ -298,7 +262,6 @@
         "title": "Show HN: Jumble, a Lifetime of Art on the Scrapheap",
         "points": 1,
         "num_comments": 0,
-        "author": "LeratoAustini",
         "created_at": "2025-07-02T12:46:53Z"
       },
       {
@@ -306,7 +269,6 @@
         "title": "Show HN: AI-powered brainstorming and goal tracking from your terminal",
         "points": 1,
         "num_comments": 0,
-        "author": "jjfoooo4",
         "created_at": "2025-03-10T22:49:34Z"
       },
       {
@@ -314,7 +276,6 @@
         "title": "Confirmed that OpenRouter's new stealth model originates from OpenAI",
         "points": 1,
         "num_comments": 0,
-        "author": "handfuloflight",
         "created_at": "2025-07-31T07:01:49Z"
       },
       {
@@ -322,7 +283,6 @@
         "title": "Show HN: Roo-Cline on Codeium",
         "points": 2,
         "num_comments": 1,
-        "author": "cranberryturkey",
         "created_at": "2025-03-17T11:00:00Z"
       }
     ],
@@ -332,7 +292,6 @@
         "title": "Roo code shuts down, Team will focus on roomote agent",
         "points": 28,
         "num_comments": 2,
-        "author": "buster",
         "created_at": "2026-04-21T17:21:10Z"
       },
       {
@@ -340,7 +299,6 @@
         "title": "Poe accounts can now be used to power Cursor, Cline, Roo Code",
         "points": 12,
         "num_comments": 0,
-        "author": "tosh",
         "created_at": "2025-07-31T17:25:45Z"
       },
       {
@@ -348,7 +306,6 @@
         "title": "Open-source plugin brings Roo Code to JetBrains IDEs",
         "points": 3,
         "num_comments": 1,
-        "author": "qdaxb",
         "created_at": "2025-08-03T12:17:40Z"
       },
       {
@@ -356,7 +313,6 @@
         "title": "Free AI Coding Assistant: Setup Roo Code with Free LLM Models",
         "points": 3,
         "num_comments": 0,
-        "author": "hybrid11",
         "created_at": "2025-06-12T17:25:37Z"
       },
       {
@@ -364,7 +320,6 @@
         "title": "RooFlow – Memory Bank System for Roo Code with Footgun Power",
         "points": 3,
         "num_comments": 0,
-        "author": "rahimnathwani",
         "created_at": "2025-04-12T21:22:54Z"
       },
       {
@@ -372,7 +327,6 @@
         "title": "Roo Code 3.7 – Yes, we support Claude Sonnet 3.7",
         "points": 2,
         "num_comments": 1,
-        "author": "hrudolph",
         "created_at": "2025-02-25T06:16:50Z"
       },
       {
@@ -380,7 +334,6 @@
         "title": "Roo Code pivots to cloud-based agent, says IDEs aren't the future of coding",
         "points": 2,
         "num_comments": 0,
-        "author": "Brajeshwar",
         "created_at": "2026-04-23T14:24:04Z"
       },
       {
@@ -388,7 +341,6 @@
         "title": "Sunsetting Roo Code (Extension, Cloud, and Router)",
         "points": 2,
         "num_comments": 0,
-        "author": "fabi0",
         "created_at": "2026-04-22T18:27:49Z"
       },
       {
@@ -396,7 +348,6 @@
         "title": "HexStrike AI on Kali with Roo Code",
         "points": 2,
         "num_comments": 0,
-        "author": "h0ek",
         "created_at": "2026-01-11T10:55:53Z"
       },
       {
@@ -404,7 +355,6 @@
         "title": "Installing the BMAD Method for Roo Code",
         "points": 2,
         "num_comments": 0,
-        "author": "DigitalCoreNZ",
         "created_at": "2025-08-11T11:58:18Z"
       },
       {
@@ -412,7 +362,6 @@
         "title": "Roo Code Workflow: An Advanced LLM-Powered Development Setup",
         "points": 2,
         "num_comments": 0,
-        "author": "indigodaddy",
         "created_at": "2025-08-09T23:27:04Z"
       },
       {
@@ -420,7 +369,6 @@
         "title": "Kilo Code: Open-Source VS Code AI Agent- Merged Features from Roo Code and Cline",
         "points": 2,
         "num_comments": 0,
-        "author": "indigodaddy",
         "created_at": "2025-08-09T22:40:51Z"
       },
       {
@@ -428,7 +376,6 @@
         "title": "RooCode: Add Gemini CLI provider for free access to Gemini models",
         "points": 2,
         "num_comments": 0,
-        "author": "sysoleg",
         "created_at": "2025-06-27T04:38:44Z"
       },
       {
@@ -436,7 +383,6 @@
         "title": "Roo Code experimental code indexing",
         "points": 2,
         "num_comments": 0,
-        "author": "srigi",
         "created_at": "2025-05-28T15:59:53Z"
       },
       {
@@ -444,7 +390,6 @@
         "title": "Roo Code 3.43.0 – Intelligent Context Condensation v2 – Settings Cleanup",
         "points": 1,
         "num_comments": 2,
-        "author": "hrudolph",
         "created_at": "2026-01-27T03:40:55Z"
       },
       {
@@ -452,7 +397,6 @@
         "title": "Roo Code 3.44 Release Updates – Worktrees (new) – Parallel tool calls",
         "points": 1,
         "num_comments": 1,
-        "author": "hrudolph",
         "created_at": "2026-01-27T23:36:30Z"
       },
       {
@@ -460,7 +404,6 @@
         "title": "Roo Code 3.42.0 – ChatGPT usage tracking – Grey Screen Fix and more",
         "points": 1,
         "num_comments": 1,
-        "author": "hrudolph",
         "created_at": "2026-01-23T06:31:35Z"
       },
       {
@@ -468,7 +411,6 @@
         "title": "AI Coding Stack That Isn't Complete Garbage: VSCode, Roocode, Augment (May 2025)",
         "points": 1,
         "num_comments": 1,
-        "author": "e2e4",
         "created_at": "2025-07-23T22:55:17Z"
       },
       {
@@ -476,7 +418,6 @@
         "title": "One of the more meta ways we've used the Roo Code and SlackHQ feature this week",
         "points": 1,
         "num_comments": 0,
-        "author": "hrudolph",
         "created_at": "2026-01-22T22:56:27Z"
       },
       {
@@ -484,7 +425,6 @@
         "title": "Show HN: Roo Code Slack: end to end agentic workflow in Slack",
         "points": 1,
         "num_comments": 0,
-        "author": "hrudolph",
         "created_at": "2026-01-22T03:40:22Z"
       },
       {
@@ -492,7 +432,6 @@
         "title": "Roo Code: AI-powered autonomous coding agent for Visual Studio Code",
         "points": 1,
         "num_comments": 0,
-        "author": "thunderbong",
         "created_at": "2025-07-28T12:26:26Z"
       },
       {
@@ -500,7 +439,6 @@
         "title": "I Effectively Use Roo Code for AI-Assisted Development",
         "points": 1,
         "num_comments": 0,
-        "author": "philk10",
         "created_at": "2025-04-01T18:16:42Z"
       },
       {
@@ -508,7 +446,6 @@
         "title": "Roo Code is an open-source AI-powered coding assistant that runs in VS Code",
         "points": 1,
         "num_comments": 0,
-        "author": "danboarder",
         "created_at": "2025-04-01T04:43:27Z"
       },
       {
@@ -516,7 +453,6 @@
         "title": "Roo Code: Popular Fork of Cline",
         "points": 1,
         "num_comments": 0,
-        "author": "amosjyng",
         "created_at": "2025-04-01T00:52:24Z"
       },
       {
@@ -524,7 +460,6 @@
         "title": "Ask HN: What is your current LLM-assisted coding tool?",
         "points": 11,
         "num_comments": 4,
-        "author": "HiPHInch",
         "created_at": "2025-06-02T16:06:17Z"
       },
       {
@@ -532,7 +467,6 @@
         "title": "Claude Code Alternatives?",
         "points": 6,
         "num_comments": 6,
-        "author": "pozzy",
         "created_at": "2025-04-18T22:10:50Z"
       },
       {
@@ -540,7 +474,6 @@
         "title": "Show HN: FlexLLama – Run multiple local LLMs at once with a simple dashboard",
         "points": 4,
         "num_comments": 0,
-        "author": "yazon",
         "created_at": "2025-08-05T06:30:54Z"
       },
       {
@@ -548,7 +481,6 @@
         "title": "Show HN: Ridvay Code – An AI Coding Assistant for VS Code",
         "points": 3,
         "num_comments": 2,
-        "author": "Tom-G",
         "created_at": "2025-05-05T13:25:32Z"
       },
       {
@@ -556,7 +488,6 @@
         "title": "Show HN: Non-Custodial Cryptocurrency Payment Gateway",
         "points": 2,
         "num_comments": 2,
-        "author": "cranberryturkey",
         "created_at": "2025-11-27T03:28:03Z"
       },
       {
@@ -564,7 +495,6 @@
         "title": "Show HN: OpenBrowser MCP: Give your AI agent a real efficient browser",
         "points": 2,
         "num_comments": 0,
-        "author": "billy-enrizky-1",
         "created_at": "2026-02-22T13:57:23Z"
       },
       {
@@ -572,7 +502,6 @@
         "title": "Show HN: Freshstuff.net – Stream of Projects Releases",
         "points": 2,
         "num_comments": 0,
-        "author": "raphinou",
         "created_at": "2025-05-15T15:00:33Z"
       },
       {
@@ -580,7 +509,6 @@
         "title": "Show HN: A Code Agent that can do runtime debugging by walking the call stack",
         "points": 1,
         "num_comments": 2,
-        "author": "zentara_code",
         "created_at": "2025-06-09T17:42:22Z"
       },
       {
@@ -588,7 +516,6 @@
         "title": "Ask HN: Which agentic AI code assistant is more future proof?",
         "points": 1,
         "num_comments": 1,
-        "author": "behnamoh",
         "created_at": "2025-11-02T18:55:48Z"
       },
       {
@@ -596,7 +523,6 @@
         "title": "Ask HN: How do I found OSS project that don't commerical backing?",
         "points": 1,
         "num_comments": 1,
-        "author": "mattfrommars",
         "created_at": "2025-10-09T02:15:43Z"
       },
       {
@@ -604,7 +530,6 @@
         "title": "Show HN: CCP, a CLI proxy that trims terminal output without changing commands",
         "points": 1,
         "num_comments": 0,
-        "author": "SuppieRK",
         "created_at": "2026-03-08T12:54:38Z"
       },
       {
@@ -612,7 +537,6 @@
         "title": "Show HN: Jumble, a Lifetime of Art on the Scrapheap",
         "points": 1,
         "num_comments": 0,
-        "author": "LeratoAustini",
         "created_at": "2025-07-02T12:46:53Z"
       },
       {
@@ -620,7 +544,6 @@
         "title": "Show HN: AI-powered brainstorming and goal tracking from your terminal",
         "points": 1,
         "num_comments": 0,
-        "author": "jjfoooo4",
         "created_at": "2025-03-10T22:49:34Z"
       },
       {
@@ -628,7 +551,6 @@
         "title": "Confirmed that OpenRouter's new stealth model originates from OpenAI",
         "points": 1,
         "num_comments": 0,
-        "author": "handfuloflight",
         "created_at": "2025-07-31T07:01:49Z"
       },
       {
@@ -636,7 +558,6 @@
         "title": "Yet another explanation of C's volatile ",
         "points": 1,
         "num_comments": 0,
-        "author": "jarrodvanda",
         "created_at": "2010-08-31T12:18:54Z"
       }
     ]
