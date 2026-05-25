@@ -160,7 +160,7 @@ A simplified FunSearch loop can be described as:
 \caption{FunSearch-style program evolution}
 \label{alg:funsearch-style}
 \begin{algorithmic}[1]
-\REQUIRE Initial program with \texttt{@run} evaluator and \texttt{@evolve} target; LLM; programs database $D$; evaluators $\mathcal{E}$
+\REQUIRE Initial program with \texttt{@run} evaluator and \texttt{@evolve} target; LLM; programs database $D$; evaluator suite $E_{\mathrm{eval}}$
 \STATE Initialize islands in $D$ with the seed program
 \WHILE{budget remains}
   \STATE Sample an island and construct a prompt from high-scoring program versions
