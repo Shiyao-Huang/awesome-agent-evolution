@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-26T00:00:00+08:00",
-  "total": 515,
-  "updated_files": 515,
+  "total": 517,
+  "updated_files": 517,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -1625,6 +1625,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "iliaal/ai-skills",
+      "url": "https://github.com/iliaal/ai-skills",
+      "file": "raw-github/iliaal_ai-skills.md",
+      "content_timestamp": "2026-05-16",
+      "collected_at": "2026-05-26T06:45:09+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26_release_date"
+    },
+    {
       "repo": "ilsilfverskiold/awesome-llm-resources-list",
       "url": "https://github.com/ilsilfverskiold/awesome-llm-resources-list",
       "file": "raw-github/ilsilfverskiold_awesome-llm-resources-list.md",
@@ -2883,6 +2892,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "Orchestra-Research/AI-research-SKILLs",
+      "url": "https://github.com/Orchestra-Research/AI-research-SKILLs",
+      "file": "raw-github/orchestra-research_ai-research-skills.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T06:45:09+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
       "repo": "os-copilot/os-copilot",

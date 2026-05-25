@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-26T05:44:07+08:00
+Generated: 2026-05-26T06:45:09+08:00
 
 ## Nodes
 
@@ -23,12 +23,10 @@ Generated: 2026-05-26T05:44:07+08:00
 
 ## Current Run Evidence
 
-- Web-observed repositories this run: YunjueTech/Yunjue-Agent, RangeKing/self-evolving-agent, gofenix/nex-agent, swapedoc/hermes2anti, and vilmire/adhdev.
-- New raw files: raw-github/yunjuetech_yunjue-agent.md, raw-github/rangeking_self-evolving-agent.md, raw-github/gofenix_nex-agent.md, raw-github/swapedoc_hermes2anti.md, raw-github/vilmire_adhdev.md.
-- New public model cards/site reports: project/report ids 228-232 for Yunjue Agent, RangeKing self-evolving-agent, NexAgent, hermes2anti, and ADHDev.
-- Counts after propagation: 515 raw captures, 515 classified repositories, 105 site projects, 82 strict evolution-theme repositories, 185 broad evolution-related repositories, and 257 public project report files.
-- GitNexus evidence: npx gitnexus status was available but stale before commit; refresh is scheduled after commit so it indexes the committed iteration.
-- GitHub API freshness caveat: shell DNS for api.github.com failed; web-observed public pages were used and GitHub analysis preserves github_api_fetch_error for the five new promoted projects.
-- Legacy generator caveat: scripts/generate_repo_classification.py only covers a 364-row legacy path; current classification truth is the restored/appended 515-row research/repo-classification.json.
+- Web-observed repositories this run: Orchestra-Research/AI-research-SKILLs and iliaal/ai-skills.
+- New raw files: raw-github/orchestra-research_ai-research-skills.md and raw-github/iliaal_ai-skills.md.
+- New public reports: site/public/reports/projects/233-ai-research-skills-agent-research-workflow.md and site/public/reports/projects/234-ai-skills-agent-process-discipline.md.
+- Counts after propagation: 517 raw captures, 517 classified repositories, 107 site projects, 82 strict evolution-theme repositories, 185 broad evolution-related repositories, and 259 public project report markdown files including INDEX.md.
+- GitNexus evidence: status/list/query are available for awesome-evolution; query surfaced scripts/analyze_github_project_data.mjs, scripts/generate_project_indexes.mjs and scripts/enforce_raw_timestamps.py as relevant data-flow nodes. gitnexus impact by path returned target not found, so impact analysis is blocked for that exact command.
 - Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> README/i18n -> site data/report -> Astro site build.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T05:44:07+08:00",
+  "generated_at": "2026-05-26T06:45:09+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -215,7 +215,9 @@
         "raw-github/rangeking_self-evolving-agent.md",
         "raw-github/gofenix_nex-agent.md",
         "raw-github/swapedoc_hermes2anti.md",
-        "raw-github/vilmire_adhdev.md"
+        "raw-github/vilmire_adhdev.md",
+        "raw-github/orchestra-research_ai-research-skills.md",
+        "raw-github/iliaal_ai-skills.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -327,7 +329,8 @@
         "work/research/hourly-public-metadata-update-2026-05-26-0239.md",
         "work/research/hourly-public-metadata-update-2026-05-26-0341.md",
         "work/research/hourly-public-metadata-update-2026-05-26-0441.md",
-        "work/research/hourly-public-metadata-update-2026-05-26-0544.md"
+        "work/research/hourly-public-metadata-update-2026-05-26-0544.md",
+        "work/research/hourly-public-metadata-update-2026-05-26-0645.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -701,7 +704,9 @@
         "site/public/reports/projects/229-rangeking-self-evolving-agent-skill.md",
         "site/public/reports/projects/230-nex-agent-elixir-otp-self-evolving-agent.md",
         "site/public/reports/projects/231-hermes2anti-self-improve-agent-memory-skills.md",
-        "site/public/reports/projects/232-adhdev-agent-dashboard-control-plane.md"
+        "site/public/reports/projects/232-adhdev-agent-dashboard-control-plane.md",
+        "site/public/reports/projects/233-ai-research-skills-agent-research-workflow.md",
+        "site/public/reports/projects/234-ai-skills-agent-process-discipline.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -952,37 +957,30 @@
     ]
   },
   "current_run_evidence": [
-    "Web-observed repositories this run: YunjueTech/Yunjue-Agent, RangeKing/self-evolving-agent, gofenix/nex-agent, swapedoc/hermes2anti, and vilmire/adhdev.",
-    "New raw files: raw-github/yunjuetech_yunjue-agent.md, raw-github/rangeking_self-evolving-agent.md, raw-github/gofenix_nex-agent.md, raw-github/swapedoc_hermes2anti.md, raw-github/vilmire_adhdev.md.",
-    "New public model cards/site reports: project/report ids 228-232 for Yunjue Agent, RangeKing self-evolving-agent, NexAgent, hermes2anti, and ADHDev.",
-    "Counts after propagation: 515 raw captures, 515 classified repositories, 105 site projects, 82 strict evolution-theme repositories, 185 broad evolution-related repositories, and 257 public project report files.",
-    "GitNexus evidence: npx gitnexus status was available but stale before commit; refresh is scheduled after commit so it indexes the committed iteration.",
-    "GitHub API freshness caveat: shell DNS for api.github.com failed; web-observed public pages were used and GitHub analysis preserves github_api_fetch_error for the five new promoted projects.",
-    "Legacy generator caveat: scripts/generate_repo_classification.py only covers a 364-row legacy path; current classification truth is the restored/appended 515-row research/repo-classification.json.",
+    "Web-observed repositories this run: Orchestra-Research/AI-research-SKILLs and iliaal/ai-skills.",
+    "New raw files: raw-github/orchestra-research_ai-research-skills.md and raw-github/iliaal_ai-skills.md.",
+    "New public reports: site/public/reports/projects/233-ai-research-skills-agent-research-workflow.md and site/public/reports/projects/234-ai-skills-agent-process-discipline.md.",
+    "Counts after propagation: 517 raw captures, 517 classified repositories, 107 site projects, 82 strict evolution-theme repositories, 185 broad evolution-related repositories, and 259 public project report markdown files including INDEX.md.",
+    "GitNexus evidence: status/list/query are available for awesome-evolution; query surfaced scripts/analyze_github_project_data.mjs, scripts/generate_project_indexes.mjs and scripts/enforce_raw_timestamps.py as relevant data-flow nodes. gitnexus impact by path returned target not found, so impact analysis is blocked for that exact command.",
     "Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> README/i18n -> site data/report -> Astro site build.",
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "collected_at": "2026-05-26T05:44:07+08:00",
+    "run_at": "2026-05-26T06:45:09+08:00",
     "added_repositories": [
-      "YunjueTech/Yunjue-Agent",
-      "RangeKing/self-evolving-agent",
-      "gofenix/nex-agent",
-      "swapedoc/hermes2anti",
-      "vilmire/adhdev"
+      "Orchestra-Research/AI-research-SKILLs",
+      "iliaal/ai-skills"
     ],
-    "counts": {
-      "raw_github": 515,
-      "classified_repos": 515,
-      "site_projects": 105,
-      "strict_evolution": 82,
-      "broad_evolution": 185,
-      "public_project_reports": 257
+    "evidence_quality": "web_observed_public_github_pages; no authenticated GitHub API freshness claimed",
+    "graph_truth_source": ".mermaid/current/graph.json",
+    "counts_after_propagation": {
+      "raw_captures": 517,
+      "classified_repositories": 517,
+      "site_projects": 107,
+      "strict_evolution_repositories": 82,
+      "broad_evolution_related_repositories": 185,
+      "public_project_report_markdown_files_including_index": 259
     },
-    "blockers": [
-      "Shell DNS could not resolve api.github.com; metadata is web-observed, not API-verified.",
-      "GitNexus index stale before commit; re-run analyze after commit.",
-      "generate_repo_classification.py is legacy 364-row path, not current 515-row truth source."
-    ]
+    "gitnexus_evidence": "gitnexus status/list/query available; query linked data-flow terms to analyze_github_project_data.mjs, generate_project_indexes.mjs, enforce_raw_timestamps.py and prior hourly notes; impact target by path returned not found, so no blast-radius claim was fabricated"
   }
 }

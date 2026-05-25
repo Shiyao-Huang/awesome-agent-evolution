@@ -1872,5 +1872,21 @@
     "forks": null,
     "source": "github_api_fetch_error",
     "error": "fetch failed"
+  },
+  "orchestra-research/ai-research-skills": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "iliaal/ai-skills": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
   }
 }

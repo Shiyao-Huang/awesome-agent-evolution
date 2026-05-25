@@ -1,18 +1,18 @@
 # GitHub Project Data Analysis
 
-Generated: 2026-05-25T21:58:25.662Z
+Generated: 2026-05-25T22:57:45.866Z
 
 ## One-Sentence Compression
 
-The project corpus has 515 timestamp-indexed raw GitHub captures, 515 classified repositories, 105 site/paper model-card projects, 82 strict evolution-theme repositories, and 185 broad evolution-related repositories.
+The project corpus has 517 timestamp-indexed raw GitHub captures, 517 classified repositories, 107 site/paper model-card projects, 82 strict evolution-theme repositories, and 185 broad evolution-related repositories.
 
 ## Corpus Funnel
 
 | Layer | Count | Definition |
 |---|---:|---|
-| Raw GitHub captures | 515 | Records in `output/raw-github-timestamp-index.json`; each points to one `raw-github/*.md` capture. |
-| Classified repositories | 515 | Rows in `research/repo-classification.json` with category, theme, stack, and time slice. |
-| Analyzed model-card projects | 105 | Repositories in `site/src/data/projects.ts` that receive public project pages and reports. |
+| Raw GitHub captures | 517 | Records in `output/raw-github-timestamp-index.json`; each points to one `raw-github/*.md` capture. |
+| Classified repositories | 517 | Rows in `research/repo-classification.json` with category, theme, stack, and time slice. |
+| Analyzed model-card projects | 107 | Repositories in `site/src/data/projects.ts` that receive public project pages and reports. |
 | Strict evolution-theme repositories | 82 | Classified rows whose `base_theme` is `evolution`. |
 | Broad evolution-related repositories | 185 | Rows matching evolution/self-improvement/reflection/search keywords in repo, description, or evidence fields. |
 
@@ -22,8 +22,8 @@ The project corpus has 515 timestamp-indexed raw GitHub captures, 515 classified
 |---|---:|
 | 框架/framework | 144 |
 | 评测/evaluation | 104 |
-| 教程/tutorial | 97 |
-| 工具/tool | 90 |
+| 教程/tutorial | 98 |
+| 工具/tool | 91 |
 | 应用/application | 48 |
 | 论文代码/paper-code | 31 |
 | 评测/benchmark | 1 |
@@ -35,7 +35,7 @@ The project corpus has 515 timestamp-indexed raw GitHub captures, 515 classified
 | memory | 104 |
 | evaluation | 93 |
 | evolution | 82 |
-| skill | 64 |
+| skill | 66 |
 | framework | 56 |
 | education-list | 35 |
 | research-agent | 31 |
@@ -48,7 +48,7 @@ The project corpus has 515 timestamp-indexed raw GitHub captures, 515 classified
 
 | Time slice | Raw classified repos |
 |---|---:|
-| 2026-05 | 354 |
+| 2026-05 | 356 |
 | unknown | 107 |
 | 2024-Q2 | 7 |
 | 2026-03 | 7 |
@@ -158,6 +158,7 @@ The project corpus has 515 timestamp-indexed raw GitHub captures, 515 classified
 | unknown | [DEEP-PolyU/Awesome-GraphMemory](https://github.com/DEEP-PolyU/Awesome-GraphMemory) | Graph-Based Agent Memory Index | graph memory papers -> techniques/applications -> memory substrate map | github_api_fetch_error |
 | unknown | [elizaOS/eliza](https://github.com/elizaOS/eliza) | Autonomous Agent Framework | autonomous-agent framework -> plugins/CLI/web lifecycle -> deployed agent applications | github_api_fetch_error |
 | unknown | [gofenix/nex-agent](https://github.com/gofenix/nex-agent) | Elixir/OTP Self-Evolving Agent Runtime | supervised runtime -> memory/tools/skills -> subagents/jobs -> source-level upgrades | github_api_fetch_error |
+| unknown | [iliaal/ai-skills](https://github.com/iliaal/ai-skills) | Agent Process Skill Library | portable agent skills -> planning, debugging, review and verification discipline -> reusable behavior layer | github_api_fetch_error |
 | unknown | [Kenotic-Labs/ATANT](https://github.com/Kenotic-Labs/ATANT) | Agent Continuity Evaluation | agent narrative checkpoints -> continuity tests -> self/identity drift evidence | github_api_fetch_error |
 | unknown | [MaximeRobeyns/self_improving_coding_agent](https://github.com/MaximeRobeyns/self_improving_coding_agent) | Self-Improving Coding Agent | coding agent -> own-codebase modification -> tests/review signal -> improved next agent iteration | github_api_fetch_error |
 | unknown | [mgechev/skillgrade](https://github.com/mgechev/skillgrade) | Agent Skill Evaluation Harness | SKILL.md package -> eval.yaml tasks and graders -> sandboxed agent trials -> pass-rate gate | github_api_fetch_error |
@@ -165,6 +166,7 @@ The project corpus has 515 timestamp-indexed raw GitHub captures, 515 classified
 | unknown | [microsoft/waza](https://github.com/microsoft/waza) | Waza Agent Skill Evaluation CLI | SKILL.md asset -> eval scaffold -> benchmark run -> grader/coverage report -> skill quality gate | github_api_fetch_error |
 | unknown | [NirDiamant/Agent_Memory_Techniques](https://github.com/NirDiamant/Agent_Memory_Techniques) | Agent Memory Technique Cookbook | memory need -> 30 runnable techniques -> taxonomy/decision tree -> evaluation and production notebooks | github_api_fetch_error |
 | unknown | [open-gitagent/gitagent](https://github.com/open-gitagent/gitagent) | Git-Native Agent Framework | git repository -> agent identity/rules/memory/tools/skills/hooks -> auditable agent runtime | github_api_fetch_error |
+| unknown | [Orchestra-Research/AI-research-SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs) | Agent Research Skill Library | research skill library -> autoresearch orchestration -> evaluation, agents, prompting and paper workflow skills | github_api_fetch_error |
 | unknown | [paradigmxyz/centaur](https://github.com/paradigmxyz/centaur) | Secure Team Agent Runtime | Slack/API request -> durable control plane -> sandboxed harness -> tools/workflows -> replayable team result | github_api_fetch_error |
 | unknown | [paradigmxyz/evmbench](https://github.com/paradigmxyz/evmbench) | Smart Contract Agent Benchmark Harness | contract upload -> sandboxed Codex detect worker -> JSON vulnerability report -> UI/report validation | github_api_fetch_error |
 | unknown | [pureples/pureples](https://github.com/pureples/pureples) | GP+LLM 代码进化 | 进化/搜索循环 → 评估器/打分器 | github_api_403 |
@@ -186,9 +188,9 @@ This table joins each public model-card project back to raw capture, classificat
 |---|---:|---|
 | GitHub API/cache metadata | 25 | Projects with verified `github_api` metadata in `analysis/github-created-at-cache.json`. |
 | Local git mirror evidence | 77 | Projects whose `localPath` points to a local git clone and can report first/last commit, count, branch, and HEAD. |
-| Raw timestamp capture | 52 | Public projects that also appear in `output/raw-github-timestamp-index.json`. |
-| Classification row | 52 | Public projects that also appear in `research/repo-classification.json`. |
-| Public model-card report | 75 | Public projects with a generated report under `site/public/reports/projects/`. |
+| Raw timestamp capture | 54 | Public projects that also appear in `output/raw-github-timestamp-index.json`. |
+| Classification row | 54 | Public projects that also appear in `research/repo-classification.json`. |
+| Public model-card report | 77 | Public projects with a generated report under `site/public/reports/projects/`. |
 
 | Repo | Raw | Classification | Report | Git source | Created | Pushed | Stars/Forks | Local git mirror |
 |---|---|---|---|---|---|---|---:|---|
@@ -221,6 +223,7 @@ This table joins each public model-card project back to raw capture, classificat
 | [huggingface/smolagents](https://github.com/huggingface/smolagents) | [raw](../raw-github/huggingface_smolagents.md) | evaluation | [report](../research/projects/68-smolagents-huggingface.md) | github_api_403 | 2026-05 | 2026-05 | 15000/1300 | 1 commits @ 3cd5c84 (2026-05 -> 2026-05) |
 | [smol-ai/developer](https://github.com/smol-ai/developer) | - | missing | [report](../research/projects/50-smol-developer.md) | github_api_403 | 2023-09 | 2025-06 | 14000/1600 | 1 commits @ a6747d1 (2023-09 -> 2023-09) |
 | [Chainlit/chainlit](https://github.com/Chainlit/chainlit) | - | missing | [report](../research/projects/70-chainlit-llm-chat.md) | github_api_403 | 2026-04 | 2026-05 | 10000/1200 | 1 commits @ 488b745 (2026-04 -> 2026-04) |
+| [Orchestra-Research/AI-research-SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs) | [raw](../raw-github/orchestra-research_ai-research-skills.md) | skill | [report](../projects/233-ai-research-skills-agent-research-workflow.md) | github_api_fetch_error | unknown | 2026-05 | 8900/679 | - |
 | [Agenta-AI/agenta](https://github.com/Agenta-AI/agenta) | - | missing | [report](../research/projects/53-agenta-evaluation.md) | github_api_403 | 2026-05 | 2026-05 | 8000/850 | 1 commits @ 5eef689 (2026-05 -> 2026-05) |
 | [dataelement/bisheng](https://github.com/dataelement/bisheng) | - | missing | [report](../research/projects/69-bisheng-llm-platform.md) | github_api_403 | 2026-05 | 2026-05 | 8000/1300 | 1 commits @ 9eb9328 (2026-05 -> 2026-05) |
 | [automl/auto-sklearn](https://github.com/automl/auto-sklearn) | - | missing | [report](../projects/31-autosklearn-automl.md) | github_api_403 | 2023-04 | 2025-01 | 7500/1000 | 1 commits @ 6732112 (2023-04 -> 2023-04) |
@@ -291,6 +294,7 @@ This table joins each public model-card project back to raw capture, classificat
 | [vilmire/adhdev](https://github.com/vilmire/adhdev) | [raw](../raw-github/vilmire_adhdev.md) | framework | [report](../projects/232-adhdev-agent-dashboard-control-plane.md) | github_api_fetch_error | unknown | 2026-05 | 33/8 | - |
 | [webmaxru/Agent-Skills](https://github.com/webmaxru/Agent-Skills) | [raw](../raw-github/webmaxru_agent-skills.md) | skill | [report](../projects/216-webmaxru-agent-skills.md) | github_api_fetch_error | unknown | 2026-05 | 29/2 | - |
 | [wazionapps/nexo](https://github.com/wazionapps/nexo) | [raw](../raw-github/wazionapps_nexo.md) | memory | [report](../projects/218-nexo-agent-memory-runtime.md) | github_api_fetch_error | unknown | 2026-05 | 22/9 | - |
+| [iliaal/ai-skills](https://github.com/iliaal/ai-skills) | [raw](../raw-github/iliaal_ai-skills.md) | skill | [report](../projects/234-ai-skills-agent-process-discipline.md) | github_api_fetch_error | unknown | 2026-05 | 13/3 | - |
 | [cxxz/awesome-agent-memory](https://github.com/cxxz/awesome-agent-memory) | [raw](../raw-github/cxxz_awesome-agent-memory.md) | memory | [report](../projects/209-cxxz-awesome-agent-memory.md) | github_api_fetch_error | unknown | 2026-05 | 10/3 | - |
 | [shareAI-lab/kbench](https://github.com/shareAI-lab/kbench) | [raw](../raw-github/shareai-lab_kbench.md) | evaluation | [report](../projects/221-kbench-agent-harness-benchmark-cli.md) | github_api_fetch_error | unknown | 2026-05 | 10/1 | - |
 | [RangeKing/self-evolving-agent](https://github.com/RangeKing/self-evolving-agent) | [raw](../raw-github/rangeking_self-evolving-agent.md) | skill | [report](../projects/229-rangeking-self-evolving-agent-skill.md) | github_api_fetch_error | unknown | 2026-05 | 9/0 | - |
@@ -330,7 +334,7 @@ This table joins each public model-card project back to raw capture, classificat
 
 ## Writing Implications
 
-- The paper should describe a funnel, not a flat list: raw captures are the discovery layer, classified rows are the analysis layer, and the 105 model-card projects are the teaching/review layer.
+- The paper should describe a funnel, not a flat list: raw captures are the discovery layer, classified rows are the analysis layer, and the 107 model-card projects are the teaching/review layer.
 - The strict evolution subset should drive the conceptual argument; the broader subset explains adjacent attention from memory, evaluation, coding agents, prompt optimization, and framework infrastructure.
 - The timeline must distinguish repository creation time from latest activity time. Raw `time_slice` is an activity/content timestamp; analyzed project `created_at` comes from GitHub API where available.
 - The Git evidence join connects each public project back to raw capture, classification row, public report, GitHub API/cache source, and local mirror status. Missing API data should be treated as an evidence-quality caveat, not as absence of repository activity.

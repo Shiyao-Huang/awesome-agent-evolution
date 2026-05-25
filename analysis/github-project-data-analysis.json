@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-25T21:58:25.662Z",
+  "generated_at": "2026-05-25T22:57:45.866Z",
   "counts": {
-    "raw_captures": 515,
-    "raw_files_on_disk": 515,
-    "classified_repos": 515,
-    "analyzed_projects": 105,
-    "analyzed_in_raw_timestamp_index": 52,
-    "analyzed_in_classification": 52,
+    "raw_captures": 517,
+    "raw_files_on_disk": 517,
+    "classified_repos": 517,
+    "analyzed_projects": 107,
+    "analyzed_in_raw_timestamp_index": 54,
+    "analyzed_in_classification": 54,
     "analyzed_evolution_focused": 55,
     "analyzed_with_created_at_or_fallback": 80,
     "analyzed_with_github_api_metadata": 25,
     "analyzed_with_local_git_mirror": 77,
-    "analyzed_with_public_report": 75,
+    "analyzed_with_public_report": 77,
     "raw_core_evolution": 82,
     "raw_broad_evolution": 185,
     "raw_unknown_time_slice": 109
@@ -27,11 +27,11 @@
     },
     {
       "key": "教程/tutorial",
-      "count": 97
+      "count": 98
     },
     {
       "key": "工具/tool",
-      "count": 90
+      "count": 91
     },
     {
       "key": "应用/application",
@@ -61,7 +61,7 @@
     },
     {
       "key": "skill",
-      "count": 64
+      "count": 66
     },
     {
       "key": "framework",
@@ -218,6 +218,10 @@
       "count": 1
     },
     {
+      "key": "Markdown/npm skills",
+      "count": 1
+    },
+    {
       "key": "Markdown/Python/TypeScript",
       "count": 1
     },
@@ -342,6 +346,10 @@
       "count": 1
     },
     {
+      "key": "Shell/Markdown skills",
+      "count": 1
+    },
+    {
       "key": "Shell/PowerShell/Markdown",
       "count": 1
     },
@@ -389,7 +397,7 @@
   "raw_time_slice_counts": [
     {
       "key": "2026-05",
-      "count": 354
+      "count": 356
     },
     {
       "key": "unknown",
@@ -486,11 +494,11 @@
       "count": 9
     },
     {
-      "key": "education-list",
-      "count": 4
+      "key": "skill",
+      "count": 6
     },
     {
-      "key": "skill",
+      "key": "education-list",
       "count": 4
     },
     {
@@ -513,7 +521,7 @@
     },
     {
       "key": "unknown",
-      "count": 25
+      "count": 27
     },
     {
       "key": "2026-03",
@@ -4471,6 +4479,21 @@
       "description": "EvoHarness delivers terminal-native agent infrastructure: tools, commands, skills, agents, plugins, MCP, memory, approvals, and controlled self-evolution"
     },
     {
+      "repo": "iliaal/ai-skills",
+      "url": "https://github.com/iliaal/ai-skills",
+      "stars": "13",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Shell/Markdown skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-16",
+      "evidence": "web GitHub page observed 61 commits, MIT license, Shell stack, v4.0.3 release on May 16 2026, 13 stars and 3 forks; README describes portable behavioral skills for Claude Code, Codex, Cursor, Gemini CLI, OpenCode, OpenClaw, and related coding agents",
+      "description": "Compact behavior skills for AI coding agents: process discipline for planning, debugging, testing, review, verification, documentation, prompting, and multi-agent orchestration."
+    },
+    {
       "repo": "ilsilfverskiold/awesome-llm-resources-list",
       "url": "https://github.com/ilsilfverskiold/awesome-llm-resources-list",
       "stars": "523",
@@ -6569,6 +6592,21 @@
       "content_timestamp": "2026-05-18",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Self-improving AI agent harness — propose, eval, approve, ship. AHE autonomous loop + MCP + BYOK + eval suite."
+    },
+    {
+      "repo": "Orchestra-Research/AI-research-SKILLs",
+      "url": "https://github.com/Orchestra-Research/AI-research-SKILLs",
+      "stars": "8900",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/npm skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 213 commits, MIT license, 8.9k stars and 679 forks; README describes 98 AI research skills across 23 categories, npx installer, Claude Code marketplace path, and installer support for Claude Code, Hermes Agent, OpenCode, Cursor, Gemini CLI and related coding agents",
+      "description": "Open-source AI research skills library covering idea-to-paper workflows, autoresearch orchestration, evaluation, agents, prompt engineering, safety, RAG, MLOps, and agent-native research artifacts."
     },
     {
       "repo": "os-copilot/os-copilot",
@@ -18232,6 +18270,92 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "framework",
       "evolution_focused": false
+    },
+    {
+      "name": "AI Research SKILLs",
+      "repo": "Orchestra-Research/AI-research-SKILLs",
+      "normalized_repo": "orchestra-research/ai-research-skills",
+      "url": "https://github.com/Orchestra-Research/AI-research-SKILLs",
+      "category": "Agent Research Skill Library",
+      "pattern": "research skill library -> autoresearch orchestration -> evaluation, agents, prompting and paper workflow skills",
+      "tags": [
+        "skills",
+        "autoresearch",
+        "evaluation",
+        "paper writing",
+        "agent workflow"
+      ],
+      "site_stars": 8900,
+      "site_forks": 679,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/orchestra-research_ai-research-skills.md",
+      "local_git": null,
+      "report": "projects/233-ai-research-skills-agent-research-workflow.md",
+      "public_report": "site/public/reports/projects/233-ai-research-skills-agent-research-workflow.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/orchestra-research_ai-research-skills.md",
+      "raw_collected_at": "2026-05-26T06:45:09+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web GitHub page observed 213 commits, MIT license, 8.9k stars and 679 forks; README describes 98 AI research skills across 23 categories, npx installer, Claude Code marketplace path, and installer support for Claude Code, Hermes Agent, OpenCode, Cursor, Gemini CLI and related coding agents",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
+      "name": "ai-skills",
+      "repo": "iliaal/ai-skills",
+      "normalized_repo": "iliaal/ai-skills",
+      "url": "https://github.com/iliaal/ai-skills",
+      "category": "Agent Process Skill Library",
+      "pattern": "portable agent skills -> planning, debugging, review and verification discipline -> reusable behavior layer",
+      "tags": [
+        "skills",
+        "verification",
+        "debugging",
+        "planning",
+        "multi-agent orchestration"
+      ],
+      "site_stars": 13,
+      "site_forks": 3,
+      "license": "MIT",
+      "lastPushed": "2026-05-16T00:00:00Z",
+      "localPath": "raw-github/iliaal_ai-skills.md",
+      "local_git": null,
+      "report": "projects/234-ai-skills-agent-process-discipline.md",
+      "public_report": "site/public/reports/projects/234-ai-skills-agent-process-discipline.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/iliaal_ai-skills.md",
+      "raw_collected_at": "2026-05-26T06:45:09+08:00",
+      "raw_content_timestamp": "2026-05-16",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26_release_date",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web GitHub page observed 61 commits, MIT license, Shell stack, v4.0.3 release on May 16 2026, 13 stars and 3 forks; README describes portable behavioral skills for Claude Code, Codex, Cursor, Gemini CLI, OpenCode, OpenClaw, and related coding agents",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
     }
   ],
   "analyzed_git_evidence": [
@@ -19587,6 +19711,49 @@
       "classification_evidence": null,
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
+      "evolution_focused": false
+    },
+    {
+      "name": "AI Research SKILLs",
+      "repo": "Orchestra-Research/AI-research-SKILLs",
+      "normalized_repo": "orchestra-research/ai-research-skills",
+      "url": "https://github.com/Orchestra-Research/AI-research-SKILLs",
+      "category": "Agent Research Skill Library",
+      "pattern": "research skill library -> autoresearch orchestration -> evaluation, agents, prompting and paper workflow skills",
+      "tags": [
+        "skills",
+        "autoresearch",
+        "evaluation",
+        "paper writing",
+        "agent workflow"
+      ],
+      "site_stars": 8900,
+      "site_forks": 679,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/orchestra-research_ai-research-skills.md",
+      "local_git": null,
+      "report": "projects/233-ai-research-skills-agent-research-workflow.md",
+      "public_report": "site/public/reports/projects/233-ai-research-skills-agent-research-workflow.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/orchestra-research_ai-research-skills.md",
+      "raw_collected_at": "2026-05-26T06:45:09+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web GitHub page observed 213 commits, MIT license, 8.9k stars and 679 forks; README describes 98 AI research skills across 23 categories, npx installer, Claude Code marketplace path, and installer support for Claude Code, Hermes Agent, OpenCode, Cursor, Gemini CLI and related coding agents",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
       "evolution_focused": false
     },
     {
@@ -22709,6 +22876,49 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "memory",
       "evolution_focused": true
+    },
+    {
+      "name": "ai-skills",
+      "repo": "iliaal/ai-skills",
+      "normalized_repo": "iliaal/ai-skills",
+      "url": "https://github.com/iliaal/ai-skills",
+      "category": "Agent Process Skill Library",
+      "pattern": "portable agent skills -> planning, debugging, review and verification discipline -> reusable behavior layer",
+      "tags": [
+        "skills",
+        "verification",
+        "debugging",
+        "planning",
+        "multi-agent orchestration"
+      ],
+      "site_stars": 13,
+      "site_forks": 3,
+      "license": "MIT",
+      "lastPushed": "2026-05-16T00:00:00Z",
+      "localPath": "raw-github/iliaal_ai-skills.md",
+      "local_git": null,
+      "report": "projects/234-ai-skills-agent-process-discipline.md",
+      "public_report": "site/public/reports/projects/234-ai-skills-agent-process-discipline.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/iliaal_ai-skills.md",
+      "raw_collected_at": "2026-05-26T06:45:09+08:00",
+      "raw_content_timestamp": "2026-05-16",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26_release_date",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web GitHub page observed 61 commits, MIT license, Shell stack, v4.0.3 release on May 16 2026, 13 stars and 3 forks; README describes portable behavioral skills for Claude Code, Codex, Cursor, Gemini CLI, OpenCode, OpenClaw, and related coding agents",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
     },
     {
       "name": "Awesome Agent Memory by cxxz",
@@ -26892,6 +27102,49 @@
       "evolution_focused": true
     },
     {
+      "name": "ai-skills",
+      "repo": "iliaal/ai-skills",
+      "normalized_repo": "iliaal/ai-skills",
+      "url": "https://github.com/iliaal/ai-skills",
+      "category": "Agent Process Skill Library",
+      "pattern": "portable agent skills -> planning, debugging, review and verification discipline -> reusable behavior layer",
+      "tags": [
+        "skills",
+        "verification",
+        "debugging",
+        "planning",
+        "multi-agent orchestration"
+      ],
+      "site_stars": 13,
+      "site_forks": 3,
+      "license": "MIT",
+      "lastPushed": "2026-05-16T00:00:00Z",
+      "localPath": "raw-github/iliaal_ai-skills.md",
+      "local_git": null,
+      "report": "projects/234-ai-skills-agent-process-discipline.md",
+      "public_report": "site/public/reports/projects/234-ai-skills-agent-process-discipline.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/iliaal_ai-skills.md",
+      "raw_collected_at": "2026-05-26T06:45:09+08:00",
+      "raw_content_timestamp": "2026-05-16",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26_release_date",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web GitHub page observed 61 commits, MIT license, Shell stack, v4.0.3 release on May 16 2026, 13 stars and 3 forks; README describes portable behavioral skills for Claude Code, Codex, Cursor, Gemini CLI, OpenCode, OpenClaw, and related coding agents",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
       "name": "ATANT",
       "repo": "Kenotic-Labs/ATANT",
       "normalized_repo": "kenotic-labs/atant",
@@ -27184,6 +27437,49 @@
       "classification_evidence": "web-observed GitHub page showed MIT license, 404 stars, 82 forks, 123 commits, and described a universal git-native AI agent framework with agent.yaml, SOUL.md, RULES.md, git-committed memory, declarative tools, composable skills, hooks, plugins, compliance audit logs and OpenTelemetry instrumentation.",
       "raw_time_slice": "2026-05",
       "classified_theme": "framework",
+      "evolution_focused": false
+    },
+    {
+      "name": "AI Research SKILLs",
+      "repo": "Orchestra-Research/AI-research-SKILLs",
+      "normalized_repo": "orchestra-research/ai-research-skills",
+      "url": "https://github.com/Orchestra-Research/AI-research-SKILLs",
+      "category": "Agent Research Skill Library",
+      "pattern": "research skill library -> autoresearch orchestration -> evaluation, agents, prompting and paper workflow skills",
+      "tags": [
+        "skills",
+        "autoresearch",
+        "evaluation",
+        "paper writing",
+        "agent workflow"
+      ],
+      "site_stars": 8900,
+      "site_forks": 679,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/orchestra-research_ai-research-skills.md",
+      "local_git": null,
+      "report": "projects/233-ai-research-skills-agent-research-workflow.md",
+      "public_report": "site/public/reports/projects/233-ai-research-skills-agent-research-workflow.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/orchestra-research_ai-research-skills.md",
+      "raw_collected_at": "2026-05-26T06:45:09+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web GitHub page observed 213 commits, MIT license, 8.9k stars and 679 forks; README describes 98 AI research skills across 23 categories, npx installer, Claude Code marketplace path, and installer support for Claude Code, Hermes Agent, OpenCode, Cursor, Gemini CLI and related coding agents",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
       "evolution_focused": false
     },
     {

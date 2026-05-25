@@ -243,6 +243,8 @@
 | Agent Zero | [agent0ai/agent-zero](https://github.com/agent0ai/agent-zero) | Autonomous Agent Runtime | [projects/225-agent-zero-runtime.md](225-agent-zero-runtime.md) |
 | elizaOS | [elizaOS/eliza](https://github.com/elizaOS/eliza) | Autonomous Agent Framework | [projects/226-elizaos-autonomous-agent-framework.md](226-elizaos-autonomous-agent-framework.md) |
 | Centaur | [paradigmxyz/centaur](https://github.com/paradigmxyz/centaur) | Secure Team Agent Runtime | [projects/227-centaur-secure-team-agent-runtime.md](227-centaur-secure-team-agent-runtime.md) |
+| AI Research SKILLs | [Orchestra-Research/AI-research-SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs) | Agent Research Skill Library | [projects/233-ai-research-skills-agent-research-workflow.md](233-ai-research-skills-agent-research-workflow.md) |
+| ai-skills | [iliaal/ai-skills](https://github.com/iliaal/ai-skills) | Agent Process Skill Library | [projects/234-ai-skills-agent-process-discipline.md](234-ai-skills-agent-process-discipline.md) |
 
 ## Data Use
 

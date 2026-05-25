@@ -2212,6 +2212,64 @@ export const projects: Project[] = [
                   "Codex",
                   "Claude Code"
           ]
+  },
+  {
+          "name": "AI Research SKILLs",
+          "repo": "Orchestra-Research/AI-research-SKILLs",
+          "url": "https://github.com/Orchestra-Research/AI-research-SKILLs",
+          "stars": 8900,
+          "forks": 679,
+          "language": "Markdown",
+          "license": "MIT",
+          "report": "projects/233-ai-research-skills-agent-research-workflow.md",
+          "pattern": "research skill library -> autoresearch orchestration -> evaluation, agents, prompting and paper workflow skills",
+          "description": "AI Research SKILLs is a large open-source skill library for turning coding agents into AI research agents across ideation, experiments, evaluation and paper writing.",
+          "stack": [
+                  "Markdown",
+                  "npm installer",
+                  "Claude Code marketplace",
+                  "Agent skills"
+          ],
+          "category": "Agent Research Skill Library",
+          "lastPushed": "2026-05-26T00:00:00Z",
+          "localPath": "raw-github/orchestra-research_ai-research-skills.md",
+          "status": "candidate",
+          "tags": [
+                  "skills",
+                  "autoresearch",
+                  "evaluation",
+                  "paper writing",
+                  "agent workflow"
+          ]
+  },
+  {
+          "name": "ai-skills",
+          "repo": "iliaal/ai-skills",
+          "url": "https://github.com/iliaal/ai-skills",
+          "stars": 13,
+          "forks": 3,
+          "language": "Shell",
+          "license": "MIT",
+          "report": "projects/234-ai-skills-agent-process-discipline.md",
+          "pattern": "portable agent skills -> planning, debugging, review and verification discipline -> reusable behavior layer",
+          "description": "ai-skills is a compact behavioral skill library for coding agents, distributing process discipline across Codex, Claude Code, Cursor, Gemini CLI and related runtimes.",
+          "stack": [
+                  "Shell",
+                  "Markdown",
+                  "npx skills installer",
+                  "Agent skills"
+          ],
+          "category": "Agent Process Skill Library",
+          "lastPushed": "2026-05-16T00:00:00Z",
+          "localPath": "raw-github/iliaal_ai-skills.md",
+          "status": "candidate",
+          "tags": [
+                  "skills",
+                  "verification",
+                  "debugging",
+                  "planning",
+                  "multi-agent orchestration"
+          ]
   }
 ];
 
@@ -2242,7 +2300,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

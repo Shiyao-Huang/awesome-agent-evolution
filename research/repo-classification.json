@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T21:57:51.996Z",
+  "generated_at": "2026-05-25T22:46:14.643Z",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -2702,6 +2702,21 @@
       "description": "EvoHarness delivers terminal-native agent infrastructure: tools, commands, skills, agents, plugins, MCP, memory, approvals, and controlled self-evolution"
     },
     {
+      "repo": "iliaal/ai-skills",
+      "url": "https://github.com/iliaal/ai-skills",
+      "stars": "13",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Shell/Markdown skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-16",
+      "evidence": "web GitHub page observed 61 commits, MIT license, Shell stack, v4.0.3 release on May 16 2026, 13 stars and 3 forks; README describes portable behavioral skills for Claude Code, Codex, Cursor, Gemini CLI, OpenCode, OpenClaw, and related coding agents",
+      "description": "Compact behavior skills for AI coding agents: process discipline for planning, debugging, testing, review, verification, documentation, prompting, and multi-agent orchestration."
+    },
+    {
       "repo": "ilsilfverskiold/awesome-llm-resources-list",
       "url": "https://github.com/ilsilfverskiold/awesome-llm-resources-list",
       "stars": "523",
@@ -4800,6 +4815,21 @@
       "content_timestamp": "2026-05-18",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Self-improving AI agent harness — propose, eval, approve, ship. AHE autonomous loop + MCP + BYOK + eval suite."
+    },
+    {
+      "repo": "Orchestra-Research/AI-research-SKILLs",
+      "url": "https://github.com/Orchestra-Research/AI-research-SKILLs",
+      "stars": "8900",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/npm skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 213 commits, MIT license, 8.9k stars and 679 forks; README describes 98 AI research skills across 23 categories, npx installer, Claude Code marketplace path, and installer support for Claude Code, Hermes Agent, OpenCode, Cursor, Gemini CLI and related coding agents",
+      "description": "Open-source AI research skills library covering idea-to-paper workflows, autoresearch orchestration, evaluation, agents, prompt engineering, safety, RAG, MLOps, and agent-native research artifacts."
     },
     {
       "repo": "os-copilot/os-copilot",
