@@ -1,10 +1,10 @@
 # GitHub Project Data Analysis
 
-Generated: 2026-05-25T16:43:02.966Z
+Generated: 2026-05-25T17:00:46.791Z
 
 ## One-Sentence Compression
 
-The project corpus has 498 timestamp-indexed raw GitHub captures, 498 classified repositories, 89 site/paper model-card projects, 79 strict evolution-theme repositories, and 178 broad evolution-related repositories.
+The project corpus has 498 timestamp-indexed raw GitHub captures, 498 classified repositories, 89 site/paper model-card projects, 79 strict evolution-theme repositories, and 179 broad evolution-related repositories.
 
 ## Corpus Funnel
 
@@ -14,7 +14,7 @@ The project corpus has 498 timestamp-indexed raw GitHub captures, 498 classified
 | Classified repositories | 498 | Rows in `research/repo-classification.json` with category, theme, stack, and time slice. |
 | Analyzed model-card projects | 89 | Repositories in `site/src/data/projects.ts` that receive public project pages and reports. |
 | Strict evolution-theme repositories | 79 | Classified rows whose `base_theme` is `evolution`. |
-| Broad evolution-related repositories | 178 | Rows matching evolution/self-improvement/reflection/search keywords in repo, description, or evidence fields. |
+| Broad evolution-related repositories | 179 | Rows matching evolution/self-improvement/reflection/search keywords in repo, description, or evidence fields. |
 
 ## Raw Collection Categories
 
@@ -33,9 +33,9 @@ The project corpus has 498 timestamp-indexed raw GitHub captures, 498 classified
 | Theme | Count |
 |---|---:|
 | memory | 100 |
-| evaluation | 90 |
+| evaluation | 91 |
 | evolution | 79 |
-| skill | 62 |
+| skill | 61 |
 | framework | 51 |
 | education-list | 35 |
 | research-agent | 31 |
@@ -242,7 +242,7 @@ This table joins each public model-card project back to raw capture, classificat
 | [ai4co/reevo](https://github.com/ai4co/reevo) | - | missing | [report](../projects/18-reevo-reflective-evolution.md) | github_api_403 | 2026-01 | 2025-01 | 500/50 | 1 commits @ 6dce182 (2026-01 -> 2026-01) |
 | [InternLM/WildClawBench](https://github.com/InternLM/WildClawBench) | - | missing | [report](../research/projects/71-wildclawbench-agent-benchmark.md) | github_api_403 | 2026-05 | 2026-02 | 500/50 | 1 commits @ 86d7144 (2026-05 -> 2026-05) |
 | [YoungDubbyDu/LLM-Agent-Optimization](https://github.com/YoungDubbyDu/LLM-Agent-Optimization) | [raw](../raw-github/youngdubbydu_llm-agent-optimization.md) | education-list | [report](../projects/36-llm-agent-optimization.md) | github_api_403 | 2026-02 | 2026-01 | 500/50 | 1 commits @ 662b5b5 (2026-02 -> 2026-02) |
-| [mgechev/skillgrade](https://github.com/mgechev/skillgrade) | [raw](../raw-github/mgechev_skillgrade.md) | skill | [report](../projects/215-skillgrade-agent-skill-evaluation.md) | github_api_fetch_error | unknown | 2026-05 | 490/35 | - |
+| [mgechev/skillgrade](https://github.com/mgechev/skillgrade) | [raw](../raw-github/mgechev_skillgrade.md) | evaluation | [report](../projects/215-skillgrade-agent-skill-evaluation.md) | github_api_fetch_error | unknown | 2026-05 | 490/35 | - |
 | [open-gitagent/gitagent](https://github.com/open-gitagent/gitagent) | [raw](../raw-github/open-gitagent_gitagent.md) | framework | [report](../projects/213-gitagent-git-native-agent-framework.md) | github_api_fetch_error | unknown | 2026-05 | 404/82 | - |
 | [FeiLiu36/LLM4Opt](https://github.com/FeiLiu36/LLM4Opt) | [raw](../raw-github/feiliu36_llm4opt.md) | research-agent | [report](../projects/27-llm4opt-llm-optimization.md) | github_api_403 | 2026-03 | 2025-01 | 400/40 | 1 commits @ a198a9c (2026-03 -> 2026-03) |
 | [beeevita/EvoPrompt](https://github.com/beeevita/EvoPrompt) | [raw](../raw-github/beeevita_evoprompt.md) | prompt-optimization | [report](../projects/20-evoprompt-prompt-optimization.md) | github_api_403 | 2025-09 | 2024-01 | 300/30 | 1 commits @ 94caff3 (2025-09 -> 2025-09) |

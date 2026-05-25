@@ -232,7 +232,8 @@
         "work/research/hourly-public-metadata-update-2026-05-25-1321.md",
         "work/research/hourly-public-metadata-update-2026-05-25-1522.md",
         "work/research/hourly-public-metadata-update-2026-05-25-2335.md",
-        "work/research/hourly-public-metadata-update-2026-05-25-1648.md"
+        "work/research/hourly-public-metadata-update-2026-05-25-1648.md",
+        "work/research/hourly-public-metadata-update-2026-05-26-0036.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -760,12 +761,14 @@
     ]
   },
   "current_run_evidence": [
-    "Web-observed repos: DSAIL-Memory/EvoMemBench, Signet-AI/signetai, MemPalace/mempalace, jcartu/rasputin-memory; arXiv 2605.18421 used for EvoMemBench paper/code linkage.",
-    "New raw files: raw-github/dsail-memory_evomembench.md, raw-github/signet-ai_signetai.md, raw-github/mempalace_mempalace.md, raw-github/jcartu_rasputin-memory.md.",
-    "New public model cards and site reports: projects/site reports 192-195 for EvoMemBench, Signet AI, MemPalace, and RASPUTIN Memory.",
-    "Shell GitHub API remains DNS-blocked: curl api.github.com failed with Could not resolve host; gh auth status reports invalid token for Shiyao-Huang.",
-    "GitNexus local binary 1.6.5 is available; fresh temp HOME analyze succeeded with 10,878 nodes, 12,530 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
-    "Post-analysis counts before final build: raw=486, classified=486, analyzed_projects=204, strict_evolution=79, broad_evolution=176, memory_theme=92, public_reports=229 expected after generated indexes.",
+    "Web-observed repos this run: mgechev/skillgrade and webmaxru/Agent-Skills; no clone, benchmark, or authenticated GitHub API freshness was claimed.",
+    "New raw files: raw-github/mgechev_skillgrade.md and raw-github/webmaxru_agent-skills.md.",
+    "New public model cards and site reports: projects/site reports 215-216 for Skillgrade and Webmaxru Agent Skills.",
+    "Generated counts after analysis: raw=498, classified=498, site projects=89, strict evolution=79, broad evolution=179, theme heat memory=100/evaluation=91/evolution=79/skill=61.",
+    "GitHub API blocker: curl api.github.com failed DNS resolution and gh auth status reported an invalid token for Shiyao-Huang.",
+    "GitNexus evidence: status reports up-to-date at commit 85247b7; analyze is degraded because global HOME registry writes are blocked and temp-HOME LadybugDB FTS extension download cannot connect.",
+    "Validation passed: node --check, jq, generate_project_indexes, enforce_raw_timestamps, analyze_github_project_data, site build, and paper xelatex. Site and LaTeX retained pre-existing warnings.",
+    "Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> project report -> site data -> README/i18n/site build.",
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
@@ -780,8 +783,8 @@
       "mgechev/skillgrade",
       "webmaxru/Agent-Skills"
     ],
-    "evidence_quality": "web_observed_public_pages_and_search; shell GitHub API DNS failed and gh token invalid",
+    "evidence_quality": "web_observed_public_pages; shell GitHub API freshness not claimed in this run",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "available; npx gitnexus status reported a stale index before this iteration and recommends re-running gitnexus analyze"
+    "gitnexus_status": "status reports up-to-date at commit 85247b7; normal analyze failed on global registry EPERM and temp-HOME analyze failed to load LadybugDB FTS without network"
   }
 }

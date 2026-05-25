@@ -3999,12 +3999,12 @@
       "prior_unclassified": "true",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
-      "base_theme": "skill",
+      "base_theme": "evaluation",
       "stack": "TypeScript/Node.js/Docker/Agent Skills",
       "time_slice": "2026-05",
       "content_timestamp": "2026-05-26",
-      "evidence": "web-observed GitHub page showed 490 stars, 35 forks, MIT license, TypeScript/Node.js project structure and README instructions for eval.yaml, smoke/reliable/regression presets, deterministic and LLM-rubric graders, and Gemini/Claude/Codex/ACP/OpenCode targets.",
-      "description": "Skillgrade turns Agent Skills into testable assets with repeatable smoke, reliability and regression trials across Gemini, Claude, Codex, ACP and OpenCode-style agents."
+      "evidence": "web-observed GitHub page showed MIT license, 490 stars, 35 forks, TypeScript/Node.js stack, and Skillgrade README claims for Agent Skill evaluation with eval.yaml, smoke/reliable/regression presets, deterministic plus LLM-rubric graders, and Codex/Gemini/Claude/OpenCode/ACP targets; this is a skill evolution quality gate, not an API-verified benchmark rerun.",
+      "description": "Skillgrade gives Agent Skills unit-test style evaluation so skill discovery and reuse can be measured through repeatable smoke, reliability and regression trials."
     },
     {
       "repo": "microsoft/skills",
@@ -6760,11 +6760,11 @@
       "final_category": "工具/tool",
       "function_tag": "tool-module",
       "base_theme": "skill",
-      "stack": "TypeScript/JavaScript/Web API Agent Skills",
+      "stack": "TypeScript/JavaScript/Web APIs/Agent Skills",
       "time_slice": "2026-05",
       "content_timestamp": "2026-05-26",
-      "evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, eight releases with v1.4.0 latest on 2026-05-03, manually reviewed Web API skills, and references to Agent Skills best practices, a skill-creator checklist and Skillgrade.",
-      "description": "Webmaxru Agent Skills is a reviewed Web API skills collection with explicit creation, validation, remediation and install-check phases."
+      "evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, v1.4.0 latest release on 2026-05-03, a manually reviewed Web API Agent Skills collection, validation/remediation workflow, install verification and references to Skillgrade; metadata is web-observed, not API-verified.",
+      "description": "Webmaxru Agent Skills collects reviewed Web API skills and documents a creation, validation, remediation and install-check lifecycle for reusable agent know-how."
     },
     {
       "repo": "werner-duvaud/muzero-general",

@@ -24,8 +24,12 @@ Generated: 2026-05-26T00:36:53+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: cxxz/awesome-agent-memory, zhangfengcdt/memoir, DEEP-PolyU/Awesome-GraphMemory, Kenotic-Labs/ATANT, open-gitagent/gitagent, google-gemini/gemini-cli, mgechev/skillgrade, webmaxru/Agent-Skills.
-- Raw/classified count reconciled at 498; site project entries now 89.
-- Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
-- GitNexus status is available but stale before this iteration commit; a post-commit refresh is required.
+- Web-observed repos this run: mgechev/skillgrade and webmaxru/Agent-Skills; no clone, benchmark, or authenticated GitHub API freshness was claimed.
+- New raw files: raw-github/mgechev_skillgrade.md and raw-github/webmaxru_agent-skills.md.
+- New public model cards and site reports: projects/site reports 215-216 for Skillgrade and Webmaxru Agent Skills.
+- Generated counts after analysis: raw=498, classified=498, site projects=89, strict evolution=79, broad evolution=179, theme heat memory=100/evaluation=91/evolution=79/skill=61.
+- GitHub API blocker: curl api.github.com failed DNS resolution and gh auth status reported an invalid token for Shiyao-Huang.
+- GitNexus evidence: status reports up-to-date at commit 85247b7; analyze is degraded because global HOME registry writes are blocked and temp-HOME LadybugDB FTS extension download cannot connect.
+- Validation passed: node --check, jq, generate_project_indexes, enforce_raw_timestamps, analyze_github_project_data, site build, and paper xelatex. Site and LaTeX retained pre-existing warnings.
+- Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> project report -> site data -> README/i18n/site build.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

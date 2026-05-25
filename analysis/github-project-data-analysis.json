@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T16:43:02.966Z",
+  "generated_at": "2026-05-25T17:00:46.791Z",
   "counts": {
     "raw_captures": 498,
     "raw_files_on_disk": 498,
@@ -13,7 +13,7 @@
     "analyzed_with_local_git_mirror": 77,
     "analyzed_with_public_report": 59,
     "raw_core_evolution": 79,
-    "raw_broad_evolution": 178,
+    "raw_broad_evolution": 179,
     "raw_unknown_time_slice": 109
   },
   "raw_category_counts": [
@@ -53,7 +53,7 @@
     },
     {
       "key": "evaluation",
-      "count": 90
+      "count": 91
     },
     {
       "key": "evolution",
@@ -61,7 +61,7 @@
     },
     {
       "key": "skill",
-      "count": 62
+      "count": 61
     },
     {
       "key": "framework",
@@ -338,7 +338,7 @@
       "count": 1
     },
     {
-      "key": "TypeScript/JavaScript/Web API Agent Skills",
+      "key": "TypeScript/JavaScript/Web APIs/Agent Skills",
       "count": 1
     },
     {
@@ -442,12 +442,12 @@
       "count": 54
     },
     {
-      "key": "evolution",
+      "key": "evaluation",
       "count": 8
     },
     {
-      "key": "evaluation",
-      "count": 7
+      "key": "evolution",
+      "count": 8
     },
     {
       "key": "memory",
@@ -466,11 +466,11 @@
       "count": 3
     },
     {
-      "key": "skill",
-      "count": 2
+      "key": "research-agent",
+      "count": 1
     },
     {
-      "key": "research-agent",
+      "key": "skill",
       "count": 1
     },
     {
@@ -1366,6 +1366,21 @@
       "description": "Bring your own agent and build a self-improving agentic system. Automatically mine failures, optimize the agent harness, and gate against regressions."
     },
     {
+      "repo": "mgechev/skillgrade",
+      "url": "https://github.com/mgechev/skillgrade",
+      "stars": "490",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "TypeScript/Node.js/Docker/Agent Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed MIT license, 490 stars, 35 forks, TypeScript/Node.js stack, and Skillgrade README claims for Agent Skill evaluation with eval.yaml, smoke/reliable/regression presets, deterministic plus LLM-rubric graders, and Codex/Gemini/Claude/OpenCode/ACP targets; this is a skill evolution quality gate, not an API-verified benchmark rerun.",
+      "description": "Skillgrade gives Agent Skills unit-test style evaluation so skill discovery and reuse can be measured through repeatable smoke, reliability and regression trials."
+    },
+    {
       "repo": "huytieu/COG-second-brain",
       "url": "https://github.com/huytieu/COG-second-brain",
       "stars": "486",
@@ -1724,21 +1739,6 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Make your agents improve themselves. Reflexio is an AI agent self-improvement harness that enables your AI agents to continuously learn from real user interactions."
-    },
-    {
-      "repo": "evalops/dspy-0to1-guide",
-      "url": "https://github.com/evalops/dspy-0to1-guide",
-      "stars": "215",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "教程/tutorial",
-      "function_tag": "resource-index",
-      "base_theme": "prompt-optimization",
-      "stack": "Python",
-      "time_slice": "unknown",
-      "content_timestamp": "unknown",
-      "evidence": "awesome/list/tutorial/survey resource signal",
-      "description": "A comprehensive 0-to-1 guide for building self-improving LLM applications with DSPy framework"
     }
   ],
   "raw_classified_repositories": [
@@ -5740,12 +5740,12 @@
       "prior_unclassified": "true",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
-      "base_theme": "skill",
+      "base_theme": "evaluation",
       "stack": "TypeScript/Node.js/Docker/Agent Skills",
       "time_slice": "2026-05",
       "content_timestamp": "2026-05-26",
-      "evidence": "web-observed GitHub page showed 490 stars, 35 forks, MIT license, TypeScript/Node.js project structure and README instructions for eval.yaml, smoke/reliable/regression presets, deterministic and LLM-rubric graders, and Gemini/Claude/Codex/ACP/OpenCode targets.",
-      "description": "Skillgrade turns Agent Skills into testable assets with repeatable smoke, reliability and regression trials across Gemini, Claude, Codex, ACP and OpenCode-style agents."
+      "evidence": "web-observed GitHub page showed MIT license, 490 stars, 35 forks, TypeScript/Node.js stack, and Skillgrade README claims for Agent Skill evaluation with eval.yaml, smoke/reliable/regression presets, deterministic plus LLM-rubric graders, and Codex/Gemini/Claude/OpenCode/ACP targets; this is a skill evolution quality gate, not an API-verified benchmark rerun.",
+      "description": "Skillgrade gives Agent Skills unit-test style evaluation so skill discovery and reuse can be measured through repeatable smoke, reliability and regression trials."
     },
     {
       "repo": "microsoft/skills",
@@ -8501,11 +8501,11 @@
       "final_category": "工具/tool",
       "function_tag": "tool-module",
       "base_theme": "skill",
-      "stack": "TypeScript/JavaScript/Web API Agent Skills",
+      "stack": "TypeScript/JavaScript/Web APIs/Agent Skills",
       "time_slice": "2026-05",
       "content_timestamp": "2026-05-26",
-      "evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, eight releases with v1.4.0 latest on 2026-05-03, manually reviewed Web API skills, and references to Agent Skills best practices, a skill-creator checklist and Skillgrade.",
-      "description": "Webmaxru Agent Skills is a reviewed Web API skills collection with explicit creation, validation, remediation and install-check phases."
+      "evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, v1.4.0 latest release on 2026-05-03, a manually reviewed Web API Agent Skills collection, validation/remediation workflow, install verification and references to Skillgrade; metadata is web-observed, not API-verified.",
+      "description": "Webmaxru Agent Skills collects reviewed Web API skills and documents a creation, validation, remediation and install-check lifecycle for reusable agent know-how."
     },
     {
       "repo": "werner-duvaud/muzero-general",
@@ -12035,6 +12035,21 @@
       "content_timestamp": "unknown",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Local-first, privacy-first AI agent with recursive self-improvement"
+    },
+    {
+      "repo": "mgechev/skillgrade",
+      "url": "https://github.com/mgechev/skillgrade",
+      "stars": "490",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "TypeScript/Node.js/Docker/Agent Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed MIT license, 490 stars, 35 forks, TypeScript/Node.js stack, and Skillgrade README claims for Agent Skill evaluation with eval.yaml, smoke/reliable/regression presets, deterministic plus LLM-rubric graders, and Codex/Gemini/Claude/OpenCode/ACP targets; this is a skill evolution quality gate, not an API-verified benchmark rerun.",
+      "description": "Skillgrade gives Agent Skills unit-test style evaluation so skill discovery and reuse can be measured through repeatable smoke, reliability and regression trials."
     },
     {
       "repo": "modelscope/agentevolver",
@@ -17071,9 +17086,9 @@
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "web-observed GitHub page showed 490 stars, 35 forks, MIT license, TypeScript/Node.js project structure and README instructions for eval.yaml, smoke/reliable/regression presets, deterministic and LLM-rubric graders, and Gemini/Claude/Codex/ACP/OpenCode targets.",
+      "classification_evidence": "web-observed GitHub page showed MIT license, 490 stars, 35 forks, TypeScript/Node.js stack, and Skillgrade README claims for Agent Skill evaluation with eval.yaml, smoke/reliable/regression presets, deterministic plus LLM-rubric graders, and Codex/Gemini/Claude/OpenCode/ACP targets; this is a skill evolution quality gate, not an API-verified benchmark rerun.",
       "raw_time_slice": "2026-05",
-      "classified_theme": "skill",
+      "classified_theme": "evaluation",
       "evolution_focused": false
     },
     {
@@ -17113,7 +17128,7 @@
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, eight releases with v1.4.0 latest on 2026-05-03, manually reviewed Web API skills, and references to Agent Skills best practices, a skill-creator checklist and Skillgrade.",
+      "classification_evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, v1.4.0 latest release on 2026-05-03, a manually reviewed Web API Agent Skills collection, validation/remediation workflow, install verification and references to Skillgrade; metadata is web-observed, not API-verified.",
       "raw_time_slice": "2026-05",
       "classified_theme": "skill",
       "evolution_focused": false
@@ -20212,9 +20227,9 @@
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "web-observed GitHub page showed 490 stars, 35 forks, MIT license, TypeScript/Node.js project structure and README instructions for eval.yaml, smoke/reliable/regression presets, deterministic and LLM-rubric graders, and Gemini/Claude/Codex/ACP/OpenCode targets.",
+      "classification_evidence": "web-observed GitHub page showed MIT license, 490 stars, 35 forks, TypeScript/Node.js stack, and Skillgrade README claims for Agent Skill evaluation with eval.yaml, smoke/reliable/regression presets, deterministic plus LLM-rubric graders, and Codex/Gemini/Claude/OpenCode/ACP targets; this is a skill evolution quality gate, not an API-verified benchmark rerun.",
       "raw_time_slice": "2026-05",
-      "classified_theme": "skill",
+      "classified_theme": "evaluation",
       "evolution_focused": false
     },
     {
@@ -21078,7 +21093,7 @@
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, eight releases with v1.4.0 latest on 2026-05-03, manually reviewed Web API skills, and references to Agent Skills best practices, a skill-creator checklist and Skillgrade.",
+      "classification_evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, v1.4.0 latest release on 2026-05-03, a manually reviewed Web API Agent Skills collection, validation/remediation workflow, install verification and references to Skillgrade; metadata is web-observed, not API-verified.",
       "raw_time_slice": "2026-05",
       "classified_theme": "skill",
       "evolution_focused": false
@@ -25044,9 +25059,9 @@
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "web-observed GitHub page showed 490 stars, 35 forks, MIT license, TypeScript/Node.js project structure and README instructions for eval.yaml, smoke/reliable/regression presets, deterministic and LLM-rubric graders, and Gemini/Claude/Codex/ACP/OpenCode targets.",
+      "classification_evidence": "web-observed GitHub page showed MIT license, 490 stars, 35 forks, TypeScript/Node.js stack, and Skillgrade README claims for Agent Skill evaluation with eval.yaml, smoke/reliable/regression presets, deterministic plus LLM-rubric graders, and Codex/Gemini/Claude/OpenCode/ACP targets; this is a skill evolution quality gate, not an API-verified benchmark rerun.",
       "raw_time_slice": "2026-05",
-      "classified_theme": "skill",
+      "classified_theme": "evaluation",
       "evolution_focused": false
     },
     {
@@ -25166,7 +25181,7 @@
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, eight releases with v1.4.0 latest on 2026-05-03, manually reviewed Web API skills, and references to Agent Skills best practices, a skill-creator checklist and Skillgrade.",
+      "classification_evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, v1.4.0 latest release on 2026-05-03, a manually reviewed Web API Agent Skills collection, validation/remediation workflow, install verification and references to Skillgrade; metadata is web-observed, not API-verified.",
       "raw_time_slice": "2026-05",
       "classified_theme": "skill",
       "evolution_focused": false
