@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-26T04:41:30+08:00
+Generated: 2026-05-26T05:44:07+08:00
 
 ## Nodes
 
@@ -19,16 +19,16 @@ Generated: 2026-05-26T04:41:30+08:00
 - raw.github.hourly-captures --feeds--> processed.github-classification
 - processed.github-classification --publishes--> results.public-site
 - processed.github-classification --explains--> work.learning-notes
-- work.learning-notes --handoff--> intent.direct-user-input
 - processed.github-classification --visualizes--> results.public-visualizations
 
 ## Current Run Evidence
 
-- Web-observed repositories this run: MaximeRobeyns/self_improving_coding_agent, agent0ai/agent-zero, elizaOS/eliza, paradigmxyz/centaur, and TransformerOptimus/SuperAGI.
-- New raw files: raw-github/maximerobeyns_self_improving_coding_agent.md, raw-github/agent0ai_agent-zero.md, raw-github/elizaos_eliza.md, raw-github/paradigmxyz_centaur.md, raw-github/transformeroptimus_superagi.md.
-- New public model cards/site reports: project/report ids 224-227 for SICA, Agent Zero, elizaOS, and Centaur; SuperAGI was a raw/classification backfill for an existing site project.
-- GitNexus evidence: npx gitnexus status reported repository indexed at current commit 2f939fd before this iteration edits.
-- GitHub API freshness caveat: shell API freshness is not claimed; web-observed public pages/search results were used and repository analysis preserves API/cache source labels where available.
-- Follow-up blocker: chenyn66/learning-to-self-evolve was not confirmed as a GitHub repository URL in this run, so no raw capture was fabricated.
-- Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> site data/report -> README/i18n/site build.
+- Web-observed repositories this run: YunjueTech/Yunjue-Agent, RangeKing/self-evolving-agent, gofenix/nex-agent, swapedoc/hermes2anti, and vilmire/adhdev.
+- New raw files: raw-github/yunjuetech_yunjue-agent.md, raw-github/rangeking_self-evolving-agent.md, raw-github/gofenix_nex-agent.md, raw-github/swapedoc_hermes2anti.md, raw-github/vilmire_adhdev.md.
+- New public model cards/site reports: project/report ids 228-232 for Yunjue Agent, RangeKing self-evolving-agent, NexAgent, hermes2anti, and ADHDev.
+- Counts after propagation: 515 raw captures, 515 classified repositories, 105 site projects, 82 strict evolution-theme repositories, 185 broad evolution-related repositories, and 257 public project report files.
+- GitNexus evidence: npx gitnexus status was available but stale before commit; refresh is scheduled after commit so it indexes the committed iteration.
+- GitHub API freshness caveat: shell DNS for api.github.com failed; web-observed public pages were used and GitHub analysis preserves github_api_fetch_error for the five new promoted projects.
+- Legacy generator caveat: scripts/generate_repo_classification.py only covers a 364-row legacy path; current classification truth is the restored/appended 515-row research/repo-classification.json.
+- Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> README/i18n -> site data/report -> Astro site build.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

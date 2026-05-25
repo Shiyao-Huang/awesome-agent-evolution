@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-05-25T20:54:54.139Z",
+  "generated_at": "2026-05-25T21:58:25.662Z",
   "counts": {
-    "raw_captures": 510,
-    "raw_files_on_disk": 510,
-    "classified_repos": 510,
-    "analyzed_projects": 100,
-    "analyzed_in_raw_timestamp_index": 47,
-    "analyzed_in_classification": 47,
-    "analyzed_evolution_focused": 51,
+    "raw_captures": 515,
+    "raw_files_on_disk": 515,
+    "classified_repos": 515,
+    "analyzed_projects": 105,
+    "analyzed_in_raw_timestamp_index": 52,
+    "analyzed_in_classification": 52,
+    "analyzed_evolution_focused": 55,
     "analyzed_with_created_at_or_fallback": 80,
     "analyzed_with_github_api_metadata": 25,
     "analyzed_with_local_git_mirror": 77,
-    "analyzed_with_public_report": 70,
-    "raw_core_evolution": 80,
-    "raw_broad_evolution": 181,
+    "analyzed_with_public_report": 75,
+    "raw_core_evolution": 82,
+    "raw_broad_evolution": 185,
     "raw_unknown_time_slice": 109
   },
   "raw_category_counts": [
     {
       "key": "框架/framework",
-      "count": 143
+      "count": 144
     },
     {
       "key": "评测/evaluation",
@@ -31,15 +31,15 @@
     },
     {
       "key": "工具/tool",
-      "count": 88
+      "count": 90
     },
     {
       "key": "应用/application",
-      "count": 47
+      "count": 48
     },
     {
       "key": "论文代码/paper-code",
-      "count": 30
+      "count": 31
     },
     {
       "key": "评测/benchmark",
@@ -49,7 +49,7 @@
   "raw_theme_counts": [
     {
       "key": "memory",
-      "count": 103
+      "count": 104
     },
     {
       "key": "evaluation",
@@ -57,15 +57,15 @@
     },
     {
       "key": "evolution",
-      "count": 80
+      "count": 82
     },
     {
       "key": "skill",
-      "count": 63
+      "count": 64
     },
     {
       "key": "framework",
-      "count": 55
+      "count": 56
     },
     {
       "key": "education-list",
@@ -99,11 +99,11 @@
     },
     {
       "key": "Python",
-      "count": 180
+      "count": 183
     },
     {
       "key": "TypeScript",
-      "count": 18
+      "count": 19
     },
     {
       "key": "Unknown",
@@ -155,6 +155,10 @@
     },
     {
       "key": "Codex CLI/AGENTS.md/Skills/Shell tools/Profiles",
+      "count": 1
+    },
+    {
+      "key": "Elixir",
       "count": 1
     },
     {
@@ -385,7 +389,7 @@
   "raw_time_slice_counts": [
     {
       "key": "2026-05",
-      "count": 350
+      "count": 354
     },
     {
       "key": "unknown",
@@ -412,11 +416,11 @@
       "count": 4
     },
     {
-      "key": "2025-05",
-      "count": 3
+      "key": "2026-02",
+      "count": 4
     },
     {
-      "key": "2026-02",
+      "key": "2025-05",
       "count": 3
     },
     {
@@ -466,31 +470,31 @@
       "count": 53
     },
     {
+      "key": "evolution",
+      "count": 11
+    },
+    {
       "key": "evaluation",
       "count": 10
     },
     {
-      "key": "evolution",
+      "key": "framework",
       "count": 9
     },
     {
-      "key": "framework",
-      "count": 8
-    },
-    {
       "key": "memory",
-      "count": 8
+      "count": 9
     },
     {
       "key": "education-list",
       "count": 4
     },
     {
-      "key": "prompt-optimization",
-      "count": 3
+      "key": "skill",
+      "count": 4
     },
     {
-      "key": "skill",
+      "key": "prompt-optimization",
       "count": 3
     },
     {
@@ -509,7 +513,7 @@
     },
     {
       "key": "unknown",
-      "count": 20
+      "count": 25
     },
     {
       "key": "2026-03",
@@ -878,6 +882,21 @@
       "description": "MemSkill 是学习并进化 long-horizon agent 记忆技能的框架，把记忆操作从静态手写规则变成由任务反馈驱动的 meta-memory skill bank。"
     },
     {
+      "repo": "YunjueTech/Yunjue-Agent",
+      "url": "https://github.com/YunjueTech/Yunjue-Agent",
+      "stars": "426",
+      "prior_category": "论文代码",
+      "prior_unclassified": "false",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "Python",
+      "time_slice": "2026-02",
+      "content_timestamp": "2026-02-11",
+      "evidence": "web GitHub page observed 34 commits, Apache-2.0 license, Python 84.9%, 426 stars and 49 forks; README says zero-start in-situ self-evolving agent system with tool evolution, public traces, reproduction branch, HLE/DeepSearchQA/FinSearchComp/xbench benchmark evidence",
+      "description": "Yunjue Agent 是可复现的 zero-start in-situ self-evolving agent system，把任务经验蒸馏成工具能力，并公开 traces、benchmark scripts 和 evolved tools。"
+    },
+    {
       "repo": "ecnu-icalk/autoskill",
       "url": "https://github.com/ecnu-icalk/autoskill",
       "stars": "424",
@@ -996,21 +1015,6 @@
       "content_timestamp": "2026-05-21",
       "evidence": "framework/runtime/orchestration signal",
       "description": "Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement"
-    },
-    {
-      "repo": "xmudeeplit/awesome-self-evolving-agents",
-      "url": "https://github.com/xmudeeplit/awesome-self-evolving-agents",
-      "stars": "181",
-      "prior_category": "工具",
-      "prior_unclassified": "false",
-      "final_category": "工具/tool",
-      "function_tag": "resource-index",
-      "base_theme": "evolution",
-      "stack": "Markdown",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-21",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "A Survey of Self-Evolving Agents | A curated list of resources (surveys, papers, benchmarks, and opensource projects) on Self-Evolving Agents."
     }
   ],
   "raw_broad_evolution_top": [
@@ -1435,6 +1439,21 @@
       "description": "MemSkill 是学习并进化 long-horizon agent 记忆技能的框架，把记忆操作从静态手写规则变成由任务反馈驱动的 meta-memory skill bank。"
     },
     {
+      "repo": "YunjueTech/Yunjue-Agent",
+      "url": "https://github.com/YunjueTech/Yunjue-Agent",
+      "stars": "426",
+      "prior_category": "论文代码",
+      "prior_unclassified": "false",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "Python",
+      "time_slice": "2026-02",
+      "content_timestamp": "2026-02-11",
+      "evidence": "web GitHub page observed 34 commits, Apache-2.0 license, Python 84.9%, 426 stars and 49 forks; README says zero-start in-situ self-evolving agent system with tool evolution, public traces, reproduction branch, HLE/DeepSearchQA/FinSearchComp/xbench benchmark evidence",
+      "description": "Yunjue Agent 是可复现的 zero-start in-situ self-evolving agent system，把任务经验蒸馏成工具能力，并公开 traces、benchmark scripts 和 evolved tools。"
+    },
+    {
       "repo": "ecnu-icalk/autoskill",
       "url": "https://github.com/ecnu-icalk/autoskill",
       "stars": "424",
@@ -1748,21 +1767,6 @@
       "content_timestamp": "2026-05-21",
       "evidence": "tool/module/memory/prompt/coding signal",
       "description": "Fully Autonomous AI Research System with Self-Evolution, built natively on Claude Code"
-    },
-    {
-      "repo": "beeevita/evoprompt",
-      "url": "https://github.com/beeevita/evoprompt",
-      "stars": "238",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "评测/evaluation",
-      "function_tag": "benchmark-eval",
-      "base_theme": "prompt-optimization",
-      "stack": "Python",
-      "time_slice": "unknown",
-      "content_timestamp": "unknown",
-      "evidence": "benchmark/evaluation/harness signal",
-      "description": "Official implementation of the paper Connecting Large Language Models with Evolutionary Algorithms Yields Powerful Prompt Optimizers"
     }
   ],
   "raw_classified_repositories": [
@@ -4030,6 +4034,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 6 commits, MIT license, 1 star and 0 forks, 6 releases with v0.1.5 latest on 2026-02-23; README says it scaffolds a production-grade OpenAI Codex Skill for LangChain Deep Agents CLI, including persistent memory, sandboxes, streaming, SDK customization, and direct $deepagents-cli invocation",
       "description": "Deep Agents CLI Codex Skill 把 LangChain Deep Agents CLI 的命令、provider、memory、sandbox、streaming、SDK customization 和 Agent Client Protocol 知识封装成 Codex 可加载 skill。"
+    },
+    {
+      "repo": "gofenix/nex-agent",
+      "url": "https://github.com/gofenix/nex-agent",
+      "stars": "64",
+      "prior_category": "应用",
+      "prior_unclassified": "false",
+      "final_category": "应用/application",
+      "function_tag": "application-demo",
+      "base_theme": "evolution",
+      "stack": "Elixir",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 159 commits, 1 tag, Elixir/OTP stack, 64 stars and 5 forks; README describes persistent sessions, memory, dynamic tools, skills, cron, subagents, source-level self-improvement and OTP fault tolerance",
+      "description": "NexAgent 是 Elixir/OTP self-evolving agent runtime，用 supervision tree 管理 memory、tools、skills、subagents、cron 和 code upgrade。"
     },
     {
       "repo": "google-gemini/gemini-cli",
@@ -6987,6 +7006,21 @@
       "description": "Randroids Dojo Skills 是面向 Claude Code、Codex CLI 和 OpenCode 的双格式技能库，把 randroid-loop、task tracking、game-dev skills 和 spiral scaffold 组织成可安装的 agent skill bundle。"
     },
     {
+      "repo": "RangeKing/self-evolving-agent",
+      "url": "https://github.com/RangeKing/self-evolving-agent",
+      "stars": "9",
+      "prior_category": "工具",
+      "prior_unclassified": "false",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 18 commits, MIT license, Python 93.1%, 9 stars and 0 forks; README describes OpenClaw self-evolving skill with curriculum, evaluation, transfer, promotion, .evolution workspace and legacy .learnings migration",
+      "description": "RangeKing/self-evolving-agent 是 OpenClaw self-evolving skill，把自改进日志升级为 curriculum、eval、transfer、promotion 和可迁移 evolution workspace。"
+    },
+    {
       "repo": "raphaelchristi/harness-evolver",
       "url": "https://github.com/raphaelchristi/harness-evolver",
       "stars": "21",
@@ -7962,6 +7996,21 @@
       "description": "[ICML-2026] Official implementation of \"SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience\""
     },
     {
+      "repo": "swapedoc/hermes2anti",
+      "url": "https://github.com/swapedoc/hermes2anti",
+      "stars": "4",
+      "prior_category": "工具",
+      "prior_unclassified": "false",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 1 commit, MIT license, Python 100%, 4 stars and 0 forks; README shows memory plus skills loop, skill security scanner, SQLite FTS5 recall, git-history insights and Hermes Agent inspiration",
+      "description": "hermes2anti 是 Hermes-inspired memory/skills self-improvement toolkit，把 golden path、skill creation、安全扫描、session recall 和 git insights 连接起来。"
+    },
+    {
       "repo": "swarmclawai/swarmclaw",
       "url": "https://github.com/swarmclawai/swarmclaw",
       "stars": "518",
@@ -8592,6 +8641,21 @@
       "description": "MemSkill 是学习并进化 long-horizon agent 记忆技能的框架，把记忆操作从静态手写规则变成由任务反馈驱动的 meta-memory skill bank。"
     },
     {
+      "repo": "vilmire/adhdev",
+      "url": "https://github.com/vilmire/adhdev",
+      "stars": "33",
+      "prior_category": "框架",
+      "prior_unclassified": "false",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 1127 commits, 243 tags, AGPL-3.0, TypeScript 96.2%, 33 stars and 8 forks; README describes local control plane/dashboard for Cursor, Antigravity, VS Code, Kiro, Codex, Claude Code, Hermes Agent and CLI sessions",
+      "description": "ADHDev 是 self-hosted coding-agent control plane，用本地 dashboard 管理长运行 agent session、approval、terminal/chat 状态和历史恢复。"
+    },
+    {
       "repo": "vision-intelligence-and-robots-group/best-incremental-learning",
       "url": "https://github.com/vision-intelligence-and-robots-group/best-incremental-learning",
       "stars": "607",
@@ -9055,6 +9119,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "This is the reading list for the survey \"A Survey on the Optimization of LLM-based Agents \". We will keep adding papers and improving the list. Any suggestions and PRs are welcome!"
+    },
+    {
+      "repo": "YunjueTech/Yunjue-Agent",
+      "url": "https://github.com/YunjueTech/Yunjue-Agent",
+      "stars": "426",
+      "prior_category": "论文代码",
+      "prior_unclassified": "false",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "Python",
+      "time_slice": "2026-02",
+      "content_timestamp": "2026-02-11",
+      "evidence": "web GitHub page observed 34 commits, Apache-2.0 license, Python 84.9%, 426 stars and 49 forks; README says zero-start in-situ self-evolving agent system with tool evolution, public traces, reproduction branch, HLE/DeepSearchQA/FinSearchComp/xbench benchmark evidence",
+      "description": "Yunjue Agent 是可复现的 zero-start in-situ self-evolving agent system，把任务经验蒸馏成工具能力，并公开 traces、benchmark scripts 和 evolved tools。"
     },
     {
       "repo": "yxf203/awesome-efficient-agents",
@@ -9884,6 +9963,21 @@
       "description": "Evolutionary algorithm that uses Large Language Models (LLMs) to automatically improve programs through iterative mutation and selection"
     },
     {
+      "repo": "gofenix/nex-agent",
+      "url": "https://github.com/gofenix/nex-agent",
+      "stars": "64",
+      "prior_category": "应用",
+      "prior_unclassified": "false",
+      "final_category": "应用/application",
+      "function_tag": "application-demo",
+      "base_theme": "evolution",
+      "stack": "Elixir",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 159 commits, 1 tag, Elixir/OTP stack, 64 stars and 5 forks; README describes persistent sessions, memory, dynamic tools, skills, cron, subagents, source-level self-improvement and OTP fault tolerance",
+      "description": "NexAgent 是 Elixir/OTP self-evolving agent runtime，用 supervision tree 管理 memory、tools、skills、subagents、cron 和 code upgrade。"
+    },
+    {
       "repo": "hankbesser/recursive-agents",
       "url": "https://github.com/hankbesser/recursive-agents",
       "stars": "39",
@@ -10557,6 +10651,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Self-improvement system for Hermes Agent. Monitors performance, finds weak skills, fixes them with self-evolution, reports results."
+    },
+    {
+      "repo": "YunjueTech/Yunjue-Agent",
+      "url": "https://github.com/YunjueTech/Yunjue-Agent",
+      "stars": "426",
+      "prior_category": "论文代码",
+      "prior_unclassified": "false",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "Python",
+      "time_slice": "2026-02",
+      "content_timestamp": "2026-02-11",
+      "evidence": "web GitHub page observed 34 commits, Apache-2.0 license, Python 84.9%, 426 stars and 49 forks; README says zero-start in-situ self-evolving agent system with tool evolution, public traces, reproduction branch, HLE/DeepSearchQA/FinSearchComp/xbench benchmark evidence",
+      "description": "Yunjue Agent 是可复现的 zero-start in-situ self-evolving agent system，把任务经验蒸馏成工具能力，并公开 traces、benchmark scripts 和 evolved tools。"
     },
     {
       "repo": "zesearch/self-improvement-llm",
@@ -11701,6 +11810,21 @@
       "description": "ACM CAIS'26 Artifact — GEPA"
     },
     {
+      "repo": "gofenix/nex-agent",
+      "url": "https://github.com/gofenix/nex-agent",
+      "stars": "64",
+      "prior_category": "应用",
+      "prior_unclassified": "false",
+      "final_category": "应用/application",
+      "function_tag": "application-demo",
+      "base_theme": "evolution",
+      "stack": "Elixir",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 159 commits, 1 tag, Elixir/OTP stack, 64 stars and 5 forks; README describes persistent sessions, memory, dynamic tools, skills, cron, subagents, source-level self-improvement and OTP fault tolerance",
+      "description": "NexAgent 是 Elixir/OTP self-evolving agent runtime，用 supervision tree 管理 memory、tools、skills、subagents、cron 和 code upgrade。"
+    },
+    {
       "repo": "google-gemini/gemini-cli",
       "url": "https://github.com/google-gemini/gemini-cli",
       "stars": "105000",
@@ -12676,6 +12800,21 @@
       "description": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search"
     },
     {
+      "repo": "RangeKing/self-evolving-agent",
+      "url": "https://github.com/RangeKing/self-evolving-agent",
+      "stars": "9",
+      "prior_category": "工具",
+      "prior_unclassified": "false",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 18 commits, MIT license, Python 93.1%, 9 stars and 0 forks; README describes OpenClaw self-evolving skill with curriculum, evaluation, transfer, promotion, .evolution workspace and legacy .learnings migration",
+      "description": "RangeKing/self-evolving-agent 是 OpenClaw self-evolving skill，把自改进日志升级为 curriculum、eval、transfer、promotion 和可迁移 evolution workspace。"
+    },
+    {
       "repo": "raphaelchristi/harness-evolver",
       "url": "https://github.com/raphaelchristi/harness-evolver",
       "stars": "21",
@@ -12929,6 +13068,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "[ICML-2026] Official implementation of \"SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience\""
+    },
+    {
+      "repo": "swapedoc/hermes2anti",
+      "url": "https://github.com/swapedoc/hermes2anti",
+      "stars": "4",
+      "prior_category": "工具",
+      "prior_unclassified": "false",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 1 commit, MIT license, Python 100%, 4 stars and 0 forks; README shows memory plus skills loop, skill security scanner, SQLite FTS5 recall, git-history insights and Hermes Agent inspiration",
+      "description": "hermes2anti 是 Hermes-inspired memory/skills self-improvement toolkit，把 golden path、skill creation、安全扫描、session recall 和 git insights 连接起来。"
     },
     {
       "repo": "tencent/selfevolvingagent",
@@ -13229,6 +13383,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Self-improvement system for Hermes Agent. Monitors performance, finds weak skills, fixes them with self-evolution, reports results."
+    },
+    {
+      "repo": "YunjueTech/Yunjue-Agent",
+      "url": "https://github.com/YunjueTech/Yunjue-Agent",
+      "stars": "426",
+      "prior_category": "论文代码",
+      "prior_unclassified": "false",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "Python",
+      "time_slice": "2026-02",
+      "content_timestamp": "2026-02-11",
+      "evidence": "web GitHub page observed 34 commits, Apache-2.0 license, Python 84.9%, 426 stars and 49 forks; README says zero-start in-situ self-evolving agent system with tool evolution, public traces, reproduction branch, HLE/DeepSearchQA/FinSearchComp/xbench benchmark evidence",
+      "description": "Yunjue Agent 是可复现的 zero-start in-situ self-evolving agent system，把任务经验蒸馏成工具能力，并公开 traces、benchmark scripts 和 evolved tools。"
     },
     {
       "repo": "zaixizhang/stella",
@@ -17848,6 +18017,221 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "framework",
       "evolution_focused": false
+    },
+    {
+      "name": "Yunjue Agent",
+      "repo": "YunjueTech/Yunjue-Agent",
+      "normalized_repo": "yunjuetech/yunjue-agent",
+      "url": "https://github.com/YunjueTech/Yunjue-Agent",
+      "category": "In-Situ Self-Evolving Agent System",
+      "pattern": "open-ended task stream -> tool evolution -> reusable capabilities -> trace/reproduction audit",
+      "tags": [
+        "in-situ self-evolution",
+        "tool evolution",
+        "benchmark traces",
+        "reproducibility",
+        "open-ended tasks"
+      ],
+      "site_stars": 426,
+      "site_forks": 49,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-02-11T00:00:00Z",
+      "localPath": "raw-github/yunjuetech_yunjue-agent.md",
+      "local_git": null,
+      "report": "projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
+      "public_report": "site/public/reports/projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/yunjuetech_yunjue-agent.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-02-11",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "论文代码/paper-code",
+      "classification_function_tag": "agent-evolution-infra",
+      "classification_evidence": "web GitHub page observed 34 commits, Apache-2.0 license, Python 84.9%, 426 stars and 49 forks; README says zero-start in-situ self-evolving agent system with tool evolution, public traces, reproduction branch, HLE/DeepSearchQA/FinSearchComp/xbench benchmark evidence",
+      "raw_time_slice": "2026-02",
+      "classified_theme": "evolution",
+      "evolution_focused": true
+    },
+    {
+      "name": "self-evolving-agent",
+      "repo": "RangeKing/self-evolving-agent",
+      "normalized_repo": "rangeking/self-evolving-agent",
+      "url": "https://github.com/RangeKing/self-evolving-agent",
+      "category": "OpenClaw Self-Evolving Skill",
+      "pattern": "agent run -> .evolution workspace -> evaluation/curriculum -> promoted capability",
+      "tags": [
+        "agent skill",
+        "OpenClaw",
+        "curriculum",
+        "evaluation",
+        "promotion"
+      ],
+      "site_stars": 9,
+      "site_forks": 0,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/rangeking_self-evolving-agent.md",
+      "local_git": null,
+      "report": "projects/229-rangeking-self-evolving-agent-skill.md",
+      "public_report": "site/public/reports/projects/229-rangeking-self-evolving-agent-skill.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/rangeking_self-evolving-agent.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web GitHub page observed 18 commits, MIT license, Python 93.1%, 9 stars and 0 forks; README describes OpenClaw self-evolving skill with curriculum, evaluation, transfer, promotion, .evolution workspace and legacy .learnings migration",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": true
+    },
+    {
+      "name": "NexAgent",
+      "repo": "gofenix/nex-agent",
+      "normalized_repo": "gofenix/nex-agent",
+      "url": "https://github.com/gofenix/nex-agent",
+      "category": "Elixir/OTP Self-Evolving Agent Runtime",
+      "pattern": "supervised runtime -> memory/tools/skills -> subagents/jobs -> source-level upgrades",
+      "tags": [
+        "self-evolving runtime",
+        "Elixir/OTP",
+        "persistent memory",
+        "subagents",
+        "code upgrades"
+      ],
+      "site_stars": 64,
+      "site_forks": 5,
+      "license": "Unknown",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/gofenix_nex-agent.md",
+      "local_git": null,
+      "report": "projects/230-nex-agent-elixir-otp-self-evolving-agent.md",
+      "public_report": "site/public/reports/projects/230-nex-agent-elixir-otp-self-evolving-agent.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/gofenix_nex-agent.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "应用/application",
+      "classification_function_tag": "application-demo",
+      "classification_evidence": "web GitHub page observed 159 commits, 1 tag, Elixir/OTP stack, 64 stars and 5 forks; README describes persistent sessions, memory, dynamic tools, skills, cron, subagents, source-level self-improvement and OTP fault tolerance",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evolution",
+      "evolution_focused": true
+    },
+    {
+      "name": "hermes2anti",
+      "repo": "swapedoc/hermes2anti",
+      "normalized_repo": "swapedoc/hermes2anti",
+      "url": "https://github.com/swapedoc/hermes2anti",
+      "category": "Memory and Skill Self-Improvement Toolkit",
+      "pattern": "task session -> golden path extraction -> skill creation/security scan -> memory recall",
+      "tags": [
+        "memory",
+        "skills",
+        "Hermes Agent",
+        "security scanning",
+        "session recall"
+      ],
+      "site_stars": 4,
+      "site_forks": 0,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/swapedoc_hermes2anti.md",
+      "local_git": null,
+      "report": "projects/231-hermes2anti-self-improve-agent-memory-skills.md",
+      "public_report": "site/public/reports/projects/231-hermes2anti-self-improve-agent-memory-skills.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/swapedoc_hermes2anti.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web GitHub page observed 1 commit, MIT license, Python 100%, 4 stars and 0 forks; README shows memory plus skills loop, skill security scanner, SQLite FTS5 recall, git-history insights and Hermes Agent inspiration",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": true
+    },
+    {
+      "name": "ADHDev",
+      "repo": "vilmire/adhdev",
+      "normalized_repo": "vilmire/adhdev",
+      "url": "https://github.com/vilmire/adhdev",
+      "category": "Coding-Agent Control Plane",
+      "pattern": "coding-agent session -> local dashboard/control plane -> approval, status, history and continuation",
+      "tags": [
+        "control plane",
+        "coding agents",
+        "session dashboard",
+        "Codex",
+        "Claude Code"
+      ],
+      "site_stars": 33,
+      "site_forks": 8,
+      "license": "AGPL-3.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/vilmire_adhdev.md",
+      "local_git": null,
+      "report": "projects/232-adhdev-agent-dashboard-control-plane.md",
+      "public_report": "site/public/reports/projects/232-adhdev-agent-dashboard-control-plane.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/vilmire_adhdev.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web GitHub page observed 1127 commits, 243 tags, AGPL-3.0, TypeScript 96.2%, 33 stars and 8 forks; README describes local control plane/dashboard for Cursor, Antigravity, VS Code, Kiro, Codex, Claude Code, Hermes Agent and CLI sessions",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "framework",
+      "evolution_focused": false
     }
   ],
   "analyzed_git_evidence": [
@@ -21162,6 +21546,49 @@
       "evolution_focused": false
     },
     {
+      "name": "Yunjue Agent",
+      "repo": "YunjueTech/Yunjue-Agent",
+      "normalized_repo": "yunjuetech/yunjue-agent",
+      "url": "https://github.com/YunjueTech/Yunjue-Agent",
+      "category": "In-Situ Self-Evolving Agent System",
+      "pattern": "open-ended task stream -> tool evolution -> reusable capabilities -> trace/reproduction audit",
+      "tags": [
+        "in-situ self-evolution",
+        "tool evolution",
+        "benchmark traces",
+        "reproducibility",
+        "open-ended tasks"
+      ],
+      "site_stars": 426,
+      "site_forks": 49,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-02-11T00:00:00Z",
+      "localPath": "raw-github/yunjuetech_yunjue-agent.md",
+      "local_git": null,
+      "report": "projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
+      "public_report": "site/public/reports/projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/yunjuetech_yunjue-agent.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-02-11",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "论文代码/paper-code",
+      "classification_function_tag": "agent-evolution-infra",
+      "classification_evidence": "web GitHub page observed 34 commits, Apache-2.0 license, Python 84.9%, 426 stars and 49 forks; README says zero-start in-situ self-evolving agent system with tool evolution, public traces, reproduction branch, HLE/DeepSearchQA/FinSearchComp/xbench benchmark evidence",
+      "raw_time_slice": "2026-02",
+      "classified_theme": "evolution",
+      "evolution_focused": true
+    },
+    {
       "name": "evmbench",
       "repo": "paradigmxyz/evmbench",
       "normalized_repo": "paradigmxyz/evmbench",
@@ -21989,6 +22416,49 @@
       "evolution_focused": true
     },
     {
+      "name": "NexAgent",
+      "repo": "gofenix/nex-agent",
+      "normalized_repo": "gofenix/nex-agent",
+      "url": "https://github.com/gofenix/nex-agent",
+      "category": "Elixir/OTP Self-Evolving Agent Runtime",
+      "pattern": "supervised runtime -> memory/tools/skills -> subagents/jobs -> source-level upgrades",
+      "tags": [
+        "self-evolving runtime",
+        "Elixir/OTP",
+        "persistent memory",
+        "subagents",
+        "code upgrades"
+      ],
+      "site_stars": 64,
+      "site_forks": 5,
+      "license": "Unknown",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/gofenix_nex-agent.md",
+      "local_git": null,
+      "report": "projects/230-nex-agent-elixir-otp-self-evolving-agent.md",
+      "public_report": "site/public/reports/projects/230-nex-agent-elixir-otp-self-evolving-agent.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/gofenix_nex-agent.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "应用/application",
+      "classification_function_tag": "application-demo",
+      "classification_evidence": "web GitHub page observed 159 commits, 1 tag, Elixir/OTP stack, 64 stars and 5 forks; README describes persistent sessions, memory, dynamic tools, skills, cron, subagents, source-level self-improvement and OTP fault tolerance",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evolution",
+      "evolution_focused": true
+    },
+    {
       "name": "Tutorial-GP-LLM",
       "repo": "alfa-group/tutorial_gp_llm",
       "normalized_repo": "alfa-group/tutorial_gp_llm",
@@ -22112,6 +22582,49 @@
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
       "evolution_focused": true
+    },
+    {
+      "name": "ADHDev",
+      "repo": "vilmire/adhdev",
+      "normalized_repo": "vilmire/adhdev",
+      "url": "https://github.com/vilmire/adhdev",
+      "category": "Coding-Agent Control Plane",
+      "pattern": "coding-agent session -> local dashboard/control plane -> approval, status, history and continuation",
+      "tags": [
+        "control plane",
+        "coding agents",
+        "session dashboard",
+        "Codex",
+        "Claude Code"
+      ],
+      "site_stars": 33,
+      "site_forks": 8,
+      "license": "AGPL-3.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/vilmire_adhdev.md",
+      "local_git": null,
+      "report": "projects/232-adhdev-agent-dashboard-control-plane.md",
+      "public_report": "site/public/reports/projects/232-adhdev-agent-dashboard-control-plane.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/vilmire_adhdev.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web GitHub page observed 1127 commits, 243 tags, AGPL-3.0, TypeScript 96.2%, 33 stars and 8 forks; README describes local control plane/dashboard for Cursor, Antigravity, VS Code, Kiro, Codex, Claude Code, Hermes Agent and CLI sessions",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "framework",
+      "evolution_focused": false
     },
     {
       "name": "Webmaxru Agent Skills",
@@ -22280,6 +22793,92 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
       "evolution_focused": false
+    },
+    {
+      "name": "self-evolving-agent",
+      "repo": "RangeKing/self-evolving-agent",
+      "normalized_repo": "rangeking/self-evolving-agent",
+      "url": "https://github.com/RangeKing/self-evolving-agent",
+      "category": "OpenClaw Self-Evolving Skill",
+      "pattern": "agent run -> .evolution workspace -> evaluation/curriculum -> promoted capability",
+      "tags": [
+        "agent skill",
+        "OpenClaw",
+        "curriculum",
+        "evaluation",
+        "promotion"
+      ],
+      "site_stars": 9,
+      "site_forks": 0,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/rangeking_self-evolving-agent.md",
+      "local_git": null,
+      "report": "projects/229-rangeking-self-evolving-agent-skill.md",
+      "public_report": "site/public/reports/projects/229-rangeking-self-evolving-agent-skill.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/rangeking_self-evolving-agent.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web GitHub page observed 18 commits, MIT license, Python 93.1%, 9 stars and 0 forks; README describes OpenClaw self-evolving skill with curriculum, evaluation, transfer, promotion, .evolution workspace and legacy .learnings migration",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": true
+    },
+    {
+      "name": "hermes2anti",
+      "repo": "swapedoc/hermes2anti",
+      "normalized_repo": "swapedoc/hermes2anti",
+      "url": "https://github.com/swapedoc/hermes2anti",
+      "category": "Memory and Skill Self-Improvement Toolkit",
+      "pattern": "task session -> golden path extraction -> skill creation/security scan -> memory recall",
+      "tags": [
+        "memory",
+        "skills",
+        "Hermes Agent",
+        "security scanning",
+        "session recall"
+      ],
+      "site_stars": 4,
+      "site_forks": 0,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/swapedoc_hermes2anti.md",
+      "local_git": null,
+      "report": "projects/231-hermes2anti-self-improve-agent-memory-skills.md",
+      "public_report": "site/public/reports/projects/231-hermes2anti-self-improve-agent-memory-skills.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/swapedoc_hermes2anti.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web GitHub page observed 1 commit, MIT license, Python 100%, 4 stars and 0 forks; README shows memory plus skills loop, skill security scanner, SQLite FTS5 recall, git-history insights and Hermes Agent inspiration",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": true
     },
     {
       "name": "ATANT",
@@ -26250,6 +26849,49 @@
       "evolution_focused": false
     },
     {
+      "name": "NexAgent",
+      "repo": "gofenix/nex-agent",
+      "normalized_repo": "gofenix/nex-agent",
+      "url": "https://github.com/gofenix/nex-agent",
+      "category": "Elixir/OTP Self-Evolving Agent Runtime",
+      "pattern": "supervised runtime -> memory/tools/skills -> subagents/jobs -> source-level upgrades",
+      "tags": [
+        "self-evolving runtime",
+        "Elixir/OTP",
+        "persistent memory",
+        "subagents",
+        "code upgrades"
+      ],
+      "site_stars": 64,
+      "site_forks": 5,
+      "license": "Unknown",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/gofenix_nex-agent.md",
+      "local_git": null,
+      "report": "projects/230-nex-agent-elixir-otp-self-evolving-agent.md",
+      "public_report": "site/public/reports/projects/230-nex-agent-elixir-otp-self-evolving-agent.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/gofenix_nex-agent.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "应用/application",
+      "classification_function_tag": "application-demo",
+      "classification_evidence": "web GitHub page observed 159 commits, 1 tag, Elixir/OTP stack, 64 stars and 5 forks; README describes persistent sessions, memory, dynamic tools, skills, cron, subagents, source-level self-improvement and OTP fault tolerance",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evolution",
+      "evolution_focused": true
+    },
+    {
       "name": "ATANT",
       "repo": "Kenotic-Labs/ATANT",
       "normalized_repo": "kenotic-labs/atant",
@@ -26669,6 +27311,49 @@
       "evolution_focused": true
     },
     {
+      "name": "self-evolving-agent",
+      "repo": "RangeKing/self-evolving-agent",
+      "normalized_repo": "rangeking/self-evolving-agent",
+      "url": "https://github.com/RangeKing/self-evolving-agent",
+      "category": "OpenClaw Self-Evolving Skill",
+      "pattern": "agent run -> .evolution workspace -> evaluation/curriculum -> promoted capability",
+      "tags": [
+        "agent skill",
+        "OpenClaw",
+        "curriculum",
+        "evaluation",
+        "promotion"
+      ],
+      "site_stars": 9,
+      "site_forks": 0,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/rangeking_self-evolving-agent.md",
+      "local_git": null,
+      "report": "projects/229-rangeking-self-evolving-agent-skill.md",
+      "public_report": "site/public/reports/projects/229-rangeking-self-evolving-agent-skill.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/rangeking_self-evolving-agent.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web GitHub page observed 18 commits, MIT license, Python 93.1%, 9 stars and 0 forks; README describes OpenClaw self-evolving skill with curriculum, evaluation, transfer, promotion, .evolution workspace and legacy .learnings migration",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": true
+    },
+    {
       "name": "state-trace",
       "repo": "razroo/state-trace",
       "normalized_repo": "razroo/state-trace",
@@ -26750,6 +27435,92 @@
       "classification_evidence": "web-observed GitHub page showed 10 stars, 1 fork, 12 commits, Apache-2.0 license, TypeScript/Python/Shell stack, support for SWE, TB2, Tau and SAE benchmarks, built-in harnesses for kode-agent-sdk, codex, claude-code and gemini-cli, generated custom adapters, and standardized run/trace artifacts; shell GitHub API freshness was blocked.",
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
+      "name": "hermes2anti",
+      "repo": "swapedoc/hermes2anti",
+      "normalized_repo": "swapedoc/hermes2anti",
+      "url": "https://github.com/swapedoc/hermes2anti",
+      "category": "Memory and Skill Self-Improvement Toolkit",
+      "pattern": "task session -> golden path extraction -> skill creation/security scan -> memory recall",
+      "tags": [
+        "memory",
+        "skills",
+        "Hermes Agent",
+        "security scanning",
+        "session recall"
+      ],
+      "site_stars": 4,
+      "site_forks": 0,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/swapedoc_hermes2anti.md",
+      "local_git": null,
+      "report": "projects/231-hermes2anti-self-improve-agent-memory-skills.md",
+      "public_report": "site/public/reports/projects/231-hermes2anti-self-improve-agent-memory-skills.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/swapedoc_hermes2anti.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web GitHub page observed 1 commit, MIT license, Python 100%, 4 stars and 0 forks; README shows memory plus skills loop, skill security scanner, SQLite FTS5 recall, git-history insights and Hermes Agent inspiration",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": true
+    },
+    {
+      "name": "ADHDev",
+      "repo": "vilmire/adhdev",
+      "normalized_repo": "vilmire/adhdev",
+      "url": "https://github.com/vilmire/adhdev",
+      "category": "Coding-Agent Control Plane",
+      "pattern": "coding-agent session -> local dashboard/control plane -> approval, status, history and continuation",
+      "tags": [
+        "control plane",
+        "coding agents",
+        "session dashboard",
+        "Codex",
+        "Claude Code"
+      ],
+      "site_stars": 33,
+      "site_forks": 8,
+      "license": "AGPL-3.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/vilmire_adhdev.md",
+      "local_git": null,
+      "report": "projects/232-adhdev-agent-dashboard-control-plane.md",
+      "public_report": "site/public/reports/projects/232-adhdev-agent-dashboard-control-plane.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/vilmire_adhdev.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web GitHub page observed 1127 commits, 243 tags, AGPL-3.0, TypeScript 96.2%, 33 stars and 8 forks; README describes local control plane/dashboard for Cursor, Antigravity, VS Code, Kiro, Codex, Claude Code, Hermes Agent and CLI sessions",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "framework",
       "evolution_focused": false
     },
     {
@@ -26835,6 +27606,49 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "skill",
       "evolution_focused": false
+    },
+    {
+      "name": "Yunjue Agent",
+      "repo": "YunjueTech/Yunjue-Agent",
+      "normalized_repo": "yunjuetech/yunjue-agent",
+      "url": "https://github.com/YunjueTech/Yunjue-Agent",
+      "category": "In-Situ Self-Evolving Agent System",
+      "pattern": "open-ended task stream -> tool evolution -> reusable capabilities -> trace/reproduction audit",
+      "tags": [
+        "in-situ self-evolution",
+        "tool evolution",
+        "benchmark traces",
+        "reproducibility",
+        "open-ended tasks"
+      ],
+      "site_stars": 426,
+      "site_forks": 49,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-02-11T00:00:00Z",
+      "localPath": "raw-github/yunjuetech_yunjue-agent.md",
+      "local_git": null,
+      "report": "projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
+      "public_report": "site/public/reports/projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/yunjuetech_yunjue-agent.md",
+      "raw_collected_at": "2026-05-26T05:44:07+08:00",
+      "raw_content_timestamp": "2026-02-11",
+      "raw_timestamp_source": "web_observed_github_page",
+      "in_classification": true,
+      "classification_category": "论文代码/paper-code",
+      "classification_function_tag": "agent-evolution-infra",
+      "classification_evidence": "web GitHub page observed 34 commits, Apache-2.0 license, Python 84.9%, 426 stars and 49 forks; README says zero-start in-situ self-evolving agent system with tool evolution, public traces, reproduction branch, HLE/DeepSearchQA/FinSearchComp/xbench benchmark evidence",
+      "raw_time_slice": "2026-02",
+      "classified_theme": "evolution",
+      "evolution_focused": true
     },
     {
       "name": "Memoir",

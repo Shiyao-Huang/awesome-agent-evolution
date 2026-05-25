@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T04:41:30+08:00",
+  "generated_at": "2026-05-26T05:44:07+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -14,6 +14,30 @@
       "intent": {
         "one_sentence": "Use only direct user inputs as goal source for the hourly public metadata loop.",
         "failure_if_absent": "Automation may optimize a team summary instead of the user's requested raw -> processed -> work -> results chain."
+      },
+      "value": {
+        "principles": [
+          "traceability",
+          "layered evidence",
+          "public freshness honesty"
+        ],
+        "non_goals": [
+          "decorative graph output",
+          "fabricated API freshness"
+        ],
+        "success_meaning": "Future agents can continue the raw -> processed -> work -> results loop from evidence."
+      },
+      "interview_evidence": [],
+      "research_rank": {
+        "rank": null,
+        "confidence": "low",
+        "sample_size": 0,
+        "next_research": "Use direct user inputs and future user interviews before treating rank as stable."
+      },
+      "taste_judgement": {
+        "main_tension": "Fast hourly updates vs evidence quality.",
+        "what_to_optimize": "Fresh raw evidence with explicit source quality.",
+        "what_to_reject": "Unsourced trend claims or hidden generated-output truth sources."
       }
     },
     {
@@ -186,11 +210,40 @@
         "raw-github/agent0ai_agent-zero.md",
         "raw-github/elizaos_eliza.md",
         "raw-github/paradigmxyz_centaur.md",
-        "raw-github/transformeroptimus_superagi.md"
+        "raw-github/transformeroptimus_superagi.md",
+        "raw-github/yunjuetech_yunjue-agent.md",
+        "raw-github/rangeking_self-evolving-agent.md",
+        "raw-github/gofenix_nex-agent.md",
+        "raw-github/swapedoc_hermes2anti.md",
+        "raw-github/vilmire_adhdev.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
         "failure_if_absent": "New benchmark and harness signals would appear only as unsourced conclusions."
+      },
+      "value": {
+        "principles": [
+          "traceability",
+          "layered evidence",
+          "public freshness honesty"
+        ],
+        "non_goals": [
+          "decorative graph output",
+          "fabricated API freshness"
+        ],
+        "success_meaning": "Future agents can continue the raw -> processed -> work -> results loop from evidence."
+      },
+      "interview_evidence": [],
+      "research_rank": {
+        "rank": null,
+        "confidence": "low",
+        "sample_size": 0,
+        "next_research": "Use direct user inputs and future user interviews before treating rank as stable."
+      },
+      "taste_judgement": {
+        "main_tension": "Fast hourly updates vs evidence quality.",
+        "what_to_optimize": "Fresh raw evidence with explicit source quality.",
+        "what_to_reject": "Unsourced trend claims or hidden generated-output truth sources."
       }
     },
     {
@@ -211,6 +264,30 @@
       "intent": {
         "one_sentence": "Classify raw captures into benchmark, harness, memory, skill, resource-index, and evolution-runtime roles.",
         "failure_if_absent": "The paper and site cannot answer what was collected, analyzed, and evolution-related."
+      },
+      "value": {
+        "principles": [
+          "traceability",
+          "layered evidence",
+          "public freshness honesty"
+        ],
+        "non_goals": [
+          "decorative graph output",
+          "fabricated API freshness"
+        ],
+        "success_meaning": "Future agents can continue the raw -> processed -> work -> results loop from evidence."
+      },
+      "interview_evidence": [],
+      "research_rank": {
+        "rank": null,
+        "confidence": "low",
+        "sample_size": 0,
+        "next_research": "Use direct user inputs and future user interviews before treating rank as stable."
+      },
+      "taste_judgement": {
+        "main_tension": "Fast hourly updates vs evidence quality.",
+        "what_to_optimize": "Fresh raw evidence with explicit source quality.",
+        "what_to_reject": "Unsourced trend claims or hidden generated-output truth sources."
       }
     },
     {
@@ -249,11 +326,36 @@
         "work/research/hourly-public-metadata-update-2026-05-26-0036.md",
         "work/research/hourly-public-metadata-update-2026-05-26-0239.md",
         "work/research/hourly-public-metadata-update-2026-05-26-0341.md",
-        "work/research/hourly-public-metadata-update-2026-05-26-0441.md"
+        "work/research/hourly-public-metadata-update-2026-05-26-0441.md",
+        "work/research/hourly-public-metadata-update-2026-05-26-0544.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
         "failure_if_absent": "Future runs will repeat the same API/GitNexus uncertainty without context."
+      },
+      "value": {
+        "principles": [
+          "traceability",
+          "layered evidence",
+          "public freshness honesty"
+        ],
+        "non_goals": [
+          "decorative graph output",
+          "fabricated API freshness"
+        ],
+        "success_meaning": "Future agents can continue the raw -> processed -> work -> results loop from evidence."
+      },
+      "interview_evidence": [],
+      "research_rank": {
+        "rank": null,
+        "confidence": "low",
+        "sample_size": 0,
+        "next_research": "Use direct user inputs and future user interviews before treating rank as stable."
+      },
+      "taste_judgement": {
+        "main_tension": "Fast hourly updates vs evidence quality.",
+        "what_to_optimize": "Fresh raw evidence with explicit source quality.",
+        "what_to_reject": "Unsourced trend claims or hidden generated-output truth sources."
       }
     },
     {
@@ -589,11 +691,45 @@
         "README.md",
         "README-ZH.md",
         "README-EN.md",
-        "CONTENT_INDEX.md"
+        "CONTENT_INDEX.md",
+        "projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
+        "projects/229-rangeking-self-evolving-agent-skill.md",
+        "projects/230-nex-agent-elixir-otp-self-evolving-agent.md",
+        "projects/231-hermes2anti-self-improve-agent-memory-skills.md",
+        "projects/232-adhdev-agent-dashboard-control-plane.md",
+        "site/public/reports/projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
+        "site/public/reports/projects/229-rangeking-self-evolving-agent-skill.md",
+        "site/public/reports/projects/230-nex-agent-elixir-otp-self-evolving-agent.md",
+        "site/public/reports/projects/231-hermes2anti-self-improve-agent-memory-skills.md",
+        "site/public/reports/projects/232-adhdev-agent-dashboard-control-plane.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
         "failure_if_absent": "The public site would lag behind the raw and processed data layers."
+      },
+      "value": {
+        "principles": [
+          "traceability",
+          "layered evidence",
+          "public freshness honesty"
+        ],
+        "non_goals": [
+          "decorative graph output",
+          "fabricated API freshness"
+        ],
+        "success_meaning": "Future agents can continue the raw -> processed -> work -> results loop from evidence."
+      },
+      "interview_evidence": [],
+      "research_rank": {
+        "rank": null,
+        "confidence": "low",
+        "sample_size": 0,
+        "next_research": "Use direct user inputs and future user interviews before treating rank as stable."
+      },
+      "taste_judgement": {
+        "main_tension": "Fast hourly updates vs evidence quality.",
+        "what_to_optimize": "Fresh raw evidence with explicit source quality.",
+        "what_to_reject": "Unsourced trend claims or hidden generated-output truth sources."
       }
     },
     {
@@ -616,6 +752,30 @@
       "intent": {
         "one_sentence": "Make the raw-to-public evidence flow visible on the website and paper status page.",
         "failure_if_absent": "The site has data but readers cannot quickly see the corpus funnel, theme shape, or delivery pipeline."
+      },
+      "value": {
+        "principles": [
+          "traceability",
+          "layered evidence",
+          "public freshness honesty"
+        ],
+        "non_goals": [
+          "decorative graph output",
+          "fabricated API freshness"
+        ],
+        "success_meaning": "Future agents can continue the raw -> processed -> work -> results loop from evidence."
+      },
+      "interview_evidence": [],
+      "research_rank": {
+        "rank": null,
+        "confidence": "low",
+        "sample_size": 0,
+        "next_research": "Use direct user inputs and future user interviews before treating rank as stable."
+      },
+      "taste_judgement": {
+        "main_tension": "Fast hourly updates vs evidence quality.",
+        "what_to_optimize": "Fresh raw evidence with explicit source quality.",
+        "what_to_reject": "Unsourced trend claims or hidden generated-output truth sources."
       }
     }
   ],
@@ -639,11 +799,6 @@
       "from": "processed.github-classification",
       "to": "work.learning-notes",
       "type": "explains"
-    },
-    {
-      "from": "work.learning-notes",
-      "to": "intent.direct-user-input",
-      "type": "handoff"
     },
     {
       "from": "processed.github-classification",
@@ -797,34 +952,37 @@
     ]
   },
   "current_run_evidence": [
-    "Web-observed repositories this run: MaximeRobeyns/self_improving_coding_agent, agent0ai/agent-zero, elizaOS/eliza, paradigmxyz/centaur, and TransformerOptimus/SuperAGI.",
-    "New raw files: raw-github/maximerobeyns_self_improving_coding_agent.md, raw-github/agent0ai_agent-zero.md, raw-github/elizaos_eliza.md, raw-github/paradigmxyz_centaur.md, raw-github/transformeroptimus_superagi.md.",
-    "New public model cards/site reports: project/report ids 224-227 for SICA, Agent Zero, elizaOS, and Centaur; SuperAGI was a raw/classification backfill for an existing site project.",
-    "GitNexus evidence: npx gitnexus status reported repository indexed at current commit 2f939fd before this iteration edits.",
-    "GitHub API freshness caveat: shell API freshness is not claimed; web-observed public pages/search results were used and repository analysis preserves API/cache source labels where available.",
-    "Follow-up blocker: chenyn66/learning-to-self-evolve was not confirmed as a GitHub repository URL in this run, so no raw capture was fabricated.",
-    "Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> site data/report -> README/i18n/site build.",
+    "Web-observed repositories this run: YunjueTech/Yunjue-Agent, RangeKing/self-evolving-agent, gofenix/nex-agent, swapedoc/hermes2anti, and vilmire/adhdev.",
+    "New raw files: raw-github/yunjuetech_yunjue-agent.md, raw-github/rangeking_self-evolving-agent.md, raw-github/gofenix_nex-agent.md, raw-github/swapedoc_hermes2anti.md, raw-github/vilmire_adhdev.md.",
+    "New public model cards/site reports: project/report ids 228-232 for Yunjue Agent, RangeKing self-evolving-agent, NexAgent, hermes2anti, and ADHDev.",
+    "Counts after propagation: 515 raw captures, 515 classified repositories, 105 site projects, 82 strict evolution-theme repositories, 185 broad evolution-related repositories, and 257 public project report files.",
+    "GitNexus evidence: npx gitnexus status was available but stale before commit; refresh is scheduled after commit so it indexes the committed iteration.",
+    "GitHub API freshness caveat: shell DNS for api.github.com failed; web-observed public pages were used and GitHub analysis preserves github_api_fetch_error for the five new promoted projects.",
+    "Legacy generator caveat: scripts/generate_repo_classification.py only covers a 364-row legacy path; current classification truth is the restored/appended 515-row research/repo-classification.json.",
+    "Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> README/i18n -> site data/report -> Astro site build.",
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-26T04:41:30+08:00",
+    "collected_at": "2026-05-26T05:44:07+08:00",
     "added_repositories": [
-      "MaximeRobeyns/self_improving_coding_agent",
-      "agent0ai/agent-zero",
-      "elizaOS/eliza",
-      "paradigmxyz/centaur",
-      "TransformerOptimus/SuperAGI"
+      "YunjueTech/Yunjue-Agent",
+      "RangeKing/self-evolving-agent",
+      "gofenix/nex-agent",
+      "swapedoc/hermes2anti",
+      "vilmire/adhdev"
     ],
-    "corpus_counts": {
-      "raw_github_captures": 510,
-      "classified_repositories": 510,
-      "site_projects": 100,
-      "strict_evolution": 80,
-      "broad_evolution": 181
+    "counts": {
+      "raw_github": 515,
+      "classified_repos": 515,
+      "site_projects": 105,
+      "strict_evolution": 82,
+      "broad_evolution": 185,
+      "public_project_reports": 257
     },
-    "evidence_quality": "web_observed_public_github_pages_and_search_results; no local clone/test/benchmark/deployment for added repos",
-    "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "npx gitnexus status reported indexed commit 2f939fd and current commit 2f939fd up-to-date before this iteration edits.",
-    "unresolved_follow_up": "chenyn66/learning-to-self-evolve GitHub repository URL not confirmed this run."
+    "blockers": [
+      "Shell DNS could not resolve api.github.com; metadata is web-observed, not API-verified.",
+      "GitNexus index stale before commit; re-run analyze after commit.",
+      "generate_repo_classification.py is legacy 364-row path, not current 515-row truth source."
+    ]
   }
 }

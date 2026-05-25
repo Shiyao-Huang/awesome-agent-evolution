@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-26T00:00:00+08:00",
-  "total": 510,
-  "updated_files": 510,
+  "total": 515,
+  "updated_files": 515,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -1360,6 +1360,15 @@
       "file": "raw-github/gitmaxd_deepagents-cli-codex-skill.md",
       "content_timestamp": "2026-05-25",
       "collected_at": "2026-05-24T19:09:37Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "gofenix/nex-agent",
+      "url": "https://github.com/gofenix/nex-agent",
+      "file": "raw-github/gofenix_nex-agent.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T05:44:07+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
     },
@@ -3137,6 +3146,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "RangeKing/self-evolving-agent",
+      "url": "https://github.com/RangeKing/self-evolving-agent",
+      "file": "raw-github/rangeking_self-evolving-agent.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T05:44:07+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "raphaelchristi/harness-evolver",
       "url": "https://github.com/raphaelchristi/harness-evolver",
       "file": "raw-github/raphaelchristi_harness-evolver.md",
@@ -3722,6 +3740,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "swapedoc/hermes2anti",
+      "url": "https://github.com/swapedoc/hermes2anti",
+      "file": "raw-github/swapedoc_hermes2anti.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T05:44:07+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "swarmclawai/swarmclaw",
       "url": "https://github.com/swarmclawai/swarmclaw",
       "file": "raw-github/swarmclawai_swarmclaw.md",
@@ -4100,6 +4127,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "vilmire/adhdev",
+      "url": "https://github.com/vilmire/adhdev",
+      "file": "raw-github/vilmire_adhdev.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T05:44:07+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "vision-intelligence-and-robots-group/best-incremental-learning",
       "url": "https://github.com/vision-intelligence-and-robots-group/best-incremental-learning",
       "file": "raw-github/vision-intelligence-and-robots-group_best-incremental-learning.md",
@@ -4377,6 +4413,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "YunjueTech/Yunjue-Agent",
+      "url": "https://github.com/YunjueTech/Yunjue-Agent",
+      "file": "raw-github/yunjuetech_yunjue-agent.md",
+      "content_timestamp": "2026-02-11",
+      "collected_at": "2026-05-26T05:44:07+08:00",
+      "time_slice": "2026-02",
+      "timestamp_source": "web_observed_github_page"
     },
     {
       "repo": "yxf203/awesome-efficient-agents",

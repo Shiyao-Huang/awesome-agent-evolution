@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T20:43:55.177Z",
+  "generated_at": "2026-05-25T21:57:51.996Z",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -2265,6 +2265,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 6 commits, MIT license, 1 star and 0 forks, 6 releases with v0.1.5 latest on 2026-02-23; README says it scaffolds a production-grade OpenAI Codex Skill for LangChain Deep Agents CLI, including persistent memory, sandboxes, streaming, SDK customization, and direct $deepagents-cli invocation",
       "description": "Deep Agents CLI Codex Skill 把 LangChain Deep Agents CLI 的命令、provider、memory、sandbox、streaming、SDK customization 和 Agent Client Protocol 知识封装成 Codex 可加载 skill。"
+    },
+    {
+      "repo": "gofenix/nex-agent",
+      "url": "https://github.com/gofenix/nex-agent",
+      "stars": "64",
+      "prior_category": "应用",
+      "prior_unclassified": "false",
+      "final_category": "应用/application",
+      "function_tag": "application-demo",
+      "base_theme": "evolution",
+      "stack": "Elixir",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 159 commits, 1 tag, Elixir/OTP stack, 64 stars and 5 forks; README describes persistent sessions, memory, dynamic tools, skills, cron, subagents, source-level self-improvement and OTP fault tolerance",
+      "description": "NexAgent 是 Elixir/OTP self-evolving agent runtime，用 supervision tree 管理 memory、tools、skills、subagents、cron 和 code upgrade。"
     },
     {
       "repo": "google-gemini/gemini-cli",
@@ -5222,6 +5237,21 @@
       "description": "Randroids Dojo Skills 是面向 Claude Code、Codex CLI 和 OpenCode 的双格式技能库，把 randroid-loop、task tracking、game-dev skills 和 spiral scaffold 组织成可安装的 agent skill bundle。"
     },
     {
+      "repo": "RangeKing/self-evolving-agent",
+      "url": "https://github.com/RangeKing/self-evolving-agent",
+      "stars": "9",
+      "prior_category": "工具",
+      "prior_unclassified": "false",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 18 commits, MIT license, Python 93.1%, 9 stars and 0 forks; README describes OpenClaw self-evolving skill with curriculum, evaluation, transfer, promotion, .evolution workspace and legacy .learnings migration",
+      "description": "RangeKing/self-evolving-agent 是 OpenClaw self-evolving skill，把自改进日志升级为 curriculum、eval、transfer、promotion 和可迁移 evolution workspace。"
+    },
+    {
       "repo": "raphaelchristi/harness-evolver",
       "url": "https://github.com/raphaelchristi/harness-evolver",
       "stars": "21",
@@ -6197,6 +6227,21 @@
       "description": "[ICML-2026] Official implementation of \"SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience\""
     },
     {
+      "repo": "swapedoc/hermes2anti",
+      "url": "https://github.com/swapedoc/hermes2anti",
+      "stars": "4",
+      "prior_category": "工具",
+      "prior_unclassified": "false",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 1 commit, MIT license, Python 100%, 4 stars and 0 forks; README shows memory plus skills loop, skill security scanner, SQLite FTS5 recall, git-history insights and Hermes Agent inspiration",
+      "description": "hermes2anti 是 Hermes-inspired memory/skills self-improvement toolkit，把 golden path、skill creation、安全扫描、session recall 和 git insights 连接起来。"
+    },
+    {
       "repo": "swarmclawai/swarmclaw",
       "url": "https://github.com/swarmclawai/swarmclaw",
       "stars": "518",
@@ -6827,6 +6872,21 @@
       "description": "MemSkill 是学习并进化 long-horizon agent 记忆技能的框架，把记忆操作从静态手写规则变成由任务反馈驱动的 meta-memory skill bank。"
     },
     {
+      "repo": "vilmire/adhdev",
+      "url": "https://github.com/vilmire/adhdev",
+      "stars": "33",
+      "prior_category": "框架",
+      "prior_unclassified": "false",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web GitHub page observed 1127 commits, 243 tags, AGPL-3.0, TypeScript 96.2%, 33 stars and 8 forks; README describes local control plane/dashboard for Cursor, Antigravity, VS Code, Kiro, Codex, Claude Code, Hermes Agent and CLI sessions",
+      "description": "ADHDev 是 self-hosted coding-agent control plane，用本地 dashboard 管理长运行 agent session、approval、terminal/chat 状态和历史恢复。"
+    },
+    {
       "repo": "vision-intelligence-and-robots-group/best-incremental-learning",
       "url": "https://github.com/vision-intelligence-and-robots-group/best-incremental-learning",
       "stars": "607",
@@ -7290,6 +7350,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "This is the reading list for the survey \"A Survey on the Optimization of LLM-based Agents \". We will keep adding papers and improving the list. Any suggestions and PRs are welcome!"
+    },
+    {
+      "repo": "YunjueTech/Yunjue-Agent",
+      "url": "https://github.com/YunjueTech/Yunjue-Agent",
+      "stars": "426",
+      "prior_category": "论文代码",
+      "prior_unclassified": "false",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "Python",
+      "time_slice": "2026-02",
+      "content_timestamp": "2026-02-11",
+      "evidence": "web GitHub page observed 34 commits, Apache-2.0 license, Python 84.9%, 426 stars and 49 forks; README says zero-start in-situ self-evolving agent system with tool evolution, public traces, reproduction branch, HLE/DeepSearchQA/FinSearchComp/xbench benchmark evidence",
+      "description": "Yunjue Agent 是可复现的 zero-start in-situ self-evolving agent system，把任务经验蒸馏成工具能力，并公开 traces、benchmark scripts 和 evolved tools。"
     },
     {
       "repo": "yxf203/awesome-efficient-agents",

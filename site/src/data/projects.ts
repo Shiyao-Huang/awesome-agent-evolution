@@ -2067,6 +2067,151 @@ export const projects: Project[] = [
                   "credential boundaries",
                   "sandbox"
           ]
+  },
+  {
+          "name": "Yunjue Agent",
+          "repo": "YunjueTech/Yunjue-Agent",
+          "url": "https://github.com/YunjueTech/Yunjue-Agent",
+          "stars": 426,
+          "forks": 49,
+          "language": "Python",
+          "license": "Apache-2.0",
+          "report": "projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
+          "pattern": "open-ended task stream -> tool evolution -> reusable capabilities -> trace/reproduction audit",
+          "description": "Yunjue Agent is a reproducible zero-start in-situ self-evolving agent system that turns execution feedback into reusable tools and auditable traces.",
+          "stack": [
+                  "Python",
+                  "Tool synthesis",
+                  "Benchmark traces",
+                  "Codex CLI"
+          ],
+          "category": "In-Situ Self-Evolving Agent System",
+          "lastPushed": "2026-02-11T00:00:00Z",
+          "localPath": "raw-github/yunjuetech_yunjue-agent.md",
+          "status": "candidate",
+          "tags": [
+                  "in-situ self-evolution",
+                  "tool evolution",
+                  "benchmark traces",
+                  "reproducibility",
+                  "open-ended tasks"
+          ]
+  },
+  {
+          "name": "self-evolving-agent",
+          "repo": "RangeKing/self-evolving-agent",
+          "url": "https://github.com/RangeKing/self-evolving-agent",
+          "stars": 9,
+          "forks": 0,
+          "language": "Python",
+          "license": "MIT",
+          "report": "projects/229-rangeking-self-evolving-agent-skill.md",
+          "pattern": "agent run -> .evolution workspace -> evaluation/curriculum -> promoted capability",
+          "description": "RangeKing/self-evolving-agent is an OpenClaw skill that upgrades self-improvement logs into a governed evolution workspace with curriculum, evals and promotion.",
+          "stack": [
+                  "Python",
+                  "OpenClaw",
+                  "Benchmarks",
+                  "Hooks"
+          ],
+          "category": "OpenClaw Self-Evolving Skill",
+          "lastPushed": "2026-05-26T00:00:00Z",
+          "localPath": "raw-github/rangeking_self-evolving-agent.md",
+          "status": "candidate",
+          "tags": [
+                  "agent skill",
+                  "OpenClaw",
+                  "curriculum",
+                  "evaluation",
+                  "promotion"
+          ]
+  },
+  {
+          "name": "NexAgent",
+          "repo": "gofenix/nex-agent",
+          "url": "https://github.com/gofenix/nex-agent",
+          "stars": 64,
+          "forks": 5,
+          "language": "Elixir",
+          "license": "Unknown",
+          "report": "projects/230-nex-agent-elixir-otp-self-evolving-agent.md",
+          "pattern": "supervised runtime -> memory/tools/skills -> subagents/jobs -> source-level upgrades",
+          "description": "NexAgent uses Elixir/OTP supervision to combine persistent sessions, memory, dynamic tools, skills, cron, subagents and source-level self-improvement.",
+          "stack": [
+                  "Elixir",
+                  "OTP",
+                  "Memory",
+                  "Dynamic tools"
+          ],
+          "category": "Elixir/OTP Self-Evolving Agent Runtime",
+          "lastPushed": "2026-05-26T00:00:00Z",
+          "localPath": "raw-github/gofenix_nex-agent.md",
+          "status": "candidate",
+          "tags": [
+                  "self-evolving runtime",
+                  "Elixir/OTP",
+                  "persistent memory",
+                  "subagents",
+                  "code upgrades"
+          ]
+  },
+  {
+          "name": "hermes2anti",
+          "repo": "swapedoc/hermes2anti",
+          "url": "https://github.com/swapedoc/hermes2anti",
+          "stars": 4,
+          "forks": 0,
+          "language": "Python",
+          "license": "MIT",
+          "report": "projects/231-hermes2anti-self-improve-agent-memory-skills.md",
+          "pattern": "task session -> golden path extraction -> skill creation/security scan -> memory recall",
+          "description": "hermes2anti is a compact Hermes-inspired memory and skill loop that persists lessons, creates reusable skills, scans them, and recalls prior sessions.",
+          "stack": [
+                  "Python",
+                  "SQLite FTS5",
+                  "Agent Skills",
+                  "Security scanner"
+          ],
+          "category": "Memory and Skill Self-Improvement Toolkit",
+          "lastPushed": "2026-05-26T00:00:00Z",
+          "localPath": "raw-github/swapedoc_hermes2anti.md",
+          "status": "candidate",
+          "tags": [
+                  "memory",
+                  "skills",
+                  "Hermes Agent",
+                  "security scanning",
+                  "session recall"
+          ]
+  },
+  {
+          "name": "ADHDev",
+          "repo": "vilmire/adhdev",
+          "url": "https://github.com/vilmire/adhdev",
+          "stars": 33,
+          "forks": 8,
+          "language": "TypeScript",
+          "license": "AGPL-3.0",
+          "report": "projects/232-adhdev-agent-dashboard-control-plane.md",
+          "pattern": "coding-agent session -> local dashboard/control plane -> approval, status, history and continuation",
+          "description": "ADHDev is a self-hosted control plane for long-running coding-agent sessions across IDEs and CLIs, including Codex, Claude Code and Hermes Agent.",
+          "stack": [
+                  "TypeScript",
+                  "Node.js",
+                  "Local daemon",
+                  "Dashboard"
+          ],
+          "category": "Coding-Agent Control Plane",
+          "lastPushed": "2026-05-26T00:00:00Z",
+          "localPath": "raw-github/vilmire_adhdev.md",
+          "status": "candidate",
+          "tags": [
+                  "control plane",
+                  "coding agents",
+                  "session dashboard",
+                  "Codex",
+                  "Claude Code"
+          ]
   }
 ];
 
@@ -2100,6 +2245,7 @@ export const projectGroups = [
   ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
+  ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }
   ,{ title: 'Agent 框架 (Round 4)', repos: ['reworkd/AgentGPT', 'yoheinakajima/babyagi', 'cheshire-cat-ai/core', 'huggingface/smolagents', 'Chainlit/chainlit', 'smol-ai/developer'] }
   ,{ title: 'Agent 研究综述 (Round 4)', repos: ['XMUDeepLIT/Awesome-Self-Evolving-Agents', 'luo-junyu/Awesome-Agent-Papers', 'Zijian-Ni/awesome-ai-agents-2026'] }
 ];
