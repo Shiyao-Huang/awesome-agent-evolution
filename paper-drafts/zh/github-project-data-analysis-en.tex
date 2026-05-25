@@ -1,0 +1,115 @@
+% 源自 analysis/github-project-data-analysis.* 的英文 arXiv 快照的中文翻译版
+% 保持本文件与英文版结构一致；中文/双语分析文件保留在 analysis/。
+
+\subsection{GitHub 项目语料库与采样漏斗}
+\label{subsec:github-project-corpus-sampling}
+
+GitHub 语料库按漏斗结构而非扁平 awesome 列表组织。原始发现层包含 486 条带时间戳索引的 GitHub 抓取记录。分类层包含 486 个仓库，附有类别、主题、技术栈和时间切片标注。面向论文的分析层当前包含 204 个仓库，这些仓库拥有公开的项目报告和模型卡片页面。在已分类语料库中，79 个仓库为严格进化主题仓库，而 176 个仓库匹配更广泛的进化相关关键词集，包括自我改进、反思、递归改进、提示进化和代码进化。
+
+\begin{table}[t]
+\centering
+\caption{GitHub 项目语料库漏斗。}
+\label{tab:github-project-corpus-funnel}
+\begin{tabular}{lrp{0.55\linewidth}}
+\toprule
+层 & 数量 & 含义 \\
+\midrule
+原始抓取 & 486 & 来自 \texttt{raw-github/} 的时间戳索引记录。 \\
+已分类仓库 & 486 & 包含类别、主题、技术栈、证据和时间切片字段的行。 \\
+已分析模型卡片项目 & 204 & 被提升至站点和面向论文的项目分析的仓库。 \\
+严格进化主题 & 79 & 基础主题为 \texttt{evolution} 的已分类行。 \\
+广泛进化相关 & 176 & 匹配进化、自我改进、反思或递归改进信号的行。 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{原始 GitHub 类别与主题分布。}
+\label{tab:github-category-theme-distribution}
+\begin{tabular}{lrlr}
+\toprule
+类别 & 数量 & 主题 & 数量 \\
+\midrule
+framework & 138 & memory & 92 \\
+evaluation & 98 & evaluation & 89 \\
+tutorial & 91 & evolution & 79 \\
+tool & 82 & skill & 60 \\
+application & 47 & framework & 50 \\
+paper-code & 29 & education-list & 35 \\
+benchmark & 1 & research-agent & 31 \\
+ &  & prompt-optimization & 26 \\
+ &  & coding-agent & 17 \\
+ &  & workflow-automation & 6 \\
+ &  & safety & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+时间分析特意将仓库创建时间与活动时间戳区分开来。原始语料库的时间切片字段是从 GitHub 抓取中提取的活动/内容时间戳，因此它衡量的是被抓取页面展示近期活动的时间。已分析项目的时间线使用 GitHub API 的 \texttt{created\_at}（若可用）。当 GitHub API 创建时间不可用时，表格标注为较弱的 \texttt{local\_git\_first\_commit} 回退值；这是首次观察到的镜像时间戳，而非发布日期声明。在当前运行中，204 个已分析项目中有 53 个拥有已验证的创建时间或本地回退值。Git 元数据也在项目层面进行了关联：29 个已分析项目拥有 GitHub API/缓存元数据，46 个拥有本地 git 镜像证据，204 个拥有公开报告路径。
+
+{\TableTight
+\begin{longtable}{@{}L{0.08\textwidth}L{0.12\textwidth}L{0.23\textwidth}L{0.24\textwidth}L{0.27\textwidth}@{}}
+\caption{按已验证创建月份或本地首次观察回退排列的前 24 个已分析项目。}
+\label{tab:analyzed-project-release-timeline}\\
+\toprule
+\textbf{月份} & \textbf{来源} & \textbf{仓库} & \textbf{类别} & \textbf{进化模式} \\
+\midrule
+\endfirsthead
+\caption[]{按创建月份或首次观察回退排列的前 24 个已分析项目（续）。}\\
+\toprule
+\textbf{月份} & \textbf{来源} & \textbf{仓库} & \textbf{类别} & \textbf{进化模式} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+2022-09 & GitHub API & \path|carperai/openelm| & 进化式提示优化 & 搜索循环加评估器/评分器 \\
+2023-01 & GitHub API & \path|stanfordnlp/dspy| & 声明式提示优化 & 反馈精炼加搜索循环加评估器 \\
+2023-03 & GitHub API & \path|Significant-Gravitas/AutoGPT| & 自主智能体平台 & 智能体编排 \\
+2023-03 & GitHub API & \path|camel-ai/camel| & 角色扮演智能体框架 & 智能体编排加反馈精炼 \\
+2023-03 & GitHub API & \path|noahshinn/reflexion| & 反思式记忆 & 搜索循环加反思记忆加反馈精炼 \\
+2023-03 & GitHub API & \path|madaan/self-refine| & 反馈精炼 & 反馈精炼 \\
+2023-04 & local mirror & \path|automl/auto-sklearn| & AutoML 框架 & 搜索循环加评估器 \\
+2023-04 & GitHub API & \path|microsoft/CoML| & ML 知识驱动智能体 & 反馈精炼加评估器 \\
+2023-06 & GitHub API & \path|FoundationAgents/MetaGPT| & 多智能体协作框架 & 智能体编排加反馈精炼 \\
+2023-07 & GitHub API & \path|aiwaves-cn/agents| & 数据驱动智能体进化 & 搜索循环加评估器加编排 \\
+2023-08 & GitHub API & \path|langchain-ai/langgraph| & 基于图的智能体编排 & 智能体编排 \\
+2023-08 & GitHub API & \path|microsoft/autogen| & 多智能体对话框架 & 智能体编排 \\
+2023-10 & GitHub API & \path|google-deepmind/opro| & LLM 作为优化器 & 搜索循环加评估器 \\
+2023-10 & GitHub API & \path|crewAIInc/crewAI| & 多智能体协作框架 & 智能体编排 \\
+2023-11 & GitHub API & \path|google-deepmind/funsearch| & 进化式数学发现 & 搜索循环加评估器 \\
+2024-03 & GitHub API & \path|All-Hands-AI/OpenHands| & AI 软件开发平台 & 智能体编排 \\
+2024-04 & GitHub API & \path|princeton-nlp/SWE-agent| & 软件工程智能体 & 反馈精炼加评估器 \\
+2024-07 & GitHub API & \path|shengranhu/adas| & 自动化智能体架构搜索 & 搜索循环加编排加评估器 \\
+2024-08 & local mirror & \path|alfa-group/tutorial_gp_llm| & GP 加 LLM 教程 & 搜索循环加评估器 \\
+2024-09 & local mirror & \path|OpenBMB/AgentVerse| & 多智能体仿真平台 & 智能体编排加反思记忆 \\
+2024-10 & local mirror & \path|siyuyuan/evoagent| & 进化式多智能体系统 & 搜索循环加编排 \\
+2024-11 & local mirror & \path|xiaofangxd/LLM_EA| & LLM 加进化算法综述 & 文献综述 \\
+2025-03 & local mirror & \path|wuxingyu-ai/LLM4EC| & LLM 加进化计算综述 & 文献综述 \\
+2025-05 & GitHub API & \path|DeepAuto-AI/automl-agent| & 多智能体 AutoML & 编排加搜索循环加评估器 \\
+\end{longtable}}
+
+\begin{table}[t]
+\centering
+\TableTight
+\caption{按本地 Star 快照排列的严格进化主题仓库排名。}
+\label{tab:top-evolution-theme-repos}
+\begin{tabularx}{\textwidth}{@{}L{0.30\textwidth}r L{0.10\textwidth}Y@{}}
+\toprule
+\textbf{仓库} & \textbf{Star 数} & \textbf{时间} & \textbf{描述} \\
+\midrule
+\path|aiming-lab/AutoResearchClaw| & 12600 & 2026-05 & 从想法到论文的自主协作研究智能体流水线，具备辩论、沙盒实验、声明验证、HITL 协驾行为、MetaClaw 跨轮次学习以及 ARC-Bench。 \\
+\path|aden-hive/hive| & 10400 & 2026-05 & 生产级多智能体框架，强调持久状态、崩溃恢复、成本控制、审计追踪、MCP 集成以及故障驱动的图进化。 \\
+\path|HKUDS/OpenSpace| & 6300 & 2026-05 & 将技能视为可选择、可执行、可监控、可分析和可进化实体的运行时，支持 OpenClaw、nanobot、Claude Code、Codex、Cursor 及相关智能体。 \\
+\path|kayba-ai/agentic-context-engine| & 2200 & 2026-05 & 持久学习循环，通过反思轨迹、在技能手册中记录策略，并在未来的编码智能体运行中重新注入策略。 \\
+\path|AMAP-ML/SkillClaw| & 1500 & 2026-05 & 从真实智能体会话中提取、去重、验证和共享可复用技能，使个人用户和团队能将经验转化为进化资产。 \\
+\path|Memento-Teams/Memento-Skills| & 1400 & 2026-05 & 部署时学习框架，通过技能记忆、失败反思和技能重写改进冻结模型智能体。 \\
+\path|zylos-ai/zylos-core| & 1400 & 2026-05 & 自进化 AI 团队平台，整合专业智能体、共享记忆、工具市场和交付界面。 \\
+\path|metauto-ai/gptswarm| & 998 & 2026-05 & 早期自改进智能体系统，专注于强化学习和提示优化。 \\
+\path|sentient-agi/EvoSkill| & 798 & 2026-05 & 将失败轨迹转化为可复用的智能体技能和提示变异，并通过留出基准评估进行智能体程序进化。 \\
+\path|aiming-lab/SkillRL| & 765 & 2026-05 & 通过自动技能发现、层次化技能库和递归技能-策略协同进化，连接经验轨迹与策略改进。 \\
+\path|adolfousier/opencrabs| & 755 & 2026-05 & 受 OpenClaw 启发的单二进制多通道 AI 智能体，使用本地脑文件、记忆搜索、自定义命令、后台任务和自更新循环。 \\
+\path|QuantaAlpha/QuantaAlpha| & 702 & 2026-05 & 仓库级进化代码智能体，对齐 SE-Agent、RepoMaster 和 GitTaskBench 风格的仓库任务自我改进。 \\
+\bottomrule
+\end{tabularx}
+\end{table}

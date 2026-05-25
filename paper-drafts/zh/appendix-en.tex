@@ -1,0 +1,283 @@
+% ====================================================================
+% 附录：英文 arXiv 面向稿件的附录。
+% 中文配套附录仍保留在 appendix.tex 中。
+% ====================================================================
+
+\section{开源项目证据}
+\label{app:projects}
+
+本附录记录了综述所使用的证据表格。表格有意保持紧凑：为读者提供本地研究语料库的可复现映射，而不会将 arXiv 面向的稿件变成目录式堆砌。完整的项目模型卡片、原始采集数据和公开站点报告保留在仓库索引和网站输出中。
+
+\subsection*{A.1 核心自演化系统}
+
+{\TableTight
+\begin{longtable}{@{}L{0.17\linewidth}r L{0.12\linewidth}L{0.12\linewidth}L{0.14\linewidth}L{0.27\linewidth}@{}}
+\toprule
+\textbf{项目} & \textbf{Stars} & \textbf{语言} & \textbf{近期活动} & \textbf{模式} & \textbf{主要贡献} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{项目} & \textbf{Stars} & \textbf{语言} & \textbf{近期活动} & \textbf{模式} & \textbf{主要贡献} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+OpenEvolve & 6,358 & Python & 2026-03 & 搜索 + 评估 & FunSearch 风格演化代码优化的开源实现模式。 \\
+Reflexion & 3,158 & Python & 2025-01 & 反思 + 记忆 & 通过情景反思的语言强化学习，包含 HumanEval 和 ALFWorld 的有力证据。 \\
+Agent Symbolic Learning & 5,928 & Python & 2024-09 & 符号更新 & 对提示词、工具和智能体流水线的文本反向传播。 \\
+AgentEvolver & 1,441 & Python & 2026-04 & 搜索 + 编排 & 智能体工具使用和任务工作流的演化优化。 \\
+Self-Refine & 805 & Python & 2024-10 & 反馈精炼 & 跨多个文本和代码任务的生成--反馈--修订循环。 \\
+SE-Agent & 274 & Python & 2025-09 & 修订 + 重组 & 面向软件工程智能体的多轨迹修订与重组。 \\
+Science-CodeEvolve & 97 & Python & 2026-04 & 搜索 + 评估 & 科学代码和算法例程的演化优化。 \\
+SCOPE & 77 & Python & 2026-03 & 搜索 & 用于智能体改进实验的演化搜索框架。 \\
+LLM-Self-Judge & 43 & Python & 2026-03 & 自评判 & 用于数据/模型演化和评估的自评判循环。 \\
+DARWIN & 41 & Python & 2026-05 & 安全感知演化 & 面向安全的自演化智能体原型。 \\
+\end{longtable}}
+
+\subsection*{A.2 智能体基础设施基线}
+
+{\TableTight
+\begin{longtable}{@{}L{0.16\linewidth}r L{0.11\linewidth}L{0.12\linewidth}L{0.11\linewidth}L{0.17\linewidth}L{0.12\linewidth}@{}}
+\toprule
+\textbf{项目} & \textbf{Stars} & \textbf{语言} & \textbf{近期活动} & \textbf{许可证} & \textbf{每贡献者 Stars} & \textbf{质量评分} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{项目} & \textbf{Stars} & \textbf{语言} & \textbf{近期活动} & \textbf{许可证} & \textbf{每贡献者 Stars} & \textbf{质量评分} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+AutoGPT & 175,000 & Python & 2026-05 & MIT & 213 & 28/100 \\
+MetaGPT & 50,000 & Python & 2026-04 & MIT & 143 & 56/100 \\
+AutoGen & 50,000 & Python & 2026-05 & MIT & 125 & 66/100 \\
+OpenHands & 55,000 & Python & 2026-05 & MIT & 145 & 68/100 \\
+CrewAI & 30,000 & Python & 2026-05 & MIT & 107 & 62/100 \\
+LangGraph & 20,000 & Python & 2026-05 & MIT & 89 & 67/100 \\
+DSPy & 25,000 & Python & 2026-05 & MIT & 62 & 73/100 \\
+SWE-Agent & 15,000 & Python & 2026-05 & MIT & 75 & 70/100 \\
+\end{longtable}}
+
+\subsection*{A.3 落地页与证据分组分类}
+
+\begin{itemize}
+\item \textbf{演化代码与 AlphaEvolve 类系统}：OpenEvolve、CodeEvolve、Science-CodeEvolve 和 SE-Agent。
+\item \textbf{智能体自演化系统}：AgentEvolver、Agent Symbolic Learning、SCOPE 及相关智能体优化框架。
+\item \textbf{反思与精炼经典方法}：Reflexion 和 Self-Refine。
+\item \textbf{安全、评判与数据/模型自演化}：DARWIN、LLM-Self-Judge、Misevolution、OEP 及能力退化研究。
+\item \textbf{智能体框架与基础设施}：AutoGPT、MetaGPT、AutoGen、CrewAI、DSPy、LangGraph、OpenHands 和 SWE-Agent。
+\end{itemize}
+
+\section{论文语料索引}
+\label{app:papers}
+
+综述语料库追踪了 2022--2026 年间的 108 篇详细论文参考文献。每篇论文被视为方法证据：项目索引提取了演化对象、反馈信号、更新算子、评估器、基准测试、局限性和可复现性状态（若有）。
+
+{\TableTight
+\begin{longtable}{@{}L{0.22\linewidth}L{0.12\linewidth}L{0.58\linewidth}@{}}
+\toprule
+\textbf{类别} & \textbf{数量} & \textbf{代表系统与主张} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{类别} & \textbf{数量} & \textbf{代表系统与主张} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+基于奖励的演化 & 14 & STaR、Self-Rewarding LM、Meta-Rewarding、IterAlign、RISE、Agent-R、RAGEN、SPIN 以及偏好/自博弈训练路线。 \\
+自博弈演化 & 6 & Absolute Zero、SPIRAL、多智能体辩论、对抗性课程生成以及博弈式提出者--求解器循环。 \\
+提示词与上下文演化 & 16 & Self-Refine、Reflexion、ExpeL、SICA、ACE、Agent Symbolic Learning、EvoMAC、EvolveR 及自动提示词优化。 \\
+架构搜索与代码自修改 & 12 & ADAS、G\"{o}del Agent、Darwin G\"{o}del Machine、AlphaEvolve、WebEvolver、FunSearch 扩展及自修改编码智能体。 \\
+基于记忆的演化 & 10 & Voyager、Memory-R1、ReasoningBank、AriadneMem、自演化分布式记忆及记忆治理研究。 \\
+混合方法与综述 & 12 & 终身学习路线图、开放式演化综述、智能体优化综述及安全性分析。 \\
+2025 年末至 2026 年新增 & 19 & SAGE、Hyperagents、Autogenesis、GenericAgent、Capability Erosion、OEP、Misevolution 以及近期记忆/奖励/安全论文。 \\
+其他已审阅参考文献 & 19 & 基准测试、工具使用系统、生产级智能体框架及用于连接方法族之间的背景工作。 \\
+\end{longtable}}
+
+\section{基准测试证据}
+\label{app:benchmarks}
+
+本附录中的基准测试数据应被理解为综述证据，而非排行榜声明。正文论述了每个自演化结果都需要一份过程报告：初始产物、更新预算、评估器、留出测试、成本、退化情况及安全边界。
+
+\subsection*{C.1 代码生成与软件工程}
+
+{\TableTight
+\begin{longtable}{@{}L{0.18\linewidth}L{0.17\linewidth}L{0.19\linewidth}L{0.19\linewidth}L{0.22\linewidth}@{}}
+\toprule
+\textbf{方法} & \textbf{基准测试} & \textbf{基线} & \textbf{报告结果} & \textbf{解读} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{方法} & \textbf{基准测试} & \textbf{基线} & \textbf{报告结果} & \textbf{解读} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Reflexion & HumanEval pass@1 & GPT-4 零样本: 80.1\% & 使用 GPT-3.5 Reflexion 达到 91.0\% & 强反思结果，但评估器范围较窄。 \\
+SelfEvolve & DS-1000 pass@1 & ChatGPT: 49.4 & 57.2 & 执行反馈改善了 API 密集型数据科学代码。 \\
+SelfEvolve & HumanEval pass@1 & ChatGPT: 74.39\% & 85.98\% & 迭代调试改善了小型代码任务。 \\
+Darwin G\"{o}del Machine & SWE-bench Verified & 20.0\% & 50.0\% & 基于存档的自修改编码智能体。 \\
+Darwin G\"{o}del Machine & Polyglot & 14.2\% & 30.7\% & 超越单一基准测试的迁移证据。 \\
+SICA & SWE-bench Verified & 17.0\% & 53.0\% & 报告大幅提升的自修改编码智能体。 \\
+ReVeal & LiveCodeBench pass@1 & 第 1 轮 36.9 & 第 19 轮 42.4 & 验证器感知的多轮推理；必须报告预算。 \\
+\end{longtable}}
+
+\subsection*{C.2 推理、智能体与开放式发现}
+
+{\TableTight
+\begin{longtable}{@{}L{0.18\linewidth}L{0.17\linewidth}L{0.19\linewidth}L{0.22\linewidth}L{0.15\linewidth}@{}}
+\toprule
+\textbf{方法} & \textbf{领域} & \textbf{基线} & \textbf{报告结果} & \textbf{指标} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{方法} & \textbf{领域} & \textbf{基线} & \textbf{报告结果} & \textbf{指标} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Self-Refine & 数学推理 & 56\% & 67\% & 准确率 \\
+Agent Symbolic Learning & MATH & 智能体基线: 56.0\%；DSPy: 48.4\% & 60.7\% & 准确率 \\
+RISE & GSM8K, Llama2-7B & 约 14\% & 约 24\% & 准确率 \\
+RISE & GSM8K, Mistral-7B & 约 38\% & 约 46\% & 准确率 \\
+Agent Symbolic Learning & HotPotQA & F1 36.2, EM 22.8 & F1 39.1, EM 25.6 & F1 / EM \\
+Reflexion & ALFWorld & 75\% 基础智能体 & 97\% & 成功率 \\
+Voyager & Minecraft & 先前的 Minecraft 智能体 & 3.3 倍独特物品；2.3 倍移动距离 & 探索能力 \\
+AlphaEvolve & 4x4 复数矩阵乘法 & 已知构造 & 48 次乘法 & 代数验证 \\
+AlphaEvolve & Borg 调度 & 生产基线 & 0.7\% 全球算力回收 & 运营指标 \\
+AlphaEvolve & LLM 训练算子 & 现有算子 & 报告设置下 23\% 和 32\% 的加速 & 运行时速度 \\
+\end{longtable}}
+
+\subsection*{C.3 基准测试披露模板}
+
+面向 arXiv 的可复现性，未来修订版应在每项基准测试声明后附上此模板：
+
+\begin{enumerate}
+\item \textbf{演化对象}：输出、提示词、记忆、工作流、工具策略、代码、权重、种群或数据课程。
+\item \textbf{评估器}：单元测试、隐藏测试、奖励模型、人类评判、形式化验证器、执行追踪或生产指标。
+\item \textbf{搜索预算}：轮次、样本、候选者、工具调用、挂钟时间、token 数、美元花费及人工审阅分钟数。
+\item \textbf{数据集划分}：训练、验证、隐藏测试、时间划分、新任务族及污染控制声明。
+\item \textbf{回归测试套件}：先前任务、安全约束、成本限制、权限边界及负迁移案例。
+\item \textbf{审计与回滚}：版本化产物、已接受/已拒绝候选日志、评估器版本及回滚路径。
+\end{enumerate}
+
+\section{GitHub Star 质量与炒作检测}
+\label{app:star-quality}
+
+GitHub Stars 是采纳信号，而非质量标签。因此，项目分析采用多因子评分，以防止病毒式关注淹没工程证据。该评分并非普适真理；它是用于决定哪些仓库值得深入模型卡片分析的筛选辅助工具。
+
+\subsection*{D.1 评分维度}
+
+\begin{table}[t]
+\centering
+\TableTight
+\caption{用于仓库筛选的 Star 质量维度。}
+\label{tab:star-quality-dimensions}
+\begin{tabular}{@{}L{0.24\linewidth}L{0.13\linewidth}L{0.50\linewidth}@{}}
+\toprule
+\textbf{维度} & \textbf{权重} & \textbf{理由} \\
+\midrule
+Star 活跃度 & 20\% & 衡量近期加星者是否活跃，而非一次性病毒式账户。 \\
+贡献者多样性 & 20\% & 当项目声称的生态系统价值较广时，对由单一维护者主导的项目予以惩罚。 \\
+Fork 质量 & 20\% & 计算具有真实提交或下游工作的 Fork，而非仅被动副本。 \\
+Issue 质量 & 20\% & 奖励具体的 Bug 报告、使用问题和设计讨论，而非低信息量 Issue。 \\
+Pull Request 合并率 & 20\% & 近似反映可维护性、审阅吞吐量和社区整合程度。 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{D.2 代表性质量排名}
+
+{\TableTight
+\begin{longtable}{@{}L{0.18\linewidth}r L{0.12\linewidth}L{0.17\linewidth}L{0.34\linewidth}@{}}
+\toprule
+\textbf{项目} & \textbf{Stars} & \textbf{评分} & \textbf{增长模式} & \textbf{解读} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{项目} & \textbf{Stars} & \textbf{评分} & \textbf{增长模式} & \textbf{解读} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+OpenEvolve & 6,358 & 74/100 & 有机增长 & 较小但高信号的演化代码优化项目。 \\
+DSPy & 25,000 & 73/100 & 有机增长 & 强学术与工程足迹。 \\
+SWE-Agent & 15,000 & 70/100 & 有机增长 & 研究驱动的软件工程智能体。 \\
+OpenHands & 55,000 & 68/100 & 有机增长 & 拥有活跃开发的大型社区。 \\
+LangGraph & 20,000 & 67/100 & 稳步增长 & 强大的工作流图基础设施。 \\
+AutoGen & 50,000 & 66/100 & 有机增长 & 拥有机构支持的大型框架生态系统。 \\
+FunSearch & 1,500 & 62/100 & 有机增长 & 相对其科学贡献而言被低估。 \\
+CrewAI & 30,000 & 62/100 & 稳步增长 & 实用的编排框架。 \\
+Reflexion & 3,158 & 58/100 & 稳步增长 & 经典研究实现。 \\
+MetaGPT & 50,000 & 56/100 & 病毒式增长 & 广泛认知，但采纳质量需审查。 \\
+AutoGPT & 175,000 & 28/100 & 病毒式增长 & 具有历史重要性，但 Star 数夸大了当前质量。 \\
+Devika & 22,000 & 30/100 & 可疑 & 跟风式增长模式，维护信号微弱。 \\
+\end{longtable}}
+
+\section{研究团队与学术谱系}
+\label{app:researchers}
+
+自演化工作连接了多个社区：演化计算、AutoML/NAS、程序合成、强化学习、语言智能体工程、工具使用基准测试和 AI 安全。谱系图之所以有用，是因为它防止该领域被仅解读为 2024--2026 年的 LLM 趋势。
+
+\begin{itemize}
+\item \textbf{演化计算谱系}：Schmidhuber 的 G\"{o}del 机、Clune 的开放式演化与 AI-GA 框架、质量多样性方法、MAP-Elites 及现代 LLM 引导的程序演化。
+\item \textbf{自我改进与推理谱系}：STaR、Self-Refine、Reflexion、RISE、RAGEN、Absolute Zero 及相关训练时或推理时改进循环。
+\item \textbf{智能体架构谱系}：ADAS、Agent Symbolic Learning、EvoMAC、G\"{o}del Agent、DGM、SICA 及工作流/智能体拓扑搜索。
+\item \textbf{代码与算法发现谱系}：FunSearch、AlphaEvolve、OpenEvolve、Science-CodeEvolve 及在 SWE-bench 类任务上评估的软件工程智能体。
+\item \textbf{记忆与终身智能体谱系}：Voyager、ExpeL、ReasoningBank、Memory-R1、AriadneMem、Mem0、LangMem、Graphiti 及长上下文或有状态智能体的基准测试工作。
+\item \textbf{安全与治理谱系}：评估器篡改、奖励黑客攻击、记忆投毒、能力退化、OEP、Misevolution 及生产环境回滚/审计模式。
+\end{itemize}
+
+\section{方法速查表}
+\label{app:method-lookup}
+
+{\TableTight
+\begin{longtable}{@{}L{0.17\linewidth}L{0.16\linewidth}L{0.10\linewidth}L{0.25\linewidth}L{0.24\linewidth}@{}}
+\toprule
+\textbf{方法} & \textbf{循环类型} & \textbf{是否训练} & \textbf{反馈来源} & \textbf{最适任务} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{方法} & \textbf{循环类型} & \textbf{是否训练} & \textbf{反馈来源} & \textbf{最适任务} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Self-Refine & 反思 & 否 & 自我反馈 & 生成、代码、对话 \\
+Reflexion & 反思 + 记忆 & 否 & 环境反馈 + 语言记忆 & 决策任务、代码、ALFWorld 类任务 \\
+Self-Debug & 评估器循环 & 否 & 执行反馈 & 代码生成 \\
+STaR & 推理引导 & 是 & 答案标签与推理过滤 & 推理 \\
+SPIN & 自博弈 & 是 & 自博弈偏好信号 & 通用语言任务 \\
+ReST-EM & 过滤 + 训练 & 是 & 自生成候选与过滤器 & 推理与代码 \\
+Constitutional AI & 批评 + 偏好 & 是 & 宪法约束下的 AI 反馈 & 对齐与无害性 \\
+OPRO & 优化 & 否 & 评分函数 & 提示词与程序优化 \\
+FunSearch & 搜索 + 评估 & 否 & 程序评估器 & 数学发现与启发式搜索 \\
+AlphaEvolve & 种群 + 代码演化 & 否 & 程序化与生产评估器 & 算法发现与基础设施优化 \\
+ADAS & 架构搜索 & 否 & 任务基准测试 & 智能体设计 \\
+DGM & 自引用 + 种群 & 否 & 隔离编码基准测试 & 智能体自我改进 \\
+G\"{o}del Agent & 运行时自修改 & 否 & 任务验证 & 智能体自修改实验 \\
+Agent Symbolic Learning & 符号搜索 + 反思 & 否 & 语言损失与梯度 & 多任务智能体 \\
+Absolute Zero & 自博弈 + RL & 是 & 自生成已验证任务 & 推理与代码 \\
+RAGEN & 轨迹 RL & 是 & 多轮奖励 & 交互式智能体 \\
+SICA & 代码自修改 & 否 & SWE-bench 类验证 & 软件工程 \\
+ACE & 上下文演化 & 否 & 上下文反馈 & 智能体工作流 \\
+EvolveR & 混合演化 & 是 & 离线蒸馏 + 在线策略演化 & 策略改进 \\
+Memory-R1 & 记忆 + RL & 是 & 记忆管理奖励 & 长程记忆任务 \\
+\end{longtable}}
+
+\section{发布与双语版本说明}
+\label{app:release-notes}
+
+由 \texttt{paper-drafts/main.tex} 构建的英文稿件是 arXiv 面向的版本。其编译输出应保持纯英文，避免依赖本地系统字体，并包含支持综述声明所需的全部表格。中文配套材料单独维护在中文综述树和中文附录源文件中，以便双语读者可以检查相同证据而不会在 arXiv PDF 中混淆语言。
+
+在公开提交之前，发布包应通过以下关卡：
+
+\begin{enumerate}
+\item 从干净检出目录使用 \texttt{xelatex}、\texttt{bibtex} 和两遍最终 \texttt{xelatex} 编译英文稿件。
+\item 确认 \texttt{main.tex} 使用的英文源文件集不包含中文字符。
+\item 确认第 5 章和附录~\ref{app:benchmarks} 中的每个基准测试数据都有论文综述、原始论文或官方报告来源。
+\item 在引用键归一化后移除重复的 BibTeX 别名。
+\item 仅打包 arXiv 所需的源文件：\texttt{main.tex}、英文章节、\texttt{appendix-en.tex}、参考文献文件及稿件实际引用的图资源。
+\item 保持中文配套输出从仓库和网站链接可访问，但不要将它们包含在 arXiv 源码包中，除非提交单独的中文注释。
+\end{enumerate}

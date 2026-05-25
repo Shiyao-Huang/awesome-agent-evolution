@@ -19,11 +19,11 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
         <h1>索引那些让 <span class="gradient-text">AI 学会自我改进</span> 的系统。</h1>
         <p class="lead">Self Evolve 是自进化智能体的中文入口：汇集论文、GitHub 实现、Benchmark、代码自我改进循环，以及 LLM 迭代优化的工程实践。</p>
         <div class="hero-actions">
-          <a class="button primary" href="#projects">浏览项目</a>
-          <a class="button" href="/research/">阅读研究图谱</a>
-          <a class="button" href="/postcards/">浏览卡片墙</a>
-          <a class="button" href="/graph/">打开知识图谱</a>
-          <a class="button" href="/star-analysis/">Star 质量分析</a>
+          <a class="button primary" href="/reports/self-evolve-survey-en.pdf" target="_blank" rel="noopener">下载 Survey PDF</a>
+          <a class="button" href="/reports/self-evolve-survey-zh.pdf" target="_blank" rel="noopener">中文伴读版 PDF</a>
+          <a class="button" href="/paper/">论文主页</a>
+          <a class="button" href="/benchmark/">Benchmark</a>
+          <a class="button" href="#projects">浏览项目</a>
           <a class="button" href="/postcards/">浏览卡片墙</a>
         </div>
         <div class="metrics" aria-label="研究站点指标">
@@ -33,6 +33,27 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
         </div>
       </div>
       <EvolutionNetwork client:load />
+    </div>
+  </section>
+
+  <section class="survey-spotlight" id="survey">
+    <div class="container survey-spotlight-inner">
+      <div class="survey-copy">
+        <div class="eyebrow">Core Survey PDF</div>
+        <h2>先看综述：Self-Evolving AI Agents 完整论文。</h2>
+        <p>主页第一入口直接放论文产物。英文版已同步到最新编译 PDF；中文当前是 44 页伴读版，不是完整 205 页翻译，完整中文版正在单独生成和验证。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/reports/self-evolve-survey-en.pdf" target="_blank" rel="noopener">打开英文完整 PDF</a>
+          <a class="button" href="/reports/self-evolve-survey-zh.pdf" target="_blank" rel="noopener">打开中文伴读版</a>
+          <a class="button" href="/paper/">查看论文数据页</a>
+        </div>
+      </div>
+      <div class="survey-panel" aria-label="Survey corpus status">
+        <div class="survey-badge">Latest build · 205 pages</div>
+        <div class="survey-stat"><strong>{researchCoverage.rawUniqueIds}</strong><span>raw unique paper IDs</span></div>
+        <div class="survey-stat"><strong>{researchCoverage.reviewFiles}</strong><span>paper reviews indexed</span></div>
+        <div class="survey-stat"><strong>{projects.length}</strong><span>GitHub projects analyzed</span></div>
+      </div>
     </div>
   </section>
 

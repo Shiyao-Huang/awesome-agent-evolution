@@ -1,0 +1,97 @@
+\documentclass[UTF8,11pt]{ctexart}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\setlength{\emergencystretch}{2em}
+
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcommand{\TableTight}{\footnotesize\setlength{\tabcolsep}{2pt}\renewcommand{\arraystretch}{1.10}}
+
+\newenvironment{algorithm}[1][]{\begin{figure}[#1]}{\end{figure}}
+\newenvironment{algorithmic}[1][]{\begin{enumerate}}{\end{enumerate}}
+\newcommand{\Require}{\item[\textbf{输入：}]}
+\newcommand{\Ensure}{\item[\textbf{输出：}]}
+\newcommand{\State}{\item}
+\newcommand{\For}[1]{\item[\textbf{对于}] #1 \textbf{执行}}
+\newcommand{\ForAll}[1]{\item[\textbf{对于所有}] #1 \textbf{执行}}
+\newcommand{\While}[1]{\item[\textbf{当}] #1 \textbf{时}}
+\newcommand{\If}[1]{\item[\textbf{如果}] #1 \textbf{则}}
+\newcommand{\Else}{\item[\textbf{否则}]}
+\newcommand{\Return}{\textbf{返回} }
+\let\REQUIRE\Require
+\let\ENSURE\Ensure
+\let\STATE\State
+\let\FOR\For
+\let\FORALL\ForAll
+\let\WHILE\While
+\let\IF\If
+\let\ELSE\Else
+\let\RETURN\Return
+\newcommand{\EndFor}{}
+\newcommand{\EndIf}{}
+\newcommand{\EndWhile}{}
+\let\ENDFOR\EndFor
+\let\ENDIF\EndIf
+\let\ENDWHILE\EndWhile
+\newcommand{\InputTranslatedOrPending}[2]{%
+  \IfFileExists{#1.tex}{\input{#1}}{%
+    \section*{#2（中文翻译待完成）}%
+    \addcontentsline{toc}{section}{#2（中文翻译待完成）}%
+    本章完整中文翻译尚未生成。当前翻译任务被 Claude 侧速率限制和上游错误阻断；英文原文见 \texttt{../#1.tex}。%
+  }%
+}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  citecolor=green!45!black,
+  urlcolor=blue!60!black,
+  pdftitle={自进化 AI 智能体综述：反馈驱动的生成、评估、记忆与自我修改},
+  pdfauthor={aha team}
+}
+
+\title{自进化 AI 智能体综述：反馈驱动的生成、评估、记忆与自我修改}
+\author{aha team}
+\date{2026 年 5 月}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+自进化 AI 智能体通过反馈驱动的改进环路，修改自身运行中的持久组件，包括提示词、记忆、工具、代码、工作流、数据课程，有时也包括模型行为。本文面向语言模型自我改进、进化计算、AutoML、智能体架构搜索、代码修复、基准测试框架和生产级智能体框架，建立统一的综述框架。我们将文献组织为五类进化环路，比较代表性论文和开源系统，总结基准证据，分析用户与生产痛点，并识别能够改进自身行动机制的智能体所需要的安全与治理要求。本文的中心论点是：自进化必须被评估为一个受控系统过程。每一个改进主张都必须说明发生了什么变化、哪类反馈支持了变化、哪个评估器批准了变化、它带来了多少成本、引入了什么风险，以及它如何被审计或回滚。
+\end{abstract}
+
+\noindent\textbf{关键词：} 自进化 AI；LLM 智能体；递归自我改进；智能体评估；记忆；代码进化；自动化智能体设计；AI 安全
+
+\tableofcontents
+\newpage
+
+\InputTranslatedOrPending{ch1-intro}{第 1 章 引言}
+\InputTranslatedOrPending{ch2-taxonomy}{第 2 章 分类体系}
+\InputTranslatedOrPending{ch3-methods}{第 3 章 方法}
+\InputTranslatedOrPending{ch4-evolutionary}{第 4 章 演化系统}
+\InputTranslatedOrPending{ch5-evaluation}{第 5 章 评估}
+\InputTranslatedOrPending{ch6-frameworks}{第 6 章 框架}
+\InputTranslatedOrPending{ch7-painpoints}{第 7 章 痛点}
+\InputTranslatedOrPending{ch8-future}{第 8 章 未来方向}
+
+\appendix
+\InputTranslatedOrPending{appendix-en}{附录}
+
+\bibliographystyle{plain}
+\bibliography{../references,../references-aliases}
+
+\end{document}
