@@ -1,0 +1,20 @@
+graph TD
+    subgraph Methods["Self-Evolution Method Taxonomy"]
+        RL["reward/RL/self-play<br/>47 papers (37.3%)"]
+        Code["code/self-modification<br/>24 papers (19.0%)"]
+        Mem["memory/knowledge evolution<br/>15 papers (11.9%)"]
+        MA["multi-agent reflection/debate<br/>14 papers (11.1%)"]
+        PS["prompt/search optimization<br/>10 papers (7.9%)"]
+        Web["web/tool adaptation<br/>12 papers (9.5%)"]
+        Eval["evaluation/safety/governance<br/>4 papers (3.2%)"]
+    end
+    RL -->|"selection pressure"| Code
+    RL -->|"reward signal"| MA
+    Code -->|"modifies"| PS
+    Mem -->|"stores experience"| RL
+    Mem -->|"informs"| MA
+    MA -->|"generates feedback"| PS
+    Web -->|"environment feedback"| RL
+    Eval -->|"verifies"| Code
+    style RL fill:#3498db,color:#fff
+    style Code fill:#e74c3c,color:#fff

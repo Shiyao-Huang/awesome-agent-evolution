@@ -1,4 +1,4 @@
-framework,composite_score,self_evolution_fit,self_evolution_z,repo_mentions,pain_mentions,pain_to_mention_ratio,adoption_signal_z,observability_signal_z,production_fit_signal_z,self_evolution_fit_z,safety_governance_signal_z
+framework,composite,self_evo_fit,self_evo_z,repo_mentions,pain_mentions,pmr,adoption_signal_z,observability_signal_z,production_fit_signal_z,self_evolution_fit_z,safety_governance_signal_z
 LangChain/LangGraph,3.8,3,0.0875,13,1,0.0769,0.3333,-0.548,1.1667,0.0875,1.3333
 CrewAI,3.4,2,-0.7003,4,0,0.0,0.3333,0.4384,-0.3333,-0.7003,-0.6667
 AutoGen,3.4,2,-0.7003,5,0,0.0,0.3333,0.4384,-0.3333,-0.7003,-0.6667

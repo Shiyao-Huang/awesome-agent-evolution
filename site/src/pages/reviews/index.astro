@@ -1,80 +1,94 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-
-// Review dimensions and placeholder scores
-// Will be updated when reviewers complete their work
-const reviewDimensions = ['Rigor', 'Novelty', 'Clarity', 'Evidence', 'Methodology'];
-const reviewers = [
-  { name: 'Reviewer A', focus: 'Rigor & Methodology', scores: [0, 0, 0, 0, 0], status: 'pending' },
-  { name: 'Reviewer B', focus: 'Novelty & Contribution', scores: [0, 0, 0, 0, 0], status: 'pending' },
-  { name: 'Reviewer C', focus: 'Clarity & Presentation', scores: [0, 0, 0, 0, 0], status: 'pending' }
-];
-
-const dimsPayload = JSON.stringify(reviewDimensions);
-const reviewersPayload = JSON.stringify(reviewers);
+import { projects } from '@/data/projects';
 ---
 
-<BaseLayout title="Self Evolve 同行评审 — 评审结果可视化" description="Self Evolve survey 同行评审结果：三位 reviewer 从严谨性、创新性、清晰度三个维度进行评审。">
+<BaseLayout
+  title="同行评审 — Self Evolve"
+  description="AI 自我进化研究的同行评审结果：方法对比、评审维度打分、跨项目评审雷达图。"
+>
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">Peer Review</div>
-        <h1 class="gradient-text">同行评审可视化</h1>
-        <p class="lead">三位 Reviewer 从学术严谨性、创新性、清晰度三个维度对 Self Evolve survey 进行评审</p>
-      </div>
+      <div class="eyebrow">Peer Reviews</div>
+      <h1 class="gradient-text">同行评审</h1>
+      <p class="lead">跨项目评审维度对比与方法评估</p>
+      <p style="color:var(--muted);margin-top:8px">覆盖 {projects.length} 个自进化项目的结构化评审</p>
+    </div>
+  </section>
 
-      <div class="metrics">
-        <div class="metric"><strong>3</strong><span>Reviewers</span></div>
-        <div class="metric"><strong>5</strong><span>评分维度</span></div>
-        <div class="metric"><strong>{reviewers.filter(r => r.status === 'pending').length}</strong><span>评审中</span></div>
-      </div>
+  <!-- Review Dimensions -->
+  <section class="section">
+    <div class="container">
+      <div class="review-grid">
+        <div class="card">
+          <div class="card-head">
+            <div class="eyebrow">Review Framework</div>
+            <h3>评审维度</h3>
+          </div>
+          <div class="review-dims">
+            <div class="review-dim">
+              <span class="review-dim-label">Novelty</span>
+              <span class="review-dim-desc">方法创新性</span>
+            </div>
+            <div class="review-dim">
+              <span class="review-dim-label">Soundness</span>
+              <span class="review-dim-desc">技术严谨性</span>
+            </div>
+            <div class="review-dim">
+              <span class="review-dim-label">Reproducibility</span>
+              <span class="review-dim-desc">可复现性</span>
+            </div>
+            <div class="review-dim">
+              <span class="review-dim-label">Evolution Impact</span>
+              <span class="review-dim-desc">对自进化领域的贡献</span>
+            </div>
+            <div class="review-dim">
+              <span class="review-dim-label">Scalability</span>
+              <span class="review-dim-desc">可扩展性</span>
+            </div>
+          </div>
+        </div>
 
-      <!-- Review Radar -->
-      <div class="review-chart-wrap">
-        <div class="viz-section-head">
-          <div class="eyebrow">Review Radar</div>
-          <h2>评审评分雷达图</h2>
-          <p>等待评审完成后自动更新</p>
-        </div>
-        <svg id="review-radar-svg" viewBox="0 0 500 500" role="img" aria-label="Review scores radar chart"></svg>
-        <div class="review-legend" id="review-legend"></div>
-        <div class="review-placeholder" id="review-placeholder">
-          <p>评审报告尚在进行中。完成后此处将展示三维评分雷达图、对比表和关键发现摘要。</p>
-          <p>数据源：<code>research/peer-reviews/</code></p>
+        <div class="card">
+          <div class="card-head">
+            <div class="eyebrow">Status</div>
+            <h3>评审进度</h3>
+          </div>
+          <div class="review-status-list">
+            <div class="review-status-row">
+              <span class="review-status-label">待评审项目</span>
+              <span class="review-status-count">{projects.length}</span>
+            </div>
+            <div class="review-status-row">
+              <span class="review-status-label">已完成评审</span>
+              <span class="review-status-count">0</span>
+            </div>
+            <div class="review-status-row">
+              <span class="review-status-label">评审维度</span>
+              <span class="review-status-count">5</span>
+            </div>
+          </div>
+          <p style="color:var(--muted);font-size:13px;margin-top:12px">
+            评审数据准备中。数据来源于 <code>research/peer-reviews/</code>，待研究团队完成后将自动填充。
+          </p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Review Comparison Table -->
-      <div class="review-table-section">
-        <div class="viz-section-head">
-          <div class="eyebrow">Review Comparison</div>
-          <h2>评审对比表</h2>
+  <!-- Comparison Table Placeholder -->
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="card-head">
+          <div class="eyebrow">Comparison Matrix</div>
+          <h3>方法对比矩阵</h3>
         </div>
-        <div class="viz-rank-table-wrap">
-          <table class="viz-rank-table">
-            <thead>
-              <tr>
-                <th>Reviewer</th>
-                <th>审查视角</th>
-                <th>Rigor</th>
-                <th>Novelty</th>
-                <th>Clarity</th>
-                <th>Evidence</th>
-                <th>Methodology</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {reviewers.map(r => (
-                <tr>
-                  <td><strong>{r.name}</strong></td>
-                  <td>{r.focus}</td>
-                  <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
-                  <td><span class="rel-badge" style="background:#f39c12;color:#fff">Pending</span></td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div class="review-placeholder">
+          <p>评审结果对比表格将在数据就绪后自动生成。</p>
+          <p style="font-size:13px;color:var(--muted);margin-top:8px">
+            生成条件：<code>research/peer-reviews/*.md</code> 文件存在且包含结构化评审数据。
+          </p>
         </div>
       </div>
     </div>
@@ -82,22 +96,16 @@ const reviewersPayload = JSON.stringify(reviewers);
 </BaseLayout>
 
 <style>
-  .review-chart-wrap {
-    margin-top: 32px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-media);
-    background: var(--surface-card);
-    padding: 24px;
-    text-align: center;
-  }
-  .viz-section-head { margin-bottom: 16px; text-align: left; }
-  .viz-section-head .eyebrow { color: var(--accent); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
-  .viz-section-head h2 { font-family: var(--font-display); font-size: 24px; font-weight: 400; color: var(--fg); margin-top: 4px; }
-  .viz-section-head p { color: var(--muted); font-size: 14px; margin-top: 4px; }
-  #review-radar-svg { width: 100%; max-width: 400px; height: auto; display: none; }
-  .review-placeholder { color: var(--muted); font-size: 14px; line-height: 1.6; margin-top: 20px; }
-  .review-placeholder code { background: var(--surface-2); padding: 2px 6px; border-radius: 4px; font-size: 13px; }
-  .review-table-section { margin-top: 40px; }
-  .rel-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 750; }
-  .review-legend { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.review-dims{display:flex;flex-direction:column;gap:10px}
+.review-dim{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:8px;background:var(--surface-2)}
+.review-dim-label{font-size:13px;font-weight:800;color:var(--accent);min-width:130px}
+.review-dim-desc{font-size:13px;color:var(--muted)}
+.review-status-list{display:flex;flex-direction:column;gap:8px}
+.review-status-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--line)}
+.review-status-label{font-size:13px;font-weight:650;color:var(--fg)}
+.review-status-count{font-size:14px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}
+.review-placeholder{padding:32px;text-align:center;border:2px dashed var(--line);border-radius:12px;color:var(--muted)}
+.review-placeholder p{font-size:14px}
+@media(max-width:760px){.review-grid{grid-template-columns:1fr}}
 </style>

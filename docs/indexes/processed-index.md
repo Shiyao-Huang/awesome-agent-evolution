@@ -10,9 +10,9 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `analysis` | present | 16 | 1 | 0 | 2.1 MB |
-| `research` | present | 120 | 5 | 0 | 2.2 MB |
-| `projects` | present | 25305 | 2881 | 0 | 2.9 GB |
+| `analysis` | present | 15 | 1 | 0 | 2.1 MB |
+| `research` | present | 126 | 5 | 0 | 2.1 MB |
+| `projects` | present | 25355 | 2881 | 0 | 2.9 GB |
 | `paper-reviews` | present | 137 | 1 | 0 | 1.3 MB |
 | `academic-reviews` | present | 34 | 1 | 0 | 287 KB |
 | `papers` | present | 12 | 4 | 0 | 55 KB |
@@ -58,7 +58,7 @@
 - `projects/07-metagpt-multi-agent-framework.md`
 - `projects/08-autogpt-autonomous-agent.md`
 - `projects/09-crewai-multi-agent-framework.md`
-- `projects/100-clawdmarket-agent-marketplace.md`
+- `projects/10-dspy-declarative-llm-programming.md`
 
 ### `paper-reviews`
 

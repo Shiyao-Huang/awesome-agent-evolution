@@ -1,4 +1,4 @@
-topic,paper_signal,repo_signal,painpoint_signal,blog_signal,total_signal,gap_ratio,signal_range,signal_std,dominant_source
+topic,paper,repo,pain,blog,total,gap_ratio,range,std,dominant
 Reliability / production gap,2,131,19,43,195,0.6718,129,57.35,repo
 Evaluation / benchmark gap,6,85,10,28,129,0.6589,79,36.45,repo
 Memory / drift / forgetting,16,59,10,34,119,0.4958,49,22.01,repo

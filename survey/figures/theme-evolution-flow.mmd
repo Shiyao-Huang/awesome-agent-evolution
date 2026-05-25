@@ -1,0 +1,26 @@
+graph LR
+    subgraph Early["2022-2023: Foundation"]
+        R1["Reflection/Self-Refine"]
+        R2["Prompt Engineering"]
+        R3["RLHF"]
+    end
+    subgraph Mid["2024: Agent Runtime"]
+        A1["Multi-Agent Systems"]
+        A2["Agent Frameworks"]
+        A3["Code Generation"]
+    end
+    subgraph Now["2025-2026: Infrastructure"]
+        B1["Code Self-Modification"]
+        B2["Memory Systems"]
+        B3["Skill Libraries"]
+        B4["Evaluation Harness"]
+    end
+    R1 -->|"evolves"| A1
+    R2 -->|"automated"| A3
+    R3 -->|"extends"| B1
+    A1 -->|"needs"| B2
+    A2 -->|"packages"| B3
+    A3 -->|"requires"| B4
+    style Early fill:#e8f4f8
+    style Mid fill:#fff3cd
+    style Now fill:#d4edda

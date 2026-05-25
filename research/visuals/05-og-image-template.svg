@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!--
+    OG Image Template for awesome-agent-evolution
+    Usage: Replace {{TITLE}}, {{SUBTITLE}}, {{STAT1}} etc with page-specific content
+    This template is for social media sharing (Twitter, LinkedIn, etc.)
+  -->
+  <defs>
+    <linearGradient id="og-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#050615"/>
+      <stop offset="1" stop-color="#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="og-accent" x1="0" x2="1">
+      <stop stop-color="#7cf7d4"/>
+      <stop offset="1" stop-color="#9f7cff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#og-bg)"/>
+
+  <!-- Decorative -->
+  <circle cx="1050" cy="80" r="200" fill="#9f7cff" opacity=".15"/>
+  <circle cx="100" cy="580" r="180" fill="#7cf7d4" opacity=".10"/>
+
+  <!-- Site branding -->
+  <text x="80" y="80" font-family="Inter,Arial,sans-serif" font-size="18" fill="#7cf7d4" font-weight="600" letter-spacing="4">AWESOME-AGENT-EVOLUTION</text>
+
+  <!-- Separator -->
+  <rect x="80" y="95" width="200" height="2" fill="url(#og-accent)" rx="1"/>
+
+  <!-- Title area (replace for each page) -->
+  <text x="80" y="190" font-family="Inter,Arial,sans-serif" font-size="56" fill="white" font-weight="900">{{TITLE}}</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="250" font-family="Inter,Arial,sans-serif" font-size="24" fill="#aaa">{{SUBTITLE}}</text>
+
+  <!-- Key metrics -->
+  <g transform="translate(80, 350)">
+    <rect x="0" y="0" width="250" height="90" rx="16" fill="#ffffff" opacity=".06"/>
+    <text x="125" y="40" font-family="Inter,Arial,sans-serif" font-size="36" fill="#7cf7d4" font-weight="900" text-anchor="middle">{{STAT1}}</text>
+    <text x="125" y="68" font-family="Inter,Arial,sans-serif" font-size="14" fill="#888" text-anchor="middle">{{STAT1_LABEL}}</text>
+
+    <rect x="270" y="0" width="250" height="90" rx="16" fill="#ffffff" opacity=".06"/>
+    <text x="395" y="40" font-family="Inter,Arial,sans-serif" font-size="36" fill="#9f7cff" font-weight="900" text-anchor="middle">{{STAT2}}</text>
+    <text x="395" y="68" font-family="Inter,Arial,sans-serif" font-size="14" fill="#888" text-anchor="middle">{{STAT2_LABEL}}</text>
+
+    <rect x="540" y="0" width="250" height="90" rx="16" fill="#ffffff" opacity=".06"/>
+    <text x="665" y="40" font-family="Inter,Arial,sans-serif" font-size="36" fill="#ff6b6b" font-weight="900" text-anchor="middle">{{STAT3}}</text>
+    <text x="665" y="68" font-family="Inter,Arial,sans-serif" font-size="14" fill="#888" text-anchor="middle">{{STAT3_LABEL}}</text>
+  </g>
+
+  <!-- URL -->
+  <text x="80" y="570" font-family="Inter,Arial,sans-serif" font-size="16" fill="#555">shiyao-huang.github.io/awesome-agent-evolution</text>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="618" width="1200" height="12" fill="url(#og-accent)"/>
+</svg>

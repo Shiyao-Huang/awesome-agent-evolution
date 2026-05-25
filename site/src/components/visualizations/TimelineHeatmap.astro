@@ -1,62 +1,19 @@
 ---
 import { timelineData, timeSliceData } from './vizData';
-const timelinePayload = JSON.stringify(timelineData);
-const timeSlicePayload = JSON.stringify(timeSliceData);
+const tlp=JSON.stringify(timelineData);const tsp=JSON.stringify(timeSliceData);
 ---
-
-<div class="viz-timeline" id="viz-timeline">
-  <div class="viz-section-head">
-    <div class="eyebrow">Timeline Heatmap</div>
-    <h2>时间线热力图</h2>
-    <p>仓库创建/活跃度按时间分布</p>
-  </div>
-  <div class="viz-timeline-tabs">
-    <button class="viz-tab active" id="tab-created">By Created Date</button>
-    <button class="viz-tab" id="tab-activity">By Activity Slice</button>
-  </div>
-  <div class="viz-heatmap-grid" id="viz-heatmap-grid"></div>
-</div>
-
-<script is:inline define:vars={{ timelinePayload, timeSlicePayload }}>
-  const createdData = JSON.parse(timelinePayload);
-  const activityData = JSON.parse(timeSlicePayload);
-  const grid = document.getElementById('viz-heatmap-grid');
-  const tabC = document.getElementById('tab-created');
-  const tabA = document.getElementById('tab-activity');
-  if (!grid) throw new Error('Heatmap not found');
-
-  function render(data) {
-    grid.innerHTML = '';
-    if (!data.length) { grid.innerHTML = '<p style="color:var(--muted);padding:20px">No data</p>'; return; }
-    const maxC = Math.max(...data.map(d => d.count));
-    data.forEach(entry => {
-      const intensity = maxC > 0 ? entry.count / maxC : 0;
-      const cell = document.createElement('div'); cell.className = 'viz-heat-cell';
-      const bar = document.createElement('div'); bar.className = 'viz-heat-bar';
-      bar.style.height = '0%'; bar.style.maxHeight = Math.max(8, intensity * 100) + '%';
-      bar.style.opacity = String(0.15 + intensity * 0.85);
-      const lbl = document.createElement('span'); lbl.className = 'viz-heat-lbl'; lbl.textContent = entry.key.slice(2);
-      cell.appendChild(bar); cell.appendChild(lbl); grid.appendChild(cell);
-    });
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { grid.querySelectorAll('.viz-heat-bar').forEach(b => { b.style.height = b.style.maxHeight; }); obs.unobserve(e.target); } });
-    }, { threshold: 0.2 }); obs.observe(grid);
-  }
-
-  render(createdData);
-  tabC.addEventListener('click', () => { tabC.classList.add('active'); tabA.classList.remove('active'); render(createdData); });
-  tabA.addEventListener('click', () => { tabA.classList.add('active'); tabC.classList.remove('active'); render(activityData); });
+<div class="viz-tl"><div class="viz-sh"><div class="eyebrow">Timeline Heatmap</div><h2>时间线热力图</h2><p>仓库创建/活跃度按时间分布</p></div>
+<div class="viz-tabs"><button class="viz-tab active" id="tc">By Created Date</button><button class="viz-tab" id="ta">By Activity</button></div>
+<div class="viz-hg" id="viz-hg"></div></div>
+<script is:inline define:vars={{ tlp, tsp }}>
+const cd=JSON.parse(tlp),ad=JSON.parse(tsp),g=document.getElementById('viz-hg'),tc=document.getElementById('tc'),ta=document.getElementById('ta');if(!g)return;
+function ren(data){g.innerHTML='';if(!data.length){g.innerHTML='<p style="color:var(--muted);padding:20px">No data</p>';return}
+const mc=Math.max(...data.map(d=>d.count));data.forEach(e=>{const i=mc>0?e.count/mc:0;const c=document.createElement('div');c.className='viz-hc';const b=document.createElement('div');b.className='viz-hb';b.style.height='0%';b.style.maxHeight=Math.max(8,i*100)+'%';b.style.opacity=String(.15+i*.85);const l=document.createElement('span');l.className='viz-hl';l.textContent=e.key.slice(2);c.appendChild(b);c.appendChild(l);g.appendChild(c)});
+const o=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){g.querySelectorAll('.viz-hb').forEach(b=>{b.style.height=b.style.maxHeight});o.unobserve(e.target)}})},{threshold:.2});o.observe(g)}
+ren(cd);tc.addEventListener('click',()=>{tc.classList.add('active');ta.classList.remove('active');ren(cd)});ta.addEventListener('click',()=>{ta.classList.add('active');tc.classList.remove('active');ren(ad)});
 </script>
-
 <style>
-  .viz-timeline { margin-top: 40px; }
-  .viz-timeline-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
-  .viz-tab { padding: 6px 14px; border: 1px solid var(--line); border-radius: var(--radius-cta); background: var(--surface-1); color: var(--muted); font-size: 13px; font-weight: 700; cursor: pointer; transition: all var(--transition); }
-  .viz-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .viz-tab:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
-  .viz-heatmap-grid { display: flex; gap: 4px; align-items: flex-end; height: 200px; overflow-x: auto; }
-  .viz-heat-cell { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 36px; flex: 1; height: 100%; justify-content: flex-end; }
-  .viz-heat-bar { width: 100%; border-radius: 4px 4px 0 0; background: var(--accent); transition: height 0.8s cubic-bezier(.4, 0, .2, 1); }
-  .viz-heat-lbl { font-size: 10px; font-weight: 700; color: var(--meta); white-space: nowrap; }
-  @media (max-width: 760px) { .viz-heat-cell { min-width: 28px; } }
+.viz-tl{margin-top:32px}.viz-tabs{display:flex;gap:8px;margin-bottom:16px}.viz-tab{padding:6px 14px;border:1px solid var(--line);border-radius:var(--radius-cta);background:var(--surface-1);color:var(--muted);font-size:13px;font-weight:700;cursor:pointer;transition:all var(--transition)}.viz-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}.viz-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.viz-hg{display:flex;gap:4px;align-items:flex-end;height:200px;overflow-x:auto}.viz-hc{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:36px;flex:1;height:100%;justify-content:flex-end}.viz-hb{width:100%;border-radius:4px 4px 0 0;background:var(--accent);transition:height .8s cubic-bezier(.4,0,.2,1)}.viz-hl{font-size:10px;font-weight:700;color:var(--meta);white-space:nowrap}
+@media(max-width:760px){.viz-hc{min-width:28px}}
 </style>

@@ -1,0 +1,14 @@
+graph TD
+    Raw["Raw Captures<br/>490 repos + 198 papers"]
+    Class["Classified<br/>490 repos"]
+    Cross["Cross-Analyzed<br/>359 repos"]
+    Cards["Model Cards<br/>204 projects"]
+    Broad["Broad Evolution<br/>176 repos"]
+    Strict["Strict Evolution<br/>79 repos"]
+    Raw --> Class --> Cross
+    Class --> Cards
+    Class --> Broad --> Strict
+    Papers["196 Papers<br/>7 methods"] -->|"method evidence"| Cross
+    Pain["97 Pain Points"] -->|"community signal"| Cross
+    style Raw fill:#3498db,color:#fff
+    style Strict fill:#e74c3c,color:#fff

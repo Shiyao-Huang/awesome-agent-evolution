@@ -1,0 +1,144 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { projects } from '@/data/projects';
+
+const ranked = [...projects]
+  .sort((a, b) => Number(b.stars || 0) - Number(a.stars || 0))
+  .slice(0, 30);
+
+const topCategories = [...new Set(ranked.map(p => p.category))];
+---
+
+<BaseLayout
+  title="项目排名 — Self Evolve"
+  description="AI 自我进化项目的综合排名：按 Stars、活跃度、进化机制等维度排序。"
+>
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Rankings</div>
+      <h1 class="gradient-text">项目排名</h1>
+      <p class="lead">Top 30 自进化项目排行 · Stars + 活跃度综合排名</p>
+    </div>
+  </section>
+
+  <!-- Top 3 Podium -->
+  <section class="section">
+    <div class="container">
+      <div class="rank-podium">
+        {ranked.slice(0, 3).map((p, i) => (
+          <div class={`rank-podium-item rank-pos-${i + 1}`}>
+            <div class="rank-medal">{i + 1}</div>
+            <div class="rank-podium-name">
+              <a href={p.url} target="_blank" rel="noopener">{p.name}</a>
+            </div>
+            <div class="rank-podium-stars">{Number(p.stars).toLocaleString()} Stars</div>
+            <div class="rank-podium-cat">{p.category}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Ranking Table -->
+  <section class="section">
+    <div class="container">
+      <div class="rank-table-wrap">
+        <table class="rank-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Project</th>
+              <th>Stars</th>
+              <th>Category</th>
+              <th>Pattern</th>
+              <th>Updated</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ranked.map((p, i) => (
+              <tr>
+                <td class="rank-num">{i + 1}</td>
+                <td class="rank-name">
+                  <a href={p.url} target="_blank" rel="noopener">{p.name}</a>
+                  <span class="rank-repo">{p.repo}</span>
+                </td>
+                <td class="rank-stars">{Number(p.stars).toLocaleString()}</td>
+                <td>{p.category}</td>
+                <td class="rank-pattern">
+                  {(p.tags || []).slice(0, 2).map(t => (
+                    <span class="rank-tag">{t}</span>
+                  ))}
+                </td>
+                <td class="rank-date">{p.lastPushed ? p.lastPushed.slice(0, 10) : '\u2014'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Breakdown -->
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="card-head">
+          <div class="eyebrow">By Category</div>
+          <h3>Top 30 类别分布</h3>
+        </div>
+        <div class="rank-cats">
+          {topCategories.map(cat => {
+            const count = ranked.filter(p => p.category === cat).length;
+            const pct = Math.round((count / 30) * 100);
+            return (
+              <div class="rank-cat-row">
+                <span class="rank-cat-label">{cat}</span>
+                <div class="rank-cat-bar-wrap">
+                  <div class="rank-cat-bar" style={`width:${pct}%`}></div>
+                </div>
+                <span class="rank-cat-count">{count}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.rank-podium{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.rank-podium-item{display:flex;flex-direction:column;align-items:center;gap:8px;padding:24px 16px;border-radius:12px;background:var(--surface-2);text-align:center}
+.rank-pos-1{border:2px solid #FFD700}.rank-pos-2{border:2px solid #C0C0C0}.rank-pos-3{border:2px solid #CD7F32}
+.rank-medal{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff}
+.rank-pos-1 .rank-medal{background:#FFD700;color:#333}.rank-pos-2 .rank-medal{background:#C0C0C0;color:#333}.rank-pos-3 .rank-medal{background:#CD7F32}
+.rank-podium-name a{font-weight:800;font-size:16px;color:var(--fg);text-decoration:none}.rank-podium-name a:hover{color:var(--accent)}
+.rank-podium-stars{font-weight:900;font-size:20px;color:var(--accent);font-variant-numeric:tabular-nums}
+.rank-podium-cat{font-size:12px;color:var(--muted);font-weight:700}
+
+.rank-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.rank-table{width:100%;border-collapse:collapse;font-size:13px}
+.rank-table th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.rank-table td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.rank-table tr:hover td{background:var(--surface-2)}
+.rank-num{font-weight:800;color:var(--meta);width:36px}
+.rank-name a{font-weight:700;color:var(--fg);text-decoration:none}.rank-name a:hover{color:var(--accent)}
+.rank-repo{display:block;font-size:11px;color:var(--meta);margin-top:2px}
+.rank-stars{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.rank-pattern{max-width:180px}
+.rank-tag{display:inline-block;padding:2px 6px;margin:1px 2px;border:1px solid var(--line);border-radius:4px;font-size:11px;font-weight:650;color:var(--muted);white-space:nowrap}
+.rank-date{white-space:nowrap;color:var(--muted);font-size:12px}
+
+.rank-cats{display:flex;flex-direction:column;gap:6px}
+.rank-cat-row{display:grid;grid-template-columns:140px 1fr 36px;gap:8px;align-items:center}
+.rank-cat-label{font-size:13px;font-weight:650;color:var(--fg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-cat-bar-wrap{height:24px;background:var(--surface-2);border-radius:6px;overflow:hidden}
+.rank-cat-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--brand2));border-radius:6px;transition:width .6s cubic-bezier(.4,0,.2,1)}
+.rank-cat-count{font-size:13px;font-weight:800;color:var(--meta);text-align:right}
+
+@media(max-width:760px){
+  .rank-podium{grid-template-columns:1fr}
+  .rank-table{font-size:12px}
+  .rank-cat-row{grid-template-columns:100px 1fr 30px}
+}
+</style>

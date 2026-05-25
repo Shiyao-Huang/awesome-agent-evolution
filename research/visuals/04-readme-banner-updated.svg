@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0a0a1a"/>
+      <stop offset="1" stop-color="#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop stop-color="#7cf7d4"/>
+      <stop offset="1" stop-color="#9f7cff"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" x2="1">
+      <stop stop-color="#ff6b6b"/>
+      <stop offset="1" stop-color="#ffa500"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1000" cy="100" r="280" fill="#9f7cff" opacity=".12"/>
+  <circle cx="150" cy="550" r="250" fill="#7cf7d4" opacity=".10"/>
+  <circle cx="600" cy="315" r="180" fill="#ff6b6b" opacity=".06"/>
+
+  <!-- Grid pattern -->
+  <g opacity=".05" stroke="#7cf7d4">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+  </g>
+
+  <!-- Evolution cycle arrows (abstract) -->
+  <g transform="translate(950, 315)" opacity=".3">
+    <circle r="120" fill="none" stroke="#7cf7d4" stroke-width="1.5" stroke-dasharray="8,4"/>
+    <circle r="80" fill="none" stroke="#9f7cff" stroke-width="1.5" stroke-dasharray="6,6"/>
+    <circle r="40" fill="none" stroke="#ff6b6b" stroke-width="2"/>
+    <!-- Arrow hints -->
+    <path d="M 0,-125 A 125,125 0 0,1 108,-62" fill="none" stroke="#7cf7d4" stroke-width="3" marker-end="url(#arrowG)"/>
+    <path d="M 85,-55 A 80,80 0 0,1 85,55" fill="none" stroke="#9f7cff" stroke-width="3"/>
+    <path d="M 35,20 A 40,40 0 0,1 -35,20" fill="none" stroke="#ff6b6b" stroke-width="3"/>
+  </g>
+
+  <!-- Title -->
+  <text x="80" y="140" font-family="Inter,Arial,sans-serif" font-size="28" fill="#7cf7d4" font-weight="600" letter-spacing="3">AWESOME AGENT EVOLUTION</text>
+
+  <!-- Main heading -->
+  <text x="80" y="240" font-family="Inter,Arial,sans-serif" font-size="68" fill="white" font-weight="900">AI Agent</text>
+  <text x="80" y="330" font-family="Inter,Arial,sans-serif" font-size="68" fill="url(#accent)" font-weight="900">Self-Evolution</text>
+
+  <!-- Stats bar -->
+  <g transform="translate(80, 400)">
+    <!-- Stat 1 -->
+    <rect x="0" y="0" width="160" height="70" rx="12" fill="#ffffff" opacity=".08"/>
+    <text x="80" y="30" font-family="Inter,Arial,sans-serif" font-size="32" fill="#7cf7d4" font-weight="900" text-anchor="middle">486</text>
+    <text x="80" y="55" font-family="Inter,Arial,sans-serif" font-size="13" fill="#aaa" font-weight="500" text-anchor="middle">Repositories</text>
+
+    <!-- Stat 2 -->
+    <rect x="180" y="0" width="160" height="70" rx="12" fill="#ffffff" opacity=".08"/>
+    <text x="260" y="30" font-family="Inter,Arial,sans-serif" font-size="32" fill="#9f7cff" font-weight="900" text-anchor="middle">196</text>
+    <text x="260" y="55" font-family="Inter,Arial,sans-serif" font-size="13" fill="#aaa" font-weight="500" text-anchor="middle">Papers</text>
+
+    <!-- Stat 3 -->
+    <rect x="360" y="0" width="160" height="70" rx="12" fill="#ffffff" opacity=".08"/>
+    <text x="440" y="30" font-family="Inter,Arial,sans-serif" font-size="32" fill="#ff6b6b" font-weight="900" text-anchor="middle">6</text>
+    <text x="440" y="55" font-family="Inter,Arial,sans-serif" font-size="13" fill="#aaa" font-weight="500" text-anchor="middle">Method Families</text>
+
+    <!-- Stat 4 -->
+    <rect x="540" y="0" width="160" height="70" rx="12" fill="#ffffff" opacity=".08"/>
+    <text x="620" y="30" font-family="Inter,Arial,sans-serif" font-size="32" fill="#ffa500" font-weight="900" text-anchor="middle">97</text>
+    <text x="620" y="55" font-family="Inter,Arial,sans-serif" font-size="13" fill="#aaa" font-weight="500" text-anchor="middle">Pain Points</text>
+  </g>
+
+  <!-- Tagline -->
+  <text x="80" y="540" font-family="Inter,Arial,sans-serif" font-size="18" fill="#888">From Reflexion to AlphaEvolve: A Comprehensive Survey of Agent Self-Evolution</text>
+
+  <!-- Formal framework hint -->
+  <text x="80" y="575" font-family="Inter,Arial,sans-serif" font-size="14" fill="#555">S = (θ, c, g, m, A) — State Space · Operators · Fitness · Selection · Convergence</text>
+
+  <!-- Decorative bottom bar -->
+  <rect x="0" y="620" width="1200" height="10" fill="url(#accent)"/>
+</svg>

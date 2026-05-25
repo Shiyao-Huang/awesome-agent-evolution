@@ -17,12 +17,7 @@ const jsonLd = {
   name: site.name,
   url: site.url,
   description: site.description,
-  keywords: site.keywords,
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: `${siteRoot}search?q={search_term_string}`,
-    'query-input': 'required name=search_term_string'
-  }
+  keywords: site.keywords
 };
 const orgLd = {
   '@context': 'https://schema.org',

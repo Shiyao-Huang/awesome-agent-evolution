@@ -7,161 +7,134 @@ import RadarChart from '@/components/visualizations/RadarChart.astro';
 import TimelineHeatmap from '@/components/visualizations/TimelineHeatmap.astro';
 import RankTable from '@/components/visualizations/RankTable.astro';
 
-type ProjectData = (typeof projects)[number];
+const catCounts = new Map<string, { count: number; totalStars: number }>();
+const langCounts = new Map<string, number>();
+const tagCounts = new Map<string, number>();
 
-const categories = (() => {
-  const map = new Map<string, { category: string; count: number; totalStars: number }>();
-  for (const p of projects) {
-    const ex = map.get(p.category);
-    if (ex) { ex.count++; ex.totalStars += Number(p.stars || 0); }
-    else { map.set(p.category, { category: p.category, count: 1, totalStars: Number(p.stars || 0) }); }
-  }
-  return [...map.values()].sort((a, b) => b.totalStars - a.totalStars);
-})();
+for (const p of projects) {
+  const ce = catCounts.get(p.category) || { count: 0, totalStars: 0 };
+  ce.count++; ce.totalStars += Number(p.stars || 0);
+  catCounts.set(p.category, ce);
 
-const languages = (() => {
-  const map = new Map<string, { language: string; count: number }>();
-  for (const p of projects) {
-    const ex = map.get(p.language);
-    if (ex) { ex.count++; } else { map.set(p.language, { language: p.language, count: 1 }); }
-  }
-  return [...map.values()].sort((a, b) => b.count - a.count);
-})();
+  const lang = p.language || 'Unknown';
+  langCounts.set(lang, (langCounts.get(lang) || 0) + 1);
 
-const tags = (() => {
-  const map = new Map<string, number>();
-  for (const p of projects) { for (const t of p.tags) { map.set(t, (map.get(t) || 0) + 1); } }
-  return [...map.entries()].map(([tag, count]) => ({ tag, count })).sort((a, b) => b.count - a.count).slice(0, 20);
-})();
+  for (const t of p.tags) tagCounts.set(t, (tagCounts.get(t) || 0) + 1);
+}
 
-const totalStars: number = projects.reduce((sum: number, p: ProjectData) => sum + Number(p.stars || 0), 0);
+const categories = [...catCounts.entries()]
+  .sort((a, b) => b[1].count - a[1].count)
+  .map(([category, data]) => ({ category, count: data.count, totalStars: data.totalStars }));
+const languages = [...langCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
+const topTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20);
 ---
-<BaseLayout title="Self Evolve 可视化 — 项目数据图表与交互式分析" description="Self Evolve 项目可视化：按类别、语言、标签分布的 GitHub 项目数据分析图表。">
+
+<BaseLayout
+  title="数据可视化 — Self Evolve"
+  description="AI 自我进化项目的交互式数据可视化：分类体系、主题雷达、时间线热力图、项目排行榜。"
+>
   <section class="section">
     <div class="container">
-      <div class="eyebrow">Visualizations / 可视化</div>
-      <h1 class="gradient-text">项目数据可视化</h1>
-      <p class="lead">交互式图表与统计视图，帮助快速理解 Self Evolve 收录项目的分布、趋势与关系。</p>
-      <div class="metrics">
-        <div class="metric"><strong>{projects.length}</strong><span>个已分析仓库</span></div>
-        <div class="metric"><strong>{totalStars.toLocaleString()}</strong><span>GitHub Stars 合计</span></div>
-        <div class="metric"><strong>{categories.length}</strong><span>个进化模式分类</span></div>
-      </div>
+      <div class="eyebrow">Data Visualizations</div>
+      <h1 class="gradient-text">数据可视化</h1>
+      <p class="lead">{projects.length} 个自进化项目的交互式图表与探索工具</p>
     </div>
   </section>
 
-  <!-- Category Distribution -->
+  <!-- Static Overview Cards -->
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">类别分布</div>
-          <h2>按进化模式分组</h2>
-        </div>
-      </div>
-      <div class="score-table-wrap">
-        <table class="score-table">
-          <thead>
-            <tr>
-              <th>类别</th>
-              <th>项目数</th>
-              <th>Stars 合计</th>
-              <th>占比</th>
-            </tr>
-          </thead>
-          <tbody>
-            {categories.map((cat: { category: string; count: number; totalStars: number }) => (
-              <tr>
-                <td><strong>{cat.category}</strong></td>
-                <td>{cat.count}</td>
-                <td>{cat.totalStars.toLocaleString()}</td>
-                <td>
-                  <div class="radar-bar-row">
-                    <span class="radar-label" />
-                    <div class="radar-bar-track">
-                      <div class="radar-bar-fill" style={`width: ${Math.round((cat.totalStars / totalStars) * 100)}%; background: var(--accent);`} />
-                    </div>
-                    <span class="radar-value">{Math.round((cat.totalStars / totalStars) * 100)}%</span>
+      <div class="viz-grid-2col">
+        <div class="card">
+          <div class="card-head">
+            <div class="eyebrow">Categories</div>
+            <h3>项目分类分布</h3>
+          </div>
+          <div class="viz-bars">
+            {categories.slice(0, 10).map((cat: { category: string; count: number; totalStars: number }) => {
+              const maxCount = categories[0]?.count || 1;
+              const pct = Math.round((cat.count / maxCount) * 100);
+              return (
+                <div class="viz-bar-row">
+                  <span class="viz-bar-label">{cat.category}</span>
+                  <div class="viz-bar-track">
+                    <div class="viz-bar-fill" style={`width:${pct}%`}></div>
                   </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                  <span class="viz-bar-count">{cat.count}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <div class="eyebrow">Languages</div>
+            <h3>编程语言分布</h3>
+          </div>
+          <div class="viz-bars">
+            {languages.map(([lang, count]: [string, number]) => {
+              const maxLang = languages[0]?.[1] || 1;
+              const pct = Math.round((count / maxLang) * 100);
+              return (
+                <div class="viz-bar-row">
+                  <span class="viz-bar-label">{lang}</span>
+                  <div class="viz-bar-track">
+                    <div class="viz-bar-fill" style={`width:${pct}%`}></div>
+                  </div>
+                  <span class="viz-bar-count">{count}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:20px">
+        <div class="card-head">
+          <div class="eyebrow">Top Tags</div>
+          <h3>高频进化机制标签</h3>
+        </div>
+        <div class="viz-tags">
+          {topTags.map(([tag, count]: [string, number]) => (
+            <span class="viz-pill">{tag} <small>{count}</small></span>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Language Distribution -->
+  <!-- Interactive Charts -->
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">语言分布</div>
-          <h2>按主要编程语言</h2>
-        </div>
+      <div class="viz-sh">
+        <div class="eyebrow">Interactive Charts</div>
+        <h2>交互式图表</h2>
       </div>
-      <div class="grid">
-        {languages.slice(0, 6).map((lang: { language: string; count: number }) => (
-          <article class="card">
-            <h3>{lang.language}</h3>
-            <p>{lang.count} 个项目</p>
-            <div class="radar-bar-row">
-              <span class="radar-label" />
-              <div class="radar-bar-track">
-                <div class="radar-bar-fill" style={`width: ${Math.round((lang.count / projects.length) * 100)}%; background: var(--caret-blue);`} />
-              </div>
-              <span class="radar-value">{Math.round((lang.count / projects.length) * 100)}%</span>
-            </div>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Top Tags -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">热门标签</div>
-          <h2>出现频率最高的关键词</h2>
-        </div>
-      </div>
-      <div class="pill-row" style="gap: 6px;">
-        {tags.map((tag: { tag: string; count: number }) => (
-          <span class="pill" style={`font-size: ${Math.min(12 + tag.count, 20)}px;`}>{tag.tag} ({tag.count})</span>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Visualizations -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Interactive Charts</div>
-          <h2>交互式图表</h2>
-        </div>
-      </div>
-
       <div class="viz-grid-2col">
         <FunnelChart />
         <TaxonomyTree />
       </div>
-
-      <div class="viz-grid-2col">
-        <RadarChart />
-        <TimelineHeatmap />
-      </div>
-
+      <RadarChart />
+      <TimelineHeatmap />
       <RankTable />
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .viz-grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  @media (max-width: 980px) { .viz-grid-2col { grid-template-columns: 1fr; } }
+.viz-grid-2col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.viz-bars{display:flex;flex-direction:column;gap:6px}
+.viz-bar-row{display:grid;grid-template-columns:120px 1fr 40px;gap:8px;align-items:center}
+.viz-bar-label{font-size:13px;font-weight:650;color:var(--fg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.viz-bar-track{height:24px;background:var(--surface-2);border-radius:6px;overflow:hidden}
+.viz-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--brand2));border-radius:6px;transition:width .6s cubic-bezier(.4,0,.2,1)}
+.viz-bar-count{font-size:13px;font-weight:800;color:var(--meta);text-align:right;font-variant-numeric:tabular-nums}
+.viz-tags{display:flex;flex-wrap:wrap;gap:8px}
+.viz-pill{display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border:1px solid var(--line);border-radius:20px;font-size:13px;font-weight:650;color:var(--fg)}
+.viz-pill small{color:var(--meta);font-weight:800}
+.viz-sh{margin-bottom:24px}
+.viz-sh .eyebrow{color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.viz-sh h2{font-family:var(--font-display);font-size:24px;font-weight:400;color:var(--fg);margin-top:4px}
+@media(max-width:760px){.viz-grid-2col{grid-template-columns:1fr}.viz-bar-row{grid-template-columns:80px 1fr 36px}}
 </style>

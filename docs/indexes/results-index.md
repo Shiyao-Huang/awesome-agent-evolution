@@ -13,8 +13,8 @@
 | `reports` | present | 1 | 1 | 0 | 7.5 KB |
 | `output` | present | 12 | 1 | 0 | 575 KB |
 | `site/public/reports` | present | 238 | 4 | 0 | 2.3 MB |
-| `site/dist` | present | 541 | 296 | 0 | 12 MB |
-| `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 954 KB |
+| `site/dist` | present | 548 | 300 | 0 | 14 MB |
+| `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 963 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
 ## Representative Files
@@ -52,6 +52,7 @@
 ### `site/dist`
 
 - `site/dist/_astro/BaseLayout.Dt2Pu-2z.css`
+- `site/dist/_astro/index.CejD_bah.css`
 - `site/dist/_astro/index.CmLyJJUK.css`
 - `site/dist/_astro/star-analysis.B9Ar3sAv.css`
 - `site/dist/blog/adas-to-dgm-evolution/index.html`
@@ -60,7 +61,6 @@
 - `site/dist/blog/ai-self-evolution-map/index.html`
 - `site/dist/blog/alphaevolve-deep-dive/index.html`
 - `site/dist/blog/code-self-improvement-playbook/index.html`
-- `site/dist/blog/cross-domain-research-map/index.html`
 
 ### `paper-drafts/main.pdf`
 

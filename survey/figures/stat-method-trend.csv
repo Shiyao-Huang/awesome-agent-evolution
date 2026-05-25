@@ -1,4 +1,4 @@
-year,method_category,annual_count,cumulative_total
+year,method_category,annual_count,cumulative
 2022,reward/RL/self-play,1,1
 2023,multi-agent reflection/debate,1,1
 2023,prompt/search optimization,1,1
@@ -24,4 +24,3 @@ year,method_category,annual_count,cumulative_total
 2026,prompt/search optimization,1,10
 2026,reward/RL/self-play,9,46
 2026,web/tool/environment adaptation,3,12
-20pl,reward/RL/self-play,1,47

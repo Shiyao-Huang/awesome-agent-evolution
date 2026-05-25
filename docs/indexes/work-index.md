@@ -13,9 +13,9 @@
 | `paper-drafts` | present | 22 | 1 | 0 | 1.9 MB |
 | `paper` | present | 1 | 2 | 0 | 43 KB |
 | `latex` | present | 9 | 3 | 0 | 53 KB |
-| `site` | present | 857 | 321 | 0 | 22 MB |
-| `survey` | present | 49 | 4 | 0 | 1.3 MB |
-| `scripts` | present | 7 | 1 | 0 | 110 KB |
+| `site` | present | 874 | 330 | 0 | 24 MB |
+| `survey` | present | 51 | 4 | 0 | 1.3 MB |
+| `scripts` | present | 8 | 1 | 0 | 126 KB |
 | `data-engine` | present | 0 | 9 | 0 | 0 B |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 | `CURRENT_GOAL.md` | present | 0 | 0 | 0 | 0 B |
@@ -75,13 +75,14 @@
 - `survey/ch7-painpoints-cn.md`
 - `survey/ch8-future-cn.md`
 - `survey/figures/README.md`
-- `survey/figures/blog-author-impact-figures.md`
+- `survey/figures/benchmark-coverage.md`
 
 ### `scripts`
 
 - `scripts/analyze_github_project_data.mjs`
 - `scripts/enforce_raw_timestamps.py`
 - `scripts/generate_blog_author_profiles.py`
+- `scripts/generate_charts.py`
 - `scripts/generate_project_indexes.mjs`
 - `scripts/generate_repo_classification.py`
 - `scripts/generate_survey_figures.py`
