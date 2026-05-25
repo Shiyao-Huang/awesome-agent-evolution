@@ -239,6 +239,10 @@
 | kbench | [shareAI-lab/kbench](https://github.com/shareAI-lab/kbench) | Agent Harness Benchmark CLI | [site/public/reports/projects/221-kbench-agent-harness-benchmark-cli.md](221-kbench-agent-harness-benchmark-cli.md) |
 | evmbench | [paradigmxyz/evmbench](https://github.com/paradigmxyz/evmbench) | Smart Contract Agent Benchmark Harness | [site/public/reports/projects/222-evmbench-smart-contract-agent-harness.md](222-evmbench-smart-contract-agent-harness.md) |
 | Skills Best Practices | [mgechev/skills-best-practices](https://github.com/mgechev/skills-best-practices) | Agent Skill Authoring Methodology | [projects/223-skills-best-practices-agent-skill-authoring.md](223-skills-best-practices-agent-skill-authoring.md) |
+| SICA Self-Improving Coding Agent | [MaximeRobeyns/self_improving_coding_agent](https://github.com/MaximeRobeyns/self_improving_coding_agent) | Self-Improving Coding Agent | [projects/224-sica-self-improving-coding-agent.md](224-sica-self-improving-coding-agent.md) |
+| Agent Zero | [agent0ai/agent-zero](https://github.com/agent0ai/agent-zero) | Autonomous Agent Runtime | [projects/225-agent-zero-runtime.md](225-agent-zero-runtime.md) |
+| elizaOS | [elizaOS/eliza](https://github.com/elizaOS/eliza) | Autonomous Agent Framework | [projects/226-elizaos-autonomous-agent-framework.md](226-elizaos-autonomous-agent-framework.md) |
+| Centaur | [paradigmxyz/centaur](https://github.com/paradigmxyz/centaur) | Secure Team Agent Runtime | [projects/227-centaur-secure-team-agent-runtime.md](227-centaur-secure-team-agent-runtime.md) |
 
 ## Data Use
 

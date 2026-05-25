@@ -38,8 +38,8 @@
   </g>
 
   <g>
-    <rect x="272" y="200" width="58" height="230" rx="14" fill="#9f7cff" filter="url(#softShadow)"/>
-    <text x="301" y="188" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#f6f8ff">79</text>
+    <rect x="272" y="197" width="58" height="233" rx="14" fill="#9f7cff" filter="url(#softShadow)"/>
+    <text x="301" y="185" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#f6f8ff">80</text>
     <text x="301" y="465" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#aab4d4">evolution</text>
   </g>
 
@@ -50,8 +50,8 @@
   </g>
 
   <g>
-    <rect x="464" y="281" width="58" height="149" rx="14" fill="url(#amber)" filter="url(#softShadow)"/>
-    <text x="493" y="269" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#f6f8ff">51</text>
+    <rect x="464" y="270" width="58" height="160" rx="14" fill="url(#amber)" filter="url(#softShadow)"/>
+    <text x="493" y="258" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#f6f8ff">55</text>
     <text x="493" y="465" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#aab4d4">framework</text>
   </g>
 

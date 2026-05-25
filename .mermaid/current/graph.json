@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T03:41:36+08:00",
+  "generated_at": "2026-05-26T04:41:30+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -181,7 +181,12 @@
         "raw-github/nirdiamant_agent_memory_techniques.md",
         "raw-github/shareai-lab_kbench.md",
         "raw-github/paradigmxyz_evmbench.md",
-        "raw-github/mgechev_skills-best-practices.md"
+        "raw-github/mgechev_skills-best-practices.md",
+        "raw-github/maximerobeyns_self_improving_coding_agent.md",
+        "raw-github/agent0ai_agent-zero.md",
+        "raw-github/elizaos_eliza.md",
+        "raw-github/paradigmxyz_centaur.md",
+        "raw-github/transformeroptimus_superagi.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -200,7 +205,8 @@
         "output/raw-github-timestamp-index.json",
         "output/raw-github-timestamp-index.md",
         "analysis/github-project-data-analysis.json",
-        "analysis/github-project-data-analysis.md"
+        "analysis/github-project-data-analysis.md",
+        "analysis/github-project-data-analysis.tex"
       ],
       "intent": {
         "one_sentence": "Classify raw captures into benchmark, harness, memory, skill, resource-index, and evolution-runtime roles.",
@@ -242,7 +248,8 @@
         "work/research/hourly-public-metadata-update-2026-05-25-1648.md",
         "work/research/hourly-public-metadata-update-2026-05-26-0036.md",
         "work/research/hourly-public-metadata-update-2026-05-26-0239.md",
-        "work/research/hourly-public-metadata-update-2026-05-26-0341.md"
+        "work/research/hourly-public-metadata-update-2026-05-26-0341.md",
+        "work/research/hourly-public-metadata-update-2026-05-26-0441.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -573,7 +580,16 @@
         "projects/222-evmbench-smart-contract-agent-harness.md",
         "site/public/reports/projects/222-evmbench-smart-contract-agent-harness.md",
         "projects/223-skills-best-practices-agent-skill-authoring.md",
-        "site/public/reports/projects/223-skills-best-practices-agent-skill-authoring.md"
+        "site/public/reports/projects/223-skills-best-practices-agent-skill-authoring.md",
+        "site/public/reports/projects/224-sica-self-improving-coding-agent.md",
+        "site/public/reports/projects/225-agent-zero-runtime.md",
+        "site/public/reports/projects/226-elizaos-autonomous-agent-framework.md",
+        "site/public/reports/projects/227-centaur-secure-team-agent-runtime.md",
+        "site/public/reports/projects/INDEX.md",
+        "README.md",
+        "README-ZH.md",
+        "README-EN.md",
+        "CONTENT_INDEX.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -781,21 +797,34 @@
     ]
   },
   "current_run_evidence": [
-    "Web-observed repo this run: mgechev/skills-best-practices; no clone, skill install, benchmark, or authenticated GitHub API freshness was claimed.",
-    "New raw file: raw-github/mgechev_skills-best-practices.md.",
-    "New public model card and site report: project/report id 223 for Skills Best Practices.",
-    "GitHub API blocker: curl api.github.com failed DNS resolution and gh auth status reported an invalid token for Shiyao-Huang.",
-    "GitNexus evidence: status was up-to-date at indexed commit d98b10f before this iteration; analyze will be rerun after commit if available.",
-    "Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> project report -> site data -> README/i18n/site build.",
+    "Web-observed repositories this run: MaximeRobeyns/self_improving_coding_agent, agent0ai/agent-zero, elizaOS/eliza, paradigmxyz/centaur, and TransformerOptimus/SuperAGI.",
+    "New raw files: raw-github/maximerobeyns_self_improving_coding_agent.md, raw-github/agent0ai_agent-zero.md, raw-github/elizaos_eliza.md, raw-github/paradigmxyz_centaur.md, raw-github/transformeroptimus_superagi.md.",
+    "New public model cards/site reports: project/report ids 224-227 for SICA, Agent Zero, elizaOS, and Centaur; SuperAGI was a raw/classification backfill for an existing site project.",
+    "GitNexus evidence: npx gitnexus status reported repository indexed at current commit 2f939fd before this iteration edits.",
+    "GitHub API freshness caveat: shell API freshness is not claimed; web-observed public pages/search results were used and repository analysis preserves API/cache source labels where available.",
+    "Follow-up blocker: chenyn66/learning-to-self-evolve was not confirmed as a GitHub repository URL in this run, so no raw capture was fabricated.",
+    "Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> site data/report -> README/i18n/site build.",
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-26T03:41:36+08:00",
+    "run_at": "2026-05-26T04:41:30+08:00",
     "added_repositories": [
-      "mgechev/skills-best-practices"
+      "MaximeRobeyns/self_improving_coding_agent",
+      "agent0ai/agent-zero",
+      "elizaOS/eliza",
+      "paradigmxyz/centaur",
+      "TransformerOptimus/SuperAGI"
     ],
-    "evidence_quality": "web_observed_public_github_page_and_skills_hub_sync; shell GitHub API DNS failed and gh token invalid",
+    "corpus_counts": {
+      "raw_github_captures": 510,
+      "classified_repositories": 510,
+      "site_projects": 100,
+      "strict_evolution": 80,
+      "broad_evolution": 181
+    },
+    "evidence_quality": "web_observed_public_github_pages_and_search_results; no local clone/test/benchmark/deployment for added repos",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "npx gitnexus status reported indexed commit d98b10f and current commit d98b10f up-to-date before this iteration commit."
+    "gitnexus_status": "npx gitnexus status reported indexed commit 2f939fd and current commit 2f939fd up-to-date before this iteration edits.",
+    "unresolved_follow_up": "chenyn66/learning-to-self-evolve GitHub repository URL not confirmed this run."
   }
 }

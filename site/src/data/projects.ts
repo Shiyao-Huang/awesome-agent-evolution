@@ -1953,6 +1953,120 @@ export const projects: Project[] = [
                   "validation",
                   "skillgrade"
           ]
+  },
+  {
+          "name": "SICA Self-Improving Coding Agent",
+          "repo": "MaximeRobeyns/self_improving_coding_agent",
+          "url": "https://github.com/MaximeRobeyns/self_improving_coding_agent",
+          "stars": 324,
+          "forks": 56,
+          "language": "Python",
+          "license": "MIT",
+          "report": "projects/224-sica-self-improving-coding-agent.md",
+          "pattern": "coding agent -> own-codebase modification -> tests/review signal -> improved next agent iteration",
+          "description": "SICA is a self-improving coding-agent implementation where the agent works on its own codebase, making it a core self-referential improvement artifact.",
+          "stack": [
+                  "Python",
+                  "JavaScript",
+                  "Docker"
+          ],
+          "category": "Self-Improving Coding Agent",
+          "lastPushed": "2026-05-26T00:00:00Z",
+          "localPath": "raw-github/maximerobeyns_self_improving_coding_agent.md",
+          "status": "candidate",
+          "tags": [
+                  "self-improving coding agent",
+                  "SICA",
+                  "code self-modification",
+                  "ICLR 2025 workshop"
+          ]
+  },
+  {
+          "name": "Agent Zero",
+          "repo": "agent0ai/agent-zero",
+          "url": "https://github.com/agent0ai/agent-zero",
+          "stars": 17600,
+          "forks": 3600,
+          "language": "Python",
+          "license": "Public repository license visible",
+          "report": "projects/225-agent-zero-runtime.md",
+          "pattern": "project workspace -> Linux/tools/browser/memory/skills -> inspectable agent work -> reusable state",
+          "description": "Agent Zero is an autonomous-agent runtime with Linux execution, memory, browser automation, skills, plugins, projects and subordinate agents.",
+          "stack": [
+                  "Python",
+                  "Docker",
+                  "Browser automation",
+                  "Agent Skills"
+          ],
+          "category": "Autonomous Agent Runtime",
+          "lastPushed": "2026-05-26T00:00:00Z",
+          "localPath": "raw-github/agent0ai_agent-zero.md",
+          "status": "candidate",
+          "tags": [
+                  "agent runtime",
+                  "memory",
+                  "skills",
+                  "multi-agent",
+                  "browser automation"
+          ]
+  },
+  {
+          "name": "elizaOS",
+          "repo": "elizaOS/eliza",
+          "url": "https://github.com/elizaOS/eliza",
+          "stars": 17300,
+          "forks": 5400,
+          "language": "TypeScript",
+          "license": "MIT",
+          "report": "projects/226-elizaos-autonomous-agent-framework.md",
+          "pattern": "autonomous-agent framework -> plugins/CLI/web lifecycle -> deployed agent applications",
+          "description": "elizaOS is a high-adoption autonomous-agent framework whose plugin and lifecycle surface can host memory, skill, workflow and evaluator loops.",
+          "stack": [
+                  "TypeScript",
+                  "CLI",
+                  "Plugins",
+                  "Web interface"
+          ],
+          "category": "Autonomous Agent Framework",
+          "lastPushed": "2026-05-26T00:00:00Z",
+          "localPath": "raw-github/elizaos_eliza.md",
+          "status": "candidate",
+          "tags": [
+                  "agent framework",
+                  "plugins",
+                  "autonomous agents",
+                  "runtime infrastructure"
+          ]
+  },
+  {
+          "name": "Centaur",
+          "repo": "paradigmxyz/centaur",
+          "url": "https://github.com/paradigmxyz/centaur",
+          "stars": 469,
+          "forks": 55,
+          "language": "Python / TypeScript",
+          "license": "View license / MIT signal from public site",
+          "report": "projects/227-centaur-secure-team-agent-runtime.md",
+          "pattern": "Slack/API request -> durable control plane -> sandboxed harness -> tools/workflows -> replayable team result",
+          "description": "Centaur is a multiplayer self-hosted secure team-agent runtime with Kubernetes sandboxes, bring-your-own harness support, durable workflows, tools and credential boundaries.",
+          "stack": [
+                  "Python",
+                  "TypeScript",
+                  "Kubernetes",
+                  "Slack",
+                  "Agent harness"
+          ],
+          "category": "Secure Team Agent Runtime",
+          "lastPushed": "2026-05-26T00:00:00Z",
+          "localPath": "raw-github/paradigmxyz_centaur.md",
+          "status": "candidate",
+          "tags": [
+                  "team agent runtime",
+                  "harness",
+                  "durable workflows",
+                  "credential boundaries",
+                  "sandbox"
+          ]
   }
 ];
 
@@ -1983,7 +2097,9 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur'] }
+  ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
+  ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'Agent 框架 (Round 4)', repos: ['reworkd/AgentGPT', 'yoheinakajima/babyagi', 'cheshire-cat-ai/core', 'huggingface/smolagents', 'Chainlit/chainlit', 'smol-ai/developer'] }
   ,{ title: 'Agent 研究综述 (Round 4)', repos: ['XMUDeepLIT/Awesome-Self-Evolving-Agents', 'luo-junyu/Awesome-Agent-Papers', 'Zijian-Ni/awesome-ai-agents-2026'] }
 ];

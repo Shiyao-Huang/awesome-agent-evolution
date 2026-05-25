@@ -1,10 +1,10 @@
-flowchart TD
-  intent_direct_user_input["Direct user intent\nops/active"]
-  raw_github_hourly_captures["Hourly GitHub raw captures\nraw/updated"]
-  processed_github_classification["GitHub classification and timestamp indexes\nprocessed/updated"]
-  work_learning_notes["Hourly learning notes\nwork/updated"]
-  results_public_site["Public site project impact\nresults/updated"]
-  results_public_visualizations["Public visualization assets\nresults/updated"]
+flowchart LR
+  intent_direct_user_input["Direct user intent\nops / active"]
+  raw_github_hourly_captures["Hourly GitHub raw captures\nraw / updated"]
+  processed_github_classification["GitHub classification and timestamp indexes\nprocessed / updated"]
+  work_learning_notes["Hourly learning notes\nwork / updated"]
+  results_public_site["Public site project impact\nresults / updated"]
+  results_public_visualizations["Public visualization assets\nresults / updated"]
   intent_direct_user_input -- "governs" --> raw_github_hourly_captures
   raw_github_hourly_captures -- "feeds" --> processed_github_classification
   processed_github_classification -- "publishes" --> results_public_site

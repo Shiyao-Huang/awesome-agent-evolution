@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-26T00:00:00+08:00",
-  "total": 505,
-  "updated_files": 505,
+  "total": 510,
+  "updated_files": 510,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -147,6 +147,15 @@
       "collected_at": "2026-05-24T21:11:06Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "agent0ai/agent-zero",
+      "url": "https://github.com/agent0ai/agent-zero",
+      "file": "raw-github/agent0ai_agent-zero.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T04:41:30+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_search_result_2026_05_26"
     },
     {
       "repo": "agentic-in/elephant-agent",
@@ -1011,6 +1020,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "elizaOS/eliza",
+      "url": "https://github.com/elizaOS/eliza",
+      "file": "raw-github/elizaos_eliza.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T04:41:30+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_search_result_2026_05_26"
     },
     {
       "repo": "emartin59/text-game-llm-improver",
@@ -2210,6 +2228,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "MaximeRobeyns/self_improving_coding_agent",
+      "url": "https://github.com/MaximeRobeyns/self_improving_coding_agent",
+      "file": "raw-github/maximerobeyns_self_improving_coding_agent.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T04:41:30+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_search_result_2026_05_26"
+    },
+    {
       "repo": "maxnorm8650/medagentsim",
       "url": "https://github.com/maxnorm8650/medagentsim",
       "file": "raw-github/maxnorm8650_medagentsim.md",
@@ -2892,6 +2919,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "paradigmxyz/centaur",
+      "url": "https://github.com/paradigmxyz/centaur",
+      "file": "raw-github/paradigmxyz_centaur.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T04:41:30+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_2026_05_26"
     },
     {
       "repo": "paradigmxyz/evmbench",
@@ -3882,6 +3918,15 @@
       "collected_at": "2026-05-25T13:21:00+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid"
+    },
+    {
+      "repo": "TransformerOptimus/SuperAGI",
+      "url": "https://github.com/TransformerOptimus/SuperAGI",
+      "file": "raw-github/transformeroptimus_superagi.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T04:41:30+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_search_result_2026_05_26"
     },
     {
       "repo": "trillskillz/clawdmarket",

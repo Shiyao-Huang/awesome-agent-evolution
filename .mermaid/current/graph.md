@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-26T03:41:36+08:00
+Generated: 2026-05-26T04:41:30+08:00
 
 ## Nodes
 
@@ -24,10 +24,11 @@ Generated: 2026-05-26T03:41:36+08:00
 
 ## Current Run Evidence
 
-- Web-observed repo this run: mgechev/skills-best-practices; no clone, skill install, benchmark, or authenticated GitHub API freshness was claimed.
-- New raw file: raw-github/mgechev_skills-best-practices.md.
-- New public model card and site report: project/report id 223 for Skills Best Practices.
-- GitHub API blocker: curl api.github.com failed DNS resolution and gh auth status reported an invalid token for Shiyao-Huang.
-- GitNexus evidence: status was up-to-date at indexed commit d98b10f before this iteration; analyze will be rerun after commit if available.
-- Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> project report -> site data -> README/i18n/site build.
+- Web-observed repositories this run: MaximeRobeyns/self_improving_coding_agent, agent0ai/agent-zero, elizaOS/eliza, paradigmxyz/centaur, and TransformerOptimus/SuperAGI.
+- New raw files: raw-github/maximerobeyns_self_improving_coding_agent.md, raw-github/agent0ai_agent-zero.md, raw-github/elizaos_eliza.md, raw-github/paradigmxyz_centaur.md, raw-github/transformeroptimus_superagi.md.
+- New public model cards/site reports: project/report ids 224-227 for SICA, Agent Zero, elizaOS, and Centaur; SuperAGI was a raw/classification backfill for an existing site project.
+- GitNexus evidence: npx gitnexus status reported repository indexed at current commit 2f939fd before this iteration edits.
+- GitHub API freshness caveat: shell API freshness is not claimed; web-observed public pages/search results were used and repository analysis preserves API/cache source labels where available.
+- Follow-up blocker: chenyn66/learning-to-self-evolve was not confirmed as a GitHub repository URL in this run, so no raw capture was fabricated.
+- Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> site data/report -> README/i18n/site build.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

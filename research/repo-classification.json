@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T03:41:36+08:00",
+  "generated_at": "2026-05-25T20:43:55.177Z",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -240,6 +240,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 23 commits, MIT license, 40 stars and 13 forks; README says it maintains 790+ skills, ships an NPX-first CLI, supports Claude Code, Gemini, Cursor, Kiro, Codex, Antigravity, OpenCode, AdaL and OpenClaw install targets, and treats skills as Markdown-based reasoning plugins",
       "description": "Agent Skills Hub 是跨 Claude Code、Gemini、Cursor、Kiro、Codex、Antigravity、OpenCode 等工具的 skills 注册表和 NPX 安装器。"
+    },
+    {
+      "repo": "agent0ai/agent-zero",
+      "url": "https://github.com/agent0ai/agent-zero",
+      "stars": "17600",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page: Linux execution, memory, browser automation, tools, projects, skills, plugins, multi-agent cooperation, v1.13 release",
+      "description": "Agent Zero is an autonomous agent runtime with inspectable Linux workspace, memory, skills, plugins, browser automation and subordinate agents."
     },
     {
       "repo": "agentic-in/elephant-agent",
@@ -1680,6 +1695,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Turn your Git repository into a self-improving autonomous agent. Open issues to assign tasks, review PRs, merge to teach. Gemini is the brain, Git is the backend."
+    },
+    {
+      "repo": "elizaOS/eliza",
+      "url": "https://github.com/elizaOS/eliza",
+      "stars": "17300",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page/org listing: autonomous-agent framework, modular architecture, CLI, web interface, MIT-visible listing, high adoption",
+      "description": "elizaOS is a high-adoption extensible framework for building and deploying autonomous AI agents."
     },
     {
       "repo": "emartin59/text-game-llm-improver",
@@ -3677,6 +3707,21 @@
       "description": "Memoria 把 AI Agent memory 做成类似 Git 的可版本化基础设施，用 snapshot、branch、merge、rollback、语义检索和自治理规则降低幻觉并维护长期上下文一致性。"
     },
     {
+      "repo": "MaximeRobeyns/self_improving_coding_agent",
+      "url": "https://github.com/MaximeRobeyns/self_improving_coding_agent",
+      "stars": "324",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "research-artifact",
+      "base_theme": "evolution",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page: SICA self-improving coding agent; own-codebase improvement target; MIT; Python-dominant implementation",
+      "description": "SICA is a self-improving coding agent framework whose improvement target is the coding agent codebase itself."
+    },
+    {
       "repo": "maxnorm8650/medagentsim",
       "url": "https://github.com/maxnorm8650/medagentsim",
       "stars": "163",
@@ -4815,6 +4860,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "paper/artifact/research-code signal",
       "description": "GenEnv: Difficulty-Aligned Co-Evolution Between LLM Agents and Environment Simulators"
+    },
+    {
+      "repo": "paradigmxyz/centaur",
+      "url": "https://github.com/paradigmxyz/centaur",
+      "stars": "469",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page: Slack-native shared agents, Kubernetes sandbox, bring-your-own harness, shared tools, durable workflows, credential boundaries, overlays",
+      "description": "Centaur is a multiplayer self-hosted secure team-agent runtime with durable workflows, harness adapters, tool plugins and credential boundaries."
     },
     {
       "repo": "paradigmxyz/evmbench",
@@ -6465,6 +6525,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 137 commits, MIT license, 28 stars and 5 forks; README says the skills are compatible with Claude Code, Cursor, Codex and Gemini CLI and include SKILL.md routing, references, scripts and OpenAI/Codex UI metadata.",
       "description": "Together AI Skills packages provider-specific API and SDK knowledge into 12 agent skills covering inference, training, embeddings, audio, video, images, function calling and infrastructure."
+    },
+    {
+      "repo": "TransformerOptimus/SuperAGI",
+      "url": "https://github.com/TransformerOptimus/SuperAGI",
+      "stars": "17500",
+      "prior_category": "框架",
+      "prior_unclassified": "false",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page: autonomous agent framework, toolkits, GUI, telemetry, vector DBs, memory storage, workflows, MIT, 2,342 commits",
+      "description": "SuperAGI is a dev-first autonomous-agent framework with tools, GUI, telemetry, memory storage, models and workflows."
     },
     {
       "repo": "trillskillz/clawdmarket",
