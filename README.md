@@ -2,15 +2,62 @@
 
 [English](README.md) | [中文](README-ZH.md)
 
-Self Evolve is a public research engineering repository for AI agent self-evolution, agent improvement, code self-improvement, and evolutionary workflows. It maintains one traceable delivery chain: raw evidence, processed analysis, paper drafts, an SEO-ready website, model-card project reports, and publishable outputs.
+![Self Evolve public research pipeline](site/public/visuals/self-evolve-readme-banner.png)
 
-## Core Thesis
+Self Evolve is a research map of AI agent self-evolution: projects, papers, benchmarks, memory systems, skill systems, harnesses, and code-improvement loops, organized into evidence-backed reports readers can actually use.
 
-One sentence: this repository is governed as a `raw -> processed -> work -> results` pipeline, and every important artifact should be indexed, traceable, buildable, and publishable.
+## What You Can Read Here
 
-Three sentences: `raw-*` folders preserve original collection evidence. `analysis/`, `research/`, `projects/`, and `paper-reviews/` contain processed classification, cross-analysis, model cards, and paper reviews. `paper-drafts/`, `site/`, `scripts/`, and `survey/` are working artifacts, while `reports/`, `output/`, `site/public/reports/`, `paper-drafts/main.pdf`, and `site/dist/` are publishable results.
+This repository is meant to answer the questions a serious reader has after hearing "self-evolving agents":
 
-Five sentences: this is not only an awesome list; it is a material corpus, paper project, website, and teaching-oriented model-card system. GitHub repositories are tracked through raw collection, classification, evolution-related subsets, and timeline analysis. Each deep project entry should help readers understand whether the project is usable, research-only, benchmark-oriented, infrastructure-like, or product-shaped. The paper should cite structured data instead of unsupported impressions. New agents should start from this README, [README-ZH.md](README-ZH.md), [AGENTS.md](AGENTS.md), [CONTENT_INDEX.md](CONTENT_INDEX.md), and [docs/indexes/master-index.md](docs/indexes/master-index.md).
+- Which projects are real systems, and which are only demos or concept signals?
+- Which directions are growing: memory, skills, harnesses, benchmarks, reflection, code evolution, or multi-agent workflows?
+- Which projects are worth studying first if I want to build, benchmark, invest in, or research self-improving agents?
+- What evidence backs each claim?
+
+## Current Results
+
+| Result | Current value | Why it matters |
+|---|---:|---|
+| Raw GitHub captures | 463 | Broad discovery layer for agent evolution, skills, memory, harness, benchmark, and adjacent repositories |
+| Classified GitHub repositories | 463 | Every captured repo is normalized into category, theme, stack, timestamp, and evidence fields |
+| Deep project / model-card reports | 181 | Reports explain role, mechanism, evidence path, limits, and use cases instead of just listing links |
+| Strict evolution-related repositories | 78 | Core projects directly about evolution, self-improvement, recursive refinement, or optimization loops |
+| Broad evolution-related repositories | 173 | Wider ecosystem: memory, skill systems, evaluation, harness engineering, coding agents, and agent OS work |
+| Paper PDF | 213 pages | Buildable survey draft grounded in structured project and paper evidence |
+| Public site build | 262 pages | Static reader-facing pages for projects, research notes, graph views, reports, and paper status |
+
+## Main Trend Signals
+
+1. **The field is moving from prompts to agent state.** Memory systems, skill libraries, and harness configuration are becoming the mutable objects that agents improve over time.
+2. **"Self-evolution" is often an evaluation problem in disguise.** The strongest systems do not merely mutate prompts; they define tasks, collect failures, gate regressions, and compare versions.
+3. **Skills are becoming portable infrastructure.** Claude/Codex/OpenCode-style skill folders are turning local know-how into reusable agent capabilities.
+4. **Memory is splitting into product memory and research memory.** Some repos optimize user-facing long-term context; others test retrieval, contradiction handling, state assertions, and benchmark performance.
+5. **Many popular projects are not equally usable.** The model cards separate product-shaped tools, research prototypes, benchmark harnesses, resource indexes, and conceptual signals.
+
+## Best Starting Points
+
+| Read this | Use it for |
+|---|---|
+| [GitHub Project Data Analysis](analysis/github-project-data-analysis.md) | Corpus funnel, category counts, evolution subsets, timeline analysis |
+| [Project Model Cards](projects/INDEX.md) | Deep project reports and public model-card coverage |
+| [Public project reports](site/public/reports/projects/) | Reader-facing report copies used by the site |
+| [Paper draft](paper-drafts/main.pdf) | Long-form survey argument and appendices |
+| [Public knowledge site](https://shiyao-huang.github.io/awesome-evolution/) | Browse project pages, research notes, graph pages, and report pages |
+| [Visual assets](site/public/visuals/) | Corpus funnel, theme distribution, group map, and evidence-flow visuals |
+
+## Research Questions
+
+The repository is organized around four practical questions:
+
+1. What public projects, papers, benchmarks, and skill/memory systems actually belong to AI agent self-evolution?
+2. Which repositories are raw discoveries, which have been analyzed, and which are strong enough for deep model-card treatment?
+3. Which systems are usable products, research prototypes, benchmark harnesses, infrastructure layers, or conceptual signals?
+4. How does the field evolve over time across memory, skills, harnesses, reflection loops, code improvement, and benchmark-driven agent iteration?
+
+## Evidence Pipeline
+
+The reports are built from a traceable chain: `raw evidence -> classification -> cross-analysis -> model cards -> paper/site outputs`. Raw captures preserve source text and timestamps. Processed analysis turns captures into categories, timelines, trend counts, and project roles. Model cards translate that structure into teaching material: what the project does, how it works, what evidence supports it, and where its limits are.
 
 ## Repository Layers
 
@@ -25,18 +72,6 @@ Five sentences: this is not only an awesome list; it is a material corpus, paper
 
 Older README material and legacy delivery indexes are preserved under [docs/legacy/](docs/legacy/). The root README is now the public control surface.
 
-## Current Corpus Metrics
-
-| Metric | Current value | Entry |
-|---|---:|---|
-| GitHub raw captures | 416 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) |
-| Classified GitHub repositories | 416 | [analysis/github-project-data-analysis.json](analysis/github-project-data-analysis.json) |
-| Deep project / model-card reports | 129 | [projects/INDEX.md](projects/INDEX.md) |
-| Strict evolution-related repositories | 71 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) |
-| Broad evolution-related repositories | 166 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) |
-| Paper PDF | 213 pages | [paper-drafts/main.pdf](paper-drafts/main.pdf) |
-| Astro site | 210 pages build | [site/](site/) |
-
 ## Required Validation
 
 ```bash
@@ -46,6 +81,12 @@ node scripts/analyze_github_project_data.mjs
 (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex)
 (cd site && npm run build)
 ```
+
+## Public Knowledge Site
+
+- GitHub repository: <https://github.com/Shiyao-Huang/awesome-evolution>
+- GitHub Pages site: <https://shiyao-huang.github.io/awesome-evolution/>
+- Public release boundary: publish original docs, normalized metadata, model cards, paper drafts, generated reports, and the site; keep raw capture dumps and local repository mirrors out of the default public commit until source terms are reviewed.
 
 ## Main Entrypoints
 

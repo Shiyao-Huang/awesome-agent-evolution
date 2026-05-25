@@ -55,6 +55,30 @@ const localGitFirstCommit = (localPath) => {
   }
 };
 
+const localGitStats = (localPath) => {
+  if (!localPath) return null;
+  const repoPath = path.join(root, localPath);
+  if (!fs.existsSync(path.join(repoPath, '.git'))) return null;
+  const git = (...args) => {
+    try {
+      return execFileSync('git', ['-C', repoPath, ...args], {
+        encoding: 'utf8',
+        stdio: ['ignore', 'pipe', 'ignore']
+      }).trim() || null;
+    } catch {
+      return null;
+    }
+  };
+  return {
+    path: localPath,
+    first_commit_at: git('log', '--reverse', '--format=%aI', '--max-count=1'),
+    last_commit_at: git('log', '-1', '--format=%aI'),
+    commit_count: Number(git('rev-list', '--count', 'HEAD') || 0),
+    branch: git('branch', '--show-current'),
+    head: git('rev-parse', '--short', 'HEAD')
+  };
+};
+
 const fetchRepoCreatedAt = async (repo, cache) => {
   const normalized = normalizeRepo(repo);
   if (cache[normalized]) return cache[normalized];
@@ -113,6 +137,13 @@ const topRows = (rows, limit = 20) =>
   [...rows]
     .sort((a, b) => Number(b.stars || 0) - Number(a.stars || 0))
     .slice(0, limit);
+
+const analysisRelativePath = (href) => {
+  if (!href || /^https?:\/\//.test(href)) return href;
+  return `../${href}`;
+};
+
+const formatLink = (label, href) => href ? `[${label}](${analysisRelativePath(href)})` : '-';
 
 const isCoreEvolutionClassified = (row) => row.base_theme === 'evolution';
 
@@ -184,6 +215,39 @@ const writeMarkdown = (analysis) => {
     lines.push(`| ${monthOf(row.created_at)} | [${row.repo}](${row.url}) | ${row.category} | ${row.pattern} | ${row.created_at_source} |`);
   }
   lines.push('');
+  lines.push('## Git Evidence Join');
+  lines.push('');
+  lines.push('This table joins each public model-card project back to raw capture, classification, GitHub API/cache metadata, local mirror evidence when present, and public report output. `github_api_fetch_error` and `github_api_403` are preserved as evidence-quality signals rather than silently replaced.');
+  lines.push('');
+  lines.push('| Joined evidence channel | Count | Meaning |');
+  lines.push('|---|---:|---|');
+  lines.push(`| GitHub API/cache metadata | ${analysis.counts.analyzed_with_github_api_metadata} | Projects with verified \`github_api\` metadata in \`analysis/github-created-at-cache.json\`. |`);
+  lines.push(`| Local git mirror evidence | ${analysis.counts.analyzed_with_local_git_mirror} | Projects whose \`localPath\` points to a local git clone and can report first/last commit, count, branch, and HEAD. |`);
+  lines.push(`| Raw timestamp capture | ${analysis.counts.analyzed_in_raw_timestamp_index} | Public projects that also appear in \`output/raw-github-timestamp-index.json\`. |`);
+  lines.push(`| Classification row | ${analysis.counts.analyzed_in_classification} | Public projects that also appear in \`research/repo-classification.json\`. |`);
+  lines.push(`| Public model-card report | ${analysis.counts.analyzed_with_public_report} | Public projects with a generated report under \`site/public/reports/projects/\`. |`);
+  lines.push('');
+  lines.push('| Repo | Raw | Classification | Report | Git source | Created | Pushed | Stars/Forks | Local git mirror |');
+  lines.push('|---|---|---|---|---|---|---|---:|---|');
+  for (const row of analysis.analyzed_git_evidence) {
+    const localGit = row.local_git
+      ? `${row.local_git.commit_count} commits @ ${row.local_git.head || 'unknown'} (${monthOf(row.local_git.first_commit_at)} -> ${monthOf(row.local_git.last_commit_at)})`
+      : '-';
+    const stars = row.github_api_stars ?? row.site_stars ?? '-';
+    const forks = row.github_api_forks ?? row.site_forks ?? '-';
+    lines.push([
+      `[${row.repo}](${row.url})`,
+      formatLink('raw', row.raw_file),
+      row.in_classification ? row.classified_theme : 'missing',
+      formatLink('report', row.report),
+      row.github_source || row.created_at_source || 'unknown',
+      monthOf(row.created_at),
+      monthOf(row.github_pushed_at || row.lastPushed),
+      `${stars}/${forks}`,
+      localGit
+    ].map((cell) => String(cell ?? '-').replace(/\|/g, '/')).join(' | ').replace(/^/, '| ').replace(/$/, ' |'));
+  }
+  lines.push('');
   lines.push('## Top Strict Evolution-Theme Raw Repositories');
   lines.push('');
   lines.push('| Repo | Stars | Category | Time slice | Description |');
@@ -197,6 +261,7 @@ const writeMarkdown = (analysis) => {
   lines.push(`- The paper should describe a funnel, not a flat list: raw captures are the discovery layer, classified rows are the analysis layer, and the ${analysis.counts.analyzed_projects} model-card projects are the teaching/review layer.`);
   lines.push('- The strict evolution subset should drive the conceptual argument; the broader subset explains adjacent attention from memory, evaluation, coding agents, prompt optimization, and framework infrastructure.');
   lines.push('- The timeline must distinguish repository creation time from latest activity time. Raw `time_slice` is an activity/content timestamp; analyzed project `created_at` comes from GitHub API where available.');
+  lines.push('- The Git evidence join connects each public project back to raw capture, classification row, public report, GitHub API/cache source, and local mirror status. Missing API data should be treated as an evidence-quality caveat, not as absence of repository activity.');
   lines.push('- Unknown timestamps remain a bias source and should be reported rather than hidden.');
   fs.writeFileSync(mdOut, `${lines.join('\n')}\n`);
 };
@@ -259,6 +324,7 @@ const writeTex = (analysis) => {
   lines.push('\\end{table}');
   lines.push('');
   lines.push(`The time analysis deliberately separates repository creation from activity timestamps. The raw corpus time-slice field is an activity/content timestamp extracted from GitHub captures, so it measures when the captured page exposed recent activity. The analyzed-project timeline uses GitHub API \\texttt{created\\_at} where available. When GitHub API creation time is unavailable, the table marks a weaker \\texttt{local\\_git\\_first\\_commit} fallback; this is a first-observed mirror timestamp, not a release-date claim. In the current run, ${analysis.counts.analyzed_with_created_at_or_fallback} of ${analysis.counts.analyzed_projects} analyzed projects have either verified creation time or a local fallback.`);
+  lines.push(` Git metadata is also joined at the project level: ${analysis.counts.analyzed_with_github_api_metadata} analyzed projects have GitHub API/cache metadata, ${analysis.counts.analyzed_with_local_git_mirror} have local git mirror evidence, and ${analysis.counts.analyzed_with_public_report} have a public report path.`);
   lines.push('');
   lines.push('\\begin{table*}[t]');
   lines.push('\\centering');
@@ -309,6 +375,9 @@ const main = async () => {
     const classifiedRow = classifiedByRepo.get(normalized);
     const rawRow = rawByRepo.get(normalized);
     const fallbackFirstCommit = apiMeta.created_at ? null : localGitFirstCommit(project.localPath);
+    const localGit = localGitStats(project.localPath);
+    const reportPath = project.report ?? null;
+    const publicReportPath = reportPath ? path.join('site/public/reports', reportPath) : null;
     enrichedProjects.push({
       name: project.name,
       repo: project.repo,
@@ -317,14 +386,31 @@ const main = async () => {
       category: project.category,
       pattern: project.pattern,
       tags: project.tags,
-      stars: project.stars,
+      site_stars: project.stars,
+      site_forks: project.forks,
+      license: project.license,
       lastPushed: project.lastPushed,
       localPath: project.localPath,
+      local_git: localGit,
+      report: reportPath,
+      public_report: publicReportPath,
+      public_report_exists: publicReportPath ? fs.existsSync(path.join(root, publicReportPath)) : false,
       created_at: apiMeta.created_at ?? fallbackFirstCommit,
       created_at_source: apiMeta.created_at ? apiMeta.source : fallbackFirstCommit ? 'local_git_first_commit' : apiMeta.source,
+      github_source: apiMeta.source,
       github_api_stars: apiMeta.stars,
+      github_api_forks: apiMeta.forks,
+      github_pushed_at: apiMeta.pushed_at,
+      github_error: apiMeta.error,
       in_raw_timestamp_index: Boolean(rawRow),
+      raw_file: rawRow?.file ?? null,
+      raw_collected_at: rawRow?.collected_at ?? null,
+      raw_content_timestamp: rawRow?.content_timestamp ?? null,
+      raw_timestamp_source: rawRow?.timestamp_source ?? null,
       in_classification: Boolean(classifiedRow),
+      classification_category: classifiedRow?.final_category ?? null,
+      classification_function_tag: classifiedRow?.function_tag ?? null,
+      classification_evidence: classifiedRow?.evidence ?? null,
       raw_time_slice: rawRow?.time_slice ?? classifiedRow?.time_slice ?? 'unknown',
       classified_theme: classifiedRow?.base_theme ?? 'not-classified',
       evolution_focused: isProjectEvolutionFocused(project)
@@ -353,6 +439,9 @@ const main = async () => {
       analyzed_in_classification: enrichedProjects.filter((row) => row.in_classification).length,
       analyzed_evolution_focused: enrichedProjects.filter((row) => row.evolution_focused).length,
       analyzed_with_created_at_or_fallback: enrichedProjects.filter((row) => row.created_at).length,
+      analyzed_with_github_api_metadata: enrichedProjects.filter((row) => row.github_source === 'github_api').length,
+      analyzed_with_local_git_mirror: enrichedProjects.filter((row) => row.local_git).length,
+      analyzed_with_public_report: enrichedProjects.filter((row) => row.public_report_exists).length,
       raw_core_evolution: rawCoreEvolution.length,
       raw_broad_evolution: rawBroadEvolution.length,
       raw_unknown_time_slice: rawTimestampIndex.unknown_content_timestamp
@@ -369,6 +458,9 @@ const main = async () => {
     raw_core_evolution_repositories: rawCoreEvolution,
     raw_broad_evolution_repositories: rawBroadEvolution,
     analyzed_projects: enrichedProjects,
+    analyzed_git_evidence: enrichedProjects
+      .slice()
+      .sort((a, b) => Number(b.github_api_stars ?? b.site_stars ?? 0) - Number(a.github_api_stars ?? a.site_stars ?? 0) || a.repo.localeCompare(b.repo)),
     analyzed_timeline: analyzedTimeline
   };
 

@@ -30,7 +30,7 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
         </div>
       </div>
       <figure class="hero-visual" aria-label="Self Evolve 数据流视觉地图">
-        <img src="/visuals/self-evolve-system-map.png" alt="Self Evolve AI raw evidence to public research output system map" loading="eager" />
+        <img src="/visuals/self-evolve-og.png" alt="Self Evolve AI raw evidence to public research output system map" loading="eager" />
       </figure>
     </div>
   </section>
@@ -61,8 +61,12 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
       </div>
       <div class="visual-grid">
         <figure class="visual-panel wide">
+          <img src="/visuals/raw-to-public-evidence-art.png" alt="Raw to public evidence flow artwork" loading="lazy" />
+          <figcaption>Imagegen 生成的 raw、processed、work、results、public site 证据流视觉入口。</figcaption>
+        </figure>
+        <figure class="visual-panel wide">
           <img src="/visuals/raw-to-public-data-flow.svg" alt="Raw to public data flow diagram" loading="lazy" />
-          <figcaption>Raw、processed、work、results 四层治理流。</figcaption>
+          <figcaption>脚本生成的 Raw、processed、work、results 四层治理流。</figcaption>
         </figure>
         <figure class="visual-panel">
           <img src="/visuals/github-corpus-funnel.svg" alt="GitHub corpus funnel chart" loading="lazy" />

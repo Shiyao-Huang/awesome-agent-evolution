@@ -39,6 +39,10 @@ raw-papers-*.json
 raw-social-*.json
 research/.anysearch-*-cache.json
 
+# One-off hourly automation scripts; keep durable Markdown notes instead.
+work/research/*hourly-public-metadata-update-*.mjs
+work/research/finalize-hourly-public-metadata-update-*.mjs
+
 # Local third-party repository mirrors.
 repos/
 # One-off cloned repositories placed at repo root.

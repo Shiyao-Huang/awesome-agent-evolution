@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-24T00:00:00+08:00",
-  "total": 416,
-  "updated_files": 416,
+  "total": 463,
+  "updated_files": 463,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -104,6 +104,15 @@
       "timestamp_source": "web_github_page_open_2026-05-24"
     },
     {
+      "repo": "agent-ecosystem/skill-validator",
+      "url": "https://github.com/agent-ecosystem/skill-validator",
+      "file": "raw-github/agent-ecosystem_skill-validator.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T23:15:54Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_or_search_result"
+    },
+    {
       "repo": "agent-on-the-fly/memento",
       "url": "https://github.com/agent-on-the-fly/memento",
       "file": "raw-github/agent-on-the-fly_memento.md",
@@ -111,6 +120,24 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "agent-sh/agentsys",
+      "url": "https://github.com/agent-sh/agentsys",
+      "file": "raw-github/agent-sh_agentsys.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T21:11:06Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "agent-skills-hub/agent-skills-hub",
+      "url": "https://github.com/agent-skills-hub/agent-skills-hub",
+      "file": "raw-github/agent-skills-hub_agent-skills-hub.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T21:11:06Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
     },
     {
       "repo": "agentic-in/elephant-agent",
@@ -230,6 +257,15 @@
       "timestamp_source": "web_github_page_open_2026-05-24"
     },
     {
+      "repo": "aiming-lab/SkillRL",
+      "url": "https://github.com/aiming-lab/SkillRL",
+      "file": "raw-github/aiming-lab_skillrl.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T22:13:29Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "aisa-group/skill-inject",
       "url": "https://github.com/aisa-group/skill-inject",
       "file": "raw-github/aisa-group_skill-inject.md",
@@ -248,6 +284,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "akillness/oh-my-skills",
+      "url": "https://github.com/akillness/oh-my-skills",
+      "file": "raw-github/akillness_oh-my-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T01:19:32Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_2026_05_25"
+    },
+    {
       "repo": "alberto-codes/gepa-adk",
       "url": "https://github.com/alberto-codes/gepa-adk",
       "file": "raw-github/alberto-codes_gepa-adk.md",
@@ -264,6 +309,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "alirezarezvani/claude-skills",
+      "url": "https://github.com/alirezarezvani/claude-skills",
+      "file": "raw-github/alirezarezvani_claude-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T23:15:54Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_or_search_result"
     },
     {
       "repo": "allenai/swe-agent",
@@ -509,6 +563,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "callstackincubator/agent-skills",
+      "url": "https://github.com/callstackincubator/agent-skills",
+      "file": "raw-github/callstackincubator_agent-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T18:08:21Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "camel-ai/owl",
       "url": "https://github.com/camel-ai/owl",
       "file": "raw-github/camel-ai_owl.md",
@@ -680,6 +743,24 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "CodeAlive-AI/ai-driven-development",
+      "url": "https://github.com/CodeAlive-AI/ai-driven-development",
+      "file": "raw-github/codealive-ai_ai-driven-development.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T18:08:21Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "codejunkie99/agentic-stack",
+      "url": "https://github.com/codejunkie99/agentic-stack",
+      "file": "raw-github/codejunkie99_agentic-stack.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T01:19:32Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_2026_05_25"
+    },
+    {
       "repo": "codexstar69/bug-hunter",
       "url": "https://github.com/codexstar69/bug-hunter",
       "file": "raw-github/codexstar69_bug-hunter.md",
@@ -725,6 +806,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "darkrishabh/agent-skills-eval",
+      "url": "https://github.com/darkrishabh/agent-skills-eval",
+      "file": "raw-github/darkrishabh_agent-skills-eval.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T23:15:54Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_or_search_result"
+    },
+    {
       "repo": "davidzwz/awesome-rag-reasoning",
       "url": "https://github.com/davidzwz/awesome-rag-reasoning",
       "file": "raw-github/davidzwz_awesome-rag-reasoning.md",
@@ -761,6 +851,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "diegosouzapw/awesome-omni-skills",
+      "url": "https://github.com/diegosouzapw/awesome-omni-skills",
+      "file": "raw-github/diegosouzapw_awesome-omni-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T20:12:04Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "dmgrok/agent_skills_directory",
       "url": "https://github.com/dmgrok/agent_skills_directory",
       "file": "raw-github/dmgrok_agent_skills_directory.md",
@@ -777,6 +876,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "doobidoo/mcp-memory-service",
+      "url": "https://github.com/doobidoo/mcp-memory-service",
+      "file": "raw-github/doobidoo_mcp-memory-service.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T19:09:37Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
     },
     {
       "repo": "dsifry/metaswarm",
@@ -813,6 +921,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "elastic/agent-skills",
+      "url": "https://github.com/elastic/agent-skills",
+      "file": "raw-github/elastic_agent-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T00:18:20Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_or_search_result"
     },
     {
       "repo": "eliasecchig/gemini-cli-git",
@@ -867,6 +984,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "evalstate/fast-agent",
+      "url": "https://github.com/evalstate/fast-agent",
+      "file": "raw-github/evalstate_fast-agent.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T20:12:04Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
     },
     {
       "repo": "evermind-ai/everos?tab=readme-ov-file",
@@ -1013,6 +1139,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "FreedomIntelligence/OpenClaw-Medical-Skills",
+      "url": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+      "file": "raw-github/freedomintelligence_openclaw-medical-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T21:11:06Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "fusionbrainlab/gigaevo-core",
       "url": "https://github.com/fusionbrainlab/gigaevo-core",
       "file": "raw-github/fusionbrainlab_gigaevo-core.md",
@@ -1103,6 +1238,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "Gitmaxd/deepagents-cli-codex-skill",
+      "url": "https://github.com/Gitmaxd/deepagents-cli-codex-skill",
+      "file": "raw-github/gitmaxd_deepagents-cli-codex-skill.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T19:09:37Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "graph-rag/graphrag",
       "url": "https://github.com/graph-rag/graphrag",
       "file": "raw-github/graph-rag_graphrag.md",
@@ -1119,6 +1263,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-04",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "guixiang123124/openclaw-harness",
+      "url": "https://github.com/guixiang123124/openclaw-harness",
+      "file": "raw-github/guixiang123124_openclaw-harness.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T01:19:32Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_2026_05_25"
     },
     {
       "repo": "gumbel-ai/agent-debate",
@@ -1175,6 +1328,33 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "harness/harness-skills",
+      "url": "https://github.com/harness/harness-skills",
+      "file": "raw-github/harness_harness-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T22:13:29Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "hashgraph-online/registry-broker-skills",
+      "url": "https://github.com/hashgraph-online/registry-broker-skills",
+      "file": "raw-github/hashgraph-online_registry-broker-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T00:18:20Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_or_search_result"
+    },
+    {
+      "repo": "hebbs-ai/hebbs-memory-engine",
+      "url": "https://github.com/hebbs-ai/hebbs-memory-engine",
+      "file": "raw-github/hebbs-ai_hebbs-memory-engine.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T22:13:29Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "hkuds/ai-researcher",
       "url": "https://github.com/hkuds/ai-researcher",
       "file": "raw-github/hkuds_ai-researcher.md",
@@ -1182,6 +1362,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "HKUDS/OpenHarness",
+      "url": "https://github.com/HKUDS/OpenHarness",
+      "file": "raw-github/hkuds_openharness.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T22:13:29Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
     },
     {
       "repo": "hkuds/openspace",
@@ -1245,6 +1434,15 @@
       "collected_at": "2026-05-24T16:06:00Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "huytieu/COG-second-brain",
+      "url": "https://github.com/huytieu/COG-second-brain",
+      "file": "raw-github/huytieu_cog-second-brain.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T00:18:20Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_or_search_result"
     },
     {
       "repo": "hwfengcs/dm-code-agent",
@@ -1364,6 +1562,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "jakenuts/agent-skills",
+      "url": "https://github.com/jakenuts/agent-skills",
+      "file": "raw-github/jakenuts_agent-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T18:08:21Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "jarvis-xs/se-agent",
       "url": "https://github.com/jarvis-xs/se-agent",
       "file": "raw-github/jarvis-xs_se-agent.md",
@@ -1391,6 +1598,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "jdrhyne/agent-skills",
+      "url": "https://github.com/jdrhyne/agent-skills",
+      "file": "raw-github/jdrhyne_agent-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T20:12:04Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "jennyzzt/awesome-open-ended",
       "url": "https://github.com/jennyzzt/awesome-open-ended",
       "file": "raw-github/jennyzzt_awesome-open-ended.md",
@@ -1409,11 +1625,29 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "JimLiu/baoyu-skills",
+      "url": "https://github.com/JimLiu/baoyu-skills",
+      "file": "raw-github/jimliu_baoyu-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T23:15:54Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_or_search_result"
+    },
+    {
       "repo": "JordanMcCann/agentmemory",
       "url": "https://github.com/JordanMcCann/agentmemory",
       "file": "raw-github/jordanmccann_agentmemory.md",
       "content_timestamp": "2026-05-24",
       "collected_at": "2026-05-24T14:08:00Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "jscraik/Agent-Skills",
+      "url": "https://github.com/jscraik/Agent-Skills",
+      "file": "raw-github/jscraik_agent-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T19:09:37Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
     },
@@ -1470,6 +1704,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "kitfunso/hippo-memory",
+      "url": "https://github.com/kitfunso/hippo-memory",
+      "file": "raw-github/kitfunso_hippo-memory.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T00:18:20Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_or_search_result"
     },
     {
       "repo": "knightnemo/awesome-world-models",
@@ -1787,6 +2030,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "managedcode/dotnet-skills",
+      "url": "https://github.com/managedcode/dotnet-skills",
+      "file": "raw-github/managedcode_dotnet-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T01:19:32Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_2026_05_25"
+    },
+    {
       "repo": "matebenyovszky/healing-agent",
       "url": "https://github.com/matebenyovszky/healing-agent",
       "file": "raw-github/matebenyovszky_healing-agent.md",
@@ -1877,6 +2129,15 @@
       "timestamp_source": "web_github_page_open_2026-05-24"
     },
     {
+      "repo": "Memento-Teams/Memento-Skills",
+      "url": "https://github.com/Memento-Teams/Memento-Skills",
+      "file": "raw-github/memento-teams_memento-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T21:11:06Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "memodb-io/acontext",
       "url": "https://github.com/memodb-io/acontext",
       "file": "raw-github/memodb-io_acontext.md",
@@ -1956,6 +2217,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "microsoft/skills",
+      "url": "https://github.com/microsoft/skills",
+      "file": "raw-github/microsoft_skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T19:09:37Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
     },
     {
       "repo": "microsoft/STATE-Bench",
@@ -2064,6 +2334,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "neo4j-labs/agent-memory",
+      "url": "https://github.com/neo4j-labs/agent-memory",
+      "file": "raw-github/neo4j-labs_agent-memory.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T19:09:37Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
     },
     {
       "repo": "neosigmaai/auto-harness",
@@ -2210,6 +2489,15 @@
       "timestamp_source": "web_github_page_open_2026-05-24"
     },
     {
+      "repo": "openai/skills",
+      "url": "https://github.com/openai/skills",
+      "file": "raw-github/openai_skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T18:08:21Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "openautocoder/live-swe-agent",
       "url": "https://github.com/openautocoder/live-swe-agent",
       "file": "raw-github/openautocoder_live-swe-agent.md",
@@ -2307,6 +2595,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "opensite-ai/opensite-skills",
+      "url": "https://github.com/opensite-ai/opensite-skills",
+      "file": "raw-github/opensite-ai_opensite-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T20:12:04Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
     },
     {
       "repo": "opentracy/opentracy",
@@ -2480,6 +2777,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "QuantaAlpha/QuantaAlpha",
+      "url": "https://github.com/QuantaAlpha/QuantaAlpha",
+      "file": "raw-github/quantaalpha_quantaalpha.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T23:15:54Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_or_search_result"
+    },
+    {
       "repo": "quantstellarlab/ai-scientist-v2",
       "url": "https://github.com/quantstellarlab/ai-scientist-v2",
       "file": "raw-github/quantstellarlab_ai-scientist-v2.md",
@@ -2534,6 +2840,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "regenrek/codex-1up",
+      "url": "https://github.com/regenrek/codex-1up",
+      "file": "raw-github/regenrek_codex-1up.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T01:19:32Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_2026_05_25"
+    },
+    {
       "repo": "rendro/sediment",
       "url": "https://github.com/rendro/sediment",
       "file": "raw-github/rendro_sediment.md",
@@ -2550,6 +2865,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "revfactory/harness",
+      "url": "https://github.com/revfactory/harness",
+      "file": "raw-github/revfactory_harness.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T01:19:32Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_2026_05_25"
     },
     {
       "repo": "richchen-maker/openclaw-multi-agent-team",
@@ -2631,6 +2955,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "rtk-ai/icm",
+      "url": "https://github.com/rtk-ai/icm",
+      "file": "raw-github/rtk-ai_icm.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T18:08:21Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
     },
     {
       "repo": "rucbm/laser",
@@ -2723,6 +3056,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "sehoon787/my-codex",
+      "url": "https://github.com/sehoon787/my-codex",
+      "file": "raw-github/sehoon787_my-codex.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T22:13:29Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "self-play-language-models/spin-peft",
       "url": "https://github.com/self-play-language-models/spin-peft",
       "file": "raw-github/self-play-language-models_spin-peft.md",
@@ -2730,6 +3072,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "sentient-agi/EvoSkill",
+      "url": "https://github.com/sentient-agi/EvoSkill",
+      "file": "raw-github/sentient-agi_evoskill.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T18:08:21Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
     },
     {
       "repo": "sentrux/sentrux",
@@ -2811,6 +3162,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "shinpr/mcp-local-rag",
+      "url": "https://github.com/shinpr/mcp-local-rag",
+      "file": "raw-github/shinpr_mcp-local-rag.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T20:12:04Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
     },
     {
       "repo": "shintaro-sprech/agent-orchestrator-template",
@@ -2993,6 +3353,15 @@
       "timestamp_source": "web_github_page_open_2026-05-24"
     },
     {
+      "repo": "sundial-org/awesome-openclaw-skills",
+      "url": "https://github.com/sundial-org/awesome-openclaw-skills",
+      "file": "raw-github/sundial-org_awesome-openclaw-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T00:18:20Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_or_search_result"
+    },
+    {
       "repo": "sunitj/colloquip",
       "url": "https://github.com/sunitj/colloquip",
       "file": "raw-github/sunitj_colloquip.md",
@@ -3056,6 +3425,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "tech-leads-club/agent-skills",
+      "url": "https://github.com/tech-leads-club/agent-skills",
+      "file": "raw-github/tech-leads-club_agent-skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T20:12:04Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "teleai-uagi/awesome-agent-memory",
       "url": "https://github.com/teleai-uagi/awesome-agent-memory",
       "file": "raw-github/teleai-uagi_awesome-agent-memory.md",
@@ -3080,6 +3458,15 @@
       "content_timestamp": "2026-05-24",
       "collected_at": "2026-05-24T13:05:00Z",
       "time_slice": "2026-02",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "thClaws/thClaws",
+      "url": "https://github.com/thClaws/thClaws",
+      "file": "raw-github/thclaws_thclaws.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T21:11:06Z",
+      "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
     },
     {
@@ -3299,6 +3686,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "vercel-labs/skills",
+      "url": "https://github.com/vercel-labs/skills",
+      "file": "raw-github/vercel-labs_skills.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T19:09:37Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
+    },
+    {
       "repo": "vicsanity623/pyob",
       "url": "https://github.com/vicsanity623/pyob",
       "file": "raw-github/vicsanity623_pyob.md",
@@ -3360,6 +3756,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2025-10",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "wanxingai/LightAgent",
+      "url": "https://github.com/wanxingai/LightAgent",
+      "file": "raw-github/wanxingai_lightagent.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T21:11:06Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page"
     },
     {
       "repo": "werner-duvaud/muzero-general",
@@ -3504,6 +3909,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "yf-he/EvoTest",
+      "url": "https://github.com/yf-he/EvoTest",
+      "file": "raw-github/yf-he_evotest.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T01:19:32Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_2026_05_25"
     },
     {
       "repo": "yinbo0927/fate",
@@ -3738,6 +4152,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "zylos-ai/zylos-core",
+      "url": "https://github.com/zylos-ai/zylos-core",
+      "file": "raw-github/zylos-ai_zylos-core.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-24T23:15:54Z",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_or_search_result"
     },
     {
       "repo": "zzz47zzz/awesome-lifelong-learning-methods-for-llm",

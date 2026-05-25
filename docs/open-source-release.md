@@ -31,7 +31,6 @@ Three sentences:
 - [x] Define publication boundary for raw data.
 - [x] Ship a static site under `site/`.
 - [x] Add a first knowledge graph route.
-- [ ] Initialize or connect the intended public Git repository.
-- [ ] Replace placeholder social/community URLs.
+- [x] Initialize or connect the intended public Git repository.
+- [x] Replace placeholder social/community URLs.
 - [ ] Audit raw data before including it in a public release artifact.
-

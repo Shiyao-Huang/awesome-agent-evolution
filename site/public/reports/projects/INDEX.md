@@ -1,25 +1,193 @@
 # Self-Evolution 开源项目索引
 
-生成时间：2026-05-22T07:10:18.265525+00:00
+生成时间：2026-05-25T09:19:32+08:00
 
-| 项目 | 仓库 | Stars | 最近活跃 | 语言 | 模式 | 报告 |
-|---|---|---:|---|---|---|---|
-| openevolve | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 6358 | 2026-03-18 | Python | 进化/搜索循环 → 评估器/打分器 | [projects/algorithmicsuperintelligence__openevolve.md](projects/algorithmicsuperintelligence__openevolve.md) |
-| agents | [aiwaves-cn/agents](https://github.com/aiwaves-cn/agents) | 5928 | 2024-09-26 | Python | 进化/搜索循环 → 评估器/打分器 → 智能体编排 | [projects/aiwaves_cn__agents.md](projects/aiwaves_cn__agents.md) |
-| reflexion | [noahshinn/reflexion](https://github.com/noahshinn/reflexion) | 3158 | 2025-01-14 | Python | 进化/搜索循环 → 反思记忆 → 反馈-精炼 → 评估器/打分器 → 训练/数据循环 | [projects/noahshinn__reflexion.md](projects/noahshinn__reflexion.md) |
-| AgentEvolver | [modelscope/AgentEvolver](https://github.com/modelscope/AgentEvolver) | 1441 | 2026-04-01 | Python | 进化/搜索循环 → 评估器/打分器 → 智能体编排 → 训练/数据循环 | [projects/modelscope__agentevolver.md](projects/modelscope__agentevolver.md) |
-| self-refine | [madaan/self-refine](https://github.com/madaan/self-refine) | 805 | 2024-10-04 | Python | 反馈-精炼 | [projects/madaan__self_refine.md](projects/madaan__self_refine.md) |
-| SE-Agent | [JARVIS-Xs/SE-Agent](https://github.com/JARVIS-Xs/SE-Agent) | 274 | 2025-09-23 | Python | 进化/搜索循环 → 评估器/打分器 → 智能体编排 | [projects/jarvis_xs__se_agent.md](projects/jarvis_xs__se_agent.md) |
-| science-codeevolve | [inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve) | 97 | 2026-04-08 | Python | 进化/搜索循环 → 评估器/打分器 | [projects/inter_co__science_codeevolve.md](projects/inter_co__science_codeevolve.md) |
-| SCOPE | [JarvisPei/SCOPE](https://github.com/JarvisPei/SCOPE) | 77 | 2026-03-26 | Python | 进化/搜索循环 | [projects/jarvispei__scope.md](projects/jarvispei__scope.md) |
-| LLM-Self-Judge | [OPPO-Mente-Lab/LLM-Self-Judge](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge) | 43 | 2026-03-24 | Python | 进化/搜索循环 → 评估器/打分器 → 智能体编排 → 训练/数据循环 | [projects/oppo_mente_lab__llm_self_judge.md](projects/oppo_mente_lab__llm_self_judge.md) |
-| DARWIN | [ZJU-LLM-Safety/DARWIN](https://github.com/ZJU-LLM-Safety/DARWIN) | 41 | 2026-05-07 | Python | 进化/搜索循环 → 反思记忆 | [projects/zju_llm_safety__darwin.md](projects/zju_llm_safety__darwin.md) |
+> 最新公共 metadata 循环的完整计数以 [analysis/github-project-data-analysis.md](../analysis/github-project-data-analysis.md) 和 [site/src/data/projects.ts](../site/src/data/projects.ts) 为准；本索引列出当前 public model-card/site coverage 的项目报告入口。
 
-## Landing Page 分组建议
-- **进化式代码 / AlphaEvolve 类**：OpenEvolve、CodeEvolve、SE-Agent。
-- **Agent 自进化系统**：AgentEvolver、aiwaves agents、SCOPE。
-- **反思 / 精炼经典范式**：Reflexion、Self-Refine。
-- **安全、评判与数据/模型自进化**：DARWIN、LLM-Self-Judge。
+| 项目 | 仓库 | 角色 | 报告 |
+|---|---|---|---|
+| openevolve | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 进化式代码优化 | [projects/algorithmicsuperintelligence__openevolve.md](algorithmicsuperintelligence__openevolve.md) |
+| agents | [aiwaves-cn/agents](https://github.com/aiwaves-cn/agents) | 数据驱动 Agent 进化 | [projects/aiwaves_cn__agents.md](aiwaves_cn__agents.md) |
+| reflexion | [noahshinn/reflexion](https://github.com/noahshinn/reflexion) | 反思记忆 | [projects/noahshinn__reflexion.md](noahshinn__reflexion.md) |
+| AgentEvolver | [modelscope/AgentEvolver](https://github.com/modelscope/AgentEvolver) | Agent 进化框架 | [projects/modelscope__agentevolver.md](modelscope__agentevolver.md) |
+| self-refine | [madaan/self-refine](https://github.com/madaan/self-refine) | 反馈精炼 | [projects/madaan__self_refine.md](madaan__self_refine.md) |
+| SE-Agent | [JARVIS-Xs/SE-Agent](https://github.com/JARVIS-Xs/SE-Agent) | 代码智能体自进化 | [projects/jarvis_xs__se_agent.md](jarvis_xs__se_agent.md) |
+| science-codeevolve | [inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve) | 科学代码进化 | [projects/inter_co__science_codeevolve.md](inter_co__science_codeevolve.md) |
+| SCOPE | [JarvisPei/SCOPE](https://github.com/JarvisPei/SCOPE) | 上下文/Prompt 进化 | [projects/jarvispei__scope.md](jarvispei__scope.md) |
+| LLM-Self-Judge | [OPPO-Mente-Lab/LLM-Self-Judge](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge) | 自评判训练 | [projects/oppo_mente_lab__llm_self_judge.md](oppo_mente_lab__llm_self_judge.md) |
+| DARWIN | [ZJU-LLM-Safety/DARWIN](https://github.com/ZJU-LLM-Safety/DARWIN) | 安全策略进化 | [projects/zju_llm_safety__darwin.md](zju_llm_safety__darwin.md) |
+| OPRO | [google-deepmind/opro](https://github.com/google-deepmind/opro) | LLM 作为优化器 | [projects/01-opro-llm-as-optimizer.md](01-opro-llm-as-optimizer.md) |
+| OpenELM | [carperai/openelm](https://github.com/carperai/openelm) | 进化式 Prompt 优化 | [projects/02-openelm-evolution-large-models.md](02-openelm-evolution-large-models.md) |
+| ADAS | [shengranhu/adas](https://github.com/ShengranHu/ADAS) | Agent 架构自动搜索 | [projects/03-adas-automated-design-agentic-systems.md](03-adas-automated-design-agentic-systems.md) |
+| FunSearch | [google-deepmind/funsearch](https://github.com/google-deepmind/funsearch) | 进化式数学发现 | [projects/04-funsearch-mathematical-discoveries.md](04-funsearch-mathematical-discoveries.md) |
+| AutoML-Agent | [DeepAuto-AI/automl-agent](https://github.com/DeepAuto-AI/automl-agent) | 多 Agent AutoML | [projects/05-automl-agent-multi-agent.md](05-automl-agent-multi-agent.md) |
+| CoML | [microsoft/CoML](https://github.com/microsoft/CoML) | ML 知识库驱动 | [projects/06-coml-mlcopilot.md](06-coml-mlcopilot.md) |
+| MetaGPT | [FoundationAgents/MetaGPT](https://github.com/FoundationAgents/MetaGPT) | 多 Agent 协作框架 | [projects/07-metagpt-multi-agent-framework.md](07-metagpt-multi-agent-framework.md) |
+| AutoGPT | [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | 自主 Agent 平台 | [projects/08-autogpt-autonomous-agent.md](08-autogpt-autonomous-agent.md) |
+| CrewAI | [crewAIInc/crewAI](https://github.com/crewAIInc/crewAI) | 多 Agent 协作框架 | [projects/09-crewai-multi-agent-framework.md](09-crewai-multi-agent-framework.md) |
+| DSPy | [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) | 声明式 Prompt 优化 | [projects/10-dspy-declarative-llm-programming.md](10-dspy-declarative-llm-programming.md) |
+| AutoGen | [microsoft/autogen](https://github.com/microsoft/autogen) | 多 Agent 对话框架 | [projects/11-autogen-multi-agent-conversation.md](11-autogen-multi-agent-conversation.md) |
+| CAMEL-AI | [camel-ai/camel](https://github.com/camel-ai/camel) | 角色扮演 Agent 框架 | [projects/12-camel-ai-communicative-agents.md](12-camel-ai-communicative-agents.md) |
+| LangGraph | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | 图式 Agent 编排 | [projects/13-langgraph-agent-workflows.md](13-langgraph-agent-workflows.md) |
+| SWE-Agent | [princeton-nlp/SWE-agent](https://github.com/princeton-nlp/SWE-agent) | 软件工程 Agent | [projects/14-swe-agent-software-engineering.md](14-swe-agent-software-engineering.md) |
+| OpenHands | [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) | AI 软件开发平台 | [projects/15-openhands-ai-software-dev.md](15-openhands-ai-software-dev.md) |
+| Devika | [stitionai/devika](https://github.com/stitionai/devika) | AI 软件工程师 | [projects/16-devika-ai-software-engineer.md](16-devika-ai-software-engineer.md) |
+| AgentVerse | [OpenBMB/AgentVerse](https://github.com/OpenBMB/AgentVerse) | 多 Agent 仿真平台 | [projects/17-agentverse-multi-agent-platform.md](17-agentverse-multi-agent-platform.md) |
+| ReEvo | [ai4co/reevo](https://github.com/ai4co/reevo) | 反射式进化搜索 | [projects/18-reevo-reflective-evolution.md](18-reevo-reflective-evolution.md) |
+| LLaMEA | [xai-liacs/LLaMEA](https://github.com/XAI-liacs/LLaMEA) | LLM 驱动算法自动发现 | [projects/19-llamea-llm-evolutionary-algorithm.md](19-llamea-llm-evolutionary-algorithm.md) |
+| EvoPrompt | [beeevita/EvoPrompt](https://github.com/beeevita/EvoPrompt) | 进化式 Prompt 优化 | [projects/20-evoprompt-prompt-optimization.md](20-evoprompt-prompt-optimization.md) |
+| EvoAgent | [siyuyuan/evoagent](https://github.com/siyuyuan/evoagent) | 进化式多 Agent 系统 | [projects/21-evoagent-evolutionary-multi-agent.md](21-evoagent-evolutionary-multi-agent.md) |
+| EvoAgentX | [EvoAgentX/EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | 自进化 Agent 生态系统 | [projects/22-evoagentx-agent-evolution-framework.md](22-evoagentx-agent-evolution-framework.md) |
+| EverOS | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | Self-Evolving Agent Memory OS | [projects/79-everos-self-evolving-memory-os.md](79-everos-self-evolving-memory-os.md) |
+| OpenTreeSearch | [Genentech/OpenTreeSearch](https://github.com/Genentech/opentreesearch) | LLM 引导代码进化 | [projects/24-opentreesearch-llm-code-evolution.md](24-opentreesearch-llm-code-evolution.md) |
+| pyribs | [icaros-usc/pyribs](https://github.com/icaros-usc/pyribs) | 质量多样性优化 | [projects/25-pyribs-quality-diversity.md](25-pyribs-quality-diversity.md) |
+| LLM4EC | [wuxingyu-ai/LLM4EC](https://github.com/wuxingyu-ai/LLM4EC) | LLM+EC 交叉综述 | [projects/26-llm4ec-llm-evolutionary-computation.md](26-llm4ec-llm-evolutionary-computation.md) |
+| LLM4Opt | [FeiLiu36/LLM4Opt](https://github.com/FeiLiu36/LLM4Opt) | LLM 驱动算法设计综述 | [projects/27-llm4opt-llm-optimization.md](27-llm4opt-llm-optimization.md) |
+| Nevergrad | [facebookresearch/nevergrad](https://github.com/facebookresearch/nevergrad) | 无梯度优化框架 | [projects/28-nevergrad-derivative-free.md](28-nevergrad-derivative-free.md) |
+| DEAP | [DEAP/deap](https://github.com/DEAP/deap) | 经典进化算法框架 | [projects/29-deap-evolutionary-framework.md](29-deap-evolutionary-framework.md) |
+| pycma | [CMA-ES/pycma](https://github.com/CMA-ES/pycma) | 经典进化策略 | [projects/30-pycma-cma-es.md](30-pycma-cma-es.md) |
+| auto-sklearn | [automl/auto-sklearn](https://github.com/automl/auto-sklearn) | AutoML 框架 | [projects/31-autosklearn-automl.md](31-autosklearn-automl.md) |
+| Self-Evolving-Agents | [CharlesQ9/Self-Evolving-Agents](https://github.com/CharlesQ9/Self-Evolving-Agents) | 自进化 Agent 综述 | [projects/32-self-evolving-agents.md](32-self-evolving-agents.md) |
+| self-improvement-llm | [Zesearch/self-improvement-llm](https://github.com/Zesearch/self-improvement-llm) | LLM 自改进综述 | [projects/33-self-improvement-llm.md](33-self-improvement-llm.md) |
+| LLM-EA-Survey | [xiaofangxd/LLM_EA](https://github.com/xiaofangxd/LLM_EA) | LLM+EA 交叉综述 | [projects/34-llm-ea-survey.md](34-llm-ea-survey.md) |
+| Tutorial-GP-LLM | [alfa-group/tutorial_gp_llm](https://github.com/alfa-group/tutorial_gp_llm) | GP+LLM 教学 | [projects/35-tutorial-gp-llm.md](35-tutorial-gp-llm.md) |
+| LLM-Agent-Optimization | [YoungDubbyDu/LLM-Agent-Optimization](https://github.com/YoungDubbyDu/LLM-Agent-Optimization) | LLM Agent 优化综述 | [projects/36-llm-agent-optimization.md](36-llm-agent-optimization.md) |
+| Awesome-Code-LLM | [CodeFuse-ML/awesome-code-llm](https://github.com/CodeFuse-ML/awesome-code-llm) | 代码 LLM 综述 | [projects/37-awesome-code-llm.md](37-awesome-code-llm.md) |
+| AgentBench | [THUDM/AgentBench](https://github.com/THUDM/AgentBench) | Agent 评测基准 | [projects/38-agentbench.md](38-agentbench.md) |
+| RL4CO | [ai4co/rl4co](https://github.com/ai4co/rl4co) | RL 组合优化基准 | [projects/39-rl4co-reinforcement-learning.md](39-rl4co-reinforcement-learning.md) |
+| Awesome-FM4CO | [ai4co/awesome-fm4co](https://github.com/ai4co/awesome-fm4co) | 基础模型+组合优化综述 | [projects/40-awesome-fm4co.md](40-awesome-fm4co.md) |
+| OpenDevin | [OpenDevin/OpenDevin](https://github.com/OpenDevin/OpenDevin) | AI 软件开发平台 | [projects/41-opendevin-ai-software.md](41-opendevin-ai-software.md) |
+| GP-LLM-Code-Evolution | [pureples/pureples](https://github.com/pureples/pureples) | GP+LLM 代码进化 | [projects/42-gp-llm-code-evolution.md](42-gp-llm-code-evolution.md) |
+| Agentic Harness Engineering | [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | Harness 进化工程 | [projects/43-agentic-harness-engineering.md](43-agentic-harness-engineering.md) |
+| Hermes Agent | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 自改进个人 Agent 运行时 | [projects/44-hermes-agent.md](44-hermes-agent.md) |
+| Hermes Agent Self-Evolution | [NousResearch/hermes-agent-self-evolution](https://github.com/NousResearch/hermes-agent-self-evolution) | 技能与提示进化 | [projects/45-hermes-agent-self-evolution.md](45-hermes-agent-self-evolution.md) |
+| EvoMap Evolver | [EvoMap/evolver](https://github.com/EvoMap/evolver) | 可审计 Agent 演化引擎 | [projects/46-evomap-evolver.md](46-evomap-evolver.md) |
+| GenericAgent | [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | Token 高效自进化 Agent | [projects/47-genericagent.md](47-genericagent.md) |
+| OpenClaw | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 个人 Agent 产品运行时 | [projects/48-openclaw.md](48-openclaw.md) |
+| Superpowers | [obra/superpowers](https://github.com/obra/superpowers) | Agentic 技能方法论 | [projects/49-superpowers.md](49-superpowers.md) |
+| agentmemory | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | Agent 持久记忆层 | [projects/50-agentmemory.md](50-agentmemory.md) |
+| PinchBench Skill | [pinchbench/skill](https://github.com/pinchbench/skill) | 真实 Agent 任务基准 | [projects/51-pinchbench-skill.md](51-pinchbench-skill.md) |
+| OpenHuman | [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | 个人 Agent 产品与记忆系统 | [projects/52-openhuman.md](52-openhuman.md) |
+| Claw Bench | [claw-bench/claw-bench](https://github.com/claw-bench/claw-bench) | 真实 Agent 任务基准 | [projects/53-claw-bench-agent-benchmark.md](53-claw-bench-agent-benchmark.md) |
+| OpenClaw ClawBench | [openclaw/clawbench](https://github.com/openclaw/clawbench) | Agent Harness 评测诊断 | [projects/54-openclaw-clawbench.md](54-openclaw-clawbench.md) |
+| Claw-Eval | [claw-eval/claw-eval](https://github.com/claw-eval/claw-eval) | 可信 Agent 评测 | [projects/55-claw-eval-agent-evaluation.md](55-claw-eval-agent-evaluation.md) |
+| Harness Evolver | [raphaelchristi/harness-evolver](https://github.com/raphaelchristi/harness-evolver) | Harness 自进化工具 | [projects/56-harness-evolver.md](56-harness-evolver.md) |
+| Awesome Harness Engineering | [ai-boost/awesome-harness-engineering](https://github.com/ai-boost/awesome-harness-engineering) | Harness Engineering 资源索引 | [projects/57-awesome-harness-engineering.md](57-awesome-harness-engineering.md) |
+| Mem0 | [mem0ai/mem0](https://github.com/mem0ai/mem0) | Agent 通用记忆层 | [projects/58-mem0-agent-memory.md](58-mem0-agent-memory.md) |
+| TiMem | [TiMEM-AI/timem](https://github.com/TiMEM-AI/timem) | 长程 Agent 时间记忆 | [projects/59-timem-temporal-memory.md](59-timem-temporal-memory.md) |
+| AMA-Bench | [AMA-Bench/AMA-Bench](https://github.com/AMA-Bench/AMA-Bench) | Agent 长程记忆基准 | [projects/60-ama-bench-memory-evaluation.md](60-ama-bench-memory-evaluation.md) |
+| Agent Skills Directory | [dmgrok/agent_skills_directory](https://github.com/dmgrok/agent_skills_directory) | Agent 技能发现索引 | [projects/61-agent-skills-directory.md](61-agent-skills-directory.md) |
+| AceForge | [sudokrang/aceforge](https://github.com/sudokrang/aceforge) | OpenClaw 技能自进化引擎 | [projects/62-aceforge-skill-evolution.md](62-aceforge-skill-evolution.md) |
+| EvoCUA | [meituan/EvoCUA](https://github.com/meituan/EvoCUA) | Computer Use Agent 进化模型 | [projects/63-evocua-computer-use-agent.md](63-evocua-computer-use-agent.md) |
+| Anthropic Skills | [anthropics/skills](https://github.com/anthropics/skills) | 官方 Agent Skills 标准样例库 | [projects/64-anthropic-skills.md](64-anthropic-skills.md) |
+| Awesome Claude Skills | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | Agent Skills 社区资源索引 | [projects/65-awesome-claude-skills.md](65-awesome-claude-skills.md) |
+| Microsoft Agent Skills | [MicrosoftDocs/Agent-Skills](https://github.com/MicrosoftDocs/Agent-Skills) | 企业文档驱动 Agent Skills | [projects/66-microsoft-agent-skills.md](66-microsoft-agent-skills.md) |
+| Scientific Agent Skills | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | 科研 Agent Skills 工作流库 | [projects/67-scientific-agent-skills.md](67-scientific-agent-skills.md) |
+| Aden Hive | [aden-hive/hive](https://github.com/aden-hive/hive) | 生产级 Multi-Agent Harness | [projects/68-aden-hive.md](68-aden-hive.md) |
+| SWE-Skills-Bench | [GeniusHTX/SWE-Skills-Bench](https://github.com/GeniusHTX/SWE-Skills-Bench) | Agent Skills 效果基准 | [projects/69-swe-skills-bench.md](69-swe-skills-bench.md) |
+| LangMem | [langchain-ai/langmem](https://github.com/langchain-ai/langmem) | Agent 长期记忆 SDK | [projects/70-langmem-agent-memory.md](70-langmem-agent-memory.md) |
+| Graphiti | [getzep/graphiti](https://github.com/getzep/graphiti) | Temporal Context Graph Agent Memory | [projects/71-graphiti-temporal-context-graphs.md](71-graphiti-temporal-context-graphs.md) |
+| Memobase | [memodb-io/memobase](https://github.com/memodb-io/memobase) | 用户画像长期记忆后端 | [projects/72-memobase-user-profile-memory.md](72-memobase-user-profile-memory.md) |
+| OSWorld | [xlang-ai/OSWorld](https://github.com/xlang-ai/OSWorld) | Computer-use Agent OS Benchmark | [projects/73-osworld-computer-agent-benchmark.md](73-osworld-computer-agent-benchmark.md) |
+| WindowsAgentArena | [microsoft/WindowsAgentArena](https://github.com/microsoft/WindowsAgentArena) | Windows OS Agent Benchmark | [projects/74-windows-agent-arena.md](74-windows-agent-arena.md) |
+| BrowserGym | [ServiceNow/BrowserGym](https://github.com/ServiceNow/BrowserGym) | Web Agent Benchmark Gym | [projects/75-browsergym-web-agent-benchmark.md](75-browsergym-web-agent-benchmark.md) |
+| agent-memory | [jayzeng/agentmemory](https://github.com/jayzeng/agentmemory) | Coding Agent Memory CLI | [projects/76-agentmemory-coding-agent-memory.md](76-agentmemory-coding-agent-memory.md) |
+| Agent Memory Benchmark | [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | Agent Memory Benchmark | [projects/77-agent-memory-benchmark.md](77-agent-memory-benchmark.md) |
+| memU | [NevaMind-AI/memU](https://github.com/NevaMind-AI/memU) | 24/7 Proactive Agent Memory | [projects/78-memu-proactive-agent-memory.md](78-memu-proactive-agent-memory.md) |
+| OneWave Claude Skills | [OneWave-AI/claude-skills](https://github.com/OneWave-AI/claude-skills) | Production Claude Skills Library | [projects/80-onewave-claude-skills.md](80-onewave-claude-skills.md) |
+| simota Agent Skills | [simota/agent-skills](https://github.com/simota/agent-skills) | Cross-Agent Skills and Nexus Orchestrator | [projects/81-simota-agent-skills-nexus.md](81-simota-agent-skills-nexus.md) |
+| SkVM | [SJTU-IPADS/SkVM](https://github.com/SJTU-IPADS/SkVM) | Skill Virtual Machine | [projects/82-skvm-skill-virtual-machine.md](82-skvm-skill-virtual-machine.md) |
+| OpenCrabs | [adolfousier/opencrabs](https://github.com/adolfousier/opencrabs) | Self-Improving Terminal Agent | [projects/83-opencrabs-self-improving-agent.md](83-opencrabs-self-improving-agent.md) |
+| SKILL-INJECT | [aisa-group/skill-inject](https://github.com/aisa-group/skill-inject) | Agent Skill Security Benchmark | [projects/84-skill-inject-agent-skill-security.md](84-skill-inject-agent-skill-security.md) |
+| Hugging Face Skills | [huggingface/skills](https://github.com/huggingface/skills) | Agent Skills Registry | [projects/85-huggingface-skills.md](85-huggingface-skills.md) |
+| SimpleMem / EvolveMem | [aiming-lab/SimpleMem](https://github.com/aiming-lab/SimpleMem) | Self-Evolving Agent Memory Stack | [projects/86-simplemem-evolvemem-memory-stack.md](86-simplemem-evolvemem-memory-stack.md) |
+| Mem0 Memory Benchmarks | [mem0ai/memory-benchmarks](https://github.com/mem0ai/memory-benchmarks) | Memory Benchmark Suite | [projects/87-mem0-memory-benchmarks.md](87-mem0-memory-benchmarks.md) |
+| MemRL | [MemTensor/MemRL](https://github.com/MemTensor/MemRL) | Runtime Reinforcement Memory | [projects/88-memrl-runtime-memory-rl.md](88-memrl-runtime-memory-rl.md) |
+| CORAL | [Human-Agent-Society/CORAL](https://github.com/Human-Agent-Society/CORAL) | Multi-Agent Evolution Infrastructure | [projects/89-coral-multi-agent-evolution.md](89-coral-multi-agent-evolution.md) |
+| ScienceClaw | [beita6969/ScienceClaw](https://github.com/beita6969/ScienceClaw) | Self-Evolving Research Agent | [projects/90-scienceclaw-research-agent.md](90-scienceclaw-research-agent.md) |
+| memsearch | [zilliztech/memsearch](https://github.com/zilliztech/memsearch) | Agent Memory Search Layer | [projects/91-memsearch-agent-memory.md](91-memsearch-agent-memory.md) |
+| Awesome Agent Skills | [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) | Agent Skills Registry | [projects/92-awesome-agent-skills-index.md](92-awesome-agent-skills-index.md) |
+| swarmclaw | [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | Self-Hosted Agent Runtime | [projects/93-swarmclaw-agent-runtime.md](93-swarmclaw-agent-runtime.md) |
+| MOLT | [OiiOAI/MOLT](https://github.com/OiiOAI/MOLT) | Reflexive Co-Evolution Engine | [projects/94-molt-co-evolution-engine.md](94-molt-co-evolution-engine.md) |
+| OpenClaw Evolution Framework | [TerryFYL/openclaw-evolution-framework](https://github.com/TerryFYL/openclaw-evolution-framework) | Continuous Learning Harness | [projects/95-openclaw-evolution-framework.md](95-openclaw-evolution-framework.md) |
+| ClawBio | [ClawBio/ClawBio](https://github.com/ClawBio/ClawBio) | Bioinformatics Agent Skill Library | [projects/96-clawbio-bioinformatics-skills.md](96-clawbio-bioinformatics-skills.md) |
+| EdgeClaw | [OpenBMB/EdgeClaw](https://github.com/OpenBMB/EdgeClaw) | Edge-Cloud Personal Agent Runtime | [projects/97-edgeclaw-edge-cloud-agent.md](97-edgeclaw-edge-cloud-agent.md) |
+| OpenClaw.NET | [clawdotnet/openclaw.net](https://github.com/clawdotnet/openclaw.net) | .NET Self-Hosted Agent Runtime | [projects/98-openclaw-dotnet-runtime.md](98-openclaw-dotnet-runtime.md) |
+| JordanMcCann agentmemory | [JordanMcCann/agentmemory](https://github.com/JordanMcCann/agentmemory) | Agent Memory Benchmark Claim | [projects/99-jordanmccann-agentmemory-longmemeval.md](99-jordanmccann-agentmemory-longmemeval.md) |
+| ClawdMarket | [trillskillz/clawdmarket](https://github.com/trillskillz/clawdmarket) | Agent-to-Agent Marketplace Evolution Loop | [projects/100-clawdmarket-agent-marketplace.md](100-clawdmarket-agent-marketplace.md) |
+| Agent Teams | [jbrahy/meta-agent-teams](https://github.com/jbrahy/meta-agent-teams) | Self-Improving Agent Team Framework | [projects/101-agent-teams-git-backed-evolution.md](101-agent-teams-git-backed-evolution.md) |
+| Randroids Dojo Skills | [Randroids-Dojo/skills](https://github.com/Randroids-Dojo/skills) | Agent Skill Loop Library | [projects/102-randroids-skills-agent-skill-loop.md](102-randroids-skills-agent-skill-loop.md) |
+| Memori | [MemoriLabs/Memori](https://github.com/memorilabs/memori) | Agent-Native Memory Infrastructure | [projects/103-memori-agent-native-memory.md](103-memori-agent-native-memory.md) |
+| skills-supply | [803/skills-supply](https://github.com/803/skills-supply) | Cross-Agent Skill Supply Chain | [projects/104-skills-supply-cross-agent-skills.md](104-skills-supply-cross-agent-skills.md) |
+| AgentOS | [iii-experimental/agentos](https://github.com/iii-experimental/agentos) | Self-Evolving Agent Operating System | [projects/105-agentos-self-evolving-agent-os.md](105-agentos-self-evolving-agent-os.md) |
+| Qt AI Skills | [TheQtCompanyRnD/agent-skills](https://github.com/TheQtCompanyRnD/agent-skills) | Industrial Agent Skill Pack | [projects/106-qt-ai-skills.md](106-qt-ai-skills.md) |
+| chriscox Agent Skills | [chriscox/agent-skills](https://github.com/chriscox/agent-skills) | Reusable Coding Agent Skills | [projects/107-chriscox-agent-skills.md](107-chriscox-agent-skills.md) |
+| Sediment | [rendro/sediment](https://github.com/rendro/sediment) | Local-First Agent Memory MCP | [projects/108-sediment-local-agent-memory.md](108-sediment-local-agent-memory.md) |
+| HAL Harness | [princeton-pli/hal-harness](https://github.com/princeton-pli/hal-harness) | Holistic Agent Evaluation Harness | [projects/109-hal-harness-agent-leaderboard.md](109-hal-harness-agent-leaderboard.md) |
+| Memoria | [matrixorigin/Memoria](https://github.com/matrixorigin/Memoria) | Versioned Agent Memory Infrastructure | [projects/110-memoria-git-for-agent-memory.md](110-memoria-git-for-agent-memory.md) |
+| MemoryAgentBench | [HUST-AI-HYZ/MemoryAgentBench](https://github.com/HUST-AI-HYZ/MemoryAgentBench) | Incremental Agent Memory Benchmark | [projects/111-memoryagentbench-incremental-memory-eval.md](111-memoryagentbench-incremental-memory-eval.md) |
+| Agent Almanac | [pjt222/agent-almanac](https://github.com/pjt222/agent-almanac) | Executable Skill and Agent Almanac | [projects/112-agent-almanac-skill-agent-team-index.md](112-agent-almanac-skill-agent-team-index.md) |
+| psenger AI Agent Skills | [psenger/ai-agent-skills](https://github.com/psenger/ai-agent-skills) | Production Agent Skills Pack | [projects/113-psenger-ai-agent-skills.md](113-psenger-ai-agent-skills.md) |
+| OpenHands Benchmarks | [OpenHands/benchmarks](https://github.com/OpenHands/benchmarks) | OpenHands Agent Evaluation Harness | [projects/114-openhands-benchmarks.md](114-openhands-benchmarks.md) |
+| A-Evolve | [a-evo-lab/a-evolve](https://github.com/a-evo-lab/a-evolve) | Universal Self-Improving Agent Infrastructure | [projects/115-a-evolve-universal-agent-evolution.md](115-a-evolve-universal-agent-evolution.md) |
+| AutoResearchClaw | [aiming-lab/AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw) | Self-Evolving Research Agent Pipeline | [projects/116-autoresearchclaw-self-evolving-research-agent.md](116-autoresearchclaw-self-evolving-research-agent.md) |
+| MemOS | [memtensor/memos](https://github.com/memtensor/memos) | Self-Evolving Memory OS | [projects/117-memos-self-evolving-memory-os.md](117-memos-self-evolving-memory-os.md) |
+| SkillLearnBench | [cxcscmu/SkillLearnBench](https://github.com/cxcscmu/SkillLearnBench) | Agent Skill Continual-Learning Benchmark | [projects/118-skilllearnbench-agent-skill-generation.md](118-skilllearnbench-agent-skill-generation.md) |
+| AgentSkillOS | [ynulihao/AgentSkillOS](https://github.com/ynulihao/AgentSkillOS) | Agent Skill Retrieval and Orchestration OS | [projects/119-agentskillos-skill-retrieval-orchestration.md](119-agentskillos-skill-retrieval-orchestration.md) |
+| STATE-Bench | [microsoft/STATE-Bench](https://github.com/microsoft/STATE-Bench) | Stateful Agent Memory Benchmark | [projects/120-state-bench-agent-memory-evaluation.md](120-state-bench-agent-memory-evaluation.md) |
+| OpenAI Skills | [openai/skills](https://github.com/openai/skills) | Codex Agent Skills Catalog | [projects/121-openai-skills-codex-catalog.md](121-openai-skills-codex-catalog.md) |
+| EvoSkill | [sentient-agi/EvoSkill](https://github.com/sentient-agi/EvoSkill) | Automated Agent Skill Discovery | [projects/122-evoskill-automated-skill-discovery.md](122-evoskill-automated-skill-discovery.md) |
+| ICM | [rtk-ai/icm](https://github.com/rtk-ai/icm) | Permanent MCP-Native Agent Memory | [projects/123-icm-permanent-agent-memory.md](123-icm-permanent-agent-memory.md) |
+| Callstack Agent Skills | [callstackincubator/agent-skills](https://github.com/callstackincubator/agent-skills) | React Native Agent Skills Pack | [projects/124-callstack-agent-skills.md](124-callstack-agent-skills.md) |
+| AI-Driven Development | [CodeAlive-AI/ai-driven-development](https://github.com/CodeAlive-AI/ai-driven-development) | Cross-Agent Development Skills and Hooks | [projects/125-ai-driven-development-skills-hooks.md](125-ai-driven-development-skills-hooks.md) |
+| jakenuts Agent Skills | [jakenuts/agent-skills](https://github.com/jakenuts/agent-skills) | Agent Skills and Expert-Agent Toolkit | [projects/126-jakenuts-agent-skills-toolkit.md](126-jakenuts-agent-skills-toolkit.md) |
+| Agent Skills Kit | [jscraik/Agent-Skills](https://github.com/jscraik/Agent-Skills) | Governed Agent Skills Control Plane | [projects/127-agent-skills-kit-control-plane.md](127-agent-skills-kit-control-plane.md) |
+| Deep Agents CLI Codex Skill | [Gitmaxd/deepagents-cli-codex-skill](https://github.com/Gitmaxd/deepagents-cli-codex-skill) | Deep Agents Codex Skill Pack | [projects/128-deepagents-cli-codex-skill.md](128-deepagents-cli-codex-skill.md) |
+| Vercel Skills CLI | [vercel-labs/skills](https://github.com/vercel-labs/skills) | Open Agent Skills Installer CLI | [projects/129-vercel-skills-cli.md](129-vercel-skills-cli.md) |
+| Neo4j Agent Memory | [neo4j-labs/agent-memory](https://github.com/neo4j-labs/agent-memory) | Graph-Native Agent Memory | [projects/130-neo4j-agent-memory.md](130-neo4j-agent-memory.md) |
+| MCP Memory Service | [doobidoo/mcp-memory-service](https://github.com/doobidoo/mcp-memory-service) | Shared Agent Memory Service | [projects/131-mcp-memory-service.md](131-mcp-memory-service.md) |
+| Microsoft Skills | [microsoft/skills](https://github.com/microsoft/skills) | Microsoft SDK Agent Skills Catalog | [projects/132-microsoft-skills.md](132-microsoft-skills.md) |
+| Tech Leads Club Agent Skills | [tech-leads-club/agent-skills](https://github.com/tech-leads-club/agent-skills) | Secure Agent Skills Registry | [projects/133-tech-leads-agent-skills-registry.md](133-tech-leads-agent-skills-registry.md) |
+| jdrhyne Agent Skills | [jdrhyne/agent-skills](https://github.com/jdrhyne/agent-skills) | Portable Agent Skills Pack | [projects/134-jdrhyne-agent-skills-pack.md](134-jdrhyne-agent-skills-pack.md) |
+| OpenSite Skills | [opensite-ai/opensite-skills](https://github.com/opensite-ai/opensite-skills) | Cross-Agent Skills and Memory Sync | [projects/135-opensite-skills-memory-sync.md](135-opensite-skills-memory-sync.md) |
+| fast-agent | [evalstate/fast-agent](https://github.com/evalstate/fast-agent) | Skills/MCP/ACP Agent Runtime | [projects/136-fast-agent-skills-mcp-acp.md](136-fast-agent-skills-mcp-acp.md) |
+| MCP Local RAG | [shinpr/mcp-local-rag](https://github.com/shinpr/mcp-local-rag) | Local-First RAG and Agent Skills | [projects/137-mcp-local-rag-agent-skills.md](137-mcp-local-rag-agent-skills.md) |
+| Awesome Omni Skills | [diegosouzapw/awesome-omni-skills](https://github.com/diegosouzapw/awesome-omni-skills) | Omni Skills CLI API MCP A2A Runtime | [projects/138-awesome-omni-skills-runtime.md](138-awesome-omni-skills-runtime.md) |
+| LightAgent | [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | Memory/MCP Skill Agent Framework | [projects/139-lightagent-memory-mcp-skills.md](139-lightagent-memory-mcp-skills.md) |
+| Agent Skills Hub | [agent-skills-hub/agent-skills-hub](https://github.com/agent-skills-hub/agent-skills-hub) | Cross-Agent Skills Registry | [projects/140-agent-skills-hub-registry.md](140-agent-skills-hub-registry.md) |
+| thClaws | [thClaws/thClaws](https://github.com/thClaws/thClaws) | Local Agent Harness Platform | [projects/141-thclaws-agent-harness-platform.md](141-thclaws-agent-harness-platform.md) |
+| Memento-Skills | [Memento-Teams/Memento-Skills](https://github.com/Memento-Teams/Memento-Skills) | Self-Evolving Skill Memory Agent | [projects/142-memento-skills-self-evolving-agent.md](142-memento-skills-self-evolving-agent.md) |
+| OpenClaw Medical Skills | [FreedomIntelligence/OpenClaw-Medical-Skills](https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills) | Domain Agent Skills Library | [projects/143-openclaw-medical-skills-library.md](143-openclaw-medical-skills-library.md) |
+| AgentSys | [agent-sh/agentsys](https://github.com/agent-sh/agentsys) | Agent Orchestration Runtime | [projects/144-agentsys-agent-orchestration-runtime.md](144-agentsys-agent-orchestration-runtime.md) |
+| Harness Skills | [harness/harness-skills](https://github.com/harness/harness-skills) | CI/CD Agent Skills System | [projects/145-harness-skills-cicd-agent-skills.md](145-harness-skills-cicd-agent-skills.md) |
+| OpenHarness | [HKUDS/OpenHarness](https://github.com/HKUDS/OpenHarness) | Open Agent Harness Runtime | [projects/146-openharness-agent-harness-ohmo.md](146-openharness-agent-harness-ohmo.md) |
+| my-codex | [sehoon787/my-codex](https://github.com/sehoon787/my-codex) | Codex Agent Harness Pack | [projects/147-my-codex-agent-harness-pack.md](147-my-codex-agent-harness-pack.md) |
+| SkillRL | [aiming-lab/SkillRL](https://github.com/aiming-lab/SkillRL) | Recursive Skill-Augmented RL | [projects/148-skillrl-recursive-skill-rl.md](148-skillrl-recursive-skill-rl.md) |
+| HEBBS | [hebbs-ai/hebbs-memory-engine](https://github.com/hebbs-ai/hebbs-memory-engine) | Agent Memory Engine | [projects/149-hebbs-memory-engine.md](149-hebbs-memory-engine.md) |
+| MemSkill | [ViktorAxelsen/MemSkill](https://github.com/ViktorAxelsen/MemSkill) | Evolving Memory Skills | [projects/150-memskill-evolving-memory-skills.md](150-memskill-evolving-memory-skills.md) |
+| Zylos Core | [zylos-ai/zylos-core](https://github.com/zylos-ai/zylos-core) | Self-Evolving AI Team Platform | [projects/151-zylos-core-self-evolving-ai-teams.md](151-zylos-core-self-evolving-ai-teams.md) |
+| QuantaAlpha | [QuantaAlpha/QuantaAlpha](https://github.com/QuantaAlpha/QuantaAlpha) | Evolutionary Repository Agent | [projects/152-quantaalpha-evolutionary-repo-agent.md](152-quantaalpha-evolutionary-repo-agent.md) |
+| Skill Validator | [agent-ecosystem/skill-validator](https://github.com/agent-ecosystem/skill-validator) | Agent Skill Validation Tool | [projects/153-agent-ecosystem-skill-validator.md](153-agent-ecosystem-skill-validator.md) |
+| agent-skills-eval | [darkrishabh/agent-skills-eval](https://github.com/darkrishabh/agent-skills-eval) | Agent Skills Evaluation Harness | [projects/154-agent-skills-eval-benchmark.md](154-agent-skills-eval-benchmark.md) |
+| Baoyu Skills | [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills) | Agent Skills Pack | [projects/155-baoyu-agent-skills-pack.md](155-baoyu-agent-skills-pack.md) |
+| Claude Skills | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | Claude Skill Pack | [projects/156-alirezarezvani-claude-skills-pack.md](156-alirezarezvani-claude-skills-pack.md) |
+| Agent Skills Specification | [agentskills/agentskills](https://github.com/agentskills/agentskills) | Agent Skills Open Standard | [projects/157-agentskills-open-standard.md](157-agentskills-open-standard.md) |
+| Elastic Agent Skills | [elastic/agent-skills](https://github.com/elastic/agent-skills) | Official Vendor Agent Skills | [projects/158-elastic-official-agent-skills.md](158-elastic-official-agent-skills.md) |
+| HOL Registry Skills | [hashgraph-online/registry-broker-skills](https://github.com/hashgraph-online/registry-broker-skills) | Agent Registry Skill Bridge | [projects/159-hol-registry-broker-skills.md](159-hol-registry-broker-skills.md) |
+| Skill Hunter | [CE0Alex/skill-hunter](https://github.com/CE0Alex/skill-hunter) | Agent Skill Discovery Skill | [projects/160-skill-hunter-agent-skill-recommender.md](160-skill-hunter-agent-skill-recommender.md) |
+| SkillClaw | [AMAP-ML/SkillClaw](https://github.com/AMAP-ML/SkillClaw) | Collective Skill Evolution | [projects/161-skillclaw-collective-skill-evolution.md](161-skillclaw-collective-skill-evolution.md) |
+| OpenSpace | [HKUDS/OpenSpace](https://github.com/HKUDS/OpenSpace) | Self-Evolving Skill Runtime | [projects/162-openspace-self-evolving-skills.md](162-openspace-self-evolving-skills.md) |
+| COG Second Brain | [huytieu/COG-second-brain](https://github.com/huytieu/COG-second-brain) | Self-Evolving Personal Memory System | [projects/163-cog-self-evolving-second-brain.md](163-cog-self-evolving-second-brain.md) |
+| Hippo Memory | [kitfunso/hippo-memory](https://github.com/kitfunso/hippo-memory) | Agent Memory System | [projects/164-hippo-memory-biological-agent-memory.md](164-hippo-memory-biological-agent-memory.md) |
+| Awesome OpenClaw Skills | [sundial-org/awesome-openclaw-skills](https://github.com/sundial-org/awesome-openclaw-skills) | OpenClaw Skill Index | [projects/165-awesome-openclaw-skills-index.md](165-awesome-openclaw-skills-index.md) |
+| EVOTEST | [yf-he/EvoTest](https://github.com/yf-he/EvoTest) | Evolutionary Test-Time Learning | [projects/166-evotest-evolutionary-test-time-learning.md](166-evotest-evolutionary-test-time-learning.md) |
+| agentic-stack | [codejunkie99/agentic-stack](https://github.com/codejunkie99/agentic-stack) | Portable Agent Memory and Skills Layer | [projects/167-agentic-stack-portable-agent-memory-skills.md](167-agentic-stack-portable-agent-memory-skills.md) |
+| Harness | [revfactory/harness](https://github.com/revfactory/harness) | Team-Architecture Harness Factory | [projects/168-revfactory-harness-team-architecture-factory.md](168-revfactory-harness-team-architecture-factory.md) |
+| oh-my-skills | [akillness/oh-my-skills](https://github.com/akillness/oh-my-skills) | Cross-Agent Skill Collection | [projects/169-oh-my-skills-cross-agent-skill-collection.md](169-oh-my-skills-cross-agent-skill-collection.md) |
+| OpenClaw Harness Engineering | [guixiang123124/openclaw-harness](https://github.com/guixiang123124/openclaw-harness) | OpenClaw Harness Engineering | [projects/170-openclaw-harness-engineering-factory.md](170-openclaw-harness-engineering-factory.md) |
+| Codex CLI 1UP | [regenrek/codex-1up](https://github.com/regenrek/codex-1up) | Codex CLI Upgrade Kit | [projects/171-codex-1up-codex-cli-upgrade-kit.md](171-codex-1up-codex-cli-upgrade-kit.md) |
+| dotnet-skills | [managedcode/dotnet-skills](https://github.com/managedcode/dotnet-skills) | .NET Agent Skill Catalog | [projects/172-dotnet-skills-agent-skill-catalog.md](172-dotnet-skills-agent-skill-catalog.md) |
 
-## 数据使用说明
-这些 Markdown 文件可直接作为 Projects Section 的内容源；`projects_manifest.json` 可供前端读取项目名、仓库地址、Star、活跃度、模式和报告路径。
+## Data Use
+
+Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

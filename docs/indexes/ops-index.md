@@ -10,7 +10,7 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `README.md` | present | 1 | 0 | 0 | 5.1 KB |
+| `README.md` | present | 1 | 0 | 0 | 7.6 KB |
 | `CONTENT_INDEX.md` | present | 1 | 0 | 0 | 2.8 KB |
 | `AGENTS.md` | present | 1 | 0 | 0 | 5.5 KB |
 | `CLAUDE.md` | present | 1 | 0 | 0 | 2.8 KB |

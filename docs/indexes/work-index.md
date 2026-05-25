@@ -10,12 +10,12 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `paper-drafts` | present | 15 | 1 | 0 | 1.9 MB |
+| `paper-drafts` | present | 20 | 1 | 0 | 2.1 MB |
 | `paper` | present | 1 | 2 | 0 | 43 KB |
 | `latex` | present | 9 | 3 | 0 | 53 KB |
-| `site` | present | 610 | 241 | 0 | 8.0 MB |
+| `site` | present | 773 | 294 | 0 | 20 MB |
 | `survey` | present | 40 | 4 | 0 | 1.2 MB |
-| `scripts` | present | 7 | 1 | 0 | 101 KB |
+| `scripts` | present | 7 | 1 | 0 | 107 KB |
 | `data-engine` | present | 0 | 9 | 0 | 0 B |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 | `CURRENT_GOAL.md` | present | 1 | 0 | 0 | 11 KB |
