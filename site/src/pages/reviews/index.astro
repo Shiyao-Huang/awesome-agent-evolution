@@ -1,111 +1,147 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { projects } from '@/data/projects';
+import { readdirSync, readFileSync, statSync } from 'node:fs';
+import path from 'node:path';
+
+interface ReviewEntry {
+  slug: string;
+  title: string;
+  perspective: string;
+  verdict: string;
+  summary: string;
+  href: string;
+}
+
+const reviewsRoot = path.resolve('research/peer-reviews');
+const reviews: ReviewEntry[] = [];
+
+if (statSync(reviewsRoot, { throwIfNoEntry: false })?.isDirectory()) {
+  for (const f of readdirSync(reviewsRoot).filter((f) => f.endsWith('.md')).sort()) {
+    const content = readFileSync(path.join(reviewsRoot, f), 'utf8');
+    const titleMatch = content.match(/^#\s+(.+)$/m);
+    const verdictMatch = content.match(/\*\*Verdict[：:]*\*\*\s*(Accept|Minor Revision|Major Revision|Reject)/i);
+    const summaryMatch = content.match(/##\s+Summary[\s\S]*?\n([\s\S]*?)(?=\n##|\n$)/);
+    reviews.push({
+      slug: f.replace(/\.md$/, ''),
+      title: titleMatch?.[1] || f.replace(/\.md$/, ''),
+      perspective: f.includes('rigor') ? '学术严谨性 & 方法论' : f.includes('novelty') ? '创新性 & 贡献度' : f.includes('clarity') ? '表达清晰度 & 呈现' : '综合评审',
+      verdict: verdictMatch?.[1] || 'Pending',
+      summary: summaryMatch?.[1]?.trim()?.slice(0, 200) || 'Review in progress.',
+      href: `/reviews/${f.replace(/\.md$/, '')}/`
+    });
+  }
+}
+
+const verdictColors: Record<string, string> = {
+  Accept: 'var(--success)',
+  'Minor Revision': 'var(--warn)',
+  'Major Revision': 'var(--accent)',
+  Reject: 'var(--danger)'
+};
 ---
-
-<BaseLayout
-  title="同行评审 — Self Evolve"
-  description="AI 自我进化研究的同行评审结果：方法对比、评审维度打分、跨项目评审雷达图。"
->
+<BaseLayout title="Self Evolve 同行评审 — arXiv 级 Survey 评审报告" description="Self Evolve survey 的 arXiv 级同行评审报告：学术严谨性、创新贡献、表达清晰度三个独立视角的结构化评审。">
   <section class="section">
     <div class="container">
-      <div class="eyebrow">Peer Reviews</div>
-      <h1 class="gradient-text">同行评审</h1>
-      <p class="lead">跨项目评审维度对比与方法评估</p>
-      <p style="color:var(--muted);margin-top:8px">覆盖 {projects.length} 个自进化项目的结构化评审</p>
-    </div>
-  </section>
-
-  <!-- Review Dimensions -->
-  <section class="section">
-    <div class="container">
-      <div class="review-grid">
-        <div class="card">
-          <div class="card-head">
-            <div class="eyebrow">Review Framework</div>
-            <h3>评审维度</h3>
-          </div>
-          <div class="review-dims">
-            <div class="review-dim">
-              <span class="review-dim-label">Novelty</span>
-              <span class="review-dim-desc">方法创新性</span>
-            </div>
-            <div class="review-dim">
-              <span class="review-dim-label">Soundness</span>
-              <span class="review-dim-desc">技术严谨性</span>
-            </div>
-            <div class="review-dim">
-              <span class="review-dim-label">Reproducibility</span>
-              <span class="review-dim-desc">可复现性</span>
-            </div>
-            <div class="review-dim">
-              <span class="review-dim-label">Evolution Impact</span>
-              <span class="review-dim-desc">对自进化领域的贡献</span>
-            </div>
-            <div class="review-dim">
-              <span class="review-dim-label">Scalability</span>
-              <span class="review-dim-desc">可扩展性</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-head">
-            <div class="eyebrow">Status</div>
-            <h3>评审进度</h3>
-          </div>
-          <div class="review-status-list">
-            <div class="review-status-row">
-              <span class="review-status-label">待评审项目</span>
-              <span class="review-status-count">{projects.length}</span>
-            </div>
-            <div class="review-status-row">
-              <span class="review-status-label">已完成评审</span>
-              <span class="review-status-count">0</span>
-            </div>
-            <div class="review-status-row">
-              <span class="review-status-label">评审维度</span>
-              <span class="review-status-count">5</span>
-            </div>
-          </div>
-          <p style="color:var(--muted);font-size:13px;margin-top:12px">
-            评审数据准备中。数据来源于 <code>research/peer-reviews/</code>，待研究团队完成后将自动填充。
-          </p>
-        </div>
+      <div class="eyebrow">Peer Reviews / 同行评审</div>
+      <h1 class="gradient-text">arXiv 级同行评审</h1>
+      <p class="lead">三位独立 Reviewer 从不同视角对本 survey 进行结构化评审。评审报告遵循 arXiv 同行评审标准，覆盖学术严谨性、创新贡献和表达清晰度。</p>
+      <div class="metrics">
+        <div class="metric"><strong>{reviews.length}</strong><span>份已完成评审</span></div>
+        <div class="metric"><strong>3</strong><span>个评审视角</span></div>
+        <div class="metric"><strong>{reviews.filter((r) => r.verdict !== 'Pending').length}/{reviews.length || 3}</strong><span>评审完成度</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Comparison Table Placeholder -->
+  {reviews.length > 0 ? (
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">评审报告</div>
+            <h2>结构化评审结果</h2>
+          </div>
+        </div>
+        <div class="grid">
+          {reviews.map((review) => (
+            <article class="card">
+              <div class="card-title-row">
+                <div>
+                  <div class="eyebrow">{review.perspective}</div>
+                  <h3>{review.title}</h3>
+                </div>
+                {review.verdict !== 'Pending' && (
+                  <span class="score-badge" style={`background: ${verdictColors[review.verdict] || 'var(--line)'}20; color: ${verdictColors[review.verdict] || 'var(--muted)'};`}>
+                    {review.verdict}
+                  </span>
+                )}
+              </div>
+              <p>{review.summary}</p>
+              <div class="pill-row">
+                <a class="pill" href={review.href}>查看完整评审</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <div class="eyebrow">评审进行中</div>
+          <h3>三位 Reviewer 正在独立评审</h3>
+          <p>评审完成后，报告将自动显示在此页面。评审范围覆盖 `paper-drafts/main.tex`、`README.md`、`survey/` 和 `research/`。</p>
+          <div class="pill-row" style="margin-top: 16px;">
+            <span class="pill">Reviewer 1: Rigor & Methodology</span>
+            <span class="pill">Reviewer 2: Novelty & Contribution</span>
+            <span class="pill">Reviewer 3: Clarity & Presentation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Review Framework -->
   <section class="section">
     <div class="container">
-      <div class="card">
-        <div class="card-head">
-          <div class="eyebrow">Comparison Matrix</div>
-          <h3>方法对比矩阵</h3>
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">评审框架</div>
+          <h2>评审标准与流程</h2>
         </div>
-        <div class="review-placeholder">
-          <p>评审结果对比表格将在数据就绪后自动生成。</p>
-          <p style="font-size:13px;color:var(--muted);margin-top:8px">
-            生成条件：<code>research/peer-reviews/*.md</code> 文件存在且包含结构化评审数据。
-          </p>
-        </div>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>学术严谨性 & 方法论</h3>
+          <p>审查证据链完整性、方法论质量、引用准确性、数据溯源和可重现性声明。</p>
+          <div class="pill-row">
+            <span class="pill">证据链</span>
+            <span class="pill">方法论</span>
+            <span class="pill">引用</span>
+            <span class="pill">可重现性</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>创新性 & 贡献度</h3>
+          <p>审查与现有 survey 的差异化、新框架/分类体系的贡献、对领域的前瞻性影响。</p>
+          <div class="pill-row">
+            <span class="pill">差异化</span>
+            <span class="pill">新框架</span>
+            <span class="pill">前瞻性</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>表达清晰度 & 呈现</h3>
+          <p>审查论文结构、图表质量、排版规范、中英文表达的一致性和可读性。</p>
+          <div class="pill-row">
+            <span class="pill">结构</span>
+            <span class="pill">图表</span>
+            <span class="pill">排版</span>
+            <span class="pill">可读性</span>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 </BaseLayout>
-
-<style>
-.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.review-dims{display:flex;flex-direction:column;gap:10px}
-.review-dim{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:8px;background:var(--surface-2)}
-.review-dim-label{font-size:13px;font-weight:800;color:var(--accent);min-width:130px}
-.review-dim-desc{font-size:13px;color:var(--muted)}
-.review-status-list{display:flex;flex-direction:column;gap:8px}
-.review-status-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--line)}
-.review-status-label{font-size:13px;font-weight:650;color:var(--fg)}
-.review-status-count{font-size:14px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}
-.review-placeholder{padding:32px;text-align:center;border:2px dashed var(--line);border-radius:12px;color:var(--muted)}
-.review-placeholder p{font-size:14px}
-@media(max-width:760px){.review-grid{grid-template-columns:1fr}}
-</style>

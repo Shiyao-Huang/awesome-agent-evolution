@@ -1,6 +1,6 @@
 export const site = {
   name: 'Self Evolve',
-  url: 'https://x.mitbunny.ai',
+  url: 'https://shiyao-huang.github.io/awesome-agent-evolution',
   title: 'Self Evolve AI — AI 自我进化研究、项目与实践指南',
   description:
     'Self Evolve 是面向 AI 自我进化、自进化智能体、代码自我改进、迭代式优化与自主 AI 系统的中文研究与项目索引。',
@@ -12,18 +12,21 @@ export const site = {
     '代码自我改进',
     'LLM 迭代优化'
   ],
-  github: 'https://github.com/',
-  discord: 'https://discord.com/',
-  x: 'https://x.com/'
+  github: 'https://github.com/Shiyao-Huang/awesome-agent-evolution',
+  discord: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/discussions',
+  x: 'https://github.com/Shiyao-Huang/awesome-agent-evolution'
 };
 
 export const nav = [
   { href: '/#about', label: '关于' },
   { href: '/projects/', label: '项目' },
+  { href: '/rank/', label: '排名' },
+  { href: '/reports/', label: '报告' },
+  { href: '/reviews/', label: '评审' },
   { href: '/research/', label: '研究' },
+  { href: '/paper/', label: '论文' },
   { href: '/graph/', label: '图谱' },
-  { href: '/postcards/', label: '卡片墙' },
+  { href: '/visualizations/', label: '可视化' },
   { href: '/blog/', label: '博客' },
-  { href: '/star-analysis/', label: 'Star 分析' },
   { href: '/#community', label: '社区' }
 ];

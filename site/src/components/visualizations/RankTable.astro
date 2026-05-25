@@ -1,28 +1,124 @@
 ---
 import { projects } from '@/data/projects';
-const rp=[...projects].sort((a,b)=>Number(b.stars||0)-Number(a.stars||0)).map(p=>({name:p.name,repo:p.repo,url:p.url,stars:Number(p.stars||0),category:p.category,pattern:p.pattern,tags:p.tags,lastPushed:p.lastPushed}));
-const pp=JSON.stringify(rp);const cats=[...new Set(rp.map(p=>p.category))];
+
+const rankedProjects = [...projects]
+  .sort((a, b) => Number(b.stars || 0) - Number(a.stars || 0))
+  .map(p => ({
+    name: p.name, repo: p.repo, url: p.url,
+    stars: Number(p.stars || 0), forks: p.forks,
+    category: p.category, pattern: p.pattern, tags: p.tags,
+    lastPushed: p.lastPushed, description: p.description
+  }));
+
+const projectsPayload = JSON.stringify(rankedProjects);
+const categories = [...new Set(rankedProjects.map(p => p.category))];
 ---
-<div class="viz-rank"><div class="viz-sh"><div class="eyebrow">Project Rankings</div><h2>项目排行榜</h2><p>可排序、可过滤的项目对比表</p></div>
-<div class="viz-rc"><input id="vr-s" type="search" placeholder="搜索项目..." aria-label="搜索"/><select id="vr-c" aria-label="类别"><option value="">所有类别</option>{cats.map(c=><option value={c}>{c}</option>)}</select><select id="vr-so" aria-label="排序"><option value="sd">Stars 高→低</option><option value="sa">Stars 低→高</option><option value="na">名称 A→Z</option><option value="ud">最近更新</option></select></div>
-<div class="viz-rco" id="vr-co" aria-live="polite"></div>
-<div class="viz-rtw"><table class="viz-rt"><thead><tr><th>#</th><th>项目</th><th>Stars</th><th>类别</th><th>进化机制</th><th>更新</th></tr></thead><tbody id="vr-tb"></tbody></table></div></div>
-<script is:inline define:vars={{ pp }}>
-const ap=JSON.parse(pp),tb=document.getElementById('vr-tb'),si=document.getElementById('vr-s'),cs=document.getElementById('vr-c'),so=document.getElementById('vr-so'),co=document.getElementById('vr-co');
-function ren(){const q=(si.value||'').trim().toLowerCase(),cat=cs.value,sk=so.value;
-let f=ap.filter(p=>{const mq=!q||p.name.toLowerCase().includes(q)||p.repo.toLowerCase().includes(q)||p.pattern.toLowerCase().includes(q)||(p.tags||[]).some(t=>t.toLowerCase().includes(q));const mc=!cat||p.category===cat;return mq&&mc});
-if(sk==='sd')f.sort((a,b)=>b.stars-a.stars);else if(sk==='sa')f.sort((a,b)=>a.stars-b.stars);else if(sk==='na')f.sort((a,b)=>a.name.localeCompare(b.name));else if(sk==='ud')f.sort((a,b)=>(b.lastPushed||'').localeCompare(a.lastPushed||''));
-co.textContent=f.length+' / '+ap.length+' 个项目';
-tb.innerHTML=f.slice(0,50).map((p,i)=>{const tg=(p.tags||[]).slice(0,3).map(t=>'<span class="viz-rtg">'+t+'</span>').join('');
-return '<tr><td class="viz-rn">'+(i+1)+'</td><td class="viz-rnm"><a href="'+p.url+'" target="_blank" rel="noopener">'+p.name+'</a><span class="viz-rr">'+p.repo+'</span></td><td class="viz-rs">'+p.stars.toLocaleString()+'</td><td>'+p.category+'</td><td class="viz-rm">'+tg+'</td><td class="viz-rd">'+(p.lastPushed?p.lastPushed.slice(0,10):'\u2014')+'</td></tr>'}).join('')}
-ren();si.addEventListener('input',ren);cs.addEventListener('change',ren);so.addEventListener('change',ren);
+
+<div class="viz-rank" id="viz-rank">
+  <div class="viz-section-head">
+    <div class="eyebrow">Project Rankings</div>
+    <h2>项目排行榜</h2>
+    <p>可排序、可过滤的项目对比表 — 按 Stars、类别、更新时间排列</p>
+  </div>
+  <div class="viz-rank-controls">
+    <input id="viz-rank-search" type="search" placeholder="搜索项目名、机制、标签..." aria-label="搜索项目" />
+    <select id="viz-rank-category" aria-label="按类别过滤">
+      <option value="">所有类别</option>
+      {categories.map(c => <option value={c}>{c}</option>)}
+    </select>
+    <select id="viz-rank-sort" aria-label="排序方式">
+      <option value="stars-desc">Stars 高→低</option>
+      <option value="stars-asc">Stars 低→高</option>
+      <option value="name-asc">名称 A→Z</option>
+      <option value="updated-desc">最近更新</option>
+    </select>
+  </div>
+  <div class="viz-rank-count" id="viz-rank-count" aria-live="polite"></div>
+  <div class="viz-rank-table-wrap">
+    <table class="viz-rank-table" id="viz-rank-table" role="grid">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>项目</th>
+          <th>Stars</th>
+          <th>类别</th>
+          <th>进化机制</th>
+          <th>更新</th>
+        </tr>
+      </thead>
+      <tbody id="viz-rank-tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<script is:inline define:vars={{ projectsPayload }}>
+  const allProjects = JSON.parse(projectsPayload);
+  const tbody = document.getElementById('viz-rank-tbody');
+  const searchInput = document.getElementById('viz-rank-search');
+  const categorySelect = document.getElementById('viz-rank-category');
+  const sortSelect = document.getElementById('viz-rank-sort');
+  const countEl = document.getElementById('viz-rank-count');
+
+  function renderTable() {
+    const query = (searchInput.value || '').trim().toLowerCase();
+    const category = categorySelect.value;
+    const sortKey = sortSelect.value;
+
+    let filtered = allProjects.filter(p => {
+      const matchQ = !query || p.name.toLowerCase().includes(query) || p.repo.toLowerCase().includes(query) || p.pattern.toLowerCase().includes(query) || (p.tags || []).some(t => t.toLowerCase().includes(query));
+      const matchC = !category || p.category === category;
+      return matchQ && matchC;
+    });
+
+    if (sortKey === 'stars-desc') filtered.sort((a, b) => b.stars - a.stars);
+    else if (sortKey === 'stars-asc') filtered.sort((a, b) => a.stars - b.stars);
+    else if (sortKey === 'name-asc') filtered.sort((a, b) => a.name.localeCompare(b.name));
+    else if (sortKey === 'updated-desc') filtered.sort((a, b) => (b.lastPushed || '').localeCompare(a.lastPushed || ''));
+
+    countEl.textContent = filtered.length + ' / ' + allProjects.length + ' 个项目';
+
+    tbody.innerHTML = filtered.slice(0, 50).map((p, i) => {
+      const tags = (p.tags || []).slice(0, 3).map(t => '<span class="viz-rank-tag">' + t + '</span>').join('');
+      return '<tr><td class="viz-rank-num">' + (i + 1) + '</td>'
+        + '<td class="viz-rank-name"><a href="' + p.url + '" target="_blank" rel="noopener">' + p.name + '</a><span class="viz-rank-repo">' + p.repo + '</span></td>'
+        + '<td class="viz-rank-stars">' + p.stars.toLocaleString() + '</td>'
+        + '<td class="viz-rank-category">' + p.category + '</td>'
+        + '<td class="viz-rank-mechanism">' + tags + '</td>'
+        + '<td class="viz-rank-date">' + (p.lastPushed ? p.lastPushed.slice(0, 10) : '—') + '</td></tr>';
+    }).join('');
+  }
+
+  renderTable();
+  searchInput.addEventListener('input', renderTable);
+  categorySelect.addEventListener('change', renderTable);
+  sortSelect.addEventListener('change', renderTable);
 </script>
+
 <style>
-.viz-rc{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}.viz-rc input,.viz-rc select{border:1px solid var(--line);border-radius:var(--radius-cta);background:var(--surface-1);color:var(--fg);padding:8px 12px;font:600 13px/1.2 var(--font-body)}.viz-rc input{flex:1;min-width:180px}.viz-rc input:focus,.viz-rc select:focus{outline:none;box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--accent)}
-.viz-rco{color:var(--muted);font-size:12px;font-weight:750;margin-bottom:10px}.viz-rtw{overflow-x:auto;-webkit-overflow-scrolling:touch}.viz-rt{width:100%;border-collapse:collapse;font-size:13px}
-.viz-rt th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
-.viz-rt td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}.viz-rt tr:hover td{background:var(--surface-2)}
-.viz-rn{font-weight:800;color:var(--meta);width:36px}.viz-rnm a{font-weight:700;color:var(--fg);text-decoration:none}.viz-rnm a:hover{color:var(--accent)}.viz-rr{display:block;font-size:11px;color:var(--meta);margin-top:2px}
-.viz-rs{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}.viz-rm{max-width:220px}.viz-rtg{display:inline-block;padding:2px 6px;margin:1px 2px;border:1px solid var(--line);border-radius:4px;font-size:11px;font-weight:650;color:var(--muted);white-space:nowrap}.viz-rd{white-space:nowrap;color:var(--muted);font-size:12px}
-@media(max-width:760px){.viz-rc{flex-direction:column}.viz-rt{font-size:12px}}
+  .viz-rank { margin-top: 40px; }
+  .viz-rank-controls { display: flex; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+  .viz-rank-controls input,
+  .viz-rank-controls select { border: 1px solid var(--line); border-radius: var(--radius-cta); background: var(--surface-1); color: var(--fg); padding: 8px 12px; font: 600 13px/1.2 var(--font-body); }
+  .viz-rank-controls input { flex: 1; min-width: 180px; }
+  .viz-rank-controls input:focus,
+  .viz-rank-controls select:focus { outline: none; box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent); }
+  .viz-rank-count { color: var(--muted); font-size: 12px; font-weight: 750; margin-bottom: 10px; }
+  .viz-rank-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .viz-rank-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .viz-rank-table th { text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--line); color: var(--muted); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+  .viz-rank-table td { padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .viz-rank-table tr:hover td { background: var(--surface-2); }
+  .viz-rank-num { font-weight: 800; color: var(--meta); width: 36px; }
+  .viz-rank-name a { font-weight: 700; color: var(--fg); text-decoration: none; }
+  .viz-rank-name a:hover { color: var(--accent); }
+  .viz-rank-repo { display: block; font-size: 11px; color: var(--meta); margin-top: 2px; }
+  .viz-rank-stars { font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .viz-rank-category { white-space: nowrap; font-weight: 600; }
+  .viz-rank-mechanism { max-width: 220px; }
+  .viz-rank-tag { display: inline-block; padding: 2px 6px; margin: 1px 2px; border: 1px solid var(--line); border-radius: 4px; font-size: 11px; font-weight: 650; color: var(--muted); white-space: nowrap; }
+  .viz-rank-date { white-space: nowrap; color: var(--muted); font-size: 12px; }
+  @media (max-width: 760px) {
+    .viz-rank-controls { flex-direction: column; }
+    .viz-rank-table { font-size: 12px; }
+  }
 </style>

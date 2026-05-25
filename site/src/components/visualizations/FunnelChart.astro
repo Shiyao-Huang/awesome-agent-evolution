@@ -1,17 +1,53 @@
 ---
 import { funnelStages } from './vizData';
-const sp = JSON.stringify(funnelStages);
+const stagesPayload = JSON.stringify(funnelStages);
 ---
-<div class="viz-funnel"><div class="viz-sh"><div class="eyebrow">Corpus Pipeline</div><h2>数据筛选漏斗</h2><p>从 GitHub 采集到核心自进化项目的层层过滤</p></div><div class="viz-fc" id="viz-fc" role="list"></div></div>
-<script is:inline define:vars={{ sp }}>
-const stages=JSON.parse(sp),mx=Math.max(...stages.map(s=>s.count)),c=document.getElementById('viz-fc');if(!c)return;
-stages.forEach(s=>{const p=(s.count/mx)*100,r=document.createElement('div');r.className='viz-fr';r.setAttribute('role','listitem');
-r.innerHTML='<div class="viz-fl"><span class="viz-fn">'+s.label+'</span><span class="viz-fd">'+s.description+'</span></div><div class="viz-bt"><div class="viz-bb" style="width:0%;max-width:'+p+'%"></div><span class="viz-bc">'+s.count.toLocaleString()+'</span></div>';c.appendChild(r)});
-const o=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){c.querySelectorAll('.viz-bb').forEach(b=>{b.style.width=b.style.maxWidth});o.unobserve(en.target)}})},{threshold:.2});o.observe(c);
+
+<div class="viz-funnel" id="viz-funnel">
+  <div class="viz-section-head">
+    <div class="eyebrow">Corpus Pipeline</div>
+    <h2>数据筛选漏斗</h2>
+    <p>从 GitHub 采集到核心自进化项目的层层过滤</p>
+  </div>
+  <div class="viz-funnel-chart" id="viz-funnel-chart" role="list"></div>
+</div>
+
+<script is:inline define:vars={{ stagesPayload }}>
+  const stages = JSON.parse(stagesPayload);
+  const maxCount = Math.max(...stages.map(s => s.count));
+  const container = document.getElementById('viz-funnel-chart');
+  if (!container) throw new Error('Funnel container not found');
+  stages.forEach((stage) => {
+    const pct = (stage.count / maxCount) * 100;
+    const row = document.createElement('div');
+    row.className = 'viz-funnel-row';
+    row.setAttribute('role', 'listitem');
+    row.innerHTML = '<div class="viz-funnel-label"><span class="viz-funnel-name">' + stage.label + '</span><span class="viz-funnel-desc">' + stage.description + '</span></div><div class="viz-funnel-bar-track"><div class="viz-funnel-bar" style="width:0%;max-width:' + pct + '%"></div><span class="viz-funnel-count">' + stage.count.toLocaleString() + '</span></div>';
+    container.appendChild(row);
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        container.querySelectorAll('.viz-funnel-bar').forEach(bar => { bar.style.width = bar.style.maxWidth; });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  observer.observe(container);
 </script>
+
 <style>
-.viz-funnel{margin-top:32px}.viz-sh{margin-bottom:16px}.viz-sh .eyebrow{color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.viz-sh h2{font-family:var(--font-display);font-size:24px;font-weight:400;color:var(--fg);margin-top:4px}.viz-sh p{color:var(--muted);font-size:14px;margin-top:4px}
-.viz-fc{display:flex;flex-direction:column;gap:12px}.viz-fr{display:grid;grid-template-columns:200px 1fr;gap:14px;align-items:center}.viz-fn{display:block;font-weight:750;font-size:14px;color:var(--fg)}.viz-fd{display:block;margin-top:2px;font-size:12px;color:var(--muted)}
-.viz-bt{position:relative;height:36px;background:var(--surface-2);border-radius:8px;overflow:hidden}.viz-bb{height:100%;background:linear-gradient(90deg,var(--accent),var(--brand2));border-radius:8px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}.viz-bc{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-weight:800;font-size:14px;color:var(--fg)}
-@media(max-width:760px){.viz-fr{grid-template-columns:1fr;gap:6px}}
+  .viz-funnel { margin-top: 40px; }
+  .viz-section-head { margin-bottom: 20px; }
+  .viz-section-head .eyebrow { color: var(--accent); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+  .viz-section-head h2 { font-family: var(--font-display); font-size: 28px; font-weight: 400; color: var(--fg); margin-top: 6px; }
+  .viz-section-head p { color: var(--muted); font-size: 14px; margin-top: 6px; }
+  .viz-funnel-chart { display: flex; flex-direction: column; gap: 12px; }
+  .viz-funnel-row { display: grid; grid-template-columns: 200px 1fr; gap: 14px; align-items: center; }
+  .viz-funnel-name { display: block; font-weight: 750; font-size: 14px; color: var(--fg); }
+  .viz-funnel-desc { display: block; margin-top: 2px; font-size: 12px; color: var(--muted); }
+  .viz-funnel-bar-track { position: relative; height: 36px; background: var(--surface-2); border-radius: 8px; overflow: hidden; }
+  .viz-funnel-bar { height: 100%; background: linear-gradient(90deg, var(--accent), var(--brand2)); border-radius: 8px; transition: width 1.2s cubic-bezier(.4, 0, .2, 1); }
+  .viz-funnel-count { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-weight: 800; font-size: 14px; color: var(--fg); }
+  @media (max-width: 760px) { .viz-funnel-row { grid-template-columns: 1fr; gap: 6px; } }
 </style>

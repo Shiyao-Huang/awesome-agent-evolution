@@ -65,12 +65,8 @@
 | `mom-test-findings-x.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
 | `mom-test-findings.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
 | `node_modules` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
-| `raw-data-timestamp-enforcement-report.json` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
 | `raw-data-timestamp-standard.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `raw-data-timestamp-validation-report.json` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
 | `raw-github-index.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `raw-papers-timestamp-backfill-report.json` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `raw-papers-timestamp-validation-report.json` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
 | `repos` | dir | support mirrors | 外部镜像，不删除；不混入本项目治理，必要时只读引用。 |
 | `social-media-raw-data-ZH.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
 | `social-media-raw-data.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
