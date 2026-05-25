@@ -1925,7 +1925,35 @@ export const projects: Project[] = [
                     "smart contracts",
                     "sandbox"
             ]
-    }
+    },
+  {
+          "name": "Skills Best Practices",
+          "repo": "mgechev/skills-best-practices",
+          "url": "https://github.com/mgechev/skills-best-practices",
+          "stars": 1900,
+          "forks": 131,
+          "language": "Python / Markdown",
+          "license": "not verified",
+          "report": "projects/223-skills-best-practices-agent-skill-authoring.md",
+          "pattern": "skill need -> trigger-optimized frontmatter -> lean SKILL.md -> references/scripts/assets -> discovery/logic/edge-case validation -> regression-aware skill iteration",
+          "description": "Skills Best Practices is a methodology layer for professional-grade agent skills, emphasizing discoverable frontmatter, progressive disclosure, deterministic helper scripts and LLM-based validation loops.",
+          "stack": [
+                  "Python",
+                  "Markdown",
+                  "Agent Skills"
+          ],
+          "category": "Agent Skill Authoring Methodology",
+          "lastPushed": "2026-05-24T00:00:00Z",
+          "localPath": "raw-github/mgechev_skills-best-practices.md",
+          "status": "candidate",
+          "tags": [
+                  "agent skills",
+                  "skill authoring",
+                  "progressive disclosure",
+                  "validation",
+                  "skillgrade"
+          ]
+  }
 ];
 
 export const projectGroups = [
@@ -1955,7 +1983,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'webmaxru/Agent-Skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'Agent 框架 (Round 4)', repos: ['reworkd/AgentGPT', 'yoheinakajima/babyagi', 'cheshire-cat-ai/core', 'huggingface/smolagents', 'Chainlit/chainlit', 'smol-ai/developer'] }
   ,{ title: 'Agent 研究综述 (Round 4)', repos: ['XMUDeepLIT/Awesome-Self-Evolving-Agents', 'luo-junyu/Awesome-Agent-Papers', 'Zijian-Ni/awesome-ai-agents-2026'] }
 ];

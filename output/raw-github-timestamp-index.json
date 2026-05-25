@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-26T00:00:00+08:00",
-  "total": 504,
-  "updated_files": 504,
+  "total": 505,
+  "updated_files": 505,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -2406,6 +2406,15 @@
       "collected_at": "2026-05-26T00:36:53+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_05_26"
+    },
+    {
+      "repo": "mgechev/skills-best-practices",
+      "url": "https://github.com/mgechev/skills-best-practices",
+      "file": "raw-github/mgechev_skills-best-practices.md",
+      "content_timestamp": "2026-05-24",
+      "collected_at": "2026-05-26T03:41:36+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_and_skills_hub_sync_2026_05_24"
     },
     {
       "repo": "microsoft/skills",

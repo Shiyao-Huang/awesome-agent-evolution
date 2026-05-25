@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-25T18:56:15.281Z",
+  "generated_at": "2026-05-25T19:44:54.120Z",
   "counts": {
-    "raw_captures": 504,
-    "raw_files_on_disk": 504,
-    "classified_repos": 504,
-    "analyzed_projects": 95,
-    "analyzed_in_raw_timestamp_index": 41,
-    "analyzed_in_classification": 41,
+    "raw_captures": 505,
+    "raw_files_on_disk": 505,
+    "classified_repos": 505,
+    "analyzed_projects": 96,
+    "analyzed_in_raw_timestamp_index": 42,
+    "analyzed_in_classification": 42,
     "analyzed_evolution_focused": 50,
     "analyzed_with_created_at_or_fallback": 80,
     "analyzed_with_github_api_metadata": 25,
     "analyzed_with_local_git_mirror": 77,
-    "analyzed_with_public_report": 65,
+    "analyzed_with_public_report": 66,
     "raw_core_evolution": 79,
     "raw_broad_evolution": 180,
     "raw_unknown_time_slice": 109
@@ -27,7 +27,7 @@
     },
     {
       "key": "教程/tutorial",
-      "count": 96
+      "count": 97
     },
     {
       "key": "工具/tool",
@@ -61,7 +61,7 @@
     },
     {
       "key": "skill",
-      "count": 62
+      "count": 63
     },
     {
       "key": "framework",
@@ -286,6 +286,10 @@
       "count": 1
     },
     {
+      "key": "Python/Markdown/Agent Skills",
+      "count": 1
+    },
+    {
       "key": "Python/MCP/mem0/Agent Skills",
       "count": 1
     },
@@ -381,7 +385,7 @@
   "raw_time_slice_counts": [
     {
       "key": "2026-05",
-      "count": 344
+      "count": 345
     },
     {
       "key": "unknown",
@@ -487,7 +491,7 @@
     },
     {
       "key": "skill",
-      "count": 2
+      "count": 3
     },
     {
       "key": "research-agent",
@@ -505,7 +509,7 @@
     },
     {
       "key": "unknown",
-      "count": 15
+      "count": 16
     },
     {
       "key": "2026-03",
@@ -5766,6 +5770,21 @@
       "content_timestamp": "2026-05-26",
       "evidence": "web-observed GitHub page showed MIT license, 490 stars, 35 forks, TypeScript/Node.js stack, and Skillgrade README claims for Agent Skill evaluation with eval.yaml, smoke/reliable/regression presets, deterministic plus LLM-rubric graders, and Codex/Gemini/Claude/OpenCode/ACP targets; this is a skill evolution quality gate, not an API-verified benchmark rerun.",
       "description": "Skillgrade gives Agent Skills unit-test style evaluation so skill discovery and reuse can be measured through repeatable smoke, reliability and regression trials."
+    },
+    {
+      "repo": "mgechev/skills-best-practices",
+      "url": "https://github.com/mgechev/skills-best-practices",
+      "stars": "1900",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Python/Markdown/Agent Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web-observed GitHub and Skills Hub evidence showed about 1.9k stars, 131 forks, 5 commits, Python language signal, professional-grade agent skill authoring guidance, progressive disclosure rules, validation workflow, skillgrade linkage and Skills Hub upstream sync on 2026-05-24; metadata is web-observed, not API-verified.",
+      "description": "Skills Best Practices packages agent skill authoring into a reusable methodology: trigger-optimized metadata, lean SKILL.md files, deterministic scripts, references/assets and LLM-based validation checks."
     },
     {
       "repo": "microsoft/skills",
@@ -17511,6 +17530,49 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
       "evolution_focused": false
+    },
+    {
+      "name": "Skills Best Practices",
+      "repo": "mgechev/skills-best-practices",
+      "normalized_repo": "mgechev/skills-best-practices",
+      "url": "https://github.com/mgechev/skills-best-practices",
+      "category": "Agent Skill Authoring Methodology",
+      "pattern": "skill need -> trigger-optimized frontmatter -> lean SKILL.md -> references/scripts/assets -> discovery/logic/edge-case validation -> regression-aware skill iteration",
+      "tags": [
+        "agent skills",
+        "skill authoring",
+        "progressive disclosure",
+        "validation",
+        "skillgrade"
+      ],
+      "site_stars": 1900,
+      "site_forks": 131,
+      "license": "not verified",
+      "lastPushed": "2026-05-24T00:00:00Z",
+      "localPath": "raw-github/mgechev_skills-best-practices.md",
+      "local_git": null,
+      "report": "projects/223-skills-best-practices-agent-skill-authoring.md",
+      "public_report": "site/public/reports/projects/223-skills-best-practices-agent-skill-authoring.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/mgechev_skills-best-practices.md",
+      "raw_collected_at": "2026-05-26T03:41:36+08:00",
+      "raw_content_timestamp": "2026-05-24",
+      "raw_timestamp_source": "web_observed_public_github_page_and_skills_hub_sync_2026_05_24",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web-observed GitHub and Skills Hub evidence showed about 1.9k stars, 131 forks, 5 commits, Python language signal, professional-grade agent skill authoring guidance, progressive disclosure rules, validation workflow, skillgrade linkage and Skills Hub upstream sync on 2026-05-24; metadata is web-observed, not API-verified.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
     }
   ],
   "analyzed_git_evidence": [
@@ -19702,6 +19764,49 @@
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
       "evolution_focused": true
+    },
+    {
+      "name": "Skills Best Practices",
+      "repo": "mgechev/skills-best-practices",
+      "normalized_repo": "mgechev/skills-best-practices",
+      "url": "https://github.com/mgechev/skills-best-practices",
+      "category": "Agent Skill Authoring Methodology",
+      "pattern": "skill need -> trigger-optimized frontmatter -> lean SKILL.md -> references/scripts/assets -> discovery/logic/edge-case validation -> regression-aware skill iteration",
+      "tags": [
+        "agent skills",
+        "skill authoring",
+        "progressive disclosure",
+        "validation",
+        "skillgrade"
+      ],
+      "site_stars": 1900,
+      "site_forks": 131,
+      "license": "not verified",
+      "lastPushed": "2026-05-24T00:00:00Z",
+      "localPath": "raw-github/mgechev_skills-best-practices.md",
+      "local_git": null,
+      "report": "projects/223-skills-best-practices-agent-skill-authoring.md",
+      "public_report": "site/public/reports/projects/223-skills-best-practices-agent-skill-authoring.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/mgechev_skills-best-practices.md",
+      "raw_collected_at": "2026-05-26T03:41:36+08:00",
+      "raw_content_timestamp": "2026-05-24",
+      "raw_timestamp_source": "web_observed_public_github_page_and_skills_hub_sync_2026_05_24",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web-observed GitHub and Skills Hub evidence showed about 1.9k stars, 131 forks, 5 commits, Python language signal, professional-grade agent skill authoring guidance, progressive disclosure rules, validation workflow, skillgrade linkage and Skills Hub upstream sync on 2026-05-24; metadata is web-observed, not API-verified.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
     },
     {
       "name": "ADAS",
@@ -25695,6 +25800,49 @@
       "classification_evidence": "web-observed GitHub page showed MIT license, 490 stars, 35 forks, TypeScript/Node.js stack, and Skillgrade README claims for Agent Skill evaluation with eval.yaml, smoke/reliable/regression presets, deterministic plus LLM-rubric graders, and Codex/Gemini/Claude/OpenCode/ACP targets; this is a skill evolution quality gate, not an API-verified benchmark rerun.",
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
+      "name": "Skills Best Practices",
+      "repo": "mgechev/skills-best-practices",
+      "normalized_repo": "mgechev/skills-best-practices",
+      "url": "https://github.com/mgechev/skills-best-practices",
+      "category": "Agent Skill Authoring Methodology",
+      "pattern": "skill need -> trigger-optimized frontmatter -> lean SKILL.md -> references/scripts/assets -> discovery/logic/edge-case validation -> regression-aware skill iteration",
+      "tags": [
+        "agent skills",
+        "skill authoring",
+        "progressive disclosure",
+        "validation",
+        "skillgrade"
+      ],
+      "site_stars": 1900,
+      "site_forks": 131,
+      "license": "not verified",
+      "lastPushed": "2026-05-24T00:00:00Z",
+      "localPath": "raw-github/mgechev_skills-best-practices.md",
+      "local_git": null,
+      "report": "projects/223-skills-best-practices-agent-skill-authoring.md",
+      "public_report": "site/public/reports/projects/223-skills-best-practices-agent-skill-authoring.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/mgechev_skills-best-practices.md",
+      "raw_collected_at": "2026-05-26T03:41:36+08:00",
+      "raw_content_timestamp": "2026-05-24",
+      "raw_timestamp_source": "web_observed_public_github_page_and_skills_hub_sync_2026_05_24",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web-observed GitHub and Skills Hub evidence showed about 1.9k stars, 131 forks, 5 commits, Python language signal, professional-grade agent skill authoring guidance, progressive disclosure rules, validation workflow, skillgrade linkage and Skills Hub upstream sync on 2026-05-24; metadata is web-observed, not API-verified.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
       "evolution_focused": false
     },
     {

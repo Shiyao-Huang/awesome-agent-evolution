@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T02:39:02+08:00",
+  "generated_at": "2026-05-26T03:41:36+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -180,7 +180,8 @@
         "raw-github/razroo_state-trace.md",
         "raw-github/nirdiamant_agent_memory_techniques.md",
         "raw-github/shareai-lab_kbench.md",
-        "raw-github/paradigmxyz_evmbench.md"
+        "raw-github/paradigmxyz_evmbench.md",
+        "raw-github/mgechev_skills-best-practices.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -240,7 +241,8 @@
         "work/research/hourly-public-metadata-update-2026-05-25-2335.md",
         "work/research/hourly-public-metadata-update-2026-05-25-1648.md",
         "work/research/hourly-public-metadata-update-2026-05-26-0036.md",
-        "work/research/hourly-public-metadata-update-2026-05-26-0239.md"
+        "work/research/hourly-public-metadata-update-2026-05-26-0239.md",
+        "work/research/hourly-public-metadata-update-2026-05-26-0341.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -569,7 +571,9 @@
         "projects/221-kbench-agent-harness-benchmark-cli.md",
         "site/public/reports/projects/221-kbench-agent-harness-benchmark-cli.md",
         "projects/222-evmbench-smart-contract-agent-harness.md",
-        "site/public/reports/projects/222-evmbench-smart-contract-agent-harness.md"
+        "site/public/reports/projects/222-evmbench-smart-contract-agent-harness.md",
+        "projects/223-skills-best-practices-agent-skill-authoring.md",
+        "site/public/reports/projects/223-skills-best-practices-agent-skill-authoring.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -647,7 +651,8 @@
       "2026-05-25T05:11+08: GitHub pages opened through browser/search tool for wanxingai/LightAgent, agent-skills-hub/agent-skills-hub, thClaws/thClaws, Memento-Teams/Memento-Skills, FreedomIntelligence/OpenClaw-Medical-Skills, agent-sh/agentsys.",
       "2026-05-25T12:21+08: GitHub pages opened through browser/search tool for OthmanAdi/planning-with-files, affaan-m/ECC, kks0488/vibe-codex, farmage/opencode-skills, cyijun/agent-smith, galyarderlabs/galyarder-framework, and quzhiii/thesis-skills.",
       "2026-05-25T13:21+08: GitHub pages opened through browser/search tool for PaulRBerg/agent-skills, ComposioHQ/awesome-codex-skills, eigent-ai/agent-skills, MoizIbnYousaf/Ai-Agent-Skills, howells/arc, Gentleman-Programming/Gentleman-Skills, togethercomputer/skills.",
-      "2026-05-25T14:23+08: GitHub/arXiv pages opened through browser/search tool for DSAIL-Memory/EvoMemBench, Signet-AI/signetai, MemPalace/mempalace, and jcartu/rasputin-memory."
+      "2026-05-25T14:23+08: GitHub/arXiv pages opened through browser/search tool for DSAIL-Memory/EvoMemBench, Signet-AI/signetai, MemPalace/mempalace, and jcartu/rasputin-memory.",
+      "2026-05-26T03:41+08: GitHub and Skills Hub pages opened through browser/search tool for mgechev/skills-best-practices."
     ],
     "shell_network": [
       "curl https://api.github.com/rate_limit failed: Could not resolve host: api.github.com.",
@@ -666,7 +671,8 @@
       "2026-05-25T05:11+08: curl -I --max-time 10 https://api.github.com failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
       "2026-05-25T12:21+08: curl -I -L --max-time 12 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
       "2026-05-25T13:21+08: curl -I -L --max-time 12 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
-      "2026-05-25T14:23+08: curl -I -L --max-time 12 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang."
+      "2026-05-25T14:23+08: curl -I -L --max-time 12 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
+      "2026-05-26T03:41+08: curl https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang."
     ],
     "gitnexus": [
       "gitnexus doctor succeeded with GitNexus 1.6.5 and graph/full-text/vector capabilities available.",
@@ -770,28 +776,26 @@
       "work/research/hourly-public-metadata-update-2026-05-25-0511.md",
       "work/research/hourly-public-metadata-update-2026-05-25-1221.md",
       "work/research/hourly-public-metadata-update-2026-05-25-1321.md",
-      "work/research/hourly-public-metadata-update-2026-05-25-1423.md"
+      "work/research/hourly-public-metadata-update-2026-05-25-1423.md",
+      "work/research/hourly-public-metadata-update-2026-05-26-0341.md"
     ]
   },
   "current_run_evidence": [
-    "Web-observed repos this run: microsoft/waza, wazionapps/nexo, razroo/state-trace; no clone, benchmark, or authenticated GitHub API freshness was claimed.",
-    "New raw files: raw-github/microsoft_waza.md, raw-github/wazionapps_nexo.md, raw-github/razroo_state-trace.md.",
-    "New public model cards and site reports: projects/site reports 217-219 for Waza, NEXO Brain and state-trace.",
-    "Generated target counts after this scripted update: raw=501, classified=501, site projects=92, strict evolution=79, broad evolution=180, theme heat memory=102/evaluation=91/evolution=79/skill=62.",
+    "Web-observed repo this run: mgechev/skills-best-practices; no clone, skill install, benchmark, or authenticated GitHub API freshness was claimed.",
+    "New raw file: raw-github/mgechev_skills-best-practices.md.",
+    "New public model card and site report: project/report id 223 for Skills Best Practices.",
     "GitHub API blocker: curl api.github.com failed DNS resolution and gh auth status reported an invalid token for Shiyao-Huang.",
-    "GitNexus evidence: status is stale at indexed commit 85247b7 before this iteration; analyze is degraded because global HOME registry writes are blocked and temp-HOME LadybugDB FTS extension download cannot connect.",
+    "GitNexus evidence: status was up-to-date at indexed commit d98b10f before this iteration; analyze will be rerun after commit if available.",
     "Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> project report -> site data -> README/i18n/site build.",
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-26T02:39:02+08:00",
+    "run_at": "2026-05-26T03:41:36+08:00",
     "added_repositories": [
-      "NirDiamant/Agent_Memory_Techniques",
-      "shareAI-lab/kbench",
-      "paradigmxyz/evmbench"
+      "mgechev/skills-best-practices"
     ],
-    "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
+    "evidence_quality": "web_observed_public_github_page_and_skills_hub_sync; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "npx gitnexus analyze attempted incremental refresh and exited with EPERM writing /Users/copizzah/.gitnexus/registry.json; npx gitnexus status afterwards reported the committed head up-to-date."
+    "gitnexus_status": "npx gitnexus status reported indexed commit d98b10f and current commit d98b10f up-to-date before this iteration commit."
   }
 }

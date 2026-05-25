@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T02:39:02+08:00",
+  "generated_at": "2026-05-26T03:41:36+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -4005,6 +4005,21 @@
       "content_timestamp": "2026-05-26",
       "evidence": "web-observed GitHub page showed MIT license, 490 stars, 35 forks, TypeScript/Node.js stack, and Skillgrade README claims for Agent Skill evaluation with eval.yaml, smoke/reliable/regression presets, deterministic plus LLM-rubric graders, and Codex/Gemini/Claude/OpenCode/ACP targets; this is a skill evolution quality gate, not an API-verified benchmark rerun.",
       "description": "Skillgrade gives Agent Skills unit-test style evaluation so skill discovery and reuse can be measured through repeatable smoke, reliability and regression trials."
+    },
+    {
+      "repo": "mgechev/skills-best-practices",
+      "url": "https://github.com/mgechev/skills-best-practices",
+      "stars": "1900",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Python/Markdown/Agent Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web-observed GitHub and Skills Hub evidence showed about 1.9k stars, 131 forks, 5 commits, Python language signal, professional-grade agent skill authoring guidance, progressive disclosure rules, validation workflow, skillgrade linkage and Skills Hub upstream sync on 2026-05-24; metadata is web-observed, not API-verified.",
+      "description": "Skills Best Practices packages agent skill authoring into a reusable methodology: trigger-optimized metadata, lean SKILL.md files, deterministic scripts, references/assets and LLM-based validation checks."
     },
     {
       "repo": "microsoft/skills",
