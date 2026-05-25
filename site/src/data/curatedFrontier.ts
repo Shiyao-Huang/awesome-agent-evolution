@@ -1,13 +1,4 @@
-export type CuratedFrontierProject = {
-  rank: number;
-  repo: string;
-  url: string;
-  quality: string;
-  readmeRole: string;
-  tags: string[];
-};
-
-export const curatedFrontierProjects: CuratedFrontierProject[] = [
+export const curatedFrontierProjects = [
   {
     rank: 1,
     repo: 'china-qijizhifeng/agentic-Harness-engineering',
@@ -64,5 +55,5 @@ export const curatedFrontierProjects: CuratedFrontierProject[] = [
     readmeRole: 'Product/application signal',
     tags: ['product', 'ux', 'personal-agent']
   }
-];
+] as const;
 

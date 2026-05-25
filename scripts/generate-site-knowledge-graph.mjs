@@ -34,10 +34,8 @@ const keywordConcepts = [
 
 const nodes = new Map();
 const edges = new Map();
-
 const slug = (value) => encodeURIComponent(value.toLowerCase().trim().replace(/\s+/g, '-'));
 const nodeId = (type, value) => `${type}:${slug(value)}`;
-const titleCaseRepo = (repo) => repo.split('/').at(-1) || repo;
 
 function addNode(node) {
   const existing = nodes.get(node.id);
@@ -45,8 +43,7 @@ function addNode(node) {
 }
 
 function addEdge(edge) {
-  if (edge.source === edge.target) return;
-  edges.set(`${edge.source}->${edge.target}:${edge.type}`, edge);
+  if (edge.source !== edge.target) edges.set(`${edge.source}->${edge.target}:${edge.type}`, edge);
 }
 
 function addConceptEdges(sourceId, text) {
@@ -99,16 +96,15 @@ for (const line of readme.split('\n')) {
       source: 'README.md',
       group: heading || 'Papers'
     });
-    const yearId = nodeId('cluster', heading || 'Papers');
-    addNode({ id: yearId, label: heading || 'Papers', type: 'cluster', weight: 7, summary: 'README paper section' });
-    addEdge({ source: id, target: yearId, type: 'belongs_to', label: 'paper year/section' });
+    const groupId = nodeId('cluster', heading || 'Papers');
+    addNode({ id: groupId, label: heading || 'Papers', type: 'cluster', weight: 7, summary: 'README paper section' });
+    addEdge({ source: id, target: groupId, type: 'belongs_to', label: 'paper year/section' });
     addConceptEdges(id, `${title} ${tail} ${heading}`);
   }
 }
 
 for (const file of readdirSync(reviewDir).filter((name) => name.startsWith('review-') && name.endsWith('.md'))) {
-  const path = join(reviewDir, file);
-  const body = readFileSync(path, 'utf8');
+  const body = readFileSync(join(reviewDir, file), 'utf8');
   const firstHeading = body.match(/^#\s+(.+)$/m)?.[1];
   const arxiv = file.match(/review-([0-9]{4}\.[0-9]{4,5})/)?.[1] || file.replace(/^review-|\.md$/g, '');
   const title = firstHeading || file.replace(/^review-|\.md$/g, '').replaceAll('-', ' ');
@@ -123,27 +119,18 @@ for (const file of readdirSync(reviewDir).filter((name) => name.startsWith('revi
     source: `paper-reviews/${file}`,
     group: 'paper reviews'
   });
-  const reviewId = nodeId('cluster', 'paper reviews');
-  addNode({ id: reviewId, label: 'paper reviews', type: 'cluster', weight: 8, summary: 'Local reviewed paper corpus' });
-  addEdge({ source: id, target: reviewId, type: 'belongs_to', label: 'reviewed paper' });
+  const groupId = nodeId('cluster', 'paper reviews');
+  addNode({ id: groupId, label: 'paper reviews', type: 'cluster', weight: 8, summary: 'Local reviewed paper corpus' });
+  addEdge({ source: id, target: groupId, type: 'belongs_to', label: 'reviewed paper' });
   addConceptEdges(id, `${title} ${body.slice(0, 2000)}`);
 }
 
 for (const [repo, url, role, tags] of curatedFrontier) {
   const id = nodeId('project', repo);
-  addNode({
-    id,
-    label: titleCaseRepo(repo),
-    type: 'project',
-    url,
-    summary: role,
-    weight: 10,
-    source: 'curated frontier',
-    group: 'frontier projects'
-  });
-  const frontierId = nodeId('cluster', 'frontier projects');
-  addNode({ id: frontierId, label: 'frontier projects', type: 'cluster', weight: 10, summary: 'Manually ranked high-signal projects' });
-  addEdge({ source: id, target: frontierId, type: 'belongs_to', label: role });
+  addNode({ id, label: repo.split('/').at(-1), type: 'project', url, summary: role, weight: 10, source: 'curated frontier', group: 'frontier projects', frontier: true });
+  const groupId = nodeId('cluster', 'frontier projects');
+  addNode({ id: groupId, label: 'frontier projects', type: 'cluster', weight: 10, summary: 'Manually ranked high-signal projects' });
+  addEdge({ source: id, target: groupId, type: 'belongs_to', label: role });
   for (const tag of tags) {
     const conceptId = nodeId('concept', tag);
     addNode({ id: conceptId, label: tag, type: 'concept', weight: 7, summary: role });
@@ -156,7 +143,6 @@ const generated = {
   edges: [...edges.values()].sort((a, b) => a.source.localeCompare(b.source) || a.target.localeCompare(b.target))
 };
 
-const content = `export const generatedKnowledgeGraph = ${JSON.stringify(generated, null, 2)} as const;\n`;
-writeFileSync(join(root, 'site/src/data/generatedKnowledgeGraph.ts'), content);
+writeFileSync(join(root, 'site/src/data/generatedKnowledgeGraph.ts'), `export const generatedKnowledgeGraph = ${JSON.stringify(generated, null, 2)} as const;\n`);
 console.log(`generated ${generated.nodes.length} nodes and ${generated.edges.length} edges`);
 

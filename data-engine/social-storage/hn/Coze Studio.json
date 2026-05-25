@@ -1,0 +1,420 @@
+{
+  "project": "Coze Studio",
+  "repo": "coze-dev/coze-studio",
+  "collected_at": "2026-05-22T12:15:00.634806+00:00",
+  "total_hits": 51,
+  "results": {
+    "Coze Studio": [
+      {
+        "objectID": "44689611",
+        "title": "Coze Studio: all-in-one AI agent development tool",
+        "points": 3,
+        "num_comments": 0,
+        "author": "shenli3514",
+        "created_at": "2025-07-25T23:11:35Z"
+      },
+      {
+        "objectID": "9459364",
+        "title": "Microsoft Launches Visual Studio Code, a Free Cross-Platform Code Editor",
+        "points": 1608,
+        "num_comments": 543,
+        "author": "TiredOfLife",
+        "created_at": "2015-04-29T16:20:57Z"
+      },
+      {
+        "objectID": "10588264",
+        "title": "Visual Studio Code is now open source",
+        "points": 1325,
+        "num_comments": 391,
+        "author": "BruceM",
+        "created_at": "2015-11-18T15:39:59Z"
+      },
+      {
+        "objectID": "11498000",
+        "title": "Visual Studio Code 1.0",
+        "points": 966,
+        "num_comments": 461,
+        "author": "lukehoban",
+        "created_at": "2016-04-14T16:23:01Z"
+      },
+      {
+        "objectID": "24558788",
+        "title": "The Era of Visual Studio Code",
+        "points": 647,
+        "num_comments": 672,
+        "author": "robenkleene",
+        "created_at": "2020-09-22T19:30:49Z"
+      },
+      {
+        "objectID": "18620404",
+        "title": "The Rise of Microsoft Visual Studio Code",
+        "points": 479,
+        "num_comments": 313,
+        "author": "Harj",
+        "created_at": "2018-12-06T18:00:41Z"
+      },
+      {
+        "objectID": "11217542",
+        "title": "Visual Studio Code for Go",
+        "points": 468,
+        "num_comments": 218,
+        "author": "rdudekul",
+        "created_at": "2016-03-03T15:49:17Z"
+      },
+      {
+        "objectID": "19650109",
+        "title": "VSCodium – An Open Source Visual Studio Code Without Trackers",
+        "points": 464,
+        "num_comments": 253,
+        "author": "arthurz",
+        "created_at": "2019-04-13T00:00:05Z"
+      },
+      {
+        "objectID": "19561718",
+        "title": "Gimli – A Visual Studio Code extension for front-end developers",
+        "points": 464,
+        "num_comments": 90,
+        "author": "gimliapp",
+        "created_at": "2019-04-03T08:22:37Z"
+      },
+      {
+        "objectID": "12859347",
+        "title": "Visual Studio Code 1.7",
+        "points": 454,
+        "num_comments": 169,
+        "author": "mpalme",
+        "created_at": "2016-11-02T21:14:46Z"
+      },
+      {
+        "objectID": "13553000",
+        "title": "Visual Studio Code 1.9",
+        "points": 451,
+        "num_comments": 293,
+        "author": "jrwiegand",
+        "created_at": "2017-02-02T18:23:37Z"
+      },
+      {
+        "objectID": "24047638",
+        "title": "The best Parts of Visual Studio Code are proprietary",
+        "points": 439,
+        "num_comments": 269,
+        "author": "ingve",
+        "created_at": "2020-08-04T07:42:40Z"
+      },
+      {
+        "objectID": "12679440",
+        "title": "Visual Studio Code 1.6",
+        "points": 429,
+        "num_comments": 223,
+        "author": "kevlened",
+        "created_at": "2016-10-10T20:04:59Z"
+      },
+      {
+        "objectID": "13179525",
+        "title": "Visual Studio Code 1.8",
+        "points": 407,
+        "num_comments": 190,
+        "author": "kentor",
+        "created_at": "2016-12-14T20:50:17Z"
+      },
+      {
+        "objectID": "41691577",
+        "title": "Visual Studio Code is designed to fracture (2022)",
+        "points": 405,
+        "num_comments": 345,
+        "author": "ghuntley",
+        "created_at": "2024-09-29T22:55:34Z"
+      },
+      {
+        "objectID": "12456136",
+        "title": "Visual Studio Code 1.5",
+        "points": 379,
+        "num_comments": 258,
+        "author": "out_of_protocol",
+        "created_at": "2016-09-08T18:57:33Z"
+      },
+      {
+        "objectID": "17925842",
+        "title": "Python in Visual Studio Code",
+        "points": 340,
+        "num_comments": 195,
+        "author": "rbanffy",
+        "created_at": "2018-09-06T12:53:07Z"
+      },
+      {
+        "objectID": "16198369",
+        "title": "Org-Mode for Visual Studio Code",
+        "points": 331,
+        "num_comments": 124,
+        "author": "_lbaq",
+        "created_at": "2018-01-21T15:26:14Z"
+      },
+      {
+        "objectID": "29635300",
+        "title": "RCE in Visual Studio Code's Remote WSL for Fun and Negative Profit",
+        "points": 327,
+        "num_comments": 102,
+        "author": "gmemstr",
+        "created_at": "2021-12-21T08:38:51Z"
+      },
+      {
+        "objectID": "37623562",
+        "title": "Blocking Visual Studio Code embedded reverse shell before it's too late",
+        "points": 310,
+        "num_comments": 83,
+        "author": "GavinAnderegg",
+        "created_at": "2023-09-23T14:29:55Z"
+      },
+      {
+        "objectID": "12860806",
+        "title": "Visual Studio Code 1.7 overloaded npmjs.org, release reverted",
+        "points": 302,
+        "num_comments": 85,
+        "author": "eiopa",
+        "created_at": "2016-11-03T01:07:03Z"
+      },
+      {
+        "objectID": "45941835",
+        "title": "IDEmacs: A Visual Studio Code clone for Emacs",
+        "points": 301,
+        "num_comments": 181,
+        "author": "nogajun",
+        "created_at": "2025-11-16T00:56:31Z"
+      },
+      {
+        "objectID": "46713526",
+        "title": "Threat actors expand abuse of Microsoft Visual Studio Code",
+        "points": 291,
+        "num_comments": 301,
+        "author": "vinnyglennon",
+        "created_at": "2026-01-22T00:12:00Z"
+      },
+      {
+        "objectID": "13768320",
+        "title": "Visual Studio Code 1.10",
+        "points": 286,
+        "num_comments": 139,
+        "author": "jrwiegand",
+        "created_at": "2017-03-01T21:04:43Z"
+      },
+      {
+        "objectID": "12228610",
+        "title": "Visual Studio Code 1.4",
+        "points": 285,
+        "num_comments": 152,
+        "author": "joseraul",
+        "created_at": "2016-08-04T21:28:35Z"
+      },
+      {
+        "objectID": "11852862",
+        "title": "Visual Studio Code 1.2 released",
+        "points": 278,
+        "num_comments": 156,
+        "author": "cryptos",
+        "created_at": "2016-06-07T06:57:59Z"
+      },
+      {
+        "objectID": "15048424",
+        "title": "Try Out Rust IDE Support in Visual Studio Code",
+        "points": 265,
+        "num_comments": 82,
+        "author": "Rusky",
+        "created_at": "2017-08-18T18:06:50Z"
+      },
+      {
+        "objectID": "32657709",
+        "title": "Visual Studio Code is designed to fracture",
+        "points": 264,
+        "num_comments": 142,
+        "author": "ghuntley",
+        "created_at": "2022-08-31T02:38:00Z"
+      },
+      {
+        "objectID": "14137563",
+        "title": "Show HN: Visual Studio Code for ARM, submitted to core",
+        "points": 236,
+        "num_comments": 83,
+        "author": "headmelted",
+        "created_at": "2017-04-18T10:13:35Z"
+      },
+      {
+        "objectID": "12865834",
+        "title": "Visual Studio Code 1.7.1",
+        "points": 233,
+        "num_comments": 140,
+        "author": "okket",
+        "created_at": "2016-11-03T17:09:18Z"
+      },
+      {
+        "objectID": "13222063",
+        "title": "Mdmath – LaTeX Math for Markdown inside of Visual Studio Code",
+        "points": 225,
+        "num_comments": 61,
+        "author": "fango",
+        "created_at": "2016-12-20T17:45:02Z"
+      },
+      {
+        "objectID": "40825146",
+        "title": "Open source 'Eclipse Theia IDE' exits beta to challenge Visual Studio Code",
+        "points": 222,
+        "num_comments": 180,
+        "author": "avivallssa",
+        "created_at": "2024-06-28T20:49:23Z"
+      },
+      {
+        "objectID": "45263063",
+        "title": "Microsoft Favors Anthropic over OpenAI for Visual Studio Code",
+        "points": 213,
+        "num_comments": 99,
+        "author": "corvad",
+        "created_at": "2025-09-16T14:48:37Z"
+      },
+      {
+        "objectID": "14065414",
+        "title": "Visual Studio Code: Shipping One of the Largest Microsoft JavaScript Apps",
+        "points": 208,
+        "num_comments": 141,
+        "author": "eklavyaa",
+        "created_at": "2017-04-08T05:08:01Z"
+      },
+      {
+        "objectID": "42290861",
+        "title": "Programming the C64 with Visual Studio Code",
+        "points": 188,
+        "num_comments": 37,
+        "author": "rbanffy",
+        "created_at": "2024-12-01T21:29:38Z"
+      },
+      {
+        "objectID": "46799435",
+        "title": "VisualJJ – Jujutsu in Visual Studio Code",
+        "points": 181,
+        "num_comments": 89,
+        "author": "demail",
+        "created_at": "2026-01-28T18:20:35Z"
+      },
+      {
+        "objectID": "22738607",
+        "title": "Eclipse Theia 1.0 – Open-Source Alternative to Visual Studio Code",
+        "points": 178,
+        "num_comments": 147,
+        "author": "eiffel31",
+        "created_at": "2020-03-31T15:41:34Z"
+      },
+      {
+        "objectID": "44058299",
+        "title": "Kotlin-Lsp: Kotlin Language Server and Plugin for Visual Studio Code",
+        "points": 175,
+        "num_comments": 119,
+        "author": "todsacerdoti",
+        "created_at": "2025-05-22T02:46:47Z"
+      },
+      {
+        "objectID": "24653911",
+        "title": "Bringing the browser developer tools to Visual Studio Code",
+        "points": 160,
+        "num_comments": 43,
+        "author": "PretzelFisch",
+        "created_at": "2020-10-01T17:42:27Z"
+      },
+      {
+        "objectID": "12956566",
+        "title": "Show HN: Visual Studio Code for Chromebooks and Raspberry Pi",
+        "points": 157,
+        "num_comments": 6,
+        "author": "headmelted",
+        "created_at": "2016-11-15T08:46:38Z"
+      }
+    ],
+    "coze-studio": [
+      {
+        "objectID": "44689611",
+        "title": "Coze Studio: all-in-one AI agent development tool",
+        "points": 3,
+        "num_comments": 0,
+        "author": "shenli3514",
+        "created_at": "2025-07-25T23:11:35Z"
+      },
+      {
+        "objectID": "14590895",
+        "title": "Fuze Code Studio will let kids use the Switch to code their own Switch games",
+        "points": 35,
+        "num_comments": 6,
+        "author": "vanburen",
+        "created_at": "2017-06-19T22:23:23Z"
+      },
+      {
+        "objectID": "14598230",
+        "title": "FUZE Code Studio for Nintendo Switch",
+        "points": 3,
+        "num_comments": 0,
+        "author": "Larrikin",
+        "created_at": "2017-06-20T20:20:14Z"
+      },
+      {
+        "objectID": "14588724",
+        "title": "FUZE Code Studio for Nintendo Switch",
+        "points": 3,
+        "num_comments": 0,
+        "author": "alxmdev",
+        "created_at": "2017-06-19T17:34:54Z"
+      },
+      {
+        "objectID": "8306660",
+        "title": "Code.org Launches Code Studio for Teaching Kids Programming",
+        "points": 1,
+        "num_comments": 0,
+        "author": "davidst",
+        "created_at": "2014-09-12T05:02:56Z"
+      },
+      {
+        "objectID": "16483116",
+        "title": "Visual Code Studio JavaScript Turbo Console Log",
+        "points": 1,
+        "num_comments": 0,
+        "author": "chakroun-anas",
+        "created_at": "2018-02-28T14:23:28Z"
+      },
+      {
+        "objectID": "13458962",
+        "title": "This morning’s technical difficulties on Code Studio",
+        "points": 1,
+        "num_comments": 0,
+        "author": "protomyth",
+        "created_at": "2017-01-23T01:30:20Z"
+      },
+      {
+        "objectID": "2903638",
+        "title": "Show HN: itsAlmo.st",
+        "points": 2,
+        "num_comments": 0,
+        "author": "amahon",
+        "created_at": "2011-08-19T15:16:15Z"
+      },
+      {
+        "objectID": "36106501",
+        "title": "„Critical Code Studies“",
+        "points": 28,
+        "num_comments": 3,
+        "author": "MrBuddyCasino",
+        "created_at": "2023-05-28T18:29:07Z"
+      },
+      {
+        "objectID": "2145306",
+        "title": "Critical Code Studies 2010 Conference Proceedings",
+        "points": 2,
+        "num_comments": 1,
+        "author": "steveklabnik",
+        "created_at": "2011-01-26T21:43:58Z"
+      },
+      {
+        "objectID": "5742899",
+        "title": "Can we become better programmers through studying code?",
+        "points": 5,
+        "num_comments": 8,
+        "author": "jakubholynet",
+        "created_at": "2013-05-21T11:08:48Z"
+      }
+    ]
+  }
+}

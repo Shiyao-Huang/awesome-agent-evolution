@@ -1,75 +1,42 @@
 # Data Engine Daily Report
 
-> Generated: 2026-05-22T11:58:08.330405+00:00
+> Generated: 2026-05-22T12:17:23.812067+00:00
 
 ## Hype Score Rankings
 
-Projects scored: 54
+| # | Project | Score | Class | Stars | Sources |
+|---|---------|-------|-------|-------|---------|
+| 1 | openclaw | 100.0 | viral | 373880 | openclaw_openclaw_stats.json |
+| 2 | claw-code | 99.7 | viral | 192223 | ultraworkers_claw-code_stats.json |
+| 3 | hermes-agent | 98.3 | viral | 162449 | NousResearch_hermes-agent_stats.json |
+| 4 | langchain | 96.9 | viral | 137380 | langchain-ai_langchain_stats.json |
+| 5 | browser-use | 93.9 | viral | 95082 | browser-use_browser-use_stats.json |
+| 6 | OpenHands | 91.9 | viral | 74504 | All-Hands-AI_OpenHands_stats.json |
+| 7 | mem0 | 89.6 | viral | 56425 | mem0ai_mem0_stats.json |
+| 8 | dspy | 85.6 | viral | 34584 | stanfordnlp_dspy_stats.json |
+| 9 | letta | 82.2 | viral | 22886 | letta-ai_letta_stats.json |
+| 10 | babyagi | 82.0 | viral | 22271 | yoheinakajima_babyagi_stats.json |
+| 11 | agent-zero | 80.2 | viral | 17763 | agent0ai_agent-zero_stats.json |
+| 12 | SuperAGI | 80.1 | viral | 17533 | TransformerOptimus_SuperAGI_stats.json |
+| 13 | cognee | 80.0 | viral | 17444 | topoteretes_cognee_stats.json |
+| 14 | memvid | 79.1 | viral | 15549 | memvid_memvid_stats.json |
+| 15 | evolver | 73.1 | viral | 7530 | EvoMap_evolver_stats.json |
+| 16 | openevolve | 71.8 | viral | 6361 | algorithmicsuperintelligence_openevolve_stats.json |
+| 17 | EvoAgentX | 65.7 | viral | 3029 | EvoAgentX_EvoAgentX_stats.json |
+| 18 | HyperAgents | 64.1 | steady | 2513 | facebookresearch_HyperAgents_stats.json |
+| 19 | ADAS | 60.3 | steady | 1579 | ShengranHu_ADAS_stats.json |
+| 20 | funsearch | 57.1 | steady | 1064 | google-deepmind_funsearch_stats.json |
+| 21 | opro | 54.2 | steady | 746 | google-deepmind_opro_stats.json |
 
-| # | Project | Score | Class | Sources |
-|---|---------|-------|-------|---------|
-| 1 | Agent Zero | 50.0 | steady | reddit |
-| 2 | AgenticSeek | 50.0 | steady | reddit |
-| 3 | Eliza | 50.0 | steady | reddit |
-| 4 | EvoAgentX | 50.0 | steady | reddit |
-| 5 | Google ADK | 50.0 | steady | reddit |
-| 6 | HyperAgents | 50.0 | steady | reddit |
-| 7 | LangChain | 50.0 | steady | reddit |
-| 8 | Letta | 50.0 | steady | reddit |
-| 9 | Ollama | 50.0 | steady | reddit |
-| 10 | OpenEvolve | 50.0 | steady | reddit |
-| 11 | OpenFang | 50.0 | steady | reddit |
-| 12 | OpenHands | 50.0 | steady | reddit |
-| 13 | SuperAGI | 50.0 | steady | reddit |
-| 14 | dify | 50.0 | steady | reddit |
-| 15 | evolver | 50.0 | steady | reddit |
-| 16 | haystack | 50.0 | steady | reddit |
-| 17 | n8n | 50.0 | steady | reddit |
-| 18 | Open WebUI | 47.6 | steady | reddit |
-| 19 | Flowise | 41.1 | organic | reddit |
-| 20 | Aider | 38.5 | organic | reddit, scholar |
-| 21 | Claude Code | 38.5 | organic | reddit, scholar |
-| 22 | Codex | 38.5 | organic | reddit, scholar |
-| 23 | CowAgent | 38.5 | organic | reddit, scholar |
-| 24 | Roo Code | 38.5 | organic | reddit, scholar |
-| 25 | agent-skills | 38.5 | organic | reddit, scholar |
-| 26 | agno | 38.5 | organic | reddit, scholar |
-| 27 | goose | 38.5 | organic | reddit, scholar |
-| 28 | Mem0 | 38.0 | organic | reddit |
-| 29 | Memvid | 37.2 | organic | reddit |
-| 30 | mastra | 34.9 | organic | reddit, scholar |
+## Anomalies
 
-... and 24 more projects
+Flagged: 0/21
 
 
-## Anomaly Detection
+## Propagation
 
-Flagged: 19/54
+Multi-platform: 0/21
 
-- **Agent Zero** (1): duplicate_content
-- **AgenticSeek** (1): duplicate_content
-- **Aider** (1): duplicate_content
-- **Claude Code** (1): duplicate_content
-- **Codex** (1): duplicate_content
-- **Cognee** (1): duplicate_content
-- **Coze Studio** (1): duplicate_content
-- **Eliza** (1): duplicate_content
-- **Flowise** (1): duplicate_content
-- **LangChain** (1): duplicate_content
-
-## Propagation Chains
-
-Multi-platform: 9/54
-
-- **Aider**: 51 events (reddit, scholar)
-- **Claude Code**: 51 events (reddit, scholar)
-- **Codex**: 51 events (reddit, scholar)
-- **CowAgent**: 51 events (reddit, scholar)
-- **Roo Code**: 51 events (reddit, scholar)
-- **agent-skills**: 26 events (reddit, scholar)
-- **agno**: 26 events (reddit, scholar)
-- **goose**: 26 events (reddit, scholar)
-- **mastra**: 26 events (reddit, scholar)
 
 ---
 *Self Evolve Data Engine — 2026-05-22*

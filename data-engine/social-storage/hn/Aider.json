@@ -1,0 +1,652 @@
+{
+  "project": "Aider",
+  "repo": "Aider-AI/aider",
+  "collected_at": "2026-05-22T12:16:58.757206+00:00",
+  "total_hits": 80,
+  "results": {
+    "Aider": [
+      {
+        "objectID": "39995725",
+        "title": "Aider: AI pair programming in your terminal",
+        "points": 432,
+        "num_comments": 156,
+        "author": "tosh",
+        "created_at": "2024-04-10T21:06:42Z"
+      },
+      {
+        "objectID": "39838169",
+        "title": "Claude 3 beats GPT-4 on Aider's code editing benchmark",
+        "points": 202,
+        "num_comments": 228,
+        "author": "goranmoomin",
+        "created_at": "2024-03-27T12:31:06Z"
+      },
+      {
+        "objectID": "43719447",
+        "title": "Show HN: AgentAPI – HTTP API for Claude Code, Goose, Aider, and Codex",
+        "points": 163,
+        "num_comments": 15,
+        "author": "hugodutka",
+        "created_at": "2025-04-17T16:54:58Z"
+      },
+      {
+        "objectID": "43672712",
+        "title": "Wasting Inferences with Aider",
+        "points": 139,
+        "num_comments": 105,
+        "author": "Stwerner",
+        "created_at": "2025-04-13T13:36:17Z"
+      },
+      {
+        "objectID": "40349655",
+        "title": "GPT-4o takes #1 and #2 on the Aider LLM leaderboards",
+        "points": 48,
+        "num_comments": 7,
+        "author": "hhh",
+        "created_at": "2024-05-13T23:09:26Z"
+      },
+      {
+        "objectID": "43276038",
+        "title": "Aider: Using Uv as an Installer",
+        "points": 39,
+        "num_comments": 14,
+        "author": "anotherpaulg",
+        "created_at": "2025-03-06T03:18:06Z"
+      },
+      {
+        "objectID": "41944284",
+        "title": "Copilot vs. Cursor vs. Cody vs. Supermaven vs. Aider",
+        "points": 27,
+        "num_comments": 10,
+        "author": "vincent_s",
+        "created_at": "2024-10-25T11:41:04Z"
+      },
+      {
+        "objectID": "42653516",
+        "title": "Aider in Your IDE",
+        "points": 22,
+        "num_comments": 9,
+        "author": "hboon",
+        "created_at": "2025-01-10T07:37:54Z"
+      },
+      {
+        "objectID": "43047555",
+        "title": "Aider: AI pair programming in your terminal",
+        "points": 21,
+        "num_comments": 3,
+        "author": "vishesh92",
+        "created_at": "2025-02-14T12:09:03Z"
+      },
+      {
+        "objectID": "43674180",
+        "title": "Show HN: Navigator Mode (Like Claude Code) for Aider",
+        "points": 16,
+        "num_comments": 5,
+        "author": "tekacs",
+        "created_at": "2025-04-13T17:00:35Z"
+      },
+      {
+        "objectID": "45945379",
+        "title": "The new Aider-CE fork of Aider is now official",
+        "points": 14,
+        "num_comments": 3,
+        "author": "tomjuggler",
+        "created_at": "2025-11-16T14:28:22Z"
+      },
+      {
+        "objectID": "44081418",
+        "title": "Ask HN: What's your favorite architect/editor pair with Aider?",
+        "points": 14,
+        "num_comments": 1,
+        "author": "34679",
+        "created_at": "2025-05-24T14:37:19Z"
+      },
+      {
+        "objectID": "40745710",
+        "title": "Claude 3.5 Sonnet takes the top spot on Aider LLM Leaderboards",
+        "points": 14,
+        "num_comments": 0,
+        "author": "Terretta",
+        "created_at": "2024-06-21T03:00:56Z"
+      },
+      {
+        "objectID": "152135",
+        "title": "AideRSS + GoogleReader = solve information overload ",
+        "points": 7,
+        "num_comments": 3,
+        "author": "igrigorik",
+        "created_at": "2008-04-01T15:32:20Z"
+      },
+      {
+        "objectID": "43719441",
+        "title": "Experiments with Writing Haskell with Aider",
+        "points": 6,
+        "num_comments": 0,
+        "author": "runeks",
+        "created_at": "2025-04-17T16:54:38Z"
+      },
+      {
+        "objectID": "42815104",
+        "title": "R1+Sonnet set SOTA on aider's polyglot benchmark",
+        "points": 6,
+        "num_comments": 0,
+        "author": "ingve",
+        "created_at": "2025-01-24T17:03:38Z"
+      },
+      {
+        "objectID": "43567377",
+        "title": "Show HN: Aider-script – create and run reusable LLM prompt templates",
+        "points": 5,
+        "num_comments": 3,
+        "author": "sgrowe",
+        "created_at": "2025-04-03T10:07:35Z"
+      },
+      {
+        "objectID": "43419077",
+        "title": "Show HN: Claude Code vs. Aider – Comparing Two Command Line Coding Utilities",
+        "points": 5,
+        "num_comments": 1,
+        "author": "qemqemqem",
+        "created_at": "2025-03-20T01:26:36Z"
+      },
+      {
+        "objectID": "41527970",
+        "title": "OpenAI o1-preview is SOTA on the aider leaderboard",
+        "points": 5,
+        "num_comments": 1,
+        "author": "anotherpaulg",
+        "created_at": "2024-09-13T04:11:26Z"
+      },
+      {
+        "objectID": "40285134",
+        "title": "Aider LLM Leaderboards",
+        "points": 5,
+        "num_comments": 1,
+        "author": "anotherpaulg",
+        "created_at": "2024-05-07T13:22:39Z"
+      },
+      {
+        "objectID": "43195221",
+        "title": "Vibe Coding with Aider: Tips and Tricks",
+        "points": 5,
+        "num_comments": 0,
+        "author": "bitforger",
+        "created_at": "2025-02-27T15:28:07Z"
+      },
+      {
+        "objectID": "40589048",
+        "title": "Aider Is SOTA for Both SWE Bench and SWE Bench Lite",
+        "points": 5,
+        "num_comments": 0,
+        "author": "vok",
+        "created_at": "2024-06-05T19:10:03Z"
+      },
+      {
+        "objectID": "44693354",
+        "title": "Ask HN: Claude Code–style agent, but Aider-like and model-agnostic?",
+        "points": 4,
+        "num_comments": 2,
+        "author": "dsrtslnd23",
+        "created_at": "2025-07-26T11:50:56Z"
+      },
+      {
+        "objectID": "40477191",
+        "title": "How Aider Scored SOTA 26.3% on SWE Bench Lite",
+        "points": 4,
+        "num_comments": 1,
+        "author": "anotherpaulg",
+        "created_at": "2024-05-25T19:18:37Z"
+      },
+      {
+        "objectID": "37837695",
+        "title": "Aider: AI pair programming in your terminal",
+        "points": 4,
+        "num_comments": 1,
+        "author": "telotortium",
+        "created_at": "2023-10-10T21:20:32Z"
+      },
+      {
+        "objectID": "96546",
+        "title": "AideRSS Raises Money To Attack Information Overload With RSS Filtering",
+        "points": 4,
+        "num_comments": 0,
+        "author": "dood",
+        "created_at": "2008-01-09T22:02:27Z"
+      },
+      {
+        "objectID": "45140010",
+        "title": "The Aider Local Model Experience",
+        "points": 4,
+        "num_comments": 0,
+        "author": "llllm",
+        "created_at": "2025-09-05T15:56:08Z"
+      },
+      {
+        "objectID": "35901649",
+        "title": "Show HN: Aider, a command line GPT coding copilot",
+        "points": 3,
+        "num_comments": 4,
+        "author": "anotherpaulg",
+        "created_at": "2023-05-11T13:23:12Z"
+      },
+      {
+        "objectID": "39642655",
+        "title": "Claude 3 beats GPT-4 on Aider's code editing benchmark",
+        "points": 3,
+        "num_comments": 3,
+        "author": "anotherpaulg",
+        "created_at": "2024-03-08T16:27:01Z"
+      },
+      {
+        "objectID": "43389992",
+        "title": "Refact.ai Agent and 3.7 Sonnet is the new #1 on Aider polyglot bench–76.4% score",
+        "points": 3,
+        "num_comments": 1,
+        "author": "bystrakowa",
+        "created_at": "2025-03-17T16:09:05Z"
+      },
+      {
+        "objectID": "42860692",
+        "title": "Aider.el: Aider (AI Pair Programming) Inside Emacs",
+        "points": 3,
+        "num_comments": 1,
+        "author": "kgwgk",
+        "created_at": "2025-01-29T02:11:16Z"
+      },
+      {
+        "objectID": "42859140",
+        "title": "Aider is AI pair programming in your terminal",
+        "points": 3,
+        "num_comments": 1,
+        "author": "jhund",
+        "created_at": "2025-01-28T22:47:16Z"
+      },
+      {
+        "objectID": "37087608",
+        "title": "Voice-to-Code with Aider",
+        "points": 3,
+        "num_comments": 1,
+        "author": "anotherpaulg",
+        "created_at": "2023-08-11T11:49:59Z"
+      },
+      {
+        "objectID": "47333990",
+        "title": "Why I (Still) Use Aider in 2026",
+        "points": 3,
+        "num_comments": 0,
+        "author": "s-sem",
+        "created_at": "2026-03-11T10:56:47Z"
+      },
+      {
+        "objectID": "44600565",
+        "title": "Use Pipx to Install Aider and Other Non-System-Managed Python Packages on Linux",
+        "points": 3,
+        "num_comments": 0,
+        "author": "supracarol",
+        "created_at": "2025-07-18T02:23:29Z"
+      },
+      {
+        "objectID": "44227707",
+        "title": "DeepSeek R1 0528 scored 71% on the aider polyglot coding benchmark (3rd)",
+        "points": 3,
+        "num_comments": 0,
+        "author": "amrrs",
+        "created_at": "2025-06-09T18:39:45Z"
+      },
+      {
+        "objectID": "39799946",
+        "title": "Aider – AI pair programming in your terminal",
+        "points": 3,
+        "num_comments": 0,
+        "author": "wofo",
+        "created_at": "2024-03-23T13:51:34Z"
+      },
+      {
+        "objectID": "39652701",
+        "title": "Claude 3 beats GPT-4 on Aider's code editing benchmark",
+        "points": 3,
+        "num_comments": 0,
+        "author": "striking",
+        "created_at": "2024-03-09T16:25:09Z"
+      },
+      {
+        "objectID": "38153854",
+        "title": "Show HN: I built an iPad game toddlers almost with aider AI pair programmer",
+        "points": 3,
+        "num_comments": 0,
+        "author": "derwiki",
+        "created_at": "2023-11-05T18:16:15Z"
+      },
+      {
+        "objectID": "43547742",
+        "title": "Refact.ai Agent got ~93% on Aider Polyglot bench: 0 user inputs, 100% autonomous",
+        "points": 2,
+        "num_comments": 1,
+        "author": "bystrakowa",
+        "created_at": "2025-04-01T15:11:42Z"
+      }
+    ],
+    "aider": [
+      {
+        "objectID": "39995725",
+        "title": "Aider: AI pair programming in your terminal",
+        "points": 432,
+        "num_comments": 156,
+        "author": "tosh",
+        "created_at": "2024-04-10T21:06:42Z"
+      },
+      {
+        "objectID": "39838169",
+        "title": "Claude 3 beats GPT-4 on Aider's code editing benchmark",
+        "points": 202,
+        "num_comments": 228,
+        "author": "goranmoomin",
+        "created_at": "2024-03-27T12:31:06Z"
+      },
+      {
+        "objectID": "43719447",
+        "title": "Show HN: AgentAPI – HTTP API for Claude Code, Goose, Aider, and Codex",
+        "points": 163,
+        "num_comments": 15,
+        "author": "hugodutka",
+        "created_at": "2025-04-17T16:54:58Z"
+      },
+      {
+        "objectID": "43672712",
+        "title": "Wasting Inferences with Aider",
+        "points": 139,
+        "num_comments": 105,
+        "author": "Stwerner",
+        "created_at": "2025-04-13T13:36:17Z"
+      },
+      {
+        "objectID": "40349655",
+        "title": "GPT-4o takes #1 and #2 on the Aider LLM leaderboards",
+        "points": 48,
+        "num_comments": 7,
+        "author": "hhh",
+        "created_at": "2024-05-13T23:09:26Z"
+      },
+      {
+        "objectID": "43276038",
+        "title": "Aider: Using Uv as an Installer",
+        "points": 39,
+        "num_comments": 14,
+        "author": "anotherpaulg",
+        "created_at": "2025-03-06T03:18:06Z"
+      },
+      {
+        "objectID": "41944284",
+        "title": "Copilot vs. Cursor vs. Cody vs. Supermaven vs. Aider",
+        "points": 27,
+        "num_comments": 10,
+        "author": "vincent_s",
+        "created_at": "2024-10-25T11:41:04Z"
+      },
+      {
+        "objectID": "42653516",
+        "title": "Aider in Your IDE",
+        "points": 22,
+        "num_comments": 9,
+        "author": "hboon",
+        "created_at": "2025-01-10T07:37:54Z"
+      },
+      {
+        "objectID": "43047555",
+        "title": "Aider: AI pair programming in your terminal",
+        "points": 21,
+        "num_comments": 3,
+        "author": "vishesh92",
+        "created_at": "2025-02-14T12:09:03Z"
+      },
+      {
+        "objectID": "43674180",
+        "title": "Show HN: Navigator Mode (Like Claude Code) for Aider",
+        "points": 16,
+        "num_comments": 5,
+        "author": "tekacs",
+        "created_at": "2025-04-13T17:00:35Z"
+      },
+      {
+        "objectID": "45945379",
+        "title": "The new Aider-CE fork of Aider is now official",
+        "points": 14,
+        "num_comments": 3,
+        "author": "tomjuggler",
+        "created_at": "2025-11-16T14:28:22Z"
+      },
+      {
+        "objectID": "44081418",
+        "title": "Ask HN: What's your favorite architect/editor pair with Aider?",
+        "points": 14,
+        "num_comments": 1,
+        "author": "34679",
+        "created_at": "2025-05-24T14:37:19Z"
+      },
+      {
+        "objectID": "40745710",
+        "title": "Claude 3.5 Sonnet takes the top spot on Aider LLM Leaderboards",
+        "points": 14,
+        "num_comments": 0,
+        "author": "Terretta",
+        "created_at": "2024-06-21T03:00:56Z"
+      },
+      {
+        "objectID": "152135",
+        "title": "AideRSS + GoogleReader = solve information overload ",
+        "points": 7,
+        "num_comments": 3,
+        "author": "igrigorik",
+        "created_at": "2008-04-01T15:32:20Z"
+      },
+      {
+        "objectID": "43719441",
+        "title": "Experiments with Writing Haskell with Aider",
+        "points": 6,
+        "num_comments": 0,
+        "author": "runeks",
+        "created_at": "2025-04-17T16:54:38Z"
+      },
+      {
+        "objectID": "42815104",
+        "title": "R1+Sonnet set SOTA on aider's polyglot benchmark",
+        "points": 6,
+        "num_comments": 0,
+        "author": "ingve",
+        "created_at": "2025-01-24T17:03:38Z"
+      },
+      {
+        "objectID": "43567377",
+        "title": "Show HN: Aider-script – create and run reusable LLM prompt templates",
+        "points": 5,
+        "num_comments": 3,
+        "author": "sgrowe",
+        "created_at": "2025-04-03T10:07:35Z"
+      },
+      {
+        "objectID": "43419077",
+        "title": "Show HN: Claude Code vs. Aider – Comparing Two Command Line Coding Utilities",
+        "points": 5,
+        "num_comments": 1,
+        "author": "qemqemqem",
+        "created_at": "2025-03-20T01:26:36Z"
+      },
+      {
+        "objectID": "41527970",
+        "title": "OpenAI o1-preview is SOTA on the aider leaderboard",
+        "points": 5,
+        "num_comments": 1,
+        "author": "anotherpaulg",
+        "created_at": "2024-09-13T04:11:26Z"
+      },
+      {
+        "objectID": "40285134",
+        "title": "Aider LLM Leaderboards",
+        "points": 5,
+        "num_comments": 1,
+        "author": "anotherpaulg",
+        "created_at": "2024-05-07T13:22:39Z"
+      },
+      {
+        "objectID": "43195221",
+        "title": "Vibe Coding with Aider: Tips and Tricks",
+        "points": 5,
+        "num_comments": 0,
+        "author": "bitforger",
+        "created_at": "2025-02-27T15:28:07Z"
+      },
+      {
+        "objectID": "40589048",
+        "title": "Aider Is SOTA for Both SWE Bench and SWE Bench Lite",
+        "points": 5,
+        "num_comments": 0,
+        "author": "vok",
+        "created_at": "2024-06-05T19:10:03Z"
+      },
+      {
+        "objectID": "44693354",
+        "title": "Ask HN: Claude Code–style agent, but Aider-like and model-agnostic?",
+        "points": 4,
+        "num_comments": 2,
+        "author": "dsrtslnd23",
+        "created_at": "2025-07-26T11:50:56Z"
+      },
+      {
+        "objectID": "40477191",
+        "title": "How Aider Scored SOTA 26.3% on SWE Bench Lite",
+        "points": 4,
+        "num_comments": 1,
+        "author": "anotherpaulg",
+        "created_at": "2024-05-25T19:18:37Z"
+      },
+      {
+        "objectID": "37837695",
+        "title": "Aider: AI pair programming in your terminal",
+        "points": 4,
+        "num_comments": 1,
+        "author": "telotortium",
+        "created_at": "2023-10-10T21:20:32Z"
+      },
+      {
+        "objectID": "96546",
+        "title": "AideRSS Raises Money To Attack Information Overload With RSS Filtering",
+        "points": 4,
+        "num_comments": 0,
+        "author": "dood",
+        "created_at": "2008-01-09T22:02:27Z"
+      },
+      {
+        "objectID": "45140010",
+        "title": "The Aider Local Model Experience",
+        "points": 4,
+        "num_comments": 0,
+        "author": "llllm",
+        "created_at": "2025-09-05T15:56:08Z"
+      },
+      {
+        "objectID": "35901649",
+        "title": "Show HN: Aider, a command line GPT coding copilot",
+        "points": 3,
+        "num_comments": 4,
+        "author": "anotherpaulg",
+        "created_at": "2023-05-11T13:23:12Z"
+      },
+      {
+        "objectID": "39642655",
+        "title": "Claude 3 beats GPT-4 on Aider's code editing benchmark",
+        "points": 3,
+        "num_comments": 3,
+        "author": "anotherpaulg",
+        "created_at": "2024-03-08T16:27:01Z"
+      },
+      {
+        "objectID": "43389992",
+        "title": "Refact.ai Agent and 3.7 Sonnet is the new #1 on Aider polyglot bench–76.4% score",
+        "points": 3,
+        "num_comments": 1,
+        "author": "bystrakowa",
+        "created_at": "2025-03-17T16:09:05Z"
+      },
+      {
+        "objectID": "42860692",
+        "title": "Aider.el: Aider (AI Pair Programming) Inside Emacs",
+        "points": 3,
+        "num_comments": 1,
+        "author": "kgwgk",
+        "created_at": "2025-01-29T02:11:16Z"
+      },
+      {
+        "objectID": "42859140",
+        "title": "Aider is AI pair programming in your terminal",
+        "points": 3,
+        "num_comments": 1,
+        "author": "jhund",
+        "created_at": "2025-01-28T22:47:16Z"
+      },
+      {
+        "objectID": "37087608",
+        "title": "Voice-to-Code with Aider",
+        "points": 3,
+        "num_comments": 1,
+        "author": "anotherpaulg",
+        "created_at": "2023-08-11T11:49:59Z"
+      },
+      {
+        "objectID": "47333990",
+        "title": "Why I (Still) Use Aider in 2026",
+        "points": 3,
+        "num_comments": 0,
+        "author": "s-sem",
+        "created_at": "2026-03-11T10:56:47Z"
+      },
+      {
+        "objectID": "44600565",
+        "title": "Use Pipx to Install Aider and Other Non-System-Managed Python Packages on Linux",
+        "points": 3,
+        "num_comments": 0,
+        "author": "supracarol",
+        "created_at": "2025-07-18T02:23:29Z"
+      },
+      {
+        "objectID": "44227707",
+        "title": "DeepSeek R1 0528 scored 71% on the aider polyglot coding benchmark (3rd)",
+        "points": 3,
+        "num_comments": 0,
+        "author": "amrrs",
+        "created_at": "2025-06-09T18:39:45Z"
+      },
+      {
+        "objectID": "39799946",
+        "title": "Aider – AI pair programming in your terminal",
+        "points": 3,
+        "num_comments": 0,
+        "author": "wofo",
+        "created_at": "2024-03-23T13:51:34Z"
+      },
+      {
+        "objectID": "39652701",
+        "title": "Claude 3 beats GPT-4 on Aider's code editing benchmark",
+        "points": 3,
+        "num_comments": 0,
+        "author": "striking",
+        "created_at": "2024-03-09T16:25:09Z"
+      },
+      {
+        "objectID": "38153854",
+        "title": "Show HN: I built an iPad game toddlers almost with aider AI pair programmer",
+        "points": 3,
+        "num_comments": 0,
+        "author": "derwiki",
+        "created_at": "2023-11-05T18:16:15Z"
+      },
+      {
+        "objectID": "43547742",
+        "title": "Refact.ai Agent got ~93% on Aider Polyglot bench: 0 user inputs, 100% autonomous",
+        "points": 2,
+        "num_comments": 1,
+        "author": "bystrakowa",
+        "created_at": "2025-04-01T15:11:42Z"
+      }
+    ]
+  }
+}

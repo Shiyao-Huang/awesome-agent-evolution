@@ -1498,7 +1498,8 @@ export const generatedKnowledgeGraph = {
       "summary": "Harness evolution / 进化闭环",
       "weight": 10,
       "source": "curated frontier",
-      "group": "frontier projects"
+      "group": "frontier projects",
+      "frontier": true
     },
     {
       "id": "project:agentic-in%2Felephant-agent",
@@ -1518,7 +1519,8 @@ export const generatedKnowledgeGraph = {
       "summary": "Memory layer",
       "weight": 10,
       "source": "curated frontier",
-      "group": "frontier projects"
+      "group": "frontier projects",
+      "frontier": true
     },
     {
       "id": "project:agentmemoryworld%2Fawesome-agent-memory",
@@ -2518,7 +2520,8 @@ export const generatedKnowledgeGraph = {
       "summary": "Personal agent runtime",
       "weight": 10,
       "source": "curated frontier",
-      "group": "frontier projects"
+      "group": "frontier projects",
+      "frontier": true
     },
     {
       "id": "project:hkuds%2Fai-researcher",
@@ -3478,7 +3481,8 @@ export const generatedKnowledgeGraph = {
       "summary": "Runtime / 生态入口",
       "weight": 10,
       "source": "curated frontier",
-      "group": "frontier projects"
+      "group": "frontier projects",
+      "frontier": true
     },
     {
       "id": "project:opendatabox%2Fworkspace-bench",
@@ -3528,7 +3532,8 @@ export const generatedKnowledgeGraph = {
       "summary": "Product/application signal",
       "weight": 10,
       "source": "curated frontier",
-      "group": "frontier projects"
+      "group": "frontier projects",
+      "frontier": true
     },
     {
       "id": "project:openmemind%2Fmemind",
@@ -4078,7 +4083,8 @@ export const generatedKnowledgeGraph = {
       "summary": "Benchmark / Eval",
       "weight": 10,
       "source": "curated frontier",
-      "group": "frontier projects"
+      "group": "frontier projects",
+      "frontier": true
     },
     {
       "id": "project:skills-mcp%2Fskills-mcp",
@@ -4228,7 +4234,8 @@ export const generatedKnowledgeGraph = {
       "summary": "Skill methodology",
       "weight": 10,
       "source": "curated frontier",
-      "group": "frontier projects"
+      "group": "frontier projects",
+      "frontier": true
     },
     {
       "id": "project:swe-agent%2Fswe-agent",

@@ -1,1370 +1,1212 @@
-# Awesome Self-Evolving AI Agents / AI Agent 自进化索引与综述
+# Awesome Evolver — Agent Evolution Platform / 智能体进化资源库
 
-**Author / 归属:** aha team
+> A bilingual awesome-list for Agent Evolution: self-evolving agents, agentic memory, workflow optimization, benchmarks, production frameworks, demos, and research papers. / 面向 Agent Evolution 的中英双语资源库：覆盖自进化智能体、智能体记忆、工作流优化、评测基准、生产框架、Demo 与论文。
 
-[中文主入口](README.md) | [English](README-EN.md) | [中文兼容镜像](README-ZH.md)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-![Self Evolve 公开研究管线](site/public/visuals/self-evolve-readme-banner.png)
+## Metadata / 元数据
 
-## 一句话
+- content_timestamp: 2026-05-22
+- collected_at: 2026-05-22T00:00:00+08:00
+- time_slice: 2026-05
+- brand: **Evolver — Agent Evolution Platform**
+- repo_records: 355 indexed public entries (348 core records + 6 AnySearch supplement records + 1 user-reported supplement)
+- paper_raw_records: 184 from `raw-papers/`
+- paper_unique_ids_listed: 113 (deduplicated for awesome-list readability; raw timestamp index keeps all 184 records)
+- review_sources: `paper-reviews/`, `research/repo-classification.*`, `research/asset-processing-anysearch-supplement-2026-05-22.*`, `analysis/*`, `output/raw-papers-timestamp-index.json`
 
-这个仓库是 AI Agent 自进化 / 自改进方向的中文优先 Awesome 索引、综述入口、项目 model-card 库、论文工程和 SEO 网站素材库。
+## Why Evolver? / 为什么做 Evolver？
 
-## 三句话
+Evolver is designed as the future knowledge and leaderboard entry point for Agent Evolution — the Hugging Face/GitHub-style hub for evolving agents. Data collection is not the end goal; structured, searchable, bilingual, SEO-ready knowledge is the moat. / Evolver 的目标是成为进化智能体领域的知识库、榜单与 Demo 入口。数据收集不是目的，结构化、可检索、中英双语、SEO-ready 的知识基础设施才是护城河。
 
-1. README 是第一入口：最有价值的分类、方法、benchmark、项目、论文、社区信号和链接必须直接放在这里，读者不用先翻目录。
-2. `survey/` 与 `paper-drafts/` 保存审稿级展开版；README 直接放主内容、分类、方法、benchmark、项目和证据链接。
-3. 全仓库按 `raw -> processed -> work -> results` 管线治理：raw 是证据，加工是解释，work 是论文/网站/脚本，results 是可发布输出。
+## Table of Contents / 目录
 
-## 五句话
+- [Cognitive Index / 认知索引](#cognitive-index--认知索引)
+- [Frameworks / 框架](#frameworks--框架)
+- [Tools & Benchmarks / 工具与评测](#tools--benchmarks--工具与评测)
+- [Research Code / 研究代码](#research-code--研究代码)
+- [Demos & Applications / 演示与应用](#demos--applications--演示与应用)
+- [Community & Learning / 社区与学习](#community--learning--社区与学习)
+- [Papers / 论文](#papers--论文)
+- [深度分析产出 / Deep Analysis Outputs](#深度分析产出--deep-analysis-outputs)
+- [Cross-validation themes / 交叉验证主题](#cross-validation-themes--交叉验证主题)
+- [Contributing / 贡献](#contributing--贡献)
 
-1. 这个领域的核心问题不是“有没有 agent”，而是“agent 到底改进了什么、凭什么证明更强、能不能复用到真实任务”。
-2. 当前证据层包括 490 个 GitHub raw captures、490 个已分类仓库、208 个站点项目、79 个严格 self-evolution 仓库、176 个广义 evolution-related 仓库。
-3. 方法主线可压缩为六类：reward/RL/self-play、prompt/search、memory、architecture/code self-modification、multi-agent reflection/debate、evaluation/safety/governance。
-4. Benchmark 是本项目的主矛盾之一：SWE-Bench、HumanEval、OSWorld、BrowserGym、AgentBench、LongMemEval、STATE-Bench 等必须被放在同一张比较表里，而不是散在项目页里。
-5. 这个 README 的目标是让读者直接获得认知结构；链接只作为证据来源和展开材料，不作为理解前提。
+## Data Summary / 数据概览
 
-## 核心历史、未来与趋势追踪
+### Repository categories / 仓库分类
 
-一句话：AI Agent 自进化的历史，是从 prompt/reflection 的轻量自我修正，走向 memory/skill/harness 的工程化积累，再走向 code、architecture、evaluator 和 organization 的可审计共同进化。
+| Category | Count | Share |
+|---|---:|---:|
+| Frameworks / 框架 | 104 | 29.3% |
+| Tools & Benchmarks / 工具与评测 | 124 | 34.9% |
+| Research Code / 研究代码 | 23 | 6.5% |
+| Demos & Applications / 演示与应用 | 43 | 12.1% |
+| Community & Learning / 社区与学习 | 61 | 17.2% |
 
-三句话：早期重点是让 LLM 在反馈中重试、反思、改 prompt 或选择更好候选；中期重点变成 agent runtime、multi-agent workflow、benchmark harness 和可执行代码/算法搜索；现在最核心的未来问题，是把改进变成可验证、可回滚、可迁移、可治理的基础设施。读这个领域不要只看“自进化”名字，而要沿着时间问：系统把什么变成可变对象，选择压力从哪里来，改进证据是否独立。README 后续每次更新都要同步追踪 trend，不只追加链接，还要判断哪个方向正在上升、哪个方向只是短期热度。
+### Repository stack distribution / 技术栈分布
 
-### 历史主线
+| Stack | Count |
+|---|---:|
+| Markdown | 197 |
+| Python | 123 |
+| Unknown | 14 |
+| TypeScript/JavaScript | 6 |
+| Shell | 6 |
+| TypeScript | 1 |
+| Jupyter Notebook | 1 |
 
-| 阶段 | 时间信号 | 核心变化 | 代表证据 | 对读者的指导 |
-|---|---|---|---|---|
-| 轻量自改进 | 2022-2023 | 从一次性回答变成 feedback/reflection/prompt search 循环。 | OpenELM、DSPy、Reflexion、Self-Refine、OPRO、FunSearch | 先学“改什么、怎么评估、如何保留经验”，不要被 agent 外壳分散注意力。 |
-| Agent runtime 与多 Agent | 2023-2024 | AutoGPT、CAMEL、MetaGPT、AutoGen、LangGraph 把工具、角色、workflow、状态机变成工程底座。 | [release timeline](analysis/github-project-data-analysis.md#analyzed-project-release-timeline), [项目分类总表](#项目分类总表) | 框架本身不等于自进化；只有接入 evaluator、memory 和更新机制才进入核心。 |
-| 架构/代码/算法自修改 | 2024-2025 | ADAS、DGM、AlphaEvolve、OpenEvolve、SE-Agent 把 architecture、code、program 和算法候选放进搜索空间。 | [ADAS](research/papers/04-adas.md), [DGM](research/papers/02-darwin-godel-machine.md), [AlphaEvolve](research/papers/08-alphaevolve.md) | 代码和算法是最容易先落地的自进化场景，因为测试、sandbox、回归和 archive 可以提供强证据。 |
-| Memory / skill / harness 基础设施化 | 2025-2026 | memory、skill、evaluation、harness 同时变热；当前 raw 分类里 memory 96、evaluation 89、evolution 79、skill 60。 | [GitHub analysis](analysis/github-project-data-analysis.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) | 下一波价值在可安装 skill、可审计 memory、可信 harness 和报告规范，而不是更多 demo。 |
+### Paper timeline / 论文时间线
 
-### 未来路线图
+| Year | Unique papers |
+|---|---:|
+| 2026 | 22 |
+| 2025 | 59 |
+| 2024 | 23 |
+| 2023 | 8 |
+| 2022 | 1 |
 
-| 优先级 | 未来方向 | 成熟标志 | 当前证据 |
-|---:|---|---|---|
-| 1 | 标准化验证器库 | 代码、网页、业务流程、记忆、安全、成本都有可复跑 evaluator。 | [survey ch8](survey/ch8-future-cn.md#86-研究与实践路线图), [Benchmark 判断准则](#benchmark-判断准则) |
-| 2 | 自进化报告规范 | 每次改进报告时间切片、验证/测试隔离、失败候选、成本、回滚、安全事件。 | [GitHub 证据层](#git--github-证据层), [必要验证](#必要验证) |
-| 3 | 可审计记忆与 skill 资产 | 经验不只是自由文本，而是可版本化、可遗忘、可迁移、可安全扫描的资产。 | [Memory / lifelong learning](#方法分类总表), [Skills / reusable know-how](#项目分类总表) |
-| 4 | Archive / lineage 基础设施 | 每个 prompt、skill、workflow、code diff 都有来源、评估、继承关系和回滚点。 | [DGM](research/papers/02-darwin-godel-machine.md), [OpenEvolve](projects/algorithmicsuperintelligence__openevolve.md) |
-| 5 | 异质多 Agent 协同 | 生成者、验证者、红队、成本控制、审计者有独立工具和独立错误分布。 | [Multi-agent reflection / debate](#方法分类总表), [survey ch8](survey/ch8-future-cn.md#82-多-agent-协同进化从角色扮演到生态搜索) |
-| 6 | 跨域迁移 benchmark | 改进不能只在一个 leaderboard 上成立，必须迁移到新任务、时间切片、环境和模型。 | [survey ch8](survey/ch8-future-cn.md#84-跨域迁移能力从-benchmark-specific-进化到通用适应) |
+## Cognitive Index / 认知索引
 
-### 趋势追踪看板
+This README is not only a long list. It is a map for building judgment about Agent Evolution: what evolves, where the feedback signal comes from, how memory persists, how safety gates work, and which projects are practical entry points. / 这个 README 不只是资源清单，而是帮助读者建立判断力的认知地图：到底进化什么、反馈信号从哪里来、记忆如何持久化、安全门怎么设计，以及哪些项目适合作为实践入口。
 
-| 追踪项 | 当前基线 | 更新方式 | 趋势怎么解读 |
-|---|---:|---|---|
-| GitHub 语料漏斗 | 490 raw captures / 490 classified / 208 model-card projects / 79 strict / 176 broad | `node scripts/analyze_github_project_data.mjs` | strict 与 broad 同涨说明核心和基础设施都在扩张；只涨 broad 可能是概念外延变松。 |
-| 主题热度 | memory 96, evaluation 89, evolution 79, skill 60 | `research/repo-classification.json` + GitHub analysis | evaluation、memory、skill 同时上升，说明领域从“会不会进化”转向“怎么证明、怎么积累、怎么复用”。 |
-| 时间切片 | 2026-05 raw classified repos 330，unknown 107 | `output/raw-github-timestamp-index.md` + classification time slice | 时间切片是采集/活动信号，不等于全部项目创建时间；unknown 要持续补时间戳。 |
-| Benchmark 覆盖 | 163 benchmark/evaluation related repos | README benchmark 表 + `analysis/github-project-data-analysis.md` | benchmark 增加要看是否有隐藏测试、失败轨迹、成本和跨域迁移，不能只数 leaderboard。 |
-| 论文前沿 | 108 detailed paper references，含 2026 补充前沿 | `research/agent-self-evolution-papers-detailed-ZH.md` | 新论文进入 README 前要抽取改进对象、feedback、update、benchmark、限制。 |
-| 产品可用性 | 208 public model-card projects | `projects/INDEX.md` + `site/public/reports/projects/INDEX.md` | 趋势判断要同时看能否运行、文档、真实 workflow、维护活跃度和用户价值，不只看 star。 |
+### Start by question / 按问题进入
 
-每次追踪这个板块时，先新增 raw 证据，再更新 processed 分类和 README 判断，最后同步 `docs/indexes/` 与网站构建；如果 trend 判断改变，要写明证据变化，而不是只改结论。
-
-## 先看：加工后的完整分类总览
-
-这一段放在最前面，只放加工后的信息：分类、判断、价值排序、可复用结论。raw 链接和完整展开列表在后面作为证据与索取区。
-
-### 0. 阅读优先级
-
-| 优先级 | 先看什么 | 为什么有价值 |
-|---:|---|---|
-| 1 | 核心历史、未来与趋势追踪 | 先知道这条技术线从哪里来、下一步往哪里去、每次更新要盯哪些趋势。 |
-| 2 | 自进化定义、方法族、benchmark 判断准则 | 再判断“什么算自进化、怎么证明、怎么防指标投机”。 |
-| 3 | GitHub 语料漏斗、分类轴、严格/广义 evolution 子集 | 先看加工后的结构，不从 490 个 raw capture 里盲找。 |
-| 4 | Public model-card 项目分组 | 208 个项目已经按角色、机制、证据和报告入口加工，可直接比较。 |
-| 5 | 论文方法图谱 | 108 篇论文按 framework/method/RL/reflection/memory/alignment/benchmark/safety 等类别归纳，不是平铺引用。 |
-| 6 | 完整列表索取区 | 需要复制、筛选、二次处理时再取完整项目、repo、paper、benchmark 列表。 |
-
-### 1. 语料漏斗
-
-| 层级 | 当前规模 | 加工后的意义 |
-|---|---:|---|
-| Raw GitHub captures | 490 | 原始发现层，只保留证据、时间戳和来源，不直接当结论。 |
-| Classified repositories | 490 | 每个仓库已归入 category、theme、function tag、time slice。 |
-| Public model-card projects | 208 | 进入项目页/报告体系，适合教学、对比和发布。 |
-| Public project report files | 233 | 网站可发布结果层，包含历史/兼容报告与站点公开材料。 |
-| Strict self-evolution repos | 79 | 核心子集：直接含自改进、进化、搜索、reflection、mutation 或 feedback loop。 |
-| Broad evolution-related repos | 176 | 外围支撑层：memory、skill、evaluation、harness、coding-agent、prompt optimization。 |
-| Detailed paper references | 108 | 论文方法证据层，按 14 个研究类别和 2026 补充前沿整理。 |
-| Benchmark/evaluation related repos | 163 | 评估相关仓库集合，专门用于比较测什么、怎么测、是否可信。 |
-
-### 2. GitHub 完整分类轴
-
-| 分类轴 | 完整分布 | 怎么读 |
-|---|---|---|
-| Collection category | 框架/framework 138, 评测/evaluation 99, 教程/tutorial 93, 工具/tool 83, 应用/application 47, 论文代码/paper-code 29, 评测/benchmark 1 | 这是“仓库形态”：框架最多，说明生态先在 runtime/harness/tool 层扩张。 |
-| Base theme | memory 96, evaluation 89, evolution 79, skill 60, framework 50, education-list 35, research-agent 31, prompt-optimization 26, coding-agent 17, workflow-automation 6, safety 1 | 这是“主题重心”：evaluation、memory、evolution、skill 是最密集的四个支点。 |
-| Function tag | benchmark-eval 118, framework-runtime 114, resource-index 101, tool-module 90, application-demo 28, research-artifact 19, agent-evolution-infra 9, memory-substrate 8, memory-runtime 1, research-agent-pipeline 1, skill-orchestration 1 | 这是“功能角色”：benchmark 和 runtime 几乎并列，说明证明能力与运行能力同等关键。 |
-| Time slice | 2026-05 330, unknown 107, 2024-Q2 7, 2026-03 7, 2026-04 7, 2025-11 5, 2024-Q3 4, 2025-05 3, 2026-02 3, early 3, 其他 14 | 这是“时间信号”：近期新增集中在 skills、memory、harness、evaluation 和 self-modifying code。 |
-
-### 3. Public model-card 项目分组
-
-| 分组 | 项目数 | 代表仓库 | 加工判断 |
-|---|---:|---|---|
-| 进化式代码 / AlphaEvolve 类 | 3 | openevolve、science-codeevolve、SE-Agent | 最接近可执行 self-improvement：代码变体、评估器、选择、迭代。 |
-| LLM 作为优化器 | 3 | OPRO、OpenELM、FunSearch | 把 LLM 当 search/optimization operator，适合 prompt、program、算法发现。 |
-| Agent 架构自动搜索 | 1 | ADAS | 把 agent architecture 本身当搜索空间，是自进化系统设计的核心论文线。 |
-| Agent 自进化系统 | 4 | AgentEvolver、AIWaves agents、SCOPE、agentos | 关注经验、上下文、评估和 agent 工作区如何持续更新。 |
-| 反思 / 精炼经典范式 | 2 | Reflexion、Self-Refine | 最常被复用的轻量自改进模式，但容易过拟合当前反馈。 |
-| 安全、评判与数据/模型自进化 | 2 | DARWIN、LLM-Self-Judge | 评判器、数据和安全策略也会演化，必须防 reward hacking。 |
-| 声明式 Prompt 优化 | 1 | DSPy | 把 prompt/program 编译成可优化对象，工程价值高。 |
-| 多 Agent 协作框架 | 5 | MetaGPT、CrewAI、AutoGen、CAMEL、AgentVerse | 不是天然自进化；只有加入评价、记忆和改进闭环才进入核心。 |
-| 图式 Agent 编排 | 1 | LangGraph | 适合作为可审计 workflow graph 和状态机底座。 |
-| AI 软件工程 | 5 | AutoGPT、SWE-Agent、OpenHands、Devika、OpenDevin | 最容易接入真实仓库、测试和回归验证。 |
-| AutoML / ML 知识驱动 | 2 | automl-agent、CoML | 与经典自动化搜索/AutoML 有强连接。 |
-| 反射式进化搜索 | 2 | ReEvo、LLaMEA | 把 reflection 和 evolutionary search 结合，适合算法/优化任务。 |
-| 进化式 Prompt/上下文优化 | 1 | EvoPrompt | 成本低、可回滚，但最容易 benchmark-specific。 |
-| 进化式多 Agent 系统 | 4 | EvoAgent、EvoAgentX、EverOS、A-Evolve | 多 agent、memory、workspace 和 benchmark 的交叉区。 |
-| LLM 驱动进化计算 | 5 | OpenTreeSearch、LLM4EC、LLM4Opt、LLM_EA、tutorial_gp_llm | 连接 LLM agent 与进化计算、组合优化、遗传编程。 |
-| 质量多样性优化 | 1 | pyribs | 提供 archive/diversity 思路，可避免只爬单一分数坡。 |
-| 经典进化算法框架 | 3 | DEAP、pycma、Nevergrad | 作为非 LLM 进化/搜索基线，不该被新 agent 术语遮蔽。 |
-| AutoML 框架 | 1 | auto-sklearn | 传统自动改进系统的参考系。 |
-| 自进化 Agent 综述 | 2 | Self-Evolving-Agents、self-improvement-llm | 用来对照分类是否遗漏研究支线。 |
-| LLM Agent 优化 | 1 | LLM-Agent-Optimization | 资源索引型材料，适合补充术语和链接。 |
-| 代码模型与评测 | 4 | Awesome-Code-LLM、AgentBench、RL4CO、Awesome-FM4CO | 把代码、agent、组合优化 benchmark 放入同一证据层。 |
-| 遗传编程 | 1 | pureples | 提供 GP + LLM 的老方法/新模型交叉样本。 |
-| Harness / 技能 / 记忆进化 | 98 | OpenClaw/Hermes/Mem0/LangMem/Graphiti/Skills 系列 | 当前最大工程簇：长期价值在可安装技能、可审计记忆、可运行 harness。 |
-| 个人 Agent 产品与真实评测 | 33 | OpenClaw、PinchBench、Claw-Eval、OSWorld、BrowserGym、STATE-Bench | 最能检验“用户愿不愿意用”和“benchmark 是否贴近真实任务”。 |
-| Harness 进化与方法索引 | 12 | harness-evolver、OpenHarness、AutoResearchClaw、SkillRL、OpenSpace | 把工具权限、执行环境、评估器和技能学习联成系统工程。 |
-
-### 4. 高价值方向排序
-
-| Rank | 方向 | 为什么排在前面 | 主要风险 |
-|---:|---|---|---|
-| 1 | Evaluation / benchmark / harness control | 自进化必须有选择压力；没有可信 evaluator，就没有可信改进。 | Goodhart、隐藏测试泄漏、LLM judge 偏差。 |
-| 2 | Code/self-modifying agents | 代码有测试、回归和 sandbox，最容易形成闭环证据。 | 候选代码副作用、评估器被改、只修 benchmark。 |
-| 3 | Memory / state substrate | 长期 agent 的真正可变对象往往是记忆、经验和用户/项目状态。 | 记忆污染、过期信息、隐私和错误经验继承。 |
-| 4 | Skills / reusable know-how | Skills 把经验变成可安装、可测试、可迁移资产。 | 只是 prompt 文件堆叠、缺少验证、安全注入。 |
-| 5 | Prompt / program optimization | 黑盒模型下最快落地，成本低、可回滚。 | context rot、prompt overfit、反思错误累积。 |
-| 6 | Multi-agent reflection / debate | 能制造异质假设和 review gate，适合研究/软件交付。 | 多 agent 共识幻觉、通信成本、责任不清。 |
-| 7 | Open-ended evolution / architecture search | 长期上限高，可能发现非人工设计结构。 | 搜索空间大、评估昂贵、复现难。 |
-
-## 最高价值内容
-
-| 你要解决的问题 | README 直接给出的答案 | 证据来源 |
-|---|---|---|
-| 完整综述讲了什么 | 自进化 Agent 不是一次性问答能力，而是一个由模型、工具、记忆、环境、评估器和代码组成的系统，能在反馈中改变 prompt、memory、skill、workflow、agent code 或 model policy，并用独立评估证明变化有效。 | [survey/latex/main.pdf](survey/latex/main.pdf), [survey/latex/main.tex](survey/latex/main.tex) |
-| 方法到底有哪些 | 六条主线：reward/RL/self-play 提供选择压力；prompt/search 改上下文和候选程序；memory 保留长期经验；architecture/code self-modification 改 agent 结构；multi-agent reflection/debate 用异质角色互相纠错；evaluation/safety/governance 把变化关进可验证边界。 | [survey/ch3-methods-cn.md](survey/ch3-methods-cn.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) |
-| Benchmark 怎么看 | 不能只看最终分数，要看验证器是否独立、任务是否隔离、是否有隐藏测试、是否跨域迁移、是否报告成本/失败率/回滚率，以及是否防 Goodhart。 | [survey/ch5-evaluation-cn.md](survey/ch5-evaluation-cn.md), [code benchmark note](projects/code-generation-evolution/05-benchmarks.md) |
-| GitHub 语料是什么 | 当前是 490 个 raw GitHub captures、490 个分类仓库、208 个站点项目、79 个严格 self-evolution 仓库、176 个广义相关仓库；它们按 category、theme、function、time slice 进入统一语料。 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md), [repo classification](research/repo-classification.md) |
-| 项目如何比较 | 每个项目按“它是什么、改进对象是什么、反馈是什么、能不能运行、有没有 benchmark、是否产品可用、限制是什么”来读，而不是只看 stars。 | [projects/INDEX.md](projects/INDEX.md), [public project reports](site/public/reports/projects/INDEX.md) |
-| 论文如何使用 | 论文不是单独列表，而是方法证据：每篇要抽取改进对象、反馈信号、更新机制、benchmark、claim、限制和可复现性。 | [中文论文索引](research/agent-self-evolution-papers-detailed-ZH.md), [英文论文索引](research/agent-self-evolution-papers-detailed.md) |
-| 社区/X/博客信号有什么用 | 社区信号用来发现真实痛点、工程争议、热度错觉和 adoption 迹象；它不能替代论文或代码，但能指出哪些 benchmark 与业务价值脱节。 | [中文社交索引](output/social-media-curated-ZH.md), [英文社交索引](output/social-media-curated.md) |
-| 作者/来源网络怎么看 | 作者、实验室、博客和榜单来源用于判断传播路径、可信度、重复信号和社区影响，不直接等同技术成熟度。 | [author network](research/author-network.md), [blog/source profiles](research/blog-author-profiles-all.md) |
-| 公开网站承担什么 | 网站服务 SEO、博客、项目页和图谱展示；README 承担完整认知入口，网站承担浏览和发布体验。 | [GitHub Pages](https://shiyao-huang.github.io/awesome-agent-evolution/) |
-| 仓库怎么维护 | 新增内容先判断 raw/processed/work/results/ops 层级；长期产物必须进入索引；会影响论文或网站的改动要跑对应验证。 | [master index](docs/indexes/master-index.md), [project structure](docs/project-management/project-structure.md) |
-
-## Survey 综述主内容
-
-| 章节 | README 内嵌结论 | 证据文档 |
-|---|---|---|
-| 第1章 引言 | Agent Evolution 的定义是：系统有可变状态或结构，有反馈信号，有选择/更新机制，并且改进可审计。只做 ReAct、planner-executor 或手工 workflow 不算自演化；只有系统能在反馈中改变自己的 prompt、memory、tool policy、代码、评估器或协作结构，才进入本综述范围。 | [ch1](survey/ch1-intro-cn.md) |
-| 第2章 理论基础 | 理论底座有四条线：进化计算提供生成-变异-选择-保留；Godel machine 提供自我指涉和自修改问题意识；元学习/自训练提供从历史任务学习如何学习；RL/在线学习/程序合成提供目标、策略、环境和更新算子的形式化。 | [ch2](survey/ch2-theory-cn.md) |
-| 第3章 方法分类 | 方法按“主要选择压力”和“主要可变对象”分层：reward、self-play、prompt、architecture/code、memory、mixed loop。关键不是术语，而是问：改什么、反馈来自哪里、如何保留、如何证明有效。 | [ch3](survey/ch3-methods-cn.md) |
-| 第4章 系统分析 | 代表系统可以按产品 runtime、研究原型、benchmark harness、memory substrate、skill system、agent architecture search 和 self-modifying coding agent 来读。真正有价值的系统会留下可复用资产，而不只是一次 demo。 | [ch4](survey/ch4-systems-cn.md) |
-| 第5章 评估体系 | 评估既是论文证据，也是进化循环里的选择压力。SWE-Bench、HumanEval、OSWorld、BrowserGym、LongMemEval 等只覆盖不同切面；成熟评估必须同时看迭代增益、迁移、多样性、安全、成本和资产积累。 | [ch5](survey/ch5-evaluation-cn.md) |
-| 第6章 工业实践 | 工业落地的关键不是“让 agent 自己乱改”，而是把变化限制在低风险层：prompt、playbook、memory、skill、test harness、tool config；所有候选变化先过 sandbox、CI、审计和回滚。 | [ch6](survey/ch6-industry-cn.md) |
-| 第7章 用户痛点 | 社区痛点集中在可靠性、成本、可观测性、benchmark 与真实业务脱节、长期记忆污染、工具权限和治理。Mom Test 信号提醒：高分 benchmark 和高 star 不等于用户愿意采用。 | [ch7](survey/ch7-painpoints-cn.md) |
-| 第8章 未来方向 | 未来优先级是验证器库、报告规范、可审计记忆、archive/lineage、异质多 agent 协同、跨域迁移 benchmark。成熟标志不是宣称“自主改进”，而是能回答为什么改、证据是什么、如何回滚、是否迁移。 | [ch8](survey/ch8-future-cn.md) |
-| 图表/数据 | 当前图表显示：方法族里 reward/RL/self-play 占比高；跨源验证里 production gap、evaluation gap、memory drift、governance/cost 都是高风险错配；框架雷达只是导航，不是性能排名。 | [figures](survey/figures/README.md), [coverage](survey/figures/data-coverage-dashboard.md), [validation](survey/figures/cross-source-validation-map.md) |
-
-## 读法总原则
-
-| 问题 | 判断标准 |
-|---|---|
-| 它是不是自进化 | 必须有可变化对象、反馈信号、更新/选择机制、可审计结果；否则只是普通 agent engineering。 |
-| 它是不是有用 | 看是否能运行、是否有真实任务、是否有文档、是否能复现、是否解决用户痛点，而不是只看 stars 或论文标题。 |
-| 它是不是可信 | 看 validation/test 是否隔离、是否跨任务迁移、是否报告失败候选、是否有成本、是否防 evaluator 被篡改。 |
-| 它是不是可发布 | raw、processed、work、results 分层清楚；README 能读懂；项目页能教学；论文/网站能构建。 |
-
-## 方法分类总表
-
-| 方法族 | 进化对象 | 选择压力 / 反馈 | 代表论文或系统 | 证据来源 |
-|---|---|---|---|---|
-| Reward / RL / self-play | 策略、推理轨迹、偏好、训练数据 | reward、胜负、正确性、judge、执行器 | STaR、Self-Rewarding LM、Meta-Rewarding、RISE、RAGEN、Absolute Zero、SPIRAL | [方法章 3.1-3.2](survey/ch3-methods-cn.md), [RAGEN](research/papers/10-ragen.md), [Absolute Zero](research/papers/07-absolute-zero.md) |
-| Prompt / search optimization | prompt、上下文、原则、playbook、候选程序 | 自反馈、文本梯度、LLM 作为优化器、程序化 evaluator | Self-Refine、Reflexion、DSPy、OPRO、EvoPrompt、SCOPE、ACE | [Self-Refine](research/papers/06-self-refine.md), [Reflexion](research/papers/05-reflexion.md), [DSPy](site/public/reports/projects/10-dspy-declarative-llm-programming.md), [SCOPE](projects/jarvispei__scope.md) |
-| Memory / lifelong learning | 情景记忆、语义记忆、技能库、用户/项目状态 | 检索成功率、长期任务表现、冲突处理、经验复用 | Voyager、ExpeL、ReasoningBank、Memory-R1、AriadneMem、Mem0、LangMem、Graphiti | [方法章 3.5](survey/ch3-methods-cn.md), [Mem0](projects/58-mem0-agent-memory.md), [LangMem](projects/70-langmem-agent-memory.md), [Graphiti](projects/71-graphiti-temporal-context-graphs.md) |
-| Architecture / code self-modification | agent 架构、工具流、代码库、多 agent 拓扑 | benchmark、单测、隐藏测试、archive selection | ADAS、DGM、Godel Agent、SICA、AlphaEvolve、OpenEvolve、A-Evolve | [ADAS](research/papers/04-adas.md), [DGM](research/papers/02-darwin-godel-machine.md), [OpenEvolve](projects/algorithmicsuperintelligence__openevolve.md), [A-Evolve](projects/115-a-evolve-universal-agent-evolution.md) |
-| Multi-agent reflection / debate | 角色、通信边、critic、审查流程、协作协议 | debate score、互评、任务成功、review gate | EvoMAC、Agent Symbolic Learning、MetaGPT、AutoGen、CORAL、MOLT | [Agent Symbolic Learning](research/papers/01-agent-symbolic-learning.md), [MetaGPT](projects/07-metagpt-multi-agent-framework.md), [AutoGen](site/public/reports/projects/11-autogen-multi-agent-conversation.md), [CORAL](projects/89-coral-multi-agent-evolution.md) |
-| Evaluation / safety / governance | evaluator、权限、回滚、审计、红线、成本模型 | 回归测试、安全规则、人工审核、跨域迁移 | REVEAL、RAGEN、Claw-Eval、AgentBench、SKILL-INJECT、HaluMem | [评估章](survey/ch5-evaluation-cn.md), [REVEAL](research/papers/12-reveal.md), [Claw-Eval](projects/55-claw-eval-agent-evaluation.md), [HaluMem](projects/177-halumem-agent-memory-hallucination-benchmark.md) |
-
-## 方法族展开
-
-| 方法族 | 它怎么工作 | 什么时候优先用 | 主要失败模式 |
+| Question / 你要理解的问题 | Category / 认知分类 | Representative entries / 代表入口 | Why it matters / 认知价值 |
 |---|---|---|---|
-| Reward / RL / self-play | 把答案、轨迹、行为或偏好映射成 reward，再用 RL、DPO、筛选微调、archive selection 或 self-play 让高 reward 行为继承。STaR 用生成 rationale 和正确性筛选形成早期自举；RAGEN/RISE 把多轮思考和行动变成可训练轨迹；Absolute Zero/SPIRAL 把任务生成也放进系统内部。 | 数学、代码、逻辑、游戏、可程序化环境，尤其是有明确 correctness 或 reward 的任务。 | Reward hacking、judge 偏差放大、任务分布塌缩、只学会迎合 evaluator。必须用隐藏测试、跨域迁移和外部摩擦校准。 |
-| Prompt / search optimization | 不改模型权重，改系统提示、few-shot、上下文 playbook、反思文本、候选程序或工具使用规则。Self-Refine 是单样本反馈修订；Reflexion 把失败反思写入 episodic memory；DSPy/OPRO/EvoPrompt/SCOPE 把 prompt/program 当搜索对象。 | API 黑盒模型、低风险快速迭代、需要人工可读和可回滚的场景。 | Context rot、错误反思被长期继承、prompt 过拟合当前 benchmark、上下文越来越长但不更有效。 |
-| Memory / lifelong learning | 把轨迹、失败、用户偏好、项目约束、技能代码和世界状态压缩成可检索长期状态。核心不是“存更多”，而是写入前判断可靠性，检索时按任务/时间/置信度过滤，使用后记录是否真的帮助成功。 | 个人助理、企业流程、长期 coding agent、科研 agent、跨 session 项目维护。 | Memory poisoning、过期信息、隐私泄漏、检索相似但功能错误、错误经验被持续强化。 |
-| Architecture / code self-modification | 把 agent 控制流、工具调用、planner/critic、代码库、workflow graph 或多 agent 拓扑当作可变对象。ADAS 让 meta agent 写新 agent；DGM/SICA 让 coding agent 改自身代码；AlphaEvolve/FunSearch 用程序化 evaluator 选择算法候选。 | 代码、算法发现、工具流程、可沙箱执行且可测试的系统。 | 搜索空间巨大、评估成本高、benchmark-specific hack、候选代码副作用、评估器被篡改。必须有 sandbox、lineage、回滚和不可修改 gate。 |
-| Multi-agent reflection / debate | 通过异质角色制造多个假设、互相审查、互相挑战，或让生成者和验证者共进化。价值不在“角色名字多”，而在不同模型、不同工具、不同检索源和不同评价标准能带来独立错误分布。 | 复杂研究、软件交付、开放式规划、需要 critic/reviewer/red-team 的工作流。 | 共识幻觉、多个 agent 互相肯定错误、通信成本爆炸、责任边界不清。 |
-| Evaluation / safety / governance | 把 evaluator、权限、审计、成本、回滚和安全规则当成自进化系统的一等组件。它不直接让 agent 更聪明，但决定什么变化可以继承，什么变化必须丢弃。 | 任何可能长期运行、改 memory、改 prompt、改工具、改代码或接触用户数据的系统。 | 只优化单一分数、忽略成本和安全、没有失败样本、没有人类治理阈值，最终把“自进化”变成指标投机。 |
+| How does an agent improve itself over time? / Agent 如何持续变强？ | Self-evolution loops / 自进化闭环 | [Darwin Godel Machine](#2025), [Agentic Harness Engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering), [FLEX](#2025), [Hermes Agent Self-Evolution](#demos--applications--演示与应用), [OpenClaw](https://github.com/openclaw/openclaw) | Separates real closed loops from one-shot prompting and marketing claims. / 区分真实闭环与一次性提示词包装。 |
+| Where should long-term experience live? / 长期经验放在哪里？ | Memory and state / 记忆与状态 | [Memind](https://github.com/openmemind/memind), [agentmemory](https://github.com/rohitg00/agentmemory), [Memento II](#2025), [A-Mem](#2025) | Turns "agent remembers" into inspectable storage, retrieval, lifecycle, and rollback questions. / 把“会记住”拆成可检查的存储、检索、生命周期和回滚问题。 |
+| How do agents acquire reusable capabilities? / 能力如何沉淀复用？ | Skills, tools, and workflow genes / Skill、工具与工作流基因 | [Superpowers](https://github.com/obra/superpowers), [SkillClaw](#demos--applications--演示与应用), [MemSkill](#frameworks--框架), [SkillWeaver](#frameworks--框架) | Skills are the bridge between raw trajectories and reusable operational knowledge. / Skill 是轨迹经验到可复用操作知识的桥。 |
+| How do we know an evolved agent is actually better? / 怎么证明真的变好了？ | Evaluation and benchmarks / 评测与基准 | [Agentic Harness Engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering), [PinchBench](https://github.com/pinchbench/skill), [RAGEN](#2025), [WebRL](#2024), [Auto-harness](#frameworks--框架) | Prevents self-improvement from becoming reward hacking or uncontrolled drift. / 防止自进化变成奖励黑客或不可控漂移。 |
+| What is usable in production today? / 今天能落地什么？ | Runtime, harness, and product systems / Runtime、Harness 与产品系统 | [OpenClaw](https://github.com/openclaw/openclaw), [Hermes Agent](https://github.com/NousResearch/hermes-agent), [OpenHuman](https://github.com/tinyhumansai/openhuman), [Prax Agent](#frameworks--框架) | Shows the practitioner surface: channels, local-first data, tool access, messaging, scheduling, and deployment. / 展示真实使用面：渠道、本地数据、工具权限、消息、定时任务与部署。 |
+| What can go wrong when agents evolve? / 进化会出什么问题？ | Governance, safety, and failure modes / 治理、安全与失败模式 | [Misevolution](#2025), [OEP Poisoning](#2026), [Agent R](#2025), [cross-validation themes](#cross-validation-themes--交叉验证主题) | Makes risk part of the architecture, not a footnote. / 把风险放进架构，而不是放在脚注里。 |
 
-## Benchmark / 评测对照
+### Capability layers / 能力分层
 
-| Benchmark 类别 | 代表基准 / 项目 | 测什么 | 自进化里最该问的问题 | 证据来源 |
-|---|---|---|---|---|
-| 函数级代码 | HumanEval、MBPP、LeetcodeHardGym | 函数正确性、代码生成、自修正 | 分数提升是否来自真实策略，还是 prompt/retry 调参 | [Reflexion](projects/noahshinn__reflexion.md), [survey ch5](survey/ch5-evaluation-cn.md) |
-| 仓库级软件工程 | SWE-Bench、SWE-Bench Verified、Polyglot、LiveCodeBench | 真实 issue、补丁、测试、跨语言 | agent 是否能改真实仓库，是否有隐藏测试和回归 | [DGM](research/papers/02-darwin-godel-machine.md), [A-Evolve](projects/115-a-evolve-universal-agent-evolution.md), [OpenHands Benchmarks](projects/114-openhands-benchmarks.md) |
-| Agent 通用评测 | AgentBench、GAIA、AppWorld、ALFWorld、WebShop | 多步任务、工具调用、交互环境 | 是否测到了 agentic behavior，而不只是一次回答 | [AgentBench](site/public/reports/projects/38-agentbench.md), [survey ch5](survey/ch5-evaluation-cn.md) |
-| Computer-use / Web | OSWorld、WindowsAgentArena、BrowserGym、WebArena、WebVoyager、Mind2Web-Live | GUI、浏览器、OS、网页任务 | agent 是否能跨网站/系统迁移，失败轨迹是否可复现 | [OSWorld](projects/73-osworld-computer-agent-benchmark.md), [WindowsAgentArena](projects/74-windows-agent-arena.md), [BrowserGym](projects/75-browsergym-web-agent-benchmark.md) |
-| Memory / long-horizon | LongMemEval、LoCoMo、MSC、STATE-Bench、MemoryAgentBench、AMA-Bench | 长期记忆、状态更新、冲突与遗忘 | 记忆是否真帮助任务，还是污染上下文 | [STATE-Bench](projects/120-state-bench-agent-memory-evaluation.md), [MemoryAgentBench](projects/111-memoryagentbench-incremental-memory-eval.md), [AMA-Bench](projects/60-ama-bench-memory-evaluation.md) |
-| Skill / capability reuse | SWE-Skills-Bench、SkillLearnBench、agent-skills-eval、SKILL-INJECT | skill 学习、skill 安全、skill 对性能的帮助 | skill 是可复用能力，还是只是 prompt 文件堆叠 | [SWE-Skills-Bench](projects/69-swe-skills-bench.md), [SkillLearnBench](projects/118-skilllearnbench-agent-skill-generation.md), [agent-skills-eval](projects/154-agent-skills-eval-benchmark.md), [SKILL-INJECT](projects/84-skill-inject-agent-skill-security.md) |
-| Harness / evaluation trust | Claw Bench、OpenClaw ClawBench、Claw-Eval、HAL Harness | 真实任务、评测噪声、轨迹审计、Pass^k | evaluator 是否可信、不可篡改、可审计 | [Claw Bench](projects/53-claw-bench-agent-benchmark.md), [OpenClaw ClawBench](projects/54-openclaw-clawbench.md), [Claw-Eval](projects/55-claw-eval-agent-evaluation.md), [HAL Harness](projects/109-hal-harness-agent-leaderboard.md) |
-| 算法/科学发现 | AlphaEvolve、FunSearch、CodeContests、EvoCodeBench | 程序搜索、算法发现、可执行 fitness | evaluator 是否完整表达目标，是否有 Goodhart 风险 | [AlphaEvolve](research/papers/08-alphaevolve.md), [FunSearch](projects/04-funsearch-mathematical-discoveries.md), [Code benchmark note](projects/code-generation-evolution/05-benchmarks.md) |
+| Layer / 层级 | What changes / 变化对象 | Common evidence / 常见证据 | Example resources / 示例资源 |
+|---|---|---|---|
+| L1 Prompt / 提示层 | System prompts, policies, rubrics | before/after prompts, judge scores, traces | GEPA, Prompt Optimization RL, Superpowers |
+| L2 Memory / 记忆层 | User profile, task lessons, case memory, vector/graph stores | retrieval quality, decay, dedupe, provenance | Memind, agentmemory, Memento, A-Mem |
+| L3 Skill / 技能层 | `SKILL.md`, tools, scripts, workflow recipes | skill tests, invocation rules, versioned changes | SkillClaw, MemSkill, SkillWeaver, OpenClaw skills |
+| L4 Workflow / 工作流层 | Agent graphs, routing, subagents, task decomposition | success rate, cost, latency, rollback | Agentic Harness Engineering, Auto-harness, SE-Agent, WebEvolver, OpenClaw |
+| L5 Code / 代码层 | Agent source code or runtime behavior | PRs, tests, lineage, independent evaluator | Darwin Godel Machine, Hermes Agent Self-Evolution, OpenEvolve |
+| L6 Ecosystem / 生态层 | Benchmarks, leaderboards, marketplaces, hosted runtimes | public tasks, reproducible runs, adoption signals | PinchBench, KiloClaw, Product Hunt signals, awesome lists |
 
-## Benchmark 判断准则
+### Hot supplement index / 热点补全索引
 
-| 判断项 | README 直接结论 |
-|---|---|
-| 只报最终分数够不够 | 不够。自进化必须报告多轮曲线、失败候选比例、回滚、方差、成本和是否跨 seed 稳定。 |
-| 单一 benchmark 提升可信吗 | 弱可信。可信提升要能跨任务、跨时间切片、跨环境或跨模型迁移；否则可能只是适配 benchmark workflow。 |
-| LLM-as-a-judge 能不能做 evaluator | 能做搜索阶段 proxy，但不能单独做最终证据；要有校准集、多 judge、一致性检测、人类抽检或程序化验证。 |
-| 代码 benchmark 为什么重要 | 单测、静态分析、sandbox 和回归测试给了强反馈，因此代码自进化最容易先落地；但测试覆盖不等于设计质量、安全和可维护性。 |
-| Memory benchmark 该怎么读 | 不只看 QA 分数，要看写入、更新、删除、冲突处理、时间过期、隐私和长期任务中是否真减少失败。 |
-| Skill benchmark 该怎么读 | 要做 skill/no-skill 对照、held-out 任务、token/cost 对比和安全注入测试；否则 skill 只是包装好的 prompt。 |
-| Harness benchmark 该怎么读 | 重点是轨迹可审计、噪声可分解、Pass^k/多次运行稳定、评估器不可被 agent 修改。 |
-| 业务价值怎么判断 | Benchmark gain 不等于用户价值；要看真实 workflow 节省时间、降低失败率、减少人工接管，并且成本可接受。 |
+These records were added after the first raw index generation via AnySearch because they are important practitioner signals. Raw crawl folders are intentionally ignored for public Git release, so the README links to canonical external sources and the public supplement report. / 以下条目是初始 raw index 之后通过 AnySearch 补入的实践侧热点信号。raw 抓取目录会在公开 Git 发布时被忽略，因此主页链接到外部 canonical 来源和公开补充报告，而不是链接到本地 raw 全文。
 
-## 项目分类总表
+| Entry / 条目 | Type / 类型 | Category hint / 分类提示 | Why indexed now / 为什么现在索引 |
+|---|---|---|---|
+| [openclaw/openclaw](https://github.com/openclaw/openclaw) | GitHub repo / 仓库 | Framework runtime / 框架运行时 | Canonical OpenClaw repo; central local-first personal agent and ecosystem anchor. / OpenClaw 主仓库，本地优先个人 Agent 与生态入口。 |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | GitHub repo / 仓库 | Framework runtime / 框架运行时 | Self-improving personal agent with memory, skills, messaging, and trajectory generation. / 带记忆、技能、消息网关和轨迹生成的自改进个人 Agent。 |
+| [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | GitHub repo / 仓库 | Application / 应用 | UI-first personal agent with local memory tree, integrations, and Obsidian-style knowledge base. / UI 优先的个人 Agent，强调本地记忆树、集成和 Obsidian 式知识库。 |
+| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | GitHub repo / 仓库 | Memory tool / 记忆工具 | Persistent memory layer for coding agents, Hermes, OpenClaw, Codex, Claude Code, Cursor, and MCP clients. / 面向多种编码 Agent 和 MCP client 的持久记忆层。 |
+| [obra/superpowers](https://github.com/obra/superpowers) | GitHub repo / 仓库 | Skill/workflow methodology / 技能与工作流方法论 | Agentic skills framework that operationalizes planning, TDD, debugging, review, and subagent workflows. / 把计划、TDD、调试、评审和 subagent 工作流操作化的技能体系。 |
+| [pinchbench/skill](https://github.com/pinchbench/skill) | GitHub repo / 仓库 | Benchmark / 评测 | OpenClaw-specific real-world agent benchmark for model selection and task success measurement. / 面向 OpenClaw 真实任务的模型选择与成功率评测。 |
+| [china-qijizhifeng/agentic-harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | GitHub repo / 仓库 | Harness evolution / Harness 进化 | Observability-driven coding-agent harness evolution: prompts, tools, middleware, skills, sub-agents, and memory evolve while the base model stays fixed. / 以可观测性驱动编码 Agent 的 harness 进化：固定 base model，进化提示词、工具、中间件、技能、子 Agent 与记忆。 |
+| [KiloClaw / PinchBench / OpenClaw trend signal](https://blog.kilo.ai/p/kiloclaw-hosted-openclaw) | Product/blog signal / 产品与博客信号 | Hosted runtime + benchmark / 托管运行时与评测 | Shows hosted OpenClaw, model routing, and benchmark-as-product trend. / 展示托管 OpenClaw、模型路由和评测产品化趋势。 |
+| [OpenHuman Product Hunt signal](https://www.producthunt.com/products/openhuman) | Product discovery / 产品发现 | Product signal / 产品信号 | Captures Product Hunt traction and non-academic adoption signal. / 捕捉 Product Hunt 热度和非学术采用信号。 |
 
-| 分类 | 当前信号 | 代表证据 | README 直接比较法 |
-|---|---:|---|---|
-| Self-evolution loops | 79 strict / 176 broad repos | [OpenEvolve](projects/algorithmicsuperintelligence__openevolve.md), [AgentEvolver](projects/modelscope__agentevolver.md), [EvoAgentX](site/public/reports/projects/22-evoagentx-agent-evolution-framework.md), [A-Evolve](projects/115-a-evolve-universal-agent-evolution.md), [OpenSpace](projects/162-openspace-self-evolving-skills.md) | 看进化对象、evaluator、archive、回滚、成本、是否跨任务迁移 |
-| Harness engineering | 138 framework repos | [Agentic Harness Engineering](site/public/reports/projects/43-agentic-harness-engineering.md), [OpenClaw](site/public/reports/projects/48-openclaw.md), [Aden Hive](projects/68-aden-hive.md), [OpenHarness](projects/146-openharness-agent-harness-ohmo.md), [CORAL](projects/89-coral-multi-agent-evolution.md) | 看工具、权限、状态、子 agent、评估器、审计链 |
-| Memory substrate | 96 memory-theme repos | [Mem0](projects/58-mem0-agent-memory.md), [LangMem](projects/70-langmem-agent-memory.md), [Graphiti](projects/71-graphiti-temporal-context-graphs.md), [Memoria](projects/110-memoria-git-for-agent-memory.md), [Hindsight](projects/174-hindsight-agent-memory-that-learns.md) | 看写入/检索/合并/删除/冲突/版本化，而不是只看向量库 |
-| Skills / reusable know-how | 60 skill-theme repos | [Anthropic Skills](projects/64-anthropic-skills.md), [OpenAI Skills](projects/121-openai-skills-codex-catalog.md), [AgentSkills](projects/157-agentskills-open-standard.md), [SkillRL](projects/148-skillrl-recursive-skill-rl.md), [Superpowers](site/public/reports/projects/49-superpowers.md) | 看格式、安装面、验证、安全、迁移和跨 agent 兼容 |
-| Evaluation / benchmarks | 89 evaluation-theme repos | [AgentBench](site/public/reports/projects/38-agentbench.md), [OSWorld](projects/73-osworld-computer-agent-benchmark.md), [BrowserGym](projects/75-browsergym-web-agent-benchmark.md), [Claw-Eval](projects/55-claw-eval-agent-evaluation.md), [HaluMem](projects/177-halumem-agent-memory-hallucination-benchmark.md) | 看是否测真实任务、是否防 Goodhart、是否有隐藏测试和轨迹 |
-| Agent frameworks | 138 framework repos | [AutoGPT](projects/08-autogpt-autonomous-agent.md), [MetaGPT](projects/07-metagpt-multi-agent-framework.md), [AutoGen](site/public/reports/projects/11-autogen-multi-agent-conversation.md), [LangGraph](projects/16-langgraph-agent-workflow.md), [OpenHands](projects/19-openhands-dev-agent.md) | 看是否只是 runtime，还是能形成评估驱动的改进闭环 |
-| Prompt / program optimization | 26 prompt-optimization repos | [DSPy](site/public/reports/projects/10-dspy-declarative-llm-programming.md), [OPRO](projects/01-opro-llm-as-optimizer.md), [EvoPrompt](site/public/reports/projects/20-evoprompt-prompt-optimization.md), [SCOPE](projects/jarvispei__scope.md), [GEPA-related](research/repo-classification.md) | 看搜索空间、反馈源、可解释更新和过拟合控制 |
-| Research agents | 31 research-agent repos | [AutoResearchClaw](projects/116-autoresearchclaw-self-evolving-research-agent.md), [ScienceClaw](projects/90-scienceclaw-research-agent.md), [AI Scientist note](research/papers/13-ai-scientist.md), [Thesis Skills](projects/184-thesis-skills-paper-workflow-skills.md) | 看是否产出可验证实验、引用、代码、负结果和复现材料 |
-| Survey / resource indexes | 35 education-list repos | [Self-Evolving-Agents](site/public/reports/projects/32-self-evolving-agents.md), [LLM4EC](site/public/reports/projects/26-llm4ec-llm-evolutionary-computation.md), [LLM4Opt](site/public/reports/projects/27-llm4opt-llm-optimization.md), [Awesome-FM4CO](site/public/reports/projects/40-awesome-fm4co.md), [Awesome Harness Engineering](projects/57-awesome-harness-engineering.md) | 看分类是否帮助认知，还是只是链接列表 |
+Public supplement record / 公开补充记录: [`research/asset-processing-anysearch-supplement-2026-05-22.md`](research/asset-processing-anysearch-supplement-2026-05-22.md)
 
-## 项目判断准则
+### Quality-ranked frontier projects / 质量优先前沿项目
 
-| 项目形态 | README 内判断 | 典型证据 |
-|---|---|---|
-| 可用产品 / runtime | 有安装路径、文档、示例、真实用户工作流、持续维护、权限/成本/观测能力。 | OpenHands、OpenClaw、Aden Hive、OpenHarness、LangGraph、AutoGen |
-| 研究原型 / paper-code | 重点是方法 claim、实验设置、benchmark 和可复现性；不要求产品完成度，但必须能说明改进机制。 | ADAS、DGM、RAGEN、SICA、AlphaEvolve、EvoAgentX |
-| Benchmark / eval harness | 价值在任务质量、评分可靠性、隐藏测试、轨迹审计、噪声控制和与真实需求的相关性。 | AgentBench、OSWorld、BrowserGym、Claw-Eval、STATE-Bench、HaluMem |
-| Memory substrate | 价值在长期状态的写入、检索、冲突、版本、隐私和过期机制，而不是“接了向量数据库”。 | Mem0、LangMem、Graphiti、Memoria、Hindsight、MemoryAgentBench |
-| Skill system | 价值在可安装、可验证、可复用、可迁移、可审计、安全边界清楚。 | Anthropic Skills、OpenAI Skills、AgentSkills、SkillRL、Superpowers |
-| Survey / resource index | 价值在分类、证据、比较和教学；如果只是链接堆叠，对本项目价值较低。 | Self-Evolving-Agents、LLM4EC、LLM4Opt、Awesome-FM4CO |
+These entries are ranked by fit to the Self Evolve thesis, evidence quality, and usefulness as architectural anchors. This table intentionally does not rank by GitHub stars. / 以下条目按 Self Evolve 主题贴合度、证据质量和架构锚点价值排序，不按 GitHub star 排序。
 
-## 论文方法图谱
+| Rank | Repo | Quality judgment / 质量判断 | README role / 放在 README 的角色 |
+|---:|---|---|---|
+| 1 | [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | Most on-theme: fixed base model, evolving harness, Terminal-Bench 2 evidence. / 最贴主题：固定 base model，进化 harness，有 Terminal-Bench 2 指标。 | Harness evolution / 进化闭环 |
+| 2 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | Strongest ecosystem anchor and practical runtime/product surface; needs separate hype audit because star/fork signal is unusual. / 生态锚点最强，runtime/product 形态完整；star/fork 异常高，需要单独 hype audit。 | Runtime / 生态入口 |
+| 3 | [obra/superpowers](https://github.com/obra/superpowers) | High-quality methodology: Skill, TDD, debugging, review, and subagent workflows can become reusable operating manuals. / 方法论质量高，Skill、TDD、debug、review、subagent 工作流可沉淀为操作手册。 | Skill methodology |
+| 4 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | Good fit for growing personal agents and self-improving personal runtimes. / 和“会成长的个人 Agent”贴合，适合作为 self-improving personal agent 案例。 | Personal agent runtime |
+| 5 | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | Precise memory-layer entry; not a complete agent, but important as Evolver memory substrate. / 主题很准：持久记忆层。不是完整 Agent，但作为 Evolver memory substrate 很重要。 | Memory layer |
+| 6 | [pinchbench/skill](https://github.com/pinchbench/skill) | Valuable benchmark signal; currently tied to the OpenClaw ecosystem, so independence and maturity need continued observation. / 评测价值高，但范围偏 OpenClaw 生态，独立性和成熟度需要继续观察。 | Benchmark / Eval |
+| 7 | [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | Product and UX signal is useful, but it is closer to an application entry than a core evolution mechanism. / 产品化和 UX 信号不错，但相对更像应用入口。 | Product/application signal |
 
-| Paper category | Count | 代表思想 | 证据来源 |
-|---|---:|---|---|
-| Frameworks | 12 | Darwin Godel Machine、Godel Agent、RAGEN、ADAS、AgentEvolver、symbolic agent learning | [paper list ZH](research/agent-self-evolution-papers-detailed-ZH.md), [deep notes](research/papers/) |
-| Methods | 22 | RISE、Agent-R、SICA、EvolveR、ACE、self-developing agents、test-time self-improvement | [survey ch3](survey/ch3-methods-cn.md) |
-| Self-play and RL | 10 | Self-play environments、RL-based self-improvement、agent training loops | [survey ch3](survey/ch3-methods-cn.md) |
-| STaR and reasoning self-improvement | 6 | Self-generated rationales、reasoning bootstrapping、weak supervision loops | [paper list ZH](research/agent-self-evolution-papers-detailed-ZH.md) |
-| Self-reflection and Reflexion | 6 | Verbal reinforcement、reflection memory、feedback-driven retry loops | [Reflexion note](research/papers/05-reflexion.md) |
-| Code self-correction | 5 | Code repair、bug fixing、SWE-style evaluation and improvement | [survey ch5](survey/ch5-evaluation-cn.md) |
-| Self-evolving curriculum | 5 | Automatic task generation、curriculum search、challenge generation | [paper review coverage](analysis/paper-review-coverage.md) |
-| Experience learning | 4 | Trajectory、lesson、execution trace 的保存与复用 | [survey ch3](survey/ch3-methods-cn.md) |
-| Memory and lifelong learning | 6 | Long-term state、consolidation、retrieval、adaptive behavior | [memory projects](#项目分类总表) |
-| Self-rewarding and alignment | 5 | Model-as-judge、reward modeling、constitutional/process feedback | [survey ch3](survey/ch3-methods-cn.md) |
-| Multi-agent debate and collaboration | 5 | Debate、coarse-to-fine refinement、collaborative reasoning | [Agent Symbolic Learning](research/papers/01-agent-symbolic-learning.md) |
-| Evolutionary strategies | 4 | LLM as evolution strategy、program/prompt/policy search | [AlphaEvolve](research/papers/08-alphaevolve.md) |
-| Open-ended evolution and classics | 5 | Voyager、generative agents、novelty search、foundation agents | [survey ch2](survey/ch2-theory-cn.md) |
-| Weak-to-strong and theory | 5 | Sharpening、weak-to-strong generalization、approval and safety theory | [survey ch2](survey/ch2-theory-cn.md) |
+## Frameworks / 框架
 
-## Git / GitHub 证据层
+Reusable SDKs, runtimes, AgentOS, orchestration layers, memory platforms, and workflow frameworks. / 可复用 SDK、runtime、AgentOS、编排层、记忆平台和工作流框架。
 
-| 层级 | Count | 定义 | 证据来源 |
-|---|---:|---|---|
-| Raw GitHub captures | 490 | `raw-github/*.md` 原始抓取和 timestamp index | [raw timestamp index](output/raw-github-timestamp-index.md), [raw-github/](raw-github/) |
-| Classified repositories | 490 | 带 category、theme、function、time slice 的分类行 | [repo classification](research/repo-classification.md), [classification JSON](research/repo-classification.json) |
-| Site/paper model-card projects | 208 | 进入站点数据和项目报告的重点项目 | [site/src/data/projects.ts](site/src/data/projects.ts), [projects/INDEX.md](projects/INDEX.md) |
-| Public project report files | 233 | 网站 public reports 层的项目报告文件 | [site/public/reports/projects/INDEX.md](site/public/reports/projects/INDEX.md) |
-| Strict evolution-theme repos | 79 | `base_theme = evolution` 的严格主题仓库 | [GitHub analysis](analysis/github-project-data-analysis.md) |
-| Broad evolution-related repos | 176 | 命中 evolution/self-improvement/reflection/search/improvement-loop 的广义集合 | [GitHub analysis](analysis/github-project-data-analysis.md) |
+- [langchain-ai/langsmith-sdk](https://github.com/langchain-ai/langsmith-sdk) - LangSmith Client SDK Implementations 🌟894
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-15`
+- [aimagelab/mammoth](https://github.com/aimagelab/mammoth) - An Extendible (General) Continual Learning Framework based on Pytorch - official codebase of Dark Experience for General Continual Learning 🌟812
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [openmemind/memind](https://github.com/openmemind/memind) - Self-evolving cognitive memory and context engine for AI agents in Java. Empowering 24/7 proactive agents like OpenClaw with understanding and SOTA performance. 🌟787
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [wzdnzd/harvester](https://github.com/wzdnzd/harvester) - Intelligent data acquisition framework for GitHub and web sources 🌟546
+  `stack:Python` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [neosigmaai/auto-harness](https://github.com/neosigmaai/auto-harness) - Bring your own agent and build a self-improving agentic system. Automatically mine failures, optimize the agent harness, and gate against regressions. 🌟507
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [viktoraxelsen/memskill](https://github.com/viktoraxelsen/memskill) - MemSkill: Learning and Evolving Memory Skills for Self-Evolving Agents 🌟482
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [openautocoder/live-swe-agent](https://github.com/openautocoder/live-swe-agent) - Live-SWE-agent: live, runtime self-evolving software engineering agent 🌟392
+  `stack:Markdown` `tag:framework-runtime` `time:2025-11` `content:2025-11-24`
+- [china-qijizhifeng/agentic-harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) - Official AHE code: observability-driven automatic evolution of coding-agent harnesses; lifts Terminal-Bench 2 pass@1 from 69.7% to 77.0% over 10 iterations and evolves prompts, tools, middleware, skills, sub-agents, and memory while the base model stays fixed. 🌟391
+  `stack:Python` `tag:framework-runtime` `time:2026-05` `content:2026-05-14`
+- [noahshinn/reflexion-draft](https://github.com/noahshinn/reflexion-draft) - Reflexion: an autonomous agent with dynamic memory and self-reflection 🌟388
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [codexstar69/bug-hunter](https://github.com/codexstar69/bug-hunter) - Adversarial AI bug hunter with auto-fix skill for Claude Code, Cursor, Codex CLI, GitHub Copilot CLI, Kiro CLI, Opencode, Pi Coding Agent, and more. Multi-agent pipeline finds security vu... 🌟380
+  `stack:Markdown` `tag:framework-runtime` `time:2026-03` `content:2026-03-12`
+- [bingreeky/memgen](https://github.com/bingreeky/memgen) - MemGen: Weaving Generative Latent Memory for Self-Evolving Agents 🌟378
+  `stack:Python` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [agentic-in/elephant-agent](https://github.com/agentic-in/elephant-agent) - Personal-Model First Self Evolving AI Agent 🐘 🌟361
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [channinglua/prax-agent](https://github.com/channinglua/prax-agent) - Self-improving agent runtime that learns from experience — test-verify-fix loops, correction detection, cross-project memory, multi-model orchestration. 🌟294
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [dsifry/metaswarm](https://github.com/dsifry/metaswarm) - A self-improving multi-agent orchestration framework for Claude Code, Gemini CLI, and Codex CLI — 18 agents, 13 skills, 15 commands, TDD enforcement, quality gates, spec-driven development 🌟272
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [onevcat/argue](https://github.com/onevcat/argue) - Harness-agnostic orchestration package for multi-agent consensus workflows 🌟238
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [reflexioai/reflexio](https://github.com/reflexioai/reflexio) - Make your agents improve themselves. Reflexio is an AI agent self-improvement harness that enables your AI agents to continuously learn from real user interactions. 🌟220
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [deepelementlab/clawcode](https://github.com/deepelementlab/clawcode) - ClawCode is claude code inspired implementation in python and Rust focused on agents and experience-based evolution, and is an Open-source coding-agent CLI for Anthropic, OpenAI, Gemini,... 🌟199
+  `stack:Python` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [memovai/memov](https://github.com/memovai/memov) - Give git-like & traceable memory to OpenClaw and any coding agents. By https://memov.ai/ aka Entire CLI for every coding agents by MCP. Self-evolution for skills. 🌟190
+  `stack:Shell` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [spiral-rl/spiral](https://github.com/spiral-rl/spiral) - SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning 🌟190
+  `stack:Python` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [n8n-io/n8n](https://github.com/n8n-io/n8n) - Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations. 🌟189
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-20`
+- [significant-gravitas/autogpt](https://github.com/significant-gravitas/autogpt) - AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters. 🌟184
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [arvid-pku/godel/agent](https://github.com/arvid-pku/godel/agent) - Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement 🌟182
+  `stack:Python` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [hao-cyber/skill-evolution](https://github.com/hao-cyber/skill-evolution) - Self-evolving AI skill framework — skills that learn from execution, reflect on failures, and autonomously improve themselves 🌟145
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [iii-experimental/agentos](https://github.com/iii-experimental/agentos) - The agent OS that evolves itself. 🌟144
+  `stack:TypeScript/JavaScript` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [langchain-ai/langchain](https://github.com/langchain-ai/langchain) - The agent engineering platform. 🌟137
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-11`
+- [osu-nlp-group/skillweaver](https://github.com/osu-nlp-group/skillweaver) - SkillWeaver is a framework to enable web agent self-improvement through environment exploration and skill synthesis. 🌟123
+  `stack:Python` `tag:framework-runtime` `time:2024-Q3` `content:2024-08-06`
+- [shintaro-sprech/agent-orchestrator-template](https://github.com/shintaro-sprech/agent-orchestrator-template) - A self-evolving subagent system for Claude Code 🌟120
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [01-ai/langcrew](https://github.com/01-ai/langcrew) - A high-level multi-agent development framework built on LangGraph, combining CrewAI’s intuitive concepts with enterprise-grade features, ready-to-use templates, and full-stack UI for rapi... 🌟114
+  `stack:Markdown` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [longyunfeigu/learn-hermes-agent](https://github.com/longyunfeigu/learn-hermes-agent) - A 27-chapter hands-on tutorial for building an autonomous AI agent from zero in Python. Agent loop, tool system, memory, skills, MCP, multi-platform gateway, and self-evolution — inspired... 🌟113
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [yang1999code/controllable-agent](https://github.com/yang1999code/controllable-agent) - 20-interface AI agent framework with 3-layer architecture, multi-agent delegation, and self-evolution. 🌟105
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [0xsanei/darwinia](https://github.com/0xsanei/darwinia) - The Self-Evolving Agent Ecosystem — Trading agents that evolve through Darwinian selection and adversarial self-play 🌟102
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [browser-use/browser-use](https://github.com/browser-use/browser-use) - 🌐 Make websites accessible for AI agents. Automate tasks online with ease. 🌟94
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-19`
+- [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) - Model Context Protocol Servers 🌟86
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [agenttoolkit/altk-evolve](https://github.com/agenttoolkit/altk-evolve) - Self improving agents through iterations 🌟85
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [richchen-maker/openclaw-multi-agent-team](https://github.com/richchen-maker/openclaw-multi-agent-team) - 🐊 Multi-Team Intelligent Orchestrator v5.3.1 — DNA-driven multi-agent collaboration with 9 genes, 11-step pipeline, 60+ roles, 6 self-evolution gears. Built for OpenClaw. 🌟80
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [flowersteam/teachmyagent](https://github.com/flowersteam/teachmyagent) - TeachMyAgent is a testbed platform for Automatic Curriculum Learning methods in Deep RL. 🌟77
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [mdalamin5/end-to-end-agentic-ai-automation-lab](https://github.com/mdalamin5/end-to-end-agentic-ai-automation-lab) - This repository contains hands-on projects, code examples, and deployment workflows. Explore multi-agent systems, LangChain, LangGraph, AutoGen, CrewAI, RAG, MCP, automation with n8n, and... 🌟72
+  `stack:Python` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [lean-dojo/leanagent](https://github.com/lean-dojo/leanagent) - LeanAgent is a novel lifelong learning framework for formal theorem proving that continuously generalizes to and improves on ever-expanding mathematical knowledge without forgetting previ... 🌟68
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [omdivyatej/self-learning-agents](https://github.com/omdivyatej/self-learning-agents) - A lightweight Python library that allows any LLM agent to self-improve through feedback, without retraining models. 🌟63
+  `stack:Python` `tag:framework-runtime` `time:2025-05` `content:2025-05-03`
+- [eliasecchig/gemini-cli-git](https://github.com/eliasecchig/gemini-cli-git) - Turn your Git repository into a self-improving autonomous agent. Open issues to assign tasks, review PRs, merge to teach. Gemini is the brain, Git is the backend. 🌟56
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [evotai/evot](https://github.com/evotai/evot) - A self-evolving AI coding agent for long-running, complex software engineering. 🌟54
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-17`
+- [emson/elfmem](https://github.com/emson/elfmem) - sELF improving agent memory system 🌟53
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [ilearn-lab/evoharness](https://github.com/ilearn-lab/evoharness) - EvoHarness delivers terminal-native agent infrastructure: tools, commands, skills, agents, plugins, MCP, memory, approvals, and controlled self-evolution 🌟52
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [crewaiinc/crewai](https://github.com/crewaiinc/crewai) - Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks. 🌟51
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [developzir/gepa-mcp](https://github.com/developzir/gepa-mcp) - MCP server integrating GEPA (Genetic-Evolutionary Prompt Architecture) for automatic prompt optimization with Claude Desktop 🌟48
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [pingcy/ace-langgraph](https://github.com/pingcy/ace-langgraph) - ACE LangGraph: ReAct Agent with Adaptive Learning - Integrating ACE framework with LangGraph for self-improving agents 🌟46
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [zoe-yyx/agentnet](https://github.com/zoe-yyx/agentnet) - [NIPS2025] A decentralized, RAG-enhanced multi-agent framework for LLMs with dynamic task routing and agent evolution. 🌟46
+  `stack:Markdown` `tag:framework-runtime` `time:2025-04` `content:2025-04-22`
+- [letta-ai/agentic-learning-sdk](https://github.com/letta-ai/agentic-learning-sdk) - Drop-in SDK for adding continual learning and long-term memory to any LLM agent. 🌟45
+  `stack:Markdown` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [28naem-del/mnemosyne](https://github.com/28naem-del/mnemosyne) - Cognitive Memory OS for AI Agents — persistent, self-improving, multi-agent memory 🌟41
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [cellium-project/cellium-agent](https://github.com/cellium-project/cellium-agent) - Self-Evolving AI Agent Framework | Decision-Loop Driven Microkernel Architecture with Hot-Pluggable Components & Triple-Layer Memory | Agent Infinite Evolution Engine that Learns from Fai... 🌟41
+  `stack:Markdown` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [hankbesser/recursive-agents](https://github.com/hankbesser/recursive-agents) - A meta-framework for self-improving LLMs with transparent reasoning 🌟39
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [zhangyiqun018/agent-for-debate](https://github.com/zhangyiqun018/agent-for-debate) - [ICASSP 2026] Agent4Debate is a dynamic multi-agent framework that leverages LLMs to achieve human-level performance in competitive debate by dynamically coordinating specialized agents t... 🌟38
+  `stack:Python` `tag:framework-runtime` `time:2026-01` `content:2026-01-18`
+- [clawland-ai/geneclaw](https://github.com/clawland-ai/geneclaw) - Self-evolving AI agent framework with 5-layer safety gatekeeper. Agents observe failures, propose fixes, and safely apply them. Built on HKUDS/nanobot. 🌟36
+  `stack:Markdown` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [stanfordnlp/dsp](https://github.com/stanfordnlp/dsp) - DSPy: The framework for programming—not prompting—language models 🌟34
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-05`
+- [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) - DSPy: The framework for programming—not prompting—language models 🌟34
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-05`
+- [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) - Build resilient agents. 🌟32
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-12`
+- [vercel-labs/ai](https://github.com/vercel-labs/ai) - The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents 🌟24
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [vercel/ai](https://github.com/vercel/ai) - The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents 🌟24
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [letta-ai/letta](https://github.com/letta-ai/letta) - Letta is the platform for building stateful agents: AI with advanced memory that can learn and self-improve over time. 🌟22
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-14`
+- [siddharth-1001/agent-eval-harness](https://github.com/siddharth-1001/agent-eval-harness) - An open-source evaluation framework specifically for agentic systems — not just LLM outputs, but full agent behavior. 🌟20
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [camel-ai/owl](https://github.com/camel-ai/owl) - 🦉 OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation 🌟19
+  `stack:Markdown` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [exoskeletonzj/mars](https://github.com/exoskeletonzj/mars) - A Multi-Agent Approach Integrating Socratic Guidance for Automated Prompt Optimization 🌟18
+  `stack:Python` `tag:tool-module` `time:unknown` `content:unknown`
+- [tsukushiai/self-organized-agent](https://github.com/tsukushiai/self-organized-agent) - A LLM Multi-Agent Framework toward Ultra Large-Scale Code Generation and Optimization 🌟18
+  `stack:Python` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [browser-use/web-ui](https://github.com/browser-use/web-ui) - 🖥️ Run AI Agent in your browser. 🌟16
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [tylerdotai/meta-harness-evolver](https://github.com/tylerdotai/meta-harness-evolver) - Meta-Harness: End-to-End Optimization of LLM Harnesses — OpenClaw Agent Evolution System 🌟14
+  `stack:Markdown` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [gumbel-ai/agent-debate](https://github.com/gumbel-ai/agent-debate) - Structured protocol for AI coding agents to debate technical decisions via shared markdown 🌟12
+  `stack:Markdown` `tag:framework-runtime` `time:2026-03` `content:2026-03-07`
+- [lsdefine/genericagent](https://github.com/lsdefine/genericagent) - Self-evolving agent: grows skill tree from 3.3K-line seed, achieving full system control with 6x less token consumption 🌟11
+  `stack:Python` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [privkeyio/evolve-mcp](https://github.com/privkeyio/evolve-mcp) - Universal MCP server for agent self-improvement via evolutionary algorithms. 🌟11
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [mettamazza/ernosagent](https://github.com/mettamazza/ernosagent) - Local-first, privacy-first AI agent with recursive self-improvement 🌟10
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [senweaver/senagentos](https://github.com/senweaver/senagentos) - High-performance Rust agent OS. Multi-agent orchestration, self-evolution, memory-first design, built-in security, and hardware-to-chat extensibility. 🌟10
+  `stack:Markdown` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [n4m3z/forge-council](https://github.com/n4m3z/forge-council) - Multi-agent council orchestration via Claude Code agent teams 🌟9
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [lastmile-ai/mcp-agent](https://github.com/lastmile-ai/mcp-agent) - Build effective agents using Model Context Protocol and simple workflow patterns 🌟8
+  `stack:Markdown` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [autodrive-ecosystem/mrdt-marl](https://github.com/autodrive-ecosystem/mrdt-marl) - Multi-Agent Deep Reinforcement Learning for Cooperative and Competitive Autonomous Vehicles 🌟7
+  `stack:Markdown` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [evomap/evolver](https://github.com/evomap/evolver) - The GEP-powered self-evolving engine for AI agents. Auditable evolution with Genes, Capsules, and Events. | evomap.ai 🌟7
+  `stack:Markdown` `tag:tool-module` `time:2026-02` `content:2026-02-01`
+- [hkuds/openspace](https://github.com/hkuds/openspace) - "OpenSpace: Make Your Agents: Smarter, Low-Cost, Self-Evolving" -- Community: https://open-space.cloud/ 🌟6
+  `stack:Python` `tag:benchmark-eval` `time:2026-04` `content:2026-04-16`
+- [aiwaves-cn/agents](https://github.com/aiwaves-cn/agents) - An Open-source Framework for Data-centric, Self-evolving Autonomous Language Agents 🌟5
+  `stack:Python` `tag:framework-runtime` `time:2024-Q2` `content:2024-06-25`
+- [argus-framework/argus-ai-debate](https://github.com/argus-framework/argus-ai-debate) - Multi-agent AI framework where LLMs debate each other to verify claims. Bayesian reasoning, adversarial evidence, calibrated verdicts & full audit trails. Works with GPT-4, Claude, Gemini... 🌟5
+  `stack:Markdown` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [bazilicum/graphltm](https://github.com/bazilicum/graphltm) - Turn any LLM into a self-extending knowledge agent powered by a graph-structured memory - complete with PDF-to-graph ingestion, budget-aware optimisation, and dual-engine orchestration. 🌟4
+  `stack:Markdown` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [xinhuagu/aceclaw](https://github.com/xinhuagu/aceclaw) - Java-native runtime for long-running AI agents with live execution control, human approvals, and audit trails. 🌟4
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [zazencodes/zazencodes-season-3](https://github.com/zazencodes/zazencodes-season-3) - YouTube video source code for Season 3 🌟4
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [anthropics/anthropic-sdk-python](https://github.com/anthropics/anthropic-sdk-python) - Claude SDK for Python 🌟3
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-19`
+- [emartin59/text-game-llm-improver](https://github.com/emartin59/text-game-llm-improver) - Code and Models for "Evolving LLMs Through Text-Based Self-Play: Achieving Emergent Performance", an AI research paper from Eric Martin 🌟3
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [evoagentx/evoagentx](https://github.com/evoagentx/evoagentx) - 🚀 EvoAgentX: Building a Self-Evolving Ecosystem of AI Agents 🌟3
+  `stack:Markdown` `tag:application-demo` `time:2026-05` `content:2026-05-21`
+- [ronit26mehta/argus-ai-debate](https://github.com/ronit26mehta/argus-ai-debate) - Debate-native multi-agent AI framework that eliminates LLM hallucination, overconfidence, and opacity. Structures knowledge evaluation as adversarial multi-round debates over a Conceptual... 🌟3
+  `stack:Unknown` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [sentrux/sentrux](https://github.com/sentrux/sentrux) - Real-time architectural sensor that helps AI agents close the feedback loop, enabling recursive self-improvement of code quality. Pure Rust. 🌟2
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [vercel/workflow](https://github.com/vercel/workflow) - Workflow SDK: Build durable, reliable, and observable apps and AI Agents in TypeScript 🌟2
+  `stack:Markdown` `tag:framework-runtime` `time:2026-04` `content:2026-04-17`
+- [arthurmgraf/graphmind](https://github.com/arthurmgraf/graphmind) - Autonomous Knowledge Agent Platform - Agentic RAG with Knowledge Graphs, hybrid retrieval, LangGraph agents, and MCP server 🌟1
+  `stack:Markdown` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [asirwad/dspy-prompt-auto-optimizer](https://github.com/asirwad/dspy-prompt-auto-optimizer) - A learning-focused exploration of programmatic prompt optimization using the DSPy framework. 🌟1
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [greyhaven-ai/autocontext](https://github.com/greyhaven-ai/autocontext) - a recursive self-improving harness designed to help your agents (and future iterations of those agents) succeed on any task 🌟1
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-04` `content:2026-04-28`
+- [internscience/internagent](https://github.com/internscience/internagent) - InternAgent-1.5: A Unified Agentic Framework for Long-Horizon Autonomous Scientific Discovery 🌟1
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [os-copilot/os-copilot](https://github.com/os-copilot/os-copilot) - An self-improving embodied conversational agent seamlessly integrated into the operating system to automate our daily tasks. 🌟1
+  `stack:Python` `tag:benchmark-eval` `time:2024-Q1` `content:2024-03-29`
+- [rinadelph/agent-mcp](https://github.com/rinadelph/agent-mcp) - Agent-MCP is a framework for creating multi-agent systems that enables coordinated, efficient AI collaboration through the Model Context Protocol (MCP). The system is designed for develop... 🌟1
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [sunitj/colloquip](https://github.com/sunitj/colloquip) - Where AI agents deliberate, debate & discover 🌟1
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [ashish-kamboj/agentic-ai-workflows](https://github.com/ashish-kamboj/agentic-ai-workflows) - AI-agent-driven workflow automation using n8n and CrewAI 🌟0
+  `stack:Markdown` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [centaurioun/crewai](https://github.com/centaurioun/crewai) - Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks. 🌟0
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [haoxufd/openrlhf](https://github.com/haoxufd/openrlhf) - An Easy-to-use, Scalable and High-performance RLHF Framework (70B+ PPO Full Tuning & Iterative DPO & LoRA & RingAttention & RFT) 🌟0
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [large-model-rl-lib/openrlhf](https://github.com/large-model-rl-lib/openrlhf) - An Easy-to-use, Scalable and High-performance Agentic RL Framework based on Ray (PPO & DAPO & REINFORCE++ & TIS & vLLM & Ray & Async RL) 🌟0
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [mitchellgordon95/dspy](https://github.com/mitchellgordon95/dspy) - DSPy: The framework for programming—not prompting—foundation models 🌟0
+  `stack:Python` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [sasleee/tencentdb-agent-memory](https://github.com/sasleee/tencentdb-agent-memory) - TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies. 🌟0
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [shingo257/gitnexus](https://github.com/shingo257/gitnexus) - GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an in... 🌟0
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [square-mind/squaremind](https://github.com/square-mind/squaremind) - Squaremind 🌟0
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) - Emergent multi-agent intelligence — AI agents collaborate via a shared knowledge graph, discovering tensions and synthesizing theses without a central orchestrator. 🌟0
+  `stack:TypeScript/JavaScript` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
 
-### Git category / theme 快照
+## Tools & Benchmarks / 工具与评测
 
-| 维度 | 分类 |
-|---|---|
-| Raw collection categories | 框架/framework 138, 评测/evaluation 99, 教程/tutorial 93, 工具/tool 83, 应用/application 47, 论文代码/paper-code 29, 评测/benchmark 1 |
-| Raw collection themes | memory 96, evaluation 89, evolution 79, skill 60, framework 50, education-list 35, research-agent 31, prompt-optimization 26, coding-agent 17, workflow-automation 6, safety 1 |
-| Timeline 证据 | [Analyzed Project Release Timeline](analysis/github-project-data-analysis.md#analyzed-project-release-timeline) |
+Developer tools, harnesses, eval suites, benchmarks, judges, observability, and safety tools. / 开发工具、评测框架、benchmark、judge、可观测性与安全工具。
 
-## 社区 / X / 博客信号
+- [madaan/self-refine](https://github.com/madaan/self-refine) - LLMs can generate feedback on their work, use it to improve the output, and repeat this process iteratively. 🌟805
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [tiger-ai-lab/openresearcher](https://github.com/tiger-ai-lab/openresearcher) - OpenResearcher: A Fully Open Pipeline for Long-Horizon Deep Research Trajectory Synthesis 🌟756
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [polarseeker/openseeker](https://github.com/polarseeker/openseeker) - OpenSeeker: A search agent with open-source data and models 🌟711
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [human-agent-society/coral](https://github.com/human-agent-society/coral) - CORAL is a robust, lightweight infrastructure for multi-agent autonomous self-evolution, built for autoresearch. Works with Claude Code, Codex, Cursor, OpenCode, Kiro, and more. 🌟669
+  `stack:Markdown` `tag:tool-module` `time:2026-04` `content:2026-04-24`
+- [vision-intelligence-and-robots-group/best-incremental-learning](https://github.com/vision-intelligence-and-robots-group/best-incremental-learning) - An Incremental Learning, Continual Learning, and Life-Long Learning Repository 🌟607
+  `stack:Unknown` `tag:tool-module` `time:unknown` `content:unknown`
+- [graph-rag/graphrag](https://github.com/graph-rag/graphrag) - GraphRAG 🌟574
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [rlhflow/online-rlhf](https://github.com/rlhflow/online-rlhf) - A recipe for online RLHF and online iterative DPO. 🌟545
+  `stack:Shell` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [ecnu-icalk/autoskill](https://github.com/ecnu-icalk/autoskill) - AutoSkill: Experience-Driven Lifelong Learning via Skill Self-Evolution 🌟424
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-09`
+- [lyl1015/jarvisevo](https://github.com/lyl1015/jarvisevo) - [CVPR' 2026] JarvisEvo: Towards a Self-Evolving Photo Editing Agent with Synergistic Editor-Evaluator Optimization 🌟401
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [xizaoqu/worldmem](https://github.com/xizaoqu/worldmem) - [NeurIPS 2025] WorldMem: Long-term Consistent World Simulation with Memory 🌟359
+  `stack:Python` `tag:benchmark-eval` `time:2025-11` `content:2025-11-30`
+- [jarvis-xs/se-agent](https://github.com/jarvis-xs/se-agent) - SE-Agent is a self-evolution framework for LLM Code agents. It enables trajectory-level evolution to exchange information across reasoning paths via Revision, Recombination, and Refinemen... 🌟274
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [rmanluo/gfm-rag](https://github.com/rmanluo/gfm-rag) - [NeurIPS'25, ICLR'26] Graph Foundation Model for Retrieval Augmented Generation 🌟259
+  `stack:Python` `tag:benchmark-eval` `time:2026-04` `content:2026-04-20`
+- [thuml/rlvr-world](https://github.com/thuml/rlvr-world) - Official repository for "RLVR-World: Training World Models with Reinforcement Learning" (NeurIPS 2025), https://arxiv.org/abs/2505.13934 🌟251
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [sibyl-research-team/sibyl-research-system](https://github.com/sibyl-research-team/sibyl-research-system) - Fully Autonomous AI Research System with Self-Evolution, built natively on Claude Code 🌟245
+  `stack:Python` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [beeevita/evoprompt](https://github.com/beeevita/evoprompt) - Official implementation of the paper Connecting Large Language Models with Evolutionary Algorithms Yields Powerful Prompt Optimizers 🌟238
+  `stack:Python` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [rlhflow/self-rewarding-reasoning-llm](https://github.com/rlhflow/self-rewarding-reasoning-llm) - Recipes to train the self-rewarding reasoning LLMs. 🌟232
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [modelscope/agentjet](https://github.com/modelscope/agentjet) - Cutting-edge platform for LLM agent tuning. Deliver RL tuning with flexibility, reliability, speed, multi-agent optimization and realtime community benchmarking. 🌟208
+  `stack:Python` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [xmudeeplit/awesome-self-evolving-agents](https://github.com/xmudeeplit/awesome-self-evolving-agents) - A Survey of Self-Evolving Agents | A curated list of resources (surveys, papers, benchmarks, and opensource projects) on Self-Evolving Agents. 🌟181
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [internlm/polar](https://github.com/internlm/polar) - Pre-trained, Scalable, High-performance Reward Models via Policy Discriminative Learning. 🌟163
+  `stack:Markdown` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [maxnorm8650/medagentsim](https://github.com/maxnorm8650/medagentsim) - MedAgentSim: Self-Evolving Multi-Agent Simulations for Realistic Clinical Interactions, MICCAI 2025 (oral and early accepted) 🌟163
+  `stack:Python` `tag:research-artifact` `time:2026-05` `content:2026-05-21`
+- [chuacheowhuan/gym-continuousdoubleauction](https://github.com/chuacheowhuan/gym-continuousdoubleauction) - A custom MARL (multi-agent reinforcement learning) environment where multiple agents trade against one another (self-play) in a zero-sum continuous double auction. Ray [RLlib] is used for... 🌟153
+  `stack:Python` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [archishmansengupta/autovoiceevals](https://github.com/archishmansengupta/autovoiceevals) - A self-improving loop for voice AI agents. Uses karpathy's autoresearch as foundation. 🌟149
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [linear95/spag](https://github.com/linear95/spag) - Self-playing Adversarial Language Game Enhances LLM Reasoning, NeurIPS 2024 🌟144
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [claire-labo/evotune](https://github.com/claire-labo/evotune) - Efficiently discovering algorithms via LLMs with evolutionary search and reinforcement learning. 🌟137
+  `stack:Python` `tag:tool-module` `time:unknown` `content:unknown`
+- [hwfengcs/dm-code-agent](https://github.com/hwfengcs/dm-code-agent) - Lightweight, auditable Python code agent (~1500 LOC) — ReAct + Planner + Reflexion + Hybrid RAG, with SWE-bench Lite eval and trace replay. 🌟135
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [oxen-ai/self-rewarding-language-models](https://github.com/oxen-ai/self-rewarding-language-models) - This is work done by the Oxen.ai Community, trying to reproduce the Self-Rewarding Language Model paper from MetaAI. 🌟134
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [evomap/awesome-agent-evolution](https://github.com/evomap/awesome-agent-evolution) - A curated list of AI Agent evolution, memory systems, multi-agent architectures, and self-improvement projects. | evomap.ai 🌟123
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [fusionbrainlab/gigaevo-core](https://github.com/fusionbrainlab/gigaevo-core) - Evolutionary algorithm that uses Large Language Models (LLMs) to automatically improve programs through iterative mutation and selection 🌟116
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [dongxiangjue/awesome-llm-self-improvement](https://github.com/dongxiangjue/awesome-llm-self-improvement) - A curated list of awesome LLM Inference-Time Self-Improvement (ITSI, pronounced "itsy") papers from our recent survey: A Survey on Large Language Model Inference-Time Self-Improvement. 🌟106
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [inclusionai/agenticlearning](https://github.com/inclusionai/agenticlearning) - Agentic Learning Powered by AWorld 🌟106
+  `stack:Markdown` `tag:tool-module` `time:2024-Q4` `content:2024-11-20`
+- [sethkarten/continual-harness](https://github.com/sethkarten/continual-harness) - Official repository of the paper: Continual Harness: Online Adaptation for Self-Improving Foundation Agents and PokeAgent Speedrun Track 2 🌟106
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [nikivanstein/llamea](https://github.com/nikivanstein/llamea) - Large Language Model Evolutionary Algorithm 🌟105
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [xai-liacs/llamea](https://github.com/xai-liacs/llamea) - Large Language Model Evolutionary Algorithm 🌟105
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [opentracy/opentracy](https://github.com/opentracy/opentracy) - Self-improving AI agent harness — propose, eval, approve, ship. AHE autonomous loop + MCP + BYOK + eval suite. 🌟101
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-18`
+- [spillwavesolutions/agent-brain](https://github.com/spillwavesolutions/agent-brain) - Private RAG system with semantic context ingestion to improve source of truth of reliable sources 🌟101
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-03` `content:2026-03-16`
+- [mycelium-io/mycelium](https://github.com/mycelium-io/mycelium) - Multi-agent coordination + persistent memory, semantic negotiation, async rooms, and a shared knowledge graph 🌟95
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [sola-st/repairagent](https://github.com/sola-st/repairagent) - RepairAgent is an autonomous LLM-based agent for software repair. 🌟95
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [bennettschwartz/membrane](https://github.com/bennettschwartz/membrane) - A selective learning and memory substrate for agentic systems — typed, revisable, decayable memory with competence learning and trust-aware retrieval. 🌟93
+  `stack:Markdown` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [zjunlp/knowself](https://github.com/zjunlp/knowself) - [ACL 2025] Agentic Knowledgeable Self-awareness 🌟93
+  `stack:Shell` `tag:benchmark-eval` `time:2024-Q3` `content:2024-08-06`
+- [ngoodman/metaprompt](https://github.com/ngoodman/metaprompt) - Meta-prompt: a simple self-improving language agent 🌟88
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [zed-industries/zed](https://github.com/zed-industries/zed) - Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. 🌟83
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-20`
+- [shaoshuai0605/misevolution](https://github.com/shaoshuai0605/misevolution) - Official Repo of Your Agent May Misevolve: Emergent Risks in Self-evolving LLM Agents 🌟76
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [imgeorgiev/pwm](https://github.com/imgeorgiev/pwm) - PWM: Policy Learning with Large World Models 🌟68
+  `stack:Python` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [pgg3/evotoolkit](https://github.com/pgg3/evotoolkit) - LLM-driven solution evolutionary optimization toolkit 🌟68
+  `stack:Python` `tag:benchmark-eval` `time:2026-03` `content:2026-03-23`
+- [x1aox1a/word2world](https://github.com/x1aox1a/word2world) - [ACL 2026 Oral] From Word to World: Can Large Language Models be Implicit Text-based World Models? 🌟62
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [bruno686/visplay](https://github.com/bruno686/visplay) - [CVPR'26] VisPlay: Self-Evolving Vision-Language Models 🌟57
+  `stack:Python` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [egmaminta/gepa-lite](https://github.com/egmaminta/gepa-lite) - A lightweight implementation of the GEPA (Genetic-Pareto) prompt optimization method for large language models. 🌟55
+  `stack:Python` `tag:tool-module` `time:unknown` `content:unknown`
+- [ibm/awesome-agentic-workflow-optimization](https://github.com/ibm/awesome-agentic-workflow-optimization) - Survey paper: From Static Templates to Dynamic Runtime Graphs: A Survey of Workflow Optimization for LLM Agents. 🌟51
+  `stack:Markdown` `tag:resource-index` `time:unknown` `content:unknown`
+- [thu-nics/mars](https://github.com/thu-nics/mars) - [ICLR'26] MARSHAL: Incentivizing Multi-Agent Reasoning via Self-Play with Strategic LLMs 🌟48
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [rucbm/laser](https://github.com/rucbm/laser) - [ICLR 2026] Official repository for the paper "LaSeR: Reinforcement Learning with Last-Token Self-Rewarding" 🌟36
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [shiqichen17/spa](https://github.com/shiqichen17/spa) - Github repository for "Internalizing World Models via Self-Play Finetuning for Agentic RL" 🌟35
+  `stack:Shell` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [zjunlp/worldmind](https://github.com/zjunlp/worldmind) - Aligning Agentic World Models via Knowledgeable Experience Learning 🌟35
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [zhentingwang/dump](https://github.com/zhentingwang/dump) - DUMP 🌟33
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [colab2/midca](https://github.com/colab2/midca) - The Metacognitive Integrated Dual-Cycle Architecture (MIDCA) 🌟27
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [huggingface/smolagents](https://github.com/huggingface/smolagents) - 🤗 smolagents: a barebones library for agents that think in code. 🌟27
+  `stack:Markdown` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [labicon/curricullm](https://github.com/labicon/curricullm) - Official code repository for CurricuLLM: Automatic Task Curricula Design for Learning Complex Robot Skills using Large Language Models 🌟27
+  `stack:Python` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [feesuu/cluerag](https://github.com/feesuu/cluerag) - Clue-RAG: Towards Accurate and Cost-Efficient Graph-based RAG via Multi-Partite Graph and Query-Driven Iterative Retrieval 🌟26
+  `stack:Python` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [garrus800-stack/genesis-agent](https://github.com/garrus800-stack/genesis-agent) - Self-aware cognitive AI agent that reads, modifies & verifies its own code. Autonomous planning, episodic memory, emotional state & MCP integration. Runs on Claude, GPT-4 or Ollama. Elect... 🌟24
+  `stack:Markdown` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [skills-mcp/skills-mcp](https://github.com/skills-mcp/skills-mcp) - Bring Claude's Skills pattern to any MCP-compatible agent 🌟24
+  `stack:TypeScript/JavaScript` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [volcengine/openviking](https://github.com/volcengine/openviking) - OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agen... 🌟24
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [matebenyovszky/healing-agent](https://github.com/matebenyovszky/healing-agent) - AI powered automatic software healing agent 🌟23
+  `stack:Markdown` `tag:benchmark-eval` `time:2024-Q1` `content:2024-02-01`
+- [ce0alex/skill-hunter](https://github.com/ce0alex/skill-hunter) - Agent skill to analyze a repo and recommend a best-fit skill stack with verified sources 🌟22
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-01` `content:2026-01-31`
+- [faveos8758/reflexion-agent-ts](https://github.com/faveos8758/reflexion-agent-ts) - Self-improving LLM agent in TypeScript using Reflexion (verbal RL): custom evaluators, reflexion memory, HTTP API, CLI. Built with Vercel AI SDK. 🌟20
+  `stack:TypeScript/JavaScript` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [agentskills/agentskills](https://github.com/agentskills/agentskills) - Specification and documentation for Agent Skills 🌟19
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [sebastianbrzustowicz/robot-sumo-rl](https://github.com/sebastianbrzustowicz/robot-sumo-rl) - Python + PyTorch. Advanced Reinforcement Learning (SAC/PPO/A2C) for ✨autonomous Robot Sumo combat featuring competitive self-play in continuous action spaces. 🌟18
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [yinbo0927/fate](https://github.com/yinbo0927/fate) - The official code of On-Policy Self-Evolution via Failure Trajectories for Agentic Safety Alignment 🌟16
+  `stack:Python` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [opendatabox/workspace-bench](https://github.com/opendatabox/workspace-bench) - Benchmark self-evolving Agent upon realistic large-scale file workspaces 🌟14
+  `stack:Markdown` `tag:benchmark-eval` `time:2025-05` `content:2025-05-07`
+- [sakanaai/ai-scientist](https://github.com/sakanaai/ai-scientist) - The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery 🧑‍🔬 🌟13
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [pathway/alphaxos](https://github.com/pathway/alphaxos) - Deep Reinforcement Learning with Self-Play 🌟12
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [haotang1995/worldcoder](https://github.com/haotang1995/worldcoder) - WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment 🌟11
+  `stack:Python` `tag:tool-module` `time:unknown` `content:unknown`
+- [zhihaopeng-cityu/awesome-self-evolving-ai-for-agentic-healthcare](https://github.com/zhihaopeng-cityu/awesome-self-evolving-ai-for-agentic-healthcare) - **Awesome-Self-Evolving-AI-for-Agentic-Healthcare** 🌟11
+  `stack:Markdown` `tag:resource-index` `time:unknown` `content:unknown`
+- [langchain-ai/open-swe](https://github.com/langchain-ai/open-swe) - An Open-Source Asynchronous Coding Agent 🌟9
+  `stack:Markdown` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [memtensor/memos](https://github.com/memtensor/memos) - Self-evolving memory OS for LLM & AI Agents: ultra-persistent memory, hybrid-retrieval, and cross-task skill reuse, with 35.24% token savings 🌟9
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-09`
+- [enajx/es](https://github.com/enajx/es) - Evolution Strategy (ES) implementation of https://arxiv.org/abs/1703.03864 🌟7
+  `stack:Python` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [kargarisaac/reflexion](https://github.com/kargarisaac/reflexion) - Reflexion Agent implementation based on the smolagents library 🌟7
+  `stack:Python` `tag:tool-module` `time:unknown` `content:unknown`
+- [synaptent/aragora](https://github.com/synaptent/aragora) - Omnivorous Multi Agent Decision Making Engine - Ingest from any source, query from any channel, get multi-agent consensus 🌟7
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [angrysky56/reflective-agent-architecture](https://github.com/angrysky56/reflective-agent-architecture) - Metacognitive AI architecture combining Modern Hopfield Networks with entropy-based confusion detection for insight-like problem solving. Implements energy-based search, adaptive beta sca... 🌟5
+  `stack:Markdown` `tag:benchmark-eval` `time:2025-12` `content:2025-12-10`
+- [evermind-ai/everos](https://github.com/evermind-ai/everos) - Build, evaluate, and integrate long-term memory for self-evolving agents. 🌟5
+  `stack:Markdown` `tag:benchmark-eval` `time:2025-02` `content:2025-02-01`
+- [evermind-ai/everos?tab=readme-ov-file](https://github.com/evermind-ai/everos?tab=readme-ov-file) - Build, evaluate, and integrate long-term memory for self-evolving agents. 🌟5
+  `stack:Markdown` `tag:benchmark-eval` `time:2025-02` `content:2025-02-01`
+- [hkuds/ai-researcher](https://github.com/hkuds/ai-researcher) - [NeurIPS2025] "AI-Researcher: Autonomous Scientific Innovation" -- A production-ready version: https://novix.science/chat 🌟5
+  `stack:Python` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [rllm-org/rllm](https://github.com/rllm-org/rllm) - Democratizing Reinforcement Learning for LLMs 🌟5
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [swe-bench/swe-bench](https://github.com/swe-bench/swe-bench) - SWE-bench: Can Language Models Resolve Real-world Github Issues? 🌟5
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [budecosystem/claudeevolve](https://github.com/budecosystem/claudeevolve) - Alpha Evolve plugin that can work with Claude Code 🌟4
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [gepa-ai/gepa](https://github.com/gepa-ai/gepa) - Optimize prompts, code, and more with AI-powered Reflective Text Evolution 🌟4
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [khykd/reflector](https://github.com/khykd/reflector) - Structured self-improvement system for OpenClaw agents. Transforms interactions into learning through a daily/weekly reflection loop that tracks outcomes, extracts patterns, and refines d... 🌟4
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [seetrex-ai/laimark](https://github.com/seetrex-ai/laimark) - LAIMARK 🌟4
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-04` `content:2026-04-18`
+- [self-play-language-models/spin-peft](https://github.com/self-play-language-models/spin-peft) - Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models 🌟4
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [shehrum/grf-self-play](https://github.com/shehrum/grf-self-play) - Training agents with competitive self-play in Google Research Football environment 🌟4
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [circlemind-ai/fast-graphrag](https://github.com/circlemind-ai/fast-graphrag) - RAG that intelligently adapts to your use case, data, and queries 🌟3
+  `stack:Markdown` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [memodb-io/acontext](https://github.com/memodb-io/acontext) - Agent Skills as a Memory Layer 🌟3
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [noahshinn024/reflexion-human-eval](https://github.com/noahshinn024/reflexion-human-eval) - [NeurIPS 2023] Reflexion: Language Agents with Verbal Reinforcement Learning 🌟3
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [studio-intrinsic/turbo-gepa](https://github.com/studio-intrinsic/turbo-gepa) - Optimize prompts, code, and more with AI-powered Reflective Text Evolution 🌟3
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [zou-group/textgrad](https://github.com/zou-group/textgrad) - TextGrad: Automatic ''Differentiation'' via Text -- using large language models to backpropagate textual gradients. Published in Nature. 🌟3
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [agent-on-the-fly/memento](https://github.com/agent-on-the-fly/memento) - Official Code of Memento: Fine-tuning LLM Agents without Fine-tuning LLMs 🌟2
+  `stack:Python` `tag:tool-module` `time:unknown` `content:unknown`
+- [caution724/github-explorer-skill](https://github.com/caution724/github-explorer-skill) - 🔍 Analyze GitHub projects deeply using multi-source data and AI to generate structured, actionable reports for informed decision-making. 🌟2
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [evoagentx/awesome-self-evolving-agents](https://github.com/evoagentx/awesome-self-evolving-agents) - [Survey] A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems 🌟2
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [mwasifanwar/meta-cognitive-learning-system](https://github.com/mwasifanwar/meta-cognitive-learning-system) - AI that monitors and improves its own learning process through self-reflection and meta-learning. 🌟2
+  `stack:Python` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [pingcap/ossinsight](https://github.com/pingcap/ossinsight) - Analysis, Comparison, Trends, Rankings of Open Source Software, you can also get insight from more than 10 billion with natural language (powered by LLM). Follow us on Twitter: https://tw... 🌟2
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [stonks-git/intuitive-ai](https://github.com/stonks-git/intuitive-ai) - Cognitive architecture for emergent AI identity — blank slate to selfhood through lived experience 🌟2
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [vicsanity623/pyob](https://github.com/vicsanity623/pyob) - THIS IS A BEAST REPO DESIGNED JUST FOR ME! COPYRIGHT! NOT OPEN-SOURCE!! 🌟2
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [werner-duvaud/muzero-general](https://github.com/werner-duvaud/muzero-general) - MuZero 🌟2
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [alberto-codes/gepa-adk](https://github.com/alberto-codes/gepa-adk) - gepa-adk 🌟1
+  `stack:Markdown` `tag:tool-module` `time:2026-03` `content:2026-03-11`
+- [incidentfox/self-learning-ai-agent](https://github.com/incidentfox/self-learning-ai-agent) - Self-learning AI agents that get smarter from your Slack, docs, meetings, and code. RAPTOR trees + knowledge graph + multi-strategy RAG. Drop into any Slack channel — it starts learning a... 🌟1
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [inclusionai/aworld](https://github.com/inclusionai/aworld) - Search, understand, reproduce, and improve an idea with ease 🌟1
+  `stack:Markdown` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [rishab-agrawal/humanoid-curriculum-rl](https://github.com/rishab-agrawal/humanoid-curriculum-rl) - MuJoCo-based reinforcement learning with Q-learning-driven curriculum for robust humanoid locomotion under perturbations. 🌟1
+  `stack:Python` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [sakanaai/shinkaevolve](https://github.com/sakanaai/shinkaevolve) - ShinkaEvolve: Towards Open-Ended and Sample-Efficient Program Evolution 🧬 🌟1
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [george-salafatinos/tictactoe-self-play](https://github.com/george-salafatinos/tictactoe-self-play) - Tic-Tac-Toe RL Project 🌟0
+  `stack:Python` `tag:tool-module` `time:unknown` `content:unknown`
+- [gepa-ai/optimize-anything-artifact](https://github.com/gepa-ai/optimize-anything-artifact) - ACM CAIS'26 Artifact — GEPA 🌟0
+  `stack:Markdown` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [gustolychees/contribai](https://github.com/gustolychees/contribai) - Autonomous AI agent that contributes to open source — discovers repos, analyzes code, generates fixes, and submits PRs 🌟0
+  `stack:Markdown` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [kadubon/audit-closed-ai-scientist](https://github.com/kadubon/audit-closed-ai-scientist) - Benchmark for statistically valid AI scientist systems, using audit-closed protocols, transparency logs, and sequential inference to prevent false discoveries in autonomous research agents. 🌟0
+  `stack:Python` `tag:benchmark-eval` `time:2026-03` `content:2026-03-05`
+- [legionio/lex-metacognition](https://github.com/legionio/lex-metacognition) - LegionIO agentic cognitive extension: lex-metacognition 🌟0
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [llmprogram/textgrad](https://github.com/llmprogram/textgrad) - TextGrad: Automatic ''Differentiation'' via Text -- using large language models to backpropagate textual gradients. 🌟0
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [longman-max/selfthinker](https://github.com/longman-max/selfthinker) - A program that "thinks it's a program that can think more than a program." 🌟0
+  `stack:Python` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [mfolsom/rlvr-world](https://github.com/mfolsom/rlvr-world) - Official repository for "RLVR-World: Training World Models with Reinforcement Learning" (NeurIPS 2025), https://arxiv.org/abs/2505.13934 🌟0
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [polya20/textgrad](https://github.com/polya20/textgrad) - Automatic ''Differentiation'' via Text -- using large language models to backpropagate textual gradients. 🌟0
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [thesdes/textgrad](https://github.com/thesdes/textgrad) - TextGrad: Automatic ''Differentiation'' via Text -- using large language models to backpropagate textual gradients. 🌟0
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [workofart/selfplay-tictactoe](https://github.com/workofart/selfplay-tictactoe) - benchmark/evaluation/harness signal 🌟0
+  `stack:Python` `tag:benchmark-eval` `time:early` `content:2019-12-06`
+- [xanther-ai/xce-benchmarks](https://github.com/xanther-ai/xce-benchmarks) - XCE SWE-bench Verified benchmark results — predictions, analysis, and trajectory download scripts 🌟0
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [zanwenfu/auto-code-rover](https://github.com/zanwenfu/auto-code-rover) - A project structure aware autonomous software engineer aiming for autonomous program improvement. Resolved 37.3% tasks (pass@1) in SWE-bench lite and 51.6% tasks (pass@3) in SWE-bench ver... 🌟0
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [zbinxp/deer-flow](https://github.com/zbinxp/deer-flow) - An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different... 🌟0
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-02` `content:2026-02-28`
+- [zixuanfeng-nyu/textgrad](https://github.com/zixuanfeng-nyu/textgrad) - TextGrad: Automatic ''Differentiation'' via Text -- using large language models to backpropagate textual gradients. 🌟0
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
 
-| 来源 | Count / signal | 主要用途 | 证据来源 |
-|---|---:|---|---|
-| X/Twitter | 13 curated signals | 论文发布、热度、风险批评、实验室信号 | [social index ZH](output/social-media-curated-ZH.md) |
-| Reddit | 45 entries | 公众疑问、真实痛点、benchmark 怀疑 | [social index](output/social-media-curated.md), [Mom Test findings](mom-test-findings-reddit.md) |
-| Hacker News | 31 entries | 工程社区对 DGM/Godel/agent framework 的反应 | [social index](output/social-media-curated.md) |
-| Blog/tutorial | 71 entries | 实践路线、架构解释、工程经验 | [blog/source profiles](research/blog-author-profiles-all.md) |
-| Ranking/evaluation platforms | 10 entries | 可见度、leaderboard、产品发现 | [rank platform research](wiki/research/rank-platforms-product-discovery-2026-05-20.md) |
+## Research Code / 研究代码
 
-## 跨源综合
+Paper artifacts and experimental repositories that implement agent evolution methods. / 论文 artifact 与实验复现代码。
 
-| 主题 | Git evidence | Paper evidence | Community evidence | 读法 |
-|---|---|---|---|---|
-| Self-modifying coding agents | OpenEvolve、DGM repos、SICA-like coding agents | DGM、Godel Agent、AlphaEvolve、SICA | HN 对 recursive self-improvement / self-modifying tools 的讨论 | 看 archive、mutation、benchmark gate、rollback 和沙箱 |
-| Agent architecture search | ADAS、AgentEvolver、EvoAgentX、A-Evolve | ADAS、Agent Symbolic Learning、RAGEN、SelfEvolve | X survey threads、AgentEvolver 讨论 | 问清楚进化对象是 prompt、tool graph、policy、workflow、role 还是 architecture |
-| Memory as evolvable state | Mem0、LangMem、Graphiti、MemoryAgentBench | Experience learning、Memory-R1、AriadneMem、Voyager | 长期记忆博客、工程教程 | 查检索、合并、冲突、隐私、时间失效和 long-horizon eval |
-| Skills as portable capabilities | Anthropic Skills、OpenAI Skills、AgentSkills、SkillRL | Voyager、skill learning、curriculum | skill folder / skill registry 社区教程 | 查 package format、validation、security、install target 和 reuse semantics |
-| Evaluation and harness control | AgentBench、OSWorld、BrowserGym、Claw-Eval、OpenClaw | Reflexion、Self-Refine、RAGEN、REVEAL | benchmark hype / Goodhart 争议 | 把 evaluation 当成 self-evolution 的核心控制面 |
-| Research automation | AutoResearchClaw、ScienceClaw、AI Scientist-style projects | AI Scientist、AlphaEvolve、scientific discovery | Karpathy autoresearch signal、research-agent blog | 查是否有可验证 artifact、citation、experiment 和 reproducible code |
-| Safety and misevolution | SKILL-INJECT、HaluMem、safety-tagged harness reports | Weak-to-strong、reward hacking、self-rewarding | risk posts、public critique | 看 reward hacking、regression、tool misuse、memory poisoning 和无根据自信 |
+- [a-evo-lab/a-evolve](https://github.com/a-evo-lab/a-evolve) - The official repository of "Position: Agentic Evolution is the Path to Evolving LLMs". 🌟549
+  `stack:Markdown` `tag:research-artifact` `time:2026-05` `content:2026-05-21`
+- [vsonicv/es-fine-tuning-paper](https://github.com/vsonicv/es-fine-tuning-paper) - This repo contains the source code for the paper "Evolution Strategies at Scale: LLM Fine-Tuning Beyond Reinforcement Learning" 🌟356
+  `stack:Python` `tag:research-artifact` `time:2025-10` `content:2025-10-27`
+- [maitrix-org/promptagent](https://github.com/maitrix-org/promptagent) - This is the official repo for "PromptAgent: Strategic Planning with Language Models Enables Expert-level Prompt Optimization". PromptAgent is a novel automatic prompt optimization method... 🌟353
+  `stack:Python` `tag:research-artifact` `time:2024-Q2` `content:2024-05-17`
+- [sunzey/seagent](https://github.com/sunzey/seagent) - [ICML-2026] Official implementation of "SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience" 🌟246
+  `stack:Shell` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [krzysztofdudek/researcherskill](https://github.com/krzysztofdudek/researcherskill) - One file. Your AI agent becomes a scientist. 30+ experiments while you sleep. 🌟223
+  `stack:Markdown` `tag:research-artifact` `time:2026-05` `content:2026-05-03`
+- [raghavc/llm-rlhf-tuning-with-ppo-and-dpo](https://github.com/raghavc/llm-rlhf-tuning-with-ppo-and-dpo) - Comprehensive toolkit for Reinforcement Learning from Human Feedback (RLHF) training, featuring instruction fine-tuning, reward model training, and support for PPO and DPO algorithms with... 🌟190
+  `stack:Python` `tag:research-artifact` `time:2026-05` `content:2026-05-21`
+- [machuangtao/llm-kg4qa](https://github.com/machuangtao/llm-kg4qa) - LLM-KG4QA: Large Language Models and Knowledge Graphs for Question Answering 🌟157
+  `stack:Markdown` `tag:research-artifact` `time:2026-05` `content:2026-05-21`
+- [memtensor/memrl](https://github.com/memtensor/memrl) - Paper: “MEMRL: SELF-EVOLVING AGENTS VIA RUNTIME REINFORCEMENT LEARNING ON EPISODIC MEMORY” Open-Source Code 🌟118
+  `stack:Python` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [tencent/selfevolvingagent](https://github.com/tencent/selfevolvingagent) - Research works from Tencent AI Lab regarding self-evolving agents 🌟100
+  `stack:Markdown` `tag:application-demo` `time:2026-05` `content:2026-05-21`
+- [gensi-thuair/flex](https://github.com/gensi-thuair/flex) - The official codebase for our paper, FLEX: Continuous Agent Evolution via Forward Learning from Experience. 🌟78
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [mbchang/meta-prompt](https://github.com/mbchang/meta-prompt) - A re-implementation of Meta-Prompt in LangChain for building self-improving agents. 🌟65
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [euphoria16/ui-genie](https://github.com/euphoria16/ui-genie) - [NeurIPS 2025] UI-Genie: A Self-Improving Approach for Iteratively Boosting MLLM-based Mobile GUI Agents 🌟57
+  `stack:Markdown` `tag:research-artifact` `time:2026-05` `content:2026-05-21`
+- [zhang677/accelopt](https://github.com/zhang677/accelopt) - [MLSys 2026] AccelOpt: Self-improving Agents for AI Accelerator Kernel Optimization 🌟43
+  `stack:Python` `tag:benchmark-eval` `time:unknown` `content:unknown`
+- [swe-agent/swe-agent](https://github.com/swe-agent/swe-agent) - SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2... 🌟19
+  `stack:Markdown` `tag:research-artifact` `time:2025-05` `content:2025-05-22`
+- [ventr1c/memma](https://github.com/ventr1c/memma) - The official repository of "MemMA: Coordinating the Memory Cycle through Multi-Agent Reasoning and In-Situ Self-Evolution". 🌟17
+  `stack:Python` `tag:tool-module` `time:unknown` `content:unknown`
+- [ltzheng/curriculummarl](https://github.com/ltzheng/curriculummarl) - Code of "Towards Skilled Population Curriculum for MARL" + Implementation of Curriculum MARL algorithms based on Ray 🌟13
+  `stack:Python` `tag:research-artifact` `time:2026-05` `content:2026-05-21`
+- [octobrist/cope](https://github.com/octobrist/cope) - A LLM-based agent optimization framework that assesses and incorporates planning-execution coordination into agent optimization. (ICML 2026) 🌟11
+  `stack:Python` `tag:framework-runtime` `time:unknown` `content:unknown`
+- [nickatomlin/lm-selfplay](https://github.com/nickatomlin/lm-selfplay) - Code for the paper "Efficacy of LM Self-Play in Non-Zero-Sum Games" 🌟9
+  `stack:Python` `tag:research-artifact` `time:2026-05` `content:2026-05-21`
+- [noahshinn/reflexion](https://github.com/noahshinn/reflexion) - [NeurIPS 2023] Reflexion: Language Agents with Verbal Reinforcement Learning 🌟3
+  `stack:Markdown` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [aiming-lab/agent0](https://github.com/aiming-lab/agent0) - Agent0 Series: Self-Evolving Agents from Zero Data 🌟1
+  `stack:Markdown` `tag:application-demo` `time:2026-05` `content:2026-05-21`
+- [allenai/swe-agent](https://github.com/allenai/swe-agent) - SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2... 🌟0
+  `stack:Markdown` `tag:research-artifact` `time:unknown` `content:unknown`
+- [paperwave/genenv](https://github.com/paperwave/genenv) - GenEnv: Difficulty-Aligned Co-Evolution Between LLM Agents and Environment Simulators 🌟0
+  `stack:Python` `tag:research-artifact` `time:2026-05` `content:2026-05-21`
+- [star-bob/swe-agent](https://github.com/star-bob/swe-agent) - SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2... 🌟0
+  `stack:Markdown` `tag:research-artifact` `time:2026-05` `content:2026-05-21`
 
-## 用户核心问题直接答案
+## Demos & Applications / 演示与应用
 
-| 用户问题 | README 直接答案 | 证据链接 |
-|---|---|---|
-| 原始收集的 GitHub 项目有哪些 | 当前 raw 层是 490 个 `raw-github/*.md` capture，保留原始来源、时间戳和未加工文本；它回答“我们到底收集过什么”。 | [raw timestamp index](output/raw-github-timestamp-index.md), [GitHub analysis](analysis/github-project-data-analysis.md) |
-| 进行分析的项目有哪些 | 490 个仓库已经进入分类分析；其中 208 个进入站点项目数据，233 个 public project report 文件承担可发布 model-card/项目页材料。 | [projects/INDEX.md](projects/INDEX.md), [public reports](site/public/reports/projects/INDEX.md), [site/src/data/projects.ts](site/src/data/projects.ts) |
-| 进化相关的有哪些 | 严格 self-evolution 主题是 79 个，广义 evolution-related 是 176 个；严格集看是否有自改进闭环，广义集覆盖 memory、skill、reflection、search、harness、evaluation 等支撑层。 | [corpus funnel](analysis/github-project-data-analysis.md#corpus-funnel), [repo classification](research/repo-classification.md) |
-| 按时间顺序发布的有哪些 | timeline 用 created/pushed/release 信号观察方向迁移：早期偏框架和工具，中期 benchmark/memory/harness 增多，近期 skill、self-modifying code、research agent 和 evaluation governance 更密集。 | [release timeline](analysis/github-project-data-analysis.md#analyzed-project-release-timeline) |
-| 方法路线有哪些 | 六类主方法已经在 README 展开：reward/RL/self-play、prompt/search optimization、memory/lifelong learning、architecture/code self-modification、multi-agent reflection/debate、evaluation/safety/governance。 | [方法分类总表](#方法分类总表), [survey ch3](survey/ch3-methods-cn.md) |
-| benchmark 在哪里 | README 已把函数级代码、仓库级软件工程、agent 通用、computer-use/web、memory、skill、harness、算法/科学发现放进同一张评测对照表，并给出判断准则。 | [Benchmark / 评测对照](#benchmark--评测对照), [survey ch5](survey/ch5-evaluation-cn.md) |
-| 哪些内容可发布给读者 | 可发布层包括 GitHub Pages、项目页、research 页、graph 页、paper PDF、survey PDF、public reports 和站点静态构建；README 是认知入口，网站是发布入口。 | [public site](https://shiyao-huang.github.io/awesome-agent-evolution/), [paper PDF](paper-drafts/main.pdf), [survey PDF](survey/latex/main.pdf), [site reports](site/public/reports/) |
+Runnable products, demos, vertical agents, browser/coding/research applications. / 可运行产品、Demo、垂直智能体、浏览器/代码/研究应用。
 
-## 完整列表索取区
+- [metauto-ai/gptswarm](https://github.com/metauto-ai/gptswarm) - 🐝 The First Self-Improving agents with RL / Prompting Optimization 🌟998
+  `stack:Python` `tag:research-artifact` `time:2026-05` `content:2026-05-21`
+- [lamm-mit/sciagentsdiscovery](https://github.com/lamm-mit/sciagentsdiscovery) - SciAgents 🌟610
+  `stack:Python` `tag:application-demo` `time:unknown` `content:unknown`
+- [thudm/webrl](https://github.com/thudm/webrl) - Building Open LLM Web Agents with Self-Evolving Online Curriculum RL 🌟524
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [facebookresearch/drzero](https://github.com/facebookresearch/drzero) - Dr. Zero Self-Evolving Search Agents without Training Data 🌟515
+  `stack:Shell` `tag:research-artifact` `time:2026-05` `content:2026-05-21`
+- [feiliu36/llm4opt](https://github.com/feiliu36/llm4opt) - A Collection on Large Language Models for Optimization 🌟367
+  `stack:Markdown` `tag:application-demo` `time:unknown` `content:unknown`
+- [snowflake-labs/agent-world-model](https://github.com/snowflake-labs/agent-world-model) - Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning 🌟356
+  `stack:Python` `tag:application-demo` `time:2026-05` `content:2026-05-01`
+- [feiliu36/eoh](https://github.com/feiliu36/eoh) - Evolution of Heuristics 🌟319
+  `stack:Markdown` `tag:application-demo` `time:unknown` `content:unknown`
+- [kayba-ai/recursive-improve](https://github.com/kayba-ai/recursive-improve) - 🪞 Make your agents recursively self-improve 🌟194
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [zaixizhang/stella](https://github.com/zaixizhang/stella) - STELLA: Self-Evolving LLM Agent for Biomedical Research 🌟141
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [fareedkhan-dev/autonomous-agentic-rag](https://github.com/fareedkhan-dev/autonomous-agentic-rag) - Self improving agentic rag pipeline 🌟139
+  `stack:Unknown` `tag:tool-module` `time:unknown` `content:unknown`
+- [adam-s/intercept](https://github.com/adam-s/intercept) - Turn any website into a typed JSON API using self improving agents 🌟127
+  `stack:TypeScript/JavaScript` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [autohandai/code-cli](https://github.com/autohandai/code-cli) - Autohand Code CLI - Ultra fast self evolving coding agent that runs in your terminal 🌟110
+  `stack:TypeScript` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [zou-group/sirius](https://github.com/zou-group/sirius) - SiriuS: Self-improving Multi-agent Systems via Bootstrapped Reasoning 🌟101
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [knowledgexlab/muse](https://github.com/knowledgexlab/muse) - Learning on the Job: An Experience-Driven, Self-Evolving Agent for Long-Horizon Tasks 🌟88
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [ecnu-icalk/ell-stulife](https://github.com/ecnu-icalk/ell-stulife) - Self-Evolving Agent via Experience-Driven Lifelong Learning 🌟74
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [yonkoo11/hermes-dojo](https://github.com/yonkoo11/hermes-dojo) - Self-improvement system for Hermes Agent. Monitors performance, finds weak skills, fixes them with self-evolution, reports results. 🌟72
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [keskival/recursive-self-improvement-suite](https://github.com/keskival/recursive-self-improvement-suite) - A suite of open-ended, non-imitative tasks involving generalizable skills for large language model chatbots and agents to enable bootstrapped recursive self-improvement and an unambiguous... 🌟46
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [xiaofangxd/llm/ea](https://github.com/xiaofangxd/llm/ea) - Evolutionary-Algorithm and Large-Language-Model 🌟23
+  `stack:Markdown` `tag:application-demo` `time:2026-05` `content:2026-05-21`
+- [naivoder/mctsr](https://github.com/naivoder/mctsr) - Monte Carlo Tree Search Self-Refine (MCTSr) 🌟22
+  `stack:Python` `tag:tool-module` `time:unknown` `content:unknown`
+- [immanuelxiv/ppo-self-play](https://github.com/immanuelxiv/ppo-self-play) - Reinforcement Learning | Multi-Agent RL | Self-Play | Proximal Policy Optimization Algorithm (PPO) agent | Unity Tennis environment 🌟20
+  `stack:Python` `tag:application-demo` `time:unknown` `content:unknown`
+- [galaxy-brain-ai/mcog-core](https://github.com/galaxy-brain-ai/mcog-core) - Metacognitive Core Ontology (MCog Core): A domain-agnostic, foundational ontology for representing metacognitive constructs. Designed for AI systems, cognitive architectures, and applicat... 🌟19
+  `stack:Markdown` `tag:application-demo` `time:unknown` `content:unknown`
+- [zesearch/self-improvement-llm](https://github.com/zesearch/self-improvement-llm) - A technical and progressive review of self-improvement of LLMs for the future. 🌟13
+  `stack:Markdown` `tag:application-demo` `time:2026-05` `content:2026-05-21`
+- [aiming-lab/atp](https://github.com/aiming-lab/atp) - Alignment Tipping Process: How Self-Evolution Pushes LLM Agents Off the Rails 🌟10
+  `stack:Markdown` `tag:tool-module` `time:unknown` `content:unknown`
+- [tianyi-stack/madevolve](https://github.com/tianyi-stack/madevolve) - MadEvolve 🌟9
+  `stack:Python` `tag:application-demo` `time:2026-05` `content:2026-05-21`
+- [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) - Open-source implementation of AlphaEvolve 🌟6
+  `stack:Python` `tag:application-demo` `time:unknown` `content:unknown`
+- [sakanaai/ai-scientist-v2](https://github.com/sakanaai/ai-scientist-v2) - The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search 🌟6
+  `stack:Python` `tag:application-demo` `time:2024-Q2` `content:2024-05-13`
+- [nousresearch/hermes-agent-self-evolution](https://github.com/nousresearch/hermes-agent-self-evolution) - ⚒ Evolutionary self-improvement for Hermes Agent — optimize skills, prompts, and code using DSPy + GEPA 🌟3
+  `stack:Python` `tag:research-artifact` `time:2026-05` `content:2026-05-21`
+- [pgg3/l-autoda](https://github.com/pgg3/l-autoda) - L-AutoDA 🌟3
+  `stack:Python` `tag:application-demo` `time:2026-05` `content:2026-05-21`
+- [facebookresearch/hyperagents](https://github.com/facebookresearch/hyperagents) - Self-referential self-improving agents that can optimize for any computable task 🌟2
+  `stack:Python` `tag:research-artifact` `time:2026-05` `content:2026-05-21`
+- [jennyzzt/dgm](https://github.com/jennyzzt/dgm) - Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents 🌟2
+  `stack:Python` `tag:benchmark-eval` `time:2026-05` `content:2026-05-21`
+- [amap-ml/skillclaw](https://github.com/amap-ml/skillclaw) - Let Skills Evolve Collectively with Agentic Evolver 🌟1
+  `stack:Python` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [charlesq9/self-evolving-agents](https://github.com/charlesq9/self-evolving-agents) - [https://github.com/CharlesQ9/Self-Evolving-Agents/blob/main/figures/evolution.png](https://github.com/CharlesQ9/Self-Evolving-Agents/blob/main/figures/evolution.png) A Survey of Self-Evo... 🌟1
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [chrisworsey55/atlas-gic](https://github.com/chrisworsey55/atlas-gic) - ATLAS by General Intelligence Capital — Self-improving AI trading agents using Karpathy-style autoresearch 🌟1
+  `stack:Markdown` `tag:framework-runtime` `time:2026-05` `content:2026-05-21`
+- [lfleon9b/sakana-ai-scientist-v2](https://github.com/lfleon9b/sakana-ai-scientist-v2) - The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search 🌟1
+  `stack:Python` `tag:application-demo` `time:2024-Q2` `content:2024-05-13`
+- [modelscope/agentevolver](https://github.com/modelscope/agentevolver) - AgentEvolver: Towards Efficient Self-Evolving Agent System 🌟1
+  `stack:Python` `tag:application-demo` `time:2026-05` `content:2026-05-21`
+- [yologdev/yoyo-evolve](https://github.com/yologdev/yoyo-evolve) - A Truman Show of a self-evolving AI coding agent. It writes its own code. Growing up in public. 🌟1
+  `stack:Markdown` `tag:tool-module` `time:2026-05` `content:2026-05-21`
+- [aaronowh/ai-scientist-v2](https://github.com/aaronowh/ai-scientist-v2) - The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search 🌟0
+  `stack:Python` `tag:application-demo` `time:2024-Q2` `content:2024-05-13`
+- [abhisakh/ai-scientist-v2](https://github.com/abhisakh/ai-scientist-v2) - The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search 🌟0
+  `stack:Python` `tag:application-demo` `time:2024-Q2` `content:2024-05-13`
+- [adiban17/ppo-ping-pong-agent-](https://github.com/adiban17/ppo-ping-pong-agent-) - 🏓 RL Pong Agent 🌟0
+  `stack:Python` `tag:application-demo` `time:unknown` `content:unknown`
+- [quantstellarlab/ai-scientist-v2](https://github.com/quantstellarlab/ai-scientist-v2) - The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search 🌟0
+  `stack:Python` `tag:application-demo` `time:2024-Q2` `content:2024-05-13`
+- [sakutepov/ai-scientist-v2](https://github.com/sakutepov/ai-scientist-v2) - The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search 🌟0
+  `stack:Python` `tag:application-demo` `time:2024-Q3` `content:2024-09-12`
+- [tzussman/openevolve](https://github.com/tzussman/openevolve) - Open-source implementation of AlphaEvolve 🌟0
+  `stack:Python` `tag:application-demo` `time:2026-05` `content:2026-05-21`
 
-这些列表直接放在 README 里，目的是让读者不用跳转也能复制、搜索、对比。折叠只是为了可读性；内容本身就在本文件中。
+## Community & Learning / 社区与学习
 
-<details>
-<summary>完整 public model-card 项目列表（208）</summary>
+Awesome lists, courses, tutorials, roadmaps, and learning resources. / Awesome列表、课程、教程、路线图与学习资源。
 
-| # | 项目 | 仓库 | 分类/角色 | Stars | 报告 |
-|---:|---|---|---|---:|---|
-| 1 | openevolve | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 进化式代码优化 | 6358 | [报告](site/public/reports/projects/algorithmicsuperintelligence__openevolve.md) |
-| 2 | agents | [aiwaves-cn/agents](https://github.com/aiwaves-cn/agents) | 数据驱动 Agent 进化 | 5928 | [报告](site/public/reports/projects/aiwaves_cn__agents.md) |
-| 3 | reflexion | [noahshinn/reflexion](https://github.com/noahshinn/reflexion) | 反思记忆 | 3158 | [报告](site/public/reports/projects/noahshinn__reflexion.md) |
-| 4 | AgentEvolver | [modelscope/AgentEvolver](https://github.com/modelscope/AgentEvolver) | Agent 进化框架 | 1441 | [报告](site/public/reports/projects/modelscope__agentevolver.md) |
-| 5 | self-refine | [madaan/self-refine](https://github.com/madaan/self-refine) | 反馈精炼 | 805 | [报告](site/public/reports/projects/madaan__self_refine.md) |
-| 6 | SE-Agent | [JARVIS-Xs/SE-Agent](https://github.com/JARVIS-Xs/SE-Agent) | 代码智能体自进化 | 274 | [报告](site/public/reports/projects/jarvis_xs__se_agent.md) |
-| 7 | science-codeevolve | [inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve) | 科学代码进化 | 97 | [报告](site/public/reports/projects/inter_co__science_codeevolve.md) |
-| 8 | SCOPE | [JarvisPei/SCOPE](https://github.com/JarvisPei/SCOPE) | 上下文/Prompt 进化 | 77 | [报告](site/public/reports/projects/jarvispei__scope.md) |
-| 9 | LLM-Self-Judge | [OPPO-Mente-Lab/LLM-Self-Judge](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge) | 自评判训练 | 43 | [报告](site/public/reports/projects/oppo_mente_lab__llm_self_judge.md) |
-| 10 | DARWIN | [ZJU-LLM-Safety/DARWIN](https://github.com/ZJU-LLM-Safety/DARWIN) | 安全策略进化 | 41 | [报告](site/public/reports/projects/zju_llm_safety__darwin.md) |
-| 11 | OPRO | [google-deepmind/opro](https://github.com/google-deepmind/opro) | LLM 作为优化器 | 2500 | [报告](site/public/reports/projects/01-opro-llm-as-optimizer.md) |
-| 12 | OpenELM | [carperai/openelm](https://github.com/carperai/openelm) | 进化式 Prompt 优化 | 1800 | [报告](site/public/reports/projects/02-openelm-evolution-large-models.md) |
-| 13 | ADAS | [shengranhu/adas](https://github.com/ShengranHu/ADAS) | Agent 架构自动搜索 | 1200 | [报告](site/public/reports/projects/03-adas-automated-design-agentic-systems.md) |
-| 14 | FunSearch | [google-deepmind/funsearch](https://github.com/google-deepmind/funsearch) | 进化式数学发现 | 1500 | [报告](site/public/reports/projects/04-funsearch-mathematical-discoveries.md) |
-| 15 | AutoML-Agent | [DeepAuto-AI/automl-agent](https://github.com/DeepAuto-AI/automl-agent) | 多 Agent AutoML | 500 | [报告](site/public/reports/projects/05-automl-agent-multi-agent.md) |
-| 16 | CoML | [microsoft/CoML](https://github.com/microsoft/CoML) | ML 知识库驱动 | 300 | [报告](site/public/reports/projects/06-coml-mlcopilot.md) |
-| 17 | MetaGPT | [FoundationAgents/MetaGPT](https://github.com/FoundationAgents/MetaGPT) | 多 Agent 协作框架 | 50000 | [报告](site/public/reports/projects/07-metagpt-multi-agent-framework.md) |
-| 18 | AutoGPT | [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | 自主 Agent 平台 | 175000 | [报告](site/public/reports/projects/08-autogpt-autonomous-agent.md) |
-| 19 | CrewAI | [crewAIInc/crewAI](https://github.com/crewAIInc/crewAI) | 多 Agent 协作框架 | 30000 | [报告](site/public/reports/projects/09-crewai-multi-agent-framework.md) |
-| 20 | DSPy | [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) | 声明式 Prompt 优化 | 25000 | [报告](site/public/reports/projects/10-dspy-declarative-llm-programming.md) |
-| 21 | AutoGen | [microsoft/autogen](https://github.com/microsoft/autogen) | 多 Agent 对话框架 | 50000 | [报告](site/public/reports/projects/11-autogen-multi-agent-conversation.md) |
-| 22 | CAMEL-AI | [camel-ai/camel](https://github.com/camel-ai/camel) | 角色扮演 Agent 框架 | 12000 | [报告](site/public/reports/projects/12-camel-ai-communicative-agents.md) |
-| 23 | LangGraph | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | 图式 Agent 编排 | 20000 | [报告](site/public/reports/projects/13-langgraph-agent-workflows.md) |
-| 24 | SWE-Agent | [princeton-nlp/SWE-agent](https://github.com/princeton-nlp/SWE-agent) | 软件工程 Agent | 15000 | [报告](site/public/reports/projects/14-swe-agent-software-engineering.md) |
-| 25 | OpenHands | [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) | AI 软件开发平台 | 55000 | [报告](site/public/reports/projects/15-openhands-ai-software-dev.md) |
-| 26 | Devika | [stitionai/devika](https://github.com/stitionai/devika) | AI 软件工程师 | 22000 | [报告](site/public/reports/projects/16-devika-ai-software-engineer.md) |
-| 27 | AgentVerse | [OpenBMB/AgentVerse](https://github.com/OpenBMB/AgentVerse) | 多 Agent 仿真平台 | 5000 | [报告](site/public/reports/projects/17-agentverse-multi-agent-platform.md) |
-| 28 | ReEvo | [ai4co/reevo](https://github.com/ai4co/reevo) | 反射式进化搜索 | 500 | [报告](site/public/reports/projects/18-reevo-reflective-evolution.md) |
-| 29 | LLaMEA | [xai-liacs/LLaMEA](https://github.com/XAI-liacs/LLaMEA) | LLM 驱动算法自动发现 | 1200 | [报告](site/public/reports/projects/19-llamea-llm-evolutionary-algorithm.md) |
-| 30 | EvoPrompt | [beeevita/EvoPrompt](https://github.com/beeevita/EvoPrompt) | 进化式 Prompt 优化 | 300 | [报告](site/public/reports/projects/20-evoprompt-prompt-optimization.md) |
-| 31 | EvoAgent | [siyuyuan/evoagent](https://github.com/siyuyuan/evoagent) | 进化式多 Agent 系统 | 200 | [报告](site/public/reports/projects/21-evoagent-evolutionary-multi-agent.md) |
-| 32 | EvoAgentX | [EvoAgentX/EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | 自进化 Agent 生态系统 | 1000 | [报告](site/public/reports/projects/22-evoagentx-agent-evolution-framework.md) |
-| 33 | EverOS | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | Self-Evolving Agent Memory OS | 5600 | [报告](site/public/reports/projects/79-everos-self-evolving-memory-os.md) |
-| 34 | OpenTreeSearch | [Genentech/OpenTreeSearch](https://github.com/Genentech/opentreesearch) | LLM 引导代码进化 | 200 | [报告](site/public/reports/projects/24-opentreesearch-llm-code-evolution.md) |
-| 35 | pyribs | [icaros-usc/pyribs](https://github.com/icaros-usc/pyribs) | 质量多样性优化 | 800 | [报告](site/public/reports/projects/25-pyribs-quality-diversity.md) |
-| 36 | LLM4EC | [wuxingyu-ai/LLM4EC](https://github.com/wuxingyu-ai/LLM4EC) | LLM+EC 交叉综述 | 200 | [报告](site/public/reports/projects/26-llm4ec-llm-evolutionary-computation.md) |
-| 37 | LLM4Opt | [FeiLiu36/LLM4Opt](https://github.com/FeiLiu36/LLM4Opt) | LLM 驱动算法设计综述 | 400 | [报告](site/public/reports/projects/27-llm4opt-llm-optimization.md) |
-| 38 | Nevergrad | [facebookresearch/nevergrad](https://github.com/facebookresearch/nevergrad) | 无梯度优化框架 | 4000 | [报告](site/public/reports/projects/28-nevergrad-derivative-free.md) |
-| 39 | DEAP | [DEAP/deap](https://github.com/DEAP/deap) | 经典进化算法框架 | 6000 | [报告](site/public/reports/projects/29-deap-evolutionary-framework.md) |
-| 40 | pycma | [CMA-ES/pycma](https://github.com/CMA-ES/pycma) | 经典进化策略 | 1000 | [报告](site/public/reports/projects/30-pycma-cma-es.md) |
-| 41 | auto-sklearn | [automl/auto-sklearn](https://github.com/automl/auto-sklearn) | AutoML 框架 | 7500 | [报告](site/public/reports/projects/31-autosklearn-automl.md) |
-| 42 | Self-Evolving-Agents | [CharlesQ9/Self-Evolving-Agents](https://github.com/CharlesQ9/Self-Evolving-Agents) | 自进化 Agent 综述 | 300 | [报告](site/public/reports/projects/32-self-evolving-agents.md) |
-| 43 | self-improvement-llm | [Zesearch/self-improvement-llm](https://github.com/Zesearch/self-improvement-llm) | LLM 自改进综述 | 200 | [报告](site/public/reports/projects/33-self-improvement-llm.md) |
-| 44 | LLM-EA-Survey | [xiaofangxd/LLM_EA](https://github.com/xiaofangxd/LLM_EA) | LLM+EA 交叉综述 | 300 | [报告](site/public/reports/projects/34-llm-ea-survey.md) |
-| 45 | Tutorial-GP-LLM | [alfa-group/tutorial_gp_llm](https://github.com/alfa-group/tutorial_gp_llm) | GP+LLM 教学 | 50 | [报告](site/public/reports/projects/35-tutorial-gp-llm.md) |
-| 46 | LLM-Agent-Optimization | [YoungDubbyDu/LLM-Agent-Optimization](https://github.com/YoungDubbyDu/LLM-Agent-Optimization) | LLM Agent 优化综述 | 500 | [报告](site/public/reports/projects/36-llm-agent-optimization.md) |
-| 47 | Awesome-Code-LLM | [CodeFuse-ML/awesome-code-llm](https://github.com/CodeFuse-ML/awesome-code-llm) | 代码 LLM 综述 | 2000 | [报告](site/public/reports/projects/37-awesome-code-llm.md) |
-| 48 | AgentBench | [THUDM/AgentBench](https://github.com/THUDM/AgentBench) | Agent 评测基准 | 3000 | [报告](site/public/reports/projects/38-agentbench.md) |
-| 49 | RL4CO | [ai4co/rl4co](https://github.com/ai4co/rl4co) | RL 组合优化基准 | 1200 | [报告](site/public/reports/projects/39-rl4co-reinforcement-learning.md) |
-| 50 | Awesome-FM4CO | [ai4co/awesome-fm4co](https://github.com/ai4co/awesome-fm4co) | 基础模型+组合优化综述 | 500 | [报告](site/public/reports/projects/40-awesome-fm4co.md) |
-| 51 | OpenDevin | [OpenDevin/OpenDevin](https://github.com/OpenDevin/OpenDevin) | AI 软件开发平台 | 50000 | [报告](site/public/reports/projects/41-opendevin-ai-software.md) |
-| 52 | GP-LLM-Code-Evolution | [pureples/pureples](https://github.com/pureples/pureples) | GP+LLM 代码进化 | 100 | [报告](site/public/reports/projects/42-gp-llm-code-evolution.md) |
-| 53 | Agentic Harness Engineering | [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | Harness 进化工程 | 391 | [报告](site/public/reports/projects/43-agentic-harness-engineering.md) |
-| 54 | Hermes Agent | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 自改进个人 Agent 运行时 | 162000 | [报告](site/public/reports/projects/44-hermes-agent.md) |
-| 55 | Hermes Agent Self-Evolution | [NousResearch/hermes-agent-self-evolution](https://github.com/NousResearch/hermes-agent-self-evolution) | 技能与提示进化 | 3400 | [报告](site/public/reports/projects/45-hermes-agent-self-evolution.md) |
-| 56 | EvoMap Evolver | [EvoMap/evolver](https://github.com/EvoMap/evolver) | 可审计 Agent 演化引擎 | 7507 | [报告](site/public/reports/projects/46-evomap-evolver.md) |
-| 57 | GenericAgent | [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | Token 高效自进化 Agent | 11900 | [报告](site/public/reports/projects/47-genericagent.md) |
-| 58 | OpenClaw | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 个人 Agent 产品运行时 | 374000 | [报告](site/public/reports/projects/48-openclaw.md) |
-| 59 | Superpowers | [obra/superpowers](https://github.com/obra/superpowers) | Agentic 技能方法论 | 202000 | [报告](site/public/reports/projects/49-superpowers.md) |
-| 60 | agentmemory | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | Agent 持久记忆层 | 16000 | [报告](site/public/reports/projects/50-agentmemory.md) |
-| 61 | PinchBench Skill | [pinchbench/skill](https://github.com/pinchbench/skill) | 真实 Agent 任务基准 | 1200 | [报告](site/public/reports/projects/51-pinchbench-skill.md) |
-| 62 | OpenHuman | [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | 个人 Agent 产品与记忆系统 | 25100 | [报告](site/public/reports/projects/52-openhuman.md) |
-| 63 | Claw Bench | [claw-bench/claw-bench](https://github.com/claw-bench/claw-bench) | 真实 Agent 任务基准 | 171 | [报告](site/public/reports/projects/53-claw-bench-agent-benchmark.md) |
-| 64 | OpenClaw ClawBench | [openclaw/clawbench](https://github.com/openclaw/clawbench) | Agent Harness 评测诊断 | 97 | [报告](site/public/reports/projects/54-openclaw-clawbench.md) |
-| 65 | Claw-Eval | [claw-eval/claw-eval](https://github.com/claw-eval/claw-eval) | 可信 Agent 评测 | 606 | [报告](site/public/reports/projects/55-claw-eval-agent-evaluation.md) |
-| 66 | Harness Evolver | [raphaelchristi/harness-evolver](https://github.com/raphaelchristi/harness-evolver) | Harness 自进化工具 | 21 | [报告](site/public/reports/projects/56-harness-evolver.md) |
-| 67 | Awesome Harness Engineering | [ai-boost/awesome-harness-engineering](https://github.com/ai-boost/awesome-harness-engineering) | Harness Engineering 资源索引 | 1100 | [报告](site/public/reports/projects/57-awesome-harness-engineering.md) |
-| 68 | Mem0 | [mem0ai/mem0](https://github.com/mem0ai/mem0) | Agent 通用记忆层 | 56500 | [报告](site/public/reports/projects/58-mem0-agent-memory.md) |
-| 69 | TiMem | [TiMEM-AI/timem](https://github.com/TiMEM-AI/timem) | 长程 Agent 时间记忆 | 134 | [报告](site/public/reports/projects/59-timem-temporal-memory.md) |
-| 70 | AMA-Bench | [AMA-Bench/AMA-Bench](https://github.com/AMA-Bench/AMA-Bench) | Agent 长程记忆基准 | 40 | [报告](site/public/reports/projects/60-ama-bench-memory-evaluation.md) |
-| 71 | Agent Skills Directory | [dmgrok/agent_skills_directory](https://github.com/dmgrok/agent_skills_directory) | Agent 技能发现索引 | 16 | [报告](site/public/reports/projects/61-agent-skills-directory.md) |
-| 72 | AceForge | [sudokrang/aceforge](https://github.com/sudokrang/aceforge) | OpenClaw 技能自进化引擎 | 1 | [报告](site/public/reports/projects/62-aceforge-skill-evolution.md) |
-| 73 | EvoCUA | [meituan/EvoCUA](https://github.com/meituan/EvoCUA) | Computer Use Agent 进化模型 | 317 | [报告](site/public/reports/projects/63-evocua-computer-use-agent.md) |
-| 74 | Anthropic Skills | [anthropics/skills](https://github.com/anthropics/skills) | 官方 Agent Skills 标准样例库 | 140000 | [报告](site/public/reports/projects/64-anthropic-skills.md) |
-| 75 | Awesome Claude Skills | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | Agent Skills 社区资源索引 | 61500 | [报告](site/public/reports/projects/65-awesome-claude-skills.md) |
-| 76 | Microsoft Agent Skills | [MicrosoftDocs/Agent-Skills](https://github.com/MicrosoftDocs/Agent-Skills) | 企业文档驱动 Agent Skills | 557 | [报告](site/public/reports/projects/66-microsoft-agent-skills.md) |
-| 77 | Scientific Agent Skills | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | 科研 Agent Skills 工作流库 | 25500 | [报告](site/public/reports/projects/67-scientific-agent-skills.md) |
-| 78 | Aden Hive | [aden-hive/hive](https://github.com/aden-hive/hive) | 生产级 Multi-Agent Harness | 10400 | [报告](site/public/reports/projects/68-aden-hive.md) |
-| 79 | SWE-Skills-Bench | [GeniusHTX/SWE-Skills-Bench](https://github.com/GeniusHTX/SWE-Skills-Bench) | Agent Skills 效果基准 | 42 | [报告](site/public/reports/projects/69-swe-skills-bench.md) |
-| 80 | LangMem | [langchain-ai/langmem](https://github.com/langchain-ai/langmem) | Agent 长期记忆 SDK | 1500 | [报告](site/public/reports/projects/70-langmem-agent-memory.md) |
-| 81 | Graphiti | [getzep/graphiti](https://github.com/getzep/graphiti) | Temporal Context Graph Agent Memory | 26500 | [报告](site/public/reports/projects/71-graphiti-temporal-context-graphs.md) |
-| 82 | Memobase | [memodb-io/memobase](https://github.com/memodb-io/memobase) | 用户画像长期记忆后端 | 2700 | [报告](site/public/reports/projects/72-memobase-user-profile-memory.md) |
-| 83 | OSWorld | [xlang-ai/OSWorld](https://github.com/xlang-ai/OSWorld) | Computer-use Agent OS Benchmark | 2900 | [报告](site/public/reports/projects/73-osworld-computer-agent-benchmark.md) |
-| 84 | WindowsAgentArena | [microsoft/WindowsAgentArena](https://github.com/microsoft/WindowsAgentArena) | Windows OS Agent Benchmark | 861 | [报告](site/public/reports/projects/74-windows-agent-arena.md) |
-| 85 | BrowserGym | [ServiceNow/BrowserGym](https://github.com/ServiceNow/BrowserGym) | Web Agent Benchmark Gym | 1200 | [报告](site/public/reports/projects/75-browsergym-web-agent-benchmark.md) |
-| 86 | agent-memory | [jayzeng/agentmemory](https://github.com/jayzeng/agentmemory) | Coding Agent Memory CLI | 5 | [报告](site/public/reports/projects/76-agentmemory-coding-agent-memory.md) |
-| 87 | Agent Memory Benchmark | [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | Agent Memory Benchmark | 43 | [报告](site/public/reports/projects/77-agent-memory-benchmark.md) |
-| 88 | memU | [NevaMind-AI/memU](https://github.com/NevaMind-AI/memU) | 24/7 Proactive Agent Memory | 13700 | [报告](site/public/reports/projects/78-memu-proactive-agent-memory.md) |
-| 89 | OneWave Claude Skills | [OneWave-AI/claude-skills](https://github.com/OneWave-AI/claude-skills) | Production Claude Skills Library | 154 | [报告](site/public/reports/projects/80-onewave-claude-skills.md) |
-| 90 | simota Agent Skills | [simota/agent-skills](https://github.com/simota/agent-skills) | Cross-Agent Skills and Nexus Orchestrator | 39 | [报告](site/public/reports/projects/81-simota-agent-skills-nexus.md) |
-| 91 | SkVM | [SJTU-IPADS/SkVM](https://github.com/SJTU-IPADS/SkVM) | Skill Virtual Machine | 480 | [报告](site/public/reports/projects/82-skvm-skill-virtual-machine.md) |
-| 92 | OpenCrabs | [adolfousier/opencrabs](https://github.com/adolfousier/opencrabs) | Self-Improving Terminal Agent | 755 | [报告](site/public/reports/projects/83-opencrabs-self-improving-agent.md) |
-| 93 | SKILL-INJECT | [aisa-group/skill-inject](https://github.com/aisa-group/skill-inject) | Agent Skill Security Benchmark | 73 | [报告](site/public/reports/projects/84-skill-inject-agent-skill-security.md) |
-| 94 | Hugging Face Skills | [huggingface/skills](https://github.com/huggingface/skills) | Agent Skills Registry | 10600 | [报告](site/public/reports/projects/85-huggingface-skills.md) |
-| 95 | SimpleMem / EvolveMem | [aiming-lab/SimpleMem](https://github.com/aiming-lab/SimpleMem) | Self-Evolving Agent Memory Stack | 3400 | [报告](site/public/reports/projects/86-simplemem-evolvemem-memory-stack.md) |
-| 96 | Mem0 Memory Benchmarks | [mem0ai/memory-benchmarks](https://github.com/mem0ai/memory-benchmarks) | Memory Benchmark Suite | 33 | [报告](site/public/reports/projects/87-mem0-memory-benchmarks.md) |
-| 97 | MemRL | [MemTensor/MemRL](https://github.com/MemTensor/MemRL) | Runtime Reinforcement Memory | 117 | [报告](site/public/reports/projects/88-memrl-runtime-memory-rl.md) |
-| 98 | CORAL | [Human-Agent-Society/CORAL](https://github.com/Human-Agent-Society/CORAL) | Multi-Agent Evolution Infrastructure | 667 | [报告](site/public/reports/projects/89-coral-multi-agent-evolution.md) |
-| 99 | ScienceClaw | [beita6969/ScienceClaw](https://github.com/beita6969/ScienceClaw) | Self-Evolving Research Agent | 816 | [报告](site/public/reports/projects/90-scienceclaw-research-agent.md) |
-| 100 | memsearch | [zilliztech/memsearch](https://github.com/zilliztech/memsearch) | Agent Memory Search Layer | 1800 | [报告](site/public/reports/projects/91-memsearch-agent-memory.md) |
-| 101 | Awesome Agent Skills | [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) | Agent Skills Registry | 22900 | [报告](site/public/reports/projects/92-awesome-agent-skills-index.md) |
-| 102 | swarmclaw | [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | Self-Hosted Agent Runtime | 518 | [报告](site/public/reports/projects/93-swarmclaw-agent-runtime.md) |
-| 103 | MOLT | [OiiOAI/MOLT](https://github.com/OiiOAI/MOLT) | Reflexive Co-Evolution Engine | 0 | [报告](site/public/reports/projects/94-molt-co-evolution-engine.md) |
-| 104 | OpenClaw Evolution Framework | [TerryFYL/openclaw-evolution-framework](https://github.com/TerryFYL/openclaw-evolution-framework) | Continuous Learning Harness | 4 | [报告](site/public/reports/projects/95-openclaw-evolution-framework.md) |
-| 105 | ClawBio | [ClawBio/ClawBio](https://github.com/ClawBio/ClawBio) | Bioinformatics Agent Skill Library | 867 | [报告](site/public/reports/projects/96-clawbio-bioinformatics-skills.md) |
-| 106 | EdgeClaw | [OpenBMB/EdgeClaw](https://github.com/OpenBMB/EdgeClaw) | Edge-Cloud Personal Agent Runtime | 1200 | [报告](site/public/reports/projects/97-edgeclaw-edge-cloud-agent.md) |
-| 107 | OpenClaw.NET | [clawdotnet/openclaw.net](https://github.com/clawdotnet/openclaw.net) | .NET Self-Hosted Agent Runtime | 345 | [报告](site/public/reports/projects/98-openclaw-dotnet-runtime.md) |
-| 108 | JordanMcCann agentmemory | [JordanMcCann/agentmemory](https://github.com/JordanMcCann/agentmemory) | Agent Memory Benchmark Claim | 23 | [报告](site/public/reports/projects/99-jordanmccann-agentmemory-longmemeval.md) |
-| 109 | ClawdMarket | [trillskillz/clawdmarket](https://github.com/trillskillz/clawdmarket) | Agent-to-Agent Marketplace Evolution Loop | 2 | [报告](site/public/reports/projects/100-clawdmarket-agent-marketplace.md) |
-| 110 | Agent Teams | [jbrahy/meta-agent-teams](https://github.com/jbrahy/meta-agent-teams) | Self-Improving Agent Team Framework | 2 | [报告](site/public/reports/projects/101-agent-teams-git-backed-evolution.md) |
-| 111 | Randroids Dojo Skills | [Randroids-Dojo/skills](https://github.com/Randroids-Dojo/skills) | Agent Skill Loop Library | 33 | [报告](site/public/reports/projects/102-randroids-skills-agent-skill-loop.md) |
-| 112 | Memori | [MemoriLabs/Memori](https://github.com/memorilabs/memori) | Agent-Native Memory Infrastructure | 14900 | [报告](site/public/reports/projects/103-memori-agent-native-memory.md) |
-| 113 | skills-supply | [803/skills-supply](https://github.com/803/skills-supply) | Cross-Agent Skill Supply Chain | 32 | [报告](site/public/reports/projects/104-skills-supply-cross-agent-skills.md) |
-| 114 | AgentOS | [iii-experimental/agentos](https://github.com/iii-experimental/agentos) | Self-Evolving Agent Operating System | 145 | [报告](site/public/reports/projects/105-agentos-self-evolving-agent-os.md) |
-| 115 | Qt AI Skills | [TheQtCompanyRnD/agent-skills](https://github.com/TheQtCompanyRnD/agent-skills) | Industrial Agent Skill Pack | 171 | [报告](site/public/reports/projects/106-qt-ai-skills.md) |
-| 116 | chriscox Agent Skills | [chriscox/agent-skills](https://github.com/chriscox/agent-skills) | Reusable Coding Agent Skills | 10 | [报告](site/public/reports/projects/107-chriscox-agent-skills.md) |
-| 117 | Sediment | [rendro/sediment](https://github.com/rendro/sediment) | Local-First Agent Memory MCP | 32 | [报告](site/public/reports/projects/108-sediment-local-agent-memory.md) |
-| 118 | HAL Harness | [princeton-pli/hal-harness](https://github.com/princeton-pli/hal-harness) | Holistic Agent Evaluation Harness | 289 | [报告](site/public/reports/projects/109-hal-harness-agent-leaderboard.md) |
-| 119 | Memoria | [matrixorigin/Memoria](https://github.com/matrixorigin/Memoria) | Versioned Agent Memory Infrastructure | 271 | [报告](site/public/reports/projects/110-memoria-git-for-agent-memory.md) |
-| 120 | MemoryAgentBench | [HUST-AI-HYZ/MemoryAgentBench](https://github.com/HUST-AI-HYZ/MemoryAgentBench) | Incremental Agent Memory Benchmark | 341 | [报告](site/public/reports/projects/111-memoryagentbench-incremental-memory-eval.md) |
-| 121 | Agent Almanac | [pjt222/agent-almanac](https://github.com/pjt222/agent-almanac) | Executable Skill and Agent Almanac | 17 | [报告](site/public/reports/projects/112-agent-almanac-skill-agent-team-index.md) |
-| 122 | psenger AI Agent Skills | [psenger/ai-agent-skills](https://github.com/psenger/ai-agent-skills) | Production Agent Skills Pack | 3 | [报告](site/public/reports/projects/113-psenger-ai-agent-skills.md) |
-| 123 | OpenHands Benchmarks | [OpenHands/benchmarks](https://github.com/OpenHands/benchmarks) | OpenHands Agent Evaluation Harness | 85 | [报告](site/public/reports/projects/114-openhands-benchmarks.md) |
-| 124 | A-Evolve | [a-evo-lab/a-evolve](https://github.com/a-evo-lab/a-evolve) | Universal Self-Improving Agent Infrastructure | 552 | [报告](site/public/reports/projects/115-a-evolve-universal-agent-evolution.md) |
-| 125 | AutoResearchClaw | [aiming-lab/AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw) | Self-Evolving Research Agent Pipeline | 12600 | [报告](site/public/reports/projects/116-autoresearchclaw-self-evolving-research-agent.md) |
-| 126 | MemOS | [memtensor/memos](https://github.com/memtensor/memos) | Self-Evolving Memory OS | 9400 | [报告](site/public/reports/projects/117-memos-self-evolving-memory-os.md) |
-| 127 | SkillLearnBench | [cxcscmu/SkillLearnBench](https://github.com/cxcscmu/SkillLearnBench) | Agent Skill Continual-Learning Benchmark | 21 | [报告](site/public/reports/projects/118-skilllearnbench-agent-skill-generation.md) |
-| 128 | AgentSkillOS | [ynulihao/AgentSkillOS](https://github.com/ynulihao/AgentSkillOS) | Agent Skill Retrieval and Orchestration OS | 415 | [报告](site/public/reports/projects/119-agentskillos-skill-retrieval-orchestration.md) |
-| 129 | STATE-Bench | [microsoft/STATE-Bench](https://github.com/microsoft/STATE-Bench) | Stateful Agent Memory Benchmark | 25 | [报告](site/public/reports/projects/120-state-bench-agent-memory-evaluation.md) |
-| 130 | OpenAI Skills | [openai/skills](https://github.com/openai/skills) | Codex Agent Skills Catalog | 20100 | [报告](site/public/reports/projects/121-openai-skills-codex-catalog.md) |
-| 131 | EvoSkill | [sentient-agi/EvoSkill](https://github.com/sentient-agi/EvoSkill) | Automated Agent Skill Discovery | 798 | [报告](site/public/reports/projects/122-evoskill-automated-skill-discovery.md) |
-| 132 | ICM | [rtk-ai/icm](https://github.com/rtk-ai/icm) | Permanent MCP-Native Agent Memory | 371 | [报告](site/public/reports/projects/123-icm-permanent-agent-memory.md) |
-| 133 | Callstack Agent Skills | [callstackincubator/agent-skills](https://github.com/callstackincubator/agent-skills) | React Native Agent Skills Pack | 1400 | [报告](site/public/reports/projects/124-callstack-agent-skills.md) |
-| 134 | AI-Driven Development | [CodeAlive-AI/ai-driven-development](https://github.com/CodeAlive-AI/ai-driven-development) | Cross-Agent Development Skills and Hooks | 74 | [报告](site/public/reports/projects/125-ai-driven-development-skills-hooks.md) |
-| 135 | jakenuts Agent Skills | [jakenuts/agent-skills](https://github.com/jakenuts/agent-skills) | Agent Skills and Expert-Agent Toolkit | 0 | [报告](site/public/reports/projects/126-jakenuts-agent-skills-toolkit.md) |
-| 136 | Agent Skills Kit | [jscraik/Agent-Skills](https://github.com/jscraik/Agent-Skills) | Governed Agent Skills Control Plane | 4 | [报告](site/public/reports/projects/127-agent-skills-kit-control-plane.md) |
-| 137 | Deep Agents CLI Codex Skill | [Gitmaxd/deepagents-cli-codex-skill](https://github.com/Gitmaxd/deepagents-cli-codex-skill) | Deep Agents Codex Skill Pack | 1 | [报告](site/public/reports/projects/128-deepagents-cli-codex-skill.md) |
-| 138 | Vercel Skills CLI | [vercel-labs/skills](https://github.com/vercel-labs/skills) | Open Agent Skills Installer CLI | 19900 | [报告](site/public/reports/projects/129-vercel-skills-cli.md) |
-| 139 | Neo4j Agent Memory | [neo4j-labs/agent-memory](https://github.com/neo4j-labs/agent-memory) | Graph-Native Agent Memory | 262 | [报告](site/public/reports/projects/130-neo4j-agent-memory.md) |
-| 140 | MCP Memory Service | [doobidoo/mcp-memory-service](https://github.com/doobidoo/mcp-memory-service) | Shared Agent Memory Service | 1900 | [报告](site/public/reports/projects/131-mcp-memory-service.md) |
-| 141 | Microsoft Skills | [microsoft/skills](https://github.com/microsoft/skills) | Microsoft SDK Agent Skills Catalog | 2400 | [报告](site/public/reports/projects/132-microsoft-skills.md) |
-| 142 | Tech Leads Club Agent Skills | [tech-leads-club/agent-skills](https://github.com/tech-leads-club/agent-skills) | Secure Agent Skills Registry | 4400 | [报告](site/public/reports/projects/133-tech-leads-agent-skills-registry.md) |
-| 143 | jdrhyne Agent Skills | [jdrhyne/agent-skills](https://github.com/jdrhyne/agent-skills) | Portable Agent Skills Pack | 230 | [报告](site/public/reports/projects/134-jdrhyne-agent-skills-pack.md) |
-| 144 | OpenSite Skills | [opensite-ai/opensite-skills](https://github.com/opensite-ai/opensite-skills) | Cross-Agent Skills and Memory Sync | 7 | [报告](site/public/reports/projects/135-opensite-skills-memory-sync.md) |
-| 145 | fast-agent | [evalstate/fast-agent](https://github.com/evalstate/fast-agent) | Skills/MCP/ACP Agent Runtime | 3800 | [报告](site/public/reports/projects/136-fast-agent-skills-mcp-acp.md) |
-| 146 | MCP Local RAG | [shinpr/mcp-local-rag](https://github.com/shinpr/mcp-local-rag) | Local-First RAG and Agent Skills | 275 | [报告](site/public/reports/projects/137-mcp-local-rag-agent-skills.md) |
-| 147 | Awesome Omni Skills | [diegosouzapw/awesome-omni-skills](https://github.com/diegosouzapw/awesome-omni-skills) | Omni Skills CLI API MCP A2A Runtime | 42 | [报告](site/public/reports/projects/138-awesome-omni-skills-runtime.md) |
-| 148 | LightAgent | [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | Memory/MCP Skill Agent Framework | 987 | [报告](site/public/reports/projects/139-lightagent-memory-mcp-skills.md) |
-| 149 | Agent Skills Hub | [agent-skills-hub/agent-skills-hub](https://github.com/agent-skills-hub/agent-skills-hub) | Cross-Agent Skills Registry | 40 | [报告](site/public/reports/projects/140-agent-skills-hub-registry.md) |
-| 150 | thClaws | [thClaws/thClaws](https://github.com/thClaws/thClaws) | Local Agent Harness Platform | 1000 | [报告](site/public/reports/projects/141-thclaws-agent-harness-platform.md) |
-| 151 | Memento-Skills | [Memento-Teams/Memento-Skills](https://github.com/Memento-Teams/Memento-Skills) | Self-Evolving Skill Memory Agent | 1400 | [报告](site/public/reports/projects/142-memento-skills-self-evolving-agent.md) |
-| 152 | OpenClaw Medical Skills | [FreedomIntelligence/OpenClaw-Medical-Skills](https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills) | Domain Agent Skills Library | 2500 | [报告](site/public/reports/projects/143-openclaw-medical-skills-library.md) |
-| 153 | AgentSys | [agent-sh/agentsys](https://github.com/agent-sh/agentsys) | Agent Orchestration Runtime | 818 | [报告](site/public/reports/projects/144-agentsys-agent-orchestration-runtime.md) |
-| 154 | Harness Skills | [harness/harness-skills](https://github.com/harness/harness-skills) | CI/CD Agent Skills System | 20 | [报告](site/public/reports/projects/145-harness-skills-cicd-agent-skills.md) |
-| 155 | OpenHarness | [HKUDS/OpenHarness](https://github.com/HKUDS/OpenHarness) | Open Agent Harness Runtime | 13000 | [报告](site/public/reports/projects/146-openharness-agent-harness-ohmo.md) |
-| 156 | my-codex | [sehoon787/my-codex](https://github.com/sehoon787/my-codex) | Codex Agent Harness Pack | 16 | [报告](site/public/reports/projects/147-my-codex-agent-harness-pack.md) |
-| 157 | SkillRL | [aiming-lab/SkillRL](https://github.com/aiming-lab/SkillRL) | Recursive Skill-Augmented RL | 765 | [报告](site/public/reports/projects/148-skillrl-recursive-skill-rl.md) |
-| 158 | HEBBS | [hebbs-ai/hebbs-memory-engine](https://github.com/hebbs-ai/hebbs-memory-engine) | Agent Memory Engine | 28 | [报告](site/public/reports/projects/149-hebbs-memory-engine.md) |
-| 159 | MemSkill | [ViktorAxelsen/MemSkill](https://github.com/ViktorAxelsen/MemSkill) | Evolving Memory Skills | 484 | [报告](site/public/reports/projects/150-memskill-evolving-memory-skills.md) |
-| 160 | Zylos Core | [zylos-ai/zylos-core](https://github.com/zylos-ai/zylos-core) | Self-Evolving AI Team Platform | 1400 | [报告](site/public/reports/projects/151-zylos-core-self-evolving-ai-teams.md) |
-| 161 | QuantaAlpha | [QuantaAlpha/QuantaAlpha](https://github.com/QuantaAlpha/QuantaAlpha) | Evolutionary Repository Agent | 702 | [报告](site/public/reports/projects/152-quantaalpha-evolutionary-repo-agent.md) |
-| 162 | Skill Validator | [agent-ecosystem/skill-validator](https://github.com/agent-ecosystem/skill-validator) | Agent Skill Validation Tool | 47 | [报告](site/public/reports/projects/153-agent-ecosystem-skill-validator.md) |
-| 163 | agent-skills-eval | [darkrishabh/agent-skills-eval](https://github.com/darkrishabh/agent-skills-eval) | Agent Skills Evaluation Harness | 34 | [报告](site/public/reports/projects/154-agent-skills-eval-benchmark.md) |
-| 164 | Baoyu Skills | [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills) | Agent Skills Pack | 339 | [报告](site/public/reports/projects/155-baoyu-agent-skills-pack.md) |
-| 165 | Claude Skills | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | Claude Skill Pack | 214 | [报告](site/public/reports/projects/156-alirezarezvani-claude-skills-pack.md) |
-| 166 | Agent Skills Specification | [agentskills/agentskills](https://github.com/agentskills/agentskills) | Agent Skills Open Standard | 19300 | [报告](site/public/reports/projects/157-agentskills-open-standard.md) |
-| 167 | Elastic Agent Skills | [elastic/agent-skills](https://github.com/elastic/agent-skills) | Official Vendor Agent Skills | 485 | [报告](site/public/reports/projects/158-elastic-official-agent-skills.md) |
-| 168 | HOL Registry Skills | [hashgraph-online/registry-broker-skills](https://github.com/hashgraph-online/registry-broker-skills) | Agent Registry Skill Bridge | 345 | [报告](site/public/reports/projects/159-hol-registry-broker-skills.md) |
-| 169 | Skill Hunter | [CE0Alex/skill-hunter](https://github.com/CE0Alex/skill-hunter) | Agent Skill Discovery Skill | 22 | [报告](site/public/reports/projects/160-skill-hunter-agent-skill-recommender.md) |
-| 170 | SkillClaw | [AMAP-ML/SkillClaw](https://github.com/AMAP-ML/SkillClaw) | Collective Skill Evolution | 1500 | [报告](site/public/reports/projects/161-skillclaw-collective-skill-evolution.md) |
-| 171 | OpenSpace | [HKUDS/OpenSpace](https://github.com/HKUDS/OpenSpace) | Self-Evolving Skill Runtime | 6300 | [报告](site/public/reports/projects/162-openspace-self-evolving-skills.md) |
-| 172 | COG Second Brain | [huytieu/COG-second-brain](https://github.com/huytieu/COG-second-brain) | Self-Evolving Personal Memory System | 486 | [报告](site/public/reports/projects/163-cog-self-evolving-second-brain.md) |
-| 173 | Hippo Memory | [kitfunso/hippo-memory](https://github.com/kitfunso/hippo-memory) | Agent Memory System | 675 | [报告](site/public/reports/projects/164-hippo-memory-biological-agent-memory.md) |
-| 174 | Awesome OpenClaw Skills | [sundial-org/awesome-openclaw-skills](https://github.com/sundial-org/awesome-openclaw-skills) | OpenClaw Skill Index | 602 | [报告](site/public/reports/projects/165-awesome-openclaw-skills-index.md) |
-| 175 | EVOTEST | [yf-he/EvoTest](https://github.com/yf-he/EvoTest) | Evolutionary Test-Time Learning | 19 | [报告](site/public/reports/projects/166-evotest-evolutionary-test-time-learning.md) |
-| 176 | agentic-stack | [codejunkie99/agentic-stack](https://github.com/codejunkie99/agentic-stack) | Portable Agent Memory and Skills Layer | 2000 | [报告](site/public/reports/projects/167-agentic-stack-portable-agent-memory-skills.md) |
-| 177 | Harness | [revfactory/harness](https://github.com/revfactory/harness) | Team-Architecture Harness Factory | 3500 | [报告](site/public/reports/projects/168-revfactory-harness-team-architecture-factory.md) |
-| 178 | oh-my-skills | [akillness/oh-my-skills](https://github.com/akillness/oh-my-skills) | Cross-Agent Skill Collection | 16 | [报告](site/public/reports/projects/169-oh-my-skills-cross-agent-skill-collection.md) |
-| 179 | OpenClaw Harness Engineering | [guixiang123124/openclaw-harness](https://github.com/guixiang123124/openclaw-harness) | OpenClaw Harness Engineering | 3 | [报告](site/public/reports/projects/170-openclaw-harness-engineering-factory.md) |
-| 180 | Codex CLI 1UP | [regenrek/codex-1up](https://github.com/regenrek/codex-1up) | Codex CLI Upgrade Kit | 430 | [报告](site/public/reports/projects/171-codex-1up-codex-cli-upgrade-kit.md) |
-| 181 | dotnet-skills | [managedcode/dotnet-skills](https://github.com/managedcode/dotnet-skills) | .NET Agent Skill Catalog | 403 | [报告](site/public/reports/projects/172-dotnet-skills-agent-skill-catalog.md) |
-| 182 | Honcho | [plastic-labs/honcho](https://github.com/plastic-labs/honcho) | Agent Memory Infrastructure | 4200 | [报告](site/public/reports/projects/173-honcho-stateful-agent-memory.md) |
-| 183 | Hindsight | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | Learning Agent Memory System | 14400 | [报告](site/public/reports/projects/174-hindsight-agent-memory-that-learns.md) |
-| 184 | Agentic Context Engine | [kayba-ai/agentic-context-engine](https://github.com/kayba-ai/agentic-context-engine) | Agent Experience Learning Loop | 2200 | [报告](site/public/reports/projects/175-agentic-context-engine-experience-learning.md) |
-| 185 | TrustGraph | [trustgraph-ai/trustgraph](https://github.com/trustgraph-ai/trustgraph) | Context Graph Agent Runtime | 2100 | [报告](site/public/reports/projects/176-trustgraph-context-graph-agent-runtime.md) |
-| 186 | HaluMem | [MemTensor/HaluMem](https://github.com/MemTensor/HaluMem) | Agent Memory Hallucination Benchmark | 138 | [报告](site/public/reports/projects/177-halumem-agent-memory-hallucination-benchmark.md) |
-| 187 | Planning with Files | [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) | Persistent Agent Planning Skill | 22000 | [报告](site/public/reports/projects/178-planning-with-files-agent-planning-skill.md) |
-| 188 | ECC | [affaan-m/ECC](https://github.com/affaan-m/ECC) | Agent Harness Optimization System | 191000 | [报告](site/public/reports/projects/179-ecc-agent-harness-optimization-system.md) |
-| 189 | vibe-codex | [kks0488/vibe-codex](https://github.com/kks0488/vibe-codex) | Codex Skills and Agent Teams Kit | 10 | [报告](site/public/reports/projects/180-vibe-codex-codex-skills-teams.md) |
-| 190 | OpenCode Skills | [farmage/opencode-skills](https://github.com/farmage/opencode-skills) | OpenCode Agent Skills and Workflow Commands | 28 | [报告](site/public/reports/projects/181-opencode-skills-workflow-commands.md) |
-| 191 | Agent Smith | [cyijun/agent-smith](https://github.com/cyijun/agent-smith) | Directory-Isolated Multi-Agent Protocol | 18 | [报告](site/public/reports/projects/182-agent-smith-directory-isolated-multi-agent.md) |
-| 192 | Galyarder Framework | [galyarderlabs/galyarder-framework](https://github.com/galyarderlabs/galyarder-framework) | Agentic Skills Orchestration Framework | 11 | [报告](site/public/reports/projects/183-galyarder-agentic-skills-orchestration.md) |
-| 193 | Thesis Skills | [quzhiii/thesis-skills](https://github.com/quzhiii/thesis-skills) | Paper Workflow Agent Skills | 71 | [报告](site/public/reports/projects/184-thesis-skills-paper-workflow-skills.md) |
-| 194 | PRB Agent Skills | [PaulRBerg/agent-skills](https://github.com/PaulRBerg/agent-skills) | Personal Codex Agent Skills Pack | 59 | [报告](site/public/reports/projects/185-prb-agent-skills-personal-codex-skill-pack.md) |
-| 195 | Awesome Codex Skills | [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) | Codex Skills Automation Catalog | 11500 | [报告](site/public/reports/projects/186-awesome-codex-skills-automation-catalog.md) |
-| 196 | Eigent Agent Skills | [eigent-ai/agent-skills](https://github.com/eigent-ai/agent-skills) | Cowork Agent Skills Collection | 10 | [报告](site/public/reports/projects/187-eigent-agent-skills-cowork-collection.md) |
-| 197 | AI Agent Skills | [MoizIbnYousaf/Ai-Agent-Skills](https://github.com/MoizIbnYousaf/Ai-Agent-Skills) | Curated Agent Skills Library and CLI | 1100 | [报告](site/public/reports/projects/188-ai-agent-skills-curated-library-cli.md) |
-| 198 | Arc | [howells/arc](https://github.com/howells/arc) | Agent Workflow Plugin | 22 | [报告](site/public/reports/projects/189-arc-agent-workflow-plugin.md) |
-| 199 | Gentleman Skills | [Gentleman-Programming/Gentleman-Skills](https://github.com/Gentleman-Programming/Gentleman-Skills) | Community Agent Skills Patterns | 522 | [报告](site/public/reports/projects/190-gentleman-skills-community-agent-patterns.md) |
-| 200 | Together AI Skills | [togethercomputer/skills](https://github.com/togethercomputer/skills) | Provider API Agent Skills Pack | 28 | [报告](site/public/reports/projects/191-together-ai-skills-provider-api-pack.md) |
-| 201 | EvoMemBench | [DSAIL-Memory/EvoMemBench](https://github.com/DSAIL-Memory/EvoMemBench) | Self-Evolving Agent Memory Benchmark | 0 | [报告](site/public/reports/projects/192-evomembench-self-evolving-memory-benchmark.md) |
-| 202 | Signet AI | [Signet-AI/signetai](https://github.com/Signet-AI/signetai) | Agent Context and Memory Substrate | 167 | [报告](site/public/reports/projects/193-signet-agent-context-substrate.md) |
-| 203 | MemPalace | [MemPalace/mempalace](https://github.com/MemPalace/mempalace) | Benchmarked Agent Memory System | 52800 | [报告](site/public/reports/projects/194-mempalace-agent-memory-benchmark.md) |
-| 204 | RASPUTIN Memory | [jcartu/rasputin-memory](https://github.com/jcartu/rasputin-memory) | Self-Hosted Agent Memory Backend | 33 | [报告](site/public/reports/projects/195-rasputin-memory-openclaw-claude.md) |
-| 205 | Agent Replay | [agentreplay/agentreplay](https://github.com/agentreplay/agentreplay) | Local Agent Evals and Memory Observability | 0 | [报告](site/public/reports/projects/196-agentreplay-local-agent-observability-memory.md) |
-| 206 | Awesome Agent Memory Papers | [yyyujintang/Awesome-Agent-Memory-Papers](https://github.com/yyyujintang/Awesome-Agent-Memory-Papers) | Agent Memory Paper and Benchmark Index | 0 | [报告](site/public/reports/projects/197-awesome-agent-memory-papers.md) |
-| 207 | Memvid | [memvid/memvid](https://github.com/memvid/memvid) | Single-File Agent Memory Layer | 12400 | [报告](site/public/reports/projects/198-memvid-single-file-agent-memory.md) |
-| 208 | Awesome Agent Memory | [tfatykhov/awesome-agent-memory](https://github.com/tfatykhov/awesome-agent-memory) | Agent Memory Research Index | 0 | [报告](site/public/reports/projects/199-tfatykhov-awesome-agent-memory.md) |
+- [tsinghua-fib-lab/world-model](https://github.com/tsinghua-fib-lab/world-model) - [ACM CSUR 2025] Understanding World or Predicting Future? A Comprehensive Survey of World Models 🌟711
+  `stack:Markdown` `tag:resource-index` `time:early` `content:2022-06-27`
+- [opendilab/awesome-exploration-rl](https://github.com/opendilab/awesome-exploration-rl) - A curated list of awesome exploration RL resources (continually updated) 🌟689
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [yingchengyang/reinforcement-learning-papers](https://github.com/yingchengyang/reinforcement-learning-papers) - Related papers for reinforcement learning, including classic papers and latest papers in top conferences 🌟569
+  `stack:Unknown` `tag:resource-index` `time:unknown` `content:unknown`
+- [ai4co/awesome-fm4co](https://github.com/ai4co/awesome-fm4co) - Recent research papers about Foundation Models for Combinatorial Optimization 🌟534
+  `stack:Markdown` `tag:resource-index` `time:unknown` `content:unknown`
+- [ilsilfverskiold/awesome-llm-resources-list](https://github.com/ilsilfverskiold/awesome-llm-resources-list) - A Curated Collection of resources for applied AI engineering (work in progress). 🌟523
+  `stack:Unknown` `tag:resource-index` `time:unknown` `content:unknown`
+- [tsinghuac3i/awesome-memory-for-agents](https://github.com/tsinghuac3i/awesome-memory-for-agents) - A Collection of Papers about Memory for Language Agents 🌟506
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [jennyzzt/awesome-open-ended](https://github.com/jennyzzt/awesome-open-ended) - Awesome Open-ended AI 🌟438
+  `stack:Markdown` `tag:resource-index` `time:unknown` `content:unknown`
+- [davidzwz/awesome-rag-reasoning](https://github.com/davidzwz/awesome-rag-reasoning) - [EMNLP 2025] Awesome RAG Reasoning Resources 🌟427
+  `stack:Markdown` `tag:resource-index` `time:2025-07` `content:2025-07-17`
+- [teleai-uagi/awesome-agent-memory](https://github.com/teleai-uagi/awesome-agent-memory) - Curated systems, benchmarks, and papers etc. on memory for LLMs/MLLMs --- long-term context, retrieval, and reasoning. 🌟421
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-20`
+- [hkust-knowcomp/awesome-llm-scientific-discovery](https://github.com/hkust-knowcomp/awesome-llm-scientific-discovery) - [EMNLP2025] From Automation to Autonomy: A Survey on Large Language Models in Scientific Discovery 🌟344
+  `stack:Markdown` `tag:resource-index` `time:unknown` `content:unknown`
+- [qianlima-lab/awesome-lifelong-llm-agent](https://github.com/qianlima-lab/awesome-lifelong-llm-agent) - TPAMI 2026 | This repository collects awesome survey, resource, and paper for lifelong learning LLM agents 🌟300
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [brain-research/guided-evolutionary-strategies](https://github.com/brain-research/guided-evolutionary-strategies) - Guided Evolutionary Strategies 🌟273
+  `stack:Jupyter Notebook` `tag:resource-index` `time:unknown` `content:unknown`
+- [yxf203/awesome-efficient-agents](https://github.com/yxf203/awesome-efficient-agents) - Survey and paper list on efficiency-guided LLM agents (memory, tool learning, planning). 🌟250
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [openning07/awesome-curriculum-learning](https://github.com/openning07/awesome-curriculum-learning) - some bravo or inspiring research works on the topic of curriculum learning 🌟248
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [lingxi-agent/lingxi](https://github.com/lingxi-agent/lingxi) - Lingxi: Knowledge-Guided Multi-Agent Framework for Repository-Level Issue Resolution 🌟243
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [isenglab/awesomellm4apr](https://github.com/isenglab/awesomellm4apr) - [TOSEM 2026]A Systematic Literature Review on Large Language Models for Automated Program Repair 🌟240
+  `stack:Markdown` `tag:resource-index` `time:unknown` `content:unknown`
+- [researai/awesome-ai-scientist](https://github.com/researai/awesome-ai-scientist) - This is a survey of research on AI scientists, AI researchers, AI engineers, and a series of AI-driven research studies 🌟240
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [youngdubbydu/llm-agent-optimization](https://github.com/youngdubbydu/llm-agent-optimization) - This is the reading list for the survey "A Survey on the Optimization of LLM-based Agents ". We will keep adding papers and improving the list. Any suggestions and PRs are welcome! 🌟231
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [lightchen233/awesome-ai4research](https://github.com/lightchen233/awesome-ai4research) - awesome/list/tutorial/survey resource signal 🌟230
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [evalops/dspy-0to1-guide](https://github.com/evalops/dspy-0to1-guide) - A comprehensive 0-to-1 guide for building self-improving LLM applications with DSPy framework 🌟215
+  `stack:Python` `tag:resource-index` `time:unknown` `content:unknown`
+- [salvatorera/ml-news-of-the-week](https://github.com/salvatorera/ml-news-of-the-week) - A collection of the the best ML and AI news every week (research, news, resources) 🌟180
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [zzz47zzz/awesome-lifelong-learning-methods-for-llm](https://github.com/zzz47zzz/awesome-lifelong-learning-methods-for-llm) - [ACM Computing Surveys 2025] This repository collects awesome survey, resource, and paper for Lifelong Learning with Large Language Models. (Updated Regularly) 🌟162
+  `stack:Unknown` `tag:resource-index` `time:unknown` `content:unknown`
+- [ghy0501/awesome-continual-learning-in-generative-models](https://github.com/ghy0501/awesome-continual-learning-in-generative-models) - A Comprehensive Survey on Continual Learning in Generative Models. 🌟151
+  `stack:Markdown` `tag:resource-index` `time:unknown` `content:unknown`
+- [agentmemoryworld/awesome-agent-memory](https://github.com/agentmemoryworld/awesome-agent-memory) - [Up-To-Date] Awesome Agent Memory Paper Resource 🌟148
+  `stack:Markdown` `tag:resource-index` `time:unknown` `content:unknown`
+- [xuchen-li/llm-arxiv-daily](https://github.com/xuchen-li/llm-arxiv-daily) - Automatically update arXiv papers about LLM Reasoning, LLM Evaluation, LLM & MLLM and Video Understanding using Github Actions. 🌟144
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [wuxingyu-ai/llm4ec](https://github.com/wuxingyu-ai/llm4ec) - A list of awesome papers and resources of the intersection of Large Language Models and Evolutionary Computation. 🌟139
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [logikon-ai/awesome-deliberative-prompting](https://github.com/logikon-ai/awesome-deliberative-prompting) - Awesome deliberative prompting: How to ask LLMs to produce reliable reasoning and make reason-responsive decisions. 🌟126
+  `stack:Markdown` `tag:resource-index` `time:early` `content:2021-03-24`
+- [yennning/awesome-code-as-agent-harness-papers](https://github.com/yennning/awesome-code-as-agent-harness-papers) - awesome/list/tutorial/survey resource signal 🌟123
+  `stack:Unknown` `tag:resource-index` `time:unknown` `content:unknown`
+- [smiles724/awesome-llm-rlvr](https://github.com/smiles724/awesome-llm-rlvr) - Collection of latest papers and materials in the area of RLVR! 🌟107
+  `stack:Unknown` `tag:resource-index` `time:unknown` `content:unknown`
+- [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) - A collection of MCP servers. 🌟87
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [zijian-ni/awesome-ai-agents-2026](https://github.com/zijian-ni/awesome-ai-agents-2026) - 🤖 A curated list of AI Agent frameworks, tools, platforms, and resources for 2026 — the year agents went mainstream 🌟81
+  `stack:Unknown` `tag:resource-index` `time:unknown` `content:unknown`
+- [bobxwu/learning-from-rewards-llm-papers](https://github.com/bobxwu/learning-from-rewards-llm-papers) - A comrephensive collection of learning from rewards in the post-training and test-time scaling of LLMs, with a focus on both reward models and learning strategies across training, inferen... 🌟71
+  `stack:Markdown` `tag:resource-index` `time:unknown` `content:unknown`
+- [arunagirinathan-k/awesome-ai-agents-2026](https://github.com/arunagirinathan-k/awesome-ai-agents-2026) - Awesome AI Agents for 2026 - 300+ AI Agents, Frameworks & Coding • Creative • Voice • Research • Enterprise. Comparison guides, benchmarks & deep dives 🌟69
+  `stack:Markdown` `tag:resource-index` `time:unknown` `content:unknown`
+- [scienceaix/agentskills](https://github.com/scienceaix/agentskills) - Awesome Agent Skills collection list, papers, tools, projects, and resources 🌟63
+  `stack:Markdown` `tag:resource-index` `time:2025-11` `content:2025-11-25`
+- [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks) - awesome/list/tutorial/survey resource signal 🌟52
+  `stack:Unknown` `tag:resource-index` `time:unknown` `content:unknown`
+- [tsinghua-fib-lab/awesome-ai-scientists](https://github.com/tsinghua-fib-lab/awesome-ai-scientists) - A curated list of awesome resources on AI Scientists based on our survey "A Comprehensive Survey of AI Scientists". 🌟35
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [huggingface/agents-course](https://github.com/huggingface/agents-course) - This repository contains the Hugging Face Agents Course. 🌟28
+  `stack:Markdown` `tag:resource-index` `time:unknown` `content:unknown`
+- [shadowrootdev/awesome-agent-skills-mcp](https://github.com/shadowrootdev/awesome-agent-skills-mcp) - MCP server providing 100+ AI agent skills from Anthropic, Vercel, Trail of Bits, Hugging Face & more. Works with Claude, GitHub Copilot, and any MCP client. 🌟23
+  `stack:TypeScript/JavaScript` `tag:resource-index` `time:2024-Q4` `content:2024-11-05`
+- [bansky-cl/graphrag-arxiv-daily-paper](https://github.com/bansky-cl/graphrag-arxiv-daily-paper) - awesome/list/tutorial/survey resource signal 🌟22
+  `stack:Markdown` `tag:resource-index` `time:2026-04` `content:2026-04-15`
+- [voltagent/awesome-agent-skills](https://github.com/voltagent/awesome-agent-skills) - A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more. 🌟22
+  `stack:Unknown` `tag:resource-index` `time:unknown` `content:unknown`
+- [clint-kristopher-morris/llm-guided-evolution](https://github.com/clint-kristopher-morris/llm-guided-evolution) - LLM Guided Evolution - The Automation of Models Advancing Models 🌟19
+  `stack:Python` `tag:resource-index` `time:2024-Q3` `content:2024-07-08`
+- [taishi-n324/awesome-rl-reasoning](https://github.com/taishi-n324/awesome-rl-reasoning) - Awesome-RL-Reasoning 🌟13
+  `stack:Markdown` `tag:resource-index` `time:2025-09` `content:2025-09-22`
+- [vivy-yi/awesome-agent-orchestration](https://github.com/vivy-yi/awesome-agent-orchestration) - ⭐ Curated list of AI Agent frameworks: AutoGen, CrewAI, MetaGPT, LangGraph, Swarms. Multi-Agent Systems, Swarm Intelligence, A2A Protocol, MCP Protocol. LLM Agents, Agentic AI, Agent Work... 🌟10
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [zhonghaojiang/awesome-issue-solving](https://github.com/zhonghaojiang/awesome-issue-solving) - Agentic Software Issue Resolution with Large Language Models: A Survey 🌟9
+  `stack:Markdown` `tag:resource-index` `time:2026-01` `content:2026-01-06`
+- [opendilab/awesome-rlhf](https://github.com/opendilab/awesome-rlhf) - A curated list of reinforcement learning with human feedback resources (continually updated) 🌟4
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [xialeiliu/awesome-incremental-learning](https://github.com/xialeiliu/awesome-incremental-learning) - Awesome Incremental Learning 🌟4
+  `stack:Unknown` `tag:resource-index` `time:unknown` `content:unknown`
+- [r4stin/kg-research-agent](https://github.com/r4stin/kg-research-agent) - Evidence-grounded, multi-agent research assistant that performs RAG over scientific papers, extracts structured claims, builds a Neo4j knowledge graph, and answers questions with verifiab... 🌟3
+  `stack:Python` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [agi-edgerunners/llm-agents-papers](https://github.com/agi-edgerunners/llm-agents-papers) - A repo lists papers related to LLM based agent 🌟2
+  `stack:Unknown` `tag:resource-index` `time:unknown` `content:unknown`
+- [deep-polyu/awesome-graphrag](https://github.com/deep-polyu/awesome-graphrag) - Awesome-GraphRAG: A curated list of resources (surveys, papers, benchmarks, and opensource projects) on graph-based retrieval-augmented generation. 🌟2
+  `stack:Markdown` `tag:resource-index` `time:2026-04` `content:2026-04-07`
+- [knightnemo/awesome-world-models](https://github.com/knightnemo/awesome-world-models) - A Curated List of Awesome Works in World Modeling, Aiming to Serve as a One-stop Resource for Researchers, Practitioners, and Enthusiasts Interested in World Modeling. 🌟2
+  `stack:Markdown` `tag:resource-index` `time:unknown` `content:unknown`
+- [lmd0311/awesome-world-model](https://github.com/lmd0311/awesome-world-model) - Collect some World Models for Autonomous Driving (and Robotic, etc.) papers. 🌟2
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [luo-junyu/awesome-agent-papers](https://github.com/luo-junyu/awesome-agent-papers) - [Up-to-date] Large Language Model Agent: A Survey on Methodology, Applications and Challenges 🌟2
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [mbzuai-oryx/awesome-llm-post-training](https://github.com/mbzuai-oryx/awesome-llm-post-training) - Awesome Reasoning LLM Tutorial/Survey/Guide 🌟2
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [shichun-liu/agent-memory-paper-list](https://github.com/shichun-liu/agent-memory-paper-list) - The paper list of "Memory in the Age of AI Agents: A Survey" 🌟2
+  `stack:Markdown` `tag:resource-index` `time:2025-12` `content:2025-12-16`
+- [tsinghuac3i/awesome-rl-for-lrms](https://github.com/tsinghuac3i/awesome-rl-for-lrms) - A Survey of Reinforcement Learning for Large Reasoning Models 🌟2
+  `stack:Markdown` `tag:resource-index` `time:2025-09` `content:2025-09-11`
+- [ai-boost/awesome-ai-for-science](https://github.com/ai-boost/awesome-ai-for-science) - A curated list of awesome AI tools, libraries, papers, datasets, and frameworks that accelerate scientific discovery — from physics and chemistry to biology, materials, and beyond. 🌟1
+  `stack:Markdown` `tag:resource-index` `time:unknown` `content:unknown`
+- [kodigitaccount/2026-roadmap-for-advance-ml-ai-generative-ai-agentic-ai](https://github.com/kodigitaccount/2026-roadmap-for-advance-ml-ai-generative-ai-agentic-ai) - 🚀 **2026 Roadmap: Machine Learning, Artificial Intelligence, Generative AI & Agentic AI** 🌟1
+  `stack:Markdown` `tag:resource-index` `time:2025-11` `content:2025-11-13`
+- [leofan90/awesome-world-models](https://github.com/leofan90/awesome-world-models) - A comprehensive list of papers for the definition of World Models and using World Models for General Video Generation, Embodied AI, and Autonomous Driving, including papers, codes, and re... 🌟1
+  `stack:Unknown` `tag:resource-index` `time:unknown` `content:unknown`
+- [luh-ai-devnerds/llm-guided-curriculum-rl](https://github.com/luh-ai-devnerds/llm-guided-curriculum-rl) - LLM-Guided Curriculum Learning for Multi-Agent Reinforcement Learning 🌟1
+  `stack:Python` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [opendilab/awesome-model-based-rl](https://github.com/opendilab/awesome-model-based-rl) - A curated list of awesome model based RL resources (continually updated) 🌟1
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
+- [tmgthb/autonomous-agents](https://github.com/tmgthb/autonomous-agents) - Autonomous Agents (LLMs) research papers. Updated Daily. 🌟1
+  `stack:Markdown` `tag:resource-index` `time:2026-05` `content:2026-05-21`
 
-</details>
+## Papers / 论文
 
-<details>
-<summary>完整 raw/classified GitHub 仓库列表（490）</summary>
+The list below deduplicates 184 raw paper records into canonical paper IDs for readability while preserving timestamps and review links. / 下表将184条原始论文记录按 arXiv/占位ID 去重展示，保留时间戳和 review 链接。
 
-| # | 仓库 | 分类 | 主题 | 功能标签 | Stars | 时间片 |
-|---:|---|---|---|---|---:|---|
-| 1 | [01-ai/langcrew](https://github.com/01-ai/langcrew) | 框架/framework | framework | framework-runtime | 114 | unknown |
-| 2 | [0xsanei/darwinia](https://github.com/0xsanei/darwinia) | 框架/framework | evolution | benchmark-eval | 102 | 2026-05 |
-| 3 | [28naem-del/mnemosyne](https://github.com/28naem-del/mnemosyne) | 框架/framework | memory | tool-module | 41 | unknown |
-| 4 | [803/skills-supply](https://github.com/803/skills-supply) | 工具/tool | skill | tool-module | 32 | 2026-05 |
-| 5 | [a-evo-lab/a-evolve](https://github.com/a-evo-lab/a-evolve) | 论文代码/paper-code | evolution | agent-evolution-infra | 552 | 2026-05 |
-| 6 | [aaronowh/ai-scientist-v2](https://github.com/aaronowh/ai-scientist-v2) | 应用/application | research-agent | application-demo | 0 | 2024-Q2 |
-| 7 | [abhisakh/ai-scientist-v2](https://github.com/abhisakh/ai-scientist-v2) | 应用/application | research-agent | application-demo | 0 | 2024-Q2 |
-| 8 | [adam-s/intercept](https://github.com/adam-s/intercept) | 应用/application | evaluation | framework-runtime | 127 | 2026-05 |
-| 9 | [aden-hive/hive](https://github.com/aden-hive/hive) | 框架/framework | evolution | framework-runtime | 10400 | 2026-05 |
-| 10 | [adiban17/ppo-ping-pong-agent-](https://github.com/adiban17/ppo-ping-pong-agent-) | 应用/application | evolution | application-demo | 0 | unknown |
-| 11 | [adolfousier/opencrabs](https://github.com/adolfousier/opencrabs) | 应用/application | evolution | application-demo | 755 | 2026-05 |
-| 12 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 框架/framework | skill | framework-runtime | 191000 | 2026-05 |
-| 13 | [agent-ecosystem/skill-validator](https://github.com/agent-ecosystem/skill-validator) | 工具/tool | skill | benchmark-eval | 47 | 2026-05 |
-| 14 | [agent-on-the-fly/memento](https://github.com/agent-on-the-fly/memento) | 工具/tool | memory | tool-module | 2 | unknown |
-| 15 | [agent-sh/agentsys](https://github.com/agent-sh/agentsys) | 框架/framework | framework | framework-runtime | 818 | 2026-05 |
-| 16 | [agent-skills-hub/agent-skills-hub](https://github.com/agent-skills-hub/agent-skills-hub) | 教程/tutorial | skill | resource-index | 40 | 2026-05 |
-| 17 | [agentic-in/elephant-agent](https://github.com/agentic-in/elephant-agent) | 框架/framework | memory | tool-module | 361 | 2026-05 |
-| 18 | [agentmemoryworld/awesome-agent-memory](https://github.com/agentmemoryworld/awesome-agent-memory) | 教程/tutorial | memory | resource-index | 148 | unknown |
-| 19 | [agentreplay/agentreplay](https://github.com/agentreplay/agentreplay) | 评测/evaluation | memory | benchmark-eval | 0 | 2026-05 |
-| 20 | [agentskills/agentskills](https://github.com/agentskills/agentskills) | 教程/tutorial | skill | resource-index | 19300 | 2026-05 |
-| 21 | [agenttoolkit/altk-evolve](https://github.com/agenttoolkit/altk-evolve) | 框架/framework | evolution | tool-module | 85 | 2026-05 |
-| 22 | [agi-edgerunners/llm-agents-papers](https://github.com/agi-edgerunners/llm-agents-papers) | 教程/tutorial | research-agent | resource-index | 2 | unknown |
-| 23 | [ai-boost/awesome-ai-for-science](https://github.com/ai-boost/awesome-ai-for-science) | 教程/tutorial | education-list | resource-index | 1 | unknown |
-| 24 | [ai-boost/awesome-harness-engineering](https://github.com/ai-boost/awesome-harness-engineering) | 教程/tutorial | education-list | resource-index | 1100 | 2026-05 |
-| 25 | [ai4co/awesome-fm4co](https://github.com/ai4co/awesome-fm4co) | 教程/tutorial | education-list | resource-index | 534 | unknown |
-| 26 | [aimagelab/mammoth](https://github.com/aimagelab/mammoth) | 框架/framework | evaluation | framework-runtime | 812 | unknown |
-| 27 | [aiming-lab/agent0](https://github.com/aiming-lab/agent0) | 论文代码/paper-code | evolution | application-demo | 1 | 2026-05 |
-| 28 | [aiming-lab/atp](https://github.com/aiming-lab/atp) | 应用/application | safety | tool-module | 10 | unknown |
-| 29 | [aiming-lab/AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw) | 应用/application | evolution | research-agent-pipeline | 12600 | 2026-05 |
-| 30 | [aiming-lab/SimpleMem](https://github.com/aiming-lab/SimpleMem) | 框架/framework | memory | framework-runtime | 3400 | 2026-05 |
-| 31 | [aiming-lab/SkillRL](https://github.com/aiming-lab/SkillRL) | 论文代码/paper-code | evolution | agent-evolution-infra | 765 | 2026-05 |
-| 32 | [aisa-group/skill-inject](https://github.com/aisa-group/skill-inject) | 评测/evaluation | skill | benchmark-eval | 73 | 2026-05 |
-| 33 | [aiwaves-cn/agents](https://github.com/aiwaves-cn/agents) | 框架/framework | evolution | framework-runtime | 5 | 2024-Q2 |
-| 34 | [akillness/oh-my-skills](https://github.com/akillness/oh-my-skills) | 教程/tutorial | skill | resource-index | 16 | 2026-05 |
-| 35 | [alberto-codes/gepa-adk](https://github.com/alberto-codes/gepa-adk) | 工具/tool | prompt-optimization | tool-module | 1 | 2026-03 |
-| 36 | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 应用/application | evolution | application-demo | 6 | unknown |
-| 37 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | 教程/tutorial | skill | resource-index | 214 | 2026-05 |
-| 38 | [allenai/swe-agent](https://github.com/allenai/swe-agent) | 论文代码/paper-code | coding-agent | research-artifact | 0 | unknown |
-| 39 | [AMA-Bench/AMA-Bench](https://github.com/AMA-Bench/AMA-Bench) | 评测/evaluation | memory | benchmark-eval | 40 | 2026-05 |
-| 40 | [AMAP-ML/SkillClaw](https://github.com/AMAP-ML/SkillClaw) | 论文代码/paper-code | evolution | agent-evolution-infra | 1500 | 2026-05 |
-| 41 | [angrysky56/reflective-agent-architecture](https://github.com/angrysky56/reflective-agent-architecture) | 评测/evaluation | evaluation | benchmark-eval | 5 | 2025-12 |
-| 42 | [anthropics/anthropic-sdk-python](https://github.com/anthropics/anthropic-sdk-python) | 框架/framework | framework | framework-runtime | 3 | 2026-05 |
-| 43 | [anthropics/skills](https://github.com/anthropics/skills) | 教程/tutorial | skill | resource-index | 140000 | 2026-05 |
-| 44 | [archishmansengupta/autovoiceevals](https://github.com/archishmansengupta/autovoiceevals) | 评测/evaluation | evaluation | benchmark-eval | 149 | 2026-05 |
-| 45 | [argus-framework/argus-ai-debate](https://github.com/argus-framework/argus-ai-debate) | 框架/framework | framework | framework-runtime | 5 | unknown |
-| 46 | [arthurmgraf/graphmind](https://github.com/arthurmgraf/graphmind) | 框架/framework | evaluation | framework-runtime | 1 | unknown |
-| 47 | [arunagirinathan-k/awesome-ai-agents-2026](https://github.com/arunagirinathan-k/awesome-ai-agents-2026) | 教程/tutorial | education-list | resource-index | 69 | unknown |
-| 48 | [arvid-pku/godel/agent](https://github.com/arvid-pku/godel/agent) | 框架/framework | evolution | framework-runtime | 182 | 2026-05 |
-| 49 | [ashish-kamboj/agentic-ai-workflows](https://github.com/ashish-kamboj/agentic-ai-workflows) | 框架/framework | workflow-automation | framework-runtime | 0 | unknown |
-| 50 | [asirwad/dspy-prompt-auto-optimizer](https://github.com/asirwad/dspy-prompt-auto-optimizer) | 框架/framework | prompt-optimization | framework-runtime | 1 | unknown |
-| 51 | [autodrive-ecosystem/mrdt-marl](https://github.com/autodrive-ecosystem/mrdt-marl) | 框架/framework | framework | framework-runtime | 7 | unknown |
-| 52 | [autohandai/code-cli](https://github.com/autohandai/code-cli) | 应用/application | evaluation | benchmark-eval | 110 | 2026-05 |
-| 53 | [bansky-cl/graphrag-arxiv-daily-paper](https://github.com/bansky-cl/graphrag-arxiv-daily-paper) | 教程/tutorial | memory | resource-index | 22 | 2026-04 |
-| 54 | [bazilicum/graphltm](https://github.com/bazilicum/graphltm) | 框架/framework | memory | framework-runtime | 4 | unknown |
-| 55 | [beeevita/evoprompt](https://github.com/beeevita/evoprompt) | 评测/evaluation | prompt-optimization | benchmark-eval | 238 | unknown |
-| 56 | [beita6969/scienceclaw](https://github.com/beita6969/ScienceClaw) | 应用/application | research-agent | application-demo | 816 | 2026-05 |
-| 57 | [bennettschwartz/membrane](https://github.com/bennettschwartz/membrane) | 评测/evaluation | memory | benchmark-eval | 93 | unknown |
-| 58 | [bingreeky/memgen](https://github.com/bingreeky/memgen) | 框架/framework | memory | tool-module | 378 | 2026-05 |
-| 59 | [bobxwu/learning-from-rewards-llm-papers](https://github.com/bobxwu/learning-from-rewards-llm-papers) | 教程/tutorial | education-list | resource-index | 71 | unknown |
-| 60 | [brain-research/guided-evolutionary-strategies](https://github.com/brain-research/guided-evolutionary-strategies) | 教程/tutorial | evolution | resource-index | 273 | unknown |
-| 61 | [browser-use/browser-use](https://github.com/browser-use/browser-use) | 框架/framework | workflow-automation | framework-runtime | 94 | 2026-05 |
-| 62 | [browser-use/web-ui](https://github.com/browser-use/web-ui) | 框架/framework | workflow-automation | framework-runtime | 16 | unknown |
-| 63 | [bruno686/visplay](https://github.com/bruno686/visplay) | 评测/evaluation | evolution | benchmark-eval | 57 | unknown |
-| 64 | [budecosystem/claudeevolve](https://github.com/budecosystem/claudeevolve) | 工具/tool | evolution | tool-module | 4 | unknown |
-| 65 | [callstackincubator/agent-skills](https://github.com/callstackincubator/agent-skills) | 教程/tutorial | skill | resource-index | 1400 | 2026-05 |
-| 66 | [camel-ai/owl](https://github.com/camel-ai/owl) | 框架/framework | framework | framework-runtime | 19 | unknown |
-| 67 | [caution724/github-explorer-skill](https://github.com/caution724/github-explorer-skill) | 工具/tool | coding-agent | tool-module | 2 | unknown |
-| 68 | [CE0Alex/skill-hunter](https://github.com/CE0Alex/skill-hunter) | 评测/evaluation | skill | benchmark-eval | 22 | 2026-05 |
-| 69 | [cellium-project/cellium-agent](https://github.com/cellium-project/cellium-agent) | 框架/framework | memory | framework-runtime | 41 | unknown |
-| 70 | [centaurioun/crewai](https://github.com/centaurioun/crewai) | 框架/framework | framework | framework-runtime | 0 | unknown |
-| 71 | [channinglua/prax-agent](https://github.com/channinglua/prax-agent) | 框架/framework | evaluation | framework-runtime | 294 | 2026-05 |
-| 72 | [charlesq9/self-evolving-agents](https://github.com/charlesq9/self-evolving-agents) | 应用/application | evolution | resource-index | 1 | 2026-05 |
-| 73 | [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | 框架/framework | evolution | framework-runtime | 391 | 2026-05 |
-| 74 | [chriscox/agent-skills](https://github.com/chriscox/agent-skills) | 教程/tutorial | skill | resource-index | 10 | 2026-05 |
-| 75 | [chrisworsey55/atlas-gic](https://github.com/chrisworsey55/atlas-gic) | 应用/application | prompt-optimization | framework-runtime | 1 | 2026-05 |
-| 76 | [chuacheowhuan/gym-continuousdoubleauction](https://github.com/chuacheowhuan/gym-continuousdoubleauction) | 评测/evaluation | coding-agent | benchmark-eval | 153 | unknown |
-| 77 | [circlemind-ai/fast-graphrag](https://github.com/circlemind-ai/fast-graphrag) | 评测/evaluation | memory | benchmark-eval | 3 | unknown |
-| 78 | [claire-labo/evotune](https://github.com/claire-labo/evotune) | 工具/tool | coding-agent | tool-module | 137 | unknown |
-| 79 | [claw-bench/claw-bench](https://github.com/claw-bench/claw-bench) | 评测/evaluation | evaluation | benchmark-eval | 171 | 2026-05 |
-| 80 | [claw-eval/claw-eval](https://github.com/claw-eval/claw-eval) | 评测/evaluation | evaluation | benchmark-eval | 606 | 2026-03 |
-| 81 | [ClawBio/ClawBio](https://github.com/ClawBio/ClawBio) | 工具/tool | skill | tool-module | 867 | 2026-05 |
-| 82 | [clawdotnet/openclaw.net](https://github.com/clawdotnet/openclaw.net) | 框架/framework | framework | framework-runtime | 345 | 2026-05 |
-| 83 | [clawland-ai/geneclaw](https://github.com/clawland-ai/geneclaw) | 框架/framework | evolution | framework-runtime | 36 | unknown |
-| 84 | [clint-kristopher-morris/llm-guided-evolution](https://github.com/clint-kristopher-morris/llm-guided-evolution) | 教程/tutorial | evolution | resource-index | 19 | 2024-Q3 |
-| 85 | [CodeAlive-AI/ai-driven-development](https://github.com/CodeAlive-AI/ai-driven-development) | 教程/tutorial | skill | resource-index | 74 | 2026-05 |
-| 86 | [codejunkie99/agentic-stack](https://github.com/codejunkie99/agentic-stack) | 工具/tool | memory | tool-module | 2000 | 2026-05 |
-| 87 | [codexstar69/bug-hunter](https://github.com/codexstar69/bug-hunter) | 框架/framework | evaluation | framework-runtime | 380 | 2026-03 |
-| 88 | [colab2/midca](https://github.com/colab2/midca) | 工具/tool | coding-agent | tool-module | 27 | unknown |
-| 89 | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | 教程/tutorial | skill | resource-index | 61500 | 2026-05 |
-| 90 | [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) | 教程/tutorial | skill | resource-index | 11500 | 2026-05 |
-| 91 | [crewaiinc/crewai](https://github.com/crewaiinc/crewai) | 框架/framework | framework | framework-runtime | 51 | unknown |
-| 92 | [cxcscmu/SkillLearnBench](https://github.com/cxcscmu/SkillLearnBench) | 评测/evaluation | skill | benchmark-eval | 21 | 2026-05 |
-| 93 | [cyijun/agent-smith](https://github.com/cyijun/agent-smith) | 框架/framework | framework | framework-runtime | 18 | 2026-05 |
-| 94 | [darkrishabh/agent-skills-eval](https://github.com/darkrishabh/agent-skills-eval) | 评测/benchmark | evaluation | benchmark-eval | 34 | 2026-05 |
-| 95 | [davidzwz/awesome-rag-reasoning](https://github.com/davidzwz/awesome-rag-reasoning) | 教程/tutorial | memory | resource-index | 427 | 2025-07 |
-| 96 | [deep-polyu/awesome-graphrag](https://github.com/deep-polyu/awesome-graphrag) | 教程/tutorial | memory | resource-index | 2 | 2026-04 |
-| 97 | [deepelementlab/clawcode](https://github.com/deepelementlab/clawcode) | 框架/framework | coding-agent | framework-runtime | 199 | 2026-05 |
-| 98 | [developzir/gepa-mcp](https://github.com/developzir/gepa-mcp) | 框架/framework | prompt-optimization | framework-runtime | 48 | unknown |
-| 99 | [diegosouzapw/awesome-omni-skills](https://github.com/diegosouzapw/awesome-omni-skills) | 工具/tool | skill | tool-module | 42 | 2026-05 |
-| 100 | [dmgrok/agent_skills_directory](https://github.com/dmgrok/agent_skills_directory) | 教程/tutorial | skill | resource-index | 16 | 2026-05 |
-| 101 | [dongxiangjue/awesome-llm-self-improvement](https://github.com/dongxiangjue/awesome-llm-self-improvement) | 工具/tool | evolution | resource-index | 106 | 2026-05 |
-| 102 | [doobidoo/mcp-memory-service](https://github.com/doobidoo/mcp-memory-service) | 工具/tool | memory | tool-module | 1900 | 2026-05 |
-| 103 | [DSAIL-Memory/EvoMemBench](https://github.com/DSAIL-Memory/EvoMemBench) | 评测/evaluation | memory | benchmark-eval | 0 | 2026-05 |
-| 104 | [dsifry/metaswarm](https://github.com/dsifry/metaswarm) | 框架/framework | framework | framework-runtime | 272 | 2026-05 |
-| 105 | [ecnu-icalk/autoskill](https://github.com/ecnu-icalk/autoskill) | 工具/tool | evolution | tool-module | 424 | 2026-05 |
-| 106 | [ecnu-icalk/ell-stulife](https://github.com/ecnu-icalk/ell-stulife) | 应用/application | memory | tool-module | 74 | 2026-05 |
-| 107 | [egmaminta/gepa-lite](https://github.com/egmaminta/gepa-lite) | 工具/tool | prompt-optimization | tool-module | 55 | unknown |
-| 108 | [eigent-ai/agent-skills](https://github.com/eigent-ai/agent-skills) | 工具/tool | skill | tool-module | 10 | 2026-05 |
-| 109 | [elastic/agent-skills](https://github.com/elastic/agent-skills) | 工具/tool | skill | tool-module | 485 | 2026-05 |
-| 110 | [eliasecchig/gemini-cli-git](https://github.com/eliasecchig/gemini-cli-git) | 框架/framework | memory | tool-module | 56 | 2026-05 |
-| 111 | [emartin59/text-game-llm-improver](https://github.com/emartin59/text-game-llm-improver) | 框架/framework | framework | framework-runtime | 3 | unknown |
-| 112 | [emson/elfmem](https://github.com/emson/elfmem) | 框架/framework | memory | benchmark-eval | 53 | 2026-05 |
-| 113 | [enajx/es](https://github.com/enajx/es) | 评测/evaluation | evolution | benchmark-eval | 7 | unknown |
-| 114 | [euphoria16/ui-genie](https://github.com/euphoria16/ui-genie) | 论文代码/paper-code | evolution | research-artifact | 57 | 2026-05 |
-| 115 | [evalops/dspy-0to1-guide](https://github.com/evalops/dspy-0to1-guide) | 教程/tutorial | prompt-optimization | resource-index | 215 | unknown |
-| 116 | [evalstate/fast-agent](https://github.com/evalstate/fast-agent) | 框架/framework | framework | framework-runtime | 3800 | 2026-05 |
-| 117 | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 框架/framework | memory | framework-runtime | 5600 | 2026-05 |
-| 118 | [evermind-ai/everos?tab=readme-ov-file](https://github.com/evermind-ai/everos?tab=readme-ov-file) | 评测/evaluation | evaluation | benchmark-eval | 5 | 2025-02 |
-| 119 | [evoagentx/awesome-self-evolving-agents](https://github.com/evoagentx/awesome-self-evolving-agents) | 工具/tool | evolution | resource-index | 2 | 2026-05 |
-| 120 | [evoagentx/evoagentx](https://github.com/evoagentx/evoagentx) | 框架/framework | evolution | application-demo | 3 | 2026-05 |
-| 121 | [evomap/awesome-agent-evolution](https://github.com/evomap/awesome-agent-evolution) | 工具/tool | evolution | resource-index | 123 | 2026-05 |
-| 122 | [evomap/evolver](https://github.com/evomap/evolver) | 框架/framework | evolution | tool-module | 7 | 2026-02 |
-| 123 | [evotai/evot](https://github.com/evotai/evot) | 框架/framework | evolution | tool-module | 54 | 2026-05 |
-| 124 | [exoskeletonzj/mars](https://github.com/exoskeletonzj/mars) | 框架/framework | prompt-optimization | tool-module | 18 | unknown |
-| 125 | [facebookresearch/drzero](https://github.com/facebookresearch/drzero) | 应用/application | research-agent | research-artifact | 515 | 2026-05 |
-| 126 | [facebookresearch/hyperagents](https://github.com/facebookresearch/hyperagents) | 应用/application | memory | research-artifact | 2 | 2026-05 |
-| 127 | [fareedkhan-dev/autonomous-agentic-rag](https://github.com/fareedkhan-dev/autonomous-agentic-rag) | 应用/application | memory | tool-module | 139 | unknown |
-| 128 | [farmage/opencode-skills](https://github.com/farmage/opencode-skills) | 工具/tool | skill | tool-module | 28 | 2026-05 |
-| 129 | [faveos8758/reflexion-agent-ts](https://github.com/faveos8758/reflexion-agent-ts) | 评测/evaluation | evaluation | framework-runtime | 20 | unknown |
-| 130 | [feesuu/cluerag](https://github.com/feesuu/cluerag) | 评测/evaluation | memory | benchmark-eval | 26 | unknown |
-| 131 | [feiliu36/eoh](https://github.com/feiliu36/eoh) | 应用/application | evolution | application-demo | 319 | unknown |
-| 132 | [feiliu36/llm4opt](https://github.com/feiliu36/llm4opt) | 应用/application | research-agent | application-demo | 367 | unknown |
-| 133 | [flowersteam/teachmyagent](https://github.com/flowersteam/teachmyagent) | 框架/framework | evaluation | framework-runtime | 77 | unknown |
-| 134 | [FreedomIntelligence/OpenClaw-Medical-Skills](https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills) | 教程/tutorial | skill | resource-index | 2500 | 2026-05 |
-| 135 | [fusionbrainlab/gigaevo-core](https://github.com/fusionbrainlab/gigaevo-core) | 工具/tool | evolution | tool-module | 116 | unknown |
-| 136 | [galaxy-brain-ai/mcog-core](https://github.com/galaxy-brain-ai/mcog-core) | 应用/application | research-agent | application-demo | 19 | unknown |
-| 137 | [galyarderlabs/galyarder-framework](https://github.com/galyarderlabs/galyarder-framework) | 框架/framework | skill | framework-runtime | 11 | 2026-05 |
-| 138 | [garrus800-stack/genesis-agent](https://github.com/garrus800-stack/genesis-agent) | 评测/evaluation | evaluation | benchmark-eval | 24 | unknown |
-| 139 | [GeniusHTX/SWE-Skills-Bench](https://github.com/GeniusHTX/SWE-Skills-Bench) | 评测/evaluation | evaluation | benchmark-eval | 42 | 2026-05 |
-| 140 | [gensi-thuair/flex](https://github.com/gensi-thuair/flex) | 论文代码/paper-code | evaluation | benchmark-eval | 78 | 2026-05 |
-| 141 | [Gentleman-Programming/Gentleman-Skills](https://github.com/Gentleman-Programming/Gentleman-Skills) | 教程/tutorial | skill | resource-index | 522 | 2026-05 |
-| 142 | [george-salafatinos/tictactoe-self-play](https://github.com/george-salafatinos/tictactoe-self-play) | 工具/tool | coding-agent | tool-module | 0 | unknown |
-| 143 | [gepa-ai/gepa](https://github.com/gepa-ai/gepa) | 工具/tool | prompt-optimization | tool-module | 4 | unknown |
-| 144 | [gepa-ai/optimize-anything-artifact](https://github.com/gepa-ai/optimize-anything-artifact) | 评测/evaluation | prompt-optimization | benchmark-eval | 0 | unknown |
-| 145 | [getzep/graphiti](https://github.com/getzep/graphiti) | 框架/framework | memory | memory-substrate | 26500 | 2026-05 |
-| 146 | [ghy0501/awesome-continual-learning-in-generative-models](https://github.com/ghy0501/awesome-continual-learning-in-generative-models) | 教程/tutorial | education-list | resource-index | 151 | unknown |
-| 147 | [Gitmaxd/deepagents-cli-codex-skill](https://github.com/Gitmaxd/deepagents-cli-codex-skill) | 教程/tutorial | skill | resource-index | 1 | 2026-05 |
-| 148 | [graph-rag/graphrag](https://github.com/graph-rag/graphrag) | 工具/tool | memory | tool-module | 574 | unknown |
-| 149 | [greyhaven-ai/autocontext](https://github.com/greyhaven-ai/autocontext) | 框架/framework | memory | benchmark-eval | 1 | 2026-04 |
-| 150 | [guixiang123124/openclaw-harness](https://github.com/guixiang123124/openclaw-harness) | 框架/framework | skill | framework-runtime | 3 | 2026-05 |
-| 151 | [gumbel-ai/agent-debate](https://github.com/gumbel-ai/agent-debate) | 框架/framework | framework | framework-runtime | 12 | 2026-03 |
-| 152 | [gustolychees/contribai](https://github.com/gustolychees/contribai) | 评测/evaluation | evaluation | benchmark-eval | 0 | unknown |
-| 153 | [hankbesser/recursive-agents](https://github.com/hankbesser/recursive-agents) | 框架/framework | evolution | framework-runtime | 39 | unknown |
-| 154 | [hao-cyber/skill-evolution](https://github.com/hao-cyber/skill-evolution) | 框架/framework | evolution | framework-runtime | 145 | 2026-05 |
-| 155 | [haotang1995/worldcoder](https://github.com/haotang1995/worldcoder) | 工具/tool | coding-agent | tool-module | 11 | unknown |
-| 156 | [haoxufd/openrlhf](https://github.com/haoxufd/openrlhf) | 框架/framework | framework | framework-runtime | 0 | unknown |
-| 157 | [harness/harness-skills](https://github.com/harness/harness-skills) | 教程/tutorial | skill | tool-module | 20 | 2026-05 |
-| 158 | [hashgraph-online/registry-broker-skills](https://github.com/hashgraph-online/registry-broker-skills) | 工具/tool | skill | tool-module | 345 | 2026-05 |
-| 159 | [hebbs-ai/hebbs-memory-engine](https://github.com/hebbs-ai/hebbs-memory-engine) | 框架/framework | memory | memory-substrate | 28 | 2026-05 |
-| 160 | [hkuds/ai-researcher](https://github.com/hkuds/ai-researcher) | 评测/evaluation | research-agent | benchmark-eval | 5 | unknown |
-| 161 | [HKUDS/OpenHarness](https://github.com/HKUDS/OpenHarness) | 框架/framework | framework | framework-runtime | 13000 | 2026-05 |
-| 162 | [HKUDS/OpenSpace](https://github.com/HKUDS/OpenSpace) | 框架/framework | evolution | framework-runtime | 6300 | 2026-05 |
-| 163 | [hkust-knowcomp/awesome-llm-scientific-discovery](https://github.com/hkust-knowcomp/awesome-llm-scientific-discovery) | 教程/tutorial | research-agent | resource-index | 344 | unknown |
-| 164 | [howells/arc](https://github.com/howells/arc) | 框架/framework | framework | framework-runtime | 22 | 2026-05 |
-| 165 | [huggingface/agents-course](https://github.com/huggingface/agents-course) | 教程/tutorial | education-list | resource-index | 28 | unknown |
-| 166 | [huggingface/skills](https://github.com/huggingface/skills) | 教程/tutorial | skill | resource-index | 10600 | 2026-05 |
-| 167 | [huggingface/smolagents](https://github.com/huggingface/smolagents) | 评测/evaluation | evaluation | benchmark-eval | 27 | unknown |
-| 168 | [human-agent-society/coral](https://github.com/Human-Agent-Society/CORAL) | 框架/framework | evolution | framework-runtime | 667 | 2026-05 |
-| 169 | [HUST-AI-HYZ/MemoryAgentBench](https://github.com/HUST-AI-HYZ/MemoryAgentBench) | 评测/evaluation | memory | benchmark-eval | 341 | 2026-05 |
-| 170 | [huytieu/COG-second-brain](https://github.com/huytieu/COG-second-brain) | 应用/application | memory | application-demo | 486 | 2026-05 |
-| 171 | [hwfengcs/dm-code-agent](https://github.com/hwfengcs/dm-code-agent) | 评测/evaluation | evaluation | benchmark-eval | 135 | 2026-05 |
-| 172 | [ibm/awesome-agentic-workflow-optimization](https://github.com/ibm/awesome-agentic-workflow-optimization) | 工具/tool | evolution | resource-index | 51 | unknown |
-| 173 | [iii-experimental/agentos](https://github.com/iii-experimental/agentos) | 框架/framework | evolution | framework-runtime | 145 | 2026-05 |
-| 174 | [ilearn-lab/evoharness](https://github.com/ilearn-lab/evoharness) | 框架/framework | evaluation | benchmark-eval | 52 | 2026-05 |
-| 175 | [ilsilfverskiold/awesome-llm-resources-list](https://github.com/ilsilfverskiold/awesome-llm-resources-list) | 教程/tutorial | education-list | resource-index | 523 | unknown |
-| 176 | [imgeorgiev/pwm](https://github.com/imgeorgiev/pwm) | 评测/evaluation | evaluation | benchmark-eval | 68 | unknown |
-| 177 | [immanuelxiv/ppo-self-play](https://github.com/immanuelxiv/ppo-self-play) | 应用/application | evolution | application-demo | 20 | unknown |
-| 178 | [incidentfox/self-learning-ai-agent](https://github.com/incidentfox/self-learning-ai-agent) | 工具/tool | memory | tool-module | 1 | unknown |
-| 179 | [inclusionai/agenticlearning](https://github.com/inclusionai/agenticlearning) | 工具/tool | memory | tool-module | 106 | 2024-Q4 |
-| 180 | [inclusionai/aworld](https://github.com/inclusionai/aworld) | 评测/evaluation | evaluation | benchmark-eval | 1 | unknown |
-| 181 | [internlm/polar](https://github.com/internlm/polar) | 评测/evaluation | evaluation | benchmark-eval | 163 | unknown |
-| 182 | [internscience/internagent](https://github.com/internscience/internagent) | 框架/framework | research-agent | framework-runtime | 1 | unknown |
-| 183 | [isenglab/awesomellm4apr](https://github.com/isenglab/awesomellm4apr) | 教程/tutorial | education-list | resource-index | 240 | unknown |
-| 184 | [jakenuts/agent-skills](https://github.com/jakenuts/agent-skills) | 工具/tool | skill | tool-module | 0 | 2026-05 |
-| 185 | [jarvis-xs/se-agent](https://github.com/jarvis-xs/se-agent) | 评测/evaluation | evaluation | framework-runtime | 274 | 2026-05 |
-| 186 | [jayzeng/agentmemory](https://github.com/jayzeng/agentmemory) | 工具/tool | memory | tool-module | 5 | 2026-05 |
-| 187 | [jbrahy/meta-agent-teams](https://github.com/jbrahy/meta-agent-teams) | 框架/framework | evolution | framework-runtime | 2 | 2026-05 |
-| 188 | [jcartu/rasputin-memory](https://github.com/jcartu/rasputin-memory) | 工具/tool | memory | memory-substrate | 33 | 2026-05 |
-| 189 | [jdrhyne/agent-skills](https://github.com/jdrhyne/agent-skills) | 教程/tutorial | skill | resource-index | 230 | 2026-05 |
-| 190 | [jennyzzt/awesome-open-ended](https://github.com/jennyzzt/awesome-open-ended) | 教程/tutorial | education-list | resource-index | 438 | unknown |
-| 191 | [jennyzzt/dgm](https://github.com/jennyzzt/dgm) | 应用/application | evaluation | benchmark-eval | 2 | 2026-05 |
-| 192 | [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills) | 教程/tutorial | skill | resource-index | 339 | 2026-05 |
-| 193 | [JordanMcCann/agentmemory](https://github.com/JordanMcCann/agentmemory) | 评测/evaluation | memory | benchmark-eval | 23 | 2026-05 |
-| 194 | [jscraik/Agent-Skills](https://github.com/jscraik/Agent-Skills) | 工具/tool | skill | tool-module | 4 | 2026-05 |
-| 195 | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | 教程/tutorial | skill | resource-index | 25500 | 2026-05 |
-| 196 | [kadubon/audit-closed-ai-scientist](https://github.com/kadubon/audit-closed-ai-scientist) | 评测/evaluation | research-agent | benchmark-eval | 0 | 2026-03 |
-| 197 | [kargarisaac/reflexion](https://github.com/kargarisaac/reflexion) | 工具/tool | prompt-optimization | tool-module | 7 | unknown |
-| 198 | [kayba-ai/agentic-context-engine](https://github.com/kayba-ai/agentic-context-engine) | 框架/framework | evolution | agent-evolution-infra | 2200 | 2026-05 |
-| 199 | [kayba-ai/recursive-improve](https://github.com/kayba-ai/recursive-improve) | 应用/application | evolution | benchmark-eval | 194 | 2026-05 |
-| 200 | [keskival/recursive-self-improvement-suite](https://github.com/keskival/recursive-self-improvement-suite) | 应用/application | evolution | tool-module | 46 | unknown |
-| 201 | [khykd/reflector](https://github.com/khykd/reflector) | 工具/tool | prompt-optimization | tool-module | 4 | unknown |
-| 202 | [kitfunso/hippo-memory](https://github.com/kitfunso/hippo-memory) | 工具/tool | memory | benchmark-eval | 675 | 2026-05 |
-| 203 | [kks0488/vibe-codex](https://github.com/kks0488/vibe-codex) | 工具/tool | skill | tool-module | 10 | 2026-05 |
-| 204 | [knightnemo/awesome-world-models](https://github.com/knightnemo/awesome-world-models) | 教程/tutorial | education-list | resource-index | 2 | unknown |
-| 205 | [knowledgexlab/muse](https://github.com/knowledgexlab/muse) | 应用/application | evaluation | benchmark-eval | 88 | 2026-05 |
-| 206 | [kodigitaccount/2026-roadmap-for-advance-ml-ai-generative-ai-agentic-ai](https://github.com/kodigitaccount/2026-roadmap-for-advance-ml-ai-generative-ai-agentic-ai) | 教程/tutorial | education-list | resource-index | 1 | 2025-11 |
-| 207 | [krzysztofdudek/researcherskill](https://github.com/krzysztofdudek/researcherskill) | 论文代码/paper-code | research-agent | research-artifact | 223 | 2026-05 |
-| 208 | [labicon/curricullm](https://github.com/labicon/curricullm) | 评测/evaluation | evaluation | benchmark-eval | 27 | unknown |
-| 209 | [lamm-mit/sciagentsdiscovery](https://github.com/lamm-mit/sciagentsdiscovery) | 应用/application | research-agent | application-demo | 610 | unknown |
-| 210 | [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | 框架/framework | framework | framework-runtime | 137 | 2026-05 |
-| 211 | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | 框架/framework | framework | framework-runtime | 32 | 2026-05 |
-| 212 | [langchain-ai/langmem](https://github.com/langchain-ai/langmem) | 框架/framework | memory | memory-substrate | 1500 | 2026-05 |
-| 213 | [langchain-ai/langsmith-sdk](https://github.com/langchain-ai/langsmith-sdk) | 框架/framework | framework | framework-runtime | 894 | 2026-05 |
-| 214 | [langchain-ai/open-swe](https://github.com/langchain-ai/open-swe) | 评测/evaluation | coding-agent | benchmark-eval | 9 | unknown |
-| 215 | [large-model-rl-lib/openrlhf](https://github.com/large-model-rl-lib/openrlhf) | 框架/framework | framework | framework-runtime | 0 | unknown |
-| 216 | [lastmile-ai/mcp-agent](https://github.com/lastmile-ai/mcp-agent) | 框架/framework | memory | framework-runtime | 8 | unknown |
-| 217 | [lean-dojo/leanagent](https://github.com/lean-dojo/leanagent) | 框架/framework | evaluation | framework-runtime | 68 | unknown |
-| 218 | [legionio/lex-metacognition](https://github.com/legionio/lex-metacognition) | 工具/tool | memory | tool-module | 0 | unknown |
-| 219 | [leofan90/awesome-world-models](https://github.com/leofan90/awesome-world-models) | 教程/tutorial | education-list | resource-index | 1 | unknown |
-| 220 | [letta-ai/agentic-learning-sdk](https://github.com/letta-ai/agentic-learning-sdk) | 框架/framework | framework | framework-runtime | 45 | unknown |
-| 221 | [letta-ai/letta](https://github.com/letta-ai/letta) | 框架/framework | memory | framework-runtime | 22 | 2026-05 |
-| 222 | [lfleon9b/sakana-ai-scientist-v2](https://github.com/lfleon9b/sakana-ai-scientist-v2) | 应用/application | research-agent | application-demo | 1 | 2024-Q2 |
-| 223 | [lightchen233/awesome-ai4research](https://github.com/lightchen233/awesome-ai4research) | 教程/tutorial | education-list | resource-index | 230 | 2026-05 |
-| 224 | [linear95/spag](https://github.com/linear95/spag) | 评测/evaluation | evaluation | benchmark-eval | 144 | 2026-05 |
-| 225 | [lingxi-agent/lingxi](https://github.com/lingxi-agent/lingxi) | 教程/tutorial | framework | resource-index | 243 | 2026-05 |
-| 226 | [llmprogram/textgrad](https://github.com/llmprogram/textgrad) | 评测/evaluation | coding-agent | benchmark-eval | 0 | 2026-05 |
-| 227 | [lmd0311/awesome-world-model](https://github.com/lmd0311/awesome-world-model) | 教程/tutorial | education-list | resource-index | 2 | 2026-05 |
-| 228 | [logikon-ai/awesome-deliberative-prompting](https://github.com/logikon-ai/awesome-deliberative-prompting) | 教程/tutorial | prompt-optimization | resource-index | 126 | early |
-| 229 | [longman-max/selfthinker](https://github.com/longman-max/selfthinker) | 工具/tool | coding-agent | tool-module | 0 | 2026-05 |
-| 230 | [longyunfeigu/learn-hermes-agent](https://github.com/longyunfeigu/learn-hermes-agent) | 框架/framework | memory | resource-index | 113 | 2026-05 |
-| 231 | [lsdefine/genericagent](https://github.com/lsdefine/genericagent) | 框架/framework | evolution | tool-module | 11 | 2026-05 |
-| 232 | [ltzheng/curriculummarl](https://github.com/ltzheng/curriculummarl) | 论文代码/paper-code | research-agent | research-artifact | 13 | 2026-05 |
-| 233 | [luh-ai-devnerds/llm-guided-curriculum-rl](https://github.com/luh-ai-devnerds/llm-guided-curriculum-rl) | 教程/tutorial | research-agent | resource-index | 1 | 2026-05 |
-| 234 | [luo-junyu/awesome-agent-papers](https://github.com/luo-junyu/awesome-agent-papers) | 教程/tutorial | education-list | resource-index | 2 | 2026-05 |
-| 235 | [lyl1015/jarvisevo](https://github.com/lyl1015/jarvisevo) | 评测/evaluation | evaluation | benchmark-eval | 401 | 2026-05 |
-| 236 | [machuangtao/llm-kg4qa](https://github.com/machuangtao/llm-kg4qa) | 论文代码/paper-code | coding-agent | research-artifact | 157 | 2026-05 |
-| 237 | [madaan/self-refine](https://github.com/madaan/self-refine) | 工具/tool | prompt-optimization | tool-module | 805 | 2026-05 |
-| 238 | [maitrix-org/promptagent](https://github.com/maitrix-org/promptagent) | 论文代码/paper-code | prompt-optimization | research-artifact | 353 | 2024-Q2 |
-| 239 | [managedcode/dotnet-skills](https://github.com/managedcode/dotnet-skills) | 工具/tool | skill | tool-module | 403 | 2026-05 |
-| 240 | [matebenyovszky/healing-agent](https://github.com/matebenyovszky/healing-agent) | 评测/evaluation | evaluation | benchmark-eval | 23 | 2024-Q1 |
-| 241 | [matrixorigin/Memoria](https://github.com/matrixorigin/Memoria) | 工具/tool | memory | tool-module | 271 | 2026-05 |
-| 242 | [maxnorm8650/medagentsim](https://github.com/maxnorm8650/medagentsim) | 评测/evaluation | evolution | research-artifact | 163 | 2026-05 |
-| 243 | [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks) | 教程/tutorial | framework | resource-index | 52 | unknown |
-| 244 | [mbchang/meta-prompt](https://github.com/mbchang/meta-prompt) | 论文代码/paper-code | prompt-optimization | tool-module | 65 | 2026-05 |
-| 245 | [mbzuai-oryx/awesome-llm-post-training](https://github.com/mbzuai-oryx/awesome-llm-post-training) | 教程/tutorial | education-list | resource-index | 2 | 2026-05 |
-| 246 | [mdalamin5/end-to-end-agentic-ai-automation-lab](https://github.com/mdalamin5/end-to-end-agentic-ai-automation-lab) | 框架/framework | workflow-automation | framework-runtime | 72 | 2026-05 |
-| 247 | [meituan/EvoCUA](https://github.com/meituan/EvoCUA) | 论文代码/paper-code | evolution | research-artifact | 317 | 2026-05 |
-| 248 | [mem0ai/mem0](https://github.com/mem0ai/mem0) | 工具/tool | memory | tool-module | 56500 | 2026-05 |
-| 249 | [mem0ai/memory-benchmarks](https://github.com/mem0ai/memory-benchmarks) | 评测/evaluation | memory | benchmark-eval | 33 | 2026-05 |
-| 250 | [Memento-Teams/Memento-Skills](https://github.com/Memento-Teams/Memento-Skills) | 框架/framework | evolution | agent-evolution-infra | 1400 | 2026-05 |
-| 251 | [memodb-io/acontext](https://github.com/memodb-io/acontext) | 工具/tool | memory | tool-module | 3 | 2026-05 |
-| 252 | [memodb-io/memobase](https://github.com/memodb-io/memobase) | 框架/framework | memory | memory-substrate | 2700 | 2026-05 |
-| 253 | [MemoriLabs/Memori](https://github.com/memorilabs/memori) | 工具/tool | memory | tool-module | 14900 | 2026-05 |
-| 254 | [memovai/memov](https://github.com/memovai/memov) | 框架/framework | memory | tool-module | 190 | 2026-05 |
-| 255 | [MemPalace/mempalace](https://github.com/MemPalace/mempalace) | 工具/tool | memory | memory-substrate | 52800 | 2026-05 |
-| 256 | [MemTensor/HaluMem](https://github.com/MemTensor/HaluMem) | 评测/evaluation | memory | benchmark-eval | 138 | 2025-11 |
-| 257 | [memtensor/memos](https://github.com/memtensor/memos) | 工具/tool | memory | memory-runtime | 9400 | 2026-05 |
-| 258 | [memtensor/memrl](https://github.com/memtensor/memrl) | 论文代码/paper-code | evolution | research-artifact | 117 | 2026-05 |
-| 259 | [memvid/memvid](https://github.com/memvid/memvid) | 工具/tool | memory | memory-substrate | 12400 | 2026-05 |
-| 260 | [metauto-ai/gptswarm](https://github.com/metauto-ai/gptswarm) | 应用/application | evolution | research-artifact | 998 | 2026-05 |
-| 261 | [mettamazza/ernosagent](https://github.com/mettamazza/ernosagent) | 框架/framework | memory | tool-module | 10 | unknown |
-| 262 | [mfolsom/rlvr-world](https://github.com/mfolsom/rlvr-world) | 评测/evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 263 | [microsoft/skills](https://github.com/microsoft/skills) | 教程/tutorial | skill | resource-index | 2400 | 2026-05 |
-| 264 | [microsoft/STATE-Bench](https://github.com/microsoft/STATE-Bench) | 评测/evaluation | memory | benchmark-eval | 25 | 2026-05 |
-| 265 | [microsoft/WindowsAgentArena](https://github.com/microsoft/WindowsAgentArena) | 评测/evaluation | evaluation | benchmark-eval | 861 | 2026-05 |
-| 266 | [MicrosoftDocs/Agent-Skills](https://github.com/MicrosoftDocs/Agent-Skills) | 教程/tutorial | skill | resource-index | 557 | 2026-05 |
-| 267 | [mitchellgordon95/dspy](https://github.com/mitchellgordon95/dspy) | 框架/framework | prompt-optimization | framework-runtime | 0 | 2026-05 |
-| 268 | [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | 框架/framework | memory | framework-runtime | 86 | 2026-05 |
-| 269 | [modelscope/agentevolver](https://github.com/modelscope/agentevolver) | 应用/application | evolution | application-demo | 1 | 2026-05 |
-| 270 | [modelscope/agentjet](https://github.com/modelscope/agentjet) | 评测/evaluation | evaluation | framework-runtime | 208 | 2026-05 |
-| 271 | [MoizIbnYousaf/Ai-Agent-Skills](https://github.com/MoizIbnYousaf/Ai-Agent-Skills) | 工具/tool | skill | tool-module | 1100 | 2026-05 |
-| 272 | [mwasifanwar/meta-cognitive-learning-system](https://github.com/mwasifanwar/meta-cognitive-learning-system) | 工具/tool | prompt-optimization | tool-module | 2 | 2026-05 |
-| 273 | [mycelium-io/mycelium](https://github.com/mycelium-io/mycelium) | 工具/tool | memory | tool-module | 95 | 2026-05 |
-| 274 | [n4m3z/forge-council](https://github.com/n4m3z/forge-council) | 框架/framework | evaluation | framework-runtime | 9 | 2026-05 |
-| 275 | [n8n-io/n8n](https://github.com/n8n-io/n8n) | 框架/framework | workflow-automation | framework-runtime | 189 | 2026-05 |
-| 276 | [naivoder/mctsr](https://github.com/naivoder/mctsr) | 应用/application | prompt-optimization | tool-module | 22 | unknown |
-| 277 | [neo4j-labs/agent-memory](https://github.com/neo4j-labs/agent-memory) | 框架/framework | memory | framework-runtime | 262 | 2026-05 |
-| 278 | [neosigmaai/auto-harness](https://github.com/neosigmaai/auto-harness) | 框架/framework | evaluation | benchmark-eval | 507 | 2026-05 |
-| 279 | [NevaMind-AI/memU](https://github.com/NevaMind-AI/memU) | 工具/tool | memory | tool-module | 13700 | 2026-05 |
-| 280 | [ngoodman/metaprompt](https://github.com/ngoodman/metaprompt) | 评测/evaluation | prompt-optimization | benchmark-eval | 88 | 2026-05 |
-| 281 | [nickatomlin/lm-selfplay](https://github.com/nickatomlin/lm-selfplay) | 论文代码/paper-code | prompt-optimization | research-artifact | 9 | 2026-05 |
-| 282 | [nikivanstein/llamea](https://github.com/nikivanstein/llamea) | 评测/evaluation | evaluation | benchmark-eval | 105 | 2026-05 |
-| 283 | [noahshinn/reflexion](https://github.com/noahshinn/reflexion) | 论文代码/paper-code | memory | benchmark-eval | 3 | 2026-05 |
-| 284 | [noahshinn/reflexion-draft](https://github.com/noahshinn/reflexion-draft) | 框架/framework | memory | benchmark-eval | 388 | 2026-05 |
-| 285 | [noahshinn024/reflexion-human-eval](https://github.com/noahshinn024/reflexion-human-eval) | 评测/evaluation | memory | benchmark-eval | 3 | 2026-05 |
-| 286 | [nousresearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 框架/framework | framework | framework-runtime | 0 | 2026-05 |
-| 287 | [nousresearch/hermes-agent-self-evolution](https://github.com/nousresearch/hermes-agent-self-evolution) | 应用/application | evolution | research-artifact | 3 | 2026-05 |
-| 288 | [obra/superpowers](https://github.com/obra/superpowers) | 工具/tool | memory | tool-module | 202000 | 2026-05 |
-| 289 | [octobrist/cope](https://github.com/octobrist/cope) | 论文代码/paper-code | evolution | framework-runtime | 11 | unknown |
-| 290 | [oiioai/molt](https://github.com/OiiOAI/MOLT) | 框架/framework | evolution | framework-runtime | 0 | 2026-05 |
-| 291 | [omdivyatej/self-learning-agents](https://github.com/omdivyatej/self-learning-agents) | 框架/framework | framework | framework-runtime | 63 | 2025-05 |
-| 292 | [onevcat/argue](https://github.com/onevcat/argue) | 框架/framework | framework | framework-runtime | 238 | 2026-05 |
-| 293 | [OneWave-AI/claude-skills](https://github.com/OneWave-AI/claude-skills) | 教程/tutorial | skill | resource-index | 154 | 2026-05 |
-| 294 | [openai/skills](https://github.com/openai/skills) | 教程/tutorial | skill | resource-index | 20100 | 2026-05 |
-| 295 | [openautocoder/live-swe-agent](https://github.com/openautocoder/live-swe-agent) | 框架/framework | coding-agent | framework-runtime | 392 | 2025-11 |
-| 296 | [OpenBMB/EdgeClaw](https://github.com/OpenBMB/EdgeClaw) | 框架/framework | framework | framework-runtime | 1200 | 2026-05 |
-| 297 | [openclaw/clawbench](https://github.com/openclaw/clawbench) | 评测/evaluation | evaluation | benchmark-eval | 97 | 2026-04 |
-| 298 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 框架/framework | framework | framework-runtime | 374000 | 2026-05 |
-| 299 | [opendatabox/workspace-bench](https://github.com/opendatabox/workspace-bench) | 评测/evaluation | evaluation | benchmark-eval | 14 | 2025-05 |
-| 300 | [opendilab/awesome-exploration-rl](https://github.com/opendilab/awesome-exploration-rl) | 教程/tutorial | education-list | resource-index | 689 | 2026-05 |
-| 301 | [opendilab/awesome-model-based-rl](https://github.com/opendilab/awesome-model-based-rl) | 教程/tutorial | education-list | resource-index | 1 | 2026-05 |
-| 302 | [opendilab/awesome-rlhf](https://github.com/opendilab/awesome-rlhf) | 教程/tutorial | education-list | resource-index | 4 | 2026-05 |
-| 303 | [OpenHands/benchmarks](https://github.com/OpenHands/benchmarks) | 评测/evaluation | evaluation | benchmark-eval | 85 | 2026-05 |
-| 304 | [openmemind/memind](https://github.com/openmemind/memind) | 框架/framework | memory | benchmark-eval | 787 | 2026-05 |
-| 305 | [openning07/awesome-curriculum-learning](https://github.com/openning07/awesome-curriculum-learning) | 教程/tutorial | education-list | resource-index | 248 | 2026-05 |
-| 306 | [opensite-ai/opensite-skills](https://github.com/opensite-ai/opensite-skills) | 工具/tool | memory | tool-module | 7 | 2026-05 |
-| 307 | [opentracy/opentracy](https://github.com/opentracy/opentracy) | 评测/evaluation | evaluation | benchmark-eval | 101 | 2026-05 |
-| 308 | [os-copilot/os-copilot](https://github.com/os-copilot/os-copilot) | 框架/framework | evaluation | benchmark-eval | 1 | 2024-Q1 |
-| 309 | [osu-nlp-group/skillweaver](https://github.com/osu-nlp-group/skillweaver) | 框架/framework | evolution | framework-runtime | 123 | 2024-Q3 |
-| 310 | [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) | 工具/tool | skill | tool-module | 22000 | 2026-05 |
-| 311 | [oxen-ai/self-rewarding-language-models](https://github.com/oxen-ai/self-rewarding-language-models) | 评测/evaluation | prompt-optimization | benchmark-eval | 134 | 2026-05 |
-| 312 | [paperwave/genenv](https://github.com/paperwave/genenv) | 论文代码/paper-code | research-agent | research-artifact | 0 | 2026-05 |
-| 313 | [pathway/alphaxos](https://github.com/pathway/alphaxos) | 评测/evaluation | evaluation | benchmark-eval | 12 | 2026-05 |
-| 314 | [PaulRBerg/agent-skills](https://github.com/PaulRBerg/agent-skills) | 工具/tool | skill | tool-module | 59 | 2026-05 |
-| 315 | [pgg3/evotoolkit](https://github.com/pgg3/evotoolkit) | 评测/evaluation | evaluation | benchmark-eval | 68 | 2026-03 |
-| 316 | [pgg3/l-autoda](https://github.com/pgg3/l-autoda) | 应用/application | evolution | application-demo | 3 | 2026-05 |
-| 317 | [pinchbench/skill](https://github.com/pinchbench/skill) | 评测/evaluation | evaluation | benchmark-eval | 1200 | 2026-05 |
-| 318 | [pingcap/ossinsight](https://github.com/pingcap/ossinsight) | 工具/tool | research-agent | tool-module | 2 | 2026-05 |
-| 319 | [pingcy/ace-langgraph](https://github.com/pingcy/ace-langgraph) | 框架/framework | framework | framework-runtime | 46 | unknown |
-| 320 | [pjt222/agent-almanac](https://github.com/pjt222/agent-almanac) | 教程/tutorial | skill | resource-index | 17 | 2026-05 |
-| 321 | [plastic-labs/honcho](https://github.com/plastic-labs/honcho) | 框架/framework | memory | framework-runtime | 4200 | 2026-05 |
-| 322 | [polarseeker/openseeker](https://github.com/polarseeker/openseeker) | 评测/evaluation | evaluation | benchmark-eval | 711 | 2026-05 |
-| 323 | [polya20/textgrad](https://github.com/polya20/textgrad) | 评测/evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 324 | [princeton-pli/hal-harness](https://github.com/princeton-pli/hal-harness) | 评测/evaluation | evaluation | benchmark-eval | 289 | 2026-05 |
-| 325 | [privkeyio/evolve-mcp](https://github.com/privkeyio/evolve-mcp) | 框架/framework | evolution | framework-runtime | 11 | unknown |
-| 326 | [psenger/ai-agent-skills](https://github.com/psenger/ai-agent-skills) | 教程/tutorial | skill | resource-index | 3 | 2026-05 |
-| 327 | [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) | 教程/tutorial | education-list | resource-index | 87 | 2026-05 |
-| 328 | [qianlima-lab/awesome-lifelong-llm-agent](https://github.com/qianlima-lab/awesome-lifelong-llm-agent) | 教程/tutorial | education-list | resource-index | 300 | 2026-05 |
-| 329 | [QuantaAlpha/QuantaAlpha](https://github.com/QuantaAlpha/QuantaAlpha) | 论文代码/paper-code | evolution | agent-evolution-infra | 702 | 2026-05 |
-| 330 | [quantstellarlab/ai-scientist-v2](https://github.com/quantstellarlab/ai-scientist-v2) | 应用/application | research-agent | application-demo | 0 | 2024-Q2 |
-| 331 | [quzhiii/thesis-skills](https://github.com/quzhiii/thesis-skills) | 工具/tool | skill | tool-module | 71 | 2026-05 |
-| 332 | [r4stin/kg-research-agent](https://github.com/r4stin/kg-research-agent) | 教程/tutorial | research-agent | resource-index | 3 | 2026-05 |
-| 333 | [raghavc/llm-rlhf-tuning-with-ppo-and-dpo](https://github.com/raghavc/llm-rlhf-tuning-with-ppo-and-dpo) | 论文代码/paper-code | memory | research-artifact | 190 | 2026-05 |
-| 334 | [Randroids-Dojo/skills](https://github.com/Randroids-Dojo/skills) | 教程/tutorial | skill | resource-index | 33 | 2026-05 |
-| 335 | [raphaelchristi/harness-evolver](https://github.com/raphaelchristi/harness-evolver) | 工具/tool | evolution | tool-module | 21 | 2026-05 |
-| 336 | [reflexioai/reflexio](https://github.com/reflexioai/reflexio) | 框架/framework | evaluation | benchmark-eval | 220 | 2026-05 |
-| 337 | [regenrek/codex-1up](https://github.com/regenrek/codex-1up) | 工具/tool | skill | tool-module | 430 | 2026-05 |
-| 338 | [rendro/sediment](https://github.com/rendro/sediment) | 工具/tool | memory | tool-module | 32 | 2026-05 |
-| 339 | [researai/awesome-ai-scientist](https://github.com/researai/awesome-ai-scientist) | 教程/tutorial | research-agent | resource-index | 240 | 2026-05 |
-| 340 | [revfactory/harness](https://github.com/revfactory/harness) | 框架/framework | skill | framework-runtime | 3500 | 2026-05 |
-| 341 | [richchen-maker/openclaw-multi-agent-team](https://github.com/richchen-maker/openclaw-multi-agent-team) | 框架/framework | framework | framework-runtime | 80 | 2026-05 |
-| 342 | [rinadelph/agent-mcp](https://github.com/rinadelph/agent-mcp) | 框架/framework | framework | framework-runtime | 1 | 2026-05 |
-| 343 | [rishab-agrawal/humanoid-curriculum-rl](https://github.com/rishab-agrawal/humanoid-curriculum-rl) | 工具/tool | coding-agent | tool-module | 1 | 2026-05 |
-| 344 | [rlhflow/online-rlhf](https://github.com/rlhflow/online-rlhf) | 评测/evaluation | evaluation | benchmark-eval | 545 | 2026-05 |
-| 345 | [rlhflow/self-rewarding-reasoning-llm](https://github.com/rlhflow/self-rewarding-reasoning-llm) | 评测/evaluation | evaluation | benchmark-eval | 232 | 2026-05 |
-| 346 | [rllm-org/rllm](https://github.com/rllm-org/rllm) | 评测/evaluation | evaluation | benchmark-eval | 5 | 2026-05 |
-| 347 | [rmanluo/gfm-rag](https://github.com/rmanluo/gfm-rag) | 评测/evaluation | memory | benchmark-eval | 259 | 2026-04 |
-| 348 | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | 工具/tool | memory | tool-module | 16000 | 2026-05 |
-| 349 | [ronit26mehta/argus-ai-debate](https://github.com/ronit26mehta/argus-ai-debate) | 框架/framework | framework | framework-runtime | 3 | unknown |
-| 350 | [rtk-ai/icm](https://github.com/rtk-ai/icm) | 工具/tool | memory | tool-module | 371 | 2026-05 |
-| 351 | [rucbm/laser](https://github.com/rucbm/laser) | 评测/evaluation | evaluation | benchmark-eval | 36 | 2026-05 |
-| 352 | [sakanaai/ai-scientist](https://github.com/sakanaai/ai-scientist) | 评测/evaluation | research-agent | benchmark-eval | 13 | 2026-05 |
-| 353 | [sakanaai/ai-scientist-v2](https://github.com/sakanaai/ai-scientist-v2) | 应用/application | research-agent | application-demo | 6 | 2024-Q2 |
-| 354 | [sakanaai/shinkaevolve](https://github.com/sakanaai/shinkaevolve) | 工具/tool | evolution | tool-module | 1 | 2026-05 |
-| 355 | [sakutepov/ai-scientist-v2](https://github.com/sakutepov/ai-scientist-v2) | 应用/application | research-agent | application-demo | 0 | 2024-Q3 |
-| 356 | [salvatorera/ml-news-of-the-week](https://github.com/salvatorera/ml-news-of-the-week) | 教程/tutorial | memory | resource-index | 180 | 2026-05 |
-| 357 | [sasleee/tencentdb-agent-memory](https://github.com/sasleee/tencentdb-agent-memory) | 框架/framework | memory | framework-runtime | 0 | 2026-05 |
-| 358 | [scienceaix/agentskills](https://github.com/scienceaix/agentskills) | 教程/tutorial | education-list | resource-index | 63 | 2025-11 |
-| 359 | [sebastianbrzustowicz/robot-sumo-rl](https://github.com/sebastianbrzustowicz/robot-sumo-rl) | 评测/evaluation | evaluation | benchmark-eval | 18 | 2026-05 |
-| 360 | [seetrex-ai/laimark](https://github.com/seetrex-ai/laimark) | 评测/evaluation | evaluation | benchmark-eval | 4 | 2026-04 |
-| 361 | [sehoon787/my-codex](https://github.com/sehoon787/my-codex) | 框架/framework | skill | framework-runtime | 16 | 2026-05 |
-| 362 | [self-play-language-models/spin-peft](https://github.com/self-play-language-models/spin-peft) | 评测/evaluation | evaluation | benchmark-eval | 4 | 2026-05 |
-| 363 | [sentient-agi/EvoSkill](https://github.com/sentient-agi/EvoSkill) | 框架/framework | evolution | agent-evolution-infra | 798 | 2026-05 |
-| 364 | [sentrux/sentrux](https://github.com/sentrux/sentrux) | 框架/framework | evaluation | benchmark-eval | 2 | 2026-05 |
-| 365 | [senweaver/senagentos](https://github.com/senweaver/senagentos) | 框架/framework | memory | framework-runtime | 10 | unknown |
-| 366 | [ServiceNow/BrowserGym](https://github.com/ServiceNow/BrowserGym) | 评测/evaluation | evaluation | benchmark-eval | 1200 | 2026-05 |
-| 367 | [sethkarten/continual-harness](https://github.com/sethkarten/continual-harness) | 评测/evaluation | evaluation | benchmark-eval | 106 | 2026-05 |
-| 368 | [shadowrootdev/awesome-agent-skills-mcp](https://github.com/shadowrootdev/awesome-agent-skills-mcp) | 教程/tutorial | education-list | resource-index | 23 | 2024-Q4 |
-| 369 | [shaoshuai0605/misevolution](https://github.com/shaoshuai0605/misevolution) | 评测/evaluation | evolution | tool-module | 76 | 2026-05 |
-| 370 | [shehrum/grf-self-play](https://github.com/shehrum/grf-self-play) | 评测/evaluation | research-agent | benchmark-eval | 4 | 2026-05 |
-| 371 | [shichun-liu/agent-memory-paper-list](https://github.com/shichun-liu/agent-memory-paper-list) | 教程/tutorial | memory | resource-index | 2 | 2025-12 |
-| 372 | [shingo257/gitnexus](https://github.com/shingo257/gitnexus) | 框架/framework | evaluation | framework-runtime | 0 | 2026-05 |
-| 373 | [shinpr/mcp-local-rag](https://github.com/shinpr/mcp-local-rag) | 工具/tool | memory | tool-module | 275 | 2026-05 |
-| 374 | [shintaro-sprech/agent-orchestrator-template](https://github.com/shintaro-sprech/agent-orchestrator-template) | 框架/framework | framework | framework-runtime | 120 | 2026-05 |
-| 375 | [shiqichen17/spa](https://github.com/shiqichen17/spa) | 工具/tool | memory | tool-module | 35 | 2026-05 |
-| 376 | [sibyl-research-team/sibyl-research-system](https://github.com/sibyl-research-team/sibyl-research-system) | 工具/tool | research-agent | tool-module | 245 | 2026-05 |
-| 377 | [siddharth-1001/agent-eval-harness](https://github.com/siddharth-1001/agent-eval-harness) | 框架/framework | evaluation | framework-runtime | 20 | 2026-05 |
-| 378 | [Signet-AI/signetai](https://github.com/Signet-AI/signetai) | 工具/tool | memory | memory-substrate | 167 | 2026-05 |
-| 379 | [significant-gravitas/autogpt](https://github.com/significant-gravitas/autogpt) | 框架/framework | framework | framework-runtime | 184 | 2026-05 |
-| 380 | [simota/agent-skills](https://github.com/simota/agent-skills) | 教程/tutorial | skill | resource-index | 39 | 2026-05 |
-| 381 | [SJTU-IPADS/SkVM](https://github.com/SJTU-IPADS/SkVM) | 框架/framework | skill | framework-runtime | 480 | 2026-05 |
-| 382 | [skills-mcp/skills-mcp](https://github.com/skills-mcp/skills-mcp) | 工具/tool | prompt-optimization | tool-module | 24 | 2026-05 |
-| 383 | [smiles724/awesome-llm-rlvr](https://github.com/smiles724/awesome-llm-rlvr) | 教程/tutorial | education-list | resource-index | 107 | unknown |
-| 384 | [snowflake-labs/agent-world-model](https://github.com/snowflake-labs/agent-world-model) | 应用/application | education-list | application-demo | 356 | 2026-05 |
-| 385 | [sola-st/repairagent](https://github.com/sola-st/repairagent) | 工具/tool | memory | tool-module | 95 | 2026-05 |
-| 386 | [spillwavesolutions/agent-brain](https://github.com/spillwavesolutions/agent-brain) | 评测/evaluation | evaluation | benchmark-eval | 101 | 2026-03 |
-| 387 | [spiral-rl/spiral](https://github.com/spiral-rl/spiral) | 框架/framework | framework | framework-runtime | 190 | 2026-05 |
-| 388 | [square-mind/squaremind](https://github.com/square-mind/squaremind) | 框架/framework | framework | framework-runtime | 0 | 2026-05 |
-| 389 | [stanfordnlp/dsp](https://github.com/stanfordnlp/dsp) | 框架/framework | prompt-optimization | framework-runtime | 34 | 2026-05 |
-| 390 | [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) | 框架/framework | prompt-optimization | framework-runtime | 34 | 2026-05 |
-| 391 | [star-bob/swe-agent](https://github.com/star-bob/swe-agent) | 论文代码/paper-code | coding-agent | research-artifact | 0 | 2026-05 |
-| 392 | [stonks-git/intuitive-ai](https://github.com/stonks-git/intuitive-ai) | 工具/tool | memory | tool-module | 2 | 2026-05 |
-| 393 | [studio-intrinsic/turbo-gepa](https://github.com/studio-intrinsic/turbo-gepa) | 评测/evaluation | prompt-optimization | benchmark-eval | 3 | 2026-05 |
-| 394 | [sudokrang/aceforge](https://github.com/sudokrang/aceforge) | 工具/tool | evolution | tool-module | 1 | 2026-05 |
-| 395 | [sundial-org/awesome-openclaw-skills](https://github.com/sundial-org/awesome-openclaw-skills) | 教程/tutorial | skill | resource-index | 602 | 2026-05 |
-| 396 | [sunitj/colloquip](https://github.com/sunitj/colloquip) | 框架/framework | framework | framework-runtime | 1 | 2026-05 |
-| 397 | [sunzey/seagent](https://github.com/sunzey/seagent) | 论文代码/paper-code | evaluation | benchmark-eval | 246 | 2026-05 |
-| 398 | [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | 框架/framework | framework | framework-runtime | 518 | 2026-05 |
-| 399 | [swe-agent/swe-agent](https://github.com/swe-agent/swe-agent) | 论文代码/paper-code | coding-agent | research-artifact | 19 | 2025-05 |
-| 400 | [swe-bench/swe-bench](https://github.com/swe-bench/swe-bench) | 评测/evaluation | evaluation | benchmark-eval | 5 | 2026-05 |
-| 401 | [synaptent/aragora](https://github.com/synaptent/aragora) | 评测/evaluation | memory | benchmark-eval | 7 | 2026-05 |
-| 402 | [taishi-n324/awesome-rl-reasoning](https://github.com/taishi-n324/awesome-rl-reasoning) | 教程/tutorial | education-list | resource-index | 13 | 2025-09 |
-| 403 | [tech-leads-club/agent-skills](https://github.com/tech-leads-club/agent-skills) | 工具/tool | skill | tool-module | 4400 | 2026-05 |
-| 404 | [teleai-uagi/awesome-agent-memory](https://github.com/teleai-uagi/awesome-agent-memory) | 教程/tutorial | memory | resource-index | 421 | 2026-05 |
-| 405 | [tencent/selfevolvingagent](https://github.com/tencent/selfevolvingagent) | 论文代码/paper-code | evolution | application-demo | 100 | 2026-05 |
-| 406 | [terryfyl/openclaw-evolution-framework](https://github.com/TerryFYL/openclaw-evolution-framework) | 框架/framework | evolution | framework-runtime | 4 | 2026-02 |
-| 407 | [tfatykhov/awesome-agent-memory](https://github.com/tfatykhov/awesome-agent-memory) | 教程/tutorial | memory | resource-index | 0 | 2026-05 |
-| 408 | [thClaws/thClaws](https://github.com/thClaws/thClaws) | 框架/framework | framework | framework-runtime | 1000 | 2026-05 |
-| 409 | [TheQtCompanyRnD/agent-skills](https://github.com/TheQtCompanyRnD/agent-skills) | 教程/tutorial | skill | resource-index | 171 | 2026-05 |
-| 410 | [thesdes/textgrad](https://github.com/thesdes/textgrad) | 评测/evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 411 | [thu-nics/mars](https://github.com/thu-nics/mars) | 评测/evaluation | evaluation | benchmark-eval | 48 | 2026-05 |
-| 412 | [thudm/webrl](https://github.com/thudm/webrl) | 应用/application | evolution | benchmark-eval | 524 | 2026-05 |
-| 413 | [thuml/rlvr-world](https://github.com/thuml/rlvr-world) | 评测/evaluation | evaluation | benchmark-eval | 251 | 2026-05 |
-| 414 | [tianyi-stack/madevolve](https://github.com/tianyi-stack/madevolve) | 应用/application | evolution | application-demo | 9 | 2026-05 |
-| 415 | [tiger-ai-lab/openresearcher](https://github.com/tiger-ai-lab/openresearcher) | 评测/evaluation | research-agent | benchmark-eval | 756 | 2026-05 |
-| 416 | [TiMEM-AI/timem](https://github.com/TiMEM-AI/timem) | 工具/tool | memory | tool-module | 134 | 2026-05 |
-| 417 | [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | 应用/application | memory | application-demo | 25100 | 2026-05 |
-| 418 | [tmgthb/autonomous-agents](https://github.com/tmgthb/autonomous-agents) | 教程/tutorial | research-agent | resource-index | 1 | 2026-05 |
-| 419 | [togethercomputer/skills](https://github.com/togethercomputer/skills) | 工具/tool | skill | tool-module | 28 | 2026-05 |
-| 420 | [trillskillz/clawdmarket](https://github.com/trillskillz/clawdmarket) | 应用/application | evolution | application-demo | 2 | 2026-05 |
-| 421 | [trustgraph-ai/trustgraph](https://github.com/trustgraph-ai/trustgraph) | 框架/framework | memory | framework-runtime | 2100 | 2026-05 |
-| 422 | [tsinghua-fib-lab/awesome-ai-scientists](https://github.com/tsinghua-fib-lab/awesome-ai-scientists) | 教程/tutorial | research-agent | resource-index | 35 | 2026-05 |
-| 423 | [tsinghua-fib-lab/world-model](https://github.com/tsinghua-fib-lab/world-model) | 教程/tutorial | education-list | resource-index | 711 | early |
-| 424 | [tsinghuac3i/awesome-memory-for-agents](https://github.com/tsinghuac3i/awesome-memory-for-agents) | 教程/tutorial | memory | resource-index | 506 | 2026-05 |
-| 425 | [tsinghuac3i/awesome-rl-for-lrms](https://github.com/tsinghuac3i/awesome-rl-for-lrms) | 教程/tutorial | education-list | resource-index | 2 | 2025-09 |
-| 426 | [tsukushiai/self-organized-agent](https://github.com/tsukushiai/self-organized-agent) | 框架/framework | framework | framework-runtime | 18 | 2026-05 |
-| 427 | [tylerdotai/meta-harness-evolver](https://github.com/tylerdotai/meta-harness-evolver) | 框架/framework | evaluation | benchmark-eval | 14 | unknown |
-| 428 | [tzussman/openevolve](https://github.com/tzussman/openevolve) | 应用/application | evolution | application-demo | 0 | 2026-05 |
-| 429 | [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | 框架/framework | framework | framework-runtime | 0 | 2026-05 |
-| 430 | [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | 评测/evaluation | memory | benchmark-eval | 43 | 2026-05 |
-| 431 | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | 框架/framework | memory | framework-runtime | 14400 | 2026-05 |
-| 432 | [ventr1c/memma](https://github.com/ventr1c/memma) | 论文代码/paper-code | memory | tool-module | 17 | unknown |
-| 433 | [vercel-labs/ai](https://github.com/vercel-labs/ai) | 框架/framework | framework | framework-runtime | 24 | 2026-05 |
-| 434 | [vercel-labs/skills](https://github.com/vercel-labs/skills) | 工具/tool | skill | tool-module | 19900 | 2026-05 |
-| 435 | [vercel/ai](https://github.com/vercel/ai) | 框架/framework | framework | framework-runtime | 24 | 2026-05 |
-| 436 | [vercel/workflow](https://github.com/vercel/workflow) | 框架/framework | workflow-automation | framework-runtime | 2 | 2026-04 |
-| 437 | [vicsanity623/pyob](https://github.com/vicsanity623/pyob) | 评测/evaluation | evaluation | benchmark-eval | 2 | 2026-05 |
-| 438 | [ViktorAxelsen/MemSkill](https://github.com/ViktorAxelsen/MemSkill) | 论文代码/paper-code | evolution | agent-evolution-infra | 484 | 2026-05 |
-| 439 | [vision-intelligence-and-robots-group/best-incremental-learning](https://github.com/vision-intelligence-and-robots-group/best-incremental-learning) | 工具/tool | coding-agent | tool-module | 607 | unknown |
-| 440 | [vivy-yi/awesome-agent-orchestration](https://github.com/vivy-yi/awesome-agent-orchestration) | 教程/tutorial | framework | resource-index | 10 | 2026-05 |
-| 441 | [volcengine/openviking](https://github.com/volcengine/openviking) | 工具/tool | memory | resource-index | 24 | 2026-05 |
-| 442 | [voltagent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) | 教程/tutorial | skill | resource-index | 22900 | 2026-05 |
-| 443 | [vsonicv/es-fine-tuning-paper](https://github.com/vsonicv/es-fine-tuning-paper) | 论文代码/paper-code | research-agent | research-artifact | 356 | 2025-10 |
-| 444 | [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | 框架/framework | framework | framework-runtime | 987 | 2026-05 |
-| 445 | [werner-duvaud/muzero-general](https://github.com/werner-duvaud/muzero-general) | 评测/evaluation | evaluation | benchmark-eval | 2 | 2026-05 |
-| 446 | [workofart/selfplay-tictactoe](https://github.com/workofart/selfplay-tictactoe) | 评测/evaluation | evaluation | benchmark-eval | 0 | early |
-| 447 | [wuxingyu-ai/llm4ec](https://github.com/wuxingyu-ai/llm4ec) | 教程/tutorial | evolution | resource-index | 139 | 2026-05 |
-| 448 | [wzdnzd/harvester](https://github.com/wzdnzd/harvester) | 框架/framework | framework | framework-runtime | 546 | 2026-05 |
-| 449 | [x1aox1a/word2world](https://github.com/x1aox1a/word2world) | 评测/evaluation | evaluation | benchmark-eval | 62 | 2026-05 |
-| 450 | [xai-liacs/llamea](https://github.com/xai-liacs/llamea) | 评测/evaluation | evaluation | benchmark-eval | 105 | 2026-05 |
-| 451 | [xanther-ai/xce-benchmarks](https://github.com/xanther-ai/xce-benchmarks) | 评测/evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 452 | [xialeiliu/awesome-incremental-learning](https://github.com/xialeiliu/awesome-incremental-learning) | 教程/tutorial | education-list | resource-index | 4 | unknown |
-| 453 | [xiaofangxd/llm/ea](https://github.com/xiaofangxd/llm/ea) | 应用/application | evolution | application-demo | 23 | 2026-05 |
-| 454 | [xinhuagu/aceclaw](https://github.com/xinhuagu/aceclaw) | 框架/framework | evaluation | framework-runtime | 4 | 2026-05 |
-| 455 | [xizaoqu/worldmem](https://github.com/xizaoqu/worldmem) | 评测/evaluation | memory | benchmark-eval | 359 | 2025-11 |
-| 456 | [xlang-ai/OSWorld](https://github.com/xlang-ai/OSWorld) | 评测/evaluation | evaluation | benchmark-eval | 2900 | 2026-05 |
-| 457 | [xmudeeplit/awesome-self-evolving-agents](https://github.com/xmudeeplit/awesome-self-evolving-agents) | 工具/tool | evolution | resource-index | 181 | 2026-05 |
-| 458 | [xuchen-li/llm-arxiv-daily](https://github.com/xuchen-li/llm-arxiv-daily) | 教程/tutorial | evaluation | resource-index | 144 | 2026-05 |
-| 459 | [yang1999code/controllable-agent](https://github.com/yang1999code/controllable-agent) | 框架/framework | evaluation | framework-runtime | 105 | 2026-05 |
-| 460 | [yennning/awesome-code-as-agent-harness-papers](https://github.com/yennning/awesome-code-as-agent-harness-papers) | 教程/tutorial | education-list | resource-index | 123 | unknown |
-| 461 | [yf-he/EvoTest](https://github.com/yf-he/EvoTest) | 论文代码/paper-code | evolution | agent-evolution-infra | 19 | 2026-05 |
-| 462 | [yinbo0927/fate](https://github.com/yinbo0927/fate) | 评测/evaluation | evolution | benchmark-eval | 16 | unknown |
-| 463 | [yingchengyang/reinforcement-learning-papers](https://github.com/yingchengyang/reinforcement-learning-papers) | 教程/tutorial | research-agent | resource-index | 569 | unknown |
-| 464 | [ynulihao/AgentSkillOS](https://github.com/ynulihao/AgentSkillOS) | 工具/tool | skill | skill-orchestration | 415 | 2026-05 |
-| 465 | [yologdev/yoyo-evolve](https://github.com/yologdev/yoyo-evolve) | 应用/application | evolution | tool-module | 1 | 2026-05 |
-| 466 | [yonkoo11/hermes-dojo](https://github.com/yonkoo11/hermes-dojo) | 应用/application | evolution | tool-module | 72 | 2026-05 |
-| 467 | [youngdubbydu/llm-agent-optimization](https://github.com/youngdubbydu/llm-agent-optimization) | 教程/tutorial | education-list | resource-index | 231 | 2026-05 |
-| 468 | [yxf203/awesome-efficient-agents](https://github.com/yxf203/awesome-efficient-agents) | 教程/tutorial | memory | resource-index | 250 | 2026-05 |
-| 469 | [yyyujintang/Awesome-Agent-Memory-Papers](https://github.com/yyyujintang/Awesome-Agent-Memory-Papers) | 教程/tutorial | memory | resource-index | 0 | 2026-05 |
-| 470 | [zaixizhang/stella](https://github.com/zaixizhang/stella) | 应用/application | evaluation | benchmark-eval | 141 | 2026-05 |
-| 471 | [zanwenfu/auto-code-rover](https://github.com/zanwenfu/auto-code-rover) | 评测/evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 472 | [zazencodes/zazencodes-season-3](https://github.com/zazencodes/zazencodes-season-3) | 框架/framework | framework | framework-runtime | 4 | 2026-05 |
-| 473 | [zbinxp/deer-flow](https://github.com/zbinxp/deer-flow) | 评测/evaluation | memory | benchmark-eval | 0 | 2026-02 |
-| 474 | [zed-industries/zed](https://github.com/zed-industries/zed) | 评测/evaluation | evaluation | benchmark-eval | 83 | 2026-05 |
-| 475 | [zesearch/self-improvement-llm](https://github.com/zesearch/self-improvement-llm) | 应用/application | evolution | application-demo | 13 | 2026-05 |
-| 476 | [zhang677/accelopt](https://github.com/zhang677/accelopt) | 论文代码/paper-code | evaluation | benchmark-eval | 43 | unknown |
-| 477 | [zhangyiqun018/agent-for-debate](https://github.com/zhangyiqun018/agent-for-debate) | 框架/framework | framework | framework-runtime | 38 | 2026-01 |
-| 478 | [zhentingwang/dump](https://github.com/zhentingwang/dump) | 评测/evaluation | evaluation | benchmark-eval | 33 | 2026-05 |
-| 479 | [zhihaopeng-cityu/awesome-self-evolving-ai-for-agentic-healthcare](https://github.com/zhihaopeng-cityu/awesome-self-evolving-ai-for-agentic-healthcare) | 工具/tool | evolution | resource-index | 11 | unknown |
-| 480 | [zhonghaojiang/awesome-issue-solving](https://github.com/zhonghaojiang/awesome-issue-solving) | 教程/tutorial | evaluation | resource-index | 9 | 2026-01 |
-| 481 | [zijian-ni/awesome-ai-agents-2026](https://github.com/zijian-ni/awesome-ai-agents-2026) | 教程/tutorial | education-list | resource-index | 81 | unknown |
-| 482 | [zilliztech/memsearch](https://github.com/zilliztech/memsearch) | 工具/tool | memory | tool-module | 1800 | 2026-05 |
-| 483 | [zixuanfeng-nyu/textgrad](https://github.com/zixuanfeng-nyu/textgrad) | 评测/evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 484 | [zjunlp/knowself](https://github.com/zjunlp/knowself) | 评测/evaluation | evaluation | benchmark-eval | 93 | 2024-Q3 |
-| 485 | [zjunlp/worldmind](https://github.com/zjunlp/worldmind) | 评测/evaluation | evaluation | benchmark-eval | 35 | 2026-05 |
-| 486 | [zoe-yyx/agentnet](https://github.com/zoe-yyx/agentnet) | 框架/framework | evolution | framework-runtime | 46 | 2025-04 |
-| 487 | [zou-group/sirius](https://github.com/zou-group/sirius) | 应用/application | framework | framework-runtime | 101 | 2026-05 |
-| 488 | [zou-group/textgrad](https://github.com/zou-group/textgrad) | 评测/evaluation | evaluation | benchmark-eval | 3 | 2026-05 |
-| 489 | [zylos-ai/zylos-core](https://github.com/zylos-ai/zylos-core) | 框架/framework | evolution | framework-runtime | 1400 | 2026-05 |
-| 490 | [zzz47zzz/awesome-lifelong-learning-methods-for-llm](https://github.com/zzz47zzz/awesome-lifelong-learning-methods-for-llm) | 教程/tutorial | education-list | resource-index | 162 | unknown |
+### 2026
 
-</details>
+- [On the Limits of Self-Improving in Large Language Models: The Singularity Is Not Near Without Symbolic Model Synthesis](https://arxiv.org/abs/2601.05280) [review](paper-reviews/review-2601.05280-on-the-limits-of-self-improving-in-large-language-models-the-singulari.md) - We formalise recursive self-training in Large Language Models (LLMs) and Generative AI as a discrete-time dynamical system. We prove that if the proportion of exogenous, externally grounded signal vanishes a...
+  `content:2026-01-05` `collected:2026-05-22T01:00:00+08:00` `slice:2026-01`
+- [Evolving from Tool User to Creator via Training-Free Experience Reuse in Multimodal Reasoning](https://arxiv.org/abs/2602.01983) [review](paper-reviews/review-2602.01983-uct-tool-user-to-creator.md) - Existing Tool-Integrated Reasoning (TIR) models have effectively extended the question-answering capabilities of LLMs by incorporating external tools. However, real-world scenarios present numerous open-ende...
+  `content:2026-02-02` `collected:2026-05-21T00:00:00+08:00` `slice:2026-02`
+- [MemSkill: Learning and Evolving Memory Skills for Self-Evolving Agents](https://arxiv.org/abs/2602.02474) [review](paper-reviews/review-2602.02474-memskill.md) - Most Large Language Model (LLM) agent memory systems rely on a small set of static, hand-designed operations for extracting memory. These fixed procedures hard-code human priors about what to store and how t...
+  `content:2026-02-02` `collected:2026-05-21T00:00:00+08:00` `slice:2026-02`
+- [AriadneMem: Threading the Maze of Lifelong Memory for LLM Agents](https://arxiv.org/abs/2603.03290) [review](paper-reviews/review-2603.03290-ariadnemem.md) - Structured memory system for LLM agents that addresses disconnected evidence and state updates via a decoupled two-phase pipeline. Uses entropy-aware gating to filter noise, conflict-aware coarsening to merg...
+  `content:2026-02-05` `collected:2026-05-21T00:00:00+08:00` `slice:2026-02`
+- [The Auton Agentic AI Framework](https://arxiv.org/abs/2602.23720) [review](paper-reviews/review-2602.23720-the-auton-agentic-ai-framework-authors-sheng-cao-zhao-chang-chang-li-h.md) - The field of Artificial Intelligence is undergoing a transition from Generative AI -- probabilistic generation of text and images -- to Agentic AI, in which autonomous systems execute actions within external...
+  `content:2026-02-27` `collected:2026-05-22T01:00:00+08:00` `slice:2026-02`
+- [Advancing Automated Algorithm Design via Evolutionary Stagewise Design with LLMs](https://arxiv.org/abs/2603.07970) [review](paper-reviews/review-2603.07970-evostage-evolutionary-stagewise-design.md) - With the rapid advancement of human science and technology, problems in industrial scenarios are becoming increasingly challenging, bringing significant challenges to traditional algorithm design. Automated...
+  `content:2026-03-09` `collected:2026-05-21T00:00:00+08:00` `slice:2026-03`
+- [SAGE: Multi-Agent Self-Evolution for LLM Reasoning](https://arxiv.org/abs/2603.15255) [review](paper-reviews/review-2603.15255-sage-multi-agent-self-evolution.md) - Reinforcement learning with verifiable rewards improves reasoning in large language models (LLMs), but many methods still rely on large human-labeled datasets. While self-play reduces this dependency, it oft...
+  `content:2026-03-16` `collected:2026-05-21T00:00:00+08:00` `slice:2026-03`
+- [Hyperagents](https://arxiv.org/abs/2603.19461) [review](paper-reviews/review-2603.19461-hyperagents.md) - Self-improving AI systems aim to reduce reliance on human engineering by learning to improve their own learning and problem-solving processes. Existing approaches to self-improvement rely on fixed, handcraft...
+  `content:2026-03-19` `collected:2026-05-21T23:00:00+08:00` `slice:2026-03`
+- [Self-Organizing Multi-Agent Systems for Continuous Software Development](https://arxiv.org/abs/2603.25928) [review](paper-reviews/review-2603.25928-self-organizing-mas-software-dev.md) - Large Language Model-based multi-agent systems have shown promise in automating software development tasks. However, most vibe code systems focus on completing small tasks and incremental code changes, leavi...
+  `content:2026-03-26` `collected:2026-05-21T00:00:00+08:00` `slice:2026-03`
+- [Drop the Hierarchy and Roles: How Self-Organizing LLM Agents Outperform Designed Structures](https://arxiv.org/abs/2603.28990) [review](paper-reviews/review-2603.28990-self-organizing-llm-agents.md) - How much autonomy can multi-agent LLM systems sustain -- and what enables it? We present a 25,000-task computational experiment spanning 8 models, 4--256 agents, and 8 coordination protocols ranging from ext...
+  `content:2026-03-30` `collected:2026-05-21T00:00:00+08:00` `slice:2026-03`
+- [CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery](https://arxiv.org/abs/2604.01658) [review](paper-reviews/review-2604.01658-coral-autonomous-multi-agent-evolution.md) - Large language model (LLM)-based evolution is a promising approach for open-ended discovery, where progress requires sustained search and knowledge accumulation. Existing methods still rely heavily on fixed...
+  `content:2026-04-02` `collected:2026-05-21T00:00:00+08:00` `slice:2026-04`
+- [CoEvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification](https://arxiv.org/abs/2604.01687) [review](paper-reviews/review-2604.01687-coevoskills-self-evolving-agent-skills-via-co-evolutionary-verificatio.md) - Anthropic proposes the concept of skills for LLM agents to tackle multi-step professional tasks that simple tool invocations cannot address. A tool is a single, self-contained function, whereas a skill is a...
+  `content:2026-04-02` `collected:2026-05-22T01:00:00+08:00` `slice:2026-04`
+- [Do Agent Societies Develop Intellectual Elites? The Hidden Power Laws of Collective Cognition in LLM Multi-Agent Systems](https://arxiv.org/abs/2604.02674) [review](paper-reviews/review-2604.02674-agent-societies-intellectual-elites.md) - Large Language Model (LLM) multi-agent systems are increasingly deployed as interacting agent societies, yet scaling these systems often yields diminishing or unstable returns, the causes of which remain poo...
+  `content:2026-04-03` `collected:2026-05-21T00:00:00+08:00` `slice:2026-04`
+- [Mem2Evolve: Towards Self-Evolving Agents via Co-Evolutionary Capability Expansion and Experience Distillation](https://arxiv.org/abs/2604.10923) [review](paper-reviews/review-2604.10923-mem2evolve-co-evolutionary.md) - While large language model-powered agents can self-evolve by accumulating experience or by dynamically creating new assets (i.e., tools or expert agents), existing frameworks typically treat these two evolut...
+  `content:2026-04-13` `collected:2026-05-21T00:00:00+08:00` `slice:2026-04`
+- [Autogenesis: A Self-Evolving Agent Protocol](https://arxiv.org/abs/2604.15034) [review](paper-reviews/review-2604.15034-autogenesis.md) - Recent advances in LLM based agent systems have shown promise in tackling complex, long horizon tasks. However, existing agent protocols (e.g., A2A and MCP) under specify cross entity lifecycle and context m...
+  `content:2026-04-16` `collected:2026-05-21T22:30:00+08:00` `slice:2026-04`
+- [GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0)](https://arxiv.org/abs/2604.17091) [review](paper-reviews/review-2604.17091-genericagent.md) - Long-horizon large language model (LLM) agents are fundamentally limited by context. As interactions become longer, tool descriptions, retrieved memories, and raw environmental feedback accumulate and push o...
+  `content:2026-04-18` `collected:2026-05-22T01:00:00+08:00` `slice:2026-04`
+- [Training LLM Agents for Spontaneous, Reward-Free Self-Evolution via World Knowledge Exploration](https://arxiv.org/abs/2604.18131) [review](paper-reviews/review-2604.18131-native-agency-self-evolution.md) - Most agents today "self-evolve" by following rewards and rules defined by humans. However, this process remains fundamentally dependent on external supervision; without human guidance, the evolution stops. I...
+  `content:2026-04-20` `collected:2026-05-21T00:00:00+08:00` `slice:2026-04`
+- [CodeEvolve: LLM-Driven Evolutionary Optimization with Runtime-Enriched Target Selection for Multi-Language Code Enhancement](https://arxiv.org/abs/2605.04677) [review](paper-reviews/review-2605.04677-codeevolve.md) - We present CodeEvolve, an evolutionary framework for improving program performance and code quality with Large Language Models (LLMs). CodeEvolve extends OpenEvolve with runtime-guided target selection, Mont...
+  `content:2026-05-06` `collected:2026-05-21T00:00:00+08:00` `slice:2026-05`
+- [SkillOS: Learning Skill Curation for Self-Evolving Agents](https://arxiv.org/abs/2605.06614) [review](paper-reviews/review-2605.06614-skillos-learning-skill-curation-for-self-evolving-agents-authors-siru.md) - LLM-based agents are increasingly deployed to handle streaming tasks, yet they often remain one-off problem solvers that fail to learn from past interactions. Reusable skills distilled from experience provid...
+  `content:2026-05-07` `collected:2026-05-22T01:00:00+08:00` `slice:2026-05`
+- [Do Self-Evolving Agents Forget? Capability Degradation and Preservation in Lifelong LLM Agent Adaptation](https://arxiv.org/abs/2605.09315) [review](paper-reviews/review-2605.09315-self-evolving-agents-forget.md) - Recent advances in LLM agents enable systems that autonomously refine workflows, accumulate reusable skills, self-train their underlying models, and maintain persistent memory. However, we show that such sel...
+  `content:2026-05-10` `collected:2026-05-21T23:10:00+08:00` `slice:2026-05`
+- [OEP: Poisoning Self-Evolving LLM Agents via Locally Correct but Non-Transferable Experiences](https://arxiv.org/abs/2605.18930) [review](paper-reviews/review-2605.18930-oep-poisoning.md) - Memory-augmented large language model (LLM) agents use iterative reflection and self-evolution to solve complex tasks, but these mechanisms introduce security risks. Existing agentic memory attacks require p...
+  `content:2026-05-18` `collected:2026-05-21T23:10:00+08:00` `slice:2026-05`
+- [Prompt Optimization for LLM Code Generation via Reinforcement Learning](https://arxiv.org/abs/2605.19102) [review](paper-reviews/review-2605.19102-prompt-optimization-rl.md) - Large Language Models (LLMs) can generate code from natural language, but their performance is highly sensitive to prompt formulation. We propose a reinforcement-learning-based framework that models prompt r...
+  `content:2026-05-18` `collected:2026-05-21T00:00:00+08:00` `slice:2026-05`
 
-<details>
-<summary>完整论文列表（108）</summary>
+### 2025
 
-| # | 类别 | 论文 | 年份 | Venue |
-|---:|---|---|---|---|
-| 1 | A. 框架 | [Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents](https://arxiv.org/abs/2505.22954) | 2025 | arXiv |
-| 2 | A. 框架 | [Gödel Agent: A Self-Referential Agent Framework for Recursively Self-Improvement](https://arxiv.org/abs/2410.04444) | 2024 (ICLR 2025) | ICLR 2025 |
-| 3 | A. 框架 | [RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn RL](https://arxiv.org/abs/2504.20073) | 2025 | arXiv |
-| 4 | A. 框架 | [ADAS: Automated Design of Agentic Systems](https://arxiv.org/abs/2408.08435) | 2024 (ICLR 2025) | ICLR 2025 |
-| 5 | A. 框架 | [Symbolic Learning Enables Self-Evolving Agents](https://arxiv.org/abs/2406.18532) | 2024 (NeurIPS 2024) | NeurIPS 2024 |
-| 6 | A. 框架 | [EvoMAC: Self-Evolving Multi-Agent Collaboration Networks for Software Development](https://arxiv.org/abs/2410.16946) | 2024 | arXiv |
-| 7 | A. 框架 | [AgentEvolver: Towards Efficient Self-Evolving Agent System](https://arxiv.org/abs/2511.10395) | 2025 | arXiv |
-| 8 | A. 框架 | [InfiAgent: Self-Evolving Pyramid Agent Framework for Infinite Scenarios](https://arxiv.org/abs/2509.22502) | 2025 | arXiv |
-| 9 | A. 框架 | [SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience](https://arxiv.org/abs/2508.04700) | 2025 | arXiv |
-| 10 | A. 框架 | [SE-Agent: Self-Evolution Trajectory Optimization in Multi-Step Reasoning](https://arxiv.org/abs/2508.02085) | 2025 | arXiv |
-| 11 | A. 框架 | [ELL Framework: Building Self-Evolving Agents via Experience-Driven Lifelong Learning](https://arxiv.org/abs/2508.19005) | 2025 | arXiv |
-| 12 | A. 框架 | [Agent0: Unleashing Self-Evolving Agents from Zero Data](https://arxiv.org/abs/2511.16043) | 2025 | arXiv |
-| 13 | B. 方法 | [RISE: Recursive Introspection: Teaching Language Model Agents How to Self-Improve](https://arxiv.org/abs/2407.18219) | 2024 | arXiv |
-| 14 | B. 方法 | [Agent-R: Training Language Model Agents to Reflect via Iterative Self-Training](https://arxiv.org/abs/2501.11425) | 2025 | arXiv |
-| 15 | B. 方法 | [SICA: A Self-Improving Coding Agent](https://arxiv.org/abs/2504.15228) | 2025 | arXiv |
-| 16 | B. 方法 | [EvolveR: Self-Evolving LLM Agents through an Experience-Driven Lifecycle](https://arxiv.org/abs/2510.16079) | 2025 | arXiv |
-| 17 | B. 方法 | [ACE: Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](https://arxiv.org/abs/2510.04618) | 2025 | arXiv |
-| 18 | B. 方法 | [Self-Developing: Can LLMs Invent Algorithms to Improve Themselves?](https://arxiv.org/abs/2410.15639) | 2024 | arXiv |
-| 19 | B. 方法 | [EVOLVE: Evolving LLMs' Self-Refinement Capability via Synergistic Training-Inference Optimization](https://arxiv.org/abs/2502.05605) | 2025 | arXiv |
-| 20 | B. 方法 | [ExIt: Exploratory Iteration - Bootstrapping Task Spaces for Self-Improvement](https://arxiv.org/abs/2509.04575) | 2025 | arXiv |
-| 21 | B. 方法 | [Self-Challenging Language Model Agents](https://arxiv.org/abs/2506.01716) | 2025 | arXiv |
-| 22 | B. 方法 | [TT-SI: Self-Improving LLM Agents at Test-Time](https://arxiv.org/abs/2510.07841) | 2025 | arXiv |
-| 23 | B. 方法 | [WebEvolver: Enhancing Web Agent Self-Improvement with Coevolving World Model](https://arxiv.org/abs/2504.21024) | 2025 | arXiv |
-| 24 | B. 方法 | [Agentic Neural Networks: Self-Evolving Multi-Agent Systems via Textual Backpropagation](https://arxiv.org/abs/2506.09046) | 2025 | arXiv |
-| 25 | B. 方法 | [Agents of Change: Self-Evolving LLM Agents for Strategic Planning](https://arxiv.org/abs/2506.04651) | 2025 | arXiv |
-| 26 | B. 方法 | [Self-Refine: Iterative Refinement with Self-Feedback](https://arxiv.org/abs/2303.17651) | 2023 (NeurIPS 2023) | NeurIPS 2023 |
-| 27 | B. 方法 | [LLMRefine: Pinpointing and Refining Large Language Models via Fine-Grained Actionable Feedback](https://arxiv.org/abs/2311.09336) | 2024 | arXiv |
-| 28 | B. 方法 | [Agent-Pro: Learning to Evolve via Policy-Level Reflection and Optimization](https://arxiv.org/abs/2402.17574) | 2024 (ACL 2024) | ACL 2024 |
-| 29 | B. 方法 | [Self-Correcting Code Small LM (2025)](https://arxiv.org/abs/2505.23060) | 2025 | arXiv |
-| 30 | B. 方法 | [ReflectEvo: Small Model Self-Reflection Evolution (2025)](https://arxiv.org/abs/2505.16475) | 2025 | arXiv |
-| 31 | B. 方法 | [Deep Self-Evolving Reasoning (2025)](https://arxiv.org/abs/2510.17498) | 2025 | arXiv |
-| 32 | B. 方法 | [Evolving Excellence: Automatic Agent Optimization (2025)](https://arxiv.org/abs/2512.09108) | 2025 | arXiv |
-| 33 | B. 方法 | [AutoAgent: Fully Automated Zero-Code Agent (2025)](https://arxiv.org/abs/2502.05957) | 2025 | arXiv |
-| 34 | B. 方法 | SEW: Self-Evolving Workflow for Code Generation (2025) | 2025 | arXiv |
-| 35 | C. 自博弈与强化学习 | [Absolute Zero: Reinforced Self-play Reasoning with Zero Data](https://arxiv.org/abs/2505.03335) | 2025 (NeurIPS 2025) | NeurIPS 2025 |
-| 36 | C. 自博弈与强化学习 | SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning (2025) | 2025 | arXiv |
-| 37 | C. 自博弈与强化学习 | [Multi-Agent Evolve (MAE): LLM Self-Improve through Co-evolution](https://arxiv.org/abs/2510.23595) | 2025 | arXiv |
-| 38 | C. 自博弈与强化学习 | [Agentic Self-Learning (ASL): Towards Agentic Self-Learning LLMs](https://arxiv.org/abs/2510.14253) | 2025 | arXiv |
-| 39 | C. 自博弈与强化学习 | Vision-Zero: VLM Multi-Agent Self-Play Self-Evolution (2025) | 2025 | arXiv |
-| 40 | C. 自博弈与强化学习 | [RLSR: Self-Rewarding Reinforcement Learning (2025)](https://arxiv.org/abs/2505.08827) | 2025 | arXiv |
-| 41 | C. 自博弈与强化学习 | Language Self-Play: Training Without Data (2025) | 2025 | arXiv |
-| 42 | C. 自博弈与强化学习 | [Self-Play Fine-Tuning: Converting Weak Models to Strong Models](https://arxiv.org/abs/2401.01335) | 2024 | arXiv |
-| 43 | C. 自博弈与强化学习 | Nature-Inspired Population-Based Evolution of LLMs (2025) | 2025 | arXiv |
-| 44 | C. 自博弈与强化学习 | ES vs GRPO in LLM Post-Training (2025) | 2025 | arXiv |
-| 45 | D. STaR与推理自我改进 | [STaR: Self-Taught Reasoner - Bootstrapping Reasoning With Reasoning](https://arxiv.org/abs/2203.14465) | 2022 (NeurIPS) | NeurIPS |
-| 46 | D. STaR与推理自我改进 | [RL-STaR: RL Framework for Self-Taught Reasoning (2024)](https://arxiv.org/abs/2410.23912) | 2024 | arXiv |
-| 47 | D. STaR与推理自我改进 | [STaR-SQL: Self-Taught Reasoning for Text-to-SQL (2025)](https://arxiv.org/abs/2502.13550) | 2025 | arXiv |
-| 48 | D. STaR与推理自我改进 | [AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery](https://arxiv.org/abs/2506.13131) | 2025 | arXiv (Google DeepMind) |
-| 49 | D. STaR与推理自我改进 | [ThetaEvolve: Open Problems and Test-Time Learning (2025)](https://arxiv.org/abs/2511.23473) | 2025 | arXiv |
-| 50 | D. STaR与推理自我改进 | [FunSearch: Mathematical Discovery via LLM Evolution (2023)](https://www.nature.com/articles/s41586-023-06924-6) | 2023 | Nature |
-| 51 | E. 自我反思与Reflexion | [Self-Correct via RL: Training Language Models to Self-Correct via Reinforcement Learning](https://arxiv.org/abs/2409.12917) | 2024 | arXiv |
-| 52 | E. 自我反思与Reflexion | [Self-Reflection in LLM Agents (2024)](https://arxiv.org/abs/2405.06682) | 2024 | arXiv |
-| 53 | E. 自我反思与Reflexion | [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366) | 2023 (NeurIPS) | NeurIPS |
-| 54 | E. 自我反思与Reflexion | SaMuLe: Multi-Level Reflection Self-Learning Agent (2024) | 2024 | arXiv |
-| 55 | E. 自我反思与Reflexion | MAR: Multi-Agent Reflection for Improved Reasoning (2024) | 2024 | arXiv |
-| 56 | E. 自我反思与Reflexion | MetaReflection: Learning Instructions from Past Reflections (2024) | 2024 | arXiv |
-| 57 | F. 代码自我纠错 | [InspectCoder: Dynamic Analysis Self-Repair (2025)](https://arxiv.org/abs/2510.18327) | 2025 | arXiv |
-| 58 | F. 代码自我纠错 | [Revisit Self-Debugging: Self-Generated Tests for Self-Debugging (2025)](https://arxiv.org/abs/2501.12793) | 2025 | arXiv |
-| 59 | F. 代码自我纠错 | [Hierarchical Debugging: Code to Correctness (2024)](https://arxiv.org/abs/2410.01215) | 2024 | arXiv |
-| 60 | F. 代码自我纠错 | LeDex: Self-Debugging + Code Explanation (2024) | 2024 | arXiv |
-| 61 | F. 代码自我纠错 | [ProgCo: Program-Assisted Self-Correction (2025)](https://arxiv.org/abs/2501.01264) | 2025 | arXiv |
-| 62 | G. 自演化课程学习 | [Self-Evolving Curriculum for LLM Reasoning (2025)](https://arxiv.org/abs/2505.14970) | 2025 | arXiv |
-| 63 | G. 自演化课程学习 | [EvoCurr: Behavioral Code Generation Self-Evolving Curriculum (2025)](https://arxiv.org/abs/2508.09586) | 2025 | arXiv |
-| 64 | G. 自演化课程学习 | TTCS: Test-Time Curriculum Synthesis (2025) | 2025 | arXiv |
-| 65 | G. 自演化课程学习 | WebRL: Online Curriculum RL Training for Web Agents (2024) | 2024 | arXiv |
-| 66 | G. 自演化课程学习 | [CurricuLLM: LLM Designs Robot Skill Curriculum (2024)](https://arxiv.org/abs/2409.18382) | 2024 | arXiv |
-| 67 | H. 经验学习 | [ExpeL: LLM Agents Are Experiential Learners](https://arxiv.org/abs/2308.10144) | 2024 (AAAI 2024) | AAAI 2024 |
-| 68 | H. 经验学习 | [ICE: Investigate-Consolidate-Exploit: A General Strategy for Inter-Task Agent Self-Evolution](https://arxiv.org/abs/2401.13996) | 2024 (AAAI 2024) | AAAI 2024 |
-| 69 | H. 经验学习 | FLEX: Forward Experience Learning for Continual Evolution (2025) | 2025 | arXiv |
-| 70 | H. 经验学习 | [ReasoningBank: Scaling Reasoning Memory for Self-Evolution (2025)](https://arxiv.org/abs/2509.25140) | 2025 | arXiv |
-| 71 | I. 记忆与终身学习 | AriadneMem: LLM Agent Lifelong Memory (2025) | 2025 | arXiv |
-| 72 | I. 记忆与终身学习 | Memory-R1: RL for Managing and Utilizing Memory (2025) | 2025 | arXiv |
-| 73 | I. 记忆与终身学习 | [Lifelong Learning of LLM Agents: A Roadmap (2025)](https://arxiv.org/abs/2501.07278) | 2025 | arXiv |
-| 74 | I. 记忆与终身学习 | Memento 2: State Reflection Memory Learning (2025) | 2025 | arXiv |
-| 75 | I. 记忆与终身学习 | A-Mem: Agent Memory for LLM Agents (2025) | 2025 | arXiv |
-| 76 | I. 记忆与终身学习 | [How Memory Management Impacts LLM Agents (2025)](https://arxiv.org/abs/2505.16067) | 2025 | arXiv |
-| 77 | J. 自奖励与对齐 | [Self-Rewarding Language Models](https://arxiv.org/abs/2401.10020) | 2024 | arXiv (Meta / NYU) |
-| 78 | J. 自奖励与对齐 | Self-Rewarding PPO (2024) | 2024 | arXiv |
-| 79 | J. 自奖励与对齐 | Process-based Self-Rewarding (2024) | 2024 | arXiv |
-| 80 | J. 自奖励与对齐 | Meta-Rewarding LM: LLM as Meta-Judge for Self-Improvement (2024) | 2024 | arXiv |
-| 81 | J. 自奖励与对齐 | [IterAlign: Iterative Constitutional Alignment (2024)](https://arxiv.org/abs/2403.18341) | 2024 | arXiv |
-| 82 | K. 多智能体辩论与协作 | [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325) | 2023 | arXiv |
-| 83 | K. 多智能体辩论与协作 | [Diversity of Thought: Stronger Reasoning through Thinking Diversity (2024)](https://arxiv.org/abs/2410.12853) | 2024 | arXiv |
-| 84 | K. 多智能体辩论与协作 | MAgICoRe: Multi-Agent Iterative Coarse-to-Fine Refinement (2024) | 2024 | arXiv |
-| 85 | K. 多智能体辩论与协作 | GroupDebate: Efficient Multi-Agent Debate (2024) | 2024 | arXiv |
-| 86 | K. 多智能体辩论与协作 | MARS: Multi-Agent Collaboration for Reasoning (2024) | 2024 | arXiv |
-| 87 | L. 进化策略与发现 | LLMs As Evolution Strategies (2024) | 2024 | arXiv |
-| 88 | L. 进化策略与发现 | Survey: LLMs for Evolutionary Computation (2024) | 2024 | arXiv |
-| 89 | L. 进化策略与发现 | Matching Accuracy: ES vs GRPO (2025) | 2025 | arXiv |
-| 90 | L. 进化策略与发现 | [Scientific Algorithm Discovery via AlphaEvolve (2025)](https://arxiv.org/abs/2510.06056) | 2025 | arXiv |
-| 91 | M. 开放式进化与经典 | [Voyager: An Open-Ended Embodied Agent with Large Language Models](https://arxiv.org/abs/2305.16291) | 2023 (NeurIPS) | NeurIPS |
-| 92 | M. 开放式进化与经典 | [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442) | 2023 (UIST) | UIST 2023 |
-| 93 | M. 开放式进化与经典 | Safety for Open-Ended Systems (2025) | 2025 | arXiv |
-| 94 | M. 开放式进化与经典 | [Dominated Novelty Search (2025)](https://arxiv.org/abs/2502.00593) | 2025 | arXiv |
-| 95 | M. 开放式进化与经典 | [Foundation Agents: Brain-Inspired Intelligence to Evolutionary, Collaborative, and Safe Systems (2025)](https://arxiv.org/abs/2504.01990) | 2025 | arXiv |
-| 96 | N. 弱到强与理论 | [Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision](https://arxiv.org/abs/2312.09390) | 2024 | arXiv (OpenAI) |
-| 97 | N. 弱到强与理论 | Debate Helps Weak-to-Strong (2024) | 2024 | arXiv |
-| 98 | N. 弱到强与理论 | [Self-Improvement in Language Models: The Sharpening Mechanism](https://arxiv.org/abs/2412.01951) | 2024 | arXiv |
-| 99 | N. 弱到强与理论 | Reward Hacking: Mechanisms & Misalignment (2025) | 2025 | arXiv |
-| 100 | N. 弱到强与理论 | [MONA: Myopic Optimization Non-myopic Approval (2025)](https://arxiv.org/abs/2508.07407) | 2025 | arXiv |
-| 101 | 2026 补充前沿 | [Self-Evolving Software Agents](https://arxiv.org/abs/2604.27264) | 2026 | arXiv |
-| 102 | 2026 补充前沿 | [EvoMemBench: Benchmarking Agent Memory from a Self-Evolving Perspective](https://arxiv.org/abs/2605.18421) | 2026 | arXiv |
-| 103 | 2026 补充前沿 | [SEA-Eval: A Benchmark for Evaluating Self-Evolving Agents Beyond Episodic Assessment](https://arxiv.org/abs/2604.08988) | 2026 | arXiv |
-| 104 | 2026 补充前沿 | [Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing](https://arxiv.org/abs/2602.04837) | 2026 | arXiv |
-| 105 | 2026 补充前沿 | [EvoSkill: Automated Skill Discovery for Multi-Agent Systems](https://arxiv.org/abs/2603.02766) | 2026 | arXiv |
-| 106 | 2026 补充前沿 | [The Devil Behind Moltbook: Anthropic Safety is Always Vanishing in Self-Evolving AI Societies](https://arxiv.org/abs/2602.09877) | 2026 | arXiv |
-| 107 | 2026 补充前沿 | [SAGER: Self-Evolving User Policy Skills for Recommendation Agent](https://arxiv.org/abs/2604.14972) | 2026 | arXiv |
-| 108 | 2026 补充前沿 | [Bifrost: Steering Strategic Trajectories to Bridge Contextual Gaps for Self-Improving Agents](https://arxiv.org/abs/2602.05810) | 2026 | arXiv |
+- [ProgCo: Program Helps Self-Correction of Large Language Models](https://arxiv.org/abs/2501.01264) [review](paper-reviews/review-2501.01264-progco-program-helps-self-correction-of-large-language-models.md) - Self-Correction aims to enable large language models (LLMs) to self-verify and self-refine their initial responses without external feedback. However, LLMs often fail to effectively self-verify and generate...
+  `content:2025-01-02` `collected:2026-05-21T00:00:00+08:00` `slice:2025-01`
+- [Lifelong Learning of Large Language Model based Agents: A Roadmap](https://arxiv.org/abs/2501.07278) [review](paper-reviews/review-2501.07278-lifelong-learning-of-large-language-model-based-agents-a-roadmap.md) - Lifelong learning, also known as continual or incremental learning, is a crucial component for advancing Artificial General Intelligence (AGI) by enabling systems to continuously adapt in dynamic environment...
+  `content:2025-01-13` `collected:2026-05-21T00:00:00+08:00` `slice:2025-01`
+- [Agent-R: Training Language Model Agents to Reflect via Iterative Self-Training](https://arxiv.org/abs/2501.11425) [review](paper-reviews/review-2501.11425-agent-r.md) - Large Language Models (LLMs) agents are increasingly pivotal for addressing complex tasks in interactive environments. Existing work mainly focuses on enhancing performance through behavior cloning from stro...
+  `content:2025-01-20` `collected:2026-05-21T00:00:00+08:00` `slice:2025-01`
+- [Revisit Self-Debugging with Self-Generated Tests for Code Generation](https://arxiv.org/abs/2501.12793) [review](paper-reviews/review-2501.12793-revisit-self-debugging-with-self-generated-tests-for-code-generation.md) - Large language models (LLMs) have shown significant advancements in code generation, but still face challenges on tasks beyond their basic capabilities. Recently, the notion of self-debugging has been propos...
+  `content:2025-01-22` `collected:2026-05-21T00:00:00+08:00` `slice:2025-01`
+- [MONA: Myopic Optimization with Non-myopic Approval Can Mitigate Multi-step Reward Hacking](https://arxiv.org/abs/2501.13011) [review](paper-reviews/review-2501.13011-mona-myopic-optimization-with-non-myopic-approval-can-mitigate-multi-s.md) - Future advanced AI systems may learn sophisticated strategies through reinforcement learning (RL) that humans cannot understand well enough to safely evaluate. We propose a training method which avoids agent...
+  `content:2025-01-22` `collected:2026-05-21T00:00:00+08:00` `slice:2025-01`
+- [Dominated Novelty Search: Rethinking Local Competition in Quality-Diversity](https://arxiv.org/abs/2502.00593) [review](paper-reviews/review-2502.00593-dominated-novelty-search-rethinking-local-competition-in-quality-diver.md) - Quality-Diversity is a family of evolutionary algorithms that generate diverse, high-performing solutions through local competition principles inspired by natural evolution. While research has focused on imp...
+  `content:2025-02-01` `collected:2026-05-21T00:00:00+08:00` `slice:2025-02`
+- [SiriuS: Self-improving Multi-agent Systems via Bootstrapped Reasoning](https://arxiv.org/abs/2502.04780) [review](paper-reviews/review-2502.04780-sirius-self-improving-multi-agent-systems-via-bootstrapped-reasoning-a.md) - Multi-agent AI systems powered by large language models (LLMs) are increasingly applied to solve complex tasks. However, these systems often rely on fragile, manually designed prompts and heuristics, making...
+  `content:2025-02-07` `collected:2026-05-22T01:00:00+08:00` `slice:2025-02`
+- [Evolving LLMs' Self-Refinement Capability via Iterative Preference Optimization](https://arxiv.org/abs/2502.05605) [review](paper-reviews/review-2502.05605-evolving-llms-self-refinement-capability-via-synergistic-training-infe.md) - While large language models (LLMs) have demonstrated remarkable general performance, enabling smaller models to achieve capabilities comparable to their larger counterparts remains a critical challenge. For...
+  `content:2025-02-08` `collected:2026-05-21T00:00:00+08:00` `slice:2025-02`
+- [AutoAgent: A Fully-Automated and Zero-Code Framework for LLM Agents](https://arxiv.org/abs/2502.05957) [review](paper-reviews/review-2502.05957-autoagent-a-fully-automated-and-zero-code-framework-for-llm-agents.md) - Large Language Model (LLM) Agents have demonstrated remarkable capabilities in task automation and intelligent decision-making, driving the widespread adoption of agent development frameworks such as LangCha...
+  `content:2025-02-09` `collected:2026-05-21T00:00:00+08:00` `slice:2025-02`
+- [A-Mem: Agentic Memory for LLM Agents](https://arxiv.org/abs/2502.12110) [review](paper-reviews/review-2502.12110-a-mem-agentic-memory-for-llm-agents-arxiv-id-2502-12110-url-https-arxi.md) - Novel agentic memory system for LLM agents that dynamically organizes memories following the Zettelkasten method. Creates interconnected knowledge networks through dynamic indexing and linking. When new memo...
+  `content:2025-02-17` `collected:2026-05-21T00:00:00+08:00` `slice:2025-02`
+- [STaR-SQL: Self-Taught Reasoner for Text-to-SQL](https://arxiv.org/abs/2502.13550) [review](paper-reviews/review-2502.13550-star-sql-self-taught-reasoner-for-text-to-sql.md) - Generating step-by-step "chain-of-thought" rationales has proven effective for improving the performance of large language models on complex reasoning tasks. However, applying such techniques to structured t...
+  `content:2025-02-19` `collected:2026-05-21T00:00:00+08:00` `slice:2025-02`
+- [Advances and Challenges in Foundation Agents: From Brain-Inspired Intelligence to Evolutionary, Collaborative, and Safe Systems](https://arxiv.org/abs/2504.01990) [review](paper-reviews/review-2504.01990-advances-and-challenges-in-foundation-agents-from-brain-inspired-intel.md) - The advent of large language models (LLMs) has catalyzed a transformative shift in artificial intelligence, paving the way for advanced intelligent agents capable of sophisticated reasoning, robust perceptio...
+  `content:2025-03-31` `collected:2026-05-21T00:00:00+08:00` `slice:2025-03`
+- [A Self-Improving Coding Agent](https://arxiv.org/abs/2504.15228) [review](paper-reviews/review-2504.15228-sica.md) - Recent advancements in Large Language Models (LLMs) have spurred interest in deploying LLM agents to undertake tasks in the world. LLMs are often deployed in agent systems: code that orchestrates LLM calls a...
+  `content:2025-04-21` `collected:2026-05-21T00:00:00+08:00` `slice:2025-04`
+- [WebEvolver: Enhancing Web Agent Self-Improvement with Coevolving World Model](https://arxiv.org/abs/2504.21024) [review](paper-reviews/review-2504.21024-webevolver.md) - Agent self-improvement, where the backbone Large Language Model (LLM) of the agent are trained on trajectories sampled autonomously based on their own policies, has emerged as a promising approach for enhanc...
+  `content:2025-04-23` `collected:2026-05-21T00:00:00+08:00` `slice:2025-04`
+- [RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning](https://arxiv.org/abs/2504.20073) [review](paper-reviews/review-2504.20073-ragen.md) - Training large language models (LLMs) as interactive agents presents unique challenges including long-horizon decision making and interacting with stochastic environment feedback. While reinforcement learnin...
+  `content:2025-04-24` `collected:2026-05-21T00:00:00+08:00` `slice:2025-04`
+- [Self-Generated In-Context Examples Improve LLM Agents for Sequential Decision-Making Tasks](https://arxiv.org/abs/2505.00234) [review](paper-reviews/review-2505.00234-self-generated-in-context-examples-improve-llm-agents-for-sequential-d.md) - Improving Large Language Model (LLM) agents for sequential decision-making tasks typically requires extensive task-specific knowledge engineering--custom prompts, curated examples, and specialized observatio...
+  `content:2025-05-01` `collected:2026-05-22T01:00:00+08:00` `slice:2025-05`
+- [Absolute Zero: Reinforced Self-play Reasoning with Zero Data](https://arxiv.org/abs/2505.03335) [review](paper-reviews/review-2505.03335-absolute-zero.md) - Reinforcement learning with verifiable rewards (RLVR) has shown promise in enhancing the reasoning capabilities of large language models by learning directly from outcome-based rewards. Recent RLVR works tha...
+  `content:2025-05-06` `collected:2026-05-21T00:00:00+08:00` `slice:2025-05`
+- [RLSR: Reinforcement Learning from Self Reward](https://arxiv.org/abs/2505.08827) [review](paper-reviews/review-2505.08827-rlsr-reinforcement-learning-from-self-reward.md) - Large language models can generate solutions to complex problems, but training them with reinforcement learning typically requires verifiable rewards that are expensive to create and not possible for all dom...
+  `content:2025-05-12` `collected:2026-05-21T00:00:00+08:00` `slice:2025-05`
+- [Self-Evolving Curriculum for LLM Reasoning](https://arxiv.org/abs/2505.14970) [review](paper-reviews/review-2505.14970-self-evolving-curriculum-for-llm-reasoning.md) - Reinforcement learning (RL) has proven effective for fine-tuning large language models (LLMs), significantly enhancing their reasoning abilities in domains such as mathematics and code generation. A crucial...
+  `content:2025-05-20` `collected:2026-05-21T00:00:00+08:00` `slice:2025-05`
+- [How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior](https://arxiv.org/abs/2505.16067) [review](paper-reviews/review-2505.16067-how-memory-management-impacts-llm-agents-an-empirical-study-of-experie.md) - Memory is a critical component in large language model (LLM)-based agents, enabling them to store and retrieve past executions to improve task performance over time. In this paper, we conduct an empirical st...
+  `content:2025-05-21` `collected:2026-05-21T00:00:00+08:00` `slice:2025-05`
+- [ReflectEvo: Improving Meta Introspection of Small LLMs by Learning Self-Reflection](https://arxiv.org/abs/2505.16475) [review](paper-reviews/review-2505.16475-reflectevo-improving-meta-introspection-of-small-llms-by-learning-self.md) - We present a novel pipeline, ReflectEvo, to demonstrate that small language models (SLMs) can enhance meta introspection through reflection learning. This process iteratively generates self-reflection for se...
+  `content:2025-05-22` `collected:2026-05-21T00:00:00+08:00` `slice:2025-05`
+- [SEW: Self-Evolving Agentic Workflows for Automated Code Generation](https://arxiv.org/abs/2505.18646) [review](paper-reviews/review-2505.18646-sew-self-evolving-agentic-workflows-for-automated-code-generation-arxi.md) - Novel self-evolving framework that automatically generates and optimises multi-agent workflows. SEW can automatically design agentic workflows and optimise them through self-evolution, bringing up to 33% imp...
+  `content:2025-05-24` `collected:2026-05-21T00:00:00+08:00` `slice:2025-05`
+- [Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents](https://arxiv.org/abs/2505.22954) [review](paper-reviews/review-2505.22954-darwin-godel-machine.md) - Today's AI systems have human-designed, fixed architectures and cannot autonomously and continuously improve themselves. The advance of AI could itself be automated. If done safely, that would accelerate AI...
+  `content:2025-05-29` `collected:2026-05-21T00:00:00+08:00` `slice:2025-05`
+- [Self-Correcting Code Generation Using Small Language Models](https://arxiv.org/abs/2505.23060) [review](paper-reviews/review-2505.23060-self-correcting-code-generation-using-small-language-models.md) - Self-correction has demonstrated potential in code generation by allowing language models to revise and improve their outputs through successive refinement. Recent studies have explored prompting-based strat...
+  `content:2025-05-29` `collected:2026-05-21T00:00:00+08:00` `slice:2025-05`
+- [Self-Challenging Language Model Agents](https://arxiv.org/abs/2506.01716) [review](paper-reviews/review-2506.01716-self-challenging-language-model-agents.md) - Large language models are quickly becoming the foundation for intelligent agents that are capable of using tools. However, training such agents is challenging because it requires human creation and annotatio...
+  `content:2025-06-02` `collected:2026-05-21T00:00:00+08:00` `slice:2025-06`
+- [Agents of Change: Self-Evolving LLM Agents for Strategic Planning](https://arxiv.org/abs/2506.04651) [review](paper-reviews/review-2506.04651-agents-of-change-hexmachina.md) - We address the long-horizon gap in large language model (LLM) agents by enabling them to sustain coherent strategies in adversarial, stochastic environments. Settlers of Catan provides a challenging benchmar...
+  `content:2025-06-05` `collected:2026-05-21T00:00:00+08:00` `slice:2025-06`
+- [Agentic Neural Networks: Self-Evolving Multi-Agent Systems via Textual Backpropagation](https://arxiv.org/abs/2506.09046) [review](paper-reviews/review-2506.09046-agentic-neural-networks-self-evolving-multi-agent-systems-via-textual.md) - Leveraging multiple Large Language Models(LLMs) has proven effective for addressing complex, high-dimensional tasks, but current approaches often rely on static, manually engineered multi-agent configuration...
+  `content:2025-06-10` `collected:2026-05-21T00:00:00+08:00` `slice:2025-06`
+- [Self-Adapting Language Models](https://arxiv.org/abs/2506.10943) [review](paper-reviews/review-2506.10943-self-adapting-language-models-authors-adam-zweiger-jyothish-pari-han-g.md) - Large language models (LLMs) are powerful but static; they lack mechanisms to adapt their weights in response to new tasks, knowledge, or examples. We introduce Self-Adapting LLMs (SEAL), a framework that en...
+  `content:2025-06-12` `collected:2026-05-22T01:00:00+08:00` `slice:2025-06`
+- [AlphaEvolve: A coding agent for scientific and algorithmic discovery](https://arxiv.org/abs/2506.13131) [review](paper-reviews/review-2506.13131-alphaevolve.md) - In this white paper, we present AlphaEvolve, an evolutionary coding agent that substantially enhances capabilities of state-of-the-art LLMs on highly challenging tasks such as tackling open scientific proble...
+  `content:2025-06-16` `collected:2026-05-21T00:00:00+08:00` `slice:2025-06`
+- [SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning](https://arxiv.org/abs/2506.24119) [review](paper-reviews/review-2506.24119-spiral.md) - Self-play framework where models learn by playing multi-turn, zero-sum games against continuously improving versions of themselves, generating an automatic curriculum of stronger opponents, and eliminating t...
+  `content:2025-06-30` `collected:2026-05-21T00:00:00+08:00` `slice:2025-06`
+- [EvoAgentX: An Automated Framework for Evolving Agentic Workflows](https://arxiv.org/abs/2507.03616) [review](paper-reviews/review-2507.03616-evoagentx-an-automated-framework-for-evolving-agentic-workflows-author.md) - Multi-agent systems (MAS) have emerged as a powerful paradigm for orchestrating large language models (LLMs) and specialized tools to collaboratively address complex tasks. However, existing MAS frameworks o...
+  `content:2025-07-04` `collected:2026-05-22T01:00:00+08:00` `slice:2025-07`
+- [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](https://arxiv.org/abs/2507.19457) [review](paper-reviews/review-2507.19457-gepa-reflective-prompt-evolution-can-outperform-reinforcement-learning.md) - Large language models (LLMs) are increasingly adapted to downstream tasks via reinforcement learning (RL) methods like Group Relative Policy Optimization (GRPO), which often require thousands of rollouts to...
+  `content:2025-07-25` `collected:2026-05-22T01:00:00+08:00` `slice:2025-07`
+- [A Survey of Self-Evolving Agents: What, When, How, and Where to Evolve on the Path to Artificial Super Intelligence](https://arxiv.org/abs/2507.21046) [review](paper-reviews/review-2507.21046-a-survey-of-self-evolving-agents-what-when-how-and-where-to-evolve-on.md) - Large Language Models (LLMs) have demonstrated remarkable capabilities across diverse tasks but remain fundamentally static, unable to adapt their internal parameters to novel tasks, evolving knowledge domai...
+  `content:2025-07-28` `collected:2026-05-21T00:00:00+08:00` `slice:2025-07`
+- [SE-Agent: Self-Evolution Trajectory Optimization in Multi-Step Reasoning with LLM-Based Agents](https://arxiv.org/abs/2508.02085) [review](paper-reviews/review-2508.02085-se-agent-trajectory-optimization.md) - Large Language Model (LLM)-based agents have recently shown impressive capabilities in complex reasoning and tool use via multi-step interactions with their environments. While these agents have the potentia...
+  `content:2025-08-04` `collected:2026-05-21T00:00:00+08:00` `slice:2025-08`
+- [SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience](https://arxiv.org/abs/2508.04700) [review](paper-reviews/review-2508.04700-seagent.md) - Repurposing large vision-language models (LVLMs) as computer use agents (CUAs) has led to substantial breakthroughs, primarily driven by human-labeled data. However, these models often struggle with novel an...
+  `content:2025-08-06` `collected:2026-05-21T00:00:00+08:00` `slice:2025-08`
+- [A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems](https://arxiv.org/abs/2508.07407) [review](paper-reviews/review-2508.07407-self-evolving-agents-survey.md) - Recent advances in large language models have sparked growing interest in AI agents capable of solving complex, real-world tasks. However, most existing agent systems rely on manually crafted configurations...
+  `content:2025-08-10` `collected:2026-05-21T00:00:00+08:00` `slice:2025-08`
+- [EvoCurr: Self-evolving Curriculum with Behavior Code Generation for Complex Decision-making](https://arxiv.org/abs/2508.09586) [review](paper-reviews/review-2508.09586-evocurr.md) - Large Language Models (LLMs) have demonstrated remarkable capabilities across diverse domains, including programming, planning, and decision-making. However, their performance often degrades when faced with...
+  `content:2025-08-13` `collected:2026-05-21T00:00:00+08:00` `slice:2025-08`
+- [Building Self-Evolving Agents via Experience-Driven Lifelong Learning: A Framework and Benchmark](https://arxiv.org/abs/2508.19005) [review](paper-reviews/review-2508.19005-ell-framework.md) - As AI advances toward general intelligence, the focus is shifting from systems optimized for static tasks to creating open-ended agents that learn continuously. In this paper, we introduce Experience-driven...
+  `content:2025-08-26` `collected:2026-05-21T00:00:00+08:00` `slice:2025-08`
+- [Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning](https://arxiv.org/abs/2508.19828) [review](paper-reviews/review-2508.19828-memory-r1.md) - Reinforcement learning framework that equips LLMs with the ability to actively manage and utilize external memory. Two-agent architecture: RL-trained Memory Manager (ADD/UPDATE/DELETE/NOOP) and Answer Agent...
+  `content:2025-08-27` `collected:2026-05-21T00:00:00+08:00` `slice:2025-08`
+- [Bootstrapping Task Spaces for Self-Improvement](https://arxiv.org/abs/2509.04575) [review](paper-reviews/review-2509.04575-bootstrapping-task-spaces-exit.md) - Progress in many task domains emerges from repeated revisions to previous solution attempts. Training agents that can reliably self-improve over such sequences at inference-time is a natural target for reinf...
+  `content:2025-09-04` `collected:2026-05-21T00:00:00+08:00` `slice:2025-09`
+- [SAMULE: Self-Learning Agents Enhanced by Multi-Level Reflection](https://arxiv.org/abs/2509.20562) [review](paper-reviews/review-2509.20562-samule.md) - Framework for self-learning agents powered by a retrospective language model trained based on Multi-Level Reflection Synthesis. Synthesizes high-quality reflections across three complementary levels: Single-...
+  `content:2025-09-24` `collected:2026-05-21T00:00:00+08:00` `slice:2025-09`
+- [InfiAgent: Self-Evolving Pyramid Agent Framework for Infinite Scenarios](https://arxiv.org/abs/2509.22502) [review](paper-reviews/review-2509.22502-infiagent.md) - Large Language Model (LLM) agents have demonstrated remarkable capabilities in organizing and executing complex tasks, and many such agents are now widely used in various application scenarios. However, deve...
+  `content:2025-09-26` `collected:2026-05-21T00:00:00+08:00` `slice:2025-09`
+- [ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory](https://arxiv.org/abs/2509.25140) [review](paper-reviews/review-2509.25140-reasoningbank.md) - With the growing adoption of large language model agents in persistent real-world roles, they naturally encounter continuous streams of tasks. A key limitation, however, is their failure to learn from the ac...
+  `content:2025-09-29` `collected:2026-05-21T00:00:00+08:00` `slice:2025-09`
+- [Vision-Zero: Scalable VLM Self-Evolution via Multi-Agent Self-Play](https://arxiv.org/abs/2509.25541) [review](paper-reviews/review-2509.25541-vision-zero-vlm-self-play.md) - Label-free, domain-agnostic multi-agent self-play framework for self-evolving VLMs through competitive visual games generated from arbitrary image inputs. Trains VLMs in "Who Is the Spy"-style games where mo...
+  `content:2025-09-29` `collected:2026-05-21T00:00:00+08:00` `slice:2025-09`
+- [Your Agent May Misevolve: Emergent Risks in Self-evolving LLM Agents](https://arxiv.org/abs/2509.26354) [review](paper-reviews/review-2509.26354-misevolution.md) - Advances in Large Language Models (LLMs) have enabled a new class of self-evolving agents that autonomously improve through interaction with the environment, demonstrating strong capabilities. However, self-...
+  `content:2025-09-30` `collected:2026-05-21T23:10:00+08:00` `slice:2025-09`
+- [Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](https://arxiv.org/abs/2510.04618) [review](paper-reviews/review-2510.04618-ace.md) - Large language model (LLM) applications such as agents and domain-specific reasoning increasingly rely on context adaptation: modifying inputs with instructions, strategies, or evidence, rather than weight u...
+  `content:2025-10-06` `collected:2026-05-21T00:00:00+08:00` `slice:2025-10`
+- [Scientific Algorithm Discovery by Augmenting AlphaEvolve with Deep Research](https://arxiv.org/abs/2510.06056) [review](paper-reviews/review-2510.06056-deepevolve.md) - Large language models hold promise as scientific assistants, yet existing agents either rely solely on algorithm evolution or on deep research in isolation, both of which face critical limitations. Pure algo...
+  `content:2025-10-07` `collected:2026-05-21T00:00:00+08:00` `slice:2025-10`
+- [Self-Improving LLM Agents at Test-Time](https://arxiv.org/abs/2510.07841) [review](paper-reviews/review-2510.07841-test-time-self-improvement.md) - One paradigm of language model (LM) fine-tuning relies on creating large training datasets, under the assumption that high quantity and diversity will enable models to generalize to novel tasks after post-tr...
+  `content:2025-10-09` `collected:2026-05-21T00:00:00+08:00` `slice:2025-10`
+- [Towards Agentic Self-Learning LLMs in Search Environment](https://arxiv.org/abs/2510.14253) [review](paper-reviews/review-2510.14253-agentic-self-learning.md) - We study whether self-learning can scale LLM-based agents without relying on human-curated datasets or predefined rule-based rewards. Through controlled experiments in a search-agent setting, we identify two...
+  `content:2025-10-16` `collected:2026-05-21T00:00:00+08:00` `slice:2025-10`
+- [EvolveR: Self-Evolving LLM Agents through an Experience-Driven Lifecycle](https://arxiv.org/abs/2510.16079) [review](paper-reviews/review-2510.16079-evolver.md) - Current Large Language Model (LLM) agents show strong performance in tool use, but lack the crucial capability to systematically learn from their own experiences. While existing frameworks mainly focus on mi...
+  `content:2025-10-17` `collected:2026-05-21T00:00:00+08:00` `slice:2025-10`
+- [Deep Self-Evolving Reasoning](https://arxiv.org/abs/2510.17498) [review](paper-reviews/review-2510.17498-deep-self-evolving-reasoning-dser.md) - Long-form chain-of-thought reasoning has become a cornerstone of advanced reasoning in large language models. While recent verification-refinement frameworks have enabled proprietary models to solve Olympiad...
+  `content:2025-10-20` `collected:2026-05-21T00:00:00+08:00` `slice:2025-10`
+- [InspectCoder: Dynamic Analysis-Enabled Self Repair through interactive LLM-Debugger Collaboration](https://arxiv.org/abs/2510.18327) [review](paper-reviews/review-2510.18327-inspectcoder-debugger-repair.md) - Large Language Models (LLMs) frequently generate buggy code with complex logic errors that are challenging to diagnose. While existing LLM-based self-repair approaches conduct intensive static semantic analy...
+  `content:2025-10-21` `collected:2026-05-21T00:00:00+08:00` `slice:2025-10`
+- [Multi-Agent Evolve: LLM Self-Improve through Co-evolution](https://arxiv.org/abs/2510.23595) [review](paper-reviews/review-2510.23595-multi-agent-evolve-mae.md) - Reinforcement Learning (RL) has demonstrated significant potential in enhancing the reasoning capabilities of large language models (LLMs). However, the success of RL for LLMs heavily relies on human-curated...
+  `content:2025-10-27` `collected:2026-05-21T00:00:00+08:00` `slice:2025-10`
+- [FLEX: Continuous Agent Evolution via Forward Learning from Experience](https://arxiv.org/abs/2511.06449) [review](paper-reviews/review-2511.06449-flex-forward-learning-from-experience.md) - Gradient-free learning paradigm enabling LLM agents to continuously evolve through accumulated experience. Constructs structured experience library through continual reflection on successes and failures. Del...
+  `content:2025-11-09` `collected:2026-05-21T00:00:00+08:00` `slice:2025-11`
+- [AgentEvolver: Towards Efficient Self-Evolving Agent System](https://arxiv.org/abs/2511.10395) [review](paper-reviews/review-2511.10395-agentevolver.md) - Autonomous agents powered by large language models (LLMs) have the potential to significantly enhance human productivity by reasoning, using tools, and executing complex tasks in diverse environments. Howeve...
+  `content:2025-11-13` `collected:2026-05-21T00:00:00+08:00` `slice:2025-11`
+- [Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning](https://arxiv.org/abs/2511.16043) [review](paper-reviews/review-2511.16043-agent0-zero-data-tool-integrated-reasoning.md) - Large Language Model (LLM) Agents, often trained with Reinforcement Learning (RL), are constrained by a dependency on human-curated data, limiting scalability and tethering AI to human knowledge. Existing se...
+  `content:2025-11-20` `collected:2026-05-21T00:00:00+08:00` `slice:2025-11`
+- [ThetaEvolve: Test-time Learning on Open Problems](https://arxiv.org/abs/2511.23473) [review](paper-reviews/review-2511.23473-thetaevolve-test-time-learning.md) - Recent advances in large language models (LLMs) have enabled breakthroughs in mathematical discovery, exemplified by AlphaEvolve, a closed-source system that evolves programs to improve bounds on open proble...
+  `content:2025-11-28` `collected:2026-05-21T00:00:00+08:00` `slice:2025-11`
+- [Evolving Excellence: Automated Optimization of LLM-based Agents](https://arxiv.org/abs/2512.09108) [review](paper-reviews/review-2512.09108-artemis-evolving-excellence.md) - Agentic AI systems built on large language models (LLMs) offer significant potential for automating complex workflows, from software development to customer support. However, LLM agents often underperform du...
+  `content:2025-12-09` `collected:2026-05-21T00:00:00+08:00` `slice:2025-12`
+- [Memento-II: Learning by Stateful Reflective Memory](https://arxiv.org/abs/2512.22716) [review](paper-reviews/review-2512.22716-memento-ii-stateful-reflective-memory.md) - Theoretical framework for continual and experiential learning in LLM agents integrating episodic memory with reinforcement learning. Introduces Stateful Reflective Decision Process (SRDP), a formal abstracti...
+  `content:2025-12-27` `collected:2026-05-21T00:00:00+08:00` `slice:2025-12`
 
-</details>
+### 2024
 
-<details>
-<summary>完整 Benchmark / Evaluation 相关仓库列表（136）</summary>
+- [Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models](https://arxiv.org/abs/2401.01335) [review](paper-reviews/review-2401.01335-self-play-fine-tuning-converts-weak-language-models-to-strong-language.md) - Computer Science > Machine Learning arXiv:2401.01335 (cs) Submitted on 2 Jan 2024 (v1), last revised 14 Jun 2024 (this version, v3) # Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Mo...
+  `content:2024-01-02` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q1`
+- [Self-Rewarding Language Models](https://arxiv.org/abs/2401.10020) [review](paper-reviews/review-2401.10020-self-rewarding.md) - Computer Science > Computation and Language arXiv:2401.10020 (cs) Submitted on 18 Jan 2024 (v1), last revised 28 Mar 2025 (this version, v3) # Self-Rewarding Language Models Authors: Weizhe Yuan, Richard Yua...
+  `content:2024-01-18` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q1`
+- [Investigate-Consolidate-Exploit: A General Strategy for Inter-Task Agent Self-Evolution](https://arxiv.org/abs/2401.13996) [review](paper-reviews/review-2401.13996-investigate-consolidate-exploit-a-general-strategy-for-inter-task-agen.md) - Computer Science > Computation and Language arXiv:2401.13996 (cs) Submitted on 25 Jan 2024 # Investigate-Consolidate-Exploit: A General Strategy for Inter-Task Agent Self-Evolution Authors: Cheng Qian, Shiha...
+  `content:2024-01-25` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q1`
+- [Agent-Pro: Learning to Evolve via Policy-Level Reflection and Optimization](https://arxiv.org/abs/2402.17574) [review](paper-reviews/review-2402.17574-agent-pro-learning-to-evolve-via-policy-level-reflection-and-optimizat.md) - Computer Science > Artificial Intelligence arXiv:2402.17574 (cs) Submitted on 27 Feb 2024 (v1), last revised 6 Jun 2024 (this version, v3) # Agent-Pro: Learning to Evolve via Policy-Level Reflection and Opti...
+  `content:2024-02-27` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q1`
+- [Large Language Models As Evolution Strategies](https://arxiv.org/abs/2402.18381) [review](paper-reviews/review-2402.18381-large-language-models-as-evolution-strategies-arxiv-id-2402-18381-url.md) - Investigates whether LLMs can implement evolutionary optimization algorithms. Introduces prompting strategy with least-to-most sorting of discretized population members and LLM-proposed improvements. Creates...
+  `content:2024-02-28` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q1`
+- [IterAlign: Iterative Constitutional Alignment of Large Language Models](https://arxiv.org/abs/2403.18341) [review](paper-reviews/review-2403.18341-iteralign.md) - Computer Science > Computation and Language arXiv:2403.18341 (cs) Submitted on 27 Mar 2024 # IterAlign: Iterative Constitutional Alignment of Large Language Models Authors: Xiusi Chen, Hongzhi Wen, Sreyashi...
+  `content:2024-03-27` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q1`
+- [Self-Reflection in LLM Agents: Effects on Problem-Solving Performance](https://arxiv.org/abs/2405.06682) [review](paper-reviews/review-2405.06682-self-reflection-agents.md) - Computer Science > Computation and Language arXiv:2405.06682 (cs) Submitted on 5 May 2024 (v1), last revised 16 Oct 2024 (this version, v3) # Self-Reflection in LLM Agents: Effects on Problem-Solving Perform...
+  `content:2024-05-05` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q2`
+- [Symbolic Learning Enables Self-Evolving Agents](https://arxiv.org/abs/2406.18532) [review](paper-reviews/review-2406.18532-symbolic-learning-enables-self-evolving-agents-arxiv-id-2406-18532-url.md) - Computer Science > Computation and Language arXiv:2406.18532 (cs) Submitted on 26 Jun 2024 # Symbolic Learning Enables Self-Evolving Agents Authors: Wangchunshu Zhou, Yixin Ou, Shengwei Ding, Long Li, Jialon...
+  `content:2024-06-26` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q2`
+- [Recursive Introspection: Teaching Language Model Agents How to Self-Improve](https://arxiv.org/abs/2407.18219) [review](paper-reviews/review-2407.18219-rise.md) - Computer Science > Machine Learning arXiv:2407.18219 (cs) Submitted on 25 Jul 2024 (v1), last revised 26 Jul 2024 (this version, v2) # Recursive Introspection: Teaching Language Model Agents How to Self-Impr...
+  `content:2024-07-25` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q3`
+- [Meta-Rewarding Language Models: Self-Improving Alignment with LLM-as-a-Meta-Judge](https://arxiv.org/abs/2407.19594) [review](paper-reviews/review-2407.19594-meta-rewarding.md) - Novel Meta-Rewarding step for self-improvement where the model judges its own judgements and uses that feedback to refine judgment skills. All three roles (actor, judge, meta-judge) performed by the same mod...
+  `content:2024-07-28` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q3`
+- [Automated Design of Agentic Systems](https://arxiv.org/abs/2408.08435) [review](paper-reviews/review-2408.08435-adas.md) - Computer Science > Artificial Intelligence arXiv:2408.08435 (cs) Submitted on 15 Aug 2024 (v1), last revised 2 Mar 2025 (this version, v2) # Automated Design of Agentic Systems Authors: Shengran Hu, Cong Lu,...
+  `content:2024-08-15` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q3`
+- [MAgICoRe: Multi-Agent, Iterative, Coarse-to-Fine Refinement for Reasoning](https://arxiv.org/abs/2409.12147) [review](paper-reviews/review-2409.12147-magicore-multi-agent-iterative-coarse-to-fine-refinement-for-reasoning.md) - Multi-agent framework that categorizes problem difficulty, solving easy problems with coarse-grained aggregation and hard ones with fine-grained iterative multi-agent refinement. Three agents: Solver, Review...
+  `content:2024-09-18` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q3`
+- [Training Language Models to Self-Correct via Reinforcement Learning](https://arxiv.org/abs/2409.12917) [review](paper-reviews/review-2409.12917-score.md) - Self-correction is a highly desirable capability of large language models (LLMs), yet it has consistently been found to be largely ineffective in modern LLMs. Current methods for training self-correction typ...
+  `content:2024-09-19` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q3`
+- [GroupDebate: Enhancing the Efficiency of Multi-Agent Debate Using Group Discussion](https://arxiv.org/abs/2409.14051) [review](paper-reviews/review-2409.14051-groupdebate-enhancing-the-efficiency-of-multi-agent-debate-using-group.md) - Method to significantly reduce token cost in multi-agent debates by dividing agents into multiple debate groups, with agents debating within groups and sharing interim results between groups. Reduces total t...
+  `content:2024-09-21` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q3`
+- [CurricuLLM: Automatic Task Curricula Design for Learning Complex Robot Skills using Large Language Models](https://arxiv.org/abs/2409.18382) [review](paper-reviews/review-2409.18382-curricullm-automatic-task-curricula-design-for-learning-complex-robot.md) - Curriculum learning is a training mechanism in reinforcement learning (RL) that facilitates the achievement of complex policies by progressively increasing the task difficulty during training. However, desig...
+  `content:2024-09-27` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q3`
+- [From Code to Correctness: Closing the Last Mile of Code Generation with Hierarchical Debugging](https://arxiv.org/abs/2410.01215) [review](paper-reviews/review-2410.01215-from-code-to-correctness-closing-the-last-mile-of-code-generation-with.md) - While large language models have made significant strides in code generation, the pass rate of the generated code is bottlenecked on subtle errors, often requiring human intervention to pass tests, especiall...
+  `content:2024-10-02` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q4`
+- [Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement](https://arxiv.org/abs/2410.04444) [review](paper-reviews/review-2410.04444-godel-agent.md) - The rapid advancement of large language models (LLMs) has significantly enhanced the capabilities of AI-driven agents across various tasks. However, existing agentic systems, whether based on fixed pipeline...
+  `content:2024-10-06` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q4`
+- [Diversity of Thought Elicits Stronger Reasoning Capabilities in Multi-Agent Debate Frameworks](https://arxiv.org/abs/2410.12853) [review](paper-reviews/review-2410.12853-diversity-of-thought-elicits-stronger-reasoning-capabilities-in-multi.md) - Large language models (LLMs) excel in natural language generation but often confidently produce incorrect responses, especially in tasks like mathematical reasoning. Chain-of-thought prompting, self-verifica...
+  `content:2024-10-10` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q4`
+- [Can Large Language Models Invent Algorithms to Improve Themselves?: Algorithm Discovery for Recursive Self-Improvement through Reinforcement Learning](https://arxiv.org/abs/2410.15639) [review](paper-reviews/review-2410.15639-can-large-language-models-invent-algorithms-to-improve-themselves-algo.md) - Large Language Models (LLMs) have achieved remarkable capabilities, yet their improvement methods remain fundamentally constrained by human design. We present Self-Developing, a framework that enables LLMs t...
+  `content:2024-10-21` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q4`
+- [Self-Evolving Multi-Agent Collaboration Networks for Software Development](https://arxiv.org/abs/2410.16946) [review](paper-reviews/review-2410.16946-evomac.md) - LLM-driven multi-agent collaboration (MAC) systems have demonstrated impressive capabilities in automatic software development at the function level. However, their heavy reliance on human design limits thei...
+  `content:2024-10-22` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q4`
+- [RL-STaR: Theoretical Analysis of Reinforcement Learning Frameworks for Self-Taught Reasoner](https://arxiv.org/abs/2410.23912) [review](paper-reviews/review-2410.23912-rl-star-theoretical-analysis-of-reinforcement-learning-frameworks-for.md) - The reasoning abilities of large language models (LLMs) have improved with chain-of-thought (CoT) prompting, allowing models to solve complex tasks stepwise. However, training CoT capabilities requires detai...
+  `content:2024-10-31` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q4`
+- [WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning](https://arxiv.org/abs/2411.02337) [review](paper-reviews/review-2411.02337-webrl-training-llm-web-agents-via-self-evolving-online-curriculum-rein.md) - Self-evolving online curriculum RL framework for training high-performance web agents using open LLMs. Incorporates self-evolving curriculum generating new tasks from unsuccessful attempts, outcome-supervise...
+  `content:2024-11-04` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q4`
+- [Self-Improvement in Language Models: The Sharpening Mechanism](https://arxiv.org/abs/2412.01951) [review](paper-reviews/review-2412.01951-self-improvement-in-language-models-the-sharpening-mechanism.md) - Recent work in language modeling has raised the possibility of self-improvement, where a language models evaluates and refines its own generations to achieve higher performance without external feedback. It...
+  `content:2024-12-02` `collected:2026-05-21T00:00:00+08:00` `slice:2024-Q4`
 
-| # | 仓库 | 分类 | 主题 | 功能标签 | Stars | 时间片 |
-|---:|---|---|---|---|---:|---|
-| 1 | [0xsanei/darwinia](https://github.com/0xsanei/darwinia) | 框架/framework | evolution | benchmark-eval | 102 | 2026-05 |
-| 2 | [adam-s/intercept](https://github.com/adam-s/intercept) | 应用/application | evaluation | framework-runtime | 127 | 2026-05 |
-| 3 | [agent-ecosystem/skill-validator](https://github.com/agent-ecosystem/skill-validator) | 工具/tool | skill | benchmark-eval | 47 | 2026-05 |
-| 4 | [aimagelab/mammoth](https://github.com/aimagelab/mammoth) | 框架/framework | evaluation | framework-runtime | 812 | unknown |
-| 5 | [aisa-group/skill-inject](https://github.com/aisa-group/skill-inject) | 评测/evaluation | skill | benchmark-eval | 73 | 2026-05 |
-| 6 | [AMA-Bench/AMA-Bench](https://github.com/AMA-Bench/AMA-Bench) | 评测/evaluation | memory | benchmark-eval | 40 | 2026-05 |
-| 7 | [angrysky56/reflective-agent-architecture](https://github.com/angrysky56/reflective-agent-architecture) | 评测/evaluation | evaluation | benchmark-eval | 5 | 2025-12 |
-| 8 | [archishmansengupta/autovoiceevals](https://github.com/archishmansengupta/autovoiceevals) | 评测/evaluation | evaluation | benchmark-eval | 149 | 2026-05 |
-| 9 | [arthurmgraf/graphmind](https://github.com/arthurmgraf/graphmind) | 框架/framework | evaluation | framework-runtime | 1 | unknown |
-| 10 | [autohandai/code-cli](https://github.com/autohandai/code-cli) | 应用/application | evaluation | benchmark-eval | 110 | 2026-05 |
-| 11 | [beeevita/evoprompt](https://github.com/beeevita/evoprompt) | 评测/evaluation | prompt-optimization | benchmark-eval | 238 | unknown |
-| 12 | [bennettschwartz/membrane](https://github.com/bennettschwartz/membrane) | 评测/evaluation | memory | benchmark-eval | 93 | unknown |
-| 13 | [bruno686/visplay](https://github.com/bruno686/visplay) | 评测/evaluation | evolution | benchmark-eval | 57 | unknown |
-| 14 | [CE0Alex/skill-hunter](https://github.com/CE0Alex/skill-hunter) | 评测/evaluation | skill | benchmark-eval | 22 | 2026-05 |
-| 15 | [channinglua/prax-agent](https://github.com/channinglua/prax-agent) | 框架/framework | evaluation | framework-runtime | 294 | 2026-05 |
-| 16 | [chuacheowhuan/gym-continuousdoubleauction](https://github.com/chuacheowhuan/gym-continuousdoubleauction) | 评测/evaluation | coding-agent | benchmark-eval | 153 | unknown |
-| 17 | [circlemind-ai/fast-graphrag](https://github.com/circlemind-ai/fast-graphrag) | 评测/evaluation | memory | benchmark-eval | 3 | unknown |
-| 18 | [claw-bench/claw-bench](https://github.com/claw-bench/claw-bench) | 评测/evaluation | evaluation | benchmark-eval | 171 | 2026-05 |
-| 19 | [claw-eval/claw-eval](https://github.com/claw-eval/claw-eval) | 评测/evaluation | evaluation | benchmark-eval | 606 | 2026-03 |
-| 20 | [codexstar69/bug-hunter](https://github.com/codexstar69/bug-hunter) | 框架/framework | evaluation | framework-runtime | 380 | 2026-03 |
-| 21 | [cxcscmu/SkillLearnBench](https://github.com/cxcscmu/SkillLearnBench) | 评测/evaluation | skill | benchmark-eval | 21 | 2026-05 |
-| 22 | [darkrishabh/agent-skills-eval](https://github.com/darkrishabh/agent-skills-eval) | 评测/benchmark | evaluation | benchmark-eval | 34 | 2026-05 |
-| 23 | [emson/elfmem](https://github.com/emson/elfmem) | 框架/framework | memory | benchmark-eval | 53 | 2026-05 |
-| 24 | [enajx/es](https://github.com/enajx/es) | 评测/evaluation | evolution | benchmark-eval | 7 | unknown |
-| 25 | [evermind-ai/everos?tab=readme-ov-file](https://github.com/evermind-ai/everos?tab=readme-ov-file) | 评测/evaluation | evaluation | benchmark-eval | 5 | 2025-02 |
-| 26 | [faveos8758/reflexion-agent-ts](https://github.com/faveos8758/reflexion-agent-ts) | 评测/evaluation | evaluation | framework-runtime | 20 | unknown |
-| 27 | [feesuu/cluerag](https://github.com/feesuu/cluerag) | 评测/evaluation | memory | benchmark-eval | 26 | unknown |
-| 28 | [flowersteam/teachmyagent](https://github.com/flowersteam/teachmyagent) | 框架/framework | evaluation | framework-runtime | 77 | unknown |
-| 29 | [garrus800-stack/genesis-agent](https://github.com/garrus800-stack/genesis-agent) | 评测/evaluation | evaluation | benchmark-eval | 24 | unknown |
-| 30 | [GeniusHTX/SWE-Skills-Bench](https://github.com/GeniusHTX/SWE-Skills-Bench) | 评测/evaluation | evaluation | benchmark-eval | 42 | 2026-05 |
-| 31 | [gensi-thuair/flex](https://github.com/gensi-thuair/flex) | 论文代码/paper-code | evaluation | benchmark-eval | 78 | 2026-05 |
-| 32 | [gepa-ai/optimize-anything-artifact](https://github.com/gepa-ai/optimize-anything-artifact) | 评测/evaluation | prompt-optimization | benchmark-eval | 0 | unknown |
-| 33 | [greyhaven-ai/autocontext](https://github.com/greyhaven-ai/autocontext) | 框架/framework | memory | benchmark-eval | 1 | 2026-04 |
-| 34 | [gustolychees/contribai](https://github.com/gustolychees/contribai) | 评测/evaluation | evaluation | benchmark-eval | 0 | unknown |
-| 35 | [hkuds/ai-researcher](https://github.com/hkuds/ai-researcher) | 评测/evaluation | research-agent | benchmark-eval | 5 | unknown |
-| 36 | [huggingface/smolagents](https://github.com/huggingface/smolagents) | 评测/evaluation | evaluation | benchmark-eval | 27 | unknown |
-| 37 | [HUST-AI-HYZ/MemoryAgentBench](https://github.com/HUST-AI-HYZ/MemoryAgentBench) | 评测/evaluation | memory | benchmark-eval | 341 | 2026-05 |
-| 38 | [hwfengcs/dm-code-agent](https://github.com/hwfengcs/dm-code-agent) | 评测/evaluation | evaluation | benchmark-eval | 135 | 2026-05 |
-| 39 | [ilearn-lab/evoharness](https://github.com/ilearn-lab/evoharness) | 框架/framework | evaluation | benchmark-eval | 52 | 2026-05 |
-| 40 | [imgeorgiev/pwm](https://github.com/imgeorgiev/pwm) | 评测/evaluation | evaluation | benchmark-eval | 68 | unknown |
-| 41 | [inclusionai/aworld](https://github.com/inclusionai/aworld) | 评测/evaluation | evaluation | benchmark-eval | 1 | unknown |
-| 42 | [internlm/polar](https://github.com/internlm/polar) | 评测/evaluation | evaluation | benchmark-eval | 163 | unknown |
-| 43 | [jarvis-xs/se-agent](https://github.com/jarvis-xs/se-agent) | 评测/evaluation | evaluation | framework-runtime | 274 | 2026-05 |
-| 44 | [jennyzzt/dgm](https://github.com/jennyzzt/dgm) | 应用/application | evaluation | benchmark-eval | 2 | 2026-05 |
-| 45 | [JordanMcCann/agentmemory](https://github.com/JordanMcCann/agentmemory) | 评测/evaluation | memory | benchmark-eval | 23 | 2026-05 |
-| 46 | [kadubon/audit-closed-ai-scientist](https://github.com/kadubon/audit-closed-ai-scientist) | 评测/evaluation | research-agent | benchmark-eval | 0 | 2026-03 |
-| 47 | [kayba-ai/recursive-improve](https://github.com/kayba-ai/recursive-improve) | 应用/application | evolution | benchmark-eval | 194 | 2026-05 |
-| 48 | [kitfunso/hippo-memory](https://github.com/kitfunso/hippo-memory) | 工具/tool | memory | benchmark-eval | 675 | 2026-05 |
-| 49 | [knowledgexlab/muse](https://github.com/knowledgexlab/muse) | 应用/application | evaluation | benchmark-eval | 88 | 2026-05 |
-| 50 | [labicon/curricullm](https://github.com/labicon/curricullm) | 评测/evaluation | evaluation | benchmark-eval | 27 | unknown |
-| 51 | [langchain-ai/open-swe](https://github.com/langchain-ai/open-swe) | 评测/evaluation | coding-agent | benchmark-eval | 9 | unknown |
-| 52 | [lean-dojo/leanagent](https://github.com/lean-dojo/leanagent) | 框架/framework | evaluation | framework-runtime | 68 | unknown |
-| 53 | [linear95/spag](https://github.com/linear95/spag) | 评测/evaluation | evaluation | benchmark-eval | 144 | 2026-05 |
-| 54 | [llmprogram/textgrad](https://github.com/llmprogram/textgrad) | 评测/evaluation | coding-agent | benchmark-eval | 0 | 2026-05 |
-| 55 | [lyl1015/jarvisevo](https://github.com/lyl1015/jarvisevo) | 评测/evaluation | evaluation | benchmark-eval | 401 | 2026-05 |
-| 56 | [matebenyovszky/healing-agent](https://github.com/matebenyovszky/healing-agent) | 评测/evaluation | evaluation | benchmark-eval | 23 | 2024-Q1 |
-| 57 | [maxnorm8650/medagentsim](https://github.com/maxnorm8650/medagentsim) | 评测/evaluation | evolution | research-artifact | 163 | 2026-05 |
-| 58 | [mem0ai/memory-benchmarks](https://github.com/mem0ai/memory-benchmarks) | 评测/evaluation | memory | benchmark-eval | 33 | 2026-05 |
-| 59 | [MemTensor/HaluMem](https://github.com/MemTensor/HaluMem) | 评测/evaluation | memory | benchmark-eval | 138 | 2025-11 |
-| 60 | [mfolsom/rlvr-world](https://github.com/mfolsom/rlvr-world) | 评测/evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 61 | [microsoft/STATE-Bench](https://github.com/microsoft/STATE-Bench) | 评测/evaluation | memory | benchmark-eval | 25 | 2026-05 |
-| 62 | [microsoft/WindowsAgentArena](https://github.com/microsoft/WindowsAgentArena) | 评测/evaluation | evaluation | benchmark-eval | 861 | 2026-05 |
-| 63 | [modelscope/agentjet](https://github.com/modelscope/agentjet) | 评测/evaluation | evaluation | framework-runtime | 208 | 2026-05 |
-| 64 | [n4m3z/forge-council](https://github.com/n4m3z/forge-council) | 框架/framework | evaluation | framework-runtime | 9 | 2026-05 |
-| 65 | [neosigmaai/auto-harness](https://github.com/neosigmaai/auto-harness) | 框架/framework | evaluation | benchmark-eval | 507 | 2026-05 |
-| 66 | [ngoodman/metaprompt](https://github.com/ngoodman/metaprompt) | 评测/evaluation | prompt-optimization | benchmark-eval | 88 | 2026-05 |
-| 67 | [nikivanstein/llamea](https://github.com/nikivanstein/llamea) | 评测/evaluation | evaluation | benchmark-eval | 105 | 2026-05 |
-| 68 | [noahshinn/reflexion](https://github.com/noahshinn/reflexion) | 论文代码/paper-code | memory | benchmark-eval | 3 | 2026-05 |
-| 69 | [noahshinn/reflexion-draft](https://github.com/noahshinn/reflexion-draft) | 框架/framework | memory | benchmark-eval | 388 | 2026-05 |
-| 70 | [noahshinn024/reflexion-human-eval](https://github.com/noahshinn024/reflexion-human-eval) | 评测/evaluation | memory | benchmark-eval | 3 | 2026-05 |
-| 71 | [openclaw/clawbench](https://github.com/openclaw/clawbench) | 评测/evaluation | evaluation | benchmark-eval | 97 | 2026-04 |
-| 72 | [opendatabox/workspace-bench](https://github.com/opendatabox/workspace-bench) | 评测/evaluation | evaluation | benchmark-eval | 14 | 2025-05 |
-| 73 | [OpenHands/benchmarks](https://github.com/OpenHands/benchmarks) | 评测/evaluation | evaluation | benchmark-eval | 85 | 2026-05 |
-| 74 | [openmemind/memind](https://github.com/openmemind/memind) | 框架/framework | memory | benchmark-eval | 787 | 2026-05 |
-| 75 | [opentracy/opentracy](https://github.com/opentracy/opentracy) | 评测/evaluation | evaluation | benchmark-eval | 101 | 2026-05 |
-| 76 | [os-copilot/os-copilot](https://github.com/os-copilot/os-copilot) | 框架/framework | evaluation | benchmark-eval | 1 | 2024-Q1 |
-| 77 | [oxen-ai/self-rewarding-language-models](https://github.com/oxen-ai/self-rewarding-language-models) | 评测/evaluation | prompt-optimization | benchmark-eval | 134 | 2026-05 |
-| 78 | [pathway/alphaxos](https://github.com/pathway/alphaxos) | 评测/evaluation | evaluation | benchmark-eval | 12 | 2026-05 |
-| 79 | [pgg3/evotoolkit](https://github.com/pgg3/evotoolkit) | 评测/evaluation | evaluation | benchmark-eval | 68 | 2026-03 |
-| 80 | [pinchbench/skill](https://github.com/pinchbench/skill) | 评测/evaluation | evaluation | benchmark-eval | 1200 | 2026-05 |
-| 81 | [polarseeker/openseeker](https://github.com/polarseeker/openseeker) | 评测/evaluation | evaluation | benchmark-eval | 711 | 2026-05 |
-| 82 | [polya20/textgrad](https://github.com/polya20/textgrad) | 评测/evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 83 | [princeton-pli/hal-harness](https://github.com/princeton-pli/hal-harness) | 评测/evaluation | evaluation | benchmark-eval | 289 | 2026-05 |
-| 84 | [reflexioai/reflexio](https://github.com/reflexioai/reflexio) | 框架/framework | evaluation | benchmark-eval | 220 | 2026-05 |
-| 85 | [rlhflow/online-rlhf](https://github.com/rlhflow/online-rlhf) | 评测/evaluation | evaluation | benchmark-eval | 545 | 2026-05 |
-| 86 | [rlhflow/self-rewarding-reasoning-llm](https://github.com/rlhflow/self-rewarding-reasoning-llm) | 评测/evaluation | evaluation | benchmark-eval | 232 | 2026-05 |
-| 87 | [rllm-org/rllm](https://github.com/rllm-org/rllm) | 评测/evaluation | evaluation | benchmark-eval | 5 | 2026-05 |
-| 88 | [rmanluo/gfm-rag](https://github.com/rmanluo/gfm-rag) | 评测/evaluation | memory | benchmark-eval | 259 | 2026-04 |
-| 89 | [rucbm/laser](https://github.com/rucbm/laser) | 评测/evaluation | evaluation | benchmark-eval | 36 | 2026-05 |
-| 90 | [sakanaai/ai-scientist](https://github.com/sakanaai/ai-scientist) | 评测/evaluation | research-agent | benchmark-eval | 13 | 2026-05 |
-| 91 | [sebastianbrzustowicz/robot-sumo-rl](https://github.com/sebastianbrzustowicz/robot-sumo-rl) | 评测/evaluation | evaluation | benchmark-eval | 18 | 2026-05 |
-| 92 | [seetrex-ai/laimark](https://github.com/seetrex-ai/laimark) | 评测/evaluation | evaluation | benchmark-eval | 4 | 2026-04 |
-| 93 | [self-play-language-models/spin-peft](https://github.com/self-play-language-models/spin-peft) | 评测/evaluation | evaluation | benchmark-eval | 4 | 2026-05 |
-| 94 | [sentrux/sentrux](https://github.com/sentrux/sentrux) | 框架/framework | evaluation | benchmark-eval | 2 | 2026-05 |
-| 95 | [ServiceNow/BrowserGym](https://github.com/ServiceNow/BrowserGym) | 评测/evaluation | evaluation | benchmark-eval | 1200 | 2026-05 |
-| 96 | [sethkarten/continual-harness](https://github.com/sethkarten/continual-harness) | 评测/evaluation | evaluation | benchmark-eval | 106 | 2026-05 |
-| 97 | [shaoshuai0605/misevolution](https://github.com/shaoshuai0605/misevolution) | 评测/evaluation | evolution | tool-module | 76 | 2026-05 |
-| 98 | [shehrum/grf-self-play](https://github.com/shehrum/grf-self-play) | 评测/evaluation | research-agent | benchmark-eval | 4 | 2026-05 |
-| 99 | [shingo257/gitnexus](https://github.com/shingo257/gitnexus) | 框架/framework | evaluation | framework-runtime | 0 | 2026-05 |
-| 100 | [siddharth-1001/agent-eval-harness](https://github.com/siddharth-1001/agent-eval-harness) | 框架/framework | evaluation | framework-runtime | 20 | 2026-05 |
-| 101 | [spillwavesolutions/agent-brain](https://github.com/spillwavesolutions/agent-brain) | 评测/evaluation | evaluation | benchmark-eval | 101 | 2026-03 |
-| 102 | [studio-intrinsic/turbo-gepa](https://github.com/studio-intrinsic/turbo-gepa) | 评测/evaluation | prompt-optimization | benchmark-eval | 3 | 2026-05 |
-| 103 | [sunzey/seagent](https://github.com/sunzey/seagent) | 论文代码/paper-code | evaluation | benchmark-eval | 246 | 2026-05 |
-| 104 | [swe-bench/swe-bench](https://github.com/swe-bench/swe-bench) | 评测/evaluation | evaluation | benchmark-eval | 5 | 2026-05 |
-| 105 | [synaptent/aragora](https://github.com/synaptent/aragora) | 评测/evaluation | memory | benchmark-eval | 7 | 2026-05 |
-| 106 | [thesdes/textgrad](https://github.com/thesdes/textgrad) | 评测/evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 107 | [thu-nics/mars](https://github.com/thu-nics/mars) | 评测/evaluation | evaluation | benchmark-eval | 48 | 2026-05 |
-| 108 | [thudm/webrl](https://github.com/thudm/webrl) | 应用/application | evolution | benchmark-eval | 524 | 2026-05 |
-| 109 | [thuml/rlvr-world](https://github.com/thuml/rlvr-world) | 评测/evaluation | evaluation | benchmark-eval | 251 | 2026-05 |
-| 110 | [tiger-ai-lab/openresearcher](https://github.com/tiger-ai-lab/openresearcher) | 评测/evaluation | research-agent | benchmark-eval | 756 | 2026-05 |
-| 111 | [tylerdotai/meta-harness-evolver](https://github.com/tylerdotai/meta-harness-evolver) | 框架/framework | evaluation | benchmark-eval | 14 | unknown |
-| 112 | [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | 评测/evaluation | memory | benchmark-eval | 43 | 2026-05 |
-| 113 | [vicsanity623/pyob](https://github.com/vicsanity623/pyob) | 评测/evaluation | evaluation | benchmark-eval | 2 | 2026-05 |
-| 114 | [werner-duvaud/muzero-general](https://github.com/werner-duvaud/muzero-general) | 评测/evaluation | evaluation | benchmark-eval | 2 | 2026-05 |
-| 115 | [workofart/selfplay-tictactoe](https://github.com/workofart/selfplay-tictactoe) | 评测/evaluation | evaluation | benchmark-eval | 0 | early |
-| 116 | [x1aox1a/word2world](https://github.com/x1aox1a/word2world) | 评测/evaluation | evaluation | benchmark-eval | 62 | 2026-05 |
-| 117 | [xai-liacs/llamea](https://github.com/xai-liacs/llamea) | 评测/evaluation | evaluation | benchmark-eval | 105 | 2026-05 |
-| 118 | [xanther-ai/xce-benchmarks](https://github.com/xanther-ai/xce-benchmarks) | 评测/evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 119 | [xinhuagu/aceclaw](https://github.com/xinhuagu/aceclaw) | 框架/framework | evaluation | framework-runtime | 4 | 2026-05 |
-| 120 | [xizaoqu/worldmem](https://github.com/xizaoqu/worldmem) | 评测/evaluation | memory | benchmark-eval | 359 | 2025-11 |
-| 121 | [xlang-ai/OSWorld](https://github.com/xlang-ai/OSWorld) | 评测/evaluation | evaluation | benchmark-eval | 2900 | 2026-05 |
-| 122 | [xuchen-li/llm-arxiv-daily](https://github.com/xuchen-li/llm-arxiv-daily) | 教程/tutorial | evaluation | resource-index | 144 | 2026-05 |
-| 123 | [yang1999code/controllable-agent](https://github.com/yang1999code/controllable-agent) | 框架/framework | evaluation | framework-runtime | 105 | 2026-05 |
-| 124 | [yinbo0927/fate](https://github.com/yinbo0927/fate) | 评测/evaluation | evolution | benchmark-eval | 16 | unknown |
-| 125 | [zaixizhang/stella](https://github.com/zaixizhang/stella) | 应用/application | evaluation | benchmark-eval | 141 | 2026-05 |
-| 126 | [zanwenfu/auto-code-rover](https://github.com/zanwenfu/auto-code-rover) | 评测/evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 127 | [zbinxp/deer-flow](https://github.com/zbinxp/deer-flow) | 评测/evaluation | memory | benchmark-eval | 0 | 2026-02 |
-| 128 | [zed-industries/zed](https://github.com/zed-industries/zed) | 评测/evaluation | evaluation | benchmark-eval | 83 | 2026-05 |
-| 129 | [zhang677/accelopt](https://github.com/zhang677/accelopt) | 论文代码/paper-code | evaluation | benchmark-eval | 43 | unknown |
-| 130 | [zhentingwang/dump](https://github.com/zhentingwang/dump) | 评测/evaluation | evaluation | benchmark-eval | 33 | 2026-05 |
-| 131 | [zhonghaojiang/awesome-issue-solving](https://github.com/zhonghaojiang/awesome-issue-solving) | 教程/tutorial | evaluation | resource-index | 9 | 2026-01 |
-| 132 | [zixuanfeng-nyu/textgrad](https://github.com/zixuanfeng-nyu/textgrad) | 评测/evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 133 | [zjunlp/knowself](https://github.com/zjunlp/knowself) | 评测/evaluation | evaluation | benchmark-eval | 93 | 2024-Q3 |
-| 134 | [zjunlp/worldmind](https://github.com/zjunlp/worldmind) | 评测/evaluation | evaluation | benchmark-eval | 35 | 2026-05 |
-| 135 | [zou-group/textgrad](https://github.com/zou-group/textgrad) | 评测/evaluation | evaluation | benchmark-eval | 3 | 2026-05 |
-| 136 | [DSAIL-Memory/EvoMemBench](https://github.com/DSAIL-Memory/EvoMemBench) | 评测/evaluation | memory | benchmark-eval | 0 | 2026-05 |
+### 2023
 
-</details>
+- [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366) [review](paper-reviews/review-2303.11366-reflexion.md) - Computer Science > Artificial Intelligence arXiv:2303.11366 (cs) Submitted on 20 Mar 2023 (v1), last revised 10 Oct 2023 (this version, v4) # Reflexion: Language Agents with Verbal Reinforcement Learning Aut...
+  `content:2023-03-20` `collected:2026-05-21T00:00:00+08:00` `slice:2023-Q1`
+- [Self-Refine: Iterative Refinement with Self-Feedback](https://arxiv.org/abs/2303.17651) [review](paper-reviews/review-2303.17651-self-refine-iterative-refinement-with-self-feedback.md) - Computer Science > Computation and Language arXiv:2303.17651 (cs) Submitted on 30 Mar 2023 (v1), last revised 25 May 2023 (this version, v2) # Self-Refine: Iterative Refinement with Self-Feedback Authors: Am...
+  `content:2023-03-30` `collected:2026-05-21T00:00:00+08:00` `slice:2023-Q1`
+- [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442) [review](paper-reviews/review-2304.03442-generative-agents-interactive-simulacra-of-human-behavior.md) - Computer Science > Human-Computer Interaction arXiv:2304.03442 (cs) Submitted on 7 Apr 2023 (v1), last revised 6 Aug 2023 (this version, v2) # Generative Agents: Interactive Simulacra of Human Behavior Autho...
+  `content:2023-04-07` `collected:2026-05-21T00:00:00+08:00` `slice:2023-Q2`
+- [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325) [review](paper-reviews/review-2305.14325-multi-agent-debate.md) - Computer Science > Computation and Language arXiv:2305.14325 (cs) Submitted on 23 May 2023 # Improving Factuality and Reasoning in Language Models through Multiagent Debate Authors: Yilun Du, Shuang Li, Anto...
+  `content:2023-05-23` `collected:2026-05-21T00:00:00+08:00` `slice:2023-Q2`
+- [Voyager: An Open-Ended Embodied Agent with Large Language Models](https://arxiv.org/abs/2305.16291) [review](paper-reviews/review-2305.16291-voyager.md) - Computer Science > Artificial Intelligence arXiv:2305.16291 (cs) Submitted on 25 May 2023 (v1), last revised 19 Oct 2023 (this version, v2) # Voyager: An Open-Ended Embodied Agent with Large Language Models...
+  `content:2023-05-25` `collected:2026-05-21T00:00:00+08:00` `slice:2023-Q2`
+- [ExpeL: LLM Agents Are Experiential Learners](https://arxiv.org/abs/2308.10144) [review](paper-reviews/review-2308.10144-expel.md) - Computer Science > Machine Learning arXiv:2308.10144 (cs) Submitted on 20 Aug 2023 (v1), last revised 20 Dec 2024 (this version, v3) # ExpeL: LLM Agents Are Experiential Learners Authors: Andrew Zhao, Daniel...
+  `content:2023-08-20` `collected:2026-05-21T00:00:00+08:00` `slice:2023-Q3`
+- [LLMRefine: Pinpointing and Refining Large Language Models via Fine-Grained Actionable Feedback](https://arxiv.org/abs/2311.09336) [review](paper-reviews/review-2311.09336-llmrefine-pinpointing-and-refining-large-language-models-via-fine-grai.md) - Computer Science > Computation and Language arXiv:2311.09336 (cs) Submitted on 15 Nov 2023 (v1), last revised 25 Oct 2024 (this version, v5) # LLMRefine: Pinpointing and Refining Large Language Models via Fi...
+  `content:2023-11-15` `collected:2026-05-21T00:00:00+08:00` `slice:2023-Q4`
+- [Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision](https://arxiv.org/abs/2312.09390) [review](paper-reviews/review-2312.09390-weak-to-strong-generalization-eliciting-strong-capabilities-with-weak.md) - Computer Science > Computation and Language arXiv:2312.09390 (cs) Submitted on 14 Dec 2023 # Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision Authors: Collin Burns, Pavel Iz...
+  `content:2023-12-14` `collected:2026-05-21T00:00:00+08:00` `slice:2023-Q4`
 
-## 数据管线与仓库维护
+### 2022
 
-```mermaid
-flowchart LR
-  RAW["raw-* 原始素材"] --> PROCESSED["analysis / research / projects / paper-reviews 加工分析"]
-  PROCESSED --> WORK["survey / paper-drafts / site / scripts 工作产物"]
-  WORK --> RESULTS["reports / output / site/public / PDFs 结果输出"]
-  OPS["README / AGENTS / docs/indexes 管理规则"] -. governs .-> RAW
-  OPS -. governs .-> PROCESSED
-  OPS -. governs .-> WORK
-  OPS -. governs .-> RESULTS
-```
+- [STaR: Bootstrapping Reasoning With Reasoning](https://arxiv.org/abs/2203.14465) [review](paper-reviews/review-2203.14465-star.md) - Computer Science > Machine Learning arXiv:2203.14465 (cs) Submitted on 28 Mar 2022 (v1), last revised 20 May 2022 (this version, v2) # STaR: Bootstrapping Reasoning With Reasoning Authors: Eric Zelikman, Yuh...
+  `content:2022-03-28` `collected:2026-05-21T00:00:00+08:00` `slice:early`
 
-| Layer | Canonical paths | 用途 |
-|---|---|---|
-| Raw evidence | `raw-github/`, `raw-papers/`, `raw-blogs/`, `raw-social/`, `raw-social-rank/` | 来源 capture、时间戳、原始公开证据 |
-| Processed analysis | `analysis/`, `research/`, `projects/`, `paper-reviews/`, `papers/`, `cc-materials/` | 分类、交叉分析、项目 model card、论文 review |
-| Work artifacts | `survey/`, `paper-drafts/`, `site/`, `scripts/`, `data-engine/` | 综述、论文草稿、站点源码、生成器、图表、中间工作 |
-| Results | `reports/`, `output/`, `site/public/reports/`, `paper-drafts/main.pdf`, `survey/latex/main.pdf`, `site/dist/` | 可发布报告、PDF、静态站点输出、下载资源 |
-| Ops | `docs/`, `AGENTS.md`, `CLAUDE.md`, `CLOUD.md`, `CONTENT_INDEX.md` | 规则、索引、发布检查、协作手册 |
+## 深度分析产出 / Deep Analysis Outputs
 
-## 迭代闭环
+> 以下为本项目团队产出的深度分析内容，包含项目分析报告、论文精读笔记和跨领域研究。
 
-每次人工迭代或定时任务结束前，都要把本轮有价值变化落到读者入口和发布面：更新相关 `README.md` / `README-ZH.md` / `README-EN.md`、`CONTENT_INDEX.md`、`docs/indexes/`、`site/src/`、`site/public/reports/`、SEO/站点公开入口和必要图表数据。
+### 项目分析报告 / Project Analysis Reports
 
-提交前先检查 `git status`，只提交本轮相关改动，保护无关用户改动。没有变化可提交时，也要明确说明 clean state；有变化则跑对应验证并主动提交。
+> 10 个开源项目的深度分析报告，统一格式，涵盖技术栈、架构图、实现方法和横向对比。
 
-## 必要验证
+| 项目 | Stars | 进化模式 | 报告 |
+|------|------:|----------|------|
+| OpenEvolve | 6,358 | 进化/搜索 → 评估器 | [projects/algorithmicsuperintelligence__openevolve.md](projects/algorithmicsuperintelligence__openevolve.md) |
+| Agents (aiwaves) | 5,928 | 进化/搜索 → 智能体编排 | [projects/aiwaves_cn__agents.md](projects/aiwaves_cn__agents.md) |
+| Reflexion | 3,158 | 反思记忆 → 反馈-精炼 | [projects/noahshinn__reflexion.md](projects/noahshinn__reflexion.md) |
+| AgentEvolver | 1,441 | 评估器 → 训练循环 | [projects/modelscope__agentevolver.md](projects/modelscope__agentevolver.md) |
+| Self-Refine | 805 | 反馈-精炼 | [projects/madaan__self_refine.md](projects/madaan__self_refine.md) |
+| SE-Agent | 274 | 评估器 → 智能体编排 | [projects/jarvis_xs__se_agent.md](projects/jarvis_xs__se_agent.md) |
+| Science-CodeEvolve | 97 | 进化/搜索 → 评估器 | [projects/inter_co__science_codeevolve.md](projects/inter_co__science_codeevolve.md) |
+| SCOPE | 77 | 进化/搜索循环 | [projects/jarvispei__scope.md](projects/jarvispei__scope.md) |
+| LLM-Self-Judge | 43 | 评估器 → 训练循环 | [projects/oppo_mente_lab__llm_self_judge.md](projects/oppo_mente_lab__llm_self_judge.md) |
+| DARWIN | 41 | 反思记忆 | [projects/zju_llm_safety__darwin.md](projects/zju_llm_safety__darwin.md) |
 
-根据改动范围选择命令。README / index 变化至少刷新索引并验证站点构建。
+索引：[projects/INDEX.md](projects/INDEX.md) | 清单：[projects/projects_manifest.json](projects/projects_manifest.json)
 
-```bash
-node scripts/generate_project_indexes.mjs
-python3 scripts/enforce_raw_timestamps.py
-node scripts/analyze_github_project_data.mjs
-(cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex)
-(cd survey/latex && xelatex -interaction=nonstopmode -halt-on-error main.tex)
-(cd site && npm run build)
-```
+### 研究型项目分析 / Research Project Analyses
 
-## 公开入口
+> 9 个关键项目的中文深度分析，涵盖核心模块、技术亮点和与 Self Evolve 的关联。
 
-- GitHub repository: <https://github.com/Shiyao-Huang/awesome-agent-evolution>
-- GitHub Pages: <https://shiyao-huang.github.io/awesome-agent-evolution/>
-- Project pages: <https://shiyao-huang.github.io/awesome-agent-evolution/projects/>
-- Research page: <https://shiyao-huang.github.io/awesome-agent-evolution/research/>
-- Graph page: <https://shiyao-huang.github.io/awesome-agent-evolution/graph/>
+| # | 项目 | 关联度 | 报告 |
+|---|------|--------|------|
+| 01 | OPRO: LLM 作为优化器 | 很高 | [research/projects/01-opro-llm-as-optimizer.md](research/projects/01-opro-llm-as-optimizer.md) |
+| 02 | OpenELM: 大模型进化 | 高 | [research/projects/02-openelm-evolution-large-models.md](research/projects/02-openelm-evolution-large-models.md) |
+| 03 | ADAS: 自动化 Agent 设计 | 很高 | [research/projects/03-adas-automated-design-agentic-systems.md](research/projects/03-adas-automated-design-agentic-systems.md) |
+| 04 | FunSearch: 数学发现 | 很高 | [research/projects/04-funsearch-mathematical-discoveries.md](research/projects/04-funsearch-mathematical-discoveries.md) |
+| 05 | AutoML-Agent | 很高 | [research/projects/05-automl-agent-multi-agent.md](research/projects/05-automl-agent-multi-agent.md) |
+| 06 | CoML: ML Copilot | 中高 | [research/projects/06-coml-mlcopilot.md](research/projects/06-coml-mlcopilot.md) |
+| 07 | MetaGPT | 高 | [research/projects/07-metagpt-multi-agent-framework.md](research/projects/07-metagpt-multi-agent-framework.md) |
+| 08 | AutoGPT | 中高 | [research/projects/08-autogpt-autonomous-agent.md](research/projects/08-autogpt-autonomous-agent.md) |
+| 09 | CrewAI | 中高 | [research/projects/09-crewai-multi-agent-framework.md](research/projects/09-crewai-multi-agent-framework.md) |
 
-## 引用与协议
+### 论文精读笔记 / Paper Reading Notes
 
-引用、转载、改编或在论文/网站/项目中使用本仓库的原创分析、分类、索引和图表时，请注明当前 repo：
+> 12 篇核心论文的精读笔记，覆盖 Agent 自进化全链路。
 
-Self Evolve / Awesome Self-Evolving AI Agents, aha team, <https://github.com/Shiyao-Huang/awesome-agent-evolution>
+| # | 论文 | 核心贡献 | 笔记 |
+|---|------|----------|------|
+| 01 | Agent Symbolic Learning | 符号化 Agent 学习 | [research/papers/01-agent-symbolic-learning.md](research/papers/01-agent-symbolic-learning.md) |
+| 02 | Darwin Gödel Machine | 达尔文式自改进 | [research/papers/02-darwin-godel-machine.md](research/papers/02-darwin-godel-machine.md) |
+| 03 | Gödel Agent | 自引用 Agent 架构 | [research/papers/03-godel-agent.md](research/papers/03-godel-agent.md) |
+| 04 | ADAS | 自动化架构搜索 | [research/papers/04-adas.md](research/papers/04-adas.md) |
+| 05 | Reflexion | 语言反思强化学习 | [research/papers/05-reflexion.md](research/papers/05-reflexion.md) |
+| 06 | Self-Refine | 迭代式自反馈精炼 | [research/papers/06-self-refine.md](research/papers/06-self-refine.md) |
+| 07 | Absolute Zero | 零样本自进化 | [research/papers/07-absolute-zero.md](research/papers/07-absolute-zero.md) |
+| 08 | AlphaEvolve | Gemini 驱动进化编码 | [research/papers/08-alphaevolve.md](research/papers/08-alphaevolve.md) |
+| 09 | RISE | 递归式自改进 | [research/papers/09-rise.md](research/papers/09-rise.md) |
+| 10 | RAGen | RAG 增强生成 | [research/papers/10-ragen.md](research/papers/10-ragen.md) |
+| 11 | SelfEvolve | 自进化框架 | [research/papers/11-selfevolve.md](research/papers/11-selfevolve.md) |
+| 12 | ReVeal | 验证引导进化学习 | [research/papers/12-reveal.md](research/papers/12-reveal.md) |
 
-推荐 BibTeX：
+### 跨领域研究 / Cross-Domain Research
 
-```bibtex
-@misc{aha_team_awesome_agent_evolution_2026,
-  title        = {Awesome Self-Evolving AI Agents: AI Agent Self-Evolution Index and Survey},
-  author       = {{aha team}},
-  year         = {2026},
-  howpublished = {\url{https://github.com/Shiyao-Huang/awesome-agent-evolution}},
-  note         = {Self Evolve research pipeline by aha team}
+五类研究循环的交叉分析与关系图谱：[papers/cross-domain/README.md](papers/cross-domain/README.md)
+
+LLM 自我改进作者关系网络：[papers/llm-self-improvement/06-author-network.md](papers/llm-self-improvement/06-author-network.md)
+
+### SEO 博客与网站 / SEO Blog & Site
+
+> 7 篇中文 SEO 博客 + 14 篇研究页面，围绕 Self Evolve 品牌。
+
+| 类型 | 数量 | 目录 |
+|------|------|------|
+| 博客文章（MDX） | 7 | site/src/content/blog/ |
+| 研究页面（MDX） | 14 | site/src/content/research/ |
+| 数据层（TS） | 4 | site/src/data/ |
+
+全产出索引：[CONTENT_INDEX.md](CONTENT_INDEX.md) | 交付摘要：[DELIVERY_SUMMARY.md](DELIVERY_SUMMARY.md)
+
+---
+
+## Cross-validation themes / 交叉验证主题
+
+The current corpus repeatedly shows five mismatches that should guide future Evolver rankings and survey updates. / 当前语料反复出现五类错配，应成为后续榜单和综述更新的核心判断标准。
+
+1. **Stars ≠ production readiness / Star数不等于生产可用** — popular repos still need observability, rollback, permissions, security, and cost controls.
+2. **Benchmark gains ≠ real-world reliability / Benchmark提升不等于真实可靠** — Mom Test evidence flags Goodharting, cherry-picking, and weak external validators.
+3. **Framework abundance ≠ integration simplicity / 框架多不等于集成简单** — abstraction opacity and deployment complexity remain major pain points.
+4. **Memory/self-evolution claims ≠ durable learning / 记忆与自进化声明不等于长期学习** — drift, context bloat, stale traces, and versioning must be audited.
+5. **Tutorial traffic ≠ reusable infrastructure / 教程流量不等于基础设施** — learning resources are SEO entry points, but Evolver must connect them to repo, paper, pain-point, and benchmark evidence.
+
+## JSON-LD / SEO structured data
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Awesome Evolver — Agent Evolution Platform",
+  "description": "Bilingual awesome-list and structured index for self-evolving agents, agent evolution frameworks, benchmarks, demos, and papers.",
+  "dateModified": "2026-05-22",
+  "inLanguage": [
+    "en",
+    "zh-CN"
+  ],
+  "about": [
+    "Agent Evolution",
+    "Self-evolving Agents",
+    "AI Agent Frameworks",
+    "Agent Benchmarks",
+    "Evolver"
+  ]
 }
 ```
+
+## Contributing / 贡献
+
+Please submit new resources with: name, URL, category, stars or impact signal, content_timestamp, collected_at, time_slice, evidence source, and whether it is a framework, tool, research artifact, demo, paper, or community resource. / 新资源请提供：名称、URL、分类、star或影响力信号、content_timestamp、collected_at、time_slice、证据来源，以及它属于框架、工具、研究代码、Demo、论文还是社区资源。
+
+## License / 许可
+
+This index is generated from locally collected metadata. Each linked project or paper keeps its own license. / 本索引由本地采集元数据生成；各链接项目或论文遵循其自身许可。

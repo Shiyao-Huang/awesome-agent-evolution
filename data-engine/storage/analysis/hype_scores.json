@@ -1,989 +1,404 @@
 {
-  "generated_at": "2026-05-22T11:58:08.318408+00:00",
-  "total_projects": 54,
+  "generated_at": "2026-05-22T12:17:23.810793+00:00",
+  "total_projects": 21,
   "scores": [
     {
-      "project": "Agent Zero",
-      "composite_score": 50.0,
-      "classification": "steady",
+      "project": "openclaw",
+      "composite_score": 100.0,
+      "classification": "viral",
       "platform_scores": {
-        "reddit": 25
+        "github": 25
       },
       "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 4513.6
+        "github": {
+          "stars": 373880,
+          "forks": 77688,
+          "watchers": 1811,
+          "repo": "openclaw/openclaw"
         }
       },
       "data_sources": [
-        "reddit"
+        "openclaw_openclaw_stats.json"
       ]
     },
     {
-      "project": "AgenticSeek",
-      "composite_score": 50.0,
-      "classification": "steady",
+      "project": "claw-code",
+      "composite_score": 99.7,
+      "classification": "viral",
       "platform_scores": {
-        "reddit": 25
+        "github": 24.9
       },
       "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 5873.0
+        "github": {
+          "stars": 192223,
+          "forks": 109962,
+          "watchers": 2197,
+          "repo": "ultraworkers/claw-code"
         }
       },
       "data_sources": [
-        "reddit"
+        "ultraworkers_claw-code_stats.json"
       ]
     },
     {
-      "project": "Eliza",
-      "composite_score": 50.0,
-      "classification": "steady",
+      "project": "hermes-agent",
+      "composite_score": 98.3,
+      "classification": "viral",
       "platform_scores": {
-        "reddit": 25
+        "github": 24.6
       },
       "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 7885.8
+        "github": {
+          "stars": 162449,
+          "forks": 26493,
+          "watchers": 637,
+          "repo": "NousResearch/hermes-agent"
         }
       },
       "data_sources": [
-        "reddit"
+        "NousResearch_hermes-agent_stats.json"
       ]
     },
     {
-      "project": "EvoAgentX",
-      "composite_score": 50.0,
-      "classification": "steady",
+      "project": "langchain",
+      "composite_score": 96.9,
+      "classification": "viral",
       "platform_scores": {
-        "reddit": 25
+        "github": 24.2
       },
       "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 1127.6
+        "github": {
+          "stars": 137380,
+          "forks": 22723,
+          "watchers": 872,
+          "repo": "langchain-ai/langchain"
         }
       },
       "data_sources": [
-        "reddit"
+        "langchain-ai_langchain_stats.json"
       ]
     },
     {
-      "project": "Google ADK",
-      "composite_score": 50.0,
-      "classification": "steady",
+      "project": "browser-use",
+      "composite_score": 93.9,
+      "classification": "viral",
       "platform_scores": {
-        "reddit": 25
+        "github": 23.5
       },
       "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 553.3
+        "github": {
+          "stars": 95082,
+          "forks": 10713,
+          "watchers": 433,
+          "repo": "browser-use/browser-use"
         }
       },
       "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "HyperAgents",
-      "composite_score": 50.0,
-      "classification": "steady",
-      "platform_scores": {
-        "reddit": 25
-      },
-      "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 5079.7
-        }
-      },
-      "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "LangChain",
-      "composite_score": 50.0,
-      "classification": "steady",
-      "platform_scores": {
-        "reddit": 25
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 550.9
-        }
-      },
-      "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "Letta",
-      "composite_score": 50.0,
-      "classification": "steady",
-      "platform_scores": {
-        "reddit": 25
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 956.5
-        }
-      },
-      "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "Ollama",
-      "composite_score": 50.0,
-      "classification": "steady",
-      "platform_scores": {
-        "reddit": 25
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 713.9
-        }
-      },
-      "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "OpenEvolve",
-      "composite_score": 50.0,
-      "classification": "steady",
-      "platform_scores": {
-        "reddit": 25
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 1858.0
-        }
-      },
-      "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "OpenFang",
-      "composite_score": 50.0,
-      "classification": "steady",
-      "platform_scores": {
-        "reddit": 25
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 1016.9
-        }
-      },
-      "data_sources": [
-        "reddit"
+        "browser-use_browser-use_stats.json"
       ]
     },
     {
       "project": "OpenHands",
-      "composite_score": 50.0,
-      "classification": "steady",
+      "composite_score": 91.9,
+      "classification": "viral",
       "platform_scores": {
-        "reddit": 25
+        "github": 23.0
       },
       "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 11156.0
+        "github": {
+          "stars": 74504,
+          "forks": 9441,
+          "watchers": 444,
+          "repo": "All-Hands-AI/OpenHands"
         }
       },
       "data_sources": [
-        "reddit"
+        "All-Hands-AI_OpenHands_stats.json"
+      ]
+    },
+    {
+      "project": "mem0",
+      "composite_score": 89.6,
+      "classification": "viral",
+      "platform_scores": {
+        "github": 22.4
+      },
+      "platforms": {
+        "github": {
+          "stars": 56425,
+          "forks": 6431,
+          "watchers": 227,
+          "repo": "mem0ai/mem0"
+        }
+      },
+      "data_sources": [
+        "mem0ai_mem0_stats.json"
+      ]
+    },
+    {
+      "project": "dspy",
+      "composite_score": 85.6,
+      "classification": "viral",
+      "platform_scores": {
+        "github": 21.4
+      },
+      "platforms": {
+        "github": {
+          "stars": 34584,
+          "forks": 2913,
+          "watchers": 195,
+          "repo": "stanfordnlp/dspy"
+        }
+      },
+      "data_sources": [
+        "stanfordnlp_dspy_stats.json"
+      ]
+    },
+    {
+      "project": "letta",
+      "composite_score": 82.2,
+      "classification": "viral",
+      "platform_scores": {
+        "github": 20.6
+      },
+      "platforms": {
+        "github": {
+          "stars": 22886,
+          "forks": 2437,
+          "watchers": 136,
+          "repo": "letta-ai/letta"
+        }
+      },
+      "data_sources": [
+        "letta-ai_letta_stats.json"
+      ]
+    },
+    {
+      "project": "babyagi",
+      "composite_score": 82.0,
+      "classification": "viral",
+      "platform_scores": {
+        "github": 20.5
+      },
+      "platforms": {
+        "github": {
+          "stars": 22271,
+          "forks": 2854,
+          "watchers": 317,
+          "repo": "yoheinakajima/babyagi"
+        }
+      },
+      "data_sources": [
+        "yoheinakajima_babyagi_stats.json"
+      ]
+    },
+    {
+      "project": "agent-zero",
+      "composite_score": 80.2,
+      "classification": "viral",
+      "platform_scores": {
+        "github": 20.0
+      },
+      "platforms": {
+        "github": {
+          "stars": 17763,
+          "forks": 3625,
+          "watchers": 288,
+          "repo": "agent0ai/agent-zero"
+        }
+      },
+      "data_sources": [
+        "agent0ai_agent-zero_stats.json"
       ]
     },
     {
       "project": "SuperAGI",
-      "composite_score": 50.0,
-      "classification": "steady",
+      "composite_score": 80.1,
+      "classification": "viral",
       "platform_scores": {
-        "reddit": 25
+        "github": 20.0
       },
       "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 2734.4
+        "github": {
+          "stars": 17533,
+          "forks": 2215,
+          "watchers": 176,
+          "repo": "TransformerOptimus/SuperAGI"
         }
       },
       "data_sources": [
-        "reddit"
+        "TransformerOptimus_SuperAGI_stats.json"
       ]
     },
     {
-      "project": "dify",
-      "composite_score": 50.0,
-      "classification": "steady",
+      "project": "cognee",
+      "composite_score": 80.0,
+      "classification": "viral",
       "platform_scores": {
-        "reddit": 25
+        "github": 20.0
       },
       "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 1831.2
+        "github": {
+          "stars": 17444,
+          "forks": 1827,
+          "watchers": 71,
+          "repo": "topoteretes/cognee"
         }
       },
       "data_sources": [
-        "reddit"
+        "topoteretes_cognee_stats.json"
+      ]
+    },
+    {
+      "project": "memvid",
+      "composite_score": 79.1,
+      "classification": "viral",
+      "platform_scores": {
+        "github": 19.8
+      },
+      "platforms": {
+        "github": {
+          "stars": 15549,
+          "forks": 1338,
+          "watchers": 114,
+          "repo": "memvid/memvid"
+        }
+      },
+      "data_sources": [
+        "memvid_memvid_stats.json"
       ]
     },
     {
       "project": "evolver",
-      "composite_score": 50.0,
+      "composite_score": 73.1,
+      "classification": "viral",
+      "platform_scores": {
+        "github": 18.3
+      },
+      "platforms": {
+        "github": {
+          "stars": 7530,
+          "forks": 763,
+          "watchers": 37,
+          "repo": "EvoMap/evolver"
+        }
+      },
+      "data_sources": [
+        "EvoMap_evolver_stats.json"
+      ]
+    },
+    {
+      "project": "openevolve",
+      "composite_score": 71.8,
+      "classification": "viral",
+      "platform_scores": {
+        "github": 17.9
+      },
+      "platforms": {
+        "github": {
+          "stars": 6361,
+          "forks": 1018,
+          "watchers": 58,
+          "repo": "algorithmicsuperintelligence/openevolve"
+        }
+      },
+      "data_sources": [
+        "algorithmicsuperintelligence_openevolve_stats.json"
+      ]
+    },
+    {
+      "project": "EvoAgentX",
+      "composite_score": 65.7,
+      "classification": "viral",
+      "platform_scores": {
+        "github": 16.4
+      },
+      "platforms": {
+        "github": {
+          "stars": 3029,
+          "forks": 265,
+          "watchers": 23,
+          "repo": "EvoAgentX/EvoAgentX"
+        }
+      },
+      "data_sources": [
+        "EvoAgentX_EvoAgentX_stats.json"
+      ]
+    },
+    {
+      "project": "HyperAgents",
+      "composite_score": 64.1,
       "classification": "steady",
       "platform_scores": {
-        "reddit": 25
+        "github": 16.0
       },
       "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 16196.4
+        "github": {
+          "stars": 2513,
+          "forks": 324,
+          "watchers": 29,
+          "repo": "facebookresearch/HyperAgents"
         }
       },
       "data_sources": [
-        "reddit"
+        "facebookresearch_HyperAgents_stats.json"
       ]
     },
     {
-      "project": "haystack",
-      "composite_score": 50.0,
+      "project": "ADAS",
+      "composite_score": 60.3,
       "classification": "steady",
       "platform_scores": {
-        "reddit": 25
+        "github": 15.1
       },
       "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 7404.8
+        "github": {
+          "stars": 1579,
+          "forks": 236,
+          "watchers": 34,
+          "repo": "ShengranHu/ADAS"
         }
       },
       "data_sources": [
-        "reddit"
+        "ShengranHu_ADAS_stats.json"
       ]
     },
     {
-      "project": "n8n",
-      "composite_score": 50.0,
+      "project": "funsearch",
+      "composite_score": 57.1,
       "classification": "steady",
       "platform_scores": {
-        "reddit": 25
+        "github": 14.3
       },
       "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 669.7
+        "github": {
+          "stars": 1064,
+          "forks": 177,
+          "watchers": 19,
+          "repo": "google-deepmind/funsearch"
         }
       },
       "data_sources": [
-        "reddit"
+        "google-deepmind_funsearch_stats.json"
       ]
     },
     {
-      "project": "Open WebUI",
-      "composite_score": 47.6,
+      "project": "opro",
+      "composite_score": 54.2,
       "classification": "steady",
       "platform_scores": {
-        "reddit": 23.8
+        "github": 13.6
       },
       "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 371.5
+        "github": {
+          "stars": 746,
+          "forks": 91,
+          "watchers": 8,
+          "repo": "google-deepmind/opro"
         }
       },
       "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "Flowise",
-      "composite_score": 41.1,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 20.5
-      },
-      "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 164.3
-        }
-      },
-      "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "Aider",
-      "composite_score": 38.5,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 25,
-        "scholar": 0.0
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 7869.7
-        },
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "Claude Code",
-      "composite_score": 38.5,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 25,
-        "scholar": 0.0
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 6249.1
-        },
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "Codex",
-      "composite_score": 38.5,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 25,
-        "scholar": 0.0
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 4253.1
-        },
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "CowAgent",
-      "composite_score": 38.5,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 25,
-        "scholar": 0.0
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 5448.7
-        },
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "Roo Code",
-      "composite_score": 38.5,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 25,
-        "scholar": 0.0
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 1024.0
-        },
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "agent-skills",
-      "composite_score": 38.5,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 25,
-        "scholar": 0.0
-      },
-      "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 2468.2
-        },
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "agno",
-      "composite_score": 38.5,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 25,
-        "scholar": 0.0
-      },
-      "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 597.3
-        },
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "goose",
-      "composite_score": 38.5,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 25,
-        "scholar": 0.0
-      },
-      "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 9618.2
-        },
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "Mem0",
-      "composite_score": 38.0,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 19.0
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 111.7
-        }
-      },
-      "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "Memvid",
-      "composite_score": 37.2,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 18.6
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 101.0
-        }
-      },
-      "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "mastra",
-      "composite_score": 34.9,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 22.7,
-        "scholar": 0.0
-      },
-      "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 281.8
-        },
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "Coze Studio",
-      "composite_score": 34.1,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 17.1
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 68.5
-        }
-      },
-      "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "PydanticAI",
-      "composite_score": 33.5,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 16.7
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 63.1
-        }
-      },
-      "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "langgraph",
-      "composite_score": 32.7,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 16.4
-      },
-      "platforms": {
-        "reddit": {
-          "items": 25,
-          "avg_ups": 57.6
-        }
-      },
-      "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "Cognee",
-      "composite_score": 19.0,
-      "classification": "organic",
-      "platform_scores": {
-        "reddit": 9.5
-      },
-      "platforms": {
-        "reddit": {
-          "items": 50,
-          "avg_ups": 9.6
-        }
-      },
-      "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "Awesome-Self-Evolving-Agents",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {},
-      "platforms": {},
-      "data_sources": [
-        "reddit"
-      ]
-    },
-    {
-      "project": "Devika",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "GenAI Agents",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "Google A2A",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "LeRobot",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "MetaGPT",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "NeMo Guardrails",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "Open-AutoGLM",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "Plandex",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "Promptfoo",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "Reflexion",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "SWE-Agent",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "TextGrad",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "agentscope",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "autogen",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "camel",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "crewAI",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "mcp-use",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "openai-agents-python",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
-      ]
-    },
-    {
-      "project": "swarm",
-      "composite_score": 0.0,
-      "classification": "organic",
-      "platform_scores": {
-        "scholar": 0.0
-      },
-      "platforms": {
-        "scholar": {
-          "papers": 1,
-          "citations": 0
-        }
-      },
-      "data_sources": [
-        "reddit",
-        "scholar"
+        "google-deepmind_opro_stats.json"
       ]
     }
   ]

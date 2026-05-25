@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "collection_timestamp": "2026-05-22T12:08:45.603179+00:00",
+    "repo": "EvoMap/evolver",
+    "collector_name": "github_quick_stats"
+  },
+  "data": {
+    "full_name": "EvoMap/evolver",
+    "description": "The GEP-powered self-evolving engine for AI agents. Auditable evolution with Genes, Capsules, and Events. | evomap.ai",
+    "stars": 7530,
+    "forks": 763,
+    "open_issues": 5,
+    "watchers": 37,
+    "language": "JavaScript",
+    "license": "GPL-3.0",
+    "topics": [
+      "a2a",
+      "agent-evolution",
+      "agent-framework",
+      "agent-protocol",
+      "ai-agent",
+      "auditable-ai",
+      "autonomous-agent",
+      "cli",
+      "evomap",
+      "gep",
+      "llm-agent",
+      "mcp",
+      "memory-system",
+      "nodejs",
+      "prompt-engineering",
+      "prompt-governance",
+      "self-evolution",
+      "self-evolving",
+      "skill-library",
+      "skills"
+    ],
+    "created_at": "2026-02-01T05:59:24Z",
+    "updated_at": "2026-05-22T11:05:02Z",
+    "pushed_at": "2026-05-22T11:05:13Z",
+    "default_branch": "main",
+    "archived": false,
+    "network_count": 763
+  }
+}

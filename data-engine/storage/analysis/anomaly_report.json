@@ -1,235 +1,8 @@
 {
-  "generated_at": "2026-05-22T11:58:08.320389+00:00",
-  "total_projects": 54,
-  "flagged": 19,
+  "generated_at": "2026-05-22T12:17:23.811452+00:00",
+  "total": 21,
+  "flagged": 0,
   "results": [
-    {
-      "project": "Agent Zero",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "24 dup titles on reddit (max repeats: 4)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "AgenticSeek",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "23 dup titles on reddit (max repeats: 4)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Aider",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "24 dup titles on reddit (max repeats: 4)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Claude Code",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "22 dup titles on reddit (max repeats: 4)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Codex",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "25 dup titles on reddit (max repeats: 2)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Cognee",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "22 dup titles on reddit (max repeats: 4)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Coze Studio",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "20 dup titles on reddit (max repeats: 10)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Eliza",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "18 dup titles on reddit (max repeats: 6)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Flowise",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "4 dup titles on reddit (max repeats: 3)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "LangChain",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "18 dup titles on reddit (max repeats: 2)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Letta",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "25 dup titles on reddit (max repeats: 2)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Mem0",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "25 dup titles on reddit (max repeats: 2)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Memvid",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "19 dup titles on reddit (max repeats: 8)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Ollama",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "25 dup titles on reddit (max repeats: 2)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Open WebUI",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "16 dup titles on reddit (max repeats: 2)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "OpenEvolve",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "3 dup titles on reddit (max repeats: 4)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "OpenFang",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "8 dup titles on reddit (max repeats: 2)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "PydanticAI",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "22 dup titles on reddit (max repeats: 4)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Roo Code",
-      "anomaly_count": 1,
-      "anomalies": [
-        {
-          "check": "duplicate_content",
-          "detail": "23 dup titles on reddit (max repeats: 6)"
-        }
-      ],
-      "status": "flagged"
-    },
-    {
-      "project": "Awesome-Self-Evolving-Agents",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "CowAgent",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "Devika",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
     {
       "project": "EvoAgentX",
       "anomaly_count": 0,
@@ -237,79 +10,31 @@
       "status": "clean"
     },
     {
-      "project": "GenAI Agents",
+      "project": "agent-zero",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "Google A2A",
+      "project": "openevolve",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "Google ADK",
+      "project": "openclaw",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "HyperAgents",
+      "project": "babyagi",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "LeRobot",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "MetaGPT",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "NeMo Guardrails",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "Open-AutoGLM",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "OpenHands",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "Plandex",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "Promptfoo",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "Reflexion",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "SWE-Agent",
+      "project": "funsearch",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
@@ -321,49 +46,19 @@
       "status": "clean"
     },
     {
-      "project": "TextGrad",
+      "project": "browser-use",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "agent-skills",
+      "project": "claw-code",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "agentscope",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "agno",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "autogen",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "camel",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "crewAI",
-      "anomaly_count": 0,
-      "anomalies": [],
-      "status": "clean"
-    },
-    {
-      "project": "dify",
+      "project": "hermes-agent",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
@@ -375,49 +70,61 @@
       "status": "clean"
     },
     {
-      "project": "goose",
+      "project": "HyperAgents",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "haystack",
+      "project": "OpenHands",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "langgraph",
+      "project": "memvid",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "mastra",
+      "project": "opro",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "mcp-use",
+      "project": "cognee",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "n8n",
+      "project": "mem0",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "openai-agents-python",
+      "project": "dspy",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"
     },
     {
-      "project": "swarm",
+      "project": "ADAS",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "langchain",
+      "anomaly_count": 0,
+      "anomalies": [],
+      "status": "clean"
+    },
+    {
+      "project": "letta",
       "anomaly_count": 0,
       "anomalies": [],
       "status": "clean"

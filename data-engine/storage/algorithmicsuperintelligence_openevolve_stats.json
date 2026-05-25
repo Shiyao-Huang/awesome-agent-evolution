@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "collection_timestamp": "2026-05-22T12:06:41.860426+00:00",
+    "repo": "algorithmicsuperintelligence/openevolve",
+    "collector_name": "github_quick_stats"
+  },
+  "data": {
+    "full_name": "algorithmicsuperintelligence/openevolve",
+    "description": "Open-source implementation of AlphaEvolve",
+    "stars": 6361,
+    "forks": 1018,
+    "open_issues": 116,
+    "watchers": 58,
+    "language": "Python",
+    "license": "Apache-2.0",
+    "topics": [
+      "alpha-evolve",
+      "alphacode",
+      "alphaevolve",
+      "coding-agent",
+      "deepmind",
+      "deepmind-lab",
+      "discovery",
+      "distributed-evolutionary-algorithms",
+      "evolutionary-algorithms",
+      "evolutionary-computation",
+      "genetic-algorithm",
+      "genetic-algorithms",
+      "iterative-methods",
+      "iterative-refinement",
+      "llm-engineering",
+      "llm-ensemble",
+      "llm-inference",
+      "openevolve",
+      "optimize"
+    ],
+    "created_at": "2025-05-15T11:46:52Z",
+    "updated_at": "2026-05-22T10:17:53Z",
+    "pushed_at": "2026-03-18T12:25:39Z",
+    "default_branch": "main",
+    "archived": false,
+    "network_count": 1018
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "project": "CowAgent",
+  "repo": "zhayujie/chatgpt-on-wechat",
+  "collected_at": "2026-05-22T12:16:06.737295+00:00",
+  "total_hits": 40,
+  "results": {
+    "CowAgent": [
+      {
+        "objectID": "42810048",
+        "title": "CogAgent: Open-Source Alternative to OpenAI Operator Agent from China",
+        "points": 5,
+        "num_comments": 0,
+        "author": "turingbook",
+        "created_at": "2025-01-24T02:43:31Z"
+      },
+      {
+        "objectID": "38670281",
+        "title": "CogAgent-18B – visual-based GUI Agent capabilities",
+        "points": 4,
+        "num_comments": 1,
+        "author": "stevenhuang",
+        "created_at": "2023-12-17T04:18:44Z"
+      },
+      {
+        "objectID": "45829766",
+        "title": "CoAgent = AI-container, RepoZipper = GitHub backups",
+        "points": 1,
+        "num_comments": 0,
+        "author": "RickBallard",
+        "created_at": "2025-11-06T00:04:18Z"
+      },
+      {
+        "objectID": "47885131",
+        "title": "Harnesses Explained: The Inner and Outer Workings of the Coding Agent Harness",
+        "points": 6,
+        "num_comments": 4,
+        "author": "paulcaplan",
+        "created_at": "2026-04-24T03:26:02Z"
+      },
+      {
+        "objectID": "47691012",
+        "title": "The Landscape of Agentic Coding",
+        "points": 4,
+        "num_comments": 1,
+        "author": "paulcaplan",
+        "created_at": "2026-04-08T14:48:29Z"
+      },
+      {
+        "objectID": "47628991",
+        "title": "Spec-driven development isn't Waterfall in Markdown – here's what it is",
+        "points": 2,
+        "num_comments": 1,
+        "author": "paulcaplan",
+        "created_at": "2026-04-03T16:46:05Z"
+      },
+      {
+        "objectID": "44434996",
+        "title": "Building the Agent Economy Part1:A New Chapter in Human-Technology Collaboration",
+        "points": 2,
+        "num_comments": 0,
+        "author": "debadyutirc",
+        "created_at": "2025-07-01T15:37:42Z"
+      },
+      {
+        "objectID": "41021366",
+        "title": "Initial details about why CrowdStrike's CSAgent.sys crashed",
+        "points": 519,
+        "num_comments": 664,
+        "author": "pilfered",
+        "created_at": "2024-07-21T00:17:34Z"
+      },
+      {
+        "objectID": "21977565",
+        "title": "Suspension of Cogent Access to ARIN Whois",
+        "points": 163,
+        "num_comments": 53,
+        "author": "cnst",
+        "created_at": "2020-01-07T06:40:49Z"
+      },
+      {
+        "objectID": "30559401",
+        "title": "U.S. firm Cogent cutting internet service to Russia",
+        "points": 102,
+        "num_comments": 169,
+        "author": "encryptluks2",
+        "created_at": "2022-03-04T19:41:16Z"
+      },
+      {
+        "objectID": "20692420",
+        "title": "Recycling of plastics enabled by dynamic covalent diketoenamine bonds (2018) [pdf]",
+        "points": 72,
+        "num_comments": 9,
+        "author": "inflatableDodo",
+        "created_at": "2019-08-14T03:09:13Z"
+      },
+      {
+        "objectID": "10961379",
+        "title": "COGENT: Certified Compilation for a Functional Systems Language",
+        "points": 60,
+        "num_comments": 14,
+        "author": "luu",
+        "created_at": "2016-01-24T03:49:35Z"
+      },
+      {
+        "objectID": "43932567",
+        "title": "Cogentcore: Open-source framework for building multi-platform apps with Go",
+        "points": 34,
+        "num_comments": 16,
+        "author": "kristianp",
+        "created_at": "2025-05-09T00:04:21Z"
+      },
+      {
+        "objectID": "45444926",
+        "title": "Experimental and Theoretical Confirmation of Covalent Bonding in α-Pu",
+        "points": 32,
+        "num_comments": 8,
+        "author": "PaulHoule",
+        "created_at": "2025-10-01T23:42:00Z"
+      },
+      {
+        "objectID": "39653820",
+        "title": "Being a Fast, Cogent Writer Is Useful",
+        "points": 17,
+        "num_comments": 12,
+        "author": "luu",
+        "created_at": "2024-03-09T18:45:39Z"
+      },
+      {
+        "objectID": "42296228",
+        "title": "Carbon dioxide capture from open air using covalent organic frameworks",
+        "points": 14,
+        "num_comments": 60,
+        "author": "the-chitmonger",
+        "created_at": "2024-12-02T13:56:02Z"
+      },
+      {
+        "objectID": "45134248",
+        "title": "Show HN: Tallyit.co/coparents – Split costs with your baby dady",
+        "points": 14,
+        "num_comments": 11,
+        "author": "cat-turner",
+        "created_at": "2025-09-05T01:44:42Z"
+      },
+      {
+        "objectID": "13612235",
+        "title": "Internet Backbone Provider Cogent Blocks Pirate Bay and Other “Pirate” Sites",
+        "points": 14,
+        "num_comments": 5,
+        "author": "doctorshady",
+        "created_at": "2017-02-10T00:10:08Z"
+      },
+      {
+        "objectID": "25172160",
+        "title": "Daydreaming of Cotangents (Automatic Differentiation in Julia) [video]",
+        "points": 12,
+        "num_comments": 0,
+        "author": "KenoFischer",
+        "created_at": "2020-11-21T19:32:57Z"
+      },
+      {
+        "objectID": "44562142",
+        "title": "Cogent Security: AI Agents for Vulnerability Management Launched",
+        "points": 10,
+        "num_comments": 0,
+        "author": "chairmanwow1",
+        "created_at": "2025-07-14T16:37:48Z"
+      },
+      {
+        "objectID": "30568929",
+        "title": "Internet backbone Cogent cuts Russia connectivity",
+        "points": 8,
+        "num_comments": 1,
+        "author": "zinekeller",
+        "created_at": "2022-03-05T16:36:24Z"
+      },
+      {
+        "objectID": "31462135",
+        "title": "Synthesis of γ-graphyne using dynamic covalent chemistry",
+        "points": 8,
+        "num_comments": 0,
+        "author": "rntn",
+        "created_at": "2022-05-21T21:39:33Z"
+      },
+      {
+        "objectID": "12129358",
+        "title": "Covalent: An Open-Source Angular 2.0 Material UI Platform by Teradata",
+        "points": 8,
+        "num_comments": 0,
+        "author": "alwaysunday",
+        "created_at": "2016-07-20T14:43:39Z"
+      },
+      {
+        "objectID": "30579714",
+        "title": "Cogent is cutting internet access to Russian customers",
+        "points": 7,
+        "num_comments": 0,
+        "author": "themerone",
+        "created_at": "2022-03-06T18:24:52Z"
+      },
+      {
+        "objectID": "30562179",
+        "title": "Internet service provider Cogent cutting off access to Russian customers",
+        "points": 6,
+        "num_comments": 2,
+        "author": "Nyr",
+        "created_at": "2022-03-04T23:48:26Z"
+      },
+      {
+        "objectID": "40391136",
+        "title": "Cogent De-Peering TATA",
+        "points": 6,
+        "num_comments": 1,
+        "author": "betaby",
+        "created_at": "2024-05-17T15:46:11Z"
+      },
+      {
+        "objectID": "33530534",
+        "title": "Show HN: Covalent – distributed computing for ML, HPC and Quantum (open source)",
+        "points": 5,
+        "num_comments": 1,
+        "author": "elliotmac",
+        "created_at": "2022-11-09T12:21:54Z"
+      },
+      {
+        "objectID": "32758468",
+        "title": "T-Mobile sells Sprint fiber assets to Cogent for $1",
+        "points": 5,
+        "num_comments": 1,
+        "author": "greyface-",
+        "created_at": "2022-09-07T23:11:45Z"
+      },
+      {
+        "objectID": "8567710",
+        "title": "Cogent Admits They Slowed Netflix’s Traffic, Creating a Fast Lane and Slow Lane",
+        "points": 5,
+        "num_comments": 0,
+        "author": "jlgaddis",
+        "created_at": "2014-11-06T16:19:39Z"
+      },
+      {
+        "objectID": "41930848",
+        "title": "Carbon dioxide capture from open air using covalent organic frameworks",
+        "points": 4,
+        "num_comments": 1,
+        "author": "amacbride",
+        "created_at": "2024-10-24T00:59:02Z"
+      },
+      {
+        "objectID": "41110430",
+        "title": "Cogent Core: A New Cross-platform GUI Framework for Go",
+        "points": 4,
+        "num_comments": 1,
+        "author": "samuell",
+        "created_at": "2024-07-30T15:53:31Z"
+      },
+      {
+        "objectID": "12933093",
+        "title": "A cogent defence of the recent marginalisation of US right wing views",
+        "points": 4,
+        "num_comments": 1,
+        "author": "lifeisstillgood",
+        "created_at": "2016-11-11T18:43:57Z"
+      },
+      {
+        "objectID": "39328206",
+        "title": "Being a Fast, Cogent Writer Is Useful",
+        "points": 4,
+        "num_comments": 0,
+        "author": "mooreds",
+        "created_at": "2024-02-10T17:29:30Z"
+      },
+      {
+        "objectID": "3492315",
+        "title": "Cogent shares slump 23 percent after Megaupload Raid",
+        "points": 4,
+        "num_comments": 0,
+        "author": "stfu",
+        "created_at": "2012-01-21T02:17:58Z"
+      },
+      {
+        "objectID": "13659719",
+        "title": "CloudFlare Puts Pirate Sites on New IP Addresses, Avoids Cogent Blockade",
+        "points": 4,
+        "num_comments": 0,
+        "author": "ikeboy",
+        "created_at": "2017-02-16T13:31:26Z"
+      },
+      {
+        "objectID": "47720778",
+        "title": "Locally Uncensored – Local AI desktop app(chat,codeagent,image/videogen,nocloud)",
+        "points": 3,
+        "num_comments": 2,
+        "author": "PurpleDoubleD",
+        "created_at": "2026-04-10T16:49:56Z"
+      },
+      {
+        "objectID": "42012231",
+        "title": "Novel covalent organic framework quickly captures CO₂ from ambient air",
+        "points": 3,
+        "num_comments": 1,
+        "author": "PaulHoule",
+        "created_at": "2024-10-31T22:31:17Z"
+      },
+      {
+        "objectID": "41109935",
+        "title": "Cogent Core: A New GUI Framework for Go",
+        "points": 3,
+        "num_comments": 1,
+        "author": "bamazizi",
+        "created_at": "2024-07-30T15:12:59Z"
+      },
+      {
+        "objectID": "7724427",
+        "title": "Comcast is the one who should pay for network connections, Cogent claims",
+        "points": 3,
+        "num_comments": 0,
+        "author": "pwg",
+        "created_at": "2014-05-10T03:51:39Z"
+      },
+      {
+        "objectID": "40253924",
+        "title": "Cogent Announces IPv4 Address Securitization Offering",
+        "points": 3,
+        "num_comments": 0,
+        "author": "greyface-",
+        "created_at": "2024-05-04T00:56:35Z"
+      }
+    ],
+    "chatgpt-on-wechat": []
+  }
+}

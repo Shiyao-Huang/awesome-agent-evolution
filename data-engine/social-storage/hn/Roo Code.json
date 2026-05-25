@@ -1,0 +1,644 @@
+{
+  "project": "Roo Code",
+  "repo": "RooCodeInc/Roo-Code",
+  "collected_at": "2026-05-22T12:17:43.676523+00:00",
+  "total_hits": 79,
+  "results": {
+    "Roo Code": [
+      {
+        "objectID": "47851734",
+        "title": "Roo code shuts down, Team will focus on roomote agent",
+        "points": 28,
+        "num_comments": 2,
+        "author": "buster",
+        "created_at": "2026-04-21T17:21:10Z"
+      },
+      {
+        "objectID": "44747893",
+        "title": "Poe accounts can now be used to power Cursor, Cline, Roo Code",
+        "points": 12,
+        "num_comments": 0,
+        "author": "tosh",
+        "created_at": "2025-07-31T17:25:45Z"
+      },
+      {
+        "objectID": "44776027",
+        "title": "Open-source plugin brings Roo Code to JetBrains IDEs",
+        "points": 3,
+        "num_comments": 1,
+        "author": "qdaxb",
+        "created_at": "2025-08-03T12:17:40Z"
+      },
+      {
+        "objectID": "44260291",
+        "title": "Free AI Coding Assistant: Setup Roo Code with Free LLM Models",
+        "points": 3,
+        "num_comments": 0,
+        "author": "hybrid11",
+        "created_at": "2025-06-12T17:25:37Z"
+      },
+      {
+        "objectID": "43668053",
+        "title": "RooFlow – Memory Bank System for Roo Code with Footgun Power",
+        "points": 3,
+        "num_comments": 0,
+        "author": "rahimnathwani",
+        "created_at": "2025-04-12T21:22:54Z"
+      },
+      {
+        "objectID": "43168778",
+        "title": "Roo Code 3.7 – Yes, we support Claude Sonnet 3.7",
+        "points": 2,
+        "num_comments": 1,
+        "author": "hrudolph",
+        "created_at": "2025-02-25T06:16:50Z"
+      },
+      {
+        "objectID": "47876124",
+        "title": "Roo Code pivots to cloud-based agent, says IDEs aren't the future of coding",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Brajeshwar",
+        "created_at": "2026-04-23T14:24:04Z"
+      },
+      {
+        "objectID": "47867396",
+        "title": "Sunsetting Roo Code (Extension, Cloud, and Router)",
+        "points": 2,
+        "num_comments": 0,
+        "author": "fabi0",
+        "created_at": "2026-04-22T18:27:49Z"
+      },
+      {
+        "objectID": "46574431",
+        "title": "HexStrike AI on Kali with Roo Code",
+        "points": 2,
+        "num_comments": 0,
+        "author": "h0ek",
+        "created_at": "2026-01-11T10:55:53Z"
+      },
+      {
+        "objectID": "44863219",
+        "title": "Installing the BMAD Method for Roo Code",
+        "points": 2,
+        "num_comments": 0,
+        "author": "DigitalCoreNZ",
+        "created_at": "2025-08-11T11:58:18Z"
+      },
+      {
+        "objectID": "44851317",
+        "title": "Roo Code Workflow: An Advanced LLM-Powered Development Setup",
+        "points": 2,
+        "num_comments": 0,
+        "author": "indigodaddy",
+        "created_at": "2025-08-09T23:27:04Z"
+      },
+      {
+        "objectID": "44851015",
+        "title": "Kilo Code: Open-Source VS Code AI Agent- Merged Features from Roo Code and Cline",
+        "points": 2,
+        "num_comments": 0,
+        "author": "indigodaddy",
+        "created_at": "2025-08-09T22:40:51Z"
+      },
+      {
+        "objectID": "44393748",
+        "title": "RooCode: Add Gemini CLI provider for free access to Gemini models",
+        "points": 2,
+        "num_comments": 0,
+        "author": "sysoleg",
+        "created_at": "2025-06-27T04:38:44Z"
+      },
+      {
+        "objectID": "44117455",
+        "title": "Roo Code experimental code indexing",
+        "points": 2,
+        "num_comments": 0,
+        "author": "srigi",
+        "created_at": "2025-05-28T15:59:53Z"
+      },
+      {
+        "objectID": "46775236",
+        "title": "Roo Code 3.43.0 – Intelligent Context Condensation v2 – Settings Cleanup",
+        "points": 1,
+        "num_comments": 2,
+        "author": "hrudolph",
+        "created_at": "2026-01-27T03:40:55Z"
+      },
+      {
+        "objectID": "46788762",
+        "title": "Roo Code 3.44 Release Updates – Worktrees (new) – Parallel tool calls",
+        "points": 1,
+        "num_comments": 1,
+        "author": "hrudolph",
+        "created_at": "2026-01-27T23:36:30Z"
+      },
+      {
+        "objectID": "46729179",
+        "title": "Roo Code 3.42.0 – ChatGPT usage tracking – Grey Screen Fix and more",
+        "points": 1,
+        "num_comments": 1,
+        "author": "hrudolph",
+        "created_at": "2026-01-23T06:31:35Z"
+      },
+      {
+        "objectID": "44664884",
+        "title": "AI Coding Stack That Isn't Complete Garbage: VSCode, Roocode, Augment (May 2025)",
+        "points": 1,
+        "num_comments": 1,
+        "author": "e2e4",
+        "created_at": "2025-07-23T22:55:17Z"
+      },
+      {
+        "objectID": "46726194",
+        "title": "One of the more meta ways we've used the Roo Code and SlackHQ feature this week",
+        "points": 1,
+        "num_comments": 0,
+        "author": "hrudolph",
+        "created_at": "2026-01-22T22:56:27Z"
+      },
+      {
+        "objectID": "46715005",
+        "title": "Show HN: Roo Code Slack: end to end agentic workflow in Slack",
+        "points": 1,
+        "num_comments": 0,
+        "author": "hrudolph",
+        "created_at": "2026-01-22T03:40:22Z"
+      },
+      {
+        "objectID": "44710152",
+        "title": "Roo Code: AI-powered autonomous coding agent for Visual Studio Code",
+        "points": 1,
+        "num_comments": 0,
+        "author": "thunderbong",
+        "created_at": "2025-07-28T12:26:26Z"
+      },
+      {
+        "objectID": "43549849",
+        "title": "I Effectively Use Roo Code for AI-Assisted Development",
+        "points": 1,
+        "num_comments": 0,
+        "author": "philk10",
+        "created_at": "2025-04-01T18:16:42Z"
+      },
+      {
+        "objectID": "43542922",
+        "title": "Roo Code is an open-source AI-powered coding assistant that runs in VS Code",
+        "points": 1,
+        "num_comments": 0,
+        "author": "danboarder",
+        "created_at": "2025-04-01T04:43:27Z"
+      },
+      {
+        "objectID": "43541699",
+        "title": "Roo Code: Popular Fork of Cline",
+        "points": 1,
+        "num_comments": 0,
+        "author": "amosjyng",
+        "created_at": "2025-04-01T00:52:24Z"
+      },
+      {
+        "objectID": "46541885",
+        "title": "Show HN: A Daily Bible Game",
+        "points": 49,
+        "num_comments": 64,
+        "author": "egglemonsoup",
+        "created_at": "2026-01-08T15:07:37Z"
+      },
+      {
+        "objectID": "44160270",
+        "title": "Ask HN: What is your current LLM-assisted coding tool?",
+        "points": 11,
+        "num_comments": 4,
+        "author": "HiPHInch",
+        "created_at": "2025-06-02T16:06:17Z"
+      },
+      {
+        "objectID": "43732274",
+        "title": "Claude Code Alternatives?",
+        "points": 6,
+        "num_comments": 6,
+        "author": "pozzy",
+        "created_at": "2025-04-18T22:10:50Z"
+      },
+      {
+        "objectID": "44794916",
+        "title": "Show HN: FlexLLama – Run multiple local LLMs at once with a simple dashboard",
+        "points": 4,
+        "num_comments": 0,
+        "author": "yazon",
+        "created_at": "2025-08-05T06:30:54Z"
+      },
+      {
+        "objectID": "43894886",
+        "title": "Show HN: Ridvay Code – An AI Coding Assistant for VS Code",
+        "points": 3,
+        "num_comments": 2,
+        "author": "Tom-G",
+        "created_at": "2025-05-05T13:25:32Z"
+      },
+      {
+        "objectID": "46065247",
+        "title": "Show HN: Non-Custodial Cryptocurrency Payment Gateway",
+        "points": 2,
+        "num_comments": 2,
+        "author": "cranberryturkey",
+        "created_at": "2025-11-27T03:28:03Z"
+      },
+      {
+        "objectID": "47111045",
+        "title": "Show HN: OpenBrowser MCP: Give your AI agent a real efficient browser",
+        "points": 2,
+        "num_comments": 0,
+        "author": "billy-enrizky-1",
+        "created_at": "2026-02-22T13:57:23Z"
+      },
+      {
+        "objectID": "43995776",
+        "title": "Show HN: Freshstuff.net – Stream of Projects Releases",
+        "points": 2,
+        "num_comments": 0,
+        "author": "raphinou",
+        "created_at": "2025-05-15T15:00:33Z"
+      },
+      {
+        "objectID": "44226957",
+        "title": "Show HN: A Code Agent that can do runtime debugging by walking the call stack",
+        "points": 1,
+        "num_comments": 2,
+        "author": "zentara_code",
+        "created_at": "2025-06-09T17:42:22Z"
+      },
+      {
+        "objectID": "45792507",
+        "title": "Ask HN: Which agentic AI code assistant is more future proof?",
+        "points": 1,
+        "num_comments": 1,
+        "author": "behnamoh",
+        "created_at": "2025-11-02T18:55:48Z"
+      },
+      {
+        "objectID": "45522782",
+        "title": "Ask HN: How do I found OSS project that don't commerical backing?",
+        "points": 1,
+        "num_comments": 1,
+        "author": "mattfrommars",
+        "created_at": "2025-10-09T02:15:43Z"
+      },
+      {
+        "objectID": "47296927",
+        "title": "Show HN: CCP, a CLI proxy that trims terminal output without changing commands",
+        "points": 1,
+        "num_comments": 0,
+        "author": "SuppieRK",
+        "created_at": "2026-03-08T12:54:38Z"
+      },
+      {
+        "objectID": "44443096",
+        "title": "Show HN: Jumble, a Lifetime of Art on the Scrapheap",
+        "points": 1,
+        "num_comments": 0,
+        "author": "LeratoAustini",
+        "created_at": "2025-07-02T12:46:53Z"
+      },
+      {
+        "objectID": "43327024",
+        "title": "Show HN: AI-powered brainstorming and goal tracking from your terminal",
+        "points": 1,
+        "num_comments": 0,
+        "author": "jjfoooo4",
+        "created_at": "2025-03-10T22:49:34Z"
+      },
+      {
+        "objectID": "44743134",
+        "title": "Confirmed that OpenRouter's new stealth model originates from OpenAI",
+        "points": 1,
+        "num_comments": 0,
+        "author": "handfuloflight",
+        "created_at": "2025-07-31T07:01:49Z"
+      },
+      {
+        "objectID": "43387134",
+        "title": "Show HN: Roo-Cline on Codeium",
+        "points": 2,
+        "num_comments": 1,
+        "author": "cranberryturkey",
+        "created_at": "2025-03-17T11:00:00Z"
+      }
+    ],
+    "Roo-Code": [
+      {
+        "objectID": "47851734",
+        "title": "Roo code shuts down, Team will focus on roomote agent",
+        "points": 28,
+        "num_comments": 2,
+        "author": "buster",
+        "created_at": "2026-04-21T17:21:10Z"
+      },
+      {
+        "objectID": "44747893",
+        "title": "Poe accounts can now be used to power Cursor, Cline, Roo Code",
+        "points": 12,
+        "num_comments": 0,
+        "author": "tosh",
+        "created_at": "2025-07-31T17:25:45Z"
+      },
+      {
+        "objectID": "44776027",
+        "title": "Open-source plugin brings Roo Code to JetBrains IDEs",
+        "points": 3,
+        "num_comments": 1,
+        "author": "qdaxb",
+        "created_at": "2025-08-03T12:17:40Z"
+      },
+      {
+        "objectID": "44260291",
+        "title": "Free AI Coding Assistant: Setup Roo Code with Free LLM Models",
+        "points": 3,
+        "num_comments": 0,
+        "author": "hybrid11",
+        "created_at": "2025-06-12T17:25:37Z"
+      },
+      {
+        "objectID": "43668053",
+        "title": "RooFlow – Memory Bank System for Roo Code with Footgun Power",
+        "points": 3,
+        "num_comments": 0,
+        "author": "rahimnathwani",
+        "created_at": "2025-04-12T21:22:54Z"
+      },
+      {
+        "objectID": "43168778",
+        "title": "Roo Code 3.7 – Yes, we support Claude Sonnet 3.7",
+        "points": 2,
+        "num_comments": 1,
+        "author": "hrudolph",
+        "created_at": "2025-02-25T06:16:50Z"
+      },
+      {
+        "objectID": "47876124",
+        "title": "Roo Code pivots to cloud-based agent, says IDEs aren't the future of coding",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Brajeshwar",
+        "created_at": "2026-04-23T14:24:04Z"
+      },
+      {
+        "objectID": "47867396",
+        "title": "Sunsetting Roo Code (Extension, Cloud, and Router)",
+        "points": 2,
+        "num_comments": 0,
+        "author": "fabi0",
+        "created_at": "2026-04-22T18:27:49Z"
+      },
+      {
+        "objectID": "46574431",
+        "title": "HexStrike AI on Kali with Roo Code",
+        "points": 2,
+        "num_comments": 0,
+        "author": "h0ek",
+        "created_at": "2026-01-11T10:55:53Z"
+      },
+      {
+        "objectID": "44863219",
+        "title": "Installing the BMAD Method for Roo Code",
+        "points": 2,
+        "num_comments": 0,
+        "author": "DigitalCoreNZ",
+        "created_at": "2025-08-11T11:58:18Z"
+      },
+      {
+        "objectID": "44851317",
+        "title": "Roo Code Workflow: An Advanced LLM-Powered Development Setup",
+        "points": 2,
+        "num_comments": 0,
+        "author": "indigodaddy",
+        "created_at": "2025-08-09T23:27:04Z"
+      },
+      {
+        "objectID": "44851015",
+        "title": "Kilo Code: Open-Source VS Code AI Agent- Merged Features from Roo Code and Cline",
+        "points": 2,
+        "num_comments": 0,
+        "author": "indigodaddy",
+        "created_at": "2025-08-09T22:40:51Z"
+      },
+      {
+        "objectID": "44393748",
+        "title": "RooCode: Add Gemini CLI provider for free access to Gemini models",
+        "points": 2,
+        "num_comments": 0,
+        "author": "sysoleg",
+        "created_at": "2025-06-27T04:38:44Z"
+      },
+      {
+        "objectID": "44117455",
+        "title": "Roo Code experimental code indexing",
+        "points": 2,
+        "num_comments": 0,
+        "author": "srigi",
+        "created_at": "2025-05-28T15:59:53Z"
+      },
+      {
+        "objectID": "46775236",
+        "title": "Roo Code 3.43.0 – Intelligent Context Condensation v2 – Settings Cleanup",
+        "points": 1,
+        "num_comments": 2,
+        "author": "hrudolph",
+        "created_at": "2026-01-27T03:40:55Z"
+      },
+      {
+        "objectID": "46788762",
+        "title": "Roo Code 3.44 Release Updates – Worktrees (new) – Parallel tool calls",
+        "points": 1,
+        "num_comments": 1,
+        "author": "hrudolph",
+        "created_at": "2026-01-27T23:36:30Z"
+      },
+      {
+        "objectID": "46729179",
+        "title": "Roo Code 3.42.0 – ChatGPT usage tracking – Grey Screen Fix and more",
+        "points": 1,
+        "num_comments": 1,
+        "author": "hrudolph",
+        "created_at": "2026-01-23T06:31:35Z"
+      },
+      {
+        "objectID": "44664884",
+        "title": "AI Coding Stack That Isn't Complete Garbage: VSCode, Roocode, Augment (May 2025)",
+        "points": 1,
+        "num_comments": 1,
+        "author": "e2e4",
+        "created_at": "2025-07-23T22:55:17Z"
+      },
+      {
+        "objectID": "46726194",
+        "title": "One of the more meta ways we've used the Roo Code and SlackHQ feature this week",
+        "points": 1,
+        "num_comments": 0,
+        "author": "hrudolph",
+        "created_at": "2026-01-22T22:56:27Z"
+      },
+      {
+        "objectID": "46715005",
+        "title": "Show HN: Roo Code Slack: end to end agentic workflow in Slack",
+        "points": 1,
+        "num_comments": 0,
+        "author": "hrudolph",
+        "created_at": "2026-01-22T03:40:22Z"
+      },
+      {
+        "objectID": "44710152",
+        "title": "Roo Code: AI-powered autonomous coding agent for Visual Studio Code",
+        "points": 1,
+        "num_comments": 0,
+        "author": "thunderbong",
+        "created_at": "2025-07-28T12:26:26Z"
+      },
+      {
+        "objectID": "43549849",
+        "title": "I Effectively Use Roo Code for AI-Assisted Development",
+        "points": 1,
+        "num_comments": 0,
+        "author": "philk10",
+        "created_at": "2025-04-01T18:16:42Z"
+      },
+      {
+        "objectID": "43542922",
+        "title": "Roo Code is an open-source AI-powered coding assistant that runs in VS Code",
+        "points": 1,
+        "num_comments": 0,
+        "author": "danboarder",
+        "created_at": "2025-04-01T04:43:27Z"
+      },
+      {
+        "objectID": "43541699",
+        "title": "Roo Code: Popular Fork of Cline",
+        "points": 1,
+        "num_comments": 0,
+        "author": "amosjyng",
+        "created_at": "2025-04-01T00:52:24Z"
+      },
+      {
+        "objectID": "44160270",
+        "title": "Ask HN: What is your current LLM-assisted coding tool?",
+        "points": 11,
+        "num_comments": 4,
+        "author": "HiPHInch",
+        "created_at": "2025-06-02T16:06:17Z"
+      },
+      {
+        "objectID": "43732274",
+        "title": "Claude Code Alternatives?",
+        "points": 6,
+        "num_comments": 6,
+        "author": "pozzy",
+        "created_at": "2025-04-18T22:10:50Z"
+      },
+      {
+        "objectID": "44794916",
+        "title": "Show HN: FlexLLama – Run multiple local LLMs at once with a simple dashboard",
+        "points": 4,
+        "num_comments": 0,
+        "author": "yazon",
+        "created_at": "2025-08-05T06:30:54Z"
+      },
+      {
+        "objectID": "43894886",
+        "title": "Show HN: Ridvay Code – An AI Coding Assistant for VS Code",
+        "points": 3,
+        "num_comments": 2,
+        "author": "Tom-G",
+        "created_at": "2025-05-05T13:25:32Z"
+      },
+      {
+        "objectID": "46065247",
+        "title": "Show HN: Non-Custodial Cryptocurrency Payment Gateway",
+        "points": 2,
+        "num_comments": 2,
+        "author": "cranberryturkey",
+        "created_at": "2025-11-27T03:28:03Z"
+      },
+      {
+        "objectID": "47111045",
+        "title": "Show HN: OpenBrowser MCP: Give your AI agent a real efficient browser",
+        "points": 2,
+        "num_comments": 0,
+        "author": "billy-enrizky-1",
+        "created_at": "2026-02-22T13:57:23Z"
+      },
+      {
+        "objectID": "43995776",
+        "title": "Show HN: Freshstuff.net – Stream of Projects Releases",
+        "points": 2,
+        "num_comments": 0,
+        "author": "raphinou",
+        "created_at": "2025-05-15T15:00:33Z"
+      },
+      {
+        "objectID": "44226957",
+        "title": "Show HN: A Code Agent that can do runtime debugging by walking the call stack",
+        "points": 1,
+        "num_comments": 2,
+        "author": "zentara_code",
+        "created_at": "2025-06-09T17:42:22Z"
+      },
+      {
+        "objectID": "45792507",
+        "title": "Ask HN: Which agentic AI code assistant is more future proof?",
+        "points": 1,
+        "num_comments": 1,
+        "author": "behnamoh",
+        "created_at": "2025-11-02T18:55:48Z"
+      },
+      {
+        "objectID": "45522782",
+        "title": "Ask HN: How do I found OSS project that don't commerical backing?",
+        "points": 1,
+        "num_comments": 1,
+        "author": "mattfrommars",
+        "created_at": "2025-10-09T02:15:43Z"
+      },
+      {
+        "objectID": "47296927",
+        "title": "Show HN: CCP, a CLI proxy that trims terminal output without changing commands",
+        "points": 1,
+        "num_comments": 0,
+        "author": "SuppieRK",
+        "created_at": "2026-03-08T12:54:38Z"
+      },
+      {
+        "objectID": "44443096",
+        "title": "Show HN: Jumble, a Lifetime of Art on the Scrapheap",
+        "points": 1,
+        "num_comments": 0,
+        "author": "LeratoAustini",
+        "created_at": "2025-07-02T12:46:53Z"
+      },
+      {
+        "objectID": "43327024",
+        "title": "Show HN: AI-powered brainstorming and goal tracking from your terminal",
+        "points": 1,
+        "num_comments": 0,
+        "author": "jjfoooo4",
+        "created_at": "2025-03-10T22:49:34Z"
+      },
+      {
+        "objectID": "44743134",
+        "title": "Confirmed that OpenRouter's new stealth model originates from OpenAI",
+        "points": 1,
+        "num_comments": 0,
+        "author": "handfuloflight",
+        "created_at": "2025-07-31T07:01:49Z"
+      },
+      {
+        "objectID": "1649110",
+        "title": "Yet another explanation of C's volatile ",
+        "points": 1,
+        "num_comments": 0,
+        "author": "jarrodvanda",
+        "created_at": "2010-08-31T12:18:54Z"
+      }
+    ]
+  }
+}
