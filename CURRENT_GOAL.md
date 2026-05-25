@@ -1,6 +1,6 @@
 # Current Goal From Direct User Inputs
 
-Last updated: 2026-05-24
+Last updated: 2026-05-25
 
 ## Precision Rule
 
@@ -46,6 +46,7 @@ Inference is allowed only after the exact direct user inputs are separated first
 - 继续把用户直接输入抽取成 Agent/Claude 可引用的参考，避免把 team 输入、工具输出或历史摘要误当作用户目标。
 - 维护项目结构边界：raw 归 raw，加工后的归加工，work 产物归 work，结果输出归 results，全部索引化覆盖。
 - 对不符合四层构成的材料，先查引用、归入 support/compatibility/mirrors/local/needs-review 等类别并更新索引；默认不要乱删。
+- 每次定时任务或人工迭代结束前，主动更新受影响的 README、i18n、网站、索引和发布面，并提交本轮相关改动。
 
 ## High-Priority Threads
 
@@ -64,6 +65,7 @@ Inference is allowed only after the exact direct user inputs are separated first
 - 用户明确要求可使用 subagent 并行推进，必要时用 browser/anysearch/gitnexus/mermaid/md。
 - 反思必须改变行为，否则反思无效。
 - 需要一面镜子：文档、mermaid、操作手册、skill、上下文/token 状态都可以成为自我观察工具。
+- 每次迭代后主动检查 `git status`、保护无关用户改动、提交本轮相关改动；没有变化可提交时也要明确说明。
 
 ## Exact Direct User Inputs
 
@@ -109,6 +111,7 @@ Inference is allowed only after the exact direct user inputs are separated first
 - `金核心，整个项目需要梳理，重新梳理一下项目结构不要乱放 ，该放哪的放哪，更新一下read me，更新一下整个项目的管理方式，更新一下Agent和Cloud的MD。 raw归raw 加工后的归加工的 、work 产物归work 、结果输出归结果、、全部都要索引化 覆盖`
 - `OK，然后用户的输入你得提取出来，然后作为Agent和Claude里边的参考。`
 - `不符合这些构成的素材怎么归类和清理一下？尽量怎样归类不要乱删`
+- `修改定时任务 、注意每次迭代后都要主动提交 、主动更新 相关的 readme 、相关的 网站、`
 
 ## Source Boundary And Redaction Note
 

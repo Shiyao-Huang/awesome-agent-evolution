@@ -306,6 +306,10 @@ flowchart LR
 | Mirrors | `repos/`, `projects/repos/`, `*__/` | 外部仓库 clone 和只读验证镜像 |
 | Ops | `docs/`, `AGENTS.md`, `CLAUDE.md`, `CLOUD.md`, `CONTENT_INDEX.md` | 规则、索引、发布检查、协作手册 |
 
+## 迭代闭环
+
+每次人工迭代或定时任务结束前，更新受影响的 README、索引、网站源码、公开报告和 SEO/发布入口；提交前检查 `git status`，只提交本轮相关改动，保护无关用户改动。
+
 ## 必要验证
 
 根据改动层选择命令。README / index 改动至少要刷新生成索引并验证站点构建。

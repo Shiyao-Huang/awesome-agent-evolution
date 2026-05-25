@@ -1,6 +1,6 @@
 # User Direct Inputs Reference
 
-> Last updated: 2026-05-24. This file extracts direct user inputs only. Do not add team instructions, subagent summaries, tool outputs, assistant summaries, or inferred project state as user input.
+> Last updated: 2026-05-25. This file extracts direct user inputs only. Do not add team instructions, subagent summaries, tool outputs, assistant summaries, or inferred project state as user input.
 
 ## L1
 
@@ -14,6 +14,7 @@
 4. 项目管理重点是目录重整：raw 归 raw，加工归 processed，work 归 work，结果归 results，全部索引覆盖。
 5. AGENTS 和 CLAUDE 必须把这些用户原话作为工作参考。
 6. 不符合四层构成的材料也要先归类、查引用、索引化，不要直接删除。
+7. 定时任务和每次迭代都要形成闭环：主动更新相关 README、网站和索引，并主动提交本轮改动。
 
 ## High-Priority User Requirements
 
@@ -26,7 +27,8 @@
 | 5 | 论文要补 GitHub 数据链路和时间序列 | `GitHub的项目原始收集的有哪些？进行分析的有哪些？进化相关的有哪些？按时间顺序发布的有哪些？` |
 | 6 | 项目结构要按 raw/processed/work/results 整理并索引化 | `raw归raw 加工后的归加工的 、work 产物归work 、结果输出归结果、、全部都要索引化 覆盖` |
 | 7 | AGENTS/CLAUDE 要引用用户输入 | `用户的输入你得提取出来，然后作为Agent和Claude里边的参考。` |
-| 8 | 非四层材料先归类，不要乱删 | `不符合这些构成的素材怎么归类和清理一下？尽量怎样归类不要乱删` |
+| 8 | 每次迭代后主动更新 README、网站并提交 | `修改定时任务 、注意每次迭代后都要主动提交 、主动更新 相关的 readme 、相关的 网站、` |
+| 9 | 非四层材料先归类，不要乱删 | `不符合这些构成的素材怎么归类和清理一下？尽量怎样归类不要乱删` |
 
 ## Exact Recent Workspace Inputs
 
@@ -62,6 +64,10 @@ OK，然后用户的输入你得提取出来，然后作为Agent和Claude里边�
 不符合这些构成的素材怎么归类和清理一下？尽量怎样归类不要乱删
 ```
 
+```text
+修改定时任务 、注意每次迭代后都要主动提交 、主动更新 相关的 readme 、相关的 网站、
+```
+
 ## Longer Historical Goal Signals
 
 这些输入已经在 [../../CURRENT_GOAL.md](../../CURRENT_GOAL.md) 中保留完整列表。AGENTS/CLAUDE 执行时优先读本文件的近期目标，再回到 CURRENT_GOAL 查看更长历史。
@@ -73,6 +79,7 @@ OK，然后用户的输入你得提取出来，然后作为Agent和Claude里边�
 - 论文覆盖不能只选少数不主流项目，要补主流论文和 2024-2026 新论文。
 - 可视化图谱质量要提高，网站可参考 `x.mitbunny.ai` 的交互方向。
 - 输出要分层：一句话、三句话、五句话、完整展开。
+- 自动化和人工迭代都要闭环：相关 README、网站、索引更新后主动提交；没有可提交变化也要明确说明。
 
 ## Agent Usage Rule
 
@@ -81,6 +88,7 @@ OK，然后用户的输入你得提取出来，然后作为Agent和Claude里边�
 1. 这次任务对应哪条用户原话？
 2. 它属于 raw、processed、work、results、ops 中哪一层？
 3. 完成后哪个索引、论文、网站或结果文件要更新？
+4. 本轮是否已经主动提交相关改动，或确认没有变化可提交？
 
 ## Canonical Goal Snapshot
 

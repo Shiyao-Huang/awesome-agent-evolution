@@ -12,12 +12,12 @@
 |---|---|---:|---:|---:|---:|
 | `README.md` | present | 1 | 0 | 0 | 185 KB |
 | `README-ZH.md` | present | 1 | 0 | 0 | 26 KB |
-| `README-EN.md` | present | 1 | 0 | 0 | 3.5 KB |
-| `CONTENT_INDEX.md` | present | 1 | 0 | 0 | 3.1 KB |
+| `README-EN.md` | present | 1 | 0 | 0 | 3.9 KB |
+| `CONTENT_INDEX.md` | present | 1 | 0 | 0 | 3.2 KB |
 | `AGENTS.md` | present | 1 | 0 | 0 | 5.5 KB |
 | `CLAUDE.md` | present | 1 | 0 | 0 | 2.8 KB |
 | `CLOUD.md` | present | 1 | 0 | 0 | 1.5 KB |
-| `docs` | present | 21 | 5 | 0 | 241 KB |
+| `docs` | present | 21 | 5 | 0 | 242 KB |
 | `.claude/AIDS_IDENTITY.md` | present | 1 | 0 | 0 | 346 B |
 
 ## Representative Files

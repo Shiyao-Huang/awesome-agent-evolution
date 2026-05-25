@@ -1257,6 +1257,12 @@ flowchart LR
 | Results | `reports/`, `output/`, `site/public/reports/`, `paper-drafts/main.pdf`, `survey/latex/main.pdf`, `site/dist/` | 可发布报告、PDF、静态站点输出、下载资源 |
 | Ops | `docs/`, `AGENTS.md`, `CLAUDE.md`, `CLOUD.md`, `CONTENT_INDEX.md` | 规则、索引、发布检查、协作手册 |
 
+## 迭代闭环
+
+每次人工迭代或定时任务结束前，都要把本轮有价值变化落到读者入口和发布面：更新相关 `README.md` / `README-ZH.md` / `README-EN.md`、`CONTENT_INDEX.md`、`docs/indexes/`、`site/src/`、`site/public/reports/`、SEO/站点公开入口和必要图表数据。
+
+提交前先检查 `git status`，只提交本轮相关改动，保护无关用户改动。没有变化可提交时，也要明确说明 clean state；有变化则跑对应验证并主动提交。
+
 ## 必要验证
 
 根据改动范围选择命令。README / index 变化至少刷新索引并验证站点构建。

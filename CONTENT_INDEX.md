@@ -24,10 +24,10 @@
 
 | 类型 | 路径 | 状态 |
 |---|---|---|
-| README 主入口 | [README.md](README.md) | 中文优先，开头前置加工后的完整分类总览，并聚合综述、方法、benchmark、项目分类、核心链接和完整列表索取区 |
-| English i18n 入口 | [README-EN.md](README-EN.md) | 英文轻量入口，指向中文主 README 和主要成果 |
-| 当前目标 | [CURRENT_GOAL.md](CURRENT_GOAL.md) | 只收录用户直接输入，不混入 team 口吻 |
-| 用户原话参考 | [docs/project-management/user-direct-inputs.md](docs/project-management/user-direct-inputs.md) | AGENTS/CLAUDE 必读参考 |
+| README 主入口 | [README.md](README.md) | 中文优先，开头前置加工后的完整分类总览，并聚合综述、方法、benchmark、项目分类、核心链接、完整列表索取区和迭代闭环 |
+| English i18n 入口 | [README-EN.md](README-EN.md) | 英文轻量入口，指向中文主 README 和主要成果，并同步维护闭环 |
+| 当前目标 | [CURRENT_GOAL.md](CURRENT_GOAL.md) | 只收录用户直接输入，不混入 team 口吻；记录每轮主动更新 README/网站/索引并提交的要求 |
+| 用户原话参考 | [docs/project-management/user-direct-inputs.md](docs/project-management/user-direct-inputs.md) | AGENTS/CLAUDE 必读参考，含定时任务和迭代提交规则 |
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |
 | GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 raw 收集、分类、进化相关、时间序列 |
 | GitHub 数据 JSON | [analysis/github-project-data-analysis.json](analysis/github-project-data-analysis.json) | 脚本生成，可复跑 |

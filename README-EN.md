@@ -55,3 +55,7 @@ flowchart LR
 ```
 
 For complete Chinese content, use [README.md](README.md).
+
+## Maintenance Loop
+
+After every manual or scheduled iteration, update the affected README files, generated indexes, site sources, public reports, and SEO/publishing surfaces before committing the iteration-scoped changes. Check `git status` first, preserve unrelated user edits, and report a clean state when there is nothing to commit.
