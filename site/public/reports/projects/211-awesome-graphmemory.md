@@ -8,7 +8,7 @@
 | Language | Markdown |
 | License | Unknown |
 | Raw capture | raw-github/deep-polyu_awesome-graphmemory.md |
-| Updated by | hourly public metadata update, 2026-05-25 23:35 +0800 |
+| Updated by | hourly public metadata update, 2026-05-25 16:48 +0800 |
 
 ## 1. Role in Self Evolve
 

@@ -1711,6 +1711,61 @@ export const projects: Project[] = [
                     "skills",
                     "audit"
             ]
+    },
+    {
+            "name": "Skillgrade Agent Skill Evaluation",
+            "repo": "mgechev/skillgrade",
+            "url": "https://github.com/mgechev/skillgrade",
+            "stars": 490,
+            "forks": 35,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/215-skillgrade-agent-skill-evaluation.md",
+            "pattern": "SKILL.md package -> eval.yaml tasks and graders -> sandboxed agent trials -> pass-rate gate",
+            "description": "Skillgrade turns Agent Skills into testable assets with repeatable smoke, reliability and regression trials across Gemini, Claude, Codex, ACP and OpenCode-style agents.",
+            "stack": [
+                    "TypeScript",
+                    "Node.js",
+                    "Docker",
+                    "Agent Skills"
+            ],
+            "category": "Agent Skill Evaluation Harness",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/mgechev_skillgrade.md",
+            "status": "candidate",
+            "tags": [
+                    "agent skills",
+                    "evaluation",
+                    "benchmark",
+                    "quality gate"
+            ]
+    },
+    {
+            "name": "Webmaxru Agent Skills",
+            "repo": "webmaxru/Agent-Skills",
+            "url": "https://github.com/webmaxru/Agent-Skills",
+            "stars": 29,
+            "forks": 2,
+            "language": "TypeScript / JavaScript",
+            "license": "Public repository license visible",
+            "report": "projects/216-webmaxru-agent-skills.md",
+            "pattern": "Web API source material -> skill authoring -> validation/remediation -> install verification",
+            "description": "Webmaxru Agent Skills is a reviewed Web API skills collection with explicit creation, validation, remediation and install-check phases.",
+            "stack": [
+                    "TypeScript",
+                    "JavaScript",
+                    "Web API Agent Skills"
+            ],
+            "category": "Reviewed Web API Agent Skills",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/webmaxru_agent-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "agent skills",
+                    "web APIs",
+                    "validation",
+                    "skill lifecycle"
+            ]
     }
 ];
 

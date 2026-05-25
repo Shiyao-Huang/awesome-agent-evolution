@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T23:35:00+08:00",
+  "generated_at": "2026-05-26T00:36:53+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -3992,6 +3992,21 @@
       "description": "Official repository for \"RLVR-World: Training World Models with Reinforcement Learning\" (NeurIPS 2025), https://arxiv.org/abs/2505.13934"
     },
     {
+      "repo": "mgechev/skillgrade",
+      "url": "https://github.com/mgechev/skillgrade",
+      "stars": "490",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "skill",
+      "stack": "TypeScript/Node.js/Docker/Agent Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 490 stars, 35 forks, MIT license, TypeScript/Node.js project structure and README instructions for eval.yaml, smoke/reliable/regression presets, deterministic and LLM-rubric graders, and Gemini/Claude/Codex/ACP/OpenCode targets.",
+      "description": "Skillgrade turns Agent Skills into testable assets with repeatable smoke, reliability and regression trials across Gemini, Claude, Codex, ACP and OpenCode-style agents."
+    },
+    {
       "repo": "microsoft/skills",
       "url": "https://github.com/microsoft/skills",
       "stars": "2400",
@@ -6735,6 +6750,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 81 commits, Apache-2.0 license, 987 stars and 127 forks; README says LightAgent natively supports Skills, persistent memory, MCP over stdio/SSE, Tree-of-Thought, multi-agent collaboration, OpenAI-compatible streaming APIs, and self-learning agents, with v0.6.0 introducing native skill support on 2026-04-26",
       "description": "LightAgent 是轻量级 Python Agent 框架，把 Skills、持久记忆、MCP、Tree-of-Thought 和 multi-agent collaboration 组合成可快速嵌入的 self-learning runtime。"
+    },
+    {
+      "repo": "webmaxru/Agent-Skills",
+      "url": "https://github.com/webmaxru/Agent-Skills",
+      "stars": "29",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "TypeScript/JavaScript/Web API Agent Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, eight releases with v1.4.0 latest on 2026-05-03, manually reviewed Web API skills, and references to Agent Skills best practices, a skill-creator checklist and Skillgrade.",
+      "description": "Webmaxru Agent Skills is a reviewed Web API skills collection with explicit creation, validation, remediation and install-check phases."
     },
     {
       "repo": "werner-duvaud/muzero-general",

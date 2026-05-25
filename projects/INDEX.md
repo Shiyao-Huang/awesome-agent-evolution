@@ -232,6 +232,9 @@
 | Gitagent | [open-gitagent/gitagent](https://github.com/open-gitagent/gitagent) | Git-Native Agent Framework | [projects/213-gitagent-git-native-agent-framework.md](213-gitagent-git-native-agent-framework.md) |
 | Gemini CLI Auto Memory | [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | Agent CLI Auto-Memory and Skills | [projects/214-gemini-cli-auto-memory-skills.md](214-gemini-cli-auto-memory-skills.md) |
 
+| Skillgrade Agent Skill Evaluation | [mgechev/skillgrade](https://github.com/mgechev/skillgrade) | Agent Skill Evaluation Harness | [projects/215-skillgrade-agent-skill-evaluation.md](215-skillgrade-agent-skill-evaluation.md) |
+| Webmaxru Agent Skills | [webmaxru/Agent-Skills](https://github.com/webmaxru/Agent-Skills) | Reviewed Web API Agent Skills | [projects/216-webmaxru-agent-skills.md](216-webmaxru-agent-skills.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

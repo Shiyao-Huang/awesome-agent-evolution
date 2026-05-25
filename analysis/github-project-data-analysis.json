@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-25T16:11:43.293Z",
+  "generated_at": "2026-05-25T16:43:02.966Z",
   "counts": {
-    "raw_captures": 496,
-    "raw_files_on_disk": 496,
-    "classified_repos": 496,
-    "analyzed_projects": 87,
-    "analyzed_in_raw_timestamp_index": 33,
-    "analyzed_in_classification": 33,
+    "raw_captures": 498,
+    "raw_files_on_disk": 498,
+    "classified_repos": 498,
+    "analyzed_projects": 89,
+    "analyzed_in_raw_timestamp_index": 35,
+    "analyzed_in_classification": 35,
     "analyzed_evolution_focused": 49,
     "analyzed_with_created_at_or_fallback": 80,
     "analyzed_with_github_api_metadata": 25,
     "analyzed_with_local_git_mirror": 77,
-    "analyzed_with_public_report": 57,
+    "analyzed_with_public_report": 59,
     "raw_core_evolution": 79,
     "raw_broad_evolution": 178,
     "raw_unknown_time_slice": 109
@@ -23,7 +23,7 @@
     },
     {
       "key": "评测/evaluation",
-      "count": 100
+      "count": 101
     },
     {
       "key": "教程/tutorial",
@@ -31,7 +31,7 @@
     },
     {
       "key": "工具/tool",
-      "count": 85
+      "count": 86
     },
     {
       "key": "应用/application",
@@ -61,7 +61,7 @@
     },
     {
       "key": "skill",
-      "count": 60
+      "count": 62
     },
     {
       "key": "framework",
@@ -338,6 +338,14 @@
       "count": 1
     },
     {
+      "key": "TypeScript/JavaScript/Web API Agent Skills",
+      "count": 1
+    },
+    {
+      "key": "TypeScript/Node.js/Docker/Agent Skills",
+      "count": 1
+    },
+    {
       "key": "TypeScript/Python/HTML/JavaScript",
       "count": 1
     },
@@ -353,7 +361,7 @@
   "raw_time_slice_counts": [
     {
       "key": "2026-05",
-      "count": 336
+      "count": 338
     },
     {
       "key": "unknown",
@@ -458,6 +466,10 @@
       "count": 3
     },
     {
+      "key": "skill",
+      "count": 2
+    },
+    {
       "key": "research-agent",
       "count": 1
     },
@@ -473,7 +485,7 @@
     },
     {
       "key": "unknown",
-      "count": 7
+      "count": 9
     },
     {
       "key": "2026-03",
@@ -5721,6 +5733,21 @@
       "description": "Official repository for \"RLVR-World: Training World Models with Reinforcement Learning\" (NeurIPS 2025), https://arxiv.org/abs/2505.13934"
     },
     {
+      "repo": "mgechev/skillgrade",
+      "url": "https://github.com/mgechev/skillgrade",
+      "stars": "490",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "skill",
+      "stack": "TypeScript/Node.js/Docker/Agent Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 490 stars, 35 forks, MIT license, TypeScript/Node.js project structure and README instructions for eval.yaml, smoke/reliable/regression presets, deterministic and LLM-rubric graders, and Gemini/Claude/Codex/ACP/OpenCode targets.",
+      "description": "Skillgrade turns Agent Skills into testable assets with repeatable smoke, reliability and regression trials across Gemini, Claude, Codex, ACP and OpenCode-style agents."
+    },
+    {
       "repo": "microsoft/skills",
       "url": "https://github.com/microsoft/skills",
       "stars": "2400",
@@ -8464,6 +8491,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 81 commits, Apache-2.0 license, 987 stars and 127 forks; README says LightAgent natively supports Skills, persistent memory, MCP over stdio/SSE, Tree-of-Thought, multi-agent collaboration, OpenAI-compatible streaming APIs, and self-learning agents, with v0.6.0 introducing native skill support on 2026-04-26",
       "description": "LightAgent 是轻量级 Python Agent 框架，把 Skills、持久记忆、MCP、Tree-of-Thought 和 multi-agent collaboration 组合成可快速嵌入的 self-learning runtime。"
+    },
+    {
+      "repo": "webmaxru/Agent-Skills",
+      "url": "https://github.com/webmaxru/Agent-Skills",
+      "stars": "29",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "TypeScript/JavaScript/Web API Agent Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, eight releases with v1.4.0 latest on 2026-05-03, manually reviewed Web API skills, and references to Agent Skills best practices, a skill-creator checklist and Skillgrade.",
+      "description": "Webmaxru Agent Skills is a reviewed Web API skills collection with explicit creation, validation, remediation and install-check phases."
     },
     {
       "repo": "werner-duvaud/muzero-general",
@@ -16991,6 +17033,90 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "framework",
       "evolution_focused": false
+    },
+    {
+      "name": "Skillgrade Agent Skill Evaluation",
+      "repo": "mgechev/skillgrade",
+      "normalized_repo": "mgechev/skillgrade",
+      "url": "https://github.com/mgechev/skillgrade",
+      "category": "Agent Skill Evaluation Harness",
+      "pattern": "SKILL.md package -> eval.yaml tasks and graders -> sandboxed agent trials -> pass-rate gate",
+      "tags": [
+        "agent skills",
+        "evaluation",
+        "benchmark",
+        "quality gate"
+      ],
+      "site_stars": 490,
+      "site_forks": 35,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/mgechev_skillgrade.md",
+      "local_git": null,
+      "report": "projects/215-skillgrade-agent-skill-evaluation.md",
+      "public_report": "site/public/reports/projects/215-skillgrade-agent-skill-evaluation.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/mgechev_skillgrade.md",
+      "raw_collected_at": "2026-05-26T00:36:53+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 490 stars, 35 forks, MIT license, TypeScript/Node.js project structure and README instructions for eval.yaml, smoke/reliable/regression presets, deterministic and LLM-rubric graders, and Gemini/Claude/Codex/ACP/OpenCode targets.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
+      "name": "Webmaxru Agent Skills",
+      "repo": "webmaxru/Agent-Skills",
+      "normalized_repo": "webmaxru/agent-skills",
+      "url": "https://github.com/webmaxru/Agent-Skills",
+      "category": "Reviewed Web API Agent Skills",
+      "pattern": "Web API source material -> skill authoring -> validation/remediation -> install verification",
+      "tags": [
+        "agent skills",
+        "web APIs",
+        "validation",
+        "skill lifecycle"
+      ],
+      "site_stars": 29,
+      "site_forks": 2,
+      "license": "Public repository license visible",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/webmaxru_agent-skills.md",
+      "local_git": null,
+      "report": "projects/216-webmaxru-agent-skills.md",
+      "public_report": "site/public/reports/projects/216-webmaxru-agent-skills.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/webmaxru_agent-skills.md",
+      "raw_collected_at": "2026-05-26T00:36:53+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, eight releases with v1.4.0 latest on 2026-05-03, manually reviewed Web API skills, and references to Agent Skills best practices, a skill-creator checklist and Skillgrade.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
     }
   ],
   "analyzed_git_evidence": [
@@ -20050,6 +20176,48 @@
       "evolution_focused": true
     },
     {
+      "name": "Skillgrade Agent Skill Evaluation",
+      "repo": "mgechev/skillgrade",
+      "normalized_repo": "mgechev/skillgrade",
+      "url": "https://github.com/mgechev/skillgrade",
+      "category": "Agent Skill Evaluation Harness",
+      "pattern": "SKILL.md package -> eval.yaml tasks and graders -> sandboxed agent trials -> pass-rate gate",
+      "tags": [
+        "agent skills",
+        "evaluation",
+        "benchmark",
+        "quality gate"
+      ],
+      "site_stars": 490,
+      "site_forks": 35,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/mgechev_skillgrade.md",
+      "local_git": null,
+      "report": "projects/215-skillgrade-agent-skill-evaluation.md",
+      "public_report": "site/public/reports/projects/215-skillgrade-agent-skill-evaluation.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/mgechev_skillgrade.md",
+      "raw_collected_at": "2026-05-26T00:36:53+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 490 stars, 35 forks, MIT license, TypeScript/Node.js project structure and README instructions for eval.yaml, smoke/reliable/regression presets, deterministic and LLM-rubric graders, and Gemini/Claude/Codex/ACP/OpenCode targets.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
       "name": "Gitagent",
       "repo": "open-gitagent/gitagent",
       "normalized_repo": "open-gitagent/gitagent",
@@ -20872,6 +21040,48 @@
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
       "evolution_focused": true
+    },
+    {
+      "name": "Webmaxru Agent Skills",
+      "repo": "webmaxru/Agent-Skills",
+      "normalized_repo": "webmaxru/agent-skills",
+      "url": "https://github.com/webmaxru/Agent-Skills",
+      "category": "Reviewed Web API Agent Skills",
+      "pattern": "Web API source material -> skill authoring -> validation/remediation -> install verification",
+      "tags": [
+        "agent skills",
+        "web APIs",
+        "validation",
+        "skill lifecycle"
+      ],
+      "site_stars": 29,
+      "site_forks": 2,
+      "license": "Public repository license visible",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/webmaxru_agent-skills.md",
+      "local_git": null,
+      "report": "projects/216-webmaxru-agent-skills.md",
+      "public_report": "site/public/reports/projects/216-webmaxru-agent-skills.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/webmaxru_agent-skills.md",
+      "raw_collected_at": "2026-05-26T00:36:53+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, eight releases with v1.4.0 latest on 2026-05-03, manually reviewed Web API skills, and references to Agent Skills best practices, a skill-creator checklist and Skillgrade.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
     },
     {
       "name": "Awesome Agent Memory by cxxz",
@@ -24798,6 +25008,48 @@
       "evolution_focused": false
     },
     {
+      "name": "Skillgrade Agent Skill Evaluation",
+      "repo": "mgechev/skillgrade",
+      "normalized_repo": "mgechev/skillgrade",
+      "url": "https://github.com/mgechev/skillgrade",
+      "category": "Agent Skill Evaluation Harness",
+      "pattern": "SKILL.md package -> eval.yaml tasks and graders -> sandboxed agent trials -> pass-rate gate",
+      "tags": [
+        "agent skills",
+        "evaluation",
+        "benchmark",
+        "quality gate"
+      ],
+      "site_stars": 490,
+      "site_forks": 35,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/mgechev_skillgrade.md",
+      "local_git": null,
+      "report": "projects/215-skillgrade-agent-skill-evaluation.md",
+      "public_report": "site/public/reports/projects/215-skillgrade-agent-skill-evaluation.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/mgechev_skillgrade.md",
+      "raw_collected_at": "2026-05-26T00:36:53+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 490 stars, 35 forks, MIT license, TypeScript/Node.js project structure and README instructions for eval.yaml, smoke/reliable/regression presets, deterministic and LLM-rubric graders, and Gemini/Claude/Codex/ACP/OpenCode targets.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
       "name": "Gitagent",
       "repo": "open-gitagent/gitagent",
       "normalized_repo": "open-gitagent/gitagent",
@@ -24876,6 +25128,48 @@
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
       "evolution_focused": true
+    },
+    {
+      "name": "Webmaxru Agent Skills",
+      "repo": "webmaxru/Agent-Skills",
+      "normalized_repo": "webmaxru/agent-skills",
+      "url": "https://github.com/webmaxru/Agent-Skills",
+      "category": "Reviewed Web API Agent Skills",
+      "pattern": "Web API source material -> skill authoring -> validation/remediation -> install verification",
+      "tags": [
+        "agent skills",
+        "web APIs",
+        "validation",
+        "skill lifecycle"
+      ],
+      "site_stars": 29,
+      "site_forks": 2,
+      "license": "Public repository license visible",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/webmaxru_agent-skills.md",
+      "local_git": null,
+      "report": "projects/216-webmaxru-agent-skills.md",
+      "public_report": "site/public/reports/projects/216-webmaxru-agent-skills.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/webmaxru_agent-skills.md",
+      "raw_collected_at": "2026-05-26T00:36:53+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, eight releases with v1.4.0 latest on 2026-05-03, manually reviewed Web API skills, and references to Agent Skills best practices, a skill-creator checklist and Skillgrade.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
     },
     {
       "name": "Memoir",

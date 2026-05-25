@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-26T00:00:00+08:00",
-  "total": 496,
-  "updated_files": 496,
+  "total": 498,
+  "updated_files": 498,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -2399,6 +2399,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "mgechev/skillgrade",
+      "url": "https://github.com/mgechev/skillgrade",
+      "file": "raw-github/mgechev_skillgrade.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T00:36:53+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
+    },
+    {
       "repo": "microsoft/skills",
       "url": "https://github.com/microsoft/skills",
       "file": "raw-github/microsoft_skills.md",
@@ -4044,6 +4053,15 @@
       "collected_at": "2026-05-24T21:11:06Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "webmaxru/Agent-Skills",
+      "url": "https://github.com/webmaxru/Agent-Skills",
+      "file": "raw-github/webmaxru_agent-skills.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T00:36:53+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
       "repo": "werner-duvaud/muzero-general",

@@ -19,7 +19,7 @@ This repository is a Chinese-first Awesome index, survey entry point, project mo
 ## Five Sentences
 
 1. The core question in this field is not "whether there is an agent", but "what exactly the agent improves, what proves the improvement, and whether the improvement transfers to real tasks".
-2. The current evidence layer includes 496 GitHub raw captures, 496 classified repositories, 87 site projects, 79 strict self-evolution repositories, and 178 broad evolution-related repositories.
+2. The current evidence layer includes 498 GitHub raw captures, 498 classified repositories, 89 site projects, 79 strict self-evolution repositories, and 178 broad evolution-related repositories.
 3. The method map compresses into six families: reward/RL/self-play, prompt/search, memory, architecture/code self-modification, multi-agent reflection/debate, and evaluation/safety/governance.
 4. Benchmarking is one of the main contradictions of this project: SWE-Bench, HumanEval, OSWorld, BrowserGym, AgentBench, LongMemEval, STATE-Bench, and related benchmarks must be compared in one table rather than scattered across project pages.
 5. The goal of this README is to give readers the cognitive structure directly; links serve as evidence and expanded material, not as prerequisites for understanding.
@@ -54,10 +54,10 @@ Three sentences: the early focus was retrying, reflecting, changing prompts, or 
 
 | Tracking item | Current baseline | How to update | How to read the trend |
 |---|---:|---|---|
-| GitHub corpus funnel | 496 raw captures / 496 classified / 87 model-card projects / 79 strict / 178 broad | `node scripts/analyze_github_project_data.mjs` | Strict and broad rising together means the core and infrastructure both expand; only broad rising may mean the concept is getting looser. |
-| Theme heat | memory 100, evaluation 90, evolution 79, skill 60 | `research/repo-classification.json` + GitHub analysis | Evaluation, memory, and skills rising together means the field is shifting from whether agents evolve to how we prove, accumulate, and reuse improvement. |
+| GitHub corpus funnel | 498 raw captures / 498 classified / 89 model-card projects / 79 strict / 178 broad | `node scripts/analyze_github_project_data.mjs` | Strict and broad rising together means the core and infrastructure both expand; only broad rising may mean the concept is getting looser. |
+| Theme heat | memory 100, evaluation 90, evolution 79, skill 62 | `research/repo-classification.json` + GitHub analysis | Evaluation, memory, and skills rising together means the field is shifting from whether agents evolve to how we prove, accumulate, and reuse improvement. |
 | Time slice | 2026-05 336, unknown 107, 2024-Q2 7, 2026-03 7, 2026-04 7, 2025-11 5, 2024-Q3 4, 2025-05 3, 2026-02 3, early 3, other 14 | Time signal: recent additions concentrate in skills, memory, harness, evaluation, and self-modifying code. |
-| Benchmark coverage | 167 benchmark/evaluation related repos | README benchmark matrix + `analysis/github-project-data-analysis.md` | Benchmark growth matters only when hidden tests, failure traces, cost, and transfer are reported, not when leaderboards multiply. |
+| Benchmark coverage | 168 benchmark/evaluation related repos | README benchmark matrix + `analysis/github-project-data-analysis.md` | Benchmark growth matters only when hidden tests, failure traces, cost, and transfer are reported, not when leaderboards multiply. |
 | Paper frontier | 108 detailed paper references, including 2026 frontier additions | `research/agent-self-evolution-papers-detailed.md` | New papers should enter README only after extracting mutable object, feedback, update, benchmark, and limitations. |
 | Product usability | 87 site-data projects / 214 project-report rows | `projects/INDEX.md` + `site/public/reports/projects/INDEX.md` | Trend judgment must include runnability, docs, real workflows, maintenance, and user value, not only stars. |
 
@@ -82,22 +82,22 @@ This section is intentionally placed first and contains only processed informati
 
 | Layer | Current scale | Processed meaning |
 |---|---:|---|
-| Raw GitHub captures | 496 | Original discovery layer; keeps evidence, timestamps, and sources, not conclusions. |
-| Classified repositories | 496 | Every repository is assigned category, theme, function tag, and time slice. |
-| Public model-card projects | 87 | Enters the project page/report system and is suitable for teaching, comparison, and publication. |
-| Public project report files | 239 | Publishable site result layer, including historical/compatibility reports and public site material. |
+| Raw GitHub captures | 498 | Original discovery layer; keeps evidence, timestamps, and sources, not conclusions. |
+| Classified repositories | 498 | Every repository is assigned category, theme, function tag, and time slice. |
+| Public model-card projects | 89 | Enters the project page/report system and is suitable for teaching, comparison, and publication. |
+| Public project report files | 241 | Publishable site result layer, including historical/compatibility reports and public site material. |
 | Strict self-evolution repos | 79 | Core subset: directly contains self-improvement, evolution, search, reflection, mutation, or feedback loops. |
 | Broad evolution-related repos | 178 | Supporting layer: memory, skill, evaluation, harness, coding-agent, and prompt optimization. |
 | Detailed paper references | 108 | Paper evidence layer, organized into 14 research categories plus 2026 frontier additions. |
-| Benchmark/evaluation related repos | 167 | Evaluation-related repository set for comparing what is measured, how it is measured, and whether it is trustworthy. |
+| Benchmark/evaluation related repos | 168 | Evaluation-related repository set for comparing what is measured, how it is measured, and whether it is trustworthy. |
 
 ### 2. Full GitHub Classification Axes
 
 | Axis | Full distribution | How to read it |
 |---|---|---|
-| Collection category | framework 139, evaluation 100, tutorial 95, tool 85, application 47, paper-code 29, benchmark 1 | Repository shape: frameworks dominate, showing that the ecosystem first expands through runtime/harness/tool layers. |
-| Base theme | memory 100, evaluation 90, evolution 79, skill 60, framework 51, education-list 35, research-agent 31, prompt-optimization 26, coding-agent 17, workflow-automation 6, safety 1 | Theme center: evaluation, memory, evolution, and skill are the four densest supports. |
-| Function tag | benchmark-eval 119, framework-runtime 115, resource-index 103, tool-module 90, application-demo 28, research-artifact 19, agent-evolution-infra 10, memory-substrate 9, memory-runtime 1, research-agent-pipeline 1, skill-orchestration 1 | Functional role: benchmarks and runtime are nearly tied, so proof capacity and execution capacity are equally central. |
+| Collection category | framework 139, evaluation 101, tutorial 95, tool 86, application 47, paper-code 29, 评测/benchmark 1 |
+| Base theme | memory 100, evaluation 90, evolution 79, skill 62, framework 51, education-list 35, research-agent 31, prompt-optimization 26, coding-agent 17, workflow-automation 6, safety 1 |
+| Function tag | benchmark-eval 120, framework-runtime 115, resource-index 103, tool-module 91, application-demo 28, research-artifact 19, agent-evolution-infra 10, memory-substrate 9, memory-runtime 1, research-agent-pipeline 1, skill-orchestration 1 |
 | Time slice | 2026-05 326, unknown 107, 2024-Q2 7, 2026-03 7, 2026-04 7, 2025-11 5, 2024-Q3 4, 2025-05 3, 2026-02 3, early 3, other 14 | Time signal: recent additions concentrate in skills, memory, harness, evaluation, and self-modifying code. |
 
 ### 3. Public Model-Card Project Groups
@@ -276,10 +276,10 @@ This section is intentionally placed first and contains only processed informati
 
 | Layer | Count | Definition | Evidence source |
 |---|---:|---|---|
-| Raw GitHub captures | 496 | Original `raw-github/*.md` captures and timestamp index | [raw timestamp index](output/raw-github-timestamp-index.md), [raw-github/](raw-github/) |
-| Classified repositories | 496 | Classification rows with category, theme, function, and time slice | [repo classification](research/repo-classification.md), [classification JSON](research/repo-classification.json) |
-| Site/paper model-card projects | 87 | Key projects that entered site data and project reports | [site/src/data/projects.ts](site/src/data/projects.ts), [projects/INDEX.md](projects/INDEX.md) |
-| Public project report files | 239 | Project report files in the site public reports layer | [site/public/reports/projects/INDEX.md](site/public/reports/projects/INDEX.md) |
+| Raw GitHub captures | 498 | Original `raw-github/*.md` captures and timestamp index | [raw timestamp index](output/raw-github-timestamp-index.md), [raw-github/](raw-github/) |
+| Classified repositories | 498 | Classification rows with category, theme, function, and time slice | [repo classification](research/repo-classification.md), [classification JSON](research/repo-classification.json) |
+| Site/paper model-card projects | 89 | Key projects that entered site data and project reports | [site/src/data/projects.ts](site/src/data/projects.ts), [projects/INDEX.md](projects/INDEX.md) |
+| Public project report files | 241 | Project report files in the site public reports layer | [site/public/reports/projects/INDEX.md](site/public/reports/projects/INDEX.md) |
 | Strict evolution-theme repos | 79 | Strict theme repositories where `base_theme = evolution` | [GitHub analysis](analysis/github-project-data-analysis.md) |
 | Broad evolution-related repos | 178 | Broad set matching evolution/self-improvement/reflection/search/improvement-loop signals | [GitHub analysis](analysis/github-project-data-analysis.md) |
 
@@ -288,7 +288,7 @@ This section is intentionally placed first and contains only processed informati
 | Dimension | Classification |
 |---|---|
 | Raw collection categories | framework 139, evaluation 100, tutorial 95, tool 85, application 47, paper-code 29, benchmark 1 |
-| Raw collection themes | memory 100, evaluation 90, evolution 79, skill 60, framework 51, education-list 35, research-agent 31, prompt-optimization 26, coding-agent 17, workflow-automation 6, safety 1 |
+| Raw collection themes | memory 100, evaluation 90, evolution 79, skill 62, framework 51, education-list 35, research-agent 31, prompt-optimization 26, coding-agent 17, workflow-automation 6, safety 1 |
 | Timeline evidence | [Analyzed Project Release Timeline](analysis/github-project-data-analysis.md#analyzed-project-release-timeline) |
 
 ## Community / X / Blog Signals
@@ -1047,7 +1047,7 @@ These lists are embedded directly in README so readers can copy, search, and com
 <details>
 <summary>Full benchmark / evaluation related repository list (136)</summary>
 
-| # | Repository | Category | Theme | Function tag | Stars | Time slice |
+| # | Repository | Category | Theme | Function tag | benchmark-eval 120, framework-runtime 115, resource-index 103, tool-module 91, application-demo 28, research-artifact 19, agent-evolution-infra 10, memory-substrate 9, memory-runtime 1, research-agent-pipeline 1, skill-orchestration 1 |
 |---:|---|---|---|---|---:|---|
 | 1 | [0xsanei/darwinia](https://github.com/0xsanei/darwinia) | framework | evolution | benchmark-eval | 102 | 2026-05 |
 | 2 | [adam-s/intercept](https://github.com/adam-s/intercept) | application | evaluation | framework-runtime | 127 | 2026-05 |

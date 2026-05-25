@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T23:35:00+08:00",
+  "generated_at": "2026-05-26T00:36:53+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -172,7 +172,9 @@
         "raw-github/deep-polyu_awesome-graphmemory.md",
         "raw-github/kenotic-labs_atant.md",
         "raw-github/open-gitagent_gitagent.md",
-        "raw-github/google-gemini_gemini-cli.md"
+        "raw-github/google-gemini_gemini-cli.md",
+        "raw-github/mgechev_skillgrade.md",
+        "raw-github/webmaxru_agent-skills.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -229,7 +231,8 @@
         "work/research/hourly-public-metadata-update-2026-05-25-1221.md",
         "work/research/hourly-public-metadata-update-2026-05-25-1321.md",
         "work/research/hourly-public-metadata-update-2026-05-25-1522.md",
-        "work/research/hourly-public-metadata-update-2026-05-25-2335.md"
+        "work/research/hourly-public-metadata-update-2026-05-25-2335.md",
+        "work/research/hourly-public-metadata-update-2026-05-25-1648.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -548,7 +551,11 @@
         "projects/213-gitagent-git-native-agent-framework.md",
         "site/public/reports/projects/213-gitagent-git-native-agent-framework.md",
         "projects/214-gemini-cli-auto-memory-skills.md",
-        "site/public/reports/projects/214-gemini-cli-auto-memory-skills.md"
+        "site/public/reports/projects/214-gemini-cli-auto-memory-skills.md",
+        "projects/215-skillgrade-agent-skill-evaluation.md",
+        "site/public/reports/projects/215-skillgrade-agent-skill-evaluation.md",
+        "projects/216-webmaxru-agent-skills.md",
+        "site/public/reports/projects/216-webmaxru-agent-skills.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -762,17 +769,19 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-25T23:35:00+08:00",
+    "run_at": "2026-05-26T00:36:53+08:00",
     "added_repositories": [
       "cxxz/awesome-agent-memory",
       "zhangfengcdt/memoir",
       "DEEP-PolyU/Awesome-GraphMemory",
       "Kenotic-Labs/ATANT",
       "open-gitagent/gitagent",
-      "google-gemini/gemini-cli"
+      "google-gemini/gemini-cli",
+      "mgechev/skillgrade",
+      "webmaxru/Agent-Skills"
     ],
     "evidence_quality": "web_observed_public_pages_and_search; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "available; npx gitnexus status reports stale index at current commit ea0e5e6 and recommends re-running gitnexus analyze"
+    "gitnexus_status": "available; npx gitnexus status reported a stale index before this iteration and recommends re-running gitnexus analyze"
   }
 }

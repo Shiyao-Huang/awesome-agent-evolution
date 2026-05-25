@@ -1,6 +1,6 @@
-# Repo 自动分类与技术栈分析（raw-github 496）
+# Repo 自动分类与技术栈分析（raw-github 498）
 
-- generated_at: 2026-05-25T23:35:00+08:00
+- generated_at: 2026-05-26T00:36:53+08:00
 - companion_csv: `research/repo-classification.csv`
 - companion_json: `research/repo-classification.json`
 
@@ -9,9 +9,9 @@
 | Category | Count |
 |---|---:|
 | 框架/framework | 139 |
-| 评测/evaluation | 100 |
+| 评测/evaluation | 101 |
 | 教程/tutorial | 95 |
-| 工具/tool | 85 |
+| 工具/tool | 86 |
 | 应用/application | 47 |
 | 论文代码/paper-code | 29 |
 | 评测/benchmark | 1 |
@@ -26,5 +26,7 @@
 | [Kenotic-Labs/ATANT](https://github.com/Kenotic-Labs/ATANT) | 评测/evaluation | evaluation | benchmark-eval | web-observed GitHub page showed 15 commits, 3 stars, 0 forks, Python language, continuity benchmark topics, 250 narrative stories, 1,835 verification questions, 10 checkpoints, no LLM in the evaluation loop, arXiv links and Hugging Face corpus link. |
 | [open-gitagent/gitagent](https://github.com/open-gitagent/gitagent) | 框架/framework | framework | framework-runtime | web-observed GitHub page showed MIT license, 404 stars, 82 forks, 123 commits, and described a universal git-native AI agent framework with agent.yaml, SOUL.md, RULES.md, git-committed memory, declarative tools, composable skills, hooks, plugins, compliance audit logs and OpenTelemetry instrumentation. |
 | [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | 工具/tool | memory | agent-evolution-infra | web-observed GitHub page showed Apache-2.0 license, 105k stars, 13.9k forks, 6,224 commits, memory-tests/evals directories, v0.43.0 latest release on 2026-05-22, and README claims for an open-source terminal AI agent; Auto Memory docs say it mines past sessions for durable memory and reusable Agent Skills, drafts patches or SKILL.md files, and never applies them without approval. |
+| [mgechev/skillgrade](https://github.com/mgechev/skillgrade) | 评测/evaluation | skill | benchmark-eval | web-observed GitHub page showed 490 stars, 35 forks, MIT license, TypeScript/Node.js project structure and README instructions for eval.yaml, smoke/reliable/regression presets, deterministic and LLM-rubric graders, and Gemini/Claude/Codex/ACP/OpenCode targets. |
+| [webmaxru/Agent-Skills](https://github.com/webmaxru/Agent-Skills) | 工具/tool | skill | tool-module | web-observed GitHub page showed 29 stars, 2 forks, TypeScript/JavaScript language mix, eight releases with v1.4.0 latest on 2026-05-03, manually reviewed Web API skills, and references to Agent Skills best practices, a skill-creator checklist and Skillgrade. |
 
 本轮新增 cxxz/awesome-agent-memory、zhangfengcdt/memoir、DEEP-PolyU/Awesome-GraphMemory、Kenotic-Labs/ATANT、open-gitagent/gitagent、google-gemini/gemini-cli raw captures，并同步提升为 public site / model-card 覆盖。GitHub API 未验证 freshness 的原因记录在 Mermaid graph 与 work notes 中。
