@@ -1,0 +1,353 @@
+\section{A Unified Taxonomy: The Five Evolution Loops}
+\label{sec:taxonomy}
+
+The diversity of self-evolving AI systems---spanning AutoML, neural architecture search, LLM self-improvement, evolutionary computation, and agent frameworks---presents a classification challenge. Each community has developed its own terminology: AutoML researchers speak of ``pipeline synthesis,'' NAS researchers of ``architecture search,'' LLM researchers of ``self-refinement,'' evolutionary computation researchers of ``mutation and selection,'' and agent researchers of ``role adaptation.'' Yet beneath this terminological diversity lies a common structure: iterative cycles of generation, evaluation, memory, and refinement.
+
+In this section, we propose a unified taxonomic framework---the Five Evolution Loops---that captures this common structure. Each loop type represents a fundamental pattern of self-improvement that recurs across domains. Individual systems may employ one or more loop types, and the most powerful systems combine multiple loops into integrated self-evolution pipelines.
+
+\subsection{Overview of the Five Loops}
+
+We identify five fundamental types of evolutionary loops:
+
+\begin{enumerate}
+    \item \textbf{Specification-to-Execution Loop} (\emph{Spec Loop}): Translating high-level goals (typically expressed in natural language) into executable artifacts (ML pipelines, agent workflows, code).
+    \item \textbf{Search Loop}: Systematically exploring a space of candidates (architectures, prompts, code, agents, hyperparameters) to find high-performing solutions.
+    \item \textbf{Evaluator Loop}: Using automated evaluation mechanisms (tests, benchmarks, verifiers, reward models) to score and select candidate solutions.
+    \item \textbf{Reflection Loop}: Analyzing failures and successes, extracting lessons, and incorporating those lessons into future generation or search strategies.
+    \item \textbf{Population Loop}: Maintaining a diverse collection of candidates, applying selection, mutation, and recombination operators, and preserving lineage information.
+\end{enumerate}
+
+These loops are related but distinct. The Search Loop and Population Loop both explore candidate spaces, but the Search Loop may operate with a single candidate (e.g., hill climbing on prompts) while the Population Loop explicitly maintains multiple simultaneous candidates. The Evaluator Loop and Reflection Loop both process feedback, but the Evaluator Loop produces scalar scores while the Reflection Loop produces structured, language-based analyses. The Specification-to-Execution Loop is unique in its focus on the \emph{translation} from intent to artifact.
+
+Figure~\ref{fig:five_loops} illustrates the relationships between the five loops. The central cycle is Generate $\rightarrow$ Evaluate $\rightarrow$ Reflect $\rightarrow$ Generate, corresponding to the Search, Evaluator, and Reflection loops. The Population loop wraps this central cycle, maintaining multiple candidates across iterations. The Specification-to-Execution loop feeds into the central cycle by providing the initial specification and artifact.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+    node distance=2cm,
+    box/.style={draw, rounded corners, minimum width=3cm, minimum height=1cm, align=center, font=\small},
+    arrow/.style={->, thick, >=stealth}
+]
+\node[box, fill=blue!10] (spec) {Specification-to-\\Execution Loop};
+\node[box, fill=green!10, right=3cm of spec] (search) {Search Loop};
+\node[box, fill=orange!10, below=1.5cm of search] (eval) {Evaluator Loop};
+\node[box, fill=red!10, left=3cm of eval] (reflect) {Reflection Loop};
+\node[box, fill=purple!10, below=1.5cm of reflect] (pop) {Population Loop};
+
+\draw[arrow] (spec) -- node[above, font=\scriptsize]{specification} (search);
+\draw[arrow] (search) -- node[right, font=\scriptsize]{candidate} (eval);
+\draw[arrow] (eval) -- node[below, font=\scriptsize]{feedback} (reflect);
+\draw[arrow] (reflect) -- node[left, font=\scriptsize]{lessons} (search);
+\draw[arrow, dashed] (pop) -- node[left, font=\scriptsize]{diversity} (search);
+\draw[arrow, dashed] (pop) -- node[right, font=\scriptsize]{selection} (eval);
+\draw[arrow, dashed] (pop) -- node[below, font=\scriptsize]{lineage} (reflect);
+\draw[arrow, bend left=20] (eval) to node[right, font=\scriptsize]{scores} (pop);
+\end{tikzpicture}
+\caption{The Five Evolution Loops and their relationships. The central cycle (Search $\rightarrow$ Evaluate $\rightarrow$ Reflect) is augmented by the Population Loop (maintaining diversity and lineage) and the Specification-to-Execution Loop (translating goals into artifacts).}
+\label{fig:five_loops}
+\end{figure}
+
+
+\subsection{Loop 1: Specification-to-Execution}
+
+\subsubsection{Definition}
+
+The Specification-to-Execution Loop (Spec Loop) transforms a high-level description of a goal---typically expressed in natural language---into an executable artifact. This artifact may be a machine learning pipeline, an agent workflow, a software program, or a configuration file. The Spec Loop is the entry point for self-evolution: it determines what the system will attempt to improve.
+
+Formally, the Spec Loop maps a specification $s \in \mathcal{S}$ (natural language or structured description) to an executable artifact $a \in \mathcal{A}$:
+\begin{equation}
+    a = \text{SpecLoop}(s) = \text{Plan}(\text{Understand}(s), \text{Decompose}(s), \text{Execute}(\cdot))
+\end{equation}
+
+The Spec Loop typically involves three sub-processes: (1)~understanding the specification (parsing the user's intent), (2)~decomposing the specification into sub-tasks (planning), and (3)~executing the sub-tasks (implementation).
+
+\subsubsection{Representative Systems}
+
+\paragraph{AutoML-GPT.}
+AutoML-GPT~\citep{zhang2023automlgpt} is a pioneering system that uses GPT models as the planning layer for automated machine learning. The user provides a task card describing the dataset and objective, and the system generates a complete ML pipeline including data preprocessing, model selection, training, and evaluation. The natural language specification serves as the ``genome'' from which the executable pipeline is synthesized. AutoML-GPT demonstrates that LLMs can bridge the gap between high-level intent and low-level implementation in the ML domain, though it operates as a single-shot generator without iterative refinement.
+
+\paragraph{AutoML-Agent.}
+AutoML-Agent~\citep{chen2024automlagent} extends AutoML-GPT by decomposing the AutoML process into a multi-agent workflow. Specialized agents handle data retrieval, preprocessing, modeling, evaluation, and deployment. A planning agent coordinates the workflow, while retrieval-augmented generation provides domain knowledge. This decomposition enables more robust and interpretable pipeline generation, as each agent can specialize in its sub-task while the overall system maintains coherence through the planning agent.
+
+\paragraph{LLM+AutoML Synergy.}
+The work on LLM synergies with automated machine learning~\citep{zheng2024llm_automl} demonstrates that LLMs can serve as the bridge between natural language task descriptions and the ML program synthesis process. Rather than treating AutoML as a fixed toolbox, this approach treats it as a program synthesis problem where the LLM proposes and the AutoML system verifies.
+
+\subsubsection{Analysis}
+
+The Spec Loop is the most product-mature of the five loops. Systems like AutoML-GPT and AutoML-Agent already demonstrate end-to-end pipeline generation from natural language. However, the current limitation is that most Spec Loop systems are \emph{single-shot}: they generate a pipeline once and do not iteratively improve it based on execution results. The integration of the Spec Loop with the Evaluator and Reflection loops---enabling the system to observe that its generated pipeline underperforms and revise the specification or implementation accordingly---remains an open challenge.
+
+
+\subsection{Loop 2: Search}
+
+\subsubsection{Definition}
+
+The Search Loop systematically explores a space of candidate solutions to find high-performing configurations. The search space may consist of prompts, code, neural network architectures, agent configurations, hyperparameters, or any other artifact that can be parameterized. The Search Loop is the engine of exploration in self-evolving systems.
+
+Formally, the Search Loop iteratively generates candidates and improves them:
+\begin{align}
+    c_{t+1} &= \text{SearchStep}(c_t, \mathcal{H}_t, \mathcal{F}) \\
+    \mathcal{H}_{t+1} &= \mathcal{H}_t \cup \{(c_t, f(c_t))\}
+\end{align}
+where $c_t$ is the current candidate, $\mathcal{H}_t$ is the history of past candidates and scores, $\mathcal{F}$ is the search strategy, and $f$ is the evaluation function.
+
+\subsubsection{Search Strategies}
+
+We identify four primary search strategies used in self-evolving AI systems:
+
+\paragraph{Gradient-free optimization with LLMs.}
+OPRO~\citep{yang2023opro} uses an LLM as a black-box optimizer. The optimization problem is described in natural language, and the LLM reads a history of past solutions paired with their scores to propose new candidates. The key insight is that the LLM can perform ``meta-learning'' from the trajectory of past solutions, identifying patterns of improvement and extrapolating to better candidates, without explicit gradient computation.
+
+The OPRO meta-prompt structure encodes the optimization trajectory as:
+\begin{verbatim}
+Instruction Score: 45
+"Let's think step by step"
+Instruction Score: 62
+"Think about this problem carefully"
+Instruction Score: 78
+"Break down the problem into parts"
+Instruction Score: [to be filled]
+\end{verbatim}
+This simple format enables the LLM to identify which solution features correlate with higher scores and propose candidates that combine promising features.
+
+\paragraph{Evolutionary search.}
+Evolutionary search applies biological metaphors---mutation, crossover, selection---to the exploration of candidate spaces. In the LLM era, the variation operators are typically implemented by LLMs rather than hand-coded functions. AlphaEvolve~\citep{novikov2025alphaevolve} uses Gemini Flash for breadth exploration (generating diverse candidates) and Gemini Pro for depth exploration (refining promising candidates). LLaMEA~\citep{van2024llaMEA} uses an LLM to generate and refine metaheuristic optimization algorithms, evolving not the solution to a problem but the optimizer itself.
+
+\paragraph{Architecture search (NAS).}
+Neural Architecture Search guided by LLMs treats neural network architectures as code that can be generated, mutated, and evaluated. EvoPrompting~\citep{chen2024evoprompting} encodes GNN architectures as Python code and uses an LLM to evolve the code. The LLM generates initial architectures from a specification, evaluates them on algorithmic reasoning tasks, and proposes mutations that improve performance. NADER~\citep{nasr2024nader} extends this by decomposing architecture search into a multi-agent collaboration, where different agents propose, evaluate, and refine architectural components.
+
+\paragraph{Agent architecture search.}
+ADAS~\citep{hu2024adas} applies search to the space of agent architectures themselves. Rather than searching for the best output of a fixed agent, ADAS searches for the best \emph{agent}---its components, connections, and control flow. The search space includes different types of agent building blocks (LLM calls, tool use, memory access, conditional branching) and the search objective is task performance. ADAS discovered agent architectures that outperform hand-designed ones on diverse benchmarks, demonstrating that the space of agent architectures is large enough to benefit from systematic search.
+
+\subsubsection{Analysis}
+
+The Search Loop is the most studied and most diverse of the five loops. The key dimension of variation is the search space: prompts (OPRO), code (FunSearch, OpenEvolve), architectures (EvoPrompting, ADAS), and agent structures (ADAS, AutoAgents). A second dimension is the search strategy: LLM-based optimization (OPRO), evolutionary search (AlphaEvolve, LLaMEA), and multi-agent decomposition (NADER, AutoAgents).
+
+An important trend is the increasing use of LLMs as the search operator. Traditional search algorithms (random search, Bayesian optimization, genetic algorithms) require hand-coded operators for each search space. LLM-based search operators are universal: the same LLM can propose prompt variations, code mutations, architectural changes, and agent reconfigurations, with only the natural language description of the search space changing. This universality is what enables the cross-domain convergence we observe.
+
+
+\subsection{Loop 3: Evaluator}
+
+\subsubsection{Definition}
+
+The Evaluator Loop provides the selection pressure that drives self-evolution. Without evaluation, generation is random search; with evaluation, generation becomes directed search. The Evaluator Loop scores candidate solutions using automated mechanisms---tests, benchmarks, verifiers, reward models, or deployment metrics---and feeds the scores back to the Search Loop.
+
+Formally, the Evaluator Loop applies an evaluation function:
+\begin{equation}
+    f: \mathcal{C} \rightarrow \mathbb{R}^k
+\end{equation}
+where $\mathcal{C}$ is the candidate space and $\mathbb{R}^k$ is a vector of scores (potentially multi-objective). The evaluation function may be deterministic (e.g., test pass rate) or stochastic (e.g., performance on random test inputs).
+
+\subsubsection{Evaluation Mechanisms}
+
+\paragraph{Unit tests and execution feedback.}
+The most reliable evaluation mechanism is execution: run the candidate program on test inputs and compare outputs to expected results. Self-Debug~\citep{chen2024selfdebug} uses execution feedback as the primary evaluation signal. When a generated program fails a test, the execution trace and error messages serve as the feedback signal for the Debug step. This mechanism is deterministic and reliable, but it requires well-defined test suites and is limited to domains where correctness can be verified by execution.
+
+\paragraph{Mathematical verification.}
+FunSearch~\citep{romera2024funsearch} and AlphaEvolve~\citep{novikov2025alphaevolve} use mathematical verification as their evaluation mechanism. For FunSearch, the evaluator checks whether a generated program correctly solves the target mathematical problem and measures its efficiency. For AlphaEvolve, the evaluators are automated scoring functions that verify correctness and measure performance across multiple dimensions. Mathematical verification provides the strongest evaluation guarantee---the system can provably verify that a candidate meets the specification---but it is applicable only to domains with formal specifications.
+
+\paragraph{Reward models.}
+ReST~\citep{gulcehre2023rest} and Constitutional AI~\citep{bai2022constitutional} use learned reward models as evaluators. ReST uses a reward model to filter generated samples, retaining only high-scoring examples for fine-tuning. Constitutional AI uses an AI evaluator that judges responses according to a set of constitutional principles. Reward models are more flexible than execution-based evaluation (they can evaluate open-ended outputs) but less reliable (they may have blind spots or biases).
+
+\paragraph{Benchmark suites.}
+Agent evaluation benchmarks (SWE-bench~\citep{jimenez2024swebench}, OSWorld~\citep{xie2024osworld}, WebArena~\citep{zhou2024webarena}) provide standardized evaluation environments for self-evolving agent systems. SWE-bench evaluates code generation on real GitHub issues; OSWorld evaluates agents on operating system tasks; WebArena evaluates web interaction. These benchmarks provide realistic, multi-step evaluation signals that go beyond single-metric scoring.
+
+\paragraph{Quality-diversity metrics.}
+MAP-Elites~\citep{mouret2015mapelites}, used by AlphaEvolve and LLMatic~\citep{chen2024llmatic}, evaluates candidates on both quality (performance on the objective) and diversity (behavioral distinctiveness). This dual evaluation ensures that the system explores the solution landscape broadly rather than converging prematurely to a local optimum. Quality-diversity evaluation is particularly important for creative discovery tasks where the goal is not just to find one good solution but to map the space of possible solutions.
+
+\subsubsection{Analysis}
+
+The Evaluator Loop is the bottleneck of self-evolving systems. The quality of evolution is fundamentally limited by the quality of evaluation. A system with a perfect evaluator can evolve arbitrarily complex solutions; a system with a noisy or biased evaluator will evolve solutions that exploit the evaluator's weaknesses rather than solving the real problem.
+
+This bottleneck manifests in several ways. First, many real-world tasks lack automated evaluators: there is no test suite for ``write a good marketing email'' or ``design an effective agent workflow.'' Second, evaluators may be gameable: code that passes all tests may be brittle, and agents that achieve high benchmark scores may fail in production. Third, multi-objective evaluation (balancing performance, efficiency, safety, and fairness) requires careful trade-off specification.
+
+The most promising direction is the combination of multiple evaluation mechanisms: execution feedback for verifiable properties, reward models for subjective quality, and quality-diversity metrics for exploration.
+
+
+\subsection{Loop 4: Reflection}
+
+\subsubsection{Definition}
+
+The Reflection Loop converts evaluation outcomes into structured, actionable knowledge that improves future generation. While the Evaluator Loop produces scalar scores (``this solution scores 0.73''), the Reflection Loop produces rich, language-based analyses (``this solution fails because it does not handle edge case X; to fix this, modify component Y''). The Reflection Loop is what distinguishes self-evolving systems from simple optimization: it creates an explicit, queryable representation of the system's own failure modes and improvement strategies.
+
+Formally, the Reflection Loop generates a reflection $r_t$ given the current candidate $c_t$, its evaluation $f(c_t)$, and past reflections $\mathcal{R}_{<t}$:
+\begin{equation}
+    r_t = \text{Reflect}(c_t, f(c_t), \mathcal{R}_{<t})
+\end{equation}
+The reflection $r_t$ is stored in memory and used to guide future generation.
+
+\subsubsection{Reflection Mechanisms}
+
+\paragraph{Verbal reinforcement learning (Reflexion).}
+Reflexion~\citep{shinn2023reflexion} introduces verbal reinforcement learning: instead of updating model parameters through gradient descent, the system updates a linguistic memory buffer through reflection. When the actor fails a task, the self-reflection module generates a verbal analysis of what went wrong and what to do differently. This analysis is stored in a growing memory buffer that the actor consults on subsequent attempts.
+
+The Reflexion architecture employs three specialized models:
+\begin{itemize}
+    \item \textbf{Actor} ($M_a$): Generates actions/outputs given the task and accumulated memory.
+    \item \textbf{Evaluator} ($M_e$): Scores the actor's output with a binary or scalar reward.
+    \item \textbf{Self-Reflection} ($M_r$): Generates verbal feedback explaining what went wrong.
+\end{itemize}
+
+The key insight is that natural language provides a richer feedback signal than scalar rewards. While a scalar reward tells the system \emph{that} it failed, a verbal reflection tells it \emph{why} and \emph{what to do about it}. This enables more efficient learning from fewer episodes.
+
+Reflexion achieved 91\% pass@1 on HumanEval using GPT-3.5, surpassing GPT-4's 80\%---demonstrating that a weaker model with reflection can outperform a stronger model without reflection.
+
+\paragraph{Iterative self-refinement (Self-Refine).}
+Self-Refine~\citep{madaan2023selfrefine} implements the simplest form of reflection: the same model generates, critiques, and refines its own output in a single session. The loop operates as:
+\begin{enumerate}
+    \item \textsc{Generate}: Model produces initial output $y_0 = \text{LLM}(x, \text{instruction})$.
+    \item \textsc{Critique}: Model analyzes its output, producing feedback $\text{fb}_t = \text{LLM}(y_t, \text{rubric})$.
+    \item \textsc{Refine}: Model improves output based on feedback $y_{t+1} = \text{LLM}(y_t, \text{fb}_t, \text{instruction})$.
+\end{enumerate}
+The loop terminates when the model's critique indicates no further improvements are needed, or a maximum iteration count is reached.
+
+Self-Refine achieves approximately 20\% improvement across seven diverse tasks without any external training data or weight updates. Its simplicity makes it a widely adopted baseline: it requires only a single LLM, no specialized training, and no external feedback mechanism.
+
+\paragraph{Language backpropagation (Agent Symbolic Learning).}
+Agent Symbolic Learning~\citep{zhou2024agentsymbolic} takes the reflection metaphor to its logical extreme by implementing a full backpropagation algorithm in natural language space. The agent is viewed as a symbolic network with learnable ``weights'' (prompts, tool descriptions, pipeline configurations). After execution, a language loss is computed, language gradients are backpropagated through the agent's computational graph, and the symbolic weights are updated using language-based optimizers.
+
+The backpropagation process operates as follows:
+\begin{enumerate}
+    \item \textbf{Forward pass}: Execute the agent on a task, producing a trajectory $\tau$.
+    \item \textbf{Language loss}: $\mathcal{L}_{\text{lang}} = \text{LLM}(\mathcal{P}_{\text{loss}}(\tau))$.
+    \item \textbf{Language gradient}: For each layer $n$ from output to input, compute $\nabla_{\text{lang}}^n = \text{LLM}(\mathcal{P}_{\text{gradient}}(\nabla_{\text{lang}}^{n+1}, \text{info}_n, \mathcal{L}_{\text{lang}}))$.
+    \item \textbf{Weight update}: Apply prompt, tool, and pipeline optimizers using the language gradients.
+\end{enumerate}
+
+This approach achieved state-of-the-art results on HotPotQA (39.1 F1), MATH (60.7\% accuracy), and HumanEval (73.2\% pass@1), outperforming DSPy and baseline agents on all benchmarks.
+
+\paragraph{Self-play reasoning (Absolute Zero).}
+Absolute Zero~\citep{zhao2025absolutezero} introduces a self-play paradigm where a single model simultaneously proposes tasks and solves them, using only self-generated data. A code executor provides verification. The model learns both to design curricula (proposing tasks that are solvable but challenging) and to solve them, creating a self-reinforcing loop of improvement that requires zero external training data.
+
+\subsubsection{Analysis}
+
+The Reflection Loop is perhaps the most distinctive feature of LLM-based self-evolution systems compared to classical evolutionary computation. Traditional evolutionary algorithms use fitness scores as the sole feedback signal; there is no mechanism for the system to ``explain'' why a candidate failed or to propose specific modifications. LLM-based reflection adds this capability, enabling more efficient search by directing generation toward promising regions of the candidate space.
+
+The key tension in reflection-based systems is between specificity and generality. Specific reflections (``the error is on line 42, where the variable should be initialized to zero'') are immediately actionable but may not generalize. General reflections (``the system tends to forget edge cases'') are transferable but require additional reasoning to become actionable. The most effective systems combine both: specific feedback for immediate correction and general principles for long-term improvement.
+
+A second tension is between single-model and multi-model reflection. Self-Refine uses the same model for generation, critique, and refinement, maximizing simplicity but potentially limiting the quality of self-critique. Reflexion uses specialized models for each role, potentially improving reflection quality at the cost of additional model invocations. Agent Symbolic Learning takes a structured approach, implementing a formal backpropagation-like algorithm that decomposes reflection into loss computation, gradient propagation, and weight updates.
+
+\subsection{Loop 5: Population}
+
+\subsubsection{Definition}
+
+The Population Loop maintains a diverse collection of candidate solutions and applies population-level operations---selection, mutation, recombination, and specialization---to evolve the population over time. Unlike the Search Loop, which may track a single current best, the Population Loop explicitly preserves multiple candidates, enabling exploration of the solution landscape rather than exploitation of a single trajectory.
+
+Formally, the Population Loop maintains a population $P_t = \{p_1, \ldots, p_n\}$ and applies evolutionary operators:
+\begin{align}
+    P' &= \text{Select}(P_t, f) \\
+    P'' &= \text{Vary}(P', \text{mutate}, \text{recombine}) \\
+    P_{t+1} &= \text{Replace}(P_t, P'', f)
+\end{align}
+where $f$ is the fitness function and the variation operators (mutate, recombine) are typically implemented by LLMs.
+
+\subsubsection{Population Strategies}
+
+\paragraph{MAP-Elites quality-diversity search.}
+MAP-Elites~\citep{mouret2015mapelites}, used by AlphaEvolve~\citep{novikov2025alphaevolve} and LLMatic~\citep{chen2024llmatic}, maintains a map of high-performing solutions across behavioral dimensions. Each dimension defines a ``niche,'' and the map stores the best solution found for each niche. New candidates are added if they outperform the current elite in their niche. This ensures both quality (each elite is high-performing within its niche) and diversity (the niches span the behavioral space).
+
+AlphaEvolve's application of MAP-Elites to algorithm discovery produced the first improvement over Strassen's matrix multiplication algorithm in 56 years: a 48-multiplication algorithm for $4\times4$ complex matrices, found by maintaining a population of candidate algorithms across dimensions of problem size and algorithm structure.
+
+\paragraph{Evolutionary optimization of optimizers (LLaMEA).}
+LLaMEA~\citep{van2024llaMEA} applies the Population Loop at the meta-level: the population consists not of problem solutions but of optimization algorithms themselves. An LLM generates candidate metaheuristic algorithms, which are evaluated on benchmark optimization problems. The best-performing algorithms are selected, mutated, and recombined by the LLM to produce the next generation. This ``improving the improvers'' approach represents the strongest form of meta-evolution in the surveyed literature.
+
+\paragraph{Multi-agent population dynamics.}
+Several multi-agent frameworks implicitly implement population dynamics. AgentEvolver~\citep{jiang2024agentevolver} evolves agent tool usage through population-level selection and mutation. EvoAgent~\citep{yuan2024evoagent} maintains a population of agent configurations and evolves them through crossover and mutation. These systems treat agent configurations as evolvable genomes and apply evolutionary pressure at the agent level.
+
+\paragraph{Evolving code populations (FunSearch, OpenEvolve).}
+FunSearch~\citep{romera2024funsearch} maintains a population of program variants, where each variant is a Python function that solves a mathematical problem. The population evolves through LLM-proposed mutations, with selection based on correctness and efficiency. OpenEvolve~\citep{openevolve2024} extends this approach with more sophisticated variation strategies, including program-level crossover and context-aware mutation.
+
+\subsubsection{Analysis}
+
+The Population Loop is the oldest evolutionary mechanism, with roots in genetic algorithms dating to the 1960s. Its key advantage over single-candidate search is the preservation of diversity: by maintaining multiple candidates, the system can explore multiple regions of the solution space simultaneously and avoid premature convergence to local optima.
+
+The LLM era has transformed the Population Loop in two ways. First, LLMs serve as universal variation operators: instead of hand-coding mutation and crossover for each domain, a single LLM can propose mutations for programs, architectures, prompts, and agent configurations. Second, LLMs can perform \emph{informed} variation: by reading the history of past candidates and their scores, the LLM can propose mutations that are more likely to improve fitness, effectively performing ``warm-started'' evolution.
+
+The key challenge for population-based methods is computational cost: maintaining and evaluating a population requires more compute than single-candidate search. This cost is mitigated by the parallelizability of evaluation (all candidates can be evaluated independently) and by the efficiency gains from informed variation (fewer generations needed to reach a given fitness level).
+
+
+\subsection{Cross-Domain Mapping}
+
+Table~\ref{tab:cross_domain} maps the five loops across the five research domains. Each cell indicates the primary representative system(s) and the role of the loop within that domain.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Cross-domain mapping of the Five Evolution Loops. Each cell lists representative systems and the loop's role within the domain.}
+\label{tab:cross_domain}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccc}
+\toprule
+& \textbf{Spec Loop} & \textbf{Search Loop} & \textbf{Evaluator Loop} & \textbf{Reflection Loop} & \textbf{Population Loop} \\
+\midrule
+\textbf{AutoML + LLM} &
+AutoML-GPT, AutoML-Agent &
+Pipeline config search &
+Dataset metrics, deployment &
+Log analysis &
+Ensemble methods \\[4pt]
+
+\textbf{NAS + LLM} &
+Architecture specification &
+EvoPrompting, LLMatic, NADER &
+NAS-Bench accuracy &
+Design rationale &
+MAP-Elites (LLMatic) \\[4pt]
+
+\textbf{LLM Self-Improve} &
+Task description &
+Prompt optimization &
+Task performance &
+Self-Refine, Reflexion, STaR &
+SPIN self-play \\[4pt]
+
+\textbf{Evo Comp + LLM} &
+Objective function &
+OPRO, ReEvo, LLaMEA &
+Fitness function &
+ReEvo reflective search &
+AlphaEvolve, FunSearch \\[4pt]
+
+\textbf{Agent Frameworks} &
+Goal/task input &
+ADAS, AutoAgents &
+Task completion, SWE-bench &
+Agent Symbolic Learning &
+EvoAgent, AgentEvolver \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+Several patterns emerge from this mapping:
+
+\begin{enumerate}
+    \item \textbf{The Reflection Loop is uniquely LLM-native.} While the other four loops have classical counterparts (specification languages for the Spec Loop, search algorithms for the Search Loop, fitness functions for the Evaluator Loop, genetic algorithms for the Population Loop), the Reflection Loop has no direct classical analogue. Verbal reinforcement learning (Reflexion) and language backpropagation (Agent Symbolic Learning) are fundamentally enabled by the ability of LLMs to generate and process natural language analyses. This makes the Reflection Loop the most distinctive contribution of the LLM era to self-evolution.
+
+    \item \textbf{The Population Loop is underrepresented in agent frameworks.} While AutoML, NAS, and evolutionary computation have strong population-level traditions, most agent frameworks (AutoGPT, MetaGPT, CrewAI) operate with a single agent or a fixed set of agents. The systems that apply population dynamics to agents (EvoAgent, AgentEvolver, AutoAgents) are relatively recent. This represents a significant gap: the space of possible agent architectures is vast, and population-level search could discover configurations that human designers would not.
+
+    \item \textbf{The Evaluator Loop is the common bottleneck.} Across all five domains, the quality of evaluation is the primary determinant of evolution quality. AutoML systems are limited by the representativeness of dataset metrics; NAS systems by the transferability of benchmark architectures; self-improvement systems by the reliability of reward models; evolutionary systems by the design of fitness functions; and agent systems by the ecological validity of task environments.
+
+    \item \textbf{Loop composition varies by domain maturity.} AutoML systems primarily employ the Spec Loop and Evaluator Loop; NAS systems add the Search Loop; evolutionary systems add the Population Loop; and LLM self-improvement systems add the Reflection Loop. The most advanced systems in each domain combine all five loops.
+\end{enumerate}
+
+
+\subsection{Loop Composition Patterns}
+
+Different systems compose the five loops in different ways. We identify three common composition patterns:
+
+\paragraph{Linear pipeline.}
+The simplest composition chains the loops sequentially: Specification $\rightarrow$ Search $\rightarrow$ Evaluate $\rightarrow$ Reflect $\rightarrow$ Repeat. AutoML-Agent exemplifies this pattern: the planning agent generates a pipeline specification, specialized agents implement each component, the evaluator scores the result, and the planning agent adjusts based on the evaluation.
+
+\paragraph{Nested loops.}
+More sophisticated systems nest one loop inside another. AlphaEvolve nests a Search Loop (LLM proposing program mutations) inside a Population Loop (MAP-Elites maintaining diverse candidates), with an Evaluator Loop (automated scoring) providing selection pressure and a Reflection Loop (evolution context adapting based on successful/failed attempts) providing learning.
+
+\paragraph{Parallel loops.}
+Some systems run multiple loops in parallel. Agent Symbolic Learning runs forward execution, language loss computation, gradient backpropagation, and weight updates as parallel processes within the agent's computational graph. Multi-agent systems like AutoGen run multiple agent instances in parallel, each with its own evolutionary trajectory.
+
+The choice of composition pattern has significant implications for system design. Linear pipelines are simple but may miss opportunities for cross-loop optimization. Nested loops enable hierarchical search but increase computational cost. Parallel loops maximize throughput but require careful coordination.
+
+\subsection{Summary}
+
+The Five Evolution Loops taxonomy provides a unified framework for understanding the diverse landscape of AI self-evolution. By identifying five fundamental types of evolutionary cycles and mapping their occurrence across five research domains, we establish a common language that enables systematic comparison and cross-pollination. The key insight is that systems from different communities---AutoML, NAS, LLM self-improvement, evolutionary computation, and agent frameworks---are converging on the same set of fundamental mechanisms, differing primarily in the artifacts they evolve and the search spaces they explore.
+
+In the following sections, we apply this taxonomy to analyze specific systems and methods in detail, beginning with self-improvement methods (Section~\ref{sec:selfimprovement}), which most heavily employ the Reflection Loop and Evaluator Loop.
