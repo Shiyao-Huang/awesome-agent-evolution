@@ -10,10 +10,10 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `README.md` | present | 1 | 0 | 0 | 195 KB |
-| `README-ZH.md` | present | 1 | 0 | 0 | 195 KB |
+| `README.md` | present | 1 | 0 | 0 | 196 KB |
+| `README-ZH.md` | present | 1 | 0 | 0 | 196 KB |
 | `README-EN.md` | present | 1 | 0 | 0 | 195 KB |
-| `CONTENT_INDEX.md` | present | 1 | 0 | 0 | 3.6 KB |
+| `CONTENT_INDEX.md` | present | 1 | 0 | 0 | 3.2 KB |
 | `AGENTS.md` | present | 1 | 0 | 0 | 5.5 KB |
 | `CLAUDE.md` | present | 1 | 0 | 0 | 2.8 KB |
 | `CLOUD.md` | present | 1 | 0 | 0 | 1.5 KB |
