@@ -241,6 +241,10 @@
 
 | state-trace | [razroo/state-trace](https://github.com/razroo/state-trace) | state-trace Agent Memory Engine | [projects/219-state-trace-agent-memory-engine.md](219-state-trace-agent-memory-engine.md) |
 
+| Agent Memory Techniques | [NirDiamant/Agent_Memory_Techniques](https://github.com/NirDiamant/Agent_Memory_Techniques) | Agent Memory Technique Cookbook | [projects/220-agent-memory-techniques.md](220-agent-memory-techniques.md) |
+| kbench | [shareAI-lab/kbench](https://github.com/shareAI-lab/kbench) | Agent Harness Benchmark CLI | [projects/221-kbench-agent-harness-benchmark-cli.md](221-kbench-agent-harness-benchmark-cli.md) |
+| evmbench | [paradigmxyz/evmbench](https://github.com/paradigmxyz/evmbench) | Smart Contract Agent Benchmark Harness | [projects/222-evmbench-smart-contract-agent-harness.md](222-evmbench-smart-contract-agent-harness.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

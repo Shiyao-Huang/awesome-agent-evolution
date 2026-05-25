@@ -10,26 +10,26 @@ Self Evolve 的项目结构按 `raw -> processed -> work -> results` 管线治�
 
 | Metric | Value |
 |---|---:|
-| Raw GitHub captures | 501 |
-| Classified GitHub repositories | 501 |
-| Analyzed project/model-card reports | 92 |
+| Raw GitHub captures | 504 |
+| Classified GitHub repositories | 504 |
+| Analyzed project/model-card reports | 95 |
 | Strict evolution-related repositories | 79 |
 | Broad evolution-related repositories | 180 |
 | Raw paper files on disk | 199 |
 | Paper review files | 137 |
-| Public project report files | 244 |
+| Public project report files | 247 |
 | Current paper PDF | present |
 
 ## Category Coverage
 
 | Category | Present Paths | Files | Directories | Skipped | Size | Rule |
 |---|---:|---:|---:|---:|---:|---|
-| [Raw / 原始素材](./raw-index.md) | 8/8 | 3786 | 6 | 0 | 39 MB | 只保存采集原貌和最小元数据；除时间戳补齐、去重索引外，不在这里写分析结论。 |
-| [Processed / 加工分析](./processed-index.md) | 8/8 | 25874 | 2907 | 0 | 2.9 GB | 清洗、分类、交叉分析、深度项目卡、论文评审都归这里；内容必须能追溯到 raw 或外部 canonical source。 |
-| [Work / 工作产物](./work-index.md) | 8/8 | 1494 | 258 | 0 | 42 MB | 论文草稿、站点源码、脚本、调查图表、工程中间件归这里；可以迭代，但要有构建或验证入口。 |
-| [Results / 结果输出](./results-index.md) | 6/6 | 743 | 194 | 0 | 17 MB | 可交付、可发布、可下载、可部署的输出归这里；生成物要说明来源和刷新命令。 |
+| [Raw / 原始素材](./raw-index.md) | 8/8 | 3789 | 6 | 0 | 39 MB | 只保存采集原貌和最小元数据；除时间戳补齐、去重索引外，不在这里写分析结论。 |
+| [Processed / 加工分析](./processed-index.md) | 8/8 | 25877 | 2907 | 0 | 2.9 GB | 清洗、分类、交叉分析、深度项目卡、论文评审都归这里；内容必须能追溯到 raw 或外部 canonical source。 |
+| [Work / 工作产物](./work-index.md) | 8/8 | 1503 | 261 | 0 | 42 MB | 论文草稿、站点源码、脚本、调查图表、工程中间件归这里；可以迭代，但要有构建或验证入口。 |
+| [Results / 结果输出](./results-index.md) | 6/6 | 752 | 197 | 0 | 17 MB | 可交付、可发布、可下载、可部署的输出归这里；生成物要说明来源和刷新命令。 |
 | [Mirrors / 外部仓库镜像](./mirrors-index.md) | 4/4 | 210827 | 44757 | 192 | 19 GB | 外部仓库克隆、只读镜像和临时验证仓库归这里；不要把本项目治理文件混入镜像内部。 |
-| [Ops / 管理与协作](./ops-index.md) | 9/9 | 29 | 5 | 0 | 773 KB | 项目管理、Agent 手册、云部署、索引、发布规范归这里；任何新长期规则都要能从根 README 找到。 |
+| [Ops / 管理与协作](./ops-index.md) | 9/9 | 29 | 5 | 0 | 790 KB | 项目管理、Agent 手册、云部署、索引、发布规范归这里；任何新长期规则都要能从根 README 找到。 |
 
 ## Project Map
 

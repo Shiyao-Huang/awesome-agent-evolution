@@ -1,6 +1,6 @@
-# Repo 自动分类与技术栈分析（raw-github 501）
+# Repo 自动分类与技术栈分析（raw-github 504）
 
-- generated_at: 2026-05-26T01:38:44+08:00
+- generated_at: 2026-05-26T02:39:02+08:00
 - companion_csv: `research/repo-classification.csv`
 - companion_json: `research/repo-classification.json`
 
@@ -9,8 +9,8 @@
 | Category | Count |
 |---|---:|
 | 框架/framework | 139 |
-| 评测/evaluation | 102 |
-| 教程/tutorial | 95 |
+| 评测/evaluation | 104 |
+| 教程/tutorial | 96 |
 | 工具/tool | 88 |
 | 应用/application | 47 |
 | 论文代码/paper-code | 29 |
@@ -20,8 +20,8 @@
 
 | Repo | Category | Theme | Function | Evidence |
 |---|---|---|---|---|
-| [microsoft/waza](https://github.com/microsoft/waza) | 评测/evaluation | skill | benchmark-eval | web-observed GitHub page showed 709 commits, MIT license, Go CLI, 904 stars, 49 forks, and README language for creating, testing, measuring and improving AI agent skill quality with eval.yaml suites, graders, multi-model comparison, coverage grids and CI comments; shell GitHub API freshness was blocked. |
-| [wazionapps/nexo](https://github.com/wazionapps/nexo) | 工具/tool | memory | memory-substrate | web-observed GitHub page showed 22 stars, 9 forks, Python/MCP runtime positioning, persistent semantic memory, natural forgetting, trust scoring, 150+ MCP tools, LoCoMo benchmark claims, and recovery-aware background jobs including weekly evolution; shell GitHub API freshness was blocked. |
-| [razroo/state-trace](https://github.com/razroo/state-trace) | 工具/tool | memory | tool-module | web-observed GitHub page showed 3 commits, Python package layout, 1 star, 0 forks, and README language for graph-native AI agent memory with typed nodes, causal links, capacity-aware decay/compression/removal, JSON persistence and optional embeddings; shell GitHub API freshness was blocked. |
+| [NirDiamant/Agent_Memory_Techniques](https://github.com/NirDiamant/Agent_Memory_Techniques) | 教程/tutorial | memory | resource-index | web-observed GitHub page showed 412 stars, 58 forks, 4 commits, Apache-2.0 license, Jupyter Notebook/Python/Mermaid stack, 30 runnable notebooks, six memory families, LoCoMo and LongMemEval benchmark coverage, and explicit warnings that the code is educational rather than production-ready; shell GitHub API freshness was blocked. |
+| [shareAI-lab/kbench](https://github.com/shareAI-lab/kbench) | 评测/evaluation | evaluation | benchmark-eval | web-observed GitHub page showed 10 stars, 1 fork, 12 commits, Apache-2.0 license, TypeScript/Python/Shell stack, support for SWE, TB2, Tau and SAE benchmarks, built-in harnesses for kode-agent-sdk, codex, claude-code and gemini-cli, generated custom adapters, and standardized run/trace artifacts; shell GitHub API freshness was blocked. |
+| [paradigmxyz/evmbench](https://github.com/paradigmxyz/evmbench) | 评测/evaluation | evaluation | benchmark-eval | web-observed GitHub page showed 421 stars, 62 forks, 5 commits, Apache-2.0 license, TypeScript/Python/Docker stack, frontend/backend/worker architecture, pinned frontier-evals reference, Codex detect-mode worker flow, parseable JSON vulnerability validation, and explicit security guidance for untrusted code; shell GitHub API freshness was blocked. |
 
-本轮新增 microsoft/waza、wazionapps/nexo、razroo/state-trace raw captures，并同步提升为 public site / model-card 覆盖。GitHub API 未验证 freshness 的原因记录在 Mermaid graph 与 work notes 中。
+本轮新增 NirDiamant/Agent_Memory_Techniques、shareAI-lab/kbench、paradigmxyz/evmbench raw captures，并同步提升为 public site / model-card 覆盖。GitHub API 未验证 freshness 的原因记录在 Mermaid graph 与 work notes 中。

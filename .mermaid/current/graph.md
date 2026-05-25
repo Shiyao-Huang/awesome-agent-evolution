@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-26T01:38:44+08:00
+Generated: 2026-05-26T02:39:02+08:00
 
 ## Nodes
 
@@ -15,20 +15,18 @@ Generated: 2026-05-26T01:38:44+08:00
 
 ## Edges
 
-- intent.direct-user-input --undefined--> raw.github.hourly-captures
-- raw.github.hourly-captures --undefined--> processed.github-classification
-- processed.github-classification --undefined--> results.public-site
-- processed.github-classification --undefined--> work.learning-notes
-- work.learning-notes --undefined--> intent.direct-user-input
-- processed.github-classification --undefined--> results.public-visualizations
+- intent.direct-user-input --governs--> raw.github.hourly-captures
+- raw.github.hourly-captures --feeds--> processed.github-classification
+- processed.github-classification --publishes--> results.public-site
+- processed.github-classification --explains--> work.learning-notes
+- work.learning-notes --handoff--> intent.direct-user-input
+- processed.github-classification --visualizes--> results.public-visualizations
 
 ## Current Run Evidence
 
-- Web-observed repos this run: microsoft/waza, wazionapps/nexo, razroo/state-trace; no clone, benchmark, or authenticated GitHub API freshness was claimed.
-- New raw files: raw-github/microsoft_waza.md, raw-github/wazionapps_nexo.md, raw-github/razroo_state-trace.md.
-- New public model cards and site reports: projects/site reports 217-219 for Waza, NEXO Brain and state-trace.
-- Generated target counts after this scripted update: raw=501, classified=501, site projects=92, strict evolution=79, broad evolution=180, theme heat memory=102/evaluation=91/evolution=79/skill=62.
-- GitHub API blocker: curl api.github.com failed DNS resolution and gh auth status reported an invalid token for Shiyao-Huang.
-- GitNexus evidence: status is stale at indexed commit 85247b7 before this iteration; analyze is degraded because global HOME registry writes are blocked and temp-HOME LadybugDB FTS extension download cannot connect.
-- Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> project report -> site data -> README/i18n/site build.
+- Web-observed repos: NirDiamant/Agent_Memory_Techniques, shareAI-lab/kbench, paradigmxyz/evmbench.
+- New raw files: raw-github/nirdiamant_agent_memory_techniques.md, raw-github/shareai-lab_kbench.md, raw-github/paradigmxyz_evmbench.md.
+- New public model cards and site reports: project/report ids 220, 221, 222.
+- Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
+- GitNexus analyze attempted an incremental refresh and failed at the HOME registry write with EPERM; a follow-up status check reported the committed head up-to-date.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

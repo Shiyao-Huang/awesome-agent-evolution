@@ -1841,6 +1841,90 @@ export const projects: Project[] = [
                     "graph memory",
                     "stateful agents"
             ]
+    },
+    {
+            "name": "Agent Memory Techniques",
+            "repo": "NirDiamant/Agent_Memory_Techniques",
+            "url": "https://github.com/NirDiamant/Agent_Memory_Techniques",
+            "stars": 412,
+            "forks": 58,
+            "language": "Jupyter Notebook / Python",
+            "license": "Apache-2.0",
+            "report": "projects/220-agent-memory-techniques.md",
+            "pattern": "memory need -> 30 runnable techniques -> taxonomy/decision tree -> evaluation and production notebooks",
+            "description": "Agent Memory Techniques is a runnable notebook cookbook for 30 LLM-agent memory patterns, covering short-term buffers, long-term stores, cognitive architectures, multi-agent shared memory, framework integrations, LoCoMo-style evaluation and production patterns.",
+            "stack": [
+                    "Jupyter Notebook",
+                    "Python",
+                    "Mermaid"
+            ],
+            "category": "Agent Memory Technique Cookbook",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/nirdiamant_agent_memory_techniques.md",
+            "status": "candidate",
+            "tags": [
+                    "agent memory",
+                    "cookbook",
+                    "LoCoMo",
+                    "knowledge graph",
+                    "production patterns"
+            ]
+    },
+    {
+            "name": "kbench",
+            "repo": "shareAI-lab/kbench",
+            "url": "https://github.com/shareAI-lab/kbench",
+            "stars": 10,
+            "forks": 1,
+            "language": "TypeScript / Python",
+            "license": "Apache-2.0",
+            "report": "projects/221-kbench-agent-harness-benchmark-cli.md",
+            "pattern": "benchmark bridge -> kbench CLI -> built-in or custom agent harness -> standardized run artifacts",
+            "description": "kbench normalizes SWE, Terminal-Bench 2.0, tau-bench and Standardized Agent Exams through one CLI and harness contract, including Codex, Claude Code, Gemini CLI, kode-agent-sdk and custom adapter paths.",
+            "stack": [
+                    "TypeScript",
+                    "Python",
+                    "Shell"
+            ],
+            "category": "Agent Harness Benchmark CLI",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/shareai-lab_kbench.md",
+            "status": "candidate",
+            "tags": [
+                    "agent harness",
+                    "benchmark",
+                    "SWE-bench",
+                    "terminal-bench",
+                    "SAE"
+            ]
+    },
+    {
+            "name": "evmbench",
+            "repo": "paradigmxyz/evmbench",
+            "url": "https://github.com/paradigmxyz/evmbench",
+            "stars": 421,
+            "forks": 62,
+            "language": "TypeScript / Python",
+            "license": "Apache-2.0",
+            "report": "projects/222-evmbench-smart-contract-agent-harness.md",
+            "pattern": "contract upload -> sandboxed Codex detect worker -> JSON vulnerability report -> UI/report validation",
+            "description": "evmbench is a domain-specific benchmark and harness for LLM agents that find and exploit smart-contract bugs, wrapping Codex detect-mode workers, job queues, secret handling, result validation and a report UI.",
+            "stack": [
+                    "TypeScript",
+                    "Python",
+                    "Docker"
+            ],
+            "category": "Smart Contract Agent Benchmark Harness",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/paradigmxyz_evmbench.md",
+            "status": "candidate",
+            "tags": [
+                    "agent benchmark",
+                    "security",
+                    "codex",
+                    "smart contracts",
+                    "sandbox"
+            ]
     }
 ];
 
@@ -1865,13 +1949,13 @@ export const projectGroups = [
   { title: 'AutoML 框架', repos: ['automl/auto-sklearn'] },
   { title: '自进化 Agent 综述', repos: ['CharlesQ9/Self-Evolving-Agents', 'Zesearch/self-improvement-llm'] },
   { title: 'LLM Agent 优化', repos: ['YoungDubbyDu/LLM-Agent-Optimization'] },
-  { title: '代码模型与评测', repos: ['CodeFuse-ML/awesome-code-llm', 'THUDM/AgentBench', 'ai4co/rl4co', 'ai4co/awesome-fm4co'] },
+  { title: '代码模型与评测', repos: ['CodeFuse-ML/awesome-code-llm', 'THUDM/AgentBench', 'ai4co/rl4co', 'ai4co/awesome-fm4co', 'paradigmxyz/evmbench'] },
   { title: '遗传编程', repos: ['pureples/pureples'] }
   ,{ title: '多 Agent 协作平台 (Round 4)', repos: ['ag2ai/ag2', 'OpenBMB/ChatDev', 'xlang-ai/OpenAgents', 'TransformerOptimus/SuperAGI', 'phidatahq/phidata', 'future-agi/future-agi'] }
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
-  ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta'] }
+  ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'webmaxru/Agent-Skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'webmaxru/Agent-Skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'Agent 框架 (Round 4)', repos: ['reworkd/AgentGPT', 'yoheinakajima/babyagi', 'cheshire-cat-ai/core', 'huggingface/smolagents', 'Chainlit/chainlit', 'smol-ai/developer'] }
   ,{ title: 'Agent 研究综述 (Round 4)', repos: ['XMUDeepLIT/Awesome-Self-Evolving-Agents', 'luo-junyu/Awesome-Agent-Papers', 'Zijian-Ni/awesome-ai-agents-2026'] }
 ];

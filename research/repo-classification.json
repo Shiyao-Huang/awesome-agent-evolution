@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T01:38:44+08:00",
+  "generated_at": "2026-05-26T02:39:02+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -4037,6 +4037,21 @@
       "description": "STATE-Bench 是 Microsoft 发布的 stateful agent task evaluation benchmark，用三类企业任务评估 memory 是否改善 agent 的可靠性、效率和多步执行。"
     },
     {
+      "repo": "microsoft/waza",
+      "url": "https://github.com/microsoft/waza",
+      "stars": "904",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "skill",
+      "stack": "Go",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 709 commits, MIT license, Go CLI, 904 stars, 49 forks, and README language for creating, testing, measuring and improving AI agent skill quality with eval.yaml suites, graders, multi-model comparison, coverage grids and CI comments; shell GitHub API freshness was blocked.",
+      "description": "Waza is Microsoft's Go CLI / framework for agent skills: it scaffolds skills and eval suites, runs benchmark tasks, compares models, checks coverage, and turns SKILL.md assets into measurable quality gates."
+    },
+    {
       "repo": "microsoft/WindowsAgentArena",
       "url": "https://github.com/microsoft/WindowsAgentArena",
       "stars": "861",
@@ -4305,6 +4320,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "Large Language Model Evolutionary Algorithm"
+    },
+    {
+      "repo": "NirDiamant/Agent_Memory_Techniques",
+      "url": "https://github.com/NirDiamant/Agent_Memory_Techniques",
+      "stars": "412",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "memory",
+      "stack": "Jupyter Notebook/Python/Mermaid",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 412 stars, 58 forks, 4 commits, Apache-2.0 license, Jupyter Notebook/Python/Mermaid stack, 30 runnable notebooks, six memory families, LoCoMo and LongMemEval benchmark coverage, and explicit warnings that the code is educational rather than production-ready; shell GitHub API freshness was blocked.",
+      "description": "Agent Memory Techniques is a runnable notebook cookbook for 30 LLM-agent memory patterns, covering short-term buffers, long-term stores, cognitive architectures, multi-agent shared memory, framework integrations, LoCoMo-style evaluation and production patterns."
     },
     {
       "repo": "noahshinn/reflexion",
@@ -4772,6 +4802,21 @@
       "description": "GenEnv: Difficulty-Aligned Co-Evolution Between LLM Agents and Environment Simulators"
     },
     {
+      "repo": "paradigmxyz/evmbench",
+      "url": "https://github.com/paradigmxyz/evmbench",
+      "stars": "421",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "TypeScript/Python/Docker",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 421 stars, 62 forks, 5 commits, Apache-2.0 license, TypeScript/Python/Docker stack, frontend/backend/worker architecture, pinned frontier-evals reference, Codex detect-mode worker flow, parseable JSON vulnerability validation, and explicit security guidance for untrusted code; shell GitHub API freshness was blocked.",
+      "description": "evmbench is a domain-specific benchmark and harness for LLM agents that find and exploit smart-contract bugs, wrapping Codex detect-mode workers, job queues, secret handling, result validation and a report UI."
+    },
+    {
       "repo": "pathway/alphaxos",
       "url": "https://github.com/pathway/alphaxos",
       "stars": "12",
@@ -5115,6 +5160,21 @@
       "prior_unclassified": "true",
       "time_slice": "2026-05",
       "content_timestamp": "2026-05-24"
+    },
+    {
+      "repo": "razroo/state-trace",
+      "url": "https://github.com/razroo/state-trace",
+      "stars": "1",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 3 commits, Python package layout, 1 star, 0 forks, and README language for graph-native AI agent memory with typed nodes, causal links, capacity-aware decay/compression/removal, JSON persistence and optional embeddings; shell GitHub API freshness was blocked.",
+      "description": "state-trace is a graph-native memory engine for AI agents that stores typed memories and causal links, then retrieves state-aware context through graph traversal instead of only vector similarity."
     },
     {
       "repo": "reflexioai/reflexio",
@@ -5625,6 +5685,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Official Repo of Your Agent May Misevolve: Emergent Risks in Self-evolving LLM Agents"
+    },
+    {
+      "repo": "shareAI-lab/kbench",
+      "url": "https://github.com/shareAI-lab/kbench",
+      "stars": "10",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "TypeScript/Python/Shell",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 10 stars, 1 fork, 12 commits, Apache-2.0 license, TypeScript/Python/Shell stack, support for SWE, TB2, Tau and SAE benchmarks, built-in harnesses for kode-agent-sdk, codex, claude-code and gemini-cli, generated custom adapters, and standardized run/trace artifacts; shell GitHub API freshness was blocked.",
+      "description": "kbench normalizes SWE, Terminal-Bench 2.0, tau-bench and Standardized Agent Exams through one CLI and harness contract, including Codex, Claude Code, Gemini CLI, kode-agent-sdk and custom adapter paths."
     },
     {
       "repo": "shehrum/grf-self-play",
@@ -6752,6 +6827,21 @@
       "description": "LightAgent 是轻量级 Python Agent 框架，把 Skills、持久记忆、MCP、Tree-of-Thought 和 multi-agent collaboration 组合成可快速嵌入的 self-learning runtime。"
     },
     {
+      "repo": "wazionapps/nexo",
+      "url": "https://github.com/wazionapps/nexo",
+      "stars": "22",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python / MCP",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 22 stars, 9 forks, Python/MCP runtime positioning, persistent semantic memory, natural forgetting, trust scoring, 150+ MCP tools, LoCoMo benchmark claims, and recovery-aware background jobs including weekly evolution; shell GitHub API freshness was blocked.",
+      "description": "NEXO Brain is a local shared-brain memory runtime for Claude Code, Codex, Claude Desktop and MCP clients, combining persistent memory, RAG, temporal recall, forgetting, trust scoring, benchmark reporting and background self-improvement jobs."
+    },
+    {
       "repo": "webmaxru/Agent-Skills",
       "url": "https://github.com/webmaxru/Agent-Skills",
       "stars": "29",
@@ -7470,51 +7560,6 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[ACM Computing Surveys 2025] This repository collects awesome survey, resource, and paper for Lifelong Learning with Large Language Models. (Updated Regularly)"
-    },
-    {
-      "repo": "microsoft/waza",
-      "url": "https://github.com/microsoft/waza",
-      "stars": "904",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "评测/evaluation",
-      "function_tag": "benchmark-eval",
-      "base_theme": "skill",
-      "stack": "Go",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-26",
-      "evidence": "web-observed GitHub page showed 709 commits, MIT license, Go CLI, 904 stars, 49 forks, and README language for creating, testing, measuring and improving AI agent skill quality with eval.yaml suites, graders, multi-model comparison, coverage grids and CI comments; shell GitHub API freshness was blocked.",
-      "description": "Waza is Microsoft's Go CLI / framework for agent skills: it scaffolds skills and eval suites, runs benchmark tasks, compares models, checks coverage, and turns SKILL.md assets into measurable quality gates."
-    },
-    {
-      "repo": "wazionapps/nexo",
-      "url": "https://github.com/wazionapps/nexo",
-      "stars": "22",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "工具/tool",
-      "function_tag": "memory-substrate",
-      "base_theme": "memory",
-      "stack": "Python / MCP",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-26",
-      "evidence": "web-observed GitHub page showed 22 stars, 9 forks, Python/MCP runtime positioning, persistent semantic memory, natural forgetting, trust scoring, 150+ MCP tools, LoCoMo benchmark claims, and recovery-aware background jobs including weekly evolution; shell GitHub API freshness was blocked.",
-      "description": "NEXO Brain is a local shared-brain memory runtime for Claude Code, Codex, Claude Desktop and MCP clients, combining persistent memory, RAG, temporal recall, forgetting, trust scoring, benchmark reporting and background self-improvement jobs."
-    },
-    {
-      "repo": "razroo/state-trace",
-      "url": "https://github.com/razroo/state-trace",
-      "stars": "1",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "工具/tool",
-      "function_tag": "tool-module",
-      "base_theme": "memory",
-      "stack": "Python",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-26",
-      "evidence": "web-observed GitHub page showed 3 commits, Python package layout, 1 star, 0 forks, and README language for graph-native AI agent memory with typed nodes, causal links, capacity-aware decay/compression/removal, JSON persistence and optional embeddings; shell GitHub API freshness was blocked.",
-      "description": "state-trace is a graph-native memory engine for AI agents that stores typed memories and causal links, then retrieves state-aware context through graph traversal instead of only vector similarity."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-26T00:00:00+08:00",
-  "total": 501,
-  "updated_files": 501,
+  "total": 504,
+  "updated_files": 504,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -2597,6 +2597,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "NirDiamant/Agent_Memory_Techniques",
+      "url": "https://github.com/NirDiamant/Agent_Memory_Techniques",
+      "file": "raw-github/nirdiamant_agent_memory_techniques.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T02:39:02+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
+    },
+    {
       "repo": "noahshinn/reflexion-draft",
       "url": "https://github.com/noahshinn/reflexion-draft",
       "file": "raw-github/noahshinn_reflexion-draft.md",
@@ -2874,6 +2883,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "paradigmxyz/evmbench",
+      "url": "https://github.com/paradigmxyz/evmbench",
+      "file": "raw-github/paradigmxyz_evmbench.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T02:39:02+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
       "repo": "pathway/alphaxos",
@@ -3396,6 +3414,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "shareAI-lab/kbench",
+      "url": "https://github.com/shareAI-lab/kbench",
+      "file": "raw-github/shareai-lab_kbench.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T02:39:02+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
       "repo": "shehrum/grf-self-play",
