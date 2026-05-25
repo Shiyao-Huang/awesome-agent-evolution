@@ -1,5 +1,7 @@
 # Awesome Self-Evolving AI Agents / AI Agent 自进化索引与综述
 
+**Author:** aha team
+
 [中文主入口](README.md) | [English](README-EN.md) | [中文兼容镜像](README-ZH.md)
 
 > 说明：中文主入口现在是 [README.md](README.md)。本文件保留 `-ZH` 兼容入口，内容与中文方向一致，但最新聚合总表以根 README 为准。

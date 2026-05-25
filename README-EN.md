@@ -1,5 +1,7 @@
 # Awesome Self-Evolving AI Agents / Self Evolve
 
+**Author:** aha team
+
 [中文主入口](README.md) | [English](README-EN.md) | [中文兼容镜像](README-ZH.md)
 
 This repository is a Chinese-first Awesome index, survey workspace, project model-card library, paper pipeline, and SEO site for self-evolving / self-improving AI agents.

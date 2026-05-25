@@ -1,5 +1,7 @@
 # Awesome Self-Evolving AI Agents / AI Agent 自进化索引与综述
 
+**Author:** aha team
+
 [中文主入口](README.md) | [English](README-EN.md) | [中文兼容镜像](README-ZH.md)
 
 ![Self Evolve 公开研究管线](site/public/visuals/self-evolve-readme-banner.png)
