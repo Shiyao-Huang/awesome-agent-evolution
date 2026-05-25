@@ -6,7 +6,7 @@ This run adds seven web-observed repositories that strengthen test-time evolutio
 
 ## Three Sentences
 
-The direct user intent source remains `docs/project-management/user-direct-inputs.md` and `CURRENT_GOAL.md`: raw evidence feeds processed classification, model cards, public reports, site data, indexes, and Mermaid evidence. Shell GitHub API and `gh api` remained blocked, so every current metric is explicitly marked web-observed rather than API verified. The added repositories fill gaps that were still missing after the 08:18 run: EVOTEST, agentic-stack, revfactory/harness, oh-my-skills, OpenClaw Harness, codex-1up, and dotnet-skills.
+The public governance rule remains: raw evidence feeds processed classification, model cards, public reports, site data, indexes, and Mermaid evidence. Shell GitHub API and `gh api` remained blocked, so every current metric is explicitly marked web-observed rather than API verified. The added repositories fill gaps that were still missing after the 08:18 run: EVOTEST, agentic-stack, revfactory/harness, oh-my-skills, OpenClaw Harness, codex-1up, and dotnet-skills.
 
 ## Added Captures
 

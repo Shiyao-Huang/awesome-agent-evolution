@@ -2,7 +2,7 @@
 
 ## Direct user intent
 
-This run follows `docs/project-management/user-direct-inputs.md` and `CURRENT_GOAL.md`: keep raw material raw, process classification separately, publish model-card/project reports to the site, and keep the data flow indexed.
+This run follows the public data-flow rule: keep raw material raw, process classification separately, publish model-card/project reports to the site, and keep the data flow indexed.
 
 ## One sentence
 

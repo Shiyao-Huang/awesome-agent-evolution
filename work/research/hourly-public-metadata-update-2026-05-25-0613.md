@@ -6,7 +6,7 @@ This run adds six web-observed public metadata records for agent skills, agent h
 
 ## Three Sentences
 
-The direct user intent source remains `docs/project-management/user-direct-inputs.md` and `CURRENT_GOAL.md`: raw evidence must feed processed analysis, public reports, website data, and indexes. New or refreshed raw captures cover `harness/harness-skills`, `HKUDS/OpenHarness`, `sehoon787/my-codex`, `aiming-lab/SkillRL`, `hebbs-ai/hebbs-memory-engine`, and `ViktorAxelsen/MemSkill`. GitHub shell API freshness is not fabricated; public GitHub pages were observed through browser/web access, while shell DNS/auth checks are recorded separately.
+The public governance rule remains: raw evidence must feed processed analysis, public reports, website data, and indexes. New or refreshed raw captures cover `harness/harness-skills`, `HKUDS/OpenHarness`, `sehoon787/my-codex`, `aiming-lab/SkillRL`, `hebbs-ai/hebbs-memory-engine`, and `ViktorAxelsen/MemSkill`. GitHub shell API freshness is not fabricated; public GitHub pages were observed through browser/web access, while shell DNS/auth checks are recorded separately.
 
 ## Added Raw Captures
 

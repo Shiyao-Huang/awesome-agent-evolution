@@ -6,7 +6,7 @@ This run extends the public Self Evolve metadata chain with six web-observed rep
 
 ## Three Sentences
 
-The user intent source remains `docs/project-management/user-direct-inputs.md` and `CURRENT_GOAL.md`: raw evidence must feed processed analysis, public project cards, site reports, and generated indexes. New raw captures were added for `tech-leads-club/agent-skills`, `jdrhyne/agent-skills`, `opensite-ai/opensite-skills`, `evalstate/fast-agent`, `shinpr/mcp-local-rag`, `diegosouzapw/awesome-omni-skills`. Shell GitHub API freshness is not fabricated; public pages were observed through web access, while local shell network and gh auth checks are validated separately.
+The public governance rule remains: raw evidence must feed processed analysis, public project cards, site reports, and generated indexes. New raw captures were added for `tech-leads-club/agent-skills`, `jdrhyne/agent-skills`, `opensite-ai/opensite-skills`, `evalstate/fast-agent`, `shinpr/mcp-local-rag`, `diegosouzapw/awesome-omni-skills`. Shell GitHub API freshness is not fabricated; public pages were observed through web access, while local shell network and gh auth checks are validated separately.
 
 ## Added Raw Captures
 

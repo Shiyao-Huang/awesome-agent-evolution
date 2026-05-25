@@ -6,7 +6,7 @@ This run extended the public Self Evolve metadata chain with current web-observe
 
 ## Three Sentences
 
-The user intent source remains `docs/project-management/user-direct-inputs.md` and `CURRENT_GOAL.md`: raw evidence must feed processed analysis, public project cards, site reports, and generated indexes. Four new raw GitHub captures were added, while existing A-Evolve and MemOS raw captures were promoted into site/model-card coverage. GitHub API freshness is not fabricated: shell DNS still cannot resolve `api.github.com`, and `gh auth status` reports an invalid token.
+The public governance rule remains: raw evidence must feed processed analysis, public project cards, site reports, and generated indexes. Four new raw GitHub captures were added, while existing A-Evolve and MemOS raw captures were promoted into site/model-card coverage. GitHub API freshness is not fabricated: shell DNS still cannot resolve `api.github.com`, and `gh auth status` reports an invalid token.
 
 ## Five Sentences
 

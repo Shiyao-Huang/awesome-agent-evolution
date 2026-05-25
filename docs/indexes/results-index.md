@@ -14,7 +14,7 @@
 | `output` | present | 8 | 1 | 0 | 564 KB |
 | `site/public/reports` | present | 232 | 4 | 0 | 764 KB |
 | `site/dist` | present | 533 | 292 | 0 | 12 MB |
-| `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 936 KB |
+| `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 955 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
 ## Representative Files

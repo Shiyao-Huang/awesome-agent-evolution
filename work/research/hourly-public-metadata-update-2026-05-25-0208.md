@@ -6,7 +6,7 @@ This run extends the public Self Evolve metadata chain with six web-observed rep
 
 ## Three Sentences
 
-The user intent source remains `docs/project-management/user-direct-inputs.md` and `CURRENT_GOAL.md`: raw evidence must feed processed analysis, public project cards, site reports, and generated indexes. New raw captures were added for `openai/skills`, `sentient-agi/EvoSkill`, `rtk-ai/icm`, `callstackincubator/agent-skills`, `CodeAlive-AI/ai-driven-development`, `jakenuts/agent-skills`. GitHub API freshness is not fabricated; shell/gh validation is recorded separately and the files mark this batch as `web_observed_github_page`.
+The public governance rule remains: raw evidence must feed processed analysis, public project cards, site reports, and generated indexes. New raw captures were added for `openai/skills`, `sentient-agi/EvoSkill`, `rtk-ai/icm`, `callstackincubator/agent-skills`, `CodeAlive-AI/ai-driven-development`, `jakenuts/agent-skills`. GitHub API freshness is not fabricated; shell/gh validation is recorded separately and the files mark this batch as `web_observed_github_page`.
 
 ## Added Raw Captures
 

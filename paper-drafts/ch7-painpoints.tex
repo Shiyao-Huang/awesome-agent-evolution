@@ -39,20 +39,20 @@ The methodology has limitations. Public forum posts overrepresent frustrated, te
 
 \begin{table*}[t]
 \centering
-\small
+\TableTight
 \caption{Mom Test coding schema used to transform practitioner discussions into design requirements.}
 \label{tab:mom-test-schema}
-\begin{tabular}{p{0.16\linewidth}p{0.25\linewidth}p{0.27\linewidth}p{0.23\linewidth}}
-\hline
+\begin{tabularx}{\textwidth}{@{}L{0.16\textwidth}L{0.25\textwidth}L{0.27\textwidth}Y@{}}
+\toprule
 \textbf{Field} & \textbf{Question asked of the evidence} & \textbf{Example signal} & \textbf{Derived requirement} \\
-\hline
+\midrule
 Observed failure & What actually broke? & Agent fabricated an API, rewrote URLs from memory, or looped on a tool call. & Verification before presentation; surgical edits; loop detection. \\
 Workaround & What did the user do instead? & Removed LangChain, wrote plain API calls, imposed iteration caps, manually inspected output. & Transparent control loops; budget guards; human-verifiable artifacts. \\
 Cost paid & What time, money, or risk did the workaround impose? & Eight attempts to generate tests; hundreds or thousands of dollars of token burn; manual context curation. & Cost-aware routing; test-quality metrics; automated context selection. \\
 Unmet need & What capability would remove the workaround? & Agent should know when it is uncertain, when to fetch docs, and when to stop. & Calibrated uncertainty, retrieval triggers, and termination policies. \\
 Severity & What happens if this is not fixed? & Production outage, security exposure, false improvement, or developer abandonment. & Prioritized roadmap and evaluation gates. \\
-\hline
-\end{tabular}
+\bottomrule
+\end{tabularx}
 \end{table*}
 
 \subsection{Pain Point Taxonomy: Severity and Category}
@@ -84,12 +84,14 @@ The taxonomy in Table~\ref{tab:pain-taxonomy} groups the observed pain points in
 \begin{table*}[t]
 \centering
 \scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.08}
 \caption{Severity-coded taxonomy of user pain points in AI self-evolution.}
 \label{tab:pain-taxonomy}
-\begin{tabular}{p{0.15\linewidth}p{0.08\linewidth}p{0.31\linewidth}p{0.36\linewidth}}
-\hline
-\textbf{Category} & \textbf{Dominant severity} & \textbf{Representative pain points} & \textbf{Why it matters for self-evolution} \\
-\hline
+\begin{tabularx}{\textwidth}{@{}L{0.16\textwidth}L{0.07\textwidth}L{0.32\textwidth}Y@{}}
+\toprule
+\textbf{Category} & \textbf{Level} & \textbf{Representative pain points} & \textbf{Why it matters for self-evolution} \\
+\midrule
 Reliability and hallucination & C/H & Fabricated APIs, stale dependencies, invalid diffs, false progress reports, brittle reasoning on novel problems. & Self-modification amplifies errors; a flawed generation can become a learned pattern. \\
 Loop control and planning & C/H & Infinite loops, local-optimum planning, inability to replan after unexpected errors, AutoGPT-style continuous-mode risk. & Evolutionary agents need bounded exploration, not unbounded wandering. \\
 Tool use and harness design & H & Wrong tool selection, bad arguments, static tool overload, low-quality tool descriptions, invalid edit formats. & The harness often determines whether model capability becomes reliable action. \\
@@ -100,8 +102,8 @@ Production economics & C/H & Token cost explosion, unpredictable latency, scalin
 Security and governance & C & Prompt injection, unauthorized operations, unsafe marketplaces, remote-code-execution exposure, compliance gaps. & Self-modification increases the attack surface and requires explicit authority control. \\
 Framework and ecosystem gaps & H/M & Framework bloat, abandoned frameworks, migration cost, no standard skill sharing, paradigm confusion. & Ecosystem churn prevents accumulated engineering knowledge from compounding. \\
 Human-agent collaboration & M/H & Extreme babysitting, unrealistic expectations, non-technical framework mandates, chat when users want work done. & Human oversight must be designed as targeted governance, not constant babysitting. \\
-\hline
-\end{tabular}
+\bottomrule
+\end{tabularx}
 \end{table*}
 
 One important result is that the highest-severity complaints concentrate around trust boundaries rather than raw task capability. Users are not only asking for higher benchmark scores. They are asking for agents that do not lie about work, do not silently lose context, do not invent external evidence, do not consume unbounded budget, and do not make opaque changes that cannot be audited. This is a sobering finding for AI self-evolution research. Recursive improvement is often framed as a capability scaling problem, but the user evidence frames it as a trust-management problem. The next generation of systems must answer: What exactly changed? Why was it changed? Who authorized it? How was it tested? What regressed? How much did it cost? Can it be rolled back? Without those answers, self-evolution remains a demo rather than an engineering discipline.
@@ -193,12 +195,14 @@ Evolutionary coding systems and self-improvement loops address the central aspir
 \begin{table*}[t]
 \centering
 \scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.08}
 \caption{Framework crosswalk: pain points versus framework families. ``Strong'' means the family directly targets the pain point; ``Partial'' means it provides useful primitives but not a complete solution; ``Gap'' means the observed user need remains largely unresolved.}
 \label{tab:framework-crosswalk}
-\begin{tabular}{p{0.18\linewidth}p{0.16\linewidth}p{0.16\linewidth}p{0.16\linewidth}p{0.24\linewidth}}
-\hline
+\begin{tabularx}{\textwidth}{@{}L{0.18\textwidth}L{0.16\textwidth}L{0.16\textwidth}L{0.16\textwidth}Y@{}}
+\toprule
 \textbf{Pain point} & \textbf{Workflow graphs} & \textbf{Multi-agent frameworks} & \textbf{Tool protocols / skills} & \textbf{Remaining gap for self-evolution} \\
-\hline
+\midrule
 State management & Strong for explicit transitions & Partial for role state & Partial for tool state & Cross-run behavioral versioning and rollback remain immature. \\
 Prompt and decision observability & Partial when tracing is integrated & Often partial; conversations visible but causality unclear & Partial; tool schema visible & Need compact, replayable, evidence-linked trajectory traces. \\
 Hallucinated APIs and stale docs & Gap unless retrieval added & Gap unless specialist agent added & Partial with dynamic docs tools & Need automatic freshness detection and verification before code changes. \\
@@ -209,8 +213,8 @@ Cost unpredictability & Partial with deterministic paths & Often worse due to ex
 Security and permissions & Partial with controlled nodes & Partial; delegation increases risk & Partial with scoped tools & Need authority models for self-modification, memory writes, and skill import. \\
 Skill reuse & Gap unless custom memory added & Partial through shared roles & Strong conceptually & Need skill tests, provenance, deprecation, and cross-framework portability. \\
 Production proof & Partial if observable and testable & Gap without strong ops features & Gap by itself & Need deployment evidence, not demo-only capability claims. \\
-\hline
-\end{tabular}
+\bottomrule
+\end{tabularx}
 \end{table*}
 
 The crosswalk suggests three design principles. First, composability is not enough. A framework can connect models, tools, and memory while still failing the core user need if it hides state or lacks evaluation. Second, explicitness beats cleverness in production. Users repeatedly prefer systems whose prompts, state, and actions can be inspected, even if they require more boilerplate. Third, self-evolution should be modular. The agent may evolve prompts, tool descriptions, memory policies, skills, routing policies, or code, but each evolution surface needs separate permissions and tests. Treating all behavior changes as one undifferentiated ``improvement'' mechanism invites regressions and security failures.
@@ -224,13 +228,13 @@ Table~\ref{tab:overall-frequency} summarizes the top English-corpus categories f
 
 \begin{table*}[t]
 \centering
-\small
+\TableTight
 \caption{Top pain point categories in the English Mom Test summary: 97 distinct pain points across 131 posts.}
 \label{tab:overall-frequency}
-\begin{tabular}{p{0.08\linewidth}p{0.34\linewidth}p{0.12\linewidth}p{0.16\linewidth}p{0.20\linewidth}}
-\hline
+\begin{tabularx}{\textwidth}{@{}L{0.08\textwidth}L{0.34\textwidth}L{0.11\textwidth}L{0.15\textwidth}Y@{}}
+\toprule
 \textbf{Rank} & \textbf{Category} & \textbf{Count} & \textbf{Severity} & \textbf{Interpretation} \\
-\hline
+\midrule
 1 & Agent reliability in production & 12 & \sevcritical{} & Demo success does not translate to real workflows. \\
 2 & Self-improvement feasibility & 12 & \sevcritical{} & Feedback loops drift, plateau, or require human labor. \\
 3 & Framework and tooling gaps & 11 & \sevhigh{} & Abstractions, bloat, and missing primitives block adoption. \\
@@ -241,8 +245,8 @@ Table~\ref{tab:overall-frequency} summarizes the top English-corpus categories f
 8 & Real-world deployment gap & 5 & \sevhigh{} & Production scale exposes flakiness hidden by demos. \\
 9 & Misevolution and unintended evolution & 3 & \sevcritical{} & Systems can improve the wrong objective or degrade. \\
 10 & Definitions and standards gap & 3 & \sevmedium{} & Lack of vocabulary creates hype and misaligned claims. \\
-\hline
-\end{tabular}
+\bottomrule
+\end{tabularx}
 \end{table*}
 
 The HN subset emphasizes engineering skepticism. Its 36 pain points cluster into agent reliability and hallucination, evaluation and benchmarking, framework and tooling gaps, knowledge and memory persistence, self-improvement fundamentals, human-agent collaboration, security and cost, interaction mismatch, and production proof. HN users provide detailed examples: fabricated APIs, code agents rewriting exact data incorrectly, frameworks abandoned in production, SWE-bench contamination, context bloat, invented evaluation logs, and the absence of demonstrated production success. The platform's distinctive contribution is its insistence on proof. HN users repeatedly ask whether self-improvement works in production, whether benchmarks are contaminated, whether the agent really ran tests, and whether the framework survives real scale.
@@ -262,7 +266,7 @@ The Chinese supplement emphasizes practical deployment constraints and learning 
 \toprule
 \textbf{Theme} & \textbf{HN signal} & \textbf{Reddit signal} & \textbf{Chinese community signal} & \textbf{Dominant severity} \\
 \midrule
-Reliability, hallucination, loops & Reliability/hallucination cluster includes 6 pain points. & Agent reliability includes 6; loop failures recur separately. & Agent loop/control includes 4; hallucination propagation appears explicitly. & \sevcritical{}/\sevhigh{} \\
+Reliability and hallucination & Reliability cluster includes 6 pain points. & Agent reliability includes 6; loop failures recur separately. & Agent loop/control includes 4; hallucination propagation appears explicitly. & \sevcritical{}/\sevhigh{} \\
 Self-improvement feasibility & Fundamentals cluster includes prompt optimization, learning limits, cost, and compliance tests. & 7 pain points on feasibility, drift, plateau, regression, and cost. & 4 self-evolution/learning pain points, including missing closed loop. & \sevcritical{} \\
 Framework and tooling & 5 framework/tooling pain points, including abstraction and harness issues. & 6 framework limitations plus MCP and state complaints. & 3 framework/tool integration and 1 paradigm-selection category. & \sevhigh{} \\
 Evaluation and benchmarks & 4 evaluation/benchmarking pain points; strong benchmark skepticism. & 5 evaluation challenges plus cherry-picking and leaderboards. & 2 evaluation/metrics pain points. & \sevcritical{}/\sevhigh{} \\

@@ -38,7 +38,6 @@
 | `CODE_OF_CONDUCT.md` | file | support release/legal | 开源发布必需，保留在根目录。 |
 | `CONTENT_INDEX.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `CONTRIBUTING.md` | file | support release/legal | 开源发布必需，保留在根目录。 |
-| `CURRENT_GOAL.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `DELIVERY_SUMMARY.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `LICENSE-CODE` | file | support release/legal | 开源发布必需，保留在根目录。 |
 | `LICENSE-CONTENT` | file | support release/legal | 开源发布必需，保留在根目录。 |

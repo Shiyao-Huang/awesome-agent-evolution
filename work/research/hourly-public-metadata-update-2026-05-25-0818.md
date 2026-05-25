@@ -6,7 +6,7 @@ This run promotes nine web-observed agent-skill, self-evolving-skill, memory, re
 
 ## Three Sentences
 
-The direct user intent source remains `docs/project-management/user-direct-inputs.md` and `CURRENT_GOAL.md`: raw evidence must feed processed analysis, public reports, website data, and indexes. Five new raw captures were added and four existing raw captures were reused rather than overwritten. GitHub shell API freshness is not fabricated; public GitHub pages/search results were observed through web access, while shell DNS/auth checks are recorded separately.
+The public governance rule remains: raw evidence must feed processed analysis, public reports, website data, and indexes. Five new raw captures were added and four existing raw captures were reused rather than overwritten. GitHub shell API freshness is not fabricated; public GitHub pages/search results were observed through web access, while shell DNS/auth checks are recorded separately.
 
 ## Added Or Promoted Captures
 

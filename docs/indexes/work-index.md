@@ -10,15 +10,15 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `paper-drafts` | present | 22 | 1 | 0 | 2.0 MB |
+| `paper-drafts` | present | 22 | 1 | 0 | 1.9 MB |
 | `paper` | present | 1 | 2 | 0 | 43 KB |
 | `latex` | present | 9 | 3 | 0 | 53 KB |
 | `site` | present | 843 | 317 | 0 | 21 MB |
-| `survey` | present | 40 | 4 | 0 | 1.2 MB |
-| `scripts` | present | 7 | 1 | 0 | 109 KB |
+| `survey` | present | 41 | 4 | 0 | 1.3 MB |
+| `scripts` | present | 7 | 1 | 0 | 110 KB |
 | `data-engine` | present | 0 | 9 | 0 | 0 B |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
-| `CURRENT_GOAL.md` | present | 1 | 0 | 0 | 11 KB |
+| `CURRENT_GOAL.md` | present | 0 | 0 | 0 | 0 B |
 
 ## Representative Files
 
@@ -97,7 +97,3 @@
 - `wiki/research/social-cn-youtube-blog-raw-2026-05-20.csv`
 - `wiki/research/social-cn-youtube-blog-raw-2026-05-20.json`
 - `wiki/research/social-cn-youtube-blog-raw-2026-05-20.md`
-
-### `CURRENT_GOAL.md`
-
-- `CURRENT_GOAL.md`
