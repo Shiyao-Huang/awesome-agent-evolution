@@ -1,126 +1,158 @@
-# Ollama: 本地 LLM 推理运行时引擎
+# Ollama: 本地大语言模型推理运行时
 
 ## 基本信息
 
 | 字段 | 内容 |
 |------|------|
 | GitHub | https://github.com/ollama/ollama |
-| Star | 140k+ |
-| 技术栈 | Go, C/C++, CUDA, Metal, MLX, llama.cpp |
-| 许可证 | MIT License |
-| 开发者 | Ollama Team (Jeffrey Morgan 等) |
+| Star | 140,000+ |
+| 技术栈 | Go, C/C++, CMake, llama.cpp, MLX, GGUF |
+| 许可证 | MIT |
+| 开发者 | Ollama 团队 (Jeffrey Morgan 等) |
 
 ## 项目简介
 
-Ollama 是目前最流行的本地大语言模型（LLM）推理运行时之一，以极低的使用门槛和跨平台支持著称。用户只需一条命令即可在 macOS、Windows 和 Linux 上运行 Llama、Gemma、Mistral、Qwen 等主流开源模型，无需深入了解 GPU 驱动配置或模型量化细节。项目底层基于 Georgi Gerganov 创建的 llama.cpp 项目，通过 Go 语言封装了高性能的 C/C++ 推理后端。
+Ollama 是目前最流行的本地大语言模型（LLM）推理运行时，为用户提供了一键式模型下载、管理和推理服务。项目以 Go 语言编写核心服务层，底层基于 llama.cpp（Georgi Gerganov 创立的 ggml 项目）实现高性能推理，在 macOS 上还集成了 Apple MLX 框架以充分利用 Apple Silicon 的 GPU 加速能力。Ollama 的核心价值在于将复杂的模型量化、GPU 调度、内存管理等底层细节完全封装，让用户只需一条命令 `ollama run gemma3` 即可在本地运行最先进的开源模型。
 
-Ollama 的设计哲学是"开箱即用"——它提供统一的 REST API 兼容 OpenAI 格式，支持流式输出、多轮对话、工具调用（Function Calling）等核心能力。同时，Ollama 通过原生支持 Apple Metal、NVIDIA CUDA 和 AMD GPU 实现硬件加速，并内置模型管理与自动下载功能，使本地部署 AI 模型的体验接近云端 API 服务。
+项目的架构设计采用了客户端-服务器模式：`ollama serve` 启动一个常驻后台的 API 服务器（默认端口 11434），提供兼容 OpenAI 风格的 REST API；CLI 工具和官方 Python/JavaScript SDK 通过 HTTP 与服务器通信。服务器负责模型加载、GPU/CPU 调度、KV Cache 管理、并发请求调度等核心功能。Runner 子系统通过进程隔离的方式执行实际的推理计算，确保主服务的稳定性。Ollama 还提供了 Modelfile 机制，允许用户基于基础模型创建自定义变体（设定系统提示、参数、模板等），类似于 Dockerfile 的概念。
 
-作为一个生态中枢，Ollama 拥有超过 200 个社区集成项目，涵盖 Chat UI、代码编辑器、Agent 框架、RAG 系统等几乎所有 AI 应用领域。官方提供 Python 和 JavaScript SDK，并与 LangChain、LlamaIndex、Semantic Kernel 等主流框架深度集成。
+Ollama 的生态极为庞大，官方库（ollama.com/library）托管了 Llama、Gemma、Mistral、Qwen、DeepSeek、Phi 等主流开源模型，社区集成了 100+ 客户端界面、50+ SDK/库和几乎所有主流 AI 编程工具（Claude Code、Copilot、Codex、Cline 等）。项目支持 macOS、Windows、Linux 三大平台，提供 Docker 镜像和各平台原生安装包。
 
 ## 目录结构
 
 ```
 ollama__ollama/
-├── api/                  # ★ Go 语言客户端 API 库
-├── app/                  # macOS 桌面应用（Electron）
-├── auth/                 # 认证与授权模块
-├── cmd/                  # ★ CLI 命令行入口
-│   ├── bench/            # 性能基准测试
-│   ├── interactive.go    # 交互式聊天
-│   ├── start.go          # 服务启动
-│   └── tui/              # 终端 UI 组件
-├── convert/              # 模型格式转换（Safetensors → GGUF）
-├── discover/             # GPU 硬件自动发现
-├── envconfig/            # 环境变量配置管理
-├── format/               # 数据格式化（字节、时间等）
-├── fs/                   # 文件系统操作抽象
-├── gpu/                  # ★ GPU 调度与加速（CUDA/Metal）
-├── harmony/              # Harmony 协议支持
-├── integration/          # 集成测试
-├── kvcache/              # ★ KV Cache 管理（因果/循环注意力）
-├── llama/                # llama.cpp 绑定层
-├── llm/                  # ★ LLM 推理引擎抽象层
-├── ml/                   # ★ 机器学习后端（CPU/GPU 统一接口）
-│   ├── backend/          # 计算后端实现
-│   └── nn/               # 神经网络算子
-├── model/                # ★ 模型加载与解析
-│   ├── imageproc/        # 图像预处理
-│   ├── models/           # 模型架构定义
-│   ├── parsers/          # GGUF 文件解析
-│   └── renderers/        # 渲染器
-├── openai/               # ★ OpenAI API 兼容层
-├── parser/               # 文本解析工具
-├── progress/             # 下载进度条
-├── readline/             # 终端行编辑
-├── runner/               # ★ 模型推理 Runner 进程
-│   ├── llamarunner/      # llama.cpp runner
-│   └── ollamarunner/     # Ollama 自有 runner
-├── sample/               # 采样策略实现
-├── server/               # ★ HTTP 服务器（路由、调度、模型管理）
-├── template/             # ★ Prompt 模板引擎（ChatML/Alpaca 等）
-├── thinking/             # 思维链（Chain-of-Thought）处理
-├── tokenizer/            # ★ 分词器（BPE/SentencePiece/WordPiece）
-├── tools/                # 工具调用支持
-├── types/                # 通用类型定义
-├── version/              # 版本管理
-├── main.go               # 入口文件
-├── go.mod                # Go 模块定义
-└── Dockerfile            # Docker 构建文件
+├── main.go                    # ★ 入口文件
+├── cmd/                       # ★ CLI 命令层
+│   ├── cmd.go                     # 根命令定义
+│   ├── start.go                   # 服务启动命令
+│   ├── interactive.go             # 交互式聊天
+│   ├── runner/                    # 模型运行器命令
+│   ├── tui/                       # 终端 UI
+│   └── launch/                    # 应用启动集成
+├── server/                    # ★ 核心服务器
+│   ├── routes.go                  # API 路由定义
+│   ├── sched.go                   # ★ 请求调度器
+│   ├── model.go                   # 模型管理
+│   ├── create.go                  # Modelfile 创建
+│   ├── images.go                  # 镜像管理
+│   ├── auth.go                    # 认证
+│   ├── prompt.go                  # 提示词处理
+│   └── internal/                  # 内部辅助模块
+├── llm/                       # ★ LLM 推理层
+│   ├── server.go                  # 推理服务器
+│   ├── status.go                  # 状态管理
+│   ├── llm_darwin.go             # macOS 特定实现
+│   ├── llm_linux.go              # Linux 特定实现
+│   └── llm_windows.go            # Windows 特定实现
+├── runner/                    # ★ 进程隔离 Runner
+│   ├── runner.go
+│   ├── llamarunner/               # llama.cpp Runner
+│   └── ollamarunner/              # Ollama 原生 Runner
+├── ml/                        # ★ 机器学习后端
+│   ├── backend.go                 # 后端抽象
+│   ├── device.go                  # 设备管理
+│   └── nn/                        # 神经网络基础
+├── model/                     # ★ 模型处理
+│   ├── model.go                   # 模型加载
+│   ├── parsers/                   # GGUF 解析器
+│   ├── renderers/                 # 渲染器
+│   ├── models/                    # 模型定义
+│   └── input/                     # 输入处理
+├── api/                       # Go 客户端 SDK
+│   ├── client.go
+│   └── types.go
+├── template/                  # ★ Prompt 模板引擎
+│   ├── template.go
+│   └── *.gotmpl                   # 各模型模板文件
+├── openai/                    # OpenAI 兼容层
+├── anthropic/                 # Anthropic 兼容层
+├── harmony/                   # Harmony 协议支持
+├── discover/                  # GPU/硬件检测
+│   ├── gpu.go
+│   ├── cpu_linux.go
+│   └── cpu_windows.go
+├── kvcache/                   # KV Cache 管理
+├── tokenizer/                 # 分词器
+├── convert/                   # 模型转换工具
+│   └── sentencepiece/             # SentencePiece 支持
+├── auth/                      # 认证模块
+├── envconfig/                 # 环境配置
+├── format/                    # 输出格式化
+├── fs/                        # 文件系统工具
+│   ├── ggml/                      # GGML 格式支持
+│   └── gguf/                      # GGUF 格式支持
+├── app/                       # 桌面应用
+│   ├── cmd/                       # 应用命令
+│   ├── ui/                        # 应用 UI
+│   ├── darwin/                    # macOS 特定
+│   └── updater/                   # 自动更新
+├── tools/                     # 工具调用支持
+├── integration/               # 集成测试
+└── docs/                      # 文档
 ```
 
 ## 核心模块分析
 
-### 1. 推理引擎层（llm/ + runner/）
+### 1. 服务器与请求调度 (`server/`)
 
-Ollama 的推理引擎采用主进程 + Runner 子进程的架构。`llm/` 包定义了平台相关的推理接口，针对 Darwin（macOS）、Linux 和 Windows 分别实现 GPU 检测和 Runner 启动逻辑。`runner/` 目录包含两个独立的 Runner 实现：`llamarunner` 封装了 llama.cpp 的推理能力，`ollamarunner` 则是 Ollama 自研的推理引擎。这种设计允许在不重启主服务的情况下切换推理后端，并通过进程隔离保证稳定性。
+server 包是 Ollama 的核心，实现了 HTTP API 服务和请求调度系统。`routes.go` 定义了完整的 REST API 端点，包括 `/api/chat`、`/api/generate`、`api/create`、`api/pull` 等。`sched.go` 实现了请求调度器，负责管理 GPU 显存分配、模型加载/卸载、并发请求排队等关键逻辑。调度器采用"懒加载"策略——模型在首次请求时加载到 GPU，空闲一段时间后自动卸载以释放显存。模型管理模块（`model.go`、`images.go`）处理 GGUF 文件的解析、分层存储和增量下载。`create.go` 实现了 Modelfile 解析和自定义模型构建，支持 FROM、SYSTEM、PARAMETER、TEMPLATE 等指令。
 
-### 2. GPU 调度与加速（gpu/ + discover/）
+### 2. LLM 推理后端 (`llm/`, `runner/`, `ml/`)
 
-GPU 模块实现了跨平台 GPU 自动发现和调度能力。在 macOS 上通过 Metal 框架利用 Apple Silicon 的 GPU 和 Neural Engine，在 Linux/Windows 上支持 NVIDIA CUDA 和 AMD ROCm。`discover/` 包在启动时自动探测可用硬件，根据 GPU 显存大小动态决定模型加载策略，包括层分布（layer offloading）和量化级别选择。
+Ollama 的推理层采用了进程隔离架构。`llm/server.go` 管理推理子进程的生命周期，通过 IPC 与 Runner 进程通信。Runner 子系统（`runner/`）包含两个实现：`llamarunner` 封装 llama.cpp 的推理能力，`ollamarunner` 是 Ollama 自研的推理引擎。`ml/` 包提供了硬件抽象层，统一管理 CPU、CUDA、ROCm、Metal 等不同计算后端。`device.go` 实现了设备发现和能力查询，`nn/` 包含神经网络基础算子。这种分层设计使得 Ollama 能够灵活切换底层推理引擎，同时保持上层 API 的稳定性。
 
-### 3. 模型管理与 GGUF 解析（model/ + convert/）
+### 3. 模型处理与转换 (`model/`, `convert/`, `fs/gguf/`)
 
-模型管理是 Ollama 的核心竞争力之一。`model/` 包实现了 GGUF 格式模型的加载、解析和验证，支持多模态输入（图像处理）。`convert/` 包负责将 HuggingFace 的 Safetensors 格式转换为 GGUF 格式，支持多种量化方案（Q4_0、Q5_K_M、Q8_0 等）。`parsers/` 子包能解析复杂的 GGUF 文件结构，包括张量元数据、词汇表和模型架构参数。
+模型处理流水线是 Ollama 技术栈的关键环节。`model/parsers/` 实现 GGUF 文件格式的解析，提取模型权重、元数据和词汇表信息。`model/renderers/` 负责将模型特定的聊天模板渲染为标准格式。`convert/` 目录包含模型转换工具，支持将 HuggingFace 格式的模型（含 SentencePiece 分词器）转换为 GGUF 格式。`fs/gguf/` 提供了 GGUF 文件系统的底层操作，支持分块读写和内存映射，这对于处理大型模型文件（数十 GB）至关重要。
 
-### 4. API 服务与兼容层（server/ + openai/）
+### 4. Prompt 模板引擎 (`template/`)
 
-Server 模块实现了完整的 HTTP/REST API，包括模型拉取、创建、推理、对话等核心端点。`openai/` 包提供了与 OpenAI API 完全兼容的接口，使 Ollama 可以作为 OpenAI API 的本地替代方案直接接入现有应用。Server 还集成了请求调度器（scheduler），支持多模型并发加载和请求排队，自动管理 GPU 显存分配。
+Ollama 的模板引擎是其用户友好性的关键技术。不同开源模型使用不同的聊天格式（如 ChatML、Alpaca、Llama2-Chat 等），模板引擎通过 Go template 文件（`.gotmpl`）定义每种模型的提示格式，并配以 JSON 配置文件描述模板元数据。`template.go` 实现了模板的解析、缓存和渲染逻辑，确保用户在与不同模型交互时无需关心底层格式差异。当前支持 20+ 种模型模板，包括 Gemma、Llama3、Mistral、Qwen、DeepSeek 等。
 
-### 5. KV Cache 与注意力优化（kvcache/）
+### 5. 硬件检测与 GPU 调度 (`discover/`, `kvcache/`)
 
-KV Cache 模块实现了高效的 Key-Value 缓存管理，支持三种注意力模式的缓存策略：因果注意力（causal）、编码器注意力（encoder）和循环注意力（recurrent）。这对于处理长上下文和流式输出至关重要，通过缓存已计算的注意力权重避免重复计算，显著提升推理吞吐量。
+`discover/` 模块负责检测运行环境的硬件配置，包括 GPU 型号、显存大小、CUDA/ROCm 可用性等。在 macOS 上通过 Metal 框架检测 Apple Silicon GPU，在 Linux 上检测 NVIDIA（通过 CUDA）和 AMD（通过 ROCm）显卡，在 Windows 上检测 DirectX 兼容设备。`kvcache/` 包管理推理过程中的 KV Cache，这是 LLM 推理性能的核心——合理的 KV Cache 管理可以显著降低重复计算的内存占用和延迟。
 
 ## 技术亮点
 
-1. **零配置本地推理**：用户无需了解量化参数、GPU 驱动或模型格式，一条命令即可运行主流开源 LLM，大幅降低本地 AI 部署门槛
-2. **跨平台 GPU 加速**：原生支持 Apple Metal、NVIDIA CUDA、AMD GPU 三大平台，通过自动硬件发现和动态层分配实现最优推理性能
-3. **OpenAI API 兼容**：完整的 OpenAI API 兼容层使 Ollama 可直接替换云端服务，与 200+ 社区项目无缝集成
-4. **多模态架构支持**：支持 Llama、Gemma、Mistral、Qwen、DeepSeek 等 20+ 模型架构，内置 Prompt 模板系统适配不同对话格式
-5. **智能内存管理**：基于 GPU 显存自动调整模型量化级别和层分布策略，支持多模型并发加载与请求调度
-6. **丰富的集成生态**：官方 Python/JS SDK，与 LangChain、LlamaIndex、Semantic Kernel 等主流框架深度集成，覆盖 Chat UI、代码编辑器、Agent 框架等全场景
+1. **进程隔离架构**：推理计算在独立 Runner 子进程中执行，主服务进程仅负责调度和 API 服务，确保推理崩溃不会影响整体服务稳定性
+2. **GGUF 格式生态**：基于 GGUF（GPT-Generated Unified Format）实现模型分发，支持多种量化级别（Q4_0、Q5_1、Q8_0 等），在模型大小和推理质量之间灵活权衡
+3. **跨平台 GPU 支持**：统一抽象了 CUDA（NVIDIA）、ROCm（AMD）、Metal（Apple Silicon）三大 GPU 平台，自动检测并选择最优后端
+4. **Modelfile 自定义机制**：类似 Dockerfile 的声明式模型定制，支持 FROM 继承、SYSTEM 提示、PARAMETER 调参、TEMPLATE 定义，实现了模型复用的标准化
+5. **OpenAI/Anthropic 兼容层**：在 `/v1/` 路径下提供 OpenAI API 兼容接口，在 `/anthropic/` 路径下提供 Anthropic API 兼容接口，使 Ollama 可无缝替换云端 API
+6. **MLX Apple Silicon 加速**：在 macOS 上集成 MLX 框架，充分利用 Apple Silicon 的统一内存架构，实现高效的 CPU-GPU 协同推理
+7. **Harmony 协议集成**：支持 Harmony 协议用于模型间的协作和编排，为多模型 Agent 系统提供了基础通信层
 
 ## 与 Self-Evolve 关联
 
 | 维度 | 贡献 |
 |------|------|
-| 本地推理基础设施 | 为 Self-Evolve 提供零成本本地 LLM 推理能力，消除对云端 API 的依赖 |
-| 模型格式标准化 | GGUF 格式和 Modelfile 规范为模型管理和版本演化提供参考 |
-| API 兼容性设计 | OpenAI 兼容层的设计模式可用于 Self-Evolve 的多模型适配 |
-| GPU 资源调度 | 动态显存管理和多模型调度策略对自演化系统的资源管理有借鉴意义 |
-| 工具调用能力 | 内置 Function Calling 支持，为 Agent 系统提供工具使用基础 |
-| 生态集成模式 | 通过 REST API 和 SDK 构建开发者生态的方法论，适用于自演化系统 |
+| 本地推理基础设施 | Ollama 为 Self-Evolve 提供了零依赖的本地 LLM 推理能力，是自进化 Agent 进行代码生成、测试、反思的认知引擎基础 |
+| 模型管理 | Modelfile 机制展示了如何通过声明式配置管理模型变体，对 Self-Evolve 的 Prompt 版本管理和模型适配有参考价值 |
+| GPU 调度 | 请求调度器和 KV Cache 管理展示了如何在资源受限环境下高效运行多个推理任务，对 Agent 的推理资源管理有启发 |
+| API 兼容层 | OpenAI/Anthropic 兼容 API 设计为 Self-Evolve 实现云端/本地推理的无缝切换提供了标准化方案 |
+| 模板引擎 | Prompt 模板系统展示了如何为不同模型适配统一的交互接口，对 Self-Evolve 的多模型适配层设计有指导意义 |
+| 生态集成 | 140k+ Star 和庞大的工具生态证明了本地推理方案的巨大需求，Self-Evolve 可直接复用 Ollama 作为推理后端 |
 
 ## 参考资料
 
-- Ollama 官网：https://ollama.com
-- API 文档：https://docs.ollama.com/api
-- Modelfile 参考：https://docs.ollama.com/modelfile
-- llama.cpp 项目：https://github.com/ggml-org/llama.cpp
-- Ollama Python SDK：https://github.com/ollama/ollama-python
-- Ollama JavaScript SDK：https://github.com/ollama/ollama-js
+- [Ollama 官方网站](https://ollama.com)
+- [Ollama GitHub 仓库](https://github.com/ollama/ollama)
+- [Ollama 文档](https://docs.ollama.com)
+- [Ollama REST API 参考](https://docs.ollama.com/api)
+- [Ollama Modelfile 参考](https://docs.ollama.com/modelfile)
+- [Ollama CLI 参考](https://docs.ollama.com/cli)
+- [llama.cpp 项目](https://github.com/ggml-org/llama.cpp)
+- [GGUF 格式规范](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md)
 
 ## GitNexus 深度架构分析
 
 - **源码位置**：`projects/repos/ollama__ollama`
 - **分析命令**：`gitnexus analyze repos/ollama__ollama --index-only --skip-git --name Ollama`
+- **知识图谱规模**：待分析
+- **查询语句**：`sched scheduler request routing; runner subprocess inference; gguf model parser; template render prompt; discover gpu detect; kvcache memory management`
+- **核心执行流程候选**：`ollama run` -> `cmd/interactive.go` -> `server/routes.go` -> `server/sched.go` -> `llm/server.go` -> `runner/` -> `ml/backend.go` -> 推理计算
+- **关键符号/文件**：`server/sched.go`（调度器）、`server/routes.go`（API 路由）、`llm/server.go`（推理服务）、`runner/runner.go`（Runner 管理）、`ml/backend.go`（计算后端）、`model/model.go`（模型加载）、`template/template.go`（模板引擎）、`discover/gpu.go`（GPU 检测）、`fs/gguf/`（GGUF 解析）
+- **调用关系上下文**：CLI 入口 -> API 服务器 -> 请求调度 -> Runner 进程 -> 计算后端 -> GPU/CUDA；模型管理 -> GGUF 解析 -> 权重加载 -> 内存映射
+- **架构结论**：该图谱结果用于把报告中的"推理运行时 / 进程隔离 / GPU 调度 / 模板引擎 / 模型管理"定位到具体符号、文件和流程

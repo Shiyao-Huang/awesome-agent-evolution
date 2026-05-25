@@ -15,7 +15,7 @@ NNI（Neural Network Intelligence）是微软亚洲研究院开发的自动机�
 - 神经架构搜索：支持 ENAS、DARTS、PDPNAS、SPOS 等 NAS 算法
 - 模型压缩：自动剪枝和量化
 - Web UI 可视化：实时监控实验进度和结果
-- 多平台支持：本地、远程服务器、 Kubernetes、AML
+- 多平台支持：本地、远程服务器、Kubernetes、AML
 
 ## 技术栈
 - Python, PyTorch, TensorFlow

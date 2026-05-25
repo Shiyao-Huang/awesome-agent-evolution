@@ -9,6 +9,7 @@
 | 技术栈 | Python, OpenAI API, OpenAI Function Calling, Modal, Agent Protocol, Poetry |
 | 许可证 | MIT |
 | 开发者 | swyx (Shawn Wang) / Smol AI |
+| 版本 | v0 (Modal) / v1 (Library + API) |
 
 ## 项目简介
 
@@ -52,7 +53,7 @@ smol_ai__developer/
 
 ### 1. 三阶段代码生成管线 (smol_dev/prompts.py)
 
-Smol Developer 的核心是一个精心设计的三阶段代码生成流程,整个 `prompts.py` 约 185 行代码实现了完整的程序合成能力。第一阶段 `plan()` 函数接收用户 prompt,以流式方式让 LLM 生成 GitHub Markdown 格式的完整开发计划,内容涵盖文件结构、导出变量、数据 schema、DOM 元素 ID 和函数名称等关键信息。第二阶段 `specify_file_paths()` 利用 OpenAI Function Calling API 通过 `@openai_function` 装饰器定义 `file_paths` 函数,确保 LLM 返回值始终是合法的 JSON 字符串数组。第三阶段 `generate_code()` (含异步版本) 针对每个文件路径逐一调用 LLM 生成代码,并通过正则表达式 `r"```[\w\s]*\n([\s\S]*?)```"` 自动清理 markdown 代码围栏,返回纯净的源代码。
+Smol Developer 的核心是一个精心设计的三阶段代码生成流程,整个 `prompts.py` 约 185 行代码实现了完整的程序合成能力。第一阶段 `plan()` 函数接收用户 prompt,以流式方式让 LLM 生成 GitHub Markdown 格式的完整开发计划,内容涵盖文件结构、导出变量、数据 schema、DOM 元素 ID 和函数名称等关键信息。第二阶段 `specify_file_paths()` 利用 OpenAI Function Calling API 通过 `@openai_function` 装饰器定义 `file_paths` 函数,确保 LLM 返回值始终是合法的 JSON 字符串数组。第三阶段 `generate_code()` (含异步版本) 针对每个文件路径逐一调用 LLM 生成代码,并通过正则表达式自动清理 markdown 代码围栏,返回纯净的源代码。
 
 ### 2. Agent Protocol API 层 (smol_dev/api.py)
 
@@ -68,11 +69,11 @@ Debugger 模块实现了"cat 整个代码库 + 错误信息 = 精准修复建议
 
 ### 5. Code2Prompt 与逆向工程 (v0/code2prompt.py)
 
-v0 版本中的 `code2prompt` 模块实现了从现有代码库逆向生成描述性 prompt 的能力,是项目追求"quine smol developer"——能生成自身代码的 AI 开发者——的重要尝试。`code2prompt2code/` 目录则实现了完整的 roundtrip 流水线:代码转 prompt,再从 prompt 生成代码,验证生成保真度。虽然 swyx 坦承这一方向"not very good yet",但它展示了 AI 代码生成工具自我理解和自我复制的长期愿景。
+v0 版本中的 `code2prompt` 模块实现了从现有代码库逆向生成描述性 prompt 的能力,是项目追求"quine smol developer"——能生成自身代码的 AI 开发者——的重要尝试。`code2prompt2code/` 目录实现了完整的 roundtrip 流水线:代码转 prompt,再从 prompt 生成代码,验证生成保真度。虽然 swyx 坦承这一方向"not very good yet",但它展示了 AI 代码生成工具自我理解和自我复制的长期愿景。
 
 ## 创新洞察
 
-Smol Developer 提出了多个影响深远的创新思路。**Markdown is all you need** 指出 Markdown 是混合自然语言和代码的完美载体,代码围栏与变量名自然共存,且 GPT-4 能严格遵循嵌入 prompt 的代码规范。**Copy and paste programming** 让开发者通过粘贴 curl 请求/响应教会 AI 使用截止日期之后的 API,通过粘贴错误实现"日志驱动的编程"。**低门槛激活不熟悉的 API** 让开发者无需深读 Chrome Extension Manifest V3 等复杂文档,用自然语言描述意图即可获得可工作的代码。
+Smol Developer 提出了多个影响深远的创新思路。**Markdown is all you need** 指出 Markdown 是混合自然语言和代码的完美载体,代码围栏与变量名自然共存,且 GPT-4 能严格遵循嵌入 prompt 的代码规范。**Copy and paste programming** 让开发者通过粘贴 curl 请求/响应教会 AI 使用截止日期之后的 API,通过粘贴错误实现"日志驱动的编程"。**低门槛激活不熟悉的 API** 让开发者无需深读 Chrome Extension Manifest V3 等复杂文档,用自然语言描述意图即可获得可工作的代码。这些洞察深刻影响了后续 AI 编程工具的设计哲学。
 
 ## 技术亮点
 

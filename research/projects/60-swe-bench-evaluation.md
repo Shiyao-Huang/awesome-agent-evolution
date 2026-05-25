@@ -1,120 +1,93 @@
-# SWE-bench: LLM 软件工程能力基准测试框架
+# SWE-bench: 真实世界软件工程任务基准测试
 
 ## 基本信息
 | 字段 | 内容 |
 |------|------|
-| GitHub | https://github.com/princeton-nlp/SWE-bench |
-| Star | 3,200+ |
-| 技术栈 | Python, Docker, HuggingFace Datasets, Git, unittest/pytest |
+| GitHub | https://github.com/swe-bench/SWE-bench |
+| Star | 2,800+ |
+| 技术栈 | Python, Docker (容器化评估), HuggingFace Datasets (数据集分发) |
 | 许可证 | MIT |
-| 开发者 | Princeton NLP (Carlos E. Jimenez, John Yang, Shunyu Yao 等) |
+| 开发者 | Princeton NLP (Carlos Jimenez, John Yang 等) |
+| 论文 | SWE-bench: Can Language Models Resolve Real-World GitHub Issues? (ICLR 2024 Oral) |
 
 ## 项目简介
 
-SWE-bench 是由 Princeton NLP 团队开发的软件工程基准测试框架，用于评估大型语言模型解决真实 GitHub Issue 的能力。该基准的核心任务是：给定一个代码仓库（codebase）和一个 Issue 描述，让 LLM 生成能够解决问题的代码补丁（patch）。SWE-bench 从 12 个流行的 Python 开源项目中收集了 2,294 个真实 Issue-PR 对，构建了目前最具挑战性的代码生成评估数据集。
+SWE-bench 是一个用于评估大语言模型在真实世界 GitHub Issue 上解决软件工程问题能力的基准测试框架。给定一个代码库和一个 Issue 描述，语言模型需要生成能够解决所描述问题的代码补丁（Patch）。该基准测试已成为衡量 AI 编程 Agent 能力的最重要标准之一，被 ICLR 2024 接收为口头报告论文。
 
-项目在 ICLR 2024 上以 Oral 报告的形式发表，并持续演进：推出了 SWE-bench Verified（经人工验证的 500 个子集）、SWE-bench Multimodal（面向视觉软件领域的多模态版本，ICLR 2025），以及配套的 SWE-agent 自主编程代理和 SWE-smith 训练数据生成工具。SWE-bench 已成为衡量 AI 编程能力的行业标准，各大模型厂商均以其作为核心评估指标之一。
+SWE-bench 的核心创新在于其数据集来源：所有任务均从真实的 GitHub 仓库中收集，涵盖了 Django、Flask、SymPy、Matplotlib、Scikit-learn 等 12 个流行 Python 项目的真实 Issue 和对应的合并 PR。这种基于真实软件工程场景的评估方式，使得 SWE-bench 成为衡量 AI 系统"能否像真正的软件工程师一样工作"的可靠度量工具。
 
-框架提供了完整的 Docker 容器化评估流程，支持从数据集加载、模型推理、patch 生成到自动化测试的全链路评估。通过基于真实测试用例的验证机制，SWE-bench 能够精确衡量模型生成的代码是否真正解决了原始问题，而非仅是文本层面的相似。
+项目已发展出多个变体：SWE-bench Verified（500 个人工验证的可解决问题）、SWE-bench Lite（精简子集）、SWE-bench Multimodal（多模态版本，ICLR 2025）和 SWE-bench Multilingual。配套的 SWE-agent、SWE-smith 等工具链形成了完整的软件工程 Agent 评估生态。
 
 ## 目录结构
 ```
-swe_bench__swe_bench/
-├── swebench/                   ★ 核心代码包
-│   ├── collect/                ★ 数据采集模块
-│   │   ├── make_repo/          仓库克隆与预处理
-│   │   ├── cleanup/            数据清洗管道
-│   │   └── make_lite/          Lite 子集生成
-│   ├── harness/                ★ 评估执行引擎
-│   ├── inference/              模型推理接口
-│   ├── resources/              预缓存仓库资源
-│   └── metrics/                评估指标计算
-├── tests/                      单元测试
-├── docs/                       文档与教程
-├── pyproject.toml              项目配置
-└── README.md
+SWE-bench/
+├── swebench/                ★ 核心评测框架
+│   ├── harness/             ★ Docker 评估引擎
+│   │   ├── constants.py     常量定义
+│   │   ├── docker_build.py  Docker 镜像构建
+│   │   ├── run_evaluation.py ★ 评估运行入口
+│   │   └── test_spec.py     测试规格定义
+│   ├── collect/             数据收集流程
+│   ├── inference/           模型推理与数据集构建
+│   ├── metrics/             ★ 评估指标计算
+│   ├── mapping/             提交映射
+│   └── model_validation/    模型验证
+├── tests/                   测试套件
+├── docs/                    文档与指南
+│   ├── guides/              使用教程
+│   └── assets/              资源文件
+├── pyproject.toml           Python 项目配置
+├── mkdocs.yml               文档站点配置
+└── codecov.yml              代码覆盖率配置
 ```
 
 ## 核心模块分析
 
-### 1. 数据采集管道（collect/）
-数据采集模块负责从 GitHub 仓库中自动提取 Issue-PR 对。`make_repo/` 子模块克隆目标仓库并解析 Git 历史，`cleanup/` 模块过滤掉不符合条件的 PR（如缺少测试、涉及多个仓库变更等），最终生成结构化的任务实例。每个实例包含：issue 描述、gold patch、相关测试文件以及仓库快照。
+### 1. Docker 评估引擎 (swebench/harness/)
+SWE-bench 的评估核心是容器化的执行评估引擎。每个任务在一个独立的 Docker 容器中执行，容器预装了对应版本的代码库和依赖。评估引擎执行模型生成的 Patch，运行项目的测试套件来验证 Patch 是否真正解决了 Issue 中描述的问题。支持本地执行和云端执行（Modal 平台、AWS via sb-cli），推荐 x86_64 机器至少 120GB 存储、16GB 内存、8 CPU 核心。
 
-```python
-from datasets import load_dataset
-swebench = load_dataset('princeton-nlp/SWE-bench', split='test')
-# 每条数据包含：instance_id, repo, version, base_commit, problem_statement, patch, test_patch 等
-```
+### 2. 数据收集流程 (swebench/collect/)
+从 GitHub 仓库自动收集 Issue-PR 对的训练数据。流程包括：识别有测试的 PR、提取 Issue 描述、生成 Oracle 检索片段等。SWE-smith 是配套的专用数据生成工具，可以大规模创建 SWE-bench 格式的训练数据。
 
-### 2. 评估执行引擎（harness/）
-评估引擎是 SWE-bench 的核心组件，采用 Docker 容器化方案确保评估环境的一致性和可复现性。引擎会为每个任务实例构建独立的 Docker 镜像，安装指定版本的依赖，应用模型生成的 patch，然后执行相关的测试用例来判断 patch 是否正确。
+### 3. 评估指标体系 (swebench/metrics/)
+核心指标是"解决率"（Resolution Rate），即模型生成的 Patch 能否通过与原始 PR 关联的测试用例。支持细粒度的按仓库、按难度分层的评估结果分析。提供 gold patch 验证基线，确保评估环境的正确性。支持精确匹配和模糊匹配两种验证模式。
 
-```bash
-python -m swebench.harness.run_evaluation \
-    --dataset_name princeton-nlp/SWE-bench_Lite \
-    --predictions_path <path_to_predictions> \
-    --max_workers 4 \
-    --run_id my-eval
-```
+### 4. 模型推理接口 (swebench/inference/)
+支持在 SWE-bench 上运行模型推理，包括 SWE-Llama 系列模型和通过 API 调用的商业模型。提供从数据预处理、推理执行到结果收集的完整流程。支持 BM25 检索增强的上下文构建，提供 13K/27K/40K/50K 多种检索粒度的预构建数据集。
 
-### 3. 模型推理接口（inference/）
-推理模块支持多种模型接入方式，包括本地模型（SWE-Llama 7b/13b）和 API 模型（GPT-4、Claude 等）。提供从数据集预处理、上下文检索（Oracle/BM25）到 patch 生成的完整推理流程。`inference/make_datasets/` 子模块还支持从 SWE-bench 数据中创建训练集，用于微调专门的代码修复模型。配套的 RAG 数据集在 HuggingFace 上提供了 13K/27K/40K/50K 不同粒度的代码上下文检索结果。
-
-```python
-# Oracle 检索：使用 gold patch 相关文件作为上下文
-# BM25 检索：基于 issue 描述自动检索相关代码片段
-from datasets import load_dataset
-oracle = load_dataset('princeton-nlp/SWE-bench_oracle', split='test')
-bm25 = load_dataset('princeton-nlp/SWE-bench_bm25_13K', split='test')
-```
-
-### 4. 评估指标体系（metrics/）
-SWE-bench 的评估核心是基于测试用例的 pass/fail 判定。指标计算模块对比应用 patch 前后的测试结果，计算 resolved rate（完全解决率）作为主要评估指标。一个实例被认为 "resolved" 需要满足两个条件：（1）FAIL_TO_PASS 中的所有失败测试变为通过；（2）PASS_TO_PASS 中的所有原本通过的测试仍然通过，即不引入回归错误。
-
-```bash
-# 评估结果存储结构
-evaluation_results/
-├── {run_id}/
-│   ├── patches_applied/       应用的 patch 文件
-│   ├── run_evaluation.log     执行日志
-│   └── results.json           评估结果摘要
-```
-
-### 5. 数据集变体管理
-项目维护多个数据集变体以适应不同评估需求：完整版 SWE-bench（2,294 实例，来自 12 个仓库）、Lite（300 实例的精简子集，用于快速迭代）、Verified（500 实例的人工验证子集，与 OpenAI Preparedness 团队合作确保每个实例可解）和 Multimodal（面向 GUI 软件的多模态版本，评估可视化领域的代码能力）。所有数据集通过 HuggingFace Hub 分发，使用 `datasets` 库即可加载。
+### 5. 数据集生态
+提供多种粒度的数据集变体：完整版（2294 个任务）、Lite 版（300 个任务）、Verified 版（500 个人工验证任务，与 OpenAI Preparedness 合作）、Multimodal 版（含视觉信息的任务，ICLR 2025）。所有数据集通过 HuggingFace 分发，配套 Oracle 和 BM25 检索数据集。
 
 ## 技术亮点
-
-1. **真实世界任务来源**：所有任务来自 12 个活跃 Python 开源项目（Django, Flask, scikit-learn, sympy 等），涵盖 Web 框架、科学计算、DevOps 等领域，确保评估的生态有效性。
-2. **容器化评估方案**：基于 Docker 的评估引擎确保环境一致性，每个任务在独立容器中执行，避免依赖冲突和状态污染。
-3. **测试驱动的验证机制**：通过执行真实项目的测试套件来判断 patch 正确性，而非依赖文本相似度比较，评估结果高度可信。
-4. **多粒度数据集**：提供 Full/Lite/Verified/Multimodal 多个变体，兼顾评估深度与资源消耗。
-5. **完整的工具链生态**：配套 SWE-agent（自主代理）、SWE-smith（训练数据生成）、sb-cli（云端评估）形成完整的评估生态。
-6. **云原生评估支持**：集成 Modal 平台和 AWS sb-cli 工具，支持无本地 GPU 的云端评估。
+1. **真实世界数据**：所有任务来源于真实 GitHub Issue 和 PR，而非人工构造，确保评估的外部效度
+2. **容器化评估**：完全基于 Docker 的隔离评估环境，确保可重复性和跨平台公平性
+3. **测试套件验证**：使用项目原生测试套件验证 Patch 正确性，避免了启发式评估的偏差
+4. **多维度数据集**：Full/Lite/Verified/Multimodal/Multilingual 五种变体，覆盖不同评估场景
+5. **完整工具链生态**：SWE-agent（Agent 框架）、SWE-smith（数据生成）、sb-cli（云评估）、SWE-ReX（远程执行）形成完整生态
 
 ## 与 Self-Evolve 关联
-| 维度 | 贡献 |
-|------|------|
-| 评估框架 | 提供代码生成能力的标准化评估基准，是 Self-Evolve 进化循环中的关键验证层 |
-| 进化循环 | SWE-bench 的任务实例可直接作为进化目标：LLM 生成 patch -> 测试验证 -> 反馈迭代 |
-| Agent 编排 | SWE-agent 展示了如何将 LLM 编排为自主代码修复 Agent，为 Self-Evolve 的 Agent 设计提供参考 |
-| 质量度量 | resolved rate 可作为 Self-Evolve 系统的适应度函数，衡量代码进化效果 |
-| 数据工程 | collect/ 模块的数据采集管道可作为构建自定义进化任务数据集的模板 |
-| 反馈信号 | 基于测试的 pass/fail 判定提供了客观的进化反馈信号 |
+| 关联维度 | 分析 |
+|----------|------|
+| 评估框架 | SWE-bench 是 Self-Evolve 评估层最核心的参考基准：其"Issue -> Patch -> Test Verification"的评估范式直接对应 Self-Evolve 的代码进化验证流程 |
+| 进化循环 | SWE-bench 的"问题描述 -> 代码生成 -> 测试验证 -> 反馈"流程与 Self-Evolve 的进化循环高度一致 |
+| Agent 编排 | SWE-agent 展示了如何编排一个完整的软件工程 Agent：代码库导航、文件定位、代码编辑、测试运行 |
+| 自主性度量 | SWE-bench 的解决率可作为 Self-Evolve 自主性层级的关键度量指标 |
+| 安全性 | Docker 容器化的评估机制为 Self-Evolve 的安全执行提供了参考实现 |
 
 ## 参考资料
+- [SWE-bench GitHub](https://github.com/swe-bench/SWE-bench)
+- [SWE-bench 官方网站](https://swebench.com)
 - [SWE-bench 论文 (ICLR 2024)](https://arxiv.org/abs/2310.06770)
-- [SWE-bench Multimodal (ICLR 2025)](https://arxiv.org/abs/2410.03859)
-- [SWE-bench 官方文档](https://swebench.com/)
-- [SWE-agent 仓库](https://github.com/SWE-agent/SWE-agent)
-- [SWE-smith 训练数据工具](https://swesmith.com/)
+- [SWE-bench Multimodal 论文 (ICLR 2025)](https://arxiv.org/abs/2410.03859)
+- [SWE-agent](https://github.com/SWE-agent/SWE-agent)
+- [SWE-smith](https://swesmith.com)
 
 ## GitNexus 深度架构分析
 - **源码位置**：`projects/repos/swe_bench__swe_bench`
 - **分析命令**：`gitnexus analyze repos/swe_bench__swe_bench --index-only --skip-git --name SWE-bench`
-- **知识图谱规模**：[placeholder]
-- **查询语句**：`swebench harness evaluation patch resolve test instance collect inference`
-- **核心执行流程候选**：数据采集(make_repo -> cleanup) -> 任务实例生成 -> Docker 镜像构建 -> patch 应用 -> 测试执行 -> 指标计算(resolved rate)
-- **关键符号/文件**：`swebench/harness/run_evaluation.py`, `swebench/collect/`, `swebench/metrics/`, `swebench/inference/`, `pyproject.toml`
-- **调用关系上下文**：run_evaluation 入口 -> 构建评估镜像 -> 应用 prediction patch -> 执行 repo 测试 -> 计算 pass/resolved 指标；collect 管道独立运行，生成任务 JSON
+- **知识图谱规模**：待分析
+- **查询语句**：`evaluation harness, Docker container, test suite verification, patch generation, issue resolution, BM25 retrieval`
+- **核心执行流程候选**：Load Instance -> Build Docker Image -> Apply Patch -> Run Tests -> Compute Metrics
+- **关键符号/文件**：`swebench/harness/run_evaluation.py`, `swebench/harness/docker_build.py`, `swebench/metrics/`, `swebench/collect/`
+- **调用关系上下文**：评估引擎通过 Docker SDK 创建容器实例，在容器内应用 Patch 并运行项目测试套件，收集测试结果并通过指标模块计算解决率
 - **架构结论**：该图谱结果用于把报告中的"进化循环 / Prompt 工程 / 评估框架 / Agent 编排"定位到具体符号、文件和流程

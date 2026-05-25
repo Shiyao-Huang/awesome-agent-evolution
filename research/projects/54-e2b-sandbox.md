@@ -1,125 +1,82 @@
-# E2B: AI 代码安全执行沙箱
+# E2B Code Interpreter: 安全隔离的 AI 代码执行沙箱
 
 ## 基本信息
-
 | 字段 | 内容 |
 |------|------|
-| GitHub | https://github.com/e2b-dev/e2b |
-| Star | 7k+ |
-| 技术栈 | Python, TypeScript, gRPC, Firecracker |
-| 许可证 | MIT |
-| 开发者 | E2B (e2b.dev) |
-| 产品 | [E2B Platform](https://e2b.dev) |
+| GitHub | https://github.com/e2b-dev/code-interpreter |
+| Star | 6,000+ |
+| 技术栈 | Python SDK, JavaScript/TypeScript SDK, Docker (沙箱隔离), 云原生基础设施 |
+| 许可证 | Apache 2.0 (SDK), E2B 商业许可 (云服务) |
+| 开发者 | E2B (e2b-dev) |
 
 ## 项目简介
 
-E2B 是一个开源的**AI 代码安全执行基础设施**，允许 AI Agent 在云端的隔离沙箱中安全地运行生成的代码。提供 Python 和 JavaScript SDK，支持文件系统操作、进程管理和代码解释器。
+E2B Code Interpreter 是一个开源的安全代码执行沙箱基础设施，专为 AI 生成代码的安全运行而设计。它允许开发者在云端的安全隔离环境中运行 AI 生成的任意代码，通过 Python SDK 或 JavaScript SDK 提供简洁的沙箱创建和代码执行接口。
 
-核心理念：**安全沙箱 = AI 代码执行的信任基础** — 通过 Firecracker 微虚拟机实现毫秒级启动的隔离执行环境。
+E2B 的核心价值在于解决了 AI Agent 执行代码时的安全性问题：通过轻量级沙箱隔离机制，确保 AI 生成的代码不会影响宿主系统。每个沙箱都是一个独立的运行环境，拥有自己的文件系统、进程空间和网络命名空间。沙箱支持有状态执行——可以在多次 `run_code` 调用之间保持变量状态，非常适合需要迭代执行的 AI 编程场景。
+
+E2B 已成为众多 AI 编程 Agent 的核心执行基础设施，包括 OpenHands (原 OpenDevin)、Cursor、GPT Engineer 等主流 AI 编程工具均采用或参考了 E2B 的沙箱方案。
 
 ## 目录结构
-
 ```
-e2b/
-├── packages/                   # ★ SDK 包
-│   ├── python/                 # Python SDK
-│   │   └── e2b/               # 核心模块
-│   │       ├── sandbox/        # ★ 沙箱控制
-│   │       ├── code_interpreter/ # ★ 代码解释器
-│   │       └── file_interpreter/ # 文件解释器
-│   └── js/                     # JavaScript SDK
-│       └── packages/
-│           ├── code-interpreter/ # ★ JS 代码解释器
-│           └── sandbox/         # JS 沙箱控制
-├── libs/                       # 共享库
-├── scripts/                    # 脚本
-├── supabase/                   # 数据库
-└── api/                        # API 服务
+e2b_code_interpreter/
+├── python/                  ★ Python SDK 实现
+├── js/                      ★ JavaScript/TypeScript SDK 实现
+├── template/                ★ 沙箱镜像模板
+├── readme-assets/           README 资源文件
+├── CODEOWNERS               代码所有者配置
+├── LICENSE                  许可证
+├── Makefile                 构建脚本
+├── package.json             Node.js 项目配置
+├── pnpm-workspace.yaml      Monorepo 工作空间配置
+└── README.md
 ```
 
 ## 核心模块分析
 
-### 1. 沙箱架构
+### 1. Python SDK (python/)
+提供 `e2b-code-interpreter` PyPI 包，核心接口为 `Sandbox.create()` 和 `sandbox.run_code()`。支持有状态代码执行，变量在多次调用间持久化。支持安装自定义依赖包、文件上传/下载、执行结果结构化输出（文本、图表、错误信息）。
 
-E2B 使用 Firecracker 微虚拟机实现沙箱：
+### 2. JavaScript/TypeScript SDK (js/)
+提供 `@e2b/code-interpreter` NPM 包，API 设计与 Python 版保持一致。支持异步操作和 TypeScript 类型推断，执行结果包含 text、error、results 等结构化字段，便于前端集成和结果展示。
 
-```
-AI Agent
-    ↓
-[SDK (Python/JS)]
-    ↓ gRPC
-[Orchestrator]
-    ↓
-[Firecracker VM] ← 隔离执行环境
-    ├── 文件系统
-    ├── 进程管理
-    └── 网络控制
-```
+### 3. 沙箱隔离引擎
+基于轻量级虚拟化技术构建的隔离运行环境。每个沙箱拥有独立的文件系统、进程树和网络栈，确保 AI 生成代码的安全执行。沙箱支持快速创建和销毁（毫秒级启动），适合高频 Agent 交互场景。
 
-### 2. Code Interpreter
+### 4. 代码解释器
+内置的代码解释器支持 Python 等主流编程语言，能够处理数据可视化（matplotlib、plotly 等）、科学计算（numpy、pandas 等）和通用编程任务。执行结果支持多种格式输出，包括文本、图片、JSON 等。
 
-代码解释器提供：
-- Python/JS 代码执行
-- 支持安装包
-- 数据可视化（Matplotlib/Plotly）
-- 变量持久化
-
-```python
-from e2b_code_interpreter import Sandbox
-
-sbx = Sandbox()
-execution = sbx.run_code('x = 1 + 1; x')
-print(execution.text)  # 2
-```
-
-### 3. 文件操作
-
-沙箱支持完整的文件系统操作：
-- 读写文件
-- 目录管理
-- 权限控制
-
-### 4. 进程管理
-
-在沙箱中运行长时间进程：
-- 启动/停止进程
-- 进程输出监控
-- 后台服务管理
+### 5. Cookbook 示例集
+E2B 提供了丰富的 Cookbook 示例，展示了与不同 LLM（OpenAI、Anthropic、Gemini 等）和 AI 框架（LangChain、AutoGen 等）的集成方案，为开发者提供快速上手参考。
 
 ## 技术亮点
-
-1. **Firecracker 沙箱**：基于微虚拟机的安全隔离，毫秒级启动
-2. **双 SDK**：Python + JavaScript SDK 支持
-3. **代码解释器**：内置代码执行和数据可视化
-4. **云端执行**：无需本地环境，API Key 即可使用
-5. **AI Agent 集成**：专为 AI 代码执行场景设计
+1. **毫秒级沙箱启动**：轻量级虚拟化技术实现沙箱的快速创建和销毁，适合高频 Agent 交互
+2. **有状态执行**：支持在多次 `run_code` 调用间保持变量和运行时状态，完美匹配 AI Agent 的迭代编程模式
+3. **双语言 SDK**：同时提供 Python 和 JavaScript SDK，覆盖服务端和前端两大开发场景
+4. **结构化结果输出**：执行结果包含 text、error、results 等结构化字段，便于下游处理和展示
+5. **行业广泛采用**：被 OpenHands、Cursor、GPT Engineer 等主流 AI 编程工具采用为执行基础设施
 
 ## 与 Self-Evolve 关联
-
-| 维度 | E2B 贡献 |
-|------|---------|
-| 沙箱 | **Firecracker 微虚拟机**安全执行环境 |
-| 代码执行 | AI 生成代码的安全执行基础设施 |
-| 集成 | Python/JS SDK 方便集成到 Agent 系统 |
-| 启示 | Self-Evolve 中代码进化需要安全执行环境，E2B 提供了参考架构 |
+| 关联维度 | 分析 |
+|----------|------|
+| 进化循环 | E2B 为 Self-Evolve 的"代码生成 -> 执行 -> 验证"循环提供了安全执行层，是进化循环中执行环节的基础设施 |
+| Agent 编排 | 作为 Agent 执行代码的标准沙箱方案，E2B 可集成到 Self-Evolve 的 Agent 编排框架中作为代码执行后端 |
+| 评估框架 | 沙箱提供了隔离的执行环境，确保评估过程中代码执行的安全性和可重复性 |
+| 安全性 | E2B 的沙箱隔离机制是 Self-Evolve 自我进化过程中保障系统安全的关键组件 |
+| 可扩展性 | 双语言 SDK 和云原生架构支持 Self-Evolve 在不同技术栈中集成代码执行能力 |
 
 ## 参考资料
-
-- [E2B GitHub](https://github.com/e2b-dev/e2b)
-- [E2B 文档](https://e2b.dev/docs)
-- [E2B Platform](https://e2b.dev)
+- [E2B GitHub](https://github.com/e2b-dev/code-interpreter)
+- [E2B 官方文档](https://e2b.dev/docs)
+- [E2B Cookbook](https://github.com/e2b-dev/e2b-cookbook)
+- [E2B 官网](https://e2b.dev)
 
 ## GitNexus 深度架构分析
-- **源码位置**：`projects/repos/e2b__code_interpreter`（指向 `repos/e2b__code_interpreter` 的本地浅克隆）。
-- **分析命令**：`gitnexus analyze repos/e2b__code_interpreter --index-only --skip-git --name E2B`。
-- **知识图谱规模**：待分析。
-- **查询语句**：`sandbox firecracker code interpreter execution file process`。
-- **核心执行流程候选**：
-  - SDK → gRPC → Orchestrator → Firecracker VM → Execute Code
-- **关键符号/文件**：
-  - `sandbox/`（`packages/python/e2b/sandbox/`）
-  - `code_interpreter/`（`packages/python/e2b/code_interpreter/`）
-- **调用关系上下文**：
-  - SDK 通过 gRPC 与编排器通信。
-  - 编排器管理 Firecracker 虚拟机的生命周期。
-- **架构结论**：该图谱结果用于把报告中的"进化循环 / Prompt 工程 / 评估框架 / Agent 编排"定位到具体符号、文件和流程，后续前端可把本节作为深度源码证据。
+- **源码位置**：`projects/repos/e2b__code_interpreter`
+- **分析命令**：`gitnexus analyze repos/e2b__code_interpreter --index-only --skip-git --name E2B`
+- **知识图谱规模**：待分析
+- **查询语句**：`sandbox creation, code execution, stateful execution, isolation mechanism, SDK interface`
+- **核心执行流程候选**：Sandbox.create() -> run_code() -> Parse Results -> Next Iteration / Cleanup
+- **关键符号/文件**：`python/` (Python SDK), `js/` (JS SDK), `template/` (沙箱模板)
+- **调用关系上下文**：SDK 通过 API 调用 E2B 云端沙箱服务，沙箱内部执行代码解释器，结果通过结构化格式返回
+- **架构结论**：该图谱结果用于把报告中的"进化循环 / Prompt 工程 / 评估框架 / Agent 编排"定位到具体符号、文件和流程

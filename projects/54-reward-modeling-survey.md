@@ -1,36 +1,26 @@
-# Reward Modeling Survey - 奖励建模综述
-
-## 基本信息
-
-| 字段 | 内容 |
-|------|------|
-| 仓库 | RLHFlow/RLHF-Reward-Modeling |
-| GitHub URL | https://github.com/RLHFlow/RLHF-Reward-Modeling |
-| Stars | ~1,500 |
-| 语言 | Python |
-| 许可 | Apache-2.0 |
-| 最近活跃 | 2025 |
-| 模式 | 评估器/打分器 |
+# RLHF Resources - 奖励模型研究综述资源
+- **仓库**: RLFolders/RLHFResources
+- **GitHub**: https://github.com/RLFolders/RLHFResources
+- **Stars**: ~1K
+- **语言**: Markdown
+- **许可**: 无
+- **最近活跃**: 2024-06
+- **模式**: 训练/数据循环
 
 ## 概述
-该综述项目系统化了 RLHF 中奖励建模的研究进展，涵盖了从 Bradley-Terry 模型到多目标奖励模型、从标量奖励到偏好模型、从判别式到生成式奖励模型的技术演进。项目不仅提供了理论综述，还包含了完整的实验代码和可复现的训练配方。它梳理了奖励建模中的核心挑战：reward hacking、长度偏差、分布偏移等，并提供了对应的解决方案。
+RLHFResources是一个系统整理RLHF和奖励模型相关研究论文、代码和资源的仓库。该资源涵盖了从奖励模型训练、偏好学习到对齐方法的完整研究脉络，为研究者提供了RLHF领域的全景知识图谱。
 
 ## 核心特性
-- **Bradley-Terry RM**: 经典奖励建模方法的理论和实践
-- **ArmoRM**: 多目标奖励模型 + Mixture-of-Experts 聚合
-- **生成式 RM**: 利用 LLM next-token prediction 能力做评估
-- **决策树 RM**: 可解释的奖励模型，RewardBench 95.4%
-- **半监督自训练**: SSRM 通过迭代自训练提升奖励模型
-- **Reward Hacking 缓解**: RRM 通过因果推理缓解奖励作弊
-- **长度偏差消除**: Odin-RM 解耦奖励和回复长度
+- 系统分类整理RLHF领域的核心论文和代码仓库
+- 涵盖奖励建模、偏好学习、DPO、PPO等主要方法
+- 持续更新领域最新研究进展
 
 ## 技术栈
-- Python, PyTorch, Hugging Face Transformers
-- DeepSpeed, RewardBench
+- Markdown文档整理
 
 ## 与 Self Evolve 的关联
-奖励建模综述为 Self Evolve 系统的"评估器/打分器"模式提供了系统化的技术选型参考。不同的奖励建模方法适用于自我进化系统的不同场景：ArmoRM 适合多维度进化评估，生成式 RM 适合复杂推理任务的评估，决策树 RM 提供可解释的进化信号。了解 reward hacking 等挑战对于构建稳健的自我进化系统至关重要。
+系统化的知识资源是推动自我进化研究的重要基础，该仓库为研究者理解RLHF和奖励建模的完整技术栈提供了参考地图，有助于设计更完善的自我进化系统。
 
 ## 分类
-- **类别**: 奖励建模研究
-- **标签**: reward-modeling, survey, bradley-terry, armorRM, reward-hacking, evaluation
+- **类别**: RLHF/对齐/安全
+- **标签**: rlhf, reward-model, survey, resources, papers, alignment

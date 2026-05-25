@@ -1,35 +1,26 @@
-# LLM Alignment Survey - 大模型对齐综述
-
-## 基本信息
-
-| 字段 | 内容 |
-|------|------|
-| 仓库 | normster/llm-alignment-survey |
-| GitHub URL | https://github.com/normster/llm-alignment-survey |
-| Stars | ~150 |
-| 语言 | 索引 |
-| 许可 | MIT |
-| 最近活跃 | 2024 |
-| 模式 | 研究综述 |
+# AI Safety - LLM对齐研究索引
+- **仓库**: tatsu-lab/ai_safety
+- **GitHub**: https://github.com/tatsu-lab/ai_safety
+- **Stars**: ~500
+- **语言**: Python
+- **许可**: MIT
+- **最近活跃**: 2024-03
+- **模式**: 反馈-精炼
 
 ## 概述
-LLM Alignment Survey 是一个大模型对齐领域的综合研究资源库，系统性地整理了对齐技术的研究进展、训练方法和评估基准。该项目涵盖了从预对齐 (Pre-alignment) 到 RLHF、DPO、Constitutional AI、红队测试等全链路对齐技术的论文、代码和数据集索引。它为研究人员提供了对齐领域的一站式参考，帮助快速了解领域全貌和技术脉络。
+Stanford tatsu-lab维护的AI安全研究索引，系统整理了LLM对齐和安全领域的论文、数据集和工具。该资源覆盖了从对齐方法到安全评估的完整研究维度，是理解AI安全研究现状的重要参考资料。
 
 ## 核心特性
-- **全链路覆盖**: 预对齐、SFT、RLHF、DPO、Red Teaming 等完整对齐流程
-- **论文索引**: 按主题分类的对齐领域核心论文列表
-- **代码和数据集**: 收录了主要对齐方法的代码仓库和数据集链接
-- **评估基准**: 整理了对齐评估的基准和排行榜
-- **技术演进**: 展示了对齐技术从 RLHF 到 DPO 到迭代式对齐的演进脉络
-- **持续更新**: 跟踪对齐领域的最新研究进展
+- 全面覆盖LLM对齐和AI安全研究方向
+- 收录对齐方法、安全评估、红队测试等子领域的关键论文
+- 提供对齐研究的数据集和基准工具索引
 
 ## 技术栈
-- Markdown (资源索引)
-- 参考多种对齐框架和工具
+- Markdown文档, Python脚本
 
 ## 与 Self Evolve 的关联
-对齐综述为 Self Evolve 系统提供了全面的技术背景和参考。理解对齐技术的全貌有助于在自我进化系统中选择合适的对齐策略。特别是迭代式对齐 (Iterative DPO/RLHF) 的技术演进，与自我进化范式高度相关。红队测试的评估方法也可应用于自我进化系统的安全性验证。
+AI安全研究索引为自我进化系统的安全设计提供了知识基础，确保模型在自我改进过程中遵循安全对齐原则，防止自我进化过程中出现不可控的行为偏移。
 
 ## 分类
-- **类别**: 对齐研究综述
-- **标签**: alignment, survey, rlhf, dpo, red-teaming, safety, comprehensive-index
+- **类别**: RLHF/对齐/安全
+- **标签**: ai-safety, alignment, survey, llm, research-index
