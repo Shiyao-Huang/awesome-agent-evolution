@@ -1,18 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
-const surveyLd = {
-  '@context': 'https://schema.org',
-  '@type': 'ScholarlyArticle',
-  name: 'Self-Evolving AI Agents: A Survey of Feedback-Driven Generation, Evaluation, Memory, and Self-Modification',
-  description: 'Comprehensive survey on AI self-evolution covering taxonomy, methods, frameworks, evaluation, and future directions.',
-  author: { '@type': 'Organization', name: 'aha team' },
-  datePublished: '2026-05',
-  inLanguage: ['en', 'zh'],
-  about: { '@type': 'Thing', name: 'AI Self-Evolution' },
-  keywords: ['self-evolving AI', 'LLM agents', 'recursive self-improvement', 'agent evaluation', 'code evolution']
-};
-
 const chapters = [
   ['1', 'Introduction', 'Definition, scope, contributions, boundaries', 'Draft-complete'],
   ['2', 'Taxonomy', 'Five evolution loops and formal design dimensions', 'Draft-complete'],
@@ -65,7 +53,6 @@ const starProjects = [
   description="Self-Evolving AI 综述论文：提供中英文 PDF 下载、方法分类图、框架雷达图、项目传播链、数据覆盖率等图文并茂的可视化内容。"
 >
   <section class="section">
-    <script type="application/ld+json" set:html={JSON.stringify(surveyLd)} is:inline />
     <div class="container">
       <div class="eyebrow">Paper / 论文</div>
       <h1 class="gradient-text">Self-Evolving AI 综述论文</h1>
@@ -138,7 +125,7 @@ const starProjects = [
       </div>
       <div class="visual-grid">
         <figure class="visual-panel">
-          <img src="/visuals/github-corpus-funnel.svg" alt="GitHub corpus funnel: 486 raw repos filtered to 63 strict evolution projects" loading="lazy" />
+          <img src="/visuals/github-corpus-funnel.svg" alt="GitHub corpus funnel: 486 raw → 359 cross-analyzed → 157 evolution-related → 63 strict evolution → 90 analyzed" loading="lazy" />
           <figcaption>GitHub 数据漏斗：从 486 个原始仓库到 63 个严格自进化项目，层层筛选的分析流水线。</figcaption>
         </figure>
         <figure class="visual-panel">
@@ -208,11 +195,11 @@ const starProjects = [
             {frameworkRadar.map((fw) => (
               <tr>
                 <td><strong>{fw.name}</strong></td>
-                <td>{fw.adoption >= 4 ? '●' : '○'} {fw.adoption}/5</td>
-                <td>{fw.observability >= 4 ? '●' : '○'} {fw.observability}/5</td>
-                <td>{fw.production >= 4 ? '●' : '○'} {fw.production}/5</td>
-                <td>{fw.evolution >= 4 ? '●' : '○'} {fw.evolution}/5</td>
-                <td>{fw.governance >= 3 ? '●' : '○'} {fw.governance}/5</td>
+                <td>{fw.adoption >= 4 ? '🟢' : '⚪'} {fw.adoption}/5</td>
+                <td>{fw.observability >= 4 ? '🟢' : '⚪'} {fw.observability}/5</td>
+                <td>{fw.production >= 4 ? '🟢' : '⚪'} {fw.production}/5</td>
+                <td>{fw.evolution >= 4 ? '🟢' : '⚪'} {fw.evolution}/5</td>
+                <td>{fw.governance >= 3 ? '🟢' : '⚪'} {fw.governance}/5</td>
               </tr>
             ))}
           </tbody>
@@ -220,6 +207,7 @@ const starProjects = [
       </div>
       <p style="margin-top: 12px; color: var(--muted);">启发式评分（1-5），基于 repo 信号和痛点分析。EvoAgentX 和 DGM/OpenEvolve 在 Self-Evolution Fit 上领先。</p>
 
+      <!-- Radar bar per framework -->
       <div class="grid" style="grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px;">
         {frameworkRadar.map((fw) => (
           <article class="card" style="padding: 16px;">
@@ -266,7 +254,7 @@ const starProjects = [
       </div>
       <div class="card" style="margin-top: 20px;">
         <h3>Research-to-Star Gap</h3>
-        <p>自进化研究前沿（ADAS、DGM、Absolute Zero）尚未反映在社区 Star 数中。10K+ Star 项目代表的是应用层进化，而非核心进化机制。</p>
+        <p>自进化研究前沿（ADAS、DGM、Absolute Zero）尚未反映在社区 Star 数中。10K+ Star 项目代表的是应用层进化（研究管线、通用 Agent），而非核心进化机制。</p>
         <div class="score-table-wrap" style="margin-top: 12px;">
           <table class="score-table">
             <thead>
@@ -274,7 +262,7 @@ const starProjects = [
             </thead>
             <tbody>
               <tr><td>Architecture Search (ADAS)</td><td>ICML 2024</td><td>1,400</td><td>80x vs avg skill repo</td></tr>
-              <tr><td>Godel Machine (DGM)</td><td>arXiv 2025</td><td>800</td><td>175x vs avg skill repo</td></tr>
+              <tr><td>Gödel Machine (DGM)</td><td>arXiv 2025</td><td>800</td><td>175x vs avg skill repo</td></tr>
               <tr><td>Self-Play Reward (Absolute Zero)</td><td>arXiv 2025</td><td>&lt;1,000</td><td>140x vs avg skill repo</td></tr>
               <tr><td>Reflection (Reflexion)</td><td>NeurIPS 2023</td><td>paper-code</td><td>Academic code only</td></tr>
             </tbody>

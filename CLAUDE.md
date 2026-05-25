@@ -17,9 +17,13 @@ Claude/Claude Code 在本仓库工作时，以 [AGENTS.md](AGENTS.md) 为最高�
 ## Claude Working Style
 
 - 用分层表达输出判断：1 句话、3 句话、5 句话、完整论证。
-- 对论文和项目分析，优先补“数据从哪来、分析了哪些、进化相关有哪些、时间顺序如何”。
+- 对论文和项目分析，优先补”数据从哪来、分析了哪些、进化相关有哪些、时间顺序如何”。
 - 对网站内容，优先保证 SEO title/description、静态可构建、public reports 可访问。
 - 对项目卡，使用 model-card 类结构：任务、方法、证据、局限、适用场景、教学价值。
+- **图表优先**：当图表比文字更容易表达时，必须使用 Mermaid DAG、SVG 或数据可视化，不要只写文字。
+- **Mom Test**：README 和面向用户的内容必须让非专业人士能理解项目做什么、为什么重要。
+- **证据链**：每个分析结论标注数据来源。无法追溯的标注 `[UNVERIFIED]`。
+- **中文调查同步**：`survey/` 是中文版调查，与 `paper-drafts/` 平行。修改一方时检查另一方是否需要同步。
 
 ## Validation
 
@@ -33,6 +37,7 @@ node scripts/analyze_github_project_data.mjs
 
 ```bash
 (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex)
+(cd survey/latex && xelatex -interaction=nonstopmode -halt-on-error main.tex)
 ```
 
 ## Handoff

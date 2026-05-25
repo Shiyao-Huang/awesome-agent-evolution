@@ -20,13 +20,13 @@ export const site = {
 export const nav = [
   { href: '/#about', label: '关于' },
   { href: '/projects/', label: '项目' },
-  { href: '/rank/', label: '排名' },
-  { href: '/reports/', label: '报告' },
-  { href: '/reviews/', label: '评审' },
   { href: '/research/', label: '研究' },
   { href: '/paper/', label: '论文' },
   { href: '/graph/', label: '图谱' },
   { href: '/visualizations/', label: '可视化' },
+  { href: '/propagation/', label: '传播链' },
+  { href: '/reviews/', label: '评审' },
   { href: '/blog/', label: '博客' },
+  { href: '/star-analysis/', label: 'Star 分析' },
   { href: '/#community', label: '社区' }
 ];
