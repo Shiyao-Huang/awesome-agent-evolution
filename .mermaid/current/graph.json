@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T13:21:00+08:00",
+  "generated_at": "2026-05-25T14:23:21+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -158,7 +158,11 @@
         "raw-github/moizibnyousaf_ai-agent-skills.md",
         "raw-github/howells_arc.md",
         "raw-github/gentleman-programming_gentleman-skills.md",
-        "raw-github/togethercomputer_skills.md"
+        "raw-github/togethercomputer_skills.md",
+        "raw-github/dsail-memory_evomembench.md",
+        "raw-github/signet-ai_signetai.md",
+        "raw-github/mempalace_mempalace.md",
+        "raw-github/jcartu_rasputin-memory.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -504,7 +508,15 @@
         "site/public/reports/projects/188-ai-agent-skills-curated-library-cli.md",
         "site/public/reports/projects/189-arc-agent-workflow-plugin.md",
         "site/public/reports/projects/190-gentleman-skills-community-agent-patterns.md",
-        "site/public/reports/projects/191-together-ai-skills-provider-api-pack.md"
+        "site/public/reports/projects/191-together-ai-skills-provider-api-pack.md",
+        "projects/192-evomembench-self-evolving-memory-benchmark.md",
+        "projects/193-signet-agent-context-substrate.md",
+        "projects/194-mempalace-agent-memory-benchmark.md",
+        "projects/195-rasputin-memory-openclaw-claude.md",
+        "site/public/reports/projects/192-evomembench-self-evolving-memory-benchmark.md",
+        "site/public/reports/projects/193-signet-agent-context-substrate.md",
+        "site/public/reports/projects/194-mempalace-agent-memory-benchmark.md",
+        "site/public/reports/projects/195-rasputin-memory-openclaw-claude.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -581,7 +593,8 @@
       "2026-05-25T02:08+08: GitHub pages opened through browser/search tool for openai/skills, sentient-agi/EvoSkill, rtk-ai/icm, callstackincubator/agent-skills, CodeAlive-AI/ai-driven-development, jakenuts/agent-skills.",
       "2026-05-25T05:11+08: GitHub pages opened through browser/search tool for wanxingai/LightAgent, agent-skills-hub/agent-skills-hub, thClaws/thClaws, Memento-Teams/Memento-Skills, FreedomIntelligence/OpenClaw-Medical-Skills, agent-sh/agentsys.",
       "2026-05-25T12:21+08: GitHub pages opened through browser/search tool for OthmanAdi/planning-with-files, affaan-m/ECC, kks0488/vibe-codex, farmage/opencode-skills, cyijun/agent-smith, galyarderlabs/galyarder-framework, and quzhiii/thesis-skills.",
-      "2026-05-25T13:21+08: GitHub pages opened through browser/search tool for PaulRBerg/agent-skills, ComposioHQ/awesome-codex-skills, eigent-ai/agent-skills, MoizIbnYousaf/Ai-Agent-Skills, howells/arc, Gentleman-Programming/Gentleman-Skills, togethercomputer/skills."
+      "2026-05-25T13:21+08: GitHub pages opened through browser/search tool for PaulRBerg/agent-skills, ComposioHQ/awesome-codex-skills, eigent-ai/agent-skills, MoizIbnYousaf/Ai-Agent-Skills, howells/arc, Gentleman-Programming/Gentleman-Skills, togethercomputer/skills.",
+      "2026-05-25T14:23+08: GitHub/arXiv pages opened through browser/search tool for DSAIL-Memory/EvoMemBench, Signet-AI/signetai, MemPalace/mempalace, and jcartu/rasputin-memory."
     ],
     "shell_network": [
       "curl https://api.github.com/rate_limit failed: Could not resolve host: api.github.com.",
@@ -599,25 +612,27 @@
       "2026-05-25T02:09+08: curl -I --max-time 15 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
       "2026-05-25T05:11+08: curl -I --max-time 10 https://api.github.com failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
       "2026-05-25T12:21+08: curl -I -L --max-time 12 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
-      "2026-05-25T13:21+08: curl -I -L --max-time 12 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang."
+      "2026-05-25T13:21+08: curl -I -L --max-time 12 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
+      "2026-05-25T14:23+08: curl -I -L --max-time 12 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang."
     ],
     "gitnexus": [
       "gitnexus doctor succeeded with GitNexus 1.6.5 and graph/full-text/vector capabilities available.",
-      "gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . failed: EPERM opening /Users/copizzah/.gitnexus/registry.json under current sandbox.",
+      "gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly . failed: EPERM opening /Users/copizzah/.gitnexus/registry.json under current sandbox.",
       "2026-05-24T16:01+08: gitnexus analyze with HOME=/private/tmp/gitnexus-home passed registry EPERM but failed because FTS extension download could not connect, then LadybugDB COPY failed: index extension is not loaded.",
-      "2026-05-24T17:00+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded: 8,654 nodes, 8,878 edges, 27 clusters, 9 flows; FTS extension unavailable due download connection failure, so exact graph/index evidence is available without FTS.",
-      "2026-05-24T18:02+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded: 8,838 nodes, 9,062 edges, 27 clusters, 9 flows; FTS extension unavailable due download connection failure.",
-      "2026-05-24T19:01+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded incrementally: changed=15, added=14, 8,972 nodes, 9,227 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
-      "2026-05-24T20:28+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded incrementally: changed=13, added=15, deleted=0, 9,079 nodes, 9,334 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
-      "2026-05-24T22:09+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded incrementally: changed=11, added=13, deleted=0, 9,277 nodes, 9,532 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
-      "2026-05-24T23:09+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded incrementally: changed=12, added=13, deleted=0, 9,371 nodes, 9,626 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
-      "2026-05-25T00:11+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded incrementally: changed=13, added=15, deleted=0, 9,476 nodes, 9,731 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
-      "2026-05-25T02:10+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded incrementally: changed=17, added=27, deleted=0, 9,669 nodes, 9,954 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
-      "2026-05-25T05:30+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded incrementally: changed=13, added=14, deleted=0, 10,002 nodes, 10,343 edges, 31 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
+      "2026-05-24T17:00+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded: 8,654 nodes, 8,878 edges, 27 clusters, 9 flows; FTS extension unavailable due download connection failure, so exact graph/index evidence is available without FTS.",
+      "2026-05-24T18:02+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded: 8,838 nodes, 9,062 edges, 27 clusters, 9 flows; FTS extension unavailable due download connection failure.",
+      "2026-05-24T19:01+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded incrementally: changed=15, added=14, 8,972 nodes, 9,227 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
+      "2026-05-24T20:28+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded incrementally: changed=13, added=15, deleted=0, 9,079 nodes, 9,334 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
+      "2026-05-24T22:09+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded incrementally: changed=11, added=13, deleted=0, 9,277 nodes, 9,532 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
+      "2026-05-24T23:09+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded incrementally: changed=12, added=13, deleted=0, 9,371 nodes, 9,626 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
+      "2026-05-25T00:11+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded incrementally: changed=13, added=15, deleted=0, 9,476 nodes, 9,731 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
+      "2026-05-25T02:10+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded incrementally: changed=17, added=27, deleted=0, 9,669 nodes, 9,954 edges, 30 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
+      "2026-05-25T05:30+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded incrementally: changed=13, added=14, deleted=0, 10,002 nodes, 10,343 edges, 31 clusters, 13 flows; FTS extension unavailable because LadybugDB extension download could not connect.",
       "2026-05-25T12:21+08: npx gitnexus status failed under HOME=/private/tmp/gitnexus-home because npm could not resolve registry.npmjs.org; local binary /Users/copizzah/.local/bin/gitnexus version 1.6.5 was available.",
       "2026-05-25T12:21+08: HOME=/private/tmp/gitnexus-home /Users/copizzah/.local/bin/gitnexus analyze failed on reused temp HOME because FTS extension download failure left an unloaded index extension; fresh HOME=/private/tmp/gitnexus-home-1221 succeeded.",
-      "2026-05-25T12:21+08: HOME=/private/tmp/gitnexus-home-1221 /Users/copizzah/.local/bin/gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded: 10,623 nodes, 11,534 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
-      "2026-05-25T13:21+08: HOME=/private/tmp/gitnexus-home-1321 /Users/copizzah/.local/bin/gitnexus doctor passed; analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded with 10,730 nodes, 11,678 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect."
+      "2026-05-25T12:21+08: HOME=/private/tmp/gitnexus-home-1221 /Users/copizzah/.local/bin/gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded: 10,623 nodes, 11,534 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
+      "2026-05-25T13:21+08: HOME=/private/tmp/gitnexus-home-1321 /Users/copizzah/.local/bin/gitnexus doctor passed; analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded with 10,730 nodes, 11,678 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
+      "2026-05-25T14:23+08: HOME=/private/tmp/gitnexus-home-1423 gitnexus doctor passed; analyze --skip-git --index-only --name awesome-evolution-hourly . succeeded with 10,878 nodes, 12,530 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect."
     ],
     "tests": [
       "2026-05-24T19:17+08: node scripts/generate_visual_assets.mjs regenerated four SVG charts from current analysis and project data.",
@@ -661,7 +676,7 @@
       "2026-05-25T02:11+08: python3 scripts/enforce_raw_timestamps.py: passed, raw-github md=422, md_ok=422, missing_count=0",
       "2026-05-25T02:11+08: node scripts/analyze_github_project_data.mjs: passed, raw=422, classified=422, analyzed_projects=135, strict_evolution=72, broad_evolution=167",
       "2026-05-25T02:11+08: node scripts/generate_visual_assets.mjs: passed, 4 SVG assets regenerated",
-      "2026-05-25T02:11+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly .: passed with changed=17, added=27, deleted=0, 9,669 nodes, 9,954 edges, 30 clusters, 13 flows; FTS degraded",
+      "2026-05-25T02:11+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly .: passed with changed=17, added=27, deleted=0, 9,669 nodes, 9,954 edges, 30 clusters, 13 flows; FTS degraded",
       "2026-05-25T02:11+08: (cd site && npm run build): passed, 216 pages built with existing Astro z deprecation hints",
       "2026-05-25T02:11+08: (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex): passed, main.pdf 213 pages with existing font/overfull warnings",
       "2026-05-25T05:30+08: jq empty research/repo-classification.json .mermaid/current/graph.json: passed",
@@ -674,7 +689,7 @@
       "2026-05-25T05:30+08: node scripts/generate_visual_assets.mjs: passed, 4 SVG assets regenerated",
       "2026-05-25T05:30+08: command -v codeflow: not found locally",
       "2026-05-25T05:30+08: HOME=/private/tmp/gitnexus-home gitnexus doctor: passed, GitNexus 1.6.5 graph/full-text/vector capabilities reported available",
-      "2026-05-25T05:30+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-evolution-hourly .: passed with changed=13, added=14, deleted=0, 10,002 nodes, 10,343 edges, 31 clusters, 13 flows; FTS degraded because LadybugDB extension download could not connect",
+      "2026-05-25T05:30+08: HOME=/private/tmp/gitnexus-home gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly .: passed with changed=13, added=14, deleted=0, 10,002 nodes, 10,343 edges, 31 clusters, 13 flows; FTS degraded because LadybugDB extension download could not connect",
       "2026-05-25T05:30+08: (cd site && npm run build): passed, 234 pages built with existing Astro z deprecation hints",
       "2026-05-25T05:30+08: (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex): passed, main.pdf 213 pages with existing font/overfull warnings",
       "2026-05-25T12:21+08: jq empty research/repo-classification.json .mermaid/current/graph.json: passed; node --check site/src/data/projects.ts and scripts/generate_project_indexes.mjs: passed.",
@@ -690,7 +705,8 @@
       "2026-05-25T13:21+08: node scripts/analyze_github_project_data.mjs passed with raw=482, classified=482, analyzed_projects=200, strict_evolution=79, broad_evolution=175.",
       "2026-05-25T13:21+08: node scripts/generate_visual_assets.mjs passed, 4 SVG assets regenerated.",
       "2026-05-25T13:21+08: (cd site && npm run build) passed, 281 pages built with existing Astro z deprecation hints.",
-      "2026-05-25T13:21+08: (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex) passed, main.pdf 213 pages with existing font/overfull/underfull warnings."
+      "2026-05-25T13:21+08: (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex) passed, main.pdf 213 pages with existing font/overfull/underfull warnings.",
+      "2026-05-25T14:23+08: node --check site/src/data/projects.ts passed after projectGroups repair; node scripts/generate_visual_assets.mjs regenerated 4 SVG assets."
     ],
     "notes": [
       "work/research/hourly-public-metadata-update-2026-05-24-2105.md",
@@ -700,16 +716,17 @@
       "work/research/hourly-public-metadata-update-2026-05-25-0208.md",
       "work/research/hourly-public-metadata-update-2026-05-25-0511.md",
       "work/research/hourly-public-metadata-update-2026-05-25-1221.md",
-      "work/research/hourly-public-metadata-update-2026-05-25-1321.md"
+      "work/research/hourly-public-metadata-update-2026-05-25-1321.md",
+      "work/research/hourly-public-metadata-update-2026-05-25-1423.md"
     ]
   },
   "current_run_evidence": [
-    "Web-observed repos: PaulRBerg/agent-skills, ComposioHQ/awesome-codex-skills, eigent-ai/agent-skills, MoizIbnYousaf/Ai-Agent-Skills, howells/arc, Gentleman-Programming/Gentleman-Skills, togethercomputer/skills",
-    "New raw files: raw-github/paulrberg_agent-skills.md, raw-github/composiohq_awesome-codex-skills.md, raw-github/eigent-ai_agent-skills.md, raw-github/moizibnyousaf_ai-agent-skills.md, raw-github/howells_arc.md, raw-github/gentleman-programming_gentleman-skills.md, raw-github/togethercomputer_skills.md",
-    "Shell GitHub API remains DNS-blocked: curl -I -L --max-time 12 https://api.github.com/rate_limit failed with Could not resolve host; gh auth status reports invalid token for Shiyao-Huang.",
-    "GitNexus local binary 1.6.5 is available; fresh temp HOME analyze succeeded with 10,730 nodes, 11,678 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
-    "Validation passed: JSON checks, project indexes, raw timestamp enforcement, GitHub project analysis, visual asset generation, site build, and paper build. Direct tsc probe hit TS5107 deprecation, but Astro check/build passed.",
-    "Final counts: raw=482, classified=482, analyzed_projects=200, strict_evolution=79, broad_evolution=175, skill_theme=60, framework_category=138, public_reports=225, site_pages=281.",
+    "Web-observed repos: DSAIL-Memory/EvoMemBench, Signet-AI/signetai, MemPalace/mempalace, jcartu/rasputin-memory; arXiv 2605.18421 used for EvoMemBench paper/code linkage.",
+    "New raw files: raw-github/dsail-memory_evomembench.md, raw-github/signet-ai_signetai.md, raw-github/mempalace_mempalace.md, raw-github/jcartu_rasputin-memory.md.",
+    "New public model cards and site reports: projects/site reports 192-195 for EvoMemBench, Signet AI, MemPalace, and RASPUTIN Memory.",
+    "Shell GitHub API remains DNS-blocked: curl api.github.com failed with Could not resolve host; gh auth status reports invalid token for Shiyao-Huang.",
+    "GitNexus local binary 1.6.5 is available; fresh temp HOME analyze succeeded with 10,878 nodes, 12,530 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
+    "Post-analysis counts before final build: raw=486, classified=486, analyzed_projects=204, strict_evolution=79, broad_evolution=176, memory_theme=92, public_reports=229 expected after generated indexes.",
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ]
 }

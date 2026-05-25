@@ -10,10 +10,10 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `paper-drafts` | present | 20 | 1 | 0 | 2.1 MB |
+| `paper-drafts` | present | 22 | 1 | 0 | 2.0 MB |
 | `paper` | present | 1 | 2 | 0 | 43 KB |
 | `latex` | present | 9 | 3 | 0 | 53 KB |
-| `site` | present | 830 | 313 | 0 | 20 MB |
+| `site` | present | 843 | 317 | 0 | 21 MB |
 | `survey` | present | 40 | 4 | 0 | 1.2 MB |
 | `scripts` | present | 7 | 1 | 0 | 109 KB |
 | `data-engine` | present | 0 | 9 | 0 | 0 B |
@@ -25,6 +25,7 @@
 ### `paper-drafts`
 
 - `paper-drafts/COMPLETION_LEDGER.md`
+- `paper-drafts/appendix-en.tex`
 - `paper-drafts/appendix.tex`
 - `paper-drafts/ch1-intro.tex`
 - `paper-drafts/ch2-taxonomy.tex`
@@ -33,7 +34,6 @@
 - `paper-drafts/ch5-evaluation.tex`
 - `paper-drafts/ch6-frameworks.tex`
 - `paper-drafts/ch7-painpoints.tex`
-- `paper-drafts/ch8-future.tex`
 
 ### `paper`
 

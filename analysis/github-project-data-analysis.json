@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-05-25T05:23:52.251Z",
+  "generated_at": "2026-05-25T06:49:29.927Z",
   "counts": {
-    "raw_captures": 482,
-    "raw_files_on_disk": 482,
-    "classified_repos": 482,
-    "analyzed_projects": 200,
-    "analyzed_in_raw_timestamp_index": 168,
-    "analyzed_in_classification": 168,
-    "analyzed_evolution_focused": 89,
-    "analyzed_with_created_at_or_fallback": 49,
-    "analyzed_with_github_api_metadata": 25,
+    "raw_captures": 486,
+    "raw_files_on_disk": 486,
+    "classified_repos": 486,
+    "analyzed_projects": 204,
+    "analyzed_in_raw_timestamp_index": 172,
+    "analyzed_in_classification": 172,
+    "analyzed_evolution_focused": 90,
+    "analyzed_with_created_at_or_fallback": 53,
+    "analyzed_with_github_api_metadata": 29,
     "analyzed_with_local_git_mirror": 46,
-    "analyzed_with_public_report": 200,
+    "analyzed_with_public_report": 204,
     "raw_core_evolution": 79,
-    "raw_broad_evolution": 175,
+    "raw_broad_evolution": 176,
     "raw_unknown_time_slice": 109
   },
   "raw_category_counts": [
@@ -23,7 +23,7 @@
     },
     {
       "key": "评测/evaluation",
-      "count": 97
+      "count": 98
     },
     {
       "key": "教程/tutorial",
@@ -31,7 +31,7 @@
     },
     {
       "key": "工具/tool",
-      "count": 79
+      "count": 82
     },
     {
       "key": "应用/application",
@@ -48,12 +48,12 @@
   ],
   "raw_theme_counts": [
     {
-      "key": "evaluation",
-      "count": 89
+      "key": "memory",
+      "count": 92
     },
     {
-      "key": "memory",
-      "count": 88
+      "key": "evaluation",
+      "count": 89
     },
     {
       "key": "evolution",
@@ -95,15 +95,15 @@
   "raw_stack_counts": [
     {
       "key": "Markdown",
-      "count": 202
+      "count": 203
     },
     {
       "key": "Python",
-      "count": 173
+      "count": 175
     },
     {
       "key": "TypeScript",
-      "count": 16
+      "count": 17
     },
     {
       "key": "Unknown",
@@ -325,7 +325,7 @@
   "raw_time_slice_counts": [
     {
       "key": "2026-05",
-      "count": 322
+      "count": 326
     },
     {
       "key": "unknown",
@@ -407,7 +407,7 @@
     },
     {
       "key": "memory",
-      "count": 36
+      "count": 40
     },
     {
       "key": "evolution",
@@ -445,18 +445,22 @@
     },
     {
       "key": "2026-05",
-      "count": 6
+      "count": 7
+    },
+    {
+      "key": "2026-03",
+      "count": 5
     },
     {
       "key": "2023-03",
       "count": 4
     },
     {
-      "key": "2026-03",
+      "key": "2026-02",
       "count": 4
     },
     {
-      "key": "2026-02",
+      "key": "2026-04",
       "count": 3
     },
     {
@@ -485,10 +489,6 @@
     },
     {
       "key": "2026-01",
-      "count": 2
-    },
-    {
-      "key": "2026-04",
       "count": 2
     },
     {
@@ -8915,6 +8915,66 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[ACM Computing Surveys 2025] This repository collects awesome survey, resource, and paper for Lifelong Learning with Large Language Models. (Updated Regularly)"
+    },
+    {
+      "repo": "DSAIL-Memory/EvoMemBench",
+      "url": "https://github.com/DSAIL-Memory/EvoMemBench",
+      "stars": "0",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed public repository with 2 commits, Apache-2.0 license, 0 stars and 0 forks, README says Coming soon; arXiv 2605.18421 states the code is available at this repository and frames EvoMemBench as agent memory benchmarking from a self-evolving perspective.",
+      "description": "EvoMemBench 是 2026-05 arXiv 论文配套的 agent memory benchmark，按 in-episode/cross-episode 与 knowledge/execution 两条轴评估记忆机制是否支持自演化 agent。"
+    },
+    {
+      "repo": "Signet-AI/signetai",
+      "url": "https://github.com/Signet-AI/signetai",
+      "stars": "167",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 2,150 commits, Apache-2.0 license, 167 stars and 33 forks; README describes local-first identity, memory and secrets for AI agents, ambient memory, raw transcript provenance, SQLite/FTS/vector/graph retrieval, and 97.6% LongMemEval answer accuracy claim under its MemoryBench rules profile.",
+      "description": "Signet 是 local-first agent context layer，把 identity、memory、provenance、secrets、skills 和工作知识放在可检查的 SQLite/文件记录中，支持 Claude Code、OpenCode、OpenClaw、Codex、Gemini CLI 等 harness。"
+    },
+    {
+      "repo": "MemPalace/mempalace",
+      "url": "https://github.com/MemPalace/mempalace",
+      "stars": "52800",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed MIT license, Python project, 52.8k stars and 7k forks; README claims verbatim local memory, ChromaDB-backed retrieval, knowledge graph, MCP tools, and reproducible benchmark files with 96.6% LongMemEval raw R@5 plus 98.4% held-out hybrid R@5. Treat benchmark numbers as project claims until independently rerun.",
+      "description": "MemPalace 是 local-first agent memory system，强调 verbatim storage、可插拔检索、知识图谱和 MCP tools，并公开 LongMemEval/LoCoMo/ConvoMem/MemBench 复现实验说明。"
+    },
+    {
+      "repo": "jcartu/rasputin-memory",
+      "url": "https://github.com/jcartu/rasputin-memory",
+      "stars": "33",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed MIT license, Python/JavaScript/Shell stack, 33 stars and 5 forks; README describes persistent conversation memory with LLM fact extraction, four-partition retrieval, Qwen3 reranker, HTTP API, MCP server, 33-question regression corpus and LoCoMo evaluation harness, while explicitly marking several future graph/temporal features as not integrated.",
+      "description": "RASPUTIN Memory 是面向 OpenClaw 和 Claude Code 的 self-hosted long-term memory backend，包含 fact/window/entity/event lane、hybrid search、Qwen reranker、MCP server 和 LoCoMo 评测记录。"
     }
   ],
   "raw_core_evolution_repositories": [
@@ -12729,6 +12789,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web search and public GitHub page evidence observed Apache-2.0 license, Python stack, 1.4k stars and 158 forks; project description positions Zylos as a self-evolving AI team platform for specialized agents, memory, automation, and marketplace-style extensibility",
       "description": "Zylos Core 是 self-evolving AI team platform，把专门化 agents、共享记忆、工具市场和交付界面组合成持续改进的团队运行时。"
+    },
+    {
+      "repo": "DSAIL-Memory/EvoMemBench",
+      "url": "https://github.com/DSAIL-Memory/EvoMemBench",
+      "stars": "0",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed public repository with 2 commits, Apache-2.0 license, 0 stars and 0 forks, README says Coming soon; arXiv 2605.18421 states the code is available at this repository and frames EvoMemBench as agent memory benchmarking from a self-evolving perspective.",
+      "description": "EvoMemBench 是 2026-05 arXiv 论文配套的 agent memory benchmark，按 in-episode/cross-episode 与 knowledge/execution 两条轴评估记忆机制是否支持自演化 agent。"
     }
   ],
   "analyzed_projects": [
@@ -21391,6 +21466,170 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "skill",
       "evolution_focused": false
+    },
+    {
+      "name": "EvoMemBench",
+      "repo": "DSAIL-Memory/EvoMemBench",
+      "normalized_repo": "dsail-memory/evomembench",
+      "url": "https://github.com/DSAIL-Memory/EvoMemBench",
+      "category": "Self-Evolving Agent Memory Benchmark",
+      "pattern": "memory benchmark -> self-evolving perspective",
+      "tags": [
+        "memory benchmark",
+        "self-evolving perspective",
+        "agent memory"
+      ],
+      "site_stars": 0,
+      "site_forks": "0",
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/dsail-memory_evomembench.md",
+      "local_git": null,
+      "report": "projects/192-evomembench-self-evolving-memory-benchmark.md",
+      "public_report": "site/public/reports/projects/192-evomembench-self-evolving-memory-benchmark.md",
+      "public_report_exists": true,
+      "created_at": "2026-05-18T02:41:08Z",
+      "created_at_source": "github_api",
+      "github_source": "github_api",
+      "github_api_stars": 0,
+      "github_api_forks": 0,
+      "github_pushed_at": "2026-05-18T02:41:41Z",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/dsail-memory_evomembench.md",
+      "raw_collected_at": "2026-05-25T14:23:21+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web GitHub page observed public repository with 2 commits, Apache-2.0 license, 0 stars and 0 forks, README says Coming soon; arXiv 2605.18421 states the code is available at this repository and frames EvoMemBench as agent memory benchmarking from a self-evolving perspective.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": true
+    },
+    {
+      "name": "Signet AI",
+      "repo": "Signet-AI/signetai",
+      "normalized_repo": "signet-ai/signetai",
+      "url": "https://github.com/Signet-AI/signetai",
+      "category": "Agent Context and Memory Substrate",
+      "pattern": "ambient memory -> provenance -> cross-harness continuity",
+      "tags": [
+        "memory substrate",
+        "context continuity",
+        "mcp",
+        "codex"
+      ],
+      "site_stars": 167,
+      "site_forks": "33",
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/signet-ai_signetai.md",
+      "local_git": null,
+      "report": "projects/193-signet-agent-context-substrate.md",
+      "public_report": "site/public/reports/projects/193-signet-agent-context-substrate.md",
+      "public_report_exists": true,
+      "created_at": "2026-02-11T05:38:32Z",
+      "created_at_source": "github_api",
+      "github_source": "github_api",
+      "github_api_stars": 167,
+      "github_api_forks": 33,
+      "github_pushed_at": "2026-05-25T04:23:06Z",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/signet-ai_signetai.md",
+      "raw_collected_at": "2026-05-25T14:23:21+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web GitHub page observed 2,150 commits, Apache-2.0 license, 167 stars and 33 forks; README describes local-first identity, memory and secrets for AI agents, ambient memory, raw transcript provenance, SQLite/FTS/vector/graph retrieval, and 97.6% LongMemEval answer accuracy claim under its MemoryBench rules profile.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "MemPalace",
+      "repo": "MemPalace/mempalace",
+      "normalized_repo": "mempalace/mempalace",
+      "url": "https://github.com/MemPalace/mempalace",
+      "category": "Benchmarked Agent Memory System",
+      "pattern": "verbatim memory -> scoped retrieval -> benchmarked recall",
+      "tags": [
+        "agent memory",
+        "LongMemEval",
+        "MCP",
+        "local-first"
+      ],
+      "site_stars": 52800,
+      "site_forks": "7000",
+      "license": "MIT",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/mempalace_mempalace.md",
+      "local_git": null,
+      "report": "projects/194-mempalace-agent-memory-benchmark.md",
+      "public_report": "site/public/reports/projects/194-mempalace-agent-memory-benchmark.md",
+      "public_report_exists": true,
+      "created_at": "2026-04-05T01:12:07Z",
+      "created_at_source": "github_api",
+      "github_source": "github_api",
+      "github_api_stars": 52789,
+      "github_api_forks": 6968,
+      "github_pushed_at": "2026-05-25T06:08:08Z",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/mempalace_mempalace.md",
+      "raw_collected_at": "2026-05-25T14:23:21+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web GitHub page observed MIT license, Python project, 52.8k stars and 7k forks; README claims verbatim local memory, ChromaDB-backed retrieval, knowledge graph, MCP tools, and reproducible benchmark files with 96.6% LongMemEval raw R@5 plus 98.4% held-out hybrid R@5. Treat benchmark numbers as project claims until independently rerun.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "RASPUTIN Memory",
+      "repo": "jcartu/rasputin-memory",
+      "normalized_repo": "jcartu/rasputin-memory",
+      "url": "https://github.com/jcartu/rasputin-memory",
+      "category": "Self-Hosted Agent Memory Backend",
+      "pattern": "memory extraction -> hybrid search -> reranked recall",
+      "tags": [
+        "agent memory",
+        "openclaw",
+        "claude-code",
+        "mcp",
+        "locomo"
+      ],
+      "site_stars": 33,
+      "site_forks": "5",
+      "license": "MIT",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/jcartu_rasputin-memory.md",
+      "local_git": null,
+      "report": "projects/195-rasputin-memory-openclaw-claude.md",
+      "public_report": "site/public/reports/projects/195-rasputin-memory-openclaw-claude.md",
+      "public_report_exists": true,
+      "created_at": "2026-03-26T14:37:53Z",
+      "created_at_source": "github_api",
+      "github_source": "github_api",
+      "github_api_stars": 33,
+      "github_api_forks": 5,
+      "github_pushed_at": "2026-04-25T15:02:13Z",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/jcartu_rasputin-memory.md",
+      "raw_collected_at": "2026-05-25T14:23:21+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web GitHub page observed MIT license, Python/JavaScript/Shell stack, 33 stars and 5 forks; README describes persistent conversation memory with LLM fact extraction, four-partition retrieval, Qwen3 reranker, HTTP API, MCP server, 33-question regression corpus and LoCoMo evaluation harness, while explicitly marking several future graph/temporal features as not integrated.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
     }
   ],
   "analyzed_git_evidence": [
@@ -21871,6 +22110,47 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "memory",
       "evolution_focused": true
+    },
+    {
+      "name": "MemPalace",
+      "repo": "MemPalace/mempalace",
+      "normalized_repo": "mempalace/mempalace",
+      "url": "https://github.com/MemPalace/mempalace",
+      "category": "Benchmarked Agent Memory System",
+      "pattern": "verbatim memory -> scoped retrieval -> benchmarked recall",
+      "tags": [
+        "agent memory",
+        "LongMemEval",
+        "MCP",
+        "local-first"
+      ],
+      "site_stars": 52800,
+      "site_forks": "7000",
+      "license": "MIT",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/mempalace_mempalace.md",
+      "local_git": null,
+      "report": "projects/194-mempalace-agent-memory-benchmark.md",
+      "public_report": "site/public/reports/projects/194-mempalace-agent-memory-benchmark.md",
+      "public_report_exists": true,
+      "created_at": "2026-04-05T01:12:07Z",
+      "created_at_source": "github_api",
+      "github_source": "github_api",
+      "github_api_stars": 52789,
+      "github_api_forks": 6968,
+      "github_pushed_at": "2026-05-25T06:08:08Z",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/mempalace_mempalace.md",
+      "raw_collected_at": "2026-05-25T14:23:21+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web GitHub page observed MIT license, Python project, 52.8k stars and 7k forks; README claims verbatim local memory, ChromaDB-backed retrieval, knowledge graph, MCP tools, and reproducible benchmark files with 96.6% LongMemEval raw R@5 plus 98.4% held-out hybrid R@5. Treat benchmark numbers as project claims until independently rerun.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
     },
     {
       "name": "CrewAI",
@@ -27349,6 +27629,47 @@
       "evolution_focused": false
     },
     {
+      "name": "Signet AI",
+      "repo": "Signet-AI/signetai",
+      "normalized_repo": "signet-ai/signetai",
+      "url": "https://github.com/Signet-AI/signetai",
+      "category": "Agent Context and Memory Substrate",
+      "pattern": "ambient memory -> provenance -> cross-harness continuity",
+      "tags": [
+        "memory substrate",
+        "context continuity",
+        "mcp",
+        "codex"
+      ],
+      "site_stars": 167,
+      "site_forks": "33",
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/signet-ai_signetai.md",
+      "local_git": null,
+      "report": "projects/193-signet-agent-context-substrate.md",
+      "public_report": "site/public/reports/projects/193-signet-agent-context-substrate.md",
+      "public_report_exists": true,
+      "created_at": "2026-02-11T05:38:32Z",
+      "created_at_source": "github_api",
+      "github_source": "github_api",
+      "github_api_stars": 167,
+      "github_api_forks": 33,
+      "github_pushed_at": "2026-05-25T04:23:06Z",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/signet-ai_signetai.md",
+      "raw_collected_at": "2026-05-25T14:23:21+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web GitHub page observed 2,150 commits, Apache-2.0 license, 167 stars and 33 forks; README describes local-first identity, memory and secrets for AI agents, ambient memory, raw transcript provenance, SQLite/FTS/vector/graph retrieval, and 97.6% LongMemEval answer accuracy claim under its MemoryBench rules profile.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
       "name": "OneWave Claude Skills",
       "repo": "OneWave-AI/claude-skills",
       "normalized_repo": "onewave-ai/claude-skills",
@@ -28504,6 +28825,48 @@
       "classification_evidence": "web search result observed darkrishabh/agent-skills-eval as a public GitHub repository for evaluating agent skills; included because benchmark/eval coverage is a first-class user requirement",
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
+      "name": "RASPUTIN Memory",
+      "repo": "jcartu/rasputin-memory",
+      "normalized_repo": "jcartu/rasputin-memory",
+      "url": "https://github.com/jcartu/rasputin-memory",
+      "category": "Self-Hosted Agent Memory Backend",
+      "pattern": "memory extraction -> hybrid search -> reranked recall",
+      "tags": [
+        "agent memory",
+        "openclaw",
+        "claude-code",
+        "mcp",
+        "locomo"
+      ],
+      "site_stars": 33,
+      "site_forks": "5",
+      "license": "MIT",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/jcartu_rasputin-memory.md",
+      "local_git": null,
+      "report": "projects/195-rasputin-memory-openclaw-claude.md",
+      "public_report": "site/public/reports/projects/195-rasputin-memory-openclaw-claude.md",
+      "public_report_exists": true,
+      "created_at": "2026-03-26T14:37:53Z",
+      "created_at_source": "github_api",
+      "github_source": "github_api",
+      "github_api_stars": 33,
+      "github_api_forks": 5,
+      "github_pushed_at": "2026-04-25T15:02:13Z",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/jcartu_rasputin-memory.md",
+      "raw_collected_at": "2026-05-25T14:23:21+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web GitHub page observed MIT license, Python/JavaScript/Shell stack, 33 stars and 5 forks; README describes persistent conversation memory with LLM fact extraction, four-partition retrieval, Qwen3 reranker, HTTP API, MCP server, 33-question regression corpus and LoCoMo evaluation harness, while explicitly marking several future graph/temporal features as not integrated.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
       "evolution_focused": false
     },
     {
@@ -29966,6 +30329,46 @@
       "classification_evidence": "web GitHub page observed OpenClaw skill engine README, plugin manifest, validation/security sections",
       "raw_time_slice": "2026-05",
       "classified_theme": "evolution",
+      "evolution_focused": true
+    },
+    {
+      "name": "EvoMemBench",
+      "repo": "DSAIL-Memory/EvoMemBench",
+      "normalized_repo": "dsail-memory/evomembench",
+      "url": "https://github.com/DSAIL-Memory/EvoMemBench",
+      "category": "Self-Evolving Agent Memory Benchmark",
+      "pattern": "memory benchmark -> self-evolving perspective",
+      "tags": [
+        "memory benchmark",
+        "self-evolving perspective",
+        "agent memory"
+      ],
+      "site_stars": 0,
+      "site_forks": "0",
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/dsail-memory_evomembench.md",
+      "local_git": null,
+      "report": "projects/192-evomembench-self-evolving-memory-benchmark.md",
+      "public_report": "site/public/reports/projects/192-evomembench-self-evolving-memory-benchmark.md",
+      "public_report_exists": true,
+      "created_at": "2026-05-18T02:41:08Z",
+      "created_at_source": "github_api",
+      "github_source": "github_api",
+      "github_api_stars": 0,
+      "github_api_forks": 0,
+      "github_pushed_at": "2026-05-18T02:41:41Z",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/dsail-memory_evomembench.md",
+      "raw_collected_at": "2026-05-25T14:23:21+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web GitHub page observed public repository with 2 commits, Apache-2.0 license, 0 stars and 0 forks, README says Coming soon; arXiv 2605.18421 states the code is available at this repository and frames EvoMemBench as agent memory benchmarking from a self-evolving perspective.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
       "evolution_focused": true
     },
     {
@@ -31662,6 +32065,47 @@
       "evolution_focused": false
     },
     {
+      "name": "Signet AI",
+      "repo": "Signet-AI/signetai",
+      "normalized_repo": "signet-ai/signetai",
+      "url": "https://github.com/Signet-AI/signetai",
+      "category": "Agent Context and Memory Substrate",
+      "pattern": "ambient memory -> provenance -> cross-harness continuity",
+      "tags": [
+        "memory substrate",
+        "context continuity",
+        "mcp",
+        "codex"
+      ],
+      "site_stars": 167,
+      "site_forks": "33",
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/signet-ai_signetai.md",
+      "local_git": null,
+      "report": "projects/193-signet-agent-context-substrate.md",
+      "public_report": "site/public/reports/projects/193-signet-agent-context-substrate.md",
+      "public_report_exists": true,
+      "created_at": "2026-02-11T05:38:32Z",
+      "created_at_source": "github_api",
+      "github_source": "github_api",
+      "github_api_stars": 167,
+      "github_api_forks": 33,
+      "github_pushed_at": "2026-05-25T04:23:06Z",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/signet-ai_signetai.md",
+      "raw_collected_at": "2026-05-25T14:23:21+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web GitHub page observed 2,150 commits, Apache-2.0 license, 167 stars and 33 forks; README describes local-first identity, memory and secrets for AI agents, ambient memory, raw transcript provenance, SQLite/FTS/vector/graph retrieval, and 97.6% LongMemEval answer accuracy claim under its MemoryBench rules profile.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
       "name": "pycma",
       "repo": "CMA-ES/pycma",
       "normalized_repo": "cma-es/pycma",
@@ -31837,6 +32281,48 @@
       "evolution_focused": true
     },
     {
+      "name": "RASPUTIN Memory",
+      "repo": "jcartu/rasputin-memory",
+      "normalized_repo": "jcartu/rasputin-memory",
+      "url": "https://github.com/jcartu/rasputin-memory",
+      "category": "Self-Hosted Agent Memory Backend",
+      "pattern": "memory extraction -> hybrid search -> reranked recall",
+      "tags": [
+        "agent memory",
+        "openclaw",
+        "claude-code",
+        "mcp",
+        "locomo"
+      ],
+      "site_stars": 33,
+      "site_forks": "5",
+      "license": "MIT",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/jcartu_rasputin-memory.md",
+      "local_git": null,
+      "report": "projects/195-rasputin-memory-openclaw-claude.md",
+      "public_report": "site/public/reports/projects/195-rasputin-memory-openclaw-claude.md",
+      "public_report_exists": true,
+      "created_at": "2026-03-26T14:37:53Z",
+      "created_at_source": "github_api",
+      "github_source": "github_api",
+      "github_api_stars": 33,
+      "github_api_forks": 5,
+      "github_pushed_at": "2026-04-25T15:02:13Z",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/jcartu_rasputin-memory.md",
+      "raw_collected_at": "2026-05-25T14:23:21+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web GitHub page observed MIT license, Python/JavaScript/Shell stack, 33 stars and 5 forks; README describes persistent conversation memory with LLM fact extraction, four-partition retrieval, Qwen3 reranker, HTTP API, MCP server, 33-question regression corpus and LoCoMo evaluation harness, while explicitly marking several future graph/temporal features as not integrated.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
       "name": "LLM4Opt",
       "repo": "FeiLiu36/LLM4Opt",
       "normalized_repo": "feiliu36/llm4opt",
@@ -31923,6 +32409,47 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "evolution",
       "evolution_focused": true
+    },
+    {
+      "name": "MemPalace",
+      "repo": "MemPalace/mempalace",
+      "normalized_repo": "mempalace/mempalace",
+      "url": "https://github.com/MemPalace/mempalace",
+      "category": "Benchmarked Agent Memory System",
+      "pattern": "verbatim memory -> scoped retrieval -> benchmarked recall",
+      "tags": [
+        "agent memory",
+        "LongMemEval",
+        "MCP",
+        "local-first"
+      ],
+      "site_stars": 52800,
+      "site_forks": "7000",
+      "license": "MIT",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/mempalace_mempalace.md",
+      "local_git": null,
+      "report": "projects/194-mempalace-agent-memory-benchmark.md",
+      "public_report": "site/public/reports/projects/194-mempalace-agent-memory-benchmark.md",
+      "public_report_exists": true,
+      "created_at": "2026-04-05T01:12:07Z",
+      "created_at_source": "github_api",
+      "github_source": "github_api",
+      "github_api_stars": 52789,
+      "github_api_forks": 6968,
+      "github_pushed_at": "2026-05-25T06:08:08Z",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/mempalace_mempalace.md",
+      "raw_collected_at": "2026-05-25T14:23:21+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web GitHub page observed MIT license, Python project, 52.8k stars and 7k forks; README claims verbatim local memory, ChromaDB-backed retrieval, knowledge graph, MCP tools, and reproducible benchmark files with 96.6% LongMemEval raw R@5 plus 98.4% held-out hybrid R@5. Treat benchmark numbers as project claims until independently rerun.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
     },
     {
       "name": "DEAP",
@@ -32097,6 +32624,46 @@
       "classification_evidence": null,
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
+      "evolution_focused": true
+    },
+    {
+      "name": "EvoMemBench",
+      "repo": "DSAIL-Memory/EvoMemBench",
+      "normalized_repo": "dsail-memory/evomembench",
+      "url": "https://github.com/DSAIL-Memory/EvoMemBench",
+      "category": "Self-Evolving Agent Memory Benchmark",
+      "pattern": "memory benchmark -> self-evolving perspective",
+      "tags": [
+        "memory benchmark",
+        "self-evolving perspective",
+        "agent memory"
+      ],
+      "site_stars": 0,
+      "site_forks": "0",
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-25T00:00:00Z",
+      "localPath": "raw-github/dsail-memory_evomembench.md",
+      "local_git": null,
+      "report": "projects/192-evomembench-self-evolving-memory-benchmark.md",
+      "public_report": "site/public/reports/projects/192-evomembench-self-evolving-memory-benchmark.md",
+      "public_report_exists": true,
+      "created_at": "2026-05-18T02:41:08Z",
+      "created_at_source": "github_api",
+      "github_source": "github_api",
+      "github_api_stars": 0,
+      "github_api_forks": 0,
+      "github_pushed_at": "2026-05-18T02:41:41Z",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/dsail-memory_evomembench.md",
+      "raw_collected_at": "2026-05-25T14:23:21+08:00",
+      "raw_content_timestamp": "2026-05-25",
+      "raw_timestamp_source": "web_observed_github_page_2026_05_25",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web GitHub page observed public repository with 2 commits, Apache-2.0 license, 0 stars and 0 forks, README says Coming soon; arXiv 2605.18421 states the code is available at this repository and frames EvoMemBench as agent memory benchmarking from a self-evolving perspective.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
       "evolution_focused": true
     },
     {

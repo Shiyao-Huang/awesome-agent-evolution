@@ -25,7 +25,7 @@
 | 类型 | 路径 | 状态 |
 |---|---|---|
 | README 主入口 | [README.md](README.md) | 中文优先，开头前置加工后的完整分类总览，并聚合综述、方法、benchmark、项目分类、核心链接、完整列表索取区和迭代闭环 |
-| English i18n 入口 | [README-EN.md](README-EN.md) | 英文轻量入口，指向中文主 README 和主要成果，并同步维护闭环 |
+| English i18n 入口 | [README-EN.md](README-EN.md) | 根 README 的完整英文镜像，包含同等结构、完整列表和维护闭环 |
 | 当前目标 | [CURRENT_GOAL.md](CURRENT_GOAL.md) | 只收录用户直接输入，不混入 team 口吻；记录每轮主动更新 README/网站/索引并提交的要求 |
 | 用户原话参考 | [docs/project-management/user-direct-inputs.md](docs/project-management/user-direct-inputs.md) | AGENTS/CLAUDE 必读参考，含定时任务和迭代提交规则 |
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |
@@ -33,7 +33,9 @@
 | GitHub 数据 JSON | [analysis/github-project-data-analysis.json](analysis/github-project-data-analysis.json) | 脚本生成，可复跑 |
 | 项目深度分析 | [projects/](projects/) | model-card/教学型项目分析 |
 | 项目清单 | [projects/INDEX.md](projects/INDEX.md) | 深度项目入口 |
-| 论文主稿 | [paper-drafts/main.tex](paper-drafts/main.tex) | XeLaTeX 构建入口 |
+| 论文主稿 | [paper-drafts/main.tex](paper-drafts/main.tex) | 英文 arXiv-facing XeLaTeX 构建入口 |
+| 英文 arXiv 附录 | [paper-drafts/appendix-en.tex](paper-drafts/appendix-en.tex) | 英文附录，替代中文 companion appendix 进入英文主稿 |
+| 英文 GitHub corpus 快照 | [paper-drafts/github-project-data-analysis-en.tex](paper-drafts/github-project-data-analysis-en.tex) | 从 `analysis/github-project-data-analysis.*` 派生的英文 LaTeX 论文快照 |
 | 论文 PDF | [paper-drafts/main.pdf](paper-drafts/main.pdf) | 当前生成版 |
 | 网站源码 | [site/](site/) | Astro 博客/SEO 网站 |
 | 公开项目报告 | [site/public/reports/projects/](site/public/reports/projects/) | 供静态站点下载/引用 |

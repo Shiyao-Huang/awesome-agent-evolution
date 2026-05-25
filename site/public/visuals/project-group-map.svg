@@ -27,15 +27,15 @@
   
   <text x="58" y="149" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">Harness / 技能 / 记忆进化</text>
   <rect x="410" y="132" width="420" height="22" rx="8" fill="url(#teal)"/>
-  <text x="850" y="149" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">98</text>
+  <text x="850" y="149" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">101</text>
 
   <text x="58" y="183" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">个人 Agent 产品与真实评测</text>
   <rect x="410" y="166" width="141" height="22" rx="8" fill="url(#amber)"/>
-  <text x="571" y="183" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">33</text>
+  <text x="571" y="183" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">34</text>
 
   <text x="58" y="217" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">Harness 进化与方法索引</text>
-  <rect x="410" y="200" width="47" height="22" rx="8" fill="url(#teal)"/>
-  <text x="477" y="217" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">11</text>
+  <rect x="410" y="200" width="46" height="22" rx="8" fill="url(#teal)"/>
+  <text x="476" y="217" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f6f8ff">11</text>
 
   <text x="58" y="251" font-family="Inter, Arial, sans-serif" font-size="13" fill="#dbe6ff">多 Agent 协作框架</text>
   <rect x="410" y="234" width="36" height="22" rx="8" fill="url(#amber)"/>

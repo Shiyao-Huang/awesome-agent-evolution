@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-25T00:00:00+08:00",
-  "total": 482,
-  "updated_files": 482,
+  "total": 486,
+  "updated_files": 486,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -914,6 +914,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "DSAIL-Memory/EvoMemBench",
+      "url": "https://github.com/DSAIL-Memory/EvoMemBench",
+      "file": "raw-github/dsail-memory_evomembench.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T14:23:21+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_2026_05_25"
+    },
+    {
       "repo": "dsifry/metaswarm",
       "url": "https://github.com/dsifry/metaswarm",
       "file": "raw-github/dsifry_metaswarm.md",
@@ -1670,6 +1679,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "jcartu/rasputin-memory",
+      "url": "https://github.com/jcartu/rasputin-memory",
+      "file": "raw-github/jcartu_rasputin-memory.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T14:23:21+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_2026_05_25"
+    },
+    {
       "repo": "jdrhyne/agent-skills",
       "url": "https://github.com/jdrhyne/agent-skills",
       "file": "raw-github/jdrhyne_agent-skills.md",
@@ -2262,6 +2280,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "MemPalace/mempalace",
+      "url": "https://github.com/MemPalace/mempalace",
+      "file": "raw-github/mempalace_mempalace.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T14:23:21+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_2026_05_25"
     },
     {
       "repo": "MemTensor/HaluMem",
@@ -3351,6 +3378,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "Signet-AI/signetai",
+      "url": "https://github.com/Signet-AI/signetai",
+      "file": "raw-github/signet-ai_signetai.md",
+      "content_timestamp": "2026-05-25",
+      "collected_at": "2026-05-25T14:23:21+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_github_page_2026_05_25"
     },
     {
       "repo": "significant-gravitas/autogpt",

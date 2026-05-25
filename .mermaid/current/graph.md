@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-25T13:21:00+08:00
+Generated: 2026-05-25T14:23:21+08:00
 
 ## Nodes
 
@@ -24,10 +24,10 @@ Generated: 2026-05-25T13:21:00+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: PaulRBerg/agent-skills, ComposioHQ/awesome-codex-skills, eigent-ai/agent-skills, MoizIbnYousaf/Ai-Agent-Skills, howells/arc, Gentleman-Programming/Gentleman-Skills, togethercomputer/skills
-- New raw files: raw-github/paulrberg_agent-skills.md, raw-github/composiohq_awesome-codex-skills.md, raw-github/eigent-ai_agent-skills.md, raw-github/moizibnyousaf_ai-agent-skills.md, raw-github/howells_arc.md, raw-github/gentleman-programming_gentleman-skills.md, raw-github/togethercomputer_skills.md
-- Shell GitHub API remains DNS-blocked: curl -I -L --max-time 12 https://api.github.com/rate_limit failed with Could not resolve host; gh auth status reports invalid token for Shiyao-Huang.
-- GitNexus local binary 1.6.5 is available; fresh temp HOME analyze succeeded with 10,730 nodes, 11,678 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.
-- Validation passed: JSON checks, project indexes, raw timestamp enforcement, GitHub project analysis, visual asset generation, site build, and paper build. Direct tsc probe hit TS5107 deprecation, but Astro check/build passed.
-- Final counts: raw=482, classified=482, analyzed_projects=200, strict_evolution=79, broad_evolution=175, skill_theme=60, framework_category=138, public_reports=225, site_pages=281.
+- Web-observed repos: DSAIL-Memory/EvoMemBench, Signet-AI/signetai, MemPalace/mempalace, jcartu/rasputin-memory; arXiv 2605.18421 used for EvoMemBench paper/code linkage.
+- New raw files: raw-github/dsail-memory_evomembench.md, raw-github/signet-ai_signetai.md, raw-github/mempalace_mempalace.md, raw-github/jcartu_rasputin-memory.md.
+- New public model cards and site reports: projects/site reports 192-195 for EvoMemBench, Signet AI, MemPalace, and RASPUTIN Memory.
+- Shell GitHub API remains DNS-blocked: curl api.github.com failed with Could not resolve host; gh auth status reports invalid token for Shiyao-Huang.
+- GitNexus local binary 1.6.5 is available; fresh temp HOME analyze succeeded with 10,878 nodes, 12,530 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.
+- Post-analysis counts before final build: raw=486, classified=486, analyzed_projects=204, strict_evolution=79, broad_evolution=176, memory_theme=92, public_reports=229 expected after generated indexes.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

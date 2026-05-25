@@ -5851,6 +5851,115 @@ export const projects: Project[] = [
             "Claude Code",
             "SDK examples"
         ]
+    },
+    {
+        "name": "EvoMemBench",
+        "repo": "DSAIL-Memory/EvoMemBench",
+        "url": "https://github.com/DSAIL-Memory/EvoMemBench",
+        "stars": 0,
+        "forks": "0",
+        "language": "Markdown",
+        "license": "Apache-2.0",
+        "report": "projects/192-evomembench-self-evolving-memory-benchmark.md",
+        "pattern": "memory benchmark -> self-evolving perspective",
+        "description": "EvoMemBench 是 2026-05 arXiv 论文配套的 agent memory benchmark，按 in-episode/cross-episode 与 knowledge/execution 两条轴评估记忆机制是否支持自演化 agent。",
+        "stack": [
+                  "Markdown"
+        ],
+        "category": "Self-Evolving Agent Memory Benchmark",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/dsail-memory_evomembench.md",
+        "status": "candidate",
+        "tags": [
+                  "memory benchmark",
+                  "self-evolving perspective",
+                  "agent memory"
+        ]
+    },
+    {
+        "name": "Signet AI",
+        "repo": "Signet-AI/signetai",
+        "url": "https://github.com/Signet-AI/signetai",
+        "stars": 167,
+        "forks": "33",
+        "language": "TypeScript",
+        "license": "Apache-2.0",
+        "report": "projects/193-signet-agent-context-substrate.md",
+        "pattern": "ambient memory -> provenance -> cross-harness continuity",
+        "description": "Signet 是 local-first agent context layer，把 identity、memory、provenance、secrets、skills 和工作知识放在可检查的 SQLite/文件记录中，支持 Claude Code、OpenCode、OpenClaw、Codex、Gemini CLI 等 harness。",
+        "stack": [
+                  "TypeScript",
+                  "Bun",
+                  "SQLite",
+                  "MCP"
+        ],
+        "category": "Agent Context and Memory Substrate",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/signet-ai_signetai.md",
+        "status": "candidate",
+        "tags": [
+                  "memory substrate",
+                  "context continuity",
+                  "mcp",
+                  "codex"
+        ]
+    },
+    {
+        "name": "MemPalace",
+        "repo": "MemPalace/mempalace",
+        "url": "https://github.com/MemPalace/mempalace",
+        "stars": 52800,
+        "forks": "7000",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/194-mempalace-agent-memory-benchmark.md",
+        "pattern": "verbatim memory -> scoped retrieval -> benchmarked recall",
+        "description": "MemPalace 是 local-first agent memory system，强调 verbatim storage、可插拔检索、知识图谱和 MCP tools，并公开 LongMemEval/LoCoMo/ConvoMem/MemBench 复现实验说明。",
+        "stack": [
+                  "Python",
+                  "ChromaDB",
+                  "SQLite",
+                  "MCP"
+        ],
+        "category": "Benchmarked Agent Memory System",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/mempalace_mempalace.md",
+        "status": "candidate",
+        "tags": [
+                  "agent memory",
+                  "LongMemEval",
+                  "MCP",
+                  "local-first"
+        ]
+    },
+    {
+        "name": "RASPUTIN Memory",
+        "repo": "jcartu/rasputin-memory",
+        "url": "https://github.com/jcartu/rasputin-memory",
+        "stars": 33,
+        "forks": "5",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/195-rasputin-memory-openclaw-claude.md",
+        "pattern": "memory extraction -> hybrid search -> reranked recall",
+        "description": "RASPUTIN Memory 是面向 OpenClaw 和 Claude Code 的 self-hosted long-term memory backend，包含 fact/window/entity/event lane、hybrid search、Qwen reranker、MCP server 和 LoCoMo 评测记录。",
+        "stack": [
+                  "Python",
+                  "Qdrant",
+                  "FalkorDB",
+                  "MCP"
+        ],
+        "category": "Self-Hosted Agent Memory Backend",
+        "lastPushed": "2026-05-25T00:00:00Z",
+        "localPath": "raw-github/jcartu_rasputin-memory.md",
+        "status": "candidate",
+        "tags": [
+                  "agent memory",
+                  "openclaw",
+                  "claude-code",
+                  "mcp",
+                  "locomo"
+        ]
     }
 ];
 
@@ -6023,6 +6132,9 @@ export const projectGroups = [
     "title": "Harness / 技能 / 记忆进化",
     "repos": [
       "china-qijizhifeng/agentic-Harness-engineering",
+      "jcartu/rasputin-memory",
+      "MemPalace/mempalace",
+      "Signet-AI/signetai",
       "NousResearch/hermes-agent",
       "NousResearch/hermes-agent-self-evolution",
       "EvoMap/evolver",
@@ -6126,6 +6238,7 @@ export const projectGroups = [
     "title": "个人 Agent 产品与真实评测",
     "repos": [
       "openclaw/openclaw",
+      "DSAIL-Memory/EvoMemBench",
       "tinyhumansai/openhuman",
       "pinchbench/skill",
       "claw-bench/claw-bench",

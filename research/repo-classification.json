@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T13:21:00+08:00",
+  "generated_at": "2026-05-25T14:23:21+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -7230,6 +7230,66 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[ACM Computing Surveys 2025] This repository collects awesome survey, resource, and paper for Lifelong Learning with Large Language Models. (Updated Regularly)"
+    },
+    {
+      "repo": "DSAIL-Memory/EvoMemBench",
+      "url": "https://github.com/DSAIL-Memory/EvoMemBench",
+      "stars": "0",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Markdown",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed public repository with 2 commits, Apache-2.0 license, 0 stars and 0 forks, README says Coming soon; arXiv 2605.18421 states the code is available at this repository and frames EvoMemBench as agent memory benchmarking from a self-evolving perspective.",
+      "description": "EvoMemBench 是 2026-05 arXiv 论文配套的 agent memory benchmark，按 in-episode/cross-episode 与 knowledge/execution 两条轴评估记忆机制是否支持自演化 agent。"
+    },
+    {
+      "repo": "Signet-AI/signetai",
+      "url": "https://github.com/Signet-AI/signetai",
+      "stars": "167",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed 2,150 commits, Apache-2.0 license, 167 stars and 33 forks; README describes local-first identity, memory and secrets for AI agents, ambient memory, raw transcript provenance, SQLite/FTS/vector/graph retrieval, and 97.6% LongMemEval answer accuracy claim under its MemoryBench rules profile.",
+      "description": "Signet 是 local-first agent context layer，把 identity、memory、provenance、secrets、skills 和工作知识放在可检查的 SQLite/文件记录中，支持 Claude Code、OpenCode、OpenClaw、Codex、Gemini CLI 等 harness。"
+    },
+    {
+      "repo": "MemPalace/mempalace",
+      "url": "https://github.com/MemPalace/mempalace",
+      "stars": "52800",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed MIT license, Python project, 52.8k stars and 7k forks; README claims verbatim local memory, ChromaDB-backed retrieval, knowledge graph, MCP tools, and reproducible benchmark files with 96.6% LongMemEval raw R@5 plus 98.4% held-out hybrid R@5. Treat benchmark numbers as project claims until independently rerun.",
+      "description": "MemPalace 是 local-first agent memory system，强调 verbatim storage、可插拔检索、知识图谱和 MCP tools，并公开 LongMemEval/LoCoMo/ConvoMem/MemBench 复现实验说明。"
+    },
+    {
+      "repo": "jcartu/rasputin-memory",
+      "url": "https://github.com/jcartu/rasputin-memory",
+      "stars": "33",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-25",
+      "evidence": "web GitHub page observed MIT license, Python/JavaScript/Shell stack, 33 stars and 5 forks; README describes persistent conversation memory with LLM fact extraction, four-partition retrieval, Qwen3 reranker, HTTP API, MCP server, 33-question regression corpus and LoCoMo evaluation harness, while explicitly marking several future graph/temporal features as not integrated.",
+      "description": "RASPUTIN Memory 是面向 OpenClaw 和 Claude Code 的 self-hosted long-term memory backend，包含 fact/window/entity/event lane、hybrid search、Qwen reranker、MCP server 和 LoCoMo 评测记录。"
     }
   ]
 }

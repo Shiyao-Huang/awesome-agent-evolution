@@ -215,6 +215,11 @@
 | Gentleman Skills | [Gentleman-Programming/Gentleman-Skills](https://github.com/Gentleman-Programming/Gentleman-Skills) | Community Agent Skills Patterns | [projects/190-gentleman-skills-community-agent-patterns.md](190-gentleman-skills-community-agent-patterns.md) |
 | Together AI Skills | [togethercomputer/skills](https://github.com/togethercomputer/skills) | Provider API Agent Skills Pack | [projects/191-together-ai-skills-provider-api-pack.md](191-together-ai-skills-provider-api-pack.md) |
 
+| EvoMemBench | [DSAIL-Memory/EvoMemBench](https://github.com/DSAIL-Memory/EvoMemBench) | Self-Evolving Agent Memory Benchmark | [projects/192-evomembench-self-evolving-memory-benchmark.md](192-evomembench-self-evolving-memory-benchmark.md) |
+| Signet AI | [Signet-AI/signetai](https://github.com/Signet-AI/signetai) | Agent Context and Memory Substrate | [projects/193-signet-agent-context-substrate.md](193-signet-agent-context-substrate.md) |
+| MemPalace | [MemPalace/mempalace](https://github.com/MemPalace/mempalace) | Benchmarked Agent Memory System | [projects/194-mempalace-agent-memory-benchmark.md](194-mempalace-agent-memory-benchmark.md) |
+| RASPUTIN Memory | [jcartu/rasputin-memory](https://github.com/jcartu/rasputin-memory) | Self-Hosted Agent Memory Backend | [projects/195-rasputin-memory-openclaw-claude.md](195-rasputin-memory-openclaw-claude.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

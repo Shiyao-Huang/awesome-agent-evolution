@@ -19,7 +19,7 @@ This repository is a Chinese-first Awesome index, survey entry point, project mo
 ## Five Sentences
 
 1. The core question in this field is not "whether there is an agent", but "what exactly the agent improves, what proves the improvement, and whether the improvement transfers to real tasks".
-2. The current evidence layer includes 482 GitHub raw captures, 482 classified repositories, 200 site projects, 79 strict self-evolution repositories, and 175 broad evolution-related repositories.
+2. The current evidence layer includes 486 GitHub raw captures, 486 classified repositories, 204 site projects, 79 strict self-evolution repositories, and 176 broad evolution-related repositories.
 3. The method map compresses into six families: reward/RL/self-play, prompt/search, memory, architecture/code self-modification, multi-agent reflection/debate, and evaluation/safety/governance.
 4. Benchmarking is one of the main contradictions of this project: SWE-Bench, HumanEval, OSWorld, BrowserGym, AgentBench, LongMemEval, STATE-Bench, and related benchmarks must be compared in one table rather than scattered across project pages.
 5. The goal of this README is to give readers the cognitive structure directly; links serve as evidence and expanded material, not as prerequisites for understanding.
@@ -37,29 +37,29 @@ Three sentences: the early focus was retrying, reflecting, changing prompts, or 
 | Lightweight self-improvement | 2022-2023 | One-shot answers become feedback/reflection/prompt-search loops. | OpenELM, DSPy, Reflexion, Self-Refine, OPRO, FunSearch | Learn the basic questions first: what changes, how is it evaluated, and how is experience retained. |
 | Agent runtimes and multi-agent systems | 2023-2024 | AutoGPT, CAMEL, MetaGPT, AutoGen, and LangGraph turn tools, roles, workflows, and state machines into engineering substrates. | [release timeline](analysis/github-project-data-analysis.md#analyzed-project-release-timeline), [project taxonomy](#project-taxonomy-table) | A framework is not self-evolution by itself; it enters the core only when evaluator, memory, and update mechanisms are attached. |
 | Architecture/code/algorithm self-modification | 2024-2025 | ADAS, DGM, AlphaEvolve, OpenEvolve, and SE-Agent put architecture, code, programs, and algorithm candidates into the search space. | [ADAS](research/papers/04-adas.md), [DGM](research/papers/02-darwin-godel-machine.md), [AlphaEvolve](research/papers/08-alphaevolve.md) | Code and algorithms are likely to land first because tests, sandboxes, regression, and archives provide strong evidence. |
-| Memory / skill / harness infrastructure | 2025-2026 | Memory, skills, evaluation, and harnesses heat up together; current raw classification has evaluation 89, memory 88, evolution 79, and skill 60. | [GitHub analysis](analysis/github-project-data-analysis.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) | The next value layer is installable skills, auditable memory, trustworthy harnesses, and reporting standards, not more demos. |
+| Memory / skill / harness infrastructure | 2025-2026 | Memory, skills, evaluation, and harnesses heat up together; current raw classification has memory 92, evaluation 89, evolution 79, and skill 60. | [GitHub analysis](analysis/github-project-data-analysis.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) | The next value layer is installable skills, auditable memory, trustworthy harnesses, and reporting standards, not more demos. |
 
 ### Future Roadmap
 
 | Priority | Future direction | Maturity signal | Current evidence |
 |---:|---|---|---|
-| 1 | Standardized verifier libraries | Code, web, business workflows, memory, safety, and cost all have rerunnable evaluators. | [survey ch8](survey/ch8-future-cn.md#86-研究与实践路线图), [benchmark rules](#benchmark-judgment-rules) |
+| 1 | Standardized verifier libraries | Code, web, business workflows, memory, safety, and cost all have rerunnable evaluators. | [survey ch8](survey/ch8-future-cn.md), [benchmark rules](#benchmark-judgment-rules) |
 | 2 | Self-evolution reporting standard | Each improvement reports time slice, validation/test isolation, failed candidates, cost, rollback, and safety events. | [GitHub evidence](#git--github-evidence-layer), [required validation](#required-validation) |
 | 3 | Auditable memory and skill assets | Experience is versioned, forgettable, transferable, and security-scannable, not only free text. | [Memory / lifelong learning](#method-taxonomy-table), [Skills / reusable know-how](#project-taxonomy-table) |
 | 4 | Archive / lineage infrastructure | Every prompt, skill, workflow, and code diff has source, evaluation, inheritance, and rollback points. | [DGM](research/papers/02-darwin-godel-machine.md), [OpenEvolve](projects/algorithmicsuperintelligence__openevolve.md) |
-| 5 | Heterogeneous multi-agent collaboration | Generators, validators, red teams, cost controllers, and auditors have independent tools and independent error distributions. | [Multi-agent reflection / debate](#method-taxonomy-table), [survey ch8](survey/ch8-future-cn.md#82-多-agent-协同进化从角色扮演到生态搜索) |
-| 6 | Cross-domain transfer benchmarks | Gains cannot hold only on one leaderboard; they must transfer across new tasks, time slices, environments, and models. | [survey ch8](survey/ch8-future-cn.md#84-跨域迁移能力从-benchmark-specific-进化到通用适应) |
+| 5 | Heterogeneous multi-agent collaboration | Generators, validators, red teams, cost controllers, and auditors have independent tools and independent error distributions. | [Multi-agent reflection / debate](#method-taxonomy-table), [survey ch8](survey/ch8-future-cn.md) |
+| 6 | Cross-domain transfer benchmarks | Gains cannot hold only on one leaderboard; they must transfer across new tasks, time slices, environments, and models. | [survey ch8](survey/ch8-future-cn.md) |
 
 ### Trend Tracker
 
 | Tracking item | Current baseline | How to update | How to read the trend |
 |---|---:|---|---|
-| GitHub corpus funnel | 482 raw captures / 482 classified / 200 model-card projects / 79 strict / 175 broad | `node scripts/analyze_github_project_data.mjs` | Strict and broad rising together means the core and infrastructure both expand; only broad rising may mean the concept is getting looser. |
-| Theme heat | evaluation 89, memory 88, evolution 79, skill 60 | `research/repo-classification.json` + GitHub analysis | Evaluation, memory, and skills rising together means the field is shifting from whether agents evolve to how we prove, accumulate, and reuse improvement. |
-| Time slice | 2026-05 raw classified repos 322, unknown 107 | `output/raw-github-timestamp-index.md` + classification time slice | Time slice is a collection/activity signal, not pure creation date; unknown timestamps need continuing cleanup. |
-| Benchmark coverage | 135 benchmark/evaluation related repos | README benchmark matrix + `analysis/github-project-data-analysis.md` | Benchmark growth matters only when hidden tests, failure traces, cost, and transfer are reported, not when leaderboards multiply. |
+| GitHub corpus funnel | 486 raw captures / 486 classified / 204 model-card projects / 79 strict / 176 broad | `node scripts/analyze_github_project_data.mjs` | Strict and broad rising together means the core and infrastructure both expand; only broad rising may mean the concept is getting looser. |
+| Theme heat | memory 92, evaluation 89, evolution 79, skill 60 | `research/repo-classification.json` + GitHub analysis | Evaluation, memory, and skills rising together means the field is shifting from whether agents evolve to how we prove, accumulate, and reuse improvement. |
+| Time slice | 2026-05 raw classified repos 326, unknown 107 | `output/raw-github-timestamp-index.md` + classification time slice | Time slice is a collection/activity signal, not pure creation date; unknown timestamps need continuing cleanup. |
+| Benchmark coverage | 136 benchmark/evaluation related repos | README benchmark matrix + `analysis/github-project-data-analysis.md` | Benchmark growth matters only when hidden tests, failure traces, cost, and transfer are reported, not when leaderboards multiply. |
 | Paper frontier | 108 detailed paper references, including 2026 frontier additions | `research/agent-self-evolution-papers-detailed.md` | New papers should enter README only after extracting mutable object, feedback, update, benchmark, and limitations. |
-| Product usability | 200 public model-card projects | `projects/INDEX.md` + `site/public/reports/projects/INDEX.md` | Trend judgment must include runnability, docs, real workflows, maintenance, and user value, not only stars. |
+| Product usability | 204 public model-card projects | `projects/INDEX.md` + `site/public/reports/projects/INDEX.md` | Trend judgment must include runnability, docs, real workflows, maintenance, and user value, not only stars. |
 
 When updating this section, add raw evidence first, then update processed classification and README judgments, then refresh `docs/indexes/` and the site build. If the trend judgment changes, state which evidence changed instead of changing the conclusion alone.
 
@@ -73,8 +73,8 @@ This section is intentionally placed first and contains only processed informati
 |---:|---|---|
 | 1 | Core history, future, and trend tracker | Understand where the technical line came from, where it is going, and which trend signals each update must track. |
 | 2 | Definition of self-evolution, method families, benchmark judgment rules | Know what counts as self-evolution, how to prove it, and how to prevent metric gaming. |
-| 3 | GitHub corpus funnel, classification axes, strict/broad evolution subsets | Read the processed structure first instead of blindly searching 482 raw captures. |
-| 4 | Public model-card project groups | 200 projects have already been processed by role, mechanism, evidence, and report entry point for direct comparison. |
+| 3 | GitHub corpus funnel, classification axes, strict/broad evolution subsets | Read the processed structure first instead of blindly searching 486 raw captures. |
+| 4 | Public model-card project groups | 204 projects have already been processed by role, mechanism, evidence, and report entry point for direct comparison. |
 | 5 | Paper method map | 108 papers are grouped by framework/method/RL/reflection/memory/alignment/benchmark/safety instead of being a flat bibliography. |
 | 6 | Full list retrieval section | Use the full project, repo, paper, and benchmark lists when you need to copy, filter, or reprocess the data. |
 
@@ -82,23 +82,23 @@ This section is intentionally placed first and contains only processed informati
 
 | Layer | Current scale | Processed meaning |
 |---|---:|---|
-| Raw GitHub captures | 482 | Original discovery layer; keeps evidence, timestamps, and sources, not conclusions. |
-| Classified repositories | 482 | Every repository is assigned category, theme, function tag, and time slice. |
-| Public model-card projects | 200 | Enters the project page/report system and is suitable for teaching, comparison, and publication. |
+| Raw GitHub captures | 486 | Original discovery layer; keeps evidence, timestamps, and sources, not conclusions. |
+| Classified repositories | 486 | Every repository is assigned category, theme, function tag, and time slice. |
+| Public model-card projects | 204 | Enters the project page/report system and is suitable for teaching, comparison, and publication. |
 | Public project report files | 225 | Publishable site result layer, including historical/compatibility reports and public site material. |
 | Strict self-evolution repos | 79 | Core subset: directly contains self-improvement, evolution, search, reflection, mutation, or feedback loops. |
-| Broad evolution-related repos | 175 | Supporting layer: memory, skill, evaluation, harness, coding-agent, and prompt optimization. |
+| Broad evolution-related repos | 176 | Supporting layer: memory, skill, evaluation, harness, coding-agent, and prompt optimization. |
 | Detailed paper references | 108 | Paper evidence layer, organized into 14 research categories plus 2026 frontier additions. |
-| Benchmark/evaluation related repos | 135 | Evaluation-related repository set for comparing what is measured, how it is measured, and whether it is trustworthy. |
+| Benchmark/evaluation related repos | 136 | Evaluation-related repository set for comparing what is measured, how it is measured, and whether it is trustworthy. |
 
 ### 2. Full GitHub Classification Axes
 
 | Axis | Full distribution | How to read it |
 |---|---|---|
-| Collection category | framework 138, evaluation 97, tutorial 91, tool 79, application 47, paper-code 29, benchmark 1 | Repository shape: frameworks dominate, showing that the ecosystem first expands through runtime/harness/tool layers. |
-| Base theme | evaluation 89, memory 88, evolution 79, skill 60, framework 50, education-list 35, research-agent 31, prompt-optimization 26, coding-agent 17, workflow-automation 6, safety 1 | Theme center: evaluation, memory, evolution, and skill are the four densest supports. |
+| Collection category | framework 138, evaluation 98, tutorial 91, tool 82, application 47, paper-code 29, benchmark 1 | Repository shape: frameworks dominate, showing that the ecosystem first expands through runtime/harness/tool layers. |
+| Base theme | memory 92, evaluation 89, evolution 79, skill 60, framework 50, education-list 35, research-agent 31, prompt-optimization 26, coding-agent 17, workflow-automation 6, safety 1 | Theme center: evaluation, memory, evolution, and skill are the four densest supports. |
 | Function tag | benchmark-eval 116, framework-runtime 114, resource-index 99, tool-module 90, application-demo 28, research-artifact 19, agent-evolution-infra 9, memory-substrate 4, memory-runtime 1, research-agent-pipeline 1, skill-orchestration 1 | Functional role: benchmarks and runtime are nearly tied, so proof capacity and execution capacity are equally central. |
-| Time slice | 2026-05 322, unknown 107, 2024-Q2 7, 2026-03 7, 2026-04 7, 2025-11 5, 2024-Q3 4, 2025-05 3, 2026-02 3, early 3, other 14 | Time signal: recent additions concentrate in skills, memory, harness, evaluation, and self-modifying code. |
+| Time slice | 2026-05 326, unknown 107, 2024-Q2 7, 2026-03 7, 2026-04 7, 2025-11 5, 2024-Q3 4, 2025-05 3, 2026-02 3, early 3, other 14 | Time signal: recent additions concentrate in skills, memory, harness, evaluation, and self-modifying code. |
 
 ### 3. Public Model-Card Project Groups
 
@@ -232,9 +232,9 @@ This section is intentionally placed first and contains only processed informati
 
 | Category | Current signal | Representative evidence | Direct comparison method in README |
 |---|---:|---|---|
-| Self-evolution loops | 79 strict / 175 broad repos | [OpenEvolve](projects/algorithmicsuperintelligence__openevolve.md), [AgentEvolver](projects/modelscope__agentevolver.md), [EvoAgentX](site/public/reports/projects/22-evoagentx-agent-evolution-framework.md), [A-Evolve](projects/115-a-evolve-universal-agent-evolution.md), [OpenSpace](projects/162-openspace-self-evolving-skills.md) | Read the evolvable object, evaluator, archive, rollback, cost, and cross-task transfer. |
+| Self-evolution loops | 79 strict / 176 broad repos | [OpenEvolve](projects/algorithmicsuperintelligence__openevolve.md), [AgentEvolver](projects/modelscope__agentevolver.md), [EvoAgentX](site/public/reports/projects/22-evoagentx-agent-evolution-framework.md), [A-Evolve](projects/115-a-evolve-universal-agent-evolution.md), [OpenSpace](projects/162-openspace-self-evolving-skills.md) | Read the evolvable object, evaluator, archive, rollback, cost, and cross-task transfer. |
 | Harness engineering | 138 framework repos | [Agentic Harness Engineering](site/public/reports/projects/43-agentic-harness-engineering.md), [OpenClaw](site/public/reports/projects/48-openclaw.md), [Aden Hive](projects/68-aden-hive.md), [OpenHarness](projects/146-openharness-agent-harness-ohmo.md), [CORAL](projects/89-coral-multi-agent-evolution.md) | Read tools, permissions, state, sub-agents, evaluator, and audit chain. |
-| Memory substrate | 88 memory-theme repos | [Mem0](projects/58-mem0-agent-memory.md), [LangMem](projects/70-langmem-agent-memory.md), [Graphiti](projects/71-graphiti-temporal-context-graphs.md), [Memoria](projects/110-memoria-git-for-agent-memory.md), [Hindsight](projects/174-hindsight-agent-memory-that-learns.md) | Inspect write/retrieval/merge/delete/conflict/versioning, not just vector databases. |
+| Memory substrate | 92 memory-theme repos | [Mem0](projects/58-mem0-agent-memory.md), [LangMem](projects/70-langmem-agent-memory.md), [Graphiti](projects/71-graphiti-temporal-context-graphs.md), [Memoria](projects/110-memoria-git-for-agent-memory.md), [Hindsight](projects/174-hindsight-agent-memory-that-learns.md) | Inspect write/retrieval/merge/delete/conflict/versioning, not just vector databases. |
 | Skills / reusable know-how | 60 skill-theme repos | [Anthropic Skills](projects/64-anthropic-skills.md), [OpenAI Skills](projects/121-openai-skills-codex-catalog.md), [AgentSkills](projects/157-agentskills-open-standard.md), [SkillRL](projects/148-skillrl-recursive-skill-rl.md), [Superpowers](site/public/reports/projects/49-superpowers.md) | Inspect format, install targets, validation, safety, transfer, and cross-agent compatibility. |
 | Evaluation / benchmarks | 89 evaluation-theme repos | [AgentBench](site/public/reports/projects/38-agentbench.md), [OSWorld](projects/73-osworld-computer-agent-benchmark.md), [BrowserGym](projects/75-browsergym-web-agent-benchmark.md), [Claw-Eval](projects/55-claw-eval-agent-evaluation.md), [HaluMem](projects/177-halumem-agent-memory-hallucination-benchmark.md) | Check whether it measures real tasks, controls Goodharting, has hidden tests, and keeps traces. |
 | Agent frameworks | 138 framework repos | [AutoGPT](projects/08-autogpt-autonomous-agent.md), [MetaGPT](projects/07-metagpt-multi-agent-framework.md), [AutoGen](site/public/reports/projects/11-autogen-multi-agent-conversation.md), [LangGraph](projects/16-langgraph-agent-workflow.md), [OpenHands](projects/19-openhands-dev-agent.md) | Check whether it is only a runtime or can form an evaluation-driven improvement loop. |
@@ -276,19 +276,19 @@ This section is intentionally placed first and contains only processed informati
 
 | Layer | Count | Definition | Evidence source |
 |---|---:|---|---|
-| Raw GitHub captures | 482 | Original `raw-github/*.md` captures and timestamp index | [raw timestamp index](output/raw-github-timestamp-index.md), [raw-github/](raw-github/) |
-| Classified repositories | 482 | Classification rows with category, theme, function, and time slice | [repo classification](research/repo-classification.md), [classification JSON](research/repo-classification.json) |
-| Site/paper model-card projects | 200 | Key projects that entered site data and project reports | [site/src/data/projects.ts](site/src/data/projects.ts), [projects/INDEX.md](projects/INDEX.md) |
+| Raw GitHub captures | 486 | Original `raw-github/*.md` captures and timestamp index | [raw timestamp index](output/raw-github-timestamp-index.md), [raw-github/](raw-github/) |
+| Classified repositories | 486 | Classification rows with category, theme, function, and time slice | [repo classification](research/repo-classification.md), [classification JSON](research/repo-classification.json) |
+| Site/paper model-card projects | 204 | Key projects that entered site data and project reports | [site/src/data/projects.ts](site/src/data/projects.ts), [projects/INDEX.md](projects/INDEX.md) |
 | Public project report files | 225 | Project report files in the site public reports layer | [site/public/reports/projects/INDEX.md](site/public/reports/projects/INDEX.md) |
 | Strict evolution-theme repos | 79 | Strict theme repositories where `base_theme = evolution` | [GitHub analysis](analysis/github-project-data-analysis.md) |
-| Broad evolution-related repos | 175 | Broad set matching evolution/self-improvement/reflection/search/improvement-loop signals | [GitHub analysis](analysis/github-project-data-analysis.md) |
+| Broad evolution-related repos | 176 | Broad set matching evolution/self-improvement/reflection/search/improvement-loop signals | [GitHub analysis](analysis/github-project-data-analysis.md) |
 
 ### Git Category / Theme Snapshot
 
 | Dimension | Classification |
 |---|---|
-| Raw collection categories | framework 138, evaluation 97, tutorial 91, tool 79, application 47, paper-code 29, benchmark 1 |
-| Raw collection themes | evaluation 89, memory 88, evolution 79, skill 60, framework 50, education-list 35, research-agent 31, prompt-optimization 26, coding-agent 17, workflow-automation 6, safety 1 |
+| Raw collection categories | framework 138, evaluation 98, tutorial 91, tool 82, application 47, paper-code 29, benchmark 1 |
+| Raw collection themes | memory 92, evaluation 89, evolution 79, skill 60, framework 50, education-list 35, research-agent 31, prompt-optimization 26, coding-agent 17, workflow-automation 6, safety 1 |
 | Timeline evidence | [Analyzed Project Release Timeline](analysis/github-project-data-analysis.md#analyzed-project-release-timeline) |
 
 ## Community / X / Blog Signals
@@ -317,9 +317,9 @@ This section is intentionally placed first and contains only processed informati
 
 | User question | Direct README answer | Evidence links |
 |---|---|---|
-| Which GitHub projects were originally collected? | The raw layer is currently 482 `raw-github/*.md` captures, preserving original sources, timestamps, and unprocessed text. It answers what was actually collected. | [raw timestamp index](output/raw-github-timestamp-index.md), [GitHub analysis](analysis/github-project-data-analysis.md) |
-| Which projects were analyzed? | 482 repositories entered classification analysis; 200 entered site project data, and 225 public project report files serve publishable model-card/project-page material. | [projects/INDEX.md](projects/INDEX.md), [public reports](site/public/reports/projects/INDEX.md), [site/src/data/projects.ts](site/src/data/projects.ts) |
-| Which ones are evolution-related? | The strict self-evolution theme contains 79 repos, and the broad evolution-related set contains 175 repos. The strict set checks for a self-improvement loop; the broad set covers memory, skill, reflection, search, harness, evaluation, and other supporting layers. | [corpus funnel](analysis/github-project-data-analysis.md#corpus-funnel), [repo classification](research/repo-classification.md) |
+| Which GitHub projects were originally collected? | The raw layer is currently 486 `raw-github/*.md` captures, preserving original sources, timestamps, and unprocessed text. It answers what was actually collected. | [raw timestamp index](output/raw-github-timestamp-index.md), [GitHub analysis](analysis/github-project-data-analysis.md) |
+| Which projects were analyzed? | 486 repositories entered classification analysis; 204 entered site project data, and 225 public project report files serve publishable model-card/project-page material. | [projects/INDEX.md](projects/INDEX.md), [public reports](site/public/reports/projects/INDEX.md), [site/src/data/projects.ts](site/src/data/projects.ts) |
+| Which ones are evolution-related? | The strict self-evolution theme contains 79 repos, and the broad evolution-related set contains 176 repos. The strict set checks for a self-improvement loop; the broad set covers memory, skill, reflection, search, harness, evaluation, and other supporting layers. | [corpus funnel](analysis/github-project-data-analysis.md#corpus-funnel), [repo classification](research/repo-classification.md) |
 | Which ones were released in chronological order? | The timeline uses created/pushed/release signals to observe direction shifts: early activity leans toward frameworks and tools; mid-period activity adds benchmarks/memory/harness; recent activity concentrates in skills, self-modifying code, research agents, and evaluation governance. | [release timeline](analysis/github-project-data-analysis.md#analyzed-project-release-timeline) |
 | What method routes exist? | Six main method families are expanded in README: reward/RL/self-play, prompt/search optimization, memory/lifelong learning, architecture/code self-modification, multi-agent reflection/debate, evaluation/safety/governance. | [method taxonomy table](#method-taxonomy-table), [survey ch3](survey/ch3-methods-cn.md) |
 | Where are the benchmarks? | README puts function-level code, repository-level software engineering, general agent evaluation, computer-use/web, memory, skill, harness, and algorithm/scientific discovery into one benchmark matrix with judgment rules. | [Benchmarks / Evaluation Matrix](#benchmarks--evaluation-matrix), [survey ch5](survey/ch5-evaluation-cn.md) |
@@ -330,7 +330,7 @@ This section is intentionally placed first and contains only processed informati
 These lists are embedded directly in README so readers can copy, search, and compare without jumping elsewhere. The collapsible blocks are only for readability; the content itself is in this file.
 
 <details>
-<summary>Full public model-card project list (200)</summary>
+<summary>Full public model-card project list (204)</summary>
 
 | # | Project | Repository | Category / role | Stars | Report |
 |---:|---|---|---|---:|---|
@@ -534,11 +534,15 @@ These lists are embedded directly in README so readers can copy, search, and com
 | 198 | Arc | [howells/arc](https://github.com/howells/arc) | Agent Workflow Plugin | 22 | [Report](site/public/reports/projects/189-arc-agent-workflow-plugin.md) |
 | 199 | Gentleman Skills | [Gentleman-Programming/Gentleman-Skills](https://github.com/Gentleman-Programming/Gentleman-Skills) | Community Agent Skills Patterns | 522 | [Report](site/public/reports/projects/190-gentleman-skills-community-agent-patterns.md) |
 | 200 | Together AI Skills | [togethercomputer/skills](https://github.com/togethercomputer/skills) | Provider API Agent Skills Pack | 28 | [Report](site/public/reports/projects/191-together-ai-skills-provider-api-pack.md) |
+| 201 | EvoMemBench | [DSAIL-Memory/EvoMemBench](https://github.com/DSAIL-Memory/EvoMemBench) | Self-Evolving Agent Memory Benchmark | 0 | [Report](site/public/reports/projects/192-evomembench-self-evolving-memory-benchmark.md) |
+| 202 | Signet AI | [Signet-AI/signetai](https://github.com/Signet-AI/signetai) | Agent Context and Memory Substrate | 167 | [Report](site/public/reports/projects/193-signet-agent-context-substrate.md) |
+| 203 | MemPalace | [MemPalace/mempalace](https://github.com/MemPalace/mempalace) | Benchmarked Agent Memory System | 52800 | [Report](site/public/reports/projects/194-mempalace-agent-memory-benchmark.md) |
+| 204 | RASPUTIN Memory | [jcartu/rasputin-memory](https://github.com/jcartu/rasputin-memory) | Self-Hosted Agent Memory Backend | 33 | [Report](site/public/reports/projects/195-rasputin-memory-openclaw-claude.md) |
 
 </details>
 
 <details>
-<summary>Full raw/classified GitHub repository list (482)</summary>
+<summary>Full raw/classified GitHub repository list (486)</summary>
 
 | # | Repository | Category | Theme | Function tag | Stars | Time slice |
 |---:|---|---|---|---|---:|---|
@@ -1024,6 +1028,10 @@ These lists are embedded directly in README so readers can copy, search, and com
 | 480 | [zou-group/textgrad](https://github.com/zou-group/textgrad) | evaluation | evaluation | benchmark-eval | 3 | 2026-05 |
 | 481 | [zylos-ai/zylos-core](https://github.com/zylos-ai/zylos-core) | framework | evolution | framework-runtime | 1400 | 2026-05 |
 | 482 | [zzz47zzz/awesome-lifelong-learning-methods-for-llm](https://github.com/zzz47zzz/awesome-lifelong-learning-methods-for-llm) | tutorial | education-list | resource-index | 162 | unknown |
+| 483 | [DSAIL-Memory/EvoMemBench](https://github.com/DSAIL-Memory/EvoMemBench) | evaluation | memory | benchmark-eval | 0 | 2026-05 |
+| 484 | [Signet-AI/signetai](https://github.com/Signet-AI/signetai) | tool | memory | memory-substrate | 167 | 2026-05 |
+| 485 | [MemPalace/mempalace](https://github.com/MemPalace/mempalace) | tool | memory | memory-substrate | 52800 | 2026-05 |
+| 486 | [jcartu/rasputin-memory](https://github.com/jcartu/rasputin-memory) | tool | memory | memory-substrate | 33 | 2026-05 |
 
 </details>
 
@@ -1144,7 +1152,7 @@ These lists are embedded directly in README so readers can copy, search, and com
 </details>
 
 <details>
-<summary>Full benchmark / evaluation related repository list (135)</summary>
+<summary>Full benchmark / evaluation related repository list (136)</summary>
 
 | # | Repository | Category | Theme | Function tag | Stars | Time slice |
 |---:|---|---|---|---|---:|---|
@@ -1283,6 +1291,7 @@ These lists are embedded directly in README so readers can copy, search, and com
 | 133 | [zjunlp/knowself](https://github.com/zjunlp/knowself) | evaluation | evaluation | benchmark-eval | 93 | 2024-Q3 |
 | 134 | [zjunlp/worldmind](https://github.com/zjunlp/worldmind) | evaluation | evaluation | benchmark-eval | 35 | 2026-05 |
 | 135 | [zou-group/textgrad](https://github.com/zou-group/textgrad) | evaluation | evaluation | benchmark-eval | 3 | 2026-05 |
+| 136 | [DSAIL-Memory/EvoMemBench](https://github.com/DSAIL-Memory/EvoMemBench) | evaluation | memory | benchmark-eval | 0 | 2026-05 |
 
 </details>
 
@@ -1333,3 +1342,21 @@ node scripts/analyze_github_project_data.mjs
 - Project pages: <https://shiyao-huang.github.io/awesome-agent-evolution/projects/>
 - Research page: <https://shiyao-huang.github.io/awesome-agent-evolution/research/>
 - Graph page: <https://shiyao-huang.github.io/awesome-agent-evolution/graph/>
+
+## Citation And License
+
+When citing, reposting, adapting, or using this repository's original analysis, taxonomy, indexes, and figures in papers, websites, or projects, cite the current repo:
+
+Self Evolve / Awesome Self-Evolving AI Agents, NPC aha team（无人自主集群 aha）, <https://github.com/Shiyao-Huang/awesome-agent-evolution>
+
+Recommended BibTeX:
+
+```bibtex
+@misc{npc_aha_team_awesome_agent_evolution_2026,
+  title        = {Awesome Self-Evolving AI Agents: AI Agent Self-Evolution Index and Survey},
+  author       = {{NPC aha team}},
+  year         = {2026},
+  howpublished = {\url{https://github.com/Shiyao-Huang/awesome-agent-evolution}},
+  note         = {Self Evolve research pipeline by NPC aha team（无人自主集群 aha）}
+}
+```
