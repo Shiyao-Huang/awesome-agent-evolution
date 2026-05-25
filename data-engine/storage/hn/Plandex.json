@@ -1,0 +1,736 @@
+{
+  "project": "Plandex",
+  "repo": "plandex-ai/plandex",
+  "collected_at": "2026-05-22T11:03:36.075474+00:00",
+  "queries": [
+    "Plandex",
+    "plandex"
+  ],
+  "total_hits": 80,
+  "results": {
+    "Plandex": [
+      {
+        "objectID": "39918500",
+        "title": "Show HN: Plandex – an AI coding engine for complex tasks",
+        "url": "https://github.com/plandex-ai/plandex",
+        "points": 304,
+        "num_comments": 111,
+        "author": "danenania",
+        "created_at": "2024-04-03T15:10:11Z"
+      },
+      {
+        "objectID": "43710576",
+        "title": "Show HN: Plandex v2 – open source AI coding agent for large projects and tasks",
+        "url": "https://github.com/plandex-ai/plandex",
+        "points": 257,
+        "num_comments": 81,
+        "author": "danenania",
+        "created_at": "2025-04-16T21:26:42Z"
+      },
+      {
+        "objectID": "40647828",
+        "title": "Plandex 1.1.0 – LLM driven development in the terminal. Now multi-modal.",
+        "url": "https://github.com/plandex-ai/plandex/releases/tag/cli%2Fv1.1.0",
+        "points": 13,
+        "num_comments": 6,
+        "author": "danenania",
+        "created_at": "2024-06-11T15:55:27Z"
+      },
+      {
+        "objectID": "43569813",
+        "title": "Show HN: Plandex v2 – OSS AI coding agent w/ diff sandbox, full auto, 2M context",
+        "url": "https://plandex.ai",
+        "points": 4,
+        "num_comments": 0,
+        "author": "danenania",
+        "created_at": "2025-04-03T14:01:02Z"
+      },
+      {
+        "objectID": "40238249",
+        "title": "Fixing a real-world bug with AI using Claude Opus 3 with Plandex [video]",
+        "url": "https://www.youtube.com/watch?v=F7wzcH9vQQI",
+        "points": 1,
+        "num_comments": 1,
+        "author": "danenania",
+        "created_at": "2024-05-02T16:40:08Z"
+      },
+      {
+        "objectID": "44321706",
+        "title": "Show HN: Run your favorite open-source AI coding agent in the browser",
+        "url": "https://github.com/newrev-io/newrev",
+        "points": 4,
+        "num_comments": 4,
+        "author": "gerardosuarez",
+        "created_at": "2025-06-19T19:24:13Z"
+      },
+      {
+        "objectID": "40888574",
+        "title": "Ask HN: Do you use AI for writing?",
+        "url": "",
+        "points": 2,
+        "num_comments": 0,
+        "author": "danenania",
+        "created_at": "2024-07-06T06:43:15Z"
+      },
+      {
+        "objectID": "40243477",
+        "title": "Ask HN: What's with the gatekeeping in open source?",
+        "url": "",
+        "points": 1,
+        "num_comments": 6,
+        "author": "danenania",
+        "created_at": "2024-05-03T02:43:14Z"
+      },
+      {
+        "objectID": "28026178",
+        "title": "Plandemic Revisited: A Planned Disinformation Campaign",
+        "url": "https://www.frontiersin.org/articles/10.3389/fpubh.2021.649930/full",
+        "points": 45,
+        "num_comments": 79,
+        "author": "mcguire",
+        "created_at": "2021-08-01T13:43:17Z"
+      },
+      {
+        "objectID": "23182053",
+        "title": "Ex-Googler Turned Whistleblower and QAnon Fan Made 'Plandemic' Go Viral",
+        "url": "https://www.vice.com/en_us/article/k7qqyn/an-ex-google-employee-turned-whistleblower-and-qanon-fan-made-plandemic-go-viral",
+        "points": 30,
+        "num_comments": 34,
+        "author": "elsewhen",
+        "created_at": "2020-05-14T16:59:29Z"
+      },
+      {
+        "objectID": "23949013",
+        "title": "Local TV set to air discredited 'Plandemic' researcher's conspiracy theory",
+        "url": "https://www.cnn.com/2020/07/24/media/sinclair-fauci-conspiracy-bolling/index.html",
+        "points": 30,
+        "num_comments": 11,
+        "author": "justin66",
+        "created_at": "2020-07-25T13:27:00Z"
+      },
+      {
+        "objectID": "23184299",
+        "title": "Judy Mikovits' 'Plandemic': 'Plague of Corruption' Sells Out on Amazon",
+        "url": "https://www.rollingstone.com/culture/culture-news/plandemic-judy-mikovits-plague-of-corruption-998224/",
+        "points": 17,
+        "num_comments": 15,
+        "author": "elsewhen",
+        "created_at": "2020-05-14T19:35:31Z"
+      },
+      {
+        "objectID": "23142239",
+        "title": "Facebook and other companies are removing viral ‘Plandemic’ conspiracy video",
+        "url": "https://www.washingtonpost.com/technology/2020/05/07/plandemic-youtube-facebook-vimeo-remove/",
+        "points": 14,
+        "num_comments": 17,
+        "author": "aspenmayer",
+        "created_at": "2020-05-11T14:03:08Z"
+      },
+      {
+        "objectID": "23296038",
+        "title": "How the 'Plandemic' conspiracy theory took hold",
+        "url": "https://www.theguardian.com/commentisfree/2020/may/23/how-the-plandemic-conspiracy-theory-took-hold",
+        "points": 10,
+        "num_comments": 3,
+        "author": "rbanffy",
+        "created_at": "2020-05-24T23:48:59Z"
+      },
+      {
+        "objectID": "24699505",
+        "title": "Plan2Explore: Active Model-Building for Visual Reinforcement Learning",
+        "url": "https://bair.berkeley.edu/blog/2020/10/06/plan2explore/",
+        "points": 6,
+        "num_comments": 0,
+        "author": "jonbaer",
+        "created_at": "2020-10-06T16:25:17Z"
+      },
+      {
+        "objectID": "28888561",
+        "title": "Pandexit, please: The need for a Covid end date – Bournbrook Magazine",
+        "url": "https://www.bournbrookmag.com/home/pandexit-please-the-need-for-a-covid-end-date",
+        "points": 5,
+        "num_comments": 0,
+        "author": "mrfusion",
+        "created_at": "2021-10-16T15:34:49Z"
+      },
+      {
+        "objectID": "23119473",
+        "title": "If You Found That ‘Plandemic’ Video Convincing, Read This Too",
+        "url": "https://vitals.lifehacker.com/if-you-found-that-plandemic-video-convincing-read-th-1843339002",
+        "points": 4,
+        "num_comments": 2,
+        "author": "_bxg1",
+        "created_at": "2020-05-08T21:07:58Z"
+      },
+      {
+        "objectID": "23950535",
+        "title": "Local TV stations in US to air 'Plandemic' researcher's theory about Fauci",
+        "url": "http://lite.cnn.com/en/article/h_339e48cbbfb460a5139163a146c80975",
+        "points": 4,
+        "num_comments": 1,
+        "author": "threatofrain",
+        "created_at": "2020-07-25T16:42:36Z"
+      },
+      {
+        "objectID": "31347441",
+        "title": "Understanding the plandemic: countering online far right Covid-19 conspiracies",
+        "url": "https://firstmonday.org/ojs/index.php/fm/article/view/12614",
+        "points": 4,
+        "num_comments": 0,
+        "author": "cratermoon",
+        "created_at": "2022-05-11T23:41:39Z"
+      },
+      {
+        "objectID": "24006391",
+        "title": "Plandemic",
+        "url": "https://en.wikipedia.org/wiki/Plandemic",
+        "points": 4,
+        "num_comments": 0,
+        "author": "simonebrunozzi",
+        "created_at": "2020-07-31T07:04:24Z"
+      },
+      {
+        "objectID": "23130955",
+        "title": "The Questions I Asked About the Viral “Plandemic” Video",
+        "url": "https://www.propublica.org/article/im-an-investigative-journalist-these-are-the-questions-i-asked-about-the-viral-plandemic-video",
+        "points": 4,
+        "num_comments": 0,
+        "author": "BerislavLopac",
+        "created_at": "2020-05-10T07:33:07Z"
+      },
+      {
+        "objectID": "23113072",
+        "title": "Platforms scramble as ‘Plandemic’ conspiracy video spreads misinformation like",
+        "url": "https://techcrunch.com/2020/05/07/plandemic-video-judy-mikovits/",
+        "points": 3,
+        "num_comments": 1,
+        "author": "makaroni1",
+        "created_at": "2020-05-08T10:00:23Z"
+      },
+      {
+        "objectID": "47694192",
+        "title": "Plannex.io",
+        "url": "https://plannex.app/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "Novakinify",
+        "created_at": "2026-04-08T18:20:12Z"
+      },
+      {
+        "objectID": "24069709",
+        "title": "The white, middle-class Pinterest moms who believe Plandemic",
+        "url": "https://www.theguardian.com/commentisfree/2020/aug/06/coronavirus-conspiracy-theories-plandemic-moms",
+        "points": 3,
+        "num_comments": 0,
+        "author": "onyva",
+        "created_at": "2020-08-06T10:36:07Z"
+      },
+      {
+        "objectID": "23328734",
+        "title": "Google deletes Drive file “Plandemic” after contacted by The Post",
+        "url": "https://www.washingtonpost.com/technology/2020/05/20/misinformation-coronavirus-plandemic-workaround/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "Nevada-Smith",
+        "created_at": "2020-05-27T19:34:36Z"
+      },
+      {
+        "objectID": "23259494",
+        "title": "Google Drive blocks personal copy of Plandemic at request of Washington Post",
+        "url": "https://reclaimthenet.org/google-drive-takes-down-user-file-plandemic/",
+        "points": 2,
+        "num_comments": 2,
+        "author": "lowkey",
+        "created_at": "2020-05-21T15:23:47Z"
+      },
+      {
+        "objectID": "44502197",
+        "title": "PlanExe",
+        "url": "https://github.com/neoneye/PlanExe",
+        "points": 2,
+        "num_comments": 1,
+        "author": "handfuloflight",
+        "created_at": "2025-07-08T17:33:39Z"
+      },
+      {
+        "objectID": "24684456",
+        "title": "Plan2Explore: Active Model-Building for Self-Supervised Visual RL",
+        "url": "http://bair.berkeley.edu/blog/2020/10/05/plan2explore/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "atg_abhishek",
+        "created_at": "2020-10-05T04:04:19Z"
+      },
+      {
+        "objectID": "23245330",
+        "title": "Facebook Groups and YouTube Enabled Viral Spread of ‘Plandemic’ Misinformation",
+        "url": "https://onezero.medium.com/facebook-groups-and-youtube-enabled-viral-spread-of-plandemic-misinformation-f1a279335e8c",
+        "points": 2,
+        "num_comments": 0,
+        "author": "empath75",
+        "created_at": "2020-05-20T10:43:08Z"
+      },
+      {
+        "objectID": "12432390",
+        "title": "Plantex: open-world game about plants",
+        "url": "https://github.com/OsnaCS/plantex",
+        "points": 2,
+        "num_comments": 0,
+        "author": "posthoctorate",
+        "created_at": "2016-09-05T21:47:13Z"
+      },
+      {
+        "objectID": "42987383",
+        "title": "PlanExe: Planning AI that outputs WBS/SWOT/estimates",
+        "url": "https://github.com/neoneye/PlanExe",
+        "points": 1,
+        "num_comments": 2,
+        "author": "neoneye2",
+        "created_at": "2025-02-09T00:21:43Z"
+      },
+      {
+        "objectID": "43047430",
+        "title": "Automated RFP (request for proposal) with my PlanExe tool",
+        "url": "https://neoneye.github.io/PlanExe-web/",
+        "points": 1,
+        "num_comments": 1,
+        "author": "neoneye2",
+        "created_at": "2025-02-14T11:51:11Z"
+      },
+      {
+        "objectID": "47730385",
+        "title": "Plannex",
+        "url": "https://plannex.app/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Novakinify",
+        "created_at": "2026-04-11T13:24:31Z"
+      },
+      {
+        "objectID": "24712333",
+        "title": "Plan2Explore: Active Model-Building for Visual Reinforcement Learning",
+        "url": "https://bair.berkeley.edu/blog/2020/10/06/plan2explore/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "headalgorithm",
+        "created_at": "2020-10-07T20:26:56Z"
+      },
+      {
+        "objectID": "23196548",
+        "title": "Self-Supervised ‘Plan2Explore’ RL Agent Achieves SOTA Zero-Shot",
+        "url": "https://medium.com/syncedreview/self-supervised-plan2explore-rl-agent-achieves-sota-zero-shot-and-adaptation-performance-82b7ce738400",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Yuqing7",
+        "created_at": "2020-05-15T19:45:50Z"
+      },
+      {
+        "objectID": "23103983",
+        "title": "Ask HN: What fact-checking sites / sources do you use?",
+        "url": "",
+        "points": 11,
+        "num_comments": 6,
+        "author": "jacobedawson",
+        "created_at": "2020-05-07T15:18:48Z"
+      },
+      {
+        "objectID": "46876687",
+        "title": "Show HN: OpenSymbolicAI – Agents with typed variables, not just context stuffing",
+        "url": "",
+        "points": 2,
+        "num_comments": 1,
+        "author": "rksart",
+        "created_at": "2026-02-03T20:19:09Z"
+      },
+      {
+        "objectID": "29173050",
+        "title": "How Long Does Exipure Official Website Last?",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "WesleMaster",
+        "created_at": "2021-11-10T10:11:02Z"
+      },
+      {
+        "objectID": "23275308",
+        "title": "Google is now applying its coronavirus misinformation policies to personal files",
+        "url": "https://reclaimthenet.org/google-drive-takes-down-user-file-plandemic/",
+        "points": 297,
+        "num_comments": 208,
+        "author": "walterbell",
+        "created_at": "2020-05-22T18:27:33Z"
+      },
+      {
+        "objectID": "103286",
+        "title": "MIT Lisp lecture from '86. wow.",
+        "url": "http://video.google.com/videoplay?docid=5546836985338782440&q=google+lectures&total=7924&start=10&num=10&so=0&type=search&plindex=0",
+        "points": 43,
+        "num_comments": 24,
+        "author": "gregp",
+        "created_at": "2008-01-24T04:15:52Z"
+      }
+    ],
+    "plandex": [
+      {
+        "objectID": "39918500",
+        "title": "Show HN: Plandex – an AI coding engine for complex tasks",
+        "url": "https://github.com/plandex-ai/plandex",
+        "points": 304,
+        "num_comments": 111,
+        "author": "danenania",
+        "created_at": "2024-04-03T15:10:11Z"
+      },
+      {
+        "objectID": "43710576",
+        "title": "Show HN: Plandex v2 – open source AI coding agent for large projects and tasks",
+        "url": "https://github.com/plandex-ai/plandex",
+        "points": 257,
+        "num_comments": 81,
+        "author": "danenania",
+        "created_at": "2025-04-16T21:26:42Z"
+      },
+      {
+        "objectID": "40647828",
+        "title": "Plandex 1.1.0 – LLM driven development in the terminal. Now multi-modal.",
+        "url": "https://github.com/plandex-ai/plandex/releases/tag/cli%2Fv1.1.0",
+        "points": 13,
+        "num_comments": 6,
+        "author": "danenania",
+        "created_at": "2024-06-11T15:55:27Z"
+      },
+      {
+        "objectID": "43569813",
+        "title": "Show HN: Plandex v2 – OSS AI coding agent w/ diff sandbox, full auto, 2M context",
+        "url": "https://plandex.ai",
+        "points": 4,
+        "num_comments": 0,
+        "author": "danenania",
+        "created_at": "2025-04-03T14:01:02Z"
+      },
+      {
+        "objectID": "40238249",
+        "title": "Fixing a real-world bug with AI using Claude Opus 3 with Plandex [video]",
+        "url": "https://www.youtube.com/watch?v=F7wzcH9vQQI",
+        "points": 1,
+        "num_comments": 1,
+        "author": "danenania",
+        "created_at": "2024-05-02T16:40:08Z"
+      },
+      {
+        "objectID": "44321706",
+        "title": "Show HN: Run your favorite open-source AI coding agent in the browser",
+        "url": "https://github.com/newrev-io/newrev",
+        "points": 4,
+        "num_comments": 4,
+        "author": "gerardosuarez",
+        "created_at": "2025-06-19T19:24:13Z"
+      },
+      {
+        "objectID": "40888574",
+        "title": "Ask HN: Do you use AI for writing?",
+        "url": "",
+        "points": 2,
+        "num_comments": 0,
+        "author": "danenania",
+        "created_at": "2024-07-06T06:43:15Z"
+      },
+      {
+        "objectID": "40243477",
+        "title": "Ask HN: What's with the gatekeeping in open source?",
+        "url": "",
+        "points": 1,
+        "num_comments": 6,
+        "author": "danenania",
+        "created_at": "2024-05-03T02:43:14Z"
+      },
+      {
+        "objectID": "28026178",
+        "title": "Plandemic Revisited: A Planned Disinformation Campaign",
+        "url": "https://www.frontiersin.org/articles/10.3389/fpubh.2021.649930/full",
+        "points": 45,
+        "num_comments": 79,
+        "author": "mcguire",
+        "created_at": "2021-08-01T13:43:17Z"
+      },
+      {
+        "objectID": "23182053",
+        "title": "Ex-Googler Turned Whistleblower and QAnon Fan Made 'Plandemic' Go Viral",
+        "url": "https://www.vice.com/en_us/article/k7qqyn/an-ex-google-employee-turned-whistleblower-and-qanon-fan-made-plandemic-go-viral",
+        "points": 30,
+        "num_comments": 34,
+        "author": "elsewhen",
+        "created_at": "2020-05-14T16:59:29Z"
+      },
+      {
+        "objectID": "23949013",
+        "title": "Local TV set to air discredited 'Plandemic' researcher's conspiracy theory",
+        "url": "https://www.cnn.com/2020/07/24/media/sinclair-fauci-conspiracy-bolling/index.html",
+        "points": 30,
+        "num_comments": 11,
+        "author": "justin66",
+        "created_at": "2020-07-25T13:27:00Z"
+      },
+      {
+        "objectID": "23184299",
+        "title": "Judy Mikovits' 'Plandemic': 'Plague of Corruption' Sells Out on Amazon",
+        "url": "https://www.rollingstone.com/culture/culture-news/plandemic-judy-mikovits-plague-of-corruption-998224/",
+        "points": 17,
+        "num_comments": 15,
+        "author": "elsewhen",
+        "created_at": "2020-05-14T19:35:31Z"
+      },
+      {
+        "objectID": "23142239",
+        "title": "Facebook and other companies are removing viral ‘Plandemic’ conspiracy video",
+        "url": "https://www.washingtonpost.com/technology/2020/05/07/plandemic-youtube-facebook-vimeo-remove/",
+        "points": 14,
+        "num_comments": 17,
+        "author": "aspenmayer",
+        "created_at": "2020-05-11T14:03:08Z"
+      },
+      {
+        "objectID": "23296038",
+        "title": "How the 'Plandemic' conspiracy theory took hold",
+        "url": "https://www.theguardian.com/commentisfree/2020/may/23/how-the-plandemic-conspiracy-theory-took-hold",
+        "points": 10,
+        "num_comments": 3,
+        "author": "rbanffy",
+        "created_at": "2020-05-24T23:48:59Z"
+      },
+      {
+        "objectID": "24699505",
+        "title": "Plan2Explore: Active Model-Building for Visual Reinforcement Learning",
+        "url": "https://bair.berkeley.edu/blog/2020/10/06/plan2explore/",
+        "points": 6,
+        "num_comments": 0,
+        "author": "jonbaer",
+        "created_at": "2020-10-06T16:25:17Z"
+      },
+      {
+        "objectID": "23119473",
+        "title": "If You Found That ‘Plandemic’ Video Convincing, Read This Too",
+        "url": "https://vitals.lifehacker.com/if-you-found-that-plandemic-video-convincing-read-th-1843339002",
+        "points": 4,
+        "num_comments": 2,
+        "author": "_bxg1",
+        "created_at": "2020-05-08T21:07:58Z"
+      },
+      {
+        "objectID": "23950535",
+        "title": "Local TV stations in US to air 'Plandemic' researcher's theory about Fauci",
+        "url": "http://lite.cnn.com/en/article/h_339e48cbbfb460a5139163a146c80975",
+        "points": 4,
+        "num_comments": 1,
+        "author": "threatofrain",
+        "created_at": "2020-07-25T16:42:36Z"
+      },
+      {
+        "objectID": "31347441",
+        "title": "Understanding the plandemic: countering online far right Covid-19 conspiracies",
+        "url": "https://firstmonday.org/ojs/index.php/fm/article/view/12614",
+        "points": 4,
+        "num_comments": 0,
+        "author": "cratermoon",
+        "created_at": "2022-05-11T23:41:39Z"
+      },
+      {
+        "objectID": "24006391",
+        "title": "Plandemic",
+        "url": "https://en.wikipedia.org/wiki/Plandemic",
+        "points": 4,
+        "num_comments": 0,
+        "author": "simonebrunozzi",
+        "created_at": "2020-07-31T07:04:24Z"
+      },
+      {
+        "objectID": "23247928",
+        "title": "How the ‘Plandemic’ Movie and Its Falsehoods Spread Widely Online",
+        "url": "https://www.nytimes.com/2020/05/20/technology/plandemic-movie-youtube-facebook-coronavirus.html",
+        "points": 4,
+        "num_comments": 0,
+        "author": "billme",
+        "created_at": "2020-05-20T15:20:08Z"
+      },
+      {
+        "objectID": "23130955",
+        "title": "The Questions I Asked About the Viral “Plandemic” Video",
+        "url": "https://www.propublica.org/article/im-an-investigative-journalist-these-are-the-questions-i-asked-about-the-viral-plandemic-video",
+        "points": 4,
+        "num_comments": 0,
+        "author": "BerislavLopac",
+        "created_at": "2020-05-10T07:33:07Z"
+      },
+      {
+        "objectID": "23113072",
+        "title": "Platforms scramble as ‘Plandemic’ conspiracy video spreads misinformation like",
+        "url": "https://techcrunch.com/2020/05/07/plandemic-video-judy-mikovits/",
+        "points": 3,
+        "num_comments": 1,
+        "author": "makaroni1",
+        "created_at": "2020-05-08T10:00:23Z"
+      },
+      {
+        "objectID": "47694192",
+        "title": "Plannex.io",
+        "url": "https://plannex.app/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "Novakinify",
+        "created_at": "2026-04-08T18:20:12Z"
+      },
+      {
+        "objectID": "24069709",
+        "title": "The white, middle-class Pinterest moms who believe Plandemic",
+        "url": "https://www.theguardian.com/commentisfree/2020/aug/06/coronavirus-conspiracy-theories-plandemic-moms",
+        "points": 3,
+        "num_comments": 0,
+        "author": "onyva",
+        "created_at": "2020-08-06T10:36:07Z"
+      },
+      {
+        "objectID": "23328734",
+        "title": "Google deletes Drive file “Plandemic” after contacted by The Post",
+        "url": "https://www.washingtonpost.com/technology/2020/05/20/misinformation-coronavirus-plandemic-workaround/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "Nevada-Smith",
+        "created_at": "2020-05-27T19:34:36Z"
+      },
+      {
+        "objectID": "23259494",
+        "title": "Google Drive blocks personal copy of Plandemic at request of Washington Post",
+        "url": "https://reclaimthenet.org/google-drive-takes-down-user-file-plandemic/",
+        "points": 2,
+        "num_comments": 2,
+        "author": "lowkey",
+        "created_at": "2020-05-21T15:23:47Z"
+      },
+      {
+        "objectID": "44502197",
+        "title": "PlanExe",
+        "url": "https://github.com/neoneye/PlanExe",
+        "points": 2,
+        "num_comments": 1,
+        "author": "handfuloflight",
+        "created_at": "2025-07-08T17:33:39Z"
+      },
+      {
+        "objectID": "24684456",
+        "title": "Plan2Explore: Active Model-Building for Self-Supervised Visual RL",
+        "url": "http://bair.berkeley.edu/blog/2020/10/05/plan2explore/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "atg_abhishek",
+        "created_at": "2020-10-05T04:04:19Z"
+      },
+      {
+        "objectID": "23245330",
+        "title": "Facebook Groups and YouTube Enabled Viral Spread of ‘Plandemic’ Misinformation",
+        "url": "https://onezero.medium.com/facebook-groups-and-youtube-enabled-viral-spread-of-plandemic-misinformation-f1a279335e8c",
+        "points": 2,
+        "num_comments": 0,
+        "author": "empath75",
+        "created_at": "2020-05-20T10:43:08Z"
+      },
+      {
+        "objectID": "12432390",
+        "title": "Plantex: open-world game about plants",
+        "url": "https://github.com/OsnaCS/plantex",
+        "points": 2,
+        "num_comments": 0,
+        "author": "posthoctorate",
+        "created_at": "2016-09-05T21:47:13Z"
+      },
+      {
+        "objectID": "42987383",
+        "title": "PlanExe: Planning AI that outputs WBS/SWOT/estimates",
+        "url": "https://github.com/neoneye/PlanExe",
+        "points": 1,
+        "num_comments": 2,
+        "author": "neoneye2",
+        "created_at": "2025-02-09T00:21:43Z"
+      },
+      {
+        "objectID": "43047430",
+        "title": "Automated RFP (request for proposal) with my PlanExe tool",
+        "url": "https://neoneye.github.io/PlanExe-web/",
+        "points": 1,
+        "num_comments": 1,
+        "author": "neoneye2",
+        "created_at": "2025-02-14T11:51:11Z"
+      },
+      {
+        "objectID": "47730385",
+        "title": "Plannex",
+        "url": "https://plannex.app/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Novakinify",
+        "created_at": "2026-04-11T13:24:31Z"
+      },
+      {
+        "objectID": "24712333",
+        "title": "Plan2Explore: Active Model-Building for Visual Reinforcement Learning",
+        "url": "https://bair.berkeley.edu/blog/2020/10/06/plan2explore/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "headalgorithm",
+        "created_at": "2020-10-07T20:26:56Z"
+      },
+      {
+        "objectID": "23196548",
+        "title": "Self-Supervised ‘Plan2Explore’ RL Agent Achieves SOTA Zero-Shot",
+        "url": "https://medium.com/syncedreview/self-supervised-plan2explore-rl-agent-achieves-sota-zero-shot-and-adaptation-performance-82b7ce738400",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Yuqing7",
+        "created_at": "2020-05-15T19:45:50Z"
+      },
+      {
+        "objectID": "23103983",
+        "title": "Ask HN: What fact-checking sites / sources do you use?",
+        "url": "",
+        "points": 11,
+        "num_comments": 6,
+        "author": "jacobedawson",
+        "created_at": "2020-05-07T15:18:48Z"
+      },
+      {
+        "objectID": "46876687",
+        "title": "Show HN: OpenSymbolicAI – Agents with typed variables, not just context stuffing",
+        "url": "",
+        "points": 2,
+        "num_comments": 1,
+        "author": "rksart",
+        "created_at": "2026-02-03T20:19:09Z"
+      },
+      {
+        "objectID": "29173050",
+        "title": "How Long Does Exipure Official Website Last?",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "WesleMaster",
+        "created_at": "2021-11-10T10:11:02Z"
+      },
+      {
+        "objectID": "23275308",
+        "title": "Google is now applying its coronavirus misinformation policies to personal files",
+        "url": "https://reclaimthenet.org/google-drive-takes-down-user-file-plandemic/",
+        "points": 297,
+        "num_comments": 208,
+        "author": "walterbell",
+        "created_at": "2020-05-22T18:27:33Z"
+      },
+      {
+        "objectID": "103286",
+        "title": "MIT Lisp lecture from '86. wow.",
+        "url": "http://video.google.com/videoplay?docid=5546836985338782440&q=google+lectures&total=7924&start=10&num=10&so=0&type=search&plindex=0",
+        "points": 43,
+        "num_comments": 24,
+        "author": "gregp",
+        "created_at": "2008-01-24T04:15:52Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "collection_timestamp": "2026-05-22T11:10:39.110722+00:00",
+    "repo": "elizaOS/eliza",
+    "collector_name": "github_stars"
+  },
+  "data": {
+    "full_name": "elizaOS/eliza",
+    "stars": 18429,
+    "stargazers_sampled": 500,
+    "monthly_counts": {
+      "2024-07": 3,
+      "2024-08": 3,
+      "2024-09": 5,
+      "2024-10": 338,
+      "2024-11": 151
+    }
+  }
+}

@@ -1,6 +1,1967 @@
 {
-  "generated_at": "2026-05-22T10:55:29.154071Z",
-  "total_projects": 0,
-  "flagged_projects": 0,
-  "results": []
+  "generated_at": "2026-05-22T11:16:14.870065Z",
+  "total_projects": 50,
+  "flagged_projects": 42,
+  "results": [
+    {
+      "project": "Agent Zero",
+      "total_hn_items": 62,
+      "anomaly_count": 3,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": true,
+          "detail": "11 HN submissions in 7 days",
+          "start_date": "2026-02-24"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=71% (threshold=30%)",
+          "ratio": 0.71
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=andrem (3% of posts, threshold=60%)",
+          "top_author": "andrem",
+          "ratio": 0.032
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=23, dup_titles=25",
+          "duplicate_urls": 23,
+          "duplicate_titles": 25
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=4.134, mean_interval=4731202s",
+          "coefficient_of_variation": 4.1342
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Google A2A",
+      "total_hn_items": 80,
+      "anomaly_count": 3,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": true,
+          "detail": "16 HN submissions in 7 days",
+          "start_date": "2025-04-09"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=69% (threshold=30%)",
+          "ratio": 0.688
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=zhangchengzc (5% of posts, threshold=60%)",
+          "top_author": "zhangchengzc",
+          "ratio": 0.05
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=12, dup_titles=10",
+          "duplicate_urls": 12,
+          "duplicate_titles": 10
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.363, mean_interval=437821s",
+          "coefficient_of_variation": 1.3626
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Letta",
+      "total_hn_items": 80,
+      "anomaly_count": 3,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": true,
+          "detail": "10 HN submissions in 7 days",
+          "start_date": "2026-02-11"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=55% (threshold=30%)",
+          "ratio": 0.55
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=pacjam (12% of posts, threshold=60%)",
+          "top_author": "pacjam",
+          "ratio": 0.125
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=42, dup_titles=40",
+          "duplicate_urls": 42,
+          "duplicate_titles": 40
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=5.427, mean_interval=4556417s",
+          "coefficient_of_variation": 5.4272
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Plandex",
+      "total_hn_items": 80,
+      "anomaly_count": 3,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": true,
+          "detail": "10 HN submissions in 7 days",
+          "start_date": "2020-05-07"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=61% (threshold=30%)",
+          "ratio": 0.613
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=danenania (18% of posts, threshold=60%)",
+          "top_author": "danenania",
+          "ratio": 0.175
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=39, dup_titles=40",
+          "duplicate_urls": 39,
+          "duplicate_titles": 40
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=4.602, mean_interval=7275515s",
+          "coefficient_of_variation": 4.602
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Promptfoo",
+      "total_hn_items": 80,
+      "anomaly_count": 3,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": true,
+          "detail": "14 HN submissions in 7 days",
+          "start_date": "2026-03-05"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=50% (threshold=30%)",
+          "ratio": 0.5
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=typpo (12% of posts, threshold=60%)",
+          "top_author": "typpo",
+          "ratio": 0.125
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=47, dup_titles=42",
+          "duplicate_urls": 47,
+          "duplicate_titles": 42
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.908, mean_interval=1153357s",
+          "coefficient_of_variation": 1.908
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "PydanticAI",
+      "total_hn_items": 80,
+      "anomaly_count": 3,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": true,
+          "detail": "12 HN submissions in 7 days",
+          "start_date": "2024-12-02"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=80% (threshold=30%)",
+          "ratio": 0.8
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=kacper-vstorm (10% of posts, threshold=60%)",
+          "top_author": "kacper-vstorm",
+          "ratio": 0.1
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=47, dup_titles=42",
+          "duplicate_urls": 47,
+          "duplicate_titles": 42
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.416, mean_interval=561069s",
+          "coefficient_of_variation": 2.4156
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Reflexion",
+      "total_hn_items": 80,
+      "anomaly_count": 3,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": true,
+          "detail": "12 HN submissions in 7 days",
+          "start_date": "2023-03-24"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=78% (threshold=30%)",
+          "ratio": 0.775
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=flornt (8% of posts, threshold=60%)",
+          "top_author": "flornt",
+          "ratio": 0.075
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=50, dup_titles=48",
+          "duplicate_urls": 50,
+          "duplicate_titles": 48
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.351, mean_interval=6858026s",
+          "coefficient_of_variation": 2.3515
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Roo Code",
+      "total_hn_items": 79,
+      "anomaly_count": 3,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": true,
+          "detail": "10 HN submissions in 7 days",
+          "start_date": "2026-01-22"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=89% (threshold=30%)",
+          "ratio": 0.886
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=hrudolph (15% of posts, threshold=60%)",
+          "top_author": "hrudolph",
+          "ratio": 0.152
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=35, dup_titles=38",
+          "duplicate_urls": 35,
+          "duplicate_titles": 38
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=8.119, mean_interval=6329450s",
+          "coefficient_of_variation": 8.1193
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "SWE-Agent",
+      "total_hn_items": 80,
+      "anomaly_count": 3,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": true,
+          "detail": "10 HN submissions in 7 days",
+          "start_date": "2024-04-02"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=60% (threshold=30%)",
+          "ratio": 0.6
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=lieret (10% of posts, threshold=60%)",
+          "top_author": "lieret",
+          "ratio": 0.1
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=42, dup_titles=40",
+          "duplicate_urls": 42,
+          "duplicate_titles": 40
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.053, mean_interval=850000s",
+          "coefficient_of_variation": 2.0529
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "AgenticSeek",
+      "total_hn_items": 6,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=33% (threshold=30%)",
+          "ratio": 0.333
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=Fosowl (33% of posts, threshold=60%)",
+          "top_author": "Fosowl",
+          "ratio": 0.333
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=3, dup_titles=3",
+          "duplicate_urls": 3,
+          "duplicate_titles": 3
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.850, mean_interval=5566798s",
+          "coefficient_of_variation": 1.8504
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Aider",
+      "total_hn_items": 80,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=40% (threshold=30%)",
+          "ratio": 0.4
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=anotherpaulg (18% of posts, threshold=60%)",
+          "top_author": "anotherpaulg",
+          "ratio": 0.175
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=45, dup_titles=44",
+          "duplicate_urls": 45,
+          "duplicate_titles": 44
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=7.332, mean_interval=7257094s",
+          "coefficient_of_variation": 7.3325
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Claude Code",
+      "total_hn_items": 80,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": true,
+          "detail": "10 HN submissions in 7 days",
+          "start_date": "2026-03-31"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=0% (threshold=30%)",
+          "ratio": 0.0
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=adocomplete (5% of posts, threshold=60%)",
+          "top_author": "adocomplete",
+          "ratio": 0.05
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=36, dup_titles=39",
+          "duplicate_urls": 36,
+          "duplicate_titles": 39
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.579, mean_interval=479502s",
+          "coefficient_of_variation": 2.5791
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Cognee",
+      "total_hn_items": 80,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=80% (threshold=30%)",
+          "ratio": 0.8
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=vasa_ (12% of posts, threshold=60%)",
+          "top_author": "vasa_",
+          "ratio": 0.125
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=43, dup_titles=40",
+          "duplicate_urls": 43,
+          "duplicate_titles": 40
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.728, mean_interval=7469530s",
+          "coefficient_of_variation": 2.7281
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "CowAgent",
+      "total_hn_items": 40,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=62% (threshold=30%)",
+          "ratio": 0.625
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=paulcaplan (8% of posts, threshold=60%)",
+          "top_author": "paulcaplan",
+          "ratio": 0.075
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=4, dup_titles=5",
+          "duplicate_urls": 4,
+          "duplicate_titles": 5
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.413, mean_interval=11535612s",
+          "coefficient_of_variation": 1.4128
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Devika",
+      "total_hn_items": 80,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": true,
+          "detail": "10 HN submissions in 7 days",
+          "start_date": "2024-03-21"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=25% (threshold=30%)",
+          "ratio": 0.25
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=gajju3588 (5% of posts, threshold=60%)",
+          "top_author": "gajju3588",
+          "ratio": 0.05
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=47, dup_titles=42",
+          "duplicate_urls": 47,
+          "duplicate_titles": 42
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.958, mean_interval=6109084s",
+          "coefficient_of_variation": 1.9575
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "GenAI Agents",
+      "total_hn_items": 80,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=80% (threshold=30%)",
+          "ratio": 0.8
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=bsuki (5% of posts, threshold=60%)",
+          "top_author": "bsuki",
+          "ratio": 0.05
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=34, dup_titles=41",
+          "duplicate_urls": 34,
+          "duplicate_titles": 41
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.825, mean_interval=1153431s",
+          "coefficient_of_variation": 1.8249
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Google ADK",
+      "total_hn_items": 44,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=86% (threshold=30%)",
+          "ratio": 0.864
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=yaronsc (5% of posts, threshold=60%)",
+          "top_author": "yaronsc",
+          "ratio": 0.045
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=8, dup_titles=4",
+          "duplicate_urls": 8,
+          "duplicate_titles": 4
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=4.117, mean_interval=9598546s",
+          "coefficient_of_variation": 4.1167
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "HyperAgents",
+      "total_hn_items": 13,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=69% (threshold=30%)",
+          "ratio": 0.692
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=andyg_blog (8% of posts, threshold=60%)",
+          "top_author": "andyg_blog",
+          "ratio": 0.077
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=3, dup_titles=1",
+          "duplicate_urls": 3,
+          "duplicate_titles": 1
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=3.030, mean_interval=34171227s",
+          "coefficient_of_variation": 3.0304
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "LeRobot",
+      "total_hn_items": 80,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=72% (threshold=30%)",
+          "ratio": 0.725
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=LERobot (22% of posts, threshold=60%)",
+          "top_author": "LERobot",
+          "ratio": 0.225
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=40, dup_titles=40",
+          "duplicate_urls": 40,
+          "duplicate_titles": 40
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=4.074, mean_interval=6177743s",
+          "coefficient_of_variation": 4.0744
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Mem0",
+      "total_hn_items": 80,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=55% (threshold=30%)",
+          "ratio": 0.55
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=staranjeet (8% of posts, threshold=60%)",
+          "top_author": "staranjeet",
+          "ratio": 0.075
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=32, dup_titles=40",
+          "duplicate_urls": 32,
+          "duplicate_titles": 40
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.913, mean_interval=699677s",
+          "coefficient_of_variation": 2.913
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Memvid",
+      "total_hn_items": 59,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=80% (threshold=30%)",
+          "ratio": 0.797
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=memoids (17% of posts, threshold=60%)",
+          "top_author": "memoids",
+          "ratio": 0.169
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=31, dup_titles=29",
+          "duplicate_urls": 31,
+          "duplicate_titles": 29
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=3.159, mean_interval=8675237s",
+          "coefficient_of_variation": 3.1591
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "MetaGPT",
+      "total_hn_items": 40,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=48% (threshold=30%)",
+          "ratio": 0.475
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=bravura (30% of posts, threshold=60%)",
+          "top_author": "bravura",
+          "ratio": 0.3
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=4, dup_titles=1",
+          "duplicate_urls": 4,
+          "duplicate_titles": 1
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.394, mean_interval=13738838s",
+          "coefficient_of_variation": 2.3939
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "NeMo Guardrails",
+      "total_hn_items": 20,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=90% (threshold=30%)",
+          "ratio": 0.9
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=gk1 (20% of posts, threshold=60%)",
+          "top_author": "gk1",
+          "ratio": 0.2
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=12, dup_titles=9",
+          "duplicate_urls": 12,
+          "duplicate_titles": 9
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.861, mean_interval=5102392s",
+          "coefficient_of_variation": 1.8614
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Open-AutoGLM",
+      "total_hn_items": 44,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=80% (threshold=30%)",
+          "ratio": 0.795
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=Ross00781 (9% of posts, threshold=60%)",
+          "top_author": "Ross00781",
+          "ratio": 0.091
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=8, dup_titles=7",
+          "duplicate_urls": 8,
+          "duplicate_titles": 7
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.289, mean_interval=10423027s",
+          "coefficient_of_variation": 2.2887
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "OpenEvolve",
+      "total_hn_items": 25,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=76% (threshold=30%)",
+          "ratio": 0.76
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=codelion (24% of posts, threshold=60%)",
+          "top_author": "codelion",
+          "ratio": 0.24
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=9, dup_titles=10",
+          "duplicate_urls": 9,
+          "duplicate_titles": 10
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=3.861, mean_interval=17122191s",
+          "coefficient_of_variation": 3.8607
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "OpenHands",
+      "total_hn_items": 40,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=75% (threshold=30%)",
+          "ratio": 0.75
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=rbren (10% of posts, threshold=60%)",
+          "top_author": "rbren",
+          "ratio": 0.1
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=4, dup_titles=1",
+          "duplicate_urls": 4,
+          "duplicate_titles": 1
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.038, mean_interval=14998171s",
+          "coefficient_of_variation": 2.0377
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "TextGrad",
+      "total_hn_items": 20,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=80% (threshold=30%)",
+          "ratio": 0.8
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=Protostome (10% of posts, threshold=60%)",
+          "top_author": "Protostome",
+          "ratio": 0.1
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=11, dup_titles=12",
+          "duplicate_urls": 11,
+          "duplicate_titles": 12
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.216, mean_interval=16151611s",
+          "coefficient_of_variation": 2.216
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "agentscope",
+      "total_hn_items": 40,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=82% (threshold=30%)",
+          "ratio": 0.825
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=agentcooper (20% of posts, threshold=60%)",
+          "top_author": "agentcooper",
+          "ratio": 0.2
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=3, dup_titles=1",
+          "duplicate_urls": 3,
+          "duplicate_titles": 1
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.918, mean_interval=11462356s",
+          "coefficient_of_variation": 1.9181
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "crewAI",
+      "total_hn_items": 40,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=75% (threshold=30%)",
+          "ratio": 0.75
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=jonkrohn (8% of posts, threshold=60%)",
+          "top_author": "jonkrohn",
+          "ratio": 0.075
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=4, dup_titles=2",
+          "duplicate_urls": 4,
+          "duplicate_titles": 2
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.174, mean_interval=1800152s",
+          "coefficient_of_variation": 1.1738
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "dify",
+      "total_hn_items": 40,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=70% (threshold=30%)",
+          "ratio": 0.7
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=mountainview (10% of posts, threshold=60%)",
+          "top_author": "mountainview",
+          "ratio": 0.1
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=4, dup_titles=0",
+          "duplicate_urls": 4,
+          "duplicate_titles": 0
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.146, mean_interval=10845046s",
+          "coefficient_of_variation": 2.1455
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "mastra",
+      "total_hn_items": 40,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=62% (threshold=30%)",
+          "ratio": 0.625
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=calcsam (15% of posts, threshold=60%)",
+          "top_author": "calcsam",
+          "ratio": 0.15
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=8, dup_titles=2",
+          "duplicate_urls": 8,
+          "duplicate_titles": 2
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=4.208, mean_interval=3737158s",
+          "coefficient_of_variation": 4.2078
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "mcp-use",
+      "total_hn_items": 40,
+      "anomaly_count": 2,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=72% (threshold=30%)",
+          "ratio": 0.725
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=pzullo (12% of posts, threshold=60%)",
+          "top_author": "pzullo",
+          "ratio": 0.125
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=2, dup_titles=3",
+          "duplicate_urls": 2,
+          "duplicate_titles": 3
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.270, mean_interval=11174665s",
+          "coefficient_of_variation": 2.2702
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Awesome-Self-Evolving-Agents",
+      "total_hn_items": 1,
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "insufficient HN data"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=100% (threshold=30%)",
+          "ratio": 1.0
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=EvoAgentX (100% of posts, threshold=60%)",
+          "top_author": "EvoAgentX",
+          "ratio": 1.0
+        },
+        {
+          "check": "duplicate_content",
+          "detected": false,
+          "detail": "dup_urls=0, dup_titles=0",
+          "duplicate_urls": 0,
+          "duplicate_titles": 0
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "insufficient items"
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Codex",
+      "total_hn_items": 80,
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=0% (threshold=30%)",
+          "ratio": 0.0
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=meetpateltech (18% of posts, threshold=60%)",
+          "top_author": "meetpateltech",
+          "ratio": 0.175
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=37, dup_titles=40",
+          "duplicate_urls": 37,
+          "duplicate_titles": 40
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=3.030, mean_interval=2793530s",
+          "coefficient_of_variation": 3.0299
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Coze Studio",
+      "total_hn_items": 51,
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=18% (threshold=30%)",
+          "ratio": 0.176
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=shenli3514 (4% of posts, threshold=60%)",
+          "top_author": "shenli3514",
+          "ratio": 0.039
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=3, dup_titles=2",
+          "duplicate_urls": 3,
+          "duplicate_titles": 2
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.238, mean_interval=9470924s",
+          "coefficient_of_variation": 1.2381
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "Eliza",
+      "total_hn_items": 80,
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=0% (threshold=30%)",
+          "ratio": 0.0
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=abrax3141 (5% of posts, threshold=60%)",
+          "top_author": "abrax3141",
+          "ratio": 0.05
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=40, dup_titles=41",
+          "duplicate_urls": 40,
+          "duplicate_titles": 41
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.432, mean_interval=5685077s",
+          "coefficient_of_variation": 2.4321
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "EvoAgentX",
+      "total_hn_items": 5,
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=80% (threshold=30%)",
+          "ratio": 0.8
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=EvoAgentX (60% of posts, threshold=60%)",
+          "top_author": "EvoAgentX",
+          "ratio": 0.6
+        },
+        {
+          "check": "duplicate_content",
+          "detected": false,
+          "detail": "dup_urls=0, dup_titles=0",
+          "duplicate_urls": 0,
+          "duplicate_titles": 0
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=0.407, mean_interval=6206500s",
+          "coefficient_of_variation": 0.4065
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "LangChain",
+      "total_hn_items": 80,
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=0% (threshold=30%)",
+          "ratio": 0.0
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=gk1 (5% of posts, threshold=60%)",
+          "top_author": "gk1",
+          "ratio": 0.05
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=37, dup_titles=40",
+          "duplicate_urls": 37,
+          "duplicate_titles": 40
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.134, mean_interval=1173182s",
+          "coefficient_of_variation": 2.1338
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "OpenFang",
+      "total_hn_items": 80,
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=20% (threshold=30%)",
+          "ratio": 0.2
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=jasonmcalacanis (8% of posts, threshold=60%)",
+          "top_author": "jasonmcalacanis",
+          "ratio": 0.075
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=40, dup_titles=40",
+          "duplicate_urls": 40,
+          "duplicate_titles": 40
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.184, mean_interval=6548556s",
+          "coefficient_of_variation": 2.1837
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "agent-skills",
+      "total_hn_items": 40,
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=25% (threshold=30%)",
+          "ratio": 0.25
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=mooreds (2% of posts, threshold=60%)",
+          "top_author": "mooreds",
+          "ratio": 0.025
+        },
+        {
+          "check": "duplicate_content",
+          "detected": true,
+          "detail": "dup_urls=3, dup_titles=5",
+          "duplicate_urls": 3,
+          "duplicate_titles": 5
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.757, mean_interval=447041s",
+          "coefficient_of_variation": 1.757
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "evolver",
+      "total_hn_items": 40,
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=72% (threshold=30%)",
+          "ratio": 0.725
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=jbermudez5 (8% of posts, threshold=60%)",
+          "top_author": "jbermudez5",
+          "ratio": 0.075
+        },
+        {
+          "check": "duplicate_content",
+          "detected": false,
+          "detail": "dup_urls=1, dup_titles=0",
+          "duplicate_urls": 1,
+          "duplicate_titles": 0
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=2.868, mean_interval=13630936s",
+          "coefficient_of_variation": 2.8681
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "langgraph",
+      "total_hn_items": 40,
+      "anomaly_count": 1,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": true,
+          "detail": "low_engagement_ratio=55% (threshold=30%)",
+          "ratio": 0.55
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=gfortaine (15% of posts, threshold=60%)",
+          "top_author": "gfortaine",
+          "ratio": 0.15
+        },
+        {
+          "check": "duplicate_content",
+          "detected": false,
+          "detail": "dup_urls=1, dup_titles=0",
+          "duplicate_urls": 1,
+          "duplicate_titles": 0
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.126, mean_interval=1490924s",
+          "coefficient_of_variation": 1.1261
+        }
+      ],
+      "status": "flagged"
+    },
+    {
+      "project": "SuperAGI",
+      "total_hn_items": 40,
+      "anomaly_count": 0,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=20% (threshold=30%)",
+          "ratio": 0.2
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=elsalgo (10% of posts, threshold=60%)",
+          "top_author": "elsalgo",
+          "ratio": 0.1
+        },
+        {
+          "check": "duplicate_content",
+          "detected": false,
+          "detail": "dup_urls=2, dup_titles=0",
+          "duplicate_urls": 2,
+          "duplicate_titles": 0
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.879, mean_interval=11197318s",
+          "coefficient_of_variation": 1.8792
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "project": "agno",
+      "total_hn_items": 40,
+      "anomaly_count": 0,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=0% (threshold=30%)",
+          "ratio": 0.0
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=zoria (5% of posts, threshold=60%)",
+          "top_author": "zoria",
+          "ratio": 0.05
+        },
+        {
+          "check": "duplicate_content",
+          "detected": false,
+          "detail": "dup_urls=0, dup_titles=0",
+          "duplicate_urls": 0,
+          "duplicate_titles": 0
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.082, mean_interval=11405521s",
+          "coefficient_of_variation": 1.0824
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "project": "autogen",
+      "total_hn_items": 40,
+      "anomaly_count": 0,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=10% (threshold=30%)",
+          "ratio": 0.1
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=suyashkumar (5% of posts, threshold=60%)",
+          "top_author": "suyashkumar",
+          "ratio": 0.05
+        },
+        {
+          "check": "duplicate_content",
+          "detected": false,
+          "detail": "dup_urls=2, dup_titles=0",
+          "duplicate_urls": 2,
+          "duplicate_titles": 0
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.303, mean_interval=10918428s",
+          "coefficient_of_variation": 1.3035
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "project": "camel",
+      "total_hn_items": 40,
+      "anomaly_count": 0,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=0% (threshold=30%)",
+          "ratio": 0.0
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=Thevet (8% of posts, threshold=60%)",
+          "top_author": "Thevet",
+          "ratio": 0.075
+        },
+        {
+          "check": "duplicate_content",
+          "detected": false,
+          "detail": "dup_urls=1, dup_titles=0",
+          "duplicate_urls": 1,
+          "duplicate_titles": 0
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.048, mean_interval=13635773s",
+          "coefficient_of_variation": 1.0478
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "project": "goose",
+      "total_hn_items": 40,
+      "anomaly_count": 0,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=0% (threshold=30%)",
+          "ratio": 0.0
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=hhs (5% of posts, threshold=60%)",
+          "top_author": "hhs",
+          "ratio": 0.05
+        },
+        {
+          "check": "duplicate_content",
+          "detected": false,
+          "detail": "dup_urls=2, dup_titles=1",
+          "duplicate_urls": 2,
+          "duplicate_titles": 1
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.201, mean_interval=13253650s",
+          "coefficient_of_variation": 1.2011
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "project": "haystack",
+      "total_hn_items": 40,
+      "anomaly_count": 0,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=0% (threshold=30%)",
+          "ratio": 0.0
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=akshaysg (12% of posts, threshold=60%)",
+          "top_author": "akshaysg",
+          "ratio": 0.125
+        },
+        {
+          "check": "duplicate_content",
+          "detected": false,
+          "detail": "dup_urls=1, dup_titles=0",
+          "duplicate_urls": 1,
+          "duplicate_titles": 0
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.535, mean_interval=14479869s",
+          "coefficient_of_variation": 1.5349
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "project": "openai-agents-python",
+      "total_hn_items": 7,
+      "anomaly_count": 0,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=29% (threshold=30%)",
+          "ratio": 0.286
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=honorable_judge (14% of posts, threshold=60%)",
+          "top_author": "honorable_judge",
+          "ratio": 0.143
+        },
+        {
+          "check": "duplicate_content",
+          "detected": false,
+          "detail": "dup_urls=0, dup_titles=1",
+          "duplicate_urls": 0,
+          "duplicate_titles": 1
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.638, mean_interval=3358577s",
+          "coefficient_of_variation": 1.6378
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "project": "swarm",
+      "total_hn_items": 40,
+      "anomaly_count": 0,
+      "anomalies": [
+        {
+          "check": "hn_burst",
+          "detected": false,
+          "detail": "HN posting rate normal"
+        },
+        {
+          "check": "low_engagement",
+          "detected": false,
+          "detail": "low_engagement_ratio=0% (threshold=30%)",
+          "ratio": 0.0
+        },
+        {
+          "check": "author_dominance",
+          "detected": false,
+          "detail": "top_author=Brajeshwar (5% of posts, threshold=60%)",
+          "top_author": "Brajeshwar",
+          "ratio": 0.05
+        },
+        {
+          "check": "duplicate_content",
+          "detected": false,
+          "detail": "dup_urls=0, dup_titles=0",
+          "duplicate_urls": 0,
+          "duplicate_titles": 0
+        },
+        {
+          "check": "bot_timing",
+          "detected": false,
+          "detail": "cv=1.003, mean_interval=12554987s",
+          "coefficient_of_variation": 1.0028
+        }
+      ],
+      "status": "clean"
+    }
+  ]
 }

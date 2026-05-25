@@ -2,19 +2,19 @@
 """
 Anomaly Detector — Suspicious Growth Pattern Detection
 
-Detects:
-  1. Burst growth: >10K stars gained in <7 days
-  2. Low fork quality: <20% forks with commits
-  3. High star/contributor ratio: >150:1
-  4. Issue spam: >50% template/duplicate issues
-  5. Sudden activity drop: >80% decline in 30 days
-  6. Bot-like star patterns: uniform star timestamps
+Detects anomalies from cross-platform data:
+  1. HN burst: many submissions with high points in short time
+  2. Low engagement ratio: many hits but few meaningful interactions
+  3. Single author dominance: one HN author submitting all posts
+  4. Duplicate content: same URL/title across multiple submissions
+  5. Bot-like timing: submissions at exact intervals
+  6. GitHub star/contributor ratio anomalies (when data available)
 """
 
 import argparse
 import json
 import os
-import sys
+from collections import Counter
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -33,192 +33,161 @@ def parse_date(s: str) -> datetime:
         return datetime(2000, 1, 1)
 
 
-def load_all_data(storage_dir: str):
-    """Load all project data from storage."""
-    data = {}
-    # Try daily_snapshots first
-    snapshots_dir = os.path.join(storage_dir, "daily_snapshots")
-    if os.path.isdir(snapshots_dir):
-        for date_dir in sorted(os.listdir(snapshots_dir)):
-            date_path = os.path.join(snapshots_dir, date_dir)
-            if not os.path.isdir(date_path):
+def discover_projects(storage_dir: str) -> dict:
+    """Discover all projects from storage subdirectories."""
+    projects = {}
+    for subdir in os.listdir(storage_dir):
+        sub_path = os.path.join(storage_dir, subdir)
+        if not os.path.isdir(sub_path) or subdir in ("analysis", "propagation"):
+            continue
+        for fname in os.listdir(sub_path):
+            if not fname.endswith(".json"):
                 continue
-            for fname in os.listdir(date_path):
-                if not fname.endswith(".json"):
-                    continue
-                proj = fname.replace(".json", "")
-                entry = load_json(os.path.join(date_path, fname))
-                if entry:
-                    data.setdefault(proj, []).append({"date": date_dir, "data": entry})
-
-    # Fallback: flat files in storage_dir
-    if not data:
-        for fname in os.listdir(storage_dir):
-            if fname.endswith(".json"):
-                proj = fname.replace(".json", "")
-                entry = load_json(os.path.join(storage_dir, fname))
-                if entry:
-                    data[proj] = [{"date": "latest", "data": entry}]
-
-    return data
+            proj_name = fname.replace(".json", "")
+            fpath = os.path.join(sub_path, fname)
+            data = load_json(fpath)
+            if data:
+                projects.setdefault(proj_name, {})[subdir] = data
+    return projects
 
 
-def detect_burst_growth(star_history: list, threshold_days: int = 7,
-                        threshold_stars: int = 10000) -> dict:
-    """Detect if a project gained threshold_stars in threshold_days."""
-    if not star_history or len(star_history) < 2:
-        return {"detected": False, "detail": "insufficient star history"}
+def extract_hn_items(hn_data: dict) -> list:
+    """Flatten HN results into a single list of items."""
+    if not hn_data:
+        return []
+    results = hn_data.get("results", {})
+    items = []
+    if isinstance(results, dict):
+        for query, query_items in results.items():
+            if isinstance(query_items, list):
+                items.extend(query_items)
+    elif isinstance(results, list):
+        items = results
+    return items
 
-    timestamps = sorted([parse_date(s.get("starred_at", "")) for s in star_history])
+
+def detect_hn_burst(items: list, threshold_days: int = 7,
+                    threshold_count: int = 10) -> dict:
+    """Detect if too many HN submissions in a short window."""
+    if not items or len(items) < 3:
+        return {"detected": False, "detail": "insufficient HN data"}
+
+    timestamps = sorted([parse_date(it.get("created_at", "")) for it in items
+                         if it.get("created_at")])
+    if len(timestamps) < 3:
+        return {"detected": False, "detail": "insufficient timestamps"}
+
     for i in range(len(timestamps)):
         window_end = timestamps[i] + timedelta(days=threshold_days)
-        stars_in_window = sum(1 for t in timestamps[i:] if t <= window_end)
-        if stars_in_window >= threshold_stars:
+        count = sum(1 for t in timestamps[i:] if t <= window_end)
+        if count >= threshold_count:
             return {
                 "detected": True,
-                "detail": f"{stars_in_window} stars in {threshold_days} days",
-                "start_date": timestamps[i].isoformat(),
+                "detail": f"{count} HN submissions in {threshold_days} days",
+                "start_date": timestamps[i].strftime("%Y-%m-%d"),
             }
-    return {"detected": False, "detail": "growth within normal range"}
+    return {"detected": False, "detail": "HN posting rate normal"}
 
 
-def detect_low_fork_quality(forks: list, threshold: float = 0.2) -> dict:
-    """Detect if fork quality is below threshold."""
-    if not forks:
-        return {"detected": False, "detail": "no fork data"}
-    with_commits = sum(1 for f in forks if f.get("commits", 0) > 0)
-    ratio = with_commits / len(forks)
-    return {
-        "detected": ratio < threshold,
-        "detail": f"fork_quality={ratio:.2%} (threshold={threshold:.0%})",
-        "fork_quality": round(ratio, 3),
-    }
-
-
-def detect_high_star_contributor_ratio(stars: int, contributors: int,
-                                        threshold: int = 150) -> dict:
-    """Detect abnormally high star/contributor ratio."""
-    if contributors <= 0:
-        return {"detected": True, "detail": f"ratio=inf (0 contributors)", "ratio": None}
-    ratio = stars / contributors
+def detect_low_engagement(items: list, threshold: float = 0.3) -> dict:
+    """Detect if most posts have very low engagement."""
+    if not items:
+        return {"detected": False, "detail": "no items"}
+    low_eng = sum(1 for it in items
+                  if it.get("points", 0) < 5 and it.get("num_comments", 0) < 3)
+    ratio = low_eng / len(items)
     return {
         "detected": ratio > threshold,
-        "detail": f"ratio={ratio:.0f}:1 (threshold={threshold}:1)",
-        "ratio": round(ratio, 1),
+        "detail": f"low_engagement_ratio={ratio:.0%} (threshold={threshold:.0%})",
+        "ratio": round(ratio, 3),
     }
 
 
-def detect_issue_spam(issues: list, threshold: float = 0.5) -> dict:
-    """Detect if >threshold of issues are spam/template."""
-    if not issues:
-        return {"detected": False, "detail": "no issue data"}
-    spam_labels = {"question", "duplicate", "invalid", "wontfix", "spam"}
-    spam_count = 0
-    for issue in issues:
-        labels = {l.get("name", "").lower() for l in issue.get("labels", [])}
-        if labels & spam_labels:
-            spam_count += 1
-    ratio = spam_count / len(issues)
+def detect_author_dominance(items: list, threshold: float = 0.6) -> dict:
+    """Detect if one author posted most of the submissions."""
+    if not items:
+        return {"detected": False, "detail": "no items"}
+    authors = [it.get("author", "unknown") for it in items]
+    if not authors:
+        return {"detected": False, "detail": "no authors"}
+    counter = Counter(authors)
+    top_author, top_count = counter.most_common(1)[0]
+    ratio = top_count / len(authors)
     return {
-        "detected": ratio > threshold,
-        "detail": f"spam_ratio={ratio:.2%} (threshold={threshold:.0%})",
-        "spam_ratio": round(ratio, 3),
+        "detected": ratio > threshold and len(authors) > 3,
+        "detail": f"top_author={top_author} ({ratio:.0%} of posts, threshold={threshold:.0%})",
+        "top_author": top_author,
+        "ratio": round(ratio, 3),
     }
 
 
-def detect_activity_drop(records: list, threshold: float = 0.8) -> dict:
-    """Detect >threshold decline in activity over last 30 days."""
-    if len(records) < 2:
-        return {"detected": False, "detail": "insufficient history"}
-
-    # Compare recent activity vs previous
-    def activity_score(rec):
-        d = rec.get("data", {})
-        return d.get("commit_count", 0) + d.get("issue_count", 0) + d.get("pr_count", 0)
-
-    recent_score = activity_score(records[-1])
-    baseline_score = max(activity_score(r) for r in records[:-1])
-
-    if baseline_score <= 0:
-        return {"detected": False, "detail": "zero baseline activity"}
-
-    drop = 1.0 - (recent_score / baseline_score)
+def detect_duplicate_content(items: list) -> dict:
+    """Detect duplicate URLs or very similar titles."""
+    if not items:
+        return {"detected": False, "detail": "no items"}
+    urls = [it.get("url", "") for it in items if it.get("url")]
+    titles = [it.get("title", "").lower().strip() for it in items if it.get("title")]
+    dup_urls = len(urls) - len(set(urls))
+    dup_titles = len(titles) - len(set(titles))
     return {
-        "detected": drop > threshold,
-        "detail": f"drop={drop:.0%} (threshold={threshold:.0%})",
-        "drop_percent": round(drop, 3),
+        "detected": dup_urls > 2 or dup_titles > 2,
+        "detail": f"dup_urls={dup_urls}, dup_titles={dup_titles}",
+        "duplicate_urls": dup_urls,
+        "duplicate_titles": dup_titles,
     }
 
 
-def detect_bot_stars(star_history: list) -> dict:
-    """Detect bot-like uniform star timestamp patterns."""
-    if not star_history or len(star_history) < 100:
-        return {"detected": False, "detail": "insufficient stars for pattern analysis"}
+def detect_bot_timing(items: list) -> dict:
+    """Detect bot-like uniform submission timing."""
+    if not items or len(items) < 5:
+        return {"detected": False, "detail": "insufficient items"}
 
-    timestamps = sorted([parse_date(s.get("starred_at", "")) for s in star_history])
-    # Check intervals between consecutive stars
-    intervals = []
-    for i in range(1, min(len(timestamps), 1000)):
-        delta = (timestamps[i] - timestamps[i-1]).total_seconds()
-        intervals.append(delta)
+    timestamps = sorted([parse_date(it.get("created_at", "")) for it in items
+                         if it.get("created_at")])
+    if len(timestamps) < 5:
+        return {"detected": False, "detail": "insufficient timestamps"}
 
+    intervals = [(timestamps[i+1] - timestamps[i]).total_seconds()
+                 for i in range(len(timestamps) - 1)]
     if not intervals:
         return {"detected": False, "detail": "no intervals"}
 
-    # If std deviation of intervals is very low, stars are suspiciously uniform
-    mean_interval = sum(intervals) / len(intervals)
-    variance = sum((x - mean_interval) ** 2 for x in intervals) / len(intervals)
-    std_dev = variance ** 0.5
-    cv = std_dev / mean_interval if mean_interval > 0 else 0  # coefficient of variation
+    mean_int = sum(intervals) / len(intervals)
+    if mean_int <= 0:
+        return {"detected": False, "detail": "zero interval"}
+    variance = sum((x - mean_int) ** 2 for x in intervals) / len(intervals)
+    cv = (variance ** 0.5) / mean_int
 
-    # Very low CV = bot-like pattern
     return {
-        "detected": cv < 0.1 and mean_interval < 3600,
-        "detail": f"cv={cv:.3f}, mean_interval={mean_interval:.0f}s",
+        "detected": cv < 0.15 and mean_int < 86400,  # very uniform + < 1 day apart
+        "detail": f"cv={cv:.3f}, mean_interval={mean_int:.0f}s",
         "coefficient_of_variation": round(cv, 4),
     }
 
 
-def analyze_project(project_name: str, records: list) -> dict:
+def analyze_project(project_name: str, data_sources: dict) -> dict:
     """Run all anomaly detectors on one project."""
-    if not records:
-        return {"project": project_name, "anomalies": [], "anomaly_count": 0,
-                "status": "no_data"}
-
-    latest = records[-1]["data"]
-    stars = latest.get("stars", latest.get("stargazers_count", 0))
-    contributors = latest.get("contributors", [])
-    contributors_count = latest.get("contributors_count", len(contributors))
-    forks = latest.get("forks", [])
-    issues = latest.get("issues", [])
-    prs = latest.get("pull_requests", [])
-    star_history = latest.get("star_history", [])
-
     anomalies = []
+    hn_data = data_sources.get("hn")
+    items = extract_hn_items(hn_data)
 
-    checks = [
-        ("burst_growth", detect_burst_growth(star_history)),
-        ("low_fork_quality", detect_low_fork_quality(forks)),
-        ("high_star_contributor_ratio",
-         detect_high_star_contributor_ratio(stars, contributors_count)),
-        ("issue_spam", detect_issue_spam(issues)),
-        ("activity_drop", detect_activity_drop(records)),
-        ("bot_like_stars", detect_bot_stars(star_history)),
-    ]
+    if items:
+        checks = [
+            ("hn_burst", detect_hn_burst(items)),
+            ("low_engagement", detect_low_engagement(items)),
+            ("author_dominance", detect_author_dominance(items)),
+            ("duplicate_content", detect_duplicate_content(items)),
+            ("bot_timing", detect_bot_timing(items)),
+        ]
+        anomalies.extend(checks)
 
-    for check_name, result in checks:
-        anomalies.append({
-            "check": check_name,
-            **result,
-        })
-
-    detected = [a for a in anomalies if a.get("detected")]
+    detected = [a for a in anomalies if a[1].get("detected")]
 
     return {
         "project": project_name,
-        "stars": stars,
+        "total_hn_items": len(items),
         "anomaly_count": len(detected),
-        "anomalies": anomalies,
+        "anomalies": [{"check": name, **result} for name, result in anomalies],
         "status": "flagged" if detected else "clean",
     }
 
@@ -226,17 +195,19 @@ def analyze_project(project_name: str, records: list) -> dict:
 def run_anomaly_detection(input_dir: str, output_dir: str):
     """Main entry: detect anomalies across all projects."""
     os.makedirs(output_dir, exist_ok=True)
+    projects = discover_projects(input_dir)
 
-    all_data = load_all_data(input_dir)
+    if not projects:
+        print("[anomaly_detector] No project data found")
+        return {"generated_at": datetime.utcnow().isoformat() + "Z",
+                "total_projects": 0, "flagged_projects": 0, "results": []}
 
     results = []
-    for proj_name, records in sorted(all_data.items()):
-        result = analyze_project(proj_name, records)
+    for proj_name, sources in sorted(projects.items()):
+        result = analyze_project(proj_name, sources)
         results.append(result)
 
-    # Sort by anomaly count descending
     results.sort(key=lambda r: r.get("anomaly_count", 0), reverse=True)
-
     flagged = [r for r in results if r["status"] == "flagged"]
 
     output = {
@@ -257,7 +228,7 @@ def run_anomaly_detection(input_dir: str, output_dir: str):
         print("\n=== Flagged Projects ===")
         for r in flagged:
             checks = [a["check"] for a in r["anomalies"] if a.get("detected")]
-            print(f"  ⚠ {r['project']:<25s} anomalies={r['anomaly_count']} "
+            print(f"  !! {r['project']:<25s} anomalies={r['anomaly_count']} "
                   f"({', '.join(checks)})")
 
     return output
@@ -265,12 +236,9 @@ def run_anomaly_detection(input_dir: str, output_dir: str):
 
 def main():
     parser = argparse.ArgumentParser(description="Anomaly Detector")
-    parser.add_argument("--input", default="./storage",
-                        help="Input storage directory")
-    parser.add_argument("--output", default="./storage/analysis",
-                        help="Output directory for anomaly report")
+    parser.add_argument("--input", default="./storage")
+    parser.add_argument("--output", default="./storage/analysis")
     args = parser.parse_args()
-
     run_anomaly_detection(args.input, args.output)
 
 

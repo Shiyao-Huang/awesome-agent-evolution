@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """
-Daily Report Generator — Comprehensive analysis report.
+Daily Report Generator — Comprehensive analysis Markdown report.
 
-Aggregates outputs from hype_scorer, anomaly_detector, and propagation_rebuilder
-into a unified Markdown report for the team.
+Aggregates hype scores, anomaly detection, and propagation chains
+into a unified report for the team.
 """
 
 import argparse
 import json
 import os
 from datetime import datetime
-from pathlib import Path
 
 
 def load_json(path: str):
@@ -21,32 +20,30 @@ def load_json(path: str):
 
 
 def render_hype_section(hype_data: dict) -> str:
-    """Render hype score rankings as Markdown table."""
     if not hype_data or not hype_data.get("results"):
         return "## Hype Scores\n\nNo hype score data available.\n"
 
     lines = [
         "## Hype Score Rankings\n",
-        f"**Total projects scored**: {hype_data['total_projects']}  ",
+        f"**Projects scored**: {hype_data['total_projects']}  ",
         f"**Generated**: {hype_data.get('generated_at', 'N/A')}\n",
-        "| # | Project | Stars | Score | Suspicion | Growth Class |",
-        "|---|---------|-------|-------|-----------|-------------|",
+        "| # | Project | Score | Growth Class | HN Avg Points | Sources |",
+        "|---|---------|-------|-------------|--------------|---------|",
     ]
 
     for i, r in enumerate(hype_data["results"], 1):
-        score = r.get("composite_score", "N/A")
-        suspicion = r.get("suspicion_index", "N/A")
-        growth = r.get("growth_class", "N/A")
-        stars = r.get("stars", "N/A")
+        hn = r.get("platforms", {}).get("hn", {})
+        avg_pts = hn.get("avg_points", "N/A")
+        sources = ", ".join(r.get("data_sources", []))
         lines.append(
-            f"| {i} | {r['project']} | {stars} | {score} | {suspicion} | {growth} |"
+            f"| {i} | {r['project']} | {r['composite_score']} | "
+            f"{r['growth_class']} | {avg_pts} | {sources} |"
         )
 
     return "\n".join(lines) + "\n"
 
 
 def render_anomaly_section(anomaly_data: dict) -> str:
-    """Render anomaly detection results."""
     if not anomaly_data or not anomaly_data.get("results"):
         return "## Anomaly Detection\n\nNo anomaly data available.\n"
 
@@ -64,7 +61,7 @@ def render_anomaly_section(anomaly_data: dict) -> str:
     lines.append("### Flagged Projects\n")
     for r in flagged:
         lines.append(f"#### {r['project']}")
-        lines.append(f"- Stars: {r.get('stars', 'N/A')}")
+        lines.append(f"- HN items: {r.get('total_hn_items', 0)}")
         lines.append(f"- Anomaly count: {r['anomaly_count']}\n")
         for a in r.get("anomalies", []):
             if a.get("detected"):
@@ -75,7 +72,6 @@ def render_anomaly_section(anomaly_data: dict) -> str:
 
 
 def render_propagation_section(prop_data: dict) -> str:
-    """Render propagation chain summaries."""
     if not prop_data or not prop_data.get("chains"):
         return "## Propagation Chains\n\nNo propagation data available.\n"
 
@@ -85,32 +81,31 @@ def render_propagation_section(prop_data: dict) -> str:
     ]
 
     for c in prop_data["chains"]:
+        if c["total_events"] == 0:
+            continue
         platforms = ", ".join(c["platforms"].keys()) if c["platforms"] else "none"
-        events = len(c["timeline"])
         lines.append(f"### {c['project']}")
         lines.append(f"- Platforms: {platforms}")
-        lines.append(f"- Timeline events: {events}")
-        if c["timeline"]:
-            lines.append("\n**Key events:**\n")
-            for evt in c["timeline"][:10]:  # Top 10 events
-                date = evt.get("date", "?")[:10]
-                lines.append(f"- {date} [{evt['platform']}] {evt.get('detail', evt.get('event', ''))}")
-            if events > 10:
-                lines.append(f"- ... and {events - 10} more events")
+        lines.append(f"- Timeline events: {c['total_events']}\n")
+
+        for evt in c["timeline"][:10]:
+            date = evt.get("date", "?")[:10]
+            pts = evt.get("points", evt.get("score", ""))
+            pts_str = f" ({pts} pts)" if pts else ""
+            lines.append(f"- `{date}` [{evt['platform']}] "
+                         f"{evt.get('title', evt.get('event', ''))}{pts_str}")
+        if c["total_events"] > 10:
+            lines.append(f"- ... and {c['total_events'] - 10} more events")
         lines.append("")
 
     return "\n".join(lines)
 
 
 def generate_daily_report(storage_dir: str, output_dir: str) -> str:
-    """Generate the full daily report."""
     os.makedirs(output_dir, exist_ok=True)
 
-    # Load analysis results
     hype_data = load_json(os.path.join(output_dir, "hype_scores.json"))
     anomaly_data = load_json(os.path.join(output_dir, "anomaly_report.json"))
-
-    # Load propagation chains
     propagation_dir = os.path.join(storage_dir, "propagation")
     prop_data = load_json(os.path.join(propagation_dir, "propagation_chains.json"))
 
@@ -138,16 +133,15 @@ def generate_daily_report(storage_dir: str, output_dir: str) -> str:
 
 ## Methodology
 
-- **Hype Scoring**: 5-dimension weighted score (star activity, contributor diversity, fork quality, issue quality, PR merge rate)
-- **Anomaly Detection**: 6 checks (burst growth, low fork quality, high star/contributor ratio, issue spam, activity drop, bot-like stars)
-- **Propagation Chains**: Cross-platform timeline reconstruction (GitHub, HN, Reddit, Semantic Scholar, Chinese media)
+- **Hype Scoring**: Cross-platform engagement score (HN points, GitHub stars, Reddit upvotes)
+- **Anomaly Detection**: 5 checks (HN burst, low engagement, author dominance, duplicate content, bot timing)
+- **Propagation Chains**: Cross-platform timeline reconstruction
 
 ---
 
 *Self Evolve Data Engine — {date_str}*
 """
 
-    # Write report
     report_path = os.path.join(output_dir, f"daily_report_{date_str}.md")
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(report)
@@ -158,12 +152,9 @@ def generate_daily_report(storage_dir: str, output_dir: str) -> str:
 
 def main():
     parser = argparse.ArgumentParser(description="Daily Report Generator")
-    parser.add_argument("--input", default="./storage",
-                        help="Input storage directory")
-    parser.add_argument("--output", default="./storage/analysis",
-                        help="Output directory for report")
+    parser.add_argument("--input", default="./storage")
+    parser.add_argument("--output", default="./storage/analysis")
     args = parser.parse_args()
-
     generate_daily_report(args.input, args.output)
 
 

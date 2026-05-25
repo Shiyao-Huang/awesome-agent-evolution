@@ -1,0 +1,374 @@
+{
+  "project": "OpenHands",
+  "repo": "All-Hands-AI/OpenHands",
+  "collected_at": "2026-05-22T11:00:54.754078+00:00",
+  "queries": [
+    "OpenHands",
+    "OpenHands"
+  ],
+  "total_hits": 40,
+  "results": {
+    "OpenHands": [
+      {
+        "objectID": "31797288",
+        "title": "OpenHands",
+        "url": "https://openhands.ai4bharat.org/en/latest/index.html",
+        "points": 70,
+        "num_comments": 10,
+        "author": "jonbaer",
+        "created_at": "2022-06-19T08:08:33Z"
+      },
+      {
+        "objectID": "44051241",
+        "title": "Show HN: OpenHands, an open source alternative to Devin, Codex, and Jules",
+        "url": "https://github.com/All-Hands-AI/OpenHands",
+        "points": 11,
+        "num_comments": 1,
+        "author": "rbren",
+        "created_at": "2025-05-21T13:29:25Z"
+      },
+      {
+        "objectID": "45975064",
+        "title": "OpenHands Raises $18.8M to Build an Open Standard for Autonomous Dev",
+        "url": "https://openhands.dev/blog/weve-just-raised-18-8m-to-build-the-open-standard-for-autonomous-software-development",
+        "points": 4,
+        "num_comments": 1,
+        "author": "mitchwainer",
+        "created_at": "2025-11-19T02:10:43Z"
+      },
+      {
+        "objectID": "42045374",
+        "title": "Zero Setup AI Coding with OpenHands",
+        "url": "https://openhands.daytona.io/",
+        "points": 4,
+        "num_comments": 1,
+        "author": "AnhTho_FR",
+        "created_at": "2024-11-04T19:49:22Z"
+      },
+      {
+        "objectID": "45994897",
+        "title": "OpenHands and AMD: Local Coding Agents Powered by Ryzen AI (No Cloud Required)",
+        "url": "https://openhands.dev/blog/20251119-amd-ryzen-ai-collaboration",
+        "points": 2,
+        "num_comments": 1,
+        "author": "mitchwainer",
+        "created_at": "2025-11-20T17:08:16Z"
+      },
+      {
+        "objectID": "44312912",
+        "title": "The OpenHands CLI",
+        "url": "https://www.all-hands.dev/blog/the-openhands-cli-ai-powered-development-in-your-terminal",
+        "points": 2,
+        "num_comments": 1,
+        "author": "Dowwie",
+        "created_at": "2025-06-18T20:08:06Z"
+      },
+      {
+        "objectID": "46464090",
+        "title": "I Accidentally Rebuilt OpenHands from Scratch – Here's What I Learned",
+        "url": "https://huggingface.co/blog/charles-azam/rebuilt-openhands",
+        "points": 2,
+        "num_comments": 0,
+        "author": "couAUIA",
+        "created_at": "2026-01-02T12:23:38Z"
+      },
+      {
+        "objectID": "45983642",
+        "title": "Show HN: OpenHands Software Agent SDK",
+        "url": "https://github.com/OpenHands/software-agent-sdk",
+        "points": 2,
+        "num_comments": 0,
+        "author": "rbren",
+        "created_at": "2025-11-19T19:04:37Z"
+      },
+      {
+        "objectID": "45969051",
+        "title": "OpenHands Raised $18.8M to Build the Open Standard for Autonomous Software Dev",
+        "url": "https://openhands.dev/blog/weve-just-raised-18-8m-to-build-the-open-standard-for-autonomous-software-development",
+        "points": 2,
+        "num_comments": 0,
+        "author": "janpio",
+        "created_at": "2025-11-18T17:10:09Z"
+      },
+      {
+        "objectID": "44300515",
+        "title": "The OpenHands CLI",
+        "url": "https://twitter.com/allhands_ai/status/1934990437627936949",
+        "points": 2,
+        "num_comments": 0,
+        "author": "tosh",
+        "created_at": "2025-06-17T15:45:52Z"
+      },
+      {
+        "objectID": "43723704",
+        "title": "Show HN: OpenHands' GitHub Action",
+        "url": "https://github.com/marketplace/actions/openhands-ai-action",
+        "points": 2,
+        "num_comments": 0,
+        "author": "xinbenlv",
+        "created_at": "2025-04-18T00:30:54Z"
+      },
+      {
+        "objectID": "42087375",
+        "title": "OpenHands AI",
+        "url": "https://github.com/All-Hands-AI/OpenHands",
+        "points": 2,
+        "num_comments": 0,
+        "author": "handfuloflight",
+        "created_at": "2024-11-08T15:05:26Z"
+      },
+      {
+        "objectID": "46343909",
+        "title": "Show HN: OpenHands-AAAA",
+        "url": "https://codeberg.org/erkinalp/OpenHands-AAAA",
+        "points": 1,
+        "num_comments": 1,
+        "author": "anticensor",
+        "created_at": "2025-12-21T10:53:33Z"
+      },
+      {
+        "objectID": "45834525",
+        "title": "The OpenHands Software Agent SDK: Composable and Extensible",
+        "url": "https://arxiv.org/abs/2511.03690",
+        "points": 1,
+        "num_comments": 1,
+        "author": "timini",
+        "created_at": "2025-11-06T12:35:30Z"
+      },
+      {
+        "objectID": "47139522",
+        "title": "The Agent Times: OpenHands hits 68K stars in the agent economy",
+        "url": "https://theagenttimes.com/articles/68107-stars-is-openhands-the-rocket-fuel-the-agent-economy-needs",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Ross00781",
+        "created_at": "2026-02-24T17:03:58Z"
+      },
+      {
+        "objectID": "46818572",
+        "title": "OpenHands Index of Coding Agent Performance",
+        "url": "https://index.openhands.dev",
+        "points": 1,
+        "num_comments": 0,
+        "author": "rbren",
+        "created_at": "2026-01-29T23:46:15Z"
+      },
+      {
+        "objectID": "46739699",
+        "title": "OpenHands: AI-Driven Development",
+        "url": "https://github.com/OpenHands/OpenHands",
+        "points": 1,
+        "num_comments": 0,
+        "author": "kristianpaul",
+        "created_at": "2026-01-24T00:14:40Z"
+      },
+      {
+        "objectID": "42076874",
+        "title": "Zero Setup OpenHands [video]",
+        "url": "https://www.youtube.com/watch?v=4D3ctTcB2hY",
+        "points": 1,
+        "num_comments": 0,
+        "author": "nkko",
+        "created_at": "2024-11-07T14:24:25Z"
+      },
+      {
+        "objectID": "42020950",
+        "title": "OpenHands CodeAct 2.1 achieved 53% resolve rate on SWE-Bench Verified",
+        "url": "https://www.all-hands.dev/blog/openhands-codeact-21-an-open-state-of-the-art-software-development-agent",
+        "points": 1,
+        "num_comments": 0,
+        "author": "timbilt",
+        "created_at": "2024-11-01T20:02:22Z"
+      },
+      {
+        "objectID": "41393458",
+        "title": "Launch HN: CodeViz (YC S24) – Visual maps of your codebase in VS Code",
+        "url": "",
+        "points": 189,
+        "num_comments": 89,
+        "author": "LiamPrevelige",
+        "created_at": "2024-08-29T17:50:23Z"
+      },
+      {
+        "objectID": "44311193",
+        "title": "Show HN: Run AI Agents on your cloud infrastructure",
+        "url": "https://www.okteto.com/ai/",
+        "points": 12,
+        "num_comments": 1,
+        "author": "Ramiro",
+        "created_at": "2025-06-18T16:21:18Z"
+      },
+      {
+        "objectID": "43103159",
+        "title": "Show HN: ML-Dev-Bench – Benchmarking AI Agents on Real-World AI Workflows",
+        "url": "https://github.com/ml-dev-bench/ml-dev-bench",
+        "points": 6,
+        "num_comments": 0,
+        "author": "chnsh",
+        "created_at": "2025-02-19T15:33:50Z"
+      },
+      {
+        "objectID": "4018696",
+        "title": "Ask HN: Tips and ideas for a new office ",
+        "url": "",
+        "points": 4,
+        "num_comments": 2,
+        "author": "brunnsbe",
+        "created_at": "2012-05-24T14:55:59Z"
+      },
+      {
+        "objectID": "46850079",
+        "title": "Show HN: Mcpbr – does your MCP help? Test it on SWE-bench and 25 evals",
+        "url": "https://github.com/greynewell/mcpbr",
+        "points": 4,
+        "num_comments": 0,
+        "author": "greynewell",
+        "created_at": "2026-02-01T22:31:46Z"
+      },
+      {
+        "objectID": "47717687",
+        "title": "Show HN: I build skillstui – TUI to search-install agent skills from skills.sh",
+        "url": "https://skillstui.sh",
+        "points": 2,
+        "num_comments": 0,
+        "author": "vab97",
+        "created_at": "2026-04-10T13:15:51Z"
+      },
+      {
+        "objectID": "46963340",
+        "title": "Runtime validation is still fucked in AI coding agents",
+        "url": "",
+        "points": 1,
+        "num_comments": 2,
+        "author": "sebringj",
+        "created_at": "2026-02-10T17:22:50Z"
+      },
+      {
+        "objectID": "48197661",
+        "title": "Show HN: Coding agent where a second agent QAs every PR in a real browser",
+        "url": "https://www.notesasm.com/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "kavin_key",
+        "created_at": "2026-05-19T18:54:10Z"
+      },
+      {
+        "objectID": "11889096",
+        "title": "Open Handset Alliance",
+        "url": "http://www.openhandsetalliance.com",
+        "points": 46,
+        "num_comments": 5,
+        "author": "rsp1984",
+        "created_at": "2016-06-12T17:12:47Z"
+      },
+      {
+        "objectID": "42103656",
+        "title": "AI GitHub Issue Resolving",
+        "url": "https://github.com/All-Hands-AI/openhands-resolver",
+        "points": 2,
+        "num_comments": 1,
+        "author": "greenfish6",
+        "created_at": "2024-11-11T00:39:00Z"
+      },
+      {
+        "objectID": "47110831",
+        "title": "Velocity Is Dead: AI-Generated Compilers and the Future of Software",
+        "url": "https://www.openhands.dev/blog/20260219-velocity-is-dead",
+        "points": 2,
+        "num_comments": 0,
+        "author": "todsacerdoti",
+        "created_at": "2026-02-22T13:26:39Z"
+      },
+      {
+        "objectID": "42006997",
+        "title": "Show HN: Middleware for running autonomous AI coding agents in sandboxes",
+        "url": "https://openhands.daytona.io/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "nkko",
+        "created_at": "2024-10-31T14:00:15Z"
+      },
+      {
+        "objectID": "76339",
+        "title": "Open Handset Alliance - Future of Mobile Phones, Google and other companies involved",
+        "url": "http://www.openhandsetalliance.com/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "shayan",
+        "created_at": "2007-11-05T18:43:19Z"
+      },
+      {
+        "objectID": "46137606",
+        "title": "Agents in the Outer Loop",
+        "url": "https://openhands.dev/blog/20251202-agents-in-the-outer-loop",
+        "points": 1,
+        "num_comments": 0,
+        "author": "janpio",
+        "created_at": "2025-12-03T17:51:10Z"
+      },
+      {
+        "objectID": "42090197",
+        "title": "An Open Software Development Agent",
+        "url": "https://www.all-hands.dev/blog/openhands-codeact-21-an-open-state-of-the-art-software-development-agent",
+        "points": 1,
+        "num_comments": 0,
+        "author": "rbren",
+        "created_at": "2024-11-08T20:28:50Z"
+      },
+      {
+        "objectID": "9117527",
+        "title": "Open-Source Library of CAD Designs for 3D-printed, Underactuated Robotic Hands",
+        "url": "http://www.eng.yale.edu/grablab/openhand",
+        "points": 8,
+        "num_comments": 6,
+        "author": "toothpickguy",
+        "created_at": "2015-02-27T06:48:16Z"
+      },
+      {
+        "objectID": "20523767",
+        "title": "Open Hand Project",
+        "url": "http://www.openhandproject.org",
+        "points": 3,
+        "num_comments": 0,
+        "author": "drmacak",
+        "created_at": "2019-07-25T08:55:22Z"
+      },
+      {
+        "objectID": "5375215",
+        "title": "Yale Open Source Robotic Hand Initiative",
+        "url": "http://www.eng.yale.edu/grablab/openhand/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ALee",
+        "created_at": "2013-03-14T14:39:41Z"
+      },
+      {
+        "objectID": "42835772",
+        "title": "Openhaystack: Build 'AirTags' – track Bluetooth devices via Apple's network",
+        "url": "https://github.com/seemoo-lab/openhaystack",
+        "points": 459,
+        "num_comments": 113,
+        "author": "thunderbong",
+        "created_at": "2025-01-27T00:11:27Z"
+      },
+      {
+        "objectID": "17248095",
+        "title": "Java: \"+=\" applied to String operands can provoke side effects",
+        "url": "https://bugs.openjdk.java.net/browse/JDK-8204322",
+        "points": 240,
+        "num_comments": 96,
+        "author": "javinpaul",
+        "created_at": "2018-06-06T15:49:35Z"
+      },
+      {
+        "objectID": "20195155",
+        "title": "OpenMandriva, the first Clang-built Linux distribution",
+        "url": "https://www.openmandriva.org/en/news/article/the-best-until-openmandriva-does-better-released-omlx-4-0",
+        "points": 148,
+        "num_comments": 131,
+        "author": "Conan_Kudo",
+        "created_at": "2019-06-16T12:32:17Z"
+      }
+    ]
+  }
+}

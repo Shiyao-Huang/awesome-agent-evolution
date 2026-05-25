@@ -1,0 +1,374 @@
+{
+  "project": "crewAI",
+  "repo": "crewAIInc/crewAI",
+  "collected_at": "2026-05-22T11:02:32.849305+00:00",
+  "queries": [
+    "crewAI",
+    "crewAI"
+  ],
+  "total_hits": 40,
+  "results": {
+    "crewAI": [
+      {
+        "objectID": "43354219",
+        "title": "Show HN: I built AI agents with CrewAI to automate my entire Gmail workflow",
+        "url": "https://github.com/tonykipkemboi/crewai-gmail-automation",
+        "points": 26,
+        "num_comments": 25,
+        "author": "Tonykip",
+        "created_at": "2025-03-13T15:18:52Z"
+      },
+      {
+        "objectID": "44561985",
+        "title": "Show HN: Portia – A stateful Crew AI alternative, with auth and 1000 tools",
+        "url": "https://github.com/portiaAI/portia-sdk-python",
+        "points": 19,
+        "num_comments": 10,
+        "author": "mounir-portia",
+        "created_at": "2025-07-14T16:24:10Z"
+      },
+      {
+        "objectID": "39399490",
+        "title": "CrewAI vs. AutoGen for runnning LLM-generated code",
+        "url": "https://e2b.dev/blog/crewai-vs-autogen-for-code-execution-ai-agents",
+        "points": 14,
+        "num_comments": 0,
+        "author": "tizkte",
+        "created_at": "2024-02-16T16:46:34Z"
+      },
+      {
+        "objectID": "44600832",
+        "title": "Agentic AI Engineering: Full 4-Hour Workshop feat. MCP, CrewAI, OpenAI Agent SDK",
+        "url": "https://www.youtube.com/watch?v=LSk5KaEGVk4",
+        "points": 12,
+        "num_comments": 8,
+        "author": "jonkrohn",
+        "created_at": "2025-07-18T03:10:20Z"
+      },
+      {
+        "objectID": "40686406",
+        "title": "CrewAI Meets Suno AI",
+        "url": "https://github.com/neural-maze/melody_agents",
+        "points": 12,
+        "num_comments": 0,
+        "author": "mtrofficus",
+        "created_at": "2024-06-15T00:14:12Z"
+      },
+      {
+        "objectID": "47132187",
+        "title": "Does anyone use CrewAI or LangChain anymore?",
+        "url": "",
+        "points": 11,
+        "num_comments": 5,
+        "author": "rakan1",
+        "created_at": "2026-02-24T02:40:13Z"
+      },
+      {
+        "objectID": "44763850",
+        "title": "Show HN: Agentic AI Frameworks on AWS (LangGraph,Strands,CrewAI,Arize,Mem0)",
+        "url": "https://github.com/aws-samples/sample-agentic-frameworks-on-aws",
+        "points": 7,
+        "num_comments": 0,
+        "author": "thinkagenticai",
+        "created_at": "2025-08-02T00:20:11Z"
+      },
+      {
+        "objectID": "38904970",
+        "title": "CrewAI: Framework for orchestrating role-playing, autonomous AI agents",
+        "url": "https://github.com/joaomdmoura/crewAI",
+        "points": 5,
+        "num_comments": 0,
+        "author": "ulrischa",
+        "created_at": "2024-01-07T20:45:51Z"
+      },
+      {
+        "objectID": "41918658",
+        "title": "Crewai Raises $18M–But Are AI Agents Ready for Prime Time?",
+        "url": "https://finance.yahoo.com/news/crewai-launches-multi-agentic-platform-120000686.html",
+        "points": 4,
+        "num_comments": 3,
+        "author": "fsndz",
+        "created_at": "2024-10-22T21:01:30Z"
+      },
+      {
+        "objectID": "40414454",
+        "title": "GUI for CrewAI, node based ai-agent visualized editor",
+        "url": "https://github.com/HomunMage/CrewAI-GUI",
+        "points": 3,
+        "num_comments": 1,
+        "author": "HomunMage",
+        "created_at": "2024-05-20T11:52:25Z"
+      },
+      {
+        "objectID": "38847595",
+        "title": "AI Role Playing Agents Framework – CrewAI",
+        "url": "https://github.com/joaomdmoura/crewAI",
+        "points": 3,
+        "num_comments": 1,
+        "author": "joaomdmoura",
+        "created_at": "2024-01-02T21:52:40Z"
+      },
+      {
+        "objectID": "42246897",
+        "title": "Building the same AI agents with 3 frameworks: LangGraph vs. CrewAI vs. Swarm",
+        "url": "https://www.relari.ai/blog/ai-agent-framework-comparison-langgraph-crewai-openai-swarm",
+        "points": 3,
+        "num_comments": 0,
+        "author": "antonap",
+        "created_at": "2024-11-26T16:06:55Z"
+      },
+      {
+        "objectID": "42449741",
+        "title": "Learnings Comparing AI Agent Frameworks LangGraph, CrewAI, AG, Semantic Kernel",
+        "url": "https://bestaiagents.ai/blog/best-4-ai-agent-frameworks-2025",
+        "points": 2,
+        "num_comments": 2,
+        "author": "danfuya",
+        "created_at": "2024-12-18T11:47:56Z"
+      },
+      {
+        "objectID": "47117537",
+        "title": "CrewAI Reaches 44K GitHub Stars as Multi-Agent Orchestration Gains Momentum",
+        "url": "https://theagenttimes.com/articles/44335-stars-and-counting-crewais-github-surge-maps-the-rise-of-the-multi-agent-e",
+        "points": 2,
+        "num_comments": 1,
+        "author": "Ross00781",
+        "created_at": "2026-02-23T03:00:38Z"
+      },
+      {
+        "objectID": "46692495",
+        "title": "An Open Protocol Uniting LangGraph, CrewAI, and Pydantic AI Agents",
+        "url": "https://openagents.org/blog/posts/2025-12-28-a2a-protocol-integration",
+        "points": 2,
+        "num_comments": 1,
+        "author": "snasan",
+        "created_at": "2026-01-20T15:02:53Z"
+      },
+      {
+        "objectID": "40923115",
+        "title": "CrewAI collects prompts via telemetry, can't be disabled",
+        "url": "https://github.com/joaomdmoura/crewAI/issues/372",
+        "points": 2,
+        "num_comments": 1,
+        "author": "gardnr",
+        "created_at": "2024-07-10T02:07:54Z"
+      },
+      {
+        "objectID": "40589656",
+        "title": "Atomic AI Agents Framework – A Better Autogen / CrewAI Alternative",
+        "url": "https://github.com/KennyVaneetvelde/atomic_agents",
+        "points": 2,
+        "num_comments": 1,
+        "author": "DeadlyPretzel",
+        "created_at": "2024-06-05T19:47:56Z"
+      },
+      {
+        "objectID": "39939998",
+        "title": "Show HN: Agent Cloud vs. CrewAI",
+        "url": "https://www.agentcloud.dev/blog/agent-cloud-vs-crewai-a-comparison",
+        "points": 2,
+        "num_comments": 1,
+        "author": "TheAnkurTyagi",
+        "created_at": "2024-04-05T08:33:22Z"
+      },
+      {
+        "objectID": "47228116",
+        "title": "Why Choose OpenAgents Instead of CrewAI, LangGraph, AutoGen?",
+        "url": "https://openagents.org/blog/posts/2026-02-23-open-source-ai-agent-frameworks-compared",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Cherie91",
+        "created_at": "2026-03-03T04:37:58Z"
+      },
+      {
+        "objectID": "47228068",
+        "title": "Why Choose OpenAgents Instead of CrewAI, LangGraph, AutoGen?",
+        "url": "https://medium.com/@openagents/open-source-ai-agent-frameworks-compared-crewai-vs-langgraph-vs-autogen-vs-openagents-2026-36a036b4801d",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Cherie91",
+        "created_at": "2026-03-03T04:30:42Z"
+      },
+      {
+        "objectID": "44571730",
+        "title": "Ask HN: OpenAI Agents SDK vs. LangGraph, CrewAI, etc.",
+        "url": "",
+        "points": 2,
+        "num_comments": 0,
+        "author": "hanlonsrazor",
+        "created_at": "2025-07-15T14:50:16Z"
+      },
+      {
+        "objectID": "44382830",
+        "title": "Multi-Agent Systems Hands on in Python: Full 4-HR Workshop Feat. MCP and CrewAI",
+        "url": "https://www.youtube.com/watch?v=LSk5KaEGVk4",
+        "points": 2,
+        "num_comments": 0,
+        "author": "jonkrohn",
+        "created_at": "2025-06-25T23:40:09Z"
+      },
+      {
+        "objectID": "44358969",
+        "title": "Agentic AI Hands-On in Python: MCP, CrewAI and OpenAI Agents SDK",
+        "url": "https://www.youtube.com/watch?v=LSk5KaEGVk4",
+        "points": 2,
+        "num_comments": 0,
+        "author": "jonkrohn",
+        "created_at": "2025-06-23T19:04:57Z"
+      },
+      {
+        "objectID": "43516087",
+        "title": "Show HN: I Built a Directory Website Using CrewAI Agents and Vibe Coding",
+        "url": "https://www.apsquared.co/posts/legally-vibing-vibe-coding",
+        "points": 2,
+        "num_comments": 0,
+        "author": "apsquared",
+        "created_at": "2025-03-29T15:01:26Z"
+      },
+      {
+        "objectID": "42968522",
+        "title": "Show HN: LangGraph and CrewAI in One Framework of Frameworks",
+        "url": "https://github.com/apsquared/lg-agents",
+        "points": 2,
+        "num_comments": 0,
+        "author": "apsquared",
+        "created_at": "2025-02-07T02:09:17Z"
+      },
+      {
+        "objectID": "40897141",
+        "title": "PraisonAI application combines AutoGen and CrewAI or similar frameworks",
+        "url": "https://github.com/MervinPraison/PraisonAI",
+        "points": 2,
+        "num_comments": 0,
+        "author": "rcarmo",
+        "created_at": "2024-07-07T12:27:10Z"
+      },
+      {
+        "objectID": "40283732",
+        "title": "Programming Arduino with CrewAI and Ollama and Llama3",
+        "url": "https://twitter.com/MTrofficus/status/1787545960710570055",
+        "points": 1,
+        "num_comments": 3,
+        "author": "mtrofficus",
+        "created_at": "2024-05-07T09:27:41Z"
+      },
+      {
+        "objectID": "47351352",
+        "title": "Running LangGraph, CrewAI, Google ADK with Durable Workflows",
+        "url": "https://docs.diagrid.io/getting-started/quickstarts/ai-agents/",
+        "points": 1,
+        "num_comments": 2,
+        "author": "yaronsc",
+        "created_at": "2026-03-12T14:48:11Z"
+      },
+      {
+        "objectID": "47361387",
+        "title": "Same Chat App, 4 Frameworks: Pydantic AI vs. LangChain vs. LangGraph vs. CrewAI",
+        "url": "https://oss.vstorm.co/blog/same-chat-app-4-frameworks/",
+        "points": 1,
+        "num_comments": 1,
+        "author": "kacper-vstorm",
+        "created_at": "2026-03-13T06:49:15Z"
+      },
+      {
+        "objectID": "46264407",
+        "title": "I added native time awareness to CrewAI to fix LLM date hallucinations",
+        "url": "https://github.com/crewAIInc/crewAI/pull/4082",
+        "points": 1,
+        "num_comments": 1,
+        "author": "sherwin27",
+        "created_at": "2025-12-14T16:48:18Z"
+      },
+      {
+        "objectID": "41329416",
+        "title": "CrewAI-Studio (Unofficial CrewAI GUI)",
+        "url": "https://github.com/strnad/CrewAI-Studio",
+        "points": 1,
+        "num_comments": 1,
+        "author": "strnad",
+        "created_at": "2024-08-23T14:38:50Z"
+      },
+      {
+        "objectID": "47185857",
+        "title": "Show HN: Agoragentic – Agent-to-Agent Marketplace for LangChain, CrewAI and MCP",
+        "url": "https://github.com/rhein1/agoragentic-integrations",
+        "points": 1,
+        "num_comments": 0,
+        "author": "bourbeau",
+        "created_at": "2026-02-27T21:27:17Z"
+      },
+      {
+        "objectID": "46733406",
+        "title": "LangChain, AutoGen, CrewAI, Temporal: What breaks when you need governance?",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "yaront111",
+        "created_at": "2026-01-23T15:09:24Z"
+      },
+      {
+        "objectID": "43927628",
+        "title": "CrewAI: Framework for orchestrating role-playing, autonomous AI agents",
+        "url": "https://github.com/crewAIInc/crewAI",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ulrischa",
+        "created_at": "2025-05-08T16:11:29Z"
+      },
+      {
+        "objectID": "43114455",
+        "title": "CrewAI – open-source framework for LLM agents",
+        "url": "https://github.com/crewAIInc/crewAI",
+        "points": 1,
+        "num_comments": 0,
+        "author": "tomrod",
+        "created_at": "2025-02-20T13:35:36Z"
+      },
+      {
+        "objectID": "42816287",
+        "title": "Automating blog creation with CrewAI and OpenAI",
+        "url": "https://github.com/bobheadmaker/BlogAgent",
+        "points": 1,
+        "num_comments": 0,
+        "author": "bobheadmaker",
+        "created_at": "2025-01-24T19:38:51Z"
+      },
+      {
+        "objectID": "42165795",
+        "title": "Show HN: Autogen and CrewAI are dev intense, so i made my own agents(free)",
+        "url": "https://github.com/ShreeshaBhat1004/Easy-Agent",
+        "points": 1,
+        "num_comments": 0,
+        "author": "shreeshabhat043",
+        "created_at": "2024-11-17T18:17:46Z"
+      },
+      {
+        "objectID": "41940360",
+        "title": "Client Feedback Processing with AI Agents Using CrewAI",
+        "url": "https://appventuretime.blog/client-feedback-processing-with-ai-agents-using-crewai2",
+        "points": 1,
+        "num_comments": 0,
+        "author": "cbuu",
+        "created_at": "2024-10-24T22:10:51Z"
+      },
+      {
+        "objectID": "40589743",
+        "title": "Why I'm Staying Away from Crew AI [video]",
+        "url": "https://www.youtube.com/watch?v=U4uBHs0gym0",
+        "points": 1,
+        "num_comments": 0,
+        "author": "mychaelangelo",
+        "created_at": "2024-06-05T19:54:31Z"
+      },
+      {
+        "objectID": "38723253",
+        "title": "Company Spotlight: CrewAI",
+        "url": "https://blog.replit.com/crew-ai",
+        "points": 1,
+        "num_comments": 0,
+        "author": "todsacerdoti",
+        "created_at": "2023-12-21T17:10:11Z"
+      }
+    ]
+  }
+}

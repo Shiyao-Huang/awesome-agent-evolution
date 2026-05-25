@@ -1,0 +1,736 @@
+{
+  "project": "GenAI Agents",
+  "repo": "NirDiamant/GenAI_Agents",
+  "collected_at": "2026-05-22T11:05:28.959382+00:00",
+  "queries": [
+    "GenAI Agents",
+    "GenAI_Agents"
+  ],
+  "total_hits": 80,
+  "results": {
+    "GenAI Agents": [
+      {
+        "objectID": "37557545",
+        "title": "Show HN: A murder mystery game built on an open-source gen-AI agent framework",
+        "url": "https://www.gron.games/",
+        "points": 43,
+        "num_comments": 15,
+        "author": "broken_clock",
+        "created_at": "2023-09-18T15:28:41Z"
+      },
+      {
+        "objectID": "45069954",
+        "title": "Can GenAI agents manage a supply chain? Lessons from the classical Beer Game",
+        "url": "https://infotheorylab.github.io/beer-game/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "acalmon",
+        "created_at": "2025-08-29T22:05:42Z"
+      },
+      {
+        "objectID": "40599150",
+        "title": "Tektonic AI raises $10M to build GenAI agents for automating business operations",
+        "url": "https://techcrunch.com/2024/06/06/tektonic-ai-raises-10m-to-build-genai-agents-for-automating-business-operations/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "against_entropy",
+        "created_at": "2024-06-06T16:12:07Z"
+      },
+      {
+        "objectID": "44449050",
+        "title": "I tested a GenAI agent on real cybersecurity scenarios and it surprised me",
+        "url": "",
+        "points": 2,
+        "num_comments": 0,
+        "author": "niruwu",
+        "created_at": "2025-07-02T21:28:19Z"
+      },
+      {
+        "objectID": "46184255",
+        "title": "Production-ready templates for GenAI agents on Google Cloud",
+        "url": "https://github.com/GoogleCloudPlatform/agent-starter-pack",
+        "points": 1,
+        "num_comments": 0,
+        "author": "andrewstetsenko",
+        "created_at": "2025-12-07T19:21:03Z"
+      },
+      {
+        "objectID": "42183809",
+        "title": "Show HN: Updates on Burr (OS) – a full-stack AI agent framework",
+        "url": "https://burr.dagworks.io/",
+        "points": 8,
+        "num_comments": 1,
+        "author": "elijahbenizzy",
+        "created_at": "2024-11-19T14:30:09Z"
+      },
+      {
+        "objectID": "42688187",
+        "title": "Ask HN: Resources to Learn AI Fundamentals?",
+        "url": "",
+        "points": 3,
+        "num_comments": 0,
+        "author": "bsuki",
+        "created_at": "2025-01-13T19:57:41Z"
+      },
+      {
+        "objectID": "44709813",
+        "title": "Show HN: Coegil – Ship enterprise-grade, full-stack AI apps with Claude Code",
+        "url": "",
+        "points": 2,
+        "num_comments": 1,
+        "author": "guadman",
+        "created_at": "2025-07-28T11:35:45Z"
+      },
+      {
+        "objectID": "48161210",
+        "title": "Show HN: Vyvoice: Privacy-first, cross-platform, offline voice transcription app",
+        "url": "https://vyvoice.com",
+        "points": 2,
+        "num_comments": 0,
+        "author": "recursivegirth",
+        "created_at": "2026-05-16T15:47:03Z"
+      },
+      {
+        "objectID": "47603542",
+        "title": "Show HN: Agent Action Guard – AI agent action safety",
+        "url": "",
+        "points": 2,
+        "num_comments": 0,
+        "author": "praneeth-v",
+        "created_at": "2026-04-01T17:02:51Z"
+      },
+      {
+        "objectID": "45810788",
+        "title": "Ask HN: Tech Stack for Startup",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "sirbraavos",
+        "created_at": "2025-11-04T13:28:27Z"
+      },
+      {
+        "objectID": "41497662",
+        "title": "Extensive Open-Source Collection of AI Agent Implementations and Many Use Cases",
+        "url": "https://github.com/NirDiamant/GenAI_Agents",
+        "points": 1,
+        "num_comments": 1,
+        "author": "nirdiamant",
+        "created_at": "2024-09-10T06:11:28Z"
+      },
+      {
+        "objectID": "42574960",
+        "title": "Building a Decentralized Ecosystem of Agents",
+        "url": "https://medium.com/decentralized-ecosystem-of-autonomous-genai-agents/building-a-decentralized-ecosystem-of-autonomous-genai-agents-c297e7a0d10f",
+        "points": 1,
+        "num_comments": 0,
+        "author": "primogen",
+        "created_at": "2025-01-02T14:59:15Z"
+      },
+      {
+        "objectID": "41648634",
+        "title": "Tutorials and implementations for various Generative AI Agent techniques",
+        "url": "https://github.com/NirDiamant/GenAI_Agents",
+        "points": 1,
+        "num_comments": 0,
+        "author": "janandonly",
+        "created_at": "2024-09-25T15:40:51Z"
+      },
+      {
+        "objectID": "46944961",
+        "title": "Added OTEL Observability to OpenClaw agents full GenAI spec support",
+        "url": "https://github.com/openclaw/openclaw/pull/11100",
+        "points": 6,
+        "num_comments": 2,
+        "author": "draismaa",
+        "created_at": "2026-02-09T13:25:33Z"
+      },
+      {
+        "objectID": "47228046",
+        "title": "A \"Game First\" Implementation of GenAI (Unity and Agents)",
+        "url": "https://blackwaterlabs.io",
+        "points": 2,
+        "num_comments": 1,
+        "author": "AlisonJJJ",
+        "created_at": "2026-03-03T04:28:11Z"
+      },
+      {
+        "objectID": "39406988",
+        "title": "Yann LeCun on GenAI as Autonomous Agent",
+        "url": "https://twitter.com/ylecun/status/1758740636176396354",
+        "points": 2,
+        "num_comments": 0,
+        "author": "mfiguiere",
+        "created_at": "2024-02-17T06:37:52Z"
+      },
+      {
+        "objectID": "44196509",
+        "title": "FlyMy.AI Media Agent 1 — GenAI Tools for Developers",
+        "url": "https://medium.com/flymy-ai/flymy-ai-media-agent-1-next-level-genai-tools-for-developers-6754c446e493",
+        "points": 1,
+        "num_comments": 0,
+        "author": "denti",
+        "created_at": "2025-06-05T23:15:24Z"
+      },
+      {
+        "objectID": "43438205",
+        "title": "Building AI Agents with Gen AI Toolbox for Databases and Dgraph",
+        "url": "https://cloud.google.com/blog/topics/partners/expanding-gen-ai-toolbox-for-databases-with-hypermode",
+        "points": 1,
+        "num_comments": 0,
+        "author": "johnymontana",
+        "created_at": "2025-03-21T17:02:56Z"
+      },
+      {
+        "objectID": "47927407",
+        "title": "Show HN: Is it art? An art project for AI agents",
+        "url": "https://isitartstudio.com",
+        "points": 2,
+        "num_comments": 0,
+        "author": "is-it-art",
+        "created_at": "2026-04-27T21:15:46Z"
+      },
+      {
+        "objectID": "42694778",
+        "title": "Resources that teach AI through Projects?",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "bsuki",
+        "created_at": "2025-01-14T07:44:30Z"
+      },
+      {
+        "objectID": "47532658",
+        "title": "Review of \"Vibe Coding: Building production grade software with Gen AI\"",
+        "url": "https://www.pramodb.com/index.php/2026/03/26/book-review-vibe-coding-building-production-grade-software-with-gen-ai-chat-agents-and-beyond/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "pramodbiligiri",
+        "created_at": "2026-03-26T16:39:10Z"
+      },
+      {
+        "objectID": "44183118",
+        "title": "Autonomous coding agents: A Codex example",
+        "url": "https://martinfowler.com/articles/exploring-gen-ai/autonomous-agents-codex-example.html",
+        "points": 3,
+        "num_comments": 0,
+        "author": "ulrischa",
+        "created_at": "2025-06-04T17:19:59Z"
+      },
+      {
+        "objectID": "36487604",
+        "title": "Show HN: Platform for building Gen-AI applications on Spark",
+        "url": "https://www.prophecy.io/blog/prophecy-generative-ai-platform-applications-on-enterprise-data-built-in-hours",
+        "points": 11,
+        "num_comments": 3,
+        "author": "several27",
+        "created_at": "2023-06-27T00:22:41Z"
+      },
+      {
+        "objectID": "37849487",
+        "title": "Ask HN: What would a \"designed-for-AI\" programming lang look like?",
+        "url": "",
+        "points": 1,
+        "num_comments": 1,
+        "author": "obeavs",
+        "created_at": "2023-10-11T19:57:16Z"
+      },
+      {
+        "objectID": "41460050",
+        "title": "Marc Benioff declared a hard pivot to autonomous AI agents. Will it be enough?",
+        "url": "https://fortune.com/2024/09/05/salesforce-ceo-marc-benioff-ai-agents-agentforce-dreamforce-gen-ai-era/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "kjhughes",
+        "created_at": "2024-09-05T20:14:45Z"
+      },
+      {
+        "objectID": "47271716",
+        "title": "Humans and Agents in Software Engineering Loops",
+        "url": "https://martinfowler.com/articles/exploring-gen-ai/humans-and-agents.html",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ColinEberhardt",
+        "created_at": "2026-03-06T06:43:17Z"
+      },
+      {
+        "objectID": "46695570",
+        "title": "Decision AI is the engine. GenAI is the interface. Agents are the operators",
+        "url": "https://eagleeyethinker.substack.com/p/the-four-ai-patterns-that-run-every",
+        "points": 1,
+        "num_comments": 1,
+        "author": "eagleeyethinker",
+        "created_at": "2026-01-20T18:12:18Z"
+      },
+      {
+        "objectID": "44685623",
+        "title": "MassGen: Multi-Agent Scaling System for GenAI",
+        "url": "https://github.com/Leezekun/MassGen",
+        "points": 1,
+        "num_comments": 0,
+        "author": "gfortaine",
+        "created_at": "2025-07-25T17:17:29Z"
+      },
+      {
+        "objectID": "46837016",
+        "title": "Show HN: Build reliably with Google GenAI tech thanks to this skills repo",
+        "url": "https://github.com/cnemri/google-genai-skills",
+        "points": 2,
+        "num_comments": 0,
+        "author": "cnemri",
+        "created_at": "2026-01-31T14:31:39Z"
+      },
+      {
+        "objectID": "47436529",
+        "title": "Context Engineering for Coding Agents",
+        "url": "https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "BerislavLopac",
+        "created_at": "2026-03-19T08:44:16Z"
+      },
+      {
+        "objectID": "45450000",
+        "title": "Neo4j Aura Agent: Create Your Own GraphRAG Agent in Minutes",
+        "url": "https://neo4j.com/blog/genai/build-context-aware-graphrag-agent/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "johnymontana",
+        "created_at": "2025-10-02T14:24:01Z"
+      },
+      {
+        "objectID": "46917780",
+        "title": "Context Engineering for Coding Agents",
+        "url": "https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html",
+        "points": 1,
+        "num_comments": 1,
+        "author": "ColinEberhardt",
+        "created_at": "2026-02-06T20:33:44Z"
+      },
+      {
+        "objectID": "43011679",
+        "title": "How to Build a GenAI Chatbot with Gemini and Vertex AI Agent Builder",
+        "url": "https://foolcontrol.org/?p=5051",
+        "points": 1,
+        "num_comments": 1,
+        "author": "fooctrl",
+        "created_at": "2025-02-11T11:39:35Z"
+      },
+      {
+        "objectID": "37753791",
+        "title": "Show HN: Wild Moose – Autonomous agent for production debugging",
+        "url": "https://www.wildmoose.ai/",
+        "points": 55,
+        "num_comments": 19,
+        "author": "yasmind",
+        "created_at": "2023-10-03T16:08:50Z"
+      },
+      {
+        "objectID": "39503469",
+        "title": "Show HN: Continuous-eval – Granular evaluation of GenAI pipelines",
+        "url": "https://github.com/relari-ai/continuous-eval",
+        "points": 10,
+        "num_comments": 2,
+        "author": "antonap",
+        "created_at": "2024-02-25T18:41:20Z"
+      },
+      {
+        "objectID": "43812336",
+        "title": "Show HN: Mirror AI – LLM agent that takes action, not just chat",
+        "url": "https://themirrorai.com",
+        "points": 5,
+        "num_comments": 4,
+        "author": "sat13",
+        "created_at": "2025-04-27T14:47:49Z"
+      },
+      {
+        "objectID": "47621306",
+        "title": "Show HN: Currant – Anonymus social media for NON-AI agents",
+        "url": "https://currantfeed.cc",
+        "points": 4,
+        "num_comments": 0,
+        "author": "PAndreew",
+        "created_at": "2026-04-02T23:00:37Z"
+      },
+      {
+        "objectID": "42129310",
+        "title": "Show HN: Retail Mage – A multiplayer Unreal game where GenAI NPCs go to shop",
+        "url": "https://store.steampowered.com/app/3224380/Retail_Mage/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "jaaron",
+        "created_at": "2024-11-13T19:57:21Z"
+      },
+      {
+        "objectID": "42454326",
+        "title": "Show HN: Fellou the Next-Gen AI Browser, Browse as Seamlessly as Using Cursor",
+        "url": "",
+        "points": 3,
+        "num_comments": 3,
+        "author": "ivydom",
+        "created_at": "2024-12-18T19:54:40Z"
+      }
+    ],
+    "GenAI_Agents": [
+      {
+        "objectID": "37557545",
+        "title": "Show HN: A murder mystery game built on an open-source gen-AI agent framework",
+        "url": "https://www.gron.games/",
+        "points": 43,
+        "num_comments": 15,
+        "author": "broken_clock",
+        "created_at": "2023-09-18T15:28:41Z"
+      },
+      {
+        "objectID": "45069954",
+        "title": "Can GenAI agents manage a supply chain? Lessons from the classical Beer Game",
+        "url": "https://infotheorylab.github.io/beer-game/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "acalmon",
+        "created_at": "2025-08-29T22:05:42Z"
+      },
+      {
+        "objectID": "40599150",
+        "title": "Tektonic AI raises $10M to build GenAI agents for automating business operations",
+        "url": "https://techcrunch.com/2024/06/06/tektonic-ai-raises-10m-to-build-genai-agents-for-automating-business-operations/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "against_entropy",
+        "created_at": "2024-06-06T16:12:07Z"
+      },
+      {
+        "objectID": "44449050",
+        "title": "I tested a GenAI agent on real cybersecurity scenarios and it surprised me",
+        "url": "",
+        "points": 2,
+        "num_comments": 0,
+        "author": "niruwu",
+        "created_at": "2025-07-02T21:28:19Z"
+      },
+      {
+        "objectID": "46184255",
+        "title": "Production-ready templates for GenAI agents on Google Cloud",
+        "url": "https://github.com/GoogleCloudPlatform/agent-starter-pack",
+        "points": 1,
+        "num_comments": 0,
+        "author": "andrewstetsenko",
+        "created_at": "2025-12-07T19:21:03Z"
+      },
+      {
+        "objectID": "42183809",
+        "title": "Show HN: Updates on Burr (OS) – a full-stack AI agent framework",
+        "url": "https://burr.dagworks.io/",
+        "points": 8,
+        "num_comments": 1,
+        "author": "elijahbenizzy",
+        "created_at": "2024-11-19T14:30:09Z"
+      },
+      {
+        "objectID": "42688187",
+        "title": "Ask HN: Resources to Learn AI Fundamentals?",
+        "url": "",
+        "points": 3,
+        "num_comments": 0,
+        "author": "bsuki",
+        "created_at": "2025-01-13T19:57:41Z"
+      },
+      {
+        "objectID": "44709813",
+        "title": "Show HN: Coegil – Ship enterprise-grade, full-stack AI apps with Claude Code",
+        "url": "",
+        "points": 2,
+        "num_comments": 1,
+        "author": "guadman",
+        "created_at": "2025-07-28T11:35:45Z"
+      },
+      {
+        "objectID": "48161210",
+        "title": "Show HN: Vyvoice: Privacy-first, cross-platform, offline voice transcription app",
+        "url": "https://vyvoice.com",
+        "points": 2,
+        "num_comments": 0,
+        "author": "recursivegirth",
+        "created_at": "2026-05-16T15:47:03Z"
+      },
+      {
+        "objectID": "47603542",
+        "title": "Show HN: Agent Action Guard – AI agent action safety",
+        "url": "",
+        "points": 2,
+        "num_comments": 0,
+        "author": "praneeth-v",
+        "created_at": "2026-04-01T17:02:51Z"
+      },
+      {
+        "objectID": "45810788",
+        "title": "Ask HN: Tech Stack for Startup",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "sirbraavos",
+        "created_at": "2025-11-04T13:28:27Z"
+      },
+      {
+        "objectID": "41497662",
+        "title": "Extensive Open-Source Collection of AI Agent Implementations and Many Use Cases",
+        "url": "https://github.com/NirDiamant/GenAI_Agents",
+        "points": 1,
+        "num_comments": 1,
+        "author": "nirdiamant",
+        "created_at": "2024-09-10T06:11:28Z"
+      },
+      {
+        "objectID": "42574960",
+        "title": "Building a Decentralized Ecosystem of Agents",
+        "url": "https://medium.com/decentralized-ecosystem-of-autonomous-genai-agents/building-a-decentralized-ecosystem-of-autonomous-genai-agents-c297e7a0d10f",
+        "points": 1,
+        "num_comments": 0,
+        "author": "primogen",
+        "created_at": "2025-01-02T14:59:15Z"
+      },
+      {
+        "objectID": "41648634",
+        "title": "Tutorials and implementations for various Generative AI Agent techniques",
+        "url": "https://github.com/NirDiamant/GenAI_Agents",
+        "points": 1,
+        "num_comments": 0,
+        "author": "janandonly",
+        "created_at": "2024-09-25T15:40:51Z"
+      },
+      {
+        "objectID": "46944961",
+        "title": "Added OTEL Observability to OpenClaw agents full GenAI spec support",
+        "url": "https://github.com/openclaw/openclaw/pull/11100",
+        "points": 6,
+        "num_comments": 2,
+        "author": "draismaa",
+        "created_at": "2026-02-09T13:25:33Z"
+      },
+      {
+        "objectID": "47228046",
+        "title": "A \"Game First\" Implementation of GenAI (Unity and Agents)",
+        "url": "https://blackwaterlabs.io",
+        "points": 2,
+        "num_comments": 1,
+        "author": "AlisonJJJ",
+        "created_at": "2026-03-03T04:28:11Z"
+      },
+      {
+        "objectID": "39406988",
+        "title": "Yann LeCun on GenAI as Autonomous Agent",
+        "url": "https://twitter.com/ylecun/status/1758740636176396354",
+        "points": 2,
+        "num_comments": 0,
+        "author": "mfiguiere",
+        "created_at": "2024-02-17T06:37:52Z"
+      },
+      {
+        "objectID": "44196509",
+        "title": "FlyMy.AI Media Agent 1 — GenAI Tools for Developers",
+        "url": "https://medium.com/flymy-ai/flymy-ai-media-agent-1-next-level-genai-tools-for-developers-6754c446e493",
+        "points": 1,
+        "num_comments": 0,
+        "author": "denti",
+        "created_at": "2025-06-05T23:15:24Z"
+      },
+      {
+        "objectID": "43438205",
+        "title": "Building AI Agents with Gen AI Toolbox for Databases and Dgraph",
+        "url": "https://cloud.google.com/blog/topics/partners/expanding-gen-ai-toolbox-for-databases-with-hypermode",
+        "points": 1,
+        "num_comments": 0,
+        "author": "johnymontana",
+        "created_at": "2025-03-21T17:02:56Z"
+      },
+      {
+        "objectID": "47927407",
+        "title": "Show HN: Is it art? An art project for AI agents",
+        "url": "https://isitartstudio.com",
+        "points": 2,
+        "num_comments": 0,
+        "author": "is-it-art",
+        "created_at": "2026-04-27T21:15:46Z"
+      },
+      {
+        "objectID": "42694778",
+        "title": "Resources that teach AI through Projects?",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "bsuki",
+        "created_at": "2025-01-14T07:44:30Z"
+      },
+      {
+        "objectID": "47532658",
+        "title": "Review of \"Vibe Coding: Building production grade software with Gen AI\"",
+        "url": "https://www.pramodb.com/index.php/2026/03/26/book-review-vibe-coding-building-production-grade-software-with-gen-ai-chat-agents-and-beyond/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "pramodbiligiri",
+        "created_at": "2026-03-26T16:39:10Z"
+      },
+      {
+        "objectID": "44183118",
+        "title": "Autonomous coding agents: A Codex example",
+        "url": "https://martinfowler.com/articles/exploring-gen-ai/autonomous-agents-codex-example.html",
+        "points": 3,
+        "num_comments": 0,
+        "author": "ulrischa",
+        "created_at": "2025-06-04T17:19:59Z"
+      },
+      {
+        "objectID": "36487604",
+        "title": "Show HN: Platform for building Gen-AI applications on Spark",
+        "url": "https://www.prophecy.io/blog/prophecy-generative-ai-platform-applications-on-enterprise-data-built-in-hours",
+        "points": 11,
+        "num_comments": 3,
+        "author": "several27",
+        "created_at": "2023-06-27T00:22:41Z"
+      },
+      {
+        "objectID": "37849487",
+        "title": "Ask HN: What would a \"designed-for-AI\" programming lang look like?",
+        "url": "",
+        "points": 1,
+        "num_comments": 1,
+        "author": "obeavs",
+        "created_at": "2023-10-11T19:57:16Z"
+      },
+      {
+        "objectID": "41460050",
+        "title": "Marc Benioff declared a hard pivot to autonomous AI agents. Will it be enough?",
+        "url": "https://fortune.com/2024/09/05/salesforce-ceo-marc-benioff-ai-agents-agentforce-dreamforce-gen-ai-era/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "kjhughes",
+        "created_at": "2024-09-05T20:14:45Z"
+      },
+      {
+        "objectID": "47271716",
+        "title": "Humans and Agents in Software Engineering Loops",
+        "url": "https://martinfowler.com/articles/exploring-gen-ai/humans-and-agents.html",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ColinEberhardt",
+        "created_at": "2026-03-06T06:43:17Z"
+      },
+      {
+        "objectID": "46695570",
+        "title": "Decision AI is the engine. GenAI is the interface. Agents are the operators",
+        "url": "https://eagleeyethinker.substack.com/p/the-four-ai-patterns-that-run-every",
+        "points": 1,
+        "num_comments": 1,
+        "author": "eagleeyethinker",
+        "created_at": "2026-01-20T18:12:18Z"
+      },
+      {
+        "objectID": "44685623",
+        "title": "MassGen: Multi-Agent Scaling System for GenAI",
+        "url": "https://github.com/Leezekun/MassGen",
+        "points": 1,
+        "num_comments": 0,
+        "author": "gfortaine",
+        "created_at": "2025-07-25T17:17:29Z"
+      },
+      {
+        "objectID": "46837016",
+        "title": "Show HN: Build reliably with Google GenAI tech thanks to this skills repo",
+        "url": "https://github.com/cnemri/google-genai-skills",
+        "points": 2,
+        "num_comments": 0,
+        "author": "cnemri",
+        "created_at": "2026-01-31T14:31:39Z"
+      },
+      {
+        "objectID": "47436529",
+        "title": "Context Engineering for Coding Agents",
+        "url": "https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "BerislavLopac",
+        "created_at": "2026-03-19T08:44:16Z"
+      },
+      {
+        "objectID": "45450000",
+        "title": "Neo4j Aura Agent: Create Your Own GraphRAG Agent in Minutes",
+        "url": "https://neo4j.com/blog/genai/build-context-aware-graphrag-agent/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "johnymontana",
+        "created_at": "2025-10-02T14:24:01Z"
+      },
+      {
+        "objectID": "46917780",
+        "title": "Context Engineering for Coding Agents",
+        "url": "https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html",
+        "points": 1,
+        "num_comments": 1,
+        "author": "ColinEberhardt",
+        "created_at": "2026-02-06T20:33:44Z"
+      },
+      {
+        "objectID": "43011679",
+        "title": "How to Build a GenAI Chatbot with Gemini and Vertex AI Agent Builder",
+        "url": "https://foolcontrol.org/?p=5051",
+        "points": 1,
+        "num_comments": 1,
+        "author": "fooctrl",
+        "created_at": "2025-02-11T11:39:35Z"
+      },
+      {
+        "objectID": "37753791",
+        "title": "Show HN: Wild Moose – Autonomous agent for production debugging",
+        "url": "https://www.wildmoose.ai/",
+        "points": 55,
+        "num_comments": 19,
+        "author": "yasmind",
+        "created_at": "2023-10-03T16:08:50Z"
+      },
+      {
+        "objectID": "39503469",
+        "title": "Show HN: Continuous-eval – Granular evaluation of GenAI pipelines",
+        "url": "https://github.com/relari-ai/continuous-eval",
+        "points": 10,
+        "num_comments": 2,
+        "author": "antonap",
+        "created_at": "2024-02-25T18:41:20Z"
+      },
+      {
+        "objectID": "43812336",
+        "title": "Show HN: Mirror AI – LLM agent that takes action, not just chat",
+        "url": "https://themirrorai.com",
+        "points": 5,
+        "num_comments": 4,
+        "author": "sat13",
+        "created_at": "2025-04-27T14:47:49Z"
+      },
+      {
+        "objectID": "47621306",
+        "title": "Show HN: Currant – Anonymus social media for NON-AI agents",
+        "url": "https://currantfeed.cc",
+        "points": 4,
+        "num_comments": 0,
+        "author": "PAndreew",
+        "created_at": "2026-04-02T23:00:37Z"
+      },
+      {
+        "objectID": "42129310",
+        "title": "Show HN: Retail Mage – A multiplayer Unreal game where GenAI NPCs go to shop",
+        "url": "https://store.steampowered.com/app/3224380/Retail_Mage/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "jaaron",
+        "created_at": "2024-11-13T19:57:21Z"
+      },
+      {
+        "objectID": "42454326",
+        "title": "Show HN: Fellou the Next-Gen AI Browser, Browse as Seamlessly as Using Cursor",
+        "url": "",
+        "points": 3,
+        "num_comments": 3,
+        "author": "ivydom",
+        "created_at": "2024-12-18T19:54:40Z"
+      }
+    ]
+  }
+}

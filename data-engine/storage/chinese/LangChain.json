@@ -1,0 +1,14 @@
+{
+  "project": "LangChain",
+  "repo": "langchain-ai/langchain",
+  "collected_at": "2026-05-22T11:09:45.606120+00:00",
+  "queries": [
+    "LangChain"
+  ],
+  "results": {
+    "LangChain": {
+      "juejin": [],
+      "cnblogs": []
+    }
+  }
+}

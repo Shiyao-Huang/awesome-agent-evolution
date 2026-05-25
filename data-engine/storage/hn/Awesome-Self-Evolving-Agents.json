@@ -1,0 +1,23 @@
+{
+  "project": "Awesome-Self-Evolving-Agents",
+  "repo": "EvoAgentX/Awesome-Self-Evolving-Agents",
+  "collected_at": "2026-05-22T11:09:22.233494+00:00",
+  "queries": [
+    "Awesome-Self-Evolving-Agents",
+    "Awesome-Self-Evolving-Agents"
+  ],
+  "total_hits": 1,
+  "results": {
+    "Awesome-Self-Evolving-Agents": [
+      {
+        "objectID": "45099226",
+        "title": "Show HN: Self-Evolving Agents – interactive evolving AI agent list",
+        "url": "https://github.com/EvoAgentX/Awesome-Self-Evolving-Agents",
+        "points": 2,
+        "num_comments": 1,
+        "author": "EvoAgentX",
+        "created_at": "2025-09-02T04:43:46Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "project": "mcp-use",
+  "repo": "mcp-use/mcp-use",
+  "collected_at": "2026-05-22T11:09:18.048143+00:00",
+  "queries": [
+    "mcp-use",
+    "mcp-use"
+  ],
+  "total_hits": 40,
+  "results": {
+    "mcp-use": [
+      {
+        "objectID": "44747229",
+        "title": "Show HN: Mcp-use – Connect any LLM to any MCP",
+        "url": "https://github.com/mcp-use/mcp-use",
+        "points": 155,
+        "num_comments": 74,
+        "author": "pzullo",
+        "created_at": "2025-07-31T16:25:51Z"
+      },
+      {
+        "objectID": "45994560",
+        "title": "Show HN: Code Mode for MCP in MCP-use's client",
+        "url": "",
+        "points": 3,
+        "num_comments": 3,
+        "author": "pzullo",
+        "created_at": "2025-11-20T16:39:06Z"
+      },
+      {
+        "objectID": "46590260",
+        "title": "Playwriter: Browser extension MCP uses 90% fewer tokens than Playwright",
+        "url": "https://github.com/remorses/playwriter",
+        "points": 3,
+        "num_comments": 0,
+        "author": "Areibman",
+        "created_at": "2026-01-12T16:03:31Z"
+      },
+      {
+        "objectID": "45125576",
+        "title": "Spotify MCP – use Cursor and Claude to control playback and manage playlists",
+        "url": "https://github.com/marcelmarais/spotify-mcp-server",
+        "points": 3,
+        "num_comments": 0,
+        "author": "stared",
+        "created_at": "2025-09-04T10:15:21Z"
+      },
+      {
+        "objectID": "44270930",
+        "title": "Real-World MCP Use at ClickHouse",
+        "url": "https://www.youtube.com/watch?v=RX8SlV4uST4",
+        "points": 2,
+        "num_comments": 0,
+        "author": "cindreta",
+        "created_at": "2025-06-13T18:27:30Z"
+      },
+      {
+        "objectID": "43557219",
+        "title": "WireMock MCP: Use AI Coding Agents for Codebase-Aware API Simulation",
+        "url": "https://www.wiremock.io/post/wiremock-mcp-ai-coding-agents",
+        "points": 2,
+        "num_comments": 0,
+        "author": "hackeruse",
+        "created_at": "2025-04-02T14:39:01Z"
+      },
+      {
+        "objectID": "46306398",
+        "title": "Building ChatGPT Apps with Supabase Edge Functions and MCP-Use",
+        "url": "https://supabase.com/blog/building-chatgpt-apps-with-supabase",
+        "points": 1,
+        "num_comments": 0,
+        "author": "luigipederzani",
+        "created_at": "2025-12-17T22:22:28Z"
+      },
+      {
+        "objectID": "43900719",
+        "title": "GitHub Chat MCP – Use GitHub Chat with Cursor and Claude",
+        "url": "https://github-chat.com/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "javatuts",
+        "created_at": "2025-05-06T00:21:34Z"
+      },
+      {
+        "objectID": "44435257",
+        "title": "Show HN: We built an open source BYOK CLI that supports any model and any MCP",
+        "url": "https://github.com/mcp-use/mcp-use-cli",
+        "points": 6,
+        "num_comments": 2,
+        "author": "pzullo",
+        "created_at": "2025-07-01T16:01:20Z"
+      },
+      {
+        "objectID": "48110929",
+        "title": "Show HN: How we made MCP development feel good",
+        "url": "https://manufact.com/blog/mcp-testing",
+        "points": 6,
+        "num_comments": 1,
+        "author": "pzullo",
+        "created_at": "2026-05-12T16:55:42Z"
+      },
+      {
+        "objectID": "47095935",
+        "title": "Show HN: Murl – Curl for MCP Servers",
+        "url": "https://github.com/turlockmike/murl",
+        "points": 5,
+        "num_comments": 2,
+        "author": "turlockmike",
+        "created_at": "2026-02-21T00:15:24Z"
+      },
+      {
+        "objectID": "43558035",
+        "title": "Show HN: OSS Python client for creating MCP capable agents in 6 lines of code",
+        "url": "https://github.com/pietrozullo/mcp-use",
+        "points": 5,
+        "num_comments": 2,
+        "author": "pzullo",
+        "created_at": "2025-04-02T15:48:34Z"
+      },
+      {
+        "objectID": "45741621",
+        "title": "Show HN: UndatasIO's document parser MCP server is online",
+        "url": "https://docs.undatas.io/mcp/undatas-mcp/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "jojogh",
+        "created_at": "2025-10-29T01:39:20Z"
+      },
+      {
+        "objectID": "45292121",
+        "title": "Show HN: PageIndex MCP – Chat with Long PDFs on Claude or Cursor",
+        "url": "https://github.com/VectifyAI/pageindex-mcp",
+        "points": 4,
+        "num_comments": 0,
+        "author": "mingtianzhang",
+        "created_at": "2025-09-18T17:02:56Z"
+      },
+      {
+        "objectID": "44872585",
+        "title": "Show HN: YouTube MCP Tool for Puch AI",
+        "url": "",
+        "points": 4,
+        "num_comments": 0,
+        "author": "codelif",
+        "created_at": "2025-08-12T05:04:29Z"
+      },
+      {
+        "objectID": "44113411",
+        "title": "Ask HN: Would you be interested in OpenRouter for MCPs?",
+        "url": "",
+        "points": 3,
+        "num_comments": 2,
+        "author": "subramanya1997",
+        "created_at": "2025-05-28T07:10:54Z"
+      },
+      {
+        "objectID": "43410383",
+        "title": "Show HN: Vibe Coding Best Practices for our dev team",
+        "url": "",
+        "points": 3,
+        "num_comments": 1,
+        "author": "bv_dev",
+        "created_at": "2025-03-19T10:56:27Z"
+      },
+      {
+        "objectID": "47346296",
+        "title": "Show HN: AutoICD API – AI clinical coding platform for ICD-10 and SNOMED",
+        "url": "https://autoicdapi.com",
+        "points": 3,
+        "num_comments": 0,
+        "author": "FedeUY",
+        "created_at": "2026-03-12T04:00:43Z"
+      },
+      {
+        "objectID": "44317480",
+        "title": "Show HN: mcp-webcam – now supports Streamable HTTP, Sampling and multiple Users",
+        "url": "https://evalstate-mcp-webcam.hf.space/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "evalstate",
+        "created_at": "2025-06-19T11:08:32Z"
+      },
+      {
+        "objectID": "43748232",
+        "title": "The most complete (and easy) explanation of MCP vulnerabilities",
+        "url": "",
+        "points": 3,
+        "num_comments": 0,
+        "author": "Arindam1729",
+        "created_at": "2025-04-21T03:09:16Z"
+      },
+      {
+        "objectID": "47848169",
+        "title": "Show HN: Anvil – a multi-repo AI pipeline and an MCP server for code search",
+        "url": "",
+        "points": 2,
+        "num_comments": 0,
+        "author": "esankhan3",
+        "created_at": "2026-04-21T13:00:30Z"
+      },
+      {
+        "objectID": "46137292",
+        "title": "Show HN: Copilot's semantic code search, now as a remote MCP",
+        "url": "",
+        "points": 2,
+        "num_comments": 0,
+        "author": "wwdmaxwell",
+        "created_at": "2025-12-03T17:27:39Z"
+      },
+      {
+        "objectID": "46922746",
+        "title": "Show HN: MCP to get latest dependency package and tool versions",
+        "url": "https://github.com/MShekow/package-version-check-mcp",
+        "points": 1,
+        "num_comments": 0,
+        "author": "mshekow",
+        "created_at": "2026-02-07T10:25:50Z"
+      },
+      {
+        "objectID": "46526294",
+        "title": "AI-Stack.dev – A persistent, community index for AI dev tools and MCPs",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "aistackdev",
+        "created_at": "2026-01-07T13:44:58Z"
+      },
+      {
+        "objectID": "45283125",
+        "title": "Show HN: PageIndex MCP – Chat with Long PDFs on Claude or Cursor",
+        "url": "https://pageindex.ai/mcp",
+        "points": 1,
+        "num_comments": 0,
+        "author": "mingtianzhang",
+        "created_at": "2025-09-18T00:09:27Z"
+      },
+      {
+        "objectID": "44112979",
+        "title": "Show HN: MCP² (Mcpsq) – A MCP Server to Discover and Install Other MCP Servers",
+        "url": "https://mcpsq.xyz",
+        "points": 1,
+        "num_comments": 0,
+        "author": "xinbenlv",
+        "created_at": "2025-05-28T05:24:26Z"
+      },
+      {
+        "objectID": "43943899",
+        "title": "Model Context Protocol (MCP) Clearly Explained",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Arindam1729",
+        "created_at": "2025-05-10T07:40:07Z"
+      },
+      {
+        "objectID": "14141454",
+        "title": "A customer reported an error in the map used by Flight Simulator",
+        "url": "https://blogs.msdn.microsoft.com/oldnewthing/20170418-00/?p=95985",
+        "points": 773,
+        "num_comments": 231,
+        "author": "Doubleguitars",
+        "created_at": "2017-04-18T18:25:44Z"
+      },
+      {
+        "objectID": "22079160",
+        "title": "Show HN: Pinball Map – user-updated map of public pinball machines",
+        "url": "https://pinballmap.com/",
+        "points": 203,
+        "num_comments": 85,
+        "author": "ryantgtg",
+        "created_at": "2020-01-17T20:52:49Z"
+      },
+      {
+        "objectID": "5929726",
+        "title": "My Boston T map used in “The Last of Us” PS3 game",
+        "url": "http://transitmaps.tumblr.com/post/53696766419/boston-theft",
+        "points": 37,
+        "num_comments": 50,
+        "author": "martingordon",
+        "created_at": "2013-06-23T22:08:02Z"
+      },
+      {
+        "objectID": "22559759",
+        "title": "Live Coronavirus Map Used to Spread Malware",
+        "url": "https://krebsonsecurity.com/2020/03/live-coronavirus-map-used-to-spread-malware/",
+        "points": 10,
+        "num_comments": 1,
+        "author": "feross",
+        "created_at": "2020-03-12T18:03:00Z"
+      },
+      {
+        "objectID": "20689781",
+        "title": "Show HN: Pinball Map – user-updated map of public pinball machines",
+        "url": "https://pinballmap.com/",
+        "points": 6,
+        "num_comments": 1,
+        "author": "ryantgtg",
+        "created_at": "2019-08-13T20:17:04Z"
+      },
+      {
+        "objectID": "21371302",
+        "title": "PG&E Outage Map uses elasticbeanstalk and returns 4.6MB JSON response",
+        "url": "",
+        "points": 4,
+        "num_comments": 0,
+        "author": "wmaiouiru",
+        "created_at": "2019-10-27T17:57:46Z"
+      },
+      {
+        "objectID": "22582366",
+        "title": "Live Coronavirus Map Used to Spread Malware",
+        "url": "https://krebsonsecurity.com/2020/03/live-coronavirus-map-used-to-spread-malware/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "robin_reala",
+        "created_at": "2020-03-15T09:27:09Z"
+      },
+      {
+        "objectID": "38321292",
+        "title": "New plant hardiness map, used by gardeners nationwide, is unveiled",
+        "url": "https://phys.org/news/2023-11-hardiness-gardeners-nationwide-unveiled.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "PaulHoule",
+        "created_at": "2023-11-18T16:33:22Z"
+      },
+      {
+        "objectID": "14226516",
+        "title": "This interactive map uses machine learning to arrange visually similar fonts",
+        "url": "http://www.theverge.com/2017/4/27/15454362/ideo-font-map-interactive-typography-tool",
+        "points": 2,
+        "num_comments": 0,
+        "author": "rbanffy",
+        "created_at": "2017-04-29T13:37:00Z"
+      },
+      {
+        "objectID": "5078533",
+        "title": "UK Snow Map uses #uksnow tweets to draw an up-to-the-minute map",
+        "url": "http://uksnowmap.com",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ayers",
+        "created_at": "2013-01-18T13:44:28Z"
+      },
+      {
+        "objectID": "4270826",
+        "title": "Tube map used to plot Londoners' life expectancy",
+        "url": "http://www.bbc.co.uk/news/uk-england-london-18917932",
+        "points": 1,
+        "num_comments": 0,
+        "author": "anons2011",
+        "created_at": "2012-07-20T14:03:24Z"
+      },
+      {
+        "objectID": "38304886",
+        "title": "New Plant hardiness map, used by gardeners and based on OSU climate data",
+        "url": "https://today.oregonstate.edu/news/new-plant-hardiness-map-used-gardeners-nationwide-and-based-osu-climate-data-unveiled",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Brajeshwar",
+        "created_at": "2023-11-17T15:28:55Z"
+      },
+      {
+        "objectID": "33215567",
+        "title": "Map Uses GPS Locations to Show How Territorial Wolf Packs Are (2019)",
+        "url": "https://twistedsifter.com/2019/01/gps-map-shows-how-territorial-wolf-packs-are/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "mellosouls",
+        "created_at": "2022-10-15T15:17:17Z"
+      }
+    ]
+  }
+}

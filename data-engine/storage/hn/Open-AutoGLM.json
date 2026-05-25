@@ -1,0 +1,412 @@
+{
+  "project": "Open-AutoGLM",
+  "repo": "zai-org/AutoGLM",
+  "collected_at": "2026-05-22T11:05:18.542304+00:00",
+  "queries": [
+    "Open-AutoGLM",
+    "AutoGLM"
+  ],
+  "total_hits": 44,
+  "results": {
+    "Open-AutoGLM": [
+      {
+        "objectID": "47125052",
+        "title": "Open-AutoGLM: Zhipu AI's Open-Source Framework for Phone Agents (23k Stars)",
+        "url": "https://theagenttimes.com/articles/open-autoglm-23k-stars-the-phone-agent-framework-from-chinas-ai-heavyweight",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Ross00781",
+        "created_at": "2026-02-23T17:01:51Z"
+      },
+      {
+        "objectID": "47112620",
+        "title": "Open-AutoGLM: Zhipu AI Open-Sources a Framework for Autonomous Phone Agents",
+        "url": "https://theagenttimes.com/articles/open-autoglm-23k-stars-the-phone-agent-framework-from-chinas-ai-heavyweight",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Ross00781",
+        "created_at": "2026-02-22T17:01:15Z"
+      },
+      {
+        "objectID": "46298907",
+        "title": "Open source - phone agent automation",
+        "url": "https://github.com/zai-org/Open-AutoGLM",
+        "points": 2,
+        "num_comments": 0,
+        "author": "impact_sy",
+        "created_at": "2025-12-17T06:36:53Z"
+      },
+      {
+        "objectID": "46203937",
+        "title": "AutoGLM – an open-source AI agent for full phone operation from Zhipu AI",
+        "url": "https://github.com/zai-org/Open-AutoGLM",
+        "points": 2,
+        "num_comments": 0,
+        "author": "nekofneko",
+        "created_at": "2025-12-09T11:56:58Z"
+      }
+    ],
+    "AutoGLM": [
+      {
+        "objectID": "46232208",
+        "title": "AutoGLM-Phone-9B-Multilingual: Vision-language model for automated mobile agents",
+        "url": "https://huggingface.co/zai-org/AutoGLM-Phone-9B-Multilingual",
+        "points": 3,
+        "num_comments": 0,
+        "author": "mudkipdev",
+        "created_at": "2025-12-11T15:01:06Z"
+      },
+      {
+        "objectID": "47125052",
+        "title": "Open-AutoGLM: Zhipu AI's Open-Source Framework for Phone Agents (23k Stars)",
+        "url": "https://theagenttimes.com/articles/open-autoglm-23k-stars-the-phone-agent-framework-from-chinas-ai-heavyweight",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Ross00781",
+        "created_at": "2026-02-23T17:01:51Z"
+      },
+      {
+        "objectID": "46232190",
+        "title": "AutoGLM-Phone-9B-Multilingual: Vision-language model for automated mobile agents",
+        "url": "http://huggingface.co/zai-org/AutoGLM-Phone-9B-Multilingual.com",
+        "points": 2,
+        "num_comments": 0,
+        "author": "mudkipdev",
+        "created_at": "2025-12-11T15:00:28Z"
+      },
+      {
+        "objectID": "46203937",
+        "title": "AutoGLM – an open-source AI agent for full phone operation from Zhipu AI",
+        "url": "https://github.com/zai-org/Open-AutoGLM",
+        "points": 2,
+        "num_comments": 0,
+        "author": "nekofneko",
+        "created_at": "2025-12-09T11:56:58Z"
+      },
+      {
+        "objectID": "47112620",
+        "title": "Open-AutoGLM: Zhipu AI Open-Sources a Framework for Autonomous Phone Agents",
+        "url": "https://theagenttimes.com/articles/open-autoglm-23k-stars-the-phone-agent-framework-from-chinas-ai-heavyweight",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Ross00781",
+        "created_at": "2026-02-22T17:01:15Z"
+      },
+      {
+        "objectID": "47073173",
+        "title": "Show HN: Claude Code for Mobile GUI Automation",
+        "url": "https://github.com/UgOrange/gui_agent_skill",
+        "points": 1,
+        "num_comments": 0,
+        "author": "UgOrange",
+        "created_at": "2026-02-19T12:44:18Z"
+      },
+      {
+        "objectID": "47576192",
+        "title": "AutoClaw: AI assistant, right inside your chats",
+        "url": "https://autoglm.z.ai/autoclaw/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "pretext",
+        "created_at": "2026-03-30T16:15:06Z"
+      },
+      {
+        "objectID": "46298907",
+        "title": "Open source - phone agent automation",
+        "url": "https://github.com/zai-org/Open-AutoGLM",
+        "points": 2,
+        "num_comments": 0,
+        "author": "impact_sy",
+        "created_at": "2025-12-17T06:36:53Z"
+      },
+      {
+        "objectID": "3825060",
+        "title": "Show HN: AutoGlance",
+        "url": "http://autoglance.com/search/#1,9,75,10003,0,999999,0,999999,1-2-3-4-5-6-7-8-9-10-11",
+        "points": 68,
+        "num_comments": 30,
+        "author": "kapkapkap",
+        "created_at": "2012-04-10T23:33:58Z"
+      },
+      {
+        "objectID": "3484875",
+        "title": "Show HN: AutoGlance is the Hipmunk for Used Car Searches",
+        "url": "http://autoglance.com/search/#Acura,tl,50,10003",
+        "points": 52,
+        "num_comments": 30,
+        "author": "kapgoals",
+        "created_at": "2012-01-19T15:34:44Z"
+      },
+      {
+        "objectID": "38126764",
+        "title": "What's the difference between LangChain, llama indexand others like autollm?",
+        "url": "",
+        "points": 31,
+        "num_comments": 13,
+        "author": "johhns4",
+        "created_at": "2023-11-03T10:41:26Z"
+      },
+      {
+        "objectID": "22034657",
+        "title": "AutoGluon: AutoML Toolkit for Deep Learning",
+        "url": "https://autogluon.mxnet.io/",
+        "points": 5,
+        "num_comments": 0,
+        "author": "ArtWomb",
+        "created_at": "2020-01-13T14:23:27Z"
+      },
+      {
+        "objectID": "22515426",
+        "title": "Show HN: Accurate image classification in 3 lines of code with AutoGluon",
+        "url": "",
+        "points": 4,
+        "num_comments": 0,
+        "author": "_jonas",
+        "created_at": "2020-03-08T00:47:56Z"
+      },
+      {
+        "objectID": "22052308",
+        "title": "Amazon’s AutoGluon produces AI models with as little as 3 lines of code",
+        "url": "https://venturebeat.com/2020/01/09/amazons-autogluon-produces-ai-models-with-as-little-as-three-lines-of-code/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "gatorbait83",
+        "created_at": "2020-01-15T07:23:14Z"
+      },
+      {
+        "objectID": "22048289",
+        "title": "AWS Introduces Open Source AutoML Toolkit ‘AutoGluon’",
+        "url": "https://medium.com/syncedreview/aws-introduces-open-source-automl-toolkit-autogluon-a536f510708a",
+        "points": 4,
+        "num_comments": 0,
+        "author": "Yuqing7",
+        "created_at": "2020-01-14T19:23:45Z"
+      },
+      {
+        "objectID": "47622120",
+        "title": "AutoGameStudio – Autoresearch for Game Development",
+        "url": "https://autogamestudio.ai/games",
+        "points": 3,
+        "num_comments": 0,
+        "author": "Optl",
+        "created_at": "2026-04-03T00:50:48Z"
+      },
+      {
+        "objectID": "42313092",
+        "title": "Fast and accurate zero-shot forecasting with Chronos-Bolt and AutoGluon",
+        "url": "https://aws.amazon.com/blogs/machine-learning/fast-and-accurate-zero-shot-forecasting-with-chronos-bolt-and-autogluon/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "abdulfatir",
+        "created_at": "2024-12-04T00:01:03Z"
+      },
+      {
+        "objectID": "46573225",
+        "title": "Amazon Redshift AutoWLM and SQA internals plus commentary (and a bit on CSC)",
+        "url": "",
+        "points": 2,
+        "num_comments": 1,
+        "author": "Max-Ganz-II",
+        "created_at": "2026-01-11T06:42:38Z"
+      },
+      {
+        "objectID": "23275261",
+        "title": "Amazons AutoGluon helps deploy deep learning models with jst a few lines of code",
+        "url": "https://www.amazon.science/amazons-autogluon-helps-developers-get-up-and-running-with-state-of-the-art-deep-learning-models-with-just-a-few-lines-of-code",
+        "points": 2,
+        "num_comments": 0,
+        "author": "wanderer42",
+        "created_at": "2020-05-22T18:23:02Z"
+      },
+      {
+        "objectID": "19607336",
+        "title": "Autoglyphs, Generative Art Born on the Blockchain",
+        "url": "https://artnome.com/news/2019/4/08/autoglyphs-generative-art-born-on-the-blockchain",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Shrugs",
+        "created_at": "2019-04-08T17:42:35Z"
+      },
+      {
+        "objectID": "19604856",
+        "title": "Autoglyphs, Generative Art Born on the Blockchain",
+        "url": "https://www.artnome.com/news/2019/4/08/autoglyphs-generative-art-born-on-the-blockchain",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Artnome",
+        "created_at": "2019-04-08T13:15:38Z"
+      },
+      {
+        "objectID": "11103009",
+        "title": "​Autoglass launches global #startup accelerator",
+        "url": "http://www.pressat.co.uk/releases/autoglassr-parent-company-launches-global-startup-accelerator-06d46105b92ea6041cb26a785bc2e614/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "pressat12",
+        "created_at": "2016-02-15T12:41:30Z"
+      },
+      {
+        "objectID": "38601064",
+        "title": "AutoGluon 1.0: AutoML at Your Fingertips",
+        "url": "https://autogluon.github.io/neurips-autogluon-workshop/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "monkeydust",
+        "created_at": "2023-12-11T14:45:29Z"
+      },
+      {
+        "objectID": "23892897",
+        "title": "AutoGluon Tabular: Automatic Machine Learning for Tabular Data",
+        "url": "https://www.amazon.science/videos-webinars/autogluon-tabular-automatic-machine-learning-for-tabular-data",
+        "points": 1,
+        "num_comments": 0,
+        "author": "rweckel",
+        "created_at": "2020-07-19T22:15:33Z"
+      },
+      {
+        "objectID": "22042135",
+        "title": "Amazon’s AutoGluon produces AI models with as little as 3 lines of code",
+        "url": "https://venturebeat.com/2020/01/09/amazons-autogluon-produces-ai-models-with-as-little-as-three-lines-of-code/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "riter",
+        "created_at": "2020-01-14T05:32:14Z"
+      },
+      {
+        "objectID": "20866518",
+        "title": "Should You Enable Amazon Redshift's AutoWLM?",
+        "url": "https://www.intermix.io/blog/should-i-enable-redshifts-autowlm/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "sokolmkd",
+        "created_at": "2019-09-03T14:02:14Z"
+      },
+      {
+        "objectID": "42647343",
+        "title": "Show HN: TabPFN v2 – A SOTA foundation model for small tabular data",
+        "url": "https://www.nature.com/articles/s41586-024-08328-6/link",
+        "points": 153,
+        "num_comments": 44,
+        "author": "onasta",
+        "created_at": "2025-01-09T16:38:26Z"
+      },
+      {
+        "objectID": "45838540",
+        "title": "Show HN: TabPFN-2.5 – SOTA foundation model for tabular data",
+        "url": "https://priorlabs.ai/technical-reports/tabpfn-2-5-model-report",
+        "points": 73,
+        "num_comments": 13,
+        "author": "onasta",
+        "created_at": "2025-11-06T18:26:53Z"
+      },
+      {
+        "objectID": "37719218",
+        "title": "Redshift Research Project: Amazon Redshift Serverless [pdf]",
+        "url": "",
+        "points": 4,
+        "num_comments": 4,
+        "author": "Max-Ganz-II",
+        "created_at": "2023-09-30T20:03:49Z"
+      },
+      {
+        "objectID": "46031558",
+        "title": "Show HN: Norma – build good datasets (using an objective)",
+        "url": "https://norma.grouplabs.ca",
+        "points": 3,
+        "num_comments": 0,
+        "author": "noelfranthomas",
+        "created_at": "2025-11-24T08:11:10Z"
+      },
+      {
+        "objectID": "26165192",
+        "title": "Show HN: Compare AutoML frameworks on 10 Tabular Kaggle competitions",
+        "url": "",
+        "points": 2,
+        "num_comments": 1,
+        "author": "pplonski86",
+        "created_at": "2021-02-17T11:22:11Z"
+      },
+      {
+        "objectID": "45909608",
+        "title": "Show HN: LimiX-2M – The super-light foundation model redefining tabular learning",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "cedge",
+        "created_at": "2025-11-13T02:08:09Z"
+      },
+      {
+        "objectID": "26224194",
+        "title": "Compare AutoML frameworks on 10 Tabular Kaggle competitions",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "pplonski86",
+        "created_at": "2021-02-22T13:24:48Z"
+      },
+      {
+        "objectID": "3544781",
+        "title": "Saving money with Regular Gas in your Premium car?...Better do the math.",
+        "url": "http://autoglance.com/blog/view/9",
+        "points": 9,
+        "num_comments": 5,
+        "author": "kapgoals",
+        "created_at": "2012-02-02T22:24:15Z"
+      },
+      {
+        "objectID": "36033925",
+        "title": "ArXiv Digest: Use GPT3.5 to Personalize Your ArXiv Email Notifications",
+        "url": "https://github.com/AutoLLM/ArxivDigest",
+        "points": 4,
+        "num_comments": 0,
+        "author": "vamiller12",
+        "created_at": "2023-05-22T17:03:21Z"
+      },
+      {
+        "objectID": "3551914",
+        "title": "For 9 out of 10 used cars, there’s a better deal to be found.",
+        "url": "http://autoglance.com/blog/view/10",
+        "points": 3,
+        "num_comments": 1,
+        "author": "kapgoals",
+        "created_at": "2012-02-04T20:01:47Z"
+      },
+      {
+        "objectID": "36023532",
+        "title": "Use GPT-3.5 to personalize your ArXiv paper newsletter",
+        "url": "https://github.com/AutoLLM/ArxivDigest",
+        "points": 2,
+        "num_comments": 0,
+        "author": "vamiller12",
+        "created_at": "2023-05-21T18:29:05Z"
+      },
+      {
+        "objectID": "42356534",
+        "title": "Show HN: Auto Gmail – writes 80% of your emails, for you",
+        "url": "https://autogmail.com",
+        "points": 1,
+        "num_comments": 4,
+        "author": "nathanganser",
+        "created_at": "2024-12-08T11:27:09Z"
+      },
+      {
+        "objectID": "36283153",
+        "title": "Show HN: Auto-Gmail: Let ChatGPT answer your inbox",
+        "url": "https://app.autogmail.com/connect",
+        "points": 1,
+        "num_comments": 0,
+        "author": "nathanganser",
+        "created_at": "2023-06-11T17:01:58Z"
+      },
+      {
+        "objectID": "17927020",
+        "title": "Surprise Search",
+        "url": "http://www.autogamedesign.eu/surprise-search",
+        "points": 1,
+        "num_comments": 0,
+        "author": "optimalsolver",
+        "created_at": "2018-09-06T15:37:40Z"
+      }
+    ]
+  }
+}

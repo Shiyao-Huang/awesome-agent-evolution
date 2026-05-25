@@ -1,0 +1,516 @@
+{
+  "project": "Codex",
+  "repo": "openai/codex",
+  "collected_at": "2026-05-22T11:14:55.879018+00:00",
+  "queries": [
+    "Codex",
+    "codex"
+  ],
+  "total_posts": 50,
+  "results": {
+    "Codex": [
+      {
+        "id": "1sun4dr",
+        "subreddit": "codex",
+        "title": "Codex after 5.5 is a monster",
+        "score": 197,
+        "num_comments": 132,
+        "author": "szansky",
+        "url": "https://reddit.com/r/codex/comments/1sun4dr/codex_after_55_is_a_monster/",
+        "created_utc": 1777053423.0
+      },
+      {
+        "id": "1t3pqc6",
+        "subreddit": "OpenAI",
+        "title": "Is Codex the best right now?",
+        "score": 511,
+        "num_comments": 133,
+        "author": "LeTanLoc98",
+        "url": "https://reddit.com/r/OpenAI/comments/1t3pqc6/is_codex_the_best_right_now/",
+        "created_utc": 1777918253.0
+      },
+      {
+        "id": "1tbq28c",
+        "subreddit": "Anthropic",
+        "title": "Is Codex really getting better than Claude code?",
+        "score": 271,
+        "num_comments": 213,
+        "author": "0_2_Hero",
+        "url": "https://reddit.com/r/Anthropic/comments/1tbq28c/is_codex_really_getting_better_than_claude_code/",
+        "created_utc": 1778649513.0
+      },
+      {
+        "id": "1t6iulo",
+        "subreddit": "codex",
+        "title": "I cut Codex token usage ~50% with one AGENTS.md rule",
+        "score": 455,
+        "num_comments": 106,
+        "author": "0_2_Hero",
+        "url": "https://reddit.com/r/codex/comments/1t6iulo/i_cut_codex_token_usage_50_with_one_agentsmd_rule/",
+        "created_utc": 1778178036.0
+      },
+      {
+        "id": "1t7r2us",
+        "subreddit": "codex",
+        "title": "Claude code is not on the same level as Codex",
+        "score": 827,
+        "num_comments": 213,
+        "author": "0_2_Hero",
+        "url": "https://reddit.com/r/codex/comments/1t7r2us/claude_code_is_not_on_the_same_level_as_codex/",
+        "created_utc": 1778290594.0
+      },
+      {
+        "id": "1sg4x27",
+        "subreddit": "ClaudeAI",
+        "title": "Codex Vs Claude (BRUTAL)",
+        "score": 17,
+        "num_comments": 67,
+        "author": "Fit_Wheel5471",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1sg4x27/codex_vs_claude_brutal/",
+        "created_utc": 1775680965.0
+      },
+      {
+        "id": "1t349hi",
+        "subreddit": "codex",
+        "title": "New Codex limits are pretty brutal.",
+        "score": 235,
+        "num_comments": 239,
+        "author": "Odd-Environment-7193",
+        "url": "https://reddit.com/r/codex/comments/1t349hi/new_codex_limits_are_pretty_brutal/",
+        "created_utc": 1777859755.0
+      },
+      {
+        "id": "1tbcfmi",
+        "subreddit": "ClaudeCode",
+        "title": "Impressions two weeks after moving from Claude Code to Codex",
+        "score": 433,
+        "num_comments": 257,
+        "author": "cowwoc",
+        "url": "https://reddit.com/r/ClaudeCode/comments/1tbcfmi/impressions_two_weeks_after_moving_from_claude/",
+        "created_utc": 1778614993.0
+      },
+      {
+        "id": "1t4scf8",
+        "subreddit": "ClaudeCode",
+        "title": "Unpopular opinion: the codex migration is going to hit the same wall in 2 months",
+        "score": 351,
+        "num_comments": 142,
+        "author": "spencer_kw",
+        "url": "https://reddit.com/r/ClaudeCode/comments/1t4scf8/unpopular_opinion_the_codex_migration_is_going_to/",
+        "created_utc": 1778014914.0
+      },
+      {
+        "id": "1they8y",
+        "subreddit": "codex",
+        "title": "The Current State of Codex",
+        "score": 81,
+        "num_comments": 26,
+        "author": "cursivecrow",
+        "url": "https://reddit.com/r/codex/comments/1they8y/the_current_state_of_codex/",
+        "created_utc": 1779173852.0
+      },
+      {
+        "id": "1sz8znr",
+        "subreddit": "nottheonion",
+        "title": "OpenAI Codex system prompt includes explicit directive to \"never talk about goblins\"",
+        "score": 12420,
+        "num_comments": 669,
+        "author": "GarlicoinAccount",
+        "url": "https://reddit.com/r/nottheonion/comments/1sz8znr/openai_codex_system_prompt_includes_explicit/",
+        "created_utc": 1777490903.0
+      },
+      {
+        "id": "1md8t4i",
+        "subreddit": "Grimdank",
+        "title": "So GW apparently decided to REVEAL THE TERMINUS DECREE in the new Grey Knights codex",
+        "score": 6331,
+        "num_comments": 1136,
+        "author": "Arch_Magos_Remus",
+        "url": "https://reddit.com/r/Grimdank/comments/1md8t4i/so_gw_apparently_decided_to_reveal_the_terminus/",
+        "created_utc": 1753887454.0
+      },
+      {
+        "id": "1na42s2",
+        "subreddit": "Grimdank",
+        "title": "Day 12: *The entire fucking Codex Astartes* has been voted as the WORST war cry for the Ultramarines! What is your pick for the worst war cry for the Death Guard?",
+        "score": 4709,
+        "num_comments": 603,
+        "author": "No1PDPStanAccount",
+        "url": "https://reddit.com/r/Grimdank/comments/1na42s2/day_12_the_entire_fucking_codex_astartes_has_been/",
+        "created_utc": 1757176509.0
+      },
+      {
+        "id": "1m39su7",
+        "subreddit": "Warhammer40k",
+        "title": "All the new Leagues of Votann models and newly announced codex",
+        "score": 5627,
+        "num_comments": 534,
+        "author": "TheSlayerofSnails",
+        "url": "https://reddit.com/r/Warhammer40k/comments/1m39su7/all_the_new_leagues_of_votann_models_and_newly/",
+        "created_utc": 1752862712.0
+      },
+      {
+        "id": "1tao42q",
+        "subreddit": "codex",
+        "title": "Did anyone here moved from claude to codex recently? And why?",
+        "score": 1483,
+        "num_comments": 381,
+        "author": "alOOshXL",
+        "url": "https://reddit.com/r/codex/comments/1tao42q/did_anyone_here_moved_from_claude_to_codex/",
+        "created_utc": 1778552381.0
+      },
+      {
+        "id": "1nxpx77",
+        "subreddit": "Grimdank",
+        "title": "The Codex 40k",
+        "score": 17879,
+        "num_comments": 200,
+        "author": "Godess_Ilias",
+        "url": "https://reddit.com/r/Grimdank/comments/1nxpx77/the_codex_40k/",
+        "created_utc": 1759571836.0
+      },
+      {
+        "id": "1lwceez",
+        "subreddit": "Grimdank",
+        "title": "The Codex Astartes denies this beating",
+        "score": 5358,
+        "num_comments": 469,
+        "author": "Sigward_TheOnionbro",
+        "url": "https://reddit.com/r/Grimdank/comments/1lwceez/the_codex_astartes_denies_this_beating/",
+        "created_utc": 1752153197.0
+      },
+      {
+        "id": "1s8zxt4",
+        "subreddit": "ClaudeAI",
+        "title": "Thanks to the leaked source code for Claude Code, I used Codex to find and patch the root cause of the insane token drain in Claude Code and patched it. Usage limits are back to normal for me!",
+        "score": 2752,
+        "num_comments": 231,
+        "author": "Rangizingo",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1s8zxt4/thanks_to_the_leaked_source_code_for_claude_code/",
+        "created_utc": 1774990684.0
+      },
+      {
+        "id": "1pxzndy",
+        "subreddit": "Grimdank",
+        "title": "I’m sorry, but according to the Codex, that’s actually moderate blasphemy at best.",
+        "score": 6910,
+        "num_comments": 181,
+        "author": "imalyshe",
+        "url": "https://reddit.com/r/Grimdank/comments/1pxzndy/im_sorry_but_according_to_the_codex_thats/",
+        "created_utc": 1766949140.0
+      },
+      {
+        "id": "1qxr7vs",
+        "subreddit": "ClaudeAI",
+        "title": "GPT-5.3 Codex vs Opus 4.6: We benchmarked both on our production Rails codebase — the results are brutal",
+        "score": 1853,
+        "num_comments": 452,
+        "author": "sergeykarayev",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1qxr7vs/gpt53_codex_vs_opus_46_we_benchmarked_both_on_our/",
+        "created_utc": 1770405854.0
+      },
+      {
+        "id": "1sk7e2k",
+        "subreddit": "ClaudeCode",
+        "title": "Claude Code (~100 hours) vs. Codex (~20 hours)",
+        "score": 1952,
+        "num_comments": 273,
+        "author": "Canamerican726",
+        "url": "https://reddit.com/r/ClaudeCode/comments/1sk7e2k/claude_code_100_hours_vs_codex_20_hours/",
+        "created_utc": 1776077860.0
+      },
+      {
+        "id": "1nbof50",
+        "subreddit": "Warhammer40k",
+        "title": "Lady Malys stands tall over the new Codex: Drukhari - Warhammer Community",
+        "score": 4164,
+        "num_comments": 363,
+        "author": "CMYK_COLOR_MODE",
+        "url": "https://reddit.com/r/Warhammer40k/comments/1nbof50/lady_malys_stands_tall_over_the_new_codex/",
+        "created_utc": 1757339785.0
+      },
+      {
+        "id": "1ikmy7v",
+        "subreddit": "Grimdank",
+        "title": "the new Codex: Aeldari experience",
+        "score": 4340,
+        "num_comments": 648,
+        "author": "AutumnArchfey",
+        "url": "https://reddit.com/r/Grimdank/comments/1ikmy7v/the_new_codex_aeldari_experience/",
+        "created_utc": 1739020310.0
+      },
+      {
+        "id": "1rsl74h",
+        "subreddit": "Marathon",
+        "title": "Bungie, Cutscenes in codex PLEASE.",
+        "score": 4005,
+        "num_comments": 130,
+        "author": "79918101",
+        "url": "https://reddit.com/r/Marathon/comments/1rsl74h/bungie_cutscenes_in_codex_please/",
+        "created_utc": 1773402691.0
+      },
+      {
+        "id": "tj99zn",
+        "subreddit": "pcmasterrace",
+        "title": "[GIVEAWAY] Hello amazing people of /r/PCMR! With the release of the Codex Collection we would like to give away 10 deskmats to you!",
+        "score": 23172,
+        "num_comments": 15788,
+        "author": "Glutchpls",
+        "url": "https://reddit.com/r/pcmasterrace/comments/tj99zn/giveaway_hello_amazing_people_of_rpcmr_with_the/",
+        "created_utc": 1647860858.0
+      }
+    ],
+    "codex": [
+      {
+        "id": "1sun4dr",
+        "subreddit": "codex",
+        "title": "Codex after 5.5 is a monster",
+        "score": 199,
+        "num_comments": 132,
+        "author": "szansky",
+        "url": "https://reddit.com/r/codex/comments/1sun4dr/codex_after_55_is_a_monster/",
+        "created_utc": 1777053423.0
+      },
+      {
+        "id": "1t3pqc6",
+        "subreddit": "OpenAI",
+        "title": "Is Codex the best right now?",
+        "score": 514,
+        "num_comments": 133,
+        "author": "LeTanLoc98",
+        "url": "https://reddit.com/r/OpenAI/comments/1t3pqc6/is_codex_the_best_right_now/",
+        "created_utc": 1777918253.0
+      },
+      {
+        "id": "1tbq28c",
+        "subreddit": "Anthropic",
+        "title": "Is Codex really getting better than Claude code?",
+        "score": 270,
+        "num_comments": 213,
+        "author": "0_2_Hero",
+        "url": "https://reddit.com/r/Anthropic/comments/1tbq28c/is_codex_really_getting_better_than_claude_code/",
+        "created_utc": 1778649513.0
+      },
+      {
+        "id": "1t6iulo",
+        "subreddit": "codex",
+        "title": "I cut Codex token usage ~50% with one AGENTS.md rule",
+        "score": 450,
+        "num_comments": 106,
+        "author": "0_2_Hero",
+        "url": "https://reddit.com/r/codex/comments/1t6iulo/i_cut_codex_token_usage_50_with_one_agentsmd_rule/",
+        "created_utc": 1778178036.0
+      },
+      {
+        "id": "1t7r2us",
+        "subreddit": "codex",
+        "title": "Claude code is not on the same level as Codex",
+        "score": 832,
+        "num_comments": 213,
+        "author": "0_2_Hero",
+        "url": "https://reddit.com/r/codex/comments/1t7r2us/claude_code_is_not_on_the_same_level_as_codex/",
+        "created_utc": 1778290594.0
+      },
+      {
+        "id": "1sg4x27",
+        "subreddit": "ClaudeAI",
+        "title": "Codex Vs Claude (BRUTAL)",
+        "score": 15,
+        "num_comments": 67,
+        "author": "Fit_Wheel5471",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1sg4x27/codex_vs_claude_brutal/",
+        "created_utc": 1775680965.0
+      },
+      {
+        "id": "1t349hi",
+        "subreddit": "codex",
+        "title": "New Codex limits are pretty brutal.",
+        "score": 233,
+        "num_comments": 239,
+        "author": "Odd-Environment-7193",
+        "url": "https://reddit.com/r/codex/comments/1t349hi/new_codex_limits_are_pretty_brutal/",
+        "created_utc": 1777859755.0
+      },
+      {
+        "id": "1tbcfmi",
+        "subreddit": "ClaudeCode",
+        "title": "Impressions two weeks after moving from Claude Code to Codex",
+        "score": 435,
+        "num_comments": 257,
+        "author": "cowwoc",
+        "url": "https://reddit.com/r/ClaudeCode/comments/1tbcfmi/impressions_two_weeks_after_moving_from_claude/",
+        "created_utc": 1778614993.0
+      },
+      {
+        "id": "1t4scf8",
+        "subreddit": "ClaudeCode",
+        "title": "Unpopular opinion: the codex migration is going to hit the same wall in 2 months",
+        "score": 353,
+        "num_comments": 142,
+        "author": "spencer_kw",
+        "url": "https://reddit.com/r/ClaudeCode/comments/1t4scf8/unpopular_opinion_the_codex_migration_is_going_to/",
+        "created_utc": 1778014914.0
+      },
+      {
+        "id": "1they8y",
+        "subreddit": "codex",
+        "title": "The Current State of Codex",
+        "score": 80,
+        "num_comments": 26,
+        "author": "cursivecrow",
+        "url": "https://reddit.com/r/codex/comments/1they8y/the_current_state_of_codex/",
+        "created_utc": 1779173852.0
+      },
+      {
+        "id": "1sz8znr",
+        "subreddit": "nottheonion",
+        "title": "OpenAI Codex system prompt includes explicit directive to \"never talk about goblins\"",
+        "score": 12412,
+        "num_comments": 669,
+        "author": "GarlicoinAccount",
+        "url": "https://reddit.com/r/nottheonion/comments/1sz8znr/openai_codex_system_prompt_includes_explicit/",
+        "created_utc": 1777490903.0
+      },
+      {
+        "id": "1md8t4i",
+        "subreddit": "Grimdank",
+        "title": "So GW apparently decided to REVEAL THE TERMINUS DECREE in the new Grey Knights codex",
+        "score": 6331,
+        "num_comments": 1136,
+        "author": "Arch_Magos_Remus",
+        "url": "https://reddit.com/r/Grimdank/comments/1md8t4i/so_gw_apparently_decided_to_reveal_the_terminus/",
+        "created_utc": 1753887454.0
+      },
+      {
+        "id": "1na42s2",
+        "subreddit": "Grimdank",
+        "title": "Day 12: *The entire fucking Codex Astartes* has been voted as the WORST war cry for the Ultramarines! What is your pick for the worst war cry for the Death Guard?",
+        "score": 4707,
+        "num_comments": 603,
+        "author": "No1PDPStanAccount",
+        "url": "https://reddit.com/r/Grimdank/comments/1na42s2/day_12_the_entire_fucking_codex_astartes_has_been/",
+        "created_utc": 1757176509.0
+      },
+      {
+        "id": "1m39su7",
+        "subreddit": "Warhammer40k",
+        "title": "All the new Leagues of Votann models and newly announced codex",
+        "score": 5621,
+        "num_comments": 534,
+        "author": "TheSlayerofSnails",
+        "url": "https://reddit.com/r/Warhammer40k/comments/1m39su7/all_the_new_leagues_of_votann_models_and_newly/",
+        "created_utc": 1752862712.0
+      },
+      {
+        "id": "1tao42q",
+        "subreddit": "codex",
+        "title": "Did anyone here moved from claude to codex recently? And why?",
+        "score": 1485,
+        "num_comments": 381,
+        "author": "alOOshXL",
+        "url": "https://reddit.com/r/codex/comments/1tao42q/did_anyone_here_moved_from_claude_to_codex/",
+        "created_utc": 1778552381.0
+      },
+      {
+        "id": "1nxpx77",
+        "subreddit": "Grimdank",
+        "title": "The Codex 40k",
+        "score": 17886,
+        "num_comments": 200,
+        "author": "Godess_Ilias",
+        "url": "https://reddit.com/r/Grimdank/comments/1nxpx77/the_codex_40k/",
+        "created_utc": 1759571836.0
+      },
+      {
+        "id": "1lwceez",
+        "subreddit": "Grimdank",
+        "title": "The Codex Astartes denies this beating",
+        "score": 5363,
+        "num_comments": 469,
+        "author": "Sigward_TheOnionbro",
+        "url": "https://reddit.com/r/Grimdank/comments/1lwceez/the_codex_astartes_denies_this_beating/",
+        "created_utc": 1752153197.0
+      },
+      {
+        "id": "1s8zxt4",
+        "subreddit": "ClaudeAI",
+        "title": "Thanks to the leaked source code for Claude Code, I used Codex to find and patch the root cause of the insane token drain in Claude Code and patched it. Usage limits are back to normal for me!",
+        "score": 2749,
+        "num_comments": 231,
+        "author": "Rangizingo",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1s8zxt4/thanks_to_the_leaked_source_code_for_claude_code/",
+        "created_utc": 1774990684.0
+      },
+      {
+        "id": "1pxzndy",
+        "subreddit": "Grimdank",
+        "title": "I’m sorry, but according to the Codex, that’s actually moderate blasphemy at best.",
+        "score": 6916,
+        "num_comments": 181,
+        "author": "imalyshe",
+        "url": "https://reddit.com/r/Grimdank/comments/1pxzndy/im_sorry_but_according_to_the_codex_thats/",
+        "created_utc": 1766949140.0
+      },
+      {
+        "id": "1qxr7vs",
+        "subreddit": "ClaudeAI",
+        "title": "GPT-5.3 Codex vs Opus 4.6: We benchmarked both on our production Rails codebase — the results are brutal",
+        "score": 1848,
+        "num_comments": 452,
+        "author": "sergeykarayev",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1qxr7vs/gpt53_codex_vs_opus_46_we_benchmarked_both_on_our/",
+        "created_utc": 1770405854.0
+      },
+      {
+        "id": "1sk7e2k",
+        "subreddit": "ClaudeCode",
+        "title": "Claude Code (~100 hours) vs. Codex (~20 hours)",
+        "score": 1951,
+        "num_comments": 273,
+        "author": "Canamerican726",
+        "url": "https://reddit.com/r/ClaudeCode/comments/1sk7e2k/claude_code_100_hours_vs_codex_20_hours/",
+        "created_utc": 1776077860.0
+      },
+      {
+        "id": "1nbof50",
+        "subreddit": "Warhammer40k",
+        "title": "Lady Malys stands tall over the new Codex: Drukhari - Warhammer Community",
+        "score": 4157,
+        "num_comments": 363,
+        "author": "CMYK_COLOR_MODE",
+        "url": "https://reddit.com/r/Warhammer40k/comments/1nbof50/lady_malys_stands_tall_over_the_new_codex/",
+        "created_utc": 1757339785.0
+      },
+      {
+        "id": "1ikmy7v",
+        "subreddit": "Grimdank",
+        "title": "the new Codex: Aeldari experience",
+        "score": 4341,
+        "num_comments": 648,
+        "author": "AutumnArchfey",
+        "url": "https://reddit.com/r/Grimdank/comments/1ikmy7v/the_new_codex_aeldari_experience/",
+        "created_utc": 1739020310.0
+      },
+      {
+        "id": "1rsl74h",
+        "subreddit": "Marathon",
+        "title": "Bungie, Cutscenes in codex PLEASE.",
+        "score": 4011,
+        "num_comments": 130,
+        "author": "79918101",
+        "url": "https://reddit.com/r/Marathon/comments/1rsl74h/bungie_cutscenes_in_codex_please/",
+        "created_utc": 1773402691.0
+      },
+      {
+        "id": "tj99zn",
+        "subreddit": "pcmasterrace",
+        "title": "[GIVEAWAY] Hello amazing people of /r/PCMR! With the release of the Codex Collection we would like to give away 10 deskmats to you!",
+        "score": 23170,
+        "num_comments": 15788,
+        "author": "Glutchpls",
+        "url": "https://reddit.com/r/pcmasterrace/comments/tj99zn/giveaway_hello_amazing_people_of_rpcmr_with_the/",
+        "created_utc": 1647860858.0
+      }
+    ]
+  }
+}

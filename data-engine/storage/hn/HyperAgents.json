@@ -1,0 +1,131 @@
+{
+  "project": "HyperAgents",
+  "repo": "facebookresearch/HyperAgents",
+  "collected_at": "2026-05-22T11:06:04.666317+00:00",
+  "queries": [
+    "HyperAgents",
+    "HyperAgents"
+  ],
+  "total_hits": 13,
+  "results": {
+    "HyperAgents": [
+      {
+        "objectID": "47505670",
+        "title": "HyperAgents: Self-referential self-improving agents",
+        "url": "https://github.com/facebookresearch/hyperagents",
+        "points": 234,
+        "num_comments": 90,
+        "author": "andyg_blog",
+        "created_at": "2026-03-24T16:54:10Z"
+      },
+      {
+        "objectID": "47528807",
+        "title": "Meta releases HyperAgents: self-improving AI",
+        "url": "https://github.com/facebookresearch/Hyperagents",
+        "points": 3,
+        "num_comments": 3,
+        "author": "grodriguez100",
+        "created_at": "2026-03-26T10:41:40Z"
+      },
+      {
+        "objectID": "47503787",
+        "title": "Hyperagents",
+        "url": "https://arxiv.org/abs/2603.19461",
+        "points": 3,
+        "num_comments": 0,
+        "author": "delduca",
+        "created_at": "2026-03-24T15:07:47Z"
+      },
+      {
+        "objectID": "47491695",
+        "title": "Hyperagents",
+        "url": "https://arxiv.org/abs/2603.19461",
+        "points": 3,
+        "num_comments": 0,
+        "author": "handfuloflight",
+        "created_at": "2026-03-23T16:28:29Z"
+      },
+      {
+        "objectID": "48097007",
+        "title": "Meta's Hyperagents and Self-Correcting Agents",
+        "url": "https://jdsemrau.substack.com/p/hyperagents-and-self-correcting-systems",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Brajeshwar",
+        "created_at": "2026-05-11T16:17:04Z"
+      },
+      {
+        "objectID": "47514591",
+        "title": "Hyperagents – Self-referential self-improving agents",
+        "url": "https://github.com/facebookresearch/Hyperagents",
+        "points": 2,
+        "num_comments": 0,
+        "author": "h4ch1",
+        "created_at": "2026-03-25T08:03:24Z"
+      },
+      {
+        "objectID": "47727255",
+        "title": "Show HN: HyperFlow – A self-improving agent framework built on LangGraph",
+        "url": "",
+        "points": 8,
+        "num_comments": 1,
+        "author": "lablnet",
+        "created_at": "2026-04-11T04:01:03Z"
+      },
+      {
+        "objectID": "47596925",
+        "title": "Show HN: Calx – track and compile corrections humans make with AI agents",
+        "url": "https://github.com/getcalx",
+        "points": 3,
+        "num_comments": 1,
+        "author": "spenceships",
+        "created_at": "2026-04-01T04:45:06Z"
+      },
+      {
+        "objectID": "5699499",
+        "title": "Show HN: hyperagent.js, a JavaScript library for consuming HAL hypermedia APIs",
+        "url": "http://weluse.github.io/hyperagent/",
+        "points": 5,
+        "num_comments": 0,
+        "author": "ch0wn",
+        "created_at": "2013-05-13T16:11:45Z"
+      },
+      {
+        "objectID": "43755695",
+        "title": "Show HN: HyperAgent: open-source Browser Automation with LLMs",
+        "url": "https://github.com/hyperbrowserai/HyperAgent",
+        "points": 4,
+        "num_comments": 0,
+        "author": "ashekhawat",
+        "created_at": "2025-04-21T19:46:26Z"
+      },
+      {
+        "objectID": "47140784",
+        "title": "Hyperagent",
+        "url": "https://www.hyperagent.com",
+        "points": 2,
+        "num_comments": 1,
+        "author": "ptrhvns",
+        "created_at": "2026-02-24T18:35:29Z"
+      },
+      {
+        "objectID": "47090865",
+        "title": "Hyperagent, Made by the Team at Airtable",
+        "url": "https://www.hyperagent.com/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "puppion",
+        "created_at": "2026-02-20T17:20:19Z"
+      },
+      {
+        "objectID": "47083848",
+        "title": "Hyperagent – Make Agents Learn, Compound, and Scale",
+        "url": "https://www.hyperagent.com/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "tortilla",
+        "created_at": "2026-02-20T04:40:39Z"
+      }
+    ]
+  }
+}

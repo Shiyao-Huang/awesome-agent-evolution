@@ -1,0 +1,14 @@
+{
+  "project": "goose",
+  "repo": "block/goose",
+  "collected_at": "2026-05-22T11:10:00.367515+00:00",
+  "queries": [
+    "goose"
+  ],
+  "results": {
+    "goose": {
+      "juejin": [],
+      "cnblogs": []
+    }
+  }
+}

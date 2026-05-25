@@ -2,14 +2,8 @@
 """
 Propagation Rebuilder — Cross-platform propagation chain reconstruction.
 
-Reconstructs how a project/idea spreads across:
-  - GitHub (stars, forks, issues)
-  - Hacker News (submissions, comments)
-  - Reddit (posts, upvotes)
-  - Semantic Scholar (citations)
-  - Chinese media (blog posts, news)
-
-Outputs a timeline of propagation events with source→target edges.
+Reconstructs how a project spreads across platforms using collected data.
+Builds a timeline of events: HN posts, Reddit mentions, GitHub stars, etc.
 """
 
 import argparse
@@ -26,197 +20,188 @@ def load_json(path: str):
         return json.load(f)
 
 
-def parse_date(s: str) -> str:
-    """Normalize date to ISO format string."""
+def parse_date(s) -> str:
     if not s:
         return ""
+    # Handle Unix timestamp (float/int)
+    if isinstance(s, (int, float)):
+        return datetime.utcfromtimestamp(s).strftime("%Y-%m-%dT%H:%M:%SZ")
     try:
         dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
         return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
     except (ValueError, AttributeError):
-        return s[:19]
+        return str(s)[:19]
 
 
-def load_github_events(storage_dir: str, project_name: str) -> list:
-    """Load GitHub events (stars, forks, issues) for a project."""
-    events = []
-
-    # Try daily snapshots
-    snapshots_dir = os.path.join(storage_dir, "daily_snapshots")
-    if os.path.isdir(snapshots_dir):
-        for date_dir in sorted(os.listdir(snapshots_dir)):
-            fpath = os.path.join(snapshots_dir, date_dir, f"{project_name}.json")
+def discover_projects(storage_dir: str) -> dict:
+    """Discover all projects from storage subdirectories."""
+    projects = {}
+    for subdir in os.listdir(storage_dir):
+        sub_path = os.path.join(storage_dir, subdir)
+        if not os.path.isdir(sub_path) or subdir in ("analysis", "propagation"):
+            continue
+        for fname in os.listdir(sub_path):
+            if not fname.endswith(".json"):
+                continue
+            proj_name = fname.replace(".json", "")
+            fpath = os.path.join(sub_path, fname)
             data = load_json(fpath)
             if data:
-                events.append({"source": "github", "date": date_dir,
-                               "type": "snapshot", "data": data})
-
-    # Try flat file
-    fpath = os.path.join(storage_dir, f"{project_name}.json")
-    data = load_json(fpath)
-    if data:
-        events.append({"source": "github", "date": "latest",
-                       "type": "snapshot", "data": data})
-
-    return events
+                projects.setdefault(proj_name, {})[subdir] = data
+    return projects
 
 
-def load_social_events(storage_dir: str, project_name: str) -> list:
-    """Load HN/Reddit/S2/media events for a project."""
+def extract_hn_timeline(hn_data: dict) -> list:
+    """Extract HN events as timeline entries."""
     events = []
-    social_dir = os.path.join(storage_dir, "social")
-    if not os.path.isdir(social_dir):
+    if not hn_data:
         return events
 
-    # Try loading from various social collector outputs
-    social_files = {
-        "hn_search": f"hn_{project_name}.json",
-        "reddit_search": f"reddit_{project_name}.json",
-        "semantic_scholar": f"s2_{project_name}.json",
-        "chinese_media": f"cn_media_{project_name}.json",
-    }
+    results = hn_data.get("results", {})
+    items = []
+    if isinstance(results, dict):
+        for query, query_items in results.items():
+            if isinstance(query_items, list):
+                items.extend(query_items)
+    elif isinstance(results, list):
+        items = results
 
-    for source, fname in social_files.items():
-        fpath = os.path.join(social_dir, fname)
-        data = load_json(fpath)
-        if data:
-            items = data if isinstance(data, list) else data.get("results", [data])
-            for item in items:
-                events.append({
-                    "source": source,
-                    "date": parse_date(item.get("created_at", item.get("date", ""))),
-                    "type": item.get("type", "mention"),
-                    "data": item,
-                })
+    for item in items:
+        events.append({
+            "date": parse_date(item.get("created_at", "")),
+            "platform": "hacker_news",
+            "event": "submission",
+            "title": item.get("title", ""),
+            "points": item.get("points", 0),
+            "comments": item.get("num_comments", 0),
+            "author": item.get("author", ""),
+            "url": item.get("url", ""),
+        })
 
     return events
 
 
-def extract_github_timeline(github_data: dict) -> list:
-    """Extract key GitHub milestone events."""
-    timeline = []
+def extract_reddit_timeline(reddit_data: dict) -> list:
+    """Extract Reddit events as timeline entries."""
+    events = []
+    if not reddit_data:
+        return events
 
-    # Repository creation
-    created = github_data.get("created_at", "")
+    items = reddit_data if isinstance(reddit_data, list) else reddit_data.get("results", [])
+    if isinstance(items, dict):
+        for query, query_items in items.items():
+            if isinstance(query_items, list):
+                items = query_items
+
+    for item in items if isinstance(items, list) else []:
+        events.append({
+            "date": parse_date(item.get("created_utc", item.get("created_at", ""))),
+            "platform": "reddit",
+            "event": "post",
+            "title": item.get("title", ""),
+            "score": item.get("score", item.get("ups", 0)),
+            "subreddit": item.get("subreddit", ""),
+            "url": item.get("url", ""),
+        })
+
+    return events
+
+
+def extract_github_timeline(gh_data: dict) -> list:
+    """Extract GitHub milestones as timeline entries."""
+    events = []
+    if not gh_data:
+        return events
+
+    created = gh_data.get("created_at", "")
     if created:
-        timeline.append({
+        events.append({
             "date": parse_date(created),
+            "platform": "github",
             "event": "repo_created",
-            "platform": "github",
-            "detail": "Repository created",
+            "title": "Repository created",
         })
 
-    # Star milestones
-    stars = github_data.get("stars", github_data.get("stargazers_count", 0))
-    milestones = [100, 500, 1000, 5000, 10000, 25000, 50000, 100000, 175000]
-    for m in milestones:
-        if stars >= m:
-            timeline.append({
-                "date": "",  # would need star history for exact dates
-                "event": f"stars_{m}",
-                "platform": "github",
-                "detail": f"Reached {m:,} stars",
-            })
-
-    # Fork milestones
-    forks = github_data.get("forks_count", 0)
-    if forks >= 100:
-        timeline.append({
+    stars = gh_data.get("stargazers_count", gh_data.get("stars", 0))
+    if stars:
+        events.append({
             "date": "",
-            "event": f"forks_{forks}",
             "platform": "github",
-            "detail": f"{forks:,} forks",
+            "event": f"stars_{stars}",
+            "title": f"Current stars: {stars:,}",
         })
 
-    return timeline
+    return events
 
 
-def build_propagation_chain(project_name: str, storage_dir: str) -> dict:
-    """Build full cross-platform propagation chain for a project."""
-    chain = {
-        "project": project_name,
-        "generated_at": datetime.utcnow().isoformat() + "Z",
-        "timeline": [],
-        "platforms": {},
-        "edges": [],
-    }
+def build_propagation_chain(project_name: str, data_sources: dict) -> dict:
+    """Build full cross-platform propagation chain."""
+    timeline = []
+    platforms = {}
 
-    # Load GitHub data
-    github_events = load_github_events(storage_dir, project_name)
-    if github_events:
-        latest_gh = github_events[-1].get("data", {})
-        gh_timeline = extract_github_timeline(latest_gh)
-        chain["timeline"].extend(gh_timeline)
-        chain["platforms"]["github"] = {
-            "stars": latest_gh.get("stars", latest_gh.get("stargazers_count", 0)),
-            "forks": latest_gh.get("forks_count", 0),
-            "events_count": len(github_events),
-        }
+    # HN
+    if "hn" in data_sources:
+        hn_events = extract_hn_timeline(data_sources["hn"])
+        timeline.extend(hn_events)
+        if hn_events:
+            platforms["hacker_news"] = {
+                "submissions": len(hn_events),
+                "max_points": max(e.get("points", 0) for e in hn_events),
+                "total_comments": sum(e.get("comments", 0) for e in hn_events),
+            }
 
-    # Load social data
-    social_events = load_social_events(storage_dir, project_name)
-    for evt in social_events:
-        chain["timeline"].append({
-            "date": evt["date"],
-            "event": f"{evt['source']}_mention",
-            "platform": evt["source"],
-            "detail": evt.get("data", {}).get("title", evt.get("type", "")),
-        })
-        chain["platforms"].setdefault(evt["source"], {"events": 0})
-        chain["platforms"][evt["source"]]["events"] += 1
+    # Reddit
+    if "reddit" in data_sources:
+        reddit_events = extract_reddit_timeline(data_sources["reddit"])
+        timeline.extend(reddit_events)
+        if reddit_events:
+            platforms["reddit"] = {
+                "posts": len(reddit_events),
+            }
 
-    # Build propagation edges (source → target)
-    platforms_with_data = list(chain["platforms"].keys())
-    for i, source in enumerate(platforms_with_data):
-        for target in platforms_with_data[i+1:]:
-            chain["edges"].append({
-                "source": source,
-                "target": target,
-                "type": "cross_platform_propagation",
-            })
+    # GitHub
+    for gh_key in ("github", "github_stars", "root"):
+        if gh_key in data_sources:
+            gh_events = extract_github_timeline(data_sources[gh_key])
+            timeline.extend(gh_events)
+            gh = data_sources[gh_key]
+            platforms["github"] = {
+                "stars": gh.get("stargazers_count", gh.get("stars", 0)),
+            }
+            break
+
+    # Build edges
+    platform_names = list(platforms.keys())
+    edges = []
+    for i, src in enumerate(platform_names):
+        for tgt in platform_names[i+1:]:
+            edges.append({"source": src, "target": tgt,
+                          "type": "cross_platform_propagation"})
 
     # Sort timeline by date
-    chain["timeline"].sort(key=lambda e: e.get("date", ""))
+    timeline.sort(key=lambda e: e.get("date", ""))
 
-    return chain
+    return {
+        "project": project_name,
+        "timeline": timeline,
+        "platforms": platforms,
+        "edges": edges,
+        "total_events": len(timeline),
+    }
 
 
 def run_propagation_rebuild(input_dir: str, output_dir: str,
-                            projects: list = None, all_projects: bool = False):
-    """Main entry: rebuild propagation chains for all or specified projects."""
+                            projects_list: list = None):
+    """Main entry: rebuild propagation chains."""
     os.makedirs(output_dir, exist_ok=True)
+    projects = discover_projects(input_dir)
 
-    # Discover projects
-    if not projects:
-        projects = set()
-        # From daily_snapshots
-        snapshots_dir = os.path.join(input_dir, "daily_snapshots")
-        if os.path.isdir(snapshots_dir):
-            for date_dir in os.listdir(snapshots_dir):
-                date_path = os.path.join(snapshots_dir, date_dir)
-                if os.path.isdir(date_path):
-                    for f in os.listdir(date_path):
-                        if f.endswith(".json"):
-                            projects.add(f.replace(".json", ""))
-        # From flat files
-        for f in os.listdir(input_dir):
-            if f.endswith(".json"):
-                projects.add(f.replace(".json", ""))
-        # From social dir
-        social_dir = os.path.join(input_dir, "social")
-        if os.path.isdir(social_dir):
-            for f in os.listdir(social_dir):
-                if f.endswith(".json"):
-                    # Strip prefix (hn_, reddit_, s2_, cn_media_)
-                    name = f.replace(".json", "")
-                    for prefix in ["hn_", "reddit_", "s2_", "cn_media_"]:
-                        if name.startswith(prefix):
-                            projects.add(name[len(prefix):])
-                            break
+    if projects_list:
+        projects = {k: v for k, v in projects.items() if k in projects_list}
 
     chains = []
-    for proj_name in sorted(projects):
-        chain = build_propagation_chain(proj_name, input_dir)
+    for proj_name, sources in sorted(projects.items()):
+        chain = build_propagation_chain(proj_name, sources)
         chains.append(chain)
 
     output = {
@@ -230,34 +215,21 @@ def run_propagation_rebuild(input_dir: str, output_dir: str,
         json.dump(output, f, indent=2, ensure_ascii=False)
 
     print(f"[propagation_rebuilder] Built chains for {len(chains)} projects → {out_path}")
-
-    # Summary
     for c in chains:
-        platforms = list(c["platforms"].keys())
-        events = len(c["timeline"])
-        print(f"  {c['project']:<25s} platforms={platforms}  events={events}")
+        plats = list(c["platforms"].keys())
+        print(f"  {c['project']:<25s} platforms={plats}  events={c['total_events']}")
 
     return output
 
 
 def main():
     parser = argparse.ArgumentParser(description="Propagation Chain Rebuilder")
-    parser.add_argument("--input", default="./storage",
-                        help="Input storage directory")
-    parser.add_argument("--output", default="./storage/propagation",
-                        help="Output directory for propagation chains")
-    parser.add_argument("--all", action="store_true",
-                        help="Process all discovered projects")
-    parser.add_argument("--projects", nargs="*", default=None,
-                        help="Specific projects to process")
+    parser.add_argument("--input", default="./storage")
+    parser.add_argument("--output", default="./storage/propagation")
+    parser.add_argument("--all", action="store_true")
+    parser.add_argument("--projects", nargs="*", default=None)
     args = parser.parse_args()
-
-    if not args.all and not args.projects:
-        args.all = True
-
-    run_propagation_rebuild(args.input, args.output,
-                           projects=args.projects,
-                           all_projects=args.all)
+    run_propagation_rebuild(args.input, args.output, args.projects)
 
 
 if __name__ == "__main__":

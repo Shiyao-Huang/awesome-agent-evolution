@@ -1,0 +1,374 @@
+{
+  "project": "agent-skills",
+  "repo": "addyosmani/agent-skills",
+  "collected_at": "2026-05-22T11:04:36.530185+00:00",
+  "queries": [
+    "agent-skills",
+    "agent-skills"
+  ],
+  "total_hits": 40,
+  "results": {
+    "agent-skills": [
+      {
+        "objectID": "46871173",
+        "title": "Agent Skills",
+        "url": "https://agentskills.io/home",
+        "points": 544,
+        "num_comments": 260,
+        "author": "mooreds",
+        "created_at": "2026-02-03T14:09:54Z"
+      },
+      {
+        "objectID": "48015397",
+        "title": "Agent Skills",
+        "url": "https://addyosmani.com/blog/agent-skills/",
+        "points": 376,
+        "num_comments": 212,
+        "author": "BOOSTERHIDROGEN",
+        "created_at": "2026-05-04T21:40:42Z"
+      },
+      {
+        "objectID": "47040430",
+        "title": "SkillsBench: Benchmarking how well agent skills work across diverse tasks",
+        "url": "https://arxiv.org/abs/2602.12670",
+        "points": 364,
+        "num_comments": 171,
+        "author": "mustaphah",
+        "created_at": "2026-02-16T21:15:56Z"
+      },
+      {
+        "objectID": "46697908",
+        "title": "Show HN: Agent Skills Leaderboard",
+        "url": "https://skills.sh",
+        "points": 135,
+        "num_comments": 44,
+        "author": "andrewqu",
+        "created_at": "2026-01-20T21:22:19Z"
+      },
+      {
+        "objectID": "48046023",
+        "title": "Show HN: Agent-skills-eval – Test whether Agent Skills improve outputs",
+        "url": "https://github.com/darkrishabh/agent-skills-eval",
+        "points": 79,
+        "num_comments": 37,
+        "author": "darkrishabh",
+        "created_at": "2026-05-07T06:12:25Z"
+      },
+      {
+        "objectID": "47689319",
+        "title": "Show HN: Skrun – Deploy any agent skill as an API",
+        "url": "https://github.com/skrun-dev/skrun",
+        "points": 62,
+        "num_comments": 12,
+        "author": "frizull",
+        "created_at": "2026-04-08T12:34:38Z"
+      },
+      {
+        "objectID": "46723183",
+        "title": "Skill.md: An open standard for agent skills",
+        "url": "https://www.mintlify.com/blog/skill-md",
+        "points": 48,
+        "num_comments": 12,
+        "author": "skeptrune",
+        "created_at": "2026-01-22T18:25:25Z"
+      },
+      {
+        "objectID": "47402118",
+        "title": "Agent Skills – Open Security Database",
+        "url": "https://index.tego.security/skills/",
+        "points": 36,
+        "num_comments": 9,
+        "author": "4ppsec",
+        "created_at": "2026-03-16T17:35:58Z"
+      },
+      {
+        "objectID": "47086170",
+        "title": "SwiftUI Agent Skill: Build Better Views with AI",
+        "url": "https://www.avanderlee.com/ai-development/swiftui-agent-skill-build-better-views-with-ai/",
+        "points": 31,
+        "num_comments": 1,
+        "author": "skreep",
+        "created_at": "2026-02-20T10:31:17Z"
+      },
+      {
+        "objectID": "45701622",
+        "title": "Claudeskills.cc – Share, Discover, and Reuse Claude/OpenAI Agent Skills",
+        "url": "https://claudeskills.cc",
+        "points": 28,
+        "num_comments": 19,
+        "author": "bingbing123",
+        "created_at": "2025-10-25T05:55:11Z"
+      },
+      {
+        "objectID": "47534936",
+        "title": "Agent Skills: One-Shot PySpark from the CLI",
+        "url": "https://lakesail.com/blog/sail-agent-skills/",
+        "points": 22,
+        "num_comments": 4,
+        "author": "chenxi9649",
+        "created_at": "2026-03-26T19:56:38Z"
+      },
+      {
+        "objectID": "46890736",
+        "title": "ClickHouse Agent Skills",
+        "url": "https://github.com/ClickHouse/agent-skills",
+        "points": 15,
+        "num_comments": 3,
+        "author": "clickpiper-pete",
+        "created_at": "2026-02-04T19:53:42Z"
+      },
+      {
+        "objectID": "46885065",
+        "title": "Show HN: Webhook Skills – Agent skills for webhook providers and best practices",
+        "url": "https://github.com/hookdeck/webhook-skills",
+        "points": 9,
+        "num_comments": 1,
+        "author": "leggetter",
+        "created_at": "2026-02-04T12:32:02Z"
+      },
+      {
+        "objectID": "46869657",
+        "title": "From magic to malware: How OpenClaw's agent skills become an attack surface",
+        "url": "https://1password.com/blog/from-magic-to-malware-how-openclaws-agent-skills-become-an-attack-surface",
+        "points": 8,
+        "num_comments": 3,
+        "author": "_____k",
+        "created_at": "2026-02-03T11:35:01Z"
+      },
+      {
+        "objectID": "47866305",
+        "title": "AI agent skills pass every scanner. 87% still degrade agent safety",
+        "url": "https://faberlens.ai/blog/skill-safety-problem",
+        "points": 8,
+        "num_comments": 1,
+        "author": "shadab_nazar",
+        "created_at": "2026-04-22T17:06:13Z"
+      },
+      {
+        "objectID": "46900933",
+        "title": "Show HN: A package manager for agent skills with built-in evals",
+        "url": "https://tessl.io/",
+        "points": 7,
+        "num_comments": 2,
+        "author": "guypod",
+        "created_at": "2026-02-05T15:45:44Z"
+      },
+      {
+        "objectID": "47999709",
+        "title": "Show HN: Security Scanner for Agent Skills and MCP",
+        "url": "https://github.com/snyk/agent-scan",
+        "points": 7,
+        "num_comments": 0,
+        "author": "lirantal",
+        "created_at": "2026-05-03T18:10:38Z"
+      },
+      {
+        "objectID": "46769384",
+        "title": "Show HN: Colin, a context engine for keeping agent skills fresh",
+        "url": "https://github.com/PrefectHQ/colin",
+        "points": 7,
+        "num_comments": 0,
+        "author": "jlowin",
+        "created_at": "2026-01-26T18:17:15Z"
+      },
+      {
+        "objectID": "46325599",
+        "title": "We built a universal installer for agent skills based on the new open standard",
+        "url": "https://github.com/skillcreatorai/Ai-Agent-Skills",
+        "points": 6,
+        "num_comments": 3,
+        "author": "skillcreator",
+        "created_at": "2025-12-19T13:27:37Z"
+      },
+      {
+        "objectID": "46550350",
+        "title": "Show HN: Distributing AI agent skills via NPM",
+        "url": "https://github.com/RaoHai/agent-skill-npm-boilerplate",
+        "points": 6,
+        "num_comments": 2,
+        "author": "surgesoft",
+        "created_at": "2026-01-09T05:24:43Z"
+      },
+      {
+        "objectID": "47753245",
+        "title": "Show HN: 15 yrs of Django in prod: patterns I keep using (agent skills)",
+        "url": "https://github.com/dvf/opinionated-django",
+        "points": 6,
+        "num_comments": 1,
+        "author": "vanflymen",
+        "created_at": "2026-04-13T15:16:49Z"
+      },
+      {
+        "objectID": "46322819",
+        "title": "GitHub Copilot Agent Skills",
+        "url": "https://github.blog/changelog/2025-12-18-github-copilot-now-supports-agent-skills/",
+        "points": 6,
+        "num_comments": 1,
+        "author": "feynmanquest",
+        "created_at": "2025-12-19T06:25:52Z"
+      },
+      {
+        "objectID": "47073193",
+        "title": "Managing Agent Skills with Your Package Manager",
+        "url": "https://pavel.pink/blog/pixi-skills/",
+        "points": 6,
+        "num_comments": 0,
+        "author": "baszalmstra",
+        "created_at": "2026-02-19T12:47:48Z"
+      },
+      {
+        "objectID": "47057149",
+        "title": "Agent Skills Hub – Security first directory for AI agent skills and MCP",
+        "url": "https://agentskillshub.dev/",
+        "points": 6,
+        "num_comments": 0,
+        "author": "cana2026",
+        "created_at": "2026-02-18T04:25:04Z"
+      },
+      {
+        "objectID": "46797831",
+        "title": "Show HN: AGENTS.lock – a package manager for Agents/Skills/MCPs",
+        "url": "https://github.com/luml-ai/AGENTS.lock",
+        "points": 6,
+        "num_comments": 0,
+        "author": "iryna_kondr",
+        "created_at": "2026-01-28T16:46:18Z"
+      },
+      {
+        "objectID": "47891283",
+        "title": "Google Unveils Agent Skills Repository for Smarter AI Agents",
+        "url": "https://cloud.google.com/blog/topics/developers-practitioners/level-up-your-agents-announcing-googles-official-skills-repository",
+        "points": 5,
+        "num_comments": 1,
+        "author": "v-mdev",
+        "created_at": "2026-04-24T15:06:30Z"
+      },
+      {
+        "objectID": "47714855",
+        "title": "Show HN: A security scanner for AI Agent Skills",
+        "url": "https://github.com/Fangcun-AI/SkillWard/tree/main",
+        "points": 5,
+        "num_comments": 0,
+        "author": "mayziem",
+        "created_at": "2026-04-10T07:41:54Z"
+      },
+      {
+        "objectID": "47605341",
+        "title": "What Claude Code Leak Teaches Us About Agent Skills",
+        "url": "https://skilldb.dev/blog/claude-code-leaked-what-500k-lines-teach-us-about-agent-skills",
+        "points": 5,
+        "num_comments": 0,
+        "author": "dev_chad",
+        "created_at": "2026-04-01T19:23:23Z"
+      },
+      {
+        "objectID": "46383614",
+        "title": "Agent Skills",
+        "url": "https://github.com/skillmatic-ai/awesome-agent-skills",
+        "points": 5,
+        "num_comments": 0,
+        "author": "dergalem",
+        "created_at": "2025-12-25T10:48:13Z"
+      },
+      {
+        "objectID": "46365578",
+        "title": "Agent Skills",
+        "url": "https://github.com/skillmatic-ai/awesome-agent-skills",
+        "points": 5,
+        "num_comments": 0,
+        "author": "galem-automi",
+        "created_at": "2025-12-23T14:30:41Z"
+      },
+      {
+        "objectID": "47770400",
+        "title": "Show HN: Sk.illmd.com, a forum for talking about and showing off agent skills",
+        "url": "https://skillmd.discourse.group/",
+        "points": 4,
+        "num_comments": 2,
+        "author": "0gs",
+        "created_at": "2026-04-14T19:37:39Z"
+      },
+      {
+        "objectID": "47760931",
+        "title": "Ask HN: Are most agent skills just fancy system prompts with a name?",
+        "url": "",
+        "points": 4,
+        "num_comments": 2,
+        "author": "skillcompass",
+        "created_at": "2026-04-14T03:32:41Z"
+      },
+      {
+        "objectID": "46693426",
+        "title": "Show HN: Agent Skills – 1k curated Claude Code skills from 60k+ GitHub skills",
+        "url": "https://agent-skills.cc/",
+        "points": 4,
+        "num_comments": 2,
+        "author": "lixiaofei",
+        "created_at": "2026-01-20T16:07:41Z"
+      },
+      {
+        "objectID": "47066593",
+        "title": "Show HN: SkillForge – Turn screen recordings into agent skill files",
+        "url": "https://skillforge.expert/",
+        "points": 4,
+        "num_comments": 1,
+        "author": "YaraDori",
+        "created_at": "2026-02-18T21:21:07Z"
+      },
+      {
+        "objectID": "48143167",
+        "title": "15% of AI agent skill files carry hardcoded credentials with DB write access",
+        "url": "https://securityboulevard.com/2026/05/capsule-security-analysis-details-scope-of-vulnerable-ai-agent-attack-surface/",
+        "points": 4,
+        "num_comments": 0,
+        "author": "Armor1AI",
+        "created_at": "2026-05-15T00:51:33Z"
+      },
+      {
+        "objectID": "48096115",
+        "title": "Skill-kit – TypeScript SDK for building agent skills as typed state machines",
+        "url": "https://github.com/contentful/skill-kit",
+        "points": 4,
+        "num_comments": 0,
+        "author": "ravel",
+        "created_at": "2026-05-11T15:14:07Z"
+      },
+      {
+        "objectID": "47151588",
+        "title": "Agent Skills for Data Engineering (Airflow, Dbt, Analytics)",
+        "url": "https://github.com/astronomer/agents",
+        "points": 4,
+        "num_comments": 0,
+        "author": "tayloramurphy",
+        "created_at": "2026-02-25T14:01:15Z"
+      },
+      {
+        "objectID": "46893894",
+        "title": "From magic to malware: How OpenClaw's agent skills become an attack surface",
+        "url": "https://1password.com/blog/from-magic-to-malware-how-openclaws-agent-skills-become-an-attack-surface",
+        "points": 4,
+        "num_comments": 0,
+        "author": "birdculture",
+        "created_at": "2026-02-05T00:18:09Z"
+      },
+      {
+        "objectID": "46863314",
+        "title": "From magic to malware: How OpenClaw's agent skills become an attack surface",
+        "url": "https://1password.com/blog/from-magic-to-malware-how-openclaws-agent-skills-become-an-attack-surface",
+        "points": 4,
+        "num_comments": 0,
+        "author": "terracatta",
+        "created_at": "2026-02-02T22:56:07Z"
+      },
+      {
+        "objectID": "46422264",
+        "title": "Show HN: Package Manager for Agent Skills: Publish, Discover, Install Everywhere",
+        "url": "https://paks.stakpak.dev",
+        "points": 4,
+        "num_comments": 0,
+        "author": "kajogo",
+        "created_at": "2025-12-29T16:31:51Z"
+      }
+    ]
+  }
+}

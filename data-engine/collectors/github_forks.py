@@ -1,107 +1,64 @@
-#!/usr/bin/env python3
-"""Collect fork data for a GitHub repository.
+"""Collect GitHub fork data for repos."""
+import sys, os
+from collections import Counter
 
-Uses the public GitHub REST API:
-  GET /repos/{owner}/{repo}        -- fork count
-  GET /repos/{owner}/{repo}/forks  -- list forks with pagination
-
-Output file: {owner}_{repo}_forks.json
-"""
-
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from collectors.base import GitHubClient, save_json, add_common_args, resolve_repos
 import argparse
-import sys
-
-from dateutil.parser import isoparse
-
-try:
-    from collectors.base import GitHubClient, save_json, add_common_args, resolve_repos, log
-except ImportError:
-    sys.path.insert(0, ".")
-    from collectors.base import GitHubClient, save_json, add_common_args, resolve_repos, log
-
-COLLECTOR = "github_forks"
 
 
-def collect(client: GitHubClient, repo: str) -> dict:
-    """Return fork data for *repo*."""
-    owner, name = repo.split("/", 1)
+def collect_forks(client, repo, output_dir):
+    owner, name = repo.split("/")
+    print(f"🍴 Collecting forks for {repo}")
 
-    # 1. Repo-level fork count
-    resp = client.get(f"/repos/{owner}/{name}")
-    if resp is None:
-        return {"error": f"Could not fetch repo {repo}"}
-    repo_data = resp.json()
-    total_forks = repo_data.get("forks_count", 0)
+    r = client.get(f"/repos/{owner}/{name}")
+    if r.status_code != 200:
+        print(f"  ❌ HTTP {r.status_code} for {repo}", file=sys.stderr)
+        return None
+    fork_count = r.json().get("forks_count", 0)
 
-    # 2. Paginate through forks (sorted by newest)
-    forks = client.paginate(
-        f"/repos/{owner}/{name}/forks",
-        per_page=100,
-        max_pages=10,
-        params={"sort": "newest"},
-    )
+    forks = client.paginate(f"/repos/{owner}/{name}/forks", max_pages=3)
 
-    # 3. Extract useful information
-    fork_list = []
+    top_by_stars = sorted(forks, key=lambda f: f.get("stargazers_count", 0), reverse=True)[:10]
+    recent = sorted(forks, key=lambda f: f.get("created_at", ""), reverse=True)[:10]
+
+    monthly = Counter()
     for f in forks:
-        if not isinstance(f, dict):
-            continue
-        fork_list.append({
-            "full_name": f.get("full_name", ""),
-            "stars": f.get("stargazers_count", 0),
-            "forks": f.get("forks_count", 0),
-            "open_issues": f.get("open_issues_count", 0),
-            "created_at": f.get("created_at", ""),
-            "pushed_at": f.get("pushed_at", ""),
-            "language": f.get("language", ""),
-        })
+        ts = f.get("created_at", "")[:7]
+        if ts:
+            monthly[ts] += 1
 
-    # Top forks by star count
-    top_by_stars = sorted(fork_list, key=lambda x: x["stars"], reverse=True)[:20]
-
-    # Recent forks (already sorted by newest from API)
-    recent = fork_list[:20]
-
-    # Forks created per month
-    monthly: dict[str, int] = {}
-    for f in fork_list:
-        try:
-            dt = isoparse(f["created_at"])
-        except (ValueError, TypeError):
-            continue
-        key = dt.strftime("%Y-%m")
-        monthly[key] = monthly.get(key, 0) + 1
-
-    return {
-        "repo": repo,
-        "total_forks": total_forks,
-        "forks_fetched": len(fork_list),
-        "top_forks_by_stars": top_by_stars,
-        "recent_forks": recent,
+    data = {
+        "full_name": repo,
+        "forks_count": fork_count,
+        "forks_sampled": len(forks),
+        "top_forks": [
+            {"full_name": f.get("full_name"), "stars": f.get("stargazers_count", 0)}
+            for f in top_by_stars
+        ],
+        "recent_forks": [
+            {"full_name": f.get("full_name"), "created_at": f.get("created_at")}
+            for f in recent
+        ],
         "monthly_counts": dict(sorted(monthly.items())),
     }
+    safe = repo.replace("/", "_")
+    save_json(output_dir, f"{safe}_forks.json", repo, "github_forks", data)
+    return data
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Collect GitHub fork data")
+    parser = argparse.ArgumentParser(description="GitHub Forks Collector")
     add_common_args(parser)
     args = parser.parse_args()
-
+    client = GitHubClient(args.token)
     repos = resolve_repos(args)
     if not repos:
-        log.error("No repos to process. Use --repo, --all, or --priority.")
-        sys.exit(1)
-
-    client = GitHubClient(token=args.token)
-    log.info("Collecting forks for %d repo(s) (auth=%s)", len(repos), client.authenticated())
-
+        print("No repos to process", file=sys.stderr)
+        return
     for repo in repos:
-        log.info("-> %s", repo)
-        data = collect(client, repo)
-        filename = f"{client.safe_filename(repo)}_forks.json"
-        save_json(args.output, filename, COLLECTOR, repo, data)
-
-    log.info("Done.")
+        collect_forks(client, repo, args.output)
+        client.throttle()
 
 
 if __name__ == "__main__":

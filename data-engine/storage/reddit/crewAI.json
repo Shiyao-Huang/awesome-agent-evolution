@@ -1,0 +1,264 @@
+{
+  "project": "crewAI",
+  "repo": "crewAIInc/crewAI",
+  "collected_at": "2026-05-22T11:17:08.989064+00:00",
+  "queries": [
+    "crewAI",
+    "crewAI"
+  ],
+  "total_posts": 25,
+  "results": {
+    "crewAI": [
+      {
+        "id": "1rjo3ve",
+        "subreddit": "AI_Agents",
+        "title": "Spent the whole weekend fighting with crewai and i think i'm done with autonomous agents for a bit",
+        "score": 1,
+        "num_comments": 5,
+        "author": "clarkemmaa",
+        "url": "https://reddit.com/r/AI_Agents/comments/1rjo3ve/spent_the_whole_weekend_fighting_with_crewai_and/",
+        "created_utc": 1772541135.0
+      },
+      {
+        "id": "1sgb50k",
+        "subreddit": "crewai",
+        "title": "How is CrewAI actually meant to be used in practice?",
+        "score": 6,
+        "num_comments": 3,
+        "author": "Bulky_Bodybuilder102",
+        "url": "https://reddit.com/r/crewai/comments/1sgb50k/how_is_crewai_actually_meant_to_be_used_in/",
+        "created_utc": 1775696398.0
+      },
+      {
+        "id": "1pwd5fp",
+        "subreddit": "AI_Agents",
+        "title": "Is crewAI really an agent framework or just managed sequential LLM calls?",
+        "score": 4,
+        "num_comments": 16,
+        "author": "Okumam",
+        "url": "https://reddit.com/r/AI_Agents/comments/1pwd5fp/is_crewai_really_an_agent_framework_or_just/",
+        "created_utc": 1766778450.0
+      },
+      {
+        "id": "1q567hp",
+        "subreddit": "AI_Agents",
+        "title": "CrewAI vs LangGraph",
+        "score": 16,
+        "num_comments": 11,
+        "author": "Responsible-Luck-175",
+        "url": "https://reddit.com/r/AI_Agents/comments/1q567hp/crewai_vs_langgraph/",
+        "created_utc": 1767666613.0
+      },
+      {
+        "id": "1l6rw2n",
+        "subreddit": "AI_Agents",
+        "title": "Who’s using crewAI really?",
+        "score": 61,
+        "num_comments": 65,
+        "author": "Standard_Region_8928",
+        "url": "https://reddit.com/r/AI_Agents/comments/1l6rw2n/whos_using_crewai_really/",
+        "created_utc": 1749430727.0
+      },
+      {
+        "id": "1s1o0k6",
+        "subreddit": "AI_Agents",
+        "title": "25+ agents built. Here's the uncomfortable truth nobody wants to post about.",
+        "score": 370,
+        "num_comments": 146,
+        "author": "Upper_Bass_2590",
+        "url": "https://reddit.com/r/AI_Agents/comments/1s1o0k6/25_agents_built_heres_the_uncomfortable_truth/",
+        "created_utc": 1774288099.0
+      },
+      {
+        "id": "1nwccur",
+        "subreddit": "crewai",
+        "title": "Is anyone here successfully using CrewAI for a live, production-grade application?",
+        "score": 10,
+        "num_comments": 13,
+        "author": "Itchy_Advantage_6267",
+        "url": "https://reddit.com/r/crewai/comments/1nwccur/is_anyone_here_successfully_using_crewai_for_a/",
+        "created_utc": 1759430949.0
+      },
+      {
+        "id": "1orpjic",
+        "subreddit": "AI_Agents",
+        "title": "LangChain vs CrewAI - which one do you like for agent development?",
+        "score": 25,
+        "num_comments": 35,
+        "author": "Successful_Pie_1239",
+        "url": "https://reddit.com/r/AI_Agents/comments/1orpjic/langchain_vs_crewai_which_one_do_you_like_for/",
+        "created_utc": 1762608857.0
+      },
+      {
+        "id": "1s39jw2",
+        "subreddit": "LocalLLaMA",
+        "title": "LangGraph vs CrewAI for multi-agent RAG with local models?",
+        "score": 3,
+        "num_comments": 1,
+        "author": "Purple_Afternoon6258",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1s39jw2/langgraph_vs_crewai_for_multiagent_rag_with_local/",
+        "created_utc": 1774442333.0
+      },
+      {
+        "id": "1r47a79",
+        "subreddit": "LocalLLaMA",
+        "title": "AI Developer Tools Map (2026 Edition)",
+        "score": 0,
+        "num_comments": 13,
+        "author": "Main-Fisherman-2075",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1r47a79/ai_developer_tools_map_2026_edition/",
+        "created_utc": 1771032354.0
+      },
+      {
+        "id": "1s2msan",
+        "subreddit": "FortNiteBR",
+        "title": "He rised the price of vbucks, fewer vbucks in the pass, reduces the vbucks that the crew gives, announced AI-generated skins, fired MORE THAN 1,000 EMPLOYEES all this in a single month",
+        "score": 4212,
+        "num_comments": 452,
+        "author": "Quick_soda",
+        "url": "https://reddit.com/r/FortNiteBR/comments/1s2msan/he_rised_the_price_of_vbucks_fewer_vbucks_in_the/",
+        "created_utc": 1774378408.0
+      },
+      {
+        "id": "1sfuk9g",
+        "subreddit": "technology",
+        "title": "Republicans fooled by AI-generated image of US airman rescued in Iran - Fake image of crew member surrounded by smiling military members has been reshared more than 21,000 times on X",
+        "score": 5705,
+        "num_comments": 222,
+        "author": "Just-Grocery-2229",
+        "url": "https://reddit.com/r/technology/comments/1sfuk9g/republicans_fooled_by_aigenerated_image_of_us/",
+        "created_utc": 1775658702.0
+      },
+      {
+        "id": "1ta3yws",
+        "subreddit": "HistoryPorn",
+        "title": "On May 11, 1960, the premier architect of the Holocaust, Adolf Eichmann, was captured by Mossad agents in Argentina. To avoid diplomatic crisis, he was drugged, dressed as a flight crew member and smuggled on an El AI flight bound for Israel, where he would stand trial for his war crimes. [1024x724]",
+        "score": 2711,
+        "num_comments": 197,
+        "author": "Pathetic_lriG43",
+        "url": "https://reddit.com/r/HistoryPorn/comments/1ta3yws/on_may_11_1960_the_premier_architect_of_the/",
+        "created_utc": 1778507571.0
+      },
+      {
+        "id": "1qj8uzn",
+        "subreddit": "thomastheplankengine",
+        "title": "Once I had a dream where a former crew member of Smiling Friends exposed that 50% of the show’s material was ai generated and it caused people to protest outside of the creators’ houses and throw away each particle of Smiling Friends merchandise in huge bonfires worldwide",
+        "score": 4712,
+        "num_comments": 90,
+        "author": "yumeto-not-found",
+        "url": "https://reddit.com/r/thomastheplankengine/comments/1qj8uzn/once_i_had_a_dream_where_a_former_crew_member_of/",
+        "created_utc": 1769026463.0
+      },
+      {
+        "id": "1s00ajb",
+        "subreddit": "ClaudeAI",
+        "title": "I'm a PhD student in AI and I built a 10-agent Obsidian crew because my brain couldn't keep up with my life anymore",
+        "score": 1217,
+        "num_comments": 212,
+        "author": "Routine_Round_8491",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1s00ajb/im_a_phd_student_in_ai_and_i_built_a_10agent/",
+        "created_utc": 1774121085.0
+      },
+      {
+        "id": "1pjelmt",
+        "subreddit": "LeftoversH3",
+        "title": "The new $28 H3 puzzle is pure AI slop, and it also doesn't include the crew",
+        "score": 849,
+        "num_comments": 276,
+        "author": "BolsonaroPresoAmanha",
+        "url": "https://reddit.com/r/LeftoversH3/comments/1pjelmt/the_new_28_h3_puzzle_is_pure_ai_slop_and_it_also/",
+        "created_utc": 1765400888.0
+      },
+      {
+        "id": "1ra75id",
+        "subreddit": "h3h3productions",
+        "title": "I asked AI to un-blur an extremely low-res pic of the crew and this is what it spat out",
+        "score": 845,
+        "num_comments": 178,
+        "author": "musecorn",
+        "url": "https://reddit.com/r/h3h3productions/comments/1ra75id/i_asked_ai_to_unblur_an_extremely_lowres_pic_of/",
+        "created_utc": 1771620733.0
+      },
+      {
+        "id": "1i8q79y",
+        "subreddit": "singularity",
+        "title": "Meta AI crew panicked because China spent only 5m dollars, a sum less than the salary of more than a dozen \"leaders\", to creat a much more powerful AI model than their own. (I wonder how many would hate China for their low price again, after numerous instances in manufacturing industry)",
+        "score": 1237,
+        "num_comments": 392,
+        "author": "uniyk",
+        "url": "https://reddit.com/r/singularity/comments/1i8q79y/meta_ai_crew_panicked_because_china_spent_only_5m/",
+        "created_utc": 1737704170.0
+      },
+      {
+        "id": "13bcxd6",
+        "subreddit": "h3h3productions",
+        "title": "LARPing was mentioned recently, so here's the crew ready for adventure (plus a valuable ally, and the BBEG for the first campaign) [AI]",
+        "score": 3498,
+        "num_comments": 251,
+        "author": "YouSayItLikeItsBad",
+        "url": "https://reddit.com/r/h3h3productions/comments/13bcxd6/larping_was_mentioned_recently_so_heres_the_crew/",
+        "created_utc": 1683517544.0
+      },
+      {
+        "id": "1hbksnz",
+        "subreddit": "CODZombies",
+        "title": "From Cantelle barry's instagram (voice actor for maya) looks like the crew is gonna change, screw AI",
+        "score": 1161,
+        "num_comments": 344,
+        "author": "Comprehensive_Rice27",
+        "url": "https://reddit.com/r/CODZombies/comments/1hbksnz/from_cantelle_barrys_instagram_voice_actor_for/",
+        "created_utc": 1733889093.0
+      },
+      {
+        "id": "1t0yoa2",
+        "subreddit": "nextfuckinglevel",
+        "title": "Shooting drones by hand video (Not AI)",
+        "score": 45326,
+        "num_comments": 1320,
+        "author": "Alpha_wolf_lover",
+        "url": "https://reddit.com/r/nextfuckinglevel/comments/1t0yoa2/shooting_drones_by_hand_video_not_ai/",
+        "created_utc": 1777653644.0
+      },
+      {
+        "id": "1j70ya1",
+        "subreddit": "Warthunder",
+        "title": "First my rocket gets hit by an AI's AA shell, then my corpse goes mach, AND I get a crew lock? Now THIS is War Thundering",
+        "score": 3472,
+        "num_comments": 78,
+        "author": "Americanshat",
+        "url": "https://reddit.com/r/Warthunder/comments/1j70ya1/first_my_rocket_gets_hit_by_an_ais_aa_shell_then/",
+        "created_utc": 1741499335.0
+      },
+      {
+        "id": "1t23gwd",
+        "subreddit": "technology",
+        "title": "China’s $1 Billion Robot Army Is Replacing Human Maintenance Crews with 8,500 AI Robots",
+        "score": 333,
+        "num_comments": 157,
+        "author": "Just-Grocery-2229",
+        "url": "https://reddit.com/r/technology/comments/1t23gwd/chinas_1_billion_robot_army_is_replacing_human/",
+        "created_utc": 1777760045.0
+      },
+      {
+        "id": "1g9hhz5",
+        "subreddit": "starcitizen",
+        "title": "You can stop asking about NPC crew / AI blades : give them time",
+        "score": 817,
+        "num_comments": 374,
+        "author": "Kehnte",
+        "url": "https://reddit.com/r/starcitizen/comments/1g9hhz5/you_can_stop_asking_about_npc_crew_ai_blades_give/",
+        "created_utc": 1729601893.0
+      },
+      {
+        "id": "1rreqxz",
+        "subreddit": "vfx",
+        "title": "Corridor Crew's  Key AI Model  in Under 6GB VRAM",
+        "score": 192,
+        "num_comments": 250,
+        "author": "Immediate-Basis2783",
+        "url": "https://reddit.com/r/vfx/comments/1rreqxz/corridor_crews_key_ai_model_in_under_6gb_vram/",
+        "created_utc": 1773282973.0
+      }
+    ]
+  }
+}

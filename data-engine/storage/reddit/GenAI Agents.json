@@ -1,0 +1,516 @@
+{
+  "project": "GenAI Agents",
+  "repo": "NirDiamant/GenAI_Agents",
+  "collected_at": "2026-05-22T11:18:13.095997+00:00",
+  "queries": [
+    "GenAI Agents",
+    "GenAI_Agents"
+  ],
+  "total_posts": 50,
+  "results": {
+    "GenAI Agents": [
+      {
+        "id": "1kq590b",
+        "subreddit": "LocalLLaMA",
+        "title": "Clara — A fully offline, Modular AI workspace (LLMs + Agents + Automation + Image Gen)",
+        "score": 732,
+        "num_comments": 213,
+        "author": "BadBoy17Ge",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1kq590b/clara_a_fully_offline_modular_ai_workspace_llms/",
+        "created_utc": 1747637581.0
+      },
+      {
+        "id": "1rzw54v",
+        "subreddit": "ProgrammerHumor",
+        "title": "agentsBeforeAIAgentWasAThing",
+        "score": 18411,
+        "num_comments": 290,
+        "author": "ClipboardCopyPaste",
+        "url": "https://reddit.com/r/ProgrammerHumor/comments/1rzw54v/agentsbeforeaiagentwasathing/",
+        "created_utc": 1774111277.0
+      },
+      {
+        "id": "1n6trt7",
+        "subreddit": "u_ibm",
+        "title": "Hi, Reddit! I’m Bruno Aziza, Vice President, Data, AI &amp; Analytics Strategy at IBM. When it comes to gen AI and AI agents, what’s real and what’s just buzz? Join me on September 9 at 2pm ET to talk about how AI agents really work and what can make them powerful. AMA!",
+        "score": 0,
+        "num_comments": 411,
+        "author": "ibm",
+        "url": "https://reddit.com/r/u_ibm/comments/1n6trt7/hi_reddit_im_bruno_aziza_vice_president_data_ai/",
+        "created_utc": 1756843007.0
+      },
+      {
+        "id": "1m8nonn",
+        "subreddit": "Salary",
+        "title": "Meta's (Facebook) Superintelligence Team leaked, all making $10 million plus yearly, with $100M first year for some.",
+        "score": 8906,
+        "num_comments": 502,
+        "author": "keralaindia",
+        "url": "https://reddit.com/r/Salary/comments/1m8nonn/metas_facebook_superintelligence_team_leaked_all/",
+        "created_utc": 1753411059.0
+      },
+      {
+        "id": "1sky54n",
+        "subreddit": "developersIndia",
+        "title": "8 YOE Data Scientist (GenAI/Agentic AI) – What salary should I expect in Bangalore?",
+        "score": 90,
+        "num_comments": 40,
+        "author": "noob_master_16",
+        "url": "https://reddit.com/r/developersIndia/comments/1sky54n/8_yoe_data_scientist_genaiagentic_ai_what_salary/",
+        "created_utc": 1776140167.0
+      },
+      {
+        "id": "1k3o8au",
+        "subreddit": "wallstreetbets",
+        "title": "$ASTS DD The Space Trade will Cum.",
+        "score": 2975,
+        "num_comments": 942,
+        "author": "F1CKEN",
+        "url": "https://reddit.com/r/wallstreetbets/comments/1k3o8au/asts_dd_the_space_trade_will_cum/",
+        "created_utc": 1745160626.0
+      },
+      {
+        "id": "1spnuzg",
+        "subreddit": "hiring",
+        "title": "[Hiring] Looking for AI Agent Developer (Automation + Lead Gen Focus)",
+        "score": 11,
+        "num_comments": 45,
+        "author": "Standard-House-8469",
+        "url": "https://reddit.com/r/hiring/comments/1spnuzg/hiring_looking_for_ai_agent_developer_automation/",
+        "created_utc": 1776589406.0
+      },
+      {
+        "id": "1pilr8z",
+        "subreddit": "learnmachinelearning",
+        "title": "[RANT] Traditional ML is dead and I’m pissed about it",
+        "score": 2038,
+        "num_comments": 358,
+        "author": "pythonlovesme",
+        "url": "https://reddit.com/r/learnmachinelearning/comments/1pilr8z/rant_traditional_ml_is_dead_and_im_pissed_about_it/",
+        "created_utc": 1765320255.0
+      },
+      {
+        "id": "1taei9m",
+        "subreddit": "AI_Agents",
+        "title": "Stop building AI agents.",
+        "score": 1344,
+        "num_comments": 231,
+        "author": "Warm-Reaction-456",
+        "url": "https://reddit.com/r/AI_Agents/comments/1taei9m/stop_building_ai_agents/",
+        "created_utc": 1778529387.0
+      },
+      {
+        "id": "1r82s64",
+        "subreddit": "cscareerquestionsEU",
+        "title": "Laid off after 6 years as a developer — should I keep focusing on traditional dev roles, or pivot toward GenAI/agentic AI roles given the direction big tech is taking?",
+        "score": 29,
+        "num_comments": 44,
+        "author": "Ok_Tale_7924",
+        "url": "https://reddit.com/r/cscareerquestionsEU/comments/1r82s64/laid_off_after_6_years_as_a_developer_should_i/",
+        "created_utc": 1771420767.0
+      },
+      {
+        "id": "1t3e5bj",
+        "subreddit": "GamingLaptops",
+        "title": "Buying advice : 1.3 Lacs - Gaming + ML+DL+Gen&amp; Agentic AI.",
+        "score": 1,
+        "num_comments": 32,
+        "author": "iGlory154",
+        "url": "https://reddit.com/r/GamingLaptops/comments/1t3e5bj/buying_advice_13_lacs_gaming_mldlgen_agentic_ai/",
+        "created_utc": 1777891814.0
+      },
+      {
+        "id": "1tijv2i",
+        "subreddit": "accindia_A_ASEhiring",
+        "title": "AASE Pre Joiner Batch OB | Delivery Fundamentals: Core Concepts and Practices Session | Batch 11- Gen AI &amp; Agentic AI",
+        "score": 6,
+        "num_comments": 25,
+        "author": "Stock_Medicine9839",
+        "url": "https://reddit.com/r/accindia_A_ASEhiring/comments/1tijv2i/aase_pre_joiner_batch_ob_delivery_fundamentals/",
+        "created_utc": 1779279292.0
+      },
+      {
+        "id": "1prjl7z",
+        "subreddit": "LocalLLaMA",
+        "title": "Nvidia Introduces 'NitroGen': A Foundation Model for Generalist Gaming Agents | \"This research effectively validates a scalable pipeline for building general-purpose agents that can operate in unknown environments, moving the field closer to universally capable AI.\"",
+        "score": 91,
+        "num_comments": 39,
+        "author": "44th--Hokage",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1prjl7z/nvidia_introduces_nitrogen_a_foundation_model_for/",
+        "created_utc": 1766251308.0
+      },
+      {
+        "id": "1r0hr5r",
+        "subreddit": "Sacramento",
+        "title": "Do you support a county wide ban on mass surveillance video cameras like Flock or Ring?",
+        "score": 1373,
+        "num_comments": 256,
+        "author": "Dannyz",
+        "url": "https://reddit.com/r/Sacramento/comments/1r0hr5r/do_you_support_a_county_wide_ban_on_mass/",
+        "created_utc": 1770673777.0
+      },
+      {
+        "id": "1smjl1n",
+        "subreddit": "LocalLLM",
+        "title": "Help me squeeze every drop out of my AMD Ryzen AI Max+ 395 (96GB unified VRAM) — local LLM, image/video gen, coding agents",
+        "score": 55,
+        "num_comments": 20,
+        "author": "platteXDlol",
+        "url": "https://reddit.com/r/LocalLLM/comments/1smjl1n/help_me_squeeze_every_drop_out_of_my_amd_ryzen_ai/",
+        "created_utc": 1776288500.0
+      },
+      {
+        "id": "1c740v6",
+        "subreddit": "antiwork",
+        "title": "We are truly living in a dystopian time period.",
+        "score": 4975,
+        "num_comments": 514,
+        "author": "ProBlackMan1",
+        "url": "https://reddit.com/r/antiwork/comments/1c740v6/we_are_truly_living_in_a_dystopian_time_period/",
+        "created_utc": 1713448704.0
+      },
+      {
+        "id": "1prihr4",
+        "subreddit": "accelerate",
+        "title": "Nvidia Introduces 'NitroGen': A Foundation Model for Generalist Gaming Agents | \"This research effectively validates a scalable pipeline for building general-purpose agents that can operate in unknown environments, moving the field closer to universally capable AI.\"",
+        "score": 101,
+        "num_comments": 30,
+        "author": "44th--Hokage",
+        "url": "https://reddit.com/r/accelerate/comments/1prihr4/nvidia_introduces_nitrogen_a_foundation_model_for/",
+        "created_utc": 1766248519.0
+      },
+      {
+        "id": "1sw4q3l",
+        "subreddit": "technology",
+        "title": "A Meta AI exec watched agents beat her top workers. Now she’s built a nonprofit to help Gen Z find jobs before they disappear",
+        "score": 0,
+        "num_comments": 21,
+        "author": "talkingatoms",
+        "url": "https://reddit.com/r/technology/comments/1sw4q3l/a_meta_ai_exec_watched_agents_beat_her_top/",
+        "created_utc": 1777201877.0
+      },
+      {
+        "id": "1q7m77p",
+        "subreddit": "AI4tech",
+        "title": "How do you see the shift from GenAI to Agentic AI?",
+        "score": 69,
+        "num_comments": 31,
+        "author": "interviewkickstartUS",
+        "url": "https://reddit.com/r/AI4tech/comments/1q7m77p/how_do_you_see_the_shift_from_genai_to_agentic_ai/",
+        "created_utc": 1767902342.0
+      },
+      {
+        "id": "1ktj5x9",
+        "subreddit": "france",
+        "title": "Les “IA” sont vraiment en train de tuer le web.",
+        "score": 1968,
+        "num_comments": 435,
+        "author": "Nemecle",
+        "url": "https://reddit.com/r/france/comments/1ktj5x9/les_ia_sont_vraiment_en_train_de_tuer_le_web/",
+        "created_utc": 1748005734.0
+      },
+      {
+        "id": "1suha2d",
+        "subreddit": "emploi",
+        "title": "Nous sommes foutus.",
+        "score": 634,
+        "num_comments": 365,
+        "author": "Beginning-Wall5552",
+        "url": "https://reddit.com/r/emploi/comments/1suha2d/nous_sommes_foutus/",
+        "created_utc": 1777040778.0
+      },
+      {
+        "id": "1qkpanx",
+        "subreddit": "techIndia",
+        "title": "Need a Laptop for Gen AI and Agentic AI under 60k",
+        "score": 9,
+        "num_comments": 34,
+        "author": "AssFucker_256",
+        "url": "https://reddit.com/r/techIndia/comments/1qkpanx/need_a_laptop_for_gen_ai_and_agentic_ai_under_60k/",
+        "created_utc": 1769170710.0
+      },
+      {
+        "id": "1sqhp8g",
+        "subreddit": "aiToolForBusiness",
+        "title": "I built a few AI agents that handle LinkedIn growth on autopilot — lead gen, content repurposing, and auto-commenting",
+        "score": 5,
+        "num_comments": 18,
+        "author": "theautomationxperts",
+        "url": "https://reddit.com/r/aiToolForBusiness/comments/1sqhp8g/i_built_a_few_ai_agents_that_handle_linkedin/",
+        "created_utc": 1776667914.0
+      },
+      {
+        "id": "1p85eok",
+        "subreddit": "dataengineering",
+        "title": "What Impressive GenAI / Agentic AI Use Cases Have You Actually Put Into Production",
+        "score": 21,
+        "num_comments": 40,
+        "author": "Different-Future-447",
+        "url": "https://reddit.com/r/dataengineering/comments/1p85eok/what_impressive_genai_agentic_ai_use_cases_have/",
+        "created_utc": 1764258383.0
+      },
+      {
+        "id": "1s39jd6",
+        "subreddit": "AI_Agents",
+        "title": "Can Agentic AI and GenAI Work Together for More Advanced Use Cases?",
+        "score": 5,
+        "num_comments": 21,
+        "author": "Sufficient-Habit4311",
+        "url": "https://reddit.com/r/AI_Agents/comments/1s39jd6/can_agentic_ai_and_genai_work_together_for_more/",
+        "created_utc": 1774442299.0
+      }
+    ],
+    "GenAI_Agents": [
+      {
+        "id": "1kq590b",
+        "subreddit": "LocalLLaMA",
+        "title": "Clara — A fully offline, Modular AI workspace (LLMs + Agents + Automation + Image Gen)",
+        "score": 726,
+        "num_comments": 213,
+        "author": "BadBoy17Ge",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1kq590b/clara_a_fully_offline_modular_ai_workspace_llms/",
+        "created_utc": 1747637581.0
+      },
+      {
+        "id": "1rzw54v",
+        "subreddit": "ProgrammerHumor",
+        "title": "agentsBeforeAIAgentWasAThing",
+        "score": 18408,
+        "num_comments": 290,
+        "author": "ClipboardCopyPaste",
+        "url": "https://reddit.com/r/ProgrammerHumor/comments/1rzw54v/agentsbeforeaiagentwasathing/",
+        "created_utc": 1774111277.0
+      },
+      {
+        "id": "1n6trt7",
+        "subreddit": "u_ibm",
+        "title": "Hi, Reddit! I’m Bruno Aziza, Vice President, Data, AI &amp; Analytics Strategy at IBM. When it comes to gen AI and AI agents, what’s real and what’s just buzz? Join me on September 9 at 2pm ET to talk about how AI agents really work and what can make them powerful. AMA!",
+        "score": 0,
+        "num_comments": 411,
+        "author": "ibm",
+        "url": "https://reddit.com/r/u_ibm/comments/1n6trt7/hi_reddit_im_bruno_aziza_vice_president_data_ai/",
+        "created_utc": 1756843007.0
+      },
+      {
+        "id": "1m8nonn",
+        "subreddit": "Salary",
+        "title": "Meta's (Facebook) Superintelligence Team leaked, all making $10 million plus yearly, with $100M first year for some.",
+        "score": 8907,
+        "num_comments": 502,
+        "author": "keralaindia",
+        "url": "https://reddit.com/r/Salary/comments/1m8nonn/metas_facebook_superintelligence_team_leaked_all/",
+        "created_utc": 1753411059.0
+      },
+      {
+        "id": "1sky54n",
+        "subreddit": "developersIndia",
+        "title": "8 YOE Data Scientist (GenAI/Agentic AI) – What salary should I expect in Bangalore?",
+        "score": 92,
+        "num_comments": 40,
+        "author": "noob_master_16",
+        "url": "https://reddit.com/r/developersIndia/comments/1sky54n/8_yoe_data_scientist_genaiagentic_ai_what_salary/",
+        "created_utc": 1776140167.0
+      },
+      {
+        "id": "1k3o8au",
+        "subreddit": "wallstreetbets",
+        "title": "$ASTS DD The Space Trade will Cum.",
+        "score": 2977,
+        "num_comments": 942,
+        "author": "F1CKEN",
+        "url": "https://reddit.com/r/wallstreetbets/comments/1k3o8au/asts_dd_the_space_trade_will_cum/",
+        "created_utc": 1745160626.0
+      },
+      {
+        "id": "1spnuzg",
+        "subreddit": "hiring",
+        "title": "[Hiring] Looking for AI Agent Developer (Automation + Lead Gen Focus)",
+        "score": 13,
+        "num_comments": 45,
+        "author": "Standard-House-8469",
+        "url": "https://reddit.com/r/hiring/comments/1spnuzg/hiring_looking_for_ai_agent_developer_automation/",
+        "created_utc": 1776589406.0
+      },
+      {
+        "id": "1pilr8z",
+        "subreddit": "learnmachinelearning",
+        "title": "[RANT] Traditional ML is dead and I’m pissed about it",
+        "score": 2043,
+        "num_comments": 358,
+        "author": "pythonlovesme",
+        "url": "https://reddit.com/r/learnmachinelearning/comments/1pilr8z/rant_traditional_ml_is_dead_and_im_pissed_about_it/",
+        "created_utc": 1765320255.0
+      },
+      {
+        "id": "1taei9m",
+        "subreddit": "AI_Agents",
+        "title": "Stop building AI agents.",
+        "score": 1340,
+        "num_comments": 231,
+        "author": "Warm-Reaction-456",
+        "url": "https://reddit.com/r/AI_Agents/comments/1taei9m/stop_building_ai_agents/",
+        "created_utc": 1778529387.0
+      },
+      {
+        "id": "1r82s64",
+        "subreddit": "cscareerquestionsEU",
+        "title": "Laid off after 6 years as a developer — should I keep focusing on traditional dev roles, or pivot toward GenAI/agentic AI roles given the direction big tech is taking?",
+        "score": 29,
+        "num_comments": 44,
+        "author": "Ok_Tale_7924",
+        "url": "https://reddit.com/r/cscareerquestionsEU/comments/1r82s64/laid_off_after_6_years_as_a_developer_should_i/",
+        "created_utc": 1771420767.0
+      },
+      {
+        "id": "1t3e5bj",
+        "subreddit": "GamingLaptops",
+        "title": "Buying advice : 1.3 Lacs - Gaming + ML+DL+Gen&amp; Agentic AI.",
+        "score": 1,
+        "num_comments": 32,
+        "author": "iGlory154",
+        "url": "https://reddit.com/r/GamingLaptops/comments/1t3e5bj/buying_advice_13_lacs_gaming_mldlgen_agentic_ai/",
+        "created_utc": 1777891814.0
+      },
+      {
+        "id": "1tijv2i",
+        "subreddit": "accindia_A_ASEhiring",
+        "title": "AASE Pre Joiner Batch OB | Delivery Fundamentals: Core Concepts and Practices Session | Batch 11- Gen AI &amp; Agentic AI",
+        "score": 6,
+        "num_comments": 25,
+        "author": "Stock_Medicine9839",
+        "url": "https://reddit.com/r/accindia_A_ASEhiring/comments/1tijv2i/aase_pre_joiner_batch_ob_delivery_fundamentals/",
+        "created_utc": 1779279292.0
+      },
+      {
+        "id": "1prjl7z",
+        "subreddit": "LocalLLaMA",
+        "title": "Nvidia Introduces 'NitroGen': A Foundation Model for Generalist Gaming Agents | \"This research effectively validates a scalable pipeline for building general-purpose agents that can operate in unknown environments, moving the field closer to universally capable AI.\"",
+        "score": 89,
+        "num_comments": 39,
+        "author": "44th--Hokage",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1prjl7z/nvidia_introduces_nitrogen_a_foundation_model_for/",
+        "created_utc": 1766251308.0
+      },
+      {
+        "id": "1r0hr5r",
+        "subreddit": "Sacramento",
+        "title": "Do you support a county wide ban on mass surveillance video cameras like Flock or Ring?",
+        "score": 1377,
+        "num_comments": 256,
+        "author": "Dannyz",
+        "url": "https://reddit.com/r/Sacramento/comments/1r0hr5r/do_you_support_a_county_wide_ban_on_mass/",
+        "created_utc": 1770673777.0
+      },
+      {
+        "id": "1smjl1n",
+        "subreddit": "LocalLLM",
+        "title": "Help me squeeze every drop out of my AMD Ryzen AI Max+ 395 (96GB unified VRAM) — local LLM, image/video gen, coding agents",
+        "score": 55,
+        "num_comments": 20,
+        "author": "platteXDlol",
+        "url": "https://reddit.com/r/LocalLLM/comments/1smjl1n/help_me_squeeze_every_drop_out_of_my_amd_ryzen_ai/",
+        "created_utc": 1776288500.0
+      },
+      {
+        "id": "1c740v6",
+        "subreddit": "antiwork",
+        "title": "We are truly living in a dystopian time period.",
+        "score": 4980,
+        "num_comments": 514,
+        "author": "ProBlackMan1",
+        "url": "https://reddit.com/r/antiwork/comments/1c740v6/we_are_truly_living_in_a_dystopian_time_period/",
+        "created_utc": 1713448704.0
+      },
+      {
+        "id": "1prihr4",
+        "subreddit": "accelerate",
+        "title": "Nvidia Introduces 'NitroGen': A Foundation Model for Generalist Gaming Agents | \"This research effectively validates a scalable pipeline for building general-purpose agents that can operate in unknown environments, moving the field closer to universally capable AI.\"",
+        "score": 102,
+        "num_comments": 30,
+        "author": "44th--Hokage",
+        "url": "https://reddit.com/r/accelerate/comments/1prihr4/nvidia_introduces_nitrogen_a_foundation_model_for/",
+        "created_utc": 1766248519.0
+      },
+      {
+        "id": "1sw4q3l",
+        "subreddit": "technology",
+        "title": "A Meta AI exec watched agents beat her top workers. Now she’s built a nonprofit to help Gen Z find jobs before they disappear",
+        "score": 0,
+        "num_comments": 21,
+        "author": "talkingatoms",
+        "url": "https://reddit.com/r/technology/comments/1sw4q3l/a_meta_ai_exec_watched_agents_beat_her_top/",
+        "created_utc": 1777201877.0
+      },
+      {
+        "id": "1q7m77p",
+        "subreddit": "AI4tech",
+        "title": "How do you see the shift from GenAI to Agentic AI?",
+        "score": 70,
+        "num_comments": 31,
+        "author": "interviewkickstartUS",
+        "url": "https://reddit.com/r/AI4tech/comments/1q7m77p/how_do_you_see_the_shift_from_genai_to_agentic_ai/",
+        "created_utc": 1767902342.0
+      },
+      {
+        "id": "1ktj5x9",
+        "subreddit": "france",
+        "title": "Les “IA” sont vraiment en train de tuer le web.",
+        "score": 1972,
+        "num_comments": 435,
+        "author": "Nemecle",
+        "url": "https://reddit.com/r/france/comments/1ktj5x9/les_ia_sont_vraiment_en_train_de_tuer_le_web/",
+        "created_utc": 1748005734.0
+      },
+      {
+        "id": "1suha2d",
+        "subreddit": "emploi",
+        "title": "Nous sommes foutus.",
+        "score": 636,
+        "num_comments": 365,
+        "author": "Beginning-Wall5552",
+        "url": "https://reddit.com/r/emploi/comments/1suha2d/nous_sommes_foutus/",
+        "created_utc": 1777040778.0
+      },
+      {
+        "id": "1qkpanx",
+        "subreddit": "techIndia",
+        "title": "Need a Laptop for Gen AI and Agentic AI under 60k",
+        "score": 9,
+        "num_comments": 34,
+        "author": "AssFucker_256",
+        "url": "https://reddit.com/r/techIndia/comments/1qkpanx/need_a_laptop_for_gen_ai_and_agentic_ai_under_60k/",
+        "created_utc": 1769170710.0
+      },
+      {
+        "id": "1sqhp8g",
+        "subreddit": "aiToolForBusiness",
+        "title": "I built a few AI agents that handle LinkedIn growth on autopilot — lead gen, content repurposing, and auto-commenting",
+        "score": 5,
+        "num_comments": 18,
+        "author": "theautomationxperts",
+        "url": "https://reddit.com/r/aiToolForBusiness/comments/1sqhp8g/i_built_a_few_ai_agents_that_handle_linkedin/",
+        "created_utc": 1776667914.0
+      },
+      {
+        "id": "1p85eok",
+        "subreddit": "dataengineering",
+        "title": "What Impressive GenAI / Agentic AI Use Cases Have You Actually Put Into Production",
+        "score": 23,
+        "num_comments": 40,
+        "author": "Different-Future-447",
+        "url": "https://reddit.com/r/dataengineering/comments/1p85eok/what_impressive_genai_agentic_ai_use_cases_have/",
+        "created_utc": 1764258383.0
+      },
+      {
+        "id": "1s39jd6",
+        "subreddit": "AI_Agents",
+        "title": "Can Agentic AI and GenAI Work Together for More Advanced Use Cases?",
+        "score": 5,
+        "num_comments": 21,
+        "author": "Sufficient-Habit4311",
+        "url": "https://reddit.com/r/AI_Agents/comments/1s39jd6/can_agentic_ai_and_genai_work_together_for_more/",
+        "created_utc": 1774442299.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "project": "TextGrad",
+  "repo": "zou-group/textgrad",
+  "collected_at": "2026-05-22T11:05:43.089904+00:00",
+  "queries": [
+    "TextGrad",
+    "textgrad"
+  ],
+  "total_hits": 20,
+  "results": {
+    "TextGrad": [
+      {
+        "objectID": "40695533",
+        "title": "TextGrad: Automatic \"Differentiation\" via Text",
+        "url": "https://arxiv.org/abs/2406.07496",
+        "points": 6,
+        "num_comments": 0,
+        "author": "Protostome",
+        "created_at": "2024-06-16T08:18:52Z"
+      },
+      {
+        "objectID": "40804365",
+        "title": "TextGrad: Automatic \"Differentiation\" via Text",
+        "url": "https://gonzoml.substack.com/p/textgrad-automatic-differentiation",
+        "points": 3,
+        "num_comments": 0,
+        "author": "che_shr_cat",
+        "created_at": "2024-06-26T20:40:18Z"
+      },
+      {
+        "objectID": "40900351",
+        "title": "TextGrad – Backpropagation through text feedback",
+        "url": "https://arxiv.org/abs/2406.07496",
+        "points": 2,
+        "num_comments": 0,
+        "author": "danielhanchen",
+        "created_at": "2024-07-07T20:47:58Z"
+      },
+      {
+        "objectID": "40655506",
+        "title": "TextGrad: Automatic \"Differentiation\" via Text",
+        "url": "https://arxiv.org/abs/2406.07496",
+        "points": 2,
+        "num_comments": 0,
+        "author": "jasondavies",
+        "created_at": "2024-06-12T07:27:07Z"
+      },
+      {
+        "objectID": "40757462",
+        "title": "TextGrad: Automatic ''Differentiation'' via Text",
+        "url": "https://textgrad.com/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "plurby",
+        "created_at": "2024-06-22T08:43:06Z"
+      },
+      {
+        "objectID": "41379408",
+        "title": "Show HN: Relari – Auto Prompt Optimizer as Lightweight Alternative to Finetuning",
+        "url": "",
+        "points": 32,
+        "num_comments": 4,
+        "author": "antonap",
+        "created_at": "2024-08-28T13:40:33Z"
+      },
+      {
+        "objectID": "42470719",
+        "title": "Show HN: Instruct LLMs to do what you want in Ruby",
+        "url": "https://github.com/instruct-rb/instruct",
+        "points": 4,
+        "num_comments": 0,
+        "author": "mackross",
+        "created_at": "2024-12-20T12:58:34Z"
+      },
+      {
+        "objectID": "9297520",
+        "title": "Show HN: React component for text gradients",
+        "url": "http://javierbyte.github.io/react-textgradient",
+        "points": 2,
+        "num_comments": 0,
+        "author": "javierbyte",
+        "created_at": "2015-03-31T16:21:42Z"
+      },
+      {
+        "objectID": "25933337",
+        "title": "Show HN: Simple text gradient CSS generator",
+        "url": "https://textgradients.com/",
+        "points": 1,
+        "num_comments": 1,
+        "author": "carxofa",
+        "created_at": "2021-01-27T20:16:21Z"
+      },
+      {
+        "objectID": "14614369",
+        "title": "ABBYY’s new version of TextGrabber is a super useful OCR and translation app",
+        "url": "https://techcrunch.com/2017/06/22/abbyys-new-version-of-textgrabber-is-a-super-useful-ocr-and-translation-app",
+        "points": 2,
+        "num_comments": 0,
+        "author": "janober",
+        "created_at": "2017-06-22T18:46:06Z"
+      }
+    ],
+    "textgrad": [
+      {
+        "objectID": "40695533",
+        "title": "TextGrad: Automatic \"Differentiation\" via Text",
+        "url": "https://arxiv.org/abs/2406.07496",
+        "points": 6,
+        "num_comments": 0,
+        "author": "Protostome",
+        "created_at": "2024-06-16T08:18:52Z"
+      },
+      {
+        "objectID": "40804365",
+        "title": "TextGrad: Automatic \"Differentiation\" via Text",
+        "url": "https://gonzoml.substack.com/p/textgrad-automatic-differentiation",
+        "points": 3,
+        "num_comments": 0,
+        "author": "che_shr_cat",
+        "created_at": "2024-06-26T20:40:18Z"
+      },
+      {
+        "objectID": "40900351",
+        "title": "TextGrad – Backpropagation through text feedback",
+        "url": "https://arxiv.org/abs/2406.07496",
+        "points": 2,
+        "num_comments": 0,
+        "author": "danielhanchen",
+        "created_at": "2024-07-07T20:47:58Z"
+      },
+      {
+        "objectID": "40655506",
+        "title": "TextGrad: Automatic \"Differentiation\" via Text",
+        "url": "https://arxiv.org/abs/2406.07496",
+        "points": 2,
+        "num_comments": 0,
+        "author": "jasondavies",
+        "created_at": "2024-06-12T07:27:07Z"
+      },
+      {
+        "objectID": "40757462",
+        "title": "TextGrad: Automatic ''Differentiation'' via Text",
+        "url": "https://textgrad.com/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "plurby",
+        "created_at": "2024-06-22T08:43:06Z"
+      },
+      {
+        "objectID": "41379408",
+        "title": "Show HN: Relari – Auto Prompt Optimizer as Lightweight Alternative to Finetuning",
+        "url": "",
+        "points": 32,
+        "num_comments": 4,
+        "author": "antonap",
+        "created_at": "2024-08-28T13:40:33Z"
+      },
+      {
+        "objectID": "42470719",
+        "title": "Show HN: Instruct LLMs to do what you want in Ruby",
+        "url": "https://github.com/instruct-rb/instruct",
+        "points": 4,
+        "num_comments": 0,
+        "author": "mackross",
+        "created_at": "2024-12-20T12:58:34Z"
+      },
+      {
+        "objectID": "9297520",
+        "title": "Show HN: React component for text gradients",
+        "url": "http://javierbyte.github.io/react-textgradient",
+        "points": 2,
+        "num_comments": 0,
+        "author": "javierbyte",
+        "created_at": "2015-03-31T16:21:42Z"
+      },
+      {
+        "objectID": "25933337",
+        "title": "Show HN: Simple text gradient CSS generator",
+        "url": "https://textgradients.com/",
+        "points": 1,
+        "num_comments": 1,
+        "author": "carxofa",
+        "created_at": "2021-01-27T20:16:21Z"
+      },
+      {
+        "objectID": "14614369",
+        "title": "ABBYY’s new version of TextGrabber is a super useful OCR and translation app",
+        "url": "https://techcrunch.com/2017/06/22/abbyys-new-version-of-textgrabber-is-a-super-useful-ocr-and-translation-app",
+        "points": 2,
+        "num_comments": 0,
+        "author": "janober",
+        "created_at": "2017-06-22T18:46:06Z"
+      }
+    ]
+  }
+}

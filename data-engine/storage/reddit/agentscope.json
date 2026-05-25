@@ -1,0 +1,264 @@
+{
+  "project": "agentscope",
+  "repo": "modelscope/agentscope",
+  "collected_at": "2026-05-22T11:17:48.278672+00:00",
+  "queries": [
+    "agentscope",
+    "agentscope"
+  ],
+  "total_posts": 25,
+  "results": {
+    "agentscope": [
+      {
+        "id": "1s6brgn",
+        "subreddit": "LovingOpenSourceAI",
+        "title": "\"BREAKING: China has open-source a massive Python framework for building AI agents called AgentScope, a python framework built around Agent-Oriented Programming that lets you build AI agents visually with MCP tools, memory, rag, and reasoning capabilities. 100% Open Source.\" ➡️ Helps your workflow?",
+        "score": 248,
+        "num_comments": 8,
+        "author": "Koala_Confused",
+        "url": "https://reddit.com/r/LovingOpenSourceAI/comments/1s6brgn/breaking_china_has_opensource_a_massive_python/",
+        "created_utc": 1774731330.0
+      },
+      {
+        "id": "1t4w0df",
+        "subreddit": "LocalLLM",
+        "title": "QwenPaw and Agentscope",
+        "score": 3,
+        "num_comments": 1,
+        "author": "leo-k7v",
+        "url": "https://reddit.com/r/LocalLLM/comments/1t4w0df/qwenpaw_and_agentscope/",
+        "created_utc": 1778023661.0
+      },
+      {
+        "id": "1tgt7ws",
+        "subreddit": "AlibabaCloudAI",
+        "title": "AgentScope Java 1.1 launches with workspace-driven persistence, pluggable filesystems, auto-context management, and secure sandbox orchestration for scalable enterprise Agents 🚀",
+        "score": 2,
+        "num_comments": 0,
+        "author": "AlibabaCloud_Team",
+        "url": "https://reddit.com/r/AlibabaCloudAI/comments/1tgt7ws/agentscope_java_11_launches_with_workspacedriven/",
+        "created_utc": 1779124521.0
+      },
+      {
+        "id": "1sgn3ud",
+        "subreddit": "u_softtechhubus",
+        "title": "How to Design Robust AgentScope Pipelines with React Agents and Structured Outputs",
+        "score": 1,
+        "num_comments": 0,
+        "author": "softtechhubus",
+        "url": "https://reddit.com/r/u_softtechhubus/comments/1sgn3ud/how_to_design_robust_agentscope_pipelines_with/",
+        "created_utc": 1775734626.0
+      },
+      {
+        "id": "1rk1nie",
+        "subreddit": "topaitools",
+        "title": "CoPaw CoPaw — co personal agent workstation is an open-source AI assistant built on the Agentscope framework for deploying modular agents locally or in the cloud",
+        "score": 1,
+        "num_comments": 0,
+        "author": "TopAiTools",
+        "url": "https://reddit.com/r/topaitools/comments/1rk1nie/copaw_copaw_co_personal_agent_workstation_is_an/",
+        "created_utc": 1772572227.0
+      },
+      {
+        "id": "1nusdpx",
+        "subreddit": "mlwires",
+        "title": "AgentScope 1.0, a developer-centric framework for AI agents",
+        "score": 2,
+        "num_comments": 0,
+        "author": "doinapp",
+        "url": "https://reddit.com/r/mlwires/comments/1nusdpx/agentscope_10_a_developercentric_framework_for_ai/",
+        "created_utc": 1759274158.0
+      },
+      {
+        "id": "1s8nikv",
+        "subreddit": "LocalLLaMA",
+        "title": "Copaw-9B (Qwen3.5 9b, alibaba official agentic finetune) is out",
+        "score": 264,
+        "num_comments": 66,
+        "author": "kironlau",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1s8nikv/copaw9b_qwen35_9b_alibaba_official_agentic/",
+        "created_utc": 1774963871.0
+      },
+      {
+        "id": "1t0bm5w",
+        "subreddit": "StableDiffusion",
+        "title": "Local AI News You Missed - April 2026",
+        "score": 365,
+        "num_comments": 34,
+        "author": "vramkickedin",
+        "url": "https://reddit.com/r/StableDiffusion/comments/1t0bm5w/local_ai_news_you_missed_april_2026/",
+        "created_utc": 1777589333.0
+      },
+      {
+        "id": "1s55dn1",
+        "subreddit": "LovingAIAgents",
+        "title": "\"BREAKING: China has open-source a massive Python framework for building AI agents called AgentScope, a python framework built around Agent-Oriented Programming that lets you build AI agents visually with MCP tools, memory, rag, and reasoning capabilities. 100% Open Source.\" ➡️ Useful?",
+        "score": 300,
+        "num_comments": 32,
+        "author": "Koala_Confused",
+        "url": "https://reddit.com/r/LovingAIAgents/comments/1s55dn1/breaking_china_has_opensource_a_massive_python/",
+        "created_utc": 1774621058.0
+      },
+      {
+        "id": "1shlk5v",
+        "subreddit": "LocalLLaMA",
+        "title": "[Model Release] I trained a 9B model to be agentic Data Analyst (Qwen3.5-9B + LoRA). Base model failed 100%, this LoRA completes 89% of workflows without human intervention.",
+        "score": 130,
+        "num_comments": 43,
+        "author": "Awkward_Run_9982",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1shlk5v/model_release_i_trained_a_9b_model_to_be_agentic/",
+        "created_utc": 1775825252.0
+      },
+      {
+        "id": "1t0swl4",
+        "subreddit": "OpenClawUseCases",
+        "title": "Tried every major multi-agent solution for OpenClaw. Here's my honest take.",
+        "score": 31,
+        "num_comments": 29,
+        "author": "NoMark3945",
+        "url": "https://reddit.com/r/OpenClawUseCases/comments/1t0swl4/tried_every_major_multiagent_solution_for/",
+        "created_utc": 1777640743.0
+      },
+      {
+        "id": "1s5eq5u",
+        "subreddit": "MyBoyfriendIsAI",
+        "title": "Give your companion some agency",
+        "score": 85,
+        "num_comments": 23,
+        "author": "Certain-Way6763",
+        "url": "https://reddit.com/r/MyBoyfriendIsAI/comments/1s5eq5u/give_your_companion_some_agency/",
+        "created_utc": 1774641214.0
+      },
+      {
+        "id": "1rhvwn3",
+        "subreddit": "MyBoyfriendIsAI",
+        "title": "Alternatives to ChatGPT - an open conversation",
+        "score": 34,
+        "num_comments": 35,
+        "author": "FelixTurtle",
+        "url": "https://reddit.com/r/MyBoyfriendIsAI/comments/1rhvwn3/alternatives_to_chatgpt_an_open_conversation/",
+        "created_utc": 1772367513.0
+      },
+      {
+        "id": "1rurrjn",
+        "subreddit": "openclaw",
+        "title": "Breaking: Alibaba launches CoPaw, China's first domestic open personal-agent answer to the OpenClaw wave.",
+        "score": 45,
+        "num_comments": 29,
+        "author": "etherd0t",
+        "url": "https://reddit.com/r/openclaw/comments/1rurrjn/breaking_alibaba_launches_copaw_chinas_first/",
+        "created_utc": 1773613385.0
+      },
+      {
+        "id": "1pnxrft",
+        "subreddit": "vibecoding",
+        "title": "I vibe coded it, now I keep finding other cool (vibe coded) projects",
+        "score": 93,
+        "num_comments": 31,
+        "author": "alvinunreal",
+        "url": "https://reddit.com/r/vibecoding/comments/1pnxrft/i_vibe_coded_it_now_i_keep_finding_other_cool/",
+        "created_utc": 1765877435.0
+      },
+      {
+        "id": "1rin3ea",
+        "subreddit": "LocalLLaMA",
+        "title": "Alibaba Team Open-Sources CoPaw: A High-Performance Personal Agent Workstation for Developers to Scale Multi-Channel AI Workflows and Memory",
+        "score": 125,
+        "num_comments": 15,
+        "author": "skippybosco",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1rin3ea/alibaba_team_opensources_copaw_a_highperformance/",
+        "created_utc": 1772438981.0
+      },
+      {
+        "id": "1s52cwk",
+        "subreddit": "AIRelationships",
+        "title": "Give your companion some agency",
+        "score": 37,
+        "num_comments": 15,
+        "author": "Certain-Way6763",
+        "url": "https://reddit.com/r/AIRelationships/comments/1s52cwk/give_your_companion_some_agency/",
+        "created_utc": 1774613625.0
+      },
+      {
+        "id": "1riz8om",
+        "subreddit": "openclaw",
+        "title": "How do you all handle memory?",
+        "score": 8,
+        "num_comments": 22,
+        "author": "io_nn",
+        "url": "https://reddit.com/r/openclaw/comments/1riz8om/how_do_you_all_handle_memory/",
+        "created_utc": 1772472667.0
+      },
+      {
+        "id": "1s4d5zk",
+        "subreddit": "opencodeCLI",
+        "title": "openclaw alternative",
+        "score": 2,
+        "num_comments": 16,
+        "author": "Joy_Boy_12",
+        "url": "https://reddit.com/r/opencodeCLI/comments/1s4d5zk/openclaw_alternative/",
+        "created_utc": 1774544359.0
+      },
+      {
+        "id": "1s4twbk",
+        "subreddit": "copaw",
+        "title": "CoPaw v0.2.0 just dropped",
+        "score": 11,
+        "num_comments": 14,
+        "author": "FortiCore",
+        "url": "https://reddit.com/r/copaw/comments/1s4twbk/copaw_v020_just_dropped/",
+        "created_utc": 1774584603.0
+      },
+      {
+        "id": "1t7uqae",
+        "subreddit": "LocalLLaMA",
+        "title": "Moderators deleted post",
+        "score": 0,
+        "num_comments": 8,
+        "author": "leo-k7v",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1t7uqae/moderators_deleted_post/",
+        "created_utc": 1778301095.0
+      },
+      {
+        "id": "1s2bfyq",
+        "subreddit": "LovingOpenSourceAI",
+        "title": "🔎 Open Source AI Resource List (curated, ongoing)",
+        "score": 71,
+        "num_comments": 5,
+        "author": "Koala_Confused",
+        "url": "https://reddit.com/r/LovingOpenSourceAI/comments/1s2bfyq/open_source_ai_resource_list_curated_ongoing/",
+        "created_utc": 1774352672.0
+      },
+      {
+        "id": "1shfhxc",
+        "subreddit": "LocalLLaMA",
+        "title": "Making small models actually browse the web, thought Bonsai would dominate bench. 1/6. What am I missing?",
+        "score": 8,
+        "num_comments": 8,
+        "author": "Honest-Debate-6863",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1shfhxc/making_small_models_actually_browse_the_web/",
+        "created_utc": 1775805654.0
+      },
+      {
+        "id": "1sk4c9e",
+        "subreddit": "copaw",
+        "title": "Copaw is rebranded as QwenPaw",
+        "score": 6,
+        "num_comments": 3,
+        "author": "FortiCore",
+        "url": "https://reddit.com/r/copaw/comments/1sk4c9e/copaw_is_rebranded_as_qwenpaw/",
+        "created_utc": 1776067354.0
+      },
+      {
+        "id": "1sdyhr2",
+        "subreddit": "LovingAIAgents",
+        "title": "\"ReMe is a memory management framework designed for AI agents, providing both file-based and vector-based memory systems. It tackles two core problems of agent memory: limited context window and stateless sessions\" ➡️ Would you actually try this?",
+        "score": 19,
+        "num_comments": 2,
+        "author": "Koala_Confused",
+        "url": "https://reddit.com/r/LovingAIAgents/comments/1sdyhr2/reme_is_a_memory_management_framework_designed/",
+        "created_utc": 1775481156.0
+      }
+    ]
+  }
+}

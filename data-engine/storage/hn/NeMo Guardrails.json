@@ -1,0 +1,196 @@
+{
+  "project": "NeMo Guardrails",
+  "repo": "NVIDIA/NeMo-Guardrails",
+  "collected_at": "2026-05-22T11:05:01.124742+00:00",
+  "queries": [
+    "NeMo Guardrails",
+    "NeMo-Guardrails"
+  ],
+  "total_hits": 20,
+  "results": {
+    "NeMo Guardrails": [
+      {
+        "objectID": "37091674",
+        "title": "NeMo Guardrails: The Missing Manual",
+        "url": "https://www.pinecone.io/learn/nemo-guardrails-intro/",
+        "points": 3,
+        "num_comments": 1,
+        "author": "gk1",
+        "created_at": "2023-08-11T17:55:05Z"
+      },
+      {
+        "objectID": "35701260",
+        "title": "NeMo Guardrails for LLM safety and trustworthiness",
+        "url": "https://github.com/NVIDIA/NeMo-Guardrails",
+        "points": 3,
+        "num_comments": 0,
+        "author": "cloudking",
+        "created_at": "2023-04-25T14:49:41Z"
+      },
+      {
+        "objectID": "37386702",
+        "title": "NeMO Guardrails from Nvidia",
+        "url": "https://github.com/NVIDIA/NeMo-Guardrails",
+        "points": 2,
+        "num_comments": 1,
+        "author": "atg_abhishek",
+        "created_at": "2023-09-05T00:59:21Z"
+      },
+      {
+        "objectID": "43765128",
+        "title": "Prevent LLM Hallucinations with Trust Scoring in Nvidia NeMo Guardrails",
+        "url": "https://developer.nvidia.com/blog/prevent-llm-hallucinations-with-the-cleanlab-trustworthy-language-model-in-nvidia-nemo-guardrails/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "_jonas",
+        "created_at": "2025-04-22T18:52:33Z"
+      },
+      {
+        "objectID": "35768524",
+        "title": "Nvidia NeMo Guardrails – open-source guardrails to conversational systems",
+        "url": "https://github.com/NVIDIA/NeMo-Guardrails",
+        "points": 2,
+        "num_comments": 0,
+        "author": "guiambros",
+        "created_at": "2023-05-01T02:31:46Z"
+      },
+      {
+        "objectID": "38708560",
+        "title": "NeMo Guardrails: Prevent Unwanted Chatbot Behavior",
+        "url": "https://www.pinecone.io/learn/nemo-guardrails-intro/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "gk1",
+        "created_at": "2023-12-20T13:44:02Z"
+      },
+      {
+        "objectID": "39780651",
+        "title": "Show HN: Chatbot Guardrails Arena",
+        "url": "https://huggingface.co/spaces/lighthouzai/guardrails-arena",
+        "points": 4,
+        "num_comments": 0,
+        "author": "srijankedia",
+        "created_at": "2024-03-21T16:21:45Z"
+      },
+      {
+        "objectID": "35701390",
+        "title": "Nvidia Open-Source Software Helps Developers Add Guardrails to AI Chatbots",
+        "url": "https://blogs.nvidia.com/blog/2023/04/25/ai-chatbot-guardrails-nemo/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "rntn",
+        "created_at": "2023-04-25T14:58:44Z"
+      },
+      {
+        "objectID": "40535874",
+        "title": "Show HN: Automatic generation of LLM guardrails with NeMo and Giskard",
+        "url": "https://docs.giskard.ai/en/latest/integrations/nemoguardrails/nemoguardrails-integration.html",
+        "points": 1,
+        "num_comments": 0,
+        "author": "alexcombessie",
+        "created_at": "2024-05-31T14:44:02Z"
+      },
+      {
+        "objectID": "35713859",
+        "title": "Nvidia Open-Source Software Helps Developers Add Guardrails to AI Chatbots",
+        "url": "https://blogs.nvidia.com/blog/2023/04/25/ai-chatbot-guardrails-nemo/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Sindisil",
+        "created_at": "2023-04-26T14:06:50Z"
+      },
+      {
+        "objectID": "48192383",
+        "title": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
+        "url": "https://github.com/antoinezambelli/forge",
+        "points": 672,
+        "num_comments": 242,
+        "author": "zambelli",
+        "created_at": "2026-05-19T12:23:07Z"
+      },
+      {
+        "objectID": "48225040",
+        "title": "Launch HN: Runtime (YC P26) – Sandboxed coding agents for everyone on a team",
+        "url": "https://www.runtm.com/",
+        "points": 90,
+        "num_comments": 23,
+        "author": "gustrigos",
+        "created_at": "2026-05-21T16:07:13Z"
+      }
+    ],
+    "NeMo-Guardrails": [
+      {
+        "objectID": "37091674",
+        "title": "NeMo Guardrails: The Missing Manual",
+        "url": "https://www.pinecone.io/learn/nemo-guardrails-intro/",
+        "points": 3,
+        "num_comments": 1,
+        "author": "gk1",
+        "created_at": "2023-08-11T17:55:05Z"
+      },
+      {
+        "objectID": "35701260",
+        "title": "NeMo Guardrails for LLM safety and trustworthiness",
+        "url": "https://github.com/NVIDIA/NeMo-Guardrails",
+        "points": 3,
+        "num_comments": 0,
+        "author": "cloudking",
+        "created_at": "2023-04-25T14:49:41Z"
+      },
+      {
+        "objectID": "37386702",
+        "title": "NeMO Guardrails from Nvidia",
+        "url": "https://github.com/NVIDIA/NeMo-Guardrails",
+        "points": 2,
+        "num_comments": 1,
+        "author": "atg_abhishek",
+        "created_at": "2023-09-05T00:59:21Z"
+      },
+      {
+        "objectID": "43765128",
+        "title": "Prevent LLM Hallucinations with Trust Scoring in Nvidia NeMo Guardrails",
+        "url": "https://developer.nvidia.com/blog/prevent-llm-hallucinations-with-the-cleanlab-trustworthy-language-model-in-nvidia-nemo-guardrails/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "_jonas",
+        "created_at": "2025-04-22T18:52:33Z"
+      },
+      {
+        "objectID": "35768524",
+        "title": "Nvidia NeMo Guardrails – open-source guardrails to conversational systems",
+        "url": "https://github.com/NVIDIA/NeMo-Guardrails",
+        "points": 2,
+        "num_comments": 0,
+        "author": "guiambros",
+        "created_at": "2023-05-01T02:31:46Z"
+      },
+      {
+        "objectID": "38708560",
+        "title": "NeMo Guardrails: Prevent Unwanted Chatbot Behavior",
+        "url": "https://www.pinecone.io/learn/nemo-guardrails-intro/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "gk1",
+        "created_at": "2023-12-20T13:44:02Z"
+      },
+      {
+        "objectID": "39780651",
+        "title": "Show HN: Chatbot Guardrails Arena",
+        "url": "https://huggingface.co/spaces/lighthouzai/guardrails-arena",
+        "points": 4,
+        "num_comments": 0,
+        "author": "srijankedia",
+        "created_at": "2024-03-21T16:21:45Z"
+      },
+      {
+        "objectID": "40535874",
+        "title": "Show HN: Automatic generation of LLM guardrails with NeMo and Giskard",
+        "url": "https://docs.giskard.ai/en/latest/integrations/nemoguardrails/nemoguardrails-integration.html",
+        "points": 1,
+        "num_comments": 0,
+        "author": "alexcombessie",
+        "created_at": "2024-05-31T14:44:02Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,736 @@
+{
+  "project": "Claude Code",
+  "repo": "anthropics/claude-code",
+  "collected_at": "2026-05-22T11:01:20.908045+00:00",
+  "queries": [
+    "Claude Code",
+    "claude-code"
+  ],
+  "total_hits": 80,
+  "results": {
+    "Claude Code": [
+      {
+        "objectID": "43163011",
+        "title": "Claude 3.7 Sonnet and Claude Code",
+        "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+        "points": 2127,
+        "num_comments": 963,
+        "author": "bakugo",
+        "created_at": "2025-02-24T18:28:59Z"
+      },
+      {
+        "objectID": "47584540",
+        "title": "Claude Code's source code has been leaked via a map file in their NPM registry",
+        "url": "https://twitter.com/Fried_rice/status/2038894956459290963",
+        "points": 2095,
+        "num_comments": 1022,
+        "author": "treexs",
+        "created_at": "2026-03-31T09:00:40Z"
+      },
+      {
+        "objectID": "47586778",
+        "title": "The Claude Code Source Leak: fake tools, frustration regexes, undercover mode",
+        "url": "https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/",
+        "points": 1376,
+        "num_comments": 578,
+        "author": "alex000kim",
+        "created_at": "2026-03-31T13:04:30Z"
+      },
+      {
+        "objectID": "47660925",
+        "title": "Issue: Claude Code is unusable for complex engineering tasks with Feb updates",
+        "url": "https://github.com/anthropics/claude-code/issues/42796",
+        "points": 1364,
+        "num_comments": 753,
+        "author": "StanAngeloff",
+        "created_at": "2026-04-06T13:50:35Z"
+      },
+      {
+        "objectID": "47963204",
+        "title": "Claude Code refuses requests or charges extra if your commits mention \"OpenClaw\"",
+        "url": "https://twitter.com/theo/status/2049645973350363168",
+        "points": 1349,
+        "num_comments": 720,
+        "author": "elmean",
+        "created_at": "2026-04-30T14:36:58Z"
+      },
+      {
+        "objectID": "46593022",
+        "title": "Cowork: Claude Code for the rest of your work",
+        "url": "https://claude.com/blog/cowork-research-preview",
+        "points": 1298,
+        "num_comments": 565,
+        "author": "adocomplete",
+        "created_at": "2026-01-12T19:27:19Z"
+      },
+      {
+        "objectID": "47597085",
+        "title": "Claude Code Unpacked : A visual guide",
+        "url": "https://ccunpacked.dev/",
+        "points": 1128,
+        "num_comments": 400,
+        "author": "autocracy101",
+        "created_at": "2026-04-01T05:15:37Z"
+      },
+      {
+        "objectID": "47633396",
+        "title": "Tell HN: Anthropic no longer allowing Claude Code subscriptions to use OpenClaw",
+        "url": "",
+        "points": 1099,
+        "num_comments": 827,
+        "author": "firloop",
+        "created_at": "2026-04-03T22:55:24Z"
+      },
+      {
+        "objectID": "47282777",
+        "title": "Tell HN: I'm 60 years old. Claude Code has re-ignited a passion",
+        "url": "",
+        "points": 1086,
+        "num_comments": 988,
+        "author": "shannoncc",
+        "created_at": "2026-03-07T00:05:06Z"
+      },
+      {
+        "objectID": "46978710",
+        "title": "Claude Code is being dumbed down?",
+        "url": "https://symmetrybreak.ing/blog/claude-code-is-being-dumbed-down/",
+        "points": 1085,
+        "num_comments": 701,
+        "author": "WXLCKNO",
+        "created_at": "2026-02-11T18:23:39Z"
+      },
+      {
+        "objectID": "46985151",
+        "title": "Warcraft III Peon Voice Notifications for Claude Code",
+        "url": "https://github.com/tonyyont/peon-ping",
+        "points": 1006,
+        "num_comments": 301,
+        "author": "doppp",
+        "created_at": "2026-02-12T05:18:49Z"
+      },
+      {
+        "objectID": "47106686",
+        "title": "How I use Claude Code: Separation of planning and execution",
+        "url": "https://boristane.com/blog/how-i-use-claude-code/",
+        "points": 976,
+        "num_comments": 591,
+        "author": "vinhnx",
+        "created_at": "2026-02-22T00:29:05Z"
+      },
+      {
+        "objectID": "47878905",
+        "title": "An update on recent Claude Code quality reports",
+        "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+        "points": 942,
+        "num_comments": 732,
+        "author": "mfiguiere",
+        "created_at": "2026-04-23T17:48:38Z"
+      },
+      {
+        "objectID": "45163362",
+        "title": "Using Claude Code to modernize a 25-year-old kernel driver",
+        "url": "https://dmitrybrant.com/2025/09/07/using-claude-code-to-modernize-a-25-year-old-kernel-driver",
+        "points": 929,
+        "num_comments": 318,
+        "author": "dmitrybrant",
+        "created_at": "2025-09-07T23:53:47Z"
+      },
+      {
+        "objectID": "44864185",
+        "title": "Claude Code is all you need",
+        "url": "https://dwyer.co.za/static/claude-code-is-all-you-need.html",
+        "points": 851,
+        "num_comments": 504,
+        "author": "sixhobbits",
+        "created_at": "2025-08-11T14:03:46Z"
+      },
+      {
+        "objectID": "45416228",
+        "title": "Claude Code 2.0",
+        "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
+        "points": 842,
+        "num_comments": 413,
+        "author": "polyrand",
+        "created_at": "2025-09-29T17:12:13Z"
+      },
+      {
+        "objectID": "46545620",
+        "title": "How to code Claude Code in 200 lines of code",
+        "url": "https://www.mihaileric.com/The-Emperor-Has-No-Clothes/",
+        "points": 816,
+        "num_comments": 239,
+        "author": "nutellalover",
+        "created_at": "2026-01-08T19:54:26Z"
+      },
+      {
+        "objectID": "44811567",
+        "title": "Claude Code IDE integration for Emacs",
+        "url": "https://github.com/manzaltu/claude-code-ide.el",
+        "points": 782,
+        "num_comments": 266,
+        "author": "kgwgk",
+        "created_at": "2025-08-06T13:17:38Z"
+      },
+      {
+        "objectID": "46810282",
+        "title": "Claude Code daily benchmarks for degradation tracking",
+        "url": "https://marginlab.ai/trackers/claude-code/",
+        "points": 760,
+        "num_comments": 354,
+        "author": "qwesr123",
+        "created_at": "2026-01-29T13:59:07Z"
+      },
+      {
+        "objectID": "47768133",
+        "title": "Claude Code Routines",
+        "url": "https://code.claude.com/docs/en/routines",
+        "points": 720,
+        "num_comments": 413,
+        "author": "matthieu_bl",
+        "created_at": "2026-04-14T16:54:33Z"
+      },
+      {
+        "objectID": "47495527",
+        "title": "Claude Code Cheat Sheet",
+        "url": "https://cc.storyfox.cz",
+        "points": 699,
+        "num_comments": 188,
+        "author": "phasE89",
+        "created_at": "2026-03-23T21:44:20Z"
+      },
+      {
+        "objectID": "47854477",
+        "title": "Claude Code to be removed from Anthropic's Pro plan?",
+        "url": "https://bsky.app/profile/edzitron.com/post/3mjzxwfx3qs2a",
+        "points": 683,
+        "num_comments": 642,
+        "author": "JamesMcMinn",
+        "created_at": "2026-04-21T21:03:04Z"
+      },
+      {
+        "objectID": "45116688",
+        "title": "Claude Code: Now in Beta in Zed",
+        "url": "https://zed.dev/blog/claude-code-via-acp",
+        "points": 683,
+        "num_comments": 406,
+        "author": "meetpateltech",
+        "created_at": "2025-09-03T15:07:20Z"
+      },
+      {
+        "objectID": "48002136",
+        "title": "DeepClaude – Claude Code agent loop with DeepSeek V4 Pro",
+        "url": "https://github.com/aattaran/deepclaude",
+        "points": 678,
+        "num_comments": 281,
+        "author": "alattaran",
+        "created_at": "2026-05-03T22:13:20Z"
+      },
+      {
+        "objectID": "46549823",
+        "title": "Anthropic blocks third-party use of Claude Code subscriptions",
+        "url": "https://github.com/anomalyco/opencode/issues/7410",
+        "points": 625,
+        "num_comments": 513,
+        "author": "sergiotapia",
+        "created_at": "2026-01-09T03:44:35Z"
+      },
+      {
+        "objectID": "43613194",
+        "title": "Show HN: Browser MCP – Automate your browser using Cursor, Claude, VS Code",
+        "url": "https://browsermcp.io/",
+        "points": 616,
+        "num_comments": 217,
+        "author": "namuorg",
+        "created_at": "2025-04-07T16:25:45Z"
+      },
+      {
+        "objectID": "43735550",
+        "title": "Claude Code: Best practices for agentic coding",
+        "url": "https://www.anthropic.com/engineering/claude-code-best-practices",
+        "points": 614,
+        "num_comments": 257,
+        "author": "sqs",
+        "created_at": "2025-04-19T10:48:30Z"
+      },
+      {
+        "objectID": "47169757",
+        "title": "What Claude Code chooses",
+        "url": "https://amplifying.ai/research/claude-code-picks",
+        "points": 611,
+        "num_comments": 235,
+        "author": "tin7in",
+        "created_at": "2026-02-26T18:12:26Z"
+      },
+      {
+        "objectID": "44713757",
+        "title": "Claude Code weekly rate limits",
+        "url": "",
+        "points": 609,
+        "num_comments": 705,
+        "author": "thebestmoshe",
+        "created_at": "2025-07-28T18:27:51Z"
+      },
+      {
+        "objectID": "44746621",
+        "title": "6 weeks of Claude Code",
+        "url": "https://blog.puzzmo.com/posts/2025/07/30/six-weeks-of-claude-code/",
+        "points": 581,
+        "num_comments": 590,
+        "author": "mike1o1",
+        "created_at": "2025-07-31T15:25:49Z"
+      },
+      {
+        "objectID": "45647166",
+        "title": "Claude Code on the web",
+        "url": "https://www.anthropic.com/news/claude-code-on-the-web",
+        "points": 578,
+        "num_comments": 390,
+        "author": "adocomplete",
+        "created_at": "2025-10-20T18:12:23Z"
+      },
+      {
+        "objectID": "47193064",
+        "title": "MCP server that reduces Claude Code context consumption by 98%",
+        "url": "https://mksg.lu/blog/context-mode",
+        "points": 570,
+        "num_comments": 107,
+        "author": "mksglu",
+        "created_at": "2026-02-28T10:01:20Z"
+      },
+      {
+        "objectID": "46470017",
+        "title": "The creator of Claude Code's Claude setup",
+        "url": "https://twitter.com/bcherny/status/2007179832300581177",
+        "points": 568,
+        "num_comments": 403,
+        "author": "KothuRoti",
+        "created_at": "2026-01-02T22:07:50Z"
+      },
+      {
+        "objectID": "47932937",
+        "title": "Who owns the code Claude Code wrote?",
+        "url": "https://legallayer.substack.com/p/who-owns-the-claude-code-wrote",
+        "points": 557,
+        "num_comments": 530,
+        "author": "senaevren",
+        "created_at": "2026-04-28T11:24:52Z"
+      },
+      {
+        "objectID": "45107962",
+        "title": "A staff engineer's journey with Claude Code",
+        "url": "https://www.sanity.io/blog/first-attempt-will-be-95-garbage",
+        "points": 550,
+        "num_comments": 396,
+        "author": "kmelve",
+        "created_at": "2025-09-02T19:34:24Z"
+      },
+      {
+        "objectID": "47148454",
+        "title": "Claude Code Remote Control",
+        "url": "https://code.claude.com/docs/en/remote-control",
+        "points": 544,
+        "num_comments": 313,
+        "author": "empressplay",
+        "created_at": "2026-02-25T07:22:56Z"
+      },
+      {
+        "objectID": "46491486",
+        "title": "Claude Code On-the-Go",
+        "url": "https://granda.org/en/2026/01/02/claude-code-on-the-go/",
+        "points": 543,
+        "num_comments": 335,
+        "author": "todsacerdoti",
+        "created_at": "2026-01-04T19:48:20Z"
+      },
+      {
+        "objectID": "45786738",
+        "title": "How I use every Claude Code feature",
+        "url": "https://blog.sshh.io/p/how-i-use-every-claude-code-feature",
+        "points": 534,
+        "num_comments": 188,
+        "author": "sshh12",
+        "created_at": "2025-11-02T00:13:27Z"
+      },
+      {
+        "objectID": "48071940",
+        "title": "Using Claude Code: The unreasonable effectiveness of HTML",
+        "url": "https://twitter.com/trq212/status/2052809885763747935",
+        "points": 528,
+        "num_comments": 274,
+        "author": "pretext",
+        "created_at": "2026-05-09T04:53:52Z"
+      },
+      {
+        "objectID": "46588972",
+        "title": "We put Claude Code in Rollercoaster Tycoon",
+        "url": "https://labs.ramp.com/rct",
+        "points": 526,
+        "num_comments": 288,
+        "author": "iamwil",
+        "created_at": "2026-01-12T14:28:17Z"
+      }
+    ],
+    "claude-code": [
+      {
+        "objectID": "43163011",
+        "title": "Claude 3.7 Sonnet and Claude Code",
+        "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+        "points": 2127,
+        "num_comments": 963,
+        "author": "bakugo",
+        "created_at": "2025-02-24T18:28:59Z"
+      },
+      {
+        "objectID": "47584540",
+        "title": "Claude Code's source code has been leaked via a map file in their NPM registry",
+        "url": "https://twitter.com/Fried_rice/status/2038894956459290963",
+        "points": 2095,
+        "num_comments": 1022,
+        "author": "treexs",
+        "created_at": "2026-03-31T09:00:40Z"
+      },
+      {
+        "objectID": "47586778",
+        "title": "The Claude Code Source Leak: fake tools, frustration regexes, undercover mode",
+        "url": "https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/",
+        "points": 1376,
+        "num_comments": 578,
+        "author": "alex000kim",
+        "created_at": "2026-03-31T13:04:30Z"
+      },
+      {
+        "objectID": "47660925",
+        "title": "Issue: Claude Code is unusable for complex engineering tasks with Feb updates",
+        "url": "https://github.com/anthropics/claude-code/issues/42796",
+        "points": 1364,
+        "num_comments": 753,
+        "author": "StanAngeloff",
+        "created_at": "2026-04-06T13:50:35Z"
+      },
+      {
+        "objectID": "47963204",
+        "title": "Claude Code refuses requests or charges extra if your commits mention \"OpenClaw\"",
+        "url": "https://twitter.com/theo/status/2049645973350363168",
+        "points": 1349,
+        "num_comments": 720,
+        "author": "elmean",
+        "created_at": "2026-04-30T14:36:58Z"
+      },
+      {
+        "objectID": "46593022",
+        "title": "Cowork: Claude Code for the rest of your work",
+        "url": "https://claude.com/blog/cowork-research-preview",
+        "points": 1298,
+        "num_comments": 565,
+        "author": "adocomplete",
+        "created_at": "2026-01-12T19:27:19Z"
+      },
+      {
+        "objectID": "47597085",
+        "title": "Claude Code Unpacked : A visual guide",
+        "url": "https://ccunpacked.dev/",
+        "points": 1128,
+        "num_comments": 400,
+        "author": "autocracy101",
+        "created_at": "2026-04-01T05:15:37Z"
+      },
+      {
+        "objectID": "47633396",
+        "title": "Tell HN: Anthropic no longer allowing Claude Code subscriptions to use OpenClaw",
+        "url": "",
+        "points": 1099,
+        "num_comments": 827,
+        "author": "firloop",
+        "created_at": "2026-04-03T22:55:24Z"
+      },
+      {
+        "objectID": "47282777",
+        "title": "Tell HN: I'm 60 years old. Claude Code has re-ignited a passion",
+        "url": "",
+        "points": 1086,
+        "num_comments": 988,
+        "author": "shannoncc",
+        "created_at": "2026-03-07T00:05:06Z"
+      },
+      {
+        "objectID": "46978710",
+        "title": "Claude Code is being dumbed down?",
+        "url": "https://symmetrybreak.ing/blog/claude-code-is-being-dumbed-down/",
+        "points": 1085,
+        "num_comments": 701,
+        "author": "WXLCKNO",
+        "created_at": "2026-02-11T18:23:39Z"
+      },
+      {
+        "objectID": "46985151",
+        "title": "Warcraft III Peon Voice Notifications for Claude Code",
+        "url": "https://github.com/tonyyont/peon-ping",
+        "points": 1006,
+        "num_comments": 301,
+        "author": "doppp",
+        "created_at": "2026-02-12T05:18:49Z"
+      },
+      {
+        "objectID": "47106686",
+        "title": "How I use Claude Code: Separation of planning and execution",
+        "url": "https://boristane.com/blog/how-i-use-claude-code/",
+        "points": 976,
+        "num_comments": 591,
+        "author": "vinhnx",
+        "created_at": "2026-02-22T00:29:05Z"
+      },
+      {
+        "objectID": "47878905",
+        "title": "An update on recent Claude Code quality reports",
+        "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+        "points": 942,
+        "num_comments": 732,
+        "author": "mfiguiere",
+        "created_at": "2026-04-23T17:48:38Z"
+      },
+      {
+        "objectID": "45163362",
+        "title": "Using Claude Code to modernize a 25-year-old kernel driver",
+        "url": "https://dmitrybrant.com/2025/09/07/using-claude-code-to-modernize-a-25-year-old-kernel-driver",
+        "points": 929,
+        "num_comments": 318,
+        "author": "dmitrybrant",
+        "created_at": "2025-09-07T23:53:47Z"
+      },
+      {
+        "objectID": "44864185",
+        "title": "Claude Code is all you need",
+        "url": "https://dwyer.co.za/static/claude-code-is-all-you-need.html",
+        "points": 851,
+        "num_comments": 504,
+        "author": "sixhobbits",
+        "created_at": "2025-08-11T14:03:46Z"
+      },
+      {
+        "objectID": "45416228",
+        "title": "Claude Code 2.0",
+        "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
+        "points": 842,
+        "num_comments": 413,
+        "author": "polyrand",
+        "created_at": "2025-09-29T17:12:13Z"
+      },
+      {
+        "objectID": "46545620",
+        "title": "How to code Claude Code in 200 lines of code",
+        "url": "https://www.mihaileric.com/The-Emperor-Has-No-Clothes/",
+        "points": 816,
+        "num_comments": 239,
+        "author": "nutellalover",
+        "created_at": "2026-01-08T19:54:26Z"
+      },
+      {
+        "objectID": "44811567",
+        "title": "Claude Code IDE integration for Emacs",
+        "url": "https://github.com/manzaltu/claude-code-ide.el",
+        "points": 782,
+        "num_comments": 266,
+        "author": "kgwgk",
+        "created_at": "2025-08-06T13:17:38Z"
+      },
+      {
+        "objectID": "46810282",
+        "title": "Claude Code daily benchmarks for degradation tracking",
+        "url": "https://marginlab.ai/trackers/claude-code/",
+        "points": 760,
+        "num_comments": 354,
+        "author": "qwesr123",
+        "created_at": "2026-01-29T13:59:07Z"
+      },
+      {
+        "objectID": "47768133",
+        "title": "Claude Code Routines",
+        "url": "https://code.claude.com/docs/en/routines",
+        "points": 720,
+        "num_comments": 413,
+        "author": "matthieu_bl",
+        "created_at": "2026-04-14T16:54:33Z"
+      },
+      {
+        "objectID": "47495527",
+        "title": "Claude Code Cheat Sheet",
+        "url": "https://cc.storyfox.cz",
+        "points": 699,
+        "num_comments": 188,
+        "author": "phasE89",
+        "created_at": "2026-03-23T21:44:20Z"
+      },
+      {
+        "objectID": "47854477",
+        "title": "Claude Code to be removed from Anthropic's Pro plan?",
+        "url": "https://bsky.app/profile/edzitron.com/post/3mjzxwfx3qs2a",
+        "points": 683,
+        "num_comments": 642,
+        "author": "JamesMcMinn",
+        "created_at": "2026-04-21T21:03:04Z"
+      },
+      {
+        "objectID": "45116688",
+        "title": "Claude Code: Now in Beta in Zed",
+        "url": "https://zed.dev/blog/claude-code-via-acp",
+        "points": 683,
+        "num_comments": 406,
+        "author": "meetpateltech",
+        "created_at": "2025-09-03T15:07:20Z"
+      },
+      {
+        "objectID": "48002136",
+        "title": "DeepClaude – Claude Code agent loop with DeepSeek V4 Pro",
+        "url": "https://github.com/aattaran/deepclaude",
+        "points": 678,
+        "num_comments": 281,
+        "author": "alattaran",
+        "created_at": "2026-05-03T22:13:20Z"
+      },
+      {
+        "objectID": "46549823",
+        "title": "Anthropic blocks third-party use of Claude Code subscriptions",
+        "url": "https://github.com/anomalyco/opencode/issues/7410",
+        "points": 625,
+        "num_comments": 513,
+        "author": "sergiotapia",
+        "created_at": "2026-01-09T03:44:35Z"
+      },
+      {
+        "objectID": "43735550",
+        "title": "Claude Code: Best practices for agentic coding",
+        "url": "https://www.anthropic.com/engineering/claude-code-best-practices",
+        "points": 614,
+        "num_comments": 257,
+        "author": "sqs",
+        "created_at": "2025-04-19T10:48:30Z"
+      },
+      {
+        "objectID": "47169757",
+        "title": "What Claude Code chooses",
+        "url": "https://amplifying.ai/research/claude-code-picks",
+        "points": 611,
+        "num_comments": 235,
+        "author": "tin7in",
+        "created_at": "2026-02-26T18:12:26Z"
+      },
+      {
+        "objectID": "44713757",
+        "title": "Claude Code weekly rate limits",
+        "url": "",
+        "points": 609,
+        "num_comments": 705,
+        "author": "thebestmoshe",
+        "created_at": "2025-07-28T18:27:51Z"
+      },
+      {
+        "objectID": "44746621",
+        "title": "6 weeks of Claude Code",
+        "url": "https://blog.puzzmo.com/posts/2025/07/30/six-weeks-of-claude-code/",
+        "points": 581,
+        "num_comments": 590,
+        "author": "mike1o1",
+        "created_at": "2025-07-31T15:25:49Z"
+      },
+      {
+        "objectID": "45647166",
+        "title": "Claude Code on the web",
+        "url": "https://www.anthropic.com/news/claude-code-on-the-web",
+        "points": 578,
+        "num_comments": 390,
+        "author": "adocomplete",
+        "created_at": "2025-10-20T18:12:23Z"
+      },
+      {
+        "objectID": "47193064",
+        "title": "MCP server that reduces Claude Code context consumption by 98%",
+        "url": "https://mksg.lu/blog/context-mode",
+        "points": 570,
+        "num_comments": 107,
+        "author": "mksglu",
+        "created_at": "2026-02-28T10:01:20Z"
+      },
+      {
+        "objectID": "46470017",
+        "title": "The creator of Claude Code's Claude setup",
+        "url": "https://twitter.com/bcherny/status/2007179832300581177",
+        "points": 568,
+        "num_comments": 403,
+        "author": "KothuRoti",
+        "created_at": "2026-01-02T22:07:50Z"
+      },
+      {
+        "objectID": "47932937",
+        "title": "Who owns the code Claude Code wrote?",
+        "url": "https://legallayer.substack.com/p/who-owns-the-claude-code-wrote",
+        "points": 557,
+        "num_comments": 530,
+        "author": "senaevren",
+        "created_at": "2026-04-28T11:24:52Z"
+      },
+      {
+        "objectID": "45107962",
+        "title": "A staff engineer's journey with Claude Code",
+        "url": "https://www.sanity.io/blog/first-attempt-will-be-95-garbage",
+        "points": 550,
+        "num_comments": 396,
+        "author": "kmelve",
+        "created_at": "2025-09-02T19:34:24Z"
+      },
+      {
+        "objectID": "47148454",
+        "title": "Claude Code Remote Control",
+        "url": "https://code.claude.com/docs/en/remote-control",
+        "points": 544,
+        "num_comments": 313,
+        "author": "empressplay",
+        "created_at": "2026-02-25T07:22:56Z"
+      },
+      {
+        "objectID": "46491486",
+        "title": "Claude Code On-the-Go",
+        "url": "https://granda.org/en/2026/01/02/claude-code-on-the-go/",
+        "points": 543,
+        "num_comments": 335,
+        "author": "todsacerdoti",
+        "created_at": "2026-01-04T19:48:20Z"
+      },
+      {
+        "objectID": "45786738",
+        "title": "How I use every Claude Code feature",
+        "url": "https://blog.sshh.io/p/how-i-use-every-claude-code-feature",
+        "points": 534,
+        "num_comments": 188,
+        "author": "sshh12",
+        "created_at": "2025-11-02T00:13:27Z"
+      },
+      {
+        "objectID": "48071940",
+        "title": "Using Claude Code: The unreasonable effectiveness of HTML",
+        "url": "https://twitter.com/trq212/status/2052809885763747935",
+        "points": 528,
+        "num_comments": 274,
+        "author": "pretext",
+        "created_at": "2026-05-09T04:53:52Z"
+      },
+      {
+        "objectID": "46588972",
+        "title": "We put Claude Code in Rollercoaster Tycoon",
+        "url": "https://labs.ramp.com/rct",
+        "points": 526,
+        "num_comments": 288,
+        "author": "iamwil",
+        "created_at": "2026-01-12T14:28:17Z"
+      },
+      {
+        "objectID": "46567400",
+        "title": "Show HN: I used Claude Code to discover connections between 100 books",
+        "url": "https://trails.pieterma.es/",
+        "points": 524,
+        "num_comments": 146,
+        "author": "pmaze",
+        "created_at": "2026-01-10T16:56:55Z"
+      }
+    ]
+  }
+}

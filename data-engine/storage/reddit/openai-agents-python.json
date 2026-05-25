@@ -1,0 +1,264 @@
+{
+  "project": "openai-agents-python",
+  "repo": "openai/openai-agents-python",
+  "collected_at": "2026-05-22T11:17:22.263125+00:00",
+  "queries": [
+    "openai-agents-python",
+    "openai-agents-python"
+  ],
+  "total_posts": 25,
+  "results": {
+    "openai-agents-python": [
+      {
+        "id": "1il8b1i",
+        "subreddit": "AI_Agents",
+        "title": "My guide on what tools to use to build AI agents (if you are a newb)",
+        "score": 2880,
+        "num_comments": 487,
+        "author": "laddermanUS",
+        "url": "https://reddit.com/r/AI_Agents/comments/1il8b1i/my_guide_on_what_tools_to_use_to_build_ai_agents/",
+        "created_utc": 1739081423.0
+      },
+      {
+        "id": "1kjsyv8",
+        "subreddit": "AgentsOfAI",
+        "title": "AI Agents are just python scripts calling OpenAI APIs",
+        "score": 470,
+        "num_comments": 23,
+        "author": "CortexOfChaos",
+        "url": "https://reddit.com/r/AgentsOfAI/comments/1kjsyv8/ai_agents_are_just_python_scripts_calling_openai/",
+        "created_utc": 1746938855.0
+      },
+      {
+        "id": "1tbyyee",
+        "subreddit": "LocalLLaMA",
+        "title": "TextGen is now a native desktop app. Open-source alternative to LM Studio (formerly text-generation-webui).",
+        "score": 682,
+        "num_comments": 232,
+        "author": "oobabooga4",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/",
+        "created_utc": 1778677232.0
+      },
+      {
+        "id": "1tdv7jq",
+        "subreddit": "gluk",
+        "title": "Claude Code vs OpenAI Codex: Python Agent Comparison · Technical news about AI, coding and all",
+        "score": 1,
+        "num_comments": 0,
+        "author": "rosaccord",
+        "url": "https://reddit.com/r/gluk/comments/1tdv7jq/claude_code_vs_openai_codex_python_agent/",
+        "created_utc": 1778848898.0
+      },
+      {
+        "id": "1rpxt6q",
+        "subreddit": "LangChain",
+        "title": "I kept racking up $150 OpenAI bills from runaway LangGraph loops, so I built a Python lib to hard-cap agent spending.",
+        "score": 5,
+        "num_comments": 7,
+        "author": "Unique-Lab-536",
+        "url": "https://reddit.com/r/LangChain/comments/1rpxt6q/i_kept_racking_up_150_openai_bills_from_runaway/",
+        "created_utc": 1773151450.0
+      },
+      {
+        "id": "1lpt4vz",
+        "subreddit": "ClaudeAI",
+        "title": "AI Agents are just python scripts calling OpenAI APIs",
+        "score": 43,
+        "num_comments": 27,
+        "author": "nitkjh",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1lpt4vz/ai_agents_are_just_python_scripts_calling_openai/",
+        "created_utc": 1751454926.0
+      },
+      {
+        "id": "1s5i6i4",
+        "subreddit": "ClaudeAI",
+        "title": "I built OpenAI Symphony inspired Python daemon that watches GitHub Issues and sends Claude Code agents to fix them automatically",
+        "score": 1,
+        "num_comments": 1,
+        "author": "mraza007",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1s5i6i4/i_built_openai_symphony_inspired_python_daemon/",
+        "created_utc": 1774649055.0
+      },
+      {
+        "id": "1rpxw02",
+        "subreddit": "LocalLLM",
+        "title": "I kept racking up $150 OpenAI bills from runaway LangGraph loops, so I built a Python lib to hard-cap agent spending.",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Unique-Lab-536",
+        "url": "https://reddit.com/r/LocalLLM/comments/1rpxw02/i_kept_racking_up_150_openai_bills_from_runaway/",
+        "created_utc": 1773151640.0
+      },
+      {
+        "id": "1qwx6ls",
+        "subreddit": "clawdbot",
+        "title": "OpenClaw 101 - a detailed guide for new users so you don't make my mistakes",
+        "score": 787,
+        "num_comments": 143,
+        "author": "adamb0mbNZ",
+        "url": "https://reddit.com/r/clawdbot/comments/1qwx6ls/openclaw_101_a_detailed_guide_for_new_users_so/",
+        "created_utc": 1770324637.0
+      },
+      {
+        "id": "1lcrzln",
+        "subreddit": "golang",
+        "title": "OpenAI Agents Python SDK, reimplemented in Go",
+        "score": 55,
+        "num_comments": 20,
+        "author": "mgrella87",
+        "url": "https://reddit.com/r/golang/comments/1lcrzln/openai_agents_python_sdk_reimplemented_in_go/",
+        "created_utc": 1750078309.0
+      },
+      {
+        "id": "1kehwa0",
+        "subreddit": "aiagents",
+        "title": "AI Agents are just python scripts calling OpenAI APIs",
+        "score": 101,
+        "num_comments": 15,
+        "author": "kova98k",
+        "url": "https://reddit.com/r/aiagents/comments/1kehwa0/ai_agents_are_just_python_scripts_calling_openai/",
+        "created_utc": 1746359075.0
+      },
+      {
+        "id": "1m5ld6j",
+        "subreddit": "mexico",
+        "title": "Guía para aprender a programar (hasta tu abuela se vuelve hacker después de esto)\nEducacion/Ciencia/Tecnologia",
+        "score": 1327,
+        "num_comments": 148,
+        "author": "RepulsiveLie2953",
+        "url": "https://reddit.com/r/mexico/comments/1m5ld6j/guía_para_aprender_a_programar_hasta_tu_abuela_se/",
+        "created_utc": 1753110349.0
+      },
+      {
+        "id": "1323qlg",
+        "subreddit": "ChatGPT",
+        "title": "GPT-4 Week 6. The first AI Political Ad + Palantir's Military AI could be a new frontier for warfare - Nofil's Weekly Breakdown",
+        "score": 2258,
+        "num_comments": 324,
+        "author": "lostlifon",
+        "url": "https://reddit.com/r/ChatGPT/comments/1323qlg/gpt4_week_6_the_first_ai_political_ad_palantirs/",
+        "created_utc": 1682702865.0
+      },
+      {
+        "id": "1phc65y",
+        "subreddit": "AI_Agents",
+        "title": "So you want to build AI agents? Here is the honest path.",
+        "score": 708,
+        "num_comments": 141,
+        "author": "Warm-Reaction-456",
+        "url": "https://reddit.com/r/AI_Agents/comments/1phc65y/so_you_want_to_build_ai_agents_here_is_the_honest/",
+        "created_utc": 1765199892.0
+      },
+      {
+        "id": "174o7vd",
+        "subreddit": "Entrepreneur",
+        "title": "I run an AI automation agency (AAA). My honest overview and review of this new business model",
+        "score": 1660,
+        "num_comments": 295,
+        "author": "AI_Scout_Official",
+        "url": "https://reddit.com/r/Entrepreneur/comments/174o7vd/i_run_an_ai_automation_agency_aaa_my_honest/",
+        "created_utc": 1696952214.0
+      },
+      {
+        "id": "1ommuxy",
+        "subreddit": "selfhosted",
+        "title": "I'm the author of LocalAI, the free, Open Source, self-hostable OpenAI alternative. We just released v3.7.0 with full AI Agent support! (Run tools, search the web, etc., 100% locally)",
+        "score": 874,
+        "num_comments": 120,
+        "author": "mudler_it",
+        "url": "https://reddit.com/r/selfhosted/comments/1ommuxy/im_the_author_of_localai_the_free_open_source/",
+        "created_utc": 1762103443.0
+      },
+      {
+        "id": "1m5l5op",
+        "subreddit": "Colombia",
+        "title": "Guía para aprender a programar (hasta tu abuela se vuelve hacker después de esto)",
+        "score": 1202,
+        "num_comments": 118,
+        "author": "RepulsiveLie2953",
+        "url": "https://reddit.com/r/Colombia/comments/1m5l5op/guía_para_aprender_a_programar_hasta_tu_abuela_se/",
+        "created_utc": 1753109889.0
+      },
+      {
+        "id": "1r49r9m",
+        "subreddit": "openclaw",
+        "title": "Give your OpenClaw permanent memory",
+        "score": 424,
+        "num_comments": 151,
+        "author": "adamb0mbNZ",
+        "url": "https://reddit.com/r/openclaw/comments/1r49r9m/give_your_openclaw_permanent_memory/",
+        "created_utc": 1771039318.0
+      },
+      {
+        "id": "1k3helv",
+        "subreddit": "modelcontextprotocol",
+        "title": "Quickstart: Using MCP for your OWN AI Agent (using just Python and the OpenAI API)",
+        "score": 19,
+        "num_comments": 11,
+        "author": "stepanogil",
+        "url": "https://reddit.com/r/modelcontextprotocol/comments/1k3helv/quickstart_using_mcp_for_your_own_ai_agent_using/",
+        "created_utc": 1745134932.0
+      },
+      {
+        "id": "1ss7z42",
+        "subreddit": "cursor",
+        "title": "SpaceX's $60B agreement to acquire Cursor is wild, but the $10B fallback is crazier.",
+        "score": 204,
+        "num_comments": 174,
+        "author": "TroyHarry6677",
+        "url": "https://reddit.com/r/cursor/comments/1ss7z42/spacexs_60b_agreement_to_acquire_cursor_is_wild/",
+        "created_utc": 1776823356.0
+      },
+      {
+        "id": "1ny3v2z",
+        "subreddit": "udemyfreebies",
+        "title": "AI Agents Crash Course: Build with Python &amp; OpenAI",
+        "score": 1,
+        "num_comments": 0,
+        "author": "smartybrome",
+        "url": "https://reddit.com/r/udemyfreebies/comments/1ny3v2z/ai_agents_crash_course_build_with_python_openai/",
+        "created_utc": 1759607942.0
+      },
+      {
+        "id": "1qlzbhh",
+        "subreddit": "LocalLLaMA",
+        "title": "[Release] Qwen3-TTS: Ultra-Low Latency (97ms), Voice Cloning &amp; OpenAI-Compatible API",
+        "score": 329,
+        "num_comments": 170,
+        "author": "blackstoreonline",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1qlzbhh/release_qwen3tts_ultralow_latency_97ms_voice/",
+        "created_utc": 1769289710.0
+      },
+      {
+        "id": "1jp8arl",
+        "subreddit": "aiagents",
+        "title": "I built an AI Agent for Gmail that can read and send emails (Python + OpenAI + Streamlit)",
+        "score": 44,
+        "num_comments": 5,
+        "author": "Ok-Classic6022",
+        "url": "https://reddit.com/r/aiagents/comments/1jp8arl/i_built_an_ai_agent_for_gmail_that_can_read_and/",
+        "created_utc": 1743545158.0
+      },
+      {
+        "id": "1ldi5vo",
+        "subreddit": "LLMgophers",
+        "title": "OpenAI Agents Python SDK, reimplemented in Go",
+        "score": 8,
+        "num_comments": 0,
+        "author": "markusrg",
+        "url": "https://reddit.com/r/LLMgophers/comments/1ldi5vo/openai_agents_python_sdk_reimplemented_in_go/",
+        "created_utc": 1750150365.0
+      },
+      {
+        "id": "1phnf27",
+        "subreddit": "singularity",
+        "title": "OpenAI has by far THE WORST guardrails of every single model provider",
+        "score": 551,
+        "num_comments": 104,
+        "author": "RoadRunnerChris",
+        "url": "https://reddit.com/r/singularity/comments/1phnf27/openai_has_by_far_the_worst_guardrails_of_every/",
+        "created_utc": 1765225901.0
+      }
+    ]
+  }
+}

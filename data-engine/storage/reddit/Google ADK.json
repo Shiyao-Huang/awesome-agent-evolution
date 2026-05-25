@@ -1,0 +1,516 @@
+{
+  "project": "Google ADK",
+  "repo": "google/adk-python",
+  "collected_at": "2026-05-22T11:12:51.919195+00:00",
+  "queries": [
+    "Google ADK",
+    "adk-python"
+  ],
+  "total_posts": 50,
+  "results": {
+    "Google ADK": [
+      {
+        "id": "1rnjujd",
+        "subreddit": "AI_Agents",
+        "title": "Google ADK is seriously underrated for building production agents — here's my setup",
+        "score": 42,
+        "num_comments": 18,
+        "author": "ComfortableAny947",
+        "url": "https://reddit.com/r/AI_Agents/comments/1rnjujd/google_adk_is_seriously_underrated_for_building/",
+        "created_utc": 1772913901.0
+      },
+      {
+        "id": "1sbqio7",
+        "subreddit": "agentdevelopmentkit",
+        "title": "I've missed the last 3 months of Google ADK can anyone catch me up?",
+        "score": 14,
+        "num_comments": 9,
+        "author": "boneMechBoy69420",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1sbqio7/ive_missed_the_last_3_months_of_google_adk_can/",
+        "created_utc": 1775251965.0
+      },
+      {
+        "id": "1s63dis",
+        "subreddit": "agentdevelopmentkit",
+        "title": "ADK can be deployed without Google Cloud",
+        "score": 15,
+        "num_comments": 12,
+        "author": "KeyPossibility2339",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1s63dis/adk_can_be_deployed_without_google_cloud/",
+        "created_utc": 1774711739.0
+      },
+      {
+        "id": "1scl75d",
+        "subreddit": "LangChain",
+        "title": "We're considering moving our production agent to LangChain from Google ADK. Thoughts?",
+        "score": 28,
+        "num_comments": 34,
+        "author": "mee-gee",
+        "url": "https://reddit.com/r/LangChain/comments/1scl75d/were_considering_moving_our_production_agent_to/",
+        "created_utc": 1775337889.0
+      },
+      {
+        "id": "1raamgk",
+        "subreddit": "vibecoding",
+        "title": "Google officially launches the Agent Development Kit (ADK) as open source",
+        "score": 51,
+        "num_comments": 10,
+        "author": "Fun-Necessary1572",
+        "url": "https://reddit.com/r/vibecoding/comments/1raamgk/google_officially_launches_the_agent_development/",
+        "created_utc": 1771628848.0
+      },
+      {
+        "id": "1renoeq",
+        "subreddit": "agentdevelopmentkit",
+        "title": "I’ve spent months curating production-ready Google ADK agents, templates, and resources — here’s the repo",
+        "score": 27,
+        "num_comments": 5,
+        "author": "Anhsirk411_",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1renoeq/ive_spent_months_curating_productionready_google/",
+        "created_utc": 1772048761.0
+      },
+      {
+        "id": "1k4erny",
+        "subreddit": "AI_Agents",
+        "title": "Is Google Agent Development Kit (ADK) really worth the hype ?",
+        "score": 89,
+        "num_comments": 39,
+        "author": "GustyDust",
+        "url": "https://reddit.com/r/AI_Agents/comments/1k4erny/is_google_agent_development_kit_adk_really_worth/",
+        "created_utc": 1745245396.0
+      },
+      {
+        "id": "1omnc37",
+        "subreddit": "LangChain",
+        "title": "Langchain vs Google ADK .",
+        "score": 18,
+        "num_comments": 17,
+        "author": "Shaktiman_dad",
+        "url": "https://reddit.com/r/LangChain/comments/1omnc37/langchain_vs_google_adk/",
+        "created_utc": 1762104561.0
+      },
+      {
+        "id": "1qkqeb5",
+        "subreddit": "agentdevelopmentkit",
+        "title": "Testing Google ADK agents for free in our new open-source directory",
+        "score": 7,
+        "num_comments": 4,
+        "author": "folkenai",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1qkqeb5/testing_google_adk_agents_for_free_in_our_new/",
+        "created_utc": 1769173830.0
+      },
+      {
+        "id": "1kggydh",
+        "subreddit": "singularity",
+        "title": "My contribution towards singularity - Vibe coded an Al Agent that can use your phone on its own. Built this using Google ADK + Gemini API 💀",
+        "score": 431,
+        "num_comments": 64,
+        "author": "Tyrange-D",
+        "url": "https://reddit.com/r/singularity/comments/1kggydh/my_contribution_towards_singularity_vibe_coded_an/",
+        "created_utc": 1746568611.0
+      },
+      {
+        "id": "hdhyd1",
+        "subreddit": "LivestreamFail",
+        "title": "Dozens of women have levied sexual assault allegations towards several Twitch streamers, YouTubers, gaming/esports personalities, and gaming industry personnel",
+        "score": 26009,
+        "num_comments": 3786,
+        "author": "DanGr_123",
+        "url": "https://reddit.com/r/LivestreamFail/comments/hdhyd1/dozens_of_women_have_levied_sexual_assault/",
+        "created_utc": 1592786247.0
+      },
+      {
+        "id": "1jvsvzj",
+        "subreddit": "LocalLLaMA",
+        "title": "Just did a deep dive into Google's Agent Development Kit (ADK). Here are some thoughts, nitpicks, and things I loved (unbiased)",
+        "score": 119,
+        "num_comments": 51,
+        "author": "Any-Cockroach-3233",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1jvsvzj/just_did_a_deep_dive_into_googles_agent/",
+        "created_utc": 1744273431.0
+      },
+      {
+        "id": "1no4tt6",
+        "subreddit": "AI_Agents",
+        "title": "Google ADK or Langchain?",
+        "score": 15,
+        "num_comments": 47,
+        "author": "ajithera",
+        "url": "https://reddit.com/r/AI_Agents/comments/1no4tt6/google_adk_or_langchain/",
+        "created_utc": 1758591859.0
+      },
+      {
+        "id": "1s91bqb",
+        "subreddit": "java",
+        "title": "ADK for Java 1.0 is now available! - Google for Developers (March 30th, 2026)",
+        "score": 29,
+        "num_comments": 12,
+        "author": "American_Streamer",
+        "url": "https://reddit.com/r/java/comments/1s91bqb/adk_for_java_10_is_now_available_google_for/",
+        "created_utc": 1774993840.0
+      },
+      {
+        "id": "1pkto4e",
+        "subreddit": "agentdevelopmentkit",
+        "title": "Using Google ADK Outside the Google Ecosystem?",
+        "score": 21,
+        "num_comments": 22,
+        "author": "swastik_K",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1pkto4e/using_google_adk_outside_the_google_ecosystem/",
+        "created_utc": 1765550765.0
+      },
+      {
+        "id": "1tjsl2i",
+        "subreddit": "androiddev",
+        "title": "Google ADK for Android",
+        "score": 1,
+        "num_comments": 2,
+        "author": "pankajrai16",
+        "url": "https://reddit.com/r/androiddev/comments/1tjsl2i/google_adk_for_android/",
+        "created_utc": 1779386462.0
+      },
+      {
+        "id": "1s9hwyh",
+        "subreddit": "AI_Agents",
+        "title": "Beyond Raw APIs: A High-Level Overview of Google ADK, Genkit, and OpenAI Agent SDKs",
+        "score": 4,
+        "num_comments": 7,
+        "author": "harrison2020",
+        "url": "https://reddit.com/r/AI_Agents/comments/1s9hwyh/beyond_raw_apis_a_highlevel_overview_of_google/",
+        "created_utc": 1775043135.0
+      },
+      {
+        "id": "1s7w0kr",
+        "subreddit": "agentdevelopmentkit",
+        "title": "Google has officially released ADK for Java 1.0.0!",
+        "score": 13,
+        "num_comments": 6,
+        "author": "Prize-Programmer4207",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1s7w0kr/google_has_officially_released_adk_for_java_100/",
+        "created_utc": 1774889208.0
+      },
+      {
+        "id": "1slyv7p",
+        "subreddit": "googlecloud",
+        "title": "[Showcase] Building a Cost-Effective Mentor Recommendation System Prototype with BigQuery &amp; Google ADK 🚀",
+        "score": 0,
+        "num_comments": 5,
+        "author": "Practical_Spend2078",
+        "url": "https://reddit.com/r/googlecloud/comments/1slyv7p/showcase_building_a_costeffective_mentor/",
+        "created_utc": 1776237496.0
+      },
+      {
+        "id": "1ti30sg",
+        "subreddit": "aiagents",
+        "title": "Zero Trust Human Control for Google ADK Agents",
+        "score": 2,
+        "num_comments": 0,
+        "author": "Even-Apple-7370",
+        "url": "https://reddit.com/r/aiagents/comments/1ti30sg/zero_trust_human_control_for_google_adk_agents/",
+        "created_utc": 1779230743.0
+      },
+      {
+        "id": "1t6ib62",
+        "subreddit": "GenkitFramework",
+        "title": "Genkit vs ADK: Why Google provides two agentic frameworks?",
+        "score": 6,
+        "num_comments": 1,
+        "author": "imanrahmati",
+        "url": "https://reddit.com/r/GenkitFramework/comments/1t6ib62/genkit_vs_adk_why_google_provides_two_agentic/",
+        "created_utc": 1778176911.0
+      },
+      {
+        "id": "1tg5jay",
+        "subreddit": "udemyfreebies",
+        "title": "3h 17m (4.7 stars)- Master Google ADK: Develop Production-Ready AI Agents with Gemini &amp; Vertex AI",
+        "score": 1,
+        "num_comments": 0,
+        "author": "easylearn___ing",
+        "url": "https://reddit.com/r/udemyfreebies/comments/1tg5jay/3h_17m_47_stars_master_google_adk_develop/",
+        "created_utc": 1779061011.0
+      },
+      {
+        "id": "1t2n4mw",
+        "subreddit": "agentdevelopmentkit",
+        "title": "Recently I Created An AI-only agentic football social network built using Google ADK.",
+        "score": 5,
+        "num_comments": 0,
+        "author": "Faiz9181",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1t2n4mw/recently_i_created_an_aionly_agentic_football/",
+        "created_utc": 1777818921.0
+      },
+      {
+        "id": "1sgacd9",
+        "subreddit": "agentdevelopmentkit",
+        "title": "AgentPhone is now an integration in Google ADK",
+        "score": 13,
+        "num_comments": 2,
+        "author": "SimilarSalamander321",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1sgacd9/agentphone_is_now_an_integration_in_google_adk/",
+        "created_utc": 1775694236.0
+      },
+      {
+        "id": "1t2vm86",
+        "subreddit": "udemyfreebies",
+        "title": "Build AI Agents with Google ADK",
+        "score": 1,
+        "num_comments": 0,
+        "author": "smartybrome",
+        "url": "https://reddit.com/r/udemyfreebies/comments/1t2vm86/build_ai_agents_with_google_adk/",
+        "created_utc": 1777837930.0
+      }
+    ],
+    "adk-python": [
+      {
+        "id": "1t6cjlc",
+        "subreddit": "agentdevelopmentkit",
+        "title": "Python or TypeScript better for ADK?",
+        "score": 2,
+        "num_comments": 3,
+        "author": "bzlight2012",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1t6cjlc/python_or_typescript_better_for_adk/",
+        "created_utc": 1778164868.0
+      },
+      {
+        "id": "1snmrc7",
+        "subreddit": "agentdevelopmentkit",
+        "title": "Any information about CVE-2026-4810 adk-python vulnerability?",
+        "score": 8,
+        "num_comments": 1,
+        "author": "thehungrywolf99",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1snmrc7/any_information_about_cve20264810_adkpython/",
+        "created_utc": 1776389282.0
+      },
+      {
+        "id": "1qk8h7j",
+        "subreddit": "agentdevelopmentkit",
+        "title": "Proposed Redis integrations for ADK (memory, search) - feedback welcome (How should third-party integrations fit into adk-python-community repo?)",
+        "score": 12,
+        "num_comments": 11,
+        "author": "nk-redis",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1qk8h7j/proposed_redis_integrations_for_adk_memory_search/",
+        "created_utc": 1769119885.0
+      },
+      {
+        "id": "1sr9dtj",
+        "subreddit": "OpenSourceDiscovery",
+        "title": "Google ADK Python — open-source toolkit for building AI agents",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Total-Hat-8891",
+        "url": "https://reddit.com/r/OpenSourceDiscovery/comments/1sr9dtj/google_adk_python_opensource_toolkit_for_building/",
+        "created_utc": 1776734693.0
+      },
+      {
+        "id": "1r34e95",
+        "subreddit": "agentdevelopmentkit",
+        "title": "ADK-Python 1.25.0 has been released!",
+        "score": 15,
+        "num_comments": 5,
+        "author": "cloude-googl",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1r34e95/adkpython_1250_has_been_released/",
+        "created_utc": 1770927878.0
+      },
+      {
+        "id": "1s3w42u",
+        "subreddit": "agentdevelopmentkit",
+        "title": "ADK Python Security Advisory: LiteLLM supply chain compromise",
+        "score": 11,
+        "num_comments": 0,
+        "author": "koverholtzer",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1s3w42u/adk_python_security_advisory_litellm_supply_chain/",
+        "created_utc": 1774494538.0
+      },
+      {
+        "id": "1r4eiie",
+        "subreddit": "agentdevelopmentkit",
+        "title": "NotebookLM to study adk-python source code",
+        "score": 6,
+        "num_comments": 3,
+        "author": "KeyPossibility2339",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1r4eiie/notebooklm_to_study_adkpython_source_code/",
+        "created_utc": 1771054457.0
+      },
+      {
+        "id": "1qwvhsh",
+        "subreddit": "agentdevelopmentkit",
+        "title": "ADK-Python 1.24 has been released!",
+        "score": 29,
+        "num_comments": 1,
+        "author": "cloude-googl",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1qwvhsh/adkpython_124_has_been_released/",
+        "created_utc": 1770320896.0
+      },
+      {
+        "id": "1q7g06s",
+        "subreddit": "agentdevelopmentkit",
+        "title": "Need a detailed tutorial on implementing AG UI with adk python",
+        "score": 3,
+        "num_comments": 5,
+        "author": "ChanceSuperb6514",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1q7g06s/need_a_detailed_tutorial_on_implementing_ag_ui/",
+        "created_utc": 1767889014.0
+      },
+      {
+        "id": "1onbalh",
+        "subreddit": "agentdevelopmentkit",
+        "title": "ADK Java vs Python",
+        "score": 3,
+        "num_comments": 9,
+        "author": "pearlkele",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1onbalh/adk_java_vs_python/",
+        "created_utc": 1762175323.0
+      },
+      {
+        "id": "1p90dnb",
+        "subreddit": "agentdevelopmentkit",
+        "title": "How to run Google ADK agents using python in production",
+        "score": 6,
+        "num_comments": 6,
+        "author": "Green_Ad6024",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1p90dnb/how_to_run_google_adk_agents_using_python_in/",
+        "created_utc": 1764350179.0
+      },
+      {
+        "id": "1qjagyt",
+        "subreddit": "agentdevelopmentkit",
+        "title": "How to set up PKCE based oauth 2.0 providers within ADK Python",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Undefined_25",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1qjagyt/how_to_set_up_pkce_based_oauth_20_providers/",
+        "created_utc": 1769030040.0
+      },
+      {
+        "id": "1lv4ejd",
+        "subreddit": "A2AProtocol",
+        "title": "python-a2a vs A2A-SDK vs Google’s ADK – which should I use?",
+        "score": 2,
+        "num_comments": 4,
+        "author": "Itchy_Advantage_6267",
+        "url": "https://reddit.com/r/A2AProtocol/comments/1lv4ejd/pythona2a_vs_a2asdk_vs_googles_adk_which_should_i/",
+        "created_utc": 1752019194.0
+      },
+      {
+        "id": "1n6egqp",
+        "subreddit": "BotJobs",
+        "title": "Python Engineer (ADK Bot Solutions)",
+        "score": 1,
+        "num_comments": 0,
+        "author": "pplbot",
+        "url": "https://reddit.com/r/BotJobs/comments/1n6egqp/python_engineer_adk_bot_solutions/",
+        "created_utc": 1756803642.0
+      },
+      {
+        "id": "1kwjziw",
+        "subreddit": "agentdevelopmentkit",
+        "title": "Unofficial adk-nodejs (vibe coded port from adk-python)",
+        "score": 7,
+        "num_comments": 1,
+        "author": "Far-Ebb-3161",
+        "url": "https://reddit.com/r/agentdevelopmentkit/comments/1kwjziw/unofficial_adknodejs_vibe_coded_port_from/",
+        "created_utc": 1748342203.0
+      },
+      {
+        "id": "1ko7yf1",
+        "subreddit": "paradigmasoft",
+        "title": "Valentina Release 15.3 updates Studio, C &amp; Python ADKs for DuckDB",
+        "score": 1,
+        "num_comments": 0,
+        "author": "lynnfredricks",
+        "url": "https://reddit.com/r/paradigmasoft/comments/1ko7yf1/valentina_release_153_updates_studio_c_python/",
+        "created_utc": 1747419658.0
+      },
+      {
+        "id": "1rg6d9e",
+        "subreddit": "CareerAdvice101",
+        "title": "I just want to know why I'm not getting any interview calls",
+        "score": 127,
+        "num_comments": 80,
+        "author": "white-devil6",
+        "url": "https://reddit.com/r/CareerAdvice101/comments/1rg6d9e/i_just_want_to_know_why_im_not_getting_any/",
+        "created_utc": 1772198146.0
+      },
+      {
+        "id": "1lltnxf",
+        "subreddit": "reactjs",
+        "title": "Please tell me Next.js isn't a waste of time",
+        "score": 149,
+        "num_comments": 143,
+        "author": "a_weeb_dev",
+        "url": "https://reddit.com/r/reactjs/comments/1lltnxf/please_tell_me_nextjs_isnt_a_waste_of_time/",
+        "created_utc": 1751030278.0
+      },
+      {
+        "id": "zbfnf9",
+        "subreddit": "programming",
+        "title": "PicoADK - A MCU board which allows making your own standalone synths and sound generators (C/C++/Python/VultDSP)",
+        "score": 8,
+        "num_comments": 0,
+        "author": "SnooSongs6162",
+        "url": "https://reddit.com/r/programming/comments/zbfnf9/picoadk_a_mcu_board_which_allows_making_your_own/",
+        "created_utc": 1670072192.0
+      },
+      {
+        "id": "1s2le26",
+        "subreddit": "NepalSocial",
+        "title": "(Day 108) after almost 4 months let's take out first official break tomorrow to relax and rewind",
+        "score": 5,
+        "num_comments": 73,
+        "author": "I_hate_politicians__",
+        "url": "https://reddit.com/r/NepalSocial/comments/1s2le26/day_108_after_almost_4_months_lets_take_out_first/",
+        "created_utc": 1774375434.0
+      },
+      {
+        "id": "1qbzqkv",
+        "subreddit": "AI_Agents",
+        "title": "Top 10 tools to build AI Agents (most recent)",
+        "score": 78,
+        "num_comments": 71,
+        "author": "General_Maize_7636",
+        "url": "https://reddit.com/r/AI_Agents/comments/1qbzqkv/top_10_tools_to_build_ai_agents_most_recent/",
+        "created_utc": 1768330381.0
+      },
+      {
+        "id": "1slb7xi",
+        "subreddit": "AI_Agents",
+        "title": "Best AI Agent Building Tools in 2026 (No-Code &amp; Developer Options)",
+        "score": 8,
+        "num_comments": 42,
+        "author": "Visual-Context-7492",
+        "url": "https://reddit.com/r/AI_Agents/comments/1slb7xi/best_ai_agent_building_tools_in_2026_nocode/",
+        "created_utc": 1776178855.0
+      },
+      {
+        "id": "1n297bh",
+        "subreddit": "leetcode",
+        "title": "What to do or learn next ( help / review needed)",
+        "score": 181,
+        "num_comments": 58,
+        "author": "AfterWaltz2664",
+        "url": "https://reddit.com/r/leetcode/comments/1n297bh/what_to_do_or_learn_next_help_review_needed/",
+        "created_utc": 1756379043.0
+      },
+      {
+        "id": "1t0g94n",
+        "subreddit": "PakistaniDevs",
+        "title": "Am I overstressing? Or this is the right time to take right decision?",
+        "score": 9,
+        "num_comments": 32,
+        "author": "Unusual-Badger4848",
+        "url": "https://reddit.com/r/PakistaniDevs/comments/1t0g94n/am_i_overstressing_or_this_is_the_right_time_to/",
+        "created_utc": 1777601673.0
+      },
+      {
+        "id": "1scl75d",
+        "subreddit": "LangChain",
+        "title": "We're considering moving our production agent to LangChain from Google ADK. Thoughts?",
+        "score": 28,
+        "num_comments": 34,
+        "author": "mee-gee",
+        "url": "https://reddit.com/r/LangChain/comments/1scl75d/were_considering_moving_our_production_agent_to/",
+        "created_utc": 1775337889.0
+      }
+    ]
+  }
+}

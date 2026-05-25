@@ -1,0 +1,516 @@
+{
+  "project": "Mem0",
+  "repo": "mem0ai/mem0",
+  "collected_at": "2026-05-22T11:11:12.908869+00:00",
+  "queries": [
+    "Mem0",
+    "mem0"
+  ],
+  "total_posts": 50,
+  "results": {
+    "Mem0": [
+      {
+        "id": "1stf5gv",
+        "subreddit": "AI_Agents",
+        "title": "Mem0 sufficient for memory layer?",
+        "score": 1,
+        "num_comments": 5,
+        "author": "Spiritualgrowth_1985",
+        "url": "https://reddit.com/r/AI_Agents/comments/1stf5gv/mem0_sufficient_for_memory_layer/",
+        "created_utc": 1776941113.0
+      },
+      {
+        "id": "1px1nb1",
+        "subreddit": "Rag",
+        "title": "Summary of My Mem0 Experience",
+        "score": 4,
+        "num_comments": 14,
+        "author": "anashel",
+        "url": "https://reddit.com/r/Rag/comments/1px1nb1/summary_of_my_mem0_experience/",
+        "created_utc": 1766852372.0
+      },
+      {
+        "id": "1p0e4nk",
+        "subreddit": "LangChain",
+        "title": "Long Term Memory - Mem0/Zep/LangMem - what made you choose it?",
+        "score": 10,
+        "num_comments": 27,
+        "author": "nicoloboschi",
+        "url": "https://reddit.com/r/LangChain/comments/1p0e4nk/long_term_memory_mem0zeplangmem_what_made_you/",
+        "created_utc": 1763477981.0
+      },
+      {
+        "id": "1t5yjje",
+        "subreddit": "hermesagent",
+        "title": "Which memory tool do you have experience with?",
+        "score": 19,
+        "num_comments": 53,
+        "author": "leonidasyy",
+        "url": "https://reddit.com/r/hermesagent/comments/1t5yjje/which_memory_tool_do_you_have_experience_with/",
+        "created_utc": 1778123470.0
+      },
+      {
+        "id": "1t1ezyc",
+        "subreddit": "hermesagent",
+        "title": "What is your choice of external memory provider?",
+        "score": 7,
+        "num_comments": 20,
+        "author": "zodiacg",
+        "url": "https://reddit.com/r/hermesagent/comments/1t1ezyc/what_is_your_choice_of_external_memory_provider/",
+        "created_utc": 1777693713.0
+      },
+      {
+        "id": "1l8b3pq",
+        "subreddit": "AI_Agents",
+        "title": "Does anyone self host mem0?",
+        "score": 3,
+        "num_comments": 11,
+        "author": "ChrisMule",
+        "url": "https://reddit.com/r/AI_Agents/comments/1l8b3pq/does_anyone_self_host_mem0/",
+        "created_utc": 1749591239.0
+      },
+      {
+        "id": "1qciguj",
+        "subreddit": "mem0",
+        "title": "I benchmarked Mem0 vs. OpenAI's Memory based on the Mem0 research paper published on ArXiv.",
+        "score": 1,
+        "num_comments": 1,
+        "author": "ninadpathak",
+        "url": "https://reddit.com/r/mem0/comments/1qciguj/i_benchmarked_mem0_vs_openais_memory_based_on_the/",
+        "created_utc": 1768381081.0
+      },
+      {
+        "id": "1onzihj",
+        "subreddit": "Rag",
+        "title": "How does mem0 work?",
+        "score": 1,
+        "num_comments": 5,
+        "author": "paragon-jack",
+        "url": "https://reddit.com/r/Rag/comments/1onzihj/how_does_mem0_work/",
+        "created_utc": 1762234958.0
+      },
+      {
+        "id": "1lc74ae",
+        "subreddit": "ClaudeAI",
+        "title": "Has anyone tried to setup Mem0 with claude-code?",
+        "score": 3,
+        "num_comments": 9,
+        "author": "Georgehwp",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1lc74ae/has_anyone_tried_to_setup_mem0_with_claudecode/",
+        "created_utc": 1750011574.0
+      },
+      {
+        "id": "1mon8it",
+        "subreddit": "LocalLLaMA",
+        "title": "Woah. Letta vs Mem0. (For AI memory nerds)",
+        "score": 368,
+        "num_comments": 56,
+        "author": "LoveMind_AI",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1mon8it/woah_letta_vs_mem0_for_ai_memory_nerds/",
+        "created_utc": 1755038044.0
+      },
+      {
+        "id": "1rzcm4p",
+        "subreddit": "AIMemory",
+        "title": "Introducing Recursive Memory Harness: RLM for Persistent Agentic Memory (Smashes Mem0 in multihop retrival benchmarks)",
+        "score": 47,
+        "num_comments": 26,
+        "author": "Beneficial_Carry_530",
+        "url": "https://reddit.com/r/AIMemory/comments/1rzcm4p/introducing_recursive_memory_harness_rlm_for/",
+        "created_utc": 1774051243.0
+      },
+      {
+        "id": "1sl7hh2",
+        "subreddit": "AI_Agents",
+        "title": "I open-sourced a memory system for AI agents that scores 89.9% on LoCoMo -- 22 points above Mem0. Here's the architecture.",
+        "score": 9,
+        "num_comments": 26,
+        "author": "StudentSweet3601",
+        "url": "https://reddit.com/r/AI_Agents/comments/1sl7hh2/i_opensourced_a_memory_system_for_ai_agents_that/",
+        "created_utc": 1776170291.0
+      },
+      {
+        "id": "1rap3kv",
+        "subreddit": "aiagents",
+        "title": "What are you all using for AI agent memory? (Looking beyond mem0)",
+        "score": 11,
+        "num_comments": 32,
+        "author": "Fantastic-Builder453",
+        "url": "https://reddit.com/r/aiagents/comments/1rap3kv/what_are_you_all_using_for_ai_agent_memory/",
+        "created_utc": 1771674074.0
+      },
+      {
+        "id": "1q0dutk",
+        "subreddit": "AIMemory",
+        "title": "mem0, Zep, Letta, Supermemory etc: why do memory layers keep remembering the wrong things?",
+        "score": 5,
+        "num_comments": 43,
+        "author": "nicolo_memorymodel",
+        "url": "https://reddit.com/r/AIMemory/comments/1q0dutk/mem0_zep_letta_supermemory_etc_why_do_memory/",
+        "created_utc": 1767190163.0
+      },
+      {
+        "id": "1kash7b",
+        "subreddit": "LangChain",
+        "title": "I Benchmarked OpenAI Memory vs LangMem vs Letta (MemGPT) vs Mem0 for Long-Term Memory: Here’s How They Stacked Up",
+        "score": 144,
+        "num_comments": 53,
+        "author": "staranjeet",
+        "url": "https://reddit.com/r/LangChain/comments/1kash7b/i_benchmarked_openai_memory_vs_langmem_vs_letta/",
+        "created_utc": 1745944766.0
+      },
+      {
+        "id": "1s5jap8",
+        "subreddit": "ClaudeAI",
+        "title": "430x faster ingestion than Mem0, no second LLM needed. Standalone memory engine for small local models.",
+        "score": 7,
+        "num_comments": 19,
+        "author": "No_Strain_2140",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1s5jap8/430x_faster_ingestion_than_mem0_no_second_llm/",
+        "created_utc": 1774651727.0
+      },
+      {
+        "id": "1sudx83",
+        "subreddit": "AI_Agents",
+        "title": "Security Audit of Mem0 (AI Memory Layer): 23 High-Severity Vulnerabilities found (SQLi, Prompt Injection, and more)",
+        "score": 0,
+        "num_comments": 13,
+        "author": "WinterSpecial7970",
+        "url": "https://reddit.com/r/AI_Agents/comments/1sudx83/security_audit_of_mem0_ai_memory_layer_23/",
+        "created_utc": 1777032654.0
+      },
+      {
+        "id": "1t30hcg",
+        "subreddit": "AiBuilders",
+        "title": "Is an Aurra membership worth it for a solo founder, or should I stick to open-source Mem0?",
+        "score": 3,
+        "num_comments": 11,
+        "author": "TysonSmith3987",
+        "url": "https://reddit.com/r/AiBuilders/comments/1t30hcg/is_an_aurra_membership_worth_it_for_a_solo/",
+        "created_utc": 1777849571.0
+      },
+      {
+        "id": "1r6r87z",
+        "subreddit": "ClaudeAI",
+        "title": "I built a self-hosted mem0 MCP memory server for Claude Code that gives persistent memory across sessions with local Qdrant + Neo4j + Ollama",
+        "score": 4,
+        "num_comments": 21,
+        "author": "Aware-One7480",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1r6r87z/i_built_a_selfhosted_mem0_mcp_memory_server_for/",
+        "created_utc": 1771288506.0
+      },
+      {
+        "id": "1l2uwml",
+        "subreddit": "Warhammer40k",
+        "title": "New Captain Centos Model",
+        "score": 2118,
+        "num_comments": 243,
+        "author": "Darkroxas95",
+        "url": "https://reddit.com/r/Warhammer40k/comments/1l2uwml/new_captain_centos_model/",
+        "created_utc": 1749005695.0
+      },
+      {
+        "id": "1rj11n9",
+        "subreddit": "openclaw",
+        "title": "Openclaw memory: QMD, MEM0, or Byterover",
+        "score": 1,
+        "num_comments": 18,
+        "author": "hameed_farah",
+        "url": "https://reddit.com/r/openclaw/comments/1rj11n9/openclaw_memory_qmd_mem0_or_byterover/",
+        "created_utc": 1772476502.0
+      },
+      {
+        "id": "1qbmffy",
+        "subreddit": "AIMemory",
+        "title": "I tried to make LLM agents truly “understand me” using Mem0, Zep, and Supermemory. Here’s what worked, what broke, and what we're building next.",
+        "score": 28,
+        "num_comments": 18,
+        "author": "Rokpiy",
+        "url": "https://reddit.com/r/AIMemory/comments/1qbmffy/i_tried_to_make_llm_agents_truly_understand_me/",
+        "created_utc": 1768294439.0
+      },
+      {
+        "id": "1tirduu",
+        "subreddit": "ZooCode",
+        "title": "Any plans for long-term memory support? (Mem0, Zep, etc.)",
+        "score": 2,
+        "num_comments": 2,
+        "author": "aquiveal",
+        "url": "https://reddit.com/r/ZooCode/comments/1tirduu/any_plans_for_longterm_memory_support_mem0_zep_etc/",
+        "created_utc": 1779295572.0
+      },
+      {
+        "id": "1rzead3",
+        "subreddit": "AgentsOfAI",
+        "title": "Introducing the Recursive Memory Harness: RLM for Persistent Agentic Memory (Smashes Mem0 in multihop retrival benchmarks)",
+        "score": 2,
+        "num_comments": 10,
+        "author": "Beneficial_Carry_530",
+        "url": "https://reddit.com/r/AgentsOfAI/comments/1rzead3/introducing_the_recursive_memory_harness_rlm_for/",
+        "created_utc": 1774055704.0
+      },
+      {
+        "id": "1t3pj9e",
+        "subreddit": "LLMDevs",
+        "title": "Finally tried Aurra’s new bi-temporal memory (after their HN launch) — Is Mem0 officially behind?",
+        "score": 0,
+        "num_comments": 3,
+        "author": "Jst_Qrius",
+        "url": "https://reddit.com/r/LLMDevs/comments/1t3pj9e/finally_tried_aurras_new_bitemporal_memory_after/",
+        "created_utc": 1777917843.0
+      }
+    ],
+    "mem0": [
+      {
+        "id": "1stf5gv",
+        "subreddit": "AI_Agents",
+        "title": "Mem0 sufficient for memory layer?",
+        "score": 1,
+        "num_comments": 5,
+        "author": "Spiritualgrowth_1985",
+        "url": "https://reddit.com/r/AI_Agents/comments/1stf5gv/mem0_sufficient_for_memory_layer/",
+        "created_utc": 1776941113.0
+      },
+      {
+        "id": "1px1nb1",
+        "subreddit": "Rag",
+        "title": "Summary of My Mem0 Experience",
+        "score": 5,
+        "num_comments": 14,
+        "author": "anashel",
+        "url": "https://reddit.com/r/Rag/comments/1px1nb1/summary_of_my_mem0_experience/",
+        "created_utc": 1766852372.0
+      },
+      {
+        "id": "1p0e4nk",
+        "subreddit": "LangChain",
+        "title": "Long Term Memory - Mem0/Zep/LangMem - what made you choose it?",
+        "score": 10,
+        "num_comments": 27,
+        "author": "nicoloboschi",
+        "url": "https://reddit.com/r/LangChain/comments/1p0e4nk/long_term_memory_mem0zeplangmem_what_made_you/",
+        "created_utc": 1763477981.0
+      },
+      {
+        "id": "1t5yjje",
+        "subreddit": "hermesagent",
+        "title": "Which memory tool do you have experience with?",
+        "score": 19,
+        "num_comments": 53,
+        "author": "leonidasyy",
+        "url": "https://reddit.com/r/hermesagent/comments/1t5yjje/which_memory_tool_do_you_have_experience_with/",
+        "created_utc": 1778123470.0
+      },
+      {
+        "id": "1l8b3pq",
+        "subreddit": "AI_Agents",
+        "title": "Does anyone self host mem0?",
+        "score": 4,
+        "num_comments": 11,
+        "author": "ChrisMule",
+        "url": "https://reddit.com/r/AI_Agents/comments/1l8b3pq/does_anyone_self_host_mem0/",
+        "created_utc": 1749591239.0
+      },
+      {
+        "id": "1qciguj",
+        "subreddit": "mem0",
+        "title": "I benchmarked Mem0 vs. OpenAI's Memory based on the Mem0 research paper published on ArXiv.",
+        "score": 1,
+        "num_comments": 1,
+        "author": "ninadpathak",
+        "url": "https://reddit.com/r/mem0/comments/1qciguj/i_benchmarked_mem0_vs_openais_memory_based_on_the/",
+        "created_utc": 1768381081.0
+      },
+      {
+        "id": "1t1ezyc",
+        "subreddit": "hermesagent",
+        "title": "What is your choice of external memory provider?",
+        "score": 7,
+        "num_comments": 20,
+        "author": "zodiacg",
+        "url": "https://reddit.com/r/hermesagent/comments/1t1ezyc/what_is_your_choice_of_external_memory_provider/",
+        "created_utc": 1777693713.0
+      },
+      {
+        "id": "1onzihj",
+        "subreddit": "Rag",
+        "title": "How does mem0 work?",
+        "score": 0,
+        "num_comments": 5,
+        "author": "paragon-jack",
+        "url": "https://reddit.com/r/Rag/comments/1onzihj/how_does_mem0_work/",
+        "created_utc": 1762234958.0
+      },
+      {
+        "id": "1lc74ae",
+        "subreddit": "ClaudeAI",
+        "title": "Has anyone tried to setup Mem0 with claude-code?",
+        "score": 4,
+        "num_comments": 9,
+        "author": "Georgehwp",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1lc74ae/has_anyone_tried_to_setup_mem0_with_claudecode/",
+        "created_utc": 1750011574.0
+      },
+      {
+        "id": "1mon8it",
+        "subreddit": "LocalLLaMA",
+        "title": "Woah. Letta vs Mem0. (For AI memory nerds)",
+        "score": 365,
+        "num_comments": 56,
+        "author": "LoveMind_AI",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1mon8it/woah_letta_vs_mem0_for_ai_memory_nerds/",
+        "created_utc": 1755038044.0
+      },
+      {
+        "id": "1rzcm4p",
+        "subreddit": "AIMemory",
+        "title": "Introducing Recursive Memory Harness: RLM for Persistent Agentic Memory (Smashes Mem0 in multihop retrival benchmarks)",
+        "score": 45,
+        "num_comments": 26,
+        "author": "Beneficial_Carry_530",
+        "url": "https://reddit.com/r/AIMemory/comments/1rzcm4p/introducing_recursive_memory_harness_rlm_for/",
+        "created_utc": 1774051243.0
+      },
+      {
+        "id": "1sl7hh2",
+        "subreddit": "AI_Agents",
+        "title": "I open-sourced a memory system for AI agents that scores 89.9% on LoCoMo -- 22 points above Mem0. Here's the architecture.",
+        "score": 7,
+        "num_comments": 26,
+        "author": "StudentSweet3601",
+        "url": "https://reddit.com/r/AI_Agents/comments/1sl7hh2/i_opensourced_a_memory_system_for_ai_agents_that/",
+        "created_utc": 1776170291.0
+      },
+      {
+        "id": "1rap3kv",
+        "subreddit": "aiagents",
+        "title": "What are you all using for AI agent memory? (Looking beyond mem0)",
+        "score": 12,
+        "num_comments": 32,
+        "author": "Fantastic-Builder453",
+        "url": "https://reddit.com/r/aiagents/comments/1rap3kv/what_are_you_all_using_for_ai_agent_memory/",
+        "created_utc": 1771674074.0
+      },
+      {
+        "id": "1q0dutk",
+        "subreddit": "AIMemory",
+        "title": "mem0, Zep, Letta, Supermemory etc: why do memory layers keep remembering the wrong things?",
+        "score": 5,
+        "num_comments": 43,
+        "author": "nicolo_memorymodel",
+        "url": "https://reddit.com/r/AIMemory/comments/1q0dutk/mem0_zep_letta_supermemory_etc_why_do_memory/",
+        "created_utc": 1767190163.0
+      },
+      {
+        "id": "1kash7b",
+        "subreddit": "LangChain",
+        "title": "I Benchmarked OpenAI Memory vs LangMem vs Letta (MemGPT) vs Mem0 for Long-Term Memory: Here’s How They Stacked Up",
+        "score": 145,
+        "num_comments": 53,
+        "author": "staranjeet",
+        "url": "https://reddit.com/r/LangChain/comments/1kash7b/i_benchmarked_openai_memory_vs_langmem_vs_letta/",
+        "created_utc": 1745944766.0
+      },
+      {
+        "id": "1s5jap8",
+        "subreddit": "ClaudeAI",
+        "title": "430x faster ingestion than Mem0, no second LLM needed. Standalone memory engine for small local models.",
+        "score": 5,
+        "num_comments": 19,
+        "author": "No_Strain_2140",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1s5jap8/430x_faster_ingestion_than_mem0_no_second_llm/",
+        "created_utc": 1774651727.0
+      },
+      {
+        "id": "1sudx83",
+        "subreddit": "AI_Agents",
+        "title": "Security Audit of Mem0 (AI Memory Layer): 23 High-Severity Vulnerabilities found (SQLi, Prompt Injection, and more)",
+        "score": 0,
+        "num_comments": 13,
+        "author": "WinterSpecial7970",
+        "url": "https://reddit.com/r/AI_Agents/comments/1sudx83/security_audit_of_mem0_ai_memory_layer_23/",
+        "created_utc": 1777032654.0
+      },
+      {
+        "id": "1t30hcg",
+        "subreddit": "AiBuilders",
+        "title": "Is an Aurra membership worth it for a solo founder, or should I stick to open-source Mem0?",
+        "score": 3,
+        "num_comments": 11,
+        "author": "TysonSmith3987",
+        "url": "https://reddit.com/r/AiBuilders/comments/1t30hcg/is_an_aurra_membership_worth_it_for_a_solo/",
+        "created_utc": 1777849571.0
+      },
+      {
+        "id": "1r6r87z",
+        "subreddit": "ClaudeAI",
+        "title": "I built a self-hosted mem0 MCP memory server for Claude Code that gives persistent memory across sessions with local Qdrant + Neo4j + Ollama",
+        "score": 5,
+        "num_comments": 21,
+        "author": "Aware-One7480",
+        "url": "https://reddit.com/r/ClaudeAI/comments/1r6r87z/i_built_a_selfhosted_mem0_mcp_memory_server_for/",
+        "created_utc": 1771288506.0
+      },
+      {
+        "id": "1l2uwml",
+        "subreddit": "Warhammer40k",
+        "title": "New Captain Centos Model",
+        "score": 2113,
+        "num_comments": 243,
+        "author": "Darkroxas95",
+        "url": "https://reddit.com/r/Warhammer40k/comments/1l2uwml/new_captain_centos_model/",
+        "created_utc": 1749005695.0
+      },
+      {
+        "id": "1rj11n9",
+        "subreddit": "openclaw",
+        "title": "Openclaw memory: QMD, MEM0, or Byterover",
+        "score": 1,
+        "num_comments": 18,
+        "author": "hameed_farah",
+        "url": "https://reddit.com/r/openclaw/comments/1rj11n9/openclaw_memory_qmd_mem0_or_byterover/",
+        "created_utc": 1772476502.0
+      },
+      {
+        "id": "1qbmffy",
+        "subreddit": "AIMemory",
+        "title": "I tried to make LLM agents truly “understand me” using Mem0, Zep, and Supermemory. Here’s what worked, what broke, and what we're building next.",
+        "score": 27,
+        "num_comments": 18,
+        "author": "Rokpiy",
+        "url": "https://reddit.com/r/AIMemory/comments/1qbmffy/i_tried_to_make_llm_agents_truly_understand_me/",
+        "created_utc": 1768294439.0
+      },
+      {
+        "id": "1tirduu",
+        "subreddit": "ZooCode",
+        "title": "Any plans for long-term memory support? (Mem0, Zep, etc.)",
+        "score": 2,
+        "num_comments": 2,
+        "author": "aquiveal",
+        "url": "https://reddit.com/r/ZooCode/comments/1tirduu/any_plans_for_longterm_memory_support_mem0_zep_etc/",
+        "created_utc": 1779295572.0
+      },
+      {
+        "id": "1rzead3",
+        "subreddit": "AgentsOfAI",
+        "title": "Introducing the Recursive Memory Harness: RLM for Persistent Agentic Memory (Smashes Mem0 in multihop retrival benchmarks)",
+        "score": 2,
+        "num_comments": 10,
+        "author": "Beneficial_Carry_530",
+        "url": "https://reddit.com/r/AgentsOfAI/comments/1rzead3/introducing_the_recursive_memory_harness_rlm_for/",
+        "created_utc": 1774055704.0
+      },
+      {
+        "id": "1t3pj9e",
+        "subreddit": "LLMDevs",
+        "title": "Finally tried Aurra’s new bi-temporal memory (after their HN launch) — Is Mem0 officially behind?",
+        "score": 0,
+        "num_comments": 3,
+        "author": "Jst_Qrius",
+        "url": "https://reddit.com/r/LLMDevs/comments/1t3pj9e/finally_tried_aurras_new_bitemporal_memory_after/",
+        "created_utc": 1777917843.0
+      }
+    ]
+  }
+}

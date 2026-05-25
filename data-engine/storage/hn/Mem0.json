@@ -1,0 +1,736 @@
+{
+  "project": "Mem0",
+  "repo": "mem0ai/mem0",
+  "collected_at": "2026-05-22T11:00:06.510756+00:00",
+  "queries": [
+    "Mem0",
+    "mem0"
+  ],
+  "total_hits": 80,
+  "results": {
+    "Mem0": [
+      {
+        "objectID": "41447317",
+        "title": "Show HN: Mem0 – open-source Memory Layer for AI apps",
+        "url": "https://github.com/mem0ai/mem0",
+        "points": 201,
+        "num_comments": 61,
+        "author": "staranjeet",
+        "created_at": "2024-09-04T16:01:40Z"
+      },
+      {
+        "objectID": "42042401",
+        "title": "Show HN: Mem0 Browser Extension: Shared Memory Across ChatGPT,Claude,Perplexity",
+        "url": "https://github.com/mem0ai/mem0-chrome-extension",
+        "points": 34,
+        "num_comments": 4,
+        "author": "staranjeet",
+        "created_at": "2024-11-04T15:27:54Z"
+      },
+      {
+        "objectID": "46891715",
+        "title": "Ask HN: Mem0 stores memories, but doesn't learn user patterns",
+        "url": "",
+        "points": 9,
+        "num_comments": 7,
+        "author": "fliellerjulian",
+        "created_at": "2026-02-04T21:02:34Z"
+      },
+      {
+        "objectID": "44763850",
+        "title": "Show HN: Agentic AI Frameworks on AWS (LangGraph,Strands,CrewAI,Arize,Mem0)",
+        "url": "https://github.com/aws-samples/sample-agentic-frameworks-on-aws",
+        "points": 7,
+        "num_comments": 0,
+        "author": "thinkagenticai",
+        "created_at": "2025-08-02T00:20:11Z"
+      },
+      {
+        "objectID": "41991731",
+        "title": "Mem0 Browser Extension",
+        "url": "https://twitter.com/taranjeetio/status/1851278999881990409",
+        "points": 6,
+        "num_comments": 0,
+        "author": "anshulbhide",
+        "created_at": "2024-10-30T03:31:41Z"
+      },
+      {
+        "objectID": "47961750",
+        "title": "Show HN: Mem0 thinks our 2023 conversation happened in 2026",
+        "url": "https://www.aurra.us/blog/mem0-vs-aurra",
+        "points": 5,
+        "num_comments": 2,
+        "author": "akshayt2012",
+        "created_at": "2026-04-30T13:00:35Z"
+      },
+      {
+        "objectID": "47501353",
+        "title": "Cortex – Local-first AI memory engine, beats Mem0 on LoCoMo, encrypted, free",
+        "url": "",
+        "points": 4,
+        "num_comments": 1,
+        "author": "gambletan",
+        "created_at": "2026-03-24T11:56:37Z"
+      },
+      {
+        "objectID": "46840181",
+        "title": "Memory-First AI Reminder Agents with Mem0 and Claude Agent SDK",
+        "url": "https://mem0.ai/blog/building-a-reminder-agent-that-actually-remembers",
+        "points": 3,
+        "num_comments": 0,
+        "author": "ninadwrites",
+        "created_at": "2026-01-31T19:58:30Z"
+      },
+      {
+        "objectID": "45734522",
+        "title": "Mem0 raises $24M to build the memory layer for AI apps",
+        "url": "https://techcrunch.com/2025/10/28/mem0-raises-24m-from-yc-peak-xv-and-basis-set-to-build-the-memory-layer-for-ai-apps/",
+        "points": 2,
+        "num_comments": 1,
+        "author": "anshulbhide",
+        "created_at": "2025-10-28T15:55:54Z"
+      },
+      {
+        "objectID": "41770451",
+        "title": "Ask HN: What are some of the alternatives of Mem0",
+        "url": "",
+        "points": 2,
+        "num_comments": 1,
+        "author": "nikasakana",
+        "created_at": "2024-10-07T20:11:05Z"
+      },
+      {
+        "objectID": "47153987",
+        "title": "Show HN: Engram – Open-source agent memory that beats Mem0 by 20% on LOCOMO",
+        "url": "https://www.engram.fyi/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "tstockham",
+        "created_at": "2026-02-25T16:43:08Z"
+      },
+      {
+        "objectID": "46123550",
+        "title": "Show HN: VAC Memory – 80.1% LoCoMo accuracy vs. Mem0's 68%",
+        "url": "https://github.com/vac-architector/VAC-Memory-System/wiki",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ViktorKuz",
+        "created_at": "2025-12-02T17:11:33Z"
+      },
+      {
+        "objectID": "43909538",
+        "title": "Lies, Damn Lies, & Statistics: Is Mem0 SOTA in Agent Memory?",
+        "url": "https://blog.getzep.com/lies-damn-lies-statistics-is-mem0-really-sota-in-agent-memory/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "amrrs",
+        "created_at": "2025-05-06T20:54:43Z"
+      },
+      {
+        "objectID": "41463913",
+        "title": "Show HN: Unofficial Dockerized mem0ai rest API server",
+        "url": "https://github.com/Airstrip-AI/mem0-rest",
+        "points": 2,
+        "num_comments": 0,
+        "author": "hchua",
+        "created_at": "2024-09-06T07:45:59Z"
+      },
+      {
+        "objectID": "41134775",
+        "title": "Mem0: The Memory Layer for Personalized AI",
+        "url": "https://github.com/mem0ai/mem0",
+        "points": 2,
+        "num_comments": 0,
+        "author": "mnoorfawi",
+        "created_at": "2024-08-01T23:36:15Z"
+      },
+      {
+        "objectID": "46911278",
+        "title": "Do agents need visual memory? Not Mem0/Supermemory",
+        "url": "",
+        "points": 1,
+        "num_comments": 1,
+        "author": "prabhavsanga",
+        "created_at": "2026-02-06T10:44:12Z"
+      },
+      {
+        "objectID": "47553405",
+        "title": "Forensic beats Mem0 with 90.1% on LOCOMO",
+        "url": "https://forensicmemory.com/proof.html",
+        "points": 1,
+        "num_comments": 0,
+        "author": "strobo",
+        "created_at": "2026-03-28T10:50:37Z"
+      },
+      {
+        "objectID": "46884209",
+        "title": "Long-term memory for OpenClaw agents with the mem0/OpenClaw-mem0 plugin",
+        "url": "https://docs.mem0.ai/integrations/openclaw",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ninadwrites",
+        "created_at": "2026-02-04T10:48:53Z"
+      },
+      {
+        "objectID": "46364699",
+        "title": "Show HN: Persistent memory for Claude Code using Mem0",
+        "url": "https://github.com/0xtechdean/claude-code-mem0",
+        "points": 1,
+        "num_comments": 0,
+        "author": "0xtechdean",
+        "created_at": "2025-12-23T12:16:57Z"
+      },
+      {
+        "objectID": "46004834",
+        "title": "Ask HN: Who is the main customer for Mem0/Supermemory, why they pay?",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ihsanf",
+        "created_at": "2025-11-21T14:16:04Z"
+      },
+      {
+        "objectID": "45994916",
+        "title": "Mem0 raises $24M from YC, Peak XV and Basis Set for a memory layer for AI apps",
+        "url": "https://techcrunch.com/2025/10/28/mem0-raises-24m-from-yc-peak-xv-and-basis-set-to-build-the-memory-layer-for-ai-apps/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "PaulHoule",
+        "created_at": "2025-11-20T17:09:41Z"
+      },
+      {
+        "objectID": "41187481",
+        "title": "Mem0: Three Prompts Created a Viral AI Memory Layer",
+        "url": "https://blog.lqhl.me/mem0-how-three-prompts-created-a-viral-ai-memory-layer",
+        "points": 1,
+        "num_comments": 0,
+        "author": "sqlvectordb",
+        "created_at": "2024-08-08T02:12:26Z"
+      },
+      {
+        "objectID": "44052766",
+        "title": "Launch HN: Sim Studio (YC X25) – Figma-like canvas for agent workflows",
+        "url": "",
+        "points": 55,
+        "num_comments": 32,
+        "author": "waleedlatif1",
+        "created_at": "2025-05-21T15:49:15Z"
+      },
+      {
+        "objectID": "42041368",
+        "title": "Show HN: AI Agents for engineering use cases like debugging, LLD,testing etc.",
+        "url": "https://github.com/potpie-ai/potpie",
+        "points": 26,
+        "num_comments": 14,
+        "author": "aditikothari",
+        "created_at": "2024-11-04T13:32:51Z"
+      },
+      {
+        "objectID": "41724550",
+        "title": "Show HN: Open-source library documentation for LLMs",
+        "url": "https://docs.codes/",
+        "points": 12,
+        "num_comments": 0,
+        "author": "rohansood15",
+        "created_at": "2024-10-02T20:09:23Z"
+      },
+      {
+        "objectID": "46511540",
+        "title": "Show HN: A file-based agent memory framework that works like skill",
+        "url": "https://github.com/NevaMind-AI/memU",
+        "points": 11,
+        "num_comments": 4,
+        "author": "Nicole9",
+        "created_at": "2026-01-06T12:43:39Z"
+      },
+      {
+        "objectID": "47053534",
+        "title": "Show HN: Persistent memory for Claude Code with self-hosted Qdrant and Ollama",
+        "url": "https://github.com/elvismdev/mem0-mcp-selfhosted",
+        "points": 8,
+        "num_comments": 0,
+        "author": "elvismdev",
+        "created_at": "2026-02-17T21:21:25Z"
+      },
+      {
+        "objectID": "43974991",
+        "title": "Show HN: OpenMemory – Make your MCP clients more context-aware",
+        "url": "https://github.com/mem0ai/mem0/tree/main/openmemory",
+        "points": 8,
+        "num_comments": 0,
+        "author": "staranjeet",
+        "created_at": "2025-05-13T16:52:00Z"
+      },
+      {
+        "objectID": "47070584",
+        "title": "Sayou – Open-source Dropbox for AI agents",
+        "url": "",
+        "points": 6,
+        "num_comments": 4,
+        "author": "syumpx",
+        "created_at": "2026-02-19T06:31:51Z"
+      },
+      {
+        "objectID": "46259498",
+        "title": "Show HN: AMP – open-source memory server for AI agents (MCP, SQLite, D3.js)",
+        "url": "https://github.com/akshayaggarwal99/amp",
+        "points": 5,
+        "num_comments": 1,
+        "author": "akshayaggarwal",
+        "created_at": "2025-12-14T00:04:16Z"
+      },
+      {
+        "objectID": "41556942",
+        "title": "Show HN: Open-source platform to build internal AI agents",
+        "url": "https://airstrip.pro/",
+        "points": 5,
+        "num_comments": 1,
+        "author": "hchua",
+        "created_at": "2024-09-16T15:18:19Z"
+      },
+      {
+        "objectID": "47260077",
+        "title": "Show HN: Mnemora – Serverless memory DB for AI agents (no LLM in your CRUD path)",
+        "url": "https://github.com/mnemora-db/mnemora",
+        "points": 4,
+        "num_comments": 4,
+        "author": "isaacgbc",
+        "created_at": "2026-03-05T10:41:27Z"
+      },
+      {
+        "objectID": "44912780",
+        "title": "Show HN: I love ChatGPT Memory, so I built one",
+        "url": "https://github.com/memodb-io/memobase",
+        "points": 4,
+        "num_comments": 0,
+        "author": "gusye",
+        "created_at": "2025-08-15T14:21:17Z"
+      },
+      {
+        "objectID": "47008274",
+        "title": "Show HN: Engram – Persistent memory for AI agents, local-first and open source",
+        "url": "https://engram-ai.dev",
+        "points": 3,
+        "num_comments": 0,
+        "author": "L3nnox_Cc",
+        "created_at": "2026-02-13T21:46:53Z"
+      },
+      {
+        "objectID": "46053464",
+        "title": "80.1 % on LoCoMo Long-Term Memory Benchmark with a pure open-source RAG pipeline",
+        "url": "",
+        "points": 3,
+        "num_comments": 0,
+        "author": "ViktorKuz",
+        "created_at": "2025-11-26T02:17:05Z"
+      },
+      {
+        "objectID": "47116615",
+        "title": "Show HN: Engram – Persistent memory for AI coding agents (open source)",
+        "url": "https://github.com/tstockham96/engram",
+        "points": 2,
+        "num_comments": 3,
+        "author": "tstockham",
+        "created_at": "2026-02-23T00:50:01Z"
+      },
+      {
+        "objectID": "46395730",
+        "title": "Show HN: AceIQ360 – First AI memory system to achieve 100% on LongMemEval",
+        "url": "",
+        "points": 2,
+        "num_comments": 3,
+        "author": "maheshvaikri99",
+        "created_at": "2025-12-26T20:14:12Z"
+      },
+      {
+        "objectID": "47912675",
+        "title": "Show HN: I replaced a memory app with two Markdown files and a Git repo",
+        "url": "",
+        "points": 2,
+        "num_comments": 1,
+        "author": "achiles",
+        "created_at": "2026-04-26T18:37:59Z"
+      },
+      {
+        "objectID": "47999377",
+        "title": "Show HN: Local semantic memory for coding agents",
+        "url": "https://github.com/Chadi00/thr",
+        "points": 2,
+        "num_comments": 0,
+        "author": "chadiiek",
+        "created_at": "2026-05-03T17:37:48Z"
+      },
+      {
+        "objectID": "47365521",
+        "title": "Show HN: Grab – A declarative stream processor for delimited text data",
+        "url": "https://github.com/anwitars/grab",
+        "points": 2,
+        "num_comments": 0,
+        "author": "anwitars",
+        "created_at": "2026-03-13T15:09:03Z"
+      }
+    ],
+    "mem0": [
+      {
+        "objectID": "41447317",
+        "title": "Show HN: Mem0 – open-source Memory Layer for AI apps",
+        "url": "https://github.com/mem0ai/mem0",
+        "points": 201,
+        "num_comments": 61,
+        "author": "staranjeet",
+        "created_at": "2024-09-04T16:01:40Z"
+      },
+      {
+        "objectID": "42042401",
+        "title": "Show HN: Mem0 Browser Extension: Shared Memory Across ChatGPT,Claude,Perplexity",
+        "url": "https://github.com/mem0ai/mem0-chrome-extension",
+        "points": 34,
+        "num_comments": 4,
+        "author": "staranjeet",
+        "created_at": "2024-11-04T15:27:54Z"
+      },
+      {
+        "objectID": "46891715",
+        "title": "Ask HN: Mem0 stores memories, but doesn't learn user patterns",
+        "url": "",
+        "points": 9,
+        "num_comments": 7,
+        "author": "fliellerjulian",
+        "created_at": "2026-02-04T21:02:34Z"
+      },
+      {
+        "objectID": "44763850",
+        "title": "Show HN: Agentic AI Frameworks on AWS (LangGraph,Strands,CrewAI,Arize,Mem0)",
+        "url": "https://github.com/aws-samples/sample-agentic-frameworks-on-aws",
+        "points": 7,
+        "num_comments": 0,
+        "author": "thinkagenticai",
+        "created_at": "2025-08-02T00:20:11Z"
+      },
+      {
+        "objectID": "41991731",
+        "title": "Mem0 Browser Extension",
+        "url": "https://twitter.com/taranjeetio/status/1851278999881990409",
+        "points": 6,
+        "num_comments": 0,
+        "author": "anshulbhide",
+        "created_at": "2024-10-30T03:31:41Z"
+      },
+      {
+        "objectID": "47961750",
+        "title": "Show HN: Mem0 thinks our 2023 conversation happened in 2026",
+        "url": "https://www.aurra.us/blog/mem0-vs-aurra",
+        "points": 5,
+        "num_comments": 2,
+        "author": "akshayt2012",
+        "created_at": "2026-04-30T13:00:35Z"
+      },
+      {
+        "objectID": "47501353",
+        "title": "Cortex – Local-first AI memory engine, beats Mem0 on LoCoMo, encrypted, free",
+        "url": "",
+        "points": 4,
+        "num_comments": 1,
+        "author": "gambletan",
+        "created_at": "2026-03-24T11:56:37Z"
+      },
+      {
+        "objectID": "46840181",
+        "title": "Memory-First AI Reminder Agents with Mem0 and Claude Agent SDK",
+        "url": "https://mem0.ai/blog/building-a-reminder-agent-that-actually-remembers",
+        "points": 3,
+        "num_comments": 0,
+        "author": "ninadwrites",
+        "created_at": "2026-01-31T19:58:30Z"
+      },
+      {
+        "objectID": "45734522",
+        "title": "Mem0 raises $24M to build the memory layer for AI apps",
+        "url": "https://techcrunch.com/2025/10/28/mem0-raises-24m-from-yc-peak-xv-and-basis-set-to-build-the-memory-layer-for-ai-apps/",
+        "points": 2,
+        "num_comments": 1,
+        "author": "anshulbhide",
+        "created_at": "2025-10-28T15:55:54Z"
+      },
+      {
+        "objectID": "41770451",
+        "title": "Ask HN: What are some of the alternatives of Mem0",
+        "url": "",
+        "points": 2,
+        "num_comments": 1,
+        "author": "nikasakana",
+        "created_at": "2024-10-07T20:11:05Z"
+      },
+      {
+        "objectID": "47153987",
+        "title": "Show HN: Engram – Open-source agent memory that beats Mem0 by 20% on LOCOMO",
+        "url": "https://www.engram.fyi/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "tstockham",
+        "created_at": "2026-02-25T16:43:08Z"
+      },
+      {
+        "objectID": "46123550",
+        "title": "Show HN: VAC Memory – 80.1% LoCoMo accuracy vs. Mem0's 68%",
+        "url": "https://github.com/vac-architector/VAC-Memory-System/wiki",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ViktorKuz",
+        "created_at": "2025-12-02T17:11:33Z"
+      },
+      {
+        "objectID": "43909538",
+        "title": "Lies, Damn Lies, & Statistics: Is Mem0 SOTA in Agent Memory?",
+        "url": "https://blog.getzep.com/lies-damn-lies-statistics-is-mem0-really-sota-in-agent-memory/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "amrrs",
+        "created_at": "2025-05-06T20:54:43Z"
+      },
+      {
+        "objectID": "41463913",
+        "title": "Show HN: Unofficial Dockerized mem0ai rest API server",
+        "url": "https://github.com/Airstrip-AI/mem0-rest",
+        "points": 2,
+        "num_comments": 0,
+        "author": "hchua",
+        "created_at": "2024-09-06T07:45:59Z"
+      },
+      {
+        "objectID": "41134775",
+        "title": "Mem0: The Memory Layer for Personalized AI",
+        "url": "https://github.com/mem0ai/mem0",
+        "points": 2,
+        "num_comments": 0,
+        "author": "mnoorfawi",
+        "created_at": "2024-08-01T23:36:15Z"
+      },
+      {
+        "objectID": "46911278",
+        "title": "Do agents need visual memory? Not Mem0/Supermemory",
+        "url": "",
+        "points": 1,
+        "num_comments": 1,
+        "author": "prabhavsanga",
+        "created_at": "2026-02-06T10:44:12Z"
+      },
+      {
+        "objectID": "47553405",
+        "title": "Forensic beats Mem0 with 90.1% on LOCOMO",
+        "url": "https://forensicmemory.com/proof.html",
+        "points": 1,
+        "num_comments": 0,
+        "author": "strobo",
+        "created_at": "2026-03-28T10:50:37Z"
+      },
+      {
+        "objectID": "46884209",
+        "title": "Long-term memory for OpenClaw agents with the mem0/OpenClaw-mem0 plugin",
+        "url": "https://docs.mem0.ai/integrations/openclaw",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ninadwrites",
+        "created_at": "2026-02-04T10:48:53Z"
+      },
+      {
+        "objectID": "46364699",
+        "title": "Show HN: Persistent memory for Claude Code using Mem0",
+        "url": "https://github.com/0xtechdean/claude-code-mem0",
+        "points": 1,
+        "num_comments": 0,
+        "author": "0xtechdean",
+        "created_at": "2025-12-23T12:16:57Z"
+      },
+      {
+        "objectID": "46004834",
+        "title": "Ask HN: Who is the main customer for Mem0/Supermemory, why they pay?",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ihsanf",
+        "created_at": "2025-11-21T14:16:04Z"
+      },
+      {
+        "objectID": "45994916",
+        "title": "Mem0 raises $24M from YC, Peak XV and Basis Set for a memory layer for AI apps",
+        "url": "https://techcrunch.com/2025/10/28/mem0-raises-24m-from-yc-peak-xv-and-basis-set-to-build-the-memory-layer-for-ai-apps/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "PaulHoule",
+        "created_at": "2025-11-20T17:09:41Z"
+      },
+      {
+        "objectID": "41187481",
+        "title": "Mem0: Three Prompts Created a Viral AI Memory Layer",
+        "url": "https://blog.lqhl.me/mem0-how-three-prompts-created-a-viral-ai-memory-layer",
+        "points": 1,
+        "num_comments": 0,
+        "author": "sqlvectordb",
+        "created_at": "2024-08-08T02:12:26Z"
+      },
+      {
+        "objectID": "44052766",
+        "title": "Launch HN: Sim Studio (YC X25) – Figma-like canvas for agent workflows",
+        "url": "",
+        "points": 55,
+        "num_comments": 32,
+        "author": "waleedlatif1",
+        "created_at": "2025-05-21T15:49:15Z"
+      },
+      {
+        "objectID": "42041368",
+        "title": "Show HN: AI Agents for engineering use cases like debugging, LLD,testing etc.",
+        "url": "https://github.com/potpie-ai/potpie",
+        "points": 26,
+        "num_comments": 14,
+        "author": "aditikothari",
+        "created_at": "2024-11-04T13:32:51Z"
+      },
+      {
+        "objectID": "41724550",
+        "title": "Show HN: Open-source library documentation for LLMs",
+        "url": "https://docs.codes/",
+        "points": 12,
+        "num_comments": 0,
+        "author": "rohansood15",
+        "created_at": "2024-10-02T20:09:23Z"
+      },
+      {
+        "objectID": "46511540",
+        "title": "Show HN: A file-based agent memory framework that works like skill",
+        "url": "https://github.com/NevaMind-AI/memU",
+        "points": 11,
+        "num_comments": 4,
+        "author": "Nicole9",
+        "created_at": "2026-01-06T12:43:39Z"
+      },
+      {
+        "objectID": "47053534",
+        "title": "Show HN: Persistent memory for Claude Code with self-hosted Qdrant and Ollama",
+        "url": "https://github.com/elvismdev/mem0-mcp-selfhosted",
+        "points": 8,
+        "num_comments": 0,
+        "author": "elvismdev",
+        "created_at": "2026-02-17T21:21:25Z"
+      },
+      {
+        "objectID": "43974991",
+        "title": "Show HN: OpenMemory – Make your MCP clients more context-aware",
+        "url": "https://github.com/mem0ai/mem0/tree/main/openmemory",
+        "points": 8,
+        "num_comments": 0,
+        "author": "staranjeet",
+        "created_at": "2025-05-13T16:52:00Z"
+      },
+      {
+        "objectID": "47070584",
+        "title": "Sayou – Open-source Dropbox for AI agents",
+        "url": "",
+        "points": 6,
+        "num_comments": 4,
+        "author": "syumpx",
+        "created_at": "2026-02-19T06:31:51Z"
+      },
+      {
+        "objectID": "46259498",
+        "title": "Show HN: AMP – open-source memory server for AI agents (MCP, SQLite, D3.js)",
+        "url": "https://github.com/akshayaggarwal99/amp",
+        "points": 5,
+        "num_comments": 1,
+        "author": "akshayaggarwal",
+        "created_at": "2025-12-14T00:04:16Z"
+      },
+      {
+        "objectID": "41556942",
+        "title": "Show HN: Open-source platform to build internal AI agents",
+        "url": "https://airstrip.pro/",
+        "points": 5,
+        "num_comments": 1,
+        "author": "hchua",
+        "created_at": "2024-09-16T15:18:19Z"
+      },
+      {
+        "objectID": "47260077",
+        "title": "Show HN: Mnemora – Serverless memory DB for AI agents (no LLM in your CRUD path)",
+        "url": "https://github.com/mnemora-db/mnemora",
+        "points": 4,
+        "num_comments": 4,
+        "author": "isaacgbc",
+        "created_at": "2026-03-05T10:41:27Z"
+      },
+      {
+        "objectID": "44912780",
+        "title": "Show HN: I love ChatGPT Memory, so I built one",
+        "url": "https://github.com/memodb-io/memobase",
+        "points": 4,
+        "num_comments": 0,
+        "author": "gusye",
+        "created_at": "2025-08-15T14:21:17Z"
+      },
+      {
+        "objectID": "47008274",
+        "title": "Show HN: Engram – Persistent memory for AI agents, local-first and open source",
+        "url": "https://engram-ai.dev",
+        "points": 3,
+        "num_comments": 0,
+        "author": "L3nnox_Cc",
+        "created_at": "2026-02-13T21:46:53Z"
+      },
+      {
+        "objectID": "46053464",
+        "title": "80.1 % on LoCoMo Long-Term Memory Benchmark with a pure open-source RAG pipeline",
+        "url": "",
+        "points": 3,
+        "num_comments": 0,
+        "author": "ViktorKuz",
+        "created_at": "2025-11-26T02:17:05Z"
+      },
+      {
+        "objectID": "47116615",
+        "title": "Show HN: Engram – Persistent memory for AI coding agents (open source)",
+        "url": "https://github.com/tstockham96/engram",
+        "points": 2,
+        "num_comments": 3,
+        "author": "tstockham",
+        "created_at": "2026-02-23T00:50:01Z"
+      },
+      {
+        "objectID": "46395730",
+        "title": "Show HN: AceIQ360 – First AI memory system to achieve 100% on LongMemEval",
+        "url": "",
+        "points": 2,
+        "num_comments": 3,
+        "author": "maheshvaikri99",
+        "created_at": "2025-12-26T20:14:12Z"
+      },
+      {
+        "objectID": "47912675",
+        "title": "Show HN: I replaced a memory app with two Markdown files and a Git repo",
+        "url": "",
+        "points": 2,
+        "num_comments": 1,
+        "author": "achiles",
+        "created_at": "2026-04-26T18:37:59Z"
+      },
+      {
+        "objectID": "47999377",
+        "title": "Show HN: Local semantic memory for coding agents",
+        "url": "https://github.com/Chadi00/thr",
+        "points": 2,
+        "num_comments": 0,
+        "author": "chadiiek",
+        "created_at": "2026-05-03T17:37:48Z"
+      },
+      {
+        "objectID": "47365521",
+        "title": "Show HN: Grab – A declarative stream processor for delimited text data",
+        "url": "https://github.com/anwitars/grab",
+        "points": 2,
+        "num_comments": 0,
+        "author": "anwitars",
+        "created_at": "2026-03-13T15:09:03Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,547 @@
+{
+  "project": "Memvid",
+  "repo": "memvid/memvid",
+  "collected_at": "2026-05-22T11:00:35.465122+00:00",
+  "queries": [
+    "Memvid",
+    "memvid"
+  ],
+  "total_hits": 59,
+  "results": {
+    "Memvid": [
+      {
+        "objectID": "44134122",
+        "title": "Memvid – Video-Based AI Memory",
+        "url": "https://github.com/Olow304/memvid",
+        "points": 9,
+        "num_comments": 3,
+        "author": "sunbum",
+        "created_at": "2025-05-30T08:24:01Z"
+      },
+      {
+        "objectID": "46502628",
+        "title": "Show HN: I accidentally built \"SQLite for AI memory\" (Memvid)",
+        "url": "https://github.com/memvid/memvid",
+        "points": 3,
+        "num_comments": 2,
+        "author": "salebanolow",
+        "created_at": "2026-01-05T18:27:29Z"
+      },
+      {
+        "objectID": "45388602",
+        "title": "MemVid – The living-memory engine for AI",
+        "url": "https://www.memvid.com/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ulrischa",
+        "created_at": "2025-09-26T16:54:11Z"
+      },
+      {
+        "objectID": "44125598",
+        "title": "Show HN: I compressed 10k PDFs into a 1.4GB video for LLM memory",
+        "url": "https://github.com/Olow304/memvid",
+        "points": 61,
+        "num_comments": 23,
+        "author": "saleban1031",
+        "created_at": "2025-05-29T12:54:01Z"
+      },
+      {
+        "objectID": "46739459",
+        "title": "Show HN: I built a CLI to search screenshots by what's in them",
+        "url": "https://github.com/memvid/screenshot-memory",
+        "points": 2,
+        "num_comments": 0,
+        "author": "saleban1031",
+        "created_at": "2026-01-23T23:38:39Z"
+      },
+      {
+        "objectID": "46507620",
+        "title": "Show HN: Single-file memory for Claude Code",
+        "url": "https://github.com/memvid/claude-brain",
+        "points": 2,
+        "num_comments": 0,
+        "author": "salebanolow",
+        "created_at": "2026-01-06T01:22:16Z"
+      },
+      {
+        "objectID": "44403785",
+        "title": "Ragged – Leveraging Video Container Formats for Efficient Vector DB Distribution",
+        "url": "",
+        "points": 2,
+        "num_comments": 0,
+        "author": "loaderchips",
+        "created_at": "2025-06-28T11:02:33Z"
+      },
+      {
+        "objectID": "47825158",
+        "title": "Claude Brain",
+        "url": "https://github.com/memvid/claude-brain",
+        "points": 33,
+        "num_comments": 25,
+        "author": "DeathArrow",
+        "created_at": "2026-04-19T15:48:13Z"
+      },
+      {
+        "objectID": "44123033",
+        "title": "I accidentally built a vector database using video compression",
+        "url": "https://github.com/Olow304/memvid",
+        "points": 15,
+        "num_comments": 3,
+        "author": "saleban1031",
+        "created_at": "2025-05-29T04:07:42Z"
+      },
+      {
+        "objectID": "45253257",
+        "title": "Is This a Scam Project?",
+        "url": "https://github.com/Olow304/memvid/issues/28",
+        "points": 3,
+        "num_comments": 2,
+        "author": "fenced_load",
+        "created_at": "2025-09-15T18:27:35Z"
+      },
+      {
+        "objectID": "47460709",
+        "title": "Get Paid to Bully AI",
+        "url": "https://memvid.com/ai-bully-job",
+        "points": 2,
+        "num_comments": 0,
+        "author": "herbertl",
+        "created_at": "2026-03-20T21:18:38Z"
+      },
+      {
+        "objectID": "47069410",
+        "title": "Design-memory: Extract and reproduce design systems from any website",
+        "url": "https://github.com/memvid/design-memory",
+        "points": 2,
+        "num_comments": 0,
+        "author": "simonpure",
+        "created_at": "2026-02-19T03:07:46Z"
+      },
+      {
+        "objectID": "47459679",
+        "title": "Startup Will Pay You $100 an Hour to 'Bully' AI",
+        "url": "https://www.entrepreneur.com/business-news/memvid-is-paying-100-an-hour-to-bully-ai",
+        "points": 1,
+        "num_comments": 0,
+        "author": "paulpauper",
+        "created_at": "2026-03-20T19:49:32Z"
+      },
+      {
+        "objectID": "47026620",
+        "title": "Show HN: Design Memory – Extract design systems from live websites via CLI",
+        "url": "https://github.com/memvid/design-memory",
+        "points": 1,
+        "num_comments": 0,
+        "author": "saleban1031",
+        "created_at": "2026-02-15T19:27:33Z"
+      },
+      {
+        "objectID": "44922018",
+        "title": "Show HN: MemViz – a modern C++ memory visualization tool",
+        "url": "https://github.com/LA-10/MemViz",
+        "points": 3,
+        "num_comments": 0,
+        "author": "LA-10",
+        "created_at": "2025-08-16T10:34:30Z"
+      },
+      {
+        "objectID": "18178087",
+        "title": "Memidex",
+        "url": "http://www.memidex.com/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "niceperson",
+        "created_at": "2018-10-09T17:41:08Z"
+      },
+      {
+        "objectID": "46044010",
+        "title": "Breaking AI Context Silos: A Proposal for a Portable Memory Protocol (PMX)",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "sravanth_thota",
+        "created_at": "2025-11-25T09:24:05Z"
+      },
+      {
+        "objectID": "2478680",
+        "title": "HN: A colorless explosive liquid that is volatile, poisonous, and foul-smelling",
+        "url": "http://www.memidex.com/hn+chemistry",
+        "points": 11,
+        "num_comments": 3,
+        "author": "gbog",
+        "created_at": "2011-04-24T11:24:28Z"
+      },
+      {
+        "objectID": "42471055",
+        "title": "Memory visualizer of C programs: show stack/heap variables and their relations",
+        "url": "https://marketplace.visualstudio.com/items?itemName=jakub-beranek.memviz",
+        "points": 3,
+        "num_comments": 0,
+        "author": "ingve",
+        "created_at": "2024-12-20T13:53:43Z"
+      },
+      {
+        "objectID": "16637343",
+        "title": "Why a battle tested messaging solution is a key to your commercial success",
+        "url": "https://www.erlang-solutions.com/products/mongooseim.html#mimvideo",
+        "points": 1,
+        "num_comments": 0,
+        "author": "wiolet",
+        "created_at": "2018-03-21T12:14:52Z"
+      },
+      {
+        "objectID": "2631134",
+        "title": "Free Alternative for DNS (everydns acquired by dyndns)",
+        "url": "",
+        "points": 4,
+        "num_comments": 2,
+        "author": "memoids",
+        "created_at": "2011-06-07T22:15:28Z"
+      },
+      {
+        "objectID": "2690787",
+        "title": "Human Genome Contaminated With Mycoplasma DNA",
+        "url": "http://www.technologyreview.com/blog/arxiv/26921/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "memoids",
+        "created_at": "2011-06-24T02:56:59Z"
+      },
+      {
+        "objectID": "2599079",
+        "title": "Time Lapse Video of the Very Large Telescope",
+        "url": "http://www.popsci.com/technology/article/2011-05/time-lapse-video-very-large-telescope-work-coolest-thing-youll-see-today",
+        "points": 2,
+        "num_comments": 0,
+        "author": "memoids",
+        "created_at": "2011-05-30T11:24:45Z"
+      },
+      {
+        "objectID": "2680850",
+        "title": "About lenguages strongly typed with late binding, do they make sense? ",
+        "url": "http://programmers.stackexchange.com/questions/85676/about-lenguages-strongly-typed-with-late-binding-do-they-make-sense",
+        "points": 1,
+        "num_comments": 1,
+        "author": "memoids",
+        "created_at": "2011-06-21T23:31:41Z"
+      },
+      {
+        "objectID": "2590116",
+        "title": "Tutorial running symfony project with dotcloud",
+        "url": "http://www.isnull.com.ar/2011/05/tutorial-running-symfony-project-under.html",
+        "points": 1,
+        "num_comments": 0,
+        "author": "memoids",
+        "created_at": "2011-05-27T01:34:44Z"
+      },
+      {
+        "objectID": "39896992",
+        "title": "Altimmune Announces Positive Lean Mass Preservation Data for Pemvidutide",
+        "url": "https://ir.altimmune.com/news-releases/news-release-details/altimmune-announces-positive-lean-mass-preservation-data",
+        "points": 2,
+        "num_comments": 1,
+        "author": "hnburnsy",
+        "created_at": "2024-04-01T17:56:04Z"
+      },
+      {
+        "objectID": "39901027",
+        "title": "What to Know About Pemvidutide– Weight Loss Drug Minimized Muscle Loss",
+        "url": "https://www.forbes.com/sites/tylerroush/2024/03/27/what-to-know-about-permvidutide-altimmune-says-weight-loss-drug-minimized-muscle-mass-loss-in-trial/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "paulpauper",
+        "created_at": "2024-04-02T00:22:55Z"
+      },
+      {
+        "objectID": "1333109",
+        "title": "Time Lapse Video of Construction of New MIT Media Lab",
+        "url": "http://www.media.mit.edu/emvideo/thickbox/4185/512/313/field_video_source/labcast/E14_dayinlife",
+        "points": 11,
+        "num_comments": 2,
+        "author": "J3L2404",
+        "created_at": "2010-05-10T00:05:44Z"
+      },
+      {
+        "objectID": "11259535",
+        "title": "Eagle Mode",
+        "url": "http://eaglemode.sourceforge.net/emvideo.html",
+        "points": 1,
+        "num_comments": 0,
+        "author": "wz1000",
+        "created_at": "2016-03-10T15:00:49Z"
+      }
+    ],
+    "memvid": [
+      {
+        "objectID": "44134122",
+        "title": "Memvid – Video-Based AI Memory",
+        "url": "https://github.com/Olow304/memvid",
+        "points": 9,
+        "num_comments": 3,
+        "author": "sunbum",
+        "created_at": "2025-05-30T08:24:01Z"
+      },
+      {
+        "objectID": "46502628",
+        "title": "Show HN: I accidentally built \"SQLite for AI memory\" (Memvid)",
+        "url": "https://github.com/memvid/memvid",
+        "points": 3,
+        "num_comments": 2,
+        "author": "salebanolow",
+        "created_at": "2026-01-05T18:27:29Z"
+      },
+      {
+        "objectID": "45388602",
+        "title": "MemVid – The living-memory engine for AI",
+        "url": "https://www.memvid.com/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ulrischa",
+        "created_at": "2025-09-26T16:54:11Z"
+      },
+      {
+        "objectID": "44125598",
+        "title": "Show HN: I compressed 10k PDFs into a 1.4GB video for LLM memory",
+        "url": "https://github.com/Olow304/memvid",
+        "points": 61,
+        "num_comments": 23,
+        "author": "saleban1031",
+        "created_at": "2025-05-29T12:54:01Z"
+      },
+      {
+        "objectID": "46739459",
+        "title": "Show HN: I built a CLI to search screenshots by what's in them",
+        "url": "https://github.com/memvid/screenshot-memory",
+        "points": 2,
+        "num_comments": 0,
+        "author": "saleban1031",
+        "created_at": "2026-01-23T23:38:39Z"
+      },
+      {
+        "objectID": "46507620",
+        "title": "Show HN: Single-file memory for Claude Code",
+        "url": "https://github.com/memvid/claude-brain",
+        "points": 2,
+        "num_comments": 0,
+        "author": "salebanolow",
+        "created_at": "2026-01-06T01:22:16Z"
+      },
+      {
+        "objectID": "44403785",
+        "title": "Ragged – Leveraging Video Container Formats for Efficient Vector DB Distribution",
+        "url": "",
+        "points": 2,
+        "num_comments": 0,
+        "author": "loaderchips",
+        "created_at": "2025-06-28T11:02:33Z"
+      },
+      {
+        "objectID": "47825158",
+        "title": "Claude Brain",
+        "url": "https://github.com/memvid/claude-brain",
+        "points": 33,
+        "num_comments": 25,
+        "author": "DeathArrow",
+        "created_at": "2026-04-19T15:48:13Z"
+      },
+      {
+        "objectID": "44123033",
+        "title": "I accidentally built a vector database using video compression",
+        "url": "https://github.com/Olow304/memvid",
+        "points": 15,
+        "num_comments": 3,
+        "author": "saleban1031",
+        "created_at": "2025-05-29T04:07:42Z"
+      },
+      {
+        "objectID": "45253257",
+        "title": "Is This a Scam Project?",
+        "url": "https://github.com/Olow304/memvid/issues/28",
+        "points": 3,
+        "num_comments": 2,
+        "author": "fenced_load",
+        "created_at": "2025-09-15T18:27:35Z"
+      },
+      {
+        "objectID": "47460709",
+        "title": "Get Paid to Bully AI",
+        "url": "https://memvid.com/ai-bully-job",
+        "points": 2,
+        "num_comments": 0,
+        "author": "herbertl",
+        "created_at": "2026-03-20T21:18:38Z"
+      },
+      {
+        "objectID": "47069410",
+        "title": "Design-memory: Extract and reproduce design systems from any website",
+        "url": "https://github.com/memvid/design-memory",
+        "points": 2,
+        "num_comments": 0,
+        "author": "simonpure",
+        "created_at": "2026-02-19T03:07:46Z"
+      },
+      {
+        "objectID": "47459679",
+        "title": "Startup Will Pay You $100 an Hour to 'Bully' AI",
+        "url": "https://www.entrepreneur.com/business-news/memvid-is-paying-100-an-hour-to-bully-ai",
+        "points": 1,
+        "num_comments": 0,
+        "author": "paulpauper",
+        "created_at": "2026-03-20T19:49:32Z"
+      },
+      {
+        "objectID": "47026620",
+        "title": "Show HN: Design Memory – Extract design systems from live websites via CLI",
+        "url": "https://github.com/memvid/design-memory",
+        "points": 1,
+        "num_comments": 0,
+        "author": "saleban1031",
+        "created_at": "2026-02-15T19:27:33Z"
+      },
+      {
+        "objectID": "44922018",
+        "title": "Show HN: MemViz – a modern C++ memory visualization tool",
+        "url": "https://github.com/LA-10/MemViz",
+        "points": 3,
+        "num_comments": 0,
+        "author": "LA-10",
+        "created_at": "2025-08-16T10:34:30Z"
+      },
+      {
+        "objectID": "18178087",
+        "title": "Memidex",
+        "url": "http://www.memidex.com/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "niceperson",
+        "created_at": "2018-10-09T17:41:08Z"
+      },
+      {
+        "objectID": "46044010",
+        "title": "Breaking AI Context Silos: A Proposal for a Portable Memory Protocol (PMX)",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "sravanth_thota",
+        "created_at": "2025-11-25T09:24:05Z"
+      },
+      {
+        "objectID": "2478680",
+        "title": "HN: A colorless explosive liquid that is volatile, poisonous, and foul-smelling",
+        "url": "http://www.memidex.com/hn+chemistry",
+        "points": 11,
+        "num_comments": 3,
+        "author": "gbog",
+        "created_at": "2011-04-24T11:24:28Z"
+      },
+      {
+        "objectID": "42471055",
+        "title": "Memory visualizer of C programs: show stack/heap variables and their relations",
+        "url": "https://marketplace.visualstudio.com/items?itemName=jakub-beranek.memviz",
+        "points": 3,
+        "num_comments": 0,
+        "author": "ingve",
+        "created_at": "2024-12-20T13:53:43Z"
+      },
+      {
+        "objectID": "16637343",
+        "title": "Why a battle tested messaging solution is a key to your commercial success",
+        "url": "https://www.erlang-solutions.com/products/mongooseim.html#mimvideo",
+        "points": 1,
+        "num_comments": 0,
+        "author": "wiolet",
+        "created_at": "2018-03-21T12:14:52Z"
+      },
+      {
+        "objectID": "2631134",
+        "title": "Free Alternative for DNS (everydns acquired by dyndns)",
+        "url": "",
+        "points": 4,
+        "num_comments": 2,
+        "author": "memoids",
+        "created_at": "2011-06-07T22:15:28Z"
+      },
+      {
+        "objectID": "2690787",
+        "title": "Human Genome Contaminated With Mycoplasma DNA",
+        "url": "http://www.technologyreview.com/blog/arxiv/26921/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "memoids",
+        "created_at": "2011-06-24T02:56:59Z"
+      },
+      {
+        "objectID": "2599079",
+        "title": "Time Lapse Video of the Very Large Telescope",
+        "url": "http://www.popsci.com/technology/article/2011-05/time-lapse-video-very-large-telescope-work-coolest-thing-youll-see-today",
+        "points": 2,
+        "num_comments": 0,
+        "author": "memoids",
+        "created_at": "2011-05-30T11:24:45Z"
+      },
+      {
+        "objectID": "2680850",
+        "title": "About lenguages strongly typed with late binding, do they make sense? ",
+        "url": "http://programmers.stackexchange.com/questions/85676/about-lenguages-strongly-typed-with-late-binding-do-they-make-sense",
+        "points": 1,
+        "num_comments": 1,
+        "author": "memoids",
+        "created_at": "2011-06-21T23:31:41Z"
+      },
+      {
+        "objectID": "2590116",
+        "title": "Tutorial running symfony project with dotcloud",
+        "url": "http://www.isnull.com.ar/2011/05/tutorial-running-symfony-project-under.html",
+        "points": 1,
+        "num_comments": 0,
+        "author": "memoids",
+        "created_at": "2011-05-27T01:34:44Z"
+      },
+      {
+        "objectID": "39896992",
+        "title": "Altimmune Announces Positive Lean Mass Preservation Data for Pemvidutide",
+        "url": "https://ir.altimmune.com/news-releases/news-release-details/altimmune-announces-positive-lean-mass-preservation-data",
+        "points": 2,
+        "num_comments": 1,
+        "author": "hnburnsy",
+        "created_at": "2024-04-01T17:56:04Z"
+      },
+      {
+        "objectID": "39901027",
+        "title": "What to Know About Pemvidutide– Weight Loss Drug Minimized Muscle Loss",
+        "url": "https://www.forbes.com/sites/tylerroush/2024/03/27/what-to-know-about-permvidutide-altimmune-says-weight-loss-drug-minimized-muscle-mass-loss-in-trial/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "paulpauper",
+        "created_at": "2024-04-02T00:22:55Z"
+      },
+      {
+        "objectID": "1333109",
+        "title": "Time Lapse Video of Construction of New MIT Media Lab",
+        "url": "http://www.media.mit.edu/emvideo/thickbox/4185/512/313/field_video_source/labcast/E14_dayinlife",
+        "points": 11,
+        "num_comments": 2,
+        "author": "J3L2404",
+        "created_at": "2010-05-10T00:05:44Z"
+      },
+      {
+        "objectID": "21846396",
+        "title": "Eagle Mode Zoomable GUI [video]",
+        "url": "http://eaglemode.sourceforge.net/emvideo.html",
+        "points": 2,
+        "num_comments": 0,
+        "author": "juancampa",
+        "created_at": "2019-12-20T18:37:27Z"
+      },
+      {
+        "objectID": "11259535",
+        "title": "Eagle Mode",
+        "url": "http://eaglemode.sourceforge.net/emvideo.html",
+        "points": 1,
+        "num_comments": 0,
+        "author": "wz1000",
+        "created_at": "2016-03-10T15:00:49Z"
+      }
+    ]
+  }
+}

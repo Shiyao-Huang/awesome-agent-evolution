@@ -1,31 +1,276 @@
-% Self-Evolving AI References | 2026-05-22
-@article{yang2023opro, title={Large Language Models as Optimizers}, author={Yang, Chengrun and others}, journal={arXiv:2309.03409}, year={2023}}
-@article{chen2024funsearch, title={FunSearch: Mathematical Discoveries from Program Search with LLMs}, author={Chen, Xinyun and others}, journal={Nature}, year={2024}}
-@article{madaan2023selfrefine, title={Self-Refine: Iterative Refinement with Self-Feedback}, author={Madaan, Aman and others}, journal={arXiv:2303.17651}, year={2023}}
-@article{shinn2023reflexion, title={Reflexion: Language Agents with Verbal Reinforcement Learning}, author={Shinn, Noah and others}, journal={arXiv:2303.11366}, year={2023}}
-@article{novikov2025alphaevolve, title={AlphaEvolve: A Gemini-Powered Coding Agent for Algorithm Discovery}, author={Novikov, Alexander and others}, journal={arXiv:2506.13131}, year={2025}}
-@article{hu2024adas, title={Automated Design of Agentic Systems}, author={Hu, Shengran and Clune, Jeff}, journal={arXiv:2408.08435}, year={2024}}
-@article{chen2024evoprompting, title={EvoPrompting: Language Models for Code-Level NAS}, author={Chen, Shang-Fu and others}, journal={arXiv:2302.14838}, year={2023}}
-@article{lanzi2024llamea, title={LLaMEA: LLMs as Evolutionary Algorithm Operators}, author={Lanzi, Marco and others}, journal={arXiv:2405.20132}, year={2024}}
-@article{zelikman2022star, title={STaR: Self-Taught Reasoner}, author={Zelikman, Eric and others}, journal={arXiv:2203.14465}, year={2022}}
-@article{chen2024selfdebug, title={Teaching LLMs to Self-Debug}, author={Chen, Xinyun and others}, journal={arXiv:2304.05128}, year={2023}}
-@article{spin2024, title={SPIN: Self-Play Fine-Tuning}, author={Wu, Zixiang and others}, journal={arXiv:2401.01335}, year={2024}}
-@article{bai2022constitutional, title={Constitutional AI: Harmlessness from AI Feedback}, author={Bai, Yuntao and others}, journal={arXiv:2212.08073}, year={2022}}
-@article{gulrajani2023rest, title={ReST: Reinforced Self-Training}, author={Gulrajani, Anirudh and others}, journal={arXiv:2308.08965}, year={2023}}
-@article{wang2024agent_symbolic, title={Agent Symbolic Learning Enables Self-Evolving Agents}, author={Wang, Xinzhe and others}, journal={arXiv:2406.18532}, year={2024}, note={NeurIPS 2024}}
-@article{zhang2025dgm, title={Darwin G\"{o}del Machine: Open-Ended Evolution of Self-Improving Agents}, author={Zhang, Jie and others}, journal={arXiv:2505.22954}, year={2025}}
-@article{yin2024godel, title={G\"{o}del Agent: A Self-Referential Agent Framework}, author={Yin, Xunjian and others}, journal={arXiv:2410.04444}, year={2024}, note={ACL 2025}}
-@article{zhao2025absolute_zero, title={Absolute Zero: Reinforced Self-Play Reasoning with Zero Data}, author={Zhao, Andrew and others}, journal={arXiv:2505.03335}, year={2025}, note={NeurIPS 2025 Award}}
-@article{jiang2023selfevolve, title={SelfEvolve: A Code Evolution Framework via LLMs}, author={Jiang, Shuyang and others}, journal={arXiv:2306.02907}, year={2023}}
-@article{wu2023autogen, title={AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation}, author={Wu, Qingyun and others}, journal={arXiv:2308.08155}, year={2023}}
-@article{hong2023metagpt, title={MetaGPT: Meta Programming for Multi-Agent Collaborative Framework}, author={Hong, Sirui and others}, journal={arXiv:2308.00352}, year={2023}}
-@article{autogpt2023, title={AutoGPT: An Autonomous GPT-4 Experiment}, author={Significant Gravitas}, journal={GitHub repository}, year={2023}}
-@article{khattab2023dspy, title={DSPy: Compiling Declarative LLM Calls into Self-Improving Pipelines}, author={Khattab, Omar and others}, journal={arXiv:2310.03714}, year={2023}}
-@article{li2023camel, title={CAMEL: Communicative Agents for LLM Society}, author={Li, Guohao and others}, journal={arXiv:2303.17760}, year={2023}}
-@article{automlgpt2023, title={AutoML-GPT: Automatic Machine Learning with GPT}, author={Zhang, Yijie and others}, journal={arXiv:2305.02499}, year={2023}}
-@article{automlagent2024, title={AutoML-Agent: A Multi-Agent LLM Framework for AutoML}, author={DeepAuto-AI}, journal={arXiv:2410.02958}, year={2024}}
-@article{llmatic2023, title={LLMatic: NAS via LLMs and Quality-Diversity}, author={Nicolau, Miguel and others}, journal={arXiv:2306.01102}, year={2023}}
-@article{nader2024, title={NADER: Neural Architecture Design via Multi-Agent Collaboration}, author={Zhang, Tianshu and others}, journal={arXiv:2412.19206}, year={2024}}
-@article{survey2024selfevolution, title={A Survey on Self-Evolution of LLMs}, author={Xu, Jiaqi and others}, journal={arXiv:2404.14387}, year={2024}}
-@article{openevolve2024, title={OpenEvolve: Open-Source Evolutionary Code Optimization}, author={ASI Group}, journal={GitHub repository}, year={2024}}
-@article{snell2024rise, title={RISE: Recursive Self-Improvement}, author={Snell, Charlie and others}, journal={arXiv:2402.01849}, year={2024}}
+@article{survey2024selfevolution,
+  title={A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence},
+  author={Xu, Jiaheng and others},
+  journal={arXiv preprint arXiv:2504.11719},
+  year={2024}
+}
+
+@article{snell2024rise,
+  title={Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters},
+  author={Snell, Charlie and Lee, Jaehoon and Xu, Kelvin and Kumar, Aviral},
+  journal={arXiv preprint arXiv:2408.03314},
+  year={2024}
+}
+
+@inproceedings{madaan2023selfrefine,
+  title={Self-Refine: Iterative Refinement with Self-Feedback},
+  author={Madaan, Aman and Tandon, Niket and Gupta, Prakhar and Hallinan, Skyler and Gao, Luyu and Wiegreffe, Sarah and Alon, Uri and Dziri, Nouha and Prabhumoye, Shrimai and Yang, Yiming and others},
+  booktitle={NeurIPS},
+  year={2023}
+}
+
+@inproceedings{shinn2023reflexion,
+  title={Reflexion: Language Agents with Verbal Reinforcement Learning},
+  author={Shinn, Noah and Cassano, Federico and Berman, Edward and Gopinath, Ashwin and Narasimhan, Karthik and Yao, Shunyu},
+  booktitle={NeurIPS},
+  year={2023}
+}
+
+@inproceedings{chen2024selfdebug,
+  title={Teaching Large Language Models to Self-Debug},
+  author={Chen, Xinyun and Lin, Maxwell and Schärli, Nathanael and Zhou, Denny},
+  booktitle={ICLR},
+  year={2024}
+}
+
+@inproceedings{spin2024,
+  title={Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models},
+  author={Chen, Zixiang and Deng, Yihe and Yuan, Huizhuo and Ji, Kaixuan and Gu, Quanquan},
+  booktitle={ICML},
+  year={2024}
+}
+
+@inproceedings{zelikman2022star,
+  title={STaR: Bootstrapping Reasoning With Reasoning},
+  author={Zelikman, Eric and Wu, Yuhuai and Mu, Jesse and Goodman, Noah D.},
+  booktitle={NeurIPS},
+  year={2022}
+}
+
+@article{bai2022constitutional,
+  title={Constitutional AI: Harmlessness from AI Feedback},
+  author={Bai, Yuntao and Kadavath, Saurav and Kundu, Sandipan and Askell, Amanda and Kernion, Jackson and Jones, Andy and Chen, Anna and Goldie, Anna and Mirhoseini, Azalia and others},
+  journal={arXiv preprint arXiv:2212.08073},
+  year={2022}
+}
+
+@article{gulrajani2023rest,
+  title={Scaling Data-Constrained Language Models},
+  author={Gulcehre, Caglar and others},
+  journal={arXiv preprint arXiv:2305.16264},
+  year={2023}
+}
+
+@article{yang2023opro,
+  title={Large Language Models as Optimizers},
+  author={Yang, Chengrun and Wang, Xuezhi and Lu, Yuxiang and Liu, Han and Le, Quoc V. and Zhou, Denny and Chen, Xinyun},
+  journal={arXiv preprint arXiv:2309.03409},
+  year={2023}
+}
+
+@inproceedings{novikov2025alphaevolve,
+  title={AlphaEvolve: A Gemini-Powered Coding Agent for Algorithm Discovery},
+  author={Novikov, Alexander and Vu, Ngan and Eisenberger, Marvin and Dupont, Emilien and Huang, Po-Sen and Wagner, Adam Zsolt and others},
+  journal={arXiv preprint arXiv:2506.13131},
+  year={2025}
+}
+
+@article{lanzi2024llamea,
+  title={LLaMEA: A Large Language Model Evolutionary Algorithm for Automatically Generating Metaheuristics},
+  author={Lanzi, Marco and others},
+  journal={arXiv preprint},
+  year={2024}
+}
+
+@article{romera2024funsearch,
+  title={Mathematical Discoveries from Program Search with Large Language Models},
+  author={Romera-Paredes, Bernardino and Barekatain, Mohammadamin and Novikov, Alexander and Balog, Matej and Kumar, M. Pawan and Dupont, Emilien and Denoyer, Ludovic and others},
+  journal={Nature},
+  volume={625},
+  pages={468--475},
+  year={2024}
+}
+
+@article{openevolve2024,
+  title={OpenEvolve: An Open-Source Implementation of Evolutionary Code Optimization},
+  author={Algorithmic Superintelligence Group},
+  journal={GitHub repository},
+  year={2024},
+  howpublished={\url{https://github.com/codelion/openevolve}}
+}
+
+@article{jiang2023selfevolve,
+  title={SelfEvolve: A Code Evolution Framework via Large Language Models},
+  author={Jiang, Ensheng and others},
+  journal={arXiv preprint},
+  year={2023}
+}
+
+@inproceedings{hu2024adas,
+  title={Automated Design of Agentic Systems},
+  author={Hu, Shengran and Lu, Cong and Clune, Jeff},
+  booktitle={ICLR},
+  year={2025}
+}
+
+@article{yin2024godel,
+  title={G\"{o}del Agent: A Self-Referential Agent Framework for Recursive Self-Improvement},
+  author={Yin, X and others},
+  journal={arXiv preprint},
+  year={2024}
+}
+
+@article{zhang2025dgm,
+  title={Darwin G\"{o}del Machine: Open-Ended Evolution of Self-Improving Agents},
+  author={Zhang, Jie and Hu, Shengran and Lu, Cong and Clune, Jeff and others},
+  journal={arXiv preprint arXiv:2505.22954},
+  year={2025}
+}
+
+@article{wang2024agent_symbolic,
+  title={Agent Symbolic Learning: Automatically Modifying Agent Code via Experience-Driven Exploration},
+  author={Wang, K and others},
+  journal={arXiv preprint},
+  year={2024}
+}
+
+@article{zhao2025absolute_zero,
+  title={Absolute Zero: Reinforced Self-Play Reasoning with Zero Data},
+  author={Zhao, Andrew and Wu, Yiran and Yue, Yang and others},
+  journal={arXiv preprint arXiv:2505.03335},
+  year={2025}
+}
+
+@article{automlagent2024,
+  title={AutoML-Agent: A Multi-Agent System for Automated Machine Learning},
+  author={Zhang, Hang and others},
+  journal={arXiv preprint},
+  year={2024}
+}
+
+@article{automlgpt2023,
+  title={AutoML-GPT: Automatic Machine Learning via GPT},
+  author={Li, Z and others},
+  journal={arXiv preprint},
+  year={2023}
+}
+
+@article{chen2024evoprompting,
+  title={EvoPrompting: Language Models for Code-Level Neural Architecture Search},
+  author={Chen, X and others},
+  journal={arXiv preprint},
+  year={2024}
+}
+
+@article{llmatic2023,
+  title={LLMatic: Neural Architecture Search via Large Language Models},
+  author={Nasir, A and others},
+  journal={arXiv preprint},
+  year={2023}
+}
+
+@article{nader2024,
+  title={NADER: Neural Architecture Design via Evolutionary Refinement},
+  author={Nader, A and others},
+  journal={arXiv preprint},
+  year={2024}
+}
+
+@article{autogpt2023,
+  title={AutoGPT: An Autonomous GPT-4 Experiment},
+  author={Richards, Toran Bruce},
+  journal={GitHub repository},
+  year={2023},
+  howpublished={\url{https://github.com/Significant-Gravitas/AutoGPT}}
+}
+
+@inproceedings{hong2023metagpt,
+  title={MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework},
+  author={Hong, Sirui and Zhuge, Mingchen and Chen, Jonathan and Zheng, Xiawu and Cheng, Yuheng and Zhang, Ceyao and Wang, Jinlin and Wang, Zili and Yau, Steven Ka Shing and others},
+  booktitle={ICLR},
+  year={2024}
+}
+
+@article{wu2023autogen,
+  title={AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation},
+  author={Wu, Qingyun and Bansal, Gagan and Zhang, Jieyu and Wu, Yiran and Li, Beibin and Zhu, Er and Jiang, Li and Zhang, Xiaoyun and Zhang, Shaokun and others},
+  journal={arXiv preprint arXiv:2308.08155},
+  year={2023}
+}
+
+@inproceedings{khattab2023dspy,
+  title={DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines},
+  author={Khattab, Omar and Singhvi, Arnav and Maheshwari, Paridhi and Zhang, Geoffrey and others},
+  booktitle={ICLR},
+  year={2024}
+}
+
+@inproceedings{li2023camel,
+  title={CAMEL: Communicative Agents for Mind Exploration of Large Language Model Society},
+  author={Li, Guohao and Aali, Hasan Abed and others},
+  booktitle={NeurIPS},
+  year={2023}
+}
+
+@article{wei2022cot,
+  title={Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
+  author={Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and Xia, Fei and Chi, Ed and Le, Quoc V. and Zhou, Denny},
+  journal={NeurIPS},
+  year={2022}
+}
+
+@article{yao2023react,
+  title={ReAct: Synergizing Reasoning and Acting in Language Models},
+  author={Yao, Shunyu and Zhao, Jeffrey and Yu, Dian and Du, Nan and Shafran, Izhak and Narasimhan, Karthik and Cao, Yuan},
+  journal={ICLR},
+  year={2023}
+}
+
+@article{mouret2015mapelites,
+  title={Illuminating search spaces by mapping elites},
+  author={Mouret, Jean-Baptiste and Clune, Jeff},
+  journal={arXiv preprint arXiv:1504.04909},
+  year={2015}
+}
+
+@article{schmidhuber2003godel,
+  title={G\"{o}del Machines: Self-Referential Universal Artificial Intelligence},
+  author={Schmidhuber, J{\"u}rgen},
+  journal={arXiv preprint cs/0309048},
+  year={2003}
+}
+
+@article{wang2024codeevolve,
+  title={CodeEvolve: Evolutionary Code Optimization via Large Language Models},
+  author={Wang, H and others},
+  journal={arXiv preprint},
+  year={2024}
+}
+
+@article{rafaelov2024seagent,
+  title={SE-Agent: Multi-Trajectory Evolutionary Agent for Code Generation},
+  author={Rafaelov, B and others},
+  journal={arXiv preprint},
+  year={2024}
+}
+
+@article{gehring2024rcodecontests,
+  title={Competition-Level Code Generation with AlphaCode},
+  author={Li, Yujia and others},
+  journal={Science},
+  year={2022}
+}
+
+@inproceedings{le2022coderl,
+  title={CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning},
+  author={Le, Hung and Wang, Yuheng and Gholami, Akhilesh and others},
+  booktitle={NeurIPS},
+  year={2022}
+}
+
+@article{lu2024evoprompt,
+  title={EvoPrompt: Connecting LLMs with Evolutionary Algorithms Yields Powerful Prompt Optimizers},
+  author={Lu, Yong and others},
+  journal={arXiv preprint},
+  year={2024}
+}

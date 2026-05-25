@@ -1,0 +1,374 @@
+{
+  "project": "goose",
+  "repo": "block/goose",
+  "collected_at": "2026-05-22T11:02:51.664463+00:00",
+  "queries": [
+    "goose",
+    "goose"
+  ],
+  "total_hits": 40,
+  "results": {
+    "goose": [
+      {
+        "objectID": "21388022",
+        "title": "How Untitled Goose Game became a real video game",
+        "url": "https://www.vox.com/culture/2019/10/10/20897212/what-is-untitled-goose-game-explained-nintendo-switch-pc-mac",
+        "points": 380,
+        "num_comments": 167,
+        "author": "hhs",
+        "created_at": "2019-10-29T15:11:11Z"
+      },
+      {
+        "objectID": "42879323",
+        "title": "Goose: An open-source, extensible AI agent that goes beyond code suggestions",
+        "url": "https://block.github.io/goose/",
+        "points": 249,
+        "num_comments": 68,
+        "author": "sansui12",
+        "created_at": "2025-01-30T16:27:15Z"
+      },
+      {
+        "objectID": "28033973",
+        "title": "Goose flying upside down is simply showing off, say experts",
+        "url": "https://wgme.com/news/offbeat/goose-flying-upside-down-is-simply-showing-off-say-experts",
+        "points": 228,
+        "num_comments": 117,
+        "author": "MaysonL",
+        "created_at": "2021-08-02T07:51:31Z"
+      },
+      {
+        "objectID": "43719447",
+        "title": "Show HN: AgentAPI – HTTP API for Claude Code, Goose, Aider, and Codex",
+        "url": "https://github.com/coder/agentapi",
+        "points": 163,
+        "num_comments": 15,
+        "author": "hugodutka",
+        "created_at": "2025-04-17T16:54:58Z"
+      },
+      {
+        "objectID": "35049978",
+        "title": "Cabel Sasser: Untitled Goose Game rejected from the Mac App Store twice",
+        "url": "https://social.panic.com/@cabel/109977366338856750",
+        "points": 149,
+        "num_comments": 101,
+        "author": "valleyer",
+        "created_at": "2023-03-07T00:41:01Z"
+      },
+      {
+        "objectID": "42302658",
+        "title": "A middle schooler found a new compound in a piece of goose poop",
+        "url": "https://phys.org/news/2024-12-middle-schooler-compound-piece-goose.html",
+        "points": 117,
+        "num_comments": 45,
+        "author": "dxs",
+        "created_at": "2024-12-03T02:47:42Z"
+      },
+      {
+        "objectID": "7500600",
+        "title": "Why Gooseberry, the open animation film, matters",
+        "url": "http://gooseberry.blender.org/why-gooseberry-matters/",
+        "points": 111,
+        "num_comments": 39,
+        "author": "unwind",
+        "created_at": "2014-03-31T10:31:34Z"
+      },
+      {
+        "objectID": "40686727",
+        "title": "Face of ancient Australian 'giga-goose' revealed after fossil skull found",
+        "url": "https://www.nhm.ac.uk/discover/news/2024/june/face-ancient-australian-giga-goose-revealed-after-fossil-skull-found.html",
+        "points": 93,
+        "num_comments": 59,
+        "author": "gmays",
+        "created_at": "2024-06-15T01:20:00Z"
+      },
+      {
+        "objectID": "20145723",
+        "title": "People who get goosebumps from music have different brains (2017)",
+        "url": "https://www.indy100.com/article/music-goosebumps-some-people-science-research-emotions-psychology-study-harvard-7926781",
+        "points": 90,
+        "num_comments": 66,
+        "author": "chha",
+        "created_at": "2019-06-10T11:41:16Z"
+      },
+      {
+        "objectID": "34020295",
+        "title": "Geese return twice as quickly if you try to shoo them away",
+        "url": "https://www.newscientist.com/article/2351985-canada-geese-return-twice-as-quickly-if-you-try-to-shoo-them-away/",
+        "points": 87,
+        "num_comments": 77,
+        "author": "GavCo",
+        "created_at": "2022-12-16T21:00:38Z"
+      },
+      {
+        "objectID": "33033129",
+        "title": "Show HN: Red Goose – Convert your website to mobile app",
+        "url": "",
+        "points": 86,
+        "num_comments": 85,
+        "author": "marvindanig",
+        "created_at": "2022-09-30T10:28:42Z"
+      },
+      {
+        "objectID": "13012348",
+        "title": "University of Waterloo created a goose-tracking map, because geese are bullies",
+        "url": "http://www.theverge.com/2016/11/21/13677516/goose-watch-geese-tracking-app-university-of-waterloo",
+        "points": 84,
+        "num_comments": 54,
+        "author": "Tomte",
+        "created_at": "2016-11-22T07:36:02Z"
+      },
+      {
+        "objectID": "41587983",
+        "title": "Smart Goose Deterrent System",
+        "url": "https://irowbot.duckdns.org:1776/goose/SGDS.html",
+        "points": 84,
+        "num_comments": 43,
+        "author": "surprisetalk",
+        "created_at": "2024-09-19T02:47:34Z"
+      },
+      {
+        "objectID": "35064383",
+        "title": "R.L. Stine accuses publisher of censoring Goosebumps books without permission",
+        "url": "https://www.nationalreview.com/news/r-l-stine-self-censoring-goosebumps-books-to-be-more-inclusive/",
+        "points": 73,
+        "num_comments": 65,
+        "author": "nhchris",
+        "created_at": "2023-03-08T02:20:08Z"
+      },
+      {
+        "objectID": "20897925",
+        "title": "High-flying geese are ‘the astronauts of the bird world’",
+        "url": "https://www.nytimes.com/2019/09/03/science/bar-headed-geese-oxygen.html",
+        "points": 54,
+        "num_comments": 27,
+        "author": "dnetesn",
+        "created_at": "2019-09-06T17:51:10Z"
+      },
+      {
+        "objectID": "9003983",
+        "title": "Killing the Golden Goose? The changing nature of corporate research, 1980-2007 [pdf]",
+        "url": "https://faculty.fuqua.duke.edu/~sb135/bio/Science%201%2091%2015.pdf",
+        "points": 54,
+        "num_comments": 14,
+        "author": "cossatot",
+        "created_at": "2015-02-05T16:16:23Z"
+      },
+      {
+        "objectID": "4021692",
+        "title": "DuckDuckGo Cooks Google's Goose",
+        "url": "http://www.thestreet.com/story/11550975/1/the-digital-skeptic-duckduckgo-cooks-googles-goose.html",
+        "points": 51,
+        "num_comments": 84,
+        "author": "bastardsage",
+        "created_at": "2012-05-25T03:02:58Z"
+      },
+      {
+        "objectID": "12571707",
+        "title": "Why is San Francisco trying to strangle its golden goose?",
+        "url": "https://techcrunch.com/2016/09/24/why-is-san-francisco-trying-to-strangle-its-golden-goose/",
+        "points": 46,
+        "num_comments": 125,
+        "author": "endswapper",
+        "created_at": "2016-09-24T17:17:56Z"
+      },
+      {
+        "objectID": "42880188",
+        "title": "Goose – an open-source, extensible AI agent that goes beyond code suggestions",
+        "url": "https://github.com/block/goose",
+        "points": 40,
+        "num_comments": 5,
+        "author": "t55",
+        "created_at": "2025-01-30T17:53:07Z"
+      },
+      {
+        "objectID": "18997764",
+        "title": "I Spent $925 on a Fake Canada Goose Coat",
+        "url": "https://www.theatlantic.com/technology/archive/2019/01/counterfeit-canada-goose-amazon/581041/",
+        "points": 37,
+        "num_comments": 72,
+        "author": "cr1895",
+        "created_at": "2019-01-25T13:41:59Z"
+      },
+      {
+        "objectID": "43431881",
+        "title": "The Barnacle Goose Myth",
+        "url": "https://en.wikipedia.org/wiki/Barnacle_goose_myth",
+        "points": 36,
+        "num_comments": 12,
+        "author": "jamesgpearce",
+        "created_at": "2025-03-21T04:35:19Z"
+      },
+      {
+        "objectID": "33792578",
+        "title": "Canada geese beat humans in longstanding territory battle: study",
+        "url": "https://aces.illinois.edu/news/study-canada-geese-beat-humans-longstanding-territory-battle",
+        "points": 35,
+        "num_comments": 45,
+        "author": "hhs",
+        "created_at": "2022-11-29T20:08:57Z"
+      },
+      {
+        "objectID": "1793159",
+        "title": "The Cocktail Creationist - Story about the man behind Grey Goose",
+        "url": "http://nymag.com/nymetro/news/bizfinance/biz/features/10816/",
+        "points": 30,
+        "num_comments": 14,
+        "author": "sr3d",
+        "created_at": "2010-10-15T00:01:22Z"
+      },
+      {
+        "objectID": "8499396",
+        "title": "The CRC Wild Goose Chase",
+        "url": "http://www.embeddedrelated.com/showarticle/669.php",
+        "points": 30,
+        "num_comments": 6,
+        "author": "nkurz",
+        "created_at": "2014-10-23T17:20:21Z"
+      },
+      {
+        "objectID": "36366921",
+        "title": "Reddit’s golden geese foul up its IPO plans",
+        "url": "https://www.reuters.com/breakingviews/reddits-golden-geese-foul-up-its-ipo-plans-2023-06-16/",
+        "points": 28,
+        "num_comments": 2,
+        "author": "mirthlessend",
+        "created_at": "2023-06-17T03:19:25Z"
+      },
+      {
+        "objectID": "11680670",
+        "title": "Goose Finds Cop and Leads Him to Her Trapped Baby",
+        "url": "https://www.thedodo.com/goose-leads-cop-trapped-baby-1789420060.html",
+        "points": 25,
+        "num_comments": 4,
+        "author": "shawndumas",
+        "created_at": "2016-05-12T01:13:59Z"
+      },
+      {
+        "objectID": "1017242",
+        "title": "Scientists want planes to fly in formation like geese, to save on jet fuel",
+        "url": "http://www.guardian.co.uk/business/2009/dec/27/jets-fuel-geese-carbon-dioxide",
+        "points": 22,
+        "num_comments": 15,
+        "author": "vaksel",
+        "created_at": "2009-12-27T16:53:48Z"
+      },
+      {
+        "objectID": "48145095",
+        "title": "Show HN: I solved my study problems by talking to a goose",
+        "url": "https://professorgoose.com/",
+        "points": 22,
+        "num_comments": 10,
+        "author": "polaritymaking",
+        "created_at": "2026-05-15T06:06:07Z"
+      },
+      {
+        "objectID": "42855913",
+        "title": "Codename Goose",
+        "url": "https://block.github.io/goose/blog/2025/01/28/introducing-codename-goose/",
+        "points": 19,
+        "num_comments": 0,
+        "author": "ramimac",
+        "created_at": "2025-01-28T18:23:58Z"
+      },
+      {
+        "objectID": "27995951",
+        "title": "Amateur photographer captures goose flying upside down",
+        "url": "https://www.ruetir.com/2021/07/26/unique-picture-amateur-photographer-captures-goose-flying-upside-down/",
+        "points": 15,
+        "num_comments": 10,
+        "author": "Someone",
+        "created_at": "2021-07-29T12:58:56Z"
+      },
+      {
+        "objectID": "17818049",
+        "title": "As Spring Arrives Earlier, Arctic Geese Speed Up Their Migration",
+        "url": "https://www.scientificamerican.com/podcast/episode/as-spring-arrives-earlier-arctic-geese-speed-up-their-migration/",
+        "points": 14,
+        "num_comments": 0,
+        "author": "yaseen-rob",
+        "created_at": "2018-08-22T12:01:54Z"
+      },
+      {
+        "objectID": "43274600",
+        "title": "Canada goose fights off bald eagle in rare, symbolism-laden battle on ice",
+        "url": "https://www.theguardian.com/environment/2025/mar/05/canada-goose-bald-eagle-political-symbolism",
+        "points": 12,
+        "num_comments": 2,
+        "author": "saadatq",
+        "created_at": "2025-03-06T00:21:16Z"
+      },
+      {
+        "objectID": "42857670",
+        "title": "Codename Goose",
+        "url": "https://block.github.io/goose/",
+        "points": 11,
+        "num_comments": 0,
+        "author": "pmastela",
+        "created_at": "2025-01-28T20:40:51Z"
+      },
+      {
+        "objectID": "2028568",
+        "title": "Goose - Article Extractor now open source, same as Flipboard/Instapaper",
+        "url": "https://github.com/jiminoc/goose/wiki",
+        "points": 9,
+        "num_comments": 2,
+        "author": "beagledude",
+        "created_at": "2010-12-21T17:42:07Z"
+      },
+      {
+        "objectID": "30038979",
+        "title": "Howard Hughes test flying a radio controlled scale model of the Spruce Goose",
+        "url": "https://www.icloud.com/photos/#030vNkTIcB1kTSomJv6wFTteQ",
+        "points": 9,
+        "num_comments": 0,
+        "author": "Txoko",
+        "created_at": "2022-01-22T17:49:41Z"
+      },
+      {
+        "objectID": "47886640",
+        "title": "One town's scheme to get rid of its geese",
+        "url": "https://www.technologyreview.com/2026/04/22/1135430/california-town-scheme-get-rid-geese/",
+        "points": 8,
+        "num_comments": 3,
+        "author": "joozio",
+        "created_at": "2026-04-24T07:02:59Z"
+      },
+      {
+        "objectID": "18989132",
+        "title": "I Wanted a Canada Goose Coat. I Got Something That Smelled Weird Instead",
+        "url": "https://www.theatlantic.com/technology/archive/2019/01/counterfeit-canada-goose-amazon/581041/",
+        "points": 8,
+        "num_comments": 0,
+        "author": "ahmedalsudani",
+        "created_at": "2019-01-24T14:52:38Z"
+      },
+      {
+        "objectID": "38375799",
+        "title": "Goose Now Supports Batch Processing in Clojure",
+        "url": "https://github.com/nilenso/goose",
+        "points": 7,
+        "num_comments": 1,
+        "author": "sriharis",
+        "created_at": "2023-11-22T06:59:41Z"
+      },
+      {
+        "objectID": "38022659",
+        "title": "Canada goosed as attackers shutter hospitals and China deepfakes its politicians",
+        "url": "https://www.theregister.com/2023/10/25/canadian_hospitals_spamoflague/",
+        "points": 6,
+        "num_comments": 1,
+        "author": "jruohonen",
+        "created_at": "2023-10-26T07:13:49Z"
+      },
+      {
+        "objectID": "9474283",
+        "title": "Private DNA data led cops on wild goose chase and linked innocent man to murder",
+        "url": "https://www.eff.org/deeplinks/2015/05/how-private-dna-data-led-idaho-cops-wild-goose-chase-and-linked-innocent-man-20",
+        "points": 6,
+        "num_comments": 0,
+        "author": "waffle_ss",
+        "created_at": "2015-05-01T20:25:07Z"
+      }
+    ]
+  }
+}

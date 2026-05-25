@@ -1,0 +1,374 @@
+{
+  "project": "camel",
+  "repo": "camel-ai/camel",
+  "collected_at": "2026-05-22T11:03:50.249221+00:00",
+  "queries": [
+    "camel",
+    "camel"
+  ],
+  "total_hits": 40,
+  "results": {
+    "camel": [
+      {
+        "objectID": "28563447",
+        "title": "Life-size camel sculptures in Saudi Arabia are older than Stonehenge, pyramids",
+        "url": "https://www.smithsonianmag.com/smart-news/life-size-camel-sculptures-in-saudi-arabia-are-older-than-stonehenge-pyramids-of-giza-180978693/",
+        "points": 428,
+        "num_comments": 127,
+        "author": "pseudolus",
+        "created_at": "2021-09-17T10:14:35Z"
+      },
+      {
+        "objectID": "38450577",
+        "title": "The camel, the rope, and the needle's eye",
+        "url": "http://kiwihellenist.blogspot.com/2023/11/camel.html",
+        "points": 263,
+        "num_comments": 271,
+        "author": "diodorus",
+        "created_at": "2023-11-28T20:10:58Z"
+      },
+      {
+        "objectID": "36648949",
+        "title": "Open Letter to Tim O’Reilly to Free the Perl Camel",
+        "url": "",
+        "points": 173,
+        "num_comments": 52,
+        "author": "reeeese",
+        "created_at": "2023-07-08T21:27:44Z"
+      },
+      {
+        "objectID": "39769412",
+        "title": "Launch HN: CamelQA (YC W24) – AI that tests mobile apps",
+        "url": "",
+        "points": 141,
+        "num_comments": 54,
+        "author": "vercantez",
+        "created_at": "2024-03-20T17:13:07Z"
+      },
+      {
+        "objectID": "43548589",
+        "title": "Tell HN: Camelgate NPM Outage (Cloudflare)",
+        "url": "",
+        "points": 122,
+        "num_comments": 36,
+        "author": "bavarianbob",
+        "created_at": "2025-04-01T16:19:28Z"
+      },
+      {
+        "objectID": "34525139",
+        "title": "CamelCase vs. underscores revisited (2013)",
+        "url": "https://whatheco.de/2013/02/16/camelcase-vs-underscores-revisited/",
+        "points": 100,
+        "num_comments": 257,
+        "author": "aloukissas",
+        "created_at": "2023-01-25T22:38:03Z"
+      },
+      {
+        "objectID": "42620720",
+        "title": "Collection: More Doctors Smoke Camels",
+        "url": "https://tobacco.stanford.edu/cigarettes/doctors-smoking/more-doctors-smoke-camels/",
+        "points": 98,
+        "num_comments": 142,
+        "author": "t0bia_s",
+        "created_at": "2025-01-07T09:12:00Z"
+      },
+      {
+        "objectID": "2491725",
+        "title": "DotCloud releases support for Perl, aka Camel-as-a-Service",
+        "url": "http://blog.dotcloud.com/dotcloud-introduces-camel-as-a-service-with-i",
+        "points": 96,
+        "num_comments": 51,
+        "author": "jpetazzo",
+        "created_at": "2011-04-28T01:16:00Z"
+      },
+      {
+        "objectID": "8059900",
+        "title": "Camels and humps: a retraction [pdf]",
+        "url": "http://www.eis.mdx.ac.uk/staffpages/r_bornat/papers/camel_hump_retraction.pdf",
+        "points": 91,
+        "num_comments": 33,
+        "author": "sampo",
+        "created_at": "2014-07-20T08:47:26Z"
+      },
+      {
+        "objectID": "11495590",
+        "title": "The camel doesn't have two humps: Programming “aptitude test” canned",
+        "url": "http://retractionwatch.com/2014/07/18/the-camel-doesnt-have-two-humps-programming-aptitude-test-canned-for-overzealous-conclusion/",
+        "points": 77,
+        "num_comments": 133,
+        "author": "Smaug123",
+        "created_at": "2016-04-14T10:59:39Z"
+      },
+      {
+        "objectID": "17784638",
+        "title": "“The DNS Camel”, or, the rise in DNS complexity",
+        "url": "https://blog.powerdns.com/2018/03/22/the-dns-camel-or-the-rise-in-dns-complexit/",
+        "points": 76,
+        "num_comments": 19,
+        "author": "pantalaimon",
+        "created_at": "2018-08-17T18:08:16Z"
+      },
+      {
+        "objectID": "43733683",
+        "title": "CaMeL: Defeating Prompt Injections by Design",
+        "url": "https://arxiv.org/abs/2503.18813",
+        "points": 71,
+        "num_comments": 16,
+        "author": "tomrod",
+        "created_at": "2025-04-19T02:20:06Z"
+      },
+      {
+        "objectID": "15031413",
+        "title": "United States Camel Corps",
+        "url": "https://en.wikipedia.org/wiki/United_States_Camel_Corps",
+        "points": 70,
+        "num_comments": 19,
+        "author": "samclemens",
+        "created_at": "2017-08-16T21:12:47Z"
+      },
+      {
+        "objectID": "40425315",
+        "title": "CamelCase vs underscores: Scientific showdown (2011)",
+        "url": "https://whatheco.de/2011/02/10/camelcase-vs-underscores-scientific-showdown/",
+        "points": 66,
+        "num_comments": 136,
+        "author": "miohtama",
+        "created_at": "2024-05-21T07:55:16Z"
+      },
+      {
+        "objectID": "19051093",
+        "title": "CamelCamelCamel: $44.6k disk failure, down until Feb 3",
+        "url": "https://camelcamelcamel.com/",
+        "points": 66,
+        "num_comments": 72,
+        "author": "lwhsiao",
+        "created_at": "2019-02-01T02:31:25Z"
+      },
+      {
+        "objectID": "964266",
+        "title": "Against Camel Case",
+        "url": "http://www.nytimes.com/2009/11/29/magazine/29FOB-onlanguage-t.html",
+        "points": 63,
+        "num_comments": 65,
+        "author": "blasdel",
+        "created_at": "2009-11-27T19:24:41Z"
+      },
+      {
+        "objectID": "18255619",
+        "title": "Welcome to DNS, or Saving the DNS Camel [pdf]",
+        "url": "https://indico.dns-oarc.net/event/29/contributions/658/attachments/641/1039/Welcome_to_DNS-final.pdf",
+        "points": 62,
+        "num_comments": 15,
+        "author": "okket",
+        "created_at": "2018-10-19T10:32:38Z"
+      },
+      {
+        "objectID": "18262638",
+        "title": "Camelot: Python library that makes it easy to extract tables from PDF files",
+        "url": "https://camelot-py.readthedocs.io/en/master/",
+        "points": 62,
+        "num_comments": 11,
+        "author": "mpweiher",
+        "created_at": "2018-10-20T10:22:38Z"
+      },
+      {
+        "objectID": "16379688",
+        "title": "Camels in early medieval western Europe (2016)",
+        "url": "http://www.caitlingreen.org/2016/05/camels-in-early-medieval-western-europe.html",
+        "points": 61,
+        "num_comments": 27,
+        "author": "Thevet",
+        "created_at": "2018-02-14T21:39:12Z"
+      },
+      {
+        "objectID": "9138156",
+        "title": "CamelCase vs. underscores: Scientific showdown",
+        "url": "https://whathecode.wordpress.com/2011/02/10/camelcase-vs-underscores-scientific-showdown/",
+        "points": 56,
+        "num_comments": 57,
+        "author": "ttmarek",
+        "created_at": "2015-03-03T15:34:25Z"
+      },
+      {
+        "objectID": "9310890",
+        "title": "Intact Ottoman 'war camel' skeleton found in Austrian cellar",
+        "url": "http://www.bbc.com/news/science-environment-32145248",
+        "points": 55,
+        "num_comments": 11,
+        "author": "benbreen",
+        "created_at": "2015-04-02T14:31:06Z"
+      },
+      {
+        "objectID": "15167479",
+        "title": "A ten-day camel trek through the Australian outback",
+        "url": "https://www.themonthly.com.au/issue/2017/august/1501509600/robert-skinner/lessons-camels",
+        "points": 55,
+        "num_comments": 7,
+        "author": "hownottowrite",
+        "created_at": "2017-09-04T11:40:22Z"
+      },
+      {
+        "objectID": "23885927",
+        "title": "Freeway project unearths a time when camels roamed San Diego",
+        "url": "https://www.sandiegouniontribune.com/news/science/story/2020-07-17/fossil-find-ancient-camels",
+        "points": 48,
+        "num_comments": 13,
+        "author": "gscott",
+        "created_at": "2020-07-19T00:18:03Z"
+      },
+      {
+        "objectID": "29389227",
+        "title": "Camel beauty contests take center stage at a celebration of Bedouin culture",
+        "url": "https://www.nytimes.com/2021/11/29/travel/camel-beauty-pageant.html",
+        "points": 39,
+        "num_comments": 27,
+        "author": "Thevet",
+        "created_at": "2021-11-30T05:23:34Z"
+      },
+      {
+        "objectID": "22792220",
+        "title": "CamelCamelCamel Is Not Tracking Amazon Pricing Anymore",
+        "url": "https://camelcamelcamel.com/blog/amazon-eu-covid-19",
+        "points": 36,
+        "num_comments": 17,
+        "author": "awiesenhofer",
+        "created_at": "2020-04-06T10:01:44Z"
+      },
+      {
+        "objectID": "18548532",
+        "title": "EyeTracking Study: camelCase vs. under_score style (2010) [pdf]",
+        "url": "http://www.cs.kent.edu/~jmaletic/papers/ICPC2010-CamelCaseUnderScoreClouds.pdf",
+        "points": 34,
+        "num_comments": 15,
+        "author": "entelechy",
+        "created_at": "2018-11-28T01:30:48Z"
+      },
+      {
+        "objectID": "16809852",
+        "title": "The story of Australia's wild camel",
+        "url": "http://www.bbc.com/travel/story/20180410-the-strange-story-of-australias-wild-camel",
+        "points": 34,
+        "num_comments": 14,
+        "author": "MiriamWeiner",
+        "created_at": "2018-04-11T11:06:17Z"
+      },
+      {
+        "objectID": "32527613",
+        "title": "The U.S. Army’s “Camel Corps” Experiment (2021)",
+        "url": "https://armyhistory.org/the-u-s-armys-camel-corps-experiment/",
+        "points": 31,
+        "num_comments": 16,
+        "author": "Thevet",
+        "created_at": "2022-08-20T00:08:54Z"
+      },
+      {
+        "objectID": "30699555",
+        "title": "Camel: CXL-based memory disaggregation framework",
+        "url": "https://news.kaist.ac.kr/newsen/html/news/?mode=V&mng_no=19331",
+        "points": 31,
+        "num_comments": 1,
+        "author": "blopeur",
+        "created_at": "2022-03-16T14:52:37Z"
+      },
+      {
+        "objectID": "733405",
+        "title": "The Camel's Back Broke: 1984 Days of Bad PR for Apple",
+        "url": "http://www.osnews.com/story/21918/The_Camel_s_Back_Broke_1984_Days_of_Bad_PR_for_Apple",
+        "points": 27,
+        "num_comments": 6,
+        "author": "luke_s",
+        "created_at": "2009-07-31T00:05:14Z"
+      },
+      {
+        "objectID": "4915219",
+        "title": "Camels and Rubber Duckies (2004)",
+        "url": "http://www.joelonsoftware.com/articles/CamelsandRubberDuckies.html?",
+        "points": 26,
+        "num_comments": 2,
+        "author": "czr80",
+        "created_at": "2012-12-13T10:49:18Z"
+      },
+      {
+        "objectID": "215536",
+        "title": "The camel has two humps. A test for programming aptitude.",
+        "url": "http://www.scribd.com/vacuum?url=http://www.cs.mdx.ac.uk/research/PhDArea/saeed/paper1.pdf",
+        "points": 25,
+        "num_comments": 24,
+        "author": "dhotson",
+        "created_at": "2008-06-12T01:27:24Z"
+      },
+      {
+        "objectID": "15735078",
+        "title": "Camels in Roman Britain?",
+        "url": "https://www.forbes.com/sites/drsarahbond/2017/11/17/were-there-camels-in-roman-britain-new-evidence-suggests-camels-were-common-across-the-empire/#3380d7bd23f8",
+        "points": 25,
+        "num_comments": 7,
+        "author": "Hooke",
+        "created_at": "2017-11-19T18:20:08Z"
+      },
+      {
+        "objectID": "285388",
+        "title": "Alan Kay on 'The Camel has Two Humps'",
+        "url": "http://www.secretgeek.net.nyud.net/camel_kay.asp",
+        "points": 25,
+        "num_comments": 6,
+        "author": "nickb",
+        "created_at": "2008-08-24T20:13:13Z"
+      },
+      {
+        "objectID": "17141628",
+        "title": "The World Wants More Camel Milk",
+        "url": "https://www.bloomberg.com/news/features/2018-05-23/the-world-wants-more-camel-milk-australia-can-help",
+        "points": 21,
+        "num_comments": 44,
+        "author": "lunchbreak",
+        "created_at": "2018-05-24T06:54:44Z"
+      },
+      {
+        "objectID": "39858361",
+        "title": "A Camel Through the Eye of a Needle, and Other Wild Tales of Translation (2018)",
+        "url": "https://stantlitore.com/2018/06/01/a-camel-through-the-eye-of-a-needle-and-other-wild-tales-of-translation/",
+        "points": 21,
+        "num_comments": 10,
+        "author": "EndXA",
+        "created_at": "2024-03-28T22:50:09Z"
+      },
+      {
+        "objectID": "7792581",
+        "title": "Spaceweather Radio: Listen to the Camelopardalis meteor shower",
+        "url": "http://spaceweatherradio.com/",
+        "points": 17,
+        "num_comments": 5,
+        "author": "zaroth",
+        "created_at": "2014-05-24T03:57:04Z"
+      },
+      {
+        "objectID": "43675364",
+        "title": "CaMeL offers a promising new direction for mitigating prompt injection attacks",
+        "url": "https://simonwillison.net/2025/Apr/11/camel/",
+        "points": 17,
+        "num_comments": 3,
+        "author": "birdculture",
+        "created_at": "2025-04-13T19:52:20Z"
+      },
+      {
+        "objectID": "28016723",
+        "title": "Nanobodies from camelid mice and llamas neutralize SARS-CoV-2 variants",
+        "url": "https://www.nature.com/articles/s41586-021-03676-z",
+        "points": 16,
+        "num_comments": 0,
+        "author": "gtsnexp",
+        "created_at": "2021-07-31T09:39:51Z"
+      },
+      {
+        "objectID": "19038198",
+        "title": "CamelCamelCamel is down for a week, 3 failed hard drives and $45k",
+        "url": "https://camelcamelcamel.com/",
+        "points": 13,
+        "num_comments": 9,
+        "author": "albertgoeswoof",
+        "created_at": "2019-01-30T19:10:55Z"
+      }
+    ]
+  }
+}

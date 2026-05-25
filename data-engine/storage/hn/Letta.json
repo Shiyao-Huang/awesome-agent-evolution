@@ -1,0 +1,736 @@
+{
+  "project": "Letta",
+  "repo": "letta-ai/letta",
+  "collected_at": "2026-05-22T11:00:16.625805+00:00",
+  "queries": [
+    "Letta",
+    "letta"
+  ],
+  "total_hits": 80,
+  "results": {
+    "Letta": [
+      {
+        "objectID": "43294974",
+        "title": "Letta: Letta is a framework for creating LLM services with memory",
+        "url": "https://github.com/letta-ai/letta",
+        "points": 121,
+        "num_comments": 22,
+        "author": "sebg",
+        "created_at": "2025-03-07T21:33:43Z"
+      },
+      {
+        "objectID": "46294274",
+        "title": "Letta Code",
+        "url": "https://www.letta.com/blog/letta-code",
+        "points": 83,
+        "num_comments": 37,
+        "author": "ascorbic",
+        "created_at": "2025-12-16T20:51:27Z"
+      },
+      {
+        "objectID": "46293374",
+        "title": "Letta Code: a memory-first coding agent",
+        "url": "https://github.com/letta-ai/letta-code",
+        "points": 6,
+        "num_comments": 3,
+        "author": "pacjam",
+        "created_at": "2025-12-16T19:41:58Z"
+      },
+      {
+        "objectID": "47718214",
+        "title": "The Letta Code App",
+        "url": "https://www.letta.com/blog/introducing-the-letta-code-app",
+        "points": 2,
+        "num_comments": 0,
+        "author": "forthwall",
+        "created_at": "2026-04-10T13:54:00Z"
+      },
+      {
+        "objectID": "47406067",
+        "title": "Letta's Next Phase",
+        "url": "https://www.letta.com/blog/our-next-phase",
+        "points": 2,
+        "num_comments": 0,
+        "author": "forthwall",
+        "created_at": "2026-03-16T22:49:05Z"
+      },
+      {
+        "objectID": "47020904",
+        "title": "Show HN: Letta – Git-Based Memory for Coding Agents",
+        "url": "https://www.letta.com/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "morawr",
+        "created_at": "2026-02-15T03:56:18Z"
+      },
+      {
+        "objectID": "44512079",
+        "title": "Letta",
+        "url": "https://www.letta.com/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "handfuloflight",
+        "created_at": "2025-07-09T16:38:15Z"
+      },
+      {
+        "objectID": "43222301",
+        "title": "Letta (formerly MemGPT) is a framework for creating LLM services with memory",
+        "url": "https://github.com/letta-ai/letta",
+        "points": 2,
+        "num_comments": 0,
+        "author": "nateb2022",
+        "created_at": "2025-03-01T18:48:10Z"
+      },
+      {
+        "objectID": "42083667",
+        "title": "LLMs as Operating Systems: Agent Memory Course by Letta",
+        "url": "https://learn.deeplearning.ai/courses/llms-as-operating-systems-agent-memory",
+        "points": 2,
+        "num_comments": 0,
+        "author": "thenameless7741",
+        "created_at": "2024-11-08T02:56:42Z"
+      },
+      {
+        "objectID": "45431326",
+        "title": "Claude Sonnet 4.5 and the memory Omni-tool in Letta",
+        "url": "https://www.letta.com/blog/introducing-sonnet-4-5-and-the-memory-omni-tool-in-letta",
+        "points": 1,
+        "num_comments": 1,
+        "author": "cpfiffer",
+        "created_at": "2025-09-30T21:13:24Z"
+      },
+      {
+        "objectID": "44130225",
+        "title": "Letta Leaderboard: Benchmarking LLMs on Agentic Memory",
+        "url": "https://www.letta.com/blog/letta-leaderboard",
+        "points": 1,
+        "num_comments": 0,
+        "author": "wooders",
+        "created_at": "2025-05-29T20:44:45Z"
+      },
+      {
+        "objectID": "43917689",
+        "title": "Academia to Agentic AI: Ion Stoica with Letta/MemGPT Founders [video]",
+        "url": "https://www.youtube.com/watch?v=zQK8apxUIS8",
+        "points": 1,
+        "num_comments": 0,
+        "author": "reubensandwich",
+        "created_at": "2025-05-07T16:26:42Z"
+      },
+      {
+        "objectID": "46891715",
+        "title": "Ask HN: Mem0 stores memories, but doesn't learn user patterns",
+        "url": "",
+        "points": 9,
+        "num_comments": 7,
+        "author": "fliellerjulian",
+        "created_at": "2026-02-04T21:02:34Z"
+      },
+      {
+        "objectID": "44594835",
+        "title": "Show HN: RunAgent; Multi-Framework Agent Deployment and Rust,Go,JS SDKs(+others)",
+        "url": "https://github.com/runagent-dev/runagent",
+        "points": 6,
+        "num_comments": 6,
+        "author": "sawradip",
+        "created_at": "2025-07-17T16:04:42Z"
+      },
+      {
+        "objectID": "44711344",
+        "title": "Show HN: AI code reviewer with Python agent called from Rust, streaming works",
+        "url": "https://medium.com/@runagent.live/building-ai-powered-code-reviewers-for-rust-developers-with-letta-c71b7ad3efae",
+        "points": 6,
+        "num_comments": 3,
+        "author": "sawradip",
+        "created_at": "2025-07-28T14:40:49Z"
+      },
+      {
+        "objectID": "43558617",
+        "title": "Show HN: Agent File (.af) – A standard file format for serializing AI agents",
+        "url": "https://github.com/letta-ai/agent-file",
+        "points": 5,
+        "num_comments": 1,
+        "author": "wooders",
+        "created_at": "2025-04-02T16:44:00Z"
+      },
+      {
+        "objectID": "47260077",
+        "title": "Show HN: Mnemora – Serverless memory DB for AI agents (no LLM in your CRUD path)",
+        "url": "https://github.com/mnemora-db/mnemora",
+        "points": 4,
+        "num_comments": 4,
+        "author": "isaacgbc",
+        "created_at": "2026-03-05T10:41:27Z"
+      },
+      {
+        "objectID": "47008274",
+        "title": "Show HN: Engram – Persistent memory for AI agents, local-first and open source",
+        "url": "https://engram-ai.dev",
+        "points": 3,
+        "num_comments": 0,
+        "author": "L3nnox_Cc",
+        "created_at": "2026-02-13T21:46:53Z"
+      },
+      {
+        "objectID": "46968889",
+        "title": "Show HN: Thoth – Obsidian AI Research Assistant",
+        "url": "https://github.com/acertainKnight/project-thoth",
+        "points": 2,
+        "num_comments": 0,
+        "author": "acertainKnight",
+        "created_at": "2026-02-11T00:01:01Z"
+      },
+      {
+        "objectID": "44610525",
+        "title": "Show HN: RunAgent: Model Context Protocol (MCP) and Vercel but for AI Agents",
+        "url": "https://github.com/runagent-dev/runagent",
+        "points": 2,
+        "num_comments": 0,
+        "author": "adewba",
+        "created_at": "2025-07-18T22:34:54Z"
+      },
+      {
+        "objectID": "47203853",
+        "title": "Show HN: Engram – Memory for AI coding agents (2.5K installs, 80% on LOCOMO)",
+        "url": "https://www.engram.fyi",
+        "points": 1,
+        "num_comments": 0,
+        "author": "tstockham",
+        "created_at": "2026-03-01T04:55:07Z"
+      },
+      {
+        "objectID": "47136129",
+        "title": "Show HN: MSAM – Memory system for AI agents that knows when it doesn't know",
+        "url": "https://github.com/jadenschwab/msam",
+        "points": 1,
+        "num_comments": 0,
+        "author": "jadenschwab",
+        "created_at": "2026-02-24T12:09:54Z"
+      },
+      {
+        "objectID": "46986940",
+        "title": "Show HN: SuperLocalMemory– Local-first AI memory for Claude, Cursor and 16+tools",
+        "url": "https://github.com/varun369/SuperLocalMemoryV2",
+        "points": 1,
+        "num_comments": 0,
+        "author": "varunpratap369",
+        "created_at": "2026-02-12T10:11:31Z"
+      },
+      {
+        "objectID": "33812999",
+        "title": "Norway: Landlines will no longer be supported",
+        "url": "https://www.nrk.no/vestland/nye-mobilmaster-gjer-livet-lettare-i-solund-1.16201115",
+        "points": 66,
+        "num_comments": 52,
+        "author": "zabaki",
+        "created_at": "2022-12-01T06:23:28Z"
+      },
+      {
+        "objectID": "47619911",
+        "title": "Context Constitution",
+        "url": "https://github.com/letta-ai/context-constitution",
+        "points": 5,
+        "num_comments": 0,
+        "author": "forthwall",
+        "created_at": "2026-04-02T20:43:48Z"
+      },
+      {
+        "objectID": "45775329",
+        "title": "Context-Bench: Benchmarking LLMs on Agentic Context Engineering",
+        "url": "https://www.letta.com/blog/context-bench",
+        "points": 5,
+        "num_comments": 0,
+        "author": "janpio",
+        "created_at": "2025-10-31T18:46:43Z"
+      },
+      {
+        "objectID": "46996726",
+        "title": "Context Repositories: Git-Based Memory for Coding Agents",
+        "url": "https://www.letta.com/blog/context-repositories",
+        "points": 4,
+        "num_comments": 0,
+        "author": "forthwall",
+        "created_at": "2026-02-12T23:23:36Z"
+      },
+      {
+        "objectID": "46235970",
+        "title": "Continual Learning in Token Space",
+        "url": "https://www.letta.com/blog/continual-learning",
+        "points": 3,
+        "num_comments": 0,
+        "author": "wooders",
+        "created_at": "2025-12-11T19:26:03Z"
+      },
+      {
+        "objectID": "43039467",
+        "title": "RAG is not agent memory",
+        "url": "https://www.letta.com/blog/rag-vs-agent-memory",
+        "points": 3,
+        "num_comments": 0,
+        "author": "wooders",
+        "created_at": "2025-02-13T18:34:24Z"
+      },
+      {
+        "objectID": "44458081",
+        "title": "Context Engineering for the LLM OS: User vs. Kernel Context",
+        "url": "https://www.letta.com/blog/guide-to-context-engineering",
+        "points": 2,
+        "num_comments": 3,
+        "author": "pacjam",
+        "created_at": "2025-07-03T18:50:17Z"
+      },
+      {
+        "objectID": "44802638",
+        "title": "How to build the #1 open source terminal-use agent",
+        "url": "https://www.letta.com/blog/terminal-bench",
+        "points": 2,
+        "num_comments": 0,
+        "author": "pacjam",
+        "created_at": "2025-08-05T18:59:37Z"
+      },
+      {
+        "objectID": "44194422",
+        "title": "Show HN: Create stateful agents in the cloud in a single API call",
+        "url": "https://docs.letta.com/quickstart",
+        "points": 2,
+        "num_comments": 0,
+        "author": "pacjam",
+        "created_at": "2025-06-05T18:34:00Z"
+      },
+      {
+        "objectID": "42138239",
+        "title": "The software stack for LLM agents (in 2024)",
+        "url": "https://www.letta.com/blog/ai-agents-stack",
+        "points": 2,
+        "num_comments": 0,
+        "author": "pacjam",
+        "created_at": "2024-11-14T17:01:34Z"
+      },
+      {
+        "objectID": "46780995",
+        "title": "Claude-subconscious: Give Claude Code a subconscious",
+        "url": "https://github.com/letta-ai/claude-subconscious",
+        "points": 1,
+        "num_comments": 0,
+        "author": "simonpure",
+        "created_at": "2026-01-27T15:08:54Z"
+      },
+      {
+        "objectID": "29595598",
+        "title": "Open letter from the BMJ to Mark Zuckerberg",
+        "url": "https://www.bmj.com/content/375/bmj.n2635/rr-80",
+        "points": 1599,
+        "num_comments": 644,
+        "author": "DrHilarius",
+        "created_at": "2021-12-17T17:49:19Z"
+      },
+      {
+        "objectID": "28801908",
+        "title": "Facebook bans, sends C&D letter to developer of Unfollow Everything extension",
+        "url": "https://www.techspot.com/news/91650-facebook-bans-sends-cease-desist-letter-developer-unfollow.html",
+        "points": 1513,
+        "num_comments": 583,
+        "author": "mmastrac",
+        "created_at": "2021-10-08T17:42:02Z"
+      },
+      {
+        "objectID": "42268580",
+        "title": "Send someone you appreciate an official 'Continue and Persist' Letter",
+        "url": "https://ContinueAndPersist.org",
+        "points": 1414,
+        "num_comments": 224,
+        "author": "adnanaga",
+        "created_at": "2024-11-28T21:16:55Z"
+      },
+      {
+        "objectID": "43684536",
+        "title": "Harvard's response to federal government letter demanding changes",
+        "url": "https://www.harvard.edu/president/news/2025/the-promise-of-american-higher-education/",
+        "points": 1391,
+        "num_comments": 1403,
+        "author": "impish9208",
+        "created_at": "2025-04-14T18:28:50Z"
+      },
+      {
+        "objectID": "8600716",
+        "title": "Letter to Amazon Board from Fired Ad Exec",
+        "url": "https://www.scribd.com/embeds/245561031/content?start_page=1&view_mode=scroll&access_key=key-UEZdQ4D9zd883gw8tn3D&show_recommendations=true",
+        "points": 1257,
+        "num_comments": 558,
+        "author": "kvargs",
+        "created_at": "2014-11-13T09:51:41Z"
+      },
+      {
+        "objectID": "28085632",
+        "title": "An Open Letter Against Apple's Privacy-Invasive Content Scanning Technology",
+        "url": "https://appleprivacyletter.com/",
+        "points": 1187,
+        "num_comments": 670,
+        "author": "nomoretime",
+        "created_at": "2021-08-06T11:22:25Z"
+      }
+    ],
+    "letta": [
+      {
+        "objectID": "43294974",
+        "title": "Letta: Letta is a framework for creating LLM services with memory",
+        "url": "https://github.com/letta-ai/letta",
+        "points": 121,
+        "num_comments": 22,
+        "author": "sebg",
+        "created_at": "2025-03-07T21:33:43Z"
+      },
+      {
+        "objectID": "46294274",
+        "title": "Letta Code",
+        "url": "https://www.letta.com/blog/letta-code",
+        "points": 83,
+        "num_comments": 37,
+        "author": "ascorbic",
+        "created_at": "2025-12-16T20:51:27Z"
+      },
+      {
+        "objectID": "46293374",
+        "title": "Letta Code: a memory-first coding agent",
+        "url": "https://github.com/letta-ai/letta-code",
+        "points": 6,
+        "num_comments": 3,
+        "author": "pacjam",
+        "created_at": "2025-12-16T19:41:58Z"
+      },
+      {
+        "objectID": "47718214",
+        "title": "The Letta Code App",
+        "url": "https://www.letta.com/blog/introducing-the-letta-code-app",
+        "points": 2,
+        "num_comments": 0,
+        "author": "forthwall",
+        "created_at": "2026-04-10T13:54:00Z"
+      },
+      {
+        "objectID": "47406067",
+        "title": "Letta's Next Phase",
+        "url": "https://www.letta.com/blog/our-next-phase",
+        "points": 2,
+        "num_comments": 0,
+        "author": "forthwall",
+        "created_at": "2026-03-16T22:49:05Z"
+      },
+      {
+        "objectID": "47020904",
+        "title": "Show HN: Letta – Git-Based Memory for Coding Agents",
+        "url": "https://www.letta.com/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "morawr",
+        "created_at": "2026-02-15T03:56:18Z"
+      },
+      {
+        "objectID": "44512079",
+        "title": "Letta",
+        "url": "https://www.letta.com/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "handfuloflight",
+        "created_at": "2025-07-09T16:38:15Z"
+      },
+      {
+        "objectID": "43222301",
+        "title": "Letta (formerly MemGPT) is a framework for creating LLM services with memory",
+        "url": "https://github.com/letta-ai/letta",
+        "points": 2,
+        "num_comments": 0,
+        "author": "nateb2022",
+        "created_at": "2025-03-01T18:48:10Z"
+      },
+      {
+        "objectID": "42083667",
+        "title": "LLMs as Operating Systems: Agent Memory Course by Letta",
+        "url": "https://learn.deeplearning.ai/courses/llms-as-operating-systems-agent-memory",
+        "points": 2,
+        "num_comments": 0,
+        "author": "thenameless7741",
+        "created_at": "2024-11-08T02:56:42Z"
+      },
+      {
+        "objectID": "45431326",
+        "title": "Claude Sonnet 4.5 and the memory Omni-tool in Letta",
+        "url": "https://www.letta.com/blog/introducing-sonnet-4-5-and-the-memory-omni-tool-in-letta",
+        "points": 1,
+        "num_comments": 1,
+        "author": "cpfiffer",
+        "created_at": "2025-09-30T21:13:24Z"
+      },
+      {
+        "objectID": "44130225",
+        "title": "Letta Leaderboard: Benchmarking LLMs on Agentic Memory",
+        "url": "https://www.letta.com/blog/letta-leaderboard",
+        "points": 1,
+        "num_comments": 0,
+        "author": "wooders",
+        "created_at": "2025-05-29T20:44:45Z"
+      },
+      {
+        "objectID": "43917689",
+        "title": "Academia to Agentic AI: Ion Stoica with Letta/MemGPT Founders [video]",
+        "url": "https://www.youtube.com/watch?v=zQK8apxUIS8",
+        "points": 1,
+        "num_comments": 0,
+        "author": "reubensandwich",
+        "created_at": "2025-05-07T16:26:42Z"
+      },
+      {
+        "objectID": "46891715",
+        "title": "Ask HN: Mem0 stores memories, but doesn't learn user patterns",
+        "url": "",
+        "points": 9,
+        "num_comments": 7,
+        "author": "fliellerjulian",
+        "created_at": "2026-02-04T21:02:34Z"
+      },
+      {
+        "objectID": "44594835",
+        "title": "Show HN: RunAgent; Multi-Framework Agent Deployment and Rust,Go,JS SDKs(+others)",
+        "url": "https://github.com/runagent-dev/runagent",
+        "points": 6,
+        "num_comments": 6,
+        "author": "sawradip",
+        "created_at": "2025-07-17T16:04:42Z"
+      },
+      {
+        "objectID": "44711344",
+        "title": "Show HN: AI code reviewer with Python agent called from Rust, streaming works",
+        "url": "https://medium.com/@runagent.live/building-ai-powered-code-reviewers-for-rust-developers-with-letta-c71b7ad3efae",
+        "points": 6,
+        "num_comments": 3,
+        "author": "sawradip",
+        "created_at": "2025-07-28T14:40:49Z"
+      },
+      {
+        "objectID": "43558617",
+        "title": "Show HN: Agent File (.af) – A standard file format for serializing AI agents",
+        "url": "https://github.com/letta-ai/agent-file",
+        "points": 5,
+        "num_comments": 1,
+        "author": "wooders",
+        "created_at": "2025-04-02T16:44:00Z"
+      },
+      {
+        "objectID": "47260077",
+        "title": "Show HN: Mnemora – Serverless memory DB for AI agents (no LLM in your CRUD path)",
+        "url": "https://github.com/mnemora-db/mnemora",
+        "points": 4,
+        "num_comments": 4,
+        "author": "isaacgbc",
+        "created_at": "2026-03-05T10:41:27Z"
+      },
+      {
+        "objectID": "47008274",
+        "title": "Show HN: Engram – Persistent memory for AI agents, local-first and open source",
+        "url": "https://engram-ai.dev",
+        "points": 3,
+        "num_comments": 0,
+        "author": "L3nnox_Cc",
+        "created_at": "2026-02-13T21:46:53Z"
+      },
+      {
+        "objectID": "46968889",
+        "title": "Show HN: Thoth – Obsidian AI Research Assistant",
+        "url": "https://github.com/acertainKnight/project-thoth",
+        "points": 2,
+        "num_comments": 0,
+        "author": "acertainKnight",
+        "created_at": "2026-02-11T00:01:01Z"
+      },
+      {
+        "objectID": "44610525",
+        "title": "Show HN: RunAgent: Model Context Protocol (MCP) and Vercel but for AI Agents",
+        "url": "https://github.com/runagent-dev/runagent",
+        "points": 2,
+        "num_comments": 0,
+        "author": "adewba",
+        "created_at": "2025-07-18T22:34:54Z"
+      },
+      {
+        "objectID": "47203853",
+        "title": "Show HN: Engram – Memory for AI coding agents (2.5K installs, 80% on LOCOMO)",
+        "url": "https://www.engram.fyi",
+        "points": 1,
+        "num_comments": 0,
+        "author": "tstockham",
+        "created_at": "2026-03-01T04:55:07Z"
+      },
+      {
+        "objectID": "47136129",
+        "title": "Show HN: MSAM – Memory system for AI agents that knows when it doesn't know",
+        "url": "https://github.com/jadenschwab/msam",
+        "points": 1,
+        "num_comments": 0,
+        "author": "jadenschwab",
+        "created_at": "2026-02-24T12:09:54Z"
+      },
+      {
+        "objectID": "46986940",
+        "title": "Show HN: SuperLocalMemory– Local-first AI memory for Claude, Cursor and 16+tools",
+        "url": "https://github.com/varun369/SuperLocalMemoryV2",
+        "points": 1,
+        "num_comments": 0,
+        "author": "varunpratap369",
+        "created_at": "2026-02-12T10:11:31Z"
+      },
+      {
+        "objectID": "33812999",
+        "title": "Norway: Landlines will no longer be supported",
+        "url": "https://www.nrk.no/vestland/nye-mobilmaster-gjer-livet-lettare-i-solund-1.16201115",
+        "points": 66,
+        "num_comments": 52,
+        "author": "zabaki",
+        "created_at": "2022-12-01T06:23:28Z"
+      },
+      {
+        "objectID": "47619911",
+        "title": "Context Constitution",
+        "url": "https://github.com/letta-ai/context-constitution",
+        "points": 5,
+        "num_comments": 0,
+        "author": "forthwall",
+        "created_at": "2026-04-02T20:43:48Z"
+      },
+      {
+        "objectID": "45775329",
+        "title": "Context-Bench: Benchmarking LLMs on Agentic Context Engineering",
+        "url": "https://www.letta.com/blog/context-bench",
+        "points": 5,
+        "num_comments": 0,
+        "author": "janpio",
+        "created_at": "2025-10-31T18:46:43Z"
+      },
+      {
+        "objectID": "46996726",
+        "title": "Context Repositories: Git-Based Memory for Coding Agents",
+        "url": "https://www.letta.com/blog/context-repositories",
+        "points": 4,
+        "num_comments": 0,
+        "author": "forthwall",
+        "created_at": "2026-02-12T23:23:36Z"
+      },
+      {
+        "objectID": "46235970",
+        "title": "Continual Learning in Token Space",
+        "url": "https://www.letta.com/blog/continual-learning",
+        "points": 3,
+        "num_comments": 0,
+        "author": "wooders",
+        "created_at": "2025-12-11T19:26:03Z"
+      },
+      {
+        "objectID": "43039467",
+        "title": "RAG is not agent memory",
+        "url": "https://www.letta.com/blog/rag-vs-agent-memory",
+        "points": 3,
+        "num_comments": 0,
+        "author": "wooders",
+        "created_at": "2025-02-13T18:34:24Z"
+      },
+      {
+        "objectID": "44458081",
+        "title": "Context Engineering for the LLM OS: User vs. Kernel Context",
+        "url": "https://www.letta.com/blog/guide-to-context-engineering",
+        "points": 2,
+        "num_comments": 3,
+        "author": "pacjam",
+        "created_at": "2025-07-03T18:50:17Z"
+      },
+      {
+        "objectID": "44802638",
+        "title": "How to build the #1 open source terminal-use agent",
+        "url": "https://www.letta.com/blog/terminal-bench",
+        "points": 2,
+        "num_comments": 0,
+        "author": "pacjam",
+        "created_at": "2025-08-05T18:59:37Z"
+      },
+      {
+        "objectID": "44194422",
+        "title": "Show HN: Create stateful agents in the cloud in a single API call",
+        "url": "https://docs.letta.com/quickstart",
+        "points": 2,
+        "num_comments": 0,
+        "author": "pacjam",
+        "created_at": "2025-06-05T18:34:00Z"
+      },
+      {
+        "objectID": "42138239",
+        "title": "The software stack for LLM agents (in 2024)",
+        "url": "https://www.letta.com/blog/ai-agents-stack",
+        "points": 2,
+        "num_comments": 0,
+        "author": "pacjam",
+        "created_at": "2024-11-14T17:01:34Z"
+      },
+      {
+        "objectID": "46780995",
+        "title": "Claude-subconscious: Give Claude Code a subconscious",
+        "url": "https://github.com/letta-ai/claude-subconscious",
+        "points": 1,
+        "num_comments": 0,
+        "author": "simonpure",
+        "created_at": "2026-01-27T15:08:54Z"
+      },
+      {
+        "objectID": "29595598",
+        "title": "Open letter from the BMJ to Mark Zuckerberg",
+        "url": "https://www.bmj.com/content/375/bmj.n2635/rr-80",
+        "points": 1599,
+        "num_comments": 644,
+        "author": "DrHilarius",
+        "created_at": "2021-12-17T17:49:19Z"
+      },
+      {
+        "objectID": "28801908",
+        "title": "Facebook bans, sends C&D letter to developer of Unfollow Everything extension",
+        "url": "https://www.techspot.com/news/91650-facebook-bans-sends-cease-desist-letter-developer-unfollow.html",
+        "points": 1513,
+        "num_comments": 583,
+        "author": "mmastrac",
+        "created_at": "2021-10-08T17:42:02Z"
+      },
+      {
+        "objectID": "42268580",
+        "title": "Send someone you appreciate an official 'Continue and Persist' Letter",
+        "url": "https://ContinueAndPersist.org",
+        "points": 1414,
+        "num_comments": 224,
+        "author": "adnanaga",
+        "created_at": "2024-11-28T21:16:55Z"
+      },
+      {
+        "objectID": "43684536",
+        "title": "Harvard's response to federal government letter demanding changes",
+        "url": "https://www.harvard.edu/president/news/2025/the-promise-of-american-higher-education/",
+        "points": 1391,
+        "num_comments": 1403,
+        "author": "impish9208",
+        "created_at": "2025-04-14T18:28:50Z"
+      },
+      {
+        "objectID": "8600716",
+        "title": "Letter to Amazon Board from Fired Ad Exec",
+        "url": "https://www.scribd.com/embeds/245561031/content?start_page=1&view_mode=scroll&access_key=key-UEZdQ4D9zd883gw8tn3D&show_recommendations=true",
+        "points": 1257,
+        "num_comments": 558,
+        "author": "kvargs",
+        "created_at": "2014-11-13T09:51:41Z"
+      },
+      {
+        "objectID": "28085632",
+        "title": "An Open Letter Against Apple's Privacy-Invasive Content Scanning Technology",
+        "url": "https://appleprivacyletter.com/",
+        "points": 1187,
+        "num_comments": 670,
+        "author": "nomoretime",
+        "created_at": "2021-08-06T11:22:25Z"
+      }
+    ]
+  }
+}

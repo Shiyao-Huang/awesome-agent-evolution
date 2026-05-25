@@ -1,0 +1,14 @@
+{
+  "project": "Codex",
+  "repo": "openai/codex",
+  "collected_at": "2026-05-22T11:16:19.354293+00:00",
+  "queries": [
+    "Codex"
+  ],
+  "total_papers": 0,
+  "total_citations": 0,
+  "papers": {
+    "Codex": []
+  },
+  "citations": {}
+}

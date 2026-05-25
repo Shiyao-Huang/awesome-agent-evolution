@@ -1,5 +1,1312 @@
 {
-  "generated_at": "2026-05-22T10:55:29.113195Z",
-  "total_projects": 0,
-  "results": []
+  "generated_at": "2026-05-22T11:16:14.820241Z",
+  "total_projects": 51,
+  "results": [
+    {
+      "project": "Claude Code",
+      "composite_score": 100.0,
+      "growth_class": "viral",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 1.0,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 1.0,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 862.0,
+          "avg_comments": 471.8,
+          "max_points": 2127
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn",
+        "chinese",
+        "scholar"
+      ]
+    },
+    {
+      "project": "Codex",
+      "composite_score": 100.0,
+      "growth_class": "viral",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 1.0,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 1.0,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 389.7,
+          "avg_comments": 209.7,
+          "max_points": 1530
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn",
+        "chinese"
+      ]
+    },
+    {
+      "project": "Devika",
+      "composite_score": 100.0,
+      "growth_class": "viral",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 1.0,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 1.0,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 157.1,
+          "avg_comments": 82.9,
+          "max_points": 490
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "Eliza",
+      "composite_score": 100.0,
+      "growth_class": "viral",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 1.0,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 1.0,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 322.4,
+          "avg_comments": 226.7,
+          "max_points": 2827
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn",
+        "chinese",
+        "scholar"
+      ]
+    },
+    {
+      "project": "LangChain",
+      "composite_score": 100.0,
+      "growth_class": "viral",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 1.0,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 1.0,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 116.7,
+          "avg_comments": 44.0,
+          "max_points": 480
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn",
+        "chinese",
+        "scholar"
+      ]
+    },
+    {
+      "project": "Letta",
+      "composite_score": 100.0,
+      "growth_class": "viral",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 1.0,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 1.0,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 218.0,
+          "avg_comments": 105.5,
+          "max_points": 1599
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn",
+        "chinese",
+        "scholar"
+      ]
+    },
+    {
+      "project": "OpenFang",
+      "composite_score": 100.0,
+      "growth_class": "viral",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 1.0,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 1.0,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 290.7,
+          "avg_comments": 143.6,
+          "max_points": 986
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "agno",
+      "composite_score": 100.0,
+      "growth_class": "viral",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 1.0,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 1.0,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 141.8,
+          "avg_comments": 57.0,
+          "max_points": 927
+        },
+        "reddit": {
+          "items": 25
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "dify",
+      "composite_score": 100.0,
+      "growth_class": "viral",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 1.0,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 1.0,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 352.1,
+          "avg_comments": 90.8,
+          "max_points": 2421
+        },
+        "reddit": {
+          "items": 25
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn",
+        "chinese",
+        "scholar"
+      ]
+    },
+    {
+      "project": "openai-agents-python",
+      "composite_score": 100.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 1.0,
+          "total_hits": 7,
+          "total_items": 7,
+          "avg_points": 119.3,
+          "avg_comments": 39.4,
+          "max_points": 807
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "swarm",
+      "composite_score": 100.0,
+      "growth_class": "viral",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 1.0,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 227.8,
+          "avg_comments": 138.8,
+          "max_points": 693
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "AgenticSeek",
+      "composite_score": 90.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.8,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.8,
+          "total_hits": 6,
+          "total_items": 6,
+          "avg_points": 63.0,
+          "avg_comments": 18.0,
+          "max_points": 122
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "goose",
+      "composite_score": 90.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.8,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.8,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 65.7,
+          "avg_comments": 36.4,
+          "max_points": 380
+        },
+        "reddit": {
+          "items": 25
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn",
+        "chinese"
+      ]
+    },
+    {
+      "project": "haystack",
+      "composite_score": 90.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.8,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.8,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 78.2,
+          "avg_comments": 37.0,
+          "max_points": 546
+        },
+        "reddit": {
+          "items": 25
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "Aider",
+      "composite_score": 80.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.6,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.6,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 31.4,
+          "avg_comments": 14.5,
+          "max_points": 432
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn",
+        "chinese"
+      ]
+    },
+    {
+      "project": "CowAgent",
+      "composite_score": 80.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.6,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.6,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 28.5,
+          "avg_comments": 25.9,
+          "max_points": 519
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "HyperAgents",
+      "composite_score": 80.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.6,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.6,
+          "total_hits": 13,
+          "total_items": 13,
+          "avg_points": 20.8,
+          "avg_comments": 7.4,
+          "max_points": 234
+        },
+        "reddit": {
+          "items": 25
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "OpenHands",
+      "composite_score": 80.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.6,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.6,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 31.1,
+          "avg_comments": 11.6,
+          "max_points": 459
+        },
+        "reddit": {
+          "items": 25
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn",
+        "chinese",
+        "scholar"
+      ]
+    },
+    {
+      "project": "SuperAGI",
+      "composite_score": 80.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.6,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.6,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 34.5,
+          "avg_comments": 21.2,
+          "max_points": 254
+        },
+        "reddit": {
+          "items": 25
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "agent-skills",
+      "composite_score": 80.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.6,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.6,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 47.3,
+          "avg_comments": 20.1,
+          "max_points": 544
+        },
+        "reddit": {
+          "items": 25
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "camel",
+      "composite_score": 80.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.8
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.8,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 71.0,
+          "avg_comments": 45.8,
+          "max_points": 428
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "mastra",
+      "composite_score": 80.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.6,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.6,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 32.6,
+          "avg_comments": 10.9,
+          "max_points": 442
+        },
+        "reddit": {
+          "items": 25
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "Agent Zero",
+      "composite_score": 70.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 62,
+          "total_items": 62,
+          "avg_points": 7.7,
+          "avg_comments": 4.1,
+          "max_points": 166
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn",
+        "chinese",
+        "scholar"
+      ]
+    },
+    {
+      "project": "Google ADK",
+      "composite_score": 70.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 44,
+          "total_items": 44,
+          "avg_points": 7.4,
+          "avg_comments": 1.9,
+          "max_points": 147
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "OpenEvolve",
+      "composite_score": 70.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 25,
+          "total_items": 25,
+          "avg_points": 7.0,
+          "avg_comments": 1.2,
+          "max_points": 53
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "SWE-Agent",
+      "composite_score": 70.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 19.8,
+          "avg_comments": 8.0,
+          "max_points": 307
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "evolver",
+      "composite_score": 70.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 8.7,
+          "avg_comments": 4.5,
+          "max_points": 68
+        },
+        "reddit": {
+          "items": 25
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "Coze Studio",
+      "composite_score": 67.0,
+      "growth_class": "viral",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 1.0,
+        "reddit_engagement": 0.341
+      },
+      "platforms": {
+        "hn": {
+          "score": 1.0,
+          "total_hits": 51,
+          "total_items": 51,
+          "avg_points": 302.5,
+          "avg_comments": 148.9,
+          "max_points": 1608
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "EvoAgentX",
+      "composite_score": 60.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.2,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.2,
+          "total_hits": 5,
+          "total_items": 5,
+          "avg_points": 2.4,
+          "avg_comments": 1.0,
+          "max_points": 5
+        },
+        "reddit": {
+          "items": 25
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "LeRobot",
+      "composite_score": 60.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.6
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.6,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 30.0,
+          "avg_comments": 13.8,
+          "max_points": 580
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "MetaGPT",
+      "composite_score": 60.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.6
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.6,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 38.0,
+          "avg_comments": 9.4,
+          "max_points": 274
+        }
+      },
+      "data_sources": [
+        "hn",
+        "chinese"
+      ]
+    },
+    {
+      "project": "NeMo Guardrails",
+      "composite_score": 60.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.6
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.6,
+          "total_hits": 20,
+          "total_items": 20,
+          "avg_points": 40.0,
+          "avg_comments": 13.4,
+          "max_points": 672
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "Plandex",
+      "composite_score": 60.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.6
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.6,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 28.6,
+          "avg_comments": 15.4,
+          "max_points": 304
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "Roo Code",
+      "composite_score": 60.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.2,
+        "reddit_engagement": 1.0
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.2,
+          "total_hits": 79,
+          "total_items": 79,
+          "avg_points": 3.5,
+          "avg_comments": 1.5,
+          "max_points": 49
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "autogen",
+      "composite_score": 60.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.6
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.6,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 32.4,
+          "avg_comments": 7.3,
+          "max_points": 467
+        }
+      },
+      "data_sources": [
+        "hn",
+        "chinese"
+      ]
+    },
+    {
+      "project": "mcp-use",
+      "composite_score": 60.0,
+      "growth_class": "steady",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.6
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.6,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 31.8,
+          "avg_comments": 11.4,
+          "max_points": 773
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "elizaOS_eliza_stars",
+      "composite_score": 50.0,
+      "growth_class": "suspicious",
+      "suspicion_index": 10.0,
+      "dimensions": {
+        "github": 0.5
+      },
+      "platforms": {
+        "github": {
+          "score": 0.5,
+          "stars": 0,
+          "contributors": 0,
+          "forks_count": 0,
+          "fork_quality": 0.5,
+          "pr_merge_rate": 0.5,
+          "suspicion_index": 10.0,
+          "stars_per_contributor": null
+        }
+      },
+      "data_sources": [
+        "root"
+      ]
+    },
+    {
+      "project": "Mem0",
+      "composite_score": 47.9,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4,
+        "reddit_engagement": 0.559
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 11.2,
+          "avg_comments": 3.6,
+          "max_points": 201
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn",
+        "chinese",
+        "scholar"
+      ]
+    },
+    {
+      "project": "Memvid",
+      "composite_score": 45.2,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4,
+        "reddit_engagement": 0.504
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 59,
+          "total_items": 59,
+          "avg_points": 6.2,
+          "avg_comments": 2.3,
+          "max_points": 61
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "GenAI Agents",
+      "composite_score": 40.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 5.0,
+          "avg_comments": 1.4,
+          "max_points": 55
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "Google A2A",
+      "composite_score": 40.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 14.1,
+          "avg_comments": 5.9,
+          "max_points": 450
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "Open-AutoGLM",
+      "composite_score": 40.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 44,
+          "total_items": 44,
+          "avg_points": 10.6,
+          "avg_comments": 3.3,
+          "max_points": 153
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "Promptfoo",
+      "composite_score": 40.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 19.4,
+          "avg_comments": 9.8,
+          "max_points": 384
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "Reflexion",
+      "composite_score": 40.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 7.3,
+          "avg_comments": 5.4,
+          "max_points": 107
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "TextGrad",
+      "composite_score": 40.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 20,
+          "total_items": 20,
+          "avg_points": 5.5,
+          "avg_comments": 0.5,
+          "max_points": 32
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "PydanticAI",
+      "composite_score": 35.8,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4,
+        "reddit_engagement": 0.316
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 8.8,
+          "avg_comments": 2.0,
+          "max_points": 197
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "langgraph",
+      "composite_score": 34.6,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.4,
+        "reddit_engagement": 0.291
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.4,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 12.6,
+          "avg_comments": 3.1,
+          "max_points": 127
+        },
+        "reddit": {
+          "items": 25
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    },
+    {
+      "project": "Awesome-Self-Evolving-Agents",
+      "composite_score": 20.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.2
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.2,
+          "total_hits": 1,
+          "total_items": 1,
+          "avg_points": 2.0,
+          "avg_comments": 1.0,
+          "max_points": 2
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "agentscope",
+      "composite_score": 20.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.2
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.2,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 2.9,
+          "avg_comments": 0.4,
+          "max_points": 11
+        }
+      },
+      "data_sources": [
+        "hn"
+      ]
+    },
+    {
+      "project": "crewAI",
+      "composite_score": 20.0,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.2
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.2,
+          "total_hits": 40,
+          "total_items": 40,
+          "avg_points": 4.0,
+          "avg_comments": 1.7,
+          "max_points": 26
+        }
+      },
+      "data_sources": [
+        "hn",
+        "chinese"
+      ]
+    },
+    {
+      "project": "Cognee",
+      "composite_score": 12.4,
+      "growth_class": "organic",
+      "suspicion_index": null,
+      "dimensions": {
+        "hn_engagement": 0.2,
+        "reddit_engagement": 0.047
+      },
+      "platforms": {
+        "hn": {
+          "score": 0.2,
+          "total_hits": 80,
+          "total_items": 80,
+          "avg_points": 4.5,
+          "avg_comments": 1.4,
+          "max_points": 43
+        },
+        "reddit": {
+          "items": 50
+        }
+      },
+      "data_sources": [
+        "reddit",
+        "hn"
+      ]
+    }
+  ]
 }

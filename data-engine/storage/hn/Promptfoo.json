@@ -1,0 +1,736 @@
+{
+  "project": "Promptfoo",
+  "repo": "promptfoo/promptfoo",
+  "collected_at": "2026-05-22T11:05:38.648461+00:00",
+  "queries": [
+    "Promptfoo",
+    "promptfoo"
+  ],
+  "total_hits": 80,
+  "results": {
+    "Promptfoo": [
+      {
+        "objectID": "47312346",
+        "title": "Promptfoo Is Joining OpenAI",
+        "url": "https://www.promptfoo.dev/blog/promptfoo-joining-openai/",
+        "points": 28,
+        "num_comments": 5,
+        "author": "Areibman",
+        "created_at": "2026-03-09T17:35:30Z"
+      },
+      {
+        "objectID": "35807020",
+        "title": "Show HN: Promptfoo – CLI for testing & improving LLM prompt quality",
+        "url": "https://github.com/typpo/promptfoo",
+        "points": 14,
+        "num_comments": 5,
+        "author": "typpo",
+        "created_at": "2023-05-03T20:03:14Z"
+      },
+      {
+        "objectID": "47311833",
+        "title": "OpenAI to Acquire Promptfoo",
+        "url": "https://openai.com/index/openai-to-acquire-promptfoo/",
+        "points": 7,
+        "num_comments": 1,
+        "author": "rvz",
+        "created_at": "2026-03-09T17:03:52Z"
+      },
+      {
+        "objectID": "46006618",
+        "title": "How to replicate the Claude Code attack with Promptfoo",
+        "url": "https://www.promptfoo.dev/blog/claude-code-attack/",
+        "points": 6,
+        "num_comments": 0,
+        "author": "typpo",
+        "created_at": "2025-11-21T17:30:08Z"
+      },
+      {
+        "objectID": "47487235",
+        "title": "Show HN: AutoResearch with PromptFoo Is AutoPrompter",
+        "url": "https://github.com/gauravvij/autoprompter",
+        "points": 5,
+        "num_comments": 0,
+        "author": "dakshjain_1616",
+        "created_at": "2026-03-23T09:49:24Z"
+      },
+      {
+        "objectID": "46945277",
+        "title": "Promptfoo: Local LLM evals and red teaming",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 5,
+        "num_comments": 0,
+        "author": "tin7in",
+        "created_at": "2026-02-09T13:59:58Z"
+      },
+      {
+        "objectID": "43831691",
+        "title": "Simon Willison: Exploring Promptfoo",
+        "url": "https://simonwillison.net/2025/Apr/24/exploring-promptfoo/",
+        "points": 5,
+        "num_comments": 0,
+        "author": "recursive4",
+        "created_at": "2025-04-29T12:28:35Z"
+      },
+      {
+        "objectID": "41084332",
+        "title": "Why is promptfoo so popular?",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 4,
+        "num_comments": 3,
+        "author": "dabs",
+        "created_at": "2024-07-27T03:55:03Z"
+      },
+      {
+        "objectID": "47323527",
+        "title": "OpenAI Acquires Promptfoo",
+        "url": "https://openai.com/index/openai-to-acquire-promptfoo/",
+        "points": 3,
+        "num_comments": 1,
+        "author": "benban",
+        "created_at": "2026-03-10T14:13:05Z"
+      },
+      {
+        "objectID": "40971981",
+        "title": "Promptfoo/promptfoo: Test your prompts, agents, and RAGs",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 3,
+        "num_comments": 0,
+        "author": "swyx",
+        "created_at": "2024-07-15T22:23:47Z"
+      },
+      {
+        "objectID": "47412524",
+        "title": "Ask HN: With Promptfoo acquired by OpenAI, what are MCP devs using for testing?",
+        "url": "",
+        "points": 2,
+        "num_comments": 4,
+        "author": "warmcat",
+        "created_at": "2026-03-17T13:40:15Z"
+      },
+      {
+        "objectID": "47397426",
+        "title": "Promptfoo: Test your prompts, agents, and RAGs",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ahamez",
+        "created_at": "2026-03-16T11:00:18Z"
+      },
+      {
+        "objectID": "45978447",
+        "title": "How to replicate the Claude Code attack with Promptfoo",
+        "url": "https://www.promptfoo.dev/blog/claude-code-attack/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "mooreds",
+        "created_at": "2025-11-19T11:48:50Z"
+      },
+      {
+        "objectID": "44317371",
+        "title": "Promptfoo: Secure your AI from prompt to production",
+        "url": "https://www.promptfoo.dev/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "handfuloflight",
+        "created_at": "2025-06-19T10:52:31Z"
+      },
+      {
+        "objectID": "39386596",
+        "title": "Promptfoo: Test Your LLM App",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 2,
+        "num_comments": 0,
+        "author": "tin7in",
+        "created_at": "2024-02-15T18:42:49Z"
+      },
+      {
+        "objectID": "38710366",
+        "title": "Promptfoo – Testing and Evaluation for LLMs",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 2,
+        "num_comments": 0,
+        "author": "tin7in",
+        "created_at": "2023-12-20T16:24:57Z"
+      },
+      {
+        "objectID": "37455316",
+        "title": "GitHub – promptfoo/promptfoo: Test your prompts",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 2,
+        "num_comments": 0,
+        "author": "kiyanwang",
+        "created_at": "2023-09-10T12:42:27Z"
+      },
+      {
+        "objectID": "46779612",
+        "title": "Promptfoo Deployed Enterprise AI Security in One Week (2025)",
+        "url": "https://fusionauth.io/blog/promptfoo-case-study",
+        "points": 1,
+        "num_comments": 0,
+        "author": "mooreds",
+        "created_at": "2026-01-27T13:21:49Z"
+      },
+      {
+        "objectID": "46205287",
+        "title": "Promptfoo Deployed Enterprise AI Security in One Week",
+        "url": "https://fusionauth.io/blog/promptfoo-case-study",
+        "points": 1,
+        "num_comments": 0,
+        "author": "mooreds",
+        "created_at": "2025-12-09T14:31:46Z"
+      },
+      {
+        "objectID": "45304317",
+        "title": "Promptfoo Raises $18.4M Series A to Build the Definitive AI Security Stack",
+        "url": "https://www.promptfoo.dev/blog/series-a-announcement/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "swyx",
+        "created_at": "2025-09-19T17:36:31Z"
+      },
+      {
+        "objectID": "41528782",
+        "title": "Promptfoo: Test your LLM app locally",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 1,
+        "num_comments": 0,
+        "author": "thenameless7741",
+        "created_at": "2024-09-13T07:15:11Z"
+      },
+      {
+        "objectID": "38476038",
+        "title": "Is anyone using self hosted LLM day to day and training it like a new employee",
+        "url": "",
+        "points": 100,
+        "num_comments": 72,
+        "author": "reachableceo",
+        "created_at": "2023-11-30T17:14:56Z"
+      },
+      {
+        "objectID": "41182055",
+        "title": "Launch HN: Release (YC W20) – Orchestrate AI Infrastructure and Applications",
+        "url": "",
+        "points": 73,
+        "num_comments": 39,
+        "author": "tommy_mcclung",
+        "created_at": "2024-08-07T14:50:11Z"
+      },
+      {
+        "objectID": "44061414",
+        "title": "Show HN: Pi Co-pilot – Evaluation of AI apps made easy",
+        "url": "https://withpi.ai/",
+        "points": 34,
+        "num_comments": 8,
+        "author": "achintms",
+        "created_at": "2025-05-22T12:31:48Z"
+      },
+      {
+        "objectID": "40671686",
+        "title": "Show HN: Automated red teaming for your LLM app",
+        "url": "https://www.promptfoo.dev/docs/red-team/",
+        "points": 23,
+        "num_comments": 2,
+        "author": "typpo",
+        "created_at": "2024-06-13T16:29:19Z"
+      },
+      {
+        "objectID": "47458726",
+        "title": "Show HN: EvalsHub: Your AI is failing in production and you don't know it",
+        "url": "https://www.evalshub.ai",
+        "points": 4,
+        "num_comments": 1,
+        "author": "neilsharma425",
+        "created_at": "2026-03-20T18:34:53Z"
+      },
+      {
+        "objectID": "47256849",
+        "title": "Show HN: Open dataset of real-world LLM performance on Apple Silicon",
+        "url": "https://devpadapp.com/anubis-oss.html",
+        "points": 2,
+        "num_comments": 4,
+        "author": "uncSoft",
+        "created_at": "2026-03-05T02:44:11Z"
+      },
+      {
+        "objectID": "43396713",
+        "title": "Show HN: Prompt Engineering Studio – Toolkit for deploying AI prompts at scale",
+        "url": "",
+        "points": 2,
+        "num_comments": 4,
+        "author": "retrovrv",
+        "created_at": "2025-03-18T07:52:21Z"
+      },
+      {
+        "objectID": "47335647",
+        "title": "Show HN: AgentSign – Open-source zero trust engine for AI agents",
+        "url": "https://github.com/razashariff/agentsign",
+        "points": 2,
+        "num_comments": 1,
+        "author": "AskCarX",
+        "created_at": "2026-03-11T13:57:42Z"
+      },
+      {
+        "objectID": "47261814",
+        "title": "Show HN: MDMA – Markdown extension that makes LLM responses interactive",
+        "url": "https://github.com/MobileReality/mdma",
+        "points": 2,
+        "num_comments": 1,
+        "author": "gitsad",
+        "created_at": "2026-03-05T14:22:29Z"
+      },
+      {
+        "objectID": "44743909",
+        "title": "Show HN: Open-source self-hosted LLM comparison tool for your own prompt",
+        "url": "https://github.com/stashlabs/duelr",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ycsuck",
+        "created_at": "2025-07-31T09:31:33Z"
+      },
+      {
+        "objectID": "39913318",
+        "title": "Prompt Evaluations Hack",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ekusiadadus",
+        "created_at": "2024-04-03T03:25:25Z"
+      },
+      {
+        "objectID": "42858552",
+        "title": "Questions censored by DeepSeek",
+        "url": "https://www.promptfoo.dev/blog/deepseek-censorship/",
+        "points": 384,
+        "num_comments": 227,
+        "author": "typpo",
+        "created_at": "2025-01-28T21:54:36Z"
+      },
+      {
+        "objectID": "37082619",
+        "title": "How to benchmark Llama2 Uncensored vs. GPT-3.5 on your own inputs",
+        "url": "https://www.promptfoo.dev/docs/guides/llama2-uncensored-benchmark-ollama/",
+        "points": 16,
+        "num_comments": 0,
+        "author": "typpo",
+        "created_at": "2023-08-10T22:37:55Z"
+      },
+      {
+        "objectID": "47266286",
+        "title": "Found a CVSS 10.0 bypass in Hugging Face's model scanner. We open-sourced ours",
+        "url": "https://www.promptfoo.dev/blog/open-sourcing-modelaudit/",
+        "points": 10,
+        "num_comments": 1,
+        "author": "yashchhabria",
+        "created_at": "2026-03-05T19:41:29Z"
+      },
+      {
+        "objectID": "46302558",
+        "title": "Building a Security Scanner for LLM Apps",
+        "url": "https://www.promptfoo.dev/blog/building-a-security-scanner-for-llm-apps/",
+        "points": 7,
+        "num_comments": 3,
+        "author": "danenania",
+        "created_at": "2025-12-17T17:26:10Z"
+      },
+      {
+        "objectID": "45938654",
+        "title": "Will agents hack everything?",
+        "url": "https://www.promptfoo.dev/blog/will-agents-hack-everything/",
+        "points": 6,
+        "num_comments": 9,
+        "author": "danenania",
+        "created_at": "2025-11-15T16:44:30Z"
+      },
+      {
+        "objectID": "44688353",
+        "title": "Political-bias benchmark for Grok 4, GPT-4.1, Gemini 2.5 Pro and Claude Opus 4",
+        "url": "https://www.promptfoo.dev/blog/grok-4-political-bias/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "dangelosaurus",
+        "created_at": "2025-07-25T20:56:07Z"
+      },
+      {
+        "objectID": "37090944",
+        "title": "Llama 2 uncensored vs. GPT3.5 benchmarking",
+        "url": "https://www.promptfoo.dev/docs/guides/llama2-uncensored-benchmark-ollama/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "mchiang",
+        "created_at": "2023-08-11T17:00:23Z"
+      },
+      {
+        "objectID": "46205321",
+        "title": "Will Agents Hack Everything?",
+        "url": "https://www.promptfoo.dev/blog/will-agents-hack-everything/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "mooreds",
+        "created_at": "2025-12-09T14:35:10Z"
+      }
+    ],
+    "promptfoo": [
+      {
+        "objectID": "47312346",
+        "title": "Promptfoo Is Joining OpenAI",
+        "url": "https://www.promptfoo.dev/blog/promptfoo-joining-openai/",
+        "points": 28,
+        "num_comments": 5,
+        "author": "Areibman",
+        "created_at": "2026-03-09T17:35:30Z"
+      },
+      {
+        "objectID": "35807020",
+        "title": "Show HN: Promptfoo – CLI for testing & improving LLM prompt quality",
+        "url": "https://github.com/typpo/promptfoo",
+        "points": 14,
+        "num_comments": 5,
+        "author": "typpo",
+        "created_at": "2023-05-03T20:03:14Z"
+      },
+      {
+        "objectID": "47311833",
+        "title": "OpenAI to Acquire Promptfoo",
+        "url": "https://openai.com/index/openai-to-acquire-promptfoo/",
+        "points": 7,
+        "num_comments": 1,
+        "author": "rvz",
+        "created_at": "2026-03-09T17:03:52Z"
+      },
+      {
+        "objectID": "46006618",
+        "title": "How to replicate the Claude Code attack with Promptfoo",
+        "url": "https://www.promptfoo.dev/blog/claude-code-attack/",
+        "points": 6,
+        "num_comments": 0,
+        "author": "typpo",
+        "created_at": "2025-11-21T17:30:08Z"
+      },
+      {
+        "objectID": "47487235",
+        "title": "Show HN: AutoResearch with PromptFoo Is AutoPrompter",
+        "url": "https://github.com/gauravvij/autoprompter",
+        "points": 5,
+        "num_comments": 0,
+        "author": "dakshjain_1616",
+        "created_at": "2026-03-23T09:49:24Z"
+      },
+      {
+        "objectID": "46945277",
+        "title": "Promptfoo: Local LLM evals and red teaming",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 5,
+        "num_comments": 0,
+        "author": "tin7in",
+        "created_at": "2026-02-09T13:59:58Z"
+      },
+      {
+        "objectID": "43831691",
+        "title": "Simon Willison: Exploring Promptfoo",
+        "url": "https://simonwillison.net/2025/Apr/24/exploring-promptfoo/",
+        "points": 5,
+        "num_comments": 0,
+        "author": "recursive4",
+        "created_at": "2025-04-29T12:28:35Z"
+      },
+      {
+        "objectID": "41084332",
+        "title": "Why is promptfoo so popular?",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 4,
+        "num_comments": 3,
+        "author": "dabs",
+        "created_at": "2024-07-27T03:55:03Z"
+      },
+      {
+        "objectID": "47323527",
+        "title": "OpenAI Acquires Promptfoo",
+        "url": "https://openai.com/index/openai-to-acquire-promptfoo/",
+        "points": 3,
+        "num_comments": 1,
+        "author": "benban",
+        "created_at": "2026-03-10T14:13:05Z"
+      },
+      {
+        "objectID": "40971981",
+        "title": "Promptfoo/promptfoo: Test your prompts, agents, and RAGs",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 3,
+        "num_comments": 0,
+        "author": "swyx",
+        "created_at": "2024-07-15T22:23:47Z"
+      },
+      {
+        "objectID": "47412524",
+        "title": "Ask HN: With Promptfoo acquired by OpenAI, what are MCP devs using for testing?",
+        "url": "",
+        "points": 2,
+        "num_comments": 4,
+        "author": "warmcat",
+        "created_at": "2026-03-17T13:40:15Z"
+      },
+      {
+        "objectID": "47397426",
+        "title": "Promptfoo: Test your prompts, agents, and RAGs",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ahamez",
+        "created_at": "2026-03-16T11:00:18Z"
+      },
+      {
+        "objectID": "45978447",
+        "title": "How to replicate the Claude Code attack with Promptfoo",
+        "url": "https://www.promptfoo.dev/blog/claude-code-attack/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "mooreds",
+        "created_at": "2025-11-19T11:48:50Z"
+      },
+      {
+        "objectID": "44317371",
+        "title": "Promptfoo: Secure your AI from prompt to production",
+        "url": "https://www.promptfoo.dev/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "handfuloflight",
+        "created_at": "2025-06-19T10:52:31Z"
+      },
+      {
+        "objectID": "39386596",
+        "title": "Promptfoo: Test Your LLM App",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 2,
+        "num_comments": 0,
+        "author": "tin7in",
+        "created_at": "2024-02-15T18:42:49Z"
+      },
+      {
+        "objectID": "38710366",
+        "title": "Promptfoo – Testing and Evaluation for LLMs",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 2,
+        "num_comments": 0,
+        "author": "tin7in",
+        "created_at": "2023-12-20T16:24:57Z"
+      },
+      {
+        "objectID": "37455316",
+        "title": "GitHub – promptfoo/promptfoo: Test your prompts",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 2,
+        "num_comments": 0,
+        "author": "kiyanwang",
+        "created_at": "2023-09-10T12:42:27Z"
+      },
+      {
+        "objectID": "46779612",
+        "title": "Promptfoo Deployed Enterprise AI Security in One Week (2025)",
+        "url": "https://fusionauth.io/blog/promptfoo-case-study",
+        "points": 1,
+        "num_comments": 0,
+        "author": "mooreds",
+        "created_at": "2026-01-27T13:21:49Z"
+      },
+      {
+        "objectID": "46205287",
+        "title": "Promptfoo Deployed Enterprise AI Security in One Week",
+        "url": "https://fusionauth.io/blog/promptfoo-case-study",
+        "points": 1,
+        "num_comments": 0,
+        "author": "mooreds",
+        "created_at": "2025-12-09T14:31:46Z"
+      },
+      {
+        "objectID": "45304317",
+        "title": "Promptfoo Raises $18.4M Series A to Build the Definitive AI Security Stack",
+        "url": "https://www.promptfoo.dev/blog/series-a-announcement/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "swyx",
+        "created_at": "2025-09-19T17:36:31Z"
+      },
+      {
+        "objectID": "41528782",
+        "title": "Promptfoo: Test your LLM app locally",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "points": 1,
+        "num_comments": 0,
+        "author": "thenameless7741",
+        "created_at": "2024-09-13T07:15:11Z"
+      },
+      {
+        "objectID": "38476038",
+        "title": "Is anyone using self hosted LLM day to day and training it like a new employee",
+        "url": "",
+        "points": 100,
+        "num_comments": 72,
+        "author": "reachableceo",
+        "created_at": "2023-11-30T17:14:56Z"
+      },
+      {
+        "objectID": "41182055",
+        "title": "Launch HN: Release (YC W20) – Orchestrate AI Infrastructure and Applications",
+        "url": "",
+        "points": 73,
+        "num_comments": 39,
+        "author": "tommy_mcclung",
+        "created_at": "2024-08-07T14:50:11Z"
+      },
+      {
+        "objectID": "44061414",
+        "title": "Show HN: Pi Co-pilot – Evaluation of AI apps made easy",
+        "url": "https://withpi.ai/",
+        "points": 34,
+        "num_comments": 8,
+        "author": "achintms",
+        "created_at": "2025-05-22T12:31:48Z"
+      },
+      {
+        "objectID": "40671686",
+        "title": "Show HN: Automated red teaming for your LLM app",
+        "url": "https://www.promptfoo.dev/docs/red-team/",
+        "points": 23,
+        "num_comments": 2,
+        "author": "typpo",
+        "created_at": "2024-06-13T16:29:19Z"
+      },
+      {
+        "objectID": "47458726",
+        "title": "Show HN: EvalsHub: Your AI is failing in production and you don't know it",
+        "url": "https://www.evalshub.ai",
+        "points": 4,
+        "num_comments": 1,
+        "author": "neilsharma425",
+        "created_at": "2026-03-20T18:34:53Z"
+      },
+      {
+        "objectID": "47256849",
+        "title": "Show HN: Open dataset of real-world LLM performance on Apple Silicon",
+        "url": "https://devpadapp.com/anubis-oss.html",
+        "points": 2,
+        "num_comments": 4,
+        "author": "uncSoft",
+        "created_at": "2026-03-05T02:44:11Z"
+      },
+      {
+        "objectID": "43396713",
+        "title": "Show HN: Prompt Engineering Studio – Toolkit for deploying AI prompts at scale",
+        "url": "",
+        "points": 2,
+        "num_comments": 4,
+        "author": "retrovrv",
+        "created_at": "2025-03-18T07:52:21Z"
+      },
+      {
+        "objectID": "47335647",
+        "title": "Show HN: AgentSign – Open-source zero trust engine for AI agents",
+        "url": "https://github.com/razashariff/agentsign",
+        "points": 2,
+        "num_comments": 1,
+        "author": "AskCarX",
+        "created_at": "2026-03-11T13:57:42Z"
+      },
+      {
+        "objectID": "47261814",
+        "title": "Show HN: MDMA – Markdown extension that makes LLM responses interactive",
+        "url": "https://github.com/MobileReality/mdma",
+        "points": 2,
+        "num_comments": 1,
+        "author": "gitsad",
+        "created_at": "2026-03-05T14:22:29Z"
+      },
+      {
+        "objectID": "44743909",
+        "title": "Show HN: Open-source self-hosted LLM comparison tool for your own prompt",
+        "url": "https://github.com/stashlabs/duelr",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ycsuck",
+        "created_at": "2025-07-31T09:31:33Z"
+      },
+      {
+        "objectID": "39913318",
+        "title": "Prompt Evaluations Hack",
+        "url": "",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ekusiadadus",
+        "created_at": "2024-04-03T03:25:25Z"
+      },
+      {
+        "objectID": "42858552",
+        "title": "Questions censored by DeepSeek",
+        "url": "https://www.promptfoo.dev/blog/deepseek-censorship/",
+        "points": 384,
+        "num_comments": 227,
+        "author": "typpo",
+        "created_at": "2025-01-28T21:54:36Z"
+      },
+      {
+        "objectID": "37082619",
+        "title": "How to benchmark Llama2 Uncensored vs. GPT-3.5 on your own inputs",
+        "url": "https://www.promptfoo.dev/docs/guides/llama2-uncensored-benchmark-ollama/",
+        "points": 16,
+        "num_comments": 0,
+        "author": "typpo",
+        "created_at": "2023-08-10T22:37:55Z"
+      },
+      {
+        "objectID": "47266286",
+        "title": "Found a CVSS 10.0 bypass in Hugging Face's model scanner. We open-sourced ours",
+        "url": "https://www.promptfoo.dev/blog/open-sourcing-modelaudit/",
+        "points": 10,
+        "num_comments": 1,
+        "author": "yashchhabria",
+        "created_at": "2026-03-05T19:41:29Z"
+      },
+      {
+        "objectID": "46302558",
+        "title": "Building a Security Scanner for LLM Apps",
+        "url": "https://www.promptfoo.dev/blog/building-a-security-scanner-for-llm-apps/",
+        "points": 7,
+        "num_comments": 3,
+        "author": "danenania",
+        "created_at": "2025-12-17T17:26:10Z"
+      },
+      {
+        "objectID": "45938654",
+        "title": "Will agents hack everything?",
+        "url": "https://www.promptfoo.dev/blog/will-agents-hack-everything/",
+        "points": 6,
+        "num_comments": 9,
+        "author": "danenania",
+        "created_at": "2025-11-15T16:44:30Z"
+      },
+      {
+        "objectID": "44688353",
+        "title": "Political-bias benchmark for Grok 4, GPT-4.1, Gemini 2.5 Pro and Claude Opus 4",
+        "url": "https://www.promptfoo.dev/blog/grok-4-political-bias/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "dangelosaurus",
+        "created_at": "2025-07-25T20:56:07Z"
+      },
+      {
+        "objectID": "37090944",
+        "title": "Llama 2 uncensored vs. GPT3.5 benchmarking",
+        "url": "https://www.promptfoo.dev/docs/guides/llama2-uncensored-benchmark-ollama/",
+        "points": 3,
+        "num_comments": 0,
+        "author": "mchiang",
+        "created_at": "2023-08-11T17:00:23Z"
+      },
+      {
+        "objectID": "46205321",
+        "title": "Will Agents Hack Everything?",
+        "url": "https://www.promptfoo.dev/blog/will-agents-hack-everything/",
+        "points": 2,
+        "num_comments": 0,
+        "author": "mooreds",
+        "created_at": "2025-12-09T14:35:10Z"
+      }
+    ]
+  }
+}

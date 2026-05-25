@@ -1,0 +1,264 @@
+{
+  "project": "mastra",
+  "repo": "mastra-ai/mastra",
+  "collected_at": "2026-05-22T11:14:06.536085+00:00",
+  "queries": [
+    "mastra",
+    "mastra"
+  ],
+  "total_posts": 25,
+  "results": {
+    "mastra": [
+      {
+        "id": "1nk56kn",
+        "subreddit": "LangChain",
+        "title": "LangChain or Mastra for a faster TypeScript based AI platform?",
+        "score": 4,
+        "num_comments": 46,
+        "author": "Fun_Equal_960",
+        "url": "https://reddit.com/r/LangChain/comments/1nk56kn/langchain_or_mastra_for_a_faster_typescript_based/",
+        "created_utc": 1758193274.0
+      },
+      {
+        "id": "1n34fmh",
+        "subreddit": "mastraai",
+        "title": "[rant warning]: why is it so hard to like Mastra",
+        "score": 6,
+        "num_comments": 16,
+        "author": "jakubriedl",
+        "url": "https://reddit.com/r/mastraai/comments/1n34fmh/rant_warning_why_is_it_so_hard_to_like_mastra/",
+        "created_utc": 1756465616.0
+      },
+      {
+        "id": "1o839eg",
+        "subreddit": "AI_Agents",
+        "title": "Should I start with langgraph or mastra if I want to build real AI agents?",
+        "score": 4,
+        "num_comments": 8,
+        "author": "Micki_SF",
+        "url": "https://reddit.com/r/AI_Agents/comments/1o839eg/should_i_start_with_langgraph_or_mastra_if_i_want/",
+        "created_utc": 1760612962.0
+      },
+      {
+        "id": "1rcxt4e",
+        "subreddit": "mastraai",
+        "title": "Announcing Mastra Code: A coding agent that never compacts",
+        "score": 11,
+        "num_comments": 8,
+        "author": "mastra_ai",
+        "url": "https://reddit.com/r/mastraai/comments/1rcxt4e/announcing_mastra_code_a_coding_agent_that_never/",
+        "created_utc": 1771889577.0
+      },
+      {
+        "id": "1jsjz2y",
+        "subreddit": "mastraai",
+        "title": "What do we think about Mastra Ai?",
+        "score": 6,
+        "num_comments": 6,
+        "author": "Rekar_Botany",
+        "url": "https://reddit.com/r/mastraai/comments/1jsjz2y/what_do_we_think_about_mastra_ai/",
+        "created_utc": 1743906448.0
+      },
+      {
+        "id": "1sxygub",
+        "subreddit": "LangChain",
+        "title": "spent 3 months testing agent frameworks",
+        "score": 5,
+        "num_comments": 2,
+        "author": "Turbulent-Pay7073",
+        "url": "https://reddit.com/r/LangChain/comments/1sxygub/spent_3_months_testing_agent_frameworks/",
+        "created_utc": 1777375228.0
+      },
+      {
+        "id": "1rnc2u9",
+        "subreddit": "LangChain",
+        "title": "Comprehensive comparison of every AI agent framework in 2026 — LangChain, LangGraph, CrewAI, AutoGen, Mastra, DeerFlow, and 20+ more",
+        "score": 24,
+        "num_comments": 10,
+        "author": "Caramaschi",
+        "url": "https://reddit.com/r/LangChain/comments/1rnc2u9/comprehensive_comparison_of_every_ai_agent/",
+        "created_utc": 1772895662.0
+      },
+      {
+        "id": "1ozlibr",
+        "subreddit": "estudacom",
+        "title": "Oi, sou Milena Mastra, estudante de Medicina na UFRJ, tendo passado em 13º e acertado 160 de 180 das questões do ENEM. AMA!",
+        "score": 578,
+        "num_comments": 227,
+        "author": "milenamastra",
+        "url": "https://reddit.com/r/estudacom/comments/1ozlibr/oi_sou_milena_mastra_estudante_de_medicina_na/",
+        "created_utc": 1763398471.0
+      },
+      {
+        "id": "1pfsjuk",
+        "subreddit": "nextjs",
+        "title": "T3 Chat and Mastra Cloud move off of Nextjs",
+        "score": 523,
+        "num_comments": 176,
+        "author": "thehashimwarren",
+        "url": "https://reddit.com/r/nextjs/comments/1pfsjuk/t3_chat_and_mastra_cloud_move_off_of_nextjs/",
+        "created_utc": 1765036548.0
+      },
+      {
+        "id": "1tf9391",
+        "subreddit": "TheBoys",
+        "title": "I decided to rewatch S1E1, and I regret it",
+        "score": 4563,
+        "num_comments": 285,
+        "author": "LiraelNix",
+        "url": "https://reddit.com/r/TheBoys/comments/1tf9391/i_decided_to_rewatch_s1e1_and_i_regret_it/",
+        "created_utc": 1778974655.0
+      },
+      {
+        "id": "162eoxc",
+        "subreddit": "RepublicaArgentina",
+        "title": "Para los que estan a favor de la destrucción INCAA, les presento entre otras tantas obras mastras ''Camionerxs'', ''Teta y metralleta''... Ah y como olvidarnos de la obra que emociono a Spielberg ''Una serie documental sobre el cantante L-Gante''.",
+        "score": 82,
+        "num_comments": 254,
+        "author": "MasiTheDev",
+        "url": "https://reddit.com/r/RepublicaArgentina/comments/162eoxc/para_los_que_estan_a_favor_de_la_destrucción/",
+        "created_utc": 1693104949.0
+      },
+      {
+        "id": "1nz8z7u",
+        "subreddit": "AI_Agents",
+        "title": "Rumor: OpenAI will release \"Agent Builder\" an alternative to Langchain and Mastra AI",
+        "score": 59,
+        "num_comments": 41,
+        "author": "thehashimwarren",
+        "url": "https://reddit.com/r/AI_Agents/comments/1nz8z7u/rumor_openai_will_release_agent_builder_an/",
+        "created_utc": 1759722851.0
+      },
+      {
+        "id": "1sm0j90",
+        "subreddit": "filmcameras",
+        "title": "How to set iso on mastra v35",
+        "score": 10,
+        "num_comments": 10,
+        "author": "No-Signature6735",
+        "url": "https://reddit.com/r/filmcameras/comments/1sm0j90/how_to_set_iso_on_mastra_v35/",
+        "created_utc": 1776243510.0
+      },
+      {
+        "id": "1thitic",
+        "subreddit": "AI_Agents",
+        "title": "Mastra AI vs LangGraph/LangChain - What's the way forward?",
+        "score": 2,
+        "num_comments": 3,
+        "author": "jkwok678",
+        "url": "https://reddit.com/r/AI_Agents/comments/1thitic/mastra_ai_vs_langgraphlangchain_whats_the_way/",
+        "created_utc": 1779186622.0
+      },
+      {
+        "id": "1o02v8o",
+        "subreddit": "sanfrancisco",
+        "title": "Whoever left 100 copies of your AI book....",
+        "score": 1109,
+        "num_comments": 255,
+        "author": "deadmamajamma",
+        "url": "https://reddit.com/r/sanfrancisco/comments/1o02v8o/whoever_left_100_copies_of_your_ai_book/",
+        "created_utc": 1759804186.0
+      },
+      {
+        "id": "1os6ab5",
+        "subreddit": "tequila",
+        "title": "Whats everyone's take on the mijenta blanco mastra selection n01",
+        "score": 43,
+        "num_comments": 21,
+        "author": "No_Flounder_5632",
+        "url": "https://reddit.com/r/tequila/comments/1os6ab5/whats_everyones_take_on_the_mijenta_blanco_mastra/",
+        "created_utc": 1762651303.0
+      },
+      {
+        "id": "1t1z0b0",
+        "subreddit": "coolgithubprojects",
+        "title": "AgentOS: open-source TypeScript AI agents that remember, adapt, and spawn new tools. 85.6% LongMemEval-S, 1% above Mastra and 0.4% behind Emergence.ai",
+        "score": 0,
+        "num_comments": 3,
+        "author": "Business-Question-20",
+        "url": "https://reddit.com/r/coolgithubprojects/comments/1t1z0b0/agentos_opensource_typescript_ai_agents_that/",
+        "created_utc": 1777749436.0
+      },
+      {
+        "id": "1t85lf4",
+        "subreddit": "LovingOpenSourceAI",
+        "title": "\"Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack. It includes everything you need to go from early prototypes to production-ready applications.\" ➡️ Is Mastra the cleanest TS agent stack?",
+        "score": 2,
+        "num_comments": 1,
+        "author": "Koala_Confused",
+        "url": "https://reddit.com/r/LovingOpenSourceAI/comments/1t85lf4/mastra_is_a_framework_for_building_aipowered/",
+        "created_utc": 1778334702.0
+      },
+      {
+        "id": "1t85py0",
+        "subreddit": "LovingAIAgents",
+        "title": "\"Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack. It includes everything you need to go from early prototypes to production-ready applications.\" ➡️ Would you build agents in TypeScript?",
+        "score": 7,
+        "num_comments": 0,
+        "author": "Koala_Confused",
+        "url": "https://reddit.com/r/LovingAIAgents/comments/1t85py0/mastra_is_a_framework_for_building_aipowered/",
+        "created_utc": 1778335020.0
+      },
+      {
+        "id": "1t3wotb",
+        "subreddit": "ai_coder",
+        "title": "The TypeScript AI Framework - Mastra",
+        "score": 1,
+        "num_comments": 1,
+        "author": "fagnerbrack",
+        "url": "https://reddit.com/r/ai_coder/comments/1t3wotb/the_typescript_ai_framework_mastra/",
+        "created_utc": 1777933189.0
+      },
+      {
+        "id": "1t2z7zq",
+        "subreddit": "softwarecrafters",
+        "title": "The TypeScript AI Framework - Mastra",
+        "score": 1,
+        "num_comments": 1,
+        "author": "fagnerbrack",
+        "url": "https://reddit.com/r/softwarecrafters/comments/1t2z7zq/the_typescript_ai_framework_mastra/",
+        "created_utc": 1777846376.0
+      },
+      {
+        "id": "1sx3hav",
+        "subreddit": "carros",
+        "title": "Silencioso mastra é bom?",
+        "score": 1,
+        "num_comments": 0,
+        "author": "SpiritualFact4554",
+        "url": "https://reddit.com/r/carros/comments/1sx3hav/silencioso_mastra_é_bom/",
+        "created_utc": 1777295989.0
+      },
+      {
+        "id": "1su2yzh",
+        "subreddit": "mastraai",
+        "title": "Multi-turn conversation testing for Mastra Agents Updates",
+        "score": 1,
+        "num_comments": 0,
+        "author": "Potential_Half_3788",
+        "url": "https://reddit.com/r/mastraai/comments/1su2yzh/multiturn_conversation_testing_for_mastra_agents/",
+        "created_utc": 1776997887.0
+      },
+      {
+        "id": "1s61fg3",
+        "subreddit": "bayarea",
+        "title": "Agents and Money - meetup with swyx, Notion, Mastra",
+        "score": 0,
+        "num_comments": 2,
+        "author": "tsriram",
+        "url": "https://reddit.com/r/bayarea/comments/1s61fg3/agents_and_money_meetup_with_swyx_notion_mastra/",
+        "created_utc": 1774707142.0
+      },
+      {
+        "id": "1sgrakd",
+        "subreddit": "MachineLearningAndAI",
+        "title": "Mastra AI — The Modern Framework for Building Production-Ready AI Agents",
+        "score": 2,
+        "num_comments": 0,
+        "author": "techlatest_net",
+        "url": "https://reddit.com/r/MachineLearningAndAI/comments/1sgrakd/mastra_ai_the_modern_framework_for_building/",
+        "created_utc": 1775745095.0
+      }
+    ]
+  }
+}

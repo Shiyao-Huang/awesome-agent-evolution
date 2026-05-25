@@ -1,0 +1,374 @@
+{
+  "project": "swarm",
+  "repo": "openai/swarm",
+  "collected_at": "2026-05-22T11:04:56.449143+00:00",
+  "queries": [
+    "swarm",
+    "swarm"
+  ],
+  "total_hits": 40,
+  "results": {
+    "swarm": [
+      {
+        "objectID": "45684934",
+        "title": "Armed police swarm student after AI mistakes bag of Doritos for a weapon",
+        "url": "https://www.dexerto.com/entertainment/armed-police-swarm-student-after-ai-mistakes-bag-of-doritos-for-a-weapon-3273512/",
+        "points": 693,
+        "num_comments": 436,
+        "author": "antongribok",
+        "created_at": "2025-10-23T18:09:37Z"
+      },
+      {
+        "objectID": "46743908",
+        "title": "Claude Code's new hidden feature: Swarms",
+        "url": "https://twitter.com/NicerInPerson/status/2014989679796347375",
+        "points": 521,
+        "num_comments": 335,
+        "author": "AffableSpatula",
+        "created_at": "2026-01-24T14:35:47Z"
+      },
+      {
+        "objectID": "29513547",
+        "title": "Show HN: Decentralized, Mutable, Serverless Torrent Swarm Websites",
+        "url": "https://github.com/publiusfederalist/federalist",
+        "points": 433,
+        "num_comments": 186,
+        "author": "publiush",
+        "created_at": "2021-12-10T18:26:37Z"
+      },
+      {
+        "objectID": "8699957",
+        "title": "Announcing Docker Machine, Swarm, and Compose for Orchestrating Distributed Apps",
+        "url": "http://blog.docker.com/2014/12/announcing-docker-machine-swarm-and-compose-for-orchestrating-distributed-apps",
+        "points": 370,
+        "num_comments": 189,
+        "author": "KenCochrane",
+        "created_at": "2014-12-04T16:16:26Z"
+      },
+      {
+        "objectID": "2109832",
+        "title": "Watch a swarm of flying robotic drones construct a tiny building",
+        "url": "http://www.botjunkie.com/2011/01/14/autonomous-quadrotor-teams-may-build-your-next-house/",
+        "points": 357,
+        "num_comments": 78,
+        "author": "coffee",
+        "created_at": "2011-01-16T18:24:58Z"
+      },
+      {
+        "objectID": "10503603",
+        "title": "Announcing Docker 1.9: Production-Ready Swarm and Multi-Host Networking",
+        "url": "http://blog.docker.com/2015/11/docker-1-9-production-ready-swarm-multi-host-networking/",
+        "points": 311,
+        "num_comments": 79,
+        "author": "ah3rz",
+        "created_at": "2015-11-03T23:52:32Z"
+      },
+      {
+        "objectID": "13655629",
+        "title": "The Basics: Kubernetes, Mesosphere, and Docker Swarm",
+        "url": "https://insights.hpe.com/content/hpe-nxt/en/articles/2017/02/the-basics-explaining-kubernetes-mesosphere-and-docker-swarm.html",
+        "points": 301,
+        "num_comments": 96,
+        "author": "CrankyBear",
+        "created_at": "2017-02-15T21:44:21Z"
+      },
+      {
+        "objectID": "26563090",
+        "title": "Multiple US Navy destroyers swarmed by mysterious 'drones' off California coast",
+        "url": "https://www.thedrive.com/the-war-zone/39913/multiple-destroyers-were-swarmed-by-mysterious-drones-off-california-over-numerous-nights?xid=twittershare",
+        "points": 299,
+        "num_comments": 261,
+        "author": "SEJeff",
+        "created_at": "2021-03-24T03:01:52Z"
+      },
+      {
+        "objectID": "40407228",
+        "title": "Swarming Proxima Centauri: Picospacecraft Swarms over Interstellar Distances",
+        "url": "https://astrobiology.com/2024/05/swarming-proxima-centauri-coherent-picospacecraft-swarms-over-interstellar-distances.html",
+        "points": 279,
+        "num_comments": 140,
+        "author": "Brajeshwar",
+        "created_at": "2024-05-19T14:33:10Z"
+      },
+      {
+        "objectID": "41815173",
+        "title": "Swarm, a new agent framework by OpenAI",
+        "url": "https://github.com/openai/swarm",
+        "points": 258,
+        "num_comments": 106,
+        "author": "mnk47",
+        "created_at": "2024-10-12T00:05:50Z"
+      },
+      {
+        "objectID": "16055313",
+        "title": "A swarm of submarine drones will scour the depths for MH370",
+        "url": "https://www.economist.com/news/science-and-technology/21733399-swarm-submarine-drones-will-scour-depths-plane-fantastical-ship",
+        "points": 246,
+        "num_comments": 87,
+        "author": "privong",
+        "created_at": "2018-01-02T20:31:06Z"
+      },
+      {
+        "objectID": "23335756",
+        "title": "Swarm satellites probe weakening of Earth’s magnetic field",
+        "url": "https://www.esa.int/Applications/Observing_the_Earth/Swarm/Swarm_probes_weakening_of_Earth_s_magnetic_field",
+        "points": 233,
+        "num_comments": 88,
+        "author": "throw0101a",
+        "created_at": "2020-05-28T10:40:34Z"
+      },
+      {
+        "objectID": "45399863",
+        "title": "High-power microwave defeats drone swarm",
+        "url": "https://www.epirusinc.com/press-releases/epirus-leonidas-high-power-microwave-defeats-49-drone-swarm-100-of-drones-flown-at-live-fire-demonstration",
+        "points": 231,
+        "num_comments": 171,
+        "author": "nis0s",
+        "created_at": "2025-09-27T22:25:24Z"
+      },
+      {
+        "objectID": "33455334",
+        "title": "Swarm – Low cost, global satellite connectivity for IoT",
+        "url": "https://swarm.space/",
+        "points": 230,
+        "num_comments": 156,
+        "author": "jsmorph",
+        "created_at": "2022-11-03T18:31:57Z"
+      },
+      {
+        "objectID": "18733048",
+        "title": "FCC fines Swarm $900K for unauthorized satellite launch",
+        "url": "https://reuters.com/article/amp/idUSKCN1OJ2WT",
+        "points": 223,
+        "num_comments": 222,
+        "author": "daegloe",
+        "created_at": "2018-12-21T13:05:03Z"
+      },
+      {
+        "objectID": "39855285",
+        "title": "Edgar, build a Dyson swarm",
+        "url": "https://playedgar.netlify.app/",
+        "points": 222,
+        "num_comments": 119,
+        "author": "whb101",
+        "created_at": "2024-03-28T18:06:55Z"
+      },
+      {
+        "objectID": "27894318",
+        "title": "Astronomers push for global debate on giant satellite swarms",
+        "url": "https://www.nature.com/articles/d41586-021-01954-4",
+        "points": 211,
+        "num_comments": 292,
+        "author": "pseudolus",
+        "created_at": "2021-07-20T14:40:55Z"
+      },
+      {
+        "objectID": "1644915",
+        "title": "Swarmation: like musical chairs for pixels",
+        "url": "http://swarmation.com/",
+        "points": 208,
+        "num_comments": 73,
+        "author": "mcantelon",
+        "created_at": "2010-08-29T23:53:55Z"
+      },
+      {
+        "objectID": "10438273",
+        "title": "Swarm vs. Fleet vs. Kubernetes vs. Mesos",
+        "url": "http://radar.oreilly.com/2015/10/swarm-v-fleet-v-kubernetes-v-mesos.html",
+        "points": 205,
+        "num_comments": 83,
+        "author": "amouat",
+        "created_at": "2015-10-23T13:02:10Z"
+      },
+      {
+        "objectID": "19878132",
+        "title": "Swarm of bees follow car for over 24 hours (2016)",
+        "url": "https://www.telegraph.co.uk/news/2016/05/24/swarm-of-bees-follow-grandmothers-car-for-over-24-hours-attempti/",
+        "points": 191,
+        "num_comments": 53,
+        "author": "howard941",
+        "created_at": "2019-05-10T14:37:08Z"
+      },
+      {
+        "objectID": "47270807",
+        "title": "Show HN: Swarm – Program a colony of 200 ants using a custom assembly language",
+        "url": "https://dev.moment.com/",
+        "points": 190,
+        "num_comments": 76,
+        "author": "armandhammer10",
+        "created_at": "2026-03-06T04:15:40Z"
+      },
+      {
+        "objectID": "22073796",
+        "title": "Incident: Ethiopian B737 at Dire Dawa on Jan 9th, swarm of grasshoppers",
+        "url": "https://avherald.com/h?article=4d1de8cc&opt=1",
+        "points": 188,
+        "num_comments": 85,
+        "author": "mhandley",
+        "created_at": "2020-01-17T11:34:24Z"
+      },
+      {
+        "objectID": "3657066",
+        "title": "Aerial robots swarm the stage at TED [video]",
+        "url": "http://arstechnica.com/science/news/2012/03/robots-swarm-the-stage-at-ted.ars?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+arstechnica%2Findex+%28Ars+Technica+-+Featured+Content%29",
+        "points": 179,
+        "num_comments": 41,
+        "author": "3lit3H4ck3r",
+        "created_at": "2012-03-02T16:10:03Z"
+      },
+      {
+        "objectID": "23270193",
+        "title": "Out-of-Sync ‘Loners’ May Secretly Protect Orderly Swarms",
+        "url": "https://www.quantamagazine.org/out-of-sync-loners-may-secretly-protect-orderly-swarms-20200521/",
+        "points": 174,
+        "num_comments": 36,
+        "author": "pseudolus",
+        "created_at": "2020-05-22T09:32:04Z"
+      },
+      {
+        "objectID": "27314922",
+        "title": "Radar data confirms: USS Omaha was surrounded by swarm of UFOs",
+        "url": "https://www.mysterywire.com/ufo/ufos-swarm-uss-omaha/",
+        "points": 171,
+        "num_comments": 317,
+        "author": "graderjs",
+        "created_at": "2021-05-28T13:10:50Z"
+      },
+      {
+        "objectID": "36005787",
+        "title": "US Air Force shoots down drone swarm with THOR microwave weapon",
+        "url": "https://www.thedefensepost.com/2023/05/18/us-drone-swarm-thor/",
+        "points": 170,
+        "num_comments": 246,
+        "author": "MR4D",
+        "created_at": "2023-05-19T19:18:53Z"
+      },
+      {
+        "objectID": "3553806",
+        "title": "A swarm of micro-quadcopters",
+        "url": "http://hackaday.com/2012/02/03/dog-pod-grid-one-step-closer-to-reality/",
+        "points": 167,
+        "num_comments": 42,
+        "author": "m_for_monkey",
+        "created_at": "2012-02-05T10:45:27Z"
+      },
+      {
+        "objectID": "8453036",
+        "title": "Swarm.js and React – Real-time, offline-ready web apps",
+        "url": "http://swarmjs.github.io/articles/todomvc/",
+        "points": 162,
+        "num_comments": 44,
+        "author": "danabramov",
+        "created_at": "2014-10-14T12:18:56Z"
+      },
+      {
+        "objectID": "39738547",
+        "title": "Mysterious Drones Swarmed Langley AFB for Weeks",
+        "url": "https://www.twz.com/air/mysterious-drones-swarmed-langley-afb-for-weeks",
+        "points": 159,
+        "num_comments": 105,
+        "author": "peutetre",
+        "created_at": "2024-03-17T22:13:38Z"
+      },
+      {
+        "objectID": "23423240",
+        "title": "The case for declaring armed and fully autonomous drone swarms as WMD",
+        "url": "https://mwi.usma.edu/swarms-mass-destruction-case-declaring-armed-fully-autonomous-drone-swarms-wmd/",
+        "points": 154,
+        "num_comments": 106,
+        "author": "atdrummond",
+        "created_at": "2020-06-04T23:28:36Z"
+      },
+      {
+        "objectID": "32559912",
+        "title": "Military drone swarms and how to combat them",
+        "url": "https://smallwarsjournal.com/jrnl/art/military-drone-swarms-and-options-combat-them",
+        "points": 144,
+        "num_comments": 229,
+        "author": "Gaishan",
+        "created_at": "2022-08-23T02:34:17Z"
+      },
+      {
+        "objectID": "11258671",
+        "title": "Veil of secrecy lifted on Pentagon office planning micro-drone swarms",
+        "url": "https://www.washingtonpost.com/news/checkpoint/wp/2016/03/08/inside-the-secretive-pentagon-office-planning-skyborg-fighters-and-drone-swarms/",
+        "points": 144,
+        "num_comments": 150,
+        "author": "wyclif",
+        "created_at": "2016-03-10T12:01:01Z"
+      },
+      {
+        "objectID": "7658551",
+        "title": "Ants swarm like brains think",
+        "url": "http://nautil.us/issue/12/feedback/ants-swarm-like-brains-think",
+        "points": 144,
+        "num_comments": 39,
+        "author": "dang",
+        "created_at": "2014-04-28T06:48:27Z"
+      },
+      {
+        "objectID": "16992058",
+        "title": "A Criminal Gang Used a Drone Swarm to Obstruct an FBI Hostage Raid",
+        "url": "https://www.defenseone.com/technology/2018/05/criminal-gang-used-drone-swarm-obstruct-fbi-raid/147956/",
+        "points": 141,
+        "num_comments": 149,
+        "author": "lnguyen",
+        "created_at": "2018-05-04T03:50:41Z"
+      },
+      {
+        "objectID": "34982520",
+        "title": "Swarm M138 Modem",
+        "url": "https://swarm.space/product/swarm-m138-modem/",
+        "points": 141,
+        "num_comments": 110,
+        "author": "kristianpaul",
+        "created_at": "2023-03-01T14:07:10Z"
+      },
+      {
+        "objectID": "38940374",
+        "title": "NASA selects a plan to \"swarm\" Proxima Centauri with tiny probes",
+        "url": "https://www.sciencealert.com/nasa-selects-a-wild-plan-to-swarm-proxima-centauri-with-thousands-of-tiny-probes",
+        "points": 140,
+        "num_comments": 133,
+        "author": "Brajeshwar",
+        "created_at": "2024-01-10T16:32:38Z"
+      },
+      {
+        "objectID": "25466385",
+        "title": "A swarm of drones flying through heavy forest–while staying in formation",
+        "url": "https://www.sciencemag.org/news/2020/12/watch-swarm-drones-fly-through-heavy-forest-while-staying-formation",
+        "points": 139,
+        "num_comments": 131,
+        "author": "giuliomagnifico",
+        "created_at": "2020-12-18T12:21:48Z"
+      },
+      {
+        "objectID": "16877369",
+        "title": "FCC Issues Warning in Wake of Swarm's Unauthorized Launch",
+        "url": "https://www.space.com/40318-fcc-issues-warning-after-unauthorized-launch.html",
+        "points": 135,
+        "num_comments": 158,
+        "author": "jackfoxy",
+        "created_at": "2018-04-19T16:39:55Z"
+      },
+      {
+        "objectID": "14531883",
+        "title": "PAAS Comparison – Dokku vs. Flynn vs. Deis vs. Kubernetes vs. Docker Swarm",
+        "url": "http://www.jancarloviray.com/blog/paas-comparison-2017-dokku-flynn-deis-kubernetes-docker-swarm/",
+        "points": 128,
+        "num_comments": 72,
+        "author": "wilsonfiifi",
+        "created_at": "2017-06-11T13:27:58Z"
+      },
+      {
+        "objectID": "29711381",
+        "title": "Swarm consensus [pdf]",
+        "url": "http://replicated.cc/files/schmebulock.pdf",
+        "points": 122,
+        "num_comments": 31,
+        "author": "gritzko",
+        "created_at": "2021-12-28T07:28:45Z"
+      }
+    ]
+  }
+}

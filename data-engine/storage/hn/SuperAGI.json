@@ -1,0 +1,374 @@
+{
+  "project": "SuperAGI",
+  "repo": "TransformerOptimus/SuperAGI",
+  "collected_at": "2026-05-22T11:05:59.460359+00:00",
+  "queries": [
+    "SuperAGI",
+    "SuperAGI"
+  ],
+  "total_hits": 40,
+  "results": {
+    "SuperAGI": [
+      {
+        "objectID": "44843386",
+        "title": "First 25 years of the SuperAging Program",
+        "url": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.70312",
+        "points": 4,
+        "num_comments": 0,
+        "author": "geox",
+        "created_at": "2025-08-09T01:41:21Z"
+      },
+      {
+        "objectID": "42496898",
+        "title": "Could God's Trinity Be Inspiration for Super AGI?",
+        "url": "https://kahler-ai-community.kit.com/posts/one-small-step-for-ai-and-a-giant-leap-in-humanity-s-quest-toward-agi",
+        "points": 3,
+        "num_comments": 2,
+        "author": "Sakurai_Quantum",
+        "created_at": "2024-12-23T19:19:23Z"
+      },
+      {
+        "objectID": "13339217",
+        "title": "Youthful Brains in Older Adults:  Contributes Youthful Memory in Superaging",
+        "url": "http://www.jneurosci.org/content/36/37/9659",
+        "points": 3,
+        "num_comments": 1,
+        "author": "nabla9",
+        "created_at": "2017-01-06T19:10:00Z"
+      },
+      {
+        "objectID": "47883166",
+        "title": "The first 25 years of the Northwestern University SuperAging Program",
+        "url": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.70312",
+        "points": 2,
+        "num_comments": 0,
+        "author": "bookofjoe",
+        "created_at": "2026-04-23T22:42:11Z"
+      },
+      {
+        "objectID": "39684678",
+        "title": "SuperAGI to launch the Verk Store marketplace to hire AI Employees",
+        "url": "https://techcrunch.com/2024/03/11/jan-koum-newlands-vc-superagi-funding-agi-agent-model/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "SurfTokyo",
+        "created_at": "2024-03-12T20:42:38Z"
+      },
+      {
+        "objectID": "37716799",
+        "title": "SuperAGI: V0.0.6 Now Live [Updated Jun 2023] – Guidady",
+        "url": "https://guidady.com/superagi/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Guidady",
+        "created_at": "2023-09-30T16:09:16Z"
+      },
+      {
+        "objectID": "12058793",
+        "title": "Superagile",
+        "url": "http://kevinmahoney.co.uk/articles/superagile/",
+        "points": 1,
+        "num_comments": 0,
+        "author": "kpmah",
+        "created_at": "2016-07-08T21:30:44Z"
+      },
+      {
+        "objectID": "35936802",
+        "title": "Ask HN: On the Threats of AI",
+        "url": "",
+        "points": 6,
+        "num_comments": 4,
+        "author": "drKarl",
+        "created_at": "2023-05-14T09:59:33Z"
+      },
+      {
+        "objectID": "36417564",
+        "title": "Show HN: Open-source framework to build, manage and run Autonomous Agents",
+        "url": "https://github.com/TransformerOptimus/SuperAGI",
+        "points": 6,
+        "num_comments": 8,
+        "author": "snowcrash123",
+        "created_at": "2023-06-21T12:23:30Z"
+      },
+      {
+        "objectID": "36054948",
+        "title": "Infrastructure for building useful Autonomous Agents",
+        "url": "https://github.com/TransformerOptimus/SuperAGI",
+        "points": 3,
+        "num_comments": 0,
+        "author": "ghgr",
+        "created_at": "2023-05-24T07:02:01Z"
+      },
+      {
+        "objectID": "27798202",
+        "title": "'Superager' brains resist the march of time to have memories like 25-year-olds",
+        "url": "https://www.sciencealert.com/superagers-with-incredible-memories-have-brains-like-25-year-olds",
+        "points": 254,
+        "num_comments": 188,
+        "author": "lnyan",
+        "created_at": "2021-07-11T03:12:46Z"
+      },
+      {
+        "objectID": "13294090",
+        "title": "How to Become a ‘Superager’",
+        "url": "http://www.nytimes.com/2016/12/31/opinion/sunday/how-to-become-a-superager.html",
+        "points": 228,
+        "num_comments": 87,
+        "author": "walterbell",
+        "created_at": "2017-01-01T00:47:30Z"
+      },
+      {
+        "objectID": "36603382",
+        "title": "Introducing Superalignment",
+        "url": "https://openai.com/blog/introducing-superalignment",
+        "points": 219,
+        "num_comments": 370,
+        "author": "tim_sw",
+        "created_at": "2023-07-05T17:04:29Z"
+      },
+      {
+        "objectID": "40502794",
+        "title": "Jan Leike joins Anthropic on their superalignment team",
+        "url": "https://twitter.com/janleike/status/1795497960509448617",
+        "points": 99,
+        "num_comments": 33,
+        "author": "icpmacdo",
+        "created_at": "2024-05-28T16:54:51Z"
+      },
+      {
+        "objectID": "24445273",
+        "title": "New species of “supergiant” isopod uncovered",
+        "url": "https://news.nus.edu.sg/research/new-species-supergiant-isopod-uncovered",
+        "points": 74,
+        "num_comments": 24,
+        "author": "kanobo",
+        "created_at": "2020-09-11T17:42:41Z"
+      },
+      {
+        "objectID": "11714187",
+        "title": "Supergiant.io – Container Platform for Stateful Applications",
+        "url": "https://www.infoq.com/news/2016/05/supergiant-container-platform",
+        "points": 61,
+        "num_comments": 8,
+        "author": "elsalgo",
+        "created_at": "2016-05-17T14:58:51Z"
+      },
+      {
+        "objectID": "38644085",
+        "title": "OpenAI Announces $10M Superalignment Grants",
+        "url": "https://openai.com/blog/superalignment-fast-grants",
+        "points": 49,
+        "num_comments": 56,
+        "author": "famouswaffles",
+        "created_at": "2023-12-14T17:26:29Z"
+      },
+      {
+        "objectID": "18373247",
+        "title": "Quark Deconfinement as Supernova Explosion Engine for Blue Supergiant Stars",
+        "url": "https://www.nature.com/articles/s41550-018-0583-0.epdf?referrer_access_token=FJTvi-qwzzjDcjq4qeVOrdRgN0jAjWel9jnR3ZoTv0MmP3dcmt4saCNPlKIe9T_VRvav27cLGXixLBWH-MIvc6iJTt63jWwxy9LhYS0aC_TAH4ZyLM48xb58-N-2ye72YkVlbTsv3ZF0W55l0Vwk_LZz6vsw3N7-cnFR81wDOUpfYhs7v0xEGSO-xFuU4y1nFa1XZ6LBNXwPafW7M9R0S_IKrSq1xocNZTie7BjTzJNAqiC2QbwCX5GQYZ3DoikZBE6rzNq_0q6NadhC12g29EN5Q0H-TdlFEfbb9eS7HLw%3D&tracking_referrer=physicsworld.com",
+        "points": 47,
+        "num_comments": 6,
+        "author": "gotocake",
+        "created_at": "2018-11-04T00:16:43Z"
+      },
+      {
+        "objectID": "41076063",
+        "title": "Genetically synthesized supergain broadband wire-bundle antenna",
+        "url": "https://www.nature.com/articles/s44172-024-00235-y",
+        "points": 45,
+        "num_comments": 11,
+        "author": "sharpshadow",
+        "created_at": "2024-07-26T05:42:18Z"
+      },
+      {
+        "objectID": "45186904",
+        "title": "Show HN: Superagents – connect spreadsheets to any database, API or MCP server",
+        "url": "https://sourcetable.com/superagents",
+        "points": 35,
+        "num_comments": 13,
+        "author": "mceoin",
+        "created_at": "2025-09-09T18:55:35Z"
+      },
+      {
+        "objectID": "43675974",
+        "title": "South Korea's 'heartbreaking' wildfires expose superaged society",
+        "url": "https://www.japantimes.co.jp/news/2025/03/30/asia-pacific/society/south-korea-wildfires-aging/",
+        "points": 33,
+        "num_comments": 10,
+        "author": "PaulHoule",
+        "created_at": "2025-04-13T21:25:59Z"
+      },
+      {
+        "objectID": "33047495",
+        "title": "SuperAger brains contain ‘super neurons’",
+        "url": "https://news.northwestern.edu/stories/2022/09/superager-brains-contain-super-neurons/?fj=1",
+        "points": 29,
+        "num_comments": 2,
+        "author": "hhs",
+        "created_at": "2022-10-01T15:52:30Z"
+      },
+      {
+        "objectID": "42895228",
+        "title": "A new supergiant Bathynomus species discovered in Vietnam",
+        "url": "https://zookeys.pensoft.net/article/139335/",
+        "points": 24,
+        "num_comments": 11,
+        "author": "WaitWaitWha",
+        "created_at": "2025-02-01T02:58:51Z"
+      },
+      {
+        "objectID": "10929788",
+        "title": "Show HN: Supergiant Elasticsearch – Auto-Scalable and Automated ES DevOps",
+        "url": "https://qbox.io/supergiant-elasticsearch",
+        "points": 22,
+        "num_comments": 0,
+        "author": "qboxio",
+        "created_at": "2016-01-19T10:33:12Z"
+      },
+      {
+        "objectID": "44843186",
+        "title": "What makes a SuperAger?",
+        "url": "https://news.northwestern.edu/stories/2025/08/what-makes-a-superager/",
+        "points": 18,
+        "num_comments": 5,
+        "author": "hhs",
+        "created_at": "2025-08-09T00:58:21Z"
+      },
+      {
+        "objectID": "38650392",
+        "title": "Now we know what OpenAI's superalignment team has been up to",
+        "url": "https://www.technologyreview.com/2023/12/14/1085344/openai-super-alignment-rogue-agi-gpt-4/",
+        "points": 13,
+        "num_comments": 1,
+        "author": "webmaven",
+        "created_at": "2023-12-15T02:18:47Z"
+      },
+      {
+        "objectID": "32440217",
+        "title": "Supergiant Betelgeuse had a never-before-seen eruption",
+        "url": "https://www.cnn.com/2022/08/12/world/betelgeuse-star-recovery-scn/index.html",
+        "points": 13,
+        "num_comments": 0,
+        "author": "PikelEmi",
+        "created_at": "2022-08-12T15:41:46Z"
+      },
+      {
+        "objectID": "11571422",
+        "title": "Show HN: Supergiant, a Data Center Management System Built on Kubernetes",
+        "url": "https://supergiant.io",
+        "points": 11,
+        "num_comments": 0,
+        "author": "qboxio",
+        "created_at": "2016-04-26T12:59:35Z"
+      },
+      {
+        "objectID": "32431063",
+        "title": "Hubble Sees Supergiant Star Betelgeuse Slowly Recovering After Blowing Its Top",
+        "url": "https://www.nasa.gov/feature/goddard/2022/hubble-sees-red-supergiant-star-betelgeuse-slowly-recovering-after-blowing-its-top/",
+        "points": 9,
+        "num_comments": 0,
+        "author": "yamrzou",
+        "created_at": "2022-08-11T20:06:59Z"
+      },
+      {
+        "objectID": "12551027",
+        "title": "Supergiant Builds on Kubernetes to Manage Multitenancy for Distributed Apps",
+        "url": "http://thenewstack.io/supergiant-builds-kubernetes-manage-multi-tenancy-distributed-applications/",
+        "points": 9,
+        "num_comments": 0,
+        "author": "elsalgo",
+        "created_at": "2016-09-21T18:41:26Z"
+      },
+      {
+        "objectID": "12122642",
+        "title": "Deploy a MongoDB Replica Set with Docker and Supergiant",
+        "url": "https://supergiant.io/blog/deploy-a-mongodb-replica-set-with-docker-and-supergiant",
+        "points": 9,
+        "num_comments": 0,
+        "author": "elsalgo",
+        "created_at": "2016-07-19T16:24:30Z"
+      },
+      {
+        "objectID": "12540476",
+        "title": "Auto-Scaling Kubernetes Cluster on AWS EC2 with Supergiant",
+        "url": "https://supergiant.io/blog/auto-scaling-kubernetes-cluster-on-aws-ec2-with-supergiant",
+        "points": 8,
+        "num_comments": 0,
+        "author": "elsalgo",
+        "created_at": "2016-09-20T15:56:05Z"
+      },
+      {
+        "objectID": "40391308",
+        "title": "Jan Leike's (ex-superalignment lead) thoughts on safety at OpenAI",
+        "url": "https://twitter.com/x/migrate?tok=eyJlIjoiL2phbmxlaWtlL3N0YXR1cy8xNzkxNDk4MTc0NjU5NzE1NDk0IiwidCI6MTcxNTk2MTc4Nn1wPS65Hd9YiDvH0t9lCIYM",
+        "points": 6,
+        "num_comments": 2,
+        "author": "Davidzheng",
+        "created_at": "2024-05-17T16:03:02Z"
+      },
+      {
+        "objectID": "27585989",
+        "title": "Why the supergiant star Betelgeuse went mysteriously dim last year",
+        "url": "https://www.nature.com/articles/d41586-021-01633-4",
+        "points": 6,
+        "num_comments": 1,
+        "author": "yusuf_giftworks",
+        "created_at": "2021-06-21T23:37:33Z"
+      },
+      {
+        "objectID": "40440504",
+        "title": "The AI Superalignment Problem",
+        "url": "https://goodcomputer.substack.com/p/the-ai-superalignment-problem",
+        "points": 6,
+        "num_comments": 0,
+        "author": "d9w",
+        "created_at": "2024-05-22T13:10:35Z"
+      },
+      {
+        "objectID": "42276550",
+        "title": "'Supergiant' gold deposit found in China, among world's largest, worth over $80B",
+        "url": "https://www.livescience.com/planet-earth/geology/supergiant-gold-deposit-discovered-in-china-is-one-of-the-largest-on-earth-and-is-worth-more-than-usd80-billion",
+        "points": 5,
+        "num_comments": 2,
+        "author": "bookofjoe",
+        "created_at": "2024-11-29T19:51:07Z"
+      },
+      {
+        "objectID": "40391931",
+        "title": "Jan Leike explains OpenAI's Superalignment research agenda (2023)",
+        "url": "https://axrp.net/episode/2023/07/27/episode-24-superalignment-jan-leike.html",
+        "points": 5,
+        "num_comments": 1,
+        "author": "mebazaa",
+        "created_at": "2024-05-17T17:00:48Z"
+      },
+      {
+        "objectID": "29859290",
+        "title": "In cosmic first, scientists observe red supergiant just before it explodes",
+        "url": "https://www.space.com/supernova-observations-what-happens-before-star-explodes",
+        "points": 5,
+        "num_comments": 1,
+        "author": "wrycoder",
+        "created_at": "2022-01-09T02:28:42Z"
+      },
+      {
+        "objectID": "42205715",
+        "title": "First close-up image of a star outside Milky Way shows supergiant in 'cocoon'",
+        "url": "https://www.theguardian.com/science/2024/nov/21/first-close-up-image-of-a-star-outside-milky-way-shows-supergiant-in-cocoon",
+        "points": 5,
+        "num_comments": 0,
+        "author": "ljf",
+        "created_at": "2024-11-21T16:08:47Z"
+      },
+      {
+        "objectID": "4142111",
+        "title": "Women in startups: Are we trying too hard to be supergirl?",
+        "url": "http://blog.teddle.com",
+        "points": 5,
+        "num_comments": 0,
+        "author": "waldr",
+        "created_at": "2012-06-21T14:25:27Z"
+      }
+    ]
+  }
+}

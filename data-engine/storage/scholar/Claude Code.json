@@ -1,0 +1,16 @@
+{
+  "project": "Claude Code",
+  "repo": "anthropics/claude-code",
+  "collected_at": "2026-05-22T11:15:42.653039+00:00",
+  "queries": [
+    "Claude Code",
+    "claude-code"
+  ],
+  "total_papers": 0,
+  "total_citations": 0,
+  "papers": {
+    "Claude Code": [],
+    "claude-code": []
+  },
+  "citations": {}
+}

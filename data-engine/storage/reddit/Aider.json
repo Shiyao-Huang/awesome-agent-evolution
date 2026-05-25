@@ -1,0 +1,516 @@
+{
+  "project": "Aider",
+  "repo": "Aider-AI/aider",
+  "collected_at": "2026-05-22T11:15:07.734191+00:00",
+  "queries": [
+    "Aider",
+    "aider"
+  ],
+  "total_posts": 50,
+  "results": {
+    "Aider": [
+      {
+        "id": "1sniyvs",
+        "subreddit": "ChatGPTCoding",
+        "title": "Aider and Claude Code",
+        "score": 7,
+        "num_comments": 16,
+        "author": "dca12345",
+        "url": "https://reddit.com/r/ChatGPTCoding/comments/1sniyvs/aider_and_claude_code/",
+        "created_utc": 1776379426.0
+      },
+      {
+        "id": "1p0iyjp",
+        "subreddit": "LocalLLaMA",
+        "title": "Alternatives to Aider for CLI development?",
+        "score": 7,
+        "num_comments": 16,
+        "author": "awebb78",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1p0iyjp/alternatives_to_aider_for_cli_development/",
+        "created_utc": 1763488794.0
+      },
+      {
+        "id": "1kr867y",
+        "subreddit": "LocalLLaMA",
+        "title": "Why aren't you using Aider??",
+        "score": 40,
+        "num_comments": 102,
+        "author": "MrPanache52",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1kr867y/why_arent_you_using_aider/",
+        "created_utc": 1747755960.0
+      },
+      {
+        "id": "1kr875w",
+        "subreddit": "ChatGPTCoding",
+        "title": "Why aren't you using Aider??",
+        "score": 124,
+        "num_comments": 131,
+        "author": "MrPanache52",
+        "url": "https://reddit.com/r/ChatGPTCoding/comments/1kr875w/why_arent_you_using_aider/",
+        "created_utc": 1747756022.0
+      },
+      {
+        "id": "1k63o9h",
+        "subreddit": "LocalLLaMA",
+        "title": "Aider appreciation post",
+        "score": 51,
+        "num_comments": 23,
+        "author": "myoddity",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1k63o9h/aider_appreciation_post/",
+        "created_utc": 1745426073.0
+      },
+      {
+        "id": "1pra6jr",
+        "subreddit": "ChatGPTCoding",
+        "title": "Aider-ce is the new Aider ( easiest way to learn how a barebones AI coding CLI works )",
+        "score": 12,
+        "num_comments": 11,
+        "author": "SmoothCCriminal",
+        "url": "https://reddit.com/r/ChatGPTCoding/comments/1pra6jr/aiderce_is_the_new_aider_easiest_way_to_learn_how/",
+        "created_utc": 1766221767.0
+      },
+      {
+        "id": "1sek11x",
+        "subreddit": "LocalLLaMA",
+        "title": "Best coder harness that sees your dirs, edits code, etc from the terminal that works with local?",
+        "score": 6,
+        "num_comments": 23,
+        "author": "Borkato",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1sek11x/best_coder_harness_that_sees_your_dirs_edits_code/",
+        "created_utc": 1775530692.0
+      },
+      {
+        "id": "dxv4mc",
+        "subreddit": "pics",
+        "title": "Hong kong police arrests volunteer first-aiders and other volunteer medical personnel.",
+        "score": 56785,
+        "num_comments": 1390,
+        "author": "lotsofsweat",
+        "url": "https://reddit.com/r/pics/comments/dxv4mc/hong_kong_police_arrests_volunteer_firstaiders/",
+        "created_utc": 1574036018.0
+      },
+      {
+        "id": "dtn4sf",
+        "subreddit": "HongKong",
+        "title": "Americans from 4 different cities come to HK to join the protests as first aiders. Source: Stand News",
+        "score": 49016,
+        "num_comments": 946,
+        "author": "miss_wolverine",
+        "url": "https://reddit.com/r/HongKong/comments/dtn4sf/americans_from_4_different_cities_come_to_hk_to/",
+        "created_utc": 1573252778.0
+      },
+      {
+        "id": "d7kjvg",
+        "subreddit": "HongKong",
+        "title": "Today, the police arrested a large number of first-aiders, insulted and tied the hands of first-aiders. This has been a serious violation of international humanitarian law.",
+        "score": 33106,
+        "num_comments": 473,
+        "author": "Sporeboss",
+        "url": "https://reddit.com/r/HongKong/comments/d7kjvg/today_the_police_arrested_a_large_number_of/",
+        "created_utc": 1569119611.0
+      },
+      {
+        "id": "cy73zd",
+        "subreddit": "pics",
+        "title": "The HK police indiscriminately attacked civilians with batons and pepper spray in the MTR subway yesterday, leading to many injuries. They also stopped first aiders from entering the subway to care for the injured.",
+        "score": 11007,
+        "num_comments": 720,
+        "author": "breakfastcook",
+        "url": "https://reddit.com/r/pics/comments/cy73zd/the_hk_police_indiscriminately_attacked_civilians/",
+        "created_utc": 1567323028.0
+      },
+      {
+        "id": "1nluexn",
+        "subreddit": "france",
+        "title": "Les coups de fil secrets de Macron pour aider le RN face à LFI... Les indiscrets du Figaro",
+        "score": 956,
+        "num_comments": 197,
+        "author": "MaxOfS2D",
+        "url": "https://reddit.com/r/france/comments/1nluexn/les_coups_de_fil_secrets_de_macron_pour_aider_le/",
+        "created_utc": 1758363181.0
+      },
+      {
+        "id": "1rxvhlp",
+        "subreddit": "france",
+        "title": "Municipales à Paris : Emmanuel Grégoire accuse Emmanuel Macron \"d'être intervenu pour aider au retrait de Sarah Knafo\", l'entourage du chef de l'Etat dément",
+        "score": 214,
+        "num_comments": 248,
+        "author": "Folivao",
+        "url": "https://reddit.com/r/france/comments/1rxvhlp/municipales_à_paris_emmanuel_grégoire_accuse/",
+        "created_utc": 1773911549.0
+      },
+      {
+        "id": "1ly2u90",
+        "subreddit": "Quebec",
+        "title": "Les vacances arrivent: Il y a beaucoup de nouveaux arrivants qui ne connaissent pas leur bibittes en venant en abitibi, voici une charte pour les aider à les identifier et les apprécier à leur juste valeur.",
+        "score": 760,
+        "num_comments": 208,
+        "author": "Infamous_Catch9551",
+        "url": "https://reddit.com/r/Quebec/comments/1ly2u90/les_vacances_arrivent_il_y_a_beaucoup_de_nouveaux/",
+        "created_utc": 1752333227.0
+      },
+      {
+        "id": "1t5b394",
+        "subreddit": "opinionnonpopulaire",
+        "title": "Il faut davantage aider les entreprises et moins les taxer",
+        "score": 152,
+        "num_comments": 223,
+        "author": "YoshiBanana3000",
+        "url": "https://reddit.com/r/opinionnonpopulaire/comments/1t5b394/il_faut_davantage_aider_les_entreprises_et_moins/",
+        "created_utc": 1778069609.0
+      },
+      {
+        "id": "cq8nwy",
+        "subreddit": "pics",
+        "title": "HK police shoot first aider in the eye point blank, she is blind now. Where is the Geneva Convention?!",
+        "score": 3159,
+        "num_comments": 420,
+        "author": "DeutschesOstpreussen",
+        "url": "https://reddit.com/r/pics/comments/cq8nwy/hk_police_shoot_first_aider_in_the_eye_point/",
+        "created_utc": 1565783963.0
+      },
+      {
+        "id": "re4cxd",
+        "subreddit": "soccer",
+        "title": "[Sam Lee] There was a small anti-Covid protest outside City’s training base today, highlighting the number of people collapsing supposedly as a result of the vaccine. “We’re not anti-vax, these things aren’t vaccines.” Anyway, a first-aider had to attend after a protestor collapsed.",
+        "score": 3105,
+        "num_comments": 259,
+        "author": "_hopelessnobody",
+        "url": "https://reddit.com/r/soccer/comments/re4cxd/sam_lee_there_was_a_small_anticovid_protest/",
+        "created_utc": 1639243435.0
+      },
+      {
+        "id": "1r5vsvy",
+        "subreddit": "etudiants",
+        "title": "J’ai arrêté d’aider une étudiante étrangère",
+        "score": 327,
+        "num_comments": 182,
+        "author": "Polish_Milk23",
+        "url": "https://reddit.com/r/etudiants/comments/1r5vsvy/jai_arrêté_daider_une_étudiante_étrangère/",
+        "created_utc": 1771204282.0
+      },
+      {
+        "id": "dbsw12",
+        "subreddit": "pics",
+        "title": "Hong Kong first aider has his will in pocket",
+        "score": 4501,
+        "num_comments": 253,
+        "author": "west1123",
+        "url": "https://reddit.com/r/pics/comments/dbsw12/hong_kong_first_aider_has_his_will_in_pocket/",
+        "created_utc": 1569934076.0
+      },
+      {
+        "id": "1sp2m3l",
+        "subreddit": "Quebec",
+        "title": "Pouvez-vous m’aider à comprendre le chialage de certains membres de la communauté anglophone du Québec?",
+        "score": 107,
+        "num_comments": 230,
+        "author": "Neat_Background_8075",
+        "url": "https://reddit.com/r/Quebec/comments/1sp2m3l/pouvezvous_maider_à_comprendre_le_chialage_de/",
+        "created_utc": 1776530614.0
+      },
+      {
+        "id": "czojo9",
+        "subreddit": "HongKong",
+        "title": "ENGLISH SUBTITLES: Police restricted and delayed first aider from helping victim who probably had neck and spine injuries. (Please vote up. This is more important than a meme.)",
+        "score": 19530,
+        "num_comments": 127,
+        "author": "NonnyNu",
+        "url": "https://reddit.com/r/HongKong/comments/czojo9/english_subtitles_police_restricted_and_delayed/",
+        "created_utc": 1567620704.0
+      },
+      {
+        "id": "1s3okja",
+        "subreddit": "Quebec",
+        "title": "Est-ce qu'un prof de français peut m'aider? svp",
+        "score": 343,
+        "num_comments": 127,
+        "author": "LandonHill8836",
+        "url": "https://reddit.com/r/Quebec/comments/1s3okja/estce_quun_prof_de_français_peut_maider_svp/",
+        "created_utc": 1774475500.0
+      },
+      {
+        "id": "d7869g",
+        "subreddit": "HongKong",
+        "title": "First aider was stopped and searched by the police. They were tied with cable tie. Some police said that there were \"criminals\" and no one need them to save. (credit:inmediahk)",
+        "score": 10539,
+        "num_comments": 133,
+        "author": "ivan_422",
+        "url": "https://reddit.com/r/HongKong/comments/d7869g/first_aider_was_stopped_and_searched_by_the/",
+        "created_utc": 1569056700.0
+      },
+      {
+        "id": "1pcdrr8",
+        "subreddit": "AskFrance",
+        "title": "Comment aider les jeunes qui travaillent pour des dealers?",
+        "score": 272,
+        "num_comments": 235,
+        "author": "Agile_Resolution_822",
+        "url": "https://reddit.com/r/AskFrance/comments/1pcdrr8/comment_aider_les_jeunes_qui_travaillent_pour_des/",
+        "created_utc": 1764694742.0
+      },
+      {
+        "id": "gst0y3",
+        "subreddit": "Minneapolis",
+        "title": "Hi Minneapolis! I've been a frontline first aider for the Hong Kong protests for almost a year straight now. I'm familiar with techniques used to protest as well as treating countless injuries seen at the scene of protests. Ask Me Anything about protest techniques or treating injuries! :)",
+        "score": 2638,
+        "num_comments": 296,
+        "author": "ProtestMedicHK",
+        "url": "https://reddit.com/r/Minneapolis/comments/gst0y3/hi_minneapolis_ive_been_a_frontline_first_aider/",
+        "created_utc": 1590758938.0
+      }
+    ],
+    "aider": [
+      {
+        "id": "1sniyvs",
+        "subreddit": "ChatGPTCoding",
+        "title": "Aider and Claude Code",
+        "score": 6,
+        "num_comments": 16,
+        "author": "dca12345",
+        "url": "https://reddit.com/r/ChatGPTCoding/comments/1sniyvs/aider_and_claude_code/",
+        "created_utc": 1776379426.0
+      },
+      {
+        "id": "1p0iyjp",
+        "subreddit": "LocalLLaMA",
+        "title": "Alternatives to Aider for CLI development?",
+        "score": 6,
+        "num_comments": 16,
+        "author": "awebb78",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1p0iyjp/alternatives_to_aider_for_cli_development/",
+        "created_utc": 1763488794.0
+      },
+      {
+        "id": "1kr867y",
+        "subreddit": "LocalLLaMA",
+        "title": "Why aren't you using Aider??",
+        "score": 42,
+        "num_comments": 102,
+        "author": "MrPanache52",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1kr867y/why_arent_you_using_aider/",
+        "created_utc": 1747755960.0
+      },
+      {
+        "id": "1kr875w",
+        "subreddit": "ChatGPTCoding",
+        "title": "Why aren't you using Aider??",
+        "score": 122,
+        "num_comments": 131,
+        "author": "MrPanache52",
+        "url": "https://reddit.com/r/ChatGPTCoding/comments/1kr875w/why_arent_you_using_aider/",
+        "created_utc": 1747756022.0
+      },
+      {
+        "id": "1pra6jr",
+        "subreddit": "ChatGPTCoding",
+        "title": "Aider-ce is the new Aider ( easiest way to learn how a barebones AI coding CLI works )",
+        "score": 11,
+        "num_comments": 11,
+        "author": "SmoothCCriminal",
+        "url": "https://reddit.com/r/ChatGPTCoding/comments/1pra6jr/aiderce_is_the_new_aider_easiest_way_to_learn_how/",
+        "created_utc": 1766221767.0
+      },
+      {
+        "id": "1k63o9h",
+        "subreddit": "LocalLLaMA",
+        "title": "Aider appreciation post",
+        "score": 51,
+        "num_comments": 23,
+        "author": "myoddity",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1k63o9h/aider_appreciation_post/",
+        "created_utc": 1745426073.0
+      },
+      {
+        "id": "1sek11x",
+        "subreddit": "LocalLLaMA",
+        "title": "Best coder harness that sees your dirs, edits code, etc from the terminal that works with local?",
+        "score": 6,
+        "num_comments": 23,
+        "author": "Borkato",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1sek11x/best_coder_harness_that_sees_your_dirs_edits_code/",
+        "created_utc": 1775530692.0
+      },
+      {
+        "id": "dxv4mc",
+        "subreddit": "pics",
+        "title": "Hong kong police arrests volunteer first-aiders and other volunteer medical personnel.",
+        "score": 56788,
+        "num_comments": 1390,
+        "author": "lotsofsweat",
+        "url": "https://reddit.com/r/pics/comments/dxv4mc/hong_kong_police_arrests_volunteer_firstaiders/",
+        "created_utc": 1574036018.0
+      },
+      {
+        "id": "dtn4sf",
+        "subreddit": "HongKong",
+        "title": "Americans from 4 different cities come to HK to join the protests as first aiders. Source: Stand News",
+        "score": 49011,
+        "num_comments": 946,
+        "author": "miss_wolverine",
+        "url": "https://reddit.com/r/HongKong/comments/dtn4sf/americans_from_4_different_cities_come_to_hk_to/",
+        "created_utc": 1573252778.0
+      },
+      {
+        "id": "d7kjvg",
+        "subreddit": "HongKong",
+        "title": "Today, the police arrested a large number of first-aiders, insulted and tied the hands of first-aiders. This has been a serious violation of international humanitarian law.",
+        "score": 33113,
+        "num_comments": 473,
+        "author": "Sporeboss",
+        "url": "https://reddit.com/r/HongKong/comments/d7kjvg/today_the_police_arrested_a_large_number_of/",
+        "created_utc": 1569119611.0
+      },
+      {
+        "id": "cy73zd",
+        "subreddit": "pics",
+        "title": "The HK police indiscriminately attacked civilians with batons and pepper spray in the MTR subway yesterday, leading to many injuries. They also stopped first aiders from entering the subway to care for the injured.",
+        "score": 11016,
+        "num_comments": 720,
+        "author": "breakfastcook",
+        "url": "https://reddit.com/r/pics/comments/cy73zd/the_hk_police_indiscriminately_attacked_civilians/",
+        "created_utc": 1567323028.0
+      },
+      {
+        "id": "1nluexn",
+        "subreddit": "france",
+        "title": "Les coups de fil secrets de Macron pour aider le RN face à LFI... Les indiscrets du Figaro",
+        "score": 952,
+        "num_comments": 197,
+        "author": "MaxOfS2D",
+        "url": "https://reddit.com/r/france/comments/1nluexn/les_coups_de_fil_secrets_de_macron_pour_aider_le/",
+        "created_utc": 1758363181.0
+      },
+      {
+        "id": "1rxvhlp",
+        "subreddit": "france",
+        "title": "Municipales à Paris : Emmanuel Grégoire accuse Emmanuel Macron \"d'être intervenu pour aider au retrait de Sarah Knafo\", l'entourage du chef de l'Etat dément",
+        "score": 218,
+        "num_comments": 248,
+        "author": "Folivao",
+        "url": "https://reddit.com/r/france/comments/1rxvhlp/municipales_à_paris_emmanuel_grégoire_accuse/",
+        "created_utc": 1773911549.0
+      },
+      {
+        "id": "1ly2u90",
+        "subreddit": "Quebec",
+        "title": "Les vacances arrivent: Il y a beaucoup de nouveaux arrivants qui ne connaissent pas leur bibittes en venant en abitibi, voici une charte pour les aider à les identifier et les apprécier à leur juste valeur.",
+        "score": 766,
+        "num_comments": 208,
+        "author": "Infamous_Catch9551",
+        "url": "https://reddit.com/r/Quebec/comments/1ly2u90/les_vacances_arrivent_il_y_a_beaucoup_de_nouveaux/",
+        "created_utc": 1752333227.0
+      },
+      {
+        "id": "1t5b394",
+        "subreddit": "opinionnonpopulaire",
+        "title": "Il faut davantage aider les entreprises et moins les taxer",
+        "score": 150,
+        "num_comments": 223,
+        "author": "YoshiBanana3000",
+        "url": "https://reddit.com/r/opinionnonpopulaire/comments/1t5b394/il_faut_davantage_aider_les_entreprises_et_moins/",
+        "created_utc": 1778069609.0
+      },
+      {
+        "id": "cq8nwy",
+        "subreddit": "pics",
+        "title": "HK police shoot first aider in the eye point blank, she is blind now. Where is the Geneva Convention?!",
+        "score": 3164,
+        "num_comments": 420,
+        "author": "DeutschesOstpreussen",
+        "url": "https://reddit.com/r/pics/comments/cq8nwy/hk_police_shoot_first_aider_in_the_eye_point/",
+        "created_utc": 1565783963.0
+      },
+      {
+        "id": "re4cxd",
+        "subreddit": "soccer",
+        "title": "[Sam Lee] There was a small anti-Covid protest outside City’s training base today, highlighting the number of people collapsing supposedly as a result of the vaccine. “We’re not anti-vax, these things aren’t vaccines.” Anyway, a first-aider had to attend after a protestor collapsed.",
+        "score": 3107,
+        "num_comments": 259,
+        "author": "_hopelessnobody",
+        "url": "https://reddit.com/r/soccer/comments/re4cxd/sam_lee_there_was_a_small_anticovid_protest/",
+        "created_utc": 1639243435.0
+      },
+      {
+        "id": "1r5vsvy",
+        "subreddit": "etudiants",
+        "title": "J’ai arrêté d’aider une étudiante étrangère",
+        "score": 335,
+        "num_comments": 182,
+        "author": "Polish_Milk23",
+        "url": "https://reddit.com/r/etudiants/comments/1r5vsvy/jai_arrêté_daider_une_étudiante_étrangère/",
+        "created_utc": 1771204282.0
+      },
+      {
+        "id": "dbsw12",
+        "subreddit": "pics",
+        "title": "Hong Kong first aider has his will in pocket",
+        "score": 4494,
+        "num_comments": 253,
+        "author": "west1123",
+        "url": "https://reddit.com/r/pics/comments/dbsw12/hong_kong_first_aider_has_his_will_in_pocket/",
+        "created_utc": 1569934076.0
+      },
+      {
+        "id": "1sp2m3l",
+        "subreddit": "Quebec",
+        "title": "Pouvez-vous m’aider à comprendre le chialage de certains membres de la communauté anglophone du Québec?",
+        "score": 105,
+        "num_comments": 230,
+        "author": "Neat_Background_8075",
+        "url": "https://reddit.com/r/Quebec/comments/1sp2m3l/pouvezvous_maider_à_comprendre_le_chialage_de/",
+        "created_utc": 1776530614.0
+      },
+      {
+        "id": "czojo9",
+        "subreddit": "HongKong",
+        "title": "ENGLISH SUBTITLES: Police restricted and delayed first aider from helping victim who probably had neck and spine injuries. (Please vote up. This is more important than a meme.)",
+        "score": 19528,
+        "num_comments": 127,
+        "author": "NonnyNu",
+        "url": "https://reddit.com/r/HongKong/comments/czojo9/english_subtitles_police_restricted_and_delayed/",
+        "created_utc": 1567620704.0
+      },
+      {
+        "id": "1s3okja",
+        "subreddit": "Quebec",
+        "title": "Est-ce qu'un prof de français peut m'aider? svp",
+        "score": 343,
+        "num_comments": 127,
+        "author": "LandonHill8836",
+        "url": "https://reddit.com/r/Quebec/comments/1s3okja/estce_quun_prof_de_français_peut_maider_svp/",
+        "created_utc": 1774475500.0
+      },
+      {
+        "id": "d7869g",
+        "subreddit": "HongKong",
+        "title": "First aider was stopped and searched by the police. They were tied with cable tie. Some police said that there were \"criminals\" and no one need them to save. (credit:inmediahk)",
+        "score": 10535,
+        "num_comments": 133,
+        "author": "ivan_422",
+        "url": "https://reddit.com/r/HongKong/comments/d7869g/first_aider_was_stopped_and_searched_by_the/",
+        "created_utc": 1569056700.0
+      },
+      {
+        "id": "1pcdrr8",
+        "subreddit": "AskFrance",
+        "title": "Comment aider les jeunes qui travaillent pour des dealers?",
+        "score": 270,
+        "num_comments": 235,
+        "author": "Agile_Resolution_822",
+        "url": "https://reddit.com/r/AskFrance/comments/1pcdrr8/comment_aider_les_jeunes_qui_travaillent_pour_des/",
+        "created_utc": 1764694742.0
+      },
+      {
+        "id": "gst0y3",
+        "subreddit": "Minneapolis",
+        "title": "Hi Minneapolis! I've been a frontline first aider for the Hong Kong protests for almost a year straight now. I'm familiar with techniques used to protest as well as treating countless injuries seen at the scene of protests. Ask Me Anything about protest techniques or treating injuries! :)",
+        "score": 2637,
+        "num_comments": 296,
+        "author": "ProtestMedicHK",
+        "url": "https://reddit.com/r/Minneapolis/comments/gst0y3/hi_minneapolis_ive_been_a_frontline_first_aider/",
+        "created_utc": 1590758938.0
+      }
+    ]
+  }
+}
