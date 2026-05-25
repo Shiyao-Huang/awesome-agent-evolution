@@ -15,7 +15,7 @@
 | Structure | 新增 [docs/project-management/project-structure.md](docs/project-management/project-structure.md) |
 | Operating model | 新增 [docs/project-management/operating-model.md](docs/project-management/operating-model.md) |
 | Noncanonical cleanup | 新增 [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) 和 `docs/indexes/noncanonical-index.md` |
-| User inputs | 新增 [docs/project-management/user-direct-inputs.md](docs/project-management/user-direct-inputs.md)，并写入 AGENTS/CLAUDE 参考规则 |
+| Local privacy | 用户输入记忆仅本地保留；公开版本只保存抽象治理原则，不发布用户原文或抽取文件 |
 | Agent docs | 新增 [AGENTS.md](AGENTS.md)、[CLAUDE.md](CLAUDE.md)、[CLOUD.md](CLOUD.md) |
 | Generator | 新增 [scripts/generate_project_indexes.mjs](scripts/generate_project_indexes.mjs)，可重复生成索引 |
 | Legacy | 旧长 README、旧内容索引、旧交付摘要保留在 [docs/legacy/](docs/legacy/) |

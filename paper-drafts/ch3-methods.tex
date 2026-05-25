@@ -468,7 +468,7 @@ Self-Debug / SelfEvolve & Inference-time execution repair & No for repair; optio
 SPIN & Iterative self-play fine-tuning & Yes & Human SFT response vs previous model response & Chat alignment, general LLM benchmarks & Zephyr-7B GSM8K $26.76\rightarrow38.97$; average leaderboard $58.14\rightarrow63.16$; SPIN+DPO average $64.05$ \\
 STaR & Iterative rationale bootstrapping & Yes & Final-answer correctness; self-generated rationales & Arithmetic, CommonsenseQA, GSM8K-like reasoning & GSM8K $5.8\%\rightarrow10.7\%$; CommonsenseQA dev about $72.5\%$ \\
 ReST-EM & Grow--Improve offline RL / EM & Yes & Reward model filtering or weighting & Machine translation, preference alignment, best-of-$N$ distillation & ReST Improve steps raise reward scores across IWSLT/WMT/Web; second Grow adds $5.3$ points on IWSLT and $0.8$ on Web Domain \\
-Constitutional AI & SL critique-revision plus RLAIF & Yes & Human-written constitution; AI critiques and preferences & Harmless/helpful assistants, safety alignment & Trains harmless but non-evasive assistant with far fewer human harm labels; uses SL-CAI and RLAIF phases \\
+Const. AI & SL critique-revision plus RLAIF & Yes & Human-written constitution; AI critiques and preferences & Harmless/helpful assistants, safety alignment & Trains harmless but non-evasive assistant with far fewer human harm labels; uses SL-CAI and RLAIF phases \\
 RISE & Multi-turn RL for introspection & Yes & Final-answer reward over reasoning trajectory & Math reasoning, multi-step QA & GSM8K Llama2-7B roughly $14\%\rightarrow24\%$; Mistral-7B roughly $38\%\rightarrow46\%$ \\
 RAGEN & Trajectory-level agent RL & Yes & Step and trajectory rewards; echo filtering & Tool agents, multi-turn decision tasks & StarPO/StarPO-S improves multi-turn agent training and identifies Echo Trap / reasoning collapse \\
 Absolute Zero & Self-play task proposal and solving & Yes & Code executor verification & Code, math, logic with verifiable rewards & AZR-Coder-7B reported SOTA at 7B level on coding average; zero external training data \\
@@ -484,10 +484,10 @@ Benchmark claims in self-improvement papers require careful normalization. A loo
 
 \begin{table*}[t]
 \centering
-\small
-\begin{tabular}{p{2.2cm}p{3.2cm}p{2.5cm}p{2.5cm}p{4.7cm}}
+\TableTight
+\begin{tabularx}{\textwidth}{@{}L{0.15\textwidth}L{0.21\textwidth}L{0.17\textwidth}L{0.17\textwidth}Y@{}}
 \toprule
-Benchmark & Method / model & Baseline & Self-improved & Notes \\
+\textbf{Benchmark} & \textbf{Method / model} & \textbf{Baseline} & \textbf{Self-improved} & \textbf{Notes} \\
 \midrule
 HumanEval & Reflexion (GPT-3.5) & GPT-4 zero-shot $80.1\%$; Codex fine-tuned $67.0\%$ & $91.0\%$ pass@1 & Inference-time verbal memory with evaluator \\
 HumanEval & Agent Symbolic Learning & Agents $68.3\%$ & $73.2\%$ pass@1 & Language-gradient agent optimization \\
@@ -501,7 +501,7 @@ BBH subset & SPIN sports understanding & $96.0$ & $94.4$ & Regression despite av
 MMLU & SPIN on Zephyr-7B-SFT-full & $60.92$ & $59.99$ at iteration 3; $59.68$ after SPIN+DPO & Shows non-monotonic per-benchmark behavior \\
 SWE-Bench & Darwin Godel Machine & $20.0\%$ & $50.0\%$ verified & Agent/code evolution rather than pure model fine-tuning \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \caption{Exact benchmark numbers cited in the research corpus and primary papers for representative self-improvement methods. Percent signs are shown where the source reports percentages; otherwise the table preserves the source score format.}
 \label{tab:benchmark-data}
 \end{table*}

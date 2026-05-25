@@ -103,10 +103,10 @@ Exact reported scores from the source materials are summarized in Table~\ref{tab
 
 \begin{table*}[t]
 \centering
-\small
+\TableTight
 \caption{Reported code-generation results for self-evolution methods. Scores are taken from the local paper summaries and original-paper reports available in the research corpus.}
 \label{tab:code-exact-scores}
-\begin{tabular}{p{0.18\linewidth}p{0.18\linewidth}p{0.20\linewidth}p{0.18\linewidth}p{0.16\linewidth}}
+\begin{tabularx}{\textwidth}{@{}L{0.16\textwidth}L{0.17\textwidth}L{0.22\textwidth}L{0.20\textwidth}Y@{}}
 \toprule
 \textbf{Method} & \textbf{Benchmark} & \textbf{Baseline} & \textbf{Self-evolution result} & \textbf{Gain} \\
 \midrule
@@ -119,7 +119,7 @@ Darwin Godel Machine & SWE-bench verified & Seed agent: 20.0\% & 50.0\% & +30.0 
 Darwin Godel Machine & Polyglot coding score & Seed agent: 14.2\% & 30.7\% & +16.5 pp \\
 ReVeal & LiveCodeBench pass@1 & Turn 1: 36.9 & Turn 19: 42.4 & +5.5 pp over inference turns \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table*}
 
 \begin{figure}[t]
@@ -161,10 +161,10 @@ Table~\ref{tab:math-exact-scores} summarizes reported numbers in the local corpu
 
 \begin{table*}[t]
 \centering
-\small
+\TableTight
 \caption{Mathematical reasoning benchmark results relevant to self-evolution. Approximate values are marked with ``$\sim$'' when the source report gives rounded figures.}
 \label{tab:math-exact-scores}
-\begin{tabular}{p{0.18\linewidth}p{0.18\linewidth}p{0.20\linewidth}p{0.20\linewidth}p{0.14\linewidth}}
+\begin{tabularx}{\textwidth}{@{}L{0.17\textwidth}L{0.18\textwidth}L{0.22\textwidth}L{0.22\textwidth}Y@{}}
 \toprule
 \textbf{Method / reference} & \textbf{Benchmark} & \textbf{Baseline} & \textbf{Reported result} & \textbf{Metric} \\
 \midrule
@@ -177,7 +177,7 @@ Expert iteration reference & MiniF2F-test & Prior GPT-f/PACT baseline & 29.6\% p
 AlphaGeometry & Olympiad geometry set & Previous symbolic/neural systems & 25 / 30 problems & Solved problems \\
 AlphaProof + AlphaGeometry & IMO 2024 & Human competition scoring & 4 / 6 problems solved & Silver-level performance \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table*}
 
 The evaluation interpretation differs across the four benchmark families. GSM8K is useful for measuring arithmetic word-problem reliability, but it is vulnerable to answer-only shortcuts and contamination. MATH is harder and more diverse, but exact-answer grading can miss reasoning quality and can reward lucky final answers. MiniF2F is stricter because proof assistants verify the proof object, yet it moves part of the difficulty into formalization and search over proof tactics. IMO-style competition math is more meaningful to humans, but it is expensive to grade, small in sample size, and often not reproducible as a standardized benchmark.
@@ -190,7 +190,7 @@ Agent Symbolic Learning provides a bridge between math reasoning and agent evalu
 
 MiniF2F and formal theorem proving are especially important for the next generation of self-evolution. A formal verifier provides a binary reward that is much harder to fool than a language-model judge. This makes theorem proving attractive for self-play, curriculum learning, and expert iteration. At the same time, formal proof systems expose a different kind of Goodhart risk: a prover may specialize in tactic patterns or formal-library artifacts rather than mathematical insight. Therefore, formal-math evaluation should report not only pass rates but also proof length, verifier calls, generated tactic diversity, dependence on imported lemmas, and performance on newly formalized problems.
 
-Competition-math evaluation introduces an additional dimension: novelty and human-level problem solving. AlphaGeometry's 25/30 olympiad-geometry result and AlphaProof/AlphaGeometry's 4/6 IMO 2024 result show that search-and-verification systems can reach meaningful mathematical milestones. For the self-evolution literature, the significance is not that every agent should be evaluated on IMO problems. The significance is that mathematical discovery systems require evaluators that can certify nontrivial reasoning. If an evolving system claims to discover new lemmas, algorithms, or conjectures, it should provide proof artifacts, independent verification, or human-review protocols that go beyond answer matching.
+Competition-math evaluation introduces an additional dimension: novelty and human-level problem solving. AlphaGeometry's 25/30 olympiad-geometry result and the AlphaProof and AlphaGeometry result on four of six IMO 2024 problems show that search-and-verification systems can reach meaningful mathematical milestones. For the self-evolution literature, the significance is not that every agent should be evaluated on IMO problems. The significance is that mathematical discovery systems require evaluators that can certify nontrivial reasoning. If an evolving system claims to discover new lemmas, algorithms, or conjectures, it should provide proof artifacts, independent verification, or human-review protocols that go beyond answer matching.
 
 A strong mathematical evaluation protocol should therefore include: (i) exact-answer benchmarks such as GSM8K for breadth; (ii) harder symbolic benchmarks such as MATH for depth; (iii) formal proof benchmarks such as MiniF2F for verification; (iv) time-split or newly generated tasks for contamination control; (v) compute-budget curves; and (vi) error taxonomy. Errors should be categorized as arithmetic slips, algebraic transformations, missing cases, false lemmas, invalid formalization, search failure, or evaluator mismatch. Self-evolution systems should then show which error categories decrease after evolution. A single aggregate accuracy hides whether the system learned mathematics or merely learned benchmark style.
 
@@ -207,10 +207,10 @@ Table~\ref{tab:agent-exact-scores} summarizes exact reported numbers from the lo
 
 \begin{table*}[t]
 \centering
-\small
+\TableTight
 \caption{Agent benchmark results relevant to self-evolving systems. WebArena and Voyager numbers are included as environment references because they are central benchmarks for multi-step agent evaluation.}
 \label{tab:agent-exact-scores}
-\begin{tabular}{p{0.17\linewidth}p{0.17\linewidth}p{0.22\linewidth}p{0.24\linewidth}p{0.10\linewidth}}
+\begin{tabularx}{\textwidth}{@{}L{0.17\textwidth}L{0.17\textwidth}L{0.23\textwidth}L{0.25\textwidth}Y@{}}
 \toprule
 \textbf{Method} & \textbf{Benchmark} & \textbf{Baseline} & \textbf{Reported result} & \textbf{Metric} \\
 \midrule
@@ -218,9 +218,9 @@ Agent Symbolic Learning & HotPotQA & Agents: F1 36.2, EM 22.8; DSPy: F1 37.4, EM
 Reflexion & ALFWorld & Base agent: 75\% & 97\% & Success rate \\
 Godel Agent & HotPotQA / ALFWorld & Hand-designed agent baseline & Reported to exceed baselines; local extraction gives +8--15\% on HotPotQA and significant ALFWorld gains & Relative gain \\
 WebArena reference & WebArena & Human performance far higher; early GPT-4 agents low & GPT-4/ReAct-style agents around 14.41\% in original benchmark reporting & Success rate \\
-Voyager reference & Minecraft & Prior Minecraft agents & 3.3$\times$ unique items, 2.3$\times$ travel distance, faster tech-tree unlocking & Exploration/skill metrics \\
+Voyager reference & Minecraft & Prior Minecraft agents & 3.3$\times$ unique items, 2.3$\times$ travel distance, faster tech-tree unlocking & Exploration and skill metrics \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table*}
 
 HotPotQA is a useful testbed for prompt and workflow evolution because errors often arise from poor decomposition or retrieval rather than missing world knowledge. Agent Symbolic Learning treats the agent as a symbolic network of prompts, tools, and pipeline connections. The evaluator constructs language losses from trajectories and propagates language gradients back through components. The HotPotQA gain from F1 36.2 to 39.1 and EM 22.8 to 25.6 is modest but meaningful because it indicates that structured prompt and pipeline updates can improve multi-hop behavior. The limitation is that HotPotQA is still mostly a question-answering benchmark; it does not fully test tool safety, long-term memory, or environment change.
@@ -244,10 +244,10 @@ FunSearch uses a language model to generate programs and an evaluator to score t
 
 \begin{table*}[t]
 \centering
-\small
+\TableTight
 \caption{Open-ended discovery results from FunSearch and AlphaEvolve-style systems. These results require evaluators that certify candidate quality rather than merely compare against a fixed answer key.}
 \label{tab:open-ended-results}
-\begin{tabular}{p{0.18\linewidth}p{0.30\linewidth}p{0.34\linewidth}p{0.10\linewidth}}
+\begin{tabularx}{\textwidth}{@{}L{0.18\textwidth}L{0.28\textwidth}Y L{0.13\textwidth}@{}}
 \toprule
 \textbf{System} & \textbf{Domain} & \textbf{Reported result} & \textbf{Evaluator} \\
 \midrule
@@ -259,7 +259,7 @@ AlphaEvolve & Borg scheduling & Recovered 0.7\% of worldwide compute & Productio
 AlphaEvolve & LLM training kernels & 23\% speedup in kernel tiling; 32\% speedup in another attention optimization & Runtime benchmark \\
 AI Scientist v2 & Automated paper generation & Peer-review score 6.33; top 45\% workshop-level ranking & Human/LLM peer review \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table*}
 
 The key evaluation challenge in open-ended discovery is novelty. A system may rediscover a known result, improve a benchmark-specific heuristic, or find a genuine new contribution. These outcomes should be reported separately. Rediscovery is valuable because it validates the search process, but it is not the same as discovery. Improvement on a synthetic evaluator is valuable if the evaluator matches the real problem, but it may not transfer. Genuine discovery requires independent verification, comparison with the literature, and often expert review.

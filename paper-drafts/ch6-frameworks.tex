@@ -228,13 +228,13 @@ Across the surveyed frameworks, the most important finding is a gap between \emp
 
 \begin{table*}[t]
 \centering
-\small
+\TableTight
 \caption{Common evolution capability gaps in current agent frameworks.}
 \label{tab:evolution-gaps}
-\begin{tabular}{p{0.18\textwidth}p{0.30\textwidth}p{0.24\textwidth}p{0.20\textwidth}}
-\hline
+\begin{tabularx}{\textwidth}{@{}L{0.18\textwidth}L{0.30\textwidth}Y L{0.20\textwidth}@{}}
+\toprule
 \textbf{Gap} & \textbf{Typical current behavior} & \textbf{Why it matters for self-evolution} & \textbf{Needed layer} \\
-\hline
+\midrule
 Persistent evaluation & Evaluation is task-specific, ad hoc, or external; some frameworks provide benchmarks or metrics but not universal governance. & A variant cannot be trusted without repeated, comparable measurement. & Benchmark registry, evaluator API, confidence and rerun policy. \\
 Lineage tracking & Runs may log traces, but parent--child variant relationships are not always first-class. & Improvement requires knowing what changed and what evidence justified promotion. & Artifact registry with parent IDs, mutation metadata, and versioned configs. \\
 Regression prevention & Agents may improve one task while silently harming another. & Evolution without regression checks causes capability drift and benchmark overfitting. & Baseline freeze, regression suite, rollback rules, gated promotion. \\
@@ -242,8 +242,8 @@ Cross-run memory & Memory often supports a task or conversation rather than long
 Cost and risk accounting & Frameworks expose token or runtime information unevenly. & A small quality gain may be unacceptable if cost, latency, or risk explodes. & Multi-objective fitness with cost, latency, safety, and maintainability. \\
 Reproducible environments & Tool and sandbox behavior may vary across runs. & Variant comparisons are invalid if environments drift. & Environment snapshots, seed control, dependency manifests. \\
 Promotion governance & A successful output may be accepted manually or implicitly. & Self-evolution needs a policy for when a child becomes the new baseline. & Promotion controller, approval workflow, audit log. \\
-\hline
-\end{tabular}
+\bottomrule
+\end{tabularx}
 \end{table*}
 
 The first gap is persistent evaluation.  DSPy has the strongest built-in evaluation loop, and AutoGen includes agbench-related tooling.  Other frameworks often rely on user-defined expected outputs, tests, or external benchmarks.  But self-evolution requires evaluation to be persistent and comparable across generations.  The system must know which benchmark version was used, which examples were included, which metric was applied, and whether the result was statistically stable.  A one-off successful run is not evolution; it is an anecdote.

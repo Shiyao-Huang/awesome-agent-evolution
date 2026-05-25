@@ -296,21 +296,22 @@ Together, these systems define a spectrum.  ADAS searches agent architectures in
 
 \begin{table*}[t]
 \centering
+\TableTight
 \caption{Agent self-evolution systems by substrate, feedback signal, and reported benchmark evidence.}
 \label{tab:agent-self-evolution-systems}
-\begin{tabular}{p{0.14\linewidth}p{0.18\linewidth}p{0.20\linewidth}p{0.24\linewidth}p{0.14\linewidth}}
-\hline
-System & Evolved substrate & Feedback signal & Reported evidence in local materials & Main limitation \\
-\hline
+\begin{tabularx}{\textwidth}{@{}L{0.13\textwidth}L{0.18\textwidth}L{0.18\textwidth}Y L{0.16\textwidth}@{}}
+\toprule
+\textbf{System} & \textbf{Evolved substrate} & \textbf{Feedback signal} & \textbf{Reported evidence in local materials} & \textbf{Main limitation} \\
+\midrule
 ADAS & Python programs implementing agent architectures & Benchmark scores on agent tasks & Outperforms hand-designed agents on ARC and GFootball; transfer across domains and models & Expensive search over huge code space \\
 DGM & Archive of coding-agent implementations & SWE-bench and Polyglot scores & SWE-bench 20.0\% $\rightarrow$ 50.0\%; Polyglot 14.2\% $\rightarrow$ 30.7\% & Evaluation cost and safe self-modification \\
 G{\"o}del Agent & Runtime agent logic via monkey patches & Task feedback plus validation & Reported gains on HotPotQA, ALFWorld, and multi-domain text tasks & Runtime patching risk and weaker portability \\
 Agent Symbolic Learning & Prompts, tools, and pipeline connections & Language loss and language gradients & HotPotQA F1 36.2 $\rightarrow$ 39.1; MATH 56.0\% $\rightarrow$ 60.7\%; HumanEval 68.3\% $\rightarrow$ 73.2\% & Depends on strong LLM for gradient quality \\
 Absolute Zero & Proposer/solver policy through RLVR & Code-executor rewards on self-generated tasks & 7B-level SOTA coding average in local notes; competitive math transfer & Curriculum collapse and executor-limited domains \\
-SelfEvolve & Generated code plus self-generated knowledge & Sandbox errors and test feedback & DS-1000 49.4 $\rightarrow$ 57.2; HumanEval pass@1 74.39 $\rightarrow$ 85.98 & Mainly handles API/assertion errors; hand-written prompts \\
+SelfEvolve & Generated code plus self-generated knowledge & Sandbox errors and test feedback & DS-1000 49.4 $\rightarrow$ 57.2; HumanEval pass@1 74.39 $\rightarrow$ 85.98 & Mainly handles API and assertion errors; hand-written prompts \\
 SE-Agent & Reasoning trajectories for code agents & SWE-bench Verified outcomes & Up to 55\% relative improvement in local notes; repository reports 80\% Top-1 & Expensive multi-trajectory search \\
-\hline
-\end{tabular}
+\bottomrule
+\end{tabularx}
 \end{table*}
 
 A unifying perspective is that agent self-evolution requires three memories.  The first is episodic memory: what happened in a particular task attempt.  The second is design memory: which prompts, tools, code changes, or trajectories have worked across attempts.  The third is evaluative memory: which measurements are trustworthy and under what conditions.  Systems that lack episodic memory repeat mistakes.  Systems that lack design memory cannot accumulate improvements.  Systems that lack evaluative memory overfit, regress, or reward hacks.

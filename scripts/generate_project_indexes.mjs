@@ -26,6 +26,19 @@ const GENERATED_ON = new Intl.DateTimeFormat('en-CA', {
 const INDEX_DIR = path.join(ROOT, 'docs', 'indexes');
 mkdirSync(INDEX_DIR, { recursive: true });
 
+const LOCAL_ONLY_USER_INPUTS = new Set([
+  'CURRENT_GOAL.md',
+  'docs/project-management/user-direct-inputs.md'
+]);
+
+function normalizeRel(file) {
+  return file.split(path.sep).join('/');
+}
+
+function isLocalOnlyUserInput(file) {
+  return LOCAL_ONLY_USER_INPUTS.has(normalizeRel(file));
+}
+
 const categories = [
   {
     id: 'raw',
@@ -141,9 +154,10 @@ function walk(target, options = {}) {
   if (!result.exists) return result;
 
   function visit(abs) {
-    const rel = path.relative(ROOT, abs);
+    const rel = normalizeRel(path.relative(ROOT, abs));
     const base = path.basename(abs);
     if (base === '.git' || base === 'node_modules') return;
+    if (isLocalOnlyUserInput(rel)) return;
     if (skipDist && rel === 'site/dist') return;
     let st;
     try {
@@ -488,7 +502,7 @@ function generateRootDocumentMap() {
   const files = readdirSync(ROOT)
     .filter((name) => {
       const full = path.join(ROOT, name);
-      return statSync(full).isFile() && !name.startsWith('.');
+      return statSync(full).isFile() && !name.startsWith('.') && !isLocalOnlyUserInput(name);
     })
     .sort();
 
@@ -546,7 +560,7 @@ function topLevelClass(name) {
 
 function generateNoncanonicalIndex() {
   const entries = readdirSync(ROOT)
-    .filter((name) => name !== '.git')
+    .filter((name) => name !== '.git' && !isLocalOnlyUserInput(name))
     .sort()
     .map((name) => {
       const full = path.join(ROOT, name);
