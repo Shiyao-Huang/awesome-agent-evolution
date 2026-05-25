@@ -87,7 +87,7 @@ const fetchRepoCreatedAt = async (repo, cache) => {
     response = await fetch(`https://api.github.com/repos/${normalized}`, {
       headers: {
         Accept: 'application/vnd.github+json',
-        'User-Agent': 'awesome-evolution-data-analysis'
+        'User-Agent': 'awesome-Agent-evolution-data-analysis'
       }
     });
   } catch (error) {

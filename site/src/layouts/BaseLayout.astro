@@ -103,13 +103,13 @@ const orgLd = {
 
       // Scroll reveal
       (function(){
-        var els=document.querySelectorAll('.card,.timeline-item,.metric,.section,.split');
+        var els=document.querySelectorAll('.card,.timeline-item,.metric,.split,.section-head');
         els.forEach(function(el){el.classList.add('reveal')});
         var obs=new IntersectionObserver(function(entries){
           entries.forEach(function(e){
             if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
           });
-        },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+        },{threshold:0.01,rootMargin:'0px 0px -40px 0px'});
         els.forEach(function(el){obs.observe(el)});
       })();
     </script>

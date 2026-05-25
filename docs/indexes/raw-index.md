@@ -11,7 +11,7 @@
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
 | `raw-github` | present | 482 | 1 | 0 | 5.0 MB |
-| `raw-papers` | present | 187 | 1 | 0 | 929 KB |
+| `raw-papers` | present | 195 | 1 | 0 | 952 KB |
 | `raw-blogs` | present | 1308 | 1 | 0 | 3.2 MB |
 | `raw-social` | present | 1307 | 2 | 0 | 19 MB |
 | `raw-social-rank` | present | 468 | 1 | 0 | 10 MB |

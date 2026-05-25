@@ -1,4 +1,4 @@
-# Agent Self-Evolution / Auto-Improvement: Detailed Paper Reference (100 Papers)
+# Agent Self-Evolution / Auto-Improvement: Detailed Paper Reference (108 Papers)
 
 > Generated: 2026-05-20 | Scope: 2022-2026 | Sources: arXiv, NeurIPS, ICLR, ACL, AAAI, Nature
 > Categories: 14 subcategories covering frameworks, methods, self-play RL, reasoning, reflection, code self-repair, curriculum, experience learning, memory, alignment, multi-agent, evolutionary strategies, open-ended evolution, weak-to-strong
@@ -961,6 +961,80 @@
 
 ---
 
+## 2026 Supplemental Frontier Papers
+
+### 101. Self-Evolving Software Agents
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2604.27264
+- **URL**: https://arxiv.org/abs/2604.27264
+- **Abstract**: Introduces self-evolving software agents that combine BDI reasoning with LLMs so goals, reasoning rules, and executable code can evolve from operational experience. Important for the software-agent line because it frames evolution as requirements/design/code update, not only prompt retry.
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 102. EvoMemBench: Benchmarking Agent Memory from a Self-Evolving Perspective
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2605.18421
+- **URL**: https://arxiv.org/abs/2605.18421
+- **Abstract**: Defines a benchmark for agent memory under self-evolution, separating in-episode vs. cross-episode memory and knowledge-oriented vs. execution-oriented memory. Important for judging whether memory really improves future behavior instead of merely storing more context.
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 103. SEA-Eval: A Benchmark for Evaluating Self-Evolving Agents Beyond Episodic Assessment
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2604.08988
+- **URL**: https://arxiv.org/abs/2604.08988
+- **Abstract**: Introduces SEA-Eval for evaluating self-evolving agents beyond one-off episodic task success, with emphasis on intra-task reliability and long-term evolutionary performance. This directly targets the benchmark gap in this project.
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 104. Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2602.04837
+- **URL**: https://arxiv.org/abs/2602.04837
+- **Abstract**: Treats a group of agents as the evolutionary unit and studies open-ended improvement through shared experience reuse. Useful for comparing individual self-modification, multi-agent collaboration, and population-level agent evolution.
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 105. EvoSkill: Automated Skill Discovery for Multi-Agent Systems
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2603.02766
+- **URL**: https://arxiv.org/abs/2603.02766
+- **Abstract**: Studies automatic skill discovery for multi-agent systems, linking the skill-supply repositories in the GitHub corpus to paper-level evidence about how reusable skills can be generated and evaluated.
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 106. The Devil Behind Moltbook: Anthropic Safety is Always Vanishing in Self-Evolving AI Societies
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2602.09877
+- **URL**: https://arxiv.org/abs/2602.09877
+- **Abstract**: Analyzes safety degradation in self-evolving AI societies. This is a needed counterweight to performance-only self-evolution claims because it asks whether autonomous adaptation erodes alignment or governance properties.
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 107. SAGER: Self-Evolving User Policy Skills for Recommendation Agent
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2604.14972
+- **URL**: https://arxiv.org/abs/2604.14972
+- **Abstract**: Applies self-evolving policy skills to recommendation agents, separating evolving user memory from evolving decision policy. Useful as a product-facing example where skill evolution is personalized and continuously updated.
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 108. Bifrost: Steering Strategic Trajectories to Bridge Contextual Gaps for Self-Improving Agents
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2602.05810
+- **URL**: https://arxiv.org/abs/2602.05810
+- **Abstract**: Focuses on steering strategic trajectories for self-improving agents when context gaps block improvement. Relevant to the context-engineering and trajectory-control branch of self-evolution.
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
 ## Surveys (additional references)
 
 ### S1. A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence
@@ -999,7 +1073,7 @@
 | L. Evolutionary Strategies | 4 |
 | M. Open-Ended & Classics | 5 |
 | N. Weak-to-Strong & Theory | 5 |
-| **Total** | **100** |
+| **Total** | **108** |
 
 | Venue | Count |
 |-------|-------|
@@ -1009,5 +1083,5 @@
 | AAAI | 2 |
 | Nature | 1 |
 | UIST | 1 |
-| arXiv only | 88 |
+| arXiv only | 96 |
 | **2024-2026 papers** | **~85%** |

@@ -961,6 +961,80 @@
 
 ---
 
+## 2026 补充前沿论文
+
+### 101. Self-Evolving Software Agents
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2604.27264
+- **URL**: https://arxiv.org/abs/2604.27264
+- **Abstract**: 提出结合 BDI 推理与 LLM 的自演化软件智能体，使目标、推理规则和可执行代码能从运行经验中更新。它把自演化从 prompt retry 推到 requirements/design/code 更新层。
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 102. EvoMemBench: Benchmarking Agent Memory from a Self-Evolving Perspective
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2605.18421
+- **URL**: https://arxiv.org/abs/2605.18421
+- **Abstract**: 从自演化角度定义 agent memory benchmark，区分 episode 内/跨 episode、知识型/执行型记忆。它直接回答“记忆是否真的改善未来行为，而不是堆上下文”。
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 103. SEA-Eval: A Benchmark for Evaluating Self-Evolving Agents Beyond Episodic Assessment
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2604.08988
+- **URL**: https://arxiv.org/abs/2604.08988
+- **Abstract**: 提出 SEA-Eval，用于评估自演化智能体，而不只看单次 episodic task 成功率；重点覆盖任务内可靠性和长期演化表现。它正好补上本项目 benchmark 缺口。
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 104. Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2602.04837
+- **URL**: https://arxiv.org/abs/2602.04837
+- **Abstract**: 把 agent group 作为演化单位，通过经验共享研究开放式自我改进。它适合比较单体自修改、多智能体协作和群体级演化。
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 105. EvoSkill: Automated Skill Discovery for Multi-Agent Systems
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2603.02766
+- **URL**: https://arxiv.org/abs/2603.02766
+- **Abstract**: 研究多智能体系统中的自动技能发现，把 GitHub 语料里的 skill supply 热点连接到论文层面的技能生成与评估证据。
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 106. The Devil Behind Moltbook: Anthropic Safety is Always Vanishing in Self-Evolving AI Societies
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2602.09877
+- **URL**: https://arxiv.org/abs/2602.09877
+- **Abstract**: 分析自演化 AI 社会中的安全属性退化，是 performance-only 自演化 claim 的必要反面证据：系统越会自改，治理/对齐会不会消失？
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 107. SAGER: Self-Evolving User Policy Skills for Recommendation Agent
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2604.14972
+- **URL**: https://arxiv.org/abs/2604.14972
+- **Abstract**: 把自演化 policy skill 用在推荐智能体中，区分用户记忆演化和决策策略演化。它是更产品化的例子：skill 可以个性化、持续更新。
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
+### 108. Bifrost: Steering Strategic Trajectories to Bridge Contextual Gaps for Self-Improving Agents
+- **Authors**: (see arXiv)
+- **Year**: 2026
+- **Venue**: arXiv
+- **arXiv**: 2602.05810
+- **URL**: https://arxiv.org/abs/2602.05810
+- **Abstract**: 研究自改进智能体如何通过战略轨迹 steering 跨越 context gaps，属于 context engineering / trajectory control 分支。
+- **Search Source**: 2026-05-25 follow-up mining for paper-undercoverage gap
+
 ## 综述（附加参考文献）
 
 ### S1. A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence
@@ -999,7 +1073,7 @@
 | L. 进化策略 | 4 |
 | M. 开放式与经典 | 5 |
 | N. 弱到强与理论 | 5 |
-| **总计** | **100** |
+| **总计** | **108** |
 
 | 发表场所 | 数量 |
 |----------|------|
@@ -1009,5 +1083,5 @@
 | AAAI | 2 |
 | Nature | 1 |
 | UIST | 1 |
-| 仅arXiv | 88 |
+| 仅arXiv | 96 |
 | **2024-2026年论文** | **约85%** |

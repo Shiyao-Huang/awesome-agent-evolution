@@ -275,6 +275,63 @@ ${rows.join('\n')}
   writeFileSync(path.join(outDir, 'raw-github-timestamp-index-ZH.md'), zh);
 }
 
+function inferArxivIdFromFile(file) {
+  return path.basename(file, '.md').replace('-', '.');
+}
+
+function generateRawPapersTimestampIndex() {
+  const rawDir = path.join(ROOT, 'raw-papers');
+  const outDir = path.join(ROOT, 'output');
+  if (!existsSync(rawDir)) return;
+  mkdirSync(outDir, { recursive: true });
+
+  const records = readdirSync(rawDir)
+    .filter((name) => name.endsWith('.md'))
+    .sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }))
+    .map((name) => {
+      const file = path.join('raw-papers', name);
+      const text = readFileSync(path.join(ROOT, file), 'utf8');
+      const meta = parseFrontmatter(text);
+      const arxivId = meta.arXiv || meta.arxiv || inferArxivIdFromFile(file);
+      const contentTimestamp = meta.content_timestamp || 'unknown';
+      return {
+        arxiv_id: arxivId,
+        title: meta.title || 'unknown',
+        url: meta.url || (arxivId === 'placeholder-no-arxiv' ? 'unknown' : `https://arxiv.org/abs/${arxivId}`),
+        file,
+        content_timestamp: contentTimestamp,
+        collected_at: meta.collected_at || 'unknown',
+        time_slice: meta.time_slice || timeSlice(contentTimestamp),
+        timestamp_source: meta.timestamp_source || 'unknown_not_present_in_raw_capture'
+      };
+    });
+
+  const index = {
+    generated_at: `${GENERATED_ON}T00:00:00+08:00`,
+    total: records.length,
+    updated_files: records.length,
+    unknown_content_timestamp: records.filter((record) => record.content_timestamp === 'unknown').length,
+    records
+  };
+  writeFileSync(path.join(outDir, 'raw-papers-timestamp-index.json'), `${JSON.stringify(index, null, 2)}\n`);
+
+  const rows = records.map((record, index) =>
+    `| ${index + 1} | [${record.arxiv_id}](${record.url}) | ${record.content_timestamp} | ${record.time_slice} | ${record.collected_at} | ${record.timestamp_source} | ${record.file} |`
+  );
+  const md = `# Raw Papers Timestamp Index
+
+Generated: ${index.generated_at}
+
+- Total raw paper captures: ${index.total}
+- Unknown content_timestamp: ${index.unknown_content_timestamp}
+
+| # | arXiv ID | content_timestamp | time_slice | collected_at | source | File |
+|---:|---|---|---|---|---|---|
+${rows.join('\n')}
+`;
+  writeFileSync(path.join(outDir, 'raw-papers-timestamp-index.md'), md);
+}
+
 function itemRow(entry, stats) {
   const status = stats.exists ? 'present' : 'missing';
   return `| \`${entry}\` | ${status} | ${stats.files} | ${stats.dirs} | ${stats.skipped} | ${formatBytes(stats.bytes)} |`;
@@ -547,6 +604,7 @@ ${supportEntries.map((entry) => `| \`${entry.name}\` | ${entry.type} | ${entry.k
 }
 
 generateRawGithubTimestampIndex();
+generateRawPapersTimestampIndex();
 for (const category of categories) writeCategoryIndex(category);
 generateMasterIndex();
 generateDataFlowIndex();

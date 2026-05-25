@@ -11,7 +11,7 @@
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
 | `reports` | present | 1 | 1 | 0 | 7.5 KB |
-| `output` | present | 8 | 1 | 0 | 521 KB |
+| `output` | present | 8 | 1 | 0 | 560 KB |
 | `site/public/reports` | present | 228 | 4 | 0 | 756 KB |
 | `site/dist` | present | 524 | 288 | 0 | 12 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 1013 KB |
@@ -49,7 +49,7 @@
 
 ### `site/dist`
 
-- `site/dist/_astro/BaseLayout.Btx1k6e5.css`
+- `site/dist/_astro/BaseLayout.Dt2Pu-2z.css`
 - `site/dist/_astro/star-analysis.B9Ar3sAv.css`
 - `site/dist/blog/adas-to-dgm-evolution/index.html`
 - `site/dist/blog/agent-evolution-layer/index.html`

@@ -13,7 +13,7 @@ This repository is a Chinese-first Awesome index, survey workspace, project mode
 | Publish-oriented paper draft | [paper-drafts/main.pdf](paper-drafts/main.pdf) | Current paper artifact generated from `paper-drafts/main.tex` |
 | GitHub corpus analysis | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 482 raw captures, 482 classified repos, 200 model-card projects, strict/broad evolution subsets, and timeline |
 | Project model cards | [projects/INDEX.md](projects/INDEX.md) | Teaching-style project analysis reports |
-| Public site | [GitHub Pages](https://shiyao-huang.github.io/awesome-evolution/) | SEO/site surface for project pages, research pages, and graph views |
+| Public site | [GitHub Pages](https://shiyao-huang.github.io/awesome-Agent-evolution/) | SEO/site surface for project pages, research pages, and graph views |
 | Master repository index | [docs/indexes/master-index.md](docs/indexes/master-index.md) | Generated map of raw, processed, work, results, mirrors, and ops layers |
 
 ## Field Shape

@@ -19,7 +19,7 @@
 | Git / GitHub 项目 | 482 个 raw captures，482 个已分类仓库，200 个 model-card 项目，79 个严格自进化仓库，175 个广义进化相关仓库 | [GitHub Project Data Analysis](analysis/github-project-data-analysis.md)、[repo classification](research/repo-classification.md) | 项目语料、category/theme 计数、时间线、严格/广义自进化子集、证据 join |
 | 论文 | 157 个 raw paper 文件，100 篇详细论文引用，25 个已匹配 review，13 篇深度论文笔记，213 页 PDF 草稿 | [详细论文索引](research/agent-self-evolution-papers-detailed.md)、[paper review coverage](analysis/paper-review-coverage.md)、[paper draft PDF](paper-drafts/main.pdf) | 方法图谱：framework、reflection、代码修复、self-play、curriculum、memory、alignment、open-ended evolution、theory |
 | X / 社区 / 公共讨论 | 350+ 条 curated entries：X/Twitter 13、Reddit 45、Hacker News 31、博客/教程 71、视频/播客 14、排行榜 10、curated lists 13 | [social media curated index](output/social-media-curated.md)、[中文社交索引](output/social-media-curated-ZH.md) | 实时讨论、论文传播、风险批评、工程教程、社区争议和采用信号 |
-| 跨源综合 | 作者网络、博客/source profiles、项目 model cards、公开网站、知识图谱 | [author network](research/author-network.md)、[blog/source profiles](research/blog-author-profiles-all.md)、[public site](https://shiyao-huang.github.io/awesome-evolution/) | Git 项目、论文、作者、实验室和社区信号之间的关系 |
+| 跨源综合 | 作者网络、博客/source profiles、项目 model cards、公开网站、知识图谱 | [author network](research/author-network.md)、[blog/source profiles](research/blog-author-profiles-all.md)、[public site](https://shiyao-huang.github.io/awesome-Agent-evolution/) | Git 项目、论文、作者、实验室和社区信号之间的关系 |
 
 ## 读者路线
 
@@ -46,7 +46,7 @@
 | Curated 社交/社区条目 | 350+ | [social media curated index](output/social-media-curated.md) |
 | 博客/source entities | 157 个唯一作者或来源实体 | [blog/source profile index](research/blog-author-profiles-all.md) |
 | 综述论文草稿 | 213 pages | [paper-drafts/main.pdf](paper-drafts/main.pdf)、[paper source](paper-drafts/main.tex) |
-| 公开站点构建 | 281 pages | [GitHub Pages site](https://shiyao-huang.github.io/awesome-evolution/) |
+| 公开站点构建 | 281 pages | [GitHub Pages site](https://shiyao-huang.github.io/awesome-Agent-evolution/) |
 
 ## Git 索引
 
@@ -320,8 +320,8 @@ node scripts/analyze_github_project_data.mjs
 
 ## 公开站点
 
-- GitHub 仓库：<https://github.com/Shiyao-Huang/awesome-evolution>
-- GitHub Pages：<https://shiyao-huang.github.io/awesome-evolution/>
-- Public project pages：<https://shiyao-huang.github.io/awesome-evolution/projects/>
-- Research page：<https://shiyao-huang.github.io/awesome-evolution/research/>
-- Graph page：<https://shiyao-huang.github.io/awesome-evolution/graph/>
+- GitHub 仓库：<https://github.com/Shiyao-Huang/awesome-Agent-evolution>
+- GitHub Pages：<https://shiyao-huang.github.io/awesome-Agent-evolution/>
+- Public project pages：<https://shiyao-huang.github.io/awesome-Agent-evolution/projects/>
+- Research page：<https://shiyao-huang.github.io/awesome-Agent-evolution/research/>
+- Graph page：<https://shiyao-huang.github.io/awesome-Agent-evolution/graph/>

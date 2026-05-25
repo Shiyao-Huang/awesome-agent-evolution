@@ -4,7 +4,7 @@ Last updated: 2026-05-24
 
 ## One-Sentence Compression
 
-`awesome-evolution` now has timestamped raw material, a buildable paper draft, an Astro blog/SEO site, and complete model-card pages for the current 181-project set; the remaining gap is turning the paper from structurally complete into publication-grade.
+`awesome-Agent-evolution` now has timestamped raw material, a buildable paper draft, an Astro blog/SEO site, and complete model-card pages for the current 181-project set; the remaining gap is turning the paper from structurally complete into publication-grade.
 
 ## Four Required Layers
 

@@ -15,7 +15,7 @@
 | `latex` | present | 9 | 3 | 0 | 53 KB |
 | `site` | present | 830 | 313 | 0 | 20 MB |
 | `survey` | present | 40 | 4 | 0 | 1.2 MB |
-| `scripts` | present | 7 | 1 | 0 | 107 KB |
+| `scripts` | present | 7 | 1 | 0 | 109 KB |
 | `data-engine` | present | 0 | 9 | 0 | 0 B |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 | `CURRENT_GOAL.md` | present | 1 | 0 | 0 | 11 KB |
