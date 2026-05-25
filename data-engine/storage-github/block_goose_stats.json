@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "collection_timestamp": "2026-05-22T14:20:10.714921+00:00",
+    "repo": "block/goose",
+    "collector_name": "github_quick_stats"
+  },
+  "data": {
+    "full_name": "block/goose",
+    "description": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
+    "stars": 45680,
+    "forks": 4688,
+    "open_issues": 202,
+    "watchers": 222,
+    "language": "Rust",
+    "license": "Apache-2.0",
+    "topics": [
+      "acp",
+      "ai",
+      "ai-agents",
+      "mcp"
+    ],
+    "created_at": "2024-08-23T19:03:36Z",
+    "updated_at": "2026-05-22T14:17:45Z",
+    "pushed_at": "2026-05-22T14:15:11Z",
+    "default_branch": "main",
+    "archived": false,
+    "network_count": 4688
+  }
+}

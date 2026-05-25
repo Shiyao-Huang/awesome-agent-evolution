@@ -1,20 +1,83 @@
 {
-  "generated_at": "2026-05-22T13:54:54.520172+00:00",
-  "total": 1,
+  "generated_at": "2026-05-22T14:21:14.228834+00:00",
+  "total": 7,
   "scores": [
     {
-      "project": "mastra",
-      "composite_score": 82.7,
+      "project": "claude-code",
+      "composite_score": 96.2,
       "classification": "viral",
       "platforms": {
         "github": {
-          "stars": 24200,
-          "forks": 2105
+          "stars": 125712,
+          "forks": 20637
         }
-      },
-      "data_sources": [
-        "mastra-ai_mastra_stats.json"
-      ]
+      }
+    },
+    {
+      "project": "codex",
+      "composite_score": 93.0,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 84618,
+          "forks": 12324
+        }
+      }
+    },
+    {
+      "project": "goose",
+      "composite_score": 87.9,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 45680,
+          "forks": 4688
+        }
+      }
+    },
+    {
+      "project": "aider",
+      "composite_score": 87.8,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 45145,
+          "forks": 4460
+        }
+      }
+    },
+    {
+      "project": "chatgpt-on-wechat",
+      "composite_score": 87.7,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 44715,
+          "forks": 10119
+        }
+      }
+    },
+    {
+      "project": "agent-skills",
+      "composite_score": 87.7,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 44805,
+          "forks": 4948
+        }
+      }
+    },
+    {
+      "project": "agno",
+      "composite_score": 86.9,
+      "classification": "viral",
+      "platforms": {
+        "github": {
+          "stars": 40300,
+          "forks": 5413
+        }
+      }
     }
   ]
 }

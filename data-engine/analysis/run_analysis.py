@@ -38,7 +38,7 @@ def score(name,src):
     raw=sum(sc.values());mx=sum({"github":25}.get(k,0)for k in sc)
     comp=round(raw/mx*100,1)if mx>0 else 0
     cls="viral"if comp>=65 else"steady"if comp>=45 else"organic"
-    return{"project":name,"composite_score":comp,"classification":cls,"platforms":info,"data_sources":list(src.keys())}
+    return{"project":name,"composite_score":comp,"classification":cls,"platforms":info}
 def main():
     base=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     projects=discover(base)
@@ -47,7 +47,7 @@ def main():
     scores=sorted([score(n,s)for n,s in projects.items()],key=lambda x:x["composite_score"],reverse=True)
     od=os.path.join(base,"storage","analysis")
     save_json(os.path.join(od,"hype_scores.json"),{"generated_at":datetime.now(timezone.utc).isoformat(),"total":len(scores),"scores":scores})
-    for s in scores[:15]:
+    for s in scores[:10]:
         st=s.get("platforms",{}).get("github",{}).get("stars","")
         e=f" {st:,}⭐"if st else""
         print(f"  {s['project']:<25s} {s['composite_score']:>5} {s['classification']}{e}")
