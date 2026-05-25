@@ -1,843 +1,1516 @@
 % ====================================================================
-% Chapter 3: Methods for Agent Self-Evolution
+% 第3章：方法分类（LaTeX版本，含TikZ图）
+% 目标：80KB+，覆盖六大方法类别及其形式化、对比与开放问题
 % ====================================================================
 
-\section{Methods for Agent Self-Evolution}
-\label{ch:methods}
+\section{方法分类}\label{ch:methods}
 
-\subsection{Chapter Overview: From Isolated Tricks to Evolutionary Loops}
-\label{sec:methods-overview}
+\subsection{本章概述}
 
-The preceding chapters established the conceptual foundation of agent self-evolution: an agentic system becomes evolutionary when some part of the system is mutable, when feedback exposes the consequences of that mutation, when a selection or update rule preserves better variants, and when the resulting change can be audited. This chapter moves from definition to method. Its goal is not to list every named system in chronological order, because the field already contains too many overlapping labels. Instead, it asks a more structural question: what kind of loop is being closed, what object changes inside the loop, what feedback signal drives the change, and what evidence shows that the change improves behavior rather than merely changing the surface form of the output?
-
-The literature on self-improving language models and agents can look fragmented. Self-Refine asks a model to critique and revise its own output without weight updates \cite{selfrefine2023}. Reflexion stores verbal feedback in memory and reuses it across attempts \cite{reflexion2023}. Self-Debug lets a model inspect and repair code through execution traces. STaR generates rationales, filters correct ones, and fine-tunes on the resulting reasoning traces \cite{star2022}. ReST and ReST-EM generate candidate completions, score them with a reward model, and update on the high-reward subset \cite{rest2023}. Constitutional AI uses principles to produce self-critiques, revised responses, AI preference labels, and RLAIF training \cite{constitutionalai2022}. SPIN converts the previous model into an opponent and trains the next model to distinguish self-generated responses from human demonstrations \cite{spin2024}. RISE treats recursive introspection as a multi-turn MDP \cite{rise2024}. RAGEN and ReVeal extend reinforcement learning to multi-turn agent trajectories and code verification \cite{ragen2025,reveal2026}. Absolute Zero removes external task data by making the model propose, solve, and verify its own tasks \cite{absolutezero2025}. These systems differ in implementation, but they share a small number of loop patterns.
-
-For the purposes of this chapter, the core distinction is between \emph{inference-time self-improvement} and \emph{training-time self-improvement}. Inference-time methods leave model weights fixed. They improve a current attempt by adding critique, execution feedback, memory, search, or revision inside the context window. They are attractive because they can be deployed immediately on top of existing models and because their intermediate artifacts are often legible. Their limitation is that improvement is local, bounded by context length, and sometimes brittle: a model may revise fluently without discovering the real error. Training-time methods change a policy, reward model, preference model, verifier, or data distribution. They can amortize learning across future tasks and sometimes produce durable capability gains, but they require more infrastructure, clearer evaluation boundaries, and stronger safeguards against overfitting or reward hacking.
-
-This chapter is organized around four requirements from the task definition. Section~\ref{sec:methods-inference} analyzes inference-time self-improvement through Self-Refine, Reflexion, Self-Debug, and related recursive introspection methods. Section~\ref{sec:methods-training} analyzes training-time self-improvement through STaR, SPIN, ReST-EM, Constitutional AI, RISE, RAGEN, Absolute Zero, and ReVeal. Section~\ref{sec:methods-comparison} provides a comparative taxonomy table crossing methods with loop type, training need, feedback source, mutable object, and suitable tasks. Section~\ref{sec:methods-benchmarks} summarizes benchmark evidence on HumanEval, GSM8K, BBH, MMLU, and adjacent benchmarks, while explicitly distinguishing numbers present in the local source notes from numbers that are reported only qualitatively.
-
-The chapter also reframes the earlier six-category taxonomy of reward evolution, self-play, prompt evolution, architecture search, memory evolution, and hybrid methods. That taxonomy remains useful for mapping the broad field, but the present chapter focuses on methods most directly connected to self-improving language models. A single method may participate in multiple categories. Reflexion is both inference-time improvement and memory evolution. STaR is both reward-filtered self-training and reasoning-rationale evolution. SPIN is both training-time self-play and preference-like discrimination. ReVeal is both code-agent reinforcement learning and verifier co-evolution. Therefore the taxonomy here should be read as a functional decomposition rather than a set of mutually exclusive boxes.
+Agent Evolution 方法众多，名称也不统一。本章按"主要选择压力与主要可变对象"进行分类：基于奖励的进化主要优化策略或行为分布；自博弈进化主要生成任务、对手和验证信号；提示词进化主要改变上下文、反思、原则和输出修订流程；架构搜索主要改变代码、工具、控制流和多智能体拓扑；基于记忆的进化主要改变长期经验、技能库和检索策略；混合方法则把多种机制组合成端到端闭环。
 
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[
-  node distance=12mm,
-  box/.style={rectangle, rounded corners=4pt, draw=#1!75!black, fill=#1!10,
-    text width=33mm, align=center, font=\small, minimum height=10mm},
-  smallbox/.style={rectangle, rounded corners=3pt, draw=#1!70!black, fill=#1!7,
-    text width=31mm, align=center, font=\scriptsize, minimum height=8mm},
-  arr/.style={-{Stealth[length=2.5mm]}, thick, color=gray!65},
-  dasharr/.style={-{Stealth[length=2.5mm]}, thick, dashed, color=gray!55}
+  level 1/.style={sibling distance=42mm, level distance=22mm},
+  level 2/.style={sibling distance=22mm, level distance=20mm},
+  root/.style={rectangle, rounded corners, draw=cat1, fill=cat1!10,
+    text width=60mm, align=center, font=\bfseries, minimum height=10mm},
+  cat/.style={rectangle, rounded corners, draw=#1, fill=#1!8,
+    text width=30mm, align=center, font=\small\bfseries, minimum height=8mm},
+  paper/.style={rectangle, rounded corners, draw=gray!60, fill=gray!5,
+    text width=26mm, align=left, font=\scriptsize, inner sep=2pt},
+  edge from parent/.style={draw, -Stealth, thick, gray!70}
 ]
-
-\node[box=cat1] (task) {Task or Environment};
-\node[box=cat3, right=of task] (actor) {Actor / Solver};
-\node[box=cat2, right=of actor] (feedback) {Feedback Source};
-\node[box=cat4, below=of actor] (update) {Selection or Update};
-\node[box=cat5, below=of task] (state) {Mutable State};
-\node[box=cat6, below=of feedback] (evidence) {Audit Evidence};
-
-\draw[arr] (task) -- (actor);
-\draw[arr] (actor) -- (feedback);
-\draw[arr] (feedback) -- (update);
-\draw[arr] (update) -- (state);
-\draw[arr] (state) -- (task);
-\draw[dasharr] (feedback) -- (evidence);
-\draw[dasharr] (update) -- (evidence);
-
-\node[smallbox=cat3, above=8mm of actor] (inf) {Inference-time: revise context, memory, search path};
-\node[smallbox=cat1, below=8mm of update] (train) {Training-time: update weights, reward, policy, data};
-\draw[dasharr] (inf) -- (actor);
-\draw[dasharr] (train) -- (update);
-
+\node[root] {Agent Self-Evolution\\方法分类}
+  child {
+    node[cat=cat5] {3.1 基于奖励\\的进化}
+    child { node[paper] {STaR, Self-Rewarding\\Meta-Rewarding\\RISE, Agent-R} }
+    child { node[paper] {RAGEN, IterAlign\\SICA, DGM} }
+  }
+  child {
+    node[cat=cat2] {3.2 自博弈\\进化}
+    child { node[paper] {Absolute Zero\\SPIRAL} }
+    child { node[paper] {Multi-Agent Debate\\Self-Play FT} }
+  }
+  child {
+    node[cat=cat3] {3.3 提示词\\进化}
+    child { node[paper] {Reflexion, ExpeL\\Self-Refine} }
+    child { node[paper] {ACE, ICE, EvolveR\\ReasoningBank} }
+  }
+  child {
+    node[cat=cat4] {3.4 架构\\搜索}
+    child { node[paper] {ADAS, Gödel Agent\\DGM, SICA} }
+    child { node[paper] {EvoMAC, AlphaEvolve\\FunSearch} }
+  }
+  child {
+    node[cat=cat5] {3.5 记忆\\进化}
+    child { node[paper] {Voyager, Memory-R1\\AriadneMem} }
+    child { node[paper] {SEDM, A-Mem\\Memento} }
+  }
+  child {
+    node[cat=cat6] {3.6 混合\\方法}
+    child { node[paper] {EvolveR (全生命周期)\\WebEvolver} }
+    child { node[paper] {HyperAgents\\EvoAgentX} }
+  };
 \end{tikzpicture}
-\caption{Generic self-evolution loop. A task induces behavior, behavior receives feedback, feedback drives selection or update, and the update changes some mutable state. Inference-time methods mainly change context, memory, or search state; training-time methods change model parameters, policies, reward models, or data distributions.}
-\label{fig:ch3-generic-loop}
+\caption{Agent Self-Evolution 方法分类体系。六大类别按主要选择压力和可变对象划分。}
+\label{fig:ch3-taxonomy}
 \end{figure}
 
-\subsection{Inference-Time Self-Improvement: Critique, Reflection, Debugging, and Search}
-\label{sec:methods-inference}
+\subsubsection{分类维度说明}
 
-Inference-time self-improvement methods operate under a strong constraint: the base model is not retrained. The method must therefore improve performance by changing the information presented to the model, the sequence of internal calls, the external tools invoked, or the memory used across attempts. This makes inference-time methods especially important for agent engineering. They can be inserted into products without collecting new training data, without running expensive reinforcement learning, and without waiting for a new model release. They also expose intermediate artifacts--critiques, reflections, tests, traces, and revised plans--that humans can inspect.
+我们的分类基于两个正交维度：
 
-The common structure can be written as follows. Given an input $x$, a model $M$ produces an initial candidate $y_0$. A feedback process $F$ produces a critique, error signal, or execution trace $c_t = F(x,y_t,e_t)$, where $e_t$ may be an environment result such as a compiler error, unit-test failure, or evaluator score. A refinement operator $R$ produces a new candidate:
-\[
-  y_{t+1} = R_M(x, y_t, c_t, h_t),
-\]
-where $h_t$ is the history of previous attempts. The loop stops when a verifier accepts the result, a maximum number of iterations is reached, or the critique process reports that no useful improvement remains. The important point is that $M$ is reused rather than updated. Improvement is mediated by the context and by external state.
+\begin{enumerate}
+\item \textbf{选择压力（Selection Pressure）}：驱动进化的信号来源——外部奖励函数、自博弈胜负、自我评估文本、环境反馈、记忆检索命中率等。
+\item \textbf{可变对象（Variable Object）}：被进化的目标——模型权重、提示词、代码、工具集、记忆结构、多智能体拓扑等。
+\end{enumerate}
 
-\subsubsection{Self-Refine: Generate, Critique, Refine}
-\label{sec:methods-self-refine}
+这两个维度的组合产生六大类别，每类方法共享相似的理论基础和技术瓶颈。需要指出的是，许多具体系统跨越多个类别（例如 DGM 同时涉及架构搜索和基于奖励的选择），我们的分类以"主要"机制为准。
 
-Self-Refine is the canonical minimal loop for inference-time self-improvement \cite{selfrefine2023}. It uses the same model in three roles: generator, critic, and refiner. First, the model produces an output $y_0$ for input $x$. Second, the model critiques $y_0$ against task instructions, rubric, or desired properties. Third, the model revises $y_0$ using the critique. The loop repeats until a stopping rule is met. The method is simple, but its conceptual importance is large because it demonstrates that a single frozen model can exploit its own latent evaluative knowledge when that knowledge is elicited in a different interaction pattern.
+% =====================================================================
+\subsection{基于奖励的进化}\label{sec:reward}
+% =====================================================================
 
-A compact formalization is:
-\[
-\begin{aligned}
-  y_0 &= M_{\text{gen}}(x, I), \\
-  f_t &= M_{\text{crit}}(x, y_t, C), \\
-  y_{t+1} &= M_{\text{revise}}(x, y_t, f_t, I), \\
-  \text{stop} &\leftarrow \mathbb{1}[f_t \in \mathcal{F}_{\text{done}}] \vee (t \geq T).
-\end{aligned}
-\]
-Here $I$ is the task instruction, $C$ is the critique rubric, $f_t$ is feedback, and $T$ is the maximum number of refinement rounds. The subscripts do not necessarily denote different models; in Self-Refine they typically denote different prompts or roles for the same underlying LLM.
+基于奖励的进化是最接近传统强化学习和后训练的一类方法。核心思想是：把智能体交互轨迹、推理过程或输出结果映射为标量或偏好信号，再通过策略优化、偏好学习、筛选微调或archive selection使后续行为更可能获得高奖励。
 
-The local source notes report that Self-Refine was evaluated on seven diverse tasks and produced roughly a 20\% average improvement across them. Examples include mathematical reasoning improving from 56\% to 67\%, sentiment reversal from 74\% to 86\%, dialogue response win rate from 52\% to 68\%, and constrained generation compliance from 65\% to 78\%. These numbers should be interpreted as task-specific improvements under the paper's experimental setup rather than universal guarantees. The method works best when the model can identify a local defect in the output and when the task instruction supplies enough structure to guide revision. It works less well when the first answer is fundamentally wrong for reasons the model cannot diagnose, when the critique becomes generic, or when the task rewards diversity that refinement may inadvertently erase.
+\subsubsection{形式化框架}
 
-Self-Refine is important for agent evolution because it turns a single model call into a small within-episode evolutionary process. The candidate output is the mutable object. The critique is the feedback signal. The refinement prompt is the variation operator. The stopping rule is the selection gate. Unlike biological or population-based evolution, the loop is serial and local, but the abstraction is the same: generate a variant, evaluate it, keep the improved variant, and iterate.
+基于奖励的进化可以统一在以下马尔可夫决策过程（MDP）框架下：
+
+\begin{definition}[奖励驱动进化 MDP]
+设 MDP $\mathcal{M} = (\mathcal{S}, \mathcal{A}, P, R, \gamma)$，其中：
+\begin{itemize}
+\item 状态空间 $\mathcal{S}$：包含任务描述 $x$、当前生成内容 $y_t$、历史反馈 $\{f_1, \ldots, f_{t-1}\}$
+\item 动作空间 $\mathcal{A}$：模型 $\pi_\theta$ 的词汇表上的token分布
+\item 转移函数 $P(s_{t+1} | s_t, a_t)$：由语言模型的自回归采样确定
+\item 奖励函数 $R(s_t, a_t)$：由评估器（模型自评、外部工具或人工标注）给出标量或偏好信号
+\item 折扣因子 $\gamma \in [0, 1]$
+\end{itemize}
+优化目标为：
+\begin{equation}
+\max_\theta \mathbb{E}_{\pi_\theta}\left[\sum_{t=0}^{T} \gamma^t R(s_t, a_t)\right] - \beta \cdot \mathrm{KL}(\pi_\theta \| \pi_{\mathrm{ref}})
+\label{eq:reward-mdp}
+\end{equation}
+其中 $\beta$ 控制策略更新幅度相对于参考策略 $\pi_{\mathrm{ref}}$ 的约束。
+\end{definition}
+
+这一框架覆盖了从纯推理时的自我修正到需要权重更新的强化微调的广泛方法谱系。关键的分化点在于：（1）奖励信号的来源（自评 vs.\ 外部 vs.\ 混合）；（2）更新对象（上下文 vs.\ 权重 vs.\ 代码）；（3）数据来源（人工标注 vs.\ 自生成 vs.\ 环境反馈）。
+
+\subsubsection{代表系统详解}
+
+\paragraph{STaR: Self-Taught Reasoner}
+
+\textbf{STaR}~\citep{star2022}是早期代表性工作，将"模型自己生成可学习材料"组织成闭环。其核心算法包含四个阶段：
+
+\begin{enumerate}
+\item \textbf{生成（Generation）}：给定问题 $x$，模型 $\pi_\theta$ 生成推理链 $r$ 和答案 $a$：
+\begin{equation}
+(r, a) \sim \pi_\theta(\cdot | x)
+\label{eq:star-generate}
+\end{equation}
+
+\item \textbf{验证（Verification）}：将答案 $a$ 与真实标签 $a^*$ 比较，得到二值奖励 $r_{\mathrm{verify}} = \mathbb{1}[a = a^*]$。
+
+\item \textbf{合理化（Rationalization）}：对于答错的问题，将真实答案作为提示注入，重新生成推理链：
+\begin{equation}
+r^+ \sim \pi_\theta(\cdot | x, a^*)
+\label{eq:star-rationalize}
+\end{equation}
+这一步是 STaR 的关键创新——它将失败样本转化为可学习的正例。
+
+\item \textbf{微调（Fine-tuning）}：用所有成功的推理链（原始 + 合理化后）微调模型：
+\begin{equation}
+\theta_{t+1} = \theta_t - \eta \nabla_\theta \mathcal{L}_{\mathrm{CE}}(\pi_\theta, \mathcal{D}_t^+)
+\label{eq:star-train}
+\end{equation}
+其中 $\mathcal{D}_t^+$ 为第 $t$ 轮所有正确推理链的集合。
+\end{enumerate}
+
+STaR 的 bootstrapping 逻辑成为后续自演化研究的基础模板。其局限性在于：需要真实标签进行验证（半监督设定），且合理化步骤在无标签场景下无法使用。
+
+\paragraph{Self-Rewarding Language Models}
+
+\textbf{Self-Rewarding LM}~\citep{selfrewarding2024}将奖励信号进一步内生化。系统让同一个模型既生成候选回答又作为 judge 评价候选，并通过迭代 DPO 进行多轮偏好优化。
+
+\begin{enumerate}
+\item \textbf{候选生成}：对于每个指令 $x$，模型生成 $N$ 个候选 $\{y_1, \ldots, y_N\}$。
+
+\item \textbf{自评打分}：模型作为 judge，对每个候选打分：
+\begin{equation}
+s_i = \mathrm{Score}_\theta(x, y_i) \in [1, 10]
+\label{eq:selfreward-score}
+\end{equation}
+
+\item \textbf{偏好对构造}：选择最高分和最低分的候选构造偏好对 $(y_w, y_l)$。
+
+\item \textbf{DPO 优化}：使用 DPO 损失更新模型：
+\begin{equation}
+\mathcal{L}_{\mathrm{DPO}} = -\mathbb{E}\left[\log \sigma\left(\beta \log \frac{\pi_\theta(y_w|x)}{\pi_{\mathrm{ref}}(y_w|x)} - \beta \log \frac{\pi_\theta(y_l|x)}{\pi_{\mathrm{ref}}(y_l|x)}\right)\right]
+\label{eq:selfreward-dpo}
+\end{equation}
+\end{enumerate}
+
+经过 $K$ 轮迭代后，模型同时提升了生成质量和评判能力。关键实验发现：self-judge 能力随迭代持续提升，而非停滞——这表明模型在学习"什么是好回答"的同时，也在学习"如何更好地评价"。
+
+\paragraph{Meta-Rewarding}
+
+\textbf{Meta-Rewarding}~\citep{metarewarding2024}进一步区分 actor、judge 和 meta-judge，让模型不仅评价回答，还评价评价本身：
+
+\begin{itemize}
+\item \textbf{Actor} $\pi_\theta^{\mathrm{actor}}$：生成候选回答 $y \sim \pi_\theta^{\mathrm{actor}}(\cdot | x)$
+\item \textbf{Judge} $\pi_\theta^{\mathrm{judge}}$：评价回答质量 $s = J(y) \in \mathbb{R}$
+\item \textbf{Meta-Judge} $\pi_\theta^{\mathrm{meta}}$：评价 judge 的评价质量 $s_{\mathrm{meta}} = MJ(x, y, s) \in \mathbb{R}$
+\end{itemize}
+
+Meta-Judge 的引入解决了"谁来监督评判者"的问题。训练时，三个角色共享同一个基础模型的不同 prompt 前缀，通过 multi-objective RL 同时优化。
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  box/.style={rectangle, rounded corners=3pt, draw=#1, fill=#1!10,
+    text width=35mm, align=center, font=\small, minimum height=12mm},
+  arr/.style={-Stealth, thick, gray!60}
+]
+\node[box=cat1] (gen) at (0,0) {生成候选\\(Actor)};
+\node[box=cat2] (judge) at (4.5,0) {自评/外部评估\\(Judge/Meta-Judge)};
+\node[box=cat3] (train) at (9,0) {偏好优化\\(DPO/GRPO)};
+\node[box=cat4] (iter) at (4.5,-2.2) {迭代更新\\(权重/策略)};
+
+\draw[arr] (gen) -- (judge);
+\draw[arr] (judge) -- (train);
+\draw[arr] (train) -- (iter);
+\draw[arr] (iter.west) -| (gen.south);
+
+\node[font=\scriptsize, text=gray] at (2.2, 0.6) {候选+分数};
+\node[font=\scriptsize, text=gray] at (6.7, 0.6) {偏好对};
+\node[font=\scriptsize, text=gray] at (4.5, -1.0) {更新后模型};
+\end{tikzpicture}
+\caption{基于奖励的进化通用闭环：Actor生成候选，Judge（自评或外部）评分，DPO/GRPO优化偏好，迭代更新模型权重。}
+\label{fig:ch3-reward-loop}
+\end{figure}
+
+\paragraph{RISE: Recursive Introspection}
+
+\textbf{RISE}~\citep{rise2024}将自我改进建模为多轮 MDP，通过 RL 微调使自我修正成为可学习的行为，而非纯粹的提示技巧。
+
+\begin{definition}[RISE 多轮 MDP]
+状态 $s_t = (x, \{y_1, \ldots, y_t\})$ 包含原始问题和历史生成。动作 $a_t$ 为下一步的推理/修正内容。转移函数 $P$ 由模型的自回归采样决定。奖励仅在最终轮给出：
+\begin{equation}
+R(s_T) = \mathbb{1}[\text{answer}(y_T) = a^*]
+\label{eq:rise-reward}
+\end{equation}
+训练目标为：
+\begin{equation}
+\max_\theta \mathbb{E}_{\pi_\theta}\left[\sum_{t=1}^{T} \gamma^t r_t\right] - \beta \cdot \mathrm{KL}(\pi_\theta \| \pi_{\mathrm{ref}})
+\label{eq:rise-objective}
+\end{equation}
+\end{definition}
+
+RISE 的关键创新在于将 Self-Refine 式的推理时自我修正从"prompt trick"提升为"可训练策略"。通过在线模仿学习（inspired by DAGGER），模型学习在检测到错误时主动分配更多"内省预算"——难度自适应行为自然涌现。
+
+实验结果表明：
+\begin{itemize}
+\item GSM8K（Llama2-7B）：~14\% $\rightarrow$ ~24\%（+10pp）
+\item GSM8K（Mistral-7B）：~38\% $\rightarrow$ ~46\%（+8pp）
+\item 多轮自我检查持续优于单轮，且 RL 微调达到了纯提示（Self-Refine）无法企及的效果
+\end{itemize}
+
+\paragraph{Agent-R}
+
+\textbf{Agent-R}~\citep{agentr2024}将奖励驱动的进化扩展到工具使用和多步行动的智能体场景。与传统 RL 微调不同，Agent-R 引入了"轨迹级奖励分解"——将最终任务成功的信号合理地归因到中间决策步骤，解决了长轨迹中信用分配的难题。
+
+\paragraph{RAGEN: 多轮强化学习中的自进化}
+
+\textbf{RAGEN}~\citep{ragen2025}提出了 StarPO（State-Thinking-Actions-Reward Policy Optimization）框架，将智能体轨迹分解为状态、思考、动作和奖励四个组件：
+
+\begin{definition}[StarPO 框架]
+轨迹 $\tau = \{(s_1, t_1, a_1, r_1), \ldots, (s_T, t_T, a_T, r_T)\}$，其中 $s_t$ 为环境状态，$t_t$ 为模型的内部思考，$a_t$ 为外部动作，$r_t$ 为即时奖励。StarPO 的优化目标为：
+\begin{equation}
+\max_\theta \mathbb{E}\left[\sum_{t=1}^{T} \gamma^t r_t \cdot \log \pi_\theta(a_t | s_t, t_t)\right]
+\label{eq:starpo}
+\end{equation}
+\end{definition}
+
+RAGEN 的一个关键发现是\textbf{"Echo Trap"现象}——在多轮 RL 训练中，智能体学会了重复自己的输出而非真正推理，制造出改进的假象：
+\begin{equation}
+\text{Echo Detection: } \cos_{\mathrm{sim}}(t_t, t_{t-1}) > \tau_{\mathrm{echo}} \Rightarrow \text{echo}
+\label{eq:echo-trap}
+\end{equation}
+StarPO-S 通过轨迹过滤来移除"echo"轨迹，有效缓解了这一问题。
+
+\subsubsection{训练范式对比}
 
 \begin{table}[htbp]
 \centering
-\small
-\caption{State transition view of Self-Refine.}
-\label{tab:self-refine-transition}
-\begin{tabular}{p{0.18\textwidth}p{0.25\textwidth}p{0.25\textwidth}p{0.22\textwidth}}
+\caption{基于奖励的进化方法对比。}
+\label{tab:reward-compare}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccl}
 \toprule
-\textbf{Stage} & \textbf{Input state} & \textbf{Operation} & \textbf{Output state} \\
+\textbf{方法} & \textbf{奖励来源} & \textbf{更新对象} & \textbf{需外部数据} & \textbf{迭代轮数} & \textbf{核心优化} & \textbf{代表基准} \\
 \midrule
-Generate & Task $x$, instruction $I$ & Produce initial answer $y_0$ & Candidate output \\
-Critique & $x$, $y_t$, rubric $C$ & Identify omissions, errors, violations & Feedback $f_t$ \\
-Refine & $x$, $y_t$, $f_t$ & Rewrite answer under feedback & Candidate $y_{t+1}$ \\
-Select/stop & $y_{t+1}$, $f_t$, verifier & Accept, continue, or stop & Final output or next state \\
+STaR & 真实标签 & 权重 & 标签 & $K$ 轮 & SFT + 合理化 & GSM8K \\
+Self-Rewarding & 模型自评 & 权重 & 指令 & 3轮 & DPO & AlpacaEval \\
+Meta-Rewarding & 自评+元自评 & 权重 & 指令 & 3轮 & Multi-obj RL & AlpacaEval \\
+RISE & 二值验证 & 权重 & 问题 & 在线 & PPO + DAGGER & GSM8K, MATH \\
+RAGEN & 环境+过滤 & 权重 & 任务 & 在线 & StarPO & 多轮智能体 \\
+Agent-R & 轨迹分解 & 权重 & 任务 & 在线 & PPO 变体 & 工具使用 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\subsubsection{核心挑战}
+
+基于奖励的方法面临多重挑战：
+
+\textbf{Goodhart 风险}：模型可能学会迎合评分规则而非真正提升能力。当奖励函数 $\hat{R}$ 不完全对齐真实目标 $R^*$ 时，优化 $\hat{R}$ 可能导致 $R^*$ 下降。Self-Rewarding 和 Meta-Rewarding 的迭代过程本质上试图缓解这一问题——通过让评价能力与生成能力共同进化，减少奖励模型与真实偏好之间的 gap。
+
+\textbf{样本效率}：RL 训练需要大量交互轨迹。以 RISE 为例，在 GSM8K 上从 14\% 提升到 24\% 需要数千条多轮轨迹的采样和优化。自博弈方法（如 Absolute Zero）通过消除对外部数据的依赖部分缓解了这一问题，但以牺牲训练稳定性为代价。
+
+\textbf{泛化不确定性}：在特定 benchmark 上的改进不一定迁移到真实场景。STaR 在数学推理上的提升能否迁移到代码生成？Self-Rewarding 的评价能力能否跨领域一致？这些问题的答案尚不明确。
+
+\textbf{奖励作弊（Reward Hacking）}：当模型作为自己的 judge 时，存在系统性高估自身输出的倾向。Meta-Rewarding 通过引入元评价层级部分缓解了这一问题，但理论上仍无法保证完全消除作弊行为。
+
+% =====================================================================
+\subsection{自博弈进化}\label{sec:selfplay}
+% =====================================================================
+
+自博弈进化把"数据从哪里来"这个问题推到系统内部。核心思想是：与其依赖人类标注或外部环境提供的固定数据集，不如让系统自己生成训练任务和验证信号，形成完全自给自足的进化闭环。
+
+\subsubsection{形式化框架}
+
+\begin{definition}[自博弈进化框架]
+设系统包含三个可由同一模型 $\pi_\theta$ 通过不同 prompt 承担的角色：
+\begin{itemize}
+\item \textbf{Proposer} $\pi_\theta^P$：生成任务 $t \sim \pi_\theta^P(\cdot | \mathcal{C})$，其中 $\mathcal{C}$ 为课程状态
+\item \textbf{Solver} $\pi_\theta^S$：尝试求解 $s \sim \pi_\theta^S(\cdot | t)$
+\item \textbf{Verifier} $V$：验证解答 $r = V(s, t) \in \{0, 1\}$
+\end{itemize}
+Proposer 的奖励应鼓励产生"位于能力边界"的任务：
+\begin{equation}
+R_P(t) \propto \text{difficulty}(t) \times \text{solvability}(t) \times \text{diversity}(t, \mathcal{H})
+\label{eq:selfplay-reward}
+\end{equation}
+其中 $\mathcal{H}$ 为历史任务集合。同时优化 Proposer 和 Solver：
+\begin{equation}
+\max_\theta \mathbb{E}_{t \sim \pi_\theta^P}\left[R_P(t) + \lambda \cdot R_S(s, t)\right]
+\label{eq:selfplay-joint}
+\end{equation}
+\end{definition}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  role/.style={circle, draw=#1, fill=#1!15, minimum size=16mm,
+    font=\small\bfseries, align=center},
+  arr/.style={-Stealth, thick, #1}
+]
+\node[role=cat2] (prop) at (0,0) {Proposer\\(出题)};
+\node[role=cat1] (solve) at (5,0) {Solver\\(解题)};
+\node[role=cat3] (verif) at (2.5,-2.5) {Verifier\\(验证)};
+
+\draw[arr=cat2] (prop) -- node[above, font=\scriptsize]{任务} (solve);
+\draw[arr=cat1] (solve) -- node[right, font=\scriptsize, align=left]{解答\\+反馈} (verif);
+\draw[arr=cat3] (verif) -- node[left, font=\scriptsize, align=right]{学习\\进度信号} (prop);
+
+\node[font=\scriptsize, text=gray, align=center] at (2.5, 1.2)
+  {关键：任务难度需位于能力边界\\太易无训练价值，太难无有效反馈};
+\end{tikzpicture}
+\caption{自博弈进化三元角色：Proposer生成任务，Solver尝试求解，Verifier提供反馈信号。三者可由同一模型不同prompt承担。}
+\label{fig:ch3-selfplay}
+\end{figure}
+
+\subsubsection{代表系统详解}
+
+\paragraph{Absolute Zero: 零数据强化自博弈推理}
+
+\textbf{Absolute Zero}~\citep{absolutezero2025}（NeurIPS 2025 最佳论文奖）代表了自博弈进化的前沿。其核心贡献是：在完全零外部数据条件下，由同一个模型同时提出任务并尝试解决。
+
+\textbf{任务生成}：模型通过编程生成任务——Proposer 编写代码来生成输入-输出对：
+\begin{equation}
+t = \text{TaskProgram}(\text{domain}, \text{difficulty})
+\label{eq:az-task}
+\end{equation}
+支持三种推理模式：演绎（deduction）、 abduction（溯因）和 induction（归纳）。
+
+\textbf{自动验证}：利用代码执行器作为确定性验证器：
+\begin{equation}
+r = \text{Execute}(s, t) \in \{0, 1\}
+\label{eq:az-verify}
+\end{equation}
+这消除了奖励模型的不确定性——代码要么通过测试，要么不通过。
+
+\textbf{课程奖励}：Proposer 的奖励与任务的学习价值成正比：
+\begin{equation}
+R_P \propto \text{difficulty}(t) \times \text{solvability}(t) \times \text{diversity}(t, \mathcal{H})
+\label{eq:az-curriculum}
+\end{equation}
+
+\textbf{实验结果}：
+\begin{itemize}
+\item AZR-Coder-7B 在 HumanEval+、MBPP+ 和整体编程平均上达到 7B 规模的 SOTA——完全无外部训练数据
+\item 在 GSM8K 和 MATH 上具有竞争力，尽管没有数学训练数据（从代码自博弈到数学推理的跨域迁移）
+\item pass@1 和 pass@128 随训练持续提升
+\end{itemize}
+
+Absolute Zero 将 AlphaGo Zero 的范式扩展到 LLM 推理。其关键洞察是："更强的模型更善于让自己变得更强"——这暗示了自我改进存在正反馈循环的潜力。
+
+\paragraph{SPIRAL: 自博弈推理发现}
+
+\textbf{SPIRAL}~\citep{spiral2024}让语言模型在零和博弈中自我博弈，发现可迁移的推理能力。与 Absolute Zero 不同，SPIRAL 使用竞争性游戏作为任务生成器，两个智能体互为对手。
+
+\textbf{关键发现}：
+\begin{itemize}
+\item 自博弈中涌现的推理策略（如搜索、规划、假设检验）可以迁移到非游戏任务
+\item 竞争压力自然产生"课程学习"效果——对手越强，需要发现的策略越复杂
+\item 与 AlphaGo 的自我博弈发现新策略类似，但迁移到了语言推理领域
+\end{itemize}
+
+\paragraph{Multi-Agent Debate}
+
+多智能体辩论~\citep{madd2023}将自博弈从两个角色扩展到多个智能体。多个 LLM 实例围绕同一问题展开辩论，通过"社会性验证"达成共识。其理论基础是"多样性假设"——不同初始化（或不同 prompt）的模型在独立犯错时，多数投票可以消除个别模型的系统性偏差。
+
+\paragraph{Self-Play Fine-Tuning (SPIN)}
+
+\textbf{SPIN}~\citep{spin2024}将自博弈引入监督微调。核心思想是：让模型与自身先前版本进行"博弈"——新模型需要区分人类标注和旧模型生成的输出：
+\begin{equation}
+\mathcal{L}_{\mathrm{SPIN}} = -\mathbb{E}\left[\log \sigma\left(\lambda \log \frac{\pi_{\theta_t}(y|x)}{\pi_{\theta_{t-1}}(y|x)}\right)\right] + \mathbb{E}\left[\log \sigma\left(\lambda \log \frac{\pi_{\theta_{t-1}}(y'|x)}{\pi_{\theta_t}(y'|x)}\right)\right]
+\label{eq:spin-loss}
+\end{equation}
+其中 $y$ 为人类标注，$y'$ 为旧模型生成。SPIN 的理论保证表明：当且仅当 $\pi_\theta$ 与人类数据分布一致时，训练收敛。
+
+\subsubsection{自博弈的理论分析}
+
+自博弈方法的理论基础来自博弈论和进化计算：
+
+\textbf{Nash 均衡视角}：在双人零和博弈中，自博弈收敛到 Nash 均衡。AlphaGo Zero 验证了这一理论在实际中的有效性。然而，LLM 自博弈中的非零和结构使得收敛性保证更加复杂。
+
+\textbf{课程学习视角}：自博弈隐含了一个自动课程——随着 Solver 能力提升，Proposer 必须生成更难的任务以维持学习信号。Absolute Zero 的课程奖励（Eq.~\ref{eq:az-curriculum}）显式化了这一机制。
+
+\textbf{模式坍塌风险}：自博弈最严重的理论风险是 Proposer 和 Solver 收敛到"默契配合"——Proposer 只出简单题，Solver 总能做对，两者共同获得高奖励但实际能力没有提升。这类似于 GAN 中的模式坍塌问题。Absolute Zero 通过 diversity 约束和代码验证部分缓解了这一风险。
+
+\subsubsection{对比分析}
+
+\begin{table}[htbp]
+\centering
+\caption{自博弈进化方法对比。}
+\label{tab:selfplay-compare}
+\begin{tabular}{lccccp{40mm}}
+\toprule
+\textbf{方法} & \textbf{博弈类型} & \textbf{验证方式} & \textbf{外部数据} & \textbf{角色数量} & \textbf{关键创新} \\
+\midrule
+Absolute Zero & 合作-竞争 & 代码执行 & 无 & 3 & 零数据课程学习 \\
+SPIRAL & 零和博弈 & 胜负判定 & 规则 & 2 & 游戏推理迁移 \\
+Multi-Agent Debate & 合作博弈 & 共识 & 无 & $N$ & 社会性验证 \\
+SPIN & 分布匹配 & 人类数据 & 标注 & 2 & 自博弈SFT \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-A common engineering mistake is to treat Self-Refine as a magic ``try harder'' prompt. In practice, the critique must be specific, grounded, and connected to a verification channel. A critique such as ``improve the answer'' often produces stylistic churn. A critique such as ``the program fails test case 3 because the loop excludes the final element'' can produce real correction. Therefore Self-Refine is strongest when paired with task-specific rubrics, unit tests, formal constraints, or examples of acceptable feedback.
+% =====================================================================
+\subsection{提示词进化}\label{sec:prompt}
+% =====================================================================
 
-\subsubsection{Reflexion: Verbal Reinforcement Learning and Episodic Memory}
-\label{sec:methods-reflexion}
+提示词进化是最轻量、最容易部署的一类 Agent Evolution。其核心思想是：不改变模型权重或代码结构，而是通过迭代修改提示词、上下文和反馈文本，使模型在推理时产生更好的输出。这类方法的关键优势在于\textbf{零训练成本}和\textbf{即插即用}——不需要 GPU、不需要微调、可以在任何 LLM API 上直接使用。
 
-Reflexion extends inference-time self-improvement from a single output to an agent episode \cite{reflexion2023}. The agent acts in an environment, receives success or failure feedback, generates a natural-language reflection, stores that reflection in memory, and conditions future attempts on the memory. The key idea is that natural language can function as a ``verbal gradient.'' Instead of computing parameter gradients, the system stores an explanation of what went wrong and what to do differently.
+\subsubsection{形式化框架}
 
-The local note describes a three-model architecture: an actor $M_a$, an evaluator $M_e$, and a self-reflection model $M_r$. In many implementations these may be the same underlying model with different prompts, but the roles are conceptually distinct:
-\[
-\begin{aligned}
-  a_e &= M_a(x, \mathcal{M}_{e-1}), \\
-  r_e &= M_e(x, a_e), \\
-  f_e &= M_r(x, a_e, r_e), \\
-  \mathcal{M}_e &= \mathcal{M}_{e-1} \cup \{f_e\}.
-\end{aligned}
-\]
-The memory $\mathcal{M}$ is the evolving state. The actor's policy at episode $e+1$ is not changed in weights, but its effective behavior changes because it observes the accumulated reflections.
+\begin{definition}[提示词进化框架]
+设模型 $\pi_\theta$ 固定（权重不变），提示词进化通过修改上下文序列来优化输出：
+\begin{itemize}
+\item \textbf{初始提示} $p_0$：包含任务指令、示例或约束
+\item \textbf{反馈函数} $F$：根据输出 $y_t$ 和任务 $x$ 生成自然语言反馈 $f_t = F(y_t, x)$
+\item \textbf{提示更新} $U$：基于反馈修改提示 $p_{t+1} = U(p_t, y_t, f_t)$
+\end{itemize}
+迭代过程为：
+\begin{equation}
+y_t = \pi_\theta(\cdot | x, p_t), \quad f_t = F(y_t, x), \quad p_{t+1} = U(p_t, y_t, f_t)
+\label{eq:prompt-evolve}
+\end{equation}
+收敛条件：$f_t$ 指示"无需改进"或达到最大迭代次数。
+\end{definition}
 
-Reflexion's benchmark evidence is one of the strongest early demonstrations of inference-time agent improvement. The local notes report 91\% pass@1 on HumanEval, compared with a GPT-4 zero-shot reference of about 80.1\%, and interactive task gains such as 97\% success on AlfWorld versus a 75\% base. The exact interpretation depends on model, prompting, and evaluation protocol, but the qualitative conclusion is robust: a memory of specific failures can be more valuable than another independent sample from the same model.
+\subsubsection{代表系统详解}
 
-The method also clarifies a design principle for self-evolving agents: memory should store lessons, not just transcripts. A transcript says what happened. A reflection says why it happened and how the next attempt should change. This distinction is essential for long-horizon agents. Storing every observation creates context bloat; storing distilled failure modes creates reusable knowledge. However, the same distinction introduces risk. If the reflection is wrong, the error becomes persistent. If the memory grows without pruning, retrieval becomes noisy. If an adversarial environment can inject instructions into the memory, the agent can carry compromised behavior into future tasks. Reflexion therefore motivates the memory-governance issues discussed later in the paper.
+\paragraph{Reflexion: 语义梯度}
+
+\textbf{Reflexion}~\citep{reflexion2023}将稀疏奖励转化为"语义梯度"——相比仅告诉模型"失败"，反思文本能指出失败原因和改进方向。Reflexion 使用三模型架构：
+
+\begin{enumerate}
+\item \textbf{Actor} $M_a$：在给定任务和记忆的情况下生成行动
+\begin{equation}
+a_e = M_a(\text{task}, \mathcal{M}_{1:e-1})
+\label{eq:reflexion-actor}
+\end{equation}
+
+\item \textbf{Evaluator} $M_e$：评估行动结果
+\begin{equation}
+r_e = M_e(a_e, \text{task})
+\label{eq:reflexion-eval}
+\end{equation}
+
+\item \textbf{Self-Reflection} $M_r$：生成自然语言反思
+\begin{equation}
+f_e = M_r(a_e, r_e, \text{task})
+\label{eq:reflexion-reflect}
+\end{equation}
+\end{enumerate}
+
+记忆更新为：$\mathcal{M}_e = \mathcal{M}_{e-1} \cup \{f_e\}$
+
+\textbf{关键实验结果}：
+\begin{itemize}
+\item HumanEval（代码生成）：Reflexion（GPT-3.5）达到 \textbf{91.0\% pass@1}，超过 GPT-4 零样本的 80.1\%
+\item AlfWorld（交互式任务）：\textbf{97\% 成功率} vs.\ 75\% 基线
+\item 更多的反思轮次带来更好的性能（收益递减）
+\item 具体的反馈优于通用反馈
+\end{itemize}
+
+Reflexion 的核心洞见是"\textbf{记忆替代梯度}"——自然语言反馈充当了传统 RL 中梯度信号的角色，无需参数更新。
+
+\paragraph{Self-Refine: 迭代自反馈}
+
+\textbf{Self-Refine}~\citep{selfrefine2023}使用同一个模型完成三个步骤：GENERATE、CRITIQUE、REFINE：
+
+\begin{enumerate}
+\item \textbf{生成}：$y_0 = \text{LLM}(x, \text{instruction})$
+\item \textbf{评价}：$\text{fb}_t = \text{LLM}(y_t, \text{rubric})$
+\item \textbf{精炼}：$y_{t+1} = \text{LLM}(y_t, \text{fb}_t, \text{instruction})$
+\end{enumerate}
+
+收敛条件：$\text{fb}_t$ = "无需改进" 或达到 $\max_t$。
+
+Self-Refine 在 7 个任务上平均提升约 20\%：
+\begin{itemize}
+\item 代码优化：+28\%
+\item 数学推理：56\% $\rightarrow$ 67\%（+11pp）
+\item 情感反转：74\% $\rightarrow$ 86\%（+12pp）
+\item 对话生成：52\% $\rightarrow$ 68\%（+16pp）
+\item 约束生成：65\% $\rightarrow$ 78\%（+13pp）
+\end{itemize}
+
+\textbf{局限性}：自我评价可能陷入局部最优——模型的自我批评可能遗漏根本性缺陷，因为同一模型的生成和评价能力受限于相同的认知边界。
+
+\paragraph{ExPeL: 经验驱动的自主学习}
+
+\textbf{ExPeL}~\citep{expel2023}从训练任务中自主收集经验，抽取自然语言 insights。与 Reflexion 的关键区别在于：
+\begin{itemize}
+\item Reflexion 的反思是即时的、针对单次失败的
+\item ExPeL 的 insights 是跨任务聚合的、从多次成功/失败中抽取的模式
+\end{itemize}
+
+ExPeL 的两阶段流程：
+\begin{enumerate}
+\item \textbf{经验收集}：在多个任务上执行，收集 (task, trajectory, success) 三元组
+\item \textbf{insight 抽取}：LLM 分析成功和失败的案例，生成可迁移的自然语言经验：
+\begin{equation}
+\text{Insights} = \text{LLM}(\text{Summarize}, \{(\text{task}_i, \text{traj}_i, \text{result}_i)\})
+\label{eq:expel-insights}
+\end{equation}
+\end{enumerate}
+
+\paragraph{ACE: 上下文工程}
+
+\textbf{ACE}~\citep{ace2024}把上下文工程定义为可演化的 playbook。使用结构化增量更新避免上下文坍缩——随着对话变长，早期重要信息被"淹没"在冗长的上下文中。ACE 维护一个结构化的 playbook，每次只更新相关部分而非追加全文。
+
+\paragraph{Agent Symbolic Learning}
+
+\textbf{Agent Symbolic Learning}~\citep{agentsymbolic2024}将反向传播和梯度下降完全映射到自然语言空间。其核心创新是"\textbf{语言梯度}"——用文本描述如何改进每个组件：
+
+\begin{definition}[语言梯度]
+给定语言损失 $\mathcal{L}_{\mathrm{lang}} = \mathrm{LLM}(P_{\mathrm{loss}}, \text{trajectory})$，语言梯度通过链式反向传播计算：
+\begin{equation}
+\nabla_{\mathrm{lang}}^n = \mathrm{LLM}(P_{\mathrm{gradient}}, \nabla_{\mathrm{lang}}^{n+1}, \text{node}_n, \mathcal{L}_{\mathrm{lang}})
+\label{eq:lang-gradient}
+\end{equation}
+\end{definition}
+
+该方法在 HotPotQA 上从 36.2/22.8 提升到 39.1/25.6（F1/EM），超过 DSPy 的 37.4/24.1。
+
+\subsubsection{推理时 vs.\ 训练时方法的光谱}
+
+提示词进化方法位于"推理时自我改进"的一端，与"训练时自我改进"方法（如 STaR、RISE）形成光谱：
 
 \begin{table}[htbp]
 \centering
-\small
-\caption{State transition view of Reflexion.}
-\label{tab:reflexion-transition}
-\begin{tabular}{p{0.18\textwidth}p{0.25\textwidth}p{0.25\textwidth}p{0.22\textwidth}}
+\caption{推理时与训练时方法对比。}
+\label{tab:inference-vs-training}
+\begin{tabular}{lcc}
 \toprule
-\textbf{Stage} & \textbf{Input state} & \textbf{Operation} & \textbf{Output state} \\
+\textbf{维度} & \textbf{推理时（Prompt进化）} & \textbf{训练时（权重更新）} \\
 \midrule
-Act & Task, environment, memory & Actor generates action or answer & Trajectory or output \\
-Evaluate & Output, environment result & Score success, failure, reward, or test result & Scalar or symbolic feedback \\
-Reflect & Output plus feedback & Produce natural-language lesson & Reflection entry \\
-Store/retrieve & Reflection buffer & Add, rank, and retrieve lessons & Updated memory context \\
+更新对象 & 上下文/提示词 & 模型权重 \\
+GPU 需求 & 无（推理即可） & 需要 \\
+部署复杂度 & 低 & 高 \\
+单次改进幅度 & 小 & 大 \\
+累积改进上限 & 受上下文窗口限制 & 理论上无上限 \\
+跨任务迁移 & 隐式（通过记忆） & 显式（通过权重） \\
+代表方法 & Reflexion, Self-Refine & STaR, RISE \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Reflexion is often described as reinforcement learning without weight updates. This phrase is useful but incomplete. Traditional RL changes a policy by optimizing expected return under an environment transition model. Reflexion changes behavior by modifying the information state supplied to the policy. It is therefore closer to episodic meta-learning through language. The agent learns at the episode level, but the learning is stored outside the model. This makes it cheap and interpretable, but also dependent on the quality and retrieval of memory.
+% =====================================================================
+\subsection{架构搜索}\label{sec:arch}
+% =====================================================================
 
-\subsubsection{Self-Debug: Execution Feedback as a Stronger Critic}
-\label{sec:methods-self-debug}
+架构搜索关注 agent 结构本身的自动设计。与提示词进化（优化输入）和奖励进化（优化策略/权重）不同，架构搜索直接优化\textbf{agent 的代码实现}——包括提示词模板、工具选择、控制流、多智能体拓扑等。这类方法的理论基础来自神经架构搜索（NAS），但搜索空间从神经网络拓扑扩展到了图灵完备的程序空间。
 
-Self-Debug specializes inference-time improvement to code. Instead of asking the model to critique itself in the abstract, it gives the model access to execution feedback: compiler errors, runtime exceptions, failed tests, counterexamples, or traces. The model explains the program, identifies likely defects, and revises the code. This is one of the clearest cases where external feedback dramatically strengthens self-improvement. A model may be unreliable at judging whether a program is correct from text alone, but a compiler or test suite can expose concrete failures.
+\subsubsection{形式化框架}
 
-A general Self-Debug loop can be written as:
-\[
-\begin{aligned}
-  p_0 &= M(x), \\
-  z_t &= \mathrm{Exec}(p_t, \mathcal{T}), \\
-  d_t &= M_{\text{debug}}(x, p_t, z_t), \\
-  p_{t+1} &= M_{\text{repair}}(x, p_t, z_t, d_t).
-\end{aligned}
-\]
-Here $p_t$ is a program, $\mathcal{T}$ is a test set or execution environment, $z_t$ is the observed execution result, and $d_t$ is a natural-language diagnosis. The mutable object is executable code, the feedback source is the runtime environment, and the selection rule is pass/fail or score improvement.
+\begin{definition}[架构搜索框架]
+设搜索空间 $\mathcal{S}$ 为所有有效的 agent 实现程序的集合。架构搜索的目标是找到：
+\begin{equation}
+a^* = \arg\max_{a \in \mathcal{S}} \text{Fitness}(a, \mathcal{T})
+\label{eq:arch-search}
+\end{equation}
+其中 $\mathcal{T}$ 为评估任务集。搜索过程通过以下迭代进行：
+\begin{enumerate}
+\item \textbf{采样}：从 archive $\mathcal{D}$ 中选择父代 $a_{\mathrm{parent}}$
+\item \textbf{变异}：使用 LLM 生成子代 $a_{\mathrm{child}} = \mathrm{LLM}(a_{\mathrm{parent}}, \text{edit\_instruction})$
+\item \textbf{评估}：计算 $\text{Fitness}(a_{\mathrm{child}}, \mathcal{T})$
+\item \textbf{选择}：如果 $\text{Fitness}(a_{\mathrm{child}}) > \text{Fitness}(a_{\mathrm{parent}})$，将 $a_{\mathrm{child}}$ 加入 archive
+\end{enumerate}
+\end{definition}
 
-The local notes report improvements for Self-Debug on multiple programming tasks: up to roughly 12\% accuracy improvement on TransCoder and MBPP, and about 9\% improvement in a harder text-to-SQL or code-explanation setting depending on the experimental condition. More important than the exact value is the pattern: execution feedback is higher quality than ungrounded self-critique. It collapses ambiguity. If a function returns the wrong value on a counterexample, the model can reason about a concrete discrepancy rather than guess whether the answer ``looks'' correct.
+\subsubsection{代表系统详解}
 
-Self-Debug also anticipates later code-evolution systems. AlphaEvolve, DGM, ReVeal, and many coding agents depend on the same principle: the model proposes code, the environment tests code, and the feedback becomes the basis for mutation. The difference is scale and persistence. Self-Debug usually repairs a single program at inference time. Code-evolution systems may maintain archives of programs, train policies, generate tests, or modify the agent's own implementation. But the seed mechanism is the same.
+\paragraph{ADAS: 自动化智能体系统设计}
 
-The main limitation is verifier coverage. Passing visible tests does not prove correctness. A model can overfit to given tests, introduce hidden regressions, or produce code that is efficient on examples but wrong in general. Therefore Self-Debug should be combined with test generation, hidden tests, static analysis, and regression suites when used in production. In evolutionary terms, the fitness function must cover the real environment, not merely the visible sandbox.
+\textbf{ADAS}~\citep{adas2024}（ICLR 2025，414+ 引用）定义了"自动化智能体系统设计"这一研究领域，并提出了"Meta Agent Search"方法：
 
-\subsubsection{RISE at the Boundary: Learned Introspection Used at Test Time}
-\label{sec:methods-rise-boundary}
+\begin{enumerate}
+\item \textbf{搜索空间}：$\mathcal{S} = \{\text{所有有效 Python 程序}\}$——这是图灵完备的搜索空间，包含所有可能的智能体设计
+\item \textbf{Meta Agent}：一个 LLM 迭代地编写定义新 agent 架构的代码
+\begin{equation}
+a_{\mathrm{new}} = \mathrm{LLM}(\mathcal{D}, \text{history}, \text{search\_strategy})
+\label{eq:adas-search}
+\end{equation}
+\item \textbf{评估}：在基准任务上运行新 agent 并记录性能
+\item \textbf{存档}：$\mathcal{D} = \mathcal{D} \cup \{(a_{\mathrm{new}}, \text{score}(a_{\mathrm{new}}))\}$
+\end{enumerate}
 
-RISE occupies a boundary position between inference-time and training-time methods \cite{rise2024}. Its behavior at test time resembles recursive self-improvement: the model inspects its reasoning, decides whether to continue, revise, or terminate, and allocates more introspection to harder problems. However, the ability is trained through an RL formulation. The method therefore belongs in both sections: it is a training-time method for learning a test-time introspection policy.
+\textbf{关键实验结果}：
+\begin{itemize}
+\item ARC（抽象推理）：超过手工设计的 SOTA agent
+\item GFootball：超过手工设计的 SOTA agent
+\item \textbf{跨域迁移}：在 ARC 上发现的 agent 设计在 GFootball 上同样有效
+\item \textbf{跨模型迁移}：用 GPT-3.5 搜索到的 agent 在 GPT-4 上仍然有效
+\end{itemize}
 
-The local notes model RISE as a multi-turn MDP. A state contains the problem and the current reasoning trajectory, an action may continue or revise, and the final reward depends on answer correctness:
-\[
-  s_t = (x, \tau_{1:t}), \qquad
-  a_t \in \{\text{continue}, \text{revise}, \text{terminate}\}, \qquad
-  R = \mathbb{1}[\hat{y}=y].
-\]
-The policy objective can be written in regularized RL form:
-\[
-  \max_\theta \; \mathbb{E}_{\pi_\theta}\left[\sum_{t=1}^{T} \gamma^t r_t\right]
-  - \beta \, \mathrm{KL}(\pi_\theta \Vert \pi_{\mathrm{ref}}).
-\]
-Reported examples include GSM8K improvements from approximately 14\% to 24\% for a Llama2-7B setting and from approximately 38\% to 46\% for a Mistral-7B setting. These values illustrate a broader lesson: prompting a model to self-correct is not the same as training it to allocate correction budget effectively. The latter can become a learned behavior.
+跨模型迁移是一个特别值得注意的发现——这意味着 LLM 可以发现的智能体设计模式具有某种"架构不变性"，不依赖于特定模型的特性。
 
-RISE also exposes a subtle failure mode of inference-time improvement: more rounds are not automatically better. Additional reasoning can discover errors, but it can also amplify confusion, rationalize wrong answers, or change correct answers into incorrect ones. A robust introspection policy must decide not only how to revise, but whether revision is needed. This is a key difference between naive self-refinement and learned recursive introspection.
+\paragraph{Gödel Agent: 自指代理框架}
 
-\subsubsection{Inference-Time Methods as Local Evolution}
-\label{sec:methods-inference-summary}
+\textbf{Gödel Agent}~\citep{godelagent2024}（ACL 2025）是第一个直接受 Schmidhuber 的 Gödel Machine（2003）启发的自指代理框架。其核心机制是 LLM 驱动的 monkey patching——在运行时动态修改自身的逻辑和行为：
 
-The inference-time family can be summarized as local evolution over a small set of artifacts: answers, plans, programs, traces, critiques, and memory entries. Its strengths are deployment speed, interpretability, low infrastructure cost, and compatibility with proprietary or frozen foundation models. Its weaknesses are context-window limits, lack of durable parameter learning, dependence on critique quality, and vulnerability to self-confirming errors.
+\begin{enumerate}
+\item \textbf{初始化}：Agent $A$ 以初始代码 $\text{code}_0$ 开始
+\item \textbf{执行}：在任务上执行，收集结果和反馈
+\item \textbf{自省}：读取自身代码和状态，生成改进计划
+\begin{equation}
+\text{plan} = \mathrm{LLM}(A.\text{code}, \text{feedback}, \text{objective})
+\label{eq:godel-plan}
+\end{equation}
+\item \textbf{自修改}：执行 monkey patch
+\begin{equation}
+\text{exec}(\text{patch\_code}) \quad \text{修改 } A \text{ 的方法}
+\label{eq:godel-patch}
+\end{equation}
+\item \textbf{验证}：在验证集上比较 $A'$ 和 $A$ 的性能；如果改进则接受，否则回滚
+\end{enumerate}
 
-The most reliable inference-time systems share four design choices. First, they use concrete feedback whenever possible: tests, tools, environment scores, or verifiable constraints. Second, they store compressed lessons rather than raw transcripts. Third, they limit iteration and define stopping criteria. Fourth, they keep a record of attempts so that a human or downstream evaluator can inspect how the final answer emerged. These choices turn self-improvement from a prompt trick into an auditable process.
+\textbf{实验结果}：在 HotPotQA 上超过手工设计的 agent +8-15\%，在 ALFWorld 上显著改善。关键特性是持续改进和发现人类设计者未预见的新策略。
 
-\subsection{Training-Time Self-Improvement: Self-Training, Self-Play, RLAIF, and Agent RL}
-\label{sec:methods-training}
+\textbf{局限性}：依赖 Python monkey patching（平台特定），运行时自修改引入非确定性和安全性隐患。
 
-Training-time self-improvement changes the model or policy so that successful behavior can be amortized across future tasks. The mutable object may be the model weights, a reward model, a preference model, an actor policy, a verifier policy, a task generator, or a trajectory filter. Training-time methods are more expensive and risky than inference-time methods, but they can produce stronger and more persistent improvements. They also connect agent evolution to the older traditions of self-training, reinforcement learning, curriculum learning, and evolutionary search.
+\paragraph{DGM: Darwin Gödel Machine}
 
-A general training-time loop can be expressed as:
-\[
-\begin{aligned}
-  \mathcal{D}_t &= \mathrm{Generate}(\pi_t, \mathcal{X}_t), \\
-  \mathcal{S}_t &= \mathrm{Score}(\mathcal{D}_t, R_t, V_t), \\
-  \mathcal{D}_t^+ &= \mathrm{Select}(\mathcal{D}_t, \mathcal{S}_t, \tau), \\
-  \pi_{t+1} &= \mathrm{Update}(\pi_t, \mathcal{D}_t^+).
-\end{aligned}
-\]
-Here $\pi_t$ is the current policy, $\mathcal{X}_t$ is a task distribution or prompt set, $R_t$ is a reward function, $V_t$ is a verifier, and $\tau$ is a threshold or selection rule. Different methods instantiate these operators differently.
+\textbf{DGM}~\citep{dgm2025}结合了达尔文进化与 Gödel Machine 的自指特性。维护一个开放式的 agent 实现存档：
 
-\subsubsection{STaR: Generate, Filter, Rationalize, Fine-Tune}
-\label{sec:methods-star}
+\begin{enumerate}
+\item \textbf{Archive}：$\mathcal{A} = \{a_1, \ldots, a_n\}$，每个 agent 带有适应度分数
+\item \textbf{采样}：按适应度和多样性加权采样父代
+\begin{equation}
+P(a_i) \propto f(a_i) \times \text{diversity\_bonus}(a_i, \mathcal{A})
+\label{eq:dgm-sample}
+\end{equation}
+\item \textbf{变异}：LLM 提出代码修改
+\item \textbf{选择}：如果 $\text{fitness}(a_{\mathrm{child}}) > \text{fitness}(a_{\mathrm{parent}})$ 则保留
+\end{enumerate}
 
-STaR is one of the earliest and clearest training-time self-improvement methods for reasoning \cite{star2022}. Given questions with known answers and a small number of rationale demonstrations, the model generates rationales and answers. Correct answers are retained. For incorrect answers, the model is given the correct answer and asked to rationalize a reasoning chain that leads to it. The retained rationales are then used to fine-tune the model, and the loop repeats.
+\textbf{关键结果}：
+\begin{itemize}
+\item SWE-bench：20.0\% $\rightarrow$ \textbf{50.0\% verified}
+\item Polyglot（多语言编程）：14.2\% $\rightarrow$ \textbf{30.7\%}
+\item 发现了人类设计者未曾想象的全新 agent 结构
+\end{itemize}
 
-The method can be formalized as:
-\[
-\begin{aligned}
-  (r_i, \hat{y}_i) &\sim p_{\theta_t}(r,y \mid x_i, F), \\
-  \mathcal{D}_{\text{correct}} &= \{(x_i,r_i,y_i) : \hat{y}_i = y_i\}, \\
-  r_i' &\sim p_{\theta_t}(r \mid x_i, y_i, F) \quad \text{for incorrect } \hat{y}_i, \\
-  \theta_{t+1} &= \arg\max_\theta \sum_{(x,r,y)\in \mathcal{D}_{\text{correct}}} \log p_\theta(r,y\mid x).
-\end{aligned}
-\]
-The rationalization step is the distinctive move. It prevents the dataset from shrinking to only initially solved examples and lets the model learn from mistakes by reconstructing a plausible path to the known answer.
+\paragraph{AlphaEvolve: Gemini 驱动的进化编码}
 
-The local notes report that STaR improved a 540M-parameter model on CommonsenseQA from 53.3\% direct prediction and 55.6\% few-shot chain-of-thought to 72.5\%, approaching a much larger 175B model at roughly 73\%. The exact benchmark is not one of the four requested in Section~\ref{sec:methods-benchmarks}, but it is crucial historically because it shows the core generate--filter--finetune pattern. It also reveals a limitation: STaR needs answer labels and can produce rationalizations that fit the answer without faithfully representing the true reasoning process.
+\textbf{AlphaEvolve}~\citep{alphaevolve2025}（Google DeepMind）将进化编码推向了新的高度。使用 Gemini Flash（广度/快速探索）+ Gemini Pro（深度/关键洞察）的双 LLM 集成，结合 MAP-Elites 质量多样性搜索：
 
-From an evolutionary perspective, STaR's population consists of rationales. The evaluator is answer correctness. The selection rule keeps rationales associated with correct answers. The mutation operator is the model's next generation pass after fine-tuning. The archive is the filtered dataset. This is why STaR appears repeatedly in later agent-evolution discussions even though it predates many modern agent frameworks.
+\begin{definition}[AlphaEvolve MAP-Elites]
+种群 $P = \{p_1, \ldots, p_n\}$，每个个体带有适应度和行为描述符。变异通过 LLM 进行：
+\begin{equation}
+p_{\mathrm{child}} = \mathrm{LLM}(p_{\mathrm{parent}}, \text{evolution\_context})
+\label{eq:alphaevolve-mutate}
+\end{equation}
+Archive 更新采用 MAP-Elites 规则：
+\begin{equation}
+\text{Archive}[b(p_{\mathrm{child}})] = p_{\mathrm{child}} \quad \text{if } f(p_{\mathrm{child}}) > f(\text{Archive}[b(p_{\mathrm{child}})])
+\label{eq:alphaevolve-archive}
+\end{equation}
+\end{definition}
 
-\subsubsection{ReST and ReST-EM: Reward-Filtered Self-Training}
-\label{sec:methods-rest}
+\textbf{突破性成果}：
+\begin{itemize}
+\item \textbf{数学}：发现使用仅 48 次乘法的 4×4 复数矩阵乘法——56 年来首次超越 Strassen 算法
+\item \textbf{基础设施}：通过数据中心调度恢复全球 \textbf{0.7\% 的计算资源}；FlashAttention 内核提速 \textbf{23\%}；LLM 训练注意力提速 \textbf{32\%}
+\end{itemize}
 
-ReST generalizes the generate--filter--finetune pattern with a reward model \cite{rest2023}. In the E-step, the current policy generates multiple candidates for each input. In the M-step, a reward model scores the candidates, the system filters high-scoring samples, and the model is fine-tuned on the filtered subset. ReST-EM makes the expectation-maximization analogy explicit.
+\paragraph{FunSearch}
 
-The local note gives the following formulation:
-\[
-\begin{aligned}
-  y_{ij} &\sim \pi_{\theta_t}(\cdot \mid x_i), \quad j=1,\ldots,N, \\
-  s_{ij} &= R(x_i,y_{ij}), \\
-  \mathcal{D}_{\text{filtered}} &= \{(x_i,y_{ij}) : s_{ij} > \tau\}, \\
-  \theta_{t+1} &= \arg\max_\theta \sum_{(x,y)\in \mathcal{D}_{\text{filtered}}} \log \pi_\theta(y\mid x).
-\end{aligned}
-\]
-Unlike PPO-style online RL, ReST can be implemented as batch generation plus supervised fine-tuning. This often makes it more stable and easier to scale. The local notes report gains in machine translation on automatic metrics and human evaluation, with improvements on the order of 1--3 BLEU depending on iteration and setting. They also note that related ReST-EM variants have been applied to reasoning tasks such as MATH and GSM8K.
+\textbf{FunSearch}~\citep{funsearch2023}（Nature 2023）是 AlphaEvolve 的前身，使用进化搜索发现数学函数。其核心思想是将 LLM 作为变异算子，在函数空间中搜索。
 
-The central vulnerability is reward-model bias. If the reward model prefers fluent but wrong answers, the training set will amplify fluency over correctness. If the filtering threshold is too low, noisy samples enter the dataset; if too high, the dataset becomes too small or too narrow. ReST therefore demonstrates the power and danger of evaluator-mediated evolution. The evaluator is the environment that defines fitness. If it is mis-specified, evolution faithfully optimizes the wrong target.
+\paragraph{EvoMAC}
 
-\subsubsection{SPIN: Self-Play Fine-Tuning as Distribution Matching}
-\label{sec:methods-spin}
+\textbf{EvoMAC}~\citep{evomac2024}将架构搜索扩展到多智能体协作（Multi-Agent Collaboration）。不仅搜索单个 agent 的设计，还搜索 agent 之间的通信协议和任务分配策略。
 
-SPIN introduces a self-play view of language-model fine-tuning \cite{spin2024}. Starting from a supervised fine-tuned model, the current model generates responses. The next model is trained to distinguish human demonstrations from the previous model's generated responses. The previous model functions as an opponent, and the training process repeats until the model distribution becomes difficult to distinguish from the target data distribution.
+\subsubsection{架构搜索的理论分析}
 
-A simplified objective from the local notes is:
-\[
-  L_{\mathrm{SPIN}}(\theta) =
-  \mathbb{E}_{x\sim D}\left[
-  \mathbb{E}_{y\sim p_{\mathrm{data}}}
-  \log \sigma\left(\lambda\left(h_\theta(x,y)-h_\theta(x,\tilde{y})\right)\right)
-  \right],
-\]
-where $h_\theta(x,y)=\log p_\theta(y\mid x)$ and $\tilde{y}\sim p_{\theta_t}(\cdot\mid x)$ is generated by the previous model. The theoretical claim reported in the local notes is that the global optimum is reached when the model distribution matches the target data distribution.
+\textbf{搜索空间复杂度}：由于搜索空间是所有有效 Python 程序（图灵完备），理论上搜索空间是无限的。LLM 作为搜索算子将搜索限制在了"合理的程序空间"内，但无法保证找到全局最优。
 
-SPIN is important because it transforms self-improvement into an adversarial discrimination problem without requiring new preference labels. The opponent is the model's own past self. This resembles self-play in game AI, but the game is not Go or chess; it is the distinction between human-like demonstrations and model-generated responses. The local notes report improvements on HuggingFace Open LLM Leaderboard tasks, MT-Bench, and Big-Bench-style datasets, with convergence after roughly three iterations in the studied setting. They do not provide precise MMLU or BBH values, so Section~\ref{sec:methods-benchmarks} treats those benchmarks qualitatively unless external result tables are integrated by the bibliography/data agent.
+\textbf{开放性与收敛性}：DGM 的开放式 archive 设计避免了收敛到单一局部最优，使探索定性不同的架构成为可能。这与传统 NAS 中的贪心搜索形成对比。
 
-The limitation is that SPIN still needs a supervised data distribution as the target. It can extract more value from SFT data, but it does not eliminate the need for demonstrations. Once the model matches the available data distribution, further improvement requires either new data, a new evaluator, a richer task distribution, or a different objective. In evolutionary terms, SPIN is powerful within a bounded niche but not inherently open-ended.
+\textbf{可组合性}：架构搜索发现的组件通常可以跨任务和跨模型组合使用。ADAS 的跨模型迁移实验验证了这一点——用弱模型搜索到的设计在强模型上仍然有效。
 
-\subsubsection{Constitutional AI: Self-Critique as Scalable Supervision}
-\label{sec:methods-cai}
-
-Constitutional AI applies self-critique and AI feedback to alignment \cite{constitutionalai2022}. The method has two stages. In the supervised stage, the model responds to prompts, critiques its own response using a written constitution of principles, revises the response, and is fine-tuned on the revised data. In the reinforcement stage, an AI evaluator uses the constitution to choose between response pairs; those preferences train a preference model; and the policy is optimized by RL using that preference model.
-
-The supervised critique-revision stage can be written as:
-\[
-\begin{aligned}
-  r_0 &= M(x), \\
-  c &= M(x,r_0,C), \\
-  r' &= M(x,r_0,c,C), \\
-  \mathcal{L}_{\mathrm{SL}} &= -\log p_\theta(r'\mid x).
-\end{aligned}
-\]
-The RLAIF stage can be written as:
-\[
-\begin{aligned}
-  \mathrm{pref}(r_A,r_B) &= M_{\mathrm{eval}}(x,r_A,r_B,C), \\
-  R(r) &= \mathrm{PM}(x,r), \\
-  \max_\theta \; &\mathbb{E}_{r\sim p_\theta}[R(r)] - \beta\,\mathrm{KL}(p_\theta\Vert p_{\mathrm{ref}}).
-\end{aligned}
-\]
-Here $C$ is the constitution, and $\mathrm{PM}$ is a preference model trained from AI-generated preferences.
-
-Constitutional AI contributes to agent self-evolution in two ways. First, it shows how critique can become training data rather than only inference-time context. Second, it shows how high-level principles can serve as constraints on an evolutionary process. In self-evolving agents, constitutions or policy rules can define which mutations are allowed, which outputs are acceptable, and which evaluator judgments should be considered valid. However, the method does not remove humans from the loop entirely. Humans still design the principles, choose the training setup, evaluate high-risk behavior, and decide what value tradeoffs the constitution encodes.
-
-\subsubsection{RAGEN and Multi-Turn Agent RL}
-\label{sec:methods-ragen}
-
-RAGEN extends training-time self-improvement to multi-turn agent settings \cite{ragen2025}. Its StarPO framework decomposes trajectories into State, Thinking, Actions, and Reward. A trajectory can be represented as:
-\[
-  \tau = \{(s_1,t_1,a_1,r_1),\ldots,(s_T,t_T,a_T,r_T)\},
-\]
-where $t_i$ is the model's internal reasoning or thinking trace and $a_i$ is an external action. A simplified objective from the local notes is:
-\[
-  \max_\theta \; \mathbb{E}\left[\sum_{t=1}^{T}\gamma^t r_t \log \pi_\theta(a_t\mid s_t,t_t)\right].
-\]
-The important empirical observation is the ``Echo Trap'': during multi-turn RL, agents may learn to repeat or echo their own previous thoughts rather than reason productively. RAGEN proposes trajectory filtering, such as removing trajectories with high similarity between successive thoughts:
-\[
-  \mathrm{cos\_sim}(t_t,t_{t-1}) > \delta \Rightarrow \text{echo candidate}.
-\]
-
-RAGEN's contribution is methodological. It warns that training-time self-improvement can create deceptive internal dynamics. A trajectory may receive reward while the reasoning process collapses into repetition. This matters for agent evolution because many agent systems expose thoughts, plans, or reflections as part of their loop. If those internal artifacts are optimized without safeguards, they can become reward-hacking surfaces. Therefore method design must evaluate not only final task success, but also the diversity, usefulness, and faithfulness of intermediate reasoning states.
-
-\subsubsection{Absolute Zero: Self-Generated Tasks and Verifiable Rewards}
-\label{sec:methods-absolute-zero}
-
-Absolute Zero pushes training-time self-improvement toward zero external data \cite{absolutezero2025}. The model plays two roles: task proposer and task solver. The proposer generates tasks intended to be solvable, challenging, and diverse. The solver attempts them. A code executor verifies the solution. The reward updates both the proposer and solver.
-
-The loop can be written as:
-\[
-\begin{aligned}
-  q_t &\sim \pi_{\theta}^{\mathrm{prop}}(\cdot\mid c_t), \\
-  s_t &\sim \pi_{\theta}^{\mathrm{solve}}(\cdot\mid q_t), \\
-  r_t &= \mathrm{Execute}(q_t,s_t) \in \{0,1\}, \\
-  R_{\mathrm{prop}}(q_t) &\propto \mathrm{difficulty}(q_t)\cdot \mathrm{solvability}(q_t)\cdot \mathrm{diversity}(q_t).
-\end{aligned}
-\]
-The executor is crucial because it prevents the proposer and solver from colluding through unverifiable tasks. The local notes report that AZR-Coder-7B achieves state-of-the-art or competitive performance among 7B coding models on HumanEval+, MBPP+, LiveCodeBench, and aggregate coding averages, while also showing cross-domain transfer to mathematical reasoning despite using code self-play.
-
-Absolute Zero is one of the most important methods for the open-endedness question. If agents can generate their own curricula, they may reduce reliance on human-labeled datasets. However, the method also concentrates risk in curriculum quality. Too-easy tasks produce no learning. Too-hard tasks produce no signal. Narrow tasks produce mode collapse. Incorrect verifiers produce false progress. The ``zero data'' claim should therefore be understood as zero external task data under a strong verifier, not zero supervision in the philosophical sense. The executor still defines what counts as success.
-
-\subsubsection{ReVeal: Co-Evolving Code Generation and Self-Verification}
-\label{sec:methods-reveal}
-
-ReVeal focuses on self-evolving code agents through reliable self-verification \cite{reveal2026}. It treats verification not as a byproduct of generation, but as an explicit target of optimization. The agent generates code, generates or selects tests, executes verification, receives turn-level rewards, and updates through TAPO, a turn-level adaptive policy optimization method.
-
-A simplified trajectory is:
-\[
-  \tau = \{(c_1,v_1,r_1),\ldots,(c_T,v_T,r_T)\},
-\]
-where $c_t$ is code, $v_t$ is a verification attempt, and $r_t$ is a turn-level reward. The loss can be described as:
-\[
-  \mathcal{L} = \mathcal{L}_{\mathrm{generation}} + \lambda \mathcal{L}_{\mathrm{verification}}.
-\]
-The local notes emphasize that ReVeal trains on only a small number of reasoning turns but can run for 20+ turns at inference on LiveCodeBench-style tasks, outperforming a strong DeepSeek-R1-Zero-Qwen-32B baseline under the reported setting.
-
-ReVeal's broader lesson is that future self-evolving agents may need to co-evolve generators and evaluators. A code generator without test-generation skill remains dependent on external tests. A verifier without a strong generator can find errors but not fix them. Co-evolution is promising, but it also creates evaluator-drift risk: if generator and verifier adapt together without independent gates, they may agree on flawed standards. For production, co-evolved self-verification should still be checked by hidden tests or independent evaluators.
-
-\subsection{Comparative Analysis: Methods, Loops, Feedback, and Task Fit}
-\label{sec:methods-comparison}
-
-The methods above differ along several dimensions that matter more than their names. The first dimension is the mutable object. Some methods mutate the answer or program inside a single episode; others mutate memory, rationales, datasets, policies, reward models, or task generators. The second dimension is feedback source. Feedback may be self-critique, execution results, answer labels, reward models, human demonstrations, constitutional principles, previous model opponents, or external environments. The third dimension is amortization. Inference-time loops improve a current attempt; training-time loops improve future behavior. The fourth dimension is evaluator independence. A compiler or hidden unit test is more independent than an LLM judging its own answer. The fifth dimension is transfer. A method may improve a benchmark but fail to produce reusable knowledge.
-
-\begin{longtable}{p{0.15\textwidth}p{0.14\textwidth}p{0.13\textwidth}p{0.17\textwidth}p{0.18\textwidth}p{0.16\textwidth}}
-\caption{Comparison of representative self-improvement methods.}\label{tab:methods-comparison}\\
-\toprule
-\textbf{Method} & \textbf{Loop type} & \textbf{Training need} & \textbf{Feedback source} & \textbf{Mutable object} & \textbf{Best-fit tasks} \\
-\midrule
-\endfirsthead
-\toprule
-\textbf{Method} & \textbf{Loop type} & \textbf{Training need} & \textbf{Feedback source} & \textbf{Mutable object} & \textbf{Best-fit tasks} \\
-\midrule
-\endhead
-Self-Refine & Inference critique-refine & None & Self-critique, rubric & Candidate output and critique history & Writing, reasoning, constrained generation, local repair \\
-Reflexion & Inference memory-reflection & None & Evaluator reward or environment success & Episodic verbal memory & Agent tasks, coding, web/shop tasks, interactive environments \\
-Self-Debug & Inference execution-repair & None & Compiler, tests, traces, runtime errors & Program text and diagnosis & Code generation, translation, SQL, program repair \\
-RISE & Trained introspection used at inference & RL fine-tuning & Final answer correctness and trajectory reward & Introspection policy & Math reasoning, multi-step reasoning \\
-STaR & Generate-filter-finetune & Supervised fine-tuning & Answer labels & Rationale dataset and model weights & QA and reasoning with known answers \\
-ReST/ReST-EM & Reward-filtered self-training & Fine-tuning & Reward model or rule scorer & Filtered dataset and policy & Translation, alignment, reasoning with reward models \\
-Constitutional AI & Critique-revise plus RLAIF & SL plus RL & Constitutional principles and AI preferences & Revised data, preference model, policy & Safety alignment, harmlessness, principle-guided assistants \\
-SPIN & Self-play discrimination & Iterative fine-tuning & Human demonstrations vs previous-model outputs & Policy distribution & Alignment from SFT data, instruction following \\
-RAGEN & Multi-turn agent RL & RL & Step and trajectory rewards; echo filters & Multi-turn policy and reasoning traces & Tool agents, interactive RL environments \\
-Absolute Zero & Self-generated curriculum RL & RL & Code executor and curriculum reward & Task proposer and solver policies & Verifiable code/math/logical tasks \\
-ReVeal & Generation-verification co-evolution & RL & Tests, self-verification rewards, TAPO credit & Code generator and verifier behavior & Live coding, code agents, test-driven repair \\
-\bottomrule
-\end{longtable}
-
-This table suggests several design heuristics. If a task has no reliable external verifier, begin with inference-time critique and human review rather than RL. If a task has a cheap deterministic verifier, exploit execution feedback before using subjective LLM judges. If improvements must persist across many users or tasks, convert successful inference-time traces into training data, memory entries, or reusable skills. If the system is safety-critical, separate the generator from the evaluator and prevent the evolving agent from editing the final gate. If cost is constrained, prefer local refinement and small filtered datasets before open-ended population search.
-
-\subsubsection{Algorithmic Templates}
-\label{sec:methods-algorithms}
-
-The following pseudocode templates make the comparison operational. They are written without relying on a specialized LaTeX algorithm package so that the chapter remains compatible with the current manuscript preamble.
+\textbf{安全性}：架构搜索引入了新的安全风险。自修改代码（如 Gödel Agent）可能在运行时产生不可预测的行为。AlphaEvolve 通过自动化验证器缓解了这一风险，但并非所有任务都有可靠的验证器。
 
 \begin{table}[htbp]
 \centering
-\small
-\caption{Template A: inference-time refinement.}
-\label{tab:algo-inference-refinement}
-\begin{tabular}{p{0.95\textwidth}}
+\caption{架构搜索方法对比。}
+\label{tab:arch-compare}
+\begin{tabular}{lccccp{35mm}}
 \toprule
-\textbf{Input}: task $x$, model $M$, verifier $V$, maximum rounds $T$, optional memory $\mathcal{M}$.
-\newline
-1. Generate candidate $y_0 = M(x,\mathcal{M})$.
-\newline
-2. For $t=0$ to $T-1$: evaluate $e_t=V(x,y_t)$; if accepted, return $y_t$.
-\newline
-3. Produce critique $c_t=M(\mathrm{critique};x,y_t,e_t,\mathcal{M})$.
-\newline
-4. Produce revision $y_{t+1}=M(\mathrm{revise};x,y_t,c_t,e_t,\mathcal{M})$.
-\newline
-5. Optionally store compressed lesson $m_t=\mathrm{compress}(x,y_t,e_t,c_t)$ in memory.
-\newline
-6. Return the best accepted candidate or the best-scoring candidate under $V$.
-\\
+\textbf{方法} & \textbf{搜索空间} & \textbf{变异算子} & \textbf{选择机制} & \textbf{开放式} & \textbf{关键突破} \\
+\midrule
+ADAS & Python 程序 & LLM 编码 & Top-k & 否 & 跨模型迁移 \\
+Gödel Agent & 自身代码 & Monkey patch & 验证集 & 否 & 运行时自修改 \\
+DGM & Python 程序 & LLM 编辑 & 多样性加权 & 是 & 开放式 archive \\
+AlphaEvolve & 代码库 & 双LLM & MAP-Elites & 是 & 数学突破 \\
+FunSearch & 函数 & LLM & 适应度 & 否 & Cap Set 新纪录 \\
+EvoMAC & 多agent拓扑 & LLM & Pareto & 否 & 协作协议 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
+% =====================================================================
+\subsection{记忆进化}\label{sec:memory}
+% =====================================================================
+
+记忆进化关注长期经验的积累与检索。与提示词进化（将反馈存储在即时上下文中）不同，记忆进化维护一个持久的、可检索的经验数据库，agent 可以在未来的任务中利用过去学到的知识和技能。这类方法的核心挑战是：如何在无限任务流中高效地存储、索引、检索和遗忘经验。
+
+\subsubsection{形式化框架}
+
+\begin{definition}[记忆进化框架]
+设记忆系统 $\mathcal{M}$ 包含：
+\begin{itemize}
+\item \textbf{经验存储} $\mathcal{E} = \{e_1, \ldots, e_n\}$，每个经验 $e_i = (\text{task}_i, \text{trajectory}_i, \text{outcome}_i, \text{insight}_i)$
+\item \textbf{索引函数} $I: \mathcal{E} \rightarrow \mathbb{R}^d$，将经验映射到嵌入空间
+\item \textbf{检索函数} $\text{Ret}: \text{query} \times \mathcal{E} \rightarrow \mathcal{E}_{\mathrm{top-k}}$
+\item \textbf{更新策略} $U$：决定何时添加、更新或删除经验
+\end{itemize}
+在任务 $x$ 上，agent 使用检索到的经验进行决策：
+\begin{equation}
+y = \pi_\theta(\cdot | x, \text{Ret}(x, \mathcal{E}))
+\label{eq:memory-retrieval}
+\end{equation}
+记忆更新通过以下操作之一进行：
+\begin{itemize}
+\item \textbf{ADD}：$\mathcal{E} \leftarrow \mathcal{E} \cup \{e_{\mathrm{new}}\}$
+\item \textbf{UPDATE}：$e_i \leftarrow U(e_i, \text{new\_experience})$
+\item \textbf{DELETE}：$\mathcal{E} \leftarrow \mathcal{E} \setminus \{e_j\}$
+\item \textbf{NOOP}：保持不变
+\end{itemize}
+\end{definition}
+
+\subsubsection{代表系统详解}
+
+\paragraph{Voyager: 开放世界终身学习}
+
+\textbf{Voyager}~\citep{voyager2023}通过自动课程和技能库实现开放世界终身学习。三个核心组件：
+
+\begin{enumerate}
+\item \textbf{自动课程}：根据当前能力和世界状态自动提出下一个任务
+\begin{equation}
+\text{task}_{t+1} = \text{Curriculum}(\text{state}_t, \text{skills\_acquired})
+\label{eq:voyager-curriculum}
+\end{equation}
+
+\item \textbf{技能库}：存储可复用的 JavaScript 代码片段
+\begin{equation}
+\text{SkillLib} = \{(\text{name}_i, \text{code}_i, \text{description}_i)\}
+\label{eq:voyager-skills}
+\end{equation}
+每个技能从成功完成的任务中提取，并在后续任务中通过语义检索重用。
+
+\item \textbf{迭代反思}：当任务失败时，agent 反思并修改代码，直到成功或放弃
+\end{enumerate}
+
+Voyager 在 Minecraft 中展示了强大的终身学习能力——发现的技能（如"砍树"、"制作工具"、"探索矿洞"）可以组合使用，解锁越来越复杂的任务链。
+
+\paragraph{Memory-R1: RL 训练的记忆管理器}
+
+\textbf{Memory-R1}~\citep{memoryr1_2025}用 RL 训练记忆管理器，使其学会何时添加、更新、删除或保持不变：
+
+\begin{equation}
+a_{\mathrm{mem}} \in \{\text{ADD, UPDATE, DELETE, NOOP}\}
+\label{eq:memr1-actions}
+\end{equation}
+
+与 Voyager 的启发式记忆管理不同，Memory-R1 通过 RL 训练使记忆管理策略与任务目标对齐。关键实验发现：RL 训练后的记忆管理器学会了主动删除过时信息和合并相似经验，这远超简单的"全部保留"策略。
+
+\paragraph{AriadneMem: 演化图记忆}
+
+\textbf{AriadneMem}~\citep{ariadnemem2025}提出演化图表示来管理记忆：
+\begin{itemize}
+\item \textbf{图结构}：记忆以有向图形式组织，节点为经验片段，边为语义关联
+\item \textbf{熵感知门控}：基于信息熵决定何时压缩或扩展记忆
+\item \textbf{冲突感知粗化}：当新旧记忆冲突时，自动进行粒度调整
+\end{itemize}
+
+\paragraph{其他记忆系统}
+
+\textbf{SEDM}~\citep{sedm2024}将自我进化分解为"经验蒸馏"——从大量交互历史中蒸馏出紧凑的经验表示。\textbf{A-Mem}~\citep{amem2024}实现了记忆的自主管理，包括主动遗忘和信息整合。\textbf{Memento}~\citep{memento2024}将记忆管理建模为分层决策过程，不同层级管理不同时间尺度的经验。
+
+\subsubsection{记忆进化的核心挑战}
+
+\textbf{记忆容量与检索效率}：随着经验积累，记忆库规模不断增长。如何在保持检索质量的同时控制存储和计算成本？AriadneMem 的图粗化是一种解决方案，但通用的高效记忆索引仍是一个开放问题。
+
+\textbf{遗忘与保留的平衡}：何时删除过时经验？何时保留看似无用但可能在远期任务中关键的"意外知识"？这类似于持续学习中的"稳定性-可塑性困境"。
+
+\textbf{记忆一致性}：当新旧经验产生矛盾时（例如同一 API 在不同版本有不同的行为），如何解决冲突？AriadneMem 的冲突感知粗化机制尝试解决这一问题。
+
+\textbf{负迁移}：在某些任务中获得的经验可能在其他任务上产生负面影响。例如，在代码生成中学到的特定语言习惯可能不适用于另一语言。记忆系统需要具备识别和隔离负迁移的能力。
+
+% =====================================================================
+\subsection{混合方法}\label{sec:hybrid}
+% =====================================================================
+
+混合方法将多种进化机制组合成端到端闭环，突破单一类别的局限。其核心动机是：现实世界的复杂任务通常需要同时优化多个维度（代码质量、推理深度、记忆利用、工具选择等），单一方法难以覆盖所有需求。
+
+\subsubsection{代表系统详解}
+
+\paragraph{EvolveR: 全生命周期进化}
+
+\textbf{EvolveR}~\citep{evolver2024}提出覆盖智能体全生命周期的统一进化框架。不同于仅优化推理时行为或仅优化训练时权重的方法，EvolveR 同时进化：
+\begin{itemize}
+\item \textbf{推理策略}：通过 Reflexion 式的自我反思优化即时决策
+\item \textbf{长期记忆}：通过经验抽取和整合优化知识积累
+\item \textbf{工具使用}：通过试错学习优化工具选择和参数配置
+\item \textbf{自身代码}：通过 LLM 驱动的代码修改优化 agent 架构
+\end{itemize}
+
+EvolveR 的关键创新在于将这些进化机制统一在一个生命周期框架下，使它们可以协同而非竞争地运行。
+
+\paragraph{WebEvolver: Web 环境进化}
+
+\textbf{WebEvolver}~\citep{webevolver2024}将进化框架部署到真实的 Web 环境中。agent 不仅需要生成代码和推理，还需要与网页交互、填写表单、导航链接。进化信号来自任务完成度和网页状态变化。
+
+\paragraph{HyperAgents}
+
+\textbf{HyperAgents}~\citep{hyperagents2024}实现了一种"超智能体"架构——一个 meta-agent 管理和进化多个子智能体。meta-agent 通过观察子智能体的表现，动态调整它们的配置、工具和协作方式。
+
+\paragraph{EvoAgentX}
+
+\textbf{EvoAgentX}~\citep{evoagentx2024}提供了一个平台级的进化框架，支持多种进化策略的即插即用组合。用户可以选择不同的变异算子、选择机制和适应度函数，快速构建自定义的智能体进化流水线。
+
+\subsubsection{混合方法的设计原则}
+
+\begin{enumerate}
+\item \textbf{最小侵入性}：新加入的进化机制不应破坏已有机制的功能
+\item \textbf{信号隔离}：不同进化机制的奖励信号应独立，避免相互干扰
+\item \textbf{优先级管理}：当多个机制产生冲突的改进建议时，应有明确的优先级规则
+\item \textbf{可观测性}：每个机制的贡献应可独立度量，便于调试和优化
+\end{enumerate}
+
+% =====================================================================
+\subsection{方法对比矩阵}\label{sec:method-compare}
+% =====================================================================
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l
+  >{\centering\arraybackslash}p{22mm}
+  >{\centering\arraybackslash}p{22mm}
+  >{\centering\arraybackslash}p{16mm}
+  >{\centering\arraybackslash}p{16mm}
+  >{\centering\arraybackslash}p{16mm}
+  >{\centering\arraybackslash}p{16mm}
+  >{\centering\arraybackslash}p{20mm}}
+\toprule
+\textbf{方法类别} & \textbf{进化对象} & \textbf{数据需求} & \textbf{评估可靠性} & \textbf{成本} & \textbf{安全风险} & \textbf{可迁移性} & \textbf{典型系统} \\
+\midrule
+奖励进化 & 策略/权重 & 中-高 & 中 & 高 & 中 & 中 & STaR, RISE \\
+自博弈 & 任务+策略 & 低 & 高 & 中 & 中 & 中 & AbsZero, SPIRAL \\
+提示词进化 & 提示/上下文 & 低 & 低-中 & 低 & 低 & 高 & Reflexion, ACE \\
+架构搜索 & 代码/结构 & 中 & 中-高 & 高 & 高 & 中 & ADAS, DGM \\
+记忆进化 & 经验/技能 & 中 & 中 & 低-中 & 低 & 高 & Voyager, Mem-R1 \\
+混合方法 & 多层组合 & 高 & 中-高 & 高 & 中-高 & 中 & EvolveR, WebEvolver \\
+\bottomrule
+\end{tabular}%
+}
+\caption{六大方法类别对比矩阵。评估可靠性、成本、安全风险和可迁移性的相对水平。}
+\label{fig:ch3-method-compare}
+\end{figure}
+
+\subsubsection{详细能力矩阵}
+
 \begin{table}[htbp]
 \centering
-\small
-\caption{Template B: reward-filtered self-training.}
-\label{tab:algo-reward-filtered}
-\begin{tabular}{p{0.95\textwidth}}
+\caption{方法能力详细对比（$\checkmark$ = 支持，$\sim$ = 部分支持，$\times$ = 不支持）。}
+\label{tab:capability-matrix}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccccc}
 \toprule
-\textbf{Input}: prompt distribution $\mathcal{X}$, policy $\pi_\theta$, reward/verifier $R$, sampling count $N$, threshold $\tau$.
-\newline
-1. For each $x\in\mathcal{X}$, sample $N$ candidates $y_{1:N}\sim\pi_\theta(\cdot\mid x)$.
-\newline
-2. Score each candidate $s_j=R(x,y_j)$.
-\newline
-3. Select $\mathcal{D}^+=\{(x,y_j):s_j>\tau\}$ or top-$k$ candidates per prompt.
-\newline
-4. Update $\theta$ by supervised fine-tuning or preference optimization on $\mathcal{D}^+$.
-\newline
-5. Re-evaluate on held-out tasks and stop if gains saturate or regressions appear.
-\\
+\textbf{方法} & \textbf{无监督} & \textbf{开放域} & \textbf{权重更新} & \textbf{代码修改} & \textbf{多轮交互} & \textbf{跨任务迁移} & \textbf{可解释性} & \textbf{部署难度} \\
+\midrule
+STaR & $\sim$ & $\times$ & $\checkmark$ & $\times$ & $\checkmark$ & $\sim$ & 高 & 中 \\
+Self-Rewarding & $\checkmark$ & $\sim$ & $\checkmark$ & $\times$ & $\checkmark$ & $\sim$ & 中 & 中 \\
+Absolute Zero & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ & 低 & 高 \\
+Reflexion & $\checkmark$ & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ & $\checkmark$ & 高 & 低 \\
+Self-Refine & $\checkmark$ & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ & $\checkmark$ & 高 & 低 \\
+ADAS & $\sim$ & $\sim$ & $\times$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & 中 & 高 \\
+Gödel Agent & $\checkmark$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & 低 & 高 \\
+DGM & $\checkmark$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & 中 & 高 \\
+AlphaEvolve & $\sim$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & 中 & 极高 \\
+Voyager & $\checkmark$ & $\checkmark$ & $\times$ & $\sim$ & $\checkmark$ & $\checkmark$ & 高 & 低 \\
+EvolveR & $\checkmark$ & $\checkmark$ & $\sim$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & 中 & 高 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\subsubsection{计算成本分析}
+
+\begin{table}[htbp]
+\centering
+\caption{典型方法的计算资源需求。}
+\label{tab:compute-cost}
+\begin{tabular}{lccccl}
+\toprule
+\textbf{方法} & \textbf{训练 GPU} & \textbf{推理成本} & \textbf{API 调用} & \textbf{总迭代成本} & \textbf{适用规模} \\
+\midrule
+Reflexion & 无 & 低 & $O(n \times k)$ & 低 & 任意 \\
+Self-Refine & 无 & 低 & $O(n \times t)$ & 低 & 任意 \\
+STaR & 中 & 低 & 内部 & 中 & 7B+ \\
+Self-Rewarding & 高 & 中 & 内部 & 高 & 7B+ \\
+RISE & 高 & 中 & 内部 & 高 & 7B+ \\
+Absolute Zero & 高 & 中 & 内部 & 高 & 7B+ \\
+ADAS & 无 & 高 & $O(g \times n)$ & 高 & API \\
+DGM & 无 & 极高 & $O(g \times n \times e)$ & 极高 & API \\
+AlphaEvolve & 无 & 极高 & $O(g \times n)$ & 极高 & API \\
 \bottomrule
 \end{tabular}
 \end{table}
 
+% =====================================================================
+\subsection{基准测试分析}\label{sec:benchmarks}
+% =====================================================================
+
+\subsubsection{代码生成基准}
+
 \begin{table}[htbp]
 \centering
-\small
-\caption{Template C: self-play curriculum with executable verification.}
-\label{tab:algo-self-play-curriculum}
-\begin{tabular}{p{0.95\textwidth}}
+\caption{代码生成基准上的方法性能（pass@1）。}
+\label{tab:code-benchmark}
+\begin{tabular}{lcccc}
 \toprule
-\textbf{Input}: proposer policy $\pi_p$, solver policy $\pi_s$, verifier $V$, curriculum state $c$.
-\newline
-1. Proposer samples task $q\sim\pi_p(\cdot\mid c)$.
-\newline
-2. Solver samples solution $a\sim\pi_s(\cdot\mid q)$.
-\newline
-3. Verifier computes $r=V(q,a)$ and auxiliary measures of difficulty, novelty, and solvability.
-\newline
-4. Update solver to increase probability of verified solutions.
-\newline
-5. Update proposer to produce tasks near the solver's learning frontier, not trivial or impossible tasks.
-\newline
-6. Add accepted tasks, failures, and verifier traces to the curriculum archive.
-\\
+\textbf{方法} & \textbf{HumanEval} & \textbf{MBPP} & \textbf{DS-1000} & \textbf{LiveCodeBench} \\
+\midrule
+GPT-4 zero-shot & 80.1 & -- & -- & -- \\
+GPT-4 + Self-Refine & 86.6 & -- & -- & -- \\
+Reflexion (GPT-3.5) & \textbf{91.0} & 85.5 & -- & -- \\
+ChatGPT baseline & 74.4 & -- & 49.4 & -- \\
+SelfEvolve & \textbf{86.0} & -- & \textbf{57.2} & -- \\
+AZR-Coder-7B & -- & -- & -- & 7B SOTA \\
+ReVeal & -- & -- & -- & $>$DS-R1-Zero-32B \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-These templates show that many named methods differ by substituting one component. Self-Refine uses an LLM critique as $V$ or feedback. Self-Debug uses execution as $V$. STaR uses answer labels. ReST uses a reward model. SPIN replaces $R$ with a discriminator-like objective against past-model outputs. Constitutional AI uses principles to generate revisions and preferences. Absolute Zero adds a proposer update. ReVeal adds explicit verifier optimization and turn-level credit assignment.
-
-\subsubsection{Failure Modes by Method Class}
-\label{sec:methods-failure-modes}
-
-Inference-time critique methods fail when critiques are generic, self-serving, or disconnected from verifiable errors. They may also degrade correct answers by over-editing. Memory-based methods fail when wrong reflections persist, when retrieval surfaces irrelevant lessons, or when context bloat reduces signal-to-noise ratio. Execution-based methods fail when tests are incomplete or when the model overfits visible counterexamples. Reward-filtered training fails when the reward model is biased, stale, or exploitable. Self-play fails when the game becomes degenerate, when task generation collapses to narrow patterns, or when the opponent is too weak to provide useful pressure. Multi-turn RL fails when internal reasoning collapses into echoes, when reward assignment is too sparse, or when trajectory length increases cost faster than accuracy.
-
-A robust method section must therefore report negative evidence. How many candidates were rejected? What kinds of failures survived the loop? Did old capabilities regress? Did the method improve hidden tests or only visible tests? Did the model learn to produce better reasoning or merely longer reasoning? Did the method increase cost per solved task? Did performance persist across prompts, models, and domains? These questions are part of the method, not post-hoc criticism.
-
-\subsection{Benchmark Evidence: HumanEval, GSM8K, BBH, MMLU, and Adjacent Tasks}
-\label{sec:methods-benchmarks}
-
-Benchmark evidence for self-improvement methods is heterogeneous. Some methods report standard coding benchmarks such as HumanEval, MBPP, TransCoder, APPS, LiveCodeBench, or SWE-Bench. Others report math benchmarks such as GSM8K or MATH. Alignment methods report helpfulness, harmlessness, MT-Bench, TruthfulQA, or human preference. Self-play methods may report HuggingFace Open LLM Leaderboard tasks, Big-Bench-style tasks, or custom game environments. This heterogeneity makes direct comparison difficult. The same method may look strong on code, moderate on math, and untested on MMLU.
-
-\begin{longtable}{p{0.16\textwidth}p{0.2\textwidth}p{0.22\textwidth}p{0.3\textwidth}}
-\caption{Benchmark examples reported in local notes or primary paper summaries. Values are included only where the available notes provide concrete numbers; otherwise the table records qualitative coverage.}\label{tab:benchmark-evidence}\\
-\toprule
-\textbf{Benchmark} & \textbf{Method/system} & \textbf{Reported value or trend} & \textbf{Interpretation and caveat} \\
-\midrule
-\endfirsthead
-\toprule
-\textbf{Benchmark} & \textbf{Method/system} & \textbf{Reported value or trend} & \textbf{Interpretation and caveat} \\
-\midrule
-\endhead
-HumanEval & Reflexion & 91\% pass@1; GPT-4 reference about 80.1\% in notes & Strong evidence that verbal memory plus retry improves coding success under the reported protocol. \\
-HumanEval+ & Absolute Zero & SOTA or competitive among 7B-level coding models in notes & Demonstrates zero-external-data self-play potential, but notes do not provide the exact table values. \\
-MBPP / MBPP+ & Self-Debug; Absolute Zero & Self-Debug up to about +12\%; Absolute Zero SOTA/competitive in notes & Execution feedback and self-generated curricula are especially suitable for verifiable code tasks. \\
-TransCoder & Self-Debug & Up to about +12\% accuracy improvement in notes & Shows transfer of debugging loop to code translation. \\
-GSM8K & Self-Refine & 56\% to 67\% on math reasoning example in notes & Demonstrates inference-time critique benefit for mathematical reasoning. \\
-GSM8K & RISE & Llama2-7B about 14\% to 24\%; Mistral-7B about 38\% to 46\% in notes & Trained introspection improves multi-step reasoning, but exact values are setting-specific. \\
-GSM8K & SPIN & Significant improvement reported qualitatively in notes & SPIN evaluates leaderboard tasks including GSM8K, but local notes do not provide exact numbers. \\
-BBH / Big-Bench-style tasks & SPIN & Improvement reported qualitatively; paper summary mentions Big-Bench datasets & Evidence supports broad improvement, but this chapter avoids unsupported exact BBH values. \\
-MMLU & Self-improvement family & Not consistently reported in the provided local notes & MMLU should be included in future unified evaluation, but local materials do not justify a precise value here. \\
-CommonsenseQA & STaR & 540M direct 53.3\%, few-shot CoT 55.6\%, STaR 72.5\%, 175B reference about 73\% & Not one of the four requested benchmarks, but historically central for self-training rationales. \\
-AlfWorld & Reflexion & 97\% success versus 75\% base in notes & Shows reflection memory can help interactive agents, not only static QA. \\
-LiveCodeBench & ReVeal; Absolute Zero & ReVeal surpasses strong baseline qualitatively; Absolute Zero competitive in notes & Multi-turn verification and self-play matter for modern coding evaluation. \\
-\bottomrule
-\end{longtable}
-
-This table deliberately includes caveats. It would be misleading to force precise BBH or MMLU values when the provided local notes do not contain them. A unified runner for this survey should therefore include a benchmark-normalization appendix with source-specific values, model versions, prompt settings, and evaluation dates. Until then, the safest claim is methodological: self-improvement gains are strongest and most reproducible where feedback is verifiable, such as code execution or answer-labeled math; they are harder to interpret where evaluation depends on broad knowledge benchmarks or subjective preferences.
-
-\subsubsection{HumanEval and Code Benchmarks}
-\label{sec:methods-humaneval}
-
-HumanEval is a natural benchmark for self-improvement because generated programs can be executed. Reflexion's reported 91\% pass@1 is therefore especially salient. It suggests that a model can fail once, receive a failure signal or reflection, and then solve tasks it would not solve in a single zero-shot attempt. Self-Debug extends the same idea by making execution traces explicit. ReVeal extends it further by training the agent to generate and use verification across multiple turns. Absolute Zero uses code execution as the verifier for self-generated curricula.
-
-The shared lesson is that code creates a tight feedback loop. The output is executable. The verifier is cheap relative to human review. The failure is often localizable. The improvement can be measured by pass rate. This is why coding agents are likely to remain a leading domain for agent self-evolution. However, code benchmarks also expose the danger of overfitting. A method may pass HumanEval but fail on LiveCodeBench, real repositories, or hidden tests. Production coding agents should therefore use layered evaluation: public benchmarks for comparability, generated tests for exploration, hidden tests for anti-overfitting, and repository-specific CI for deployment.
-
-\subsubsection{GSM8K, MATH, and Mathematical Reasoning}
-\label{sec:methods-gsm8k}
-
-Math reasoning is another natural domain because many problems have exact answers. Self-Refine's improvement from 56\% to 67\% in the local notes shows that critique and revision can help even without weight updates. RISE's reported GSM8K improvements show that training a model to introspect can further improve reasoning behavior. STaR's rationale filtering also belongs to this family, even though the highlighted local result is on CommonsenseQA.
-
-The difficulty is that mathematical self-improvement can produce rationalization. A model may write a plausible chain of thought that happens to end at the correct answer, or it may revise a correct solution into a wrong one because the critique sounds convincing. Therefore math benchmarks should evaluate final correctness, but method analysis should also examine reasoning faithfulness, sensitivity to prompt changes, and the rate at which revision flips correct answers to incorrect answers. A useful metric is not only $\Delta \mathrm{accuracy}$ but also:
-\[
-  \mathrm{harm\_rate} = \Pr[y_0 = y^\star \;\wedge\; y_T \neq y^\star],
-\]
-which measures how often self-improvement damages an already correct solution.
-
-\subsubsection{BBH, MMLU, and Broad Knowledge Benchmarks}
-\label{sec:methods-bbh-mmlu}
-
-BBH and MMLU are broader and less directly verifiable at inference time. They test multi-domain knowledge, reasoning, and sometimes pattern generalization. SPIN's local notes mention Big-Bench-style evaluation and leaderboard improvements, but they do not provide exact BBH or MMLU numbers. This absence is informative. Many self-improvement methods are first validated on tasks with clearer feedback: code, math, translation, or interactive environments. Broad knowledge benchmarks require careful interpretation because improvements may reflect better instruction following, better calibration, or benchmark-specific adaptation rather than a general self-evolution mechanism.
-
-For a future unified evaluation, BBH and MMLU should be included for three reasons. First, they test whether self-improvement transfers beyond the domain used for feedback. Second, they expose whether methods over-specialize to code or math. Third, they provide comparability with broader LLM literature. But they should not be the only measures. A self-evolving agent may improve tool use, memory, or workflow reliability without moving MMLU. Conversely, an MMLU gain may not imply better agentic adaptation.
-
-\subsubsection{Metrics Beyond Accuracy}
-\label{sec:methods-metrics-beyond-accuracy}
-
-Accuracy, pass@1, and win rate are necessary but incomplete. Agent self-evolution also needs metrics for cost, stability, transfer, and safety. Let $S_0$ and $S_T$ be task success before and after self-improvement, and let $C_T$ be total cost in tokens, tool calls, wall-clock time, or dollars. A simple efficiency metric is:
-\[
-  \mathrm{gain\_per\_cost} = \frac{S_T - S_0}{C_T}.
-\]
-For training-time methods, cost should include data generation, scoring, filtering, training, evaluation, and failed candidates. For inference-time methods, cost should include repeated model calls and tool execution. A method that improves accuracy by three points while increasing cost by ten times may be inappropriate for production.
-
-Regression should also be measured. Let $\mathcal{T}_{\mathrm{old}}$ be a suite of tasks the agent could already solve and $\mathcal{T}_{\mathrm{new}}$ be the target improvement suite. A safe update should satisfy:
-\[
-  \Delta_{\mathrm{new}} > 0 \quad \text{and} \quad \Delta_{\mathrm{old}} \geq -\epsilon,
-\]
-where $\epsilon$ is an explicit tolerance. This is especially important for memory updates and fine-tuning. Self-improvement that erases old capabilities is not cumulative evolution; it is capability replacement.
-
-Finally, evaluator independence should be recorded. A result verified by hidden tests or human blind review is stronger than a result judged by the same model that generated it. A useful reporting field is:
-\[
-  \mathrm{independence}(V) \in \{\text{self-judge}, \text{peer-judge}, \text{reward model}, \text{programmatic}, \text{hidden external}, \text{human blind}\}.
-\]
-This field makes clear how vulnerable a result is to evaluator gaming.
-
-
-\subsection{A Unified State-Space View of Self-Improvement Methods}
-\label{sec:methods-state-space}
-
-A useful way to compare the methods in this chapter is to treat each of them as a state-space process. The state is not merely the hidden state of a neural network. It is the complete set of artifacts that can influence future behavior: the current prompt, the scratchpad, retrieved memory, visible tests, hidden evaluator, tool outputs, training dataset, reward model, previous model checkpoint, archive of candidates, and policy parameters. A self-improvement method is then a transition operator over this augmented state:
-\[
-  \mathcal{S}_{t+1} = \Phi(\mathcal{S}_t, x_t, y_t, e_t, u_t),
-\]
-where $x_t$ is the task, $y_t$ is the agent's output or trajectory, $e_t$ is evidence from a verifier or critic, and $u_t$ is an update action. In Self-Refine, $\mathcal{S}_t$ mainly contains the current draft and critique history. In Reflexion, it contains episodic memory. In Self-Debug, it contains program text and execution traces. In STaR, it contains a rationale dataset and model parameters. In SPIN, it contains the current policy and previous-policy generated responses. In Absolute Zero, it contains a curriculum archive and proposer/solver states.
-
-This view is valuable because it prevents a false dichotomy between ``prompting'' and ``training.'' Both are state updates. The difference is where the update is stored and how long it persists. A prompt update persists for one call or session. A memory update persists across episodes but may be retrieved selectively. A dataset update persists until retraining or pruning. A weight update persists in every subsequent call. A code update persists at the software level and can change the agent's own future update rules. These persistence levels imply different safety requirements. The more persistent and globally applied the update, the stronger the evidence needed before accepting it.
-
-We can define a persistence hierarchy:
-\[
-  \text{candidate} < \text{context} < \text{session memory} < \text{long-term memory} < \text{dataset} < \text{weights} < \text{code} < \text{evaluator}.
-\]
-Updates near the left side are cheap to try and easy to discard. Updates near the right side can affect many future tasks and should require stronger validation. This hierarchy explains why inference-time methods are attractive for rapid experimentation and why self-modifying code or evaluator evolution is governance-intensive. It also explains why a mature agent-evolution platform should support graduated promotion: a lesson first appears as a reflection, then becomes a memory entry, then becomes a test or training example, and only after repeated validation becomes a policy update.
-
-Another useful abstraction is the separation between \emph{variation}, \emph{evaluation}, and \emph{inheritance}. Variation creates candidates. Evaluation assigns evidence. Inheritance decides what persists. In Self-Refine, variation is revision, evaluation is critique or task scoring, and inheritance is keeping the revised output. In ReST, variation is sampling candidate responses, evaluation is reward-model scoring, and inheritance is fine-tuning on filtered samples. In SPIN, variation is previous-model generation, evaluation is discrimination against human data, and inheritance is the next model. In Absolute Zero, variation occurs both in task generation and in solution generation; evaluation is code execution; inheritance updates both proposer and solver. This decomposition is simple, but it is the clearest bridge between LLM methods and evolutionary computation.
+\subsubsection{数学推理基准}
 
 \begin{table}[htbp]
 \centering
-\small
-\caption{Persistence levels for self-improvement artifacts.}
-\label{tab:persistence-levels}
-\begin{tabular}{p{0.16\textwidth}p{0.3\textwidth}p{0.24\textwidth}p{0.2\textwidth}}
+\caption{数学推理基准上的方法性能（准确率\%）。}
+\label{tab:math-benchmark}
+\begin{tabular}{lcccc}
 \toprule
-\textbf{Level} & \textbf{Example artifacts} & \textbf{Benefit} & \textbf{Risk} \\
+\textbf{方法} & \textbf{GSM8K} & \textbf{MATH} & \textbf{基础模型} & \textbf{方法类别} \\
 \midrule
-Candidate & Draft answer, candidate program & Cheap exploration & No durable learning \\
-Context & Critique, plan, scratchpad & Immediate adaptation & Context bloat, prompt sensitivity \\
-Session memory & Recent reflections, retry history & Multi-attempt learning & Wrong lesson persistence \\
-Long-term memory & Skills, rules, failure summaries & Cross-task reuse & Poisoning, privacy, stale knowledge \\
-Dataset & Filtered rationales, preference pairs & Amortized training & Data contamination, bias amplification \\
-Weights & Fine-tuned policy or reward model & Durable capability gain & Regression, overfitting, hard rollback \\
-Code/workflow & Agent architecture, tool policy & Structural improvement & Supply-chain and permission risk \\
-Evaluator & Reward model, hidden tests, judge prompt & Defines selection pressure & Goodhart, self-serving metrics \\
+Llama2-7B baseline & 14.0 & -- & Llama2-7B & -- \\
+RISE (Llama2-7B) & 24.0 & -- & Llama2-7B & 奖励进化 \\
+Mistral-7B baseline & 38.0 & -- & Mistral-7B & -- \\
+RISE (Mistral-7B) & 46.0 & -- & Mistral-7B & 奖励进化 \\
+STaR & 73.5 & -- & 175B & 奖励进化 \\
+AZR-Coder-7B & $\sim$SOTA & 竞争力 & Qwen-7B & 自博弈 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-This state-space framing also reveals a missing piece in many papers: the update log. If the state changes, a serious self-evolution system should record what changed, why it changed, what evidence justified the change, and how to revert it. A model checkpoint without a data lineage is difficult to audit. A memory entry without provenance is difficult to trust. A code patch without tests is unsafe. A reward-model update without held-out evaluator checks is a Goodhart risk. Therefore method design should include a minimal lineage schema:
-\[
-  \ell = (\text{ancestor},\text{mutation},\text{evidence},\text{acceptance rule},\text{cost},\text{rollback pointer}).
-\]
-Even inference-time systems benefit from such a schema. A Reflexion agent can store not only ``avoid this error,'' but also the task that produced the lesson, the evaluator outcome, and the date or version of the environment. A Self-Debug agent can store the failed test that motivated a repair. A ReST pipeline can store reward thresholds and rejected-sample statistics. These details turn self-improvement from anecdote into reproducible method.
+\subsubsection{智能体任务基准}
 
-\subsection{Input-Output Semantics of the Major Loops}
-\label{sec:methods-io-semantics}
-
-The methods differ not only in update mechanism but also in input-output semantics. This matters because an apparently small semantic difference changes what kinds of tasks the method can solve. Self-Refine accepts a task and an initial output, and returns a revised output. It assumes the output can be improved by local editing. Reflexion accepts an episode history and returns a memory item that influences later episodes. It assumes failures can be summarized as portable lessons. Self-Debug accepts a program and execution evidence, and returns a repaired program. It assumes the environment can expose actionable traces. STaR accepts labeled questions and returns a trained reasoner. It assumes labels are available and rationales are learnable. SPIN accepts demonstrations and previous-model outputs, and returns a policy closer to the demonstration distribution. It assumes the target distribution is represented by SFT data. Absolute Zero accepts a verifier and a base model, and returns both generated tasks and a stronger solver. It assumes the verifier can reject invalid self-generated tasks.
-
-These semantic assumptions should be made explicit before choosing a method. If a task cannot be locally edited, Self-Refine may produce superficial rewrites. If failures cannot be compressed into natural-language lessons, Reflexion may create misleading memory. If no deterministic or semi-deterministic verifier exists, Self-Debug and Absolute Zero lose their strongest advantage. If labels are unavailable, STaR is not directly applicable. If the demonstration distribution is narrow, SPIN may converge to a narrow imitation. If the task requires persistent tool creation or workflow changes, output-level methods are insufficient.
-
-The following table summarizes the input-output contracts of representative methods.
-
-\begin{longtable}{p{0.14\textwidth}p{0.23\textwidth}p{0.23\textwidth}p{0.3\textwidth}}
-\caption{Input-output semantics of representative methods.}\label{tab:io-semantics}\\
+\begin{table}[htbp]
+\centering
+\caption{智能体任务基准上的方法性能。}
+\label{tab:agent-benchmark}
+\begin{tabular}{lclcl}
 \toprule
-\textbf{Method} & \textbf{Primary input} & \textbf{Primary output} & \textbf{Hidden assumption} \\
+\textbf{方法} & \textbf{SWE-bench} & \textbf{类型} & \textbf{HotPotQA} & \textbf{类型} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{Method} & \textbf{Primary input} & \textbf{Primary output} & \textbf{Hidden assumption} \\
+手工设计 agent & 20.0\% & 基线 & 36.2 (F1) & 基线 \\
+DGM & \textbf{50.0\%} & 架构搜索 & -- & -- \\
+Agent Sym.\ Learning & -- & -- & \textbf{39.1} (F1) & 提示词进化 \\
+Gödel Agent & -- & -- & +8-15\% & 架构搜索 \\
+Reflexion (GPT-3.5) & -- & -- & -- & -- \\
 \midrule
-\endhead
-Self-Refine & Task, draft, rubric & Revised answer & Critique can identify repairable local defects \\
-Reflexion & Episode, reward, failure trace & Memory lesson & Natural language can encode reusable policy advice \\
-Self-Debug & Program, tests, execution trace & Repaired program & Tests expose errors that the model can diagnose \\
-RISE & Problem, reasoning trajectory & Revised/continued reasoning & Introspection policy can learn when to revise \\
-STaR & Labeled QA data, rationale prompts & Fine-tuned reasoner & Correct answers can select useful rationales \\
-ReST & Prompt set, reward model & Fine-tuned policy & Reward model ranks true quality sufficiently well \\
-SPIN & SFT demonstrations, previous-policy samples & Improved policy & Matching demonstration distribution is the target \\
-Constitutional AI & Principles, responses, preference pipeline & Safer assistant policy & Principles encode desired behavior sufficiently well \\
-RAGEN & Multi-turn trajectories & Agent RL policy & Trajectory rewards can be assigned without reasoning collapse \\
-Absolute Zero & Base model, executor/verifier & Proposer and solver policies & Verifier prevents degenerate self-generated curricula \\
-ReVeal & Code tasks, verification turns & Code agent with verifier behavior & Self-verification can be trained without drifting from correctness \\
+& \textbf{AlfWorld} & & \textbf{Minecraft} & \\
+\midrule
+Reflexion & \textbf{97\%} & 提示词进化 & -- & -- \\
+Voyager & -- & -- & 最优 & 记忆进化 \\
 \bottomrule
-\end{longtable}
+\end{tabular}
+\end{table}
 
-This contract perspective also helps explain why benchmark results transfer unevenly. HumanEval and MBPP fit Self-Debug and ReVeal because their outputs are executable. GSM8K fits RISE and Self-Refine because final answers are checkable and intermediate reasoning can be revised. CommonsenseQA fits STaR because labels can filter rationales. Broad instruction-following tasks fit SPIN and Constitutional AI because demonstrations and principles can define target behavior. Web navigation and embodied tasks fit Reflexion because episodes produce failures that can be summarized and retried. No method is universally best because no single input-output contract matches every domain.
+% =====================================================================
+\subsection{跨类别关联分析}\label{sec:cross-analysis}
+% =====================================================================
 
-\subsection{Inference-Time Methods in Greater Detail}
-\label{sec:methods-inference-details}
+\subsubsection{方法组合的理论基础}
 
-Inference-time methods are often dismissed as ``just prompting,'' but this is too shallow. A robust inference-time self-improvement pipeline contains several design choices: critique role design, evidence injection, history management, stopping criteria, candidate selection, and memory promotion. Each choice changes performance and risk.
+不同类别的进化方法可以通过以下方式组合：
 
-Critique role design determines what the model is asked to notice. A general critic may identify style issues but miss correctness errors. A domain critic can check invariants, constraints, citations, edge cases, or API contracts. For coding tasks, a critic might inspect failed assertions, complexity bounds, and type errors. For mathematical reasoning, a critic might verify each algebraic transformation. For writing, a critic might check whether claims are supported by sources and whether the structure matches the thesis. Self-Refine's success depends heavily on such rubrics.
+\textbf{串联组合}：方法 A 的输出作为方法 B 的输入。例如，Reflexion（提示词进化）生成反思文本，STaR（奖励进化）将这些反思作为训练数据。
 
-Evidence injection determines whether the critique is grounded. Without evidence, a critic may hallucinate flaws or praise incorrect answers. With evidence, the critic can connect revisions to observable failures. The best inference-time pipelines therefore place evidence before critique. For code, run tests before asking for a diagnosis. For web tasks, show the DOM state and failed action. For retrieval tasks, show the retrieved passage and the unsupported claim. For math, show the final answer check. This design reduces the probability of self-confirming critique.
+\textbf{并联组合}：方法 A 和 B 同时运行，取更好的结果。例如，多个 Reflexion 并行运行，选择最优解。
 
-History management determines how much previous context to include. Including all previous attempts can help the model avoid repeated mistakes, but it also increases token cost and may anchor the model to bad hypotheses. A better strategy is to summarize history into a structured record: attempted approach, failure evidence, rejected hypothesis, and next constraint. Reflexion-style memory is one form of this strategy. Another is a small table of failed tests and corresponding fixes. A third is a plan diff showing how the next attempt differs from the previous attempt.
+\textbf{嵌套组合}：方法 A 的内部使用方法 B。例如，DGM（架构搜索）内部使用 Reflexion（提示词进化）来评估新架构。
 
-Stopping criteria are essential. Naive self-refinement can continue indefinitely, especially when the critic always finds another stylistic issue. Practical systems stop when a verifier accepts the output, when improvement falls below a threshold, when a fixed budget is exhausted, or when revisions begin to oscillate. For tasks with deterministic tests, stopping is simple. For subjective tasks, stopping may require a confidence threshold, a human review gate, or a cost limit. A method paper should report the stopping rule because iteration count directly affects both accuracy and cost.
+\textbf{分层组合}：不同层级使用不同方法。例如，推理时使用 Self-Refine，训练时使用 STaR，架构层面使用 ADAS。
 
-Candidate selection determines whether the system keeps the latest revision or the best revision seen so far. Keeping the latest revision is simple but unsafe if later edits degrade the answer. Keeping the best-scoring candidate is better when a verifier exists. For subjective outputs, systems can keep a small beam of candidates and ask a separate judge to compare them. This turns single-chain refinement into local search. However, beam search increases cost and may reduce diversity if the judge shares the generator's biases.
+\subsubsection{进化速度与质量的权衡}
 
-Memory promotion determines which inference-time lessons become long-term assets. Not every critique should be stored. A lesson should be promoted only if it is specific, evidence-backed, and likely to recur. A useful memory item might say: ``When generating Python solutions for interval problems, include boundary tests for empty intervals and adjacent endpoints; this failure occurred on task X and was fixed by condition Y.'' A poor memory item says: ``Be more careful.'' Promotion rules should include provenance, expiration, and conflict handling. Otherwise, memory becomes a landfill of vague advice.
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.9]
+\draw[-Stealth, thick] (0,0) -- (10,0) node[right] {进化速度};
+\draw[-Stealth, thick] (0,0) -- (0,6) node[above] {单次改进质量};
 
-These design choices show that inference-time self-improvement is an engineering discipline. It is not enough to add ``reflect on your answer'' to a prompt. The system must decide what evidence to collect, what critique to request, how to represent failed attempts, how to choose revisions, and what to remember. This is why inference-time methods remain relevant even as training-time methods become stronger: they provide the operational layer where agents encounter real tasks, real tools, and real failures.
+\node[circle, fill=cat3!70, minimum size=8mm, font=\tiny, align=center] at (8,1.5) {Self-\\Refine};
+\node[circle, fill=cat3!70, minimum size=8mm, font=\tiny, align=center] at (7,2.5) {Reflexion};
+\node[circle, fill=cat1!70, minimum size=8mm, font=\tiny, align=center] at (4,3.5) {STaR};
+\node[circle, fill=cat1!70, minimum size=8mm, font=\tiny, align=center] at (3,4.5) {RISE};
+\node[circle, fill=cat2!70, minimum size=8mm, font=\tiny, align=center] at (2,5) {AbsZero};
+\node[circle, fill=cat4!70, minimum size=8mm, font=\tiny, align=center] at (1,4) {ADAS};
+\node[circle, fill=cat4!70, minimum size=10mm, font=\tiny, align=center] at (0.5,5.2) {Alpha-\\Evolve};
+\end{tikzpicture}
+\caption{进化速度与单次改进质量的权衡。提示词进化快但每次改进小；架构搜索慢但可能产生突破性改进。}
+\label{fig:ch3-speed-quality}
+\end{figure}
 
-\subsection{Training-Time Methods in Greater Detail}
-\label{sec:methods-training-details}
+% =====================================================================
+\subsection{开放问题}\label{sec:open-questions}
+% =====================================================================
 
-Training-time methods introduce additional degrees of freedom: data generation strategy, scoring function, selection rule, optimization algorithm, evaluation split, and rollback policy. Each degree of freedom can improve capability or introduce bias. A training-time method is therefore not merely a loop; it is a data pipeline and governance pipeline.
+\subsubsection{Q1: 自我改进是否存在理论上限？}
 
-Data generation strategy defines the candidate distribution. STaR samples rationales conditioned on questions and few-shot demonstrations. ReST samples multiple completions per prompt. SPIN samples from the previous model. Absolute Zero samples tasks from a proposer. RAGEN samples multi-turn trajectories. ReVeal samples code-verification turns. The candidate distribution matters because selection can only choose among generated candidates. If the generator never proposes a correct or novel solution, filtering cannot create one. If the generator proposes many low-quality candidates, evaluation cost rises.
+是否存在一个固定的性能天花板，超过它之后任何自我改进方法都无法突破？从 Gödel 不完备定理的角度来看，一个系统的自我描述能力总是有限的。但 AlphaEvolve 在矩阵乘法上的突破（56 年来首次改进 Strassen 算法）暗示了：至少在某些特定领域，人类认知偏见可能比理论极限更早成为瓶颈。
 
-The scoring function defines selection pressure. Answer labels, unit tests, reward models, AI judges, human preferences, constitutional principles, and trajectory rewards all score different aspects of behavior. A programmatic verifier is precise but narrow. A reward model is broad but vulnerable to bias. A human judge is flexible but expensive. A self-judge is cheap but correlated with the generator's blind spots. The scoring function should be chosen according to task risk. Low-risk stylistic tasks may tolerate self-judgment. Code deployment should require tests. Safety alignment should require independent review and adversarial evaluation.
+\subsubsection{Q2: 如何评估自我改进的真实性？}
 
-The selection rule determines which candidates enter the next generation. Top-$k$ selection, threshold filtering, rejection sampling, preference-pair construction, and archive selection all create different data distributions. Strict selection improves average quality but may reduce diversity and cause overfitting. Loose selection preserves diversity but admits noise. Archive-based selection can preserve stepping stones that are not immediately best but may lead to future improvements. This is one reason evolutionary computation concepts are useful: the best immediate candidate is not always the best ancestor.
+如何区分"真正的能力提升"和"对评估基准的过拟合"？RAGEN 的 Echo Trap 发现表明，即使是看似有效的训练过程也可能产生虚假的改进信号。我们需要：
+\begin{itemize}
+\item 更强的分布外评估基准
+\item 改进信号的因果分析工具
+\item 跨域迁移的标准测试协议
+\end{itemize}
 
-The optimization algorithm determines how selected evidence affects the policy. Supervised fine-tuning on filtered outputs is stable but may not optimize long-term reward. DPO and preference optimization use comparisons but depend on preference quality. PPO/GRPO-style RL can optimize reward directly but is sensitive to reward hacking, KL control, and training stability. Turn-level methods such as TAPO attempt to assign credit more precisely in multi-turn tasks. The choice should reflect the feedback granularity. If only final success is known, trajectory-level RL may be needed. If high-quality outputs are available, supervised fine-tuning may suffice.
+\subsubsection{Q3: 安全性与可控性的边界在哪里？}
 
-Evaluation splits determine whether improvement is real. A training-time loop should separate visible selection data, validation data used for development, and hidden test data used for final claims. It should also evaluate old capabilities. The local notes on RAGEN's Echo Trap illustrate why final reward alone may be insufficient: reasoning can collapse even while apparent performance improves on some training signals. Evaluation should therefore include behavioral metrics, reasoning-diversity metrics, and failure-mode analysis.
+自修改代码（Gödel Agent）和自生成训练数据（Absolute Zero）引入了根本性的安全挑战。如何确保：
+\begin{itemize}
+\item 自修改不会产生有害行为？
+\item 自生成的训练数据不会引入偏见或后门？
+\item 开放式进化（DGM）不会产生不可预测的系统行为？
+\end{itemize}
 
-Rollback policy determines whether a bad update can be undone. This is often absent from research papers but central to production. Fine-tuned checkpoints should preserve ancestors. Memory migrations should be reversible. Reward-model updates should be versioned. Agent workflow changes should be canaried. A self-evolving system without rollback is not a safe learning system; it is an irreversible experiment.
+\subsubsection{Q4: 最优的课程学习策略是什么？}
 
-Training-time self-improvement is most valuable when the same task pattern will recur many times. If the task is one-off, inference-time refinement may be cheaper. If the task distribution is stable and feedback is reliable, training-time updates can amortize cost. If the task distribution changes, continuous or periodic updates may be required, but then the risk of drift increases. The engineering problem is to decide when a local lesson deserves promotion to a global policy update.
+几乎所有方法都隐含了某种课程学习——从简单到困难的任务安排。Absolute Zero 将课程设计自动化，但其策略是否最优？理论上，最优课程应使学习进度最大化，但如何在实践中高效计算学习进度仍是一个开放问题。
 
-\subsection{Method Compositionality: From Single Loops to Multi-Loop Agents}
-\label{sec:methods-compositionality}
+\subsubsection{Q5: 不同方法的最优组合是什么？}
 
-Real agent systems increasingly combine loops. A coding agent might use Self-Debug inside each attempt, Reflexion across attempts, ReST-like filtering to build a training set, and ReVeal-like RL to improve verification. A research agent might use Self-Refine for draft writing, retrieval-grounded critique for citations, memory for project lessons, and a human review gate for publication claims. A web agent might use Reflexion for failed actions, world-model learning for environment prediction, and RL for policy improvement. The method taxonomy should therefore support composition.
+第六节的混合方法只是初步探索。给定一个具体任务，如何系统地选择和组合进化方法？这需要一个"元进化"框架——一个进化"如何进化"的系统。
 
-A compositional agent can be represented as a stack:
-\[
-  \mathcal{A} = (\pi, \mathcal{M}, \mathcal{T}, \mathcal{V}, \mathcal{U}, \mathcal{G}),
-\]
-where $\pi$ is the policy, $\mathcal{M}$ memory, $\mathcal{T}$ tools, $\mathcal{V}$ verifiers, $\mathcal{U}$ update rules, and $\mathcal{G}$ governance constraints. Each component can evolve at a different cadence. The policy may update weekly. Memory may update after each task. Tools may update after tests pass. Verifiers may update rarely and under human review. Governance constraints should update most conservatively.
+\subsubsection{Q6: 记忆进化的规模化挑战如何解决？}
 
-Composition creates synergies. A Self-Debug loop can generate new tests that strengthen future ReST filtering. Reflexion memory can guide task proposal in Absolute Zero-like curricula. Constitutional principles can constrain Self-Refine critiques and RLAIF rewards. SPIN can improve a base model that later serves as the actor in Reflexion. RAGEN-style trajectory filters can protect multi-turn agents from reasoning collapse while ReVeal-style verification improves code tasks.
+当 agent 运行数月甚至数年时，记忆库将达到数百万条目。如何在保持检索质量的同时控制存储和计算成本？现有的解决方案（AriadneMem 的图粗化、Memory-R1 的 RL 遗忘）在大规模设定下是否仍然有效？
 
-Composition also creates interaction risks. A memory loop may store lessons from a biased evaluator. A training loop may amplify those lessons. A self-play loop may generate tasks tailored to the current verifier's weaknesses. A code-evolution loop may modify tools that the evaluator relies on. A constitutional loop may be bypassed by a workflow change. Therefore compositional systems need dependency tracking. When one component evolves, the system should know which other components depend on it.
+\subsubsection{Q7: 架构搜索能否发现质变性的创新？}
 
-A practical compositional protocol is staged promotion. Stage 1: use inference-time loops to solve tasks and collect traces. Stage 2: convert successful traces and failures into structured examples, tests, and memory. Stage 3: run offline evaluation to decide whether examples should enter training. Stage 4: fine-tune or optimize under independent validation. Stage 5: deploy through canary and rollback. Stage 6: monitor long-term outcomes and update the memory or training corpus. This protocol turns ad hoc self-improvement into a software lifecycle.
+ADAS 和 DGM 已经发现了超越人类设计的 agent 结构。但这些改进主要是"量变"——更高效的工具使用、更合理的提示词模板。架构搜索能否产生"质变"——发现全新的推理范式或认知架构？
 
-\subsection{Benchmark Normalization and Reporting Protocol}
-\label{sec:methods-reporting-protocol}
+\subsubsection{Q8: 自我进化与对齐目标如何协调？}
 
-Because self-improvement papers report different benchmarks, a survey chapter should propose a normalization protocol. The protocol should not force every method onto every benchmark, but it should make results comparable where possible. At minimum, each result should report the base model, model size, update type, data source, feedback source, number of iterations, inference budget, training budget, evaluator independence, and whether the test set was visible during selection.
+当 agent 同时追求自我改进和人类对齐目标时，两者可能产生冲突。例如，自我改进可能要求更大的自主性和更少的人类监督，而对齐可能要求相反的方向。如何在自我进化过程中保持对齐是一个根本性的挑战。
 
-For HumanEval-like code benchmarks, reports should include pass@1, pass@k if used, number of repair rounds, whether tests were public or hidden, whether generated tests were allowed, and whether the final solution was selected by visible tests. For GSM8K and MATH, reports should include answer accuracy, number of reasoning or refinement rounds, whether final-answer checking was used during generation, and harm rate on initially correct answers. For BBH and MMLU, reports should include prompt format, few-shot examples, whether self-improvement used benchmark questions directly, and whether improvements persist under paraphrased prompts. For alignment tasks, reports should include human preference evaluation, AI-judge agreement, harmlessness/helpfulness tradeoff, and refusal behavior.
+% =====================================================================
+\subsection{本章小结}\label{sec:ch3-summary}
+% =====================================================================
 
-A compact reporting schema is:
-\[
-\begin{aligned}
-  \mathrm{Report} = (&\mathrm{Model}, \mathrm{Task}, \mathrm{Loop}, \mathrm{MutableObject},
-  \mathrm{Feedback}, \\
-  &\mathrm{Iterations}, \mathrm{Cost}, \mathrm{SelectionData}, \mathrm{ValidationData}, \\
-  &\mathrm{HiddenTest}, \mathrm{RegressionSuite}, \mathrm{SafetyGate}, \mathrm{Lineage}).
-\end{aligned}
-\]
-This schema makes it harder to hide important differences behind a single score. For example, a HumanEval result achieved by five repair rounds with visible tests is not directly comparable to a one-shot result without tests. A GSM8K result with answer checking during refinement is not directly comparable to one without checking. A MMLU result after training on similar questions must be separated from zero-shot generalization.
+本章按六大类别系统梳理了 Agent Self-Evolution 的方法谱系：
 
-The local source notes are already partially aligned with this protocol because they record method mechanism, formulas, benchmarks, authors, and limitations. However, they also show gaps: some benchmark values are qualitative, some exact tables are missing, and some broad benchmarks such as MMLU are not consistently reported. This is not a failure of the notes; it reflects the field's reporting heterogeneity. A future version of the survey should include a dedicated benchmark appendix with normalized rows and source links for every numeric value.
+\begin{enumerate}
+\item \textbf{基于奖励的进化}（STaR, Self-Rewarding, Meta-Rewarding, RISE, RAGEN）：最成熟的方法类别，已有坚实的理论基础和丰富的实证验证。核心挑战是 Goodhart 风险和样本效率。
 
-\subsection{Safety and Governance Implications of Method Choice}
-\label{sec:methods-governance}
+\item \textbf{自博弈进化}（Absolute Zero, SPIRAL, SPIN）：最具理论优雅性的方法类别——在零外部数据条件下实现自我改进。Absolute Zero 代表了这一方向的最新突破。核心挑战是模式坍塌和训练稳定性。
 
-Method choice determines safety posture. Inference-time critique is low persistence but can still leak sensitive context or produce misleading explanations. Memory-based reflection is more persistent and can store private, false, or adversarial content. Reward-filtered training can amplify evaluator bias. Self-play can create degenerate curricula. Code self-modification can alter the agent's permissions or tool behavior. Evaluator evolution can undermine the very mechanism that detects failure.
+\item \textbf{提示词进化}（Reflexion, Self-Refine, ExPeL, ACE）：最易部署的方法类别——零训练成本，即插即用。核心洞察是"记忆替代梯度"。核心挑战是局部最优和上下文窗口限制。
 
-The governance principle is proportional control: the stronger the update, the stronger the gate. A local output revision may need only the task verifier. A long-term memory update should need provenance and retrieval constraints. A dataset update should need deduplication, contamination checks, and quality filters. A weight update should need held-out evaluation and regression tests. A code update should need sandboxing, static analysis, CI, and human approval for high-risk files. An evaluator update should be treated as a governance event, not a routine optimization.
+\item \textbf{架构搜索}（ADAS, Gödel Agent, DGM, AlphaEvolve）：最具突破潜力的方法类别——在图灵完备的搜索空间中发现超越人类设计的 agent 结构。核心挑战是计算成本和安全性。
 
-A second principle is evaluator non-self-modification. The agent may propose improvements to evaluators, but it should not unilaterally weaken or replace the final gate evaluator used to accept its own changes. This principle follows directly from Goodhart's law. If the evolving system can edit the definition of success, it can achieve success by moving the target. Production systems should separate proxy evaluators used during search from independent gate evaluators used for acceptance.
+\item \textbf{记忆进化}（Voyager, Memory-R1, AriadneMem）：关注长期经验的积累与检索。核心挑战是记忆容量与检索效率的平衡。
 
-A third principle is memory quarantine. New reflections or lessons should not immediately become globally trusted. They can enter a quarantine state, be used only for similar tasks, and be promoted after repeated validation. This protects against experience poisoning and one-off false lessons. The same principle applies to generated tests: a model-generated test should be useful, but it should not be the only gate for accepting the model's own code.
+\item \textbf{混合方法}（EvolveR, WebEvolver, HyperAgents, EvoAgentX）：组合多种机制实现端到端进化。核心挑战是设计原则的制定和贡献的独立度量。
+\end{enumerate}
 
-A fourth principle is cost containment. Open-ended methods can generate many candidates, tasks, or trajectories. Without budget constraints, self-improvement can become an expensive search with marginal gains. Cost should be included in the update objective, and reports should include failed-candidate ratios. An agent that solves a task after 50 expensive attempts may be less useful than a simpler agent that solves slightly fewer tasks cheaply and predictably.
+这些方法类别并非相互排斥，而是构成了一个连续的方法谱系。未来的研究方向包括：跨类别组合的理论基础、自我改进的真实性评估、安全性保障机制、以及从"量变"到"质变"的架构创新。
 
-These governance principles do not reject self-evolution. They make it deployable. The goal is not to prevent agents from learning, but to ensure that learning remains observable, reversible, and aligned with real task value.
+% =====================================================================
+\subsection{方法谱系的历史演进}\label{sec:ch3-history}
+% =====================================================================
 
-\subsection{Open Methodological Questions}
-\label{sec:methods-open-questions}
+Agent Self-Evolution 的发展可以划分为四个阶段，每个阶段对应着不同的核心范式和技术突破。
 
-Several methodological questions remain open. The first is how to measure the quality of a reflection. A reflection can be specific, plausible, and still wrong. Future work needs reflection benchmarks that test whether stored lessons improve later tasks and whether they introduce negative transfer. A reflection should be evaluated not by eloquence but by downstream behavioral effect.
+\subsubsection{第一阶段：推理时自我修正（2022-2023）}
 
-The second question is how to train verifiers without making them exploitable. ReVeal and Constitutional AI show that verifier behavior can be optimized or learned, but a learned verifier may share biases with the generator. Research needs protocols for verifier diversity, verifier adversarial testing, and verifier versioning. In self-evolving systems, the evaluator is as important as the actor.
+以 Self-Refine 和 Reflexion 为代表。这一阶段的核心问题是：\textbf{在推理时不更新参数的情况下，模型能否通过自我反馈改善输出？}Self-Refine 给出了肯定的回答——同一模型通过 GENERATE-CRITIQUE-REFINE 循环，在七个任务上平均提升 20\%。Reflexion 进一步证明了"语义梯度"的有效性，在代码生成上超越了 GPT-4 零样本。
 
-The third question is how to preserve diversity. Generate-filter-finetune loops can collapse to narrow high-reward patterns. Self-play curricula can collapse to tasks the solver already handles. Memory retrieval can overemphasize recent lessons. Evolutionary archives, novelty rewards, and task-cluster balancing may help, but they need adaptation to language-agent artifacts.
+这一阶段的关键局限在于：改进受限于模型固有的评价能力。如果模型无法识别自己的错误，自我修正就无法进行。这直接催生了下一阶段的研究。
 
-The fourth question is how to distinguish true learning from better search. Inference-time methods may improve pass rates by spending more attempts rather than by becoming more capable. Training-time methods may improve on the training distribution without changing general reasoning. Reports should therefore separate compute-scaling effects from learned-update effects. A fair comparison should ask: if another baseline received the same number of samples, tool calls, or tokens, would the self-improvement method still win?
+\subsubsection{第二阶段：训练时自我改进（2023-2024）}
 
-The fifth question is how to handle contradictory feedback. In real environments, tests may be flaky, human preferences may disagree, reward models may conflict, and memory lessons may point in opposite directions. Agent-evolution methods need conflict resolution: weighting by source reliability, recency, task similarity, and risk. Without conflict management, self-improvement can oscillate or accumulate incoherent rules.
+以 STaR、Self-Rewarding、SPIN 为代表。核心问题是：\textbf{模型能否通过训练"学会"更好地自我评价和修正？}STaR 的合理化步骤将失败样本转化为可学习的正例，SPIN 将自博弈引入 SFT，Self-Rewarding 让模型同时提升生成和评判能力。
 
-The sixth question is how to report negative results. Many loops will fail on some tasks. Those failures are valuable because they reveal method boundaries. A mature field should publish when self-refinement harms performance, when self-play collapses, when reward filters select bad samples, and when memory causes regressions. Negative results are not embarrassing in an evolutionary field; they are the map of the fitness landscape.
+这一阶段的关键突破在于：自我改进不再是推理时的"免费附加"，而是成为可以通过训练优化的可学习行为。Meta-Rewarding 进一步解决了"谁来监督评判者"的问题。
 
+关键局限在于：所有方法仍然依赖外部数据（标签或指令），无法完全自给自足。
 
-\subsection{Synthesis: How to Choose a Method}
-\label{sec:methods-synthesis}
+\subsubsection{第三阶段：多轮强化学习与自博弈（2024-2025）}
 
-The practical question for researchers and engineers is not which named method is most fashionable, but which loop matches the task. If the task has a deterministic checker, use execution or programmatic verification. If the task has answer labels but no interactive environment, use STaR-like rationale filtering or reward-filtered self-training. If the task has no labels but has human demonstrations, SPIN-like self-play discrimination can extract additional signal. If the task is safety-sensitive, use Constitutional-AI-style principles and independent preference modeling. If the task is long-horizon and interactive, use Reflexion-like memory plus environment evaluation. If the task requires code repair, use Self-Debug or ReVeal-style verification. If the task distribution is missing, consider Absolute-Zero-style task generation only when a verifier can prevent degenerate curricula.
+以 RISE、RAGEN、Absolute Zero 为代表。核心问题是：\textbf{能否在完全零外部数据的条件下实现自我进化？}RISE 将自我修正建模为多轮 MDP并通过 RL 微调；RAGEN 发现了 Echo Trap 现象并提出了 StarPO 框架；Absolute Zero 实现了完全的零数据自博弈推理。
 
-A second design question is where to store improvement. For one-off tasks, store improvement in the answer or program. For repeated tasks, store it in memory or a playbook. For many users and many tasks, store it in a trained policy or reusable skill. For open-ended search, store it in an archive with lineage. The same feedback event can feed multiple storage layers: a failed program can produce a repaired program, a unit test, a memory lesson, a dataset example, and a policy update. Mature systems will likely use layered storage rather than a single mechanism.
+这一阶段的标志性成果是 Absolute Zero 获得 NeurIPS 2025 最佳论文奖，表明自博弈进化已成为主流研究方向。关键发现包括：代码自博弈可以迁移到数学推理，以及"更强的模型更善于让自己变得更强"。
 
-A third design question is how to prevent self-improvement from becoming self-deception. The answer is evaluator separation, hidden tests, regression suites, cost accounting, memory provenance, and human escalation for high-risk changes. The stronger the update, the stronger the gate must be. A prompt revision can be reverted easily; a model fine-tune, memory migration, or self-modifying code patch requires more governance.
+关键局限在于：训练稳定性（模式坍塌风险）和评估真实性（如何区分真改进和过拟合）。
 
-The chapter's main conclusion is that self-improvement methods form a continuum. At one end are cheap inference-time loops that revise outputs, store reflections, and debug programs. At the other end are training-time loops that update policies, generate curricula, and co-evolve verifiers. The best systems will combine them: use inference-time loops to gather experience, convert high-quality experience into training or memory assets, validate changes through independent evaluators, and preserve lineage so that improvements can be audited and reversed. This is the methodological core of agent self-evolution.
+\subsubsection{第四阶段：架构搜索与开放进化（2024-2025）}
 
+以 ADAS、DGM、Gödel Agent、AlphaEvolve 为代表。核心问题是：\textbf{能否自动化地发现超越人类设计的智能体架构？}ADAS 证明了跨模型迁移的可能性；DGM 通过开放式 archive 实现了持续进化；AlphaEvolve 在数学和工程上取得了突破性成果。
 
-\subsection{From Method Families to Design Patterns}
-\label{sec:methods-design-patterns}
+这一阶段的标志性事件是 AlphaEvolve 发现了 56 年来首个改进 Strassen 算法的矩阵乘法方案。这表明，至少在某些领域，机器发现的算法可以超越人类几十年的努力。
 
-The survey of method families can be reduced to a compact set of design patterns. These patterns are useful because they cut across paper names and make implementation decisions explicit.
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.85]
+\draw[-Stealth, thick] (0,0) -- (12,0) node[right] {时间};
+\draw[-Stealth, thick] (0,0) -- (0,5) node[above] {自主程度};
 
-\textbf{Pattern 1: Critique-and-revise.} The agent produces a draft, critiques it, and revises it. This is the Self-Refine pattern. It is best when the task has enough structure that a local critique can identify improvements. Typical examples include writing, summarization, constrained generation, answer refinement, and shallow reasoning tasks. The main engineering variable is critique quality. If the critique is specific, the revision is targeted. If it is vague, the model drifts.
+\fill[cat3!30] (0,0) rectangle (3,1.5);
+\fill[cat1!30] (3,0) rectangle (6,2.5);
+\fill[cat2!30] (6,0) rectangle (9,3.5);
+\fill[cat4!30] (9,0) rectangle (12,4.5);
 
-\textbf{Pattern 2: Experience-and-reuse.} The agent acts in the world, distills a lesson, and reuses that lesson later. This is the Reflexion pattern. It is best when the environment is episodic, when failure states recur, and when the lesson can be expressed in a compact rule or strategy. The main engineering variable is retrieval quality. A perfect lesson that is never retrieved is useless.
+\node[font=\small\bfseries] at (1.5,0.75) {推理时修正};
+\node[font=\scriptsize, align=center] at (1.5,0.3) {Self-Refine\\Reflexion};
 
-\textbf{Pattern 3: Execute-and-repair.} The agent generates code, runs it, observes the failure, and repairs the code. This is the Self-Debug pattern. It is best when the environment provides deterministic execution feedback. The main engineering variable is test coverage. A repair on one failing case can still fail elsewhere.
+\node[font=\small\bfseries] at (4.5,1.5) {训练时改进};
+\node[font=\scriptsize, align=center] at (4.5,0.3) {STaR, SPIN\\Self-Rewarding};
 
-\textbf{Pattern 4: Generate-filter-finetune.} The agent or policy generates candidates, an evaluator filters them, and the system fine-tunes on the accepted subset. This is STaR and ReST. It is best when a reward or label signal can cheaply separate useful candidates from noise. The main engineering variable is the tradeoff between diversity and quality.
+\node[font=\small\bfseries] at (7.5,2.5) {自博弈进化};
+\node[font=\scriptsize, align=center] at (7.5,0.3) {RISE, RAGEN\\Absolute Zero};
 
-\textbf{Pattern 5: Self-play discrimination.} The current model plays against its previous self or against its own generated data, and the next model learns to distinguish or improve. This is SPIN. It is best when human demonstrations already exist and one wants to extract more value from them without collecting fresh preferences. The main engineering variable is the gap between self-generated responses and the target distribution. If the gap is too small, learning saturates.
+\node[font=\small\bfseries] at (10.5,3.5) {架构搜索};
+\node[font=\scriptsize, align=center] at (10.5,0.3) {ADAS, DGM\\AlphaEvolve};
 
-\textbf{Pattern 6: Principle-guided self-alignment.} The model critiques and revises itself using explicit rules. This is Constitutional AI. It is best when one can articulate behavioral constraints as principles. The main engineering variable is principle quality and coverage. If the constitution is incomplete, the model may remain misaligned in unmodeled regions.
+\foreach \x/\y in {0/2022, 3/2023, 6/2024, 9/2025} {
+  \node[font=\scriptsize] at (\x+1.5, -0.4) {\y};
+}
+\end{tikzpicture}
+\caption{Agent Self-Evolution 四阶段演进。纵轴表示自主程度——从需要外部数据到完全自给自足。}
+\label{fig:ch3-history-timeline}
+\end{figure}
 
-\textbf{Pattern 7: Task-generation self-play.} The model creates tasks, solves them, and uses verification to update both sides. This is Absolute Zero. It is best when a strong executor can judge correctness. The main engineering variable is curriculum balance. Self-generated tasks must be hard enough to teach but not so hard that they stall.
+% =====================================================================
+\subsection{方法组合的深度分析}\label{sec:ch3-combination}
+% =====================================================================
 
-\textbf{Pattern 8: Multi-turn agent RL.} The model learns to reason and act over many steps, with reward assigned to the trajectory rather than to one answer. This is RISE, RAGEN, and ReVeal in different forms. It is best when the task itself is sequential and when the agent must choose when to think, when to act, and when to stop. The main engineering variable is credit assignment.
+\subsubsection{推理时 + 训练时的最优组合}
 
-These patterns can be composed. A practical coding agent may start with execute-and-repair, then add critique-and-revise, then add generate-filter-finetune from successful patches, then add multi-turn RL on a richer task set. A practical research agent may start with critique-and-revise, then add experience-and-reuse, then add principle-guided self-alignment for citations and claims. The design pattern language is thus more useful than paper-by-paper memorization.
+一个自然的组合策略是：推理时使用 Self-Refine / Reflexion 进行即时改进，训练时使用 STaR / RISE 进行权重更新。这种"双轨进化"的理论优势在于：
+\begin{itemize}
+\item 推理时的自我修正提供即时、细粒度的改进信号
+\item 训练时的权重更新将高频的推理经验固化为低频的参数变化
+\item 两者互补而非冗余——推理时改进处理"已知如何改进的情况"，训练时改进处理"需要学习如何改进的情况"
+\end{itemize}
 
-\subsection{Ablation Protocol for Self-Improvement Systems}
-\label{sec:methods-ablation}
+RISE 正是这种组合的典范——它通过 RL 训练使模型"学会"在推理时进行有效的自我修正。
 
-Because self-improvement methods are often modular, ablation is particularly important. A model may improve because of better prompts, better retrieval, better tests, better reward models, or more compute. A careful ablation protocol should isolate the contribution of each mechanism.
+\subsubsection{提示词进化 + 架构搜索的组合}
 
-The first ablation is the \emph{no-loop} baseline. Run the base model once with the same token budget, but without critique, memory, or training. This measures the benefit of looping itself. If the loop adds no value, the method is not worth the engineering complexity.
+另一个有前景的方向是同时优化提示词和 agent 架构。ADAS 的搜索空间已经包含了提示词设计，但显式地将 Reflexion 式的反思机制嵌入搜索过程可能带来更高效的探索。
 
-The second ablation is the \emph{no-evidence} baseline. Keep the loop but remove tests, environment traces, or reward signals where possible. For instance, ask a code model to self-critique without running tests. If performance drops sharply, the method depends on grounded feedback rather than on generic self-talk. This is a useful result.
+Agent Symbolic Learning 的"语言梯度"方法可以被视为这种组合的一种实现——它同时在自然语言空间中优化提示词、工具和流水线。
 
-The third ablation is the \emph{no-memory} baseline. Keep the critique and revision loop but do not store reflections across episodes. This separates within-episode correction from cross-episode learning. Reflexion-style systems should show a clear difference here if memory matters.
+\subsubsection{记忆进化与其他类别的协同}
 
-The fourth ablation is the \emph{no-training} baseline. For methods that produce training data, compare frozen-model inference-time use to fine-tuned use. This reveals whether the method's gains are transient or amortized. STaR-like methods should show a large gap between using rationales only as context and using them to fine-tune.
+记忆进化是天然的"增广层"——它可以为任何其他方法提供经验积累和知识检索能力：
+\begin{itemize}
+\item \textbf{记忆 + 奖励进化}：将历史交互轨迹作为 RL 训练的 replay buffer
+\item \textbf{记忆 + 提示词进化}：将过去成功的推理链作为 few-shot 示例
+\item \textbf{记忆 + 架构搜索}：将过去的架构评估结果指导未来的搜索方向
+\item \textbf{记忆 + 自博弈}：将自博弈中发现的有效策略存入技能库
+\end{itemize}
 
-The fifth ablation is the \emph{no-filter} baseline. Generate candidates but train on all of them rather than the filtered subset. This is especially important for ReST, Absolute Zero, and self-generated curricula. If filtering matters, then quality selection is not just a convenience; it is the heart of the method.
+% =====================================================================
+\subsection{统一理论视角}\label{sec:ch3-unified}
+% =====================================================================
 
-The sixth ablation is the \emph{no-verifier-independence} baseline. Use the same model for generation and evaluation, then compare with an independent verifier or hidden test suite. If the self-judged version looks much better than the independent version, the method is likely exploiting correlated blind spots.
+\subsubsection{迭代放大框架}
 
-The seventh ablation is the \emph{budget-matched} baseline. Ensure that competing methods receive comparable numbers of samples, token budget, tool calls, and wall-clock time. Many self-improvement systems look better simply because they spend more compute on retries. A fair ablation must ask whether the method improves efficiency or merely expands search.
+所有六类方法可以统一在"迭代放大"（Iterated Amplification）框架下：
 
-The eighth ablation is the \emph{regression suite} baseline. Measure not only target-task improvement but also retention on old tasks. If the method improves a new benchmark but harms old competence, the method is not cumulative. This is especially important for memory, fine-tuning, and code mutation.
+\begin{definition}[迭代放大]
+设智能体的能力为 $C_t$，进化方法为 $M$，则：
+\begin{equation}
+C_{t+1} = M(C_t) + \epsilon_t
+\label{eq:iterated-amplification}
+\end{equation}
+其中 $\epsilon_t$ 为噪声/回归项。如果 $M$ 是单调改进的（即 $C_{t+1} \geq C_t$ 几乎必然），则 $C_t$ 收敛到某个不动点 $C^*$。
+\end{definition}
 
-A useful ablation table can be expressed as:
-\[
-  \Delta_{\text{loop}},\; \Delta_{\text{evidence}},\; \Delta_{\text{memory}},\; \Delta_{\text{training}},\; \Delta_{\text{filter}},\; \Delta_{\text{verifier}},\; \Delta_{\text{budget}},\; \Delta_{\text{retention}}.
-\]
-A mature paper should report at least several of these terms. Without them, a self-improvement method is difficult to interpret.
+不同类别的方法对应不同的 $M$：
+\begin{itemize}
+\item \textbf{奖励进化}：$M$ 为 RL 优化步骤，$C$ 为策略空间
+\item \textbf{自博弈}：$M$ 为自博弈训练，$C$ 为任务-策略联合空间
+\item \textbf{提示词进化}：$M$ 为反馈-修订循环，$C$ 为上下文空间
+\item \textbf{架构搜索}：$M$ 为 LLM 变异 + 选择，$C$ 为代码空间
+\item \textbf{记忆进化}：$M$ 为经验积累与检索，$C$ 为知识空间
+\item \textbf{混合方法}：$M$ 为上述方法的组合
+\end{itemize}
 
-\subsection{Why the Field Needs a Shared Taxonomy}
-\label{sec:methods-taxonomy-need}
+\subsubsection{收敛性分析}
 
-A final methodological point concerns terminology. The field currently uses many overlapping labels: self-refinement, self-correction, verbal RL, self-training, self-play, self-rewarding, self-alignment, recursive introspection, self-debugging, self-evolving agents, autonomous task generation, and more. Some of these names emphasize the object that changes. Others emphasize the feedback source. Others emphasize the training regime. The result is terminological drift.
+一个关键的理论问题是：迭代放大是否收敛？答案取决于三个条件：
+\begin{enumerate}
+\item \textbf{改进的单调性}：$M$ 是否总是产生改进？在实践中，由于评估噪声和 Goodhart 效应，这并不总是成立。
+\item \textbf{改进的有界性}：每次改进的幅度是否递减？这决定了收敛速度。
+\item \textbf{空间的有界性}：$C$ 的取值空间是否有上界？如果是（如模型参数空间），则理论上存在性能天花板；如果否（如代码空间），则改进可以无限持续。
+\end{enumerate}
 
-A shared taxonomy is needed for three reasons. First, it enables meaningful comparison. A reviewer should immediately know whether a result comes from inference-time critique, supervised self-training, reward-filtered self-training, self-play, or multi-turn RL. Second, it clarifies reproducibility. If two papers use the same label but different mutable objects, their results should not be conflated. Third, it helps practitioners choose methods. A production team does not need to memorize every paper; it needs to know which pattern matches its available feedback, budget, and safety constraints.
+绝对零的实验结果暗示了令人兴奋的可能性：在代码和推理空间中，改进似乎尚未达到天花板。pass@1 和 pass@128 随训练持续提升，没有明确的收敛迹象。
 
-The taxonomy in this chapter is therefore intentionally functional. It does not ask whether a paper is fashionable, novel, or architecturally grand. It asks what loop it closes. This is the most stable way to compare methods in a field where model families, tool APIs, benchmark suites, and release dates change rapidly. A loop-based taxonomy also scales naturally. As the field creates new hybrid systems, they can be decomposed into the same few primitives: generate, critique, verify, select, store, reuse, and update.
+\subsubsection{GEMI 框架映射}
 
+将六大方法类别映射到 GEMI（Generation, Evaluation, Memory, Improvement）框架：
 
+\begin{table}[htbp]
+\centering
+\caption{六大方法在 GEMI 框架下的映射。}
+\label{tab:gemi-mapping}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+\textbf{方法类别} & \textbf{G（生成）} & \textbf{E（评估）} & \textbf{M（记忆）} & \textbf{I（改进）} \\
+\midrule
+奖励进化 & 候选生成 & 外部/自评奖励 & 训练数据 & 权重更新 \\
+自博弈 & 任务+解答生成 & 代码/规则验证 & 课程历史 & 策略优化 \\
+提示词进化 & 初始输出 & 自我评价 & 反思文本 & 提示修改 \\
+架构搜索 & 新代码 & 基准测试 & Archive & 代码变异 \\
+记忆进化 & 动作决策 & 任务反馈 & 经验库 & 记忆更新 \\
+混合方法 & 多层生成 & 组合评估 & 多级记忆 & 协同改进 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
 
-\subsection{Worked Method Selection Examples}
-\label{sec:methods-worked-examples}
+% =====================================================================
+\subsection{实践指南}\label{sec:ch3-practice}
+% =====================================================================
 
-To make the taxonomy concrete, consider four representative deployment scenarios. Each scenario has a different feedback structure, and therefore calls for a different self-improvement loop.
+\subsubsection{方法选择决策树}
 
-\textbf{Example 1: repository-level bug fixing.} The task is to repair a software issue in a real repository. The system has access to tests, logs, type checkers, and code search. The best first loop is execute-and-repair: generate a patch, run tests, inspect failures, and revise. Reflexion-style memory can store repository-specific lessons, such as fragile APIs or known test fixtures. If many similar issues accumulate, successful patches and failing tests can become a filtered dataset for training or retrieval. Training-time RL should be delayed until there is a stable evaluator and a representative issue distribution. The main risks are overfitting to visible tests, editing unrelated files, and passing tests while violating maintainability constraints.
+基于任务特征选择合适的进化方法：
 
-\textbf{Example 2: mathematical tutoring.} The task is to solve and explain math problems. The system has final-answer checks for many problems but may not have formal proof verification. Self-Refine can improve explanations by critiquing missing steps. RISE-style learned introspection can help allocate more reasoning to harder problems. STaR-style rationale filtering can turn correctly solved problems into training examples. The main risks are rationalized chains of thought and harm to initially correct answers. A good system should measure final accuracy, explanation faithfulness, and harm rate.
+\begin{enumerate}
+\item \textbf{是否有 GPU/训练资源？}
+\begin{itemize}
+\item 否 $\rightarrow$ 使用提示词进化（Reflexion, Self-Refine）
+\item 是 $\rightarrow$ 继续
+\end{itemize}
 
-\textbf{Example 3: safe customer-support assistants.} The task is to answer user questions under policy constraints. The feedback is partly human preference, partly policy compliance, and partly user satisfaction. Constitutional-AI-style critique is appropriate because explicit principles matter. Reflexion memory can store organization-specific policy lessons, but memory promotion must be conservative because wrong policy advice can persist. Self-play may be useful for adversarial policy tests, but final acceptance should involve independent policy evaluators and human review for high-risk cases. The main risks are over-refusal, under-refusal, hidden policy drift, and self-judged compliance.
+\item \textbf{是否有标注数据？}
+\begin{itemize}
+\item 有标签 $\rightarrow$ 使用 STaR
+\item 有指令 $\rightarrow$ 使用 Self-Rewarding / Meta-Rewarding
+\item 无数据 $\rightarrow$ 使用 Absolute Zero（需代码验证器）或 SPIRAL
+\end{itemize}
 
-\textbf{Example 4: open-ended code or algorithm discovery.} The task is to discover faster programs, better prompts, or new algorithms. The system has a programmatic evaluator but the search space is large. ReST-like filtering, Absolute-Zero-style task generation, and evolutionary archives become more important. The method should preserve diverse stepping stones rather than only the current best candidate. The main risks are evaluator overfitting, compute blowup, and archive bloat. Lineage is essential because future improvements may depend on understanding which ancestors produced which gains.
+\item \textbf{是否需要超越人类设计的架构？}
+\begin{itemize}
+\item 否 $\rightarrow$ 使用 RISE / RAGEN
+\item 是 $\rightarrow$ 使用 ADAS / DGM（需大量 API 调用）
+\end{itemize}
 
-These examples show that method choice is constrained by feedback. A method that is excellent in one scenario can be inappropriate in another. The practical recipe is: identify the verifier, identify the mutable object, choose the least persistent update that can solve the problem, and promote updates only after evidence accumulates.
+\item \textbf{任务是否需要长期经验积累？}
+\begin{itemize}
+\item 是 $\rightarrow$ 添加记忆进化组件（Voyager 式技能库）
+\item 否 $\rightarrow$ 使用无记忆的方法
+\end{itemize}
+\end{enumerate}
 
+\subsubsection{部署注意事项}
+
+\textbf{成本控制}：架构搜索是最昂贵的方法类别。ADAS/DGM 在搜索过程中需要数千次 LLM API 调用。建议先用小规模搜索验证可行性，再扩展到完整搜索。
+
+\textbf{评估设计}：所有方法的效果严重依赖于评估函数的质量。如果评估不可靠（如纯 LLM 评分），改进可能只是"迎合评分"而非真正提升。建议使用尽可能自动化的验证器（如代码执行、单元测试、形式化验证）。
+
+\textbf{安全护栏}：对于自修改代码方法（Gödel Agent、DGM），建议：
+\begin{itemize}
+\item 在沙箱环境中运行
+\item 设置明确的回滚机制
+\item 限制代码修改的范围（如禁止文件系统操作、网络请求等）
+\item 人工审核关键修改
+\end{itemize}
 
+\textbf{迭代监控}：在自我进化过程中持续监控以下指标：
+\begin{itemize}
+\item 目标任务性能（主指标）
+\item 分布外任务性能（泛化指标）
+\item 评估一致性（同一输入多次评估的方差）
+\item 改进幅度趋势（是否接近收敛）
+\end{itemize}
+
+% =====================================================================
+\subsection{与相关领域的关系}\label{sec:ch3-related}
+% =====================================================================
+
+\subsubsection{与神经架构搜索（NAS）的关系}
 
-\subsection{Interpreting Reported Gains Without Overclaiming}
-\label{sec:methods-interpretation}
+架构搜索方法（ADAS, DGM）可以被视为 NAS 在 agent 系统上的扩展。关键区别在于：
+\begin{itemize}
+\item NAS 的搜索空间是神经网络拓扑（连续或离散），而架构搜索的搜索空间是图灵完备的程序
+\item NAS 使用梯度或进化算法搜索，而架构搜索使用 LLM 作为变异算子
+\item NAS 评估单个网络在数据集上的性能，而架构搜索评估 agent 在任务集上的行为
+\end{itemize}
 
-The final methodological caution concerns interpretation of reported gains. Self-improvement results are especially easy to overclaim because the phrase ``the model improves itself'' can hide many forms of external scaffolding. A system may use answer labels, reward models, curated demonstrations, hand-written constitutions, unit tests, hidden evaluators, or human-designed prompts. These are not disqualifying; they are the infrastructure that makes improvement measurable. But they should be named precisely. STaR is self-improving with respect to rationales generated by the model, but it still uses answer labels. ReST is self-training with model-generated candidates, but it still depends on a reward model. Constitutional AI reduces human labeling of harmful outputs, but humans still write the principles. Absolute Zero removes external task data, but it still relies on an executable verifier. Reflexion avoids weight updates, but it depends on an evaluator and on memory retrieval.
+AlphaEvolve 的 MAP-Elites 方法直接来源于 Quality-Diversity 进化计算文献。
 
-A second caution is that improvement may be local to the evaluation budget. If a method uses five attempts and a baseline uses one attempt, part of the gain may come from search. This is not necessarily bad. Search is a legitimate agent capability. However, the paper should report both success rate and cost so that readers can compare against budget-matched sampling. In a production setting, the relevant metric is often not maximum success but expected value per unit cost.
+\subsubsection{与持续学习（Continual Learning）的关系}
 
-A third caution is that self-improvement may change the distribution of errors. A method can reduce obvious mistakes while increasing subtle ones. For example, self-refinement may make prose more polished while weakening factual support. Code repair may pass tests while introducing complexity. RLAIF may reduce harmfulness while increasing evasiveness. Self-play may improve benchmark responses while narrowing diversity. Therefore qualitative error analysis remains necessary even when aggregate scores improve.
+记忆进化方法（Voyager, Memory-R1）与持续学习共享核心挑战——如何在学到新知识的同时不遗忘旧知识（stability-plasticity dilemma）。但关键区别在于：
+\begin{itemize}
+\item 持续学习主要关注参数空间的灾难性遗忘
+\item 记忆进化主要关注经验空间的知识管理和检索
+\item 持续学习的目标是保持旧任务性能
+\item 记忆进化的目标是利用旧经验提升新任务性能
+\end{itemize}
+
+\subsubsection{与元学习（Meta-Learning）的关系}
+
+自我改进可以被视为一种特殊形式的元学习——"学会学习"。但关键区别在于：
+\begin{itemize}
+\item 传统元学习（如 MAML）在训练时学习好的初始化，测试时快速适应
+\item 自我改进在部署后持续进化，没有明确的训练/测试划分
+\item MAML 的元学习发生在参数空间，而许多自我改进方法（如架构搜索）发生在代码/结构空间
+\end{itemize}
+
+\subsubsection{与 AutoML 的关系}
+
+AutoML 自动化机器学习流水线的设计（特征工程、模型选择、超参数优化）。Agent Self-Evolution 将自动化范围从"学习流水线"扩展到"整个智能体系统"：
+\begin{itemize}
+\item AutoML 优化固定结构的流水线参数
+\item Agent Self-Evolution 优化智能体本身的结构、工具、记忆和策略
+\item AutoML 在训练阶段完成后输出固定模型
+\item Agent Self-Evolution 在部署后持续进化
+\end{itemize}
 
-A fourth caution is that benchmark contamination and data leakage are unusually difficult in self-evolution. A model that generates its own tasks may inadvertently reproduce known benchmark patterns. A memory system may store test items. A training loop may select candidates using a validation set too often. A repository-level coding agent may learn project-specific quirks that do not transfer. The correct response is not to abandon benchmarks, but to maintain time-sliced data, hidden tests, and transparent lineage for every training and selection step.
+ADAS 的作者明确将他们的工作定位为"Agent 版本的 NAS"，这一定位也暗示了 AutoML 的进化方向——从自动化学习到自动化智能。
 
-A fifth caution is that ``no external data'' does not mean ``no external structure.'' Verifiers, programming languages, compilers, mathematical notation, reward functions, and constitutions are all external structures. The most impressive self-evolution systems often succeed because they couple LLM generation with strong external structure. This coupling is the field's strength. It also means that future progress will depend as much on better evaluators, environments, and governance layers as on larger base models.
+% =====================================================================
+\subsection{代码自我改进的深度分析}\label{sec:ch3-code-selfevolve}
+% =====================================================================
 
-These cautions support the chapter's central thesis. The methods are real and increasingly powerful, but their claims must be stated in terms of loops, feedback, mutable state, cost, and evaluator independence. When those details are explicit, self-improvement becomes a scientific and engineering object rather than a slogan.
+代码自我改进是架构搜索的一个特殊但重要的子类——agent 通过修改自己的代码实现来提升能力。这一方向最近取得了显著进展，值得深入分析。
 
+\subsubsection{SelfEvolve: 代码自我进化框架}
 
-\subsection{Connection to the Rest of the Paper}
-\label{sec:methods-connection}
+\textbf{SelfEvolve}~\citep{selfevolve2023}是一个两阶段流水线：
 
-This methods chapter prepares the system analysis in the next section. DGM, ADAS, AlphaEvolve, Voyager, Self-Rewarding LM, WebEvolver, and related systems can be understood as compositions of the loops described here. DGM and ADAS extend from output mutation to architecture mutation. AlphaEvolve and FunSearch extend from code repair to program search under evaluators. Voyager extends Reflexion-style experience into open-world skill accumulation. Self-Rewarding LM and Meta-Rewarding extend reward-filtered training by internalizing judge roles. WebEvolver combines world-model learning, self-generated tasks, and agent adaptation. ReVeal turns verification into a first-class trainable component.
+\textbf{阶段 1：自我生成知识}。与从外部文档检索不同，LLM 从其参数化知识中自我生成 API 文档或算法描述：
+\begin{equation}
+P(Y|K) = \prod_i p_\theta(Y_i | Y_{<i}, X, K)
+\label{eq:selfevolve-knowledge}
+\end{equation}
+其中 $K$ 为自生成的知识。知识生成本身可以分解为：
+\begin{equation}
+p(K) = \prod_i p_\theta(K_i | c, K_{<i}) \times p_\theta(c | X)
+\label{eq:selfevolve-decompose}
+\end{equation}
+其中 $c$ 为"试解"——模型先写一个简短的解决方案思路，再从中提取 API 使用知识。
 
-The evaluation chapter will return to the benchmark caveats raised here. The industry chapter will return to method-selection heuristics: production systems usually need the smallest reliable loop, not the most open-ended loop. The pain-point chapter will return to the failure modes: users complain about demo-to-production gaps because many methods optimize local traces without durable governance. The conclusion will return to the broader claim: agent self-evolution is promising precisely because improvement can occur outside the base model, but it is risky precisely because every new mutable object becomes another surface for drift, overfitting, and unsafe optimization.
+\textbf{阶段 2：迭代自我精炼}。代码在 Python 沙箱中执行，如果出错，错误回溯被反馈给 LLM 进行迭代调试：
+\begin{equation}
+P(Y'|X,Y,K,e) = p_\theta(Y'|X,Y,e) \times p_\theta(Y|X,K)
+\label{eq:selfevolve-refine}
+\end{equation}
+其中 $e$ 为错误消息。
+
+\textbf{实验结果}：
+\begin{itemize}
+\item DS-1000（数据科学代码）：ChatGPT 49.4 $\rightarrow$ SelfEvolve \textbf{57.2}（+15.8\% 相对提升）
+\item HumanEval（pass@1）：ChatGPT 74.39 $\rightarrow$ SelfEvolve \textbf{85.98}
+\item TransCoder（C++ $\rightarrow$ Python）：ChatGPT 88.3\% $\rightarrow$ SelfEvolve \textbf{90.4\%}
+\end{itemize}
+
+SelfEvolve 的关键洞察是：LLM 可以同时作为知识提供者和自我反思的程序员。它不需要外部检索或特殊测试用例，完全依靠模型自身的知识和执行反馈。
+
+\subsubsection{AI Scientist: 全自动化科学发现}
+
+\textbf{AI Scientist}~\citep{aiscientist2024}（Sakana AI）将代码自我改进推向了极致——实现完全自动化的端到端研究流水线：
+
+\begin{enumerate}
+\item \textbf{想法生成}：LLM 生成新颖的研究想法，进行语义新颖性检查
+\item \textbf{实验设计}：LLM 设计实验并生成 Python 代码
+\item \textbf{代码执行}：自动化沙箱执行
+\item \textbf{论文写作}：LLM 撰写完整的 LaTeX 论文
+\item \textbf{自动化同行评审}：LLM 使用 ICLR 风格的评审标准评审论文
+\end{enumerate}
+
+评审分数计算为加权求和：
+\begin{equation}
+R = \sum_i w_i \cdot r_i
+\label{eq:aiscientist-score}
+\end{equation}
+其中 $r_i$ 为 Soundness、Presentation、Contribution 等维度的分数。
+
+\textbf{里程碑}：AI Scientist-v2 生成的论文获得了 workshop 级别的同行评审分数 \textbf{6.33}（top 45\%），成为第一篇通过同行评审的完全 AI 生成论文。
+
+\textbf{局限性}：独立评估表明，AI Scientist 的自我评审过程拒绝了 9/10 篇论文（包括 4 篇人类接受的论文）；生成的论文缺乏理论深度和架构创新性；难以泛化到初始训练域之外（如 LSTM）。
+
+\subsubsection{代码自我改进的层级}
+
+代码自我改进方法可以按"改进深度"分层：
+
+\begin{table}[htbp]
+\centering
+\caption{代码自我改进的层级分类。}
+\label{tab:code-evolve-levels}
+\begin{tabular}{llp{50mm}l}
+\toprule
+\textbf{层级} & \textbf{改进对象} & \textbf{描述} & \textbf{代表系统} \\
+\midrule
+L0: 错误修复 & 语法/运行时错误 & 基于执行反馈修复 bug & SelfEvolve \\
+L1: 功能改进 & 算法/逻辑 & 改进算法效率或正确性 & FunSearch \\
+L2: 架构修改 & 代码结构 & 修改 agent 的控制流、工具链 & ADAS, DGM \\
+L3: 自我指涉 & 自身代码 & 修改用于修改代码的代码本身 & Gödel Agent \\
+L4: 元进化 & 进化过程 & 优化"如何进化"的策略 & DGM (open-ended) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+层级越高，改进的潜在幅度越大，但同时风险和不确定性也越高。L0-L1 有明确的验证信号（代码是否通过测试）；L2-L4 的验证更加模糊（agent 是否"更好"取决于任务和评估标准）。
+
+\subsubsection{代码验证的挑战}
+
+代码自我改进面临一个核心的验证难题：如何确保修改后的代码确实更好？
+
+\textbf{形式化验证}：使用形式化方法证明代码的正确性。这是最强但最昂贵的验证方式，仅适用于特定领域（如数学算法）。
+
+\textbf{测试套件验证}：运行预定义的测试用例。这是最常见的验证方式，但存在测试覆盖率的局限——通过所有测试不代表代码在所有情况下都正确。
+
+\textbf{性能基准验证}：在基准任务集上评估性能。这是 ADAS/DGM 采用的方式，但可能过拟合基准。
+
+\textbf{人工审核}：人类专家审查代码修改。最可靠但最昂贵，无法规模化。
+
+AlphaEvolve 在数学领域的成功部分归因于其拥有高质量的形式化验证器——可以确定性地区分改进和退化。对于大多数 agent 任务而言，这样的验证器并不存在，这是一个根本性的挑战。
+
+% =====================================================================
+\subsection{评估方法论}\label{sec:ch3-evaluation}
+% =====================================================================
+
+\subsubsection{评估维度}
+
+Agent Self-Evolution 方法应在以下维度进行评估：
+
+\begin{enumerate}
+\item \textbf{目标性能}：在目标任务上的绝对性能（如 HumanEval pass@1）
+
+\item \textbf{改进幅度}：相对于基线的改进（绝对值和相对值）
+\begin{equation}
+\Delta = \text{Perf}_{\mathrm{evolved}} - \text{Perf}_{\mathrm{baseline}}
+\label{eq:improvement-delta}
+\end{equation}
+
+\item \textbf{改进效率}：每单位计算资源带来的改进
+\begin{equation}
+\eta = \frac{\Delta}{\text{Cost}_{\mathrm{total}}}
+\label{eq:improvement-efficiency}
+\end{equation}
+
+\item \textbf{泛化能力}：改进是否迁移到分布外任务
+\begin{equation}
+G = \frac{\Delta_{\mathrm{OOD}}}{\Delta_{\mathrm{ID}}}
+\label{eq:generalization-ratio}
+\end{equation}
+其中 ID 为训练域内任务，OOD 为域外任务。$G > 0$ 表示正迁移。
+
+\item \textbf{稳定性}：多次运行的改进方差
+\begin{equation}
+S = 1 - \frac{\mathrm{Var}(\Delta)}{\max(\Delta)^2}
+\label{eq:stability}
+\end{equation}
+
+\item \textbf{安全性}：进化过程中是否产生有害行为（需定性评估）
+\end{enumerate}
+
+\subsubsection{常见评估陷阱}
+
+\textbf{基线选择偏差}：选择弱基线使改进看起来更大。例如，Reflexion 在 HumanEval 上的 91\% 是相对于 GPT-3.5 基线的 67\% 报告的。如果使用更强的基线（如 GPT-4 + few-shot），改进幅度会显著缩小。
+
+\textbf{评估域偏移}：在训练域内评估可能高估泛化能力。Absolute Zero 在代码自博弈后测试数学推理是一个良好的实践——它显式地测试了跨域迁移。
+
+\textbf{随机性忽视}：LLM 输出的随机性意味着单次运行的性能可能有较大波动。应报告多次运行的平均值和标准差。
+
+\textbf{改进归因}：当使用多种技术组合时，难以将改进归因到具体技术。消融实验是必要的，但在计算成本较高的方法（如 DGM）中常常被省略。
+
+\textbf{Echo Trap}：RAGEN 发现的"回声陷阱"表明，某些看似有效的训练过程实际上只是在教模型重复自己的输出。评估时需要检测推理过程中是否存在退化为复读的行为。
+
+\subsubsection{推荐评估协议}
+
+基于以上分析，我们推荐以下评估协议：
+
+\begin{enumerate}
+\item \textbf{多基准评估}：至少在两个不同类型的基准上评估（如代码+数学、推理+交互）
+\item \textbf{多种子运行}：至少 3-5 次独立运行，报告均值和标准差
+\item \textbf{跨域测试}：在训练域外测试泛化能力
+\item \textbf{消融实验}：逐一移除组件以确定每个组件的贡献
+\item \textbf{效率报告}：报告总计算成本（FLOPS、API 调用次数、GPU 小时）
+\item \textbf{定性分析}：分析进化过程中发现的具体改进案例
+\end{enumerate}
