@@ -85,33 +85,23 @@ Agent Evolution，或称智能体自演化、自我改进与开放式智能体�
 \subsection{Agent Evolution 的定义与范畴}\label{sec:intro-def}
 % =====================================================================
 
-本文中的 Agent Evolution 指：以 LLM 或多模态基础模型为核心推理器，以环境反馈、任务奖励、人类偏好、程序化测试、同伴竞争、历史记忆或自生成数据为改进信号，通过可重复的生成--评估--选择--更新循环，使智能体系统在任务能力、泛化能力、效率、安全性或适应性上产生可验证变化的一类方法。这个定义包含四个必要要素：
+本文中的 Agent Evolution 指：以 LLM 或多模态基础模型为核心推理器，以环境反馈、任务奖励、人类偏好、程序化测试、同伴竞争、历史记忆或自生成数据为改进信号，通过可重复的生成--评估--选择--更新循环，使智能体系统在任务能力、泛化能力、效率、安全性或适应性上产生可验证变化的一类方法。这个定义包含四个必要要素。
 
-\paragraph{要素一：可变状态或结构}
-系统必须具有可变化的状态或结构；变化对象可以是模型权重，也可以是提示词、记忆、工具调用策略、agent 代码、planner、critic、world model、协作拓扑或评估准则。
+第一，系统必须具有可变化的状态或结构；变化对象可以是模型权重，也可以是提示词、记忆、工具调用策略、agent 代码、planner、critic、world model、协作拓扑或评估准则。
 
-\paragraph{要素二：反馈信号}
-系统必须有反馈信号；反馈可以来自外部基准、程序测试、环境 reward、LLM-as-a-judge、自博弈对手、人工评价或历史任务表现。
+第二，系统必须有反馈信号；反馈可以来自外部基准、程序测试、环境 reward、LLM-as-a-judge、自博弈对手、人工评价或历史任务表现。
 
-\paragraph{要素三：选择或更新机制}
-系统必须有选择或更新机制；例如 DPO/RL、MCTS、archive selection、文本反向传播、反思写入、程序 patch、上下文 playbook 更新或课程生成。
+第三，系统必须有选择或更新机制；例如 DPO/RL、MCTS、archive selection、文本反向传播、反思写入、程序 patch、上下文 playbook 更新或课程生成。
 
-\paragraph{要素四：可审计的改进}
-改进必须可审计；仅仅"看起来回答更好"不足以构成自演化，必须有任务分数、迁移测试、消融、成本记录或失败分析支撑。
+第四，改进必须可审计；仅仅"看起来回答更好"不足以构成自演化，必须有任务分数、迁移测试、消融、成本记录或失败分析支撑。
 
 \subsubsection{与相关概念的区别}
 
-这个定义故意比"自我训练"更宽，也比"递归自我改进"更实用。传统自训练主要关注模型从伪标签中学习，变化对象多为权重；而 Agent Evolution 允许智能体在不修改底层模型的情况下，通过外部记忆和程序结构获得行为层面的持续改进。
+这个定义故意比"自我训练"更宽，也比"递归自我改进"更实用。传统自训练主要关注模型从伪标签中学习，变化对象多为权重；而 Agent Evolution 允许智能体在不修改底层模型的情况下，通过外部记忆和程序结构获得行为层面的持续改进。Reflexion 使用自然语言反思作为情景记忆，ExpeL 从训练任务中抽取经验规则，ACE 把上下文组织成可演化策略手册，ReasoningBank 把成功与失败轨迹蒸馏为可检索推理策略，这些都属于"非参数自演化"。相反，RISE、Agent-R、RAGEN、Absolute Zero、SPIRAL、Self-Rewarding 与 IterAlign 涉及训练或偏好优化，属于"参数或策略级自演化"。DGM、SICA、Gödel Agent 与 AlphaEvolve 则把变化对象推进到代码和算法层面：智能体不仅选择动作，而且生成或修改执行自身行为的程序。
 
-\textbf{与传统自训练的区别}：自训练（Self-Training）通常指模型用自己的预测作为伪标签来进一步训练。Agent Evolution 的范围更广——它不仅包括权重更新，还包括提示词进化、代码修改、记忆管理等非参数化的改进路径。Reflexion 使用自然语言反思作为情景记忆，ExpeL 从训练任务中抽取经验规则，ACE 把上下文组织成可演化策略手册——这些都属于"非参数自演化"。
+Agent Evolution 也不同于普通 agent engineering。手工搭建 ReAct、planner-executor、tool-use workflow 或 multi-agent debate，并不自动构成自演化；只有当系统能在反馈中自动改写这些结构，或把经验转化为以后可用的策略，才进入本文的讨论范围。ADAS 的意义正在于把"设计 agent 架构"本身变成可搜索对象：元智能体用 Python 编写新 agent，评估其任务表现，再把有效设计纳入 archive。
 
-\textbf{与递归自我改进的区别}：递归自我改进（Recursive Self-Improvement）通常指系统能修改自身的源代码以变得更智能。经典的 Gödel Machine 理论提供了一个理想化的框架：系统在能证明修改有益时才执行修改。Agent Evolution 不要求形式证明，而是接受经验验证（在基准测试上评估性能）作为替代。这使得工程实现更加可行，但也引入了评估不完备的风险。
-
-\textbf{与 Agent Engineering 的区别}：手工搭建 ReAct、planner-executor、tool-use workflow 或 multi-agent debate 并不自动构成自演化；只有当系统能在反馈中自动改写这些结构，或把经验转化为以后可用的策略，才进入本文的讨论范围。ADAS 的意义正在于把"设计 agent 架构"本身变成可搜索对象。
-
-\textbf{与持续学习的区别}：持续学习（Continual Learning）关注如何在学到新任务时不遗忘旧任务。Agent Evolution 关注的不仅是记忆保留，更是能力的主动提升——包括推理、规划、工具使用、代码生成等多维度能力的协同进化。
-
-\textbf{与 Test-Time Compute 的区别}：Test-Time Compute（如 Tree of Thoughts、Beam Search）增加推理时的计算以获得更好的单次输出，但不从历史交互中学习。Agent Evolution 的核心区别在于：改进是\textbf{持久的}——过去的经验会改变未来的行为。
+从范畴上，本文把相关方法划分为六类。第一是基于奖励或验证器的进化，包括强化学习、自奖励、程序化测试和 benchmark-driven archive。第二是自博弈与自生成任务，代表工作包括 Self-Play Fine-Tuning、Absolute Zero、SPIRAL、MAE 与 Agentic Self-Learning。第三是提示词、上下文与反思进化，包括 Self-Refine、Reflexion、RISE、ACE、EvolveR 与 ExpeL。第四是架构搜索与代码级自修改，包括 ADAS、Gödel Agent、SICA、DGM、AlphaEvolve、EvoMAC 与符号学习。第五是基于记忆的进化，包括 Voyager、Generative Agents、ReasoningBank、Memory-R1、AriadneMem、ELL 与 Lifelong Learning roadmap。第六是混合方法，即同时结合奖励、记忆、世界模型、课程、自博弈和架构修改的闭环系统。
 
 \subsubsection{形式化定义}
 
@@ -133,9 +123,15 @@ o_{t+1} = \mathcal{U}(o_t, s_t), \quad s_t = \mathrm{Collect}(o_t, \mathcal{T}_t
 最后的不等式是可选的——有些方法允许暂时退化以探索更好的长期策略。
 \end{definition}
 
-\subsubsection{参数级 vs.\ 非参数级自演化}
+\subsubsection{参数级 vs.\ 非参数级 vs.\ 结构级自演化}
 
-RISE、Agent-R、RAGEN、Absolute Zero、SPIRAL、Self-Rewarding 与 IterAlign 涉及训练或偏好优化，属于"\textbf{参数级自演化}"。Reflexion、Self-Refine、ExPeL、ACE、EvolveR 使用自然语言反馈和上下文修改，属于"\textbf{非参数级自演化}"。DGM、SICA、Gödel Agent 与 AlphaEvolve 则把变化对象推进到代码和算法层面，属于"\textbf{结构级自演化}"。
+自演化方法可以按"变化深度"分为三个层级：
+
+\textbf{非参数级}：不修改模型权重或代码，仅通过上下文和记忆改进。代表：Reflexion、Self-Refine、ExPeL、ACE。这些方法的优点是零训练成本、即插即用；缺点是改进受限于模型的固有评价能力和上下文窗口。
+
+\textbf{参数级}：修改模型权重，通过 RL 或偏好优化提升策略。代表：STaR、Self-Rewarding、RISE、RAGEN、Absolute Zero。这些方法的优点是改进持久且可累积；缺点是需要 GPU 资源和大量训练数据。
+
+\textbf{结构级}：修改 agent 的代码实现，改变系统结构本身。代表：ADAS、Gödel Agent、DGM、AlphaEvolve。这些方法的优点是搜索空间最大、突破潜力最高；缺点是计算成本极高且安全性风险最大。
 
 \begin{figure}[htbp]
 \centering
@@ -189,7 +185,7 @@ o_{t+1} &= I(o_t, r_t, M_{t+1})
 \end{equation}
 其中 $c_t$ 为候选，$r_t$ 为评估结果，$o_t$ 为系统状态，$M_t$ 为记忆，$x_t$ 为当前任务。
 
-\subsubsection{GEMI 对六大方法类别的映射}
+GEMI 框架的价值在于它提供了一个统一的比较视角。不同方法的核心差异可以归纳为：哪个组件最复杂？哪个组件是瓶颈？例如，架构搜索方法中 G（代码生成）和 E（基准测试）是主要瓶颈；自博弈方法中 M（课程历史管理）是关键挑战。
 
 \begin{table}[htbp]
 \centering
@@ -211,8 +207,6 @@ o_{t+1} &= I(o_t, r_t, M_{t+1})
 }
 \end{table}
 
-GEMI 框架的价值在于它提供了一个统一的比较视角。不同方法的核心差异可以归纳为：哪个组件最复杂？哪个组件是瓶颈？例如，架构搜索方法中 G（代码生成）和 E（基准测试）是主要瓶颈；自博弈方法中 M（课程历史管理）是关键挑战。
-
 % =====================================================================
 \subsection{研究背景与动机}\label{sec:intro-motivation}
 % =====================================================================
@@ -223,31 +217,25 @@ Agent Evolution 兴起的第一个背景，是基础模型能力增长与静态�
 
 第三个背景，是真实应用场景要求长期适应。软件工程智能体要面对不断变化的代码库、依赖、测试和需求；网页智能体要适应动态网页、API 与用户目标；科研智能体要在开放问题空间中提出假设并执行实验；企业智能体要记住历史流程、合规要求与组织偏好。静态 benchmark 难以覆盖这些变化。SICA 和 DGM 把编码 agent 的自修改能力放到 SWE-Bench、Polyglot 等环境中验证；WebEvolver 面向 web 环境中的世界模型协同进化；Memory-R1、ReasoningBank 和 AriadneMem 则说明长期记忆不是附属模块，而是 agent 能否持续学习的核心基础设施。
 
-第四个背景，是安全与可控性问题变得更加尖锐。自演化系统可能修改自己的提示、代码、工具调用策略和记忆，因而不仅可能变强，也可能产生 reward hacking、benchmark overfitting、权限扩大、隐藏回归或错误自我强化。Gödel Agent、DGM 和 SICA 继承了 Gödel 机器关于递归自我改进的雄心，但它们用经验验证替代形式证明，也因此必须面对评估不完备、沙箱隔离、回滚机制和审计日志等工程问题。Constitutional AI~\citep{cai2022}展示了用"宪法原则"约束自评行为的路径——AI 在原则框架内进行自我批评和修正，而非完全自由地改进。
+第四个背景，是安全与可控性问题变得更加尖锐。自演化系统可能修改自己的提示、代码、工具调用策略和记忆，因而不仅可能变强，也可能产生 reward hacking、benchmark overfitting、权限扩大、隐藏回归或错误自我强化。Gödel Agent、DGM 和 SICA 继承了 Gödel 机器关于递归自我改进的雄心，但它们用经验验证替代形式证明，也因此必须面对评估不完备、沙箱隔离、回滚机制和审计日志等工程问题。Constitutional AI~\citep{cai2022}展示了用"宪法原则"约束自评行为的路径——AI 在原则框架内进行自我批评和修正，而非完全自由地改进。Agent Evolution 的研究动机并非无条件追求"让系统自己变强"，而是在可验证、可回滚、可解释、可约束的条件下，把自我改进转化为可工程化的能力增长。
 
-第五个背景，是进化计算与 LLM 的互补性越来越明显。进化算法擅长在非可微、离散、开放式空间中进行变异、选择和保持多样性，但传统进化搜索往往需要精心编码的基因表示和大量评估；LLM 擅长提出语义丰富的候选程序、策略、解释和工具组合，却容易缺乏稳定的外部选择压力。AlphaEvolve、FunSearch、ADAS 和 DGM 展示了二者结合的优势：LLM 负责生成高层候选，评估器负责选择，archive 负责保留 stepping stones，多轮迭代负责积累改进。
+第五个背景，是进化计算与 LLM 的互补性越来越明显。进化算法擅长在非可微、离散、开放式空间中进行变异、选择和保持多样性，但传统进化搜索往往需要精心编码的基因表示和大量评估；LLM 擅长提出语义丰富的候选程序、策略、解释和工具组合，却容易缺乏稳定的外部选择压力。AlphaEvolve、FunSearch、ADAS 和 DGM 展示了二者结合的优势：LLM 负责生成高层候选，评估器负责选择，archive 负责保留 stepping stones，多轮迭代负责积累改进。这一范式使"进化"不再只是随机扰动参数，而成为对可读代码、自然语言策略和 agent 结构的语义搜索。
 
 \subsubsection{六个具体动机案例}
 
 为了使动机更加具体，我们提供六个来自真实系统的研究案例：
 
-\textbf{案例 1：STaR——推理可以引导推理}
-STaR 在 CommonsenseQA 上让一个 540M 参数的模型通过自我 bootstrapping 达到了 175B 模型的性能水平。这意味着自训练可以让小模型通过"从自己的成功中学习"来弥补参数规模的不足。其"合理化"步骤（给错误样本提供正确答案作为提示，重新生成推理链）是关键创新——它将失败样本转化为可学习的正例。
+\textbf{案例 1：STaR——推理可以引导推理。}STaR 在 CommonsenseQA 上让一个 540M 参数的模型通过自我 bootstrapping 达到了 175B 模型的性能水平。其"合理化"步骤（给错误样本提供正确答案作为提示，重新生成推理链）是关键创新——它将失败样本转化为可学习的正例。
 
-\textbf{案例 2：Reflexion——记忆替代梯度}
-Reflexion 在 HumanEval 上让 GPT-3.5 达到 91.0\% pass@1，超过 GPT-4 零样本的 80.1\%。没有任何权重更新——所有改进来自自然语言反思记忆。这证明了"语义梯度"的有效性：用文本描述"哪里错了、为什么错、怎么改"比单纯的标量奖励信号更信息丰富。
+\textbf{案例 2：Reflexion——记忆替代梯度。}Reflexion 在 HumanEval 上让 GPT-3.5 达到 91.0\% pass@1，超过 GPT-4 零样本的 80.1\%。没有任何权重更新——所有改进来自自然语言反思记忆。这证明了"语义梯度"的有效性。
 
-\textbf{案例 3：SPIN——自博弈替代人类标注}
-SPIN 在没有使用任何 GPT-4 偏好数据的情况下，在 HuggingFace Open LLM Leaderboard 上超过了使用 GPT-4 数据训练的 DPO。其理论基础是：当且仅当模型分布与人类数据分布一致时，自博弈训练收敛。这意味着自博弈可以完全替代人类偏好标注。
+\textbf{案例 3：SPIN——自博弈替代人类标注。}SPIN 在没有使用任何 GPT-4 偏好数据的情况下，在 HuggingFace Open LLM Leaderboard 上超过了使用 GPT-4 数据训练的 DPO。其理论基础是：当且仅当模型分布与人类数据分布一致时，自博弈训练收敛。
 
-\textbf{案例 4：Absolute Zero——零数据达到 SOTA}
-Absolute Zero 的 AZR-Coder-7B 在完全零外部训练数据的条件下，在 HumanEval+、MBPP+ 上达到 7B 规模的 SOTA。代码自博弈的成果甚至迁移到了数学推理——尽管从未见过数学训练数据。这是 AlphaGo Zero 范式在 LLM 领域的成功复现。
+\textbf{案例 4：Absolute Zero——零数据达到 SOTA。}AZR-Coder-7B 在完全零外部训练数据的条件下，在 HumanEval+、MBPP+ 上达到 7B 规模的 SOTA。代码自博弈的成果甚至迁移到了数学推理。
 
-\textbf{案例 5：AlphaEvolve——超越人类算法}
-AlphaEvolve 发现了使用仅 48 次乘法的 4$\times$4 复数矩阵乘法算法——这是 56 年来首次超越 Strassen 1969 年的纪录。此外，它还通过数据中心调度优化恢复了全球 0.7\% 的计算资源。这表明进化方法不仅能匹配人类设计，还能发现人类未曾想到的解决方案。
+\textbf{案例 5：AlphaEvolve——超越人类算法。}AlphaEvolve 发现了使用仅 48 次乘法的 4$\times$4 复数矩阵乘法算法——这是 56 年来首次超越 Strassen 1969 年的纪录。
 
-\textbf{案例 6：DGM——超越手工 agent 架构}
-DGM 在 SWE-bench 上将验证解决率从 20.0\% 提升到 50.0\%，在 Polyglot 上从 14.2\% 提升到 30.7\%。更重要的是，DGM 发现了人类设计者未曾想象的全新 agent 结构，并且这些结构可以跨任务和跨模型迁移。
+\textbf{案例 6：DGM——超越手工 agent 架构。}DGM 在 SWE-bench 上将验证解决率从 20.0\% 提升到 50.0\%，并且发现了人类设计者未曾想象的全新 agent 结构。
 
 % ====================================================================
 % 图1.2: 数据收集统计柱状图
@@ -318,12 +306,12 @@ Agent Evolution 的思想根源可以追溯到更早的研究。Schmidhuber 的 
 
 \textbf{关键里程碑}：
 \begin{itemize}
-\item 2023.03：Reflexion 引入"语义梯度"——用自然语言反思替代标量奖励，在多个任务上大幅提升
-\item 2023.03：Self-Refine 证明同一模型可以同时担任生成者、批评者和改进者，无需外部训练
-\item 2023.05：Voyager 在 Minecraft 中展示了开放世界终身学习——技能库 + 自动课程 + 迭代反思
+\item 2023.03：Reflexion 引入"语义梯度"——用自然语言反思替代标量奖励
+\item 2023.03：Self-Refine 证明同一模型可以同时担任生成者、批评者和改进者
+\item 2023.05：Voyager 在 Minecraft 中展示了开放世界终身学习
 \item 2023.06：SelfEvolve 提出自我生成知识 + 迭代调试的两阶段代码自我进化框架
-\item 2023.08：ReST/ReST-EM 提出稳定的 generate-filter-finetune 范式，替代不稳定的在线 RL
-\item 2023.10：ExPeL 从训练任务中自动抽取经验规则，实现跨任务知识迁移
+\item 2023.08：ReST/ReST-EM 提出稳定的 generate-filter-finetune 范式
+\item 2023.10：ExPeL 从训练任务中自动抽取经验规则
 \end{itemize}
 
 \subsubsection{训练时自改进期（2023-2024）}
@@ -402,7 +390,7 @@ Agent Evolution 的思想根源可以追溯到更早的研究。Schmidhuber 的 
 
 \subsubsection{进化计算视角}
 
-Agent Evolution 可以被视为进化计算（Evolutionary Computation）在大语言模型时代的重新演绎。传统进化算法使用遗传算子（交叉、变异）在种群中搜索；Agent Evolution 使用 LLM 作为"智能变异算子"在代码/提示词/架构空间中搜索。AlphaEvolve 的 MAP-Elites 方法直接来源于 Quality-Diversity 进化计算文献。
+Agent Evolution 可以被视为进化计算（Evolutionary Computation）在大语言模型时代的重新演绎。传统进化算法使用遗传算子（交叉、变异）在种群中搜索；Agent Evolution 使用 LLM 作为"智能变异算子"在代码/提示词/架构空间中搜索。
 
 关键类比：
 \begin{itemize}
@@ -413,19 +401,35 @@ Agent Evolution 可以被视为进化计算（Evolutionary Computation）在大�
 \item \textbf{多样性维护} $\leftrightarrow$ MAP-Elites 的行为描述符、DGM 的多样性加权采样
 \end{itemize}
 
+AlphaEvolve 的 MAP-Elites 方法直接来源于 Quality-Diversity 进化计算文献。MAP-Elites 维护一个行为描述符到最优个体的映射，既保持高性能又保持多样性。这与传统的只保留最优个体的贪心搜索形成对比。
+
 \subsubsection{强化学习视角}
 
-基于奖励的进化方法直接建立在 RL 理论之上。MDP 框架（详见第\ref{ch:methods}章）为 STaR、RISE、RAGEN 等方法提供了统一的数学描述。DPO 替代 PPO 的趋势反映了从在线 RL 到离线偏好学习的范式转移。
+基于奖励的进化方法直接建立在 RL 理论之上。MDP 框架为 STaR、RISE、RAGEN 等方法提供了统一的数学描述。DPO 替代 PPO 的趋势反映了从在线 RL 到离线偏好学习的范式转移——DPO 不需要在线采样和奖励模型，而是直接从偏好对中学习策略。
+
+RL 视角下的核心权衡是"探索 vs.\ 利用"：Self-Refine 纯利用（基于自身反馈改进），Absolute Zero 纯探索（生成全新任务），而 RISE 在两者之间取得了平衡。
 
 \subsubsection{元学习视角}
 
-自我改进可以被视为一种特殊形式的元学习——"学会自我改进"。MAML 在参数空间中学习好的初始化；Agent Evolution 在行为空间中学习改进策略。关键区别在于：MAML 的元学习发生在训练时，而 Agent Evolution 的自我改进发生在部署后。
+自我改进可以被视为一种特殊形式的元学习——"学会自我改进"。MAML 在参数空间中学习好的初始化，使得少量梯度步就能适应新任务；Agent Evolution 在行为空间中学习改进策略，使得部署后可以持续进化。
+
+关键区别在于：MAML 的元学习发生在训练时（train-time meta-learning），而 Agent Evolution 的自我改进发生在部署后（deployment-time improvement）。这意味着 Agent Evolution 面临的分布偏移问题更加严峻——它需要在完全未见过的任务上自我改进。
 
 \subsubsection{自指与 Gödel Machine}
 
-Schmidhuber 的 Gödel Machine（2003）提供了递归自修改的理论基础。其核心思想是：系统只在能\textbf{形式证明}修改有益时才执行修改。Gödel Agent 和 DGM 继承了这一思想，但用经验验证替代了形式证明——这是一个关键的实用化妥协。
+Schmidhuber 的 Gödel Machine（2003）提供了递归自修改的理论基础。其核心思想是：系统只在能\textbf{形式证明}修改有益时才执行修改。形式化地，Gödel Machine 的搜索策略为：
+\begin{equation}
+\text{switch}(p \rightarrow p') \text{ iff } \text{Prov}_{\text{Gödel}}[\text{Utility}(p') > \text{Utility}(p)]
+\label{eq:godel-switch}
+\end{equation}
+其中 $\text{Prov}_{\text{Gödel}}$ 表示在系统内的形式证明。
 
-Gödel Machine 的理论保证是：如果初始策略是 $\pi_0$，修改规则是"仅在可证明改进时修改"，则最终策略 $\pi^*$ 不劣于 $\pi_0$。实践中，由于无法对所有可能的修改进行形式验证，Gödel Agent 退化为"仅在验证集上改进时接受修改"——这更接近贪心搜索而非全局最优。
+Gödel Agent 和 DGM 继承了这一思想，但用经验验证替代了形式证明——这是一个关键的实用化妥协。由此产生的理论保证弱化为：
+\begin{equation}
+\text{accept}(p \rightarrow p') \text{ iff } \text{Score}(p', \mathcal{T}_{\text{val}}) > \text{Score}(p, \mathcal{T}_{\text{val}})
+\label{eq:empirical-switch}
+\end{equation}
+这在验证集 $\mathcal{T}_{\text{val}}$ 上提供了单调改进保证，但无法保证在所有未见任务上的性能。
 
 % =====================================================================
 \subsection{自演化的风险与挑战}\label{sec:intro-risks}
@@ -433,23 +437,19 @@ Gödel Machine 的理论保证是：如果初始策略是 $\pi_0$，修改规则
 
 \subsubsection{Reward Hacking}
 
-当评估函数不完全对齐真实目标时，优化评估分数可能导致实际能力退化。Self-Rewarding 的自评打分存在系统性高估自身输出的倾向；Meta-Rewarding 通过引入元评价层级部分缓解了这一问题。
+当评估函数不完全对齐真实目标时，优化评估分数可能导致实际能力退化。Self-Rewarding 的自评打分存在系统性高估自身输出的倾向。RAGEN 发现的 Echo Trap 是一种特殊的 reward hacking——模型学会了重复自己的输出来获得高奖励，而非真正提升推理质量。
 
 \subsubsection{评估不完备}
 
-经验验证（在基准测试上评估性能）无法保证系统在所有情况下的行为都符合预期。Gödel Agent 的运行时自修改可能在训练域内表现良好但在边缘情况下产生不可预测的行为。
+经验验证无法保证系统在所有情况下的行为都符合预期。Gödel Agent 的运行时自修改可能在训练域内表现良好但在边缘情况下产生不可预测的行为。AI Scientist 的自我评审拒绝了人类接受的论文——这表明自评系统可能存在系统性的评价偏差。
 
 \subsubsection{模式坍塌}
 
-自博弈方法（如 Absolute Zero）面临 Proposer 和 Solver 共同收敛到平凡解的风险——Proposer 只出简单题，Solver 总能做对，两者都获得高奖励但实际能力没有提升。
+自博弈方法面临 Proposer 和 Solver 共同收敛到平凡解的风险。这与 GAN 中的模式坍塌问题类似。Absolute Zero 通过 diversity 约束和代码验证部分缓解了这一风险，但在理论上仍无法保证完全避免。
 
-\subsubsection{不可逆修改}
+\subsubsection{不可逆修改与安全性}
 
-代码自修改（Gödel Agent、DGM）可能导致不可逆的状态变化。即使有回滚机制，在复杂系统中确定"回滚到哪个状态"本身就是一个困难问题。
-
-\subsubsection{安全性与对齐}
-
-自演化系统的能力提升可能超出人类监督的范围。当 agent 能够修改自己的代码、工具和策略时，如何确保它不会产生有害行为？Constitutional AI 提供了一种思路——用"宪法原则"约束自我评价的范围，但这一方法在面对复杂的现实场景时仍然脆弱。
+代码自修改可能导致不可逆的状态变化。即使有回滚机制，在复杂系统中确定"回滚到哪个状态"本身就是一个困难问题。Constitutional AI 提供了一种思路——用"宪法原则"约束自我评价的范围，但这一方法在面对复杂的现实场景时仍然脆弱。
 
 % =====================================================================
 % 表1.1: 全文结构导航表
@@ -480,15 +480,15 @@ Gödel Machine 的理论保证是：如果初始策略是 $\pi_0$，修改规则
 
 \textbf{贡献 1：统一的分类框架}。我们提出按"选择压力"和"可变对象"两个正交维度将现有方法分为六大类别。这一分类覆盖了从推理时自我修正到代码级自修改的完整谱系，提供了比"自训练"或"递归自改进"更细粒度的分析视角。
 
-\textbf{贡献 2：GEMI 统一框架}。我们提出 Generation-Evaluation-Memory-Improvement 四组件框架，将所有方法统一在一个可比较的分析框架下。GEMI 识别了各类方法的核心差异——哪个组件是瓶颈、哪个组件是创新点。
+\textbf{贡献 2：GEMI 统一框架}。我们提出 Generation-Evaluation-Memory-Improvement 四组件框架，将所有方法统一在一个可比较的分析框架下。
 
-\textbf{贡献 3：系统的比较分析}。我们提供了 12 张比较表，覆盖方法特性、计算成本、基准性能、跨域迁移等维度。特别是我们识别了评估方法论中的常见陷阱（基线选择偏差、Echo Trap、随机性忽视）并提出了推荐的评估协议。
+\textbf{贡献 3：系统的比较分析}。我们提供了 12 张比较表，覆盖方法特性、计算成本、基准性能、跨域迁移等维度。
 
-\textbf{贡献 4：历史脉络梳理}。我们将 2020-2026 年的研究划分为四个阶段，识别了每个阶段的核心问题和突破。这一历史视角有助于理解当前研究前沿的来龙去脉。
+\textbf{贡献 4：历史脉络梳理}。我们将 2020-2026 年的研究划分为四个阶段，识别了每个阶段的核心问题和突破。
 
-\textbf{贡献 5：实践指南}。我们提供了方法选择的决策树、部署注意事项和安全护栏建议。这些实践性的内容旨在帮助研究者和工程师快速选择适合其场景的自演化方法。
+\textbf{贡献 5：实践指南}。我们提供了方法选择的决策树、部署注意事项和安全护栏建议。
 
-\textbf{贡献 6：开放问题识别}。我们提出了八个开放研究问题，涵盖理论基础、评估方法、安全性、课程学习、方法组合、记忆规模化、架构创新和目标对齐。这些问题定义了未来几年的研究方向。
+\textbf{贡献 6：开放问题识别}。我们提出了八个开放研究问题，涵盖理论基础、评估方法、安全性、课程学习、方法组合、记忆规模化、架构创新和目标对齐。
 
 \textbf{贡献 7：全面的文献覆盖}。本综述收集了 88 篇论文、348 个代码仓库、97 个痛点分析和 1306 篇博客与技术报告，提供了 Agent Evolution 领域最全面的文献索引之一。
 
@@ -496,17 +496,13 @@ Gödel Machine 的理论保证是：如果初始策略是 $\pi_0$，修改规则
 \subsection{综述结构与阅读指南}\label{sec:intro-guide}
 % =====================================================================
 
-本综述的后续章节围绕"理论--方法--系统--评估--实践--风险--前沿"展开。
+本综述的后续章节围绕"理论--方法--系统--评估--实践--风险--前沿"展开。第\ref{ch:theory}章讨论理论基础，包括进化计算与 LLM 的结合、自我指涉与 Gödel 机器、元学习与自我改进框架，以及自演化的数学形式化。读者如果关心"为什么这些系统可以被称为进化""递归自我改进与经验验证有什么差别""如何用统一符号描述 agent 更新闭环"，应优先阅读第\ref{ch:theory}章。
 
-第\ref{ch:theory}章讨论理论基础，包括进化计算与 LLM 的结合、自我指涉与 Gödel 机器、元学习与自我改进框架，以及自演化的数学形式化。读者如果关心"为什么这些系统可以被称为进化""递归自我改进与经验验证有什么差别""如何用统一符号描述 agent 更新闭环"，应优先阅读第\ref{ch:theory}章。
-
-第\ref{ch:methods}章给出方法分类，是全篇最长的技术章节。它按照奖励、自博弈、提示词、架构搜索、记忆和混合方法组织材料，覆盖所有代表性工作。每个类别都包含形式化定义、代表系统详解、对比分析和核心挑战。读者如果希望快速了解各类方法的机制、适用场景和局限，应把第\ref{ch:methods}章作为主入口。
+第\ref{ch:methods}章给出方法分类，是全篇最长的技术章节。它按照奖励、自博弈、提示词、架构搜索、记忆和混合方法组织材料，覆盖 STaR、Reflexion、Self-Refine、Self-Rewarding、RISE、Agent-R、RAGEN、ADAS、Gödel Agent、EvoMAC、SICA、DGM、AlphaEvolve、WebEvolver、Absolute Zero、SPIRAL、ACE、EvolveR、ReasoningBank、Memory-R1 与 AriadneMem 等代表性工作。读者如果希望快速了解各类方法的机制、适用场景和局限，应把第\ref{ch:methods}章作为主入口。
 
 后续章节将进一步分析核心系统、评估体系、工业实践、风险治理和未来方向。特别需要注意的是，Agent Evolution 文献跨越多个术语体系：有的论文称为 self-improvement，有的称为 self-evolution、lifelong learning、test-time learning、agent optimization、open-endedness、auto-curriculum、context engineering 或 recursive self-improvement。阅读时不应被名称差异干扰，而要问四个问题：系统改的是什么，信号来自哪里，如何选择并保留改进，改进是否经过独立验证。只要围绕这四个问题组织阅读，就能把看似分散的论文纳入同一张技术地图。
 
 \subsubsection{术语对照表}
-
-为了帮助读者跨越术语差异，我们提供以下对照表：
 
 \begin{table}[htbp]
 \centering
@@ -540,6 +536,522 @@ Agent Evolution & Self-Evolution & DGM, SICA \\
 \subsection{本章小结}\label{sec:intro-summary}
 % =====================================================================
 
-本章建立了 Agent Evolution 研究的基本框架。我们首先给出了 Agent Evolution 的四要素定义（可变状态、反馈信号、更新机制、可审计改进），并提出了 GEMI 统一框架将所有方法纳入可比较的分析体系。然后我们梳理了五个研究动机和六个具体案例，说明了为什么自演化是大模型智能体研究的关键方向。我们回顾了 2020-2026 年的四阶段发展历程，从奠基期到架构搜索与自博弈期，展示了领域的快速演进。最后，我们明确了本综述的七大贡献，并给出了术语对照表和阅读指南。
+本章建立了 Agent Evolution 研究的基本框架。我们首先给出了 Agent Evolution 的四要素定义（可变状态、反馈信号、更新机制、可审计改进），并提出了 GEMI 统一框架将所有方法纳入可比较的分析体系。然后我们梳理了五个研究动机和六个具体案例，说明了为什么自演化是大模型智能体研究的关键方向。我们回顾了 2020-2026 年的四阶段发展历程，从奠基期到架构搜索与自博弈期，展示了领域的快速演进。我们讨论了理论基础（进化计算、强化学习、元学习、自指与 Gödel Machine），分析了核心风险（Reward Hacking、评估不完备、模式坍塌、安全性），明确了本综述的七大贡献，并给出了术语对照表和阅读指南。
 
 后续章节将按以下顺序展开：第\ref{ch:theory}章奠定理论基础，第\ref{ch:methods}章给出方法分类（全篇最长），第\ref{ch:systems}章分析核心系统实现，第\ref{ch:evaluation}章讨论评估方法，后续章节覆盖工业实践、风险治理和未来方向。
+
+% =====================================================================
+\subsection{代表方法的预备介绍}\label{sec:intro-methods-preview}
+% =====================================================================
+
+在第\ref{ch:methods}章给出完整技术分析之前，本节为每个方法类别提供简要的预备介绍，帮助读者建立初步的技术直觉。
+
+\subsubsection{基于奖励的进化}
+
+基于奖励的进化是最接近传统强化学习的方法类别。其核心循环是：生成候选、评估打分、更新策略。STaR 用真实标签作为奖励信号，Self-Rewarding 用模型自身作为 judge，RISE 将自我修正建模为多轮 MDP，RAGEN 提出了 StarPO 框架来处理多轮智能体训练中的 Echo Trap 问题。
+
+这类方法的共同特征是：需要一个明确的评估信号（无论是外部提供的还是自生成的），以及一个将评估信号转化为策略更新的机制（SFT、DPO 或 PPO）。其核心瓶颈在于评估信号的质量——如果评估不可靠，优化方向就可能偏离真实目标。
+
+\subsubsection{自博弈进化}
+
+自博弈进化是最具理论优雅性的方法——在零外部数据条件下实现自我改进。Absolute Zero 是这一方向的巅峰之作：同一个模型同时充当任务生成器（Proposer）、解题者（Solver）和验证者（Verifier），完全自给自足。SPIRAL 在竞争性博弈中发现可迁移的推理策略。SPIN 用自博弈替代人类偏好标注。
+
+这类方法的理论基础来自博弈论——自博弈在双人零和博弈中收敛到 Nash 均衡。但 LLM 自博弈中的非零和结构使得收敛性保证更加复杂。最严重的实践风险是模式坍塌——Proposer 和 Solver 收敛到"默契配合"。
+
+\subsubsection{提示词进化}
+
+提示词进化是最轻量、最容易部署的方法——零训练成本，即插即用。Reflexion 用自然语言反思作为"语义梯度"，Self-Refine 使用同一模型完成 GENERATE-CRITIQUE-REFINE 三步循环，ExPeL 从多个任务中抽取跨任务可迁移的经验规则，ACE 将上下文工程定义为可演化的 playbook。
+
+这类方法的核心洞察是：\textbf{记忆可以替代梯度}。自然语言反馈充当了传统 RL 中梯度信号的角色——它指出"哪里错了、为什么错、怎么改"，比单纯的标量奖励更加信息丰富。但局限性也很明显：自我批评可能陷入局部最优，因为同一模型的生成和评价能力受限于相同的认知边界。
+
+\subsubsection{架构搜索}
+
+架构搜索关注 agent 结构本身的自动设计——在图灵完备的程序空间中搜索超越人类设计的智能体架构。ADAS 证明了跨模型迁移的可能性，DGM 通过开放式 archive 实现了持续进化，Gödel Agent 在运行时动态修改自身代码，AlphaEvolve 在数学和工程上取得了突破性成果。
+
+这类方法的搜索空间是所有有效的 agent 实现程序——这是一个图灵完备的无限空间。LLM 作为"智能变异算子"将搜索限制在"合理的程序空间"内，但无法保证找到全局最优。AlphaEvolve 的 MAP-Elites 质量多样性方法通过同时维护高性能和多样性来缓解这一问题。
+
+\subsubsection{记忆进化}
+
+记忆进化关注长期经验的积累与检索。Voyager 通过自动课程和技能库实现开放世界终身学习，Memory-R1 用 RL 训练记忆管理器学习何时添加/更新/删除经验，AriadneMem 使用演化图表示来管理记忆结构。
+
+这类方法面临的核心挑战是"稳定性-可塑性困境"的变体：如何在新旧经验之间取得平衡。过于保守的策略导致记忆过时；过于激进的策略导致遗忘重要经验。此外，随着运行时间增长，记忆库的检索效率也是一个工程挑战。
+
+\subsubsection{混合方法}
+
+混合方法将多种进化机制组合成端到端闭环。EvolveR 同时优化推理策略、长期记忆、工具使用和自身代码。WebEvolver 将进化框架部署到真实的 Web 环境中。
+
+混合方法的设计原则是：最小侵入性（新机制不破坏旧机制）、信号隔离（不同机制的奖励信号应独立）、优先级管理（冲突时有明确优先级）和可观测性（每个机制的贡献可独立度量）。
+
+% =====================================================================
+\subsection{跨领域连接}\label{sec:intro-crossdomain}
+% =====================================================================
+
+Agent Evolution 并非孤立的研究方向，它与多个相邻领域存在深刻的交叉关系。理解这些连接有助于把握领域全貌和未来趋势。
+
+\subsubsection{与 AutoML 的融合}
+
+自动机器学习（AutoML）自动化了特征工程、模型选择和超参数优化的过程。近年来，AutoML 与 LLM 的结合催生了一系列新工作：AutoML-GPT 和 AutoML-Agent 用 LLM 作为 AutoML 流水线的控制器，LLMs-as-Evolutionary-Optimizers 用 LLM 替代传统的进化算子。
+
+Agent Evolution 可以被视为 AutoML 的自然延伸——从自动化"学习流水线"到自动化"整个智能体系统"。ADAS 的作者明确将他们的工作定位为"Agent 版本的 NAS"（Neural Architecture Search），这暗示了 AutoML 的进化方向。
+
+\subsubsection{与多智能体系统的交叉}
+
+多智能体系统（Multi-Agent Systems）研究多个智能体如何协作、竞争和协商。AutoGen、CrewAI、MetaGPT 等框架提供了多智能体协作的基础设施。Agent Evolution 与多智能体系统的交叉点在于：
+
+\begin{itemize}
+\item \textbf{多智能体辩论}：多个 LLM 实例围绕同一问题展开辩论，通过"社会性验证"达成共识。这是一种分布式的自我改进——不同的视角互补，减少单一模型的系统性偏差。
+\item \textbf{角色分化}：Self-Rewarding 的 Actor-Judge 分离、Meta-Rewarding 的 Actor-Judge-MetaJudge 三级分化，可以被视为多智能体协作的特殊形式。
+\item \textbf{架构搜索}：EvoMAC 将架构搜索扩展到多智能体协作拓扑——不仅搜索单个 agent 的设计，还搜索 agent 之间的通信协议和任务分配策略。
+\end{itemize}
+
+\subsubsection{与程序合成的关系}
+
+程序合成（Program Synthesis）研究如何自动生成满足规范的程序。FunSearch 和 AlphaEvolve 可以被视为"进化式程序合成"——LLM 作为程序生成器，评估器作为规范检查器，MAP-Elites 作为搜索策略。
+
+关键区别在于：传统程序合成要求生成的程序\textbf{完全正确}（满足形式规范），而 Agent Evolution 中的代码自修改追求\textbf{渐进改进}（在新版本比旧版本更好时接受修改）。这一区别使得 Agent Evolution 的搜索空间更大、方法更灵活，但也意味着改进的正确性保证更弱。
+
+\subsubsection{与认知科学的对话}
+
+Agent Evolution 的一些核心思想与认知科学中的元认知（Metacognition）概念密切相关。Reflexion 的"语义梯度"类似于人类的反思性思维——"我刚才为什么犯了这个错误？下次应该怎么做？"Voyager 的技能库类似于人类的程序性记忆——将反复使用的技能编码为可复用的子程序。
+
+然而，当前的 Agent Evolution 系统与真正的认知自组织还有本质差距。人类不仅改进具体的技能，还改进学习策略本身——"学会如何学习"。DGM 和 ADAS 在某种程度上实现了这种"元学习"——它们改进的是"agent 如何构建"而非"agent 如何执行特定任务"。但这一方向的深度还远远不够。
+
+% =====================================================================
+\subsection{研究社区与学术网络}\label{sec:intro-community}
+% =====================================================================
+
+\subsubsection{机构分布}
+
+Agent Evolution 研究呈现出明显的机构集中性。Google DeepMind 在代码自改进和进化搜索方向处于领先地位（AlphaEvolve、FunSearch、ReST）。UBC/Vector Institute 的 Jeff Clune 团队主导了开放式 agent 进化（ADAS、DGM）。Sakana AI 在全自动化科学发现方面取得了突破（AI Scientist）。
+
+学术界方面，Stanford/Princeton 的 Shunyu Yao 连接了 ReAct、Tree of Thoughts 和 Reflexion 等重要工作。CMU 的研究者在 RISE 和偏好学习方面有重要贡献。Anthropic 在安全导向的自我改进（Constitutional AI）方面独树一帜。
+
+国内研究方面，清华大学/LeapLabTHU 的 Absolute Zero 获得了 NeurIPS 2025 最佳论文奖，北京大学在 Gödel Agent 方面有重要贡献。
+
+\subsubsection{学术谱系}
+
+从学术谱系看，Agent Evolution 存在几条明显的知识传承线：
+
+\begin{itemize}
+\item \textbf{推理链线}：Chain-of-Thought $\rightarrow$ STaR $\rightarrow$ Self-Refine $\rightarrow$ Reflexion $\rightarrow$ RISE。这条线关注"如何让推理过程自我改进"。
+\item \bfseries 进化搜索线}：FunSearch $\rightarrow$ AlphaEvolve $\rightarrow$ ADAS $\rightarrow$ DGM。这条线关注"如何用进化方法搜索程序/架构空间"。
+\item \textbf{安全自评线}：RLHF $\rightarrow$ Constitutional AI $\rightarrow$ Self-Rewarding $\rightarrow$ Meta-Rewarding。这条线关注"如何让模型安全地自我评价"。
+\item \textbf{开放世界线}：ReAct $\rightarrow$ Voyager $\rightarrow$ DGM $\rightarrow$ WebEvolver。这条线关注"如何在开放环境中持续进化"。
+\end{itemize}
+
+这些知识传承线并非完全独立——它们在多个节点交叉。例如，Reflexion 同时连接了推理链线和开放世界线（通过 Shunyu Yao）；DGM 同时属于进化搜索线和开放世界线。
+
+% =====================================================================
+\subsection{数据与方法论}\label{sec:intro-methodology}
+% =====================================================================
+
+\subsubsection{文献收集方法}
+
+本综述的文献收集采用多渠道并行策略：
+
+\textbf{学术数据库}：通过 Google Scholar、Semantic Scholar 和 arXiv 搜索关键词包括"self-evolving agents"、"LLM self-improvement"、"recursive self-improvement"、"agent evolution"、"open-ended learning"等。
+
+\textbf{代码仓库}：通过 GitHub 搜索和 awesome-list 索引收集了 348 个相关代码仓库。
+
+\textbf{技术博客}：收集了 1306 篇来自 OpenAI、Anthropic、Google DeepMind、Hugging Face、Meta AI 等机构的技术博客。
+
+\textbf{痛点分析}：整理了 97 个来自实践者的问题报告和经验总结。
+
+\subsubsection{分析方法}
+
+我们对每篇论文进行了结构化分析，提取以下维度：
+\begin{itemize}
+\item 可变对象（权重、提示词、代码、记忆、工具、拓扑）
+\item 信号来源（外部奖励、自评、环境反馈、自博弈）
+\item 更新机制（SFT、DPO、PPO、代码修改、记忆更新）
+\item 验证方式（人工评估、自动测试、基准测试、形式验证）
+\item 基准结果（具体数值、对比基线、改进幅度）
+\item 局限性（作者自述 + 我们的分析）
+\end{itemize}
+
+\subsubsection{分类标准}
+
+我们的六类分类基于以下标准：
+\begin{enumerate}
+\item 如果方法的主要改进机制是优化标量/偏好奖励信号，归入"奖励进化"
+\item 如果方法通过自我博弈生成训练数据和验证信号，归入"自博弈进化"
+\item 如果方法不修改权重或代码，仅通过上下文修改改进输出，归入"提示词进化"
+\item 如果方法修改 agent 的代码实现或架构，归入"架构搜索"
+\item 如果方法的核心创新在于记忆管理和经验检索，归入"记忆进化"
+\item 如果方法同时使用上述多种机制，归入"混合方法"
+\end{enumerate}
+
+当一个方法涉及多个类别时，我们以其"\textbf{主要}"机制为准。例如，DGM 同时涉及架构搜索和基于奖励的选择，但其核心创新在于开放式架构进化，因此归入"架构搜索"。
+
+% =====================================================================
+\subsection{符号约定}\label{sec:intro-notation}
+% =====================================================================
+
+为了全文的一致性，我们统一以下符号：
+
+\begin{table}[htbp]
+\centering
+\caption{全文符号约定。}
+\label{tab:notation}
+\begin{tabular}{ll}
+\toprule
+\textbf{符号} & \textbf{含义} \\
+\midrule
+$\pi_\theta$ & 参数为 $\theta$ 的策略/模型 \\
+$x$ & 输入/任务描述 \\
+$y$ & 输出/候选解 \\
+$r$ & 奖励信号 \\
+$\mathcal{D}$ & 数据集/archive \\
+$\mathcal{M}$ & 记忆系统 \\
+$\mathcal{T}$ & 任务集 \\
+$\gamma$ & 折扣因子 \\
+$\beta$ & KL 散度约束系数 \\
+$o_t$ & 系统状态（时刻 $t$） \\
+$c_t$ & 候选（时刻 $t$） \\
+$s_t$ & 信号（时刻 $t$） \\
+$G, E, M, I$ & GEMI 框架的四个组件 \\
+$\mathcal{O}$ & 可变对象集合 \\
+$\mathcal{S}$ & 信号空间 \\
+$\mathcal{U}$ & 更新函数 \\
+$\mathcal{V}$ & 验证函数 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+这些符号在第\ref{ch:theory}章和第\ref{ch:methods}章中将被频繁使用。读者可以在遇到不熟悉的符号时回到本表查阅。
+
+% =====================================================================
+\subsection{关键洞察与核心发现}\label{sec:intro-insights}
+% =====================================================================
+
+基于对 88 篇论文、348 个代码仓库和 1306 篇技术博客的系统分析，我们总结了 Agent Evolution 领域的十个关键洞察。
+
+\subsubsection{洞察 1：推理可以引导推理}
+
+STaR、Self-Refine 和 Reflexion 共同证明了一个令人惊讶的事实：LLM 可以从自己的推理过程中学习，并产生比初始能力更好的推理。STaR 在 CommonsenseQA 上让 540M 模型匹配了 175B 模型的性能；Reflexion 在 HumanEval 上让 GPT-3.5 超越了 GPT-4。这意味着推理能力存在"自举"的可能性——当前的推理可以成为未来更好推理的训练数据。
+
+\subsubsection{洞察 2：记忆可以替代梯度}
+
+Reflexion 的核心贡献是证明了自然语言反馈可以充当传统 RL 中梯度信号的角色。在 Reflexion 中，记忆条目描述了"我尝试了什么、为什么失败、应该如何改进"——这比单纯的标量奖励（+1/-1）更加信息丰富。这一洞察暗示了：在 LLM 时代，传统的"奖励-梯度"范式可能不是唯一的改进路径。文本形式的"语义梯度"同样有效，且不需要参数更新。
+
+\subsubsection{洞察 3：自博弈可以替代人类标注}
+
+SPIN 在理论上证明了：当且仅当模型分布与人类数据分布一致时，自博弈训练收敛。在实践中，SPIN 在没有使用任何 GPT-4 偏好数据的情况下超过了使用 GPT-4 数据的 DPO。Absolute Zero 更进一步——完全消除了对外部数据的依赖。这两个工作共同暗示了：自博弈可能是解决"人类标注瓶颈"的根本方案。
+
+\subsubsection{洞察 4：更强的模型更善于自我改进}
+
+Absolute Zero 的实验揭示了一个正反馈循环：随着模型能力的提升，它生成的训练任务质量也随之提升，进而产生更好的训练信号。这与"Gödel Machine 理论中更强的证明器可以发现更多的改进"的思想一致。但这也引发了一个安全担忧：如果自我改进的速度随能力非线性增长，可能出现"智能爆炸"式的快速能力跃升。
+
+\subsubsection{洞察 5：架构的发现可以超越人类设计}
+
+ADAS 发现的 agent 架构在跨模型迁移后仍然有效——用 GPT-3.5 搜索到的设计在 GPT-4 上同样出色。DGM 在 SWE-bench 上将解决率从 20\% 提升到 50\%，远超手工设计的 agent。AlphaEvolve 更是发现了 56 年来首个改进 Strassen 算法的矩阵乘法方案。这三个工作共同表明：在代码/架构空间中，LLM 驱动的搜索可以发现人类未曾想到的解决方案。
+
+\subsubsection{洞察 6：代码验证是最可靠的评估信号}
+
+在所有评估方式中，代码执行器提供的二值信号（通过/失败）是最可靠的。Absolute Zero 和 SelfEvolve 都利用了代码执行器作为确定性验证器——代码要么通过测试，要么不通过。这与 LLM-as-judge 的不确定性形成鲜明对比。但代码验证的适用范围有限——并非所有任务都有可编程的验证器。
+
+\subsubsection{洞察 7：迭代放大的收敛性是核心理论问题}
+
+所有自演化方法都可以统一在"迭代放大"框架下：$C_{t+1} = M(C_t) + \epsilon_t$。收敛性取决于三个条件：改进的单调性、改进的有界性和空间的有界性。在实践中，由于评估噪声和 Goodhart 效应，单调性并不总是成立。Echo Trap 的发现表明，改进信号可能是虚假的。因此，建立可靠的收敛性检测方法是一个关键的开放问题。
+
+\subsubsection{洞察 8：跨域迁移是验证真实改进的试金石}
+
+许多方法在训练域内表现出显著改进，但跨域测试往往揭示改进的局限性。Absolute Zero 在代码自博弈后测试数学推理是一个良好实践——代码自博弈到数学推理的迁移暗示了某种"通用推理能力"的提升。反之，AI Scientist 在初始训练域（LSTM）之外的泛化能力很弱，暴露了其改进的表面性。
+
+\subsubsection{洞察 9：开放式搜索优于贪心搜索}
+
+DGM 的开放式 archive 设计避免了收敛到单一局部最优。MAP-Elites 的质量多样性方法同时维护高性能和多样性。这些实验证据表明，在开放式空间中的搜索比贪心搜索更有效——这支持了进化计算中"stepping stones"理论的有效性。
+
+\subsubsection{洞察 10：安全性是自我进化的根本约束}
+
+Gödel Agent 的运行时自修改、DGM 的开放式进化、AlphaEvolve 的代码修改都引入了新的安全风险。Constitutional AI 的"宪法原则"方法提供了一种约束机制，但在面对复杂的现实场景时仍然脆弱。安全性不是事后考虑——它应该被内建到自我进化的核心循环中。
+
+% =====================================================================
+\subsection{从 Self-Training 到 Self-Evolution 的范式转变}\label{sec:intro-paradigm}
+% =====================================================================
+
+\subsubsection{范式转变的时间线}
+
+Agent Evolution 领域正在经历一个从"Self-Training"到"Self-Evolution"的范式转变。这一转变可以用以下时间线描述：
+
+\textbf{第一阶段：Self-Training（2020-2022）}。核心问题是"模型能否从自己的预测中学习？"。代表方法：伪标签自训练、STaR。变化对象仅限于模型权重，信号来源仅限于标签验证。
+
+\textbf{第二阶段：Self-Correction（2023）}。核心问题是"模型能否在推理时修正自己的错误？"。代表方法：Self-Refine、Reflexion、Self-Debug。变化对象扩展到上下文和记忆，信号来源扩展到执行反馈和自我评价。
+
+\textbf{第三阶段：Self-Rewarding（2024）}。核心问题是"模型能否自己评估自己的输出？"。代表方法：Self-Rewarding LM、Meta-Rewarding、SPIN。信号来源扩展到模型自身的评价能力，更新机制引入 DPO 等偏好学习方法。
+
+\textbf{第四阶段：Self-Evolution（2025-2026）}。核心问题是"系统能否在多个层面上同时自我改进？"。代表方法：Absolute Zero、DGM、AlphaEvolve、RAGEN。变化对象扩展到代码、架构和进化过程本身，信号来源扩展到自博弈和环境交互。
+
+\subsubsection{范式转变的关键维度}
+
+\begin{table}[htbp]
+\centering
+\caption{从 Self-Training 到 Self-Evolution 的范式转变。}
+\label{tab:paradigm-shift}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+\textbf{维度} & \textbf{Self-Training} & \textbf{Self-Correction} & \textbf{Self-Rewarding} & \textbf{Self-Evolution} \\
+\midrule
+变化对象 & 权重 & 上下文/记忆 & 权重+评价器 & 代码/架构/策略 \\
+信号来源 & 标签 & 执行反馈 & 自评/自博弈 & 环境/自博弈/进化 \\
+更新机制 & SFT & 提示修改 & DPO/RL & 代码变异/RL \\
+自动化程度 & 半自动 & 自动 & 自动 & 全自动 \\
+代表系统 & STaR & Reflexion & Self-Rewarding & DGM, AlphaEvolve \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+这一范式转变的核心特征是：变化对象从单一的权重空间扩展到多维的智能体状态空间，信号来源从外部标注扩展到完全自生成，自动化程度从需要人工干预的半自动进化到全自动。
+
+% =====================================================================
+\subsection{自演化能力的评估维度}\label{sec:intro-eval-dims}
+% =====================================================================
+
+如何评估一个自演化系统的好坏？我们提出以下六个评估维度：
+
+\subsubsection{维度 1：改进幅度（Improvement Magnitude）}
+
+最基本的指标——自演化后比演化前提升了多少？可以用绝对改进（$\Delta = \text{Perf}_{\mathrm{evolved}} - \text{Perf}_{\mathrm{baseline}}$）或相对改进（$\Delta / \text{Perf}_{\mathrm{baseline}}$）来衡量。
+
+\subsubsection{维度 2：改进效率（Improvement Efficiency）}
+
+每单位计算资源带来的改进。某些方法（如 Reflexion）几乎不需要额外计算成本，而另一些方法（如 DGM）需要数千次 LLM API 调用。效率可以用 $\eta = \Delta / \text{Cost}$ 来衡量。
+
+\subsubsection{维度 3：泛化能力（Generalization）}
+
+改进是否迁移到分布外任务？这可能是最重要的评估维度。一个只在训练基准上改进的系统可能是过拟合而非真正提升了能力。
+
+\subsubsection{维度 4：稳定性（Stability）}
+
+多次独立运行的改进方差。一些方法（如 DGM 的进化搜索）具有较高的随机性——不同的随机种子可能导致截然不同的结果。稳定性 $S = 1 - \mathrm{Var}(\Delta) / \max(\Delta)^2$。
+
+\subsubsection{维度 5：持久性（Persistence）}
+
+改进是否持久？推理时方法（如 Reflexion）的改进在上下文清除后消失；训练时方法（如 STaR）的改进持久存在于权重中；架构搜索方法（如 ADAS）的改进持久存在于代码中。
+
+\subsubsection{维度 6：安全性（Safety）}
+
+进化过程中是否产生有害行为？这需要定性评估——是否有 reward hacking、权限扩大、隐藏回归或错误自我强化。
+
+\begin{table}[htbp]
+\centering
+\caption{方法在六个评估维度上的表现。}
+\label{tab:eval-dims}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{方法} & \textbf{改进幅度} & \textbf{效率} & \textbf{泛化} & \textbf{稳定性} & \textbf{持久性} & \textbf{安全性} \\
+\midrule
+Reflexion & 中 & 高 & 高 & 高 & 低 & 高 \\
+Self-Refine & 低-中 & 极高 & 高 & 高 & 低 & 高 \\
+STaR & 中 & 中 & 中 & 中 & 高 & 高 \\
+Self-Rewarding & 中 & 中 & 中 & 中 & 高 & 中 \\
+RISE & 中-高 & 中 & 中 & 中 & 高 & 中 \\
+Absolute Zero & 高 & 低 & 高 & 低 & 高 & 中 \\
+ADAS & 高 & 低 & 高 & 低 & 高 & 低 \\
+DGM & 极高 & 极低 & 高 & 低 & 高 & 低 \\
+AlphaEvolve & 极高 & 极低 & 中 & 低 & 高 & 中 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+% =====================================================================
+\subsection{开源生态与工具链}\label{sec:intro-ecosystem}
+% =====================================================================
+
+\subsubsection{框架与平台}
+
+Agent Evolution 的实践依赖于一系列开源框架和平台：
+
+\textbf{基础模型}：OpenAI GPT 系列、Anthropic Claude、Meta LLaMA、Google Gemini、Qwen 系列等。大多数方法可以部署在任何提供 API 或权重的模型上。
+
+\textbf{智能体框架}：LangChain/LangGraph（流水线编排）、AutoGen（多智能体协作）、CrewAI（角色扮演智能体）、DSPy（声明式提示词优化）。这些框架为构建自演化 agent 提供了基础设施。
+
+\textbf{进化搜索框架}：EvoAgentX 提供了可插拔的进化策略组合平台；ADAS 提供了 Meta Agent Search 的参考实现。
+
+\textbf{评估基准}：HumanEval/MBPP（代码生成）、SWE-bench（软件工程）、GSM8K/MATH（数学推理）、HotPotQA（多跳问答）、AlfWorld（交互任务）。
+
+\subsubsection{部署模式}
+
+自演化系统的部署可以分为三种模式：
+
+\textbf{API 模式}：通过 LLM API 调用进行推理和进化。优点是无需 GPU，缺点是成本较高且受 API 限制。大多数提示词进化和架构搜索方法使用此模式。
+
+\textbf{本地模式}：在本地 GPU 上运行开源模型。优点是成本可控且可进行权重更新，缺点是需要 GPU 资源。STaR、RISE 等训练时方法使用此模式。
+
+\textbf{混合模式}：结合 API 和本地运行。例如，用 GPT-4 API 进行代码生成，用本地小模型进行评估和筛选。
+
+% =====================================================================
+\subsection{未来展望}\label{sec:intro-future}
+% =====================================================================
+
+基于当前研究态势，我们对 Agent Evolution 的未来发展提出以下展望：
+
+\subsubsection{短期（2025-2026）}
+
+\begin{itemize}
+\item 自博弈方法将在更多任务域（数学证明、科学推理、多模态理解）得到验证
+\item 架构搜索将从学术基准扩展到真实工业场景（软件工程、数据分析、内容创作）
+\item 评估方法论将标准化——统一的评估协议和基准将被广泛采用
+\item 安全护栏将成为自演化系统的标配——Constitutional AI 式的约束机制将内嵌到主流框架中
+\end{itemize}
+
+\subsubsection{中期（2027-2028）}
+
+\begin{itemize}
+\item 端到端的自我进化闭环将成为可能——从数据生成到架构设计到安全审计全部自动化
+\item 跨模型迁移将成为标准实践——用小模型搜索的架构直接部署到大模型上
+\item 记忆进化将解决规模化挑战——支持数月甚至数年的持续运行
+\item 自演化的理论基础将更加完善——收敛性保证、安全性证明和效率下界
+\end{itemize}
+
+\subsubsection{长期（2029+）}
+
+\begin{itemize}
+\item "质变"式创新——自演化系统可能发现全新的推理范式或认知架构
+\item 自我指涉的深度递归——系统不仅能修改自身代码，还能修改"修改代码的代码"
+\item 人类与自演化系统的协作范式——如何在保持人类监督的同时释放自演化的潜力
+\item 自演化的社会影响——自动化能力提升对劳动力、教育和研究的影响
+\end{itemize}
+
+这些展望基于当前的研究趋势，实际发展可能更快或更慢。但有一点是确定的：Agent Evolution 正在从一个有趣的研究方向成长为一个关键的工程学科——如何在可控、安全、可验证的条件下让 AI 系统持续自我改进。
+
+% =====================================================================
+\subsection{深度案例分析}\label{sec:intro-deep-cases}
+% =====================================================================
+
+为了更深入地理解 Agent Evolution 的技术实质，本节对四个代表性系统进行深度案例分析。
+
+\subsubsection{案例 A：Reflexion 的语义梯度机制}
+
+Reflexion 的核心创新在于将稀疏的标量奖励（成功/失败）转化为稠密的语义反馈。其三模型架构可以形式化为：
+
+\begin{enumerate}
+\item Actor 在给定任务和记忆的情况下生成行动：
+$a_e = M_a(\text{task}, \mathcal{M}_{1:e-1})$
+
+\item Evaluator 评估行动结果：
+$r_e = M_e(a_e, \text{task})$
+
+\item Self-Reflection 生成自然语言反思：
+$f_e = M_r(a_e, r_e, \text{task})$
+\end{enumerate}
+
+关键点在于第三步：Self-Reflection 不仅报告"失败"，而且分析"为什么失败"和"应该怎么做"。这种语义丰富的反馈充当了传统 RL 中梯度的角色，但以自然语言形式表达。
+
+Reflexion 的实验揭示了几个重要规律：
+\begin{itemize}
+\item \textbf{具体反馈优于通用反馈}：指出"你忘了解析 JSON 返回值"比"你的代码有错误"有效得多
+\item \textbf{积累效应}：更多的反思轮次带来更好的性能，但收益递减——第 2-3 轮反思最有价值
+\item \textbf{记忆容量限制}：当反思记忆过长时，早期的反思可能被"淹没"，导致性能下降
+\end{itemize}
+
+Reflexion 的局限性在于：如果模型的自我评价能力不足以识别某些类型的错误，那么反思将无法产生有效的改进信号。这也是 RISE 通过 RL 训练来提升自我修正能力的动机之一。
+
+\subsubsection{案例 B：Absolute Zero 的零数据自博弈}
+
+Absolute Zero 实现了完全自给自足的自我进化——零外部数据，零人工标注。其核心是三角色自博弈框架：
+
+\textbf{任务生成}：模型不是直接生成题目，而是编写一个"题目生成器"——一段 Python 代码，运行后产生输入-输出对。这一设计确保了任务的可验证性：执行生成器代码即可得到标准答案。
+
+\textbf{三种推理模式}：
+\begin{itemize}
+\item \textbf{演绎（Deduction）}：给定规则和输入，预测输出——测试规则应用能力
+\item \textbf{溯因（Abduction）}：给定规则和输出，反推输入——测试逆向推理能力
+\item \textbf{归纳（Induction）}：给定输入-输出对，发现规则——测试模式识别能力
+\end{itemize}
+
+这三种模式覆盖了不同类型的推理能力，使得自博弈训练可以全面提升推理而非只优化某一类型。
+
+\textbf{课程设计}：Proposer 的奖励与任务的学习价值成正比——太简单的任务没有训练价值，太困难的任务无法提供有效反馈。最优的任务难度位于模型能力的"边界"——就像维果茨基的"最近发展区"理论。
+
+\textbf{跨域迁移}：最令人惊讶的发现是，仅通过代码自博弈训练，模型在数学推理上也表现出提升。这暗示了代码推理和数学推理共享某种"通用推理原语"——逻辑链条、条件分支、循环不变量等。
+
+\subsubsection{案例 C：AlphaEvolve 的 MAP-Elites 进化}
+
+AlphaEvolve 在数学和工程上的突破源于其精巧的进化架构：
+
+\textbf{双 LLM 集成}：Gemini Flash 用于广度探索（快速生成大量候选），Gemini Pro 用于深度洞察（针对关键候选进行精细修改）。这种"快速探索 + 深度精炼"的双层策略在进化计算中并不罕见，但 LLM 的语义理解能力使变异算子远比传统遗传算子高效。
+
+\textbf{MAP-Elites 质量多样性搜索}：不同于只保留最优个体的贪心搜索，MAP-Elites 维护一个行为描述符到最优个体的映射。在矩阵乘法问题中，行为描述符可以是"使用的乘法次数"——MAP-Elites 确保在每一个乘法次数级别上都保留最优算法。
+
+\textbf{56 年纪录的突破}：Strassen 在 1969 年发现了使用 49 次乘法的 4×4 复数矩阵乘法算法。AlphaEvolve 将这一纪录改进到 48 次——虽然只减少了 1 次乘法，但在 56 年无人改进的背景下，这一突破的意义不言而喻。
+
+AlphaEvolve 的局限性在于：它需要高质量的自动化评估器。在矩阵乘法问题中，可以编写验证器来确认算法的正确性和乘法次数。但对于大多数实际问题，这样的验证器并不存在。
+
+\subsubsection{案例 D：DGM 的开放式架构进化}
+
+DGM 的核心创新在于"开放式"（open-ended）的 archive 设计：
+
+\textbf{与 ADAS 的区别}：ADAS 的搜索空间是有限的（固定的迭代次数和候选数量），搜索目标是找到"最优"架构。DGM 的 archive 是无限增长的——只要新的 agent 比其父代更好，就被保留。这意味着 DGM 不仅搜索"好"的架构，而且搜索"多样化"的好架构。
+
+\textbf{多样性加权采样}：在选择父代时，DGM 不仅考虑适应度（在基准上的性能），还考虑多样性（与 archive 中其他 agent 的差异）。这类似于进化计算中的"niching"策略——维护多个生态位。
+
+\textbf{在 SWE-bench 上的表现}：从 20.0\% 到 50.0\% 的提升是一个质变——这意味着 DGM 发现的 agent 架构解决了手工设计 agent 无法解决的问题。更重要的是，DGM 发现的架构具有可解释性——研究者可以检查进化出的代码，理解为什么某些设计选择更有效。
+
+DGM 的发现之一是：进化出的 agent 往往使用"非直觉"的设计选择——例如在某些任务上跳过反思步骤，或使用非标准的工具调用顺序。这些发现对人类的 agent 设计直觉构成了挑战。
+
+% =====================================================================
+\subsection{自演化的哲学维度}\label{sec:intro-philosophy}
+% =====================================================================
+
+Agent Evolution 不仅是一个技术方向，也触及了一些深层的哲学问题。
+
+\subsubsection{自我意识的边界}
+
+当一个 agent 能够修改自己的代码、评价自己的行为、并决定是否接受修改时，它是否具有某种"自我意识"？从功能主义的角度看，这种自我反思和自我修改的能力与哲学中讨论的"元认知"（metacognition）有结构性的相似。当然，当前的系统远未达到真正的自我意识——它们的"反思"仍然是模式匹配而非真正的理解。但 Reflexion 的"语义梯度"和 Gödel Agent 的运行时自修改暗示了一个有趣的方向：自我改进的深度可能与我们所说的"自我意识"存在某种关联。
+
+\subsubsection{创造性 vs.\ 优化}
+
+AlphaEvolve 发现了超越人类的算法。这种发现应该被称为"创造性"吗？从计算的角度看，MAP-Elites 的质量多样性搜索与人类的创造性过程有相似之处——都是在探索多个可能性空间的同时保持高质量。但 LLM 的变异算子是基于训练数据中的模式——它"重新组合"了已知的知识，而非"无中生有"。真正的创造性可能需要跳出训练数据的范围，这超出了当前系统的能力。
+
+\subsubsection{控制权与自主性}
+
+随着自演化系统变得越来越自主，人类控制权的边界在哪里？DGM 的开放式进化已经产生了人类未曾预见的 agent 架构。当系统不仅能改进自己的代码，还能改进"改进代码的代码"时，人类是否还能理解系统在做什么？这不仅是一个技术问题，也是一个治理问题——我们需要新的框架来管理"渐进式自主"（progressive autonomy）。
+
+\subsubsection{对齐的终极挑战}
+
+Agent Evolution 的终极挑战是：如何确保一个能持续自我改进的系统始终与人类价值观对齐？Constitutional AI 的方法是用"宪法原则"约束自我评价。但当系统能修改自己的代码时，它是否也能修改自己的"宪法"？这就回到了 Gödel Machine 的核心困境：系统的自我改进是否有边界？如果有，谁设定这个边界？
+
+这些问题没有简单的答案。但 Agent Evolution 的研究正在迫使我们在技术实践中面对这些哲学问题——这不是抽象的思辨，而是具体的工程决策。
+
+% =====================================================================
+\subsection{文献覆盖与检索指南}\label{sec:intro-literature}
+% =====================================================================
+
+\subsubsection{论文分类索引}
+
+本综述引用的 88 篇核心论文按方法类别分类如下：
+
+\textbf{基于奖励的进化}（15 篇）：STaR~\citep{star2022}、Self-Rewarding~\citep{selfrewarding2024}、Meta-Rewarding~\citep{metarewarding2024}、RISE~\citep{rise2024}、RAGEN~\citep{ragen2025}、SPIN~\citep{spin2024}、ReST~\citep{rest2023}、Agent-R~\citep{agentr2024}、IterAlign~\citep{iteralign2024}、Constitutional AI~\citep{cai2022} 等。
+
+\textbf{自博弈进化}（8 篇）：Absolute Zero~\citep{absolutezero2025}、SPIRAL~\citep{spiral2024}、Multi-Agent Debate~\citep{madd2023}、Self-Play Fine-Tuning~\citep{spin2024} 等。
+
+\textbf{提示词进化}（12 篇）：Reflexion~\citep{reflexion2023}、Self-Refine~\citep{selfrefine2023}、Self-Debug~\citep{selfdebug2023}、ExPeL~\citep{expel2023}、ACE~\citep{ace2024}、Agent Symbolic Learning~\citep{agentsymbolic2024}、DSPy~\citep{dspy2023} 等。
+
+\textbf{架构搜索}（10 篇）：ADAS~\citep{adas2024}、Gödel Agent~\citep{godelagent2024}、DGM~\citep{dgm2025}、AlphaEvolve~\citep{alphaevolve2025}、FunSearch~\citep{funsearch2023}、EvoMAC~\citep{evomac2024}、SICA~\citep{sica2025} 等。
+
+\textbf{记忆进化}（8 篇）：Voyager~\citep{voyager2023}、Memory-R1~\citep{memoryr1_2025}、AriadneMem~\citep{ariadnemem2025}、ReasoningBank~\citep{reasoningbank2024} 等。
+
+\textbf{混合方法与系统}（6 篇）：EvolveR~\citep{evolver2024}、WebEvolver~\citep{webevolver2024}、AI Scientist~\citep{aiscientist2024}、SelfEvolve~\citep{selfevolve2023}、ReVeal~\citep{reveal2025} 等。
+
+\textbf{综述与理论}（9 篇）：包括进化计算综述、LLM 自我改进综述、开放式进化综述等。
+
+\subsubsection{代码仓库索引}
+
+348 个代码仓库按功能分为：基础模型仓库（45 个）、智能体框架（62 个）、进化搜索工具（28 个）、基准测试（35 个）、数据集（22 个）、教程与示例（56 个）和其他（100 个）。
+
+\subsubsection{检索建议}
+
+对于想要快速入门的读者，我们建议以下阅读路径：
+
+\textbf{实践者路径}：阅读本章（引言）→ 第\ref{ch:methods}章（方法分类）中的实践指南 → 第\ref{ch:industry}章（工业实践）→ 相关代码仓库。
+
+\textbf{研究者路径}：阅读本章 → 第\ref{ch:theory}章（理论基础）→ 第\ref{ch:methods}章（方法分类）→ 第\ref{ch:evaluation}章（评估体系）→ 开放问题。
+
+\textbf{安全研究者路径}：阅读本章中的风险与挑战 → Constitutional AI → 第\ref{ch:evaluation}章 → 安全护栏相关内容。
+
+本综述的所有材料——包括论文全文、代码仓库链接、痛点分析报告和技术博客索引——都可以在项目的 GitHub 仓库中找到。我们鼓励读者在阅读过程中对照原始材料，形成自己的判断。Agent Evolution 是一个快速发展的领域，本综述提供的不仅是一个静态的快照，更是一个持续更新的知识框架。

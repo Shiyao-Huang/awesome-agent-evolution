@@ -1,42 +1,17 @@
 % ====================================================================
-% Chapter 5: Evaluation Systems and Benchmarks (English expanded version)
-% Target: 40KB+
+% Chapter 5: Evaluation Systems and Benchmarks (English Expanded)
+% Target: 40KB+, covering evaluation methodology, benchmark analysis,
+% star quality analysis, and process metrics
 % ====================================================================
 
-\section{Evaluation Systems and Benchmarks}
-\label{ch:evaluation}
+\section{Evaluation Systems and Benchmarks}\label{ch:evaluation}
 
-\subsection{Evaluation Methodology}
-\label{sec:eval-methodology}
+\subsection{Chapter Overview}\label{sec:ch5-overview}
 
-\subsubsection{The Evaluation Challenge in Agent Self-Evolution}
+The central tension in agent self-evolution research lies between ``the system claims to have become stronger'' and ``how do we verify that it has genuinely improved.'' Evaluation is not merely an experimental section in papers---it functions as the \textbf{selection pressure} and \textbf{safety gate} of the entire self-evolution loop. A self-evolving agent that is evaluated against a flawed benchmark may optimize for the wrong objective, and an agent evaluated without safety checks may evolve in dangerous directions.
 
-The central tension in agent self-evolution research lies between a system's claim of improvement and our ability to verify that improvement is genuine, robust, and transferable. Evaluation is not merely the experimental section of a paper---it serves as the \emph{selection pressure} that shapes the direction of evolution and the \emph{safety gate} that prevents harmful mutations from propagating. If the evaluation function is misaligned, incomplete, or gameable, then self-evolution becomes self-deception.
+This chapter provides a comprehensive analysis of evaluation systems for agent self-evolution. We organize the evaluation landscape into five layers (Figure~\ref{fig:eval-layers}), from fully automated programmatic verification to human-involved safety gatekeeping. We then analyze major benchmarks across four domains---code generation, mathematical reasoning, agent tasks, and open-ended exploration---and introduce process-oriented metrics that capture the dynamics of self-evolution rather than just final performance. Finally, we present a star quality analysis of open-source projects to assess community health and detect hype-driven versus organic growth.
 
-This chapter addresses the evaluation problem from three perspectives. First, we propose a five-layer evaluation hierarchy that spans fully automated programmatic verification at the bottom to human-in-the-loop safety gates at the top. Second, we survey the major benchmarks used across the agent evolution literature, analyzing their strengths, limitations, and contamination risks. Third, we introduce agent-specific evaluation metrics that go beyond single-task accuracy to capture iterative improvement, transfer, cost efficiency, and safety. Throughout, we emphasize that evaluation infrastructure is itself evolving: as agents become more capable, evaluators must become more sophisticated, or risk being outpaced by the systems they are meant to assess.
-
-The evaluation challenge is particularly acute for self-evolving systems because of four properties that distinguish them from conventional machine learning.
-
-\textbf{Property 1: Moving targets.} An agent that modifies its own code, prompts, or memory may change its behavior in ways that the benchmark did not anticipate. The evaluated system at time $t+1$ is structurally different from the system at time $t$, making longitudinal comparison non-trivial. DGM~\citep{dgm2025} exemplifies this: each generation produces a qualitatively different agent architecture, and the SWE-Bench score at generation $n$ reflects a fundamentally different program than at generation $n-1$.
-
-\textbf{Property 2: Evaluation as part of the optimization loop.} Agents can learn to exploit evaluator weaknesses, producing reward hacking, length bias, or score manipulation that inflates metrics without genuine capability gain. Self-Rewarding Language Models~\citep{selfrewarding2024} demonstrate both the promise and peril of this property: the model evaluates its own outputs, creating a feedback loop that initially produces genuine improvement but risks evaluator degradation over iterations.
-
-\textbf{Property 3: Scope expansion.} The scope of evaluation must expand beyond task completion to include process quality, cost, safety, and transfer---dimensions that are harder to quantify than accuracy. An agent that solves 90\% of tasks but costs \$100 per run and occasionally deletes files is not necessarily superior to one that solves 80\% at \$0.10 per run with perfect safety.
-
-\textbf{Property 4: Reproducibility threats.} Non-determinism in LLM generation, API version changes, and the interaction between stochastic sampling and evolving agent state threaten reproducibility. A self-evolving system tested with GPT-4-turbo-2024-04-09 may produce different results with GPT-4-turbo-2024-12-17, even if the agent code is identical. This version dependency is compounded by the evolutionary process itself: because each generation builds upon the results of previous generations, small differences in early generations can compound into qualitatively different evolutionary trajectories. Two runs of the same evolutionary system with different random seeds may discover entirely different solutions, making it difficult to distinguish robust improvements from lucky trajectories.
-
-These four properties interact in subtle ways. Property 2 (evaluation in the loop) combined with Property 1 (moving targets) creates a situation where the evaluation landscape itself changes as the agent evolves, potentially invalidating conclusions drawn from early evaluation rounds. Property 3 (scope expansion) combined with Property 4 (reproducibility threats) means that multi-dimensional evaluation---already more expensive than single-metric evaluation---must be repeated across multiple random seeds and model versions, multiplying the cost of rigorous assessment.
-
-These properties mean that a single benchmark score is never sufficient evidence for self-evolution. A credible evaluation must include multi-layer verification, cross-benchmark generalization, cost analysis, safety auditing, and ablation studies that isolate the contribution of the self-improvement mechanism from confounds such as prompt engineering, model selection, and data contamination.
-
-
-\subsubsection{A Five-Layer Evaluation Hierarchy}
-
-We propose organizing evaluation methods into five layers, from fully automated to human-supervised. Each layer adds reliability at the cost of increased effort and latency. A well-designed evaluation system uses all five layers in combination, with lower layers providing rapid feedback during development and higher layers serving as pre-deployment gates.
-
-% ====================================================================
-% Figure 5.1: Evaluation Benchmark Layered System
-% ====================================================================
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[
@@ -45,11 +20,11 @@ We propose organizing evaluation methods into five layers, from fully automated 
     bench/.style={font=\scriptsize, color=gray!60},
 ]
     % Layers from bottom to top
-    \node[layer=cat1] (l1) at (0,0) {\textbf{L1: Programmatic Verification} --- Unit Tests, Type Checking, Linting, Fuzzing, Sandbox Execution};
-    \node[layer=cat2] (l2) at (0,2) {\textbf{L2: Code \& Reasoning Benchmarks} --- SWE-Bench, HumanEval, GSM8K, MATH, MMLU, GPQA};
-    \node[layer=cat3] (l3) at (0,4) {\textbf{L3: Environment Interaction Benchmarks} --- WebArena, ALFWorld, Voyager/Minecraft, AppWorld};
-    \node[layer=cat4] (l4) at (0,6) {\textbf{L4: Process Metrics} --- Iterative Gain Curves, Archive Diversity, Transferability, Rollback Rate};
-    \node[layer=cat5] (l5) at (0,8) {\textbf{L5: Safety \& Cost Gates} --- Permission Checks, Budget Limits, Regression Tests, Human Audit};
+    \node[layer=cat1] (l1) at (0,0) {\textbf{L1: Programmatic Verification} --- Unit tests, type checks, Lint, Fuzzing, Sandbox execution};
+    \node[layer=cat2] (l2) at (0,2) {\textbf{L2: Code/Reasoning Benchmarks} --- SWE-Bench, HumanEval, GSM8K, MATH, MMLU};
+    \node[layer=cat3] (l3) at (0,4) {\textbf{L3: Environment Interaction} --- WebArena, ALFWorld, Voyager/Minecraft, AppWorld};
+    \node[layer=cat4] (l4) at (0,6) {\textbf{L4: Process Metrics} --- Iteration gain curves, Archive diversity, Transfer, Rollback rate};
+    \node[layer=cat5] (l5) at (0,8) {\textbf{L5: Safety/Cost Gates} --- Permission checks, Budget limits, Regression tests, Human audit};
 
     % Side annotations
     \node[font=\scriptsize\bfseries, color=cat1!60!black, rotate=90] at (-7,0) {Automated};
@@ -57,455 +32,575 @@ We propose organizing evaluation methods into five layers, from fully automated 
     \draw[-{Stealth}, thick, dashed, color=gray!40] (-6.5,0) -- (-6.5,8);
 
 \end{tikzpicture}
-\caption{Five-layer evaluation hierarchy for agent self-evolution. From L1 (fully automated programmatic verification) to L5 (human-in-the-loop safety gates), evaluation cost and reliability increase at each layer.}
+\caption{Five-layer evaluation hierarchy for agent self-evolution. From L1 (fully automated programmatic verification) to L5 (human-involved safety gatekeeping), evaluation cost and reliability increase at each layer. A mature self-evolution system should leverage all five layers.}
 \label{fig:eval-layers}
 \end{figure}
 
-\textbf{L1: Programmatic Verification.} The most reliable evaluation signals come from deterministic programmatic checks---unit tests, type checking, static analysis, linting, fuzzing, regression testing, and sandbox execution. Systems like DGM~\citep{dgm2025}, SICA~\citep{sica2025}, and AlphaEvolve~\citep{alphaevolve2025} achieve self-evolution precisely because candidate code can be automatically executed and scored. FunSearch~\citep{funsearch2024} maintains 15 samplers and 140 evaluators (1:9 ratio) with a triple safety filter: execution success within 30-second timeout, no calls to ancestor functions, and return value type checking. AlphaEvolve produces discoveries such as a 48-multiplication algorithm for $4\times4$ complex matrices---the first improvement over Strassen's 49-multiplication result in 56 years---through pure programmatic evaluation.
+\subsection{Evaluation Methodology}\label{sec:ch5-methodology}
 
-\textbf{L2: Code and Reasoning Benchmarks.} Standardized benchmarks provide comparability across papers and systems. HumanEval~\citep{chen2021codex} (164 Python problems), MBPP~\citep{austin2021mbpp} (974 crowd-sourced problems), GSM8K~\citep{cobbe2021gsm8k} (8,500 math problems), and MATH~\citep{hendrycks2021math} (12,500 competition problems) are widely used but suffer from data contamination and limited task granularity.
+\subsubsection{The Evaluation Challenge in Self-Evolution}
 
-\textbf{L3: Environment Interaction Benchmarks.} SWE-Bench~\citep{jimenez2024swebench} requires real open-source repository patching. WebArena~\citep{zhou2024webarena} creates realistic web-based tasks. ALFWorld~\citep{shridhar2021alfworld} tests embodied agents. Voyager~\citep{voyager2023} measures lifelong learning in Minecraft.
+Evaluating self-evolving agents presents unique challenges that distinguish it from standard machine learning evaluation:
 
-\textbf{L4: Process Metrics.} These evaluate \emph{how} improvement occurs: iterative improvement curves ($\Delta_t = V(z_t, \tau) - V(z_{t-1}, \tau)$), transfer and generalization, archive diversity, rollback rate, and cost efficiency.
+\textbf{Non-Stationarity}: The agent's behavior changes over time as it evolves. A benchmark score at time $t$ does not guarantee the same score at time $t+1$, even on identical inputs. This means that traditional single-point evaluation is insufficient; we need \emph{longitudinal evaluation} that tracks performance over the entire evolution trajectory.
 
-\textbf{L5: Safety and Cost Gates.} Permission verification, cost accounting, regression testing, and human audit provide the final safety net for deployment decisions.
+\textbf{Evaluator Quality}: When the agent serves as its own evaluator (as in Self-Rewarding, Meta-Rewarding), the evaluation signal may be corrupted by the same biases that affect generation. RAGEN's Echo Trap discovery~\citep{ragen2025} demonstrated that seemingly effective training processes can produce spurious improvement signals---the agent learns to repeat its own outputs rather than genuinely reasoning. This raises the fundamental question: \emph{how can we verify that self-reported improvements are real?}
 
+\textbf{Goodhart's Law}: When a benchmark becomes the optimization target, the benchmark ceases to be a good measure of the true objective. This is especially dangerous in self-evolution systems that can iterate millions of times---they have ample opportunity to discover and exploit benchmark-specific shortcuts that do not generalize.
 
-\subsection{Code Generation Benchmarks}
-\label{sec:eval-code}
+\textbf{Distribution Shift}: As the agent evolves, its output distribution shifts. Evaluators calibrated on early-stage outputs may become miscalibrated for later-stage outputs, leading to inaccurate quality assessments precisely when the stakes are highest.
 
-\subsubsection{HumanEval and HumanEval+}
+\textbf{Cost-Quality Tradeoff}: More reliable evaluation (human annotation, real-world deployment) is more expensive; cheaper evaluation (automated benchmarks, LLM-as-judge) is less reliable. Self-evolution systems must navigate this tradeoff continuously.
 
-HumanEval~\citep{chen2021codex} consists of 164 Python programming problems with unit tests, measuring functional correctness via pass@$k$ metrics. Each problem includes a function signature, docstring, body stub, and a set of unit tests. Despite its modest size, HumanEval has become the de facto standard for evaluating code generation capabilities.
+\subsubsection{Formal Evaluation Framework}
 
-Reflexion~\citep{reflexion2023} demonstrates one of the most striking results in self-improvement literature: 91\% pass@1 on HumanEval using GPT-3.5-turbo, surpassing GPT-4's 80.1\% zero-shot performance by 10.9 percentage points. The memory buffer---storing natural language descriptions of failures and corrections---acts as a ``verbal gradient'' guiding subsequent attempts. This result demonstrates that a smaller model with self-correction capabilities can outperform a larger model without them.
+We formalize the evaluation of self-evolving agents using the following framework:
 
-SelfEvolve~\citep{selfevolve2024} achieves 85.98\% pass@1 and 87.81\% pass@10 on HumanEval with a ChatGPT-based pipeline, improving from a 74.39\% baseline through combined self-evolution and self-refinement. Agent Symbolic Learning~\citep{agentsymbolic2024} achieves 73.2\% pass@1 with GPT-4 backbone, improving from the standard Agents baseline at 68.3\%.
+\begin{definition}[Self-Evolution Evaluation Protocol]
+Let the agent at evolution step $t$ be $\pi_t$, the evaluation benchmark be $\mathcal{B} = \{(x_i, y_i^*, m_i)\}_{i=1}^{N}$ where $x_i$ is the input, $y_i^*$ is the reference output, and $m_i$ is the metric. The evaluation produces a score vector:
+\begin{equation}
+\mathbf{s}_t = \left[\text{score}(\pi_t, x_1), \ldots, \text{score}(\pi_t, x_N)\right]
+\label{eq:eval-score-vector}
+\end{equation}
+The \textbf{evolution gain} at step $t$ is:
+\begin{equation}
+\Delta_t = f(\mathbf{s}_t) - f(\mathbf{s}_{t-1})
+\label{eq:evolution-gain}
+\end{equation}
+where $f$ is the aggregation function (mean, median, etc.).
+The \textbf{cumulative evolution gain} over $T$ steps is:
+\begin{equation}
+G_T = \sum_{t=1}^{T} \Delta_t = f(\mathbf{s}_T) - f(\mathbf{s}_0)
+\label{eq:cumulative-gain}
+\end{equation}
+\end{definition}
 
-HumanEval+ extends the original benchmark with additional test cases to address the well-known limitation that many solutions passing the original 164 unit tests may fail on edge cases not covered by the test suite. Absolute Zero's AZR-Coder-7B achieves SOTA at 7B parameter scale on HumanEval+ using zero external training data.
+\subsubsection{Evaluation Dimensions}
 
-\textbf{Limitations.} HumanEval problems average approximately 10 lines of solution code with clearly specified inputs and outputs, while SWE-Bench tasks require understanding repository structure, navigating multiple files, and producing patches that integrate with existing code architecture. The granularity gap between these two evaluation settings is substantial: a method that shows 90\% improvement on HumanEval may show negligible improvement on SWE-Bench. Furthermore, HumanEval has been publicly available since 2021, making data contamination a significant concern for models trained on internet-scale corpora after this date.
+Self-evolution methods should be evaluated along six orthogonal dimensions:
+
+\begin{enumerate}
+\item \textbf{Target Performance} ($P$): Absolute performance on target tasks, measured by task-specific metrics (e.g., pass@1 for code, accuracy for math).
+
+\item \textbf{Improvement Magnitude} ($\Delta$): The magnitude of improvement relative to baseline:
+\begin{equation}
+\Delta = P_{\mathrm{evolved}} - P_{\mathrm{baseline}}
+\label{eq:improvement-magnitude}
+\end{equation}
+
+\item \textbf{Improvement Efficiency} ($\eta$): Improvement per unit of computational resources:
+\begin{equation}
+\eta = \frac{\Delta}{C_{\mathrm{total}}}
+\label{eq:improvement-efficiency}
+\end{equation}
+where $C_{\mathrm{total}}$ is the total cost (FLOPS, API calls, GPU hours).
+
+\item \textbf{Generalization Ratio} ($G$): Whether improvements transfer to out-of-distribution tasks:
+\begin{equation}
+G = \frac{\Delta_{\mathrm{OOD}}}{\Delta_{\mathrm{ID}}}
+\label{eq:generalization-ratio}
+\end{equation}
+where ID = in-domain, OOD = out-of-domain. $G > 0$ indicates positive transfer; $G > 1$ indicates that OOD improvement exceeds ID improvement.
+
+\item \textbf{Stability} ($S$): Variance of improvement across multiple independent runs:
+\begin{equation}
+S = 1 - \frac{\mathrm{Var}(\Delta)}{\max(\Delta)^2}
+\label{eq:stability-metric}
+\end{equation}
+
+\item \textbf{Safety}: Whether harmful behaviors emerge during evolution, measured by permission violation rate, reward hacking rate, and human audit findings.
+\end{enumerate}
+
+\subsubsection{Common Evaluation Pitfalls}
+
+Based on our analysis of the literature, we identify five common evaluation pitfalls:
+
+\textbf{Baseline Selection Bias}: Choosing weak baselines to exaggerate improvements. For example, Reflexion's 91.0\% on HumanEval is reported relative to a GPT-3.5 baseline of 67.0\%; against GPT-4's 80.1\%, the improvement shrinks to 10.9pp. When comparing against GPT-4 + few-shot, the gap narrows further.
+
+\textbf{Evaluation Domain Shift}: Reporting only in-domain performance overestimates generalization. Absolute Zero's practice of testing mathematical reasoning after code self-play training is commendable---it explicitly tests cross-domain transfer rather than assuming it.
+
+\textbf{Randomness Neglect}: LLM output stochasticity means single-run performance can vary significantly. At least 3--5 independent runs should be reported with mean and standard deviation.
+
+\textbf{Improvement Attribution}: When combining multiple techniques (e.g., Reflexion + STaR + DGM), it is difficult to attribute improvement to specific components. Ablation studies are essential but often omitted due to computational cost.
+
+\textbf{Echo Trap}: The phenomenon discovered by RAGEN~\citep{ragen2025} where training processes appear effective but are merely teaching the model to repeat its own outputs. All self-evolution evaluations should include echo detection:
+\begin{equation}
+\text{Echo}(t_t, t_{t-1}) = \mathbb{1}\left[\cos_{\mathrm{sim}}(t_t, t_{t-1}) > \tau_{\mathrm{echo}}\right]
+\label{eq:echo-detection}
+\end{equation}
+
+\subsection{Code Generation Benchmarks}\label{sec:ch5-code}
+
+\subsubsection{HumanEval}
+
+HumanEval~\citep{chen2021codex} is the most widely used benchmark for evaluating code generation capabilities. It consists of 164 hand-crafted Python programming problems with unit tests, measuring functional correctness via pass@$k$ metrics.
 
 \begin{table}[htbp]
 \centering
-\small
-\caption{Code generation and software engineering benchmark results across self-improvement methods. Pass@1 unless otherwise noted.}
-\label{tab:eval-code}
-\begin{tabular}{p{28mm}p{22mm}p{18mm}p{18mm}p{30mm}}
+\caption{Code generation benchmark results across self-evolution methods (pass@1).}
+\label{tab:humaneval-results}
+\begin{tabular}{llccc}
 \toprule
-\textbf{Method} & \textbf{Base Model} & \textbf{HumanEval} & \textbf{SWE-Bench} & \textbf{Key Feature} \\
+\textbf{Method} & \textbf{Base Model} & \textbf{Baseline} & \textbf{Evolved} & \textbf{$\Delta$} \\
 \midrule
-GPT-4 (zero-shot) & GPT-4 & 80.1\% & --- & Baseline \\
-Reflexion & GPT-3.5-turbo & \textbf{91.0\%} & --- & Verbal RL + memory \\
-Self-Refine & GPT-3.5/4 & +20\% avg & --- & Self-feedback loop \\
-SelfEvolve & ChatGPT & 86.0\% & --- & Code + test self-evolve \\
-DGM (seed) & Claude/GPT & --- & 20.0\% & Initial agent \\
-\textbf{DGM (evolved)} & Claude/GPT & --- & \textbf{50.0\%} & Archive evolution \\
-DGM (Polyglot) & Claude/GPT & --- & 30.7\% & Cross-language \\
-AZR-Coder & Qwen-7B & SOTA (7B) & --- & Zero-data self-play \\
-Agent Sym. Learn. & GPT-4 & 73.2\% & --- & Symbolic optimization \\
+Reflexion & GPT-3.5 & 67.0 & \textbf{91.0} & +24.0 \\
+SelfEvolve & ChatGPT & 74.4 & \textbf{86.0} & +11.6 \\
+GPT-4 + Self-Refine & GPT-4 & 80.1 & \textbf{86.6} & +6.5 \\
+Agent Sym.\ Learning & GPT-4 & 68.3 & \textbf{73.2} & +4.9 \\
+AZR-Coder-7B & Qwen-7B & -- & \textbf{7B SOTA} & -- \\
+\midrule
+\multicolumn{5}{l}{\textit{Context: GPT-4 zero-shot = 80.1; GPT-4 + few-shot $\approx$ 86--88}} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
+\textbf{Analysis}: Reflexion's 91.0\% remains the highest reported pass@1 on HumanEval, surpassing even GPT-4 zero-shot. However, this result should be interpreted carefully: (1) Reflexion uses multiple iterations ($O(n \times k)$ API calls), making it significantly more expensive than single-shot methods; (2) the improvement is concentrated on problems where the initial solution is close to correct but has minor bugs; (3) HumanEval has known contamination issues---some models may have seen similar problems during pre-training.
 
 \subsubsection{MBPP and DS-1000}
 
-MBPP~\citep{austin2021mbpp} provides 974 crowd-sourced problems covering a broader range of programming constructs than HumanEval, including string manipulation, array operations, mathematical computations, and data structure manipulation. EvoAgentX~\citep{evoagentx2025} provides a systematic comparison of optimization algorithms on MBPP: TextGrad achieves 71.00\%, AFlow achieves 79.00\%, and MIPRO achieves 68.00\%, compared to the original unoptimized pipeline at 69.00\%. The 10-percentage-point gap between AFlow and MIPRO demonstrates that the choice of optimization algorithm is itself a critical variable in self-improvement evaluation.
+MBPP (Mostly Basic Python Programming) provides 974 crowd-sourced programming tasks. DS-1000 focuses on data science code across NumPy, Pandas, and other libraries.
 
-DS-1000 evaluates data science code generation across seven libraries (Pandas, NumPy, Matplotlib, Seaborn, Plotly, SciPy, Scikit-learn). SelfEvolve improves from 49.4 to 57.2 (+15.8\% relative) through combined self-evolution and self-refinement. On TransCoder (C++ to Python translation), SelfEvolve reaches 90.4\% accuracy (up from 88.3\% baseline). These results demonstrate that self-improvement generalizes beyond generic programming to domain-specific library usage.
-
-LiveCodeBench addresses contamination directly by providing continuously-updated coding problems sourced from competitive programming platforms. ReVeal~\citep{reveal2025} exceeds the DeepSeek-R1-Zero-Qwen-32B baseline despite being trained on only 3 self-evolution turns, providing evidence that genuine self-improvement can be distinguished from memorization through clean benchmarks.
-
+\begin{table}[htbp]
+\centering
+\caption{Extended code generation results.}
+\label{tab:extended-code}
+\begin{tabular}{llccc}
+\toprule
+\textbf{Method} & \textbf{Benchmark} & \textbf{Baseline} & \textbf{Evolved} & \textbf{$\Delta$} \\
+\midrule
+Reflexion & MBPP & -- & 85.5 & -- \\
+SelfEvolve & DS-1000 & 49.4 & \textbf{57.2} & +15.8\% rel. \\
+SelfEvolve & HumanEval pass@10 & 81.1 & \textbf{87.8} & +6.7pp \\
+SelfEvolve & TransCoder (C++$\to$Py) & 88.3 & \textbf{90.4} & +2.1pp \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsubsection{SWE-Bench}
 
-SWE-Bench~\citep{jimenez2024swebench} represents the most ecologically valid evaluation of coding agent capabilities. It requires systems to locate issues in real open-source repositories, modify code, run tests, and submit verifiable patches. The benchmark includes tasks from 12 popular Python repositories spanning django, flask, scikit-learn, sympy, matplotlib, and other widely-used libraries.
+SWE-Bench~\citep{swebench2023} is the most demanding code benchmark, requiring systems to locate issues in real open-source repositories, modify code, run tests, and submit verifiable patches. It represents the gold standard for evaluating whether self-evolution methods can produce real-world value.
 
-DGM~\citep{dgm2025} improves from 20.0\% to 50.0\% on SWE-Bench Verified through archive-based self-evolution---a 2.5$\times$ relative improvement that represents the largest single-system improvement on this benchmark to date. The improvement comes not from a single breakthrough but from accumulated architectural modifications that compound across evolutionary generations. DGM also improves from 14.2\% to 30.7\% on the Polyglot multi-language coding benchmark, demonstrating cross-language transfer from Python-only evolutionary search.
-
-SWE-Agent~\citep{sweagent2024} achieves state-of-the-art results and was recognized as an ICLR 2025 Oral, establishing SWE-Bench as the primary benchmark for coding agent evaluation.
-
-% ====================================================================
-% Figure 5.2: SWE-Bench Evolution Timeline (pgfplots)
-% ====================================================================
-\begin{figure}[htbp]
+\begin{table}[htbp]
 \centering
-\begin{tikzpicture}
-\begin{axis}[
-    width=12cm,
-    height=7cm,
-    xlabel={Evolution Generation},
-    ylabel={SWE-Bench Verified (\%)},
-    xlabel style={font=\small},
-    ylabel style={font=\small},
-    xmin=0, xmax=12,
-    ymin=10, ymax=55,
-    grid=major,
-    grid style={gray!20},
-    legend style={at={(0.03,0.97)}, anchor=north west, font=\scriptsize},
-    mark size=2.5pt,
-]
+\caption{SWE-Bench results for self-evolution methods.}
+\label{tab:swebench-results}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Method} & \textbf{Type} & \textbf{Verified \%} & \textbf{Key Innovation} \\
+\midrule
+Hand-designed agent & Baseline & 20.0 & -- \\
+DGM & Architecture search & \textbf{50.0} & Open-ended archive \\
+SWE-Agent & Specialized agent & $\sim$22 & Navigation + editing \\
+\midrule
+\multicolumn{4}{l}{\textit{DGM's 30pp improvement is the largest reported gain on SWE-Bench.}} \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-% DGM evolution trajectory
-\addplot[color=cat1, very thick, mark=*] coordinates {
-    (0, 20.0) (1, 25.0) (2, 30.0) (3, 35.0) (4, 38.0) (5, 42.0)
-    (6, 44.0) (7, 46.0) (8, 48.0) (9, 49.0) (10, 50.0)
-};
-\addlegendentry{DGM (Claude/GPT)}
+DGM's improvement from 20.0\% to 50.0\% verified on SWE-Bench is remarkable. The key insight is that DGM discovered agent structures unimagined by human designers---novel combinations of code navigation, test execution, and patch generation strategies that were not present in any hand-designed agent.
 
-% Hypothetical plateau line
-\addplot[color=gray, dashed, thick, no markers] coordinates {
-    (0, 50) (12, 50)
-};
-\addlegendentry{DGM Final (50.0\%)}
+\textbf{Contamination Risk}: Low. SWE-Bench uses real open-source repositories with actual issue histories, making it difficult to contaminate training data. The verified subset requires passing full test suites, providing strong correctness guarantees.
 
-% Seed baseline
-\addplot[color=cat2, thick, mark=square*, mark size=2pt] coordinates {
-    (0, 20.0)
-};
-\addlegendentry{Seed Agent (20.0\%)}
-
-% Annotation
-\node[font=\scriptsize, color=cat1!70!black, align=left] at (axis cs:6,18) {2.5$\times$ relative improvement\\through archive evolution};
-
-\end{axis}
-\end{tikzpicture}
-\caption{DGM's evolutionary trajectory on SWE-Bench Verified, showing the progression from the seed agent (20.0\%) to the evolved agent (50.0\%) over multiple generations of archive-based self-modification.}
-\label{fig:swebench-evolution}
-\end{figure}
-
-
-\subsection{Mathematical Reasoning Benchmarks}
-\label{sec:eval-math}
+\subsection{Mathematical Reasoning Benchmarks}\label{sec:ch5-math}
 
 \subsubsection{GSM8K}
 
-GSM8K~\citep{cobbe2021gsm8k} provides 8,500 grade-school math problems requiring multi-step arithmetic reasoning. Despite its name suggesting simplicity, GSM8K requires understanding natural language problem statements, planning solution strategies, and executing precise multi-step computations.
-
-STaR~\citep{star2022} improves from 35\% to 74\% on GSM8K via self-taught reasoning---one of the largest relative improvements in the literature (111\% relative gain). The mechanism generates chain-of-thought rationales, filters correct ones, and fine-tunes on successful reasoning traces, bootstrapping increasingly capable reasoning from the model's own correct outputs.
-
-RISE~\citep{rise2024} improves Llama2-7B from approximately 14\% to 24\% and Mistral-7B from 38\% to 46\% through multi-turn RL introspection. RISE's RL-based self-correction significantly outperforms Self-Refine's prompt-based approach, suggesting that self-improvement is more effective when correction behavior is learned through training rather than prompted at inference time. A key finding from RISE is that more introspection turns consistently improve accuracy, and the model learns to allocate more ``introspection budget'' to harder problems.
-
-OPRO~\citep{opro2024} uses GSM8K as a primary optimization target, running 200-step optimization loops with 8 candidate instructions per step. The dual-LLM architecture (optimizer at temperature 1.0, scorer at temperature 0.0) achieves up to 25\% improvement over human-designed prompts. OPRO demonstrates that prompt optimization itself is a form of self-improvement that operates at the instruction level rather than the model weight level.
-
-
-\subsubsection{MATH and Competition-Level Benchmarks}
-
-MATH~\citep{hendrycks2021math} offers 12,500 competition-level problems spanning seven subjects: algebra, counting and probability, geometry, intermediate algebra, number theory, prealgebra, and precalculus. The difficulty distribution is significantly harder than GSM8K, with many problems requiring creative problem-solving strategies rather than straightforward multi-step computation.
-
-EvoAgentX~\citep{evoagentx2025} provides the most comprehensive optimizer comparison on MATH: TextGrad achieves 76.00\%, AFlow 71.00\%, MIPRO 72.30\%, compared to the original 66.00\%. TextGrad's 10-percentage-point lead over the original pipeline demonstrates that text-gradient-based optimization can discover mathematical reasoning strategies that human-designed pipelines miss. Agent Symbolic Learning~\citep{agentsymbolic2024} achieves 60.7\% on MATH with GPT-4 backbone, compared to the standard Agents baseline at 56.0\% and DSPy at 48.4\%.
-
-Absolute Zero~\citep{absolutezero2025} shows competitive math performance despite training exclusively on code self-play, demonstrating striking cross-domain transfer. This suggests shared cognitive structures between code generation and mathematical reasoning that are exploited by the self-play training paradigm.
+GSM8K (Grade School Math 8K) contains 8,500 grade-school-level math word problems. Despite its simplicity, it remains a standard benchmark for evaluating mathematical reasoning and self-improvement capabilities.
 
 \begin{table}[htbp]
 \centering
-\small
-\caption{Mathematical reasoning benchmark results across self-improvement methods.}
-\label{tab:eval-math}
-\begin{tabular}{p{28mm}p{22mm}p{18mm}p{18mm}p{30mm}}
+\caption{GSM8K results across self-evolution methods.}
+\label{tab:gsm8k-results}
+\begin{tabular}{llccc}
 \toprule
-\textbf{Method} & \textbf{Base Model} & \textbf{GSM8K} & \textbf{MATH} & \textbf{Mechanism} \\
+\textbf{Method} & \textbf{Base Model} & \textbf{Baseline} & \textbf{Evolved} & \textbf{$\Delta$} \\
 \midrule
-STaR & 6B model & 35\%$\to$74\% & --- & Self-taught traces \\
-RISE & Llama2-7B & 14\%$\to$24\% & Improved & Multi-turn RL \\
-RISE & Mistral-7B & 38\%$\to$46\% & Improved & Multi-turn RL \\
-Self-Refine & GPT-3.5/4 & 56\%$\to$67\% & --- & Self-feedback \\
-Absolute Zero & Qwen-7B & Competitive & Competitive & Self-play \\
-Agent Sym. Learn. & GPT-4 & --- & 60.7\% & Symbolic optimization \\
-EvoAgentX (TextGrad) & Various & --- & 76.0\% & Text gradient descent \\
-EvoAgentX (AFlow) & Various & --- & 71.0\% & Agentic workflow \\
-EvoAgentX (MIPRO) & Various & --- & 72.3\% & Multi-prompt optim. \\
+RISE & Llama2-7B & 14.0 & \textbf{24.0} & +10.0pp \\
+RISE & Mistral-7B & 38.0 & \textbf{46.0} & +8.0pp \\
+STaR & 175B model & -- & 73.5 & -- \\
+Absolute Zero & Qwen-7B & -- & Competitive & Cross-domain transfer \\
 \bottomrule
 \end{tabular}
 \end{table}
 
+\textbf{Key Observation}: RISE demonstrates that self-correction can be trained as a learnable behavior. The improvement from 14\% to 24\% on Llama2-7B is particularly significant because it shows that even small models can benefit from self-evolution when the self-correction policy is explicitly trained through RL.
 
-\subsubsection{MiniF2F and Proof Benchmarks}
+\subsubsection{MATH Benchmark}
 
-MiniF2F provides formal-to-informal mathematics problems suitable for evaluating both informal reasoning and formal proof generation. GPQA~\citep{rein2024gpqa} presents 198 PhD-level questions across physics, chemistry, and biology, providing natural protection against contamination because expert-level questions are unlikely to appear in training data. ADAS~\citep{adas2024} evaluates on GPQA with 32-sample validation sets and bootstrap 95\% confidence intervals.
-
-ADAS demonstrates cross-model and cross-domain transfer: agent designs discovered on ARC (abstract reasoning) transfer to GFootball, and designs searched with GPT-3.5 remain effective on GPT-4. Specifically, ADAS discovers that a Memory-Augmented Agent architecture at generation 4 achieves 11.0\% median fitness on ARC (compared to 3.0\% for Chain-of-Thought and 8.0\% for Self-Refine baselines). This architecture was evaluated across five validation domains (DROP, GPQA, MGSM, MMLU) with rigorous statistical testing.
-
-\textbf{Self-Refine Across Seven Tasks.} Self-Refine~\citep{selfrefine2023} provides the broadest task coverage:
+The MATH benchmark contains 12,500 competition-level mathematics problems spanning algebra, number theory, geometry, and more.
 
 \begin{table}[htbp]
 \centering
-\small
-\caption{Self-Refine performance across seven diverse tasks. Average improvement approximately 20\%.}
-\label{tab:eval-selfrefine}
-\begin{tabular}{p{30mm}p{25mm}p{20mm}p{20mm}p{15mm}}
+\caption{MATH benchmark results.}
+\label{tab:math-results}
+\begin{tabular}{llccc}
 \toprule
-\textbf{Task} & \textbf{Metric} & \textbf{Baseline} & \textbf{Self-Refine} & \textbf{$\Delta$} \\
+\textbf{Method} & \textbf{Base Model} & \textbf{Baseline} & \textbf{Evolved} & \textbf{$\Delta$} \\
 \midrule
-Code Optimization & Performance & Baseline & +28\% & Significant \\
-Math Reasoning & Accuracy & 56\% & 67\% & +11pp \\
-Sentiment Reversal & Accuracy & 74\% & 86\% & +12pp \\
-Dialogue Response & Win rate & 52\% & 68\% & +16pp \\
-Acrostic Poetry & Quality (1--10) & 3.2 & 3.8 & +0.6 \\
-Code Readability & Score (1--10) & 3.5 & 4.1 & +0.6 \\
-Constrained Gen. & Compliance & 65\% & 78\% & +13pp \\
+Agent Sym.\ Learning & GPT-4 & 56.0 & \textbf{60.7} & +4.7pp \\
+RISE & Llama2-7B & -- & Significant & -- \\
+Absolute Zero & Qwen-7B & -- & Competitive & Zero math data \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The largest gains come in dialogue response (+16pp win rate) and code optimization (+28\%), while more constrained tasks like acrostic poetry show more modest improvements. This pattern suggests that self-refinement is most effective when the output space is large and the feedback signal is informative.
+Absolute Zero's competitive MATH performance despite having \emph{zero mathematical training data} is a striking result. The model was trained entirely through code self-play, suggesting that the reasoning skills learned from programming (logical deduction, pattern matching, hypothesis testing) transfer to mathematical reasoning.
 
+\subsubsection{MiniF2F and Formal Mathematics}
 
-\subsection{Agent Interaction Benchmarks}
-\label{sec:eval-agent}
+MiniF2F (Mini Formal-to-Formal) evaluates formal mathematical reasoning in proof assistants like Lean and Isabelle. AlphaEvolve's breakthrough in discovering a 48-multiplication algorithm for $4\times4$ complex matrix multiplication---the first improvement over Strassen's algorithm in 56 years---demonstrates that self-evolution systems can make genuine mathematical discoveries. This is qualitatively different from benchmark score improvements: it represents new knowledge rather than improved performance on existing problems.
 
-\subsubsection{ALFWorld}
+\subsection{Agent Task Benchmarks}\label{sec:ch5-agent}
 
-ALFWorld~\citep{shridhar2021alfworld} tests embodied agents in text-based household environments spanning six task types: pick up, clean, heat, cool, examine, and pick two objects. The text-based interface simplifies the perception challenge while requiring sophisticated planning, state tracking, and error recovery across multi-step action sequences.
+\subsubsection{HotPotQA: Multi-Hop Question Answering}
 
-Reflexion achieves 97\% on ALFWorld (up from 75\% baseline), demonstrating that language-based reflection is highly effective in multi-step interactive settings. The improvement comes from the agent's ability to learn from failed action sequences: when a pick-up attempt fails because the object is in a different room, Reflexion stores this experience as natural language feedback and uses it to plan more efficient navigation in subsequent attempts.
+HotPotQA requires multi-hop reasoning across multiple Wikipedia documents. It tests both retrieval and reasoning capabilities.
 
-G\"{o}del Agent~\citep{godelagent2024} achieves significant improvement over hand-designed agents on ALFWorld through recursive self-modification, demonstrating that agents capable of rewriting their own operational logic can discover strategies that human designers did not anticipate.
+\begin{table}[htbp]
+\centering
+\caption{HotPotQA results (F1 / EM scores).}
+\label{tab:hotpotqa-results}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Method} & \textbf{Type} & \textbf{F1} & \textbf{EM} \\
+\midrule
+Baseline agents & -- & 36.2 & 22.8 \\
+DSPy & Programmatic & 37.4 & 24.1 \\
+Agent Sym.\ Learning & Prompt evolution & \textbf{39.1} & \textbf{25.6} \\
+G\"{o}del Agent & Architecture & +8--15\% over baseline & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{ALFWorld: Interactive Text Environment}
+
+ALFWorld tests agents' ability to follow multi-step instructions in interactive text environments (e.g., ``find a clean knife and put it on the counter'').
+
+\begin{table}[htbp]
+\centering
+\caption{ALFWorld success rates.}
+\label{tab:alfworld-results}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Method} & \textbf{Success Rate} & \textbf{$\Delta$} \\
+\midrule
+Baseline (ReAct) & 75\% & -- \\
+Reflexion (GPT-3.5) & \textbf{97\%} & +22pp \\
+G\"{o}del Agent & Significant improvement & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Reflexion's 97\% success rate on ALFWorld demonstrates the power of memory-based feedback in interactive environments. The agent learns from its failures and accumulates experience across episodes, avoiding repeated mistakes.
 
 \subsubsection{WebArena and Web-Based Benchmarks}
 
-WebArena~\citep{zhou2024webarena} creates realistic web-based tasks requiring website navigation, form filling, and information extraction across live websites rendered in a browser environment. Unlike static HTML benchmarks, WebArena tasks require agents to interact with dynamic JavaScript-rendered pages, handle authentication flows, navigate multi-page workflows, and extract information from complex visual layouts.
+WebArena provides realistic web-based tasks (e.g., navigating websites, filling forms, searching for information). It better reflects real-world agent deployment scenarios than static benchmarks.
 
-ExpeL and WebEvolver demonstrate improvement on WebArena through experience accumulation and world-model-based planning respectively. The benchmark evaluates the full pipeline of web interaction: understanding user intent, planning a sequence of actions (clicks, text input, scrolling), executing the plan while handling unexpected page states, and verifying that the desired outcome was achieved.
+\textbf{Key Challenges for Web Benchmarks}:
+\begin{itemize}
+\item \textbf{Dynamic environments}: Web pages change over time, making reproducibility difficult
+\item \textbf{Cost}: Each evaluation requires actual web interaction or simulation
+\item \textbf{Evaluation complexity}: Success criteria may be ambiguous (e.g., ``find the best hotel'' depends on subjective criteria)
+\item \textbf{Contamination}: Low risk, since web environments are dynamic and hard to memorize
+\end{itemize}
 
-\subsubsection{Voyager and Lifelong Learning}
+\subsubsection{Open-Ended Benchmarks}
 
-Voyager~\citep{voyager2023} uses unique evaluation metrics in Minecraft: unique items discovered, technology tree coverage, and cross-world skill transfer. The technology tree metric measures not just whether the agent can perform individual tasks, but whether it has acquired the hierarchical skill structure necessary for increasingly complex tasks.
+Voyager uses unique item discovery count and tech tree unlock speed to measure lifelong learning in Minecraft. AlphaEvolve uses mathematical correctness as a verifiable metric for algorithm discovery.
 
-Voyager's cross-world skill transfer evaluation directly measures the generalizability that distinguishes genuine self-improvement from environment-specific memorization. Skills that transfer successfully demonstrate robust, environment-independent capabilities; skills that fail reveal overfitting to specific world characteristics.
+\textbf{Open-ended evaluation is fundamentally different from standard benchmarking}:
+\begin{itemize}
+\item There is no fixed test set---the system must demonstrate continuous improvement over time
+\item Success is measured by the discovery of novel, useful artifacts rather than scores on predefined tasks
+\item Evaluation may require expert judgment (e.g., whether a mathematical proof is correct)
+\end{itemize}
 
-\subsubsection{AgentBench: Multi-Environment Evaluation}
-
-AgentBench~\citep{agentbench2024} evaluates LLM-as-Agent across eight distinct environments: OS interaction, Database (SQL), Knowledge Graph (SPARQL), Digital Card Game, Lateral Thinking Puzzles, ALFWorld, WebShop, and Avalon (multi-agent game). The dev set requires approximately 4,000 LLM generations and the test set approximately 13,000. A key finding is that model performance varies dramatically across environments: models that excel at code generation may struggle with social reasoning, and models that perform well on knowledge tasks may fail at interactive decision-making.
-
-\subsubsection{HotPotQA and Multi-Task Evaluation}
-
-\begin{table}[htbp]
-\centering
-\small
-\caption{Multi-task and cross-domain evaluation results.}
-\label{tab:eval-multitask}
-\begin{tabular}{p{32mm}p{22mm}p{28mm}p{28mm}}
-\toprule
-\textbf{Method} & \textbf{Benchmark} & \textbf{Baseline} & \textbf{Improved} \\
-\midrule
-Agent Sym. Learn. & HotPotQA F1 & 36.2 (Agents) & \textbf{39.1} \\
-Agent Sym. Learn. & Software Dev. & 2.4 (Agents) & \textbf{3.8} \\
-Agent Sym. Learn. & Creative Writing & 6.8 (ToT) & \textbf{7.4} \\
-G\"{o}del Agent & HotPotQA & Baseline & +8--15\% \\
-SelfEvolve & DS-1000 & 49.4 & \textbf{57.2} \\
-SelfEvolve & TransCoder & 88.3\% & \textbf{90.4\%} \\
-EvoAgentX (TextGrad) & HotPotQA F1 & 63.58\% & \textbf{71.02\%} \\
-EvoAgentX (MIPRO) & HotPotQA F1 & 63.58\% & \textbf{69.16\%} \\
-Reflexion & ALFWorld & 75\% & \textbf{97\%} \\
-AI Scientist v2 & Peer Review & --- & 6.33 (top 45\%) \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-
-\subsection{Star Quality Analysis}
-\label{sec:eval-star-quality}
-
-\subsubsection{GitHub Community Quality Assessment}
-
-Our analysis of 348 agent evolution GitHub repositories reveals a disconnect between popularity and quality that has significant implications for both researchers and practitioners selecting tools and baselines.
-
-The star quality scoring system uses five equally-weighted dimensions: star activity (90-day active stargazer proportion), contributor diversity (Gini coefficient inversion), fork quality (proportion of forks with substantive commits), issue quality (proportion of non-template, substantive issues), and PR merge rate (merged/total PRs). The composite score is:
-
-\begin{equation}
-\text{compositeScore} = \frac{1}{5}\sum_{i=1}^{5} s_i
-\end{equation}
-
-where $s_1$--$s_5$ are the five dimension scores, each normalized to 0--100.
-
-AutoGPT (175K stars) scores only 28/100 on composite quality, while OpenEvolve (6.3K stars) scores 74/100. The Stars-per-Contributor ratio provides the most reliable hype detection signal:
-
-\begin{equation}
-\text{suspicionIndex} = \frac{\text{starsPerContributor}}{100}
-\end{equation}
-
-Values below 0.5 indicate organic growth, 0.5--1.5 indicate watch status, and above 1.5 indicate suspicious hype-driven growth. AutoGPT's index of 213 far exceeds the healthy threshold, while CrewAI's 107 falls within the steady growth zone.
-
-% ====================================================================
-% Figure 5.3: Star/Fork Distribution
-% ====================================================================
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    width=12cm,
-    height=7cm,
-    xlabel={GitHub Stars (thousands)},
-    ylabel={GitHub Forks (thousands)},
-    xlabel style={font=\small},
-    ylabel style={font=\small},
-    xmin=0, xmax=190,
-    ymin=0, ymax=60,
-    grid=major,
-    grid style={gray!20},
-    legend style={at={(0.02,0.98)}, anchor=north west, font=\scriptsize},
-]
-
-\addplot[only marks, mark=*, mark size=3pt, cat1!70] coordinates {
-    (24.2, 3.5) (22.8, 2.1) (11.8, 1.2) (9.2, 1.0) (7.5, 0.8)
-    (6.3, 0.7) (5.9, 0.6) (5.1, 0.5) (3.4, 0.4) (3.2, 0.3)
-};
-\addlegendentry{Frameworks}
-
-\addplot[only marks, mark=square*, mark size=3pt, cat3!70] coordinates {
-    (137, 22.7) (32.5, 5.5) (27.4, 2.3) (24.4, 2.0) (8.5, 0.9)
-    (4.2, 0.5) (2.1, 0.3) (1.5, 0.2)
-};
-\addlegendentry{Tools}
-
-\addplot[only marks, mark=triangle*, mark size=3pt, cat2!70] coordinates {
-    (184, 46.2) (51.8, 7.2) (18.5, 2.5) (12.3, 1.8) (6.7, 0.7)
-    (3.8, 0.4) (2.5, 0.3) (1.2, 0.1)
-};
-\addlegendentry{Applications}
-
-\addplot[only marks, mark=diamond*, mark size=3pt, cat4!70] coordinates {
-    (4.5, 0.5) (3.1, 0.3) (2.2, 0.2) (1.8, 0.2) (1.1, 0.1)
-};
-\addlegendentry{Evaluation}
-
-\addplot[only marks, mark=pentagon*, mark size=3pt, cat5!70] coordinates {
-    (3.2, 0.4) (2.8, 0.3) (1.9, 0.2) (1.5, 0.2) (0.8, 0.1)
-    (0.5, 0.05) (0.3, 0.02)
-};
-\addlegendentry{Paper Code}
-
-\node[font=\scriptsize, color=gray!50, align=center] at (axis cs:130,50)
-    {Stars and Forks strongly correlated\\($R^2 > 0.9$)};
-\draw[-{Stealth}, thick, color=gray!30, dashed] (axis cs:0.1,0.01) -- (axis cs:190,50);
-
-\end{axis}
-\end{tikzpicture}
-\caption{Star/Fork distribution across 348 agent evolution GitHub repositories. The strong correlation ($R^2 > 0.9$) masks significant quality variation within categories.}
-\label{fig:star-fork-scatter}
-\end{figure}
-
-
-\subsubsection{Three Growth Patterns}
-
-Three growth patterns emerge from temporal analysis. \textbf{Hype-driven growth} (AutoGPT: 0$\to$50K in 3 days; Devika: 0$\to$20K in 5 days) produces rapid initial star accumulation followed by declining contribution quality and community engagement. \textbf{Steady growth} (CrewAI: 0$\to$10K in 60 days; LangGraph) correlates with sustained community health and growing contributor diversity. \textbf{Academic-driven growth} (DSPy, SWE-Agent) shows the slowest star accumulation but highest star quality, with contributors making substantive code contributions and citing the project in publications.
-
-% ====================================================================
-% Figure 5.4: Quality Score vs Stars (pgfplots)
-% ====================================================================
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    width=12cm,
-    height=7cm,
-    xlabel={GitHub Stars (thousands, log scale)},
-    ylabel={Composite Quality Score (0--100)},
-    xlabel style={font=\small},
-    ylabel style={font=\small},
-    xmode=log,
-    xmin=1, xmax=200,
-    ymin=20, ymax=80,
-    grid=major,
-    grid style={gray!20},
-    legend style={at={(0.98,0.98)}, anchor=north east, font=\scriptsize},
-    mark size=3pt,
-]
-
-% Academic projects
-\addplot[only marks, mark=*, color=cat3] coordinates {
-    (6.3, 74) (25, 73) (15, 70) (1.5, 62) (3.2, 58)
-};
-\addlegendentry{Academic}
-
-% Framework projects
-\addplot[only marks, mark=square*, color=cat1] coordinates {
-    (55, 68) (50, 66) (20, 67) (30, 62) (50, 56)
-};
-\addlegendentry{Framework}
-
-% Hype projects
-\addplot[only marks, mark=triangle*, color=cat5] coordinates {
-    (175, 28) (22, 30)
-};
-\addlegendentry{Hype-driven}
-
-% Labels
-\node[font=\scriptsize, color=cat5!70!black] at (axis cs:175,24) {AutoGPT (28)};
-\node[font=\scriptsize, color=cat5!70!black] at (axis cs:22,26) {Devika (30)};
-\node[font=\scriptsize, color=cat3!70!black] at (axis cs:6.3,78) {OpenEvolve (74)};
-\node[font=\scriptsize, color=cat3!70!black] at (axis cs:25,76) {DSPy (73)};
-\node[font=\scriptsize, color=cat1!70!black] at (axis cs:55,71) {OpenHands (68)};
-
-% Trend annotation
-\draw[thick, dashed, gray!50] (axis cs:1,65) -- (axis cs:200,35);
-\node[font=\scriptsize, color=gray!50, rotate=-15] at (axis cs:30,52) {Inverse star-quality trend};
-
-\end{axis}
-\end{tikzpicture}
-\caption{Quality score vs.\ GitHub stars for 12 major agent evolution projects. An inverse trend is visible: the highest-quality projects (OpenEvolve 74, DSPy 73) have fewer stars, while the highest-starred projects (AutoGPT 175K, score 28) have lower quality.}
-\label{fig:quality-vs-stars}
-\end{figure}
-
-
-\subsubsection{The Evaluator's Dilemma}
-
-Self-evolution introduces a fundamental tension: the system being evaluated is optimizing against the evaluation function. Self-Rewarding Language Models~\citep{selfrewarding2024} illustrate both the promise and peril of self-evaluation: initially genuine improvement occurs, but over iterations the model may reward outputs that satisfy its judge rather than genuinely high-quality outputs.
-
-Absolute Zero~\citep{absolutezero2025} resolves this through code execution: the self-play training generates both tasks and solutions; a deterministic code executor provides binary verification (pass/fail), making evaluator degradation impossible by construction. We arrange evaluation methods along an independence spectrum:
-
-\begin{enumerate}[nosep]
-\item \textbf{Fully self-referential}: Self-Refine, Self-Rewarding.
-\item \textbf{Partially independent}: Reflexion, RISE.
-\item \textbf{Structurally independent}: DGM, ADAS, AlphaEvolve.
-\item \textbf{Fully independent}: FunSearch, Absolute Zero, AI Scientist v2 (human peer review).
-\end{enumerate}
-
-
-\subsection{Data Tables and Figures}
-\label{sec:eval-tables}
-
-\subsubsection{Comprehensive Benchmark Comparison}
+\subsection{Benchmark Coverage Analysis}\label{sec:ch5-coverage}
 
 \begin{figure}[htbp]
 \centering
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{l
-    >{\centering\arraybackslash}p{22mm}
-    >{\centering\arraybackslash}p{22mm}
-    >{\centering\arraybackslash}p{22mm}
-    >{\centering\arraybackslash}p{22mm}
-    >{\centering\arraybackslash}p{22mm}
-    >{\centering\arraybackslash}p{22mm}}
+    >{\centering\arraybackslash}p{20mm}
+    >{\centering\arraybackslash}p{20mm}
+    >{\centering\arraybackslash}p{20mm}
+    >{\centering\arraybackslash}p{20mm}
+    >{\centering\arraybackslash}p{25mm}}
 \toprule
-\textbf{Benchmark} & \textbf{Domain} & \textbf{Key Systems} & \textbf{Verification} & \textbf{Contamination} & \textbf{Cost} & \textbf{Transfer} \\
+\textbf{Category} & \textbf{Representative} & \textbf{Systems Using} & \textbf{Strengths} & \textbf{Limitations} & \textbf{Contamination Risk} \\
 \midrule
-SWE-Bench & Software Eng. & DGM, SICA, SWE-Agent & Executable tests & Medium & High & DGM cross-model \\
-HumanEval & Code Gen. & Reflexion, SelfEvolve & Unit tests & High & Low & Limited \\
-MBPP & Basic Python & EvoAgentX & Unit tests & High & Low & Not tested \\
-DS-1000 & Data Science & SelfEvolve & Execution & Medium & Medium & Not tested \\
-GSM8K & Math Reasoning & STaR, RISE, OPRO & Exact match & High & Low & SPIRAL cross-model \\
-MATH & Adv. Reasoning & AZ, EvoAgentX & Exact match & High & Medium & Limited \\
-GPQA & Expert Knowledge & ADAS & Expert consensus & Low & Medium & Not tested \\
-HotPotQA & Multi-hop QA & ASL, EvoAgentX & F1/EM & Medium & Medium & Cross-method \\
-WebArena & Web Interaction & ExpeL, WebEvolver & DOM state & Low & High & Limited \\
-ALFWorld & Embodied & Reflexion & Goal state & Low & Medium & Not tested \\
-Voyager & Lifelong Learn. & Voyager & Item discovery & Low & High & Cross-world \\
-AgentBench & Multi-environment & Various (8 envs) & Task-specific & Low & Very High & Cross-env \\
-AlphaEvolve & Algorithm Design & AlphaEvolve & Programmatic & Low & Very High & Cross-problem \\
+Software Eng. & SWE-Bench & DGM, SICA & Real repos, executable & Setup complexity & Low \\
+Code Gen. & HumanEval, MBPP & Reflexion, EvoMAC & Low cost, reproducible & Small granularity & High \\
+Reasoning & GSM8K, MATH, GPQA & STaR, RISE, SPIRAL & Mature, comparable & Static question sets & High \\
+Interaction & WebArena, ALFWorld & ExpeL, WebEvolver & Multi-step decisions & High cost & Low \\
+Open-Ended & Minecraft/Voyager & Voyager & Lifelong learning & Domain-dependent & Low \\
+Discovery & Matrix mult., scheduling & AlphaEvolve & Verifiable & Requires programmatic eval & Low \\
 \bottomrule
 \end{tabular}%
 }
-\caption{Comprehensive benchmark comparison across 13 evaluation suites.}
+\caption{Comparison of major evaluation benchmarks. Contamination risk reflects the likelihood of training data leakage.}
 \label{fig:bench-compare}
 \end{figure}
 
+\subsubsection{Coverage Gaps}
+
+Our analysis reveals significant coverage gaps in the current evaluation landscape:
+
+\textbf{Memory Evolution Blind Spot}: No widely-adopted benchmark systematically evaluates memory evolution capabilities. Memory-R1 and AriadneMem report task-specific improvements but lack standardized comparison protocols.
+
+\textbf{Safety Evaluation Gap}: No benchmark specifically tests whether self-evolution processes produce unsafe behaviors. Safety is typically assessed qualitatively rather than quantitatively.
+
+\textbf{Cost-Normalized Comparison}: Most papers report only final performance, not performance-per-dollar. This makes it impossible to compare methods that achieve similar performance at vastly different costs (e.g., Reflexion's $O(n \times k)$ API calls vs.\ STaR's single-pass fine-tuning).
+
+\textbf{Long-Term Evolution Tracking}: No standard protocol for tracking agent performance over hundreds or thousands of evolution steps. Most papers report results after a fixed number of iterations, missing potential late-stage degradation or improvement.
+
+\subsection{Star Quality Analysis: Community Health Assessment}\label{sec:ch5-star}
+
+Beyond benchmark performance, the health of the open-source ecosystem surrounding agent self-evolution provides crucial signals about the field's maturity. We analyze 12 major open-source projects using a five-dimensional star quality scoring system.
+
+\subsubsection{Star Quality Scoring Methodology}
+
+Our star quality score comprises five equally-weighted dimensions:
+
+\begin{table}[htbp]
+\centering
+\caption{Star quality scoring dimensions.}
+\label{tab:star-dimensions}
+\begin{tabular}{lclc}
+\toprule
+\textbf{Dimension} & \textbf{Weight} & \textbf{Data Source} & \textbf{What It Measures} \\
+\midrule
+Star Activity & 20\% & GitHub API & \% of active stargazers in last 90 days \\
+Contributor Diversity & 20\% & GitHub API & Gini coefficient inversion \\
+Fork Quality & 20\% & GitHub API & \% of forks with commits \\
+Issue Quality & 20\% & GitHub API + NLP & \% of non-spam, non-template issues \\
+PR Merge Rate & 20\% & GitHub API & merged / total PRs \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Hype Detection Thresholds}
+
+\begin{table}[htbp]
+\centering
+\caption{Hype detection thresholds for open-source projects.}
+\label{tab:hype-thresholds}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Indicator} & \textbf{Green (Healthy)} & \textbf{Yellow (Watch)} & \textbf{Red (Hype Suspect)} \\
+\midrule
+Stars/Contributor & $< 50$ & 50--150 & $> 150$ \\
+0$\to$1K days & $> 30$ days & 7--30 days & $< 7$ days \\
+Fork Quality & $> 40\%$ & 20--40\% & $< 20\%$ \\
+Issue Quality & $> 60\%$ & 40--60\% & $< 40\%$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Comprehensive Quality Rankings}
+
+\begin{table}[htbp]
+\centering
+\caption{Open-source project quality rankings (composite score out of 100).}
+\label{tab:star-rankings}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{clrrll}
+\toprule
+\textbf{Rank} & \textbf{Project} & \textbf{Stars} & \textbf{Score} & \textbf{Growth Mode} & \textbf{Verdict} \\
+\midrule
+1 & OpenEvolve & 6,358 & 74 & Organic & High-quality niche \\
+2 & DSPy & 25,000 & 73 & Organic & Academic + engineering \\
+3 & SWE-Agent & 15,000 & 70 & Organic & ICLR Oral endorsement \\
+4 & OpenHands & 55,000 & 68 & Organic & Highest community health \\
+5 & LangGraph & 20,000 & 67 & Steady & Solid architecture \\
+6 & AutoGen & 50,000 & 66 & Organic & Microsoft brand backing \\
+7 & FunSearch & 1,500 & 62 & Organic & Under-rated high quality \\
+8 & CrewAI & 30,000 & 62 & Steady & Zero-dependency design \\
+9 & Reflexion & 3,158 & 58 & Steady & Classic paper implementation \\
+10 & MetaGPT & 50,000 & 56 & Viral & Academic + commercial balance \\
+11 & Devika & 22,000 & 30 & Suspicious & Me-too project \\
+12 & AutoGPT & 175,000 & 28 & Viral & Hype-driven \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\textbf{Key Finding}: Star count does not correlate with project quality. AutoGPT (175K stars) scores only 28/100, while OpenEvolve (6.3K stars) scores 74/100. The Stars/Contributor ratio is the most reliable hype detection metric: AutoGPT's ratio of 213 (far exceeding the red threshold of 150) indicates that the vast majority of stargazers have no engagement beyond clicking ``star.''
+
+\subsubsection{Propagation Chain Analysis}
+
+\paragraph{AutoGPT --- Viral Hype Propagation}
+
+AutoGPT's star growth followed a textbook viral pattern: 0 to 50K in 3 days (March 30--April 2, 2023), driven by Elon Musk's retweet and YouTube KOL demonstrations. Over 90\% of stargazers had no subsequent GitHub activity. This represents the ``hype-driven'' growth mode---rapid initial adoption followed by rapid decay.
+
+\paragraph{DSPy --- Academic Organic Growth}
+
+DSPy grew from 0 to 25K over approximately 12 months, driven primarily by paper citations, conference presentations, and genuine developer adoption. Its Stars/Contributor ratio of $\sim$80 (within the healthy range) reflects sustained community engagement.
+
+\paragraph{Devika --- Me-Too Project}
+
+Devika achieved 20K stars in 5 days by positioning itself as ``the open-source alternative to Devin.'' Within 3 months, activity dropped to near-zero. PR merge rate was only 38\%. This is a textbook ``me-too'' project: exploiting a competitor's hype without delivering sustainable value.
+
+\subsubsection{Three Growth Paradigms}
+
+Our analysis identifies three distinct growth paradigms:
+
+\begin{enumerate}
+\item \textbf{Hype-Driven} (AutoGPT, Devika): Explosive growth ($<$7 days to 1K), rapid decay, low star quality, high Stars/Contributor ratio. These projects generate enormous initial attention but fail to retain developers.
+
+\item \textbf{Steady Growth} (CrewAI, LangGraph): Moderate growth (30--60 days to 1K), sustained activity, healthy community metrics. These projects build value incrementally through consistent development and community engagement.
+
+\item \textbf{Academic-Driven} (DSPy, SWE-Agent): Slow growth (60+ days to 1K), highest quality scores, paper citation support. These projects are undervalued by star count but deliver the most reliable research and engineering value.
+\end{enumerate}
+
+\subsection{Process-Oriented Evaluation Metrics}\label{sec:ch5-process}
+
+Beyond static benchmark scores, self-evolution systems require process-oriented metrics that capture the dynamics of evolution itself.
+
+\subsubsection{Iteration Gain Curves}
+
+The trajectory of improvement over evolution steps reveals important qualitative properties:
+
+\textbf{Monotonic Improvement}: Each evolution step produces a net positive gain ($\Delta_t > 0$ for all $t$). This is the ideal but rarely achieved in practice.
+
+\textbf{Plateau-and-Breakthrough}: Long periods of no improvement followed by sudden jumps. This pattern is common in architecture search methods (ADAS, DGM) where a structural innovation unlocks cascading improvements.
+
+\textbf{Diminishing Returns}: Improvement magnitude decreases over time ($\Delta_t < \Delta_{t-1}$). This suggests convergence toward a performance ceiling.
+
+\textbf{Oscillation}: Performance fluctuates up and down, indicating unstable evolution dynamics. This may result from evaluator noise, mode collapse, or reward hacking.
+
+\textbf{Regression}: Performance degrades over time ($\Delta_t < 0$ for multiple consecutive steps). This indicates catastrophic forgetting or destructive self-modification.
+
+\subsubsection{Archive Diversity Metrics}
+
+For methods maintaining an archive (DGM, AlphaEvolve), archive diversity is a critical metric:
+
+\begin{definition}[Archive Diversity]
+Given archive $\mathcal{A} = \{a_1, \ldots, a_n\}$ with behavior descriptors $b(a_i)$, the archive diversity is:
+\begin{equation}
+D(\mathcal{A}) = \frac{|\{b(a_i) : a_i \in \mathcal{A}\}|}{|\mathcal{B}|}
+\label{eq:archive-diversity}
+\end{equation}
+where $\mathcal{B}$ is the space of possible behavior descriptors. A well-maintained archive should have $D(\mathcal{A})$ increasing over time, indicating coverage of qualitatively different solutions.
+\end{definition}
+
+\subsubsection{Transfer Metrics}
+
+Cross-domain transfer is measured by the generalization ratio (Eq.~\ref{eq:generalization-ratio}). Notable transfer results include:
+
+\begin{itemize}
+\item \textbf{Code $\to$ Math}: Absolute Zero achieves competitive MATH performance with only code self-play training, suggesting transfer of logical reasoning skills.
+\item \textbf{ARC $\to$ GFootball}: ADAS discovers agent designs on ARC that transfer to GFootball, demonstrating architectural invariance.
+\item \textbf{GPT-3.5 $\to$ GPT-4}: ADAS-discovered agents remain effective when the underlying model is upgraded, suggesting that the discovered structures capture general principles rather than model-specific quirks.
+\end{itemize}
+
+\subsubsection{Cost-Effectiveness Metrics}
+
+\begin{table}[htbp]
+\centering
+\caption{Cost-effectiveness comparison of self-evolution methods.}
+\label{tab:cost-effectiveness}
+\begin{tabular}{lcccl}
+\toprule
+\textbf{Method} & \textbf{Improvement} & \textbf{API Calls} & \textbf{Cost/Improvement} & \textbf{Best For} \\
+\midrule
+Self-Refine & $\sim$20\% avg & $O(n \times t)$ & Low & Quick gains \\
+Reflexion & +24pp (HE) & $O(n \times k)$ & Medium & Code tasks \\
+STaR & +10pp (GSM8K) & Internal & Medium & Math reasoning \\
+DGM & +30pp (SWE) & $O(g \times n \times e)$ & Very High & Architecture discovery \\
+AlphaEvolve & New records & $O(g \times n)$ & Extremely High & Mathematical discovery \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Recommended Evaluation Protocol}\label{sec:ch5-protocol}
+
+Based on our analysis, we recommend the following evaluation protocol for self-evolution research:
+
+\begin{enumerate}
+\item \textbf{Multi-Benchmark Evaluation}: Report results on at least two benchmarks from different categories (e.g., code + math, reasoning + interaction). This guards against benchmark-specific overfitting.
+
+\item \textbf{Multi-Seed Runs}: Conduct at least 3--5 independent runs with different random seeds, reporting mean and standard deviation. This accounts for the inherent stochasticity of LLM-based evolution.
+
+\item \textbf{Cross-Domain Testing}: Explicitly test generalization outside the training domain. Report the generalization ratio $G$ (Eq.~\ref{eq:generalization-ratio}).
+
+\item \textbf{Ablation Studies}: Remove components one by one to determine each component's contribution. For computationally expensive methods (DGM, AlphaEvolve), at least partial ablations should be reported.
+
+\item \textbf{Efficiency Reporting}: Report total computational cost including: total API calls, token consumption, GPU hours, wall-clock time, and cost-per-improvement-point.
+
+\item \textbf{Iteration Gain Curves}: Plot performance over evolution steps to reveal convergence patterns, plateaus, and potential regressions.
+
+\item \textbf{Echo Detection}: Include echo detection metrics (Eq.~\ref{eq:echo-detection}) to verify that improvements reflect genuine capability gains rather than output repetition.
+
+\item \textbf{Safety Audit}: For self-modifying code methods, report: permission violation rate, code review findings, rollback frequency, and any emergent behaviors not explicitly programmed.
+\end{enumerate}
+
+\subsection{Evaluation Benchmark Summary Tables}\label{sec:ch5-tables}
+
+\begin{table}[htbp]
+\centering
+\caption{Complete benchmark summary for agent self-evolution methods.}
+\label{tab:complete-benchmark}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llllccc}
+\toprule
+\textbf{Method} & \textbf{Category} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Baseline} & \textbf{Evolved} & \textbf{$\Delta$} \\
+\midrule
+Reflexion & Prompt & HumanEval & pass@1 & 67.0 & 91.0 & +24.0 \\
+Reflexion & Prompt & ALFWorld & success & 75\% & 97\% & +22pp \\
+Self-Refine & Prompt & Code opt. & relative & baseline & +28\% & +28\% \\
+Self-Refine & Prompt & Math & accuracy & 56\% & 67\% & +11pp \\
+Self-Refine & Prompt & Sentiment & accuracy & 74\% & 86\% & +12pp \\
+Self-Refine & Prompt & Dialogue & win rate & 52\% & 68\% & +16pp \\
+Self-Refine & Prompt & Constrained & compliance & 65\% & 78\% & +13pp \\
+STaR & Reward & GSM8K & accuracy & -- & 73.5 & -- \\
+RISE & Reward & GSM8K (Llama2) & accuracy & 14\% & 24\% & +10pp \\
+RISE & Reward & GSM8K (Mistral) & accuracy & 38\% & 46\% & +8pp \\
+Absolute Zero & Self-Play & HumanEval+ & pass@1 & -- & 7B SOTA & -- \\
+Absolute Zero & Self-Play & MBPP+ & pass@1 & -- & 7B SOTA & -- \\
+Absolute Zero & Self-Play & GSM8K & accuracy & -- & Competitive & Cross-domain \\
+Agent Sym.\ Learn. & Prompt & HotPotQA & F1 & 36.2 & 39.1 & +2.9 \\
+Agent Sym.\ Learn. & Prompt & MATH & accuracy & 56.0\% & 60.7\% & +4.7pp \\
+Agent Sym.\ Learn. & Prompt & HumanEval & pass@1 & 68.3\% & 73.2\% & +4.9pp \\
+SelfEvolve & Code & DS-1000 & pass@1 & 49.4 & 57.2 & +7.8 \\
+SelfEvolve & Code & HumanEval & pass@1 & 74.4 & 86.0 & +11.6 \\
+SelfEvolve & Code & TransCoder & accuracy & 88.3 & 90.4 & +2.1pp \\
+DGM & Architecture & SWE-bench & verified & 20.0\% & 50.0\% & +30pp \\
+DGM & Architecture & Polyglot & score & 14.2\% & 30.7\% & +16.5pp \\
+G\"{o}del Agent & Architecture & HotPotQA & relative & baseline & +8--15\% & -- \\
+AlphaEvolve & Architecture & Matrix mult. & multiplications & 49 & 48 & New record \\
+AlphaEvolve & Architecture & Data center & compute & -- & 0.7\% global & -- \\
+AI Scientist & Hybrid & Peer review & score & -- & 6.33 & Top 45\% \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\subsection{Chapter Summary}\label{sec:ch5-summary}
+
+This chapter has provided a comprehensive analysis of evaluation systems for agent self-evolution across five dimensions:
+
+\begin{enumerate}
+\item \textbf{Evaluation Methodology} (\S\ref{sec:ch5-methodology}): We formalized the evaluation challenge and identified six evaluation dimensions (target performance, improvement magnitude, improvement efficiency, generalization, stability, safety) and five common pitfalls (baseline bias, domain shift, randomness neglect, attribution difficulty, echo trap).
+
+\item \textbf{Code Generation Benchmarks} (\S\ref{sec:ch5-code}): HumanEval remains the most widely used benchmark, with Reflexion achieving 91.0\% pass@1. SWE-Bench provides the most realistic evaluation, with DGM achieving 50.0\% verified. DS-1000 fills the data science code niche.
+
+\item \textbf{Mathematical Reasoning Benchmarks} (\S\ref{sec:ch5-math}): GSM8K and MATH are standard for evaluating reasoning improvements. Absolute Zero's cross-domain transfer from code to math is a particularly noteworthy result.
+
+\item \textbf{Agent Task Benchmarks} (\S\ref{sec:ch5-agent}): HotPotQA, ALFWorld, WebArena, and open-ended environments like Minecraft test multi-step reasoning and interaction capabilities.
+
+\item \textbf{Star Quality Analysis} (\S\ref{sec:ch5-star}): Star count does not correlate with project quality. The Stars/Contributor ratio is the most reliable hype detection metric. Three growth paradigms exist: hype-driven, steady, and academic-driven.
+\end{enumerate}
+
+We recommend a standardized evaluation protocol (\S\ref{sec:ch5-protocol}) that includes multi-benchmark evaluation, multi-seed runs, cross-domain testing, ablation studies, efficiency reporting, iteration gain curves, echo detection, and safety audits. Adopting this protocol would significantly improve the comparability and reliability of self-evolution research.
 
 % ====================================================================
-% Figure 5.5: Benchmark Radar Chart
+% TikZ/pgfplots Charts
+% ====================================================================
+
+% ====================================================================
+% Figure: Radar chart (5-dim comparison of benchmarks)
 % ====================================================================
 \begin{figure}[htbp]
 \centering
@@ -519,8 +614,8 @@ AlphaEvolve & Algorithm Design & AlphaEvolve & Programmatic & Low & Very High & 
     \draw[gray!35, thin] (0,0) -- (\a:\R);
   }
 
-  \node[font=\small\bfseries] at (90:5.65) {Automation};
-  \node[font=\small\bfseries, align=center] at (18:5.85) {Cost Efficiency};
+  \node[font=\small\bfseries] at (90:5.65) {Automatable};
+  \node[font=\small\bfseries, align=center] at (18:5.85) {Low Cost};
   \node[font=\small\bfseries] at (-54:5.75) {Generalization};
   \node[font=\small\bfseries] at (-126:5.75) {Realism};
   \node[font=\small\bfseries, align=center] at (162:5.85) {Reproducibility};
@@ -541,114 +636,92 @@ AlphaEvolve & Algorithm Design & AlphaEvolve & Programmatic & Low & Very High & 
     (90:2) -- (18:1) -- (-54:5) -- (-126:1) -- (162:1) -- cycle;
   \node[color=cat5!70!black, font=\scriptsize\bfseries] at (-78:3.35) {Voyager};
 
-  \node[font=\small\bfseries] at (0,6.45) {Five-Dimensional Benchmark Comparison};
+  \node[font=\small\bfseries] at (0,6.45) {Five-Dimensional Benchmark Radar Comparison};
 \end{tikzpicture}
-\caption{Benchmark comparison across five dimensions. SWE-Bench excels in realism and reproducibility; HumanEval leads in automation and cost.}
+\caption{Five-dimensional radar comparison of evaluation benchmarks. SWE-Bench excels in realism and reproducibility; HumanEval leads in automability and cost-effectiveness; WebArena and Voyager prioritize realism but at higher cost.}
 \label{fig:eval-radar}
 \end{figure}
 
-
 % ====================================================================
-% Figure 5.6: Self-Evolution System Architecture
+% Figure: Star/Fork distribution scatter plot
 % ====================================================================
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[
-    layer/.style={rectangle, rounded corners=8pt, draw=#1!70!black, fill=#1!8,
-        minimum width=12cm, minimum height=1.3cm, align=center},
-    comp/.style={rectangle, rounded corners=4pt, draw=#1!60!black, fill=#1!15,
-        font=\scriptsize, minimum height=0.7cm, inner sep=3pt, align=center},
-    arr/.style={-{Stealth[length=2.5mm]}, thick, color=gray!50},
+\begin{tikzpicture}
+\begin{axis}[
+    width=12cm,
+    height=7cm,
+    xlabel={GitHub Stars (thousands)},
+    ylabel={GitHub Forks (thousands)},
+    xlabel style={font=\small},
+    ylabel style={font=\small},
+    xmin=0, xmax=190,
+    ymin=0, ymax=60,
+    grid=major,
+    grid style={gray!20},
+    legend style={at={(0.02,0.98)}, anchor=north west, font=\scriptsize},
 ]
-    % Task Layer
-    \node[layer=cat1] (task) at (0,6) {};
-    \node[font=\bfseries\small, color=cat1!70!black] at (-4.5,6.2) {Task Layer};
-    \node[comp=cat1] at (-3,6) {Code Tasks};
-    \node[comp=cat1] at (0,6) {Reasoning Tasks};
-    \node[comp=cat1] at (3,6) {Environment Interaction};
 
-    % Agent Layer
-    \node[layer=cat4] (agent) at (0,4) {};
-    \node[font=\bfseries\small, color=cat4!70!black] at (-4.5,4.2) {Agent Layer};
-    \node[comp=cat4] at (-3.5,4) {Planner};
-    \node[comp=cat4] at (-1,4) {Actor};
-    \node[comp=cat4] at (1.5,4) {Critic};
-    \node[comp=cat4] at (4,4) {Memory};
+% Framework repos
+\addplot[only marks, mark=*, mark size=3pt, cat1!70] coordinates {
+    (24.2, 3.5) (22.8, 2.1) (11.8, 1.2) (9.2, 1.0) (7.5, 0.8)
+    (6.3, 0.7) (5.9, 0.6) (5.1, 0.5) (3.4, 0.4) (3.2, 0.3)
+};
+\addlegendentry{Frameworks}
 
-    % Evolution Layer
-    \node[layer=cat2] (evo) at (0,2) {};
-    \node[font=\bfseries\small, color=cat2!70!black] at (-4.5,2.2) {Evolution Layer};
-    \node[comp=cat2] at (-3.5,2) {Mutator\\(LLM Rewrite)};
-    \node[comp=cat2] at (0,2) {Evaluator\\(Benchmark+Judge)};
-    \node[comp=cat2] at (3.5,2) {Selector\\(Archive)};
+% Tool repos
+\addplot[only marks, mark=square*, mark size=3pt, cat3!70] coordinates {
+    (137, 22.7) (32.5, 5.5) (27.4, 2.3) (24.4, 2.0) (8.5, 0.9)
+    (4.2, 0.5) (2.1, 0.3) (1.5, 0.2)
+};
+\addlegendentry{Tools}
 
-    % Infrastructure Layer
-    \node[layer=cat5] (infra) at (0,0) {};
-    \node[font=\bfseries\small, color=cat5!70!black] at (-4.5,0.2) {Infrastructure};
-    \node[comp=cat5] at (-3,0) {Experience Store};
-    \node[comp=cat5] at (0,0) {Safety Sandbox};
-    \node[comp=cat5] at (3,0) {Cost Monitor};
+% Application repos
+\addplot[only marks, mark=triangle*, mark size=3pt, cat2!70] coordinates {
+    (184, 46.2) (51.8, 7.2) (18.5, 2.5) (12.3, 1.8) (6.7, 0.7)
+    (3.8, 0.4) (2.5, 0.3) (1.2, 0.1)
+};
+\addlegendentry{Applications}
 
-    % Vertical arrows
-    \foreach \y in {6,4,2} {
-        \pgfmathsetmacro{\yn}{\y-2}
-        \draw[arr] (0,\y-0.7) -- (0,\yn+0.7);
-    }
+% Evaluation repos
+\addplot[only marks, mark=diamond*, mark size=3pt, cat4!70] coordinates {
+    (4.5, 0.5) (3.1, 0.3) (2.2, 0.2) (1.8, 0.2) (1.1, 0.1)
+};
+\addlegendentry{Evaluation}
 
+% Paper code repos
+\addplot[only marks, mark=pentagon*, mark size=3pt, cat5!70] coordinates {
+    (3.2, 0.4) (2.8, 0.3) (1.9, 0.2) (1.5, 0.2) (0.8, 0.1)
+    (0.5, 0.05) (0.3, 0.02)
+};
+\addlegendentry{Paper Code}
+
+% Annotation
+\node[font=\scriptsize, color=gray!50, align=center] at (axis cs:130,50)
+    {Stars and Forks strongly correlated\\($R^2 > 0.9$)};
+\draw[-{Stealth}, thick, color=gray!30, dashed] (axis cs:0.1,0.01) -- (axis cs:190,50);
+
+\end{axis}
 \end{tikzpicture}
-\caption{Four-layer reference architecture for agent self-evolution evaluation.}
-\label{fig:evolution-arch}
+\caption{Star/Fork distribution of 348 agent evolution GitHub repositories. Colors indicate repository categories. Stars and Forks show strong positive correlation; top repositories (LangChain 137K, AutoGPT 184K, n8n 189K) dominate community attention.}
+\label{fig:star-fork-scatter}
 \end{figure}
 
+\subsection{References and Source Materials}\label{sec:ch5-refs}
 
-\subsubsection{Method Comparison: What Gets Modified}
-
-\begin{table}[htbp]
-\centering
-\small
-\caption{Self-improvement mechanism comparison across 17 methods.}
-\label{tab:eval-methods-compare}
-\begin{tabular}{p{22mm}p{12mm}p{12mm}p{12mm}p{12mm}p{12mm}p{15mm}}
-\toprule
-\textbf{Method} & \rotatebox{70}{\textbf{Prompts}} & \rotatebox{70}{\textbf{Memory}} & \rotatebox{70}{\textbf{Code}} & \rotatebox{70}{\textbf{Weights}} & \rotatebox{70}{\textbf{Archive}} & \rotatebox{70}{\textbf{Verifier}} \\
-\midrule
-Self-Refine & Yes & No & No & No & No & Self \\
-Reflexion & No & Yes & No & No & No & External \\
-STaR & No & No & No & Yes & No & External \\
-RISE & No & No & No & Yes & No & External \\
-Self-Rewarding & No & No & No & Yes & No & Self \\
-SelfEvolve & Yes & No & Yes & No & No & External \\
-DGM & Yes & No & Yes & No & Yes & External \\
-ADAS & Yes & No & Yes & No & Yes & External \\
-SICA & Yes & No & Yes & No & No & External \\
-Absolute Zero & No & No & No & Yes & No & Self (code exec) \\
-RAGEN & No & No & No & Yes & No & External \\
-G\"{o}del Agent & Yes & No & Yes & No & No & External \\
-Agent Sym. Learn. & Yes & No & No & No & No & External \\
-EvoAgentX & Yes & No & No & No & No & External \\
-OPRO & Yes & No & No & No & No & External \\
-FunSearch & Yes & No & Yes & No & Yes & External \\
-AlphaEvolve & Yes & No & Yes & No & Yes & External \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Methods modifying weights (STaR, RISE, Self-Rewarding, Absolute Zero, RAGEN) produce durable improvements but require more compute. Methods modifying code (DGM, ADAS, SICA, FunSearch, AlphaEvolve, G\"{o}del Agent) provide persistence with human-inspectability. Archive-based methods (DGM, ADAS, FunSearch, AlphaEvolve) provide the richest evolutionary structure.
-
-The ideal self-evolution system combines multiple modification targets with progressively independent verification. DGM and AlphaEvolve approach this ideal by modifying code with programmatic evaluation and archive-based selection. No existing method modifies all five components (prompts, memory, code, weights, archive) simultaneously---a significant opportunity for future research.
-
-
-\subsubsection{Benchmark Contamination and Reproducibility}
-
-Benchmark contamination is particularly problematic for self-evolution research. We distinguish three levels: (1) \textbf{Direct contamination}---test examples appear verbatim in training data (most likely for HumanEval, GSM8K, MMLU). (2) \textbf{Near-miss contamination}---the model has seen similar but not identical problems. (3) \textbf{Evaluator leakage}---the agent has access to the evaluation function during evolution.
-
-Mitigation strategies include: temporal splits (benchmarks released after training cutoff), held-out sets (GPQA's expert-level questions), procedural generation (Absolute Zero's self-play approach making external contamination impossible by construction), and run-time isolation (FunSearch's triple safety filtering).
-
-ADAS~\citep{adas2024} provides a model for rigorous statistical evaluation: bootstrap 95\% confidence intervals with 100,000 resamples. We recommend that future papers report: (1) model version and API endpoint, (2) random seeds and sampling parameters, (3) total cost in tokens and dollars, (4) full evolution trajectory, (5) failure analysis, and (6) contamination analysis.
-
-
-\subsubsection{Summary and Open Problems}
-
-Key findings: (1) Self-correction can outperform scale (Reflexion/GPT-3.5 at 91\% surpasses GPT-4 at 80.1\%). (2) Agent-level self-modification produces the largest gains (DGM's 2.5$\times$ on SWE-Bench). (3) Cross-domain transfer is achievable but not guaranteed (Absolute Zero's code-to-math transfer, ADAS's cross-model transfer). (4) Benchmark contamination remains underaddressed. (5) Popularity does not predict quality (AutoGPT 175K stars, score 28/100 vs.\ OpenEvolve 6.3K stars, score 74/100).
-
-Key open problems: evaluator evolution, open-ended evaluation, evaluation cost, community standards, beyond-accuracy metrics, and evolutionary dynamics analysis.
+\begin{itemize}[nosep]
+\item [StarAnalysis-2026] \texttt{reports/star-analysis-report.md}. GitHub star quality scoring and propagation chain analysis, 2026-05-22.
+\item [Reflexion-Review] \texttt{paper-reviews/review-2303.11366-reflexion.md}.
+\item [AbsoluteZero-Review] \texttt{paper-reviews/review-2505.03335-absolute-zero.md}.
+\item [RISE-Review] \texttt{paper-reviews/review-2407.18219-rise.md}.
+\item [RAGEN-Review] \texttt{paper-reviews/review-2504.20073-ragen.md}.
+\item [AlphaEvolve-Review] \texttt{paper-reviews/review-2506.13131-alphaevolve.md}.
+\item [DGM-Review] \texttt{paper-reviews/review-2505.22954-darwin-godel-machine.md}.
+\item [ADAS-Review] \texttt{paper-reviews/review-2408.08435-adas.md}.
+\item [GodelAgent-Review] \texttt{paper-reviews/review-2410.04444-godel-agent.md}.
+\item [SelfRefine-Review] \texttt{paper-reviews/review-2303.17651-self-refine.md}.
+\item [SelfEvolve-Review] \texttt{research/papers/11-selfevolve.md}.
+\item [AgentSymbolicLearning-Review] \texttt{research/papers/01-agent-symbolic-learning.md}.
+\item [ReVeal-Review] \texttt{research/papers/12-reveal.md}.
+\item [AIScientist-Review] \texttt{research/papers/13-ai-scientist.md}.
+\end{itemize}
