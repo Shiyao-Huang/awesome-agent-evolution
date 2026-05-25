@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-05-25T17:00:46.791Z",
+  "generated_at": "2026-05-25T17:53:04.757Z",
   "counts": {
-    "raw_captures": 498,
-    "raw_files_on_disk": 498,
-    "classified_repos": 498,
-    "analyzed_projects": 89,
-    "analyzed_in_raw_timestamp_index": 35,
-    "analyzed_in_classification": 35,
-    "analyzed_evolution_focused": 49,
+    "raw_captures": 501,
+    "raw_files_on_disk": 501,
+    "classified_repos": 501,
+    "analyzed_projects": 92,
+    "analyzed_in_raw_timestamp_index": 38,
+    "analyzed_in_classification": 38,
+    "analyzed_evolution_focused": 50,
     "analyzed_with_created_at_or_fallback": 80,
     "analyzed_with_github_api_metadata": 25,
     "analyzed_with_local_git_mirror": 77,
-    "analyzed_with_public_report": 59,
+    "analyzed_with_public_report": 62,
     "raw_core_evolution": 79,
-    "raw_broad_evolution": 179,
+    "raw_broad_evolution": 180,
     "raw_unknown_time_slice": 109
   },
   "raw_category_counts": [
@@ -23,7 +23,7 @@
     },
     {
       "key": "评测/evaluation",
-      "count": 101
+      "count": 102
     },
     {
       "key": "教程/tutorial",
@@ -31,7 +31,7 @@
     },
     {
       "key": "工具/tool",
-      "count": 86
+      "count": 88
     },
     {
       "key": "应用/application",
@@ -49,7 +49,7 @@
   "raw_theme_counts": [
     {
       "key": "memory",
-      "count": 100
+      "count": 102
     },
     {
       "key": "evaluation",
@@ -61,7 +61,7 @@
     },
     {
       "key": "skill",
-      "count": 61
+      "count": 62
     },
     {
       "key": "framework",
@@ -99,7 +99,7 @@
     },
     {
       "key": "Python",
-      "count": 175
+      "count": 176
     },
     {
       "key": "TypeScript",
@@ -155,6 +155,10 @@
     },
     {
       "key": "Codex CLI/AGENTS.md/Skills/Shell tools/Profiles",
+      "count": 1
+    },
+    {
+      "key": "Go",
       "count": 1
     },
     {
@@ -223,6 +227,10 @@
     },
     {
       "key": "OpenClaw/ACP/Agent teams/Skills/Sprint templates",
+      "count": 1
+    },
+    {
+      "key": "Python / MCP",
       "count": 1
     },
     {
@@ -361,7 +369,7 @@
   "raw_time_slice_counts": [
     {
       "key": "2026-05",
-      "count": 338
+      "count": 341
     },
     {
       "key": "unknown",
@@ -451,7 +459,7 @@
     },
     {
       "key": "memory",
-      "count": 5
+      "count": 7
     },
     {
       "key": "education-list",
@@ -466,11 +474,11 @@
       "count": 3
     },
     {
-      "key": "research-agent",
-      "count": 1
+      "key": "skill",
+      "count": 2
     },
     {
-      "key": "skill",
+      "key": "research-agent",
       "count": 1
     },
     {
@@ -485,7 +493,7 @@
     },
     {
       "key": "unknown",
-      "count": 9
+      "count": 12
     },
     {
       "key": "2026-03",
@@ -9211,6 +9219,51 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[ACM Computing Surveys 2025] This repository collects awesome survey, resource, and paper for Lifelong Learning with Large Language Models. (Updated Regularly)"
+    },
+    {
+      "repo": "microsoft/waza",
+      "url": "https://github.com/microsoft/waza",
+      "stars": "904",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "skill",
+      "stack": "Go",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 709 commits, MIT license, Go CLI, 904 stars, 49 forks, and README language for creating, testing, measuring and improving AI agent skill quality with eval.yaml suites, graders, multi-model comparison, coverage grids and CI comments; shell GitHub API freshness was blocked.",
+      "description": "Waza is Microsoft's Go CLI / framework for agent skills: it scaffolds skills and eval suites, runs benchmark tasks, compares models, checks coverage, and turns SKILL.md assets into measurable quality gates."
+    },
+    {
+      "repo": "wazionapps/nexo",
+      "url": "https://github.com/wazionapps/nexo",
+      "stars": "22",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python / MCP",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 22 stars, 9 forks, Python/MCP runtime positioning, persistent semantic memory, natural forgetting, trust scoring, 150+ MCP tools, LoCoMo benchmark claims, and recovery-aware background jobs including weekly evolution; shell GitHub API freshness was blocked.",
+      "description": "NEXO Brain is a local shared-brain memory runtime for Claude Code, Codex, Claude Desktop and MCP clients, combining persistent memory, RAG, temporal recall, forgetting, trust scoring, benchmark reporting and background self-improvement jobs."
+    },
+    {
+      "repo": "razroo/state-trace",
+      "url": "https://github.com/razroo/state-trace",
+      "stars": "1",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 3 commits, Python package layout, 1 star, 0 forks, and README language for graph-native AI agent memory with typed nodes, causal links, capacity-aware decay/compression/removal, JSON persistence and optional embeddings; shell GitHub API freshness was blocked.",
+      "description": "state-trace is a graph-native memory engine for AI agents that stores typed memories and causal links, then retrieves state-aware context through graph traversal instead of only vector similarity."
     }
   ],
   "raw_core_evolution_repositories": [
@@ -13085,6 +13138,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web search and public GitHub page evidence observed Apache-2.0 license, Python stack, 1.4k stars and 158 forks; project description positions Zylos as a self-evolving AI team platform for specialized agents, memory, automation, and marketplace-style extensibility",
       "description": "Zylos Core 是 self-evolving AI team platform，把专门化 agents、共享记忆、工具市场和交付界面组合成持续改进的团队运行时。"
+    },
+    {
+      "repo": "wazionapps/nexo",
+      "url": "https://github.com/wazionapps/nexo",
+      "stars": "22",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python / MCP",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 22 stars, 9 forks, Python/MCP runtime positioning, persistent semantic memory, natural forgetting, trust scoring, 150+ MCP tools, LoCoMo benchmark claims, and recovery-aware background jobs including weekly evolution; shell GitHub API freshness was blocked.",
+      "description": "NEXO Brain is a local shared-brain memory runtime for Claude Code, Codex, Claude Desktop and MCP clients, combining persistent memory, RAG, temporal recall, forgetting, trust scoring, benchmark reporting and background self-improvement jobs."
     }
   ],
   "analyzed_projects": [
@@ -17132,6 +17200,131 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "skill",
       "evolution_focused": false
+    },
+    {
+      "name": "Waza",
+      "repo": "microsoft/waza",
+      "normalized_repo": "microsoft/waza",
+      "url": "https://github.com/microsoft/waza",
+      "category": "Waza Agent Skill Evaluation CLI",
+      "pattern": "SKILL.md asset -> eval scaffold -> benchmark run -> grader/coverage report -> skill quality gate",
+      "tags": [
+        "agent skills",
+        "evaluation",
+        "benchmark",
+        "quality gate"
+      ],
+      "site_stars": 904,
+      "site_forks": 49,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/microsoft_waza.md",
+      "local_git": null,
+      "report": "projects/217-waza-agent-skill-evaluation-cli.md",
+      "public_report": "site/public/reports/projects/217-waza-agent-skill-evaluation-cli.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/microsoft_waza.md",
+      "raw_collected_at": "2026-05-26T01:38:44+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 709 commits, MIT license, Go CLI, 904 stars, 49 forks, and README language for creating, testing, measuring and improving AI agent skill quality with eval.yaml suites, graders, multi-model comparison, coverage grids and CI comments; shell GitHub API freshness was blocked.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
+      "name": "NEXO Brain",
+      "repo": "wazionapps/nexo",
+      "normalized_repo": "wazionapps/nexo",
+      "url": "https://github.com/wazionapps/nexo",
+      "category": "NEXO Agent Memory Runtime",
+      "pattern": "conversation/session traces -> cognitive memory extraction -> semantic/temporal retrieval -> trust/forgetting gates -> proactive context packets",
+      "tags": [
+        "agent memory",
+        "MCP",
+        "LoCoMo",
+        "self-improvement"
+      ],
+      "site_stars": 22,
+      "site_forks": 9,
+      "license": "Open source public repository",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/wazionapps_nexo.md",
+      "local_git": null,
+      "report": "projects/218-nexo-agent-memory-runtime.md",
+      "public_report": "site/public/reports/projects/218-nexo-agent-memory-runtime.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/wazionapps_nexo.md",
+      "raw_collected_at": "2026-05-26T01:38:44+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web-observed GitHub page showed 22 stars, 9 forks, Python/MCP runtime positioning, persistent semantic memory, natural forgetting, trust scoring, 150+ MCP tools, LoCoMo benchmark claims, and recovery-aware background jobs including weekly evolution; shell GitHub API freshness was blocked.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": true
+    },
+    {
+      "name": "state-trace",
+      "repo": "razroo/state-trace",
+      "normalized_repo": "razroo/state-trace",
+      "url": "https://github.com/razroo/state-trace",
+      "category": "state-trace Agent Memory Engine",
+      "pattern": "agent log step -> typed memory node/edge -> capacity-aware decay -> graph traversal retrieval",
+      "tags": [
+        "agent memory",
+        "graph memory",
+        "stateful agents"
+      ],
+      "site_stars": 1,
+      "site_forks": 0,
+      "license": "Public repository license not verified",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/razroo_state-trace.md",
+      "local_git": null,
+      "report": "projects/219-state-trace-agent-memory-engine.md",
+      "public_report": "site/public/reports/projects/219-state-trace-agent-memory-engine.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/razroo_state-trace.md",
+      "raw_collected_at": "2026-05-26T01:38:44+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web-observed GitHub page showed 3 commits, Python package layout, 1 star, 0 forks, and README language for graph-native AI agent memory with typed nodes, causal links, capacity-aware decay/compression/removal, JSON persistence and optional embeddings; shell GitHub API freshness was blocked.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
     }
   ],
   "analyzed_git_evidence": [
@@ -19738,6 +19931,48 @@
       "evolution_focused": true
     },
     {
+      "name": "Waza",
+      "repo": "microsoft/waza",
+      "normalized_repo": "microsoft/waza",
+      "url": "https://github.com/microsoft/waza",
+      "category": "Waza Agent Skill Evaluation CLI",
+      "pattern": "SKILL.md asset -> eval scaffold -> benchmark run -> grader/coverage report -> skill quality gate",
+      "tags": [
+        "agent skills",
+        "evaluation",
+        "benchmark",
+        "quality gate"
+      ],
+      "site_stars": 904,
+      "site_forks": 49,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/microsoft_waza.md",
+      "local_git": null,
+      "report": "projects/217-waza-agent-skill-evaluation-cli.md",
+      "public_report": "site/public/reports/projects/217-waza-agent-skill-evaluation-cli.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/microsoft_waza.md",
+      "raw_collected_at": "2026-05-26T01:38:44+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 709 commits, MIT license, Go CLI, 904 stars, 49 forks, and README language for creating, testing, measuring and improving AI agent skill quality with eval.yaml suites, graders, multi-model comparison, coverage grids and CI comments; shell GitHub API freshness was blocked.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
       "name": "self-refine",
       "repo": "madaan/self-refine",
       "normalized_repo": "madaan/self-refine",
@@ -21099,6 +21334,48 @@
       "evolution_focused": false
     },
     {
+      "name": "NEXO Brain",
+      "repo": "wazionapps/nexo",
+      "normalized_repo": "wazionapps/nexo",
+      "url": "https://github.com/wazionapps/nexo",
+      "category": "NEXO Agent Memory Runtime",
+      "pattern": "conversation/session traces -> cognitive memory extraction -> semantic/temporal retrieval -> trust/forgetting gates -> proactive context packets",
+      "tags": [
+        "agent memory",
+        "MCP",
+        "LoCoMo",
+        "self-improvement"
+      ],
+      "site_stars": 22,
+      "site_forks": 9,
+      "license": "Open source public repository",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/wazionapps_nexo.md",
+      "local_git": null,
+      "report": "projects/218-nexo-agent-memory-runtime.md",
+      "public_report": "site/public/reports/projects/218-nexo-agent-memory-runtime.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/wazionapps_nexo.md",
+      "raw_collected_at": "2026-05-26T01:38:44+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web-observed GitHub page showed 22 stars, 9 forks, Python/MCP runtime positioning, persistent semantic memory, natural forgetting, trust scoring, 150+ MCP tools, LoCoMo benchmark claims, and recovery-aware background jobs including weekly evolution; shell GitHub API freshness was blocked.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": true
+    },
+    {
       "name": "Awesome Agent Memory by cxxz",
       "repo": "cxxz/awesome-agent-memory",
       "normalized_repo": "cxxz/awesome-agent-memory",
@@ -21178,6 +21455,47 @@
       "classification_evidence": "web-observed GitHub page showed 15 commits, 3 stars, 0 forks, Python language, continuity benchmark topics, 250 narrative stories, 1,835 verification questions, 10 checkpoints, no LLM in the evaluation loop, arXiv links and Hugging Face corpus link.",
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
+      "name": "state-trace",
+      "repo": "razroo/state-trace",
+      "normalized_repo": "razroo/state-trace",
+      "url": "https://github.com/razroo/state-trace",
+      "category": "state-trace Agent Memory Engine",
+      "pattern": "agent log step -> typed memory node/edge -> capacity-aware decay -> graph traversal retrieval",
+      "tags": [
+        "agent memory",
+        "graph memory",
+        "stateful agents"
+      ],
+      "site_stars": 1,
+      "site_forks": 0,
+      "license": "Public repository license not verified",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/razroo_state-trace.md",
+      "local_git": null,
+      "report": "projects/219-state-trace-agent-memory-engine.md",
+      "public_report": "site/public/reports/projects/219-state-trace-agent-memory-engine.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/razroo_state-trace.md",
+      "raw_collected_at": "2026-05-26T01:38:44+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web-observed GitHub page showed 3 commits, Python package layout, 1 star, 0 forks, and README language for graph-native AI agent memory with typed nodes, causal links, capacity-aware decay/compression/removal, JSON persistence and optional embeddings; shell GitHub API freshness was blocked.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
       "evolution_focused": false
     }
   ],
@@ -25065,6 +25383,48 @@
       "evolution_focused": false
     },
     {
+      "name": "Waza",
+      "repo": "microsoft/waza",
+      "normalized_repo": "microsoft/waza",
+      "url": "https://github.com/microsoft/waza",
+      "category": "Waza Agent Skill Evaluation CLI",
+      "pattern": "SKILL.md asset -> eval scaffold -> benchmark run -> grader/coverage report -> skill quality gate",
+      "tags": [
+        "agent skills",
+        "evaluation",
+        "benchmark",
+        "quality gate"
+      ],
+      "site_stars": 904,
+      "site_forks": 49,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/microsoft_waza.md",
+      "local_git": null,
+      "report": "projects/217-waza-agent-skill-evaluation-cli.md",
+      "public_report": "site/public/reports/projects/217-waza-agent-skill-evaluation-cli.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/microsoft_waza.md",
+      "raw_collected_at": "2026-05-26T01:38:44+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 709 commits, MIT license, Go CLI, 904 stars, 49 forks, and README language for creating, testing, measuring and improving AI agent skill quality with eval.yaml suites, graders, multi-model comparison, coverage grids and CI comments; shell GitHub API freshness was blocked.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
       "name": "Gitagent",
       "repo": "open-gitagent/gitagent",
       "normalized_repo": "open-gitagent/gitagent",
@@ -25142,6 +25502,89 @@
       "classification_evidence": null,
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
+      "evolution_focused": true
+    },
+    {
+      "name": "state-trace",
+      "repo": "razroo/state-trace",
+      "normalized_repo": "razroo/state-trace",
+      "url": "https://github.com/razroo/state-trace",
+      "category": "state-trace Agent Memory Engine",
+      "pattern": "agent log step -> typed memory node/edge -> capacity-aware decay -> graph traversal retrieval",
+      "tags": [
+        "agent memory",
+        "graph memory",
+        "stateful agents"
+      ],
+      "site_stars": 1,
+      "site_forks": 0,
+      "license": "Public repository license not verified",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/razroo_state-trace.md",
+      "local_git": null,
+      "report": "projects/219-state-trace-agent-memory-engine.md",
+      "public_report": "site/public/reports/projects/219-state-trace-agent-memory-engine.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/razroo_state-trace.md",
+      "raw_collected_at": "2026-05-26T01:38:44+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web-observed GitHub page showed 3 commits, Python package layout, 1 star, 0 forks, and README language for graph-native AI agent memory with typed nodes, causal links, capacity-aware decay/compression/removal, JSON persistence and optional embeddings; shell GitHub API freshness was blocked.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "NEXO Brain",
+      "repo": "wazionapps/nexo",
+      "normalized_repo": "wazionapps/nexo",
+      "url": "https://github.com/wazionapps/nexo",
+      "category": "NEXO Agent Memory Runtime",
+      "pattern": "conversation/session traces -> cognitive memory extraction -> semantic/temporal retrieval -> trust/forgetting gates -> proactive context packets",
+      "tags": [
+        "agent memory",
+        "MCP",
+        "LoCoMo",
+        "self-improvement"
+      ],
+      "site_stars": 22,
+      "site_forks": 9,
+      "license": "Open source public repository",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/wazionapps_nexo.md",
+      "local_git": null,
+      "report": "projects/218-nexo-agent-memory-runtime.md",
+      "public_report": "site/public/reports/projects/218-nexo-agent-memory-runtime.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/wazionapps_nexo.md",
+      "raw_collected_at": "2026-05-26T01:38:44+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web-observed GitHub page showed 22 stars, 9 forks, Python/MCP runtime positioning, persistent semantic memory, natural forgetting, trust scoring, 150+ MCP tools, LoCoMo benchmark claims, and recovery-aware background jobs including weekly evolution; shell GitHub API freshness was blocked.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
       "evolution_focused": true
     },
     {

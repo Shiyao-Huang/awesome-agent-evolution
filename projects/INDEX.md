@@ -235,6 +235,12 @@
 | Skillgrade Agent Skill Evaluation | [mgechev/skillgrade](https://github.com/mgechev/skillgrade) | Agent Skill Evaluation Harness | [projects/215-skillgrade-agent-skill-evaluation.md](215-skillgrade-agent-skill-evaluation.md) |
 | Webmaxru Agent Skills | [webmaxru/Agent-Skills](https://github.com/webmaxru/Agent-Skills) | Reviewed Web API Agent Skills | [projects/216-webmaxru-agent-skills.md](216-webmaxru-agent-skills.md) |
 
+| Waza | [microsoft/waza](https://github.com/microsoft/waza) | Waza Agent Skill Evaluation CLI | [projects/217-waza-agent-skill-evaluation-cli.md](217-waza-agent-skill-evaluation-cli.md) |
+
+| NEXO Brain | [wazionapps/nexo](https://github.com/wazionapps/nexo) | NEXO Agent Memory Runtime | [projects/218-nexo-agent-memory-runtime.md](218-nexo-agent-memory-runtime.md) |
+
+| state-trace | [razroo/state-trace](https://github.com/razroo/state-trace) | state-trace Agent Memory Engine | [projects/219-state-trace-agent-memory-engine.md](219-state-trace-agent-memory-engine.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

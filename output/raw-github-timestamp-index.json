@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-26T00:00:00+08:00",
-  "total": 498,
-  "updated_files": 498,
+  "total": 501,
+  "updated_files": 501,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -2426,6 +2426,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "microsoft/waza",
+      "url": "https://github.com/microsoft/waza",
+      "file": "raw-github/microsoft_waza.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T01:38:44+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page"
+    },
+    {
       "repo": "microsoft/WindowsAgentArena",
       "url": "https://github.com/microsoft/WindowsAgentArena",
       "file": "raw-github/microsoft_windowsagentarena.md",
@@ -3072,6 +3081,15 @@
       "collected_at": "2026-05-24T15:00:00+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_github_page_open_2026-05-24"
+    },
+    {
+      "repo": "razroo/state-trace",
+      "url": "https://github.com/razroo/state-trace",
+      "file": "raw-github/razroo_state-trace.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T01:38:44+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page"
     },
     {
       "repo": "reflexioai/reflexio",
@@ -4053,6 +4071,15 @@
       "collected_at": "2026-05-24T21:11:06Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "wazionapps/nexo",
+      "url": "https://github.com/wazionapps/nexo",
+      "file": "raw-github/wazionapps_nexo.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T01:38:44+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page"
     },
     {
       "repo": "webmaxru/Agent-Skills",

@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-26T00:36:53+08:00
+Generated: 2026-05-26T01:38:44+08:00
 
 ## Nodes
 
@@ -15,21 +15,20 @@ Generated: 2026-05-26T00:36:53+08:00
 
 ## Edges
 
-- intent.direct-user-input --governs--> raw.github.hourly-captures
-- raw.github.hourly-captures --feeds--> processed.github-classification
-- processed.github-classification --publishes--> results.public-site
-- processed.github-classification --explains--> work.learning-notes
-- work.learning-notes --handoff--> intent.direct-user-input
-- processed.github-classification --visualizes--> results.public-visualizations
+- intent.direct-user-input --undefined--> raw.github.hourly-captures
+- raw.github.hourly-captures --undefined--> processed.github-classification
+- processed.github-classification --undefined--> results.public-site
+- processed.github-classification --undefined--> work.learning-notes
+- work.learning-notes --undefined--> intent.direct-user-input
+- processed.github-classification --undefined--> results.public-visualizations
 
 ## Current Run Evidence
 
-- Web-observed repos this run: mgechev/skillgrade and webmaxru/Agent-Skills; no clone, benchmark, or authenticated GitHub API freshness was claimed.
-- New raw files: raw-github/mgechev_skillgrade.md and raw-github/webmaxru_agent-skills.md.
-- New public model cards and site reports: projects/site reports 215-216 for Skillgrade and Webmaxru Agent Skills.
-- Generated counts after analysis: raw=498, classified=498, site projects=89, strict evolution=79, broad evolution=179, theme heat memory=100/evaluation=91/evolution=79/skill=61.
+- Web-observed repos this run: microsoft/waza, wazionapps/nexo, razroo/state-trace; no clone, benchmark, or authenticated GitHub API freshness was claimed.
+- New raw files: raw-github/microsoft_waza.md, raw-github/wazionapps_nexo.md, raw-github/razroo_state-trace.md.
+- New public model cards and site reports: projects/site reports 217-219 for Waza, NEXO Brain and state-trace.
+- Generated target counts after this scripted update: raw=501, classified=501, site projects=92, strict evolution=79, broad evolution=180, theme heat memory=102/evaluation=91/evolution=79/skill=62.
 - GitHub API blocker: curl api.github.com failed DNS resolution and gh auth status reported an invalid token for Shiyao-Huang.
-- GitNexus evidence: status reports up-to-date at commit 85247b7; analyze is degraded because global HOME registry writes are blocked and temp-HOME LadybugDB FTS extension download cannot connect.
-- Validation passed: node --check, jq, generate_project_indexes, enforce_raw_timestamps, analyze_github_project_data, site build, and paper xelatex. Site and LaTeX retained pre-existing warnings.
+- GitNexus evidence: status is stale at indexed commit 85247b7 before this iteration; analyze is degraded because global HOME registry writes are blocked and temp-HOME LadybugDB FTS extension download cannot connect.
 - Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> project report -> site data -> README/i18n/site build.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

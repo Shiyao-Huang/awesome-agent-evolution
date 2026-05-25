@@ -1766,6 +1766,81 @@ export const projects: Project[] = [
                     "validation",
                     "skill lifecycle"
             ]
+    },
+    {
+            "name": "Waza",
+            "repo": "microsoft/waza",
+            "url": "https://github.com/microsoft/waza",
+            "stars": 904,
+            "forks": 49,
+            "language": "Go",
+            "license": "MIT",
+            "report": "projects/217-waza-agent-skill-evaluation-cli.md",
+            "pattern": "SKILL.md asset -> eval scaffold -> benchmark run -> grader/coverage report -> skill quality gate",
+            "description": "Waza is Microsoft's Go CLI / framework for agent skills: it scaffolds skills and eval suites, runs benchmark tasks, compares models, checks coverage, and turns SKILL.md assets into measurable quality gates.",
+            "stack": [
+                    "Go"
+            ],
+            "category": "Waza Agent Skill Evaluation CLI",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/microsoft_waza.md",
+            "status": "candidate",
+            "tags": [
+                    "agent skills",
+                    "evaluation",
+                    "benchmark",
+                    "quality gate"
+            ]
+    },
+    {
+            "name": "NEXO Brain",
+            "repo": "wazionapps/nexo",
+            "url": "https://github.com/wazionapps/nexo",
+            "stars": 22,
+            "forks": 9,
+            "language": "Python / MCP",
+            "license": "Open source public repository",
+            "report": "projects/218-nexo-agent-memory-runtime.md",
+            "pattern": "conversation/session traces -> cognitive memory extraction -> semantic/temporal retrieval -> trust/forgetting gates -> proactive context packets",
+            "description": "NEXO Brain is a local shared-brain memory runtime for Claude Code, Codex, Claude Desktop and MCP clients, combining persistent memory, RAG, temporal recall, forgetting, trust scoring, benchmark reporting and background self-improvement jobs.",
+            "stack": [
+                    "Python",
+                    "MCP"
+            ],
+            "category": "NEXO Agent Memory Runtime",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/wazionapps_nexo.md",
+            "status": "candidate",
+            "tags": [
+                    "agent memory",
+                    "MCP",
+                    "LoCoMo",
+                    "self-improvement"
+            ]
+    },
+    {
+            "name": "state-trace",
+            "repo": "razroo/state-trace",
+            "url": "https://github.com/razroo/state-trace",
+            "stars": 1,
+            "forks": 0,
+            "language": "Python",
+            "license": "Public repository license not verified",
+            "report": "projects/219-state-trace-agent-memory-engine.md",
+            "pattern": "agent log step -> typed memory node/edge -> capacity-aware decay -> graph traversal retrieval",
+            "description": "state-trace is a graph-native memory engine for AI agents that stores typed memories and causal links, then retrieves state-aware context through graph traversal instead of only vector similarity.",
+            "stack": [
+                    "Python"
+            ],
+            "category": "state-trace Agent Memory Engine",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/razroo_state-trace.md",
+            "status": "candidate",
+            "tags": [
+                    "agent memory",
+                    "graph memory",
+                    "stateful agents"
+            ]
     }
 ];
 
@@ -1796,7 +1871,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['mgechev/skillgrade', 'webmaxru/Agent-Skills', 'google-gemini/gemini-cli', 'open-gitagent/gitagent'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'webmaxru/Agent-Skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent'] }
   ,{ title: 'Agent 框架 (Round 4)', repos: ['reworkd/AgentGPT', 'yoheinakajima/babyagi', 'cheshire-cat-ai/core', 'huggingface/smolagents', 'Chainlit/chainlit', 'smol-ai/developer'] }
   ,{ title: 'Agent 研究综述 (Round 4)', repos: ['XMUDeepLIT/Awesome-Self-Evolving-Agents', 'luo-junyu/Awesome-Agent-Papers', 'Zijian-Ni/awesome-ai-agents-2026'] }
 ];

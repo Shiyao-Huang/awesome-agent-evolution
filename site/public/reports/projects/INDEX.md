@@ -238,3 +238,6 @@
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.
+| Waza | [microsoft/waza](https://github.com/microsoft/waza) | Waza Agent Skill Evaluation CLI | [site/public/reports/projects/217-waza-agent-skill-evaluation-cli.md](217-waza-agent-skill-evaluation-cli.md) |
+| NEXO Brain | [wazionapps/nexo](https://github.com/wazionapps/nexo) | NEXO Agent Memory Runtime | [site/public/reports/projects/218-nexo-agent-memory-runtime.md](218-nexo-agent-memory-runtime.md) |
+| state-trace | [razroo/state-trace](https://github.com/razroo/state-trace) | state-trace Agent Memory Engine | [site/public/reports/projects/219-state-trace-agent-memory-engine.md](219-state-trace-agent-memory-engine.md) |
