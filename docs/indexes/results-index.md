@@ -11,10 +11,10 @@
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
 | `reports` | present | 1 | 1 | 0 | 7.5 KB |
-| `output` | present | 12 | 1 | 0 | 575 KB |
-| `site/public/reports` | present | 238 | 4 | 0 | 2.3 MB |
-| `site/dist` | present | 548 | 300 | 0 | 14 MB |
-| `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 963 KB |
+| `output` | present | 8 | 1 | 0 | 564 KB |
+| `site/public/reports` | present | 232 | 4 | 0 | 764 KB |
+| `site/dist` | present | 533 | 292 | 0 | 12 MB |
+| `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 954 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
 ## Representative Files
@@ -25,16 +25,14 @@
 
 ### `output`
 
-- `output/raw-data-timestamp-enforcement-report.json`
-- `output/raw-data-timestamp-validation-report.json`
 - `output/raw-github-timestamp-index-ZH.md`
 - `output/raw-github-timestamp-index.json`
 - `output/raw-github-timestamp-index.md`
-- `output/raw-papers-timestamp-backfill-report.json`
 - `output/raw-papers-timestamp-index.json`
 - `output/raw-papers-timestamp-index.md`
-- `output/raw-papers-timestamp-validation-report.json`
 - `output/self-evolve-research-report.md`
+- `output/social-media-curated-ZH.md`
+- `output/social-media-curated.md`
 
 ### `site/public/reports`
 
@@ -52,7 +50,6 @@
 ### `site/dist`
 
 - `site/dist/_astro/BaseLayout.Dt2Pu-2z.css`
-- `site/dist/_astro/index.CejD_bah.css`
 - `site/dist/_astro/index.CmLyJJUK.css`
 - `site/dist/_astro/star-analysis.B9Ar3sAv.css`
 - `site/dist/blog/adas-to-dgm-evolution/index.html`
@@ -61,6 +58,7 @@
 - `site/dist/blog/ai-self-evolution-map/index.html`
 - `site/dist/blog/alphaevolve-deep-dive/index.html`
 - `site/dist/blog/code-self-improvement-playbook/index.html`
+- `site/dist/blog/cross-domain-research-map/index.html`
 
 ### `paper-drafts/main.pdf`
 

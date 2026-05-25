@@ -23,6 +23,10 @@ dist/
 .genome/
 output/
 
+# Local-only user input memory. Keep these on this machine, but never publish.
+CURRENT_GOAL.md
+docs/project-management/user-direct-inputs.md
+
 site/node_modules/
 site/dist/
 site/.astro/

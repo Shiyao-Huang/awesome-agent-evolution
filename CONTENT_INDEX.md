@@ -25,7 +25,7 @@
 |---|---|---|
 | README 主入口 | [README.md](README.md) | 中文优先，开头前置加工后的完整分类总览，并聚合综述、方法、benchmark、项目分类、核心链接、完整列表索取区和迭代闭环 |
 | English i18n 入口 | [README-EN.md](README-EN.md) | 根 README 的完整英文镜像，包含同等结构、完整列表和维护闭环 |
-| 本地隐私规则 | [AGENTS.md](AGENTS.md) | 用户输入记忆只在本地保留；公开索引不发布用户原文、抽取表或目标快照 |
+| 用户输入记忆 | local-only, ignored | 本地保留，不发布、不提交；公开仓库只保留抽象操作原则 |
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |
 | GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 raw 收集、分类、进化相关、时间序列 |
 | GitHub 数据 JSON | [analysis/github-project-data-analysis.json](analysis/github-project-data-analysis.json) | 脚本生成，可复跑 |

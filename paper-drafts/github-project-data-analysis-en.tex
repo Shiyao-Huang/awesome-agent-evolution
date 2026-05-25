@@ -48,16 +48,15 @@ benchmark & 1 & research-agent & 31 \\
 
 The time analysis deliberately separates repository creation from activity timestamps. The raw corpus time-slice field is an activity/content timestamp extracted from GitHub captures, so it measures when the captured page exposed recent activity. The analyzed-project timeline uses GitHub API \texttt{created\_at} where available. When GitHub API creation time is unavailable, the table marks a weaker \texttt{local\_git\_first\_commit} fallback; this is a first-observed mirror timestamp, not a release-date claim. In the current run, 53 of 204 analyzed projects have either verified creation time or a local fallback. Git metadata is also joined at the project level: 29 analyzed projects have GitHub API/cache metadata, 46 have local git mirror evidence, and 204 have a public report path.
 
-\begin{center}
-\TableTight
-\begin{longtable}{@{}L{0.10\textwidth}L{0.12\textwidth}L{0.22\textwidth}L{0.24\textwidth}L{0.26\textwidth}@{}}
+{\TableTight
+\begin{longtable}{@{}L{0.08\textwidth}L{0.12\textwidth}L{0.23\textwidth}L{0.24\textwidth}L{0.27\textwidth}@{}}
 \caption{First 24 analyzed projects by verified creation month or local first-observed fallback.}
 \label{tab:analyzed-project-release-timeline}\\
 \toprule
 \textbf{Month} & \textbf{Source} & \textbf{Repository} & \textbf{Category} & \textbf{Evolution pattern} \\
 \midrule
 \endfirsthead
-\caption[]{First analyzed projects by verified creation month or local first-observed fallback (continued).}\\
+\caption[]{First analyzed projects by creation month or first-observed fallback (continued).}\\
 \toprule
 \textbf{Month} & \textbf{Source} & \textbf{Repository} & \textbf{Category} & \textbf{Evolution pattern} \\
 \midrule
@@ -88,17 +87,16 @@ The time analysis deliberately separates repository creation from activity times
 2024-11 & local mirror & \path|xiaofangxd/LLM_EA| & LLM plus evolutionary algorithms survey & literature review \\
 2025-03 & local mirror & \path|wuxingyu-ai/LLM4EC| & LLM plus evolutionary computation survey & literature review \\
 2025-05 & GitHub API & \path|DeepAuto-AI/automl-agent| & multi-agent AutoML & orchestration plus search loop plus evaluator \\
-\end{longtable}
-\end{center}
+\end{longtable}}
 
 \begin{table}[t]
 \centering
 \TableTight
 \caption{Top strict evolution-theme repositories by local star snapshot.}
 \label{tab:top-evolution-theme-repos}
-\begin{tabularx}{\linewidth}{@{}L{0.28\linewidth}r r Y@{}}
+\begin{tabularx}{\textwidth}{@{}L{0.30\textwidth}r L{0.10\textwidth}Y@{}}
 \toprule
-Repository & Stars & Time & Description \\
+\textbf{Repository} & \textbf{Stars} & \textbf{Time} & \textbf{Description} \\
 \midrule
 \path|aiming-lab/AutoResearchClaw| & 12600 & 2026-05 & Autonomous and collaborative research-agent pipeline from idea to paper, with debate, sandboxed experiments, claim verification, HITL co-pilot behavior, MetaClaw cross-run learning, and ARC-Bench. \\
 \path|aden-hive/hive| & 10400 & 2026-05 & Production multi-agent harness emphasizing persistent state, crash recovery, cost control, audit traces, MCP integration, and failure-driven graph evolution. \\
