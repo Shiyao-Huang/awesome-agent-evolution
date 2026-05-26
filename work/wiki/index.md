@@ -51,6 +51,7 @@ _Processed raw sources with extracted insights_
 - [Blogs Brainstorm](sources/blogs-brainstorm.md) — 20 blog entries × industry insights: evaluation gap/memory evolution/self-modification safety | Rank: V1 | 2026-05-26
 - [Cross-Pollination](sources/cross-pollination.md) — Papers×Blogs×Reviews交叉: 13 clusters from evaluation-production gap to verification arms race | Rank: V1 | 2026-05-26
 - [Papers Brainstorm](sources/papers-brainstorm.md) — 12 high-value papers × creative insights: 3 evolution channels/diversity dilemma/evaluator bottleneck | Rank: V1 | 2026-05-26
+- [Raw-Social & Blogs Mechanism Analysis](sources/raw-social-blogs-mechanism-analysis.md) — 1298 social+1308 blog: 7 patterns, 6 method families, social-hype vs evidence gap, official company positions | Rank: A | 2026-05-26
 
 ## Synthesis
 
@@ -68,6 +69,6 @@ _Cross-cutting analyses, comparisons, evolving theses_
 |--------|-------|
 | Entities | 8 |
 | Concepts | 9 |
-| Sources | 14 |
+| Sources | 15 |
 | Synthesis pages | 2 |
 | Last updated | 2026-05-26 |
