@@ -246,6 +246,9 @@
 | AI Research SKILLs | [Orchestra-Research/AI-research-SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs) | Agent Research Skill Library | [projects/233-ai-research-skills-agent-research-workflow.md](233-ai-research-skills-agent-research-workflow.md) |
 | ai-skills | [iliaal/ai-skills](https://github.com/iliaal/ai-skills) | Agent Process Skill Library | [projects/234-ai-skills-agent-process-discipline.md](234-ai-skills-agent-process-discipline.md) |
 
+| Claude Trading Skills | [agiprolabs/claude-trading-skills](https://github.com/agiprolabs/claude-trading-skills) | Domain Agent Skill Workflow Pack | [projects/235-claude-trading-skills-domain-agent-workflows.md](235-claude-trading-skills-domain-agent-workflows.md) |
+| Spec Kit Agent Skills | [dceoy/speckit-agent-skills](https://github.com/dceoy/speckit-agent-skills) | Spec-Driven Agent Workflow Skills | [projects/236-speckit-agent-skills-spec-driven-workflow.md](236-speckit-agent-skills-spec-driven-workflow.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

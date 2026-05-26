@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-25T22:57:45.866Z",
+  "generated_at": "2026-05-26T00:22:07.510Z",
   "counts": {
-    "raw_captures": 517,
-    "raw_files_on_disk": 517,
-    "classified_repos": 517,
-    "analyzed_projects": 107,
-    "analyzed_in_raw_timestamp_index": 54,
-    "analyzed_in_classification": 54,
+    "raw_captures": 519,
+    "raw_files_on_disk": 519,
+    "classified_repos": 519,
+    "analyzed_projects": 109,
+    "analyzed_in_raw_timestamp_index": 56,
+    "analyzed_in_classification": 56,
     "analyzed_evolution_focused": 55,
     "analyzed_with_created_at_or_fallback": 80,
     "analyzed_with_github_api_metadata": 25,
     "analyzed_with_local_git_mirror": 77,
-    "analyzed_with_public_report": 77,
+    "analyzed_with_public_report": 79,
     "raw_core_evolution": 82,
     "raw_broad_evolution": 185,
     "raw_unknown_time_slice": 109
@@ -31,7 +31,7 @@
     },
     {
       "key": "工具/tool",
-      "count": 91
+      "count": 93
     },
     {
       "key": "应用/application",
@@ -61,7 +61,7 @@
     },
     {
       "key": "skill",
-      "count": 66
+      "count": 68
     },
     {
       "key": "framework",
@@ -127,6 +127,10 @@
     },
     {
       "key": "Python/JavaScript/Shell",
+      "count": 2
+    },
+    {
+      "key": "Python/Markdown/Agent Skills",
       "count": 2
     },
     {
@@ -294,10 +298,6 @@
       "count": 1
     },
     {
-      "key": "Python/Markdown/Agent Skills",
-      "count": 1
-    },
-    {
       "key": "Python/MCP/mem0/Agent Skills",
       "count": 1
     },
@@ -350,6 +350,10 @@
       "count": 1
     },
     {
+      "key": "Shell/Markdown/Spec Kit",
+      "count": 1
+    },
+    {
       "key": "Shell/PowerShell/Markdown",
       "count": 1
     },
@@ -397,7 +401,7 @@
   "raw_time_slice_counts": [
     {
       "key": "2026-05",
-      "count": 356
+      "count": 358
     },
     {
       "key": "unknown",
@@ -495,7 +499,7 @@
     },
     {
       "key": "skill",
-      "count": 6
+      "count": 8
     },
     {
       "key": "education-list",
@@ -516,11 +520,11 @@
   ],
   "analyzed_created_month_counts": [
     {
-      "key": "2026-05",
-      "count": 27
+      "key": "unknown",
+      "count": 29
     },
     {
-      "key": "unknown",
+      "key": "2026-05",
       "count": 27
     },
     {
@@ -2124,6 +2128,21 @@
       "description": "A repo lists papers related to LLM based agent"
     },
     {
+      "repo": "agiprolabs/claude-trading-skills",
+      "url": "https://github.com/agiprolabs/claude-trading-skills",
+      "stars": "31",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "Python/Markdown/Agent Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 31 stars, 14 forks, 4 commits, MIT license, Python primary language, and README language about 62 trading/DeFi/quantitative-finance Agent Skills across 16 categories with Claude Code plugin and manual install paths for Codex, Cursor and Gemini CLI.",
+      "description": "Claude Trading Skills packages trading, DeFi and quantitative finance procedures as reusable Agent Skills for Claude Code, Codex, Cursor, Gemini CLI and other compatible runtimes."
+    },
+    {
       "repo": "ai-boost/awesome-ai-for-science",
       "url": "https://github.com/ai-boost/awesome-ai-for-science",
       "stars": "1",
@@ -3232,6 +3251,21 @@
       "content_timestamp": "2025-07-17",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[EMNLP 2025] Awesome RAG Reasoning Resources"
+    },
+    {
+      "repo": "dceoy/speckit-agent-skills",
+      "url": "https://github.com/dceoy/speckit-agent-skills",
+      "stars": "88",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "Shell/Markdown/Spec Kit",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 88 stars, 21 forks, 92 commits, AGPL-3.0 license, Shell primary language, v0.1.2 release on 2026-03-14, and README sections for shared speckit-* skills plus runtime-specific Claude Code, Codex, GitHub Copilot CLI and Gemini CLI access.",
+      "description": "speckit-agent-skills maps Spec Kit methodology into shared skills, prompts, commands and agent files for Claude Code, Codex CLI, GitHub Copilot CLI, Gemini CLI and related runtimes."
     },
     {
       "repo": "DEEP-PolyU/Awesome-GraphMemory",
@@ -18356,6 +18390,92 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "skill",
       "evolution_focused": false
+    },
+    {
+      "name": "Claude Trading Skills",
+      "repo": "agiprolabs/claude-trading-skills",
+      "normalized_repo": "agiprolabs/claude-trading-skills",
+      "url": "https://github.com/agiprolabs/claude-trading-skills",
+      "category": "Domain Agent Skill Workflow Pack",
+      "pattern": "domain skill pack -> market data / backtesting / risk / tax workflows -> reusable agent task procedures",
+      "tags": [
+        "agent skills",
+        "domain workflow",
+        "trading",
+        "Codex",
+        "Claude Code"
+      ],
+      "site_stars": 31,
+      "site_forks": 14,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/agiprolabs_claude-trading-skills.md",
+      "local_git": null,
+      "report": "projects/235-claude-trading-skills-domain-agent-workflows.md",
+      "public_report": "site/public/reports/projects/235-claude-trading-skills-domain-agent-workflows.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/agiprolabs_claude-trading-skills.md",
+      "raw_collected_at": "2026-05-26T07:45:34+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web-observed GitHub page showed 31 stars, 14 forks, 4 commits, MIT license, Python primary language, and README language about 62 trading/DeFi/quantitative-finance Agent Skills across 16 categories with Claude Code plugin and manual install paths for Codex, Cursor and Gemini CLI.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
+      "name": "Spec Kit Agent Skills",
+      "repo": "dceoy/speckit-agent-skills",
+      "normalized_repo": "dceoy/speckit-agent-skills",
+      "url": "https://github.com/dceoy/speckit-agent-skills",
+      "category": "Spec-Driven Agent Workflow Skills",
+      "pattern": "spec-driven workflow -> constitution/specify/plan/tasks/implement skills -> multi-runtime agent process discipline",
+      "tags": [
+        "agent skills",
+        "spec-driven development",
+        "workflow orchestration",
+        "Codex",
+        "Gemini CLI"
+      ],
+      "site_stars": 88,
+      "site_forks": 21,
+      "license": "AGPL-3.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/dceoy_speckit-agent-skills.md",
+      "local_git": null,
+      "report": "projects/236-speckit-agent-skills-spec-driven-workflow.md",
+      "public_report": "site/public/reports/projects/236-speckit-agent-skills-spec-driven-workflow.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/dceoy_speckit-agent-skills.md",
+      "raw_collected_at": "2026-05-26T07:45:34+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "skill-orchestration",
+      "classification_evidence": "web-observed GitHub page showed 88 stars, 21 forks, 92 commits, AGPL-3.0 license, Shell primary language, v0.1.2 release on 2026-03-14, and README sections for shared speckit-* skills plus runtime-specific Claude Code, Codex, GitHub Copilot CLI and Gemini CLI access.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
     }
   ],
   "analyzed_git_evidence": [
@@ -22545,6 +22665,49 @@
       "evolution_focused": true
     },
     {
+      "name": "Spec Kit Agent Skills",
+      "repo": "dceoy/speckit-agent-skills",
+      "normalized_repo": "dceoy/speckit-agent-skills",
+      "url": "https://github.com/dceoy/speckit-agent-skills",
+      "category": "Spec-Driven Agent Workflow Skills",
+      "pattern": "spec-driven workflow -> constitution/specify/plan/tasks/implement skills -> multi-runtime agent process discipline",
+      "tags": [
+        "agent skills",
+        "spec-driven development",
+        "workflow orchestration",
+        "Codex",
+        "Gemini CLI"
+      ],
+      "site_stars": 88,
+      "site_forks": 21,
+      "license": "AGPL-3.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/dceoy_speckit-agent-skills.md",
+      "local_git": null,
+      "report": "projects/236-speckit-agent-skills-spec-driven-workflow.md",
+      "public_report": "site/public/reports/projects/236-speckit-agent-skills-spec-driven-workflow.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/dceoy_speckit-agent-skills.md",
+      "raw_collected_at": "2026-05-26T07:45:34+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "skill-orchestration",
+      "classification_evidence": "web-observed GitHub page showed 88 stars, 21 forks, 92 commits, AGPL-3.0 license, Shell primary language, v0.1.2 release on 2026-03-14, and README sections for shared speckit-* skills plus runtime-specific Claude Code, Codex, GitHub Copilot CLI and Gemini CLI access.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
       "name": "SCOPE",
       "repo": "JarvisPei/SCOPE",
       "normalized_repo": "jarvispei/scope",
@@ -22791,6 +22954,49 @@
       "classification_evidence": "web GitHub page observed 1127 commits, 243 tags, AGPL-3.0, TypeScript 96.2%, 33 stars and 8 forks; README describes local control plane/dashboard for Cursor, Antigravity, VS Code, Kiro, Codex, Claude Code, Hermes Agent and CLI sessions",
       "raw_time_slice": "2026-05",
       "classified_theme": "framework",
+      "evolution_focused": false
+    },
+    {
+      "name": "Claude Trading Skills",
+      "repo": "agiprolabs/claude-trading-skills",
+      "normalized_repo": "agiprolabs/claude-trading-skills",
+      "url": "https://github.com/agiprolabs/claude-trading-skills",
+      "category": "Domain Agent Skill Workflow Pack",
+      "pattern": "domain skill pack -> market data / backtesting / risk / tax workflows -> reusable agent task procedures",
+      "tags": [
+        "agent skills",
+        "domain workflow",
+        "trading",
+        "Codex",
+        "Claude Code"
+      ],
+      "site_stars": 31,
+      "site_forks": 14,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/agiprolabs_claude-trading-skills.md",
+      "local_git": null,
+      "report": "projects/235-claude-trading-skills-domain-agent-workflows.md",
+      "public_report": "site/public/reports/projects/235-claude-trading-skills-domain-agent-workflows.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/agiprolabs_claude-trading-skills.md",
+      "raw_collected_at": "2026-05-26T07:45:34+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web-observed GitHub page showed 31 stars, 14 forks, 4 commits, MIT license, Python primary language, and README language about 62 trading/DeFi/quantitative-finance Agent Skills across 16 categories with Claude Code plugin and manual install paths for Codex, Cursor and Gemini CLI.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
       "evolution_focused": false
     },
     {
@@ -26898,6 +27104,49 @@
       "evolution_focused": false
     },
     {
+      "name": "Claude Trading Skills",
+      "repo": "agiprolabs/claude-trading-skills",
+      "normalized_repo": "agiprolabs/claude-trading-skills",
+      "url": "https://github.com/agiprolabs/claude-trading-skills",
+      "category": "Domain Agent Skill Workflow Pack",
+      "pattern": "domain skill pack -> market data / backtesting / risk / tax workflows -> reusable agent task procedures",
+      "tags": [
+        "agent skills",
+        "domain workflow",
+        "trading",
+        "Codex",
+        "Claude Code"
+      ],
+      "site_stars": 31,
+      "site_forks": 14,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/agiprolabs_claude-trading-skills.md",
+      "local_git": null,
+      "report": "projects/235-claude-trading-skills-domain-agent-workflows.md",
+      "public_report": "site/public/reports/projects/235-claude-trading-skills-domain-agent-workflows.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/agiprolabs_claude-trading-skills.md",
+      "raw_collected_at": "2026-05-26T07:45:34+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "tool-module",
+      "classification_evidence": "web-observed GitHub page showed 31 stars, 14 forks, 4 commits, MIT license, Python primary language, and README language about 62 trading/DeFi/quantitative-finance Agent Skills across 16 categories with Claude Code plugin and manual install paths for Codex, Cursor and Gemini CLI.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
       "name": "Awesome-Code-LLM",
       "repo": "CodeFuse-ML/awesome-code-llm",
       "normalized_repo": "codefuse-ml/awesome-code-llm",
@@ -26973,6 +27222,49 @@
       "classification_evidence": "web-observed GitHub page showed MIT license, 10 stars, 3 forks, 16 commits, and an MCP-centric memory server/tool list covering Basic Memory, OpenMemory MCP, graph memory servers and vector-backed memory tools; counts were not API-verified in this shell-blocked run.",
       "raw_time_slice": "2026-05",
       "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "Spec Kit Agent Skills",
+      "repo": "dceoy/speckit-agent-skills",
+      "normalized_repo": "dceoy/speckit-agent-skills",
+      "url": "https://github.com/dceoy/speckit-agent-skills",
+      "category": "Spec-Driven Agent Workflow Skills",
+      "pattern": "spec-driven workflow -> constitution/specify/plan/tasks/implement skills -> multi-runtime agent process discipline",
+      "tags": [
+        "agent skills",
+        "spec-driven development",
+        "workflow orchestration",
+        "Codex",
+        "Gemini CLI"
+      ],
+      "site_stars": 88,
+      "site_forks": 21,
+      "license": "AGPL-3.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/dceoy_speckit-agent-skills.md",
+      "local_git": null,
+      "report": "projects/236-speckit-agent-skills-spec-driven-workflow.md",
+      "public_report": "site/public/reports/projects/236-speckit-agent-skills-spec-driven-workflow.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/dceoy_speckit-agent-skills.md",
+      "raw_collected_at": "2026-05-26T07:45:34+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "skill-orchestration",
+      "classification_evidence": "web-observed GitHub page showed 88 stars, 21 forks, 92 commits, AGPL-3.0 license, Shell primary language, v0.1.2 release on 2026-03-14, and README sections for shared speckit-* skills plus runtime-specific Claude Code, Codex, GitHub Copilot CLI and Gemini CLI access.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
       "evolution_focused": false
     },
     {

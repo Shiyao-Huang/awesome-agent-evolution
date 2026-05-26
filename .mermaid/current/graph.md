@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-26T06:45:09+08:00
+Generated: 2026-05-26T07:45:34+08:00
 
 ## Nodes
 
@@ -19,14 +19,14 @@ Generated: 2026-05-26T06:45:09+08:00
 - raw.github.hourly-captures --feeds--> processed.github-classification
 - processed.github-classification --publishes--> results.public-site
 - processed.github-classification --explains--> work.learning-notes
+- work.learning-notes --handoff--> intent.direct-user-input
 - processed.github-classification --visualizes--> results.public-visualizations
 
 ## Current Run Evidence
 
-- Web-observed repositories this run: Orchestra-Research/AI-research-SKILLs and iliaal/ai-skills.
-- New raw files: raw-github/orchestra-research_ai-research-skills.md and raw-github/iliaal_ai-skills.md.
-- New public reports: site/public/reports/projects/233-ai-research-skills-agent-research-workflow.md and site/public/reports/projects/234-ai-skills-agent-process-discipline.md.
-- Counts after propagation: 517 raw captures, 517 classified repositories, 107 site projects, 82 strict evolution-theme repositories, 185 broad evolution-related repositories, and 259 public project report markdown files including INDEX.md.
-- GitNexus evidence: status/list/query are available for awesome-evolution; query surfaced scripts/analyze_github_project_data.mjs, scripts/generate_project_indexes.mjs and scripts/enforce_raw_timestamps.py as relevant data-flow nodes. gitnexus impact by path returned target not found, so impact analysis is blocked for that exact command.
-- Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> README/i18n -> site data/report -> Astro site build.
+- Web-observed repos: agiprolabs/claude-trading-skills, dceoy/speckit-agent-skills.
+- New raw files: raw-github/agiprolabs_claude-trading-skills.md, raw-github/dceoy_speckit-agent-skills.md.
+- New public model cards and site reports: project/report ids 235, 236.
+- Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
+- GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

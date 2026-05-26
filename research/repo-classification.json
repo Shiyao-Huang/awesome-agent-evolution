@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T22:46:14.643Z",
+  "generated_at": "2026-05-26T07:45:34+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -345,6 +345,21 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "A repo lists papers related to LLM based agent"
+    },
+    {
+      "repo": "agiprolabs/claude-trading-skills",
+      "url": "https://github.com/agiprolabs/claude-trading-skills",
+      "stars": "31",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "Python/Markdown/Agent Skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 31 stars, 14 forks, 4 commits, MIT license, Python primary language, and README language about 62 trading/DeFi/quantitative-finance Agent Skills across 16 categories with Claude Code plugin and manual install paths for Codex, Cursor and Gemini CLI.",
+      "description": "Claude Trading Skills packages trading, DeFi and quantitative finance procedures as reusable Agent Skills for Claude Code, Codex, Cursor, Gemini CLI and other compatible runtimes."
     },
     {
       "repo": "ai-boost/awesome-ai-for-science",
@@ -1455,6 +1470,21 @@
       "content_timestamp": "2025-07-17",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[EMNLP 2025] Awesome RAG Reasoning Resources"
+    },
+    {
+      "repo": "dceoy/speckit-agent-skills",
+      "url": "https://github.com/dceoy/speckit-agent-skills",
+      "stars": "88",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "Shell/Markdown/Spec Kit",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 88 stars, 21 forks, 92 commits, AGPL-3.0 license, Shell primary language, v0.1.2 release on 2026-03-14, and README sections for shared speckit-* skills plus runtime-specific Claude Code, Codex, GitHub Copilot CLI and Gemini CLI access.",
+      "description": "speckit-agent-skills maps Spec Kit methodology into shared skills, prompts, commands and agent files for Claude Code, Codex CLI, GitHub Copilot CLI, Gemini CLI and related runtimes."
     },
     {
       "repo": "DEEP-PolyU/Awesome-GraphMemory",

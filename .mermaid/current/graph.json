@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T06:45:09+08:00",
+  "generated_at": "2026-05-26T07:45:34+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -217,7 +217,9 @@
         "raw-github/swapedoc_hermes2anti.md",
         "raw-github/vilmire_adhdev.md",
         "raw-github/orchestra-research_ai-research-skills.md",
-        "raw-github/iliaal_ai-skills.md"
+        "raw-github/iliaal_ai-skills.md",
+        "raw-github/agiprolabs_claude-trading-skills.md",
+        "raw-github/dceoy_speckit-agent-skills.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -330,7 +332,8 @@
         "work/research/hourly-public-metadata-update-2026-05-26-0341.md",
         "work/research/hourly-public-metadata-update-2026-05-26-0441.md",
         "work/research/hourly-public-metadata-update-2026-05-26-0544.md",
-        "work/research/hourly-public-metadata-update-2026-05-26-0645.md"
+        "work/research/hourly-public-metadata-update-2026-05-26-0645.md",
+        "work/research/hourly-public-metadata-update-2026-05-26-0745.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -706,7 +709,11 @@
         "site/public/reports/projects/231-hermes2anti-self-improve-agent-memory-skills.md",
         "site/public/reports/projects/232-adhdev-agent-dashboard-control-plane.md",
         "site/public/reports/projects/233-ai-research-skills-agent-research-workflow.md",
-        "site/public/reports/projects/234-ai-skills-agent-process-discipline.md"
+        "site/public/reports/projects/234-ai-skills-agent-process-discipline.md",
+        "projects/235-claude-trading-skills-domain-agent-workflows.md",
+        "site/public/reports/projects/235-claude-trading-skills-domain-agent-workflows.md",
+        "projects/236-speckit-agent-skills-spec-driven-workflow.md",
+        "site/public/reports/projects/236-speckit-agent-skills-spec-driven-workflow.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -966,21 +973,13 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-26T06:45:09+08:00",
+    "run_at": "2026-05-26T07:45:34+08:00",
     "added_repositories": [
-      "Orchestra-Research/AI-research-SKILLs",
-      "iliaal/ai-skills"
+      "agiprolabs/claude-trading-skills",
+      "dceoy/speckit-agent-skills"
     ],
-    "evidence_quality": "web_observed_public_github_pages; no authenticated GitHub API freshness claimed",
+    "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "counts_after_propagation": {
-      "raw_captures": 517,
-      "classified_repositories": 517,
-      "site_projects": 107,
-      "strict_evolution_repositories": 82,
-      "broad_evolution_related_repositories": 185,
-      "public_project_report_markdown_files_including_index": 259
-    },
-    "gitnexus_evidence": "gitnexus status/list/query available; query linked data-flow terms to analyze_github_project_data.mjs, generate_project_indexes.mjs, enforce_raw_timestamps.py and prior hourly notes; impact target by path returned not found, so no blast-radius claim was fabricated"
+    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
   }
 }

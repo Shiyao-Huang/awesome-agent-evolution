@@ -246,6 +246,9 @@
 | evmbench | [paradigmxyz/evmbench](https://github.com/paradigmxyz/evmbench) | Smart Contract Agent Benchmark Harness | [projects/222-evmbench-smart-contract-agent-harness.md](222-evmbench-smart-contract-agent-harness.md) |
 | Skills Best Practices | [mgechev/skills-best-practices](https://github.com/mgechev/skills-best-practices) | Agent Skill Authoring Methodology | [projects/223-skills-best-practices-agent-skill-authoring.md](223-skills-best-practices-agent-skill-authoring.md) |
 
+| Claude Trading Skills | [agiprolabs/claude-trading-skills](https://github.com/agiprolabs/claude-trading-skills) | Domain Agent Skill Workflow Pack | [projects/235-claude-trading-skills-domain-agent-workflows.md](235-claude-trading-skills-domain-agent-workflows.md) |
+| Spec Kit Agent Skills | [dceoy/speckit-agent-skills](https://github.com/dceoy/speckit-agent-skills) | Spec-Driven Agent Workflow Skills | [projects/236-speckit-agent-skills-spec-driven-workflow.md](236-speckit-agent-skills-spec-driven-workflow.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

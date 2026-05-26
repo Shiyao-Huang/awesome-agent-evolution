@@ -2270,7 +2270,63 @@ export const projects: Project[] = [
                   "planning",
                   "multi-agent orchestration"
           ]
-  }
+  },
+    {
+            "name": "Claude Trading Skills",
+            "repo": "agiprolabs/claude-trading-skills",
+            "url": "https://github.com/agiprolabs/claude-trading-skills",
+            "stars": 31,
+            "forks": 14,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/235-claude-trading-skills-domain-agent-workflows.md",
+            "pattern": "domain skill pack -> market data / backtesting / risk / tax workflows -> reusable agent task procedures",
+            "description": "Claude Trading Skills packages trading, DeFi and quantitative finance procedures as reusable Agent Skills for Claude Code, Codex, Cursor, Gemini CLI and other compatible runtimes.",
+            "stack": [
+                    "Python",
+                    "Markdown",
+                    "Agent Skills"
+            ],
+            "category": "Domain Agent Skill Workflow Pack",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/agiprolabs_claude-trading-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "agent skills",
+                    "domain workflow",
+                    "trading",
+                    "Codex",
+                    "Claude Code"
+            ]
+    },
+    {
+            "name": "Spec Kit Agent Skills",
+            "repo": "dceoy/speckit-agent-skills",
+            "url": "https://github.com/dceoy/speckit-agent-skills",
+            "stars": 88,
+            "forks": 21,
+            "language": "Shell",
+            "license": "AGPL-3.0",
+            "report": "projects/236-speckit-agent-skills-spec-driven-workflow.md",
+            "pattern": "spec-driven workflow -> constitution/specify/plan/tasks/implement skills -> multi-runtime agent process discipline",
+            "description": "speckit-agent-skills maps Spec Kit methodology into shared skills, prompts, commands and agent files for Claude Code, Codex CLI, GitHub Copilot CLI, Gemini CLI and related runtimes.",
+            "stack": [
+                    "Shell",
+                    "Markdown",
+                    "Spec Kit"
+            ],
+            "category": "Spec-Driven Agent Workflow Skills",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/dceoy_speckit-agent-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "agent skills",
+                    "spec-driven development",
+                    "workflow orchestration",
+                    "Codex",
+                    "Gemini CLI"
+            ]
+    }
 ];
 
 export const projectGroups = [
