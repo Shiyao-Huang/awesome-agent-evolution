@@ -10,7 +10,7 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `reports` | present | 5 | 1 | 0 | 69 KB |
+| `reports` | present | 12 | 2 | 0 | 90 KB |
 | `output` | present | 8 | 1 | 0 | 572 KB |
 | `site/public/reports` | present | 357 | 6 | 0 | 2.7 MB |
 | `site/dist` | present | 657 | 264 | 0 | 15 MB |
@@ -26,6 +26,11 @@
 - `reports/project-discovery-leads.md`
 - `reports/propagation-chain-evidence.md`
 - `reports/star-analysis-report.md`
+- `reports/survey-publication/01-field-map.md`
+- `reports/survey-publication/02-true-vs-pseudo-evolution.md`
+- `reports/survey-publication/03-evaluation-bottleneck.md`
+- `reports/survey-publication/04-demo-to-production-gap.md`
+- `reports/survey-publication/05-open-source-evidence-atlas.md`
 
 ### `output`
 
