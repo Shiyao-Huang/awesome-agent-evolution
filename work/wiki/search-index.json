@@ -1,0 +1,1294 @@
+{
+  "generated": "2026-05-26T04:17:20.200Z",
+  "stats": {
+    "pages": 20,
+    "keywords": 317
+  },
+  "catalog": [
+    {
+      "path": "concepts/emergent-behavior.md",
+      "title": "\"涌现行为分析 (Emergent Behavior Analysis)\"",
+      "rank": "A",
+      "type": "concept",
+      "tags": [
+        "mechanism",
+        "M5",
+        "emergence",
+        "open-ended",
+        "stepping-stones",
+        "misevolution",
+        "risk"
+      ]
+    },
+    {
+      "path": "concepts/llm-agent-knowledge-delivery.md",
+      "title": "\"LLM Agent 知识交付架构\"",
+      "rank": "A",
+      "type": "concept",
+      "tags": [
+        "architecture",
+        "knowledge-delivery",
+        "agent-infrastructure",
+        "wiki",
+        "MCP"
+      ]
+    },
+    {
+      "path": "concepts/multi-agent-coevolution.md",
+      "title": "\"多智能体协作进化 (Multi-Agent Co-Evolution)\"",
+      "rank": "A",
+      "type": "concept",
+      "tags": [
+        "mechanism",
+        "M4",
+        "multi-agent",
+        "co-evolution",
+        "debate",
+        "archive",
+        "ecology"
+      ]
+    },
+    {
+      "path": "concepts/self-evaluation.md",
+      "title": "\"自我评估 (Self-Evaluation)\"",
+      "rank": "A",
+      "type": "concept",
+      "tags": [
+        "mechanism",
+        "M2",
+        "evaluation",
+        "reward",
+        "benchmark",
+        "goodhart"
+      ]
+    },
+    {
+      "path": "concepts/self-improvement.md",
+      "title": "\"自我改进 (Self-Improvement)\"",
+      "rank": "A",
+      "type": "concept",
+      "tags": [
+        "mechanism",
+        "M3",
+        "improvement",
+        "prompt-evolution",
+        "memory",
+        "architecture-search",
+        "code-self-modification"
+      ]
+    },
+    {
+      "path": "concepts/self-observation.md",
+      "title": "\"自我观察 (Self-Observation)\"",
+      "rank": "A",
+      "type": "concept",
+      "tags": [
+        "mechanism",
+        "M1",
+        "self-observation",
+        "trajectory",
+        "reflection"
+      ]
+    },
+    {
+      "path": "entities/anthropic.md",
+      "title": "Anthropic",
+      "rank": "A",
+      "type": "entity",
+      "tags": [
+        "org",
+        "industry",
+        "safety",
+        "code-agent",
+        "talent-hub"
+      ]
+    },
+    {
+      "path": "entities/google-deepmind.md",
+      "title": "Google DeepMind",
+      "rank": "A",
+      "type": "entity",
+      "tags": [
+        "org",
+        "industry",
+        "search-evolution",
+        "code-agent"
+      ]
+    },
+    {
+      "path": "entities/jeff-clune.md",
+      "title": "Jeff Clune",
+      "rank": "A",
+      "type": "entity",
+      "tags": [
+        "person",
+        "academic",
+        "ubc",
+        "open-ended-evolution",
+        "adas",
+        "ai-scientist"
+      ]
+    },
+    {
+      "path": "entities/meta-fair.md",
+      "title": "Meta FAIR",
+      "rank": "A",
+      "type": "entity",
+      "tags": [
+        "org",
+        "industry",
+        "self-improving-agents",
+        "hyperagents"
+      ]
+    },
+    {
+      "path": "entities/noah-shinn.md",
+      "title": "Noah Shinn",
+      "rank": "B",
+      "type": "entity",
+      "tags": [
+        "person",
+        "academic-to-industry",
+        "reflexion",
+        "m2-feedback"
+      ]
+    },
+    {
+      "path": "entities/openai.md",
+      "title": "OpenAI",
+      "rank": "A",
+      "type": "entity",
+      "tags": [
+        "org",
+        "industry",
+        "code-agent",
+        "talent-source"
+      ]
+    },
+    {
+      "path": "entities/sakana-ai.md",
+      "title": "Sakana AI",
+      "rank": "A",
+      "type": "entity",
+      "tags": [
+        "org",
+        "startup",
+        "japan",
+        "self-evolution",
+        "dgm",
+        "ai-scientist"
+      ]
+    },
+    {
+      "path": "entities/shengran-hu.md",
+      "title": "Shengran Hu",
+      "rank": "A",
+      "type": "entity",
+      "tags": [
+        "person",
+        "academic",
+        "ucsd",
+        "adas",
+        "m1-search"
+      ]
+    },
+    {
+      "path": "sources/cross-pollination.md",
+      "title": "\"Cross-Pollination: Papers x Blogs x Reviews\"",
+      "rank": "V1",
+      "type": "source",
+      "tags": []
+    },
+    {
+      "path": "sources/employee-social-intelligence.md",
+      "title": "sources/employee-social-intelligence",
+      "rank": "C",
+      "type": "source",
+      "tags": []
+    },
+    {
+      "path": "sources/papers-brainstorm.md",
+      "title": "\"Papers Brainstorm: 12 High-Value Papers × Creative Insights\"",
+      "rank": "V1",
+      "type": "source",
+      "tags": []
+    },
+    {
+      "path": "sources/raw-github-mechanism-analysis.md",
+      "title": "sources/raw-github-mechanism-analysis",
+      "rank": "C",
+      "type": "source",
+      "tags": []
+    },
+    {
+      "path": "synthesis/mechanism-framework.md",
+      "title": "\"Agent进化机制分析框架\"",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "framework",
+        "mechanism",
+        "M1-M5",
+        "DAG",
+        "taxonomy",
+        "architecture"
+      ]
+    },
+    {
+      "path": "synthesis/talent-landscape.md",
+      "title": "SV Self-Evolution Talent & Paper Landscape",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "landscape",
+        "talent",
+        "papers",
+        "capital",
+        "synthesis"
+      ]
+    }
+  ],
+  "index": {
+    "\"涌现行为分析 (emergent behavior analysis)\"": [
+      "concepts/emergent-behavior.md"
+    ],
+    "mechanism": [
+      "concepts/emergent-behavior.md",
+      "concepts/multi-agent-coevolution.md",
+      "concepts/self-evaluation.md",
+      "concepts/self-improvement.md",
+      "concepts/self-observation.md",
+      "synthesis/mechanism-framework.md"
+    ],
+    "m5": [
+      "concepts/emergent-behavior.md"
+    ],
+    "emergence": [
+      "concepts/emergent-behavior.md"
+    ],
+    "open-ended": [
+      "concepts/emergent-behavior.md"
+    ],
+    "stepping-stones": [
+      "concepts/emergent-behavior.md"
+    ],
+    "misevolution": [
+      "concepts/emergent-behavior.md"
+    ],
+    "risk": [
+      "concepts/emergent-behavior.md",
+      "entities/anthropic.md",
+      "entities/sakana-ai.md"
+    ],
+    "涌现行为分析 (emergent behavior analysis)": [
+      "concepts/emergent-behavior.md"
+    ],
+    "定义": [
+      "concepts/emergent-behavior.md",
+      "concepts/multi-agent-coevolution.md",
+      "concepts/self-evaluation.md",
+      "concepts/self-improvement.md",
+      "concepts/self-observation.md"
+    ],
+    "子机制分类": [
+      "concepts/emergent-behavior.md",
+      "concepts/multi-agent-coevolution.md",
+      "concepts/self-evaluation.md",
+      "concepts/self-improvement.md",
+      "concepts/self-observation.md"
+    ],
+    "正负向涌现案例": [
+      "concepts/emergent-behavior.md"
+    ],
+    "正向": [
+      "concepts/emergent-behavior.md"
+    ],
+    "负向": [
+      "concepts/emergent-behavior.md"
+    ],
+    "局限性": [
+      "concepts/emergent-behavior.md",
+      "concepts/multi-agent-coevolution.md",
+      "concepts/self-evaluation.md",
+      "concepts/self-improvement.md",
+      "concepts/self-observation.md"
+    ],
+    "cross-references": [
+      "concepts/emergent-behavior.md",
+      "concepts/multi-agent-coevolution.md",
+      "concepts/self-evaluation.md",
+      "concepts/self-improvement.md",
+      "concepts/self-observation.md",
+      "entities/anthropic.md",
+      "entities/google-deepmind.md",
+      "entities/jeff-clune.md",
+      "entities/meta-fair.md",
+      "entities/noah-shinn.md",
+      "entities/openai.md",
+      "entities/sakana-ai.md",
+      "entities/shengran-hu.md",
+      "synthesis/mechanism-framework.md",
+      "synthesis/talent-landscape.md"
+    ],
+    "alphaevolve 56年突破": [
+      "concepts/emergent-behavior.md"
+    ],
+    "dgm自发现能力": [
+      "concepts/emergent-behavior.md"
+    ],
+    "voyager技能迁移": [
+      "concepts/emergent-behavior.md"
+    ],
+    "adas设计迁移": [
+      "concepts/emergent-behavior.md"
+    ],
+    "self-rewarding长度膨胀": [
+      "concepts/emergent-behavior.md"
+    ],
+    "ragen echo trap": [
+      "concepts/emergent-behavior.md"
+    ],
+    "misevolution时间涌现": [
+      "concepts/emergent-behavior.md"
+    ],
+    "reward hacking": [
+      "concepts/emergent-behavior.md"
+    ],
+    "可预测性差": [
+      "concepts/emergent-behavior.md"
+    ],
+    "风险评估滞后": [
+      "concepts/emergent-behavior.md"
+    ],
+    "安全边界模糊": [
+      "concepts/emergent-behavior.md"
+    ],
+    "评估不充分": [
+      "concepts/emergent-behavior.md"
+    ],
+    "\"llm agent 知识交付架构\"": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "architecture": [
+      "concepts/llm-agent-knowledge-delivery.md",
+      "synthesis/mechanism-framework.md"
+    ],
+    "knowledge-delivery": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "agent-infrastructure": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "wiki": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "mcp": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "llm agent 知识交付架构": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "核心问题": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "现状分析": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "推荐架构：三层知识交付": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "方案比较": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "推荐方案：wiki-first + 搜索索引": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "phase 1：wiki-first（立即可用）": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "phase 2：mcp 增强（中期）": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "phase 3：sqlite 聚合（长期）": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "实现原型": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "原型 1：搜索索引生成器": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "scripts/generate-wiki-index.mjs": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "扫描 work/wiki/ 所有 .md 文件": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "提取标题、标签、rank": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "生成 work/wiki/search-index.json": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "原型 2：claude.md 集成": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "原型 3：agent skill 模板": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    ".claude/skills/knowledge-query.md": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "与 llm wiki 模式的关系": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "下一步": [
+      "concepts/llm-agent-knowledge-delivery.md"
+    ],
+    "\"多智能体协作进化 (multi-agent co-evolution)\"": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "m4": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "multi-agent": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "co-evolution": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "debate": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "archive": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "ecology": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "多智能体协作进化 (multi-agent co-evolution)": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "三种拓扑形态": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "典型案例": [
+      "concepts/multi-agent-coevolution.md",
+      "concepts/self-evaluation.md",
+      "concepts/self-improvement.md",
+      "concepts/self-observation.md"
+    ],
+    "dgm 开放式archive": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "evomac 多agent网络": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "同体自博弈": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "异体对抗": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "archive生态": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "共识幻觉": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "成本二次增长": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "异质性不足": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "协调失败": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "self-evaluation": [
+      "concepts/multi-agent-coevolution.md",
+      "concepts/self-improvement.md",
+      "concepts/self-observation.md",
+      "synthesis/mechanism-framework.md"
+    ],
+    "self-improvement": [
+      "concepts/multi-agent-coevolution.md",
+      "concepts/self-evaluation.md",
+      "concepts/self-observation.md",
+      "synthesis/mechanism-framework.md"
+    ],
+    "emergent-behavior": [
+      "concepts/multi-agent-coevolution.md",
+      "concepts/self-evaluation.md",
+      "concepts/self-improvement.md",
+      "synthesis/mechanism-framework.md"
+    ],
+    "mechanism-framework": [
+      "concepts/multi-agent-coevolution.md",
+      "concepts/self-evaluation.md",
+      "concepts/self-improvement.md",
+      "concepts/self-observation.md"
+    ],
+    "\"自我评估 (self-evaluation)\"": [
+      "concepts/self-evaluation.md"
+    ],
+    "m2": [
+      "concepts/self-evaluation.md"
+    ],
+    "evaluation": [
+      "concepts/self-evaluation.md"
+    ],
+    "reward": [
+      "concepts/self-evaluation.md"
+    ],
+    "benchmark": [
+      "concepts/self-evaluation.md"
+    ],
+    "goodhart": [
+      "concepts/self-evaluation.md"
+    ],
+    "自我评估 (self-evaluation)": [
+      "concepts/self-evaluation.md"
+    ],
+    "可靠性谱系": [
+      "concepts/self-evaluation.md"
+    ],
+    "alphaevolve 的自动evaluator": [
+      "concepts/self-evaluation.md"
+    ],
+    "self-rewarding lm 的评价循环": [
+      "concepts/self-evaluation.md"
+    ],
+    "goodhart定律": [
+      "concepts/self-evaluation.md"
+    ],
+    "评价器退化": [
+      "concepts/self-evaluation.md"
+    ],
+    "评估覆盖不足": [
+      "concepts/self-evaluation.md"
+    ],
+    "评估-修改隔离难题": [
+      "concepts/self-evaluation.md"
+    ],
+    "self-observation": [
+      "concepts/self-evaluation.md",
+      "concepts/self-improvement.md",
+      "concepts/self-observation.md",
+      "synthesis/mechanism-framework.md"
+    ],
+    "\"自我改进 (self-improvement)\"": [
+      "concepts/self-improvement.md"
+    ],
+    "m3": [
+      "concepts/self-improvement.md"
+    ],
+    "improvement": [
+      "concepts/self-improvement.md"
+    ],
+    "prompt-evolution": [
+      "concepts/self-improvement.md"
+    ],
+    "memory": [
+      "concepts/self-improvement.md"
+    ],
+    "architecture-search": [
+      "concepts/self-improvement.md"
+    ],
+    "code-self-modification": [
+      "concepts/self-improvement.md"
+    ],
+    "自我改进 (self-improvement)": [
+      "concepts/self-improvement.md"
+    ],
+    "改进深度谱系": [
+      "concepts/self-improvement.md"
+    ],
+    "统一形式化": [
+      "concepts/self-improvement.md"
+    ],
+    "dgm 代码自修改闭环": [
+      "concepts/self-improvement.md"
+    ],
+    "voyager 技能库进化": [
+      "concepts/self-improvement.md"
+    ],
+    "改进plateau": [
+      "concepts/self-improvement.md"
+    ],
+    "归因困难": [
+      "concepts/self-improvement.md"
+    ],
+    "灾难性遗忘": [
+      "concepts/self-improvement.md"
+    ],
+    "成本爆炸": [
+      "concepts/self-improvement.md"
+    ],
+    "multi-agent-coevolution": [
+      "concepts/self-improvement.md",
+      "synthesis/mechanism-framework.md"
+    ],
+    "\"自我观察 (self-observation)\"": [
+      "concepts/self-observation.md"
+    ],
+    "m1": [
+      "concepts/self-observation.md"
+    ],
+    "trajectory": [
+      "concepts/self-observation.md"
+    ],
+    "reflection": [
+      "concepts/self-observation.md"
+    ],
+    "自我观察 (self-observation)": [
+      "concepts/self-observation.md"
+    ],
+    "reflexion 的 verbal rl": [
+      "concepts/self-observation.md"
+    ],
+    "ace 的上下文工程": [
+      "concepts/self-observation.md"
+    ],
+    "反思幻觉": [
+      "concepts/self-observation.md"
+    ],
+    "上下文膨胀": [
+      "concepts/self-observation.md"
+    ],
+    "观察遗漏": [
+      "concepts/self-observation.md"
+    ],
+    "观察偏差": [
+      "concepts/self-observation.md"
+    ],
+    "anthropic": [
+      "entities/anthropic.md",
+      "entities/google-deepmind.md",
+      "entities/jeff-clune.md",
+      "entities/meta-fair.md",
+      "entities/noah-shinn.md",
+      "entities/openai.md",
+      "entities/sakana-ai.md"
+    ],
+    "org": [
+      "entities/anthropic.md",
+      "entities/google-deepmind.md",
+      "entities/meta-fair.md",
+      "entities/openai.md",
+      "entities/sakana-ai.md"
+    ],
+    "industry": [
+      "entities/anthropic.md",
+      "entities/google-deepmind.md",
+      "entities/meta-fair.md",
+      "entities/openai.md"
+    ],
+    "safety": [
+      "entities/anthropic.md"
+    ],
+    "code-agent": [
+      "entities/anthropic.md",
+      "entities/google-deepmind.md",
+      "entities/openai.md"
+    ],
+    "talent-hub": [
+      "entities/anthropic.md"
+    ],
+    "self-evolution activity": [
+      "entities/anthropic.md"
+    ],
+    "key talent events": [
+      "entities/anthropic.md"
+    ],
+    "self-evolution assessment": [
+      "entities/anthropic.md"
+    ],
+    "hire": [
+      "entities/anthropic.md"
+    ],
+    "departure": [
+      "entities/anthropic.md"
+    ],
+    "net flow": [
+      "entities/anthropic.md"
+    ],
+    "strength": [
+      "entities/anthropic.md"
+    ],
+    "gap": [
+      "entities/anthropic.md"
+    ],
+    "jeff-clune": [
+      "entities/anthropic.md",
+      "entities/sakana-ai.md",
+      "entities/shengran-hu.md"
+    ],
+    "sakana-ai": [
+      "entities/anthropic.md",
+      "entities/google-deepmind.md",
+      "entities/jeff-clune.md",
+      "entities/meta-fair.md",
+      "entities/shengran-hu.md"
+    ],
+    "google-deepmind": [
+      "entities/anthropic.md",
+      "entities/openai.md",
+      "entities/sakana-ai.md"
+    ],
+    "openai": [
+      "entities/anthropic.md",
+      "entities/google-deepmind.md",
+      "entities/meta-fair.md",
+      "entities/openai.md"
+    ],
+    "google deepmind": [
+      "entities/google-deepmind.md"
+    ],
+    "search-evolution": [
+      "entities/google-deepmind.md"
+    ],
+    "self-evolution projects": [
+      "entities/google-deepmind.md",
+      "entities/meta-fair.md",
+      "entities/sakana-ai.md"
+    ],
+    "key capabilities": [
+      "entities/google-deepmind.md"
+    ],
+    "jeff clune": [
+      "entities/jeff-clune.md"
+    ],
+    "person": [
+      "entities/jeff-clune.md",
+      "entities/noah-shinn.md",
+      "entities/shengran-hu.md"
+    ],
+    "academic": [
+      "entities/jeff-clune.md",
+      "entities/shengran-hu.md"
+    ],
+    "ubc": [
+      "entities/jeff-clune.md"
+    ],
+    "open-ended-evolution": [
+      "entities/jeff-clune.md"
+    ],
+    "adas": [
+      "entities/jeff-clune.md",
+      "entities/shengran-hu.md"
+    ],
+    "ai-scientist": [
+      "entities/jeff-clune.md",
+      "entities/sakana-ai.md"
+    ],
+    "affiliations": [
+      "entities/jeff-clune.md"
+    ],
+    "key contributions to self-evolution": [
+      "entities/jeff-clune.md"
+    ],
+    "academic network (co-authors)": [
+      "entities/jeff-clune.md"
+    ],
+    "significance": [
+      "entities/jeff-clune.md"
+    ],
+    "university of british columbia (ubc)": [
+      "entities/jeff-clune.md"
+    ],
+    "cifar ai chair": [
+      "entities/jeff-clune.md"
+    ],
+    "sakana ai": [
+      "entities/jeff-clune.md",
+      "entities/sakana-ai.md",
+      "synthesis/talent-landscape.md"
+    ],
+    "shengran hu": [
+      "entities/jeff-clune.md",
+      "entities/shengran-hu.md"
+    ],
+    "cong lu": [
+      "entities/jeff-clune.md"
+    ],
+    "jenny zhuoting zhang": [
+      "entities/jeff-clune.md"
+    ],
+    "robert lange": [
+      "entities/jeff-clune.md"
+    ],
+    "shengran-hu": [
+      "entities/jeff-clune.md"
+    ],
+    "mechanism-search-loop": [
+      "entities/jeff-clune.md"
+    ],
+    "meta fair": [
+      "entities/meta-fair.md"
+    ],
+    "self-improving-agents": [
+      "entities/meta-fair.md"
+    ],
+    "hyperagents": [
+      "entities/meta-fair.md"
+    ],
+    "meta fair (fundamental ai research)": [
+      "entities/meta-fair.md"
+    ],
+    "key person": [
+      "entities/meta-fair.md"
+    ],
+    "talent event: msl": [
+      "entities/meta-fair.md"
+    ],
+    "yoonho lee": [
+      "entities/meta-fair.md"
+    ],
+    "implication": [
+      "entities/meta-fair.md"
+    ],
+    "noah shinn": [
+      "entities/noah-shinn.md"
+    ],
+    "academic-to-industry": [
+      "entities/noah-shinn.md"
+    ],
+    "reflexion": [
+      "entities/noah-shinn.md"
+    ],
+    "m2-feedback": [
+      "entities/noah-shinn.md"
+    ],
+    "key contribution": [
+      "entities/noah-shinn.md"
+    ],
+    "career trajectory": [
+      "entities/noah-shinn.md"
+    ],
+    "impact on self-evolution": [
+      "entities/noah-shinn.md"
+    ],
+    "τ-bench": [
+      "entities/noah-shinn.md"
+    ],
+    "northeastern university": [
+      "entities/noah-shinn.md"
+    ],
+    "sierra ai": [
+      "entities/noah-shinn.md"
+    ],
+    "possibly departed sierra": [
+      "entities/noah-shinn.md"
+    ],
+    "meta-fair": [
+      "entities/noah-shinn.md",
+      "entities/openai.md"
+    ],
+    "talent-source": [
+      "entities/openai.md"
+    ],
+    "self-evolution products": [
+      "entities/openai.md"
+    ],
+    "talent status": [
+      "entities/openai.md"
+    ],
+    "net exporter": [
+      "entities/openai.md"
+    ],
+    "startup": [
+      "entities/sakana-ai.md"
+    ],
+    "japan": [
+      "entities/sakana-ai.md"
+    ],
+    "self-evolution": [
+      "entities/sakana-ai.md"
+    ],
+    "dgm": [
+      "entities/sakana-ai.md"
+    ],
+    "funding": [
+      "entities/sakana-ai.md"
+    ],
+    "strategic position": [
+      "entities/sakana-ai.md"
+    ],
+    "unique": [
+      "entities/sakana-ai.md"
+    ],
+    "academic bridge": [
+      "entities/sakana-ai.md"
+    ],
+    "ucsd": [
+      "entities/shengran-hu.md"
+    ],
+    "m1-search": [
+      "entities/shengran-hu.md"
+    ],
+    "key paper": [
+      "entities/shengran-hu.md"
+    ],
+    "follow-up work": [
+      "entities/shengran-hu.md"
+    ],
+    "high order adas": [
+      "entities/shengran-hu.md"
+    ],
+    "\"cross-pollination: papers x blogs x reviews\"": [
+      "sources/cross-pollination.md"
+    ],
+    "cross-pollination: where academic papers meet industry reality": [
+      "sources/cross-pollination.md"
+    ],
+    "cluster a: the evaluation-production gap": [
+      "sources/cross-pollination.md"
+    ],
+    "a1. benchmarks measure the wrong thing": [
+      "sources/cross-pollination.md"
+    ],
+    "a2. self-reported success is the universal anti-pattern": [
+      "sources/cross-pollination.md"
+    ],
+    "a3. cost is the silent killer": [
+      "sources/cross-pollination.md"
+    ],
+    "cluster b: memory is not chat history": [
+      "sources/cross-pollination.md"
+    ],
+    "b4. memory evolution has a dark side": [
+      "sources/cross-pollination.md"
+    ],
+    "b5. cultural transmission > individual learning": [
+      "sources/cross-pollination.md"
+    ],
+    "cluster c: the self-modification safety paradox": [
+      "sources/cross-pollination.md"
+    ],
+    "c6. more autonomous = more dangerous = more valuable": [
+      "sources/cross-pollination.md"
+    ],
+    "c7. the immutability principle": [
+      "sources/cross-pollination.md"
+    ],
+    "cluster d: emerging frontiers": [
+      "sources/cross-pollination.md"
+    ],
+    "d8. intrinsic vs. extrinsic self-evolution": [
+      "sources/cross-pollination.md"
+    ],
+    "d9. open-ended vs. fixed-objective": [
+      "sources/cross-pollination.md"
+    ],
+    "d10. scale-evolution trade-off": [
+      "sources/cross-pollination.md"
+    ],
+    "cluster e: protocol-level thinking": [
+      "sources/cross-pollination.md"
+    ],
+    "e11. self-evolution needs http, not custom protocols": [
+      "sources/cross-pollination.md"
+    ],
+    "e12. the verification arms race": [
+      "sources/cross-pollination.md"
+    ],
+    "cluster f: practical patterns": [
+      "sources/cross-pollination.md"
+    ],
+    "f13. start small, evolve up": [
+      "sources/cross-pollination.md"
+    ],
+    "sources/employee-social-intelligence": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "employee social intelligence: ai self-evolution researchers": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "1. key x/twitter posts by self-evolution researchers": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "1.1 jeff clune (ubc / vector / recursive) — @jeffclune": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "1.2 shengran hu (ubc / recursive) — @shengranhu": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "1.3 andrej karpathy (anthropic) — @karpathy": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "1.4 google deepmind researchers": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "1.5 community amplifiers": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "2. linkedin intelligence: talent movements": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "2.1 meta msl — aggressive hiring (public linkedin data)": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "2.2 recursive — academic-to-startup pipeline": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "2.3 anthropic — net talent inflow": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "3. github activity signals": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "4. blog & podcast signals": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "5. social sentiment patterns": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "5.1 dominant narratives on x/twitter": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "5.2 sentiment analysis": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "6. key observations": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "6.1 most active social researchers (self-evolution)": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "6.2 commercialization signals": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "6.3 geopolitical signals from social data": [
+      "sources/employee-social-intelligence.md"
+    ],
+    "\"papers brainstorm: 12 high-value papers × creative insights\"": [
+      "sources/papers-brainstorm.md"
+    ],
+    "papers brainstorm: creative insights from 12 evolution papers": [
+      "sources/papers-brainstorm.md"
+    ],
+    "meta-theme 1: three channels of evolution (emerging across all papers)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "meta-theme 2: diversity-convergence dilemma at every level": [
+      "sources/papers-brainstorm.md"
+    ],
+    "meta-theme 3: the evaluator bottleneck": [
+      "sources/papers-brainstorm.md"
+    ],
+    "paper-level insights": [
+      "sources/papers-brainstorm.md"
+    ],
+    "symbolic learning (2406.18532)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "adas (2408.08435)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "rise (2407.18219)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "self-rewarding (2401.10020)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "agent-pro (2402.17574)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "voyager (2305.16291)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "reflexion (2303.11366)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "weak-to-strong (2312.09390)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "score (2409.12917)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "self-reflection (2405.06682)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "llms as evolution strategies (2402.18381)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "iteralign (2403.18341)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "genetic (weight changes)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "epigenetic (memory/context)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "cultural (code/architecture)": [
+      "sources/papers-brainstorm.md"
+    ],
+    "sources/raw-github-mechanism-analysis": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "source: raw-github 365 project mechanism analysis": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "summary": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "key findings": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "mechanism classes": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "top case studies": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs1: openevolve — algorithm discovery via map-elites + llms": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs2: a-evolve — 5-phase agent evolution loop": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs3: darwinia — darwinian trading agent selection": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs4: agent0 — zero-data self-evolution": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs5: flex — experience library scaling law": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs6: skillclaw — cross-agent skill evolution": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs7: claudeevolve — alphaevolve in claude code": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs8: jarvisevo — editor-evaluator co-evolution": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs9: muse — hierarchical memory self-evolution": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs10: altk-evolve — on-the-job learning via mcp": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs11: mnemosyne — fleet-level knowledge synthesis": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs12: genenv — agent-environment co-training": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs13: ui-genie — gui agent-reward model co-evolution": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs14: sica — self-referential code improvement": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "cs15: atp / misevolution — evolution risk studies": [
+      "sources/raw-github-mechanism-analysis.md"
+    ],
+    "\"agent进化机制分析框架\"": [
+      "synthesis/mechanism-framework.md"
+    ],
+    "framework": [
+      "synthesis/mechanism-framework.md"
+    ],
+    "m1-m5": [
+      "synthesis/mechanism-framework.md"
+    ],
+    "dag": [
+      "synthesis/mechanism-framework.md"
+    ],
+    "taxonomy": [
+      "synthesis/mechanism-framework.md"
+    ],
+    "agent进化机制分析框架": [
+      "synthesis/mechanism-framework.md"
+    ],
+    "全景dag": [
+      "synthesis/mechanism-framework.md"
+    ],
+    "五大维度概览": [
+      "synthesis/mechanism-framework.md"
+    ],
+    "系统覆盖矩阵": [
+      "synthesis/mechanism-framework.md"
+    ],
+    "97痛点映射": [
+      "synthesis/mechanism-framework.md"
+    ],
+    "sv self-evolution talent & paper landscape": [
+      "synthesis/talent-landscape.md"
+    ],
+    "landscape": [
+      "synthesis/talent-landscape.md"
+    ],
+    "talent": [
+      "synthesis/talent-landscape.md"
+    ],
+    "papers": [
+      "synthesis/talent-landscape.md"
+    ],
+    "capital": [
+      "synthesis/talent-landscape.md"
+    ],
+    "synthesis": [
+      "synthesis/talent-landscape.md"
+    ],
+    "sv self-evolution / auto-research landscape": [
+      "synthesis/talent-landscape.md"
+    ],
+    "1. lab competition matrix": [
+      "synthesis/talent-landscape.md"
+    ],
+    "2. supply-demand by mechanism": [
+      "synthesis/talent-landscape.md"
+    ],
+    "3. capital flows": [
+      "synthesis/talent-landscape.md"
+    ],
+    "4. talent pipeline": [
+      "synthesis/talent-landscape.md"
+    ],
+    "5. three testable causal hypotheses": [
+      "synthesis/talent-landscape.md"
+    ],
+    "m4 code self-mod": [
+      "synthesis/talent-landscape.md"
+    ],
+    "extreme": [
+      "synthesis/talent-landscape.md"
+    ],
+    "engineering > papers": [
+      "synthesis/talent-landscape.md"
+    ],
+    "m5 skill evolution": [
+      "synthesis/talent-landscape.md"
+    ],
+    "low": [
+      "synthesis/talent-landscape.md"
+    ],
+    "severely undersupplied": [
+      "synthesis/talent-landscape.md"
+    ],
+    "concentrated": [
+      "synthesis/talent-landscape.md"
+    ],
+    "ai agent market": [
+      "synthesis/talent-landscape.md"
+    ],
+    "structural gap": [
+      "synthesis/talent-landscape.md"
+    ],
+    "bottleneck": [
+      "synthesis/talent-landscape.md"
+    ],
+    "academic-industry bridge accelerates m1": [
+      "synthesis/talent-landscape.md"
+    ],
+    "safety concentration delays m4": [
+      "synthesis/talent-landscape.md"
+    ]
+  }
+}

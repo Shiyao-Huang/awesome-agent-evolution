@@ -31,6 +31,7 @@ _Processed raw sources with extracted insights_
 <!-- sources auto-indexed here -->
 - [Employee Social Intelligence](sources/employee-social-intelligence.md) — X/Twitter, LinkedIn, GitHub signals from self-evolution researchers; Meta MSL 44-person list; Recursive startup; Karpathy→Anthropic move | Rank: A | 2026-05-26
 - [Raw-GitHub Mechanism Analysis](sources/raw-github-mechanism-analysis.md) — 365 project deep-dive: 7-class taxonomy, 15 case studies, 5 structural factors for TRUE self-evolution; ~12% genuine evolution rate | Rank: A | 2026-05-26
+- [Raw-Papers Mechanism Analysis](sources/raw-papers-mechanism-analysis.md) — 128论文深挖: 7机制族F1-F7, Top-10论文, 5引用谱系, T1-T4证据分级, 效果/实现分类 | Rank: A | 2026-05-26
 
 ## Synthesis
 
@@ -48,6 +49,6 @@ _Cross-cutting analyses, comparisons, evolving theses_
 |--------|-------|
 | Entities | 0 |
 | Concepts | 9 |
-| Sources | 2 |
+| Sources | 3 |
 | Synthesis pages | 2 |
 | Last updated | 2026-05-26 |

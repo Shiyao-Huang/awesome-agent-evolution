@@ -45,11 +45,25 @@ Claude 遇到用户要求“写入”“持久”“别丢”“恢复昨天版�
 - 恢复风格/graph/i18n 时，不重新设计；先对照 `3fd1785`、`e2f4518`、`git reflog --date=iso -20` 和已有补丁。
 - 最终交接必须说明改动是否已经提交；未提交时明确提示 reset 会再次丢失。
 
+## Knowledge Base (LLM Agent 知识交付)
+
+Agent 启动时优先检查 `work/wiki/` 获取结构化知识。流程：
+
+1. **索引入口**：`work/wiki/index.md` — 主题目录
+2. **搜索索引**：`work/wiki/search-index.json` — 关键词→文件映射（由 `scripts/generate-wiki-index.mjs` 生成）
+3. **概念页**：`work/wiki/concepts/` — 机制分类（自观察/自评估/自改进/多智能体/涌现）
+4. **实体页**：`work/wiki/entities/` — 人物/组织/项目
+5. **原始源摘要**：`work/wiki/sources/` — raw-* 层的结构化摘要
+6. **规则**：`work/wiki/schema.md` — 三层架构、rank 体系、trust chain 规则
+
+研究任务开始前，先查 `work/wiki/search-index.json` 或 grep `work/wiki/`，避免重复分析。
+
 ## Validation
 
 ```bash
 node scripts/generate_project_indexes.mjs
 node scripts/analyze_github_project_data.mjs
+node scripts/generate-wiki-index.mjs
 (cd site && npm run build)
 ```
 

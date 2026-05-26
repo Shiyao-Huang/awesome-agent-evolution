@@ -72,3 +72,16 @@
 - `work/wiki/concepts/reward-based-evolution.md`
 - `work/wiki/concepts/self-play-evolution.md`
 - `work/wiki/concepts/architecture-search.md`
+
+## [2026-05-26 ~14:00] ingest | Raw-Papers Mechanism Deep-Dive (128论文)
+
+**操作:** Researcher (L3论文机制) 写入 wiki source page + work/research 完整分析
+**详情:**
+- [Raw-Papers Mechanism Analysis](sources/raw-papers-mechanism-analysis.md): 7机制族(F1-F7), Top-10论文, 5引用谱系(Mermaid DAG), T1-T4证据分级, 效果/实现分类, 研究缺口
+- [papers-mechanism-analysis.md](../research/papers-mechanism-analysis.md): 700行完整分析(含Appendix A: 50+论文映射表)
+- 深读30+核心论文评审，6并行agent读取剩余论文
+- 交叉引用: paper-drafts/ch2-ch4, essential-classification.md
+**Sources:** raw-papers/(128), paper-reviews/(137), paper-drafts/(8 chapters)
+**信任链:** 所有声明标注[KNOWN]/[INFERRED]/[UNVERIFIED]，arXiv ID可追溯
+**Rank:** ⬤⬤⬤⬤
+**矛盾/更新:** 无矛盾。F1-F7与Architect的M1-M5互补（论文视角 vs 框架视角）
