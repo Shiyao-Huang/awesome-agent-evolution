@@ -57,6 +57,21 @@ scope: L6-A
 | HIGH | COMPLETION_LEDGER 5 gates unfilled | UNRESOLVED |
 | MEDIUM | PAPER_OUTLINE.md stale | UNRESOLVED |
 
+## CRITICAL: L2 EN→CN Mapping Violation (found 16:50)
+
+User Iron Rule: EN paper-drafts/ = single source of truth. CN survey/latex/ = strict mapping.
+
+QA spot-check of 3 chapter pairs reveals VIOLATION:
+
+| Chapter | EN→CN line ratio | Structure match | Issue |
+|---|---|---|---|
+| ch1-intro | 525→258 (49%) | Partial | Missing 13 subsubsections + 1 subsection |
+| ch5-evaluation | 507→668 (132%) | NO | Completely different organization, CN-only content |
+| ch8-future | 177→326 (184%) | NO | Different topics, CN-only sections, 2 TikZ figures not in EN |
+
+L2 marked "done" but deliverables are independent CN documents, not faithful EN mappings.
+Recommendation: Reopen L2 for rework on ch5 and ch8 (minimum).
+
 ## Daemon Reset Impact
 - work/qa/ directory was created at 13:33 then reset by daemon
 - Only SAFETY-RULES.md survived (committed at 13:34)
