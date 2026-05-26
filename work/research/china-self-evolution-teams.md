@@ -228,4 +228,160 @@ CAICT 2025年3月联合 20+ 企业发布 Agent 术语框架，显示中国政府
 - [知乎: 自进化智能体综述](https://zhuanlan.zhihu.com/p/1937626679519450682)
 - raw-papers/ 交叉验证
 
-*生成 by Researcher Agent | Task: 中国国内团队和趋势 | 2026-05-26*
+---
+
+## 8. 🆕 v2 更新：新发现（2026-05-26 第二轮搜索）
+
+### 8.1 清华 AIR + 阿里云：国内首个可进化智能体产学研专项
+
+**价值**: ⬤⬤⬤⬤⬤ — 政策级信号
+**来源**: [清华大学官网](https://www.tsinghua.edu.cn/info/1182/108491.htm)
+
+2023 年 12 月，阿里云与清华 AIR 联合启动"基于大模型的可进化智能体"研究：
+- **方向**：大模型智能体共性基础技术、面向智能体的学习机制、单智能体基础素质提升
+- **张亚勤评价**："Agent的发展有助于通过Exploration的方式提升模型能力，长远来看可以把不一样的智能体组织起来，解决复杂问题"
+- **阿里云基础**：ModelScope-Agent 开源框架 + Qwen 系列模型
+- **意义**：这是国内首个系统化产学研融合的可进化智能体专项
+
+### 8.2 清华 AIR + 字节跳动 Seed：CUDA Agent
+
+**价值**: ⬤⬤⬤⬤ — 代码自优化 Agent 的中国实践
+**来源**: [清华AIR](https://air.tsinghua.edu.cn/info/1007/2523.htm)
+
+| 维度 | 数据 |
+|------|------|
+| 名称 | CUDA Agent |
+| 合作方 | 清华 AIR (周浩) + 字节跳动 Seed + SIA-Lab |
+| 方法 | 大规模智能体强化学习 (Agentic RL) |
+| 性能 | Level-3 任务加速比 92%，超越 Claude Opus 4.6 和 Gemini 3 Pro |
+| 自进化特征 | 标准化技能流 SKILL.md + 多阶段预热策略 + 防作弊机制 |
+| 路径 | LLM 从"被动代码生成器"→"主动系统优化器" |
+
+**自进化机制评级**：L2→L3 — 有反馈循环和策略优化，但在 CUDA 专用领域，非通用自进化。
+
+### 8.3 DeepSeek V4：自进化记忆 + 多 Agent 协作
+
+**价值**: ⬤⬤⬤⬤ — 中国最强开源模型的自进化能力声明
+**来源**: [deepseek.com](https://deepseek.com/), 多个媒体报道
+
+| 维度 | 数据 |
+|------|------|
+| 模型 | DeepSeek V4 (2026-04-24) |
+| 参数 | 1.6T total / 49B active |
+| 上下文 | 1M+ native |
+| 自进化特征 | **Self-Evolving Memory**, Multi-Agent Swarm, Real-Time Learning |
+| 开源状态 | 开放权重 + API |
+| 适配 | Claude Code, OpenClaw, OpenCode, CodeBuddy |
+
+**自进化机制评级**：L2 (Memory Evolution) — 持久记忆 + 实时适应，但无权重更新或代码自修改。
+
+### 8.4 EvoAgentX：全球首个自进化 Agent 开源框架
+
+**价值**: ⬤⬤⬤⬤ — 开源生态基础设施
+**来源**: [GitHub](https://github.com/EvoAgentX/Awesome-Self-Evolving-Agents), [HuggingFace](https://huggingface.co/spaces/X-iZhang/Awesome-Self-Evolving-Agents)
+
+- 维护机构：格拉斯哥大学 + 剑桥 + 谢菲尔德 + NUS + UCL + **中国研究者参与**
+- 提出 MOP→MOA→MAO→MASE 进化路线图
+- 同时维护 [XMUDeepLIT/Awesome-Self-Evolving-Agents](https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents)
+- 格拉斯哥综述 vs 普林斯顿综述的竞争格局：格拉斯哥偏落地（操作指南），普林斯顿偏宏观（路线图）
+
+### 8.5 Lemon AI (宜创科技)：自进化消费级 Agent
+
+**价值**: ⬤⬤⬤ — 中国首个消费级自进化 Agent 产品
+**来源**: [36kr](https://36kr.com/p/3467644996048264)
+
+（详见 capital-talent-supply-2026.md 第 4.1-4.2 节）
+
+### 8.6 Manus AI：中国通用自主 Agent
+
+**价值**: ⬤⬤⬤ — 信号级事件
+**来源**: Bloomberg, Euronews, 多个报道
+
+- "China's next DeepSeek" — 完全自主 AI Agent
+- 能力：自主执行任务、在线研究、多模态理解
+- 与 OpenAI 竞争定位
+- **自进化关联**：间接 — Manus 的自主任务执行能力是自进化的前置条件
+
+### 8.7 智源大会 2026："当AI学会自我超越"
+
+**价值**: ⬤⬤⬤⬤ — 中国 AI 社区对自进化的关注信号
+**来源**: [CSDN](https://blog.csdn.net/BAAIBeijing/article/details/161326298)
+
+2026 年 6 月 12-13 日，第 8 届智源大会主题为"当AI学会自我超越"，表明自进化已成为中国 AI 学术界的核心议题。
+
+---
+
+## 9. 🆕 v2 更新：修订后的中国自进化生态图
+
+```mermaid
+graph TD
+    subgraph "高校研究"
+        THU2["清华 AIR<br/>张亚勤/刘洋/周浩<br/>WebRL + CUDA Agent + 可进化智能体专项"]
+        SJTU2["上海交大<br/>Qian/Chen/Zhang<br/>自进化安全 Misevolve"]
+        ZJU2["浙大<br/>Wenqi Zhang<br/>Agent-Pro"]
+        PKU2["北大<br/>Wan/Yin<br/>Goedel Agent"]
+        SYSU2["中山大学<br/>Fang<br/>Comprehensive Survey"]
+        XMU2["厦门大学 XMUDeepLIT<br/>Awesome List 维护"]
+    end
+
+    subgraph "产业"
+        ALI2["阿里云 + 通义<br/>AgentEvolver<br/>ModelScope-Agent<br/>Qwen 系列"]
+        DS2["DeepSeek<br/>V4 Self-Evolving Memory<br/>1.6T 开源"]
+        BD2["字节跳动 Seed<br/>CUDA Agent 合作<br/>Agentic RL"]
+        LEMON2["Lemon AI<br/>Evolving Agent L3<br/>千万天使轮"]
+        MANUS2["Manus AI<br/>通用自主 Agent<br/>'China next DeepSeek'"]
+    end
+
+    subgraph "产学研合作"
+        THU_ALI["清华AIR + 阿里云<br/>可进化智能体专项<br/>国内首个"]
+        THU_BD["清华AIR + 字节跳动<br/>CUDA Agent<br/>Agentic RL"]
+    end
+
+    subgraph "开源生态"
+        EVOX["EvoAgentX<br/>自进化框架<br/>全球首个"]
+        XMU_GH["XMUDeepLIT<br/>Awesome List<br/>资源整合"]
+    end
+
+    THU2 --- THU_ALI --- ALI2
+    THU2 --- THU_BD --- BD2
+    DS2 -.->|开源基础设施| LEMON2
+    XMU2 --- XMU_GH --- EVOX
+    SJTU2 -.->|安全标准| ALI2
+
+    style THU_ALI fill:#a855f7,color:#fff
+    style THU_BD fill:#a855f7,color:#fff
+    style DS2 fill:#22c55e,color:#000
+```
+
+---
+
+## 10. 🆕 v2 更新：中国 vs 硅谷对比
+
+| 维度 | 中国 | 硅谷 |
+|------|------|------|
+| **驱动模式** | 学术驱动 + 产业跟进 | 产业驱动 + 学术合作 |
+| **核心优势** | 安全研究 (SJTU)、应用场景、开源适配 | 基础架构 (DGM/ADAS)、资本规模 |
+| **资本规模** | 千万~数亿 RMB | $100M-$650M USD |
+| **开源生态** | DeepSeek/Qwen 开源 + EvoAgentX | GitHub 为主，EvoAgentX 全球协作 |
+| **政策支持** | 政府协调标准、产学研专项 | 市场驱动，较少政府干预 |
+| **人才管道** | 高校博士输出强，但留美回国少 | 国际人才流入 (但 89% 下降) |
+| **独特方向** | 小模型自进化 (7B/14B)、CUDA Agent、安全 | 开放式进化 (DGM)、代码自修改 (Claude Code) |
+| **最大差距** | 缺少 L4 级系统 (无 ADAS/DGM 等价物) | 人才留存成本高 ($100M+) |
+
+---
+
+## 11. 🆕 v2 更新：新 Sources
+
+*Sources (v2 additions):*
+- [清华官网: 阿里云+清华AIR可进化智能体](https://www.tsinghua.edu.cn/info/1182/108491.htm)
+- [清华AIR: CUDA Agent](https://air.tsinghua.edu.cn/info/1007/2523.htm)
+- [DeepSeek V4](https://deepseek.com/)
+- [EvoAgentX GitHub](https://github.com/EvoAgentX/Awesome-Self-Evolving-Agents)
+- [XMUDeepLIT GitHub](https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents)
+- [36kr: Lemon AI](https://36kr.com/p/3467644996048264)
+- [Bloomberg: DeepSeek AI Agent](https://www.bloomberg.com/news/articles/2025-09-04/deepseek-targets-ai-agent-release-by-end-of-year-to-rival-openai)
+- [智源大会 2026](https://blog.csdn.net/BAAIBeijing/article/details/161326298)
+- [知乎: 自进化智能体综述](https://zhuanlan.zhihu.com/p/1934180050728645023)
+- [新智元: 八大机构自进化综述](https://hub.baai.ac.cn/view/48339)
+
+*Generated by Researcher Agent | Task: lDg1WF05bVKM | 2026-05-26 v2*
