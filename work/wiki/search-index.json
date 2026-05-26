@@ -1,8 +1,8 @@
 {
-  "generated": "2026-05-26T09:23:14.443Z",
+  "generated": "2026-05-26T13:02:41.755Z",
   "stats": {
     "pages": 48,
-    "keywords": 737
+    "keywords": 740
   },
   "catalog": [
     {
@@ -304,10 +304,15 @@
     },
     {
       "path": "sources/essential-taxonomy-framework.md",
-      "title": "sources/essential-taxonomy-framework",
-      "rank": "C",
+      "title": "Essential Taxonomy Framework",
+      "rank": "A",
       "type": "source",
-      "tags": []
+      "tags": [
+        "taxonomy",
+        "classification",
+        "5d-framework",
+        "essential-taxonomy"
+      ]
     },
     {
       "path": "sources/github-digest.md",
@@ -1878,7 +1883,25 @@
     "6.3 geopolitical signals from social data": [
       "sources/employee-social-intelligence.md"
     ],
-    "sources/essential-taxonomy-framework": [
+    "essential taxonomy framework": [
+      "sources/essential-taxonomy-framework.md"
+    ],
+    "taxonomy": [
+      "sources/essential-taxonomy-framework.md",
+      "sources/github-digest.md",
+      "sources/papers-digest.md",
+      "sources/raw-github-mechanism-analysis.md",
+      "sources/raw-papers-mechanism-analysis.md",
+      "sources/review-mechanism-insights-enhanced.md",
+      "synthesis/mechanism-framework.md"
+    ],
+    "classification": [
+      "sources/essential-taxonomy-framework.md"
+    ],
+    "5d-framework": [
+      "sources/essential-taxonomy-framework.md"
+    ],
+    "essential-taxonomy": [
       "sources/essential-taxonomy-framework.md"
     ],
     "essential taxonomy framework: 5d classification for self-evolution": [
@@ -1947,14 +1970,6 @@
     "projects": [
       "sources/github-digest.md",
       "sources/projects-evolution-grading.md"
-    ],
-    "taxonomy": [
-      "sources/github-digest.md",
-      "sources/papers-digest.md",
-      "sources/raw-github-mechanism-analysis.md",
-      "sources/raw-papers-mechanism-analysis.md",
-      "sources/review-mechanism-insights-enhanced.md",
-      "synthesis/mechanism-framework.md"
     ],
     "coverage statistics": [
       "sources/github-digest.md",
