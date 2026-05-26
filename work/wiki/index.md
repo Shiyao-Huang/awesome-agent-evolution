@@ -19,6 +19,11 @@ _Ideas, mechanisms, patterns, taxonomies_
 - [自我改进 (Self-Improvement)](concepts/self-improvement.md) — M3: 改变自身分布，提示词→记忆→权重→代码 4层深度谱系 | Rank: A | 2026-05-26
 - [多智能体协作进化 (Multi-Agent Co-Evolution)](concepts/multi-agent-coevolution.md) — M4: 竞争/协作/批判/分工/知识共享 5子机制 | Rank: A | 2026-05-26
 - [涌现行为分析 (Emergent Behavior)](concepts/emergent-behavior.md) — M5: 正向/负向涌现，开放式探索/递归反馈/stepping stones/风险 | Rank: A | 2026-05-26
+- [自我观察 (Self-Observation)](concepts/self-observation.md) — M1: Agent感知自身行为，轨迹/反思/诊断/元认知 4子机制 | Rank: A | 2026-05-26
+- [自我评估 (Self-Evaluation)](concepts/self-evaluation.md) — M2: 评估行为质量，自评/环境反馈/程序化验证/元评估/人类审查 | Rank: A | 2026-05-26
+- [自我改进 (Self-Improvement)](concepts/self-improvement.md) — M3: 改变自身分布，提示词→记忆→权重→代码 4层深度谱系 | Rank: A | 2026-05-26
+- [多智能体协作进化 (Multi-Agent Co-Evolution)](concepts/multi-agent-coevolution.md) — M4: 竞争/协作/批判/分工/知识共享 5子机制 | Rank: A | 2026-05-26
+- [涌现行为分析 (Emergent Behavior)](concepts/emergent-behavior.md) — M5: 正向/负向涌现，开放式探索/递归反馈/stepping stones/风险 | Rank: A | 2026-05-26
 
 ## Sources
 
@@ -33,6 +38,8 @@ _Processed raw sources with extracted insights_
 _Cross-cutting analyses, comparisons, evolving theses_
 
 <!-- synthesis auto-indexed here -->
+- [Agent进化机制分析框架](synthesis/mechanism-framework.md) — M1-M5全景DAG + 8系统覆盖矩阵 + 97痛点映射 | Rank: A | 2026-05-26
+- [硅谷人才版图](synthesis/talent-landscape.md) — 用户直接输入的硅谷AI Agent人才市场分析 | Rank: A | 2026-05-26
 
 ---
 
@@ -41,7 +48,7 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Metric | Count |
 |--------|-------|
 | Entities | 0 |
-| Concepts | 0 |
+| Concepts | 5 |
 | Sources | 2 |
-| Synthesis pages | 0 |
+| Synthesis pages | 2 |
 | Last updated | 2026-05-26 |

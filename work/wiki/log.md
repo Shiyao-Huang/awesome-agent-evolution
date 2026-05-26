@@ -41,3 +41,17 @@
 **信任链:** 所有条目附带原始link
 **Rank:** ⬤⬤⬤⬤
 **局限:** 未覆盖中国平台（WeChat/知乎/B站）; 多次遇到429 rate limit
+
+## [2026-05-26 ~13:00] ingest | Mechanism Framework Wiki Population
+
+**操作:** Architect (wiki schema设计) 写入 5 concept pages + 1 synthesis page
+**详情:**
+- M1 [自我观察](concepts/self-observation.md): 轨迹/反思/诊断/元认知 4子机制, Reflexion+ACE 案例
+- M2 [自我评估](concepts/self-evaluation.md): 自评/环境反馈/程序化验证/元评估/人类审查 5子机制, 可靠性谱系
+- M3 [自我改进](concepts/self-improvement.md): 提示词→记忆→权重→代码 4层深度谱系, 统一形式化, DGM+Voyager 案例
+- M4 [多智能体协作进化](concepts/multi-agent-coevolution.md): 3种拓扑形态, 5子机制, DGM Archive+EvoMAC 案例
+- M5 [涌现行为分析](concepts/emergent-behavior.md): 正向/负向涌现案例, AlphaEvolve 56年突破 vs Echo Trap
+- [机制框架](synthesis/mechanism-framework.md): 全景DAG + 8系统×5机制覆盖矩阵 + 97痛点映射
+**Sources:** survey/ch1-ch8, paper-reviews (6 reviews), work/research/mechanism-analysis-framework.md (L1产出)
+**信任链:** 每条声明标注 Source: survey/chX 或 paper-reviews/review-XXX
+**Rank:** ⬤⬤⬤⬤⬤
