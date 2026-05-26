@@ -40,7 +40,7 @@ Claude 处理网页、样式、graph 或 i18n 时，必须先按 [AGENTS.md](AGE
 
 Claude 遇到用户要求“写入”“持久”“别丢”“恢复昨天版本”时，必须把结果从临时工作区变成可恢复状态。
 
-- 任何 `git reset`、`git restore`、`git checkout`、`git clean` 或大范围生成脚本前，先看 `git status --short`，再看关键文件 diff。
+- **禁止执行 `git reset --mixed HEAD`、`git reset --hard`、`git checkout .`、`git restore .`、`git clean -f`**：用户明确指令 2026-05-26。任何需要回退的操作必须先确认 `git status --short`，再通过 commit 或 stash 方式保护已有变更。
 - 若不能立即提交，先保存补丁到 `work/`，尤其是 `AGENTS.md`、`CLAUDE.md`、`site/src/styles/global.css`、`site/src/pages/index.astro`、`site/src/pages/graph/index.astro`、`site/src/layouts/BaseLayout.astro`、`site/src/data/site.ts`。
 - 恢复风格/graph/i18n 时，不重新设计；先对照 `3fd1785`、`e2f4518`、`git reflog --date=iso -20` 和已有补丁。
 - 最终交接必须说明改动是否已经提交；未提交时明确提示 reset 会再次丢失。
@@ -73,6 +73,49 @@ node scripts/generate-wiki-index.mjs
 (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex)
 (cd survey/latex && xelatex -interaction=nonstopmode -halt-on-error main.tex)
 ```
+
+## Iron Rules (铁律)
+
+以下规则由用户于 2026-05-26 明确制定，不可覆盖：
+
+### 1. Single Source of Truth (唯一真实源)
+
+- `paper-drafts/`（英文）是论文的 **唯一真实源**。
+- `survey/latex/`（中文）从英文版本 **严格映射**，不是独立创作。
+- 修改中文时必须回溯英文源确认；修改英文时必须同步中文。
+
+### 2. Trust Chain (信任链)
+
+- 所有素材和分析结论必须附带 **原始参考链接**。
+- 无链接 = 无效素材，不可引用。
+- 信任等级：`[KNOWN]` 有原始链接 > `[INFERRED]` 有间接证据 > `[UNVERIFIED]` 无法追溯。
+- Wiki 每条声明必须标注来源（survey/chX、paper-reviews/review-XXX、raw-papers/ 等）。
+
+### 3. Rank & Value (等级与价值)
+
+- 所有素材和加工信息必须有 **Rank 区分**（⬤⬤⬤⬤⬤ 到 ⬤）。
+- 无 Rank = 无效素材，不入库。
+- Rank 体系定义见 `work/wiki/schema.md`。
+
+### 4. LLM Wiki Pattern (知识交付架构)
+
+- 三层架构：Raw sources（不可变）→ Wiki（LLM 维护）→ Schema（规则）。
+- 操作：Ingest（入库）、Query（查询）、Lint（检查）。
+- 特殊文件：`index.md`（内容目录）+ `log.md`（时序记录），由 agent 自动维护。
+- 研究任务开始前，先查 wiki 避免重复分析。
+
+### 5. Git Safety (Git 安全)
+
+- **绝对禁止**：`git reset`（任何形式）、`git checkout .`、`git restore .`、`git clean -f`。
+- 文件写入后必须 `git add + git commit` 保护。
+- 需要回退时先确认 `git status --short`，通过 commit 或 stash 保护变更。
+- 此规则源于 2026-05-26 git reset 事件导致 agent 工作全部丢失的教训。
+
+### 6. Completion = File on Disk (完成 = 文件在磁盘上)
+
+- 任务完成的标准是 **文件已写入磁盘并提交**。
+- 聊天描述、任务评论、口头承诺 **不算完成**。
+- 交付物必须可验证：`ls` 能看到文件，`git log` 能看到提交。
 
 ## Handoff
 
