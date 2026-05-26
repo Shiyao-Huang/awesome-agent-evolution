@@ -1,7 +1,16 @@
 ---
 import '../styles/global.css';
 import { nav, site } from '@/data/site';
-const { title = site.title, description = site.description, image = '/visuals/self-evolve-og.png', type = 'website', publishedTime, modifiedTime } = Astro.props;
+const {
+  title = site.title,
+  description = site.description,
+  image = '/visuals/self-evolve-og.png',
+  imageAlt = 'Self Evolve AI 自我进化研究图谱',
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  pageKeywords = []
+} = Astro.props;
 const siteRoot = site.url.endsWith('/') ? site.url : `${site.url}/`;
 const basePath = new URL(siteRoot).pathname.replace(/\/$/, '');
 const routePath = basePath && Astro.url.pathname.startsWith(basePath)
@@ -10,23 +19,27 @@ const routePath = basePath && Astro.url.pathname.startsWith(basePath)
 const absoluteUrl = (path = '/') => new URL(String(path).replace(/^\//, ''), siteRoot).toString();
 const withBase = (path = '/') => `${basePath}${String(path).startsWith('/') ? path : `/${path}`}` || '/';
 const canonical = absoluteUrl(routePath);
-const keywords = site.keywords.join(', ');
+const mergedKeywords = Array.from(new Set([...site.keywords, ...pageKeywords]));
+const keywords = mergedKeywords.join(', ');
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': `${site.url}/#website`,
   name: site.name,
   url: site.url,
   description: site.description,
   keywords: site.keywords,
+  inLanguage: 'zh-CN',
   potentialAction: {
     '@type': 'SearchAction',
-    target: `${siteRoot}search?q={search_term_string}`,
+    target: `${siteRoot}search/?q={search_term_string}`,
     'query-input': 'required name=search_term_string'
   }
 };
 const orgLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': `${site.url}/#organization`,
   name: site.name,
   url: site.url,
   logo: absoluteUrl('/visuals/self-evolve-og.png'),
@@ -51,6 +64,7 @@ const orgLd = {
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={absoluteUrl(image)} />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:site_name" content={site.name} />
     {publishedTime && <meta property="article:published_time" content={publishedTime} />}
@@ -59,6 +73,7 @@ const orgLd = {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={absoluteUrl(image)} />
+    <meta name="twitter:image:alt" content={imageAlt} />
     <meta name="twitter:site" content="@SelfEvolveAI" />
     <meta name="theme-color" content="#FAF7F2" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

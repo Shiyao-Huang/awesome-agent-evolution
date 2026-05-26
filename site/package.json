@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build && node scripts/apply-base-path.mjs",
+    "seo:audit": "node scripts/seo-audit.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

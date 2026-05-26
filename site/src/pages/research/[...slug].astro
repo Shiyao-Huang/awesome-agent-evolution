@@ -1,12 +1,14 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
+import { site } from '@/data/site';
 export async function getStaticPaths(){const notes=await getCollection('research');return notes.map((note)=>({params:{slug:note.id},props:{note}}));}
 const { note } = Astro.props;
 const { Content } = await render(note);
-const jsonLd = {'@context':'https://schema.org','@type':'ScholarlyArticle',headline:note.data.title,description:note.data.description,datePublished:note.data.pubDate.toISOString(),mainEntityOfPage:Astro.url.toString()};
+const canonical = new URL(`/research/${note.id}/`, site.url).toString();
+const jsonLd = {'@context':'https://schema.org','@type':'ScholarlyArticle',headline:note.data.title,description:note.data.description,datePublished:note.data.pubDate.toISOString(),inLanguage:'zh-CN',keywords:note.data.tags,image:new URL('/visuals/self-evolve-og.png', site.url).toString(),author:{'@id':`${site.url}/#organization`},publisher:{'@id':`${site.url}/#organization`},mainEntityOfPage:canonical,...(note.data.arxiv ? {sameAs:`https://arxiv.org/abs/${note.data.arxiv}`} : {})};
 ---
-<BaseLayout title={`${note.data.title} | Self Evolve 研究图谱`} description={note.data.description} type="article">
+<BaseLayout title={`${note.data.title} | Self Evolve 研究图谱`} description={note.data.description} type="article" publishedTime={note.data.pubDate.toISOString()} modifiedTime={note.data.pubDate.toISOString()} pageKeywords={note.data.tags}>
   <article class="blog-article">
     <div class="eyebrow">{note.data.pubDate.toISOString().slice(0,10)} · {note.data.status}</div>
     <h1>{note.data.title}</h1>

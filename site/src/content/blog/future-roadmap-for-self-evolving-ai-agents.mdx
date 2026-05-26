@@ -1,0 +1,115 @@
+---
+title: "自进化 AI 的未来路线图：评估器、记忆、安全、组合性和生产治理"
+description: "从英文论文第八章拆解未来方向：评估瓶颈、长期记忆漂移、安全与对齐、五大循环组合、生产挑战和 Self Evolve 两到三年路线图。"
+pubDate: 2026-05-26
+updatedDate: 2026-05-26
+tags: ["AI 自我进化", "未来路线图", "Agent 安全", "记忆系统", "评估器"]
+author: "aha team"
+---
+
+## 一句话
+
+未来两三年，自进化 AI 的主战场不是“更自主”，而是评估器、记忆治理、安全边界、循环组合和生产可观测性。
+
+## 三句话
+
+只要评估器不可靠，系统越会优化越危险。只要记忆不可审计，长期学习就会变成长期污染。只要修改不能回滚，self-evolution 就不是能力，而是事故放大器。
+
+## 这篇来自论文哪一章？
+
+Source: `paper-drafts/ch8-future.tex`。第八章总结开放问题和未来路线：evaluation bottleneck、memory drift、safety、composability、production challenges、Self-Evolve roadmap。
+
+## 方向 1：优化抗性的评估器
+
+自进化系统会学习 evaluator。这个事实必须被当成安全前提。
+
+未来高价值工作包括：
+
+- hidden validation；
+- evaluator versioning；
+- adversarial tests；
+- cost-aware metrics；
+- process metrics；
+- failure candidate reporting；
+- cross-domain transfer tests。
+
+如果一个系统只在公开 benchmark 上报告最高分，而不报告失败候选、成本和 hidden split，它的证据等级应该降低。
+
+## 方向 2：长期记忆稳定性
+
+记忆是 Agent 自进化的低成本入口，也是最容易脏的地方。
+
+需要解决的问题：
+
+- 什么时候写入？
+- 写入什么粒度？
+- 谁能删除？
+- 旧经验何时过期？
+- memory 如何引用原始证据？
+- prompt injection 如何防止变成长期记忆？
+
+未来的 memory system 不该只是向量数据库，而应该像小型知识库：有来源、有时间、有可信度、有作用域、有删除机制。
+
+## 方向 3：安全和对齐
+
+自进化系统的安全问题不只是不输出坏话，而是不要学会坏更新。
+
+典型风险：
+
+- reward hacking；
+- evaluator tampering；
+- sandbox escape；
+- memory poisoning；
+- tool permission drift；
+- 隐藏真实失败；
+- 为降低成本牺牲审计。
+
+解决方向不是禁止自我修改，而是把修改分层：低风险建议可以自动应用，高风险代码/权限/评估器修改必须 sandbox、review、rollback。
+
+## 方向 4：五大循环组合
+
+未来系统不会只有一个 loop。一个真实 coding agent 可能同时有：
+
+- 任务执行 loop；
+- 反思记忆 loop；
+- prompt update loop；
+- workflow search loop；
+- code patch loop；
+- archive loop。
+
+难点是归因。系统变好了，到底是哪一环带来的？系统变坏了，哪个版本引入问题？这要求每个 loop 都有接口、日志、版本和 ablation。
+
+## 方向 5：生产治理
+
+研究 demo 可以追求惊艳，生产系统必须追求可控。
+
+生产自进化需要：
+
+- trace replay；
+- state diff；
+- prompt/memory/workflow versioning；
+- budget control；
+- canary deployment；
+- incident report；
+- human approval tiers；
+- rollback by default。
+
+这听起来像 DevOps，但这正是重点。自进化 AI 最终会变成 AgentOps。
+
+## Self Evolve 的两到三年路线图
+
+1. 建立项目、论文、benchmark、博客、社交信号的证据链。
+2. 把每个项目做成 model-card，而不是链接列表。
+3. 抽取统一的 evolution loops 和机制分类。
+4. 建立评估和 pain point 交叉表。
+5. 做可搜索网站、图谱和 SEO 博客。
+6. 逐步把经验沉淀成可复用 wiki、skill 和报告规范。
+
+## 结论
+
+自进化 AI 的未来不是单点奇迹，而是系统工程。它需要像科学一样有证据，像软件一样有测试，像产品一样理解用户，像安全系统一样控制权限。
+
+最值得研究的问题不是“Agent 能不能自己变强”，而是：
+
+> 当 Agent 声称自己变强时，我们凭什么相信？
+

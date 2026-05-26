@@ -42,6 +42,10 @@ const jsonLd = {
   description,
   url: `${site.url}/projects/${projectSlug}/`,
   dateModified: project.lastPushed,
+  inLanguage: 'zh-CN',
+  keywords: [project.name, project.repo, project.category, project.pattern, ...project.tags],
+  image: new URL('/visuals/self-evolve-og.png', site.url).toString(),
+  publisher: { '@id': `${site.url}/#organization` },
   about: [
     project.name,
     project.repo,
@@ -60,7 +64,7 @@ const jsonLd = {
 };
 ---
 
-<BaseLayout title={title} description={description} type="article" modifiedTime={project.lastPushed}>
+<BaseLayout title={title} description={description} type="article" modifiedTime={project.lastPushed} pageKeywords={[project.name, project.repo, project.category, project.pattern, ...project.tags]}>
   <article class="project-detail">
     <div class="container">
       <a class="button" href="/projects/">&larr; 返回项目索引</a>

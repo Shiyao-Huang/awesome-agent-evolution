@@ -13,7 +13,7 @@
 | `reports` | present | 5 | 1 | 0 | 69 KB |
 | `output` | present | 8 | 1 | 0 | 572 KB |
 | `site/public/reports` | present | 357 | 6 | 0 | 2.7 MB |
-| `site/dist` | present | 620 | 227 | 0 | 14 MB |
+| `site/dist` | present | 657 | 264 | 0 | 15 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 983 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
@@ -62,7 +62,7 @@
 - `site/dist/benchmark/index.html`
 - `site/dist/blog/adas-to-dgm-evolution/index.html`
 - `site/dist/blog/agent-evolution-layer/index.html`
-- `site/dist/blog/ai-self-evolution-from-concept-to-implementation/index.html`
+- `site/dist/blog/agent-frameworks-evolution-layer/index.html`
 
 ### `paper-drafts/main.pdf`
 

@@ -25,6 +25,7 @@ export const nav = [
   { href: '/paper/', label: '论文' },
   { href: '/graph/', label: '图谱' },
   { href: '/blog/', label: '博客' },
+  { href: '/search/', label: '搜索' },
   { href: '/star-analysis/', label: 'Star 分析' },
   { href: '/#community', label: '社区' }
 ];

@@ -1,0 +1,73 @@
+---
+title: "AI Agent 自进化入门：从静态模型到会改进自己的系统"
+description: "把 Self-Evolving AI Agents 英文论文第一章拆成一篇可读博客：解释什么是 AI 自进化、它和在线学习/AutoML/普通 Agent 的边界，以及为什么真正的问题是可验证的自我修改。"
+pubDate: 2026-05-26
+updatedDate: 2026-05-26
+tags: ["AI 自我进化", "Self-Evolving Agents", "Agent 架构", "论文拆解", "SEO"]
+author: "aha team"
+---
+
+## 一句话
+
+AI Agent 自进化不是“模型变聪明了”的泛泛说法，而是系统能基于反馈修改自己的提示词、记忆、工具、代码、工作流、数据课程或模型行为，并能解释为什么这次修改应该被保留。
+
+## 三句话
+
+传统 AI 像一次发布的静态软件：训练好、部署、测试，然后等人类下一轮修复。自进化 Agent 更像一个带有 CI、记忆、评估器和变更管理的系统：它观察失败，提出候选修改，验证修改，然后只保留通过门槛的版本。判断一个项目是否真的 self-evolving，不要看名字里有没有 evolution，而要问：改了什么、反馈从哪来、谁批准、能不能回滚。
+
+## 这篇来自论文哪一章？
+
+Source: `paper-drafts/ch1-intro.tex`。英文论文第一章做的是定义和边界：从静态 AI、Goedel machine、AutoML/NAS、进化计算、LLM 工具使用，收束到一个核心抽象：feedback-driven self-modification。
+
+## 为什么这个定义重要？
+
+很多 Agent 产品会说自己“会学习”。但“会学习”太宽了：记录用户偏好是学习，调 prompt 是学习，重新训练模型也是学习，甚至人类工程师每周改一次配置也能被包装成学习。
+
+真正有用的定义必须能把泡沫挤掉。Self Evolve 采用的判据是：
+
+1. **对象明确**：系统到底修改了 prompt、memory、tool policy、workflow、code，还是 weights？
+2. **反馈明确**：反馈来自用户、测试、benchmark、环境、judge model，还是另一个 agent？
+3. **更新明确**：修改是一次输出内的 refinement，还是跨会话持久化？
+4. **保留明确**：候选修改为什么被接受？是否有 hidden validation？
+5. **治理明确**：失败能否回滚，日志能否审计？
+
+如果这五项答不上来，它最多是“动态 Agent”，还不是可研究、可复现、可部署的自进化系统。
+
+## 一个最小模型
+
+```text
+state_t = {prompt, memory, tools, workflow, code, model}
+trace_t = run(state_t, task)
+feedback_t = evaluate(trace_t)
+candidate = propose_update(state_t, trace_t, feedback_t)
+state_{t+1} = accept(candidate) if validation_passes else state_t
+```
+
+这个公式故意很朴素。它像 Karpathy 常用的讲法：先把系统压成最小可运行形状，再逐步加复杂度。你不需要一开始就做 Goedel machine，也不需要让模型改自己的权重。只要有持久状态、反馈、候选修改、验证和保留机制，就已经进入 self-evolution 的工程空间。
+
+## 和几个近邻概念的边界
+
+**普通 Agent**：会调用工具、执行计划，但不一定持久修改自己。
+
+**在线学习**：模型参数随数据更新，但更新规则可能完全由人类固定，系统不一定参与修改提案。
+
+**AutoML/NAS**：自动搜索模型或架构，但通常发生在部署前；自进化强调系统运行后的持续改进。
+
+**记忆系统**：写入偏好和事实是基础设施；只有当记忆影响未来行为并被评估、修正、删除时，才是 evolution loop。
+
+**RLHF/RLAIF**：训练期行为改进很重要，但如果只是在外部训练管线里完成，它更像训练方法；如果 Agent 能生成任务、验证反馈并参与课程更新，就更接近自进化。
+
+## 读者应该带走什么？
+
+不要把 self-evolution 理解成科幻式“递归自我爆炸”。短期最有价值的自进化，是受控的软件工程过程：版本化、验证、回滚、审计、成本控制。
+
+如果你要设计一个自进化 Agent，第一版不要问“它能不能自己变强”。问这五个更硬的问题：
+
+- 它最先允许修改哪个低风险组件？
+- 评价信号是否独立于生成者？
+- 修改失败时是否自动回滚？
+- 日志是否能复盘每次变更？
+- 改进是否在新任务上仍然成立？
+
+这就是本系列的入口。后面七篇会把论文剩余章节拆成可实践的博客：五大进化环、方法族、代码/算法发现、评估、框架、用户痛点和未来路线图。
+

@@ -19,14 +19,15 @@ export async function getStaticPaths() {
 
 const { tag, posts } = Astro.props;
 const decodedTag = decodeURIComponent(tag as string);
+const tagDescription = `Self Evolve 标签「${decodedTag}」聚合 ${posts.length} 篇 AI 自我进化相关博客，覆盖论文拆解、项目分析、评估方法和工程实践。`;
 ---
 
-<BaseLayout title={`标签「${decodedTag}」的博客 — Self Evolve`} description={`Self Evolve 博客中标签为「${decodedTag}」的所有文章。`}>
+<BaseLayout title={`标签「${decodedTag}」的博客 — Self Evolve`} description={tagDescription} pageKeywords={[decodedTag, 'AI 自我进化', 'Agent Evolution']}>
   <section class="section">
     <div class="container">
       <div class="eyebrow">标签过滤</div>
       <h1 class="gradient-text">{decodedTag}</h1>
-      <p class="lead">共 {posts.length} 篇文章</p>
+      <p class="lead">共 {posts.length} 篇文章，按发布时间整理 Self Evolve 的论文拆解、研究笔记和工程案例。</p>
       <p><a href="/blog/">← 返回全部博客</a></p>
       <div class="grid">
         {posts.map((post) => (

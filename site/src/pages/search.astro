@@ -1,0 +1,98 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { projects } from '@/data/projects';
+import { featuredResearch } from '@/data/research';
+
+const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const posts = (await getCollection('blog')).filter((p) => !p.data.draft);
+const items = [
+  ...posts.map((post) => ({
+    type: '博客',
+    title: post.data.title,
+    description: post.data.description,
+    href: `/blog/${post.id}/`,
+    tags: post.data.tags
+  })),
+  ...featuredResearch.map((paper) => ({
+    type: '研究',
+    title: paper.title,
+    description: paper.insight,
+    href: `/research/${slugify(paper.slug || paper.title)}/`,
+    tags: paper.tags
+  })),
+  ...projects.map((project) => ({
+    type: '项目',
+    title: project.name,
+    description: project.description,
+    href: `/projects/${slugify(project.repo)}/`,
+    tags: [project.category, project.pattern, ...project.tags]
+  }))
+];
+const payload = JSON.stringify(items);
+---
+<BaseLayout title="Self Evolve 搜索 — AI 自我进化项目、论文与博客" description="搜索 Self Evolve 的自进化 AI 博客、研究笔记和项目 model card。">
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Search / 站内搜索</div>
+      <h1>搜索自进化 AI 证据链</h1>
+      <p class="lead">输入方法、论文、项目、benchmark 或问题，例如 Reflexion、AlphaEvolve、memory、SWE-Bench、评估器。</p>
+      <div class="search-panel">
+        <input id="search-input" class="search-input" type="search" placeholder="搜索博客、研究、项目..." autocomplete="off" />
+        <div id="search-count" class="eyebrow">准备搜索</div>
+      </div>
+      <div id="search-results" class="post-stack" aria-live="polite"></div>
+    </div>
+  </section>
+  <script is:inline define:vars={{ payload }}>
+    const items = JSON.parse(payload);
+    const input = document.getElementById('search-input');
+    const results = document.getElementById('search-results');
+    const count = document.getElementById('search-count');
+    const params = new URLSearchParams(window.location.search);
+    const normalize = (value) => String(value || '').toLowerCase();
+    const render = (query) => {
+      const q = normalize(query).trim();
+      const matches = q
+        ? items.filter((item) => normalize(`${item.title} ${item.description} ${(item.tags || []).join(' ')}`).includes(q)).slice(0, 40)
+        : items.slice(0, 12);
+      count.textContent = q ? `${matches.length} 条匹配` : `展示 ${matches.length} 条入口`;
+      results.innerHTML = matches.map((item, index) => `
+        <article class="post-card">
+          <div class="post-number">${String(index + 1).padStart(2, '0')}</div>
+          <div>
+            <div class="eyebrow">${item.type}</div>
+            <h2><a href="${item.href}">${item.title}</a></h2>
+            <p>${item.description}</p>
+            <div class="pill-row">${(item.tags || []).slice(0, 5).map((tag) => `<span class="pill">${tag}</span>`).join('')}</div>
+          </div>
+        </article>
+      `).join('');
+    };
+    input.value = params.get('q') || '';
+    input.addEventListener('input', () => render(input.value));
+    render(input.value);
+  </script>
+</BaseLayout>
+
+<style>
+  .search-panel {
+    display: grid;
+    gap: 12px;
+    margin: 28px 0;
+  }
+  .search-input {
+    width: 100%;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--ink);
+    border-radius: 8px;
+    padding: 16px 18px;
+    font: inherit;
+    font-size: 18px;
+  }
+  .search-input:focus {
+    outline: 2px solid var(--caret);
+    outline-offset: 2px;
+  }
+</style>

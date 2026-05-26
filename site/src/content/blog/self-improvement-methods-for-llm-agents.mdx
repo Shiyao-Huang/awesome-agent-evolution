@@ -1,0 +1,110 @@
+---
+title: "LLM 自我改进方法全图：Self-Refine、Reflexion、RISE 到 Absolute Zero"
+description: "从英文论文第三章拆解 LLM/Agent 自我改进方法：推理时修正、反思记忆、训练期自博弈、RL、语言梯度，以及什么时候该用 prompt、fine-tuning 或 reinforcement learning。"
+pubDate: 2026-05-26
+updatedDate: 2026-05-26
+tags: ["Self-Refine", "Reflexion", "RISE", "Absolute Zero", "LLM 自我改进"]
+author: "aha team"
+---
+
+## 一句话
+
+LLM 自我改进可以按“更新发生在哪里”来读：输出内修正、跨回合记忆、提示词/工作流更新、训练数据生成、参数训练和自博弈。
+
+## 三句话
+
+Self-Refine 让模型在同一任务里生成、批评、修正。Reflexion 把失败经验写成记忆，影响未来任务。RISE、RAGEN、Absolute Zero、ReVeal 这类方法把改进推进到训练期或轨迹级优化，但也更依赖评估器质量。
+
+## 这篇来自论文哪一章？
+
+Source: `paper-drafts/ch3-methods.tex`。第三章聚焦 self-improvement methods，尤其是 inference-time 与 training-time 的分界。
+
+## 第一类：推理时自我修正
+
+最小闭环长这样：
+
+```python
+answer = model(task)
+critique = model("Critique the answer", answer)
+answer = model("Revise using critique", answer, critique)
+```
+
+它便宜、好实现、容易演示，所以传播最快。但它的上限也清楚：如果模型不知道自己错在哪里，它会生成听起来更自信的错误。
+
+适用场景：
+
+- 文案改写；
+- 代码风格修正；
+- 推理步骤补全；
+- 低风险任务的多轮润色。
+
+不适用场景：
+
+- 需要真实执行验证的代码；
+- 安全/法律/医疗高风险决策；
+- 评估器无法区分对错的开放任务。
+
+## 第二类：反思记忆
+
+Reflexion 的核心不是“反思”这个词，而是**失败经验持久化**。
+
+```text
+episode failed -> natural language reflection -> memory -> next attempt
+```
+
+这让 Agent 不必改模型权重，也能跨任务改善行为。但反思记忆有三个坑：
+
+1. 错误经验会被永久带入；
+2. 经验太泛会污染无关任务；
+3. 经验太多会增加上下文成本。
+
+所以好的反思记忆必须包含作用域、证据、过期和去重。
+
+## 第三类：语言梯度和符号更新
+
+Agent Symbolic Learning 这条线很重要，因为它把“优化”从数值梯度扩展到语言对象。Prompt、tool description、workflow step 都可以被看作可学习参数。
+
+直觉上，它像这样：
+
+```text
+loss: "agent missed constraint X"
+gradient: "planner should inspect file paths before editing"
+update: add planning rule to system prompt or skill
+```
+
+这很适合 Codex/Claude Code/OpenClaw 类系统，因为它们的行为大量由文本规则、skill、工具说明和工作流控制。
+
+## 第四类：训练期自我改进
+
+训练期方法更强，也更危险。模型可以生成任务、解题、验证、筛选数据，再用这些数据更新自己或同类模型。
+
+代表模式包括：
+
+- self-play：自己生成挑战，自己或对手求解；
+- verifier-driven RL：代码执行器、数学验证器、单元测试提供奖励；
+- trajectory RL：对完整 Agent 轨迹给奖励，而不是只看最终答案；
+- self-rewarding：模型参与生成奖励信号。
+
+核心风险是 evaluator hacking。模型不一定学会真实能力，可能只是学会讨好评估器。
+
+## 怎么选择方法？
+
+| 目标 | 优先方法 | 原因 |
+|---|---|---|
+| 低成本提升回答质量 | Self-Refine | 无需持久状态 |
+| 跨任务吸收失败经验 | Reflexion / memory | 不改权重也能积累 |
+| 改 Agent 工作流 | 语言梯度 / prompt update | 对软件 Agent 最实用 |
+| 代码任务可靠提升 | execution feedback + tests | 反馈最硬 |
+| 大规模行为迁移 | fine-tuning / RL | 成本高但可泛化 |
+| 开放式发现 | population + archive | 保留 stepping stones |
+
+## 设计原则
+
+1. 能用执行验证，就不要只用自评。
+2. 能局部更新，就不要先改权重。
+3. 能记录失败候选，就不要只报告成功样本。
+4. 能做 hidden validation，就不要只看训练任务。
+5. 能回滚，就不要直接上线。
+
+自我改进不是“让模型多想几遍”。它是把失败转化为可验证、可复用、可治理的更新。
+

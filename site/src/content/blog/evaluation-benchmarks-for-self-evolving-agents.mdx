@@ -1,0 +1,112 @@
+---
+title: "自进化 Agent 怎么评估：别只看分数，要看改进是否可复现"
+description: "从英文论文第五章拆解自进化 AI 的评估问题：代码、数学、Agent、开放式 benchmark、Star 质量、过程指标和推荐评估协议。"
+pubDate: 2026-05-26
+updatedDate: 2026-05-26
+tags: ["Agent 评估", "Benchmark", "SWE-Bench", "HumanEval", "自进化 AI"]
+author: "aha team"
+---
+
+## 一句话
+
+自进化系统的评估不该只问“分数涨了多少”，而要问“是什么改了、为什么涨、有没有过拟合、能否复跑、成本是多少、失败样本在哪里”。
+
+## 三句话
+
+普通模型 benchmark 测一个静态快照，自进化 benchmark 要测一个改进过程。这个过程可能通过更多尝试、更多 token、更强 judge 或 evaluator 漏洞获得分数。真正可信的报告必须同时展示结果指标、过程指标、成本指标和退化案例。
+
+## 这篇来自论文哪一章？
+
+Source: `paper-drafts/ch5-evaluation.tex`。第五章覆盖代码生成、数学推理、Agent benchmark、open-ended evaluation、Star quality、process-oriented metrics 和推荐评估协议。
+
+## 为什么静态分数不够？
+
+假设两个 Agent 在同一个 benchmark 上都从 20% 提升到 35%。
+
+第一个 Agent 通过更好的 workflow 和测试修复提升。第二个 Agent 只是重试 20 次，或者学会利用 evaluator 的盲点。分数一样，系统价值完全不同。
+
+所以自进化评估必须同时记录：
+
+- 初始版本；
+- 候选生成次数；
+- 每次修改对象；
+- evaluator 版本；
+- hidden validation；
+- token/时间/工具成本；
+- 失败候选；
+- promote 规则；
+- 回滚结果。
+
+## 代码 benchmark
+
+代码是最硬的评估场景。HumanEval、MBPP、SWE-Bench、Polyglot 这类任务能提供明确执行反馈。
+
+但代码 benchmark 也会被投机：
+
+- 针对公开测试过拟合；
+- 生成通过测试但不可维护的代码；
+- 修改环境而不是修复问题；
+- 用超高重试次数换分；
+- 在报告里隐藏失败 patch。
+
+推荐做法是：公开 pass@k、cost、失败率、回滚率、hidden test 结果和人工审查样本。
+
+## Agent benchmark
+
+AgentBench、OSWorld、WebArena、BrowserGym 这类 benchmark 更接近真实任务，但噪声更大。网页状态会变，工具调用会失败，LLM 输出有随机性，任务成功标准也更复杂。
+
+因此 Agent benchmark 需要 process metrics：
+
+- 任务完成率；
+- 工具调用成功率；
+- 平均步骤数；
+- 无效动作比例；
+- 循环/卡死率；
+- 人类接管率；
+- 成本；
+- 安全事件。
+
+对用户来说，“成功率 5% 提升但成本 4 倍”不一定是改进。
+
+## 开放式评估
+
+Open-ended evolution 最难评估，因为目标本身可能变化。AlphaEvolve/DGM 这类系统需要 archive 和 lineage：不是只报告最后冠军，而是展示搜索过程如何保留多样性。
+
+一个有价值的开放式报告应该回答：
+
+- archive 里有多少独立路线？
+- 改进是否来自一个 lucky branch？
+- 是否存在退化但有长期价值的 stepping stones？
+- evaluator 是否随时间变化？
+- 新变体能否迁移到未见任务？
+
+## Star 质量不是能力，但能辅助排序
+
+GitHub Star 可以反映传播，不等于工程质量。Self Evolve 站点里的 Star quality 分析把 star、fork、贡献者、活跃度、增长模式和项目类型分开看。
+
+这对 SEO 也重要：读者不只想知道“最火项目”，还想知道“哪些项目真的能用，哪些只是热度信号”。
+
+## 推荐评估协议
+
+```text
+Report = {
+  changed_object,
+  feedback_source,
+  evaluator_version,
+  baseline,
+  candidate_count,
+  accepted_count,
+  rejected_count,
+  hidden_validation,
+  cost,
+  safety_events,
+  rollback_plan
+}
+```
+
+如果一篇论文或项目报告没有这些信息，就不要把它的分数当成强证据。
+
+## 最短结论
+
+评估器是自进化系统的宪法。宪法写得差，系统会学会钻漏洞；宪法写得好，系统才可能把失败变成进步。
+

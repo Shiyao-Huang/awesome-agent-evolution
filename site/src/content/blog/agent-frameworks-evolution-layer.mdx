@@ -1,0 +1,94 @@
+---
+title: "Agent 框架不是自进化：AutoGPT、MetaGPT、AutoGen、CrewAI、DSPy、LangGraph 差在哪"
+description: "从英文论文第六章拆解主流 Agent 框架：它们提供运行时、角色、对话、流程、prompt 编译或状态图，但自进化需要额外的评估、记忆、更新和治理层。"
+pubDate: 2026-05-26
+updatedDate: 2026-05-26
+tags: ["Agent Framework", "AutoGPT", "AutoGen", "CrewAI", "LangGraph", "DSPy"]
+author: "aha team"
+---
+
+## 一句话
+
+Agent 框架提供“能运行”的骨架，自进化层提供“能变好且能证明”的机制。
+
+## 三句话
+
+AutoGPT、MetaGPT、AutoGen、CrewAI、DSPy、LangGraph 都解决了 Agent 工程的一部分问题。它们让工具调用、角色协作、prompt 编译、状态机和 workflow 更容易构建。但一个框架只有接入 evaluator、memory update、candidate generation、promotion gate 和 rollback，才进入 self-evolution。
+
+## 这篇来自论文哪一章？
+
+Source: `paper-drafts/ch6-frameworks.tex`。第六章分析主流 Agent frameworks 和 infrastructure，并说明 Self Evolve 更像框架之上的 evolution layer。
+
+## 框架解决什么？
+
+主流框架大致分六类：
+
+| 框架 | 核心价值 | 自进化缺口 |
+|---|---|---|
+| AutoGPT | 任务循环和工具使用 | 评估与治理不足 |
+| MetaGPT | SOP 和多角色协作 | 改进机制不自动 |
+| AutoGen | 对话式多 Agent runtime | 需要外部评估闭环 |
+| CrewAI | 轻量生产 flows | 需要持久学习层 |
+| DSPy | prompt/program 编译优化 | 更偏优化器，不是完整 Agent OS |
+| LangGraph | 状态图和循环 workflow | 需要版本化和 promotion gate |
+
+这不是批评。框架本来就不该全包。问题是很多人把“用了框架”误当成“系统会进化”。
+
+## 自进化层应该长什么样？
+
+```text
+Framework runtime
+  + trace logging
+  + evaluator suite
+  + memory write/delete policy
+  + prompt/workflow candidate generator
+  + sandbox validation
+  + approval gate
+  + rollback
+  + report
+```
+
+这个 evolution layer 可以放在任何框架上。LangGraph 提供状态图，DSPy 提供优化器，CrewAI 提供角色和流程，AutoGen 提供消息 runtime；Self Evolve 关心的是这些组件如何被反馈驱动地修改。
+
+## 一个实用判断
+
+当你评估一个 Agent 框架是否“支持自进化”时，不要看官网文案。看这七个接口：
+
+1. 是否导出完整 execution trace？
+2. 是否能版本化 prompt/workflow/memory？
+3. 是否有评估器接口？
+4. 是否支持 offline replay？
+5. 是否能比较两个 Agent 版本？
+6. 是否能阻止候选修改直接上线？
+7. 是否生成可审计报告？
+
+如果答案多数是否，它只是 Agent runtime，不是 self-evolving runtime。
+
+## 为什么 DSPy 特别重要？
+
+DSPy 的价值在于它把 prompt 从手写字符串变成可优化程序。这个思想非常接近自进化：系统不再只“执行 prompt”，而是可以根据数据和 metric 编译 prompt。
+
+但 DSPy 仍然需要和 Agent trace、memory、tools、workflow 结合，才能覆盖完整 self-evolution。
+
+## 为什么 LangGraph 也重要？
+
+LangGraph 把 Agent 流程显式化成图。显式图比隐藏 chain 更适合自进化，因为你可以比较版本：
+
+```text
+v1: plan -> act -> observe
+v2: plan -> retrieve memory -> act -> test -> reflect
+```
+
+图结构让更新对象更清楚，rollback 也更自然。
+
+## 给框架使用者的建议
+
+- 不要先追求全自动自改；
+- 先把 trace 和 evaluator 做出来；
+- 把 prompt、memory、workflow 当成版本化资产；
+- 给每次更新生成 diff；
+- 从建议模式开始，不要直接写生产配置；
+- 每个框架外面都要有独立审计层。
+
+自进化不是框架功能列表里的一个 checkbox。它是框架之上的控制系统。
+

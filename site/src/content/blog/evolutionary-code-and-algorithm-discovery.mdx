@@ -1,0 +1,97 @@
+---
+title: "进化式代码与算法发现：为什么 AlphaEvolve、DGM 和 OpenEvolve 重要"
+description: "从英文论文第四章拆解进化式代码和算法发现：LLM 作为优化器、语义变异器、程序搜索器，以及 AlphaEvolve、Darwin Gödel Machine、OpenEvolve 的工程意义。"
+pubDate: 2026-05-26
+updatedDate: 2026-05-26
+tags: ["AlphaEvolve", "Darwin Gödel Machine", "OpenEvolve", "代码自我改进", "进化计算"]
+author: "aha team"
+---
+
+## 一句话
+
+代码是当前最适合自进化的对象，因为它天然有 diff、测试、执行器、版本控制和回滚。
+
+## 三句话
+
+Prompt 进化容易漂移，记忆进化容易污染，工作流进化难以归因。代码和算法进化虽然风险高，但反馈更硬：运行了没有、测试过了没有、性能变好没有。AlphaEvolve、DGM、OpenEvolve 的意义在于，它们把 LLM 从“写一次代码”变成“反复提出变体、执行评估、保留改进”的搜索器。
+
+## 这篇来自论文哪一章？
+
+Source: `paper-drafts/ch4-evolutionary.tex`。第四章分析 OPRO、FunSearch、OpenEvolve、CodeEvolve、SE-Agent、DGM、AlphaEvolve 等路线。
+
+## LLM 从作者变成变异器
+
+传统代码生成是：
+
+```text
+task -> LLM -> code
+```
+
+进化式代码发现是：
+
+```text
+parent code -> LLM mutation -> child code -> evaluator -> archive
+```
+
+差别巨大。第一种把模型当作者；第二种把模型当 mutation operator。它不要求一次写对，而是要求持续提出有价值变体。
+
+## 为什么这条线比普通 Agent 更硬？
+
+因为代码可以被机器检验：
+
+- 单元测试可以判定功能；
+- benchmark 可以测性能；
+- profiler 可以测成本；
+- git diff 可以审计变更；
+- CI 可以阻止退化；
+- archive 可以保留父子关系。
+
+这让“改进”不再只是主观评价。
+
+## OPRO 到 FunSearch：语言模型成为优化器
+
+OPRO 的关键想法是：把优化过程写成自然语言历史，让 LLM 继续提出更好的候选。FunSearch 则把程序发现和自动评估结合起来，让模型生成小程序，再用 evaluator 筛选。
+
+它们共同说明：LLM 不一定要直接输出最终答案。它可以输出一个可执行候选，然后让外部世界决定它是否有价值。
+
+## DGM：Agent 也可以成为进化对象
+
+Darwin Gödel Machine 把进化对象从“算法代码”推进到“Agent 实现”。这很关键，因为未来最有价值的系统不是单个函数，而是整个 harness：规划、工具调用、记忆、修复、测试、反思、报告。
+
+一个 Agent 版本可以成为另一个 Agent 版本的 parent。每个 child 都带着 diff、评估结果和 lineage。这样，系统不是线性地“升级”，而是在 archive 里保留多条可能路线。
+
+## AlphaEvolve：工业尺度的信号
+
+AlphaEvolve 的重要性不只是分数，而是它展示了三件事：
+
+1. LLM 可以参与真实算法搜索；
+2. quality-diversity/archive 比单一爬坡更稳；
+3. 评估器越硬，进化越有工程意义。
+
+这也是 Self Evolve 站点为什么把 AlphaEvolve、OpenEvolve、DGM 放在核心图谱里：它们是“LLM + evaluator + archive”范式的代表。
+
+## 工程模板
+
+```text
+1. 选择低风险代码对象
+2. 写可重复 evaluator
+3. 生成候选 diff
+4. 在 sandbox 中运行
+5. 记录 score/cost/failure
+6. 只 promote 通过 hidden tests 的变体
+7. 把失败变体留在 archive 供分析
+```
+
+不要跳过第 6 步。没有 hidden validation 的代码进化，很容易只是测试集投机。
+
+## 最重要的开放问题
+
+- 如何防止模型改 evaluator？
+- 如何发现“短期降分、长期有价值”的 stepping stone？
+- 如何让 archive 不爆炸？
+- 如何衡量搜索成本？
+- 如何把代码改进迁移到新任务？
+- 如何对安全相关代码设置不可变边界？
+
+进化式代码发现是最像“真正自进化”的方向之一，但它必须像严肃软件工程一样运行：权限分离、CI、审计、回滚、成本预算，一个都不能少。
+

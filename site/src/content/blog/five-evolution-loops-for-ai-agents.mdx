@@ -1,0 +1,114 @@
+---
+title: "自进化 Agent 的五个循环：反馈、搜索、评估、反思与种群"
+description: "从英文论文第二章拆解 Self Evolve 的 Five Evolution Loops：Specification-to-Execution、Search、Evaluator、Reflection、Population，以及如何组合成真实 Agent 系统。"
+pubDate: 2026-05-26
+updatedDate: 2026-05-26
+tags: ["Five Evolution Loops", "自进化智能体", "Agent 设计", "评估闭环", "论文拆解"]
+author: "aha team"
+---
+
+## 一句话
+
+自进化 Agent 不是一个算法，而是五类循环的组合：把目标变成执行、在候选空间搜索、用评估器筛选、把经验写回反思记忆、用种群保留多条改进路径。
+
+## 三句话
+
+如果你只做反思，系统会变成会写复盘但不一定变强的 Agent。如果你只做搜索，系统会很快过拟合评估器。如果你把五个循环分清楚，再明确每个循环的对象、输入、更新、验证和回滚，系统才从 demo 走向工程。
+
+## 这篇来自论文哪一章？
+
+Source: `paper-drafts/ch2-taxonomy.tex`。第二章建立论文的核心分类框架：Five Evolution Loops。
+
+## Loop 1：Specification-to-Execution
+
+这是最容易被忽略的一环。用户说“帮我做一个研究报告”，Agent 要把模糊目标拆成计划、工具调用、文件路径、验证命令和交付格式。
+
+这个循环的演化对象不是模型参数，而是**任务规格到执行轨迹的翻译器**。
+
+好系统会逐步学会：
+
+- 哪些用户输入需要澄清，哪些可以直接执行；
+- 哪些任务需要先读 raw，哪些先查 wiki；
+- 哪些输出必须带证据链；
+- 哪些操作必须先跑 git status 和引用搜索。
+
+这也是为什么 Self Evolve 仓库强调 AGENTS、wiki、index 和验证命令：它们都是 specification-to-execution loop 的外部骨架。
+
+## Loop 2：Search
+
+Search loop 把改进变成候选生成问题。候选可以是 prompt、代码 patch、workflow graph、tool routing、memory policy，也可以是完整 Agent 架构。
+
+关键不是“生成很多候选”，而是定义搜索空间：
+
+```text
+search_space = prompt | memory_policy | workflow | code_patch | evaluator | tool_policy
+```
+
+搜索空间太小，系统只能局部修补；搜索空间太大，系统会烧钱、漂移、难以归因。好的工程做法是从低风险对象开始：先改 prompt 和 checklist，再改 routing，再改 workflow，最后才允许代码级修改。
+
+## Loop 3：Evaluator
+
+Evaluator loop 是自进化的地基。没有评估器，所有“改进”都只是叙事。
+
+评估器可以很简单：
+
+- 单元测试；
+- benchmark 分数；
+- replay conversations；
+- 工具调用是否成功；
+- 用户是否接受结果；
+- 成本是否低于预算；
+- 安全规则是否被违反。
+
+但它必须独立。生成候选的 Agent 不能同时完全控制批准机制。否则系统会学会让自己看起来更好，而不是变得更好。
+
+## Loop 4：Reflection
+
+Reflection loop 把失败变成未来上下文。Reflexion 的核心就是：失败后写一条自然语言经验，下次任务把经验读回来。
+
+但生产系统里，反思不能只是“写日记”。它需要结构化：
+
+```yaml
+failure: tool call selected wrong file
+condition: user asked for repo-wide analysis
+fix: run rg before opening individual files
+scope: coding/research tasks
+expires: when repo index changes
+```
+
+反思如果没有作用域和过期机制，会变成污染未来决策的旧经验。
+
+## Loop 5：Population
+
+Population loop 来自进化计算：保留多个候选分支，而不是只保留当前最高分版本。DGM、AlphaEvolve、MAP-Elites 这类系统都说明了一个原则：短期不是最强的变体，可能是长期 stepping stone。
+
+Agent 工程里也一样。一个 workflow 分支可能今天分数一般，但它提供了更好的日志、更安全的权限边界、更低的成本，未来可能成为可靠性的基础。
+
+## 怎么组合？
+
+一个实用组合如下：
+
+```text
+task -> specification loop
+     -> execution trace
+     -> evaluator loop
+     -> reflection memory
+     -> search candidate
+     -> sandbox validation
+     -> archive or rollback
+```
+
+这不是玄学，是软件工程。每个箭头都应该有日志，每次变更都应该能解释。
+
+## 给实践者的清单
+
+- 先写清楚当前系统有哪几个 loop；
+- 每个 loop 只允许修改明确对象；
+- evaluator 版本化；
+- memory 有删除和过期；
+- archive 记录 parent、diff、score、cost；
+- 高风险修改必须 sandbox；
+- 每次 promote 都要有 rollback path。
+
+如果这份清单太重，说明你的系统还不适合“自我修改”。先把可观测性和评估器做出来。
+
