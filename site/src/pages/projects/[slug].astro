@@ -28,6 +28,7 @@ const title = `${project.name} Model Card — ${project.category} | Self Evolve`
 const description = `${project.name} 深度分析：${project.description} 机制模式：${project.pattern}。`;
 const reportHref = `/reports/${project.report}`;
 const localReportPath = `research/${project.report}`;
+const githubReportUrl = `${site.github}/blob/main/${localReportPath}`;
 const updatedDate = project.lastPushed ? project.lastPushed.slice(0, 10) : 'unknown';
 const maturity =
   project.status === 'verified'
@@ -126,7 +127,7 @@ const jsonLd = {
           <ul>
             <li>GitHub: <a href={project.url} target="_blank" rel="noopener">{project.url}</a></li>
             <li>Local mirror: <code>{project.localPath ?? 'not recorded'}</code></li>
-            <li>Source report: <code>{localReportPath}</code></li>
+            <li>Source report: <a href={githubReportUrl} target="_blank" rel="noopener">{localReportPath}</a></li>
             <li>Published report path: <a href={reportHref}>{reportHref}</a></li>
           </ul>
         </section>
@@ -142,6 +143,20 @@ const jsonLd = {
           </ul>
         </section>
       </section>
+
+      <aside class="source-panel" aria-label={`${project.name} GitHub evidence links`}>
+        <div>
+          <div class="eyebrow">Open Source Trail</div>
+          <h2>回到 GitHub 检查这个项目</h2>
+          <p>这个 model card 的目的不是替代原仓库，而是帮读者先建立判断框架：项目解决什么问题、用什么进化机制、证据链在哪里。真正做技术选型时，仍应回到 GitHub 查看代码、issue、release 和最近提交。</p>
+        </div>
+        <div class="source-links">
+          <a href={project.url} target="_blank" rel="noopener">打开原始 GitHub 仓库</a>
+          <a href={githubReportUrl} target="_blank" rel="noopener">查看分析源码</a>
+          <a href={`${site.github}/issues/new?title=${encodeURIComponent(`Update model card: ${project.repo}`)}`} target="_blank" rel="noopener">提交更新线索</a>
+          <a href={`/search/?q=${encodeURIComponent(project.repo)}`}>搜索站内相关内容</a>
+        </div>
+      </aside>
     </div>
   </article>
 </BaseLayout>

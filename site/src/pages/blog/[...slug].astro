@@ -6,8 +6,47 @@ export async function getStaticPaths(){const posts=(await getCollection('blog'))
 const { post } = Astro.props;
 const { Content } = await render(post);
 const canonical = new URL(`/blog/${post.id}/`, site.url).toString();
+const allPosts = (await getCollection('blog')).filter((p) => !p.data.draft && p.id !== post.id);
+const relatedPosts = allPosts
+  .map((candidate) => ({
+    post: candidate,
+    score: candidate.data.tags.reduce((sum, tag) => sum + (post.data.tags.includes(tag) ? 1 : 0), 0)
+  }))
+  .filter((item) => item.score > 0)
+  .sort((a, b) => b.score - a.score || b.post.data.pubDate.valueOf() - a.post.data.pubDate.valueOf())
+  .slice(0, 3)
+  .map((item) => item.post);
+const sourceUrl = `${site.github}/blob/main/site/src/content/blog/${post.id}.mdx`;
 const jsonLd = {'@context':'https://schema.org','@type':'BlogPosting',headline:post.data.title,description:post.data.description,datePublished:post.data.pubDate.toISOString(),dateModified:(post.data.updatedDate ?? post.data.pubDate).toISOString(),inLanguage:'zh-CN',keywords:post.data.tags,image:new URL('/visuals/self-evolve-og.png', site.url).toString(),author:{'@type':'Organization',name:post.data.author},publisher:{'@id':`${site.url}/#organization`},mainEntityOfPage:canonical};
 ---
 <BaseLayout title={`${post.data.title} | Self Evolve`} description={post.data.description} type="article" publishedTime={post.data.pubDate.toISOString()} modifiedTime={(post.data.updatedDate ?? post.data.pubDate).toISOString()} pageKeywords={post.data.tags}>
-  <article class="blog-article"><div class="eyebrow">{post.data.pubDate.toISOString().slice(0,10)} · {post.data.author}</div><h1>{post.data.title}</h1><p class="lead">{post.data.description}</p><div class="pill-row">{post.data.tags.map((tag)=><a class="pill" href={`/blog/tag/${encodeURIComponent(tag)}`}>{tag}</a>)}</div><script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline /><Content /></article>
+  <article class="blog-article"><div class="eyebrow">{post.data.pubDate.toISOString().slice(0,10)} · {post.data.author}</div><h1>{post.data.title}</h1><p class="lead">{post.data.description}</p><div class="pill-row">{post.data.tags.map((tag)=><a class="pill" href={`/blog/tag/${encodeURIComponent(tag)}`}>{tag}</a>)}</div><script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline /><Content />
+    <aside class="source-panel" aria-label="文章证据链与下一步阅读">
+      <div>
+        <div class="eyebrow">Evidence / Source</div>
+        <h2>这篇文章如何继续验证？</h2>
+        <p>Self Evolve 的博客不是孤立文章：每篇都回到 GitHub 源文件、项目 model card、论文页和站内搜索，方便读者复查来源、补充证据或继续深挖。</p>
+      </div>
+      <div class="source-links">
+        <a href={sourceUrl} target="_blank" rel="noopener">查看本文 MDX 源码</a>
+        <a href={site.github} target="_blank" rel="noopener">打开 GitHub 仓库</a>
+        <a href={`/search/?q=${encodeURIComponent(post.data.tags[0] ?? post.data.title)}`}>搜索同主题资料</a>
+        <a href="/projects/">进入 GitHub 项目索引</a>
+      </div>
+    </aside>
+    {relatedPosts.length > 0 && (
+      <section class="related-content" aria-label="相关文章">
+        <div class="eyebrow">Related reading</div>
+        <h2>继续读这条线</h2>
+        <div class="related-grid">
+          {relatedPosts.map((related) => (
+            <a class="related-card" href={`/blog/${related.id}/`}>
+              <strong>{related.data.title}</strong>
+              <span>{related.data.description}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </article>
 </BaseLayout>

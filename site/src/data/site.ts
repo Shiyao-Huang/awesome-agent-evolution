@@ -26,6 +26,7 @@ export const nav = [
   { href: '/graph/', label: '图谱' },
   { href: '/blog/', label: '博客' },
   { href: '/search/', label: '搜索' },
+  { href: '/github/', label: 'GitHub' },
   { href: '/star-analysis/', label: 'Star 分析' },
   { href: '/#community', label: '社区' }
 ];

@@ -26,6 +26,7 @@ Reference style: Karpathy-like technical clarity.
 | Crawlability | Every post is linked from `/blog/`, `/search/`, RSS, and sitemap after build. |
 | Structured data | Blog posts emit `BlogPosting` JSON-LD with title, dates, image, tags, author, publisher. |
 | Canonical URLs | Every generated page canonicalizes to `https://agent-evolution.com/...`. |
+| GitHub evidence links | Important pages include crawlable `<a href>` links back to the GitHub repository, MDX source, project reports, or original upstream repo. |
 
 ## Chapter-to-Blog Map
 
@@ -39,6 +40,16 @@ Reference style: Karpathy-like technical clarity.
 | `paper-drafts/ch6-frameworks.tex` | `agent-frameworks-evolution-layer` | Are Agent frameworks self-evolving? | AutoGPT, AutoGen, CrewAI, LangGraph, DSPy | `/projects/`, `/rank/` |
 | `paper-drafts/ch7-painpoints.tex` | `user-painpoints-production-self-evolving-agents` | What do users actually need from agents? | Agent 痛点, 可观测性, 生产部署, Mom Test | `/reviews/`, `/reports/` |
 | `paper-drafts/ch8-future.tex` | `future-roadmap-for-self-evolving-ai-agents` | What is the future roadmap? | AI 自我进化未来, Agent 安全, 记忆系统, 评估器 | `/survey/`, `/graph/` |
+
+## GitHub Link Strategy
+
+| Page Type | Reader Value | GitHub Target |
+|---|---|---|
+| Blog post | Verify how an article was written and suggest corrections. | `site/src/content/blog/{slug}.mdx` |
+| Research note | Recheck paper notes, arXiv ID, tags, and source commentary. | `site/src/content/research/{slug}.mdx` |
+| Project model card | Compare the analysis with the upstream code and issue activity. | Original project repo + `research/projects/*.md` |
+| GitHub hub page | Give crawlers and readers a single evidence-chain map. | Main repository, `projects/`, `paper-drafts/`, `docs/indexes/` |
+| Footer | Keep source links available on every page without interrupting reading. | Main repository, blog source, project analysis, RSS |
 
 ## Topic Cluster Graph
 
@@ -73,9 +84,10 @@ flowchart TD
 | Platform | Action | Status |
 |---|---|---|
 | GitHub Pages | Custom domain set to `agent-evolution.com` | Done |
-| Hostinger DNS | A records for apex + `www` CNAME to GitHub Pages | User action pending/propagation pending |
-| Google Search Console | Add Domain property for `agent-evolution.com`; add DNS TXT verification in Hostinger | Pending token |
-| Google Search Console | Submit `https://agent-evolution.com/sitemap-index.xml` | Pending DNS + HTTPS |
+| Hostinger DNS | A records for apex + `www` CNAME to GitHub Pages | Done; Google/Cloudflare DNS-over-HTTPS see GitHub Pages records |
+| GitHub Pages HTTPS | Wait for GitHub certificate, then enable Enforce HTTPS | Pending certificate (`The certificate does not exist yet`) |
+| Google Search Console | Add Domain property for `agent-evolution.com`; add DNS TXT verification in Hostinger | Token received; DNS TXT still needs verification wait |
+| Google Search Console | Submit `https://agent-evolution.com/sitemap-index.xml` | Pending GitHub Pages HTTPS certificate |
 | Bing Webmaster Tools | Add site or import from Search Console; add DNS TXT if needed | Pending token |
 | Rich Results Test | Test one blog post and one project model-card page | Pending deployment |
 | URL Inspection | Request indexing for `/`, `/blog/`, `/search/`, top 8 blog posts | Pending Search Console ownership |

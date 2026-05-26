@@ -1002,6 +1002,78 @@ a.pill:focus-visible {
   vertical-align: top;
 }
 
+.source-panel,
+.related-content {
+  margin-top: 54px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-card);
+  padding: 24px;
+  box-shadow: var(--shadow-mockup);
+}
+
+.source-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(220px, .8fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.source-panel h2,
+.related-content h2 {
+  margin-top: 8px;
+  font-size: 30px;
+}
+
+.source-panel p {
+  color: var(--muted);
+}
+
+.source-links {
+  display: grid;
+  gap: 10px;
+}
+
+.source-links a,
+.related-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-1);
+  padding: 12px 14px;
+  text-decoration: none;
+}
+
+.source-links a {
+  color: var(--fg);
+  font-weight: 800;
+}
+
+.source-links a:hover,
+.related-card:hover {
+  border-color: rgba(255, 91, 0, .45);
+  transform: translateY(-1px);
+}
+
+.related-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.related-card {
+  display: grid;
+  gap: 6px;
+}
+
+.related-card strong {
+  color: var(--fg);
+}
+
+.related-card span {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 .project-detail {
   padding: 58px 0 88px;
 }
@@ -1071,6 +1143,31 @@ a.pill:focus-visible {
   padding: 36px 0 52px;
   color: var(--muted);
   font-size: 14px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.footer-inner p {
+  margin-top: 6px;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 16px;
+}
+
+.footer-links a {
+  color: var(--fg);
+  font-weight: 800;
 }
 
 .score-table-wrap {
@@ -1226,7 +1323,8 @@ a.pill:focus-visible {
   .project-hero,
   .model-card-grid,
   .visual-grid,
-  .radar-grid {
+  .radar-grid,
+  .source-panel {
     grid-template-columns: 1fr;
   }
 
@@ -1290,6 +1388,14 @@ a.pill:focus-visible {
 
   .post-card h2 {
     font-size: 28px;
+  }
+
+  .footer-inner {
+    display: grid;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
   }
 }
 

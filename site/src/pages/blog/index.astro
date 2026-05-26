@@ -1,9 +1,32 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { site } from '@/data/site';
 const posts = (await getCollection('blog')).filter((p)=>!p.data.draft).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
 const featuredPost = posts[0];
 const otherPosts = posts.slice(1);
+const readingRoutes = [
+  {
+    title: '第一次理解自进化 Agent',
+    description: '先读概念入口，再看五个循环，把“反思、搜索、评估、记忆、种群”放进同一张图。',
+    href: '/blog/self-evolving-ai-introduction-static-to-evolving-agents/'
+  },
+  {
+    title: '做技术选型',
+    description: '从项目索引进入 GitHub 仓库，检查 stars、活跃度、许可证、技术栈和 model card 判断。',
+    href: '/projects/'
+  },
+  {
+    title: '写论文或做综述',
+    description: '从研究图谱进入论文、benchmark 和 coverage gap，避免只看名字里带 evolution 的项目。',
+    href: '/research/'
+  },
+  {
+    title: '复查原始材料',
+    description: '所有站点内容都应能回到 GitHub 仓库、论文草稿、项目分析或 raw 素材。',
+    href: '/github/'
+  }
+];
 ---
 <BaseLayout title="Self Evolve 博客 — AI 自我进化实践笔记" description="围绕自进化智能体、LLM 迭代优化、代码自我改进与评测闭环的中文 SEO 文章。">
   <section class="section blog-index-hero">
@@ -19,8 +42,29 @@ const otherPosts = posts.slice(1);
           <a class="pill" href="/rss.xml">RSS</a>
           <a class="pill" href="/research/">研究图谱</a>
           <a class="pill" href="/projects/">项目索引</a>
+          <a class="pill" href={site.github} target="_blank" rel="noopener">GitHub</a>
         </div>
       </aside>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 20px">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Reading routes</div>
+          <h2>按任务选择阅读路径</h2>
+        </div>
+        <a class="button" href="/github/">查看 GitHub 证据链</a>
+      </div>
+      <div class="grid">
+        {readingRoutes.map((route) => (
+          <article class="card">
+            <h3><a href={route.href}>{route.title}</a></h3>
+            <p>{route.description}</p>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 

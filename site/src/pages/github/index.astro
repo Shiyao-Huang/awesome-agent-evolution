@@ -1,0 +1,134 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { projects } from '@/data/projects';
+import { featuredResearch } from '@/data/research';
+
+const repo = site.github;
+const githubLinks = [
+  {
+    title: '开源仓库首页',
+    description: '查看 README、站点源码、issue、discussions 和发布历史。',
+    href: repo
+  },
+  {
+    title: '项目 model card 数据',
+    description: '每个 GitHub 仓库的分类、机制、stars、许可证和报告来源。',
+    href: `${repo}/tree/main/projects`
+  },
+  {
+    title: '英文论文草稿',
+    description: 'Self Evolve survey 的 LaTeX 章节，是博客系列和研究页的重要来源。',
+    href: `${repo}/tree/main/paper-drafts`
+  },
+  {
+    title: '站点博客源码',
+    description: '所有 SEO 博客的 MDX 源文件，方便复查标题、摘要、标签和引用。',
+    href: `${repo}/tree/main/site/src/content/blog`
+  },
+  {
+    title: '研究笔记源码',
+    description: '论文精读、机制拆解和 benchmark 相关页面的 MDX 源文件。',
+    href: `${repo}/tree/main/site/src/content/research`
+  },
+  {
+    title: '数据与索引规则',
+    description: '查看 raw、processed、work、results 的项目治理和索引文件。',
+    href: `${repo}/tree/main/docs/indexes`
+  }
+];
+
+const readerTasks = [
+  ['我想找能运行的项目', '先看项目索引的 model card，再点回 GitHub 检查 README、安装路径、issue 活跃度和最近提交。', '/projects/'],
+  ['我想理解技术路线', '先读博客的五个循环和自改进方法，再进研究图谱看论文和 benchmark。', '/blog/five-evolution-loops-for-ai-agents/'],
+  ['我想复查证据链', '从页面底部的 GitHub 源文件进入仓库，确认 MDX、报告和论文章节是否一致。', `${repo}/tree/main/site/src`],
+  ['我想贡献或纠错', '用 GitHub issue 提供新仓库、新论文、benchmark 结果或失效链接。', `${repo}/issues`]
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Self Evolve GitHub 证据链',
+  description: 'Self Evolve AI 站点的 GitHub 源码、论文、项目 model card、研究笔记与 SEO 博客证据入口。',
+  url: `${site.url}/github/`,
+  inLanguage: 'zh-CN',
+  isPartOf: { '@id': `${site.url}/#website` },
+  mainEntity: {
+    '@type': 'SoftwareSourceCode',
+    name: 'awesome-agent-evolution',
+    codeRepository: repo,
+    programmingLanguage: ['TypeScript', 'Astro', 'MDX', 'LaTeX']
+  }
+};
+---
+
+<BaseLayout
+  title="Self Evolve GitHub 证据链 — 源码、论文、项目与博客入口"
+  description="从 Self Evolve 网站回到 GitHub：查看开源仓库、项目 model card、论文草稿、研究笔记、博客源码和索引规则。"
+  pageKeywords={['GitHub', '开源仓库', 'AI 自我进化', 'Self Evolve 源码']}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">GitHub evidence trail</div>
+      <h1>所有结论都应该能回到源码、论文或原始仓库。</h1>
+      <p class="lead">这个页面是 Self Evolve 的开源证据入口：读者可以从这里回到 GitHub，复查站点源码、论文草稿、项目分析、博客 MDX 和目录索引规则。</p>
+      <div class="metrics">
+        <div class="metric"><strong>{projects.length}</strong><span>项目 model cards</span></div>
+        <div class="metric"><strong>{featuredResearch.length}</strong><span>代表论文条目</span></div>
+        <div class="metric"><strong>GitHub</strong><span>第一证据源</span></div>
+      </div>
+      <div class="pill-row" style="margin-top: 22px">
+        <a class="button primary" href={repo} target="_blank" rel="noopener">打开 GitHub 仓库</a>
+        <a class="button" href={`${repo}/issues`} target="_blank" rel="noopener">提交线索或纠错</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 20px">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Source map</div>
+          <h2>从页面回到 GitHub 的路径</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {githubLinks.map((link) => (
+          <article class="card">
+            <h3><a href={link.href} target="_blank" rel="noopener">{link.title}</a></h3>
+            <p>{link.description}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 20px">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Reader tasks</div>
+          <h2>按任务使用这个站点</h2>
+        </div>
+      </div>
+      <div class="score-table-wrap">
+        <table class="score-table">
+          <thead>
+            <tr><th>读者任务</th><th>最有价值的下一步</th><th>入口</th></tr>
+          </thead>
+          <tbody>
+            {readerTasks.map(([task, next, href]) => (
+              <tr>
+                <td><strong>{task}</strong></td>
+                <td>{next}</td>
+                <td><a href={href} target={String(href).startsWith('http') ? '_blank' : undefined} rel={String(href).startsWith('http') ? 'noopener' : undefined}>打开</a></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

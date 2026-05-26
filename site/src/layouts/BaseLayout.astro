@@ -58,6 +58,7 @@ const orgLd = {
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <link rel="canonical" href={canonical} />
+    <link rel="me" href={site.github} />
     <link rel="icon" type="image/svg+xml" href={withBase('/og.svg')} />
     <link rel="alternate" type="application/rss+xml" title="Self Evolve RSS 订阅" href={withBase('/rss.xml')} />
     <meta property="og:title" content={title} />
@@ -97,7 +98,21 @@ const orgLd = {
       {nav.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
     <main id="main"><slot /></main>
-    <footer class="footer"><div class="container">© {new Date().getFullYear()} Self Evolve. AI 自我进化中文研究与项目索引静态站点。</div></footer>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Self Evolve</strong>
+          <p>AI 自我进化中文研究、项目 model card、论文证据链与博客索引。</p>
+        </div>
+        <nav class="footer-links" aria-label="站点与开源链接">
+          <a href="/github/">GitHub 证据链</a>
+          <a href={site.github} target="_blank" rel="noopener">开源仓库</a>
+          <a href={`${site.github}/tree/main/site/src/content/blog`} target="_blank" rel="noopener">博客源码</a>
+          <a href={`${site.github}/tree/main/projects`} target="_blank" rel="noopener">项目分析</a>
+          <a href="/rss.xml">RSS</a>
+        </nav>
+      </div>
+    </footer>
 
     <!-- Mobile menu + Scroll reveal -->
     <script is:inline>

@@ -7,6 +7,13 @@ import { featuredResearch } from '@/data/research';
 const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const posts = (await getCollection('blog')).filter((p) => !p.data.draft);
 const items = [
+  {
+    type: '入口',
+    title: 'GitHub 证据链',
+    description: '从 Self Evolve 网站回到开源仓库、项目 model card、论文草稿、博客源码和索引规则。',
+    href: '/github/',
+    tags: ['GitHub', '开源仓库', '证据链', '源码']
+  },
   ...posts.map((post) => ({
     type: '博客',
     title: post.data.title,

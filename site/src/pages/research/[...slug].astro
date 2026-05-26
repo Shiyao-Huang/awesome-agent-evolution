@@ -6,6 +6,7 @@ export async function getStaticPaths(){const notes=await getCollection('research
 const { note } = Astro.props;
 const { Content } = await render(note);
 const canonical = new URL(`/research/${note.id}/`, site.url).toString();
+const sourceUrl = `${site.github}/blob/main/site/src/content/research/${note.id}.mdx`;
 const jsonLd = {'@context':'https://schema.org','@type':'ScholarlyArticle',headline:note.data.title,description:note.data.description,datePublished:note.data.pubDate.toISOString(),inLanguage:'zh-CN',keywords:note.data.tags,image:new URL('/visuals/self-evolve-og.png', site.url).toString(),author:{'@id':`${site.url}/#organization`},publisher:{'@id':`${site.url}/#organization`},mainEntityOfPage:canonical,...(note.data.arxiv ? {sameAs:`https://arxiv.org/abs/${note.data.arxiv}`} : {})};
 ---
 <BaseLayout title={`${note.data.title} | Self Evolve 研究图谱`} description={note.data.description} type="article" publishedTime={note.data.pubDate.toISOString()} modifiedTime={note.data.pubDate.toISOString()} pageKeywords={note.data.tags}>
@@ -16,6 +17,19 @@ const jsonLd = {'@context':'https://schema.org','@type':'ScholarlyArticle',headl
     <div class="pill-row">{note.data.arxiv && <a class="pill" href={`https://arxiv.org/abs/${note.data.arxiv}`} target="_blank" rel="noopener">arXiv</a>}{note.data.tags.map((tag)=><span class="pill">{tag}</span>)}</div>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
     <Content />
+    <aside class="source-panel" aria-label="研究笔记证据链">
+      <div>
+        <div class="eyebrow">Evidence / GitHub</div>
+        <h2>复查这篇研究笔记</h2>
+        <p>研究页保留论文入口、MDX 源文件和站内关联入口。读者可以从这里回到 GitHub 检查笔记来源，或沿标签继续找同一机制的项目与博客。</p>
+      </div>
+      <div class="source-links">
+        <a href={sourceUrl} target="_blank" rel="noopener">查看研究笔记源码</a>
+        {note.data.arxiv && <a href={`https://arxiv.org/abs/${note.data.arxiv}`} target="_blank" rel="noopener">打开 arXiv</a>}
+        <a href={site.github} target="_blank" rel="noopener">打开 GitHub 仓库</a>
+        <a href={`/search/?q=${encodeURIComponent(note.data.tags[0] ?? note.data.title)}`}>搜索相关项目与博客</a>
+      </div>
+    </aside>
     <p style="margin-top:48px"><a href="/research/" class="button">&larr; 返回研究图谱</a></p>
   </article>
 </BaseLayout>
