@@ -17,6 +17,8 @@
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
 | `scripts` | present | 23 | 1 | 0 | 460 KB |
 | `data-engine` | present | 479 | 18 | 0 | 5.9 MB |
+| `work/research` | present | 47 | 1 | 0 | 1.2 MB |
+| `work/wiki` | present | 46 | 5 | 0 | 500 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files

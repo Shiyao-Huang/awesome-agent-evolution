@@ -65,6 +65,7 @@ _Processed raw sources with extracted insights_
 - [Papers Digest](sources/papers-digest.md) — 201文件/128论文聚合摘要: F1-F7机制族, Top-10论文, 73待分析 | Rank: A | 2026-05-26
 - [Social Media Digest](sources/social-digest.md) — 1298+468社交帖子聚合摘要: 6类内容, 研究趋势, 人才信号, raw-social-rank零覆盖 | Rank: B | 2026-05-26
 - [Blogs Digest](sources/blogs-digest.md) — 1308博客聚合摘要: 6类内容, ~1.5%已采样, 高价值子集优先 | Rank: B | 2026-05-26
+- [Essential Taxonomy Framework](sources/essential-taxonomy-framework.md) — 5D统一分类框架: 方法×效果×实现×进化阶×证据分级, essential-classification+survey整合 | Rank: A | 2026-05-26
 
 ## Synthesis
 

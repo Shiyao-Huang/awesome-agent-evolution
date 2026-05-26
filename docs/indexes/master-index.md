@@ -36,10 +36,13 @@ Self Evolve 的项目结构按 `raw -> processed -> work -> results` 管线治�
 ```mermaid
 flowchart LR
   RAW["raw-* 原始素材"] --> PROCESSED["analysis/research/projects/paper-reviews 加工分析"]
+  PROCESSED --> WIKI["work/wiki LLM Wiki (47 pages)"]
+  RAW -. ingest .-> WIKI
   PROCESSED --> WORK["paper-drafts/site/scripts/survey 工作产物"]
   WORK --> RESULTS["reports/output/site/public/reports/main.pdf 结果输出"]
   OPS["AGENTS/CLAUDE/CLOUD/docs 管理规则"] -. governs .-> RAW
   OPS -. governs .-> PROCESSED
+  OPS -. governs .-> WIKI
   OPS -. governs .-> WORK
   OPS -. governs .-> RESULTS
   MIRRORS["repos/* 外部镜像"] -. evidence .-> PROCESSED

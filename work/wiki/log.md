@@ -189,3 +189,29 @@
 **Index updated**: Sources 25→29, V1 ranks eliminated
 **Search index**: Regenerated (node scripts/generate-wiki-index.mjs)
 **Executor**: builder (cmplzf51c4njhmr23bi4324fy)
+
+## [2026-05-26 ~15:00] ingest | Additional Research→Wiki Migrations
+
+**操作:** Multiple agents created additional wiki source pages
+**详情:**
+
+| Wiki Source Page | Origin | Rank | Content |
+|---|---|---|---|
+| projects-evolution-grading.md | work/research/projects-evolution-grading.md | A | 43 model cards L0-L4 grading |
+| project-evolution-grading-full.md | work/research/project-evolution-grading.md | A | 470 projects L0-L5 full grading + 15 case studies |
+| raw-github-mechanisms-full.md | work/research/raw-github-mechanisms.md | A | 365 projects deep-dive complete: 7-class + 15 cases + TRUE/PSEUDO |
+| review-mechanism-insights-enhanced.md | work/research/review-mechanism-insights-enhanced.md | A | 60 reviews: 16 core insights (6 original + 10 new) |
+| review-mechanism-insights-expanded.md | work/research/review-mechanism-insights-expanded.md | A | 111/137 reviews (81%): 12 insights + 12 method families |
+| essential-taxonomy-framework.md | work/research/essential-classification.md + survey | A | 5D unified framework: method×effect×impl×evolution-order×evidence |
+
+**Index:** Sources 15→29 (cumulative across all agent contributions)
+
+## [2026-05-26 21:01] lint | Index Reconciliation
+
+**操作:** Researcher (cmplzerl54ngt) verified index vs disk consistency
+**详情:**
+- Found `essential-taxonomy-framework.md` on disk but missing from index — added
+- Verified all 29 index entries have corresponding files
+- Verified all 29 source files have index entries
+- Updated log to cover 6 previously unlogged source pages
+- Stats confirmed: 8 entities, 9 concepts, 29 sources, 2 synthesis

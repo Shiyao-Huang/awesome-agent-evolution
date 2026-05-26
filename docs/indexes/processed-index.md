@@ -46,6 +46,9 @@
 - `research/author-network.md`
 - `research/blog-author-anysearch-validation.md`
 - `research/blog-author-profiles-all.csv`
+- `research/repo-classification.csv` — GitHub repo evolution classification (CSV)
+- `research/repo-classification.json` — GitHub repo evolution classification (JSON)
+- `research/repo-classification.md` — GitHub repo evolution classification (report)
 
 ### `projects`
 
