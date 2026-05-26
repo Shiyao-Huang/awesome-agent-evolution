@@ -1,7 +1,8 @@
 ---
 title: "Cross-Pollination: Papers x Blogs x Reviews"
 content_timestamp: 2026-05-26
-rank: V1
+rank: B
+sources: [paper-reviews/, raw-social/, research/evolution-method-chain-formal-analysis.md, research/formal-framework-agent-evolution.md]
 ---
 
 # Cross-Pollination: Where Academic Papers Meet Industry Reality

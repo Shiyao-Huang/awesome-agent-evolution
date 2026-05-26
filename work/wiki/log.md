@@ -176,3 +176,16 @@
 **补充研究文件:** work/research/social-mechanism-insights.md (已有, 355行)
 **Index更新:** Sources 14→15
 **交叉引用:** 链接到Papers/GitHub analysis + self-improvement/emergent-behavior/architecture-search concepts
+
+## [2026-05-26 20:30] ingest | LLM Wiki Build — Canonical Digests + Frontmatter Fix
+
+**Operation**: Created 4 canonical digest pages per schema + fixed 3 V1-rank pages
+**New pages**:
+- sources/github-digest.md (531 projects, 7-class taxonomy, 5 structural factors)
+- sources/papers-digest.md (201 files/128 papers, F1-F7 families, Top-10)
+- sources/social-digest.md (1298+468 files, 6 categories, trend signals)
+- sources/blogs-digest.md (1308 files, 6 categories, ~1.5% sampled)
+**Fixed**: blogs-brainstorm, cross-pollination, papers-brainstorm — V1→B rank, added sources fields
+**Index updated**: Sources 25→29, V1 ranks eliminated
+**Search index**: Regenerated (node scripts/generate-wiki-index.mjs)
+**Executor**: builder (cmplzf51c4njhmr23bi4324fy)

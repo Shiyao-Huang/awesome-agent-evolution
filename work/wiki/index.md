@@ -48,9 +48,9 @@ _Processed raw sources with extracted insights_
 - [Review Mechanism Insights](sources/review-mechanism-insights.md) — 137评审深读6机制洞察: 评估瓶颈/非单调/代码通用/知识构建/验证不可变/协议收敛 | Rank: A | 2026-05-26
 - [Talent Capital Structure](sources/talent-capital-structure.md) — 极端金字塔: <50 L4研究者, $852B OpenAI + $900B Anthropic资本集中 | Rank: A | 2026-05-26
 - [Paper Undercoverage Follow-up](sources/paper-undercoverage-followup.md) — 补充8篇2026论文: EvoMemBench/SEA-Eval/Group-Evolving/Safety degradation | Rank: B | 2026-05-26
-- [Blogs Brainstorm](sources/blogs-brainstorm.md) — 20 blog entries × industry insights: evaluation gap/memory evolution/self-modification safety | Rank: V1 | 2026-05-26
-- [Cross-Pollination](sources/cross-pollination.md) — Papers×Blogs×Reviews交叉: 13 clusters from evaluation-production gap to verification arms race | Rank: V1 | 2026-05-26
-- [Papers Brainstorm](sources/papers-brainstorm.md) — 12 high-value papers × creative insights: 3 evolution channels/diversity dilemma/evaluator bottleneck | Rank: V1 | 2026-05-26
+- [Blogs Brainstorm](sources/blogs-brainstorm.md) — 20 blog entries × industry insights: evaluation gap/memory evolution/self-modification safety | Rank: B | 2026-05-26
+- [Cross-Pollination](sources/cross-pollination.md) — Papers×Blogs×Reviews交叉: 13 clusters from evaluation-production gap to verification arms race | Rank: B | 2026-05-26
+- [Papers Brainstorm](sources/papers-brainstorm.md) — 12 high-value papers × creative insights: 3 evolution channels/diversity dilemma/evaluator bottleneck | Rank: B | 2026-05-26
 - [Raw-Social & Blogs Mechanism Analysis](sources/raw-social-blogs-mechanism-analysis.md) — 1298 social+1308 blog: 7 patterns, 6 method families, social-hype vs evidence gap, official company positions | Rank: A | 2026-05-26
 - [Projects Evolution Grading](sources/projects-evolution-grading.md) — 43 model cards graded L0-L4: L4=7(ADAS/DGM/Godel/OpenEvolve/A-Evolve/EvoAgentX/SICA), card format bias found | Rank: A | 2026-05-26
 - [Enhanced Review Mechanism Insights](sources/review-mechanism-insights-enhanced.md) — 60 reviews deep-read: 16 core insights (6 original + 10 new), Echo Trap/Misevolution/Self-organization/Metacognitive Nth-order | Rank: A | 2026-05-26
@@ -61,6 +61,10 @@ _Processed raw sources with extracted insights_
 - [Silicon Valley Self-Evolution Landscape](sources/sv-selfevolution-landscape.md) — 硅谷9实验室竞争格局 + 10关键人员轨迹 + 资本融资分析 + 人才供给管道 | Rank: A | 2026-05-26
 - [Expanded Review Mechanism Insights](sources/review-mechanism-insights-expanded.md) — 111/137 reviews (81%): 12核心洞察 + 12方法族 + 跨切缺陷 + 12未评审论文补读 | Rank: A | 2026-05-26
 - [Papers Mechanism Analysis](sources/papers-mechanism-analysis.md) — 128论文F1-F7机制族 + Top-10论文 + 5引用谱系 + T1-T4证据分级 + 方法×效果×实现三维分类 | Rank: A | 2026-05-26
+- [GitHub Projects Digest](sources/github-digest.md) — 531项目聚合摘要: 7类分类学, 5结构因子, ~12%真自进化率, 166待分析 | Rank: A | 2026-05-26
+- [Papers Digest](sources/papers-digest.md) — 201文件/128论文聚合摘要: F1-F7机制族, Top-10论文, 73待分析 | Rank: A | 2026-05-26
+- [Social Media Digest](sources/social-digest.md) — 1298+468社交帖子聚合摘要: 6类内容, 研究趋势, 人才信号, raw-social-rank零覆盖 | Rank: B | 2026-05-26
+- [Blogs Digest](sources/blogs-digest.md) — 1308博客聚合摘要: 6类内容, ~1.5%已采样, 高价值子集优先 | Rank: B | 2026-05-26
 
 ## Synthesis
 
@@ -78,6 +82,6 @@ _Cross-cutting analyses, comparisons, evolving theses_
 |--------|-------|
 | Entities | 8 |
 | Concepts | 9 |
-| Sources | 25 |
+| Sources | 29 |
 | Synthesis pages | 2 |
 | Last updated | 2026-05-26 |

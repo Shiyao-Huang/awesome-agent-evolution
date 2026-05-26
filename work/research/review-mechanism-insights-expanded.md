@@ -1,17 +1,17 @@
 ---
-title: "Peer Review Mechanism Insights: Full-Coverage Deep-Dive (72/137 Reviews)"
+title: "Peer Review Mechanism Insights: Full-Coverage Deep-Dive (128/137 Reviews)"
 content_timestamp: 2026-05-26
 time_slice: 2026-05
 language: en
 output_type: deep_analysis
 source_corpus:
-  paper_reviews: paper-reviews/ (137 total, 72 deep-read with mechanism extraction)
+  paper_reviews: paper-reviews/ (137 total, 128 deep-read with mechanism extraction)
   review_reports: review/reports/gitnexus-agent-evolution-review.md
   existing_research: research/evolution-method-chain-formal-analysis.md, research/formal-framework-agent-evolution.md
   unreviewed_papers: 12 raw-papers without corresponding reviews
 coverage:
-  reviews_deep_read: 111
-  reviews_remaining: 26
+  reviews_deep_read: 128
+  reviews_remaining: 9
   unreviewed_papers: 12
   time_span: "2022-2026"
   mechanism_insights: 12

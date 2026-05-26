@@ -2,7 +2,8 @@
 title: "Papers Brainstorm: 12 High-Value Papers × Creative Insights"
 content_timestamp: 2026-05-26
 output_type: brainstorm
-rank: V1
+rank: B
+sources: [raw-papers/]
 source: raw-papers/ (12 papers, D1≥3)
 ---
 

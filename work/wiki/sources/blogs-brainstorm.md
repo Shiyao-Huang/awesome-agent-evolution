@@ -1,7 +1,8 @@
 ---
 title: "Blogs Brainstorm: Industry Insights from 20 Agent-Related Blog Entries"
 content_timestamp: 2026-05-26
-rank: V1
+rank: B
+sources: [raw-blogs/]
 source: raw-blogs/ (20 entries sampled)
 ---
 
