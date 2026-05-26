@@ -215,3 +215,14 @@
 - Verified all 29 source files have index entries
 - Updated log to cover 6 previously unlogged source pages
 - Stats confirmed: 8 entities, 9 concepts, 29 sources, 2 synthesis
+
+## [2026-05-26 23:50] synthesis | Current-Value Ranking Reanalysis
+
+**操作:** Recomputed GitHub project ranking after user identified a ranking contradiction: a 2023 project ranked first despite a 50% time-weight goal.
+**详情:**
+- Added `synthesis/current-value-ranking-reanalysis.md`
+- Corrected ranking formula: `0.50*time + 0.20*mechanism + 0.15*evidence + 0.10*adoption + 0.05*usefulness`
+- Changed local mirror first commit from creation fallback to `first_observed_at`
+- Added unknown `created_at` caveat and capped missing-date time score at 45/100
+- Public `/rankings/` now reads `recency_weighted_project_ranking`
+**Results:** Top project becomes `modelscope/AgentEvolver`; `stanfordnlp/dspy` moves to rank 14 under current-value scoring.

@@ -10,10 +10,10 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `reports` | present | 12 | 2 | 0 | 90 KB |
+| `reports` | present | 13 | 2 | 0 | 94 KB |
 | `output` | present | 8 | 1 | 0 | 572 KB |
 | `site/public/reports` | present | 357 | 6 | 0 | 2.7 MB |
-| `site/dist` | present | 657 | 264 | 0 | 15 MB |
+| `site/dist` | present | 658 | 265 | 0 | 15 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 983 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
@@ -23,6 +23,7 @@
 
 - `reports/academic-propagation-analysis.md`
 - `reports/cross-validation-report.md`
+- `reports/current-value-ranking-reanalysis.md`
 - `reports/project-discovery-leads.md`
 - `reports/propagation-chain-evidence.md`
 - `reports/star-analysis-report.md`
@@ -30,7 +31,6 @@
 - `reports/survey-publication/02-true-vs-pseudo-evolution.md`
 - `reports/survey-publication/03-evaluation-bottleneck.md`
 - `reports/survey-publication/04-demo-to-production-gap.md`
-- `reports/survey-publication/05-open-source-evidence-atlas.md`
 
 ### `output`
 
@@ -59,7 +59,7 @@
 ### `site/dist`
 
 - `site/dist/CNAME`
-- `site/dist/_astro/BaseLayout.Dt2Pu-2z.css`
+- `site/dist/_astro/BaseLayout.Dnh_NTE-.css`
 - `site/dist/_astro/RankTable.Cde92VTF.css`
 - `site/dist/_astro/client.BpEju3qh.js`
 - `site/dist/_astro/index.CmLyJJUK.css`

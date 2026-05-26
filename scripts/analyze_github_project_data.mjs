@@ -138,6 +138,132 @@ const topRows = (rows, limit = 20) =>
     .sort((a, b) => Number(b.stars || 0) - Number(a.stars || 0))
     .slice(0, limit);
 
+const parseDate = (value) => {
+  if (!value || value === 'unknown') return null;
+  const date = new Date(value);
+  return Number.isNaN(date.valueOf()) ? null : date;
+};
+
+const monthsAgo = (value, referenceDate) => {
+  const date = parseDate(value);
+  if (!date) return null;
+  return Math.max(0, (referenceDate.valueOf() - date.valueOf()) / (1000 * 60 * 60 * 24 * 30.4375));
+};
+
+const linearRecencyScore = (value, referenceDate, horizonMonths) => {
+  const age = monthsAgo(value, referenceDate);
+  if (age === null) return null;
+  return Math.max(0, Math.min(1, 1 - age / horizonMonths));
+};
+
+const clampScore = (value) => Math.max(0, Math.min(100, value));
+
+const scoreMechanism = (row) => {
+  const haystack = [
+    row.name,
+    row.repo,
+    row.description,
+    row.category,
+    row.pattern,
+    row.classified_theme,
+    ...(row.tags || [])
+  ].join(' ').toLowerCase();
+  let score = 10;
+  if (row.evolution_focused) score += 25;
+  if (row.classified_theme === 'evolution') score += 20;
+  if (/自进化|self[- ]?evol|self[- ]?improv|recursive|darwin|godel|gödel/.test(haystack)) score += 18;
+  if (/进化\/搜索|evol|search|optimization|optimisation|genetic|population|archive|mutation|crossover/.test(haystack)) score += 14;
+  if (/评估器|打分器|benchmark|eval|verifier|judge|reward/.test(haystack)) score += 10;
+  if (/memory|skill|记忆|技能|persistent|experience/.test(haystack)) score += 8;
+  if (/训练|数据循环|rl|reinforcement|fine[- ]?tune|weight/.test(haystack)) score += 8;
+  if (/文献综述|论文索引|awesome|resource index|cookbook/.test(haystack)) score -= 18;
+  return clampScore(score);
+};
+
+const scoreEvidence = (row) => {
+  let score = 0;
+  if (row.status === 'verified') score += 18;
+  if (row.public_report_exists) score += 24;
+  if (row.in_classification) score += 18;
+  if (row.in_raw_timestamp_index) score += 14;
+  if (row.github_source === 'github_api') score += 16;
+  else if (row.github_source === 'github_api_403') score += 6;
+  if (row.local_git) score += 6;
+  if (row.created_at) score += 4;
+  return clampScore(score);
+};
+
+const scoreUsefulness = (row) => {
+  const haystack = [
+    row.category,
+    row.pattern,
+    ...(row.tags || [])
+  ].join(' ').toLowerCase();
+  let score = 45;
+  if (/进化式代码|agent 进化|自进化|代码智能体|harness|benchmark|评测|memory|skill|框架|runtime|production/.test(haystack)) score += 25;
+  if (/评估器|打分器|benchmark|eval/.test(haystack)) score += 10;
+  if (/文献综述|论文索引|awesome|resource index/.test(haystack)) score -= 20;
+  if (row.status === 'verified') score += 8;
+  return clampScore(score);
+};
+
+const rankAnalyzedProjects = (rows, referenceDate) => {
+  const maxStars = Math.max(...rows.map((row) => Number(row.github_api_stars ?? row.site_stars ?? 0)), 1);
+  return rows
+    .map((row) => {
+      const createdRecency = linearRecencyScore(row.created_at, referenceDate, 24);
+      const activityDate = row.github_pushed_at || row.lastPushed || row.raw_content_timestamp || row.raw_collected_at;
+      const activityRecency = linearRecencyScore(activityDate, referenceDate, 12);
+      const timeScore = createdRecency === null
+        ? Math.min(45, (activityRecency ?? 0) * 50)
+        : (createdRecency * 70) + ((activityRecency ?? 0) * 30);
+      const mechanismScore = scoreMechanism(row);
+      const evidenceScore = scoreEvidence(row);
+      const stars = Number(row.github_api_stars ?? row.site_stars ?? 0);
+      const adoptionScore = maxStars > 1 ? (Math.log1p(stars) / Math.log1p(maxStars)) * 100 : 0;
+      const usefulnessScore = scoreUsefulness(row);
+      const currentValueScore =
+        timeScore * 0.50 +
+        mechanismScore * 0.20 +
+        evidenceScore * 0.15 +
+        adoptionScore * 0.10 +
+        usefulnessScore * 0.05;
+      return {
+        rank: 0,
+        repo: row.repo,
+        name: row.name,
+        url: row.url,
+        category: row.category,
+        pattern: row.pattern,
+        tags: row.tags,
+        status: row.status,
+        created_at: row.created_at,
+        created_at_source: row.created_at_source,
+        first_observed_at: row.first_observed_at,
+        activity_at: activityDate,
+        stars,
+        report: row.report,
+        scores: {
+          current_value: Number(currentValueScore.toFixed(2)),
+          time: Number(timeScore.toFixed(2)),
+          mechanism: Number(mechanismScore.toFixed(2)),
+          evidence: Number(evidenceScore.toFixed(2)),
+          adoption: Number(adoptionScore.toFixed(2)),
+          usefulness: Number(usefulnessScore.toFixed(2))
+        },
+        caveat: row.created_at ? '' : 'created_at unavailable; time score capped and based on activity/observation only'
+      };
+    })
+    .sort((a, b) =>
+      b.scores.current_value - a.scores.current_value ||
+      b.scores.time - a.scores.time ||
+      b.scores.mechanism - a.scores.mechanism ||
+      b.stars - a.stars ||
+      a.repo.localeCompare(b.repo)
+    )
+    .map((row, index) => ({ ...row, rank: index + 1 }));
+};
+
 const analysisRelativePath = (href) => {
   if (!href || /^https?:\/\//.test(href)) return href;
   return `../${href}`;
@@ -209,10 +335,35 @@ const writeMarkdown = (analysis) => {
   lines.push('');
   lines.push('## Analyzed Project Release Timeline');
   lines.push('');
+  lines.push('Only GitHub API `created_at` is treated as repository creation time. Local mirror first commit is reported as `first_observed_at` only, because many mirrors are shallow or regenerated and would otherwise create false 2026 projects.');
+  lines.push('');
   lines.push('| Created month | Repo | Category | Pattern | Source |');
   lines.push('|---|---|---|---|---|');
   for (const row of analysis.analyzed_timeline) {
     lines.push(`| ${monthOf(row.created_at)} | [${row.repo}](${row.url}) | ${row.category} | ${row.pattern} | ${row.created_at_source} |`);
+  }
+  lines.push('');
+  lines.push('## Recency-Weighted Current Value Ranking');
+  lines.push('');
+  lines.push('This ranking fixes the old star-dominance problem. It is a current-value ranking for public release decisions, not a historical-impact ranking. Time/newness carries 50% of the score: verified repository creation recency is 70% of the time score and recent activity is 30%. When GitHub `created_at` is unavailable, the time score is capped at 45/100 and uses only activity/observation freshness, so unknown projects cannot win by looking artificially new.');
+  lines.push('');
+  lines.push('Formula: `current_value = 0.50*time + 0.20*mechanism + 0.15*evidence + 0.10*adoption + 0.05*usefulness`.');
+  lines.push('');
+  lines.push('| Rank | Repo | Score | Time | Mechanism | Evidence | Adoption | Created | Activity | Caveat |');
+  lines.push('|---:|---|---:|---:|---:|---:|---:|---|---|---|');
+  for (const row of analysis.recency_weighted_project_ranking.slice(0, 40)) {
+    lines.push([
+      row.rank,
+      `[${row.repo}](${row.url})`,
+      row.scores.current_value,
+      row.scores.time,
+      row.scores.mechanism,
+      row.scores.evidence,
+      row.scores.adoption,
+      monthOf(row.created_at),
+      monthOf(row.activity_at),
+      row.caveat || '-'
+    ].map((cell) => String(cell ?? '-').replace(/\|/g, '/')).join(' | ').replace(/^/, '| ').replace(/$/, ' |'));
   }
   lines.push('');
   lines.push('## Git Evidence Join');
@@ -261,6 +412,7 @@ const writeMarkdown = (analysis) => {
   lines.push(`- The paper should describe a funnel, not a flat list: raw captures are the discovery layer, classified rows are the analysis layer, and the ${analysis.counts.analyzed_projects} model-card projects are the teaching/review layer.`);
   lines.push('- The strict evolution subset should drive the conceptual argument; the broader subset explains adjacent attention from memory, evaluation, coding agents, prompt optimization, and framework infrastructure.');
   lines.push('- The timeline must distinguish repository creation time from latest activity time. Raw `time_slice` is an activity/content timestamp; analyzed project `created_at` comes from GitHub API where available.');
+  lines.push('- The current-value ranking uses 50% time weight. A 2023 project can still be historically important, but it should not rank first for current release attention unless it also has exceptional recent evidence and mechanism value.');
   lines.push('- The Git evidence join connects each public project back to raw capture, classification row, public report, GitHub API/cache source, and local mirror status. Missing API data should be treated as an evidence-quality caveat, not as absence of repository activity.');
   lines.push('- Unknown timestamps remain a bias source and should be reported rather than hidden.');
   fs.writeFileSync(mdOut, `${lines.join('\n')}\n`);
@@ -323,7 +475,7 @@ const writeTex = (analysis) => {
   lines.push('\\end{tabular}');
   lines.push('\\end{table}');
   lines.push('');
-  lines.push(`The time analysis deliberately separates repository creation from activity timestamps. The raw corpus time-slice field is an activity/content timestamp extracted from GitHub captures, so it measures when the captured page exposed recent activity. The analyzed-project timeline uses GitHub API \\texttt{created\\_at} where available. When GitHub API creation time is unavailable, the table marks a weaker \\texttt{local\\_git\\_first\\_commit} fallback; this is a first-observed mirror timestamp, not a release-date claim. In the current run, ${analysis.counts.analyzed_with_created_at_or_fallback} of ${analysis.counts.analyzed_projects} analyzed projects have either verified creation time or a local fallback.`);
+  lines.push(`The time analysis deliberately separates repository creation from activity timestamps. The raw corpus time-slice field is an activity/content timestamp extracted from GitHub captures, so it measures when the captured page exposed recent activity. The analyzed-project timeline uses GitHub API \\texttt{created\\_at} where available. Local mirror first commit is reported only as a first-observed timestamp, not as repository creation time, because many local mirrors are shallow or regenerated. In the current run, ${analysis.counts.analyzed_with_verified_created_at} of ${analysis.counts.analyzed_projects} analyzed projects have verified GitHub creation time, while ${analysis.counts.analyzed_with_first_observed_fallback} have only first-observed local fallback evidence.`);
   lines.push(` Git metadata is also joined at the project level: ${analysis.counts.analyzed_with_github_api_metadata} analyzed projects have GitHub API/cache metadata, ${analysis.counts.analyzed_with_local_git_mirror} have local git mirror evidence, and ${analysis.counts.analyzed_with_public_report} have a public report path.`);
   lines.push('');
   lines.push('\\begin{table*}[t]');
@@ -337,6 +489,22 @@ const writeTex = (analysis) => {
   lines.push('\\midrule');
   for (const row of topTimeline) {
     lines.push(`${escapeTex(monthOf(row.created_at))} & ${escapeTex(row.created_at_source)} & \\texttt{${escapeTex(row.repo)}} & ${escapeTex(row.category)} & ${escapeTex(row.pattern)} \\\\`);
+  }
+  lines.push('\\bottomrule');
+  lines.push('\\end{tabular}');
+  lines.push('\\end{table*}');
+  lines.push('');
+  lines.push('\\begin{table*}[t]');
+  lines.push('\\centering');
+  lines.push('\\small');
+  lines.push('\\caption{Top 20 current-value project ranking with 50\\% time weight.}');
+  lines.push('\\label{tab:recency-weighted-project-ranking}');
+  lines.push('\\begin{tabular}{rllrrrr}');
+  lines.push('\\toprule');
+  lines.push('Rank & Repository & Created & Score & Time & Mechanism & Evidence \\\\');
+  lines.push('\\midrule');
+  for (const row of analysis.recency_weighted_project_ranking.slice(0, 20)) {
+    lines.push(`${row.rank} & \\texttt{${escapeTex(row.repo)}} & ${escapeTex(monthOf(row.created_at))} & ${row.scores.current_value} & ${row.scores.time} & ${row.scores.mechanism} & ${row.scores.evidence} \\\\`);
   }
   lines.push('\\bottomrule');
   lines.push('\\end{tabular}');
@@ -395,8 +563,12 @@ const main = async () => {
       report: reportPath,
       public_report: publicReportPath,
       public_report_exists: publicReportPath ? fs.existsSync(path.join(root, publicReportPath)) : false,
-      created_at: apiMeta.created_at ?? fallbackFirstCommit,
-      created_at_source: apiMeta.created_at ? apiMeta.source : fallbackFirstCommit ? 'local_git_first_commit' : apiMeta.source,
+      status: project.status,
+      description: project.description,
+      created_at: apiMeta.created_at ?? null,
+      created_at_source: apiMeta.created_at ? apiMeta.source : 'unknown',
+      first_observed_at: fallbackFirstCommit,
+      first_observed_source: fallbackFirstCommit ? 'local_git_first_commit' : null,
       github_source: apiMeta.source,
       github_api_stars: apiMeta.stars,
       github_api_forks: apiMeta.forks,
@@ -438,7 +610,8 @@ const main = async () => {
       analyzed_in_raw_timestamp_index: enrichedProjects.filter((row) => row.in_raw_timestamp_index).length,
       analyzed_in_classification: enrichedProjects.filter((row) => row.in_classification).length,
       analyzed_evolution_focused: enrichedProjects.filter((row) => row.evolution_focused).length,
-      analyzed_with_created_at_or_fallback: enrichedProjects.filter((row) => row.created_at).length,
+      analyzed_with_verified_created_at: enrichedProjects.filter((row) => row.created_at).length,
+      analyzed_with_first_observed_fallback: enrichedProjects.filter((row) => row.first_observed_at).length,
       analyzed_with_github_api_metadata: enrichedProjects.filter((row) => row.github_source === 'github_api').length,
       analyzed_with_local_git_mirror: enrichedProjects.filter((row) => row.local_git).length,
       analyzed_with_public_report: enrichedProjects.filter((row) => row.public_report_exists).length,
@@ -461,7 +634,27 @@ const main = async () => {
     analyzed_git_evidence: enrichedProjects
       .slice()
       .sort((a, b) => Number(b.github_api_stars ?? b.site_stars ?? 0) - Number(a.github_api_stars ?? a.site_stars ?? 0) || a.repo.localeCompare(b.repo)),
-    analyzed_timeline: analyzedTimeline
+    analyzed_timeline: analyzedTimeline,
+    ranking_method: {
+      name: 'recency_weighted_current_value',
+      reference_date: new Date().toISOString(),
+      weights: {
+        time: 0.50,
+        mechanism: 0.20,
+        evidence: 0.15,
+        adoption: 0.10,
+        usefulness: 0.05
+      },
+      time_score: {
+        creation_recency_weight: 0.70,
+        activity_recency_weight: 0.30,
+        creation_horizon_months: 24,
+        activity_horizon_months: 12,
+        missing_created_at_cap: 45
+      },
+      note: 'Historical influence and current release attention are intentionally separated; star-only ranking is not used.'
+    },
+    recency_weighted_project_ranking: rankAnalyzedProjects(enrichedProjects, new Date())
   };
 
   fs.writeFileSync(jsonOut, `${JSON.stringify(analysis, null, 2)}\n`);

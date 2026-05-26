@@ -43,7 +43,7 @@ Category & Count & Theme & Count \\
 \end{tabular}
 \end{table}
 
-The time analysis deliberately separates repository creation from activity timestamps. The raw corpus time-slice field is an activity/content timestamp extracted from GitHub captures, so it measures when the captured page exposed recent activity. The analyzed-project timeline uses GitHub API \texttt{created\_at} where available. When GitHub API creation time is unavailable, the table marks a weaker \texttt{local\_git\_first\_commit} fallback; this is a first-observed mirror timestamp, not a release-date claim. In the current run, 79 of 123 analyzed projects have either verified creation time or a local fallback.
+The time analysis deliberately separates repository creation from activity timestamps. The raw corpus time-slice field is an activity/content timestamp extracted from GitHub captures, so it measures when the captured page exposed recent activity. The analyzed-project timeline uses GitHub API \texttt{created\_at} where available. Local mirror first commit is reported only as a first-observed timestamp, not as repository creation time, because many local mirrors are shallow or regenerated. In the current run, 25 of 123 analyzed projects have verified GitHub creation time, while 54 have only first-observed local fallback evidence.
  Git metadata is also joined at the project level: 25 analyzed projects have GitHub API/cache metadata, 76 have local git mirror evidence, and 123 have a public report path.
 
 \begin{table*}[t]
@@ -61,24 +61,57 @@ Month & Source & Repository & Category & Evolution pattern \\
 2023-03 & github\_api & \texttt{camel-ai/camel} & 角色扮演 Agent 框架 & 智能体编排 → 反馈-精炼 \\
 2023-03 & github\_api & \texttt{noahshinn/reflexion} & 反思记忆 & 进化/搜索循环 → 反思记忆 → 反馈-精炼 → 评估器/打分器 → 训练/数据循环 \\
 2023-03 & github\_api & \texttt{madaan/self-refine} & 反馈精炼 & 反馈-精炼 \\
-2023-04 & local\_git\_first\_commit & \texttt{automl/auto-sklearn} & AutoML 框架 & 进化/搜索循环 → 评估器/打分器 \\
 2023-04 & github\_api & \texttt{microsoft/CoML} & ML 知识库驱动 & 反馈-精炼 → 评估器/打分器 \\
 2023-06 & github\_api & \texttt{FoundationAgents/MetaGPT} & 多 Agent 协作框架 & 智能体编排 → 反馈-精炼 \\
 2023-07 & github\_api & \texttt{aiwaves-cn/agents} & 数据驱动 Agent 进化 & 进化/搜索循环 → 评估器/打分器 → 智能体编排 \\
 2023-08 & github\_api & \texttt{langchain-ai/langgraph} & 图式 Agent 编排 & 智能体编排 \\
 2023-08 & github\_api & \texttt{microsoft/autogen} & 多 Agent 对话框架 & 智能体编排 \\
-2023-09 & local\_git\_first\_commit & \texttt{smol-ai/developer} & AI 开发助手 & 最小 Agent → 代码生成 → 迭代 \\
 2023-10 & github\_api & \texttt{google-deepmind/opro} & LLM 作为优化器 & 进化/搜索循环 → 评估器/打分器 \\
 2023-10 & github\_api & \texttt{crewAIInc/crewAI} & 多 Agent 协作框架 & 智能体编排 \\
 2023-11 & github\_api & \texttt{google-deepmind/funsearch} & 进化式数学发现 & 进化/搜索循环 → 评估器/打分器 \\
 2024-03 & github\_api & \texttt{All-Hands-AI/OpenHands} & AI 软件开发平台 & 智能体编排 \\
 2024-04 & github\_api & \texttt{princeton-nlp/SWE-agent} & 软件工程 Agent & 反馈-精炼 → 评估器/打分器 \\
 2024-07 & github\_api & \texttt{shengranhu/adas} & Agent 架构自动搜索 & 进化/搜索循环 → 智能体编排 → 评估器/打分器 \\
-2024-08 & local\_git\_first\_commit & \texttt{alfa-group/tutorial\_gp\_llm} & GP+LLM 教学 & 进化/搜索循环 → 评估器/打分器 \\
-2024-09 & local\_git\_first\_commit & \texttt{OpenBMB/AgentVerse} & 多 Agent 仿真平台 & 智能体编排 → 反思记忆 \\
-2024-10 & local\_git\_first\_commit & \texttt{siyuyuan/evoagent} & 进化式多 Agent 系统 & 进化/搜索循环 → 智能体编排 \\
-2024-11 & local\_git\_first\_commit & \texttt{xiaofangxd/LLM\_EA} & LLM+EA 交叉综述 & 文献综述 \\
-2024-11 & local\_git\_first\_commit & \texttt{xlang-ai/OpenAgents} & Agent 工具使用 & 工具调用 → 函数选择 → 代码执行 \\
+2025-05 & github\_api & \texttt{DeepAuto-AI/automl-agent} & 多 Agent AutoML & 智能体编排 → 进化/搜索循环 → 评估器/打分器 \\
+2025-05 & github\_api & \texttt{algorithmicsuperintelligence/openevolve} & 进化式代码优化 & 进化/搜索循环 → 评估器/打分器 \\
+2025-07 & github\_api & \texttt{JARVIS-Xs/SE-Agent} & 代码智能体自进化 & 进化/搜索循环 → 评估器/打分器 → 智能体编排 \\
+2025-10 & github\_api & \texttt{inter-co/science-codeevolve} & 科学代码进化 & 进化/搜索循环 → 评估器/打分器 \\
+2025-11 & github\_api & \texttt{modelscope/AgentEvolver} & Agent 进化框架 & 进化/搜索循环 → 评估器/打分器 → 智能体编排 → 训练/数据循环 \\
+2025-12 & github\_api & \texttt{JarvisPei/SCOPE} & 上下文/Prompt 进化 & 进化/搜索循环 \\
+2026-03 & github\_api & \texttt{OPPO-Mente-Lab/LLM-Self-Judge} & 自评判训练 & 进化/搜索循环 → 评估器/打分器 → 智能体编排 → 训练/数据循环 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Top 20 current-value project ranking with 50\% time weight.}
+\label{tab:recency-weighted-project-ranking}
+\begin{tabular}{rllrrrr}
+\toprule
+Rank & Repository & Created & Score & Time & Mechanism & Evidence \\
+\midrule
+1 & \texttt{modelscope/AgentEvolver} & 2025-11 & 83.82 & 76.84 & 100 & 100 \\
+2 & \texttt{ZJU-LLM-Safety/DARWIN} & 2026-04 & 77.39 & 94.72 & 75 & 62 \\
+3 & \texttt{OPPO-Mente-Lab/LLM-Self-Judge} & 2026-03 & 76.35 & 87.56 & 85 & 62 \\
+4 & \texttt{algorithmicsuperintelligence/openevolve} & 2025-05 & 71.56 & 58.28 & 79 & 100 \\
+5 & \texttt{JarvisPei/SCOPE} & 2025-12 & 68.77 & 79.66 & 67 & 62 \\
+6 & \texttt{inter-co/science-codeevolve} & 2025-10 & 66.24 & 74.59 & 59 & 68 \\
+7 & \texttt{JARVIS-Xs/SE-Agent} & 2025-07 & 64.05 & 49.24 & 77 & 100 \\
+8 & \texttt{stanford-iris-lab/meta-harness} & unknown & 57.96 & 45 & 87 & 56 \\
+9 & \texttt{EvoAgentX/EvoAgentX} & unknown & 57.43 & 30.06 & 97 & 86 \\
+10 & \texttt{gofenix/nex-agent} & unknown & 56.84 & 45 & 95 & 56 \\
+11 & \texttt{MaximeRobeyns/self\_improving\_coding\_agent} & unknown & 55.32 & 45 & 87 & 56 \\
+12 & \texttt{YunjueTech/Yunjue-Agent} & unknown & 54.63 & 35.67 & 97 & 56 \\
+13 & \texttt{RangeKing/self-evolving-agent} & unknown & 53.8 & 45 & 85 & 56 \\
+14 & \texttt{stanfordnlp/dspy} & 2023-01 & 53.46 & 29.77 & 59 & 100 \\
+15 & \texttt{EverMind-AI/EverOS} & unknown & 51.73 & 30.06 & 71 & 86 \\
+16 & \texttt{wazionapps/nexo} & unknown & 51.69 & 45 & 71 & 56 \\
+17 & \texttt{Orchestra-Research/AI-research-SKILLs} & unknown & 50.8 & 45 & 42 & 56 \\
+18 & \texttt{SuperagenticAI/metaharness} & unknown & 50.52 & 45 & 59 & 56 \\
+19 & \texttt{google-gemini/gemini-cli} & unknown & 49.34 & 45 & 18 & 68 \\
+20 & \texttt{XMUDeepLIT/Awesome-Self-Evolving-Agents} & unknown & 49.29 & 31.98 & 69 & 68 \\
 \bottomrule
 \end{tabular}
 \end{table*}

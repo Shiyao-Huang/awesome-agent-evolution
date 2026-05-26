@@ -1,8 +1,8 @@
 {
-  "generated": "2026-05-26T13:02:41.755Z",
+  "generated": "2026-05-26T15:50:36.174Z",
   "stats": {
-    "pages": 48,
-    "keywords": 740
+    "pages": 50,
+    "keywords": 760
   },
   "catalog": [
     {
@@ -268,6 +268,13 @@
       ]
     },
     {
+      "path": "sources/capital-talent-supply-2026.md",
+      "title": "\"Capital, Talent Supply & Stakeholder Perspectives 2026\"",
+      "rank": "A",
+      "type": "source",
+      "tags": []
+    },
+    {
       "path": "sources/china-self-evolution-teams.md",
       "title": "\"China Self-Evolution Agent Teams and Trends\"",
       "rank": "A",
@@ -498,10 +505,23 @@
     },
     {
       "path": "sources/talent-flow-analysis.md",
-      "title": "\"AI Self-Evolution Talent Flow Analysis\"",
+      "title": "\"AI Self-Evolution Talent Flow Analysis (v2)\"",
       "rank": "A",
       "type": "source",
       "tags": []
+    },
+    {
+      "path": "synthesis/current-value-ranking-reanalysis.md",
+      "title": "Current-Value Ranking Reanalysis",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "github-projects",
+        "ranking",
+        "recency",
+        "current-value",
+        "release-attention"
+      ]
     },
     {
       "path": "synthesis/mechanism-framework.md",
@@ -634,6 +654,7 @@
       "entities/sakana-ai.md",
       "entities/shengran-hu.md",
       "sources/anthropic-talent-movement.md",
+      "sources/capital-talent-supply-2026.md",
       "sources/china-self-evolution-teams.md",
       "sources/combined-talent-landscape.md",
       "sources/material-ranking-framework.md",
@@ -1442,6 +1463,7 @@
     ],
     "key findings": [
       "sources/anthropic-talent-movement.md",
+      "sources/capital-talent-supply-2026.md",
       "sources/china-self-evolution-teams.md",
       "sources/combined-talent-landscape.md",
       "sources/material-ranking-framework.md",
@@ -1458,6 +1480,7 @@
     "trust chain": [
       "sources/anthropic-talent-movement.md",
       "sources/blogs-digest.md",
+      "sources/capital-talent-supply-2026.md",
       "sources/china-self-evolution-teams.md",
       "sources/combined-talent-landscape.md",
       "sources/essential-taxonomy-framework.md",
@@ -1470,11 +1493,13 @@
       "sources/review-mechanism-insights.md",
       "sources/social-digest.md",
       "sources/talent-capital-structure.md",
-      "sources/talent-flow-analysis.md"
+      "sources/talent-flow-analysis.md",
+      "synthesis/current-value-ranking-reanalysis.md"
     ],
     "type": [
       "sources/anthropic-talent-movement.md",
       "sources/blogs-digest.md",
+      "sources/capital-talent-supply-2026.md",
       "sources/china-self-evolution-teams.md",
       "sources/combined-talent-landscape.md",
       "sources/github-digest.md",
@@ -1489,6 +1514,7 @@
     "rank": [
       "sources/anthropic-talent-movement.md",
       "sources/blogs-digest.md",
+      "sources/capital-talent-supply-2026.md",
       "sources/china-self-evolution-teams.md",
       "sources/combined-talent-landscape.md",
       "sources/github-digest.md",
@@ -1505,6 +1531,7 @@
     "date": [
       "sources/anthropic-talent-movement.md",
       "sources/blogs-digest.md",
+      "sources/capital-talent-supply-2026.md",
       "sources/china-self-evolution-teams.md",
       "sources/combined-talent-landscape.md",
       "sources/github-digest.md",
@@ -1519,6 +1546,7 @@
     "origin": [
       "sources/anthropic-talent-movement.md",
       "sources/blogs-digest.md",
+      "sources/capital-talent-supply-2026.md",
       "sources/china-self-evolution-teams.md",
       "sources/combined-talent-landscape.md",
       "sources/github-digest.md",
@@ -1533,6 +1561,7 @@
     ],
     "full analysis": [
       "sources/anthropic-talent-movement.md",
+      "sources/capital-talent-supply-2026.md",
       "sources/china-self-evolution-teams.md",
       "sources/combined-talent-landscape.md",
       "sources/material-ranking-framework.md",
@@ -1682,6 +1711,30 @@
     ],
     "failure analyses": [
       "sources/blogs-digest.md"
+    ],
+    "\"capital, talent supply & stakeholder perspectives 2026\"": [
+      "sources/capital-talent-supply-2026.md"
+    ],
+    "source: capital, talent supply & stakeholder perspectives 2026": [
+      "sources/capital-talent-supply-2026.md"
+    ],
+    "capital flow network": [
+      "sources/capital-talent-supply-2026.md"
+    ],
+    "talent pipeline crisis": [
+      "sources/capital-talent-supply-2026.md"
+    ],
+    "capital misalignment": [
+      "sources/capital-talent-supply-2026.md"
+    ],
+    "academic→industry drain": [
+      "sources/capital-talent-supply-2026.md"
+    ],
+    "china catching up": [
+      "sources/capital-talent-supply-2026.md"
+    ],
+    "recursive thesis": [
+      "sources/capital-talent-supply-2026.md"
     ],
     "\"china self-evolution agent teams and trends\"": [
       "sources/china-self-evolution-teams.md"
@@ -2198,7 +2251,8 @@
     "one sentence": [
       "sources/papers-mechanism-analysis.md",
       "sources/raw-papers-mechanism-analysis.md",
-      "sources/raw-social-blogs-mechanism-analysis.md"
+      "sources/raw-social-blogs-mechanism-analysis.md",
+      "synthesis/current-value-ranking-reanalysis.md"
     ],
     "1. paper landscape overview": [
       "sources/papers-mechanism-analysis.md"
@@ -2910,23 +2964,59 @@
     "中国供给对比": [
       "sources/talent-capital-structure.md"
     ],
-    "\"ai self-evolution talent flow analysis\"": [
+    "\"ai self-evolution talent flow analysis (v2)\"": [
       "sources/talent-flow-analysis.md"
     ],
-    "source: ai self-evolution talent flow analysis": [
+    "source: ai self-evolution talent flow analysis (v2)": [
       "sources/talent-flow-analysis.md"
     ],
-    "talent flow network": [
+    "talent flow network (v2)": [
       "sources/talent-flow-analysis.md"
     ],
-    "meta 虹吸效应": [
+    "🆕 recursive superintelligence": [
       "sources/talent-flow-analysis.md"
     ],
-    "anthropic 净流入": [
+    "自进化领域最大单一人才+资本事件": [
+      "sources/talent-flow-analysis.md"
+    ],
+    "meta 虹吸→回流": [
+      "sources/talent-flow-analysis.md"
+    ],
+    "anthropic 净流入加强": [
       "sources/talent-flow-analysis.md"
     ],
     "中国高校集群": [
       "sources/talent-flow-analysis.md"
+    ],
+    "新 surveys": [
+      "sources/talent-flow-analysis.md"
+    ],
+    "current-value ranking reanalysis": [
+      "synthesis/current-value-ranking-reanalysis.md"
+    ],
+    "github-projects": [
+      "synthesis/current-value-ranking-reanalysis.md"
+    ],
+    "ranking": [
+      "synthesis/current-value-ranking-reanalysis.md"
+    ],
+    "recency": [
+      "synthesis/current-value-ranking-reanalysis.md"
+    ],
+    "current-value": [
+      "synthesis/current-value-ranking-reanalysis.md"
+    ],
+    "release-attention": [
+      "synthesis/current-value-ranking-reanalysis.md"
+    ],
+    "three sentences": [
+      "synthesis/current-value-ranking-reanalysis.md"
+    ],
+    "corrected top signal": [
+      "synthesis/current-value-ranking-reanalysis.md"
+    ],
+    "operational rule": [
+      "synthesis/current-value-ranking-reanalysis.md"
     ],
     "m1-m5": [
       "synthesis/mechanism-framework.md"

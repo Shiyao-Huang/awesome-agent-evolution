@@ -1,23 +1,28 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { projects } from '@/data/projects';
+import analysis from '@/data/analysis.json';
 
-const ranked = [...projects]
-  .sort((a, b) => Number(b.stars || 0) - Number(a.stars || 0))
-  .slice(0, 30);
+const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const method = analysis.ranking_method;
+const ranked = [...(analysis.recency_weighted_project_ranking ?? [])].slice(0, 30);
 
 const topCategories = [...new Set(ranked.map(p => p.category))];
 ---
 
 <BaseLayout
-  title="项目排名 — Self Evolve"
-  description="AI 自我进化项目的综合排名：按 Stars、活跃度、进化机制等维度排序。"
+  title="当前价值排名 — Self Evolve"
+  description="AI 自我进化项目当前价值排名：时间新近性占 50%，并结合自进化机制、证据链、社区动量和实用适配度。"
 >
   <section class="section">
     <div class="container">
       <div class="eyebrow">Rankings</div>
-      <h1 class="gradient-text">项目排名</h1>
-      <p class="lead">Top 30 自进化项目排行 · Stars + 活跃度综合排名</p>
+      <h1 class="gradient-text">当前价值排名</h1>
+      <p class="lead">Top 30 自进化项目排行 · 时间权重 50% · 避免旧项目被历史 Stars 垄断。</p>
+      <div class="metrics">
+        <div class="metric"><strong>{ranked.length}</strong><span>展示项目</span></div>
+        <div class="metric"><strong>50%</strong><span>时间权重</span></div>
+        <div class="metric"><strong>{analysis.counts.analyzed_projects}</strong><span>分析项目</span></div>
+      </div>
     </div>
   </section>
 
@@ -29,9 +34,9 @@ const topCategories = [...new Set(ranked.map(p => p.category))];
           <div class={`rank-podium-item rank-pos-${i + 1}`}>
             <div class="rank-medal">{i + 1}</div>
             <div class="rank-podium-name">
-              <a href={p.url} target="_blank" rel="noopener">{p.name}</a>
+              <a href={`/projects/${slugify(p.repo)}/`}>{p.name}</a>
             </div>
-            <div class="rank-podium-stars">{Number(p.stars).toLocaleString()} Stars</div>
+            <div class="rank-podium-stars">{p.scores.current_value.toFixed(2)} 分</div>
             <div class="rank-podium-cat">{p.category}</div>
           </div>
         ))}
@@ -48,10 +53,13 @@ const topCategories = [...new Set(ranked.map(p => p.category))];
             <tr>
               <th>Rank</th>
               <th>Project</th>
-              <th>Stars</th>
+              <th>Score</th>
+              <th>Time</th>
+              <th>Mechanism</th>
+              <th>Evidence</th>
               <th>Category</th>
-              <th>Pattern</th>
-              <th>Updated</th>
+              <th>Created</th>
+              <th>Activity</th>
             </tr>
           </thead>
           <tbody>
@@ -59,17 +67,17 @@ const topCategories = [...new Set(ranked.map(p => p.category))];
               <tr>
                 <td class="rank-num">{i + 1}</td>
                 <td class="rank-name">
-                  <a href={p.url} target="_blank" rel="noopener">{p.name}</a>
+                  <a href={`/projects/${slugify(p.repo)}/`}>{p.name}</a>
                   <span class="rank-repo">{p.repo}</span>
+                  {p.caveat && <span class="rank-caveat">{p.caveat}</span>}
                 </td>
-                <td class="rank-stars">{Number(p.stars).toLocaleString()}</td>
+                <td class="rank-stars">{p.scores.current_value.toFixed(2)}</td>
+                <td>{p.scores.time.toFixed(1)}</td>
+                <td>{p.scores.mechanism.toFixed(1)}</td>
+                <td>{p.scores.evidence.toFixed(1)}</td>
                 <td>{p.category}</td>
-                <td class="rank-pattern">
-                  {(p.tags || []).slice(0, 2).map(t => (
-                    <span class="rank-tag">{t}</span>
-                  ))}
-                </td>
-                <td class="rank-date">{p.lastPushed ? p.lastPushed.slice(0, 10) : '\u2014'}</td>
+                <td class="rank-date">{p.created_at ? p.created_at.slice(0, 10) : 'unknown'}</td>
+                <td class="rank-date">{p.activity_at ? p.activity_at.slice(0, 10) : '\u2014'}</td>
               </tr>
             ))}
           </tbody>
@@ -83,8 +91,21 @@ const topCategories = [...new Set(ranked.map(p => p.category))];
     <div class="container">
       <div class="card">
         <div class="card-head">
-          <div class="eyebrow">By Category</div>
-          <h3>Top 30 类别分布</h3>
+          <div class="eyebrow">Method</div>
+          <h3>排序方法</h3>
+        </div>
+        <p>当前价值排名不是历史影响力排名。时间新近性占 50%，自进化机制强度占 20%，证据链完整度占 15%，社区动量占 10%，实用适配度占 5%。GitHub API 无法确认创建时间的项目会被标记 caveat，时间分最高封顶 45/100，避免本地 mirror 或采集时间制造“假新项目”。</p>
+        <div class="score-table-wrap" style="margin:16px 0;">
+          <table class="rank-table">
+            <thead><tr><th>Dimension</th><th>Weight</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td>Time</td><td>{Math.round(method.weights.time * 100)}%</td><td>创建时间新近性 + 最近活动；创建时间缺失时封顶。</td></tr>
+              <tr><td>Mechanism</td><td>{Math.round(method.weights.mechanism * 100)}%</td><td>是否真的包含进化、评估器、记忆/技能、训练/数据循环。</td></tr>
+              <tr><td>Evidence</td><td>{Math.round(method.weights.evidence * 100)}%</td><td>是否有 raw、classification、公开报告、GitHub API 或本地镜像证据。</td></tr>
+              <tr><td>Adoption</td><td>{Math.round(method.weights.adoption * 100)}%</td><td>log-scaled stars，只作为动量信号，不再主导排名。</td></tr>
+              <tr><td>Usefulness</td><td>{Math.round(method.weights.usefulness * 100)}%</td><td>是否适合工程使用、评测、harness、memory/skill 或自进化实践。</td></tr>
+            </tbody>
+          </table>
         </div>
         <div class="rank-cats">
           {topCategories.map(cat => {
@@ -124,6 +145,7 @@ const topCategories = [...new Set(ranked.map(p => p.category))];
 .rank-num{font-weight:800;color:var(--meta);width:36px}
 .rank-name a{font-weight:700;color:var(--fg);text-decoration:none}.rank-name a:hover{color:var(--accent)}
 .rank-repo{display:block;font-size:11px;color:var(--meta);margin-top:2px}
+.rank-caveat{display:block;font-size:11px;color:var(--muted);margin-top:4px;max-width:360px}
 .rank-stars{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
 .rank-pattern{max-width:180px}
 .rank-tag{display:inline-block;padding:2px 6px;margin:1px 2px;border:1px solid var(--line);border-radius:4px;font-size:11px;font-weight:650;color:var(--muted);white-space:nowrap}
