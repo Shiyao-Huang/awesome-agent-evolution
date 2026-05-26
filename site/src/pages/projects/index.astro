@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { projects, projectGroups } from '@/data/projects';
 import { featuredResearch } from '@/data/research';
+import { site } from '@/data/site';
 
 const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const projectHref = (repo: string) => `/projects/${slugify(repo)}/`;
@@ -64,7 +65,7 @@ const itemListLd = {
     '@type': 'ListItem',
     position: i + 1,
     name: p.name,
-    url: `https://shiyao-huang.github.io/awesome-agent-evolution/projects/${slugify(p.repo)}/`
+    url: `${site.url}/projects/${slugify(p.repo)}/`
   }))
 };
 ---

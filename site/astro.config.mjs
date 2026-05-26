@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 
 export default defineConfig({
-  site: 'https://x.mitbunny.ai',
+  site: 'https://agent-evolution.com',
   output: 'static',
   integrations: [mdx(), sitemap(), react()],
   markdown: {

@@ -2,7 +2,7 @@ import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve('dist');
-const base = (process.env.SITE_BASE_PATH || '/awesome-agent-evolution').replace(/\/$/, '');
+const base = (process.env.SITE_BASE_PATH || '/').replace(/\/$/, '');
 
 if (!base || base === '/') process.exit(0);
 

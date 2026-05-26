@@ -1,6 +1,6 @@
 export const site = {
   name: 'Self Evolve',
-  url: 'https://shiyao-huang.github.io/awesome-agent-evolution',
+  url: 'https://agent-evolution.com',
   title: 'Self Evolve AI — AI 自我进化研究、项目与实践指南',
   description:
     'Self Evolve 是面向 AI 自我进化、自进化智能体、代码自我改进、迭代式优化与自主 AI 系统的中文研究与项目索引。',

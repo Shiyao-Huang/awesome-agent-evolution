@@ -1,6 +1,6 @@
 # Self Evolve 站点
 
-这是部署到 `https://x.mitbunny.ai` 的静态 Astro + MDX 中文站点，用作 Self Evolve 品牌入口、GitHub 项目索引和 SEO 博客。
+这是部署到 `https://agent-evolution.com` 的静态 Astro + MDX 中文站点，用作 Self Evolve 品牌入口、GitHub 项目索引和 SEO 博客。
 
 ## 命令
 
@@ -27,4 +27,4 @@ npm run preview
 
 ## 当前生产站点快照
 
-`http://x.mitbunny.ai` 会跳转到 Vercel HTTPS，目前线上页面是标题为 `AI Influencers on X` 的 Vite/React 单页应用，使用 Tailwind CDN，尚未包含 Self Evolve 品牌 Landing Page、项目索引或博客系统。本目录提供替换方案：静态页面、Sitemap、Robots、RSS、Open Graph 与 JSON-LD。
+`https://agent-evolution.com` 是当前 Self Evolve / Agent Evolution 站点主域名。本目录提供静态页面、Sitemap、Robots、RSS、Open Graph 与 JSON-LD。
