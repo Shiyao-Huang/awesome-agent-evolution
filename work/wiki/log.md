@@ -55,3 +55,20 @@
 **Sources:** survey/ch1-ch8, paper-reviews (6 reviews), work/research/mechanism-analysis-framework.md (L1产出)
 **信任链:** 每条声明标注 Source: survey/chX 或 paper-reviews/review-XXX
 **Rank:** ⬤⬤⬤⬤⬤
+
+## [2026-05-26 12:15] build | Survey LaTeX 编译修复 + Wiki概念填充
+
+**操作:** Implementer (XeLaTeX编译+图表) 完成survey编译修复和wiki扩展
+**详情:**
+- survey/latex/main.tex: `\bibliography{references}` → `\bibliography{references,references-aliases}`
+- 创建 references-aliases.bib: 50+ 别名条目解决跨章节引用键不一致
+- 修复 selfrewarding2024 author字段: `Meta, and others` → `{Meta} and others`
+- 修复 ch5-supplement.tex 3个重复label: 加 `-supplement` 后缀
+- 最终编译: 177页 PDF, 1.2MB, 0 BibTeX warnings, 0 multiply-defined labels
+- Wiki新增3个概念页: reward-based-evolution, self-play-evolution, architecture-search
+**产出:**
+- `survey/latex/main.pdf` (177 pages)
+- `survey/latex/references-aliases.bib`
+- `work/wiki/concepts/reward-based-evolution.md`
+- `work/wiki/concepts/self-play-evolution.md`
+- `work/wiki/concepts/architecture-search.md`
