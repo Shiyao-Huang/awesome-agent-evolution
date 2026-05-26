@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T09:12:00+08:00",
+  "generated_at": "2026-05-26T10:04:13+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -2882,6 +2882,21 @@
       "description": "Search, understand, reproduce, and improve an idea with ease"
     },
     {
+      "repo": "inngest/utah",
+      "url": "https://github.com/inngest/utah",
+      "stars": "116",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "workflow-automation",
+      "stack": "TypeScript/Inngest/pi-ai/skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 116 stars, 2 forks, 41 commits, Apache-2.0 license, and README language for durable event-driven execution with retry/cancel behavior, channel adapters, skills, file-based memory, and workspace eval traces.",
+      "description": "Utah is a universally triggered agent harness built on Inngest events with durable retries and local worker execution for think-act-observe loops."
+    },
+    {
       "repo": "internlm/polar",
       "url": "https://github.com/internlm/polar",
       "stars": "163",
@@ -5747,6 +5762,21 @@
       "description": "Awesome Agent Skills collection list, papers, tools, projects, and resources"
     },
     {
+      "repo": "sd0xdev/sd0x-dev-flow",
+      "url": "https://github.com/sd0xdev/sd0x-dev-flow",
+      "stars": "157",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "JavaScript/TypeScript/Claude Code hooks",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 157 stars, 21 forks, 456 commits, MIT license, and README claims for hook-enforced dual review, state-machine gate checks, fail-closed policies, and a large bundled public skill set for coding-agent operations.",
+      "description": "sd0x-dev-flow is a harness layer for Claude Code with dual-review gates, state-machine controls and fail-closed safety for coding-agent workflows."
+    },
+    {
       "repo": "sebastianbrzustowicz/robot-sumo-rl",
       "url": "https://github.com/sebastianbrzustowicz/robot-sumo-rl",
       "stars": "18",
@@ -6345,6 +6375,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "[ICML-2026] Official implementation of \"SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience\""
+    },
+    {
+      "repo": "SuperagenticAI/metaharness",
+      "url": "https://github.com/SuperagenticAI/metaharness",
+      "stars": "102",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evaluation",
+      "stack": "Python/Codex CLI/Ollama benchmark harness",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 102 stars, 11 forks, 23 commits, and README language for Codex-first benchmark loops, proposal/evaluate/keep harness iterations, candidate ledgers, write-scope controls, and experiment matrix support.",
+      "description": "Meta Harness is a benchmark-driven outer loop for coding-agent harness optimization, with reproducible candidate ledgers and run evidence."
     },
     {
       "repo": "suyoumo/ClawProBench",

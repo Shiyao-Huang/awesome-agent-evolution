@@ -27,7 +27,7 @@
 | English i18n 入口 | [README-EN.md](README-EN.md) | 根 README 的完整英文镜像，包含同等结构、完整列表和维护闭环 |
 | 用户输入记忆 | local-only, ignored | 本地保留，不发布、不提交；公开仓库只保留抽象操作原则 |
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |
-| GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 524 个 raw GitHub captures、分类、进化相关、时间序列 |
+| GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 527 个 raw GitHub captures、分类、进化相关、时间序列 |
 | GitHub 数据 JSON | [analysis/github-project-data-analysis.json](analysis/github-project-data-analysis.json) | 脚本生成，可复跑 |
 | 项目深度分析 | [projects/](projects/) | model-card/教学型项目分析 |
 | 项目清单 | [projects/INDEX.md](projects/INDEX.md) | 427 个深度项目入口 |
@@ -36,7 +36,7 @@
 | 英文 GitHub corpus 快照 | [paper-drafts/github-project-data-analysis-en.tex](paper-drafts/github-project-data-analysis-en.tex) | 从 `analysis/github-project-data-analysis.*` 派生的英文 LaTeX 论文快照 |
 | 论文 PDF | [paper-drafts/main.pdf](paper-drafts/main.pdf) | 当前生成版 |
 | 网站源码 | [site/](site/) | Astro 博客/SEO 网站 |
-| 公开项目报告 | [site/public/reports/projects/](site/public/reports/projects/) | 266 个公开项目报告供静态站点下载/引用 |
+| 公开项目报告 | [site/public/reports/projects/](site/public/reports/projects/) | 269 个公开项目报告供静态站点下载/引用 |
 
 ## 历史索引
 

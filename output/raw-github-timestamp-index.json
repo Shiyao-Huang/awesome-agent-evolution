@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-26T00:00:00+08:00",
-  "total": 524,
-  "updated_files": 524,
+  "total": 527,
+  "updated_files": 527,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -1733,6 +1733,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "inngest/utah",
+      "url": "https://github.com/inngest/utah",
+      "file": "raw-github/inngest_utah.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T10:04:13+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
+    },
+    {
       "repo": "internlm/polar",
       "url": "https://github.com/internlm/polar",
       "file": "raw-github/internlm_polar.md",
@@ -3452,6 +3461,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "sd0xdev/sd0x-dev-flow",
+      "url": "https://github.com/sd0xdev/sd0x-dev-flow",
+      "file": "raw-github/sd0xdev_sd0x-dev-flow.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T10:04:13+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
+    },
+    {
       "repo": "sebastianbrzustowicz/robot-sumo-rl",
       "url": "https://github.com/sebastianbrzustowicz/robot-sumo-rl",
       "file": "raw-github/sebastianbrzustowicz_robot-sumo-rl.md",
@@ -3810,6 +3828,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "SuperagenticAI/metaharness",
+      "url": "https://github.com/SuperagenticAI/metaharness",
+      "file": "raw-github/superagenticai_metaharness.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T10:04:13+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
       "repo": "suyoumo/ClawProBench",

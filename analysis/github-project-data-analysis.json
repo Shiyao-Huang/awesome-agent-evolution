@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-05-26T01:42:45.349Z",
+  "generated_at": "2026-05-26T02:51:23.576Z",
   "counts": {
-    "raw_captures": 524,
-    "raw_files_on_disk": 524,
-    "classified_repos": 524,
-    "analyzed_projects": 114,
-    "analyzed_in_raw_timestamp_index": 61,
-    "analyzed_in_classification": 61,
-    "analyzed_evolution_focused": 55,
+    "raw_captures": 527,
+    "raw_files_on_disk": 527,
+    "classified_repos": 527,
+    "analyzed_projects": 117,
+    "analyzed_in_raw_timestamp_index": 64,
+    "analyzed_in_classification": 64,
+    "analyzed_evolution_focused": 56,
     "analyzed_with_created_at_or_fallback": 80,
     "analyzed_with_github_api_metadata": 25,
     "analyzed_with_local_git_mirror": 77,
-    "analyzed_with_public_report": 84,
+    "analyzed_with_public_report": 87,
     "raw_core_evolution": 82,
-    "raw_broad_evolution": 185,
+    "raw_broad_evolution": 186,
     "raw_unknown_time_slice": 109
   },
   "raw_category_counts": [
     {
       "key": "框架/framework",
-      "count": 147
+      "count": 149
     },
     {
       "key": "评测/evaluation",
@@ -31,7 +31,7 @@
     },
     {
       "key": "工具/tool",
-      "count": 93
+      "count": 94
     },
     {
       "key": "应用/application",
@@ -53,7 +53,7 @@
     },
     {
       "key": "evaluation",
-      "count": 94
+      "count": 95
     },
     {
       "key": "evolution",
@@ -61,7 +61,7 @@
     },
     {
       "key": "skill",
-      "count": 68
+      "count": 69
     },
     {
       "key": "framework",
@@ -85,7 +85,7 @@
     },
     {
       "key": "workflow-automation",
-      "count": 7
+      "count": 8
     },
     {
       "key": "safety",
@@ -210,6 +210,10 @@
       "count": 1
     },
     {
+      "key": "JavaScript/TypeScript/Claude Code hooks",
+      "count": 1
+    },
+    {
       "key": "Jupyter Notebook",
       "count": 1
     },
@@ -259,6 +263,10 @@
     },
     {
       "key": "Python/C++/HTML",
+      "count": 1
+    },
+    {
+      "key": "Python/Codex CLI/Ollama benchmark harness",
       "count": 1
     },
     {
@@ -386,6 +394,10 @@
       "count": 1
     },
     {
+      "key": "TypeScript/Inngest/pi-ai/skills",
+      "count": 1
+    },
+    {
       "key": "TypeScript/JavaScript/Web APIs/Agent Skills",
       "count": 1
     },
@@ -421,7 +433,7 @@
   "raw_time_slice_counts": [
     {
       "key": "2026-05",
-      "count": 363
+      "count": 366
     },
     {
       "key": "unknown",
@@ -503,7 +515,7 @@
     },
     {
       "key": "evaluation",
-      "count": 11
+      "count": 12
     },
     {
       "key": "evolution",
@@ -519,7 +531,7 @@
     },
     {
       "key": "skill",
-      "count": 8
+      "count": 9
     },
     {
       "key": "education-list",
@@ -530,18 +542,18 @@
       "count": 3
     },
     {
-      "key": "research-agent",
-      "count": 2
+      "key": "workflow-automation",
+      "count": 3
     },
     {
-      "key": "workflow-automation",
+      "key": "research-agent",
       "count": 2
     }
   ],
   "analyzed_created_month_counts": [
     {
       "key": "unknown",
-      "count": 34
+      "count": 37
     },
     {
       "key": "2026-05",
@@ -4683,6 +4695,21 @@
       "description": "Search, understand, reproduce, and improve an idea with ease"
     },
     {
+      "repo": "inngest/utah",
+      "url": "https://github.com/inngest/utah",
+      "stars": "116",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "workflow-automation",
+      "stack": "TypeScript/Inngest/pi-ai/skills",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 116 stars, 2 forks, 41 commits, Apache-2.0 license, and README language for durable event-driven execution with retry/cancel behavior, channel adapters, skills, file-based memory, and workspace eval traces.",
+      "description": "Utah is a universally triggered agent harness built on Inngest events with durable retries and local worker execution for think-act-observe loops."
+    },
+    {
       "repo": "internlm/polar",
       "url": "https://github.com/internlm/polar",
       "stars": "163",
@@ -7548,6 +7575,21 @@
       "description": "Awesome Agent Skills collection list, papers, tools, projects, and resources"
     },
     {
+      "repo": "sd0xdev/sd0x-dev-flow",
+      "url": "https://github.com/sd0xdev/sd0x-dev-flow",
+      "stars": "157",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "JavaScript/TypeScript/Claude Code hooks",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 157 stars, 21 forks, 456 commits, MIT license, and README claims for hook-enforced dual review, state-machine gate checks, fail-closed policies, and a large bundled public skill set for coding-agent operations.",
+      "description": "sd0x-dev-flow is a harness layer for Claude Code with dual-review gates, state-machine controls and fail-closed safety for coding-agent workflows."
+    },
+    {
       "repo": "sebastianbrzustowicz/robot-sumo-rl",
       "url": "https://github.com/sebastianbrzustowicz/robot-sumo-rl",
       "stars": "18",
@@ -8146,6 +8188,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "[ICML-2026] Official implementation of \"SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience\""
+    },
+    {
+      "repo": "SuperagenticAI/metaharness",
+      "url": "https://github.com/SuperagenticAI/metaharness",
+      "stars": "102",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evaluation",
+      "stack": "Python/Codex CLI/Ollama benchmark harness",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 102 stars, 11 forks, 23 commits, and README language for Codex-first benchmark loops, proposal/evaluate/keep harness iterations, candidate ledgers, write-scope controls, and experiment matrix support.",
+      "description": "Meta Harness is a benchmark-driven outer loop for coding-agent harness optimization, with reproducible candidate ledgers and run evidence."
     },
     {
       "repo": "suyoumo/ClawProBench",
@@ -13235,6 +13292,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "[ICML-2026] Official implementation of \"SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience\""
+    },
+    {
+      "repo": "SuperagenticAI/metaharness",
+      "url": "https://github.com/SuperagenticAI/metaharness",
+      "stars": "102",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evaluation",
+      "stack": "Python/Codex CLI/Ollama benchmark harness",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 102 stars, 11 forks, 23 commits, and README language for Codex-first benchmark loops, proposal/evaluate/keep harness iterations, candidate ledgers, write-scope controls, and experiment matrix support.",
+      "description": "Meta Harness is a benchmark-driven outer loop for coding-agent harness optimization, with reproducible candidate ledgers and run evidence."
     },
     {
       "repo": "swapedoc/hermes2anti",
@@ -18784,6 +18856,135 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
       "evolution_focused": false
+    },
+    {
+      "name": "sd0x-dev-flow",
+      "repo": "sd0xdev/sd0x-dev-flow",
+      "normalized_repo": "sd0xdev/sd0x-dev-flow",
+      "url": "https://github.com/sd0xdev/sd0x-dev-flow",
+      "category": "Claude Code Harness Safety Runtime",
+      "pattern": "hook lifecycle -> state-machine gates -> dual-review approvals -> fail-closed enforcement -> reusable skill pack",
+      "tags": [
+        "harness",
+        "Claude Code",
+        "safety gates",
+        "skill orchestration",
+        "agent workflow"
+      ],
+      "site_stars": 157,
+      "site_forks": 21,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/sd0xdev_sd0x-dev-flow.md",
+      "local_git": null,
+      "report": "projects/242-sd0x-dev-flow-claude-code-harness-safety-gates.md",
+      "public_report": "site/public/reports/projects/242-sd0x-dev-flow-claude-code-harness-safety-gates.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/sd0xdev_sd0x-dev-flow.md",
+      "raw_collected_at": "2026-05-26T10:04:13+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "skill-orchestration",
+      "classification_evidence": "web-observed GitHub page showed 157 stars, 21 forks, 456 commits, MIT license, and README claims for hook-enforced dual review, state-machine gate checks, fail-closed policies, and a large bundled public skill set for coding-agent operations.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
+      "name": "Utah",
+      "repo": "inngest/utah",
+      "normalized_repo": "inngest/utah",
+      "url": "https://github.com/inngest/utah",
+      "category": "Event-Driven Agent Harness Runtime",
+      "pattern": "incoming event -> think/act/observe loop -> durable retries and singleton control -> memory/session trace updates -> channel response",
+      "tags": [
+        "harness",
+        "event-driven",
+        "Inngest",
+        "agent memory",
+        "skills"
+      ],
+      "site_stars": 116,
+      "site_forks": 2,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/inngest_utah.md",
+      "local_git": null,
+      "report": "projects/243-utah-event-driven-agent-harness.md",
+      "public_report": "site/public/reports/projects/243-utah-event-driven-agent-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/inngest_utah.md",
+      "raw_collected_at": "2026-05-26T10:04:13+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed 116 stars, 2 forks, 41 commits, Apache-2.0 license, and README language for durable event-driven execution with retry/cancel behavior, channel adapters, skills, file-based memory, and workspace eval traces.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "workflow-automation",
+      "evolution_focused": false
+    },
+    {
+      "name": "Meta Harness",
+      "repo": "SuperagenticAI/metaharness",
+      "normalized_repo": "superagenticai/metaharness",
+      "url": "https://github.com/SuperagenticAI/metaharness",
+      "category": "Benchmark-Driven Harness Evolution Toolkit",
+      "pattern": "propose harness change -> run benchmark matrix -> compare score/runtime/cost -> keep best candidate -> persist ledger",
+      "tags": [
+        "benchmark harness",
+        "Codex CLI",
+        "Ollama",
+        "proposal ledger",
+        "agent optimization"
+      ],
+      "site_stars": 102,
+      "site_forks": 11,
+      "license": "Repository LICENSE file",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/superagenticai_metaharness.md",
+      "local_git": null,
+      "report": "projects/244-metaharness-benchmark-driven-harness-evolution.md",
+      "public_report": "site/public/reports/projects/244-metaharness-benchmark-driven-harness-evolution.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/superagenticai_metaharness.md",
+      "raw_collected_at": "2026-05-26T10:04:13+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "agent-evolution-infra",
+      "classification_evidence": "web-observed GitHub page showed 102 stars, 11 forks, 23 commits, and README language for Codex-first benchmark loops, proposal/evaluate/keep harness iterations, candidate ledgers, write-scope controls, and experiment matrix support.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
+      "evolution_focused": true
     }
   ],
   "analyzed_git_evidence": [
@@ -23008,6 +23209,49 @@
       "evolution_focused": true
     },
     {
+      "name": "sd0x-dev-flow",
+      "repo": "sd0xdev/sd0x-dev-flow",
+      "normalized_repo": "sd0xdev/sd0x-dev-flow",
+      "url": "https://github.com/sd0xdev/sd0x-dev-flow",
+      "category": "Claude Code Harness Safety Runtime",
+      "pattern": "hook lifecycle -> state-machine gates -> dual-review approvals -> fail-closed enforcement -> reusable skill pack",
+      "tags": [
+        "harness",
+        "Claude Code",
+        "safety gates",
+        "skill orchestration",
+        "agent workflow"
+      ],
+      "site_stars": 157,
+      "site_forks": 21,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/sd0xdev_sd0x-dev-flow.md",
+      "local_git": null,
+      "report": "projects/242-sd0x-dev-flow-claude-code-harness-safety-gates.md",
+      "public_report": "site/public/reports/projects/242-sd0x-dev-flow-claude-code-harness-safety-gates.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/sd0xdev_sd0x-dev-flow.md",
+      "raw_collected_at": "2026-05-26T10:04:13+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "skill-orchestration",
+      "classification_evidence": "web-observed GitHub page showed 157 stars, 21 forks, 456 commits, MIT license, and README claims for hook-enforced dual review, state-machine gate checks, fail-closed policies, and a large bundled public skill set for coding-agent operations.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
       "name": "AutoML-Agent",
       "repo": "DeepAuto-AI/automl-agent",
       "normalized_repo": "deepauto-ai/automl-agent",
@@ -23052,6 +23296,92 @@
       "classification_evidence": null,
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
+      "evolution_focused": true
+    },
+    {
+      "name": "Utah",
+      "repo": "inngest/utah",
+      "normalized_repo": "inngest/utah",
+      "url": "https://github.com/inngest/utah",
+      "category": "Event-Driven Agent Harness Runtime",
+      "pattern": "incoming event -> think/act/observe loop -> durable retries and singleton control -> memory/session trace updates -> channel response",
+      "tags": [
+        "harness",
+        "event-driven",
+        "Inngest",
+        "agent memory",
+        "skills"
+      ],
+      "site_stars": 116,
+      "site_forks": 2,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/inngest_utah.md",
+      "local_git": null,
+      "report": "projects/243-utah-event-driven-agent-harness.md",
+      "public_report": "site/public/reports/projects/243-utah-event-driven-agent-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/inngest_utah.md",
+      "raw_collected_at": "2026-05-26T10:04:13+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed 116 stars, 2 forks, 41 commits, Apache-2.0 license, and README language for durable event-driven execution with retry/cancel behavior, channel adapters, skills, file-based memory, and workspace eval traces.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "workflow-automation",
+      "evolution_focused": false
+    },
+    {
+      "name": "Meta Harness",
+      "repo": "SuperagenticAI/metaharness",
+      "normalized_repo": "superagenticai/metaharness",
+      "url": "https://github.com/SuperagenticAI/metaharness",
+      "category": "Benchmark-Driven Harness Evolution Toolkit",
+      "pattern": "propose harness change -> run benchmark matrix -> compare score/runtime/cost -> keep best candidate -> persist ledger",
+      "tags": [
+        "benchmark harness",
+        "Codex CLI",
+        "Ollama",
+        "proposal ledger",
+        "agent optimization"
+      ],
+      "site_stars": 102,
+      "site_forks": 11,
+      "license": "Repository LICENSE file",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/superagenticai_metaharness.md",
+      "local_git": null,
+      "report": "projects/244-metaharness-benchmark-driven-harness-evolution.md",
+      "public_report": "site/public/reports/projects/244-metaharness-benchmark-driven-harness-evolution.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/superagenticai_metaharness.md",
+      "raw_collected_at": "2026-05-26T10:04:13+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "agent-evolution-infra",
+      "classification_evidence": "web-observed GitHub page showed 102 stars, 11 forks, 23 commits, and README language for Codex-first benchmark loops, proposal/evaluate/keep harness iterations, candidate ledgers, write-scope controls, and experiment matrix support.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
       "evolution_focused": true
     },
     {
@@ -28086,6 +28416,49 @@
       "evolution_focused": false
     },
     {
+      "name": "Utah",
+      "repo": "inngest/utah",
+      "normalized_repo": "inngest/utah",
+      "url": "https://github.com/inngest/utah",
+      "category": "Event-Driven Agent Harness Runtime",
+      "pattern": "incoming event -> think/act/observe loop -> durable retries and singleton control -> memory/session trace updates -> channel response",
+      "tags": [
+        "harness",
+        "event-driven",
+        "Inngest",
+        "agent memory",
+        "skills"
+      ],
+      "site_stars": 116,
+      "site_forks": 2,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/inngest_utah.md",
+      "local_git": null,
+      "report": "projects/243-utah-event-driven-agent-harness.md",
+      "public_report": "site/public/reports/projects/243-utah-event-driven-agent-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/inngest_utah.md",
+      "raw_collected_at": "2026-05-26T10:04:13+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed 116 stars, 2 forks, 41 commits, Apache-2.0 license, and README language for durable event-driven execution with retry/cancel behavior, channel adapters, skills, file-based memory, and workspace eval traces.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "workflow-automation",
+      "evolution_focused": false
+    },
+    {
       "name": "ATANT",
       "repo": "Kenotic-Labs/ATANT",
       "normalized_repo": "kenotic-labs/atant",
@@ -28675,6 +29048,49 @@
       "evolution_focused": false
     },
     {
+      "name": "sd0x-dev-flow",
+      "repo": "sd0xdev/sd0x-dev-flow",
+      "normalized_repo": "sd0xdev/sd0x-dev-flow",
+      "url": "https://github.com/sd0xdev/sd0x-dev-flow",
+      "category": "Claude Code Harness Safety Runtime",
+      "pattern": "hook lifecycle -> state-machine gates -> dual-review approvals -> fail-closed enforcement -> reusable skill pack",
+      "tags": [
+        "harness",
+        "Claude Code",
+        "safety gates",
+        "skill orchestration",
+        "agent workflow"
+      ],
+      "site_stars": 157,
+      "site_forks": 21,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/sd0xdev_sd0x-dev-flow.md",
+      "local_git": null,
+      "report": "projects/242-sd0x-dev-flow-claude-code-harness-safety-gates.md",
+      "public_report": "site/public/reports/projects/242-sd0x-dev-flow-claude-code-harness-safety-gates.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/sd0xdev_sd0x-dev-flow.md",
+      "raw_collected_at": "2026-05-26T10:04:13+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "skill-orchestration",
+      "classification_evidence": "web-observed GitHub page showed 157 stars, 21 forks, 456 commits, MIT license, and README claims for hook-enforced dual review, state-machine gate checks, fail-closed policies, and a large bundled public skill set for coding-agent operations.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
       "name": "kbench",
       "repo": "shareAI-lab/kbench",
       "normalized_repo": "shareai-lab/kbench",
@@ -28716,6 +29132,49 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
       "evolution_focused": false
+    },
+    {
+      "name": "Meta Harness",
+      "repo": "SuperagenticAI/metaharness",
+      "normalized_repo": "superagenticai/metaharness",
+      "url": "https://github.com/SuperagenticAI/metaharness",
+      "category": "Benchmark-Driven Harness Evolution Toolkit",
+      "pattern": "propose harness change -> run benchmark matrix -> compare score/runtime/cost -> keep best candidate -> persist ledger",
+      "tags": [
+        "benchmark harness",
+        "Codex CLI",
+        "Ollama",
+        "proposal ledger",
+        "agent optimization"
+      ],
+      "site_stars": 102,
+      "site_forks": 11,
+      "license": "Repository LICENSE file",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/superagenticai_metaharness.md",
+      "local_git": null,
+      "report": "projects/244-metaharness-benchmark-driven-harness-evolution.md",
+      "public_report": "site/public/reports/projects/244-metaharness-benchmark-driven-harness-evolution.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/superagenticai_metaharness.md",
+      "raw_collected_at": "2026-05-26T10:04:13+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "agent-evolution-infra",
+      "classification_evidence": "web-observed GitHub page showed 102 stars, 11 forks, 23 commits, and README language for Codex-first benchmark loops, proposal/evaluate/keep harness iterations, candidate ledgers, write-scope controls, and experiment matrix support.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
+      "evolution_focused": true
     },
     {
       "name": "ClawProBench",

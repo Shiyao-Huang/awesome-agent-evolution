@@ -255,6 +255,10 @@
 | KWeaver Core | [kweaver-ai/kweaver-core](https://github.com/kweaver-ai/kweaver-core) | Enterprise Decision Agent Harness | [projects/240-kweaver-core-enterprise-decision-agent-harness.md](240-kweaver-core-enterprise-decision-agent-harness.md) |
 | ClawProBench | [suyoumo/ClawProBench](https://github.com/suyoumo/ClawProBench) | Live OpenClaw Benchmark Harness | [projects/241-clawprobench-live-openclaw-benchmark.md](241-clawprobench-live-openclaw-benchmark.md) |
 
+| sd0x-dev-flow | [sd0xdev/sd0x-dev-flow](https://github.com/sd0xdev/sd0x-dev-flow) | Claude Code Harness Safety Runtime | [projects/242-sd0x-dev-flow-claude-code-harness-safety-gates.md](242-sd0x-dev-flow-claude-code-harness-safety-gates.md) |
+| Utah | [inngest/utah](https://github.com/inngest/utah) | Event-Driven Agent Harness Runtime | [projects/243-utah-event-driven-agent-harness.md](243-utah-event-driven-agent-harness.md) |
+| Meta Harness | [SuperagenticAI/metaharness](https://github.com/SuperagenticAI/metaharness) | Benchmark-Driven Harness Evolution Toolkit | [projects/244-metaharness-benchmark-driven-harness-evolution.md](244-metaharness-benchmark-driven-harness-evolution.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T09:12:00+08:00",
+  "generated_at": "2026-05-26T10:04:13+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -219,7 +219,10 @@
         "raw-github/orchestra-research_ai-research-skills.md",
         "raw-github/iliaal_ai-skills.md",
         "raw-github/agiprolabs_claude-trading-skills.md",
-        "raw-github/dceoy_speckit-agent-skills.md"
+        "raw-github/dceoy_speckit-agent-skills.md",
+        "raw-github/sd0xdev_sd0x-dev-flow.md",
+        "raw-github/inngest_utah.md",
+        "raw-github/superagenticai_metaharness.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -345,7 +348,8 @@
         "work/research/hourly-public-metadata-update-2026-05-26-0441.md",
         "work/research/hourly-public-metadata-update-2026-05-26-0544.md",
         "work/research/hourly-public-metadata-update-2026-05-26-0645.md",
-        "work/research/hourly-public-metadata-update-2026-05-26-0745.md"
+        "work/research/hourly-public-metadata-update-2026-05-26-0745.md",
+        "work/research/hourly-public-metadata-update-2026-05-26-1001.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -725,7 +729,13 @@
         "projects/235-claude-trading-skills-domain-agent-workflows.md",
         "site/public/reports/projects/235-claude-trading-skills-domain-agent-workflows.md",
         "projects/236-speckit-agent-skills-spec-driven-workflow.md",
-        "site/public/reports/projects/236-speckit-agent-skills-spec-driven-workflow.md"
+        "site/public/reports/projects/236-speckit-agent-skills-spec-driven-workflow.md",
+        "projects/242-sd0x-dev-flow-claude-code-harness-safety-gates.md",
+        "site/public/reports/projects/242-sd0x-dev-flow-claude-code-harness-safety-gates.md",
+        "projects/243-utah-event-driven-agent-harness.md",
+        "site/public/reports/projects/243-utah-event-driven-agent-harness.md",
+        "projects/244-metaharness-benchmark-driven-harness-evolution.md",
+        "site/public/reports/projects/244-metaharness-benchmark-driven-harness-evolution.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1040,14 +1050,14 @@
     "Workspace cleanup: migrated root raw/social/GitHub/paper/report compatibility files into canonical raw, analysis, paper-drafts, reports, output, docs, and legacy paths; updated references and generators."
   ],
   "current_run": {
-    "run_at": "2026-05-26T07:45:34+08:00",
+    "run_at": "2026-05-26T10:04:13+08:00",
     "added_repositories": [
-      "agiprolabs/claude-trading-skills",
-      "dceoy/speckit-agent-skills"
+      "sd0xdev/sd0x-dev-flow",
+      "inngest/utah",
+      "SuperagenticAI/metaharness"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration",
-    "workspace_taxonomy_status": "updated root cleanup object node and canonical layer migration paths"
+    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
   }
 }

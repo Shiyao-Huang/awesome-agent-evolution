@@ -3085,6 +3085,91 @@ export const projects: Project[] = [
       "agent evaluation",
       "deterministic grading"
     ]
+  },
+  {
+    name: "sd0x-dev-flow",
+    repo: "sd0xdev/sd0x-dev-flow",
+    url: "https://github.com/sd0xdev/sd0x-dev-flow",
+    stars: 157,
+    forks: 21,
+    language: "TypeScript",
+    license: "MIT",
+    report: "projects/242-sd0x-dev-flow-claude-code-harness-safety-gates.md",
+    pattern: "hook lifecycle -> state-machine gates -> dual-review approvals -> fail-closed enforcement -> reusable skill pack",
+    description: "sd0x-dev-flow is a harness layer for Claude Code with dual-review gates, state-machine controls and fail-closed safety for coding-agent workflows.",
+    stack: [
+      "JavaScript",
+      "TypeScript",
+      "Claude Code hooks"
+    ],
+    category: "Claude Code Harness Safety Runtime",
+    lastPushed: "2026-05-26T00:00:00Z",
+    localPath: "raw-github/sd0xdev_sd0x-dev-flow.md",
+    status: "candidate",
+    tags: [
+      "harness",
+      "Claude Code",
+      "safety gates",
+      "skill orchestration",
+      "agent workflow"
+    ]
+  },
+  {
+    name: "Utah",
+    repo: "inngest/utah",
+    url: "https://github.com/inngest/utah",
+    stars: 116,
+    forks: 2,
+    language: "TypeScript",
+    license: "Apache-2.0",
+    report: "projects/243-utah-event-driven-agent-harness.md",
+    pattern: "incoming event -> think/act/observe loop -> durable retries and singleton control -> memory/session trace updates -> channel response",
+    description: "Utah is a universally triggered agent harness built on Inngest events with durable retries and local worker execution for think-act-observe loops.",
+    stack: [
+      "TypeScript",
+      "Inngest",
+      "pi-ai",
+      "skills"
+    ],
+    category: "Event-Driven Agent Harness Runtime",
+    lastPushed: "2026-05-26T00:00:00Z",
+    localPath: "raw-github/inngest_utah.md",
+    status: "candidate",
+    tags: [
+      "harness",
+      "event-driven",
+      "Inngest",
+      "agent memory",
+      "skills"
+    ]
+  },
+  {
+    name: "Meta Harness",
+    repo: "SuperagenticAI/metaharness",
+    url: "https://github.com/SuperagenticAI/metaharness",
+    stars: 102,
+    forks: 11,
+    language: "Python",
+    license: "Repository LICENSE file",
+    report: "projects/244-metaharness-benchmark-driven-harness-evolution.md",
+    pattern: "propose harness change -> run benchmark matrix -> compare score/runtime/cost -> keep best candidate -> persist ledger",
+    description: "Meta Harness is a benchmark-driven outer loop for coding-agent harness optimization, with reproducible candidate ledgers and run evidence.",
+    stack: [
+      "Python",
+      "Codex CLI",
+      "Ollama benchmark harness"
+    ],
+    category: "Benchmark-Driven Harness Evolution Toolkit",
+    lastPushed: "2026-05-26T00:00:00Z",
+    localPath: "raw-github/superagenticai_metaharness.md",
+    status: "candidate",
+    tags: [
+      "benchmark harness",
+      "Codex CLI",
+      "Ollama",
+      "proposal ledger",
+      "agent optimization"
+    ]
   }
 ];
 
@@ -3115,7 +3200,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }
