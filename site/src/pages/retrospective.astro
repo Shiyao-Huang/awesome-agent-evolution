@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const whatWorked = [
+  {
+    title: 'LLM Wiki Pattern',
+    verdict: '有效',
+    color: '#27ae60',
+    stats: '49 页面, 737 关键词',
+    detail: '三层架构（Raw→Wiki→Schema）解决了 RAG 重复推导的痛点。知识编译一次，持续更新，交叉引用和矛盾标记不需要每次重建。'
+  },
+  {
+    title: '多 Agent 并行素材收集',
+    verdict: '有效',
+    color: '#27ae60',
+    stats: '4 类 raw 源, 18+ 研究文件',
+    detail: 'GitHub/论文/社交/博客四类素材并行分析，每类 Agent 在自己擅长的领域深入。产出全部有证据链标注。'
+  },
+  {
+    title: 'QA 铁律写入 AGENTS.md',
+    verdict: '有效',
+    color: '#27ae60',
+    stats: '6 条 Iron Rules',
+    detail: 'Iron Rules 提交后所有 Agent 都遵循了禁止 git reset 规则。规则持久化比口头传达可靠。'
+  },
+  {
+    title: '自动索引 + 人工索引配合',
+    verdict: '有效',
+    color: '#27ae60',
+    stats: '212 页网站, 49 wiki 页',
+    detail: '生成器负责机械索引，人工负责知识索引。两者不冲突。'
+  }
+];
+
+const whatFailed = [
+  {
+    title: 'Daemon git reset 摧毁工作',
+    verdict: 'P0 失败',
+    color: '#e74c3c',
+    stats: '2 次重置, 3 文件永久丢失',
+    detail: 'aha-agi supervisor 每 ~20min 执行 git reset --mixed HEAD，清除所有未提交工作。文件恢复率 94%，但 3 个文件无法恢复。根因：代码混淆无法本地修复。'
+  },
+  {
+    title: 'EN→CN 映射偏离 Iron Rule',
+    verdict: 'P0 失败',
+    color: '#e74c3c',
+    stats: '7/8 章违规',
+    detail: 'CN Survey 是独立的中文综述，不是 EN 论文的忠实映射。ch3 甚至使用了完全不同的分类体系。根因："同步"表述太模糊。'
+  },
+  {
+    title: 'Agent 标记 done 但文件未持久化',
+    verdict: 'P1 问题',
+    color: '#e67e22',
+    stats: '初始交付率 25%',
+    detail: 'Agent 写入了文件但未 commit，daemon reset 销毁后 Kanban 仍显示 done。Reviewer 初始审计准确（文件不存在），但对原因判断错误（不是未写入，是被删除）。'
+  },
+  {
+    title: 'PAPER_OUTLINE.md 与实际不同步',
+    verdict: 'P2 问题',
+    color: '#f39c12',
+    stats: '10 章 vs 实际 8 章',
+    detail: '大纲描述 10 章结构，实际论文 8 章 + appendix。新 Agent 参考过时大纲会产生错误计划。'
+  }
+];
+
+const directions = [
+  {
+    title: '修复 EN→CN 映射',
+    priority: '最高',
+    color: '#e74c3c',
+    action: '方案 B：结构对齐。CN 章节标题匹配 EN，独有内容移入附录。建自动化 section 匹配验证脚本。每章修完即 commit + QA。',
+    estimate: '8-16 小时'
+  },
+  {
+    title: '强化 Wiki 知识中枢',
+    priority: '高',
+    color: '#e67e22',
+    action: '将 work/research/ 22 文件迁移到 wiki。研究任务直接产出 wiki 页面。Wiki lint 改为自动任务。search-index 每次 commit 前自动更新。',
+    estimate: '4-8 小时'
+  },
+  {
+    title: '多 Agent 协作流程改进',
+    priority: '高',
+    color: '#e67e22',
+    action: '每 2-3 任务完成触发 QA 检查。写后立即 commit 作为铁律。任务描述精确化（避免"同步"模糊表述）。Review 检查文件大小和内容相关性。',
+    estimate: '流程变更，不耗时'
+  },
+  {
+    title: 'Daemon git reset 上游修复',
+    priority: '高',
+    color: '#e67e22',
+    action: '向 aha-agi 报告 bug。请求配置选项允许项目禁用 daemon 工作区清理。保持 auto-commit-shield 作为临时方案。',
+    estimate: '依赖上游'
+  },
+  {
+    title: '自动化质量门禁',
+    priority: '中',
+    color: '#3498db',
+    action: 'EN→CN section matching 脚本。证据链检查器。[UNVERIFIED] 标记计数。行数比例异常检测。Wiki orphan 检测。在 pre-commit 或 CI 中运行。',
+    estimate: '6-10 小时开发'
+  }
+];
+---
+
+<BaseLayout
+  title="Survey 深挖实验复盘 — Self Evolve"
+  description="2026-05-26 多 Agent 团队实验复盘：什么有效、什么失败、未来方向与具体行动计划。"
+>
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">实验复盘</div>
+      <h1 class="gradient-text">Survey 深挖实验复盘</h1>
+      <p class="lead">复盘之前的实验、知道什么有效什么没有、未来方向在哪里、应该怎么做</p>
+      <div class="metrics">
+        <div class="metric"><strong>58</strong><span>commits</span></div>
+        <div class="metric"><strong>22</strong><span>tasks done</span></div>
+        <div class="metric"><strong>212</strong><span>site pages</span></div>
+        <div class="metric"><strong>94%</strong><span>文件恢复率</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Worked -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" style="color: #27ae60;">什么有效</div>
+          <h2>有效的实践</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {whatWorked.map((item) => (
+          <article class="card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <h3 style="margin:0;">{item.title}</h3>
+              <span style={`padding:2px 10px; border-radius:10px; font-size:0.75rem; font-weight:600; background:${item.color}15; color:${item.color}; border:1px solid ${item.color}40;`}>{item.verdict}</span>
+            </div>
+            <p style="color:var(--muted); font-size:0.85rem; margin:0 0 8px;">{item.stats}</p>
+            <p style="font-size:0.9rem;">{item.detail}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- What Failed -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" style="color: #e74c3c;">什么失败了</div>
+          <h2>失败的实践</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {whatFailed.map((item) => (
+          <article class="card" style={`border-left: 3px solid ${item.color};`}>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <h3 style="margin:0;">{item.title}</h3>
+              <span style={`padding:2px 10px; border-radius:10px; font-size:0.75rem; font-weight:600; background:${item.color}15; color:${item.color}; border:1px solid ${item.color}40;`}>{item.verdict}</span>
+            </div>
+            <p style="color:var(--muted); font-size:0.85rem; margin:0 0 8px;">{item.stats}</p>
+            <p style="font-size:0.9rem;">{item.detail}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Lesson -->
+  <section class="section">
+    <div class="container">
+      <div class="card" style="border-left: 4px solid #3498db; background: linear-gradient(135deg, rgba(52,152,219,0.05), transparent);">
+        <h3>核心教训</h3>
+        <p style="font-size: 1.05rem; line-height: 1.7; margin-top: 12px;">
+          多 Agent 研究团队的产出质量取决于三个基础设施：<strong>持久化保障</strong>（不丢工作）、<strong>映射纪律</strong>（忠于源）和<strong>中间验证</strong>（不等全做完才检查）。任何一个缺失都会导致大量返工。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Future Directions -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">未来方向</div>
+          <h2>应该怎么做</h2>
+        </div>
+      </div>
+      {directions.map((dir) => (
+        <div class="card" style="margin-bottom: 12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+            <h3 style="margin:0;">{dir.title}</h3>
+            <div style="display:flex; gap:8px; align-items:center;">
+              <span style={`padding:2px 10px; border-radius:10px; font-size:0.75rem; font-weight:600; background:${dir.color}15; color:${dir.color}; border:1px solid ${dir.color}40;`}>优先级: {dir.priority}</span>
+              <span style="font-size:0.8rem; color:var(--muted);">{dir.estimate}</span>
+            </div>
+          </div>
+          <p style="margin-top:10px; font-size:0.9rem;">{dir.action}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Key Data -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">数据总览</div>
+          <h2>实验规模</h2>
+        </div>
+      </div>
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border,#e0e0e0); text-align:left;">
+              <th style="padding:8px;">指标</th>
+              <th style="padding:8px;">数值</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border,#e0e0e0);"><td style="padding:8px;">今日 commits</td><td style="padding:8px;">58</td></tr>
+            <tr style="border-bottom:1px solid var(--border,#e0e0e0);"><td style="padding:8px;">Kanban done</td><td style="padding:8px;">22</td></tr>
+            <tr style="border-bottom:1px solid var(--border,#e0e0e0);"><td style="padding:8px;">work/research/</td><td style="padding:8px;">22 文件 (2.2MB)</td></tr>
+            <tr style="border-bottom:1px solid var(--border,#e0e0e0);"><td style="padding:8px;">work/wiki/</td><td style="padding:8px;">49 页面 (496KB)</td></tr>
+            <tr style="border-bottom:1px solid var(--border,#e0e0e0);"><td style="padding:8px;">projects/</td><td style="padding:8px;">447 model cards (3.3MB)</td></tr>
+            <tr style="border-bottom:1px solid var(--border,#e0e0e0);"><td style="padding:8px;">Site pages</td><td style="padding:8px;">212</td></tr>
+            <tr style="border-bottom:1px solid var(--border,#e0e0e0);"><td style="padding:8px;">文件恢复率</td><td style="padding:8px; color:#27ae60; font-weight:600;">94% (44/47)</td></tr>
+            <tr><td style="padding:8px;">EN→CN 合规率</td><td style="padding:8px; color:#e74c3c; font-weight:600;">12.5% (1/8)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p style="color:var(--muted); font-size:0.85rem;">
+        复盘日期：2026-05-26 | 审计人：gstack-qa-commander |
+        <a href="/mapping-audit/">EN→CN 映射审计</a> |
+        <a href="/reports/">报告索引</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
