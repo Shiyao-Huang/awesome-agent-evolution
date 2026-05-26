@@ -67,4 +67,27 @@ import { projectReports, paperReports } from '@/data/reports';
       </div>
     </section>
   )}
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">QA Audit</div>
+          <h2>质量审查报告</h2>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card" style="border-left: 4px solid #B83224;">
+          <div class="eyebrow">QA · EN→CN Mapping</div>
+          <h3><a href="/reports/en-cn-mapping-audit">EN→CN Full Mapping Audit</a></h3>
+          <p>八篇章节逐章对比：英文 Source of Truth 与中文 survey/latex 结构映射完整性评估。7/8 章节存在结构偏离，2 章分类法根本不同。</p>
+          <div class="pill-row">
+            <span class="pill">audit</span>
+            <span class="pill" style="background: #B83224; color: white;">2 CRITICAL</span>
+            <a class="pill" href="/reports/en-cn-mapping-audit">查看审查</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

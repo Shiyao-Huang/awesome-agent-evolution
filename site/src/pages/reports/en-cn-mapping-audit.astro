@@ -1,0 +1,433 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const chapters = [
+  {
+    id: 'ch1',
+    title: 'Ch1: Introduction',
+    enFile: 'paper-drafts/ch1-intro.tex',
+    cnFile: 'survey/latex/chapters/ch1-intro.tex',
+    enLines: 525,
+    cnLines: 258,
+    enSections: 7,
+    cnSections: 7,
+    enSubsubs: 21,
+    cnSubsubs: 11,
+    verdict: 'under-mapped',
+    verdictLabel: 'Under-mapped',
+    verdictColor: '#A56117',
+    analysis: 'CN 背景有 7 个 subsubsection（含"控制论"和"进化计算"两个 CN 独有），EN 有 5 个。EN Contributions 下有 14+ subsubsection，CN 仅映射了 4 个核心贡献，缺失 12 个。EN 有独立"Relation to Existing Surveys"小节，CN 缺失。',
+    cnExtras: ['控制论与自适应控制', '进化计算'],
+    cnMissing: ['Running examples and evidence', 'Why the field needs a survey now', 'Open-source evidence and project health', 'Evaluation principles', 'Safety and governance', 'Unifying vocabulary', 'Limitations of scope', 'Design dimensions', 'Formal decomposition', 'Benchmark to capability accumulation', 'Implications for building systems', 'Research questions', 'Relation to Existing Surveys (entire subsection)'],
+  },
+  {
+    id: 'ch2',
+    title: 'Ch2: Taxonomy / Theory',
+    enFile: 'paper-drafts/ch2-taxonomy.tex',
+    cnFile: 'survey/latex/chapters/ch2-theory.tex',
+    enLines: 564,
+    cnLines: 478,
+    enSections: 14,
+    cnSections: 18,
+    enSubsubs: 0,
+    cnSubsubs: 2,
+    verdict: 'divergent',
+    verdictLabel: 'Divergent',
+    verdictColor: '#B83224',
+    analysis: 'CN 比 EN 多 4 个 subsection：本章概述、经典 EC vs Agent Self-Evolution 比较、理论边界、改进的层次、选择压力与多目标优化、历史演进与跨领域融合。EN 有 Comparison Table 和 Implications for Future Systems 两个小节 CN 缺失。',
+    cnExtras: ['本章概述', '经典 EC vs Agent Self-Evolution 比较', '理论边界', '改进的层次', '选择压力与多目标优化', '历史演进与跨领域融合'],
+    cnMissing: ['Comparison Table', 'Implications for Future Self-Evolving AI Systems'],
+  },
+  {
+    id: 'ch3',
+    title: 'Ch3: Methods',
+    enFile: 'paper-drafts/ch3-methods.tex',
+    cnFile: 'survey/latex/chapters/ch3-methods.tex',
+    enLines: 729,
+    cnLines: 1530,
+    enSections: 19,
+    cnSections: 19,
+    enSubsubs: 11,
+    cnSubsubs: 56,
+    verdict: 'critical',
+    verdictLabel: 'CRITICAL',
+    verdictColor: '#B83224',
+    analysis: '采用完全不同的分类法：EN 按推理时 vs 训练时二分法组织，CN 按机制类型六分法（奖励/自博弈/提示词/架构/记忆/混合）。结构完全不平行。CN 有 56 个 subsubsection vs EN 的 11 个，包含大量理论分析、历史演进、实践指南等 CN 独有内容。',
+    cnExtras: ['六类机制分类（奖励/自博弈/提示词/架构/记忆/混合）', '方法谱系历史演进（4阶段）', '方法组合深度分析', '统一理论视角（GEMI 框架）', '实践指南（决策树）', '与 NAS/持续学习/元学习/AutoML 的关系', '代码自我改进深度分析', '评估方法论'],
+    cnMissing: ['推理时 vs 训练时二分法整体结构', 'Inference-time design patterns', 'Unified Taxonomy of Feedback/Update/Selection', 'Implementation-Level Design Choices', 'Method-by-Method Failure Analysis', 'Recommended Reporting Checklist', 'Worked Design Example: Code Agent', 'Worked Design Example: Reasoning Model', 'Choosing Between Prompting/FT/RL'],
+  },
+  {
+    id: 'ch4',
+    title: 'Ch4: Evolutionary / Systems',
+    enFile: 'paper-drafts/ch4-evolutionary.tex',
+    cnFile: 'survey/latex/chapters/ch4-systems.tex',
+    enLines: 536,
+    cnLines: 938,
+    enSections: 13,
+    cnSections: 8,
+    enSubsubs: 0,
+    cnSubsubs: 43,
+    verdict: 'critical',
+    verdictLabel: 'CRITICAL',
+    verdictColor: '#B83224',
+    analysis: 'EN 是扁平结构（13 subsection，0 subsubsection）。CN 是深层嵌套（8 subsection，43 subsubsection）。CN 为每个系统（DGM、ADAS、Godel Agent、Voyager 等）创建了独立 subsubsection，并有大量基准分析和理论扩展。CN 还包含 3 个重复 subsubsection。',
+    cnExtras: ['EvoPrompt 独立小节', 'AlphaEvolve 独立小节', 'ReEvo、OpenELM 独立小节', '9 个 Agent 系统独立分析', 'LLaMEA、OpenTreeSearch 开源实现', '进化算子设计原则（变异/交叉/选择）', '40+ 基准分析 subsubsection', '3 个重复 subsubsection'],
+    cnMissing: ['System-by-System Analytical Notes', 'Methodological Checklist for Reproducible Discovery', 'Conceptual Taxonomy of Evolutionary Loops', 'Implications for the Broader Survey'],
+  },
+  {
+    id: 'ch5',
+    title: 'Ch5: Evaluation',
+    enFile: 'paper-drafts/ch5-evaluation.tex',
+    cnFile: 'survey/latex/chapters/ch5-evaluation.tex',
+    enLines: 507,
+    cnLines: 668,
+    enSections: 8,
+    cnSections: 8,
+    enSubsubs: 0,
+    cnSubsubs: 8,
+    verdict: 'moderate',
+    verdictLabel: 'Moderate',
+    verdictColor: '#A56117',
+    analysis: '数量一致但命名和组织不同。CN 提出了 Five-Layer Evaluation Hierarchy（L1-L5）和 Evaluator\'s Dilemma 概念，EN 没有。EN 有 Star Quality Analysis，CN 没有。CN 有 Benchmark Contamination 和 Community Assessment，EN 没有。',
+    cnExtras: ['Five-Layer Evaluation Hierarchy (L1-L5)', 'Evaluator\'s Dilemma', 'Evaluation Infrastructure & Community Assessment', 'Benchmark Contamination and Reproducibility', 'Method Comparison: What Gets Modified'],
+    cnMissing: ['Star Quality Analysis'],
+  },
+  {
+    id: 'ch6',
+    title: 'Ch6: Frameworks / Industry',
+    enFile: 'paper-drafts/ch6-frameworks.tex',
+    cnFile: 'survey/latex/chapters/ch6-industry.tex',
+    enLines: 311,
+    cnLines: 319,
+    enSections: 9,
+    cnSections: 5,
+    enSubsubs: 0,
+    cnSubsubs: 15,
+    verdict: 'divergent',
+    verdictLabel: 'Divergent',
+    verdictColor: '#B83224',
+    analysis: 'EN 按框架逐个分析（AutoGPT、MetaGPT、AutoGen、CrewAI、DSPy、LangGraph），CN 按主题组织（框架对比、生产部署挑战、开源生态分析、Demo 到 Production 鸿沟）。组织逻辑完全不同。',
+    cnExtras: ['框架生态分层分析', '生产环境部署挑战（可靠性/成本/安全/运维）', '开源生态分析（Stars/技术栈/热度）', 'Demo 到 Production 的鸿沟'],
+    cnMissing: ['AutoGPT 框架详细分析', 'MetaGPT 框架详细分析', 'AutoGen 框架详细分析', 'CrewAI 框架详细分析', 'DSPy 框架详细分析', 'LangGraph 框架详细分析', 'Evolution Capability Gaps', 'Self-Evolve Positioning'],
+  },
+  {
+    id: 'ch7',
+    title: 'Ch7: Pain Points',
+    enFile: 'paper-drafts/ch7-painpoints.tex',
+    cnFile: 'survey/latex/chapters/ch7-painpoints.tex',
+    enLines: 313,
+    cnLines: 541,
+    enSections: 9,
+    cnSections: 6,
+    enSubsubs: 0,
+    cnSubsubs: 24,
+    verdict: 'divergent',
+    verdictLabel: 'Divergent',
+    verdictColor: '#B83224',
+    analysis: 'CN 包含一个大型"English Recovery Expansion"块，有 ~18 个英文 subsubsection，部分镜像 EN 结构但远超 EN 内容。CN 核心结构（跨平台主题、优先级矩阵）与 EN 不同。EN 有独立的 Reliability、Development、Production 三个大节，CN 把类似内容放在 Recovery 子节下。',
+    cnExtras: ['5 个跨平台主题（Demo有效/自改进神话/框架被抛弃/Benchmark被操控/自修改危险）', '痛点优先级矩阵', '对 awesome-evolution 项目的启示', 'English Recovery Expansion 块（~18 subsubsection）', 'Memory as Product Pain Point', 'Hidden Labor Problem', 'Failure Recovery as Core Feature'],
+    cnMissing: ['Design Implications for AI Self-Evolution Systems (standalone)', 'Summary (standalone)'],
+  },
+  {
+    id: 'ch8',
+    title: 'Ch8: Future Directions',
+    enFile: 'paper-drafts/ch8-future.tex',
+    cnFile: 'survey/latex/chapters/ch8-future.tex',
+    enLines: 177,
+    cnLines: 326,
+    enSections: 7,
+    cnSections: 8,
+    enSubsubs: 0,
+    cnSubsubs: 0,
+    verdict: 'moderate',
+    verdictLabel: 'Moderate',
+    verdictColor: '#A56117',
+    analysis: 'EN 有 Evaluation Bottleneck、Memory/Drift、Production Challenges 三个主题方向和独立 Conclusion 节。CN 有自动化验证器、多Agent协同进化、跨域迁移、AGI 路径等不同主题方向。重叠部分（Safety、Composability、Roadmap）命名也不同。',
+    cnExtras: ['自动化验证器：替代人工反馈', '多 Agent 协同进化', '跨域迁移能力', '从 Agent Evolution 到 AGI', '参考文献与本地来源'],
+    cnMissing: ['Evaluation Bottleneck', 'Memory and Drift', 'Production Challenges', 'Conclusion (separate section)'],
+  },
+];
+
+const verdictStats = {
+  critical: chapters.filter(c => c.verdict === 'critical').length,
+  divergent: chapters.filter(c => c.verdict === 'divergent').length,
+  moderate: chapters.filter(c => c.verdict === 'moderate').length,
+  underMapped: chapters.filter(c => c.verdict === 'under-mapped').length,
+  pass: chapters.filter(c => c.verdict === 'pass').length,
+};
+
+const totals = {
+  enLines: chapters.reduce((s, c) => s + c.enLines, 0),
+  cnLines: chapters.reduce((s, c) => s + c.cnLines, 0),
+  enSections: chapters.reduce((s, c) => s + c.enSections, 0),
+  cnSections: chapters.reduce((s, c) => s + c.cnSections, 0),
+  enSubsubs: chapters.reduce((s, c) => s + c.enSubsubs, 0),
+  cnSubsubs: chapters.reduce((s, c) => s + c.cnSubsubs, 0),
+};
+---
+
+<BaseLayout
+  title="EN→CN Mapping Audit — 英中结构映射审查"
+  description="八篇章节逐章对比审查：英文 paper-drafts（Source of Truth）与中文 survey/latex 的结构映射完整性评估。"
+  publishedTime="2026-05-26T17:25:00+08:00"
+  modifiedTime="2026-05-26T20:59:00+08:00"
+>
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">QA Audit · 质量审查</div>
+      <h1 class="gradient-text">EN→CN Full Mapping Audit</h1>
+      <p class="lead">英文 <code>paper-drafts/</code> 为唯一真实源（Iron Rule #1）。中文 <code>survey/latex/</code> 应严格映射。本审查逐章对比结构完整性。</p>
+
+      <div class="metrics">
+        <div class="metric"><strong>{chapters.length}</strong><span>章审查</span></div>
+        <div class="metric"><strong>{totals.enLines.toLocaleString()}</strong><span>EN 行数</span></div>
+        <div class="metric"><strong>{totals.cnLines.toLocaleString()}</strong><span>CN 行数</span></div>
+        <div class="metric" style="color: var(--danger);"><strong>{verdictStats.critical + verdictStats.divergent}</strong><span>章严重偏离</span></div>
+      </div>
+
+      <div class="hero-actions" style="margin-top: 24px;">
+        <a class="button primary" href="#chapter-details">逐章详情</a>
+        <a class="button" href="#recommendations">修复建议</a>
+        <a class="text-link" href="/paper/">论文下载</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verdict Summary -->
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Summary</div>
+          <h2>审查结论摘要</h2>
+        </div>
+      </div>
+
+      <div class="verdict-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 24px;">
+        <div class="card" style="text-align: center; border-top: 3px solid #B83224;">
+          <div style="font-size: 2rem; font-weight: 700; color: #B83224;">{verdictStats.critical}</div>
+          <div style="color: var(--muted);">CRITICAL</div>
+          <div style="font-size: 0.8rem;">分类法根本不同</div>
+        </div>
+        <div class="card" style="text-align: center; border-top: 3px solid #B83224;">
+          <div style="font-size: 2rem; font-weight: 700; color: #B83224;">{verdictStats.divergent}</div>
+          <div style="color: var(--muted);">Divergent</div>
+          <div style="font-size: 0.8rem;">组织逻辑不同</div>
+        </div>
+        <div class="card" style="text-align: center; border-top: 3px solid #A56117;">
+          <div style="font-size: 2rem; font-weight: 700; color: #A56117;">{verdictStats.moderate}</div>
+          <div style="color: var(--muted);">Moderate</div>
+          <div style="font-size: 0.8rem;">命名/深度差异</div>
+        </div>
+        <div class="card" style="text-align: center; border-top: 3px solid #A56117;">
+          <div style="font-size: 2rem; font-weight: 700; color: #A56117;">{verdictStats.underMapped}</div>
+          <div style="color: var(--muted);">Under-mapped</div>
+          <div style="font-size: 0.8rem;">映射不完整</div>
+        </div>
+      </div>
+
+      <div class="card" style="border-left: 4px solid #B83224; padding: 24px;">
+        <h3 style="color: #B83224;">7/8 章节存在结构偏离</h3>
+        <p style="margin-top: 8px;">仅 Ch1 为部分映射（缺失 12 个 subsubsection），其余 7 章均存在不同程度的结构性偏离。最严重的是 Ch3（完全不同的分类法）和 Ch4（CN 是 EN 的 3 倍体积，含 43 个 subsubsection vs EN 的 0 个）。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Line Count Comparison Table -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Quantitative</div>
+          <h2>规模对比</h2>
+        </div>
+      </div>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--line);">
+              <th style="padding: 12px 8px; text-align: left;">章节</th>
+              <th style="padding: 12px 8px; text-align: right;">EN 行数</th>
+              <th style="padding: 12px 8px; text-align: right;">CN 行数</th>
+              <th style="padding: 12px 8px; text-align: right;">比例</th>
+              <th style="padding: 12px 8px; text-align: center;">EN 节</th>
+              <th style="padding: 12px 8px; text-align: center;">CN 节</th>
+              <th style="padding: 12px 8px; text-align: center;">EN 子节</th>
+              <th style="padding: 12px 8px; text-align: center;">CN 子节</th>
+              <th style="padding: 12px 8px; text-align: center;">判定</th>
+            </tr>
+          </thead>
+          <tbody>
+            {chapters.map((ch) => {
+              const ratio = Math.round((ch.cnLines / ch.enLines) * 100);
+              const ratioStr = ratio > 100 ? `${ratio}%` : `${ratio}%`;
+              return (
+                <tr style="border-bottom: 1px solid var(--line);">
+                  <td style="padding: 10px 8px; font-weight: 600;">{ch.title}</td>
+                  <td style="padding: 10px 8px; text-align: right;">{ch.enLines.toLocaleString()}</td>
+                  <td style="padding: 10px 8px; text-align: right;">{ch.cnLines.toLocaleString()}</td>
+                  <td style="padding: 10px 8px; text-align: right; font-weight: 600; color: ratio > 150 || ratio < 70 ? '#B83224' : ratio > 120 || ratio < 90 ? '#A56117' : 'var(--success)';">{ratioStr}</td>
+                  <td style="padding: 10px 8px; text-align: center;">{ch.enSections}</td>
+                  <td style="padding: 10px 8px; text-align: center;">{ch.cnSections}</td>
+                  <td style="padding: 10px 8px; text-align: center;">{ch.enSubsubs}</td>
+                  <td style="padding: 10px 8px; text-align: center; font-weight: 600; color: ch.cnSubsubs > ch.enSubsubs * 2 ? '#B83224' : 'inherit';">{ch.cnSubsubs}</td>
+                  <td style="padding: 10px 8px; text-align: center;">
+                    <span style={`display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; color: white; background: ${ch.verdictColor};`}>{ch.verdictLabel}</span>
+                  </td>
+                </tr>
+              );
+            })}
+            <tr style="border-top: 2px solid var(--line); font-weight: 700;">
+              <td style="padding: 12px 8px;">合计</td>
+              <td style="padding: 12px 8px; text-align: right;">{totals.enLines.toLocaleString()}</td>
+              <td style="padding: 12px 8px; text-align: right;">{totals.cnLines.toLocaleString()}</td>
+              <td style="padding: 12px 8px; text-align: right;">{Math.round((totals.cnLines / totals.enLines) * 100)}%</td>
+              <td style="padding: 12px 8px; text-align: center;">{totals.enSections}</td>
+              <td style="padding: 12px 8px; text-align: center;">{totals.cnSections}</td>
+              <td style="padding: 12px 8px; text-align: center;">{totals.enSubsubs}</td>
+              <td style="padding: 12px 8px; text-align: center;">{totals.cnSubsubs}</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chapter Details -->
+  <section class="section" id="chapter-details" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Chapter-by-Chapter</div>
+          <h2>逐章详细分析</h2>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        {chapters.map((ch) => (
+          <article class="card" style="border-left: 4px solid {ch.verdictColor};">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px;">
+              <div>
+                <h3 style="margin-bottom: 4px;">{ch.title}</h3>
+                <div style="font-size: 0.8rem; color: var(--muted);">
+                  <code>{ch.enFile}</code> → <code>{ch.cnFile}</code>
+                </div>
+              </div>
+              <span style={`padding: 4px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; color: white; background: ${ch.verdictColor};`}>{ch.verdictLabel}</span>
+            </div>
+
+            <p style="margin-top: 12px;">{ch.analysis}</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;">
+              <div>
+                <h4 style="font-size: 0.85rem; color: #B83224; margin-bottom: 8px;">CN 独有内容（EN 中不存在）</h4>
+                <ul style="font-size: 0.85rem; color: var(--muted); padding-left: 16px;">
+                  {ch.cnExtras.map((item) => (
+                    <li style="margin-bottom: 4px;">{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 style="font-size: 0.85rem; color: var(--success); margin-bottom: 8px;">EN 内容 CN 中缺失</h4>
+                <ul style="font-size: 0.85rem; color: var(--muted); padding-left: 16px;">
+                  {ch.cnMissing.map((item) => (
+                    <li style="margin-bottom: 4px;">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendations -->
+  <section class="section" id="recommendations">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Recommendations</div>
+          <h2>修复建议</h2>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        <div class="card" style="border-top: 3px solid #B83224;">
+          <h3>方案 1：完全重写</h3>
+          <div class="pill-row" style="margin: 8px 0;"><span class="pill" style="background: #B83224; color: white;">最高正确性</span><span class="pill">工作量最大</span></div>
+          <p>从 EN 逐节翻译，确保结构 1:1 对应。CN 独有内容移入附录或作为 Extended Version。需要约 40-60 小时工作量。</p>
+          <p style="font-size: 0.85rem; color: var(--muted); margin-top: 8px;">适用场景：投稿前最后校对。</p>
+        </div>
+        <div class="card" style="border-top: 3px solid #A56117;">
+          <h3>方案 2：对齐重构</h3>
+          <div class="pill-row" style="margin: 8px 0;"><span class="pill" style="background: #A56117; color: white;">平衡方案</span><span class="pill">中等工作量</span></div>
+          <p>保留 CN 已有内容，重构章节标题和小节组织以匹配 EN。额外内容保留但重新归位到 EN 对应位置或附录。</p>
+          <p style="font-size: 0.85rem; color: var(--muted); margin-top: 8px;">适用场景：快速修复 Iron Rule 违规。</p>
+        </div>
+        <div class="card" style="border-top: 3px solid var(--muted);">
+          <h3>方案 3：接受偏离</h3>
+          <div class="pill-row" style="margin: 8px 0;"><span class="pill" style="background: var(--muted); color: white;">违规</span><span class="pill">工作量最小</span></div>
+          <p>将 CN 文档标注为独立中文调查报告，与 EN 互为补充而非严格映射。</p>
+          <p style="font-size: 0.85rem; color: #B83224; margin-top: 8px;">注意：违反 Iron Rule #1（Single Source of Truth），不推荐。</p>
+        </div>
+      </div>
+
+      <div class="card" style="border-left: 4px solid var(--accent); padding: 24px; margin-top: 24px;">
+        <h3>优先级排序</h3>
+        <ol style="padding-left: 20px; line-height: 2;">
+          <li><strong>Ch3 (Methods)</strong>：必须修复 — 分类法完全不同，无法对齐阅读</li>
+          <li><strong>Ch4 (Systems)</strong>：必须修复 — 结构深度差异过大，CN 含重复节</li>
+          <li><strong>Ch6 (Frameworks)</strong>：必须修复 — 组织逻辑根本不同</li>
+          <li><strong>Ch2 (Taxonomy)</strong>：需要重构 — CN 多出 6 个 EN 不存在的节</li>
+          <li><strong>Ch7 (Pain Points)</strong>：需要重构 — English Recovery 块需要拆分归位</li>
+          <li><strong>Ch5 (Evaluation)</strong>：部分修复 — 命名和层级需对齐</li>
+          <li><strong>Ch8 (Future)</strong>：部分修复 — 主题方向需对齐</li>
+          <li><strong>Ch1 (Intro)</strong>：补充缺失 — 12 个 subsubsection 需翻译补入</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Iron Rule Reference -->
+  <section class="section">
+    <div class="container">
+      <div class="card" style="padding: 24px;">
+        <h3>Iron Rule #1: Single Source of Truth</h3>
+        <blockquote style="margin: 12px 0; padding: 12px 16px; border-left: 3px solid var(--accent); color: var(--muted);">
+          <code>paper-drafts/</code>（英文）是论文的唯一真实源。<code>survey/latex/</code>（中文）从英文版本严格映射，不是独立创作。修改中文时必须回溯英文源确认；修改英文时必须同步中文。
+        </blockquote>
+        <p style="font-size: 0.85rem; color: var(--muted);">此规则由用户于 2026-05-26 明确制定，不可覆盖。详见 CLAUDE.md Iron Rules 章节。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+        <a href="/paper/" class="card" style="text-decoration: none; color: inherit; border-top: 3px solid var(--caret-blue);">
+          <h3>论文下载</h3>
+          <p>中英文 PDF 和 LaTeX 源文件。</p>
+        </a>
+        <a href="/survey/" class="card" style="text-decoration: none; color: inherit; border-top: 3px solid var(--success);">
+          <h3>Survey 核心发现</h3>
+          <p>五大进化环、七大方法族、案例研究。</p>
+        </a>
+        <a href="/projects/" class="card" style="text-decoration: none; color: inherit; border-top: 3px solid var(--accent);">
+          <h3>项目索引</h3>
+          <p>348 个开源项目 Model Card。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  code {
+    background: var(--surface-3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+  }
+</style>
