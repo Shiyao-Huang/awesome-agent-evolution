@@ -1,0 +1,164 @@
+\section{Introduction}
+\label{sec:intro}
+
+The history of artificial intelligence is, at its core, a story of increasing autonomy. Early expert systems of the 1970s and 1980s---MYCIN for medical diagnosis, DENDRAL for chemical analysis, XCON for computer configuration---were entirely hand-crafted: every rule, every inference pathway, every piece of domain knowledge was explicitly encoded by human engineers. These systems were brittle, domain-specific, and entirely dependent on the completeness of their hand-coded knowledge bases. When confronted with cases that fell outside their rule sets, they failed silently or produced nonsensical results. The knowledge acquisition bottleneck---the difficulty of extracting and formalizing human expertise into machine-readable rules---proved to be the fundamental limitation of the expert systems paradigm. Feigenbaum's dictum that ``knowledge is power'' captured the era's philosophy: the power of an AI system was directly proportional to the amount of human knowledge it could be made to contain. The implicit assumption was that intelligence was primarily a matter of knowledge storage and retrieval, not of learning or adaptation.
+
+This assumption was challenged by the connectionist revival of the 1980s and 1990s. Neural networks---inspired by the biological brain's ability to learn from experience---offered an alternative paradigm: instead of encoding knowledge in explicit rules, encode it in the weights of a network that could be trained from data. The backpropagation algorithm~\citep{rumelhart1986backprop} provided an efficient method for training multi-layer networks, enabling them to learn complex input-output mappings. However, the neural networks of this era were limited by computational resources, dataset sizes, and the difficulty of training deep architectures. The ``AI winter'' of the late 1980s and 1990s saw reduced funding and interest in both symbolic and connectionist AI, as the promises of each paradigm proved difficult to realize in practice.
+
+The machine learning revolution of the 1990s and 2000s offered a fundamentally different approach: instead of hand-coding rules, let the machine discover patterns from data. Support vector machines, decision trees, and Bayesian networks could learn classification boundaries from labeled examples, automatically discovering decision rules that would have been tedious or impossible to specify by hand. Yet this shift introduced a new form of human dependency: the need for feature engineering. The performance of early ML systems was determined largely by the quality of the features---representations of the input data that made the learning problem tractable. A spam filter was only as good as the hand-crafted features that distinguished spam from legitimate email; a computer vision system was only as good as the edge detectors, color histograms, and texture descriptors that its engineers had designed.
+
+Deep learning, catalyzed by the breakthrough results of AlexNet on ImageNet in 2012, automated feature engineering itself. Convolutional neural networks learned hierarchical visual representations directly from raw pixels, eliminating the need for hand-designed features. Recurrent neural networks and later Transformer architectures similarly automated feature extraction for sequential and structured data. The deep learning paradigm shift was profound: the engineer's role moved from designing representations to designing architectures and training procedures. But a dependency remained---on architecture design, hyperparameter tuning, and the curation of large-scale training datasets.
+
+Large language models represent the latest and most dramatic step in this progression. Models like GPT-4, Gemini, Claude, and Llama, trained on trillions of tokens of text and code, have demonstrated remarkable capabilities across an extraordinary range of tasks---code generation, mathematical reasoning, creative writing, scientific analysis, multi-turn dialogue, and much more. The Transformer architecture~\citep{vaswani2017attention}, with its self-attention mechanism enabling parallel processing of sequential data, provided the architectural foundation. The scaling laws discovered by Kaplan et al.~\citep{kaplan2020scaling} revealed that model performance improves predictably with increases in model size, dataset size, and compute budget. Post-training alignment techniques---RLHF~\citep{ouyang2022rlhf}, Constitutional AI~\citep{bai2022constitutional}, DPO---have further refined these models, making them more helpful, harmless, and honest.
+
+The progression from expert systems to machine learning to deep learning to large language models represents a steady reduction in the amount of human engineering required to build capable AI systems. Expert systems required humans to specify every rule; machine learning required humans to design every feature; deep learning required humans to design every architecture; large language models required humans to design the training procedure and curate the data. Self-evolving AI represents the next step in this progression: reducing the need for human engineering in the improvement process itself.
+
+Yet even these powerful systems remain fundamentally static in a crucial sense: their capabilities are fixed at the moment of deployment. A GPT-4 model deployed in January 2024 has the same capabilities in December 2024; it does not learn from its interactions, improve from its mistakes, or evolve its strategies based on accumulated experience. Each conversation begins from the same baseline, with no memory of past successes or failures. This is a fundamental limitation: the most capable AI systems in history are, in a meaningful sense, unable to learn from experience.
+
+This limitation has given rise to a new frontier in AI research: \textbf{self-evolving AI systems}---systems that can autonomously improve their own capabilities through cycles of generation, evaluation, memory, and refinement. The emergence of self-evolving AI is not a single innovation but a convergence of multiple research streams: self-improvement methods from the LLM community, evolutionary computation enhanced by language models, automated machine learning (AutoML) extended with natural language interfaces, neural architecture search (NAS) powered by LLM-based search operators, and agent frameworks that accumulate and learn from operational experience.
+
+The breadth of this convergence is striking. When DeepMind's FunSearch~\citep{romera2024funsearch} discovers new mathematical constructions by evolving programs with LLMs, it is applying the same fundamental loop as Reflexion~\citep{shinn2023reflexion} improving code generation through linguistic self-reflection, as ADAS~\citep{hu2024adas} evolving agent architectures through automated search, and as AutoML-Agent~\citep{chen2024automlagent} synthesizing ML pipelines from natural language. The objects being improved differ---mathematical programs, code, agent architectures, ML pipelines---but the underlying structure of iterative generation, evaluation, memory formation, and improvement is the same. This isomorphism is the central insight of this survey.
+
+This survey provides the first comprehensive, cross-domain analysis of AI self-evolution. We propose a unified taxonomic framework---the \emph{Five Evolution Loops}---that captures the common structure underlying self-evolution systems across these diverse communities. We analyze 19+ open-source projects and 17+ core papers spanning all five domains, identifying patterns, gaps, and opportunities for cross-pollination.
+
+
+\subsection{What is AI Self-Evolution?}
+\label{sec:definition}
+
+We define \textbf{AI Self-Evolution} as the capability of an AI system to autonomously improve its performance on a target distribution of tasks through cycles of self-directed generation, evaluation, memory formation, and behavioral modification, without requiring external human annotation or manual intervention for each improvement cycle.
+
+This definition distinguishes self-evolving systems from several related but distinct concepts. We highlight four essential components, which we call the \textbf{GEMI framework}:
+
+\paragraph{Generation.}
+The system must generate candidate solutions or modifications to its own behavior. This can be formalized as a conditional distribution:
+\begin{equation}
+    x_{\text{new}} \sim G(\cdot \mid \mathcal{H}, \theta)
+\end{equation}
+where $G$ is the generator (e.g., an LLM), $\mathcal{H}$ is the history of past candidates and evaluations, and $\theta$ represents the generator's parameters or prompt configuration. The key requirement is that generation produces \emph{novelty}---candidates that differ from what has been tried before. The source of novelty varies: in Self-Refine, it comes from the LLM's stochastic sampling; in OPRO, from the LLM's ability to extrapolate from solution trajectories; in evolutionary systems, from mutation and crossover operators.
+
+\paragraph{Evaluation.}
+The system must evaluate candidate quality, providing the selection pressure that directs self-evolution:
+\begin{equation}
+    s = E(x, \mathcal{T}) \in \mathbb{R}^d
+\end{equation}
+where $x$ is the candidate, $\mathcal{T}$ is the evaluation specification (test suite, reward model, verification procedure), and $d$ is the number of evaluation dimensions. The quality of evaluation fundamentally bounds the quality of self-evolution: an imprecise evaluator introduces noise that misdirects improvement; a biased evaluator leads to reward hacking; an incomplete evaluator may approve candidates that fail on unmeasured dimensions. The history of self-evolving AI can be read as a history of increasingly sophisticated evaluation mechanisms.
+
+\paragraph{Memory.}
+The system must maintain memory of past experiences. Memory takes multiple forms: episodic (individual experiences, as in Reflexion's linguistic memory), semantic (abstracted principles, as in Constitutional AI's constitution), procedural (learned strategies, as in STaR's reasoning traces), and population (diverse candidate archives, as in AlphaEvolve's MAP-Elites).
+
+\paragraph{Improvement.}
+The system must translate evaluations and memory into actual performance gains:
+\begin{equation}
+    \mathbb{E}[s_{t+1}] > \mathbb{E}[s_t]
+\end{equation}
+Improvement can occur at multiple levels: output-level (Self-Refine), strategy-level (Reflexion), architecture-level (ADAS, AlphaEvolve), or meta-level (LLaMEA, Absolute Zero).
+
+Together, these form the GEMI cycle: Generation $\rightarrow$ Evaluation $\rightarrow$ Memory $\rightarrow$ Improvement $\rightarrow$ Generation. The cycle is self-reinforcing: better generation produces higher-quality candidates for evaluation; better evaluation provides more informative feedback for memory; richer memory enables more effective improvement.
+
+The GEMI framework also reveals a hierarchy of self-evolution levels: Level~1 (output improvement, e.g., Self-Refine), Level~2 (strategy improvement, e.g., Reflexion), Level~3 (architecture improvement, e.g., ADAS, AlphaEvolve), and Level~4 (meta-improvement, e.g., LLaMEA, Absolute Zero).
+
+
+\subsection{Distinction from Related Concepts}
+\label{sec:distinctions}
+
+\paragraph{Continual Learning.}
+Continual learning~\citep{parisi2019continual} addresses learning from non-stationary data streams without catastrophic forgetting. Self-evolution differs in being \emph{goal-driven} rather than \emph{data-driven}, in potentially modifying architectures and evaluation criteria (not just parameters), and in introducing \emph{self-directed} improvement. Techniques from continual learning (replay buffers, parameter isolation) are complementary building blocks for self-evolving systems.
+
+\paragraph{Online Learning.}
+Online learning~\citep{hazan2016introduction} updates parameters using well-defined gradient-based rules with theoretical regret bounds. Self-evolution may update any system component using diverse mechanisms (reflection, evolution, self-play), operates beyond fixed hypothesis classes, and currently lacks comparable theoretical foundations---an important open problem. However, self-evolving systems often exceed what online learning theory can guarantee, as demonstrated by Reflexion's ability to surpass GPT-4 using GPT-3.5.
+
+\paragraph{Self-Supervised Learning.}
+Self-supervised learning~\citep{liu2021selfsupervised} extracts learning signal from unlabeled data. It is a \emph{training paradigm}; self-evolution is a \emph{system-level capability}. The two are complementary: self-supervised learning can serve as the training mechanism within a self-evolving system (e.g., ReST-EM), but self-evolution encompasses much more, including self-play, reflection, and architectural modification.
+
+\paragraph{Meta-Learning.}
+Meta-learning~\citep{hospedales2021metalearning} improves learning efficiency within a fixed algorithm class. Self-evolution improves effectiveness across any system component, operates continuously during deployment, and can discover entirely new algorithms or strategies. MAML's learned initialization is analogous to Reflexion's linguistic memory---both encode transferable knowledge from prior experience.
+
+\paragraph{AutoML and NAS.}
+Traditional AutoML/NAS optimizes within a fixed search space. Self-evolving systems may modify the search space itself, continue improving indefinitely, and accumulate knowledge across tasks. Recent LLM-enhanced systems (AutoML-GPT, EvoPrompting, ADAS) represent convergence toward self-evolution.
+
+\paragraph{RLHF.}
+RLHF~\citep{ouyang2022rlhf} depends on human annotations. Self-evolving systems reduce this dependency by generating their own evaluation signals. Constitutional AI~\citep{bai2022constitutional} bridges the two, replacing human annotations with AI-generated critiques.
+
+
+\subsection{The Emergence of Self-Evolution Research}
+\label{sec:emergence}
+
+The modern era of AI self-evolution research has origins in six pivotal developments:
+
+\begin{enumerate}
+    \item \textbf{Capable LLMs (2020--2022):} GPT-3~\citep{brown2020gpt3} and Codex demonstrated that LLMs could serve as \emph{universal variation operators}---proposing modifications to any artifact expressible in natural language or code. Where traditional evolutionary algorithms required hand-designed mutation operators for each domain, LLMs perform \emph{informed variation}: reading a candidate, understanding its properties, and proposing targeted modifications based on evaluation history.
+
+    \item \textbf{The self-refinement paradigm (2023):} Self-Refine~\citep{madaan2023selfrefine} and Reflexion~\citep{shinn2023reflexion} demonstrated that LLMs could improve their own outputs without external training---Reflexion with GPT-3.5 achieving 91\% pass@1 on HumanEval, surpassing GPT-4's 80\%. This established that self-evolution was a viable path to capability enhancement without additional training.
+
+    \item \textbf{LLM-as-optimizer (2023):} OPRO~\citep{yang2023opro} showed LLMs could serve as general-purpose optimizers. The meta-prompt structure---encoding the optimization trajectory as instruction-score pairs---became a standard pattern adopted by EvoPrompt, AlphaEvolve, and OpenEvolve.
+
+    \item \textbf{Mathematical discovery (2023--2024):} FunSearch~\citep{romera2024funsearch}, published in Nature, demonstrated that self-evolving AI could produce genuine mathematical discoveries exceeding human expert capability---the first improvement over Strassen's matrix multiplication algorithm in over 50 years.
+
+    \item \textbf{Agent architecture search (2024):} ADAS~\citep{hu2024adas} extended self-evolution from optimizing within fixed architectures to optimizing the architectures themselves, discovering designs that human researchers had not explored.
+
+    \item \textbf{Integrated systems (2024--2025):} AlphaEvolve~\citep{novikov2025alphaevolve} (48-multiplication for $4\times4$ complex matrices, 0.7\% Borg compute recovery, 23\% FlashAttention speedup), DGM~\citep{zhang2025dgm} (50\% SWE-bench), and Absolute Zero~\citep{zhao2025absolutezero} (SOTA at 7B scale with zero external data) represent the most integrated self-evolution systems.
+\end{enumerate}
+
+These developments occurred across five converging communities: AutoML (pipeline automation), NAS (architecture search), LLM self-improvement (output and parameter enhancement), evolutionary computation (population-based optimization), and agent frameworks (system-level evolution). Each independently discovered the GEMI cycle structure.
+
+
+\subsection{Related Surveys}
+\label{sec:related_surveys}
+
+Several surveys examine aspects of AI self-improvement. The Survey on Self-Evolution of Large Language Models~\citep{zeng2024selfevolution_survey} organizes LLM self-evolution into four stages but does not consider evolutionary computation, AutoML/NAS, or agent frameworks. The LLM Agent Survey~\citep{wang2024llm_agents_survey} covers agent architectures but treats self-improvement as secondary. AutoML surveys~\citep{hutter2019automl} cover traditional methods but not the LLM convergence. The Evo+LLM Survey~\citep{wang2024evo_llm_survey} covers evolutionary computation with LLMs but not other communities. Prompt optimization surveys treat their topic as one instantiation of the Search Loop.
+
+No existing survey provides a unified, cross-domain analysis spanning all five communities with a common taxonomic framework and project ecosystem analysis.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Comparison with related surveys.}
+\label{tab:survey_comparison}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Survey} & \textbf{Cross-Domain} & \textbf{Unified} & \textbf{Project} & \textbf{Infrastructure} & \textbf{Open Problems} \\
+\midrule
+LLM Self-Evolution & \textasciitilde & \checkmark & & & \checkmark \\
+LLM Agent Survey & & & & & \\
+AutoML Surveys & & \checkmark & & & \checkmark \\
+Evo+LLM Survey & \textasciitilde & & & & \checkmark \\
+\textbf{Our Survey} & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\subsection{Contributions}
+\label{sec:contributions}
+
+\begin{enumerate}
+    \item \textbf{Unified taxonomy (Section~\ref{sec:taxonomy}):} The Five Evolution Loops---Specification-to-Execution, Search, Evaluator, Reflection, and Population---providing a common language across domains with formal definitions, representative systems, algorithmic formalizations, and cross-loop interaction analyses.
+    \item \textbf{Comprehensive method analysis (Section~\ref{sec:methods}):} Detailed analyses of inference-time (Self-Refine, Reflexion, Self-Debug) and training-time (STaR, SPIN, ReST-EM, Constitutional AI) methods with formal descriptions, benchmark data, and limitations.
+    \item \textbf{Evolutionary code discovery (Section~\ref{sec:evolutionary}):} Analysis of OPRO, FunSearch, AlphaEvolve, and open-source implementations with benchmark results.
+    \item \textbf{Self-evolving agents (Section~\ref{sec:agents}):} Survey of ADAS, G\"odel Agent, DGM, AgentEvolver, and Absolute Zero.
+    \item \textbf{Cross-domain perspective (Sections~\ref{sec:automl}--\ref{sec:landscape}):} First systematic analysis across all five communities with author networks and project ecosystem analysis.
+    \item \textbf{Open problems (Section~\ref{sec:future}):} Evaluation bottleneck, memory stability, safety and alignment, composability, and research-to-production gap.
+\end{enumerate}
+
+
+\subsection{Key Findings Preview}
+\label{sec:key_findings}
+
+\paragraph{Finding 1: The Reflection Loop is uniquely LLM-native.} It has no direct analogue in classical optimization or evolutionary computation, making it the most distinctive contribution of the LLM era.
+
+\paragraph{Finding 2: The Evaluator Loop is the primary bottleneck.} The quality of self-evolution is fundamentally bounded by the quality of evaluation. The most impactful advances have been driven by evaluation improvements.
+
+\paragraph{Finding 3: Population-based methods outperform single-trajectory methods} for complex, multi-modal search spaces, as demonstrated by AlphaEvolve and DGM.
+
+\paragraph{Finding 4: Cross-domain transfer is accelerating but underleveraged.} Techniques developed in one community are increasingly adopted by others, but this transfer is largely ad hoc.
+
+\paragraph{Finding 5: Safety considerations are insufficiently addressed.} Current systems lack robust mechanisms for ensuring self-evolution preserves safety properties.
+
+\paragraph{Finding 6: The research-to-production gap remains large.} Infrastructure for reliable self-evolution (persistent memory, evaluation pipelines, regression testing, lineage tracking) is largely absent from current agent frameworks.
+
+
+\subsection{Paper Organization}
+\label{sec:organization}
+
+\textbf{Section~\ref{sec:taxonomy}} introduces the Five Evolution Loops taxonomy with formal definitions and cross-domain mapping. \textbf{Section~\ref{sec:methods}} provides detailed analysis of self-improvement methods. \textbf{Section~\ref{sec:evolutionary}} examines evolutionary code and algorithm discovery. \textbf{Section~\ref{sec:agents}} surveys self-evolving agent systems. \textbf{Sections~\ref{sec:frameworks}--\ref{sec:automl}} analyze frameworks, AutoML/NAS, and the research landscape. \textbf{Section~\ref{sec:future}} identifies open problems and future directions.
+

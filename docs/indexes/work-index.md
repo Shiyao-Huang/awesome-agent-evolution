@@ -10,15 +10,13 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `paper-drafts` | present | 30 | 2 | 0 | 2.2 MB |
-| `paper` | missing | 0 | 0 | 0 | 0 B |
-| `latex` | missing | 0 | 0 | 0 | 0 B |
-| `site` | present | 1094 | 258 | 0 | 27 MB |
+| `paper-drafts` | present | 31 | 2 | 0 | 2.3 MB |
+| `paper` | present | 15 | 2 | 0 | 1023 KB |
+| `latex` | present | 9 | 2 | 0 | 53 KB |
+| `site` | present | 1096 | 259 | 0 | 27 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
 | `scripts` | present | 23 | 1 | 0 | 460 KB |
 | `data-engine` | present | 479 | 18 | 0 | 5.9 MB |
-| `work/research` | present | 47 | 1 | 0 | 1.2 MB |
-| `work/wiki` | present | 46 | 5 | 0 | 500 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files
@@ -32,9 +30,34 @@
 - `paper-drafts/ch1-intro.tex`
 - `paper-drafts/ch2-taxonomy.tex`
 - `paper-drafts/ch3-methods.tex`
+- `paper-drafts/ch3-methods.tex.bak`
 - `paper-drafts/ch4-evolutionary.tex`
 - `paper-drafts/ch5-evaluation.tex`
-- `paper-drafts/ch6-frameworks.tex`
+
+### `paper`
+
+- `paper/main.pdf`
+- `paper/main.tex`
+- `paper/references.bib`
+- `paper/sections/benchmark_self_improvement.tex`
+- `paper/sections/sec10_conclusion.tex`
+- `paper/sections/sec1_intro.tex`
+- `paper/sections/sec2_taxonomy.tex`
+- `paper/sections/sec3-self-improvement.tex`
+- `paper/sections/sec3_methods.tex`
+- `paper/sections/sec3_methods_final.tex`
+
+### `latex`
+
+- `latex/chapters/ch1-intro.tex`
+- `latex/chapters/ch2-theory.tex`
+- `latex/chapters/ch3-methods.tex`
+- `latex/chapters/ch4-systems.tex`
+- `latex/chapters/ch5-evaluation.tex`
+- `latex/chapters/ch6-industry.tex`
+- `latex/chapters/ch7-painpoints.tex`
+- `latex/chapters/ch8-future.tex`
+- `latex/main.tex`
 
 ### `site`
 

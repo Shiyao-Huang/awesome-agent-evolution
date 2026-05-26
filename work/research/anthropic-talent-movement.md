@@ -45,7 +45,7 @@ Anthropic 定位为安全导向的 AI 实验室，2024-2026 年间从基础模�
 
 | 人物 | 背景 | 加入 Anthropic | 角色/方向 | 自进化关联 |
 |---|---|---|---|---|
-| **Andrej Karpathy** | OpenAI 联合创始人 → Tesla AI 总监 → Eureka Labs 创始人 | 2025 | 领导 Claude 预训练研究 | 间接：预训练能力是所有进化方法的基础设施；Karpathy 在 AI 教育和 Auto-regressive 模型上的积累可被视为 M5 (Skill Evolution) 的上游 |
+| **Andrej Karpathy** | OpenAI 联合创始人 → Tesla AI 总监 → Eureka Labs 创始人 | **2026-05-19** (确认) | 在 Nick Joseph 领导下建立新团队，用 Claude 加速预训练研究 | 直接："using AI to accelerate AI training" = M1 (Search) + M4 (Code) 自改进循环。Claude→Claude 复合加速。$40B 估值背景。[explainx.ai](https://explainx.ai/blog/andrej-karpathy-joins-anthropic-pre-training-2026) |
 
 ### 2.2 重要离开
 

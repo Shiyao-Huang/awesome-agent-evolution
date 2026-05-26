@@ -15,9 +15,9 @@
 | `projects` | present | 25764 | 2882 | 0 | 2.9 GB |
 | `paper-reviews` | present | 171 | 1 | 0 | 1.6 MB |
 | `academic-reviews` | missing | 0 | 0 | 0 | 0 B |
-| `papers` | missing | 0 | 0 | 0 | 0 B |
+| `papers` | present | 3 | 2 | 0 | 16 KB |
 | `cc-materials` | missing | 0 | 0 | 0 | 0 B |
-| `review` | missing | 0 | 0 | 0 | 0 B |
+| `review` | present | 3 | 2 | 0 | 27 KB |
 
 ## Representative Files
 
@@ -46,9 +46,6 @@
 - `research/author-network.md`
 - `research/blog-author-anysearch-validation.md`
 - `research/blog-author-profiles-all.csv`
-- `research/repo-classification.csv` — GitHub repo evolution classification (CSV)
-- `research/repo-classification.json` — GitHub repo evolution classification (JSON)
-- `research/repo-classification.md` — GitHub repo evolution classification (report)
 
 ### `projects`
 
@@ -75,3 +72,15 @@
 - `paper-reviews/08-2304.03442-review.md`
 - `paper-reviews/09-2305-14325-review.md`
 - `paper-reviews/10-2305-16291-review.md`
+
+### `papers`
+
+- `papers/README.md`
+- `papers/cross-domain/README.md`
+- `papers/cross-domain/relationship-map.mmd`
+
+### `review`
+
+- `review/quality-report.md`
+- `review/reports/gitnexus-agent-evolution-review-ZH.md`
+- `review/reports/gitnexus-agent-evolution-review.md`

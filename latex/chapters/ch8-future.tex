@@ -1,0 +1,120 @@
+\section{未来方向与展望}
+\label{ch:future}
+
+\subsection{本章概述}
+
+Agent Evolution的未来不是简单让Agent更``自主''，而是让自主性进入可验证、可协作、可治理、可迁移的工程框架。未来十年的关键问题是``能否形成可复用的自进化基础设施''。
+
+% ====================================================================
+% 图8.1: 未来研究路线图
+% ====================================================================
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    phase/.style={rectangle, rounded corners=8pt, draw=#1!70!black, fill=#1!10,
+        text width=4cm, minimum height=3cm, align=center, font=\small},
+    arr/.style={-{Stealth[length=4mm]}, very thick, color=gray!50},
+    note/.style={font=\scriptsize, color=gray!50, text width=3.5cm, align=left},
+]
+    % Phase 1
+    \node[phase=cat1] (p1) at (0,0) {};
+    \node[font=\bfseries\small, color=cat1!70!black] at (0,1) {Phase 1: 基础设施};
+    \node[note] at (0,0) {
+        $\bullet$ 程序化验证器\\
+        $\bullet$ 记忆资产管理\\
+        $\bullet$ 变体Archive\\
+        $\bullet$ 成本预算门控
+    };
+
+    % Phase 2
+    \node[phase=cat3] (p2) at (5.5,0) {};
+    \node[font=\bfseries\small, color=cat3!70!black] at (5.5,1) {Phase 2: 分级自治};
+    \node[note] at (5.5,0) {
+        $\bullet$ 低风险自动改进\\
+        $\bullet$ 中风险灰度评估\\
+        $\bullet$ 高风险人工批准\\
+        $\bullet$ 多Agent协同进化
+    };
+
+    % Phase 3
+    \node[phase=cat4] (p3) at (11,0) {};
+    \node[font=\bfseries\small, color=cat4!70!black] at (11,1) {Phase 3: 开放式进化};
+    \node[note] at (11,0) {
+        $\bullet$ 跨域迁移评估\\
+        $\bullet$ 生态级Archive共享\\
+        $\bullet$ 可证明安全边界\\
+        $\bullet$ 人机协同治理
+    };
+
+    % Arrows
+    \draw[arr] (p1) -- (p2);
+    \draw[arr] (p2) -- (p3);
+
+    % Time labels
+    \node[font=\scriptsize, color=gray!40] at (0,-2.2) {2026--2027};
+    \node[font=\scriptsize, color=gray!40] at (5.5,-2.2) {2027--2029};
+    \node[font=\scriptsize, color=gray!40] at (11,-2.2) {2029+};
+
+\end{tikzpicture}
+\caption{Agent Evolution未来研究路线图。Phase 1聚焦基础设施（验证器、记忆、Archive），Phase 2推进分级自治，Phase 3迈向开放式跨域进化。}
+\label{fig:roadmap}
+\end{figure}
+
+% ====================================================================
+% 图8.2: 自进化基础设施架构
+% ====================================================================
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    comp/.style={rectangle, rounded corners=5pt, draw=#1!70!black, fill=#1!12,
+        text width=3.2cm, minimum height=1.2cm, align=center, font=\small},
+    arr/.style={-{Stealth[length=2.5mm]}, thick, color=gray!50},
+]
+    % Top: Agent layer
+    \node[comp=cat4, minimum width=10cm] (agent) at (4,4) {\textbf{Agent执行层}\\任务执行, 工具调用, 环境交互};
+
+    % Middle: Evolution layer
+    \node[comp=cat2] (gen) at (0,1.5) {生成器\\LLM变异,\\代码Patch};
+    \node[comp=cat1] (eval) at (4,1.5) {评估器\\Benchmark,\\Judge, Sandbox};
+    \node[comp=cat3] (sel) at (8,1.5) {选择器\\Archive管理,\\多样性保持};
+
+    % Bottom: Infrastructure
+    \node[comp=cat5] (mem) at (0,-1.5) {记忆层\\经验库, 技能库,\\原则库};
+    \node[comp=painmed] (safety) at (4,-1.5) {安全层\\权限, 预算,\\回滚, 审计};
+    \node[comp=cat6] (cost) at (8,-1.5) {成本层\\Token预算,\\API限制, 监控};
+
+    % Connections
+    \draw[arr] (agent) -- (gen);
+    \draw[arr] (agent) -- (eval);
+    \draw[arr] (agent) -- (sel);
+    \draw[arr] (gen) -- (eval);
+    \draw[arr] (eval) -- (sel);
+    \draw[arr] (sel.south) -- ++(0,-0.3) -| (gen.south);
+    \draw[arr] (mem) -- (gen);
+    \draw[arr] (safety) -- (eval);
+    \draw[arr] (cost) -- (sel);
+
+\end{tikzpicture}
+\caption{未来自进化基础设施参考架构。三层设计：执行层（Agent行为）、进化层（生成—评估—选择循环）、基础设施层（记忆/安全/成本）。每层独立可审计。}
+\label{fig:infra-arch}
+\end{figure}
+
+\subsection{自动化验证器}
+
+验证器是Agent Evolution从人工调参走向真正闭环的首要条件。四类验证器：（1）确定性程序验证（测试、lint、sandbox）；（2）模型辅助验证（judge、debate、meta-judge）；（3）交互式环境验证（WebArena、AppWorld）；（4）安全与成本验证（权限检查、预算上限）。
+
+\subsection{多Agent协同进化}
+
+未来多Agent系统应超越``角色扮演''，强调异质性：不同模型、不同工具、不同检索源、不同评价标准。协同进化的三种形态：（1）生成者—验证者共进化；（2）archive-based生态搜索；（3）组织级协同。
+
+\subsection{安全可控的自进化机制}
+
+安全可控是自进化Agent能否进入生产的前提。分级自治原则：低风险组件自动改进，中风险策略灰度评估，高风险代码/权限/目标函数修改必须人工批准。
+
+\subsection{跨域迁移与通用性}
+
+当前自进化系统多为benchmark-specific改进。未来需要跨任务、跨环境、跨模型的迁移评估，以及公共``Agent Evolution Hub''共享失败样本、验证器和安全规则。
+
+\subsection{从Agent Evolution到AGI}
+
+Agent Evolution不是AGI的充分条件，但可能是必要条件。自修改、自评估、自改进的工程化能力，加上开放式探索和价值对齐，构成通向更通用智能的候选路径。

@@ -1,0 +1,170 @@
+% ====================================================================
+% 第4章：核心系统深度分析（LaTeX版本，含TikZ图）
+% ====================================================================
+
+\section{核心系统深度分析}\label{ch:systems}
+
+\subsection{本章概述}
+
+本章选择六个代表性系统进行深度分析：DGM、ADAS、AlphaEvolve、Voyager/Reflexion、Self-Rewarding LM，并在最后给出系统对比矩阵。这些系统覆盖了当前自进化研究的主要对象层级：代码、架构、算法、技能、记忆、奖励模型。
+
+% --- DGM 核心闭环图 ---
+\subsection{DGM（Darwin Gödel Machine）：自进化架构}
+
+DGM是当前最接近"agent修改自身"的代表系统。它用经验评估替代形式证明，用Darwinian evolution和open-endedness替代单一路径的贪婪优化。
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  box/.style={rectangle, rounded corners=4pt, draw=#1, fill=#1!10,
+    text width=32mm, align=center, font=\small\bfseries,
+    minimum height=14mm, drop shadow={shadow xshift=1pt, shadow yshift=-1pt}},
+  arr/.style={-Stealth, thick, #1},
+  lbl/.style={font=\scriptsize, text=gray!70, align=center}
+]
+\node[box=cat1] (archive) at (0,0) {Agent Archive\\（变体库）};
+\node[box=cat5] (sample) at (4.5,0) {采样父代\\（选择压力）};
+\node[box=cat2] (modify) at (9,0) {LLM生成变体\\（代码修改）};
+\node[box=cat3] (eval) at (9,-3.5) {沙箱评估\\（Benchmark）};
+\node[box=cat4] (filter) at (4.5,-3.5) {筛选与归档\\（质量门控）};
+\node[box=cat6] (meta) at (0,-3.5) {经验蒸馏\\（策略提取）};
+
+\draw[arr=cat1] (archive) -- node[above, lbl]{采样策略} (sample);
+\draw[arr=cat5] (sample) -- node[above, lbl]{代码diff} (modify);
+\draw[arr=cat2] (modify) -- node[right, lbl]{隔离\\执行} (eval);
+\draw[arr=cat3] (eval) -- node[above, lbl]{通过/丢弃} (filter);
+\draw[arr=cat4] (filter) -- node[above, lbl]{归档更新} (meta);
+\draw[arr=cat6] (meta) -- node[left, lbl]{策略\\反馈} (archive);
+
+\node[font=\footnotesize, text=gray!50, align=center] at (4.5, 1.5)
+  {开放式进化：保留stepping stones，\\而非仅保留最优个体};
+\end{tikzpicture}
+\caption{DGM自进化闭环。从变体库中采样父代，通过LLM生成代码变体，在沙箱中执行SWE-bench/Polyglot评估，筛选成功变体归档，并蒸馏经验策略反馈至下一轮。}
+\label{fig:ch4-dgm-loop}
+\end{figure}
+
+DGM在编码能力上取得显著提升：SWE-bench从20.0\%提升到50.0\%，Polyglot从14.2\%提升到30.7\%。但评估成本高、benchmark specificity风险、安全沙箱要求严格。
+
+\subsection{ADAS：自动架构搜索}
+
+ADAS提出Automated Design of Agentic Systems，让meta agent用Python编写新agent architecture。由于Python是图灵完备的，搜索空间理论上包含任意agent控制流。重要发现：跨域和跨模型的可迁移性。
+
+\subsection{AlphaEvolve：进化计算+LLM}
+
+AlphaEvolve通过LLM生成代码变体、程序化evaluator评分、迭代选择与改写，在矩阵乘法（Strassen算法改进）、数据中心调度、硬件设计中发现高价值候选。
+
+\subsection{Voyager/Reflexion：经验驱动自我改进}
+
+\textbf{Voyager}实现Minecraft中的终身学习：自动课程最大化探索，技能库存储可复用代码，迭代提示机制生成执行控制。结果：3.3x更多独特物品，15.3x更快技术树里程碑。
+
+\textbf{Reflexion}将actor、evaluator和self-reflection分离：失败被压缩为自然语言经验并存入情景记忆。91\% pass@1 on HumanEval。
+
+\subsection{Self-Rewarding LM：自奖励语言模型}
+
+统一模型同时作为policy和reward model，用Iterative DPO进行多轮偏好优化。Llama-3-8B经Meta-Rewarding后AlpacaEval 2.0从22.9\%提升到39.4\%。关键局限：长度偏差和奖励黑客。
+
+\subsection{系统对比矩阵}\label{sec:system-compare}
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l
+  >{\centering\arraybackslash}p{18mm}
+  >{\centering\arraybackslash}p{18mm}
+  >{\centering\arraybackslash}p{18mm}
+  >{\centering\arraybackslash}p{16mm}
+  >{\centering\arraybackslash}p{16mm}
+  >{\centering\arraybackslash}p{16mm}
+  >{\centering\arraybackslash}p{16mm}
+  >{\centering\arraybackslash}p{16mm}}
+\toprule
+\textbf{系统} & \textbf{进化对象} & \textbf{生成方式} & \textbf{验证方式} & \textbf{开放性} & \textbf{可迁移} & \textbf{部署难度} & \textbf{安全风险} & \textbf{评分} \\
+\midrule
+DGM & Agent代码 & LLM代码修改 & Benchmark & ★★★★ & ★★★ & ★★★★ & ★★★★★ & 4.0 \\
+ADAS & Agent架构 & MetaAgent搜索 & 任务评估 & ★★★ & ★★★★ & ★★★ & ★★★ & 4.0 \\
+AlphaEvolve & 目标程序 & LLM+GA进化 & 程序化Eval & ★★★★ & ★★ & ★★★ & ★★ & 4.5 \\
+Voyager & 技能库 & LLM+课程 & 环境交互 & ★★★★★ & ★★ & ★★ & ★ & 4.25 \\
+Reflexion & 语言记忆 & 自我反思 & 环境反馈 & ★★ & ★★★★ & ★ & ★ & 4.25 \\
+Self-Rewarding & 模型权重 & Iterative DPO & 自评+外部 & ★★ & ★★★ & ★★★ & ★★★ & 3.75 \\
+\bottomrule
+\end{tabular}%
+}
+\caption{六大核心系统对比矩阵。开放性指探索广度，可迁移性指跨域泛化能力，部署难度和安全风险按1--5级评估。}
+\label{fig:ch4-system-compare}
+\end{figure}
+
+% --- 能力层级图 ---
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  level/.style={rectangle, rounded corners=3pt, draw=#1, fill=#1!10,
+    text width=100mm, align=center, minimum height=11mm, font=\small},
+  arr/.style={-Stealth, thick, gray!40}
+]
+\node[level=gray] (l0) at (0, 0) {\textbf{Level 0:} 冻结Agent — 无自改进};
+\node[level=cat3] (l1) at (0, 1.6) {\textbf{Level 1:} 提示词进化 — Self-Refine, Reflexion, ACE};
+\node[level=cat1] (l2) at (0, 3.2) {\textbf{Level 2:} 策略/权重进化 — STaR, Self-Rewarding, RISE};
+\node[level=cat4] (l3) at (0, 4.8) {\textbf{Level 3:} 架构/技能进化 — ADAS, Voyager, Memory-R1};
+\node[level=cat5] (l4) at (0, 6.4) {\textbf{Level 4:} 代码自进化 — DGM, Gödel Agent, SICA};
+\node[level=cat2] (l5) at (0, 8.0) {\textbf{Level 5:} 递归自进化 — 自我指涉+开放式（理论阶段）};
+
+\draw[arr] (l0) -- (l1);
+\draw[arr] (l1) -- (l2);
+\draw[arr] (l2) -- (l3);
+\draw[arr] (l3) -- (l4);
+\draw[arr] (l4) -- (l5);
+
+\node[font=\scriptsize, text=gray, align=left] at (7, 0) {安全: ★★★★★};
+\node[font=\scriptsize, text=gray, align=left] at (7, 1.6) {安全: ★★★★};
+\node[font=\scriptsize, text=gray, align=left] at (7, 3.2) {安全: ★★★};
+\node[font=\scriptsize, text=gray, align=left] at (7, 4.8) {安全: ★★};
+\node[font=\scriptsize, text=gray, align=left] at (7, 6.4) {安全: ★};
+\node[font=\scriptsize, text=gray, align=left] at (7, 8.0) {安全: ?};
+
+\end{tikzpicture}
+\caption{Agent Self-Evolution能力层级。从Level 0（冻结系统）到Level 5（递归自进化），层级越高改进潜力越大，但安全控制难度也指数级增长。}
+\label{fig:ch4-levels}
+\end{figure}
+
+% --- 技术演进时间线 ---
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  yearnode/.style={circle, draw=cat1, fill=cat1!15, font=\small\bfseries,
+    minimum size=10mm, inner sep=0pt},
+  eventnode/.style={rectangle, rounded corners=2pt, draw=gray!50, fill=white,
+    text width=30mm, align=center, font=\scriptsize, inner sep=3pt,
+    drop shadow={shadow xshift=0.5pt, shadow yshift=-0.5pt}},
+  conn/.style={-Stealth, thick, gray!50}
+]
+\draw[very thick, gray!30] (0,0) -- (14,0);
+
+\foreach \x/\yr in {0/2023, 2.5/2024, 5/2024.5, 7.5/2025, 10/2025.5, 12.5/2026} {
+  \node[yearnode] at (\x, 0) {\yr};
+}
+
+\node[eventnode, above=8mm] at (0, 0) {Reflexion\\91\% HumanEval};
+\node[eventnode, above=8mm] at (2.5, 0) {Voyager\\3.3x探索加速};
+\node[eventnode, above=8mm] at (5, 0) {Self-Rewarding\\Iterative DPO};
+\node[eventnode, above=8mm] at (7.5, 0) {ADAS\\自动架构搜索};
+\node[eventnode, above=8mm] at (10, 0) {AlphaEvolve\\Strassen改进};
+\node[eventnode, above=8mm] at (12.5, 0) {DGM\\SWE-bench 50\%};
+
+\foreach \x in {0, 2.5, 5, 7.5, 10, 12.5} {
+  \draw[conn] (\x, 0.5) -- (\x, 0.15);
+}
+
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}]
+  (-0.5, -0.8) -- (3.5, -0.8) node[midway, below=6pt, font=\scriptsize]
+  {Phase 1: 反思与经验};
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}]
+  (4, -0.8) -- (9, -0.8) node[midway, below=6pt, font=\scriptsize]
+  {Phase 2: 架构搜索与自博弈};
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}]
+  (9.5, -0.8) -- (13.5, -0.8) node[midway, below=6pt, font=\scriptsize]
+  {Phase 3: 代码级自进化};
+
+\end{tikzpicture}
+\caption{Agent Self-Evolution技术演进时间线（2023--2026）。}
+\label{fig:ch4-timeline}
+\end{figure}

@@ -1,0 +1,166 @@
+% ====================================================================
+% 第3章：方法分类（LaTeX版本，含TikZ图）
+% ====================================================================
+
+\section{方法分类}\label{ch:methods}
+
+\subsection{本章概述}
+
+Agent Evolution 方法众多，名称也不统一。本章按"主要选择压力与主要可变对象"进行分类：基于奖励的进化主要优化策略或行为分布；自博弈进化主要生成任务、对手和验证信号；提示词进化主要改变上下文、反思、原则和输出修订流程；架构搜索主要改变代码、工具、控制流和多智能体拓扑；基于记忆的进化主要改变长期经验、技能库和检索策略；混合方法则把多种机制组合成端到端闭环。
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  level 1/.style={sibling distance=42mm, level distance=22mm},
+  level 2/.style={sibling distance=22mm, level distance=20mm},
+  root/.style={rectangle, rounded corners, draw=cat1, fill=cat1!10,
+    text width=60mm, align=center, font=\bfseries, minimum height=10mm},
+  cat/.style={rectangle, rounded corners, draw=#1, fill=#1!8,
+    text width=30mm, align=center, font=\small\bfseries, minimum height=8mm},
+  paper/.style={rectangle, rounded corners, draw=gray!60, fill=gray!5,
+    text width=26mm, align=left, font=\scriptsize, inner sep=2pt},
+  edge from parent/.style={draw, -Stealth, thick, gray!70}
+]
+\node[root] {Agent Self-Evolution\\方法分类}
+  child {
+    node[cat=cat5] {3.1 基于奖励\\的进化}
+    child { node[paper] {STaR, Self-Rewarding\\Meta-Rewarding\\RISE, Agent-R} }
+    child { node[paper] {RAGEN, IterAlign\\SICA, DGM} }
+  }
+  child {
+    node[cat=cat2] {3.2 自博弈\\进化}
+    child { node[paper] {Absolute Zero\\SPIRAL} }
+    child { node[paper] {Multi-Agent Debate\\Self-Play FT} }
+  }
+  child {
+    node[cat=cat3] {3.3 提示词\\进化}
+    child { node[paper] {Reflexion, ExpeL\\Self-Refine} }
+    child { node[paper] {ACE, ICE, EvolveR\\ReasoningBank} }
+  }
+  child {
+    node[cat=cat4] {3.4 架构\\搜索}
+    child { node[paper] {ADAS, Gödel Agent\\DGM, SICA} }
+    child { node[paper] {EvoMAC, AlphaEvolve\\FunSearch} }
+  }
+  child {
+    node[cat=cat5] {3.5 记忆\\进化}
+    child { node[paper] {Voyager, Memory-R1\\AriadneMem} }
+    child { node[paper] {SEDM, A-Mem\\Memento} }
+  }
+  child {
+    node[cat=cat6] {3.6 混合\\方法}
+    child { node[paper] {EvolveR (全生命周期)\\WebEvolver} }
+    child { node[paper] {HyperAgents\\EvoAgentX} }
+  };
+\end{tikzpicture}
+\caption{Agent Self-Evolution 方法分类体系。六大类别按主要选择压力和可变对象划分。}
+\label{fig:ch3-taxonomy}
+\end{figure}
+
+\subsection{基于奖励的进化}\label{sec:reward}
+
+基于奖励的进化是最接近传统强化学习和后训练的一类方法。核心思想是：把智能体交互轨迹、推理过程或输出结果映射为标量或偏好信号，再通过策略优化、偏好学习、筛选微调或archive selection使后续行为更可能获得高奖励。
+
+\subsubsection{代表系统}
+
+\textbf{STaR}（Self-Taught Reasoner）是早期代表。它把"模型自己生成可学习材料"组织成闭环：生成、验证、训练、再生成。虽然它主要作用于推理链和模型权重，但其bootstrapping逻辑成为后续自演化研究的基础模板。
+
+\textbf{Self-Rewarding Language Models} 把奖励信号进一步内生化。系统让同一个模型既生成候选回答，又作为judge评价候选，并用Iterative DPO进行多轮偏好优化。\textbf{Meta-Rewarding}进一步区分actor、judge和meta-judge，让模型不仅评价回答，还评价评价本身。
+
+\textbf{RISE}将单轮问题改写为多轮MDP，让模型学习在测试时递归自省和修正。其关键是把"再想一轮"从prompt trick变成可训练策略。
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  box/.style={rectangle, rounded corners=3pt, draw=#1, fill=#1!10,
+    text width=35mm, align=center, font=\small, minimum height=12mm},
+  arr/.style={-Stealth, thick, gray!60}
+]
+\node[box=cat1] (gen) at (0,0) {生成候选\\(Actor)};
+\node[box=cat2] (judge) at (4.5,0) {自评/外部评估\\(Judge/Meta-Judge)};
+\node[box=cat3] (train) at (9,0) {偏好优化\\(DPO/GRPO)};
+\node[box=cat4] (iter) at (4.5,-2.2) {迭代更新\\(权重/策略)};
+
+\draw[arr] (gen) -- (judge);
+\draw[arr] (judge) -- (train);
+\draw[arr] (train) -- (iter);
+\draw[arr] (iter.west) -| (gen.south);
+
+\node[font=\scriptsize, text=gray] at (2.2, 0.6) {候选+分数};
+\node[font=\scriptsize, text=gray] at (6.7, 0.6) {偏好对};
+\node[font=\scriptsize, text=gray] at (4.5, -1.0) {更新后模型};
+\end{tikzpicture}
+\caption{基于奖励的进化通用闭环：Actor生成候选，Judge（自评或外部）评分，DPO/GRPO优化偏好，迭代更新模型权重。}
+\label{fig:ch3-reward-loop}
+\end{figure}
+
+\subsubsection{核心挑战}
+
+基于奖励的方法面临\textbf{Goodhart风险}：模型可能学会迎合评分规则而非真正提升能力。\textbf{样本效率}问题突出——RL训练需要大量交互轨迹，成本高昂。\textbf{泛化不确定}——在特定benchmark上的改进不一定迁移到真实场景。
+
+\subsection{自博弈进化}\label{sec:selfplay}
+
+自博弈进化把"数据从哪里来"这个问题推到系统内部。\textbf{Absolute Zero}提出在零外部数据条件下，由同一个模型提出最大化自身学习进度的任务并尝试解决。\textbf{SPIRAL}让语言模型在零和游戏中自我博弈，发现可迁移的推理能力。
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  role/.style={circle, draw=#1, fill=#1!15, minimum size=16mm,
+    font=\small\bfseries, align=center},
+  arr/.style={-Stealth, thick, #1}
+]
+\node[role=cat2] (prop) at (0,0) {Proposer\\(出题)};
+\node[role=cat1] (solve) at (5,0) {Solver\\(解题)};
+\node[role=cat3] (verif) at (2.5,-2.5) {Verifier\\(验证)};
+
+\draw[arr=cat2] (prop) -- node[above, font=\scriptsize]{任务} (solve);
+\draw[arr=cat1] (solve) -- node[right, font=\scriptsize, align=left]{解答\\+反馈} (verif);
+\draw[arr=cat3] (verif) -- node[left, font=\scriptsize, align=right]{学习\\进度信号} (prop);
+
+\node[font=\scriptsize, text=gray, align=center] at (2.5, 1.2)
+  {关键：任务难度需位于能力边界\\太易无训练价值，太难无有效反馈};
+\end{tikzpicture}
+\caption{自博弈进化三元角色：Proposer生成任务，Solver尝试求解，Verifier提供反馈信号。三者可由同一模型不同prompt承担。}
+\label{fig:ch3-selfplay}
+\end{figure}
+
+\subsection{提示词进化}\label{sec:prompt}
+
+提示词进化是最轻量、最容易部署的一类Agent Evolution。\textbf{Reflexion}把稀疏reward转化为"语义梯度"：相比仅告诉模型失败，反思文本能指出失败原因和改进方向。\textbf{ExpeL}从训练任务中自主收集经验，抽取自然语言insights。\textbf{ACE}把上下文工程定义为可演化playbook，使用结构化增量更新避免上下文坍缩。
+
+\subsection{架构搜索}\label{sec:arch}
+
+架构搜索关注agent结构本身的自动设计。\textbf{ADAS}让meta agent用Python编写新agent architecture，在任务上评估后把有效设计加入archive。\textbf{DGM}和\textbf{SICA}把架构搜索推向自我指涉——被改进对象参与改进自身。
+
+\subsection{记忆进化}\label{sec:memory}
+
+记忆进化关注长期经验的积累与检索。\textbf{Voyager}通过自动课程和技能库实现开放世界终身学习。\textbf{Memory-R1}用RL训练记忆管理器（ADD/UPDATE/DELETE/NOOP）。\textbf{AriadneMem}提出演化图表示，用熵感知门控和冲突感知粗化管理记忆。
+
+\subsection{方法对比矩阵}\label{sec:method-compare}
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l
+  >{\centering\arraybackslash}p{22mm}
+  >{\centering\arraybackslash}p{22mm}
+  >{\centering\arraybackslash}p{16mm}
+  >{\centering\arraybackslash}p{16mm}
+  >{\centering\arraybackslash}p{16mm}
+  >{\centering\arraybackslash}p{16mm}
+  >{\centering\arraybackslash}p{20mm}}
+\toprule
+\textbf{方法类别} & \textbf{进化对象} & \textbf{数据需求} & \textbf{评估可靠性} & \textbf{成本} & \textbf{安全风险} & \textbf{可迁移性} & \textbf{典型系统} \\
+\midrule
+奖励进化 & 策略/权重 & 中-高 & 中 & 高 & 中 & 中 & STaR, RISE \\
+自博弈 & 任务+策略 & 低 & 高 & 中 & 中 & 中 & AbsZero, SPIRAL \\
+提示词进化 & 提示/上下文 & 低 & 低-中 & 低 & 低 & 高 & Reflexion, ACE \\
+架构搜索 & 代码/结构 & 中 & 中-高 & 高 & 高 & 中 & ADAS, DGM \\
+记忆进化 & 经验/技能 & 中 & 中 & 低-中 & 低 & 高 & Voyager, Mem-R1 \\
+混合方法 & 多层组合 & 高 & 中-高 & 高 & 中-高 & 中 & EvolveR, WebEvolver \\
+\bottomrule
+\end{tabular}%
+}
+\caption{六大方法类别对比矩阵。评估可靠性、成本、安全风险和可迁移性的相对水平。}
+\label{fig:ch3-method-compare}
+\end{figure}
