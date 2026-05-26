@@ -12,6 +12,7 @@ Root only keeps entry points, legal/release files, and compatibility files still
 | `CODE_OF_CONDUCT.md` | release/legal |
 | `CONTENT_INDEX.md` | ops |
 | `CONTRIBUTING.md` | release/legal |
+| `CURRENT_GOAL.md` | ops |
 | `LICENSE-CODE` | release/legal |
 | `LICENSE-CONTENT` | release/legal |
 | `NOTICE` | release/legal |

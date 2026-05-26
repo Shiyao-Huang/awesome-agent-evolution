@@ -83,6 +83,8 @@ const categories = [
       'survey',
       'scripts',
       'data-engine',
+      'work/research',
+      'work/wiki',
       'wiki'
     ]
   },
@@ -445,10 +447,13 @@ ${rows.join('\n')}
 \`\`\`mermaid
 flowchart LR
   RAW["raw-* 原始素材"] --> PROCESSED["analysis/research/projects/paper-reviews 加工分析"]
+  PROCESSED --> WIKI["work/wiki LLM Wiki"]
+  RAW -. ingest .-> WIKI
   PROCESSED --> WORK["paper-drafts/site/scripts/survey 工作产物"]
   WORK --> RESULTS["reports/output/site/public/reports/main.pdf 结果输出"]
   OPS["AGENTS/CLAUDE/CLOUD/docs 管理规则"] -. governs .-> RAW
   OPS -. governs .-> PROCESSED
+  OPS -. governs .-> WIKI
   OPS -. governs .-> WORK
   OPS -. governs .-> RESULTS
   MIRRORS["repos/* 外部镜像"] -. evidence .-> PROCESSED
@@ -499,15 +504,16 @@ Root-level historical markdown files should not accumulate. Raw compatibility fi
 }
 
 function generateRootDocumentMap() {
+  const alwaysInclude = new Set(['CURRENT_GOAL.md']);
   const files = readdirSync(ROOT)
     .filter((name) => {
       const full = path.join(ROOT, name);
-      return statSync(full).isFile() && !name.startsWith('.') && !isLocalOnlyUserInput(name);
+      return statSync(full).isFile() && !name.startsWith('.') && (alwaysInclude.has(name) || !isLocalOnlyUserInput(name));
     })
     .sort();
 
   const classify = (name) => {
-    if (['README.md', 'README-ZH.md', 'README-EN.md', 'CONTENT_INDEX.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md'].includes(name)) return 'ops';
+    if (['README.md', 'README-ZH.md', 'README-EN.md', 'CONTENT_INDEX.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md', 'CURRENT_GOAL.md'].includes(name)) return 'ops';
     if (name.startsWith('mom-test') || name.startsWith('social-media') || name.startsWith('raw-')) return 'raw compatibility';
     if (name.startsWith('awesome-') || name.startsWith('github-agent-evolution')) return 'processed compatibility';
     if (name.startsWith('LICENSE') || ['NOTICE', 'CONTRIBUTING.md', 'CODE_OF_CONDUCT.md'].includes(name)) return 'release/legal';

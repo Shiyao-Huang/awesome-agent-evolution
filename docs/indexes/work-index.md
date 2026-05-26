@@ -15,8 +15,10 @@
 | `latex` | present | 9 | 2 | 0 | 53 KB |
 | `site` | present | 1096 | 259 | 0 | 27 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
-| `scripts` | present | 23 | 1 | 0 | 460 KB |
+| `scripts` | present | 23 | 1 | 0 | 461 KB |
 | `data-engine` | present | 479 | 18 | 0 | 5.9 MB |
+| `work/research` | present | 41 | 2 | 0 | 2.1 MB |
+| `work/wiki` | present | 52 | 6 | 0 | 390 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files
@@ -110,6 +112,32 @@
 - `data-engine/analysis/run.py`
 - `data-engine/analysis/run_analysis.py`
 - `data-engine/collectors/__init__.py`
+
+### `work/research`
+
+- `work/research/INDEX.md`
+- `work/research/ai-talent-flow-analysis.md`
+- `work/research/anthropic-talent-movement.md`
+- `work/research/archived-analysis/benchmark-comparison.md`
+- `work/research/archived-analysis/discovery-report-2026-05-25.md`
+- `work/research/archived-analysis/essential-taxonomy-framework.md`
+- `work/research/archived-analysis/framework-painpoint-crosswalk.md`
+- `work/research/archived-analysis/github-agent-evolution-repos-ZH.md`
+- `work/research/archived-analysis/github-agent-evolution-repos.md`
+- `work/research/archived-analysis/github-project-data-analysis.json`
+
+### `work/wiki`
+
+- `work/wiki/concepts/architecture-search.md`
+- `work/wiki/concepts/emergent-behavior.md`
+- `work/wiki/concepts/llm-agent-knowledge-delivery.md`
+- `work/wiki/concepts/multi-agent-coevolution.md`
+- `work/wiki/concepts/reward-based-evolution.md`
+- `work/wiki/concepts/self-evaluation.md`
+- `work/wiki/concepts/self-improvement.md`
+- `work/wiki/concepts/self-observation.md`
+- `work/wiki/concepts/self-play-evolution.md`
+- `work/wiki/entities/anthropic.md`
 
 ### `wiki`
 
