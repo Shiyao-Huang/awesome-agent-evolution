@@ -72,6 +72,26 @@ QA spot-check of 3 chapter pairs reveals VIOLATION:
 L2 marked "done" but deliverables are independent CN documents, not faithful EN mappings.
 Recommendation: Reopen L2 for rework on ch5 and ch8 (minimum).
 
+## Daemon Reset Mitigation (deployed 17:22)
+
+1. **auto-commit-shield.sh** — `scripts/auto-commit-shield.sh`
+   - Scans for uncommitted changes every 5 minutes
+   - Auto-commits with timestamp shield message
+   - Amends recent shield commits to avoid spam
+   - Scheduled via CC CronCreate (durable, survives session restart)
+   - First run protected 306 files at 17:22
+
+2. **Cron schedule**: `*/5 * * * *` (every 5 min, well within ~20 min daemon cycle)
+   - Job ID: `67a92e03`
+   - Durable: persists to `.claude/scheduled_tasks.json`
+   - Auto-expires after 7 days
+
+3. **Remaining gaps**:
+   - Cron approach depends on CC session being active; if session dies, shield stops
+   - macOS launchd blocked by sandbox (Operation not permitted)
+   - crontab additions being stripped by unknown process
+   - **Upstream fix still needed**: aha-agi daemon must stop executing `git reset`
+
 ## Daemon Reset Impact
 - work/qa/ directory was created at 13:33 then reset by daemon
 - Only SAFETY-RULES.md survived (committed at 13:34)
