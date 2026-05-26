@@ -10,39 +10,36 @@ Self Evolve 的项目结构按 `raw -> processed -> work -> results` 管线治�
 
 | Metric | Value |
 |---|---:|
-| Raw GitHub captures | 530 |
-| Classified GitHub repositories | 530 |
-| Analyzed project/model-card reports | 119 |
-| Strict evolution-related repositories | 82 |
-| Broad evolution-related repositories | 186 |
+| Raw GitHub captures | n/a |
+| Classified GitHub repositories | n/a |
+| Analyzed project/model-card reports | n/a |
+| Strict evolution-related repositories | n/a |
+| Broad evolution-related repositories | n/a |
 | Raw paper files on disk | 201 |
-| Paper review files | 137 |
-| Public project report files | 272 |
+| Paper review files | 171 |
+| Public project report files | 320 |
 | Current paper PDF | present |
 
 ## Category Coverage
 
 | Category | Present Paths | Files | Directories | Skipped | Size | Rule |
 |---|---:|---:|---:|---:|---:|---|
-| [Raw / 原始素材](./raw-index.md) | 9/9 | 3838 | 9 | 0 | 40 MB | 只保存采集原貌和最小元数据；除时间戳补齐、去重索引外，不在这里写分析结论。 |
-| [Processed / 加工分析](./processed-index.md) | 8/8 | 25900 | 2907 | 0 | 2.9 GB | 清洗、分类、交叉分析、深度项目卡、论文评审都归这里；内容必须能追溯到 raw 或外部 canonical source。 |
-| [Work / 工作产物](./work-index.md) | 8/8 | 1592 | 289 | 0 | 44 MB | 论文草稿、站点源码、脚本、调查图表、工程中间件归这里；可以迭代，但要有构建或验证入口。 |
-| [Results / 结果输出](./results-index.md) | 6/6 | 829 | 224 | 0 | 18 MB | 可交付、可发布、可下载、可部署的输出归这里；生成物要说明来源和刷新命令。 |
-| [Mirrors / 外部仓库镜像](./mirrors-index.md) | 4/4 | 210827 | 44757 | 192 | 19 GB | 外部仓库克隆、只读镜像和临时验证仓库归这里；不要把本项目治理文件混入镜像内部。 |
-| [Ops / 管理与协作](./ops-index.md) | 9/9 | 32 | 5 | 0 | 826 KB | 项目管理、Agent 手册、云部署、索引、发布规范归这里；任何新长期规则都要能从根 README 找到。 |
+| [Raw / 原始素材](./raw-index.md) | 9/9 | 3839 | 9 | 0 | 40 MB | 只保存采集原貌和最小元数据；除时间戳补齐、去重索引外，不在这里写分析结论。 |
+| [Processed / 加工分析](./processed-index.md) | 4/8 | 26077 | 2892 | 0 | 2.9 GB | 清洗、分类、交叉分析、深度项目卡、论文评审都归这里；内容必须能追溯到 raw 或外部 canonical source。 |
+| [Work / 工作产物](./work-index.md) | 5/8 | 1521 | 278 | 0 | 38 MB | 论文草稿、站点源码、脚本、调查图表、工程中间件归这里；可以迭代，但要有构建或验证入口。 |
+| [Results / 结果输出](./results-index.md) | 5/6 | 893 | 225 | 0 | 18 MB | 可交付、可发布、可下载、可部署的输出归这里；生成物要说明来源和刷新命令。 |
+| [Mirrors / 外部仓库镜像](./mirrors-index.md) | 2/4 | 208318 | 44347 | 192 | 18 GB | 外部仓库克隆、只读镜像和临时验证仓库归这里；不要把本项目治理文件混入镜像内部。 |
+| [Ops / 管理与协作](./ops-index.md) | 8/9 | 90 | 15 | 0 | 1.8 MB | 项目管理、Agent 手册、云部署、索引、发布规范归这里；任何新长期规则都要能从根 README 找到。 |
 
 ## Project Map
 
 ```mermaid
 flowchart LR
   RAW["raw-* 原始素材"] --> PROCESSED["analysis/research/projects/paper-reviews 加工分析"]
-  PROCESSED --> WIKI["work/wiki LLM Wiki (46 pages)"]
-  RAW -. ingest .-> WIKI
   PROCESSED --> WORK["paper-drafts/site/scripts/survey 工作产物"]
   WORK --> RESULTS["reports/output/site/public/reports/main.pdf 结果输出"]
   OPS["AGENTS/CLAUDE/CLOUD/docs 管理规则"] -. governs .-> RAW
   OPS -. governs .-> PROCESSED
-  OPS -. governs .-> WIKI
   OPS -. governs .-> WORK
   OPS -. governs .-> RESULTS
   MIRRORS["repos/* 外部镜像"] -. evidence .-> PROCESSED

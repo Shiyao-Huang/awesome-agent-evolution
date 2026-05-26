@@ -14,10 +14,10 @@
 | `README-ZH.md` | present | 1 | 0 | 0 | 187 KB |
 | `README-EN.md` | present | 1 | 0 | 0 | 186 KB |
 | `CONTENT_INDEX.md` | present | 1 | 0 | 0 | 3.3 KB |
-| `AGENTS.md` | present | 1 | 0 | 0 | 11 KB |
-| `CLAUDE.md` | present | 1 | 0 | 0 | 7.5 KB |
-| `CLOUD.md` | present | 1 | 0 | 0 | 1.5 KB |
-| `docs` | present | 24 | 5 | 0 | 242 KB |
+| `AGENTS.md` | present | 1 | 0 | 0 | 15 KB |
+| `CLAUDE.md` | present | 1 | 0 | 0 | 11 KB |
+| `CLOUD.md` | missing | 0 | 0 | 0 | 0 B |
+| `docs` | present | 83 | 15 | 0 | 1.2 MB |
 | `.claude/AIDS_IDENTITY.md` | present | 1 | 0 | 0 | 346 B |
 
 ## Representative Files
@@ -46,22 +46,18 @@
 
 - `CLAUDE.md`
 
-### `CLOUD.md`
-
-- `CLOUD.md`
-
 ### `docs`
 
+- `docs/cc-materials/architecture-patterns/architecture-patterns.md`
+- `docs/cc-materials/benchmark-comparison/benchmark-leaderboard.md`
+- `docs/cc-materials/contributor-network/contributor-org-network.md`
+- `docs/cc-materials/evolution-mechanisms/evolution-mechanisms-deepdive.md`
+- `docs/cc-materials/paper-repo-linkage/paper-repo-linkage.md`
+- `docs/cc-materials/strategy-taxonomy/missing-projects-supplement.md`
+- `docs/cc-materials/strategy-taxonomy/strategy-taxonomy.md`
+- `docs/cc-materials/top-repo-deepdive/top20-deep-analysis.md`
 - `docs/data-schema.md`
 - `docs/indexes/data-flow-index.md`
-- `docs/indexes/master-index.md`
-- `docs/indexes/mirrors-index.md`
-- `docs/indexes/noncanonical-index.md`
-- `docs/indexes/ops-index.md`
-- `docs/indexes/processed-index.md`
-- `docs/indexes/raw-index.md`
-- `docs/indexes/results-index.md`
-- `docs/indexes/root-document-map.md`
 
 ### `.claude/AIDS_IDENTITY.md`
 

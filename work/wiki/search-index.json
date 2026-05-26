@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-26T09:15:50.654Z",
+  "generated": "2026-05-26T09:18:33.883Z",
   "stats": {
     "pages": 48,
     "keywords": 737
@@ -444,8 +444,8 @@
     },
     {
       "path": "sources/review-mechanism-insights-expanded.md",
-      "title": "\"Peer Review Mechanism Insights: Full-Coverage Deep-Dive (111/137 Reviews)\"",
-      "rank": "A",
+      "title": "\"Peer Review Mechanism Insights: Full-Coverage Deep-Dive (128/137 Reviews)\"",
+      "rank": "C",
       "type": "source",
       "tags": []
     },
@@ -2628,7 +2628,7 @@
     "full data": [
       "sources/review-mechanism-insights-enhanced.md"
     ],
-    "\"peer review mechanism insights: full-coverage deep-dive (111/137 reviews)\"": [
+    "\"peer review mechanism insights: full-coverage deep-dive (128/137 reviews)\"": [
       "sources/review-mechanism-insights-expanded.md"
     ],
     "peer review mechanism insights: full-coverage deep-dive": [
@@ -2640,19 +2640,19 @@
     "1. twelve core mechanism insights": [
       "sources/review-mechanism-insights-expanded.md"
     ],
-    "insight 1: the evaluation bottleneck is universal [verified — 111/111 reviews]": [
+    "insight 1: the evaluation bottleneck is universal [verified — 72/72 reviews]": [
       "sources/review-mechanism-insights-expanded.md"
     ],
-    "insight 2: self-evolution is non-monotonic [verified — 2605.09315, 2509.26354]": [
+    "insight 2: self-evolution is non-monotonic — four erosion channels [verified — 2605.09315, 2509.26354]": [
       "sources/review-mechanism-insights-expanded.md"
     ],
     "insight 3: code as universal mutable representation [verified — 28+ papers]": [
       "sources/review-mechanism-insights-expanded.md"
     ],
-    "insight 4: knowledge building > parallelism in multi-agent [verified]": [
+    "insight 4: knowledge building > parallelism in multi-agent [verified — coral, self-organizing study]": [
       "sources/review-mechanism-insights-expanded.md"
     ],
-    "insight 5: immutable verification required [verified]": [
+    "insight 5: immutable verification required [verified — misevolution, meta-rewarding]": [
       "sources/review-mechanism-insights-expanded.md"
     ],
     "insight 6: self-improvement is sharpening, not creation [verified — 2412.01951]": [
@@ -2661,19 +2661,19 @@
     "insight 7: pure autonomous recursion collapses [verified — 2601.05280]": [
       "sources/review-mechanism-insights-expanded.md"
     ],
-    "insight 8: judge quality = system ceiling [verified]": [
+    "insight 8: judge quality = system ceiling [verified — meta-rewarding, score, rlsr]": [
       "sources/review-mechanism-insights-expanded.md"
     ],
-    "insight 9: self-play creates automatic curriculum [verified]": [
+    "insight 9: self-play creates automatic curriculum [verified — spiral, self-challenging, agent0, sage]": [
       "sources/review-mechanism-insights-expanded.md"
     ],
-    "insight 10: memory operations are learnable skills [verified]": [
+    "insight 10: memory operations are learnable skills [verified — memory-r1, memskill, reasoningbank]": [
       "sources/review-mechanism-insights-expanded.md"
     ],
-    "insight 11: co-evolution of generator + verifier [verified]": [
+    "insight 11: co-evolution of generator + verifier [verified — coevoskills, agentic self-learning]": [
       "sources/review-mechanism-insights-expanded.md"
     ],
-    "insight 12: misevolution is universal [verified — 2509.26354]": [
+    "insight 12: misevolution is universal — even frontier models degrade [verified — 2509.26354]": [
       "sources/review-mechanism-insights-expanded.md"
     ],
     "2. method cluster analysis": [
@@ -2685,10 +2685,10 @@
     "2.2 architecture/search cluster (10 reviews)": [
       "sources/review-mechanism-insights-expanded.md"
     ],
-    "2.3 multi-agent cluster (10 reviews)": [
+    "2.3 multi-agent cluster (12 reviews)": [
       "sources/review-mechanism-insights-expanded.md"
     ],
-    "2.4 memory cluster (7 reviews)": [
+    "2.4 memory cluster (8 reviews)": [
       "sources/review-mechanism-insights-expanded.md"
     ],
     "\"peer review mechanism insights (137 reviews)\"": [

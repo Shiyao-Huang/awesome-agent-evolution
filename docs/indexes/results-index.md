@@ -10,35 +10,22 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `reports` | present | 5 | 1 | 0 | 69 KB |
-| `output` | present | 12 | 1 | 0 | 606 KB |
-| `site/public/reports` | present | 277 | 4 | 0 | 2.3 MB |
+| `reports` | missing | 0 | 0 | 0 | 0 B |
+| `output` | present | 5 | 1 | 0 | 506 KB |
+| `site/public/reports` | present | 353 | 6 | 0 | 2.7 MB |
 | `site/dist` | present | 533 | 218 | 0 | 14 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 983 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
 ## Representative Files
 
-### `reports`
-
-- `reports/academic-propagation-analysis.md`
-- `reports/cross-validation-report.md`
-- `reports/project-discovery-leads.md`
-- `reports/propagation-chain-evidence.md`
-- `reports/star-analysis-report.md`
-
 ### `output`
 
-- `output/raw-data-timestamp-enforcement-report.json`
-- `output/raw-data-timestamp-validation-report.json`
 - `output/raw-github-timestamp-index-ZH.md`
 - `output/raw-github-timestamp-index.json`
 - `output/raw-github-timestamp-index.md`
-- `output/raw-papers-timestamp-backfill-report.json`
 - `output/raw-papers-timestamp-index.json`
 - `output/raw-papers-timestamp-index.md`
-- `output/raw-papers-timestamp-validation-report.json`
-- `output/self-evolve-research-report.md`
 
 ### `site/public/reports`
 

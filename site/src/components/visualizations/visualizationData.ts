@@ -1,5 +1,5 @@
 import { projects } from '@/data/projects';
-import analysisJson from '../../../../analysis/github-project-data-analysis.json';
+import analysisJson from '../../../../work/research/archived-analysis/github-project-data-analysis.json';
 
 // ── Types ──
 

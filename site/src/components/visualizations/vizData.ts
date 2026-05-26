@@ -1,4 +1,4 @@
-import analysisJson from '../../../../analysis/github-project-data-analysis.json';
+import analysisJson from '../../../../work/research/archived-analysis/github-project-data-analysis.json';
 
 type CountEntry = { key: string; count: number };
 type AnalysisSnapshot = {

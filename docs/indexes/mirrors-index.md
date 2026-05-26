@@ -12,8 +12,8 @@
 |---|---|---:|---:|---:|---:|
 | `repos` | present | 183244 | 41470 | 192 | 16 GB |
 | `projects/repos` | present | 25074 | 2877 | 0 | 2.9 GB |
-| `all_hands_ai__openhands` | present | 2340 | 363 | 0 | 16 MB |
-| `stitionai__devika` | present | 169 | 47 | 0 | 8.9 MB |
+| `all_hands_ai__openhands` | missing | 0 | 0 | 0 | 0 B |
+| `stitionai__devika` | missing | 0 | 0 | 0 | 0 B |
 
 ## Representative Files
 
@@ -42,29 +42,3 @@
 - `projects/repos/aiwaves_cn__agents/LICENSE`
 - `projects/repos/aiwaves_cn__agents/README.md`
 - `projects/repos/aiwaves_cn__agents/assets/agents-logo.png`
-
-### `all_hands_ai__openhands`
-
-- `all_hands_ai__openhands/.agents/skills/cross-repo-testing/SKILL.md`
-- `all_hands_ai__openhands/.agents/skills/custom-codereview-guide.md`
-- `all_hands_ai__openhands/.agents/skills/upcoming-release/SKILL.md`
-- `all_hands_ai__openhands/.agents/skills/update-sdk/SKILL.md`
-- `all_hands_ai__openhands/.agents/skills/update-sdk/references/docker-image-locations.md`
-- `all_hands_ai__openhands/.agents/skills/update-sdk/references/sdk-pinning-examples.md`
-- `all_hands_ai__openhands/.devcontainer/README.md`
-- `all_hands_ai__openhands/.devcontainer/devcontainer.json`
-- `all_hands_ai__openhands/.devcontainer/setup.sh`
-- `all_hands_ai__openhands/.dockerignore`
-
-### `stitionai__devika`
-
-- `stitionai__devika/.assets/devika-avatar.png`
-- `stitionai__devika/.assets/devika-pygame-demo.mp4`
-- `stitionai__devika/.assets/devika-screenshot.png`
-- `stitionai__devika/.github/ISSUE_TEMPLATE/bug_report.md`
-- `stitionai__devika/.github/ISSUE_TEMPLATE/feature_request.md`
-- `stitionai__devika/.github/ISSUE_TEMPLATE/issue.md`
-- `stitionai__devika/.github/pull_request_template.md`
-- `stitionai__devika/.gitignore`
-- `stitionai__devika/ARCHITECTURE.md`
-- `stitionai__devika/CONTRIBUTING.md`

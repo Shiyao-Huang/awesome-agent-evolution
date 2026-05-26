@@ -23,19 +23,17 @@
 
 | Path | Type | Class | Cleanup Action |
 |---|---|---|---|
-| `.DS_Store` | file | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
 | `.aha` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
 | `.astro` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
 | `.claude` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
 | `.genome` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
+| `.git-safe` | dir | needs-review holding | 不删除；先放入待审清单，确认引用后再决定归层或迁入 docs/legacy。 |
 | `.github` | dir | needs-review holding | 不删除；先放入待审清单，确认引用后再决定归层或迁入 docs/legacy。 |
 | `.gitignore` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `.gitnexus` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
 | `.mermaid` | dir | needs-review holding | 不删除；先放入待审清单，确认引用后再决定归层或迁入 docs/legacy。 |
-| `.tmp` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
 | `AGENTS.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `CLAUDE.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
-| `CLOUD.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `CODE_OF_CONDUCT.md` | file | support release/legal | 开源发布必需，保留在根目录。 |
 | `CONTENT_INDEX.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `CONTRIBUTING.md` | file | support release/legal | 开源发布必需，保留在根目录。 |
@@ -46,11 +44,8 @@
 | `README-ZH.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `README.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `SECURITY.md` | file | support release/legal | 开源发布必需，保留在根目录。 |
-| `all_hands_ai__openhands` | dir | support mirrors | 外部镜像，不删除；不混入本项目治理，必要时只读引用。 |
 | `docs` | dir | support ops | 管理入口，保留；长文档进入 docs/。 |
-| `node_modules` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
 | `repos` | dir | support mirrors | 外部镜像，不删除；不混入本项目治理，必要时只读引用。 |
-| `stitionai__devika` | dir | support mirrors | 外部镜像，不删除；不混入本项目治理，必要时只读引用。 |
 | `work` | dir | needs-review holding | 不删除；先放入待审清单，确认引用后再决定归层或迁入 docs/legacy。 |
 
 ## Safe Cleanup Loop
