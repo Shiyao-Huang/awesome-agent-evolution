@@ -10,11 +10,11 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `paper-drafts` | present | 31 | 2 | 0 | 2.3 MB |
+| `paper-drafts` | present | 32 | 2 | 0 | 2.3 MB |
 | `paper` | present | 16 | 2 | 0 | 1.0 MB |
 | `latex` | present | 9 | 3 | 0 | 53 KB |
-| `site` | present | 936 | 252 | 0 | 27 MB |
-| `survey` | present | 94 | 4 | 0 | 3.4 MB |
+| `site` | present | 931 | 251 | 0 | 26 MB |
+| `survey` | present | 88 | 4 | 0 | 3.5 MB |
 | `scripts` | present | 11 | 1 | 0 | 176 KB |
 | `data-engine` | present | 479 | 21 | 0 | 5.9 MB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
@@ -23,6 +23,7 @@
 
 ### `paper-drafts`
 
+- `paper-drafts/.DS_Store`
 - `paper-drafts/COMPLETION_LEDGER.md`
 - `paper-drafts/PAPER_OUTLINE.md`
 - `paper-drafts/appendix-en.tex`
@@ -32,7 +33,6 @@
 - `paper-drafts/ch3-methods.tex`
 - `paper-drafts/ch3-methods.tex.bak`
 - `paper-drafts/ch4-evolutionary.tex`
-- `paper-drafts/ch5-evaluation.tex`
 
 ### `paper`
 
@@ -83,7 +83,7 @@
 - `survey/ch7-painpoints-cn.md`
 - `survey/ch8-future-cn.md`
 - `survey/figures/README.md`
-- `survey/figures/agent-evolution-panorama-dag.md`
+- `survey/figures/benchmark-coverage.md`
 
 ### `scripts`
 

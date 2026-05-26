@@ -25,6 +25,26 @@ Claude/Claude Code 在本仓库工作时，以 [AGENTS.md](AGENTS.md) 为最高�
 - **证据链**：每个分析结论标注数据来源。无法追溯的标注 `[UNVERIFIED]`。
 - **中文调查同步**：`survey/` 是中文版调查，与 `paper-drafts/` 平行。修改一方时检查另一方是否需要同步。
 
+## Website Style Baseline
+
+Claude 处理网页、样式、graph 或 i18n 时，必须先按 [AGENTS.md](AGENTS.md) 的 Website Style Lock 执行。当前站点不是空白重设计任务，而是需要保持 2026-05-25 15:05 +0800 附近版本的 Caret/editorial 风格。
+
+- 参考提交：`3fd1785`（15:05，graph/i18n/home 相关），严格 15:00 前快照为 `e2f4518`（14:53）。
+- 关键文件：`site/src/styles/global.css`、`site/src/pages/index.astro`、`site/src/pages/graph/index.astro`、`site/src/layouts/BaseLayout.astro`、`site/src/data/site.ts`。
+- 视觉要求：浅色 paper 背景、EB Garamond 标题、蓝色 caret、橙色 CTA、克制边框和 8px 左右圆角；不要改成深色炫技、玻璃拟态、营销大卡片或另一个 design system。
+- Graph 要求：保留 `/graph/` 的圆形 Knowledge graph、搜索/类型过滤和 AI Research Prompt 面板；不要用 `EvolutionNetwork.tsx` 这类首页 mockup 替代真实 graph。
+- i18n 要求：当前网页主语言是中文 `zh-CN`，中文导航、metadata、SEO copy 必须保留。新增英文或多语言时，不能牺牲中文入口和 canonical/alternate。
+- 验证要求：网页改动后至少执行 `(cd site && npm run build)`，并用桌面和约 390px 移动视口检查 `/` 与 `/graph/`，确认没有横向溢出、graph 非空、Prompt 面板可见。
+
+## Persistence Baseline
+
+Claude 遇到用户要求“写入”“持久”“别丢”“恢复昨天版本”时，必须把结果从临时工作区变成可恢复状态。
+
+- 任何 `git reset`、`git restore`、`git checkout`、`git clean` 或大范围生成脚本前，先看 `git status --short`，再看关键文件 diff。
+- 若不能立即提交，先保存补丁到 `work/`，尤其是 `AGENTS.md`、`CLAUDE.md`、`site/src/styles/global.css`、`site/src/pages/index.astro`、`site/src/pages/graph/index.astro`、`site/src/layouts/BaseLayout.astro`、`site/src/data/site.ts`。
+- 恢复风格/graph/i18n 时，不重新设计；先对照 `3fd1785`、`e2f4518`、`git reflog --date=iso -20` 和已有补丁。
+- 最终交接必须说明改动是否已经提交；未提交时明确提示 reset 会再次丢失。
+
 ## Validation
 
 ```bash

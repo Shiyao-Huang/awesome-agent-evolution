@@ -1,36 +1,69 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { coreKnowledgeGraph, knowledgeGraph, knowledgeGraphStats } from '@/data/knowledgeGraph';
-import { researchCoverage } from '@/data/researchCoverage';
+import { knowledgeGraph, knowledgeGraphStats } from '@/data/knowledgeGraph';
+import { projects } from '@/data/projects';
+import { featuredResearch } from '@/data/research';
+import { site } from '@/data/site';
 
-const coreGraphPayload = JSON.stringify(coreKnowledgeGraph);
-const fullGraphPayload = JSON.stringify(knowledgeGraph);
+const graphPayload = JSON.stringify(knowledgeGraph);
+const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const encodeId = (prefix: string, value: string) =>
+  `${prefix}:${encodeURIComponent(value.toLowerCase().trim().replace(/\s+/g, '-'))}`;
+const pdfHref = (url?: string) => {
+  if (!url) return '';
+  const arxiv = url.match(/arxiv\.org\/abs\/([^?#]+)/);
+  return arxiv ? `https://arxiv.org/pdf/${arxiv[1]}` : url;
+};
+const rankedProjects = [...projects].sort((a, b) => Number(b.stars || 0) - Number(a.stars || 0));
+const rankByRepo = new Map(rankedProjects.map((project, index) => [project.repo.toLowerCase(), index + 1]));
+const graphMetaPayload = JSON.stringify({
+  projects: Object.fromEntries(projects.map((project) => [
+    encodeId('project', project.repo),
+    {
+      kind: 'project',
+      name: project.name,
+      repo: project.repo,
+      url: project.url,
+      href: `/projects/${slugify(project.repo)}/`,
+      reportHref: `/reports/${project.report}`,
+      localPath: project.localPath,
+      stars: project.stars,
+      forks: project.forks,
+      rank: rankByRepo.get(project.repo.toLowerCase()),
+      category: project.category,
+      pattern: project.pattern,
+      tags: project.tags,
+      summary: project.description,
+      updated: project.lastPushed?.slice(0, 10)
+    }
+  ])),
+  papers: Object.fromEntries(featuredResearch.map((paper) => [
+    encodeId('paper', paper.slug || paper.title),
+    {
+      kind: 'paper',
+      title: paper.title,
+      url: paper.url,
+      pdfHref: pdfHref(paper.url),
+      href: paper.slug ? `/research/${paper.slug}/` : '',
+      year: paper.year,
+      cluster: paper.cluster,
+      relation: paper.relation,
+      tags: paper.tags,
+      summary: paper.insight
+    }
+  ]))
+});
+const siteBasePath = new URL(site.url).pathname.replace(/\/$/, '');
 ---
 <BaseLayout title="Self Evolve 知识图谱 — 项目、论文与机制关系" description="Self Evolve 知识图谱，把自进化 AI 项目、论文、机制标签和研究簇连接成可检索的关系网络。">
-  <section class="section">
-    <div class="container">
-      <div class="eyebrow">Knowledge Graph / 知识图谱</div>
-      <h1 class="gradient-text">项目、论文、机制和证据关系。</h1>
-      <p class="lead">当前图谱不再只取少数代表论文：默认展示 Core 150，可切换到 Full corpus 查看项目、{researchCoverage.reviewFiles} 篇论文 review、raw paper 索引和待补主流论文缺口。</p>
-      <div class="metrics">
-        <div class="metric"><strong>{knowledgeGraphStats.nodes}</strong><span>nodes</span></div>
-        <div class="metric"><strong>{knowledgeGraphStats.edges}</strong><span>edges</span></div>
-        <div class="metric"><strong>{researchCoverage.identifiedCoverageGaps}</strong><span>paper gaps to review</span></div>
-      </div>
-    </div>
-  </section>
-
   <section class="section graph-section">
-    <div class="container graph-shell">
+    <div class="graph-shell">
       <div class="graph-panel">
         <div class="graph-toolbar">
-          <label>
-            <span>Scope</span>
-            <select id="graph-scope">
-              <option value="core">Core 150</option>
-              <option value="full">Full corpus</option>
-            </select>
-          </label>
+          <div class="graph-title">
+            <h1>Knowledge graph</h1>
+            <p>{knowledgeGraphStats.nodes} nodes · {knowledgeGraphStats.edges} edges · {knowledgeGraphStats.projects + knowledgeGraphStats.papers} projects + papers</p>
+          </div>
           <label>
             <span>Search</span>
             <input id="graph-search" type="search" placeholder="openevolve, Reflexion, 评估器..." />
@@ -45,129 +78,337 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
               <option value="cluster">Clusters</option>
             </select>
           </label>
+          <p id="graph-count" class="graph-count" aria-live="polite"></p>
         </div>
-        <svg id="knowledge-graph" viewBox="0 0 1100 680" role="img" aria-label="Self Evolve knowledge graph"></svg>
+        <svg id="knowledge-graph" viewBox="0 0 1400 720" role="img" aria-label="Self Evolve knowledge graph"></svg>
       </div>
-      <aside class="graph-detail" id="graph-detail">
-        <div class="eyebrow">Selected Node</div>
-        <h2>点击节点查看关系</h2>
-        <p>搜索或选择类型后，图谱会高亮匹配节点及其直接关系。Full corpus 可审计全量材料；Core 150 保留可读性。</p>
-        <h3>Paper coverage warning</h3>
-        <p>{researchCoverage.coverageWarning}</p>
+      <aside class="graph-prompt-panel" id="graph-detail">
+        <div class="eyebrow">AI Research Prompt</div>
+        <h2 id="graph-prompt-title">点击节点生成调研 Prompt</h2>
+        <p id="graph-prompt-summary">选择 graph 中的项目、论文、概念或 cluster 后，这里会自动组装可复制给 AI 的继续调研提示词。</p>
+        <div class="graph-prompt-links" id="graph-prompt-links"></div>
+        <textarea id="graph-prompt" readonly rows="14" aria-label="AI research prompt"></textarea>
+        <div class="graph-prompt-actions">
+          <button class="button primary" id="copy-graph-prompt" type="button">Copy prompt</button>
+          <span id="copy-graph-prompt-status" aria-live="polite"></span>
+        </div>
       </aside>
     </div>
   </section>
 
-  <section class="section" id="coverage-debt">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Coverage Debt / 论文缺口</div>
-          <h2>论文这块还不够，必须公开追踪。</h2>
-        </div>
-      </div>
-      <div class="grid">
-        {researchCoverage.coverageGaps.map((paper) => (
-          <article class="card">
-            <div class="eyebrow">{paper.year} · {paper.status}</div>
-            <h3><a href={paper.url} target="_blank" rel="noopener">{paper.title}</a></h3>
-            <p>{paper.reason}</p>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <script is:inline define:vars={{ coreGraphPayload, fullGraphPayload }}>
-    const graphs = {
-      core: JSON.parse(coreGraphPayload),
-      full: JSON.parse(fullGraphPayload)
-    };
-    let graph = graphs.core;
+  <script is:inline define:vars={{ graphPayload, graphMetaPayload, siteBasePath }}>
+    /* @sm:node knowledge-graph-readable-radial-layout
+     * Purpose: render the static Self Evolve knowledge graph as a readable, inspectable SVG.
+     * Inputs: site/src/data/knowledgeGraph.ts payload.
+     * Verification: /graph/ desktop and mobile screenshots plus `npm run build`.
+     */
+    const graph = JSON.parse(graphPayload);
+    const graphMeta = JSON.parse(graphMetaPayload);
     const svg = document.querySelector('#knowledge-graph');
-    const detail = document.querySelector('#graph-detail');
-    const scopeSelect = document.querySelector('#graph-scope');
     const search = document.querySelector('#graph-search');
     const typeSelect = document.querySelector('#graph-type');
-    const width = 1100;
-    const height = 680;
-    const center = { x: width / 2, y: height / 2 };
+    const graphCount = document.querySelector('#graph-count');
+    const promptTitle = document.querySelector('#graph-prompt-title');
+    const promptSummary = document.querySelector('#graph-prompt-summary');
+    const promptLinks = document.querySelector('#graph-prompt-links');
+    const promptTextarea = document.querySelector('#graph-prompt');
+    const copyPromptButton = document.querySelector('#copy-graph-prompt');
+    const copyPromptStatus = document.querySelector('#copy-graph-prompt-status');
+    let selectedNodeId = null;
+    let width = 1400;
+    let height = 720;
+    let center = { x: width / 2, y: height / 2 };
     const typeOrder = ['cluster', 'concept', 'paper', 'project'];
     const typeColor = {
-      project: '#7cf7d4',
-      paper: '#ffcf7c',
-      concept: '#9f7cff',
-      cluster: '#f6f8ff'
+      project: '#1A1A1A',
+      paper: '#FFB347',
+      concept: '#007AFF',
+      cluster: '#FF5B00'
     };
 
-    let byId = new Map();
-    let adjacency = new Map();
-
-    function indexGraph() {
-      byId = new Map(graph.nodes.map((node) => [node.id, node]));
-      adjacency = new Map(graph.nodes.map((node) => [node.id, new Set()]));
-      for (const edge of graph.edges) {
-        adjacency.get(edge.source)?.add(edge.target);
-        adjacency.get(edge.target)?.add(edge.source);
-      }
+    const byId = new Map(graph.nodes.map((node) => [node.id, node]));
+    const metaById = new Map([
+      ...Object.entries(graphMeta.projects),
+      ...Object.entries(graphMeta.papers)
+    ]);
+    const adjacency = new Map(graph.nodes.map((node) => [node.id, new Set()]));
+    const degree = new Map(graph.nodes.map((node) => [node.id, 0]));
+    for (const edge of graph.edges) {
+      adjacency.get(edge.source)?.add(edge.target);
+      adjacency.get(edge.target)?.add(edge.source);
+      degree.set(edge.source, (degree.get(edge.source) || 0) + 1);
+      degree.set(edge.target, (degree.get(edge.target) || 0) + 1);
     }
 
-    function placeNodes() {
-      const grouped = graph.nodes.reduce((acc, node) => {
+    function stableHash(value) {
+      let hash = 0;
+      for (let index = 0; index < value.length; index += 1) {
+        hash = (hash * 31 + value.charCodeAt(index)) >>> 0;
+      }
+      return hash;
+    }
+
+    function nodeRank(node) {
+      return (node.weight || 1) * 8 + (degree.get(node.id) || 0);
+    }
+
+    function ranked(nodes) {
+      return [...nodes].sort((a, b) => nodeRank(b) - nodeRank(a));
+    }
+
+    function syncCanvas() {
+      const box = svg.getBoundingClientRect();
+      width = Math.max(320, Math.round(box.width || width));
+      height = Math.max(420, Math.round(box.height || height));
+      center = { x: width / 2, y: height / 2 };
+      svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    }
+
+    const prominentLabelIds = new Set([
+      ...ranked(graph.nodes.filter((node) => node.type === 'cluster')).slice(0, 8).map((node) => node.id),
+      ...ranked(graph.nodes.filter((node) => node.type === 'concept')).slice(0, 6).map((node) => node.id)
+    ]);
+
+    function defaultVisibleIds() {
+      const groups = graph.nodes.reduce((acc, node) => {
         acc[node.type] ||= [];
         acc[node.type].push(node);
         return acc;
       }, {});
+      const limit = width < 700
+        ? { concept: 34, paper: 18, project: 48 }
+        : width < 1100
+          ? { concept: 62, paper: 28, project: 84 }
+          : { concept: 88, paper: 36, project: 126 };
+      return new Set([
+        ...ranked(groups.cluster || []).map((node) => node.id),
+        ...ranked(groups.concept || []).slice(0, limit.concept).map((node) => node.id),
+        ...ranked(groups.paper || []).slice(0, limit.paper).map((node) => node.id),
+        ...ranked(groups.project || []).slice(0, limit.project).map((node) => node.id)
+      ]);
+    }
+
+    function matchIds() {
+      const q = search.value.trim().toLowerCase();
+      const type = typeSelect.value;
+      const direct = graph.nodes.filter((node) => {
+        const typeOk = type === 'all' || node.type === type;
+        const textOk = !q || `${node.label} ${node.summary || ''}`.toLowerCase().includes(q);
+        return typeOk && textOk;
+      });
+
+      if (!q && type === 'all') return defaultVisibleIds();
+
+      const visible = new Set(ranked(direct).slice(0, q ? 120 : 220).map((node) => node.id));
+      for (const node of direct.slice(0, q ? 48 : 120)) {
+        for (const neighbor of adjacency.get(node.id) || []) visible.add(neighbor);
+      }
+      return visible;
+    }
+
+    function placeNodes(displayNodes) {
+      const grouped = Object.groupBy
+        ? Object.groupBy(displayNodes, (node) => node.type)
+        : displayNodes.reduce((acc, node) => {
+            acc[node.type] ||= [];
+            acc[node.type].push(node);
+            return acc;
+          }, {});
 
       typeOrder.forEach((type, ring) => {
-        const list = grouped[type] || [];
-        const radius = scopeSelect.value === 'full' ? [64, 170, 300, 435][ring] : [70, 190, 310, 420][ring];
+        const list = ranked(grouped[type] || []);
+        const maxRadius = Math.min(width * .38, height * .43);
+        const radius = maxRadius * [.18, .44, .68, .92][ring];
+        const xStretch = Math.min(1.85, Math.max(1.05, (width / height) * .74));
         list.forEach((node, index) => {
           const angle = (Math.PI * 2 * index) / Math.max(list.length, 1) - Math.PI / 2 + ring * 0.34;
-          node.x = center.x + Math.cos(angle) * radius;
-          node.y = center.y + Math.sin(angle) * radius;
+          const jitter = ((stableHash(node.id) % 100) / 100 - .5) * 24;
+          node.x = center.x + Math.cos(angle) * (radius * xStretch + jitter);
+          node.y = center.y + Math.sin(angle) * (radius + jitter * .6);
         });
       });
     }
 
-    function matches(node) {
-      const q = search.value.trim().toLowerCase();
-      const type = typeSelect.value;
-      const typeOk = type === 'all' || node.type === type;
-      const textOk = !q || `${node.label} ${node.summary || ''}`.toLowerCase().includes(q);
-      return typeOk && textOk;
+    function shouldLabel(node, active, related) {
+      const q = search.value.trim();
+      if (width < 700 && !q) return active || related;
+      return active || related || prominentLabelIds.has(node.id) || (q && node.type !== 'project');
+    }
+
+    function nodeRadius(node, active, related) {
+      const base = 4.5 + Math.min(10, Math.sqrt(Math.max(1, nodeRank(node))) * 1.1);
+      if (active) return base + 5;
+      if (related) return base + 2;
+      return base;
+    }
+
+    function absoluteHref(value) {
+      if (!value) return '';
+      if (/^https?:\/\//.test(value)) return value;
+      const clean = value.startsWith('/') ? value : `/${value}`;
+      return `${location.origin}${siteBasePath}${clean}`;
+    }
+
+    function directRelations(id, limit = 18) {
+      return [...(adjacency.get(id) || [])]
+        .map((nodeId) => byId.get(nodeId))
+        .filter(Boolean)
+        .sort((a, b) => nodeRank(b) - nodeRank(a))
+        .slice(0, limit);
+    }
+
+    function materialLinksForNode(node) {
+      const meta = metaById.get(node.id);
+      const links = [];
+      if (meta?.kind === 'project') {
+        links.push({ label: `${meta.name} model card`, href: absoluteHref(meta.href), note: `rank #${String(meta.rank).padStart(3, '0')} · ${Number(meta.stars || 0).toLocaleString()} stars` });
+        links.push({ label: `${meta.repo} GitHub`, href: meta.url, note: `${meta.category} · ${meta.updated}` });
+        links.push({ label: `${meta.name} published report`, href: absoluteHref(meta.reportHref), note: meta.localPath ? `local: ${meta.localPath}` : 'site report' });
+      } else if (meta?.kind === 'paper') {
+        if (meta.href) links.push({ label: `${meta.title} research note`, href: absoluteHref(meta.href), note: `${meta.year}${meta.cluster ? ` · ${meta.cluster}` : ''}` });
+        if (meta.url) links.push({ label: `${meta.title} source`, href: meta.url, note: meta.relation || 'paper source' });
+        if (meta.pdfHref) links.push({ label: `${meta.title} PDF`, href: meta.pdfHref, note: 'paper PDF / publisher page' });
+      } else if (node.url) {
+        links.push({ label: `${node.label} source`, href: node.url, note: node.type });
+      }
+      return links;
+    }
+
+    function uniqueLinks(nodes) {
+      const seen = new Set();
+      const links = [];
+      for (const node of nodes) {
+        for (const link of materialLinksForNode(node)) {
+          if (!link.href || seen.has(link.href)) continue;
+          seen.add(link.href);
+          links.push(link);
+        }
+      }
+      return links.slice(0, 18);
+    }
+
+    function nodeLine(node) {
+      const meta = metaById.get(node.id);
+      if (meta?.kind === 'project') {
+        return `- project: ${meta.name} (${meta.repo}) | rank #${String(meta.rank).padStart(3, '0')} | stars ${Number(meta.stars || 0).toLocaleString()} | pattern: ${meta.pattern}`;
+      }
+      if (meta?.kind === 'paper') {
+        return `- paper: ${meta.title} (${meta.year}) | cluster: ${meta.cluster || 'unknown'} | relation: ${meta.relation || 'unknown'}`;
+      }
+      return `- ${node.type}: ${node.label}${node.summary ? ` | ${node.summary}` : ''}`;
+    }
+
+    function buildPrompt(selectedId, displayNodes) {
+      const selected = selectedId ? byId.get(selectedId) : null;
+      const focusNodes = selected ? [selected, ...directRelations(selected.id, 14)] : ranked(displayNodes).slice(0, 16);
+      const relationNodes = selected ? focusNodes.slice(1) : focusNodes;
+      const links = uniqueLinks(focusNodes);
+      const focusTitle = selected ? `${selected.label} (${selected.type})` : '当前 Self Evolve graph 视图';
+      const focusSummary = selected?.summary || '基于当前搜索/类型筛选结果，从项目、论文、概念和 cluster 中继续深挖。';
+      const linkLines = links.length
+        ? links.map((link) => `- ${link.label}: ${link.href}${link.note ? ` (${link.note})` : ''}`).join('\n')
+        : '- 当前节点没有直接 URL；请先使用下方关系节点作为检索入口。';
+      const relationLines = relationNodes.length
+        ? relationNodes.map(nodeLine).join('\n')
+        : '- 暂无直接关系。';
+      return `你是 Self Evolve / AI 自我进化研究助理。请基于下面的 graph 节点继续做深度调研，不要只总结网页，要沿着 GitHub、论文/PDF、站内报告交叉验证。
+
+焦点节点:
+- ${focusTitle}
+- 摘要: ${focusSummary}
+
+直接关系 / 当前候选:
+${relationLines}
+
+可继续打开的材料链接:
+${linkLines}
+
+请输出:
+1. 这个节点在 Self Evolve 中的机制位置：它改进 prompt、代码、记忆、工具、策略、数据、模型权重，还是 agent 组织？
+2. 证据质量 rank：按 GitHub stars/最近活跃、论文可信度、可复现实验、benchmark/评估器是否明确排序。
+3. 对应 GitHub 仓库和论文/PDF 的证据表：每条证据说明它支持了什么判断。
+4. 与相邻项目/论文的差异：哪些只是同名概念，哪些真正有新机制。
+5. 下一步研究计划：raw 要抓什么、processed 要抽取什么、work 中要画什么图、results 可以产出什么文章/报告。
+6. 风险与限制：数据缺口、过时仓库、不可复现实验、概念误连。`;
+    }
+
+    function updatePrompt(selectedId, displayNodes) {
+      const selected = selectedId ? byId.get(selectedId) : null;
+      const focusNodes = selected ? [selected, ...directRelations(selected.id, 14)] : ranked(displayNodes).slice(0, 16);
+      const links = uniqueLinks(focusNodes);
+      promptTitle.textContent = selected ? `${selected.label}` : '当前 graph 视图调研 Prompt';
+      promptSummary.textContent = selected?.summary || `${displayNodes.length} 个可见节点，可先点击具体项目/论文/cluster 生成更聚焦的 Prompt。`;
+      promptLinks.innerHTML = '';
+      for (const link of links.slice(0, 8)) {
+        const anchor = document.createElement('a');
+        anchor.href = link.href;
+        anchor.target = '_blank';
+        anchor.rel = 'noopener';
+        anchor.textContent = link.label;
+        promptLinks.append(anchor);
+      }
+      promptTextarea.value = buildPrompt(selectedId, displayNodes);
+      copyPromptStatus.textContent = '';
     }
 
     function render(selectedId) {
-      const matched = new Set(graph.nodes.filter(matches).map((node) => node.id));
+      syncCanvas();
+      const matched = matchIds();
       const selectedNeighbors = selectedId ? adjacency.get(selectedId) || new Set() : new Set();
+      if (selectedId) {
+        matched.add(selectedId);
+        for (const neighbor of selectedNeighbors) matched.add(neighbor);
+      }
+      const displayNodes = graph.nodes.filter((node) => matched.has(node.id));
+      const displayIds = new Set(displayNodes.map((node) => node.id));
+      placeNodes(displayNodes);
+      const selectedNode = selectedId ? byId.get(selectedId) : null;
+      graphCount.textContent = selectedNode
+        ? `${selectedNode.label} · ${selectedNeighbors.size} relations`
+        : `${displayNodes.length} of ${graph.nodes.length} nodes`;
       svg.innerHTML = '';
 
       const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
-      defs.innerHTML = '<filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>';
+      defs.innerHTML = `
+        <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <radialGradient id="paper-wash" cx="50%" cy="45%" r="58%">
+          <stop offset="0%" stop-color="#FFF8F0"/>
+          <stop offset="100%" stop-color="#FFF0E0"/>
+        </radialGradient>
+      `;
       svg.append(defs);
 
+      const maxRadius = Math.min(width * .38, height * .43);
+      const xStretch = Math.min(1.85, Math.max(1.05, (width / height) * .74));
+      const wash = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse');
+      wash.setAttribute('cx', center.x);
+      wash.setAttribute('cy', center.y);
+      wash.setAttribute('rx', String(maxRadius * xStretch * 1.05));
+      wash.setAttribute('ry', String(maxRadius * 1.08));
+      wash.setAttribute('fill', 'url(#paper-wash)');
+      wash.setAttribute('opacity', '.82');
+      svg.append(wash);
+
       for (const edge of graph.edges) {
+        if (!displayIds.has(edge.source) || !displayIds.has(edge.target)) continue;
         const source = byId.get(edge.source);
         const target = byId.get(edge.target);
         if (!source || !target) continue;
         const active = selectedId && (edge.source === selectedId || edge.target === selectedId);
-        const visible = matched.has(edge.source) || matched.has(edge.target) || active;
         const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
         line.setAttribute('x1', source.x);
         line.setAttribute('y1', source.y);
         line.setAttribute('x2', target.x);
         line.setAttribute('y2', target.y);
-        line.setAttribute('stroke', active ? '#7cf7d4' : 'rgba(255,255,255,.18)');
+        line.setAttribute('stroke', active ? '#FF5B00' : 'rgba(26,26,26,.20)');
         line.setAttribute('stroke-width', active ? '2.5' : '1');
-        line.setAttribute('opacity', visible ? '1' : '.14');
+        line.setAttribute('opacity', active ? '1' : '.38');
         svg.append(line);
       }
 
-      for (const node of graph.nodes) {
+      for (const node of displayNodes) {
         const active = node.id === selectedId;
         const related = selectedNeighbors.has(node.id);
-        const visible = matched.has(node.id) || active || related;
         const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
         group.setAttribute('transform', `translate(${node.x}, ${node.y})`);
         group.setAttribute('tabindex', '0');
@@ -180,84 +421,107 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
         });
 
         const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        circle.setAttribute('r', String(7 + node.weight * 1.5));
+        circle.setAttribute('r', String(nodeRadius(node, active, related)));
         circle.setAttribute('fill', typeColor[node.type]);
-        circle.setAttribute('opacity', visible ? '1' : '.18');
-        circle.setAttribute('stroke', active ? '#ffffff' : 'rgba(255,255,255,.55)');
+        circle.setAttribute('opacity', active || related ? '1' : '.86');
+        circle.setAttribute('stroke', active ? '#1A1A1A' : 'rgba(26,26,26,.28)');
         circle.setAttribute('stroke-width', active ? '3' : '1');
         if (active || related) circle.setAttribute('filter', 'url(#glow)');
         group.append(circle);
 
-        const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        const maxLabel = scopeSelect.value === 'full' ? 18 : 28;
-        label.textContent = node.label.length > maxLabel ? `${node.label.slice(0, maxLabel - 1)}...` : node.label;
-        label.setAttribute('y', String(25 + node.weight));
-        label.setAttribute('text-anchor', 'middle');
-        label.setAttribute('fill', visible ? '#f6f8ff' : 'rgba(246,248,255,.28)');
-        label.setAttribute('font-size', active || related || node.type === 'cluster' ? '13' : scopeSelect.value === 'full' ? '9' : '11');
-        label.setAttribute('font-weight', active || node.type === 'cluster' ? '800' : '500');
-        group.append(label);
+        if (shouldLabel(node, active, related)) {
+          const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+          label.textContent = node.label.length > 32 ? `${node.label.slice(0, 31)}...` : node.label;
+          label.setAttribute('y', String(nodeRadius(node, active, related) + 16));
+          label.setAttribute('text-anchor', 'middle');
+          label.setAttribute('fill', '#1A1A1A');
+          label.setAttribute('font-size', active || related || node.type === 'cluster' ? '14' : '11');
+          label.setAttribute('font-weight', active || node.type === 'cluster' ? '800' : '650');
+          label.setAttribute('paint-order', 'stroke');
+          label.setAttribute('stroke', '#FFF8F0');
+          label.setAttribute('stroke-width', '5');
+          label.setAttribute('stroke-linejoin', 'round');
+          group.append(label);
+        }
         svg.append(group);
       }
+      updatePrompt(selectedId, displayNodes);
     }
 
     function selectNode(id) {
-      const node = byId.get(id);
-      if (!node) return;
-      const neighbors = [...(adjacency.get(id) || [])].map((neighborId) => byId.get(neighborId)).filter(Boolean);
-      detail.innerHTML = `
-        <div class="eyebrow">${node.type}</div>
-        <h2>${node.label}</h2>
-        <p>${node.summary || 'No summary yet.'}</p>
-        ${node.url ? `<p><a class="button" href="${node.url}" target="_blank" rel="noopener">Open source</a></p>` : ''}
-        <h3>Direct relations</h3>
-        <ul>${neighbors.slice(0, 12).map((item) => `<li>${item.type}: ${item.label}</li>`).join('')}</ul>
-      `;
-      render(id);
+      selectedNodeId = id;
+      render(selectedNodeId);
     }
 
-    function setScope(scope) {
-      graph = graphs[scope] || graphs.core;
-      indexGraph();
-      placeNodes();
-      detail.innerHTML = `
-        <div class="eyebrow">Graph Scope</div>
-        <h2>${scope === 'full' ? 'Full corpus' : 'Core 150'}</h2>
-        <p>${graph.nodes.length} nodes and ${graph.edges.length} edges. Use search to inspect papers, projects, mechanisms, and coverage gaps.</p>
-      `;
-      render();
-    }
-
-    indexGraph();
-    placeNodes();
     render();
-    scopeSelect.addEventListener('change', () => setScope(scopeSelect.value));
-    search.addEventListener('input', () => render());
-    typeSelect.addEventListener('change', () => render());
+    search.addEventListener('input', () => {
+      selectedNodeId = null;
+      render();
+    });
+    typeSelect.addEventListener('change', () => {
+      selectedNodeId = null;
+      render();
+    });
+    copyPromptButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(promptTextarea.value);
+        copyPromptStatus.textContent = 'Copied';
+      } catch (_error) {
+        promptTextarea.focus();
+        promptTextarea.select();
+        document.execCommand('copy');
+        copyPromptStatus.textContent = 'Copied';
+      }
+    });
+    window.addEventListener('resize', () => render(selectedNodeId));
   </script>
 </BaseLayout>
 
 <style>
-  .graph-section { padding-top: 12px }
+  .graph-section {
+    padding: 18px 0 42px;
+  }
   .graph-shell {
+    width: min(calc(100% - 56px), 2140px);
+    max-width: none;
+    margin-inline: auto;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 330px;
-    gap: 18px;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+    gap: 14px;
     align-items: stretch;
   }
-  .graph-panel,
-  .graph-detail {
+  .graph-panel {
     border: 1px solid var(--line);
-    background: var(--card-bg);
-    border-radius: var(--radius);
+    background: var(--surface-1);
+    border-radius: var(--radius-media);
   }
   .graph-panel { overflow: hidden }
   .graph-toolbar {
     display: grid;
-    grid-template-columns: 150px minmax(180px, 1fr) 180px;
-    gap: 12px;
-    padding: 16px;
+    grid-template-columns: minmax(190px, .72fr) minmax(260px, 1fr) 180px auto;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
     border-bottom: 1px solid var(--line);
+  }
+  .graph-title {
+    min-width: 0;
+  }
+  .graph-title h1 {
+    color: var(--fg);
+    font-family: var(--font-display);
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .graph-title p {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
   }
   .graph-toolbar label {
     display: grid;
@@ -272,34 +536,116 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
   .graph-toolbar select {
     width: 100%;
     border: 1px solid var(--line);
-    border-radius: 14px;
-    background: rgba(5, 6, 21, .8);
+    border-radius: var(--radius-cta);
+    background: var(--surface-card);
     color: var(--text);
     padding: 12px 14px;
-    font: inherit;
+    font: 650 14px/1.1 var(--font-body);
     letter-spacing: 0;
+  }
+  .graph-toolbar input:focus,
+  .graph-toolbar select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
+  }
+  .graph-count {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--meta);
+    font-size: 13px;
+    font-weight: 750;
+    white-space: nowrap;
   }
   #knowledge-graph {
     display: block;
     width: 100%;
-    min-height: 620px;
+    height: clamp(560px, calc(100vh - 206px), 820px);
+    min-height: 560px;
     background:
-      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      linear-gradient(rgba(26,26,26,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26,26,26,.035) 1px, transparent 1px),
+      var(--surface-card);
     background-size: 44px 44px;
   }
-  .graph-detail {
-    padding: 22px;
-    min-height: 620px;
+  .graph-prompt-panel {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-media);
+    background: var(--surface-card);
+    padding: 18px;
+    box-shadow: var(--shadow-mockup);
   }
-  .graph-detail h2 { font-size: 28px; line-height: 1.1; margin: 12px 0 }
-  .graph-detail h3 { margin-top: 22px; font-size: 16px }
-  .graph-detail ul { margin: 12px 0 0 18px; color: var(--muted); line-height: 1.7 }
-
+  .graph-prompt-panel h2 {
+    margin-top: 12px;
+    color: var(--fg);
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.02;
+  }
+  .graph-prompt-panel p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .graph-prompt-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .graph-prompt-links a {
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: var(--surface-1);
+    color: var(--fg);
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.25;
+  }
+  .graph-prompt-links a:hover,
+  .graph-prompt-links a:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  #graph-prompt {
+    width: 100%;
+    min-height: 330px;
+    margin-top: 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-1);
+    color: var(--fg);
+    padding: 12px;
+    resize: vertical;
+    font: 12px/1.55 var(--font-mono);
+  }
+  .graph-prompt-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  #copy-graph-prompt-status {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 800;
+  }
   @media (max-width: 920px) {
-    .graph-shell { grid-template-columns: 1fr }
+    .graph-section { padding-top: 14px }
+    .graph-shell {
+      width: min(100% - 32px, 1160px);
+      grid-template-columns: 1fr;
+    }
     .graph-toolbar { grid-template-columns: 1fr }
-    #knowledge-graph { min-height: 430px }
-    .graph-detail { min-height: auto }
+    .graph-title h1 { font-size: 30px }
+    .graph-count { justify-content: flex-start }
+    #knowledge-graph {
+      height: 430px;
+      min-height: 430px;
+    }
   }
 </style>

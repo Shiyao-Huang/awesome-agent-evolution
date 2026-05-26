@@ -37,6 +37,26 @@
 - **Evidence chain**: 每个分析结论必须可追溯到 raw 数据源。如果无法追溯，标注 `[UNVERIFIED]`。
 - **Layered output**: 判断用 1 句话，证据用 3 句话，完整论证用 5+ 句话。
 
+## Website Style Lock
+
+网站当前视觉基准是 `3fd1785`（2026-05-25 15:05 +0800，`docs: sync README i18n and paper pipeline`）附近恢复出的 Caret/editorial 风格；严格 15:00 前快照是 `e2f4518`（2026-05-25 14:53 +0800）。不要随意把站点改成另一套深色、玻璃、营销页、过度卡片化或组件展示风格。
+
+- 样式基准文件：`site/src/styles/global.css`。保留浅色 `#FAF7F2` 背景、EB Garamond display 字体、蓝色 caret 线、橙色主 CTA、8px 左右卡片圆角、克制的 editorial 版式。
+- 首页基准：`site/src/pages/index.astro` 使用中文主叙事、证据链 `hero-evidence`、Raw/Processed/Model cards/Results 结构；不要用新 React mockup 替代它。
+- Graph 基准：`site/src/pages/graph/index.astro` 是可搜索的圆形 Knowledge graph + 右侧/下方 AI Research Prompt 面板；不要恢复或新建 `site/src/components/EvolutionNetwork.tsx` 来替换该 graph。
+- i18n 基准：当前网页主语言是 `zh-CN`，`site/src/data/site.ts` 的中文导航和 metadata 不能被英文化或删减。若新增 i18n 路由，必须保留中文入口、canonical/alternate 和 SEO 描述。
+- 改网页风格前，必须先跑 `git diff 3fd1785 -- site/src/styles/global.css site/src/pages/index.astro site/src/pages/graph/index.astro site/src/layouts/BaseLayout.astro site/src/data/site.ts`，说明为什么要偏离基准。
+- 改完网页必须验证桌面和移动端；至少跑 `(cd site && npm run build)`，并检查首页与 `/graph/` 在约 390px 移动视口没有横向溢出。
+
+## Persistence Rule
+
+恢复历史版本、修复样式回退、写入 AGENTS/CLAUDE/CLOUD 或做任何用户明确要求“保留”的改动后，不要让成果只停留在未提交工作区。
+
+- 在执行 `git reset`、`git restore`、`git checkout`、`git clean`、生成索引或大范围脚本前，先跑 `git status --short` 和相关 `git diff --name-status`，确认不会覆盖刚恢复的网页、graph、i18n 或手册改动。
+- 如果改动还不能提交，先生成可恢复补丁：`git diff -- AGENTS.md CLAUDE.md site/src/styles/global.css site/src/pages/index.astro site/src/pages/graph/index.astro site/src/layouts/BaseLayout.astro site/src/data/site.ts > work/recovery-style-lock.patch`。
+- 当用户要求“写入”“持久”“别丢”时，优先建议或创建一个 checkpoint commit；没有提交前，最终汇报必须明确说明这些改动仍可能被 reset 清掉。
+- 任何 reset 后发现丢失，先查 `git reflog --date=iso -20`、`git diff 3fd1785 -- ...` 和本地 `work/*.patch`，再恢复，不要重新设计。
+
 ## User Direct Input Reference
 
 执行任务时优先对齐这些用户原话，而不是 team 输入或历史摘要：
@@ -49,6 +69,8 @@
 | 4 | `GitHub的项目原始收集的有哪些？进行分析的有哪些？进化相关的有哪些？按时间顺序发布的有哪些？` | 论文和分析必须回答 raw collection、analyzed subset、evolution-related subset、timeline 四件事。 |
 | 5 | `raw归raw 加工后的归加工的 、work 产物归work 、结果输出归结果、、全部都要索引化 覆盖` | 任何文件新增或移动都要归层，并刷新索引。 |
 | 6 | `用户的输入你得提取出来，然后作为Agent和Claude里边的参考。` | AGENTS/CLAUDE 必须链接并使用 [docs/project-management/user-direct-inputs.md](docs/project-management/user-direct-inputs.md)。 |
+| 7 | `找回昨天的那个版本，尤其是在graph的这个上修改的内容。注意 i18N 网页 15:00` | 网站风格和 graph 以 2026-05-25 15:05 附近版本为基准；任何 style/graph/i18n 改动必须先对照历史。 |
+| 8 | `持久建议放入 agent claude ，md` | 用户要求保留的恢复规则必须写入 AGENTS/CLAUDE，并在 reset 前先保存补丁或 checkpoint。 |
 
 开始工作前自问三句：
 
