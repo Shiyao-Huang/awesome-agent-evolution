@@ -14,6 +14,11 @@ _People, organizations, projects, products_
 _Ideas, mechanisms, patterns, taxonomies_
 
 <!-- concepts auto-indexed here -->
+- [自我观察 (Self-Observation)](concepts/self-observation.md) — M1: Agent感知自身行为，轨迹/反思/诊断/元认知 4子机制 | Rank: A | 2026-05-26
+- [自我评估 (Self-Evaluation)](concepts/self-evaluation.md) — M2: 评估行为质量，自评/环境反馈/程序化验证/元评估/人类审查 | Rank: A | 2026-05-26
+- [自我改进 (Self-Improvement)](concepts/self-improvement.md) — M3: 改变自身分布，提示词→记忆→权重→代码 4层深度谱系 | Rank: A | 2026-05-26
+- [多智能体协作进化 (Multi-Agent Co-Evolution)](concepts/multi-agent-coevolution.md) — M4: 竞争/协作/批判/分工/知识共享 5子机制 | Rank: A | 2026-05-26
+- [涌现行为分析 (Emergent Behavior)](concepts/emergent-behavior.md) — M5: 正向/负向涌现，开放式探索/递归反馈/stepping stones/风险 | Rank: A | 2026-05-26
 
 ## Sources
 
@@ -21,6 +26,7 @@ _Processed raw sources with extracted insights_
 
 <!-- sources auto-indexed here -->
 - [Employee Social Intelligence](sources/employee-social-intelligence.md) — X/Twitter, LinkedIn, GitHub signals from self-evolution researchers; Meta MSL 44-person list; Recursive startup; Karpathy→Anthropic move | Rank: A | 2026-05-26
+- [Raw-GitHub Mechanism Analysis](sources/raw-github-mechanism-analysis.md) — 365 project deep-dive: 7-class taxonomy, 15 case studies, 5 structural factors for TRUE self-evolution; ~12% genuine evolution rate | Rank: A | 2026-05-26
 
 ## Synthesis
 
@@ -36,6 +42,6 @@ _Cross-cutting analyses, comparisons, evolving theses_
 |--------|-------|
 | Entities | 0 |
 | Concepts | 0 |
-| Sources | 0 |
+| Sources | 2 |
 | Synthesis pages | 0 |
 | Last updated | 2026-05-26 |

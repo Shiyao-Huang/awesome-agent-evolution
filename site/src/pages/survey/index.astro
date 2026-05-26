@@ -1,0 +1,236 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { surveyStats, evolutionLoops, methodFamilies, painPoints, surveyFigurePaths } from '@/data/survey';
+
+const surveyLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ScholarlyArticle',
+  name: 'Self-Evolving AI Agents: Survey Findings & Mechanism Analysis',
+  description: 'Key findings from a comprehensive survey on AI self-evolution: five evolution loops, 196 papers, 348 projects, 97 user pain points, and 6 deep-dive case studies.',
+  author: { '@type': 'Organization', name: 'Self Evolve Research' },
+  datePublished: '2026-05',
+  inLanguage: ['en', 'zh'],
+  keywords: ['AI self-evolution', 'evolution loops', 'agent improvement', 'self-modification', 'mechanism taxonomy', 'case studies'],
+};
+---
+
+<BaseLayout
+  title="Survey核心发现 — AI自进化机制分析与案例研究"
+  description="从196篇论文、348个项目、97个用户痛点中提炼的AI自进化核心发现：五大进化环、七大方法族、六大案例深度分析和实用建议。"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(surveyLd)} is:inline />
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Survey Findings · 核心发现</div>
+      <h1 class="gradient-text">AI 自进化的核心机制与证据</h1>
+      <p class="lead">从 196 篇论文、348 个开源项目、1306 篇博客和 97 个独立用户访谈中提炼的自进化机制图谱——每个结论都有证据链。</p>
+      <div class="metrics">
+        <div class="metric"><strong>{surveyStats.papers}</strong><span>篇论文分析</span></div>
+        <div class="metric"><strong>{surveyStats.repos}</strong><span>个 GitHub 项目</span></div>
+        <div class="metric"><strong>{surveyStats.painPoints}</strong><span>个用户痛点</span></div>
+        <div class="metric"><strong>{surveyStats.evolutionLoops}</strong><span>大进化环</span></div>
+      </div>
+      <div class="hero-actions" style="margin-top: 24px;">
+        <a class="button primary" href="/survey/mechanisms/">五大进化环详解</a>
+        <a class="button" href="/survey/case-studies/">六大案例研究</a>
+        <a class="text-link" href="/paper/">论文下载</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Core Framework</div>
+          <h2>五大进化环 — 自进化的统一框架</h2>
+        </div>
+        <a class="text-link" href="/survey/mechanisms/">深入理解 →</a>
+      </div>
+      <p style="margin-bottom: 24px; color: var(--muted);">Survey 的核心贡献：将散乱的"自改进"文献统一为五个可组合的进化环。</p>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        {evolutionLoops.map((loop) => (
+          <article class="card" style="border-top: 3px solid var(--accent);">
+            <div style="font-size: 2rem; margin-bottom: 8px;">{loop.icon}</div>
+            <h3>{loop.nameZh}</h3>
+            <p style="color: var(--muted); font-size: 0.85rem;">{loop.name}</p>
+            <p>{loop.descriptionZh}</p>
+            <div class="pill-row">
+              {loop.examples.map((ex) => (
+                <span class="pill">{ex}</span>
+              ))}
+            </div>
+            <p style="margin-top: 12px; font-style: italic; color: var(--accent);">💡 {loop.keyInsight}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Method Taxonomy</div>
+          <h2>七大方法族 — 196 篇论文分类</h2>
+        </div>
+      </div>
+      <div class="method-bars">
+        {methodFamilies.map((f) => (
+          <div class="radar-bar-row">
+            <span class="radar-label" style="min-width: 200px;">
+              <strong>{f.nameZh}</strong>
+              <br /><span style="font-size: 0.75rem; color: var(--muted);">{f.name}</span>
+            </span>
+            <div class="radar-bar-track" style="flex: 1;">
+              <div class="radar-bar-fill" style={`width: ${(f.papers / 68) * 100}%; background: ${f.color};`} />
+            </div>
+            <span class="radar-value">{f.papers} ({f.share})</span>
+          </div>
+        ))}
+      </div>
+      <div class="visual-grid" style="margin-top: 24px;">
+        <figure class="visual-panel">
+          <img src={surveyFigurePaths.methodDistribution} alt="Method distribution across 196 papers" loading="lazy" />
+          <figcaption>方法族分布：提示词优化占最大份额，安全/治理占比最低但最关键。</figcaption>
+        </figure>
+        <figure class="visual-panel">
+          <img src={surveyFigurePaths.methodTrend} alt="Method trend over time" loading="lazy" />
+          <figcaption>时间趋势：代码自修改和自博弈方法在 2025 年快速增长。</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Case Studies</div>
+          <h2>六大案例 — 深度证据分析</h2>
+        </div>
+        <a class="text-link" href="/survey/case-studies/">查看完整案例 →</a>
+      </div>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <article class="card" style="border-left: 4px solid #3498db;">
+          <h3>🧬 DGM: Darwin Godel Machine</h3>
+          <p>代码级自修改 + 开放式归档继承。</p>
+          <div class="pill-row">
+            <span class="pill">SWE-bench 20→50%</span>
+            <span class="pill">Polyglot 14→31%</span>
+          </div>
+        </article>
+        <article class="card" style="border-left: 4px solid #9b59b6;">
+          <h3>🏗️ ADAS: 自动 Agent 设计</h3>
+          <p>元智能体搜索 Python 编码的 Agent 架构。</p>
+          <div class="pill-row">
+            <span class="pill">跨任务迁移</span>
+            <span class="pill">自动代码搜索</span>
+          </div>
+        </article>
+        <article class="card" style="border-left: 4px solid #e74c3c;">
+          <h3>💎 AlphaEvolve (DeepMind)</h3>
+          <p>LLM + 进化算法发现超越人类直觉的新算法。</p>
+          <div class="pill-row">
+            <span class="pill">矩阵乘法 49→47步</span>
+            <span class="pill">50年记录</span>
+          </div>
+        </article>
+      </div>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 16px;">
+        <article class="card" style="border-left: 4px solid #2ecc71;">
+          <h3>🎮 Voyager: Minecraft 终身学习</h3>
+          <p>技能库积累创造复合回报。</p>
+          <div class="pill-row">
+            <span class="pill">独特物品 3.6x</span>
+            <span class="pill">钻石级全通关</span>
+          </div>
+        </article>
+        <article class="card" style="border-left: 4px solid #f39c12;">
+          <h3>🪞 Reflexion: 语言反思</h3>
+          <p>失败 → 文本反思 → 记忆 → 避免重复错误。</p>
+          <div class="pill-row">
+            <span class="pill">HumanEval 91%</span>
+            <span class="pill">AlfWorld 97%</span>
+          </div>
+        </article>
+        <article class="card" style="border-left: 4px solid #1abc9c;">
+          <h3>🏆 Self-Rewarding LM</h3>
+          <p>模型自己生成奖励 → 自己训练 → 自我强化循环。</p>
+          <div class="pill-row">
+            <span class="pill">零人工标注</span>
+            <span class="pill">迭代 DPO</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">User Pain Points</div>
+          <h2>来自真实用户的 97 个痛点</h2>
+        </div>
+      </div>
+      <p style="margin-bottom: 24px; color: var(--muted);">Mom Test 方法论：Reddit 47 条 + Hacker News 36 条 + X/Twitter 14 条独立用户访谈。</p>
+      <div class="grid">
+        {painPoints.map((pp) => (
+          <article class="card">
+            <div style="font-size: 1.5rem;">{pp.icon}</div>
+            <h3>{pp.categoryZh}</h3>
+            <p><strong>{pp.count} 个痛点</strong></p>
+            <p>{pp.coreFinding}</p>
+            <p style="font-size: 0.85rem; color: var(--muted); margin-top: 8px;">Survey 证据：{pp.surveyEvidence}</p>
+          </article>
+        ))}
+      </div>
+      <div class="visual-grid" style="margin-top: 24px;">
+        <figure class="visual-panel">
+          <img src={surveyFigurePaths.painpointPlatform} alt="Pain points by platform" loading="lazy" />
+          <figcaption>痛点来源分布</figcaption>
+        </figure>
+        <figure class="visual-panel">
+          <img src={surveyFigurePaths.crossSourceGap} alt="Cross-source validation gaps" loading="lazy" />
+          <figcaption>交叉验证差距</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card" style="border-left: 4px solid var(--accent); padding: 32px;">
+        <h2>Survey 核心论点</h2>
+        <p style="font-size: 1.2rem; line-height: 1.8;">
+          <strong>自进化应当被评估为一个受控的系统过程：</strong>每一个声称的改进都必须说明——改变了什么？什么反馈证明了这次改变？什么评估器批准了它？成本多少？引入了什么风险？如何审计和回滚？
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+        <a href="/survey/mechanisms/" class="card" style="text-decoration: none; color: inherit; border-top: 3px solid #9b59b6;">
+          <h3>🔍 五大进化环详解</h3>
+          <p>每个环的机制、证据和组合模式。</p>
+        </a>
+        <a href="/survey/case-studies/" class="card" style="text-decoration: none; color: inherit; border-top: 3px solid #3498db;">
+          <h3>📋 六大案例研究</h3>
+          <p>DGM、ADAS、AlphaEvolve 等的深度证据分析。</p>
+        </a>
+        <a href="/paper/" class="card" style="text-decoration: none; color: inherit; border-top: 3px solid #e74c3c;">
+          <h3>📄 论文下载</h3>
+          <p>中英文 PDF、方法分类图和框架雷达图。</p>
+        </a>
+        <a href="/projects/" class="card" style="text-decoration: none; color: inherit; border-top: 3px solid #2ecc71;">
+          <h3>🗂️ 项目索引</h3>
+          <p>348 个开源项目的 Model Card 和机制分析。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

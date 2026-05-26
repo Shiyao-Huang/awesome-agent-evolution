@@ -28,3 +28,16 @@
 2. 禁止 `git checkout .` 或 `git restore .`
 3. 禁止 `git clean -f`
 4. 文件写入后应 `git add + git commit` 保护
+
+## [2026-05-26 12:15] ingest | Employee Social Intelligence Mining
+
+**操作:** Researcher (社交情报挖掘) 写入 work/wiki/sources/employee-social-intelligence.md
+**详情:**
+- X/Twitter: Jeff Clune DGM (@jeffclune), Abigail See AlphaEvolve (@abigail_e_see), Karpathy Anthropic move (@karpathy)
+- LinkedIn: Meta MSL 44-person team (leaked by @deedydas), Recursive startup founding team, Anthropic net inflow
+- GitHub: EvoAgentX framework, Awesome-Self-Evolving-Agents, CORAL, AgentEvolver
+- Blogs: Sakana DGM, DeepMind AlphaEvolve (2 posts), Vector Institute Clune profile
+- Sentiment: DGM extremely positive (#1 discussed May 2025), Meta MSL mixed, AlphaEvolve very positive
+**信任链:** 所有条目附带原始link
+**Rank:** ⬤⬤⬤⬤
+**局限:** 未覆盖中国平台（WeChat/知乎/B站）; 多次遇到429 rate limit

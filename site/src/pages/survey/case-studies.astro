@@ -1,0 +1,171 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { caseStudies, surveyFigurePaths } from '@/data/survey';
+
+const caseStudyLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'AI Self-Evolution Case Studies — Deep Evidence Analysis',
+  description: 'Six in-depth case studies: DGM, ADAS, AlphaEvolve, Voyager, Reflexion, Self-Rewarding LM.',
+  author: { '@type': 'Organization', name: 'Self Evolve Research' },
+  datePublished: '2026-05',
+  keywords: ['case study', 'DGM', 'ADAS', 'AlphaEvolve', 'Voyager', 'Reflexion', 'evidence-based'],
+};
+---
+
+<BaseLayout
+  title="六大案例研究 — DGM/ADAS/AlphaEvolve深度证据分析"
+  description="六个自进化系统的深度案例研究：DGM代码自修改、ADAS自动架构搜索、AlphaEvolve算法发现、Voyager技能库、Reflexion语言反思、Self-Rewarding自奖励。每个案例包含可验证的证据链。"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(caseStudyLd)} is:inline />
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Case Studies · 案例研究</div>
+      <h1 class="gradient-text">六大自进化系统深度分析</h1>
+      <p class="lead">每个案例回答四个问题：它做了什么？怎么进化的？有什么证据？核心启示是什么？</p>
+      <div class="hero-actions" style="margin-top: 16px;">
+        <a class="text-link" href="/survey/">← Survey 总览</a>
+        <a class="text-link" href="/survey/mechanisms/">五大进化环 →</a>
+      </div>
+    </div>
+  </section>
+
+  {caseStudies.map((cs, i) => (
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Case {i + 1} of 6 — {cs.category}</div>
+            <h2>{cs.icon} {cs.fullName}</h2>
+          </div>
+          {cs.relatedProject && (
+            <a class="text-link" href={`/projects/${cs.relatedProject}/`}>项目卡 →</a>
+          )}
+        </div>
+        <div class="split">
+          <div>
+            <div class="card" style="border-top: 3px solid var(--accent);">
+              <h3>它做了什么？</h3>
+              <p>{cs.whatItDoes}</p>
+            </div>
+            <div class="card" style="margin-top: 16px; border-left: 4px solid #9b59b6;">
+              <h3>它怎么进化的？</h3>
+              <p>{cs.howItEvolves}</p>
+            </div>
+          </div>
+          <div>
+            <div class="card" style="border-left: 4px solid #2ecc71;">
+              <h3>📊 证据</h3>
+              {cs.evidence.map((e) => (
+                <div style="margin-bottom: 12px;">
+                  <strong>{e.metric}</strong>
+                  <div class="radar-bar-row" style="margin-top: 4px;">
+                    <span class="radar-label">{e.before}</span>
+                    <span style="margin: 0 8px;">→</span>
+                    <span style="color: #2ecc71; font-weight: 600;">{e.after}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div class="card" style="margin-top: 16px; border-left: 4px solid var(--accent);">
+              <h3>💡 核心启示</h3>
+              <p style="font-style: italic;">{cs.keyTakeaway}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Comparison</div>
+          <h2>六大系统对比</h2>
+        </div>
+      </div>
+      <div class="score-table-wrap">
+        <table class="score-table">
+          <thead>
+            <tr><th>系统</th><th>进化维度</th><th>进化环</th><th>可变对象</th><th>核心证据</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>DGM</strong></td><td>Architecture Search</td><td>Search + Population</td><td>Code</td><td>SWE-bench 20→50%</td></tr>
+            <tr><td><strong>ADAS</strong></td><td>Architecture Search</td><td>Search + Evaluator</td><td>Code</td><td>Cross-task transfer</td></tr>
+            <tr><td><strong>AlphaEvolve</strong></td><td>Algorithm Discovery</td><td>Population + Evaluator</td><td>Code</td><td>4×4 matmul 49→47</td></tr>
+            <tr><td><strong>Voyager</strong></td><td>Skill Library</td><td>Reflection + Memory</td><td>Skill, Memory</td><td>Items 3.6x</td></tr>
+            <tr><td><strong>Reflexion</strong></td><td>Reflection</td><td>Reflection</td><td>Memory</td><td>HumanEval 91%</td></tr>
+            <tr><td><strong>Self-Rewarding</strong></td><td>Self-Play</td><td>Search + Evaluator</td><td>Policy</td><td>Zero annotation</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Synthesis</div>
+          <h2>六个案例教会我们什么？</h2>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card" style="border-left: 4px solid var(--accent);">
+          <h3>1. 代码是最强大的可变对象</h3>
+          <p>六个案例中三个以代码为进化载体。修改代码可以改变系统的根本行为。</p>
+        </article>
+        <article class="card" style="border-left: 4px solid #e74c3c;">
+          <h3>2. 评估器决定进化方向</h3>
+          <p>AlphaEvolve 用数学证明，DGM 用 SWE-bench。评估器质量决定结果质量。</p>
+        </article>
+        <article class="card" style="border-left: 4px solid #2ecc71;">
+          <h3>3. 记忆和技能创造复合回报</h3>
+          <p>积累的经验不是线性增加，而是指数级拓展能力的边界。</p>
+        </article>
+      </div>
+      <div class="grid" style="margin-top: 16px;">
+        <article class="card" style="border-left: 4px solid #f39c12;">
+          <h3>4. 种群 > 单轨迹</h3>
+          <p>维护多个候选方案并进行选择，比沿着单一方向优化更鲁棒。</p>
+        </article>
+        <article class="card" style="border-left: 4px solid #9b59b6;">
+          <h3>5. 自我奖励有条件成立</h3>
+          <p>如何防止评估者和被评估者是同一系统时的奖励作弊？</p>
+        </article>
+        <article class="card" style="border-left: 4px solid #1abc9c;">
+          <h3>6. 真实环境是终极检验</h3>
+          <p>从 Minecraft 到 SWE-bench：真实世界的复杂性是最佳验证标准。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="visual-grid">
+        <figure class="visual-panel">
+          <img src={surveyFigurePaths.corpusFunnel} alt="Corpus funnel" loading="lazy" />
+          <figcaption>数据漏斗：案例研究覆盖范围。</figcaption>
+        </figure>
+        <figure class="visual-panel">
+          <img src={surveyFigurePaths.starDistribution} alt="Star distribution" loading="lazy" />
+          <figcaption>Star 分布：案例代表研究前沿。</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+        <a href="/survey/" class="card" style="text-decoration: none; color: inherit;">← Survey 总览</a>
+        <a href="/survey/mechanisms/" class="card" style="text-decoration: none; color: inherit;">五大进化环 →</a>
+        <a href="/paper/" class="card" style="text-decoration: none; color: inherit;">论文下载 →</a>
+        <a href="/projects/" class="card" style="text-decoration: none; color: inherit;">项目索引 →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

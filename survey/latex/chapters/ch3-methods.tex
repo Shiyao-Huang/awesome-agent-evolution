@@ -492,7 +492,13 @@ Self-Refine 在 7 个任务上平均提升约 20\%：
 \item 约束生成：65\% $\rightarrow$ 78\%（+13pp）
 \end{itemize}
 
-\textbf{局限性}：自我评价可能陷入局部最优——模型的自我批评可能遗漏根本性缺陷，因为同一模型的生成和评价能力受限于相同的认知边界。
+\textbf{局限性}：自我评价可能陷入局部最优——模型的自我批评可能遗漏根本性缺陷。额外迭代可能因过度拟合评价偏好而降低输出质量，鲁棒实现应保留最佳验证候选。
+
+\paragraph{Self-Debug: 执行反馈驱动的代码自修复}
+
+\textbf{Self-Debug}~\citep{singh2023selfdebug}引入代码任务中最重要的反馈不对称性：\textbf{执行反馈}。程序可被运行——解析失败、异常、断言违反、超时或错误输出——这些信号通常比 LLM 内省式批评更可靠。
+
+\textbf{机制流程}（输入$\to$处理$\to$输出）：(1) 生成 $c_0 \sim p_\theta(\cdot | x)$；(2) 沙箱执行 $o_t = \text{Execute}(c_t, \mathcal{T}_x)$；(3) 调试分析 $d_t \sim p_\theta(\cdot | x, c_t, o_t)$；(4) 修复 $c_{t+1} \sim p_\theta(\cdot | x, c_t, o_t, d_t)$。核心优势在于精确性（回溯指向具体行号），局限在于覆盖率（通过可见测试不代表通过隐藏测试）。SelfEvolve~\citep{selfevolve2023}报告 HumanEval pass@1 从 74.39\% 提升至 85.98\%。现代方法如 ReVeal~\citep{reveal2025}通过联合进化代码和测试生成来应对覆盖率限制。
 
 \paragraph{ExPeL: 经验驱动的自主学习}
 
@@ -529,6 +535,14 @@ ExPeL 的两阶段流程：
 \end{definition}
 
 该方法在 HotPotQA 上从 36.2/22.8 提升到 39.1/25.6（F1/EM），超过 DSPy 的 37.4/24.1。
+
+\paragraph{ReST-EM: 强化自训练的期望最大化}
+
+\textbf{ReST-EM}将自训练组织为 EM 交替——Grow 步骤生成候选，Improve 步骤用奖励模型过滤并更新策略：$\theta_{t+1} = \arg\min_\theta \mathbb{E}[\mathbf{1}\{R(x,y)>\tau_t\} \cdot \mathcal{L}(x,y;\theta)]$。阈值递增形成课程。拒绝采样微调、Best-of-$N$ 蒸馏和 RLVR 都是该循环的变体。
+
+\paragraph{Constitutional AI: 从 AI 反馈中自我对齐}
+
+\textbf{Constitutional AI}~\citep{constitutionalai2022}用人类编写的宪法原则 $\mathcal{C}$ 引导自我对齐。监督阶段：模型对有害提示生成回答 $\to$ 根据 $\mathcal{C}$ 自我批评 $\to$ 自我修订 $\to$ 在修订结果上微调。RL 阶段：AI 反馈模型根据宪法比较回答对，训练偏好模型作为奖励信号。核心洞见：对齐监督的唯一人类输入是宪法本身，而非逐例有害标签。
 
 \subsubsection{推理时 vs.\ 训练时方法的光谱}
 

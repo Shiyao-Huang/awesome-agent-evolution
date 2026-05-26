@@ -1,93 +1,45 @@
 % ====================================================================
-% Chapter 2: Theoretical Foundations and Taxonomy
+% 第2章：理论基础与分类体系（LaTeX版本）
 % ====================================================================
 
-\section{Theoretical Foundations and Taxonomy of Self-Evolving Agents}\label{ch:theory}
+\section{理论基础与分类体系}\label{ch:theory}
 
-\subsection{Chapter Overview}\label{sec:ch2-overview}
+\subsection{本章概述}\label{sec:ch2-overview}
 
-The theoretical foundations of Agent Self-Evolution draw from four converging research traditions. Evolutionary computation provides the ``generate--vary--select--retain'' framework for open-ended search over non-differentiable spaces. Self-reference and G\"{o}del machines offer a recursive lens through which a system can modify its own structure and empirically verify improvements. Meta-learning and self-training supply the machine-learning formalism for ``learning how to learn'' across task distributions. Reinforcement learning, online learning, and program synthesis contribute mathematical characterizations of objectives, policies, environments, evaluators, and update operators. This chapter does not claim that a mature unified theory already exists---the literature is still coalescing rapidly. Instead, the goal is to abstract the common structures underlying diverse works, providing conceptual coordinates for the method taxonomy in Chapter~\ref{ch:methods} and the system analysis in subsequent chapters.
+AI 自进化不应被理解为单一算法、模型家族或基准测试，而应被视为一组反复将系统从一种运行状态转换为另一种状态的反馈循环。共享模式很简单：系统提出变体、评估变体、保留部分信息，并利用这些信息改变未来行为。不同文献之间的差异在于：被修改的对象、反馈的来源、更新的持久性以及维护替代方案的规模。自精炼答案在多次推理时迭代中改变文本输出；反思型智能体改变其记忆；AutoML 智能体改变可执行流水线；程序进化系统改变源代码；种群方法改变候选智能体或算法的归档；训练时自博弈方法改变模型参数。共同的抽象是进化循环，而实际领域由所组合的循环种类来组织。
 
-A central contribution of this survey is the identification of five recurring ``evolution loops'' that appear, in various combinations, across the systems we study. These loops are not mutually exclusive; most real systems instantiate two or more simultaneously. However, isolating them as analytical primitives clarifies design choices, trade-offs, and failure modes. The five loops are: (1) the \emph{Specification-to-Execution Loop}, which converts natural-language goals into runnable pipelines; (2) the \emph{Search Loop}, which explores architectures, prompts, code, agent designs, and hyperparameters; (3) the \emph{Evaluator Loop}, which scores candidates through tests, benchmarks, verifiers, or deployment metrics; (4) the \emph{Reflection Loop}, which transforms failures into memories, feedback signals, or revised candidate generators; and (5) the \emph{Population Loop}, which maintains multiple candidates and applies selection, mutation, recombination, and specialization across them. Sections~\ref{sec:theory-evo} through~\ref{sec:theory-formal} develop the theoretical machinery; Section~\ref{sec:theory-five-loops} provides the detailed loop taxonomy.
+本章提出围绕五个反复出现的循环的分类体系：规约到执行循环（Specification-to-Execution Loop）、搜索循环（Search Loop）、评估器循环（Evaluator Loop）、反思循环（Reflection Loop）和种群循环（Population Loop）。这些循环并非互斥，而是可以分层的模块化机制。例如，AlphaEvolve~\cite{alphaevolve2025} 可被解读为搜索、评估器和种群循环的组合；ADAS~\cite{adas2025} 可被解读为规约到执行加上智能体设计搜索；Reflexion~\cite{reflexion2023} 结合了评估器信号与反思记忆；FunSearch~\cite{funsearch2024} 将候选程序生成与可执行评估器和进化选择相耦合；AutoML-Agent 将自然语言目标转化为多智能体流水线，其输出可被评估和修订。因此，该分类体系不是将每种方法精确归入的盒子集合，而是用于分解系统、比较系统和设计未来自进化 AI 基础设施的词汇表。
 
-\subsection{Evolutionary Computation and LLM Integration}\label{sec:theory-evo}
+核心区别在于更新发生在\emph{哪里}以及\emph{什么}反馈使其合法。提示级方法更新消息、推理或指令。记忆级方法存储自然语言经验教训或轨迹。流水线级方法修改工作流、工具选择、特征变换或智能体角色。代码级方法编辑程序或智能体实现。种群级方法改变变体归档。权重级方法执行训练或强化学习。评估同样可以从软自批评到人类偏好、单元测试、基准分数、代码执行、部署指标或形式化验证器。更新越持久、影响越大，评估器通常需要越强。一步措辞修订可以容忍弱批评家；改变源代码、智能体权限或模型权重的系统需要回归测试、沙箱隔离、回滚和审计追踪。
 
-\subsubsection{Evolutionary Computation as Search Framework}
+五循环分类对综述工作尤为有用，因为它连接了多个使用不同术语的研究传统。AutoML~\cite{zoph2018learning} 强调任务规约、流水线构建和指标驱动优化。神经架构搜索~\cite{liu2018darts,real2019regularized} 强调候选生成、搜索空间和性能估计。进化计算~\cite{stanley2002evolving,lehman2011abandoning} 强调种群、变异、交叉、多样性保持和选择。程序合成强调可执行候选和基于测试的修复。智能体研究强调规划、工具使用、记忆、多智能体协调和反思。LLM 自我改进强调迭代反馈、合成数据、自博弈和模型更新。当这些传统被组合成一个能在评估下反复改进自身产物或行为的系统时，自进化便出现了。
 
-The foundational idea of evolutionary computation (EC) is straightforward: maintain a population or archive of candidate solutions in a search space, and iteratively improve them through variation, recombination, and selection based on a fitness function. Classical genetic algorithms, genetic programming, evolution strategies, novelty search, and quality-diversity algorithms all belong to this tradition. Their strength lies in requiring no differentiability of the objective function and no fixed-length representation of candidates---as long as one can \emph{evaluate} a candidate, search can proceed.
+\subsection{统一形式化}\label{sec:ch2-formalization}
 
-Agent Self-Evolution operates in search spaces that are precisely the kind EC handles well. Prompts are discrete text strings; tool chains are combinatorial structures; agent code is executable programs; memories are natural-language or vector collections; multi-agent topologies are graphs; world models and evaluators may themselves be composed of code or LLM prompts. None of these objects admits gradient-based optimization in the usual sense. Evolutionary computation thus provides a natural outer-loop optimization framework for self-evolving agents.
+令 $z_t$ 表示自进化 AI 系统在第 $t$ 次迭代时的状态。状态可以包括模型、提示、记忆、智能体工作流、源代码仓库、基准日志、候选归档、数据缓冲区，或这些产物的任意组合。候选生成算子 $g$ 将当前状态映射到一个或多个提议变体。评估器 $e$ 将候选、执行轨迹或产物映射为反馈。选择算子 $s$ 决定哪些候选或反馈项值得保留。更新算子 $u$ 将选定的信息纳入下一状态。紧凑的进化方程为
+\begin{equation}\label{eq:ch2-general-evolution}
+  z_{t+1} = u\bigl(z_t, g(z_t), e(g(z_t))\bigr),
+\end{equation}
+其中 $g(z_t)$ 可以是单个候选或候选集合。当需要显式选择时，同一循环可以写为
+\begin{equation}\label{eq:ch2-expanded-evolution}
+  C_t = g(z_t), \qquad F_t = e(C_t; z_t), \qquad A_t = s(C_t, F_t, z_t), \qquad z_{t+1}=u(z_t,A_t,F_t).
+\end{equation}
+这里 $C_t$ 是候选集，$F_t$ 是反馈对象，$A_t$ 是选择所接受的子集或选择的动作。反馈对象可以包含标量分数、通过/失败测试、自然语言批评、符号梯度、执行轨迹、反例、置信度估计、成本测量或安全违规。接受子集可以包含单个最佳候选、前 $k$ 个候选、多样化归档、修订后的提示、新的记忆条目或一组训练样本。
 
-\subsubsection{LLM as Semantic Mutator}
+该形式化刻意将生成与评估分离。在许多 LLM 系统中，同一个基础模型参与两个步骤：它提出答案、批评答案、然后修订答案。尽管如此，这些角色在概念上是不同的。候选生成回答的问题是：\emph{下一步应该尝试什么？}评估回答：\emph{表现如何？}选择回答：\emph{应该信任或保留什么？}更新回答：\emph{应该进行什么持久改变？}保持这些角色分离使得比较不同实现的方法更容易。Self-Refine~\cite{selfrefine2023} 使用 LLM 同时作为生成器和批评家，但其更新主要是修订后的输出。Reflexion~\cite{reflexion2023} 使用环境反馈写入自然语言记忆，因此其更新在多次尝试间持久存在。FunSearch~\cite{funsearch2024} 使用 LLM 生成程序、使用程序化评估器评分，因此其更新是更好程序的归档。DGM~\cite{darwingodelmachine2025} 和 AlphaEvolve~\cite{alphaevolve2025} 将更新推入代码和种群归档。
 
-Large language models transform two critical components of the evolutionary loop. First, the LLM acts as a \emph{strong semantic mutator}. Traditional variation operators---bit flips, Gaussian perturbations, subtree crossovers---are random or near-random. An LLM, by contrast, can generate \emph{targeted} modifications based on failure explanations: adding a test-running step for a coding agent, rewriting the exploration strategy for a web agent, inserting a self-verification sub-routine for a reasoning agent, or designing a debate protocol for a multi-agent system. ADAS's Meta Agent Search, DGM's self-modification, SICA's code updates, and AlphaEvolve's algorithm candidate generation all use the LLM as a high-level \emph{program mutation operator}, producing changes informed by context rather than blind perturbation.
+一个有用的设计分解是将 $z_t$ 视为各层的乘积，
+\begin{equation}\label{eq:ch2-state-factorization}
+  z_t = \bigl(m_t, p_t, a_t, c_t, d_t, h_t, \pi_t\bigr),
+\end{equation}
+其中 $m_t$ 表示模型参数，$p_t$ 提示或指令，$a_t$ 智能体架构，$c_t$ 源代码，$d_t$ 数据或示范，$h_t$ 历史和记忆，$\pi_t$ 用于评估、路由或选择的策略。不同的自进化方法操作该状态的不同坐标。反思循环主要修改 $h_t$，有时修改 $p_t$。提示优化器修改 $p_t$。AutoML 和 ADAS 修改 $a_t$、$c_t$ 或工作流策略。代码进化系统修改 $c_t$。自博弈和强化学习系统修改 $m_t$ 和 $d_t$。种群方法修改状态集合 $\mathcal{Z}_t = \{z_t^{(1)},\ldots,z_t^{(n)}\}$，而非单个状态。这种因子化也澄清了为什么安全要求不同：临时答案修订是可逆的；记忆更新可以偏倚未来行为；代码更新可以破坏工具链；权重更新可以改变整个能力面。
 
-Second, the LLM can participate in \emph{evaluation and explanation}. Self-Rewarding Language Models, Meta-Rewarding, IterAlign, ACE, and EvolveR all employ the model to generate scores, principles, critiques, or policy summaries. This means selection pressure need not come solely from hard-coded metrics; it can also derive from natural-language preferences, process judgments, and qualitative feedback. However, using LLMs as judges introduces well-documented biases: length preference, position bias, verbosity rewards, and---most critically---the risk that the evaluator and the generator share the same failure modes, producing self-consistent but systematically wrong assessments.
+候选生成算子 $g$ 可以通过多种方式实现：直接 LLM 采样器（以任务指令和历史为条件）、规划器（将自然语言目标分解为子目标）、变异算子（针对程序文本、图结构、神经架构、超参数或提示）、交叉算子、学习控制器、强化学习策略、贝叶斯优化器、符号变换规则或多智能体审议协议。在现代自进化系统中，显著特征是 $g$ 通常是语义性的：生成器可以阅读注释、测试、轨迹和先前失败，并可以提出结构化变更而非随机编辑。
 
-\subsubsection{The Archive as Externalized Search Experience}
-
-The interaction between LLMs and evolutionary computation also introduces new design challenges. LLM-generated candidates carry strong priors from training data, so the search is not a uniform exploration of the space. The archive---the collection of previously evaluated candidates---plays a critical role. If it retains only the highest-scoring candidates, the system may converge prematurely; if it retains everything, context length and computational cost explode. DGM makes the deliberate choice to maintain a growing archive of agent variants, embracing open-ended exploration to avoid local optima. ADAS leverages historical discoveries within the meta-agent's context to compose new agent designs. Both illustrate a key principle: in Agent Self-Evolution, the archive is not merely a log but the \emph{externalized carrier of reusable search experience}.
-
-\subsubsection{Five Design Dimensions}
-
-From the evolutionary computation perspective, Agent Self-Evolution involves at least five design dimensions:
-\begin{enumerate}
-\item \textbf{Representation}: What constitutes a candidate individual? Options include prompts, policies, memory states, tool plans, Python code, workflow graphs, or model weights.
-\item \textbf{Variation}: How are new candidates generated? Mechanisms range from random perturbation, LLM rewriting, reflection-based revision, textual gradients, MCTS-guided search, RL updates, to program patches.
-\item \textbf{Fitness}: How are candidates scored? Signals include benchmark performance, unit tests, environment rewards, judge scores, human preferences, cost constraints, or safety rule compliance.
-\item \textbf{Selection}: Which candidates survive? Strategies include keeping the best, keeping the novel, quality-diversity archiving, task-domain stratification, or rollback gating.
-\item \textbf{Inheritance}: How is experience transferred across generations? Carriers include model weights, in-context examples, memory banks, code repositories, skill libraries, principle collections, or archive metadata.
-\end{enumerate}
-
-\subsection{Self-Reference and G\"{o}del Machines}\label{sec:theory-godel}
-
-\subsubsection{Theoretical Background}
-
-Self-reference is the most theoretically provocative aspect of Agent Self-Evolution. The concept traces to Schmidhuber's G\"{o}del machine: a theoretical system containing a problem solver and a proof searcher. When the proof searcher finds a self-modification that provably improves expected utility without violating global optimality, the system executes the modification. The importance of this framework is conceptual: it transforms ``recursive self-improvement'' from science fiction into a formal problem---how does a system represent itself, reason about the consequences of its own modifications, and avoid local improvements that compromise long-term objectives?
-
-\subsubsection{From Formal Proofs to Empirical Verification}
-
-Modern LLM-based agents deviate significantly from the original G\"{o}del machine. G\"{o}del Agent, DGM, and SICA all borrow the self-reference idea, but they replace formal proofs with empirical evaluation. G\"{o}del Agent allows the LLM to modify its own logic through runtime monkey-patching. SICA lets a coding agent autonomously edit its own source code to improve performance on SWE-Bench Verified. DGM maintains an executable archive of agent variants, where stronger coding agents generate even stronger descendants. These systems demonstrate the possibility of ``practical G\"{o}delization'': rather than requiring the system to prove global optimality, it suffices that each variant is \emph{reliably} better in isolated evaluation.
-
-\subsubsection{The Verification Gap}
-
-This shift from formal proof to empirical evaluation raises a core theoretical question: when formal proofs are unavailable, what level of empirical verification suffices to support self-modification? If the evaluator's coverage is insufficient, the system may optimize for gaps in the evaluation rather than genuine improvement. If the evaluation tasks are not representative of real-world objectives, the system may Goodhart the proxy. If the agent can modify the evaluator or bypass tests, the ``improvement'' is meaningless.
-
-Consequently, empirical G\"{o}del agents must decompose self-reference into controlled layers: a \emph{modifiable layer} (prompts, tools, code, strategies), an \emph{immutable evaluation layer} (isolated evaluators that the agent cannot directly modify), a \emph{sandbox execution layer} (isolated environments for testing), an \emph{archive recording layer} (complete lineage and rollback paths), and a \emph{human audit layer} (for reviewing high-risk modifications). Without these layers, self-reference easily degenerates into uncontrolled self-rewriting.
-
-\subsubsection{Positive Feedback Between Capability and Self-Modification}
-
-Self-reference also involves a recursive ``capability feedback'' structure. DGM's key insight is that stronger coding agents can not only solve more external tasks but also better improve their own code. This creates positive feedback between downstream task performance and self-modification capability---a structure stronger than ordinary AutoML, because the searcher itself is the search target. ADAS retains a fixed meta-agent, while DGM allows the improved agent to assume self-improvement responsibility. This distinction corresponds to two theoretical models: the \emph{exogenous optimizer model} (easier to control) and the \emph{endogenous optimizer model} (closer to recursive self-improvement, but with higher safety and evaluation difficulty).
-
-\subsection{Meta-Learning and the Theory of Self-Improvement}\label{sec:theory-meta}
-
-\subsubsection{Learning to Learn Across Tasks}
-
-Meta-learning concerns ``learning how to learn.'' In Agent Self-Evolution, meta-learning need not take the form of MAML-style gradient updates; it can also manifest as the progressive optimization of experience principles, in-context strategies, memory retrieval patterns, task curricula, and tool selections. Reflexion compresses failure trajectories into natural-language reflections---effectively storing a first-order policy update in context. ExpeL integrates experiences across multiple tasks into transferable insights. ICE (Investigate-Consolidate-Exploit) converts task trajectories into simplified workflows. ACE treats the context as an evolving playbook. EvolveR organizes offline self-distillation, online interaction, and policy evolution into a lifecycle.
-
-These works extend ``learning'' from the weight space to the space of external cognitive artifacts---prompts, memories, skill libraries, principle collections, and world models.
-
-\subsubsection{Three-Layer Policy Formalization}
-
-An LLM-based agent can be represented as a three-layer policy:
-\begin{itemize}
-\item \textbf{Base layer} $\theta$: The foundation model parameters, obtained through pre-training and post-training alignment.
-\item \textbf{Behavioral interface} $\varphi$: The editable behavioral layer, including system prompts, tool descriptions, planners, critics, code modules, and multi-agent topologies.
-\item \textbf{Experience state} $m$: The accumulated experience, including memories, skill libraries, principle collections, failure reflections, world models, and archive metadata.
-\end{itemize}
-
-Traditional fine-tuning primarily updates $\theta$; prompt engineering updates $\varphi$; memory-based self-evolution updates $m$; systems like SICA, DGM, and ADAS simultaneously update $\varphi$ and code-level structures; RAGEN, Absolute Zero, and SPIRAL may update $\theta$ or policy parameters. The generalized policy can be written as $\pi(a \mid s; \theta, \varphi, m)$, and self-evolution is the process of updating components of $(\theta, \varphi, m)$ under the drive of feedback $r$ or evaluation $e$.
-
-\subsubsection{Task Distribution and Transfer}
-
-The meta-learning framework emphasizes task distributions. A system that iterates on a single fixed task may only be performing local optimization; extracting cross-task strategies is necessary for genuine self-evolution. Voyager's skill library is reusable across Minecraft exploration tasks. ExpeL demonstrates forward transfer of extracted insights. ADAS reports that discovered agent designs transfer across domains and models. ReasoningBank distills reasoning strategies from both successful and failed episodes for use on new problems. Theoretically, this can be expressed as minimizing expected loss over a task distribution $\mathcal{T}$: the system does not merely seek the optimal behavior for a single task $\tau$ but learns an update operator $U$ such that, after a few interactions, it performs better on new tasks.
-
-\subsubsection{Online Learning View}
-
-Self-improvement can also be viewed as online learning. At each round $t$, the agent executes a trajectory $\tau_t$ in environment $\mathcal{E}$, the evaluator provides feedback $f_t$, and the updater $U$ produces a new state $z_{t+1} = U(z_t, \tau_t, f_t)$, where $z_t = (\theta_t, \varphi_t, m_t)$. If $\theta$ is fixed and $m$ is updated, this is memory-based self-evolution; if $\varphi$ is updated, it is prompt/architecture self-evolution; if $\theta$ is updated, it is training-based self-evolution; if $\mathcal{E}$ or the task generator is also updated, it is self-curriculum or self-play. This unified framework facilitates comparison: Reflexion's $U$ writes to reflective memory, Self-Rewarding's $U$ executes Iterative DPO, RAGEN's $U$ is trajectory-level RL, DGM's $U$ is code patch with archive selection, and ACE's $U$ is incremental context playbook restructuring.
+评估器 $e$ 是合法性的核心来源。弱评估器提供语言合理性、风格偏好或自一致性。中等强度评估器提供外部反馈，如答案正确性、奖励、人类偏好或基准分数。强评估器提供可执行、可重复和可自动检查的证据：单元测试、形式约束、编译器、证明检查器、模拟器、留出基准、运行时监控或部署指标。自进化的质量受评估器质量约束。
 
 % ====================================================================
-% Figure 2.1: Unified Formalized Evolution Loop (TikZ)
+% 图2.1: 通用自进化循环（TikZ）
 % ====================================================================
 \begin{figure}[htbp]
 \centering
@@ -101,91 +53,262 @@ Self-improvement can also be viewed as online learning. At each round $t$, the a
   mathlbl/.style={font=\scriptsize, color=gray!60!black, align=center, fill=white,
     inner sep=1pt},
 ]
-  % State vector box
+  % 状态向量框
   \node[rectangle, rounded corners=8pt, draw=cat1!50!black, fill=cat1!5,
     text width=5cm, minimum height=1cm, align=center, font=\small]
     (state) at (0, 1.8)
-    {System State $z_t = (\theta,\, c,\, g,\, m,\, \mathcal{A})$};
+    {系统状态 $z_t = (m, p, a, c, d, h, \pi)$};
 
-  % Main loop nodes
-  \node[state=cat1] (gen) at (-5, -0.8) {Generate};
-  \node[state=cat2] (eval) at (0, -0.8) {Evaluate};
-  \node[state=cat3] (sel) at (5, -0.8) {Select/Retain};
-  \node[state=cat4] (upd) at (5, -3.8) {Vary/Update\\$U_k$};
-  \node[state=cat5] (arc) at (0, -3.8) {Archive\\$\mathcal{A}_{t+1}$};
-  \node[state=cat6] (safe) at (-5, -3.8) {Safety Gate\\$C(x_t, z_t)$};
+  % 主循环节点
+  \node[state=cat1] (gen) at (-5, -0.8) {生成 $g$\\候选集 $C_t$};
+  \node[state=cat2] (eval) at (0, -0.8) {评估 $e$\\分数、测试、轨迹};
+  \node[state=cat3] (sel) at (5, -0.8) {选择 $s$\\精英或反馈};
+  \node[state=cat4] (upd) at (5, -3.8) {更新 $u$\\新状态 $z_{t+1}$};
+  \node[state=cat5] (arc) at (0, -3.8) {归档 $\mathcal{A}$\\种群/历史};
+  \node[state=cat6] (safe) at (-5, -3.8) {安全门\\$C(x_t, z_t)$};
 
-  % Arrows forming the loop
+  % 循环箭头
   \draw[arr] (gen) -- (eval)
-    node[midway, above, mathlbl] {Trajectory $x_t \sim \pi_z(\cdot|\tau_t, \mathcal{E})$};
+    node[midway, above, mathlbl] {轨迹 $x_t \sim \pi_z(\cdot|\tau_t, \mathcal{E})$};
   \draw[arr] (eval) -- (sel)
-    node[midway, above, mathlbl] {Feedback $y_t = V(x_t, \tau_t, \mathcal{E})$};
+    node[midway, above, mathlbl] {反馈 $y_t = e(C_t; z_t)$};
   \draw[arr] (sel) -- (upd)
-    node[midway, right, mathlbl] {Candidate set\\$\{U_k(z_t, x_t, y_t)\}_{k=1}^K$};
+    node[midway, right, mathlbl] {接受子集\\$A_t = s(C_t, F_t, z_t)$};
   \draw[arr] (upd) -- (arc)
-    node[midway, below, mathlbl] {Diversity $D$};
+    node[midway, below, mathlbl] {多样性 $D$};
   \draw[arr] (arc) -- (safe)
-    node[midway, below, mathlbl] {Gating};
+    node[midway, below, mathlbl] {门控};
   \draw[arr] (safe) -- (gen)
-    node[midway, left, mathlbl] {Update $z_{t+1}$};
+    node[midway, left, mathlbl] {更新 $z_{t+1}$};
 
-  % State to loop connections
+  % 状态到循环的连接
   \draw[darr, cat1!50] (state.south) -- ++(0, -0.3) -| (gen.north);
   \draw[darr, cat2!50] (state.south) -- (eval.north);
 
-  % External inputs
-  \node[op] (task) at (-5, 1.8) {Task distribution\\$P(\tau)$, Env $\mathcal{E}$};
+  % 外部输入
+  \node[op] (task) at (-5, 1.8) {任务分布\\$P(\tau)$，环境 $\mathcal{E}$};
   \draw[darr, cat1!40] (task.east) -- (state.west);
 
-  % Method examples along the bottom
+  % 方法示例
   \node[rectangle, rounded corners=3pt, draw=cat2!50, fill=cat2!5,
     text width=10cm, align=center, font=\scriptsize, inner sep=3pt]
     (examples) at (0, -5.6)
-    {Reflexion: $U$ writes reflection $\to m$ \quad
-     Self-Rewarding: $U$ = DPO $\to \theta$ \quad
-     DGM: $U$ = code patch $\to g,\mathcal{A}$ \quad
-     ACE: $U$ = playbook restructure $\to c$};
+    {Reflexion: $u$ 写反思 $\to h$ \quad
+     Self-Rewarding: $u$ = DPO $\to m$ \quad
+     DGM: $u$ = 代码补丁 $\to a,\mathcal{A}$ \quad
+     ACE: $u$ = playbook 重构 $\to p$};
 
   \draw[darr, gray!40] (safe.south) -- ++(0,-0.5) -- (examples.west);
   \draw[darr, gray!40] (upd.south) -- ++(0,-0.5) -- (examples.east);
 
 \end{tikzpicture}
-\caption{Unified formalized evolution loop for Agent Self-Evolution. The system state $z_t=(\theta,c,g,m,\mathcal{A})$ is iteratively updated through a ``generate--evaluate--select--vary'' cycle, jointly modulated by task distribution $P(\tau)$, evaluator $V$, and safety constraints $C$. The bottom row maps specific methods to their $U$ operator.}
+\caption{Agent Self-Evolution 的统一形式化进化循环。系统状态 $z_t=(m,p,a,c,d,h,\pi)$ 通过``生成--评估--选择--更新''循环迭代更新，由任务分布 $P(\tau)$、评估器 $e$ 和安全约束 $C$ 共同调制。底部行将具体方法映射到其 $u$ 算子。}
 \label{fig:ch2-evolution-loop}
 \end{figure}
 
-\subsection{Mathematical Formalization of Self-Evolution}\label{sec:theory-formal}
+\subsection{规约到执行循环}\label{sec:ch2-spec-loop}
 
-\subsubsection{Unified State and Update Equations}
+\textbf{定义。}规约到执行循环将自然语言或高层目标规约转换为可运行的、可评估的产物——机器学习流水线、智能体工作流、可执行程序或部署服务。循环在规约解释、候选生成、执行和规约精炼之间迭代。
 
-For unified description, this survey adopts the following formalization. Let the agent system state be $z = (\theta, c, g, m, \mathcal{A})$, where $\theta$ represents the base model or trainable parameters, $c$ represents the context and prompts, $g$ represents tools, code, and control-flow graphs, $m$ represents memories, skills, principles, and world models, and $\mathcal{A}$ represents the archive or collection of historical candidates. Given a task distribution $P(\tau)$, environment $\mathcal{E}$, evaluator $V$, and safety constraints $C$, the agent generates a behavioral trajectory $x_t \sim \pi_z(\cdot \mid \tau_t, \mathcal{E})$ at round $t$, receives feedback $y_t = V(x_t, \tau_t, \mathcal{E})$, and undergoes constraint checking $C(x_t, z_t)$. The updater $U$ produces a set of candidate states $\{z'_{t,k}\}$, and the selector $S$ chooses $z_{t+1}$ or adds multiple candidates to $\mathcal{A}$ based on quality, diversity, cost, and safety gating:
-\begin{equation}\label{eq:update}
-z_{t+1},\, \mathcal{A}_{t+1} = S\!\Big(\mathcal{A}_t \cup \{U_k(z_t, x_t, y_t)\}_{k=1}^K ;\; V,\, C,\, D\Big)
+\textbf{代表性系统。}AutoML-GPT 使用 GPT 作为自然语言桥梁，将任务卡、模型卡和数据卡转换为数据预处理、模型架构、超参数优化和训练日志预测。AutoML-Agent 将全流水线 AutoML 分解为专门化的智能体，分别负责数据检索、预处理、建模、评估和部署，结合检索增强规划与多阶段验证。ADAS~\cite{adas2025} 将循环从 ML 流水线推广到智能体架构：系统不仅搜索模型超参数或特征变换，还搜索智能体设计——工具选择、推理模块、控制流、提示、记忆布局和协作协议。在五循环分类中，ADAS 将智能体架构类比为 NAS~\cite{zoph2018learning,liu2018darts} 中的神经架构，重要区别在于搜索空间是离散的、文本的和可执行的。
+
+\textbf{形式化结构。}令规约为自然语言描述 $s \in \mathcal{S}$。生成器 $G$ 产生候选产物 $a = G(s; h)$，其中 $h$ 表示历史上下文（先前尝试、相似任务）。执行器 $E$ 在环境 $\mathcal{E}$ 中运行 $a$，产生轨迹 $\tau = E(a, \mathcal{E})$。评估器 $V$ 对轨迹评分：$v = V(\tau, s)$。规约精炼器 $R$ 更新规约或上下文：$s' = R(s, \tau, v)$。循环持续直到 $v$ 超过阈值或预算耗尽：
+\begin{equation}\label{eq:ch2-spec-loop}
+s_{t+1} = R\big(s_t,\; E(G(s_t; h_t), \mathcal{E}),\; V(\tau_t, s_t)\big)
 \end{equation}
-where $D$ represents a diversity or novelty measure. Different methods primarily differ in the definitions of $U$, $V$, $S$, and $D$.
 
-\subsubsection{Mapping Methods to Formal Components}
+\textbf{核心步骤。}规约到执行循环的核心步骤为：解析目标、推断缺失约束、设计可执行计划、实例化组件、运行计划、评估输出并修订。形式上，生成器 $g$ 是从部分规约到候选流水线的编译器。评估器 $e$ 包括静态检查（依赖可用性、数据模式匹配、工具授权）和动态执行（训练、测试、模拟或基准任务）。更新 $u$ 可以修改任务表示、组件库、规划器提示、智能体角色或存储的示例。
 
-Self-Refine's $U$ rewrites the output using self-feedback from the same model, with state changes primarily occurring on a single sample's text. Reflexion's $U$ writes reflections to $m$. Self-Rewarding's $V$ is the model's own judge, and $U$ is DPO. RAGEN's $V$ comes from multi-turn environment rewards, and $U$ is StarPO. ADAS's $U$ has the meta-agent write new agent code, changing $g$. DGM's $U$ has the current agent modify its own code, and $\mathcal{A}$ preserves lineage. AlphaEvolve's $V$ is a programmatic evaluator, and $U$ generates algorithm code. Memory-R1's $U$ learns when to write, update, delete, and retrieve memories.
+\textbf{关键挑战。}自然语言规约的歧义是主要障碍。同一规约可能因不同解释而产生截然不同的产物。AutoML-GPT 通过结构化任务卡、AutoML-Agent 通过多智能体解释辩论来应对。然而，用户\emph{意指}与系统\emph{理解}之间的差距仍然是最薄弱的环节。此外，每次迭代执行完整流水线的成本可能很高，催生了对近似或部分评估策略的需求。
 
-\subsubsection{Hierarchy of Improvement}
+\textbf{可执行表示的重要性。}自然语言目标只有在其被锚定为可运行和可检查的产物后才变得可进化。在 AutoML 中，产物可以是流水线配置、Python 脚本或工作流图。在智能体系统中，它可以是提示集、工具模式、策略、记忆存储和路由图。在代码进化系统中，它可以是仓库补丁。表示应足够结构化以支持评估和修订，同时足够灵活以便 LLM 操作。
 
-Formalization must also distinguish levels of ``improvement.'' \emph{Local improvement} means $V$ increases on the current task set. \emph{Robust improvement} requires increase on an independent test set. \emph{Transfer improvement} requires increase on a new task distribution or new model. \emph{Open-ended improvement} requires the archive to continuously produce novel and useful stepping stones. \emph{Safe improvement} requires capability growth without increasing constraint violations. Many papers demonstrate only the first two; works like ADAS, DGM, Voyager, and ReasoningBank attempt to demonstrate transfer or open-endedness. Future theory needs to more rigorously distinguish these levels; otherwise, ``self-improvement'' is easily over-interpreted from a single benchmark improvement.
+\textbf{与其他循环的连接。}规约到执行循环自然地链接到评估器循环（第~\ref{sec:ch2-evaluator-loop}~节），因为执行产生需要评分的轨迹。它也连接到反思循环（第~\ref{sec:ch2-reflection-loop}~节），因为规约精炼本身就是反思性改进的一种形式。
 
-\subsubsection{Selection Pressure and Multi-Objective Optimization}
+\subsection{搜索循环}\label{sec:ch2-search-loop}
 
-Another key concept is \emph{selection pressure}. The evaluator $V$ determines where the system evolves. If $V$ is unit tests, the system optimizes for test passage. If $V$ is an LLM judge, the system optimizes for judge preferences. If $V$ is environment reward, the system exploits reward structure loopholes. If $V$ is human preference, the system may overfit the annotator distribution. Goodhart's law applies: when a metric becomes a target, it ceases to be a good measure. Self-evolving systems therefore typically require multi-objective optimization: maximize task reward $R$, minimize cost $\mathrm{Cost}$, satisfy safety constraints $C$, maintain diversity $D$, and control complexity $\Omega$. This can be expressed as finding $z$ that maximizes:
-\begin{equation}\label{eq:multi-obj}
-\mathbb{E}[R(z)] - \lambda\,\mathrm{Cost}(z) + \beta\,D(z) - \gamma\,\Omega(z)
+\textbf{定义。}搜索循环探索候选空间——提示、架构、代码、智能体设计或超参数——由评估反馈引导。与规约到执行循环专注于将目标转化为产物不同，搜索循环专注于\emph{系统性探索和改进}可能解的空间。
+
+\textbf{代表性系统。}OPRO~\cite{opro2023} 将 LLM 本身视为优化器：提示描述优化任务，模型根据过去解及其分数的历史生成新候选。AlphaEvolve~\cite{alphaevolve2025} 结合 Gemini Flash 进行快速候选生成、Gemini Pro 进行深度评估，使用 MAP-Elites 质量多样性搜索维护多样化的算法候选归档。OpenEvolve~\cite{openevolve2024} 扩展了 FunSearch 的程序进化框架，具有更复杂的变异算子。EvoPrompting~\cite{evoprompting2023} 使用语言模型作为架构代码的进化算子，在算法推理任务上评估候选。ADAS~\cite{adas2025} 使用元智能体搜索智能体架构空间，提出并评估新设计。
+
+\textbf{形式化结构。}搜索循环维护具有关联适应度分数的种群或归档 $\mathcal{A}_t$。每次迭代中，选择机制 $\sigma$ 选择父候选；变异算子 $\mu$（由 LLM 驱动）生成后代；评估器 $V$ 对后代评分；更新规则 $\phi$ 决定保留哪些候选：
+\begin{equation}\label{eq:ch2-search-loop}
+\mathcal{A}_{t+1} = \phi\big(\mathcal{A}_t \cup \{\mu(\sigma(\mathcal{A}_t))\},\; V\big)
 \end{equation}
-subject to $C(z) = \mathrm{true}$. Practical systems approximate this through gating, ablation, rollback, and human review.
+关键设计选择是：候选的表示（代码、提示、架构）、变异算子（LLM 重写、交叉、变异）、选择机制（锦标赛、轮盘赌、基于新颖性）和归档管理策略（精英主义、质量多样性、基于年龄）。
 
-\subsubsection{Theoretical Boundaries}
+\textbf{质量多样性搜索。}MAP-Elites~\cite{mouret2015illuminating} 是典型的质量多样性算法。它将行为或特征空间划分为单元，并为每个单元存储找到的最佳候选。在自进化 AI 中，行为描述符可以包括任务族、资源预算、推理深度、工具使用模式、模型大小、延迟类别、风险级别或领域。MAP-Elites 使这些描述符成为一等公民，防止循环坍缩为单一过度专门化的产物。
 
-The theoretical boundaries of self-evolution must also be acknowledged. First, without external or independent evaluators, self-rewarding may collapse into self-consistency illusion. Second, if the task distribution is too narrow, the system may learn benchmark-specific hacks. Third, if the modifiable scope is too broad and constraints are insufficient, the system may corrupt evaluation, logging, or safety boundaries. Fourth, if the archive lacks curation, long-term memory accumulates noise, contradictions, and context collapse. Fifth, if the underlying foundation model lacks sufficient capability, LLM-generated variations may be unable to cross critical technical thresholds. Agent Self-Evolution is not a magic growth engine; it is an optimization process that couples base model capabilities, external feedback, search mechanisms, and engineering constraints. It amplifies existing strengths but also amplifies deficiencies in the evaluator and environment design.
+\textbf{基准证据。}AlphaEvolve 通过发现使用 48 次标量乘法的 $4\times 4$ 复矩阵新算法展示了该循环的力量——首次在此设置中改进了 Strassen 的 49 次乘法算法。OPRO 表明 LLM 可以优化 GSM8K 和 Big-Bench Hard 的提示，相比人工设计的提示实现了 8--50\% 的改进。EvoPrompting 通过进化图神经网络架构在 CLRS 算法推理基准上达到了最先进水平。
+
+\textbf{关键挑战。}搜索空间的维度诅咒是主要挑战。即使有 LLM 引导的变异，可能提示、架构或智能体设计的空间也是巨大的。过早收敛很常见。DGM 维护所有候选的开放式归档（而非仅当前最佳）是一种应对，但增加了计算成本。另一个挑战是评估成本：每个候选必须在环境中执行，对于在 SWE-Bench 等复杂基准上运行的基于代码的智能体，可能需要大量计算时间。
+
+\textbf{失败模式。}搜索循环面临多种失败模式。第一是基准过拟合：候选通过利用评估器的怪癖而非解决底层任务来改进。第二是模式坍缩：生成器反复提出相同设计的微小变体。第三是无效性：许多候选无法运行、编译或满足接口约束。第四是成本爆炸：评估主导运行时间。第五是隐藏回归：候选改进目标指标同时破坏其他任务。这些失败模式催生了评估器和种群循环。
+
+\subsection{评估器循环}\label{sec:ch2-evaluator-loop}
+
+\textbf{定义。}评估器循环将行为转化为适应度。没有评估，自进化只是自我修改。评估器可以是基准、测试套件、编译器、模拟器、验证器、人类评分、基于模型的评判器、环境奖励、部署指标或安全监控器。评估器循环反复运行候选、提取证据、并将该证据转换为选择和更新使用的反馈。它是可靠性最重要的循环，因为它定义了什么算作进步。
+
+\textbf{代表性系统。}FunSearch~\cite{funsearch2024} 是旗舰评估器循环系统。它结合提出程序的 LLM 与在数学或科学目标上执行和评分程序的评估器。LLM 提供创造性变异，但评估器提供纪律。候选程序存活是因为它们产生了可测量的改进，而非因为模型声称它们好。Self-Debug~\cite{singh2023selfdebug} 在代码修复层面展示了评估器反馈：模型编写代码、观察执行结果或错误、解释问题并修订程序。CodeEvolve~\cite{codeevolve2024} 风格的系统使评估成为重复的工程过程：候选代码修改被生成和测试；通过或改进的候选被保留；失败的候选被总结并用于指导新提议。
+
+\textbf{四层评估框架。}评估器循环可以分解为四个复杂度递增的层级：(1) \emph{确定性验证器}：单元测试、类型检查器、静态分析器、模糊测试和回归测试，提供无噪声的二值或标量信号。(2) \emph{基于模型的评估器}：LLM-as-a-judge、批评智能体、辩论式评估和元评判器，提供丰富但有噪声的信号。(3) \emph{交互环境评估器}：WebArena、SWE-Bench、机器人模拟器和游戏环境，提供接地反馈。(4) \emph{人类评估器}：领域专家、众包工作者或终端用户，提供偏好判断和定性反馈。
+
+\textbf{数学表示。}评估器可以写为
+\begin{equation}\label{eq:ch2-evaluator-object}
+  e(c) = \bigl(r(c), v(c), \tau(c), q(c), \sigma(c)\bigr),
+\end{equation}
+其中 $r(c)$ 是奖励或适应度分数，$v(c)$ 是有效性标志，$\tau(c)$ 是执行轨迹，$q(c)$ 是质量向量，$\sigma(c)$ 是安全或约束报告。选择不应仅依赖 $r(c)$。具有高任务奖励但无效安全状态的候选应被拒绝或隔离。具有有前途奖励但高方差的候选可能需要重复评估。
+
+\textbf{关键挑战。}最关键的挑战是\emph{评估器退化}。Self-Rewarding Language Models 和 Meta-Rewarding 已经证明，当评估器与生成器是同一模型（或其微调变体）时，系统偏差会出现：长度偏好、分数膨胀和奖励黑客。使用 LLM 作为评判器引入了有据可查的偏差：长度偏好、位置偏差、冗长奖励，以及最关键的——评估器和生成器共享相同失败模式的风险，产生自洽但系统性错误的评估。
+
+\textbf{诊断性与决定性评估。}另一个重要区别是\emph{诊断性}和\emph{决定性}评估。诊断性评估帮助生成器理解失败，而决定性评估决定接受。模型生成的批评在诊断上有用但在决定上不够。失败的单元测试既是诊断性也是决定性的：它解释了失败并阻止接受。设计良好的自进化系统应按权威性标记评估器。例如，LLM 评判器可以建议修订，但编译器、测试套件、安全策略或人类审查员才能门控部署。
+
+\textbf{与安全的连接。}评估器循环是对抗错位和错误进化的主要防线。如果评估器可以被进化中的智能体修改，或者其盲点可被利用，整个进化过程就变得不可靠。评估器隔离——确保评估器不能被被评估的智能体直接修改——是安全自进化的必要（虽非充分）条件。
+
+\subsection{反思循环}\label{sec:ch2-reflection-loop}
+
+\textbf{定义。}反思循环将失败转化为可复用信息。它是语言原生性最强的自进化形式，因为更新可以是自然语言记忆、批评、规则、推理或修订后的指令。循环观察一次尝试、识别问题、写入反思，并使后续尝试以该反思为条件。与纯搜索不同，反思不需要大型候选种群。与权重训练不同，它不需要梯度更新。其优势是低成本和可解释性；其弱点是自然语言记忆可能不完整、错误、过时或过度泛化。
+
+\textbf{代表性系统。}Reflexion~\cite{reflexion2023} 是典型例子。智能体尝试任务、从环境接收反馈、并写入存储在记忆中的语言反思。在下一次尝试时，智能体阅读记忆并改变行为。Self-Refine~\cite{selfrefine2023} 使用更局部的循环：模型生成输出、批评它、并精炼它，通常同一模型扮演所有角色。STaR~\cite{star2022} 在推理和训练数据层面展示了反思：模型生成推理链、基于答案过滤或纠正、并使用成功的推理来改进未来推理。ExpeL 聚合跨多个任务的经验以提取可迁移的洞察——指导新任务行为的通用原则。ACE（Adaptive Context Evolution）将智能体的上下文视为演进的 playbook，基于任务结果增量精炼。ReasoningBank 从成功和失败的问题解决片段中蒸馏推理策略到可复用库。Agent Symbolic Learning~\cite{agentsymboliclearning2024} 将智能体改进框架为通过符号组件的文本反馈传播，而非用梯度更新连续权重。
+
+\textbf{形式化结构。}反思循环可以形式化为记忆更新算子。令智能体的反思记忆在第 $t$ 次迭代时为 $m_t$。执行轨迹 $\tau_t$ 并接收反馈 $y_t$ 后，反思算子 $\rho$ 产生更新后的记忆：
+\begin{equation}\label{eq:ch2-reflection-update}
+m_{t+1} = \rho(m_t, \tau_t, y_t)
+\end{equation}
+$\rho$ 的性质因系统而异：在 Reflexion 中，$\rho$ 向情景记忆追加自然语言摘要；在 ExpeL 中，$\rho$ 提取和泛化洞察；在 STaR 中，$\rho$ 选择正确轨迹用于微调；在 ACE 中，$\rho$ 重构上下文 playbook；在 Memory-R1 中，$\rho$ 通过 RL 训练来决定\emph{何时}写入、更新、删除和检索记忆。检索然后调节生成：
+\begin{equation}\label{eq:ch2-reflection-retrieval}
+  C_{t+1} = g\bigl(z_t, \mathrm{Retrieve}(m_{t+1}, x_{t+1})\bigr).
+\end{equation}
+
+\textbf{基准证据。}Reflexion 在 HumanEval 上达到 91\% pass@1（相比 GPT-4 的 80\%），通过在编码片段中积累语言反思。STaR 表明迭代自训练过滤后的推理轨迹可以在 GSM8K 和其他数学基准上匹配或超过监督微调。ExpeL 展示了前向迁移：从一组任务提取的洞察改进了不同集合上的性能。ACE 表明演进上下文 playbook 可以在静态提示上改进智能体性能 15--40\%。
+
+\textbf{关键挑战。}记忆质量是核心挑战。并非所有反思都同样有用；有些可能编码错误教训、过拟合特定任务实例或与现有记忆引入矛盾。``上下文坍缩''问题出现在过多反思挤占智能体上下文窗口时，降低而非提高性能。AriadneMem 通过熵感知门控来决定保留哪些记忆和丢弃哪些来解决这个问题。Memory-R1 采取不同方法，通过强化学习\emph{学习}记忆管理策略，而非依赖手工启发式。
+
+\textbf{反思与普通日志的区别。}日志记录发生了什么。反思提取可以改变未来行为的教训。例如，日志可能说单元测试因差一错误而失败。反思可能说：``在为包含性问题描述生成范围循环时，在最终确定之前显式测试两个端点。''反思越可操作、越有范围，就越有用。反思也不同于自我批评。批评可以在执行前生成，可能纯粹是推测性的。反思应基于反馈。
+
+\subsection{种群循环}\label{sec:ch2-population-loop}
+
+\textbf{定义。}种群循环随时间维护多个候选智能体、策略或产物，应用进化操作——选择、变异、重组和专门化——跨种群。与搜索循环专注于优化单一目标不同，种群循环强调\emph{多样性}、\emph{踏脚石}和\emph{开放式探索}。
+
+\textbf{代表性系统。}DGM（Darwin G\"{o}del Machine）~\cite{darwingodelmachine2025} 维护不断增长的智能体变体归档：每个智能体可以修改自己的代码，归档保留所有变体及其谱系和性能记录。AlphaEvolve~\cite{alphaevolve2025} 使用 MAP-Elites 质量多样性搜索维护跨多个行为维度的高性能解网格。Absolute Zero Reasoners~\cite{absolutezero2025} 采用``提议者''和``求解者''之间的自博弈，在无任何外部标签的情况下生成训练数据。SPIN~\cite{spin2024}（Self-Play Fine-Tuning）使用自博弈逐步增强语言模型：模型生成候选响应，判别器（在前几轮迭代上训练）提供训练信号。LLaMEA~\cite{llamea2024} 在元启发式层面展示种群循环，进化的是解决优化问题的算法，而非单一优化问题的解。
+
+\textbf{踏脚石的关键洞察。}来自质量多样性优化和开放式搜索的一个关键洞察是：通往高性能解的路径往往经过\emph{不}是当前目标下高性能的候选。DGM 的归档保留了这些踏脚石，允许搜索重新审视和建立在早期变体之上，这些变体在当时的可能不是``最佳''但包含有用组件。这与纯精英选择形成对比，后者丢弃除当前最佳之外的所有候选并可能收敛到局部最优。
+
+\textbf{形式化结构。}种群循环可以描述为
+\begin{equation}\label{eq:ch2-population-update}
+  \mathcal{P}_{t+1} = U_{pop}\bigl(\mathcal{P}_t,\; s(\mathcal{P}_t \cup g(\mathcal{P}_t),\; e(g(\mathcal{P}_t)))\bigr),
+\end{equation}
+其中 $\mathcal{P}_t$ 是种群或归档。如果 $U_{pop}$ 总是只保留单个最佳候选，循环坍缩为爬山。如果它跨生态位保留精英，则成为质量多样性搜索。如果它维护候选的概率分布，则类似于分布估计或策略搜索方法。
+
+\textbf{基准证据。}DGM 表明带有归档维护的开放式进化可以产生在 SWE-Bench Verified 和 Polyglot 基准上超越手工设计基线的编码智能体。AlphaEvolve 的质量多样性搜索发现了矩阵乘法和其他组合问题的新算法，超越任何单一模型孤立生成解的能力。Absolute Zero Reasoners 在数学和编码基准上使用\emph{零}外部训练数据达到了有竞争力的性能，完全依赖提议和求解智能体之间的自博弈。
+
+\textbf{关键挑战。}计算成本是主要障碍。维护和评估大量智能体变体归档是昂贵的，特别是当每次评估需要运行复杂基准时。归档管理——决定保留什么、丢弃什么以及如何索引以实现高效检索——是一个开放问题。此外，种群的多样性必须是有意义的：维护同一基本方法的许多变体提供很少收益。
+
+\subsection{跨循环交互与复合系统}\label{sec:ch2-crossloop}
+
+没有真实系统只实现单个循环。最强大的系统组合多个循环，循环之间的交互产生涌现行为——既有益的也有危险的。我们识别出几种反复出现的组合模式。
+
+\textbf{规约 + 搜索。}AutoML-Agent 和 ADAS 等系统将规约解释与设计空间搜索结合。规约定义任务；搜索探索解空间。交互发生在搜索结果反馈到规约精炼时：如果没有候选满足规约，规约本身可能需要调整。
+
+\textbf{搜索 + 评估器。}这是最基本的组合。每个基于搜索的系统都需要评估器提供选择压力。关键设计决策是评估器是静态的（固定基准、单元测试）还是共同进化的（LLM 评判器本身也在改进）。AlphaEvolve 使用静态程序化评估器；Meta-Rewarding 使用带有元评判层的共同进化基于模型的评估器来防止评估器退化。
+
+\textbf{反思 + 种群。}DGM 将反思（智能体分析自身性能并生成自我修改）与种群级归档维护结合。反思循环在每个智能体内部操作；种群循环跨智能体操作。交互创造了一种``文化进化''形式：成功的自我修改保留在归档中，可以被未来智能体继承。
+
+\textbf{全部五个循环：自进化愿景。}完整的自进化系统将组合所有五个循环：规约被解析和精炼（循环1），维护候选解种群（循环5），搜索探索变体（循环2），评估器评分候选（循环3），失败触发反思和记忆更新（循环4）。
+
+\textbf{设计张力。}跨循环组合创造了几种设计张力。第一是速度与确定性：反思和自批评便宜但不够可靠；完整基准评估可靠但昂贵。第二是专门化与通用性：搜索和种群循环可以创建在狭窄生态位中表现出色的专门化智能体。第三是可塑性与稳定性：高可塑性系统快速响应反馈而改变；稳定系统抵抗可能导致回归的变更。第四是自主改进与治理：自进化意味着自主，但真实系统需要人类监督、策略约束和可审计性。
 
 % ====================================================================
-% Figure 2.2: Classical Evolution vs. Agent Evolution Comparison
+% 表2.1: 代表性方法与循环类型映射
+% ====================================================================
+\begin{table}[htbp]
+\centering
+\small
+\caption{代表性方法映射到循环类型、可训练性、反馈来源和任务领域。多种方法组合多个循环；本表列出用于分类目的的主导解释。}
+\label{tab:ch2-method-loop-comparison}
+\begin{tabular}{p{2cm}p{2.8cm}p{1.5cm}p{3cm}p{3cm}}
+\toprule
+\textbf{方法} & \textbf{主导循环类型} & \textbf{可训练？} & \textbf{反馈来源} & \textbf{代表任务} \\
+\midrule
+AutoML-GPT & 规约到执行；ML 流水线搜索 & 通常无权重更新 & 任务卡、数据卡、模型卡、训练日志 & AutoML 规划、模型选择 \\
+ADAS & 智能体架构搜索；评估器 & 智能体代码、提示可训练 & 基准任务性能、执行轨迹 & 自动化智能体系统设计 \\
+OPRO & 文本候选搜索 & 无需模型训练 & 优化提示中的标量分数 & 提示优化、黑盒目标调优 \\
+AlphaEvolve & 搜索 + 种群 + 评估器 & 代码/归档进化 & 可执行评估器、基准分数 & 算法发现、科学程序 \\
+FunSearch & 评估器驱动的程序搜索 & 程序种群进化 & 程序执行和目标分数 & 数学发现、组合构造 \\
+Reflexion & 评估器 + 反思 & 记忆更新 & 环境奖励、任务成败 & 智能体任务、推理、代码 \\
+Self-Refine & 推理时反思/修订 & 无权重更新 & LLM 生成的批评 & 文本生成、推理、代码 \\
+STaR & 反思到推理数据；训练循环 & 可在推理上微调 & 正确答案、生成的推理链 & 推理任务、CoT 改进 \\
+DGM & 种群 + 搜索 + 评估器 + 代码更新 & 智能体代码进化 & 基准、代码执行、谱系性能 & 自修改编码智能体 \\
+SPIN & 自博弈/训练循环 & 模型微调 & 自博弈比较、生成响应 & 语言模型改进、推理行为 \\
+Absolute Zero & 自博弈、自生成任务、训练 & 策略/模型更新 & 可验证的自生成任务 & 零数据推理/代码改进 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{五大循环的设计维度}\label{sec:ch2-design-dimensions}
+
+除了方法名称，自进化系统还可以沿设计维度进行比较。
+
+\textbf{第一维度：更新基底。}产物、提示、记忆、工作流、代码、数据、归档或权重。输出更新是临时的；提示和记忆更新是轻量的；工作流和代码更新是结构性的；数据和权重更新是统计性的；归档更新是种群级的。更新基底决定了持久性、可逆性和安全负担。
+
+\textbf{第二维度：候选生成器。}可以是单个 LLM、多智能体规划器、进化算子、学习控制器、随机采样器、贝叶斯优化器或混合体。LLM 生成器灵活且语义化，但需要强约束。混合生成器可能占主导，因为它们可以将结构化搜索与语言理解结合。
+
+\textbf{第三维度：适应度信号。}适应度可以是直接或代理的、密集或稀疏的、确定性或有噪声的、标量或结构化的。直接确定性评估器（如编译器或精确检查器）支持激进搜索。有噪声代理评估器（如 LLM 评判器）需要谨慎和重复验证。多目标适应度通常是必要的，因为真实产物必须在任务成功、成本、延迟、健壮性和安全之间权衡。
+
+\textbf{第四维度：记忆。}有些系统除了当前提示外没有记忆。其他系统存储示例、反思、日志、谱系或学习参数。记忆可以是情景的、语义的、程序的或归档的。每种记忆类型有不同的检索和遗忘问题。
+
+\textbf{第五维度：选择压力。}贪心选择最大化即时分数。保守选择要求超出不确定性的改进。保持多样性的选择维护生态位。风险感知选择惩罚安全违规和回归。人类门控选择要求某些更新的批准。
+
+\textbf{第六维度：自主性。}有些循环是人在回路中的；其他在沙箱内自主运行；还有完全自动化的训练循环。自主性应仅随评估器可靠性和回滚能力增加而增加。
+
+\textbf{第七维度：开放性。}闭环系统优化固定任务集。开放式系统可以生成新任务、新描述符、新评估器或新目标。Absolute Zero 风格的自生成任务和 DGM 风格的开放式归档指向这个方向。
+
+\textbf{第八维度：谱系可见性。}在自进化系统中，知道候选好是不够的；我们想知道它从哪里来。谱系揭示哪些父候选、提示、记忆或代码变更产生了改进。它支持可复现性和调试。
+
+\subsection{失败模式、安全防护与治理}\label{sec:ch2-failure-governance}
+
+自进化的分类体系如果不包含失败分类就不完整。每个循环都创造特有的风险，因为每个循环都创造了系统改变的方式。
+
+\textbf{规约漂移。}用户提供初始目标，但系统将其转换为省略、扭曲或过度解释部分目标的内部任务卡。一旦此内部表示成为搜索目标，后续迭代可能以越来越高的信心优化错误问题。安全防护包括显式任务卡、假设日志、对模糊目标的人工确认和指标多元化。
+
+\textbf{奖励黑客。}候选可能改进测量的适应度同时违反预期目的。在程序进化中，候选可能利用测试工具、硬编码答案、跳过工作或依赖未定义行为。在提示优化中，候选可能学到取悦 LLM 评判器的短语而不改进正确性。安全防护包括隐藏测试、对抗性评估、随机任务、差分测试和评估器集成。
+
+\textbf{记忆污染。}反思循环可能存储不准确或过度泛化的教训。``总是使用树模型''的记忆可能对一个表格数据集有帮助但对另一个有害。如果被污染的记忆频繁检索，它可以偏倚跨许多未来任务的生成和选择。安全防护包括证据链接的反思、范围化检索、置信度分数、过期、矛盾检查和基于性能的记忆验证。记忆应被视为假设存储，而非不加质疑的事实存储。
+
+\textbf{种群膨胀。}种群系统可能积累过多候选，许多是无效的、冗余的、不安全的或文档不足的。没有描述符、谱系和选择纪律的大型归档成为存储负担。安全防护包括归档模式、基于描述符的索引、隔离状态、修剪策略和重新评估计划。
+
+\textbf{回归掩蔽。}候选在当前目标上改进但默默恶化旧能力。当选择使用狭窄分数时很常见。安全防护包括冻结基线、金丝雀任务、多目标记分卡、统计重复运行和回滚。
+
+\textbf{评估器漂移。}评估器本身是产物：测试变更、基准更新、LLM 评判器被替换、指标被重新加权。如果不记录评估器版本，历史分数变得不可比。安全防护包括版本化、原始轨迹存储、精英重新评估和评估器开发与候选选择之间的明确分离。
+
+\textbf{不安全自主性升级。}系统可能从低风险输出修订开始，逐渐获得修改提示、工具、代码、工作流或模型权重的能力。安全防护包括能力边界、权限层级、人类门控、沙箱隔离和部署分离。
+
+\textbf{解释洗白。}系统可能为候选为什么改进生成看似合理的解释，即使实际原因是偶然的。安全防护包括证据优先报告、从声明到评估器输出的链接、以及测量事实与推断解释之间的区分。
+
+治理可以总结为四条规则：第一，使更新基底显式化。第二，使评估器强度匹配更新深度。第三，版本化每一个影响选择的产物。第四，保留回滚能力。
+
+\subsection{循环组合模式}\label{sec:ch2-composition-patterns}
+
+五循环分类可以作为设计语言。不同的应用需要不同的模式。
+
+\textbf{反思优先助手。}系统尝试任务、接收反馈、写入范围化记忆、并在后续尝试中使用该记忆。适用于任务重复、更新应可解释且外部评估可用但不必可执行的场景。Reflexion 类智能体属于此类。主要风险是记忆污染。
+
+\textbf{测试驱动代码进化器。}系统生成代码变体、运行测试、存储失败、并仅接受在记分卡上改进且无回归的候选。Self-Debug、CodeEvolve、FunSearch 和 AlphaEvolve 风格的系统属于此族。评估器是决定性的：编译器、单元测试、基准和性能测量应门控更新。
+
+\textbf{AutoML 编译器。}系统将用户目标转换为数据处理和模型训练流水线。AutoML-GPT 和 AutoML-Agent 属于此模式。主要风险是规约漂移、数据泄漏和指标过拟合。
+
+\textbf{智能体架构搜索引擎。}系统将智能体工作流视为候选，改变角色定义、规划策略、工具访问、记忆策略和验证步骤。ADAS 和 Agent Symbolic Learning 是核心参考。
+
+\textbf{质量多样性归档。}系统跨任务生态位或行为描述符维护精英。MAP-Elites、AlphaEvolve 风格归档、DGM 和 LLaMEA 属于此模式。主要收益是多样性和专门化。
+
+\textbf{自博弈训练器。}系统生成任务、解、批评或对手行为，验证它们，并使用结果数据更新模型参数。SPIN 和 Absolute Zero 风格的系统属于此类。此模式强大但难以治理，因为权重更新是广泛且不太可解释的。
+
+这些模式可以分层。测试驱动代码进化器可以使用反思优先助手来总结失败。AutoML 编译器可以维护不同数据机制流水线的质量多样性归档。智能体架构搜索引擎可以使用自博弈生成的任务来扩展其基准套件。
+
+\subsection{经典 EC 与 Agent Self-Evolution 的系统比较}\label{sec:ch2-ec-comparison}
+
+% ====================================================================
+% 图2.2: 经典EC vs Agent自进化对比
 % ====================================================================
 \begin{figure}[htbp]
 \centering
@@ -198,211 +321,158 @@ The theoretical boundaries of self-evolution must also be acknowledged. First, w
     text width=4.5cm, minimum height=1cm, align=center, font=\scriptsize},
   divider/.style={draw=gray!40, dashed, thick},
 ]
-  % Headers
-  \node[header=gray] (title) at (0, 0) {Classical Evolutionary Computation vs.\ Agent Self-Evolution};
+  % 标题
+  \node[header=gray] (title) at (0, 0) {经典进化计算 vs.\ Agent Self-Evolution};
 
-  % Column headers
-  \node[rowlabel, fill=cat4!15, draw=cat4!50] (col1) at (-4.5, -1.5) {Dimension};
-  \node[rowlabel, fill=cat1!15, draw=cat1!50] (col2) at (0, -1.5) {Classical EC};
+  % 列标题
+  \node[rowlabel, fill=cat4!15, draw=cat4!50] (col1) at (-4.5, -1.5) {维度};
+  \node[rowlabel, fill=cat1!15, draw=cat1!50] (col2) at (0, -1.5) {经典 EC};
   \node[rowlabel, fill=cat5!15, draw=cat5!50] (col3) at (4.5, -1.5) {Agent Self-Evolution};
 
-  % Row 1: Representation
-  \node[rowlabel] (r1) at (-4.5, -2.8) {Representation};
-  \node[cell=cat1!5] (c1) at (0, -2.8) {Fixed-length gene strings\\Real vectors / S-expressions};
-  \node[cell=cat5!5] (d1) at (4.5, -2.8) {Prompts, policies, memories,\\Python code, workflow graphs, $\theta$};
+  % 第1行：表示
+  \node[rowlabel] (r1) at (-4.5, -2.8) {表示};
+  \node[cell=cat1!5] (c1) at (0, -2.8) {固定长度基因串\\实向量 / S-表达式};
+  \node[cell=cat5!5] (d1) at (4.5, -2.8) {提示、策略、记忆、\\Python 代码、工作流图、$\theta$};
 
-  % Row 2: Mutation
-  \node[rowlabel] (r2) at (-4.5, -3.9) {Mutation};
-  \node[cell=cat1!5] (c2) at (0, -3.9) {Random flips, crossover,\\Gaussian perturbation};
-  \node[cell=cat5!5] (d2) at (4.5, -3.9) {LLM rewrite, reflection text,\\textual gradient, RL update, patch};
+  % 第2行：变异
+  \node[rowlabel] (r2) at (-4.5, -3.9) {变异};
+  \node[cell=cat1!5] (c2) at (0, -3.9) {随机翻转、交叉、\\高斯扰动};
+  \node[cell=cat5!5] (d2) at (4.5, -3.9) {LLM 重写、反思文本、\\文本梯度、RL 更新、补丁};
 
-  % Row 3: Fitness
-  \node[rowlabel] (r3) at (-4.5, -5.0) {Fitness};
-  \node[cell=cat1!5] (c3) at (0, -5.0) {Predefined scalar function\\Hand-crafted};
-  \node[cell=cat5!5] (d3) at (4.5, -5.0) {Benchmarks, unit tests,\\LLM judges, human preferences};
+  % 第3行：适应度
+  \node[rowlabel] (r3) at (-4.5, -5.0) {适应度};
+  \node[cell=cat1!5] (c3) at (0, -5.0) {预定义标量函数\\手工设计};
+  \node[cell=cat5!5] (d3) at (4.5, -5.0) {基准、单元测试、\\LLM 评判器、人类偏好};
 
-  % Row 4: Selection
-  \node[rowlabel] (r4) at (-4.5, -6.1) {Selection};
-  \node[cell=cat1!5] (c4) at (0, -6.1) {Tournament / roulette\\Fixed strategy};
-  \node[cell=cat5!5] (d4) at (4.5, -6.1) {Quality-diversity, rollback gating,\\safety constraints $C$, cost control};
+  % 第4行：选择
+  \node[rowlabel] (r4) at (-4.5, -6.1) {选择};
+  \node[cell=cat1!5] (c4) at (0, -6.1) {锦标赛 / 轮盘赌\\固定策略};
+  \node[cell=cat5!5] (d4) at (4.5, -6.1) {质量多样性、回滚门控、\\安全约束 $C$、成本控制};
 
-  % Row 5: Self-reference
-  \node[rowlabel] (r5) at (-4.5, -7.2) {Self-reference};
-  \node[cell=cat1!5] (c5) at (0, -7.2) {None\\Searcher and searchee separated};
-  \node[cell=cat5!5] (d5) at (4.5, -7.2) {G\"{o}delization / empirical self-mod.\\Searcher itself is the search target};
+  % 第5行：自指
+  \node[rowlabel] (r5) at (-4.5, -7.2) {自指};
+  \node[cell=cat1!5] (c5) at (0, -7.2) {无\\搜索者与被搜索者分离};
+  \node[cell=cat5!5] (d5) at (4.5, -7.2) {G\"{o}del 化 / 经验性自修改\\搜索者本身是搜索目标};
 
-  % Row 6: Theory
-  \node[rowlabel] (r6) at (-4.5, -8.3) {Theory};
-  \node[cell=cat1!5] (c6) at (0, -8.3) {Convergence theorems\\No-Free-Lunch};
-  \node[cell=cat5!5] (d6) at (4.5, -8.3) {Primarily empirical\\Formal framework emerging};
+  % 第6行：理论
+  \node[rowlabel] (r6) at (-4.5, -8.3) {理论};
+  \node[cell=cat1!5] (c6) at (0, -8.3) {收敛定理\\No-Free-Lunch};
+  \node[cell=cat5!5] (d6) at (4.5, -8.3) {以经验为主\\形式化框架正在形成};
 
-  % Horizontal divider between header and rows
+  % 分隔线
   \draw[divider] (-7.2, -2.1) -- (7.2, -2.1);
-  % Vertical dividers
   \draw[divider] (-2.2, -1.5) -- (-2.2, -8.8);
   \draw[divider] (2.2, -1.5) -- (2.2, -8.8);
 
-  % Bottom annotation
+  % 底部注释
   \node[font=\scriptsize, text=gray!50!black, align=center] at (0, -9.2)
-    {Core differences: LLM as semantic mutator and judge, the searcher is itself searchable, improvements must be auditable.};
+    {核心差异：LLM 作为语义变异器和评判器、搜索者本身可被搜索、改进必须可审计。};
 
 \end{tikzpicture}
-\caption{Systematic comparison between classical evolutionary computation and Agent Self-Evolution across six dimensions: representation, mutation, fitness, selection, self-reference, and theoretical guarantees.}
+\caption{经典进化计算与 Agent Self-Evolution 在六个维度上的系统比较：表示、变异、适应度、选择、自指和理论保证。}
 \label{fig:ch2-comparison}
 \end{figure}
 
+\subsection{统一示例：从用户目标到进化智能体}\label{sec:ch2-unifying-example}
+
+考虑一个用户要求构建能维护小型软件库的智能体。用户希望智能体能分类问题、编写补丁、运行测试、更新文档，并避免破坏公共 API。非进化智能体可能被手工设计一次然后部署。自进化系统将请求视为一系列循环的开始。
+
+\textbf{规约到执行循环}首先将请求转换为任务卡。任务卡声明仓库类型、允许的文件、测试命令、API 稳定性约束、文档要求和成功指标。它构建初始智能体工作流：问题读取器、规划器、编码器、测试运行器、审查器和文档更新器。
+
+\textbf{搜索循环}提出变体。一个变体在编码前添加静态分析步骤。另一个添加回归测试生成器。另一个更改规划提示以要求 API 影响分析。每个候选是智能体工作流，而不仅仅是答案。
+
+\textbf{评估器循环}在仓库维护任务套件上运行候选。它测量通过的测试、应用的补丁、API 兼容性、文档完整性、时间和工具调用成本。它记录轨迹：失败命令、更改文件、审查评论和最终差异。通过更多问题但频繁更改公共 API 的候选不被接受为全局替换。
+
+\textbf{反思循环}总结失败。如果智能体反复忘记在更改行为后更新文档，则为文档更新器写入记忆。如果编码器频繁破坏公共 API，反思附加到规划和审查组件：公共接口必须在编辑前检查，回归测试必须包括下游示例。
+
+\textbf{种群循环}保留专门化工作流。低延迟工作流处理简单文档修复。高保证工作流处理 API 更改。依赖更新工作流处理包升级。缺陷修复工作流处理失败测试。MAP-Elites 描述符可能包括任务类型、风险级别、延迟预算和所需工具深度。
+
+该示例展示了为什么自进化不仅仅是``模型改进自身''。模型可以保持固定，而系统通过更好的规约、工作流、测试、记忆和归档显著改进。反之，模型可以在没有有意义的自进化的情况下被微调，如果没有从评估经验到针对性更新的闭环。本质是从状态到候选到反馈到选择性更新的结构化转换。
+
+\subsection{理论边界}\label{sec:ch2-theory-boundaries}
+
+自进化的理论边界也必须承认。第一，没有外部或独立评估器，自奖励可能坍缩为自一致性幻觉。第二，如果任务分布太窄，系统可能学到基准特定的技巧。第三，如果可修改范围太宽且约束不足，系统可能破坏评估、日志或安全边界。第四，如果归档缺乏管理，长期记忆积累噪声、矛盾和上下文坍缩。第五，如果底层基础模型缺乏足够能力，LLM 生成的变体可能无法跨越关键技术阈值。
+
+Agent Self-Evolution 不是魔法增长引擎；它是一个耦合基础模型能力、外部反馈、搜索机制和工程约束的优化过程。它放大现有优势，但也放大评估器和环境设计中的缺陷。
+
+\subsection{改进的层次}
+
+形式化还必须区分``改进''的层次。\emph{局部改进}意味着 $V$ 在当前任务集上增加。\emph{健壮改进}要求在独立测试集上增加。\emph{迁移改进}要求在新任务分布或新模型上增加。\emph{开放式改进}要求归档持续产生新颖有用的踏脚石。\emph{安全改进}要求能力增长而不增加约束违规。许多论文仅展示前两个；ADAS、DGM、Voyager 和 ReasoningBank 等工作尝试展示迁移或开放性。未来理论需要更严格地区分这些层次；否则``自我改进''很容易从单一基准改进中被过度解读。
+
+\subsection{选择压力与多目标优化}\label{sec:ch2-selection-pressure}
+
+另一个关键概念是\emph{选择压力}。评估器 $V$ 决定系统进化方向。如果 $V$ 是单元测试，系统优化测试通过。如果 $V$ 是 LLM 评判器，系统优化评判器偏好。如果 $V$ 是环境奖励，系统利用奖励结构漏洞。Goodhart 定律适用：当指标成为目标时，它就不再是好的度量。自进化系统因此通常需要多目标优化：最大化任务奖励 $R$、最小化成本 $\mathrm{Cost}$、满足安全约束 $C$、保持多样性 $D$、控制复杂度 $\Omega$。这可以表示为寻找最大化以下目标的 $z$：
+\begin{equation}\label{eq:ch2-multi-obj}
+\mathbb{E}[R(z)] - \lambda\,\mathrm{Cost}(z) + \beta\,D(z) - \gamma\,\Omega(z)
+\end{equation}
+约束为 $C(z) = \mathrm{true}$。实际系统通过门控、消融、回滚和人工审查来近似此目标。
 
 % ====================================================================
-% Table 2.1: Theory Components to Engineering Mechanisms Mapping
+% 表2.2: 五大循环比较
 % ====================================================================
 \begin{table}[htbp]
 \centering
 \small
-\caption{Mapping between Agent Self-Evolution theory components and engineering mechanisms.}
-\label{tab:ch2-theory-components}
-\begin{tabular}{p{0.22\textwidth}p{0.30\textwidth}p{0.36\textwidth}}
-\toprule
-Theory Component & Engineering Carrier & Key Risk \\
-\midrule
-Evolutionary search & Candidate prompts, workflows, agent code, and archive & Premature convergence, evaluation cost explosion, diversity loss \\
-Self-reference & Self-modification patches, runtime hooks, versioned agent variants & Local improvements breaking long-term objectives, privilege escalation, audit difficulty \\
-Meta-learning & Experience libraries, principle collections, skill libraries, cross-task initialization & Negative transfer, overfitting to historical tasks, context pollution \\
-RL / Online learning & Rewards, judges, unit tests, environment feedback, and rollback gating & Reward hacking, judge bias, non-stationary feedback \\
-Software engineering constraints & Sandboxes, CI, regression testing, logging, and safety policies & Insufficient test coverage, hidden regressions, irreproducibility \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\subsection{Summary}\label{sec:theory-summary}
-
-The theoretical landscape of Agent Self-Evolution can be summarized as follows. LLMs provide semantic generation and reasoning capabilities. Evolutionary computation provides open-ended candidate search. Self-reference provides the recursive self-improvement objective. Meta-learning provides cross-task experience reuse. Reinforcement learning and online learning provide feedback-driven updates. Software engineering provides testing, sandboxing, version control, and rollback mechanisms.
-
-The field does not yet possess a unified theory as mature as that of supervised learning, but it has established a stable set of questions: \emph{What is being changed?} (the five state components $\theta, c, g, m, \mathcal{A}$). \emph{Is the evaluator reliable?} (the Evaluator Loop and its failure modes). \emph{How is the archive managed?} (the Population Loop and stepping stones). \emph{Can improvements transfer?} (the meta-learning dimension). \emph{Are safety constraints tamper-proof?} (the G\"{o}del machine verification gap).
-
-The five evolution loops---Specification-to-Execution, Search, Evaluator, Reflection, and Population---provide the taxonomic framework for answering these questions systematically. Chapter~\ref{ch:methods} will map specific methods to these loops, and subsequent chapters will analyze how real systems compose them.
-
-\subsection{The Five Evolution Loops: A Unified Taxonomy}\label{sec:theory-five-loops}
-
-Building on the evolutionary computation framework above, we now present the five evolution loops that constitute our central taxonomic contribution. Each loop represents a recurring pattern observed across multiple systems, and each loop has characteristic inputs, outputs, internal state, and failure modes. Real systems typically compose multiple loops; the taxonomy is analytical, not prescriptive.
-
-\subsubsection{The Specification-to-Execution Loop}\label{sec:loop-spec}
-
-\textbf{Definition.} The Specification-to-Execution Loop converts a natural-language or high-level specification of a goal into a runnable, evaluated artifact---a machine learning pipeline, an agent workflow, an executable program, or a deployed service. The loop iterates between specification interpretation, candidate generation, execution, and specification refinement.
-
-\textbf{Representative Systems.} AutoML-GPT uses GPT as a natural-language bridge to convert task cards, model cards, and data cards into data processing, model architecture, hyperparameter optimization, and training log prediction. AutoML-Agent decomposes full-pipeline AutoML into specialized agents for data retrieval, preprocessing, modeling, evaluation, and deployment, combining retrieval-augmented planning with multi-stage verification. The Text-to-ML paradigm treats ML pipeline generation as autonomous program synthesis combined with search. ADAS takes this further: rather than generating a single pipeline, the meta-agent searches over the \emph{space of agent designs}, producing novel architectures that are then evaluated on held-out tasks.
-
-\textbf{Formal Structure.} Let the specification be a natural-language description $s \in \mathcal{S}$. The generator $G$ produces a candidate artifact $a = G(s; h)$, where $h$ represents historical context (previous attempts, similar tasks). The executor $E$ runs $a$ in an environment $\mathcal{E}$, producing a trace $\tau = E(a, \mathcal{E})$. The evaluator $V$ scores the trace: $v = V(\tau, s)$. The specification refiner $R$ updates the specification or the context: $s' = R(s, \tau, v)$. The loop continues until $v$ exceeds a threshold or a budget is exhausted:
-\begin{equation}\label{eq:spec-loop}
-s_{t+1} = R\big(s_t,\; E(G(s_t; h_t), \mathcal{E}),\; V(\tau_t, s_t)\big)
-\end{equation}
-
-\textbf{Key Challenges.} Ambiguity in natural-language specifications is the primary obstacle. The same specification can yield wildly different artifacts depending on interpretation. Current systems address this through structured task cards (AutoML-GPT), multi-agent debate over interpretation (AutoML-Agent), or iterative clarification. However, the gap between what a user \emph{means} and what the system \emph{understands} remains the weakest link. Additionally, the cost of executing full pipelines on each iteration can be prohibitive, motivating approximate or partial evaluation strategies.
-
-\textbf{Connection to Other Loops.} The Specification-to-Execution Loop naturally chains into the Evaluator Loop (Section~\ref{sec:loop-evaluator}), since execution produces traces that must be scored. It also connects to the Reflection Loop (Section~\ref{sec:loop-reflection}), since specification refinement is itself a form of reflective improvement.
-
-\subsubsection{The Search Loop}\label{sec:loop-search}
-
-\textbf{Definition.} The Search Loop explores a space of candidates---prompts, architectures, code, agent designs, or hyperparameters---guided by feedback from evaluation. Unlike the Specification-to-Execution Loop, which focuses on converting goals to artifacts, the Search Loop focuses on \emph{systematically exploring and improving} the space of possible solutions.
-
-\textbf{Representative Systems.} OPRO treats the LLM itself as an optimizer: the prompt describes the optimization task, and the model generates new candidate solutions conditioned on the history of past solutions and their scores. AlphaEvolve combines Gemini Flash for fast candidate generation with Gemini Pro for deep evaluation, using MAP-Elites quality-diversity search to maintain a diverse archive of algorithm candidates. OpenEvolve extends FunSearch's program evolution framework with more sophisticated variation operators. EvoPrompting uses language models as evolutionary operators over architecture code, evaluating candidates on algorithmic reasoning tasks. ADAS searches over the space of agent architectures using a meta-agent that proposes and evaluates new designs.
-
-\textbf{Formal Structure.} The Search Loop maintains a population or archive $\mathcal{A}_t$ of candidates with associated fitness scores. At each iteration, a selection mechanism $\sigma$ chooses parent candidates; a variation operator $\mu$ (powered by the LLM) generates offspring; an evaluator $V$ scores the offspring; and an update rule $\phi$ determines which candidates are retained:
-\begin{equation}\label{eq:search-loop}
-\mathcal{A}_{t+1} = \phi\big(\mathcal{A}_t \cup \{\mu(\sigma(\mathcal{A}_t))\},\; V\big)
-\end{equation}
-The critical design choices are: the representation of candidates (code, prompts, architectures), the variation operator (LLM rewrite, crossover, mutation), the selection mechanism (tournament, roulette, novelty-based), and the archive management strategy (elitist, quality-diversity, age-based).
-
-\textbf{Benchmark Evidence.} AlphaEvolve demonstrated the power of this loop by discovering a new matrix multiplication algorithm for $4\times 4$ complex matrices using 48 scalar multiplications---improving upon Strassen's 49-multiplication algorithm for the first time in this setting. OPRO showed that LLMs can optimize prompts for GSM8K and Big-Bench Hard, achieving improvements of 8--50\% over human-designed prompts. EvoPrompting achieved state-of-the-art on the CLRS algorithmic reasoning benchmark by evolving graph neural network architectures.
-
-\textbf{Key Challenges.} The curse of dimensionality in the search space is the primary challenge. Even with LLM-guided mutation, the space of possible prompts, architectures, or agent designs is vast. Premature convergence---where the search settles on a local optimum---is common. DGM's approach of maintaining an open-ended archive of all candidates (rather than just the current best) is one response, but it increases computational cost. Another challenge is the cost of evaluation: each candidate must be executed in an environment, which may require significant compute time, especially for code-based agents running on complex benchmarks like SWE-Bench.
-
-\subsubsection{The Evaluator Loop}\label{sec:loop-evaluator}
-
-\textbf{Definition.} The Evaluator Loop provides feedback signals to the evolution process by scoring candidate artifacts against task requirements, correctness criteria, quality standards, or deployment constraints. The evaluator may be a deterministic program (unit tests, static analyzers), a model-based judge (LLM-as-a-judge), an interactive environment (web arena, code sandbox), or a human reviewer.
-
-\textbf{Representative Systems.} FunSearch pioneered the combination of LLM generation with programmatic evaluation: LLM-generated programs are evaluated on mathematical constraints, and only those that pass both correctness and performance checks are retained in the population. Self-Debug uses execution feedback (error messages, test results) as a first-class signal for self-repair: the agent reads its own error output and generates patches. AlphaEvolve employs Gemini Pro as a deep evaluator that can assess algorithmic quality beyond simple correctness. ReVeal uses formal verification to evaluate the correctness of generated programs.
-
-\textbf{Four-Tier Evaluation Framework.} The Evaluator Loop can be decomposed into four tiers of increasing complexity: (1) \emph{Deterministic verifiers}: unit tests, type checkers, linters, static analyzers, fuzzing, and regression tests that provide binary or scalar signals with no noise. (2) \emph{Model-based evaluators}: LLM-as-a-judge, critic agents, debate-based evaluation, and meta-judges that provide rich but noisy signals. (3) \emph{Interactive environment evaluators}: web arenas (WebArena, WebShop), code sandboxes (SWE-Bench), robot simulators, and game environments that provide grounded feedback. (4) \emph{Human evaluators}: domain experts, crowdworkers, or end users who provide preference judgments and qualitative feedback.
-
-\textbf{Key Challenges.} The most critical challenge is \emph{evaluator degradation}. Self-Rewarding Language Models and Meta-Rewarding have demonstrated that when the evaluator is the same model (or a fine-tuned variant) as the generator, systematic biases emerge: length preference, score inflation, and reward hacking. The evaluator may also become a bottleneck: comprehensive evaluation of each candidate can be expensive, and fast approximate evaluation may miss important failure modes. Finally, the evaluator's coverage matters: a system that passes all unit tests may still fail on edge cases, security vulnerabilities, or performance regressions that the test suite does not cover.
-
-\textbf{Connection to Safety.} The Evaluator Loop is the primary line of defense against misalignment and mis-evolution. If the evaluator can be modified by the evolving agent, or if its blind spots are exploitable, the entire evolution process becomes unreliable. Evaluator isolation---ensuring the evaluator cannot be directly modified by the agent under evaluation---is a necessary (though not sufficient) condition for safe self-evolution.
-
-\subsubsection{The Reflection Loop}\label{sec:loop-reflection}
-
-\textbf{Definition.} The Reflection Loop transforms execution traces, failure signals, and environmental feedback into structured knowledge that improves future behavior. Unlike the Evaluator Loop, which scores outputs, the Reflection Loop produces \emph{explanations}, \emph{principles}, \emph{insights}, or \emph{revised strategies} that modify the agent's internal state.
-
-\textbf{Representative Systems.} Self-Refine demonstrates the simplest form: the same LLM generates an output, critiques it, and iteratively revises it within a single inference session. Reflexion extends this by persisting reflections as episodic memory: after a task failure, the agent generates a natural-language reflection describing what went wrong and how to fix it, which is retrieved on subsequent attempts. ExpeL aggregates experiences across multiple tasks to extract transferable insights---general principles that guide behavior on new tasks. STaR (Self-Taught Reasoner) uses a generate--filter--fine-tune loop: the model generates chain-of-thought reasoning, filters for correct answers, and fine-tunes on the successful traces. ACE (Adaptive Context Evolution) treats the agent's context as an evolving playbook that is incrementally refined based on task outcomes. ReasoningBank distills reasoning strategies from both successful and failed problem-solving episodes into a reusable library.
-
-\textbf{Formal Structure.} The Reflection Loop can be formalized as a memory update operator. Let the agent's reflective memory be $m_t$ at iteration $t$. After executing a trajectory $\tau_t$ and receiving feedback $y_t$, the reflection operator $\rho$ produces an updated memory:
-\begin{equation}\label{eq:reflection-loop}
-m_{t+1} = \rho(m_t, \tau_t, y_t)
-\end{equation}
-The nature of $\rho$ varies across systems: in Reflexion, $\rho$ appends a natural-language summary to episodic memory; in ExpeL, $\rho$ extracts and generalizes insights; in STaR, $\rho$ selects correct trajectories for fine-tuning; in ACE, $\rho$ restructures the context playbook; in Memory-R1, $\rho$ is trained via RL to decide \emph{when} to write, update, delete, and retrieve memories.
-
-\textbf{Benchmark Evidence.} Reflexion achieves 91\% pass@1 on HumanEval (compared to GPT-4's 80\%) by accumulating language-based reflections across coding episodes. STaR demonstrates that iterative self-training on filtered reasoning traces can match or exceed supervised fine-tuning on GSM8K and other math benchmarks. ExpeL shows forward transfer: insights extracted from one set of tasks improve performance on a different set. ACE shows that evolving context playbooks can improve agent performance by 15--40\% over static prompts.
-
-\textbf{Key Challenges.} Memory quality is the central challenge. Not all reflections are equally useful; some may encode false lessons, overfit to specific task instances, or introduce contradictions with existing memory. The ``context collapse'' problem arises when too many reflections crowd the agent's context window, degrading rather than improving performance. AriadneMem addresses this with entropy-aware gating that decides which memories to retain and which to discard. Memory-R1 takes a different approach by \emph{learning} the memory management policy via reinforcement learning, rather than relying on hand-crafted heuristics.
-
-\subsubsection{The Population Loop}\label{sec:loop-population}
-
-\textbf{Definition.} The Population Loop maintains multiple candidate agents, strategies, or artifacts simultaneously, applying evolutionary operations---selection, mutation, recombination, and specialization---across the population. Unlike the Search Loop, which focuses on optimizing a single objective, the Population Loop emphasizes \emph{diversity}, \emph{stepping stones}, and \emph{open-ended exploration}.
-
-\textbf{Representative Systems.} DGM (Darwin G\"{o}del Machine) maintains an ever-growing archive of agent variants: each agent can modify its own code, and the archive preserves all variants along with their lineage and performance records. AlphaEvolve uses MAP-Elites quality-diversity search to maintain a grid of high-performing solutions across multiple behavioral dimensions. Absolute Zero Reasoners employ self-play between a ``proposer'' and a ``solver,'' generating training data without any external labels. SPIRAL extends self-play to zero-sum games, discovering novel reasoning capabilities through adversarial interaction. SPIN (Self-Play Fine-Tuning) uses self-play to progressively strengthen language models: the model generates candidate responses, and a discriminator (trained on previous iterations) provides training signal.
-
-\textbf{Key Insight: Stepping Stones.} A crucial insight from quality-diversity optimization and open-ended search is that the path to high-performing solutions often passes through candidates that are \emph{not} high-performing by the current objective. DGM's archive preserves these stepping stones, allowing the search to revisit and build upon earlier variants that may not have been the ``best'' at the time but contained useful components. This contrasts with purely elitist selection, which discards all but the current best and may converge to local optima.
-
-\textbf{Benchmark Evidence.} DGM demonstrates that open-ended evolution with archive maintenance can produce coding agents that outperform hand-designed baselines on SWE-Bench Verified and Polyglot benchmarks. AlphaEvolve's quality-diversity search discovered new algorithms for matrix multiplication and other combinatorial problems, exceeding the capabilities of any single model generating solutions in isolation. Absolute Zero Reasoners achieve competitive performance on math and coding benchmarks using \emph{zero} external training data, relying entirely on self-play between proposal and solving agents.
-
-\textbf{Key Challenges.} Computational cost is the primary obstacle. Maintaining and evaluating a large population of agent variants is expensive, especially when each evaluation requires running complex benchmarks. Archive management---deciding what to keep, what to discard, and how to index for efficient retrieval---is an open problem. Additionally, the population's diversity must be meaningful: maintaining many variants of the same basic approach provides little benefit.
-
-\subsection{Cross-Loop Interactions and Composite Systems}\label{sec:theory-crossloop}
-
-No real system implements only a single loop. The most powerful systems compose multiple loops, and the interactions between loops create emergent behaviors---both beneficial and dangerous. We identify several recurring composition patterns.
-
-\textbf{Specification + Search.} Systems like AutoML-Agent and ADAS combine specification interpretation with search over the design space. The specification defines the task; the search explores the solution space. The interaction occurs when search results feed back into specification refinement: if no candidate satisfies the specification, the specification itself may need adjustment.
-
-\textbf{Search + Evaluator.} This is the most fundamental composition. Every search-based system requires an evaluator to provide selection pressure. The key design decision is whether the evaluator is static (fixed benchmarks, unit tests) or co-evolving (LLM judges that are themselves being improved). AlphaEvolve uses static programmatic evaluators; Meta-Rewarding uses co-evolving model-based evaluators with a meta-judge layer to guard against evaluator degradation.
-
-\textbf{Reflection + Population.} DGM combines reflection (agents analyze their own performance and generate self-modifications) with population-level archive maintenance. The reflection loop operates within each agent; the population loop operates across agents. The interaction creates a form of ``cultural evolution'': successful self-modifications are preserved in the archive and can be inherited by future agents.
-
-\textbf{All Five Loops: The Self-Evolve Vision.} A complete self-evolving system would compose all five loops: specifications are parsed and refined (Loop 1), a population of candidate solutions is maintained (Loop 5), the search explores variations (Loop 2), evaluators score candidates (Loop 3), and failures trigger reflection and memory updates (Loop 4). The ``Self-Evolve'' framework proposed in this survey represents this full composition, with the added principle that each loop should be independently verifiable and auditable.
-
-\subsection{Historical Progression and Cross-Domain Synthesis}\label{sec:theory-history}
-
-\subsubsection{Temporal Evolution of the Field}
-
-The field of Agent Self-Evolution has progressed through several phases, each building on the insights of its predecessors. The first phase (2022--2023) established the foundational loops: Self-Refine demonstrated iterative self-feedback at inference time; Reflexion introduced persistent language-based memory as a substitute for parameter updates; STaR showed that self-generated reasoning traces could be used for training. These early works primarily operated within the Reflection Loop, with limited integration of other loops.
-
-The second phase (2024) saw the emergence of training-time self-improvement and multi-loop composition. Self-Rewarding Language Models combined the Evaluator Loop (model-as-judge) with the Search Loop (Iterative DPO), training the model to improve both generation and evaluation simultaneously. RISE introduced multi-turn MDP formulations for self-corrective policy learning. ExpeL and Voyager demonstrated that accumulated experience could transfer across tasks, moving beyond single-episode improvement.
-
-The third phase (2025) brought architecture-level and code-level self-modification. ADAS automated the search over agent designs. DGM combined self-reference with population-level archive maintenance. SICA demonstrated self-modifying coding agents on real-world benchmarks. AlphaEvolve showed that LLM-guided evolutionary search could make genuine scientific discoveries. These systems compose all five loops and represent the current frontier.
-
-The fourth phase (2025--2026) is marked by growing attention to safety, memory governance, and production readiness. Misevolution analysis identifies failure modes specific to self-evolving systems. OEP demonstrates experience-poisoning attacks. Capability Erosion studies catastrophic forgetting in self-evolving agents. AriadneMem and Memory-R1 develop sophisticated memory management policies.
-
-\subsubsection{Cross-Domain Convergence}
-
-A striking feature of the field is the convergence of five previously separate research traditions: (1) \textbf{AutoML + LLM} (AutoML-GPT, AutoML-Agent), where the evolved object is the ML pipeline; (2) \textbf{NAS + LLM} (EvoPrompting, LLMatic, NADER), where the evolved object is the network architecture; (3) \textbf{LLM Self-Improvement} (Self-Refine, Reflexion, STaR, SPIN), where the evolved object is the model output or weights; (4) \textbf{Evolutionary Computation + LLM} (OPRO, FunSearch, ReEvo, LLaMEA), where the evolved object is a program, prompt, or heuristic; and (5) \textbf{Agent Frameworks} (AutoGPT, MetaGPT, AutoGen, CrewAI), which provide the orchestration infrastructure.
-
-Self-Evolving AI sits at the intersection of these five traditions. The common thread is that each tradition contributes one or more of the five loops: AutoML provides the Specification-to-Execution Loop; NAS provides the Search Loop with quality-diversity optimization; LLM self-improvement provides the Reflection Loop; EC provides the Population Loop; and all traditions contribute to the Evaluator Loop. The unified framework presented in this survey is possible precisely because these traditions are converging on the same set of design problems.
-
-% ====================================================================
-% Table 2.2: Five Evolution Loops Comparison
-% ====================================================================
-\begin{table}[htbp]
-\centering
-\small
-\caption{Comparison of the five evolution loops across key dimensions. Each loop addresses a distinct aspect of self-evolution, and most real systems compose multiple loops.}
+\caption{五大进化循环在关键维度上的比较。每个循环解决自进化的不同方面，大多数真实系统组合多个循环。}
 \label{tab:ch2-five-loops}
 \begin{tabular}{p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{3.5cm}}
 \toprule
-\textbf{Loop} & \textbf{Primary Target} & \textbf{Key Operation} & \textbf{Feedback Signal} & \textbf{Representative Systems} \\
+\textbf{循环} & \textbf{主要目标} & \textbf{关键操作} & \textbf{反馈信号} & \textbf{代表性系统} \\
 \midrule
-Specification-to-Execution & Task specification $\to$ runnable artifact & Interpretation, generation, refinement & Execution trace, specification satisfaction & AutoML-GPT, AutoML-Agent, ADAS \\
-Search & Candidate space exploration & Variation, selection, archive management & Fitness scores, novelty, diversity & OPRO, AlphaEvolve, EvoPrompting, OpenEvolve \\
-Evaluator & Quality assessment & Scoring, verification, calibration & Correctness, performance, safety compliance & FunSearch, Self-Debug, AlphaEvolve (Pro evaluator) \\
-Reflection & Internal state update & Memory writing, insight extraction, principle learning & Failure explanations, success patterns & Reflexion, ExpeL, STaR, ACE, ReasoningBank \\
-Population & Multi-candidate maintenance & Selection, recombination, specialization, archive growth & Multi-objective fitness, stepping stones & DGM, MAP-Elites, Absolute Zero, SPIRAL, SPIN \\
+规约到执行 & 任务规约 $\to$ 可运行产物 & 解释、生成、精炼 & 执行轨迹、规约满足 & AutoML-GPT、AutoML-Agent、ADAS \\
+搜索 & 候选空间探索 & 变异、选择、归档管理 & 适应度分数、新颖性、多样性 & OPRO、AlphaEvolve、EvoPrompting \\
+评估器 & 质量评估 & 评分、验证、校准 & 正确性、性能、安全合规 & FunSearch、Self-Debug、AlphaEvolve \\
+反思 & 内部状态更新 & 记忆写入、洞察提取、原则学习 & 失败解释、成功模式 & Reflexion、ExpeL、STaR、ACE \\
+种群 & 多候选维护 & 选择、重组、专门化、归档增长 & 多目标适应度、踏脚石 & DGM、MAP-Elites、Absolute Zero \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\subsection{历史演进与跨领域融合}\label{sec:ch2-history}
+
+\subsubsection{领域的时间演进}
+
+Agent Self-Evolution 领域经历了几个阶段，每个阶段建立在其前驱的洞察之上。第一阶段（2022--2023）建立了基础循环：Self-Refine 展示了推理时的迭代自反馈；Reflexion 引入了持久语言记忆作为参数更新的替代；STaR 表明自生成的推理轨迹可用于训练。这些早期工作主要在反思循环内操作，与其他循环的集成有限。
+
+第二阶段（2024）见证了训练时自我改进和多循环组合的出现。Self-Rewarding Language Models 将评估器循环（模型作为评判器）与搜索循环（迭代 DPO）结合，训练模型同时改进生成和评估。ExpeL 和 Voyager 展示了积累的经验可以跨任务迁移，超越单片段改进。
+
+第三阶段（2025）带来了架构级和代码级自我修改。ADAS 自动化了智能体设计的搜索。DGM 将自指与种群级归档维护结合。SICA 展示了在真实世界基准上的自修改编码智能体。AlphaEvolve 表明 LLM 引导的进化搜索可以做出真正的科学发现。这些系统组合了所有五个循环，代表了当前前沿。
+
+第四阶段（2025--2026）的标志是对安全、记忆治理和生产就绪性的日益关注。Misevolution 分析识别了自进化系统特有的失败模式。OEP 展示了经验投毒攻击。Capability Erosion 研究了自进化智能体中的灾难性遗忘。AriadneMem 和 Memory-R1 开发了复杂的记忆管理策略。
+
+\subsubsection{跨领域融合}
+
+该领域的一个引人注目的特征是五个先前独立研究传统的融合：(1) \textbf{AutoML + LLM}（AutoML-GPT、AutoML-Agent），进化对象是 ML 流水线；(2) \textbf{NAS + LLM}（EvoPrompting、LLatic、NADER），进化对象是网络架构；(3) \textbf{LLM 自我改进}（Self-Refine、Reflexion、STaR、SPIN），进化对象是模型输出或权重；(4) \textbf{进化计算 + LLM}（OPRO、FunSearch、ReEvo、LLaMEA），进化对象是程序、提示或启发式；(5) \textbf{智能体框架}（AutoGPT、MetaGPT、AutoGen、CrewAI），提供编排基础设施。
+
+Self-Evolving AI 位于这五个传统的交叉点。共同线索是每个传统贡献了五个循环中的一个或多个：AutoML 提供规约到执行循环；NAS 提供带质量多样性优化的搜索循环；LLM 自我改进提供反思循环；EC 提供种群循环；所有传统都对评估器循环做出贡献。
+
+% ====================================================================
+% 表2.3: 理论组件到工程机制映射
+% ====================================================================
+\begin{table}[htbp]
+\centering
+\small
+\caption{Agent Self-Evolution 理论组件与工程机制的映射。}
+\label{tab:ch2-theory-components}
+\begin{tabular}{p{0.22\textwidth}p{0.30\textwidth}p{0.36\textwidth}}
+\toprule
+理论组件 & 工程载体 & 关键风险 \\
+\midrule
+进化搜索 & 候选提示、工作流、智能体代码和归档 & 过早收敛、评估成本爆炸、多样性丧失 \\
+自指 & 自修改补丁、运行时钩子、版本化智能体变体 & 局部改进破坏长期目标、权限升级、审计困难 \\
+元学习 & 经验库、原则集、技能库、跨任务初始化 & 负迁移、过拟合历史任务、上下文污染 \\
+RL / 在线学习 & 奖励、评判器、单元测试、环境反馈和回滚门控 & 奖励黑客、评判器偏差、非平稳反馈 \\
+软件工程约束 & 沙箱、CI、回归测试、日志记录和安全策略 & 测试覆盖不足、隐藏回归、不可复现 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{本章小结}\label{sec:ch2-summary}
+
+本章围绕五个循环组织了 AI 自进化。规约到执行循环将自然语言目标转换为可执行产物，如 AutoML-GPT、AutoML-Agent 和 ADAS 所示。搜索循环探索提示、架构、代码、工作流和超参数，如 OPRO、EvoPrompting、ADAS、OpenEvolve 和 AlphaEvolve 所示。评估器循环通过测试、基准、验证器、执行轨迹和部署指标提供适应度，如 FunSearch、Self-Debug、CodeEvolve 和 SelfEvolve 所示。反思循环将失败转化为可复用记忆和反馈，如 Reflexion、Self-Refine、STaR 和 Agent Symbolic Learning 所示。种群循环维护多个候选、谱系和生态位，如 AlphaEvolve、LLaMEA、DGM、SPIN 和 Absolute Zero 所示。
+
+统一形式化 $z_{t+1}=u(z_t,g(z_t),e(g(z_t)))$ 刻意保持宽泛。其价值在于使隐藏的设计选择显式化。状态是什么？可以生成什么候选？信任什么评估器？如何选择候选？更新什么？更新多持久？如何处理回滚？这些问题贯穿 AutoML、NAS、程序合成、智能体框架、进化计算和 LLM 自我改进。
+
+主要论点是自进化是一种系统属性。它不单独来自生成，也不单独来自反思，也不单独来自基准测试。它来自生成、评估、记忆、选择和更新在持久循环中的连接。系统的强度取决于评估器质量与更新能力之间的对齐。弱评估器可以支持轻量修订；强可执行评估器可以支持代码和种群进化；广泛验证的反馈可以支持训练时更新。
+
+对于系统构建者，五循环分类提供了检查清单。自进化 AI 系统应指定其状态、候选、评估器、选择策略、更新基底、记忆、种群策略和安全门。方法然后不仅可以按最终分数比较，还可以按其如何进化、如何安全更新以及多少改进可复现来比较。这是将 AI 自进化视为连贯研究和工程学科（而非松散的提示技巧、AutoML 工具和智能体 demo 集合）的基础。

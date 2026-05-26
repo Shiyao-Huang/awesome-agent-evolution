@@ -4,195 +4,194 @@
 % Task: jD4XcIRWrpJO
 % ====================================================================
 
-\section{Evolutionary Systems for Self-Improving AI}
+\section{自进化 AI 的演化系统}
 \label{ch:systems}
 
-\subsection{Introduction and Motivation}
+\subsection{引言与动机}
 
-The emergence of large language models (LLMs) as general-purpose reasoning and code generation engines has catalyzed a paradigm shift in optimization, algorithm design, and system improvement. A new class of systems treats the LLM itself as an evolutionary operator---a mechanism that proposes, refines, and selects candidate solutions iteratively. This chapter analyzes the key systems exemplifying this paradigm across three perspectives: LLM-driven optimization, evolutionary code discovery, and agent-level self-evolution.
+大语言模型（LLM）作为通用推理和代码生成引擎的出现，催生了优化、算法设计和系统改进领域的范式转变。一类新兴系统将 LLM 本身视为进化算子——一种迭代地提出、优化和选择候选方案的机制。本章从三个视角分析体现这一范式的关键系统：LLM 驱动的优化、进化式代码发现和智能体级自进化。
 
-These systems share a \textbf{Generate--Evaluate--Select} loop: at each iteration, a generator (LLM) proposes candidates; an evaluator assigns scores; a selection mechanism retains the best. What distinguishes them from classical evolutionary computation is the LLM's role: rather than applying fixed mutation operators, the LLM leverages parametric knowledge to propose semantically meaningful changes, conducting \emph{informed search} over programs, prompts, or architectures.
+这些系统共享一个\textbf{生成--评估--选择}循环：在每次迭代中，生成器（LLM）提出候选方案；评估器分配分数；选择机制保留最优方案。它们与经典进化计算的区别在于 LLM 的角色：LLM 并非应用固定的变异算子，而是利用参数化知识提出语义上有意义的改变，在程序、提示词或架构空间中执行\emph{有信息的搜索}。
 
-\paragraph{Historical Context.}
-Neural Architecture Search (NAS) demonstrated that network architectures could be discovered rather than hand-crafted~\citep{zoph2017neural}. AutoML automated pipeline configuration, reducing human expertise requirements for machine learning workflows~\citep{feurer2015efficient}. Quality-Diversity (QD) algorithms such as MAP-Elites showed how to maintain diverse high-performing populations across behavioral feature spaces~\citep{mouret2015illuminating}. The systems surveyed in this chapter build on these foundations but introduce a transformative element: the LLM as an intelligent mutation operator whose semantically informed proposals dramatically accelerate search.
+\paragraph{历史背景。}
+神经架构搜索（NAS）证明了网络架构可以通过搜索发现而非人工设计~\citep{zoph2017neural}。AutoML 自动化了流水线配置，降低了机器学习工作流对人类专业知识的需求~\citep{feurer2015efficient}。质量-多样性（QD）算法如 MAP-Elites 展示了如何在行为特征空间中维持多样化的高性能种群~\citep{mouret2015illuminating}。本章所调研的系统建立在这些基础之上，但引入了一个变革性要素：LLM 作为智能变异算子，其语义信息的提案极大地加速了搜索过程。
 
-\paragraph{The Evolutionary Intelligence Paradigm.}
-A unifying tension across all evolutionary systems is \emph{exploration vs.\ exploitation}. Classical evolutionary algorithms address this through fitness sharing, niching, and island models. The systems surveyed in this chapter inherit these mechanisms but augment them with LLM-specific capabilities: reasoning about \emph{why} a change might help, incorporating internet-scale pre-training knowledge, and generating novel solutions unlikely under random mutation. This combination represents what we term the \textbf{Evolutionary Intelligence} paradigm---a key pillar of self-evolving AI where the mutation operator itself possesses domain knowledge.
+\paragraph{进化智能范式。}
+所有进化系统中一个统一的张力是\emph{探索与利用之间的平衡}。经典进化算法通过适应度共享、小生境和岛屿模型来解决这一问题。本章调研的系统继承了这些机制，但通过 LLM 特有的能力对其进行了增强：推理\emph{为什么}某种改变可能有帮助、融入互联网规模的预训练知识、以及生成在随机变异下不太可能出现的新颖解决方案。这种组合构成了我们所称的\textbf{进化智能}范式——自进化 AI 的关键支柱，其中变异算子本身具备领域知识。
 
-\paragraph{Chapter Organization.}
-We organize this chapter along the axis of evolution targets, progressing from peripheral (prompts) to core (code, algorithms, architectures) to fully self-improving AI. Section~\ref{sec:ch4-llm-optimizer} covers LLM-as-optimizer systems (OPRO, EvoPrompt). Section~\ref{sec:ch4-evo-operator} analyzes evolutionary code discovery systems (FunSearch, AlphaEvolve, ReEvo, OpenELM). Section~\ref{sec:ch4-agent-evo} examines agent-level self-evolution (DGM, ADAS, G\"{o}del Agent, and others). Section~\ref{sec:ch4-opensource} reviews open-source implementations. Section~\ref{sec:ch4-benchmark} provides cross-cutting analysis with comparison tables and scaling laws.
+\paragraph{本章组织。}
+我们按照进化目标的轴线组织本章，从外围（提示词）到核心（代码、算法、架构）再到完全自进化的 AI。第~\ref{sec:ch4-llm-optimizer}~节介绍 LLM 作为优化器的系统（OPRO、EvoPrompt）。第~\ref{sec:ch4-evo-operator}~节分析进化式代码发现系统（FunSearch、AlphaEvolve、ReEvo、OpenELM）。第~\ref{sec:ch4-agent-evo}~节考察智能体级自进化（DGM、ADAS、G\"{o}del Agent 等）。第~\ref{sec:ch4-opensource}~节回顾开源实现。第~\ref{sec:ch4-benchmark}~节提供交叉分析，包含对比表和缩放定律。
 
 
-\subsection{LLM as Optimizer}
+\subsection{LLM 作为优化器}
 \label{sec:ch4-llm-optimizer}
 
-The simplest form of LLM-driven evolution optimizes over \emph{text}: prompts, instructions, or natural language strategies. In this regime, the LLM generates textual candidates, a task-specific evaluator scores them, and the highest-scoring texts are retained for the next iteration. Two landmark systems illustrate this approach: OPRO, which treats optimization as a prompting problem, and EvoPrompt, which instantiates classical evolutionary algorithms with LLM operators.
+LLM 驱动进化的最简单形式是对\emph{文本}进行优化：提示词、指令或自然语言策略。在这种模式下，LLM 生成文本候选方案，任务特定的评估器对其进行评分，得分最高的文本被保留到下一次迭代。两个里程碑式的系统说明了这种方法：OPRO 将优化视为提示问题，而 EvoPrompt 用 LLM 算子实例化经典进化算法。
 
-\subsubsection{OPRO: Optimization by PROmpting}
+\subsubsection{OPRO：通过提示进行优化}
 
-OPRO~\citep{yang2023opro} (Google DeepMind, 2023) establishes the foundational result that LLMs can serve as general-purpose optimizers when problems are expressed in natural language. Rather than designing gradient-based or combinatorial optimization algorithms, OPRO simply presents the LLM with a history of solution--score pairs and asks it to propose higher-scoring solutions.
+OPRO~\citep{yang2023opro}（Google DeepMind，2023）确立了 LLM 在问题以自然语言表达时可作为通用优化器的基础性结论。OPRO 不设计基于梯度或组合优化的算法，而是简单地向 LLM 呈现解决方案--得分对的历史记录，要求其提出更高得分的解决方案。
 
-\paragraph{Algorithmic Framework.}
-Given an objective function $f$ and a solution--score history $\mathcal{H}=\{(s_i, f(s_i))\}_{i=1}^{K}$, OPRO constructs a \textbf{meta-prompt} $\mathcal{M}$ that formats the pairs in ascending score order with the best solution appearing last:
+\paragraph{算法框架。}
+给定目标函数 $f$ 和解决方案--得分历史 $\mathcal{H}=\{(s_i, f(s_i))\}_{i=1}^{K}$，OPRO 构建一个\textbf{元提示} $\mathcal{M}$，将得分对按升序排列，最优解决方案出现在最后：
 \begin{equation}
 \mathcal{M} = \text{Format}\left(\mathcal{H}, \text{task\_description}\right)
 \end{equation}
-The optimizer LLM generates $m$ candidate solutions at temperature 1.0 (encouraging diversity), each is evaluated by a zero-temperature scorer LLM for deterministic scoring, and the history is updated via top-$K$ selection:
+优化器 LLM 在温度 1.0 下生成 $m$ 个候选解决方案（鼓励多样性），每个候选由零温度评分器 LLM 评估以获得确定性评分，历史通过 top-$K$ 选择更新：
 \begin{equation}
 \mathcal{H} \leftarrow \text{TopK}\left(\mathcal{H} \cup \{(s'_j, f(s'_j))\}_{j=1}^{m}, K\right), \quad K=20, \; m=8
 \end{equation}
-This process repeats for $T=200$ iterations, yielding up to 1,600 candidate solutions explored over a single optimization run.
+此过程重复 $T=200$ 次迭代，单次优化运行中最多探索 1,600 个候选解决方案。
 
-\paragraph{Meta-Prompt Design.}
-The meta-prompt $\mathcal{M}$ serves as the sole interface between the optimizer and the optimization history. Its design reflects three principles: (1) \textbf{monotonic ordering}: solutions are presented in ascending score order, enabling the LLM to perceive the quality gradient; (2) \textbf{conciseness}: only the top-$K=20$ solutions are retained to avoid context window saturation; (3) \textbf{deduplication}: MD5 hashing of instruction text prevents redundant entries from cluttering the history. The meta-prompt also includes a task description header that specifies the optimization objective, input format, and output constraints. Instructions exceeding 500 characters are filtered, as longer instructions tend to introduce noise that degrades the optimizer's signal-to-noise ratio.
+\paragraph{元提示设计。}
+元提示 $\mathcal{M}$ 是优化器与优化历史之间的唯一接口。其设计遵循三个原则：(1) \textbf{单调排序}：解决方案按得分升序呈现，使 LLM 能够感知质量梯度；(2) \textbf{简洁性}：仅保留 top-$K=20$ 的解决方案以避免上下文窗口饱和；(3) \textbf{去重}：指令文本的 MD5 哈希防止冗余条目堆积在历史中。元提示还包含指定优化目标、输入格式和输出约束的任务描述头部。超过 500 个字符的指令会被过滤，因为较长的指令往往会引入噪声，降低优化器的信噪比。
 
-\paragraph{Key Design Decisions.}
-Several engineering choices prove critical to OPRO's success. First, \textbf{score bucketization}: continuous scores are discretized into 100 buckets, enabling the LLM to perceive score differences more clearly in the meta-prompt. The bucketization scheme maps raw accuracy scores (0--100\%) to integer bucket indices, with ties broken by average confidence. This discretization is particularly important for tasks with small score differences near the optimum, where the LLM might otherwise fail to distinguish marginal improvements. Second, \textbf{error-driven few-shot selection}: the system tracks frequently misclassified examples and uses them as few-shot context, focusing optimization on the most informative instances. Two strategies are supported: \textit{accumulative\_most\_frequent} (aggregating errors across all steps) and \textit{current\_most\_frequent} (using only the latest step's errors). Third, \textbf{multi-position instruction placement}: four possible positions for the instruction within the prompt (before question, at question beginning, at question end, at answer beginning) are evaluated, as the optimal position varies by task. The position is treated as an additional optimization variable, effectively multiplying the search space.
+\paragraph{关键设计决策。}
+几个工程选择对 OPRO 的成功至关重要。首先，\textbf{分数分桶化}：连续分数被离散化为 100 个桶，使 LLM 在元提示中更清晰地感知分数差异。分桶方案将原始准确率分数（0--100\%）映射到整数桶索引，平局通过平均置信度打破。这种离散化对于接近最优时分数差异较小的任务特别重要，否则 LLM 可能无法区分边际改进。其次，\textbf{错误驱动的少样本选择}：系统跟踪频繁误分类的样本并将其用作少样本上下文，将优化集中在信息量最大的实例上。支持两种策略：\textit{accumulative\_most\_frequent}（聚合所有步骤的错误）和 \textit{current\_most\_frequent}（仅使用最新步骤的错误）。第三，\textbf{多位置指令放置}：评估指令在提示中的四个可能位置（问题前、问题开头、问题末尾、答案开头），因为最优位置因任务而异。位置被视为额外的优化变量，有效地扩展了搜索空间。
 
-\paragraph{Key Results and Impact.}
-OPRO's most celebrated discovery is the instruction ``\textit{Take a deep breath and work on this problem step by step},'' which achieves \textbf{80\% accuracy on GSM8K} when used with PaLM 2, compared to 34\% with a naive baseline prompt. This single result transformed prompt engineering from a manual art into an automated optimization problem. OPRO also demonstrates generalization beyond NLP: on linear regression optimization, it discovers near-optimal step sizes; on small-scale traveling salesman problems (TSP), it finds reasonable tour orderings, demonstrating the paradigm's breadth beyond language tasks.
+\paragraph{关键结果与影响。}
+OPRO 最著名的发现是指令 ``\textit{深呼吸并逐步解决这个问题}''，与 PaLM 2 配合使用时在 GSM8K 上达到\textbf{80\% 的准确率}，而朴素基线提示词仅为 34\%。这一结果将提示词工程从手工艺术转变为自动化优化问题。OPRO 还展示了超越 NLP 的泛化能力：在线性回归优化中，它发现接近最优的步长；在小规模旅行商问题（TSP）中，它找到合理的路径排序，证明了该范式在语言任务之外的广度。
 
-\paragraph{Experimental Results Across Tasks.}
-Beyond GSM8K, OPRO is evaluated on a comprehensive suite of benchmarks including BBH (27 subtasks covering logical deduction, navigation, and object tracking), MMLU (57 subtasks spanning STEM, humanities, and social sciences), AQuA (algebraic reasoning), and MultiArith (multi-step arithmetic). On BBH, the optimized instructions improve average accuracy by 5--12 percentage points over human-crafted baselines, with the largest gains on logical reasoning subtasks where chain-of-thought prompting proves most beneficial. On MMLU, improvements are more modest (2--5 points), reflecting the broader knowledge requirements that prompt optimization alone cannot address.
+\paragraph{跨任务实验结果。}
+除 GSM8K 外，OPRO 还在一系列综合基准上进行了评估，包括 BBH（涵盖逻辑推理、导航和目标跟踪的 27 个子任务）、MMLU（覆盖 STEM、人文学科和社会科学的 57 个子任务）、AQuA（代数推理）和 MultiArith（多步算术）。在 BBH 上，优化后的指令将平均准确率提高了 5--12 个百分点，其中在逻辑推理子任务上增益最大，思维链提示词在这些任务上最为有效。在 MMLU 上，改进较为温和（2--5 个点），反映了更广泛的知识需求，仅靠提示词优化无法解决。
 
-\paragraph{Limitations and Scaling Analysis.}
-The computational cost of OPRO is $T \times m \times |\mathcal{D}_{\text{train}}|$ LLM inferences per optimization run---hundreds of thousands of calls for a task like GSM8K with its 7,473 training examples. At \$0.01--0.03 per 1K tokens (PaLM 2 pricing), a single optimization run costs \$50--200, making OPRO expensive for production use. The quality of discovered prompts scales with the optimizer LLM's capability but plateaus: PaLM 2-L (the largest model tested) outperforms PaLM 2-S and PaLM 2-M, but the gap narrows for well-structured tasks. A fundamental limitation is that OPRO searches in discrete text space without gradient information, making it less sample-efficient than gradient-based methods for continuous optimization. However, this very property enables it to optimize over discrete objects (prompts, strategies) where gradients are unavailable. The approach also lacks a principled stopping criterion: it is unclear whether 200 iterations are necessary or whether most gains are achieved earlier.
+\paragraph{局限性与扩展分析。}
+OPRO 的计算开销为每次优化运行 $T \times m \times |\mathcal{D}_{\text{train}}|$ 次 LLM 推理——对于 GSM8K 这样拥有 7,473 个训练样本的任务，需要数十万次调用。按每 1K 词元 \$0.01--0.03（PaLM 2 定价）计算，单次优化运行成本为 \$50--200，使 OPRO 在生产环境中使用成本高昂。所发现提示词的质量随优化器 LLM 能力的提升而提高，但会达到平台期：PaLM 2-L（测试的最大模型）优于 PaLM 2-S 和 PaLM 2-M，但在结构良好的任务上差距缩小。一个根本性局限是 OPRO 在离散文本空间中搜索，缺乏梯度信息，使其在连续优化中不如基于梯度的方法高效。然而，正是这一特性使其能够优化梯度不可用的离散对象（提示词、策略）。该方法还缺乏原则性的停止准则：不清楚 200 次迭代是否必要，还是大部分增益在更早期就已实现。
 
-\paragraph{Transition to Evolutionary Prompt Optimization.}
-OPRO demonstrates that LLMs can optimize over text, but it uses a relatively simple hill-climbing strategy: propose candidates, score them, keep the best. A natural question is whether more sophisticated search strategies---borrowed from evolutionary computation---can improve upon this. EvoPrompt, discussed next, provides an affirmative answer by instantiating genetic algorithms and differential evolution with LLM operators.
-
-
-\subsubsection{EvoPrompt: Evolutionary Prompt Optimization}
-
-EvoPrompt~\citep{guo2023evoprompt} (ICLR 2024) frames prompt optimization as evolutionary computation, instantiating two classical evolutionary algorithms---Genetic Algorithm (GA) and Differential Evolution (DE)---with LLMs serving as crossover and mutation operators.
-
-\paragraph{GA Instantiation.}
-In the GA variant, EvoPrompt maintains a population of $N$ prompts. At each generation: (1) \textbf{Selection}: pairs of parent prompts are selected via tournament selection (supporting roulette wheel, random, and tournament strategies); (2) \textbf{Crossover}: an LLM receives both parent prompts and generates a child that combines their strengths, guided by a structured crossover template; (3) \textbf{Mutation}: an LLM receives a single parent and generates an improved variant, guided by a mutation template; (4) \textbf{Replacement}: elitist selection retains the top-$N$ prompts from the combined parent--offspring pool.
-
-\paragraph{DE Instantiation.}
-In the DE variant, for each prompt $p_i$ in the population, a \emph{donor} vector $v_i$ is constructed from three other prompts via LLM-guided recombination. A trial prompt $u_i$ is generated by crossing $p_i$ with $v_i$ using the LLM. Greedy replacement is employed: $u_i$ replaces $p_i$ only if $f(u_i) > f(p_i)$. Three DE template variants (v1/v2/v3) adapt the recombination strategy to different search characteristics.
-
-\paragraph{Dual-Model Architecture.}
-A key architectural insight is the separation of the \textbf{evolution model} (the LLM performing crossover/mutation, recommended to be GPT-4 class) from the \textbf{task model} (the LLM executing the prompt on the target task, which can be any model). This separation allows optimization of prompts for smaller, cheaper models using a more capable evolution model, reducing the cost per evaluation while maintaining mutation quality.
-
-\paragraph{Results.}
-EvoPrompt is evaluated on 31 datasets spanning three task categories: text classification (SST-5, TREC,subj), text summarization (CNN/DailyMail, SAMSum), and BIG-Bench Hard (BBH) reasoning tasks. Key findings include: (1) up to \textbf{25\% improvement} over human-designed prompts on BBH tasks; (2) consistent superiority over APE~\citep{zhou2023ape} and LM-BFF~\citep{gao2021lm} across all task types; (3) GA outperforms DE on classification tasks, while DE is competitive on generation tasks, suggesting that the optimal evolutionary strategy is task-dependent.
-
-\paragraph{Methodological Contribution.}
-Beyond specific benchmark improvements, EvoPrompt's primary contribution is methodological: it demonstrates that LLMs can serve as \emph{intelligent crossover and mutation operators} in text space, producing semantically coherent offspring that combine parental strengths---an operation impossible with traditional string-level crossover. The crossover template instructs the LLM to ``analyze both prompts, identify their respective strengths, and create a new prompt that combines the best elements of both,'' while the mutation template asks the LLM to ``improve the following prompt while maintaining its core intent.'' This LLM+EC (Evolutionary Computation) paradigm establishes a template that subsequent systems extend to code, algorithms, and agent architectures. The key insight is that LLMs can perform \emph{semantic} operations on discrete objects that were previously only amenable to syntactic manipulation, opening a vast new design space for evolutionary computation.
-
-\paragraph{Transition to Code Evolution.}
-EvoPrompt's insight---LLMs as intelligent evolutionary operators in language space---generalizes naturally to code space, where formal syntax and semantics enable more powerful operations. Code is a particularly attractive evolution target because: (1) it has well-defined syntax that LLMs have learned to respect; (2) it can be automatically evaluated via execution; (3) improvements in code directly translate to algorithmic improvements. The next section examines systems that make this transition.
+\paragraph{向进化式提示词优化的过渡。}
+OPRO 表明 LLM 可以在文本空间中进行优化，但其采用的仍是相对简单的爬山策略：提出候选、评分、保留最优。一个自然的问题是，借鉴进化计算的更复杂搜索策略能否进一步提升效果。接下来的 EvoPrompt 对此给出了肯定回答，通过将遗传算法和差分进化中的算子替换为 LLM 来实现。
 
 
-\subsection{LLM as Evolutionary Operator: Code and Algorithm Discovery}
+\subsubsection{EvoPrompt：基于进化的提示词优化}
+
+EvoPrompt~\citep{guo2023evoprompt}（ICLR 2024）将提示词优化框架化为进化计算，用 LLM 充当交叉和变异算子来实例化两种经典进化算法——遗传算法（GA）和差分进化（DE）。
+
+\paragraph{GA 实例化。}
+在 GA 变体中，EvoPrompt 维护一个包含 $N$ 个提示词的种群。每一代：(1) \textbf{选择}：通过锦标赛选择选取父代提示词对（支持轮盘赌、随机和锦标赛策略）；(2) \textbf{交叉}：LLM 接收两个父代提示词，在结构化交叉模板的指导下生成结合两者优势的子代；(3) \textbf{变异}：LLM 接收单个父代，在变异模板的指导下生成改进变体；(4) \textbf{替换}：精英选择从父代-子代合并池中保留前 $N$ 个提示词。
+
+\paragraph{DE 实例化。}
+在 DE 变体中，对于种群中的每个提示词 $p_i$，通过 LLM 引导的重组从另外三个提示词构建\emph{捐赠者}向量 $v_i$。使用 LLM 将 $p_i$ 与 $v_i$ 交叉生成试验提示词 $u_i$。采用贪心替换：仅当 $f(u_i) > f(p_i)$ 时，$u_i$ 才替换 $p_i$。三种 DE 模板变体（v1/v2/v3）适应不同搜索特征的重组策略。
+
+\paragraph{双模型架构。}
+一个关键的架构洞见是将\textbf{进化模型}（执行交叉/变异的 LLM，建议使用 GPT-4 级别）与\textbf{任务模型}（在目标任务上执行提示词的 LLM，可以是任何模型）分离。这种分离允许使用更强的进化模型为更小、更便宜的模型优化提示词，在保持变异质量的同时降低每次评估的成本。
+
+\paragraph{实验结果。}
+EvoPrompt 在涵盖三个任务类别的 31 个数据集上进行了评估：文本分类（SST-5、TREC、subj）、文本摘要（CNN/DailyMail、SAMSum）和 BIG-Bench Hard（BBH）推理任务。主要发现包括：(1) 在 BBH 任务上相比人工设计的提示词提升高达 \textbf{25\%}；(2) 在所有任务类型上一致优于 APE~\citep{zhou2023ape} 和 LM-BFF~\citep{gao2021lm}；(3) GA 在分类任务上优于 DE，而 DE 在生成任务上具有竞争力，表明最优进化策略依赖于具体任务。
+
+\paragraph{方法论贡献。}
+超越具体的基准改进，EvoPrompt 的主要贡献是方法论层面的：它证明了 LLM 可以作为文本空间中的\emph{智能交叉和变异算子}，生成结合父代优势的语义连贯后代——这是传统字符串级交叉无法实现的操作。交叉模板指示 LLM``分析两个提示词，识别各自的优势，并创建一个结合两者最佳元素的新提示词''，而变异模板则要求 LLM``在保持核心意图的同时改进以下提示词''。这种 LLM+EC（进化计算）范式建立了一个模板，后续系统将其扩展到代码、算法和智能体架构。关键洞见是 LLM 可以对离散对象执行\emph{语义}操作，而这些对象以前只能进行语法层面的操作，从而为进化计算开辟了广阔的新设计空间。
+
+\paragraph{向代码进化的过渡。}
+EvoPrompt 的洞见——LLM 作为语言空间中的智能进化算子——自然地推广到代码空间，其中形式化的语法和语义支持更强大的操作。代码是特别有吸引力的进化目标，因为：(1) 它具有 LLM 已学会遵守的明确定义的语法；(2) 可以通过执行自动评估；(3) 代码改进直接转化为算法改进。下一节考察实现这一转变的系统。
+
+
+\subsection{LLM 作为进化算子：代码与算法发现}
 \label{sec:ch4-evo-operator}
 
-Moving beyond text optimization, a second class of systems uses LLMs to evolve \emph{code}---programs, algorithms, and heuristics. These systems operate in a richer space where candidates are executable programs rather than natural language strings, enabling automated evaluation through execution and formal verification.
+超越文本优化，第二类系统利用 LLM 进化\emph{代码}——包括程序、算法和启发式方法。这些系统在更丰富的搜索空间中运行，候选对象是可执行程序而非自然语言字符串，从而支持通过执行和形式化验证进行自动评估。
 
-\subsubsection{FunSearch: Mathematical Discovery via Program Search}
+\subsubsection{FunSearch：通过程序搜索实现数学发现}
 
-FunSearch~\citep{romera2024funsearch} (Google DeepMind, \textit{Nature} 2023) represents a landmark achievement: the first demonstration that LLMs can make \emph{new mathematical discoveries} through evolutionary program search. Rather than searching for solutions directly, FunSearch searches the space of \emph{programs that generate solutions}---a crucial distinction that enables generalization beyond individual problem instances.
+FunSearch~\citep{romera2024funsearch}（Google DeepMind，\textit{Nature} 2023）代表了一项里程碑式成就：首次证明 LLM 可以通过进化式程序搜索做出\emph{新的数学发现}。FunSearch 不直接搜索解，而是搜索\emph{生成解的程序}空间——这一关键区别使其能够泛化到个别问题实例之外。
 
-\paragraph{System Architecture.}
-FunSearch comprises four parallel components operating asynchronously:
+\paragraph{系统架构。}
+FunSearch 由四个并行运行的异步组件组成：
 \begin{enumerate}
-    \item \textbf{ProgramsDatabase}: Maintains the evolving population using a hierarchical island model (Database $\rightarrow$ Island $\rightarrow$ Cluster $\rightarrow$ Program). The default configuration uses 10 independent islands, each containing multiple clusters of functionally similar programs. The total number of programs in the database can grow to thousands over a multi-day run, requiring efficient indexing and retrieval mechanisms.
-    \item \textbf{Sampler}: Selects parent programs from the database and constructs evolutionary prompts by chaining program versions. The sampler biases selection toward high-scoring clusters within each island while maintaining exploration through the temperature parameter $\tau$.
-    \item \textbf{LLM}: Generates candidate programs from prompts, producing 4 samples (\texttt{samples\_per\_prompt}) per prompt call. The LLM sees a chain of 2 parent programs (\texttt{functions\_per\_prompt}) with progressive docstrings indicating the improvement trajectory.
-    \item \textbf{Evaluator}: Executes generated programs in a sandboxed environment and scores their outputs. Programs must complete within a 30-second timeout and pass three-stage safety filtering (execution success, no ancestor calls, correct return type).
+    \item \textbf{ProgramsDatabase}：使用分层岛屿模型（Database $\rightarrow$ Island $\rightarrow$ Cluster $\rightarrow$ Program）维护进化的种群。默认配置使用 10 个独立岛屿，每个岛屿包含多个功能相似程序的集群。在多日运行中，数据库中的程序总数可增长到数千个，需要高效的索引和检索机制。
+    \item \textbf{Sampler}：从数据库中选择父代程序，通过链接程序版本构建进化提示词。采样器偏向每个岛屿中高得分集群的选择，同时通过温度参数 $\tau$ 维持探索。
+    \item \textbf{LLM}：从提示词生成候选程序，每次提示词调用产生 4 个样本（\texttt{samples\_per\_prompt}）。LLM 看到由 2 个父代程序（\texttt{functions\_per\_prompt}）组成的链，附带渐进式文档字符串指示改进轨迹。
+    \item \textbf{Evaluator}：在沙盒环境中执行生成的程序并对其输出评分。程序必须在 30 秒超时内完成并通过三阶段安全过滤（执行成功、无祖先调用、正确返回类型）。
 \end{enumerate}
-The default configuration allocates 15 samplers and 140 evaluators (a 1:9 ratio), indicating that evaluation---not generation---is the primary computational bottleneck. This ratio is motivated by the asymmetry between generation cost (a single LLM API call producing 4 candidates in $\sim$5 seconds) and evaluation cost (executing the candidate across all test instances, which can take 30 seconds per instance for complex combinatorial problems).
+默认配置分配 15 个采样器和 140 个评估器（1:9 的比例），表明评估——而非生成——是主要的计算瓶颈。这一比例源于生成成本（单次 LLM API 调用在约 5 秒内产生 4 个候选）与评估成本（在所有测试实例上执行候选，对于复杂组合问题每个实例可能需要 30 秒）之间的不对称性。
 
-\paragraph{Island Model with Signature Clustering.}
-FunSearch's population management uses a three-layer structure. At the top level, 10 independent islands evolve in parallel. Within each island, programs are grouped into \textbf{clusters} by signature: a tuple of per-test-case scores that captures the program's behavioral profile. Selection within an island uses temperature-annealed softmax over cluster scores:
+\paragraph{基于签名聚类的岛屿模型。}
+FunSearch 的种群管理使用三层结构。顶层有 10 个独立岛屿并行进化。每个岛屿内，程序按签名被分组为\textbf{集群}：签名的每个测试用例得分构成的元组，捕获程序的行为特征。岛屿内的选择使用温度退火的 softmax 函数计算集群得分：
 \begin{equation}
 P(c) = \frac{\exp(\text{score}(c)/\tau)}{\sum_{c'}\exp(\text{score}(c')/\tau)}, \quad \tau_0 = 0.1
 \end{equation}
-This low initial temperature strongly biases selection toward high-scoring clusters. Within a cluster, shorter programs are preferred (Occam's razor). Periodically (every 14,400 seconds), the bottom 50\% of islands are \textbf{reset} and re-seeded with the best programs from the top-performing island, implementing a migration mechanism that balances exploration with exploitation.
+这一较低初始温度强烈偏向选择高得分集群。集群内，较短的程序更受偏好（奥卡姆剃刀原则）。定期（每 14,400 秒），底部 50\% 的岛屿被\textbf{重置}并用表现最佳岛屿的最优程序重新播种，实现了平衡探索与利用的迁移机制。
 
-\paragraph{Prompt Engineering.}
-FunSearch constructs evolutionary prompts using \textbf{versioned program chains}: a low-scoring program version (\texttt{v0}) is followed by a medium-scoring improvement (\texttt{v1}) and finally an empty slot (\texttt{v2}) for the LLM to complete. Progressive docstrings (``Improved version of\ldots'') provide an evolutionary narrative that helps the LLM understand the improvement trajectory. Three-level safety filtering ensures generated programs: (1) execute successfully within a 30-second timeout; (2) do not call ancestor functions (preventing trivial delegation); (3) return the correct type (integer or float).
+\paragraph{提示词工程。}
+FunSearch 使用\textbf{版本化程序链}构建进化提示词：一个低得分程序版本（\texttt{v0}）后跟一个中等得分的改进版本（\texttt{v1}），最后是供 LLM 完成的空槽位（\texttt{v2}）。渐进式文档字符串（``Improved version of\ldots''）提供了进化叙事，帮助 LLM 理解改进轨迹。三级安全过滤确保生成的程序：(1) 在 30 秒超时内成功执行；(2) 不调用祖先函数（防止简单委托）；(3) 返回正确类型（整数或浮点数）。
 
-\paragraph{Key Discoveries.}
-FunSearch produced two major mathematical results: (1) \textbf{New cap set bounds} for $n \geq 8$ in $\mathbb{F}_3^n$, improving upon constructions that had stood for over 20 years---a result published in \textit{Nature}; (2) \textbf{Improved bin-packing heuristics} that outperform classical First Fit Decreasing (FFD) and Best Fit Decreasing (BFD) algorithms; (3) \textbf{New independent set constructions} for cyclic graphs. These discoveries required multi-day runs with hundreds of thousands of LLM calls, demonstrating that sustained evolutionary search can explore mathematical spaces inaccessible to direct LLM generation.
+\paragraph{主要发现。}
+FunSearch 取得了两项重大数学成果：(1) $\mathbb{F}_3^n$ 中 $n \geq 8$ 的\textbf{新 cap set 界}，改进了保持超过 20 年的构造——该结果发表在 \textit{Nature} 上；(2) \textbf{改进的装箱启发式方法}，优于经典的 First Fit Decreasing（FFD）和 Best Fit Decreasing（BFD）算法；(3) 循环图的\textbf{新独立集构造}。这些发现需要多日运行和数十万次 LLM 调用，表明持续的进化搜索能够探索直接 LLM 生成无法触及的数学空间。
 
-\paragraph{Limitations.}
-FunSearch's scope is restricted to single-function optimization: only the target function evolves while the surrounding infrastructure remains fixed. Its discoveries are limited to domains with automated evaluators (mathematical functions, optimization heuristics). The 1:9 sampler-to-evaluator ratio indicates evaluation cost dominates, making FunSearch expensive for problems requiring lengthy execution. The island model requires 9+ hyperparameters (number of islands, cluster temperature, reset period, samples per prompt, etc.), creating a significant configuration burden.
+\paragraph{局限性。}
+FunSearch 的范围仅限于单函数优化：只有目标函数进化，而周围的基础设施保持不变。其发现局限于具有自动评估器的领域（数学函数、优化启发式）。1:9 的采样器与评估器比例表明评估成本占主导地位，使 FunSearch 在需要长时间执行的问题上成本高昂。岛屿模型需要 9 个以上的超参数（岛屿数量、集群温度、重置周期、每次提示词的样本数等），造成了显著的配置负担。
 
 
-\subsubsection{AlphaEvolve: Gemini-Powered Algorithm Discovery}
+\subsubsection{AlphaEvolve：基于 Gemini 的算法发现}
 
-AlphaEvolve~\citep{novikov2025alphaevolve} (Google DeepMind, 2025) extends FunSearch from single-function to \textbf{whole-program optimization} and introduces several architectural innovations that substantially improve search efficiency and result quality.
+AlphaEvolve~\citep{novikov2025alphaevolve}（Google DeepMind，2025）将 FunSearch 从单函数扩展到\textbf{全程序优化}，并引入了多项架构创新，显著提升了搜索效率和结果质量。
 
-\paragraph{Dual-Model Architecture.}
-The key innovation is a \textbf{dual LLM design}: Gemini Flash serves as the \emph{breadth} model, generating many diverse candidate modifications with high throughput and low cost; Gemini Pro serves as the \emph{depth} model, applying focused, targeted improvements to promising candidates. This breadth--depth separation allows AlphaEvolve to both explore widely and refine deeply, a capability that single-model approaches cannot efficiently provide.
+\paragraph{双模型架构。}
+关键创新是\textbf{双 LLM 设计}：Gemini Flash 作为\emph{广度}模型，以高吞吐量和低成本生成多样化的候选修改；Gemini Pro 作为\emph{深度}模型，对有前景的候选应用聚焦的、有针对性的改进。这种广度-深度分离使 AlphaEvolve 既能广泛探索又能深度精炼，这是单模型方法无法高效实现的能力。
 
-\paragraph{MAP-Elites Quality-Diversity Search.}
-AlphaEvolve replaces FunSearch's island model with \textbf{MAP-Elites}, a Quality-Diversity algorithm that maintains an archive of solutions mapped to behavioral descriptors:
+\paragraph{MAP-Elites 质量-多样性搜索。}
+AlphaEvolve 用 \textbf{MAP-Elites} 替换了 FunSearch 的岛屿模型，这是一种质量-多样性算法，维护一个将解映射到行为描述符的存档：
 \begin{equation}
 \text{Archive}[\mathbf{b}(p)] \leftarrow p \quad \text{if } f(p) > f(\text{Archive}[\mathbf{b}(p)])
 \end{equation}
-where $\mathbf{b}(p)$ is a vector of behavioral descriptors specific to the problem domain (e.g., number of multiplications, memory access patterns, computational throughput). This ensures the archive maintains diverse high-performing solutions rather than converging to a single optimum. The adaptive evolution context mechanism learns from search history to guide future mutations, providing a form of meta-learning within the evolutionary loop.
+其中 $\mathbf{b}(p)$ 是特定于问题领域的行为描述符向量（例如，乘法次数、内存访问模式、计算吞吐量）。这确保存档维护多样化高性能解，而非收敛到单一最优点。自适应进化上下文机制从搜索历史中学习以指导未来的变异，在进化循环内提供一种元学习形式。
 
-\paragraph{Results.}
-AlphaEvolve achieves results across multiple domains, each demonstrating different aspects of the system's capabilities:
+\paragraph{实验结果。}
+AlphaEvolve 在多个领域取得了成果，每个领域展示了系统不同方面的能力：
 \begin{itemize}
-    \item \textbf{Matrix multiplication}: Discovered a $4 \times 4$ complex matrix multiplication algorithm using only \textbf{48 scalar multiplications}, improving upon Strassen's 1969 result of 49---the first improvement in 56 years. This result is particularly noteworthy because matrix multiplication is one of the most studied problems in computer science, and the discovery was made by evolving the entire Strassen-like decomposition algorithm rather than manually designing a better decomposition.
-    \item \textbf{Data center scheduling}: Applied to Google's Borg scheduling system, recovering \textbf{0.7\%} of worldwide Google compute---a seemingly small percentage that translates to millions of dollars in annual infrastructure savings when applied at Google's scale of millions of machines.
-    \item \textbf{Kernel optimization}: Achieved \textbf{23\% speedup} in FlashAttention kernel tiling and \textbf{32\% speedup} in attention computation for LLM training. These speedups were discovered by evolving the CUDA kernel code directly, demonstrating AlphaEvolve's ability to operate at the hardware-software interface.
-    \item \textbf{Mathematical problems}: On 50+ open problems in combinatorics, number theory, and analysis, AlphaEvolve re-discovered the state-of-the-art for \textbf{75\%} of problems and found strictly better solutions for \textbf{20\%}. The remaining 5\% either matched or slightly underperformed the known best results, typically for problems requiring very large search spaces or specialized mathematical insight.
-    \item \textbf{Hardware design}: Applied to hardware accelerator design, finding functionally equivalent but simpler implementations that reduce circuit complexity without sacrificing correctness.
+    \item \textbf{矩阵乘法}：发现了一种 $4 \times 4$ 复矩阵乘法算法，仅使用 \textbf{48 次标量乘法}，改进了 Strassen 1969 年的 49 次结果——56 年来的首次改进。这一结果特别值得关注，因为矩阵乘法是计算机科学中研究最充分的问题之一，而该发现是通过进化整个类 Strassen 分解算法而非手动设计更好的分解实现的。
+    \item \textbf{数据中心调度}：应用于 Google 的 Borg 调度系统，回收了全球 Google 计算资源的 \textbf{0.7\%}——看似很小的百分比，但在 Google 数百万台机器的规模下，意味着每年数百万美元的基础设施节省。
+    \item \textbf{内核优化}：在 FlashAttention 内核分块中实现了 \textbf{23\% 加速}，在 LLM 训练的注意力计算中实现了 \textbf{32\% 加速}。这些加速是通过直接进化 CUDA 内核代码发现的，展示了 AlphaEvolve 在硬件-软件接口层面的操作能力。
+    \item \textbf{数学问题}：在组合数学、数论和分析学的 50 多个开放问题上，AlphaEvolve 重新发现了 \textbf{75\%} 问题的当前最优结果，并为 \textbf{20\%} 的问题找到了严格更优的解。剩余 5\% 要么匹配要么略低于已知最优结果，通常是需要极大搜索空间或专门数学洞察的问题。
+    \item \textbf{硬件设计}：应用于硬件加速器设计，找到功能等效但更简单的实现，在不牺牲正确性的前提下降低电路复杂度。
 \end{itemize}
 
-\paragraph{Comparison with FunSearch.}
-AlphaEvolve extends FunSearch in three critical dimensions: (1) scope: single-function $\rightarrow$ whole-program evolution, enabling optimization of complex multi-component systems; (2) LLM strategy: single model $\rightarrow$ dual-model breadth--depth separation; (3) adaptation: static prompts $\rightarrow$ adaptive context that learns from search history. However, AlphaEvolve is not publicly available (academic early access only), requires access to multiple LLM tiers, and demands sophisticated evaluation infrastructure.
+\paragraph{与 FunSearch 的比较。}
+AlphaEvolve 在三个关键维度上扩展了 FunSearch：(1) 范围：单函数 $\rightarrow$ 全程序进化，能够优化复杂的多组件系统；(2) LLM 策略：单模型 $\rightarrow$ 双模型广度-深度分离；(3) 适应性：静态提示词 $\rightarrow$ 从搜索历史中学习的自适应上下文。然而，AlphaEvolve 尚未公开发布（仅限学术早期访问），需要访问多个 LLM 层级，并需要复杂的评估基础设施。
 
 
-\subsubsection{ReEvo: Reflective Evolutionary Search}
+\subsubsection{ReEvo：反思式进化搜索}
 
-ReEvo~\citep{ye2024reevo} (NeurIPS 2024) introduces a \textbf{dual-layer reflection} mechanism that mimics how human experts iteratively improve algorithms: analyzing current performance, identifying weaknesses, and proposing targeted improvements.
+ReEvo~\citep{ye2024reevo}（NeurIPS 2024）引入了\textbf{双层反思}机制，模仿人类专家迭代改进算法的方式：分析当前性能、识别弱点并提出针对性改进。
 
-\paragraph{Short-Term and Long-Term Reflection.}
-ReEvo's innovation is a two-level reflection architecture:
+\paragraph{短期与长期反思。}
+ReEvo 的创新是双层反思架构：
 \begin{itemize}
-    \item \textbf{Short-term reflection}: After evaluating a candidate heuristic, an LLM analyzes the specific execution trace, identifies which components performed well or poorly, and generates concrete improvement suggestions. This is analogous to a code review focused on a single pull request.
-    \item \textbf{Long-term reflection}: Across iterations, a separate LLM accumulates structural knowledge about the problem domain, successful strategies, and common failure modes. This accumulated wisdom is formulated as:
+    \item \textbf{短期反思}：评估候选启发式方法后，LLM 分析具体的执行轨迹，识别哪些组件表现好或差，并生成具体的改进建议。这类似于针对单个拉取请求的代码审查。
+    \item \textbf{长期反思}：跨迭代地，一个独立的 LLM 积累关于问题领域的结构化知识、成功策略和常见失败模式。这种积累的智慧被表述为：
 \begin{equation}
 \mathcal{R}_{\text{long}}^{(t)} = \text{LLM}\left(\mathcal{R}_{\text{long}}^{(t-1)}, \{\text{results at iteration } t\}\right)
 \end{equation}
-This acts as an evolving domain expert that guides future search.
+这充当一个不断进化的领域专家，指导未来的搜索。
 \end{itemize}
-Ablation studies confirm that both reflection layers are critical: removing either one significantly degrades performance, with long-term reflection being particularly important for sustained improvement across many iterations.
+消融实验证实两个反思层都至关重要：移除任一层都会显著降低性能，其中长期反思对于跨多次迭代的持续改进尤为重要。
 
-\paragraph{Multi-LLM Architecture.}
-A distinctive feature is support for different LLMs per evolutionary operator: a generator LLM proposes candidates, separate reflector LLMs handle short-term and long-term reflection, and dedicated crossover and mutation LLMs handle population operations. This allows users to assign expensive models (e.g., GPT-4) to reflection tasks while using cheaper models for generation, optimizing the cost--quality tradeoff.
+\paragraph{多 LLM 架构。}
+一个显著特征是支持为每个进化算子使用不同的 LLM：生成器 LLM 提出候选，独立的反思器 LLM 处理短期和长期反思，专门的交叉和变异 LLM 处理种群操作。这允许用户将昂贵的模型（如 GPT-4）分配给反思任务，而使用更便宜的模型进行生成，优化成本-质量权衡。
 
-\paragraph{Results.}
-ReEvo demonstrates the concept of \textbf{Language Hyper-Heuristics} (LHHs): LLMs that search over the space of heuristics rather than directly over solutions. On classic combinatorial optimization problems including TSP, CVRP, OP, MKP, BPP, and DPP, ReEvo consistently discovers heuristics that outperform human-designed baselines in both white-box settings (leveraging problem structure) and black-box settings (using only evaluation feedback). The project's motto---``give ReEvo 5 minutes, get a SOTA algorithm''---captures the efficiency of reflective search compared to uninformed evolutionary approaches.
+\paragraph{实验结果。}
+ReEvo 展示了\textbf{语言超启发式}（Language Hyper-Heuristics, LHHs）的概念：LLM 在启发式方法的空间中搜索，而非直接在解空间中搜索。在经典组合优化问题（包括 TSP、CVRP、OP、MKP、BPP 和 DPP）上，ReEvo 一致地发现了优于人工设计基线的启发式方法，无论在白盒设置（利用问题结构）还是黑盒设置（仅使用评估反馈）中。项目的口号——``给 ReEvo 5 分钟，得到一个 SOTA 算法''——捕捉了反思式搜索相比无信息进化方法的高效性。
 
-\paragraph{Problem Adaptation Interface.}
-A notable design feature is ReEvo's standardized problem adaptation interface, which lowers the barrier to applying the framework to new domains. Each problem requires three components: (1) a \textbf{configuration file} in Hydra/YAML format specifying the problem parameters and evaluation budget; (2) an \textbf{evaluation pipeline} (\texttt{eval.py}) that takes a candidate heuristic function, executes it on problem instances, and returns a quality score; and (3) \textbf{prompt templates} providing the function signature, a seed implementation, and domain-specific knowledge. This three-component interface has been instantiated for over 10 problem domains, demonstrating that the reflective evolution framework generalizes across diverse optimization landscapes.
-
-
-\subsubsection{OpenELM: Open-Source Evolution via MAP-Elites}
-
-OpenELM~\citep{carperai2023openelm} (CarperAI / Stability AI) provides the first open-source implementation combining MAP-Elites quality-diversity search with LLM-driven mutation and crossover. Its architecture is organized in four layers: (1) \textbf{ELM} (Evolution through Large Models) provides the base LLM integration; (2) \textbf{MAP-Elites} implements quality-diversity archiving with three variants (standard MAP-Elites, CVT-MAP-Elites using centroid voronoi tessellation, and Deep Grid MAP-Elites); (3) \textbf{Environment} defines the problem-specific evaluation pipeline; (4) \textbf{MutationModel} manages LLM-driven code modification.
-
-OpenELM ships with five pre-built environments: Sodarace (2D physics simulation creatures), image evolution (generating images matching target distributions), programming puzzles, prompt evolution, and poetry generation via QDAIF (Quality-Diversity for Artificial Intelligence Fiction). Code execution is sandboxed using gVisor, preventing malicious or buggy programs from affecting the host system. While OpenELM's benchmark coverage is limited compared to FunSearch or AlphaEvolve, its modular design makes it straightforward to add new environments and evaluation functions.
-
-\paragraph{MAP-Elites Variants.}
-OpenELM implements three variants of the MAP-Elites algorithm, each suited to different exploration characteristics. \textbf{Standard MAP-Elites} discretizes the behavioral feature space into a fixed grid, where each cell contains the highest-performing solution with those behavioral features. \textbf{CVT-MAP-Elites} (Centroidal Voronoi Tessellation) replaces the fixed grid with a Voronoi tessellation whose centroids are computed via k-means clustering, providing more uniform coverage of the feature space. \textbf{Deep Grid MAP-Elites} uses learned feature representations, enabling the algorithm to operate in high-dimensional behavioral spaces where manual feature engineering is impractical. The choice of MAP-Elites variant significantly affects the diversity and quality of discovered solutions, with CVT-MAP-Elites generally providing the best balance between coverage and resolution.
+\paragraph{问题适配接口。}
+一个值得注意的设计特征是 ReEvo 的标准化问题适配接口，降低了将框架应用于新领域的门槛。每个问题需要三个组件：(1) Hydra/YAML 格式的\textbf{配置文件}，指定问题参数和评估预算；(2) \textbf{评估流水线}（\texttt{eval.py}），接收候选启发式函数，在问题实例上执行并返回质量得分；(3) \textbf{提示词模板}，提供函数签名、种子实现和领域特定知识。这一三组件接口已在 10 多个问题领域上实例化，证明反思式进化框架可以泛化到多样化的优化场景。
 
 
-\subsection{Agent-Level Self-Evolution}
-\label{sec:ch4-agent-evo}
+\subsubsection{OpenELM：基于 MAP-Elites 的开源进化}
 
-The most ambitious class of evolutionary systems targets \emph{agent architectures} themselves: the code, configuration, and control flow that define how an AI agent operates. Unlike code evolution systems that optimize a single function or program, agent-level systems modify the very machinery that generates behavior, creating a form of recursive self-improvement.
+OpenELM~\citep{carperai2023openelm}（CarperAI / Stability AI）提供了首个将 MAP-Elites 质量-多样性搜索与 LLM 驱动的变异和交叉相结合的开源实现。其架构分为四层：(1) \textbf{ELM}（Evolution through Large Models）提供基础 LLM 集成；(2) \textbf{MAP-Elites} 实现质量-多样性存档，支持三种变体（标准 MAP-Elites、使用质心 Voronoi 镶嵌的 CVT-MAP-Elites 和 Deep Grid MAP-Elites）；(3) \textbf{Environment} 定义问题特定的评估流水线；(4) \textbf{MutationModel} 管理 LLM 驱动的代码修改。
 
-\subsubsection{DGM: Darwin G\"{o}del Machine}
+OpenELM 附带五个预构建环境：Sodarace（2D 物理模拟生物）、图像进化（生成匹配目标分布的图像）、编程谜题、提示词进化，以及通过 QDAIF（Quality-Diversity for Artificial Intelligence Fiction）的诗歌生成。代码执行使用 gVisor 进行沙盒隔离，防止恶意或有缺陷的程序影响宿主系统。虽然 OpenELM 的基准覆盖范围相比 FunSearch 或 AlphaEvolve 较为有限，但其模块化设计使添加新环境和评估函数变得简单。
 
-DGM~\citep{zhang2025dgm} (UBC / Vector Institute, Jeff Clune's lab) combines Darwinian evolution with Schmidhuber's theoretical G\"{o}del machine framework~\citep{schmidhuber2003godel}, replacing formal mathematical proofs of self-improvement with empirical evaluation.
+\paragraph{MAP-Elites 变体。}
+OpenELM 实现了三种 MAP-Elites 算法变体，每种适合不同的探索特征。\textbf{标准 MAP-Elites} 将行为特征空间离散化为固定网格，每个单元格包含具有该行为特征的最优解。\textbf{CVT-MAP-Elites}（质心 Voronoi 镶嵌）用 Voronoi 镶嵌替换固定网格，其质心通过 k-means 聚类计算，提供更均匀的特征空间覆盖。\textbf{Deep Grid MAP-Elites} 使用学习的特征表示，使算法能够在手动特征工程不可行的高维行为空间中运行。MAP-Elites 变体的选择显著影响发现解的多样性和质量，CVT-MAP-Elites 通常在覆盖率和分辨率之间提供最佳平衡。
+
+
+\subsection{智能体级自进化}\label{sec:ch4-agent-evo}
+
+最雄心勃勃的进化系统类别的目标是\emph{智能体架构}本身：定义 AI 智能体如何运作的代码、配置和控制流。与优化单个函数或程序的代码进化系统不同，智能体级系统修改生成行为的核心机制，创造了一种递归自我改进的形式。
+
+\subsubsection{DGM：Darwin G\"{o}del Machine}
+
+DGM~\citep{zhang2025dgm}（UBC / Vector Institute，Jeff Clune 实验室）将达尔文进化与 Schmidhuber 的理论 G\"{o}del 机框架~\citep{schmidhuber2003godel} 结合，用经验评估替代自改进的形式化数学证明。
 
 \begin{figure}[htbp]
 \centering
@@ -215,84 +214,84 @@ DGM~\citep{zhang2025dgm} (UBC / Vector Institute, Jeff Clune's lab) combines Dar
 \draw[arr=red!60] (filter) -- node[above, lbl]{archive update} (meta);
 \draw[arr=purple!60] (meta) -- node[left, lbl]{strategy feedback} (archive);
 \end{tikzpicture}
-\caption{DGM self-evolution loop. From a monotonically growing archive, parents are sampled with quality--diversity pressure, modified via LLM code editing, evaluated in sandboxed benchmarks, and filtered before archiving. Experience distillation feeds strategy improvements back to the sampling mechanism.}
+\caption{DGM 自进化循环。从单调增长的存档中，父代在质量-多样性压力下被采样，通过 LLM 代码编辑进行修改，在沙盒基准中评估，并在归档前过滤。经验蒸馏将策略改进反馈给采样机制。}
 \label{fig:ch4-dgm-loop}
 \end{figure}
 
-\paragraph{Open-Ended Archive.}
-Unlike traditional evolutionary algorithms that maintain a fixed-size population, DGM maintains a \textbf{monotonically growing archive} $\mathcal{A}$ that preserves all agents, including those that score poorly on current benchmarks. This design is motivated by the principle of \emph{stepping stones}: seemingly suboptimal agents may contain innovations that become valuable in combination with future modifications. The sampling probability balances quality with diversity:
+\paragraph{开放式存档。}
+与维护固定大小种群的传统进化算法不同，DGM 维护一个\textbf{单调增长的存档} $\mathcal{A}$，保留所有智能体，包括在当前基准上得分较低的智能体。这一设计基于\emph{踏脚石}原则：看似次优的智能体可能包含在与未来修改组合时变得有价值的创新。采样概率平衡质量与多样性：
 \begin{equation}
 P(a_i) \propto f(a_i) \times \exp\left(-\beta \cdot \text{similarity}(a_i, \mathcal{A})\right)
 \end{equation}
-where $f(a_i)$ is the benchmark score and $\beta$ controls the diversity pressure. Child agents are generated by presenting the parent's full source code to an LLM along with edit instructions and performance history. A child is added to the archive only if it improves on at least one benchmark metric, ensuring monotonic progress on the evaluation criteria.
+其中 $f(a_i)$ 是基准得分，$\beta$ 控制多样性压力。子代智能体通过向 LLM 展示父代的完整源代码以及编辑指令和性能历史来生成。只有当子代在至少一个基准指标上有所改进时才会被添加到存档中，确保评估标准上的单调进展。
 
-\paragraph{Results.}
-DGM achieves substantial improvements on two coding benchmarks:
+\paragraph{实验结果。}
+DGM 在两个编码基准上取得了显著改进：
 \begin{itemize}
-    \item \textbf{SWE-bench}: 20.0\% $\rightarrow$ \textbf{50.0\%} (verified, +150\% relative improvement), representing one of the largest single-system improvements on this benchmark. The improvement is achieved through $\sim$30 evolutionary iterations, with each iteration generating 1--3 agent variants. The initial agent (20\%) is a carefully engineered baseline using GPT-4, making the 150\% improvement even more notable---it suggests that evolutionary search discovers strategies beyond what human prompt engineering can achieve.
-    \item \textbf{Polyglot} (multi-language coding): 14.2\% $\rightarrow$ \textbf{30.7\%} (+116\% relative improvement). The Polyglot benchmark requires generating correct code across multiple programming languages (Python, JavaScript, C++, Go, Rust), testing the agent's ability to handle diverse syntax and semantics.
+    \item \textbf{SWE-bench}：20.0\% $\rightarrow$ \textbf{50.0\%}（已验证，+150\% 相对改进），是该基准上最大的单系统改进之一。改进通过约 30 次进化迭代实现，每次迭代生成 1--3 个智能体变体。初始智能体（20\%）是使用 GPT-4 的精心工程化基线，使得 150\% 的改进更加显著——这表明进化搜索发现了超越人工提示词工程所能实现的策略。
+    \item \textbf{Polyglot}（多语言编码）：14.2\% $\rightarrow$ \textbf{30.7\%}（+116\% 相对改进）。Polyglot 基准要求跨多种编程语言（Python、JavaScript、C++、Go、Rust）生成正确的代码，测试智能体处理多样化语法和语义的能力。
 \end{itemize}
-Importantly, DGM discovers novel problem-solving strategies not seen in its training data, and cross-benchmark transfer is confirmed: agents improved on SWE-bench also show gains on Polyglot, suggesting the evolution discovers general coding strategies rather than benchmark-specific tricks. The archive grows to contain dozens of agent variants spanning a wide range of architectural approaches, from simple single-pass code generation to complex multi-agent systems with verification loops.
+重要的是，DGM 发现了其训练数据中未见的新颖问题解决策略，并确认了跨基准迁移：在 SWE-bench 上改进的智能体在 Polyglot 上也显示出增益，表明进化发现了通用的编码策略而非特定于基准的技巧。存档增长到包含数十个智能体变体，涵盖从简单的单次代码生成到带有验证循环的复杂多智能体系统的广泛架构方法。
 
-\paragraph{Safety Considerations.}
-DGM's open-ended self-modification capability raises significant safety concerns that merit detailed discussion. Because the LLM generates arbitrary code modifications without formal constraints, the system could theoretically produce agents with unintended behaviors. Three categories of risk are particularly concerning:
+\paragraph{安全性考虑。}
+DGM 的开放式自我修改能力引发了值得详细讨论的重要安全问题。由于 LLM 在没有形式化约束的情况下生成任意代码修改，系统理论上可能产生具有意外行为的智能体。三类风险特别值得关注：
 
 \begin{enumerate}
-    \item \textbf{Benchmark overfitting}: The evolved agent may discover strategies that exploit specific properties of the evaluation benchmarks rather than developing genuinely useful capabilities. For example, an SWE-bench agent might learn to generate patches that pass the specific test cases without correctly fixing the underlying issue. DGM mitigates this through multi-benchmark evaluation (agents must improve on at least one benchmark without degrading on others), but the risk remains.
+    \item \textbf{基准过拟合}：进化的智能体可能发现利用评估基准特定性质的策略，而非发展真正有用的能力。例如，SWE-bench 智能体可能学会生成通过特定测试用例的补丁，而未正确修复潜在问题。DGM 通过多基准评估来缓解这一问题（智能体必须至少在一个基准上改进而不在其他基准上退化），但风险仍然存在。
 
-    \item \textbf{Resource escalation}: Self-modifying agents could potentially modify themselves to consume more computational resources (e.g., adding parallel processing, increasing context length, spawning sub-agents), leading to unbounded resource consumption. DGM's sandboxed evaluation provides time and memory limits, but these limits may need to be carefully tuned to prevent both waste and false negatives (killing agents that legitimately need more resources for complex tasks).
+    \item \textbf{资源升级}：自我修改的智能体可能修改自身以消耗更多计算资源（例如，增加并行处理、增加上下文长度、生成子智能体），导致无限制的资源消耗。DGM 的沙盒评估提供了时间和内存限制，但这些限制可能需要仔细调整，以防止浪费和误判（终止那些复杂任务中确实需要更多资源的智能体）。
 
-    \item \textbf{Goal misalignment}: The agent's evolved objectives may diverge from the user's actual goals if the evaluation benchmarks do not perfectly capture the intended behavior. This is particularly concerning for agent-level evolution, where the system modifies its own decision-making machinery. Formal verification of self-modifying code, constrained generation (limiting the types of modifications the LLM can propose), and alignment-aware evaluation (explicitly checking for safety properties alongside performance) are identified as critical areas for future work before such systems can be deployed in production.
+    \item \textbf{目标不一致}：如果评估基准不能完美捕获预期行为，智能体的进化目标可能与用户的实际目标偏离。这对于智能体级别的进化特别令人担忧，因为系统修改的是自身的决策机制。自我修改代码的形式化验证、约束生成（限制 LLM 可以提出的修改类型）和对齐感知评估（在检查性能的同时显式检查安全属性）被确定为在此类系统投入生产之前的关键未来工作方向。
 \end{enumerate}
 
 
-\subsubsection{ADAS: Automated Design of Agentic Systems}
+\subsubsection{ADAS：智能体系统的自动化设计}
 
-ADAS~\citep{hu2024adas} (ICLR 2025) takes a complementary approach to agent self-evolution by searching over \textbf{Turing-complete Python code space} for agent architectures. Rather than evolving an existing agent's code (as DGM does), ADAS uses a \textbf{meta-agent} that writes complete agent architectures from scratch.
+ADAS~\citep{hu2024adas}（ICLR 2025）采用了一种互补的智能体自我进化方法，在\textbf{图灵完备的 Python 代码空间}中搜索智能体架构。与 DGM 进化现有智能体的代码不同，ADAS 使用\textbf{元智能体}从零开始编写完整的智能体架构。
 
-\paragraph{Search Space and Algorithm.}
-The search space $S$ is defined as all valid Python programs implementing agent control flow, making it theoretically capable of expressing any computable agent architecture. The meta-agent iteratively: (1) proposes a new agent architecture as Python code; (2) evaluates it on a set of benchmark tasks; (3) receives the evaluation results and proposes an improved architecture. This process continues for a fixed number of iterations (configurable, typically 20--50).
+\paragraph{搜索空间与算法。}
+搜索空间 $S$ 定义为实现智能体控制流的所有有效 Python 程序，使其理论上能够表达任何可计算的智能体架构。元智能体迭代执行：(1) 以 Python 代码提出新的智能体架构；(2) 在一组基准任务上评估；(3) 接收评估结果并提出改进的架构。此过程持续固定次数的迭代（可配置，通常为 20--50 次）。
 
-A key insight is that the search space is \textbf{Turing-complete}: unlike constrained search spaces (e.g., hyperparameter grids, template-based architectures), ADAS can discover arbitrary control flow including loops, conditionals, recursion, and multi-agent coordination patterns. This makes the search space vast but also enables the discovery of genuinely novel architectural patterns that would be inexpressible in more constrained frameworks.
+一个关键洞察是搜索空间是\textbf{图灵完备的}：与受约束的搜索空间（如超参数网格、基于模板的架构）不同，ADAS 可以发现任意的控制流，包括循环、条件、递归和多智能体协调模式。这使得搜索空间巨大，但也使发现真正新颖的架构模式成为可能，这些模式在更受限的框架中是无法表达的。
 
-\paragraph{Cross-Domain and Cross-Model Transfer.}
-ADAS's most striking result is its \textbf{transfer capability}. Agents designed on one domain (e.g., ARC pattern recognition) transfer effectively to completely different domains (e.g., GFootball multi-agent strategy). Even more remarkably, architectures discovered using GPT-3.5 as the meta-agent remain effective when evaluated with GPT-4 as the backbone model. This suggests that ADAS learns \emph{general design principles} for agent architectures---such as effective prompt decomposition, error recovery patterns, and tool-use strategies---rather than task-specific overfitting.
+\paragraph{跨领域与跨模型迁移。}
+ADAS 最引人注目的结果是其\textbf{迁移能力}。在一个领域（如 ARC 模式识别）上设计的智能体可以有效地迁移到完全不同的领域（如 GFootball 多智能体策略）。更值得注意的是，使用 GPT-3.5 作为元智能体发现的架构，在用 GPT-4 作为主干模型评估时仍然有效。这表明 ADAS 学习的是智能体架构的\emph{通用设计原则}——如有效的提示词分解、错误恢复模式和工具使用策略——而非任务特定的过拟合。
 
-The transfer results have important practical implications: (1) the cost of meta-search can be amortized across many applications, as a single architecture search yields agents effective across domains; (2) architectures can be discovered using cheaper models (GPT-3.5) and then deployed with more capable models (GPT-4), reducing the cost of the search process; (3) the discovered principles may inform human agent design, as the meta-agent's architectural choices reveal which patterns (e.g., self-reflection, planning, verification) are most broadly useful.
+迁移结果具有重要的实践意义：(1) 元搜索的成本可以分摊到多个应用中，因为单次架构搜索就能产生跨领域有效的智能体；(2) 可以使用更便宜的模型（GPT-3.5）发现架构，然后使用更强大的模型（GPT-4）部署，降低搜索过程的成本；(3) 发现的原则可以为人工智能体设计提供参考，因为元智能体的架构选择揭示了哪些模式（如自我反思、规划、验证）是最广泛有用的。
 
-\paragraph{Limitations.}
-ADAS's quality depends heavily on the meta-agent LLM's code generation capability. The search is computationally expensive, requiring many agent evaluations per iteration. No formal guarantees exist on the optimality of discovered architectures, and the safety properties of generated agents are not systematically addressed. The requirement for Turing-complete code also means that the search space is vast, and the meta-agent may miss effective architectures that require non-obvious structural patterns.
-
-
-\subsubsection{G\"{o}del Agent: Runtime Self-Modification via Monkey Patching}
-
-G\"{o}del Agent~\citep{yin2025godelagent} (Peking University / UCSB, ACL 2025) implements self-referential modification using Python's monkey patching mechanism, enabling \textbf{in-place runtime self-modification} without restarting the agent process.
-
-\paragraph{Self-Modification Loop.}
-The modification cycle consists of four steps: (1) \textbf{Introspection}: the agent reads its own source code and execution history; (2) \textbf{Proposal}: an LLM analyzes the code and proposes specific modifications; (3) \textbf{Application}: modifications are applied via Python's \texttt{exec()} function, directly patching methods and attributes at runtime; (4) \textbf{Validation}: the modified agent is tested on a validation set, with automatic rollback if performance degrades.
-
-\paragraph{Results and Comparison with DGM.}
-G\"{o}del Agent achieves +8--15\% improvement on HotPotQA (multi-hop question answering) and significant improvements on ALFWorld (text-based interactive environment). On multi-domain tasks, it outperforms all fixed agent configurations across all tested domains, demonstrating that runtime self-modification provides consistent benefits regardless of the task type. Importantly, the agent discovers strategies not foreseen by human designers, such as dynamically switching between retrieval strategies based on question complexity---a pattern that would be difficult to pre-program.
-
-Compared to DGM, G\"{o}del Agent is lighter-weight (no archive management, no separate evaluation sandbox) but offers less exploration diversity: by modifying an existing agent in-place, it is constrained to local improvements rather than the broader search that DGM's population-based approach enables. The tradeoff is between efficiency (G\"{o}del Agent requires fewer resources per improvement) and exploration (DGM maintains a diverse population of agents that can discover qualitatively different solutions). The Polaris follow-up~\citep{ye2025polaris} extends this approach to smaller language models, demonstrating that self-modification benefits are not limited to large-scale LLMs. This is an important finding because it suggests that self-evolution can improve even resource-constrained models, potentially enabling self-improving agents on edge devices.
-
-\paragraph{Limitations.}
-Monkey patching is Python-specific, limiting portability to other languages. Runtime modification introduces non-determinism that complicates debugging and reproducibility. The theoretical guarantees are weaker than formal G\"{o}del machine proofs, as the self-modification is guided by empirical evaluation rather than mathematical verification. Evaluation has been limited to text-based tasks; applicability to code generation, robotics, or multi-modal domains remains untested.
+\paragraph{局限性。}
+ADAS 的质量严重依赖于元智能体 LLM 的代码生成能力。搜索计算成本高昂，每次迭代需要许多智能体评估。对发现架构的最优性没有形式化保证，生成的智能体的安全属性也未被系统性地解决。对图灵完备代码的要求也意味着搜索空间巨大，元智能体可能遗漏需要非显而易见结构模式的有效架构。
 
 
-\subsubsection{Agent Symbolic Learning: Language Backpropagation}
+\subsubsection{G\"{o}del Agent：通过 Monkey Patching 实现运行时自我修改}
 
-Agent Symbolic Learning~\citep{zhou2024symbolic} (NeurIPS 2024, AIWaves / Zhejiang University) draws an explicit analogy between neural network training and agent optimization. It treats agents as \textbf{symbolic networks} where the ``weights'' are discrete textual components: prompts $\mathcal{P}$, tool descriptions $\mathcal{T}$, and input/output pipelines $\mathcal{I}/\mathcal{O}$.
+G\"{o}del Agent~\citep{yin2025godelagent}（北京大学 / UCSB，ACL 2025）使用 Python 的 monkey patching 机制实现自我指涉式修改，实现\textbf{原位运行时自我修改}而无需重启智能体进程。
 
-\paragraph{Language Backpropagation.}
-The key innovation is performing gradient-like optimization entirely in language space. Given a task trajectory, the system computes a language loss, then propagates improvement signals backward through the agent's symbolic structure:
+\paragraph{自我修改循环。}
+修改周期包含四个步骤：(1) \textbf{内省}：智能体读取自身的源代码和执行历史；(2) \textbf{提案}：LLM 分析代码并提出具体的修改建议；(3) \textbf{应用}：通过 Python 的 \texttt{exec()} 函数应用修改，在运行时直接修补方法和属性；(4) \textbf{验证}：修改后的智能体在验证集上测试，如果性能下降则自动回滚。
+
+\paragraph{实验结果及与 DGM 的比较。}
+G\"{o}del Agent 在 HotPotQA（多跳问答）上实现了 +8--15\% 的改进，在 ALFWorld（基于文本的交互环境）上也取得了显著改进。在多领域任务上，它在所有测试领域上均优于所有固定智能体配置，表明运行时自我修改无论任务类型如何都能提供一致的收益。重要的是，智能体发现了人类设计者未预见到的策略，例如根据问题复杂度动态切换检索策略——这是一种难以预先编程的模式。
+
+与 DGM 相比，G\"{o}del Agent 更轻量（无需存档管理，无需独立的评估沙盒），但探索多样性较少：通过原位修改现有智能体，它局限于局部改进，而非 DGM 基于种群方法所支持的更广泛搜索。权衡在于效率（G\"{o}del Agent 每次改进需要更少的资源）与探索（DGM 维护多样化的智能体种群，可以发现定性不同的解决方案）之间。Polaris 后续工作~\citep{ye2025polaris}将这种方法扩展到较小的语言模型，证明自我修改的好处不限于大规模 LLM。这是一个重要发现，因为它表明自进化甚至可以改进资源受限的模型，可能使边缘设备上的自我改进智能体成为可能。
+
+\paragraph{局限性。}
+Monkey patching 是 Python 特有的，限制了到其他语言的可移植性。运行时修改引入了使调试和复现复杂化的非确定性。理论保证弱于形式化的 G\"{o}del 机证明，因为自我修改由经验评估而非数学验证指导。评估仅限于基于文本的任务；对代码生成、机器人或多模态领域的适用性尚未测试。
+
+
+\subsubsection{Agent Symbolic Learning：语言反向传播}
+
+Agent Symbolic Learning~\citep{zhou2024symbolic}（NeurIPS 2024，AIWaves / 浙江大学）在神经网络训练和智能体优化之间建立了明确的类比。它将智能体视为\textbf{符号网络}，其中``权重''是离散的文本组件：提示词 $\mathcal{P}$、工具描述 $\mathcal{T}$ 和输入/输出流水线 $\mathcal{I}/\mathcal{O}$。
+
+\paragraph{语言反向传播。}
+关键创新是在语言空间中执行类梯度优化。给定任务轨迹，系统计算语言损失，然后通过智能体的符号结构反向传播改进信号：
 \begin{equation}
 \nabla_{\text{lang}}^{(n)} = \text{LLM}\left(\mathcal{P}_{\text{gradient}}(\nabla_{\text{lang}}^{(n+1)}, \text{node}_n, \mathcal{L}_{\text{lang}})\right)
 \end{equation}
-where $\nabla_{\text{lang}}^{(n)}$ represents the improvement direction at layer $n$, $\text{node}_n$ is the symbolic component at that layer, and $\mathcal{L}_{\text{lang}}$ is the language-formulated loss. Three specialized optimizers handle different weight types: \textbf{PromptOptimizer} for prompts, \textbf{ToolOptimizer} for tool descriptions, and \textbf{PipelineOptimizer} for input/output configurations.
+其中 $\nabla_{\text{lang}}^{(n)}$ 表示第 $n$ 层的改进方向，$\text{node}_n$ 是该层的符号组件，$\mathcal{L}_{\text{lang}}$ 是用语言表述的损失。三个专门的优化器处理不同类型的权重：\textbf{PromptOptimizer} 处理提示词，\textbf{ToolOptimizer} 处理工具描述，\textbf{PipelineOptimizer} 处理输入/输出配置。
 
-\paragraph{Results.}
-Agent Symbolic Learning demonstrates consistent improvements across multiple benchmarks:
+\paragraph{实验结果。}
+智能体符号学习在多个基准上展示了一致的改进：
 \begin{itemize}
     \item \textbf{HotPotQA}: F1 36.2 $\rightarrow$ \textbf{39.1}, EM 22.8 $\rightarrow$ 25.6
     \item \textbf{MATH}: 56.0\% $\rightarrow$ \textbf{60.7\%} (with GPT-4 backbone)
@@ -300,128 +299,128 @@ Agent Symbolic Learning demonstrates consistent improvements across multiple ben
     \item \textbf{Software Development}: 2.4 $\rightarrow$ \textbf{3.8} executability score
     \item \textbf{Creative Writing}: 6.8 $\rightarrow$ \textbf{7.4} (GPT-4 judge, 1--10 scale)
 \end{itemize}
-Across all benchmarks, it outperforms DSPy~\citep{khattab2023dspy}, demonstrating that language-space backpropagation is a more effective optimization strategy than prompt chaining alone.
+在所有基准上，它优于 DSPy~\citep{khattab2023dspy}，证明语言空间反向传播是比单纯提示词链更有效的优化策略。
 
-\paragraph{Limitations.}
-The approach requires a strong LLM backbone (GPT-4 level) for both forward execution and gradient computation. The quality of language gradients depends heavily on the prompt design for loss/gradient/update templates. No theoretical convergence guarantees exist, and the computational cost is significant: multiple LLM calls per training step for forward pass, loss computation, backpropagation, and weight update.
+\paragraph{局限性。}
+该方法需要强大的 LLM 主干（GPT-4 级别）来执行前向执行和梯度计算。语言梯度的质量严重依赖于损失/梯度/更新模板的提示设计。不存在理论收敛保证，计算成本显著：每个训练步骤需要多次 LLM 调用，用于前向传递、损失计算、反向传播和权重更新。
 
 
-\subsubsection{SelfEvolve: Self-Guided Code Evolution}
+\subsubsection{SelfEvolve：自引导代码进化}
 
-SelfEvolve~\citep{jiang2023selfevolve} (Shanghai Jiao Tong University, 2023) introduces a two-stage pipeline for self-improving code generation. In Stage 1, the model generates \textbf{self-knowledge} $K$ about the problem before producing code:
+SelfEvolve~\citep{jiang2023selfevolve}（上海交通大学，2023）引入了两阶段自改进代码生成流水线。在第一阶段，模型在生成代码之前生成关于问题的\textbf{自我知识} $K$：
 \begin{equation}
 p(K) = \prod_i p_\theta(K_i | X, K_{<i}), \quad P(Y|K) = \prod_i p_\theta(Y_i | Y_{<i}, X, K)
 \end{equation}
-This self-generated knowledge captures API usage patterns, algorithmic insights, and common pitfalls. In Stage 2, the generated code undergoes \textbf{iterative refinement with execution feedback}: compilation errors and test failures are fed back to the model for correction, creating a self-repair loop.
+这种自我生成的知识捕获 API 使用模式、算法洞察和常见陷阱。在第二阶段，生成的代码经过\textbf{基于执行反馈的迭代精炼}：编译错误和测试失败被反馈给模型进行纠正，创建自我修复循环。
 
-\paragraph{Results.}
-SelfEvolve achieves consistent improvements across three code generation benchmarks: \textbf{HumanEval} 74.39\% $\rightarrow$ \textbf{85.98\%} pass@1 (approaching GPT-4's 89.95\% baseline, a +15.6\% relative improvement); \textbf{DS-1000} (data science code) 49.4 $\rightarrow$ \textbf{57.2} (+15.8\% relative improvement); \textbf{TransCoder} (C++ to Python translation) 88.3\% $\rightarrow$ \textbf{90.4\%} accuracy. Ablation studies show that both stages contribute: Stage 1 (self-knowledge) alone improves HumanEval from 74.39\% to 79.27\%, and Stage 2 (execution feedback) further improves to 85.98\%, indicating that the two mechanisms are complementary.
+\paragraph{实验结果。}
+SelfEvolve 在三个代码生成基准上取得了一致的改进：\textbf{HumanEval} 74.39\% $\rightarrow$ \textbf{85.98\%} pass@1（接近 GPT-4 的 89.95\% 基线，+15.6\% 相对改进）；\textbf{DS-1000}（数据科学代码）49.4 $\rightarrow$ \textbf{57.2}（+15.8\% 相对改进）；\textbf{TransCoder}（C++ 到 Python 翻译）88.3\% $\rightarrow$ \textbf{90.4\%} 准确率。消融研究表明两个阶段都有贡献：仅第一阶段（自我知识）将 HumanEval 从 74.39\% 提高到 79.27\%，第二阶段（执行反馈）进一步提高到 85.98\%，表明两种机制是互补的。
 
-The self-generated knowledge proves particularly valuable for data science tasks involving unfamiliar APIs, where the model can reason about library interfaces before generating code. On DS-1000, the self-knowledge stage improves performance on Pandas and Scikit-learn tasks by 10--15\%, suggesting that explicit API reasoning is more effective than relying on implicit parametric knowledge alone.
+自我生成的知识对于涉及不熟悉 API 的数据科学任务特别有价值，模型可以在生成代码之前推理库接口。在 DS-1000 上，自我知识阶段将 Pandas 和 Scikit-learn 任务的性能提高了 10--15\%，表明显式的 API 推理比仅依赖隐式参数化知识更有效。
 
-\paragraph{Limitations.}
-SelfEvolve's prompt templates are hand-written and may not generalize across all task types. The self-generated knowledge can be inaccurate for niche APIs not well-represented in training data---for example, rarely-used NumPy functions with non-obvious parameter semantics. The refinement stage only corrects API errors and assertion errors, missing logical errors that pass type checking but produce incorrect results (e.g., an off-by-one error in a loop that passes unit tests with small inputs). A more fundamental limitation is that SelfEvolve's refinement loop is bounded: after a fixed number of attempts, the system gives up rather than attempting a fundamentally different approach. This contrasts with Reflexion's open-ended reflection mechanism, which can accumulate insights across multiple failed attempts.
+\paragraph{局限性。}
+SelfEvolve 的提示模板是手写的，可能无法泛化到所有任务类型。自我生成的知识对于训练数据中代表性不足的小众 API 可能不准确——例如具有非显而易见参数语义的罕见 NumPy 函数。精炼阶段仅纠正 API 错误和断言错误，遗漏了通过类型检查但产生不正确结果的逻辑错误（例如，在使用小输入通过单元测试的循环中的差一错误）。更根本的局限是 SelfEvolve 的精炼循环是有界的：在固定次数的尝试后，系统会放弃而不是尝试根本不同的方法。这与 Reflexion 的开放式反思机制形成对比，后者可以在多次失败尝试中积累洞察。
 
 
-\subsubsection{Absolute Zero: Self-Play Reinforcement Learning}
+\subsubsection{Absolute Zero：自博弈强化学习}
 
-Absolute Zero~\citep{zhao2025absolutezero} (Tsinghua University, NeurIPS 2025 award) takes a radically different approach: a single model simultaneously acts as \textbf{task proposer} and \textbf{task solver}, creating a self-play loop that requires zero external training data.
+Absolute Zero~\citep{zhao2025absolutezero}（清华大学，NeurIPS 2025 获奖）采用了一种截然不同的方法：单一模型同时充当\textbf{任务提出者}和\textbf{任务求解者}，创建一个需要零外部训练数据的自博弈循环。
 
-\paragraph{Dual-Role Architecture.}
-The proposer generates tasks $t$ with a curriculum reward that balances difficulty and solvability:
+\paragraph{双重角色架构。}
+任务提出者生成任务 $t$，使用平衡难度和可解性的课程奖励：
 \begin{equation}
 R_{\text{proposer}} \propto \text{difficulty}(t) \times \text{solvability}(t)
 \end{equation}
-This ensures the proposer generates tasks that are challenging enough to drive learning but not so difficult that the solver cannot make progress. The \textbf{difficulty} component is estimated from the solver's current success rate on similar tasks: tasks where the solver consistently fail are rated as more difficult. The \textbf{solvability} component ensures that the task is not impossible: tasks with zero solver success across many attempts receive low solvability scores. The product of these two components creates a curriculum that progressively increases in difficulty as the solver improves, maintaining a zone of proximal development that maximizes learning efficiency.
+这确保提出者生成足够具有挑战性的任务来驱动学习，但又不至于难到求解者无法取得进展。\textbf{难度}组件根据求解者在相似任务上的当前成功率估计：求解者持续失败的任务被评为更难。\textbf{可解性}组件确保任务不是不可能完成的：在多次尝试中求解者成功率为零的任务获得较低的可解性评分。这两个组件的乘积创建了一个随着求解者改进而逐渐增加难度的课程，维持最大化学习效率的最近发展区。
 
-Verification is straightforward for code tasks: $r = \text{Execute}(s, t) \in \{0, 1\}$, where $s$ is the solver's solution. This binary signal provides clean training signal for both the proposer and solver, avoiding the noise and subjectivity of human evaluation. Both proposer and solver are updated via PPO/GRPO reinforcement learning, creating a co-evolutionary dynamic where improved solving ability drives the proposer toward harder tasks, which in turn drives further solver improvement.
+对于代码任务，验证很简单：$r = \text{Execute}(s, t) \in \{0, 1\}$，其中 $s$ 是求解者的解。这一二值信号为提出者和求解者提供干净的训练信号，避免了人工评估的噪声和主观性。提出者和求解者均通过 PPO/GRPO 强化学习进行更新，创建了共同进化的动态：改进的求解能力驱动提出者朝向更难的任务，进而驱动求解者的进一步改进。
 
-\paragraph{Results.}
-AZR-Coder-7B (based on Qwen) achieves \textbf{state-of-the-art at the 7B parameter scale} on coding benchmarks (HumanEval+, MBPP+, LiveCodeBench) without any external training data---a result that challenges the assumption that high-quality curated datasets are necessary for strong coding performance. Remarkably, code self-play training also transfers to mathematical reasoning (GSM8K, MATH), despite receiving zero math training data.
+\paragraph{实验结果。}
+AZR-Coder-7B（基于 Qwen）在编码基准（HumanEval+、MBPP+、LiveCodeBench）上达到了 \textbf{7B 参数规模的最优水平}，且无需任何外部训练数据——这一结果挑战了高质量精选数据集是强大编码性能所必需的假设。值得注意的是，代码自博弈训练还迁移到了数学推理（GSM8K、MATH），尽管从未接收任何数学训练数据。
 
-\paragraph{Limitations.}
-The bootstrapping challenge is fundamental: early in training, the proposer's capability is limited, so it generates trivial or unsolvable tasks. The approach is restricted to domains with executable verification (primarily code). There is a risk of mode collapse, where the proposer--solver pair converges to a narrow task distribution. The computational cost of dual-role RL training is substantial, though the zero data requirement partially offsets this.
-
-
-\subsubsection{Reflexion: Verbal Reinforcement Learning}
-
-Reflexion~\citep{shinn2023reflexion} introduces \textbf{verbal reinforcement learning} with episodic memory. The system separates the agent into three components: an \textbf{Actor} that generates actions, an \textbf{Evaluator} that assesses outcomes, and a \textbf{Reflector} that converts failure experiences into natural language summaries stored in episodic memory. Before each new episode, the actor retrieves relevant past reflections to avoid repeating mistakes.
-
-\paragraph{Results.}
-Reflexion achieves \textbf{91\% pass@1 on HumanEval}, surpassing GPT-4's 80\% at the time of publication, and 97\% success on AlfWorld compared to 75\% with the base ReAct agent. The key insight is that natural language reflections provide a more compact and transferable representation of experience than scalar rewards or trajectory replays. On HumanEval, Reflexion achieves most of its improvement within 2--3 reflection iterations, suggesting that the first few reflections capture the most important lessons. The remaining iterations provide diminishing returns, consistent with the logarithmic scaling pattern observed across other self-evolution systems.
-
-On AlfWorld, Reflexion's advantage is even more pronounced because the environment provides rich failure signals (``you cannot put the knife in the microwave'') that the reflector can convert into actionable advice. This suggests that Reflexion is most effective in environments with informative failure modes, where the gap between success and failure is easy to verbalize.
-
-\paragraph{Limitations.}
-The primary limitation is \textbf{unbounded memory growth}: as the agent accumulates reflections, the context length required to include all relevant past experiences grows without bound, eventually exceeding the LLM's context window. A typical Reflexion run on HumanEval generates 5--15 reflections per problem, each 50--200 tokens long, totaling 250--3,000 tokens of reflective memory per problem. For a benchmark with 164 problems, this yields 40K--500K tokens of accumulated reflections---far exceeding any LLM's context window. Practical deployments require memory management strategies such as recency-based filtering (keeping only the most recent $N$ reflections), relevance scoring (selecting reflections similar to the current task via embedding similarity), or periodic consolidation (using an LLM to summarize multiple reflections into a compact representation).
+\paragraph{局限性。}
+引导挑战是根本性的：训练初期，提出者的能力有限，因此会生成平凡或不可解的任务。该方法局限于具有可执行验证的领域（主要是代码）。存在模式崩溃的风险，即提出者-求解者对收敛到狭窄的任务分布上。双角色 RL 训练的计算成本很高，尽管零数据需求在一定程度上抵消了这一点。
 
 
-\subsubsection{Voyager: Lifelong Learning via Skill Libraries}
+\subsubsection{Reflexion：语言强化学习}
 
-Voyager~\citep{wang2023voyager} implements lifelong learning in Minecraft through three integrated components: (1) an \textbf{automatic curriculum} that proposes increasingly complex tasks to maximize exploration; (2) a \textbf{skill library} that stores reusable code modules (e.g., ``craft wooden pickaxe,'' ``navigate to village''); (3) an \textbf{iterative prompting} mechanism that generates and debugs code for each task.
+Reflexion~\citep{shinn2023reflexion} 引入了带有情节记忆的\textbf{语言强化学习}。系统将智能体分为三个组件：生成动作的\textbf{执行者}（Actor）、评估结果的\textbf{评估器}（Evaluator），以及将失败经验转化为存储在情节记忆中的自然语言摘要的\textbf{反思器}（Reflector）。在每次新轮次之前，执行者检索相关的过去反思以避免重复错误。
 
-\paragraph{Results.}
-Voyager discovers \textbf{3.3$\times$ more unique items} (42 vs.\ 13 for the strongest baseline, which uses GPT-4 without skill libraries) and reaches technology tree milestones \textbf{15.3$\times$ faster}. Over a full playthrough, the skill library accumulates $\sim$40 reusable code modules, ranging from basic actions (``mine\_wood,'' ``craft\_planks'') to complex strategies (``find\_diamonds,'' ``navigate\_nether''). Skills accumulate as building blocks: early-learned skills (wood gathering, crafting) are composed into complex behaviors (diamond mining, Nether exploration). The skill library provides a natural curriculum structure where mastered skills enable new ones.
+\paragraph{结果。}
+Reflexion 在 HumanEval 上实现了 \textbf{91\% pass@1}，超越了当时 GPT-4 的 80\%；在 AlfWorld 上达到 97\% 成功率，而基础 ReAct 智能体仅为 75\%。核心洞察是自然语言反思提供了比标量奖励或轨迹回放更紧凑、更可迁移的经验表示。在 HumanEval 上，Reflexion 在 2--3 次反思迭代内就实现了大部分改进，表明前几次反思捕获了最重要的教训。后续迭代的收益递减，这与在其他自进化系统中观察到的对数缩放模式一致。
 
-A key finding is that the skill library is \textbf{composable}: the agent can invoke previously learned skills as subroutines when solving new tasks, dramatically reducing the planning horizon. For example, the ``build\_nether\_portal'' skill composes ``mine\_obsidian'' + ``craft\_flint\_and\_steel'' + ``place\_blocks,'' each of which was learned independently. This compositional structure mirrors the hierarchical task decomposition seen in classical AI planning and suggests that skill libraries are a general mechanism for lifelong learning.
+在 AlfWorld 上，Reflexion 的优势更为显著，因为环境提供了丰富的失败信号（``你不能把刀放进微波炉），反思器可以将其转换为可操作的建议。这表明 Reflexion 在具有信息丰富失败模式的环境中最为有效，其中成功与失败之间的差距容易用语言表达。
 
-\paragraph{Limitations.}
-Voyager's design is Minecraft-specific: the skill representation (Python functions calling Minecraft API), curriculum design (technology tree), and evaluation metrics (items discovered, milestones reached) are deeply tied to the game environment. Transfer to other domains requires rethinking all three components, limiting generalizability. The approach also depends on the Minecraft API providing a clean, well-documented interface for skill execution---a luxury not available in most real-world environments. Furthermore, the skills are stored as raw code without semantic annotations, making it difficult to assess skill applicability without attempting execution.
-
-
-\subsubsection{Self-Rewarding Language Models}
-
-Self-Rewarding LM~\citep{meta2024selfrewarding} unifies the policy model and reward model into a single LLM, using \textbf{Iterative DPO} (Direct Preference Optimization) for self-improvement. At each iteration, the model generates candidate responses, scores them using its own reward head, constructs preference pairs from high-scoring and low-scoring responses, and fine-tunes on these pairs. The Meta-Rewarding extension adds a meta-reward evaluation layer to reduce reward hacking.
-
-\paragraph{Results.}
-Llama-3-8B improves from 22.9\% to \textbf{39.4\%} on AlpacaEval 2.0 through self-rewarding iterations. This demonstrates that models can improve their instruction-following ability using only self-generated preference data, without external human annotations. The improvement occurs over 3 iterations of self-rewarding DPO, with diminishing returns after the second iteration. The Meta-Rewarding extension, which adds a second model to evaluate the reward model's judgments, further improves results by reducing reward hacking.
-
-\paragraph{Analysis of Failure Modes.}
-Two primary failure modes emerge: (1) \textbf{length bias}, where the self-reward model systematically prefers longer outputs regardless of quality---an analysis of the preference data shows that responses 50\% longer than the baseline receive approximately 10\% higher reward scores on average; (2) \textbf{reward hacking}, where the policy learns to generate outputs that exploit weaknesses in the reward model rather than genuinely improving---for example, the model may learn to include superficial markers of quality (``certainly,'' ``I'd be happy to help'') that trigger high reward scores without improving the actual response quality. The Meta-Rewarding extension partially addresses these issues by providing a second evaluation layer, but the fundamental tension between using the same model for generation and evaluation remains.
-
-These limitations bridge the evolutionary systems discussed in this chapter and the training-time self-improvement methods discussed in Chapter~\ref{ch:methods}. Self-Rewarding LM represents a hybrid approach: evolutionary in its iterative selection of high-scoring variants, but learning-based in its use of gradient optimization (DPO) rather than explicit population management. This hybrid nature suggests that the boundary between evolutionary and learning-based self-improvement is increasingly blurred, with the most effective future systems likely combining elements of both paradigms.
+\paragraph{局限性。}
+主要局限是\textbf{无界记忆增长}：随着智能体积累反思，包含所有相关过往经验所需的上下文长度无限增长，最终超出 LLM 的上下文窗口。HumanEval 上典型的 Reflexion 运行每个问题生成 5--15 条反思，每条 50--200 个 token，每个问题总计 250--3,000 个 token 的反思记忆。对于 164 个问题的基准，这产生 40K--500K token 的累积反思——远超任何 LLM 的上下文窗口。实际部署需要记忆管理策略，如基于时效的过滤（仅保留最近 $N$ 条反思）、相关性评分（通过嵌入相似性选择与当前任务相似的反思），或定期整合（使用 LLM 将多条反思总结为紧凑表示）。
 
 
-\subsection{Open-Source Implementations}
+\subsubsection{Voyager：基于技能库的终身学习}
+
+Voyager~\citep{wang2023voyager}通过三个集成组件在 Minecraft 中实现终身学习：(1) 提出越来越复杂的任务以最大化探索的\textbf{自动课程}；(2) 存储可重用代码模块（如"制作木镐"、"导航到村庄"）的\textbf{技能库}；(3) 为每个任务生成和调试代码的\textbf{迭代提示}机制。
+
+\paragraph{结果。}
+Voyager 发现了 \textbf{3.3$\times$ 更多独特物品}（42 vs.\ 最强基线的 13，该基线使用不带技能库的 GPT-4），并以 \textbf{15.3$\times$ 更快}的速度达到科技树里程碑。在完整游戏过程中，技能库积累了约 40 个可复用代码模块，从基本动作（``mine\_wood''、``craft\_planks''）到复杂策略（``find\_diamonds''、``navigate\_nether''）。技能以构建模块的方式累积：早期学到的技能（采集木材、制作物品）被组合成复杂行为（钻石开采、下界探索）。技能库提供了自然的课程结构，已掌握的技能为学习新技能奠定基础。
+
+一个关键发现是技能库具有\textbf{可组合性}：智能体在解决新任务时可以调用之前学到的技能作为子程序，显著缩短规划范围。例如，``build\_nether\_portal 技能由 ``mine\_obsidian + ``craft\_flint\_and\_steel + ``place\_blocks 组成，每个技能都是独立学习的。这种组合结构反映了经典 AI 规划中的层次任务分解，表明技能库是终身学习的通用机制。
+
+\paragraph{局限性。}
+Voyager 的设计针对 Minecraft 特定：技能表示（调用 Minecraft API 的 Python 函数）、课程设计（科技树）和评估指标（发现的物品、达到的里程碑）与游戏环境深度绑定。迁移到其他领域需要重新设计这三个组件，限制了通用性。该方法还依赖于 Minecraft API 提供干净、文档化的技能执行接口——这在大多数真实世界环境中是不具备的奢侈条件。此外，技能以原始代码形式存储，缺乏语义标注，使得在不尝试执行的情况下难以评估技能的适用性。
+
+
+\subsubsection{Self-Rewarding Language Models：自奖励语言模型}
+
+Self-Rewarding LM~\citep{meta2024selfrewarding}将策略模型和奖励模型统一到单个 LLM 中，使用\textbf{迭代 DPO}（Direct Preference Optimization）进行自我改进。在每次迭代中，模型生成候选响应，使用自身的奖励头对其进行评分，从高分和低分响应构建偏好对，并在这些对上微调。Meta-Rewarding 扩展添加了元奖励评估层以减少奖励作弊。
+
+\paragraph{结果。}
+Llama-3-8B 在 AlpacaEval 2.0 上通过自奖励迭代从 22.9\% 提升至 	extbf{39.4\%}。这表明模型可以仅使用自生成的偏好数据改进其指令跟随能力，无需外部人类标注。这一改进发生在 3 轮自奖励 DPO 迭代中，第二轮之后的收益逐渐递减。添加第二个模型来评估奖励模型判断的 Meta-Rewarding 扩展通过减少奖励作弊进一步改善了结果。
+
+\paragraph{失败模式分析。}
+两种主要失败模式浮现：（1）\textbf{长度偏差}，即自奖励模型系统性地偏好更长的输出而忽视质量——对偏好数据的分析表明，比基线长 50\% 的响应平均获得约 10\% 更高的奖励分数；（2）\textbf{奖励作弊}，即策略学会生成利用奖励模型弱点的输出，而非真正改进——例如，模型可能学会添加表面的质量标记（``当然''、``我很乐意帮助''），这些标记触发高奖励分数却不会改善实际响应质量。Meta-Rewarding 扩展通过提供第二层评估部分缓解了这些问题，但生成与评估使用同一模型这一根本矛盾仍然存在。
+
+这些局限性将本章讨论的进化系统与第~\ref{ch:methods}~章讨论的训练时自改进方法联系起来。Self-Rewarding LM 代表了一种混合方法：在迭代选择高分变体方面是进化式的，但在使用梯度优化（DPO）而非显式种群管理方面是基于学习的。这种混合性质表明，进化式和基于学习的自改进之间的边界日益模糊，最有效的未来系统可能结合两种范式的要素。
+
+
+\subsection{开源实现}
 \label{sec:ch4-opensource}
 
-The systems discussed in Sections~\ref{sec:ch4-evo-operator} and~\ref{sec:ch4-agent-evo} have inspired a growing ecosystem of open-source implementations that make evolutionary code and agent discovery accessible to the broader research community.
+第~\ref{sec:ch4-evo-operator}~节和第~\ref{sec:ch4-agent-evo}~节讨论的系统催生了一个日益增长的开源实现生态系统，使进化式代码和智能体发现为更广泛的研究社区所可用。
 
-\subsubsection{LLaMEA: Large Language Model Evolutionary Algorithm}
+\subsubsection{LLaMEA：大语言模型进化算法}
 
-LLaMEA~\citep{chen2025llamea} (IEEE TEVC 2025, GECCO 2025 Silver Humies Award) is positioned as a fully open-source successor to AlphaEvolve. It implements a ($\mu$,$\lambda$)-evolution strategy with several distinguishing features:
+LLaMEA~\citep{chen2025llamea}（IEEE TEVC 2025，GECCO 2025 银色 Humies 奖）定位为 AlphaEvolve 的完全开源后继者。它实现了 ($\mu$,$\lambda$)-进化策略，具有以下显著特征：
 
 \begin{enumerate}
-    \item \textbf{LLaMEA-HPO}: Integration with SMAC (Sequential Model-Based Algorithm Configuration) enables \emph{in-the-loop hyperparameter optimization}. Rather than burdening the LLM with both structural code changes and numerical parameter tuning, SMAC handles the latter. This separation yields 3--5$\times$ cost reduction compared to having the LLM manage all optimization dimensions.
+    \item \textbf{LLaMEA-HPO}：与 SMAC（Sequential Model-Based Algorithm Configuration）的集成实现了\emph{循环内超参数优化}。SMAC 负责处理数值参数调优，而非让 LLM 同时承担结构化代码修改和数值参数调优的双重负担。这种分离相比让 LLM 管理所有优化维度，实现了 3--5$\times$ 的成本降低。
 
-    \item \textbf{Diff editing mode}: Instead of regenerating complete programs, LLaMEA uses SEARCH/REPLACE diff patches where the LLM specifies which code sections to replace. This reduces token usage to \textbf{10--20\%} of full code rewriting, dramatically cutting API costs for long programs.
+    \item \textbf{差异编辑模式}：LLaMEA 不再重新生成完整程序，而是使用 SEARCH/REPLACE 差异补丁，由 LLM 指定需要替换的代码段。这将 token 用量减少到完整代码重写的 \textbf{10--20\%}，显著降低了长程序的 API 成本。
 
-    \item \textbf{Multi-objective optimization}: Built-in Pareto archive and non-dominated sorting support simultaneous optimization of multiple conflicting objectives (e.g., solution quality vs.\ execution speed).
+    \item \textbf{多目标优化}：内置 Pareto 归档和非支配排序支持多个冲突目标的同步优化（例如，解的质量与执行速度之间的权衡）。
 
-    \item \textbf{Multi-LLM backend support}: Compatible with OpenAI (GPT-4), Google Gemini, and local models via Ollama, providing flexibility in cost--quality tradeoffs.
+    \item \textbf{多 LLM 后端支持}：兼容 OpenAI（GPT-4）、Google Gemini 以及通过 Ollama 的本地模型，在成本与质量的权衡上提供灵活性。
 \end{enumerate}
 
-LLaMEA's default configuration uses $n_{\text{parents}}=5$, $n_{\text{offspring}}=5$, a budget of 100 generations, clearing-based niching for diversity, and diff mode enabled. The clearing strategy works as follows: when a new solution is added to the population, existing solutions within a similarity threshold are removed, preventing the population from converging to a single region of the search space. The similarity threshold is configurable and typically based on Jaccard similarity of AST (Abstract Syntax Tree) node types.
+LLaMEA 的默认配置使用 $n_{\text{parents}}=5$、$n_{\text{offspring}}=5$、100 代的预算、基于清除的小生境策略以保持多样性，并启用差异模式。清除策略的工作方式如下：当新解加入种群时，相似度阈值内的现有解被移除，防止种群收敛到搜索空间的单一区域。相似度阈值可配置，通常基于 AST（抽象语法树）节点类型的 Jaccard 相似度。
 
-The framework has been applied to BBOB (Black-Box Optimization Benchmarking) functions and AutoML pipeline generation. On BBOB, LLaMEA discovers optimization algorithms that are competitive with hand-crafted methods across 24 test functions spanning separable, low-condition, high-condition, multi-modal, and weakly-structured categories. The code evolution graph feature provides a visual record of the evolutionary process, showing how each algorithm relates to its ancestors through structural modifications.
+该框架已应用于 BBOB（Black-Box Optimization Benchmarking）函数和 AutoML 流水线生成。在 BBOB 上，LLaMEA 发现的优化算法在涵盖可分离、低条件数、高条件数、多模态和弱结构化等 24 个测试函数上与人工设计的方法具有竞争力。代码进化图功能提供了进化过程的可视化记录，展示了每个算法如何通过结构修改与其祖先相关联。
 
 
-\subsubsection{OpenTreeSearch: PUCT Tree Search for Code Evolution}
+\subsubsection{OpenTreeSearch：代码进化的 PUCT 树搜索}
 
-OpenTreeSearch~\citep{genentech2025opentreesearch} (Genentech) replaces the island model of FunSearch/OpenEvolve with \textbf{PUCT tree search}---the same selection strategy used in AlphaGo. The PUCT formula balances exploitation of high-scoring branches with exploration of less-visited ones:
+OpenTreeSearch~\citep{genentech2025opentreesearch}（Genentech）用 \textbf{PUCT 树搜索}取代了 FunSearch/OpenEvolve 的岛屿模型——与 AlphaGo 使用的相同选择策略。PUCT 公式在对高分分支的利用和对较少访问分支的探索之间取得平衡：
 \begin{equation}
 \text{PUCT}(parent, child) = \text{score}_{\text{norm}}(child) + C\sqrt{\frac{\ln(\text{parent.visits})}{\text{child.visits}}}
 \end{equation}
-where $C$ is the single exploration constant (default 1.0). This is the system's only hyperparameter, compared to 9+ for OpenEvolve's island model.
+其中 $C$ 是唯一的探索常数（默认 1.0）。这是系统唯一的超参数，而 OpenEvolve 的岛屿模型需要 9 个以上。
 
-\paragraph{Virtual Loss for Parallelism.}
-In parallel evolution, multiple workers may simultaneously select the same parent for modification. OpenTreeSearch uses a \textbf{virtual loss} mechanism: when a worker selects a node for expansion, the node's virtual loss count is incremented, temporarily reducing its selection probability for other workers. Once evaluation completes, the virtual loss is decremented. This prevents redundant exploration and improves parallel efficiency.
+\paragraph{并行性的虚拟损失。}
+在并行进化中，多个工作线程可能同时选择相同的父节点进行修改。OpenTreeSearch 使用 \textbf{虚拟损失}机制：当工作线程选择一个节点进行扩展时，该节点的虚拟损失计数递增，临时降低其他工作线程选择它的概率。评估完成后，虚拟损失递减。这避免了冗余探索并提高了并行效率。
 
-\paragraph{Results.}
-On the circle packing problem ($n=26$), OpenTreeSearch achieves a score of \textbf{2.632} in \textbf{121 iterations}, compared to OpenEvolve's 2.634 in 200 iterations and AlphaEvolve's 2.635. While slightly lower in absolute score, the faster convergence and dramatically simpler configuration (1 vs.\ 9+ hyperparameters) represent a significant practical advantage. The project also provides interactive HTML tree visualization and optional LLM-generated node summaries for interpretability.
+\paragraph{结果。}
+在圆填充问题（$n=26$）上，OpenTreeSearch 在 \textbf{121 次迭代}中获得了 \textbf{2.632} 的分数，而 OpenEvolve 在 200 次迭代中为 2.634，AlphaEvolve 为 2.635。虽然绝对分数略低，但更快的收敛速度和大幅简化的配置（1 vs.\ 9+ 超参数）代表了显著的实践优势。该项目还提供交互式 HTML 树可视化和可选的 LLM 生成节点摘要以提高可解释性。
 
 
-\subsubsection{Comparison of Open-Source Systems}
+\subsubsection{开源系统对比}
 
 \begin{table}[htbp]
 \centering
@@ -438,99 +437,99 @@ ReEvo & Reflective ES & Population & Reflective & Moderate & MIT & Dual-layer re
 \bottomrule
 \end{tabular}
 }
-\caption{Open-source evolutionary code systems. A clear trend toward progressive simplification: from FunSearch's 9+ hyperparameters to OpenTreeSearch's single parameter.}
+\caption{开源进化代码系统。呈现明显的渐进简化趋势：从 FunSearch 的 9+ 超参数到 OpenTreeSearch 的单一参数。}
 \label{tab:opensource-compare}
 \end{table}
 
-The comparison reveals a clear trend toward \textbf{progressive simplification}: FunSearch requires 9+ hyperparameters (number of islands, cluster temperature, reset period, samples per prompt, functions per prompt, etc.), while OpenTreeSearch achieves comparable performance with a single exploration constant. This suggests that search strategy sophistication is less important than LLM quality, a finding discussed further in Section~\ref{sec:ch4-benchmark}.
+对比揭示了向 \textbf{渐进简化}发展的明显趋势：FunSearch 需要 9+ 超参数（岛屿数量、聚类温度、重置周期、每个提示的样本数、每个提示的函数数等），而 OpenTreeSearch 以单一的探索常数实现了可比的性能。这表明搜索策略的复杂度不如 LLM 质量重要，这一发现在第~\ref{sec:ch4-benchmark}~节中进一步讨论。
 
-A second trend is the \textbf{diversification of mutation strategies}: FunSearch uses simple LLM prompting; LLaMEA adds diff editing and HPO; ReEvo adds dual-layer reflection; OpenTreeSearch replaces the entire population model with tree search. Each approach captures a different insight about how to make LLM-driven mutation more effective: diff editing reduces cost, reflection improves direction, tree search balances exploration. The optimal combination of these strategies remains an open question, but the trend toward modular, composable mutation operators is clear.
+第二个趋势是 \textbf{变异策略的多样化}：FunSearch 使用简单的 LLM 提示；LLaMEA 添加了差异编辑和 HPO；ReEvo 添加了双层反思；OpenTreeSearch 用树搜索替换了整个种群模型。每种方法捕获了关于如何使 LLM 驱动的变异更有效的不同洞察：差异编辑降低成本，反思改善方向，树搜索平衡探索。这些策略的最优组合仍然是一个开放问题，但向模块化、可组合变异算子发展的趋势是清晰的。
 
 
-\subsection{Evolutionary Operator Design Principles}
+\subsection{进化算子设计原则}
 \label{sec:ch4-operator-design}
 
-Across the 17 systems surveyed, we can extract several recurring design principles for the evolutionary operators---the mechanisms that propose new candidates from existing ones.
+在我们调研的 17 个系统中，可以提取出若干关于进化算子——即从现有候选方案提出新方案的机制——的反复出现的设计原则。
 
-\subsubsection{Mutation Operator Design}
+\subsubsection{变异算子设计}
 
-The mutation operator is responsible for proposing modifications to existing solutions. In classical evolutionary computation, mutation is typically random (e.g., bit-flip mutation in genetic algorithms, Gaussian perturbation in evolution strategies). In LLM-based systems, mutation becomes \textbf{semantically informed}: the LLM receives the current solution, contextual information (performance scores, error messages, improvement trajectory), and generates a modified version.
+变异算子负责对现有解提出修改建议。在经典进化计算中，变异通常是随机的（例如，遗传算法中的位翻转变异，进化策略中的高斯扰动）。在基于 LLM 的系统中，变异变为 \textbf{语义信息的}：LLM 接收当前解、上下文信息（性能分数、错误消息、改进轨迹），并生成修改版本。
 
-\paragraph{Informed Mutation vs.\ Random Mutation.}
-The key advantage of LLM-based mutation is its ability to propose \emph{targeted} improvements. When FunSearch evolves a cap set function, the LLM does not randomly perturb characters; it reads the current function, understands its mathematical structure, and proposes modifications that address specific weaknesses (e.g., ``the function performs poorly for odd $n$''). This informed mutation dramatically increases the probability that each proposed change improves performance, reducing the number of evaluations required.
+\paragraph{有信息变异 vs.\ 随机变异。}
+基于 LLM 的变异的关键优势在于其提出 \emph{有针对性的}改进的能力。当 FunSearch 进化 cap set 函数时，LLM 不会随机扰动字符；它阅读当前函数，理解其数学结构，并提出解决特定弱点的修改（例如，``该函数对奇数 $n$ 表现不佳''）。这种有信息的变异大幅提高了每次提议的变更改善性能的概率，减少了所需的评估次数。
 
-\paragraph{Mutation Granularity.}
-Systems differ in the granularity of mutations they support. At the coarsest end, DGM and ADAS propose complete agent architectures as mutations---replacing entire control flows and decision-making structures. At the finest end, LLaMEA's diff mode proposes small SEARCH/REPLACE patches that modify specific code sections. The optimal granularity depends on the problem: coarse mutations explore faster but are less sample-efficient, while fine-grained mutations converge faster but may get stuck in local optima. A hybrid approach, where the system adapts mutation granularity based on search progress, remains unexplored.
+\paragraph{变异粒度。}
+各系统支持的变异粒度不同。在最粗的一端，DGM 和 ADAS 将完整的智能体架构作为变异提出——替换整个控制流和决策结构。在最细的一端，LLaMEA 的差异模式提出修改特定代码段的小型 SEARCH/REPLACE 补丁。最优粒度取决于具体问题：粗粒度变异探索更快但样本效率较低，而细粒度变异收敛更快但可能陷入局部最优。一种混合方法——即系统根据搜索进度自适应调整变异粒度——仍有待探索。
 
-\subsubsection{Crossover Operator Design}
+\subsubsection{交叉算子设计}
 
-Crossover combines features from two or more parent solutions to produce offspring. In classical evolutionary computation, crossover is a well-studied operation (one-point, two-point, uniform crossover). In LLM-based systems, crossover becomes a \textbf{semantic synthesis} operation: the LLM receives multiple parent solutions and produces a new solution that combines their strengths.
+交叉将两个或多个父代解的特征组合以产生后代。在经典进化计算中，交叉是经过充分研究的操作（单点、两点、均匀交叉）。在基于 LLM 的系统中，交叉变为一种 \textbf{语义合成}操作：LLM 接收多个父代解，并产生一个结合其优势的新解。
 
-\paragraph{Challenges of LLM Crossover.}
-Unlike classical crossover, where the operation is well-defined for any pair of parents (simply swap genetic material at a crossover point), LLM crossover requires the model to understand the \emph{semantic content} of each parent and identify complementary features. This is more challenging but also more powerful: the LLM can identify that Parent A has a clever loop structure while Parent B has a better termination condition, and synthesize a child that combines both. EvoPrompt demonstrates this capability in prompt space; OpenELM extends it to code space.
+\paragraph{LLM 交叉的挑战。}
+与经典交叉（对任意父代对操作定义明确——只需在交叉点交换遗传物质）不同，LLM 交叉要求模型理解每个父代的 \emph{语义内容}并识别互补特征。这更具挑战性但也更强大：LLM 可以识别父代 A 具有巧妙的循环结构而父代 B 具有更好的终止条件，并合成一个结合两者的子代。EvoPrompt 在提示空间展示了这种能力；OpenELM 将其扩展到代码空间。
 
-\paragraph{When Crossover Helps.}
-Empirically, crossover appears most beneficial when the search space has \emph{modular structure}---where different components of the solution can be independently improved and combined. In FunSearch's cap set experiments, the island model implicitly performs crossover by recombining ideas from different evolutionary lineages through migration. In EvoPrompt, explicit crossover of prompts produces consistent improvements over mutation-only baselines. However, for problems where solutions are highly interdependent (changing one component invalidates others), crossover can produce non-functional offspring and may hurt performance.
+\paragraph{交叉何时有效。}
+实证上，当搜索空间具有 \emph{模块化结构}——即解的不同组件可以独立改进和组合——时，交叉最为有益。在 FunSearch 的 cap set 实验中，岛屿模型通过迁移隐式地执行交叉，重新组合来自不同进化谱系的思想。在 EvoPrompt 中，提示的显式交叉相对于仅变异的基线产生了一致的改进。然而，对于解高度相互依赖的问题（改变一个组件使其他组件失效），交叉可能产生非功能性后代并可能损害性能。
 
-\subsubsection{Selection Pressure Design}
+\subsubsection{选择压力设计}
 
-Selection determines which candidates survive to the next generation. The surveyed systems employ a range of selection strategies:
+选择决定哪些候选方案存活到下一代。所调研的系统采用了多种选择策略：
 
 \begin{itemize}
-    \item \textbf{Elitist selection} (OPRO, EvoPrompt GA): Only the top-$K$ candidates are retained. Simple and effective for hill-climbing, but risks premature convergence.
-    \item \textbf{Quality-Diversity selection} (FunSearch via clustering, AlphaEvolve via MAP-Elites, OpenELM): Candidates are selected based on both quality and behavioral diversity, ensuring the population covers a wide range of solution types. This is more robust but requires defining behavioral descriptors.
-    \item \textbf{Tournament selection} (EvoPrompt GA): Small random subsets compete, with the winner selected. Provides adjustable selection pressure through tournament size.
-    \item \textbf{Monotonic archive} (DGM): All candidates are retained, with selection pressure applied through sampling probability rather than elimination. Preserves stepping stones at the cost of unbounded archive growth.
-    \item \textbf{PUCT selection} (OpenTreeSearch): Balances exploitation (selecting high-scoring nodes) with exploration (visiting less-explored branches) using the PUCT formula, adapted from Monte Carlo tree search. Requires only a single hyperparameter $C$.
+    \item \textbf{精英选择}（OPRO, EvoPrompt GA）：仅保留前 $K$ 个候选。简单且适用于爬山法，但存在过早收敛的风险。
+    \item \textbf{质量-多样性选择}（FunSearch 通过聚类，AlphaEvolve 通过 MAP-Elites，OpenELM）：候选基于质量和行为多样性同时进行选择，确保种群覆盖广泛的解类型。这更具鲁棒性但需要定义行为描述符。
+    \item \textbf{锦标赛选择}（EvoPrompt GA）：小型随机子集竞争，胜者被选中。通过锦标赛大小提供可调节的选择压力。
+    \item \textbf{单调归档}（DGM）：所有候选都被保留，选择压力通过采样概率而非淘汰施加。以无界归档增长为代价保留垫脚石。
+    \item \textbf{PUCT 选择}（OpenTreeSearch）：使用源自蒙特卡洛树搜索的 PUCT 公式，平衡利用（选择高分节点）与探索（访问较少探索的分支）。仅需单一超参数 $C$。
 \end{itemize}
 
-The choice of selection strategy interacts with the mutation operator: strong selection pressure (elitist) combined with conservative mutations converges quickly but may miss global optima, while weak selection pressure (archive-based) combined with aggressive mutations explores broadly but converges slowly. The most successful systems (FunSearch, AlphaEvolve, DGM) use strategies that balance quality and diversity.
+选择策略的选择与变异算子相互作用：强选择压力（精英式）结合保守变异收敛快但可能错过全局最优，而弱选择压力（归档式）结合激进变异探索广泛但收敛缓慢。最成功的系统（FunSearch、AlphaEvolve、DGM）使用平衡质量和多样性的策略。
 
 
-\subsection{Benchmark Comparison and Cross-Cutting Analysis}
+\subsection{基准比较与跨领域分析}
 \label{sec:ch4-benchmark}
 
-This section provides a systematic comparison of all surveyed systems, identifies common patterns, and analyzes scaling laws that govern self-evolution performance.
+本节对所有调研系统进行系统比较，识别共同模式，并分析控制自进化性能的扩展规律。
 
-\subsubsection{Detailed Benchmark Results}
+\subsubsection{详细基准结果}
 
-To complement the qualitative comparison in Table~\ref{tab:system-compare-full}, we provide detailed quantitative results for the most commonly reported benchmarks across surveyed systems.
+为补充表~\ref{tab:system-compare-full} 中的定性比较，我们提供了调研系统中最常报告的基准测试的详细定量结果。
 
-\paragraph{HumanEval (Code Generation).}
-HumanEval~\citep{chen2021humaneval} is the most widely reported benchmark in the self-evolution literature, measuring the pass@1 rate of generated Python functions against unit tests:
+\paragraph{HumanEval（代码生成）。}
+HumanEval~\citep{chen2021humaneval} 是自进化文献中最广泛报告的基准，测量生成的 Python 函数针对单元测试的 pass@1 率：
 \begin{itemize}
-    \item \textbf{Reflexion}: \textbf{91\%} pass@1 (with GPT-3.5 backbone), surpassing GPT-4's 80\% at the time of publication. The improvement is achieved through iterative reflection where failed attempts are analyzed and converted into natural language summaries.
-    \item \textbf{SelfEvolve}: \textbf{85.98\%} pass@1 (with ChatGPT backbone), up from 74.39\% baseline. The two-stage pipeline (self-knowledge generation + execution feedback) accounts for most of the improvement.
-    \item \textbf{Agent Symbolic Learning}: \textbf{73.2\%} pass@1, up from 68.3\% baseline. The improvement comes from optimizing the agent's prompts and tool descriptions via language backpropagation.
-    \item \textbf{Absolute Zero (AZR-Coder-7B)}: \textbf{SOTA at 7B parameter scale} on HumanEval+, achieved with zero external training data. The model's self-play training generates and solves coding tasks, creating a curriculum that progressively increases in difficulty.
+    \item \textbf{Reflexion}：\textbf{91\%} pass@1（GPT-3.5 骨干），超过了当时 GPT-4 的 80\%。改进通过迭代反思实现，失败的尝试被分析并转化为自然语言摘要。
+    \item \textbf{SelfEvolve}：\textbf{85.98\%} pass@1（ChatGPT 骨干），从 74.39\% 基线提升。两阶段流水线（自知识生成 + 执行反馈）贡献了大部分改进。
+    \item \textbf{Agent Symbolic Learning}：\textbf{73.2\%} pass@1，从 68.3\% 基线提升。改进来自通过语言反向传播优化智能体的提示和工具描述。
+    \item \textbf{Absolute Zero (AZR-Coder-7B)}：在 HumanEval+ 上达到 \textbf{7B 参数规模的 SOTA}，无需外部训练数据。模型的自博弈训练生成并解决编码任务，创建一个渐进增加难度的课程。
 \end{itemize}
-These results demonstrate that self-evolution techniques can extract significantly more capability from a given LLM backbone than direct prompting, with Reflexion's 91\% being the highest reported pass@1 for a non-frontier model.
+这些结果表明，自进化技术可以从给定的 LLM 骨干中提取比直接提示显著更多的能力，Reflexion 的 91\% 是非前沿模型报告的最高 pass@1。
 
-\paragraph{Mathematical Reasoning (GSM8K, MATH).}
+\paragraph{数学推理（GSM8K, MATH）。}
 \begin{itemize}
-    \item \textbf{OPRO}: Discovered the ``take a deep breath'' prompt achieving \textbf{80\%} on GSM8K with PaLM 2, up from 34\% baseline---a 135\% relative improvement from prompt optimization alone.
-    \item \textbf{Agent Symbolic Learning}: \textbf{60.7\%} on MATH (with GPT-4 backbone), up from 56.0\% baseline. Outperforms DSPy's 48.4\%, demonstrating that language backpropagation is more effective than prompt chaining for mathematical reasoning.
-    \item \textbf{Absolute Zero}: Achieves mathematical reasoning capability on GSM8K and MATH despite receiving zero math training data, demonstrating transfer from code self-play.
-\end{itemize}
-
-\paragraph{Agent Benchmarks.}
-\begin{itemize}
-    \item \textbf{SWE-bench} (real-world software engineering): DGM achieves \textbf{50.0\%} verified, up from 20.0\% baseline---the largest single-system improvement reported on this benchmark.
-    \item \textbf{HotPotQA} (multi-hop QA): G\"{o}del Agent achieves \textbf{+8--15\%} F1 improvement; Agent Symbolic Learning achieves F1 \textbf{36.2 $\rightarrow$ 39.1}, outperforming DSPy (37.4).
-    \item \textbf{AlfWorld} (text interaction): Reflexion achieves \textbf{97\%} success vs.\ 75\% ReAct baseline.
-    \item \textbf{AlpacaEval 2.0} (instruction following): Self-Rewarding LM (Llama-3-8B) improves from \textbf{22.9\%} to \textbf{39.4\%} via iterative self-rewarding with DPO.
+    \item \textbf{OPRO}：发现了 ``深呼吸'' 提示，在 PaLM 2 上的 GSM8K 达到 \textbf{80\%}，从 34\% 基线提升——仅通过提示优化就获得了 135\% 的相对改进。
+    \item \textbf{Agent Symbolic Learning}：MATH 上 \textbf{60.7\%}（GPT-4 骨干），从 56.0\% 基线提升。优于 DSPy 的 48.4\%，表明语言反向传播在数学推理中比提示链更有效。
+    \item \textbf{Absolute Zero}：尽管未接收任何数学训练数据，在 GSM8K 和 MATH 上实现了数学推理能力，展示了从代码自博弈的迁移。
 \end{itemize}
 
-\paragraph{Code Evolution Benchmarks.}
+\paragraph{智能体基准测试。}
 \begin{itemize}
-    \item \textbf{Circle Packing} ($n=26$): AlphaEvolve 2.635, OpenEvolve 2.634 (200 iter), OpenTreeSearch \textbf{2.632} (121 iter). The close scores despite vastly different search strategies support the ``LLM quality $>$ search sophistication'' observation.
-    \item \textbf{Matrix Multiplication} ($4\times 4$ complex): AlphaEvolve achieves \textbf{48 multiplications}, the first improvement over Strassen's 49 in 56 years.
-    \item \textbf{Combinatorial Optimization} (TSP, CVRP, BPP): ReEvo consistently discovers heuristics outperforming human-designed baselines across all tested problems.
-    \item \textbf{BBOB} (Black-Box Optimization Benchmarking): LLaMEA automatically discovers optimization algorithms competitive with hand-crafted methods across 24 test functions.
+    \item \textbf{SWE-bench}（真实世界软件工程）：DGM 达到 \textbf{50.0\%} 已验证，从 20.0\% 基线提升——这是该基准上报告的最大单一系统改进。
+    \item \textbf{HotPotQA}（多跳问答）：G\"{o}del Agent 达到 \textbf{+8--15\%} F1 改进；Agent Symbolic Learning 达到 F1 \textbf{36.2 $\rightarrow$ 39.1}，优于 DSPy（37.4）。
+    \item \textbf{AlfWorld}（文本交互）：Reflexion 达到 \textbf{97\%} 成功率 vs.\ 75\% ReAct 基线。
+    \item \textbf{AlpacaEval 2.0}（指令跟随）：Self-Rewarding LM（Llama-3-8B）通过迭代自奖励 DPO 从 \textbf{22.9\%} 提升至 \textbf{39.4\%}。
 \end{itemize}
 
-\paragraph{Minecraft (Voyager).}
-Voyager discovers \textbf{3.3$\times$ more unique items} (42 vs.\ 13 for the strongest baseline), reaches technology tree milestones \textbf{15.3$\times$ faster}, and successfully traverses diverse biomes. The skill library accumulates $\sim$40 reusable code modules over a full playthrough, demonstrating the value of compositional skill acquisition in open-ended environments.
+\paragraph{代码进化基准测试。}
+\begin{itemize}
+    \item \textbf{圆填充}（$n=26$）：AlphaEvolve 2.635，OpenEvolve 2.634（200 次迭代），OpenTreeSearch \textbf{2.632}（121 次迭代）。尽管搜索策略差异巨大但分数接近，支持了``LLM 质量 $>$ 搜索复杂度''的观察。
+    \item \textbf{矩阵乘法}（$4\times 4$ 复数）：AlphaEvolve 达到 \textbf{48 次乘法}，这是 56 年来首次超过 Strassen 的 49 次的改进。
+    \item \textbf{组合优化}（TSP, CVRP, BPP）：ReEvo 在所有测试问题上一致发现优于人工设计基线的启发式方法。
+    \item \textbf{BBOB}（Black-Box Optimization Benchmarking）：LLaMEA 在 24 个测试函数上自动发现与人工设计方法具有竞争力的优化算法。
+\end{itemize}
+
+\paragraph{Minecraft（Voyager）。}
+Voyager 发现了 \textbf{3.3$\times$ 更多独特物品}（42 vs.\ 最强基线的 13），以 \textbf{15.3$\times$ 更快}的速度达到科技树里程碑，并成功穿越各种生态群落。技能库在整个游戏过程中积累了 $\sim$40 个可复用代码模块，展示了在开放环境中组合式技能获取的价值。
 
 \begin{table}[htbp]
 \centering
@@ -559,29 +558,29 @@ Self-Rewarding & Weights & Iter.\ DPO & $\times$ & Moderate & AlpacaEval & 22.9$
 \bottomrule
 \end{tabular}
 }
-\caption{Comprehensive comparison of 17 self-evolving AI systems. ``Open'' indicates open-source availability. ``Transfer'' rates cross-domain generalization capability.}
+\caption{17 个自进化 AI 系统的综合比较。``Open'' 表示开源可用性。``Transfer'' 评估跨领域泛化能力。}
 \label{tab:system-compare-full}
 \end{table}
 
 
-\subsubsection{Evolution Target Taxonomy}
+\subsubsection{进化目标分类}
 
-The surveyed systems can be categorized by their evolution target along a spectrum of increasing scope and risk:
+调研系统可按其进化目标沿范围和风险递增的谱线进行分类：
 
 \begin{enumerate}
-    \item \textbf{Prompt level} (OPRO, EvoPrompt): The evolution target is discrete text---instructions, prompts, or strategies. Evaluation is straightforward (task accuracy on validation sets). The scope of improvement is limited to better instructions for existing capabilities, but the risk is minimal since prompts are easily inspected and reverted.
+    \item \textbf{提示级别}（OPRO, EvoPrompt）：进化目标是离散文本——指令、提示或策略。评估直截了当（验证集上的任务准确率）。改进范围限于为现有能力提供更好的指令，但风险最小，因为提示易于检查和回滚。
 
-    \item \textbf{Code level} (FunSearch, AlphaEvolve, ReEvo, OpenTreeSearch): The evolution target is executable code---functions, heuristics, or algorithms. Evaluation requires automated execution environments, and the scope of improvement is much larger (any computable function can be discovered). However, ensuring code safety and correctness becomes a significant challenge.
+    \item \textbf{代码级别}（FunSearch, AlphaEvolve, ReEvo, OpenTreeSearch）：进化目标是可执行代码——函数、启发式方法或算法。评估需要自动化执行环境，改进范围大得多（可以发现任何可计算函数）。然而，确保代码安全性和正确性成为一个重大挑战。
 
-    \item \textbf{Algorithm level} (LLaMEA): The evolution target must generalize across problem instances, not just solve a single instance. Evaluation is expensive (requires testing across many instances), but the resulting algorithms are broadly applicable. LLaMEA's approach of separating structural search (LLM) from parameter tuning (SMAC) is a promising design pattern.
+    \item \textbf{算法级别}（LLaMEA）：进化目标必须在问题实例之间泛化，而非仅解决单一实例。评估成本高昂（需要在多个实例上测试），但产生的算法具有广泛的适用性。LLaMEA 将结构搜索（LLM）与参数调优（SMAC）分离的方法是一个有前景的设计模式。
 
-    \item \textbf{Agent level} (DGM, ADAS, G\"{o}del Agent): The most ambitious target---the agent's own architecture, control flow, and decision-making machinery. The scope of potential improvement is vast (the agent can fundamentally restructure its behavior), but the risks are correspondingly high (unintended behaviors, safety violations, resource consumption). Multi-task evaluation is essential to avoid overfitting.
+    \item \textbf{智能体级别}（DGM, ADAS, G\"{o}del Agent）：最雄心勃勃的目标——智能体自身的架构、控制流和决策机制。潜在改进范围巨大（智能体可以根本性地重构其行为），但风险也相应更高（非预期行为、安全违规、资源消耗）。多任务评估对于避免过拟合至关重要。
 \end{enumerate}
 
-This progression---peripheral (prompts) to core (code, algorithms, architectures) to fully self-improving AI---mirrors the historical development of the field, with each level building on the infrastructure and insights of the previous one.
+这一从外围（提示）到核心（代码、算法、架构）再到完全自改进 AI 的递进过程，反映了该领域的历史发展，每一层级都建立在前一层级的基础设施和洞察之上。
 
 
-\subsubsection{Capability Levels of Self-Evolution}
+\subsubsection{自进化能力等级}
 
 \begin{figure}[htbp]
 \centering
@@ -589,26 +588,26 @@ This progression---peripheral (prompts) to core (code, algorithms, architectures
   level/.style={rectangle, rounded corners=3pt, draw=#1, fill=white, text width=110mm, align=center, minimum height=11mm, font=\small},
   arr/.style={-Stealth, thick, gray!40}
 ]
-\node[level=gray] (l0) at (0,0) {\textbf{Level 0:} Frozen --- No self-improvement capability};
-\node[level=blue!70] (l1) at (0,1.6) {\textbf{Level 1:} Prompt Evolution --- OPRO, EvoPrompt, Reflexion};
-\node[level=green!70] (l2) at (0,3.2) {\textbf{Level 2:} Code Evolution --- FunSearch, AlphaEvolve, LLaMEA};
-\node[level=orange!70] (l3) at (0,4.8) {\textbf{Level 3:} Agent Evolution --- ADAS, DGM, G\"{o}del Agent};
-\node[level=red!70] (l4) at (0,6.4) {\textbf{Level 4:} Recursive Self-Evolution --- Self-referential + open-ended};
+\node[level=gray] (l0) at (0,0) {\textbf{第 0 级：}冻结 --- 无自改进能力};
+\node[level=blue!70] (l1) at (0,1.6) {\textbf{第 1 级：}提示进化 --- OPRO, EvoPrompt, Reflexion};
+\node[level=green!70] (l2) at (0,3.2) {\textbf{第 2 级：}代码进化 --- FunSearch, AlphaEvolve, LLaMEA};
+\node[level=orange!70] (l3) at (0,4.8) {\textbf{第 3 级：}智能体进化 --- ADAS, DGM, G\"{o}del Agent};
+\node[level=red!70] (l4) at (0,6.4) {\textbf{第 4 级：}递归自进化 --- 自指 + 开放式};
 \draw[arr](l0)--(l1); \draw[arr](l1)--(l2); \draw[arr](l2)--(l3); \draw[arr](l3)--(l4);
-\node[font=\scriptsize,text=gray] at (7.5,0) {Safety: $\bigstar\bigstar\bigstar\bigstar\bigstar$};
-\node[font=\scriptsize,text=gray] at (7.5,1.6) {Safety: $\bigstar\bigstar\bigstar\bigstar$};
-\node[font=\scriptsize,text=gray] at (7.5,3.2) {Safety: $\bigstar\bigstar\bigstar$};
-\node[font=\scriptsize,text=gray] at (7.5,4.8) {Safety: $\bigstar\bigstar$};
-\node[font=\scriptsize,text=gray] at (7.5,6.4) {Safety: ?};
+\node[font=\scriptsize,text=gray] at (7.5,0) {安全性：$\bigstar\bigstar\bigstar\bigstar\bigstar$};
+\node[font=\scriptsize,text=gray] at (7.5,1.6) {安全性：$\bigstar\bigstar\bigstar\bigstar$};
+\node[font=\scriptsize,text=gray] at (7.5,3.2) {安全性：$\bigstar\bigstar\bigstar$};
+\node[font=\scriptsize,text=gray] at (7.5,4.8) {安全性：$\bigstar\bigstar$};
+\node[font=\scriptsize,text=gray] at (7.5,6.4) {安全性：?};
 \end{tikzpicture}
-\caption{Self-Evolution Capability Levels. Current systems operate at Levels 1--3. Level 4 (recursive self-evolution, where the system improves its own improvement process) remains theoretical. Higher levels offer greater potential improvement but pose exponentially greater safety challenges.}
+\caption{自进化能力等级。当前系统运行在第 1--3 级。第 4 级（递归自进化，即系统改进自身的改进过程）仍停留在理论层面。更高级别提供更大的潜在改进，但带来指数级增长的安全挑战。}
 \label{fig:ch4-levels}
 \end{figure}
 
-The capability level framework highlights an important observation: \textbf{no current system operates at Level 4}. While DGM and G\"{o}del Agent modify their own code, they do not modify the \emph{evolution process itself}---the sampling strategy, the evaluation criteria, or the modification mechanisms. Achieving Level 4 would require systems that can improve their own improvement algorithms, creating a truly recursive self-evolution loop.
+能力等级框架突出了一个重要观察：\textbf{目前没有系统在第 4 级运行}。虽然 DGM 和 G\"{o}del Agent 修改自身的代码，但它们并不修改 \emph{进化过程本身}——采样策略、评估标准或修改机制。实现第 4 级需要能够改进自身改进算法的系统，从而创建一个真正的递归自进化循环。
 
 
-\subsubsection{Search Strategy Taxonomy}
+\subsubsection{搜索策略分类}
 
 \begin{table}[htbp]
 \centering
@@ -621,42 +620,42 @@ The capability level framework highlights an important observation: \textbf{no c
 \textbf{RL-based} & Absolute Zero & (gap) \\
 \bottomrule
 \end{tabular}
-\caption{Search strategy taxonomy across self-evolving AI systems. The population-based RL cell represents a notable gap in the current landscape---no system yet combines population-based evolutionary search with reinforcement learning for agent self-evolution.}
+\caption{自进化 AI 系统的搜索策略分类。基于种群的 RL 单元代表当前领域的一个显著缺口——尚无系统将基于种群的进化搜索与强化学习相结合用于智能体自进化。}
 \label{tab:search-strategy}
 \end{table}
 
-An important observation from Table~\ref{tab:search-strategy} is the \textbf{population-based RL gap}: no existing system combines the diversity maintenance of population-based evolutionary search with the sample efficiency of reinforcement learning. Such a combination could potentially achieve both broad exploration and rapid convergence, representing a promising research direction.
+表~\ref{tab:search-strategy} 的一个重要观察是 \textbf{基于种群的 RL 缺口}：现有系统没有将基于种群的进化搜索的多样性维持与强化学习的样本效率相结合。这种组合可能同时实现广泛探索和快速收敛，代表了一个有前景的研究方向。
 
 
-\subsubsection{The Evaluation Bottleneck}
+\subsubsection{评估瓶颈}
 
-Across all surveyed systems, the \textbf{evaluator} emerges as the critical bottleneck that fundamentally limits the scope and speed of self-evolution. The pattern is consistent across all system categories:
+在所有调研系统中，\textbf{评估器}成为根本限制自进化范围和速度的关键瓶颈。这一模式在所有系统类别中一致：
 
 \begin{itemize}
-    \item \textbf{FunSearch}: 140 evaluators per 15 samplers (9:1 evaluation-to-generation ratio). Evaluation requires program execution with a 30-second timeout per candidate. For the cap set discovery, each evaluation involves running the candidate function across all test cases ($n = 2$ through $n = 12$), computing the cap set size for each, and comparing against known bounds. The total evaluation time per candidate can exceed 5 minutes for complex problems.
-    \item \textbf{AlphaEvolve}: Relies on domain-specific evaluators for each problem type (matrix multiplication verification, scheduling simulation, mathematical proof checking). Creating these evaluators requires significant human effort. For the Strassen improvement, the evaluator must verify that the evolved algorithm produces correct matrix products for all inputs---a verification that itself requires careful implementation to avoid false positives.
-    \item \textbf{DGM}: Depends on standardized benchmarks (SWE-bench, Polyglot) that require full test suite execution for each agent variant, taking 5--15 minutes per evaluation. Each SWE-bench evaluation involves creating a Docker container, installing dependencies, running the agent on the issue, and executing the project's test suite against the agent's proposed patch.
-    \item \textbf{LLaMEA}: BBOB evaluation requires running the discovered algorithm across multiple function instances (24 functions $\times$ 5 instances $\times$ 2 dimensions = 240 runs per candidate), with the cost scaling quadratically with problem dimensionality. This motivates LLaMEA-HPO's separation of structural and parameter search: SMAC's surrogate model provides cheap approximate evaluation for numerical parameters.
+    \item \textbf{FunSearch}：每 15 个采样器配备 140 个评估器（9:1 评估与生成比）。评估需要程序执行，每个候选有 30 秒超时。对于 cap set 发现，每次评估需要在所有测试用例（$n = 2$ 到 $n = 12$）上运行候选函数，计算每个 cap set 大小，并与已知边界比较。对于复杂问题，每个候选的总评估时间可超过 5 分钟。
+    \item \textbf{AlphaEvolve}：依赖每种问题类型的领域特定评估器（矩阵乘法验证、调度模拟、数学证明检查）。创建这些评估器需要大量人力。对于 Strassen 改进，评估器必须验证进化算法对所有输入产生正确的矩阵乘积——这一验证本身需要仔细实现以避免假阳性。
+    \item \textbf{DGM}：依赖标准化基准（SWE-bench, Polyglot），每个智能体变体需要完整的测试套件执行，每次评估耗时 5--15 分钟。每次 SWE-bench 评估涉及创建 Docker 容器、安装依赖、在 issue 上运行智能体，并针对智能体提出的补丁执行项目测试套件。
+    \item \textbf{LLaMEA}：BBOB 评估需要在多个函数实例上运行发现的算法（24 个函数 $\times$ 5 个实例 $\times$ 2 个维度 = 每个候选 240 次运行），成本随问题维度呈二次增长。这驱动了 LLaMEA-HPO 将结构和参数搜索分离的设计：SMAC 的代理模型为数值参数提供低成本的近似评估。
 \end{itemize}
 
-The evaluation bottleneck has a clear implication: self-evolution is currently limited to domains with automated, inexpensive evaluators. Extending to domains without clear evaluation criteria (creative writing, strategic planning, social interaction) remains a fundamental open problem. Three potential solutions have emerged: (1) \textbf{self-constructing evaluators} as explored by Absolute Zero's self-play mechanism, where the system generates its own evaluation tasks; (2) \textbf{learned surrogates} that predict evaluation scores from program features, pre-filtering candidates before expensive evaluation; and (3) \textbf{human-in-the-loop evaluation} where human judgments are actively sampled to maximize information gain per evaluation. Each approach has tradeoffs: self-constructed evaluators may miss important failure modes, learned surrogates require training data from the expensive evaluation they aim to replace, and human evaluation does not scale.
+评估瓶颈有一个明确的启示：自进化目前局限于具有自动化、低成本评估器的领域。扩展到缺乏明确评估标准的领域（创意写作、战略规划、社交互动）仍然是一个根本性的开放问题。三种潜在解决方案已经浮现：（1）\textbf{自构建评估器}，如 Absolute Zero 自博弈机制所探索的，系统生成自己的评估任务；（2）	extbf{学习代理}，从程序特征预测评估分数，在昂贵评估之前预筛选候选；（3）	extbf{人在环评估}，主动采样人类判断以最大化每次评估的信息增益。每种方法都有权衡：自构建评估器可能遗漏重要的失败模式，学习代理需要来自其旨在替代的昂贵评估的训练数据，人类评估则不可扩展。
 
 
-\subsubsection{Scaling Laws for Self-Evolution}
+\subsubsection{自进化扩展规律}
 
-Three scaling dimensions govern the performance of self-evolving systems:
+三个缩放维度控制着自进化系统的性能：
 
-\paragraph{Iteration Scaling.}
-Performance improvements follow a \textbf{logarithmic scaling} pattern: rapid initial gains followed by diminishing returns. In FunSearch, the most significant cap set improvements occur within the first 25\% of iterations. In DGM, SWE-bench performance jumps from 20\% to $\sim$35\% in the first 10 iterations but requires $\sim$30 more iterations to reach 50\%. This suggests that ``quick wins'' from obvious improvements are captured early, with later improvements requiring increasingly sophisticated structural changes.
+\paragraph{迭代缩放。}
+性能改进遵循 \textbf{对数缩放}模式：快速的初始收益之后是递减的回报。在 FunSearch 中，最重要的 cap set 改进发生在前 25\% 的迭代中。在 DGM 中，SWE-bench 性能在前 10 次迭代中从 20\% 跳至 $\sim$35\%，但需要 $\sim$30 次更多迭代才能达到 50\%。这表明来自明显改进的``快速收益''在早期被捕获，后续改进需要越来越复杂的结构性变化。
 
-\paragraph{LLM Capability Scaling.}
-The relationship between LLM quality and evolution performance appears approximately linear: DGM reports that GPT-4 and Claude significantly outperform GPT-3.5 for code modification quality, with improvements in LLM coding benchmarks translating roughly proportionally to evolution convergence speed. This has an important implication: as foundation models continue to improve, self-evolution quality will improve proportionally. Current results represent a \textbf{lower bound} on future performance.
+\paragraph{LLM能力缩放。}
+LLM 质量与进化性能之间的关系近似线性：DGM 报告 GPT-4 和 Claude 在代码修改质量上显著优于 GPT-3.5，LLM 编码基准的改进大致按比例转化为进化收敛速度。这有一个重要启示：随着基础模型的持续改进，自进化质量将按比例提升。当前结果代表了未来性能的 \textbf{下界}。
 
-\paragraph{Evaluation Budget Scaling.}
-FunSearch's 1:9 sampler-to-evaluator ratio indicates that evaluation costs approximately 9$\times$ more than generation. For real-world interaction domains (robotics, scientific experiments, user studies), this ratio becomes extreme---potentially 100:1 or higher. This motivates two approaches: (1) \textbf{surrogate models} that predict evaluation scores from program features, pre-filtering candidates before expensive evaluation; and (2) \textbf{active evaluation} strategies that prioritize evaluating candidates most likely to provide informative feedback.
+\paragraph{评估预算缩放。}
+FunSearch 的 1:9 采样器与评估器比率表明评估成本约为生成的 9$\times$。对于真实世界交互领域（机器人、科学实验、用户研究），这一比率变得极端——可能达到 100:1 或更高。这驱动了两种方法：（1）	extbf{代理模型}，从程序特征预测评估分数，在昂贵评估之前预筛选候选；（2）	extbf{主动评估}策略，优先评估最有可能提供信息反馈的候选。
 
 
-\subsubsection{Timeline of Development}
+\subsubsection{发展时间线}
 
 \begin{figure}[htbp]
 \centering
@@ -674,16 +673,16 @@ FunSearch's 1:9 sampler-to-evaluator ratio indicates that evaluation costs appro
 \node[en,above=8mm] at (10,0){AlphaEvolve\\Strassen improv.};
 \node[en,above=8mm] at (12.5,0){DGM\\SWE-bench 50\%};
 \foreach \x in {0,2.5,5,7.5,10,12.5}{\draw[cn](\x,0.5)--(\x,0.15);}
-\draw[decorate,decoration={brace,amplitude=5pt,mirror}](-0.5,-0.8)--(3.5,-0.8) node[midway,below=6pt,font=\scriptsize]{Phase 1: Reflection \& Prompts};
-\draw[decorate,decoration={brace,amplitude=5pt,mirror}](4,-0.8)--(9,-0.8) node[midway,below=6pt,font=\scriptsize]{Phase 2: Code \& Algorithm Discovery};
-\draw[decorate,decoration={brace,amplitude=5pt,mirror}](9.5,-0.8)--(13.5,-0.8) node[midway,below=6pt,font=\scriptsize]{Phase 3: Agent Self-Evolution};
+\draw[decorate,decoration={brace,amplitude=5pt,mirror}](-0.5,-0.8)--(3.5,-0.8) node[midway,below=6pt,font=\scriptsize]{第 1 阶段：反思与提示};
+\draw[decorate,decoration={brace,amplitude=5pt,mirror}](4,-0.8)--(9,-0.8) node[midway,below=6pt,font=\scriptsize]{第 2 阶段：代码与算法发现};
+\draw[decorate,decoration={brace,amplitude=5pt,mirror}](9.5,-0.8)--(13.5,-0.8) node[midway,below=6pt,font=\scriptsize]{第 3 阶段：智能体自进化};
 \end{tikzpicture}
-\caption{Timeline of self-evolving AI systems (2023--2026). Phase 1 (2023--early 2024) established LLM-based reflection and prompt optimization. Phase 2 (mid-2024--early 2025) extended to code and algorithm discovery with mathematical breakthroughs. Phase 3 (2025--2026) targets agent-level self-evolution with systems that modify their own architectures.}
+\caption{自进化 AI 系统的发展时间线（2023--2026）。第一阶段（2023--2024 年初）建立了基于 LLM 的反思和提示优化。第二阶段（2024 年中--2025 年初）扩展到代码和算法发现并取得数学突破。第三阶段（2025--2026）目标是智能体级自进化，系统能修改自身架构。}
 \label{fig:ch4-timeline}
 \end{figure}
 
 
-\subsubsection{Five Evolution Loops Mapping}
+\subsubsection{五大进化循环映射}
 
 \begin{table}[htbp]
 \centering
@@ -706,153 +705,153 @@ Reflexion & & $\checkmark$ & $\checkmark$ & $\checkmark$ & \\
 \bottomrule
 \end{tabular}
 }
-\caption{Mapping to the Five Evolution Loops framework. All systems employ Search and Evaluator loops; advanced systems add Reflection. Population-level evolution (maintaining diverse candidate sets) is used by approximately half the systems. No system activates all five loops simultaneously---their integration represents a research frontier.}
+\caption{映射到五大进化循环框架。所有系统都使用搜索和评估循环；高级系统增加了反思。约一半的系统使用种群级进化（维护多样化的候选集合）。没有系统同时激活所有五个循环——它们的整合代表了研究前沿。}
 \label{tab:loop-mapping}
 \end{table}
 
-The mapping in Table~\ref{tab:loop-mapping} reveals that \textbf{all systems employ Search and Evaluator loops}---these are the minimum requirements for evolutionary self-improvement. Reflection is added by more advanced systems (ReEvo, DGM, ADAS, G\"{o}del Agent, Reflexion) that analyze past performance to guide future search. Population-level evolution is employed by systems that benefit from maintaining diverse candidate sets (FunSearch, AlphaEvolve, LLaMEA, DGM, ReEvo). Notably, \textbf{no system activates all five loops simultaneously}, suggesting that their full integration---where a system manages its own specifications, search strategies, evaluators, reflection mechanisms, and population diversity in a unified framework---represents an important research frontier.
+表~\ref{tab:loop-mapping} 的映射揭示了 \textbf{所有系统都使用搜索和评估循环}——这是进化式自改进的最低要求。反思由更高级的系统（ReEvo、DGM、ADAS、G\"{o}del Agent、Reflexion）添加，这些系统分析过去的表现以指导未来搜索。种群级进化由从维护多样化候选集合中受益的系统（FunSearch、AlphaEvolve、LLaMEA、DGM、ReEvo）采用。值得注意的是，\textbf{没有系统同时激活所有五个循环}，这表明它们的完整整合——即系统在统一框架中管理自身的规约、搜索策略、评估器、反思机制和种群多样性——代表了一个重要的研究前沿。
 
 
-\subsubsection{Cross-Cutting Observations}
+\subsubsection{跨领域观察}
 
-\paragraph{1. LLM Quality Matters More Than Search Sophistication.}
-A striking empirical finding is that FunSearch (with 9+ hyperparameters and a complex island model) achieves approximately the same performance as OpenTreeSearch (with a single hyperparameter) on shared benchmarks like circle packing. Similarly, OPRO's simple hill-climbing approach discovers prompt quality comparable to EvoPrompt's more sophisticated GA/DE framework. This suggests that the quality of the LLM mutation operator dominates the sophistication of the search algorithm: better LLMs yield higher returns than more complex search strategies. We hypothesize that this occurs because LLM quality determines the ``step size'' and direction of each mutation---a high-quality LLM proposes improvements that move toward the global optimum, while a low-quality LLM proposes random or counterproductive changes that no amount of search sophistication can compensate for. This has a practical implication: researchers should invest in better LLM prompting and selection before tuning evolutionary algorithm parameters.
+\paragraph{1. LLM质量比搜索复杂度更重要。}
+一个引人注目的实证发现是，FunSearch（具有 9+ 超参数和复杂的岛屿模型）与 OpenTreeSearch（单一超参数）在圆填充等共享基准上达到大致相同的性能。类似地，OPRO 的简单爬山法发现的提示质量与 EvoPrompt 更复杂的 GA/DE 框架相当。这表明 LLM 变异算子的质量主导了搜索算法的复杂度：更好的 LLM 比更复杂的搜索策略带来更高的回报。我们假设这是因为 LLM 质量决定了每次变异的``步长''和方向——高质量的 LLM 提出的改进趋向全局最优，而低质量的 LLM 提出随机或适得其反的变更，无论搜索复杂度多高都无法补偿。这有一个实际启示：研究者应在调整进化算法参数之前，优先投资于更好的 LLM 提示和选择。
 
-\paragraph{2. Transfer Capability is the Key Differentiator.}
-ADAS demonstrates the strongest cross-domain transfer (ARC $\rightarrow$ GFootball), while AlphaEvolve shows strong within-domain but limited cross-domain transfer. Systems that learn general principles (effective prompt decomposition, error recovery patterns) rather than task-specific tricks provide greater practical value because the search cost amortizes across applications. Overfitting to specific benchmarks limits real-world utility.
+\paragraph{2. 迁移能力是关键区分因素。}
+ADAS 展示了最强的跨领域迁移（ARC $\rightarrow$ GFootball），而 AlphaEvolve 展示了强领域内但有限的跨领域迁移。学习通用原则（有效的提示分解、错误恢复模式）而非特定任务技巧的系统提供更大的实用价值，因为搜索成本在多个应用间摊销。对特定基准的过拟合限制了真实世界的实用性。
 
-\paragraph{3. Safety Scales with Evolution Target.}
-The risk profile increases sharply along the evolution target spectrum: prompt-level evolution carries approximately zero risk (prompts are easily inspectable and reversible); code-level evolution carries moderate risk (generated code may contain bugs or security vulnerabilities); agent-level evolution carries high risk (modified agents may develop unintended behaviors that are difficult to detect before deployment). This escalating risk profile motivates proportionally stronger safety measures at each level.
+\paragraph{3. 安全性随进化目标而扩展。}
+风险概况沿进化目标谱线急剧增加：提示级进化的风险接近零（提示易于检查和回滚）；代码级进化具有中等风险（生成的代码可能包含漏洞或安全缺陷）；智能体级进化具有高风险（修改后的智能体可能发展出在部署前难以检测的非预期行为）。这种递增的风险概况促使在每个层级采取成比例的更强安全措施。
 
-\paragraph{4. Open-Source Systems Are Converging on Core Ideas.}
-LLaMEA approximates AlphaEvolve's functionality as an open-source alternative; OpenTreeSearch matches its performance with simpler search; ReEvo adds reflection as a differentiator. This convergence suggests that the core ideas of evolutionary code discovery are now well-understood, and future progress will come from applications, scaling, and novel capabilities rather than fundamental algorithmic innovation. The convergence pattern is reminiscent of the open-source LLM ecosystem, where the gap between proprietary and open models has narrowed rapidly as core techniques (transformer architecture, RLHF, instruction tuning) become widely understood. We expect a similar trajectory for evolutionary AI systems: the current gap between AlphaEvolve (closed, Google-scale infrastructure) and LLaMEA/OpenTreeSearch (open, academic-scale infrastructure) will continue to narrow.
+\paragraph{4. 开源系统正在收敛于核心理念。}
+LLaMEA 作为开源替代方案逼近了 AlphaEvolve 的功能；OpenTreeSearch 以更简单的搜索匹配了其性能；ReEvo 以反思作为差异化特性。这种收敛表明，进化式代码发现的核心理念现在已被充分理解，未来的进步将来自应用、扩展和新能力而非基础算法创新。这一收敛模式让人联想到开源 LLM 生态系统，随着核心技术（Transformer 架构、RLHF、指令调优）被广泛理解，专有模型与开源模型之间的差距迅速缩小。我们预计进化 AI 系统也将呈现类似的轨迹：AlphaEvolve（闭源，Google 规模基础设施）与 LLaMEA/OpenTreeSearch（开源，学术规模基础设施）之间的当前差距将继续缩小。
 
-\paragraph{5. Evaluation Remains the True Bottleneck.}
-All impressive results to date come from domains with automated evaluation: mathematics (formal verification), code generation (test suites), optimization (objective functions), and games (score functions). Extending self-evolution to domains without clear, automated evaluation criteria remains the most important open problem.
-
-
-\subsubsection{The Role of Foundation Models}
-
-A critical factor underlying all surveyed systems is the choice of LLM backend. Empirical patterns across systems reveal four regularities. First, there is a clear \textbf{capability gradient}: more capable models (GPT-4, Claude 3.5) consistently propose higher-quality mutations than less capable models (GPT-3.5, Llama 2). The relationship appears roughly linear: a 10\% improvement in LLM coding benchmarks yields approximately 10\% faster evolution convergence. Second, the \textbf{gap narrows} for well-structured search spaces (where even weak models can propose reasonable mutations) and \textbf{widens} for open-ended ones (where strong models' reasoning capabilities provide a decisive advantage). Third, \textbf{code-specialized models} (e.g., CodeLlama, DeepSeek-Coder) outperform general-purpose models at similar scale for code evolution tasks, suggesting that domain-specific pre-training provides meaningful benefits for evolutionary operators. Fourth, the \textbf{cost--performance tradeoff} favors the breadth--depth pattern pioneered by AlphaEvolve: cheap models for high-volume exploration (Gemini Flash / GPT-4o-mini) and expensive models for high-stakes refinement (Gemini Pro / GPT-4).
-
-\paragraph{Transfer Learning in Code Evolution.}
-An under-explored but promising direction is transfer learning between evolution tasks. ADAS demonstrates that agent architectures discovered on one task transfer to others. Similarly, LLaMEA's algorithms discovered on BBOB functions may transfer to practical optimization problems. However, no system currently implements explicit transfer mechanisms between evolution runs. We envision two approaches: (1) \textbf{prompt library transfer}, where successful mutation prompts from one evolution run are reused as initialization for another (analogous to pre-training in neural networks); and (2) \textbf{population seeding}, where high-performing solutions from related problems serve as the initial population for a new problem (analogous to transfer learning in supervised learning). Both approaches could significantly reduce the number of iterations required for convergence on new problems.
-
-\begin{enumerate}
-    \item \textbf{Capability gradient}: More capable models (GPT-4, Claude 3.5) consistently propose higher-quality mutations than less capable models (GPT-3.5, Llama 2). The relationship appears roughly linear: a 10\% improvement in LLM coding benchmarks yields approximately 10\% faster evolution convergence.
-
-    \item \textbf{Gap narrowing}: The capability gap between models narrows for well-structured search spaces (where even weak models can propose reasonable mutations) and widens for open-ended ones (where strong models' reasoning capabilities provide a decisive advantage).
-
-    \item \textbf{Specialization advantage}: Code-specialized models (e.g., CodeLlama, DeepSeek-Coder) outperform general-purpose models at similar scale for code evolution tasks, suggesting that domain-specific pre-training provides meaningful benefits for evolutionary operators.
-
-    \item \textbf{Cost--performance tradeoff}: The breadth--depth pattern pioneered by AlphaEvolve (cheap model for breadth, expensive model for depth) appears to be a general principle. Assigning cheap models to high-volume, low-stakes operations (candidate generation) and expensive models to low-volume, high-stakes operations (reflection, targeted improvement) optimizes the cost--quality frontier.
-\end{enumerate}
-
-These four observations suggest that as foundation models continue to improve, the quality of self-evolution will improve proportionally---making current results a \textbf{lower bound} on future performance rather than an upper limit.
+\paragraph{5. 评估仍是真正的瓶颈。}
+迄今为止所有令人印象深刻的结果都来自具有自动化评估的领域：数学（形式验证）、代码生成（测试套件）、优化（目标函数）和游戏（分数函数）。将自进化扩展到缺乏明确、自动化评估标准的领域仍然是最重要的开放问题。
 
 
-\subsubsection{Practical Considerations for Deployment}
+\subsubsection{基础模型的角色}
 
-For practitioners seeking to apply self-evolution systems to real-world problems, several practical considerations emerge from our analysis.
+所有调研系统背后的一个关键因素是 LLM 后端的选择。跨系统的实证模式揭示了四个规律。首先，存在明确的 \textbf{能力梯度}：更强的模型（GPT-4, Claude 3.5）始终比较弱的模型（GPT-3.5, Llama 2）提出更高质量的变异。关系大致呈线性：LLM 编码基准提升 10\% 大约带来进化收敛速度 10\% 的加快。其次，对于结构良好的搜索空间（即使弱模型也能提出合理变异），差距 \textbf{缩小}；对于开放式搜索空间（强模型的推理能力提供决定性优势），差距 \textbf{扩大}。第三，\textbf{代码专业化模型}（例如 CodeLlama, DeepSeek-Coder）在代码进化任务上优于同规模的通用模型，表明领域特定的预训练为进化算子提供了实质性益处。第四，	extbf{成本-性能权衡}倾向于 AlphaEvolve 首创的广度-深度模式：廉价模型用于高量探索（Gemini Flash / GPT-4o-mini），昂贵模型用于高风险精炼（Gemini Pro / GPT-4）。
 
-\paragraph{Cost Management.}
-The dominant cost is LLM API calls for the mutation operator. A typical evolutionary run requires 500--5,000 LLM calls for generation plus 500--10,000 evaluation calls (which may themselves require LLM calls for evaluation in NLP tasks). At current GPT-4 pricing (\$30/1M tokens input, \$60/1M tokens output), a single 1,000-iteration evolution run with 500-token average prompt length costs approximately \$15--75 for generation alone. Strategies for cost reduction include: (1) using cheaper models (GPT-4o-mini, Claude Haiku) for initial exploration and expensive models (GPT-4, Claude Sonnet) for refinement; (2) caching LLM responses for duplicate or near-duplicate prompts; (3) early stopping when improvement plateaus; and (4) LLaMEA-style diff editing to reduce token consumption by 80--90\%.
-
-\paragraph{Evaluation Infrastructure.}
-Building a reliable evaluation pipeline is often more challenging than configuring the evolutionary algorithm. Key considerations include: (1) \textbf{determinism}: evaluators must produce consistent scores for the same candidate across runs; (2) \textbf{isolation}: candidates must be evaluated in sandboxed environments to prevent interference (DGM uses Docker containers, FunSearch uses gVisor); (3) \textbf{throughput}: evaluation speed limits the overall evolution speed, motivating parallel evaluation with virtual loss (OpenTreeSearch) or asynchronous evaluation (FunSearch); (4) \textbf{representativeness}: the evaluation benchmark must reflect the deployment distribution, as evolution will eagerly exploit any mismatch between training and deployment objectives.
-
-\paragraph{Hyperparameter Selection.}
-The surveyed systems range from 1 hyperparameter (OpenTreeSearch) to 9+ (FunSearch). For initial exploration, we recommend starting with minimal configurations (OpenTreeSearch-style PUCT with $C=1.0$, or LLaMEA with default ($\mu$,$\lambda$) = (5,5)) and increasing complexity only if results are unsatisfactory. Key hyperparameters to tune, in order of importance: (1) mutation prompt template (highest impact on quality); (2) population size (affects diversity); (3) selection temperature (affects exploration--exploitation balance); (4) number of LLM candidates per iteration (affects throughput vs.\ quality tradeoff).
-
-\paragraph{Debugging and Interpretability.}
-Evolutionary search can produce surprising results that are difficult to interpret. Several tools aid understanding: (1) OpenTreeSearch's HTML tree visualization shows the full evolutionary history; (2) LLaMEA's code evolution graphs track structural changes across generations; (3) ReEvo's long-term reflection accumulates interpretable knowledge about the problem domain; (4) FunSearch's prompt chains show the improvement trajectory. We recommend always enabling logging and visualization during development, as the evolutionary process itself often reveals insights about the problem structure.
-
-
-\subsubsection{Future Directions}
-
-Based on the gaps identified in our analysis, we identify five priority directions for future research:
+\paragraph{代码进化中的迁移学习。}
+一个尚未充分探索但有前景的方向是进化任务之间的迁移学习。ADAS 表明在一个任务上发现的智能体架构可以迁移到其他任务。类似地，LLaMEA 在 BBOB 函数上发现的算法可能迁移到实际优化问题。然而，目前没有系统实现进化运行之间的显式迁移机制。我们设想两种方法：（1）	extbf{提示库迁移}，即从一个进化运行中成功的变异提示被重用为另一个运行的初始化（类似于神经网络中的预训练）；（2）	extbf{种群播种}，即来自相关问题的优秀解作为新问题的初始种群（类似于监督学习中的迁移学习）。两种方法都可能显著减少新问题上收敛所需的迭代次数。
 
 \begin{enumerate}
-    \item \textbf{Self-constructing evaluators}: Systems that build their own evaluation functions would expand self-evolution to domains currently limited by evaluation bottlenecks. Absolute Zero's self-play is an early step, but general-purpose meta-evaluation frameworks that bootstrap evaluation quality across domains are needed. Such systems could enable self-evolution in creative writing, strategic planning, and social interaction domains where objective evaluation functions do not currently exist. A concrete approach would be to train a meta-evaluator that learns to predict human judgments across tasks, using the evolutionary system's own history as training data: candidates that persisted in the population (suggesting human approval) serve as positive examples, while rejected candidates serve as negative examples. This approach faces a fundamental challenge: the evaluation function must be learned from the same data that the evolutionary system generates, creating a circular dependency that risks reward hacking.
+    \item \textbf{能力梯度}：更强的模型（GPT-4, Claude 3.5）始终比较弱的模型（GPT-3.5, Llama 2）提出更高质量的变异。关系大致呈线性：LLM 编码基准提升 10\% 大约带来进化收敛速度 10\% 的加快。
 
-    \item \textbf{Hierarchical multi-level evolution}: Simultaneous evolution at multiple levels---prompts, code, architectures, and evaluation criteria---with cross-level information flow could unlock synergistic improvements. The five-loop integration gap identified in Table~\ref{tab:loop-mapping} suggests that combining all loop types in a single system would provide capabilities beyond any individual loop. For example, a system might evolve better code at Level 2, use that code to improve its own search strategy at Level 3, and then use the improved search strategy to discover even better code. The technical challenge is managing the complex interactions between levels: a change at one level may invalidate improvements at another level, requiring coordinated updates across the hierarchy.
+    \item \textbf{差距缩小}：模型之间的能力差距在结构良好的搜索空间中缩小（即使弱模型也能提出合理变异），在开放式搜索空间中扩大（强模型的推理能力提供决定性优势）。
 
-    \item \textbf{Sample-efficient evolution}: Current systems require thousands to hundreds of thousands of LLM calls. Bayesian optimization surrogates, transfer learning across related problems, and lightweight ``mutation quality predictors'' that pre-filter candidates before expensive evaluation could reduce this by an order of magnitude. Active evaluation strategies that prioritize the most informative candidates for full evaluation would further improve sample efficiency. The key insight from FunSearch's 1:9 sampler-to-evaluator ratio is that evaluation is the bottleneck, not generation---a mutation quality predictor that achieves even 70\% accuracy in predicting evaluation outcomes would reduce the evaluation budget by approximately 3$\times$ by filtering out likely low-quality candidates before expensive evaluation.
+    \item \textbf{专业化优势}：代码专业化模型（例如 CodeLlama, DeepSeek-Coder）在代码进化任务上优于同规模的通用模型，表明领域特定的预训练为进化算子提供了实质性益处。
 
-    \item \textbf{Safe self-modification}: As systems evolve toward Level 3--4 capability, formal verification of self-modifying code, constrained generation spaces, and alignment-aware evaluation become essential. ``Constitutional evolution'' frameworks that govern the evolutionary process by explicit safety principles---analogous to Constitutional AI's approach for language models---would provide guardrails while preserving the benefits of open-ended search. Specific safety mechanisms include: (1) sandboxed execution with resource limits (memory, time, network); (2) formal verification of critical properties (type safety, termination guarantees); (3) human oversight for high-risk modifications; and (4) rollback mechanisms that restore previous versions if unexpected behaviors emerge.
-
-    \item \textbf{Open-ended evolution}: Current systems optimize toward fixed objectives. Systems that autonomously discover new tasks, challenges, and evaluation criteria would represent a qualitative leap in capability. POET's co-evolution of tasks and agents~\citep{wang2020poet} provides one model for this direction. Intrinsic motivation mechanisms---where the system generates its own objectives based on novelty, surprise, or learning progress---could enable self-directed improvement at the Level 3--4 boundary without requiring externally defined benchmarks. The transition from fixed-objective to open-ended evolution is the most speculative direction but also potentially the most transformative, as it would create systems that continually expand their own capabilities without human intervention.
+    \item \textbf{成本-性能权衡}：AlphaEvolve 首创的广度-深度模式（廉价模型用于广度，昂贵模型用于深度）似乎是一个通用原则。将廉价模型分配给高量、低风险操作（候选生成），昂贵模型分配给低量、高风险操作（反思、定向改进），可以优化成本-质量前沿。
 \end{enumerate}
 
-\subsubsection{Theoretical Considerations}
-
-The empirical success of LLM-based evolutionary systems raises several theoretical questions that remain largely unanswered.
-
-\paragraph{Convergence Guarantees.}
-Classical evolutionary algorithms have well-developed convergence theory under various assumptions (e.g., elitist selection with infinite population size guarantees convergence to the global optimum). However, LLM-based systems violate many classical assumptions: the mutation operator is neither random nor stationary (it depends on the LLM's context window and the prompt construction), the population size is typically very small (5--20 individuals), and the search space is effectively infinite. Developing convergence theory for LLM-based evolutionary systems is an open problem. One promising direction is to treat the LLM as a conditional distribution over mutations and analyze the resulting Markov chain's mixing properties.
-
-\paragraph{No Free Lunch Implications.}
-The No Free Lunch theorem states that no optimization algorithm outperforms all others across all possible problems. This implies that the empirical success of LLM-based evolutionary systems must be due to the LLM's pre-training distribution being well-matched to the distribution of practically relevant problems. Characterizing this match---understanding which problem structures LLM-based evolution handles well and which it handles poorly---would help practitioners select appropriate tools and researchers focus on capability gaps.
-
-\paragraph{Complexity of Evolved Solutions.}
-A concern with evolutionary approaches is that evolved solutions may be complex and difficult to understand, even if they perform well. In classical genetic programming, evolved programs are notoriously difficult to interpret. LLM-based systems partially address this: the LLM's code generation tends to produce more readable code than classical genetic programming's tree-based representations. However, the multi-generational accumulation of mutations can still produce solutions that are difficult to understand. Techniques from explainable AI (attention visualization, concept-based explanations) could be adapted to improve the interpretability of evolved solutions.
-
-\paragraph{Scaling Relationships.}
-Three scaling dimensions interact: (1) LLM capability (measured by coding benchmarks); (2) evaluation budget (number of evaluations allowed); (3) evolution duration (number of iterations). We hypothesize that performance scales as $P \approx \alpha \log(L) \times \log(E) \times \log(I)$, where $L$ is LLM capability, $E$ is evaluation budget, and $I$ is iteration count. Testing this hypothesis would require controlled experiments varying each dimension independently while holding others constant---an expensive but valuable undertaking.
+这四个观察表明，随着基础模型的持续改进，自进化的质量将按比例提升——使当前结果成为未来性能的 \textbf{下界}而非上限。
 
 
-\subsubsection{Synthesis: The State of Self-Evolving AI Systems}
+\subsubsection{部署的实践考量}
 
-Drawing together the analysis across all 17 systems, we can characterize the current state of self-evolving AI along several dimensions.
+对于希望将自进化系统应用于真实世界问题的实践者，我们的分析提出了若干实践考量。
 
-\paragraph{What Works Well.}
-Self-evolution has demonstrated clear value in three categories of domains: (1) \textbf{mathematical and algorithmic discovery}, where FunSearch and AlphaEvolve have produced genuinely new scientific results; (2) \textbf{code generation and software engineering}, where Reflexion, SelfEvolve, and DGM have achieved substantial benchmark improvements; and (3) \textbf{prompt and strategy optimization}, where OPRO and EvoPrompt have automated previously manual processes. In all three categories, the key enabler is the availability of automated, inexpensive evaluation. Where evaluation is cheap and reliable, self-evolution consistently outperforms manual design.
+\paragraph{成本管理。}
+主要成本是变异算子的 LLM API 调用。一次典型的进化运行需要 500--5,000 次 LLM 调用用于生成，加上 500--10,000 次评估调用（在 NLP 任务中评估本身可能也需要 LLM 调用）。按当前 GPT-4 定价（\$30/1M tokens 输入，\$60/1M tokens 输出），一次 1,000 次迭代的进化运行（平均 500 token 提示长度）仅生成成本约为 \$15--75。降低成本的策略包括：（1）使用廉价模型（GPT-4o-mini, Claude Haiku）进行初始探索，昂贵模型（GPT-4, Claude Sonnet）进行精炼；（2）缓存重复或近似重复提示的 LLM 响应；（3）改进停滞时提前停止；（4）LLaMEA 风格的差异编辑以减少 80--90\% 的 token 消耗。
 
-\paragraph{What Remains Challenging.}
-Self-evolution struggles in domains where evaluation is expensive, subjective, or undefined. No system has successfully applied evolutionary self-improvement to: (1) creative tasks (writing, music, art), where quality is subjective and evaluation requires human judgment; (2) strategic decision-making (business strategy, scientific hypothesis generation), where outcomes may take months or years to evaluate; (3) social interaction (negotiation, teaching, therapy), where evaluation requires understanding nuanced human responses. These domains collectively represent the majority of real-world applications, suggesting that the current self-evolution paradigm---which depends on automated evaluation---has fundamental limitations that must be addressed before broad deployment.
+\paragraph{评估基础设施。}
+构建可靠的评估流水线通常比配置进化算法更具挑战性。关键考量包括：（1）	extbf{确定性}：评估器必须对相同候选在不同运行中产生一致的分数；（2）	extbf{隔离}：候选必须在沙盒环境中评估以防止干扰（DGM 使用 Docker 容器，FunSearch 使用 gVisor）；（3）	extbf{吞吐量}：评估速度限制整体进化速度，驱动了带虚拟损失的并行评估（OpenTreeSearch）或异步评估（FunSearch）；（4）	extbf{代表性}：评估基准必须反映部署分布，因为进化会积极利用训练和部署目标之间的任何不匹配。
 
-\paragraph{The Recursive Self-Improvement Gap.}
-Perhaps the most important finding from our survey is the gap between current systems and truly recursive self-improvement. Current systems improve \emph{within} a fixed framework: DGM improves agent code but does not improve its own evolution algorithm; AlphaEvolve discovers better algorithms but does not discover better search strategies. True recursive self-improvement would require the system to modify the very mechanisms that drive improvement---the mutation operator, the selection strategy, the evaluation criteria, and the search architecture. The five-loop integration gap identified in Table~\ref{tab:loop-mapping} quantifies this: no system activates all five evolution loops simultaneously. Closing this gap represents the most important open problem in self-evolving AI.
+\paragraph{超参数选择。}
+调研系统的超参数从 1 个（OpenTreeSearch）到 9+ 个（FunSearch）不等。对于初始探索，我们建议从最小配置开始（OpenTreeSearch 风格的 PUCT，$C=1.0$，或 LLaMEA 默认的 ($\mu$,$\lambda$) = (5,5)），仅在结果不令人满意时增加复杂度。按重要性排序的关键调优超参数：（1）变异提示模板（对质量影响最大）；（2）种群大小（影响多样性）；（3）选择温度（影响探索-利用平衡）；（4）每次迭代的 LLM 候选数（影响吞吐量 vs.\ 质量权衡）。
 
-\paragraph{The Safety Imperative.}
-As self-evolution systems progress from Level 2 (code) to Level 3 (agent) toward Level 4 (recursive), the safety stakes increase dramatically. A system that can modify its own decision-making machinery could potentially modify its own safety constraints, creating a classic AI alignment challenge. The surveyed systems address safety through sandboxing (DGM, FunSearch) and rollback mechanisms (G\"{o}del Agent), but these are reactive measures that catch failures after they occur. Proactive safety measures---formal verification of modifications, constrained generation, and constitutional evolution principles---are urgently needed before self-evolution systems are deployed in high-stakes environments. The field would benefit from a systematic treatment of self-evolution safety analogous to the alignment literature for large language models.
+\paragraph{调试与可解释性。}
+进化搜索可能产生令人惊讶且难以解释的结果。多种工具有助于理解：（1）OpenTreeSearch 的 HTML 树可视化展示完整的进化历史；（2）LLaMEA 的代码进化图跟踪跨代的结构变化；（3）ReEvo 的长期反思积累关于问题领域的可解释知识；（4）FunSearch 的提示链展示改进轨迹。我们建议在开发过程中始终启用日志和可视化，因为进化过程本身经常揭示关于问题结构的洞察。
 
-This chapter has surveyed 17 systems spanning four levels of self-evolution: prompt optimization (OPRO, EvoPrompt), code and algorithm discovery (FunSearch, AlphaEvolve, ReEvo, OpenELM, LLaMEA, OpenTreeSearch), agent self-evolution (DGM, ADAS, G\"{o}del Agent, Agent Symbolic Learning, SelfEvolve, Absolute Zero), and experience-driven improvement (Reflexion, Voyager, Self-Rewarding LM). Three key themes emerge:
+
+\subsubsection{未来方向}
+
+基于我们分析中识别的差距，我们提出五个优先的未来研究方向：
 
 \begin{enumerate}
-    \item The \textbf{Generate--Evaluate--Select} loop is universal, but the sophistication of each component varies dramatically. LLM quality dominates search algorithm sophistication as a predictor of success.
-    \item The \textbf{evaluation bottleneck} is the primary constraint on progress. All breakthrough results come from domains with automated evaluation; extending beyond these domains requires fundamentally new approaches.
-    \item \textbf{Safety concerns scale with evolution target}. The transition from code-level to agent-level self-evolution represents a qualitative increase in risk that demands proportionally stronger safeguards.
+    \item \textbf{自构建评估器}：能够构建自身评估函数的系统将把自进化扩展到目前受评估瓶颈限制的领域。Absolute Zero 的自博弈是早期尝试，但需要跨领域引导评估质量的通用元评估框架。此类系统可以在目前不存在客观评估函数的创意写作、战略规划和社交互动领域实现自进化。一个具体方法是训练一个元评估器，学习跨任务预测人类判断，使用进化系统自身的历史作为训练数据：在种群中持续存在的候选（暗示人类认可）作为正例，被拒绝的候选作为负例。这一方法面临一个根本挑战：评估函数必须从进化系统自身生成的数据中学习，创建了一个有奖励作弊风险的循环依赖。
+
+    \item \textbf{分层多级进化}：在多个层级——提示、代码、架构和评估标准——同时进行进化，并实现跨层级信息流，可以释放协同改进。表~\ref{tab:loop-mapping} 中识别的五循环整合缺口表明，将所有循环类型组合在单一系统中将提供超越任何单一循环的能力。例如，系统可以在第 2 级进化更好的代码，使用该代码在第 3 级改进自身的搜索策略，然后用改进的搜索策略发现更好的代码。技术挑战在于管理层级之间的复杂交互：一个层级的变更可能使另一层级的改进失效，需要在整个层级间进行协调更新。
+
+    \item \textbf{样本高效的进化}：当前系统需要数千到数十万次 LLM 调用。贝叶斯优化代理、跨相关问题的迁移学习以及在昂贵评估之前预筛选候选的轻量``变异质量预测器''可以将调用减少一个数量级。优先选择信息量最大的候选进行完整评估的主动评估策略将进一步提高样本效率。FunSearch 的 1:9 采样器与评估器比率的关键洞察是，评估是瓶颈而非生成——一个达到 70\% 准确率的变异质量预测器可以通过在昂贵评估之前过滤可能低质量的候选，将评估预算减少约 3$\times$。
+
+    \item \textbf{安全的自我修改}：随着系统向第 3--4 级能力进化，自修改代码的形式化验证、受约束的生成空间和感知对齐的评估变得至关重要。``宪法式进化''框架通过显式安全原则管理进化过程——类似于语言模型的 Constitutional AI 方法——将在保留开放式搜索益处的同时提供护栏。具体安全机制包括：（1）带资源限制（内存、时间、网络）的沙盒执行；（2）关键属性的形式化验证（类型安全、终止保证）；（3）高风险修改的人工监督；（4）在出现非预期行为时恢复先前版本的回滚机制。
+
+    \item \textbf{开放式进化}：当前系统朝固定目标优化。能够自主发现新任务、挑战和评估标准的系统将代表能力的质变飞跃。POET 的任务与智能体协同进化~\citep{wang2020poet} 为这一方向提供了一个模型。内在动机机制——即系统基于新颖性、惊奇或学习进度生成自身目标——可以在第 3--4 级边界实现自定向改进，无需外部定义的基准。从固定目标到开放式进化的转变是最具推测性的方向，但也可能是最具变革性的，因为它将创建无需人类干预即能持续扩展自身能力的系统。
 \end{enumerate}
 
-These themes set the stage for the methodological analysis in Chapter~\ref{ch:methods}, which examines the training-time and inference-time techniques that complement the evolutionary approaches discussed here.
+\subsubsection{理论考量}
 
-\subsubsection{Bridging Evolution and Learning}
+基于 LLM 的进化系统的实证成功提出了几个在很大程度上仍未解答的理论问题。
 
-An important observation is the growing convergence between evolutionary self-improvement and learning-based self-improvement. Several systems in this chapter already blur the boundary: Self-Rewarding LM uses evolutionary principles (iterative selection of high-scoring variants) within a training loop (DPO fine-tuning); Absolute Zero combines evolutionary self-play with reinforcement learning; Agent Symbolic Learning applies backpropagation-like optimization to discrete agent components. We identify three hybrid patterns emerging in the literature:
+\paragraph{收敛性保证。}
+经典进化算法在各种假设下有完善的收敛理论（例如，无限种群的精英选择保证收敛到全局最优）。然而，基于 LLM 的系统违反了许多经典假设：变异算子既不是随机的也不是平稳的（它取决于 LLM 的上下文窗口和提示构造），种群规模通常很小（5--20 个个体），搜索空间实际上是无限的。为基于 LLM 的进化系统发展收敛理论是一个开放问题。一个有前景的方向是将 LLM 视为变异上的条件分布，分析所得马尔可夫链的混合性质。
 
-\paragraph{Evolution-Guided Learning.}
-Evolutionary search identifies promising structural changes (e.g., new agent architectures, algorithm templates), which are then refined using gradient-based methods. LLaMEA-HPO exemplifies this pattern: the LLM proposes structural algorithm changes, and SMAC optimizes the numerical parameters. This separation exploits the complementary strengths of each approach: evolutionary search handles discrete, non-differentiable structural decisions, while gradient-based methods efficiently optimize continuous parameters.
+\paragraph{没有免费午餐定理的启示。}
+没有免费午餐定理指出，没有优化算法在所有可能的问题上都优于其他算法。这意味着基于 LLM 的进化系统的实证成功必然是因为 LLM 的预训练分布与实际相关问题的分布良好匹配。刻画这种匹配——理解基于 LLM 的进化处理得好的问题结构和处理得差的结构——将帮助实践者选择合适的工具，帮助研究者聚焦于能力差距。
 
-\paragraph{Learning-Guided Evolution.}
-Machine learning models serve as surrogate evaluators or mutation quality predictors within the evolutionary loop, reducing the number of expensive evaluations required. While no system in our survey fully implements this pattern, the scaling analysis in Section~\ref{sec:ch4-benchmark} suggests that learned surrogate models for candidate quality prediction would significantly reduce the evaluation bottleneck that currently limits all surveyed systems.
+\paragraph{进化解的复杂性。}
+进化方法的一个担忧是，进化的解可能复杂且难以理解，即使它们表现良好。在经典遗传编程中，进化程序的难以解释是众所周知的。基于 LLM 的系统部分解决了这个问题：LLM 的代码生成倾向于产生比经典遗传编程基于树的表示更可读的代码。然而，多代变异的累积仍可能产生难以理解的解。可解释 AI 的技术（注意力可视化、基于概念的解释）可以适配以提高进化解的可解释性。
 
-\paragraph{Co-Evolution of Tasks and Solvers.}
-Absolute Zero's self-play loop, where the task proposer and solver co-evolve, represents a form of co-evolution that has proven powerful in classical evolutionary computation (e.g., competitive co-evolution in game-playing, POET's co-evolution of environments and agents). Extending this co-evolutionary principle to broader self-evolution---where the system simultaneously evolves its tasks, evaluation criteria, and solution strategies---represents a promising direction for achieving open-ended self-improvement.
+\paragraph{缩放关系。}
+三个缩放维度相互作用：（1）LLM 能力（以编码基准衡量）；（2）评估预算（允许的评估次数）；（3）进化持续时间（迭代次数）。我们假设性能按 $P \approx \alpha \log(L) \times \log(E) \times \log(I)$ 缩放，其中 $L$ 是 LLM 能力，$E$ 是评估预算，$I$ 是迭代次数。验证这一假设需要控制实验，独立变化每个维度同时保持其他不变——这是一项昂贵但有价值的工作。
 
 
-\subsubsection{Measuring Openness in Self-Evolution}
+\subsubsection{综合：自进化AI系统的现状}
 
-A crucial but under-explored question is how to measure the \emph{openness} of a self-evolution system---its ability to discover novel solutions, behaviors, or capabilities that were not anticipated by its designers. We propose three dimensions of openness:
+综合所有 17 个系统的分析，我们可以从多个维度刻画自进化 AI 的当前状态。
 
-\paragraph{Solution Novelty.}
-Does the system discover solutions that are qualitatively different from its initial population? FunSearch's cap set discovery scores highly on this dimension: the discovered constructions are mathematically novel, not just incremental improvements over the seed program. In contrast, OPRO's prompt optimization typically discovers incremental variations of known prompting strategies (e.g., ``think step by step'' is a well-known strategy that OPRO rediscovers and refines).
+\paragraph{已取得成功的领域。}
+自进化在三类领域展示了明确价值：（1）	extbf{数学和算法发现}，FunSearch 和 AlphaEvolve 产生了真正新的科学成果；（2）	extbf{代码生成和软件工程}，Reflexion、SelfEvolve 和 DGM 取得了实质性的基准改进；（3）	extbf{提示和策略优化}，OPRO 和 EvoPrompt 自动化了此前手动的过程。在所有三类中，关键推动因素是自动化、低成本评估的可用性。在评估廉价且可靠的领域，自进化始终优于人工设计。
 
-\paragraph{Capability Expansion.}
-Does the system develop capabilities that were not present in the initial agent? DGM and ADAS score highly: evolved agents develop problem-solving strategies (e.g., multi-step verification, error recovery loops) not present in the seed agent. Reflexion and Voyager also expand capabilities through accumulated experience, though the expansion is bounded by the LLM's inherent capabilities.
+\paragraph{仍具挑战的领域。}
+自进化在评估昂贵、主观或未定义的领域中面临困难。没有系统成功将进化式自改进应用于：（1）创意任务（写作、音乐、艺术），其质量是主观的，评估需要人类判断；（2）战略决策（商业策略、科学假设生成），其结果可能需要数月或数年才能评估；（3）社交互动（谈判、教学、治疗），其评估需要理解细微的人类反应。这些领域共同代表了真实世界应用的大部分，表明当前依赖自动化评估的自进化范式存在根本局限性，必须在广泛部署之前加以解决。
 
-\paragraph{Objective Discovery.}
-Does the system autonomously discover new objectives or evaluation criteria? Currently, \textbf{no surveyed system} achieves this dimension. All systems operate within predefined evaluation frameworks: FunSearch optimizes cap set size, AlphaEvolve optimizes multiplication count, DGM optimizes benchmark scores. Objective discovery would require the system to identify new worthwhile goals---a capability that would represent a qualitative leap toward Level 4 self-evolution. Absolute Zero's task proposer is a step in this direction, but its tasks are constrained to code generation with executable verification.
+\paragraph{递归自改进的鸿沟。}
+我们的调研最重要的发现可能是当前系统与真正递归自改进之间的差距。当前系统在固定框架 \emph{内}进行改进：DGM 改进智能体代码但不改进自身的进化算法；AlphaEvolve 发现更好的算法但不发现更好的搜索策略。真正的递归自改进需要系统修改驱动改进的机制本身——变异算子、选择策略、评估标准和搜索架构。表~\ref{tab:loop-mapping} 中识别的五循环整合缺口量化了这一点：没有系统同时激活所有五个进化循环。弥合这一差距代表了自进化 AI 中最重要的开放问题。
+
+\paragraph{安全性的紧迫性。}
+随着自进化系统从第 2 级（代码）向第 3 级（智能体）再到第 4 级（递归）发展，安全风险急剧增加。能够修改自身决策机制的系统可能修改自身的安全约束，造成经典的 AI 对齐挑战。调研系统通过沙盒（DGM, FunSearch）和回滚机制（G\"{o}del Agent）解决安全问题，但这些都是在失败发生后才捕获的被动措施。主动安全措施——修改的形式化验证、受约束的生成和宪法式进化原则——在自进化系统部署到高风险环境之前迫切需要。该领域将受益于类似于大语言模型对齐文献的自进化安全系统性研究。
+
+本章调研了跨越四个自进化层级的 17 个系统：提示优化（OPRO, EvoPrompt），代码和算法发现（FunSearch, AlphaEvolve, ReEvo, OpenELM, LLaMEA, OpenTreeSearch），智能体自进化（DGM, ADAS, G\"{o}del Agent, Agent Symbolic Learning, SelfEvolve, Absolute Zero），以及经验驱动的改进（Reflexion, Voyager, Self-Rewarding LM）。三个关键主题浮现：
+
+\begin{enumerate}
+    \item \textbf{生成--评估--选择}循环是普适的，但每个组件的复杂度差异巨大。LLM 质量作为成功的预测因子主导了搜索算法的复杂度。
+    \item \textbf{评估瓶颈}是进展的主要约束。所有突破性成果都来自具有自动化评估的领域；超越这些领域需要根本性的新方法。
+    \item \textbf{安全问题随进化目标而扩展}。从代码级到智能体级自进化的转变代表了风险的质变增加，需要成比例的更强保障措施。
+\end{enumerate}
+
+这些主题为第~\ref{ch:methods}~章的方法论分析奠定了基础，该章考察了补充此处讨论的进化方法的训练时和推理时技术。
+
+\subsubsection{连接进化与学习}
+
+一个重要的观察是进化式自改进与基于学习的自改进之间日益增长的收敛。本章中多个系统已经模糊了边界：Self-Rewarding LM 在训练循环（DPO 微调）中使用进化原则（迭代选择高分变体）；Absolute Zero 将进化式自博弈与强化学习结合；Agent Symbolic Learning 将类似反向传播的优化应用于离散的智能体组件。我们识别出文献中正在浮现的三种混合模式：
+
+\paragraph{进化引导的学习。}
+进化搜索识别有前景的结构变化（例如，新的智能体架构、算法模板），然后使用基于梯度的方法进行精炼。LLaMEA-HPO 展示了这一模式：LLM 提出结构算法变更，SMAC 优化数值参数。这种分离利用了每种方法的互补优势：进化搜索处理离散、不可微的结构决策，而基于梯度的方法高效优化连续参数。
+
+\paragraph{学习引导的进化。}
+机器学习模型在进化循环中充当代理评估器或变异质量预测器，减少所需的昂贵评估次数。虽然我们的调研中没有系统完全实现这一模式，但第~\ref{sec:ch4-benchmark}~节的缩放分析表明，用于候选质量预测的学习代理模型将显著减少当前限制所有调研系统的评估瓶颈。
+
+\paragraph{任务与求解器的协同进化。}
+Absolute Zero 的自博弈循环，其中任务提出者和求解器协同进化，代表了一种在经典进化计算中被证明强大的协同进化形式（例如，游戏中的竞争性协同进化，POET 的环境与智能体协同进化）。将这一协同进化原则扩展到更广泛的自进化——即系统同时进化其任务、评估标准和解决方案策略——代表了实现开放式自改进的有前景方向。
+
+
+\subsubsection{度量自进化的开放性}
+
+一个关键但尚未充分探索的问题是如何度量自进化系统的 \emph{开放性}——即发现设计者未预料到的新颖解、行为或能力的能力。我们提出开放性的三个维度：
+
+\paragraph{解的新颖性。}
+系统是否发现与其初始种群有定性差异的解？FunSearch 的 cap set 发现在这一维度上得分很高：发现的构造在数学上是新颖的，而非仅仅是种子程序的增量改进。相比之下，OPRO 的提示优化通常发现已知提示策略的增量变体（例如，``逐步思考''是一个众所周知的策略，OPRO 重新发现并改进了它）。
+
+\paragraph{能力扩展。}
+系统是否发展出初始智能体中不存在的能力？DGM 和 ADAS 得分很高：进化的智能体发展出种子智能体中不存在的解决问题策略（例如，多步验证、错误恢复循环）。Reflexion 和 Voyager 也通过积累的经验扩展了能力，尽管扩展受限于 LLM 的固有能力。
+
+\paragraph{目标发现。}
+系统是否自主发现新目标或评估标准？目前，	extbf{没有调研系统}实现这一维度。所有系统在预定义的评估框架内运行：FunSearch 优化 cap set 大小，AlphaEvolve 优化乘法次数，DGM 优化基准分数。目标发现需要系统识别新的有价值目标——这将代表向第 4 级自进化的质变飞跃。Absolute Zero 的任务提出者是朝这一方向的一步，但其任务局限于具有可执行验证的代码生成。
 
 \begin{table}[htbp]
 \centering
@@ -870,70 +869,70 @@ ADAS & Moderate & \textbf{High} & None \\
 Absolute Zero & Moderate & Moderate & Low (constrained) \\
 \bottomrule
 \end{tabular}
-\caption{Openness dimensions across self-evolution systems. FunSearch and AlphaEvolve achieve high solution novelty (new mathematical discoveries); DGM and ADAS achieve high capability expansion (new agent strategies). No system achieves objective discovery.}
+\caption{自进化系统的开放性维度。FunSearch 和 AlphaEvolve 达到高解新颖性（新数学发现）；DGM 和 ADAS 达到高能力扩展（新智能体策略）。没有系统实现目标发现。}
 \label{tab:openness}
 \end{table}
 
 
-\subsubsection{Synthesis: The State of Self-Evolving AI Systems}
+\subsubsection{综合：自进化AI系统的现状}
 
-Drawing together the analysis across all 17 systems, we can characterize the current state of self-evolving AI along several dimensions.
+综合所有 17 个系统的分析，我们可以从多个维度刻画自进化 AI 的当前状态。
 
-\paragraph{What Works Well.}
-Self-evolution has demonstrated clear value in three categories of domains: (1) \textbf{mathematical and algorithmic discovery}, where FunSearch and AlphaEvolve have produced genuinely new scientific results; (2) \textbf{code generation and software engineering}, where Reflexion, SelfEvolve, and DGM have achieved substantial benchmark improvements; and (3) \textbf{prompt and strategy optimization}, where OPRO and EvoPrompt have automated previously manual processes. In all three categories, the key enabler is the availability of automated, inexpensive evaluation. Where evaluation is cheap and reliable, self-evolution consistently outperforms manual design.
+\paragraph{已取得成功的领域。}
+自进化在三类领域展示了明确价值：（1）	extbf{数学和算法发现}，FunSearch 和 AlphaEvolve 产生了真正新的科学成果；（2）	extbf{代码生成和软件工程}，Reflexion、SelfEvolve 和 DGM 取得了实质性的基准改进；（3）	extbf{提示和策略优化}，OPRO 和 EvoPrompt 自动化了此前手动的过程。在所有三类中，关键推动因素是自动化、低成本评估的可用性。在评估廉价且可靠的领域，自进化始终优于人工设计。
 
-\paragraph{What Remains Challenging.}
-Self-evolution struggles in domains where evaluation is expensive, subjective, or undefined. No system has successfully applied evolutionary self-improvement to: (1) creative tasks (writing, music, art), where quality is subjective and evaluation requires human judgment; (2) strategic decision-making (business strategy, scientific hypothesis generation), where outcomes may take months or years to evaluate; (3) social interaction (negotiation, teaching, therapy), where evaluation requires understanding nuanced human responses. These domains collectively represent the majority of real-world applications, suggesting that the current self-evolution paradigm---which depends on automated evaluation---has fundamental limitations that must be addressed before broad deployment.
+\paragraph{仍具挑战的领域。}
+自进化在评估昂贵、主观或未定义的领域中面临困难。没有系统成功将进化式自改进应用于：（1）创意任务（写作、音乐、艺术），其质量是主观的，评估需要人类判断；（2）战略决策（商业策略、科学假设生成），其结果可能需要数月或数年才能评估；（3）社交互动（谈判、教学、治疗），其评估需要理解细微的人类反应。这些领域共同代表了真实世界应用的大部分，表明当前依赖自动化评估的自进化范式存在根本局限性，必须在广泛部署之前加以解决。
 
-\paragraph{The Recursive Self-Improvement Gap.}
-Perhaps the most important finding from our survey is the gap between current systems and truly recursive self-improvement. Current systems improve \emph{within} a fixed framework: DGM improves agent code but does not improve its own evolution algorithm; AlphaEvolve discovers better algorithms but does not discover better search strategies. True recursive self-improvement would require the system to modify the very mechanisms that drive improvement---the mutation operator, the selection strategy, the evaluation criteria, and the search architecture. The five-loop integration gap identified in Table~\ref{tab:loop-mapping} quantifies this: no system activates all five evolution loops simultaneously. Closing this gap represents the most important open problem in self-evolving AI.
+\paragraph{递归自改进的鸿沟。}
+我们的调研最重要的发现可能是当前系统与真正递归自改进之间的差距。当前系统在固定框架 \emph{内}进行改进：DGM 改进智能体代码但不改进自身的进化算法；AlphaEvolve 发现更好的算法但不发现更好的搜索策略。真正的递归自改进需要系统修改驱动改进的机制本身——变异算子、选择策略、评估标准和搜索架构。表~\ref{tab:loop-mapping} 中识别的五循环整合缺口量化了这一点：没有系统同时激活所有五个进化循环。弥合这一差距代表了自进化 AI 中最重要的开放问题。
 
-\paragraph{The Safety Imperative.}
-As self-evolution systems progress from Level 2 (code) to Level 3 (agent) toward Level 4 (recursive), the safety stakes increase dramatically. A system that can modify its own decision-making machinery could potentially modify its own safety constraints, creating a classic AI alignment challenge. The surveyed systems address safety through sandboxing (DGM, FunSearch) and rollback mechanisms (G\"{o}del Agent), but these are reactive measures that catch failures after they occur. Proactive safety measures---formal verification of modifications, constrained generation, and constitutional evolution principles---are urgently needed before self-evolution systems are deployed in high-stakes environments. The field would benefit from a systematic treatment of self-evolution safety analogous to the alignment literature for large language models.
-
-
-\subsubsection{Practical Considerations for Deployment}
-
-For practitioners seeking to apply self-evolution systems to real-world problems, several practical considerations emerge from our analysis.
-
-\paragraph{Cost Management.}
-The dominant cost is LLM API calls for the mutation operator. A typical evolutionary run requires 500--5,000 LLM calls for generation plus 500--10,000 evaluation calls. At current GPT-4 pricing, a single 1,000-iteration evolution run costs approximately \$15--75 for generation alone. Strategies for cost reduction include: (1) using cheaper models for initial exploration and expensive models for refinement; (2) caching LLM responses for duplicate prompts; (3) early stopping when improvement plateaus; and (4) LLaMEA-style diff editing to reduce token consumption by 80--90\%.
-
-\paragraph{Evaluation Infrastructure.}
-Building a reliable evaluation pipeline is often more challenging than configuring the evolutionary algorithm. Key requirements include determinism (consistent scores for identical candidates), isolation (sandboxed execution), throughput (parallel evaluation), and representativeness (benchmarks must reflect deployment conditions). The FunSearch and DGM systems provide good templates for evaluation infrastructure design.
-
-\paragraph{Hyperparameter Selection.}
-We recommend starting with minimal configurations (OpenTreeSearch-style PUCT with $C=1.0$ or LLaMEA defaults) and increasing complexity only if results are unsatisfactory. Key hyperparameters to tune, in order of importance: (1) mutation prompt template; (2) population size; (3) selection temperature; (4) candidates per iteration.
-
-\paragraph{Debugging and Interpretability.}
-Tools for understanding the evolutionary process include OpenTreeSearch's HTML tree visualization, LLaMEA's code evolution graphs, ReEvo's long-term reflection, and FunSearch's prompt chains. We recommend always enabling logging and visualization during development.
+\paragraph{安全性的紧迫性。}
+随着自进化系统从第 2 级（代码）向第 3 级（智能体）再到第 4 级（递归）发展，安全风险急剧增加。能够修改自身决策机制的系统可能修改自身的安全约束，造成经典的 AI 对齐挑战。调研系统通过沙盒（DGM, FunSearch）和回滚机制（G\"{o}del Agent）解决安全问题，但这些都是在失败发生后才捕获的被动措施。主动安全措施——修改的形式化验证、受约束的生成和宪法式进化原则——在自进化系统部署到高风险环境之前迫切需要。该领域将受益于类似于大语言模型对齐文献的自进化安全系统性研究。
 
 
-\subsubsection{Future Directions}
+\subsubsection{部署的实践考量}
 
-Based on the gaps identified in our analysis, we identify five priority directions for future research:
+对于希望将自进化系统应用于真实世界问题的实践者，我们的分析提出了若干实践考量。
+
+\paragraph{成本管理。}
+主要成本是变异算子的 LLM API 调用。一次典型的进化运行需要 500--5,000 次 LLM 调用用于生成，加上 500--10,000 次评估调用。按当前 GPT-4 定价，一次 1,000 次迭代的进化运行仅生成成本约为 \$15--75。降低成本的策略包括：（1）使用廉价模型进行初始探索，昂贵模型进行精炼；（2）缓存重复提示的 LLM 响应；（3）改进停滞时提前停止；（4）LLaMEA 风格的差异编辑以减少 80--90\% 的 token 消耗。
+
+\paragraph{评估基础设施。}
+构建可靠的评估流水线通常比配置进化算法更具挑战性。关键需求包括确定性（相同候选的一致分数）、隔离（沙盒执行）、吞吐量（并行评估）和代表性（基准必须反映部署条件）。FunSearch 和 DGM 系统提供了评估基础设施设计的良好模板。
+
+\paragraph{超参数选择。}
+我们建议从最小配置开始（OpenTreeSearch 风格的 PUCT，$C=1.0$ 或 LLaMEA 默认值），仅在结果不令人满意时增加复杂度。按重要性排序的关键调优超参数：（1）变异提示模板；（2）种群大小；（3）选择温度；（4）每次迭代的候选数。
+
+\paragraph{调试与可解释性。}
+理解进化过程的工具包括 OpenTreeSearch 的 HTML 树可视化、LLaMEA 的代码进化图、ReEvo 的长期反思和 FunSearch 的提示链。我们建议在开发过程中始终启用日志和可视化。
+
+
+\subsubsection{未来方向}
+
+基于我们分析中识别的差距，我们提出五个优先的未来研究方向：
 
 \begin{enumerate}
-    \item \textbf{Self-constructing evaluators}: Systems that build their own evaluation functions would expand self-evolution to domains currently limited by evaluation bottlenecks. Absolute Zero's self-play is an early step, but general-purpose meta-evaluation frameworks are needed.
+    \item \textbf{自构建评估器}：能够构建自身评估函数的系统将把自进化扩展到目前受评估瓶颈限制的领域。Absolute Zero 的自博弈是早期尝试，但需要通用元评估框架。
 
-    \item \textbf{Hierarchical multi-level evolution}: Simultaneous evolution at multiple levels---prompts, code, architectures, and evaluation criteria---with cross-level information flow could unlock synergistic improvements. The five-loop integration gap suggests that combining all loop types in a single system would provide capabilities beyond any individual loop.
+    \item \textbf{分层多级进化}：在多个层级同时进化——提示、代码、架构和评估标准——并实现跨层级信息流，可以释放协同改进。五循环整合缺口表明，将所有循环类型组合在单一系统中将提供超越任何单一循环的能力。
 
-    \item \textbf{Sample-efficient evolution}: Bayesian optimization surrogates, transfer learning, and lightweight mutation quality predictors could reduce LLM calls by an order of magnitude. A predictor achieving 70\% accuracy would reduce the evaluation budget by approximately 3$\times$.
+    \item \textbf{样本高效的进化}：贝叶斯优化代理、迁移学习和轻量变异质量预测器可以将 LLM 调用减少一个数量级。达到 70\% 准确率的预测器可以将评估预算减少约 3$\times$。
 
-    \item \textbf{Safe self-modification}: Formal verification of self-modifying code, constrained generation, and alignment-aware evaluation become essential at Level 3--4. ``Constitutional evolution'' frameworks governing the evolutionary process by explicit safety principles would provide guardrails while preserving the benefits of open-ended search.
+    \item \textbf{安全的自我修改}：自修改代码的形式化验证、受约束的生成和感知对齐的评估在第 3--4 级变得至关重要。``宪法式进化''框架通过显式安全原则管理进化过程，将在保留开放式搜索益处的同时提供护栏。
 
-    \item \textbf{Open-ended evolution}: Systems that autonomously discover new tasks, challenges, and evaluation criteria would represent a qualitative leap. Intrinsic motivation mechanisms---where the system generates its own objectives based on novelty, surprise, or learning progress---could enable self-directed improvement at the Level 3--4 boundary.
+    \item \textbf{开放式进化}：能够自主发现新任务、挑战和评估标准的系统将代表质变飞跃。内在动机机制——即系统基于新颖性、惊奇或学习进度生成自身目标——可以在第 3--4 级边界实现自定向改进。
 \end{enumerate}
 
 
-\subsubsection{Chapter Summary}
+\subsubsection{本章小结}
 
-This chapter has surveyed 17 systems spanning four levels of self-evolution: prompt optimization (OPRO, EvoPrompt), code and algorithm discovery (FunSearch, AlphaEvolve, ReEvo, OpenELM, LLaMEA, OpenTreeSearch), agent self-evolution (DGM, ADAS, G\"{o}del Agent, Agent Symbolic Learning, SelfEvolve, Absolute Zero), and experience-driven improvement (Reflexion, Voyager, Self-Rewarding LM). Three key themes emerge:
+本章调研了跨越四个自进化层级的 17 个系统：提示优化（OPRO, EvoPrompt），代码和算法发现（FunSearch, AlphaEvolve, ReEvo, OpenELM, LLaMEA, OpenTreeSearch），智能体自进化（DGM, ADAS, G\"{o}del Agent, Agent Symbolic Learning, SelfEvolve, Absolute Zero），以及经验驱动的改进（Reflexion, Voyager, Self-Rewarding LM）。三个关键主题浮现：
 
 \begin{enumerate}
-    \item The \textbf{Generate--Evaluate--Select} loop is universal, but the sophistication of each component varies dramatically. LLM quality dominates search algorithm sophistication as a predictor of success---a finding with immediate practical implications for system designers.
-    \item The \textbf{evaluation bottleneck} is the primary constraint on progress. All breakthrough results come from domains with automated evaluation; extending beyond these domains requires fundamentally new approaches.
-    \item \textbf{Safety concerns scale with evolution target}. The transition from code-level to agent-level self-evolution represents a qualitative increase in risk that demands proportionally stronger safeguards.
+    \item \textbf{生成--评估--选择}循环是普适的，但每个组件的复杂度差异巨大。LLM 质量作为成功的预测因子主导了搜索算法的复杂度——这一发现对系统设计者具有直接的实践启示。
+    \item \textbf{评估瓶颈}是进展的主要约束。所有突破性成果都来自具有自动化评估的领域；超越这些领域需要根本性的新方法。
+    \item \textbf{安全问题随进化目标而扩展}。从代码级到智能体级自进化的转变代表了风险的质变增加，需要成比例的更强保障措施。
 \end{enumerate}
 
-The chapter has also identified several structural gaps: the population-based RL gap, the five-loop integration gap, and the recursive self-improvement gap. Closing these gaps represents the most important frontier for self-evolving AI research. These themes set the stage for the methodological analysis in Chapter~\ref{ch:methods}, which examines the training-time and inference-time techniques that complement the evolutionary approaches discussed here.
+本章还识别了若干结构性差距：基于种群的 RL 缺口、五循环整合缺口和递归自改进缺口。弥合这些差距代表了自进化 AI 研究的最重要前沿。这些主题为第~\ref{ch:methods}~章的方法论分析奠定了基础，该章考察了补充此处讨论的进化方法的训练时和推理时技术。
