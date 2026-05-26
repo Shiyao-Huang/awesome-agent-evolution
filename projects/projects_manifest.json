@@ -1,401 +1,3570 @@
-[
-  {
-    "name": "agents",
-    "repo": "aiwaves-cn/agents",
-    "url": "https://github.com/aiwaves-cn/agents",
-    "stars": 5928,
-    "forks": "482",
-    "last_pushed": "2024-09-26T03:12:53Z",
-    "language": "Python",
-    "license": "Apache-2.0",
-    "local_path": "repos/aiwaves_cn__agents",
-    "report": "projects/aiwaves_cn__agents.md",
-    "pattern": "进化/搜索循环 → 评估器/打分器 → 智能体编排",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "ae-aiwaves_cn__agents",
-    "gitnexus_stats": {
-      "nodes": "14149",
-      "edges": "15626",
-      "clusters": "56",
-      "flows": "93"
-    }
+{
+  "01-opro-llm-as-optimizer.md": {
+    "title": "01-opro-llm-as-optimizer",
+    "file": "01-opro-llm-as-optimizer.md",
+    "summary": "",
+    "repo": "",
+    "num": 1,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "AgentEvolver",
-    "repo": "modelscope/AgentEvolver",
-    "url": "https://github.com/modelscope/AgentEvolver",
-    "stars": 1441,
-    "forks": "167",
-    "last_pushed": "2026-04-01T08:47:19Z",
-    "language": "Python",
-    "license": "Apache-2.0",
-    "local_path": "repos/modelscope__agentevolver",
-    "report": "projects/modelscope__agentevolver.md",
-    "pattern": "进化/搜索循环 → 评估器/打分器 → 智能体编排 → 训练/数据循环",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "ae-modelscope__agentevolver",
-    "gitnexus_stats": {
-      "nodes": "7152",
-      "edges": "12157",
-      "clusters": "286",
-      "flows": "249"
-    }
+  "02-openelm-evolution-large-models.md": {
+    "title": "02-openelm-evolution-large-models",
+    "file": "02-openelm-evolution-large-models.md",
+    "summary": "",
+    "repo": "",
+    "num": 2,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "SE-Agent",
-    "repo": "JARVIS-Xs/SE-Agent",
-    "url": "https://github.com/JARVIS-Xs/SE-Agent",
-    "stars": 274,
-    "forks": "29",
-    "last_pushed": "2025-09-23T01:32:14Z",
-    "language": "Python",
-    "license": "MIT",
-    "local_path": "repos/jarvis_xs__se_agent",
-    "report": "projects/jarvis_xs__se_agent.md",
-    "pattern": "进化/搜索循环 → 评估器/打分器 → 智能体编排",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "ae-jarvis_xs__se_agent",
-    "gitnexus_stats": {
-      "nodes": "4510",
-      "edges": "8103",
-      "clusters": "225",
-      "flows": "192"
-    }
+  "03-adas-automated-design-agentic-systems.md": {
+    "title": "03-adas-automated-design-agentic-systems",
+    "file": "03-adas-automated-design-agentic-systems.md",
+    "summary": "",
+    "repo": "",
+    "num": 3,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "openevolve",
-    "repo": "algorithmicsuperintelligence/openevolve",
-    "url": "https://github.com/algorithmicsuperintelligence/openevolve",
-    "stars": 6358,
-    "forks": "1018",
-    "last_pushed": "2026-03-18T12:25:39Z",
-    "language": "Python",
-    "license": "Apache-2.0",
-    "local_path": "repos/algorithmicsuperintelligence__openevolve",
-    "report": "projects/algorithmicsuperintelligence__openevolve.md",
-    "pattern": "进化/搜索循环 → 评估器/打分器",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "ae-algorithmicsuperintelligence__openevolve",
-    "gitnexus_stats": {
-      "nodes": "8733",
-      "edges": "13519",
-      "clusters": "249",
-      "flows": "233"
-    }
+  "04-funsearch-mathematical-discoveries.md": {
+    "title": "04-funsearch-mathematical-discoveries",
+    "file": "04-funsearch-mathematical-discoveries.md",
+    "summary": "",
+    "repo": "",
+    "num": 4,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "science-codeevolve",
-    "repo": "inter-co/science-codeevolve",
-    "url": "https://github.com/inter-co/science-codeevolve",
-    "stars": 97,
-    "forks": "14",
-    "last_pushed": "2026-04-08T14:38:23Z",
-    "language": "Python",
-    "license": "Apache-2.0",
-    "local_path": "repos/inter_co__science_codeevolve",
-    "report": "projects/inter_co__science_codeevolve.md",
-    "pattern": "进化/搜索循环 → 评估器/打分器",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "ae-inter_co__science_codeevolve",
-    "gitnexus_stats": {
-      "nodes": "2887",
-      "edges": "4511",
-      "clusters": "60",
-      "flows": "49"
-    }
+  "05-automl-agent-multi-agent.md": {
+    "title": "05-automl-agent-multi-agent",
+    "file": "05-automl-agent-multi-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 5,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "reflexion",
-    "repo": "noahshinn/reflexion",
-    "url": "https://github.com/noahshinn/reflexion",
-    "stars": 3158,
-    "forks": "306",
-    "last_pushed": "2025-01-14T07:54:02Z",
-    "language": "Python",
-    "license": "MIT",
-    "local_path": "repos/noahshinn__reflexion",
-    "report": "projects/noahshinn__reflexion.md",
-    "pattern": "进化/搜索循环 → 反思记忆 → 反馈-精炼 → 评估器/打分器 → 训练/数据循环",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "ae-noahshinn__reflexion",
-    "gitnexus_stats": {
-      "nodes": "1403",
-      "edges": "2293",
-      "clusters": "54",
-      "flows": "79"
-    }
+  "06-coml-mlcopilot.md": {
+    "title": "06-coml-mlcopilot",
+    "file": "06-coml-mlcopilot.md",
+    "summary": "",
+    "repo": "",
+    "num": 6,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "self-refine",
-    "repo": "madaan/self-refine",
-    "url": "https://github.com/madaan/self-refine",
-    "stars": 805,
-    "forks": "70",
-    "last_pushed": "2024-10-04T21:06:28Z",
-    "language": "Python",
-    "license": "Apache-2.0",
-    "local_path": "repos/madaan__self_refine",
-    "report": "projects/madaan__self_refine.md",
-    "pattern": "反馈-精炼",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "ae-madaan__self_refine",
-    "gitnexus_stats": {
-      "nodes": "1197",
-      "edges": "1802",
-      "clusters": "67",
-      "flows": "32"
-    }
+  "07-metagpt-multi-agent-framework.md": {
+    "title": "07-metagpt-multi-agent-framework",
+    "file": "07-metagpt-multi-agent-framework.md",
+    "summary": "",
+    "repo": "",
+    "num": 7,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "SCOPE",
-    "repo": "JarvisPei/SCOPE",
-    "url": "https://github.com/JarvisPei/SCOPE",
-    "stars": 77,
-    "forks": "6",
-    "last_pushed": "2026-03-26T03:01:04Z",
-    "language": "Python",
-    "license": "MIT",
-    "local_path": "repos/jarvispei__scope",
-    "report": "projects/jarvispei__scope.md",
-    "pattern": "进化/搜索循环",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "ae-jarvispei__scope",
-    "gitnexus_stats": {
-      "nodes": "754",
-      "edges": "1336",
-      "clusters": "23",
-      "flows": "29"
-    }
+  "08-autogpt-autonomous-agent.md": {
+    "title": "08-autogpt-autonomous-agent",
+    "file": "08-autogpt-autonomous-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 8,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "DARWIN",
-    "repo": "ZJU-LLM-Safety/DARWIN",
-    "url": "https://github.com/ZJU-LLM-Safety/DARWIN",
-    "stars": 41,
-    "forks": "4",
-    "last_pushed": "2026-05-07T03:26:42Z",
-    "language": "Python",
-    "license": "NOASSERTION",
-    "local_path": "repos/zju_llm_safety__darwin",
-    "report": "projects/zju_llm_safety__darwin.md",
-    "pattern": "进化/搜索循环 → 反思记忆",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "ae-zju_llm_safety__darwin",
-    "gitnexus_stats": {
-      "nodes": "1053",
-      "edges": "1895",
-      "clusters": "38",
-      "flows": "68"
-    }
+  "09-crewai-multi-agent-framework.md": {
+    "title": "09-crewai-multi-agent-framework",
+    "file": "09-crewai-multi-agent-framework.md",
+    "summary": "",
+    "repo": "",
+    "num": 9,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "LLM-Self-Judge",
-    "repo": "OPPO-Mente-Lab/LLM-Self-Judge",
-    "url": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
-    "stars": 43,
-    "forks": "1",
-    "last_pushed": "2026-03-24T03:51:30Z",
-    "language": "Python",
-    "license": "Apache-2.0",
-    "local_path": "repos/oppo_mente_lab__llm_self_judge",
-    "report": "projects/oppo_mente_lab__llm_self_judge.md",
-    "pattern": "进化/搜索循环 → 评估器/打分器 → 智能体编排 → 训练/数据循环",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "ae-oppo_mente_lab__llm_self_judge",
-    "gitnexus_stats": {
-      "nodes": "10236",
-      "edges": "18110",
-      "clusters": "354",
-      "flows": "300"
-    }
+  "10-dspy-declarative-llm-programming.md": {
+    "title": "10-dspy-declarative-llm-programming",
+    "file": "10-dspy-declarative-llm-programming.md",
+    "summary": "",
+    "repo": "",
+    "num": 10,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "OPRO",
-    "repo": "google-deepmind/opro",
-    "url": "https://github.com/google-deepmind/opro",
-    "stars": null,
-    "forks": null,
-    "last_pushed": null,
-    "language": null,
-    "license": null,
-    "local_path": "projects/repos/google_deepmind__opro",
-    "report": "projects/01-opro-llm-as-optimizer.md",
-    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "opro",
-    "gitnexus_stats": {
-      "nodes": "697",
-      "edges": "826",
-      "clusters": "9",
-      "flows": "12"
-    }
+  "100-clawdmarket-agent-marketplace.md": {
+    "title": "100-clawdmarket-agent-marketplace",
+    "file": "100-clawdmarket-agent-marketplace.md",
+    "summary": "",
+    "repo": "",
+    "num": 100,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "OpenELM",
-    "repo": "CarperAI/OpenELM",
-    "url": "https://github.com/CarperAI/OpenELM",
-    "stars": null,
-    "forks": null,
-    "last_pushed": null,
-    "language": null,
-    "license": null,
-    "local_path": "projects/repos/carperai__openelm",
-    "report": "projects/02-openelm-evolution-large-models.md",
-    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "OpenELM",
-    "gitnexus_stats": {
-      "nodes": "3596",
-      "edges": "6639",
-      "clusters": "157",
-      "flows": "139"
-    }
+  "100-rd-agent-scientific-discovery.md": {
+    "title": "100-rd-agent-scientific-discovery",
+    "file": "100-rd-agent-scientific-discovery.md",
+    "summary": "",
+    "repo": "",
+    "num": 100,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "ADAS",
-    "repo": "ShengranHu/ADAS",
-    "url": "https://github.com/ShengranHu/ADAS",
-    "stars": null,
-    "forks": null,
-    "last_pushed": null,
-    "language": null,
-    "license": null,
-    "local_path": "projects/repos/shengranhu__adas",
-    "report": "projects/03-adas-automated-design-agentic-systems.md",
-    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "ADAS",
-    "gitnexus_stats": {
-      "nodes": "2107",
-      "edges": "2795",
-      "clusters": "49",
-      "flows": "78"
-    }
+  "100-rd-agent.md": {
+    "title": "100-rd-agent",
+    "file": "100-rd-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 100,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "FunSearch",
-    "repo": "google-deepmind/funsearch",
-    "url": "https://github.com/google-deepmind/funsearch",
-    "stars": null,
-    "forks": null,
-    "last_pushed": null,
-    "language": null,
-    "license": null,
-    "local_path": "projects/repos/google_deepmind__funsearch",
-    "report": "projects/04-funsearch-mathematical-discoveries.md",
-    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "funsearch",
-    "gitnexus_stats": {
-      "nodes": "310",
-      "edges": "441",
-      "clusters": "10",
-      "flows": "7"
-    }
+  "101-agent-teams-git-backed-evolution.md": {
+    "title": "101-agent-teams-git-backed-evolution",
+    "file": "101-agent-teams-git-backed-evolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 101,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "AutoML-Agent",
-    "repo": "DeepAuto-AI/AutoML-Agent",
-    "url": "https://github.com/DeepAuto-AI/AutoML-Agent",
-    "stars": null,
-    "forks": null,
-    "last_pushed": null,
-    "language": null,
-    "license": null,
-    "local_path": "projects/repos/deepauto_ai__automl_agent",
-    "report": "projects/05-automl-agent-multi-agent.md",
-    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "automl-agent",
-    "gitnexus_stats": {
-      "nodes": "1239",
-      "edges": "1517",
-      "clusters": "19",
-      "flows": "14"
-    }
+  "101-hardmaru-estool.md": {
+    "title": "101-hardmaru-estool",
+    "file": "101-hardmaru-estool.md",
+    "summary": "",
+    "repo": "",
+    "num": 101,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "CoML / MLCopilot",
-    "repo": "microsoft/CoML",
-    "url": "https://github.com/microsoft/CoML",
-    "stars": null,
-    "forks": null,
-    "last_pushed": null,
-    "language": null,
-    "license": null,
-    "local_path": "projects/repos/microsoft__coml",
-    "report": "projects/06-coml-mlcopilot.md",
-    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "CoML",
-    "gitnexus_stats": {
-      "nodes": "937",
-      "edges": "1693",
-      "clusters": "36",
-      "flows": "78"
-    }
+  "102-openai-evolution-strategies-starter.md": {
+    "title": "102-openai-evolution-strategies-starter",
+    "file": "102-openai-evolution-strategies-starter.md",
+    "summary": "",
+    "repo": "",
+    "num": 102,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "MetaGPT",
-    "repo": "FoundationAgents/MetaGPT",
-    "url": "https://github.com/FoundationAgents/MetaGPT",
-    "stars": null,
-    "forks": null,
-    "last_pushed": null,
-    "language": null,
-    "license": null,
-    "local_path": "projects/repos/foundation_agents__metagpt",
-    "report": "projects/07-metagpt-multi-agent-framework.md",
-    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "MetaGPT",
-    "gitnexus_stats": {
-      "nodes": "18107",
-      "edges": "36116",
-      "clusters": "833",
-      "flows": "300"
-    }
+  "102-randroids-skills-agent-skill-loop.md": {
+    "title": "102-randroids-skills-agent-skill-loop",
+    "file": "102-randroids-skills-agent-skill-loop.md",
+    "summary": "",
+    "repo": "",
+    "num": 102,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "AutoGPT",
-    "repo": "Significant-Gravitas/AutoGPT",
-    "url": "https://github.com/Significant-Gravitas/AutoGPT",
-    "stars": null,
-    "forks": null,
-    "last_pushed": null,
-    "language": null,
-    "license": null,
-    "local_path": "projects/repos/significant_gravitas__autogpt",
-    "report": "projects/08-autogpt-autonomous-agent.md",
-    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "AutoGPT",
-    "gitnexus_stats": {
-      "nodes": "75477",
-      "edges": "135916",
-      "clusters": "1499",
-      "flows": "300"
-    }
+  "103-memori-agent-native-memory.md": {
+    "title": "103-memori-agent-native-memory",
+    "file": "103-memori-agent-native-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 103,
+    "updated": "2026-05-26T17:23:02"
   },
-  {
-    "name": "CrewAI",
-    "repo": "crewAIInc/crewAI",
-    "url": "https://github.com/crewAIInc/crewAI",
-    "stars": null,
-    "forks": null,
-    "last_pushed": null,
-    "language": null,
-    "license": null,
-    "local_path": "projects/repos/crewai_inc__crewai",
-    "report": "projects/09-crewai-multi-agent-framework.md",
-    "pattern": "GitNexus 深度架构分析 / 进化计算+LLM / Agent 框架",
-    "gitnexus_analyzed": true,
-    "gitnexus_alias": "crewAI",
-    "gitnexus_stats": {
-      "nodes": "55773",
-      "edges": "86393",
-      "clusters": "713",
-      "flows": "300"
-    }
+  "103-uber-deep-neuroevolution.md": {
+    "title": "103-uber-deep-neuroevolution",
+    "file": "103-uber-deep-neuroevolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 103,
+    "updated": "2026-05-26T17:23:02"
+  },
+  "104-icaros-pyribs.md": {
+    "title": "104-icaros-pyribs",
+    "file": "104-icaros-pyribs.md",
+    "summary": "",
+    "repo": "",
+    "num": 104,
+    "updated": "2026-05-26T17:23:02"
+  },
+  "104-skills-supply-cross-agent-skills.md": {
+    "title": "104-skills-supply-cross-agent-skills",
+    "file": "104-skills-supply-cross-agent-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 104,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "105-agentos-self-evolving-agent-os.md": {
+    "title": "105-agentos-self-evolving-agent-os",
+    "file": "105-agentos-self-evolving-agent-os.md",
+    "summary": "",
+    "repo": "",
+    "num": 105,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "105-robotics-qdax.md": {
+    "title": "105-robotics-qdax",
+    "file": "105-robotics-qdax.md",
+    "summary": "",
+    "repo": "",
+    "num": 105,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "106-ahmedfgad-genetic-algorithm-python.md": {
+    "title": "106-ahmedfgad-genetic-algorithm-python",
+    "file": "106-ahmedfgad-genetic-algorithm-python.md",
+    "summary": "",
+    "repo": "",
+    "num": 106,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "106-qt-ai-skills.md": {
+    "title": "106-qt-ai-skills",
+    "file": "106-qt-ai-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 106,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "107-chriscox-agent-skills.md": {
+    "title": "107-chriscox-agent-skills",
+    "file": "107-chriscox-agent-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 107,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "107-deap-distributed-evolutionary-algorithms.md": {
+    "title": "107-deap-distributed-evolutionary-algorithms",
+    "file": "107-deap-distributed-evolutionary-algorithms.md",
+    "summary": "",
+    "repo": "",
+    "num": 107,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "108-facebookresearch-nevergrad.md": {
+    "title": "108-facebookresearch-nevergrad",
+    "file": "108-facebookresearch-nevergrad.md",
+    "summary": "",
+    "repo": "",
+    "num": 108,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "108-sediment-local-agent-memory.md": {
+    "title": "108-sediment-local-agent-memory",
+    "file": "108-sediment-local-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 108,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "109-hal-harness-agent-leaderboard.md": {
+    "title": "109-hal-harness-agent-leaderboard",
+    "file": "109-hal-harness-agent-leaderboard.md",
+    "summary": "",
+    "repo": "",
+    "num": 109,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "109-ray-project-ray-es.md": {
+    "title": "109-ray-project-ray-es",
+    "file": "109-ray-project-ray-es.md",
+    "summary": "",
+    "repo": "",
+    "num": 109,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "11-autogen-multi-agent-conversation.md": {
+    "title": "11-autogen-multi-agent-conversation",
+    "file": "11-autogen-multi-agent-conversation.md",
+    "summary": "",
+    "repo": "",
+    "num": 11,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "11-crewai-multi-agent-framework.md": {
+    "title": "11-crewai-multi-agent-framework",
+    "file": "11-crewai-multi-agent-framework.md",
+    "summary": "",
+    "repo": "",
+    "num": 11,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "110-memoria-git-for-agent-memory.md": {
+    "title": "110-memoria-git-for-agent-memory",
+    "file": "110-memoria-git-for-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 110,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "110-uber-research-evograd.md": {
+    "title": "110-uber-research-evograd",
+    "file": "110-uber-research-evograd.md",
+    "summary": "",
+    "repo": "",
+    "num": 110,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "111-memoryagentbench-incremental-memory-eval.md": {
+    "title": "111-memoryagentbench-incremental-memory-eval",
+    "file": "111-memoryagentbench-incremental-memory-eval.md",
+    "summary": "",
+    "repo": "",
+    "num": 111,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "111-resibots-pymap-elites.md": {
+    "title": "111-resibots-pymap-elites",
+    "file": "111-resibots-pymap-elites.md",
+    "summary": "",
+    "repo": "",
+    "num": 111,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "112-agent-almanac-skill-agent-team-index.md": {
+    "title": "112-agent-almanac-skill-agent-team-index",
+    "file": "112-agent-almanac-skill-agent-team-index.md",
+    "summary": "",
+    "repo": "",
+    "num": 112,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "112-cyberagent-cmaes.md": {
+    "title": "112-cyberagent-cmaes",
+    "file": "112-cyberagent-cmaes.md",
+    "summary": "",
+    "repo": "",
+    "num": 112,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "113-psenger-ai-agent-skills.md": {
+    "title": "113-psenger-ai-agent-skills",
+    "file": "113-psenger-ai-agent-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 113,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "113-pymoo-pymoo.md": {
+    "title": "113-pymoo-pymoo",
+    "file": "113-pymoo-pymoo.md",
+    "summary": "",
+    "repo": "",
+    "num": 113,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "114-neat-python-neuroevolution.md": {
+    "title": "114-neat-python-neuroevolution",
+    "file": "114-neat-python-neuroevolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 114,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "114-openhands-benchmarks.md": {
+    "title": "114-openhands-benchmarks",
+    "file": "114-openhands-benchmarks.md",
+    "summary": "",
+    "repo": "",
+    "num": 114,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "115-a-evolve-universal-agent-evolution.md": {
+    "title": "115-a-evolve-universal-agent-evolution",
+    "file": "115-a-evolve-universal-agent-evolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 115,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "115-google-evojax.md": {
+    "title": "115-google-evojax",
+    "file": "115-google-evojax.md",
+    "summary": "",
+    "repo": "",
+    "num": 115,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "116-automl-auto-sklearn.md": {
+    "title": "116-automl-auto-sklearn",
+    "file": "116-automl-auto-sklearn.md",
+    "summary": "",
+    "repo": "",
+    "num": 116,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "116-autoresearchclaw-self-evolving-research-agent.md": {
+    "title": "116-autoresearchclaw-self-evolving-research-agent",
+    "file": "116-autoresearchclaw-self-evolving-research-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 116,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "117-keras-team-autokeras.md": {
+    "title": "117-keras-team-autokeras",
+    "file": "117-keras-team-autokeras.md",
+    "summary": "",
+    "repo": "",
+    "num": 117,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "117-memos-self-evolving-memory-os.md": {
+    "title": "117-memos-self-evolving-memory-os",
+    "file": "117-memos-self-evolving-memory-os.md",
+    "summary": "",
+    "repo": "",
+    "num": 117,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "118-microsoft-flaml.md": {
+    "title": "118-microsoft-flaml",
+    "file": "118-microsoft-flaml.md",
+    "summary": "",
+    "repo": "",
+    "num": 118,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "118-skilllearnbench-agent-skill-generation.md": {
+    "title": "118-skilllearnbench-agent-skill-generation",
+    "file": "118-skilllearnbench-agent-skill-generation.md",
+    "summary": "",
+    "repo": "",
+    "num": 118,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "119-agentskillos-skill-retrieval-orchestration.md": {
+    "title": "119-agentskillos-skill-retrieval-orchestration",
+    "file": "119-agentskillos-skill-retrieval-orchestration.md",
+    "summary": "",
+    "repo": "",
+    "num": 119,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "119-awslabs-autogluon.md": {
+    "title": "119-awslabs-autogluon",
+    "file": "119-awslabs-autogluon.md",
+    "summary": "",
+    "repo": "",
+    "num": 119,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "12-camel-ai-communicative-agents.md": {
+    "title": "12-camel-ai-communicative-agents",
+    "file": "12-camel-ai-communicative-agents.md",
+    "summary": "",
+    "repo": "",
+    "num": 12,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "12-microsoft-autogen.md": {
+    "title": "12-microsoft-autogen",
+    "file": "12-microsoft-autogen.md",
+    "summary": "",
+    "repo": "",
+    "num": 12,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "120-microsoft-nni.md": {
+    "title": "120-microsoft-nni",
+    "file": "120-microsoft-nni.md",
+    "summary": "",
+    "repo": "",
+    "num": 120,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "120-state-bench-agent-memory-evaluation.md": {
+    "title": "120-state-bench-agent-memory-evaluation",
+    "file": "120-state-bench-agent-memory-evaluation.md",
+    "summary": "",
+    "repo": "",
+    "num": 120,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "121-openai-skills-codex-catalog.md": {
+    "title": "121-openai-skills-codex-catalog",
+    "file": "121-openai-skills-codex-catalog.md",
+    "summary": "",
+    "repo": "",
+    "num": 121,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "121-optuna-optuna.md": {
+    "title": "121-optuna-optuna",
+    "file": "121-optuna-optuna.md",
+    "summary": "",
+    "repo": "",
+    "num": 121,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "122-automl-smac3.md": {
+    "title": "122-automl-smac3",
+    "file": "122-automl-smac3.md",
+    "summary": "",
+    "repo": "",
+    "num": 122,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "122-evoskill-automated-skill-discovery.md": {
+    "title": "122-evoskill-automated-skill-discovery",
+    "file": "122-evoskill-automated-skill-discovery.md",
+    "summary": "",
+    "repo": "",
+    "num": 122,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "123-automl-auto-pytorch.md": {
+    "title": "123-automl-auto-pytorch",
+    "file": "123-automl-auto-pytorch.md",
+    "summary": "",
+    "repo": "",
+    "num": 123,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "123-icm-permanent-agent-memory.md": {
+    "title": "123-icm-permanent-agent-memory",
+    "file": "123-icm-permanent-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 123,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "124-callstack-agent-skills.md": {
+    "title": "124-callstack-agent-skills",
+    "file": "124-callstack-agent-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 124,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "124-ray-project-ray-tune.md": {
+    "title": "124-ray-project-ray-tune",
+    "file": "124-ray-project-ray-tune.md",
+    "summary": "",
+    "repo": "",
+    "num": 124,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "125-ai-driven-development-skills-hooks.md": {
+    "title": "125-ai-driven-development-skills-hooks",
+    "file": "125-ai-driven-development-skills-hooks.md",
+    "summary": "",
+    "repo": "",
+    "num": 125,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "125-automl-naslib.md": {
+    "title": "125-automl-naslib",
+    "file": "125-automl-naslib.md",
+    "summary": "",
+    "repo": "",
+    "num": 125,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "126-d-x-y-autodl-projects.md": {
+    "title": "126-d-x-y-autodl-projects",
+    "file": "126-d-x-y-autodl-projects.md",
+    "summary": "",
+    "repo": "",
+    "num": 126,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "126-jakenuts-agent-skills-toolkit.md": {
+    "title": "126-jakenuts-agent-skills-toolkit",
+    "file": "126-jakenuts-agent-skills-toolkit.md",
+    "summary": "",
+    "repo": "",
+    "num": 126,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "127-agent-skills-kit-control-plane.md": {
+    "title": "127-agent-skills-kit-control-plane",
+    "file": "127-agent-skills-kit-control-plane.md",
+    "summary": "",
+    "repo": "",
+    "num": 127,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "127-microsoft-archai.md": {
+    "title": "127-microsoft-archai",
+    "file": "127-microsoft-archai.md",
+    "summary": "",
+    "repo": "",
+    "num": 127,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "128-deepagents-cli-codex-skill.md": {
+    "title": "128-deepagents-cli-codex-skill",
+    "file": "128-deepagents-cli-codex-skill.md",
+    "summary": "",
+    "repo": "",
+    "num": 128,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "128-google-research-nasbench.md": {
+    "title": "128-google-research-nasbench",
+    "file": "128-google-research-nasbench.md",
+    "summary": "",
+    "repo": "",
+    "num": 128,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "129-epistasis-lab-tpot.md": {
+    "title": "129-epistasis-lab-tpot",
+    "file": "129-epistasis-lab-tpot.md",
+    "summary": "",
+    "repo": "",
+    "num": 129,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "129-vercel-skills-cli.md": {
+    "title": "129-vercel-skills-cli",
+    "file": "129-vercel-skills-cli.md",
+    "summary": "",
+    "repo": "",
+    "num": 129,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "13-camel-ai-multi-agent.md": {
+    "title": "13-camel-ai-multi-agent",
+    "file": "13-camel-ai-multi-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 13,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "13-langgraph-agent-workflows.md": {
+    "title": "13-langgraph-agent-workflows",
+    "file": "13-langgraph-agent-workflows.md",
+    "summary": "",
+    "repo": "",
+    "num": 13,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "130-h2oai-h2o-3.md": {
+    "title": "130-h2oai-h2o-3",
+    "file": "130-h2oai-h2o-3.md",
+    "summary": "",
+    "repo": "",
+    "num": 130,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "130-neo4j-agent-memory.md": {
+    "title": "130-neo4j-agent-memory",
+    "file": "130-neo4j-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 130,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "131-mcp-memory-service.md": {
+    "title": "131-mcp-memory-service",
+    "file": "131-mcp-memory-service.md",
+    "summary": "",
+    "repo": "",
+    "num": 131,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "132-microsoft-skills.md": {
+    "title": "132-microsoft-skills",
+    "file": "132-microsoft-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 132,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "133-tech-leads-agent-skills-registry.md": {
+    "title": "133-tech-leads-agent-skills-registry",
+    "file": "133-tech-leads-agent-skills-registry.md",
+    "summary": "",
+    "repo": "",
+    "num": 133,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "134-jdrhyne-agent-skills-pack.md": {
+    "title": "134-jdrhyne-agent-skills-pack",
+    "file": "134-jdrhyne-agent-skills-pack.md",
+    "summary": "",
+    "repo": "",
+    "num": 134,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "135-opensite-skills-memory-sync.md": {
+    "title": "135-opensite-skills-memory-sync",
+    "file": "135-opensite-skills-memory-sync.md",
+    "summary": "",
+    "repo": "",
+    "num": 135,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "136-fast-agent-skills-mcp-acp.md": {
+    "title": "136-fast-agent-skills-mcp-acp",
+    "file": "136-fast-agent-skills-mcp-acp.md",
+    "summary": "",
+    "repo": "",
+    "num": 136,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "137-mcp-local-rag-agent-skills.md": {
+    "title": "137-mcp-local-rag-agent-skills",
+    "file": "137-mcp-local-rag-agent-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 137,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "138-awesome-omni-skills-runtime.md": {
+    "title": "138-awesome-omni-skills-runtime",
+    "file": "138-awesome-omni-skills-runtime.md",
+    "summary": "",
+    "repo": "",
+    "num": 138,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "139-lightagent-memory-mcp-skills.md": {
+    "title": "139-lightagent-memory-mcp-skills",
+    "file": "139-lightagent-memory-mcp-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 139,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "14-chatdev-software-dev.md": {
+    "title": "14-chatdev-software-dev",
+    "file": "14-chatdev-software-dev.md",
+    "summary": "",
+    "repo": "",
+    "num": 14,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "14-swe-agent-software-engineering.md": {
+    "title": "14-swe-agent-software-engineering",
+    "file": "14-swe-agent-software-engineering.md",
+    "summary": "",
+    "repo": "",
+    "num": 14,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "140-agent-skills-hub-registry.md": {
+    "title": "140-agent-skills-hub-registry",
+    "file": "140-agent-skills-hub-registry.md",
+    "summary": "",
+    "repo": "",
+    "num": 140,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "141-thclaws-agent-harness-platform.md": {
+    "title": "141-thclaws-agent-harness-platform",
+    "file": "141-thclaws-agent-harness-platform.md",
+    "summary": "",
+    "repo": "",
+    "num": 141,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "142-memento-skills-self-evolving-agent.md": {
+    "title": "142-memento-skills-self-evolving-agent",
+    "file": "142-memento-skills-self-evolving-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 142,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "143-openclaw-medical-skills-library.md": {
+    "title": "143-openclaw-medical-skills-library",
+    "file": "143-openclaw-medical-skills-library.md",
+    "summary": "",
+    "repo": "",
+    "num": 143,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "144-agentsys-agent-orchestration-runtime.md": {
+    "title": "144-agentsys-agent-orchestration-runtime",
+    "file": "144-agentsys-agent-orchestration-runtime.md",
+    "summary": "",
+    "repo": "",
+    "num": 144,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "145-harness-skills-cicd-agent-skills.md": {
+    "title": "145-harness-skills-cicd-agent-skills",
+    "file": "145-harness-skills-cicd-agent-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 145,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "146-openharness-agent-harness-ohmo.md": {
+    "title": "146-openharness-agent-harness-ohmo",
+    "file": "146-openharness-agent-harness-ohmo.md",
+    "summary": "",
+    "repo": "",
+    "num": 146,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "147-my-codex-agent-harness-pack.md": {
+    "title": "147-my-codex-agent-harness-pack",
+    "file": "147-my-codex-agent-harness-pack.md",
+    "summary": "",
+    "repo": "",
+    "num": 147,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "148-skillrl-recursive-skill-rl.md": {
+    "title": "148-skillrl-recursive-skill-rl",
+    "file": "148-skillrl-recursive-skill-rl.md",
+    "summary": "",
+    "repo": "",
+    "num": 148,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "149-hebbs-memory-engine.md": {
+    "title": "149-hebbs-memory-engine",
+    "file": "149-hebbs-memory-engine.md",
+    "summary": "",
+    "repo": "",
+    "num": 149,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "15-agentverse-collaboration.md": {
+    "title": "15-agentverse-collaboration",
+    "file": "15-agentverse-collaboration.md",
+    "summary": "",
+    "repo": "",
+    "num": 15,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "15-openhands-ai-software-dev.md": {
+    "title": "15-openhands-ai-software-dev",
+    "file": "15-openhands-ai-software-dev.md",
+    "summary": "",
+    "repo": "",
+    "num": 15,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "150-memskill-evolving-memory-skills.md": {
+    "title": "150-memskill-evolving-memory-skills",
+    "file": "150-memskill-evolving-memory-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 150,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "151-zylos-core-self-evolving-ai-teams.md": {
+    "title": "151-zylos-core-self-evolving-ai-teams",
+    "file": "151-zylos-core-self-evolving-ai-teams.md",
+    "summary": "",
+    "repo": "",
+    "num": 151,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "152-quantaalpha-evolutionary-repo-agent.md": {
+    "title": "152-quantaalpha-evolutionary-repo-agent",
+    "file": "152-quantaalpha-evolutionary-repo-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 152,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "153-agent-ecosystem-skill-validator.md": {
+    "title": "153-agent-ecosystem-skill-validator",
+    "file": "153-agent-ecosystem-skill-validator.md",
+    "summary": "",
+    "repo": "",
+    "num": 153,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "154-agent-skills-eval-benchmark.md": {
+    "title": "154-agent-skills-eval-benchmark",
+    "file": "154-agent-skills-eval-benchmark.md",
+    "summary": "",
+    "repo": "",
+    "num": 154,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "155-baoyu-agent-skills-pack.md": {
+    "title": "155-baoyu-agent-skills-pack",
+    "file": "155-baoyu-agent-skills-pack.md",
+    "summary": "",
+    "repo": "",
+    "num": 155,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "156-alirezarezvani-claude-skills-pack.md": {
+    "title": "156-alirezarezvani-claude-skills-pack",
+    "file": "156-alirezarezvani-claude-skills-pack.md",
+    "summary": "",
+    "repo": "",
+    "num": 156,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "157-agentskills-open-standard.md": {
+    "title": "157-agentskills-open-standard",
+    "file": "157-agentskills-open-standard.md",
+    "summary": "",
+    "repo": "",
+    "num": 157,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "158-elastic-official-agent-skills.md": {
+    "title": "158-elastic-official-agent-skills",
+    "file": "158-elastic-official-agent-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 158,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "159-hol-registry-broker-skills.md": {
+    "title": "159-hol-registry-broker-skills",
+    "file": "159-hol-registry-broker-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 159,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "16-devika-ai-software-engineer.md": {
+    "title": "16-devika-ai-software-engineer",
+    "file": "16-devika-ai-software-engineer.md",
+    "summary": "",
+    "repo": "",
+    "num": 16,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "16-langgraph-agent-workflow.md": {
+    "title": "16-langgraph-agent-workflow",
+    "file": "16-langgraph-agent-workflow.md",
+    "summary": "",
+    "repo": "",
+    "num": 16,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "160-skill-hunter-agent-skill-recommender.md": {
+    "title": "160-skill-hunter-agent-skill-recommender",
+    "file": "160-skill-hunter-agent-skill-recommender.md",
+    "summary": "",
+    "repo": "",
+    "num": 160,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "161-skillclaw-collective-skill-evolution.md": {
+    "title": "161-skillclaw-collective-skill-evolution",
+    "file": "161-skillclaw-collective-skill-evolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 161,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "162-openspace-self-evolving-skills.md": {
+    "title": "162-openspace-self-evolving-skills",
+    "file": "162-openspace-self-evolving-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 162,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "163-cog-self-evolving-second-brain.md": {
+    "title": "163-cog-self-evolving-second-brain",
+    "file": "163-cog-self-evolving-second-brain.md",
+    "summary": "",
+    "repo": "",
+    "num": 163,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "164-hippo-memory-biological-agent-memory.md": {
+    "title": "164-hippo-memory-biological-agent-memory",
+    "file": "164-hippo-memory-biological-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 164,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "165-awesome-openclaw-skills-index.md": {
+    "title": "165-awesome-openclaw-skills-index",
+    "file": "165-awesome-openclaw-skills-index.md",
+    "summary": "",
+    "repo": "",
+    "num": 165,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "166-evotest-evolutionary-test-time-learning.md": {
+    "title": "166-evotest-evolutionary-test-time-learning",
+    "file": "166-evotest-evolutionary-test-time-learning.md",
+    "summary": "",
+    "repo": "",
+    "num": 166,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "167-agentic-stack-portable-agent-memory-skills.md": {
+    "title": "167-agentic-stack-portable-agent-memory-skills",
+    "file": "167-agentic-stack-portable-agent-memory-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 167,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "168-revfactory-harness-team-architecture-factory.md": {
+    "title": "168-revfactory-harness-team-architecture-factory",
+    "file": "168-revfactory-harness-team-architecture-factory.md",
+    "summary": "",
+    "repo": "",
+    "num": 168,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "169-oh-my-skills-cross-agent-skill-collection.md": {
+    "title": "169-oh-my-skills-cross-agent-skill-collection",
+    "file": "169-oh-my-skills-cross-agent-skill-collection.md",
+    "summary": "",
+    "repo": "",
+    "num": 169,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "17-agentscope-alibaba.md": {
+    "title": "17-agentscope-alibaba",
+    "file": "17-agentscope-alibaba.md",
+    "summary": "",
+    "repo": "",
+    "num": 17,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "17-agentverse-multi-agent-platform.md": {
+    "title": "17-agentverse-multi-agent-platform",
+    "file": "17-agentverse-multi-agent-platform.md",
+    "summary": "",
+    "repo": "",
+    "num": 17,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "170-openclaw-harness-engineering-factory.md": {
+    "title": "170-openclaw-harness-engineering-factory",
+    "file": "170-openclaw-harness-engineering-factory.md",
+    "summary": "",
+    "repo": "",
+    "num": 170,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "171-codex-1up-codex-cli-upgrade-kit.md": {
+    "title": "171-codex-1up-codex-cli-upgrade-kit",
+    "file": "171-codex-1up-codex-cli-upgrade-kit.md",
+    "summary": "",
+    "repo": "",
+    "num": 171,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "172-dotnet-skills-agent-skill-catalog.md": {
+    "title": "172-dotnet-skills-agent-skill-catalog",
+    "file": "172-dotnet-skills-agent-skill-catalog.md",
+    "summary": "",
+    "repo": "",
+    "num": 172,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "173-honcho-stateful-agent-memory.md": {
+    "title": "173-honcho-stateful-agent-memory",
+    "file": "173-honcho-stateful-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 173,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "174-hindsight-agent-memory-that-learns.md": {
+    "title": "174-hindsight-agent-memory-that-learns",
+    "file": "174-hindsight-agent-memory-that-learns.md",
+    "summary": "",
+    "repo": "",
+    "num": 174,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "175-agentic-context-engine-experience-learning.md": {
+    "title": "175-agentic-context-engine-experience-learning",
+    "file": "175-agentic-context-engine-experience-learning.md",
+    "summary": "",
+    "repo": "",
+    "num": 175,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "176-trustgraph-context-graph-agent-runtime.md": {
+    "title": "176-trustgraph-context-graph-agent-runtime",
+    "file": "176-trustgraph-context-graph-agent-runtime.md",
+    "summary": "",
+    "repo": "",
+    "num": 176,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "177-halumem-agent-memory-hallucination-benchmark.md": {
+    "title": "177-halumem-agent-memory-hallucination-benchmark",
+    "file": "177-halumem-agent-memory-hallucination-benchmark.md",
+    "summary": "",
+    "repo": "",
+    "num": 177,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "178-planning-with-files-agent-planning-skill.md": {
+    "title": "178-planning-with-files-agent-planning-skill",
+    "file": "178-planning-with-files-agent-planning-skill.md",
+    "summary": "",
+    "repo": "",
+    "num": 178,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "179-ecc-agent-harness-optimization-system.md": {
+    "title": "179-ecc-agent-harness-optimization-system",
+    "file": "179-ecc-agent-harness-optimization-system.md",
+    "summary": "",
+    "repo": "",
+    "num": 179,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "18-flaml-fast-automl.md": {
+    "title": "18-flaml-fast-automl",
+    "file": "18-flaml-fast-automl.md",
+    "summary": "",
+    "repo": "",
+    "num": 18,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "18-reevo-reflective-evolution.md": {
+    "title": "18-reevo-reflective-evolution",
+    "file": "18-reevo-reflective-evolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 18,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "18-swe-agent-code-fix.md": {
+    "title": "18-swe-agent-code-fix",
+    "file": "18-swe-agent-code-fix.md",
+    "summary": "",
+    "repo": "",
+    "num": 18,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "180-vibe-codex-codex-skills-teams.md": {
+    "title": "180-vibe-codex-codex-skills-teams",
+    "file": "180-vibe-codex-codex-skills-teams.md",
+    "summary": "",
+    "repo": "",
+    "num": 180,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "181-opencode-skills-workflow-commands.md": {
+    "title": "181-opencode-skills-workflow-commands",
+    "file": "181-opencode-skills-workflow-commands.md",
+    "summary": "",
+    "repo": "",
+    "num": 181,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "182-agent-smith-directory-isolated-multi-agent.md": {
+    "title": "182-agent-smith-directory-isolated-multi-agent",
+    "file": "182-agent-smith-directory-isolated-multi-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 182,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "183-galyarder-agentic-skills-orchestration.md": {
+    "title": "183-galyarder-agentic-skills-orchestration",
+    "file": "183-galyarder-agentic-skills-orchestration.md",
+    "summary": "",
+    "repo": "",
+    "num": 183,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "184-thesis-skills-paper-workflow-skills.md": {
+    "title": "184-thesis-skills-paper-workflow-skills",
+    "file": "184-thesis-skills-paper-workflow-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 184,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "185-prb-agent-skills-personal-codex-skill-pack.md": {
+    "title": "185-prb-agent-skills-personal-codex-skill-pack",
+    "file": "185-prb-agent-skills-personal-codex-skill-pack.md",
+    "summary": "",
+    "repo": "",
+    "num": 185,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "186-awesome-codex-skills-automation-catalog.md": {
+    "title": "186-awesome-codex-skills-automation-catalog",
+    "file": "186-awesome-codex-skills-automation-catalog.md",
+    "summary": "",
+    "repo": "",
+    "num": 186,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "187-eigent-agent-skills-cowork-collection.md": {
+    "title": "187-eigent-agent-skills-cowork-collection",
+    "file": "187-eigent-agent-skills-cowork-collection.md",
+    "summary": "",
+    "repo": "",
+    "num": 187,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "188-ai-agent-skills-curated-library-cli.md": {
+    "title": "188-ai-agent-skills-curated-library-cli",
+    "file": "188-ai-agent-skills-curated-library-cli.md",
+    "summary": "",
+    "repo": "",
+    "num": 188,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "189-arc-agent-workflow-plugin.md": {
+    "title": "189-arc-agent-workflow-plugin",
+    "file": "189-arc-agent-workflow-plugin.md",
+    "summary": "",
+    "repo": "",
+    "num": 189,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "19-autogluon-automl.md": {
+    "title": "19-autogluon-automl",
+    "file": "19-autogluon-automl.md",
+    "summary": "",
+    "repo": "",
+    "num": 19,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "19-llamea-llm-evolutionary-algorithm.md": {
+    "title": "19-llamea-llm-evolutionary-algorithm",
+    "file": "19-llamea-llm-evolutionary-algorithm.md",
+    "summary": "",
+    "repo": "",
+    "num": 19,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "19-openhands-dev-agent.md": {
+    "title": "19-openhands-dev-agent",
+    "file": "19-openhands-dev-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 19,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "190-gentleman-skills-community-agent-patterns.md": {
+    "title": "190-gentleman-skills-community-agent-patterns",
+    "file": "190-gentleman-skills-community-agent-patterns.md",
+    "summary": "",
+    "repo": "",
+    "num": 190,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "191-together-ai-skills-provider-api-pack.md": {
+    "title": "191-together-ai-skills-provider-api-pack",
+    "file": "191-together-ai-skills-provider-api-pack.md",
+    "summary": "",
+    "repo": "",
+    "num": 191,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "192-evomembench-self-evolving-memory-benchmark.md": {
+    "title": "192-evomembench-self-evolving-memory-benchmark",
+    "file": "192-evomembench-self-evolving-memory-benchmark.md",
+    "summary": "",
+    "repo": "",
+    "num": 192,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "193-signet-agent-context-substrate.md": {
+    "title": "193-signet-agent-context-substrate",
+    "file": "193-signet-agent-context-substrate.md",
+    "summary": "",
+    "repo": "",
+    "num": 193,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "194-mempalace-agent-memory-benchmark.md": {
+    "title": "194-mempalace-agent-memory-benchmark",
+    "file": "194-mempalace-agent-memory-benchmark.md",
+    "summary": "",
+    "repo": "",
+    "num": 194,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "195-rasputin-memory-openclaw-claude.md": {
+    "title": "195-rasputin-memory-openclaw-claude",
+    "file": "195-rasputin-memory-openclaw-claude.md",
+    "summary": "",
+    "repo": "",
+    "num": 195,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "196-agentreplay-local-agent-observability-memory.md": {
+    "title": "196-agentreplay-local-agent-observability-memory",
+    "file": "196-agentreplay-local-agent-observability-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 196,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "197-awesome-agent-memory-papers.md": {
+    "title": "197-awesome-agent-memory-papers",
+    "file": "197-awesome-agent-memory-papers.md",
+    "summary": "",
+    "repo": "",
+    "num": 197,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "198-memvid-single-file-agent-memory.md": {
+    "title": "198-memvid-single-file-agent-memory",
+    "file": "198-memvid-single-file-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 198,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "199-tfatykhov-awesome-agent-memory.md": {
+    "title": "199-tfatykhov-awesome-agent-memory",
+    "file": "199-tfatykhov-awesome-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 199,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "20-aider-ai-pair-programming.md": {
+    "title": "20-aider-ai-pair-programming",
+    "file": "20-aider-ai-pair-programming.md",
+    "summary": "",
+    "repo": "",
+    "num": 20,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "20-evoprompt-evolutionary-prompt-optimization.md": {
+    "title": "20-evoprompt-evolutionary-prompt-optimization",
+    "file": "20-evoprompt-evolutionary-prompt-optimization.md",
+    "summary": "",
+    "repo": "",
+    "num": 20,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "20-evoprompt-prompt-optimization.md": {
+    "title": "20-evoprompt-prompt-optimization",
+    "file": "20-evoprompt-prompt-optimization.md",
+    "summary": "",
+    "repo": "",
+    "num": 20,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "20-mad-multi-agent-debate.md": {
+    "title": "20-mad-multi-agent-debate",
+    "file": "20-mad-multi-agent-debate.md",
+    "summary": "",
+    "repo": "",
+    "num": 20,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "209-cxxz-awesome-agent-memory.md": {
+    "title": "209-cxxz-awesome-agent-memory",
+    "file": "209-cxxz-awesome-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 209,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "21-babyagi-task-agent.md": {
+    "title": "21-babyagi-task-agent",
+    "file": "21-babyagi-task-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 21,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "21-cline-autonomous-coding.md": {
+    "title": "21-cline-autonomous-coding",
+    "file": "21-cline-autonomous-coding.md",
+    "summary": "",
+    "repo": "",
+    "num": 21,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "21-evoagent-evolutionary-multi-agent.md": {
+    "title": "21-evoagent-evolutionary-multi-agent",
+    "file": "21-evoagent-evolutionary-multi-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 21,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "21-evoagent-multi-agent-evolution.md": {
+    "title": "21-evoagent-multi-agent-evolution",
+    "file": "21-evoagent-multi-agent-evolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 21,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "210-memoir-agent-auto-memory.md": {
+    "title": "210-memoir-agent-auto-memory",
+    "file": "210-memoir-agent-auto-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 210,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "211-awesome-graphmemory.md": {
+    "title": "211-awesome-graphmemory",
+    "file": "211-awesome-graphmemory.md",
+    "summary": "",
+    "repo": "",
+    "num": 211,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "212-atant-agent-continuity-eval.md": {
+    "title": "212-atant-agent-continuity-eval",
+    "file": "212-atant-agent-continuity-eval.md",
+    "summary": "",
+    "repo": "",
+    "num": 212,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "213-gitagent-git-native-agent-framework.md": {
+    "title": "213-gitagent-git-native-agent-framework",
+    "file": "213-gitagent-git-native-agent-framework.md",
+    "summary": "",
+    "repo": "",
+    "num": 213,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "214-gemini-cli-auto-memory-skills.md": {
+    "title": "214-gemini-cli-auto-memory-skills",
+    "file": "214-gemini-cli-auto-memory-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 214,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "215-skillgrade-agent-skill-evaluation.md": {
+    "title": "215-skillgrade-agent-skill-evaluation",
+    "file": "215-skillgrade-agent-skill-evaluation.md",
+    "summary": "",
+    "repo": "",
+    "num": 215,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "216-webmaxru-agent-skills.md": {
+    "title": "216-webmaxru-agent-skills",
+    "file": "216-webmaxru-agent-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 216,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "217-waza-agent-skill-evaluation-cli.md": {
+    "title": "217-waza-agent-skill-evaluation-cli",
+    "file": "217-waza-agent-skill-evaluation-cli.md",
+    "summary": "",
+    "repo": "",
+    "num": 217,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "218-nexo-agent-memory-runtime.md": {
+    "title": "218-nexo-agent-memory-runtime",
+    "file": "218-nexo-agent-memory-runtime.md",
+    "summary": "",
+    "repo": "",
+    "num": 218,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "219-state-trace-agent-memory-engine.md": {
+    "title": "219-state-trace-agent-memory-engine",
+    "file": "219-state-trace-agent-memory-engine.md",
+    "summary": "",
+    "repo": "",
+    "num": 219,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "22-devika-ai-engineer.md": {
+    "title": "22-devika-ai-engineer",
+    "file": "22-devika-ai-engineer.md",
+    "summary": "",
+    "repo": "",
+    "num": 22,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "22-evoagentx-agent-evolution-framework.md": {
+    "title": "22-evoagentx-agent-evolution-framework",
+    "file": "22-evoagentx-agent-evolution-framework.md",
+    "summary": "",
+    "repo": "",
+    "num": 22,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "22-evoagentx-evolutionary-agents.md": {
+    "title": "22-evoagentx-evolutionary-agents",
+    "file": "22-evoagentx-evolutionary-agents.md",
+    "summary": "",
+    "repo": "",
+    "num": 22,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "22-tabby-self-hosted-copilot.md": {
+    "title": "22-tabby-self-hosted-copilot",
+    "file": "22-tabby-self-hosted-copilot.md",
+    "summary": "",
+    "repo": "",
+    "num": 22,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "220-agent-memory-techniques.md": {
+    "title": "220-agent-memory-techniques",
+    "file": "220-agent-memory-techniques.md",
+    "summary": "",
+    "repo": "",
+    "num": 220,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "221-kbench-agent-harness-benchmark-cli.md": {
+    "title": "221-kbench-agent-harness-benchmark-cli",
+    "file": "221-kbench-agent-harness-benchmark-cli.md",
+    "summary": "",
+    "repo": "",
+    "num": 221,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "222-evmbench-smart-contract-agent-harness.md": {
+    "title": "222-evmbench-smart-contract-agent-harness",
+    "file": "222-evmbench-smart-contract-agent-harness.md",
+    "summary": "",
+    "repo": "",
+    "num": 222,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "223-skills-best-practices-agent-skill-authoring.md": {
+    "title": "223-skills-best-practices-agent-skill-authoring",
+    "file": "223-skills-best-practices-agent-skill-authoring.md",
+    "summary": "",
+    "repo": "",
+    "num": 223,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "224-sica-self-improving-coding-agent.md": {
+    "title": "SICA Self-Improving Coding Agent",
+    "file": "224-sica-self-improving-coding-agent.md",
+    "summary": "SICA is a self-improving coding-agent implementation where the agent works on its own codebase, making it a core self-referential improvement artifact.",
+    "repo": "MaximeRobeyns/self_improving_coding_agent |",
+    "num": 224,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "225-agent-zero-runtime.md": {
+    "title": "Agent Zero",
+    "file": "225-agent-zero-runtime.md",
+    "summary": "Agent Zero is an autonomous-agent runtime with Linux execution, memory, browser automation, skills, plugins, projects and subordinate agents.",
+    "repo": "agent0ai/agent-zero |",
+    "num": 225,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "226-elizaos-autonomous-agent-framework.md": {
+    "title": "elizaOS",
+    "file": "226-elizaos-autonomous-agent-framework.md",
+    "summary": "elizaOS is a high-adoption autonomous-agent framework whose plugin and lifecycle surface can host memory, skill, workflow and evaluator loops.",
+    "repo": "elizaOS/eliza |",
+    "num": 226,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "227-centaur-secure-team-agent-runtime.md": {
+    "title": "Centaur",
+    "file": "227-centaur-secure-team-agent-runtime.md",
+    "summary": "Centaur is a multiplayer self-hosted secure team-agent runtime with Kubernetes sandboxes, bring-your-own harness support, durable workflows, tools and credential boundaries.",
+    "repo": "paradigmxyz/centaur |",
+    "num": 227,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "228-yunjue-agent-in-situ-self-evolving-agent.md": {
+    "title": "228-yunjue-agent-in-situ-self-evolving-agent",
+    "file": "228-yunjue-agent-in-situ-self-evolving-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 228,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "229-rangeking-self-evolving-agent-skill.md": {
+    "title": "229-rangeking-self-evolving-agent-skill",
+    "file": "229-rangeking-self-evolving-agent-skill.md",
+    "summary": "",
+    "repo": "",
+    "num": 229,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "23-continue-opensource-assistant.md": {
+    "title": "23-continue-opensource-assistant",
+    "file": "23-continue-opensource-assistant.md",
+    "summary": "",
+    "repo": "",
+    "num": 23,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "23-everos-agent-benchmark.md": {
+    "title": "23-everos-agent-benchmark",
+    "file": "23-everos-agent-benchmark.md",
+    "summary": "",
+    "repo": "",
+    "num": 23,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "23-everos-self-evolving-agents.md": {
+    "title": "23-everos-self-evolving-agents",
+    "file": "23-everos-self-evolving-agents.md",
+    "summary": "",
+    "repo": "",
+    "num": 23,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "23-gpt-engineer-code.md": {
+    "title": "23-gpt-engineer-code",
+    "file": "23-gpt-engineer-code.md",
+    "summary": "",
+    "repo": "",
+    "num": 23,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "230-nex-agent-elixir-otp-self-evolving-agent.md": {
+    "title": "230-nex-agent-elixir-otp-self-evolving-agent",
+    "file": "230-nex-agent-elixir-otp-self-evolving-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 230,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "231-hermes2anti-self-improve-agent-memory-skills.md": {
+    "title": "231-hermes2anti-self-improve-agent-memory-skills",
+    "file": "231-hermes2anti-self-improve-agent-memory-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 231,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "232-adhdev-agent-dashboard-control-plane.md": {
+    "title": "232-adhdev-agent-dashboard-control-plane",
+    "file": "232-adhdev-agent-dashboard-control-plane.md",
+    "summary": "",
+    "repo": "",
+    "num": 232,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "233-ai-research-skills-agent-research-workflow.md": {
+    "title": "AI Research SKILLs",
+    "file": "233-ai-research-skills-agent-research-workflow.md",
+    "summary": "AI Research SKILLs is a large open-source skill library for turning coding agents into AI research agents across ideation, experiments, evaluation and paper writing.",
+    "repo": "Orchestra-Research/AI-research-SKILLs |",
+    "num": 233,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "234-ai-skills-agent-process-discipline.md": {
+    "title": "ai-skills",
+    "file": "234-ai-skills-agent-process-discipline.md",
+    "summary": "ai-skills is a compact behavioral skill library for coding agents, distributing process discipline across Codex, Claude Code, Cursor, Gemini CLI and related runtimes.",
+    "repo": "iliaal/ai-skills |",
+    "num": 234,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "235-claude-trading-skills-domain-agent-workflows.md": {
+    "title": "235-claude-trading-skills-domain-agent-workflows",
+    "file": "235-claude-trading-skills-domain-agent-workflows.md",
+    "summary": "",
+    "repo": "",
+    "num": 235,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "236-speckit-agent-skills-spec-driven-workflow.md": {
+    "title": "236-speckit-agent-skills-spec-driven-workflow",
+    "file": "236-speckit-agent-skills-spec-driven-workflow.md",
+    "summary": "",
+    "repo": "",
+    "num": 236,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "237-cuga-agent-enterprise-agent-harness.md": {
+    "title": "237-cuga-agent-enterprise-agent-harness",
+    "file": "237-cuga-agent-enterprise-agent-harness.md",
+    "summary": "",
+    "repo": "",
+    "num": 237,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "238-autor-human-centered-research-harness.md": {
+    "title": "238-autor-human-centered-research-harness",
+    "file": "238-autor-human-centered-research-harness.md",
+    "summary": "",
+    "repo": "",
+    "num": 238,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "239-chorus-ai-human-collaboration-harness.md": {
+    "title": "239-chorus-ai-human-collaboration-harness",
+    "file": "239-chorus-ai-human-collaboration-harness.md",
+    "summary": "",
+    "repo": "",
+    "num": 239,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "24-aider-pair-programming.md": {
+    "title": "24-aider-pair-programming",
+    "file": "24-aider-pair-programming.md",
+    "summary": "",
+    "repo": "",
+    "num": 24,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "24-gpt-engineer-codegen.md": {
+    "title": "24-gpt-engineer-codegen",
+    "file": "24-gpt-engineer-codegen.md",
+    "summary": "",
+    "repo": "",
+    "num": 24,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "24-opentreesearch-llm-code-evolution.md": {
+    "title": "24-opentreesearch-llm-code-evolution",
+    "file": "24-opentreesearch-llm-code-evolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 24,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "24-opentreesearch-tree-search.md": {
+    "title": "24-opentreesearch-tree-search",
+    "file": "24-opentreesearch-tree-search.md",
+    "summary": "",
+    "repo": "",
+    "num": 24,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "240-kweaver-core-enterprise-decision-agent-harness.md": {
+    "title": "240-kweaver-core-enterprise-decision-agent-harness",
+    "file": "240-kweaver-core-enterprise-decision-agent-harness.md",
+    "summary": "",
+    "repo": "",
+    "num": 240,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "241-clawprobench-live-openclaw-benchmark.md": {
+    "title": "241-clawprobench-live-openclaw-benchmark",
+    "file": "241-clawprobench-live-openclaw-benchmark.md",
+    "summary": "",
+    "repo": "",
+    "num": 241,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "242-sd0x-dev-flow-claude-code-harness-safety-gates.md": {
+    "title": "242-sd0x-dev-flow-claude-code-harness-safety-gates",
+    "file": "242-sd0x-dev-flow-claude-code-harness-safety-gates.md",
+    "summary": "",
+    "repo": "",
+    "num": 242,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "243-utah-event-driven-agent-harness.md": {
+    "title": "243-utah-event-driven-agent-harness",
+    "file": "243-utah-event-driven-agent-harness.md",
+    "summary": "",
+    "repo": "",
+    "num": 243,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "244-metaharness-benchmark-driven-harness-evolution.md": {
+    "title": "244-metaharness-benchmark-driven-harness-evolution",
+    "file": "244-metaharness-benchmark-driven-harness-evolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 244,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "245-wildclawbench-authentic-real-world-agent-benchmark.md": {
+    "title": "245-wildclawbench-authentic-real-world-agent-benchmark",
+    "file": "245-wildclawbench-authentic-real-world-agent-benchmark.md",
+    "summary": "",
+    "repo": "",
+    "num": 245,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "246-supermemory-open-memory-infrastructure.md": {
+    "title": "246-supermemory-open-memory-infrastructure",
+    "file": "246-supermemory-open-memory-infrastructure.md",
+    "summary": "",
+    "repo": "",
+    "num": 246,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "247-flagos-skills-open-agent-skill-registry.md": {
+    "title": "247-flagos-skills-open-agent-skill-registry",
+    "file": "247-flagos-skills-open-agent-skill-registry.md",
+    "summary": "",
+    "repo": "",
+    "num": 247,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "25-goose-extensible-agent.md": {
+    "title": "25-goose-extensible-agent",
+    "file": "25-goose-extensible-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 25,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "25-open-interpreter.md": {
+    "title": "25-open-interpreter",
+    "file": "25-open-interpreter.md",
+    "summary": "",
+    "repo": "",
+    "num": 25,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "25-pyribs-quality-diversity.md": {
+    "title": "25-pyribs-quality-diversity",
+    "file": "25-pyribs-quality-diversity.md",
+    "summary": "",
+    "repo": "",
+    "num": 25,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "26-llm4ec-llm-evolutionary-computation.md": {
+    "title": "26-llm4ec-llm-evolutionary-computation",
+    "file": "26-llm4ec-llm-evolutionary-computation.md",
+    "summary": "注：本项目为纯论文索引仓库，不包含可执行源代码。其核心价值在于对 LLM-EC 交叉领域研究工作的系统化分类整理。",
+    "repo": "",
+    "num": 26,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "26-ludwig-lowcode-automl.md": {
+    "title": "26-ludwig-lowcode-automl",
+    "file": "26-ludwig-lowcode-automl.md",
+    "summary": "",
+    "repo": "",
+    "num": 26,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "26-semantic-kernel-enterprise.md": {
+    "title": "26-semantic-kernel-enterprise",
+    "file": "26-semantic-kernel-enterprise.md",
+    "summary": "",
+    "repo": "",
+    "num": 26,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "27-agency-swarm.md": {
+    "title": "27-agency-swarm",
+    "file": "27-agency-swarm.md",
+    "summary": "",
+    "repo": "",
+    "num": 27,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "27-llm4opt-llm-optimization.md": {
+    "title": "27-llm4opt-llm-optimization",
+    "file": "27-llm4opt-llm-optimization.md",
+    "summary": "",
+    "repo": "",
+    "num": 27,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "27-optuna-hyperparameter-optimization.md": {
+    "title": "27-optuna-hyperparameter-optimization",
+    "file": "27-optuna-hyperparameter-optimization.md",
+    "summary": "",
+    "repo": "",
+    "num": 27,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "28-codegeex-multilingual-codegen.md": {
+    "title": "28-codegeex-multilingual-codegen",
+    "file": "28-codegeex-multilingual-codegen.md",
+    "summary": "",
+    "repo": "",
+    "num": 28,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "28-dify-llm-platform.md": {
+    "title": "28-dify-llm-platform",
+    "file": "28-dify-llm-platform.md",
+    "summary": "",
+    "repo": "",
+    "num": 28,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "28-nevergrad-derivative-free.md": {
+    "title": "28-nevergrad-derivative-free",
+    "file": "28-nevergrad-derivative-free.md",
+    "summary": "",
+    "repo": "",
+    "num": 28,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "29-deap-evolutionary-framework.md": {
+    "title": "29-deap-evolutionary-framework",
+    "file": "29-deap-evolutionary-framework.md",
+    "summary": "",
+    "repo": "",
+    "num": 29,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "29-llamaindex-data-framework.md": {
+    "title": "29-llamaindex-data-framework",
+    "file": "29-llamaindex-data-framework.md",
+    "summary": "",
+    "repo": "",
+    "num": 29,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "29-nni-automl-toolkit.md": {
+    "title": "29-nni-automl-toolkit",
+    "file": "29-nni-automl-toolkit.md",
+    "summary": "",
+    "repo": "",
+    "num": 29,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "30-haystack-search-agent.md": {
+    "title": "30-haystack-search-agent",
+    "file": "30-haystack-search-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 30,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "30-pycma-cma-es.md": {
+    "title": "30-pycma-cma-es",
+    "file": "30-pycma-cma-es.md",
+    "summary": "",
+    "repo": "",
+    "num": 30,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "31-autosklearn-automl.md": {
+    "title": "31-autosklearn-automl",
+    "file": "31-autosklearn-automl.md",
+    "summary": "",
+    "repo": "",
+    "num": 31,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "31-flowise-drag-drop.md": {
+    "title": "31-flowise-drag-drop",
+    "file": "31-flowise-drag-drop.md",
+    "summary": "",
+    "repo": "",
+    "num": 31,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "32-langflow-visual-agent.md": {
+    "title": "32-langflow-visual-agent",
+    "file": "32-langflow-visual-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 32,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "32-self-evolving-agents-survey.md": {
+    "title": "Self-Evolving-Agents",
+    "file": "32-self-evolving-agents-survey.md",
+    "summary": "普林斯顿/UIUC/MIT 等联合撰写的自进化 Agent 综述，系统回答 What/When/How/Where to Evolve 四个核心问题，覆盖从模型权重到 Agent 架构的多个进化层次。",
+    "repo": "CharlesQ9/Self-Evolving-Agents |",
+    "num": 32,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "32-self-evolving-agents.md": {
+    "title": "32-self-evolving-agents",
+    "file": "32-self-evolving-agents.md",
+    "summary": "",
+    "repo": "",
+    "num": 32,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "33-self-improvement-llm.md": {
+    "title": "33-self-improvement-llm",
+    "file": "33-self-improvement-llm.md",
+    "summary": "",
+    "repo": "",
+    "num": 33,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "33-taskweaver-data-agent.md": {
+    "title": "33-taskweaver-data-agent",
+    "file": "33-taskweaver-data-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 33,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "34-llm-agent-survey.md": {
+    "title": "34-llm-agent-survey",
+    "file": "34-llm-agent-survey.md",
+    "summary": "",
+    "repo": "",
+    "num": 34,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "34-llm-ea-survey.md": {
+    "title": "34-llm-ea-survey",
+    "file": "34-llm-ea-survey.md",
+    "summary": "",
+    "repo": "",
+    "num": 34,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "35-awesome-agent-orchestration.md": {
+    "title": "35-awesome-agent-orchestration",
+    "file": "35-awesome-agent-orchestration.md",
+    "summary": "",
+    "repo": "",
+    "num": 35,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "35-tutorial-gp-llm.md": {
+    "title": "35-tutorial-gp-llm",
+    "file": "35-tutorial-gp-llm.md",
+    "summary": "",
+    "repo": "",
+    "num": 35,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "36-continue-ai-assistant.md": {
+    "title": "36-continue-ai-assistant",
+    "file": "36-continue-ai-assistant.md",
+    "summary": "",
+    "repo": "",
+    "num": 36,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "36-llm-agent-optimization.md": {
+    "title": "36-llm-agent-optimization",
+    "file": "36-llm-agent-optimization.md",
+    "summary": "",
+    "repo": "",
+    "num": 36,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "37-awesome-code-llm.md": {
+    "title": "37-awesome-code-llm",
+    "file": "37-awesome-code-llm.md",
+    "summary": "",
+    "repo": "",
+    "num": 37,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "37-magis-github-issue.md": {
+    "title": "37-magis-github-issue",
+    "file": "37-magis-github-issue.md",
+    "summary": "",
+    "repo": "",
+    "num": 37,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "38-agentbench-evaluation.md": {
+    "title": "38-agentbench-evaluation",
+    "file": "38-agentbench-evaluation.md",
+    "summary": "",
+    "repo": "",
+    "num": 38,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "38-agentbench.md": {
+    "title": "38-agentbench",
+    "file": "38-agentbench.md",
+    "summary": "",
+    "repo": "",
+    "num": 38,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "38-mallm-debate-framework.md": {
+    "title": "38-mallm-debate-framework",
+    "file": "38-mallm-debate-framework.md",
+    "summary": "",
+    "repo": "",
+    "num": 38,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "39-llm-multiagents-survey.md": {
+    "title": "39-llm-multiagents-survey",
+    "file": "39-llm-multiagents-survey.md",
+    "summary": "",
+    "repo": "",
+    "num": 39,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "39-rl4co-combinatorial-optimization.md": {
+    "title": "39-rl4co-combinatorial-optimization",
+    "file": "39-rl4co-combinatorial-optimization.md",
+    "summary": "",
+    "repo": "",
+    "num": 39,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "39-rl4co-reinforcement-learning.md": {
+    "title": "39-rl4co-reinforcement-learning",
+    "file": "39-rl4co-reinforcement-learning.md",
+    "summary": "",
+    "repo": "",
+    "num": 39,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "40-awesome-fm4co.md": {
+    "title": "40-awesome-fm4co",
+    "file": "40-awesome-fm4co.md",
+    "summary": "",
+    "repo": "",
+    "num": 40,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "40-camel-oasis-simulation.md": {
+    "title": "40-camel-oasis-simulation",
+    "file": "40-camel-oasis-simulation.md",
+    "summary": "",
+    "repo": "",
+    "num": 40,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "41-awesome-self-evolving.md": {
+    "title": "41-awesome-self-evolving",
+    "file": "41-awesome-self-evolving.md",
+    "summary": "",
+    "repo": "",
+    "num": 41,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "41-huggingface-trl.md": {
+    "title": "41-huggingface-trl",
+    "file": "41-huggingface-trl.md",
+    "summary": "",
+    "repo": "",
+    "num": 41,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "41-opendevin-ai-software.md": {
+    "title": "41-opendevin-ai-software",
+    "file": "41-opendevin-ai-software.md",
+    "summary": "",
+    "repo": "",
+    "num": 41,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "42-gp-llm-code-evolution.md": {
+    "title": "42-gp-llm-code-evolution",
+    "file": "42-gp-llm-code-evolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 42,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "42-pureples-genetic-programming.md": {
+    "title": "42-pureples-genetic-programming",
+    "file": "42-pureples-genetic-programming.md",
+    "summary": "",
+    "repo": "",
+    "num": 42,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "42-rlhflow-reward-modeling.md": {
+    "title": "42-rlhflow-reward-modeling",
+    "file": "42-rlhflow-reward-modeling.md",
+    "summary": "",
+    "repo": "",
+    "num": 42,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "43-bytedance-verl.md": {
+    "title": "43-bytedance-verl",
+    "file": "43-bytedance-verl.md",
+    "summary": "",
+    "repo": "",
+    "num": 43,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "43-verl-rlhf-framework.md": {
+    "title": "43-verl-rlhf-framework",
+    "file": "43-verl-rlhf-framework.md",
+    "summary": "",
+    "repo": "",
+    "num": 43,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "44-anthropic-hh-rlhf.md": {
+    "title": "44-anthropic-hh-rlhf",
+    "file": "44-anthropic-hh-rlhf.md",
+    "summary": "",
+    "repo": "",
+    "num": 44,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "45-openbmb-ultrafeedback.md": {
+    "title": "45-openbmb-ultrafeedback",
+    "file": "45-openbmb-ultrafeedback.md",
+    "summary": "",
+    "repo": "",
+    "num": 45,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "46-allenai-reward-bench.md": {
+    "title": "46-allenai-reward-bench",
+    "file": "46-allenai-reward-bench.md",
+    "summary": "",
+    "repo": "",
+    "num": 46,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "46-allenai-rewardbench.md": {
+    "title": "46-allenai-rewardbench",
+    "file": "46-allenai-rewardbench.md",
+    "summary": "",
+    "repo": "",
+    "num": 46,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "47-ray-rllib.md": {
+    "title": "47-ray-rllib",
+    "file": "47-ray-rllib.md",
+    "summary": "",
+    "repo": "",
+    "num": 47,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "48-pku-alignment-safe-rlhf.md": {
+    "title": "48-pku-alignment-safe-rlhf",
+    "file": "48-pku-alignment-safe-rlhf.md",
+    "summary": "",
+    "repo": "",
+    "num": 48,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "48-pku-saferlhf.md": {
+    "title": "48-pku-saferlhf",
+    "file": "48-pku-saferlhf.md",
+    "summary": "",
+    "repo": "",
+    "num": 48,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "49-openrlhf-framework.md": {
+    "title": "49-openrlhf-framework",
+    "file": "49-openrlhf-framework.md",
+    "summary": "",
+    "repo": "",
+    "num": 49,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "49-openrlhf.md": {
+    "title": "49-openrlhf",
+    "file": "49-openrlhf.md",
+    "summary": "",
+    "repo": "",
+    "num": 49,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "50-dpo-direct-preference.md": {
+    "title": "50-dpo-direct-preference",
+    "file": "50-dpo-direct-preference.md",
+    "summary": "",
+    "repo": "",
+    "num": 50,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "50-dpo-preference.md": {
+    "title": "50-dpo-preference",
+    "file": "50-dpo-preference.md",
+    "summary": "",
+    "repo": "",
+    "num": 50,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "51-rstar-reasoning.md": {
+    "title": "51-rstar-reasoning",
+    "file": "51-rstar-reasoning.md",
+    "summary": "",
+    "repo": "",
+    "num": 51,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "51-rstar-self-reasoning.md": {
+    "title": "51-rstar-self-reasoning",
+    "file": "51-rstar-self-reasoning.md",
+    "summary": "",
+    "repo": "",
+    "num": 51,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "52-sheared-llama-alignment.md": {
+    "title": "52-sheared-llama-alignment",
+    "file": "52-sheared-llama-alignment.md",
+    "summary": "",
+    "repo": "",
+    "num": 52,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "52-sheared-llama.md": {
+    "title": "52-sheared-llama",
+    "file": "52-sheared-llama.md",
+    "summary": "",
+    "repo": "",
+    "num": 52,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "53-carperai-trlx.md": {
+    "title": "53-carperai-trlx",
+    "file": "53-carperai-trlx.md",
+    "summary": "",
+    "repo": "",
+    "num": 53,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "53-claw-bench-agent-benchmark.md": {
+    "title": "53-claw-bench-agent-benchmark",
+    "file": "53-claw-bench-agent-benchmark.md",
+    "summary": "",
+    "repo": "",
+    "num": 53,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "53-rlaif-ai-feedback.md": {
+    "title": "53-rlaif-ai-feedback",
+    "file": "53-rlaif-ai-feedback.md",
+    "summary": "",
+    "repo": "",
+    "num": 53,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "54-openclaw-clawbench.md": {
+    "title": "54-openclaw-clawbench",
+    "file": "54-openclaw-clawbench.md",
+    "summary": "",
+    "repo": "",
+    "num": 54,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "54-reward-modeling-survey.md": {
+    "title": "54-reward-modeling-survey",
+    "file": "54-reward-modeling-survey.md",
+    "summary": "",
+    "repo": "",
+    "num": 54,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "55-claw-eval-agent-evaluation.md": {
+    "title": "55-claw-eval-agent-evaluation",
+    "file": "55-claw-eval-agent-evaluation.md",
+    "summary": "",
+    "repo": "",
+    "num": 55,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "55-llm-alignment-survey.md": {
+    "title": "55-llm-alignment-survey",
+    "file": "55-llm-alignment-survey.md",
+    "summary": "",
+    "repo": "",
+    "num": 55,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "55-sparse-dpo-alignment.md": {
+    "title": "55-sparse-dpo-alignment",
+    "file": "55-sparse-dpo-alignment.md",
+    "summary": "",
+    "repo": "",
+    "num": 55,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "56-harness-evolver.md": {
+    "title": "56-harness-evolver",
+    "file": "56-harness-evolver.md",
+    "summary": "",
+    "repo": "",
+    "num": 56,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "56-lucidrains-self-rewarding-lm.md": {
+    "title": "56-lucidrains-self-rewarding-lm",
+    "file": "56-lucidrains-self-rewarding-lm.md",
+    "summary": "",
+    "repo": "",
+    "num": 56,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "56-self-rewarding-lm.md": {
+    "title": "56-self-rewarding-lm",
+    "file": "56-self-rewarding-lm.md",
+    "summary": "",
+    "repo": "",
+    "num": 56,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "57-awesome-harness-engineering.md": {
+    "title": "57-awesome-harness-engineering",
+    "file": "57-awesome-harness-engineering.md",
+    "summary": "",
+    "repo": "",
+    "num": 57,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "57-meta-self-rewarding-lm.md": {
+    "title": "57-meta-self-rewarding-lm",
+    "file": "57-meta-self-rewarding-lm.md",
+    "summary": "",
+    "repo": "",
+    "num": 57,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "57-meta-self-rewarding.md": {
+    "title": "57-meta-self-rewarding",
+    "file": "57-meta-self-rewarding.md",
+    "summary": "",
+    "repo": "",
+    "num": 57,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "58-mem0-agent-memory.md": {
+    "title": "58-mem0-agent-memory",
+    "file": "58-mem0-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 58,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "58-openbmb-self-evolve.md": {
+    "title": "58-openbmb-self-evolve",
+    "file": "58-openbmb-self-evolve.md",
+    "summary": "",
+    "repo": "",
+    "num": 58,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "58-openbmb-selfevolve.md": {
+    "title": "58-openbmb-selfevolve",
+    "file": "58-openbmb-selfevolve.md",
+    "summary": "",
+    "repo": "",
+    "num": 58,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "59-spin-self-play-finetuning.md": {
+    "title": "59-spin-self-play-finetuning",
+    "file": "59-spin-self-play-finetuning.md",
+    "summary": "",
+    "repo": "",
+    "num": 59,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "59-spin-selfplay.md": {
+    "title": "59-spin-selfplay",
+    "file": "59-spin-selfplay.md",
+    "summary": "",
+    "repo": "",
+    "num": 59,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "59-timem-temporal-memory.md": {
+    "title": "59-timem-temporal-memory",
+    "file": "59-timem-temporal-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 59,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "60-ama-bench-memory-evaluation.md": {
+    "title": "60-ama-bench-memory-evaluation",
+    "file": "60-ama-bench-memory-evaluation.md",
+    "summary": "",
+    "repo": "",
+    "num": 60,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "60-self-rag-retrieval.md": {
+    "title": "60-self-rag-retrieval",
+    "file": "60-self-rag-retrieval.md",
+    "summary": "",
+    "repo": "",
+    "num": 60,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "60-self-rag.md": {
+    "title": "60-self-rag",
+    "file": "60-self-rag.md",
+    "summary": "",
+    "repo": "",
+    "num": 60,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "61-abel-self-alignment.md": {
+    "title": "61-abel-self-alignment",
+    "file": "61-abel-self-alignment.md",
+    "summary": "",
+    "repo": "",
+    "num": 61,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "61-agent-skills-directory.md": {
+    "title": "61-agent-skills-directory",
+    "file": "61-agent-skills-directory.md",
+    "summary": "",
+    "repo": "",
+    "num": 61,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "61-gair-abel.md": {
+    "title": "61-gair-abel",
+    "file": "61-gair-abel.md",
+    "summary": "",
+    "repo": "",
+    "num": 61,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "62-aceforge-skill-evolution.md": {
+    "title": "62-aceforge-skill-evolution",
+    "file": "62-aceforge-skill-evolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 62,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "62-self-refine-classic.md": {
+    "title": "62-self-refine-classic",
+    "file": "62-self-refine-classic.md",
+    "summary": "",
+    "repo": "",
+    "num": 62,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "62-self-refine-iterative.md": {
+    "title": "62-self-refine-iterative",
+    "file": "62-self-refine-iterative.md",
+    "summary": "",
+    "repo": "",
+    "num": 62,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "63-evocua-computer-use-agent.md": {
+    "title": "63-evocua-computer-use-agent",
+    "file": "63-evocua-computer-use-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 63,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "63-llm-self-align-sail.md": {
+    "title": "63-llm-self-align-sail",
+    "file": "63-llm-self-align-sail.md",
+    "summary": "",
+    "repo": "",
+    "num": 63,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "63-llm-self-align.md": {
+    "title": "63-llm-self-align",
+    "file": "63-llm-self-align.md",
+    "summary": "",
+    "repo": "",
+    "num": 63,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "64-anthropic-skills.md": {
+    "title": "64-anthropic-skills",
+    "file": "64-anthropic-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 64,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "64-facebook-self-align-research.md": {
+    "title": "64-facebook-self-align-research",
+    "file": "64-facebook-self-align-research.md",
+    "summary": "",
+    "repo": "",
+    "num": 64,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "64-facebook-self-align.md": {
+    "title": "64-facebook-self-align",
+    "file": "64-facebook-self-align.md",
+    "summary": "",
+    "repo": "",
+    "num": 64,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "65-awesome-claude-skills.md": {
+    "title": "65-awesome-claude-skills",
+    "file": "65-awesome-claude-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 65,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "65-self-play-finetuning-weak-to-strong.md": {
+    "title": "65-self-play-finetuning-weak-to-strong",
+    "file": "65-self-play-finetuning-weak-to-strong.md",
+    "summary": "",
+    "repo": "",
+    "num": 65,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "65-selfplay-finetuning.md": {
+    "title": "65-selfplay-finetuning",
+    "file": "65-selfplay-finetuning.md",
+    "summary": "",
+    "repo": "",
+    "num": 65,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "66-microsoft-agent-skills.md": {
+    "title": "66-microsoft-agent-skills",
+    "file": "66-microsoft-agent-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 66,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "66-microsoft-llm-adaptive-testing.md": {
+    "title": "66-microsoft-llm-adaptive-testing",
+    "file": "66-microsoft-llm-adaptive-testing.md",
+    "summary": "",
+    "repo": "",
+    "num": 66,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "66-ms-adaptive-testing.md": {
+    "title": "66-ms-adaptive-testing",
+    "file": "66-ms-adaptive-testing.md",
+    "summary": "",
+    "repo": "",
+    "num": 66,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "67-magpie-alignment-synthesis.md": {
+    "title": "67-magpie-alignment-synthesis",
+    "file": "67-magpie-alignment-synthesis.md",
+    "summary": "",
+    "repo": "",
+    "num": 67,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "67-magpie-alignment.md": {
+    "title": "67-magpie-alignment",
+    "file": "67-magpie-alignment.md",
+    "summary": "",
+    "repo": "",
+    "num": 67,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "67-scientific-agent-skills.md": {
+    "title": "67-scientific-agent-skills",
+    "file": "67-scientific-agent-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 67,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "68-aden-hive.md": {
+    "title": "68-aden-hive",
+    "file": "68-aden-hive.md",
+    "summary": "",
+    "repo": "",
+    "num": 68,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "68-star-bootstrapping-reasoning.md": {
+    "title": "68-star-bootstrapping-reasoning",
+    "file": "68-star-bootstrapping-reasoning.md",
+    "summary": "",
+    "repo": "",
+    "num": 68,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "68-star-reasoner.md": {
+    "title": "68-star-reasoner",
+    "file": "68-star-reasoner.md",
+    "summary": "",
+    "repo": "",
+    "num": 68,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "69-alignment-handbook.md": {
+    "title": "69-alignment-handbook",
+    "file": "69-alignment-handbook.md",
+    "summary": "",
+    "repo": "",
+    "num": 69,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "69-recent-synthetic-data-alignment.md": {
+    "title": "69-recent-synthetic-data-alignment",
+    "file": "69-recent-synthetic-data-alignment.md",
+    "summary": "",
+    "repo": "",
+    "num": 69,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "69-swe-skills-bench.md": {
+    "title": "69-swe-skills-bench",
+    "file": "69-swe-skills-bench.md",
+    "summary": "",
+    "repo": "",
+    "num": 69,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "70-langmem-agent-memory.md": {
+    "title": "70-langmem-agent-memory",
+    "file": "70-langmem-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 70,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "70-self-evolve-llm-perspective.md": {
+    "title": "70-self-evolve-llm-perspective",
+    "file": "70-self-evolve-llm-perspective.md",
+    "summary": "",
+    "repo": "",
+    "num": 70,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "70-selfevolve-llm.md": {
+    "title": "70-selfevolve-llm",
+    "file": "70-selfevolve-llm.md",
+    "summary": "",
+    "repo": "",
+    "num": 70,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "71-graphiti-temporal-context-graphs.md": {
+    "title": "71-graphiti-temporal-context-graphs",
+    "file": "71-graphiti-temporal-context-graphs.md",
+    "summary": "",
+    "repo": "",
+    "num": 71,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "71-voyager-embodied-agent.md": {
+    "title": "71-voyager-embodied-agent",
+    "file": "71-voyager-embodied-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 71,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "71-voyager-minecraft.md": {
+    "title": "71-voyager-minecraft",
+    "file": "71-voyager-minecraft.md",
+    "summary": "",
+    "repo": "",
+    "num": 71,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "72-memobase-user-profile-memory.md": {
+    "title": "72-memobase-user-profile-memory",
+    "file": "72-memobase-user-profile-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 72,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "72-robotics-transformer.md": {
+    "title": "72-robotics-transformer",
+    "file": "72-robotics-transformer.md",
+    "summary": "",
+    "repo": "",
+    "num": 72,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "73-dora-robotic-dataflow.md": {
+    "title": "73-dora-robotic-dataflow",
+    "file": "73-dora-robotic-dataflow.md",
+    "summary": "",
+    "repo": "",
+    "num": 73,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "73-dora-robotics.md": {
+    "title": "73-dora-robotics",
+    "file": "73-dora-robotics.md",
+    "summary": "",
+    "repo": "",
+    "num": 73,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "73-osworld-computer-agent-benchmark.md": {
+    "title": "73-osworld-computer-agent-benchmark",
+    "file": "73-osworld-computer-agent-benchmark.md",
+    "summary": "",
+    "repo": "",
+    "num": 73,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "74-android-env-rl.md": {
+    "title": "74-android-env-rl",
+    "file": "74-android-env-rl.md",
+    "summary": "",
+    "repo": "",
+    "num": 74,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "74-android-env.md": {
+    "title": "74-android-env",
+    "file": "74-android-env.md",
+    "summary": "",
+    "repo": "",
+    "num": 74,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "74-windows-agent-arena.md": {
+    "title": "74-windows-agent-arena",
+    "file": "74-windows-agent-arena.md",
+    "summary": "",
+    "repo": "",
+    "num": 74,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "75-browsergym-web-agent-benchmark.md": {
+    "title": "75-browsergym-web-agent-benchmark",
+    "file": "75-browsergym-web-agent-benchmark.md",
+    "summary": "",
+    "repo": "",
+    "num": 75,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "75-lerobot-end-to-end-learning.md": {
+    "title": "75-lerobot-end-to-end-learning",
+    "file": "75-lerobot-end-to-end-learning.md",
+    "summary": "",
+    "repo": "",
+    "num": 75,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "75-lerobot-hf.md": {
+    "title": "75-lerobot-hf",
+    "file": "75-lerobot-hf.md",
+    "summary": "",
+    "repo": "",
+    "num": 75,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "76-agentmemory-coding-agent-memory.md": {
+    "title": "76-agentmemory-coding-agent-memory",
+    "file": "76-agentmemory-coding-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 76,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "76-openpi-vla-model.md": {
+    "title": "76-openpi-vla-model",
+    "file": "76-openpi-vla-model.md",
+    "summary": "",
+    "repo": "",
+    "num": 76,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "76-openpi-vla.md": {
+    "title": "76-openpi-vla",
+    "file": "76-openpi-vla.md",
+    "summary": "",
+    "repo": "",
+    "num": 76,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "77-agent-memory-benchmark.md": {
+    "title": "77-agent-memory-benchmark",
+    "file": "77-agent-memory-benchmark.md",
+    "summary": "",
+    "repo": "",
+    "num": 77,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "77-rtx-embodiment.md": {
+    "title": "77-rtx-embodiment",
+    "file": "77-rtx-embodiment.md",
+    "summary": "",
+    "repo": "",
+    "num": 77,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "77-rtx-open-embodiment.md": {
+    "title": "77-rtx-open-embodiment",
+    "file": "77-rtx-open-embodiment.md",
+    "summary": "",
+    "repo": "",
+    "num": 77,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "78-memu-proactive-agent-memory.md": {
+    "title": "78-memu-proactive-agent-memory",
+    "file": "78-memu-proactive-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 78,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "78-theia-robot-vision.md": {
+    "title": "78-theia-robot-vision",
+    "file": "78-theia-robot-vision.md",
+    "summary": "",
+    "repo": "",
+    "num": 78,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "78-theia-vision.md": {
+    "title": "78-theia-vision",
+    "file": "78-theia-vision.md",
+    "summary": "",
+    "repo": "",
+    "num": 78,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "79-everos-self-evolving-memory-os.md": {
+    "title": "79-everos-self-evolving-memory-os",
+    "file": "79-everos-self-evolving-memory-os.md",
+    "summary": "",
+    "repo": "",
+    "num": 79,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "79-habitat-sim-embodied-ai.md": {
+    "title": "79-habitat-sim-embodied-ai",
+    "file": "79-habitat-sim-embodied-ai.md",
+    "summary": "",
+    "repo": "",
+    "num": 79,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "79-habitat-sim.md": {
+    "title": "79-habitat-sim",
+    "file": "79-habitat-sim.md",
+    "summary": "",
+    "repo": "",
+    "num": 79,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "80-igibson-sim.md": {
+    "title": "80-igibson-sim",
+    "file": "80-igibson-sim.md",
+    "summary": "",
+    "repo": "",
+    "num": 80,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "80-igibson-simulation.md": {
+    "title": "80-igibson-simulation",
+    "file": "80-igibson-simulation.md",
+    "summary": "",
+    "repo": "",
+    "num": 80,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "80-onewave-claude-skills.md": {
+    "title": "80-onewave-claude-skills",
+    "file": "80-onewave-claude-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 80,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "81-embodied-agents.md": {
+    "title": "81-embodied-agents",
+    "file": "81-embodied-agents.md",
+    "summary": "",
+    "repo": "",
+    "num": 81,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "81-mbodiai-embodied-agents.md": {
+    "title": "81-mbodiai-embodied-agents",
+    "file": "81-mbodiai-embodied-agents.md",
+    "summary": "",
+    "repo": "",
+    "num": 81,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "81-simota-agent-skills-nexus.md": {
+    "title": "81-simota-agent-skills-nexus",
+    "file": "81-simota-agent-skills-nexus.md",
+    "summary": "",
+    "repo": "",
+    "num": 81,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "82-saycan-planning.md": {
+    "title": "82-saycan-planning",
+    "file": "82-saycan-planning.md",
+    "summary": "",
+    "repo": "",
+    "num": 82,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "82-saycan-robot-planning.md": {
+    "title": "82-saycan-robot-planning",
+    "file": "82-saycan-robot-planning.md",
+    "summary": "",
+    "repo": "",
+    "num": 82,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "82-skvm-skill-virtual-machine.md": {
+    "title": "82-skvm-skill-virtual-machine",
+    "file": "82-skvm-skill-virtual-machine.md",
+    "summary": "",
+    "repo": "",
+    "num": 82,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "83-code-as-policies-robot.md": {
+    "title": "83-code-as-policies-robot",
+    "file": "83-code-as-policies-robot.md",
+    "summary": "",
+    "repo": "",
+    "num": 83,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "83-code-as-policies.md": {
+    "title": "83-code-as-policies",
+    "file": "83-code-as-policies.md",
+    "summary": "",
+    "repo": "",
+    "num": 83,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "83-opencrabs-self-improving-agent.md": {
+    "title": "83-opencrabs-self-improving-agent",
+    "file": "83-opencrabs-self-improving-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 83,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "84-inner-monologue-robot.md": {
+    "title": "84-inner-monologue-robot",
+    "file": "84-inner-monologue-robot.md",
+    "summary": "",
+    "repo": "",
+    "num": 84,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "84-inner-monologue.md": {
+    "title": "84-inner-monologue",
+    "file": "84-inner-monologue.md",
+    "summary": "",
+    "repo": "",
+    "num": 84,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "84-skill-inject-agent-skill-security.md": {
+    "title": "84-skill-inject-agent-skill-security",
+    "file": "84-skill-inject-agent-skill-security.md",
+    "summary": "",
+    "repo": "",
+    "num": 84,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "85-huggingface-skills.md": {
+    "title": "85-huggingface-skills",
+    "file": "85-huggingface-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 85,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "85-progprompt-robot.md": {
+    "title": "85-progprompt-robot",
+    "file": "85-progprompt-robot.md",
+    "summary": "",
+    "repo": "",
+    "num": 85,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "85-progprompt.md": {
+    "title": "85-progprompt",
+    "file": "85-progprompt.md",
+    "summary": "",
+    "repo": "",
+    "num": 85,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "86-alphafold-protein-structure.md": {
+    "title": "86-alphafold-protein-structure",
+    "file": "86-alphafold-protein-structure.md",
+    "summary": "",
+    "repo": "",
+    "num": 86,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "86-alphafold.md": {
+    "title": "86-alphafold",
+    "file": "86-alphafold.md",
+    "summary": "",
+    "repo": "",
+    "num": 86,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "86-simplemem-evolvemem-memory-stack.md": {
+    "title": "86-simplemem-evolvemem-memory-stack",
+    "file": "86-simplemem-evolvemem-memory-stack.md",
+    "summary": "",
+    "repo": "",
+    "num": 86,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "87-funsearch-math-discovery.md": {
+    "title": "87-funsearch-math-discovery",
+    "file": "87-funsearch-math-discovery.md",
+    "summary": "",
+    "repo": "",
+    "num": 87,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "87-funsearch.md": {
+    "title": "87-funsearch",
+    "file": "87-funsearch.md",
+    "summary": "",
+    "repo": "",
+    "num": 87,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "87-mem0-memory-benchmarks.md": {
+    "title": "87-mem0-memory-benchmarks",
+    "file": "87-mem0-memory-benchmarks.md",
+    "summary": "",
+    "repo": "",
+    "num": 87,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "88-alphafold3-biomolecular.md": {
+    "title": "88-alphafold3-biomolecular",
+    "file": "88-alphafold3-biomolecular.md",
+    "summary": "",
+    "repo": "",
+    "num": 88,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "88-alphafold3.md": {
+    "title": "88-alphafold3",
+    "file": "88-alphafold3.md",
+    "summary": "",
+    "repo": "",
+    "num": 88,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "88-memrl-runtime-memory-rl.md": {
+    "title": "88-memrl-runtime-memory-rl",
+    "file": "88-memrl-runtime-memory-rl.md",
+    "summary": "",
+    "repo": "",
+    "num": 88,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "89-coral-multi-agent-evolution.md": {
+    "title": "89-coral-multi-agent-evolution",
+    "file": "89-coral-multi-agent-evolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 89,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "89-qlib-investment.md": {
+    "title": "89-qlib-investment",
+    "file": "89-qlib-investment.md",
+    "summary": "",
+    "repo": "",
+    "num": 89,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "89-qlib-quantitative-finance.md": {
+    "title": "89-qlib-quantitative-finance",
+    "file": "89-qlib-quantitative-finance.md",
+    "summary": "",
+    "repo": "",
+    "num": 89,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "90-deepchem-drug-discovery.md": {
+    "title": "90-deepchem-drug-discovery",
+    "file": "90-deepchem-drug-discovery.md",
+    "summary": "",
+    "repo": "",
+    "num": 90,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "90-deepchem.md": {
+    "title": "90-deepchem",
+    "file": "90-deepchem.md",
+    "summary": "",
+    "repo": "",
+    "num": 90,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "90-scienceclaw-research-agent.md": {
+    "title": "90-scienceclaw-research-agent",
+    "file": "90-scienceclaw-research-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 90,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "91-mava-multi-agent-rl.md": {
+    "title": "91-mava-multi-agent-rl",
+    "file": "91-mava-multi-agent-rl.md",
+    "summary": "",
+    "repo": "",
+    "num": 91,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "91-mava-multiagent.md": {
+    "title": "91-mava-multiagent",
+    "file": "91-mava-multiagent.md",
+    "summary": "",
+    "repo": "",
+    "num": 91,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "91-memsearch-agent-memory.md": {
+    "title": "91-memsearch-agent-memory",
+    "file": "91-memsearch-agent-memory.md",
+    "summary": "",
+    "repo": "",
+    "num": 91,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "92-awesome-agent-skills-index.md": {
+    "title": "92-awesome-agent-skills-index",
+    "file": "92-awesome-agent-skills-index.md",
+    "summary": "",
+    "repo": "",
+    "num": 92,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "92-gflownet-scientific-discovery.md": {
+    "title": "92-gflownet-scientific-discovery",
+    "file": "92-gflownet-scientific-discovery.md",
+    "summary": "",
+    "repo": "",
+    "num": 92,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "92-gflownet.md": {
+    "title": "92-gflownet",
+    "file": "92-gflownet.md",
+    "summary": "",
+    "repo": "",
+    "num": 92,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "93-mattergen-materials-design.md": {
+    "title": "93-mattergen-materials-design",
+    "file": "93-mattergen-materials-design.md",
+    "summary": "",
+    "repo": "",
+    "num": 93,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "93-mattergen.md": {
+    "title": "93-mattergen",
+    "file": "93-mattergen.md",
+    "summary": "",
+    "repo": "",
+    "num": 93,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "93-swarmclaw-agent-runtime.md": {
+    "title": "93-swarmclaw-agent-runtime",
+    "file": "93-swarmclaw-agent-runtime.md",
+    "summary": "",
+    "repo": "",
+    "num": 93,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "94-alphageometry-math.md": {
+    "title": "94-alphageometry-math",
+    "file": "94-alphageometry-math.md",
+    "summary": "",
+    "repo": "",
+    "num": 94,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "94-alphageometry.md": {
+    "title": "94-alphageometry",
+    "file": "94-alphageometry.md",
+    "summary": "",
+    "repo": "",
+    "num": 94,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "94-molt-co-evolution-engine.md": {
+    "title": "94-molt-co-evolution-engine",
+    "file": "94-molt-co-evolution-engine.md",
+    "summary": "",
+    "repo": "",
+    "num": 94,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "95-netket-quantum-physics.md": {
+    "title": "95-netket-quantum-physics",
+    "file": "95-netket-quantum-physics.md",
+    "summary": "",
+    "repo": "",
+    "num": 95,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "95-netket-quantum.md": {
+    "title": "95-netket-quantum",
+    "file": "95-netket-quantum.md",
+    "summary": "",
+    "repo": "",
+    "num": 95,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "95-openclaw-evolution-framework.md": {
+    "title": "95-openclaw-evolution-framework",
+    "file": "95-openclaw-evolution-framework.md",
+    "summary": "",
+    "repo": "",
+    "num": 95,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "96-clawbio-bioinformatics-skills.md": {
+    "title": "96-clawbio-bioinformatics-skills",
+    "file": "96-clawbio-bioinformatics-skills.md",
+    "summary": "",
+    "repo": "",
+    "num": 96,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "96-optax-jax-optimization.md": {
+    "title": "96-optax-jax-optimization",
+    "file": "96-optax-jax-optimization.md",
+    "summary": "",
+    "repo": "",
+    "num": 96,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "96-optax-jax.md": {
+    "title": "96-optax-jax",
+    "file": "96-optax-jax.md",
+    "summary": "",
+    "repo": "",
+    "num": 96,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "97-alphafold-ecosystem.md": {
+    "title": "97-alphafold-ecosystem",
+    "file": "97-alphafold-ecosystem.md",
+    "summary": "",
+    "repo": "",
+    "num": 97,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "97-alphafold2-casp14.md": {
+    "title": "97-alphafold2-casp14",
+    "file": "97-alphafold2-casp14.md",
+    "summary": "",
+    "repo": "",
+    "num": 97,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "97-edgeclaw-edge-cloud-agent.md": {
+    "title": "97-edgeclaw-edge-cloud-agent",
+    "file": "97-edgeclaw-edge-cloud-agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 97,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "98-openclaw-dotnet-runtime.md": {
+    "title": "98-openclaw-dotnet-runtime",
+    "file": "98-openclaw-dotnet-runtime.md",
+    "summary": "",
+    "repo": "",
+    "num": 98,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "98-optuna-auto-ml.md": {
+    "title": "98-optuna-auto-ml",
+    "file": "98-optuna-auto-ml.md",
+    "summary": "",
+    "repo": "",
+    "num": 98,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "98-optuna-science.md": {
+    "title": "98-optuna-science",
+    "file": "98-optuna-science.md",
+    "summary": "",
+    "repo": "",
+    "num": 98,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "99-automl-science-pipeline.md": {
+    "title": "99-automl-science-pipeline",
+    "file": "99-automl-science-pipeline.md",
+    "summary": "",
+    "repo": "",
+    "num": 99,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "99-autosklearn-science.md": {
+    "title": "99-autosklearn-science",
+    "file": "99-autosklearn-science.md",
+    "summary": "",
+    "repo": "",
+    "num": 99,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "99-jordanmccann-agentmemory-longmemeval.md": {
+    "title": "99-jordanmccann-agentmemory-longmemeval",
+    "file": "99-jordanmccann-agentmemory-longmemeval.md",
+    "summary": "",
+    "repo": "",
+    "num": 99,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "aiwaves_cn__agents.md": {
+    "title": "\"agents\"",
+    "file": "aiwaves_cn__agents.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "algorithmicsuperintelligence__openevolve.md": {
+    "title": "\"openevolve\"",
+    "file": "algorithmicsuperintelligence__openevolve.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "alphaevolve-landmark.md": {
+    "title": "alphaevolve-landmark",
+    "file": "alphaevolve-landmark.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "automl-nas-tools-index.md": {
+    "title": "automl-nas-tools-index",
+    "file": "automl-nas-tools-index.md",
+    "summary": "Scribe 负责 | 目标 30 个项目 | 2026-05-22",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "creator-tool-creation.md": {
+    "title": "creator-tool-creation",
+    "file": "creator-tool-creation.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "darwin-godel-machine-dgm.md": {
+    "title": "darwin-godel-machine-dgm",
+    "file": "darwin-godel-machine-dgm.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "eliza-multi-agent-platform.md": {
+    "title": "eliza-multi-agent-platform",
+    "file": "eliza-multi-agent-platform.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "evoagentx-evolving-workflows.md": {
+    "title": "evoagentx-evolving-workflows",
+    "file": "evoagentx-evolving-workflows.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "evomac-multi-agent-evolution.md": {
+    "title": "evomac-multi-agent-evolution",
+    "file": "evomac-multi-agent-evolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "godel-agent-self-referential.md": {
+    "title": "godel-agent-self-referential",
+    "file": "godel-agent-self-referential.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "inter_co__science_codeevolve.md": {
+    "title": "\"science-codeevolve\"",
+    "file": "inter_co__science_codeevolve.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "jarvis_xs__se_agent.md": {
+    "title": "\"SE-Agent\"",
+    "file": "jarvis_xs__se_agent.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "jarvispei__scope.md": {
+    "title": "\"SCOPE\"",
+    "file": "jarvispei__scope.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "llm-self-training-batch-report.md": {
+    "title": "llm-self-training-batch-report",
+    "file": "llm-self-training-batch-report.md",
+    "summary": "方向：ReST / RLAIF / Constitutional AI / SPIN / STaR / Self-Rewarding",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "madaan__self_refine.md": {
+    "title": "\"self-refine\"",
+    "file": "madaan__self_refine.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "meta-rewarding-self-improvement.md": {
+    "title": "meta-rewarding-self-improvement",
+    "file": "meta-rewarding-self-improvement.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "modelscope__agentevolver.md": {
+    "title": "\"AgentEvolver\"",
+    "file": "modelscope__agentevolver.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "noahshinn__reflexion.md": {
+    "title": "\"reflexion\"",
+    "file": "noahshinn__reflexion.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "oppo_mente_lab__llm_self_judge.md": {
+    "title": "\"LLM-Self-Judge\"",
+    "file": "oppo_mente_lab__llm_self_judge.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "promptbreeder-self-referential-evolution.md": {
+    "title": "promptbreeder-self-referential-evolution",
+    "file": "promptbreeder-self-referential-evolution.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "score-self-correction-rl.md": {
+    "title": "score-self-correction-rl",
+    "file": "score-self-correction-rl.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "self-rewarding-language-models.md": {
+    "title": "self-rewarding-language-models",
+    "file": "self-rewarding-language-models.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
+  },
+  "zju_llm_safety__darwin.md": {
+    "title": "\"DARWIN\"",
+    "file": "zju_llm_safety__darwin.md",
+    "summary": "",
+    "repo": "",
+    "num": 999,
+    "updated": "2026-05-26T17:23:03"
   }
-]
+}
