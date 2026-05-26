@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T16:00:59+08:00",
+  "generated_at": "2026-05-26T21:54:04+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -885,6 +885,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed 25 commits, MIT license, TypeScript primary language, 285 skills, four-layer memory/research protocol, self-evolving topic, 816 stars and 90 forks",
       "description": "ScienceClaw 是面向科学家的 self-evolving research agent，把 OpenClaw、长期记忆、285 个研究技能、领域适配和零幻觉引用约束组织成科研工作台。"
+    },
+    {
+      "repo": "benchflow-ai/skillsbench",
+      "url": "https://github.com/benchflow-ai/skillsbench",
+      "stars": "1200",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "PDDL/Python/Shell/TypeScript/JavaScript/Scala",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 1.2k stars, 302 forks, 360 commits, Apache-2.0 license, and README statements for deterministic skill evaluation workflows, task composition difficulty targets, and lockfile-based reproducible runs.",
+      "description": "SkillsBench is a gym-style benchmark framework for measuring how well agents use reusable skills across multi-step tasks."
     },
     {
       "repo": "bennettschwartz/membrane",
@@ -2625,6 +2640,21 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[EMNLP2025] From Automation to Autonomy: A Survey on Large Language Models in Scientific Discovery"
+    },
+    {
+      "repo": "howdymary/hermes-agent-metaharness",
+      "url": "https://github.com/howdymary/hermes-agent-metaharness",
+      "stars": "86",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evaluation",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 86 stars, 9 forks, 11 commits, MIT license, and README sections describing TBLite/TB2 benchmark orchestration, baseline-candidate comparability checks, deterministic wrapper mutation, and frontier-backed search.",
+      "description": "Hermes Agent Meta-Harness is a standalone outer-loop evaluator that optimizes Hermes benchmark harness candidates without modifying model weights."
     },
     {
       "repo": "howells/arc",
@@ -6272,6 +6302,21 @@
       "description": "Squaremind"
     },
     {
+      "repo": "stanford-iris-lab/meta-harness",
+      "url": "https://github.com/stanford-iris-lab/meta-harness",
+      "stars": "959",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "Python/Shell",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 959 stars, 92 forks, 11 commits, MIT license, and README content for framework-level harness search, onboarding-driven domain adaptation, and separate optimized Terminal-Bench-2 artifact linkage.",
+      "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search."
+    },
+    {
       "repo": "stanfordnlp/dsp",
       "url": "https://github.com/stanfordnlp/dsp",
       "stars": "34",
@@ -7860,6 +7905,21 @@
       "content_timestamp": "2024-08-06",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "[ACL 2025] Agentic Knowledgeable Self-awareness"
+    },
+    {
+      "repo": "zjunlp/SkillX",
+      "url": "https://github.com/zjunlp/SkillX",
+      "stars": "181",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 181 stars, 16 forks, 17 commits, MIT license, and README details for three-level skill abstraction plus iterative refinement and expansion across AppWorld, BFCL-v3, and τ2-Bench.",
+      "description": "SkillX is a paper-backed framework that automatically constructs reusable multi-level skill knowledge bases for agents from execution experience."
     },
     {
       "repo": "zjunlp/worldmind",

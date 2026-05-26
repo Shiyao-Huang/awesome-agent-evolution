@@ -11,9 +11,9 @@
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
 | `reports` | present | 5 | 1 | 0 | 69 KB |
-| `output` | present | 7 | 1 | 0 | 568 KB |
-| `site/public/reports` | present | 353 | 6 | 0 | 2.7 MB |
-| `site/dist` | present | 611 | 222 | 0 | 14 MB |
+| `output` | present | 8 | 1 | 0 | 572 KB |
+| `site/public/reports` | present | 357 | 6 | 0 | 2.7 MB |
+| `site/dist` | present | 620 | 227 | 0 | 14 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 983 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
@@ -29,6 +29,7 @@
 
 ### `output`
 
+- `output/raw-data-timestamp-validation-report.json`
 - `output/raw-github-timestamp-index-ZH.md`
 - `output/raw-github-timestamp-index.json`
 - `output/raw-github-timestamp-index.md`

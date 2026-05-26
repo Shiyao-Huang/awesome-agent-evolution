@@ -3228,7 +3228,117 @@ export const projects: Project[] = [
       "agent tooling",
       "reuse"
     ]
-  }
+  },
+    {
+            "name": "SkillsBench",
+            "repo": "benchflow-ai/skillsbench",
+            "url": "https://github.com/benchflow-ai/skillsbench",
+            "stars": 1200,
+            "forks": 302,
+            "language": "PDDL",
+            "license": "Apache-2.0",
+            "report": "projects/248-skillsbench-agent-skills-benchmark.md",
+            "pattern": "task + skill set -> agent run -> deterministic verifier scoring -> artifact/leaderboard export -> iteration and comparison",
+            "description": "SkillsBench is a gym-style benchmark framework for measuring how well agents use reusable skills across multi-step tasks.",
+            "stack": [
+                    "PDDL",
+                    "Python",
+                    "Shell",
+                    "TypeScript",
+                    "JavaScript",
+                    "Scala"
+            ],
+            "category": "Agent Skills Benchmark Harness",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/benchflow-ai_skillsbench.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "skills",
+                    "evaluation harness",
+                    "agent reliability",
+                    "task composition"
+            ]
+    },
+    {
+            "name": "Meta-Harness (Stanford IRIS)",
+            "repo": "stanford-iris-lab/meta-harness",
+            "url": "https://github.com/stanford-iris-lab/meta-harness",
+            "stars": 959,
+            "forks": 92,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/249-stanford-meta-harness-framework.md",
+            "pattern": "define domain spec -> search harness candidates -> run reference experiments -> compare outcomes -> retain stronger harness",
+            "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search.",
+            "stack": [
+                    "Python",
+                    "Shell"
+            ],
+            "category": "Meta-Harness Framework and Reference Experiments",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/stanford-iris-lab_meta-harness.md",
+            "status": "candidate",
+            "tags": [
+                    "meta-harness",
+                    "harness engineering",
+                    "agent evolution",
+                    "benchmark",
+                    "outer-loop search"
+            ]
+    },
+    {
+            "name": "Hermes Agent Meta-Harness",
+            "repo": "howdymary/hermes-agent-metaharness",
+            "url": "https://github.com/howdymary/hermes-agent-metaharness",
+            "stars": 86,
+            "forks": 9,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/250-hermes-agent-metaharness-outer-loop.md",
+            "pattern": "select candidate -> evaluate on TBLite/TB2 -> parse archives -> compare baseline vs candidate -> update frontier",
+            "description": "Hermes Agent Meta-Harness is a standalone outer-loop evaluator that optimizes Hermes benchmark harness candidates without modifying model weights.",
+            "stack": [
+                    "Python"
+            ],
+            "category": "Hermes Benchmark Outer-Loop Harness",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/howdymary_hermes-agent-metaharness.md",
+            "status": "candidate",
+            "tags": [
+                    "hermes",
+                    "meta-harness",
+                    "benchmark orchestration",
+                    "frontier tracking",
+                    "candidate mutation"
+            ]
+    },
+    {
+            "name": "SkillX",
+            "repo": "zjunlp/SkillX",
+            "url": "https://github.com/zjunlp/SkillX",
+            "stars": 181,
+            "forks": 16,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/251-skillx-agent-skill-kb-construction.md",
+            "pattern": "collect trajectories -> extract multi-level skills -> refine and filter skill library -> expand via exploration -> transfer to other agents",
+            "description": "SkillX is a paper-backed framework that automatically constructs reusable multi-level skill knowledge bases for agents from execution experience.",
+            "stack": [
+                    "Python"
+            ],
+            "category": "Automated Agent Skill KB Construction",
+            "lastPushed": "2026-05-26T00:00:00Z",
+            "localPath": "raw-github/zjunlp_skillx.md",
+            "status": "candidate",
+            "tags": [
+                    "skills",
+                    "knowledge base",
+                    "experience learning",
+                    "agent transfer",
+                    "benchmark"
+            ]
+    }
 ];
 
 export const projectGroups = [

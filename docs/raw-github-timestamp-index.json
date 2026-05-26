@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-26T00:00:00+08:00",
-  "total": 530,
-  "updated_files": 530,
+  "total": 534,
+  "updated_files": 534,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -534,6 +534,15 @@
       "collected_at": "2026-05-24T13:05:00Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "benchflow-ai/skillsbench",
+      "url": "https://github.com/benchflow-ai/skillsbench",
+      "file": "raw-github/benchflow-ai_skillsbench.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T21:54:04+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
       "repo": "bennettschwartz/membrane",
@@ -1578,6 +1587,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "howdymary/hermes-agent-metaharness",
+      "url": "https://github.com/howdymary/hermes-agent-metaharness",
+      "file": "raw-github/howdymary_hermes-agent-metaharness.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T21:54:04+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
       "repo": "howells/arc",
@@ -3767,6 +3785,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "stanford-iris-lab/meta-harness",
+      "url": "https://github.com/stanford-iris-lab/meta-harness",
+      "file": "raw-github/stanford-iris-lab_meta-harness.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T21:54:04+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
+    },
+    {
       "repo": "stanfordnlp/dsp",
       "url": "https://github.com/stanfordnlp/dsp",
       "file": "raw-github/stanfordnlp_dsp.md",
@@ -4719,6 +4746,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2024-Q3",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "zjunlp/SkillX",
+      "url": "https://github.com/zjunlp/SkillX",
+      "file": "raw-github/zjunlp_skillx.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T21:54:04+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
       "repo": "zjunlp/worldmind",

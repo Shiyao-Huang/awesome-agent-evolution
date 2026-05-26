@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T16:29:41+08:00",
+  "generated_at": "2026-05-26T21:54:04+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -225,7 +225,11 @@
         "raw-github/superagenticai_metaharness.md",
         "raw-github/internlm_wildclawbench.md",
         "raw-github/supermemoryai_supermemory.md",
-        "raw-github/flagos-ai_skills.md"
+        "raw-github/flagos-ai_skills.md",
+        "raw-github/benchflow-ai_skillsbench.md",
+        "raw-github/stanford-iris-lab_meta-harness.md",
+        "raw-github/howdymary_hermes-agent-metaharness.md",
+        "raw-github/zjunlp_skillx.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -357,7 +361,8 @@
         "work/research/hourly-public-metadata-update-2026-05-26-0745.md",
         "work/research/hourly-public-metadata-update-2026-05-26-1001.md",
         "work/research/hourly-public-metadata-update-2026-05-26-1618.md",
-        ".mermaid/current/graph.json"
+        ".mermaid/current/graph.json",
+        "work/research/hourly-public-metadata-update-2026-05-26-2154.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -749,7 +754,15 @@
         "projects/247-flagos-skills-open-agent-skill-registry.md",
         "site/public/reports/projects/245-wildclawbench-authentic-real-world-agent-benchmark.md",
         "site/public/reports/projects/246-supermemory-open-memory-infrastructure.md",
-        "site/public/reports/projects/247-flagos-skills-open-agent-skill-registry.md"
+        "site/public/reports/projects/247-flagos-skills-open-agent-skill-registry.md",
+        "projects/248-skillsbench-agent-skills-benchmark.md",
+        "site/public/reports/projects/248-skillsbench-agent-skills-benchmark.md",
+        "projects/249-stanford-meta-harness-framework.md",
+        "site/public/reports/projects/249-stanford-meta-harness-framework.md",
+        "projects/250-hermes-agent-metaharness-outer-loop.md",
+        "site/public/reports/projects/250-hermes-agent-metaharness-outer-loop.md",
+        "projects/251-skillx-agent-skill-kb-construction.md",
+        "site/public/reports/projects/251-skillx-agent-skill-kb-construction.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1075,14 +1088,15 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-26T16:29:41+08:00",
+    "run_at": "2026-05-26T21:54:04+08:00",
     "added_repositories": [
-      "InternLM/WildClawBench",
-      "supermemoryai/supermemory",
-      "flagos-ai/skills"
+      "benchflow-ai/skillsbench",
+      "stanford-iris-lab/meta-harness",
+      "howdymary/hermes-agent-metaharness",
+      "zjunlp/SkillX"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "available but stale; refresh blocked by extension download failure in this environment"
+    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
   }
 }

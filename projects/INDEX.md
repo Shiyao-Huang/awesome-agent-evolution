@@ -262,6 +262,11 @@
 | Supermemory | [supermemoryai/supermemory](https://github.com/supermemoryai/supermemory) | Open AI Memory Infrastructure | [projects/246-supermemory-open-memory-infrastructure.md](246-supermemory-open-memory-infrastructure.md) |
 | FlagoS Skills | [flagos-ai/skills](https://github.com/flagos-ai/skills) | Open Agent Skill Registry | [projects/247-flagos-skills-open-agent-skill-registry.md](247-flagos-skills-open-agent-skill-registry.md) |
 
+| SkillsBench | [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | Agent Skills Benchmark Harness | [projects/248-skillsbench-agent-skills-benchmark.md](248-skillsbench-agent-skills-benchmark.md) |
+| Meta-Harness (Stanford IRIS) | [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | Meta-Harness Framework and Reference Experiments | [projects/249-stanford-meta-harness-framework.md](249-stanford-meta-harness-framework.md) |
+| Hermes Agent Meta-Harness | [howdymary/hermes-agent-metaharness](https://github.com/howdymary/hermes-agent-metaharness) | Hermes Benchmark Outer-Loop Harness | [projects/250-hermes-agent-metaharness-outer-loop.md](250-hermes-agent-metaharness-outer-loop.md) |
+| SkillX | [zjunlp/SkillX](https://github.com/zjunlp/SkillX) | Automated Agent Skill KB Construction | [projects/251-skillx-agent-skill-kb-construction.md](251-skillx-agent-skill-kb-construction.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.
