@@ -52,6 +52,15 @@ _Processed raw sources with extracted insights_
 - [Cross-Pollination](sources/cross-pollination.md) — Papers×Blogs×Reviews交叉: 13 clusters from evaluation-production gap to verification arms race | Rank: V1 | 2026-05-26
 - [Papers Brainstorm](sources/papers-brainstorm.md) — 12 high-value papers × creative insights: 3 evolution channels/diversity dilemma/evaluator bottleneck | Rank: V1 | 2026-05-26
 - [Raw-Social & Blogs Mechanism Analysis](sources/raw-social-blogs-mechanism-analysis.md) — 1298 social+1308 blog: 7 patterns, 6 method families, social-hype vs evidence gap, official company positions | Rank: A | 2026-05-26
+- [Projects Evolution Grading](sources/projects-evolution-grading.md) — 43 model cards graded L0-L4: L4=7(ADAS/DGM/Godel/OpenEvolve/A-Evolve/EvoAgentX/SICA), card format bias found | Rank: A | 2026-05-26
+- [Enhanced Review Mechanism Insights](sources/review-mechanism-insights-enhanced.md) — 60 reviews deep-read: 16 core insights (6 original + 10 new), Echo Trap/Misevolution/Self-organization/Metacognitive Nth-order | Rank: A | 2026-05-26
+- [Social & Blog Mechanism Insights](sources/social-mechanism-insights.md) — 7 mechanism patterns from social/blogs: evaluation bottleneck/archive architecture/skill crystallization/meta-meta modification/reward hacking/deterministic network/cost | Rank: A | 2026-05-26
+- [Mechanism Analysis Framework](sources/mechanism-analysis-framework.md) — M1-M5 五大机制全景 DAG + 97痛点映射 + 系统覆盖矩阵 (survey 重组) | Rank: A | 2026-05-26
+- [Project Evolution Grading (Full)](sources/project-evolution-grading-full.md) — 470项目 L0-L5 完整分级: 7类机制交叉矩阵 + 15案例研究 + 5结构因子TRUE/PSEUDO区分 | Rank: A | 2026-05-26
+- [Raw-GitHub Mechanisms (Full)](sources/raw-github-mechanisms-full.md) — 365项目深挖完整版: 7类机制分类学 + 15案例 + 5结构因子 + TRUE/GUIDED/PSEUDO鉴别 | Rank: A | 2026-05-26
+- [Silicon Valley Self-Evolution Landscape](sources/sv-selfevolution-landscape.md) — 硅谷9实验室竞争格局 + 10关键人员轨迹 + 资本融资分析 + 人才供给管道 | Rank: A | 2026-05-26
+- [Expanded Review Mechanism Insights](sources/review-mechanism-insights-expanded.md) — 111/137 reviews (81%): 12核心洞察 + 12方法族 + 跨切缺陷 + 12未评审论文补读 | Rank: A | 2026-05-26
+- [Papers Mechanism Analysis](sources/papers-mechanism-analysis.md) — 128论文F1-F7机制族 + Top-10论文 + 5引用谱系 + T1-T4证据分级 + 方法×效果×实现三维分类 | Rank: A | 2026-05-26
 
 ## Synthesis
 
@@ -69,6 +78,6 @@ _Cross-cutting analyses, comparisons, evolving theses_
 |--------|-------|
 | Entities | 8 |
 | Concepts | 9 |
-| Sources | 15 |
+| Sources | 25 |
 | Synthesis pages | 2 |
 | Last updated | 2026-05-26 |
