@@ -296,7 +296,7 @@ This section is intentionally placed first and contains only processed informati
 | Source | Count / signal | Main use | Evidence source |
 |---|---:|---|---|
 | X/Twitter | 13 curated signals | paper releases, attention, risk critique, lab signals | [social index ZH](output/social-media-curated-ZH.md) |
-| Reddit | 45 entries | public questions, real pain points, benchmark skepticism | [social index](output/social-media-curated.md), [Mom Test findings](mom-test-findings-reddit.md) |
+| Reddit | 45 entries | public questions, real pain points, benchmark skepticism | [social index](output/social-media-curated.md), [Mom Test findings](raw-social/mom-test/mom-test-findings-reddit.md) |
 | Hacker News | 31 entries | engineering community response to DGM/Godel/agent frameworks | [social index](output/social-media-curated.md) |
 | Blog/tutorial | 71 entries | practice routes, architecture explanations, engineering experience | [blog/source profiles](research/blog-author-profiles-all.md) |
 | Ranking/evaluation platforms | 10 entries | visibility, leaderboards, product discovery | [rank platform research](wiki/research/rank-platforms-product-discovery-2026-05-20.md) |

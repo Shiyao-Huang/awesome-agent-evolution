@@ -6,7 +6,7 @@ time_slice: 2026-05
 chapter: 8
 language: zh-CN
 source_corpus:
-  mom_test_findings: mom-test-findings*.md
+  mom_test_findings: raw-social/mom-test/mom-test-findings*.md
   raw_social: raw-social/647 markdown records plus raw-social-index.json snapshot
   paper_reviews: paper-reviews/25 deep review files
 output_type: survey_chapter
@@ -110,7 +110,7 @@ Agent Evolution 与 AGI 的关系需要谨慎表述。自进化 Agent 不是 AGI
 
 ## 参考文献与本地来源
 
-- [MomTest-2026] `mom-test-findings-ZH.md`; `mom-test-findings-reddit-ZH.md`; `mom-test-findings-hn-ZH.md`; `mom-test-findings-x-ZH.md`. Mom Test 调研发现，2026-05-20/21。
+- [MomTest-2026] `raw-social/mom-test/mom-test-findings-ZH.md`; `raw-social/mom-test/mom-test-findings-reddit-ZH.md`; `raw-social/mom-test/mom-test-findings-hn-ZH.md`; `raw-social/mom-test/mom-test-findings-x-ZH.md`. Mom Test 调研发现，2026-05-20/21。
 - [RawSocial-2026] `raw-social/raw-social-index.json`; `raw-social/*.md`. 本地采集社区、博客、GitHub、HN、X/Twitter、中文平台语料，2026-05。
 - [STaR-Review] `paper-reviews/review-2203.14465-star.md`.
 - [Reflexion-Review] `paper-reviews/review-2303.11366-reflexion.md`.
@@ -161,7 +161,7 @@ Agent Evolution 与 AGI 的关系需要谨慎表述。自进化 Agent 不是 AGI
 
 ## 8.8 参考材料与引文索引
 
-- 用户需求基础：`mom-test-findings-ZH.md`（97 个痛点）及 HN/Reddit/X 分项文件。
+- 用户需求基础：`raw-social/mom-test/mom-test-findings-ZH.md`（97 个痛点）及 HN/Reddit/X 分项文件。
 - 自动验证与反思：`paper-reviews/review-2303.11366-reflexion.md`、`paper-reviews/review-2501.11425-agent-r.md`、`paper-reviews/review-2506.13131-alphaevolve.md`、`paper-reviews/review-2505.03335-absolute-zero.md`。
 - 协同进化与开放式搜索：`paper-reviews/review-2408.08435-adas.md`、`paper-reviews/review-2505.22954-darwin-godel-machine.md`、`raw-social/boost_batch_01.md`、`raw-social/0138-segmentfault-com-AI.json`。
 - 评价器与偏好学习风险：`paper-reviews/review-2401.10020-self-rewarding.md`、`paper-reviews/review-2407.19594-meta-rewarding.md`。

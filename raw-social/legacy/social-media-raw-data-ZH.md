@@ -1,9 +1,9 @@
-# Social Media / Blog / Platform Raw Data — Agent Evolution
+# 社交媒体 / 博客 / 平台原始数据 — Agent 进化
 # Collected by Researcher 社交媒体搜索
-# Format: gBrain raw
-# Target: 500+ items (English X/Twitter + Reddit + HN + Newsletter)
+# 格式：gBrain 原始数据
+# 目标：500+ 条目（英文 X/Twitter + Reddit + HN + 新闻通讯）
 
-## X/Twitter Discussions
+## X/Twitter 讨论
 
 | # | Author | Core Content | Date | URL |
 |---|--------|-------------|------|-----|
@@ -11,7 +11,7 @@
 | 2 | @rohanpaul_ai | Self-evolving agents survey: 3 laws (Endure/Excel/Evolve), evolution mechanisms mapped | 2025-08-14 | https://x.com/rohanpaul_ai/status/1955892704308543992 |
 | 3 | @DataScienceDojo | "Your Agent May Misevolve" — risks of self-evolving agents | 2025-10-01 | https://x.com/DataScienceDojo/status/1973478023773966583 |
 
-## Reddit Discussions
+## Reddit 讨论
 
 | # | Subreddit | Title | Core Content | Date | URL |
 |---|-----------|-------|-------------|------|-----|
@@ -36,7 +36,7 @@
 | 19 | r/LocalLLaMA | Anyone tried self improving AI agents? | Darwin Godel Machine self-modifying system discussion | 2025-06-02 | https://www.reddit.com/r/LocalLLaMA/comments/1l1glmq/ |
 | 20 | r/n8n | Built AI agent auto-posts to X/Twitter | AI agent for Twitter automation with RSS feeds | 2025-12-21 | https://www.reddit.com/r/n8n/comments/1prxv82/ |
 
-## Hacker News Discussions
+## Hacker News 讨论
 
 | # | Title | Core Content | Date | URL |
 |---|-------|-------------|------|-----|
@@ -977,3 +977,11 @@
 ---
 # END OF BATCH APPEND (Phase 3 additions from bhsnm7e8v.txt, b97n2xf7h.txt, boa58yteo.txt)
 # Total new entries appended: ~100 items across 11 new/extended sections
+## gBrain Temporal Metadata
+
+- content_timestamp: 2019-08-13
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: early
+- timestamp_confidence: derived
+- timestamp_source: extracted from markdown content/metadata
+

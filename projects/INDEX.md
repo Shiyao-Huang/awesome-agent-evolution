@@ -249,6 +249,12 @@
 | Claude Trading Skills | [agiprolabs/claude-trading-skills](https://github.com/agiprolabs/claude-trading-skills) | Domain Agent Skill Workflow Pack | [projects/235-claude-trading-skills-domain-agent-workflows.md](235-claude-trading-skills-domain-agent-workflows.md) |
 | Spec Kit Agent Skills | [dceoy/speckit-agent-skills](https://github.com/dceoy/speckit-agent-skills) | Spec-Driven Agent Workflow Skills | [projects/236-speckit-agent-skills-spec-driven-workflow.md](236-speckit-agent-skills-spec-driven-workflow.md) |
 
+| CUGA Agent | [cuga-project/cuga-agent](https://github.com/cuga-project/cuga-agent) | Enterprise Generalist Agent Harness | [projects/237-cuga-agent-enterprise-agent-harness.md](237-cuga-agent-enterprise-agent-harness.md) |
+| AutoR | [AutoX-AI-Labs/AutoR](https://github.com/AutoX-AI-Labs/AutoR) | Human-Centered Research Harness | [projects/238-autor-human-centered-research-harness.md](238-autor-human-centered-research-harness.md) |
+| Chorus | [Chorus-AIDLC/Chorus](https://github.com/Chorus-AIDLC/Chorus) | AI-Human Collaboration Harness | [projects/239-chorus-ai-human-collaboration-harness.md](239-chorus-ai-human-collaboration-harness.md) |
+| KWeaver Core | [kweaver-ai/kweaver-core](https://github.com/kweaver-ai/kweaver-core) | Enterprise Decision Agent Harness | [projects/240-kweaver-core-enterprise-decision-agent-harness.md](240-kweaver-core-enterprise-decision-agent-harness.md) |
+| ClawProBench | [suyoumo/ClawProBench](https://github.com/suyoumo/ClawProBench) | Live OpenClaw Benchmark Harness | [projects/241-clawprobench-live-openclaw-benchmark.md](241-clawprobench-live-openclaw-benchmark.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

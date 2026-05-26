@@ -10,9 +10,9 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `reports` | present | 4 | 1 | 0 | 43 KB |
-| `output` | present | 12 | 1 | 0 | 597 KB |
-| `site/public/reports` | present | 266 | 4 | 0 | 2.3 MB |
+| `reports` | present | 5 | 1 | 0 | 69 KB |
+| `output` | present | 12 | 1 | 0 | 601 KB |
+| `site/public/reports` | present | 271 | 4 | 0 | 2.3 MB |
 | `site/dist` | present | 510 | 205 | 0 | 14 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 979 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
@@ -22,6 +22,7 @@
 ### `reports`
 
 - `reports/academic-propagation-analysis.md`
+- `reports/cross-validation-report.md`
 - `reports/project-discovery-leads.md`
 - `reports/propagation-chain-evidence.md`
 - `reports/star-analysis-report.md`

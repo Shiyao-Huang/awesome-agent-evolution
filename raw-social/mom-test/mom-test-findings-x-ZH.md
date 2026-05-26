@@ -236,3 +236,11 @@
 | 12 | 从业者可及性 | 真实用户需要简单工具，而非研究级系统 |
 | 13 | 搜索空间规模 | 改进空间对单 Agent 探索过于庞大 |
 | 14 | 质量控制 | Agent 创建的工具和技能需要单独的过滤机制 |
+## gBrain Temporal Metadata
+
+- content_timestamp: 2026-05-20
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: 2026-05
+- timestamp_confidence: derived
+- timestamp_source: extracted from markdown content/metadata
+

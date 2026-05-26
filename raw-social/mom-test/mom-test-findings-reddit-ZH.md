@@ -678,3 +678,11 @@
 ---
 
 *本分析采用 Mom Test 方法论进行：专注于用户报告的具体问题、实际应对方案和已记录的未满足需求，而非主观意见或假想的功能需求。*
+## gBrain Temporal Metadata
+
+- content_timestamp: 2000
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: early
+- timestamp_confidence: derived
+- timestamp_source: extracted from markdown content/metadata
+

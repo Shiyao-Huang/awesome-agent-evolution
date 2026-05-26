@@ -3,29 +3,27 @@ import { gsap } from 'gsap';
 
 type NodeItem = {
   label: string;
+  meta: string;
   x: number;
   y: number;
-  kind: 'paper' | 'project' | 'memory' | 'eval' | 'safety';
 };
 
 const nodes: NodeItem[] = [
-  { label: 'Papers', x: 18, y: 22, kind: 'paper' },
-  { label: 'Harness', x: 56, y: 16, kind: 'project' },
-  { label: 'Memory', x: 82, y: 36, kind: 'memory' },
-  { label: 'Eval', x: 72, y: 72, kind: 'eval' },
-  { label: 'Safety', x: 30, y: 76, kind: 'safety' },
-  { label: 'Skills', x: 46, y: 48, kind: 'project' }
+  { label: 'Raw', meta: '519 captures', x: 18, y: 24 },
+  { label: 'Processed', meta: 'analysis', x: 42, y: 18 },
+  { label: 'Work', meta: 'paper/site', x: 66, y: 28 },
+  { label: 'Results', meta: 'reports', x: 82, y: 52 },
+  { label: 'Benchmarks', meta: 'eval', x: 34, y: 58 },
+  { label: 'Model cards', meta: 'teaching', x: 58, y: 62 }
 ];
 
 const edges = [
-  [0, 5],
-  [1, 5],
-  [2, 5],
-  [3, 5],
-  [4, 3],
-  [0, 3],
-  [1, 3],
-  [2, 4]
+  [0, 1],
+  [1, 2],
+  [2, 3],
+  [1, 4],
+  [4, 5],
+  [5, 3]
 ];
 
 export default function EvolutionNetwork() {
@@ -38,37 +36,30 @@ export default function EvolutionNetwork() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         '.network-node',
-        { opacity: 0, scale: 0.72 },
-        { opacity: 1, scale: 1, duration: 0.7, stagger: 0.08, ease: 'back.out(1.5)' }
+        { opacity: 0, y: 5 },
+        { opacity: 1, y: 0, duration: 0.65, stagger: 0.08, ease: 'power2.out' }
       );
-      gsap.to('.network-node', {
-        y: (index) => (index % 2 === 0 ? -8 : 8),
-        duration: 2.8,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut',
-        stagger: 0.12
-      });
       gsap.fromTo(
         '.network-edge',
-        { strokeDashoffset: 160, opacity: 0.18 },
-        { strokeDashoffset: 0, opacity: 0.72, duration: 1.6, stagger: 0.06, ease: 'power2.out' }
+        { strokeDashoffset: 80, opacity: 0.18 },
+        { strokeDashoffset: 0, opacity: 1, duration: 1.2, stagger: 0.05, ease: 'power2.out' }
       );
+      gsap.to('.network-caret.active', {
+        opacity: 0.25,
+        duration: 0.72,
+        repeat: -1,
+        yoyo: true,
+        ease: 'steps(1)'
+      });
     }, root);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <div className="evolution-network" ref={rootRef} aria-label="Self Evolve knowledge network">
-      <svg viewBox="0 0 100 100" role="img">
-        <defs>
-          <radialGradient id="network-core" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#7cf7d4" />
-            <stop offset="55%" stopColor="#9f7cff" />
-            <stop offset="100%" stopColor="#050615" />
-          </radialGradient>
-        </defs>
+    <div className="evolution-network" ref={rootRef} aria-label="Self Evolve research pipeline mockup">
+      <svg viewBox="0 0 100 78" role="img">
+        <title>Self Evolve evidence pipeline</title>
         {edges.map(([sourceIndex, targetIndex]) => {
           const source = nodes[sourceIndex];
           const target = nodes[targetIndex];
@@ -80,27 +71,40 @@ export default function EvolutionNetwork() {
               y1={source.y}
               x2={target.x}
               y2={target.y}
-              pathLength="160"
+              pathLength="80"
             />
           );
         })}
-        <circle className="network-core" cx="50" cy="50" r="13" fill="url(#network-core)" />
-        <text className="network-core-text" x="50" y="48">
-          Observe
+        <rect className="network-core" x="33" y="32" width="34" height="14" rx="2.7" />
+        <line className="network-caret active" x1="37" y1="35" x2="37" y2="43" />
+        <text className="network-core-text" x="51" y="38.2">
+          self evolve index
         </text>
-        <text className="network-core-text small" x="50" y="54">
-          Patch / Verify
+        <text className="network-core-text small" x="51" y="42.6">
+          raw to evidence to public site
         </text>
-        {nodes.map((node) => (
-          <g className={`network-node ${node.kind}`} key={node.label} transform={`translate(${node.x} ${node.y})`}>
-            <circle r="6.8" />
-            <text y="13">{node.label}</text>
+        {nodes.map((node, index) => (
+          <g className="network-node" key={node.label} transform={`translate(${node.x} ${node.y})`}>
+            <rect className="network-card" x="-9.5" y="-6.6" width="19" height="13.2" rx="2.2" />
+            <line
+              className={`network-caret ${index === 2 ? 'active' : 'ghost'}`}
+              x1="-6.4"
+              y1="-3.9"
+              x2="-6.4"
+              y2="3.9"
+            />
+            <text x="1.5" y="-0.8">
+              {node.label}
+            </text>
+            <text className="network-meta" x="1.5" y="3.8">
+              {node.meta}
+            </text>
           </g>
         ))}
       </svg>
       <div className="network-caption">
-        <strong>Full corpus graph</strong>
-        <span>papers, repos, skills, memory, eval, safety</span>
+        <strong>Evidence chain first</strong>
+        <span>raw, processed analysis, work artifacts, public results</span>
       </div>
     </div>
   );

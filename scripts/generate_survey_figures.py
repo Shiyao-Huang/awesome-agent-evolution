@@ -66,11 +66,11 @@ paper_review_count = len(list((ROOT/'paper-reviews').glob('*.md')))
 academic_review_count = len(list((ROOT/'academic-reviews').glob('*.md')))
 raw_paper_md_count = len(list((ROOT/'raw-papers').glob('*.md')))
 raw_github_md_count = len(list((ROOT/'raw-github').glob('*.md')))
-raw_blog_file_count = sum(1 for _ in (ROOT/'raw-blogs').glob('*'))
-raw_social_file_count = sum(1 for _ in (ROOT/'raw-social').glob('*'))
+raw_blog_file_count = sum(1 for p in (ROOT/'raw-blogs').rglob('*') if p.is_file())
+raw_social_file_count = sum(1 for p in (ROOT/'raw-social').rglob('*') if p.is_file())
 
 # ---------- Pain point parsing ----------
-pain_summary = read_text(ROOT/'mom-test-findings.md')
+pain_summary = read_text(ROOT/'raw-social/mom-test/mom-test-findings.md')
 summary_categories = []
 in_table = False
 for line in pain_summary.splitlines():
@@ -85,7 +85,7 @@ for line in pain_summary.splitlines():
         elif summary_categories:
             break
 pain_rows = []
-for platform, fname in [('Reddit','mom-test-findings-reddit.md'), ('HN','mom-test-findings-hn.md'), ('X/Twitter','mom-test-findings-x.md')]:
+for platform, fname in [('Reddit','raw-social/mom-test/mom-test-findings-reddit.md'), ('HN','raw-social/mom-test/mom-test-findings-hn.md'), ('X/Twitter','raw-social/mom-test/mom-test-findings-x.md')]:
     txt = read_text(ROOT/fname)
     for m in re.finditer(r'^## Pain Point\s+(\d+):\s*(.+)$', txt, flags=re.M):
         pain_rows.append({'platform': platform, 'pain_id': m.group(1), 'title': m.group(2).strip(), 'source_file': fname})

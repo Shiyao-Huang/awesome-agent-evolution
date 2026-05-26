@@ -2,7 +2,7 @@ framework,adoption_signal,observability_signal,production_fit_signal,self_evolut
 LangChain/LangGraph,5,3,5,3,3,13,1
 CrewAI,5,4,4,2,2,4,0
 AutoGen,5,4,4,2,2,5,0
-OpenAI Agents SDK,5,1,5,2,3,82,28
+OpenAI Agents SDK,5,1,5,2,3,83,28
 EvoAgentX,5,4,4,5,2,5,0
 DGM/OpenEvolve,5,4,5,5,2,14,0
 Letta/Graphiti,5,4,4,3,3,4,0

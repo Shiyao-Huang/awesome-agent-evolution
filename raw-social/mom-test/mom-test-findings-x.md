@@ -236,3 +236,11 @@
 | 12 | Practitioner Accessibility | Real users need simple tools, not research-scale systems |
 | 13 | Search Space Scale | The improvement space is too vast for single-agent exploration |
 | 14 | Quality Control | Agent-created tools and skills need separate filtering mechanisms |
+## gBrain Temporal Metadata
+
+- content_timestamp: 2026-05-20
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: 2026-05
+- timestamp_confidence: derived
+- timestamp_source: extracted from markdown content/metadata
+

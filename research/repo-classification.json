@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T07:45:34+08:00",
+  "generated_at": "2026-05-26T09:12:00+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -812,6 +812,21 @@
       "description": "Autohand Code CLI - Ultra fast self evolving coding agent that runs in your terminal"
     },
     {
+      "repo": "AutoX-AI-Labs/AutoR",
+      "url": "https://github.com/AutoX-AI-Labs/AutoR",
+      "stars": "897",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "应用/application",
+      "function_tag": "research-agent-pipeline",
+      "base_theme": "research-agent",
+      "stack": "Python/JavaScript/Research Harness",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 897 stars, 22 forks, 154 commits, Python primary language, no releases, and README language about a 9-stage workflow, human approval, local browser Studio, reproducible runs and rollback-stage recovery.",
+      "description": "AutoR is a terminal-first research harness where AI handles execution, humans retain direction, and every run is stored as an inspectable artifact on disk."
+    },
+    {
       "repo": "bansky-cl/graphrag-arxiv-daily-paper",
       "url": "https://github.com/bansky-cl/graphrag-arxiv-daily-paper",
       "stars": "22",
@@ -1127,6 +1142,21 @@
       "description": "Agentic Harness Engineering treats prompts, tools, middleware, skills, sub-agents, memory, and evaluator scaffolds as evolvable harness surfaces while the base model stays fixed."
     },
     {
+      "repo": "Chorus-AIDLC/Chorus",
+      "url": "https://github.com/Chorus-AIDLC/Chorus",
+      "stars": "909",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "workflow-automation",
+      "stack": "TypeScript/Shell/Astro",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 909 stars, 84 forks, 471 commits, AGPL-3.0 license, TypeScript primary language, v0.8.2 latest on 2026-05-21, and README sections for lifecycle hooks, permissions, task state, context injection and OpenSpec mode.",
+      "description": "Chorus is an AI-human collaboration harness that manages session lifecycle, task state, sub-agent orchestration, permissions, observability and failure recovery around LLM agents."
+    },
+    {
       "repo": "chriscox/agent-skills",
       "url": "https://github.com/chriscox/agent-skills",
       "stars": "10",
@@ -1395,6 +1425,21 @@
       "content_timestamp": "unknown",
       "evidence": "framework/runtime/orchestration signal",
       "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks."
+    },
+    {
+      "repo": "cuga-project/cuga-agent",
+      "url": "https://github.com/cuga-project/cuga-agent",
+      "stars": "742",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Python/TypeScript/Agent Skills/MCP",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 742 stars, 132 forks, 304 commits, Python/TypeScript stack, v0.2.28 latest release on 2026-05-10, README claims for MCP/OpenAPI/LangChain tools, policy/HITL, optional memory, knowledge and SKILL.md assets.",
+      "description": "CUGA is an enterprise generalist agent harness that wires APIs, MCP servers, policies, memory, knowledge and agent skills into configurable web/API task execution."
     },
     {
       "repo": "cxcscmu/SkillLearnBench",
@@ -3255,6 +3300,21 @@
       "content_timestamp": "2026-05-03",
       "evidence": "paper/artifact/research-code signal",
       "description": "One file. Your AI agent becomes a scientist. 30+ experiments while you sleep."
+    },
+    {
+      "repo": "kweaver-ai/kweaver-core",
+      "url": "https://github.com/kweaver-ai/kweaver-core",
+      "stars": "803",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Go/Python/Knowledge Network",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 803 stars, 92 forks, 501 commits, Apache-2.0 license, Go primary language, README claims for governed context, verifiable feedback loops, KWeaver SDK/admin CLI, BKN Lang, benchmark sections and TraceAI.",
+      "description": "KWeaver Core is a harness-first foundation for enterprise decision agents, combining governed context, knowledge networks, tool policies and TraceAI-style feedback evidence."
     },
     {
       "repo": "labicon/curricullm",
@@ -6285,6 +6345,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "[ICML-2026] Official implementation of \"SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience\""
+    },
+    {
+      "repo": "suyoumo/ClawProBench",
+      "url": "https://github.com/suyoumo/ClawProBench",
+      "stars": "690",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/OpenClaw/Benchmark",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 690 stars, 50 forks, 44 commits, Apache-2.0 license, Python primary language, and README claims for 102 active scenarios, 162 catalog scenarios, deterministic grading, core profile ranking and public leaderboard.",
+      "description": "ClawProBench is a live-first benchmark harness for evaluating LLM agents in the OpenClaw runtime with deterministic grading, profile selection and repeated-trial reliability."
     },
     {
       "repo": "swapedoc/hermes2anti",

@@ -26,4 +26,4 @@
 
 ## Migration Rule
 
-Root-level historical markdown files are compatibility evidence until scripts and citations stop referencing them. New long-form management material goes under `docs/`; new raw captures go under `raw-*`; new generated public reports go under `reports/` or `site/public/reports/`.
+Root-level historical markdown files should not accumulate. Raw compatibility files move under `raw-*`, processed compatibility files move under `analysis/` or `reports/`, paper working files move under `paper-drafts/`, and new long-form management material goes under `docs/`.

@@ -17,7 +17,7 @@
 | `AGENTS.md` | present | 1 | 0 | 0 | 7.4 KB |
 | `CLAUDE.md` | present | 1 | 0 | 0 | 2.5 KB |
 | `CLOUD.md` | present | 1 | 0 | 0 | 1.5 KB |
-| `docs` | present | 21 | 5 | 0 | 239 KB |
+| `docs` | present | 24 | 5 | 0 | 242 KB |
 | `.claude/AIDS_IDENTITY.md` | present | 1 | 0 | 0 | 346 B |
 
 ## Representative Files

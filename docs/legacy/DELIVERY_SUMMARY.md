@@ -45,4 +45,4 @@
 
 ## Compatibility Note
 
-根目录中仍保留 `mom-test-findings*.md`、`raw-github-index.md`、`social-media-raw-data*.md` 等兼容文件，因为脚本、论文和调查章节仍引用它们。后续做物理迁移前，需要先改引用、跑验证，再记录迁移。
+根目录中仍保留 `raw-social/mom-test/mom-test-findings*.md`、`raw-github/INDEX.md`、`social-media-raw-data*.md` 等兼容文件，因为脚本、论文和调查章节仍引用它们。后续做物理迁移前，需要先改引用、跑验证，再记录迁移。

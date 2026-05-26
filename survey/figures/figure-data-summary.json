@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-05-25T15:25:19+08:00",
+  "generated_at": "2026-05-26T09:34:56+08:00",
   "counts": {
     "paper_records_timestamp_index": 196,
     "raw_paper_md_files": 198,
     "paper_reviews": 137,
     "academic_reviews": 34,
-    "repo_records_timestamp_index": 486,
-    "raw_github_md_files": 486,
-    "repo_cross_analysis_rows": 359,
+    "repo_records_timestamp_index": 524,
+    "raw_github_md_files": 525,
+    "repo_cross_analysis_rows": 364,
     "raw_blog_files": 1308,
     "raw_blog_json_records": 652,
-    "raw_social_files": 1296,
+    "raw_social_files": 1318,
     "raw_social_json_records": 613,
     "raw_social_rank_json_records": 228,
     "pain_points_parsed": 97
@@ -22,15 +22,15 @@
     ],
     [
       "evolution",
-      59
+      61
     ],
     [
       "memory",
-      59
+      60
     ],
     [
       "framework",
-      40
+      41
     ],
     [
       "education-list",
@@ -64,7 +64,7 @@
     ],
     [
       "Python",
-      127
+      130
     ],
     [
       "Unknown",
@@ -80,7 +80,7 @@
     ],
     [
       "TypeScript",
-      3
+      4
     ],
     [
       "Jupyter Notebook",
@@ -88,6 +88,10 @@
     ],
     [
       "Rust",
+      1
+    ],
+    [
+      "Elixir",
       1
     ]
   ],

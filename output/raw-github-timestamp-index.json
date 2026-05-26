@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-26T00:00:00+08:00",
-  "total": 519,
-  "updated_files": 519,
+  "total": 524,
+  "updated_files": 524,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -491,6 +491,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "AutoX-AI-Labs/AutoR",
+      "url": "https://github.com/AutoX-AI-Labs/AutoR",
+      "file": "raw-github/autox-ai-labs_autor.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T09:12:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
+    },
+    {
       "repo": "bansky-cl/graphrag-arxiv-daily-paper",
       "url": "https://github.com/bansky-cl/graphrag-arxiv-daily-paper",
       "file": "raw-github/bansky-cl_graphrag-arxiv-daily-paper.md",
@@ -680,6 +689,15 @@
       "timestamp_source": "user-reported GitHub URL plus existing legacy README/search supplement evidence"
     },
     {
+      "repo": "Chorus-AIDLC/Chorus",
+      "url": "https://github.com/Chorus-AIDLC/Chorus",
+      "file": "raw-github/chorus-aidlc_chorus.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T09:12:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
+    },
+    {
       "repo": "chriscox/agent-skills",
       "url": "https://github.com/chriscox/agent-skills",
       "file": "raw-github/chriscox_agent-skills.md",
@@ -840,6 +858,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "cuga-project/cuga-agent",
+      "url": "https://github.com/cuga-project/cuga-agent",
+      "file": "raw-github/cuga-project_cuga-agent.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T09:12:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
       "repo": "cxcscmu/SkillLearnBench",
@@ -1956,6 +1983,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "kweaver-ai/kweaver-core",
+      "url": "https://github.com/kweaver-ai/kweaver-core",
+      "file": "raw-github/kweaver-ai_kweaver-core.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T09:12:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
       "repo": "labicon/curricullm",
@@ -3774,6 +3810,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "suyoumo/ClawProBench",
+      "url": "https://github.com/suyoumo/ClawProBench",
+      "file": "raw-github/suyoumo_clawprobench.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T09:12:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
       "repo": "swapedoc/hermes2anti",

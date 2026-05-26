@@ -8,14 +8,14 @@
 
 ## 0. 方法与证据边界
 
-本报告响应 Master 的“基础数据优先、先交叉验证后写综述”要求，交叉读取：`analysis/repo-techstack-cross-analysis.csv`（348 个 raw-github repo）、`mom-test-findings-*-ZH.md`（97 个痛点）、`raw-social/` 与 `raw-blogs/` 的本地 Markdown/JSON 快照。仓库根目录未发现 `SYSTEM.md`/`AGENTS.md` 与 `wiki/log.md`，因此没有额外历史 lesson 需要引用。
+本报告响应 Master 的“基础数据优先、先交叉验证后写综述”要求，交叉读取：`analysis/repo-techstack-cross-analysis.csv`（348 个 raw-github repo）、`raw-social/mom-test/mom-test-findings-*-ZH.md`（97 个痛点）、`raw-social/` 与 `raw-blogs/` 的本地 Markdown/JSON 快照。仓库根目录未发现 `SYSTEM.md`/`AGENTS.md` 与 `wiki/log.md`，因此没有额外历史 lesson 需要引用。
 
 证据等级分三类：**直接证据**来自 Mom Test 痛点原文；**结构证据**来自 repo 分类、README 文件结构、star/语言/时间切片字段；**关键词证据**来自 raw-social/raw-blogs 的本地文本命中。由于 repo star 字段在部分行缺失或被 scrape 截断，本文不把 star 当成唯一价值指标，只用于“注意力/采用信号”的弱代理。
 
 ## 1. Repo生态快照
 
 - raw-github 记录数：348；star 总和（合并 techstack CSV 与 raw-github-index 的较高本地字段）：162569；stars>0 的记录：315；stars=0/缺失的记录：33。
-- star 字段为本地采集快照，不代表实时 GitHub；当 `repo-techstack-cross-analysis.csv` 与 `raw-github-index.md` 不一致时，本报告采用两者较高值作为注意力代理，并把不一致列为后续数据清洗缺口。
+- star 字段为本地采集快照，不代表实时 GitHub；当 `repo-techstack-cross-analysis.csv` 与 `raw-github/INDEX.md` 不一致时，本报告采用两者较高值作为注意力代理，并把不一致列为后续数据清洗缺口。
 - 类别Top：evaluation:81(23.3%)；evolution:58(16.7%)；memory:56(16.1%)；framework:38(10.9%)；education-list:35(10.1%)；research-agent:30(8.6%)；prompt-optimization:26(7.5%)；coding-agent:17(4.9%)；workflow-automation:6(1.7%)；safety:1(0.3%)
 - 技术栈Top：Markdown:197(56.6%)；Python:123(35.3%)；Unknown:14(4.0%)；TypeScript/JavaScript:6(1.7%)；Shell:6(1.7%)；TypeScript:1(0.3%)；Jupyter Notebook:1(0.3%)
 - 时间切片Top：2026-05:186；unknown:109；2026-04:8；2024-Q2:7；2026-03:6；2024-Q3:4；2025-11:4；2026-01:3；early:3；2025-05:3
@@ -77,25 +77,25 @@
 
 | Term | 本地命中数 | 示例文件 | 解读 |
 |---|---:|---|---|
-| LangChain | 1207 | mom-test-findings-reddit-ZH.md; mom-test-findings-hn-ZH.md; raw-social/0046-langchain-ai-github-io-Agent-Server-Docs-by-LangChain.md | 框架/系统关注度 |
-| CrewAI | 1574 | mom-test-findings-reddit-ZH.md; raw-social/0072-agentic-ai-AutoGen-vs-CrewAI-Multi-Agent-Orchestration-Comparison-Agentic-ai.md; raw-social/0554-github-com-BUG-output-pydantic-response-model-leaks-into-agent-tool-calling-loop-causing-tools-to-be.md | 框架/系统关注度 |
+| LangChain | 1207 | raw-social/mom-test/mom-test-findings-reddit-ZH.md; raw-social/mom-test/mom-test-findings-hn-ZH.md; raw-social/0046-langchain-ai-github-io-Agent-Server-Docs-by-LangChain.md | 框架/系统关注度 |
+| CrewAI | 1574 | raw-social/mom-test/mom-test-findings-reddit-ZH.md; raw-social/0072-agentic-ai-AutoGen-vs-CrewAI-Multi-Agent-Orchestration-Comparison-Agentic-ai.md; raw-social/0554-github-com-BUG-output-pydantic-response-model-leaks-into-agent-tool-calling-loop-causing-tools-to-be.md | 框架/系统关注度 |
 | AutoGen | 884 | raw-social/0072-agentic-ai-AutoGen-vs-CrewAI-Multi-Agent-Orchestration-Comparison-Agentic-ai.md; raw-social/0070-arsum-com-AutoGen-vs-CrewAI-Production-Comparison-and-ROI-Fit-AI-Automation-Blog-Arsum.md; raw-social/0071-agentscookbook-com-CrewAI-vs-AutoGen-Which-Multi-Agent-Framework-Should-You-Use-Agents-Coo.md | 框架/系统关注度 |
-| LangGraph | 1384 | mom-test-findings-reddit-ZH.md; mom-test-findings-hn-ZH.md; raw-social/0046-langchain-ai-github-io-Agent-Server-Docs-by-LangChain.md | 框架/系统关注度 |
+| LangGraph | 1384 | raw-social/mom-test/mom-test-findings-reddit-ZH.md; raw-social/mom-test/mom-test-findings-hn-ZH.md; raw-social/0046-langchain-ai-github-io-Agent-Server-Docs-by-LangChain.md | 框架/系统关注度 |
 | Letta | 2 | raw-social/boost_batch_01.md; raw-social/0349-Hacker-News-Claude-Code-2-0-Hacker-News.md | 框架/系统关注度 |
-| DGM | 593 | mom-test-findings-hn-ZH.md; mom-test-findings-x-ZH.md; raw-social/0070-arsum-com-AutoGen-vs-CrewAI-Production-Comparison-and-ROI-Fit-AI-Automation-Blog-Arsum.md | 框架/系统关注度 |
-| Darwin Godel | 45 | mom-test-findings-hn-ZH.md; mom-test-findings-x-ZH.md; raw-social/0139-cnblogs-com-AI-HyperAgents.md | 框架/系统关注度 |
-| AgentEvolver | 275 | mom-test-findings-x-ZH.md; raw-social/0150-developer-aliyun-com-AI.md; raw-social/x-twitter-posts.md | 框架/系统关注度 |
+| DGM | 593 | raw-social/mom-test/mom-test-findings-hn-ZH.md; raw-social/mom-test/mom-test-findings-x-ZH.md; raw-social/0070-arsum-com-AutoGen-vs-CrewAI-Production-Comparison-and-ROI-Fit-AI-Automation-Blog-Arsum.md | 框架/系统关注度 |
+| Darwin Godel | 45 | raw-social/mom-test/mom-test-findings-hn-ZH.md; raw-social/mom-test/mom-test-findings-x-ZH.md; raw-social/0139-cnblogs-com-AI-HyperAgents.md | 框架/系统关注度 |
+| AgentEvolver | 275 | raw-social/mom-test/mom-test-findings-x-ZH.md; raw-social/0150-developer-aliyun-com-AI.md; raw-social/x-twitter-posts.md | 框架/系统关注度 |
 | Reflexion | 267 | raw-social/0108-Juejin-AI-Agent-agent-evolution-AI-Agent.md; raw-social/0051-arxiv-org-A-Self-Improving-Coding-Agent.md; raw-social/0032-export-arxiv-org-2303-11366v1-Reflexion-an-autonomous-agent-with-dynamic-memory-and-self-r.md | 框架/系统关注度 |
-| SWE-Bench | 221 | mom-test-findings-hn-ZH.md; mom-test-findings-x-ZH.md; raw-social/0175-36kr-com-Meta-Agent-36.md | 风险/验证/生产痛点关注度 |
+| SWE-Bench | 221 | raw-social/mom-test/mom-test-findings-hn-ZH.md; raw-social/mom-test/mom-test-findings-x-ZH.md; raw-social/0175-36kr-com-Meta-Agent-36.md | 风险/验证/生产痛点关注度 |
 | browser-use | 5 | raw-social/x_more_3.md; raw-social/0479-X-Twitter-Browser-Use-An-open-source-tool-that-lets-AI-agents-control-web.md; raw-social/raw-social-index.md | 框架/系统关注度 |
-| MCP | 5233 | mom-test-findings-reddit-ZH.md; raw-social/0510-arxiv-org-2512-02731-Self-Improving-AI-Agents-through-Self-Play-arXiv.md; raw-social/0528-marktechpost-com-Meet-A-Evolve-The-PyTorch-Moment-For-Agentic-AI-Systems-Replacing-Manual-Tuning-Wit.md | 框架/系统关注度 |
-| memory | 1772 | mom-test-findings-x-ZH.md; raw-social/0072-agentic-ai-AutoGen-vs-CrewAI-Multi-Agent-Orchestration-Comparison-Agentic-ai.md; raw-social/0043-langchain-com-LangGraph-Agent-Orchestration-Framework-for-Reliable-AI-Agents.md | 风险/验证/生产痛点关注度 |
-| benchmark | 606 | mom-test-findings-reddit-ZH.md; mom-test-findings-hn-ZH.md; raw-social/0139-cnblogs-com-AI-HyperAgents.md | 风险/验证/生产痛点关注度 |
-| production | 687 | mom-test-findings-reddit-ZH.md; raw-social/0072-agentic-ai-AutoGen-vs-CrewAI-Multi-Agent-Orchestration-Comparison-Agentic-ai.md; raw-social/0043-langchain-com-LangGraph-Agent-Orchestration-Framework-for-Reliable-AI-Agents.md | 风险/验证/生产痛点关注度 |
+| MCP | 5233 | raw-social/mom-test/mom-test-findings-reddit-ZH.md; raw-social/0510-arxiv-org-2512-02731-Self-Improving-AI-Agents-through-Self-Play-arXiv.md; raw-social/0528-marktechpost-com-Meet-A-Evolve-The-PyTorch-Moment-For-Agentic-AI-Systems-Replacing-Manual-Tuning-Wit.md | 框架/系统关注度 |
+| memory | 1772 | raw-social/mom-test/mom-test-findings-x-ZH.md; raw-social/0072-agentic-ai-AutoGen-vs-CrewAI-Multi-Agent-Orchestration-Comparison-Agentic-ai.md; raw-social/0043-langchain-com-LangGraph-Agent-Orchestration-Framework-for-Reliable-AI-Agents.md | 风险/验证/生产痛点关注度 |
+| benchmark | 606 | raw-social/mom-test/mom-test-findings-reddit-ZH.md; raw-social/mom-test/mom-test-findings-hn-ZH.md; raw-social/0139-cnblogs-com-AI-HyperAgents.md | 风险/验证/生产痛点关注度 |
+| production | 687 | raw-social/mom-test/mom-test-findings-reddit-ZH.md; raw-social/0072-agentic-ai-AutoGen-vs-CrewAI-Multi-Agent-Orchestration-Comparison-Agentic-ai.md; raw-social/0043-langchain-com-LangGraph-Agent-Orchestration-Framework-for-Reliable-AI-Agents.md | 风险/验证/生产痛点关注度 |
 | observability | 197 | raw-social/0209-Hacker-News-Ask-HN-How-to-Learn-to-Build-Agentic-AI-Systems-Like-Claude-Code-Hacker-News.md; raw-social/0070-arsum-com-AutoGen-vs-CrewAI-Production-Comparison-and-ROI-Fit-AI-Automation-Blog-Arsum.md; raw-social/more_batch_14.md | 风险/验证/生产痛点关注度 |
 | prompt injection | 78 | raw-social/hn-posts.md; raw-social/reddit_hn_batch_03.md; raw-social/0080-makerpulse-ai-MCP-Under-the-Hood-How-the-Model-Context-Protocol-Actually-Wires-Agents-to-E.md | 风险/验证/生产痛点关注度 |
 | cost | 563 | raw-social/0070-arsum-com-AutoGen-vs-CrewAI-Production-Comparison-and-ROI-Fit-AI-Automation-Blog-Arsum.md; raw-social/0071-agentscookbook-com-CrewAI-vs-AutoGen-Which-Multi-Agent-Framework-Should-You-Use-Agents-Coo.md; raw-social/0226-Hacker-News-Ask-HN-How-are-you-scaling-AI-agents-reliably-in-production-Hacker-News.md | 风险/验证/生产痛点关注度 |
-| self-improv | 1287 | mom-test-findings-reddit-ZH.md; mom-test-findings-hn-ZH.md; mom-test-findings-x-ZH.md | 风险/验证/生产痛点关注度 |
+| self-improv | 1287 | raw-social/mom-test/mom-test-findings-reddit-ZH.md; raw-social/mom-test/mom-test-findings-hn-ZH.md; raw-social/mom-test/mom-test-findings-x-ZH.md | 风险/验证/生产痛点关注度 |
 
 ## 6. 可视化字段建议
 

@@ -79,3 +79,11 @@
 3. **安全/治理模式**，适用于自修改智能体
 4. **记忆架构**，不会导致上下文膨胀
 5. **实用的自我改进模式**，无需人工介入验证即可工作
+## gBrain Temporal Metadata
+
+- content_timestamp: 2026-05-21
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: 2026-05
+- timestamp_confidence: derived
+- timestamp_source: extracted from markdown content/metadata
+

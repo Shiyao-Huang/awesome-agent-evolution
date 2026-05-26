@@ -2,7 +2,7 @@
 
 Date: 2026-05-20  
 Task: `Av0awMJt6E4j` — project-wide GitNexus technical/code/domain extraction and review output.  
-Primary source: [`github-agent-evolution-repos.md`](../../github-agent-evolution-repos.md)  
+Primary source: [`analysis/github-agent-evolution-repos.md`](../../analysis/github-agent-evolution-repos.md)  
 GitNexus evidence: `gitnexus analyze --skip-git --index-only --name awesome-agent-evolution .` indexed this workspace as a non-git folder: **2 nodes, 1 edge, 0 clusters, 0 flows**.
 
 ## L1 Verdict
@@ -11,7 +11,7 @@ The current `awesome-agent-evolution` workspace is a curated repository corpus r
 
 ## L2 Evidence Summary
 
-- Workspace files inspected: only `github-agent-evolution-repos.md` is present outside `.aha`; `wiki/log.md` is absent.
+- Workspace files inspected: only `analysis/github-agent-evolution-repos.md` is present outside `.aha`; `wiki/log.md` is absent.
 - GitNexus is installed (`1.6.5`) and can index the folder, but there are no local source files, symbols, flows, PDF files, or LaTeX files to analyze in this workspace.
 - The corpus contains **107 repositories**: 47 frameworks, 23 applications, 16 evaluation projects, 13 paper-code repositories, and 8 tools.
 
@@ -92,7 +92,7 @@ Review: application projects show self-evolution moving from generic agents into
 
 ```mermaid
 flowchart LR
-  Corpus[github-agent-evolution-repos.md] --> Extractor[Markdown table extraction]
+  Corpus[analysis/github-agent-evolution-repos.md] --> Extractor[Markdown table extraction]
   Extractor --> Taxonomy[Category and language taxonomy]
   Taxonomy --> Memory[Memory/context substrate]
   Taxonomy --> Frameworks[Evolution frameworks]
@@ -108,7 +108,7 @@ flowchart LR
 
 Self Mirror node map:
 
-- `awesome-agent-evolution.corpus`: `github-agent-evolution-repos.md`; upstream search and GitHub metadata; downstream taxonomy review.
+- `awesome-agent-evolution.corpus`: `analysis/github-agent-evolution-repos.md`; upstream search and GitHub metadata; downstream taxonomy review.
 - `awesome-agent-evolution.gitnexus-index`: local GitNexus index of this workspace; evidence `2 nodes | 1 edges | 0 clusters | 0 flows`.
 - `awesome-agent-evolution.review`: this report; downstream candidate PDF/LaTeX or manuscript production.
 

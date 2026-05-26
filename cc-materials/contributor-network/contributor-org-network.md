@@ -466,7 +466,7 @@ graph TB
 
 ## Appendix: Data Methodology
 
-- **Core repos (107)**: Curated from `github-agent-evolution-repos.md` with manual categorization
+- **Core repos (107)**: Curated from `analysis/github-agent-evolution-repos.md` with manual categorization
 - **Extended repos (352 total)**: Includes all files in `raw-github/` directory covering broader agent evolution ecosystem
 - **Organization classification**: Based on GitHub org name, profile, and project context
 - **Language detection**: Primary language from GitHub metadata, with fallback to content analysis

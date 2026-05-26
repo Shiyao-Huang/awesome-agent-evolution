@@ -2,7 +2,7 @@
 
 日期: 2026-05-20
 任务: `Av0awMJt6E4j` — 项目级 GitNexus 技术/代码/领域提取与评审输出。
-主要来源: [`github-agent-evolution-repos.md`](../../github-agent-evolution-repos.md)
+主要来源: [`analysis/github-agent-evolution-repos.md`](../../analysis/github-agent-evolution-repos.md)
 GitNexus 证据: `gitnexus analyze --skip-git --index-only --name awesome-agent-evolution .` 将此工作区作为非 Git 文件夹进行索引: **2 个节点, 1 条边, 0 个集群, 0 条流**。
 
 ## L1 结论
@@ -11,7 +11,7 @@ GitNexus 证据: `gitnexus analyze --skip-git --index-only --name awesome-agent-
 
 ## L2 证据摘要
 
-- 已检查的工作区文件: `.aha` 之外仅存在 `github-agent-evolution-repos.md`; `wiki/log.md` 不存在。
+- 已检查的工作区文件: `.aha` 之外仅存在 `analysis/github-agent-evolution-repos.md`; `wiki/log.md` 不存在。
 - GitNexus 已安装 (`1.6.5`) 且可以索引该文件夹，但该工作区中没有本地源文件、符号、流、PDF 文件或 LaTeX 文件可供分析。
 - 该语料库包含 **107 个仓库**: 47 个框架, 23 个应用, 16 个评测项目, 13 个论文代码仓库, 以及 8 个工具。
 
@@ -92,7 +92,7 @@ GitNexus 证据: `gitnexus analyze --skip-git --index-only --name awesome-agent-
 
 ```mermaid
 flowchart LR
-  Corpus[github-agent-evolution-repos.md] --> Extractor[Markdown 表格提取]
+  Corpus[analysis/github-agent-evolution-repos.md] --> Extractor[Markdown 表格提取]
   Extractor --> Taxonomy[类别和语言分类]
   Taxonomy --> Memory[记忆/上下文基础设施]
   Taxonomy --> Frameworks[进化框架]
@@ -108,7 +108,7 @@ flowchart LR
 
 自镜像节点映射:
 
-- `awesome-agent-evolution.corpus`: `github-agent-evolution-repos.md`; 上游搜索和 GitHub 元数据; 下游分类评审。
+- `awesome-agent-evolution.corpus`: `analysis/github-agent-evolution-repos.md`; 上游搜索和 GitHub 元数据; 下游分类评审。
 - `awesome-agent-evolution.gitnexus-index`: 此工作区的本地 GitNexus 索引; 证据 `2 个节点 | 1 条边 | 0 个集群 | 0 条流`。
 - `awesome-agent-evolution.review`: 本报告; 下游候选 PDF/LaTeX 或稿件制作。
 

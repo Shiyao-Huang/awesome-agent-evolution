@@ -50,9 +50,10 @@ const categories = [
       'raw-blogs',
       'raw-social',
       'raw-social-rank',
-      'raw-github-index.md',
-      'social-media-raw-data.md',
-      'social-media-raw-data-ZH.md'
+      'raw-github/INDEX.md',
+      'raw-social/mom-test',
+      'raw-social/legacy/social-media-raw-data.md',
+      'raw-social/legacy/social-media-raw-data-ZH.md'
     ]
   },
   {
@@ -230,7 +231,7 @@ function generateRawGithubTimestampIndex() {
   mkdirSync(outDir, { recursive: true });
 
   const records = readdirSync(rawDir)
-    .filter((name) => name.endsWith('.md'))
+    .filter((name) => name.endsWith('.md') && name !== 'INDEX.md')
     .sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }))
     .map((name) => {
       const file = path.join('raw-github', name);
@@ -492,7 +493,7 @@ function generateDataFlowIndex() {
 
 ## Migration Rule
 
-Root-level historical markdown files are compatibility evidence until scripts and citations stop referencing them. New long-form management material goes under \`docs/\`; new raw captures go under \`raw-*\`; new generated public reports go under \`reports/\` or \`site/public/reports/\`.
+Root-level historical markdown files should not accumulate. Raw compatibility files move under \`raw-*\`, processed compatibility files move under \`analysis/\` or \`reports/\`, paper working files move under \`paper-drafts/\`, and new long-form management material goes under \`docs/\`.
 `;
   writeFileSync(path.join(INDEX_DIR, 'data-flow-index.md'), body);
 }
@@ -506,11 +507,9 @@ function generateRootDocumentMap() {
     .sort();
 
   const classify = (name) => {
-    if (['README.md', 'README-ZH.md', 'README-EN.md', 'CONTENT_INDEX.md', 'DELIVERY_SUMMARY.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md'].includes(name)) return 'ops';
+    if (['README.md', 'README-ZH.md', 'README-EN.md', 'CONTENT_INDEX.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md'].includes(name)) return 'ops';
     if (name.startsWith('mom-test') || name.startsWith('social-media') || name.startsWith('raw-')) return 'raw compatibility';
     if (name.startsWith('awesome-') || name.startsWith('github-agent-evolution')) return 'processed compatibility';
-    if (['PAPER_OUTLINE.md'].includes(name)) return 'work compatibility';
-    if (['cross-validation-report.md'].includes(name)) return 'processed compatibility';
     if (name.startsWith('LICENSE') || ['NOTICE', 'CONTRIBUTING.md', 'CODE_OF_CONDUCT.md'].includes(name)) return 'release/legal';
     if (['SECURITY.md'].includes(name)) return 'release/security';
     return 'uncategorized';
@@ -535,7 +534,7 @@ function topLevelClass(name) {
   const work = new Set(['paper-drafts', 'paper', 'latex', 'site', 'survey', 'scripts', 'data-engine', 'wiki']);
   const results = new Set(['reports', 'output']);
   const mirrors = new Set(['repos', 'all_hands_ai__openhands', 'stitionai__devika']);
-  const ops = new Set(['README.md', 'README-ZH.md', 'README-EN.md', 'CONTENT_INDEX.md', 'DELIVERY_SUMMARY.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md', 'docs', '.gitignore']);
+  const ops = new Set(['README.md', 'README-ZH.md', 'README-EN.md', 'CONTENT_INDEX.md', 'AGENTS.md', 'CLAUDE.md', 'CLOUD.md', 'docs', '.gitignore']);
   const legal = new Set(['LICENSE-CODE', 'LICENSE-CONTENT', 'NOTICE', 'CONTRIBUTING.md', 'CODE_OF_CONDUCT.md', 'SECURITY.md']);
   const local = new Set(['.DS_Store', '.aha', '.astro', '.claude', '.genome', '.git', '.gitnexus', '.tmp', 'node_modules']);
 
@@ -548,12 +547,12 @@ function topLevelClass(name) {
   if (legal.has(name)) return ['support release/legal', '开源发布必需，保留在根目录。'];
   if (local.has(name)) return ['local ignored/cache', '本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。'];
   if (name.startsWith('mom-test') || name.startsWith('social-media') || name.startsWith('raw-')) {
-    return ['compatibility raw-root', '根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。'];
+    return ['misplaced raw-root', '新规则要求迁入 raw-*；先查引用，再移动并刷新索引。'];
   }
   if (name.startsWith('awesome-') || name.startsWith('github-agent-evolution') || name === 'cross-validation-report.md') {
-    return ['compatibility processed-root', '根目录兼容分析，不删；等引用清完后迁入 processed 或 docs/legacy。'];
+    return ['misplaced processed-root', '新规则要求迁入 analysis/、research/ 或 reports/；先查引用，再移动并刷新索引。'];
   }
-  if (name === 'PAPER_OUTLINE.md') return ['compatibility work-root', '论文工作兼容入口，不删；后续可迁入 paper-drafts 或 docs/legacy。'];
+  if (name === 'PAPER_OUTLINE.md') return ['misplaced work-root', '新规则要求迁入 paper-drafts/ 或 docs/legacy/；先查引用，再移动并刷新索引。'];
   return ['needs-review holding', '不删除；先放入待审清单，确认引用后再决定归层或迁入 docs/legacy。'];
 }
 

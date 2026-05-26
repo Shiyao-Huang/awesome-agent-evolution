@@ -1,10 +1,10 @@
 # Awesome Agent Evolution — Social Media / Blog / Platform Resources
 
-> Processed from `social-media-raw-data.md` into awesome-list format. Raw data is preserved unchanged.
+> Processed from `raw-social/legacy/social-media-raw-data.md` into awesome-list format. Raw data is preserved unchanged.
 
 ## Summary
 
-- Source file: `social-media-raw-data.md`
+- Source file: `raw-social/legacy/social-media-raw-data.md`
 - Parsed entries: 783
 - Unique URLs: 693
 - Stars/upvotes: social/media sources generally do not expose GitHub stars, so entries use `🌟N/A`.

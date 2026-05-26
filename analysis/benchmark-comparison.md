@@ -10,7 +10,7 @@ evidence_sources:
   - survey/ch7-painpoints-cn.md
   - analysis/github-project-data-analysis.md
   - projects/*.md (model cards for OSWorld, BrowserGym, etc.)
-  - mom-test-findings-ZH.md (P008, P022, P031, P054, P062, P067, P075, P082, P088)
+  - raw-social/mom-test/mom-test-findings-ZH.md (P008, P022, P031, P054, P062, P067, P075, P082, P088)
   - research/papers/ (11 deep reviews)
 ---
 
@@ -119,7 +119,7 @@ evidence_sources:
 
 ### 3.1 已确认的投机模式
 
-来源：`mom-test-findings-ZH.md` 和 `survey/ch7-painpoints-cn.md`
+来源：`raw-social/mom-test/mom-test-findings-ZH.md` 和 `survey/ch7-painpoints-cn.md`
 
 | 投机模式 | 影响 benchmark | Mom Test 证据 | 典型手法 |
 |---|---|---|---|
@@ -277,4 +277,4 @@ graph LR
 - projects/75-browsergym-web-agent-benchmark.md — BrowserGym model card
 - projects/111-memoryagentbench-incremental-memory-eval.md — MemoryAgentBench model card
 - research/papers/ — 11 篇论文 review 的实验部分
-- mom-test-findings-ZH.md — P008, P022, P031, P054, P062, P067, P069, P075, P082, P088
+- raw-social/mom-test/mom-test-findings-ZH.md — P008, P022, P031, P054, P062, P067, P069, P075, P082, P088

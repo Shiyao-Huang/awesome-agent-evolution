@@ -39,38 +39,17 @@
 | `CODE_OF_CONDUCT.md` | file | support release/legal | 开源发布必需，保留在根目录。 |
 | `CONTENT_INDEX.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `CONTRIBUTING.md` | file | support release/legal | 开源发布必需，保留在根目录。 |
-| `DELIVERY_SUMMARY.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `LICENSE-CODE` | file | support release/legal | 开源发布必需，保留在根目录。 |
 | `LICENSE-CONTENT` | file | support release/legal | 开源发布必需，保留在根目录。 |
 | `NOTICE` | file | support release/legal | 开源发布必需，保留在根目录。 |
-| `PAPER_OUTLINE.md` | file | compatibility work-root | 论文工作兼容入口，不删；后续可迁入 paper-drafts 或 docs/legacy。 |
 | `README-EN.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `README-ZH.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `README.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `SECURITY.md` | file | support release/legal | 开源发布必需，保留在根目录。 |
 | `all_hands_ai__openhands` | dir | support mirrors | 外部镜像，不删除；不混入本项目治理，必要时只读引用。 |
-| `awesome-social-media-resources-ZH.md` | file | compatibility processed-root | 根目录兼容分析，不删；等引用清完后迁入 processed 或 docs/legacy。 |
-| `awesome-social-media-resources.md` | file | compatibility processed-root | 根目录兼容分析，不删；等引用清完后迁入 processed 或 docs/legacy。 |
-| `cross-validation-report.md` | file | compatibility processed-root | 根目录兼容分析，不删；等引用清完后迁入 processed 或 docs/legacy。 |
 | `docs` | dir | support ops | 管理入口，保留；长文档进入 docs/。 |
-| `github-agent-evolution-repos-ZH.md` | file | compatibility processed-root | 根目录兼容分析，不删；等引用清完后迁入 processed 或 docs/legacy。 |
-| `github-agent-evolution-repos.md` | file | compatibility processed-root | 根目录兼容分析，不删；等引用清完后迁入 processed 或 docs/legacy。 |
-| `mom-test-findings-ZH.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `mom-test-findings-chinese.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `mom-test-findings-hn-ZH.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `mom-test-findings-hn.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `mom-test-findings-reddit-ZH.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `mom-test-findings-reddit.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `mom-test-findings-x-ZH.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `mom-test-findings-x.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `mom-test-findings.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
 | `node_modules` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
-| `raw-data-timestamp-standard.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `raw-data-timestamp-validation-report.json` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `raw-github-index.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
 | `repos` | dir | support mirrors | 外部镜像，不删除；不混入本项目治理，必要时只读引用。 |
-| `social-media-raw-data-ZH.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
-| `social-media-raw-data.md` | file | compatibility raw-root | 根目录兼容素材，不删；等脚本/论文引用清完后迁入 raw 或 docs/legacy。 |
 | `stitionai__devika` | dir | support mirrors | 外部镜像，不删除；不混入本项目治理，必要时只读引用。 |
 | `work` | dir | needs-review holding | 不删除；先放入待审清单，确认引用后再决定归层或迁入 docs/legacy。 |
 

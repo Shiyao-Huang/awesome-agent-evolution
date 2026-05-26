@@ -370,3 +370,11 @@ These records were added after the main raw-github index generation as hot-proje
 | S4 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 162k | Python/TypeScript | framework-runtime | nousresearch_hermes-agent.md |
 | S5 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 374k | TypeScript | framework-runtime | openclaw_openclaw.md |
 | S6 | [pinchbench/skill](https://github.com/pinchbench/skill) | 1.2k | Python/TypeScript | benchmark-eval | pinchbench_skill.md |
+## gBrain Temporal Metadata
+
+- content_timestamp: 2026-05-21
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: 2026-05
+- timestamp_confidence: derived
+- timestamp_source: extracted from markdown content/metadata
+

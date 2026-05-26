@@ -179,7 +179,7 @@
 
 ## 6. 下一步建议
 
-1. **Repo分类补齐**: 对241个未分类repo按README关键词自动分类，输出到raw-github-index.md
+1. **Repo分类补齐**: 对241个未分类repo按README关键词自动分类，输出到raw-github/INDEX.md
 2. **作者画像补齐**: 从JSON中的URL提取GitHub/Twitter profile，补充followers和影响力数据
 3. **评估基准标准化**: 当前11篇evaluation_benchmark博客远不够，需补充评测方法论分析
 4. **交叉验证深化**: 论文声称效果与社区体验的gap需要逐篇对照

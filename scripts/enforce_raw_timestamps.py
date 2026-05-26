@@ -7,6 +7,7 @@ NOW = "2026-05-21T00:00:00+08:00"
 RAW_DIRS = ["raw-blogs", "raw-github", "raw-papers", "raw-social"]
 REQUIRED = ["content_timestamp", "collected_at", "time_slice"]
 RAW_PAPERS_METADATA_FILES = {"index.md", "timestamp-audit.md"}
+RAW_METADATA_FILES = {"index.md"}
 MONTHS = {name: i for i, name in enumerate("January February March April May June July August September October November December".split(), 1)}
 MONTHS.update({name[:3]: i for name, i in MONTHS.copy().items()})
 
@@ -107,6 +108,8 @@ def enforce_once() -> int:
         for path in root.rglob("*"):
             if not path.is_file():
                 continue
+            if path.name.lower() in RAW_METADATA_FILES:
+                continue
             if dirname == "raw-papers" and path.name in RAW_PAPERS_METADATA_FILES:
                 continue
             if path.suffix == ".json":
@@ -140,6 +143,8 @@ def validate() -> dict[str, Any]:
         if root.exists():
             for path in root.rglob("*"):
                 if not path.is_file():
+                    continue
+                if path.name.lower() in RAW_METADATA_FILES:
                     continue
                 if dirname == "raw-papers" and path.name in RAW_PAPERS_METADATA_FILES:
                     continue
@@ -178,7 +183,9 @@ def main() -> None:
             break
     report = validate()
     report["updated_in_this_run"] = total_updated
-    pathlib.Path("raw-data-timestamp-validation-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    output_dir = pathlib.Path("output")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    (output_dir / "raw-data-timestamp-validation-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
 if __name__ == "__main__":

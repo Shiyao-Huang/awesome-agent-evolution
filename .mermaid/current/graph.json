@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T07:45:34+08:00",
+  "generated_at": "2026-05-26T09:12:00+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -248,7 +248,14 @@
         "main_tension": "Fast hourly updates vs evidence quality.",
         "what_to_optimize": "Fresh raw evidence with explicit source quality.",
         "what_to_reject": "Unsourced trend claims or hidden generated-output truth sources."
-      }
+      },
+      "evidence": [
+        "raw-github/cuga-project_cuga-agent.md",
+        "raw-github/autox-ai-labs_autor.md",
+        "raw-github/chorus-aidlc_chorus.md",
+        "raw-github/kweaver-ai_kweaver-core.md",
+        "raw-github/suyoumo_clawprobench.md"
+      ]
     },
     {
       "id": "processed.github-classification",
@@ -292,7 +299,12 @@
         "main_tension": "Fast hourly updates vs evidence quality.",
         "what_to_optimize": "Fresh raw evidence with explicit source quality.",
         "what_to_reject": "Unsourced trend claims or hidden generated-output truth sources."
-      }
+      },
+      "evidence": [
+        "research/repo-classification.json",
+        "output/raw-github-timestamp-index.json",
+        "analysis/github-project-data-analysis.json"
+      ]
     },
     {
       "id": "work.learning-notes",
@@ -742,7 +754,15 @@
         "main_tension": "Fast hourly updates vs evidence quality.",
         "what_to_optimize": "Fresh raw evidence with explicit source quality.",
         "what_to_reject": "Unsourced trend claims or hidden generated-output truth sources."
-      }
+      },
+      "evidence": [
+        "site/src/data/projects.ts",
+        "site/public/reports/projects/237-cuga-agent-enterprise-agent-harness.md",
+        "site/public/reports/projects/238-autor-human-centered-research-harness.md",
+        "site/public/reports/projects/239-chorus-ai-human-collaboration-harness.md",
+        "site/public/reports/projects/240-kweaver-core-enterprise-decision-agent-harness.md",
+        "site/public/reports/projects/241-clawprobench-live-openclaw-benchmark.md"
+      ]
     },
     {
       "id": "results.public-visualizations",
@@ -789,6 +809,48 @@
         "what_to_optimize": "Fresh raw evidence with explicit source quality.",
         "what_to_reject": "Unsourced trend claims or hidden generated-output truth sources."
       }
+    },
+    {
+      "id": "ops.workspace-taxonomy",
+      "title": "Workspace taxonomy and root cleanup",
+      "layer": "ops",
+      "status": "updated",
+      "paths": [
+        "docs/project-management/workspace-taxonomy.md",
+        "docs/project-management/noncanonical-cleanup-policy.md",
+        "docs/indexes/root-document-map.md",
+        "docs/indexes/noncanonical-index.md"
+      ],
+      "intent": {
+        "one_sentence": "Keep root as an entry surface while canonical evidence lives in raw, processed, work, results, and ops layers.",
+        "failure_if_absent": "Agents and humans see 60+ mixed root items and cannot distinguish raw evidence from processed conclusions or generated results."
+      },
+      "value": {
+        "principles": [
+          "scanability",
+          "layered evidence",
+          "non-destructive migration"
+        ],
+        "non_goals": [
+          "delete historical evidence",
+          "break script or paper references"
+        ],
+        "success_meaning": "A future agent can infer where to place new material without asking and can validate references after moves."
+      },
+      "interview_evidence": [
+        "User direct request on 2026-05-26: raw goes to raw, paper goes to paper, root had 60+ items and hurt experience."
+      ],
+      "research_rank": {
+        "rank": 1,
+        "confidence": "high",
+        "sample_size": 1,
+        "next_research": "Track root item count and broken-reference checks after each cleanup iteration."
+      },
+      "taste_judgement": {
+        "main_tension": "Clean interface vs preserving traceable evidence.",
+        "what_to_optimize": "Small root surface with canonical layer directories and updated references.",
+        "what_to_reject": "Cosmetic moves that strand citations or regenerate clutter."
+      }
     }
   ],
   "edges": [
@@ -816,6 +878,11 @@
       "from": "processed.github-classification",
       "to": "results.public-visualizations",
       "type": "visualizes"
+    },
+    {
+      "from": "intent.direct-user-input",
+      "to": "ops.workspace-taxonomy",
+      "label": "governs root cleanup"
     }
   ],
   "evidence": {
@@ -964,13 +1031,13 @@
     ]
   },
   "current_run_evidence": [
-    "Web-observed repositories this run: Orchestra-Research/AI-research-SKILLs and iliaal/ai-skills.",
-    "New raw files: raw-github/orchestra-research_ai-research-skills.md and raw-github/iliaal_ai-skills.md.",
-    "New public reports: site/public/reports/projects/233-ai-research-skills-agent-research-workflow.md and site/public/reports/projects/234-ai-skills-agent-process-discipline.md.",
-    "Counts after propagation: 517 raw captures, 517 classified repositories, 107 site projects, 82 strict evolution-theme repositories, 185 broad evolution-related repositories, and 259 public project report markdown files including INDEX.md.",
-    "GitNexus evidence: status/list/query are available for awesome-evolution; query surfaced scripts/analyze_github_project_data.mjs, scripts/generate_project_indexes.mjs and scripts/enforce_raw_timestamps.py as relevant data-flow nodes. gitnexus impact by path returned target not found, so impact analysis is blocked for that exact command.",
-    "Data flow: raw capture -> repo-classification -> generated timestamp index -> GitHub analysis -> README/i18n -> site data/report -> Astro site build.",
-    "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
+    "Web-observed repos: cuga-project/cuga-agent, AutoX-AI-Labs/AutoR, Chorus-AIDLC/Chorus, kweaver-ai/kweaver-core, suyoumo/ClawProBench.",
+    "New raw files: raw-github/cuga-project_cuga-agent.md, raw-github/autox-ai-labs_autor.md, raw-github/chorus-aidlc_chorus.md, raw-github/kweaver-ai_kweaver-core.md, raw-github/suyoumo_clawprobench.md.",
+    "New public model cards and site reports: project/report ids 237-241.",
+    "Shell GitHub API freshness is blocked by DNS; local gh token is invalid.",
+    "GitNexus status/list are available but the repo index was stale at start of this iteration.",
+    "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.",
+    "Workspace cleanup: migrated root raw/social/GitHub/paper/report compatibility files into canonical raw, analysis, paper-drafts, reports, output, docs, and legacy paths; updated references and generators."
   ],
   "current_run": {
     "run_at": "2026-05-26T07:45:34+08:00",
@@ -980,6 +1047,7 @@
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
+    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration",
+    "workspace_taxonomy_status": "updated root cleanup object node and canonical layer migration paths"
   }
 }

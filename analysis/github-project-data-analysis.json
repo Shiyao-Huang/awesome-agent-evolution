@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-26T00:22:07.510Z",
+  "generated_at": "2026-05-26T01:35:04.831Z",
   "counts": {
-    "raw_captures": 519,
-    "raw_files_on_disk": 519,
-    "classified_repos": 519,
-    "analyzed_projects": 109,
-    "analyzed_in_raw_timestamp_index": 56,
-    "analyzed_in_classification": 56,
+    "raw_captures": 524,
+    "raw_files_on_disk": 525,
+    "classified_repos": 524,
+    "analyzed_projects": 114,
+    "analyzed_in_raw_timestamp_index": 61,
+    "analyzed_in_classification": 61,
     "analyzed_evolution_focused": 55,
     "analyzed_with_created_at_or_fallback": 80,
     "analyzed_with_github_api_metadata": 25,
     "analyzed_with_local_git_mirror": 77,
-    "analyzed_with_public_report": 79,
+    "analyzed_with_public_report": 84,
     "raw_core_evolution": 82,
     "raw_broad_evolution": 185,
     "raw_unknown_time_slice": 109
@@ -19,11 +19,11 @@
   "raw_category_counts": [
     {
       "key": "框架/framework",
-      "count": 144
+      "count": 147
     },
     {
       "key": "评测/evaluation",
-      "count": 104
+      "count": 105
     },
     {
       "key": "教程/tutorial",
@@ -35,7 +35,7 @@
     },
     {
       "key": "应用/application",
-      "count": 48
+      "count": 49
     },
     {
       "key": "论文代码/paper-code",
@@ -53,7 +53,7 @@
     },
     {
       "key": "evaluation",
-      "count": 93
+      "count": 94
     },
     {
       "key": "evolution",
@@ -65,7 +65,7 @@
     },
     {
       "key": "framework",
-      "count": 56
+      "count": 58
     },
     {
       "key": "education-list",
@@ -73,7 +73,7 @@
     },
     {
       "key": "research-agent",
-      "count": 31
+      "count": 32
     },
     {
       "key": "prompt-optimization",
@@ -85,7 +85,7 @@
     },
     {
       "key": "workflow-automation",
-      "count": 6
+      "count": 7
     },
     {
       "key": "safety",
@@ -167,6 +167,10 @@
     },
     {
       "key": "Go",
+      "count": 1
+    },
+    {
+      "key": "Go/Python/Knowledge Network",
       "count": 1
     },
     {
@@ -282,6 +286,10 @@
       "count": 1
     },
     {
+      "key": "Python/JavaScript/Research Harness",
+      "count": 1
+    },
+    {
       "key": "Python/JavaScript/Shell/HTML/Makefile/Astro",
       "count": 1
     },
@@ -302,6 +310,10 @@
       "count": 1
     },
     {
+      "key": "Python/OpenClaw/Benchmark",
+      "count": 1
+    },
+    {
       "key": "Python/Rust/Video index",
       "count": 1
     },
@@ -319,6 +331,10 @@
     },
     {
       "key": "Python/Skill Memory/CLI/GUI",
+      "count": 1
+    },
+    {
+      "key": "Python/TypeScript/Agent Skills/MCP",
       "count": 1
     },
     {
@@ -396,12 +412,16 @@
     {
       "key": "TypeScript/Python/Shell/Markdown",
       "count": 1
+    },
+    {
+      "key": "TypeScript/Shell/Astro",
+      "count": 1
     }
   ],
   "raw_time_slice_counts": [
     {
       "key": "2026-05",
-      "count": 358
+      "count": 363
     },
     {
       "key": "unknown",
@@ -482,16 +502,16 @@
       "count": 53
     },
     {
+      "key": "evaluation",
+      "count": 11
+    },
+    {
       "key": "evolution",
       "count": 11
     },
     {
-      "key": "evaluation",
-      "count": 10
-    },
-    {
       "key": "framework",
-      "count": 9
+      "count": 11
     },
     {
       "key": "memory",
@@ -511,17 +531,17 @@
     },
     {
       "key": "research-agent",
-      "count": 1
+      "count": 2
     },
     {
       "key": "workflow-automation",
-      "count": 1
+      "count": 2
     }
   ],
   "analyzed_created_month_counts": [
     {
       "key": "unknown",
-      "count": 29
+      "count": 34
     },
     {
       "key": "2026-05",
@@ -2593,6 +2613,21 @@
       "description": "Autohand Code CLI - Ultra fast self evolving coding agent that runs in your terminal"
     },
     {
+      "repo": "AutoX-AI-Labs/AutoR",
+      "url": "https://github.com/AutoX-AI-Labs/AutoR",
+      "stars": "897",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "应用/application",
+      "function_tag": "research-agent-pipeline",
+      "base_theme": "research-agent",
+      "stack": "Python/JavaScript/Research Harness",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 897 stars, 22 forks, 154 commits, Python primary language, no releases, and README language about a 9-stage workflow, human approval, local browser Studio, reproducible runs and rollback-stage recovery.",
+      "description": "AutoR is a terminal-first research harness where AI handles execution, humans retain direction, and every run is stored as an inspectable artifact on disk."
+    },
+    {
       "repo": "bansky-cl/graphrag-arxiv-daily-paper",
       "url": "https://github.com/bansky-cl/graphrag-arxiv-daily-paper",
       "stars": "22",
@@ -2908,6 +2943,21 @@
       "description": "Agentic Harness Engineering treats prompts, tools, middleware, skills, sub-agents, memory, and evaluator scaffolds as evolvable harness surfaces while the base model stays fixed."
     },
     {
+      "repo": "Chorus-AIDLC/Chorus",
+      "url": "https://github.com/Chorus-AIDLC/Chorus",
+      "stars": "909",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "workflow-automation",
+      "stack": "TypeScript/Shell/Astro",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 909 stars, 84 forks, 471 commits, AGPL-3.0 license, TypeScript primary language, v0.8.2 latest on 2026-05-21, and README sections for lifecycle hooks, permissions, task state, context injection and OpenSpec mode.",
+      "description": "Chorus is an AI-human collaboration harness that manages session lifecycle, task state, sub-agent orchestration, permissions, observability and failure recovery around LLM agents."
+    },
+    {
       "repo": "chriscox/agent-skills",
       "url": "https://github.com/chriscox/agent-skills",
       "stars": "10",
@@ -3176,6 +3226,21 @@
       "content_timestamp": "unknown",
       "evidence": "framework/runtime/orchestration signal",
       "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks."
+    },
+    {
+      "repo": "cuga-project/cuga-agent",
+      "url": "https://github.com/cuga-project/cuga-agent",
+      "stars": "742",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Python/TypeScript/Agent Skills/MCP",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 742 stars, 132 forks, 304 commits, Python/TypeScript stack, v0.2.28 latest release on 2026-05-10, README claims for MCP/OpenAPI/LangChain tools, policy/HITL, optional memory, knowledge and SKILL.md assets.",
+      "description": "CUGA is an enterprise generalist agent harness that wires APIs, MCP servers, policies, memory, knowledge and agent skills into configurable web/API task execution."
     },
     {
       "repo": "cxcscmu/SkillLearnBench",
@@ -5036,6 +5101,21 @@
       "content_timestamp": "2026-05-03",
       "evidence": "paper/artifact/research-code signal",
       "description": "One file. Your AI agent becomes a scientist. 30+ experiments while you sleep."
+    },
+    {
+      "repo": "kweaver-ai/kweaver-core",
+      "url": "https://github.com/kweaver-ai/kweaver-core",
+      "stars": "803",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Go/Python/Knowledge Network",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 803 stars, 92 forks, 501 commits, Apache-2.0 license, Go primary language, README claims for governed context, verifiable feedback loops, KWeaver SDK/admin CLI, BKN Lang, benchmark sections and TraceAI.",
+      "description": "KWeaver Core is a harness-first foundation for enterprise decision agents, combining governed context, knowledge networks, tool policies and TraceAI-style feedback evidence."
     },
     {
       "repo": "labicon/curricullm",
@@ -8066,6 +8146,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "[ICML-2026] Official implementation of \"SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience\""
+    },
+    {
+      "repo": "suyoumo/ClawProBench",
+      "url": "https://github.com/suyoumo/ClawProBench",
+      "stars": "690",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/OpenClaw/Benchmark",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 690 stars, 50 forks, 44 commits, Apache-2.0 license, Python primary language, and README claims for 102 active scenarios, 162 catalog scenarios, deterministic grading, core profile ranking and public leaderboard.",
+      "description": "ClawProBench is a live-first benchmark harness for evaluating LLM agents in the OpenClaw runtime with deterministic grading, profile selection and repeated-trial reliability."
     },
     {
       "repo": "swapedoc/hermes2anti",
@@ -18476,6 +18571,219 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "skill",
       "evolution_focused": false
+    },
+    {
+      "name": "CUGA Agent",
+      "repo": "cuga-project/cuga-agent",
+      "normalized_repo": "cuga-project/cuga-agent",
+      "url": "https://github.com/cuga-project/cuga-agent",
+      "category": "Enterprise Generalist Agent Harness",
+      "pattern": "enterprise agent config -> tools/MCP/OpenAPI -> policies/HITL -> optional memory/knowledge/skills -> trajectory visualization",
+      "tags": [
+        "agent harness",
+        "MCP",
+        "policy",
+        "skills",
+        "enterprise agents"
+      ],
+      "site_stars": 742,
+      "site_forks": 132,
+      "license": "Open source public repository",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/cuga-project_cuga-agent.md",
+      "local_git": null,
+      "report": "projects/237-cuga-agent-enterprise-agent-harness.md",
+      "public_report": "site/public/reports/projects/237-cuga-agent-enterprise-agent-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/cuga-project_cuga-agent.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed 742 stars, 132 forks, 304 commits, Python/TypeScript stack, v0.2.28 latest release on 2026-05-10, README claims for MCP/OpenAPI/LangChain tools, policy/HITL, optional memory, knowledge and SKILL.md assets.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "framework",
+      "evolution_focused": false
+    },
+    {
+      "name": "AutoR",
+      "repo": "AutoX-AI-Labs/AutoR",
+      "normalized_repo": "autox-ai-labs/autor",
+      "url": "https://github.com/AutoX-AI-Labs/AutoR",
+      "category": "Human-Centered Research Harness",
+      "pattern": "human research intent -> staged agent execution -> approval checkpoints -> artifact-backed run directory -> resume/redo/rollback",
+      "tags": [
+        "research agent",
+        "harness",
+        "artifact-backed runs",
+        "human approval"
+      ],
+      "site_stars": 897,
+      "site_forks": 22,
+      "license": "Public repository license not verified",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/autox-ai-labs_autor.md",
+      "local_git": null,
+      "report": "projects/238-autor-human-centered-research-harness.md",
+      "public_report": "site/public/reports/projects/238-autor-human-centered-research-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/autox-ai-labs_autor.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "应用/application",
+      "classification_function_tag": "research-agent-pipeline",
+      "classification_evidence": "web-observed GitHub page showed 897 stars, 22 forks, 154 commits, Python primary language, no releases, and README language about a 9-stage workflow, human approval, local browser Studio, reproducible runs and rollback-stage recovery.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "research-agent",
+      "evolution_focused": false
+    },
+    {
+      "name": "Chorus",
+      "repo": "Chorus-AIDLC/Chorus",
+      "normalized_repo": "chorus-aidlc/chorus",
+      "url": "https://github.com/Chorus-AIDLC/Chorus",
+      "category": "AI-Human Collaboration Harness",
+      "pattern": "requirements/task state -> sub-agent orchestration -> permissions/context injection -> observability/failure recovery -> OpenSpec archival",
+      "tags": [
+        "agent harness",
+        "multi-agent",
+        "AI-DLC",
+        "permissions",
+        "observability"
+      ],
+      "site_stars": 909,
+      "site_forks": 84,
+      "license": "AGPL-3.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/chorus-aidlc_chorus.md",
+      "local_git": null,
+      "report": "projects/239-chorus-ai-human-collaboration-harness.md",
+      "public_report": "site/public/reports/projects/239-chorus-ai-human-collaboration-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/chorus-aidlc_chorus.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed 909 stars, 84 forks, 471 commits, AGPL-3.0 license, TypeScript primary language, v0.8.2 latest on 2026-05-21, and README sections for lifecycle hooks, permissions, task state, context injection and OpenSpec mode.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "workflow-automation",
+      "evolution_focused": false
+    },
+    {
+      "name": "KWeaver Core",
+      "repo": "kweaver-ai/kweaver-core",
+      "normalized_repo": "kweaver-ai/kweaver-core",
+      "url": "https://github.com/kweaver-ai/kweaver-core",
+      "category": "Enterprise Decision Agent Harness",
+      "pattern": "business knowledge network -> governed context loader -> tool curation/path guidance -> decision agent execution -> TraceAI feedback evidence",
+      "tags": [
+        "decision agents",
+        "harness",
+        "knowledge network",
+        "TraceAI",
+        "governance"
+      ],
+      "site_stars": 803,
+      "site_forks": 92,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/kweaver-ai_kweaver-core.md",
+      "local_git": null,
+      "report": "projects/240-kweaver-core-enterprise-decision-agent-harness.md",
+      "public_report": "site/public/reports/projects/240-kweaver-core-enterprise-decision-agent-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/kweaver-ai_kweaver-core.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed 803 stars, 92 forks, 501 commits, Apache-2.0 license, Go primary language, README claims for governed context, verifiable feedback loops, KWeaver SDK/admin CLI, BKN Lang, benchmark sections and TraceAI.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "framework",
+      "evolution_focused": false
+    },
+    {
+      "name": "ClawProBench",
+      "repo": "suyoumo/ClawProBench",
+      "normalized_repo": "suyoumo/clawprobench",
+      "url": "https://github.com/suyoumo/ClawProBench",
+      "category": "Live OpenClaw Benchmark Harness",
+      "pattern": "OpenClaw runtime task -> live scenario execution -> deterministic grading -> structured report -> leaderboard/profile selection",
+      "tags": [
+        "benchmark",
+        "OpenClaw",
+        "agent evaluation",
+        "deterministic grading"
+      ],
+      "site_stars": 690,
+      "site_forks": 50,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/suyoumo_clawprobench.md",
+      "local_git": null,
+      "report": "projects/241-clawprobench-live-openclaw-benchmark.md",
+      "public_report": "site/public/reports/projects/241-clawprobench-live-openclaw-benchmark.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/suyoumo_clawprobench.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 690 stars, 50 forks, 44 commits, Apache-2.0 license, Python primary language, and README claims for 102 active scenarios, 162 catalog scenarios, deterministic grading, core profile ranking and public leaderboard.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
     }
   ],
   "analyzed_git_evidence": [
@@ -21253,6 +21561,49 @@
       "evolution_focused": true
     },
     {
+      "name": "Chorus",
+      "repo": "Chorus-AIDLC/Chorus",
+      "normalized_repo": "chorus-aidlc/chorus",
+      "url": "https://github.com/Chorus-AIDLC/Chorus",
+      "category": "AI-Human Collaboration Harness",
+      "pattern": "requirements/task state -> sub-agent orchestration -> permissions/context injection -> observability/failure recovery -> OpenSpec archival",
+      "tags": [
+        "agent harness",
+        "multi-agent",
+        "AI-DLC",
+        "permissions",
+        "observability"
+      ],
+      "site_stars": 909,
+      "site_forks": 84,
+      "license": "AGPL-3.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/chorus-aidlc_chorus.md",
+      "local_git": null,
+      "report": "projects/239-chorus-ai-human-collaboration-harness.md",
+      "public_report": "site/public/reports/projects/239-chorus-ai-human-collaboration-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/chorus-aidlc_chorus.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed 909 stars, 84 forks, 471 commits, AGPL-3.0 license, TypeScript primary language, v0.8.2 latest on 2026-05-21, and README sections for lifecycle hooks, permissions, task state, context injection and OpenSpec mode.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "workflow-automation",
+      "evolution_focused": false
+    },
+    {
       "name": "Waza",
       "repo": "microsoft/waza",
       "normalized_repo": "microsoft/waza",
@@ -21292,6 +21643,48 @@
       "classification_evidence": "web-observed GitHub page showed 709 commits, MIT license, Go CLI, 904 stars, 49 forks, and README language for creating, testing, measuring and improving AI agent skill quality with eval.yaml suites, graders, multi-model comparison, coverage grids and CI comments; shell GitHub API freshness was blocked.",
       "raw_time_slice": "2026-05",
       "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
+      "name": "AutoR",
+      "repo": "AutoX-AI-Labs/AutoR",
+      "normalized_repo": "autox-ai-labs/autor",
+      "url": "https://github.com/AutoX-AI-Labs/AutoR",
+      "category": "Human-Centered Research Harness",
+      "pattern": "human research intent -> staged agent execution -> approval checkpoints -> artifact-backed run directory -> resume/redo/rollback",
+      "tags": [
+        "research agent",
+        "harness",
+        "artifact-backed runs",
+        "human approval"
+      ],
+      "site_stars": 897,
+      "site_forks": 22,
+      "license": "Public repository license not verified",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/autox-ai-labs_autor.md",
+      "local_git": null,
+      "report": "projects/238-autor-human-centered-research-harness.md",
+      "public_report": "site/public/reports/projects/238-autor-human-centered-research-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/autox-ai-labs_autor.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "应用/application",
+      "classification_function_tag": "research-agent-pipeline",
+      "classification_evidence": "web-observed GitHub page showed 897 stars, 22 forks, 154 commits, Python primary language, no releases, and README language about a 9-stage workflow, human approval, local browser Studio, reproducible runs and rollback-stage recovery.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "research-agent",
       "evolution_focused": false
     },
     {
@@ -21338,6 +21731,49 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "prompt-optimization",
       "evolution_focused": true
+    },
+    {
+      "name": "KWeaver Core",
+      "repo": "kweaver-ai/kweaver-core",
+      "normalized_repo": "kweaver-ai/kweaver-core",
+      "url": "https://github.com/kweaver-ai/kweaver-core",
+      "category": "Enterprise Decision Agent Harness",
+      "pattern": "business knowledge network -> governed context loader -> tool curation/path guidance -> decision agent execution -> TraceAI feedback evidence",
+      "tags": [
+        "decision agents",
+        "harness",
+        "knowledge network",
+        "TraceAI",
+        "governance"
+      ],
+      "site_stars": 803,
+      "site_forks": 92,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/kweaver-ai_kweaver-core.md",
+      "local_git": null,
+      "report": "projects/240-kweaver-core-enterprise-decision-agent-harness.md",
+      "public_report": "site/public/reports/projects/240-kweaver-core-enterprise-decision-agent-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/kweaver-ai_kweaver-core.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed 803 stars, 92 forks, 501 commits, Apache-2.0 license, Go primary language, README claims for governed context, verifiable feedback loops, KWeaver SDK/admin CLI, BKN Lang, benchmark sections and TraceAI.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "framework",
+      "evolution_focused": false
     },
     {
       "name": "pyribs",
@@ -21479,6 +21915,49 @@
       "evolution_focused": true
     },
     {
+      "name": "CUGA Agent",
+      "repo": "cuga-project/cuga-agent",
+      "normalized_repo": "cuga-project/cuga-agent",
+      "url": "https://github.com/cuga-project/cuga-agent",
+      "category": "Enterprise Generalist Agent Harness",
+      "pattern": "enterprise agent config -> tools/MCP/OpenAPI -> policies/HITL -> optional memory/knowledge/skills -> trajectory visualization",
+      "tags": [
+        "agent harness",
+        "MCP",
+        "policy",
+        "skills",
+        "enterprise agents"
+      ],
+      "site_stars": 742,
+      "site_forks": 132,
+      "license": "Open source public repository",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/cuga-project_cuga-agent.md",
+      "local_git": null,
+      "report": "projects/237-cuga-agent-enterprise-agent-harness.md",
+      "public_report": "site/public/reports/projects/237-cuga-agent-enterprise-agent-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/cuga-project_cuga-agent.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed 742 stars, 132 forks, 304 commits, Python/TypeScript stack, v0.2.28 latest release on 2026-05-10, README claims for MCP/OpenAPI/LangChain tools, policy/HITL, optional memory, knowledge and SKILL.md assets.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "framework",
+      "evolution_focused": false
+    },
+    {
       "name": "OpenELM",
       "repo": "carperai/openelm",
       "normalized_repo": "carperai/openelm",
@@ -21524,6 +22003,48 @@
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
       "evolution_focused": true
+    },
+    {
+      "name": "ClawProBench",
+      "repo": "suyoumo/ClawProBench",
+      "normalized_repo": "suyoumo/clawprobench",
+      "url": "https://github.com/suyoumo/ClawProBench",
+      "category": "Live OpenClaw Benchmark Harness",
+      "pattern": "OpenClaw runtime task -> live scenario execution -> deterministic grading -> structured report -> leaderboard/profile selection",
+      "tags": [
+        "benchmark",
+        "OpenClaw",
+        "agent evaluation",
+        "deterministic grading"
+      ],
+      "site_stars": 690,
+      "site_forks": 50,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/suyoumo_clawprobench.md",
+      "local_git": null,
+      "report": "projects/241-clawprobench-live-openclaw-benchmark.md",
+      "public_report": "site/public/reports/projects/241-clawprobench-live-openclaw-benchmark.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/suyoumo_clawprobench.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 690 stars, 50 forks, 44 commits, Apache-2.0 license, Python primary language, and README claims for 102 active scenarios, 162 catalog scenarios, deterministic grading, core profile ranking and public leaderboard.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
     },
     {
       "name": "Memoir",
@@ -27147,6 +27668,91 @@
       "evolution_focused": false
     },
     {
+      "name": "AutoR",
+      "repo": "AutoX-AI-Labs/AutoR",
+      "normalized_repo": "autox-ai-labs/autor",
+      "url": "https://github.com/AutoX-AI-Labs/AutoR",
+      "category": "Human-Centered Research Harness",
+      "pattern": "human research intent -> staged agent execution -> approval checkpoints -> artifact-backed run directory -> resume/redo/rollback",
+      "tags": [
+        "research agent",
+        "harness",
+        "artifact-backed runs",
+        "human approval"
+      ],
+      "site_stars": 897,
+      "site_forks": 22,
+      "license": "Public repository license not verified",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/autox-ai-labs_autor.md",
+      "local_git": null,
+      "report": "projects/238-autor-human-centered-research-harness.md",
+      "public_report": "site/public/reports/projects/238-autor-human-centered-research-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/autox-ai-labs_autor.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "应用/application",
+      "classification_function_tag": "research-agent-pipeline",
+      "classification_evidence": "web-observed GitHub page showed 897 stars, 22 forks, 154 commits, Python primary language, no releases, and README language about a 9-stage workflow, human approval, local browser Studio, reproducible runs and rollback-stage recovery.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "research-agent",
+      "evolution_focused": false
+    },
+    {
+      "name": "Chorus",
+      "repo": "Chorus-AIDLC/Chorus",
+      "normalized_repo": "chorus-aidlc/chorus",
+      "url": "https://github.com/Chorus-AIDLC/Chorus",
+      "category": "AI-Human Collaboration Harness",
+      "pattern": "requirements/task state -> sub-agent orchestration -> permissions/context injection -> observability/failure recovery -> OpenSpec archival",
+      "tags": [
+        "agent harness",
+        "multi-agent",
+        "AI-DLC",
+        "permissions",
+        "observability"
+      ],
+      "site_stars": 909,
+      "site_forks": 84,
+      "license": "AGPL-3.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/chorus-aidlc_chorus.md",
+      "local_git": null,
+      "report": "projects/239-chorus-ai-human-collaboration-harness.md",
+      "public_report": "site/public/reports/projects/239-chorus-ai-human-collaboration-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/chorus-aidlc_chorus.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed 909 stars, 84 forks, 471 commits, AGPL-3.0 license, TypeScript primary language, v0.8.2 latest on 2026-05-21, and README sections for lifecycle hooks, permissions, task state, context injection and OpenSpec mode.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "workflow-automation",
+      "evolution_focused": false
+    },
+    {
       "name": "Awesome-Code-LLM",
       "repo": "CodeFuse-ML/awesome-code-llm",
       "normalized_repo": "codefuse-ml/awesome-code-llm",
@@ -27182,6 +27788,49 @@
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
       "evolution_focused": true
+    },
+    {
+      "name": "CUGA Agent",
+      "repo": "cuga-project/cuga-agent",
+      "normalized_repo": "cuga-project/cuga-agent",
+      "url": "https://github.com/cuga-project/cuga-agent",
+      "category": "Enterprise Generalist Agent Harness",
+      "pattern": "enterprise agent config -> tools/MCP/OpenAPI -> policies/HITL -> optional memory/knowledge/skills -> trajectory visualization",
+      "tags": [
+        "agent harness",
+        "MCP",
+        "policy",
+        "skills",
+        "enterprise agents"
+      ],
+      "site_stars": 742,
+      "site_forks": 132,
+      "license": "Open source public repository",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/cuga-project_cuga-agent.md",
+      "local_git": null,
+      "report": "projects/237-cuga-agent-enterprise-agent-harness.md",
+      "public_report": "site/public/reports/projects/237-cuga-agent-enterprise-agent-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/cuga-project_cuga-agent.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed 742 stars, 132 forks, 304 commits, Python/TypeScript stack, v0.2.28 latest release on 2026-05-10, README claims for MCP/OpenAPI/LangChain tools, policy/HITL, optional memory, knowledge and SKILL.md assets.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "framework",
+      "evolution_focused": false
     },
     {
       "name": "Awesome Agent Memory by cxxz",
@@ -27475,6 +28124,49 @@
       "classification_evidence": "web-observed GitHub page showed 15 commits, 3 stars, 0 forks, Python language, continuity benchmark topics, 250 narrative stories, 1,835 verification questions, 10 checkpoints, no LLM in the evaluation loop, arXiv links and Hugging Face corpus link.",
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
+      "name": "KWeaver Core",
+      "repo": "kweaver-ai/kweaver-core",
+      "normalized_repo": "kweaver-ai/kweaver-core",
+      "url": "https://github.com/kweaver-ai/kweaver-core",
+      "category": "Enterprise Decision Agent Harness",
+      "pattern": "business knowledge network -> governed context loader -> tool curation/path guidance -> decision agent execution -> TraceAI feedback evidence",
+      "tags": [
+        "decision agents",
+        "harness",
+        "knowledge network",
+        "TraceAI",
+        "governance"
+      ],
+      "site_stars": 803,
+      "site_forks": 92,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/kweaver-ai_kweaver-core.md",
+      "local_git": null,
+      "report": "projects/240-kweaver-core-enterprise-decision-agent-harness.md",
+      "public_report": "site/public/reports/projects/240-kweaver-core-enterprise-decision-agent-harness.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/kweaver-ai_kweaver-core.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "web-observed GitHub page showed 803 stars, 92 forks, 501 commits, Apache-2.0 license, Go primary language, README claims for governed context, verifiable feedback loops, KWeaver SDK/admin CLI, BKN Lang, benchmark sections and TraceAI.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "framework",
       "evolution_focused": false
     },
     {
@@ -28021,6 +28713,48 @@
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
       "classification_evidence": "web-observed GitHub page showed 10 stars, 1 fork, 12 commits, Apache-2.0 license, TypeScript/Python/Shell stack, support for SWE, TB2, Tau and SAE benchmarks, built-in harnesses for kode-agent-sdk, codex, claude-code and gemini-cli, generated custom adapters, and standardized run/trace artifacts; shell GitHub API freshness was blocked.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
+      "name": "ClawProBench",
+      "repo": "suyoumo/ClawProBench",
+      "normalized_repo": "suyoumo/clawprobench",
+      "url": "https://github.com/suyoumo/ClawProBench",
+      "category": "Live OpenClaw Benchmark Harness",
+      "pattern": "OpenClaw runtime task -> live scenario execution -> deterministic grading -> structured report -> leaderboard/profile selection",
+      "tags": [
+        "benchmark",
+        "OpenClaw",
+        "agent evaluation",
+        "deterministic grading"
+      ],
+      "site_stars": 690,
+      "site_forks": 50,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/suyoumo_clawprobench.md",
+      "local_git": null,
+      "report": "projects/241-clawprobench-live-openclaw-benchmark.md",
+      "public_report": "site/public/reports/projects/241-clawprobench-live-openclaw-benchmark.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/suyoumo_clawprobench.md",
+      "raw_collected_at": "2026-05-26T09:12:00+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 690 stars, 50 forks, 44 commits, Apache-2.0 license, Python primary language, and README claims for 102 active scenarios, 162 catalog scenarios, deterministic grading, core profile ranking and public leaderboard.",
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
       "evolution_focused": false

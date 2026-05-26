@@ -185,7 +185,7 @@ Astro-based static site. Built 2026-05-25. 207 project pages, blog index, resear
 
 **1 file only** (`star-analysis-report.md`, 7.7 KB). With 220 project cards and substantial analysis, this directory should contain:
 - Aggregate project reports
-- Cross-validation reports (currently at repo root: `cross-validation-report.md`)
+- Cross-validation reports (currently at repo root: `reports/cross-validation-report.md`)
 - Published analysis summaries
 
 Most report-like content lives scattered across `analysis/`, `output/`, and root-level files.
@@ -251,7 +251,7 @@ graph LR
 ### Immediate (Builder can fix)
 
 1. **Fix raw-blogs timestamps**: Run `enforce_raw_timestamps.py` or build a blog-specific timestamp resolver using URL metadata.
-2. **Populate reports/**: Move `cross-validation-report.md` from root, generate aggregate reports from analysis data.
+2. **Populate reports/**: Move `reports/cross-validation-report.md` from root, generate aggregate reports from analysis data.
 3. **Compile survey bibliography**: Run bibtex on `survey/latex/main.tex`.
 4. **Clean binary files**: Remove null bytes from 2 raw-github files.
 

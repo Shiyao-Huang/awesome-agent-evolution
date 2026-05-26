@@ -79,3 +79,11 @@ Based on these findings, the most valuable resources for users would be:
 3. **Safety/governance patterns** for self-modifying agents
 4. **Memory architectures** that don't bloat context
 5. **Practical self-improvement** patterns that work without human-in-the-loop verification
+## gBrain Temporal Metadata
+
+- content_timestamp: 2026-05-21
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: 2026-05
+- timestamp_confidence: derived
+- timestamp_source: extracted from markdown content/metadata
+

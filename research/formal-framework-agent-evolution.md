@@ -12,7 +12,7 @@ evidence_sources:
   - survey/ch7-painpoints-cn.md
   - survey/figures/method-taxonomy-mermaid.md
   - research/papers/ (11 deep reviews)
-  - mom-test-findings-ZH.md (97 pain points)
+  - raw-social/mom-test/mom-test-findings-ZH.md (97 pain points)
   - README.md method taxonomy
 ---
 
@@ -20,7 +20,7 @@ evidence_sources:
 
 > **一句话**：从 196 篇分类论文、97 个用户痛点和 11 篇深度 review 中提取共性，构建统一的形式化框架，让读者判断哪种进化方法适合什么场景。
 
-> **证据层级**：本文件所有断言均引用自 `survey/` 章节、`research/papers/` review 和 `mom-test-findings-ZH.md`。推断与已知事实已区分标注。
+> **证据层级**：本文件所有断言均引用自 `survey/` 章节、`research/papers/` review 和 `raw-social/mom-test/mom-test-findings-ZH.md`。推断与已知事实已区分标注。
 
 ---
 
@@ -217,7 +217,7 @@ Agent Evolution 没有统一的收敛定义。以下五个层次构成收敛的�
 
 ## 3. 痛点分类学
 
-基于 `mom-test-findings-ZH.md` 的 97 个独立痛点和 `survey/ch7-painpoints-cn.md` 的系统分析，构建三级分类树。
+基于 `raw-social/mom-test/mom-test-findings-ZH.md` 的 97 个独立痛点和 `survey/ch7-painpoints-cn.md` 的系统分析，构建三级分类树。
 
 ### 3.1 痛点分类树
 
@@ -568,4 +568,4 @@ graph TD
 - research/papers/11-selfevolve.md — SelfEvolve review
 - research/papers/12-reveal.md — ReVeal review
 - research/papers/13-ai-scientist.md — AI Scientist review
-- mom-test-findings-ZH.md — 97 个 Mom Test 痛点
+- raw-social/mom-test/mom-test-findings-ZH.md — 97 个 Mom Test 痛点

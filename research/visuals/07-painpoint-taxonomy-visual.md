@@ -1,7 +1,7 @@
 # 痛点分类学可视化
 
 - generated_at: 2026-05-25
-- source: research/formal-framework-agent-evolution.md §3 + mom-test-findings-ZH.md
+- source: research/formal-framework-agent-evolution.md §3 + raw-social/mom-test/mom-test-findings-ZH.md
 - purpose: 97 个痛点在 7 大族中的分布 + 方法缓解映射
 
 ```mermaid

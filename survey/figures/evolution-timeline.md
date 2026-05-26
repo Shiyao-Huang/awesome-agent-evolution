@@ -1,6 +1,6 @@
 # 领域发展时间线（论文 + Repo 活跃快照）
 
-- generated_at: 2026-05-25T15:25:19+08:00
+- generated_at: 2026-05-26T09:34:56+08:00
 - paper time source: raw-papers temporal metadata
 - repo time source: repo techstack cross-analysis `time_slice`
 
@@ -50,7 +50,7 @@ timeline
 
 | Time slice | Repo count |
 |---|---:|
-| 2026-05 | 195 |
+| 2026-05 | 199 |
 | unknown | 109 |
 | 2026-04 | 9 |
 | 2024-Q2 | 7 |
@@ -58,11 +58,11 @@ timeline
 | 2024-Q3 | 4 |
 | 2025-11 | 4 |
 | 2026-01 | 3 |
+| 2026-02 | 3 |
 | early | 3 |
 | 2025-05 | 3 |
 | 2025-12 | 2 |
 | 2025-02 | 2 |
-| 2026-02 | 2 |
 | 2024-Q4 | 2 |
 | 2024-Q1 | 2 |
 | 2025-09 | 2 |

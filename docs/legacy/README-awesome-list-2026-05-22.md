@@ -1152,7 +1152,7 @@ LLM 自我改进作者关系网络：[papers/llm-self-improvement/06-author-netw
 | 研究页面（MDX） | 14 | site/src/content/research/ |
 | 数据层（TS） | 4 | site/src/data/ |
 
-全产出索引：[CONTENT_INDEX.md](CONTENT_INDEX.md) | 交付摘要：[DELIVERY_SUMMARY.md](DELIVERY_SUMMARY.md)
+全产出索引：[CONTENT_INDEX.md](CONTENT_INDEX.md) | 交付摘要：[docs/legacy/DELIVERY_SUMMARY.md](docs/legacy/DELIVERY_SUMMARY.md)
 
 ---
 

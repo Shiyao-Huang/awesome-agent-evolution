@@ -28,7 +28,7 @@
 | 社交媒体数据 | ~1,200 + ~450 | raw-social/, raw-social-rank/ | ✅ 完成 |
 | 社交媒体资源汇总 | 2 份（中英文） | awesome-social-media-resources*.md | ✅ 完成 |
 | Agent 进化仓库列表 | 2 份（中英文） | github-agent-evolution-repos*.md | ✅ 完成 |
-| Mom Test 调研发现 | 8 份（多平台中英文） | mom-test-findings*.md | ✅ 完成 |
+| Mom Test 调研发现 | 8 份（多平台中英文） | raw-social/mom-test/mom-test-findings*.md | ✅ 完成 |
 
 ### 2. 论文评审与精读
 
@@ -108,7 +108,7 @@
 |------|------|------|
 | README.md | 项目主文档（awesome-list + 深度分析索引） | ✅ 完成 |
 | CONTENT_INDEX.md | 全产出内容索引（9 类） | ✅ 完成 |
-| DELIVERY_SUMMARY.md | 本文件 — 交付摘要 | ✅ 完成 |
+| docs/legacy/DELIVERY_SUMMARY.md | 本文件 — 交付摘要 | ✅ 完成 |
 | projects/INDEX.md | 项目分析报告索引 | ✅ 完成 |
 | papers/README.md | 论文目录说明 + 格式模板 | ✅ 完成 |
 
@@ -138,7 +138,7 @@
 awesome-agent-evolution/
 ├── README.md                          # 主文档（awesome-list + 索引）
 ├── CONTENT_INDEX.md                   # 全产出索引
-├── DELIVERY_SUMMARY.md                # 交付摘要（本文件）
+├── docs/legacy/DELIVERY_SUMMARY.md                # 交付摘要（本文件）
 ├── projects/                          # 项目分析报告（10 个）
 │   ├── INDEX.md
 │   ├── projects_manifest.json

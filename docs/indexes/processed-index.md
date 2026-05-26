@@ -10,9 +10,9 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `analysis` | present | 20 | 1 | 0 | 1.6 MB |
+| `analysis` | present | 24 | 1 | 0 | 2.0 MB |
 | `research` | present | 132 | 8 | 0 | 2.3 MB |
-| `projects` | present | 25539 | 2881 | 0 | 2.9 GB |
+| `projects` | present | 25544 | 2881 | 0 | 2.9 GB |
 | `paper-reviews` | present | 137 | 1 | 0 | 1.3 MB |
 | `academic-reviews` | present | 34 | 1 | 0 | 287 KB |
 | `papers` | present | 12 | 4 | 0 | 55 KB |
@@ -27,12 +27,12 @@
 - `analysis/discovery-report-2026-05-25.md`
 - `analysis/framework-painpoint-crosswalk.csv`
 - `analysis/framework-painpoint-crosswalk.md`
+- `analysis/github-agent-evolution-repos-ZH.md`
+- `analysis/github-agent-evolution-repos.md`
 - `analysis/github-analysis.tex`
 - `analysis/github-created-at-cache.json`
 - `analysis/github-project-data-analysis.json`
 - `analysis/github-project-data-analysis.md`
-- `analysis/github-project-data-analysis.tex`
-- `analysis/paper-review-coverage-51-88-latest.md`
 
 ### `research`
 

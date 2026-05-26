@@ -203,13 +203,13 @@
 | raw-blogs/ | 博客原始数据 | ~1,300 |
 | raw-social/ | 社交媒体数据 | ~1,200 |
 | raw-social-rank/ | 社交媒体排名 | ~450 |
-| raw-github-index.md | GitHub 数据索引 | — |
-| awesome-social-media-resources.md | 社交媒体资源汇总（英文） | — |
-| awesome-social-media-resources-ZH.md | 社交媒体资源汇总（中文） | — |
-| github-agent-evolution-repos.md | Agent 进化仓库列表（英文） | — |
-| github-agent-evolution-repos-ZH.md | Agent 进化仓库列表（中文） | — |
-| mom-test-findings*.md | Mom Test 调研发现（多平台） | 8 份 |
-| cross-validation-report.md | 交叉验证报告 | — |
+| raw-github/INDEX.md | GitHub 数据索引 | — |
+| analysis/social-media-resources.md | 社交媒体资源汇总（英文） | — |
+| analysis/social-media-resources-ZH.md | 社交媒体资源汇总（中文） | — |
+| analysis/github-agent-evolution-repos.md | Agent 进化仓库列表（英文） | — |
+| analysis/github-agent-evolution-repos-ZH.md | Agent 进化仓库列表（中文） | — |
+| raw-social/mom-test/mom-test-findings*.md | Mom Test 调研发现（多平台） | 8 份 |
+| reports/cross-validation-report.md | 交叉验证报告 | — |
 
 ---
 

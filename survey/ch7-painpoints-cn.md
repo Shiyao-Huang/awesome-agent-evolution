@@ -6,7 +6,7 @@ time_slice: 2026-05
 chapter: 7
 language: zh-CN
 source_corpus:
-  mom_test_findings: mom-test-findings*.md
+  mom_test_findings: raw-social/mom-test/mom-test-findings*.md
   raw_social: raw-social/ plus raw-social-rank/ platform snapshots; raw-blogs/653 JSON+653 MD artifacts
   paper_reviews: paper-reviews/25 deep review files
 output_type: survey_chapter
@@ -16,7 +16,7 @@ notes: "本章综合Mom Test 97个痛点、社区讨论、1306个raw-blogs本地
 # 第7章：用户痛点与实践挑战
 
 > 撰写时间戳：2026-05-21T19:18:00+08:00  
-> 主要依据：`mom-test-findings-ZH.md` 提取的 97 个独立痛点，`raw-social/` 中 647 个 markdown 社区/博客/平台记录，及 `paper-reviews/` 中 25 篇自进化 Agent 论文深度 review。代表性来源包括 Reddit、Hacker News、X/Twitter、GitHub、知乎、CSDN、Linux.do，以及 STaR、Reflexion、Voyager、ExpeL、Self-Rewarding LM、Meta-Rewarding、ADAS、Godel Agent、EvoMAC、Agent-R、SICA、RAGEN、WebEvolver、DGM、AlphaEvolve、ACE、Memory-R1、AriadneMem 等论文 review。
+> 主要依据：`raw-social/mom-test/mom-test-findings-ZH.md` 提取的 97 个独立痛点，`raw-social/` 中 647 个 markdown 社区/博客/平台记录，及 `paper-reviews/` 中 25 篇自进化 Agent 论文深度 review。代表性来源包括 Reddit、Hacker News、X/Twitter、GitHub、知乎、CSDN、Linux.do，以及 STaR、Reflexion、Voyager、ExpeL、Self-Rewarding LM、Meta-Rewarding、ADAS、Godel Agent、EvoMAC、Agent-R、SICA、RAGEN、WebEvolver、DGM、AlphaEvolve、ACE、Memory-R1、AriadneMem 等论文 review。
 
 ## 7.0 本章概述
 
@@ -264,7 +264,7 @@ Master最新修正要求“不限字数，数据覆盖最重要”。因此本�
 
 ## 参考文献与本地来源
 
-- [MomTest-2026] `mom-test-findings-ZH.md`; `mom-test-findings-reddit-ZH.md`; `mom-test-findings-hn-ZH.md`; `mom-test-findings-x-ZH.md`. Mom Test 调研发现，2026-05-20/21。
+- [MomTest-2026] `raw-social/mom-test/mom-test-findings-ZH.md`; `raw-social/mom-test/mom-test-findings-reddit-ZH.md`; `raw-social/mom-test/mom-test-findings-hn-ZH.md`; `raw-social/mom-test/mom-test-findings-x-ZH.md`. Mom Test 调研发现，2026-05-20/21。
 - [RawSocial-2026] `raw-social/raw-social-index.json`; `raw-social/*.md`. 本地采集社区、博客、GitHub、HN、X/Twitter、中文平台语料，2026-05。
 - [STaR-Review] `paper-reviews/review-2203.14465-star.md`.
 - [Reflexion-Review] `paper-reviews/review-2303.11366-reflexion.md`.
@@ -294,7 +294,7 @@ Master最新修正要求“不限字数，数据覆盖最重要”。因此本�
 
 ## 7.8 参考材料与引文索引
 
-- Mom Test 总结：`mom-test-findings-ZH.md`、`mom-test-findings.md`（131 篇帖子，97 个痛点，15 类问题）。
-- 平台分项：`mom-test-findings-hn-ZH.md`、`mom-test-findings-reddit-ZH.md`、`mom-test-findings-x-ZH.md`。
+- Mom Test 总结：`raw-social/mom-test/mom-test-findings-ZH.md`、`raw-social/mom-test/mom-test-findings.md`（131 篇帖子，97 个痛点，15 类问题）。
+- 平台分项：`raw-social/mom-test/mom-test-findings-hn-ZH.md`、`raw-social/mom-test/mom-test-findings-reddit-ZH.md`、`raw-social/mom-test/mom-test-findings-x-ZH.md`。
 - 社区讨论样例：`raw-social/0330-Hacker-News-What-makes-an-AI-agent-framework-production-ready-vs-a-toy.json`、`raw-social/0138-segmentfault-com-AI.json`。
 - 论文局限性 review：`paper-reviews/review-2303.11366-reflexion.md`、`paper-reviews/review-2501.11425-agent-r.md`、`paper-reviews/review-2408.08435-adas.md`、`paper-reviews/review-2505.22954-darwin-godel-machine.md`、`paper-reviews/review-2505.03335-absolute-zero.md`、`paper-reviews/review-2506.13131-alphaevolve.md`、`paper-reviews/review-2401.10020-self-rewarding.md`、`paper-reviews/review-2407.19594-meta-rewarding.md`、`paper-reviews/review-2504.21024-webevolver.md`。

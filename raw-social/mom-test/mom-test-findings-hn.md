@@ -525,3 +525,11 @@ Analysis of 46 HN posts (Mar 2023–May 2026) on agent evolution, self-evolving 
 ---
 
 *Generated via Mom Test analysis of 46 HN posts, 2023-2026. Focus: concrete practitioner complaints, not theoretical opinions.*
+## gBrain Temporal Metadata
+
+- content_timestamp: 2023
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: 2023-Q1
+- timestamp_confidence: derived
+- timestamp_source: extracted from markdown content/metadata
+
