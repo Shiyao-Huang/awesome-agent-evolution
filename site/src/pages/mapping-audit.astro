@@ -1,9 +1,10 @@
 ---
-title: "EN→CN Mapping Fidelity Audit — Self Evolve"
-description: "QA 审计报告：英文论文（paper-drafts/）与中文 Survey（survey/latex/）8 章节映射忠实度全量审计。"
----
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-export const chapters = [
+const pageTitle = 'EN→CN Mapping Fidelity Audit — Self Evolve';
+const pageDescription = 'QA 审计报告：英文论文（paper-drafts/）与中文 Survey（survey/latex/）8 章节映射忠实度全量审计。';
+
+const chapters = [
   {
     id: 'ch1',
     enTitle: 'Introduction',
@@ -15,7 +16,7 @@ export const chapters = [
     ratio: 49,
     verdict: 'under-mapped',
     verdictLabel: '映射不足',
-    color: 'var(--warning, #e67e22)',
+    color: '#e67e22',
     structureMatch: 'partial',
     issues: [
       'CN 缺少 13 个 subsubsection 和 1 个 subsection',
@@ -34,7 +35,7 @@ export const chapters = [
     ratio: 85,
     verdict: 'partial',
     verdictLabel: '部分偏离',
-    color: 'var(--warning, #e67e22)',
+    color: '#e67e22',
     structureMatch: 'partial',
     issues: [
       'EN 15 个 section/subsection，CN 有 20+ 个（含 CN 独有内容）',
@@ -53,7 +54,7 @@ export const chapters = [
     ratio: 210,
     verdict: 'violation',
     verdictLabel: '严重违规',
-    color: 'var(--danger, #e74c3c)',
+    color: '#e74c3c',
     structureMatch: 'no',
     issues: [
       'EN 按推理时 vs 训练时组织；CN 按机制类型（reward/selfplay/prompt/arch/memory/hybrid）组织',
@@ -73,7 +74,7 @@ export const chapters = [
     ratio: 175,
     verdict: 'violation',
     verdictLabel: '严重违规',
-    color: 'var(--danger, #e74c3c)',
+    color: '#e74c3c',
     structureMatch: 'no',
     issues: [
       'EN 聚焦于进化式代码与算法发现；CN 扩展为更广泛的「演化系统」',
@@ -93,7 +94,7 @@ export const chapters = [
     ratio: 132,
     verdict: 'violation',
     verdictLabel: '严重违规',
-    color: 'var(--danger, #e74c3c)',
+    color: '#e74c3c',
     structureMatch: 'no',
     issues: [
       'EN 与 CN 的组织结构完全不同',
@@ -112,7 +113,7 @@ export const chapters = [
     ratio: 103,
     verdict: 'weak',
     verdictLabel: '弱偏离',
-    color: 'var(--warning, #e67e22)',
+    color: '#e67e22',
     structureMatch: 'weak',
     issues: [
       '行数接近（103%）但结构不同',
@@ -132,7 +133,7 @@ export const chapters = [
     ratio: 173,
     verdict: 'violation',
     verdictLabel: '严重违规',
-    color: 'var(--danger, #e74c3c)',
+    color: '#e74c3c',
     structureMatch: 'no',
     issues: [
       'EN 有 9 个 subsection；CN 有 25+ 个 subsection',
@@ -152,7 +153,7 @@ export const chapters = [
     ratio: 184,
     verdict: 'violation',
     verdictLabel: '严重违规',
-    color: 'var(--danger, #e74c3c)',
+    color: '#e74c3c',
     structureMatch: 'no',
     issues: [
       'EN 与 CN 覆盖的主题不同',
@@ -310,9 +311,9 @@ const partialCount = chapters.filter(c => c.verdict === 'partial' || c.verdict =
               <span style="width: 60px; font-size: 0.8rem; color: var(--muted);">{ch.enLines}→{ch.cnLines}</span>
             </div>
           ))}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: 16; marginTop: 12px, fontSize: '0.8rem', color: 'var(--muted)' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}><span style="display: inline-block; width: 12px; height: 12px; backgroundColor: var(--danger, #e74c3c); borderRadius: 2; }} /> 严重违规 (&gt;150%)</span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}><span style="display: inline-block; width: 12px; height: 12px; backgroundColor: var(--warning, #e67e22); borderRadius: 2; }} /> 部分偏离</span>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 16, marginTop: 12, fontSize: '0.8rem', color: 'var(--muted)' }}>
+            <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}><span style={{ display: 'inline-block', width: 12, height: 12, backgroundColor: 'var(--danger, #e74c3c)', borderRadius: 2 }} /> 严重违规 (&gt;150%)</span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}><span style={{ display: 'inline-block', width: 12, height: 12, backgroundColor: 'var(--warning, #e67e22)', borderRadius: 2 }} /> 部分偏离</span>
             <span>虚线 = 100%（理想映射）</span>
           </div>
         </div>
