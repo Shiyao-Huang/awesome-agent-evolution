@@ -17,6 +17,8 @@
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
 | `scripts` | present | 12 | 1 | 0 | 179 KB |
 | `data-engine` | present | 479 | 21 | 0 | 5.9 MB |
+| `work/research` | present | 47 | 1 | 0 | 1.2 MB |
+| `work/wiki` | present | 46 | 5 | 0 | 500 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files
@@ -121,3 +123,23 @@
 - `wiki/research/social-cn-youtube-blog-raw-2026-05-20.csv`
 - `wiki/research/social-cn-youtube-blog-raw-2026-05-20.json`
 - `wiki/research/social-cn-youtube-blog-raw-2026-05-20.md`
+
+### `work/research`
+
+- `work/research/INDEX.md` — Full file index for this directory
+- `work/research/mechanism-analysis-framework.md` — L1 mechanism framework
+- `work/research/social-mechanism-insights.md` — L3 social/blogs deepdive
+- `work/research/papers-mechanism-analysis.md` — L3 papers mechanism analysis (700 lines)
+- `work/research/raw-github-mechanisms.md` — L3 GitHub mechanisms analysis
+- `work/research/project-evolution-grading.md` — L4 project evolution grading
+
+### `work/wiki` (LLM Wiki Pattern)
+
+- `work/wiki/index.md` — Content directory with page links and summaries
+- `work/wiki/log.md` — Append-only timeline record
+- `work/wiki/schema.md` — Wiki rules and format specification
+- `work/wiki/search-index.json` — Keyword-to-file mapping
+- `work/wiki/concepts/` (9) — Mechanism taxonomy pages
+- `work/wiki/entities/` (8) — People, org, project pages
+- `work/wiki/sources/` (24) — Raw material digests with trust chains
+- `work/wiki/synthesis/` (2) — Cross-cutting analyses
