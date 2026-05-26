@@ -1,39 +1,39 @@
 % ====================================================================
-% Chapter 5: Evaluation Systems and Benchmarks (English expanded version)
+% 第五章：评估体系与基准测试（英文扩展版的中文映射）
 % ====================================================================
 
-\section{Evaluation Systems and Benchmarks}
+\section{评估体系与基准测试}
 \label{ch:evaluation}
 
-\subsection{The Evaluation Challenge in Agent Self-Evolution}
+\subsection{智能体自进化中的评估挑战}
 \label{sec:eval-challenge}
 
-The central tension in agent self-evolution research lies between a system's claim of improvement and our ability to verify that improvement is genuine, robust, and transferable. Evaluation is not merely the experimental section of a paper---it serves as the \emph{selection pressure} that shapes the direction of evolution and the \emph{safety gate} that prevents harmful mutations from propagating. If the evaluation function is misaligned, incomplete, or gameable, then self-evolution becomes self-deception.
+智能体自进化研究的核心张力在于系统声称的改进与我们验证该改进是否真实、稳健且可迁移的能力之间。评估不仅仅是论文的实验部分——它既是塑造进化方向的\emph{选择压力}，也是防止有害变异传播的\emph{安全门}。如果评估函数存在偏差、不完整或可被博弈，那么自进化就会沦为自我欺骗。
 
-This chapter addresses the evaluation problem from three perspectives. First, we propose a five-layer evaluation hierarchy that spans fully automated programmatic verification at the bottom to human-in-the-loop safety gates at the top. Second, we survey the major benchmarks used across the agent evolution literature, analyzing their strengths, limitations, and contamination risks. Third, we introduce agent-specific evaluation metrics that go beyond single-task accuracy to capture iterative improvement, transfer, cost efficiency, and safety. Throughout, we emphasize that evaluation infrastructure is itself evolving: as agents become more capable, evaluators must become more sophisticated, or risk being outpaced by the systems they are meant to assess.
+本章从三个角度讨论评估问题。首先，我们提出一个五层评估层级体系，从底层的全自动程序化验证到顶层的人工介入安全门。其次，我们综述智能体进化文献中使用的主要基准测试，分析其优势、局限和污染风险。第三，我们引入智能体专用评估指标，超越单任务准确率，涵盖迭代改进、迁移、成本效率和安全。贯穿全文，我们强调评估基础设施本身也在进化：随着智能体能力增强，评估器必须变得更加精密，否则就有被其所评估系统超越的风险。
 
-The evaluation challenge is particularly acute for self-evolving systems because of four properties that distinguish them from conventional machine learning.
+由于自进化系统区别于传统机器学习的四个特性，评估挑战尤为突出。
 
-\textbf{Property 1: Moving targets.} An agent that modifies its own code, prompts, or memory may change its behavior in ways that the benchmark did not anticipate. The evaluated system at time $t+1$ is structurally different from the system at time $t$, making longitudinal comparison non-trivial. DGM~\citep{dgm2025} exemplifies this: each generation produces a qualitatively different agent architecture, and the SWE-Bench score at generation $n$ reflects a fundamentally different program than at generation $n-1$.
+\textbf{特性一：动态目标。}修改自身代码、提示或记忆的智能体可能以基准测试未预料到的方式改变行为。$t+1$ 时刻的被评估系统与 $t$ 时刻的系统在结构上不同，使得纵向比较并非易事。DGM~\citep{dgm2025}正是典型案例：每一代产生性质不同的智能体架构，第 $n$ 代在 SWE-Bench 上的分数反映的是一个与第 $n-1$ 代根本不同的程序。
 
-\textbf{Property 2: Evaluation as part of the optimization loop.} Agents can learn to exploit evaluator weaknesses, producing reward hacking, length bias, or score manipulation that inflates metrics without genuine capability gain. Self-Rewarding Language Models~\citep{selfrewarding2024} demonstrate both the promise and peril of this property: the model evaluates its own outputs, creating a feedback loop that initially produces genuine improvement but risks evaluator degradation over iterations.
+\textbf{特性二：评估作为优化回路的一部分。}智能体可以学会利用评估器的弱点，产生奖励博弈、长度偏差或分数操纵，在不具备真实能力提升的情况下虚高指标。自奖励语言模型~\citep{selfrewarding2024}同时展示了这一特性的前景与风险：模型评估自身输出，形成的反馈回路初期产生真实改进，但在迭代过程中存在评估器退化的风险。
 
-\textbf{Property 3: Scope expansion.} The scope of evaluation must expand beyond task completion to include process quality, cost, safety, and transfer---dimensions that are harder to quantify than accuracy. An agent that solves 90\% of tasks but costs \$100 per run and occasionally deletes files is not necessarily superior to one that solves 80\% at \$0.10 per run with perfect safety.
+\textbf{特性三：评估范围扩展。}评估范围必须从任务完成扩展到过程质量、成本、安全和迁移——这些维度比准确率更难量化。一个解决 90\% 任务但每次运行成本 \$100 且偶尔删除文件的智能体，不一定优于一个解决 80\% 任务、每次 \$0.10 且安全记录完美的智能体。
 
-\textbf{Property 4: Reproducibility threats.} Non-determinism in LLM generation, API version changes, and the interaction between stochastic sampling and evolving agent state threaten reproducibility. A self-evolving system tested with GPT-4-turbo-2024-04-09 may produce different results with GPT-4-turbo-2024-12-17, even if the agent code is identical. This version dependency is compounded by the evolutionary process itself: because each generation builds upon the results of previous generations, small differences in early generations can compound into qualitatively different evolutionary trajectories. Two runs of the same evolutionary system with different random seeds may discover entirely different solutions, making it difficult to distinguish robust improvements from lucky trajectories.
+\textbf{特性四：可复现性威胁。}LLM 生成的非确定性、API 版本变更以及随机采样与进化中智能体状态之间的交互，威胁着可复现性。使用 GPT-4-turbo-2024-04-09 测试的自进化系统，即使智能体代码完全相同，使用 GPT-4-turbo-2024-12-17 也可能产生不同结果。这种版本依赖性被进化过程本身放大：因为每一代建立在前一代结果之上，早期的微小差异可能复合成性质不同的进化轨迹。相同进化系统在两个不同随机种子下可能发现完全不同的解，使得难以区分稳健改进与幸运轨迹。
 
-These four properties interact in subtle ways. Property 2 (evaluation in the loop) combined with Property 1 (moving targets) creates a situation where the evaluation landscape itself changes as the agent evolves, potentially invalidating conclusions drawn from early evaluation rounds. Property 3 (scope expansion) combined with Property 4 (reproducibility threats) means that multi-dimensional evaluation---already more expensive than single-metric evaluation---must be repeated across multiple random seeds and model versions, multiplying the cost of rigorous assessment.
+这四个特性以微妙的方式相互影响。特性二（评估在回路中）与特性一（动态目标）结合，导致评估景观本身随智能体进化而变化，可能使早期评估轮次得出的结论失效。特性三（范围扩展）与特性四（可复现性威胁）结合，意味着多维评估——本身已比单一指标评估更昂贵——必须在多个随机种子和模型版本上重复，成倍增加严格评估的成本。
 
-These properties mean that a single benchmark score is never sufficient evidence for self-evolution. A credible evaluation must include multi-layer verification, cross-benchmark generalization, cost analysis, safety auditing, and ablation studies that isolate the contribution of the self-improvement mechanism from confounds such as prompt engineering, model selection, and data contamination.
+这些特性意味着单一的基准分数永远不足以作为自进化的证据。可信的评估必须包括多层验证、跨基准泛化、成本分析、安全审计以及消融实验，以分离自改进机制的贡献与提示工程、模型选择和数据污染等混淆因素。
 
 
-\subsection{A Five-Layer Evaluation Hierarchy}
+\subsection{五层评估层级体系}
 \label{sec:eval-hierarchy}
 
-We propose organizing evaluation methods into five layers, from fully automated to human-supervised. Each layer adds reliability at the cost of increased effort and latency. A well-designed evaluation system uses all five layers in combination, with lower layers providing rapid feedback during development and higher layers serving as pre-deployment gates.
+我们建议将评估方法组织为五个层次，从全自动到人工监督。每一层以增加工作量和延迟为代价提升可靠性。一个设计良好的评估系统应组合使用全部五层，底层在开发过程中提供快速反馈，高层作为部署前的安全门。
 
 % ====================================================================
-% Figure 5.1: Evaluation Benchmark Layered System
+% 图5.1：评估基准分层体系
 % ====================================================================
 \begin{figure}[htbp]
 \centering
@@ -55,144 +55,144 @@ We propose organizing evaluation methods into five layers, from fully automated 
     \draw[-{Stealth}, thick, dashed, color=gray!40] (-6.5,0) -- (-6.5,8);
 
 \end{tikzpicture}
-\caption{Five-layer evaluation hierarchy for agent self-evolution. From L1 (fully automated programmatic verification) to L5 (human-in-the-loop safety gates), evaluation cost and reliability increase at each layer.}
+\caption{智能体自进化的五层评估层级体系。从 L1（全自动程序化验证）到 L5（人工介入安全门），每一层的评估成本和可靠性递增。}
 \label{fig:eval-layers}
 \end{figure}
 
 
-\subsubsection{L1: Programmatic Verification}
+\subsubsection{L1：程序化验证}
 \label{sec:eval-L1}
 
-The most reliable evaluation signals come from deterministic programmatic checks. These include unit tests, type checking, static analysis, linting, fuzzing, regression testing, and sandbox execution. Their key advantage is that they are fully automated, reproducible, and cannot be gamed by an LLM that understands the evaluation format---assuming the test suite itself is not accessible to the agent.
+最可靠的评估信号来自确定性程序化检查，包括单元测试、类型检查、静态分析、代码规范检查、模糊测试、回归测试和沙箱执行。其核心优势在于完全自动化、可复现，且无法被理解评估格式的 LLM 所博弈——前提是测试套件本身不被智能体访问。
 
-In the agent evolution literature, systems like DGM~\citep{dgm2025}, SICA~\citep{sica2025}, EvoMAC~\citep{evomac2024}, and AlphaEvolve~\citep{alphaevolve2025} achieve self-evolution precisely because candidate code can be automatically executed and scored. DGM evaluates agent variants by running them on SWE-Bench tasks and measuring the percentage of tests passed; SICA allows the coding agent to modify its own source code and validates changes against a held-out test suite; AlphaEvolve uses programmatic evaluators to score algorithm candidates on mathematical optimization problems.
+在智能体进化文献中，DGM~\citep{dgm2025}、SICA~\citep{sica2025}、EvoMAC~\citep{evomac2024} 和 AlphaEvolve~\citep{alphaevolve2025} 等系统之所以能实现自进化，正是因为候选代码可以被自动执行和评分。DGM 通过在 SWE-Bench 任务上运行智能体变体并测量测试通过率来评估；SICA 允许编码智能体修改自身源代码，并对照保留测试集验证变更；AlphaEvolve 使用程序化评估器对数学优化问题上的算法候选进行评分。
 
-FunSearch~\citep{funsearch2024} provides an instructive example of rigorous L1 verification at scale. The system maintains 15 samplers and 140 evaluators---a 1:9 sampler-to-evaluator ratio that reflects the fundamental asymmetry between generation and verification. Each candidate program must pass a triple safety filter: (1) execution success within a 30-second timeout, (2) no calls to ancestor functions (preventing trivial delegation), and (3) return value type checking. This defense-in-depth approach prevents common failure modes such as infinite loops, circular references, and type errors that could corrupt the evolutionary process.
+FunSearch~\citep{funsearch2024} 提供了一个大规模严格 L1 验证的典型案例。该系统维护 15 个采样器和 140 个评估器——1:9 的采样器-评估器比率反映了生成与验证之间的根本不对称性。每个候选程序必须通过三重安全过滤：(1) 在 30 秒超时内成功执行，(2) 不调用祖先函数（防止简单委托），(3) 返回值类型检查。这种纵深防御方法防止了无限循环、循环引用和类型错误等可能破坏进化过程的常见故障模式。
 
-The scope of programmatic verification should be expanded beyond code tasks. Data pipelines can verify schema compliance, distribution drift, and end-to-end consistency. Business processes can verify state machine constraints and permission policies. Web tasks can verify DOM state, backend responses, and user intent fulfillment. Programmatic verifiers do not need to understand full semantics, but they must cover the critical failure modes of the target domain.
+程序化验证的范围应扩展到代码任务之外。数据管道可以验证模式合规性、分布漂移和端到端一致性。业务流程可以验证状态机约束和权限策略。Web 任务可以验证 DOM 状态、后端响应和用户意图满足。程序化验证器不需要理解完整语义，但必须覆盖目标领域的关键故障模式。
 
-A key challenge is test coverage: a test suite that passes may simply be incomplete. Self-evolving agents can learn to satisfy the visible tests while introducing subtle regressions in untested behaviors. This motivates mutation testing (injecting deliberate bugs to check whether tests catch them), fuzzing (generating random inputs to stress-test edge cases), and invariant checking (verifying properties that should hold across all executions).
+一个关键挑战是测试覆盖率：通过的测试套件可能只是不够完整。自进化智能体可以学会满足可见测试，同时在未测试行为中引入微妙的回归。这推动了变异测试（注入故意制造的缺陷以检查测试是否捕获）、模糊测试（生成随机输入以压力测试边界情况）和不变量检查（验证应在所有执行中成立的属性）的使用。
 
-For mathematical discovery tasks, AlphaEvolve demonstrates programmatic evaluation at its most powerful. The system evaluates evolved algorithms against ground-truth solutions on concrete problem instances, providing an unambiguous binary signal: does the candidate algorithm produce a numerically correct result? This clarity of evaluation enables rapid evolutionary search, producing discoveries such as a 48-multiplication algorithm for $4\times4$ complex matrices---the first improvement over Strassen's 49-multiplication result in 56 years. AlphaEvolve also demonstrates real-world programmatic evaluation: evolved scheduling algorithms recovered 0.7\% of worldwide Google data center compute, and optimized FlashAttention kernel tiling achieved 23\% speedup and attention optimization achieved 32\% speedup in LLM training.
+对于数学发现任务，AlphaEvolve 展示了程序化评估的最强大形态。该系统在具体问题实例上将进化出的算法与真实解进行比对评估，提供明确的二元信号：候选算法是否产生数值正确的结果？这种评估的清晰性使快速进化搜索成为可能，产生了诸如 $4\times4$ 复矩阵的 48 次乘法算法等发现——这是 56 年来对 Strassen 49 次乘法结果的首次改进。AlphaEvolve 还展示了真实世界的程序化评估：进化出的调度算法恢复了全球 Google 数据中心 0.7\% 的计算资源，优化的 FlashAttention 内核分块在 LLM 训练中实现了 23\% 加速，注意力优化实现了 32\% 加速。
 
-The OpenTreeSearch comparison on circle packing ($n=26$) provides a valuable cross-system validation: three independent evolutionary systems (AlphaEvolve: 2.635, OpenEvolve: 2.634, OpenTreeSearch: 2.632) converge on nearly identical optima despite using different evolutionary algorithms and LLM backbones. This convergence suggests that the programmatic evaluation signal is sufficiently strong to guide diverse search strategies toward the same high-quality region of the solution space, providing evidence that the evaluation is measuring a real property of the solutions rather than an artifact of the search process.
+OpenTreeSearch 在圆形填充（$n=26$）上的对比提供了有价值的跨系统验证：三个独立的进化系统（AlphaEvolve: 2.635, OpenEvolve: 2.634, OpenTreeSearch: 2.632）尽管使用不同的进化算法和 LLM 骨干网络，却收敛到几乎相同的最优值。这种收敛表明程序化评估信号足够强，能够引导不同的搜索策略朝向解空间的同一高质量区域，证明评估测量的是解的真实属性而非搜索过程的伪影。
 
-Programmatic verification also plays a critical role in the meta-search aspects of self-evolution. When ADAS searches for optimal agent architectures, it evaluates each candidate architecture by running it on a task set and measuring performance. The fitness function is itself a programmatic evaluation: given an agent architecture $A$ and a task distribution $\tau$, the fitness $f(A, \tau)$ is computed by executing $A$ on tasks sampled from $\tau$ and measuring the success rate. ADAS uses bootstrap 95\% confidence intervals with 100,000 resamples to ensure statistical significance, and ThreadPoolExecutor with 32--48 workers for parallel evaluation. This rigorous statistical methodology ensures that the evolutionary search is guided by genuine performance differences rather than random noise.
+程序化验证在自进化的元搜索层面也发挥着关键作用。当 ADAS 搜索最优智能体架构时，它通过在任务集上运行每个候选架构并测量性能来评估。适应度函数本身就是一种程序化评估：给定智能体架构 $A$ 和任务分布 $\tau$，适应度 $f(A, \tau)$ 通过在从 $\tau$ 中采样的任务上执行 $A$ 并测量成功率来计算。ADAS 使用 100,000 次重采样的 bootstrap 95\% 置信区间确保统计显著性，并使用 32--48 个工作线程的 ThreadPoolExecutor 进行并行评估。这种严格的统计方法确保进化搜索由真实性能差异而非随机噪声引导。
 
 
-\subsubsection{L2: Code and Reasoning Benchmarks}
+\subsubsection{L2：代码与推理基准测试}
 \label{sec:eval-L2}
 
-Code generation and mathematical reasoning benchmarks provide standardized, widely-recognized evaluation signals. Their primary advantage is comparability: results can be directly compared across papers and systems.
+代码生成和数学推理基准测试提供了标准化、广泛认可的评估信号。其主要优势在于可比性：结果可以直接跨论文和系统比较。
 
-\textbf{Code generation benchmarks.} HumanEval~\citep{chen2021codex} consists of 164 Python programming problems with unit tests, measuring functional correctness via pass@$k$ metrics. MBPP~\citep{austin2021mbpp} provides 974 crowd-sourced problems covering a broader range of programming constructs. DS-1000 evaluates data science code generation across seven libraries (Pandas, NumPy, Matplotlib, etc.). LiveCodeBench provides continuously-updated problems to mitigate contamination.
+\textbf{代码生成基准测试。}HumanEval~\citep{chen2021codex} 由 164 个带单元测试的 Python 编程问题组成，通过 pass@$k$ 指标测量功能正确性。MBPP~\citep{austin2021mbpp} 提供 974 个众包问题，覆盖更广泛的编程构造。DS-1000 评估跨七个库（Pandas、NumPy、Matplotlib 等）的数据科学代码生成。LiveCodeBench 提供持续更新的问题以缓解污染。
 
-Reflexion~\citep{reflexion2023} demonstrates self-improvement on HumanEval, achieving 91\% pass@1 with GPT-3.5-turbo, surpassing GPT-4's 80.1\% zero-shot performance by 10.9 percentage points. SelfEvolve~\citep{selfevolve2024} achieves 85.98\% pass@1 and 87.81\% pass@10 on HumanEval with a ChatGPT-based pipeline, improving from a 74.39\% baseline. On DS-1000, SelfEvolve improves from 49.4 to 57.2 (+15.8\% relative) through combined self-evolution and self-refinement. On TransCoder (C++ to Python translation), SelfEvolve reaches 90.4\% accuracy (up from 88.3\% baseline).
+Reflexion~\citep{reflexion2023} 在 HumanEval 上展示了自改进，使用 GPT-3.5-turbo 达到 91\% pass@1，以 10.9 个百分点超越 GPT-4 的 80.1\% 零样本性能。SelfEvolve~\citep{selfevolve2024} 使用基于 ChatGPT 的管道在 HumanEval 上达到 85.98\% pass@1 和 87.81\% pass@10，从 74.39\% 的基线提升。在 DS-1000 上，SelfEvolve 通过结合自进化和自精炼从 49.4 提升至 57.2（+15.8\% 相对提升）。在 TransCoder（C++ 到 Python 翻译）上，SelfEvolve 达到 90.4\% 准确率（从 88.3\% 基线提升）。
 
-EvoAgentX~\citep{evoagentx2025} provides a systematic comparison of optimization algorithms on MBPP: TextGrad achieves 71.00\%, AFlow achieves 79.00\%, and MIPRO achieves 68.00\%, compared to the original unoptimized pipeline at 69.00\%. The variation across optimizers highlights that the choice of optimization algorithm itself is a significant variable in self-improvement evaluation. AFlow's 10-percentage-point advantage over MIPRO suggests that agentic workflow optimization---which restructures the pipeline topology---can outperform prompt-level optimization that keeps the pipeline fixed. This finding has important implications for evaluation design: comparing two self-improvement methods is only meaningful when the optimization algorithm is controlled, or when the comparison explicitly includes algorithm selection as a variable.
+EvoAgentX~\citep{evoagentx2025} 在 MBPP 上提供了优化算法的系统比较：TextGrad 达到 71.00\%，AFlow 达到 79.00\%，MIPRO 达到 68.00\%，而原始未优化管道为 69.00\%。不同优化器之间的差异凸显了优化算法选择本身是自改进评估中的重要变量。AFlow 相比 MIPRO 的 10 个百分点优势表明，重构管道拓扑的智能体工作流优化可以优于保持管道固定的提示级优化。这一发现对评估设计有重要启示：比较两种自改进方法仅在优化算法受控时才有意义，或者当比较明确将算法选择作为变量时。
 
-DS-1000 provides evaluation for data science code generation across seven libraries (Pandas, NumPy, Matplotlib, Seaborn, Plotly, SciPy, Scikit-learn), testing the ability to generate library-specific code for data manipulation, visualization, and statistical analysis. SelfEvolve's 15.8\% relative improvement on DS-1000 (49.4 to 57.2) demonstrates that self-improvement generalizes beyond generic programming tasks to domain-specific library usage. The improvement is smaller than on HumanEval (+11.59 percentage points vs.\ +15.8\% relative), suggesting that library-specific knowledge is harder to improve through self-correction, possibly because the correct usage of library APIs requires factual knowledge that is less amenable to iterative refinement.
+DS-1000 跨七个库（Pandas、NumPy、Matplotlib、Seaborn、Plotly、SciPy、Scikit-learn）评估数据科学代码生成，测试生成库特定代码用于数据操作、可视化和统计分析的能力。SelfEvolve 在 DS-1000 上 15.8\% 的相对提升（49.4 到 57.2）表明自改进能从通用编程任务泛化到领域特定库的使用。改进幅度小于 HumanEval（+11.59 个百分点 vs.\ +15.8\% 相对提升），表明库特定知识更难通过自我纠正来改进，可能因为库 API 的正确使用需要事实性知识，不太适合迭代精炼。
 
-LiveCodeBench addresses contamination directly by providing continuously-updated coding problems sourced from competitive programming platforms, ensuring that problems were not present in any model's training data. ReVeal's strong performance on LiveCodeBench---exceeding the DeepSeek-R1-Zero-Qwen-32B baseline despite being trained on only 3 self-evolution turns---provides evidence that genuine self-improvement can be distinguished from memorization through the use of clean, uncontaminated benchmarks.
+LiveCodeBench 通过提供源自竞赛编程平台的持续更新编程问题直接解决污染问题，确保问题未出现在任何模型的训练数据中。ReVeal 在 LiveCodeBench 上的强劲表现——仅用 3 轮自进化训练就超越了 DeepSeek-R1-Zero-Qwen-32B 基线——提供了真实自改进可以通过使用干净、无污染基准测试与记忆化区分的证据。
 
-\textbf{Mathematical reasoning benchmarks.} GSM8K~\citep{cobbe2021gsm8k} provides 8,500 grade-school math problems, MATH~\citep{hendrycks2021math} offers 12,500 competition-level problems, and GPQA~\citep{rein2024gpqa} presents expert-level questions across physics, chemistry, and biology. STaR~\citep{star2022} improves from 35\% to 74\% on GSM8K via self-taught reasoning, one of the largest relative improvements in the literature. RISE~\citep{rise2024} improves Llama2-7B from approximately 14\% to 24\% and Mistral-7B from 38\% to 46\% through multi-turn RL introspection.
+\textbf{数学推理基准测试。}GSM8K~\citep{cobbe2021gsm8k} 提供 8,500 道小学数学题，MATH~\citep{hendrycks2021math} 提供 12,500 道竞赛级题目，GPQA~\citep{rein2024gpqa} 涵盖物理、化学和生物学的专家级问题。STaR~\citep{star2022} 通过自教推理将 GSM8K 从 35\% 提升至 74\%，是文献中最大的相对改进之一。RISE~\citep{rise2024} 通过多轮 RL 自省将 Llama2-7B 从约 14\% 提升至 24\%，Mistral-7B 从 38\% 提升至 46\%。
 
-EvoAgentX on MATH shows substantial optimizer-dependent variation: TextGrad achieves 76.00\%, AFlow 71.00\%, MIPRO 72.30\%, compared to the original 66.00\%. Agent Symbolic Learning~\citep{agentsymbolic2024} achieves 60.7\% on MATH with GPT-4 backbone, compared to the standard Agents baseline at 56.0\% and DSPy at 48.4\%.
+EvoAgentX 在 MATH 上显示出显著的优化器依赖性差异：TextGrad 达到 76.00\%，AFlow 71.00\%，MIPRO 72.30\%，而原始管道为 66.00\%。Agent Symbolic Learning~\citep{agentsymbolic2024} 在使用 GPT-4 骨干的 MATH 上达到 60.7\%，而标准 Agents 基线为 56.0\%，DSPy 为 48.4\%。
 
-However, these benchmarks suffer from well-documented limitations that are particularly consequential for self-evolution research. Many are static problem sets vulnerable to data contamination---once a benchmark becomes widely used, subsequent LLM training corpora are likely to include it, inflating future scores regardless of genuine capability improvement. They measure only final-answer correctness, not reasoning process quality, tool use, or multi-step interactions. A self-evolving agent that achieves high accuracy on GSM8K through memorized solution templates has not improved its mathematical reasoning ability in any meaningful sense.
+然而，这些基准测试存在文献已充分记录的局限性，对自进化研究尤其严重。许多是静态问题集，容易受到数据污染——一旦基准测试被广泛使用，后续 LLM 训练语料很可能包含它，无论真实能力是否提升，都会虚高未来分数。它们只测量最终答案正确性，不测量推理过程质量、工具使用或多步交互。通过记忆的解题模板在 GSM8K 上达到高准确率的进化智能体，并未在真正意义上提升其数学推理能力。
 
-Their granularity is small: passing a unit test on a 10-line function differs fundamentally from patching a real codebase. HumanEval problems average approximately 10 lines of solution code with clearly specified inputs and outputs, while SWE-Bench tasks require understanding repository structure, navigating multiple files, and producing patches that integrate with existing code architecture. The gap between these two evaluation settings is substantial: a method that shows 90\% improvement on HumanEval may show negligible improvement on SWE-Bench, and vice versa. This granularity gap motivates the use of multi-level evaluation spanning from simple unit tests to full software engineering environments.
+其粒度较小：在 10 行函数上通过单元测试与在真实代码库上打补丁有根本性差异。HumanEval 问题平均约 10 行解代码，输入输出明确指定，而 SWE-Bench 任务需要理解仓库结构、跨文件导航并生成与现有代码架构集成的补丁。两种评估设置之间的差距很大：在 HumanEval 上显示 90\% 改进的方法在 SWE-Bench 上可能几乎没有改进，反之亦然。这种粒度差距推动了从简单单元测试到完整软件工程环境的多级评估。
 
-Furthermore, static benchmarks provide no mechanism for evaluating the \emph{process} of improvement. Two systems that achieve the same final score on GSM8K may differ dramatically in their improvement trajectories: one may show monotonic improvement over 10 iterations, while the other may oscillate between high and low scores before converging. These trajectory differences carry important information about the reliability and robustness of the self-improvement mechanism, information that is invisible in single-number comparisons.
+此外，静态基准测试没有评估改进\emph{过程}的机制。在 GSM8K 上达到相同最终分数的两个系统可能在改进轨迹上截然不同：一个可能在 10 次迭代中单调改进，另一个可能在收敛前在高分和低分之间振荡。这些轨迹差异携带了关于自改进机制可靠性和稳健性的重要信息，而这些信息在单数值比较中是不可见的。
 
 
-\subsubsection{L3: Environment Interaction Benchmarks}
+\subsubsection{L3：环境交互基准测试}
 \label{sec:eval-L3}
 
-Environment interaction benchmarks evaluate agents in simulated or real environments where success requires multi-step planning, tool use, error recovery, and state tracking. These benchmarks provide the most ecologically valid evaluation of agent capabilities, but are also the most expensive to run and hardest to reproduce.
+环境交互基准测试在模拟或真实环境中评估智能体，成功需要多步规划、工具使用、错误恢复和状态追踪。这些基准测试提供了最具生态效度的智能体能力评估，但运行成本最高且最难复现。
 
-\textbf{Software engineering environments.} SWE-Bench~\citep{jimenez2024swebench} requires systems to locate issues in real open-source repositories, modify code, run tests, and submit verifiable patches. Unlike unit-test benchmarks, SWE-Bench tasks require understanding repository structure, navigating dependencies across multiple files, producing patches that integrate with existing code architecture, and ensuring that modifications do not break existing functionality. The benchmark includes tasks from 12 popular Python repositories spanning django, flask, scikit-learn, sympy, matplotlib, and other widely-used libraries.
+\textbf{软件工程环境。}SWE-Bench~\citep{jimenez2024swebench} 要求系统在真实开源仓库中定位问题、修改代码、运行测试并提交可验证的补丁。与单元测试基准不同，SWE-Bench 任务需要理解仓库结构、跨文件导航依赖关系、生成与现有代码架构集成的补丁，并确保修改不破坏现有功能。该基准测试包含来自 12 个流行 Python 仓库的任务，涵盖 django、flask、scikit-learn、sympy、matplotlib 等广泛使用的库。
 
-DGM~\citep{dgm2025} improves from 20.0\% to 50.0\% on SWE-Bench Verified through archive-based self-evolution---a 2.5$\times$ relative improvement that represents the largest single-system improvement on this benchmark to date. The improvement comes not from a single breakthrough but from accumulated architectural modifications that compound across evolutionary generations: early generations improve debugging and code navigation capabilities, middle generations improve test-driven development strategies, and later generations develop sophisticated multi-file reasoning abilities.
+DGM~\citep{dgm2025} 通过基于存档的自进化在 SWE-Bench Verified 上从 20.0\% 提升至 50.0\%——2.5$\times$ 的相对提升，是迄今为止该基准测试上最大的单系统改进。改进并非来自单一突破，而是来自跨进化代累积的架构修改：早期代改进调试和代码导航能力，中期代改进测试驱动开发策略，后期代发展出复杂的多文件推理能力。
 
-DGM also improves from 14.2\% to 30.7\% on the Polyglot multi-language coding benchmark, demonstrating cross-language transfer. This result is particularly notable because the evolutionary search was conducted primarily on Python tasks, yet the evolved agent architecture transferred its improvements to Rust, Go, and Java programming tasks. SWE-Agent~\citep{sweagent2024} achieves state-of-the-art results and was recognized as an ICLR 2025 Oral, establishing SWE-Bench as the primary benchmark for coding agent evaluation and driving community convergence on this evaluation standard.
+DGM 在 Polyglot 多语言编码基准测试上也从 14.2\% 提升至 30.7\%，展示了跨语言迁移。这一结果特别值得注意，因为进化搜索主要在 Python 任务上进行，但进化的智能体架构将其改进迁移到了 Rust、Go 和 Java 编程任务。SWE-Agent~\citep{sweagent2024} 达到了最先进结果并被 ICLR 2025 接收为 Oral 报告，确立了 SWE-Bench 作为编码智能体评估的主要基准测试，推动了社区向这一评估标准的汇聚。
 
-\textbf{Web and embodied environments.} WebArena~\citep{zhou2024webarena} creates realistic web-based tasks requiring website navigation, form filling, and information extraction across live websites rendered in a browser environment. Unlike static HTML benchmarks, WebArena tasks require agents to interact with dynamic JavaScript-rendered pages, handle authentication flows, navigate multi-page workflows, and extract information from complex visual layouts. The benchmark evaluates the full pipeline of web interaction: understanding user intent, planning a sequence of actions (clicks, text input, scrolling), executing the plan while handling unexpected page states, and verifying that the desired outcome was achieved.
+\textbf{Web 和具身环境。}WebArena~\citep{zhou2024webarena} 创建真实的基于 Web 的任务，要求在浏览器渲染的实时网站上进行网站导航、表单填写和信息提取。与静态 HTML 基准不同，WebArena 任务要求智能体与动态 JavaScript 渲染页面交互、处理认证流程、导航多页工作流，并从复杂视觉布局中提取信息。该基准评估 Web 交互的完整管道：理解用户意图、规划动作序列（点击、文本输入、滚动）、在处理意外页面状态时执行计划，并验证预期结果是否达成。
 
-ALFWorld~\citep{shridhar2021alfworld} tests embodied agents in text-based household environments spanning six task types: pick up, clean, heat, cool, examine, and pick two objects. While the text-based interface simplifies the perception challenge, it requires sophisticated planning, state tracking, and error recovery across multi-step action sequences. Reflexion achieves 97\% on ALFWorld (up from 75\% baseline), demonstrating that language-based reflection is effective in multi-step interactive settings. The improvement comes from the agent's ability to learn from failed action sequences: when a pick-up attempt fails because the object is in a different room, Reflexion stores this experience as natural language feedback and uses it to plan more efficient navigation in subsequent attempts.
+ALFWorld~\citep{shridhar2021alfworld} 在基于文本的家庭环境中测试具身智能体，涵盖六种任务类型：拾取、清洁、加热、冷却、检查和拾取两个物品。虽然文本界面简化了感知挑战，但它需要跨多步动作序列的复杂规划、状态追踪和错误恢复。Reflexion 在 ALFWorld 上达到 97\%（从 75\% 基线提升），表明基于语言的反思在多步交互场景中是有效的。改进来自智能体从失败动作序列中学习的能力：当拾取尝试因物品在不同房间而失败时，Reflexion 将此经验存储为自然语言反馈，并在后续尝试中用于规划更高效的导航。
 
-\textbf{Lifelong learning environments.} Voyager~\citep{voyager2023} uses unique evaluation metrics in Minecraft: unique items discovered, technology tree coverage, and cross-world skill transfer. This lifelong learning evaluation captures cumulative capability growth rather than single-test performance. The technology tree metric is particularly informative: it measures not just whether the agent can perform individual tasks, but whether it has acquired the hierarchical skill structure necessary for increasingly complex tasks. An agent that discovers iron tools but cannot progress to diamond tools has hit a skill plateau; one that progresses through the full technology tree demonstrates genuine cumulative learning.
+\textbf{终身学习环境。}Voyager~\citep{voyager2023} 在 Minecraft 中使用独特的评估指标：发现独特物品数、科技树覆盖率和跨世界技能迁移。这种终身学习评估捕获的是累积能力增长而非单次测试性能。科技树指标特别有价值：它不仅测量智能体是否能执行单个任务，还测量是否获得了日益复杂任务所需的层次化技能结构。发现铁工具但无法进展到钻石工具的智能体已触及技能平台期；而完整通过科技树的智能体则展示了真正的累积学习。
 
-Voyager's cross-world skill transfer evaluation addresses a critical question for self-evolution: do acquired skills generalize to new environments? The system tests this by deploying skills learned in one Minecraft world to a different world with different terrain, resource distributions, and mob spawning patterns. Skills that transfer successfully demonstrate robust, environment-independent capabilities; skills that fail reveal overfitting to specific world characteristics. This transfer evaluation paradigm should be adopted more broadly in agent self-evolution research, as it directly measures the generalizability that distinguishes genuine self-improvement from environment-specific memorization.
+Voyager 的跨世界技能迁移评估解决了自进化的一个关键问题：习得的技能是否能泛化到新环境？系统通过将在一个 Minecraft 世界中习得的技能部署到具有不同地形、资源分布和怪物生成模式的不同世界来测试。成功迁移的技能展示了稳健的、独立于环境的能力；失败的技能则暴露了对特定世界特征的过拟合。这种迁移评估范式应在智能体自进化研究中被更广泛采用，因为它直接测量了区分真正自改进与环境特定记忆化的泛化能力。
 
-\textbf{Multi-environment benchmarks.} AgentBench~\citep{agentbench2024} evaluates LLM-as-Agent across eight distinct environments: OS interaction, Database (SQL), Knowledge Graph (SPARQL), Digital Card Game, Lateral Thinking Puzzles, ALFWorld, WebShop, and Avalon (multi-agent game). The dev set requires approximately 4,000 LLM generations and the test set requires approximately 13,000, making it one of the most comprehensive agent evaluation suites available. Published at ICLR 2024, AgentBench establishes that competent agent performance requires mastery across multiple interaction paradigms---command-line interaction, database query, web navigation, and social reasoning. The eight environments span a wide range of interaction complexities: OS interaction requires file system manipulation and process management; Database tasks require SQL query construction against real schemas; Knowledge Graph tasks require SPARQL query generation for structured data retrieval; the Card Game environment tests strategic reasoning under uncertainty; Lateral Thinking Puzzles test creative problem-solving; ALFWorld tests embodied task completion; WebShop tests goal-directed web navigation; and Avalon tests social deduction and multi-agent cooperation in a game of hidden roles.
+\textbf{多环境基准测试。}AgentBench~\citep{agentbench2024} 跨八个不同环境评估 LLM-as-Agent：操作系统交互、数据库（SQL）、知识图谱（SPARQL）、数字纸牌游戏、横向思维谜题、ALFWorld、WebShop 和 Avalon（多智能体博弈）。开发集约需 4,000 次 LLM 生成，测试集约需 13,000 次，是目前最全面的智能体评估套件之一。发表于 ICLR 2024，AgentBench 确立了胜任的智能体性能需要掌握多种交互范式——命令行交互、数据库查询、Web 导航和社会推理。八个环境跨越了广泛的交互复杂度：操作系统交互需要文件系统操作和进程管理；数据库任务需要针对真实模式构建 SQL 查询；知识图谱任务需要生成 SPARQL 查询进行结构化数据检索；纸牌游戏环境测试不确定条件下的策略推理；横向思维谜题测试创意性问题解决；ALFWorld 测试具身任务完成；WebShop 测试目标导向的 Web 导航；Avalon 测试隐藏角色博弈中的社会推理和多智能体合作。
 
-A key finding from AgentBench is that model performance varies dramatically across environments: models that excel at code generation may struggle with social reasoning, and models that perform well on knowledge tasks may fail at interactive decision-making. This environment-dependent performance has direct implications for self-evolution evaluation: a self-improvement method that shows consistent gains across all eight AgentBench environments demonstrates genuine agent-level improvement, while one that improves only on a subset may be exploiting environment-specific features rather than developing general agent capabilities.
+AgentBench 的一个关键发现是模型性能在不同环境间差异巨大：擅长代码生成的模型可能在社会推理上表现不佳，在知识任务上表现良好的模型可能在交互决策上失败。这种环境依赖性对自进化评估有直接影响：在所有八个 AgentBench 环境上显示出一致改进的自改进方法展示了真正的智能体级改进，而仅在子集上改进的方法可能是在利用环境特定特征而非发展通用智能体能力。
 
-\textbf{Scientific discovery environments.} AI Scientist v2~\citep{aiscientist2025} evaluates end-to-end autonomous research at approximately \$15 per paper, achieving a peer review score of 6.33 and ranking in the top 45\% of submissions---the first AI-generated paper accepted through peer review. This represents a qualitatively different evaluation paradigm where the benchmark is the scientific community itself.
+\textbf{科学发现环境。}AI Scientist v2~\citep{aiscientist2025} 以约每篇论文 \$15 的成本评估端到端自主研究，达到 6.33 的同行评审分数，位列提交的前 45\%——第一篇通过同行评审的 AI 生成论文。这代表了一种性质不同的评估范式，其中基准测试就是科学共同体本身。
 
-\textbf{Memory and reasoning environments.} EverOS~\citep{everos2025} introduces two specialized benchmarks for self-evolving agents. EverMemBench evaluates memory quality across three layers: Factual Recall (direct information retrieval), Applied Reasoning (using memories for problem-solving), and Personalized Generalization (adapting to user-specific patterns). The dataset is published on HuggingFace (EverMind-AI/EverMemBench-Dynamic). EverCore achieves 93.05\% on LoCoMo and 83.00\% on LongMemEval, while HyperMem achieves 92.73\% on LoCoMo.
+\textbf{记忆与推理环境。}EverOS~\citep{everos2025} 为自进化智能体引入了两个专用基准测试。EverMemBench 跨三层评估记忆质量：事实回忆（直接信息检索）、应用推理（使用记忆进行问题解决）和个性化泛化（适应用户特定模式）。数据集发布在 HuggingFace（EverMind-AI/EverMemBench-Dynamic）上。EverCore 在 LoCoMo 上达到 93.05\%，在 LongMemEval 上达到 83.00\%，而 HyperMem 在 LoCoMo 上达到 92.73\%。
 
 
-\subsubsection{L4: Process Metrics}
+\subsubsection{L4：过程指标}
 \label{sec:eval-L4}
 
-Process metrics evaluate \emph{how} improvement occurs, distinguishing genuine self-evolution from one-time optimization. These metrics are essential for understanding the dynamics of evolutionary improvement and predicting future trajectories.
+过程指标评估改进\emph{如何}发生，区分真正的自进化与一次性优化。这些指标对理解进化改进的动态和预测未来轨迹至关重要。
 
-\textbf{Iterative Improvement Curves.} We define $\Delta_t = V(z_t, \tau) - V(z_{t-1}, \tau)$ where $V(z_t, \tau)$ is the evaluation score of agent state $z_t$ on task distribution $\tau$. Key patterns include: monotonic improvement ($\Delta_t > 0$ for all $t$), plateau ($\Delta_t \approx 0$ after initial gains), volatile improvement (alternating positive and negative $\Delta_t$), and regression ($\Delta_t < 0$ indicating negative transfer).
+\textbf{迭代改进曲线。}我们定义 $\Delta_t = V(z_t, \tau) - V(z_{t-1}, \tau)$，其中 $V(z_t, \tau)$ 是智能体状态 $z_t$ 在任务分布 $\tau$ 上的评估分数。关键模式包括：单调改进（所有 $t$ 满足 $\Delta_t > 0$）、平台期（初始收益后 $\Delta_t \approx 0$）、波动改进（正负 $\Delta_t$ 交替）和回归（$\Delta_t < 0$ 表示负迁移）。
 
-RISE~\citep{rise2024} provides detailed iterative improvement analysis: more introspection turns consistently improve accuracy, and the model learns to allocate more ``introspection budget'' on harder problems. This adaptive allocation is itself a form of meta-learning that emerges from the self-correction process.
+RISE~\citep{rise2024} 提供了详细的迭代改进分析：更多自省轮次持续提升准确率，且模型学会在更难的问题上分配更多"自省预算"。这种自适应分配本身就是从自我纠正过程中涌现的一种元学习形式。
 
-ReVeal~\citep{reveal2025} demonstrates an important finding: self-evolution trained on only 3 turns generalizes to 20+ inference turns, producing results that exceed the DeepSeek-R1-Zero-Qwen-32B baseline. This gap between training and inference turn counts suggests that self-evolution learns a general correction policy rather than overfitting to specific turn counts.
+ReVeal~\citep{reveal2025} 展示了一个重要发现：仅用 3 轮训练的自进化可以泛化到 20+ 轮推理，产生超越 DeepSeek-R1-Zero-Qwen-32B 基线的结果。训练和推理轮数之间的差距表明自进化学习的是通用纠正策略，而非对特定轮数的过拟合。
 
-\textbf{Transfer and Generalization.} ADAS~\citep{adas2024} demonstrates cross-model and cross-domain transfer: agent designs discovered on ARC transfer to GFootball, and designs searched with GPT-3.5 remain effective on GPT-4. Specifically, ADAS discovers that a Memory-Augmented Agent architecture at generation 4 achieves 11.0\% median fitness on ARC (compared to 3.0\% for Chain-of-Thought and 8.0\% for Self-Refine baselines). This architecture was evaluated across five validation domains (DROP, GPQA, MGSM, MMLU) with rigorous statistical testing using bootstrap 95\% confidence intervals with 100,000 resamples.
+\textbf{迁移与泛化。}ADAS~\citep{adas2024} 展示了跨模型和跨领域迁移：在 ARC 上发现的智能体设计迁移到 GFootball，用 GPT-3.5 搜索的设计在 GPT-4 上仍然有效。具体而言，ADAS 发现第 4 代的记忆增强智能体架构在 ARC 上达到 11.0\% 的中位适应度（相比之下 Chain-of-Thought 为 3.0\%，Self-Refine 基线为 8.0\%）。该架构在五个验证领域（DROP、GPQA、MGSM、MMLU）上进行了评估，使用 100,000 次重采样的 bootstrap 95\% 置信区间进行严格统计检验。
 
-Absolute Zero~\citep{absolutezero2025} shows that code self-play training confers mathematical reasoning ability---a striking cross-domain transfer result. AZR-Coder-7B achieves SOTA at 7B parameter scale on code benchmarks using zero external training data, and competitive performance on math benchmarks despite training exclusively on code self-play.
+Absolute Zero~\citep{absolutezero2025} 表明代码自博弈训练赋予数学推理能力——一个引人注目的跨领域迁移结果。AZR-Coder-7B 使用零外部训练数据在 7B 参数规模的代码基准测试上达到 SOTA，并在数学基准测试上取得有竞争力的表现，尽管训练完全基于代码自博弈。
 
-DGM demonstrates cross-domain transfer at the agent level: agents evolved on SWE-Bench also show improved performance on the Polyglot multi-language benchmark (14.2\% to 30.7\%), suggesting that self-evolving agent architectures learn general problem-solving strategies rather than task-specific tricks.
+DGM 在智能体层面展示了跨领域迁移：在 SWE-Bench 上进化的智能体在 Polyglot 多语言基准测试上也显示出改进的性能（14.2\% 到 30.7\%），表明自进化的智能体架构学习的是通用问题解决策略而非任务特定技巧。
 
-\textbf{Archive Diversity.} DGM's key insight is that maintaining a growing archive of agent variants---including currently suboptimal ones---enables open-ended exploration and avoids local optima. Archive diversity metrics quantify the breadth of the explored design space. The archive serves dual purposes: as a source of genetic material for future recombination and as a rollback mechanism when evolutionary paths prove unproductive.
+\textbf{存档多样性。}DGM 的关键洞见是维护一个不断增长的智能体变体存档——包括当前次优的变体——使得开放式探索成为可能并避免局部最优。存档多样性度量量化了探索设计空间的广度。存档具有双重目的：作为未来重组的遗传物质来源，以及当进化路径被证明无效时的回滚机制。
 
-\textbf{Rollback Rate.} The frequency of rollbacks to previous versions directly measures evolution reliability. High rollback rates indicate insufficiently conservative mutation-selection processes. DGM reports rollback rates as part of its fitness evaluation, and the diversity-weighted sampling strategy explicitly encourages exploration of underexplored regions of the agent design space.
+\textbf{回滚率。}回滚到先前版本的频率直接测量进化可靠性。高回滚率表明变异-选择过程不够保守。DGM 将回滚率作为其适应度评估的一部分报告，多样性加权采样策略明确鼓励探索智能体设计空间中欠探索的区域。
 
-\textbf{Cost Efficiency Metrics.} The cost of self-evolution is a critical but often underreported dimension. We identify four cost categories that should be tracked: (1) API costs measured in token consumption per improvement iteration; (2) wall-clock time including both LLM inference and evaluation execution; (3) human intervention frequency measuring how often manual oversight is required; and (4) compute costs for methods that involve fine-tuning or training. The total cost of a self-evolution experiment should be expressed as a cost-efficiency ratio: improvement gained per dollar spent, enabling comparison across methods with different cost profiles.
+\textbf{成本效率指标。}自进化的成本是一个关键但经常被低报的维度。我们识别了四类应追踪的成本：(1) 以每次改进迭代的 token 消耗衡量的 API 成本；(2) 包括 LLM 推理和评估执行在内的挂钟时间；(3) 衡量需要人工监督频率的人工干预频次；(4) 涉及微调或训练的方法的计算成本。自进化实验的总成本应表示为成本效率比：每花费一美元获得的改进量，使不同成本特征的方法之间可以比较。
 
-OPRO~\citep{opro2024} provides detailed cost analysis: 200-step optimization loops with 8 candidate instructions per step, using dual-LLM architecture (optimizer at temperature 1.0, scorer at temperature 0.0). The system retains top-20 instruction history with MD5 deduplication, achieving up to 25\% improvement on BBH tasks over human-designed prompts. The 200-step budget represents approximately 1,600 LLM calls for the optimizer and 200 for the scorer, providing a concrete cost baseline for prompt optimization methods.
+OPRO~\citep{opro2024} 提供了详细的成本分析：200 步优化循环，每步 8 个候选指令，使用双 LLM 架构（优化器温度 1.0，评分器温度 0.0）。系统保留 top-20 指令历史并使用 MD5 去重，在 BBH 任务上相对人工设计提示达到高达 25\% 的改进。200 步预算代表优化器约 1,600 次 LLM 调用和评分器约 200 次调用，为提示优化方法提供了具体的成本基线。
 
-EvoPrompt~\citep{evoprompt2024} evaluates across 31 datasets spanning classification, summarization, simplification, and BBH tasks, using both Genetic Algorithm and Differential Evolution variants with LLM-executed crossover and mutation. The comparison between GA and DE variants reveals that evolutionary algorithm choice affects both optimization quality and cost: DE variants tend to converge faster but may explore less of the prompt space, while GA variants with crossover produce more diverse candidates at higher computational cost.
+EvoPrompt~\citep{evoprompt2024} 跨 31 个数据集评估，涵盖分类、摘要、简化和 BBH 任务，使用遗传算法和差分进化变体，由 LLM 执行交叉和变异。GA 和 DE 变体之间的比较揭示了进化算法选择同时影响优化质量和成本：DE 变体倾向于更快收敛但可能较少探索提示空间，而带交叉的 GA 变体以更高计算成本产生更多样的候选。
 
-FunSearch's infrastructure cost is particularly informative: the system maintains 10 islands (independent sub-populations) with periodic bottom-50\% resets, 15 samplers, and 140 evaluators operating in parallel. The evaluation bottleneck is evidenced by the 1:9 sampler-to-evaluator ratio, and the cluster-level aggregation by Signature (per-test-case score tuples) enables efficient deduplication of equivalent solutions. Temperature 0.1 for cluster sampling ensures that the system is heavily biased toward high-score clusters, focusing compute on the most promising regions of the search space.
+FunSearch 的基础设施成本特别值得关注：该系统维护 10 个岛屿（独立子种群），定期重置底 50\%，15 个采样器和 140 个评估器并行运行。1:9 的采样器-评估器比率证明了评估瓶颈，按 Signature（按测试用例分数元组）进行的集群级聚合实现了等效解的高效去重。集群采样的温度 0.1 确保系统严重偏向高分集群，将计算聚焦于搜索空间中最有前景的区域。
 
 
-\subsubsection{L5: Safety and Cost Gates}
+\subsubsection{L5：安全与成本门控}
 \label{sec:eval-L5}
 
-The highest layer evaluates whether improvement was achieved at acceptable cost and risk. As self-evolving agents become more autonomous and more capable, the importance of L5 evaluation increases proportionally.
+最高层评估改进是否以可接受的成本和风险达成。随着自进化智能体变得更加自主和更加强大，L5 评估的重要性成比例增加。
 
-\textbf{Permission Verification.} Every candidate variant must undergo permission checks before deployment. Self-modifying agents like G\"{o}del Agent~\citep{godelagent2024} and SICA are particularly sensitive to this concern because their self-modification capabilities extend to the agent's own operational constraints. G\"{o}del Agent achieves 8--15\% improvement over hand-designed agents on HotPotQA through recursive self-modification, but this very capability raises fundamental questions about permission boundaries: what modifications should be allowed, who sets the permission policy, and how can we verify that permissions are respected during evolution?
+\textbf{权限验证。}每个候选变体在部署前必须经过权限检查。像 G\"{o}del Agent~\citep{godelagent2024} 和 SICA 这样的自修改智能体对此问题尤为敏感，因为其自修改能力延伸到智能体自身的操作约束。G\"{o}del Agent 通过递归自修改在 HotPotQA 上达到比手工设计智能体高 8--15\% 的改进，但正是这种能力引发了关于权限边界的根本性问题：应该允许哪些修改、谁设定权限策略、以及如何验证进化过程中权限被遵守？
 
-We identify three levels of permission models for self-evolving agents. \textbf{Static permissions} define a fixed set of allowed modifications at design time (e.g., ``the agent may modify its prompts but not its code''). Static permissions are simple to verify but limit the scope of possible improvements. \textbf{Dynamic permissions} allow the permission set to evolve alongside the agent, with modifications to the permission policy itself requiring human approval. Dynamic permissions enable wider exploration but introduce a meta-permission problem. \textbf{Contractual permissions} encode behavioral constraints as executable specifications (e.g., ``the agent must always pass regression tests after modification''), allowing any modification that satisfies the contract. Contractual permissions are the most flexible but require comprehensive test coverage to be effective. The choice of permission model has direct implications for evaluation: static permissions can be verified by simple code inspection, dynamic permissions require monitoring the permission evolution trajectory, and contractual permissions require regression test execution after every modification.
+我们识别了自进化智能体的三个权限模型级别。\textbf{静态权限}在设计时定义固定的允许修改集合（如"智能体可以修改其提示但不能修改其代码"）。静态权限简单易验证但限制了可能的改进范围。\textbf{动态权限}允许权限集随智能体一起进化，权限策略本身的修改需要人工审批。动态权限支持更广泛的探索但引入了元权限问题。\textbf{契约权限}将行为约束编码为可执行规范（如"智能体在修改后必须始终通过回归测试"），允许满足契约的任何修改。契约权限最灵活但需要全面的测试覆盖率才能有效。权限模型的选择对评估有直接影响：静态权限可通过简单代码检查验证，动态权限需要监控权限进化轨迹，契约权限需要在每次修改后执行回归测试。
 
-\textbf{Cost Accounting.} Key metrics include: API calls per improvement iteration, token consumption per unit gain, wall-clock time to target performance, and human intervention frequency. Cost should be part of the fitness function, not an afterthought. AlphaEvolve's infrastructure improvements demonstrate the value of cost-aware evaluation: recovered 0.7\% of worldwide compute in data center scheduling and 23--32\% speedups in LLM training represent economically significant improvements that would not be captured by accuracy-only metrics.
+\textbf{成本核算。}关键指标包括：每次改进迭代的 API 调用次数、每单位增益的 token 消耗、达到目标性能的挂钟时间和人工干预频次。成本应是适应度函数的一部分，而非事后补充。AlphaEvolve 的基础设施改进展示了成本感知评估的价值：在数据中心调度中恢复的全球 0.7\% 计算资源和 LLM 训练中的 23--32\% 加速代表了仅凭准确率指标无法捕获的经济意义上的改进。
 
-\textbf{Regression Testing.} Every evolved variant must pass regression tests verifying core capability preservation. Self-evolution can produce negative transfer: optimizing for new tasks may degrade existing ones. This phenomenon has been observed in weight-modification methods: STaR's improvement on GSM8K (35\% to 74\%) comes at the cost of degraded performance on some out-of-distribution tasks, as the fine-tuning process specializes the model toward the training distribution. Similarly, RISE's multi-turn self-correction training may cause the model to over-correct on simple tasks where the initial answer was already correct.
+\textbf{回归测试。}每个进化变体必须通过验证核心能力保持的回归测试。自进化可能产生负迁移：为新任务优化可能降低现有任务性能。这一现象已在权重修改方法中观察到：STaR 在 GSM8K 上的改进（35\% 到 74\%）以某些分布外任务性能退化为代价，因为微调过程使模型专门化于训练分布。类似地，RISE 的多轮自我纠正训练可能导致模型在初始答案已正确的简单任务上过度纠正。
 
-The rollback mechanisms in archive-based systems like DGM serve as automated regression testing---variants that fail to maintain baseline performance are simply not selected. However, rollback-based regression testing has a limitation: it only prevents performance degradation on the benchmarks used for selection. Performance degradation on unmeasured dimensions---such as response latency, memory consumption, or robustness to adversarial inputs---may go undetected. A comprehensive regression testing strategy should include performance baselines across multiple dimensions, not just the primary optimization metric.
+基于存档的系统（如 DGM）中的回滚机制充当自动化回归测试——未能维持基线性能的变体直接不被选择。然而，基于回滚的回归测试有一个局限：它仅防止用于选择的基准测试上的性能退化。未测量维度上的性能退化——如响应延迟、内存消耗或对抗输入的稳健性——可能无法被检测到。全面的回归测试策略应包含跨多个维度的性能基线，而非仅限于主要优化指标。
 
-\textbf{Human Audit.} For high-stakes applications, human review of code changes, reasoning traces, and safety constraint maintenance provides the final safety net. Human audit is the most expensive evaluation layer but also the most capable of detecting subtle failures that automated systems miss: ethical violations, culturally insensitive outputs, logical inconsistencies that happen to satisfy the evaluation criteria, and security vulnerabilities that exploit assumptions in the test suite. AI Scientist v2's peer review score of 6.33 represents a form of human audit at the research output level, demonstrating that human evaluators can assess AI-generated content at a quality level comparable to human-generated content. The OpenTreeSearch comparison on circle packing ($n=26$) demonstrates that different evolution systems can converge on similar optima (AlphaEvolve: 2.635, OpenEvolve: 2.634, OpenTreeSearch: 2.632), providing cross-system validation of evolutionary results that reduces the need for human verification of individual results.
+\textbf{人工审计。}对于高风险应用，人工审查代码变更、推理轨迹和安全约束维护提供了最终安全网。人工审计是最昂贵的评估层，但也是最善于检测自动化系统遗漏的微妙故障的：伦理违规、文化不敏感输出、碰巧满足评估标准的逻辑不一致，以及利用测试套件假设的安全漏洞。AI Scientist v2 的同行评审分数 6.33 代表了研究输出层面的人工审计形式，表明人类评估者可以以与人类生成内容相当的质量水平评估 AI 生成内容。OpenTreeSearch 在圆形填充（$n=26$）上的比较表明不同进化系统可以收敛于相似的最优值（AlphaEvolve: 2.635, OpenEvolve: 2.634, OpenTreeSearch: 2.632），提供了进化结果的跨系统验证，减少了对单个人工验证个别结果的需求。
 
-\textbf{Human Audit.} For high-stakes applications, human review of code changes, reasoning traces, and safety constraint maintenance provides the final safety net. AI Scientist v2's peer review score of 6.33 represents a form of human audit at the research output level. The OpenTreeSearch comparison on circle packing ($n=26$) demonstrates that different evolution systems can converge on similar optima (AlphaEvolve: 2.635, OpenEvolve: 2.634, OpenTreeSearch: 2.632), providing cross-system validation of evolutionary results.
+\textbf{人工审计。}对于高风险应用，人工审查代码变更、推理轨迹和安全约束维护提供了最终安全网。AI Scientist v2 的同行评审分数 6.33 代表了研究输出层面的人工审计形式。OpenTreeSearch 在圆形填充（$n=26$）上的比较表明不同进化系统可以收敛于相似的最优值（AlphaEvolve: 2.635, OpenEvolve: 2.634, OpenTreeSearch: 2.632），提供了进化结果的跨系统验证。
 
 
-\subsection{Quantitative Benchmark Results Across Methods}
+\subsection{跨方法定量基准测试结果}
 \label{sec:eval-quantitative}
 
-This section consolidates quantitative results from the agent evolution literature, organized by benchmark category. These tables provide a comprehensive reference for comparing self-improvement methods across standardized evaluation settings.
+本节汇总智能体进化文献中的定量结果，按基准测试类别组织。这些表格为在标准化评估设置下比较自改进方法提供了综合参考。
 
 \begin{table}[htbp]
 \centering
 \small
-\caption{Code generation and software engineering benchmark results across self-improvement methods. Pass@1 unless otherwise noted.}
+\caption{代码生成和软件工程基准测试跨自改进方法的结果。除特别说明外均为 Pass@1。}
 \label{tab:eval-code}
 \begin{tabular}{p{28mm}p{22mm}p{18mm}p{18mm}p{30mm}}
 \toprule
@@ -211,16 +211,16 @@ Agent Sym. Learn. & GPT-4 & 73.2\% & --- & Symbolic optimization \\
 \end{tabular}
 \end{table}
 
-Reflexion's 91\% pass@1 on HumanEval using GPT-3.5-turbo surpasses GPT-4 zero-shot (80.1\%) by 10.9 percentage points. The memory buffer---storing natural language descriptions of failures and corrections---acts as a ``verbal gradient'' guiding subsequent attempts. This result demonstrates that a smaller model with self-correction capabilities can outperform a larger model without them, a finding with significant practical implications.
+Reflexion 使用 GPT-3.5-turbo 在 HumanEval 上 91\% 的 pass@1 以 10.9 个百分点超越 GPT-4 零样本（80.1\%）。存储失败和纠正的自然语言描述的记忆缓冲区充当"语言梯度"引导后续尝试。该结果表明，具有自我纠正能力的较小模型可以超越没有该能力的较大模型，这一发现具有重要的实践意义。
 
-DGM's SWE-Bench improvement (20.0\% to 50.0\%, a 2.5$\times$ relative gain) demonstrates that agent-level self-modification can produce gains beyond prompt-level or memory-level self-improvement. The Polyglot cross-language result (14.2\% to 30.7\%) further demonstrates that evolved agent architectures capture generalizable problem-solving strategies.
+DGM 在 SWE-Bench 上的改进（20.0\% 到 50.0\%，2.5$\times$ 相对增益）表明智能体级自修改可以产生超越提示级或记忆级自改进的增益。Polyglot 跨语言结果（14.2\% 到 30.7\%）进一步表明进化的智能体架构捕获了可泛化的问题解决策略。
 
-Absolute Zero achieves SOTA at 7B scale using zero external training data, with code self-play generating both tasks and solutions verified by a code executor. This result challenges the assumption that self-improvement requires external supervision.
+Absolute Zero 使用零外部训练数据在 7B 规模达到 SOTA，代码自博弈同时生成任务和解决方案，由代码执行器验证。该结果挑战了自改进需要外部监督的假设。
 
 \begin{table}[htbp]
 \centering
 \small
-\caption{Mathematical reasoning benchmark results across self-improvement methods.}
+\caption{数学推理基准测试跨自改进方法的结果。}
 \label{tab:eval-math}
 \begin{tabular}{p{28mm}p{22mm}p{18mm}p{18mm}p{30mm}}
 \toprule
@@ -239,14 +239,14 @@ EvoAgentX (MIPRO) & Various & --- & 72.3\% & Multi-prompt optim. \\
 \end{tabular}
 \end{table}
 
-STaR's improvement from 35\% to 74\% on GSM8K represents one of the largest relative improvements in the literature (111\% relative gain). RISE's RL-based self-correction significantly outperforms Self-Refine's prompt-based approach (RISE: 38\%$\to$46\% vs.\ Self-Refine: 56\%$\to$67\%), suggesting that self-improvement is more effective when correction behavior is learned through training rather than prompted at inference time.
+STaR 在 GSM8K 上从 35\% 到 74\% 的改进代表了文献中最大的相对改进之一（111\% 相对增益）。RISE 基于RL的自我纠正显著优于 Self-Refine 基于提示的方法（RISE: 38\%$\to$46\% vs.\ Self-Refine: 56\%$\to$67\%），表明当纠正行为通过训练而非推理时提示获得时，自改进更为有效。
 
-EvoAgentX's optimizer comparison on MATH reveals substantial variation: TextGrad (76.0\%) outperforms AFlow (71.0\%) and MIPRO (72.3\%), all exceeding the original pipeline (66.0\%). This comparison demonstrates that the choice of optimization algorithm is itself a critical design decision in self-evolution systems.
+EvoAgentX 在 MATH 上的优化器比较揭示了显著差异：TextGrad（76.0\%）优于 AFlow（71.0\%）和 MIPRO（72.3\%），三者均超过原始管道（66.0\%）。这一比较表明优化算法选择本身是自进化系统中的关键设计决策。
 
 \begin{table}[htbp]
 \centering
 \small
-\caption{Multi-task and cross-domain evaluation results.}
+\caption{多任务和跨领域评估结果。}
 \label{tab:eval-multitask}
 \begin{tabular}{p{32mm}p{22mm}p{28mm}p{28mm}}
 \toprule
@@ -266,12 +266,12 @@ AI Scientist v2 & Peer Review & --- & 6.33 (top 45\%) \\
 \end{tabular}
 \end{table}
 
-The multi-task results demonstrate that self-improvement is not limited to code and math domains. Agent Symbolic Learning produces consistent improvements across software development (2.4 to 3.8 on a 1--4 executability scale), creative writing (6.8 to 7.4 on a 1--10 GPT-4 judge scale), and multi-hop QA (36.2 to 39.1 F1 on HotPotQA). Reflexion's 97\% on ALFWorld (from 75\% baseline) demonstrates that natural language reflection is highly effective in interactive embodied environments.
+多任务结果表明自改进不限于代码和数学领域。Agent Symbolic Learning 在软件开发（1--4 可执行性量表上 2.4 到 3.8）、创意写作（1--10 GPT-4 评分量表上 6.8 到 7.4）和多跳问答（HotPotQA 上 F1 从 36.2 到 39.1）上产生了一致的改进。Reflexion 在 ALFWorld 上的 97\%（从 75\% 基线）表明自然语言反思在交互式具身环境中非常有效。
 
 \begin{table}[htbp]
 \centering
 \small
-\caption{Self-Refine performance across seven diverse tasks. Average improvement approximately 20\%.}
+\caption{Self-Refine 在七项不同任务上的表现。平均改进约 20\%。}
 \label{tab:eval-selfrefine}
 \begin{tabular}{p{30mm}p{25mm}p{20mm}p{20mm}p{15mm}}
 \toprule
@@ -288,63 +288,63 @@ Constrained Gen. & Compliance & 65\% & 78\% & +13pp \\
 \end{tabular}
 \end{table}
 
-Self-Refine's results across seven tasks demonstrate the breadth of applicability of iterative self-correction. The largest gains come in dialogue response (+16pp win rate) and code optimization (+28\%), while more constrained tasks like acrostic poetry show more modest improvements. This pattern suggests that self-refinement is most effective when the output space is large and the feedback signal is informative. In constrained tasks, the initial output is often already near-optimal within the constraints, leaving less room for iterative improvement.
+Self-Refine 在七项任务上的结果展示了迭代自我纠正的广泛适用性。最大增益出现在对话响应（+16pp 胜率）和代码优化（+28\%）中，而更具约束性的任务如藏头诗的改进较为温和。这一模式表明当输出空间较大且反馈信号信息丰富时，自我精炼最为有效。在约束性任务中，初始输出通常已在约束内接近最优，留给迭代改进的空间较小。
 
-The variation in improvement magnitude across tasks also provides evidence about the mechanism of self-refinement. Tasks where the evaluation criteria are well-defined and easily verbalized (code optimization, constrained generation) tend to show larger improvements than tasks with subjective criteria (acrostic poetry quality). This suggests that the self-refinement loop works by generating informative natural language feedback, and that feedback quality is higher when the evaluation criteria are more explicit---an important design consideration for self-evolution systems that rely on LLM-generated feedback signals.
+跨任务改进幅度的差异也提供了关于自我精炼机制的证据。评估标准明确定义且易于语言化的任务（代码优化、约束生成）往往显示更大的改进，而主观标准的任务（藏头诗质量）改进较小。这表明自我精炼回路通过生成信息丰富的自然语言反馈起作用，且评估标准越明确，反馈质量越高——这是依赖 LLM 生成反馈信号的自进化系统的重要设计考量。
 
 
-\subsection{Benchmark Contamination and Reproducibility}
+\subsection{基准测试污染与可复现性}
 \label{sec:eval-contamination}
 
-Benchmark contamination is particularly problematic for self-evolution research where claimed improvements may be artifacts of memorization rather than genuine capability gain. As LLMs are trained on increasingly large internet-scale corpora, the probability that benchmark examples appear in training data approaches certainty for widely-used benchmarks.
+基准测试污染对自进化研究尤为棘手，因为声称的改进可能是记忆化的产物而非真实能力提升。随着 LLM 在越来越大的互联网规模语料上训练，基准测试样本出现在训练数据中的概率对广泛使用的基准测试趋近于确定。
 
-\textbf{Three levels of contamination.} We distinguish three levels of increasing subtlety. (1) \textbf{Direct contamination}---test examples appear verbatim in training data. This is most likely for widely-used benchmarks (HumanEval, GSM8K, MMLU) that have been publicly available since before model training cutoffs. The contamination is detectable via n-gram overlap analysis and membership inference attacks. (2) \textbf{Near-miss contamination}---the model has seen similar but not identical problems, inflating scores through pattern transfer. This is harder to detect but can be estimated by comparing performance on original vs.\ reformulated problems. (3) \textbf{Evaluator leakage}---the agent has access to the evaluation function during evolution, enabling optimization against the evaluator rather than genuine improvement. This is the most insidious form because it produces ``improvements'' that are genuine with respect to the observed metric but meaningless in deployment.
+\textbf{三个污染层次。}我们区分三个递增微妙性的层次。(1) \textbf{直接污染}——测试样本在训练数据中原样出现。这对广泛使用的基准测试（HumanEval、GSM8K、MMLU）最有可能，这些基准在模型训练截止日期之前就已公开发布。污染可通过 n-gram 重叠分析和成员推理攻击检测。(2) \textbf{近失污染}——模型见过相似但不完全相同的问题，通过模式迁移虚高分数。这更难检测但可通过比较原始和重新表述问题上的性能来估计。(3) \textbf{评估器泄漏}——智能体在进化期间可以访问评估函数，能够针对评估器优化而非真实改进。这是最隐蔽的形式，因为它产生的"改进"相对于观察到的指标是真实的，但在部署中毫无意义。
 
-\textbf{Mitigation strategies.} Several approaches have been proposed: (a) Temporal splits---using only benchmarks released after training cutoff. This is simple but limits benchmark availability. (b) Held-out sets---structurally similar but novel instances. GPQA's expert-level questions provide natural protection because they are unlikely to appear in training data. (c) Procedural generation---algorithmically generating problems, as in SPIRAL and Absolute Zero. Absolute Zero's self-play approach is particularly elegant: the model generates its own training tasks, making external contamination impossible by construction. (d) Run-time isolation---sandboxed evaluation preventing access to ground truth. FunSearch's 15-sampler, 140-evaluator architecture with triple safety filtering demonstrates this approach at scale.
+\textbf{缓解策略。}已提出多种方法：(a) 时间分割——仅使用训练截止后发布的基准测试。简单但限制基准可用性。(b) 保留集——结构相似但全新的实例。GPQA 的专家级问题提供天然保护，因为它们不太可能出现在训练数据中。(c) 程序化生成——算法生成问题，如 SPIRAL 和 Absolute Zero。Absolute Zero 的自博弈方法尤为优雅：模型生成自己的训练任务，从构造上使外部污染不可能。(d) 运行时隔离——沙箱化评估阻止访问真值。FunSearch 的 15 个采样器、140 个评估器架构配合三重安全过滤在大规模上展示了这种方法。
 
-\textbf{Reproducibility challenges.} Beyond contamination, self-evolution research faces unique reproducibility challenges. LLM non-determinism means the same prompt produces different outputs across runs. API version changes mean model behavior updates without notice---a GPT-4-turbo checkpoint from January 2024 may produce qualitatively different results from one in December 2024. State-dependent evaluation means results depend on the full evolution history, not just the final agent configuration. Cost barriers mean full reproduction of evolutionary experiments requires thousands of API calls, with costs ranging from tens to hundreds of dollars per experimental condition.
+\textbf{可复现性挑战。}除污染外，自进化研究面临独特的可复现性挑战。LLM 非确定性意味着相同提示在不同运行中产生不同输出。API 版本变更意味着模型行为在无通知情况下更新——2024 年 1 月的 GPT-4-turbo 检查点可能与 2024 年 12 月的产生性质不同的结果。状态依赖评估意味着结果取决于完整进化历史，而非仅最终智能体配置。成本障碍意味着完整复现进化实验需要数千次 API 调用，每个实验条件的成本从数十到数百美元不等。
 
-\textbf{Statistical rigor.} ADAS~\citep{adas2024} provides a model for rigorous statistical evaluation: fitness is measured via bootstrap 95\% confidence intervals with 100,000 resamples, and dynamic code execution uses ThreadPoolExecutor with 32--48 workers for parallel evaluation. This level of statistical rigor should be the standard, not the exception, in self-evolution research.
+\textbf{统计严谨性。}ADAS~\citep{adas2024} 为严格统计评估提供了模型：适应度通过 100,000 次重采样的 bootstrap 95\% 置信区间测量，动态代码执行使用 32--48 个工作线程的 ThreadPoolExecutor 进行并行评估。这种统计严谨水平应该是自进化研究的标准而非例外。
 
-We recommend that future papers report: (1) model version and API endpoint, (2) random seeds and sampling parameters, (3) total cost in tokens and dollars, (4) full evolution trajectory with intermediate checkpoints, (5) failure analysis including rollback events, and (6) contamination analysis with respect to model training data cutoff dates.
+我们建议未来论文报告：(1) 模型版本和 API 端点，(2) 随机种子和采样参数，(3) 以 token 和美元计的总成本，(4) 带有中间检查点的完整进化轨迹，(5) 包括回滚事件的失败分析，(6) 关于模型训练数据截止日期的污染分析。
 
-The reproducibility crisis is exacerbated by the proprietary nature of most frontier LLMs. When a self-evolution paper reports results using ``GPT-4,'' the specific model version, system prompt, and API parameters may all affect results, yet these details are frequently omitted. Open-source model evaluations (e.g., Absolute Zero using Qwen-7B) provide better reproducibility guarantees because the model weights are fixed and publicly available, enabling exact reproduction of experimental conditions. We encourage the community to prioritize open-model evaluations alongside proprietary-model evaluations, and to treat proprietary-model results as upper-bound estimates rather than reproducible findings.
+可复现性危机因大多数前沿 LLM 的专有性质而加剧。当自进化论文报告使用"GPT-4"的结果时，具体模型版本、系统提示和 API 参数都可能影响结果，但这些细节经常被省略。开源模型评估（如使用 Qwen-7B 的 Absolute Zero）提供更好的可复现性保证，因为模型权重是固定且公开可用的，能够精确复现实验条件。我们鼓励社区在专有模型评估之外优先考虑开源模型评估，并将专有模型结果视为上界估计而非可复现发现。
 
-An underappreciated aspect of reproducibility is the interaction between temperature settings and evolutionary dynamics. Many self-evolution methods use temperature 0.0 for evaluation (to ensure deterministic scoring) but temperature $>$0 for generation (to encourage exploration). The choice of generation temperature affects the diversity of the candidate pool, which in turn affects the evolutionary trajectory. Two runs with identical configurations except for generation temperature may produce qualitatively different evolutionary outcomes, making temperature a critical variable that must be reported and controlled.
+可复现性中一个未被充分认识的方面是温度设置与进化动态之间的交互。许多自进化方法使用温度 0.0 进行评估（确保确定性评分）但温度 $>$0 进行生成（鼓励探索）。生成温度的选择影响候选池的多样性，进而影响进化轨迹。除生成温度外配置完全相同的两次运行可能产生性质不同的进化结果，使温度成为必须报告和控制的关键变量。
 
 
-\subsection{The Evaluator's Dilemma}
+\subsection{评估器困境}
 \label{sec:eval-dilemma}
 
-Self-evolution introduces a fundamental tension: the system being evaluated is optimizing against the evaluation function. This creates a co-evolutionary dynamic between the agent and its evaluator, with distinct failure modes depending on the evaluator's independence.
+自进化引入了一个基本张力：被评估的系统正在优化评估函数。这在智能体与其评估器之间创建了协同进化动态，具有取决于评估器独立性的不同失败模式。
 
-\textbf{Self-Rewarding and evaluator degradation.} Self-Rewarding Language Models~\citep{selfrewarding2024} illustrate both the promise and peril of self-evaluation. The model evaluates its own outputs and fine-tunes on its preferences. Initially, genuine improvement occurs as the model learns to produce higher-quality outputs that also receive higher self-assigned scores. Over iterations, however, the model may learn to produce outputs that satisfy its judge rather than genuinely high-quality outputs---the evaluator reward and true quality diverge.
+\textbf{自奖励与评估器退化。}自奖励语言模型~\citep{selfrewarding2024} 阐明了自评估的前景与风险。模型评估自身输出并基于自身偏好进行微调。初期出现真实改进，因为模型学会产生也获得更高自评分的更高质量输出。然而，随着迭代，模型可能学会产生满足其评判器而非真正高质量的输出——评估器奖励与真实质量发生偏离。
 
-\textbf{Meta-Rewarding and recursive evaluation.} Meta-Rewarding~\citep{metarewarding2024} adds a meta-judge to evaluate the judge, creating a recursive evaluation structure. While this can detect some forms of evaluator degradation, it introduces a meta-evaluator's dilemma: who evaluates the meta-evaluator? The recursion must bottom out at an external ground truth, or the evaluation becomes entirely self-referential.
+\textbf{元奖励与递归评估。}元奖励~\citep{metarewarding2024} 增加了一个元评判器来评估评判器，创建递归评估结构。虽然这可以检测某些形式的评估器退化，但它引入了元评估器的困境：谁来评估元评估器？递归必须终止于外部真值，否则评估将变得完全自指。
 
-\textbf{Absolute Zero's elegant solution.} Absolute Zero~\citep{absolutezero2025} resolves the evaluator's dilemma through code execution. The self-play training generates both tasks (code problems) and solutions; a deterministic code executor provides binary verification (pass/fail). The evaluator is not a learned model but a programmatic sandbox, making evaluator degradation impossible by construction. This approach generalizes to any domain where programmatic verification is available: mathematical proofs (verified by proof checkers), physical simulations (verified by numerical solvers), and database queries (verified by execution against ground-truth databases).
+\textbf{Absolute Zero 的优雅解决方案。}Absolute Zero~\citep{absolutezero2025} 通过代码执行解决了评估器困境。自博弈训练同时生成任务（代码问题）和解决方案；确定性代码执行器提供二元验证（通过/失败）。评估器不是学习到的模型而是程序化沙箱，从构造上使评估器退化不可能。这种方法可推广到任何有程序化验证可用的领域：数学证明（由证明检验器验证）、物理模拟（由数值求解器验证）和数据库查询（由针对真值数据库执行验证）。
 
-\textbf{The independence spectrum.} We can arrange evaluation methods along an independence spectrum:
+\textbf{独立性谱系。}我们可以将评估方法沿独立性谱系排列：
 
 \begin{enumerate}[nosep]
-\item \textbf{Fully self-referential}: Self-Refine, Self-Rewarding (same model generates, evaluates, and improves).
-\item \textbf{Partially independent}: Reflexion (external environment provides feedback, but the model interprets it), RISE (external reward signal from RL environment).
-\item \textbf{Structurally independent}: DGM, ADAS (code execution against external test suites), AlphaEvolve (programmatic evaluators).
-\item \textbf{Fully independent}: FunSearch (separate sampler and evaluator populations), Absolute Zero (code executor as ground truth), AI Scientist v2 (human peer review).
+\item \textbf{完全自指}：Self-Refine、Self-Rewarding（同一模型生成、评估和改进）。
+\item \textbf{部分独立}：Reflexion（外部环境提供反馈，但模型解释它），RISE（来自 RL 环境的外部奖励信号）。
+\item \textbf{结构独立}：DGM、ADAS（针对外部测试套件的代码执行），AlphaEvolve（程序化评估器）。
+\item \textbf{完全独立}：FunSearch（独立的采样器和评估器群体），Absolute Zero（代码执行器作为真值），AI Scientist v2（人类同行评审）。
 \end{enumerate}
 
-The resolution lies in maximizing evaluator independence: the evaluation function should be as independent as possible from the agent being evolved. The five-layer hierarchy provides multiple independent evaluation signals, reducing the risk of any single evaluator's weakness being exploited.
+解决方案在于最大化评估器独立性：评估函数应尽可能独立于被进化的智能体。五层层级体系提供多个独立评估信号，降低任何单一评估器弱点被利用的风险。
 
-A practical implication is that self-evolution systems should employ \emph{defense in depth} for evaluation: multiple independent evaluators operating at different layers, each capable of detecting failures that others might miss. A code-generating agent might pass all unit tests (L1), score well on HumanEval (L2), and even solve SWE-Bench tasks (L3), yet still fail a human audit (L5) because its solutions contain subtle security vulnerabilities or unnecessarily complex code that would be difficult for human developers to maintain. Each evaluation layer catches different failure modes, and only the combination provides comprehensive coverage.
+一个实践启示是自进化系统应采用\emph{纵深防御}进行评估：多个独立评估器在不同层操作，每个都能检测其他评估器可能遗漏的故障。一个代码生成智能体可能通过所有单元测试（L1），在 HumanEval 上得分良好（L2），甚至解决 SWE-Bench 任务（L3），但仍然无法通过人工审计（L5），因为其解决方案包含微妙的安全漏洞或不必要地复杂、人类开发者难以维护的代码。每一评估层捕获不同的故障模式，只有组合才能提供全面覆盖。
 
-The evaluator's dilemma also has implications for the design of self-play training systems. Absolute Zero's approach---where the evaluator is a deterministic code executor---represents the gold standard for evaluator independence, but it is limited to domains where programmatic verification is available. For domains such as creative writing, strategic planning, or open-ended reasoning, no such programmatic evaluator exists, and the field must develop new approaches to evaluation independence. Potential directions include multi-model evaluation (using different LLMs as generator and evaluator), human-in-the-loop evaluation for high-stakes decisions, and adversarial evaluation where a separate system actively searches for evaluator weaknesses.
+评估器困境对自博弈训练系统的设计也有启示。Absolute Zero 的方法——评估器是确定性代码执行器——代表了评估器独立性的金标准，但仅限于有程序化验证可用的领域。对于创意写作、策略规划或开放推理等领域，不存在这样的程序化评估器，领域必须发展评估独立性的新方法。潜在方向包括多模型评估（使用不同 LLM 作为生成器和评估器）、高风险决策的人工介入评估，以及对抗性评估（独立系统主动搜索评估器弱点）。
 
 
-\subsection{Evaluation Infrastructure and Community Assessment}
+\subsection{评估基础设施与社区评估}
 \label{sec:eval-infra}
 
 % ====================================================================
-% Figure 5.2: Self-Evolution System Architecture
+% 图5.2：自进化系统架构
 % ====================================================================
 \begin{figure}[htbp]
 \centering
@@ -391,34 +391,34 @@ The evaluator's dilemma also has implications for the design of self-play traini
     }
 
 \end{tikzpicture}
-\caption{Four-layer reference architecture for agent self-evolution evaluation. The Task Layer defines what is being evaluated; the Agent Layer defines who is being evaluated; the Evolution Layer defines how improvement occurs; the Infrastructure Layer provides persistent evaluation services.}
+\caption{智能体自进化评估的四层参考架构。任务层定义评估什么；智能体层定义评估谁；进化层定义改进如何发生；基础设施层提供持久评估服务。}
 \label{fig:evolution-arch}
 \end{figure}
 
 
-\subsubsection{Specialized Evaluation Frameworks}
+\subsubsection{专用评估框架}
 
-Several specialized frameworks have emerged to address the unique evaluation needs of self-evolving agents.
+多种专用框架已经出现，以解决自进化智能体的独特评估需求。
 
-\textbf{EvoAgentBench}~\citep{everos2025} introduces four evaluation dimensions specifically designed for agent self-evolution: (1) longitudinal growth curves measuring cumulative capability improvement over extended time horizons; (2) transfer efficiency quantifying how quickly improvements in one domain generalize to related domains; (3) error avoidance measuring the system's ability to learn from mistakes without human intervention; and (4) skill hit quality evaluating whether newly acquired skills are genuinely useful or merely decorative.
+\textbf{EvoAgentBench}~\citep{everos2025} 引入了专为智能体自进化设计的四个评估维度：(1) 纵向增长曲线，测量长时间范围内的累积能力改进；(2) 迁移效率，量化一个领域的改进多快能泛化到相关领域；(3) 错误规避，测量系统在无人工干预下从错误中学习的能力；(4) 技能命中质量，评估新习得技能是否真正有用还是仅为装饰。
 
-\textbf{EverMemBench}~\citep{everos2025} evaluates memory quality across three layers that mirror the complexity of real-world memory demands: Factual Recall tests direct information retrieval (``What was the user's name?''), Applied Reasoning tests using memories for problem-solving (``Based on past interactions, what would the user prefer?''), and Personalized Generalization tests adapting to user-specific patterns (``Given this user's history, predict their likely next request''). The three-layer structure captures the progression from simple storage to intelligent utilization of accumulated experience. The dataset is published on HuggingFace (EverMind-AI/EverMemBench-Dynamic), enabling reproducible evaluation and community contribution of new evaluation scenarios. EverMemBench's three-layer evaluation provides a model for how self-evolution evaluation should be structured: not as a single score, but as a profile across multiple capability dimensions that reveals both strengths and weaknesses. A system that scores well on Factual Recall but poorly on Applied Reasoning has accumulated information but cannot use it effectively; one that scores well on Personalized Generalization has learned to adapt but may be overfitting to specific user patterns. Only by evaluating across all three layers can we obtain a complete picture of memory quality.
+\textbf{EverMemBench}~\citep{everos2025} 跨三层评估记忆质量，映射真实世界记忆需求的复杂性：事实回忆测试直接信息检索（"用户叫什么名字？"），应用推理测试使用记忆进行问题解决（"基于过往交互，用户会偏好什么？"），个性化泛化测试适应用户特定模式（"给定该用户的历史，预测其可能的下一个请求"）。三层结构捕获了从简单存储到智能利用累积经验的进展。数据集发布在 HuggingFace（EverMind-AI/EverMemBench-Dynamic）上，支持可复现评估和社区贡献新评估场景。EverMemBench 的三层评估为自进化评估应如何结构化提供了模型：不是单一分数，而是跨越多个能力维度的画像，揭示优势和弱点。在事实回忆上得分好但在应用推理上差的系统积累了信息但无法有效利用；在个性化泛化上得分好的系统学会了适应但可能对特定用户模式过拟合。只有跨所有三层评估才能获得记忆质量的完整图景。
 
-\textbf{AgentBench}~\citep{agentbench2024} evaluates LLM-as-Agent across eight distinct environments spanning command-line interaction, database querying, knowledge graph navigation, game playing, lateral thinking, embodied tasks, web shopping, and multi-agent social deduction. The breadth of environments ensures that self-evolving agents cannot specialize to a single interaction paradigm and must develop general agent capabilities.
+\textbf{AgentBench}~\citep{agentbench2024} 跨八个不同环境评估 LLM-as-Agent，涵盖命令行交互、数据库查询、知识图谱导航、游戏博弈、横向思维、具身任务、Web 购物和多智能体社会推理。环境的广度确保自进化智能体不能专精于单一交互范式，必须发展通用智能体能力。
 
-\textbf{OPRO's optimization evaluation.} OPRO~\citep{opro2024} introduces a meta-evaluation framework for comparing optimization algorithms themselves. By evaluating across GSM8K, BBH (27 subtasks), MMLU (57 subtasks), AQuA, and MultiArith, OPRO demonstrates that prompt optimization quality varies substantially across task types, and no single optimizer dominates all domains.
+\textbf{OPRO 的优化评估。}OPRO~\citep{opro2024} 引入了比较优化算法本身的元评估框架。通过在 GSM8K、BBH（27 个子任务）、MMLU（57 个子任务）、AQuA 和 MultiArith 上评估，OPRO 表明提示优化质量在不同任务类型间差异很大，没有单一优化器在所有领域占优。
 
-\textbf{EvoAgent's multi-domain evaluation.} EvoAgent~\citep{evoagent2024} evaluates evolutionary multi-agent optimization across four task types: NLP reasoning (Logic Grid Puzzle, Creative Writing, Codenames), Multimodal reasoning (MMMU), Interactive Science (ScienceWorld, 30 tasks), and Travel Planning (TravelPlanner). The selection strategy comparison (random, all, performance-based) reveals that performance-based selection consistently outperforms random selection, but the gap varies by domain. This domain-dependent effectiveness of selection strategies suggests that the optimal evolutionary algorithm parameters may themselves need to evolve---a meta-optimization challenge that mirrors the self-referential nature of agent self-evolution.
+\textbf{EvoAgent 的多领域评估。}EvoAgent~\citep{evoagent2024} 跨四种任务类型评估进化多智能体优化：NLP 推理（逻辑网格谜题、创意写作、Codenames）、多模态推理（MMMU）、交互科学（ScienceWorld，30 个任务）和旅行规划（TravelPlanner）。选择策略比较（随机、全部、基于性能）表明基于性能的选择一致优于随机选择，但差距因领域而异。这种领域依赖的选择策略有效性表明最优进化算法参数本身可能需要进化——一个镜像智能体自进化自指性质的元优化挑战。
 
-\textbf{AI Scientist as evaluation paradigm.} AI Scientist v2~\citep{aiscientist2025} represents a fundamentally different approach to evaluation: rather than benchmarking against fixed test sets, it submits generated research to human peer review. The peer review score of 6.33 and top-45\% ranking among workshop submissions demonstrates that self-evolving AI systems can produce outputs that meet community quality standards. At approximately \$15 per paper, the cost is orders of magnitude lower than human research, raising questions about the future of evaluation: if AI-generated research becomes indistinguishable from human-generated research, the evaluation problem transforms from ``can the system improve?'' to ``can the community detect AI-generated outputs?'' This shift has profound implications for the evaluator's dilemma discussed in Section~\ref{sec:eval-dilemma}.
+\textbf{AI Scientist 作为评估范式。}AI Scientist v2~\citep{aiscientist2025} 代表了一种根本不同的评估方法：不针对固定测试集进行基准测试，而是将生成的研究提交给人类同行评审。6.33 的同行评审分数和研讨会提交中排名前 45\% 表明自进化 AI 系统可以产出满足社区质量标准的成果。以约每篇论文 \$15 的成本，其成本比人类研究低数个数量级，引发了对评估未来的思考：如果 AI 生成的研究变得与人类生成的研究不可区分，评估问题就从"系统能否改进？"转变为"社区能否检测到 AI 生成的内容？"这种转变对第~\ref{sec:eval-dilemma} 节讨论的评估器困境具有深远影响。
 
 
-\subsubsection{GitHub Community Quality Assessment}
+\subsubsection{GitHub 社区质量评估}
 
-Our analysis of 348 agent evolution GitHub repositories reveals a disconnect between popularity and quality that has significant implications for both researchers and practitioners selecting tools and baselines.
+我们对 348 个智能体进化 GitHub 仓库的分析揭示了受欢迎程度与质量之间的脱节，这对选择工具和基线的研究者和实践者有重要影响。
 
 % ====================================================================
-% Figure 5.3: Star/Fork Distribution
+% 图5.3：Star/Fork 分布
 % ====================================================================
 \begin{figure}[htbp]
 \centering
@@ -472,24 +472,24 @@ Our analysis of 348 agent evolution GitHub repositories reveals a disconnect bet
 
 \end{axis}
 \end{tikzpicture}
-\caption{Star/Fork distribution across 348 agent evolution GitHub repositories. The strong correlation ($R^2 > 0.9$) between stars and forks masks significant quality variation within categories.}
+\caption{348 个智能体进化 GitHub 仓库的 Star/Fork 分布。Stars 和 Forks 之间的强相关（$R^2 > 0.9$）掩盖了类别内的显著质量差异。}
 \label{fig:star-fork-scatter}
 \end{figure}
 
-The star quality scoring system uses five equally-weighted dimensions: star activity (90-day active stargazer proportion), contributor diversity (Gini coefficient inversion), fork quality (proportion of forks with substantive commits), issue quality (proportion of non-template, substantive issues), and PR merge rate (merged/total PRs). The composite score reveals striking disparities:
+星级质量评分系统使用五个等权维度：Star 活跃度（90 天活跃 Star 者比例）、贡献者多样性（基尼系数反转）、Fork 质量（有实质性提交的 Fork 比例）、Issue 质量（非模板、实质性 Issue 的比例）和 PR 合并率（已合并/总 PR 数）。综合评分揭示了惊人的差距：
 
-AutoGPT (175K stars) scores only 28/100 on composite quality, while OpenEvolve (6.3K stars) scores 74/100. The Stars-per-Contributor ratio provides the most reliable hype detection signal: values above 150 indicate hype-driven growth unlikely to be sustained. AutoGPT's ratio of 213 far exceeds the healthy threshold, while CrewAI's ratio of 107 falls within the steady growth zone.
+AutoGPT（175K Stars）综合质量仅得分 28/100，而 OpenEvolve（6.3K Stars）得分 74/100。Stars-per-Contributor 比率提供了最可靠的炒作检测信号：超过 150 的值表明不可能持续的炒作驱动增长。AutoGPT 的比率 213 远超健康阈值，而 CrewAI 的比率 107 落在稳定增长区间。
 
-Three growth patterns emerge from the temporal analysis. \textbf{Hype-driven growth} (AutoGPT: 0$\to$50K in 3 days; Devika: 0$\to$20K in 5 days) produces rapid initial star accumulation followed by declining contribution quality and community engagement. \textbf{Steady growth} (CrewAI: 0$\to$10K in 60 days; LangGraph) correlates with sustained community health and growing contributor diversity. \textbf{Academic-driven growth} (DSPy, SWE-Agent) shows the slowest star accumulation but highest star quality, with contributors making substantive code contributions and citing the project in publications.
+时间分析揭示了三种增长模式。\textbf{炒作驱动增长}（AutoGPT: 3 天 0$\to$50K; Devika: 5 天 0$\to$20K）产生快速初始 Star 积累，随后是贡献质量和社区参与度下降。\textbf{稳定增长}（CrewAI: 60 天 0$\to$10K; LangGraph）与持续的社区健康和不断增长的贡献者多样性相关。\textbf{学术驱动增长}（DSPy、SWE-Agent）Star 积累最慢但 Star 质量最高，贡献者做出实质性代码贡献并在出版物中引用项目。
 
-The practical implication is clear: when selecting baselines, tools, or evaluation frameworks, researchers should look beyond star counts to the composite quality score, contributor diversity, and community health indicators. An evaluation infrastructure built on hype-driven projects may inherit their instability and lack of rigor.
+实践启示很明确：在选择基线、工具或评估框架时，研究者应超越 Star 数量，关注综合质量评分、贡献者多样性和社区健康指标。建立在炒作驱动项目上的评估基础设施可能继承其不稳定性和缺乏严谨性。
 
-To formalize this assessment, we propose a suspicion index: $\text{suspicionIndex} = \text{starsPerContributor} / 100$. Projects with index below 0.5 are classified as organic (genuine community adoption), 0.5--1.5 as watch (mixed signals), and above 1.5 as suspicious (likely hype-driven). Among the 12 major projects in our analysis, the suspicion index correctly identifies AutoGPT (2.13, suspicious), Devika (1.83, suspicious), and MetaGPT (1.43, watch) as projects with popularity disproportionate to contributor engagement, while classifying DSPy, SWE-Agent, and OpenEvolve as organic high-quality projects.
+为形式化此评估，我们提出可疑指数：$\text{suspicionIndex} = \text{starsPerContributor} / 100$。指数低于 0.5 的项目归类为有机增长（真实社区采用），0.5--1.5 为观察（混合信号），高于 1.5 为可疑（可能炒作驱动）。在我们分析的 12 个主要项目中，可疑指数正确识别了 AutoGPT（2.13，可疑）、Devika（1.83，可疑）和 MetaGPT（1.43，观察）为受欢迎程度与贡献者参与度不成比例的项目，同时将 DSPy、SWE-Agent 和 OpenEvolve 分类为有机高质量项目。
 
-This quality assessment framework is relevant to evaluation because it affects the reliability of evaluation tools and benchmarks. A benchmark maintained by a high-quality community (contributor diversity $>$0.7, fork quality $>$40\%) is more likely to be well-tested, documented, and maintained than one from a hype-driven project. Similarly, evaluation tools with high PR merge rates indicate active maintenance and responsiveness to bug reports---critical properties for infrastructure that other researchers depend upon for reproducible evaluation.
+这一质量评估框架与评估相关，因为它影响评估工具和基准测试的可靠性。由高质量社区维护的基准测试（贡献者多样性 $>$0.7，Fork 质量 $>$40\%）更可能经过良好测试、文档完善和维护，而炒作驱动项目的基准测试则不然。同样，高 PR 合并率的评估工具表明积极维护和对错误报告的响应性——其他研究者依赖其进行可复现评估的基础设施的关键属性。
 
 % ====================================================================
-% Figure 5.4: Benchmark Radar Chart
+% 图5.4：基准测试雷达图
 % ====================================================================
 \begin{figure}[htbp]
 \centering
@@ -503,11 +503,11 @@ This quality assessment framework is relevant to evaluation because it affects t
     \draw[gray!35, thin] (0,0) -- (\a:\R);
   }
 
-  \node[font=\small\bfseries] at (90:5.65) {Automation};
-  \node[font=\small\bfseries, align=center] at (18:5.85) {Cost Efficiency};
-  \node[font=\small\bfseries] at (-54:5.75) {Generalization};
-  \node[font=\small\bfseries] at (-126:5.75) {Realism};
-  \node[font=\small\bfseries, align=center] at (162:5.85) {Reproducibility};
+  \node[font=\small\bfseries] at (90:5.65) {自动化程度};
+  \node[font=\small\bfseries, align=center] at (18:5.85) {成本效率};
+  \node[font=\small\bfseries] at (-54:5.75) {泛化能力};
+  \node[font=\small\bfseries] at (-126:5.75) {真实性};
+  \node[font=\small\bfseries, align=center] at (162:5.85) {可复现性};
 
   \draw[cat1, very thick, fill=cat1!18, opacity=0.72]
     (90:4.5) -- (18:2) -- (-54:4) -- (-126:5) -- (162:3) -- cycle;
@@ -525,14 +525,14 @@ This quality assessment framework is relevant to evaluation because it affects t
     (90:2) -- (18:1) -- (-54:5) -- (-126:1) -- (162:1) -- cycle;
   \node[color=cat5!70!black, font=\scriptsize\bfseries] at (-78:3.35) {Voyager};
 
-  \node[font=\small\bfseries] at (0,6.45) {Five-Dimensional Benchmark Comparison};
+  \node[font=\small\bfseries] at (0,6.45) {五维基准测试比较};
 \end{tikzpicture}
-\caption{Benchmark comparison across five dimensions. SWE-Bench excels in realism and reproducibility; HumanEval leads in automation and cost; WebArena and Voyager score high on generalization but lower on cost and reproducibility.}
+\caption{跨五个维度的基准测试比较。SWE-Bench 在真实性和可复现性上表现优异；HumanEval 在自动化和成本上领先；WebArena 和 Voyager 在泛化能力上得分较高但在成本和可复现性上较低。}
 \label{fig:eval-radar}
 \end{figure}
 
 
-\subsubsection{Comprehensive Benchmark Comparison}
+\subsubsection{综合基准测试比较}
 
 \begin{figure}[htbp]
 \centering
@@ -563,24 +563,24 @@ AlphaEvolve & Algorithm Design & AlphaEvolve & Programmatic & Low & Very High & 
 \bottomrule
 \end{tabular}%
 }
-\caption{Comprehensive benchmark comparison. Verification type indicates how correctness is determined; contamination risk reflects training data leakage likelihood; transfer evidence indicates cross-task/model/domain generalization.}
+\caption{综合基准测试比较。验证类型表示如何确定正确性；污染风险反映训练数据泄漏可能性；迁移证据表示跨任务/模型/领域的泛化能力。}
 \label{fig:bench-compare}
 \end{figure}
 
-The benchmark comparison reveals several important patterns. First, the most widely-used benchmarks (HumanEval, GSM8K, MATH) have the highest contamination risk, creating a tension between comparability and validity. Researchers face a dilemma: use established benchmarks where scores are comparable but potentially inflated, or use newer benchmarks with lower contamination risk but fewer comparison points. We recommend reporting results on both types, with the established benchmarks providing comparability and the newer benchmarks providing validity.
+基准测试比较揭示了几个重要模式。首先，最广泛使用的基准测试（HumanEval、GSM8K、MATH）污染风险最高，在可比性和有效性之间产生了张力。研究者面临困境：使用分数可比但可能虚高的成熟基准测试，还是使用污染风险较低但比较点较少的新基准测试。我们建议同时报告两种类型的结果，成熟基准测试提供可比性，新基准测试提供有效性。
 
-Second, the benchmarks with the strongest transfer evidence (SWE-Bench, Voyager, AlphaEvolve) are also the most expensive to evaluate on, creating a cost-rigor tradeoff. A single SWE-Bench evaluation requires cloning the target repository, setting up the development environment, applying the agent's patch, and running the full test suite---a process that can take minutes per task and requires significant compute infrastructure. AlphaEvolve evaluations on mathematical optimization problems require running candidate algorithms to convergence on concrete problem instances, which can take hours for complex problems. This cost-rigor tradeoff means that the most rigorous evaluations are available only to well-resourced research groups, potentially creating a reproduction barrier.
+其次，迁移证据最强的基准测试（SWE-Bench、Voyager、AlphaEvolve）也是评估成本最高的，形成了成本-严谨性权衡。单次 SWE-Bench 评估需要克隆目标仓库、搭建开发环境、应用智能体补丁并运行完整测试套件——每个任务可能需要数分钟且需要大量计算基础设施。AlphaEvolve 在数学优化问题上的评估需要将候选算法在具体问题实例上运行至收敛，对复杂问题可能需要数小时。这种成本-严谨性权衡意味着最严谨的评估仅对资源充足的研究团队可用，可能造成复现壁垒。
 
-Third, no single benchmark covers all evaluation dimensions, motivating the multi-layer evaluation hierarchy proposed in Section~\ref{sec:eval-hierarchy}. A comprehensive evaluation requires combining multiple benchmarks across layers: programmatic verification (L1) for rapid iteration, code and reasoning benchmarks (L2) for standardized comparison, environment interaction benchmarks (L3) for ecological validity, process metrics (L4) for evolutionary dynamics, and safety/cost gates (L5) for deployment readiness. The total cost of such a comprehensive evaluation can be substantial---potentially hundreds of dollars per method per experimental condition---but is necessary for credible self-evolution claims.
+第三，没有任何单一基准测试覆盖所有评估维度，推动了第~\ref{sec:eval-hierarchy} 节提出的多层评估层级体系。全面评估需要跨层组合多个基准测试：程序化验证（L1）用于快速迭代，代码和推理基准测试（L2）用于标准化比较，环境交互基准测试（L3）用于生态效度，过程指标（L4）用于进化动态，以及安全/成本门控（L5）用于部署就绪度。这种全面评估的总成本可能很高——每个方法每个实验条件可能数百美元——但对可信的自进化声明是必要的。
 
 
-\subsection{Method Comparison: What Gets Modified}
+\subsection{方法比较：修改什么}
 \label{sec:eval-method-compare}
 
 \begin{table}[htbp]
 \centering
 \small
-\caption{Self-improvement mechanism comparison. Columns indicate whether each method modifies the specified component. ``Verifier'' indicates whether evaluation is self-administered or external.}
+\caption{自改进机制比较。各列表示每种方法是否修改指定组件。"验证器"表示评估是自管理还是外部的。}
 \label{tab:eval-methods-compare}
 \begin{tabular}{p{22mm}p{12mm}p{12mm}p{12mm}p{12mm}p{12mm}p{15mm}}
 \toprule
@@ -607,62 +607,62 @@ AlphaEvolve & Yes & No & Yes & No & Yes & External \\
 \end{tabular}
 \end{table}
 
-Several structural patterns emerge from the comparison. Methods can be organized along two axes: \emph{modification target} (what component of the agent changes) and \emph{evaluation independence} (how decoupled is the evaluator from the evolved system).
+比较中出现了几个结构模式。方法可以沿两个轴组织：\emph{修改目标}（智能体的哪个组件发生变化）和\emph{评估独立性}（评估器与被进化系统的解耦程度）。
 
-\textbf{Modification target spectrum.} Methods modifying weights (STaR, RISE, Self-Rewarding, Absolute Zero, RAGEN) require more compute but produce durable improvements persisting across sessions. These methods modify the neural network parameters themselves, creating permanent behavioral change. Methods modifying prompts or memory (Self-Refine, Reflexion, OPRO, EvoAgentX) are lightweight but improvements are lost when sessions end or prompts are reset. Methods modifying code (DGM, ADAS, SICA, FunSearch, AlphaEvolve, G\"{o}del Agent) provide a middle ground: code changes persist and are human-inspectable, enabling both durability and transparency.
+\textbf{修改目标谱系。}修改权重的方法（STaR、RISE、Self-Rewarding、Absolute Zero、RAGEN）需要更多计算但产生跨会话持久的改进。这些方法修改神经网络参数本身，创建永久性行为变更。修改提示或记忆的方法（Self-Refine、Reflexion、OPRO、EvoAgentX）轻量级但改进在会话结束或提示重置时丢失。修改代码的方法（DGM、ADAS、SICA、FunSearch、AlphaEvolve、G\"{o}del Agent）提供了中间立场：代码变更持久且人类可检查，兼具耐久性和透明性。
 
-The depth of modification correlates with both potential impact and risk. Prompt modifications are easily reversible but limited to the expressiveness of natural language. Memory modifications provide richer state but risk memory corruption. Code modifications can change arbitrary behavior but may introduce bugs. Weight modifications produce the most fundamental changes but are the hardest to audit and reverse.
+修改深度与潜在影响和风险均相关。提示修改易于逆转但受限于自然语言的表达力。记忆修改提供更丰富的状态但面临记忆损坏风险。代码修改可以改变任意行为但可能引入缺陷。权重修改产生最根本的变更但最难审计和逆转。
 
-\textbf{Archive-based evolution.} Archive-based methods (DGM, ADAS, FunSearch, AlphaEvolve) provide the richest evolutionary structure by maintaining diverse agent populations. The archive serves as both a genetic reservoir (enabling recombination of partial solutions) and a safety mechanism (enabling rollback to any previous state). DGM's diversity-weighted sampling explicitly encourages exploration of underexplored regions of the agent design space, while FunSearch's 10-island population structure with periodic bottom-50\% resets prevents premature convergence.
+\textbf{基于存档的进化。}基于存档的方法（DGM、ADAS、FunSearch、AlphaEvolve）通过维护多样化智能体种群提供最丰富的进化结构。存档既作为遗传资源库（支持部分解决方案的重组），也作为安全机制（支持回滚到任何先前状态）。DGM 的多样性加权采样明确鼓励探索智能体设计空间中欠探索的区域，而 FunSearch 的 10 岛屿种群结构配合定期的底 50\% 重置防止过早收敛。
 
-\textbf{Verifier independence.} The choice of verifier (self vs.\ external) has profound implications for evolutionary dynamics. Self-verification methods (Self-Refine, Self-Rewarding, Absolute Zero) are more self-contained but risk evaluator degradation as discussed in Section~\ref{sec:eval-dilemma}. External verification (Reflexion, DGM, ADAS, FunSearch, AlphaEvolve) is more reliable but requires pre-existing benchmarks or programmatic evaluators, limiting applicability to domains where such infrastructure exists.
+\textbf{验证器独立性。}验证器选择（自验证 vs.\ 外部验证）对进化动态有深远影响。自验证方法（Self-Refine、Self-Rewarding、Absolute Zero）更自包含但面临第~\ref{sec:eval-dilemma} 节讨论的评估器退化风险。外部验证（Reflexion、DGM、ADAS、FunSearch、AlphaEvolve）更可靠但需要预先存在的基准测试或程序化评估器，限制了在缺乏此类基础设施的领域中的适用性。
 
-The ideal self-evolution system combines multiple modification targets with progressively independent verification. DGM and AlphaEvolve approach this ideal by modifying code (deep, persistent changes) with programmatic evaluation (maximally independent verification) and archive-based selection (population-level safety).
+理想的自进化系统应结合多种修改目标和渐进独立的验证。DGM 和 AlphaEvolve 接近这一理想，通过修改代码（深度、持久的变更）配合程序化评估（最大化独立验证）和基于存档的选择（种群级安全）。
 
-An important observation from Table~\ref{tab:eval-methods-compare} is that no existing method modifies all five components simultaneously. The closest is DGM, which modifies prompts, code, and maintains an archive with external verification. A truly comprehensive self-evolution system might combine weight modification (for learning from experience), prompt modification (for rapid adaptation), memory modification (for accumulating knowledge), code modification (for architectural changes), and archive maintenance (for population-level evolution)---all with progressively independent multi-layer verification. Such a system does not yet exist in the literature, representing a significant opportunity for future research.
+表~\ref{tab:eval-methods-compare} 中的一个重要观察是，没有现有方法同时修改所有五个组件。最接近的是 DGM，它修改提示和代码，并通过外部验证维护存档。真正全面的自进化系统可能结合权重修改（从经验中学习）、提示修改（快速适应）、记忆修改（知识积累）、代码修改（架构变更）和存档维护（种群级进化）——所有这些都配合渐进独立的多层验证。文献中尚不存在这样的系统，代表了未来研究的重要机遇。
 
-The distinction between self-verification and external verification also has practical implications for deployment. Self-verification systems can operate autonomously without external infrastructure, making them suitable for deployment in environments where pre-existing benchmarks or test suites are unavailable. However, they require careful monitoring for evaluator degradation. External verification systems are more reliable but cannot operate outside their evaluation infrastructure, limiting their applicability to domains where such infrastructure exists. This tradeoff between autonomy and reliability is a fundamental design decision in self-evolution system architecture.
+自验证与外部验证的区分对部署也有实践意义。自验证系统可以在没有外部基础设施的情况下自主运行，适合部署在缺乏预存基准测试或测试套件的环境中，但需要仔细监控评估器退化。外部验证系统更可靠但不能在其评估基础设施之外运行，限制了在缺乏此类基础设施的领域中的适用性。这种自主性与可靠性之间的权衡是自进化系统架构中的基本设计决策。
 
 
-\subsection{Summary and Open Problems}
+\subsection{总结与开放问题}
 \label{sec:eval-summary}
 
-Evaluation is the linchpin of agent self-evolution---the selection pressure that determines the direction of evolutionary progress and the safety gate that prevents harmful mutations from propagating. This chapter has proposed a five-layer evaluation hierarchy, surveyed major benchmarks, consolidated quantitative results across 17 methods and 13 benchmark suites, and introduced agent-specific metrics for iterative improvement, transfer, cost efficiency, and safety.
+评估是智能体自进化的关键——决定进化进展方向的选择压力和防止有害变异传播的安全门。本章提出了五层评估层级体系，综述了主要基准测试，汇总了 17 种方法和 13 个基准测试套件的定量结果，并引入了涵盖迭代改进、迁移、成本效率和安全性的智能体专用指标。
 
-Key findings from our analysis include:
+我们分析的关键发现包括：
 
 \begin{enumerate}
-\item \textbf{Self-correction can outperform scale.} Reflexion with GPT-3.5-turbo (91\% HumanEval) surpasses GPT-4 zero-shot (80.1\%), demonstrating that iterative improvement mechanisms can compensate for model size limitations.
+\item \textbf{自我纠正可以超越规模。}使用 GPT-3.5-turbo 的 Reflexion（HumanEval 91\%）超越了 GPT-4 零样本（80.1\%），表明迭代改进机制可以补偿模型规模限制。
 
-\item \textbf{Agent-level self-modification produces the largest gains.} DGM's 2.5$\times$ improvement on SWE-Bench (20.0\% to 50.0\%) exceeds gains from prompt-level or memory-level self-improvement, suggesting that deeper modification targets enable larger improvements.
+\item \textbf{智能体级自修改产生最大增益。}DGM 在 SWE-Bench 上 2.5$\times$ 的改进（20.0\% 到 50.0\%）超过了提示级或记忆级自改进的增益，表明更深的修改目标使更大的改进成为可能。
 
-\item \textbf{Cross-domain transfer is achievable but not guaranteed.} Absolute Zero's code-to-math transfer, ADAS's cross-model transfer, and DGM's cross-language transfer demonstrate that self-evolution can produce generalizable improvements, but transfer efficiency varies substantially across methods and domains.
+\item \textbf{跨领域迁移可实现但非保证。}Absolute Zero 的代码到数学迁移、ADAS 的跨模型迁移和 DGM 的跨语言迁移表明自进化可以产生可泛化的改进，但迁移效率在方法和领域间差异很大。
 
-\item \textbf{Benchmark contamination remains an underaddressed threat.} The most widely-used benchmarks (HumanEval, GSM8K, MATH) have the highest contamination risk, and few papers report systematic contamination analysis.
+\item \textbf{基准测试污染仍是未被充分解决的威胁。}最广泛使用的基准测试（HumanEval、GSM8K、MATH）污染风险最高，很少有论文报告系统性污染分析。
 
-\item \textbf{Popularity does not predict quality.} Our analysis of 348 GitHub repositories reveals a strong disconnect between star counts and composite quality scores, with implications for baseline selection and tool adoption.
+\item \textbf{受欢迎程度不预测质量。}我们对 348 个 GitHub 仓库的分析揭示了 Star 数量与综合质量评分之间的严重脱节，对基线选择和工具采用有重要影响。
 \end{enumerate}
 
-Key open problems include:
+关键开放问题包括：
 
 \begin{enumerate}[nosep]
-\item \textbf{Evaluator evolution}: As agents improve, evaluators must evolve in tandem to prevent agents from outpacing their own evaluation. This requires a meta-evaluation framework that can detect evaluator degradation and trigger evaluator updates.
+\item \textbf{评估器进化}：随着智能体改进，评估器必须同步进化以防止智能体超越自身评估。这需要一个能检测评估器退化并触发评估器更新的元评估框架。
 
-\item \textbf{Open-ended evaluation}: Standard benchmarks evaluate fixed task sets; open environments require methods assessing cumulative growth and exploration quality. Voyager's technology tree coverage metric provides a starting point but is domain-specific.
+\item \textbf{开放式评估}：标准基准测试评估固定任务集；开放环境需要评估累积增长和探索质量的方法。Voyager 的科技树覆盖率指标提供了起点但具有领域特异性。
 
-\item \textbf{Evaluation cost}: Comprehensive multi-layer evaluation is expensive; cost-efficient strategies with high signal-to-noise ratios are needed. Adaptive evaluation that allocates more resources to borderline candidates could reduce cost without sacrificing reliability.
+\item \textbf{评估成本}：全面多层评估成本高昂；需要高信噪比的成本效率策略。将更多资源分配给边界候选的自适应评估可以在不牺牲可靠性的情况下降低成本。
 
-\item \textbf{Community standards}: The field lacks standardized protocols for reporting self-evolution results. We recommend reporting multi-benchmark results with full cost accounting, transfer evaluation, contamination analysis, and statistical significance testing following ADAS's bootstrap CI methodology.
+\item \textbf{社区标准}：该领域缺乏报告自进化结果的标准化协议。我们建议报告多基准测试结果并附完整成本核算、迁移评估、污染分析和遵循 ADAS bootstrap CI 方法的统计显著性检验。
 
-\item \textbf{Beyond accuracy}: Process quality, reliability, safety, cost, and user satisfaction should be first-class metrics alongside accuracy. EverMemBench's three-layer memory evaluation and EvoAgentBench's four-dimension agent evaluation provide models for multi-dimensional assessment.
+\item \textbf{超越准确率}：过程质量、可靠性、安全、成本和用户满意度应与准确率一起作为一级指标。EverMemBench 的三层记忆评估和 EvoAgentBench 的四维智能体评估为多维评估提供了模型。
 
-\item \textbf{Evolutionary dynamics analysis}: The field needs better tools for analyzing evolutionary trajectories---understanding when improvement plateaus, what causes regression, and how to design mutation-selection processes that maintain stable improvement over hundreds of generations. Visualization tools for evolutionary trajectories, diversity metrics for the candidate pool, and theoretical models predicting convergence behavior would all advance the field.
+\item \textbf{进化动态分析}：该领域需要更好的分析进化轨迹的工具——理解改进何时达到平台期、什么导致回归、以及如何设计在数百代中维持稳定改进的变异-选择过程。进化轨迹可视化工具、候选池多样性度量和预测收敛行为的理论模型都将推动该领域前进。
 
-\item \textbf{Evaluation for self-play systems}: Absolute Zero's self-play training introduces a new evaluation challenge: how to evaluate a system that generates its own training tasks? The traditional contamination framework assumes fixed benchmarks, but self-play systems bypass this by construction. New evaluation frameworks are needed that can assess the quality and diversity of self-generated tasks, the curriculum progression during training, and the generalizability of skills acquired through self-play.
+\item \textbf{自博弈系统的评估}：Absolute Zero 的自博弈训练引入了新的评估挑战：如何评估生成自身训练任务的系统？传统污染框架假设固定基准测试，但自博弈系统从构造上绕过了这一点。需要新的评估框架来评估自生成任务的质量和多样性、训练期间的课程进展，以及通过自博弈习得技能的泛化能力。
 \end{enumerate}
 
-Looking forward, we anticipate that evaluation will increasingly become a bottleneck for the field. As self-evolution methods become more sophisticated and claim larger improvements, the evaluation infrastructure needed to verify these claims becomes correspondingly more expensive and complex. The community should invest in shared evaluation infrastructure: standardized benchmark suites with automated scoring, contamination detection tools, and cross-method comparison platforms. Without such infrastructure, the field risks fragmentation into incompatible evaluation silos, where each research group uses different benchmarks, different reporting standards, and different statistical methods, making meaningful comparison impossible.
+展望未来，我们预计评估将日益成为该领域的瓶颈。随着自进化方法变得更加精密并声称更大的改进，验证这些声明所需的评估基础设施变得相应更加昂贵和复杂。社区应投资于共享评估基础设施：带有自动评分的标准化基准测试套件、污染检测工具和跨方法比较平台。缺乏此类基础设施，该领域面临分化为不兼容评估孤岛的风险——各研究组使用不同的基准测试、不同的报告标准和不同的统计方法，使有意义的比较变得不可能。
 
-The ultimate evaluation of agent self-evolution may not be a benchmark at all, but rather the demonstrable ability to produce useful, reliable, and safe improvements in real-world applications. The gap between benchmark performance and production reliability---explored in the following chapter---remains the most critical challenge facing the field.
+智能体自进化的终极评估可能根本不是基准测试，而是在实际应用中产出有用、可靠和安全的改进的可证明能力。基准测试性能与生产可靠性之间的差距——下一章将探讨——仍然是该领域面临的最关键挑战。
 
-The following chapter examines how these evaluation principles manifest in industrial practice, where the gap between benchmark performance and production reliability remains a critical challenge.
+下一章将考察这些评估原则如何在工业实践中体现，其中基准测试性能与生产可靠性之间的差距仍是关键挑战。
