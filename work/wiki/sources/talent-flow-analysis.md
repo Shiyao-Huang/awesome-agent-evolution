@@ -1,3 +1,22 @@
+---
+title: "AI Self-Evolution Talent Flow Analysis"
+rank: A
+created: 2026-05-26
+updated: 2026-05-26
+type: source
+tags:
+  - talent-flow
+  - meta-siphon
+  - anthropic-inflow
+  - china-academia
+  - self-evolution
+sources:
+  - web-search
+  - raw-papers/ 18 paper author cross-validation
+  - Fortune reporting
+  - work/research/ai-talent-flow-analysis.md
+---
+
 # Source: AI Self-Evolution Talent Flow Analysis
 
 > **Type**: Source analysis | **Rank**: A | **Date**: 2026-05-26

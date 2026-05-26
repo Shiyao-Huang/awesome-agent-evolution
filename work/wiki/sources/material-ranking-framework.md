@@ -1,3 +1,24 @@
+---
+title: "Material Ranking Framework"
+rank: A
+created: 2026-05-26
+updated: 2026-05-26
+type: source
+tags:
+  - ranking-framework
+  - classification
+  - paper-reviews
+  - repo-classification
+  - method-family
+  - scoring-dimensions
+sources:
+  - paper-reviews (137, 50 classified)
+  - repo-classification.json (527 repos)
+  - paper-method-classification (196 papers)
+  - 6 independent classification systems
+  - work/research/material-ranking-framework.md
+---
+
 # Source: Material Ranking Framework (素材Rank与价值区分)
 
 > **Type**: Framework design | **Rank**: A | **Date**: 2026-05-26

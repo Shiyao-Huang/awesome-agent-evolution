@@ -1,3 +1,25 @@
+---
+title: "Paper Undercoverage Follow-up"
+rank: B
+created: 2026-05-25
+updated: 2026-05-26
+type: source
+tags:
+  - paper-coverage
+  - gap-analysis
+  - raw-papers
+  - self-evolving-benchmarks
+  - memory
+  - skills
+  - safety
+sources:
+  - gap analysis of raw-papers/ coverage
+  - arXiv Atom API
+  - public arXiv abstract URLs
+  - 8 added papers (2604.27264, 2605.18421, 2604.08988, 2602.04837, 2603.02766, 2602.09877, 2604.14972, 2602.05810)
+  - work/research/paper-undercoverage-followup-2026-05-25-1345.md
+---
+
 # Source: Paper Undercoverage Follow-up (2026-05-25)
 
 > **Type**: Source follow-up | **Rank**: B | **Date**: 2026-05-25

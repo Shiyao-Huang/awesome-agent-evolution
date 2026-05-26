@@ -1,3 +1,24 @@
+---
+title: "Anthropic Talent Movement Analysis"
+rank: A
+created: 2026-05-26
+updated: 2026-05-26
+type: source
+tags:
+  - anthropic
+  - talent-movement
+  - karpathy
+  - agent-platform
+  - SICA
+  - self-evolution
+sources:
+  - 3 rounds web search + raw data cross-validation
+  - SICA paper arXiv 2504.15228
+  - SignalFire industry report
+  - HBS case study
+  - work/research/anthropic-talent-movement.md
+---
+
 # Source: Anthropic Talent Movement Analysis
 
 > **Type**: Source analysis | **Rank**: A | **Date**: 2026-05-26

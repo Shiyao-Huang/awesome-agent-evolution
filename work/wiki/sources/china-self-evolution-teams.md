@@ -1,3 +1,27 @@
+---
+title: "China Self-Evolution Agent Teams and Trends"
+rank: A
+created: 2026-05-26
+updated: 2026-05-26
+type: source
+tags:
+  - china
+  - self-evolution
+  - academia
+  - agentevolver
+  - agent-hospital
+  - CAICT
+  - SJTU
+  - Tsinghua
+sources:
+  - web-search
+  - raw-papers/ cross-validation
+  - arXiv 2511.10395
+  - Zhihu/official website data
+  - VentureBeat reporting
+  - work/research/china-self-evolution-teams.md
+---
+
 # Source: China Self-Evolution Agent Teams & Trends
 
 > **Type**: Source analysis | **Rank**: A | **Date**: 2026-05-26

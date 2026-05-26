@@ -1,3 +1,25 @@
+---
+title: "Peer Review Mechanism Insights (137 Reviews)"
+rank: A
+created: 2026-05-26
+updated: 2026-05-26
+type: source
+tags:
+  - review-mechanism
+  - evaluation-bottleneck
+  - non-monotonic
+  - code-mutable
+  - multi-agent
+  - verification
+  - ADAS
+  - DGM
+sources:
+  - paper-reviews/ (137 total, 32 deep-read, 7 full-text analyzed)
+  - 6 mechanism insights
+  - 8 survey chapters mapped
+  - work/research/review-mechanism-insights.md
+---
+
 # Source: Peer Review Mechanism Insights (137 Reviews)
 
 > **Type**: Source analysis | **Rank**: A | **Date**: 2026-05-26

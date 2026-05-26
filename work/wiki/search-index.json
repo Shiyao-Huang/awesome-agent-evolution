@@ -1,8 +1,8 @@
 {
-  "generated": "2026-05-26T05:03:28.928Z",
+  "generated": "2026-05-26T07:59:41.108Z",
   "stats": {
-    "pages": 34,
-    "keywords": 496
+    "pages": 43,
+    "keywords": 678
   },
   "catalog": [
     {
@@ -242,8 +242,8 @@
     },
     {
       "path": "sources/anthropic-talent-movement.md",
-      "title": "sources/anthropic-talent-movement",
-      "rank": "C",
+      "title": "\"Anthropic Talent Movement Analysis\"",
+      "rank": "A",
       "type": "source",
       "tags": []
     },
@@ -256,15 +256,15 @@
     },
     {
       "path": "sources/china-self-evolution-teams.md",
-      "title": "sources/china-self-evolution-teams",
-      "rank": "C",
+      "title": "\"China Self-Evolution Agent Teams and Trends\"",
+      "rank": "A",
       "type": "source",
       "tags": []
     },
     {
       "path": "sources/combined-talent-landscape.md",
-      "title": "sources/combined-talent-landscape",
-      "rank": "C",
+      "title": "\"Combined Talent/Papers/Engineering Landscape\"",
+      "rank": "A",
       "type": "source",
       "tags": []
     },
@@ -291,15 +291,22 @@
     },
     {
       "path": "sources/material-ranking-framework.md",
-      "title": "sources/material-ranking-framework",
-      "rank": "C",
+      "title": "\"Material Ranking Framework\"",
+      "rank": "A",
+      "type": "source",
+      "tags": []
+    },
+    {
+      "path": "sources/mechanism-analysis-framework.md",
+      "title": "\"Agent进化机制分析框架\"",
+      "rank": "A",
       "type": "source",
       "tags": []
     },
     {
       "path": "sources/paper-undercoverage-followup.md",
-      "title": "sources/paper-undercoverage-followup",
-      "rank": "C",
+      "title": "\"Paper Undercoverage Follow-up\"",
+      "rank": "B",
       "type": "source",
       "tags": []
     },
@@ -309,6 +316,32 @@
       "rank": "V1",
       "type": "source",
       "tags": []
+    },
+    {
+      "path": "sources/papers-mechanism-analysis.md",
+      "title": "\"论文进化机制深度分析\"",
+      "rank": "A",
+      "type": "source",
+      "tags": []
+    },
+    {
+      "path": "sources/project-evolution-grading-full.md",
+      "title": "\"Projects/ 目录进化能力分级报告 (Full)\"",
+      "rank": "A",
+      "type": "source",
+      "tags": []
+    },
+    {
+      "path": "sources/projects-evolution-grading.md",
+      "title": "Projects Model Card Evolution Grading",
+      "rank": "A",
+      "type": "source",
+      "tags": [
+        "projects",
+        "model-cards",
+        "evolution-grading",
+        "L0-L4"
+      ]
     },
     {
       "path": "sources/raw-github-mechanism-analysis.md",
@@ -322,6 +355,13 @@
         "case-studies",
         "self-evolution"
       ]
+    },
+    {
+      "path": "sources/raw-github-mechanisms-full.md",
+      "title": "\"Raw-GitHub 365 Project Evolution Mechanism Deep-Dive\"",
+      "rank": "A",
+      "type": "source",
+      "tags": []
     },
     {
       "path": "sources/raw-papers-mechanism-analysis.md",
@@ -338,29 +378,63 @@
     },
     {
       "path": "sources/raw-social-blogs-mechanism-analysis.md",
-      "title": "sources/raw-social-blogs-mechanism-analysis",
-      "rank": "C",
+      "title": "\"Raw-Social and Raw-Blogs Mechanism Analysis\"",
+      "rank": "A",
+      "type": "source",
+      "tags": []
+    },
+    {
+      "path": "sources/review-mechanism-insights-enhanced.md",
+      "title": "Enhanced Review Mechanism Insights",
+      "rank": "A",
+      "type": "source",
+      "tags": [
+        "paper-reviews",
+        "mechanism-insights",
+        "self-evolution",
+        "criticisms",
+        "taxonomy"
+      ]
+    },
+    {
+      "path": "sources/review-mechanism-insights-expanded.md",
+      "title": "\"Peer Review Mechanism Insights: Full-Coverage Deep-Dive (111/137 Reviews)\"",
+      "rank": "A",
       "type": "source",
       "tags": []
     },
     {
       "path": "sources/review-mechanism-insights.md",
-      "title": "sources/review-mechanism-insights",
-      "rank": "C",
+      "title": "\"Peer Review Mechanism Insights (137 Reviews)\"",
+      "rank": "A",
+      "type": "source",
+      "tags": []
+    },
+    {
+      "path": "sources/social-mechanism-insights.md",
+      "title": "\"Social & Blog Evolution Mechanism Insights\"",
+      "rank": "A",
+      "type": "source",
+      "tags": []
+    },
+    {
+      "path": "sources/sv-selfevolution-landscape.md",
+      "title": "\"硅谷自进化/Auto-Research 论文与人员景观\"",
+      "rank": "A",
       "type": "source",
       "tags": []
     },
     {
       "path": "sources/talent-capital-structure.md",
-      "title": "sources/talent-capital-structure",
-      "rank": "C",
+      "title": "\"Talent Structure, Supply Chain and Capital Investment\"",
+      "rank": "A",
       "type": "source",
       "tags": []
     },
     {
       "path": "sources/talent-flow-analysis.md",
-      "title": "sources/talent-flow-analysis",
-      "rank": "C",
+      "title": "\"AI Self-Evolution Talent Flow Analysis\"",
+      "rank": "A",
       "type": "source",
       "tags": []
     },
@@ -423,7 +497,8 @@
     "adas": [
       "concepts/architecture-search.md",
       "entities/jeff-clune.md",
-      "entities/shengran-hu.md"
+      "entities/shengran-hu.md",
+      "sources/projects-evolution-grading.md"
     ],
     "dgm": [
       "concepts/architecture-search.md",
@@ -1104,7 +1179,8 @@
       "sources/raw-social-blogs-mechanism-analysis.md"
     ],
     "google deepmind": [
-      "entities/google-deepmind.md"
+      "entities/google-deepmind.md",
+      "sources/sv-selfevolution-landscape.md"
     ],
     "search-evolution": [
       "entities/google-deepmind.md"
@@ -1262,7 +1338,8 @@
     ],
     "self-evolution": [
       "entities/sakana-ai.md",
-      "sources/raw-github-mechanism-analysis.md"
+      "sources/raw-github-mechanism-analysis.md",
+      "sources/review-mechanism-insights-enhanced.md"
     ],
     "funding": [
       "entities/sakana-ai.md"
@@ -1291,7 +1368,7 @@
     "high order adas": [
       "entities/shengran-hu.md"
     ],
-    "sources/anthropic-talent-movement": [
+    "\"anthropic talent movement analysis\"": [
       "sources/anthropic-talent-movement.md"
     ],
     "source: anthropic talent movement analysis": [
@@ -1303,6 +1380,7 @@
       "sources/combined-talent-landscape.md",
       "sources/material-ranking-framework.md",
       "sources/paper-undercoverage-followup.md",
+      "sources/projects-evolution-grading.md",
       "sources/raw-github-mechanism-analysis.md",
       "sources/raw-papers-mechanism-analysis.md",
       "sources/talent-capital-structure.md",
@@ -1361,6 +1439,7 @@
       "sources/combined-talent-landscape.md",
       "sources/material-ranking-framework.md",
       "sources/paper-undercoverage-followup.md",
+      "sources/projects-evolution-grading.md",
       "sources/review-mechanism-insights.md",
       "sources/talent-capital-structure.md",
       "sources/talent-flow-analysis.md"
@@ -1450,7 +1529,7 @@
     "b16. babyagi legacy: task decomposition ≠ self-evolution": [
       "sources/blogs-brainstorm.md"
     ],
-    "sources/china-self-evolution-teams": [
+    "\"china self-evolution agent teams and trends\"": [
       "sources/china-self-evolution-teams.md"
     ],
     "source: china self-evolution agent teams & trends": [
@@ -1474,7 +1553,7 @@
     "独特方向": [
       "sources/china-self-evolution-teams.md"
     ],
-    "sources/combined-talent-landscape": [
+    "\"combined talent/papers/engineering landscape\"": [
       "sources/combined-talent-landscape.md"
     ],
     "source: combined talent/papers/engineering landscape": [
@@ -1647,7 +1726,7 @@
     "6.3 geopolitical signals from social data": [
       "sources/employee-social-intelligence.md"
     ],
-    "sources/material-ranking-framework": [
+    "\"material ranking framework\"": [
       "sources/material-ranking-framework.md"
     ],
     "source: material ranking framework (素材rank与价值区分)": [
@@ -1668,7 +1747,72 @@
     "覆盖范围": [
       "sources/material-ranking-framework.md"
     ],
-    "sources/paper-undercoverage-followup": [
+    "\"agent进化机制分析框架\"": [
+      "sources/mechanism-analysis-framework.md",
+      "synthesis/mechanism-framework.md"
+    ],
+    "agent进化机制分析框架": [
+      "sources/mechanism-analysis-framework.md",
+      "synthesis/mechanism-framework.md"
+    ],
+    "0. 框架定位": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "1. 机制关系全景 dag": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "2. 机制1：自我观察 (self-observation)": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "2.1 定义": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "2.2 分类学": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "2.3 典型案例": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "2.4 局限性": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "3. 机制2：自我评估 (self-evaluation)": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "3.1 定义": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "3.2 分类学": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "3.3 评估可靠性谱系": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "3.4 典型案例": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "3.5 局限性": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "4. 机制3：自我改进 (self-improvement)": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "4.1 定义": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "4.2 改进深度谱系": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "4.3 分类学": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "4.4 统一数学形式化": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "4.5 典型案例": [
+      "sources/mechanism-analysis-framework.md"
+    ],
+    "\"paper undercoverage follow-up\"": [
       "sources/paper-undercoverage-followup.md"
     ],
     "source: paper undercoverage follow-up (2026-05-25)": [
@@ -1749,12 +1893,209 @@
     "cultural (code/architecture)": [
       "sources/papers-brainstorm.md"
     ],
+    "\"论文进化机制深度分析\"": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "论文进化机制深度分析": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "one sentence": [
+      "sources/papers-mechanism-analysis.md",
+      "sources/raw-papers-mechanism-analysis.md",
+      "sources/raw-social-blogs-mechanism-analysis.md"
+    ],
+    "1. paper landscape overview": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "1.1 corpus statistics [known]": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "1.2 temporal distribution [known]": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "2. mechanism taxonomy (7 mechanism families)": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "2.1 family overview [known]": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "2.2 family details": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "f1: self-reflection & refinement": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "f2: self-reward & alignment": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "f3: memory & experience accumulation": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "f4: code & architecture self-modification": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "f5: evolutionary search & optimization": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "f6: multi-agent co-evolution": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "f7: environment adaptation & curriculum": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "3. citation lineage & evolution phylogeny": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "4. top-10 papers: deep mechanism analysis": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "#1: gödel agent (2410.04444) — self-referential recursion": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "#2: self-rewarding language models (2401.10020) — bootstrap loop": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "#3: coral (2604.01658) — autonomous multi-agent evolution": [
+      "sources/papers-mechanism-analysis.md"
+    ],
+    "\"projects/ 目录进化能力分级报告 (full)\"": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "projects/ 目录进化能力分级报告 (full)": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "0. 分级方法": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "0.1 采用框架": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "0.2 分级规则 [known]": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "0.3 数据源映射": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "1. l4-l5: architecture/code self-modification & co-evolution": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "1.1 true 自进化项目 — 从 raw-github 机制分析 (12 个)": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "1.2 l4-l5 分布统计": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "2. l3: memory/skill accumulation": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "2.1 guided 自进化项目 — 3-4 个结构因子 (8 个)": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "3. l2: prompt/output refinement": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "3.1 pseudo 自进化 — 1-2 个结构因子 (25 个中约 15 个)": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "4. l0-l1 & n/a: infrastructure and reference": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "4.1 hall of overpromising (声称自进化但实际 l0-l1)": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "5. 全量分布": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "关键比例 [known]": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "6. 机制类别 x l 等级交叉矩阵": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "7. 关键洞察": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "7.1 三个机制级发现": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "8. 分级置信度声明": [
+      "sources/project-evolution-grading-full.md"
+    ],
+    "projects model card evolution grading": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "projects": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "model-cards": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "evolution-grading": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "l0-l4": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "source: projects model card evolution grading": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "l0-l4 framework definition": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "top l4 projects (true self-evolution)": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "related wiki pages": [
+      "sources/projects-evolution-grading.md",
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "full report": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "sample": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "framework": [
+      "sources/projects-evolution-grading.md",
+      "synthesis/mechanism-framework.md"
+    ],
+    "distribution": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "l4 frontier (7 projects)": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "card format bias": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "memory ≠ evolution": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "darwin godel machine": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "godel agent": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "openevolve": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "a-evolve": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "concepts/self-improvement": [
+      "sources/projects-evolution-grading.md"
+    ],
+    "sources/raw-github-mechanism-analysis": [
+      "sources/projects-evolution-grading.md"
+    ],
     "raw-github mechanism analysis": [
       "sources/raw-github-mechanism-analysis.md"
     ],
     "taxonomy": [
       "sources/raw-github-mechanism-analysis.md",
       "sources/raw-papers-mechanism-analysis.md",
+      "sources/review-mechanism-insights-enhanced.md",
       "synthesis/mechanism-framework.md"
     ],
     "case-studies": [
@@ -1773,16 +2114,20 @@
       "sources/raw-github-mechanism-analysis.md"
     ],
     "cs1: openevolve — algorithm discovery via map-elites + llms": [
-      "sources/raw-github-mechanism-analysis.md"
+      "sources/raw-github-mechanism-analysis.md",
+      "sources/raw-github-mechanisms-full.md"
     ],
     "cs2: a-evolve — 5-phase agent evolution loop": [
-      "sources/raw-github-mechanism-analysis.md"
+      "sources/raw-github-mechanism-analysis.md",
+      "sources/raw-github-mechanisms-full.md"
     ],
     "cs3: darwinia — darwinian trading agent selection": [
-      "sources/raw-github-mechanism-analysis.md"
+      "sources/raw-github-mechanism-analysis.md",
+      "sources/raw-github-mechanisms-full.md"
     ],
     "cs4: agent0 — zero-data self-evolution": [
-      "sources/raw-github-mechanism-analysis.md"
+      "sources/raw-github-mechanism-analysis.md",
+      "sources/raw-github-mechanisms-full.md"
     ],
     "cs5: flex — experience library scaling law": [
       "sources/raw-github-mechanism-analysis.md"
@@ -1817,6 +2162,57 @@
     "cs15: atp / misevolution — evolution risk studies": [
       "sources/raw-github-mechanism-analysis.md"
     ],
+    "\"raw-github 365 project evolution mechanism deep-dive\"": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "raw-github 365 project evolution mechanism deep-dive": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "executive summary": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "1. corpus overview": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "2. mechanism taxonomy (7 classes)": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "class 1: population-based evolutionary optimization (pbe)": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "class 2: agent self-modification (asm)": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "class 3: reflection-based self-improvement (rbs)": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "class 4: prompt optimization (po)": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "class 5: weight-level self-improvement (wls)": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "class 6: co-evolution (ce)": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "class 7: memory-driven evolution (mde)": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "3. case studies (15 projects)": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "cs5: flex — experience library with scaling law": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "cs6-cs15: additional case studies": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "4. cross-cutting analysis": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
+    "what separates true from pseudo self-evolution": [
+      "sources/raw-github-mechanisms-full.md"
+    ],
     "raw-papers mechanism analysis": [
       "sources/raw-papers-mechanism-analysis.md"
     ],
@@ -1829,10 +2225,6 @@
     ],
     "evidence": [
       "sources/raw-papers-mechanism-analysis.md"
-    ],
-    "one sentence": [
-      "sources/raw-papers-mechanism-analysis.md",
-      "sources/raw-social-blogs-mechanism-analysis.md"
     ],
     "7 mechanism families": [
       "sources/raw-papers-mechanism-analysis.md"
@@ -1852,7 +2244,8 @@
     ],
     "source": [
       "sources/raw-papers-mechanism-analysis.md",
-      "sources/raw-social-blogs-mechanism-analysis.md"
+      "sources/raw-social-blogs-mechanism-analysis.md",
+      "sources/review-mechanism-insights-enhanced.md"
     ],
     "ingested": [
       "sources/raw-papers-mechanism-analysis.md",
@@ -1879,7 +2272,7 @@
     "f7": [
       "sources/raw-papers-mechanism-analysis.md"
     ],
-    "sources/raw-social-blogs-mechanism-analysis": [
+    "\"raw-social and raw-blogs mechanism analysis\"": [
       "sources/raw-social-blogs-mechanism-analysis.md"
     ],
     "raw-social & raw-blogs mechanism analysis": [
@@ -1915,7 +2308,136 @@
     "meta": [
       "sources/raw-social-blogs-mechanism-analysis.md"
     ],
-    "sources/review-mechanism-insights": [
+    "enhanced review mechanism insights": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "paper-reviews": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "mechanism-insights": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "criticisms": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "source: enhanced review mechanism insights (6→16 core insights)": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "original 6 core insights (confirmed)": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "10 new insights (this analysis)": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "insight 7: echo trap as distinct multi-turn failure mode": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "insight 8: misevolution as formal concept": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "insight 9: self-organization beats designed hierarchy": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "insight 10: training-inference synergy as distinct evolution axis": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "insight 11: learnability reward = zone of proximal development for ai": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "insight 12: diff-based evolution accumulates complex optimizations": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "insight 13: brevity bias and context collapse": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "insight 14: specialist-to-generalist consolidation creates emergent capabilities": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "insight 15: world models break exploration plateaus": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "insight 16: metacognitive self-modification (nth-order evolution)": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "mechanism category distribution (60 reviews)": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "self-evolution order distribution": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "evidence quality distribution": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "top 5 mechanism criticisms (frequency-weighted)": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "full data": [
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "\"peer review mechanism insights: full-coverage deep-dive (111/137 reviews)\"": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "peer review mechanism insights: full-coverage deep-dive": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "0. executive summary": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "1. twelve core mechanism insights": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "insight 1: the evaluation bottleneck is universal [verified — 111/111 reviews]": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "insight 2: self-evolution is non-monotonic [verified — 2605.09315, 2509.26354]": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "insight 3: code as universal mutable representation [verified — 28+ papers]": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "insight 4: knowledge building > parallelism in multi-agent [verified]": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "insight 5: immutable verification required [verified]": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "insight 6: self-improvement is sharpening, not creation [verified — 2412.01951]": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "insight 7: pure autonomous recursion collapses [verified — 2601.05280]": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "insight 8: judge quality = system ceiling [verified]": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "insight 9: self-play creates automatic curriculum [verified]": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "insight 10: memory operations are learnable skills [verified]": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "insight 11: co-evolution of generator + verifier [verified]": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "insight 12: misevolution is universal [verified — 2509.26354]": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "2. method cluster analysis": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "2.1 reward/rl cluster (10 reviews)": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "2.2 architecture/search cluster (10 reviews)": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "2.3 multi-agent cluster (10 reviews)": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "2.4 memory cluster (7 reviews)": [
+      "sources/review-mechanism-insights-expanded.md"
+    ],
+    "\"peer review mechanism insights (137 reviews)\"": [
       "sources/review-mechanism-insights.md"
     ],
     "source: peer review mechanism insights (137 reviews)": [
@@ -1945,7 +2467,130 @@
     "field converging on protocol-level abstractions": [
       "sources/review-mechanism-insights.md"
     ],
-    "sources/talent-capital-structure": [
+    "\"social & blog evolution mechanism insights\"": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "social & blog evolution mechanism insights": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "1. data landscape": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "1.1 raw-social/ topology": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "1.2 raw-blogs/ topology": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "1.3 raw-social-rank/ (seed dataset)": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "2. seven dominant evolution mechanism patterns": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "pattern 1: empirical validation replacing mathematical proof": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "pattern 2: archive / stepping stone architecture": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "pattern 3: skill crystallization via execution traces": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "pattern 4: meta-meta self-modification": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "pattern 5: reward hacking as spontaneous emergent behavior": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "pattern 6: deterministic network from stochastic components": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "pattern 7: budget/cost as fundamental constraint": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "3. community perspective analysis": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "3.1 hacker news (172 items, highest signal-to-noise)": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "3.2 chinese developer platforms (zhihu 14, juejin 10, csdn 10, wechat 10, 36kr 9)": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "3.3 x/twitter (156 items, highest volume)": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "3.4 reddit (4 items in raw-social, 55 posts in aggregate)": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "4. recurring pain points (ranked by frequency)": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "5. six evolution method families (cross-validated taxonomy)": [
+      "sources/social-mechanism-insights.md"
+    ],
+    "\"硅谷自进化/auto-research 论文与人员景观\"": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "硅谷自进化/auto-research 论文与人员景观": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "0. 方法边界": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "1. 主要实验室研究方向": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "1.1 实验室全景": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "1.2 实验室间竞争格局": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "2. 关键论文与人员映射": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "2.1 核心 10 篇自进化论文": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "2.2 关键人员轨迹": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "3. 竞争焦点 (2025-2026)": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "4. 人才流动网络": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "4.1 核心流动路径": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "5. 资本投入与融资格局": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "5.1 自进化相关融资": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "5.2 行业级资本趋势": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "6. 人才供给管道": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "6.1 博士培养输出": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "6.2 人才供给瓶颈 [inferred]": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "7. 已知 vs 推断 vs 未验证": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "引用来源": [
+      "sources/sv-selfevolution-landscape.md"
+    ],
+    "\"talent structure, supply chain and capital investment\"": [
       "sources/talent-capital-structure.md"
     ],
     "source: talent structure, supply chain & capital investment": [
@@ -1966,7 +2611,7 @@
     "中国供给对比": [
       "sources/talent-capital-structure.md"
     ],
-    "sources/talent-flow-analysis": [
+    "\"ai self-evolution talent flow analysis\"": [
       "sources/talent-flow-analysis.md"
     ],
     "source: ai self-evolution talent flow analysis": [
@@ -1984,19 +2629,10 @@
     "中国高校集群": [
       "sources/talent-flow-analysis.md"
     ],
-    "\"agent进化机制分析框架\"": [
-      "synthesis/mechanism-framework.md"
-    ],
-    "framework": [
-      "synthesis/mechanism-framework.md"
-    ],
     "m1-m5": [
       "synthesis/mechanism-framework.md"
     ],
     "dag": [
-      "synthesis/mechanism-framework.md"
-    ],
-    "agent进化机制分析框架": [
       "synthesis/mechanism-framework.md"
     ],
     "全景dag": [

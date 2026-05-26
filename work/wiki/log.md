@@ -159,3 +159,20 @@
 - Updated stats: Entities 0→8, Sources 11→14
 
 **产出:** index.md updated, 3 source files frontmatter fixed, log.md lint entry
+
+## [2026-05-26 ~13:30] ingest | Raw-Social & Blogs Mechanism Deep-Dive
+
+**操作:** Researcher (cmplzerl54ngt) 深挖raw-social/和raw-blogs/提取机制洞察
+**详情:**
+- 创建 wiki source page: `sources/raw-social-blogs-mechanism-analysis.md`
+- 7 dominant patterns (P1-P7): 从empirical validation到budget constraint
+- 6 cross-validated method families (Mermaid DAG)
+- 8 ranked pain points (evaluation signal quality = #1 universal bottleneck)
+- Cross-validation table: social claims vs academic reality (4 Large gaps, 3 Medium)
+- Official company positions: OpenAI/Anthropic/LangChain/DeepMind/Meta/Sakana
+- HN community signal: Gödel Agent (81pts), DGM (195pts), recursive debate (129pts)
+- Chinese platform insights: Hermes as canonical example, Chase 3-layer framework dominant
+**Sources:** raw-social/(612 pairs + 31 batches), raw-blogs/(652 pairs), raw-social-rank/(234 items)
+**补充研究文件:** work/research/social-mechanism-insights.md (已有, 355行)
+**Index更新:** Sources 14→15
+**交叉引用:** 链接到Papers/GitHub analysis + self-improvement/emergent-behavior/architecture-search concepts

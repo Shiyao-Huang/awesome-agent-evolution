@@ -1,3 +1,28 @@
+---
+title: "Talent Structure, Supply Chain and Capital Investment"
+rank: A
+created: 2026-05-26
+updated: 2026-05-26
+type: source
+tags:
+  - talent-structure
+  - capital-investment
+  - supply-chain
+  - stanford-ai-index
+  - openai
+  - anthropic
+  - meta-MSL
+  - deepmind
+sources:
+  - web-search
+  - Stanford AI Index 2025
+  - CNBC
+  - Reuters
+  - Anthropic press releases
+  - raw-papers cross-validation
+  - work/research/talent-capital-structure.md
+---
+
 # Source: Talent Structure, Supply Chain & Capital Investment
 
 > **Type**: Source analysis | **Rank**: A | **Date**: 2026-05-26

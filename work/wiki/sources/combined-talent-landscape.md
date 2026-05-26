@@ -1,3 +1,26 @@
+---
+title: "Combined Talent/Papers/Engineering Landscape"
+rank: A
+created: 2026-05-26
+updated: 2026-05-26
+type: source
+tags:
+  - talent-landscape
+  - papers-ranking
+  - engineering-scoring
+  - deepmind
+  - anthropic
+  - openai
+  - meta-MSL
+  - 3D-matrix
+sources:
+  - "[R1] anthropic-talent-movement"
+  - "[R2] sv-selfevolution-landscape"
+  - "[R3] ai-talent-flow"
+  - web-search + raw-papers cross-reference + multi-report synthesis
+  - work/research/combined-talent-landscape.md
+---
+
 # Source: Combined Talent/Papers/Engineering Landscape
 
 > **Type**: Source analysis (synthesis of 3 reports) | **Rank**: A | **Date**: 2026-05-26
