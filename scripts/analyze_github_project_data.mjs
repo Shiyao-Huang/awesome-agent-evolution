@@ -432,7 +432,7 @@ const main = async () => {
     generated_at: new Date().toISOString(),
     counts: {
       raw_captures: rawTimestampIndex.records.length,
-      raw_files_on_disk: fs.readdirSync(path.join(root, 'raw-github')).filter((name) => name.endsWith('.md')).length,
+      raw_files_on_disk: fs.readdirSync(path.join(root, 'raw-github')).filter((name) => name.endsWith('.md') && name !== 'INDEX.md').length,
       classified_repos: classified.length,
       analyzed_projects: projects.length,
       analyzed_in_raw_timestamp_index: enrichedProjects.filter((row) => row.in_raw_timestamp_index).length,

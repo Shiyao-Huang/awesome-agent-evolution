@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-26T01:35:04.831Z",
+  "generated_at": "2026-05-26T01:42:45.349Z",
   "counts": {
     "raw_captures": 524,
-    "raw_files_on_disk": 525,
+    "raw_files_on_disk": 524,
     "classified_repos": 524,
     "analyzed_projects": 114,
     "analyzed_in_raw_timestamp_index": 61,

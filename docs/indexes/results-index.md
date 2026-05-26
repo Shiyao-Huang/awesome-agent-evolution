@@ -13,7 +13,7 @@
 | `reports` | present | 5 | 1 | 0 | 69 KB |
 | `output` | present | 12 | 1 | 0 | 601 KB |
 | `site/public/reports` | present | 271 | 4 | 0 | 2.3 MB |
-| `site/dist` | present | 510 | 205 | 0 | 14 MB |
+| `site/dist` | present | 520 | 210 | 0 | 14 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 979 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
@@ -56,8 +56,8 @@
 ### `site/dist`
 
 - `site/dist/CNAME`
-- `site/dist/_astro/BaseLayout.xm560FXx.css`
-- `site/dist/_astro/EvolutionNetwork.CPRTilLc.js`
+- `site/dist/_astro/BaseLayout.CVVNj5Q9.css`
+- `site/dist/_astro/EvolutionNetwork.C6w0W4W2.js`
 - `site/dist/_astro/RankTable.Cde92VTF.css`
 - `site/dist/_astro/client.DTojXMD-.js`
 - `site/dist/_astro/index.CO9X3OiW.js`

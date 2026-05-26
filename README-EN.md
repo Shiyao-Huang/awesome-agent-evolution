@@ -19,7 +19,7 @@ This repository is a Chinese-first Awesome index, survey entry point, project mo
 ## Five Sentences
 
 1. The core question in this field is not "whether there is an agent", but "what exactly the agent improves, what proves the improvement, and whether the improvement transfers to real tasks".
-2. The current evidence layer includes 519 GitHub raw captures, 519 classified repositories, 109 site projects, 82 strict self-evolution repositories, and 185 broad evolution-related repositories.
+2. The current evidence layer includes 524 GitHub raw captures, 524 classified repositories, 114 site projects, 82 strict self-evolution repositories, and 185 broad evolution-related repositories.
 3. The method map compresses into six families: reward/RL/self-play, prompt/search, memory, architecture/code self-modification, multi-agent reflection/debate, and evaluation/safety/governance.
 4. Benchmarking is one of the main contradictions of this project: SWE-Bench, HumanEval, OSWorld, BrowserGym, AgentBench, LongMemEval, STATE-Bench, and related benchmarks must be compared in one table rather than scattered across project pages.
 5. The goal of this README is to give readers the cognitive structure directly; links serve as evidence and expanded material, not as prerequisites for understanding.
@@ -37,7 +37,7 @@ Three sentences: the early focus was retrying, reflecting, changing prompts, or 
 | Lightweight self-improvement | 2022-2023 | One-shot answers become feedback/reflection/prompt-search loops. | OpenELM, DSPy, Reflexion, Self-Refine, OPRO, FunSearch | Learn the basic questions first: what changes, how is it evaluated, and how is experience retained. |
 | Agent runtimes and multi-agent systems | 2023-2024 | AutoGPT, CAMEL, MetaGPT, AutoGen, and LangGraph turn tools, roles, workflows, and state machines into engineering substrates. | [release timeline](analysis/github-project-data-analysis.md#analyzed-project-release-timeline), [project taxonomy](#project-taxonomy-table) | A framework is not self-evolution by itself; it enters the core only when evaluator, memory, and update mechanisms are attached. |
 | Architecture/code/algorithm self-modification | 2024-2025 | ADAS, DGM, AlphaEvolve, OpenEvolve, and SE-Agent put architecture, code, programs, and algorithm candidates into the search space. | [ADAS](research/papers/04-adas.md), [DGM](research/papers/02-darwin-godel-machine.md), [AlphaEvolve](research/papers/08-alphaevolve.md) | Code and algorithms are likely to land first because tests, sandboxes, regression, and archives provide strong evidence. |
-| Memory / skill / harness infrastructure | 2025-2026 | Memory, skills, evaluation, and harnesses heat up together; current raw classification has memory 104, evaluation 93, evolution 82, and skill 66. | [GitHub analysis](analysis/github-project-data-analysis.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) | The next value layer is installable skills, auditable memory, trustworthy harnesses, and reporting standards, not more demos. |
+| Memory / skill / harness infrastructure | 2025-2026 | Memory, skills, evaluation, and harnesses heat up together; current raw classification has memory 104, evaluation 94, evolution 82, and skill 68. | [GitHub analysis](analysis/github-project-data-analysis.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) | The next value layer is installable skills, auditable memory, trustworthy harnesses, and reporting standards, not more demos. |
 
 ### Future Roadmap
 
@@ -54,12 +54,12 @@ Three sentences: the early focus was retrying, reflecting, changing prompts, or 
 
 | Tracking item | Current baseline | How to update | How to read the trend |
 |---|---:|---|---|
-| GitHub corpus funnel | 519 raw captures / 519 classified / 109 model-card projects / 82 strict / 185 broad | `node scripts/analyze_github_project_data.mjs` | Strict and broad rising together means the core and infrastructure both expand; only broad rising may mean the concept is getting looser. |
-| Theme heat | memory 104, evaluation 93, evolution 82, skill 68 | `research/repo-classification.json` + GitHub analysis | Evaluation, memory, and skills rising together means the field is shifting from whether agents evolve to how we prove, accumulate, and reuse improvement. |
-| Time slice | 2026-05 358, unknown 107, 2024-Q2 7, 2026-03 7, 2026-04 7, 2025-11 5, 2024-Q3 4, 2026-02 4, 2025-05 3, early 3, other 14 | Time signal: recent additions concentrate in skills, memory, harness, evaluation, and self-modifying code. |
-| Benchmark coverage | 123 benchmark-eval function-tagged repos | README benchmark matrix + `analysis/github-project-data-analysis.md` | Benchmark growth matters only when hidden tests, failure traces, cost, and transfer are reported, not when leaderboards multiply. |
+| GitHub corpus funnel | 524 raw captures / 524 classified / 114 model-card projects / 82 strict / 185 broad | `node scripts/analyze_github_project_data.mjs` | Strict and broad rising together means the core and infrastructure both expand; only broad rising may mean the concept is getting looser. |
+| Theme heat | memory 104, evaluation 94, evolution 82, skill 68, framework 58, education-list 35, research-agent 32, prompt-optimization 26, coding-agent 17, workflow-automation 7, safety 1 | `research/repo-classification.json` + GitHub analysis | Evaluation, memory, and skills rising together means the field is shifting from whether agents evolve to how we prove, accumulate, and reuse improvement. |
+| Time slice | 2026-05 363, unknown 107, 2024-Q2 7, 2026-03 7, 2026-04 7, 2025-11 5, 2024-Q3 4, 2026-02 4, 2025-05 3, early 3, other 14 | `output/raw-github-timestamp-index.md` + classification time slice | Time signal: recent additions concentrate in skills, memory, harness, evaluation, and self-modifying code. |
+| Benchmark coverage | 124 benchmark-eval function-tagged repos | README benchmark matrix + `analysis/github-project-data-analysis.md` | Benchmark growth matters only when hidden tests, failure traces, cost, and transfer are reported, not when leaderboards multiply. |
 | Paper frontier | 108 detailed paper references, including 2026 frontier additions | `research/agent-self-evolution-papers-detailed.md` | New papers should enter README only after extracting mutable object, feedback, update, benchmark, and limitations. |
-| Product usability | 109 site-data projects / 261 public project reports | `projects/INDEX.md` + `site/public/reports/projects/INDEX.md` | Trend judgment must include runnability, docs, real workflows, maintenance, and user value, not only stars. |
+| Product usability | 114 site-data projects / 266 public project reports | `projects/INDEX.md` + `site/public/reports/projects/INDEX.md` | Trend judgment must include runnability, docs, real workflows, maintenance, and user value, not only stars. |
 
 When updating this section, add raw evidence first, then update processed classification and README judgments, then refresh `docs/indexes/` and the site build. If the trend judgment changes, state which evidence changed instead of changing the conclusion alone.
 
@@ -73,8 +73,8 @@ This section is intentionally placed first and contains only processed informati
 |---:|---|---|
 | 1 | Core history, future, and trend tracker | Understand where the technical line came from, where it is going, and which trend signals each update must track. |
 | 2 | Definition of self-evolution, method families, benchmark judgment rules | Know what counts as self-evolution, how to prove it, and how to prevent metric gaming. |
-| 3 | GitHub corpus funnel, classification axes, strict/broad evolution subsets | Read the processed structure first instead of blindly searching 517 raw captures. |
-| 4 | Public model-card project groups | 107 site projects and 259 public report projects have already been processed by role, mechanism, evidence, and report entry point for direct comparison. |
+| 3 | GitHub corpus funnel, classification axes, strict/broad evolution subsets | Read the processed structure first instead of blindly searching 524 raw captures. |
+| 4 | Public model-card project groups | 114 site projects and 266 public report projects have already been processed by role, mechanism, evidence, and report entry point for direct comparison. |
 | 5 | Paper method map | 108 papers are grouped by framework/method/RL/reflection/memory/alignment/benchmark/safety instead of being a flat bibliography. |
 | 6 | Full list retrieval section | Use the full project, repo, paper, and benchmark lists when you need to copy, filter, or reprocess the data. |
 
@@ -82,10 +82,10 @@ This section is intentionally placed first and contains only processed informati
 
 | Layer | Current scale | Processed meaning |
 |---|---:|---|
-| Raw GitHub captures | 519 | Original discovery layer; keeps evidence, timestamps, and sources, not conclusions. |
-| Classified repositories | 519 | Every repository is assigned category, theme, function tag, and time slice. |
-| Public model-card projects | 109 | Enters the project page/report system and is suitable for teaching, comparison, and publication. |
-| Public project report files | 261 | Publishable site result layer, including historical/compatibility reports and public site material. |
+| Raw GitHub captures | 524 | Original discovery layer; keeps evidence, timestamps, and sources, not conclusions. |
+| Classified repositories | 524 | Every repository is assigned category, theme, function tag, and time slice. |
+| Public model-card projects | 114 | Enters the project page/report system and is suitable for teaching, comparison, and publication. |
+| Public project report files | 266 | Publishable site result layer, including historical/compatibility reports and public site material. |
 | Strict self-evolution repos | 82 | Core subset: directly contains self-improvement, evolution, search, reflection, mutation, or feedback loops. |
 | Broad evolution-related repos | 185 | Supporting layer: memory, skill, evaluation, harness, coding-agent, and prompt optimization. |
 | Detailed paper references | 108 | Paper evidence layer, organized into 14 research categories plus 2026 frontier additions. |
@@ -95,10 +95,10 @@ This section is intentionally placed first and contains only processed informati
 
 | Axis | Full distribution | How to read it |
 |---|---|---|
-| Collection category | framework 144, evaluation 104, tutorial 98, tool 93, application 48, paper-code 31, benchmark 1 | Repository shape: frameworks dominate, but skill/tool growth is now an important infrastructure signal. |
-| Base theme | memory 104, evaluation 93, evolution 82, skill 68, framework 56, education-list 35, research-agent 31, prompt-optimization 26, coding-agent 17, workflow-automation 6, safety 1 | Theme center: memory, evaluation, evolution, and skill are the four densest supports. |
-| Function tag | benchmark-eval 123, framework-runtime 120, resource-index 107, tool-module 95, application-demo 29, research-artifact 20, agent-evolution-infra 11, memory-substrate 10, skill-orchestration 2, memory-runtime 1, research-agent-pipeline 1 | Functional role: benchmark/eval, runtime, resource index and tool modules form the main public evidence surfaces. |
-| Time slice | 2026-05 356, unknown 107, 2024-Q2 7, 2026-03 7, 2026-04 7, 2025-11 5, 2024-Q3 4, 2026-02 4, 2025-05 3, early 3, other 14 | Time signal: recent additions concentrate in skills, memory, harness, evaluation, and self-modifying code. |
+| Collection category | framework 147, evaluation 105, tutorial 98, tool 93, application 49, paper-code 31, benchmark 1 | Repository shape: frameworks dominate, but skill/tool growth is now an important infrastructure signal. |
+| Base theme | memory 104, evaluation 94, evolution 82, skill 68, framework 58, education-list 35, research-agent 32, prompt-optimization 26, coding-agent 17, workflow-automation 7, safety 1 | Theme center: memory, evaluation, evolution, and skill are the four densest supports. |
+| Function tag | benchmark-eval 124, framework-runtime 123, resource-index 107, tool-module 95, application-demo 29, research-artifact 20, agent-evolution-infra 11, memory-substrate 10, research-agent-pipeline 2, skill-orchestration 2, memory-runtime 1 | Functional role: benchmark/eval, runtime, resource index and tool modules form the main public evidence surfaces. |
+| Time slice | 2026-05 363, unknown 107, 2024-Q2 7, 2026-03 7, 2026-04 7, 2025-11 5, 2024-Q3 4, 2026-02 4, 2025-05 3, early 3, other 14 | Time signal: recent additions concentrate in skills, memory, harness, evaluation, and self-modifying code. |
 
 ### 3. Public Model-Card Project Groups
 
@@ -149,7 +149,7 @@ This section is intentionally placed first and contains only processed informati
 | What does the full survey say? | A self-evolving agent is not one-shot QA ability; it is a system of model, tools, memory, environment, evaluator, and code that can change prompt, memory, skill, workflow, agent code, or model policy under feedback, then prove the change through independent evaluation. | [survey/latex/main.pdf](survey/latex/main.pdf), [survey/latex/main.tex](survey/latex/main.tex) |
 | What methods exist? | Six main lines: reward/RL/self-play provides selection pressure; prompt/search changes context and candidate programs; memory preserves long-term experience; architecture/code self-modification changes agent structure; multi-agent reflection/debate uses heterogeneous roles to correct errors; evaluation/safety/governance keeps change inside verifiable boundaries. | [survey/ch3-methods-cn.md](survey/ch3-methods-cn.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) |
 | How should benchmarks be read? | Do not look only at final score. Check whether the validator is independent, tasks are isolated, hidden tests exist, transfer is measured, cost/failure/rollback rates are reported, and Goodharting is controlled. | [survey/ch5-evaluation-cn.md](survey/ch5-evaluation-cn.md), [code benchmark note](projects/code-generation-evolution/05-benchmarks.md) |
-| What is the GitHub corpus? | Currently 517 raw GitHub captures, 517 classified repositories, 107 site projects, 82 strict self-evolution repositories, and 185 broad related repositories, all unified by category, theme, function, and time slice. | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md), [repo classification](research/repo-classification.md) |
+| What is the GitHub corpus? | Currently 524 raw GitHub captures, 524 classified repositories, 114 site projects, 82 strict self-evolution repositories, and 185 broad related repositories, all unified by category, theme, function, and time slice. | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md), [repo classification](research/repo-classification.md) |
 | How should projects be compared? | Read each project by what it is, what evolves, what feedback is used, whether it can run, whether it has benchmarks, whether it is product-usable, and what its limits are, instead of only reading stars. | [projects/INDEX.md](projects/INDEX.md), [public project reports](site/public/reports/projects/INDEX.md) |
 | How should papers be used? | Papers are method evidence, not a standalone list: extract evolvable object, feedback signal, update mechanism, benchmark, claim, limitation, and reproducibility from each paper. | [Chinese paper index](research/agent-self-evolution-papers-detailed-ZH.md), [English paper index](research/agent-self-evolution-papers-detailed.md) |
 | What are community/X/blog signals for? | Community signals reveal real pain, engineering disputes, hype illusions, and adoption signals. They do not replace papers or code, but they show where benchmarks detach from business value. | [Chinese social index](output/social-media-curated-ZH.md), [English social index](output/social-media-curated.md) |
@@ -276,19 +276,19 @@ This section is intentionally placed first and contains only processed informati
 
 | Layer | Count | Definition | Evidence source |
 |---|---:|---|---|
-| Raw GitHub captures | 519 | Original `raw-github/*.md` captures and timestamp index | [raw timestamp index](output/raw-github-timestamp-index.md), [raw-github/](raw-github/) |
-| Classified repositories | 519 | Classification rows with category, theme, function, and time slice | [repo classification](research/repo-classification.md), [classification JSON](research/repo-classification.json) |
-| Site/paper model-card projects | 109 | Key projects that entered site data and project reports | [site/src/data/projects.ts](site/src/data/projects.ts), [projects/INDEX.md](projects/INDEX.md) |
-| Public project report files | 261 | Project report files in the site public reports layer | [site/public/reports/projects/INDEX.md](site/public/reports/projects/INDEX.md) |
-| Strict evolution-theme repos | 80 | Strict theme repositories where `base_theme = evolution` | [GitHub analysis](analysis/github-project-data-analysis.md) |
+| Raw GitHub captures | 524 | Original `raw-github/*.md` captures and timestamp index | [raw timestamp index](output/raw-github-timestamp-index.md), [raw-github/](raw-github/) |
+| Classified repositories | 524 | Classification rows with category, theme, function, and time slice | [repo classification](research/repo-classification.md), [classification JSON](research/repo-classification.json) |
+| Site/paper model-card projects | 114 | Key projects that entered site data and project reports | [site/src/data/projects.ts](site/src/data/projects.ts), [projects/INDEX.md](projects/INDEX.md) |
+| Public project report files | 266 | Project report files in the site public reports layer | [site/public/reports/projects/INDEX.md](site/public/reports/projects/INDEX.md) |
+| Strict evolution-theme repos | 82 | Strict theme repositories where `base_theme = evolution` | [GitHub analysis](analysis/github-project-data-analysis.md) |
 | Broad evolution-related repos | 185 | Broad set matching evolution/self-improvement/reflection/search/improvement-loop signals | [GitHub analysis](analysis/github-project-data-analysis.md) |
 
 ### Git Category / Theme Snapshot
 
 | Dimension | Classification |
 |---|---|
-| Raw collection categories | framework 144, evaluation 104, tutorial 98, tool 93, application 48, paper-code 31, benchmark 1 |
-| Raw collection themes | memory 104, evaluation 93, evolution 82, skill 68, framework 56, education-list 35, research-agent 31, prompt-optimization 26, coding-agent 17, workflow-automation 6, safety 1 |
+| Raw collection categories | framework 147, evaluation 105, tutorial 98, tool 93, application 49, paper-code 31, benchmark 1 |
+| Raw collection themes | memory 104, evaluation 94, evolution 82, skill 68, framework 58, education-list 35, research-agent 32, prompt-optimization 26, coding-agent 17, workflow-automation 7, safety 1 |
 | Timeline evidence | [Analyzed Project Release Timeline](analysis/github-project-data-analysis.md#analyzed-project-release-timeline) |
 
 ## Community / X / Blog Signals
@@ -317,8 +317,8 @@ This section is intentionally placed first and contains only processed informati
 
 | User question | Direct README answer | Evidence links |
 |---|---|---|
-| Which GitHub projects were originally collected? | The raw layer is currently 517 `raw-github/*.md` captures, preserving original sources, timestamps, and unprocessed text. It answers what was actually collected. | [raw timestamp index](output/raw-github-timestamp-index.md), [GitHub analysis](analysis/github-project-data-analysis.md) |
-| Which projects were analyzed? | 517 repositories entered classification analysis; 107 entered site project data, and 259 public project report files serve publishable model-card/project-page material. | [projects/INDEX.md](projects/INDEX.md), [public reports](site/public/reports/projects/INDEX.md), [site/src/data/projects.ts](site/src/data/projects.ts) |
+| Which GitHub projects were originally collected? | The raw layer is currently 524 `raw-github/*.md` captures, preserving original sources, timestamps, and unprocessed text. It answers what was actually collected. | [raw timestamp index](output/raw-github-timestamp-index.md), [GitHub analysis](analysis/github-project-data-analysis.md) |
+| Which projects were analyzed? | 524 repositories entered classification analysis; 114 entered site project data, and 266 public project report files serve publishable model-card/project-page material. | [projects/INDEX.md](projects/INDEX.md), [public reports](site/public/reports/projects/INDEX.md), [site/src/data/projects.ts](site/src/data/projects.ts) |
 | Which ones are evolution-related? | The strict self-evolution theme contains 82 repos, and the broad evolution-related set contains 185 repos. The strict set checks for a self-improvement loop; the broad set covers memory, skill, reflection, search, harness, evaluation, and other supporting layers. | [corpus funnel](analysis/github-project-data-analysis.md#corpus-funnel), [repo classification](research/repo-classification.md) |
 | Which ones were released in chronological order? | The timeline uses created/pushed/release signals to observe direction shifts: early activity leans toward frameworks and tools; mid-period activity adds benchmarks/memory/harness; recent activity concentrates in skills, self-modifying code, research agents, and evaluation governance. | [release timeline](analysis/github-project-data-analysis.md#analyzed-project-release-timeline) |
 | What method routes exist? | Six main method families are expanded in README: reward/RL/self-play, prompt/search optimization, memory/lifelong learning, architecture/code self-modification, multi-agent reflection/debate, evaluation/safety/governance. | [method taxonomy table](#method-taxonomy-table), [survey ch3](survey/ch3-methods-cn.md) |
@@ -330,9 +330,9 @@ This section is intentionally placed first and contains only processed informati
 These lists are embedded directly in README so readers can copy, search, and compare without jumping elsewhere. The collapsible blocks are only for readability; the content itself is in this file.
 
 <details>
-<summary>Full public model-card project list (109)</summary>
+<summary>Full public model-card project list (114)</summary>
 
-| # | Project | Repository | Role | Stars | Report |
+| # | Project | Repository | Category / role | Stars | Report |
 |---:|---|---|---|---:|---|
 | 1 | openevolve | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 进化式代码优化 | 6358 | [Report](site/public/reports/projects/algorithmicsuperintelligence__openevolve.md) |
 | 2 | agents | [aiwaves-cn/agents](https://github.com/aiwaves-cn/agents) | 数据驱动 Agent 进化 | 5928 | [Report](site/public/reports/projects/aiwaves_cn__agents.md) |
@@ -443,11 +443,16 @@ These lists are embedded directly in README so readers can copy, search, and com
 | 107 | ai-skills | [iliaal/ai-skills](https://github.com/iliaal/ai-skills) | Agent Process Skill Library | 13 | [Report](site/public/reports/projects/234-ai-skills-agent-process-discipline.md) |
 | 108 | Claude Trading Skills | [agiprolabs/claude-trading-skills](https://github.com/agiprolabs/claude-trading-skills) | Domain Agent Skill Workflow Pack | 31 | [Report](site/public/reports/projects/235-claude-trading-skills-domain-agent-workflows.md) |
 | 109 | Spec Kit Agent Skills | [dceoy/speckit-agent-skills](https://github.com/dceoy/speckit-agent-skills) | Spec-Driven Agent Workflow Skills | 88 | [Report](site/public/reports/projects/236-speckit-agent-skills-spec-driven-workflow.md) |
+| 110 | CUGA Agent | [cuga-project/cuga-agent](https://github.com/cuga-project/cuga-agent) | Enterprise Generalist Agent Harness | 742 | [Report](site/public/reports/projects/237-cuga-agent-enterprise-agent-harness.md) |
+| 111 | AutoR | [AutoX-AI-Labs/AutoR](https://github.com/AutoX-AI-Labs/AutoR) | Human-Centered Research Harness | 897 | [Report](site/public/reports/projects/238-autor-human-centered-research-harness.md) |
+| 112 | Chorus | [Chorus-AIDLC/Chorus](https://github.com/Chorus-AIDLC/Chorus) | AI-Human Collaboration Harness | 909 | [Report](site/public/reports/projects/239-chorus-ai-human-collaboration-harness.md) |
+| 113 | KWeaver Core | [kweaver-ai/kweaver-core](https://github.com/kweaver-ai/kweaver-core) | Enterprise Decision Agent Harness | 803 | [Report](site/public/reports/projects/240-kweaver-core-enterprise-decision-agent-harness.md) |
+| 114 | ClawProBench | [suyoumo/ClawProBench](https://github.com/suyoumo/ClawProBench) | Live OpenClaw Benchmark Harness | 690 | [Report](site/public/reports/projects/241-clawprobench-live-openclaw-benchmark.md) |
 
 </details>
 
 <details>
-<summary>Full raw/classified GitHub repository list (519)</summary>
+<summary>Full raw/classified GitHub repository list (524)</summary>
 
 | # | Repository | Category | Theme | Function | Stars | Time slice |
 |---:|---|---|---|---|---:|---|
@@ -505,471 +510,476 @@ These lists are embedded directly in README so readers can copy, search, and com
 | 52 | [asirwad/dspy-prompt-auto-optimizer](https://github.com/asirwad/dspy-prompt-auto-optimizer) | framework | prompt-optimization | framework-runtime | 1 | unknown |
 | 53 | [autodrive-ecosystem/mrdt-marl](https://github.com/autodrive-ecosystem/mrdt-marl) | framework | framework | framework-runtime | 7 | unknown |
 | 54 | [autohandai/code-cli](https://github.com/autohandai/code-cli) | application | evaluation | benchmark-eval | 110 | 2026-05 |
-| 55 | [bansky-cl/graphrag-arxiv-daily-paper](https://github.com/bansky-cl/graphrag-arxiv-daily-paper) | tutorial | memory | resource-index | 22 | 2026-04 |
-| 56 | [bazilicum/graphltm](https://github.com/bazilicum/graphltm) | framework | memory | framework-runtime | 4 | unknown |
-| 57 | [beeevita/evoprompt](https://github.com/beeevita/evoprompt) | evaluation | prompt-optimization | benchmark-eval | 238 | unknown |
-| 58 | [beita6969/scienceclaw](https://github.com/beita6969/ScienceClaw) | application | research-agent | application-demo | 816 | 2026-05 |
-| 59 | [bennettschwartz/membrane](https://github.com/bennettschwartz/membrane) | evaluation | memory | benchmark-eval | 93 | unknown |
-| 60 | [bingreeky/memgen](https://github.com/bingreeky/memgen) | framework | memory | tool-module | 378 | 2026-05 |
-| 61 | [bobxwu/learning-from-rewards-llm-papers](https://github.com/bobxwu/learning-from-rewards-llm-papers) | tutorial | education-list | resource-index | 71 | unknown |
-| 62 | [brain-research/guided-evolutionary-strategies](https://github.com/brain-research/guided-evolutionary-strategies) | tutorial | evolution | resource-index | 273 | unknown |
-| 63 | [browser-use/browser-use](https://github.com/browser-use/browser-use) | framework | workflow-automation | framework-runtime | 94 | 2026-05 |
-| 64 | [browser-use/web-ui](https://github.com/browser-use/web-ui) | framework | workflow-automation | framework-runtime | 16 | unknown |
-| 65 | [bruno686/visplay](https://github.com/bruno686/visplay) | evaluation | evolution | benchmark-eval | 57 | unknown |
-| 66 | [budecosystem/claudeevolve](https://github.com/budecosystem/claudeevolve) | tool | evolution | tool-module | 4 | unknown |
-| 67 | [callstackincubator/agent-skills](https://github.com/callstackincubator/agent-skills) | tutorial | skill | resource-index | 1400 | 2026-05 |
-| 68 | [camel-ai/owl](https://github.com/camel-ai/owl) | framework | framework | framework-runtime | 19 | unknown |
-| 69 | [caution724/github-explorer-skill](https://github.com/caution724/github-explorer-skill) | tool | coding-agent | tool-module | 2 | unknown |
-| 70 | [CE0Alex/skill-hunter](https://github.com/CE0Alex/skill-hunter) | evaluation | skill | benchmark-eval | 22 | 2026-05 |
-| 71 | [cellium-project/cellium-agent](https://github.com/cellium-project/cellium-agent) | framework | memory | framework-runtime | 41 | unknown |
-| 72 | [centaurioun/crewai](https://github.com/centaurioun/crewai) | framework | framework | framework-runtime | 0 | unknown |
-| 73 | [channinglua/prax-agent](https://github.com/channinglua/prax-agent) | framework | evaluation | framework-runtime | 294 | 2026-05 |
-| 74 | [charlesq9/self-evolving-agents](https://github.com/charlesq9/self-evolving-agents) | application | evolution | resource-index | 1 | 2026-05 |
-| 75 | [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | framework | evolution | framework-runtime | 391 | 2026-05 |
-| 76 | [chriscox/agent-skills](https://github.com/chriscox/agent-skills) | tutorial | skill | resource-index | 10 | 2026-05 |
-| 77 | [chrisworsey55/atlas-gic](https://github.com/chrisworsey55/atlas-gic) | application | prompt-optimization | framework-runtime | 1 | 2026-05 |
-| 78 | [chuacheowhuan/gym-continuousdoubleauction](https://github.com/chuacheowhuan/gym-continuousdoubleauction) | evaluation | coding-agent | benchmark-eval | 153 | unknown |
-| 79 | [circlemind-ai/fast-graphrag](https://github.com/circlemind-ai/fast-graphrag) | evaluation | memory | benchmark-eval | 3 | unknown |
-| 80 | [claire-labo/evotune](https://github.com/claire-labo/evotune) | tool | coding-agent | tool-module | 137 | unknown |
-| 81 | [claw-bench/claw-bench](https://github.com/claw-bench/claw-bench) | evaluation | evaluation | benchmark-eval | 171 | 2026-05 |
-| 82 | [claw-eval/claw-eval](https://github.com/claw-eval/claw-eval) | evaluation | evaluation | benchmark-eval | 606 | 2026-03 |
-| 83 | [ClawBio/ClawBio](https://github.com/ClawBio/ClawBio) | tool | skill | tool-module | 867 | 2026-05 |
-| 84 | [clawdotnet/openclaw.net](https://github.com/clawdotnet/openclaw.net) | framework | framework | framework-runtime | 345 | 2026-05 |
-| 85 | [clawland-ai/geneclaw](https://github.com/clawland-ai/geneclaw) | framework | evolution | framework-runtime | 36 | unknown |
-| 86 | [clint-kristopher-morris/llm-guided-evolution](https://github.com/clint-kristopher-morris/llm-guided-evolution) | tutorial | evolution | resource-index | 19 | 2024-Q3 |
-| 87 | [CodeAlive-AI/ai-driven-development](https://github.com/CodeAlive-AI/ai-driven-development) | tutorial | skill | resource-index | 74 | 2026-05 |
-| 88 | [codejunkie99/agentic-stack](https://github.com/codejunkie99/agentic-stack) | tool | memory | tool-module | 2000 | 2026-05 |
-| 89 | [codexstar69/bug-hunter](https://github.com/codexstar69/bug-hunter) | framework | evaluation | framework-runtime | 380 | 2026-03 |
-| 90 | [colab2/midca](https://github.com/colab2/midca) | tool | coding-agent | tool-module | 27 | unknown |
-| 91 | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | tutorial | skill | resource-index | 61500 | 2026-05 |
-| 92 | [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) | tutorial | skill | resource-index | 11500 | 2026-05 |
-| 93 | [crewaiinc/crewai](https://github.com/crewaiinc/crewai) | framework | framework | framework-runtime | 51 | unknown |
-| 94 | [cxcscmu/SkillLearnBench](https://github.com/cxcscmu/SkillLearnBench) | evaluation | skill | benchmark-eval | 21 | 2026-05 |
-| 95 | [cxxz/awesome-agent-memory](https://github.com/cxxz/awesome-agent-memory) | tutorial | memory | resource-index | 10 | 2026-05 |
-| 96 | [cyijun/agent-smith](https://github.com/cyijun/agent-smith) | framework | framework | framework-runtime | 18 | 2026-05 |
-| 97 | [darkrishabh/agent-skills-eval](https://github.com/darkrishabh/agent-skills-eval) | benchmark | evaluation | benchmark-eval | 34 | 2026-05 |
-| 98 | [davidzwz/awesome-rag-reasoning](https://github.com/davidzwz/awesome-rag-reasoning) | tutorial | memory | resource-index | 427 | 2025-07 |
-| 99 | [dceoy/speckit-agent-skills](https://github.com/dceoy/speckit-agent-skills) | tool | skill | skill-orchestration | 88 | 2026-05 |
-| 100 | [DEEP-PolyU/Awesome-GraphMemory](https://github.com/DEEP-PolyU/Awesome-GraphMemory) | tutorial | memory | resource-index | 273 | 2026-05 |
-| 101 | [deep-polyu/awesome-graphrag](https://github.com/deep-polyu/awesome-graphrag) | tutorial | memory | resource-index | 2 | 2026-04 |
-| 102 | [deepelementlab/clawcode](https://github.com/deepelementlab/clawcode) | framework | coding-agent | framework-runtime | 199 | 2026-05 |
-| 103 | [developzir/gepa-mcp](https://github.com/developzir/gepa-mcp) | framework | prompt-optimization | framework-runtime | 48 | unknown |
-| 104 | [diegosouzapw/awesome-omni-skills](https://github.com/diegosouzapw/awesome-omni-skills) | tool | skill | tool-module | 42 | 2026-05 |
-| 105 | [dmgrok/agent_skills_directory](https://github.com/dmgrok/agent_skills_directory) | tutorial | skill | resource-index | 16 | 2026-05 |
-| 106 | [dongxiangjue/awesome-llm-self-improvement](https://github.com/dongxiangjue/awesome-llm-self-improvement) | tool | evolution | resource-index | 106 | 2026-05 |
-| 107 | [doobidoo/mcp-memory-service](https://github.com/doobidoo/mcp-memory-service) | tool | memory | tool-module | 1900 | 2026-05 |
-| 108 | [DSAIL-Memory/EvoMemBench](https://github.com/DSAIL-Memory/EvoMemBench) | evaluation | memory | benchmark-eval | 0 | 2026-05 |
-| 109 | [dsifry/metaswarm](https://github.com/dsifry/metaswarm) | framework | framework | framework-runtime | 272 | 2026-05 |
-| 110 | [ecnu-icalk/autoskill](https://github.com/ecnu-icalk/autoskill) | tool | evolution | tool-module | 424 | 2026-05 |
-| 111 | [ecnu-icalk/ell-stulife](https://github.com/ecnu-icalk/ell-stulife) | application | memory | tool-module | 74 | 2026-05 |
-| 112 | [egmaminta/gepa-lite](https://github.com/egmaminta/gepa-lite) | tool | prompt-optimization | tool-module | 55 | unknown |
-| 113 | [eigent-ai/agent-skills](https://github.com/eigent-ai/agent-skills) | tool | skill | tool-module | 10 | 2026-05 |
-| 114 | [elastic/agent-skills](https://github.com/elastic/agent-skills) | tool | skill | tool-module | 485 | 2026-05 |
-| 115 | [eliasecchig/gemini-cli-git](https://github.com/eliasecchig/gemini-cli-git) | framework | memory | tool-module | 56 | 2026-05 |
-| 116 | [elizaOS/eliza](https://github.com/elizaOS/eliza) | framework | framework | framework-runtime | 17300 | 2026-05 |
-| 117 | [emartin59/text-game-llm-improver](https://github.com/emartin59/text-game-llm-improver) | framework | framework | framework-runtime | 3 | unknown |
-| 118 | [emson/elfmem](https://github.com/emson/elfmem) | framework | memory | benchmark-eval | 53 | 2026-05 |
-| 119 | [enajx/es](https://github.com/enajx/es) | evaluation | evolution | benchmark-eval | 7 | unknown |
-| 120 | [euphoria16/ui-genie](https://github.com/euphoria16/ui-genie) | paper-code | evolution | research-artifact | 57 | 2026-05 |
-| 121 | [evalops/dspy-0to1-guide](https://github.com/evalops/dspy-0to1-guide) | tutorial | prompt-optimization | resource-index | 215 | unknown |
-| 122 | [evalstate/fast-agent](https://github.com/evalstate/fast-agent) | framework | framework | framework-runtime | 3800 | 2026-05 |
-| 123 | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | framework | memory | framework-runtime | 5600 | 2026-05 |
-| 124 | [evermind-ai/everos?tab=readme-ov-file](https://github.com/evermind-ai/everos?tab=readme-ov-file) | evaluation | evaluation | benchmark-eval | 5 | 2025-02 |
-| 125 | [evoagentx/awesome-self-evolving-agents](https://github.com/evoagentx/awesome-self-evolving-agents) | tool | evolution | resource-index | 2 | 2026-05 |
-| 126 | [evoagentx/evoagentx](https://github.com/evoagentx/evoagentx) | framework | evolution | application-demo | 3 | 2026-05 |
-| 127 | [evomap/awesome-agent-evolution](https://github.com/evomap/awesome-agent-evolution) | tool | evolution | resource-index | 123 | 2026-05 |
-| 128 | [evomap/evolver](https://github.com/evomap/evolver) | framework | evolution | tool-module | 7 | 2026-02 |
-| 129 | [evotai/evot](https://github.com/evotai/evot) | framework | evolution | tool-module | 54 | 2026-05 |
-| 130 | [exoskeletonzj/mars](https://github.com/exoskeletonzj/mars) | framework | prompt-optimization | tool-module | 18 | unknown |
-| 131 | [facebookresearch/drzero](https://github.com/facebookresearch/drzero) | application | research-agent | research-artifact | 515 | 2026-05 |
-| 132 | [facebookresearch/hyperagents](https://github.com/facebookresearch/hyperagents) | application | memory | research-artifact | 2 | 2026-05 |
-| 133 | [fareedkhan-dev/autonomous-agentic-rag](https://github.com/fareedkhan-dev/autonomous-agentic-rag) | application | memory | tool-module | 139 | unknown |
-| 134 | [farmage/opencode-skills](https://github.com/farmage/opencode-skills) | tool | skill | tool-module | 28 | 2026-05 |
-| 135 | [faveos8758/reflexion-agent-ts](https://github.com/faveos8758/reflexion-agent-ts) | evaluation | evaluation | framework-runtime | 20 | unknown |
-| 136 | [feesuu/cluerag](https://github.com/feesuu/cluerag) | evaluation | memory | benchmark-eval | 26 | unknown |
-| 137 | [feiliu36/eoh](https://github.com/feiliu36/eoh) | application | evolution | application-demo | 319 | unknown |
-| 138 | [feiliu36/llm4opt](https://github.com/feiliu36/llm4opt) | application | research-agent | application-demo | 367 | unknown |
-| 139 | [flowersteam/teachmyagent](https://github.com/flowersteam/teachmyagent) | framework | evaluation | framework-runtime | 77 | unknown |
-| 140 | [FreedomIntelligence/OpenClaw-Medical-Skills](https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills) | tutorial | skill | resource-index | 2500 | 2026-05 |
-| 141 | [fusionbrainlab/gigaevo-core](https://github.com/fusionbrainlab/gigaevo-core) | tool | evolution | tool-module | 116 | unknown |
-| 142 | [galaxy-brain-ai/mcog-core](https://github.com/galaxy-brain-ai/mcog-core) | application | research-agent | application-demo | 19 | unknown |
-| 143 | [galyarderlabs/galyarder-framework](https://github.com/galyarderlabs/galyarder-framework) | framework | skill | framework-runtime | 11 | 2026-05 |
-| 144 | [garrus800-stack/genesis-agent](https://github.com/garrus800-stack/genesis-agent) | evaluation | evaluation | benchmark-eval | 24 | unknown |
-| 145 | [GeniusHTX/SWE-Skills-Bench](https://github.com/GeniusHTX/SWE-Skills-Bench) | evaluation | evaluation | benchmark-eval | 42 | 2026-05 |
-| 146 | [gensi-thuair/flex](https://github.com/gensi-thuair/flex) | paper-code | evaluation | benchmark-eval | 78 | 2026-05 |
-| 147 | [Gentleman-Programming/Gentleman-Skills](https://github.com/Gentleman-Programming/Gentleman-Skills) | tutorial | skill | resource-index | 522 | 2026-05 |
-| 148 | [george-salafatinos/tictactoe-self-play](https://github.com/george-salafatinos/tictactoe-self-play) | tool | coding-agent | tool-module | 0 | unknown |
-| 149 | [gepa-ai/gepa](https://github.com/gepa-ai/gepa) | tool | prompt-optimization | tool-module | 4 | unknown |
-| 150 | [gepa-ai/optimize-anything-artifact](https://github.com/gepa-ai/optimize-anything-artifact) | evaluation | prompt-optimization | benchmark-eval | 0 | unknown |
-| 151 | [getzep/graphiti](https://github.com/getzep/graphiti) | framework | memory | memory-substrate | 26500 | 2026-05 |
-| 152 | [ghy0501/awesome-continual-learning-in-generative-models](https://github.com/ghy0501/awesome-continual-learning-in-generative-models) | tutorial | education-list | resource-index | 151 | unknown |
-| 153 | [Gitmaxd/deepagents-cli-codex-skill](https://github.com/Gitmaxd/deepagents-cli-codex-skill) | tutorial | skill | resource-index | 1 | 2026-05 |
-| 154 | [gofenix/nex-agent](https://github.com/gofenix/nex-agent) | application | evolution | application-demo | 64 | 2026-05 |
-| 155 | [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | tool | memory | agent-evolution-infra | 105000 | 2026-05 |
-| 156 | [graph-rag/graphrag](https://github.com/graph-rag/graphrag) | tool | memory | tool-module | 574 | unknown |
-| 157 | [greyhaven-ai/autocontext](https://github.com/greyhaven-ai/autocontext) | framework | memory | benchmark-eval | 1 | 2026-04 |
-| 158 | [guixiang123124/openclaw-harness](https://github.com/guixiang123124/openclaw-harness) | framework | skill | framework-runtime | 3 | 2026-05 |
-| 159 | [gumbel-ai/agent-debate](https://github.com/gumbel-ai/agent-debate) | framework | framework | framework-runtime | 12 | 2026-03 |
-| 160 | [gustolychees/contribai](https://github.com/gustolychees/contribai) | evaluation | evaluation | benchmark-eval | 0 | unknown |
-| 161 | [hankbesser/recursive-agents](https://github.com/hankbesser/recursive-agents) | framework | evolution | framework-runtime | 39 | unknown |
-| 162 | [hao-cyber/skill-evolution](https://github.com/hao-cyber/skill-evolution) | framework | evolution | framework-runtime | 145 | 2026-05 |
-| 163 | [haotang1995/worldcoder](https://github.com/haotang1995/worldcoder) | tool | coding-agent | tool-module | 11 | unknown |
-| 164 | [haoxufd/openrlhf](https://github.com/haoxufd/openrlhf) | framework | framework | framework-runtime | 0 | unknown |
-| 165 | [harness/harness-skills](https://github.com/harness/harness-skills) | tutorial | skill | tool-module | 20 | 2026-05 |
-| 166 | [hashgraph-online/registry-broker-skills](https://github.com/hashgraph-online/registry-broker-skills) | tool | skill | tool-module | 345 | 2026-05 |
-| 167 | [hebbs-ai/hebbs-memory-engine](https://github.com/hebbs-ai/hebbs-memory-engine) | framework | memory | memory-substrate | 28 | 2026-05 |
-| 168 | [hkuds/ai-researcher](https://github.com/hkuds/ai-researcher) | evaluation | research-agent | benchmark-eval | 5 | unknown |
-| 169 | [HKUDS/OpenHarness](https://github.com/HKUDS/OpenHarness) | framework | framework | framework-runtime | 13000 | 2026-05 |
-| 170 | [HKUDS/OpenSpace](https://github.com/HKUDS/OpenSpace) | framework | evolution | framework-runtime | 6300 | 2026-05 |
-| 171 | [hkust-knowcomp/awesome-llm-scientific-discovery](https://github.com/hkust-knowcomp/awesome-llm-scientific-discovery) | tutorial | research-agent | resource-index | 344 | unknown |
-| 172 | [howells/arc](https://github.com/howells/arc) | framework | framework | framework-runtime | 22 | 2026-05 |
-| 173 | [huggingface/agents-course](https://github.com/huggingface/agents-course) | tutorial | education-list | resource-index | 28 | unknown |
-| 174 | [huggingface/skills](https://github.com/huggingface/skills) | tutorial | skill | resource-index | 10600 | 2026-05 |
-| 175 | [huggingface/smolagents](https://github.com/huggingface/smolagents) | evaluation | evaluation | benchmark-eval | 27 | unknown |
-| 176 | [human-agent-society/coral](https://github.com/Human-Agent-Society/CORAL) | framework | evolution | framework-runtime | 667 | 2026-05 |
-| 177 | [HUST-AI-HYZ/MemoryAgentBench](https://github.com/HUST-AI-HYZ/MemoryAgentBench) | evaluation | memory | benchmark-eval | 341 | 2026-05 |
-| 178 | [huytieu/COG-second-brain](https://github.com/huytieu/COG-second-brain) | application | memory | application-demo | 486 | 2026-05 |
-| 179 | [hwfengcs/dm-code-agent](https://github.com/hwfengcs/dm-code-agent) | evaluation | evaluation | benchmark-eval | 135 | 2026-05 |
-| 180 | [ibm/awesome-agentic-workflow-optimization](https://github.com/ibm/awesome-agentic-workflow-optimization) | tool | evolution | resource-index | 51 | unknown |
-| 181 | [iii-experimental/agentos](https://github.com/iii-experimental/agentos) | framework | evolution | framework-runtime | 145 | 2026-05 |
-| 182 | [ilearn-lab/evoharness](https://github.com/ilearn-lab/evoharness) | framework | evaluation | benchmark-eval | 52 | 2026-05 |
-| 183 | [iliaal/ai-skills](https://github.com/iliaal/ai-skills) | tool | skill | resource-index | 13 | 2026-05 |
-| 184 | [ilsilfverskiold/awesome-llm-resources-list](https://github.com/ilsilfverskiold/awesome-llm-resources-list) | tutorial | education-list | resource-index | 523 | unknown |
-| 185 | [imgeorgiev/pwm](https://github.com/imgeorgiev/pwm) | evaluation | evaluation | benchmark-eval | 68 | unknown |
-| 186 | [immanuelxiv/ppo-self-play](https://github.com/immanuelxiv/ppo-self-play) | application | evolution | application-demo | 20 | unknown |
-| 187 | [incidentfox/self-learning-ai-agent](https://github.com/incidentfox/self-learning-ai-agent) | tool | memory | tool-module | 1 | unknown |
-| 188 | [inclusionai/agenticlearning](https://github.com/inclusionai/agenticlearning) | tool | memory | tool-module | 106 | 2024-Q4 |
-| 189 | [inclusionai/aworld](https://github.com/inclusionai/aworld) | evaluation | evaluation | benchmark-eval | 1 | unknown |
-| 190 | [internlm/polar](https://github.com/internlm/polar) | evaluation | evaluation | benchmark-eval | 163 | unknown |
-| 191 | [internscience/internagent](https://github.com/internscience/internagent) | framework | research-agent | framework-runtime | 1 | unknown |
-| 192 | [isenglab/awesomellm4apr](https://github.com/isenglab/awesomellm4apr) | tutorial | education-list | resource-index | 240 | unknown |
-| 193 | [jakenuts/agent-skills](https://github.com/jakenuts/agent-skills) | tool | skill | tool-module | 0 | 2026-05 |
-| 194 | [jarvis-xs/se-agent](https://github.com/jarvis-xs/se-agent) | evaluation | evaluation | framework-runtime | 274 | 2026-05 |
-| 195 | [jayzeng/agentmemory](https://github.com/jayzeng/agentmemory) | tool | memory | tool-module | 5 | 2026-05 |
-| 196 | [jbrahy/meta-agent-teams](https://github.com/jbrahy/meta-agent-teams) | framework | evolution | framework-runtime | 2 | 2026-05 |
-| 197 | [jcartu/rasputin-memory](https://github.com/jcartu/rasputin-memory) | tool | memory | memory-substrate | 33 | 2026-05 |
-| 198 | [jdrhyne/agent-skills](https://github.com/jdrhyne/agent-skills) | tutorial | skill | resource-index | 230 | 2026-05 |
-| 199 | [jennyzzt/awesome-open-ended](https://github.com/jennyzzt/awesome-open-ended) | tutorial | education-list | resource-index | 438 | unknown |
-| 200 | [jennyzzt/dgm](https://github.com/jennyzzt/dgm) | application | evaluation | benchmark-eval | 2 | 2026-05 |
-| 201 | [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills) | tutorial | skill | resource-index | 339 | 2026-05 |
-| 202 | [JordanMcCann/agentmemory](https://github.com/JordanMcCann/agentmemory) | evaluation | memory | benchmark-eval | 23 | 2026-05 |
-| 203 | [jscraik/Agent-Skills](https://github.com/jscraik/Agent-Skills) | tool | skill | tool-module | 4 | 2026-05 |
-| 204 | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | tutorial | skill | resource-index | 25500 | 2026-05 |
-| 205 | [kadubon/audit-closed-ai-scientist](https://github.com/kadubon/audit-closed-ai-scientist) | evaluation | research-agent | benchmark-eval | 0 | 2026-03 |
-| 206 | [kargarisaac/reflexion](https://github.com/kargarisaac/reflexion) | tool | prompt-optimization | tool-module | 7 | unknown |
-| 207 | [kayba-ai/agentic-context-engine](https://github.com/kayba-ai/agentic-context-engine) | framework | evolution | agent-evolution-infra | 2200 | 2026-05 |
-| 208 | [kayba-ai/recursive-improve](https://github.com/kayba-ai/recursive-improve) | application | evolution | benchmark-eval | 194 | 2026-05 |
-| 209 | [Kenotic-Labs/ATANT](https://github.com/Kenotic-Labs/ATANT) | evaluation | evaluation | benchmark-eval | 3 | 2026-05 |
-| 210 | [keskival/recursive-self-improvement-suite](https://github.com/keskival/recursive-self-improvement-suite) | application | evolution | tool-module | 46 | unknown |
-| 211 | [khykd/reflector](https://github.com/khykd/reflector) | tool | prompt-optimization | tool-module | 4 | unknown |
-| 212 | [kitfunso/hippo-memory](https://github.com/kitfunso/hippo-memory) | tool | memory | benchmark-eval | 675 | 2026-05 |
-| 213 | [kks0488/vibe-codex](https://github.com/kks0488/vibe-codex) | tool | skill | tool-module | 10 | 2026-05 |
-| 214 | [knightnemo/awesome-world-models](https://github.com/knightnemo/awesome-world-models) | tutorial | education-list | resource-index | 2 | unknown |
-| 215 | [knowledgexlab/muse](https://github.com/knowledgexlab/muse) | application | evaluation | benchmark-eval | 88 | 2026-05 |
-| 216 | [kodigitaccount/2026-roadmap-for-advance-ml-ai-generative-ai-agentic-ai](https://github.com/kodigitaccount/2026-roadmap-for-advance-ml-ai-generative-ai-agentic-ai) | tutorial | education-list | resource-index | 1 | 2025-11 |
-| 217 | [krzysztofdudek/researcherskill](https://github.com/krzysztofdudek/researcherskill) | paper-code | research-agent | research-artifact | 223 | 2026-05 |
-| 218 | [labicon/curricullm](https://github.com/labicon/curricullm) | evaluation | evaluation | benchmark-eval | 27 | unknown |
-| 219 | [lamm-mit/sciagentsdiscovery](https://github.com/lamm-mit/sciagentsdiscovery) | application | research-agent | application-demo | 610 | unknown |
-| 220 | [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | framework | framework | framework-runtime | 137 | 2026-05 |
-| 221 | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | framework | framework | framework-runtime | 32 | 2026-05 |
-| 222 | [langchain-ai/langmem](https://github.com/langchain-ai/langmem) | framework | memory | memory-substrate | 1500 | 2026-05 |
-| 223 | [langchain-ai/langsmith-sdk](https://github.com/langchain-ai/langsmith-sdk) | framework | framework | framework-runtime | 894 | 2026-05 |
-| 224 | [langchain-ai/open-swe](https://github.com/langchain-ai/open-swe) | evaluation | coding-agent | benchmark-eval | 9 | unknown |
-| 225 | [large-model-rl-lib/openrlhf](https://github.com/large-model-rl-lib/openrlhf) | framework | framework | framework-runtime | 0 | unknown |
-| 226 | [lastmile-ai/mcp-agent](https://github.com/lastmile-ai/mcp-agent) | framework | memory | framework-runtime | 8 | unknown |
-| 227 | [lean-dojo/leanagent](https://github.com/lean-dojo/leanagent) | framework | evaluation | framework-runtime | 68 | unknown |
-| 228 | [legionio/lex-metacognition](https://github.com/legionio/lex-metacognition) | tool | memory | tool-module | 0 | unknown |
-| 229 | [leofan90/awesome-world-models](https://github.com/leofan90/awesome-world-models) | tutorial | education-list | resource-index | 1 | unknown |
-| 230 | [letta-ai/agentic-learning-sdk](https://github.com/letta-ai/agentic-learning-sdk) | framework | framework | framework-runtime | 45 | unknown |
-| 231 | [letta-ai/letta](https://github.com/letta-ai/letta) | framework | memory | framework-runtime | 22 | 2026-05 |
-| 232 | [lfleon9b/sakana-ai-scientist-v2](https://github.com/lfleon9b/sakana-ai-scientist-v2) | application | research-agent | application-demo | 1 | 2024-Q2 |
-| 233 | [lightchen233/awesome-ai4research](https://github.com/lightchen233/awesome-ai4research) | tutorial | education-list | resource-index | 230 | 2026-05 |
-| 234 | [linear95/spag](https://github.com/linear95/spag) | evaluation | evaluation | benchmark-eval | 144 | 2026-05 |
-| 235 | [lingxi-agent/lingxi](https://github.com/lingxi-agent/lingxi) | tutorial | framework | resource-index | 243 | 2026-05 |
-| 236 | [llmprogram/textgrad](https://github.com/llmprogram/textgrad) | evaluation | coding-agent | benchmark-eval | 0 | 2026-05 |
-| 237 | [lmd0311/awesome-world-model](https://github.com/lmd0311/awesome-world-model) | tutorial | education-list | resource-index | 2 | 2026-05 |
-| 238 | [logikon-ai/awesome-deliberative-prompting](https://github.com/logikon-ai/awesome-deliberative-prompting) | tutorial | prompt-optimization | resource-index | 126 | early |
-| 239 | [longman-max/selfthinker](https://github.com/longman-max/selfthinker) | tool | coding-agent | tool-module | 0 | 2026-05 |
-| 240 | [longyunfeigu/learn-hermes-agent](https://github.com/longyunfeigu/learn-hermes-agent) | framework | memory | resource-index | 113 | 2026-05 |
-| 241 | [lsdefine/genericagent](https://github.com/lsdefine/genericagent) | framework | evolution | tool-module | 11 | 2026-05 |
-| 242 | [ltzheng/curriculummarl](https://github.com/ltzheng/curriculummarl) | paper-code | research-agent | research-artifact | 13 | 2026-05 |
-| 243 | [luh-ai-devnerds/llm-guided-curriculum-rl](https://github.com/luh-ai-devnerds/llm-guided-curriculum-rl) | tutorial | research-agent | resource-index | 1 | 2026-05 |
-| 244 | [luo-junyu/awesome-agent-papers](https://github.com/luo-junyu/awesome-agent-papers) | tutorial | education-list | resource-index | 2 | 2026-05 |
-| 245 | [lyl1015/jarvisevo](https://github.com/lyl1015/jarvisevo) | evaluation | evaluation | benchmark-eval | 401 | 2026-05 |
-| 246 | [machuangtao/llm-kg4qa](https://github.com/machuangtao/llm-kg4qa) | paper-code | coding-agent | research-artifact | 157 | 2026-05 |
-| 247 | [madaan/self-refine](https://github.com/madaan/self-refine) | tool | prompt-optimization | tool-module | 805 | 2026-05 |
-| 248 | [maitrix-org/promptagent](https://github.com/maitrix-org/promptagent) | paper-code | prompt-optimization | research-artifact | 353 | 2024-Q2 |
-| 249 | [managedcode/dotnet-skills](https://github.com/managedcode/dotnet-skills) | tool | skill | tool-module | 403 | 2026-05 |
-| 250 | [matebenyovszky/healing-agent](https://github.com/matebenyovszky/healing-agent) | evaluation | evaluation | benchmark-eval | 23 | 2024-Q1 |
-| 251 | [matrixorigin/Memoria](https://github.com/matrixorigin/Memoria) | tool | memory | tool-module | 271 | 2026-05 |
-| 252 | [MaximeRobeyns/self_improving_coding_agent](https://github.com/MaximeRobeyns/self_improving_coding_agent) | paper-code | evolution | research-artifact | 324 | 2026-05 |
-| 253 | [maxnorm8650/medagentsim](https://github.com/maxnorm8650/medagentsim) | evaluation | evolution | research-artifact | 163 | 2026-05 |
-| 254 | [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks) | tutorial | framework | resource-index | 52 | unknown |
-| 255 | [mbchang/meta-prompt](https://github.com/mbchang/meta-prompt) | paper-code | prompt-optimization | tool-module | 65 | 2026-05 |
-| 256 | [mbzuai-oryx/awesome-llm-post-training](https://github.com/mbzuai-oryx/awesome-llm-post-training) | tutorial | education-list | resource-index | 2 | 2026-05 |
-| 257 | [mdalamin5/end-to-end-agentic-ai-automation-lab](https://github.com/mdalamin5/end-to-end-agentic-ai-automation-lab) | framework | workflow-automation | framework-runtime | 72 | 2026-05 |
-| 258 | [meituan/EvoCUA](https://github.com/meituan/EvoCUA) | paper-code | evolution | research-artifact | 317 | 2026-05 |
-| 259 | [mem0ai/mem0](https://github.com/mem0ai/mem0) | tool | memory | tool-module | 56500 | 2026-05 |
-| 260 | [mem0ai/memory-benchmarks](https://github.com/mem0ai/memory-benchmarks) | evaluation | memory | benchmark-eval | 33 | 2026-05 |
-| 261 | [Memento-Teams/Memento-Skills](https://github.com/Memento-Teams/Memento-Skills) | framework | evolution | agent-evolution-infra | 1400 | 2026-05 |
-| 262 | [memodb-io/acontext](https://github.com/memodb-io/acontext) | tool | memory | tool-module | 3 | 2026-05 |
-| 263 | [memodb-io/memobase](https://github.com/memodb-io/memobase) | framework | memory | memory-substrate | 2700 | 2026-05 |
-| 264 | [MemoriLabs/Memori](https://github.com/memorilabs/memori) | tool | memory | tool-module | 14900 | 2026-05 |
-| 265 | [memovai/memov](https://github.com/memovai/memov) | framework | memory | tool-module | 190 | 2026-05 |
-| 266 | [MemPalace/mempalace](https://github.com/MemPalace/mempalace) | tool | memory | memory-substrate | 52800 | 2026-05 |
-| 267 | [MemTensor/HaluMem](https://github.com/MemTensor/HaluMem) | evaluation | memory | benchmark-eval | 138 | 2025-11 |
-| 268 | [memtensor/memos](https://github.com/memtensor/memos) | tool | memory | memory-runtime | 9400 | 2026-05 |
-| 269 | [memtensor/memrl](https://github.com/memtensor/memrl) | paper-code | evolution | research-artifact | 117 | 2026-05 |
-| 270 | [memvid/memvid](https://github.com/memvid/memvid) | tool | memory | memory-substrate | 12400 | 2026-05 |
-| 271 | [metauto-ai/gptswarm](https://github.com/metauto-ai/gptswarm) | application | evolution | research-artifact | 998 | 2026-05 |
-| 272 | [mettamazza/ernosagent](https://github.com/mettamazza/ernosagent) | framework | memory | tool-module | 10 | unknown |
-| 273 | [mfolsom/rlvr-world](https://github.com/mfolsom/rlvr-world) | evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 274 | [mgechev/skillgrade](https://github.com/mgechev/skillgrade) | evaluation | evaluation | benchmark-eval | 490 | 2026-05 |
-| 275 | [mgechev/skills-best-practices](https://github.com/mgechev/skills-best-practices) | tutorial | skill | resource-index | 1900 | 2026-05 |
-| 276 | [microsoft/skills](https://github.com/microsoft/skills) | tutorial | skill | resource-index | 2400 | 2026-05 |
-| 277 | [microsoft/STATE-Bench](https://github.com/microsoft/STATE-Bench) | evaluation | memory | benchmark-eval | 25 | 2026-05 |
-| 278 | [microsoft/waza](https://github.com/microsoft/waza) | evaluation | skill | benchmark-eval | 904 | 2026-05 |
-| 279 | [microsoft/WindowsAgentArena](https://github.com/microsoft/WindowsAgentArena) | evaluation | evaluation | benchmark-eval | 861 | 2026-05 |
-| 280 | [MicrosoftDocs/Agent-Skills](https://github.com/MicrosoftDocs/Agent-Skills) | tutorial | skill | resource-index | 557 | 2026-05 |
-| 281 | [mitchellgordon95/dspy](https://github.com/mitchellgordon95/dspy) | framework | prompt-optimization | framework-runtime | 0 | 2026-05 |
-| 282 | [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | framework | memory | framework-runtime | 86 | 2026-05 |
-| 283 | [modelscope/agentevolver](https://github.com/modelscope/agentevolver) | application | evolution | application-demo | 1 | 2026-05 |
-| 284 | [modelscope/agentjet](https://github.com/modelscope/agentjet) | evaluation | evaluation | framework-runtime | 208 | 2026-05 |
-| 285 | [MoizIbnYousaf/Ai-Agent-Skills](https://github.com/MoizIbnYousaf/Ai-Agent-Skills) | tool | skill | tool-module | 1100 | 2026-05 |
-| 286 | [mwasifanwar/meta-cognitive-learning-system](https://github.com/mwasifanwar/meta-cognitive-learning-system) | tool | prompt-optimization | tool-module | 2 | 2026-05 |
-| 287 | [mycelium-io/mycelium](https://github.com/mycelium-io/mycelium) | tool | memory | tool-module | 95 | 2026-05 |
-| 288 | [n4m3z/forge-council](https://github.com/n4m3z/forge-council) | framework | evaluation | framework-runtime | 9 | 2026-05 |
-| 289 | [n8n-io/n8n](https://github.com/n8n-io/n8n) | framework | workflow-automation | framework-runtime | 189 | 2026-05 |
-| 290 | [naivoder/mctsr](https://github.com/naivoder/mctsr) | application | prompt-optimization | tool-module | 22 | unknown |
-| 291 | [neo4j-labs/agent-memory](https://github.com/neo4j-labs/agent-memory) | framework | memory | framework-runtime | 262 | 2026-05 |
-| 292 | [neosigmaai/auto-harness](https://github.com/neosigmaai/auto-harness) | framework | evaluation | benchmark-eval | 507 | 2026-05 |
-| 293 | [NevaMind-AI/memU](https://github.com/NevaMind-AI/memU) | tool | memory | tool-module | 13700 | 2026-05 |
-| 294 | [ngoodman/metaprompt](https://github.com/ngoodman/metaprompt) | evaluation | prompt-optimization | benchmark-eval | 88 | 2026-05 |
-| 295 | [nickatomlin/lm-selfplay](https://github.com/nickatomlin/lm-selfplay) | paper-code | prompt-optimization | research-artifact | 9 | 2026-05 |
-| 296 | [nikivanstein/llamea](https://github.com/nikivanstein/llamea) | evaluation | evaluation | benchmark-eval | 105 | 2026-05 |
-| 297 | [NirDiamant/Agent_Memory_Techniques](https://github.com/NirDiamant/Agent_Memory_Techniques) | tutorial | memory | resource-index | 412 | 2026-05 |
-| 298 | [noahshinn/reflexion](https://github.com/noahshinn/reflexion) | paper-code | memory | benchmark-eval | 3 | 2026-05 |
-| 299 | [noahshinn/reflexion-draft](https://github.com/noahshinn/reflexion-draft) | framework | memory | benchmark-eval | 388 | 2026-05 |
-| 300 | [noahshinn024/reflexion-human-eval](https://github.com/noahshinn024/reflexion-human-eval) | evaluation | memory | benchmark-eval | 3 | 2026-05 |
-| 301 | [nousresearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | framework | framework | framework-runtime | 0 | 2026-05 |
-| 302 | [nousresearch/hermes-agent-self-evolution](https://github.com/nousresearch/hermes-agent-self-evolution) | application | evolution | research-artifact | 3 | 2026-05 |
-| 303 | [obra/superpowers](https://github.com/obra/superpowers) | tool | memory | tool-module | 202000 | 2026-05 |
-| 304 | [octobrist/cope](https://github.com/octobrist/cope) | paper-code | evolution | framework-runtime | 11 | unknown |
-| 305 | [oiioai/molt](https://github.com/OiiOAI/MOLT) | framework | evolution | framework-runtime | 0 | 2026-05 |
-| 306 | [omdivyatej/self-learning-agents](https://github.com/omdivyatej/self-learning-agents) | framework | framework | framework-runtime | 63 | 2025-05 |
-| 307 | [onevcat/argue](https://github.com/onevcat/argue) | framework | framework | framework-runtime | 238 | 2026-05 |
-| 308 | [OneWave-AI/claude-skills](https://github.com/OneWave-AI/claude-skills) | tutorial | skill | resource-index | 154 | 2026-05 |
-| 309 | [open-gitagent/gitagent](https://github.com/open-gitagent/gitagent) | framework | framework | framework-runtime | 404 | 2026-05 |
-| 310 | [openai/skills](https://github.com/openai/skills) | tutorial | skill | resource-index | 20100 | 2026-05 |
-| 311 | [openautocoder/live-swe-agent](https://github.com/openautocoder/live-swe-agent) | framework | coding-agent | framework-runtime | 392 | 2025-11 |
-| 312 | [OpenBMB/EdgeClaw](https://github.com/OpenBMB/EdgeClaw) | framework | framework | framework-runtime | 1200 | 2026-05 |
-| 313 | [openclaw/clawbench](https://github.com/openclaw/clawbench) | evaluation | evaluation | benchmark-eval | 97 | 2026-04 |
-| 314 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | framework | framework | framework-runtime | 374000 | 2026-05 |
-| 315 | [opendatabox/workspace-bench](https://github.com/opendatabox/workspace-bench) | evaluation | evaluation | benchmark-eval | 14 | 2025-05 |
-| 316 | [opendilab/awesome-exploration-rl](https://github.com/opendilab/awesome-exploration-rl) | tutorial | education-list | resource-index | 689 | 2026-05 |
-| 317 | [opendilab/awesome-model-based-rl](https://github.com/opendilab/awesome-model-based-rl) | tutorial | education-list | resource-index | 1 | 2026-05 |
-| 318 | [opendilab/awesome-rlhf](https://github.com/opendilab/awesome-rlhf) | tutorial | education-list | resource-index | 4 | 2026-05 |
-| 319 | [OpenHands/benchmarks](https://github.com/OpenHands/benchmarks) | evaluation | evaluation | benchmark-eval | 85 | 2026-05 |
-| 320 | [openmemind/memind](https://github.com/openmemind/memind) | framework | memory | benchmark-eval | 787 | 2026-05 |
-| 321 | [openning07/awesome-curriculum-learning](https://github.com/openning07/awesome-curriculum-learning) | tutorial | education-list | resource-index | 248 | 2026-05 |
-| 322 | [opensite-ai/opensite-skills](https://github.com/opensite-ai/opensite-skills) | tool | memory | tool-module | 7 | 2026-05 |
-| 323 | [opentracy/opentracy](https://github.com/opentracy/opentracy) | evaluation | evaluation | benchmark-eval | 101 | 2026-05 |
-| 324 | [Orchestra-Research/AI-research-SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs) | tutorial | skill | resource-index | 8900 | 2026-05 |
-| 325 | [os-copilot/os-copilot](https://github.com/os-copilot/os-copilot) | framework | evaluation | benchmark-eval | 1 | 2024-Q1 |
-| 326 | [osu-nlp-group/skillweaver](https://github.com/osu-nlp-group/skillweaver) | framework | evolution | framework-runtime | 123 | 2024-Q3 |
-| 327 | [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) | tool | skill | tool-module | 22000 | 2026-05 |
-| 328 | [oxen-ai/self-rewarding-language-models](https://github.com/oxen-ai/self-rewarding-language-models) | evaluation | prompt-optimization | benchmark-eval | 134 | 2026-05 |
-| 329 | [paperwave/genenv](https://github.com/paperwave/genenv) | paper-code | research-agent | research-artifact | 0 | 2026-05 |
-| 330 | [paradigmxyz/centaur](https://github.com/paradigmxyz/centaur) | framework | framework | framework-runtime | 469 | 2026-05 |
-| 331 | [paradigmxyz/evmbench](https://github.com/paradigmxyz/evmbench) | evaluation | evaluation | benchmark-eval | 421 | 2026-05 |
-| 332 | [pathway/alphaxos](https://github.com/pathway/alphaxos) | evaluation | evaluation | benchmark-eval | 12 | 2026-05 |
-| 333 | [PaulRBerg/agent-skills](https://github.com/PaulRBerg/agent-skills) | tool | skill | tool-module | 59 | 2026-05 |
-| 334 | [pgg3/evotoolkit](https://github.com/pgg3/evotoolkit) | evaluation | evaluation | benchmark-eval | 68 | 2026-03 |
-| 335 | [pgg3/l-autoda](https://github.com/pgg3/l-autoda) | application | evolution | application-demo | 3 | 2026-05 |
-| 336 | [pinchbench/skill](https://github.com/pinchbench/skill) | evaluation | evaluation | benchmark-eval | 1200 | 2026-05 |
-| 337 | [pingcap/ossinsight](https://github.com/pingcap/ossinsight) | tool | research-agent | tool-module | 2 | 2026-05 |
-| 338 | [pingcy/ace-langgraph](https://github.com/pingcy/ace-langgraph) | framework | framework | framework-runtime | 46 | unknown |
-| 339 | [pjt222/agent-almanac](https://github.com/pjt222/agent-almanac) | tutorial | skill | resource-index | 17 | 2026-05 |
-| 340 | [plastic-labs/honcho](https://github.com/plastic-labs/honcho) | framework | memory | framework-runtime | 4200 | 2026-05 |
-| 341 | [polarseeker/openseeker](https://github.com/polarseeker/openseeker) | evaluation | evaluation | benchmark-eval | 711 | 2026-05 |
-| 342 | [polya20/textgrad](https://github.com/polya20/textgrad) | evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 343 | [princeton-pli/hal-harness](https://github.com/princeton-pli/hal-harness) | evaluation | evaluation | benchmark-eval | 289 | 2026-05 |
-| 344 | [privkeyio/evolve-mcp](https://github.com/privkeyio/evolve-mcp) | framework | evolution | framework-runtime | 11 | unknown |
-| 345 | [psenger/ai-agent-skills](https://github.com/psenger/ai-agent-skills) | tutorial | skill | resource-index | 3 | 2026-05 |
-| 346 | [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) | tutorial | education-list | resource-index | 87 | 2026-05 |
-| 347 | [qianlima-lab/awesome-lifelong-llm-agent](https://github.com/qianlima-lab/awesome-lifelong-llm-agent) | tutorial | education-list | resource-index | 300 | 2026-05 |
-| 348 | [QuantaAlpha/QuantaAlpha](https://github.com/QuantaAlpha/QuantaAlpha) | paper-code | evolution | agent-evolution-infra | 702 | 2026-05 |
-| 349 | [quantstellarlab/ai-scientist-v2](https://github.com/quantstellarlab/ai-scientist-v2) | application | research-agent | application-demo | 0 | 2024-Q2 |
-| 350 | [quzhiii/thesis-skills](https://github.com/quzhiii/thesis-skills) | tool | skill | tool-module | 71 | 2026-05 |
-| 351 | [r4stin/kg-research-agent](https://github.com/r4stin/kg-research-agent) | tutorial | research-agent | resource-index | 3 | 2026-05 |
-| 352 | [raghavc/llm-rlhf-tuning-with-ppo-and-dpo](https://github.com/raghavc/llm-rlhf-tuning-with-ppo-and-dpo) | paper-code | memory | research-artifact | 190 | 2026-05 |
-| 353 | [Randroids-Dojo/skills](https://github.com/Randroids-Dojo/skills) | tutorial | skill | resource-index | 33 | 2026-05 |
-| 354 | [RangeKing/self-evolving-agent](https://github.com/RangeKing/self-evolving-agent) | tool | skill | tool-module | 9 | 2026-05 |
-| 355 | [raphaelchristi/harness-evolver](https://github.com/raphaelchristi/harness-evolver) | tool | evolution | tool-module | 21 | 2026-05 |
-| 356 | [razroo/state-trace](https://github.com/razroo/state-trace) | tool | memory | tool-module | 1 | 2026-05 |
-| 357 | [reflexioai/reflexio](https://github.com/reflexioai/reflexio) | framework | evaluation | benchmark-eval | 220 | 2026-05 |
-| 358 | [regenrek/codex-1up](https://github.com/regenrek/codex-1up) | tool | skill | tool-module | 430 | 2026-05 |
-| 359 | [rendro/sediment](https://github.com/rendro/sediment) | tool | memory | tool-module | 32 | 2026-05 |
-| 360 | [researai/awesome-ai-scientist](https://github.com/researai/awesome-ai-scientist) | tutorial | research-agent | resource-index | 240 | 2026-05 |
-| 361 | [revfactory/harness](https://github.com/revfactory/harness) | framework | skill | framework-runtime | 3500 | 2026-05 |
-| 362 | [richchen-maker/openclaw-multi-agent-team](https://github.com/richchen-maker/openclaw-multi-agent-team) | framework | framework | framework-runtime | 80 | 2026-05 |
-| 363 | [rinadelph/agent-mcp](https://github.com/rinadelph/agent-mcp) | framework | framework | framework-runtime | 1 | 2026-05 |
-| 364 | [rishab-agrawal/humanoid-curriculum-rl](https://github.com/rishab-agrawal/humanoid-curriculum-rl) | tool | coding-agent | tool-module | 1 | 2026-05 |
-| 365 | [rlhflow/online-rlhf](https://github.com/rlhflow/online-rlhf) | evaluation | evaluation | benchmark-eval | 545 | 2026-05 |
-| 366 | [rlhflow/self-rewarding-reasoning-llm](https://github.com/rlhflow/self-rewarding-reasoning-llm) | evaluation | evaluation | benchmark-eval | 232 | 2026-05 |
-| 367 | [rllm-org/rllm](https://github.com/rllm-org/rllm) | evaluation | evaluation | benchmark-eval | 5 | 2026-05 |
-| 368 | [rmanluo/gfm-rag](https://github.com/rmanluo/gfm-rag) | evaluation | memory | benchmark-eval | 259 | 2026-04 |
-| 369 | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | tool | memory | tool-module | 16000 | 2026-05 |
-| 370 | [ronit26mehta/argus-ai-debate](https://github.com/ronit26mehta/argus-ai-debate) | framework | framework | framework-runtime | 3 | unknown |
-| 371 | [rtk-ai/icm](https://github.com/rtk-ai/icm) | tool | memory | tool-module | 371 | 2026-05 |
-| 372 | [rucbm/laser](https://github.com/rucbm/laser) | evaluation | evaluation | benchmark-eval | 36 | 2026-05 |
-| 373 | [sakanaai/ai-scientist](https://github.com/sakanaai/ai-scientist) | evaluation | research-agent | benchmark-eval | 13 | 2026-05 |
-| 374 | [sakanaai/ai-scientist-v2](https://github.com/sakanaai/ai-scientist-v2) | application | research-agent | application-demo | 6 | 2024-Q2 |
-| 375 | [sakanaai/shinkaevolve](https://github.com/sakanaai/shinkaevolve) | tool | evolution | tool-module | 1 | 2026-05 |
-| 376 | [sakutepov/ai-scientist-v2](https://github.com/sakutepov/ai-scientist-v2) | application | research-agent | application-demo | 0 | 2024-Q3 |
-| 377 | [salvatorera/ml-news-of-the-week](https://github.com/salvatorera/ml-news-of-the-week) | tutorial | memory | resource-index | 180 | 2026-05 |
-| 378 | [sasleee/tencentdb-agent-memory](https://github.com/sasleee/tencentdb-agent-memory) | framework | memory | framework-runtime | 0 | 2026-05 |
-| 379 | [scienceaix/agentskills](https://github.com/scienceaix/agentskills) | tutorial | education-list | resource-index | 63 | 2025-11 |
-| 380 | [sebastianbrzustowicz/robot-sumo-rl](https://github.com/sebastianbrzustowicz/robot-sumo-rl) | evaluation | evaluation | benchmark-eval | 18 | 2026-05 |
-| 381 | [seetrex-ai/laimark](https://github.com/seetrex-ai/laimark) | evaluation | evaluation | benchmark-eval | 4 | 2026-04 |
-| 382 | [sehoon787/my-codex](https://github.com/sehoon787/my-codex) | framework | skill | framework-runtime | 16 | 2026-05 |
-| 383 | [self-play-language-models/spin-peft](https://github.com/self-play-language-models/spin-peft) | evaluation | evaluation | benchmark-eval | 4 | 2026-05 |
-| 384 | [sentient-agi/EvoSkill](https://github.com/sentient-agi/EvoSkill) | framework | evolution | agent-evolution-infra | 798 | 2026-05 |
-| 385 | [sentrux/sentrux](https://github.com/sentrux/sentrux) | framework | evaluation | benchmark-eval | 2 | 2026-05 |
-| 386 | [senweaver/senagentos](https://github.com/senweaver/senagentos) | framework | memory | framework-runtime | 10 | unknown |
-| 387 | [ServiceNow/BrowserGym](https://github.com/ServiceNow/BrowserGym) | evaluation | evaluation | benchmark-eval | 1200 | 2026-05 |
-| 388 | [sethkarten/continual-harness](https://github.com/sethkarten/continual-harness) | evaluation | evaluation | benchmark-eval | 106 | 2026-05 |
-| 389 | [shadowrootdev/awesome-agent-skills-mcp](https://github.com/shadowrootdev/awesome-agent-skills-mcp) | tutorial | education-list | resource-index | 23 | 2024-Q4 |
-| 390 | [shaoshuai0605/misevolution](https://github.com/shaoshuai0605/misevolution) | evaluation | evolution | tool-module | 76 | 2026-05 |
-| 391 | [shareAI-lab/kbench](https://github.com/shareAI-lab/kbench) | evaluation | evaluation | benchmark-eval | 10 | 2026-05 |
-| 392 | [shehrum/grf-self-play](https://github.com/shehrum/grf-self-play) | evaluation | research-agent | benchmark-eval | 4 | 2026-05 |
-| 393 | [shichun-liu/agent-memory-paper-list](https://github.com/shichun-liu/agent-memory-paper-list) | tutorial | memory | resource-index | 2 | 2025-12 |
-| 394 | [shingo257/gitnexus](https://github.com/shingo257/gitnexus) | framework | evaluation | framework-runtime | 0 | 2026-05 |
-| 395 | [shinpr/mcp-local-rag](https://github.com/shinpr/mcp-local-rag) | tool | memory | tool-module | 275 | 2026-05 |
-| 396 | [shintaro-sprech/agent-orchestrator-template](https://github.com/shintaro-sprech/agent-orchestrator-template) | framework | framework | framework-runtime | 120 | 2026-05 |
-| 397 | [shiqichen17/spa](https://github.com/shiqichen17/spa) | tool | memory | tool-module | 35 | 2026-05 |
-| 398 | [sibyl-research-team/sibyl-research-system](https://github.com/sibyl-research-team/sibyl-research-system) | tool | research-agent | tool-module | 245 | 2026-05 |
-| 399 | [siddharth-1001/agent-eval-harness](https://github.com/siddharth-1001/agent-eval-harness) | framework | evaluation | framework-runtime | 20 | 2026-05 |
-| 400 | [Signet-AI/signetai](https://github.com/Signet-AI/signetai) | tool | memory | memory-substrate | 167 | 2026-05 |
-| 401 | [significant-gravitas/autogpt](https://github.com/significant-gravitas/autogpt) | framework | framework | framework-runtime | 184 | 2026-05 |
-| 402 | [simota/agent-skills](https://github.com/simota/agent-skills) | tutorial | skill | resource-index | 39 | 2026-05 |
-| 403 | [SJTU-IPADS/SkVM](https://github.com/SJTU-IPADS/SkVM) | framework | skill | framework-runtime | 480 | 2026-05 |
-| 404 | [skills-mcp/skills-mcp](https://github.com/skills-mcp/skills-mcp) | tool | prompt-optimization | tool-module | 24 | 2026-05 |
-| 405 | [smiles724/awesome-llm-rlvr](https://github.com/smiles724/awesome-llm-rlvr) | tutorial | education-list | resource-index | 107 | unknown |
-| 406 | [snowflake-labs/agent-world-model](https://github.com/snowflake-labs/agent-world-model) | application | education-list | application-demo | 356 | 2026-05 |
-| 407 | [sola-st/repairagent](https://github.com/sola-st/repairagent) | tool | memory | tool-module | 95 | 2026-05 |
-| 408 | [spillwavesolutions/agent-brain](https://github.com/spillwavesolutions/agent-brain) | evaluation | evaluation | benchmark-eval | 101 | 2026-03 |
-| 409 | [spiral-rl/spiral](https://github.com/spiral-rl/spiral) | framework | framework | framework-runtime | 190 | 2026-05 |
-| 410 | [square-mind/squaremind](https://github.com/square-mind/squaremind) | framework | framework | framework-runtime | 0 | 2026-05 |
-| 411 | [stanfordnlp/dsp](https://github.com/stanfordnlp/dsp) | framework | prompt-optimization | framework-runtime | 34 | 2026-05 |
-| 412 | [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) | framework | prompt-optimization | framework-runtime | 34 | 2026-05 |
-| 413 | [star-bob/swe-agent](https://github.com/star-bob/swe-agent) | paper-code | coding-agent | research-artifact | 0 | 2026-05 |
-| 414 | [stonks-git/intuitive-ai](https://github.com/stonks-git/intuitive-ai) | tool | memory | tool-module | 2 | 2026-05 |
-| 415 | [studio-intrinsic/turbo-gepa](https://github.com/studio-intrinsic/turbo-gepa) | evaluation | prompt-optimization | benchmark-eval | 3 | 2026-05 |
-| 416 | [sudokrang/aceforge](https://github.com/sudokrang/aceforge) | tool | evolution | tool-module | 1 | 2026-05 |
-| 417 | [sundial-org/awesome-openclaw-skills](https://github.com/sundial-org/awesome-openclaw-skills) | tutorial | skill | resource-index | 602 | 2026-05 |
-| 418 | [sunitj/colloquip](https://github.com/sunitj/colloquip) | framework | framework | framework-runtime | 1 | 2026-05 |
-| 419 | [sunzey/seagent](https://github.com/sunzey/seagent) | paper-code | evaluation | benchmark-eval | 246 | 2026-05 |
-| 420 | [swapedoc/hermes2anti](https://github.com/swapedoc/hermes2anti) | tool | memory | tool-module | 4 | 2026-05 |
-| 421 | [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | framework | framework | framework-runtime | 518 | 2026-05 |
-| 422 | [swe-agent/swe-agent](https://github.com/swe-agent/swe-agent) | paper-code | coding-agent | research-artifact | 19 | 2025-05 |
-| 423 | [swe-bench/swe-bench](https://github.com/swe-bench/swe-bench) | evaluation | evaluation | benchmark-eval | 5 | 2026-05 |
-| 424 | [synaptent/aragora](https://github.com/synaptent/aragora) | evaluation | memory | benchmark-eval | 7 | 2026-05 |
-| 425 | [taishi-n324/awesome-rl-reasoning](https://github.com/taishi-n324/awesome-rl-reasoning) | tutorial | education-list | resource-index | 13 | 2025-09 |
-| 426 | [tech-leads-club/agent-skills](https://github.com/tech-leads-club/agent-skills) | tool | skill | tool-module | 4400 | 2026-05 |
-| 427 | [teleai-uagi/awesome-agent-memory](https://github.com/teleai-uagi/awesome-agent-memory) | tutorial | memory | resource-index | 421 | 2026-05 |
-| 428 | [tencent/selfevolvingagent](https://github.com/tencent/selfevolvingagent) | paper-code | evolution | application-demo | 100 | 2026-05 |
-| 429 | [terryfyl/openclaw-evolution-framework](https://github.com/TerryFYL/openclaw-evolution-framework) | framework | evolution | framework-runtime | 4 | 2026-02 |
-| 430 | [tfatykhov/awesome-agent-memory](https://github.com/tfatykhov/awesome-agent-memory) | tutorial | memory | resource-index | 0 | 2026-05 |
-| 431 | [thClaws/thClaws](https://github.com/thClaws/thClaws) | framework | framework | framework-runtime | 1000 | 2026-05 |
-| 432 | [TheQtCompanyRnD/agent-skills](https://github.com/TheQtCompanyRnD/agent-skills) | tutorial | skill | resource-index | 171 | 2026-05 |
-| 433 | [thesdes/textgrad](https://github.com/thesdes/textgrad) | evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 434 | [thu-nics/mars](https://github.com/thu-nics/mars) | evaluation | evaluation | benchmark-eval | 48 | 2026-05 |
-| 435 | [thudm/webrl](https://github.com/thudm/webrl) | application | evolution | benchmark-eval | 524 | 2026-05 |
-| 436 | [thuml/rlvr-world](https://github.com/thuml/rlvr-world) | evaluation | evaluation | benchmark-eval | 251 | 2026-05 |
-| 437 | [tianyi-stack/madevolve](https://github.com/tianyi-stack/madevolve) | application | evolution | application-demo | 9 | 2026-05 |
-| 438 | [tiger-ai-lab/openresearcher](https://github.com/tiger-ai-lab/openresearcher) | evaluation | research-agent | benchmark-eval | 756 | 2026-05 |
-| 439 | [TiMEM-AI/timem](https://github.com/TiMEM-AI/timem) | tool | memory | tool-module | 134 | 2026-05 |
-| 440 | [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | application | memory | application-demo | 25100 | 2026-05 |
-| 441 | [tmgthb/autonomous-agents](https://github.com/tmgthb/autonomous-agents) | tutorial | research-agent | resource-index | 1 | 2026-05 |
-| 442 | [togethercomputer/skills](https://github.com/togethercomputer/skills) | tool | skill | tool-module | 28 | 2026-05 |
-| 443 | [TransformerOptimus/SuperAGI](https://github.com/TransformerOptimus/SuperAGI) | framework | framework | framework-runtime | 17500 | 2026-05 |
-| 444 | [trillskillz/clawdmarket](https://github.com/trillskillz/clawdmarket) | application | evolution | application-demo | 2 | 2026-05 |
-| 445 | [trustgraph-ai/trustgraph](https://github.com/trustgraph-ai/trustgraph) | framework | memory | framework-runtime | 2100 | 2026-05 |
-| 446 | [tsinghua-fib-lab/awesome-ai-scientists](https://github.com/tsinghua-fib-lab/awesome-ai-scientists) | tutorial | research-agent | resource-index | 35 | 2026-05 |
-| 447 | [tsinghua-fib-lab/world-model](https://github.com/tsinghua-fib-lab/world-model) | tutorial | education-list | resource-index | 711 | early |
-| 448 | [tsinghuac3i/awesome-memory-for-agents](https://github.com/tsinghuac3i/awesome-memory-for-agents) | tutorial | memory | resource-index | 506 | 2026-05 |
-| 449 | [tsinghuac3i/awesome-rl-for-lrms](https://github.com/tsinghuac3i/awesome-rl-for-lrms) | tutorial | education-list | resource-index | 2 | 2025-09 |
-| 450 | [tsukushiai/self-organized-agent](https://github.com/tsukushiai/self-organized-agent) | framework | framework | framework-runtime | 18 | 2026-05 |
-| 451 | [tylerdotai/meta-harness-evolver](https://github.com/tylerdotai/meta-harness-evolver) | framework | evaluation | benchmark-eval | 14 | unknown |
-| 452 | [tzussman/openevolve](https://github.com/tzussman/openevolve) | application | evolution | application-demo | 0 | 2026-05 |
-| 453 | [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | framework | framework | framework-runtime | 0 | 2026-05 |
-| 454 | [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | evaluation | memory | benchmark-eval | 43 | 2026-05 |
-| 455 | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | framework | memory | framework-runtime | 14400 | 2026-05 |
-| 456 | [ventr1c/memma](https://github.com/ventr1c/memma) | paper-code | memory | tool-module | 17 | unknown |
-| 457 | [vercel-labs/ai](https://github.com/vercel-labs/ai) | framework | framework | framework-runtime | 24 | 2026-05 |
-| 458 | [vercel-labs/skills](https://github.com/vercel-labs/skills) | tool | skill | tool-module | 19900 | 2026-05 |
-| 459 | [vercel/ai](https://github.com/vercel/ai) | framework | framework | framework-runtime | 24 | 2026-05 |
-| 460 | [vercel/workflow](https://github.com/vercel/workflow) | framework | workflow-automation | framework-runtime | 2 | 2026-04 |
-| 461 | [vicsanity623/pyob](https://github.com/vicsanity623/pyob) | evaluation | evaluation | benchmark-eval | 2 | 2026-05 |
-| 462 | [ViktorAxelsen/MemSkill](https://github.com/ViktorAxelsen/MemSkill) | paper-code | evolution | agent-evolution-infra | 484 | 2026-05 |
-| 463 | [vilmire/adhdev](https://github.com/vilmire/adhdev) | framework | framework | framework-runtime | 33 | 2026-05 |
-| 464 | [vision-intelligence-and-robots-group/best-incremental-learning](https://github.com/vision-intelligence-and-robots-group/best-incremental-learning) | tool | coding-agent | tool-module | 607 | unknown |
-| 465 | [vivy-yi/awesome-agent-orchestration](https://github.com/vivy-yi/awesome-agent-orchestration) | tutorial | framework | resource-index | 10 | 2026-05 |
-| 466 | [volcengine/openviking](https://github.com/volcengine/openviking) | tool | memory | resource-index | 24 | 2026-05 |
-| 467 | [voltagent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) | tutorial | skill | resource-index | 22900 | 2026-05 |
-| 468 | [vsonicv/es-fine-tuning-paper](https://github.com/vsonicv/es-fine-tuning-paper) | paper-code | research-agent | research-artifact | 356 | 2025-10 |
-| 469 | [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | framework | framework | framework-runtime | 987 | 2026-05 |
-| 470 | [wazionapps/nexo](https://github.com/wazionapps/nexo) | tool | memory | memory-substrate | 22 | 2026-05 |
-| 471 | [webmaxru/Agent-Skills](https://github.com/webmaxru/Agent-Skills) | tool | skill | tool-module | 29 | 2026-05 |
-| 472 | [werner-duvaud/muzero-general](https://github.com/werner-duvaud/muzero-general) | evaluation | evaluation | benchmark-eval | 2 | 2026-05 |
-| 473 | [workofart/selfplay-tictactoe](https://github.com/workofart/selfplay-tictactoe) | evaluation | evaluation | benchmark-eval | 0 | early |
-| 474 | [wuxingyu-ai/llm4ec](https://github.com/wuxingyu-ai/llm4ec) | tutorial | evolution | resource-index | 139 | 2026-05 |
-| 475 | [wzdnzd/harvester](https://github.com/wzdnzd/harvester) | framework | framework | framework-runtime | 546 | 2026-05 |
-| 476 | [x1aox1a/word2world](https://github.com/x1aox1a/word2world) | evaluation | evaluation | benchmark-eval | 62 | 2026-05 |
-| 477 | [xai-liacs/llamea](https://github.com/xai-liacs/llamea) | evaluation | evaluation | benchmark-eval | 105 | 2026-05 |
-| 478 | [xanther-ai/xce-benchmarks](https://github.com/xanther-ai/xce-benchmarks) | evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 479 | [xialeiliu/awesome-incremental-learning](https://github.com/xialeiliu/awesome-incremental-learning) | tutorial | education-list | resource-index | 4 | unknown |
-| 480 | [xiaofangxd/llm/ea](https://github.com/xiaofangxd/llm/ea) | application | evolution | application-demo | 23 | 2026-05 |
-| 481 | [xinhuagu/aceclaw](https://github.com/xinhuagu/aceclaw) | framework | evaluation | framework-runtime | 4 | 2026-05 |
-| 482 | [xizaoqu/worldmem](https://github.com/xizaoqu/worldmem) | evaluation | memory | benchmark-eval | 359 | 2025-11 |
-| 483 | [xlang-ai/OSWorld](https://github.com/xlang-ai/OSWorld) | evaluation | evaluation | benchmark-eval | 2900 | 2026-05 |
-| 484 | [xmudeeplit/awesome-self-evolving-agents](https://github.com/xmudeeplit/awesome-self-evolving-agents) | tool | evolution | resource-index | 181 | 2026-05 |
-| 485 | [xuchen-li/llm-arxiv-daily](https://github.com/xuchen-li/llm-arxiv-daily) | tutorial | evaluation | resource-index | 144 | 2026-05 |
-| 486 | [yang1999code/controllable-agent](https://github.com/yang1999code/controllable-agent) | framework | evaluation | framework-runtime | 105 | 2026-05 |
-| 487 | [yennning/awesome-code-as-agent-harness-papers](https://github.com/yennning/awesome-code-as-agent-harness-papers) | tutorial | education-list | resource-index | 123 | unknown |
-| 488 | [yf-he/EvoTest](https://github.com/yf-he/EvoTest) | paper-code | evolution | agent-evolution-infra | 19 | 2026-05 |
-| 489 | [yinbo0927/fate](https://github.com/yinbo0927/fate) | evaluation | evolution | benchmark-eval | 16 | unknown |
-| 490 | [yingchengyang/reinforcement-learning-papers](https://github.com/yingchengyang/reinforcement-learning-papers) | tutorial | research-agent | resource-index | 569 | unknown |
-| 491 | [ynulihao/AgentSkillOS](https://github.com/ynulihao/AgentSkillOS) | tool | skill | skill-orchestration | 415 | 2026-05 |
-| 492 | [yologdev/yoyo-evolve](https://github.com/yologdev/yoyo-evolve) | application | evolution | tool-module | 1 | 2026-05 |
-| 493 | [yonkoo11/hermes-dojo](https://github.com/yonkoo11/hermes-dojo) | application | evolution | tool-module | 72 | 2026-05 |
-| 494 | [youngdubbydu/llm-agent-optimization](https://github.com/youngdubbydu/llm-agent-optimization) | tutorial | education-list | resource-index | 231 | 2026-05 |
-| 495 | [YunjueTech/Yunjue-Agent](https://github.com/YunjueTech/Yunjue-Agent) | paper-code | evolution | agent-evolution-infra | 426 | 2026-02 |
-| 496 | [yxf203/awesome-efficient-agents](https://github.com/yxf203/awesome-efficient-agents) | tutorial | memory | resource-index | 250 | 2026-05 |
-| 497 | [yyyujintang/Awesome-Agent-Memory-Papers](https://github.com/yyyujintang/Awesome-Agent-Memory-Papers) | tutorial | memory | resource-index | 0 | 2026-05 |
-| 498 | [zaixizhang/stella](https://github.com/zaixizhang/stella) | application | evaluation | benchmark-eval | 141 | 2026-05 |
-| 499 | [zanwenfu/auto-code-rover](https://github.com/zanwenfu/auto-code-rover) | evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 500 | [zazencodes/zazencodes-season-3](https://github.com/zazencodes/zazencodes-season-3) | framework | framework | framework-runtime | 4 | 2026-05 |
-| 501 | [zbinxp/deer-flow](https://github.com/zbinxp/deer-flow) | evaluation | memory | benchmark-eval | 0 | 2026-02 |
-| 502 | [zed-industries/zed](https://github.com/zed-industries/zed) | evaluation | evaluation | benchmark-eval | 83 | 2026-05 |
-| 503 | [zesearch/self-improvement-llm](https://github.com/zesearch/self-improvement-llm) | application | evolution | application-demo | 13 | 2026-05 |
-| 504 | [zhang677/accelopt](https://github.com/zhang677/accelopt) | paper-code | evaluation | benchmark-eval | 43 | unknown |
-| 505 | [zhangfengcdt/memoir](https://github.com/zhangfengcdt/memoir) | tool | memory | memory-substrate | 549 | 2026-05 |
-| 506 | [zhangyiqun018/agent-for-debate](https://github.com/zhangyiqun018/agent-for-debate) | framework | framework | framework-runtime | 38 | 2026-01 |
-| 507 | [zhentingwang/dump](https://github.com/zhentingwang/dump) | evaluation | evaluation | benchmark-eval | 33 | 2026-05 |
-| 508 | [zhihaopeng-cityu/awesome-self-evolving-ai-for-agentic-healthcare](https://github.com/zhihaopeng-cityu/awesome-self-evolving-ai-for-agentic-healthcare) | tool | evolution | resource-index | 11 | unknown |
-| 509 | [zhonghaojiang/awesome-issue-solving](https://github.com/zhonghaojiang/awesome-issue-solving) | tutorial | evaluation | resource-index | 9 | 2026-01 |
-| 510 | [zijian-ni/awesome-ai-agents-2026](https://github.com/zijian-ni/awesome-ai-agents-2026) | tutorial | education-list | resource-index | 81 | unknown |
-| 511 | [zilliztech/memsearch](https://github.com/zilliztech/memsearch) | tool | memory | tool-module | 1800 | 2026-05 |
-| 512 | [zixuanfeng-nyu/textgrad](https://github.com/zixuanfeng-nyu/textgrad) | evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
-| 513 | [zjunlp/knowself](https://github.com/zjunlp/knowself) | evaluation | evaluation | benchmark-eval | 93 | 2024-Q3 |
-| 514 | [zjunlp/worldmind](https://github.com/zjunlp/worldmind) | evaluation | evaluation | benchmark-eval | 35 | 2026-05 |
-| 515 | [zoe-yyx/agentnet](https://github.com/zoe-yyx/agentnet) | framework | evolution | framework-runtime | 46 | 2025-04 |
-| 516 | [zou-group/sirius](https://github.com/zou-group/sirius) | application | framework | framework-runtime | 101 | 2026-05 |
-| 517 | [zou-group/textgrad](https://github.com/zou-group/textgrad) | evaluation | evaluation | benchmark-eval | 3 | 2026-05 |
-| 518 | [zylos-ai/zylos-core](https://github.com/zylos-ai/zylos-core) | framework | evolution | framework-runtime | 1400 | 2026-05 |
-| 519 | [zzz47zzz/awesome-lifelong-learning-methods-for-llm](https://github.com/zzz47zzz/awesome-lifelong-learning-methods-for-llm) | tutorial | education-list | resource-index | 162 | unknown |
+| 55 | [AutoX-AI-Labs/AutoR](https://github.com/AutoX-AI-Labs/AutoR) | application | research-agent | research-agent-pipeline | 897 | 2026-05 |
+| 56 | [bansky-cl/graphrag-arxiv-daily-paper](https://github.com/bansky-cl/graphrag-arxiv-daily-paper) | tutorial | memory | resource-index | 22 | 2026-04 |
+| 57 | [bazilicum/graphltm](https://github.com/bazilicum/graphltm) | framework | memory | framework-runtime | 4 | unknown |
+| 58 | [beeevita/evoprompt](https://github.com/beeevita/evoprompt) | evaluation | prompt-optimization | benchmark-eval | 238 | unknown |
+| 59 | [beita6969/scienceclaw](https://github.com/beita6969/ScienceClaw) | application | research-agent | application-demo | 816 | 2026-05 |
+| 60 | [bennettschwartz/membrane](https://github.com/bennettschwartz/membrane) | evaluation | memory | benchmark-eval | 93 | unknown |
+| 61 | [bingreeky/memgen](https://github.com/bingreeky/memgen) | framework | memory | tool-module | 378 | 2026-05 |
+| 62 | [bobxwu/learning-from-rewards-llm-papers](https://github.com/bobxwu/learning-from-rewards-llm-papers) | tutorial | education-list | resource-index | 71 | unknown |
+| 63 | [brain-research/guided-evolutionary-strategies](https://github.com/brain-research/guided-evolutionary-strategies) | tutorial | evolution | resource-index | 273 | unknown |
+| 64 | [browser-use/browser-use](https://github.com/browser-use/browser-use) | framework | workflow-automation | framework-runtime | 94 | 2026-05 |
+| 65 | [browser-use/web-ui](https://github.com/browser-use/web-ui) | framework | workflow-automation | framework-runtime | 16 | unknown |
+| 66 | [bruno686/visplay](https://github.com/bruno686/visplay) | evaluation | evolution | benchmark-eval | 57 | unknown |
+| 67 | [budecosystem/claudeevolve](https://github.com/budecosystem/claudeevolve) | tool | evolution | tool-module | 4 | unknown |
+| 68 | [callstackincubator/agent-skills](https://github.com/callstackincubator/agent-skills) | tutorial | skill | resource-index | 1400 | 2026-05 |
+| 69 | [camel-ai/owl](https://github.com/camel-ai/owl) | framework | framework | framework-runtime | 19 | unknown |
+| 70 | [caution724/github-explorer-skill](https://github.com/caution724/github-explorer-skill) | tool | coding-agent | tool-module | 2 | unknown |
+| 71 | [CE0Alex/skill-hunter](https://github.com/CE0Alex/skill-hunter) | evaluation | skill | benchmark-eval | 22 | 2026-05 |
+| 72 | [cellium-project/cellium-agent](https://github.com/cellium-project/cellium-agent) | framework | memory | framework-runtime | 41 | unknown |
+| 73 | [centaurioun/crewai](https://github.com/centaurioun/crewai) | framework | framework | framework-runtime | 0 | unknown |
+| 74 | [channinglua/prax-agent](https://github.com/channinglua/prax-agent) | framework | evaluation | framework-runtime | 294 | 2026-05 |
+| 75 | [charlesq9/self-evolving-agents](https://github.com/charlesq9/self-evolving-agents) | application | evolution | resource-index | 1 | 2026-05 |
+| 76 | [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | framework | evolution | framework-runtime | 391 | 2026-05 |
+| 77 | [Chorus-AIDLC/Chorus](https://github.com/Chorus-AIDLC/Chorus) | framework | workflow-automation | framework-runtime | 909 | 2026-05 |
+| 78 | [chriscox/agent-skills](https://github.com/chriscox/agent-skills) | tutorial | skill | resource-index | 10 | 2026-05 |
+| 79 | [chrisworsey55/atlas-gic](https://github.com/chrisworsey55/atlas-gic) | application | prompt-optimization | framework-runtime | 1 | 2026-05 |
+| 80 | [chuacheowhuan/gym-continuousdoubleauction](https://github.com/chuacheowhuan/gym-continuousdoubleauction) | evaluation | coding-agent | benchmark-eval | 153 | unknown |
+| 81 | [circlemind-ai/fast-graphrag](https://github.com/circlemind-ai/fast-graphrag) | evaluation | memory | benchmark-eval | 3 | unknown |
+| 82 | [claire-labo/evotune](https://github.com/claire-labo/evotune) | tool | coding-agent | tool-module | 137 | unknown |
+| 83 | [claw-bench/claw-bench](https://github.com/claw-bench/claw-bench) | evaluation | evaluation | benchmark-eval | 171 | 2026-05 |
+| 84 | [claw-eval/claw-eval](https://github.com/claw-eval/claw-eval) | evaluation | evaluation | benchmark-eval | 606 | 2026-03 |
+| 85 | [ClawBio/ClawBio](https://github.com/ClawBio/ClawBio) | tool | skill | tool-module | 867 | 2026-05 |
+| 86 | [clawdotnet/openclaw.net](https://github.com/clawdotnet/openclaw.net) | framework | framework | framework-runtime | 345 | 2026-05 |
+| 87 | [clawland-ai/geneclaw](https://github.com/clawland-ai/geneclaw) | framework | evolution | framework-runtime | 36 | unknown |
+| 88 | [clint-kristopher-morris/llm-guided-evolution](https://github.com/clint-kristopher-morris/llm-guided-evolution) | tutorial | evolution | resource-index | 19 | 2024-Q3 |
+| 89 | [CodeAlive-AI/ai-driven-development](https://github.com/CodeAlive-AI/ai-driven-development) | tutorial | skill | resource-index | 74 | 2026-05 |
+| 90 | [codejunkie99/agentic-stack](https://github.com/codejunkie99/agentic-stack) | tool | memory | tool-module | 2000 | 2026-05 |
+| 91 | [codexstar69/bug-hunter](https://github.com/codexstar69/bug-hunter) | framework | evaluation | framework-runtime | 380 | 2026-03 |
+| 92 | [colab2/midca](https://github.com/colab2/midca) | tool | coding-agent | tool-module | 27 | unknown |
+| 93 | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | tutorial | skill | resource-index | 61500 | 2026-05 |
+| 94 | [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) | tutorial | skill | resource-index | 11500 | 2026-05 |
+| 95 | [crewaiinc/crewai](https://github.com/crewaiinc/crewai) | framework | framework | framework-runtime | 51 | unknown |
+| 96 | [cuga-project/cuga-agent](https://github.com/cuga-project/cuga-agent) | framework | framework | framework-runtime | 742 | 2026-05 |
+| 97 | [cxcscmu/SkillLearnBench](https://github.com/cxcscmu/SkillLearnBench) | evaluation | skill | benchmark-eval | 21 | 2026-05 |
+| 98 | [cxxz/awesome-agent-memory](https://github.com/cxxz/awesome-agent-memory) | tutorial | memory | resource-index | 10 | 2026-05 |
+| 99 | [cyijun/agent-smith](https://github.com/cyijun/agent-smith) | framework | framework | framework-runtime | 18 | 2026-05 |
+| 100 | [darkrishabh/agent-skills-eval](https://github.com/darkrishabh/agent-skills-eval) | benchmark | evaluation | benchmark-eval | 34 | 2026-05 |
+| 101 | [davidzwz/awesome-rag-reasoning](https://github.com/davidzwz/awesome-rag-reasoning) | tutorial | memory | resource-index | 427 | 2025-07 |
+| 102 | [dceoy/speckit-agent-skills](https://github.com/dceoy/speckit-agent-skills) | tool | skill | skill-orchestration | 88 | 2026-05 |
+| 103 | [DEEP-PolyU/Awesome-GraphMemory](https://github.com/DEEP-PolyU/Awesome-GraphMemory) | tutorial | memory | resource-index | 273 | 2026-05 |
+| 104 | [deep-polyu/awesome-graphrag](https://github.com/deep-polyu/awesome-graphrag) | tutorial | memory | resource-index | 2 | 2026-04 |
+| 105 | [deepelementlab/clawcode](https://github.com/deepelementlab/clawcode) | framework | coding-agent | framework-runtime | 199 | 2026-05 |
+| 106 | [developzir/gepa-mcp](https://github.com/developzir/gepa-mcp) | framework | prompt-optimization | framework-runtime | 48 | unknown |
+| 107 | [diegosouzapw/awesome-omni-skills](https://github.com/diegosouzapw/awesome-omni-skills) | tool | skill | tool-module | 42 | 2026-05 |
+| 108 | [dmgrok/agent_skills_directory](https://github.com/dmgrok/agent_skills_directory) | tutorial | skill | resource-index | 16 | 2026-05 |
+| 109 | [dongxiangjue/awesome-llm-self-improvement](https://github.com/dongxiangjue/awesome-llm-self-improvement) | tool | evolution | resource-index | 106 | 2026-05 |
+| 110 | [doobidoo/mcp-memory-service](https://github.com/doobidoo/mcp-memory-service) | tool | memory | tool-module | 1900 | 2026-05 |
+| 111 | [DSAIL-Memory/EvoMemBench](https://github.com/DSAIL-Memory/EvoMemBench) | evaluation | memory | benchmark-eval | 0 | 2026-05 |
+| 112 | [dsifry/metaswarm](https://github.com/dsifry/metaswarm) | framework | framework | framework-runtime | 272 | 2026-05 |
+| 113 | [ecnu-icalk/autoskill](https://github.com/ecnu-icalk/autoskill) | tool | evolution | tool-module | 424 | 2026-05 |
+| 114 | [ecnu-icalk/ell-stulife](https://github.com/ecnu-icalk/ell-stulife) | application | memory | tool-module | 74 | 2026-05 |
+| 115 | [egmaminta/gepa-lite](https://github.com/egmaminta/gepa-lite) | tool | prompt-optimization | tool-module | 55 | unknown |
+| 116 | [eigent-ai/agent-skills](https://github.com/eigent-ai/agent-skills) | tool | skill | tool-module | 10 | 2026-05 |
+| 117 | [elastic/agent-skills](https://github.com/elastic/agent-skills) | tool | skill | tool-module | 485 | 2026-05 |
+| 118 | [eliasecchig/gemini-cli-git](https://github.com/eliasecchig/gemini-cli-git) | framework | memory | tool-module | 56 | 2026-05 |
+| 119 | [elizaOS/eliza](https://github.com/elizaOS/eliza) | framework | framework | framework-runtime | 17300 | 2026-05 |
+| 120 | [emartin59/text-game-llm-improver](https://github.com/emartin59/text-game-llm-improver) | framework | framework | framework-runtime | 3 | unknown |
+| 121 | [emson/elfmem](https://github.com/emson/elfmem) | framework | memory | benchmark-eval | 53 | 2026-05 |
+| 122 | [enajx/es](https://github.com/enajx/es) | evaluation | evolution | benchmark-eval | 7 | unknown |
+| 123 | [euphoria16/ui-genie](https://github.com/euphoria16/ui-genie) | paper-code | evolution | research-artifact | 57 | 2026-05 |
+| 124 | [evalops/dspy-0to1-guide](https://github.com/evalops/dspy-0to1-guide) | tutorial | prompt-optimization | resource-index | 215 | unknown |
+| 125 | [evalstate/fast-agent](https://github.com/evalstate/fast-agent) | framework | framework | framework-runtime | 3800 | 2026-05 |
+| 126 | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | framework | memory | framework-runtime | 5600 | 2026-05 |
+| 127 | [evermind-ai/everos?tab=readme-ov-file](https://github.com/evermind-ai/everos?tab=readme-ov-file) | evaluation | evaluation | benchmark-eval | 5 | 2025-02 |
+| 128 | [evoagentx/awesome-self-evolving-agents](https://github.com/evoagentx/awesome-self-evolving-agents) | tool | evolution | resource-index | 2 | 2026-05 |
+| 129 | [evoagentx/evoagentx](https://github.com/evoagentx/evoagentx) | framework | evolution | application-demo | 3 | 2026-05 |
+| 130 | [evomap/awesome-agent-evolution](https://github.com/evomap/awesome-agent-evolution) | tool | evolution | resource-index | 123 | 2026-05 |
+| 131 | [evomap/evolver](https://github.com/evomap/evolver) | framework | evolution | tool-module | 7 | 2026-02 |
+| 132 | [evotai/evot](https://github.com/evotai/evot) | framework | evolution | tool-module | 54 | 2026-05 |
+| 133 | [exoskeletonzj/mars](https://github.com/exoskeletonzj/mars) | framework | prompt-optimization | tool-module | 18 | unknown |
+| 134 | [facebookresearch/drzero](https://github.com/facebookresearch/drzero) | application | research-agent | research-artifact | 515 | 2026-05 |
+| 135 | [facebookresearch/hyperagents](https://github.com/facebookresearch/hyperagents) | application | memory | research-artifact | 2 | 2026-05 |
+| 136 | [fareedkhan-dev/autonomous-agentic-rag](https://github.com/fareedkhan-dev/autonomous-agentic-rag) | application | memory | tool-module | 139 | unknown |
+| 137 | [farmage/opencode-skills](https://github.com/farmage/opencode-skills) | tool | skill | tool-module | 28 | 2026-05 |
+| 138 | [faveos8758/reflexion-agent-ts](https://github.com/faveos8758/reflexion-agent-ts) | evaluation | evaluation | framework-runtime | 20 | unknown |
+| 139 | [feesuu/cluerag](https://github.com/feesuu/cluerag) | evaluation | memory | benchmark-eval | 26 | unknown |
+| 140 | [feiliu36/eoh](https://github.com/feiliu36/eoh) | application | evolution | application-demo | 319 | unknown |
+| 141 | [feiliu36/llm4opt](https://github.com/feiliu36/llm4opt) | application | research-agent | application-demo | 367 | unknown |
+| 142 | [flowersteam/teachmyagent](https://github.com/flowersteam/teachmyagent) | framework | evaluation | framework-runtime | 77 | unknown |
+| 143 | [FreedomIntelligence/OpenClaw-Medical-Skills](https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills) | tutorial | skill | resource-index | 2500 | 2026-05 |
+| 144 | [fusionbrainlab/gigaevo-core](https://github.com/fusionbrainlab/gigaevo-core) | tool | evolution | tool-module | 116 | unknown |
+| 145 | [galaxy-brain-ai/mcog-core](https://github.com/galaxy-brain-ai/mcog-core) | application | research-agent | application-demo | 19 | unknown |
+| 146 | [galyarderlabs/galyarder-framework](https://github.com/galyarderlabs/galyarder-framework) | framework | skill | framework-runtime | 11 | 2026-05 |
+| 147 | [garrus800-stack/genesis-agent](https://github.com/garrus800-stack/genesis-agent) | evaluation | evaluation | benchmark-eval | 24 | unknown |
+| 148 | [GeniusHTX/SWE-Skills-Bench](https://github.com/GeniusHTX/SWE-Skills-Bench) | evaluation | evaluation | benchmark-eval | 42 | 2026-05 |
+| 149 | [gensi-thuair/flex](https://github.com/gensi-thuair/flex) | paper-code | evaluation | benchmark-eval | 78 | 2026-05 |
+| 150 | [Gentleman-Programming/Gentleman-Skills](https://github.com/Gentleman-Programming/Gentleman-Skills) | tutorial | skill | resource-index | 522 | 2026-05 |
+| 151 | [george-salafatinos/tictactoe-self-play](https://github.com/george-salafatinos/tictactoe-self-play) | tool | coding-agent | tool-module | 0 | unknown |
+| 152 | [gepa-ai/gepa](https://github.com/gepa-ai/gepa) | tool | prompt-optimization | tool-module | 4 | unknown |
+| 153 | [gepa-ai/optimize-anything-artifact](https://github.com/gepa-ai/optimize-anything-artifact) | evaluation | prompt-optimization | benchmark-eval | 0 | unknown |
+| 154 | [getzep/graphiti](https://github.com/getzep/graphiti) | framework | memory | memory-substrate | 26500 | 2026-05 |
+| 155 | [ghy0501/awesome-continual-learning-in-generative-models](https://github.com/ghy0501/awesome-continual-learning-in-generative-models) | tutorial | education-list | resource-index | 151 | unknown |
+| 156 | [Gitmaxd/deepagents-cli-codex-skill](https://github.com/Gitmaxd/deepagents-cli-codex-skill) | tutorial | skill | resource-index | 1 | 2026-05 |
+| 157 | [gofenix/nex-agent](https://github.com/gofenix/nex-agent) | application | evolution | application-demo | 64 | 2026-05 |
+| 158 | [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | tool | memory | agent-evolution-infra | 105000 | 2026-05 |
+| 159 | [graph-rag/graphrag](https://github.com/graph-rag/graphrag) | tool | memory | tool-module | 574 | unknown |
+| 160 | [greyhaven-ai/autocontext](https://github.com/greyhaven-ai/autocontext) | framework | memory | benchmark-eval | 1 | 2026-04 |
+| 161 | [guixiang123124/openclaw-harness](https://github.com/guixiang123124/openclaw-harness) | framework | skill | framework-runtime | 3 | 2026-05 |
+| 162 | [gumbel-ai/agent-debate](https://github.com/gumbel-ai/agent-debate) | framework | framework | framework-runtime | 12 | 2026-03 |
+| 163 | [gustolychees/contribai](https://github.com/gustolychees/contribai) | evaluation | evaluation | benchmark-eval | 0 | unknown |
+| 164 | [hankbesser/recursive-agents](https://github.com/hankbesser/recursive-agents) | framework | evolution | framework-runtime | 39 | unknown |
+| 165 | [hao-cyber/skill-evolution](https://github.com/hao-cyber/skill-evolution) | framework | evolution | framework-runtime | 145 | 2026-05 |
+| 166 | [haotang1995/worldcoder](https://github.com/haotang1995/worldcoder) | tool | coding-agent | tool-module | 11 | unknown |
+| 167 | [haoxufd/openrlhf](https://github.com/haoxufd/openrlhf) | framework | framework | framework-runtime | 0 | unknown |
+| 168 | [harness/harness-skills](https://github.com/harness/harness-skills) | tutorial | skill | tool-module | 20 | 2026-05 |
+| 169 | [hashgraph-online/registry-broker-skills](https://github.com/hashgraph-online/registry-broker-skills) | tool | skill | tool-module | 345 | 2026-05 |
+| 170 | [hebbs-ai/hebbs-memory-engine](https://github.com/hebbs-ai/hebbs-memory-engine) | framework | memory | memory-substrate | 28 | 2026-05 |
+| 171 | [hkuds/ai-researcher](https://github.com/hkuds/ai-researcher) | evaluation | research-agent | benchmark-eval | 5 | unknown |
+| 172 | [HKUDS/OpenHarness](https://github.com/HKUDS/OpenHarness) | framework | framework | framework-runtime | 13000 | 2026-05 |
+| 173 | [HKUDS/OpenSpace](https://github.com/HKUDS/OpenSpace) | framework | evolution | framework-runtime | 6300 | 2026-05 |
+| 174 | [hkust-knowcomp/awesome-llm-scientific-discovery](https://github.com/hkust-knowcomp/awesome-llm-scientific-discovery) | tutorial | research-agent | resource-index | 344 | unknown |
+| 175 | [howells/arc](https://github.com/howells/arc) | framework | framework | framework-runtime | 22 | 2026-05 |
+| 176 | [huggingface/agents-course](https://github.com/huggingface/agents-course) | tutorial | education-list | resource-index | 28 | unknown |
+| 177 | [huggingface/skills](https://github.com/huggingface/skills) | tutorial | skill | resource-index | 10600 | 2026-05 |
+| 178 | [huggingface/smolagents](https://github.com/huggingface/smolagents) | evaluation | evaluation | benchmark-eval | 27 | unknown |
+| 179 | [human-agent-society/coral](https://github.com/Human-Agent-Society/CORAL) | framework | evolution | framework-runtime | 667 | 2026-05 |
+| 180 | [HUST-AI-HYZ/MemoryAgentBench](https://github.com/HUST-AI-HYZ/MemoryAgentBench) | evaluation | memory | benchmark-eval | 341 | 2026-05 |
+| 181 | [huytieu/COG-second-brain](https://github.com/huytieu/COG-second-brain) | application | memory | application-demo | 486 | 2026-05 |
+| 182 | [hwfengcs/dm-code-agent](https://github.com/hwfengcs/dm-code-agent) | evaluation | evaluation | benchmark-eval | 135 | 2026-05 |
+| 183 | [ibm/awesome-agentic-workflow-optimization](https://github.com/ibm/awesome-agentic-workflow-optimization) | tool | evolution | resource-index | 51 | unknown |
+| 184 | [iii-experimental/agentos](https://github.com/iii-experimental/agentos) | framework | evolution | framework-runtime | 145 | 2026-05 |
+| 185 | [ilearn-lab/evoharness](https://github.com/ilearn-lab/evoharness) | framework | evaluation | benchmark-eval | 52 | 2026-05 |
+| 186 | [iliaal/ai-skills](https://github.com/iliaal/ai-skills) | tool | skill | resource-index | 13 | 2026-05 |
+| 187 | [ilsilfverskiold/awesome-llm-resources-list](https://github.com/ilsilfverskiold/awesome-llm-resources-list) | tutorial | education-list | resource-index | 523 | unknown |
+| 188 | [imgeorgiev/pwm](https://github.com/imgeorgiev/pwm) | evaluation | evaluation | benchmark-eval | 68 | unknown |
+| 189 | [immanuelxiv/ppo-self-play](https://github.com/immanuelxiv/ppo-self-play) | application | evolution | application-demo | 20 | unknown |
+| 190 | [incidentfox/self-learning-ai-agent](https://github.com/incidentfox/self-learning-ai-agent) | tool | memory | tool-module | 1 | unknown |
+| 191 | [inclusionai/agenticlearning](https://github.com/inclusionai/agenticlearning) | tool | memory | tool-module | 106 | 2024-Q4 |
+| 192 | [inclusionai/aworld](https://github.com/inclusionai/aworld) | evaluation | evaluation | benchmark-eval | 1 | unknown |
+| 193 | [internlm/polar](https://github.com/internlm/polar) | evaluation | evaluation | benchmark-eval | 163 | unknown |
+| 194 | [internscience/internagent](https://github.com/internscience/internagent) | framework | research-agent | framework-runtime | 1 | unknown |
+| 195 | [isenglab/awesomellm4apr](https://github.com/isenglab/awesomellm4apr) | tutorial | education-list | resource-index | 240 | unknown |
+| 196 | [jakenuts/agent-skills](https://github.com/jakenuts/agent-skills) | tool | skill | tool-module | 0 | 2026-05 |
+| 197 | [jarvis-xs/se-agent](https://github.com/jarvis-xs/se-agent) | evaluation | evaluation | framework-runtime | 274 | 2026-05 |
+| 198 | [jayzeng/agentmemory](https://github.com/jayzeng/agentmemory) | tool | memory | tool-module | 5 | 2026-05 |
+| 199 | [jbrahy/meta-agent-teams](https://github.com/jbrahy/meta-agent-teams) | framework | evolution | framework-runtime | 2 | 2026-05 |
+| 200 | [jcartu/rasputin-memory](https://github.com/jcartu/rasputin-memory) | tool | memory | memory-substrate | 33 | 2026-05 |
+| 201 | [jdrhyne/agent-skills](https://github.com/jdrhyne/agent-skills) | tutorial | skill | resource-index | 230 | 2026-05 |
+| 202 | [jennyzzt/awesome-open-ended](https://github.com/jennyzzt/awesome-open-ended) | tutorial | education-list | resource-index | 438 | unknown |
+| 203 | [jennyzzt/dgm](https://github.com/jennyzzt/dgm) | application | evaluation | benchmark-eval | 2 | 2026-05 |
+| 204 | [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills) | tutorial | skill | resource-index | 339 | 2026-05 |
+| 205 | [JordanMcCann/agentmemory](https://github.com/JordanMcCann/agentmemory) | evaluation | memory | benchmark-eval | 23 | 2026-05 |
+| 206 | [jscraik/Agent-Skills](https://github.com/jscraik/Agent-Skills) | tool | skill | tool-module | 4 | 2026-05 |
+| 207 | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | tutorial | skill | resource-index | 25500 | 2026-05 |
+| 208 | [kadubon/audit-closed-ai-scientist](https://github.com/kadubon/audit-closed-ai-scientist) | evaluation | research-agent | benchmark-eval | 0 | 2026-03 |
+| 209 | [kargarisaac/reflexion](https://github.com/kargarisaac/reflexion) | tool | prompt-optimization | tool-module | 7 | unknown |
+| 210 | [kayba-ai/agentic-context-engine](https://github.com/kayba-ai/agentic-context-engine) | framework | evolution | agent-evolution-infra | 2200 | 2026-05 |
+| 211 | [kayba-ai/recursive-improve](https://github.com/kayba-ai/recursive-improve) | application | evolution | benchmark-eval | 194 | 2026-05 |
+| 212 | [Kenotic-Labs/ATANT](https://github.com/Kenotic-Labs/ATANT) | evaluation | evaluation | benchmark-eval | 3 | 2026-05 |
+| 213 | [keskival/recursive-self-improvement-suite](https://github.com/keskival/recursive-self-improvement-suite) | application | evolution | tool-module | 46 | unknown |
+| 214 | [khykd/reflector](https://github.com/khykd/reflector) | tool | prompt-optimization | tool-module | 4 | unknown |
+| 215 | [kitfunso/hippo-memory](https://github.com/kitfunso/hippo-memory) | tool | memory | benchmark-eval | 675 | 2026-05 |
+| 216 | [kks0488/vibe-codex](https://github.com/kks0488/vibe-codex) | tool | skill | tool-module | 10 | 2026-05 |
+| 217 | [knightnemo/awesome-world-models](https://github.com/knightnemo/awesome-world-models) | tutorial | education-list | resource-index | 2 | unknown |
+| 218 | [knowledgexlab/muse](https://github.com/knowledgexlab/muse) | application | evaluation | benchmark-eval | 88 | 2026-05 |
+| 219 | [kodigitaccount/2026-roadmap-for-advance-ml-ai-generative-ai-agentic-ai](https://github.com/kodigitaccount/2026-roadmap-for-advance-ml-ai-generative-ai-agentic-ai) | tutorial | education-list | resource-index | 1 | 2025-11 |
+| 220 | [krzysztofdudek/researcherskill](https://github.com/krzysztofdudek/researcherskill) | paper-code | research-agent | research-artifact | 223 | 2026-05 |
+| 221 | [kweaver-ai/kweaver-core](https://github.com/kweaver-ai/kweaver-core) | framework | framework | framework-runtime | 803 | 2026-05 |
+| 222 | [labicon/curricullm](https://github.com/labicon/curricullm) | evaluation | evaluation | benchmark-eval | 27 | unknown |
+| 223 | [lamm-mit/sciagentsdiscovery](https://github.com/lamm-mit/sciagentsdiscovery) | application | research-agent | application-demo | 610 | unknown |
+| 224 | [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | framework | framework | framework-runtime | 137 | 2026-05 |
+| 225 | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | framework | framework | framework-runtime | 32 | 2026-05 |
+| 226 | [langchain-ai/langmem](https://github.com/langchain-ai/langmem) | framework | memory | memory-substrate | 1500 | 2026-05 |
+| 227 | [langchain-ai/langsmith-sdk](https://github.com/langchain-ai/langsmith-sdk) | framework | framework | framework-runtime | 894 | 2026-05 |
+| 228 | [langchain-ai/open-swe](https://github.com/langchain-ai/open-swe) | evaluation | coding-agent | benchmark-eval | 9 | unknown |
+| 229 | [large-model-rl-lib/openrlhf](https://github.com/large-model-rl-lib/openrlhf) | framework | framework | framework-runtime | 0 | unknown |
+| 230 | [lastmile-ai/mcp-agent](https://github.com/lastmile-ai/mcp-agent) | framework | memory | framework-runtime | 8 | unknown |
+| 231 | [lean-dojo/leanagent](https://github.com/lean-dojo/leanagent) | framework | evaluation | framework-runtime | 68 | unknown |
+| 232 | [legionio/lex-metacognition](https://github.com/legionio/lex-metacognition) | tool | memory | tool-module | 0 | unknown |
+| 233 | [leofan90/awesome-world-models](https://github.com/leofan90/awesome-world-models) | tutorial | education-list | resource-index | 1 | unknown |
+| 234 | [letta-ai/agentic-learning-sdk](https://github.com/letta-ai/agentic-learning-sdk) | framework | framework | framework-runtime | 45 | unknown |
+| 235 | [letta-ai/letta](https://github.com/letta-ai/letta) | framework | memory | framework-runtime | 22 | 2026-05 |
+| 236 | [lfleon9b/sakana-ai-scientist-v2](https://github.com/lfleon9b/sakana-ai-scientist-v2) | application | research-agent | application-demo | 1 | 2024-Q2 |
+| 237 | [lightchen233/awesome-ai4research](https://github.com/lightchen233/awesome-ai4research) | tutorial | education-list | resource-index | 230 | 2026-05 |
+| 238 | [linear95/spag](https://github.com/linear95/spag) | evaluation | evaluation | benchmark-eval | 144 | 2026-05 |
+| 239 | [lingxi-agent/lingxi](https://github.com/lingxi-agent/lingxi) | tutorial | framework | resource-index | 243 | 2026-05 |
+| 240 | [llmprogram/textgrad](https://github.com/llmprogram/textgrad) | evaluation | coding-agent | benchmark-eval | 0 | 2026-05 |
+| 241 | [lmd0311/awesome-world-model](https://github.com/lmd0311/awesome-world-model) | tutorial | education-list | resource-index | 2 | 2026-05 |
+| 242 | [logikon-ai/awesome-deliberative-prompting](https://github.com/logikon-ai/awesome-deliberative-prompting) | tutorial | prompt-optimization | resource-index | 126 | early |
+| 243 | [longman-max/selfthinker](https://github.com/longman-max/selfthinker) | tool | coding-agent | tool-module | 0 | 2026-05 |
+| 244 | [longyunfeigu/learn-hermes-agent](https://github.com/longyunfeigu/learn-hermes-agent) | framework | memory | resource-index | 113 | 2026-05 |
+| 245 | [lsdefine/genericagent](https://github.com/lsdefine/genericagent) | framework | evolution | tool-module | 11 | 2026-05 |
+| 246 | [ltzheng/curriculummarl](https://github.com/ltzheng/curriculummarl) | paper-code | research-agent | research-artifact | 13 | 2026-05 |
+| 247 | [luh-ai-devnerds/llm-guided-curriculum-rl](https://github.com/luh-ai-devnerds/llm-guided-curriculum-rl) | tutorial | research-agent | resource-index | 1 | 2026-05 |
+| 248 | [luo-junyu/awesome-agent-papers](https://github.com/luo-junyu/awesome-agent-papers) | tutorial | education-list | resource-index | 2 | 2026-05 |
+| 249 | [lyl1015/jarvisevo](https://github.com/lyl1015/jarvisevo) | evaluation | evaluation | benchmark-eval | 401 | 2026-05 |
+| 250 | [machuangtao/llm-kg4qa](https://github.com/machuangtao/llm-kg4qa) | paper-code | coding-agent | research-artifact | 157 | 2026-05 |
+| 251 | [madaan/self-refine](https://github.com/madaan/self-refine) | tool | prompt-optimization | tool-module | 805 | 2026-05 |
+| 252 | [maitrix-org/promptagent](https://github.com/maitrix-org/promptagent) | paper-code | prompt-optimization | research-artifact | 353 | 2024-Q2 |
+| 253 | [managedcode/dotnet-skills](https://github.com/managedcode/dotnet-skills) | tool | skill | tool-module | 403 | 2026-05 |
+| 254 | [matebenyovszky/healing-agent](https://github.com/matebenyovszky/healing-agent) | evaluation | evaluation | benchmark-eval | 23 | 2024-Q1 |
+| 255 | [matrixorigin/Memoria](https://github.com/matrixorigin/Memoria) | tool | memory | tool-module | 271 | 2026-05 |
+| 256 | [MaximeRobeyns/self_improving_coding_agent](https://github.com/MaximeRobeyns/self_improving_coding_agent) | paper-code | evolution | research-artifact | 324 | 2026-05 |
+| 257 | [maxnorm8650/medagentsim](https://github.com/maxnorm8650/medagentsim) | evaluation | evolution | research-artifact | 163 | 2026-05 |
+| 258 | [mb-mal/awesome-ai-agents-frameworks](https://github.com/mb-mal/awesome-ai-agents-frameworks) | tutorial | framework | resource-index | 52 | unknown |
+| 259 | [mbchang/meta-prompt](https://github.com/mbchang/meta-prompt) | paper-code | prompt-optimization | tool-module | 65 | 2026-05 |
+| 260 | [mbzuai-oryx/awesome-llm-post-training](https://github.com/mbzuai-oryx/awesome-llm-post-training) | tutorial | education-list | resource-index | 2 | 2026-05 |
+| 261 | [mdalamin5/end-to-end-agentic-ai-automation-lab](https://github.com/mdalamin5/end-to-end-agentic-ai-automation-lab) | framework | workflow-automation | framework-runtime | 72 | 2026-05 |
+| 262 | [meituan/EvoCUA](https://github.com/meituan/EvoCUA) | paper-code | evolution | research-artifact | 317 | 2026-05 |
+| 263 | [mem0ai/mem0](https://github.com/mem0ai/mem0) | tool | memory | tool-module | 56500 | 2026-05 |
+| 264 | [mem0ai/memory-benchmarks](https://github.com/mem0ai/memory-benchmarks) | evaluation | memory | benchmark-eval | 33 | 2026-05 |
+| 265 | [Memento-Teams/Memento-Skills](https://github.com/Memento-Teams/Memento-Skills) | framework | evolution | agent-evolution-infra | 1400 | 2026-05 |
+| 266 | [memodb-io/acontext](https://github.com/memodb-io/acontext) | tool | memory | tool-module | 3 | 2026-05 |
+| 267 | [memodb-io/memobase](https://github.com/memodb-io/memobase) | framework | memory | memory-substrate | 2700 | 2026-05 |
+| 268 | [MemoriLabs/Memori](https://github.com/memorilabs/memori) | tool | memory | tool-module | 14900 | 2026-05 |
+| 269 | [memovai/memov](https://github.com/memovai/memov) | framework | memory | tool-module | 190 | 2026-05 |
+| 270 | [MemPalace/mempalace](https://github.com/MemPalace/mempalace) | tool | memory | memory-substrate | 52800 | 2026-05 |
+| 271 | [MemTensor/HaluMem](https://github.com/MemTensor/HaluMem) | evaluation | memory | benchmark-eval | 138 | 2025-11 |
+| 272 | [memtensor/memos](https://github.com/memtensor/memos) | tool | memory | memory-runtime | 9400 | 2026-05 |
+| 273 | [memtensor/memrl](https://github.com/memtensor/memrl) | paper-code | evolution | research-artifact | 117 | 2026-05 |
+| 274 | [memvid/memvid](https://github.com/memvid/memvid) | tool | memory | memory-substrate | 12400 | 2026-05 |
+| 275 | [metauto-ai/gptswarm](https://github.com/metauto-ai/gptswarm) | application | evolution | research-artifact | 998 | 2026-05 |
+| 276 | [mettamazza/ernosagent](https://github.com/mettamazza/ernosagent) | framework | memory | tool-module | 10 | unknown |
+| 277 | [mfolsom/rlvr-world](https://github.com/mfolsom/rlvr-world) | evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
+| 278 | [mgechev/skillgrade](https://github.com/mgechev/skillgrade) | evaluation | evaluation | benchmark-eval | 490 | 2026-05 |
+| 279 | [mgechev/skills-best-practices](https://github.com/mgechev/skills-best-practices) | tutorial | skill | resource-index | 1900 | 2026-05 |
+| 280 | [microsoft/skills](https://github.com/microsoft/skills) | tutorial | skill | resource-index | 2400 | 2026-05 |
+| 281 | [microsoft/STATE-Bench](https://github.com/microsoft/STATE-Bench) | evaluation | memory | benchmark-eval | 25 | 2026-05 |
+| 282 | [microsoft/waza](https://github.com/microsoft/waza) | evaluation | skill | benchmark-eval | 904 | 2026-05 |
+| 283 | [microsoft/WindowsAgentArena](https://github.com/microsoft/WindowsAgentArena) | evaluation | evaluation | benchmark-eval | 861 | 2026-05 |
+| 284 | [MicrosoftDocs/Agent-Skills](https://github.com/MicrosoftDocs/Agent-Skills) | tutorial | skill | resource-index | 557 | 2026-05 |
+| 285 | [mitchellgordon95/dspy](https://github.com/mitchellgordon95/dspy) | framework | prompt-optimization | framework-runtime | 0 | 2026-05 |
+| 286 | [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | framework | memory | framework-runtime | 86 | 2026-05 |
+| 287 | [modelscope/agentevolver](https://github.com/modelscope/agentevolver) | application | evolution | application-demo | 1 | 2026-05 |
+| 288 | [modelscope/agentjet](https://github.com/modelscope/agentjet) | evaluation | evaluation | framework-runtime | 208 | 2026-05 |
+| 289 | [MoizIbnYousaf/Ai-Agent-Skills](https://github.com/MoizIbnYousaf/Ai-Agent-Skills) | tool | skill | tool-module | 1100 | 2026-05 |
+| 290 | [mwasifanwar/meta-cognitive-learning-system](https://github.com/mwasifanwar/meta-cognitive-learning-system) | tool | prompt-optimization | tool-module | 2 | 2026-05 |
+| 291 | [mycelium-io/mycelium](https://github.com/mycelium-io/mycelium) | tool | memory | tool-module | 95 | 2026-05 |
+| 292 | [n4m3z/forge-council](https://github.com/n4m3z/forge-council) | framework | evaluation | framework-runtime | 9 | 2026-05 |
+| 293 | [n8n-io/n8n](https://github.com/n8n-io/n8n) | framework | workflow-automation | framework-runtime | 189 | 2026-05 |
+| 294 | [naivoder/mctsr](https://github.com/naivoder/mctsr) | application | prompt-optimization | tool-module | 22 | unknown |
+| 295 | [neo4j-labs/agent-memory](https://github.com/neo4j-labs/agent-memory) | framework | memory | framework-runtime | 262 | 2026-05 |
+| 296 | [neosigmaai/auto-harness](https://github.com/neosigmaai/auto-harness) | framework | evaluation | benchmark-eval | 507 | 2026-05 |
+| 297 | [NevaMind-AI/memU](https://github.com/NevaMind-AI/memU) | tool | memory | tool-module | 13700 | 2026-05 |
+| 298 | [ngoodman/metaprompt](https://github.com/ngoodman/metaprompt) | evaluation | prompt-optimization | benchmark-eval | 88 | 2026-05 |
+| 299 | [nickatomlin/lm-selfplay](https://github.com/nickatomlin/lm-selfplay) | paper-code | prompt-optimization | research-artifact | 9 | 2026-05 |
+| 300 | [nikivanstein/llamea](https://github.com/nikivanstein/llamea) | evaluation | evaluation | benchmark-eval | 105 | 2026-05 |
+| 301 | [NirDiamant/Agent_Memory_Techniques](https://github.com/NirDiamant/Agent_Memory_Techniques) | tutorial | memory | resource-index | 412 | 2026-05 |
+| 302 | [noahshinn/reflexion](https://github.com/noahshinn/reflexion) | paper-code | memory | benchmark-eval | 3 | 2026-05 |
+| 303 | [noahshinn/reflexion-draft](https://github.com/noahshinn/reflexion-draft) | framework | memory | benchmark-eval | 388 | 2026-05 |
+| 304 | [noahshinn024/reflexion-human-eval](https://github.com/noahshinn024/reflexion-human-eval) | evaluation | memory | benchmark-eval | 3 | 2026-05 |
+| 305 | [nousresearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | framework | framework | framework-runtime | 0 | 2026-05 |
+| 306 | [nousresearch/hermes-agent-self-evolution](https://github.com/nousresearch/hermes-agent-self-evolution) | application | evolution | research-artifact | 3 | 2026-05 |
+| 307 | [obra/superpowers](https://github.com/obra/superpowers) | tool | memory | tool-module | 202000 | 2026-05 |
+| 308 | [octobrist/cope](https://github.com/octobrist/cope) | paper-code | evolution | framework-runtime | 11 | unknown |
+| 309 | [oiioai/molt](https://github.com/OiiOAI/MOLT) | framework | evolution | framework-runtime | 0 | 2026-05 |
+| 310 | [omdivyatej/self-learning-agents](https://github.com/omdivyatej/self-learning-agents) | framework | framework | framework-runtime | 63 | 2025-05 |
+| 311 | [onevcat/argue](https://github.com/onevcat/argue) | framework | framework | framework-runtime | 238 | 2026-05 |
+| 312 | [OneWave-AI/claude-skills](https://github.com/OneWave-AI/claude-skills) | tutorial | skill | resource-index | 154 | 2026-05 |
+| 313 | [open-gitagent/gitagent](https://github.com/open-gitagent/gitagent) | framework | framework | framework-runtime | 404 | 2026-05 |
+| 314 | [openai/skills](https://github.com/openai/skills) | tutorial | skill | resource-index | 20100 | 2026-05 |
+| 315 | [openautocoder/live-swe-agent](https://github.com/openautocoder/live-swe-agent) | framework | coding-agent | framework-runtime | 392 | 2025-11 |
+| 316 | [OpenBMB/EdgeClaw](https://github.com/OpenBMB/EdgeClaw) | framework | framework | framework-runtime | 1200 | 2026-05 |
+| 317 | [openclaw/clawbench](https://github.com/openclaw/clawbench) | evaluation | evaluation | benchmark-eval | 97 | 2026-04 |
+| 318 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | framework | framework | framework-runtime | 374000 | 2026-05 |
+| 319 | [opendatabox/workspace-bench](https://github.com/opendatabox/workspace-bench) | evaluation | evaluation | benchmark-eval | 14 | 2025-05 |
+| 320 | [opendilab/awesome-exploration-rl](https://github.com/opendilab/awesome-exploration-rl) | tutorial | education-list | resource-index | 689 | 2026-05 |
+| 321 | [opendilab/awesome-model-based-rl](https://github.com/opendilab/awesome-model-based-rl) | tutorial | education-list | resource-index | 1 | 2026-05 |
+| 322 | [opendilab/awesome-rlhf](https://github.com/opendilab/awesome-rlhf) | tutorial | education-list | resource-index | 4 | 2026-05 |
+| 323 | [OpenHands/benchmarks](https://github.com/OpenHands/benchmarks) | evaluation | evaluation | benchmark-eval | 85 | 2026-05 |
+| 324 | [openmemind/memind](https://github.com/openmemind/memind) | framework | memory | benchmark-eval | 787 | 2026-05 |
+| 325 | [openning07/awesome-curriculum-learning](https://github.com/openning07/awesome-curriculum-learning) | tutorial | education-list | resource-index | 248 | 2026-05 |
+| 326 | [opensite-ai/opensite-skills](https://github.com/opensite-ai/opensite-skills) | tool | memory | tool-module | 7 | 2026-05 |
+| 327 | [opentracy/opentracy](https://github.com/opentracy/opentracy) | evaluation | evaluation | benchmark-eval | 101 | 2026-05 |
+| 328 | [Orchestra-Research/AI-research-SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs) | tutorial | skill | resource-index | 8900 | 2026-05 |
+| 329 | [os-copilot/os-copilot](https://github.com/os-copilot/os-copilot) | framework | evaluation | benchmark-eval | 1 | 2024-Q1 |
+| 330 | [osu-nlp-group/skillweaver](https://github.com/osu-nlp-group/skillweaver) | framework | evolution | framework-runtime | 123 | 2024-Q3 |
+| 331 | [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) | tool | skill | tool-module | 22000 | 2026-05 |
+| 332 | [oxen-ai/self-rewarding-language-models](https://github.com/oxen-ai/self-rewarding-language-models) | evaluation | prompt-optimization | benchmark-eval | 134 | 2026-05 |
+| 333 | [paperwave/genenv](https://github.com/paperwave/genenv) | paper-code | research-agent | research-artifact | 0 | 2026-05 |
+| 334 | [paradigmxyz/centaur](https://github.com/paradigmxyz/centaur) | framework | framework | framework-runtime | 469 | 2026-05 |
+| 335 | [paradigmxyz/evmbench](https://github.com/paradigmxyz/evmbench) | evaluation | evaluation | benchmark-eval | 421 | 2026-05 |
+| 336 | [pathway/alphaxos](https://github.com/pathway/alphaxos) | evaluation | evaluation | benchmark-eval | 12 | 2026-05 |
+| 337 | [PaulRBerg/agent-skills](https://github.com/PaulRBerg/agent-skills) | tool | skill | tool-module | 59 | 2026-05 |
+| 338 | [pgg3/evotoolkit](https://github.com/pgg3/evotoolkit) | evaluation | evaluation | benchmark-eval | 68 | 2026-03 |
+| 339 | [pgg3/l-autoda](https://github.com/pgg3/l-autoda) | application | evolution | application-demo | 3 | 2026-05 |
+| 340 | [pinchbench/skill](https://github.com/pinchbench/skill) | evaluation | evaluation | benchmark-eval | 1200 | 2026-05 |
+| 341 | [pingcap/ossinsight](https://github.com/pingcap/ossinsight) | tool | research-agent | tool-module | 2 | 2026-05 |
+| 342 | [pingcy/ace-langgraph](https://github.com/pingcy/ace-langgraph) | framework | framework | framework-runtime | 46 | unknown |
+| 343 | [pjt222/agent-almanac](https://github.com/pjt222/agent-almanac) | tutorial | skill | resource-index | 17 | 2026-05 |
+| 344 | [plastic-labs/honcho](https://github.com/plastic-labs/honcho) | framework | memory | framework-runtime | 4200 | 2026-05 |
+| 345 | [polarseeker/openseeker](https://github.com/polarseeker/openseeker) | evaluation | evaluation | benchmark-eval | 711 | 2026-05 |
+| 346 | [polya20/textgrad](https://github.com/polya20/textgrad) | evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
+| 347 | [princeton-pli/hal-harness](https://github.com/princeton-pli/hal-harness) | evaluation | evaluation | benchmark-eval | 289 | 2026-05 |
+| 348 | [privkeyio/evolve-mcp](https://github.com/privkeyio/evolve-mcp) | framework | evolution | framework-runtime | 11 | unknown |
+| 349 | [psenger/ai-agent-skills](https://github.com/psenger/ai-agent-skills) | tutorial | skill | resource-index | 3 | 2026-05 |
+| 350 | [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) | tutorial | education-list | resource-index | 87 | 2026-05 |
+| 351 | [qianlima-lab/awesome-lifelong-llm-agent](https://github.com/qianlima-lab/awesome-lifelong-llm-agent) | tutorial | education-list | resource-index | 300 | 2026-05 |
+| 352 | [QuantaAlpha/QuantaAlpha](https://github.com/QuantaAlpha/QuantaAlpha) | paper-code | evolution | agent-evolution-infra | 702 | 2026-05 |
+| 353 | [quantstellarlab/ai-scientist-v2](https://github.com/quantstellarlab/ai-scientist-v2) | application | research-agent | application-demo | 0 | 2024-Q2 |
+| 354 | [quzhiii/thesis-skills](https://github.com/quzhiii/thesis-skills) | tool | skill | tool-module | 71 | 2026-05 |
+| 355 | [r4stin/kg-research-agent](https://github.com/r4stin/kg-research-agent) | tutorial | research-agent | resource-index | 3 | 2026-05 |
+| 356 | [raghavc/llm-rlhf-tuning-with-ppo-and-dpo](https://github.com/raghavc/llm-rlhf-tuning-with-ppo-and-dpo) | paper-code | memory | research-artifact | 190 | 2026-05 |
+| 357 | [Randroids-Dojo/skills](https://github.com/Randroids-Dojo/skills) | tutorial | skill | resource-index | 33 | 2026-05 |
+| 358 | [RangeKing/self-evolving-agent](https://github.com/RangeKing/self-evolving-agent) | tool | skill | tool-module | 9 | 2026-05 |
+| 359 | [raphaelchristi/harness-evolver](https://github.com/raphaelchristi/harness-evolver) | tool | evolution | tool-module | 21 | 2026-05 |
+| 360 | [razroo/state-trace](https://github.com/razroo/state-trace) | tool | memory | tool-module | 1 | 2026-05 |
+| 361 | [reflexioai/reflexio](https://github.com/reflexioai/reflexio) | framework | evaluation | benchmark-eval | 220 | 2026-05 |
+| 362 | [regenrek/codex-1up](https://github.com/regenrek/codex-1up) | tool | skill | tool-module | 430 | 2026-05 |
+| 363 | [rendro/sediment](https://github.com/rendro/sediment) | tool | memory | tool-module | 32 | 2026-05 |
+| 364 | [researai/awesome-ai-scientist](https://github.com/researai/awesome-ai-scientist) | tutorial | research-agent | resource-index | 240 | 2026-05 |
+| 365 | [revfactory/harness](https://github.com/revfactory/harness) | framework | skill | framework-runtime | 3500 | 2026-05 |
+| 366 | [richchen-maker/openclaw-multi-agent-team](https://github.com/richchen-maker/openclaw-multi-agent-team) | framework | framework | framework-runtime | 80 | 2026-05 |
+| 367 | [rinadelph/agent-mcp](https://github.com/rinadelph/agent-mcp) | framework | framework | framework-runtime | 1 | 2026-05 |
+| 368 | [rishab-agrawal/humanoid-curriculum-rl](https://github.com/rishab-agrawal/humanoid-curriculum-rl) | tool | coding-agent | tool-module | 1 | 2026-05 |
+| 369 | [rlhflow/online-rlhf](https://github.com/rlhflow/online-rlhf) | evaluation | evaluation | benchmark-eval | 545 | 2026-05 |
+| 370 | [rlhflow/self-rewarding-reasoning-llm](https://github.com/rlhflow/self-rewarding-reasoning-llm) | evaluation | evaluation | benchmark-eval | 232 | 2026-05 |
+| 371 | [rllm-org/rllm](https://github.com/rllm-org/rllm) | evaluation | evaluation | benchmark-eval | 5 | 2026-05 |
+| 372 | [rmanluo/gfm-rag](https://github.com/rmanluo/gfm-rag) | evaluation | memory | benchmark-eval | 259 | 2026-04 |
+| 373 | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | tool | memory | tool-module | 16000 | 2026-05 |
+| 374 | [ronit26mehta/argus-ai-debate](https://github.com/ronit26mehta/argus-ai-debate) | framework | framework | framework-runtime | 3 | unknown |
+| 375 | [rtk-ai/icm](https://github.com/rtk-ai/icm) | tool | memory | tool-module | 371 | 2026-05 |
+| 376 | [rucbm/laser](https://github.com/rucbm/laser) | evaluation | evaluation | benchmark-eval | 36 | 2026-05 |
+| 377 | [sakanaai/ai-scientist](https://github.com/sakanaai/ai-scientist) | evaluation | research-agent | benchmark-eval | 13 | 2026-05 |
+| 378 | [sakanaai/ai-scientist-v2](https://github.com/sakanaai/ai-scientist-v2) | application | research-agent | application-demo | 6 | 2024-Q2 |
+| 379 | [sakanaai/shinkaevolve](https://github.com/sakanaai/shinkaevolve) | tool | evolution | tool-module | 1 | 2026-05 |
+| 380 | [sakutepov/ai-scientist-v2](https://github.com/sakutepov/ai-scientist-v2) | application | research-agent | application-demo | 0 | 2024-Q3 |
+| 381 | [salvatorera/ml-news-of-the-week](https://github.com/salvatorera/ml-news-of-the-week) | tutorial | memory | resource-index | 180 | 2026-05 |
+| 382 | [sasleee/tencentdb-agent-memory](https://github.com/sasleee/tencentdb-agent-memory) | framework | memory | framework-runtime | 0 | 2026-05 |
+| 383 | [scienceaix/agentskills](https://github.com/scienceaix/agentskills) | tutorial | education-list | resource-index | 63 | 2025-11 |
+| 384 | [sebastianbrzustowicz/robot-sumo-rl](https://github.com/sebastianbrzustowicz/robot-sumo-rl) | evaluation | evaluation | benchmark-eval | 18 | 2026-05 |
+| 385 | [seetrex-ai/laimark](https://github.com/seetrex-ai/laimark) | evaluation | evaluation | benchmark-eval | 4 | 2026-04 |
+| 386 | [sehoon787/my-codex](https://github.com/sehoon787/my-codex) | framework | skill | framework-runtime | 16 | 2026-05 |
+| 387 | [self-play-language-models/spin-peft](https://github.com/self-play-language-models/spin-peft) | evaluation | evaluation | benchmark-eval | 4 | 2026-05 |
+| 388 | [sentient-agi/EvoSkill](https://github.com/sentient-agi/EvoSkill) | framework | evolution | agent-evolution-infra | 798 | 2026-05 |
+| 389 | [sentrux/sentrux](https://github.com/sentrux/sentrux) | framework | evaluation | benchmark-eval | 2 | 2026-05 |
+| 390 | [senweaver/senagentos](https://github.com/senweaver/senagentos) | framework | memory | framework-runtime | 10 | unknown |
+| 391 | [ServiceNow/BrowserGym](https://github.com/ServiceNow/BrowserGym) | evaluation | evaluation | benchmark-eval | 1200 | 2026-05 |
+| 392 | [sethkarten/continual-harness](https://github.com/sethkarten/continual-harness) | evaluation | evaluation | benchmark-eval | 106 | 2026-05 |
+| 393 | [shadowrootdev/awesome-agent-skills-mcp](https://github.com/shadowrootdev/awesome-agent-skills-mcp) | tutorial | education-list | resource-index | 23 | 2024-Q4 |
+| 394 | [shaoshuai0605/misevolution](https://github.com/shaoshuai0605/misevolution) | evaluation | evolution | tool-module | 76 | 2026-05 |
+| 395 | [shareAI-lab/kbench](https://github.com/shareAI-lab/kbench) | evaluation | evaluation | benchmark-eval | 10 | 2026-05 |
+| 396 | [shehrum/grf-self-play](https://github.com/shehrum/grf-self-play) | evaluation | research-agent | benchmark-eval | 4 | 2026-05 |
+| 397 | [shichun-liu/agent-memory-paper-list](https://github.com/shichun-liu/agent-memory-paper-list) | tutorial | memory | resource-index | 2 | 2025-12 |
+| 398 | [shingo257/gitnexus](https://github.com/shingo257/gitnexus) | framework | evaluation | framework-runtime | 0 | 2026-05 |
+| 399 | [shinpr/mcp-local-rag](https://github.com/shinpr/mcp-local-rag) | tool | memory | tool-module | 275 | 2026-05 |
+| 400 | [shintaro-sprech/agent-orchestrator-template](https://github.com/shintaro-sprech/agent-orchestrator-template) | framework | framework | framework-runtime | 120 | 2026-05 |
+| 401 | [shiqichen17/spa](https://github.com/shiqichen17/spa) | tool | memory | tool-module | 35 | 2026-05 |
+| 402 | [sibyl-research-team/sibyl-research-system](https://github.com/sibyl-research-team/sibyl-research-system) | tool | research-agent | tool-module | 245 | 2026-05 |
+| 403 | [siddharth-1001/agent-eval-harness](https://github.com/siddharth-1001/agent-eval-harness) | framework | evaluation | framework-runtime | 20 | 2026-05 |
+| 404 | [Signet-AI/signetai](https://github.com/Signet-AI/signetai) | tool | memory | memory-substrate | 167 | 2026-05 |
+| 405 | [significant-gravitas/autogpt](https://github.com/significant-gravitas/autogpt) | framework | framework | framework-runtime | 184 | 2026-05 |
+| 406 | [simota/agent-skills](https://github.com/simota/agent-skills) | tutorial | skill | resource-index | 39 | 2026-05 |
+| 407 | [SJTU-IPADS/SkVM](https://github.com/SJTU-IPADS/SkVM) | framework | skill | framework-runtime | 480 | 2026-05 |
+| 408 | [skills-mcp/skills-mcp](https://github.com/skills-mcp/skills-mcp) | tool | prompt-optimization | tool-module | 24 | 2026-05 |
+| 409 | [smiles724/awesome-llm-rlvr](https://github.com/smiles724/awesome-llm-rlvr) | tutorial | education-list | resource-index | 107 | unknown |
+| 410 | [snowflake-labs/agent-world-model](https://github.com/snowflake-labs/agent-world-model) | application | education-list | application-demo | 356 | 2026-05 |
+| 411 | [sola-st/repairagent](https://github.com/sola-st/repairagent) | tool | memory | tool-module | 95 | 2026-05 |
+| 412 | [spillwavesolutions/agent-brain](https://github.com/spillwavesolutions/agent-brain) | evaluation | evaluation | benchmark-eval | 101 | 2026-03 |
+| 413 | [spiral-rl/spiral](https://github.com/spiral-rl/spiral) | framework | framework | framework-runtime | 190 | 2026-05 |
+| 414 | [square-mind/squaremind](https://github.com/square-mind/squaremind) | framework | framework | framework-runtime | 0 | 2026-05 |
+| 415 | [stanfordnlp/dsp](https://github.com/stanfordnlp/dsp) | framework | prompt-optimization | framework-runtime | 34 | 2026-05 |
+| 416 | [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) | framework | prompt-optimization | framework-runtime | 34 | 2026-05 |
+| 417 | [star-bob/swe-agent](https://github.com/star-bob/swe-agent) | paper-code | coding-agent | research-artifact | 0 | 2026-05 |
+| 418 | [stonks-git/intuitive-ai](https://github.com/stonks-git/intuitive-ai) | tool | memory | tool-module | 2 | 2026-05 |
+| 419 | [studio-intrinsic/turbo-gepa](https://github.com/studio-intrinsic/turbo-gepa) | evaluation | prompt-optimization | benchmark-eval | 3 | 2026-05 |
+| 420 | [sudokrang/aceforge](https://github.com/sudokrang/aceforge) | tool | evolution | tool-module | 1 | 2026-05 |
+| 421 | [sundial-org/awesome-openclaw-skills](https://github.com/sundial-org/awesome-openclaw-skills) | tutorial | skill | resource-index | 602 | 2026-05 |
+| 422 | [sunitj/colloquip](https://github.com/sunitj/colloquip) | framework | framework | framework-runtime | 1 | 2026-05 |
+| 423 | [sunzey/seagent](https://github.com/sunzey/seagent) | paper-code | evaluation | benchmark-eval | 246 | 2026-05 |
+| 424 | [suyoumo/ClawProBench](https://github.com/suyoumo/ClawProBench) | evaluation | evaluation | benchmark-eval | 690 | 2026-05 |
+| 425 | [swapedoc/hermes2anti](https://github.com/swapedoc/hermes2anti) | tool | memory | tool-module | 4 | 2026-05 |
+| 426 | [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | framework | framework | framework-runtime | 518 | 2026-05 |
+| 427 | [swe-agent/swe-agent](https://github.com/swe-agent/swe-agent) | paper-code | coding-agent | research-artifact | 19 | 2025-05 |
+| 428 | [swe-bench/swe-bench](https://github.com/swe-bench/swe-bench) | evaluation | evaluation | benchmark-eval | 5 | 2026-05 |
+| 429 | [synaptent/aragora](https://github.com/synaptent/aragora) | evaluation | memory | benchmark-eval | 7 | 2026-05 |
+| 430 | [taishi-n324/awesome-rl-reasoning](https://github.com/taishi-n324/awesome-rl-reasoning) | tutorial | education-list | resource-index | 13 | 2025-09 |
+| 431 | [tech-leads-club/agent-skills](https://github.com/tech-leads-club/agent-skills) | tool | skill | tool-module | 4400 | 2026-05 |
+| 432 | [teleai-uagi/awesome-agent-memory](https://github.com/teleai-uagi/awesome-agent-memory) | tutorial | memory | resource-index | 421 | 2026-05 |
+| 433 | [tencent/selfevolvingagent](https://github.com/tencent/selfevolvingagent) | paper-code | evolution | application-demo | 100 | 2026-05 |
+| 434 | [terryfyl/openclaw-evolution-framework](https://github.com/TerryFYL/openclaw-evolution-framework) | framework | evolution | framework-runtime | 4 | 2026-02 |
+| 435 | [tfatykhov/awesome-agent-memory](https://github.com/tfatykhov/awesome-agent-memory) | tutorial | memory | resource-index | 0 | 2026-05 |
+| 436 | [thClaws/thClaws](https://github.com/thClaws/thClaws) | framework | framework | framework-runtime | 1000 | 2026-05 |
+| 437 | [TheQtCompanyRnD/agent-skills](https://github.com/TheQtCompanyRnD/agent-skills) | tutorial | skill | resource-index | 171 | 2026-05 |
+| 438 | [thesdes/textgrad](https://github.com/thesdes/textgrad) | evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
+| 439 | [thu-nics/mars](https://github.com/thu-nics/mars) | evaluation | evaluation | benchmark-eval | 48 | 2026-05 |
+| 440 | [thudm/webrl](https://github.com/thudm/webrl) | application | evolution | benchmark-eval | 524 | 2026-05 |
+| 441 | [thuml/rlvr-world](https://github.com/thuml/rlvr-world) | evaluation | evaluation | benchmark-eval | 251 | 2026-05 |
+| 442 | [tianyi-stack/madevolve](https://github.com/tianyi-stack/madevolve) | application | evolution | application-demo | 9 | 2026-05 |
+| 443 | [tiger-ai-lab/openresearcher](https://github.com/tiger-ai-lab/openresearcher) | evaluation | research-agent | benchmark-eval | 756 | 2026-05 |
+| 444 | [TiMEM-AI/timem](https://github.com/TiMEM-AI/timem) | tool | memory | tool-module | 134 | 2026-05 |
+| 445 | [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | application | memory | application-demo | 25100 | 2026-05 |
+| 446 | [tmgthb/autonomous-agents](https://github.com/tmgthb/autonomous-agents) | tutorial | research-agent | resource-index | 1 | 2026-05 |
+| 447 | [togethercomputer/skills](https://github.com/togethercomputer/skills) | tool | skill | tool-module | 28 | 2026-05 |
+| 448 | [TransformerOptimus/SuperAGI](https://github.com/TransformerOptimus/SuperAGI) | framework | framework | framework-runtime | 17500 | 2026-05 |
+| 449 | [trillskillz/clawdmarket](https://github.com/trillskillz/clawdmarket) | application | evolution | application-demo | 2 | 2026-05 |
+| 450 | [trustgraph-ai/trustgraph](https://github.com/trustgraph-ai/trustgraph) | framework | memory | framework-runtime | 2100 | 2026-05 |
+| 451 | [tsinghua-fib-lab/awesome-ai-scientists](https://github.com/tsinghua-fib-lab/awesome-ai-scientists) | tutorial | research-agent | resource-index | 35 | 2026-05 |
+| 452 | [tsinghua-fib-lab/world-model](https://github.com/tsinghua-fib-lab/world-model) | tutorial | education-list | resource-index | 711 | early |
+| 453 | [tsinghuac3i/awesome-memory-for-agents](https://github.com/tsinghuac3i/awesome-memory-for-agents) | tutorial | memory | resource-index | 506 | 2026-05 |
+| 454 | [tsinghuac3i/awesome-rl-for-lrms](https://github.com/tsinghuac3i/awesome-rl-for-lrms) | tutorial | education-list | resource-index | 2 | 2025-09 |
+| 455 | [tsukushiai/self-organized-agent](https://github.com/tsukushiai/self-organized-agent) | framework | framework | framework-runtime | 18 | 2026-05 |
+| 456 | [tylerdotai/meta-harness-evolver](https://github.com/tylerdotai/meta-harness-evolver) | framework | evaluation | benchmark-eval | 14 | unknown |
+| 457 | [tzussman/openevolve](https://github.com/tzussman/openevolve) | application | evolution | application-demo | 0 | 2026-05 |
+| 458 | [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | framework | framework | framework-runtime | 0 | 2026-05 |
+| 459 | [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | evaluation | memory | benchmark-eval | 43 | 2026-05 |
+| 460 | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | framework | memory | framework-runtime | 14400 | 2026-05 |
+| 461 | [ventr1c/memma](https://github.com/ventr1c/memma) | paper-code | memory | tool-module | 17 | unknown |
+| 462 | [vercel-labs/ai](https://github.com/vercel-labs/ai) | framework | framework | framework-runtime | 24 | 2026-05 |
+| 463 | [vercel-labs/skills](https://github.com/vercel-labs/skills) | tool | skill | tool-module | 19900 | 2026-05 |
+| 464 | [vercel/ai](https://github.com/vercel/ai) | framework | framework | framework-runtime | 24 | 2026-05 |
+| 465 | [vercel/workflow](https://github.com/vercel/workflow) | framework | workflow-automation | framework-runtime | 2 | 2026-04 |
+| 466 | [vicsanity623/pyob](https://github.com/vicsanity623/pyob) | evaluation | evaluation | benchmark-eval | 2 | 2026-05 |
+| 467 | [ViktorAxelsen/MemSkill](https://github.com/ViktorAxelsen/MemSkill) | paper-code | evolution | agent-evolution-infra | 484 | 2026-05 |
+| 468 | [vilmire/adhdev](https://github.com/vilmire/adhdev) | framework | framework | framework-runtime | 33 | 2026-05 |
+| 469 | [vision-intelligence-and-robots-group/best-incremental-learning](https://github.com/vision-intelligence-and-robots-group/best-incremental-learning) | tool | coding-agent | tool-module | 607 | unknown |
+| 470 | [vivy-yi/awesome-agent-orchestration](https://github.com/vivy-yi/awesome-agent-orchestration) | tutorial | framework | resource-index | 10 | 2026-05 |
+| 471 | [volcengine/openviking](https://github.com/volcengine/openviking) | tool | memory | resource-index | 24 | 2026-05 |
+| 472 | [voltagent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) | tutorial | skill | resource-index | 22900 | 2026-05 |
+| 473 | [vsonicv/es-fine-tuning-paper](https://github.com/vsonicv/es-fine-tuning-paper) | paper-code | research-agent | research-artifact | 356 | 2025-10 |
+| 474 | [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | framework | framework | framework-runtime | 987 | 2026-05 |
+| 475 | [wazionapps/nexo](https://github.com/wazionapps/nexo) | tool | memory | memory-substrate | 22 | 2026-05 |
+| 476 | [webmaxru/Agent-Skills](https://github.com/webmaxru/Agent-Skills) | tool | skill | tool-module | 29 | 2026-05 |
+| 477 | [werner-duvaud/muzero-general](https://github.com/werner-duvaud/muzero-general) | evaluation | evaluation | benchmark-eval | 2 | 2026-05 |
+| 478 | [workofart/selfplay-tictactoe](https://github.com/workofart/selfplay-tictactoe) | evaluation | evaluation | benchmark-eval | 0 | early |
+| 479 | [wuxingyu-ai/llm4ec](https://github.com/wuxingyu-ai/llm4ec) | tutorial | evolution | resource-index | 139 | 2026-05 |
+| 480 | [wzdnzd/harvester](https://github.com/wzdnzd/harvester) | framework | framework | framework-runtime | 546 | 2026-05 |
+| 481 | [x1aox1a/word2world](https://github.com/x1aox1a/word2world) | evaluation | evaluation | benchmark-eval | 62 | 2026-05 |
+| 482 | [xai-liacs/llamea](https://github.com/xai-liacs/llamea) | evaluation | evaluation | benchmark-eval | 105 | 2026-05 |
+| 483 | [xanther-ai/xce-benchmarks](https://github.com/xanther-ai/xce-benchmarks) | evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
+| 484 | [xialeiliu/awesome-incremental-learning](https://github.com/xialeiliu/awesome-incremental-learning) | tutorial | education-list | resource-index | 4 | unknown |
+| 485 | [xiaofangxd/llm/ea](https://github.com/xiaofangxd/llm/ea) | application | evolution | application-demo | 23 | 2026-05 |
+| 486 | [xinhuagu/aceclaw](https://github.com/xinhuagu/aceclaw) | framework | evaluation | framework-runtime | 4 | 2026-05 |
+| 487 | [xizaoqu/worldmem](https://github.com/xizaoqu/worldmem) | evaluation | memory | benchmark-eval | 359 | 2025-11 |
+| 488 | [xlang-ai/OSWorld](https://github.com/xlang-ai/OSWorld) | evaluation | evaluation | benchmark-eval | 2900 | 2026-05 |
+| 489 | [xmudeeplit/awesome-self-evolving-agents](https://github.com/xmudeeplit/awesome-self-evolving-agents) | tool | evolution | resource-index | 181 | 2026-05 |
+| 490 | [xuchen-li/llm-arxiv-daily](https://github.com/xuchen-li/llm-arxiv-daily) | tutorial | evaluation | resource-index | 144 | 2026-05 |
+| 491 | [yang1999code/controllable-agent](https://github.com/yang1999code/controllable-agent) | framework | evaluation | framework-runtime | 105 | 2026-05 |
+| 492 | [yennning/awesome-code-as-agent-harness-papers](https://github.com/yennning/awesome-code-as-agent-harness-papers) | tutorial | education-list | resource-index | 123 | unknown |
+| 493 | [yf-he/EvoTest](https://github.com/yf-he/EvoTest) | paper-code | evolution | agent-evolution-infra | 19 | 2026-05 |
+| 494 | [yinbo0927/fate](https://github.com/yinbo0927/fate) | evaluation | evolution | benchmark-eval | 16 | unknown |
+| 495 | [yingchengyang/reinforcement-learning-papers](https://github.com/yingchengyang/reinforcement-learning-papers) | tutorial | research-agent | resource-index | 569 | unknown |
+| 496 | [ynulihao/AgentSkillOS](https://github.com/ynulihao/AgentSkillOS) | tool | skill | skill-orchestration | 415 | 2026-05 |
+| 497 | [yologdev/yoyo-evolve](https://github.com/yologdev/yoyo-evolve) | application | evolution | tool-module | 1 | 2026-05 |
+| 498 | [yonkoo11/hermes-dojo](https://github.com/yonkoo11/hermes-dojo) | application | evolution | tool-module | 72 | 2026-05 |
+| 499 | [youngdubbydu/llm-agent-optimization](https://github.com/youngdubbydu/llm-agent-optimization) | tutorial | education-list | resource-index | 231 | 2026-05 |
+| 500 | [YunjueTech/Yunjue-Agent](https://github.com/YunjueTech/Yunjue-Agent) | paper-code | evolution | agent-evolution-infra | 426 | 2026-02 |
+| 501 | [yxf203/awesome-efficient-agents](https://github.com/yxf203/awesome-efficient-agents) | tutorial | memory | resource-index | 250 | 2026-05 |
+| 502 | [yyyujintang/Awesome-Agent-Memory-Papers](https://github.com/yyyujintang/Awesome-Agent-Memory-Papers) | tutorial | memory | resource-index | 0 | 2026-05 |
+| 503 | [zaixizhang/stella](https://github.com/zaixizhang/stella) | application | evaluation | benchmark-eval | 141 | 2026-05 |
+| 504 | [zanwenfu/auto-code-rover](https://github.com/zanwenfu/auto-code-rover) | evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
+| 505 | [zazencodes/zazencodes-season-3](https://github.com/zazencodes/zazencodes-season-3) | framework | framework | framework-runtime | 4 | 2026-05 |
+| 506 | [zbinxp/deer-flow](https://github.com/zbinxp/deer-flow) | evaluation | memory | benchmark-eval | 0 | 2026-02 |
+| 507 | [zed-industries/zed](https://github.com/zed-industries/zed) | evaluation | evaluation | benchmark-eval | 83 | 2026-05 |
+| 508 | [zesearch/self-improvement-llm](https://github.com/zesearch/self-improvement-llm) | application | evolution | application-demo | 13 | 2026-05 |
+| 509 | [zhang677/accelopt](https://github.com/zhang677/accelopt) | paper-code | evaluation | benchmark-eval | 43 | unknown |
+| 510 | [zhangfengcdt/memoir](https://github.com/zhangfengcdt/memoir) | tool | memory | memory-substrate | 549 | 2026-05 |
+| 511 | [zhangyiqun018/agent-for-debate](https://github.com/zhangyiqun018/agent-for-debate) | framework | framework | framework-runtime | 38 | 2026-01 |
+| 512 | [zhentingwang/dump](https://github.com/zhentingwang/dump) | evaluation | evaluation | benchmark-eval | 33 | 2026-05 |
+| 513 | [zhihaopeng-cityu/awesome-self-evolving-ai-for-agentic-healthcare](https://github.com/zhihaopeng-cityu/awesome-self-evolving-ai-for-agentic-healthcare) | tool | evolution | resource-index | 11 | unknown |
+| 514 | [zhonghaojiang/awesome-issue-solving](https://github.com/zhonghaojiang/awesome-issue-solving) | tutorial | evaluation | resource-index | 9 | 2026-01 |
+| 515 | [zijian-ni/awesome-ai-agents-2026](https://github.com/zijian-ni/awesome-ai-agents-2026) | tutorial | education-list | resource-index | 81 | unknown |
+| 516 | [zilliztech/memsearch](https://github.com/zilliztech/memsearch) | tool | memory | tool-module | 1800 | 2026-05 |
+| 517 | [zixuanfeng-nyu/textgrad](https://github.com/zixuanfeng-nyu/textgrad) | evaluation | evaluation | benchmark-eval | 0 | 2026-05 |
+| 518 | [zjunlp/knowself](https://github.com/zjunlp/knowself) | evaluation | evaluation | benchmark-eval | 93 | 2024-Q3 |
+| 519 | [zjunlp/worldmind](https://github.com/zjunlp/worldmind) | evaluation | evaluation | benchmark-eval | 35 | 2026-05 |
+| 520 | [zoe-yyx/agentnet](https://github.com/zoe-yyx/agentnet) | framework | evolution | framework-runtime | 46 | 2025-04 |
+| 521 | [zou-group/sirius](https://github.com/zou-group/sirius) | application | framework | framework-runtime | 101 | 2026-05 |
+| 522 | [zou-group/textgrad](https://github.com/zou-group/textgrad) | evaluation | evaluation | benchmark-eval | 3 | 2026-05 |
+| 523 | [zylos-ai/zylos-core](https://github.com/zylos-ai/zylos-core) | framework | evolution | framework-runtime | 1400 | 2026-05 |
+| 524 | [zzz47zzz/awesome-lifelong-learning-methods-for-llm](https://github.com/zzz47zzz/awesome-lifelong-learning-methods-for-llm) | tutorial | education-list | resource-index | 162 | unknown |
 
 </details>
 
@@ -1092,7 +1102,7 @@ These lists are embedded directly in README so readers can copy, search, and com
 <details>
 <summary>Full benchmark / evaluation related repository list (173)</summary>
 
-| # | Repository | Category | Theme | Function tag | benchmark-eval 123, framework-runtime 120, resource-index 107, tool-module 94, application-demo 29, research-artifact 20, agent-evolution-infra 11, memory-substrate 10, memory-runtime 1, research-agent-pipeline 1, skill-orchestration 1 | Functional role: benchmark and runtime remain the two strongest public evidence surfaces. |
+| # | Repository | Category | Theme | Function tag | benchmark-eval 124, framework-runtime 123, resource-index 107, tool-module 95, application-demo 29, research-artifact 20, agent-evolution-infra 11, memory-substrate 10, research-agent-pipeline 2, skill-orchestration 2, memory-runtime 1 | Functional role: benchmark and runtime remain the two strongest public evidence surfaces. |
 |---:|---|---|---|---|---:|---|
 | 1 | [0xsanei/darwinia](https://github.com/0xsanei/darwinia) | framework | evolution | benchmark-eval | 102 | 2026-05 |
 | 2 | [a-evo-lab/a-evolve](https://github.com/a-evo-lab/a-evolve) | paper-code | evolution | agent-evolution-infra | 552 | 2026-05 |
