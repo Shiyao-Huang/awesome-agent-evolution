@@ -345,24 +345,29 @@ Key papers: HexMachina (artifact-centric strategy), STaR-SQL (reasoning-driven S
 
 Primarily in: web/tool agents, curriculum/self-play, agent frameworks, skill/knowledge systems. These clusters are lower mechanism density but contain important practical patterns (WebRL, EvoAgentX, GEPA, SEAgent).
 
-### 5.2 Unreviewed Papers (12 raw-papers with no review)
+### 5.2 Unreviewed Papers — Deep-Read Results (12 raw-papers)
 
-| Paper | Title | Mechanism Gap |
-|-------|-------|---------------|
-| 2401.10510 | LLM + Evolutionary Algorithms | EC×LLM intersection survey |
-| 2404.14387 | Survey on Self-Evolution of LLMs | Competing survey — comparison needed |
-| 2503.12434 | Survey on Optimization of LLM Agents | Agent optimization landscape |
-| 2505.15741 | EC + LLM Survey | EC methods for LLM improvement |
-| 2602.04837 | Group-Evolving Agents | Open-ended self-improvement via experience sharing |
-| 2602.05810 | Bifrost | Strategic trajectory steering for self-improvement |
-| 2602.09877 | Devil Behind Moltbook | Safety in self-evolving AI societies |
-| 2603.02766 | EvoSkill | Automated skill discovery for MAS |
-| 2604.08988 | SEA-Eval | Benchmark for self-evolving agents |
-| 2604.14972 | SAGER | Self-evolving recommendation agent |
-| 2604.27264 | Self-Evolving Software Agents | Software agent evolution concept |
-| 2605.18421 | EvoMemBench | Memory benchmarking for self-evolving |
+All 12 papers without reviews have been deep-read for mechanisms:
 
-**Priority reads**: 2404.14387 (competing survey), 2602.04837 (group evolution), 2604.08988 (evaluation benchmark), 2602.09877 (safety).
+| Paper | Title | Core Mechanism | Key Novel Insight |
+|-------|-------|---------------|-------------------|
+| 2401.10510 | LLM + Evolutionary Algorithms | Bidirectional LLM↔EA mapping (selection~RLHF, crossover~instruction-tuning, mutation~sampling) | Unified vocabulary: prompt/program/agent evolution are instantiations of same evolutionary loop |
+| 2404.14387 | Survey on Self-Evolution of LLMs | Four-phase cycle (acquire→refine→update→evaluate) + 3 autonomy levels (Low/Medium/High) | Most "self-evolving" systems are Low-autonomy; genuine High-autonomy evolution unsolved |
+| 2503.12434 | Survey on Agent Optimization | Parameter-driven vs parameter-free optimization dichotomy | Parameter-free routes (prompt/retrieval) easier to make autonomous than fine-tuning/RL |
+| 2505.15741 | EC + LLM Survey | LLM-as-search-operator in semantic space (vs syntactic EA operators) | LLM variation fundamentally changes exploration-exploitation dynamics |
+| 2602.04837 | Group-Evolving Agents | Tree-structured group selection with shared knowledge bases | Group-level selection preserves complementary skill sets better than individual selection |
+| 2602.05810 | Bifrost | Strategic trajectory steering with BDI structure | Evolving strategic priors > evolving actions — more sample-efficient in long-horizon tasks |
+| 2602.09877 | Devil Behind Moltbook | Critical analysis of hidden pathologies in self-evolving systems | Self-evolution's improvement mechanisms also enable undetectable regression |
+| 2603.02766 | EvoSkill | Pareto-frontier skill discovery with frozen model | Meaningful self-evolution in skill/code layer without any parameter updates |
+| 2604.08988 | SEA-Eval | Dedicated benchmark for self-evolving agents | Field lacks shared evaluation standard — claims of "self-improvement" are incomparable |
+| 2604.14972 | SAGER | User policy skill evolution via deployment experience | User-facing policies create multi-objective evolution (task success vs user satisfaction) |
+| 2604.27264 | Self-Evolving Software Agents | "Evolutionary Flywheel": observe→diagnose→modify→validate | Minimal viable self-evolution loop; simpler and more actionable than prior frameworks |
+| 2605.18421 | EvoMemBench | Memory benchmark targeting retention, forgetting, retrieval, integration | Memory is the hidden bottleneck; different evolution targets need different memory architectures |
+
+**Three recurring themes from unreviewed papers**:
+1. **Frozen-model evolution** (EvoSkill, SAGER, Self-Evolving SA): Self-improvement can occur entirely in code/skill/policy layer without parameter updates
+2. **Evaluation gap** (SEA-Eval, EvoMemBench, Devil Behind Moltbook): Field urgently needs shared benchmarks and critical analysis
+3. **Group/structure-level evolution** (Group-Evolving Agents, Bifrost): Evolutionary units above the individual agent may be more effective
 
 ---
 
