@@ -85,3 +85,28 @@
 **信任链:** 所有声明标注[KNOWN]/[INFERRED]/[UNVERIFIED]，arXiv ID可追溯
 **Rank:** ⬤⬤⬤⬤
 **矛盾/更新:** 无矛盾。F1-F7与Architect的M1-M5互补（论文视角 vs 框架视角）
+
+## [2026-05-26 ~14:30] ingest | work/research/ → wiki/sources/ Migration
+
+**操作:** Implementer (cmplze8ih4nd9) 将 work/research/ 内容研究文件迁移为 wiki source 页
+**详情:**
+8个研究文件创建对应wiki source页（结构化摘要+交叉引用+信任链）：
+
+| Research File | Wiki Source Page | Rank |
+|---|---|---|
+| ai-talent-flow-analysis.md | sources/talent-flow-analysis.md | A |
+| anthropic-talent-movement.md | sources/anthropic-talent-movement.md | A |
+| china-self-evolution-teams.md | sources/china-self-evolution-teams.md | A |
+| combined-talent-landscape.md | sources/combined-talent-landscape.md | A |
+| material-ranking-framework.md | sources/material-ranking-framework.md | A |
+| review-mechanism-insights.md | sources/review-mechanism-insights.md | A |
+| talent-capital-structure.md | sources/talent-capital-structure.md | A |
+| paper-undercoverage-followup-*.md | sources/paper-undercoverage-followup.md | B |
+
+已存在wiki映射（无需新建）:
+- raw-github-mechanisms.md → sources/raw-github-mechanism-analysis.md ✅
+- papers-mechanism-analysis.md → sources/raw-papers-mechanism-analysis.md ✅
+- mechanism-analysis-framework.md → synthesis/mechanism-framework.md ✅
+
+**Index更新:** sources 3→11, index.md 更新完成
+**交叉引用:** 每个 source 页链接到相关 concept/synthesis 页 + 原始 research 文件

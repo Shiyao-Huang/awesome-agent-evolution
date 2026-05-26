@@ -8,6 +8,14 @@
 _People, organizations, projects, products_
 
 <!-- entities auto-indexed here -->
+- [Anthropic](entities/anthropic.md) — LLM→Agent转型, SICA论文, Karpathy加入, Claude Code, talent hub | Rank: A | 2026-05-26
+- [Google DeepMind](entities/google-deepmind.md) — AlphaEvolve/FunSearch/OpenELM, code-agent, search-evolution | Rank: A | 2026-05-26
+- [Jeff Clune](entities/jeff-clune.md) — UBC/Vector/Recursive, ADAS/AI-Scientist/open-ended evolution pioneer | Rank: A | 2026-05-26
+- [Meta FAIR](entities/meta-fair.md) — Self-improving agents/Hyperagents, MSL 44-person team | Rank: A | 2026-05-26
+- [Noah Shinn](entities/noah-shinn.md) — Reflexion author, Northeastern→Sierra→Meta, academic-to-industry | Rank: B | 2026-05-26
+- [OpenAI](entities/openai.md) — Code-agent/Codex, talent source/net exporter, self-evolution products | Rank: A | 2026-05-26
+- [Sakana AI](entities/sakana-ai.md) — DGM/AI-Scientist, Japan startup, academic bridge, $200M+ funding | Rank: A | 2026-05-26
+- [Shengran Hu](entities/shengran-hu.md) — UCSD, ADAS first author, M1 mechanism search, high-order ADAS | Rank: A | 2026-05-26
 
 ## Concepts
 
@@ -32,6 +40,17 @@ _Processed raw sources with extracted insights_
 - [Employee Social Intelligence](sources/employee-social-intelligence.md) — X/Twitter, LinkedIn, GitHub signals from self-evolution researchers; Meta MSL 44-person list; Recursive startup; Karpathy→Anthropic move | Rank: A | 2026-05-26
 - [Raw-GitHub Mechanism Analysis](sources/raw-github-mechanism-analysis.md) — 365 project deep-dive: 7-class taxonomy, 15 case studies, 5 structural factors for TRUE self-evolution; ~12% genuine evolution rate | Rank: A | 2026-05-26
 - [Raw-Papers Mechanism Analysis](sources/raw-papers-mechanism-analysis.md) — 128论文深挖: 7机制族F1-F7, Top-10论文, 5引用谱系, T1-T4证据分级, 效果/实现分类 | Rank: A | 2026-05-26
+- [Talent Flow Analysis](sources/talent-flow-analysis.md) — 2024-2026 人才流动: Meta虹吸, Anthropic净流入, 中国4高校集群 | Rank: A | 2026-05-26
+- [Anthropic Talent Movement](sources/anthropic-talent-movement.md) — Anthropic LLM→Agent转型, SICA论文, Karpathy加入, HBS案例 | Rank: A | 2026-05-26
+- [China Self-Evolution Teams](sources/china-self-evolution-teams.md) — 4高校集群 + 2产业力量 + CAICT标准, 学术界驱动模式 | Rank: A | 2026-05-26
+- [Combined Talent Landscape](sources/combined-talent-landscape.md) — 三维整合(论文×工程×人才) Top-5机构评分 | Rank: A | 2026-05-26
+- [Material Ranking Framework](sources/material-ranking-framework.md) — 统一6套分类系统→四维评分, 137 reviews + 527 repos + 196 papers | Rank: A | 2026-05-26
+- [Review Mechanism Insights](sources/review-mechanism-insights.md) — 137评审深读6机制洞察: 评估瓶颈/非单调/代码通用/知识构建/验证不可变/协议收敛 | Rank: A | 2026-05-26
+- [Talent Capital Structure](sources/talent-capital-structure.md) — 极端金字塔: <50 L4研究者, $852B OpenAI + $900B Anthropic资本集中 | Rank: A | 2026-05-26
+- [Paper Undercoverage Follow-up](sources/paper-undercoverage-followup.md) — 补充8篇2026论文: EvoMemBench/SEA-Eval/Group-Evolving/Safety degradation | Rank: B | 2026-05-26
+- [Blogs Brainstorm](sources/blogs-brainstorm.md) — 20 blog entries × industry insights: evaluation gap/memory evolution/self-modification safety | Rank: V1 | 2026-05-26
+- [Cross-Pollination](sources/cross-pollination.md) — Papers×Blogs×Reviews交叉: 13 clusters from evaluation-production gap to verification arms race | Rank: V1 | 2026-05-26
+- [Papers Brainstorm](sources/papers-brainstorm.md) — 12 high-value papers × creative insights: 3 evolution channels/diversity dilemma/evaluator bottleneck | Rank: V1 | 2026-05-26
 
 ## Synthesis
 
@@ -47,8 +66,8 @@ _Cross-cutting analyses, comparisons, evolving theses_
 
 | Metric | Count |
 |--------|-------|
-| Entities | 0 |
+| Entities | 8 |
 | Concepts | 9 |
-| Sources | 3 |
+| Sources | 14 |
 | Synthesis pages | 2 |
 | Last updated | 2026-05-26 |

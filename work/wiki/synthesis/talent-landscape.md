@@ -38,6 +38,14 @@ updated: 2026-05-26
 - **AI Agent market**: $5.25B (2024) → $7.84B (2025), 48% of VC — Source: [Crunchbase](https://news.crunchbase.com/ai/autonomous-agents-top-seed-trend-2025/), [CB Insights](https://www.cbinsights.com/research/report/ai-trends-2025/)
 - **Structural gap**: Application-layer agents valued at $29B (Cursor), self-evolution infrastructure only $2.65B (Sakana)
 
+## Related Source Pages
+
+- → [sources/talent-flow-analysis.md](../sources/talent-flow-analysis.md) — flow network diagram
+- → [sources/anthropic-talent-movement.md](../sources/anthropic-talent-movement.md) — Anthropic deep-dive
+- → [sources/china-self-evolution-teams.md](../sources/china-self-evolution-teams.md) — China ecosystem
+- → [sources/combined-talent-landscape.md](../sources/combined-talent-landscape.md) — 3D matrix
+- → [sources/talent-capital-structure.md](../sources/talent-capital-structure.md) — capital pyramid
+
 ## 4. Talent Pipeline
 
 | University | Direction | Key Person | Mechanism |
