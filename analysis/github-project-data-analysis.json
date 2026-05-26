@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-26T02:51:23.576Z",
+  "generated_at": "2026-05-26T08:32:25.900Z",
   "counts": {
-    "raw_captures": 527,
-    "raw_files_on_disk": 527,
-    "classified_repos": 527,
-    "analyzed_projects": 117,
-    "analyzed_in_raw_timestamp_index": 64,
-    "analyzed_in_classification": 64,
+    "raw_captures": 530,
+    "raw_files_on_disk": 530,
+    "classified_repos": 530,
+    "analyzed_projects": 119,
+    "analyzed_in_raw_timestamp_index": 67,
+    "analyzed_in_classification": 67,
     "analyzed_evolution_focused": 56,
-    "analyzed_with_created_at_or_fallback": 80,
+    "analyzed_with_created_at_or_fallback": 79,
     "analyzed_with_github_api_metadata": 25,
-    "analyzed_with_local_git_mirror": 77,
-    "analyzed_with_public_report": 87,
+    "analyzed_with_local_git_mirror": 76,
+    "analyzed_with_public_report": 90,
     "raw_core_evolution": 82,
     "raw_broad_evolution": 186,
     "raw_unknown_time_slice": 109
@@ -23,7 +23,7 @@
     },
     {
       "key": "评测/evaluation",
-      "count": 105
+      "count": 106
     },
     {
       "key": "教程/tutorial",
@@ -31,7 +31,7 @@
     },
     {
       "key": "工具/tool",
-      "count": 94
+      "count": 96
     },
     {
       "key": "应用/application",
@@ -49,11 +49,11 @@
   "raw_theme_counts": [
     {
       "key": "memory",
-      "count": 104
+      "count": 105
     },
     {
       "key": "evaluation",
-      "count": 95
+      "count": 96
     },
     {
       "key": "evolution",
@@ -61,7 +61,7 @@
     },
     {
       "key": "skill",
-      "count": 69
+      "count": 70
     },
     {
       "key": "framework",
@@ -99,11 +99,11 @@
     },
     {
       "key": "Python",
-      "count": 183
+      "count": 185
     },
     {
       "key": "TypeScript",
-      "count": 19
+      "count": 20
     },
     {
       "key": "Unknown",
@@ -433,7 +433,7 @@
   "raw_time_slice_counts": [
     {
       "key": "2026-05",
-      "count": 366
+      "count": 369
     },
     {
       "key": "unknown",
@@ -511,11 +511,11 @@
   "analyzed_theme_counts": [
     {
       "key": "not-classified",
-      "count": 53
+      "count": 52
     },
     {
       "key": "evaluation",
-      "count": 12
+      "count": 13
     },
     {
       "key": "evolution",
@@ -527,11 +527,11 @@
     },
     {
       "key": "memory",
-      "count": 9
+      "count": 10
     },
     {
       "key": "skill",
-      "count": 9
+      "count": 10
     },
     {
       "key": "education-list",
@@ -553,11 +553,11 @@
   "analyzed_created_month_counts": [
     {
       "key": "unknown",
-      "count": 37
+      "count": 40
     },
     {
       "key": "2026-05",
-      "count": 27
+      "count": 26
     },
     {
       "key": "2026-03",
@@ -3930,6 +3930,21 @@
       "description": "A Collection on Large Language Models for Optimization"
     },
     {
+      "repo": "flagos-ai/skills",
+      "url": "https://github.com/flagos-ai/skills",
+      "stars": "12",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 12 stars, 11 forks, 69 commits, Apache-2.0 license, and README claims for an open AI-agent skills registry plus package format",
+      "description": "FlagoS skills provides an open registry and package format for reusable AI-agent skills."
+    },
+    {
       "repo": "flowersteam/teachmyagent",
       "url": "https://github.com/flowersteam/teachmyagent",
       "stars": "77",
@@ -4723,6 +4738,21 @@
       "content_timestamp": "unknown",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "Pre-trained, Scalable, High-performance Reward Models via Policy Discriminative Learning."
+    },
+    {
+      "repo": "InternLM/WildClawBench",
+      "url": "https://github.com/InternLM/WildClawBench",
+      "stars": "408",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 408 stars, 37 forks, 10 commits, MIT license, and README claims of authentic real-world multi-turn dynamic benchmark tasks with anti-overfitting design for agent evaluation",
+      "description": "WildClawBench is an authentic benchmark for LLM agents with real-world-style multi-turn dynamic tasks and anti-overfitting design."
     },
     {
       "repo": "internscience/internagent",
@@ -8203,6 +8233,21 @@
       "content_timestamp": "2026-05-26",
       "evidence": "web-observed GitHub page showed 102 stars, 11 forks, 23 commits, and README language for Codex-first benchmark loops, proposal/evaluate/keep harness iterations, candidate ledgers, write-scope controls, and experiment matrix support.",
       "description": "Meta Harness is a benchmark-driven outer loop for coding-agent harness optimization, with reproducible candidate ledgers and run evidence."
+    },
+    {
+      "repo": "supermemoryai/supermemory",
+      "url": "https://github.com/supermemoryai/supermemory",
+      "stars": "22700",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 22.7k stars, 2.1k forks, 1,632 commits, MIT license, and README claims for open-source AI memory infrastructure with indexing, retrieval, and benchmark-ready memory workflows",
+      "description": "Supermemory is an open-source AI memory infrastructure that turns chat and browser context into persistent retrieval memory."
     },
     {
       "repo": "suyoumo/ClawProBench",
@@ -17407,50 +17452,44 @@
       "evolution_focused": false
     },
     {
-      "name": "wildclawbench",
+      "name": "WildClawBench",
       "repo": "InternLM/WildClawBench",
       "normalized_repo": "internlm/wildclawbench",
       "url": "https://github.com/InternLM/WildClawBench",
       "category": "Agent 评测基准",
-      "pattern": "真实任务 → 端到端评估 → 无人工干预",
+      "pattern": "真实场景任务 -> 多轮动态交互 -> anti-overfitting 设计 -> 端到端评分 -> agent 能力画像",
       "tags": [
         "评测基准",
         "真实任务",
-        "端到端"
+        "multi-turn",
+        "anti-overfitting"
       ],
-      "site_stars": 500,
-      "site_forks": "50",
-      "license": "Apache-2.0",
-      "lastPushed": "2026-02-01T00:00:00Z",
-      "localPath": "repos/internlm__wildclawbench",
-      "local_git": {
-        "path": "repos/internlm__wildclawbench",
-        "first_commit_at": "2026-05-19T19:35:24+08:00",
-        "last_commit_at": "2026-05-19T19:35:24+08:00",
-        "commit_count": 1,
-        "branch": "main",
-        "head": "86d7144"
-      },
-      "report": "research/projects/71-wildclawbench-agent-benchmark.md",
-      "public_report": "site/public/reports/research/projects/71-wildclawbench-agent-benchmark.md",
-      "public_report_exists": false,
-      "created_at": "2026-05-19T19:35:24+08:00",
-      "created_at_source": "local_git_first_commit",
+      "site_stars": 408,
+      "site_forks": "37",
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/internlm_wildclawbench.md",
+      "local_git": null,
+      "report": "projects/245-wildclawbench-authentic-real-world-agent-benchmark.md",
+      "public_report": "site/public/reports/projects/245-wildclawbench-authentic-real-world-agent-benchmark.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_403",
       "github_source": "github_api_403",
       "github_api_stars": null,
       "github_api_forks": null,
       "github_pushed_at": null,
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
-      "in_classification": false,
-      "classification_category": null,
-      "classification_function_tag": null,
-      "classification_evidence": null,
-      "raw_time_slice": "unknown",
-      "classified_theme": "not-classified",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/internlm_wildclawbench.md",
+      "raw_collected_at": "2026-05-26T15:57:27+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 408 stars, 37 forks, 10 commits, MIT license, and README claims of authentic real-world multi-turn dynamic benchmark tasks with anti-overfitting design for agent evaluation",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
       "evolution_focused": false
     },
     {
@@ -18985,6 +19024,92 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
       "evolution_focused": true
+    },
+    {
+      "name": "Supermemory",
+      "repo": "supermemoryai/supermemory",
+      "normalized_repo": "supermemoryai/supermemory",
+      "url": "https://github.com/supermemoryai/supermemory",
+      "category": "Open AI Memory Infrastructure",
+      "pattern": "chat/browser context ingest -> memory indexing -> retrieval scoring -> personalization -> downstream agent loop reuse",
+      "tags": [
+        "memory substrate",
+        "retrieval",
+        "personalization",
+        "agent memory",
+        "infra"
+      ],
+      "site_stars": 22700,
+      "site_forks": 2100,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/supermemoryai_supermemory.md",
+      "local_git": null,
+      "report": "projects/246-supermemory-open-memory-infrastructure.md",
+      "public_report": "site/public/reports/projects/246-supermemory-open-memory-infrastructure.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/supermemoryai_supermemory.md",
+      "raw_collected_at": "2026-05-26T15:57:27+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web-observed GitHub page showed 22.7k stars, 2.1k forks, 1,632 commits, MIT license, and README claims for open-source AI memory infrastructure with indexing, retrieval, and benchmark-ready memory workflows",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "FlagoS Skills",
+      "repo": "flagos-ai/skills",
+      "normalized_repo": "flagos-ai/skills",
+      "url": "https://github.com/flagos-ai/skills",
+      "category": "Open Agent Skill Registry",
+      "pattern": "skill package spec -> registry publishing -> install hooks -> versioning -> cross-agent reuse",
+      "tags": [
+        "skills",
+        "registry",
+        "package format",
+        "agent tooling",
+        "reuse"
+      ],
+      "site_stars": 12,
+      "site_forks": 11,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/flagos-ai_skills.md",
+      "local_git": null,
+      "report": "projects/247-flagos-skills-open-agent-skill-registry.md",
+      "public_report": "site/public/reports/projects/247-flagos-skills-open-agent-skill-registry.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/flagos-ai_skills.md",
+      "raw_collected_at": "2026-05-26T15:57:27+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "skill-orchestration",
+      "classification_evidence": "web-observed GitHub page showed 12 stars, 11 forks, 69 commits, Apache-2.0 license, and README claims for an open AI-agent skills registry plus package format",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
     }
   ],
   "analyzed_git_evidence": [
@@ -19789,6 +19914,49 @@
       "raw_time_slice": "unknown",
       "classified_theme": "not-classified",
       "evolution_focused": true
+    },
+    {
+      "name": "Supermemory",
+      "repo": "supermemoryai/supermemory",
+      "normalized_repo": "supermemoryai/supermemory",
+      "url": "https://github.com/supermemoryai/supermemory",
+      "category": "Open AI Memory Infrastructure",
+      "pattern": "chat/browser context ingest -> memory indexing -> retrieval scoring -> personalization -> downstream agent loop reuse",
+      "tags": [
+        "memory substrate",
+        "retrieval",
+        "personalization",
+        "agent memory",
+        "infra"
+      ],
+      "site_stars": 22700,
+      "site_forks": 2100,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/supermemoryai_supermemory.md",
+      "local_git": null,
+      "report": "projects/246-supermemory-open-memory-infrastructure.md",
+      "public_report": "site/public/reports/projects/246-supermemory-open-memory-infrastructure.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/supermemoryai_supermemory.md",
+      "raw_collected_at": "2026-05-26T15:57:27+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web-observed GitHub page showed 22.7k stars, 2.1k forks, 1,632 commits, MIT license, and README claims for open-source AI memory infrastructure with indexing, retrieval, and benchmark-ready memory workflows",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
     },
     {
       "name": "litellm",
@@ -22378,53 +22546,6 @@
       "evolution_focused": true
     },
     {
-      "name": "wildclawbench",
-      "repo": "InternLM/WildClawBench",
-      "normalized_repo": "internlm/wildclawbench",
-      "url": "https://github.com/InternLM/WildClawBench",
-      "category": "Agent 评测基准",
-      "pattern": "真实任务 → 端到端评估 → 无人工干预",
-      "tags": [
-        "评测基准",
-        "真实任务",
-        "端到端"
-      ],
-      "site_stars": 500,
-      "site_forks": "50",
-      "license": "Apache-2.0",
-      "lastPushed": "2026-02-01T00:00:00Z",
-      "localPath": "repos/internlm__wildclawbench",
-      "local_git": {
-        "path": "repos/internlm__wildclawbench",
-        "first_commit_at": "2026-05-19T19:35:24+08:00",
-        "last_commit_at": "2026-05-19T19:35:24+08:00",
-        "commit_count": 1,
-        "branch": "main",
-        "head": "86d7144"
-      },
-      "report": "research/projects/71-wildclawbench-agent-benchmark.md",
-      "public_report": "site/public/reports/research/projects/71-wildclawbench-agent-benchmark.md",
-      "public_report_exists": false,
-      "created_at": "2026-05-19T19:35:24+08:00",
-      "created_at_source": "local_git_first_commit",
-      "github_source": "github_api_403",
-      "github_api_stars": null,
-      "github_api_forks": null,
-      "github_pushed_at": null,
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
-      "in_classification": false,
-      "classification_category": null,
-      "classification_function_tag": null,
-      "classification_evidence": null,
-      "raw_time_slice": "unknown",
-      "classified_theme": "not-classified",
-      "evolution_focused": false
-    },
-    {
       "name": "LLM-Agent-Optimization",
       "repo": "YoungDubbyDu/LLM-Agent-Optimization",
       "normalized_repo": "youngdubbydu/llm-agent-optimization",
@@ -22681,6 +22802,47 @@
       "classification_evidence": "web-observed GitHub page showed 412 stars, 58 forks, 4 commits, Apache-2.0 license, Jupyter Notebook/Python/Mermaid stack, 30 runnable notebooks, six memory families, LoCoMo and LongMemEval benchmark coverage, and explicit warnings that the code is educational rather than production-ready; shell GitHub API freshness was blocked.",
       "raw_time_slice": "2026-05",
       "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
+      "name": "WildClawBench",
+      "repo": "InternLM/WildClawBench",
+      "normalized_repo": "internlm/wildclawbench",
+      "url": "https://github.com/InternLM/WildClawBench",
+      "category": "Agent 评测基准",
+      "pattern": "真实场景任务 -> 多轮动态交互 -> anti-overfitting 设计 -> 端到端评分 -> agent 能力画像",
+      "tags": [
+        "评测基准",
+        "真实任务",
+        "multi-turn",
+        "anti-overfitting"
+      ],
+      "site_stars": 408,
+      "site_forks": "37",
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/internlm_wildclawbench.md",
+      "local_git": null,
+      "report": "projects/245-wildclawbench-authentic-real-world-agent-benchmark.md",
+      "public_report": "site/public/reports/projects/245-wildclawbench-authentic-real-world-agent-benchmark.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_403",
+      "github_source": "github_api_403",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/internlm_wildclawbench.md",
+      "raw_collected_at": "2026-05-26T15:57:27+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 408 stars, 37 forks, 10 commits, MIT license, and README claims of authentic real-world multi-turn dynamic benchmark tasks with anti-overfitting design for agent evaluation",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
       "evolution_focused": false
     },
     {
@@ -23973,6 +24135,49 @@
       "classification_category": "工具/tool",
       "classification_function_tag": "resource-index",
       "classification_evidence": "web GitHub page observed 61 commits, MIT license, Shell stack, v4.0.3 release on May 16 2026, 13 stars and 3 forks; README describes portable behavioral skills for Claude Code, Codex, Cursor, Gemini CLI, OpenCode, OpenClaw, and related coding agents",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
+      "name": "FlagoS Skills",
+      "repo": "flagos-ai/skills",
+      "normalized_repo": "flagos-ai/skills",
+      "url": "https://github.com/flagos-ai/skills",
+      "category": "Open Agent Skill Registry",
+      "pattern": "skill package spec -> registry publishing -> install hooks -> versioning -> cross-agent reuse",
+      "tags": [
+        "skills",
+        "registry",
+        "package format",
+        "agent tooling",
+        "reuse"
+      ],
+      "site_stars": 12,
+      "site_forks": 11,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/flagos-ai_skills.md",
+      "local_git": null,
+      "report": "projects/247-flagos-skills-open-agent-skill-registry.md",
+      "public_report": "site/public/reports/projects/247-flagos-skills-open-agent-skill-registry.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/flagos-ai_skills.md",
+      "raw_collected_at": "2026-05-26T15:57:27+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "skill-orchestration",
+      "classification_evidence": "web-observed GitHub page showed 12 stars, 11 forks, 69 commits, Apache-2.0 license, and README claims for an open AI-agent skills registry plus package format",
       "raw_time_slice": "2026-05",
       "classified_theme": "skill",
       "evolution_focused": false
@@ -27070,53 +27275,6 @@
       "evolution_focused": false
     },
     {
-      "name": "wildclawbench",
-      "repo": "InternLM/WildClawBench",
-      "normalized_repo": "internlm/wildclawbench",
-      "url": "https://github.com/InternLM/WildClawBench",
-      "category": "Agent 评测基准",
-      "pattern": "真实任务 → 端到端评估 → 无人工干预",
-      "tags": [
-        "评测基准",
-        "真实任务",
-        "端到端"
-      ],
-      "site_stars": 500,
-      "site_forks": "50",
-      "license": "Apache-2.0",
-      "lastPushed": "2026-02-01T00:00:00Z",
-      "localPath": "repos/internlm__wildclawbench",
-      "local_git": {
-        "path": "repos/internlm__wildclawbench",
-        "first_commit_at": "2026-05-19T19:35:24+08:00",
-        "last_commit_at": "2026-05-19T19:35:24+08:00",
-        "commit_count": 1,
-        "branch": "main",
-        "head": "86d7144"
-      },
-      "report": "research/projects/71-wildclawbench-agent-benchmark.md",
-      "public_report": "site/public/reports/research/projects/71-wildclawbench-agent-benchmark.md",
-      "public_report_exists": false,
-      "created_at": "2026-05-19T19:35:24+08:00",
-      "created_at_source": "local_git_first_commit",
-      "github_source": "github_api_403",
-      "github_api_stars": null,
-      "github_api_forks": null,
-      "github_pushed_at": null,
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
-      "in_classification": false,
-      "classification_category": null,
-      "classification_function_tag": null,
-      "classification_evidence": null,
-      "raw_time_slice": "unknown",
-      "classified_theme": "not-classified",
-      "evolution_focused": false
-    },
-    {
       "name": "flowise",
       "repo": "FlowiseAI/Flowise",
       "normalized_repo": "flowiseai/flowise",
@@ -28330,6 +28488,49 @@
       "evolution_focused": false
     },
     {
+      "name": "FlagoS Skills",
+      "repo": "flagos-ai/skills",
+      "normalized_repo": "flagos-ai/skills",
+      "url": "https://github.com/flagos-ai/skills",
+      "category": "Open Agent Skill Registry",
+      "pattern": "skill package spec -> registry publishing -> install hooks -> versioning -> cross-agent reuse",
+      "tags": [
+        "skills",
+        "registry",
+        "package format",
+        "agent tooling",
+        "reuse"
+      ],
+      "site_stars": 12,
+      "site_forks": 11,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/flagos-ai_skills.md",
+      "local_git": null,
+      "report": "projects/247-flagos-skills-open-agent-skill-registry.md",
+      "public_report": "site/public/reports/projects/247-flagos-skills-open-agent-skill-registry.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/flagos-ai_skills.md",
+      "raw_collected_at": "2026-05-26T15:57:27+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "skill-orchestration",
+      "classification_evidence": "web-observed GitHub page showed 12 stars, 11 forks, 69 commits, Apache-2.0 license, and README claims for an open AI-agent skills registry plus package format",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
       "name": "NexAgent",
       "repo": "gofenix/nex-agent",
       "normalized_repo": "gofenix/nex-agent",
@@ -28456,6 +28657,47 @@
       "classification_evidence": "web-observed GitHub page showed 116 stars, 2 forks, 41 commits, Apache-2.0 license, and README language for durable event-driven execution with retry/cancel behavior, channel adapters, skills, file-based memory, and workspace eval traces.",
       "raw_time_slice": "2026-05",
       "classified_theme": "workflow-automation",
+      "evolution_focused": false
+    },
+    {
+      "name": "WildClawBench",
+      "repo": "InternLM/WildClawBench",
+      "normalized_repo": "internlm/wildclawbench",
+      "url": "https://github.com/InternLM/WildClawBench",
+      "category": "Agent 评测基准",
+      "pattern": "真实场景任务 -> 多轮动态交互 -> anti-overfitting 设计 -> 端到端评分 -> agent 能力画像",
+      "tags": [
+        "评测基准",
+        "真实任务",
+        "multi-turn",
+        "anti-overfitting"
+      ],
+      "site_stars": 408,
+      "site_forks": "37",
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/internlm_wildclawbench.md",
+      "local_git": null,
+      "report": "projects/245-wildclawbench-authentic-real-world-agent-benchmark.md",
+      "public_report": "site/public/reports/projects/245-wildclawbench-authentic-real-world-agent-benchmark.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_403",
+      "github_source": "github_api_403",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/internlm_wildclawbench.md",
+      "raw_collected_at": "2026-05-26T15:57:27+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-eval",
+      "classification_evidence": "web-observed GitHub page showed 408 stars, 37 forks, 10 commits, MIT license, and README claims of authentic real-world multi-turn dynamic benchmark tasks with anti-overfitting design for agent evaluation",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
       "evolution_focused": false
     },
     {
@@ -29175,6 +29417,49 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
       "evolution_focused": true
+    },
+    {
+      "name": "Supermemory",
+      "repo": "supermemoryai/supermemory",
+      "normalized_repo": "supermemoryai/supermemory",
+      "url": "https://github.com/supermemoryai/supermemory",
+      "category": "Open AI Memory Infrastructure",
+      "pattern": "chat/browser context ingest -> memory indexing -> retrieval scoring -> personalization -> downstream agent loop reuse",
+      "tags": [
+        "memory substrate",
+        "retrieval",
+        "personalization",
+        "agent memory",
+        "infra"
+      ],
+      "site_stars": 22700,
+      "site_forks": 2100,
+      "license": "MIT",
+      "lastPushed": "2026-05-26T00:00:00Z",
+      "localPath": "raw-github/supermemoryai_supermemory.md",
+      "local_git": null,
+      "report": "projects/246-supermemory-open-memory-infrastructure.md",
+      "public_report": "site/public/reports/projects/246-supermemory-open-memory-infrastructure.md",
+      "public_report_exists": true,
+      "created_at": null,
+      "created_at_source": "github_api_fetch_error",
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/supermemoryai_supermemory.md",
+      "raw_collected_at": "2026-05-26T15:57:27+08:00",
+      "raw_content_timestamp": "2026-05-26",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_26",
+      "in_classification": true,
+      "classification_category": "工具/tool",
+      "classification_function_tag": "memory-substrate",
+      "classification_evidence": "web-observed GitHub page showed 22.7k stars, 2.1k forks, 1,632 commits, MIT license, and README claims for open-source AI memory infrastructure with indexing, retrieval, and benchmark-ready memory workflows",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "memory",
+      "evolution_focused": false
     },
     {
       "name": "ClawProBench",

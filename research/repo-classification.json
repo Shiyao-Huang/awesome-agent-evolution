@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T10:04:13+08:00",
+  "generated_at": "2026-05-26T16:00:59+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -2117,6 +2117,21 @@
       "description": "A Collection on Large Language Models for Optimization"
     },
     {
+      "repo": "flagos-ai/skills",
+      "url": "https://github.com/flagos-ai/skills",
+      "stars": "12",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 12 stars, 11 forks, 69 commits, Apache-2.0 license, and README claims for an open AI-agent skills registry plus package format",
+      "description": "FlagoS skills provides an open registry and package format for reusable AI-agent skills."
+    },
+    {
       "repo": "flowersteam/teachmyagent",
       "url": "https://github.com/flowersteam/teachmyagent",
       "stars": "77",
@@ -2910,6 +2925,21 @@
       "content_timestamp": "unknown",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "Pre-trained, Scalable, High-performance Reward Models via Policy Discriminative Learning."
+    },
+    {
+      "repo": "InternLM/WildClawBench",
+      "url": "https://github.com/InternLM/WildClawBench",
+      "stars": "408",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 408 stars, 37 forks, 10 commits, MIT license, and README claims of authentic real-world multi-turn dynamic benchmark tasks with anti-overfitting design for agent evaluation",
+      "description": "WildClawBench is an authentic benchmark for LLM agents with real-world-style multi-turn dynamic tasks and anti-overfitting design."
     },
     {
       "repo": "internscience/internagent",
@@ -6390,6 +6420,21 @@
       "content_timestamp": "2026-05-26",
       "evidence": "web-observed GitHub page showed 102 stars, 11 forks, 23 commits, and README language for Codex-first benchmark loops, proposal/evaluate/keep harness iterations, candidate ledgers, write-scope controls, and experiment matrix support.",
       "description": "Meta Harness is a benchmark-driven outer loop for coding-agent harness optimization, with reproducible candidate ledgers and run evidence."
+    },
+    {
+      "repo": "supermemoryai/supermemory",
+      "url": "https://github.com/supermemoryai/supermemory",
+      "stars": "22700",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "TypeScript",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub page showed 22.7k stars, 2.1k forks, 1,632 commits, MIT license, and README claims for open-source AI memory infrastructure with indexing, retrieval, and benchmark-ready memory workflows",
+      "description": "Supermemory is an open-source AI memory infrastructure that turns chat and browser context into persistent retrieval memory."
     },
     {
       "repo": "suyoumo/ClawProBench",

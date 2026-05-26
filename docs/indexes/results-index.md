@@ -11,10 +11,10 @@
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
 | `reports` | present | 5 | 1 | 0 | 69 KB |
-| `output` | present | 12 | 1 | 0 | 603 KB |
-| `site/public/reports` | present | 274 | 4 | 0 | 2.3 MB |
-| `site/dist` | present | 529 | 216 | 0 | 14 MB |
-| `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 979 KB |
+| `output` | present | 12 | 1 | 0 | 606 KB |
+| `site/public/reports` | present | 277 | 4 | 0 | 2.3 MB |
+| `site/dist` | present | 533 | 218 | 0 | 14 MB |
+| `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 983 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
 ## Representative Files
@@ -56,15 +56,15 @@
 ### `site/dist`
 
 - `site/dist/CNAME`
-- `site/dist/_astro/BaseLayout.CVVNj5Q9.css`
-- `site/dist/_astro/EvolutionNetwork.C6w0W4W2.js`
+- `site/dist/_astro/BaseLayout.Dt2Pu-2z.css`
 - `site/dist/_astro/RankTable.Cde92VTF.css`
-- `site/dist/_astro/client.DTojXMD-.js`
-- `site/dist/_astro/index.CO9X3OiW.js`
+- `site/dist/_astro/client.BpEju3qh.js`
+- `site/dist/_astro/index.CmLyJJUK.css`
 - `site/dist/_astro/star-analysis.B9Ar3sAv.css`
 - `site/dist/benchmark/index.html`
 - `site/dist/blog/adas-to-dgm-evolution/index.html`
 - `site/dist/blog/agent-evolution-layer/index.html`
+- `site/dist/blog/ai-self-evolution-from-concept-to-implementation/index.html`
 
 ### `paper-drafts/main.pdf`
 

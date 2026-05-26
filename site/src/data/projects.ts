@@ -2159,28 +2159,29 @@ export const projects: Project[] = [
     ]
   },
   {
-    name: "wildclawbench",
+    name: "WildClawBench",
     repo: "InternLM/WildClawBench",
     url: "https://github.com/InternLM/WildClawBench",
-    stars: 500,
-    forks: "50",
+    stars: 408,
+    forks: "37",
     language: "Python",
-    license: "Apache-2.0",
-    report: "research/projects/71-wildclawbench-agent-benchmark.md",
-    pattern: "真实任务 → 端到端评估 → 无人工干预",
-    description: "WildClawBench 浦语（InternLM）真实环境 Agent 评测，测试 AI Agent 无人工辅助的端到端能力。",
+    license: "MIT",
+    report: "projects/245-wildclawbench-authentic-real-world-agent-benchmark.md",
+    pattern: "真实场景任务 -> 多轮动态交互 -> anti-overfitting 设计 -> 端到端评分 -> agent 能力画像",
+    description: "WildClawBench 是面向 LLM Agent 的真实世界风格评测基准，强调动态、多轮、长程任务与 anti-overfitting 评估设计。",
     stack: [
       "Python",
-      "Docker"
+      "Benchmark"
     ],
     category: "Agent 评测基准",
-    lastPushed: "2026-02-01T00:00:00Z",
-    localPath: "repos/internlm__wildclawbench",
+    lastPushed: "2026-05-26T00:00:00Z",
+    localPath: "raw-github/internlm_wildclawbench.md",
     status: "candidate",
     tags: [
       "评测基准",
       "真实任务",
-      "端到端"
+      "multi-turn",
+      "anti-overfitting"
     ]
   },
   {
@@ -3170,6 +3171,63 @@ export const projects: Project[] = [
       "proposal ledger",
       "agent optimization"
     ]
+  },
+  {
+    name: "Supermemory",
+    repo: "supermemoryai/supermemory",
+    url: "https://github.com/supermemoryai/supermemory",
+    stars: 22700,
+    forks: 2100,
+    language: "TypeScript",
+    license: "MIT",
+    report: "projects/246-supermemory-open-memory-infrastructure.md",
+    pattern: "chat/browser context ingest -> memory indexing -> retrieval scoring -> personalization -> downstream agent loop reuse",
+    description: "Supermemory 是开源 AI memory 基础设施，把聊天与浏览上下文沉淀为可检索、可复用的长期记忆层。",
+    stack: [
+      "TypeScript",
+      "Memory Infrastructure",
+      "Postgres",
+      "Redis"
+    ],
+    category: "Open AI Memory Infrastructure",
+    lastPushed: "2026-05-26T00:00:00Z",
+    localPath: "raw-github/supermemoryai_supermemory.md",
+    status: "candidate",
+    tags: [
+      "memory substrate",
+      "retrieval",
+      "personalization",
+      "agent memory",
+      "infra"
+    ]
+  },
+  {
+    name: "FlagoS Skills",
+    repo: "flagos-ai/skills",
+    url: "https://github.com/flagos-ai/skills",
+    stars: 12,
+    forks: 11,
+    language: "Python",
+    license: "Apache-2.0",
+    report: "projects/247-flagos-skills-open-agent-skill-registry.md",
+    pattern: "skill package spec -> registry publishing -> install hooks -> versioning -> cross-agent reuse",
+    description: "FlagoS skills 提供开源 AI agent 技能注册表和包格式，把技能资产变成可发布、可安装、可复用模块。",
+    stack: [
+      "Python",
+      "Skill Registry",
+      "Package Tooling"
+    ],
+    category: "Open Agent Skill Registry",
+    lastPushed: "2026-05-26T00:00:00Z",
+    localPath: "raw-github/flagos-ai_skills.md",
+    status: "candidate",
+    tags: [
+      "skills",
+      "registry",
+      "package format",
+      "agent tooling",
+      "reuse"
+    ]
   }
 ];
 
@@ -3200,7 +3258,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

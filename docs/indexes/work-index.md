@@ -13,9 +13,9 @@
 | `paper-drafts` | present | 32 | 2 | 0 | 2.3 MB |
 | `paper` | present | 16 | 2 | 0 | 1.0 MB |
 | `latex` | present | 9 | 3 | 0 | 53 KB |
-| `site` | present | 931 | 251 | 0 | 26 MB |
-| `survey` | present | 88 | 4 | 0 | 3.5 MB |
-| `scripts` | present | 11 | 1 | 0 | 176 KB |
+| `site` | present | 942 | 254 | 0 | 27 MB |
+| `survey` | present | 94 | 4 | 0 | 3.4 MB |
+| `scripts` | present | 12 | 1 | 0 | 179 KB |
 | `data-engine` | present | 479 | 21 | 0 | 5.9 MB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
@@ -83,20 +83,20 @@
 - `survey/ch7-painpoints-cn.md`
 - `survey/ch8-future-cn.md`
 - `survey/figures/README.md`
-- `survey/figures/benchmark-coverage.md`
+- `survey/figures/agent-evolution-panorama-dag.md`
 
 ### `scripts`
 
 - `scripts/analyze_github_project_data.mjs`
 - `scripts/enforce_raw_timestamps.py`
 - `scripts/generate-site-knowledge-graph.mjs`
+- `scripts/generate-wiki-index.mjs`
 - `scripts/generate_blog_author_profiles.py`
 - `scripts/generate_charts.py`
 - `scripts/generate_project_indexes.mjs`
 - `scripts/generate_repo_classification.py`
 - `scripts/generate_survey_figures.py`
 - `scripts/generate_visual_assets.mjs`
-- `scripts/generate_viz_exports.mjs`
 
 ### `data-engine`
 

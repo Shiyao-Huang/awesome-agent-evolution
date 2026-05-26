@@ -12,7 +12,7 @@
 |---|---|---:|---:|---:|---:|
 | `analysis` | present | 24 | 1 | 0 | 2.0 MB |
 | `research` | present | 132 | 8 | 0 | 2.3 MB |
-| `projects` | present | 25547 | 2881 | 0 | 2.9 GB |
+| `projects` | present | 25550 | 2881 | 0 | 2.9 GB |
 | `paper-reviews` | present | 137 | 1 | 0 | 1.3 MB |
 | `academic-reviews` | present | 34 | 1 | 0 | 287 KB |
 | `papers` | present | 12 | 4 | 0 | 55 KB |

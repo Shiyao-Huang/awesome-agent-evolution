@@ -19,7 +19,7 @@
 ## 五句话
 
 1. 这个领域的核心问题不是“有没有 agent”，而是“agent 到底改进了什么、凭什么证明更强、能不能复用到真实任务”。
-2. 当前证据层包括 527 个 GitHub raw captures、527 个已分类仓库、117 个站点项目、82 个严格 self-evolution 仓库、186 个广义 evolution-related 仓库。
+2. 当前证据层包括 530 个 GitHub raw captures、530 个已分类仓库、119 个站点项目、82 个严格 self-evolution 仓库、186 个广义 evolution-related 仓库。
 3. 方法主线可压缩为六类：reward/RL/self-play、prompt/search、memory、architecture/code self-modification、multi-agent reflection/debate、evaluation/safety/governance。
 4. Benchmark 是本项目的主矛盾之一：SWE-Bench、HumanEval、OSWorld、BrowserGym、AgentBench、LongMemEval、STATE-Bench 等必须被放在同一张比较表里，而不是散在项目页里。
 5. 这个 README 的目标是让读者直接获得认知结构；链接只作为证据来源和展开材料，不作为理解前提。
@@ -37,7 +37,7 @@
 | 轻量自改进 | 2022-2023 | 从一次性回答变成 feedback/reflection/prompt search 循环。 | OpenELM、DSPy、Reflexion、Self-Refine、OPRO、FunSearch | 先学“改什么、怎么评估、如何保留经验”，不要被 agent 外壳分散注意力。 |
 | Agent runtime 与多 Agent | 2023-2024 | AutoGPT、CAMEL、MetaGPT、AutoGen、LangGraph 把工具、角色、workflow、状态机变成工程底座。 | [release timeline](analysis/github-project-data-analysis.md#analyzed-project-release-timeline), [项目分类总表](#项目分类总表) | 框架本身不等于自进化；只有接入 evaluator、memory 和更新机制才进入核心。 |
 | 架构/代码/算法自修改 | 2024-2025 | ADAS、DGM、AlphaEvolve、OpenEvolve、SE-Agent 把 architecture、code、program 和算法候选放进搜索空间。 | [ADAS](research/papers/04-adas.md), [DGM](research/papers/02-darwin-godel-machine.md), [AlphaEvolve](research/papers/08-alphaevolve.md) | 代码和算法是最容易先落地的自进化场景，因为测试、sandbox、回归和 archive 可以提供强证据。 |
-| Memory / skill / harness 基础设施化 | 2025-2026 | memory、skill、evaluation、harness 同时变热；当前 raw 分类里 memory 104、evaluation 95、evolution 82、skill 69。 | [GitHub analysis](analysis/github-project-data-analysis.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) | 下一波价值在可安装 skill、可审计 memory、可信 harness 和报告规范，而不是更多 demo。 |
+| Memory / skill / harness 基础设施化 | 2025-2026 | memory、skill、evaluation、harness 同时变热；当前 raw 分类里 memory 105、evaluation 96、evolution 82、skill 70。 | [GitHub analysis](analysis/github-project-data-analysis.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) | 下一波价值在可安装 skill、可审计 memory、可信 harness 和报告规范，而不是更多 demo。 |
 
 ### 未来路线图
 
@@ -54,12 +54,12 @@
 
 | 追踪项 | 当前基线 | 更新方式 | 趋势怎么解读 |
 |---|---:|---|---|
-| GitHub 语料漏斗 | 524 raw captures / 524 classified / 114 model-card projects / 82 strict / 185 | `node scripts/analyze_github_project_data.mjs` | strict 与 broad 同涨说明核心和基础设施都在扩张；只涨 broad 可能是概念外延变松。 |
-| 主题热度 | memory 104, evaluation 95, evolution 82, skill 69 | `research/repo-classification.json` + GitHub analysis | evaluation、memory、skill 同时上升，说明领域从“会不会进化”转向“怎么证明、怎么积累、怎么复用”。 |
-| 时间切片 | 2026-05 raw classified repos 366，unknown 107 | `output/raw-github-timestamp-index.md` + classification time slice | 时间切片是采集/活动信号，不等于全部项目创建时间；unknown 要持续补时间戳。 |
-| Benchmark 覆盖 | 124 benchmark-eval function-tagged repos | README benchmark 表 + `analysis/github-project-data-analysis.md` | benchmark 增加要看是否有隐藏测试、失败轨迹、成本和跨域迁移，不能只数 leaderboard。 |
+| GitHub 语料漏斗 | 530 raw captures / 530 classified / 119 model-card projects / 82 strict / 186 | `node scripts/analyze_github_project_data.mjs` | strict 与 broad 同涨说明核心和基础设施都在扩张；只涨 broad 可能是概念外延变松。 |
+| 主题热度 | memory 105, evaluation 96, evolution 82, skill 70 | `research/repo-classification.json` + GitHub analysis | evaluation、memory、skill 同时上升，说明领域从“会不会进化”转向“怎么证明、怎么积累、怎么复用”。 |
+| 时间切片 | 2026-05 raw classified repos 369，unknown 107 | `output/raw-github-timestamp-index.md` + classification time slice | 时间切片是采集/活动信号，不等于全部项目创建时间；unknown 要持续补时间戳。 |
+| Benchmark 覆盖 | 125 benchmark-eval function-tagged repos | README benchmark 表 + `analysis/github-project-data-analysis.md` | benchmark 增加要看是否有隐藏测试、失败轨迹、成本和跨域迁移，不能只数 leaderboard。 |
 | 论文前沿 | 108 detailed paper references，含 2026 补充前沿 | `research/agent-self-evolution-papers-detailed-ZH.md` | 新论文进入 README 前要抽取改进对象、feedback、update、benchmark、限制。 |
-| 产品可用性 | 117 site-data projects / 269 public project reports | `projects/INDEX.md` + `site/public/reports/projects/INDEX.md` | 趋势判断要同时看能否运行、文档、真实 workflow、维护活跃度和用户价值，不只看 star。 |
+| 产品可用性 | 119 site-data projects / 271 public project reports | `projects/INDEX.md` + `site/public/reports/projects/INDEX.md` | 趋势判断要同时看能否运行、文档、真实 workflow、维护活跃度和用户价值，不只看 star。 |
 
 每次追踪这个板块时，先新增 raw 证据，再更新 processed 分类和 README 判断，最后同步 `docs/indexes/` 与网站构建；如果 trend 判断改变，要写明证据变化，而不是只改结论。
 
@@ -73,8 +73,8 @@
 |---:|---|---|
 | 1 | 核心历史、未来与趋势追踪 | 先知道这条技术线从哪里来、下一步往哪里去、每次更新要盯哪些趋势。 |
 | 2 | 自进化定义、方法族、benchmark 判断准则 | 再判断“什么算自进化、怎么证明、怎么防指标投机”。 |
-| 3 | GitHub 语料漏斗、分类轴、严格/广义 evolution 子集 | 先看加工后的结构，不从 524 个 raw capture 里盲找。 |
-| 4 | Public model-card 项目分组 | 114 个 site 项目和 266 个 public report 项目已经按角色、机制、证据和报告入口加工，可直接比较。 |
+| 3 | GitHub 语料漏斗、分类轴、严格/广义 evolution 子集 | 先看加工后的结构，不从 530 个 raw capture 里盲找。 |
+| 4 | Public model-card 项目分组 | 119 个 site 项目和 271 个 public report 项目已经按角色、机制、证据和报告入口加工，可直接比较。 |
 | 5 | 论文方法图谱 | 108 篇论文按 framework/method/RL/reflection/memory/alignment/benchmark/safety 等类别归纳，不是平铺引用。 |
 | 6 | 完整列表索取区 | 需要复制、筛选、二次处理时再取完整项目、repo、paper、benchmark 列表。 |
 
@@ -82,10 +82,10 @@
 
 | 层级 | 当前规模 | 加工后的意义 |
 |---|---:|---|
-| Raw GitHub captures | 527 | 原始发现层，只保留证据、时间戳和来源，不直接当结论。 |
-| Classified repositories | 527 | 每个仓库已归入 category、theme、function tag、time slice。 |
-| Public model-card projects | 117 | 进入项目页/报告体系，适合教学、对比和发布。 |
-| Public project report files | 269 | 网站可发布结果层，包含历史/兼容报告与站点公开材料。 |
+| Raw GitHub captures | 530 | 原始发现层，只保留证据、时间戳和来源，不直接当结论。 |
+| Classified repositories | 530 | 每个仓库已归入 category、theme、function tag、time slice。 |
+| Public model-card projects | 119 | 进入项目页/报告体系，适合教学、对比和发布。 |
+| Public project report files | 271 | 网站可发布结果层，包含历史/兼容报告与站点公开材料。 |
 | Strict self-evolution repos | 82 | 核心子集：直接含自改进、进化、搜索、reflection、mutation 或 feedback loop。 |
 | Broad evolution-related repos | 186 | 外围支撑层：memory、skill、evaluation、harness、coding-agent、prompt optimization。 |
 | Detailed paper references | 108 | 论文方法证据层，按 14 个研究类别和 2026 补充前沿整理。 |
@@ -95,10 +95,10 @@
 
 | 分类轴 | 完整分布 | 怎么读 |
 |---|---|---|
-| Collection category | 框架/framework 149、评测/evaluation 105、教程/tutorial 98、工具/tool 94、应用/application 49、论文代码/paper-code 31、评测/benchmark 1 | 这是“仓库形态”：框架最多，但 skill/tool 增长已经是重要基础设施信号。 |
-| Base theme | memory 104、evaluation 95、evolution 82、skill 69、framework 58、education-list 35、research-agent 32、prompt-optimization 26、coding-agent 17、workflow-automation 8、safety 1 | 这是“主题重心”：memory、evaluation、evolution、skill 是最密集的四个支点。 |
-| Function tag | benchmark-eval 124、framework-runtime 124、resource-index 107、tool-module 95、application-demo 29、research-artifact 20、agent-evolution-infra 12、memory-substrate 10、skill-orchestration 3、research-agent-pipeline 2、memory-runtime 1 | 这是“功能角色”：benchmark/eval、runtime、resource index 和 tool module 构成主要公开证据面。 |
-| Time slice | 2026-05 366、unknown 107、2024-Q2 7、2026-03 7、2026-04 7、2025-11 5、2024-Q3 4、2026-02 4、2025-05 3、early 3、其他 14 | 这是“时间信号”：近期新增集中在 skills、memory、harness、evaluation 和 self-modifying code。 |
+| Collection category | 框架/framework 149、评测/evaluation 106、教程/tutorial 98、工具/tool 96、应用/application 49、论文代码/paper-code 31、评测/benchmark 1 | 这是“仓库形态”：框架最多，但 skill/tool 增长已经是重要基础设施信号。 |
+| Base theme | memory 105、evaluation 96、evolution 82、skill 70、framework 58、education-list 35、research-agent 32、prompt-optimization 26、coding-agent 17、workflow-automation 8、safety 1 | 这是“主题重心”：memory、evaluation、evolution、skill 是最密集的四个支点。 |
+| Function tag | benchmark-eval 125、framework-runtime 124、resource-index 107、tool-module 95、application-demo 29、research-artifact 20、agent-evolution-infra 12、memory-substrate 11、skill-orchestration 4、research-agent-pipeline 2、memory-runtime 1 | 这是“功能角色”：benchmark/eval、runtime、resource index 和 tool module 构成主要公开证据面。 |
+| Time slice | 2026-05 369、unknown 107、2024-Q2 7、2026-03 7、2026-04 7、2025-11 5、2024-Q3 4、2026-02 4、2025-05 3、early 3、其他 14 | 这是“时间信号”：近期新增集中在 skills、memory、harness、evaluation 和 self-modifying code。 |
 
 ### 3. Public model-card 项目分组
 
@@ -149,7 +149,7 @@
 | 完整综述讲了什么 | 自进化 Agent 不是一次性问答能力，而是一个由模型、工具、记忆、环境、评估器和代码组成的系统，能在反馈中改变 prompt、memory、skill、workflow、agent code 或 model policy，并用独立评估证明变化有效。 | [survey/latex/main.pdf](survey/latex/main.pdf), [survey/latex/main.tex](survey/latex/main.tex) |
 | 方法到底有哪些 | 六条主线：reward/RL/self-play 提供选择压力；prompt/search 改上下文和候选程序；memory 保留长期经验；architecture/code self-modification 改 agent 结构；multi-agent reflection/debate 用异质角色互相纠错；evaluation/safety/governance 把变化关进可验证边界。 | [survey/ch3-methods-cn.md](survey/ch3-methods-cn.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) |
 | Benchmark 怎么看 | 不能只看最终分数，要看验证器是否独立、任务是否隔离、是否有隐藏测试、是否跨域迁移、是否报告成本/失败率/回滚率，以及是否防 Goodhart。 | [survey/ch5-evaluation-cn.md](survey/ch5-evaluation-cn.md), [code benchmark note](projects/code-generation-evolution/05-benchmarks.md) |
-| GitHub 语料是什么 | 当前是 524 个 raw GitHub captures、524 个分类仓库、114 个站点项目、82 个严格 self-evolution 仓库、185 个广义相关仓库；它们按 category、theme、function、time slice 进入统一语料。 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md), [repo classification](research/repo-classification.md) |
+| GitHub 语料是什么 | 当前是 530 个 raw GitHub captures、530 个分类仓库、119 个站点项目、82 个严格 self-evolution 仓库、186 个广义相关仓库；它们按 category、theme、function、time slice 进入统一语料。 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md), [repo classification](research/repo-classification.md) |
 | 项目如何比较 | 每个项目按“它是什么、改进对象是什么、反馈是什么、能不能运行、有没有 benchmark、是否产品可用、限制是什么”来读，而不是只看 stars。 | [projects/INDEX.md](projects/INDEX.md), [public project reports](site/public/reports/projects/INDEX.md) |
 | 论文如何使用 | 论文不是单独列表，而是方法证据：每篇要抽取改进对象、反馈信号、更新机制、benchmark、claim、限制和可复现性。 | [中文论文索引](research/agent-self-evolution-papers-detailed-ZH.md), [英文论文索引](research/agent-self-evolution-papers-detailed.md) |
 | 社区/X/博客信号有什么用 | 社区信号用来发现真实痛点、工程争议、热度错觉和 adoption 迹象；它不能替代论文或代码，但能指出哪些 benchmark 与业务价值脱节。 | [中文社交索引](output/social-media-curated-ZH.md), [英文社交索引](output/social-media-curated.md) |
@@ -232,7 +232,7 @@
 
 | 分类 | 当前信号 | 代表证据 | README 直接比较法 |
 |---|---:|---|---|
-| Self-evolution loops | 82 strict / 185 broad repos | [OpenEvolve](projects/algorithmicsuperintelligence__openevolve.md), [AgentEvolver](projects/modelscope__agentevolver.md), [EvoAgentX](site/public/reports/projects/22-evoagentx-agent-evolution-framework.md), [A-Evolve](projects/115-a-evolve-universal-agent-evolution.md), [OpenSpace](projects/162-openspace-self-evolving-skills.md) | 看进化对象、evaluator、archive、回滚、成本、是否跨任务迁移 |
+| Self-evolution loops | 82 strict / 186 broad repos | [OpenEvolve](projects/algorithmicsuperintelligence__openevolve.md), [AgentEvolver](projects/modelscope__agentevolver.md), [EvoAgentX](site/public/reports/projects/22-evoagentx-agent-evolution-framework.md), [A-Evolve](projects/115-a-evolve-universal-agent-evolution.md), [OpenSpace](projects/162-openspace-self-evolving-skills.md) | 看进化对象、evaluator、archive、回滚、成本、是否跨任务迁移 |
 | Harness engineering | 143 framework repos | [Agentic Harness Engineering](site/public/reports/projects/43-agentic-harness-engineering.md), [OpenClaw](site/public/reports/projects/48-openclaw.md), [Aden Hive](projects/68-aden-hive.md), [OpenHarness](projects/146-openharness-agent-harness-ohmo.md), [CORAL](projects/89-coral-multi-agent-evolution.md) | 看工具、权限、状态、子 agent、评估器、审计链 |
 | Memory substrate | 103 memory-theme repos | [Mem0](projects/58-mem0-agent-memory.md), [LangMem](projects/70-langmem-agent-memory.md), [Graphiti](projects/71-graphiti-temporal-context-graphs.md), [Memoria](projects/110-memoria-git-for-agent-memory.md), [Hindsight](projects/174-hindsight-agent-memory-that-learns.md) | 看写入/检索/合并/删除/冲突/版本化，而不是只看向量库 |
 | Skills / reusable know-how | 63 skill-theme repos | [Anthropic Skills](projects/64-anthropic-skills.md), [OpenAI Skills](projects/121-openai-skills-codex-catalog.md), [AgentSkills](projects/157-agentskills-open-standard.md), [SkillRL](projects/148-skillrl-recursive-skill-rl.md), [Superpowers](site/public/reports/projects/49-superpowers.md) | 看格式、安装面、验证、安全、迁移和跨 agent 兼容 |
@@ -276,10 +276,10 @@
 
 | 层级 | Count | 定义 | 证据来源 |
 |---|---:|---|---|
-| Raw GitHub captures | 527 | `raw-github/*.md` 原始抓取和 timestamp index | [raw timestamp index](output/raw-github-timestamp-index.md), [raw-github/](raw-github/) |
-| Classified repositories | 527 | 带 category、theme、function、time slice 的分类行 | [repo classification](research/repo-classification.md), [classification JSON](research/repo-classification.json) |
-| Site/paper model-card projects | 117 | 进入站点数据和项目报告的重点项目 | [site/src/data/projects.ts](site/src/data/projects.ts), [projects/INDEX.md](projects/INDEX.md) |
-| Public project report files | 269 | 网站 public reports 层的项目报告文件 | [site/public/reports/projects/INDEX.md](site/public/reports/projects/INDEX.md) |
+| Raw GitHub captures | 530 | `raw-github/*.md` 原始抓取和 timestamp index | [raw timestamp index](output/raw-github-timestamp-index.md), [raw-github/](raw-github/) |
+| Classified repositories | 530 | 带 category、theme、function、time slice 的分类行 | [repo classification](research/repo-classification.md), [classification JSON](research/repo-classification.json) |
+| Site/paper model-card projects | 119 | 进入站点数据和项目报告的重点项目 | [site/src/data/projects.ts](site/src/data/projects.ts), [projects/INDEX.md](projects/INDEX.md) |
+| Public project report files | 271 | 网站 public reports 层的项目报告文件 | [site/public/reports/projects/INDEX.md](site/public/reports/projects/INDEX.md) |
 | Strict evolution-theme repos | 82 | `base_theme = evolution` 的严格主题仓库 | [GitHub analysis](analysis/github-project-data-analysis.md) |
 | Broad evolution-related repos | 186 | 命中 evolution/self-improvement/reflection/search/improvement-loop 的广义集合 | [GitHub analysis](analysis/github-project-data-analysis.md) |
 
@@ -287,8 +287,8 @@
 
 | 维度 | 分类 |
 |---|---|
-| Raw collection categories | 框架/framework 149、评测/evaluation 105、教程/tutorial 98、工具/tool 94、应用/application 49、论文代码/paper-code 31、评测/benchmark 1 |
-| Raw collection themes | memory 104、evaluation 95、evolution 82、skill 69、framework 58、education-list 35、research-agent 32、prompt-optimization 26、coding-agent 17、workflow-automation 8、safety 1 |
+| Raw collection categories | 框架/framework 149、评测/evaluation 106、教程/tutorial 98、工具/tool 96、应用/application 49、论文代码/paper-code 31、评测/benchmark 1 |
+| Raw collection themes | memory 105、evaluation 96、evolution 82、skill 70、framework 58、education-list 35、research-agent 32、prompt-optimization 26、coding-agent 17、workflow-automation 8、safety 1 |
 | Timeline 证据 | [Analyzed Project Release Timeline](analysis/github-project-data-analysis.md#analyzed-project-release-timeline) |
 
 ## 社区 / X / 博客信号
@@ -317,9 +317,9 @@
 
 | 用户问题 | README 直接答案 | 证据链接 |
 |---|---|---|
-| 原始收集的 GitHub 项目有哪些 | 当前 raw 层是 524 个 `raw-github/*.md` capture，保留原始来源、时间戳和未加工文本；它回答“我们到底收集过什么”。 | [raw timestamp index](output/raw-github-timestamp-index.md), [GitHub analysis](analysis/github-project-data-analysis.md) |
-| 进行分析的项目有哪些 | 524 个仓库已经进入分类分析；其中 114 个进入站点项目数据，266 个 public project report 文件承担可发布 model-card/项目页材料。 | [projects/INDEX.md](projects/INDEX.md), [public reports](site/public/reports/projects/INDEX.md), [site/src/data/projects.ts](site/src/data/projects.ts) |
-| 进化相关的有哪些 | 严格 self-evolution 主题是 82 个，广义 evolution-related 是 185 个；严格集看是否有自改进闭环，广义集覆盖 memory、skill、reflection、search、harness、evaluation 等支撑层。 | [corpus funnel](analysis/github-project-data-analysis.md#corpus-funnel), [repo classification](research/repo-classification.md) |
+| 原始收集的 GitHub 项目有哪些 | 当前 raw 层是 530 个 `raw-github/*.md` capture，保留原始来源、时间戳和未加工文本；它回答“我们到底收集过什么”。 | [raw timestamp index](output/raw-github-timestamp-index.md), [GitHub analysis](analysis/github-project-data-analysis.md) |
+| 进行分析的项目有哪些 | 530 个仓库已经进入分类分析；其中 119 个进入站点项目数据，271 个 public project report 文件承担可发布 model-card/项目页材料。 | [projects/INDEX.md](projects/INDEX.md), [public reports](site/public/reports/projects/INDEX.md), [site/src/data/projects.ts](site/src/data/projects.ts) |
+| 进化相关的有哪些 | 严格 self-evolution 主题是 82 个，广义 evolution-related 是 186 个；严格集看是否有自改进闭环，广义集覆盖 memory、skill、reflection、search、harness、evaluation 等支撑层。 | [corpus funnel](analysis/github-project-data-analysis.md#corpus-funnel), [repo classification](research/repo-classification.md) |
 | 按时间顺序发布的有哪些 | timeline 用 created/pushed/release 信号观察方向迁移：早期偏框架和工具，中期 benchmark/memory/harness 增多，近期 skill、self-modifying code、research agent 和 evaluation governance 更密集。 | [release timeline](analysis/github-project-data-analysis.md#analyzed-project-release-timeline) |
 | 方法路线有哪些 | 六类主方法已经在 README 展开：reward/RL/self-play、prompt/search optimization、memory/lifelong learning、architecture/code self-modification、multi-agent reflection/debate、evaluation/safety/governance。 | [方法分类总表](#方法分类总表), [survey ch3](survey/ch3-methods-cn.md) |
 | benchmark 在哪里 | README 已把函数级代码、仓库级软件工程、agent 通用、computer-use/web、memory、skill、harness、算法/科学发现放进同一张评测对照表，并给出判断准则。 | [Benchmark / 评测对照](#benchmark--评测对照), [survey ch5](survey/ch5-evaluation-cn.md) |
@@ -330,7 +330,7 @@
 这些列表直接放在 README 里，目的是让读者不用跳转也能复制、搜索、对比。折叠只是为了可读性；内容本身就在本文件中。
 
 <details>
-<summary>完整 public model-card 项目列表（117）</summary>
+<summary>完整 public model-card 项目列表（119）</summary>
 
 | # | 项目 | 仓库 | 分类/角色 | Stars | 报告 |
 |---:|---|---|---|---:|---|

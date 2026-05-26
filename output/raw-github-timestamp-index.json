@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-26T00:00:00+08:00",
-  "total": 527,
-  "updated_files": 527,
+  "total": 530,
+  "updated_files": 530,
   "unknown_content_timestamp": 109,
   "records": [
     {
@@ -1274,6 +1274,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "flagos-ai/skills",
+      "url": "https://github.com/flagos-ai/skills",
+      "file": "raw-github/flagos-ai_skills.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T15:57:27+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
+    },
+    {
       "repo": "flowersteam/teachmyagent",
       "url": "https://github.com/flowersteam/teachmyagent",
       "file": "raw-github/flowersteam_teachmyagent.md",
@@ -1749,6 +1758,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "InternLM/WildClawBench",
+      "url": "https://github.com/InternLM/WildClawBench",
+      "file": "raw-github/internlm_wildclawbench.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T15:57:27+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
       "repo": "internscience/internagent",
@@ -3835,6 +3853,15 @@
       "file": "raw-github/superagenticai_metaharness.md",
       "content_timestamp": "2026-05-26",
       "collected_at": "2026-05-26T10:04:13+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_26"
+    },
+    {
+      "repo": "supermemoryai/supermemory",
+      "url": "https://github.com/supermemoryai/supermemory",
+      "file": "raw-github/supermemoryai_supermemory.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-05-26T15:57:27+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },

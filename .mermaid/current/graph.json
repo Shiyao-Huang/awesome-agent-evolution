@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T10:04:13+08:00",
+  "generated_at": "2026-05-26T16:29:41+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -222,7 +222,10 @@
         "raw-github/dceoy_speckit-agent-skills.md",
         "raw-github/sd0xdev_sd0x-dev-flow.md",
         "raw-github/inngest_utah.md",
-        "raw-github/superagenticai_metaharness.md"
+        "raw-github/superagenticai_metaharness.md",
+        "raw-github/internlm_wildclawbench.md",
+        "raw-github/supermemoryai_supermemory.md",
+        "raw-github/flagos-ai_skills.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -257,7 +260,10 @@
         "raw-github/autox-ai-labs_autor.md",
         "raw-github/chorus-aidlc_chorus.md",
         "raw-github/kweaver-ai_kweaver-core.md",
-        "raw-github/suyoumo_clawprobench.md"
+        "raw-github/suyoumo_clawprobench.md",
+        "raw-github/internlm_wildclawbench.md",
+        "raw-github/supermemoryai_supermemory.md",
+        "raw-github/flagos-ai_skills.md"
       ]
     },
     {
@@ -349,7 +355,9 @@
         "work/research/hourly-public-metadata-update-2026-05-26-0544.md",
         "work/research/hourly-public-metadata-update-2026-05-26-0645.md",
         "work/research/hourly-public-metadata-update-2026-05-26-0745.md",
-        "work/research/hourly-public-metadata-update-2026-05-26-1001.md"
+        "work/research/hourly-public-metadata-update-2026-05-26-1001.md",
+        "work/research/hourly-public-metadata-update-2026-05-26-1618.md",
+        ".mermaid/current/graph.json"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -735,7 +743,13 @@
         "projects/243-utah-event-driven-agent-harness.md",
         "site/public/reports/projects/243-utah-event-driven-agent-harness.md",
         "projects/244-metaharness-benchmark-driven-harness-evolution.md",
-        "site/public/reports/projects/244-metaharness-benchmark-driven-harness-evolution.md"
+        "site/public/reports/projects/244-metaharness-benchmark-driven-harness-evolution.md",
+        "projects/245-wildclawbench-authentic-real-world-agent-benchmark.md",
+        "projects/246-supermemory-open-memory-infrastructure.md",
+        "projects/247-flagos-skills-open-agent-skill-registry.md",
+        "site/public/reports/projects/245-wildclawbench-authentic-real-world-agent-benchmark.md",
+        "site/public/reports/projects/246-supermemory-open-memory-infrastructure.md",
+        "site/public/reports/projects/247-flagos-skills-open-agent-skill-registry.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -771,7 +785,10 @@
         "site/public/reports/projects/238-autor-human-centered-research-harness.md",
         "site/public/reports/projects/239-chorus-ai-human-collaboration-harness.md",
         "site/public/reports/projects/240-kweaver-core-enterprise-decision-agent-harness.md",
-        "site/public/reports/projects/241-clawprobench-live-openclaw-benchmark.md"
+        "site/public/reports/projects/241-clawprobench-live-openclaw-benchmark.md",
+        "site/public/reports/projects/245-wildclawbench-authentic-real-world-agent-benchmark.md",
+        "site/public/reports/projects/246-supermemory-open-memory-infrastructure.md",
+        "site/public/reports/projects/247-flagos-skills-open-agent-skill-registry.md"
       ]
     },
     {
@@ -912,7 +929,8 @@
       "2026-05-25T12:21+08: GitHub pages opened through browser/search tool for OthmanAdi/planning-with-files, affaan-m/ECC, kks0488/vibe-codex, farmage/opencode-skills, cyijun/agent-smith, galyarderlabs/galyarder-framework, and quzhiii/thesis-skills.",
       "2026-05-25T13:21+08: GitHub pages opened through browser/search tool for PaulRBerg/agent-skills, ComposioHQ/awesome-codex-skills, eigent-ai/agent-skills, MoizIbnYousaf/Ai-Agent-Skills, howells/arc, Gentleman-Programming/Gentleman-Skills, togethercomputer/skills.",
       "2026-05-25T14:23+08: GitHub/arXiv pages opened through browser/search tool for DSAIL-Memory/EvoMemBench, Signet-AI/signetai, MemPalace/mempalace, and jcartu/rasputin-memory.",
-      "2026-05-26T03:41+08: GitHub and Skills Hub pages opened through browser/search tool for mgechev/skills-best-practices."
+      "2026-05-26T03:41+08: GitHub and Skills Hub pages opened through browser/search tool for mgechev/skills-best-practices.",
+      "2026-05-26T16:18+08: GitHub pages opened through browser/search for InternLM/WildClawBench, supermemoryai/supermemory, and flagos-ai/skills."
     ],
     "shell_network": [
       "curl https://api.github.com/rate_limit failed: Could not resolve host: api.github.com.",
@@ -932,7 +950,8 @@
       "2026-05-25T12:21+08: curl -I -L --max-time 12 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
       "2026-05-25T13:21+08: curl -I -L --max-time 12 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
       "2026-05-25T14:23+08: curl -I -L --max-time 12 https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
-      "2026-05-26T03:41+08: curl https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang."
+      "2026-05-26T03:41+08: curl https://api.github.com/rate_limit failed DNS resolution; gh auth status reported invalid default token for Shiyao-Huang.",
+      "2026-05-26T16:18+08: shell GitHub API freshness remains blocked; api.github.com DNS resolution failed and gh auth remains invalid."
     ],
     "gitnexus": [
       "gitnexus doctor succeeded with GitNexus 1.6.5 and graph/full-text/vector capabilities available.",
@@ -951,7 +970,8 @@
       "2026-05-25T12:21+08: HOME=/private/tmp/gitnexus-home /Users/copizzah/.local/bin/gitnexus analyze failed on reused temp HOME because FTS extension download failure left an unloaded index extension; fresh HOME=/private/tmp/gitnexus-home-1221 succeeded.",
       "2026-05-25T12:21+08: HOME=/private/tmp/gitnexus-home-1221 /Users/copizzah/.local/bin/gitnexus analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded: 10,623 nodes, 11,534 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
       "2026-05-25T13:21+08: HOME=/private/tmp/gitnexus-home-1321 /Users/copizzah/.local/bin/gitnexus doctor passed; analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded with 10,730 nodes, 11,678 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
-      "2026-05-25T14:23+08: HOME=/private/tmp/gitnexus-home-1423 gitnexus doctor passed; analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded with 10,878 nodes, 12,530 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect."
+      "2026-05-25T14:23+08: HOME=/private/tmp/gitnexus-home-1423 gitnexus doctor passed; analyze --skip-git --index-only --name awesome-agent-evolution-hourly . succeeded with 10,878 nodes, 12,530 edges, 31 clusters, 15 flows; FTS degraded because LadybugDB extension download could not connect.",
+      "2026-05-26T16:18+08: npx gitnexus status returned stale index (indexed commit 8c36b4d vs current e6cab97); query worked with stale evidence; impact target lookup still not found; fresh-home analyze failed because FTS extension download was blocked then COPY index load failed."
     ],
     "tests": [
       "2026-05-24T19:17+08: node scripts/generate_visual_assets.mjs regenerated four SVG charts from current analysis and project data.",
@@ -1025,7 +1045,11 @@
       "2026-05-25T13:21+08: node scripts/generate_visual_assets.mjs passed, 4 SVG assets regenerated.",
       "2026-05-25T13:21+08: (cd site && npm run build) passed, 281 pages built with existing Astro z deprecation hints.",
       "2026-05-25T13:21+08: (cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex) passed, main.pdf 213 pages with existing font/overfull/underfull warnings.",
-      "2026-05-25T14:23+08: node --check site/src/data/projects.ts passed after projectGroups repair; node scripts/generate_visual_assets.mjs regenerated 4 SVG assets."
+      "2026-05-25T14:23+08: node --check site/src/data/projects.ts passed after projectGroups repair; node scripts/generate_visual_assets.mjs regenerated 4 SVG assets.",
+      "2026-05-26T16:18+08: node scripts/generate_project_indexes.mjs passed (docs/indexes regenerated).",
+      "2026-05-26T16:18+08: python3 scripts/enforce_raw_timestamps.py passed with raw-github md=530, missing_count=0.",
+      "2026-05-26T16:18+08: node scripts/analyze_github_project_data.mjs passed with raw=530, classified=530, analyzed_projects=119, strict=82, broad=186.",
+      "2026-05-26T16:18+08: (cd site && npm run build) passed; existing /visualizations duplicate-route warning and Astro hints remain."
     ],
     "notes": [
       "work/research/hourly-public-metadata-update-2026-05-24-2105.md",
@@ -1037,27 +1061,28 @@
       "work/research/hourly-public-metadata-update-2026-05-25-1221.md",
       "work/research/hourly-public-metadata-update-2026-05-25-1321.md",
       "work/research/hourly-public-metadata-update-2026-05-25-1423.md",
-      "work/research/hourly-public-metadata-update-2026-05-26-0341.md"
+      "work/research/hourly-public-metadata-update-2026-05-26-0341.md",
+      "work/research/hourly-public-metadata-update-2026-05-26-1618.md"
     ]
   },
   "current_run_evidence": [
-    "Web-observed repos: cuga-project/cuga-agent, AutoX-AI-Labs/AutoR, Chorus-AIDLC/Chorus, kweaver-ai/kweaver-core, suyoumo/ClawProBench.",
-    "New raw files: raw-github/cuga-project_cuga-agent.md, raw-github/autox-ai-labs_autor.md, raw-github/chorus-aidlc_chorus.md, raw-github/kweaver-ai_kweaver-core.md, raw-github/suyoumo_clawprobench.md.",
-    "New public model cards and site reports: project/report ids 237-241.",
+    "Web-observed repos: InternLM/WildClawBench, supermemoryai/supermemory, flagos-ai/skills.",
+    "New raw files: raw-github/internlm_wildclawbench.md, raw-github/supermemoryai_supermemory.md, raw-github/flagos-ai_skills.md.",
+    "New public model cards and site reports: project/report ids 245-247.",
     "Shell GitHub API freshness is blocked by DNS; local gh token is invalid.",
-    "GitNexus status/list are available but the repo index was stale at start of this iteration.",
-    "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.",
-    "Workspace cleanup: migrated root raw/social/GitHub/paper/report compatibility files into canonical raw, analysis, paper-drafts, reports, output, docs, and legacy paths; updated references and generators."
+    "GitNexus status is available but stale before this iteration commit; query worked while impact path lookup remained blocked.",
+    "Fresh-home gitnexus analyze failed because FTS extension download is blocked, so symbol-level refresh is degraded.",
+    "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-26T10:04:13+08:00",
+    "run_at": "2026-05-26T16:29:41+08:00",
     "added_repositories": [
-      "sd0xdev/sd0x-dev-flow",
-      "inngest/utah",
-      "SuperagenticAI/metaharness"
+      "InternLM/WildClawBench",
+      "supermemoryai/supermemory",
+      "flagos-ai/skills"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
+    "gitnexus_status": "available but stale; refresh blocked by extension download failure in this environment"
   }
 }

@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-26T10:04:13+08:00
+Generated: 2026-05-26T16:29:41+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-05-26T10:04:13+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: sd0xdev/sd0x-dev-flow, inngest/utah, SuperagenticAI/metaharness.
-- New raw files: raw-github/sd0xdev_sd0x-dev-flow.md, raw-github/inngest_utah.md, raw-github/superagenticai_metaharness.md.
-- New public model cards and site reports: project/report ids 242, 243, 244.
+- Web-observed repos: InternLM/WildClawBench, supermemoryai/supermemory, flagos-ai/skills.
+- New raw files: raw-github/internlm_wildclawbench.md, raw-github/supermemoryai_supermemory.md, raw-github/flagos-ai_skills.md.
+- New public model cards and site reports: project/report ids 245, 246, 247.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
-- GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
+- GitNexus status is available but stale; impact path lookup remained blocked and fresh-home analyze degraded on FTS extension download failure.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

@@ -27,7 +27,7 @@
 | English i18n 入口 | [README-EN.md](README-EN.md) | 根 README 的完整英文镜像，包含同等结构、完整列表和维护闭环 |
 | 用户输入记忆 | local-only, ignored | 本地保留，不发布、不提交；公开仓库只保留抽象操作原则 |
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |
-| GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 527 个 raw GitHub captures、分类、进化相关、时间序列 |
+| GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 530 个 raw GitHub captures、分类、进化相关、时间序列 |
 | GitHub 数据 JSON | [analysis/github-project-data-analysis.json](analysis/github-project-data-analysis.json) | 脚本生成，可复跑 |
 | 项目深度分析 | [projects/](projects/) | model-card/教学型项目分析 |
 | 项目清单 | [projects/INDEX.md](projects/INDEX.md) | 427 个深度项目入口 |
