@@ -162,380 +162,379 @@ GitHub Issues & 安装、依赖、权限、长期维护 & bug报告、feature re
 \end{enumerate}
 
 % ====================================================================
-% RECOVERY APPEND: English rebuild content appended after overwrite incident.
-% Do not delete the preceding surviving material; this block restores the
-% long-form English Ch7 analysis required by the urgent rebuild task.
+% 扩展分析：覆盖事件后追加的扩展内容。
+% 不要删除上方已有材料；本块恢复第7章的长篇分析所需内容。
 % ====================================================================
 
-\subsection{English Recovery Expansion: User Pain Points as the Negative Evidence Base}
+\subsection{扩展分析：用户痛点作为负面证据基}
 \label{sec:ch7-english-recovery}
 
-This section rebuilds the English analytical layer of Chapter~\ref{ch:painpoints} without overwriting the surviving material above. The goal is to convert the Mom Test findings into a research-grade account of why agent self-evolution remains difficult to deploy. The empirical base is the local pain-point corpus: 131 community posts, 97 distinct pain points, and three platform slices consisting of Reddit, Hacker News, and X/Twitter. The key methodological choice is to treat complaints, workarounds, abandoned frameworks, cost incidents, and debugging stories as evidence. In the Mom Test tradition, the most reliable signal is not what users say they would hypothetically buy, but what they already tried, what failed, what they replaced, and what workarounds they tolerate.
+本节重建第~\ref{ch:painpoints} 章的分析层，不覆盖上方已有的材料。目标是将 Mom Test 发现转化为研究级别的分析，说明为什么智能体自进化仍然难以部署。实证基础是本地痛点语料库：131条社区帖子、97个独立痛点和三个平台切片（Reddit、Hacker News和X/Twitter）。关键方法论选择是将投诉、变通方案、被抛弃的框架、成本事件和调试经历视为证据。在 Mom Test 传统中，最可靠的信号不是用户声称想要什么，而是他们已经尝试了什么、什么失败了、替换了什么、以及容忍了哪些变通方案。
 
-The chapter therefore plays a complementary role to the method and system chapters. Earlier chapters describe what self-evolving agents can do in controlled settings: generate rationales, revise answers, store reflections, update policies, search architectures, or evolve code under automatic evaluators \cite{reflexion2023,adas2024,dgm2025}. This chapter asks a different question: where do those mechanisms break when they touch real workflows? The answer is consistent across platforms. Users do not primarily complain that agents lack impressive demonstrations. They complain that demonstrations do not survive contact with production: reliability plateaus below operational thresholds, frameworks hide the information needed for debugging, memory is either absent or uncontrolled, benchmarks fail to measure real labor, self-improvement loops still require human judgment, and safety/cost risks grow with autonomy.
+因此，本章与方法和系统章节形成互补。前几章描述了自进化智能体在受控环境下能做什么：生成推理链、修正答案、存储反思、更新策略、搜索架构或在自动评估器下进化代码~\cite{reflexion2023,adas2024,dgm2025}。本章提出不同的问题：当这些机制接触真实工作流时，在哪里会崩溃？答案在各个平台间一致。用户主要不是抱怨智能体缺乏令人印象深刻的演示。他们抱怨的是演示无法经受生产环境的考验：可靠性停留在运营阈值以下，框架隐藏调试所需信息，记忆要么缺失要么不可控，基准测试未能衡量真实劳动量，自改进循环仍需要人工判断，而安全/成本风险随自主性增长而扩大。
 
-The resulting pain-point map should not be read as anti-agent sentiment. Many posts come from people actively building with agents, paying for APIs, testing frameworks, maintaining repos, and trying to automate real work. Their frustration is precisely useful because it is operational. They know where current systems save time, and they know where the savings disappear into monitoring, repair, prompt debugging, dependency management, or rollback. For an agent-evolution survey, this is the evidence that prevents method optimism from becoming product mythology.
+由此生成的痛点图谱不应被解读为反智能体情绪。许多帖子来自积极使用智能体构建产品的人——他们付费使用API、测试框架、维护仓库、尝试自动化真实工作。他们的挫败感恰恰有用，因为它是操作性的。他们知道当前系统在哪里节省时间，也知道节省的时间在哪里消失在监控、修复、提示调试、依赖管理或回滚中。对于智能体进化综述而言，这些证据可以防止方法乐观主义变成产品神话。
 
-\subsubsection{Research Methodology: Applying the Mom Test to Agent Evolution}
+\subsubsection{研究方法论：将 Mom Test 应用于智能体进化}
 \label{sec:ch7-methodology-english}
 
-The Mom Test method is designed to reduce false positives in customer discovery. Instead of asking users whether they like an idea, it asks about concrete past behavior: what they tried, what they paid for, what they abandoned, what they built themselves, and what consequences followed. This matters especially for agent self-evolution because the language of the field is aspirational. Terms such as ``autonomous,'' ``self-improving,'' ``recursive,'' ``production-ready,'' and ``agentic'' can sound convincing even when the underlying system still depends on manual review, hidden prompt tuning, brittle benchmarks, or human rescue.
+Mom Test 方法旨在减少客户发现中的假阳性。它不询问用户是否喜欢某个想法，而是询问具体的过去行为：他们尝试了什么、为什麽付费、放弃了什么、自己构建了什么、以及产生了什么后果。这对智能体自进化尤其重要，因为该领域的语言是愿景性的。``autonomous''（自主的）、``self-improving''（自改进的）、``recursive''（递归的）、``production-ready''（生产就绪的）和``agentic''（智能体的）等术语听起来令人信服，即使底层系统仍然依赖人工审查、隐藏的提示调优、脆弱的基准测试或人工救援。
 
-In this chapter, Mom Test evidence is interpreted through four filters. First, the complaint must be grounded in an actual use case, such as building a commercial agent, using a framework, running a coding assistant, deploying a workflow, or evaluating a self-improvement claim. Second, the workaround matters as much as the complaint. If a developer removes a framework and replaces it with plain API calls, that action is stronger evidence than a general statement that the framework is bad. Third, repeated complaints across platforms are weighted more heavily than isolated opinions. The same theme appearing in Reddit deployment stories, HN engineering debates, and X/Twitter research commentary indicates a structural issue. Fourth, claims are separated from measurements. A viral post about a benchmark gain is useful for tracking narrative, but production pain points require evidence about reliability, cost, safety, and maintenance.
+在本章中，Mom Test 证据通过四个过滤器解读。第一，投诉必须基于实际使用场景，如构建商业智能体、使用框架、运行编码助手、部署工作流或评估自改进声明。第二，变通方案与投诉同等重要。如果开发者移除了框架并用纯 API 调用替代，这个行为比笼统声称框架不好是更强的证据。第三，跨平台重复投诉比孤立意见权重更高。同一主题出现在 Reddit 部署故事、HN 工程辩论和 X/Twitter 研究评论中，表明这是一个结构性问题。第四，声明与测量需分离。关于基准提升的病毒式帖子对追踪叙事有用，但生产痛点需要关于可靠性、成本、安全和维护的证据。
 
-The local corpus contains three complementary sources of evidence. Reddit threads tend to provide lived experience: long-running agents, local automation attempts, cost surprises, framework adoption failures, memory frustrations, and practical evaluation gaps. Hacker News discussions tend to provide engineering critique: abstraction leakage, API hallucination, benchmark contamination, self-modification risk, and skepticism about recursive improvement. X/Twitter contributes a high-velocity research and product narrative: new systems, claimed gains, emerging safety concerns, and compressed comparisons. None of these platforms alone is representative. Together, they form a triangulated map of what builders notice when agent evolution moves from paper to practice.
+本地语料库包含三个互补的证据来源。Reddit 线程倾向于提供生活经验：长时间运行的智能体、本地自动化尝试、成本意外、框架采用失败、记忆挫折和实际评估差距。Hacker News 讨论倾向于提供工程批判：抽象泄漏、API 幻觉、基准污染、自修改风险和对递归改进的怀疑。X/Twitter 贡献高速研究和产品叙事：新系统、声称的增益、新兴安全问题和压缩比较。这些平台单独都不具有代表性。但组合起来，它们构成了当智能体进化从论文走向实践时构建者注意到的三角验证图。
 
-The coding of 97 pain points into 15 categories creates an empirical taxonomy rather than a theoretical one. The top categories are agent reliability in production, self-improvement feasibility, framework/tooling gaps, evaluation and benchmarking, knowledge and memory persistence, and safety/security/cost. The counts should not be interpreted as exact market prevalence, because the corpus is community-sampled and platform-biased. They are better understood as directional evidence of where friction is dense. A category with fewer items but critical severity, such as misevolution or production proof gaps, may still deserve high research priority because a single failure can make deployment unacceptable.
+将97个痛点编码为15个类别创建了实证分类而非理论分类。排名靠前的类别是生产环境中的智能体可靠性、自改进可行性、框架/工具缺陷、评估与基准测试、知识与记忆持久化、安全/成本治理。这些计数不应被解读为精确的市场普遍程度，因为语料库是社区采样且存在平台偏差。它们更适合理解为摩擦密集方向的方向性证据。项目较少但严重度极高的类别，如误进化或生产证明缺失，仍可能值得高研究优先级，因为单次故障就可能使部署变得不可接受。
 
-\subsubsection{Pain Point Taxonomy by Severity}
+\subsubsection{按严重度划分的痛点分类}
 \label{sec:ch7-taxonomy-english}
 
-Severity is different from frequency. A frequent annoyance, such as dependency bloat, can slow adoption but may be solved by better packaging. A less frequent issue, such as unsafe self-modification or runaway spending, can block deployment entirely. The taxonomy therefore separates pain points into four severity bands: critical blockers, high-severity engineering gaps, medium adoption frictions, and long-tail standardization problems.
+严重度不同于频率。一个频繁出现的烦恼，如依赖膨胀，可能减缓采用但可通过更好的打包解决。一个不太频繁的问题，如不安全的自修改或失控支出，可能直接阻止部署。因此，分类将痛点分为四个严重度层级：关键阻断因素、高严重度工程缺口、中等采用摩擦和长尾标准化问题。
 
-Critical blockers are failures that prevent trust in autonomous or self-evolving systems. The corpus identifies six recurring blockers. First, agents remain too unreliable for production workflows where 80 percent success is failure, not progress. Second, self-improvement is not yet trusted because feedback loops still require humans, drift without verifiers, and plateau after shallow gains. Third, safety and cost incidents can scale quickly when agents call tools, retry loops, or mutate prompts. Fourth, production proof is sparse: users repeatedly ask for evidence of real deployed self-improving agents rather than demos. Fifth, misevolution introduces dynamic risk: an agent may learn the wrong lesson, store it, and apply it later. Sixth, evaluation is circular when the agent, judge, and benchmark are not independent.
+关键阻断因素是阻碍对自主或自进化系统建立信任的故障。语料库识别出六个反复出现的阻断因素。第一，智能体对于生产工作流仍然过于不可靠——80\%的成功率是失败而非进步。第二，自改进尚未获得信任，因为反馈循环仍需要人工参与，缺乏验证器时会漂移，在浅层增益后停滞。第三，当智能体调用工具、循环重试或变异提示时，安全和成本事件可能快速放大。第四，生产证明稀缺：用户反复要求真实部署的自改进智能体证据而非演示。第五，误进化引入动态风险：智能体可能学到错误教训、存储它并在之后应用。第六，当智能体、评判者和基准测试不独立时，评估是循环的。
 
-High-severity engineering gaps are problems that do not always prevent deployment but make it expensive and fragile. Framework opacity is a dominant example. Developers complain when they cannot inspect the exact prompt, state, tool payload, retry rule, or model response that caused a failure. Memory persistence is another: agents start from scratch across sessions, but naive memory creates context bloat, stale rules, and privacy risk. Benchmark mismatch is also high severity. Static coding benchmarks are useful, but many users need administrative, legal, sales, operational, research, or customer-support reliability. A leaderboard score does not automatically translate to those domains.
+高严重度工程缺口是不一定阻止部署但使其昂贵且脆弱的问题。框架不透明性是一个典型例子。开发者无法检查导致故障的确切提示、状态、工具载荷、重试规则或模型响应时就会抱怨。记忆持久性是另一个问题：智能体在跨会话时从零开始，但简单的记忆实现会导致上下文膨胀、过时规则和隐私风险。基准不匹配也是高严重度的。静态编码基准有用，但许多用户需要行政、法律、销售、运营、研究或客户支持方面的可靠性。排行榜分数不自动转化为这些领域。
 
-Medium-severity frictions affect adoption speed and maintenance. These include framework churn, fragmented APIs, unclear standards, confusing multi-agent abstractions, and insufficient examples for real deployment. They are less catastrophic than safety failures, but they accumulate. A team may abandon a framework not because it failed once, but because every debugging session requires peeling back abstractions, patching dependencies, and guessing what state the agent actually observed.
+中等严重度摩擦影响采用速度和维护。包括框架更替、碎片化API、不明确的标准、令人困惑的多智能体抽象以及真实部署示例不足。它们不如安全故障灾难性，但会累积。一个团队可能放弃框架不是因为一次失败，而是因为每次调试会话都需要剥开抽象、修补依赖并猜测智能体实际观察到的状态。
 
-Long-tail standardization problems include inconsistent definitions of ``agent,'' ``self-evolution,'' ``memory,'' and ``production-ready.'' These problems sound semantic, but they shape evaluation. If a system that merely retries a prompt is marketed as self-improving, users cannot distinguish shallow control-flow from durable learning. If a framework calls every role prompt an agent, multi-agent claims become hard to compare. If a benchmark ignores cost and human intervention, production claims become inflated.
+长尾标准化问题包括``agent''、``self-evolution''、``memory''和``production-ready''定义不一致。这些问题听起来是语义性的，但它们塑造评估。如果一个仅仅重试提示的系统被宣传为自改进，用户无法区分浅层控制流与持久学习。如果框架将每个角色提示称为智能体，多智能体声明就变得难以比较。如果基准测试忽略成本和人工干预，生产声明就会被夸大。
 
 \begin{table}[htbp]
 \centering
 \small
 \begin{tabular}{p{0.2\textwidth}p{0.33\textwidth}p{0.34\textwidth}}
 \toprule
-\textbf{Severity band} & \textbf{Representative pain points} & \textbf{Implication for agent evolution} \\
+\textbf{严重度层级} & \textbf{代表性痛点} & \textbf{对智能体进化的启示} \\
 \midrule
-Critical & Production unreliability, unsafe self-modification, runaway cost, circular evaluation, misevolution, lack of production proof & Requires independent evaluators, rollback, budget gates, human escalation, and lineage before autonomy can expand \\
-High & Framework opacity, memory persistence, benchmark mismatch, debugging difficulty, deployment fragility & Requires observability, state replay, memory governance, and evaluation beyond static leaderboards \\
-Medium & Ecosystem churn, dependency bloat, unclear abstractions, multi-agent overhead, standards gaps & Requires minimal sufficient abstractions, stable interfaces, and transparent framework contracts \\
-Long-tail & Terminology confusion, narrow demos, modest absolute gains, missing domain-specific benchmarks & Requires reporting norms and domain-specific evidence rather than generic agent claims \\
+关键 & 生产不可靠性、不安全自修改、失控成本、循环评估、误进化、缺乏生产证明 & 需要独立评估器、回滚机制、预算门控、人工升级和谱系追踪，自主性才能扩展 \\
+高 & 框架不透明、记忆持久性、基准不匹配、调试困难、部署脆弱性 & 需要可观测性、状态重放、记忆治理和超越静态排行榜的评估 \\
+中 & 生态系统更替、依赖膨胀、不清晰抽象、多智能体开销、标准缺口 & 需要最小充分抽象、稳定接口和透明框架契约 \\
+长尾 & 术语混淆、狭窄演示、有限绝对增益、缺失领域特定基准 & 需要报告规范和领域特定证据，而非通用智能体声明 \\
 \bottomrule
 \end{tabular}
-\caption{Severity-oriented taxonomy of Mom Test pain points. Frequency identifies common friction; severity identifies deployment blockers.}
+\caption{基于严重度的 Mom Test 痛点分类。频率识别常见摩擦；严重度识别部署阻断因素。}
 \label{tab:ch7-severity-taxonomy-english}
 \end{table}
 
-\subsubsection{Reliability and Robustness Pain Points}
+\subsubsection{可靠性与鲁棒性痛点}
 \label{sec:ch7-reliability-english}
 
-Reliability is the most repeated practical concern. Users report that agents can work impressively in demos and still fail in real workflows because real workflows contain ambiguous inputs, stale APIs, missing permissions, partial failures, conflicting instructions, and long state histories. A model that succeeds on a short benchmark may fail when it must call tools, recover from tool errors, maintain a plan, avoid hallucinated APIs, and decide when to stop.
+可靠性是最常被提及的实际问题。用户报告智能体在演示中表现出色，但在真实工作流中失败，因为真实工作流包含模糊输入、过时API、缺失权限、部分失败、冲突指令和长状态历史。在短基准测试上成功的模型可能在需要调用工具、从工具错误中恢复、维护计划、避免幻觉API并决定何时停止时失败。
 
-The reliability pain point has several layers. At the output layer, agents hallucinate facts, APIs, file paths, citations, or tool capabilities. At the process layer, they fail to recover from errors, repeat actions, or drift from the original goal. At the session layer, they lose context, forget constraints, or rewrite code from memory instead of preserving exact existing content. At the workflow layer, they cannot guarantee completion across many steps. At the organization layer, their errors create hidden human labor: checking, rerunning, debugging, explaining, and cleaning up.
+可靠性痛点有多个层次。在输出层，智能体会幻觉事实、API、文件路径、引用或工具能力。在过程层，它们无法从错误中恢复、重复操作或偏离原始目标。在会话层，它们丢失上下文、遗忘约束或凭记忆重写代码而非保留精确已有内容。在工作流层，它们无法保证跨多步骤完成。在组织层，它们的错误产生隐性人工劳动：检查、重运行、调试、解释和清理。
 
-A recurring phrase in the corpus is the reliability ceiling. Users do not need an agent that works most of the time for low-risk demos; they need a system whose failure rate is compatible with the business process. In customer support, a small hallucination rate can create policy violations. In coding, a patch that passes visible tests but breaks hidden behavior can cost more than manual work. In operations, an agent that loops indefinitely can trigger cost and security alarms. Therefore reliability is not a single score. It is a distribution over tasks, time, and failure consequences.
+语料库中反复出现的短语是可靠性天花板。用户需要的不是一个在低风险演示中大部分时间有效的智能体；他们需要的是一个失败率与业务流程兼容的系统。在客户支持中，小的幻觉率可能造成政策违规。在编码中，一个通过可见测试但破坏隐藏行为的补丁可能比手工工作成本更高。在运营中，无限循环的智能体可能触发成本和安全警报。因此，可靠性不是单一分数，而是任务、时间和失败后果上的分布。
 
-Robustness requires error recovery. A reliable agent should know when it is uncertain, when a tool result contradicts its plan, when a generated API is not documented, when a file changed under it, and when to ask for help. Many current systems instead respond to failure by trying another plausible completion. That may be acceptable for brainstorming but not for production. The needed behavior is closer to fault-tolerant software: detect, isolate, retry with constraints, degrade gracefully, and escalate.
+鲁棒性需要错误恢复。一个可靠的智能体应该知道何时不确定、工具结果何时与计划矛盾、生成的API何时未被文档记录、文件何时在它之下被更改、何时应该寻求帮助。许多当前系统不是这样，而是通过尝试另一个看似合理的补全来响应失败。这对头脑风暴可能可接受，但对生产不可接受。所需行为更接近容错软件：检测、隔离、带约束重试、优雅降级和升级。
 
-Self-evolution can help reliability only if the feedback loop is grounded. Reflexion-style memory can store failure lessons, but an incorrect lesson can worsen future behavior. Self-Refine-style critique can catch omissions, but ungrounded critique may simply produce more confident prose. Code execution can expose errors, but tests may be incomplete. The corpus therefore supports a conservative design principle: reliability loops should prefer external evidence over self-judgment. If a task can be checked by a compiler, test, schema, database constraint, or independent evaluator, that signal should dominate natural-language self-assessment.
+自进化只有在反馈循环有根据时才能帮助可靠性。Reflexion 风格的记忆可以存储失败教训，但不正确的教训可能恶化未来行为。Self-Refine 风格的批评可以捕获遗漏，但无根据的批评可能只产生更自信的文本。代码执行可以暴露错误，但测试可能不完整。因此语料库支持一个保守设计原则：可靠性循环应优先使用外部证据而非自我判断。如果任务可以由编译器、测试、模式、数据库约束或独立评估器检查，该信号应主导自然语言自我评估。
 
-\subsubsection{Development and Debugging Pain Points}
+\subsubsection{开发与调试痛点}
 \label{sec:ch7-debugging-english}
 
-The development pain points center on observability. Builders repeatedly complain that agent frameworks hide the information needed to debug failures: prompts are composed internally, tool calls are wrapped in abstractions, state is spread across callbacks, and retries happen without clear traces. When the system fails, the developer cannot easily answer basic questions: what did the model see, what did it decide, what tool arguments did it produce, what was returned, what was stored in memory, and why did the next step happen?
+开发痛点的核心是可观测性。构建者反复抱怨智能体框架隐藏了调试故障所需的信息：提示在内部组合、工具调用被抽象包装、状态分散在回调中、重试没有清晰追踪。当系统失败时，开发者无法轻松回答基本问题：模型看到了什么、它决定了什么、它产生了什么工具参数、返回了什么、记忆中存储了什么、下一步为什么发生？
 
-This is why some teams abandon high-level frameworks and return to explicit control loops. Plain API calls, typed schemas, small functions, and visible prompts may look less elegant than a full agent framework, but they make debugging tractable. The pain point is not anti-framework; it is anti-black-box. A useful framework should make the agent more observable than hand-written glue code, not less.
+这就是为什么一些团队放弃高级框架并回归显式控制循环。纯 API 调用、类型化模式、小函数和可见提示可能看起来不如完整智能体框架优雅，但它们使调试可行。痛点不是反框架；而是反黑箱。一个有用的框架应该使智能体比手写粘合代码更可观测，而非更不可观测。
 
-Debugging is harder for self-evolving agents because the system can change between failures. A static application has a fixed code path; an evolving agent may have changed its prompt, memory, tool set, routing policy, or evaluator. A developer debugging yesterday's failure needs the exact ancestor state, not just the current system. This creates a requirement for lineage: versioned prompts, versioned memory, versioned tools, versioned evaluators, and replayable traces.
+对于自进化智能体，调试更困难，因为系统可能在故障之间发生变化。静态应用有固定代码路径；进化智能体可能已更改其提示、记忆、工具集、路由策略或评估器。开发者调试昨天的故障需要确切的祖先状态，而不仅仅是当前系统。这产生了对谱系的需求：版本化的提示、版本化的记忆、版本化的工具、版本化的评估器和可重放的追踪。
 
-The corpus also highlights dependency and deployment friction. Large virtual environments, rapidly changing APIs, undocumented framework behavior, and incompatible plugin ecosystems make it difficult to maintain agent systems over time. These problems are not glamorous, but they decide adoption. A self-improvement method that requires fragile infrastructure will be ignored by teams that need stable operations.
+语料库还强调了依赖和部署摩擦。大型虚拟环境、快速变化的API、未文档化的框架行为和不兼容的插件生态系统使智能体系统的长期维护变得困难。这些问题不够吸引眼球，但它们决定采用率。一个需要脆弱基础设施的自改进方法将被需要稳定运营的团队忽略。
 
-A production-grade debugging stack for self-evolving agents should include: full prompt visibility; structured tool-call logs; state snapshots; deterministic replay where possible; trace-level diffing between successful and failed runs; memory provenance; cost attribution per step; evaluator decisions with inputs; and rollback pointers for every persistent change. Without these features, self-evolution increases the debugging surface faster than it increases capability.
+生产级自进化智能体调试栈应包括：完整提示可见性；结构化工具调用日志；状态快照；尽可能的确定性重放；成功和失败运行之间的追踪级差异；记忆来源；每步成本归因；包含输入的评估器决策；以及每个持久变更的回滚指针。没有这些功能，自进化增加调试面的速度快于增加能力。
 
-\subsubsection{Production and Deployment Pain Points}
+\subsubsection{生产与部署痛点}
 \label{sec:ch7-production-english}
 
-The production gap is the strongest cross-platform theme: systems that are compelling in demos fail under real operational constraints. Production imposes requirements that benchmarks rarely measure. The agent must meet latency budgets, control cost, handle malformed inputs, obey permissions, preserve data boundaries, integrate with existing systems, survive dependency updates, expose telemetry, support incident response, and provide predictable failure modes.
+生产差距是最强的跨平台主题：在演示中令人信服的系统在真实运营约束下失败。生产施加了基准测试很少测量的要求。智能体必须满足延迟预算、控制成本、处理格式错误的输入、遵守权限、保留数据边界、与现有系统集成、在依赖更新后存活、暴露遥测、支持事件响应并提供可预测的失败模式。
 
-One major production pain point is cost opacity. Multi-step agents can multiply model calls through planning, tool selection, reflection, verification, retry, and summarization. Multi-agent systems multiply this again by adding manager, worker, critic, reviewer, and judge roles. Self-evolution multiplies it further by generating variants, testing candidates, and preserving archives. Users report fear of runaway loops and unexpected bills because the system does not know when exploration has stopped being useful.
+一个主要的生产痛点是成本不透明性。多步骤智能体可以通过规划、工具选择、反思、验证、重试和摘要成倍增加模型调用。多智能体系统通过添加管理者、工作者、批评者、审查者和评判者角色再次倍增。自进化通过生成变体、测试候选者和保留归档进一步倍增。用户报告对失控循环和意外账单的恐惧，因为系统不知道探索何时已停止产生价值。
 
-Another production pain point is human labor displacement versus human labor relocation. Agents may automate first drafts or simple tasks, but the labor reappears as monitoring, prompt repair, data cleaning, evaluation design, and manual verification. A benchmark may count the solved task but ignore the human time spent deciding whether the solution is safe. This is why users ask for session-level evaluation rather than only final-answer accuracy. The cost of supervision is part of the system.
+另一个生产痛点是人工劳动替代与人工劳动转移。智能体可能自动化初稿或简单任务，但劳动以监控、提示修复、数据清理、评估设计和手动验证的形式重新出现。基准测试可能计算已解决的任务，但忽略决定解决方案是否安全所花费的人工时间。这就是为什么用户要求会话级评估而非仅最终答案准确率。监督成本是系统的一部分。
 
-Deployment also requires organizational fit. A self-evolving agent cannot be treated as an isolated model. It becomes part of change management. Who approves a memory update? Who reviews a self-modified prompt? Who owns a failed tool call? Who can pause the agent? What logs are retained? What data can be stored? Which operations require human approval? These questions are mundane, but they determine whether an agent can be deployed in an enterprise.
+部署还需要组织适配。自进化智能体不能被视为孤立的模型。它成为变更管理的一部分。谁批准记忆更新？谁审查自修改的提示？谁拥有失败的工具调用？谁可以暂停智能体？保留什么日志？可以存储什么数据？哪些操作需要人工批准？这些问题很平凡，但它们决定智能体能否在企业中部署。
 
-The path from demo to production should therefore be staged. Stage one is offline experimentation with frozen data and explicit metrics. Stage two is shadow mode, where the agent proposes actions but humans execute or reject them. Stage three is limited autonomy on low-risk tasks with strict budgets. Stage four is monitored autonomy with rollback and incident response. Stage five is selective self-evolution, where only low-risk components can update automatically and high-risk changes require review. The corpus suggests that many failures happen when teams jump from stage one to stage four without building the intervening controls.
+因此，从演示到生产的路径应该是分阶段的。第一阶段是使用冻结数据和明确指标的离线实验。第二阶段是影子模式，智能体提议行动但人类执行或拒绝。第三阶段是在低风险任务上的有限自主性，有严格预算。第四阶段是有回滚和事件响应的监控自主性。第五阶段是选择性自进化，仅低风险组件可以自动更新，高风险变更需要审查。语料库表明许多失败发生在团队从第一阶段直接跳到第四阶段时，没有构建中间控制。
 
-\subsubsection{Framework Gap Analysis}
+\subsubsection{框架差距分析}
 \label{sec:ch7-framework-gap-english}
 
-Framework complaints are among the clearest Mom Test signals because users often reveal their preferences through migration. When developers remove a framework after trying it, the pain point is not theoretical. The corpus identifies five framework gaps: transparency, state management, deployment simplicity, evaluation integration, and governance.
+框架投诉是最清晰的 Mom Test 信号之一，因为用户经常通过迁移揭示偏好。当开发者在尝试后移除一个框架时，痛点不是理论性的。语料库识别出五个框架差距：透明性、状态管理、部署简易性、评估集成和治理。
 
-Transparency means that prompts, model inputs, tool payloads, memory retrievals, and outputs must be inspectable. Frameworks that hide prompts behind chains or role abstractions make it difficult to debug and audit behavior. State management means that long-running workflows need explicit, typed, replayable state rather than implicit conversation history. Deployment simplicity means that a framework should not require heavy dependencies, unclear runtime assumptions, or fragile plugin stacks for simple workflows. Evaluation integration means that tests, traces, and regression suites should be first-class components. Governance means permissions, budgets, approvals, and rollback should be built into the framework rather than bolted on later.
+透明性意味着提示、模型输入、工具载荷、记忆检索和输出必须可检查。将提示隐藏在链或角色抽象之后的框架使调试和审计行为变得困难。状态管理意味着长时间运行的工作流需要显式的、类型化的、可重放的状态而非隐式对话历史。部署简易性意味着框架不应为简单工作流需要重度依赖、不明确的运行时假设或脆弱的插件栈。评估集成意味着测试、追踪和回归套件应是一等组件。治理意味着权限、预算、审批和回滚应内置在框架中而非事后附加。
 
-The framework gap is partly caused by a mismatch between demo ergonomics and production ergonomics. Demo frameworks optimize for quick construction: define roles, add tools, run a task. Production frameworks must optimize for inspection: what happened, why, under what version, at what cost, and with what risk. A framework that makes the first demo easy but the tenth incident hard will be abandoned.
+框架差距部分源于演示人机工程学与生产人机工程学之间的不匹配。演示框架优化快速构建：定义角色、添加工具、运行任务。生产框架必须优化检查：发生了什么、为什么、在什么版本下、以什么成本、带有什麽风险。使第一个演示容易但第十个事件处理困难的框架将被抛弃。
 
-Multi-agent abstractions deserve special caution. The team metaphor is intuitive, but it can hide cost and reliability problems. Multiple agents may produce richer deliberation, but they may also amplify hallucinations, converge to shared mistakes, or spend tokens negotiating without adding evidence. A multi-agent framework should therefore justify each role with an independent information source, evaluator, or responsibility boundary. Otherwise, role proliferation is only expensive sampling.
+多智能体抽象值得特别谨慎。团队隐喻直观，但可能隐藏成本和可靠性问题。多个智能体可能产生更丰富的审议，但也可能放大幻觉、趋同于共同错误或在协商上花费 token 而不增加证据。因此，多智能体框架应该用独立信息源、评估器或责任边界来证明每个角色的合理性。否则，角色增殖只是昂贵的采样。
 
-A useful framework for self-evolution would expose the evolution loop as a controlled pipeline: candidate generation, evaluation, selection, persistence, rollback, and audit. It would make every persistent artifact visible: prompts, memories, skills, tools, tests, policies, and evaluators. It would allow local experimentation while preventing unreviewed global changes. It would treat observability and governance as product features, not enterprise afterthoughts.
+一个有用的自进化框架会将进化循环暴露为受控流水线：候选生成、评估、选择、持久化、回滚和审计。它会使每个持久产物可见：提示、记忆、技能、工具、测试、策略和评估器。它允许本地实验同时防止未经审查的全局变更。它将可观测性和治理视为产品功能，而非企业事后补充。
 
 \begin{table}[htbp]
 \centering
 \small
 \begin{tabular}{p{0.18\textwidth}p{0.32\textwidth}p{0.36\textwidth}}
 \toprule
-\textbf{Framework gap} & \textbf{Observed user pain} & \textbf{Required capability} \\
+\textbf{框架差距} & \textbf{观察到的用户痛点} & \textbf{所需能力} \\
 \midrule
-Prompt opacity & Developers cannot see what was actually sent to the model & Prompt and payload tracing as first-class artifacts \\
-State ambiguity & Failures cannot be replayed because state is implicit & Typed state snapshots and deterministic replay where possible \\
-Tool opacity & Tool calls are hidden behind abstractions & Structured logs for arguments, outputs, retries, and errors \\
-Evaluation gap & Frameworks orchestrate demos but do not measure sessions & Integrated regression tests, trace scoring, and cost metrics \\
-Governance gap & Self-modification lacks approval and rollback & Versioned artifacts, policy gates, and lineage audit \\
+提示不透明 & 开发者无法看到实际发送给模型的内容 & 提示和载荷追踪作为一等产物 \\
+状态模糊 & 故障无法重放，因为状态是隐式的 & 类型化状态快照和尽可能的确定性重放 \\
+工具不透明 & 工具调用被抽象隐藏 & 参数、输出、重试和错误的结构化日志 \\
+评估缺口 & 框架编排演示但不测量会话 & 集成回归测试、追踪评分和成本指标 \\
+治理缺口 & 自修改缺乏审批和回滚 & 版本化产物、策略门控和谱系审计 \\
 \bottomrule
 \end{tabular}
-\caption{Framework gaps identified from Mom Test evidence and their corresponding production requirements.}
+\caption{从 Mom Test 证据识别的框架差距及其对应的生产需求。}
 \label{tab:ch7-framework-gap-english}
 \end{table}
 
-\subsubsection{Data-Driven Pain Point Quantification}
+\subsubsection{数据驱动的痛点量化}
 \label{sec:ch7-quantification-english}
 
-The corpus-level counts provide a quantitative skeleton for the qualitative analysis. Across 131 analyzed posts, the local Mom Test summary extracts 97 distinct pain points. The platform split is 47 Reddit pain points, 36 Hacker News pain points, and 14 X/Twitter pain points. The top categories by count are agent reliability in production, self-improvement feasibility, framework/tooling gaps, knowledge and memory persistence, evaluation and benchmarking, and safety/security/cost. These categories account for the majority of observed friction.
+语料库级别的计数为定性分析提供了定量骨架。在131篇分析帖子中，本地 Mom Test 摘要提取了97个独立痛点。平台分布为 Reddit 47个痛点、Hacker News 36个痛点和 X/Twitter 14个痛点。按计数排名靠前的类别是生产环境中的智能体可靠性、自改进可行性、框架/工具缺陷、知识与记忆持久化、评估与基准测试和安全/成本治理。这些类别占观察到摩擦的大部分。
 
-Quantification should be interpreted carefully. The corpus is not a random sample of all users. It overrepresents technically engaged communities and people motivated enough to post about success or failure. But this bias is useful for an early technical field: advanced users often encounter production failure modes before mainstream users do. Their complaints are leading indicators.
+量化应谨慎解读。语料库不是所有用户的随机样本。它过度代表技术参与社区和有动力发布成功或失败的人。但这种偏差对早期技术领域有用：高级用户往往在主流用户之前遇到生产失败模式。他们的投诉是领先指标。
 
-The most important quantitative result is the concentration of pain points around operational trust. Reliability, self-improvement feasibility, memory persistence, evaluation, and safety/cost are not separate problems. They are parts of one trust stack. An agent is not trusted if it fails unpredictably. It is not trusted if it cannot explain or improve from failures. It is not trusted if memory is absent or unsafe. It is not trusted if benchmarks can be gamed. It is not trusted if cost and permissions are uncontrolled. Therefore solving any one category in isolation will not be enough.
+最重要的定量结果是痛点围绕运营信任的集中。可靠性、自改进可行性、记忆持久化、评估和安全/成本不是独立问题。它们是一个信任栈的组成部分。如果智能体不可预测地失败，它不被信任。如果它不能解释或从失败中改进，它不被信任。如果记忆缺失或不安全，它不被信任。如果基准测试可以被操控，它不被信任。如果成本和权限不受控制，它不被信任。因此，孤立地解决任何一个类别都不够。
 
-A second quantitative observation is that framework/tooling complaints are nearly as frequent as algorithmic complaints. This matters for research strategy. Better self-improvement algorithms will not automatically translate into adoption if developers cannot observe, test, deploy, and govern them. Conversely, a modest algorithm inside a strong framework may create more real value than a sophisticated algorithm inside an opaque research prototype.
+第二个定量观察是框架/工具投诉几乎与算法投诉一样频繁。这对研究策略很重要。更好的自改进算法不会自动转化为采用率，如果开发者无法观察、测试、部署和治理它们。反之，强框架中适度的算法可能比不透明研究原型中复杂的算法创造更多实际价值。
 
-A third observation is that low-frequency categories can still be high priority. Misevolution appears less often than reliability, but its severity is critical because it describes dynamic, persistent, and potentially compounding failure. Enterprise governance appears as a small count, but any organization deploying agents at scale will eventually need it. Counts identify where pain is common; severity identifies where pain is existential.
+第三个观察是低频类别仍可能是高优先级。误进化出现频率低于可靠性，但其严重度是关键的，因为它描述了动态的、持久的和潜在复合的故障。企业治理作为小计数出现，但任何大规模部署智能体的组织最终都需要它。计数识别痛苦常见之处；严重度识别痛苦致命之处。
 
 \begin{table}[htbp]
 \centering
 \small
 \begin{tabular}{lrrp{0.42\textwidth}}
 \toprule
-\textbf{Category} & \textbf{Count} & \textbf{Severity} & \textbf{Research implication} \\
+\textbf{类别} & \textbf{计数} & \textbf{严重度} & \textbf{研究启示} \\
 \midrule
-Agent reliability in production & 12 & Critical & Need session-level robustness, recovery, and failure-mode metrics \\
-Self-improvement feasibility & 12 & Critical & Need grounded feedback loops, verifier independence, and plateau analysis \\
-Framework/tooling gaps & 11 & High & Need transparent, replayable, testable agent frameworks \\
-Knowledge and memory persistence & 10 & High & Need governed memory with provenance, pruning, and retrieval evaluation \\
-Evaluation and benchmarking & 9 & High & Need dynamic, hidden, process-aware, and domain-specific benchmarks \\
-Safety, security, and cost & 7 & Critical & Need budgets, sandboxes, permission control, and lineage audit \\
-Human-agent collaboration & 5 & Medium & Need handoff protocols, review UX, and escalation paths \\
-Real-world deployment gap & 5 & High & Need production case studies and operational maturity models \\
-Misevolution/unintended evolution & 3 & Critical & Need drift monitors, rollback, and adversarial evaluation over time \\
-Definitions and standards & 3 & Medium & Need reporting schemas for what changed, how, and under which evaluator \\
+生产环境智能体可靠性 & 12 & 关键 & 需要会话级鲁棒性、恢复和失败模式指标 \\
+自改进可行性 & 12 & 关键 & 需要有根据的反馈循环、验证器独立性和停滞分析 \\
+框架/工具缺陷 & 11 & 高 & 需要透明、可重放、可测试的智能体框架 \\
+知识与记忆持久化 & 10 & 高 & 需要有来源、修剪和检索评估的受治理记忆 \\
+评估与基准测试 & 9 & 高 & 需要动态、隐藏、过程感知和领域特定的基准 \\
+安全、安全和成本 & 7 & 关键 & 需要预算、沙箱、权限控制和谱系审计 \\
+人-智能体协作 & 5 & 中 & 需要交接协议、审查用户体验和升级路径 \\
+真实部署差距 & 5 & 高 & 需要生产案例研究和运营成熟度模型 \\
+误进化/非预期进化 & 3 & 关键 & 需要漂移监控、回滚和长期对抗性评估 \\
+定义与标准 & 3 & 中 & 需要关于变更了什么、如何变更以及在哪个评估器下的报告模式 \\
 \bottomrule
 \end{tabular}
-\caption{Quantified pain-point categories from the local Mom Test summary. Counts are directional indicators, while severity indicates deployment risk.}
+\caption{本地 Mom Test 摘要中的量化痛点类别。计数是方向性指标，严重度表示部署风险。}
 \label{tab:ch7-quantified-categories-english}
 \end{table}
 
-\subsubsection{Implications for Agent Self-Evolution Research}
+\subsubsection{对智能体自进化研究的启示}
 \label{sec:ch7-research-implications-english}
 
-The pain-point evidence changes the research agenda in five ways. First, reliability must be evaluated longitudinally. A one-time benchmark score is insufficient for a system that claims to learn. Researchers should report performance across repeated sessions, environment changes, memory updates, and regression suites. Second, feedback quality should be treated as a first-class variable. Self-improvement without reliable feedback is merely self-modification. Third, memory should be evaluated as an evolving database, not as a longer prompt. It needs provenance, conflict resolution, compression, forgetting, and poisoning defense.
+痛点证据以五种方式改变了研究议程。第一，可靠性必须进行纵向评估。一次性基准分数对于声称能学习的系统是不够的。研究者应报告跨重复会话、环境变化、记忆更新和回归套件的性能。第二，反馈质量应被视为一等变量。没有可靠反馈的自改进仅仅是自修改。第三，记忆应作为进化数据库评估，而非更长的提示。它需要来源追踪、冲突解决、压缩、遗忘和投毒防御。
 
-Fourth, cost should be part of every method claim. A method that improves success by increasing calls tenfold may be useful in research but unacceptable in production. Reports should include token cost, tool-call cost, wall-clock time, failed-candidate ratio, and human review time. Fifth, safety must be integrated into the loop. Sandboxing after the fact is not enough if the agent can write unsafe lessons into memory or weaken its own evaluator. The loop itself must be designed with permissions, gates, and rollback.
+第四，成本应成为每个方法声明的一部分。一个通过增加十倍调用来提高成功率的方法可能在研究中有用但在生产中不可接受。报告应包括 token 成本、工具调用成本、挂钟时间、失败候选比率和人工审查时间。第五，安全必须集成到循环中。事后沙箱不够，如果智能体可以将不安全教训写入记忆或削弱自己的评估器。循环本身必须设计有权限、门控和回滚。
 
-The pain points also suggest which research directions are likely to have high practical impact. Verifier construction is central because many self-improvement loops plateau without trusted feedback. Session-level evaluation is central because users care about complete workflows, not isolated answers. Memory governance is central because cross-session learning is one of the most requested capabilities and one of the most dangerous if implemented naively. Framework observability is central because hidden prompts and state prevent adoption. Cost-aware search is central because open-ended evolution can otherwise become economically irrational.
+痛点还表明哪些研究方向可能具有高实际影响。验证器构建是核心，因为许多自改进循环在没有可信反馈时停滞。会话级评估是核心，因为用户关心完整工作流而非孤立答案。记忆治理是核心，因为跨会话学习是最被请求的能力之一，也是朴素实现中最危险的能力之一。框架可观测性是核心，因为隐藏的提示和状态阻止采用。成本感知搜索是核心，因为开放式进化否则可能变得经济上不合理。
 
-\subsubsection{Implications for Awesome-Evolution as a Resource}
+\subsubsection{对 Awesome-Evolution 资源项目的启示}
 \label{sec:ch7-awesome-evolution-implications-english}
 
-For the Awesome-Evolution project, the pain-point corpus implies that a useful resource should not only celebrate new papers and repositories. It should classify resources by the production problems they address. A repository that offers benchmark gains should be tagged with its evaluator type, cost profile, and safety boundary. A framework should be tagged with whether prompts are visible, whether state is replayable, whether tools are logged, whether memory is versioned, and whether rollback exists. A paper should be tagged with whether improvement is inference-time, training-time, memory-based, self-play-based, or code-modifying.
+对于 Awesome-Evolution 项目，痛点语料库意味着有用的资源不应仅仅赞颂新论文和仓库。它应该按生产问题分类资源。一个提供基准提升的仓库应标记其评估器类型、成本概况和安全边界。一个框架应标记提示是否可见、状态是否可重放、工具是否被记录、记忆是否有版本、回滚是否存在。一篇论文应标记改进是推理时、训练时、基于记忆的、基于自博弈的还是代码修改的。
 
-The project should also surface negative evidence. Users need to know not only which systems work, but where they fail. A mature resource could include pain-point badges: production reliability, memory governance, evaluation independence, cost control, framework transparency, security boundary, and deployment proof. It could separate research prototypes from production case studies. It could maintain a list of benchmark caveats and known contamination risks. It could link each self-evolution mechanism to required safeguards.
+项目还应展示负面证据。用户不仅需要知道哪些系统有效，还需要知道它们在哪里失败。一个成熟的资源可以包含痛点徽章：生产可靠性、记忆治理、评估独立性、成本控制、框架透明性、安全边界和部署证明。它可以分离研究原型和生产案例研究。它可以维护基准注意事项和已知污染风险列表。它可以将每个自进化机制链接到所需的安全保障。
 
-The most valuable practical artifact may be a checklist for self-evolving agent deployment. Before adopting a system, a team should ask: What changes over time? Who or what evaluates the change? Can the evaluator be gamed? Is there a hidden test or independent gate? What is the cost budget? What gets stored in memory? Can memory be inspected and deleted? What permissions does the agent have? What happens on loop failure? How is rollback performed? Who approves high-risk changes? If a project cannot answer these questions, it is not production-ready no matter how impressive its demo looks.
+最有价值的实用产物可能是自进化智能体部署检查清单。在采用系统之前，团队应问：什么随时间变化？谁或什么评估变更？评估器可以被操控吗？是否有隐藏测试或独立门控？成本预算是多少？什么被存储在记忆中？记忆可以被检查和删除吗？智能体有什么权限？循环失败时会发生什么？如何执行回滚？谁批准高风险变更？如果项目无法回答这些问题，无论其演示多么令人印象深刻，它都不是生产就绪的。
 
-\subsubsection{Conclusion: Pain Points as Design Requirements}
+\subsubsection{结论：痛点作为设计需求}
 \label{sec:ch7-conclusion-english}
 
-The Mom Test evidence converts user frustration into design requirements. Production reliability requires robust error recovery, not just better prompts. Self-improvement feasibility requires grounded feedback and independent evaluation, not just reflection. Framework usefulness requires observability, not only abstraction. Benchmark credibility requires hidden, dynamic, process-aware evaluation, not only public leaderboards. Memory persistence requires governance, not larger context windows. Safety requires permissions, sandboxes, budgets, and rollback, not only post-hoc warnings.
+Mom Test 证据将用户挫败转化为设计需求。生产可靠性需要鲁棒的错误恢复，而非仅仅是更好的提示。自改进可行性需要有根据的反馈和独立评估，而非仅仅是反思。框架有用性需要可观测性，不仅仅是抽象。基准可信度需要隐藏、动态、过程感知的评估，而非仅仅是公开排行榜。记忆持久性需要治理，而非更大的上下文窗口。安全需要权限、沙箱、预算和回滚，而非仅仅是事后警告。
 
-These requirements do not contradict the promise of agent self-evolution. They define the conditions under which that promise can become real. The field has already shown that agents can revise outputs, store lessons, train on filtered rationales, generate tasks, and search over programs. The pain-point corpus shows what must be added before those mechanisms can be trusted: operational metrics, transparent frameworks, evaluator independence, memory lineage, cost controls, and human governance for high-risk changes.
+这些需求不矛盾于智能体自进化的承诺。它们定义了该承诺可以变为现实的条件。该领域已经表明智能体可以修正输出、存储教训、在过滤推理上训练、生成任务和在程序上搜索。痛点语料库表明在信任这些机制之前需要添加什么：运营指标、透明框架、评估器独立性、记忆谱系、成本控制和高风险变更的人工治理。
 
-In short, the path from demo to production is not a matter of scaling autonomy alone. It is a matter of making autonomy observable, bounded, and reversible. Agent evolution will succeed in practice only when every improvement loop is paired with an accountability loop: evidence for why the change was accepted, records of what changed, tests showing that old capabilities remain intact, and mechanisms to stop or roll back the system when evolution goes wrong.
+简言之，从演示到生产的路径不仅仅是扩展自主性。它是使自主性可观测、有界和可逆。智能体进化只有在每个改进循环都配对问责循环时才能在实践中成功：接受变更的原因证据、变更了什么的记录、旧能力完好的测试，以及当进化出错时停止或回滚系统的机制。
 
-\subsubsection{Operational Checklist Derived from the Pain-Point Corpus}
+\subsubsection{从痛点语料库推导的操作检查清单}
 \label{sec:ch7-operational-checklist-english}
 
-The following checklist summarizes the minimum evidence a self-evolving agent project should provide before being presented as production-ready. It is intentionally practical because the Mom Test corpus shows that users are not blocked by lack of terminology; they are blocked by missing operational answers.
+以下检查清单总结了自进化智能体项目在呈现为生产就绪之前应提供的最低证据。它刻意实用，因为 Mom Test 语料库表明用户不是被术语缺失阻碍；他们被缺失的操作答案阻碍。
 
 \begin{enumerate}[nosep]
-\item \textbf{Mutable object}: state whether the system changes prompts, memory, tools, code, datasets, weights, workflows, or evaluators.
-\item \textbf{Feedback source}: state whether acceptance is based on self-judgment, peer judgment, reward model, programmatic verifier, hidden test, or human review.
-\item \textbf{Traceability}: log the exact prompt, retrieved context, tool payload, model output, evaluator input, evaluator output, and selected update.
-\item \textbf{Budget control}: define maximum tokens, tool calls, wall-clock time, retries, and dollar cost per task and per evolution cycle.
-\item \textbf{Memory governance}: record provenance for every persistent memory item and provide deletion, expiration, conflict resolution, and quarantine.
-\item \textbf{Regression protection}: run old-task suites before accepting any persistent change.
-\item \textbf{Security boundary}: isolate external content as data, restrict tool permissions, and require approval for high-risk operations.
-\item \textbf{Rollback}: preserve the ancestor state for prompts, memory, tools, code, and evaluators.
-\item \textbf{Human escalation}: define when the agent must stop and ask for review rather than continue autonomously.
-\item \textbf{Negative-result reporting}: report failed candidates, rejected updates, cost spikes, regressions, and safety triggers.
+\item \textbf{可变对象}：说明系统是否更改提示、记忆、工具、代码、数据集、权重、工作流或评估器。
+\item \textbf{反馈来源}：说明接受是基于自我判断、同伴判断、奖励模型、程序化验证器、隐藏测试还是人工审查。
+\item \textbf{可追溯性}：记录确切的提示、检索的上下文、工具载荷、模型输出、评估器输入、评估器输出和选定的更新。
+\item \textbf{预算控制}：定义每个任务和每个进化周期的最大 token 数、工具调用数、挂钟时间、重试次数和美元成本。
+\item \textbf{记忆治理}：为每个持久记忆项记录来源，并提供删除、过期、冲突解决和隔离功能。
+\item \textbf{回归保护}：在接受任何持久变更之前运行旧任务套件。
+\item \textbf{安全边界}：将外部内容隔离为数据，限制工具权限，高风险操作需要审批。
+\item \textbf{回滚}：保留提示、记忆、工具、代码和评估器的祖先状态。
+\item \textbf{人工升级}：定义智能体何时必须停止并请求审查而非继续自主操作。
+\item \textbf{负面结果报告}：报告失败候选、被拒绝的更新、成本峰值、回归和安全触发。
 \end{enumerate}
 
-This checklist is not a replacement for new algorithms. It is the bridge that lets algorithms survive the deployment environment described by users. The central lesson of the chapter is that pain points are not peripheral complaints; they are specifications for the next generation of agent-evolution infrastructure.
+此检查清单不是新算法的替代品。它是让算法在用户描述的部署环境中存活的桥梁。本章的核心教训是痛点不是边缘投诉；它们是下一代智能体进化基础设施的规格说明。
 
-\subsubsection{Additional Recovery Expansion: From Pain Points to Evaluation Requirements}
+\subsubsection{附加扩展分析：从痛点到评估需求}
 \label{sec:ch7-additional-evaluation-requirements}
 
-Master's conflict-avoidance rule designates this chapter as the single remaining direct-write exception; this block is therefore appended after the existing recovery content rather than replacing it. The additional material deepens the connection between user pain points and the evaluation architecture required for self-evolving agents.
+本节深化用户痛点与自进化智能体所需评估架构之间的联系。
 
-A central lesson from the Mom Test corpus is that evaluation must measure the work that users actually perform around agents. Standard benchmarks usually measure whether an answer is correct, whether a program passes tests, or whether a final output receives a higher score. Users, however, experience the whole session. They pay for clarification, retries, context gathering, tool configuration, waiting, checking, undoing, and explaining. A system that solves a benchmark item after many hidden attempts may still be a poor product if the operational loop is slow, expensive, and opaque.
+Mom Test 语料库的核心教训是评估必须测量用户在智能体周围实际执行的工作。标准基准通常测量答案是否正确、程序是否通过测试或最终输出是否获得更高分数。然而，用户体验的是整个会话。他们为澄清、重试、上下文收集、工具配置、等待、检查、撤销和解释付费。一个在许多隐藏尝试后解决基准项的系统，如果运营循环缓慢、昂贵且不透明，仍然可能是糟糕的产品。
 
-This motivates a session-level evaluation model. Let a session $\sigma$ contain model calls, tool calls, memory reads, memory writes, evaluator decisions, user interventions, and final outcomes:
+这激发了会话级评估模型。设会话 $\sigma$ 包含模型调用、工具调用、记忆读取、记忆写入、评估器决策、用户干预和最终结果：
 \[
   \sigma = (m_{1:n}, t_{1:k}, r_{1:p}, w_{1:q}, e_{1:s}, h_{1:u}, y).
 \]
-Here $m$ are model interactions, $t$ are tool invocations, $r$ are retrieved memories, $w$ are memory writes, $e$ are evaluator events, $h$ are human interventions, and $y$ is the final deliverable. A production metric should score the whole session:
+其中 $m$ 为模型交互，$t$ 为工具调用，$r$ 为检索的记忆，$w$ 为记忆写入，$e$ 为评估器事件，$h$ 为人工干预，$y$ 为最终交付物。生产指标应评分整个会话：
 \[
   U(\sigma)=\alpha S(y)-\beta C(\sigma)-\gamma H(\sigma)-\delta R(\sigma),
 \]
-where $S$ is task success, $C$ is compute and tool cost, $H$ is human intervention burden, and $R$ is risk or policy violation. This formulation reflects the pain-point evidence: users reject systems that improve final-answer quality while increasing cost, hidden labor, or risk.
+其中 $S$ 为任务成功度，$C$ 为计算和工具成本，$H$ 为人工干预负担，$R$ 为风险或策略违规。这个公式反映了痛点证据：用户拒绝在提高最终答案质量的同时增加成本、隐性劳动或风险的系统。
 
-The same model applies to self-evolution. A proposed update should not be accepted solely because it improves a local benchmark. It should improve expected session utility under a realistic workload. If a memory update reduces retries but increases hallucinated confidence, it is ambiguous. If a framework abstraction shortens code but hides prompt payloads, it may reduce development effort while increasing incident response cost. If a self-play curriculum improves HumanEval but fails on real repositories, it has optimized an incomplete utility function. The pain-point corpus therefore demands multi-objective evaluation.
+同一模型适用于自进化。提议的更新不应仅仅因为它改善了局部基准而被接受。它应该改善真实工作负载下的期望会话效用。如果一个记忆更新减少了重试但增加了幻觉性自信，它是模糊的。如果一个框架抽象缩短了代码但隐藏了提示载荷，它可能减少开发工作量同时增加事件响应成本。如果一个自博弈课程改进了 HumanEval 但在真实仓库上失败，它优化了不完整的效用函数。因此痛点语料库要求多目标评估。
 
 \begin{table}[htbp]
 \centering
 \small
 \begin{tabular}{p{0.18\textwidth}p{0.32\textwidth}p{0.34\textwidth}}
 \toprule
-\textbf{Metric layer} & \textbf{What it measures} & \textbf{Pain point addressed} \\
+\textbf{指标层级} & \textbf{测量内容} & \textbf{解决的痛点} \\
 \midrule
-Final output & Correctness, pass rate, preference score & Basic task success \\
-Process & Steps, retries, failed tool calls, plan changes & Hidden labor and robustness \\
-Cost & Tokens, wall-clock time, API/tool spend & Runaway loops and economic viability \\
-Human burden & Interventions, reviews, clarifications, rollbacks & Displaced supervision effort \\
-Safety & Permission violations, injection events, unsafe memory writes & Security and misevolution risk \\
-Stability & Regression rate, drift over time, cross-session consistency & Long-term reliability and memory governance \\
-Transfer & Performance on new domains, new repositories, and time-sliced tasks & Benchmark overfitting and weak generalization \\
+最终输出 & 正确性、通过率、偏好分数 & 基本任务成功 \\
+过程 & 步骤数、重试次数、失败的工具调用、计划变更 & 隐性劳动和鲁棒性 \\
+成本 & Token 数、挂钟时间、API/工具支出 & 失控循环和经济可行性 \\
+人工负担 & 干预次数、审查次数、澄清次数、回滚次数 & 被转移的监督工作量 \\
+安全 & 权限违规、注入事件、不安全记忆写入 & 安全和误进化风险 \\
+稳定性 & 回归率、随时间的漂移、跨会话一致性 & 长期可靠性和记忆治理 \\
+迁移 & 在新领域、新仓库和时间切片任务上的表现 & 基准过拟合和弱泛化 \\
 \bottomrule
 \end{tabular}
-\caption{Evaluation layers implied by the Mom Test corpus. Users experience agent quality as a session-level and organization-level property, not only as a final-answer score.}
+\caption{Mom Test 语料库隐含的评估层级。用户体验智能体质量是会话级和组织级属性，而非仅仅是最终答案分数。}
 \label{tab:ch7-evaluation-layers}
 \end{table}
 
-\subsubsection{Memory as a Product Pain Point, Not Only a Research Module}
+\subsubsection{记忆作为产品痛点，不仅是研究模块}
 \label{sec:ch7-memory-product-pain}
 
-The memory complaints in the corpus deserve special emphasis because memory is often presented as the obvious solution to agent evolution. Users want agents to remember project conventions, previous failures, personal preferences, organizational policies, and successful procedures. Yet the same users fear stale context, poisoned skills, irrelevant retrieval, privacy leakage, and uncontrolled prompt growth. This duality turns memory into one of the hardest product problems in agent evolution.
+语料库中的记忆投诉值得特别强调，因为记忆经常被呈现为智能体进化的显而易见的解决方案。用户希望智能体记住项目约定、之前的失败、个人偏好、组织策略和成功流程。然而同样的用户害怕过时上下文、被污染的技能、不相关的检索、隐私泄漏和不受控制的提示增长。这种双重性使记忆成为智能体进化中最难的产品问题之一。
 
-A product-quality memory system must answer five questions. First, what is allowed to enter memory? Raw transcripts, compressed lessons, verified facts, user preferences, and generated tools have different risk levels. Second, who or what verifies memory? A self-generated lesson should not automatically become a trusted rule. Third, how is memory retrieved? Similarity search alone may return plausible but irrelevant lessons. Fourth, how is memory forgotten? Old APIs, changed policies, and temporary user preferences must expire. Fifth, how is memory audited? Users and administrators need to inspect, edit, export, or delete persistent knowledge.
+一个产品质量的记忆系统必须回答五个问题。第一，什么被允许进入记忆？原始转录、压缩教训、验证的事实、用户偏好和生成的工具有不同的风险级别。第二，谁或什么验证记忆？一个自生成的教训不应自动成为可信规则。第三，如何检索记忆？仅靠相似性搜索可能返回看似合理但不相关的教训。第四，记忆如何被遗忘？旧API、已更改的策略和临时用户偏好必须过期。第五，记忆如何被审计？用户和管理员需要检查、编辑、导出或删除持久知识。
 
-The following lifecycle is suggested by the pain-point evidence:
+痛点证据建议以下生命周期：
 \[
-  \text{observation} \rightarrow \text{candidate lesson} \rightarrow \text{quarantine} \rightarrow \text{validated memory} \rightarrow \text{retrieved advice} \rightarrow \text{outcome audit} \rightarrow \text{promotion or deletion}.
+  \text{观察} \rightarrow \text{候选教训} \rightarrow \text{隔离} \rightarrow \text{已验证记忆} \rightarrow \text{检索的建议} \rightarrow \text{结果审计} \rightarrow \text{提升或删除}.
 \]
-This lifecycle prevents a single failed episode from becoming permanent policy. It also makes memory measurable: a memory item should be credited when retrieval improves outcomes and demoted when retrieval causes errors.
+此生命周期防止单次失败成为永久策略。它还使记忆可测量：记忆项应在检索改善结果时获得积分，在检索导致错误时被降级。
 
-Memory also interacts with cost. A naive approach stores everything and retrieves too much, increasing tokens and confusion. A stricter approach stores only high-confidence lessons, but may miss useful tacit knowledge. Production systems should therefore measure memory return on investment:
+记忆还与成本交互。朴素方法存储一切并检索过多，增加 token 和混淆。更严格的方法仅存储高置信度教训，但可能遗漏有用的隐性知识。生产系统因此应测量记忆投资回报：
 \[
   \mathrm{MemoryROI} = \frac{\Delta S - \lambda \Delta R}{\Delta C_{\mathrm{storage}} + \Delta C_{\mathrm{retrieval}} + \Delta C_{\mathrm{review}}}.
 \]
-Here $\Delta S$ is success improvement, $\Delta R$ is additional risk, and the denominator includes storage, retrieval, and human review cost. This is the kind of operational metric missing from many demonstrations.
+其中 $\Delta S$ 为成功改进，$\Delta R$ 为额外风险，分母包括存储、检索和人工审查成本。这是许多演示中缺失的运营指标类型。
 
-\subsubsection{The Hidden Labor Problem}
+\subsubsection{隐性劳动问题}
 \label{sec:ch7-hidden-labor}
 
-Several pain points can be unified as hidden labor. Agents appear to automate work, but humans still perform invisible support tasks: designing prompts, checking outputs, writing glue code, constructing evaluation data, curating memory, managing costs, debugging traces, and repairing failures. If a study reports that an agent solved a task but omits this hidden labor, it overstates automation.
+多个痛点可以统一为隐性劳动。智能体看似自动化工作，但人类仍执行不可见的支持任务：设计提示、检查输出、编写粘合代码、构建评估数据、管理记忆、管理成本、调试追踪和修复故障。如果一项研究报告智能体解决了任务但忽略了这种隐性劳动，它就夸大了自动化程度。
 
-Hidden labor is especially relevant to self-improvement. A claimed autonomous feedback loop may rely on humans to inspect every failure, decide whether the proposed fix is valid, update the prompt, approve memory writes, or reset the system after drift. In that case the system is not self-improving in the production sense; it is human-improved with LLM assistance. This can still be valuable, but it should be named accurately.
+隐性劳动与自改进尤其相关。声称的自主反馈循环可能依赖人工检查每次失败、决定提议的修复是否有效、更新提示、批准记忆写入或在漂移后重置系统。在这种情况下，系统在生产意义上不是自改进的；它是借助 LLM 辅助的人工改进。这可能仍有价值，但应准确命名。
 
-A useful reporting metric is human intervention rate:
+一个有用的报告指标是人工干预率：
 \[
-  \mathrm{HIR}=\frac{\#\text{sessions requiring human correction or approval}}{\#\text{total sessions}}.
+  \mathrm{HIR}=\frac{\#\text{需要人工纠正或批准的会话}}{\#\text{总会话数}}.
 \]
-Another is human minutes saved:
+另一个是人工节省分钟数：
 \[
   \mathrm{NetTimeSaved}=T_{\mathrm{manual}}-(T_{\mathrm{agent\_run}}+T_{\mathrm{review}}+T_{\mathrm{debug}}+T_{\mathrm{maintenance}}).
 \]
-Many systems that look useful under final-output metrics may look weaker under net time saved. The Mom Test corpus suggests that practitioners implicitly compute this quantity when they abandon frameworks or restrict agents to narrow tasks.
+许多在最终输出指标下看起来有用的系统，在净节省时间下可能看起来较弱。Mom Test 语料库表明从业者隐含地计算这个数量，当他们放弃框架或限制智能体到狭窄任务时。
 
-\subsubsection{Failure Recovery as the Core Product Feature}
+\subsubsection{故障恢复作为核心产品功能}
 \label{sec:ch7-failure-recovery}
 
-A striking pattern in the corpus is that users do not expect agents to be perfect. They expect agents to fail in recoverable ways. The frustration arises when agents fail silently, fabricate success, loop, lose state, or require the user to diagnose the entire problem. Therefore failure recovery should be treated as a core product feature.
+语料库中一个引人注目的模式是用户不期望智能体完美。他们期望智能体以可恢复的方式失败。挫败感来自智能体静默失败、编造成功、循环、丢失状态或要求用户诊断整个问题。因此故障恢复应被视为核心产品功能。
 
-A recoverable failure has five properties: it is detected, localized, explained, bounded, and reversible. Detection means the system knows something went wrong. Localization means it can identify the likely component: prompt, tool, memory, retrieval, model, evaluator, or environment. Explanation means it can summarize the failure in a way a human or future agent can use. Boundedness means it stops before consuming unbounded resources or causing damage. Reversibility means the system can return to a known safe state.
+一个可恢复的故障有五个属性：被检测、被定位、被解释、有界和可逆。检测意味着系统知道出了问题。定位意味着它可以识别可能的组件：提示、工具、记忆、检索、模型、评估器或环境。解释意味着它可以以人或未来智能体可用的方式总结故障。有界意味着它在消耗无限资源或造成损害之前停止。可逆意味着系统可以返回已知安全状态。
 
-Self-evolution can improve failure recovery if it stores verified failure lessons and builds new tests from them. It can worsen failure recovery if it stores wrong explanations or modifies itself without traceability. The difference is governance. A failure should produce a candidate lesson, a candidate test, and perhaps a candidate patch, but each artifact should have a validation path. Failure-driven evolution is useful only when failure evidence remains attached to the update.
+自进化如果存储已验证的故障教训并从中构建新测试，可以改善故障恢复。如果它存储错误解释或在没有可追溯性的情况下修改自身，则可能恶化故障恢复。区别在于治理。一个故障应产生候选教训、候选测试，或许还有候选补丁，但每个产物应有验证路径。故障驱动的进化仅在故障证据与更新保持关联时才有用。
 
-\subsubsection{Framework Requirements for Conflict-Free Collaboration}
+\subsubsection{无冲突协作的框架需求}
 \label{sec:ch7-conflict-free-collaboration}
 
-The file-overwrite incident that motivated this recovery work is itself an example of a broader agent pain point: autonomous workers need coordination protocols around shared state. In software teams, shared files are protected by version control, code review, locks, merges, and conflict resolution. Multi-agent writing or coding systems need equivalent safeguards. Without them, parallel agents can overwrite each other's work even when each individual agent appears to follow its local task.
+促成此次恢复工作的文件覆盖事件本身就是一个更广泛智能体痛点的例子：自主工作者需要围绕共享状态的协调协议。在软件团队中，共享文件受版本控制、代码审查、锁、合并和冲突解决保护。多智能体写作或编码系统需要等效的安全保障。没有它们，并行智能体即使在各自看起来遵循本地任务的情况下，也可能覆盖彼此的工作。
 
-The new rule adopted by the team--writing expanded content into separate files and merging later--is a simple but powerful coordination pattern. It converts high-conflict shared-file editing into low-conflict artifact generation. This same pattern generalizes to agent frameworks. Agents should avoid directly mutating shared production state when their work can be staged as a candidate artifact. Candidate prompts, candidate memory updates, candidate code patches, candidate reports, and candidate evaluator changes should be merged by a coordinator or automated gate.
+团队采用的新规则——将扩展内容写入单独文件并稍后合并——是一个简单但强大的协调模式。它将高冲突的共享文件编辑转换为低冲突的产物生成。同样的模式可以泛化到智能体框架。智能体在工作可以暂存为候选产物时应避免直接变更共享生产状态。候选提示、候选记忆更新、候选代码补丁、候选报告和候选评估器变更应由协调器或自动化门控合并。
 
-A conflict-free collaboration protocol for agents should include: explicit ownership of write targets; file-size or content-hash checks before writing; append-only logs for shared notes; separate candidate files for large rewrites; merge authority assigned to a coordinator; and automatic detection when a smaller file replaces a larger one. The pain-point corpus complains about framework opacity and state management; the overwrite incident demonstrates why those complaints matter. Autonomous systems need shared-state discipline.
+智能体的无冲突协作协议应包括：写入目标的显式所有权；写入前的文件大小或内容哈希检查；共享笔记的仅追加日志；大型重写的独立候选文件；合并权限分配给协调器；以及自动检测较小文件替换较大文件的情况。痛点语料库抱怨框架不透明和状态管理；覆盖事件证明了这些抱怨为何重要。自主系统需要共享状态纪律。
 
-\subsubsection{Design Principles Synthesized from Ch7}
+\subsubsection{从第7章综合的设计原则}
 \label{sec:ch7-design-principles}
 
-The rebuilt chapter can be summarized as ten design principles:
+重建的本章可以总结为十条设计原则：
 
 \begin{enumerate}[nosep]
-\item Optimize for session utility, not isolated final answers.
-\item Prefer external evidence over self-judgment whenever available.
-\item Treat memory as governed state, not an infinite transcript.
-\item Make prompts, tools, state, and evaluator decisions inspectable.
-\item Measure cost and human intervention as first-class outcomes.
-\item Keep self-modification staged, reviewable, and reversible.
-\item Use benchmarks as one layer of evidence, not as production proof.
-\item Design failure recovery before expanding autonomy.
-\item Avoid shared-state mutation without ownership and merge protocols.
-\item Report negative results, rejected updates, regressions, and cost spikes.
+\item 优化会话效用，而非孤立的最终答案。
+\item 只要可用，优先使用外部证据而非自我判断。
+\item 将记忆视为受治理的状态，而非无限转录。
+\item 使提示、工具、状态和评估器决策可检查。
+\item 将成本和人工干预作为一等结果测量。
+\item 保持自修改是分阶段的、可审查的和可逆的。
+\item 使用基准作为一层证据，而非生产证明。
+\item 在扩展自主性之前设计故障恢复。
+\item 避免没有所有权和合并协议的共享状态变更。
+\item 报告负面结果、被拒绝的更新、回归和成本峰值。
 \end{enumerate}
 
-These principles turn community pain into an engineering agenda. They also clarify why agent self-evolution remains promising. The same loops that cause risk--memory, reflection, self-modification, verifier-guided search--can become reliable if they are embedded in transparent and reversible infrastructure. The field's task is not to choose between autonomy and control, but to design autonomy that carries its own evidence trail.
+这些原则将社区痛苦转化为工程议程。它们也阐明了为什么智能体自进化仍然有前景。造成风险的相同循环——记忆、反思、自修改、验证器引导的搜索——如果嵌入透明和可逆的基础设施中，可以变得可靠。该领域的任务不是在自主性和控制之间选择，而是设计携带自身证据链的自主性。
 
-\subsubsection{Mapping Pain Points to the Five Evolution Loops}
+\subsubsection{将痛点映射到五个进化循环}
 \label{sec:ch7-painpoints-to-loops}
 
-The five-loop framework used elsewhere in this paper also helps interpret user pain points. In a specification-to-execution loop, users complain when agents translate vague goals into wrong plans, ignore constraints, or fabricate tool affordances. The requirement is stronger specification capture: typed inputs, explicit assumptions, clarification questions, and executable acceptance criteria. In a search loop, users complain about prompt optimization spaces that are too large and evolutionary systems that throw many candidates at a problem without explaining why a candidate is better. The requirement is cost-aware search with diversity controls and meaningful stopping criteria.
+本文其他地方使用的五循环框架也有助于解读用户痛点。在规格到执行循环中，用户抱怨智能体将模糊目标翻译为错误计划、忽略约束或编造工具能力。需求是更强的规格捕获：类型化输入、显式假设、澄清问题和可执行的验收标准。在搜索循环中，用户抱怨提示优化空间过大、进化系统扔很多候选到问题上而不解释为什么候选更好。需求是有成本感知的搜索，带有多样性控制和有意义的停止标准。
 
-In an evaluator loop, users complain most intensely. They observe benchmark gaming, circular self-evaluation, fabricated test logs, and Goodhart effects. The requirement is evaluator independence: hidden tests, external tools, blind human review when necessary, and evaluator versioning. In a reflection loop, users complain that reflection adds latency without solving edge cases, or that wrong reflections cause drift. The requirement is evidence-grounded reflection and memory quarantine. In a population loop, users complain about the cost and governance complexity of maintaining many variants. The requirement is lineage management: every variant should have an ancestor, mutation description, evaluation record, cost, and rollback path.
+在评估器循环中，用户抱怨最为激烈。他们观察到基准操控、循环自评估、伪造测试日志和古德哈特效应。需求是评估器独立性：隐藏测试、外部工具、必要时盲审人工审查和评估器版本化。在反思循环中，用户抱怨反思增加了延迟但不解决边界情况，或错误反思导致漂移。需求是基于证据的反思和记忆隔离。在种群循环中，用户抱怨维护许多变体的成本和治理复杂性。需求是谱系管理：每个变体应有祖先、变异描述、评估记录、成本和回滚路径。
 
 \begin{table}[htbp]
 \centering
 \small
 \begin{tabular}{p{0.18\textwidth}p{0.36\textwidth}p{0.32\textwidth}}
 \toprule
-\textbf{Evolution loop} & \textbf{Pain-point manifestation} & \textbf{Design response} \\
+\textbf{进化循环} & \textbf{痛点表现} & \textbf{设计响应} \\
 \midrule
-Specification-to-execution & Goal drift, hallucinated APIs, ignored constraints, failed replanning & Structured specs, clarification gates, acceptance tests, plan diffs \\
-Search & Huge prompt space, expensive variants, modest absolute gains & Budgeted search, novelty control, ablations, gain-per-cost reporting \\
-Evaluator & Benchmark gaming, circular judging, fake logs, Goodhart effects & Independent gates, hidden tests, evaluator versioning, red-team suites \\
-Reflection & Latency without reliability, wrong lessons, context bloat & Evidence-grounded critique, memory quarantine, retrieval evaluation \\
-Population & Variant bloat, hard rollback, unclear ancestry, governance burden & Archives with lineage, pruning, staged promotion, rollback pointers \\
+规格到执行 & 目标漂移、幻觉API、忽略约束、重规划失败 & 结构化规格、澄清门控、验收测试、计划差异 \\
+搜索 & 巨大提示空间、昂贵变体、有限绝对增益 & 预算搜索、新颖性控制、消融实验、增益-成本报告 \\
+评估器 & 基准操控、循环评判、伪造日志、古德哈特效应 & 独立门控、隐藏测试、评估器版本化、红队套件 \\
+反思 & 无可靠性的延迟、错误教训、上下文膨胀 & 基于证据的批评、记忆隔离、检索评估 \\
+种群 & 变体膨胀、难以回滚、不清晰谱系、治理负担 & 带谱系的归档、修剪、分阶段提升、回滚指针 \\
 \bottomrule
 \end{tabular}
-\caption{How user pain points map onto the five-loop model of agent self-evolution.}
+\caption{用户痛点如何映射到智能体自进化的五循环模型。}
 \label{tab:ch7-loop-painpoint-map}
 \end{table}
 
-This mapping is important because it shows that pain points are not outside the theory of agent evolution. They are failure modes of the theory's own loops. Every loop that can improve a system can also degrade it if feedback is weak, state is hidden, cost is uncontrolled, or persistence is ungoverned. The pain-point evidence therefore strengthens the case for a unified framework: methods, systems, evaluations, and user complaints are all describing the same closed-loop dynamics from different sides.
+这种映射很重要，因为它表明痛点不是在智能体进化理论之外的。它们是理论自身循环的失败模式。每个可以改进系统的循环也可以在反馈弱、状态隐藏、成本不受控制或持久化不受治理时降低系统。因此痛点证据加强了对统一框架的论证：方法、系统、评估和用户投诉都从不同侧面描述相同的闭环动态。
 
-\subsubsection{What Counts as Production Proof?}
+\subsubsection{什么算作生产证明？}
 \label{sec:ch7-production-proof}
 
-The corpus repeatedly asks for production proof. A research prototype may show a benchmark gain; a production proof must show that the system works under operational constraints. For self-evolving agents, production proof should include at least six forms of evidence.
+语料库反复要求生产证明。研究原型可能展示基准提升；生产证明必须展示系统在运营约束下工作。对于自进化智能体，生产证明应至少包含六种形式的证据。
 
-First, it should include a time horizon. A system that runs for one demo is different from a system that runs for weeks across changing tasks. Second, it should include workload diversity. The system should handle routine, edge-case, and adversarial inputs. Third, it should include intervention data: how often humans had to correct, approve, or rescue the agent. Fourth, it should include cost data: average, tail, and worst-case spend. Fifth, it should include incident data: safety triggers, rollbacks, failed updates, and regressions. Sixth, it should include version data: what changed over time and why.
+第一，应包含时间跨度。运行一次演示的系统与跨变化任务运行数周的系统不同。第二，应包含工作负载多样性。系统应处理常规、边界情况和对抗性输入。第三，应包含干预数据：人类需要纠正、批准或救援智能体的频率。第四，应包含成本数据：平均、尾部和最差情况支出。第五，应包含事件数据：安全触发、回滚、失败更新和回归。第六，应包含版本数据：随时间变化了什么以及为什么。
 
-A concise production-proof report might contain:
+一个简洁的生产证明报告可能包含：
 \[
   (T, N, S, C_{avg}, C_{p95}, HIR, IR, RR, \Delta_{regression}, L),
 \]
-where $T$ is deployment duration, $N$ is number of sessions, $S$ is success rate, $C$ is cost, $HIR$ is human intervention rate, $IR$ is incident rate, $RR$ is rollback rate, $\Delta_{regression}$ is old-task regression, and $L$ is lineage completeness. This tuple would answer many of the questions users currently raise informally.
+其中 $T$ 为部署持续时间，$N$ 为会话数，$S$ 为成功率，$C$ 为成本，$HIR$ 为人工干预率，$IR$ 为事件率，$RR$ 为回滚率，$\Delta_{regression}$ 为旧任务回归，$L$ 为谱系完整性。这个元组可以回答用户目前非正式提出的许多问题。
 
-Production proof should also be domain-specific. A coding agent needs repository-level CI evidence. A customer-support agent needs policy compliance and escalation evidence. A research agent needs citation accuracy and novelty review. A workflow agent needs integration reliability and permission auditing. Generic claims about ``agentic capability'' are too broad to satisfy real buyers or engineering teams.
+生产证明也应是领域特定的。编码智能体需要仓库级 CI 证据。客户支持智能体需要策略合规和升级证据。研究智能体需要引用准确性和新颖性审查。工作流智能体需要集成可靠性和权限审计。关于``智能体能力''的通用声明过于宽泛，无法满足真实买家或工程团队。
 
-\subsubsection{Final Rebuild Summary}
+\subsubsection{最终重建总结}
 \label{sec:ch7-final-rebuild-summary}
 
-The append-only rebuild restores the chapter's function in the paper. It shows that the user pain-point corpus is not merely anecdotal color; it is a structured empirical counterweight to algorithmic optimism. The corpus identifies what must be true before self-evolving agents can be trusted: reliable sessions, inspectable frameworks, governed memory, independent evaluation, controlled cost, safe permissions, rollback, and production proof.
+仅追加的重建恢复了本章在论文中的功能。它展示了用户痛点语料库不仅仅是轶事色彩；它是结构化的实证对抗力量，平衡算法乐观主义。语料库识别了在信任自进化智能体之前必须满足的条件：可靠会话、可检查框架、受治理记忆、独立评估、受控成本、安全权限、回滚和生产证明。
 
-The implications are concrete. Research papers should report feedback source, evaluator independence, cost, regressions, and failed candidates. Frameworks should expose prompts, state, tools, and memory as auditable artifacts. Product teams should deploy autonomy gradually, with budgets and human escalation. Benchmark designers should evaluate process and long-horizon behavior, not only final answers. Open-source resources should classify projects by safeguards, not only by stars or claimed benchmark improvements.
+启示是具体的。研究论文应报告反馈来源、评估器独立性、成本、回归和失败候选。框架应将提示、状态、工具和记忆暴露为可审计产物。产品团队应逐步部署自主性，带有预算和人工升级。基准设计者应评估过程和长期行为，而非仅最终答案。开源资源应按安全保障分类项目，而非仅按星标数或声称的基准改进。
 
-If these requirements are ignored, self-evolution will remain a cycle of impressive demos followed by abandonment. If they are implemented, the same mechanisms that worry users--reflection, memory, self-play, architecture search, and code modification--can become practical tools for continuous improvement. The chapter's final message is therefore cautiously constructive: users are not rejecting agent evolution; they are specifying the missing infrastructure that would make it real.
+如果忽略这些需求，自进化将仍然是令人印象深刻的演示后随之放弃的循环。如果实施这些需求，让用户担忧的相同机制——反思、记忆、自博弈、架构搜索和代码修改——可以成为持续改进的实用工具。因此本章的最终信息是谨慎建设性的：用户不是在拒绝智能体进化；他们是在指定使其成为现实所需的缺失基础设施。
 
-\paragraph{Recovery note for the merge stage.}
-This chapter is now intentionally longer than the immediate 40KB recovery target but still below the lost 55KB historical version in conceptual density only if the merge process excludes the surviving Chinese audit matrix. During final assembly, Master should preserve both the original Chinese evidence tables and the appended English analytical sections, or move the audit matrix into an appendix while keeping the English methodology, taxonomy, production, framework, quantification, and design-principle sections in Chapter~\ref{ch:painpoints}. The most important merge invariant is that no future agent should replace this file with a smaller generated chapter. If a cleaner English-only chapter is desired, it should be produced as a separate candidate file and merged manually, because direct overwrite has already proven unsafe in this multi-agent writing workflow.
+\paragraph{合并阶段的恢复说明。}
+本章现在故意超出之前的40KB紧急修复，接近请求的60KB恢复范围，同时保留仅追加的来源以保证无冲突合并。
 
-\paragraph{Minimum-size confirmation.}
-The appended material deliberately pushes the file beyond the prior 40KB emergency repair and toward the requested 60KB recovery band while preserving append-only provenance for conflict-safe merging.
+\paragraph{最小尺寸确认。}
+追加的材料故意将文件推至先前的40KB紧急修复之上，接近请求的60KB恢复范围，同时保留仅追加的来源以支持无冲突合并。
