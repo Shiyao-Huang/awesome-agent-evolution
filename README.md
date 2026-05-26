@@ -18,11 +18,59 @@
 
 ## 五句话
 
-1. 这个领域的核心问题不是“有没有 agent”，而是“agent 到底改进了什么、凭什么证明更强、能不能复用到真实任务”。
+1. 这个领域的核心问题不是”有没有 agent”，而是”agent 到底改进了什么、凭什么证明更强、能不能复用到真实任务”。
 2. 当前证据层包括 530 个 GitHub raw captures、530 个已分类仓库、119 个站点项目、82 个严格 self-evolution 仓库、186 个广义 evolution-related 仓库。
 3. 方法主线可压缩为六类：reward/RL/self-play、prompt/search、memory、architecture/code self-modification、multi-agent reflection/debate、evaluation/safety/governance。
 4. Benchmark 是本项目的主矛盾之一：SWE-Bench、HumanEval、OSWorld、BrowserGym、AgentBench、LongMemEval、STATE-Bench 等必须被放在同一张比较表里，而不是散在项目页里。
 5. 这个 README 的目标是让读者直接获得认知结构；链接只作为证据来源和展开材料，不作为理解前提。
+
+## Star 榜单 — GitHub 项目热度排名
+
+> Rank 不只看 Star 数，还看 Star 质量、增长模式、证据强度。AutoGPT 175K stars 但质量分低于 DSPy 25K。
+
+| # | 项目 | Stars | 质量分 | 增长模式 | 判定 |
+|---:|---|---:|---:|---|---|
+| 1 | AutoGPT | 175K | 34 | 🚀 病毒式 | 营销驱动，代码质量中等 |
+| 2 | OpenHands | 55K | 58 | 🌱 自然增长 | 社区活跃，实用性强 |
+| 3 | MetaGPT | 50K | 50 | 🚀 病毒式 | 概念新颖，工程待验证 |
+| 4 | AutoGen | 50K | 56 | 🌱 自然增长 | 微软背书，多 Agent 框架 |
+| 5 | CrewAI | 30K | 60 | 📊 稳定增长 | 轻量、生产就绪 |
+| 6 | Devika | 22K | 35 | ⚠️ 可疑 | 增长快但 Fork 质量低 |
+| 7 | DSPy | 25K | 68 | 🌱 自然增长 | 最高质量分，编译式优化 |
+| 8 | LangGraph | 20K | 55 | 🌱 自然增长 | 状态机工作流 |
+| 9 | SWE-Agent | 15K | 62 | 🌱 自然增长 | 代码 Agent 基准标杆 |
+| 10 | OpenEvolve | 6.4K | 65 | 🌱 自然增长 | 开源 AlphaEvolve |
+
+[→ 完整 Star 质量分析](https://shiyao-huang.github.io/awesome-agent-evolution/star-analysis/)
+
+## Trend 榜单 — 活跃度与增长趋势
+
+> 按 Star 活跃度（近 90 天 stargazer 活跃比例）排名。高活跃 ≠ 高质量，但反映社区关注度。
+
+| # | 项目 | 活跃度 | 贡献者多样性 | Fork 质量 | 增长 |
+|---:|---|---:|---:|---:|---|
+| 1 | OpenHands | 75 | 70 | 45 | 🌱 自然 |
+| 2 | AutoGen | 68 | 75 | 42 | 🌱 自然 |
+| 3 | MetaGPT | 58 | 68 | 35 | 🚀 病毒 |
+| 4 | CrewAI | 72 | 60 | 40 | 📊 稳定 |
+| 5 | DSPy | 65 | 72 | 38 | 🌱 自然 |
+
+[→ 完整趋势数据](https://shiyao-huang.github.io/awesome-agent-evolution/star-analysis/)
+
+## 方向 Map — 每个方向的最高质量代表作
+
+> 六大方向，每个方向标注 Champion、核心证据和成熟度。用 Rank 快速找到每个领域的最佳实现。
+
+| 方向 | 🏆 Champion | 分数 | 核心证据 | 亚军 | 成熟度 |
+|---|---|---:|---|---|---|
+| 🧬 架构/代码自修改 | **AlphaEvolve** | 7.06 | 打破 56 年矩阵乘法记录 | DGM (6.78) | L4 |
+| 🏗️ Agent 自动设计 | **ADAS** | 6.50 | 自动发现 Agent 架构 | OpenEvolve (6.42) | L4 |
+| 🪞 推理时自我修正 | **Reflexion** | 6.39 | HumanEval 91%, AlfWorld 97% | Self-Refine (6.00) | L2 |
+| 🎮 训练时自博弈 | **Absolute Zero** | 6.33 | 零外部数据，NeurIPS Best Paper | ReVeal (5.89) | L2 |
+| ⚡ 声明式 Prompt 优化 | **DSPy** | 6.15 | 最广泛采用 | OPRO | L2 |
+| 📚 技能/记忆积累 | **Voyager** | 5.78 | 3.3x 独特物品，技能库 | SE-Agent (5.96) | L3 |
+
+[→ 完整系统排名](https://shiyao-huang.github.io/awesome-agent-evolution/rank/)
 
 ## 核心历史、未来与趋势追踪
 
