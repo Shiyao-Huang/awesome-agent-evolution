@@ -89,8 +89,7 @@ pre {
 }
 
 .container {
-  width: calc(100% - 40px);
-  max-width: 1160px;
+  width: min(1160px, calc(100% - 40px));
   margin-inline: auto;
 }
 
@@ -276,7 +275,6 @@ pre {
 
 .hero-copy,
 .hero-grid > div:first-child {
-  min-width: 0;
   max-width: 700px;
   text-align: left;
 }
@@ -315,7 +313,6 @@ pre {
   max-width: 760px;
   margin: 16px 0 0;
   font-size: 40px;
-  overflow-wrap: anywhere;
 }
 
 .gradient-text {
@@ -331,7 +328,6 @@ pre {
   color: var(--fg);
   font-size: 18px;
   line-height: 1.58;
-  overflow-wrap: anywhere;
 }
 
 .hero-actions,
@@ -396,7 +392,6 @@ pre {
 }
 
 .hero-evidence {
-  min-width: 0;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface-card);
@@ -442,7 +437,6 @@ pre {
   color: var(--fg);
   font-size: 15px;
   line-height: 1.35;
-  overflow-wrap: anywhere;
 }
 
 .hero-evidence p {
@@ -1248,8 +1242,7 @@ a.pill:focus-visible {
 @media (max-width: 700px) {
   .container,
   .blog-article {
-    width: calc(100% - 32px);
-    max-width: 1160px;
+    width: min(100% - 32px, 1160px);
   }
 
   .nav-cta {
