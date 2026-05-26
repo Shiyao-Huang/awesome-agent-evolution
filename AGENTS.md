@@ -78,11 +78,115 @@
 2. 产物属于 raw、processed、work、results、ops 的哪一层？
 3. 完成后要更新哪个索引、论文、网站或结果文件？
 
+研究任务开始前额外检查 wiki：
+
+1. 读 `work/wiki/index.md` 避免重复分析
+2. 读 `work/wiki/log.md` 最后 5 条了解近期操作
+3. 先查 wiki 再查 raw——wiki 是第一知识源
+
+## LLM Wiki Pattern
+
+本仓库采用 LLM Wiki Pattern 作为知识交付架构。完整规则见 `work/wiki/schema.md`；以下为 Agent 必须遵守的核心原则。
+
+### 三层架构
+
+```
+Layer 1 — Raw Sources (不可变)        Layer 2 — Wiki (Agent 维护)           Layer 3 — Schema (规则)
+raw-github/  raw-papers/              work/wiki/                           work/wiki/schema.md
+raw-social/  raw-blogs/               ├── concepts/                        CLAUDE.md
+  ↑ Agent 只读，永不修改                ├── entities/                      AGENTS.md
+  ↑ Source of Truth                     ├── sources/
+                                        ├── synthesis/
+                                        ├── index.md  ← 内容目录
+                                        ├── log.md    ← 时序记录
+                                        └── search-index.json
+```
+
+- **Raw 层不可变**：Agent 从 `raw-github/`、`raw-papers/`、`raw-social/`、`raw-blogs/` 读取但永不修改。
+- **Wiki 层由 Agent 拥有**：`work/wiki/` 下的页面由 Agent 创建、更新交叉引用、标记矛盾、维持一致性。人类不手写 wiki 页面。
+- **Schema 层定义规则**：`work/wiki/schema.md` 规定格式、rank、trust chain、操作流程。`AGENTS.md` 和 `CLAUDE.md` 为顶层规则。
+
+### 操作协议
+
+| 操作 | 流程 | 触发时机 |
+|------|------|----------|
+| **Ingest** | 读 raw 源 → 提取关键信息 → 写/更新 wiki 页面 → 更新 `index.md` → 追加 `log.md` | 新素材入库 |
+| **Query** | 读 `index.md` 定位 → 读目标页 → 综合回答（含引用）→ 好的回答可回存为新 synthesis 页 | 研究提问 |
+| **Lint** | 查孤立页、过期声明、缺失 frontmatter、`[UNVERIFIED]` 可验证化、缺失交叉引用 | 定期/手动 |
+
+**关键原则：** 单个源可能触发 10-15 个 wiki 页面更新。Ingest 不是简单索引，是知识整合。
+
+### Agent 启动检查
+
+每个 Agent 会话开始时必须：
+
+1. 读 `work/wiki/index.md` — 获取全貌和最近更新
+2. 读 `work/wiki/log.md` 最后 5 条 — 理解近期操作历史
+3. 查 `work/wiki/search-index.json` 或 grep `work/wiki/` — 避免重复分析
+4. 遵循 `work/wiki/schema.md` 的 rank 和 trust chain 规则
+
+### 页面格式
+
+每个 wiki 页面必须有 YAML frontmatter：
+
+```yaml
+---
+title: 页面标题
+type: concept | entity | source | synthesis
+rank: A | B | C
+tags: [tag1, tag2]
+sources: [path/to/raw/source]
+updated: YYYY-MM-DD
+---
+```
+
+### Rank 体系
+
+| Rank | 含义 | 标准 |
+|------|------|------|
+| **A** | 已验证，高价值 | 有原始链接，交叉验证，直接相关 |
+| **B** | 有用，部分验证 | 有原始链接，合理但未交叉验证 |
+| **C** | 未验证或低价值 | 无原始链接，或相关性弱 |
+
+### Trust Chain（信任链）
+
+- 每条事实声明必须标注来源：`[CLAIM] — Source: [URL or file path]`
+- 信任等级：`[KNOWN]` 有原始链接 > `[INFERRED]` 有间接证据 > `[UNVERIFIED]` 无法追溯
+- 无链接 = 无效声明，必须标 `[UNVERIFIED]`
+
+### Compounding（累积原则）
+
+Wiki 是持久累积产物，不是一次性检索结果：
+- 交叉引用已建立，不需要每次重建
+- 矛盾已被标记，新源可以挑战旧结论
+- 综合分析已反映所有已读内容
+- 好的回答（比较分析、连接发现）应回存为新的 wiki 页面，不让它消失在聊天历史中
+
+### 特殊文件
+
+| 文件 | 用途 | 维护频率 |
+|------|------|----------|
+| `index.md` | 内容目录，按类别列出所有页面 | 每次 ingest |
+| `log.md` | 时序记录，格式 `## [YYYY-MM-DD HH:MM] operation \| title` | 每次操作 |
+| `search-index.json` | 关键词→文件映射（`scripts/generate-wiki-index.mjs` 生成） | 每次 ingest/lint |
+| `schema.md` | Wiki 规则：三层架构、rank 体系、trust chain | 按需更新 |
+
+### Agent Wiki 职责
+
+| 角色 | Wiki 操作 |
+|------|----------|
+| Researcher | Ingest raw-* → wiki pages，提取 entities/concepts |
+| Implementer | 构建基础设施、修复编译、创建模板 |
+| Architect | 设计框架 → synthesis pages |
+| Scribe | 维护 index.md、log.md、lint wiki |
+| QA | 验证 trust chains、检查 ranks |
+
 ## Placement Rules
 
 | 类型 | 放到哪里 |
 |---|---|
 | 原始 GitHub/论文/博客/社交素材 | `raw-github/`, `raw-papers/`, `raw-blogs/`, `raw-social/`, `raw-social-rank/` |
+| Wiki 知识页面（concepts/entities/sources/synthesis） | `work/wiki/`（按 schema.md 格式，每次更新 index.md + log.md） |
 | 清洗、分类、统计、交叉分析 | `analysis/`, `research/` |
 | 项目深度分析/model-card | `projects/`，必要时同步 `site/public/reports/projects/` |
 | 论文草稿和 PDF (英文) | `paper-drafts/`，主入口是 `paper-drafts/main.tex` |
