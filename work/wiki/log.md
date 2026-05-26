@@ -110,3 +110,52 @@
 
 **Index更新:** sources 3→11, index.md 更新完成
 **交叉引用:** 每个 source 页链接到相关 concept/synthesis 页 + 原始 research 文件
+
+## [2026-05-26 ~13:10] lint | Full Wiki Lint (Implementer cmplzedm14ndz)
+
+**操作:** Full wiki health check — frontmatter, orphans, index accuracy, cross-references, UNVERIFIED claims, schema drift
+**详情:**
+
+### Issues Found & Fixed
+
+| Category | Issue | Count | Status |
+|----------|-------|-------|--------|
+| Missing frontmatter | source pages without YAML frontmatter | 3 | ✅ Fixed |
+| Index missing entries | files on disk but not in index.md | 11 | ✅ Fixed |
+| Orphan pages | 0 inbound cross-references | 13 | ⚠️ Logged |
+| Index stats wrong | Entities=0 (actual=8), Sources=11 (actual=14) | 2 | ✅ Fixed |
+| UNVERIFIED claims | [UNVERIFIED] markers in content | 1 | ⚠️ Logged |
+| Schema drift | schema-expected dirs/files not yet created | 11 | ⚠️ Future work |
+
+### Orphan Pages (no inbound [[wikilinks]] from other pages)
+- `concepts/architecture-search.md` — 0 inbound
+- `concepts/llm-agent-knowledge-delivery.md` — 0 inbound
+- `synthesis/talent-landscape.md` — 0 inbound
+- All 10 source pages under `sources/` — 0 inbound (expected: source pages are linked from index, not from concept pages)
+- Note: 3 source pages (blogs-brainstorm, cross-pollination, papers-brainstorm) had no outbound cross-references either
+
+### UNVERIFIED Claims
+- `sources/employee-social-intelligence.md`: "Chinese self-evolution researchers (Qian, Zhang, Yin) have no public X presence" — [UNVERIFIED] — cannot verify without WeChat/知乎 access
+
+### Schema Drift (expected by schema but not yet created)
+- Concepts: `prompt-evolution.md`, `memory-evolution.md` (partially covered by self-improvement.md)
+- Sources: `github-digest.md`, `papers-digest.md`, `social-digest.md`, `blogs-digest.md`
+- Synthesis: `sv-selfevolution-landscape.md`, `brainstorm-*.md`
+- Entities subdirs: `people/`, `orgs/`, `projects/`, `papers/` (flat structure used instead)
+
+### Search Index Status
+- 20 pages in search-index.json vs 33 on disk → 13 pages not indexed
+- Missing: 3 new concepts (reward-based, self-play, architecture-search) + 10 source/migration pages
+- Action: regenerate search index after lint fixes
+
+### Frontmatter Fixes Applied
+- `sources/employee-social-intelligence.md`: Added YAML frontmatter (title, type, rank, tags, sources)
+- `sources/raw-github-mechanism-analysis.md`: Added YAML frontmatter
+- `sources/raw-papers-mechanism-analysis.md`: Added YAML frontmatter
+
+### Index Fixes Applied
+- Added 8 entity entries (anthropic, google-deepmind, jeff-clune, meta-fair, noah-shinn, openai, sakana-ai, shengran-hu)
+- Added 3 source entries (blogs-brainstorm, cross-pollination, papers-brainstorm)
+- Updated stats: Entities 0→8, Sources 11→14
+
+**产出:** index.md updated, 3 source files frontmatter fixed, log.md lint entry

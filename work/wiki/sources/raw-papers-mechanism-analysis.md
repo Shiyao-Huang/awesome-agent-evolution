@@ -1,3 +1,12 @@
+---
+title: Raw-Papers Mechanism Analysis
+type: source
+rank: A
+tags: [papers, mechanism, f1-f7, evidence, taxonomy]
+sources: [raw-papers/, paper-reviews/]
+updated: 2026-05-26
+---
+
 # Raw-Papers Mechanism Analysis
 
 > **Source**: raw-papers/ (128 unique papers, 199 files) + paper-reviews/ (137 reviews)

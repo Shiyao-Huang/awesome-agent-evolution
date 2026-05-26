@@ -1,3 +1,12 @@
+---
+title: Raw-GitHub Mechanism Analysis
+type: source
+rank: A
+tags: [github, mechanism, taxonomy, case-studies, self-evolution]
+sources: [raw-github/]
+updated: 2026-05-26
+---
+
 # Source: Raw-GitHub 365 Project Mechanism Analysis
 
 > **Type**: Source analysis | **Rank**: A | **Date**: 2026-05-26

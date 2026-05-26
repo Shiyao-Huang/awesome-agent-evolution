@@ -1,8 +1,17 @@
+---
+title: Employee Social Intelligence
+type: source
+rank: A
+tags: [social-intelligence, twitter, linkedin, github, talent, researchers]
+sources: [raw-social/, work/research/]
+updated: 2026-05-26
+---
+
 # Employee Social Intelligence: AI Self-Evolution Researchers
 
 Generated: 2026-05-26
 Method: Web search (X/Twitter, LinkedIn, GitHub, blogs, podcasts) + cross-reference with work/research/
-Rank: ⬤⬤⬤⬤ (high — real-time social signals from active researchers)
+Rank: A (high — real-time social signals from active researchers)
 Trust chain: All entries include original links. No private data.
 
 ---
