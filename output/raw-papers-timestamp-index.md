@@ -2,8 +2,8 @@
 
 Generated: 2026-05-26T00:00:00+08:00
 
-- Total raw paper captures: 196
-- Unknown content_timestamp: 0
+- Total raw paper captures: 197
+- Unknown content_timestamp: 1
 
 | # | arXiv ID | content_timestamp | time_slice | collected_at | source | File |
 |---:|---|---|---|---|---|---|
@@ -202,4 +202,5 @@ Generated: 2026-05-26T00:00:00+08:00
 | 193 | [2605.18421](https://arxiv.org/abs/2605.18421) | 2026-05-18 | 2026-05 | 2026-05-25T13:45:00+08:00 | arXiv Atom API published field | raw-papers/2605.18421.md |
 | 194 | [2605.18930](https://arxiv.org/abs/2605.18930) | 2026-05-18 | 2026-05 | 2026-05-21T23:10:00+08:00 | arxiv submission date | raw-papers/2605.18930.md |
 | 195 | [2605.19102](https://arxiv.org/abs/2605.19102) | 2026-05-18 | 2026-05 | 2026-05-21 | arXiv submission history | raw-papers/2605.19102.md |
-| 196 | [placeholder.no-arxiv](https://arxiv.org/abs/placeholder.no-arxiv) | 20pl-ac-01 | 20pl-ac | 2026-05-21 | arXiv submission history | raw-papers/placeholder-no-arxiv.md |
+| 196 | [classification.index](https://arxiv.org/abs/classification.index) | unknown | unknown | unknown | unknown_not_present_in_raw_capture | raw-papers/classification-index.md |
+| 197 | [placeholder.no-arxiv](https://arxiv.org/abs/placeholder.no-arxiv) | 20pl-ac-01 | 20pl-ac | 2026-05-21 | arXiv submission history | raw-papers/placeholder-no-arxiv.md |

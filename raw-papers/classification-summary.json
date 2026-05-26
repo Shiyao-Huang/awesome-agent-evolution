@@ -33,130 +33,1010 @@
     }
   },
   "papers": [
-    {"id": "2203.14465", "title": "STaR: Bootstrapping Reasoning With Reasoning", "year": 2022, "primary": "M3", "secondary": "M2", "rank": 5},
-    {"id": "2303.11366", "title": "Reflexion: Language Agents with Verbal Reinforcement Learning", "year": 2023, "primary": "M3", "secondary": "M1", "rank": 5},
-    {"id": "2303.17651", "title": "Self-Refine: Iterative Refinement with Self-Feedback", "year": 2023, "primary": "M3", "secondary": "M2", "rank": 5},
-    {"id": "2304.03442", "title": "Generative Agents: Interactive Simulacra of Human Behavior", "year": 2023, "primary": "M1", "secondary": "M5", "rank": 4},
-    {"id": "2305.14325", "title": "Improving Factuality and Reasoning through Multiagent Debate", "year": 2023, "primary": "M4", "secondary": "M3", "rank": 5},
-    {"id": "2305.16291", "title": "Voyager: An Open-Ended Embodied Agent with LLMs", "year": 2023, "primary": "M3", "secondary": "M1", "rank": 5},
-    {"id": "2308.10144", "title": "ExpeL: LLM Agents Are Experiential Learners", "year": 2023, "primary": "M1", "secondary": "M3", "rank": 4},
-    {"id": "2311.09336", "title": "LLMRefine: Fine-Grained Feedback for Refinement", "year": 2023, "primary": "Other", "secondary": "M3", "rank": 3},
-    {"id": "2312.09390", "title": "Weak-to-Strong Generalization", "year": 2023, "primary": "M5", "secondary": "M2", "rank": 5},
-    {"id": "2401.01335", "title": "Self-Play Fine-Tuning (SPIN)", "year": 2024, "primary": "M4", "secondary": "M3", "rank": 4},
-    {"id": "2401.10020", "title": "Self-Rewarding Language Models", "year": 2024, "primary": "M2", "secondary": "M3", "rank": 5},
-    {"id": "2401.10510", "title": "When LLMs Meet Evolutionary Algorithms", "year": 2024, "primary": "Survey", "secondary": "M3", "rank": 4},
-    {"id": "2401.13996", "title": "ICE: Inter-Task Agent Self-Evolution", "year": 2024, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2402.17574", "title": "Agent-Pro: Policy-Level Reflection and Optimization", "year": 2024, "primary": "M3", "secondary": "M2", "rank": 4},
-    {"id": "2402.18381", "title": "Large Language Models As Evolution Strategies", "year": 2024, "primary": "Other", "secondary": "M3", "rank": 3},
-    {"id": "2403.18341", "title": "IterAlign: Iterative Constitutional Alignment", "year": 2024, "primary": "Other", "secondary": "M2", "rank": 3},
-    {"id": "2404.14387", "title": "A Survey on Self-Evolution of LLMs", "year": 2024, "primary": "Survey", "secondary": "M3", "rank": 5},
-    {"id": "2405.06682", "title": "Self-Reflection in LLM Agents", "year": 2024, "primary": "M1", "secondary": "M3", "rank": 3},
-    {"id": "2406.18532", "title": "Symbolic Learning Enables Self-Evolving Agents", "year": 2024, "primary": "M3", "secondary": "M1", "rank": 5},
-    {"id": "2407.18219", "title": "RISE: Recursive Introspection for Self-Improvement", "year": 2024, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2407.19594", "title": "Meta-Rewarding Language Models", "year": 2024, "primary": "M2", "secondary": "M3", "rank": 4},
-    {"id": "2408.08435", "title": "Automated Design of Agentic Systems (ADAS)", "year": 2024, "primary": "M3", "secondary": "M5", "rank": 5},
-    {"id": "2409.12147", "title": "MAgICoRe: Multi-Agent Iterative Coarse-to-Fine Refinement", "year": 2024, "primary": "M4", "secondary": "M3", "rank": 3},
-    {"id": "2409.12917", "title": "SCoRe: Training LLMs to Self-Correct via RL", "year": 2024, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2409.14051", "title": "GroupDebate: Multi-Agent Debate Using Group Discussion", "year": 2024, "primary": "M4", "secondary": "M3", "rank": 3},
-    {"id": "2409.18382", "title": "CurricuLLM: Automatic Task Curricula Design", "year": 2024, "primary": "Other", "secondary": "M3", "rank": 3},
-    {"id": "2410.01215", "title": "MGDebugger: Hierarchical Debugging for Code Generation", "year": 2024, "primary": "Other", "secondary": "M1", "rank": 3},
-    {"id": "2410.04444", "title": "Godel Agent: Self-Referential Agent for Recursive Self-Improvement", "year": 2024, "primary": "M3", "secondary": "M5", "rank": 5},
-    {"id": "2410.12853", "title": "Diversity of Thought in Multi-Agent Debate", "year": 2024, "primary": "M4", "secondary": "M5", "rank": 3},
-    {"id": "2410.15639", "title": "Self-Developing: Algorithm Discovery for Recursive Self-Improvement", "year": 2024, "primary": "M3", "secondary": "M5", "rank": 4},
-    {"id": "2410.16946", "title": "EvoMAC: Self-Evolving Multi-Agent Collaboration Networks", "year": 2024, "primary": "M4", "secondary": "M3", "rank": 4},
-    {"id": "2410.23912", "title": "RL-STaR: Theoretical Analysis of RL for Self-Taught Reasoner", "year": 2024, "primary": "Survey", "secondary": "M3", "rank": 3},
-    {"id": "2411.02337", "title": "WebRL: Self-Evolving Online Curriculum RL for Web Agents", "year": 2024, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2412.01951", "title": "Self-Improvement in LMs: The Sharpening Mechanism", "year": 2024, "primary": "Survey", "secondary": "M3", "rank": 4},
-    {"id": "2501.01264", "title": "ProgCo: Program-Driven Self-Correction", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 3},
-    {"id": "2501.07278", "title": "Lifelong Learning of LLM-based Agents: A Roadmap", "year": 2025, "primary": "Survey", "secondary": "M1", "rank": 4},
-    {"id": "2501.11425", "title": "Agent-R: Training LLM Agents to Reflect via Self-Training", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2501.12793", "title": "Revisit Self-Debugging with Self-Generated Tests", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 3},
-    {"id": "2501.13011", "title": "MONA: Myopic Optimization with Non-myopic Approval", "year": 2025, "primary": "Other", "secondary": "M2", "rank": 3},
-    {"id": "2502.00593", "title": "Dominated Novelty Search: Quality-Diversity Reformulation", "year": 2025, "primary": "Other", "secondary": "M5", "rank": 3},
-    {"id": "2502.04780", "title": "SiriuS: Self-improving Multi-agent Systems via Bootstrapped Reasoning", "year": 2025, "primary": "M4", "secondary": "M3", "rank": 4},
-    {"id": "2502.05605", "title": "EVOLVE: Evolving Self-Refinement via Iterative Preference Optimization", "year": 2025, "primary": "M3", "secondary": "M2", "rank": 4},
-    {"id": "2502.05957", "title": "AutoAgent: Fully-Automated Zero-Code Framework for LLM Agents", "year": 2025, "primary": "Other", "secondary": "M3", "rank": 3},
-    {"id": "2502.12110", "title": "A-Mem: Agentic Memory for LLM Agents", "year": 2025, "primary": "M1", "secondary": "M3", "rank": 4},
-    {"id": "2502.13550", "title": "STaR-SQL: Self-Taught Reasoner for Text-to-SQL", "year": 2025, "primary": "M2", "secondary": "M3", "rank": 3},
-    {"id": "2503.12434", "title": "Survey on Optimization of LLM-based Agents", "year": 2025, "primary": "Survey", "secondary": "M3", "rank": 3},
-    {"id": "2504.01990", "title": "Advances in Foundation Agents (Book)", "year": 2025, "primary": "Survey", "secondary": "M3", "rank": 5},
-    {"id": "2504.15228", "title": "A Self-Improving Coding Agent", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2504.20073", "title": "RAGEN: Self-Evolution in LLM Agents via Multi-Turn RL", "year": 2025, "primary": "M3", "secondary": "M2", "rank": 4},
-    {"id": "2504.21024", "title": "WebEvolver: Web Agent Self-Improvement with Coevolving World Model", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2505.00234", "title": "Self-Generated In-Context Examples for Sequential Decision-Making", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2505.03335", "title": "Absolute Zero: Reinforced Self-play Reasoning with Zero Data", "year": 2025, "primary": "M4", "secondary": "M3", "rank": 5},
-    {"id": "2505.08827", "title": "RLSR: Reinforcement Learning from Self Reward", "year": 2025, "primary": "M2", "secondary": "M3", "rank": 3},
-    {"id": "2505.14970", "title": "Self-Evolving Curriculum for LLM Reasoning", "year": 2025, "primary": "M2", "secondary": "M3", "rank": 4},
-    {"id": "2505.15741", "title": "Evolutionary Computation and LLMs: A Survey", "year": 2025, "primary": "Survey", "secondary": "M3", "rank": 4},
-    {"id": "2505.16067", "title": "How Memory Management Impacts LLM Agents", "year": 2025, "primary": "M1", "secondary": "M3", "rank": 3},
-    {"id": "2505.16475", "title": "ReflectEvo: Improving Meta Introspection of Small LLMs", "year": 2025, "primary": "M1", "secondary": "M3", "rank": 4},
-    {"id": "2505.18646", "title": "SEW: Self-Evolving Agentic Workflows for Code Generation", "year": 2025, "primary": "M3", "secondary": "M4", "rank": 4},
-    {"id": "2505.22954", "title": "Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents", "year": 2025, "primary": "M3", "secondary": "M5", "rank": 5},
-    {"id": "2505.23060", "title": "CoCoS: Self-Correcting Code Generation Using Small LMs", "year": 2025, "primary": "M2", "secondary": "M3", "rank": 3},
-    {"id": "2506.01716", "title": "Self-Challenging Language Model Agents", "year": 2025, "primary": "M2", "secondary": "M3", "rank": 4},
-    {"id": "2506.04651", "title": "Agents of Change: Self-Evolving LLM Agents for Strategic Planning", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 3},
-    {"id": "2506.09046", "title": "Agentic Neural Networks: Self-Evolving Multi-Agent Systems", "year": 2025, "primary": "M4", "secondary": "M3", "rank": 4},
-    {"id": "2506.10943", "title": "Self-Adapting Language Models", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 3},
-    {"id": "2506.13131", "title": "AlphaEvolve: A Coding Agent for Scientific Discovery", "year": 2025, "primary": "M3", "secondary": "M5", "rank": 5},
-    {"id": "2506.24119", "title": "SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning", "year": 2025, "primary": "M4", "secondary": "M3", "rank": 4},
-    {"id": "2507.03616", "title": "EvoAgentX: Automated Framework for Evolving Agentic Workflows", "year": 2025, "primary": "M3", "secondary": "M4", "rank": 3},
-    {"id": "2507.19457", "title": "GEPA: Reflective Prompt Evolution", "year": 2025, "primary": "M2", "secondary": "M3", "rank": 4},
-    {"id": "2507.21046", "title": "Survey of Self-Evolving Agents: Path to ASI", "year": 2025, "primary": "Survey", "secondary": "M3", "rank": 5},
-    {"id": "2508.02085", "title": "SE-Agent: Self-Evolution Trajectory Optimization", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 3},
-    {"id": "2508.04700", "title": "SEAgent: Self-Evolving Computer Use Agent", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2508.07407", "title": "Comprehensive Survey of Self-Evolving AI Agents", "year": 2025, "primary": "Survey", "secondary": "M1", "rank": 4},
-    {"id": "2508.09586", "title": "EvoCurr: Self-evolving Curriculum with Behavior Code Generation", "year": 2025, "primary": "M2", "secondary": "M3", "rank": 3},
-    {"id": "2508.19005", "title": "Building Self-Evolving Agents via Experience-Driven Lifelong Learning", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2508.19828", "title": "Memory-R1: Managing and Utilizing Memories via RL", "year": 2025, "primary": "M1", "secondary": "M3", "rank": 4},
-    {"id": "2509.04575", "title": "Bootstrapping Task Spaces for Self-Improvement", "year": 2025, "primary": "M2", "secondary": "M3", "rank": 3},
-    {"id": "2509.20562", "title": "SAMULE: Self-Learning Agents Enhanced by Multi-Level Reflection", "year": 2025, "primary": "M1", "secondary": "M3", "rank": 3},
-    {"id": "2509.22502", "title": "InfiAgent: Self-Evolving Pyramid Agent Framework", "year": 2025, "primary": "M3", "secondary": "M4", "rank": 3},
-    {"id": "2509.25140", "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory", "year": 2025, "primary": "M1", "secondary": "M3", "rank": 3},
-    {"id": "2509.25541", "title": "Vision-Zero: Scalable VLM Self-Evolution via Multi-Agent Self-Play", "year": 2025, "primary": "M4", "secondary": "M3", "rank": 3},
-    {"id": "2509.26354", "title": "Your Agent May Misevolve: Emergent Risks in Self-Evolving Agents", "year": 2025, "primary": "M5", "secondary": "M3", "rank": 5},
-    {"id": "2510.04618", "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving LMs", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 3},
-    {"id": "2510.06056", "title": "Scientific Algorithm Discovery by Augmenting AlphaEvolve", "year": 2025, "primary": "M3", "secondary": "M5", "rank": 3},
-    {"id": "2510.07841", "title": "Self-Improving LLM Agents at Test-Time", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2510.14253", "title": "Towards Agentic Self-Learning LLMs in Search Environment", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 3},
-    {"id": "2510.16079", "title": "EvolveR: Self-Evolving LLM Agents through Experience-Driven Lifecycle", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2510.17498", "title": "Deep Self-Evolving Reasoning", "year": 2025, "primary": "M3", "secondary": "M2", "rank": 4},
-    {"id": "2510.18327", "title": "InspectCoder: Self Repair through LLM-Debugger Collaboration", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 3},
-    {"id": "2510.23595", "title": "Multi-Agent Evolve: LLM Self-Improve through Co-evolution", "year": 2025, "primary": "M4", "secondary": "M3", "rank": 4},
-    {"id": "2511.06449", "title": "FLEX: Continuous Agent Evolution via Forward Learning from Experience", "year": 2025, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2511.10395", "title": "AgentEvolver: Towards Efficient Self-Evolving Agent System", "year": 2025, "primary": "M3", "secondary": "M4", "rank": 3},
-    {"id": "2511.16043", "title": "Agent0: Self-Evolving Agents from Zero Data", "year": 2025, "primary": "M3", "secondary": "M4", "rank": 4},
-    {"id": "2511.23473", "title": "ThetaEvolve: Test-time Learning on Open Problems", "year": 2025, "primary": "M3", "secondary": "M5", "rank": 3},
-    {"id": "2512.09108", "title": "Evolving Excellence: Automated Optimization of LLM-based Agents", "year": 2025, "primary": "M3", "secondary": "M4", "rank": 3},
-    {"id": "2512.22716", "title": "Memento-II: Learning by Stateful Reflective Memory", "year": 2025, "primary": "M5", "secondary": "M3", "rank": 3},
-    {"id": "2601.05280", "title": "On the Limits of Self-Improving in LLMs", "year": 2026, "primary": "Survey", "secondary": "M3", "rank": 4},
-    {"id": "2602.01983", "title": "Evolving from Tool User to Creator via Experience Reuse", "year": 2026, "primary": "M3", "secondary": "M1", "rank": 3},
-    {"id": "2602.02474", "title": "MemSkill: Learning and Evolving Memory Skills", "year": 2026, "primary": "M1", "secondary": "M3", "rank": 3},
-    {"id": "2602.04837", "title": "Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing", "year": 2026, "primary": "M4", "secondary": "M3", "rank": 4},
-    {"id": "2602.05810", "title": "Bifrost: Steering Strategic Trajectories for Self-Improving Agents", "year": 2026, "primary": "M3", "secondary": "M1", "rank": 3},
-    {"id": "2602.09877", "title": "The Devil Behind Moltbook: Safety in Self-Evolving AI Societies", "year": 2026, "primary": "M5", "secondary": "M4", "rank": 4},
-    {"id": "2602.23720", "title": "The Auton Agentic AI Framework", "year": 2026, "primary": "Other", "secondary": "M3", "rank": 3},
-    {"id": "2603.02766", "title": "EvoSkill: Automated Skill Discovery for Multi-Agent Systems", "year": 2026, "primary": "M4", "secondary": "M3", "rank": 3},
-    {"id": "2603.03290", "title": "AriadneMem: Threading the Maze of Lifelong Memory", "year": 2026, "primary": "M1", "secondary": "M3", "rank": 3},
-    {"id": "2603.07970", "title": "Advancing Automated Algorithm Design via Evolutionary Stagewise Design", "year": 2026, "primary": "Other", "secondary": "M3", "rank": 3},
-    {"id": "2603.15255", "title": "SAGE: Multi-Agent Self-Evolution for LLM Reasoning", "year": 2026, "primary": "M4", "secondary": "M3", "rank": 4},
-    {"id": "2603.19461", "title": "Hyperagents", "year": 2026, "primary": "M5", "secondary": "M3", "rank": 4},
-    {"id": "2603.25928", "title": "Self-Organizing Multi-Agent Systems for Continuous Software Development", "year": 2026, "primary": "M4", "secondary": "M5", "rank": 3},
-    {"id": "2603.28990", "title": "Drop the Hierarchy: Self-Organizing LLM Agents Outperform Designed Structures", "year": 2026, "primary": "M5", "secondary": "M4", "rank": 3},
-    {"id": "2604.01658", "title": "CORAL: Autonomous Multi-Agent Evolution for Open-Ended Discovery", "year": 2026, "primary": "M4", "secondary": "M5", "rank": 4},
-    {"id": "2604.01687", "title": "CoEvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification", "year": 2026, "primary": "M4", "secondary": "M3", "rank": 4},
-    {"id": "2604.02674", "title": "Hidden Power Laws of Collective Cognition in LLM MAS", "year": 2026, "primary": "M5", "secondary": "M4", "rank": 3},
-    {"id": "2604.08988", "title": "SEA-Eval: Benchmark for Evaluating Self-Evolving Agents", "year": 2026, "primary": "Other", "secondary": "M3", "rank": 3},
-    {"id": "2604.10923", "title": "Mem2Evolve: Self-Evolving Agents via Co-Evolutionary Capability Expansion", "year": 2026, "primary": "M4", "secondary": "M1", "rank": 4},
-    {"id": "2604.14972", "title": "SAGER: Self-Evolving User Policy Skills for Recommendation Agent", "year": 2026, "primary": "M3", "secondary": "M1", "rank": 3},
-    {"id": "2604.15034", "title": "Autogenesis: A Self-Evolving Agent Protocol", "year": 2026, "primary": "M3", "secondary": "M5", "rank": 4},
-    {"id": "2604.17091", "title": "GenericAgent: Token-Efficient Self-Evolving LLM Agent", "year": 2026, "primary": "M3", "secondary": "M1", "rank": 3},
-    {"id": "2604.18131", "title": "Training LLM Agents for Reward-Free Self-Evolution via World Knowledge", "year": 2026, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2604.27264", "title": "Self-Evolving Software Agents", "year": 2026, "primary": "M3", "secondary": "M1", "rank": 3},
-    {"id": "2605.04677", "title": "CodeEvolve: LLM-Driven Evolutionary Optimization for Code Enhancement", "year": 2026, "primary": "M3", "secondary": "M5", "rank": 3},
-    {"id": "2605.06614", "title": "SkillOS: Learning Skill Curation for Self-Evolving Agents", "year": 2026, "primary": "M3", "secondary": "M1", "rank": 4},
-    {"id": "2605.09315", "title": "Do Self-Evolving Agents Forget? Capability Degradation in Lifelong Adaptation", "year": 2026, "primary": "M1", "secondary": "M3", "rank": 4},
-    {"id": "2605.18421", "title": "EvoMemBench: Benchmarking Agent Memory from Self-Evolving Perspective", "year": 2026, "primary": "Other", "secondary": "M1", "rank": 3},
-    {"id": "2605.18930", "title": "OEP: Poisoning Self-Evolving LLM Agents", "year": 2026, "primary": "Other", "secondary": "M3", "rank": 3},
-    {"id": "2605.19102", "title": "Prompt Optimization for LLM Code Generation via RL", "year": 2026, "primary": "M2", "secondary": "M3", "rank": 3}
-  ]
+    {
+      "id": "2203.14465",
+      "title": "STaR: Bootstrapping Reasoning With Reasoning",
+      "year": 2022,
+      "primary": "M3",
+      "secondary": "M2",
+      "rank": 5
+    },
+    {
+      "id": "2303.11366",
+      "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+      "year": 2023,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 5
+    },
+    {
+      "id": "2303.17651",
+      "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+      "year": 2023,
+      "primary": "M3",
+      "secondary": "M2",
+      "rank": 5
+    },
+    {
+      "id": "2304.03442",
+      "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "year": 2023,
+      "primary": "M1",
+      "secondary": "M5",
+      "rank": 4
+    },
+    {
+      "id": "2305.14325",
+      "title": "Improving Factuality and Reasoning through Multiagent Debate",
+      "year": 2023,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 5
+    },
+    {
+      "id": "2305.16291",
+      "title": "Voyager: An Open-Ended Embodied Agent with LLMs",
+      "year": 2023,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 5
+    },
+    {
+      "id": "2308.10144",
+      "title": "ExpeL: LLM Agents Are Experiential Learners",
+      "year": 2023,
+      "primary": "M1",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2311.09336",
+      "title": "LLMRefine: Fine-Grained Feedback for Refinement",
+      "year": 2023,
+      "primary": "Other",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2312.09390",
+      "title": "Weak-to-Strong Generalization",
+      "year": 2023,
+      "primary": "M5",
+      "secondary": "M2",
+      "rank": 5
+    },
+    {
+      "id": "2401.01335",
+      "title": "Self-Play Fine-Tuning (SPIN)",
+      "year": 2024,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2401.10020",
+      "title": "Self-Rewarding Language Models",
+      "year": 2024,
+      "primary": "M2",
+      "secondary": "M3",
+      "rank": 5
+    },
+    {
+      "id": "2401.10510",
+      "title": "When LLMs Meet Evolutionary Algorithms",
+      "year": 2024,
+      "primary": "Survey",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2401.13996",
+      "title": "ICE: Inter-Task Agent Self-Evolution",
+      "year": 2024,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2402.17574",
+      "title": "Agent-Pro: Policy-Level Reflection and Optimization",
+      "year": 2024,
+      "primary": "M3",
+      "secondary": "M2",
+      "rank": 4
+    },
+    {
+      "id": "2402.18381",
+      "title": "Large Language Models As Evolution Strategies",
+      "year": 2024,
+      "primary": "Other",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2403.18341",
+      "title": "IterAlign: Iterative Constitutional Alignment",
+      "year": 2024,
+      "primary": "Other",
+      "secondary": "M2",
+      "rank": 3
+    },
+    {
+      "id": "2404.14387",
+      "title": "A Survey on Self-Evolution of LLMs",
+      "year": 2024,
+      "primary": "Survey",
+      "secondary": "M3",
+      "rank": 5
+    },
+    {
+      "id": "2405.06682",
+      "title": "Self-Reflection in LLM Agents",
+      "year": 2024,
+      "primary": "M1",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2406.18532",
+      "title": "Symbolic Learning Enables Self-Evolving Agents",
+      "year": 2024,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 5
+    },
+    {
+      "id": "2407.18219",
+      "title": "RISE: Recursive Introspection for Self-Improvement",
+      "year": 2024,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2407.19594",
+      "title": "Meta-Rewarding Language Models",
+      "year": 2024,
+      "primary": "M2",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2408.08435",
+      "title": "Automated Design of Agentic Systems (ADAS)",
+      "year": 2024,
+      "primary": "M3",
+      "secondary": "M5",
+      "rank": 5
+    },
+    {
+      "id": "2409.12147",
+      "title": "MAgICoRe: Multi-Agent Iterative Coarse-to-Fine Refinement",
+      "year": 2024,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2409.12917",
+      "title": "SCoRe: Training LLMs to Self-Correct via RL",
+      "year": 2024,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2409.14051",
+      "title": "GroupDebate: Multi-Agent Debate Using Group Discussion",
+      "year": 2024,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2409.18382",
+      "title": "CurricuLLM: Automatic Task Curricula Design",
+      "year": 2024,
+      "primary": "Other",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2410.01215",
+      "title": "MGDebugger: Hierarchical Debugging for Code Generation",
+      "year": 2024,
+      "primary": "Other",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2410.04444",
+      "title": "Godel Agent: Self-Referential Agent for Recursive Self-Improvement",
+      "year": 2024,
+      "primary": "M3",
+      "secondary": "M5",
+      "rank": 5
+    },
+    {
+      "id": "2410.12853",
+      "title": "Diversity of Thought in Multi-Agent Debate",
+      "year": 2024,
+      "primary": "M4",
+      "secondary": "M5",
+      "rank": 3
+    },
+    {
+      "id": "2410.15639",
+      "title": "Self-Developing: Algorithm Discovery for Recursive Self-Improvement",
+      "year": 2024,
+      "primary": "M3",
+      "secondary": "M5",
+      "rank": 4
+    },
+    {
+      "id": "2410.16946",
+      "title": "EvoMAC: Self-Evolving Multi-Agent Collaboration Networks",
+      "year": 2024,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2410.23912",
+      "title": "RL-STaR: Theoretical Analysis of RL for Self-Taught Reasoner",
+      "year": 2024,
+      "primary": "Survey",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2411.02337",
+      "title": "WebRL: Self-Evolving Online Curriculum RL for Web Agents",
+      "year": 2024,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2412.01951",
+      "title": "Self-Improvement in LMs: The Sharpening Mechanism",
+      "year": 2024,
+      "primary": "Survey",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2501.01264",
+      "title": "ProgCo: Program-Driven Self-Correction",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2501.07278",
+      "title": "Lifelong Learning of LLM-based Agents: A Roadmap",
+      "year": 2025,
+      "primary": "Survey",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2501.11425",
+      "title": "Agent-R: Training LLM Agents to Reflect via Self-Training",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2501.12793",
+      "title": "Revisit Self-Debugging with Self-Generated Tests",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2501.13011",
+      "title": "MONA: Myopic Optimization with Non-myopic Approval",
+      "year": 2025,
+      "primary": "Other",
+      "secondary": "M2",
+      "rank": 3
+    },
+    {
+      "id": "2502.00593",
+      "title": "Dominated Novelty Search: Quality-Diversity Reformulation",
+      "year": 2025,
+      "primary": "Other",
+      "secondary": "M5",
+      "rank": 3
+    },
+    {
+      "id": "2502.04780",
+      "title": "SiriuS: Self-improving Multi-agent Systems via Bootstrapped Reasoning",
+      "year": 2025,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2502.05605",
+      "title": "EVOLVE: Evolving Self-Refinement via Iterative Preference Optimization",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M2",
+      "rank": 4
+    },
+    {
+      "id": "2502.05957",
+      "title": "AutoAgent: Fully-Automated Zero-Code Framework for LLM Agents",
+      "year": 2025,
+      "primary": "Other",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2502.12110",
+      "title": "A-Mem: Agentic Memory for LLM Agents",
+      "year": 2025,
+      "primary": "M1",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2502.13550",
+      "title": "STaR-SQL: Self-Taught Reasoner for Text-to-SQL",
+      "year": 2025,
+      "primary": "M2",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2503.12434",
+      "title": "Survey on Optimization of LLM-based Agents",
+      "year": 2025,
+      "primary": "Survey",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2504.01990",
+      "title": "Advances in Foundation Agents (Book)",
+      "year": 2025,
+      "primary": "Survey",
+      "secondary": "M3",
+      "rank": 5
+    },
+    {
+      "id": "2504.15228",
+      "title": "A Self-Improving Coding Agent",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2504.20073",
+      "title": "RAGEN: Self-Evolution in LLM Agents via Multi-Turn RL",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M2",
+      "rank": 4
+    },
+    {
+      "id": "2504.21024",
+      "title": "WebEvolver: Web Agent Self-Improvement with Coevolving World Model",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2505.00234",
+      "title": "Self-Generated In-Context Examples for Sequential Decision-Making",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2505.03335",
+      "title": "Absolute Zero: Reinforced Self-play Reasoning with Zero Data",
+      "year": 2025,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 5
+    },
+    {
+      "id": "2505.08827",
+      "title": "RLSR: Reinforcement Learning from Self Reward",
+      "year": 2025,
+      "primary": "M2",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2505.14970",
+      "title": "Self-Evolving Curriculum for LLM Reasoning",
+      "year": 2025,
+      "primary": "M2",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2505.15741",
+      "title": "Evolutionary Computation and LLMs: A Survey",
+      "year": 2025,
+      "primary": "Survey",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2505.16067",
+      "title": "How Memory Management Impacts LLM Agents",
+      "year": 2025,
+      "primary": "M1",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2505.16475",
+      "title": "ReflectEvo: Improving Meta Introspection of Small LLMs",
+      "year": 2025,
+      "primary": "M1",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2505.18646",
+      "title": "SEW: Self-Evolving Agentic Workflows for Code Generation",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M4",
+      "rank": 4
+    },
+    {
+      "id": "2505.22954",
+      "title": "Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M5",
+      "rank": 5
+    },
+    {
+      "id": "2505.23060",
+      "title": "CoCoS: Self-Correcting Code Generation Using Small LMs",
+      "year": 2025,
+      "primary": "M2",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2506.01716",
+      "title": "Self-Challenging Language Model Agents",
+      "year": 2025,
+      "primary": "M2",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2506.04651",
+      "title": "Agents of Change: Self-Evolving LLM Agents for Strategic Planning",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2506.09046",
+      "title": "Agentic Neural Networks: Self-Evolving Multi-Agent Systems",
+      "year": 2025,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2506.10943",
+      "title": "Self-Adapting Language Models",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2506.13131",
+      "title": "AlphaEvolve: A Coding Agent for Scientific Discovery",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M5",
+      "rank": 5
+    },
+    {
+      "id": "2506.24119",
+      "title": "SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning",
+      "year": 2025,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2507.03616",
+      "title": "EvoAgentX: Automated Framework for Evolving Agentic Workflows",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M4",
+      "rank": 3
+    },
+    {
+      "id": "2507.19457",
+      "title": "GEPA: Reflective Prompt Evolution",
+      "year": 2025,
+      "primary": "M2",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2507.21046",
+      "title": "Survey of Self-Evolving Agents: Path to ASI",
+      "year": 2025,
+      "primary": "Survey",
+      "secondary": "M3",
+      "rank": 5
+    },
+    {
+      "id": "2508.02085",
+      "title": "SE-Agent: Self-Evolution Trajectory Optimization",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2508.04700",
+      "title": "SEAgent: Self-Evolving Computer Use Agent",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2508.07407",
+      "title": "Comprehensive Survey of Self-Evolving AI Agents",
+      "year": 2025,
+      "primary": "Survey",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2508.09586",
+      "title": "EvoCurr: Self-evolving Curriculum with Behavior Code Generation",
+      "year": 2025,
+      "primary": "M2",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2508.19005",
+      "title": "Building Self-Evolving Agents via Experience-Driven Lifelong Learning",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2508.19828",
+      "title": "Memory-R1: Managing and Utilizing Memories via RL",
+      "year": 2025,
+      "primary": "M1",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2509.04575",
+      "title": "Bootstrapping Task Spaces for Self-Improvement",
+      "year": 2025,
+      "primary": "M2",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2509.20562",
+      "title": "SAMULE: Self-Learning Agents Enhanced by Multi-Level Reflection",
+      "year": 2025,
+      "primary": "M1",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2509.22502",
+      "title": "InfiAgent: Self-Evolving Pyramid Agent Framework",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M4",
+      "rank": 3
+    },
+    {
+      "id": "2509.25140",
+      "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory",
+      "year": 2025,
+      "primary": "M1",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2509.25541",
+      "title": "Vision-Zero: Scalable VLM Self-Evolution via Multi-Agent Self-Play",
+      "year": 2025,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2509.26354",
+      "title": "Your Agent May Misevolve: Emergent Risks in Self-Evolving Agents",
+      "year": 2025,
+      "primary": "M5",
+      "secondary": "M3",
+      "rank": 5
+    },
+    {
+      "id": "2510.04618",
+      "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving LMs",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2510.06056",
+      "title": "Scientific Algorithm Discovery by Augmenting AlphaEvolve",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M5",
+      "rank": 3
+    },
+    {
+      "id": "2510.07841",
+      "title": "Self-Improving LLM Agents at Test-Time",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2510.14253",
+      "title": "Towards Agentic Self-Learning LLMs in Search Environment",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2510.16079",
+      "title": "EvolveR: Self-Evolving LLM Agents through Experience-Driven Lifecycle",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2510.17498",
+      "title": "Deep Self-Evolving Reasoning",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M2",
+      "rank": 4
+    },
+    {
+      "id": "2510.18327",
+      "title": "InspectCoder: Self Repair through LLM-Debugger Collaboration",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2510.23595",
+      "title": "Multi-Agent Evolve: LLM Self-Improve through Co-evolution",
+      "year": 2025,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2511.06449",
+      "title": "FLEX: Continuous Agent Evolution via Forward Learning from Experience",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2511.10395",
+      "title": "AgentEvolver: Towards Efficient Self-Evolving Agent System",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M4",
+      "rank": 3
+    },
+    {
+      "id": "2511.16043",
+      "title": "Agent0: Self-Evolving Agents from Zero Data",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M4",
+      "rank": 4
+    },
+    {
+      "id": "2511.23473",
+      "title": "ThetaEvolve: Test-time Learning on Open Problems",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M5",
+      "rank": 3
+    },
+    {
+      "id": "2512.09108",
+      "title": "Evolving Excellence: Automated Optimization of LLM-based Agents",
+      "year": 2025,
+      "primary": "M3",
+      "secondary": "M4",
+      "rank": 3
+    },
+    {
+      "id": "2512.22716",
+      "title": "Memento-II: Learning by Stateful Reflective Memory",
+      "year": 2025,
+      "primary": "M5",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2601.05280",
+      "title": "On the Limits of Self-Improving in LLMs",
+      "year": 2026,
+      "primary": "Survey",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2602.01983",
+      "title": "Evolving from Tool User to Creator via Experience Reuse",
+      "year": 2026,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2602.02474",
+      "title": "MemSkill: Learning and Evolving Memory Skills",
+      "year": 2026,
+      "primary": "M1",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2602.04837",
+      "title": "Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing",
+      "year": 2026,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2602.05810",
+      "title": "Bifrost: Steering Strategic Trajectories for Self-Improving Agents",
+      "year": 2026,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2602.09877",
+      "title": "The Devil Behind Moltbook: Safety in Self-Evolving AI Societies",
+      "year": 2026,
+      "primary": "M5",
+      "secondary": "M4",
+      "rank": 4
+    },
+    {
+      "id": "2602.23720",
+      "title": "The Auton Agentic AI Framework",
+      "year": 2026,
+      "primary": "Other",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2603.02766",
+      "title": "EvoSkill: Automated Skill Discovery for Multi-Agent Systems",
+      "year": 2026,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2603.03290",
+      "title": "AriadneMem: Threading the Maze of Lifelong Memory",
+      "year": 2026,
+      "primary": "M1",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2603.07970",
+      "title": "Advancing Automated Algorithm Design via Evolutionary Stagewise Design",
+      "year": 2026,
+      "primary": "Other",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2603.15255",
+      "title": "SAGE: Multi-Agent Self-Evolution for LLM Reasoning",
+      "year": 2026,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2603.19461",
+      "title": "Hyperagents",
+      "year": 2026,
+      "primary": "M5",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2603.25928",
+      "title": "Self-Organizing Multi-Agent Systems for Continuous Software Development",
+      "year": 2026,
+      "primary": "M4",
+      "secondary": "M5",
+      "rank": 3
+    },
+    {
+      "id": "2603.28990",
+      "title": "Drop the Hierarchy: Self-Organizing LLM Agents Outperform Designed Structures",
+      "year": 2026,
+      "primary": "M5",
+      "secondary": "M4",
+      "rank": 3
+    },
+    {
+      "id": "2604.01658",
+      "title": "CORAL: Autonomous Multi-Agent Evolution for Open-Ended Discovery",
+      "year": 2026,
+      "primary": "M4",
+      "secondary": "M5",
+      "rank": 4
+    },
+    {
+      "id": "2604.01687",
+      "title": "CoEvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification",
+      "year": 2026,
+      "primary": "M4",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2604.02674",
+      "title": "Hidden Power Laws of Collective Cognition in LLM MAS",
+      "year": 2026,
+      "primary": "M5",
+      "secondary": "M4",
+      "rank": 3
+    },
+    {
+      "id": "2604.08988",
+      "title": "SEA-Eval: Benchmark for Evaluating Self-Evolving Agents",
+      "year": 2026,
+      "primary": "Other",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2604.10923",
+      "title": "Mem2Evolve: Self-Evolving Agents via Co-Evolutionary Capability Expansion",
+      "year": 2026,
+      "primary": "M4",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2604.14972",
+      "title": "SAGER: Self-Evolving User Policy Skills for Recommendation Agent",
+      "year": 2026,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2604.15034",
+      "title": "Autogenesis: A Self-Evolving Agent Protocol",
+      "year": 2026,
+      "primary": "M3",
+      "secondary": "M5",
+      "rank": 4
+    },
+    {
+      "id": "2604.17091",
+      "title": "GenericAgent: Token-Efficient Self-Evolving LLM Agent",
+      "year": 2026,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2604.18131",
+      "title": "Training LLM Agents for Reward-Free Self-Evolution via World Knowledge",
+      "year": 2026,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2604.27264",
+      "title": "Self-Evolving Software Agents",
+      "year": 2026,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2605.04677",
+      "title": "CodeEvolve: LLM-Driven Evolutionary Optimization for Code Enhancement",
+      "year": 2026,
+      "primary": "M3",
+      "secondary": "M5",
+      "rank": 3
+    },
+    {
+      "id": "2605.06614",
+      "title": "SkillOS: Learning Skill Curation for Self-Evolving Agents",
+      "year": 2026,
+      "primary": "M3",
+      "secondary": "M1",
+      "rank": 4
+    },
+    {
+      "id": "2605.09315",
+      "title": "Do Self-Evolving Agents Forget? Capability Degradation in Lifelong Adaptation",
+      "year": 2026,
+      "primary": "M1",
+      "secondary": "M3",
+      "rank": 4
+    },
+    {
+      "id": "2605.18421",
+      "title": "EvoMemBench: Benchmarking Agent Memory from Self-Evolving Perspective",
+      "year": 2026,
+      "primary": "Other",
+      "secondary": "M1",
+      "rank": 3
+    },
+    {
+      "id": "2605.18930",
+      "title": "OEP: Poisoning Self-Evolving LLM Agents",
+      "year": 2026,
+      "primary": "Other",
+      "secondary": "M3",
+      "rank": 3
+    },
+    {
+      "id": "2605.19102",
+      "title": "Prompt Optimization for LLM Code Generation via RL",
+      "year": 2026,
+      "primary": "M2",
+      "secondary": "M3",
+      "rank": 3
+    }
+  ],
+  "content_timestamp": "unknown",
+  "timestamp_confidence": "unknown",
+  "timestamp_source": "no reliable publication/creation timestamp found in raw artifact",
+  "collected_at": "2026-05-21T00:00:00+08:00",
+  "time_slice": "unknown"
 }

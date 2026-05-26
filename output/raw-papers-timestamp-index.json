@@ -1,8 +1,8 @@
 {
   "generated_at": "2026-05-26T00:00:00+08:00",
-  "total": 196,
-  "updated_files": 196,
-  "unknown_content_timestamp": 0,
+  "total": 197,
+  "updated_files": 197,
+  "unknown_content_timestamp": 1,
   "records": [
     {
       "arxiv_id": "2203.14465",
@@ -1953,6 +1953,16 @@
       "collected_at": "2026-05-21",
       "time_slice": "2026-05",
       "timestamp_source": "arXiv submission history"
+    },
+    {
+      "arxiv_id": "classification.index",
+      "title": "Raw Papers Classification Index",
+      "url": "https://arxiv.org/abs/classification.index",
+      "file": "raw-papers/classification-index.md",
+      "content_timestamp": "unknown",
+      "collected_at": "unknown",
+      "time_slice": "unknown",
+      "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
       "arxiv_id": "placeholder.no-arxiv",

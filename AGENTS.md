@@ -129,6 +129,7 @@ rg -n "old/path/or/file" -g '!*node_modules*' -g '!site/dist/**'
 
 ## Do Not
 
+- **禁止执行破坏性 git 操作**：`git reset --mixed HEAD`、`git reset --hard`、`git checkout .`、`git restore .`、`git clean -f`、`rm -rf` 等一律禁止。用户明确指令 2026-05-26。
 - 不把 team 的总结当作用户输入；用户直接输入以 [CURRENT_GOAL.md](CURRENT_GOAL.md) 为准。
 - 不跳过 [docs/project-management/user-direct-inputs.md](docs/project-management/user-direct-inputs.md)。
 - 不把非标准材料直接删除；先归类、查引用、更新 [docs/indexes/noncanonical-index.md](docs/indexes/noncanonical-index.md)。

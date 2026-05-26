@@ -347,3 +347,11 @@ Papers related to alignment, benchmarks, safety, evolutionary computation, curri
 | 2605.09315 | Do Self-Evolving Agents Forget? | 2026 | Catastrophic forgetting |
 | 2605.18421 | EvoMemBench: Benchmarking Agent Memory | 2026 | Benchmark |
 | 2605.18930 | OEP: Poisoning Self-Evolving LLM Agents | 2026 | Security |
+## gBrain Temporal Metadata
+
+- content_timestamp: 2026-05-26
+- collected_at: 2026-05-21T00:00:00+08:00
+- time_slice: 2026-05
+- timestamp_confidence: derived
+- timestamp_source: extracted from markdown content/metadata
+
