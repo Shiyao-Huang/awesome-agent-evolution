@@ -1,0 +1,572 @@
+{
+  "project": "Codex",
+  "repo": "openai/codex",
+  "collected_at": "2026-05-22T12:41:54.450906+00:00",
+  "total_hits": 80,
+  "results": {
+    "Codex": [
+      {
+        "objectID": "46902638",
+        "title": "GPT-5.3-Codex",
+        "points": 1530,
+        "num_comments": 605,
+        "created_at": "2026-02-05T18:08:08Z"
+      },
+      {
+        "objectID": "47796469",
+        "title": "Codex for almost everything",
+        "points": 1001,
+        "num_comments": 559,
+        "created_at": "2026-04-16T17:12:19Z"
+      },
+      {
+        "objectID": "35803435",
+        "title": "Replit's new Code LLM: Open Source, 77% smaller than Codex, trained in 1 week",
+        "points": 891,
+        "num_comments": 220,
+        "created_at": "2023-05-03T15:19:20Z"
+      },
+      {
+        "objectID": "46992553",
+        "title": "GPT‑5.3‑Codex‑Spark",
+        "points": 890,
+        "num_comments": 387,
+        "created_at": "2026-02-12T18:06:09Z"
+      },
+      {
+        "objectID": "46859054",
+        "title": "The Codex App",
+        "points": 805,
+        "num_comments": 638,
+        "created_at": "2026-02-02T18:02:48Z"
+      },
+      {
+        "objectID": "46316367",
+        "title": "GPT-5.2-Codex",
+        "points": 589,
+        "num_comments": 318,
+        "created_at": "2025-12-18T18:14:48Z"
+      },
+      {
+        "objectID": "46250332",
+        "title": "OpenAI are quietly adopting skills, now available in ChatGPT and Codex CLI",
+        "points": 587,
+        "num_comments": 324,
+        "created_at": "2025-12-12T23:30:19Z"
+      },
+      {
+        "objectID": "43708025",
+        "title": "OpenAI Codex CLI: Lightweight coding agent that runs in your terminal",
+        "points": 516,
+        "num_comments": 289,
+        "created_at": "2025-04-16T17:24:50Z"
+      },
+      {
+        "objectID": "44006345",
+        "title": "A Research Preview of Codex",
+        "points": 511,
+        "num_comments": 450,
+        "created_at": "2025-05-16T15:02:02Z"
+      },
+      {
+        "objectID": "48140529",
+        "title": "Codex is now in the ChatGPT mobile app",
+        "points": 486,
+        "num_comments": 247,
+        "created_at": "2026-05-14T20:06:14Z"
+      },
+      {
+        "objectID": "45982649",
+        "title": "Building more with GPT-5.1-Codex-Max",
+        "points": 483,
+        "num_comments": 319,
+        "created_at": "2025-11-19T18:01:59Z"
+      },
+      {
+        "objectID": "46737630",
+        "title": "Unrolling the Codex agent loop",
+        "points": 456,
+        "num_comments": 208,
+        "created_at": "2026-01-23T20:42:36Z"
+      },
+      {
+        "objectID": "45252301",
+        "title": "GPT-5-Codex",
+        "points": 396,
+        "num_comments": 137,
+        "created_at": "2025-09-15T17:10:39Z"
+      },
+      {
+        "objectID": "39803508",
+        "title": "New Aztec Codices Discovered: The Codices of San Andrés Tetepilco",
+        "points": 378,
+        "num_comments": 154,
+        "created_at": "2024-03-23T22:34:27Z"
+      },
+      {
+        "objectID": "28191362",
+        "title": "OpenAI's Codex sure knows a lot about HN [video]",
+        "points": 374,
+        "num_comments": 105,
+        "created_at": "2021-08-15T18:53:39Z"
+      },
+      {
+        "objectID": "28131745",
+        "title": "OpenAI Codex",
+        "points": 372,
+        "num_comments": 174,
+        "created_at": "2021-08-10T17:33:50Z"
+      },
+      {
+        "objectID": "23781743",
+        "title": "Slate Star Codex and Silicon Valley’s War Against the Media",
+        "points": 354,
+        "num_comments": 555,
+        "created_at": "2020-07-09T16:11:53Z"
+      },
+      {
+        "objectID": "46334424",
+        "title": "Skills Officially Comes to Codex",
+        "points": 304,
+        "num_comments": 130,
+        "created_at": "2025-12-20T08:09:17Z"
+      },
+      {
+        "objectID": "46080835",
+        "title": "Codex, Opus, Gemini try to build Counter Strike",
+        "points": 287,
+        "num_comments": 132,
+        "created_at": "2025-11-28T17:41:01Z"
+      },
+      {
+        "objectID": "47744255",
+        "title": "I ran Gemma 4 as a local model in Codex CLI",
+        "points": 285,
+        "num_comments": 116,
+        "created_at": "2026-04-12T20:43:08Z"
+      },
+      {
+        "objectID": "46295771",
+        "title": "I ported JustHTML from Python to JavaScript with Codex CLI and GPT-5.2 in hours",
+        "points": 278,
+        "num_comments": 145,
+        "created_at": "2025-12-16T22:48:56Z"
+      },
+      {
+        "objectID": "45606698",
+        "title": "Codex Is Live in Zed",
+        "points": 268,
+        "num_comments": 70,
+        "created_at": "2025-10-16T15:36:39Z"
+      },
+      {
+        "objectID": "47791212",
+        "title": "Codex Hacked a Samsung TV",
+        "points": 259,
+        "num_comments": 132,
+        "created_at": "2026-04-16T10:44:45Z"
+      },
+      {
+        "objectID": "44188839",
+        "title": "Tracking Copilot vs. Codex vs. Cursor vs. Devin PR Performance",
+        "points": 254,
+        "num_comments": 122,
+        "created_at": "2025-06-05T06:22:09Z"
+      },
+      {
+        "objectID": "23719376",
+        "title": "Ask HN: After Slate Star Codex, where are the nuanced discussions?",
+        "points": 253,
+        "num_comments": 311,
+        "created_at": "2020-07-02T23:46:52Z"
+      },
+      {
+        "objectID": "48130679",
+        "title": "A Claude Code and Codex Skill for Deliberate Skill Development",
+        "points": 253,
+        "num_comments": 50,
+        "created_at": "2026-05-14T03:13:31Z"
+      },
+      {
+        "objectID": "45253458",
+        "title": "Addendum to GPT-5 system card: GPT-5-Codex",
+        "points": 250,
+        "num_comments": 141,
+        "created_at": "2025-09-15T18:45:32Z"
+      },
+      {
+        "objectID": "46365105",
+        "title": "Show HN: Mysti – Claude, Codex, and Gemini debate your code, then synthesize",
+        "points": 216,
+        "num_comments": 178,
+        "created_at": "2025-12-23T13:18:32Z"
+      },
+      {
+        "objectID": "29413428",
+        "title": "The 40th anniversary edition of Codex Seraphinianus",
+        "points": 215,
+        "num_comments": 64,
+        "created_at": "2021-12-02T07:19:11Z"
+      },
+      {
+        "objectID": "47650726",
+        "title": "Codex pricing to align with API token usage, instead of per-message",
+        "points": 211,
+        "num_comments": 193,
+        "created_at": "2026-04-05T15:58:08Z"
+      },
+      {
+        "objectID": "47749674",
+        "title": "Show HN: I built a social media management tool in 3 weeks with Claude and Codex",
+        "points": 190,
+        "num_comments": 131,
+        "created_at": "2026-04-13T09:26:56Z"
+      },
+      {
+        "objectID": "19939464",
+        "title": "Leonardo Da Vinci’s “Codex Atlanticus” Now Online",
+        "points": 184,
+        "num_comments": 44,
+        "created_at": "2019-05-17T13:38:25Z"
+      },
+      {
+        "objectID": "35242069",
+        "title": "OpenAI to discontinue support for the Codex API",
+        "points": 175,
+        "num_comments": 131,
+        "created_at": "2023-03-21T03:03:13Z"
+      },
+      {
+        "objectID": "44042070",
+        "title": "OpenAI Codex hands-on review",
+        "points": 171,
+        "num_comments": 121,
+        "created_at": "2025-05-20T14:29:00Z"
+      },
+      {
+        "objectID": "45862802",
+        "title": "Reverse engineering Codex CLI to get GPT-5-Codex-Mini to draw me a pelican",
+        "points": 168,
+        "num_comments": 76,
+        "created_at": "2025-11-09T04:02:47Z"
+      },
+      {
+        "objectID": "43719447",
+        "title": "Show HN: AgentAPI – HTTP API for Claude Code, Goose, Aider, and Codex",
+        "points": 163,
+        "num_comments": 15,
+        "created_at": "2025-04-17T16:54:58Z"
+      },
+      {
+        "objectID": "44150093",
+        "title": "Codex CLI is going native",
+        "points": 151,
+        "num_comments": 129,
+        "created_at": "2025-06-01T11:22:55Z"
+      },
+      {
+        "objectID": "46991591",
+        "title": "Launch HN: Omnara (YC S25) – Run Claude Code and Codex from anywhere",
+        "points": 147,
+        "num_comments": 161,
+        "created_at": "2026-02-12T17:14:28Z"
+      },
+      {
+        "objectID": "45728975",
+        "title": "Complete Digitization of Leonardo da Vinci's Codex Atlanticus",
+        "points": 147,
+        "num_comments": 46,
+        "created_at": "2025-10-28T03:32:09Z"
+      },
+      {
+        "objectID": "45610266",
+        "title": "Claude Code vs. Codex: I built a sentiment dashboard from Reddit comments",
+        "points": 141,
+        "num_comments": 62,
+        "created_at": "2025-10-16T20:26:35Z"
+      }
+    ],
+    "codex": [
+      {
+        "objectID": "46902638",
+        "title": "GPT-5.3-Codex",
+        "points": 1530,
+        "num_comments": 605,
+        "created_at": "2026-02-05T18:08:08Z"
+      },
+      {
+        "objectID": "47796469",
+        "title": "Codex for almost everything",
+        "points": 1001,
+        "num_comments": 559,
+        "created_at": "2026-04-16T17:12:19Z"
+      },
+      {
+        "objectID": "35803435",
+        "title": "Replit's new Code LLM: Open Source, 77% smaller than Codex, trained in 1 week",
+        "points": 891,
+        "num_comments": 220,
+        "created_at": "2023-05-03T15:19:20Z"
+      },
+      {
+        "objectID": "46992553",
+        "title": "GPT‑5.3‑Codex‑Spark",
+        "points": 890,
+        "num_comments": 387,
+        "created_at": "2026-02-12T18:06:09Z"
+      },
+      {
+        "objectID": "46859054",
+        "title": "The Codex App",
+        "points": 805,
+        "num_comments": 638,
+        "created_at": "2026-02-02T18:02:48Z"
+      },
+      {
+        "objectID": "46316367",
+        "title": "GPT-5.2-Codex",
+        "points": 589,
+        "num_comments": 318,
+        "created_at": "2025-12-18T18:14:48Z"
+      },
+      {
+        "objectID": "46250332",
+        "title": "OpenAI are quietly adopting skills, now available in ChatGPT and Codex CLI",
+        "points": 587,
+        "num_comments": 324,
+        "created_at": "2025-12-12T23:30:19Z"
+      },
+      {
+        "objectID": "43708025",
+        "title": "OpenAI Codex CLI: Lightweight coding agent that runs in your terminal",
+        "points": 516,
+        "num_comments": 289,
+        "created_at": "2025-04-16T17:24:50Z"
+      },
+      {
+        "objectID": "44006345",
+        "title": "A Research Preview of Codex",
+        "points": 511,
+        "num_comments": 450,
+        "created_at": "2025-05-16T15:02:02Z"
+      },
+      {
+        "objectID": "48140529",
+        "title": "Codex is now in the ChatGPT mobile app",
+        "points": 486,
+        "num_comments": 247,
+        "created_at": "2026-05-14T20:06:14Z"
+      },
+      {
+        "objectID": "45982649",
+        "title": "Building more with GPT-5.1-Codex-Max",
+        "points": 483,
+        "num_comments": 319,
+        "created_at": "2025-11-19T18:01:59Z"
+      },
+      {
+        "objectID": "46737630",
+        "title": "Unrolling the Codex agent loop",
+        "points": 456,
+        "num_comments": 208,
+        "created_at": "2026-01-23T20:42:36Z"
+      },
+      {
+        "objectID": "45252301",
+        "title": "GPT-5-Codex",
+        "points": 396,
+        "num_comments": 137,
+        "created_at": "2025-09-15T17:10:39Z"
+      },
+      {
+        "objectID": "39803508",
+        "title": "New Aztec Codices Discovered: The Codices of San Andrés Tetepilco",
+        "points": 378,
+        "num_comments": 154,
+        "created_at": "2024-03-23T22:34:27Z"
+      },
+      {
+        "objectID": "28191362",
+        "title": "OpenAI's Codex sure knows a lot about HN [video]",
+        "points": 374,
+        "num_comments": 105,
+        "created_at": "2021-08-15T18:53:39Z"
+      },
+      {
+        "objectID": "28131745",
+        "title": "OpenAI Codex",
+        "points": 372,
+        "num_comments": 174,
+        "created_at": "2021-08-10T17:33:50Z"
+      },
+      {
+        "objectID": "23781743",
+        "title": "Slate Star Codex and Silicon Valley’s War Against the Media",
+        "points": 354,
+        "num_comments": 555,
+        "created_at": "2020-07-09T16:11:53Z"
+      },
+      {
+        "objectID": "46334424",
+        "title": "Skills Officially Comes to Codex",
+        "points": 304,
+        "num_comments": 130,
+        "created_at": "2025-12-20T08:09:17Z"
+      },
+      {
+        "objectID": "46080835",
+        "title": "Codex, Opus, Gemini try to build Counter Strike",
+        "points": 287,
+        "num_comments": 132,
+        "created_at": "2025-11-28T17:41:01Z"
+      },
+      {
+        "objectID": "47744255",
+        "title": "I ran Gemma 4 as a local model in Codex CLI",
+        "points": 285,
+        "num_comments": 116,
+        "created_at": "2026-04-12T20:43:08Z"
+      },
+      {
+        "objectID": "46295771",
+        "title": "I ported JustHTML from Python to JavaScript with Codex CLI and GPT-5.2 in hours",
+        "points": 278,
+        "num_comments": 145,
+        "created_at": "2025-12-16T22:48:56Z"
+      },
+      {
+        "objectID": "45606698",
+        "title": "Codex Is Live in Zed",
+        "points": 268,
+        "num_comments": 70,
+        "created_at": "2025-10-16T15:36:39Z"
+      },
+      {
+        "objectID": "47791212",
+        "title": "Codex Hacked a Samsung TV",
+        "points": 259,
+        "num_comments": 132,
+        "created_at": "2026-04-16T10:44:45Z"
+      },
+      {
+        "objectID": "44188839",
+        "title": "Tracking Copilot vs. Codex vs. Cursor vs. Devin PR Performance",
+        "points": 254,
+        "num_comments": 122,
+        "created_at": "2025-06-05T06:22:09Z"
+      },
+      {
+        "objectID": "23719376",
+        "title": "Ask HN: After Slate Star Codex, where are the nuanced discussions?",
+        "points": 253,
+        "num_comments": 311,
+        "created_at": "2020-07-02T23:46:52Z"
+      },
+      {
+        "objectID": "48130679",
+        "title": "A Claude Code and Codex Skill for Deliberate Skill Development",
+        "points": 253,
+        "num_comments": 50,
+        "created_at": "2026-05-14T03:13:31Z"
+      },
+      {
+        "objectID": "45253458",
+        "title": "Addendum to GPT-5 system card: GPT-5-Codex",
+        "points": 250,
+        "num_comments": 141,
+        "created_at": "2025-09-15T18:45:32Z"
+      },
+      {
+        "objectID": "46365105",
+        "title": "Show HN: Mysti – Claude, Codex, and Gemini debate your code, then synthesize",
+        "points": 216,
+        "num_comments": 178,
+        "created_at": "2025-12-23T13:18:32Z"
+      },
+      {
+        "objectID": "29413428",
+        "title": "The 40th anniversary edition of Codex Seraphinianus",
+        "points": 215,
+        "num_comments": 64,
+        "created_at": "2021-12-02T07:19:11Z"
+      },
+      {
+        "objectID": "47650726",
+        "title": "Codex pricing to align with API token usage, instead of per-message",
+        "points": 211,
+        "num_comments": 193,
+        "created_at": "2026-04-05T15:58:08Z"
+      },
+      {
+        "objectID": "47749674",
+        "title": "Show HN: I built a social media management tool in 3 weeks with Claude and Codex",
+        "points": 190,
+        "num_comments": 131,
+        "created_at": "2026-04-13T09:26:56Z"
+      },
+      {
+        "objectID": "19939464",
+        "title": "Leonardo Da Vinci’s “Codex Atlanticus” Now Online",
+        "points": 184,
+        "num_comments": 44,
+        "created_at": "2019-05-17T13:38:25Z"
+      },
+      {
+        "objectID": "35242069",
+        "title": "OpenAI to discontinue support for the Codex API",
+        "points": 175,
+        "num_comments": 131,
+        "created_at": "2023-03-21T03:03:13Z"
+      },
+      {
+        "objectID": "44042070",
+        "title": "OpenAI Codex hands-on review",
+        "points": 171,
+        "num_comments": 121,
+        "created_at": "2025-05-20T14:29:00Z"
+      },
+      {
+        "objectID": "45862802",
+        "title": "Reverse engineering Codex CLI to get GPT-5-Codex-Mini to draw me a pelican",
+        "points": 168,
+        "num_comments": 76,
+        "created_at": "2025-11-09T04:02:47Z"
+      },
+      {
+        "objectID": "43719447",
+        "title": "Show HN: AgentAPI – HTTP API for Claude Code, Goose, Aider, and Codex",
+        "points": 163,
+        "num_comments": 15,
+        "created_at": "2025-04-17T16:54:58Z"
+      },
+      {
+        "objectID": "44150093",
+        "title": "Codex CLI is going native",
+        "points": 151,
+        "num_comments": 129,
+        "created_at": "2025-06-01T11:22:55Z"
+      },
+      {
+        "objectID": "46991591",
+        "title": "Launch HN: Omnara (YC S25) – Run Claude Code and Codex from anywhere",
+        "points": 147,
+        "num_comments": 161,
+        "created_at": "2026-02-12T17:14:28Z"
+      },
+      {
+        "objectID": "45728975",
+        "title": "Complete Digitization of Leonardo da Vinci's Codex Atlanticus",
+        "points": 147,
+        "num_comments": 46,
+        "created_at": "2025-10-28T03:32:09Z"
+      },
+      {
+        "objectID": "45610266",
+        "title": "Claude Code vs. Codex: I built a sentiment dashboard from Reddit comments",
+        "points": 141,
+        "num_comments": 62,
+        "created_at": "2025-10-16T20:26:35Z"
+      }
+    ]
+  }
+}

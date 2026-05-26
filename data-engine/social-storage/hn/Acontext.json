@@ -1,0 +1,290 @@
+{
+  "project": "Acontext",
+  "repo": "memodb-io/Acontext",
+  "collected_at": "2026-05-22T12:37:52.408879+00:00",
+  "total_hits": 40,
+  "results": {
+    "Acontext": [
+      {
+        "objectID": "47343927",
+        "title": "Show HN: A context-aware permission guard for Claude Code",
+        "points": 127,
+        "num_comments": 94,
+        "created_at": "2026-03-11T23:26:25Z"
+      },
+      {
+        "objectID": "7920382",
+        "title": "CGrep: a context-aware grep for source codes",
+        "points": 109,
+        "num_comments": 35,
+        "created_at": "2014-06-20T12:21:46Z"
+      },
+      {
+        "objectID": "45682776",
+        "title": "Show HN: Git for LLMs – A context management interface",
+        "points": 106,
+        "num_comments": 37,
+        "created_at": "2025-10-23T15:12:57Z"
+      },
+      {
+        "objectID": "13930305",
+        "title": "How long does it take to make a context switch? (2010)",
+        "points": 87,
+        "num_comments": 72,
+        "created_at": "2017-03-22T12:25:12Z"
+      },
+      {
+        "objectID": "46056197",
+        "title": "Await Is Not a Context Switch: Understanding Python's Coroutines vs. Tasks",
+        "points": 78,
+        "num_comments": 76,
+        "created_at": "2025-11-26T11:00:49Z"
+      },
+      {
+        "objectID": "45723828",
+        "title": "Let the little guys in: A context sharing runtime for the personalised web",
+        "points": 74,
+        "num_comments": 13,
+        "created_at": "2025-10-27T17:27:18Z"
+      },
+      {
+        "objectID": "40665015",
+        "title": "How to enumerate trees from a context-free grammar",
+        "points": 53,
+        "num_comments": 9,
+        "created_at": "2024-06-13T01:30:54Z"
+      },
+      {
+        "objectID": "43812699",
+        "title": "Calibrations Have a Context-Collapse Problem",
+        "points": 42,
+        "num_comments": 6,
+        "created_at": "2025-04-27T15:43:01Z"
+      },
+      {
+        "objectID": "44395523",
+        "title": "Echo Chamber: A Context-Poisoning Jailbreak That Bypasses LLM Guardrails",
+        "points": 33,
+        "num_comments": 33,
+        "created_at": "2025-06-27T10:15:03Z"
+      },
+      {
+        "objectID": "36149876",
+        "title": "Paragraphica is a context-to-image camera",
+        "points": 32,
+        "num_comments": 3,
+        "created_at": "2023-06-01T11:46:35Z"
+      },
+      {
+        "objectID": "46675236",
+        "title": "Show HN: Intent Layer: A context engineering skill for AI agents",
+        "points": 29,
+        "num_comments": 5,
+        "created_at": "2026-01-19T05:04:40Z"
+      },
+      {
+        "objectID": "10697247",
+        "title": "Show HN: Curiosity, a context-aware Wikipedia reader for iPhone",
+        "points": 28,
+        "num_comments": 12,
+        "created_at": "2015-12-08T16:15:09Z"
+      },
+      {
+        "objectID": "44045894",
+        "title": "A context-aware LLM agent built directly into Grafana Cloud",
+        "points": 22,
+        "num_comments": 0,
+        "created_at": "2025-05-20T21:02:21Z"
+      },
+      {
+        "objectID": "1945481",
+        "title": "How long does it take to make a context switch? ",
+        "points": 13,
+        "num_comments": 0,
+        "created_at": "2010-11-27T18:20:55Z"
+      },
+      {
+        "objectID": "953693",
+        "title": "Python thread deadlock avoidance using a context manager",
+        "points": 12,
+        "num_comments": 0,
+        "created_at": "2009-11-20T23:07:57Z"
+      },
+      {
+        "objectID": "45676686",
+        "title": "I built a context management plugin and it CHANGED MY LIFE",
+        "points": 11,
+        "num_comments": 1,
+        "created_at": "2025-10-23T00:04:31Z"
+      },
+      {
+        "objectID": "45528161",
+        "title": "Show HN: A context aware backend for AI coding agents",
+        "points": 10,
+        "num_comments": 1,
+        "created_at": "2025-10-09T14:25:29Z"
+      },
+      {
+        "objectID": "46049909",
+        "title": "GTM Engineering Has a Context Problem",
+        "points": 7,
+        "num_comments": 1,
+        "created_at": "2025-11-25T19:50:53Z"
+      },
+      {
+        "objectID": "46769384",
+        "title": "Show HN: Colin, a context engine for keeping agent skills fresh",
+        "points": 7,
+        "num_comments": 0,
+        "created_at": "2026-01-26T18:17:15Z"
+      },
+      {
+        "objectID": "43999566",
+        "title": "Grafana Assistant, a context-aware LLM agent built into Grafana Cloud",
+        "points": 6,
+        "num_comments": 0,
+        "created_at": "2025-05-15T21:38:03Z"
+      },
+      {
+        "objectID": "517624",
+        "title": "Enumerating a context-free language; introducing the Omega monad",
+        "points": 5,
+        "num_comments": 1,
+        "created_at": "2009-03-16T02:08:04Z"
+      },
+      {
+        "objectID": "12624846",
+        "title": "A context-controllable content summarizer bot",
+        "points": 5,
+        "num_comments": 0,
+        "created_at": "2016-10-02T23:44:27Z"
+      },
+      {
+        "objectID": "48098380",
+        "title": "Is Consciousness Just a Context Window?",
+        "points": 4,
+        "num_comments": 4,
+        "created_at": "2026-05-11T18:01:53Z"
+      },
+      {
+        "objectID": "47971744",
+        "title": "Show HN: I built a context layer for our home",
+        "points": 4,
+        "num_comments": 3,
+        "created_at": "2026-05-01T06:15:34Z"
+      },
+      {
+        "objectID": "46977251",
+        "title": "HN needs a context reminder in the URL window",
+        "points": 4,
+        "num_comments": 3,
+        "created_at": "2026-02-11T16:44:33Z"
+      },
+      {
+        "objectID": "917237",
+        "title": "Enumerating a context-free language",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2009-11-02T17:10:58Z"
+      },
+      {
+        "objectID": "48194790",
+        "title": "Building a self-improving agent on a context graph of human disagreement",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2026-05-19T15:39:49Z"
+      },
+      {
+        "objectID": "48031250",
+        "title": "Security Engineering Is a Context Problem",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2026-05-06T02:02:04Z"
+      },
+      {
+        "objectID": "46365599",
+        "title": "Your Team Has a Context Window",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2025-12-23T14:32:28Z"
+      },
+      {
+        "objectID": "1097207",
+        "title": "A Context Manager for Timing Benchmarks",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2010-02-03T06:26:27Z"
+      },
+      {
+        "objectID": "42433336",
+        "title": "Ask HN: Have you hit a context ceiling with an LLM? What did you do about it?",
+        "points": 3,
+        "num_comments": 4,
+        "created_at": "2024-12-16T17:46:59Z"
+      },
+      {
+        "objectID": "47589325",
+        "title": "Show HN: LogicStamp – A Context Compiler for TypeScript",
+        "points": 3,
+        "num_comments": 2,
+        "created_at": "2026-03-31T15:57:41Z"
+      },
+      {
+        "objectID": "38747181",
+        "title": "What Is Generative Art? Complexity Theory as a Context for Art Theory (2003) [pdf]",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2023-12-23T19:18:03Z"
+      },
+      {
+        "objectID": "46430585",
+        "title": "Threads – A context strategy for humans and LLMs",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-12-30T07:40:38Z"
+      },
+      {
+        "objectID": "42754996",
+        "title": "ContextLens: A Context-Aware Graph-Based Algorithm for Merging Entities (Rows)",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-01-19T08:10:28Z"
+      },
+      {
+        "objectID": "29512723",
+        "title": "Show HN: Generate Sublime Text syntax definitions for a context-free grammar",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2021-12-10T17:31:32Z"
+      },
+      {
+        "objectID": "18932866",
+        "title": "The Brain Is a Context Machine",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2019-01-17T17:53:48Z"
+      },
+      {
+        "objectID": "11041486",
+        "title": "A Context-Driven Approach to Automation in Testing [pdf]",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2016-02-05T14:14:47Z"
+      },
+      {
+        "objectID": "11006449",
+        "title": "A Context-Driven Approach to Automation in Testing [pdf]",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2016-01-31T14:18:34Z"
+      },
+      {
+        "objectID": "1084118",
+        "title": "Generating random sentences from a context free grammar",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2010-01-28T16:03:04Z"
+      }
+    ]
+  }
+}

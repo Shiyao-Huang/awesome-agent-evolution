@@ -1,0 +1,68 @@
+{
+  "project": "Nanobrowser",
+  "repo": "nanobrowser/nanobrowser",
+  "collected_at": "2026-05-22T12:42:59.373384+00:00",
+  "total_hits": 8,
+  "results": {
+    "Nanobrowser": [
+      {
+        "objectID": "44216351",
+        "title": "Nanobrowser: Open-Source Chrome extension for AI-powered web automation",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-06-08T11:43:28Z"
+      },
+      {
+        "objectID": "44310553",
+        "title": "NanoBrowser: OSS Chrome Ext for AI-powered web automation",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-06-18T15:06:05Z"
+      },
+      {
+        "objectID": "43261000",
+        "title": "Show HN: We Built Open-Source Alternative to OpenAI's Operator, Runs in Chrome",
+        "points": 9,
+        "num_comments": 6,
+        "created_at": "2025-03-04T23:49:48Z"
+      },
+      {
+        "objectID": "46839167",
+        "title": "Show HN: An open-source Chrome extension that lets any LLMs control the browser",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-01-31T18:22:52Z"
+      }
+    ],
+    "nanobrowser": [
+      {
+        "objectID": "44216351",
+        "title": "Nanobrowser: Open-Source Chrome extension for AI-powered web automation",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-06-08T11:43:28Z"
+      },
+      {
+        "objectID": "44310553",
+        "title": "NanoBrowser: OSS Chrome Ext for AI-powered web automation",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-06-18T15:06:05Z"
+      },
+      {
+        "objectID": "43261000",
+        "title": "Show HN: We Built Open-Source Alternative to OpenAI's Operator, Runs in Chrome",
+        "points": 9,
+        "num_comments": 6,
+        "created_at": "2025-03-04T23:49:48Z"
+      },
+      {
+        "objectID": "46839167",
+        "title": "Show HN: An open-source Chrome extension that lets any LLMs control the browser",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-01-31T18:22:52Z"
+      }
+    ]
+  }
+}

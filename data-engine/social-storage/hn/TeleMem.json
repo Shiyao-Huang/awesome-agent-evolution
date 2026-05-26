@@ -1,0 +1,572 @@
+{
+  "project": "TeleMem",
+  "repo": "TeleAI-UAGI/telemem",
+  "collected_at": "2026-05-22T12:38:52.404295+00:00",
+  "total_hits": 80,
+  "results": {
+    "TeleMem": [
+      {
+        "objectID": "44703164",
+        "title": "Performance and telemetry analysis of Trae IDE, ByteDance's VSCode fork",
+        "points": 954,
+        "num_comments": 366,
+        "created_at": "2025-07-27T17:57:06Z"
+      },
+      {
+        "objectID": "26639261",
+        "title": "Google collects 20 times more telemetry from Android devices than Apple from iOS",
+        "points": 816,
+        "num_comments": 442,
+        "created_at": "2021-03-30T19:32:45Z"
+      },
+      {
+        "objectID": "28869462",
+        "title": "Oculess – Removes account requirements and telemetry from Oculus Quest devices",
+        "points": 816,
+        "num_comments": 382,
+        "created_at": "2021-10-14T20:18:39Z"
+      },
+      {
+        "objectID": "25091823",
+        "title": "Google sued: Idle Android eats mobile data to send telemetry and preload ads",
+        "points": 680,
+        "num_comments": 309,
+        "created_at": "2020-11-14T12:06:43Z"
+      },
+      {
+        "objectID": "44036647",
+        "title": "DDoSecrets publishes 410 GB of heap dumps, hacked from TeleMessage",
+        "points": 666,
+        "num_comments": 188,
+        "created_at": "2025-05-20T00:52:27Z"
+      },
+      {
+        "objectID": "21343761",
+        "title": "Gitlab ‘rethinking’ third-party telemetry",
+        "points": 623,
+        "num_comments": 422,
+        "created_at": "2019-10-24T12:07:36Z"
+      },
+      {
+        "objectID": "47862331",
+        "title": "GitHub CLI now collects pseudoanonymous telemetry",
+        "points": 464,
+        "num_comments": 346,
+        "created_at": "2026-04-22T11:58:58Z"
+      },
+      {
+        "objectID": "23257843",
+        "title": "Windows package manager does not permit opting out of telemetry",
+        "points": 428,
+        "num_comments": 316,
+        "created_at": "2020-05-21T13:05:00Z"
+      },
+      {
+        "objectID": "35724939",
+        "title": "Dropbox telemetry can't be disabled",
+        "points": 416,
+        "num_comments": 242,
+        "created_at": "2023-04-27T08:28:15Z"
+      },
+      {
+        "objectID": "12884762",
+        "title": "Nvidia  adds telemetry to latest drivers",
+        "points": 409,
+        "num_comments": 231,
+        "created_at": "2016-11-06T12:15:53Z"
+      },
+      {
+        "objectID": "37033475",
+        "title": "PSA: Intel Graphics Drivers Now Collect Telemetry by Default",
+        "points": 407,
+        "num_comments": 411,
+        "created_at": "2023-08-07T12:26:36Z"
+      },
+      {
+        "objectID": "27741910",
+        "title": "Audacity fork without any sentry telemetry or crash reporting",
+        "points": 407,
+        "num_comments": 339,
+        "created_at": "2021-07-05T21:18:38Z"
+      },
+      {
+        "objectID": "28812486",
+        "title": "VSCode deprecates Enable Telemetry, auto-enrolls you in Telemetry?",
+        "points": 388,
+        "num_comments": 181,
+        "created_at": "2021-10-09T19:24:19Z"
+      },
+      {
+        "objectID": "23447413",
+        "title": "VS Code without Microsoft branding/telemetry/licensing",
+        "points": 369,
+        "num_comments": 200,
+        "created_at": "2020-06-07T14:03:57Z"
+      },
+      {
+        "objectID": "22656431",
+        "title": "Researchers say MS Edge's telemetry has worst privacy of any major browser",
+        "points": 365,
+        "num_comments": 98,
+        "created_at": "2020-03-22T16:56:24Z"
+      },
+      {
+        "objectID": "35691383",
+        "title": "1Password to Add Telemetry",
+        "points": 349,
+        "num_comments": 343,
+        "created_at": "2023-04-24T18:36:32Z"
+      },
+      {
+        "objectID": "18527997",
+        "title": "German federal office publishes Windows 10 telemetry analysis",
+        "points": 323,
+        "num_comments": 229,
+        "created_at": "2018-11-25T18:19:12Z"
+      },
+      {
+        "objectID": "37060226",
+        "title": "Intel's GPU Drivers Now Collect Telemetry, Including 'How You Use Your Computer'",
+        "points": 314,
+        "num_comments": 181,
+        "created_at": "2023-08-09T09:01:23Z"
+      },
+      {
+        "objectID": "35944373",
+        "title": "VSCode config to disable annoyances – telemetry, notifications, welcome pages",
+        "points": 287,
+        "num_comments": 128,
+        "created_at": "2023-05-15T06:05:01Z"
+      },
+      {
+        "objectID": "28598474",
+        "title": "Text entered into Windows' Run dialogue gets sent to Microsoft's telemetry",
+        "points": 274,
+        "num_comments": 172,
+        "created_at": "2021-09-20T20:20:53Z"
+      },
+      {
+        "objectID": "26423406",
+        "title": "Receiving SpaceX Falcon 9 Telemetry with a HackRF and 1.2m Satellite Dish",
+        "points": 271,
+        "num_comments": 111,
+        "created_at": "2021-03-11T12:48:41Z"
+      },
+      {
+        "objectID": "24050262",
+        "title": "Windows 10: HOSTS file blocking telemetry is now flagged as a risk",
+        "points": 268,
+        "num_comments": 172,
+        "created_at": "2020-08-04T14:22:59Z"
+      },
+      {
+        "objectID": "17850960",
+        "title": "VSCodium: Binary releases of VSCode without MS branding, telemetry and licensing",
+        "points": 266,
+        "num_comments": 113,
+        "created_at": "2018-08-27T12:20:27Z"
+      },
+      {
+        "objectID": "43909220",
+        "title": "TeleMessage, used by Trump officials, can access plaintext chat logs",
+        "points": 262,
+        "num_comments": 75,
+        "created_at": "2025-05-06T20:17:57Z"
+      },
+      {
+        "objectID": "21337594",
+        "title": "Update on free software and telemetry",
+        "points": 256,
+        "num_comments": 260,
+        "created_at": "2019-10-23T18:48:29Z"
+      },
+      {
+        "objectID": "14902630",
+        "title": "Kite telemetry code in Sublime package SideBarEnhancements",
+        "points": 256,
+        "num_comments": 114,
+        "created_at": "2017-08-01T16:41:31Z"
+      },
+      {
+        "objectID": "34707583",
+        "title": "Transparent telemetry for open-source projects",
+        "points": 248,
+        "num_comments": 300,
+        "created_at": "2023-02-08T13:19:39Z"
+      },
+      {
+        "objectID": "25582962",
+        "title": "Don't Use Protobuf for Telemetry",
+        "points": 223,
+        "num_comments": 187,
+        "created_at": "2020-12-30T16:20:53Z"
+      },
+      {
+        "objectID": "31430170",
+        "title": "Engineers investigating NASA’s Voyager 1 telemetry data",
+        "points": 220,
+        "num_comments": 97,
+        "created_at": "2022-05-19T03:01:06Z"
+      },
+      {
+        "objectID": "27298422",
+        "title": "OpenHD - HD video, UAV telemetry, audio, and RC control",
+        "points": 216,
+        "num_comments": 34,
+        "created_at": "2021-05-27T01:45:11Z"
+      },
+      {
+        "objectID": "36525940",
+        "title": "Tesla Fleet Telemetry",
+        "points": 214,
+        "num_comments": 130,
+        "created_at": "2023-06-29T20:03:25Z"
+      },
+      {
+        "objectID": "14042119",
+        "title": "Microsoft opens up on Windows telemetry, tells us most of what data it collects",
+        "points": 207,
+        "num_comments": 200,
+        "created_at": "2017-04-05T14:02:48Z"
+      },
+      {
+        "objectID": "23417891",
+        "title": "Decoding radio telemetry heard on news helicopter video footage with GNU Radio",
+        "points": 205,
+        "num_comments": 36,
+        "created_at": "2020-06-04T15:26:59Z"
+      },
+      {
+        "objectID": "34771472",
+        "title": "Go claims telemetry objectors arguing in bad faith and violating Code of Conduct",
+        "points": 200,
+        "num_comments": 334,
+        "created_at": "2023-02-13T08:51:50Z"
+      },
+      {
+        "objectID": "32563897",
+        "title": "VS Code – What's the deal with the telemetry?",
+        "points": 194,
+        "num_comments": 187,
+        "created_at": "2022-08-23T12:31:35Z"
+      },
+      {
+        "objectID": "44099096",
+        "title": "TeleMessage Customers Include DC Police, Andreessen Horowitz, JP Morgan,Hundreds",
+        "points": 176,
+        "num_comments": 1,
+        "created_at": "2025-05-26T16:47:27Z"
+      },
+      {
+        "objectID": "22472330",
+        "title": "Recovering telemetry data from Venera-13 and 14",
+        "points": 173,
+        "num_comments": 43,
+        "created_at": "2020-03-03T06:38:18Z"
+      },
+      {
+        "objectID": "12623253",
+        "title": "Gr-satellites – A collection of GNUradio decoders for satellite telemetry",
+        "points": 170,
+        "num_comments": 15,
+        "created_at": "2016-10-02T17:05:09Z"
+      },
+      {
+        "objectID": "39612640",
+        "title": "Realtime telemetry from ISS internal components",
+        "points": 166,
+        "num_comments": 48,
+        "created_at": "2024-03-06T05:28:50Z"
+      },
+      {
+        "objectID": "19279890",
+        "title": "Does Windows 10's telemetry include sending *.doc files if Word crashed?",
+        "points": 157,
+        "num_comments": 102,
+        "created_at": "2019-03-01T12:26:00Z"
+      }
+    ],
+    "telemem": [
+      {
+        "objectID": "44703164",
+        "title": "Performance and telemetry analysis of Trae IDE, ByteDance's VSCode fork",
+        "points": 954,
+        "num_comments": 366,
+        "created_at": "2025-07-27T17:57:06Z"
+      },
+      {
+        "objectID": "26639261",
+        "title": "Google collects 20 times more telemetry from Android devices than Apple from iOS",
+        "points": 816,
+        "num_comments": 442,
+        "created_at": "2021-03-30T19:32:45Z"
+      },
+      {
+        "objectID": "28869462",
+        "title": "Oculess – Removes account requirements and telemetry from Oculus Quest devices",
+        "points": 816,
+        "num_comments": 382,
+        "created_at": "2021-10-14T20:18:39Z"
+      },
+      {
+        "objectID": "25091823",
+        "title": "Google sued: Idle Android eats mobile data to send telemetry and preload ads",
+        "points": 680,
+        "num_comments": 309,
+        "created_at": "2020-11-14T12:06:43Z"
+      },
+      {
+        "objectID": "44036647",
+        "title": "DDoSecrets publishes 410 GB of heap dumps, hacked from TeleMessage",
+        "points": 666,
+        "num_comments": 188,
+        "created_at": "2025-05-20T00:52:27Z"
+      },
+      {
+        "objectID": "21343761",
+        "title": "Gitlab ‘rethinking’ third-party telemetry",
+        "points": 623,
+        "num_comments": 422,
+        "created_at": "2019-10-24T12:07:36Z"
+      },
+      {
+        "objectID": "47862331",
+        "title": "GitHub CLI now collects pseudoanonymous telemetry",
+        "points": 464,
+        "num_comments": 346,
+        "created_at": "2026-04-22T11:58:58Z"
+      },
+      {
+        "objectID": "23257843",
+        "title": "Windows package manager does not permit opting out of telemetry",
+        "points": 428,
+        "num_comments": 316,
+        "created_at": "2020-05-21T13:05:00Z"
+      },
+      {
+        "objectID": "35724939",
+        "title": "Dropbox telemetry can't be disabled",
+        "points": 416,
+        "num_comments": 242,
+        "created_at": "2023-04-27T08:28:15Z"
+      },
+      {
+        "objectID": "12884762",
+        "title": "Nvidia  adds telemetry to latest drivers",
+        "points": 409,
+        "num_comments": 231,
+        "created_at": "2016-11-06T12:15:53Z"
+      },
+      {
+        "objectID": "37033475",
+        "title": "PSA: Intel Graphics Drivers Now Collect Telemetry by Default",
+        "points": 407,
+        "num_comments": 411,
+        "created_at": "2023-08-07T12:26:36Z"
+      },
+      {
+        "objectID": "27741910",
+        "title": "Audacity fork without any sentry telemetry or crash reporting",
+        "points": 407,
+        "num_comments": 339,
+        "created_at": "2021-07-05T21:18:38Z"
+      },
+      {
+        "objectID": "28812486",
+        "title": "VSCode deprecates Enable Telemetry, auto-enrolls you in Telemetry?",
+        "points": 388,
+        "num_comments": 181,
+        "created_at": "2021-10-09T19:24:19Z"
+      },
+      {
+        "objectID": "23447413",
+        "title": "VS Code without Microsoft branding/telemetry/licensing",
+        "points": 369,
+        "num_comments": 200,
+        "created_at": "2020-06-07T14:03:57Z"
+      },
+      {
+        "objectID": "22656431",
+        "title": "Researchers say MS Edge's telemetry has worst privacy of any major browser",
+        "points": 365,
+        "num_comments": 98,
+        "created_at": "2020-03-22T16:56:24Z"
+      },
+      {
+        "objectID": "35691383",
+        "title": "1Password to Add Telemetry",
+        "points": 349,
+        "num_comments": 343,
+        "created_at": "2023-04-24T18:36:32Z"
+      },
+      {
+        "objectID": "18527997",
+        "title": "German federal office publishes Windows 10 telemetry analysis",
+        "points": 323,
+        "num_comments": 229,
+        "created_at": "2018-11-25T18:19:12Z"
+      },
+      {
+        "objectID": "37060226",
+        "title": "Intel's GPU Drivers Now Collect Telemetry, Including 'How You Use Your Computer'",
+        "points": 314,
+        "num_comments": 181,
+        "created_at": "2023-08-09T09:01:23Z"
+      },
+      {
+        "objectID": "35944373",
+        "title": "VSCode config to disable annoyances – telemetry, notifications, welcome pages",
+        "points": 287,
+        "num_comments": 128,
+        "created_at": "2023-05-15T06:05:01Z"
+      },
+      {
+        "objectID": "28598474",
+        "title": "Text entered into Windows' Run dialogue gets sent to Microsoft's telemetry",
+        "points": 274,
+        "num_comments": 172,
+        "created_at": "2021-09-20T20:20:53Z"
+      },
+      {
+        "objectID": "26423406",
+        "title": "Receiving SpaceX Falcon 9 Telemetry with a HackRF and 1.2m Satellite Dish",
+        "points": 271,
+        "num_comments": 111,
+        "created_at": "2021-03-11T12:48:41Z"
+      },
+      {
+        "objectID": "24050262",
+        "title": "Windows 10: HOSTS file blocking telemetry is now flagged as a risk",
+        "points": 268,
+        "num_comments": 172,
+        "created_at": "2020-08-04T14:22:59Z"
+      },
+      {
+        "objectID": "17850960",
+        "title": "VSCodium: Binary releases of VSCode without MS branding, telemetry and licensing",
+        "points": 266,
+        "num_comments": 113,
+        "created_at": "2018-08-27T12:20:27Z"
+      },
+      {
+        "objectID": "43909220",
+        "title": "TeleMessage, used by Trump officials, can access plaintext chat logs",
+        "points": 262,
+        "num_comments": 75,
+        "created_at": "2025-05-06T20:17:57Z"
+      },
+      {
+        "objectID": "21337594",
+        "title": "Update on free software and telemetry",
+        "points": 256,
+        "num_comments": 260,
+        "created_at": "2019-10-23T18:48:29Z"
+      },
+      {
+        "objectID": "14902630",
+        "title": "Kite telemetry code in Sublime package SideBarEnhancements",
+        "points": 256,
+        "num_comments": 114,
+        "created_at": "2017-08-01T16:41:31Z"
+      },
+      {
+        "objectID": "34707583",
+        "title": "Transparent telemetry for open-source projects",
+        "points": 248,
+        "num_comments": 300,
+        "created_at": "2023-02-08T13:19:39Z"
+      },
+      {
+        "objectID": "25582962",
+        "title": "Don't Use Protobuf for Telemetry",
+        "points": 223,
+        "num_comments": 187,
+        "created_at": "2020-12-30T16:20:53Z"
+      },
+      {
+        "objectID": "31430170",
+        "title": "Engineers investigating NASA’s Voyager 1 telemetry data",
+        "points": 220,
+        "num_comments": 97,
+        "created_at": "2022-05-19T03:01:06Z"
+      },
+      {
+        "objectID": "27298422",
+        "title": "OpenHD - HD video, UAV telemetry, audio, and RC control",
+        "points": 216,
+        "num_comments": 34,
+        "created_at": "2021-05-27T01:45:11Z"
+      },
+      {
+        "objectID": "36525940",
+        "title": "Tesla Fleet Telemetry",
+        "points": 214,
+        "num_comments": 130,
+        "created_at": "2023-06-29T20:03:25Z"
+      },
+      {
+        "objectID": "14042119",
+        "title": "Microsoft opens up on Windows telemetry, tells us most of what data it collects",
+        "points": 207,
+        "num_comments": 200,
+        "created_at": "2017-04-05T14:02:48Z"
+      },
+      {
+        "objectID": "23417891",
+        "title": "Decoding radio telemetry heard on news helicopter video footage with GNU Radio",
+        "points": 205,
+        "num_comments": 36,
+        "created_at": "2020-06-04T15:26:59Z"
+      },
+      {
+        "objectID": "34771472",
+        "title": "Go claims telemetry objectors arguing in bad faith and violating Code of Conduct",
+        "points": 200,
+        "num_comments": 334,
+        "created_at": "2023-02-13T08:51:50Z"
+      },
+      {
+        "objectID": "32563897",
+        "title": "VS Code – What's the deal with the telemetry?",
+        "points": 194,
+        "num_comments": 187,
+        "created_at": "2022-08-23T12:31:35Z"
+      },
+      {
+        "objectID": "44099096",
+        "title": "TeleMessage Customers Include DC Police, Andreessen Horowitz, JP Morgan,Hundreds",
+        "points": 176,
+        "num_comments": 1,
+        "created_at": "2025-05-26T16:47:27Z"
+      },
+      {
+        "objectID": "22472330",
+        "title": "Recovering telemetry data from Venera-13 and 14",
+        "points": 173,
+        "num_comments": 43,
+        "created_at": "2020-03-03T06:38:18Z"
+      },
+      {
+        "objectID": "12623253",
+        "title": "Gr-satellites – A collection of GNUradio decoders for satellite telemetry",
+        "points": 170,
+        "num_comments": 15,
+        "created_at": "2016-10-02T17:05:09Z"
+      },
+      {
+        "objectID": "39612640",
+        "title": "Realtime telemetry from ISS internal components",
+        "points": 166,
+        "num_comments": 48,
+        "created_at": "2024-03-06T05:28:50Z"
+      },
+      {
+        "objectID": "19279890",
+        "title": "Does Windows 10's telemetry include sending *.doc files if Word crashed?",
+        "points": 157,
+        "num_comments": 102,
+        "created_at": "2019-03-01T12:26:00Z"
+      }
+    ]
+  }
+}

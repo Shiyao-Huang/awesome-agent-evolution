@@ -1,0 +1,406 @@
+---
+title: "EN→CN Mapping Fidelity Audit — Self Evolve"
+description: "QA 审计报告：英文论文（paper-drafts/）与中文 Survey（survey/latex/）8 章节映射忠实度全量审计。"
+---
+
+export const chapters = [
+  {
+    id: 'ch1',
+    enTitle: 'Introduction',
+    cnTitle: '引言',
+    enFile: 'paper-drafts/ch1-intro.tex',
+    cnFile: 'survey/latex/chapters/ch1-intro.tex',
+    enLines: 525,
+    cnLines: 258,
+    ratio: 49,
+    verdict: 'under-mapped',
+    verdictLabel: '映射不足',
+    color: 'var(--warning, #e67e22)',
+    structureMatch: 'partial',
+    issues: [
+      'CN 缺少 13 个 subsubsection 和 1 个 subsection',
+      'EN 有详细的形式化定义和 benchmark 讨论，CN 仅保留高层概述',
+      'CN 的核心叙事结构与 EN 一致，但深度不足'
+    ]
+  },
+  {
+    id: 'ch2',
+    enTitle: 'Taxonomy: Five Evolution Loops',
+    cnTitle: '理论框架与五类进化循环',
+    enFile: 'paper-drafts/ch2-taxonomy.tex',
+    cnFile: 'survey/latex/chapters/ch2-theory.tex',
+    enLines: 564,
+    cnLines: 478,
+    ratio: 85,
+    verdict: 'partial',
+    verdictLabel: '部分偏离',
+    color: 'var(--warning, #e67e22)',
+    structureMatch: 'partial',
+    issues: [
+      'EN 15 个 section/subsection，CN 有 20+ 个（含 CN 独有内容）',
+      'CN 额外增加「改进的层次」「选择压力」「历史/时间演进/跨领域融合」等节',
+      '核心五循环框架对齐，但 CN 添加了大量独立扩展内容'
+    ]
+  },
+  {
+    id: 'ch3',
+    enTitle: 'Self-Improvement Methods',
+    cnTitle: '自我改进方法',
+    enFile: 'paper-drafts/ch3-methods.tex',
+    cnFile: 'survey/latex/chapters/ch3-methods.tex',
+    enLines: 729,
+    cnLines: 1530,
+    ratio: 210,
+    verdict: 'violation',
+    verdictLabel: '严重违规',
+    color: 'var(--danger, #e74c3c)',
+    structureMatch: 'no',
+    issues: [
+      'EN 按推理时 vs 训练时组织；CN 按机制类型（reward/selfplay/prompt/arch/memory/hybrid）组织',
+      '两种分类体系完全不同，不是翻译而是独立创作',
+      'CN 额外增加 history、combination、unified framework、practice、related work、code-selfevolve、evaluation 等大量 EN 不存在的章节',
+      'CN 1530 行是 EN 729 行的 2.1 倍'
+    ]
+  },
+  {
+    id: 'ch4',
+    enTitle: 'Evolutionary Code & Algorithm Discovery',
+    cnTitle: '自进化 AI 的演化系统',
+    enFile: 'paper-drafts/ch4-evolutionary.tex',
+    cnFile: 'survey/latex/chapters/ch4-systems.tex',
+    enLines: 536,
+    cnLines: 938,
+    ratio: 175,
+    verdict: 'violation',
+    verdictLabel: '严重违规',
+    color: 'var(--danger, #e74c3c)',
+    structureMatch: 'no',
+    issues: [
+      'EN 聚焦于进化式代码与算法发现；CN 扩展为更广泛的「演化系统」',
+      'CN 增加大量 CN 独有的系统分析（ADAS、Gödel Agent、Voyager 等详细展开）',
+      'CN 添加「进化算子设计原则」「变异/交叉/选择压力」等 EN 不存在的理论分析',
+      '章节标题本身就反映了不同的范围界定'
+    ]
+  },
+  {
+    id: 'ch5',
+    enTitle: 'Evaluation',
+    cnTitle: '评估',
+    enFile: 'paper-drafts/ch5-evaluation.tex',
+    cnFile: 'survey/latex/chapters/ch5-evaluation.tex',
+    enLines: 507,
+    cnLines: 668,
+    ratio: 132,
+    verdict: 'violation',
+    verdictLabel: '严重违规',
+    color: 'var(--danger, #e74c3c)',
+    structureMatch: 'no',
+    issues: [
+      'EN 与 CN 的组织结构完全不同',
+      'CN 包含大量 EN 不存在的评估框架和案例研究',
+      '两者的 benchmark 分析重点不同'
+    ]
+  },
+  {
+    id: 'ch6',
+    enTitle: 'Agent Frameworks and Infrastructure',
+    cnTitle: '产业与应用',
+    enFile: 'paper-drafts/ch6-frameworks.tex',
+    cnFile: 'survey/latex/chapters/ch6-industry.tex',
+    enLines: 311,
+    cnLines: 319,
+    ratio: 103,
+    verdict: 'weak',
+    verdictLabel: '弱偏离',
+    color: 'var(--warning, #e67e22)',
+    structureMatch: 'weak',
+    issues: [
+      '行数接近（103%）但结构不同',
+      'EN 逐框架详解（AutoGPT/MetaGPT/AutoGen 等）；CN 按「生产/开源/差距」主题组织',
+      'CN 标题「产业与应用」vs EN「Agent Frameworks and Infrastructure」反映不同定位',
+      '内容覆盖相似但不是忠实映射'
+    ]
+  },
+  {
+    id: 'ch7',
+    enTitle: 'User Pain Points and Practical Challenges',
+    cnTitle: '用户痛点与实践挑战',
+    enFile: 'paper-drafts/ch7-painpoints.tex',
+    cnFile: 'survey/latex/chapters/ch7-painpoints.tex',
+    enLines: 313,
+    cnLines: 541,
+    ratio: 173,
+    verdict: 'violation',
+    verdictLabel: '严重违规',
+    color: 'var(--danger, #e74c3c)',
+    structureMatch: 'no',
+    issues: [
+      'EN 有 9 个 subsection；CN 有 25+ 个 subsection',
+      'CN 包含「English Recovery Expansion」节——表明曾尝试将 EN 内容回填 CN，但结果是混合体',
+      'CN 大量 CN 独有内容：设计原则综合、评估要求、隐性劳动问题、生产证明标准等',
+      'EN 简洁聚焦 vs CN 大幅扩展，比例 173%'
+    ]
+  },
+  {
+    id: 'ch8',
+    enTitle: 'Open Problems and Future Directions',
+    cnTitle: '开放问题与未来方向',
+    enFile: 'paper-drafts/ch8-future.tex',
+    cnFile: 'survey/latex/chapters/ch8-future.tex',
+    enLines: 177,
+    cnLines: 326,
+    ratio: 184,
+    verdict: 'violation',
+    verdictLabel: '严重违规',
+    color: 'var(--danger, #e74c3c)',
+    structureMatch: 'no',
+    issues: [
+      'EN 与 CN 覆盖的主题不同',
+      'CN 包含 EN 不存在的多个 subsection 和 2 个 TikZ 图',
+      'CN 的未来方向分析与 EN 的开放问题列表不对齐',
+      '比例 184%，CN 近乎 EN 的两倍'
+    ]
+  }
+];
+
+const violationCount = chapters.filter(c => c.verdict === 'violation').length;
+const partialCount = chapters.filter(c => c.verdict === 'partial' || c.verdict === 'under-mapped' || c.verdict === 'weak').length;
+---
+
+<BaseLayout
+  title="EN→CN 映射忠实度审计 — Self Evolve"
+  description="QA 审计：英文 paper-drafts/ 与中文 survey/latex/ 8 章节映射质量全量审计。7/8 章节违反 Iron Rule。"
+>
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">QA 审计报告</div>
+      <h1 class="gradient-text">EN→CN 映射忠实度审计</h1>
+      <p class="lead">英文论文 (paper-drafts/) → 中文 Survey (survey/latex/) 全章节映射质量审计</p>
+      <div class="metrics">
+        <div class="metric"><strong>8</strong><span>章节审计</span></div>
+        <div class="metric"><strong>{violationCount}</strong><span>严重违规</span></div>
+        <div class="metric"><strong>{partialCount}</strong><span>部分偏离</span></div>
+        <div class="metric"><strong>0</strong><span>完全合规</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Iron Rule -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">审计标准</div>
+          <h2>Iron Rule（铁律）</h2>
+        </div>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--danger, #e74c3c);">
+        <p><strong>EN paper-drafts/ = Single Source of Truth（唯一真实源）</strong></p>
+        <p><strong>CN survey/latex/ = Strict Mapping（严格映射）</strong></p>
+        <p style="color: var(--muted); margin-top: 8px;">中文 Survey 必须是英文论文的忠实映射，不是独立创作。修改中文时必须回溯英文源确认；修改英文时必须同步中文。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Summary Table -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">总览</div>
+          <h2>8 章节审计结果</h2>
+        </div>
+      </div>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--border, #e0e0e0); text-align: left;">
+              <th style="padding: 10px;">章节</th>
+              <th style="padding: 10px;">EN 行数</th>
+              <th style="padding: 10px;">CN 行数</th>
+              <th style="padding: 10px;">比例</th>
+              <th style="padding: 10px;">结构匹配</th>
+              <th style="padding: 10px;">判定</th>
+            </tr>
+          </thead>
+          <tbody>
+            {chapters.map((ch) => (
+              <tr style="border-bottom: 1px solid var(--border, #e0e0e0);">
+                <td style="padding: 10px;">
+                  <a href={`#${ch.id}`}>{ch.id.toUpperCase()}</a>
+                  <span style="color: var(--muted); margin-left: 6px;">{ch.cnTitle}</span>
+                </td>
+                <td style="padding: 10px;">{ch.enLines}</td>
+                <td style="padding: 10px;">{ch.cnLines}</td>
+                <td style="padding: 10px;">
+                  <span style={{
+                    color: ch.ratio > 150 ? 'var(--danger, #e74c3c)' : ch.ratio < 80 ? 'var(--warning, #e67e22)' : 'inherit',
+                    fontWeight: 600
+                  }}>
+                    {ch.ratio}%
+                  </span>
+                </td>
+                <td style="padding: 10px;">
+                  {ch.structureMatch === 'no' && <span style="color: var(--danger, #e74c3c); font-weight: 600;">不匹配</span>}
+                  {ch.structureMatch === 'partial' && <span style="color: var(--warning, #e67e22);">部分匹配</span>}
+                  {ch.structureMatch === 'weak' && <span style="color: var(--warning, #e67e22);">弱匹配</span>}
+                  {ch.structureMatch === 'yes' && <span style="color: var(--success, #27ae60);">匹配</span>}
+                </td>
+                <td style="padding: 10px;">
+                  <span style={{
+                    display: 'inline-block',
+                    padding: '2px 10px',
+                    borderRadius: '12px',
+                    fontSize: '0.8rem',
+                    fontWeight: 600,
+                    backgroundColor: ch.color + '20',
+                    color: ch.color,
+                    border: `1px solid ${ch.color}40`
+                  }}>
+                    {ch.verdictLabel}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual: Ratio Bar Chart -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">可视化</div>
+          <h2>EN→CN 行数比例</h2>
+        </div>
+      </div>
+      <div class="card">
+        <div style="position: relative; padding: 20px 0;">
+          {chapters.map((ch) => (
+            <div style="display: flex; align-items: center; margin-bottom: 12px; gap: 12px;">
+              <span style="width: 40px; font-weight: 600; font-size: 0.85rem; text-align: right;">{ch.id.toUpperCase()}</span>
+              <div style="flex: 1; position: relative; height: 28px; background: var(--bg-alt, #f0f0f0); border-radius: 4px; overflow: hidden;">
+                <div style={{
+                  height: '100%',
+                  width: `${Math.min(ch.ratio, 250) / 2.5}%`,
+                  backgroundColor: ch.color,
+                  borderRadius: '4px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  paddingLeft: '8px',
+                  color: '#fff',
+                  fontSize: '0.75rem',
+                  fontWeight: 600,
+                  minWidth: '40px'
+                }}>
+                  {ch.ratio}%
+                </div>
+                <div style={{
+                  position: 'absolute',
+                  left: '40%',
+                  top: 0,
+                  height: '100%',
+                  borderLeft: '2px dashed var(--muted, #999)',
+                  opacity: 0.5
+                }} />
+              </div>
+              <span style="width: 60px; font-size: 0.8rem; color: var(--muted);">{ch.enLines}→{ch.cnLines}</span>
+            </div>
+          ))}
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 16; marginTop: 12px, fontSize: '0.8rem', color: 'var(--muted)' }}>
+            <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}><span style="display: inline-block; width: 12px; height: 12px; backgroundColor: var(--danger, #e74c3c); borderRadius: 2; }} /> 严重违规 (&gt;150%)</span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}><span style="display: inline-block; width: 12px; height: 12px; backgroundColor: var(--warning, #e67e22); borderRadius: 2; }} /> 部分偏离</span>
+            <span>虚线 = 100%（理想映射）</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chapter Details -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">逐章审计</div>
+          <h2>详细发现</h2>
+        </div>
+      </div>
+      {chapters.map((ch) => (
+        <div class="card" id={ch.id} style="margin-bottom: 16px; border-left: 4px solid {ch.color};">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <div>
+              <h3 style="margin: 0;">{ch.id.toUpperCase()}: {ch.enTitle}</h3>
+              <p style="color: var(--muted); margin: 4px 0 0;">CN: {ch.cnTitle}</p>
+            </div>
+            <span style={{
+              padding: '4px 14px',
+              borderRadius: '16px',
+              fontSize: '0.85rem',
+              fontWeight: 600,
+              backgroundColor: ch.color + '20',
+              color: ch.color,
+              border: `1px solid ${ch.color}40`
+            }}>
+              {ch.verdictLabel}
+            </span>
+          </div>
+          <div style="display: flex; gap: 24px; margin-top: 12px; font-size: 0.85rem; flex-wrap: wrap;">
+            <span><strong>EN:</strong> <code>{ch.enFile}</code> ({ch.enLines} 行)</span>
+            <span><strong>CN:</strong> <code>{ch.cnFile}</code> ({ch.cnLines} 行)</span>
+            <span><strong>比例:</strong> {ch.ratio}%</span>
+          </div>
+          <ul style="margin-top: 12px; padding-left: 20px;">
+            {ch.issues.map((issue) => (
+              <li style="margin-bottom: 6px; font-size: 0.9rem;">{issue}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Root Cause -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">根因分析</div>
+          <h2>为什么 CN Survey 偏离了 EN Source of Truth？</h2>
+        </div>
+      </div>
+      <div class="split">
+        <div class="card">
+          <h3>根因</h3>
+          <ul>
+            <li><strong>独立创作 vs 忠实翻译</strong>：CN 作者将 Survey 视为独立的中文综述，而非 EN 论文的映射版本</li>
+            <li><strong>分类体系冲突</strong>：ch3 最典型——EN 按推理时/训练时分类，CN 按机制类型分类，两者完全不同的知识组织</li>
+            <li><strong>CN 独有扩展</strong>：多个 CN 章节包含 EN 不存在的分析内容（如历史回顾、实践指南、相关学科关联）</li>
+            <li><strong>「English Recovery Expansion」残留</strong>：ch7 中发现将 EN 内容回填 CN 的痕迹，说明问题已被部分意识到但未系统解决</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>建议的修复路径</h3>
+          <ul>
+            <li><strong>方案 A：全量重写</strong>（最正确、最耗时）<br />从 EN 逐节翻译，确保每节一一对应</li>
+            <li><strong>方案 B：结构对齐</strong>（折中）<br />重构 CN 章节标题和顺序匹配 EN，将 CN 独有内容移入附录</li>
+            <li><strong>方案 C：承认偏离</strong>（违反 Iron Rule）<br />将 CN 标记为「平行中文综述」并补充交叉引用</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metadata -->
+  <section class="section">
+    <div class="container">
+      <p style="color: var(--muted); font-size: 0.85rem;">
+        审计日期：2026-05-26 | 审计人：gstack-qa-commander | 审计方法：全量 section/subsection 结构比对 + 行数比例分析 |
+        <a href="/reports/">← 返回报告索引</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

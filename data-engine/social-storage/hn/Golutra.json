@@ -1,0 +1,432 @@
+{
+  "project": "Golutra",
+  "repo": "golutra/golutra",
+  "collected_at": "2026-05-22T12:48:45.222825+00:00",
+  "total_hits": 60,
+  "results": {
+    "Golutra": [
+      {
+        "objectID": "47162675",
+        "title": "Demo of an indie AI collaboration app – beyond Codex and Claude Code desktop",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-02-26T06:40:06Z"
+      },
+      {
+        "objectID": "47196575",
+        "title": "Show HN: The most awesome AI programming application desktop has emerged",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-02-28T15:38:45Z"
+      },
+      {
+        "objectID": "26329375",
+        "title": "Launch HN: GoldTrash, give away your unused items for someone who need them",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2021-03-03T15:16:29Z"
+      },
+      {
+        "objectID": "11896000",
+        "title": "Show HN: Golf Tradr – fantasy golf with a stock market overlay",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2016-06-13T18:21:02Z"
+      },
+      {
+        "objectID": "18469672",
+        "title": "Golua – A Lua 5.3 engine implemented in Go",
+        "points": 277,
+        "num_comments": 89,
+        "created_at": "2018-11-16T16:21:29Z"
+      },
+      {
+        "objectID": "23333805",
+        "title": "Alterations in glutamate and the experience of ego dissolution with psilocybin",
+        "points": 167,
+        "num_comments": 187,
+        "created_at": "2020-05-28T05:41:47Z"
+      },
+      {
+        "objectID": "32435019",
+        "title": "Glutamate buildup may be key factor in mental exhaustion",
+        "points": 113,
+        "num_comments": 51,
+        "created_at": "2022-08-12T05:35:40Z"
+      },
+      {
+        "objectID": "26237508",
+        "title": "Fructose reprogrammes glutamine-dependent oxidative metabolism to support LPS",
+        "points": 108,
+        "num_comments": 106,
+        "created_at": "2021-02-23T14:21:03Z"
+      },
+      {
+        "objectID": "30007844",
+        "title": "How to grow monosodium glutamate (MSG) crystals",
+        "points": 104,
+        "num_comments": 59,
+        "created_at": "2022-01-20T12:06:30Z"
+      },
+      {
+        "objectID": "2646477",
+        "title": "RIP Eliyahu M. Goldratt",
+        "points": 75,
+        "num_comments": 26,
+        "created_at": "2011-06-12T13:54:11Z"
+      },
+      {
+        "objectID": "37412834",
+        "title": "Specialized astrocytes mediate glutamatergic gliotransmission in the CNS",
+        "points": 39,
+        "num_comments": 15,
+        "created_at": "2023-09-06T23:33:09Z"
+      },
+      {
+        "objectID": "28697354",
+        "title": "Judge Rodney Gilstrap Sets Unwanted Record: Most Cases with Financial Conflicts",
+        "points": 32,
+        "num_comments": 2,
+        "created_at": "2021-09-29T17:52:36Z"
+      },
+      {
+        "objectID": "21192244",
+        "title": "Starving Cancer by Cutting Off Its Favorite Foods, Glucose and Glutamine",
+        "points": 21,
+        "num_comments": 0,
+        "created_at": "2019-10-08T13:48:45Z"
+      },
+      {
+        "objectID": "12125587",
+        "title": "GoTrace – Concurrency tracer and visualizer for Go",
+        "points": 18,
+        "num_comments": 0,
+        "created_at": "2016-07-19T22:58:26Z"
+      },
+      {
+        "objectID": "23280277",
+        "title": "Gourami: An intentionally small, lightweight ActivityPub microblogging service",
+        "points": 10,
+        "num_comments": 6,
+        "created_at": "2020-05-23T05:48:24Z"
+      },
+      {
+        "objectID": "44081930",
+        "title": "New Study Confirms That Cancer Cells Ferment Glutamine [video]",
+        "points": 8,
+        "num_comments": 0,
+        "created_at": "2025-05-24T16:01:49Z"
+      },
+      {
+        "objectID": "43536911",
+        "title": "Glutamate Unlocks Brain Cell Channels to Enable Thinking and Learning",
+        "points": 6,
+        "num_comments": 2,
+        "created_at": "2025-03-31T16:33:09Z"
+      },
+      {
+        "objectID": "40835052",
+        "title": "Monosodium glutamate: Review on clinical reports",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2024-06-30T04:00:31Z"
+      },
+      {
+        "objectID": "31818086",
+        "title": "Typo-squatting popular Go Gorilla toolkit on GitHub with “gollira”",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2022-06-21T00:20:41Z"
+      },
+      {
+        "objectID": "23276896",
+        "title": "Show HN: Gourami – Intentionally small ActivityPub microblogging service in Rust",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2020-05-22T20:55:40Z"
+      },
+      {
+        "objectID": "39087558",
+        "title": "Gotraceui: Working with Go Execution Traces",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2024-01-22T08:38:58Z"
+      },
+      {
+        "objectID": "5216232",
+        "title": "GoTray - Your Go application manager in one system status bar",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2013-02-13T22:47:28Z"
+      },
+      {
+        "objectID": "36369937",
+        "title": "Climbing Gourami",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2023-06-17T13:18:03Z"
+      },
+      {
+        "objectID": "29413574",
+        "title": "The Long Fuse: Monosodium Glutamate (2019)",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2021-12-02T07:50:02Z"
+      },
+      {
+        "objectID": "23186759",
+        "title": "Endogenous deficiency of glutathione might be the cause of Covid-19 death",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2020-05-14T23:11:58Z"
+      },
+      {
+        "objectID": "47849714",
+        "title": "Biotin and FBXW7 are essential to bypass glutamine addiction",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-04-21T14:56:42Z"
+      },
+      {
+        "objectID": "434063",
+        "title": "Govtrack founder launches Planet Open Government Open Source Hacking",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2009-01-14T19:11:40Z"
+      },
+      {
+        "objectID": "41988261",
+        "title": "GovTrack Marks Two Decades of Tracking Congress",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-10-29T19:12:48Z"
+      },
+      {
+        "objectID": "40590571",
+        "title": "Unhealthy diet associated with altered gamma-aminobutyric acid and glutamate",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-06-05T21:02:05Z"
+      },
+      {
+        "objectID": "40512291",
+        "title": "Treating OCD caused by excessive levels of glutamate",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-05-29T14:19:53Z"
+      },
+      {
+        "objectID": "40498498",
+        "title": "GoAura: Modern Amazon repricer, powered by AI",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-05-28T08:02:31Z"
+      },
+      {
+        "objectID": "37196236",
+        "title": "Umami: A History of Monosodium Glutamate [video]",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2023-08-20T04:54:01Z"
+      },
+      {
+        "objectID": "29153804",
+        "title": "City of Goleta Announces Intent to Sue UCSB over Shortage in Student Housing",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2021-11-08T20:26:54Z"
+      },
+      {
+        "objectID": "28820742",
+        "title": "Glutamine-blocking drug slows tumor growth and strengthens anti-tumor (2019)",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2021-10-10T18:23:09Z"
+      },
+      {
+        "objectID": "22913037",
+        "title": "So you want to reform democracy? Civic tech thoughts by founder of GovTrack",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2020-04-19T02:41:49Z"
+      },
+      {
+        "objectID": "22035319",
+        "title": "Glutamate Built the Brain–Can It Treat It Too?",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2020-01-13T15:36:18Z"
+      },
+      {
+        "objectID": "2043138",
+        "title": "H.R. 1529: Second Chance for Ex-Offenders Act of 2009 (GovTrack.us)",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2010-12-27T18:15:09Z"
+      },
+      {
+        "objectID": "19637214",
+        "title": "New NMDA Receptor (Glutamate) Modulators for Depression",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2019-04-11T17:48:39Z"
+      },
+      {
+        "objectID": "16911584",
+        "title": "Gulptraum: A simple-to-use build system based on gulp",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2018-04-24T11:20:25Z"
+      },
+      {
+        "objectID": "15448378",
+        "title": "GoTrackApp",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2017-10-11T09:26:53Z"
+      }
+    ],
+    "golutra": [
+      {
+        "objectID": "47162675",
+        "title": "Demo of an indie AI collaboration app – beyond Codex and Claude Code desktop",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-02-26T06:40:06Z"
+      },
+      {
+        "objectID": "47196575",
+        "title": "Show HN: The most awesome AI programming application desktop has emerged",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-02-28T15:38:45Z"
+      },
+      {
+        "objectID": "26329375",
+        "title": "Launch HN: GoldTrash, give away your unused items for someone who need them",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2021-03-03T15:16:29Z"
+      },
+      {
+        "objectID": "11896000",
+        "title": "Show HN: Golf Tradr – fantasy golf with a stock market overlay",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2016-06-13T18:21:02Z"
+      },
+      {
+        "objectID": "18469672",
+        "title": "Golua – A Lua 5.3 engine implemented in Go",
+        "points": 277,
+        "num_comments": 89,
+        "created_at": "2018-11-16T16:21:29Z"
+      },
+      {
+        "objectID": "23333805",
+        "title": "Alterations in glutamate and the experience of ego dissolution with psilocybin",
+        "points": 167,
+        "num_comments": 187,
+        "created_at": "2020-05-28T05:41:47Z"
+      },
+      {
+        "objectID": "32435019",
+        "title": "Glutamate buildup may be key factor in mental exhaustion",
+        "points": 113,
+        "num_comments": 51,
+        "created_at": "2022-08-12T05:35:40Z"
+      },
+      {
+        "objectID": "26237508",
+        "title": "Fructose reprogrammes glutamine-dependent oxidative metabolism to support LPS",
+        "points": 108,
+        "num_comments": 106,
+        "created_at": "2021-02-23T14:21:03Z"
+      },
+      {
+        "objectID": "30007844",
+        "title": "How to grow monosodium glutamate (MSG) crystals",
+        "points": 104,
+        "num_comments": 59,
+        "created_at": "2022-01-20T12:06:30Z"
+      },
+      {
+        "objectID": "2646477",
+        "title": "RIP Eliyahu M. Goldratt",
+        "points": 75,
+        "num_comments": 26,
+        "created_at": "2011-06-12T13:54:11Z"
+      },
+      {
+        "objectID": "37412834",
+        "title": "Specialized astrocytes mediate glutamatergic gliotransmission in the CNS",
+        "points": 39,
+        "num_comments": 15,
+        "created_at": "2023-09-06T23:33:09Z"
+      },
+      {
+        "objectID": "28697354",
+        "title": "Judge Rodney Gilstrap Sets Unwanted Record: Most Cases with Financial Conflicts",
+        "points": 32,
+        "num_comments": 2,
+        "created_at": "2021-09-29T17:52:36Z"
+      },
+      {
+        "objectID": "21192244",
+        "title": "Starving Cancer by Cutting Off Its Favorite Foods, Glucose and Glutamine",
+        "points": 21,
+        "num_comments": 0,
+        "created_at": "2019-10-08T13:48:45Z"
+      },
+      {
+        "objectID": "12125587",
+        "title": "GoTrace – Concurrency tracer and visualizer for Go",
+        "points": 18,
+        "num_comments": 0,
+        "created_at": "2016-07-19T22:58:26Z"
+      },
+      {
+        "objectID": "23280277",
+        "title": "Gourami: An intentionally small, lightweight ActivityPub microblogging service",
+        "points": 10,
+        "num_comments": 6,
+        "created_at": "2020-05-23T05:48:24Z"
+      },
+      {
+        "objectID": "44081930",
+        "title": "New Study Confirms That Cancer Cells Ferment Glutamine [video]",
+        "points": 8,
+        "num_comments": 0,
+        "created_at": "2025-05-24T16:01:49Z"
+      },
+      {
+        "objectID": "43536911",
+        "title": "Glutamate Unlocks Brain Cell Channels to Enable Thinking and Learning",
+        "points": 6,
+        "num_comments": 2,
+        "created_at": "2025-03-31T16:33:09Z"
+      },
+      {
+        "objectID": "40835052",
+        "title": "Monosodium glutamate: Review on clinical reports",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2024-06-30T04:00:31Z"
+      },
+      {
+        "objectID": "31818086",
+        "title": "Typo-squatting popular Go Gorilla toolkit on GitHub with “gollira”",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2022-06-21T00:20:41Z"
+      },
+      {
+        "objectID": "23276896",
+        "title": "Show HN: Gourami – Intentionally small ActivityPub microblogging service in Rust",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2020-05-22T20:55:40Z"
+      }
+    ]
+  }
+}

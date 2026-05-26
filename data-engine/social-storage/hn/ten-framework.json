@@ -1,0 +1,45 @@
+{
+  "project": "ten-framework",
+  "repo": "TEN-framework/ten-framework",
+  "collected_at": "2026-05-22T12:44:32.149322+00:00",
+  "total_hits": 5,
+  "results": {
+    "ten-framework": [
+      {
+        "objectID": "44585350",
+        "title": "TEN-framework: Open-source framework for conversational voice AI agents",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-07-16T18:23:01Z"
+      },
+      {
+        "objectID": "44518350",
+        "title": "Show HN: Boost Your Voice AI Agents with Open-Source Ten VAD",
+        "points": 8,
+        "num_comments": 5,
+        "created_at": "2025-07-10T07:36:21Z"
+      },
+      {
+        "objectID": "41623997",
+        "title": "Meet Ten, the First Real-Time Multimodal Agent Framework",
+        "points": 7,
+        "num_comments": 9,
+        "created_at": "2024-09-23T09:12:20Z"
+      },
+      {
+        "objectID": "44441458",
+        "title": "Boost Your Voice AI Agents with Open-Source Ten VAD",
+        "points": 2,
+        "num_comments": 3,
+        "created_at": "2025-07-02T08:53:54Z"
+      },
+      {
+        "objectID": "42439531",
+        "title": "A conversational AI powered by TEN",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2024-12-17T08:39:47Z"
+      }
+    ]
+  }
+}

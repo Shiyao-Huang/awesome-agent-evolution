@@ -1,0 +1,290 @@
+{
+  "project": "honcho",
+  "repo": "plastic-labs/honcho",
+  "collected_at": "2026-05-22T12:47:42.762203+00:00",
+  "total_hits": 40,
+  "results": {
+    "honcho": [
+      {
+        "objectID": "46781717",
+        "title": "Show HN: Honcho – Open-source memory infrastructure, powered by custom models",
+        "points": 8,
+        "num_comments": 0,
+        "created_at": "2026-01-27T15:58:43Z"
+      },
+      {
+        "objectID": "4606915",
+        "title": "Former McDonald’s Honchos Take On Sustainable Cuisine",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2012-10-03T11:54:31Z"
+      },
+      {
+        "objectID": "4282729",
+        "title": "Former McDonald’s Honchos Take On Sustainable Cuisine",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2012-07-23T19:48:01Z"
+      },
+      {
+        "objectID": "32348342",
+        "title": "Why No One Cared That Al Qaeda Honcho Zawahiri Got Droned",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2022-08-04T21:12:29Z"
+      },
+      {
+        "objectID": "15707949",
+        "title": "IBM’s Head Honchos Recall the Company’s Rocky Design Journey in Documentary",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2017-11-15T21:23:15Z"
+      },
+      {
+        "objectID": "5690710",
+        "title": "Microsoft honcho pleads with media: 'Stop picking on us'",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2013-05-11T14:41:34Z"
+      },
+      {
+        "objectID": "47831013",
+        "title": "Why Honcho solved my agent memory problem",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-04-20T06:28:40Z"
+      },
+      {
+        "objectID": "47733504",
+        "title": "Honcho: Memory library for building stateful agents",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-04-11T20:00:25Z"
+      },
+      {
+        "objectID": "4390632",
+        "title": "Former McDonald's Honchos Take On Sustainable Cuisine",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2012-08-16T09:48:45Z"
+      },
+      {
+        "objectID": "4357073",
+        "title": "Former McDonald’s Honchos Take On Sustainable Cuisine",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2012-08-08T18:12:01Z"
+      },
+      {
+        "objectID": "24882180",
+        "title": "Airbnb recruits ex-Apple design honcho Jony Ive",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2020-10-24T21:46:39Z"
+      },
+      {
+        "objectID": "2238349",
+        "title": "Obama dines with the honchos of Silicon Valley",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2011-02-19T04:12:23Z"
+      },
+      {
+        "objectID": "9169668",
+        "title": "China’s Tech Honchos Put on Their Politician Hats",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2015-03-09T07:22:57Z"
+      },
+      {
+        "objectID": "6487217",
+        "title": "Former NSA Honcho Calls Enterprise Security 'Appalling'",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2013-10-03T04:40:14Z"
+      },
+      {
+        "objectID": "5926045",
+        "title": "Honcho: a python clone of Foreman.",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2013-06-23T02:40:36Z"
+      },
+      {
+        "objectID": "47803812",
+        "title": "Honcho: Continual Learning for Stateful Agents",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-04-17T08:43:12Z"
+      },
+      {
+        "objectID": "40250181",
+        "title": "Introducing Honcho's Dialectic API",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2024-05-03T17:35:20Z"
+      },
+      {
+        "objectID": "296682",
+        "title": "Ten most powerful tech honchos",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2008-09-06T08:42:36Z"
+      },
+      {
+        "objectID": "15382668",
+        "title": "As hacks soar, tech honchos are the first to get fired, and then rehired",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2017-10-02T09:39:28Z"
+      },
+      {
+        "objectID": "8871744",
+        "title": "Ask HN: Money or Career Growth?",
+        "points": 8,
+        "num_comments": 9,
+        "created_at": "2015-01-11T23:21:11Z"
+      },
+      {
+        "objectID": "674912",
+        "title": "India's Unique Citizen ID initiative - how would you build it using open source?",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2009-06-26T03:48:12Z"
+      },
+      {
+        "objectID": "45053864",
+        "title": "Show HN: Penny for Your Thoughts",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2025-08-28T16:04:25Z"
+      },
+      {
+        "objectID": "14654551",
+        "title": "Ask HN: 100% remote work for large firm?",
+        "points": 2,
+        "num_comments": 2,
+        "created_at": "2017-06-28T14:44:43Z"
+      },
+      {
+        "objectID": "38128260",
+        "title": "Ask HN: Is Bankman-Fried's Guilty Verdict a Crypto's \"Madoff\" Moment?",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2023-11-03T13:16:34Z"
+      },
+      {
+        "objectID": "44864811",
+        "title": "Linus Torvalds calls RISC-V code from Google engineer 'garbage'",
+        "points": 9,
+        "num_comments": 7,
+        "created_at": "2025-08-11T14:52:25Z"
+      },
+      {
+        "objectID": "5370923",
+        "title": "NYT design director: \"We’re not going to do things that don’t work\"",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2013-03-13T20:28:25Z"
+      },
+      {
+        "objectID": "19990258",
+        "title": "Why We're Craft CMS Developers",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2019-05-23T10:13:24Z"
+      },
+      {
+        "objectID": "34082408",
+        "title": "Craft CMS Developer Benchmark Results 2022",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2022-12-21T16:01:58Z"
+      },
+      {
+        "objectID": "708159",
+        "title": "Why Bing Is Fundamentally Different from Other Microsoft Products",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2009-07-16T15:42:56Z"
+      },
+      {
+        "objectID": "319319",
+        "title": "LowerMyBills Releases Three Top Execs",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2008-09-30T05:28:28Z"
+      },
+      {
+        "objectID": "39580136",
+        "title": "Show HN: Hancho – A simple and pleasant build system in ~500 lines of Python",
+        "points": 162,
+        "num_comments": 56,
+        "created_at": "2024-03-03T11:15:37Z"
+      },
+      {
+        "objectID": "30254914",
+        "title": "How Bitcoin bigwigs’ ‘HonkHonk’ came to fundraise for Canada’s ‘Freedom convoy’",
+        "points": 3,
+        "num_comments": 2,
+        "created_at": "2022-02-08T04:31:14Z"
+      },
+      {
+        "objectID": "26920412",
+        "title": "HotChocolate: Open-source GraphQL server for .NET",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2021-04-23T23:20:26Z"
+      },
+      {
+        "objectID": "30438785",
+        "title": "Pokemon Legends Arceus: How to Evolve Murkrow to Honchkrow",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2022-02-23T08:03:45Z"
+      },
+      {
+        "objectID": "15794756",
+        "title": "Turning a Furby into an Amazon Echo",
+        "points": 200,
+        "num_comments": 26,
+        "created_at": "2017-11-28T05:48:12Z"
+      },
+      {
+        "objectID": "36176954",
+        "title": "Connect to your Raspberry Pi over USB using gadget mode",
+        "points": 191,
+        "num_comments": 81,
+        "created_at": "2023-06-03T14:25:51Z"
+      },
+      {
+        "objectID": "2521200",
+        "title": "What Does Having the #6 App in a Mac App Store Category Get You? $15.42",
+        "points": 95,
+        "num_comments": 38,
+        "created_at": "2011-05-06T15:30:03Z"
+      },
+      {
+        "objectID": "30833637",
+        "title": "Raspberry Pi Projects: 30 Projects for Any Skill Level",
+        "points": 8,
+        "num_comments": 0,
+        "created_at": "2022-03-28T18:11:07Z"
+      },
+      {
+        "objectID": "33256040",
+        "title": "CFO of OpenSea sells all his NFTs and quits",
+        "points": 7,
+        "num_comments": 1,
+        "created_at": "2022-10-19T00:46:37Z"
+      },
+      {
+        "objectID": "4292099",
+        "title": "Paperfold for iOS",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2012-07-25T17:52:45Z"
+      }
+    ]
+  }
+}

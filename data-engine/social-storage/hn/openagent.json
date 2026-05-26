@@ -1,0 +1,290 @@
+{
+  "project": "openagent",
+  "repo": "the-open-agent/openagent",
+  "collected_at": "2026-05-22T12:49:46.184995+00:00",
+  "total_hits": 40,
+  "results": {
+    "openagent": [
+      {
+        "objectID": "47506037",
+        "title": "AI2 MolmoWeb: An open agent for automating web tasks",
+        "points": 9,
+        "num_comments": 0,
+        "created_at": "2026-03-24T17:16:55Z"
+      },
+      {
+        "objectID": "47609881",
+        "title": "Show HN: Open-agent-SDK – Claude Code's internals, extracted and open-sourced",
+        "points": 7,
+        "num_comments": 1,
+        "created_at": "2026-04-02T04:08:00Z"
+      },
+      {
+        "objectID": "46133544",
+        "title": "OpenAgent – a portable, framework-agnostic specification for defining AI agents",
+        "points": 6,
+        "num_comments": 4,
+        "created_at": "2025-12-03T12:05:33Z"
+      },
+      {
+        "objectID": "40145951",
+        "title": "Open Agent Studio: Introduce new RPA concepts for the agent era",
+        "points": 4,
+        "num_comments": 2,
+        "created_at": "2024-04-24T15:59:05Z"
+      },
+      {
+        "objectID": "48180667",
+        "title": "The Oats Protocol – Open Agent Tools for Local Coding Agents",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2026-05-18T14:48:57Z"
+      },
+      {
+        "objectID": "48007535",
+        "title": "Oh My OpenAgent",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2026-05-04T11:53:15Z"
+      },
+      {
+        "objectID": "42703290",
+        "title": "Show HN: Open Agent Social Interaction Simulations (Oasis) with 1M Agents",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2025-01-14T20:22:06Z"
+      },
+      {
+        "objectID": "47721361",
+        "title": "MolmoWeb: An open agent for automating web tasks",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2026-04-10T17:41:05Z"
+      },
+      {
+        "objectID": "46703206",
+        "title": "Connecting Claude Code to OpenAgents Networks",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2026-01-21T09:35:40Z"
+      },
+      {
+        "objectID": "48181770",
+        "title": "The Open Agent Leaderboard",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2026-05-18T16:15:30Z"
+      },
+      {
+        "objectID": "47624464",
+        "title": "OpenHarness: Open Agent Harness",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2026-04-03T08:38:36Z"
+      },
+      {
+        "objectID": "46733863",
+        "title": "Show HN: Open Agent, My attempt at a managed environment for AI coding agents",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2026-01-23T15:46:07Z"
+      },
+      {
+        "objectID": "42859404",
+        "title": "Show HN: Oasis – Open Agent Social Interaction Simulations",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-01-28T23:12:15Z"
+      },
+      {
+        "objectID": "47515764",
+        "title": "Show HN: Open Agent Spec. Treat AI agents like typed functions not prompt chains",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-03-25T11:06:19Z"
+      },
+      {
+        "objectID": "47338489",
+        "title": "Show HN: Linggen – Open agent system in Rust, any model, file-based",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-03-11T17:26:04Z"
+      },
+      {
+        "objectID": "45888830",
+        "title": "OpenAgents Was Dubbed \"VC Bait\" in China. Then, a Voice Cut Through the Noise",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2025-11-11T15:59:47Z"
+      },
+      {
+        "objectID": "45843334",
+        "title": "OpenAgents: AI Agent Networks for Open Collaboration",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2025-11-07T03:38:08Z"
+      },
+      {
+        "objectID": "48093299",
+        "title": "Open Agent Memory Protocol 1.2 ships; 1.3 (draft) adds governed memory",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-05-11T10:43:27Z"
+      },
+      {
+        "objectID": "47228116",
+        "title": "Why Choose OpenAgents Instead of CrewAI, LangGraph, AutoGen?",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-03-03T04:37:58Z"
+      },
+      {
+        "objectID": "47228068",
+        "title": "Why Choose OpenAgents Instead of CrewAI, LangGraph, AutoGen?",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-03-03T04:30:42Z"
+      },
+      {
+        "objectID": "45507003",
+        "title": "Open Agent Specification (Agent Spec): A Unified Representation for AI Agents",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-10-07T18:39:17Z"
+      },
+      {
+        "objectID": "43633042",
+        "title": "Open Agent Management Protocol",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-04-09T15:10:58Z"
+      },
+      {
+        "objectID": "43479584",
+        "title": "Show HN: Open Agent Kit(OAK) Launch – Build Agents in Minutes",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-03-26T07:08:39Z"
+      },
+      {
+        "objectID": "38063783",
+        "title": "OpenAgents: An Open Platform for Language Agents in the Wild",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2023-10-29T23:10:26Z"
+      },
+      {
+        "objectID": "47373311",
+        "title": "Tethyr Cloud: Open Agent discovery, zero vendor lock-in (AIdeas Semi-finalist)",
+        "points": 1,
+        "num_comments": 3,
+        "created_at": "2026-03-14T04:22:03Z"
+      },
+      {
+        "objectID": "48191715",
+        "title": "OpenGeni – The Open Agent Runtime",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-05-19T10:57:56Z"
+      },
+      {
+        "objectID": "47166085",
+        "title": "Is your Agent secure? OpenAgents' agent ID provides encrypted authentication",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-02-26T13:51:57Z"
+      },
+      {
+        "objectID": "46820035",
+        "title": "Deploy OpenAgents on Zeabur",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-01-30T02:56:50Z"
+      },
+      {
+        "objectID": "48199179",
+        "title": "Oh My Open Agent",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-05-19T20:34:08Z"
+      },
+      {
+        "objectID": "46444971",
+        "title": "Reusable agents meet agentic UI: AG-UI integration for Open Agent Specification",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-12-31T15:28:26Z"
+      },
+      {
+        "objectID": "45896193",
+        "title": "Building the Open Agent Ecosystem Together: Introducing OpenEnv",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-11-12T03:47:27Z"
+      },
+      {
+        "objectID": "45515901",
+        "title": "Open Agent Specification (Agent Spec)",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-10-08T13:23:13Z"
+      },
+      {
+        "objectID": "45498319",
+        "title": "Open Agent Specification (Agent Spec): A Unified Representation for AI Agents",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-10-07T01:13:46Z"
+      },
+      {
+        "objectID": "47152571",
+        "title": "Show HN: CivBench a long-horizon AI benchmark for multi-agent games",
+        "points": 12,
+        "num_comments": 24,
+        "created_at": "2026-02-25T15:10:27Z"
+      },
+      {
+        "objectID": "46735406",
+        "title": "Show HN: Claude Tutor – an open source engineering tutor",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2026-01-23T17:48:23Z"
+      },
+      {
+        "objectID": "46654935",
+        "title": "Show HN: Agent Coworking,Multi-agent networks for AI collaboration (open source)",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2026-01-17T03:22:56Z"
+      },
+      {
+        "objectID": "47584308",
+        "title": "Show HN: HolyCode – OpenCode in Docker. Use your Claude subscription. 30 tools",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-03-31T08:29:46Z"
+      },
+      {
+        "objectID": "43749382",
+        "title": "Show HN: Dive v0.8.0 Is Here – Major Architecture Overhaul and Feature Upgrades",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-04-21T07:54:53Z"
+      },
+      {
+        "objectID": "47222898",
+        "title": "Show HN: Smidge. Turn expert knowledge into agent intelligence",
+        "points": 1,
+        "num_comments": 5,
+        "created_at": "2026-03-02T19:29:39Z"
+      },
+      {
+        "objectID": "47907096",
+        "title": "Show HN: Peeroxide – Full wire-compatible Rust implementation of Hyperswarm",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-04-26T03:37:40Z"
+      }
+    ]
+  }
+}

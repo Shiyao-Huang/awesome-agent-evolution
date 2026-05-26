@@ -1,0 +1,572 @@
+{
+  "project": "Ouroboros",
+  "repo": "razzant/ouroboros",
+  "collected_at": "2026-05-22T12:35:56.780527+00:00",
+  "total_hits": 80,
+  "results": {
+    "Ouroboros": [
+      {
+        "objectID": "1942909",
+        "title": "PyPy 1.4: Ouroboros in practice",
+        "points": 127,
+        "num_comments": 20,
+        "created_at": "2010-11-26T18:25:13Z"
+      },
+      {
+        "objectID": "22052416",
+        "title": "Show HN: Ouroboros – A Decentralized Packet Network",
+        "points": 116,
+        "num_comments": 38,
+        "created_at": "2020-01-15T07:46:51Z"
+      },
+      {
+        "objectID": "25981373",
+        "title": "Ouroboros: A Provably Secure Proof-of-Stake Blockchain Protocol [pdf] (2019)",
+        "points": 90,
+        "num_comments": 70,
+        "created_at": "2021-01-31T18:50:23Z"
+      },
+      {
+        "objectID": "33515022",
+        "title": "Ouroboros: Packet networking rebuilt from the ground up",
+        "points": 70,
+        "num_comments": 16,
+        "created_at": "2022-11-08T01:46:23Z"
+      },
+      {
+        "objectID": "17679379",
+        "title": "The Worm Ouroboros",
+        "points": 44,
+        "num_comments": 12,
+        "created_at": "2018-08-03T12:52:18Z"
+      },
+      {
+        "objectID": "29537524",
+        "title": "Ouroboros: Distributed System for Packetized Network Communications",
+        "points": 41,
+        "num_comments": 10,
+        "created_at": "2021-12-13T07:24:50Z"
+      },
+      {
+        "objectID": "257768",
+        "title": "Internet Fame: The Voyeuristic Ouroboros",
+        "points": 11,
+        "num_comments": 1,
+        "created_at": "2008-07-26T20:56:23Z"
+      },
+      {
+        "objectID": "44689270",
+        "title": "Ouroboros Water Cooled PC",
+        "points": 10,
+        "num_comments": 0,
+        "created_at": "2025-07-25T22:30:32Z"
+      },
+      {
+        "objectID": "44639549",
+        "title": "Ouroboros",
+        "points": 6,
+        "num_comments": 3,
+        "created_at": "2025-07-21T19:41:51Z"
+      },
+      {
+        "objectID": "43842266",
+        "title": "The Ouroboros Effect: How AI-Generated Content Risks Degrading Future AI Models",
+        "points": 6,
+        "num_comments": 0,
+        "created_at": "2025-04-30T07:39:42Z"
+      },
+      {
+        "objectID": "46789685",
+        "title": "Ouroboros – AI agent framework that asks \"why?\" before writing code",
+        "points": 5,
+        "num_comments": 1,
+        "created_at": "2026-01-28T01:10:38Z"
+      },
+      {
+        "objectID": "15805479",
+        "title": "Cardano: Cryptographic currency implementing Ouroboros PoS protocol",
+        "points": 3,
+        "num_comments": 2,
+        "created_at": "2017-11-29T08:34:15Z"
+      },
+      {
+        "objectID": "26179420",
+        "title": "Ouroboros Protocol: 4M times the energy efficiency of BTC and up to 1M TPS",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2021-02-18T13:13:22Z"
+      },
+      {
+        "objectID": "22484054",
+        "title": "The Ouroboros, from Antiquity to AI",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2020-03-04T14:35:58Z"
+      },
+      {
+        "objectID": "22229061",
+        "title": "Design of the Ouroboros Packet Network",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2020-02-03T21:03:42Z"
+      },
+      {
+        "objectID": "21626959",
+        "title": "Writing an Ouroboros Quine",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2019-11-25T10:49:09Z"
+      },
+      {
+        "objectID": "18693492",
+        "title": "Simple Explanation of Cardano and Ouroboros",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2018-12-16T15:41:06Z"
+      },
+      {
+        "objectID": "18268852",
+        "title": "Ouroboros: Automatically update running docker containers with latest image",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2018-10-21T16:52:54Z"
+      },
+      {
+        "objectID": "15589865",
+        "title": "Ouroboros: A Provably Secure Proof-Of-Stake Blockchain Protocol",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2017-10-30T23:18:23Z"
+      },
+      {
+        "objectID": "47519065",
+        "title": "Ouroboros the snake that bit himself",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-03-25T15:53:12Z"
+      },
+      {
+        "objectID": "44200739",
+        "title": "The Ouroboros Prompt – A Stable Point in Claude Sonnet 4 Recursion",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2025-06-06T13:33:06Z"
+      },
+      {
+        "objectID": "6320121",
+        "title": "Turning Apple TV Into Ouroboros",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2013-09-03T10:39:59Z"
+      },
+      {
+        "objectID": "47901713",
+        "title": "Ouroboros: Dynamic Weight Generation for Recursive Transformers",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-04-25T14:15:03Z"
+      },
+      {
+        "objectID": "41462025",
+        "title": "The Reality Ouroboros",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-09-06T01:31:31Z"
+      },
+      {
+        "objectID": "40750142",
+        "title": "How Does Ouroboros Relate to RINA, the Recursive InterNetwork Architecture? (2021)",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-06-21T14:42:02Z"
+      },
+      {
+        "objectID": "39562314",
+        "title": "(1) Escape the Ouroboros of BS – By Irene Kaoru",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-03-01T14:53:53Z"
+      },
+      {
+        "objectID": "31301981",
+        "title": "Quine Relay: 100-language ouroboros quine",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2022-05-08T07:20:15Z"
+      },
+      {
+        "objectID": "25161767",
+        "title": "Ouroboros Steak grow-your-own human meat kit is “technically” not cannibalism",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2020-11-20T16:12:31Z"
+      },
+      {
+        "objectID": "24628194",
+        "title": "Using Bytecode Surgery to Create an Ouroboros",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2020-09-29T14:24:35Z"
+      },
+      {
+        "objectID": "23146067",
+        "title": "Ouroboros",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2020-05-11T19:37:38Z"
+      },
+      {
+        "objectID": "21531217",
+        "title": "The Ouroboros Quine Explained",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2019-11-14T00:00:19Z"
+      },
+      {
+        "objectID": "21119821",
+        "title": "Free Ouroboros Ransomware (Zeropadypt NextGen) Decryption Available",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2019-09-30T21:28:37Z"
+      },
+      {
+        "objectID": "18766174",
+        "title": "Civil Wars, the Ouroboros, and Bitcoin SV",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2018-12-27T00:31:02Z"
+      },
+      {
+        "objectID": "16956226",
+        "title": "Ouroboros – simple decentralized scalable IPC",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2018-04-30T06:22:00Z"
+      },
+      {
+        "objectID": "16945508",
+        "title": "Ouroboros Genesis proof of stake (POS) protocol",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2018-04-28T00:41:14Z"
+      },
+      {
+        "objectID": "15861348",
+        "title": "Ouroboros",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2017-12-06T14:45:02Z"
+      },
+      {
+        "objectID": "47386904",
+        "title": "Ouroboros: AI research loop that rewrites methodology with lineage logs",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-03-15T12:48:01Z"
+      },
+      {
+        "objectID": "47263869",
+        "title": "Show HN: Ouroboros – Post-quantum P2P messenger with zero servers",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-03-05T16:41:34Z"
+      },
+      {
+        "objectID": "46843853",
+        "title": "Ouroboros: An AI vibe-coding game",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-02-01T05:22:11Z"
+      },
+      {
+        "objectID": "7933339",
+        "title": "Ouroboros – After Effects Preset – Sander van Dijk",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2014-06-23T17:54:50Z"
+      }
+    ],
+    "ouroboros": [
+      {
+        "objectID": "1942909",
+        "title": "PyPy 1.4: Ouroboros in practice",
+        "points": 127,
+        "num_comments": 20,
+        "created_at": "2010-11-26T18:25:13Z"
+      },
+      {
+        "objectID": "22052416",
+        "title": "Show HN: Ouroboros – A Decentralized Packet Network",
+        "points": 116,
+        "num_comments": 38,
+        "created_at": "2020-01-15T07:46:51Z"
+      },
+      {
+        "objectID": "25981373",
+        "title": "Ouroboros: A Provably Secure Proof-of-Stake Blockchain Protocol [pdf] (2019)",
+        "points": 90,
+        "num_comments": 70,
+        "created_at": "2021-01-31T18:50:23Z"
+      },
+      {
+        "objectID": "33515022",
+        "title": "Ouroboros: Packet networking rebuilt from the ground up",
+        "points": 70,
+        "num_comments": 16,
+        "created_at": "2022-11-08T01:46:23Z"
+      },
+      {
+        "objectID": "17679379",
+        "title": "The Worm Ouroboros",
+        "points": 44,
+        "num_comments": 12,
+        "created_at": "2018-08-03T12:52:18Z"
+      },
+      {
+        "objectID": "29537524",
+        "title": "Ouroboros: Distributed System for Packetized Network Communications",
+        "points": 41,
+        "num_comments": 10,
+        "created_at": "2021-12-13T07:24:50Z"
+      },
+      {
+        "objectID": "257768",
+        "title": "Internet Fame: The Voyeuristic Ouroboros",
+        "points": 11,
+        "num_comments": 1,
+        "created_at": "2008-07-26T20:56:23Z"
+      },
+      {
+        "objectID": "44689270",
+        "title": "Ouroboros Water Cooled PC",
+        "points": 10,
+        "num_comments": 0,
+        "created_at": "2025-07-25T22:30:32Z"
+      },
+      {
+        "objectID": "44639549",
+        "title": "Ouroboros",
+        "points": 6,
+        "num_comments": 3,
+        "created_at": "2025-07-21T19:41:51Z"
+      },
+      {
+        "objectID": "43842266",
+        "title": "The Ouroboros Effect: How AI-Generated Content Risks Degrading Future AI Models",
+        "points": 6,
+        "num_comments": 0,
+        "created_at": "2025-04-30T07:39:42Z"
+      },
+      {
+        "objectID": "46789685",
+        "title": "Ouroboros – AI agent framework that asks \"why?\" before writing code",
+        "points": 5,
+        "num_comments": 1,
+        "created_at": "2026-01-28T01:10:38Z"
+      },
+      {
+        "objectID": "15805479",
+        "title": "Cardano: Cryptographic currency implementing Ouroboros PoS protocol",
+        "points": 3,
+        "num_comments": 2,
+        "created_at": "2017-11-29T08:34:15Z"
+      },
+      {
+        "objectID": "26179420",
+        "title": "Ouroboros Protocol: 4M times the energy efficiency of BTC and up to 1M TPS",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2021-02-18T13:13:22Z"
+      },
+      {
+        "objectID": "22484054",
+        "title": "The Ouroboros, from Antiquity to AI",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2020-03-04T14:35:58Z"
+      },
+      {
+        "objectID": "22229061",
+        "title": "Design of the Ouroboros Packet Network",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2020-02-03T21:03:42Z"
+      },
+      {
+        "objectID": "21626959",
+        "title": "Writing an Ouroboros Quine",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2019-11-25T10:49:09Z"
+      },
+      {
+        "objectID": "18693492",
+        "title": "Simple Explanation of Cardano and Ouroboros",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2018-12-16T15:41:06Z"
+      },
+      {
+        "objectID": "18268852",
+        "title": "Ouroboros: Automatically update running docker containers with latest image",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2018-10-21T16:52:54Z"
+      },
+      {
+        "objectID": "15589865",
+        "title": "Ouroboros: A Provably Secure Proof-Of-Stake Blockchain Protocol",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2017-10-30T23:18:23Z"
+      },
+      {
+        "objectID": "47519065",
+        "title": "Ouroboros the snake that bit himself",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-03-25T15:53:12Z"
+      },
+      {
+        "objectID": "44200739",
+        "title": "The Ouroboros Prompt – A Stable Point in Claude Sonnet 4 Recursion",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2025-06-06T13:33:06Z"
+      },
+      {
+        "objectID": "6320121",
+        "title": "Turning Apple TV Into Ouroboros",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2013-09-03T10:39:59Z"
+      },
+      {
+        "objectID": "47901713",
+        "title": "Ouroboros: Dynamic Weight Generation for Recursive Transformers",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-04-25T14:15:03Z"
+      },
+      {
+        "objectID": "41462025",
+        "title": "The Reality Ouroboros",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-09-06T01:31:31Z"
+      },
+      {
+        "objectID": "40750142",
+        "title": "How Does Ouroboros Relate to RINA, the Recursive InterNetwork Architecture? (2021)",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-06-21T14:42:02Z"
+      },
+      {
+        "objectID": "39562314",
+        "title": "(1) Escape the Ouroboros of BS – By Irene Kaoru",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-03-01T14:53:53Z"
+      },
+      {
+        "objectID": "31301981",
+        "title": "Quine Relay: 100-language ouroboros quine",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2022-05-08T07:20:15Z"
+      },
+      {
+        "objectID": "25161767",
+        "title": "Ouroboros Steak grow-your-own human meat kit is “technically” not cannibalism",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2020-11-20T16:12:31Z"
+      },
+      {
+        "objectID": "24628194",
+        "title": "Using Bytecode Surgery to Create an Ouroboros",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2020-09-29T14:24:35Z"
+      },
+      {
+        "objectID": "23146067",
+        "title": "Ouroboros",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2020-05-11T19:37:38Z"
+      },
+      {
+        "objectID": "21531217",
+        "title": "The Ouroboros Quine Explained",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2019-11-14T00:00:19Z"
+      },
+      {
+        "objectID": "21119821",
+        "title": "Free Ouroboros Ransomware (Zeropadypt NextGen) Decryption Available",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2019-09-30T21:28:37Z"
+      },
+      {
+        "objectID": "18766174",
+        "title": "Civil Wars, the Ouroboros, and Bitcoin SV",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2018-12-27T00:31:02Z"
+      },
+      {
+        "objectID": "16956226",
+        "title": "Ouroboros – simple decentralized scalable IPC",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2018-04-30T06:22:00Z"
+      },
+      {
+        "objectID": "16945508",
+        "title": "Ouroboros Genesis proof of stake (POS) protocol",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2018-04-28T00:41:14Z"
+      },
+      {
+        "objectID": "15861348",
+        "title": "Ouroboros",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2017-12-06T14:45:02Z"
+      },
+      {
+        "objectID": "47386904",
+        "title": "Ouroboros: AI research loop that rewrites methodology with lineage logs",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-03-15T12:48:01Z"
+      },
+      {
+        "objectID": "47263869",
+        "title": "Show HN: Ouroboros – Post-quantum P2P messenger with zero servers",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-03-05T16:41:34Z"
+      },
+      {
+        "objectID": "46843853",
+        "title": "Ouroboros: An AI vibe-coding game",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-02-01T05:22:11Z"
+      },
+      {
+        "objectID": "7933339",
+        "title": "Ouroboros – After Effects Preset – Sander van Dijk",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2014-06-23T17:54:50Z"
+      }
+    ]
+  }
+}

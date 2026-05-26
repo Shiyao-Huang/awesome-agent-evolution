@@ -10,14 +10,22 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `reports` | missing | 0 | 0 | 0 | 0 B |
-| `output` | present | 5 | 1 | 0 | 506 KB |
+| `reports` | present | 5 | 1 | 0 | 69 KB |
+| `output` | present | 7 | 1 | 0 | 568 KB |
 | `site/public/reports` | present | 353 | 6 | 0 | 2.7 MB |
-| `site/dist` | present | 533 | 218 | 0 | 14 MB |
+| `site/dist` | present | 609 | 220 | 0 | 14 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 983 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
 ## Representative Files
+
+### `reports`
+
+- `reports/academic-propagation-analysis.md`
+- `reports/cross-validation-report.md`
+- `reports/project-discovery-leads.md`
+- `reports/propagation-chain-evidence.md`
+- `reports/star-analysis-report.md`
 
 ### `output`
 
@@ -26,6 +34,8 @@
 - `output/raw-github-timestamp-index.md`
 - `output/raw-papers-timestamp-index.json`
 - `output/raw-papers-timestamp-index.md`
+- `output/social-media-curated-ZH.md`
+- `output/social-media-curated.md`
 
 ### `site/public/reports`
 

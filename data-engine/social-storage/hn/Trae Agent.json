@@ -1,0 +1,173 @@
+{
+  "project": "Trae Agent",
+  "repo": "bytedance/trae-agent",
+  "collected_at": "2026-05-22T12:42:36.904368+00:00",
+  "total_hits": 23,
+  "results": {
+    "Trae Agent": [
+      {
+        "objectID": "44499237",
+        "title": "Trae-agent: ByteDance's developer agent for general purpose software engineering",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-07-08T12:10:40Z"
+      },
+      {
+        "objectID": "44467106",
+        "title": "Trae Agent",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-07-04T19:13:26Z"
+      },
+      {
+        "objectID": "44504046",
+        "title": "Trae Agent is an LLM-based agent for general purpose software engineering tasks",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-07-08T21:01:38Z"
+      },
+      {
+        "objectID": "44480317",
+        "title": "Trae Agent",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-07-06T12:44:41Z"
+      },
+      {
+        "objectID": "47166647",
+        "title": "Show HN: Coding agents find the right GPU bottleneck 70% of the time, fix it 30%",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2026-02-26T14:33:26Z"
+      },
+      {
+        "objectID": "45909048",
+        "title": "Solo: The Responsive Coding Agent",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-11-13T00:47:26Z"
+      },
+      {
+        "objectID": "47204082",
+        "title": "Show HN: SkillFortify, Formal verification for AI agents (auto-discovers)",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-03-01T05:51:06Z"
+      },
+      {
+        "objectID": "45913545",
+        "title": "Solo: The Responsive Coding Agent",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-11-13T11:15:42Z"
+      },
+      {
+        "objectID": "48023496",
+        "title": "Show HN: Airbyte Agents – context for agents across multiple data sources",
+        "points": 156,
+        "num_comments": 48,
+        "created_at": "2026-05-05T15:03:18Z"
+      },
+      {
+        "objectID": "48002442",
+        "title": "Agentic Coding Is a Trap",
+        "points": 463,
+        "num_comments": 375,
+        "created_at": "2026-05-03T22:52:07Z"
+      },
+      {
+        "objectID": "48169874",
+        "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
+        "points": 442,
+        "num_comments": 150,
+        "created_at": "2026-05-17T15:37:07Z"
+      },
+      {
+        "objectID": "48109962",
+        "title": "Launch HN: Voker (YC S24) – Analytics for AI Agents",
+        "points": 59,
+        "num_comments": 22,
+        "created_at": "2026-05-12T15:45:20Z"
+      },
+      {
+        "objectID": "46518527",
+        "title": "Show HN: An open-source telephony stack for AI voice agents (Twilio alternative)",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2026-01-06T20:52:03Z"
+      },
+      {
+        "objectID": "44727836",
+        "title": "Language Model Can Be a Steganographic Privacy Leaking Agent",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-07-29T20:22:34Z"
+      },
+      {
+        "objectID": "48226033",
+        "title": "Show HN: From one Claude agent to a fleet – in five small steps",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-05-21T17:14:35Z"
+      },
+      {
+        "objectID": "48221146",
+        "title": "Show HN: SoMatic – Vision-based OS automation framework for AI agents",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-05-21T11:53:00Z"
+      },
+      {
+        "objectID": "47557938",
+        "title": "Data Is the Final Moat",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2026-03-28T20:35:56Z"
+      },
+      {
+        "objectID": "48214202",
+        "title": "Show HN: Runo – Scraping API that returns typed JSON, not raw HTML",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2026-05-20T21:12:48Z"
+      },
+      {
+        "objectID": "48206058",
+        "title": "Show HN: Proposalkit.io – you write the content, we control the design",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2026-05-20T11:30:28Z"
+      }
+    ],
+    "trae-agent": [
+      {
+        "objectID": "44499237",
+        "title": "Trae-agent: ByteDance's developer agent for general purpose software engineering",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-07-08T12:10:40Z"
+      },
+      {
+        "objectID": "44467106",
+        "title": "Trae Agent",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-07-04T19:13:26Z"
+      },
+      {
+        "objectID": "44504046",
+        "title": "Trae Agent is an LLM-based agent for general purpose software engineering tasks",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-07-08T21:01:38Z"
+      },
+      {
+        "objectID": "44480317",
+        "title": "Trae Agent",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-07-06T12:44:41Z"
+      }
+    ]
+  }
+}

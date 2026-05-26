@@ -13,11 +13,11 @@
 | `paper-drafts` | present | 30 | 2 | 0 | 2.2 MB |
 | `paper` | missing | 0 | 0 | 0 | 0 B |
 | `latex` | missing | 0 | 0 | 0 | 0 B |
-| `site` | present | 1018 | 256 | 0 | 27 MB |
+| `site` | present | 1094 | 258 | 0 | 27 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
-| `scripts` | present | 22 | 1 | 0 | 458 KB |
-| `data-engine` | present | 357 | 15 | 0 | 4.9 MB |
-| `wiki` | missing | 0 | 0 | 0 | 0 B |
+| `scripts` | present | 23 | 1 | 0 | 460 KB |
+| `data-engine` | present | 479 | 18 | 0 | 5.9 MB |
+| `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files
 
@@ -63,6 +63,7 @@
 ### `scripts`
 
 - `scripts/analyze_github_project_data.mjs`
+- `scripts/auto-commit-shield.sh`
 - `scripts/enforce_raw_timestamps.py`
 - `scripts/generate-site-knowledge-graph.mjs`
 - `scripts/generate-wiki-index.mjs`
@@ -71,7 +72,6 @@
 - `scripts/generate_project_indexes.mjs`
 - `scripts/generate_repo_classification.py`
 - `scripts/generate_survey_figures.py`
-- `scripts/generate_visual_assets.mjs`
 
 ### `data-engine`
 
@@ -85,3 +85,14 @@
 - `data-engine/analysis/run.py`
 - `data-engine/analysis/run_analysis.py`
 - `data-engine/collectors/__init__.py`
+
+### `wiki`
+
+- `wiki/research/rank-platforms-product-discovery-2026-05-20-ZH.md`
+- `wiki/research/rank-platforms-product-discovery-2026-05-20.csv`
+- `wiki/research/rank-platforms-product-discovery-2026-05-20.json`
+- `wiki/research/rank-platforms-product-discovery-2026-05-20.md`
+- `wiki/research/social-cn-youtube-blog-raw-2026-05-20-ZH.md`
+- `wiki/research/social-cn-youtube-blog-raw-2026-05-20.csv`
+- `wiki/research/social-cn-youtube-blog-raw-2026-05-20.json`
+- `wiki/research/social-cn-youtube-blog-raw-2026-05-20.md`

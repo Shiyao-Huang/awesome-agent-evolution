@@ -1,0 +1,572 @@
+{
+  "project": "Open SWE",
+  "repo": "langchain-ai/open-swe",
+  "collected_at": "2026-05-22T12:42:48.940856+00:00",
+  "total_hits": 80,
+  "results": {
+    "Open SWE": [
+      {
+        "objectID": "46713106",
+        "title": "Show HN: Sweep, Open-weights 1.5B model for next-edit autocomplete",
+        "points": 534,
+        "num_comments": 153,
+        "created_at": "2026-01-21T23:22:40Z"
+      },
+      {
+        "objectID": "39907468",
+        "title": "Princeton group open sources \"SWE-agent\", with 12% fix rate for GitHub issues",
+        "points": 307,
+        "num_comments": 143,
+        "created_at": "2024-04-02T16:16:07Z"
+      },
+      {
+        "objectID": "32897784",
+        "title": "Pentagon opens sweeping review of clandestine psychological operations",
+        "points": 272,
+        "num_comments": 308,
+        "created_at": "2022-09-19T13:08:02Z"
+      },
+      {
+        "objectID": "16822488",
+        "title": "World's first electrified road for charging vehicles opens in Sweden",
+        "points": 162,
+        "num_comments": 98,
+        "created_at": "2018-04-12T16:27:19Z"
+      },
+      {
+        "objectID": "44838733",
+        "title": "Open SWE: An open-source asynchronous coding agent",
+        "points": 111,
+        "num_comments": 26,
+        "created_at": "2025-08-08T16:16:20Z"
+      },
+      {
+        "objectID": "44837601",
+        "title": "Open SWE by LangChain",
+        "points": 24,
+        "num_comments": 12,
+        "created_at": "2025-08-08T14:43:01Z"
+      },
+      {
+        "objectID": "33996023",
+        "title": "Twitter blocks a link to Jack Sweeney's open-source code repository on GitHub",
+        "points": 10,
+        "num_comments": 0,
+        "created_at": "2022-12-15T06:30:53Z"
+      },
+      {
+        "objectID": "1952724",
+        "title": "Net Neutrality vs Open Access - Sweden's Open Network Pioneer",
+        "points": 8,
+        "num_comments": 0,
+        "created_at": "2010-11-30T01:57:04Z"
+      },
+      {
+        "objectID": "45617945",
+        "title": "Show HN: Open SWE-grep for fast, high-precision code context",
+        "points": 5,
+        "num_comments": 1,
+        "created_at": "2025-10-17T15:33:51Z"
+      },
+      {
+        "objectID": "1544695",
+        "title": "'Invisible' tree house opens in Sweden",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2010-07-25T00:36:58Z"
+      },
+      {
+        "objectID": "45626602",
+        "title": "Open SWE-grep: architecture review request",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2025-10-18T11:51:34Z"
+      },
+      {
+        "objectID": "11992423",
+        "title": "Sweden Opens World's First Electric Highway",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2016-06-28T09:16:32Z"
+      },
+      {
+        "objectID": "47277407",
+        "title": "Anthropic Open SWE Roles vs. AI Replacement Claims",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2026-03-06T16:46:11Z"
+      },
+      {
+        "objectID": "44837604",
+        "title": "Open SWE by LangChain (Docs)",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-08-08T14:43:49Z"
+      },
+      {
+        "objectID": "42837091",
+        "title": "Sweden opens sabotage probe into Baltic undersea cable damage",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-01-27T03:26:54Z"
+      },
+      {
+        "objectID": "29248413",
+        "title": "Microsoft Opens Three Swedish Data Hubs Using Only Green Power",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2021-11-17T01:26:08Z"
+      },
+      {
+        "objectID": "44819019",
+        "title": "Open SWE: An Open-Source Asynchronous Coding Agent",
+        "points": 2,
+        "num_comments": 3,
+        "created_at": "2025-08-06T23:26:40Z"
+      },
+      {
+        "objectID": "32369807",
+        "title": "Nike Sr SWE: Open to Remote Work, Except: SD, VT, and WV)",
+        "points": 2,
+        "num_comments": 3,
+        "created_at": "2022-08-06T17:12:35Z"
+      },
+      {
+        "objectID": "8908823",
+        "title": "Tim Sweeney: “Open sourcing Unreal Engine 1 might be possible”",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2015-01-18T20:50:43Z"
+      },
+      {
+        "objectID": "8079919",
+        "title": "Show HN: Sweet – Open Source Network device configuration backups and change alerts",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2014-07-24T15:02:18Z"
+      },
+      {
+        "objectID": "44826663",
+        "title": "Open SWE: An Open-Source Asynchronous Coding Agent",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-08-07T16:33:14Z"
+      },
+      {
+        "objectID": "44822633",
+        "title": "OpenSWE: Open Source Devin alternative",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-08-07T10:09:05Z"
+      },
+      {
+        "objectID": "42418414",
+        "title": "Sweden open to measures to tackle energy crisis, blames German nuclear phase-out",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-12-14T17:50:00Z"
+      },
+      {
+        "objectID": "42036386",
+        "title": "IKEA opens first Swedish restaurant selling iconic meatballs on UK high street",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-11-03T21:55:27Z"
+      },
+      {
+        "objectID": "39970885",
+        "title": "Devon, open-source SWE agent",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-04-08T15:46:19Z"
+      },
+      {
+        "objectID": "34379822",
+        "title": "Sweden opens first satellite launch port on EU mainland",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2023-01-14T12:38:08Z"
+      },
+      {
+        "objectID": "11992225",
+        "title": "Sweden opens 1.2 mile long electric highway for trucks",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2016-06-28T08:11:56Z"
+      },
+      {
+        "objectID": "11971843",
+        "title": "Sweden opens 1.2 mile long electric highway for trucks",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2016-06-24T17:43:27Z"
+      },
+      {
+        "objectID": "10899313",
+        "title": "Supermarket Controlled by App Opens in Sweden",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2016-01-14T02:42:08Z"
+      },
+      {
+        "objectID": "47428428",
+        "title": "OpenSWE",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-03-18T17:13:25Z"
+      },
+      {
+        "objectID": "47425334",
+        "title": "LangChain Open SWE: An Open-Source Framework for Internal Coding Agents",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-03-18T13:07:28Z"
+      },
+      {
+        "objectID": "44131325",
+        "title": "Open SWE is an open-source cloud based coding agent",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-05-29T23:21:49Z"
+      },
+      {
+        "objectID": "31650071",
+        "title": "World’s first second-hand IKEA store to open in Sweden (2020)",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2022-06-07T05:03:08Z"
+      },
+      {
+        "objectID": "24916226",
+        "title": "Amazon Sweden Opens",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2020-10-28T07:38:46Z"
+      },
+      {
+        "objectID": "16829939",
+        "title": "World's first electrified public road opens in Sweden",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2018-04-13T13:49:44Z"
+      },
+      {
+        "objectID": "16796407",
+        "title": "Swedbank Open Banking – a work in progress package written in Go",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2018-04-09T19:57:21Z"
+      },
+      {
+        "objectID": "14535749",
+        "title": "Museum of Failure opens in Sweden",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2017-06-12T08:02:15Z"
+      },
+      {
+        "objectID": "42475273",
+        "title": "Ask HN: Handling Two Identical Resumes?",
+        "points": 7,
+        "num_comments": 10,
+        "created_at": "2024-12-20T21:33:30Z"
+      },
+      {
+        "objectID": "36806657",
+        "title": "Show HN: Sweep – AI-Powered Junior Developer for Tech Debt",
+        "points": 7,
+        "num_comments": 2,
+        "created_at": "2023-07-20T20:58:04Z"
+      },
+      {
+        "objectID": "48230925",
+        "title": "Show HN: Deputies, an open source background agent",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-05-22T01:34:52Z"
+      }
+    ],
+    "open-swe": [
+      {
+        "objectID": "32897784",
+        "title": "Pentagon opens sweeping review of clandestine psychological operations",
+        "points": 272,
+        "num_comments": 308,
+        "created_at": "2022-09-19T13:08:02Z"
+      },
+      {
+        "objectID": "44838733",
+        "title": "Open SWE: An open-source asynchronous coding agent",
+        "points": 111,
+        "num_comments": 26,
+        "created_at": "2025-08-08T16:16:20Z"
+      },
+      {
+        "objectID": "44837601",
+        "title": "Open SWE by LangChain",
+        "points": 24,
+        "num_comments": 12,
+        "created_at": "2025-08-08T14:43:01Z"
+      },
+      {
+        "objectID": "45617945",
+        "title": "Show HN: Open SWE-grep for fast, high-precision code context",
+        "points": 5,
+        "num_comments": 1,
+        "created_at": "2025-10-17T15:33:51Z"
+      },
+      {
+        "objectID": "45626602",
+        "title": "Open SWE-grep: architecture review request",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2025-10-18T11:51:34Z"
+      },
+      {
+        "objectID": "47277407",
+        "title": "Anthropic Open SWE Roles vs. AI Replacement Claims",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2026-03-06T16:46:11Z"
+      },
+      {
+        "objectID": "44837604",
+        "title": "Open SWE by LangChain (Docs)",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-08-08T14:43:49Z"
+      },
+      {
+        "objectID": "44819019",
+        "title": "Open SWE: An Open-Source Asynchronous Coding Agent",
+        "points": 2,
+        "num_comments": 3,
+        "created_at": "2025-08-06T23:26:40Z"
+      },
+      {
+        "objectID": "44826663",
+        "title": "Open SWE: An Open-Source Asynchronous Coding Agent",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-08-07T16:33:14Z"
+      },
+      {
+        "objectID": "44822633",
+        "title": "OpenSWE: Open Source Devin alternative",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-08-07T10:09:05Z"
+      },
+      {
+        "objectID": "47428428",
+        "title": "OpenSWE",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-03-18T17:13:25Z"
+      },
+      {
+        "objectID": "47425334",
+        "title": "LangChain Open SWE: An Open-Source Framework for Internal Coding Agents",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-03-18T13:07:28Z"
+      },
+      {
+        "objectID": "44131325",
+        "title": "Open SWE is an open-source cloud based coding agent",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-05-29T23:21:49Z"
+      },
+      {
+        "objectID": "42475273",
+        "title": "Ask HN: Handling Two Identical Resumes?",
+        "points": 7,
+        "num_comments": 10,
+        "created_at": "2024-12-20T21:33:30Z"
+      },
+      {
+        "objectID": "48230925",
+        "title": "Show HN: Deputies, an open source background agent",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-05-22T01:34:52Z"
+      },
+      {
+        "objectID": "44815237",
+        "title": "An Open-Source Asynchronous Coding Agent",
+        "points": 5,
+        "num_comments": 0,
+        "created_at": "2025-08-06T17:45:48Z"
+      },
+      {
+        "objectID": "37060654",
+        "title": "Infrastructure audit completed by Radically Open Security",
+        "points": 585,
+        "num_comments": 278,
+        "created_at": "2023-08-09T10:18:46Z"
+      },
+      {
+        "objectID": "29024032",
+        "title": "Open secrets about Hacker News",
+        "points": 503,
+        "num_comments": 191,
+        "created_at": "2021-10-28T09:26:52Z"
+      },
+      {
+        "objectID": "34061511",
+        "title": "Towards a More Open Secure Element Chip",
+        "points": 214,
+        "num_comments": 69,
+        "created_at": "2022-12-20T04:23:25Z"
+      },
+      {
+        "objectID": "34209087",
+        "title": "Once an open sewer, New York Harbor now teems with life",
+        "points": 187,
+        "num_comments": 105,
+        "created_at": "2023-01-01T18:26:09Z"
+      },
+      {
+        "objectID": "25369208",
+        "title": "Open Security Training: open license training material for computer security",
+        "points": 152,
+        "num_comments": 31,
+        "created_at": "2020-12-10T03:15:41Z"
+      },
+      {
+        "objectID": "12712611",
+        "title": "Introducing Zaius, Google and Rackspace’s Open Server Running IBM Power9",
+        "points": 116,
+        "num_comments": 24,
+        "created_at": "2016-10-15T03:45:41Z"
+      },
+      {
+        "objectID": "19630830",
+        "title": "Traffic Director: Traffic management for open service mesh",
+        "points": 90,
+        "num_comments": 10,
+        "created_at": "2019-04-11T03:09:30Z"
+      },
+      {
+        "objectID": "36801807",
+        "title": "Fed opens service that dramatically speeds up U.S. payments",
+        "points": 90,
+        "num_comments": 2,
+        "created_at": "2023-07-20T15:19:53Z"
+      },
+      {
+        "objectID": "11248703",
+        "title": "Open Semantic Search",
+        "points": 68,
+        "num_comments": 8,
+        "created_at": "2016-03-08T21:14:51Z"
+      },
+      {
+        "objectID": "1010673",
+        "title": "Soon-to-Be Open Secret (Males in College Admission)",
+        "points": 65,
+        "num_comments": 62,
+        "created_at": "2009-12-22T20:12:18Z"
+      },
+      {
+        "objectID": "9924632",
+        "title": "Bug in widely used OpenSSH opens servers to password cracking",
+        "points": 64,
+        "num_comments": 59,
+        "created_at": "2015-07-21T18:36:16Z"
+      },
+      {
+        "objectID": "1064931",
+        "title": "The Open Secret",
+        "points": 60,
+        "num_comments": 7,
+        "created_at": "2010-01-20T15:40:15Z"
+      },
+      {
+        "objectID": "38419248",
+        "title": "At Meta, Underage Users Were an 'Open Secret,' States Say",
+        "points": 50,
+        "num_comments": 56,
+        "created_at": "2023-11-26T04:48:59Z"
+      },
+      {
+        "objectID": "11440179",
+        "title": "Google and Rackspace develop open server architecture on IBM Power9 hardware",
+        "points": 50,
+        "num_comments": 12,
+        "created_at": "2016-04-06T17:20:09Z"
+      },
+      {
+        "objectID": "44146339",
+        "title": "Intelligent Agent Technology: Open Sesame! (1993)",
+        "points": 50,
+        "num_comments": 6,
+        "created_at": "2025-05-31T19:09:09Z"
+      },
+      {
+        "objectID": "986594",
+        "title": "Reddit opens self-serve ads to the public (promo your site for as little as $20)",
+        "points": 48,
+        "num_comments": 24,
+        "created_at": "2009-12-09T21:13:45Z"
+      },
+      {
+        "objectID": "27451798",
+        "title": "WWDC 2021: Apple Calls Open Season on IP Address Tracking and Targeting",
+        "points": 48,
+        "num_comments": 0,
+        "created_at": "2021-06-09T19:08:36Z"
+      },
+      {
+        "objectID": "242011",
+        "title": "BOSS – The Next Step in our Open Search Ecosystem",
+        "points": 47,
+        "num_comments": 16,
+        "created_at": "2008-07-10T04:08:38Z"
+      },
+      {
+        "objectID": "10625448",
+        "title": "As thousands of new apartments open, Seattle's rental market weakens",
+        "points": 46,
+        "num_comments": 52,
+        "created_at": "2015-11-25T05:07:06Z"
+      },
+      {
+        "objectID": "46895440",
+        "title": "Open secrets about Hacker News (2021)",
+        "points": 40,
+        "num_comments": 6,
+        "created_at": "2026-02-05T03:48:04Z"
+      },
+      {
+        "objectID": "9915234",
+        "title": "Telegram to open server sources?",
+        "points": 39,
+        "num_comments": 5,
+        "created_at": "2015-07-20T11:21:28Z"
+      },
+      {
+        "objectID": "47402118",
+        "title": "Agent Skills – Open Security Database",
+        "points": 36,
+        "num_comments": 9,
+        "created_at": "2026-03-16T17:35:58Z"
+      },
+      {
+        "objectID": "183381",
+        "title": "The open secret of (Toyota's) success",
+        "points": 31,
+        "num_comments": 19,
+        "created_at": "2008-05-07T14:29:08Z"
+      },
+      {
+        "objectID": "25622337",
+        "title": "A new open security key: Solo v2",
+        "points": 30,
+        "num_comments": 15,
+        "created_at": "2021-01-03T15:39:38Z"
+      }
+    ]
+  }
+}

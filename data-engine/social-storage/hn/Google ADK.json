@@ -1,0 +1,320 @@
+{
+  "project": "Google ADK",
+  "repo": "google/adk-python",
+  "collected_at": "2026-05-22T12:40:15.364793+00:00",
+  "total_hits": 44,
+  "results": {
+    "Google ADK": [
+      {
+        "objectID": "5273877",
+        "title": "Google ADK vs Arduino ADK vs Sparkfun IOIO vs ADK Shield vs?",
+        "points": 5,
+        "num_comments": 1,
+        "created_at": "2013-02-24T11:44:17Z"
+      },
+      {
+        "objectID": "44407845",
+        "title": "Show HN: Leveraging Google ADK for Cyber Threat Intelligence",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2025-06-28T20:19:50Z"
+      },
+      {
+        "objectID": "43755266",
+        "title": "How to Build a Team of 5 Agents Using Google ADK and Nebius (Llama and Nemotron)",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2025-04-21T18:59:18Z"
+      },
+      {
+        "objectID": "45869793",
+        "title": "Google ADK-Go",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2025-11-09T22:23:46Z"
+      },
+      {
+        "objectID": "47097588",
+        "title": "Show HN: AI Code Review Agent – Automated PR Reviews with Google ADK and Gemini",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-02-21T04:46:23Z"
+      },
+      {
+        "objectID": "45346831",
+        "title": "Deploying and Running Google ADK Agent on Amazon Bedrock AgentCore",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-09-23T13:34:52Z"
+      },
+      {
+        "objectID": "45064434",
+        "title": "Orchestrating Multi-Agent Systems: Google ADK, A2A, and Temporal",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-08-29T14:15:34Z"
+      },
+      {
+        "objectID": "44755125",
+        "title": "Google ADK and AMD Instinct GPUs: The Dynamic Duo for AI Agents",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-08-01T10:48:45Z"
+      },
+      {
+        "objectID": "44200081",
+        "title": "Google's ADK for agentic AI development – and some general thoughts",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-06-06T12:16:53Z"
+      },
+      {
+        "objectID": "47351352",
+        "title": "Running LangGraph, CrewAI, Google ADK with Durable Workflows",
+        "points": 1,
+        "num_comments": 2,
+        "created_at": "2026-03-12T14:48:11Z"
+      },
+      {
+        "objectID": "45608325",
+        "title": "OpenAI AgentKit vs. Google ADK vs. Inngest: Comparison",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2025-10-16T17:38:21Z"
+      },
+      {
+        "objectID": "43656283",
+        "title": "Google ADK",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2025-04-11T17:28:01Z"
+      },
+      {
+        "objectID": "5643527",
+        "title": "Quality of Google ADK 2012 code",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2013-05-02T10:19:31Z"
+      },
+      {
+        "objectID": "45610287",
+        "title": "OpenAI AgentKit vs. Google ADK vs. Inngest: Comparison",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-10-16T20:28:23Z"
+      },
+      {
+        "objectID": "45565390",
+        "title": "AI Agent Python SDK: Google ADK",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-10-13T06:39:50Z"
+      },
+      {
+        "objectID": "44516749",
+        "title": "Show HN: Google ADK and Vertex AI Memory Bank for Persistent Conversational AI",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-07-10T02:55:34Z"
+      },
+      {
+        "objectID": "43903401",
+        "title": "Building AI Agents with Google ADK, Gemma 3, and MCP Tools",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-05-06T10:11:02Z"
+      },
+      {
+        "objectID": "47376584",
+        "title": "Show HN: GitAgent – An open standard that turns any Git repo into an AI agent",
+        "points": 147,
+        "num_comments": 39,
+        "created_at": "2026-03-14T13:41:25Z"
+      },
+      {
+        "objectID": "45723102",
+        "title": "Show HN: Relai-SDK – simulate → evaluate → optimize AI agents",
+        "points": 5,
+        "num_comments": 0,
+        "created_at": "2025-10-27T16:40:48Z"
+      },
+      {
+        "objectID": "47205382",
+        "title": "Show HN: AgentLens – Open-source observability for AI agents",
+        "points": 2,
+        "num_comments": 2,
+        "created_at": "2026-03-01T10:15:55Z"
+      },
+      {
+        "objectID": "47516792",
+        "title": "Show HN: FlowScript – Agent memory where contradictions are features",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-03-25T13:01:58Z"
+      },
+      {
+        "objectID": "46630810",
+        "title": "Show HN: Bazinga – Enforced engineering practices for AI coding",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-01-15T11:00:51Z"
+      },
+      {
+        "objectID": "47226273",
+        "title": "Show HN: Grantex–Open authorization protocol for AI agents(IETF draft submitted)",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-03-03T00:29:43Z"
+      },
+      {
+        "objectID": "46837016",
+        "title": "Show HN: Build reliably with Google GenAI tech thanks to this skills repo",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-01-31T14:31:39Z"
+      },
+      {
+        "objectID": "47242324",
+        "title": "Oscar Six Radar – vulnerability scanner with native A2A (agent-to-agent) support",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-03-04T02:40:41Z"
+      },
+      {
+        "objectID": "47122431",
+        "title": "Show HN: Attest – Test AI agents with 8-layer graduated assertions",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-02-23T14:00:59Z"
+      },
+      {
+        "objectID": "45667786",
+        "title": "Show HN: Selecta – Natural language analytics for BigQuery",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-10-22T12:04:05Z"
+      },
+      {
+        "objectID": "45891968",
+        "title": "Adk-go: code-first Go toolkit for building, evaluating, and deploying AI agents",
+        "points": 86,
+        "num_comments": 24,
+        "created_at": "2025-11-11T19:52:55Z"
+      },
+      {
+        "objectID": "43632824",
+        "title": "Agent Development Kit (ADK) from Google",
+        "points": 6,
+        "num_comments": 3,
+        "created_at": "2025-04-09T14:52:21Z"
+      },
+      {
+        "objectID": "47168072",
+        "title": "Checkpoints Are Not Durable Execution in Agent Frameworks",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2026-02-26T16:17:17Z"
+      },
+      {
+        "objectID": "44846953",
+        "title": "CaMeL-Powered Secure Agent Demo with ADK",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2025-08-09T14:51:04Z"
+      },
+      {
+        "objectID": "45549091",
+        "title": "Google Agent Development Kit (ADK) for TypeScript",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2025-10-11T13:43:04Z"
+      },
+      {
+        "objectID": "46851625",
+        "title": "Agent Development Kit (ADK-Go) v0.4.0",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-02-02T02:12:17Z"
+      },
+      {
+        "objectID": "44272386",
+        "title": "A collection of sample agents built with Agent Development (ADK)",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-06-13T21:22:15Z"
+      },
+      {
+        "objectID": "44891197",
+        "title": "CaMeL agent to protect against indirect prompt injection",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2025-08-13T17:22:21Z"
+      },
+      {
+        "objectID": "43660681",
+        "title": "Building AI Agent Using Google Agent Development Kit(ADK)as MCP Client",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-04-12T02:06:02Z"
+      },
+      {
+        "objectID": "19127667",
+        "title": "Google head of internet security: ignore cyber scare tactics, learn from history",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2019-02-10T13:21:31Z"
+      },
+      {
+        "objectID": "19126402",
+        "title": "Google infosec chief: businesses should ignore scare stories, learn from history",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2019-02-10T04:45:35Z"
+      },
+      {
+        "objectID": "43634326",
+        "title": "Google Open Source Agent Development Kit",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2025-04-09T16:50:31Z"
+      },
+      {
+        "objectID": "44044091",
+        "title": "What's New with Agents: ADK, Agent Engine, and A2A Enhancements",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-05-20T17:52:10Z"
+      }
+    ],
+    "adk-python": [
+      {
+        "objectID": "46837016",
+        "title": "Show HN: Build reliably with Google GenAI tech thanks to this skills repo",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-01-31T14:31:39Z"
+      },
+      {
+        "objectID": "46252336",
+        "title": "Show HN: ADK-Rust: a Rust Implementation of Google Agent Dev Kit",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-12-13T05:45:09Z"
+      },
+      {
+        "objectID": "43632824",
+        "title": "Agent Development Kit (ADK) from Google",
+        "points": 6,
+        "num_comments": 3,
+        "created_at": "2025-04-09T14:52:21Z"
+      },
+      {
+        "objectID": "43656283",
+        "title": "Google ADK",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2025-04-11T17:28:01Z"
+      }
+    ]
+  }
+}

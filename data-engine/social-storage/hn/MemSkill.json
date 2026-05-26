@@ -1,0 +1,283 @@
+{
+  "project": "MemSkill",
+  "repo": "ViktorAxelsen/MemSkill",
+  "collected_at": "2026-05-22T12:39:05.369332+00:00",
+  "total_hits": 39,
+  "results": {
+    "MemSkill": [
+      {
+        "objectID": "1658976",
+        "title": "Skills and Metaskills",
+        "points": 9,
+        "num_comments": 0,
+        "created_at": "2010-09-03T08:44:12Z"
+      },
+      {
+        "objectID": "4624275",
+        "title": "Metaskills - Talents for the coming Robotic Age",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2012-10-07T20:07:14Z"
+      },
+      {
+        "objectID": "37211059",
+        "title": "MySkillFolio",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2023-08-21T15:40:57Z"
+      },
+      {
+        "objectID": "48020650",
+        "title": "Agent MetaSKILLs",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-05-05T10:45:59Z"
+      },
+      {
+        "objectID": "43666287",
+        "title": "Open Source, Self-Hosted One-Click Generator Platform for JavaWeb MemShell",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-04-12T17:19:08Z"
+      },
+      {
+        "objectID": "26332344",
+        "title": "Dreaming: A Metaskill for the Future",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2021-03-03T18:18:33Z"
+      },
+      {
+        "objectID": "46222409",
+        "title": "Show HN: Metaskills: AI agents that autonomously create their own capabilities",
+        "points": 1,
+        "num_comments": 2,
+        "created_at": "2025-12-10T19:30:01Z"
+      },
+      {
+        "objectID": "47010873",
+        "title": "Show HN: Hivemind – Metaskill for skill/experience sharing between agents",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-02-14T02:22:07Z"
+      },
+      {
+        "objectID": "34171576",
+        "title": "Ask HN: Good Metabooks?",
+        "points": 6,
+        "num_comments": 5,
+        "created_at": "2022-12-29T11:25:14Z"
+      },
+      {
+        "objectID": "40395107",
+        "title": "Multi AI agent systems using OpenAI's assistants API",
+        "points": 227,
+        "num_comments": 80,
+        "created_at": "2024-05-17T23:25:32Z"
+      },
+      {
+        "objectID": "810794",
+        "title": "The Ultimate OS X Snow Leopard Stack For Rails Development",
+        "points": 25,
+        "num_comments": 6,
+        "created_at": "2009-09-08T12:41:12Z"
+      },
+      {
+        "objectID": "1977549",
+        "title": "Windows 7 still searching for the ghost floppy",
+        "points": 9,
+        "num_comments": 2,
+        "created_at": "2010-12-07T00:59:03Z"
+      },
+      {
+        "objectID": "3645551",
+        "title": "Too LESS? Should You Be Using Sass?",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2012-02-28T23:25:37Z"
+      },
+      {
+        "objectID": "2111408",
+        "title": "Interactive JavaScript Console With TextMate",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2011-01-17T06:26:01Z"
+      },
+      {
+        "objectID": "5228215",
+        "title": "Test your Meta Skills. ",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2013-02-15T20:04:29Z"
+      },
+      {
+        "objectID": "6320347",
+        "title": "Jekyll Tips And Tricks",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2013-09-03T11:49:45Z"
+      },
+      {
+        "objectID": "3832424",
+        "title": "Secrets Of The Asset Pipeline",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2012-04-12T14:28:51Z"
+      },
+      {
+        "objectID": "3536710",
+        "title": "For all your Rails design hack bootstrap needs...",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2012-02-01T04:35:44Z"
+      },
+      {
+        "objectID": "1499280",
+        "title": "Interactive JavaScript Console With TextMate (w/ Safari's javascript REPL)",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2010-07-09T00:34:57Z"
+      },
+      {
+        "objectID": "41747548",
+        "title": "Can OpenAI's Realtime API Recognize Spacial Audio?",
+        "points": 1,
+        "num_comments": 2,
+        "created_at": "2024-10-05T03:41:18Z"
+      },
+      {
+        "objectID": "45719618",
+        "title": "Skill Builder for Claude Code",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-10-27T11:11:04Z"
+      },
+      {
+        "objectID": "3050062",
+        "title": "Using Twitter's Bootstrap In The Rails 3.1 Asset Pipeline",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2011-09-28T21:48:21Z"
+      },
+      {
+        "objectID": "2968036",
+        "title": "How Do You Encapsulate Your JavaScript",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2011-09-07T02:01:17Z"
+      },
+      {
+        "objectID": "23561981",
+        "title": "Monolithic Ideas for AWS Lambda File Systems",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2020-06-18T11:17:50Z"
+      },
+      {
+        "objectID": "2139996",
+        "title": "From Test::Unit & Shoulda To MiniTest::Spec & MiniShoulda",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2011-01-25T17:41:43Z"
+      },
+      {
+        "objectID": "2067597",
+        "title": "Automating Heroku PG Backups",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2011-01-04T17:00:59Z"
+      },
+      {
+        "objectID": "40893028",
+        "title": "Gemma 2 on AWS Lambda with Llamafile",
+        "points": 10,
+        "num_comments": 3,
+        "created_at": "2024-07-06T20:33:09Z"
+      },
+      {
+        "objectID": "7355709",
+        "title": "HomeMarks v3 Launches",
+        "points": 5,
+        "num_comments": 1,
+        "created_at": "2014-03-06T18:45:33Z"
+      },
+      {
+        "objectID": "19379498",
+        "title": "Simple Rails and AWS Lambda Integration Using Rack",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2019-03-13T15:18:28Z"
+      },
+      {
+        "objectID": "42448177",
+        "title": "Graph-Driven Open Source Memory Layer for Llama 3",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2024-12-18T04:43:19Z"
+      },
+      {
+        "objectID": "43327266",
+        "title": "Show HN: Waypoints – A Gamified Local Discovery and Loyalty App",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-03-10T23:16:09Z"
+      },
+      {
+        "objectID": "43344160",
+        "title": "Launching SolveCircle – A Gamified Task Management App for Businesses",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2025-03-12T15:16:44Z"
+      },
+      {
+        "objectID": "8933670",
+        "title": "Zoho to Salesforce Migration: Comprehensive Guide",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2015-01-23T06:39:17Z"
+      },
+      {
+        "objectID": "8929928",
+        "title": "Insightly to Zoho Migration: Getting the Driver's Seat",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2015-01-22T16:18:35Z"
+      },
+      {
+        "objectID": "8928705",
+        "title": "Zoho to SugarCRM MIgration: Open-Shut Instruction",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2015-01-22T12:05:49Z"
+      },
+      {
+        "objectID": "8928180",
+        "title": "SugarCRM vs. Salesforce. Which One to Pick Up and How to Migrate?",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2015-01-22T08:52:15Z"
+      },
+      {
+        "objectID": "8928177",
+        "title": "SugarCRM to Zoho Migration Guide",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2015-01-22T08:51:46Z"
+      },
+      {
+        "objectID": "42562602",
+        "title": "Ask Questions, Beat AI for Cash Prizes – Does This Sound Fun?",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2024-12-31T23:18:58Z"
+      },
+      {
+        "objectID": "1803464",
+        "title": "TinyTds - A modern, simple and fast FreeTDS library for Ruby using DB-Library ",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2010-10-18T13:50:00Z"
+      }
+    ]
+  }
+}

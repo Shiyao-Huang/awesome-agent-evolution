@@ -1,0 +1,290 @@
+{
+  "project": "haystack",
+  "repo": "deepset-ai/haystack",
+  "collected_at": "2026-05-22T12:44:12.076411+00:00",
+  "total_hits": 40,
+  "results": {
+    "haystack": [
+      {
+        "objectID": "41068719",
+        "title": "Show HN: Haystack – an IDE for exploring and editing code on an infinite canvas",
+        "points": 546,
+        "num_comments": 214,
+        "created_at": "2024-07-25T13:54:14Z"
+      },
+      {
+        "objectID": "41648564",
+        "title": "Launch HN: Haystack (YC S24) – Visualize and edit code on an infinite canvas",
+        "points": 328,
+        "num_comments": 173,
+        "created_at": "2024-09-25T15:31:00Z"
+      },
+      {
+        "objectID": "8912639",
+        "title": "The Whole Haystack: The N.S.A. claims it needs access to all our phone records",
+        "points": 247,
+        "num_comments": 162,
+        "created_at": "2015-01-19T16:41:06Z"
+      },
+      {
+        "objectID": "27839161",
+        "title": "The Art of the Romanian Haystack",
+        "points": 228,
+        "num_comments": 85,
+        "created_at": "2021-07-14T22:19:47Z"
+      },
+      {
+        "objectID": "35430188",
+        "title": "Introducing Agents in Haystack: Make LLMs resolve complex tasks",
+        "points": 202,
+        "num_comments": 102,
+        "created_at": "2023-04-03T19:47:26Z"
+      },
+      {
+        "objectID": "895512",
+        "title": "37signals Launches Haystack for Web Designers and Clients To Find Each Other",
+        "points": 134,
+        "num_comments": 66,
+        "created_at": "2009-10-21T20:06:37Z"
+      },
+      {
+        "objectID": "29501045",
+        "title": "Haystack 1.0 – open-source NLP framework to build NLProc back end applications",
+        "points": 109,
+        "num_comments": 34,
+        "created_at": "2021-12-09T18:27:24Z"
+      },
+      {
+        "objectID": "26413311",
+        "title": "Launch HN: Haystack (YC W21) – Engineering analytics that don’t suck",
+        "points": 104,
+        "num_comments": 39,
+        "created_at": "2021-03-10T16:54:00Z"
+      },
+      {
+        "objectID": "40827970",
+        "title": "Artificial needles to real haystacks: Improving retrieval capabilities in LLMs",
+        "points": 101,
+        "num_comments": 21,
+        "created_at": "2024-06-29T04:55:57Z"
+      },
+      {
+        "objectID": "34218724",
+        "title": "Show HN: I built Haystack – your own google for scattered workplace knowledge",
+        "points": 96,
+        "num_comments": 67,
+        "created_at": "2023-01-02T15:14:13Z"
+      },
+      {
+        "objectID": "45201703",
+        "title": "Show HN: Haystack – Review pull requests like you wrote them yourself",
+        "points": 88,
+        "num_comments": 59,
+        "created_at": "2025-09-10T18:21:12Z"
+      },
+      {
+        "objectID": "33815197",
+        "title": "83% of Developers Suffer from Burnout, Haystack Analytics Study Finds",
+        "points": 79,
+        "num_comments": 148,
+        "created_at": "2022-12-01T12:07:43Z"
+      },
+      {
+        "objectID": "18166174",
+        "title": "Why Mathematicians Can’t Find the Hay in a Haystack",
+        "points": 68,
+        "num_comments": 49,
+        "created_at": "2018-10-08T10:44:09Z"
+      },
+      {
+        "objectID": "40192552",
+        "title": "Haystack DB – 10x faster than FAISS with binary embeddings by default",
+        "points": 61,
+        "num_comments": 26,
+        "created_at": "2024-04-28T22:27:34Z"
+      },
+      {
+        "objectID": "42935218",
+        "title": "Show HN: Haystack Code Reviewer – Perform code reviews on a canvas",
+        "points": 55,
+        "num_comments": 22,
+        "created_at": "2025-02-04T17:02:20Z"
+      },
+      {
+        "objectID": "630096",
+        "title": "Haystack - Search for Django",
+        "points": 54,
+        "num_comments": 6,
+        "created_at": "2009-05-28T12:13:17Z"
+      },
+      {
+        "objectID": "37680817",
+        "title": "Emu: Enhancing Image Generation Models Using Photogenic Needles in a Haystack",
+        "points": 52,
+        "num_comments": 20,
+        "created_at": "2023-09-27T20:29:38Z"
+      },
+      {
+        "objectID": "1583222",
+        "title": "Haystack: a project for iran",
+        "points": 50,
+        "num_comments": 12,
+        "created_at": "2010-08-07T07:17:38Z"
+      },
+      {
+        "objectID": "34161085",
+        "title": "Show HN: I built haystack – Google for workplace knowledge",
+        "points": 46,
+        "num_comments": 11,
+        "created_at": "2022-12-28T14:09:31Z"
+      },
+      {
+        "objectID": "48182856",
+        "title": "Show HN: Haystack – Review the PRs that need human attention",
+        "points": 45,
+        "num_comments": 17,
+        "created_at": "2026-05-18T17:44:12Z"
+      },
+      {
+        "objectID": "1690405",
+        "title": "Haystack project responds to 'security concerns', looks like it's falling apart",
+        "points": 44,
+        "num_comments": 23,
+        "created_at": "2010-09-14T13:20:59Z"
+      },
+      {
+        "objectID": "22009523",
+        "title": "Show HN: Haystack – Visibility into How Software Teams Works",
+        "points": 39,
+        "num_comments": 26,
+        "created_at": "2020-01-10T09:04:48Z"
+      },
+      {
+        "objectID": "42150581",
+        "title": "Find a needle in a haystack with Git bisect",
+        "points": 39,
+        "num_comments": 4,
+        "created_at": "2024-11-15T20:27:17Z"
+      },
+      {
+        "objectID": "32288450",
+        "title": "9-Dimensional Haystack",
+        "points": 38,
+        "num_comments": 2,
+        "created_at": "2022-07-30T17:14:28Z"
+      },
+      {
+        "objectID": "36532282",
+        "title": "Haystack PromptHub – OSS collection of LLM prompts",
+        "points": 33,
+        "num_comments": 0,
+        "created_at": "2023-06-30T09:14:58Z"
+      },
+      {
+        "objectID": "906461",
+        "title": "Behind the scenes: 37Signals's Haystack",
+        "points": 31,
+        "num_comments": 6,
+        "created_at": "2009-10-27T21:04:50Z"
+      },
+      {
+        "objectID": "921691",
+        "title": "Finding the Needles in the Haystack (Why competition is healthy)",
+        "points": 29,
+        "num_comments": 3,
+        "created_at": "2009-11-04T14:25:00Z"
+      },
+      {
+        "objectID": "1029860",
+        "title": "Haystack Is Now Sortfolio: A Trademark Issue",
+        "points": 21,
+        "num_comments": 14,
+        "created_at": "2010-01-04T05:54:55Z"
+      },
+      {
+        "objectID": "2242923",
+        "title": "Haystack: A small utility helping to protect your searches",
+        "points": 20,
+        "num_comments": 17,
+        "created_at": "2011-02-20T20:25:10Z"
+      },
+      {
+        "objectID": "3029422",
+        "title": "How big is your haystack",
+        "points": 20,
+        "num_comments": 4,
+        "created_at": "2011-09-23T09:57:02Z"
+      },
+      {
+        "objectID": "3105883",
+        "title": "The iOS App Store: Needles in Haystacks",
+        "points": 19,
+        "num_comments": 19,
+        "created_at": "2011-10-13T03:07:41Z"
+      },
+      {
+        "objectID": "227655",
+        "title": "Facebook - Needle in a Haystack: Efficient Storage of Billions of Photos",
+        "points": 17,
+        "num_comments": 6,
+        "created_at": "2008-06-25T16:29:31Z"
+      },
+      {
+        "objectID": "229342",
+        "title": "Searching for a Needle or Exploring the Haystack?",
+        "points": 13,
+        "num_comments": 0,
+        "created_at": "2008-06-27T02:18:54Z"
+      },
+      {
+        "objectID": "28378227",
+        "title": "Semantic Search for FAQs with Haystack",
+        "points": 12,
+        "num_comments": 5,
+        "created_at": "2021-09-01T10:44:52Z"
+      },
+      {
+        "objectID": "39667569",
+        "title": "Haystack 2.0 – compound LLM pipelines are here",
+        "points": 11,
+        "num_comments": 4,
+        "created_at": "2024-03-11T12:51:55Z"
+      },
+      {
+        "objectID": "755194",
+        "title": "Xapian-haystack - A Xapian backend for Django Haystack",
+        "points": 10,
+        "num_comments": 4,
+        "created_at": "2009-08-11T13:57:58Z"
+      },
+      {
+        "objectID": "3210553",
+        "title": "PHP-Haystack-Needle-Cheat-Sheet",
+        "points": 10,
+        "num_comments": 0,
+        "created_at": "2011-11-08T13:05:39Z"
+      },
+      {
+        "objectID": "1585153",
+        "title": "How Google Finds Your Needle in the Web's Haystack ",
+        "points": 10,
+        "num_comments": 0,
+        "created_at": "2010-08-08T10:16:34Z"
+      },
+      {
+        "objectID": "9067222",
+        "title": "Show HN: Haystack – Simple graph abstraction over Hbase",
+        "points": 9,
+        "num_comments": 6,
+        "created_at": "2015-02-18T05:59:25Z"
+      },
+      {
+        "objectID": "16975397",
+        "title": "The ICSI Haystack Panopticon",
+        "points": 9,
+        "num_comments": 2,
+        "created_at": "2018-05-02T09:47:00Z"
+      }
+    ]
+  }
+}

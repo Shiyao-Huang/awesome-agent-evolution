@@ -34,6 +34,7 @@
 | `.mermaid` | dir | needs-review holding | 不删除；先放入待审清单，确认引用后再决定归层或迁入 docs/legacy。 |
 | `AGENTS.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `CLAUDE.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
+| `CLOUD.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `CODE_OF_CONDUCT.md` | file | support release/legal | 开源发布必需，保留在根目录。 |
 | `CONTENT_INDEX.md` | file | support ops | 管理入口，保留；长文档进入 docs/。 |
 | `CONTRIBUTING.md` | file | support release/legal | 开源发布必需，保留在根目录。 |

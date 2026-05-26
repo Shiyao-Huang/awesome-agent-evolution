@@ -414,7 +414,7 @@
 | 78 | smolagents | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Agent 框架 | 15000 | [报告](site/public/reports/research/projects/68-smolagents-huggingface.md) |
 | 79 | bisheng | [dataelement/bisheng](https://github.com/dataelement/bisheng) | LLM 应用平台 | 8000 | [报告](site/public/reports/research/projects/69-bisheng-llm-platform.md) |
 | 80 | chainlit | [Chainlit/chainlit](https://github.com/Chainlit/chainlit) | LLM 聊天框架 | 10000 | [报告](site/public/reports/research/projects/70-chainlit-llm-chat.md) |
-| 81 | wildclawbench | [InternLM/WildClawBench](https://github.com/InternLM/WildClawBench) | Agent 评测基准 | 500 | [报告](site/public/reports/research/projects/71-wildclawbench-agent-benchmark.md) |
+| 81 | wildclawbench | [InternLM/WildClawBench](https://github.com/InternLM/WildClawBench) | Agent 评测基准 | 500 | [报告](site/public/reports/projects/71-wildclawbench-agent-benchmark.md) |
 | 82 | awesome-ai-agents-2026 | [Zijian-Ni/awesome-ai-agents-2026](https://github.com/Zijian-Ni/awesome-ai-agents-2026) | Agent 研究综述 | 800 | [报告](site/public/reports/research/projects/72-awesome-ai-agents-2026.md) |
 | 83 | Awesome Agent Memory by cxxz | [cxxz/awesome-agent-memory](https://github.com/cxxz/awesome-agent-memory) | Agent Memory Resource Index | 10 | [报告](site/public/reports/projects/209-cxxz-awesome-agent-memory.md) |
 | 84 | Memoir | [zhangfengcdt/memoir](https://github.com/zhangfengcdt/memoir) | Git-like Agent Auto-Memory | 549 | [报告](site/public/reports/projects/210-memoir-agent-auto-memory.md) |

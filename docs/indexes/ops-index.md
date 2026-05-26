@@ -16,7 +16,7 @@
 | `CONTENT_INDEX.md` | present | 1 | 0 | 0 | 3.3 KB |
 | `AGENTS.md` | present | 1 | 0 | 0 | 15 KB |
 | `CLAUDE.md` | present | 1 | 0 | 0 | 11 KB |
-| `CLOUD.md` | missing | 0 | 0 | 0 | 0 B |
+| `CLOUD.md` | present | 1 | 0 | 0 | 156 B |
 | `docs` | present | 83 | 15 | 0 | 1.2 MB |
 | `.claude/AIDS_IDENTITY.md` | present | 1 | 0 | 0 | 346 B |
 
@@ -45,6 +45,10 @@
 ### `CLAUDE.md`
 
 - `CLAUDE.md`
+
+### `CLOUD.md`
+
+- `CLOUD.md`
 
 ### `docs`
 

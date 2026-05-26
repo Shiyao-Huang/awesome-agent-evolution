@@ -10,7 +10,7 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `analysis` | present | 1 | 1 | 0 | 6.6 KB |
+| `analysis` | present | 10 | 1 | 0 | 1.5 MB |
 | `research` | present | 141 | 8 | 0 | 2.3 MB |
 | `projects` | present | 25764 | 2882 | 0 | 2.9 GB |
 | `paper-reviews` | present | 171 | 1 | 0 | 1.6 MB |
@@ -24,6 +24,15 @@
 ### `analysis`
 
 - `analysis/essential-taxonomy-framework.md`
+- `analysis/framework-painpoint-crosswalk.csv`
+- `analysis/github-analysis.tex`
+- `analysis/github-created-at-cache.json`
+- `analysis/github-project-data-analysis.json`
+- `analysis/github-project-data-analysis.md`
+- `analysis/github-project-data-analysis.tex`
+- `analysis/paper-review-coverage.md`
+- `analysis/repo-cross-analysis.csv`
+- `analysis/repo-techstack-cross-analysis.csv`
 
 ### `research`
 

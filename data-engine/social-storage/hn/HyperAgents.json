@@ -1,0 +1,122 @@
+{
+  "project": "HyperAgents",
+  "repo": "facebookresearch/HyperAgents",
+  "collected_at": "2026-05-22T12:35:22.370756+00:00",
+  "total_hits": 16,
+  "results": {
+    "HyperAgents": [
+      {
+        "objectID": "47505670",
+        "title": "HyperAgents: Self-referential self-improving agents",
+        "points": 234,
+        "num_comments": 90,
+        "created_at": "2026-03-24T16:54:10Z"
+      },
+      {
+        "objectID": "47528807",
+        "title": "Meta releases HyperAgents: self-improving AI",
+        "points": 3,
+        "num_comments": 3,
+        "created_at": "2026-03-26T10:41:40Z"
+      },
+      {
+        "objectID": "47503787",
+        "title": "Hyperagents",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2026-03-24T15:07:47Z"
+      },
+      {
+        "objectID": "47491695",
+        "title": "Hyperagents",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2026-03-23T16:28:29Z"
+      },
+      {
+        "objectID": "48097007",
+        "title": "Meta's Hyperagents and Self-Correcting Agents",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-05-11T16:17:04Z"
+      },
+      {
+        "objectID": "47514591",
+        "title": "Hyperagents – Self-referential self-improving agents",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-03-25T08:03:24Z"
+      },
+      {
+        "objectID": "47727255",
+        "title": "Show HN: HyperFlow – A self-improving agent framework built on LangGraph",
+        "points": 8,
+        "num_comments": 1,
+        "created_at": "2026-04-11T04:01:03Z"
+      },
+      {
+        "objectID": "47596925",
+        "title": "Show HN: Calx – track and compile corrections humans make with AI agents",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2026-04-01T04:45:06Z"
+      },
+      {
+        "objectID": "5699499",
+        "title": "Show HN: hyperagent.js, a JavaScript library for consuming HAL hypermedia APIs",
+        "points": 5,
+        "num_comments": 0,
+        "created_at": "2013-05-13T16:11:45Z"
+      },
+      {
+        "objectID": "43755695",
+        "title": "Show HN: HyperAgent: open-source Browser Automation with LLMs",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2025-04-21T19:46:26Z"
+      },
+      {
+        "objectID": "47140784",
+        "title": "Hyperagent",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-02-24T18:35:29Z"
+      },
+      {
+        "objectID": "47090865",
+        "title": "Hyperagent, Made by the Team at Airtable",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-02-20T17:20:19Z"
+      },
+      {
+        "objectID": "47083848",
+        "title": "Hyperagent – Make Agents Learn, Compound, and Scale",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-02-20T04:40:39Z"
+      },
+      {
+        "objectID": "5544632",
+        "title": "Show HN: Hypergenesis - a simple alternative to Boxen to get your Mac setup fast",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2013-04-13T20:50:43Z"
+      },
+      {
+        "objectID": "46903296",
+        "title": "Show HN: HyperAgency (H9y.ai) – Open-Source Agentic AI Operating System",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-02-05T18:48:39Z"
+      },
+      {
+        "objectID": "5863306",
+        "title": "Show HN: Hypergenesis - Step 0 for an Automated Development Environment",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2013-06-11T17:29:16Z"
+      }
+    ]
+  }
+}

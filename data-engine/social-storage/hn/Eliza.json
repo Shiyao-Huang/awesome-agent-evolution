@@ -1,0 +1,572 @@
+{
+  "project": "Eliza",
+  "repo": "elizaOS/eliza",
+  "collected_at": "2026-05-22T12:34:28.448703+00:00",
+  "total_hits": 80,
+  "results": {
+    "Eliza": [
+      {
+        "objectID": "32768834",
+        "title": "Queen Elizabeth II has died",
+        "points": 2827,
+        "num_comments": 1596,
+        "created_at": "2022-09-08T17:33:02Z"
+      },
+      {
+        "objectID": "29789137",
+        "title": "Elizabeth Holmes found guilty",
+        "points": 1712,
+        "num_comments": 1234,
+        "created_at": "2022-01-04T00:23:30Z"
+      },
+      {
+        "objectID": "33663278",
+        "title": "Elizabeth Holmes is sentenced to more than 11 years for fraud",
+        "points": 978,
+        "num_comments": 770,
+        "created_at": "2022-11-18T22:22:42Z"
+      },
+      {
+        "objectID": "19337456",
+        "title": "Elizabeth Warren Proposes Breaking Up Tech Giants Like Amazon",
+        "points": 733,
+        "num_comments": 711,
+        "created_at": "2019-03-08T13:54:17Z"
+      },
+      {
+        "objectID": "17323485",
+        "title": "U.S. Files Criminal Charges Against Theranos’s Elizabeth Holmes, Ramesh Balwani",
+        "points": 701,
+        "num_comments": 500,
+        "created_at": "2018-06-15T20:55:23Z"
+      },
+      {
+        "objectID": "12053721",
+        "title": "U.S. Bans Theranos CEO Elizabeth Holmes from Operating Labs for Two Years",
+        "points": 418,
+        "num_comments": 269,
+        "created_at": "2016-07-08T05:38:13Z"
+      },
+      {
+        "objectID": "12648990",
+        "title": "An Open Letter From Elizabeth Holmes",
+        "points": 287,
+        "num_comments": 206,
+        "created_at": "2016-10-05T23:50:06Z"
+      },
+      {
+        "objectID": "28693855",
+        "title": "Elizabeth Holmes urged employees to hide Theranos’ lab equipment from inspectors",
+        "points": 284,
+        "num_comments": 256,
+        "created_at": "2021-09-29T14:08:07Z"
+      },
+      {
+        "objectID": "43332752",
+        "title": "The US island that speaks Elizabethan English",
+        "points": 271,
+        "num_comments": 189,
+        "created_at": "2025-03-11T14:24:48Z"
+      },
+      {
+        "objectID": "3153898",
+        "title": "Siri meets Eliza",
+        "points": 254,
+        "num_comments": 29,
+        "created_at": "2011-10-25T13:02:39Z"
+      },
+      {
+        "objectID": "13059683",
+        "title": "How Elizabeth Warren Took Down the CEO of Wells Fargo, and Why It Matters",
+        "points": 253,
+        "num_comments": 156,
+        "created_at": "2016-11-29T00:30:31Z"
+      },
+      {
+        "objectID": "32794197",
+        "title": "What went down on Wikipedia after Queen Elizabeth II's death was announced",
+        "points": 233,
+        "num_comments": 91,
+        "created_at": "2022-09-10T20:08:55Z"
+      },
+      {
+        "objectID": "7588484",
+        "title": "Welcome Kat, Yuri, Patrick, and Elizabeth",
+        "points": 232,
+        "num_comments": 29,
+        "created_at": "2014-04-14T20:01:13Z"
+      },
+      {
+        "objectID": "17328664",
+        "title": "Ask HN: Elizabeth Holmes has 200 patents – if tech didn't work, why not noticed?",
+        "points": 207,
+        "num_comments": 118,
+        "created_at": "2018-06-16T18:32:26Z"
+      },
+      {
+        "objectID": "20750664",
+        "title": "Elizabeth Warren Came Up with a Plan to Break Up Big Tech",
+        "points": 193,
+        "num_comments": 338,
+        "created_at": "2019-08-20T19:00:06Z"
+      },
+      {
+        "objectID": "22155975",
+        "title": "Elizabeth Holmes representing herself in Arizona civil case",
+        "points": 193,
+        "num_comments": 164,
+        "created_at": "2020-01-27T00:45:51Z"
+      },
+      {
+        "objectID": "46659550",
+        "title": "An Elizabethan mansion's secrets for staying warm",
+        "points": 185,
+        "num_comments": 180,
+        "created_at": "2026-01-17T16:53:24Z"
+      },
+      {
+        "objectID": "35528281",
+        "title": "Elizabeth Holmes loses bid to stay out of prison",
+        "points": 176,
+        "num_comments": 289,
+        "created_at": "2023-04-11T17:27:50Z"
+      },
+      {
+        "objectID": "28814742",
+        "title": "Obsidian mirror used by Elizabeth I’s court astrologer has Aztec origins",
+        "points": 166,
+        "num_comments": 147,
+        "created_at": "2021-10-10T00:45:49Z"
+      },
+      {
+        "objectID": "33575082",
+        "title": "U.S. seeks 15 years for Elizabeth Holmes over Theranos fraud",
+        "points": 154,
+        "num_comments": 137,
+        "created_at": "2022-11-12T17:23:57Z"
+      },
+      {
+        "objectID": "16122765",
+        "title": "Elizabeth Warren's bill would fine the next Equifax for data breach",
+        "points": 145,
+        "num_comments": 105,
+        "created_at": "2018-01-11T10:34:11Z"
+      },
+      {
+        "objectID": "33521144",
+        "title": "Theranos founder Elizabeth Holmes is denied a bid for new trial",
+        "points": 138,
+        "num_comments": 160,
+        "created_at": "2022-11-08T16:50:07Z"
+      },
+      {
+        "objectID": "38506175",
+        "title": "1960s chatbot ELIZA beat OpenAI's GPT-3.5 in a recent Turing test study",
+        "points": 136,
+        "num_comments": 47,
+        "created_at": "2023-12-03T10:56:52Z"
+      },
+      {
+        "objectID": "28955433",
+        "title": "Elizabeth Holmes is on trial for fraud, but don't forget about her VC enablers",
+        "points": 135,
+        "num_comments": 102,
+        "created_at": "2021-10-22T10:11:55Z"
+      },
+      {
+        "objectID": "38840339",
+        "title": "Elizabeth line testing ways of banishing its \"ghosts in the walls\"",
+        "points": 132,
+        "num_comments": 150,
+        "created_at": "2024-01-02T10:59:27Z"
+      },
+      {
+        "objectID": "44001041",
+        "title": "I was a Theranos whistleblower. Here's what I think Elizabeth Holmes is up to",
+        "points": 132,
+        "num_comments": 91,
+        "created_at": "2025-05-16T01:34:54Z"
+      },
+      {
+        "objectID": "32768854",
+        "title": "Queen Elizabeth II has died",
+        "points": 129,
+        "num_comments": 1,
+        "created_at": "2022-09-08T17:34:27Z"
+      },
+      {
+        "objectID": "34459666",
+        "title": "Elizabeth Holmes bought one-way ticket to Mexico after convicted of fraud",
+        "points": 127,
+        "num_comments": 150,
+        "created_at": "2023-01-20T20:44:29Z"
+      },
+      {
+        "objectID": "39752941",
+        "title": "Draft Paper Discovered in Which Joseph Weizenbaum Envisions ELIZA's Applications",
+        "points": 125,
+        "num_comments": 24,
+        "created_at": "2024-03-19T04:27:27Z"
+      },
+      {
+        "objectID": "35754736",
+        "title": "A reproduction of Elizabeth Twining’s catalog of botanical drawings from 1868",
+        "points": 124,
+        "num_comments": 7,
+        "created_at": "2023-04-29T17:01:03Z"
+      },
+      {
+        "objectID": "38900304",
+        "title": "AI or Ain't: Eliza",
+        "points": 123,
+        "num_comments": 110,
+        "created_at": "2024-01-07T11:20:59Z"
+      },
+      {
+        "objectID": "36016419",
+        "title": "Apple-1 ELIZA chatbot vs. ChatGPT [video]",
+        "points": 119,
+        "num_comments": 68,
+        "created_at": "2023-05-20T23:01:00Z"
+      },
+      {
+        "objectID": "32343684",
+        "title": "Elizabeth Cotton’s Fingerstyle Ragtime",
+        "points": 118,
+        "num_comments": 27,
+        "created_at": "2022-08-04T14:52:32Z"
+      },
+      {
+        "objectID": "31630734",
+        "title": "Riding London’s unexpectedly fantastic Elizabeth line",
+        "points": 116,
+        "num_comments": 134,
+        "created_at": "2022-06-05T13:20:54Z"
+      },
+      {
+        "objectID": "33663191",
+        "title": "Elizabeth Holmes sentenced to 11 years in prison for Theranos fraud",
+        "points": 110,
+        "num_comments": 82,
+        "created_at": "2022-11-18T22:17:20Z"
+      },
+      {
+        "objectID": "21163657",
+        "title": "Attorneys say Elizabeth Holmes isn’t paying them",
+        "points": 109,
+        "num_comments": 66,
+        "created_at": "2019-10-05T03:33:36Z"
+      },
+      {
+        "objectID": "35970854",
+        "title": "Theranos founder Elizabeth Holmes must go to prison while she appeals sentence",
+        "points": 107,
+        "num_comments": 89,
+        "created_at": "2023-05-17T03:13:52Z"
+      },
+      {
+        "objectID": "44300641",
+        "title": "ELIZA Reanimated: Restoring the Mother of All Chatbots",
+        "points": 106,
+        "num_comments": 30,
+        "created_at": "2025-06-17T15:57:15Z"
+      },
+      {
+        "objectID": "28533220",
+        "title": "'Concerned Citizen'at Theranos CEO Elizabeth Holmes Trial Turns Out to Be Family",
+        "points": 105,
+        "num_comments": 54,
+        "created_at": "2021-09-14T23:57:37Z"
+      },
+      {
+        "objectID": "40977389",
+        "title": "Making Elizabethan plays understandable and fun to read",
+        "points": 104,
+        "num_comments": 162,
+        "created_at": "2024-07-16T15:20:34Z"
+      }
+    ],
+    "eliza": [
+      {
+        "objectID": "32768834",
+        "title": "Queen Elizabeth II has died",
+        "points": 2827,
+        "num_comments": 1596,
+        "created_at": "2022-09-08T17:33:02Z"
+      },
+      {
+        "objectID": "29789137",
+        "title": "Elizabeth Holmes found guilty",
+        "points": 1712,
+        "num_comments": 1234,
+        "created_at": "2022-01-04T00:23:30Z"
+      },
+      {
+        "objectID": "33663278",
+        "title": "Elizabeth Holmes is sentenced to more than 11 years for fraud",
+        "points": 978,
+        "num_comments": 770,
+        "created_at": "2022-11-18T22:22:42Z"
+      },
+      {
+        "objectID": "19337456",
+        "title": "Elizabeth Warren Proposes Breaking Up Tech Giants Like Amazon",
+        "points": 733,
+        "num_comments": 711,
+        "created_at": "2019-03-08T13:54:17Z"
+      },
+      {
+        "objectID": "17323485",
+        "title": "U.S. Files Criminal Charges Against Theranos’s Elizabeth Holmes, Ramesh Balwani",
+        "points": 701,
+        "num_comments": 500,
+        "created_at": "2018-06-15T20:55:23Z"
+      },
+      {
+        "objectID": "12053721",
+        "title": "U.S. Bans Theranos CEO Elizabeth Holmes from Operating Labs for Two Years",
+        "points": 418,
+        "num_comments": 269,
+        "created_at": "2016-07-08T05:38:13Z"
+      },
+      {
+        "objectID": "12648990",
+        "title": "An Open Letter From Elizabeth Holmes",
+        "points": 287,
+        "num_comments": 206,
+        "created_at": "2016-10-05T23:50:06Z"
+      },
+      {
+        "objectID": "28693855",
+        "title": "Elizabeth Holmes urged employees to hide Theranos’ lab equipment from inspectors",
+        "points": 284,
+        "num_comments": 256,
+        "created_at": "2021-09-29T14:08:07Z"
+      },
+      {
+        "objectID": "43332752",
+        "title": "The US island that speaks Elizabethan English",
+        "points": 271,
+        "num_comments": 189,
+        "created_at": "2025-03-11T14:24:48Z"
+      },
+      {
+        "objectID": "3153898",
+        "title": "Siri meets Eliza",
+        "points": 254,
+        "num_comments": 29,
+        "created_at": "2011-10-25T13:02:39Z"
+      },
+      {
+        "objectID": "13059683",
+        "title": "How Elizabeth Warren Took Down the CEO of Wells Fargo, and Why It Matters",
+        "points": 253,
+        "num_comments": 156,
+        "created_at": "2016-11-29T00:30:31Z"
+      },
+      {
+        "objectID": "32794197",
+        "title": "What went down on Wikipedia after Queen Elizabeth II's death was announced",
+        "points": 233,
+        "num_comments": 91,
+        "created_at": "2022-09-10T20:08:55Z"
+      },
+      {
+        "objectID": "7588484",
+        "title": "Welcome Kat, Yuri, Patrick, and Elizabeth",
+        "points": 232,
+        "num_comments": 29,
+        "created_at": "2014-04-14T20:01:13Z"
+      },
+      {
+        "objectID": "17328664",
+        "title": "Ask HN: Elizabeth Holmes has 200 patents – if tech didn't work, why not noticed?",
+        "points": 207,
+        "num_comments": 118,
+        "created_at": "2018-06-16T18:32:26Z"
+      },
+      {
+        "objectID": "20750664",
+        "title": "Elizabeth Warren Came Up with a Plan to Break Up Big Tech",
+        "points": 193,
+        "num_comments": 338,
+        "created_at": "2019-08-20T19:00:06Z"
+      },
+      {
+        "objectID": "22155975",
+        "title": "Elizabeth Holmes representing herself in Arizona civil case",
+        "points": 193,
+        "num_comments": 164,
+        "created_at": "2020-01-27T00:45:51Z"
+      },
+      {
+        "objectID": "46659550",
+        "title": "An Elizabethan mansion's secrets for staying warm",
+        "points": 185,
+        "num_comments": 180,
+        "created_at": "2026-01-17T16:53:24Z"
+      },
+      {
+        "objectID": "35528281",
+        "title": "Elizabeth Holmes loses bid to stay out of prison",
+        "points": 176,
+        "num_comments": 289,
+        "created_at": "2023-04-11T17:27:50Z"
+      },
+      {
+        "objectID": "28814742",
+        "title": "Obsidian mirror used by Elizabeth I’s court astrologer has Aztec origins",
+        "points": 166,
+        "num_comments": 147,
+        "created_at": "2021-10-10T00:45:49Z"
+      },
+      {
+        "objectID": "33575082",
+        "title": "U.S. seeks 15 years for Elizabeth Holmes over Theranos fraud",
+        "points": 154,
+        "num_comments": 137,
+        "created_at": "2022-11-12T17:23:57Z"
+      },
+      {
+        "objectID": "16122765",
+        "title": "Elizabeth Warren's bill would fine the next Equifax for data breach",
+        "points": 145,
+        "num_comments": 105,
+        "created_at": "2018-01-11T10:34:11Z"
+      },
+      {
+        "objectID": "33521144",
+        "title": "Theranos founder Elizabeth Holmes is denied a bid for new trial",
+        "points": 138,
+        "num_comments": 160,
+        "created_at": "2022-11-08T16:50:07Z"
+      },
+      {
+        "objectID": "38506175",
+        "title": "1960s chatbot ELIZA beat OpenAI's GPT-3.5 in a recent Turing test study",
+        "points": 136,
+        "num_comments": 47,
+        "created_at": "2023-12-03T10:56:52Z"
+      },
+      {
+        "objectID": "28955433",
+        "title": "Elizabeth Holmes is on trial for fraud, but don't forget about her VC enablers",
+        "points": 135,
+        "num_comments": 102,
+        "created_at": "2021-10-22T10:11:55Z"
+      },
+      {
+        "objectID": "38840339",
+        "title": "Elizabeth line testing ways of banishing its \"ghosts in the walls\"",
+        "points": 132,
+        "num_comments": 150,
+        "created_at": "2024-01-02T10:59:27Z"
+      },
+      {
+        "objectID": "44001041",
+        "title": "I was a Theranos whistleblower. Here's what I think Elizabeth Holmes is up to",
+        "points": 132,
+        "num_comments": 91,
+        "created_at": "2025-05-16T01:34:54Z"
+      },
+      {
+        "objectID": "32768854",
+        "title": "Queen Elizabeth II has died",
+        "points": 129,
+        "num_comments": 1,
+        "created_at": "2022-09-08T17:34:27Z"
+      },
+      {
+        "objectID": "34459666",
+        "title": "Elizabeth Holmes bought one-way ticket to Mexico after convicted of fraud",
+        "points": 127,
+        "num_comments": 150,
+        "created_at": "2023-01-20T20:44:29Z"
+      },
+      {
+        "objectID": "39752941",
+        "title": "Draft Paper Discovered in Which Joseph Weizenbaum Envisions ELIZA's Applications",
+        "points": 125,
+        "num_comments": 24,
+        "created_at": "2024-03-19T04:27:27Z"
+      },
+      {
+        "objectID": "35754736",
+        "title": "A reproduction of Elizabeth Twining’s catalog of botanical drawings from 1868",
+        "points": 124,
+        "num_comments": 7,
+        "created_at": "2023-04-29T17:01:03Z"
+      },
+      {
+        "objectID": "38900304",
+        "title": "AI or Ain't: Eliza",
+        "points": 123,
+        "num_comments": 110,
+        "created_at": "2024-01-07T11:20:59Z"
+      },
+      {
+        "objectID": "36016419",
+        "title": "Apple-1 ELIZA chatbot vs. ChatGPT [video]",
+        "points": 119,
+        "num_comments": 68,
+        "created_at": "2023-05-20T23:01:00Z"
+      },
+      {
+        "objectID": "32343684",
+        "title": "Elizabeth Cotton’s Fingerstyle Ragtime",
+        "points": 118,
+        "num_comments": 27,
+        "created_at": "2022-08-04T14:52:32Z"
+      },
+      {
+        "objectID": "31630734",
+        "title": "Riding London’s unexpectedly fantastic Elizabeth line",
+        "points": 116,
+        "num_comments": 134,
+        "created_at": "2022-06-05T13:20:54Z"
+      },
+      {
+        "objectID": "33663191",
+        "title": "Elizabeth Holmes sentenced to 11 years in prison for Theranos fraud",
+        "points": 110,
+        "num_comments": 82,
+        "created_at": "2022-11-18T22:17:20Z"
+      },
+      {
+        "objectID": "21163657",
+        "title": "Attorneys say Elizabeth Holmes isn’t paying them",
+        "points": 109,
+        "num_comments": 66,
+        "created_at": "2019-10-05T03:33:36Z"
+      },
+      {
+        "objectID": "35970854",
+        "title": "Theranos founder Elizabeth Holmes must go to prison while she appeals sentence",
+        "points": 107,
+        "num_comments": 89,
+        "created_at": "2023-05-17T03:13:52Z"
+      },
+      {
+        "objectID": "44300641",
+        "title": "ELIZA Reanimated: Restoring the Mother of All Chatbots",
+        "points": 106,
+        "num_comments": 30,
+        "created_at": "2025-06-17T15:57:15Z"
+      },
+      {
+        "objectID": "28533220",
+        "title": "'Concerned Citizen'at Theranos CEO Elizabeth Holmes Trial Turns Out to Be Family",
+        "points": 105,
+        "num_comments": 54,
+        "created_at": "2021-09-14T23:57:37Z"
+      },
+      {
+        "objectID": "40977389",
+        "title": "Making Elizabethan plays understandable and fun to read",
+        "points": 104,
+        "num_comments": 162,
+        "created_at": "2024-07-16T15:20:34Z"
+      }
+    ]
+  }
+}

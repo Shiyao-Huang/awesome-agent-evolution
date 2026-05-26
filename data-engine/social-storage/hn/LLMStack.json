@@ -1,0 +1,290 @@
+{
+  "project": "LLMStack",
+  "repo": "trypromptly/LLMStack",
+  "collected_at": "2026-05-22T12:46:47.489369+00:00",
+  "total_hits": 40,
+  "results": {
+    "LLMStack": [
+      {
+        "objectID": "44572043",
+        "title": "Ask HN: What's Your Useful Local LLM Stack?",
+        "points": 91,
+        "num_comments": 54,
+        "created_at": "2025-07-15T15:17:16Z"
+      },
+      {
+        "objectID": "44187275",
+        "title": "Ask HN: What Does Your Self-Hosted LLM Stack Look Like in 2025?",
+        "points": 21,
+        "num_comments": 7,
+        "created_at": "2025-06-05T01:00:20Z"
+      },
+      {
+        "objectID": "43201627",
+        "title": "Ask HN: Best LLM Stack for Q&A over Internal PDFs?",
+        "points": 11,
+        "num_comments": 6,
+        "created_at": "2025-02-28T04:16:25Z"
+      },
+      {
+        "objectID": "34726647",
+        "title": "Dev LLM stack, production LLM stack, example projects, & things you'll discover",
+        "points": 10,
+        "num_comments": 2,
+        "created_at": "2023-02-09T16:36:15Z"
+      },
+      {
+        "objectID": "37342482",
+        "title": "Show HN: LLMStack – Self-Hosted, Low-Code Platform to Build AI Experiences",
+        "points": 7,
+        "num_comments": 2,
+        "created_at": "2023-08-31T19:29:52Z"
+      },
+      {
+        "objectID": "37290863",
+        "title": "Show HN: LLMStack – Low-Code Platform for Building LLM Apps with LocalAI Support",
+        "points": 7,
+        "num_comments": 0,
+        "created_at": "2023-08-28T07:18:01Z"
+      },
+      {
+        "objectID": "42152561",
+        "title": "LLM Stack Guide",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2024-11-15T23:37:42Z"
+      },
+      {
+        "objectID": "41010394",
+        "title": "Build No-Code Generative AI Apps with Ollama, Llama3 and LLMStack",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2024-07-19T19:51:40Z"
+      },
+      {
+        "objectID": "39432565",
+        "title": "LLM Stack for 2024 – Initial Survey",
+        "points": 3,
+        "num_comments": 5,
+        "created_at": "2024-02-19T17:48:49Z"
+      },
+      {
+        "objectID": "41122901",
+        "title": "The Most Productive LLM Stack (For Me)",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2024-07-31T20:02:32Z"
+      },
+      {
+        "objectID": "37295652",
+        "title": "Build and Run LLM Apps Locally with LocalAI and LLMStack",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2023-08-28T15:27:40Z"
+      },
+      {
+        "objectID": "36426338",
+        "title": "Forget LAMP Stack: LLM stack is here",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2023-06-21T23:46:03Z"
+      },
+      {
+        "objectID": "37136262",
+        "title": "Be confident about your LLM stack",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2023-08-15T16:55:48Z"
+      },
+      {
+        "objectID": "40167461",
+        "title": "Show HN: OpenLIT – Open-Source LLM Observability with OpenTelemetry",
+        "points": 62,
+        "num_comments": 22,
+        "created_at": "2024-04-26T09:45:26Z"
+      },
+      {
+        "objectID": "48109962",
+        "title": "Launch HN: Voker (YC S24) – Analytics for AI Agents",
+        "points": 59,
+        "num_comments": 22,
+        "created_at": "2026-05-12T15:45:20Z"
+      },
+      {
+        "objectID": "44177964",
+        "title": "Show HN: Tiptap AI Agent – Add AI workflows to your text editor in minutes",
+        "points": 45,
+        "num_comments": 18,
+        "created_at": "2025-06-04T07:10:05Z"
+      },
+      {
+        "objectID": "37695963",
+        "title": "Show HN: Pontus the Zero Trust AI Layer",
+        "points": 7,
+        "num_comments": 1,
+        "created_at": "2023-09-28T21:13:44Z"
+      },
+      {
+        "objectID": "37404949",
+        "title": "Ask HN: Most LLM libraries are abandoned. What do you use in production now?",
+        "points": 5,
+        "num_comments": 4,
+        "created_at": "2023-09-06T13:38:44Z"
+      },
+      {
+        "objectID": "37777683",
+        "title": "Show HN: HoneyHive – An unified evaluation and monitoring platform for LLM apps",
+        "points": 3,
+        "num_comments": 2,
+        "created_at": "2023-10-05T12:26:01Z"
+      },
+      {
+        "objectID": "47395047",
+        "title": "Show HN: Run the popular LLM-Course tutorials on HyperAI",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2026-03-16T03:52:54Z"
+      },
+      {
+        "objectID": "42192049",
+        "title": "Show HN: Langrocks – tools like computer access, browser etc., for LLM agents",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2024-11-20T09:07:12Z"
+      },
+      {
+        "objectID": "47162581",
+        "title": "Show HN: Context Harness – Local first context engine for AI tools",
+        "points": 2,
+        "num_comments": 4,
+        "created_at": "2026-02-26T06:26:01Z"
+      },
+      {
+        "objectID": "40827002",
+        "title": "Show HN: [OSS] Taking a Systematic Approach to Improving LLM Accuracy",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-06-29T00:56:12Z"
+      },
+      {
+        "objectID": "40167478",
+        "title": "OpenLIT – Open-Source LLM Observability with OpenTelemetry",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-04-26T09:47:23Z"
+      },
+      {
+        "objectID": "47161647",
+        "title": "Show HN: DeltaMemory – Persistent cognitive memory for production AI agents",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-02-26T03:57:22Z"
+      },
+      {
+        "objectID": "40179153",
+        "title": "Show HN: OpenLIT – Open-Source LLM Observability with OpenTelemetry",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2024-04-27T11:29:10Z"
+      },
+      {
+        "objectID": "36343255",
+        "title": "The New Language Model Stack",
+        "points": 9,
+        "num_comments": 0,
+        "created_at": "2023-06-15T16:48:19Z"
+      },
+      {
+        "objectID": "37509176",
+        "title": "Retrieval Augmented Generation (Rag): What, Why and How?",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2023-09-14T14:01:16Z"
+      },
+      {
+        "objectID": "39053304",
+        "title": "Realtime Avatars with Retrieval Augmented Generation",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2024-01-19T09:09:40Z"
+      },
+      {
+        "objectID": "37558077",
+        "title": "Retrieval Augmented Generation (Rag): What, Why and How?",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2023-09-18T16:04:52Z"
+      },
+      {
+        "objectID": "36350764",
+        "title": "The New Language Model Stack – Sequoia Capital",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2023-06-16T03:28:02Z"
+      },
+      {
+        "objectID": "43314411",
+        "title": "Show HN: I built a Mac app to watch YouTube playlists and channels",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2025-03-09T22:08:42Z"
+      },
+      {
+        "objectID": "32466326",
+        "title": "Labstack/echo: High performance, minimalist Go web framework",
+        "points": 91,
+        "num_comments": 40,
+        "created_at": "2022-08-15T05:58:57Z"
+      },
+      {
+        "objectID": "40346843",
+        "title": "Novel LLMjacking Attacks Target Cloud-Based AI Models",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2024-05-13T18:52:33Z"
+      },
+      {
+        "objectID": "23285488",
+        "title": "Show HN: LibStack – Better search for Node.js packages",
+        "points": 3,
+        "num_comments": 2,
+        "created_at": "2020-05-23T19:04:19Z"
+      },
+      {
+        "objectID": "22756639",
+        "title": "Show HN: LibStack – Better search for Node.js packages",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2020-04-02T06:09:06Z"
+      },
+      {
+        "objectID": "13361452",
+        "title": "LabStack API is Live",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2017-01-10T00:37:45Z"
+      },
+      {
+        "objectID": "43270017",
+        "title": "Show HN: LLMShark, Copy Context as Markdown from Postgres DBs",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-03-05T18:01:45Z"
+      },
+      {
+        "objectID": "42991525",
+        "title": "LLMjacking Targets DeepSeek",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-02-09T16:12:28Z"
+      },
+      {
+        "objectID": "41380456",
+        "title": "LLMjacking: Stolen Cloud Credentials Used in New AI Attack",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2024-08-28T15:15:03Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "project": "GEP MCP Server",
+  "repo": "EvoMap/gep-mcp-server",
+  "collected_at": "2026-05-22T12:39:23.218314+00:00",
+  "total_hits": 42,
+  "results": {
+    "GEP MCP Server": [
+      {
+        "objectID": "44145215",
+        "title": "EZ-MCP: Get an MCP Server Going in 2M (Python or TS)",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-05-31T16:11:08Z"
+      },
+      {
+        "objectID": "43774176",
+        "title": "Show HN: MCP Manager – Open-Source CLI to Manage Your MCP Servers",
+        "points": 5,
+        "num_comments": 5,
+        "created_at": "2025-04-23T17:00:16Z"
+      },
+      {
+        "objectID": "43887752",
+        "title": "Show HN: Open-Source CLI for Managing MCP",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-05-04T16:43:28Z"
+      },
+      {
+        "objectID": "46279591",
+        "title": "Show HN: VibeCoCo – Plan your project, get a custom MCP server for your AI agent",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-12-15T19:55:01Z"
+      },
+      {
+        "objectID": "45715628",
+        "title": "Ask HN: Has anyone deployed your own MCP server connector to ChatGPT?",
+        "points": 5,
+        "num_comments": 3,
+        "created_at": "2025-10-26T22:18:44Z"
+      },
+      {
+        "objectID": "46557748",
+        "title": "Show HN: I managed to configure Auth0 for ChatGPT MCP serve for OAuth setup",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-01-09T19:06:33Z"
+      },
+      {
+        "objectID": "43377621",
+        "title": "Show HN: MCPify – Bring your MCP server ideas to life",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-03-16T08:30:09Z"
+      },
+      {
+        "objectID": "45735886",
+        "title": "Show HN: MCP-C – cloud platform for running MCP agents and apps",
+        "points": 9,
+        "num_comments": 2,
+        "created_at": "2025-10-28T17:25:38Z"
+      },
+      {
+        "objectID": "42291436",
+        "title": "Show HN: Connect any Open Data to Claude (and soon, any other LLMs)",
+        "points": 8,
+        "num_comments": 0,
+        "created_at": "2024-12-01T23:10:13Z"
+      },
+      {
+        "objectID": "43570306",
+        "title": "Ask HN: What's the Point of MCP?",
+        "points": 6,
+        "num_comments": 7,
+        "created_at": "2025-04-03T14:35:47Z"
+      },
+      {
+        "objectID": "46870638",
+        "title": "Show HN: Buildlog – Record AI coding sessions as replayable workflow recipes",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2026-02-03T13:21:00Z"
+      },
+      {
+        "objectID": "45467807",
+        "title": "Show HN: Lootbox – CLI that unifies MCP and custom functions for Claude Code",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-10-03T21:09:23Z"
+      },
+      {
+        "objectID": "47082612",
+        "title": "Show HN: Free web search for AI agents via MCP (You.com)",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-02-20T01:41:56Z"
+      },
+      {
+        "objectID": "47003685",
+        "title": "Show HN: AI Dev Hub. 75 free AI and dev tools",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-02-13T15:20:44Z"
+      },
+      {
+        "objectID": "45693834",
+        "title": "Show HN: MCP-C – cloud platform for running MCP agents and apps",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-10-24T12:12:42Z"
+      },
+      {
+        "objectID": "47234139",
+        "title": "How to get large files to your MCP server without blowing up the context window",
+        "points": 9,
+        "num_comments": 0,
+        "created_at": "2026-03-03T15:48:18Z"
+      },
+      {
+        "objectID": "46981670",
+        "title": "Show HN: Send Claude Code tasks to the Batch API at 50% off",
+        "points": 23,
+        "num_comments": 1,
+        "created_at": "2026-02-11T21:53:42Z"
+      },
+      {
+        "objectID": "47954786",
+        "title": "MCP server that lets agents get human opinions in real-time",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-04-29T21:15:26Z"
+      },
+      {
+        "objectID": "47282106",
+        "title": "Show HN: Sqry – semantic code search using AST and call graphs",
+        "points": 5,
+        "num_comments": 1,
+        "created_at": "2026-03-06T22:40:36Z"
+      },
+      {
+        "objectID": "43866112",
+        "title": "Show HN: Texture: Create an MCP Server from Any API",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-05-02T04:09:16Z"
+      },
+      {
+        "objectID": "47110453",
+        "title": "Show HN: goto-assistant – Self-hosted AI assistant, one npx command, no Docker",
+        "points": 1,
+        "num_comments": 2,
+        "created_at": "2026-02-22T12:24:07Z"
+      },
+      {
+        "objectID": "47210564",
+        "title": "Show HN: Reflex – local code search engine and MCP server for AI coding",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-03-01T20:54:54Z"
+      },
+      {
+        "objectID": "45589969",
+        "title": "Show HN: Updated Dbmcp – An Instant MCP Server for Your DBs",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-10-15T09:28:35Z"
+      },
+      {
+        "objectID": "46654804",
+        "title": "Show HN: Making Claude Code sessions link-shareable",
+        "points": 8,
+        "num_comments": 0,
+        "created_at": "2026-01-17T02:50:26Z"
+      },
+      {
+        "objectID": "45242057",
+        "title": "Show HN: AutoDocs – Reduce AI costs and never manage context again",
+        "points": 3,
+        "num_comments": 2,
+        "created_at": "2025-09-14T18:21:19Z"
+      },
+      {
+        "objectID": "47605063",
+        "title": "We scanned 73 open-source MCP servers. Here's what source code analysis found",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-04-01T19:02:37Z"
+      },
+      {
+        "objectID": "47276621",
+        "title": "Show HN: Vet – Security registry for 88K+ MCP servers and AI tools",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-03-06T15:58:20Z"
+      },
+      {
+        "objectID": "44528840",
+        "title": "Ask HN: I built what I feel is a great API, but I'm stuck figuring out GTM",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-07-11T06:06:22Z"
+      },
+      {
+        "objectID": "48169874",
+        "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
+        "points": 442,
+        "num_comments": 150,
+        "created_at": "2026-05-17T15:37:07Z"
+      },
+      {
+        "objectID": "43532967",
+        "title": "Show HN: WhatsApp MCP Server",
+        "points": 229,
+        "num_comments": 138,
+        "created_at": "2025-03-31T09:32:54Z"
+      },
+      {
+        "objectID": "44241202",
+        "title": "Show HN: A “Course” as an MCP Server",
+        "points": 213,
+        "num_comments": 32,
+        "created_at": "2025-06-10T20:36:55Z"
+      },
+      {
+        "objectID": "45347914",
+        "title": "Launch HN: Strata (YC X25) – One MCP server for AI to handle thousands of tools",
+        "points": 133,
+        "num_comments": 66,
+        "created_at": "2025-09-23T14:52:07Z"
+      },
+      {
+        "objectID": "43425767",
+        "title": "Show HN: Hyperbrowser MCP Server – Connect AI agents to the web through browsers",
+        "points": 63,
+        "num_comments": 26,
+        "created_at": "2025-03-20T17:01:12Z"
+      },
+      {
+        "objectID": "45521788",
+        "title": "Show HN: HyprMCP – Analytics, logs and auth for MCP servers",
+        "points": 59,
+        "num_comments": 8,
+        "created_at": "2025-10-08T23:27:23Z"
+      },
+      {
+        "objectID": "44053754",
+        "title": "Show HN: Representing Agents as MCP Servers",
+        "points": 58,
+        "num_comments": 16,
+        "created_at": "2025-05-21T17:19:52Z"
+      },
+      {
+        "objectID": "45618536",
+        "title": "Show HN: We packaged an MCP server inside Chromium",
+        "points": 46,
+        "num_comments": 17,
+        "created_at": "2025-10-17T16:22:07Z"
+      },
+      {
+        "objectID": "43683075",
+        "title": "Show HN: A library to convert+deploy existing agent projects as MCP servers",
+        "points": 22,
+        "num_comments": 2,
+        "created_at": "2025-04-14T16:29:15Z"
+      },
+      {
+        "objectID": "44637165",
+        "title": "Show HN: MCP Jetpack – The easiest way to get started with MCP in Cursor",
+        "points": 17,
+        "num_comments": 10,
+        "created_at": "2025-07-21T16:33:54Z"
+      },
+      {
+        "objectID": "46151579",
+        "title": "Show HN: Turn APIs into MCP servers without code",
+        "points": 15,
+        "num_comments": 4,
+        "created_at": "2025-12-04T19:16:11Z"
+      },
+      {
+        "objectID": "44225186",
+        "title": "Show HN: Mcp-hacker-news – An MCP server for accessing Hacker News data via LLMs",
+        "points": 12,
+        "num_comments": 0,
+        "created_at": "2025-06-09T15:00:14Z"
+      }
+    ],
+    "gep-mcp-server": [
+      {
+        "objectID": "43774176",
+        "title": "Show HN: MCP Manager – Open-Source CLI to Manage Your MCP Servers",
+        "points": 5,
+        "num_comments": 5,
+        "created_at": "2025-04-23T17:00:16Z"
+      },
+      {
+        "objectID": "43887752",
+        "title": "Show HN: Open-Source CLI for Managing MCP",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-05-04T16:43:28Z"
+      }
+    ]
+  }
+}

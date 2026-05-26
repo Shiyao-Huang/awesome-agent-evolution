@@ -1,0 +1,572 @@
+{
+  "project": "LangChain",
+  "repo": "langchain-ai/langchain",
+  "collected_at": "2026-05-22T12:39:38.446900+00:00",
+  "total_hits": 80,
+  "results": {
+    "LangChain": [
+      {
+        "objectID": "40739982",
+        "title": "Why we no longer use LangChain for building our AI agents",
+        "points": 480,
+        "num_comments": 297,
+        "created_at": "2024-06-20T15:41:56Z"
+      },
+      {
+        "objectID": "36645575",
+        "title": "Langchain Is Pointless",
+        "points": 386,
+        "num_comments": 178,
+        "created_at": "2023-07-08T15:56:19Z"
+      },
+      {
+        "objectID": "34422627",
+        "title": "LangChain: Build AI apps with LLMs through composability",
+        "points": 372,
+        "num_comments": 76,
+        "created_at": "2023-01-18T02:16:13Z"
+      },
+      {
+        "objectID": "36725982",
+        "title": "The Problem with LangChain",
+        "points": 268,
+        "num_comments": 92,
+        "created_at": "2023-07-14T16:11:09Z"
+      },
+      {
+        "objectID": "35820931",
+        "title": "Re-implementing LangChain in 100 lines of code",
+        "points": 252,
+        "num_comments": 83,
+        "created_at": "2023-05-04T19:33:12Z"
+      },
+      {
+        "objectID": "35442483",
+        "title": "LangChain Announces 10M Seed Round",
+        "points": 235,
+        "num_comments": 167,
+        "created_at": "2023-04-04T16:48:00Z"
+      },
+      {
+        "objectID": "37050532",
+        "title": "Show HN: Chat with your data using LangChain, Pinecone, and Airbyte",
+        "points": 220,
+        "num_comments": 59,
+        "created_at": "2023-08-08T15:32:13Z"
+      },
+      {
+        "objectID": "35301943",
+        "title": "Retrieval in LangChain",
+        "points": 212,
+        "num_comments": 69,
+        "created_at": "2023-03-25T12:21:39Z"
+      },
+      {
+        "objectID": "36775475",
+        "title": "AutoChain, lightweight and testable alternative to LangChain",
+        "points": 211,
+        "num_comments": 36,
+        "created_at": "2023-07-18T16:47:53Z"
+      },
+      {
+        "objectID": "35859344",
+        "title": "RasaGPT: First headless LLM chatbot built on top of Rasa, Langchain and FastAPI",
+        "points": 179,
+        "num_comments": 111,
+        "created_at": "2023-05-08T08:31:37Z"
+      },
+      {
+        "objectID": "36001465",
+        "title": "LangChain: The Missing Manual",
+        "points": 164,
+        "num_comments": 43,
+        "created_at": "2023-05-19T13:07:41Z"
+      },
+      {
+        "objectID": "38096958",
+        "title": "New: LangChain templates – fastest way to build a production-ready LLM app",
+        "points": 137,
+        "num_comments": 69,
+        "created_at": "2023-11-01T11:36:00Z"
+      },
+      {
+        "objectID": "46386009",
+        "title": "Critical vulnerability in LangChain – CVE-2025-68664",
+        "points": 131,
+        "num_comments": 91,
+        "created_at": "2025-12-25T18:06:44Z"
+      },
+      {
+        "objectID": "43676084",
+        "title": "Quick Primer on MCP Using Ollama and LangChain",
+        "points": 131,
+        "num_comments": 20,
+        "created_at": "2025-04-13T21:43:36Z"
+      },
+      {
+        "objectID": "43434171",
+        "title": "LangManus: An Open-Source Manus Agent with LangChain + LangGraph",
+        "points": 127,
+        "num_comments": 14,
+        "created_at": "2025-03-21T11:01:00Z"
+      },
+      {
+        "objectID": "34422122",
+        "title": "GPT-3.5 and Wolfram Alpha via LangChain",
+        "points": 107,
+        "num_comments": 8,
+        "created_at": "2023-01-18T01:16:33Z"
+      },
+      {
+        "objectID": "41709436",
+        "title": "Comparing our Rust-based indexing and querying pipeline to Langchain",
+        "points": 103,
+        "num_comments": 65,
+        "created_at": "2024-10-01T15:09:23Z"
+      },
+      {
+        "objectID": "37116353",
+        "title": "LangChain Agent Simulation – Multi-Player Dungeons and Dragons",
+        "points": 95,
+        "num_comments": 29,
+        "created_at": "2023-08-14T01:15:22Z"
+      },
+      {
+        "objectID": "35987413",
+        "title": "Using LangChainJS and Cloudflare Workers together",
+        "points": 83,
+        "num_comments": 17,
+        "created_at": "2023-05-18T13:16:25Z"
+      },
+      {
+        "objectID": "36669866",
+        "title": "Hacking LangChain for fun and profit",
+        "points": 79,
+        "num_comments": 24,
+        "created_at": "2023-07-10T17:37:02Z"
+      },
+      {
+        "objectID": "39480398",
+        "title": "Gemma, Ollama and LangChainGo",
+        "points": 79,
+        "num_comments": 22,
+        "created_at": "2024-02-23T13:37:25Z"
+      },
+      {
+        "objectID": "38435182",
+        "title": "Agency: Pure Go LangChain Alternative",
+        "points": 77,
+        "num_comments": 39,
+        "created_at": "2023-11-27T17:28:16Z"
+      },
+      {
+        "objectID": "36757334",
+        "title": "The Future of LLMs with Arthur, MosaicML, LangChain, and Weaviate [video]",
+        "points": 64,
+        "num_comments": 2,
+        "created_at": "2023-07-17T12:19:36Z"
+      },
+      {
+        "objectID": "36920423",
+        "title": "Show HN: LLMFlows – LangChain alternative for explicit and transparent apps",
+        "points": 49,
+        "num_comments": 22,
+        "created_at": "2023-07-29T14:03:50Z"
+      },
+      {
+        "objectID": "43274435",
+        "title": "Agno: Agent framework 10,000x faster than LangChain",
+        "points": 47,
+        "num_comments": 23,
+        "created_at": "2025-03-05T23:54:16Z"
+      },
+      {
+        "objectID": "44348415",
+        "title": "Structured Output with LangChain and Llamafile",
+        "points": 46,
+        "num_comments": 20,
+        "created_at": "2025-06-22T17:01:10Z"
+      },
+      {
+        "objectID": "41192069",
+        "title": "LangChain Is a Black Box",
+        "points": 42,
+        "num_comments": 28,
+        "created_at": "2024-08-08T14:42:46Z"
+      },
+      {
+        "objectID": "38126764",
+        "title": "What's the difference between LangChain, llama indexand others like autollm?",
+        "points": 31,
+        "num_comments": 13,
+        "created_at": "2023-11-03T10:41:26Z"
+      },
+      {
+        "objectID": "39122463",
+        "title": "WikiChat – a chatbot built on real-time Wikipedia updates, LangChain and AstraDB",
+        "points": 31,
+        "num_comments": 2,
+        "created_at": "2024-01-24T20:51:01Z"
+      },
+      {
+        "objectID": "36439927",
+        "title": "LangChain Guide to Get Started",
+        "points": 29,
+        "num_comments": 8,
+        "created_at": "2023-06-22T22:18:56Z"
+      },
+      {
+        "objectID": "37078753",
+        "title": "LangchainJs Real-World Examples",
+        "points": 27,
+        "num_comments": 8,
+        "created_at": "2023-08-10T17:05:43Z"
+      },
+      {
+        "objectID": "44837601",
+        "title": "Open SWE by LangChain",
+        "points": 24,
+        "num_comments": 12,
+        "created_at": "2025-08-08T14:43:01Z"
+      },
+      {
+        "objectID": "39385000",
+        "title": "Langchain $25M Series A, Langsmith GA",
+        "points": 22,
+        "num_comments": 3,
+        "created_at": "2024-02-15T16:49:51Z"
+      },
+      {
+        "objectID": "34623033",
+        "title": "Show HN: 1-Click Deploy for Langchain LLM Agents from Google Colab to Web-App",
+        "points": 21,
+        "num_comments": 0,
+        "created_at": "2023-02-02T06:45:47Z"
+      },
+      {
+        "objectID": "37573742",
+        "title": "Show HN: Dialoqbase – open-source chatbot creation platform (LangChain wrapper)",
+        "points": 20,
+        "num_comments": 3,
+        "created_at": "2023-09-19T18:02:52Z"
+      },
+      {
+        "objectID": "37664914",
+        "title": "Timescale Vector (PostgreSQL) now available in LangChain",
+        "points": 20,
+        "num_comments": 0,
+        "created_at": "2023-09-26T19:49:44Z"
+      },
+      {
+        "objectID": "37420836",
+        "title": "Is LangChain Pointless?",
+        "points": 18,
+        "num_comments": 2,
+        "created_at": "2023-09-07T15:53:41Z"
+      },
+      {
+        "objectID": "38630922",
+        "title": "We built a Taylor Swift chatbot using AstraDB, Cohere, LangChain and Vercel AI",
+        "points": 18,
+        "num_comments": 1,
+        "created_at": "2023-12-13T17:36:05Z"
+      },
+      {
+        "objectID": "38475745",
+        "title": "langchaingo – LangChain in Idiomatic Go",
+        "points": 17,
+        "num_comments": 2,
+        "created_at": "2023-11-30T16:51:36Z"
+      },
+      {
+        "objectID": "36167298",
+        "title": "Show HN: Tutor-GPT – A LangChain application for tutoring",
+        "points": 15,
+        "num_comments": 2,
+        "created_at": "2023-06-02T16:32:55Z"
+      }
+    ],
+    "langchain": [
+      {
+        "objectID": "40739982",
+        "title": "Why we no longer use LangChain for building our AI agents",
+        "points": 480,
+        "num_comments": 297,
+        "created_at": "2024-06-20T15:41:56Z"
+      },
+      {
+        "objectID": "36645575",
+        "title": "Langchain Is Pointless",
+        "points": 386,
+        "num_comments": 178,
+        "created_at": "2023-07-08T15:56:19Z"
+      },
+      {
+        "objectID": "34422627",
+        "title": "LangChain: Build AI apps with LLMs through composability",
+        "points": 372,
+        "num_comments": 76,
+        "created_at": "2023-01-18T02:16:13Z"
+      },
+      {
+        "objectID": "36725982",
+        "title": "The Problem with LangChain",
+        "points": 268,
+        "num_comments": 92,
+        "created_at": "2023-07-14T16:11:09Z"
+      },
+      {
+        "objectID": "35820931",
+        "title": "Re-implementing LangChain in 100 lines of code",
+        "points": 252,
+        "num_comments": 83,
+        "created_at": "2023-05-04T19:33:12Z"
+      },
+      {
+        "objectID": "35442483",
+        "title": "LangChain Announces 10M Seed Round",
+        "points": 235,
+        "num_comments": 167,
+        "created_at": "2023-04-04T16:48:00Z"
+      },
+      {
+        "objectID": "37050532",
+        "title": "Show HN: Chat with your data using LangChain, Pinecone, and Airbyte",
+        "points": 220,
+        "num_comments": 59,
+        "created_at": "2023-08-08T15:32:13Z"
+      },
+      {
+        "objectID": "35301943",
+        "title": "Retrieval in LangChain",
+        "points": 212,
+        "num_comments": 69,
+        "created_at": "2023-03-25T12:21:39Z"
+      },
+      {
+        "objectID": "36775475",
+        "title": "AutoChain, lightweight and testable alternative to LangChain",
+        "points": 211,
+        "num_comments": 36,
+        "created_at": "2023-07-18T16:47:53Z"
+      },
+      {
+        "objectID": "35859344",
+        "title": "RasaGPT: First headless LLM chatbot built on top of Rasa, Langchain and FastAPI",
+        "points": 179,
+        "num_comments": 111,
+        "created_at": "2023-05-08T08:31:37Z"
+      },
+      {
+        "objectID": "36001465",
+        "title": "LangChain: The Missing Manual",
+        "points": 164,
+        "num_comments": 43,
+        "created_at": "2023-05-19T13:07:41Z"
+      },
+      {
+        "objectID": "38096958",
+        "title": "New: LangChain templates – fastest way to build a production-ready LLM app",
+        "points": 137,
+        "num_comments": 69,
+        "created_at": "2023-11-01T11:36:00Z"
+      },
+      {
+        "objectID": "46386009",
+        "title": "Critical vulnerability in LangChain – CVE-2025-68664",
+        "points": 131,
+        "num_comments": 91,
+        "created_at": "2025-12-25T18:06:44Z"
+      },
+      {
+        "objectID": "43676084",
+        "title": "Quick Primer on MCP Using Ollama and LangChain",
+        "points": 131,
+        "num_comments": 20,
+        "created_at": "2025-04-13T21:43:36Z"
+      },
+      {
+        "objectID": "43434171",
+        "title": "LangManus: An Open-Source Manus Agent with LangChain + LangGraph",
+        "points": 127,
+        "num_comments": 14,
+        "created_at": "2025-03-21T11:01:00Z"
+      },
+      {
+        "objectID": "34422122",
+        "title": "GPT-3.5 and Wolfram Alpha via LangChain",
+        "points": 107,
+        "num_comments": 8,
+        "created_at": "2023-01-18T01:16:33Z"
+      },
+      {
+        "objectID": "41709436",
+        "title": "Comparing our Rust-based indexing and querying pipeline to Langchain",
+        "points": 103,
+        "num_comments": 65,
+        "created_at": "2024-10-01T15:09:23Z"
+      },
+      {
+        "objectID": "37116353",
+        "title": "LangChain Agent Simulation – Multi-Player Dungeons and Dragons",
+        "points": 95,
+        "num_comments": 29,
+        "created_at": "2023-08-14T01:15:22Z"
+      },
+      {
+        "objectID": "35987413",
+        "title": "Using LangChainJS and Cloudflare Workers together",
+        "points": 83,
+        "num_comments": 17,
+        "created_at": "2023-05-18T13:16:25Z"
+      },
+      {
+        "objectID": "36669866",
+        "title": "Hacking LangChain for fun and profit",
+        "points": 79,
+        "num_comments": 24,
+        "created_at": "2023-07-10T17:37:02Z"
+      },
+      {
+        "objectID": "39480398",
+        "title": "Gemma, Ollama and LangChainGo",
+        "points": 79,
+        "num_comments": 22,
+        "created_at": "2024-02-23T13:37:25Z"
+      },
+      {
+        "objectID": "38435182",
+        "title": "Agency: Pure Go LangChain Alternative",
+        "points": 77,
+        "num_comments": 39,
+        "created_at": "2023-11-27T17:28:16Z"
+      },
+      {
+        "objectID": "36757334",
+        "title": "The Future of LLMs with Arthur, MosaicML, LangChain, and Weaviate [video]",
+        "points": 64,
+        "num_comments": 2,
+        "created_at": "2023-07-17T12:19:36Z"
+      },
+      {
+        "objectID": "36920423",
+        "title": "Show HN: LLMFlows – LangChain alternative for explicit and transparent apps",
+        "points": 49,
+        "num_comments": 22,
+        "created_at": "2023-07-29T14:03:50Z"
+      },
+      {
+        "objectID": "43274435",
+        "title": "Agno: Agent framework 10,000x faster than LangChain",
+        "points": 47,
+        "num_comments": 23,
+        "created_at": "2025-03-05T23:54:16Z"
+      },
+      {
+        "objectID": "44348415",
+        "title": "Structured Output with LangChain and Llamafile",
+        "points": 46,
+        "num_comments": 20,
+        "created_at": "2025-06-22T17:01:10Z"
+      },
+      {
+        "objectID": "41192069",
+        "title": "LangChain Is a Black Box",
+        "points": 42,
+        "num_comments": 28,
+        "created_at": "2024-08-08T14:42:46Z"
+      },
+      {
+        "objectID": "38126764",
+        "title": "What's the difference between LangChain, llama indexand others like autollm?",
+        "points": 31,
+        "num_comments": 13,
+        "created_at": "2023-11-03T10:41:26Z"
+      },
+      {
+        "objectID": "39122463",
+        "title": "WikiChat – a chatbot built on real-time Wikipedia updates, LangChain and AstraDB",
+        "points": 31,
+        "num_comments": 2,
+        "created_at": "2024-01-24T20:51:01Z"
+      },
+      {
+        "objectID": "36439927",
+        "title": "LangChain Guide to Get Started",
+        "points": 29,
+        "num_comments": 8,
+        "created_at": "2023-06-22T22:18:56Z"
+      },
+      {
+        "objectID": "37078753",
+        "title": "LangchainJs Real-World Examples",
+        "points": 27,
+        "num_comments": 8,
+        "created_at": "2023-08-10T17:05:43Z"
+      },
+      {
+        "objectID": "44837601",
+        "title": "Open SWE by LangChain",
+        "points": 24,
+        "num_comments": 12,
+        "created_at": "2025-08-08T14:43:01Z"
+      },
+      {
+        "objectID": "39385000",
+        "title": "Langchain $25M Series A, Langsmith GA",
+        "points": 22,
+        "num_comments": 3,
+        "created_at": "2024-02-15T16:49:51Z"
+      },
+      {
+        "objectID": "34623033",
+        "title": "Show HN: 1-Click Deploy for Langchain LLM Agents from Google Colab to Web-App",
+        "points": 21,
+        "num_comments": 0,
+        "created_at": "2023-02-02T06:45:47Z"
+      },
+      {
+        "objectID": "37573742",
+        "title": "Show HN: Dialoqbase – open-source chatbot creation platform (LangChain wrapper)",
+        "points": 20,
+        "num_comments": 3,
+        "created_at": "2023-09-19T18:02:52Z"
+      },
+      {
+        "objectID": "37664914",
+        "title": "Timescale Vector (PostgreSQL) now available in LangChain",
+        "points": 20,
+        "num_comments": 0,
+        "created_at": "2023-09-26T19:49:44Z"
+      },
+      {
+        "objectID": "37420836",
+        "title": "Is LangChain Pointless?",
+        "points": 18,
+        "num_comments": 2,
+        "created_at": "2023-09-07T15:53:41Z"
+      },
+      {
+        "objectID": "38630922",
+        "title": "We built a Taylor Swift chatbot using AstraDB, Cohere, LangChain and Vercel AI",
+        "points": 18,
+        "num_comments": 1,
+        "created_at": "2023-12-13T17:36:05Z"
+      },
+      {
+        "objectID": "38475745",
+        "title": "langchaingo – LangChain in Idiomatic Go",
+        "points": 17,
+        "num_comments": 2,
+        "created_at": "2023-11-30T16:51:36Z"
+      },
+      {
+        "objectID": "36167298",
+        "title": "Show HN: Tutor-GPT – A LangChain application for tutoring",
+        "points": 15,
+        "num_comments": 2,
+        "created_at": "2023-06-02T16:32:55Z"
+      }
+    ]
+  }
+}

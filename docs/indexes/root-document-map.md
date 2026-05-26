@@ -8,6 +8,7 @@ Root only keeps entry points, legal/release files, and compatibility files still
 |---|---|
 | `AGENTS.md` | ops |
 | `CLAUDE.md` | ops |
+| `CLOUD.md` | ops |
 | `CODE_OF_CONDUCT.md` | release/legal |
 | `CONTENT_INDEX.md` | ops |
 | `CONTRIBUTING.md` | release/legal |

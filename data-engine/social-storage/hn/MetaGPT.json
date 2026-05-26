@@ -1,0 +1,330 @@
+{
+  "project": "MetaGPT",
+  "repo": "geekan/MetaGPT",
+  "collected_at": "2026-05-22T12:18:53.411530+00:00",
+  "total_hits": 40,
+  "results": {
+    "MetaGPT": [
+      {
+        "objectID": "37076125",
+        "title": "MetaGPT: Meta Programming for Multi-Agent Collaborative Framework",
+        "points": 152,
+        "num_comments": 82,
+        "author": "Anon84",
+        "created_at": "2023-08-10T13:48:39Z"
+      },
+      {
+        "objectID": "37053201",
+        "title": "MetaGPT: The Multi-Agent Framework",
+        "points": 4,
+        "num_comments": 1,
+        "author": "jpdus",
+        "created_at": "2023-08-08T18:11:58Z"
+      },
+      {
+        "objectID": "36588622",
+        "title": "MetaGPT：Open-Source Framework for Innovative AI-Powered Applications",
+        "points": 3,
+        "num_comments": 2,
+        "author": "metagpt",
+        "created_at": "2023-07-04T16:13:18Z"
+      },
+      {
+        "objectID": "36988677",
+        "title": "MetaGPT: Meta Programming for Multi-Agent Collaborative Framework",
+        "points": 3,
+        "num_comments": 0,
+        "author": "lindman",
+        "created_at": "2023-08-03T17:11:40Z"
+      },
+      {
+        "objectID": "37109586",
+        "title": "Ask HN: Success stories for Multi-Agent GPT frameworks like MetaGPT, GPTEngineer",
+        "points": 2,
+        "num_comments": 0,
+        "author": "kken",
+        "created_at": "2023-08-13T12:59:37Z"
+      },
+      {
+        "objectID": "37031520",
+        "title": "MetaGPT – A LLM powered simulation of software dev company",
+        "points": 2,
+        "num_comments": 0,
+        "author": "enoch2090",
+        "created_at": "2023-08-07T07:47:02Z"
+      },
+      {
+        "objectID": "42003949",
+        "title": "MetaGPT Open-Sources SELA: AutoML System Achieving 75% Win Rate Against AIDE",
+        "points": 1,
+        "num_comments": 0,
+        "author": "suzyc",
+        "created_at": "2024-10-31T06:14:13Z"
+      },
+      {
+        "objectID": "39028462",
+        "title": "MetaGPT Selected for Oral Presentation at ICLR 2024",
+        "points": 1,
+        "num_comments": 0,
+        "author": "metagpt",
+        "created_at": "2024-01-17T14:49:36Z"
+      },
+      {
+        "objectID": "38070126",
+        "title": "MetaGPT's AI agents play a Werewolf game",
+        "points": 1,
+        "num_comments": 0,
+        "author": "metagpt",
+        "created_at": "2023-10-30T14:50:37Z"
+      },
+      {
+        "objectID": "36596115",
+        "title": "MetaGPT: Given One Line Requirement, Return PRD, Design, Tasks, Repo",
+        "points": 1,
+        "num_comments": 0,
+        "author": "metagpt",
+        "created_at": "2023-07-05T06:10:58Z"
+      },
+      {
+        "objectID": "35690855",
+        "title": "Show HN: Build GPT-powered apps with just GPT4 prompting",
+        "points": 22,
+        "num_comments": 5,
+        "author": "abi",
+        "created_at": "2023-04-24T17:51:05Z"
+      },
+      {
+        "objectID": "47388873",
+        "title": "We saw how 30 AI agent projects handle authorization-93% use unscoped API keys",
+        "points": 1,
+        "num_comments": 2,
+        "author": "mishrasanjeev",
+        "created_at": "2026-03-15T16:19:37Z"
+      },
+      {
+        "objectID": "39531251",
+        "title": "Ask HN: Curious about Open-Source AI Agent Frameworks – Seeking Insights",
+        "points": 1,
+        "num_comments": 0,
+        "author": "diefunction",
+        "created_at": "2024-02-27T22:48:47Z"
+      },
+      {
+        "objectID": "37911643",
+        "title": "Ask HN: How can ChatGPT be effectively utilized in the work",
+        "points": 1,
+        "num_comments": 0,
+        "author": "SimFG",
+        "created_at": "2023-10-17T07:23:04Z"
+      },
+      {
+        "objectID": "41850232",
+        "title": "Show HN: Aflow achieves 96.2% on HumanEval at 4.55% of GPT-4's cost",
+        "points": 1,
+        "num_comments": 0,
+        "author": "metagpt",
+        "created_at": "2024-10-15T16:26:06Z"
+      },
+      {
+        "objectID": "39693312",
+        "title": "Show HN: Data Interpreter: An LLM Agent for Data Science",
+        "points": 2,
+        "num_comments": 0,
+        "author": "metagpt",
+        "created_at": "2024-03-13T16:10:46Z"
+      },
+      {
+        "objectID": "1494800",
+        "title": "scale.metaoptimize - A StackOverflow-like site about high scalability and NoSQL",
+        "points": 74,
+        "num_comments": 22,
+        "author": "alextp",
+        "created_at": "2010-07-07T17:32:26Z"
+      },
+      {
+        "objectID": "1482529",
+        "title": "Did StackOverFlow just lose it to MetaOptimize? And is it good or bad?",
+        "points": 73,
+        "num_comments": 31,
+        "author": "bravura",
+        "created_at": "2010-07-02T22:09:16Z"
+      },
+      {
+        "objectID": "1588679",
+        "title": "MetaOptimize: PyLucene 3.0 in 60 seconds - Tutorial sample code for the 3.0 API",
+        "points": 29,
+        "num_comments": 0,
+        "author": "bravura",
+        "created_at": "2010-08-09T17:37:17Z"
+      },
+      {
+        "objectID": "36815124",
+        "title": "MeatGPT",
+        "points": 4,
+        "num_comments": 1,
+        "author": "bookofjoe",
+        "created_at": "2023-07-21T15:41:31Z"
+      },
+      {
+        "objectID": "1492956",
+        "title": "MetaOptimize: Stack Overflow for Data Geeks",
+        "points": 3,
+        "num_comments": 0,
+        "author": "th0ma5",
+        "created_at": "2010-07-07T01:08:13Z"
+      },
+      {
+        "objectID": "36044006",
+        "title": "Show HN: MeatGPT",
+        "points": 2,
+        "num_comments": 0,
+        "author": "rpastuszak",
+        "created_at": "2023-05-23T13:33:15Z"
+      },
+      {
+        "objectID": "7061718",
+        "title": "MetaOptimize Q+A - machine learning, natural language processing...",
+        "points": 1,
+        "num_comments": 0,
+        "author": "msvan",
+        "created_at": "2014-01-15T04:44:37Z"
+      },
+      {
+        "objectID": "17297215",
+        "title": "Metahash has released #MetaGate",
+        "points": 1,
+        "num_comments": 0,
+        "author": "supertest",
+        "created_at": "2018-06-12T19:39:58Z"
+      },
+      {
+        "objectID": "1839611",
+        "title": "Offer HN: Advice from PhD on NLP, machine learning, and data monetization",
+        "points": 112,
+        "num_comments": 63,
+        "author": "bravura",
+        "created_at": "2010-10-27T17:37:34Z"
+      },
+      {
+        "objectID": "1804261",
+        "title": "Show HN: Hacker News, automagically organized",
+        "points": 274,
+        "num_comments": 36,
+        "author": "bravura",
+        "created_at": "2010-10-18T17:09:31Z"
+      },
+      {
+        "objectID": "4672577",
+        "title": "Free Textbooks on Machine Learning",
+        "points": 179,
+        "num_comments": 12,
+        "author": "pkuhad",
+        "created_at": "2012-10-19T07:01:51Z"
+      },
+      {
+        "objectID": "1475746",
+        "title": "Stack overflow knockoff for machine learning, NLP, AI, ...",
+        "points": 152,
+        "num_comments": 30,
+        "author": "finin",
+        "created_at": "2010-06-30T18:44:58Z"
+      },
+      {
+        "objectID": "1736675",
+        "title": "Good, freely-available textbooks in machine learning",
+        "points": 133,
+        "num_comments": 33,
+        "author": "alextp",
+        "created_at": "2010-09-28T18:21:54Z"
+      },
+      {
+        "objectID": "1875593",
+        "title": "NLP Challenge: Find semantically related terms over a large vocabulary (1M)?",
+        "points": 89,
+        "num_comments": 35,
+        "author": "bravura",
+        "created_at": "2010-11-06T01:26:13Z"
+      },
+      {
+        "objectID": "2697234",
+        "title": "Good Machine Learning Blogs",
+        "points": 80,
+        "num_comments": 1,
+        "author": "helwr",
+        "created_at": "2011-06-26T02:39:32Z"
+      },
+      {
+        "objectID": "527911",
+        "title": "Fast deserialization in Python",
+        "points": 19,
+        "num_comments": 3,
+        "author": "bravura",
+        "created_at": "2009-03-23T02:54:42Z"
+      },
+      {
+        "objectID": "1010533",
+        "title": "Why can’t you pickle generators in Python? A pattern for saving training state",
+        "points": 17,
+        "num_comments": 6,
+        "author": "bravura",
+        "created_at": "2009-12-22T19:21:52Z"
+      },
+      {
+        "objectID": "1695070",
+        "title": "Information Organization: A case study in music recommendations",
+        "points": 16,
+        "num_comments": 2,
+        "author": "bravura",
+        "created_at": "2010-09-15T17:32:15Z"
+      },
+      {
+        "objectID": "1617859",
+        "title": "KEA Keyphrase Extraction as an XML-RPC service (code release)",
+        "points": 13,
+        "num_comments": 0,
+        "author": "bravura",
+        "created_at": "2010-08-19T16:50:43Z"
+      },
+      {
+        "objectID": "2599839",
+        "title": "Discussion 2.0: Personalization",
+        "points": 12,
+        "num_comments": 4,
+        "author": "bravura",
+        "created_at": "2011-05-30T16:58:08Z"
+      },
+      {
+        "objectID": "1184981",
+        "title": "Code maintainability, and the joy of outsourcing",
+        "points": 12,
+        "num_comments": 4,
+        "author": "bravura",
+        "created_at": "2010-03-11T21:27:54Z"
+      },
+      {
+        "objectID": "1181385",
+        "title": "Lean Startup, and The Stooges",
+        "points": 11,
+        "num_comments": 0,
+        "author": "bravura",
+        "created_at": "2010-03-10T17:14:05Z"
+      },
+      {
+        "objectID": "1503007",
+        "title": "Most influential ideas in machine learning 1995 - 2005",
+        "points": 8,
+        "num_comments": 0,
+        "author": "helwr",
+        "created_at": "2010-07-10T04:04:34Z"
+      },
+      {
+        "objectID": "1483346",
+        "title": "Good Freely Available Textbooks on Machine Learning",
+        "points": 7,
+        "num_comments": 0,
+        "author": "helwr",
+        "created_at": "2010-07-03T05:32:20Z"
+      }
+    ]
+  }
+}

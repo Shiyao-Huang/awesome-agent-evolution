@@ -1,0 +1,110 @@
+{
+  "project": "GoClaw",
+  "repo": "nextlevelbuilder/goclaw",
+  "collected_at": "2026-05-22T12:46:56.423660+00:00",
+  "total_hits": 14,
+  "results": {
+    "GoClaw": [
+      {
+        "objectID": "47214664",
+        "title": "Goclaw: A Go Port of OpenClaw",
+        "points": 5,
+        "num_comments": 0,
+        "created_at": "2026-03-02T06:51:45Z"
+      },
+      {
+        "objectID": "47134694",
+        "title": "Show HN: Built an AI tool that routes tasks to agents, humans. Am I crazy?",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-02-24T09:04:34Z"
+      },
+      {
+        "objectID": "47009251",
+        "title": "An app to manage your OpenClaw on the go",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-02-13T23:26:18Z"
+      },
+      {
+        "objectID": "24823596",
+        "title": "A distributed web crawler infrastructure implemented using Go",
+        "points": 2,
+        "num_comments": 2,
+        "created_at": "2020-10-19T05:40:27Z"
+      },
+      {
+        "objectID": "47437814",
+        "title": "NoClaw – Mac Mini Assistant the Unix Way",
+        "points": 3,
+        "num_comments": 2,
+        "created_at": "2026-03-19T11:53:50Z"
+      },
+      {
+        "objectID": "47238974",
+        "title": "Show HN: Noclaw",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-03-03T21:04:30Z"
+      },
+      {
+        "objectID": "47440832",
+        "title": "Show HN: UnixClaw – A Mac Mini AI assistant in one line of bash, no OpenClaw",
+        "points": 3,
+        "num_comments": 3,
+        "created_at": "2026-03-19T15:10:58Z"
+      }
+    ],
+    "goclaw": [
+      {
+        "objectID": "47214664",
+        "title": "Goclaw: A Go Port of OpenClaw",
+        "points": 5,
+        "num_comments": 0,
+        "created_at": "2026-03-02T06:51:45Z"
+      },
+      {
+        "objectID": "47134694",
+        "title": "Show HN: Built an AI tool that routes tasks to agents, humans. Am I crazy?",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-02-24T09:04:34Z"
+      },
+      {
+        "objectID": "47009251",
+        "title": "An app to manage your OpenClaw on the go",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-02-13T23:26:18Z"
+      },
+      {
+        "objectID": "24823596",
+        "title": "A distributed web crawler infrastructure implemented using Go",
+        "points": 2,
+        "num_comments": 2,
+        "created_at": "2020-10-19T05:40:27Z"
+      },
+      {
+        "objectID": "47437814",
+        "title": "NoClaw – Mac Mini Assistant the Unix Way",
+        "points": 3,
+        "num_comments": 2,
+        "created_at": "2026-03-19T11:53:50Z"
+      },
+      {
+        "objectID": "47238974",
+        "title": "Show HN: Noclaw",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-03-03T21:04:30Z"
+      },
+      {
+        "objectID": "47440832",
+        "title": "Show HN: UnixClaw – A Mac Mini AI assistant in one line of bash, no OpenClaw",
+        "points": 3,
+        "num_comments": 3,
+        "created_at": "2026-03-19T15:10:58Z"
+      }
+    ]
+  }
+}

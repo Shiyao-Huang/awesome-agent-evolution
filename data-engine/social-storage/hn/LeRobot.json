@@ -1,0 +1,652 @@
+{
+  "project": "LeRobot",
+  "repo": "huggingface/lerobot",
+  "collected_at": "2026-05-22T12:20:54.681244+00:00",
+  "total_hits": 80,
+  "results": {
+    "LeRobot": [
+      {
+        "objectID": "40272045",
+        "title": "LeRobot: Machine Learning for Real-World Robotics in PyTorch",
+        "points": 27,
+        "num_comments": 0,
+        "author": "AdilZtn",
+        "created_at": "2024-05-06T07:17:59Z"
+      },
+      {
+        "objectID": "44993264",
+        "title": "Train robots with Pi0, Lerobot and human pose motion retargeting",
+        "points": 2,
+        "num_comments": 2,
+        "author": "Tycho87",
+        "created_at": "2025-08-23T04:52:32Z"
+      },
+      {
+        "objectID": "47315235",
+        "title": "LeRobot v0.5.0: Scaling Every Dimension",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ibobev",
+        "created_at": "2026-03-09T20:42:44Z"
+      },
+      {
+        "objectID": "47229546",
+        "title": "LeRobot: An Open-Source Library for End-to-End Robot Learning",
+        "points": 2,
+        "num_comments": 0,
+        "author": "nill0",
+        "created_at": "2026-03-03T08:02:50Z"
+      },
+      {
+        "objectID": "45005156",
+        "title": "LeRobot Brings Autonomy to Hobby Robots",
+        "points": 2,
+        "num_comments": 0,
+        "author": "lxm",
+        "created_at": "2025-08-24T15:48:27Z"
+      },
+      {
+        "objectID": "43763432",
+        "title": "LeRobot – Lowering the entry barrier to AI for robotics[video]",
+        "points": 2,
+        "num_comments": 0,
+        "author": "nill0",
+        "created_at": "2025-04-22T15:37:15Z"
+      },
+      {
+        "objectID": "41707246",
+        "title": "New LeRobot arm just dropped",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Tycho87",
+        "created_at": "2024-10-01T11:59:53Z"
+      },
+      {
+        "objectID": "15750054",
+        "title": "Nous avons testé le robot qui colorise les photos en un tweet",
+        "points": 2,
+        "num_comments": 0,
+        "author": "alexellisuk",
+        "created_at": "2017-11-21T18:06:52Z"
+      },
+      {
+        "objectID": "44181697",
+        "title": "LeRobot Worldwide Hackathon",
+        "points": 1,
+        "num_comments": 1,
+        "author": "cmatthieu",
+        "created_at": "2025-06-04T15:21:10Z"
+      },
+      {
+        "objectID": "45577435",
+        "title": "A toolkit for improving the quality of your LeRobot datasets",
+        "points": 1,
+        "num_comments": 0,
+        "author": "machinelearning",
+        "created_at": "2025-10-14T08:08:06Z"
+      },
+      {
+        "objectID": "45528369",
+        "title": "New HuggingFace LeRobot plugin hardware drivers",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ratsbane",
+        "created_at": "2025-10-09T14:40:30Z"
+      },
+      {
+        "objectID": "44970237",
+        "title": "Show HN: LeRobot Episode Scoring Tool",
+        "points": 1,
+        "num_comments": 0,
+        "author": "machinelearning",
+        "created_at": "2025-08-21T07:52:23Z"
+      },
+      {
+        "objectID": "44838098",
+        "title": "Lerobot Now on Pip Install",
+        "points": 1,
+        "num_comments": 0,
+        "author": "clmnt",
+        "created_at": "2025-08-08T15:21:52Z"
+      },
+      {
+        "objectID": "44240302",
+        "title": "Launch HN: Vassar Robotics (YC X25) – $219 robot arm that learns new skills",
+        "points": 580,
+        "num_comments": 219,
+        "author": "charleszyong",
+        "created_at": "2025-06-10T19:12:17Z"
+      },
+      {
+        "objectID": "45362914",
+        "title": "Launch HN: Flywheel (YC S25) – Waymo for Excavators",
+        "points": 103,
+        "num_comments": 78,
+        "author": "jashmota",
+        "created_at": "2025-09-24T16:48:27Z"
+      },
+      {
+        "objectID": "42714631",
+        "title": "Show HN: Federation of robots collaboratively train an object manipulation model",
+        "points": 7,
+        "num_comments": 0,
+        "author": "jafermarq",
+        "created_at": "2025-01-15T18:04:35Z"
+      },
+      {
+        "objectID": "43400676",
+        "title": "Show HN: My progress towards building a robotics training dataset",
+        "points": 2,
+        "num_comments": 2,
+        "author": "pablovelagomez",
+        "created_at": "2025-03-18T15:34:05Z"
+      },
+      {
+        "objectID": "43937635",
+        "title": "Show HN: Building a self collected multiview mocap studio for robot training",
+        "points": 2,
+        "num_comments": 1,
+        "author": "pablovelagomez",
+        "created_at": "2025-05-09T15:07:48Z"
+      },
+      {
+        "objectID": "44513751",
+        "title": "Show HN: EgoExo Forge: Data and Utilities Needed for Ego and Exo Human Data",
+        "points": 2,
+        "num_comments": 0,
+        "author": "pablovelagomez",
+        "created_at": "2025-07-09T19:11:58Z"
+      },
+      {
+        "objectID": "46851191",
+        "title": "Show HN: Democlean – Score robot demos by motion quality",
+        "points": 1,
+        "num_comments": 0,
+        "author": "dipampaul17",
+        "created_at": "2026-02-02T01:10:35Z"
+      },
+      {
+        "objectID": "43758427",
+        "title": "Show HN: I made a dual-arm robot for ninja folding T-shirts",
+        "points": 1,
+        "num_comments": 0,
+        "author": "freemanjiang",
+        "created_at": "2025-04-22T02:01:42Z"
+      },
+      {
+        "objectID": "43474064",
+        "title": "Show HN: Camera Calibration Using VGGT",
+        "points": 1,
+        "num_comments": 0,
+        "author": "pablovelagomez",
+        "created_at": "2025-03-25T18:00:49Z"
+      },
+      {
+        "objectID": "43335206",
+        "title": "Open-sourcing 5,000hrs of self-driving dataset",
+        "points": 63,
+        "num_comments": 11,
+        "author": "SnYaak",
+        "created_at": "2025-03-11T17:53:48Z"
+      },
+      {
+        "objectID": "43874564",
+        "title": "Show HN: Kinematic Hand Skeleton Optimization in Jax",
+        "points": 20,
+        "num_comments": 0,
+        "author": "pablovelagomez",
+        "created_at": "2025-05-02T21:03:52Z"
+      },
+      {
+        "objectID": "45719371",
+        "title": "Show HN: Automate robot data quality improvement",
+        "points": 9,
+        "num_comments": 2,
+        "author": "machinelearning",
+        "created_at": "2025-10-27T10:34:35Z"
+      },
+      {
+        "objectID": "44274576",
+        "title": "Voice-controlled agentic robot with pi0",
+        "points": 6,
+        "num_comments": 1,
+        "author": "danqing0703",
+        "created_at": "2025-06-14T06:17:33Z"
+      },
+      {
+        "objectID": "47685172",
+        "title": "The Open-Source Recipe for Teaching a Robot to Fold Your Clothes",
+        "points": 3,
+        "num_comments": 0,
+        "author": "dsr12",
+        "created_at": "2026-04-08T04:18:39Z"
+      },
+      {
+        "objectID": "43829665",
+        "title": "HuggingFace S101 $100 3D Printed Robotic Arm",
+        "points": 2,
+        "num_comments": 0,
+        "author": "linsomniac",
+        "created_at": "2025-04-29T07:37:33Z"
+      },
+      {
+        "objectID": "41310335",
+        "title": "Show HN: Tutorial to get started with end-to-end robotics",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Tamazy",
+        "created_at": "2024-08-21T13:55:12Z"
+      },
+      {
+        "objectID": "10520639",
+        "title": "24/192 music downloads make no sense",
+        "points": 325,
+        "num_comments": 228,
+        "author": "LERobot",
+        "created_at": "2015-11-06T17:31:34Z"
+      },
+      {
+        "objectID": "8909067",
+        "title": "“Don't fear AI” Kurzweil",
+        "points": 5,
+        "num_comments": 0,
+        "author": "LERobot",
+        "created_at": "2015-01-18T21:50:51Z"
+      },
+      {
+        "objectID": "8079553",
+        "title": "We hackers have to build the energy internet",
+        "points": 2,
+        "num_comments": 2,
+        "author": "LERobot",
+        "created_at": "2014-07-24T13:56:34Z"
+      },
+      {
+        "objectID": "11280722",
+        "title": "Ask HN: What are you using to read scientific papers?",
+        "points": 2,
+        "num_comments": 1,
+        "author": "LERobot",
+        "created_at": "2016-03-14T02:34:33Z"
+      },
+      {
+        "objectID": "8909985",
+        "title": "A mario who learns how to play",
+        "points": 2,
+        "num_comments": 0,
+        "author": "LERobot",
+        "created_at": "2015-01-19T02:33:46Z"
+      },
+      {
+        "objectID": "8665728",
+        "title": "Nice “continuity” alternative for android",
+        "points": 2,
+        "num_comments": 0,
+        "author": "LERobot",
+        "created_at": "2014-11-27T02:39:18Z"
+      },
+      {
+        "objectID": "8649377",
+        "title": "Handy cheatsheet I found. credit: adam-p",
+        "points": 2,
+        "num_comments": 0,
+        "author": "LERobot",
+        "created_at": "2014-11-23T18:10:24Z"
+      },
+      {
+        "objectID": "9830959",
+        "title": "Sprout: a desktop 3D scanner made by HP",
+        "points": 1,
+        "num_comments": 0,
+        "author": "LERobot",
+        "created_at": "2015-07-04T18:01:53Z"
+      },
+      {
+        "objectID": "9272301",
+        "title": "A text base interstellar game",
+        "points": 1,
+        "num_comments": 0,
+        "author": "LERobot",
+        "created_at": "2015-03-26T19:06:54Z"
+      },
+      {
+        "objectID": "1811019",
+        "title": "Machine Made of Lego Builds Anything You Want — Out of Lego",
+        "points": 1,
+        "num_comments": 2,
+        "author": "ph0rque",
+        "created_at": "2010-10-20T13:10:06Z"
+      },
+      {
+        "objectID": "38056338",
+        "title": "Volkswagen plans job cuts, further launch delays at software unit",
+        "points": 8,
+        "num_comments": 1,
+        "author": "lxrobotics",
+        "created_at": "2023-10-29T06:51:19Z"
+      }
+    ],
+    "lerobot": [
+      {
+        "objectID": "40272045",
+        "title": "LeRobot: Machine Learning for Real-World Robotics in PyTorch",
+        "points": 27,
+        "num_comments": 0,
+        "author": "AdilZtn",
+        "created_at": "2024-05-06T07:17:59Z"
+      },
+      {
+        "objectID": "44993264",
+        "title": "Train robots with Pi0, Lerobot and human pose motion retargeting",
+        "points": 2,
+        "num_comments": 2,
+        "author": "Tycho87",
+        "created_at": "2025-08-23T04:52:32Z"
+      },
+      {
+        "objectID": "47315235",
+        "title": "LeRobot v0.5.0: Scaling Every Dimension",
+        "points": 2,
+        "num_comments": 0,
+        "author": "ibobev",
+        "created_at": "2026-03-09T20:42:44Z"
+      },
+      {
+        "objectID": "47229546",
+        "title": "LeRobot: An Open-Source Library for End-to-End Robot Learning",
+        "points": 2,
+        "num_comments": 0,
+        "author": "nill0",
+        "created_at": "2026-03-03T08:02:50Z"
+      },
+      {
+        "objectID": "45005156",
+        "title": "LeRobot Brings Autonomy to Hobby Robots",
+        "points": 2,
+        "num_comments": 0,
+        "author": "lxm",
+        "created_at": "2025-08-24T15:48:27Z"
+      },
+      {
+        "objectID": "43763432",
+        "title": "LeRobot – Lowering the entry barrier to AI for robotics[video]",
+        "points": 2,
+        "num_comments": 0,
+        "author": "nill0",
+        "created_at": "2025-04-22T15:37:15Z"
+      },
+      {
+        "objectID": "41707246",
+        "title": "New LeRobot arm just dropped",
+        "points": 2,
+        "num_comments": 0,
+        "author": "Tycho87",
+        "created_at": "2024-10-01T11:59:53Z"
+      },
+      {
+        "objectID": "15750054",
+        "title": "Nous avons testé le robot qui colorise les photos en un tweet",
+        "points": 2,
+        "num_comments": 0,
+        "author": "alexellisuk",
+        "created_at": "2017-11-21T18:06:52Z"
+      },
+      {
+        "objectID": "44181697",
+        "title": "LeRobot Worldwide Hackathon",
+        "points": 1,
+        "num_comments": 1,
+        "author": "cmatthieu",
+        "created_at": "2025-06-04T15:21:10Z"
+      },
+      {
+        "objectID": "45577435",
+        "title": "A toolkit for improving the quality of your LeRobot datasets",
+        "points": 1,
+        "num_comments": 0,
+        "author": "machinelearning",
+        "created_at": "2025-10-14T08:08:06Z"
+      },
+      {
+        "objectID": "45528369",
+        "title": "New HuggingFace LeRobot plugin hardware drivers",
+        "points": 1,
+        "num_comments": 0,
+        "author": "ratsbane",
+        "created_at": "2025-10-09T14:40:30Z"
+      },
+      {
+        "objectID": "44970237",
+        "title": "Show HN: LeRobot Episode Scoring Tool",
+        "points": 1,
+        "num_comments": 0,
+        "author": "machinelearning",
+        "created_at": "2025-08-21T07:52:23Z"
+      },
+      {
+        "objectID": "44838098",
+        "title": "Lerobot Now on Pip Install",
+        "points": 1,
+        "num_comments": 0,
+        "author": "clmnt",
+        "created_at": "2025-08-08T15:21:52Z"
+      },
+      {
+        "objectID": "44240302",
+        "title": "Launch HN: Vassar Robotics (YC X25) – $219 robot arm that learns new skills",
+        "points": 580,
+        "num_comments": 219,
+        "author": "charleszyong",
+        "created_at": "2025-06-10T19:12:17Z"
+      },
+      {
+        "objectID": "45362914",
+        "title": "Launch HN: Flywheel (YC S25) – Waymo for Excavators",
+        "points": 103,
+        "num_comments": 78,
+        "author": "jashmota",
+        "created_at": "2025-09-24T16:48:27Z"
+      },
+      {
+        "objectID": "42714631",
+        "title": "Show HN: Federation of robots collaboratively train an object manipulation model",
+        "points": 7,
+        "num_comments": 0,
+        "author": "jafermarq",
+        "created_at": "2025-01-15T18:04:35Z"
+      },
+      {
+        "objectID": "43400676",
+        "title": "Show HN: My progress towards building a robotics training dataset",
+        "points": 2,
+        "num_comments": 2,
+        "author": "pablovelagomez",
+        "created_at": "2025-03-18T15:34:05Z"
+      },
+      {
+        "objectID": "43937635",
+        "title": "Show HN: Building a self collected multiview mocap studio for robot training",
+        "points": 2,
+        "num_comments": 1,
+        "author": "pablovelagomez",
+        "created_at": "2025-05-09T15:07:48Z"
+      },
+      {
+        "objectID": "44513751",
+        "title": "Show HN: EgoExo Forge: Data and Utilities Needed for Ego and Exo Human Data",
+        "points": 2,
+        "num_comments": 0,
+        "author": "pablovelagomez",
+        "created_at": "2025-07-09T19:11:58Z"
+      },
+      {
+        "objectID": "46851191",
+        "title": "Show HN: Democlean – Score robot demos by motion quality",
+        "points": 1,
+        "num_comments": 0,
+        "author": "dipampaul17",
+        "created_at": "2026-02-02T01:10:35Z"
+      },
+      {
+        "objectID": "43758427",
+        "title": "Show HN: I made a dual-arm robot for ninja folding T-shirts",
+        "points": 1,
+        "num_comments": 0,
+        "author": "freemanjiang",
+        "created_at": "2025-04-22T02:01:42Z"
+      },
+      {
+        "objectID": "43474064",
+        "title": "Show HN: Camera Calibration Using VGGT",
+        "points": 1,
+        "num_comments": 0,
+        "author": "pablovelagomez",
+        "created_at": "2025-03-25T18:00:49Z"
+      },
+      {
+        "objectID": "43335206",
+        "title": "Open-sourcing 5,000hrs of self-driving dataset",
+        "points": 63,
+        "num_comments": 11,
+        "author": "SnYaak",
+        "created_at": "2025-03-11T17:53:48Z"
+      },
+      {
+        "objectID": "43874564",
+        "title": "Show HN: Kinematic Hand Skeleton Optimization in Jax",
+        "points": 20,
+        "num_comments": 0,
+        "author": "pablovelagomez",
+        "created_at": "2025-05-02T21:03:52Z"
+      },
+      {
+        "objectID": "45719371",
+        "title": "Show HN: Automate robot data quality improvement",
+        "points": 9,
+        "num_comments": 2,
+        "author": "machinelearning",
+        "created_at": "2025-10-27T10:34:35Z"
+      },
+      {
+        "objectID": "44274576",
+        "title": "Voice-controlled agentic robot with pi0",
+        "points": 6,
+        "num_comments": 1,
+        "author": "danqing0703",
+        "created_at": "2025-06-14T06:17:33Z"
+      },
+      {
+        "objectID": "47685172",
+        "title": "The Open-Source Recipe for Teaching a Robot to Fold Your Clothes",
+        "points": 3,
+        "num_comments": 0,
+        "author": "dsr12",
+        "created_at": "2026-04-08T04:18:39Z"
+      },
+      {
+        "objectID": "43829665",
+        "title": "HuggingFace S101 $100 3D Printed Robotic Arm",
+        "points": 2,
+        "num_comments": 0,
+        "author": "linsomniac",
+        "created_at": "2025-04-29T07:37:33Z"
+      },
+      {
+        "objectID": "41310335",
+        "title": "Show HN: Tutorial to get started with end-to-end robotics",
+        "points": 1,
+        "num_comments": 0,
+        "author": "Tamazy",
+        "created_at": "2024-08-21T13:55:12Z"
+      },
+      {
+        "objectID": "10520639",
+        "title": "24/192 music downloads make no sense",
+        "points": 325,
+        "num_comments": 228,
+        "author": "LERobot",
+        "created_at": "2015-11-06T17:31:34Z"
+      },
+      {
+        "objectID": "8909067",
+        "title": "“Don't fear AI” Kurzweil",
+        "points": 5,
+        "num_comments": 0,
+        "author": "LERobot",
+        "created_at": "2015-01-18T21:50:51Z"
+      },
+      {
+        "objectID": "8079553",
+        "title": "We hackers have to build the energy internet",
+        "points": 2,
+        "num_comments": 2,
+        "author": "LERobot",
+        "created_at": "2014-07-24T13:56:34Z"
+      },
+      {
+        "objectID": "11280722",
+        "title": "Ask HN: What are you using to read scientific papers?",
+        "points": 2,
+        "num_comments": 1,
+        "author": "LERobot",
+        "created_at": "2016-03-14T02:34:33Z"
+      },
+      {
+        "objectID": "8909985",
+        "title": "A mario who learns how to play",
+        "points": 2,
+        "num_comments": 0,
+        "author": "LERobot",
+        "created_at": "2015-01-19T02:33:46Z"
+      },
+      {
+        "objectID": "8665728",
+        "title": "Nice “continuity” alternative for android",
+        "points": 2,
+        "num_comments": 0,
+        "author": "LERobot",
+        "created_at": "2014-11-27T02:39:18Z"
+      },
+      {
+        "objectID": "8649377",
+        "title": "Handy cheatsheet I found. credit: adam-p",
+        "points": 2,
+        "num_comments": 0,
+        "author": "LERobot",
+        "created_at": "2014-11-23T18:10:24Z"
+      },
+      {
+        "objectID": "9830959",
+        "title": "Sprout: a desktop 3D scanner made by HP",
+        "points": 1,
+        "num_comments": 0,
+        "author": "LERobot",
+        "created_at": "2015-07-04T18:01:53Z"
+      },
+      {
+        "objectID": "9272301",
+        "title": "A text base interstellar game",
+        "points": 1,
+        "num_comments": 0,
+        "author": "LERobot",
+        "created_at": "2015-03-26T19:06:54Z"
+      },
+      {
+        "objectID": "1811019",
+        "title": "Machine Made of Lego Builds Anything You Want — Out of Lego",
+        "points": 1,
+        "num_comments": 2,
+        "author": "ph0rque",
+        "created_at": "2010-10-20T13:10:06Z"
+      },
+      {
+        "objectID": "38056338",
+        "title": "Volkswagen plans job cuts, further launch delays at software unit",
+        "points": 8,
+        "num_comments": 1,
+        "author": "lxrobotics",
+        "created_at": "2023-10-29T06:51:19Z"
+      }
+    ]
+  }
+}

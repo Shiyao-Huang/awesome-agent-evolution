@@ -1,0 +1,572 @@
+{
+  "project": "PydanticAI",
+  "repo": "pydantic/pydantic-ai",
+  "collected_at": "2026-05-22T12:41:00.981148+00:00",
+  "total_hits": 80,
+  "results": {
+    "PydanticAI": [
+      {
+        "objectID": "45055439",
+        "title": "Building your own CLI coding agent with Pydantic-AI",
+        "points": 197,
+        "num_comments": 40,
+        "created_at": "2025-08-28T18:34:29Z"
+      },
+      {
+        "objectID": "45243320",
+        "title": "Show HN: AI-powered web service combining FastAPI, Pydantic-AI, and MCP servers",
+        "points": 46,
+        "num_comments": 24,
+        "created_at": "2025-09-14T21:17:56Z"
+      },
+      {
+        "objectID": "45595074",
+        "title": "HN Research Agent (Fenic and PydanticAI) with typed, citation-backed answers",
+        "points": 12,
+        "num_comments": 0,
+        "created_at": "2025-10-15T16:33:08Z"
+      },
+      {
+        "objectID": "42295320",
+        "title": "PydanticAI Agent: Framework to Use Pydantic with LLMs",
+        "points": 12,
+        "num_comments": 0,
+        "created_at": "2024-12-02T11:57:22Z"
+      },
+      {
+        "objectID": "46544231",
+        "title": "Show HN: Pydantic-AI-stream – Structured event streaming for pydantic-AI agents",
+        "points": 6,
+        "num_comments": 3,
+        "created_at": "2026-01-08T18:01:48Z"
+      },
+      {
+        "objectID": "42572948",
+        "title": "PydanticAI",
+        "points": 5,
+        "num_comments": 1,
+        "created_at": "2025-01-02T09:18:33Z"
+      },
+      {
+        "objectID": "45133837",
+        "title": "Pydantic AI reaches V1",
+        "points": 5,
+        "num_comments": 0,
+        "created_at": "2025-09-05T00:39:43Z"
+      },
+      {
+        "objectID": "46203615",
+        "title": "Pydantic-AI Deepagents",
+        "points": 4,
+        "num_comments": 2,
+        "created_at": "2025-12-09T11:17:30Z"
+      },
+      {
+        "objectID": "45225586",
+        "title": "Pydantic AI Durable Execution",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2025-09-12T19:15:12Z"
+      },
+      {
+        "objectID": "43227269",
+        "title": "PydanticAI",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2025-03-02T04:25:48Z"
+      },
+      {
+        "objectID": "42691419",
+        "title": "PydanticAI is a Python agent framework by the Pydantic Team",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2025-01-14T00:08:18Z"
+      },
+      {
+        "objectID": "46284775",
+        "title": "Deep Agent Framework, the Pydantic AI Way",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2025-12-16T04:27:32Z"
+      },
+      {
+        "objectID": "45145263",
+        "title": "Pydantic AI V1",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-09-06T00:17:56Z"
+      },
+      {
+        "objectID": "42680816",
+        "title": "AI Workflow Patterns with PydanticAI (based on Anthropic agents guide)",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-01-13T07:01:32Z"
+      },
+      {
+        "objectID": "42439739",
+        "title": "PydanticAI vs. LangChain: A Tale of Two AI Frameworks",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2024-12-17T09:15:27Z"
+      },
+      {
+        "objectID": "42325183",
+        "title": "Pydantic AI – Agent Framework / Shim to Use Pydantic with LLMs",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2024-12-05T05:13:46Z"
+      },
+      {
+        "objectID": "42311498",
+        "title": "Pydantic AI",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2024-12-03T21:12:00Z"
+      },
+      {
+        "objectID": "42307238",
+        "title": "PydanticAI",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2024-12-03T15:35:19Z"
+      },
+      {
+        "objectID": "42344943",
+        "title": "PydanticAI using Ollama (llama3.2) running locally",
+        "points": 2,
+        "num_comments": 3,
+        "created_at": "2024-12-06T21:56:08Z"
+      },
+      {
+        "objectID": "47137660",
+        "title": "Build your own custom AI CLI with Pydantic AI",
+        "points": 2,
+        "num_comments": 2,
+        "created_at": "2026-02-24T14:34:31Z"
+      },
+      {
+        "objectID": "46692495",
+        "title": "An Open Protocol Uniting LangGraph, CrewAI, and Pydantic AI Agents",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-01-20T15:02:53Z"
+      },
+      {
+        "objectID": "46250874",
+        "title": "PydanticAI-DeepAgents – Build powerful AI agents",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2025-12-13T00:52:47Z"
+      },
+      {
+        "objectID": "47465735",
+        "title": "Pydantic-Deep: Production Deep Agents for Pydantic AI – Vstorm",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-03-21T10:14:33Z"
+      },
+      {
+        "objectID": "47239546",
+        "title": "Turning 4,668 comments into AGENTS.md rules to automate Pydantic AI reviews",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-03-03T21:50:21Z"
+      },
+      {
+        "objectID": "46590751",
+        "title": "Show HN: Server for Pydantic-AI Agents",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-01-12T16:33:35Z"
+      },
+      {
+        "objectID": "46588608",
+        "title": "Show HN: I got tired of \"Reliability Spaghetti,\" so I monkeypatched PydanticAI",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-01-12T13:59:57Z"
+      },
+      {
+        "objectID": "45209479",
+        "title": "Pydantic AI Gateway",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-09-11T09:20:52Z"
+      },
+      {
+        "objectID": "45117874",
+        "title": "Build Better Agents in Java Than Python: Embabel vs. Pydantic AI",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-09-03T16:42:13Z"
+      },
+      {
+        "objectID": "42490162",
+        "title": "Building Effective Agents with Pydantic AI",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-12-22T23:40:33Z"
+      },
+      {
+        "objectID": "42343447",
+        "title": "PydanticAI: Model-Agnostic, Production-Ready Agent Framework for LLM",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-12-06T19:38:12Z"
+      },
+      {
+        "objectID": "46111230",
+        "title": "Pydantic-AI-production-ready-template",
+        "points": 1,
+        "num_comments": 2,
+        "created_at": "2025-12-01T18:42:45Z"
+      },
+      {
+        "objectID": "47361387",
+        "title": "Same Chat App, 4 Frameworks: Pydantic AI vs. LangChain vs. LangGraph vs. CrewAI",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-03-13T06:49:15Z"
+      },
+      {
+        "objectID": "46254477",
+        "title": "PydanticAI-DeepAgents – AI Agent Framework planning, filesystem, and subagents",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2025-12-13T13:48:08Z"
+      },
+      {
+        "objectID": "47947311",
+        "title": "Building AI Agents in Python with Pydantic AI",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-04-29T12:18:36Z"
+      },
+      {
+        "objectID": "47837272",
+        "title": "Hack Monty, Win $5k: Inside PydanticAI's Challenge",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-04-20T17:06:05Z"
+      },
+      {
+        "objectID": "47704585",
+        "title": "We orchestrate our internal AI agent (PydanticAI, Gemini, Jinja2 prompts)",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-04-09T14:56:07Z"
+      },
+      {
+        "objectID": "47394064",
+        "title": "VibeSDK: I ported all features of Pydantic AI to TypeScript in 5hrs",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-03-16T01:31:26Z"
+      },
+      {
+        "objectID": "45919374",
+        "title": "Pydantic AI Gateway: Open Beta",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-11-13T19:26:42Z"
+      },
+      {
+        "objectID": "44157675",
+        "title": "We Built an AI Data Team with Pydantic AI",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-06-02T11:24:05Z"
+      },
+      {
+        "objectID": "44117265",
+        "title": "Building a Data Team That Never Sleeps with Pydantic AI",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-05-28T15:45:29Z"
+      }
+    ],
+    "pydantic-ai": [
+      {
+        "objectID": "45055439",
+        "title": "Building your own CLI coding agent with Pydantic-AI",
+        "points": 197,
+        "num_comments": 40,
+        "created_at": "2025-08-28T18:34:29Z"
+      },
+      {
+        "objectID": "45243320",
+        "title": "Show HN: AI-powered web service combining FastAPI, Pydantic-AI, and MCP servers",
+        "points": 46,
+        "num_comments": 24,
+        "created_at": "2025-09-14T21:17:56Z"
+      },
+      {
+        "objectID": "45595074",
+        "title": "HN Research Agent (Fenic and PydanticAI) with typed, citation-backed answers",
+        "points": 12,
+        "num_comments": 0,
+        "created_at": "2025-10-15T16:33:08Z"
+      },
+      {
+        "objectID": "42295320",
+        "title": "PydanticAI Agent: Framework to Use Pydantic with LLMs",
+        "points": 12,
+        "num_comments": 0,
+        "created_at": "2024-12-02T11:57:22Z"
+      },
+      {
+        "objectID": "46544231",
+        "title": "Show HN: Pydantic-AI-stream – Structured event streaming for pydantic-AI agents",
+        "points": 6,
+        "num_comments": 3,
+        "created_at": "2026-01-08T18:01:48Z"
+      },
+      {
+        "objectID": "42572948",
+        "title": "PydanticAI",
+        "points": 5,
+        "num_comments": 1,
+        "created_at": "2025-01-02T09:18:33Z"
+      },
+      {
+        "objectID": "45133837",
+        "title": "Pydantic AI reaches V1",
+        "points": 5,
+        "num_comments": 0,
+        "created_at": "2025-09-05T00:39:43Z"
+      },
+      {
+        "objectID": "46203615",
+        "title": "Pydantic-AI Deepagents",
+        "points": 4,
+        "num_comments": 2,
+        "created_at": "2025-12-09T11:17:30Z"
+      },
+      {
+        "objectID": "45225586",
+        "title": "Pydantic AI Durable Execution",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2025-09-12T19:15:12Z"
+      },
+      {
+        "objectID": "43227269",
+        "title": "PydanticAI",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2025-03-02T04:25:48Z"
+      },
+      {
+        "objectID": "42691419",
+        "title": "PydanticAI is a Python agent framework by the Pydantic Team",
+        "points": 4,
+        "num_comments": 0,
+        "created_at": "2025-01-14T00:08:18Z"
+      },
+      {
+        "objectID": "46284775",
+        "title": "Deep Agent Framework, the Pydantic AI Way",
+        "points": 3,
+        "num_comments": 1,
+        "created_at": "2025-12-16T04:27:32Z"
+      },
+      {
+        "objectID": "45145263",
+        "title": "Pydantic AI V1",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-09-06T00:17:56Z"
+      },
+      {
+        "objectID": "42680816",
+        "title": "AI Workflow Patterns with PydanticAI (based on Anthropic agents guide)",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2025-01-13T07:01:32Z"
+      },
+      {
+        "objectID": "42439739",
+        "title": "PydanticAI vs. LangChain: A Tale of Two AI Frameworks",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2024-12-17T09:15:27Z"
+      },
+      {
+        "objectID": "42325183",
+        "title": "Pydantic AI – Agent Framework / Shim to Use Pydantic with LLMs",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2024-12-05T05:13:46Z"
+      },
+      {
+        "objectID": "42311498",
+        "title": "Pydantic AI",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2024-12-03T21:12:00Z"
+      },
+      {
+        "objectID": "42307238",
+        "title": "PydanticAI",
+        "points": 3,
+        "num_comments": 0,
+        "created_at": "2024-12-03T15:35:19Z"
+      },
+      {
+        "objectID": "42344943",
+        "title": "PydanticAI using Ollama (llama3.2) running locally",
+        "points": 2,
+        "num_comments": 3,
+        "created_at": "2024-12-06T21:56:08Z"
+      },
+      {
+        "objectID": "47137660",
+        "title": "Build your own custom AI CLI with Pydantic AI",
+        "points": 2,
+        "num_comments": 2,
+        "created_at": "2026-02-24T14:34:31Z"
+      },
+      {
+        "objectID": "46692495",
+        "title": "An Open Protocol Uniting LangGraph, CrewAI, and Pydantic AI Agents",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-01-20T15:02:53Z"
+      },
+      {
+        "objectID": "46250874",
+        "title": "PydanticAI-DeepAgents – Build powerful AI agents",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2025-12-13T00:52:47Z"
+      },
+      {
+        "objectID": "47465735",
+        "title": "Pydantic-Deep: Production Deep Agents for Pydantic AI – Vstorm",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-03-21T10:14:33Z"
+      },
+      {
+        "objectID": "47239546",
+        "title": "Turning 4,668 comments into AGENTS.md rules to automate Pydantic AI reviews",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-03-03T21:50:21Z"
+      },
+      {
+        "objectID": "46590751",
+        "title": "Show HN: Server for Pydantic-AI Agents",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-01-12T16:33:35Z"
+      },
+      {
+        "objectID": "46588608",
+        "title": "Show HN: I got tired of \"Reliability Spaghetti,\" so I monkeypatched PydanticAI",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2026-01-12T13:59:57Z"
+      },
+      {
+        "objectID": "45209479",
+        "title": "Pydantic AI Gateway",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-09-11T09:20:52Z"
+      },
+      {
+        "objectID": "45117874",
+        "title": "Build Better Agents in Java Than Python: Embabel vs. Pydantic AI",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-09-03T16:42:13Z"
+      },
+      {
+        "objectID": "42490162",
+        "title": "Building Effective Agents with Pydantic AI",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-12-22T23:40:33Z"
+      },
+      {
+        "objectID": "42343447",
+        "title": "PydanticAI: Model-Agnostic, Production-Ready Agent Framework for LLM",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2024-12-06T19:38:12Z"
+      },
+      {
+        "objectID": "46111230",
+        "title": "Pydantic-AI-production-ready-template",
+        "points": 1,
+        "num_comments": 2,
+        "created_at": "2025-12-01T18:42:45Z"
+      },
+      {
+        "objectID": "47361387",
+        "title": "Same Chat App, 4 Frameworks: Pydantic AI vs. LangChain vs. LangGraph vs. CrewAI",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2026-03-13T06:49:15Z"
+      },
+      {
+        "objectID": "46254477",
+        "title": "PydanticAI-DeepAgents – AI Agent Framework planning, filesystem, and subagents",
+        "points": 1,
+        "num_comments": 1,
+        "created_at": "2025-12-13T13:48:08Z"
+      },
+      {
+        "objectID": "47947311",
+        "title": "Building AI Agents in Python with Pydantic AI",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-04-29T12:18:36Z"
+      },
+      {
+        "objectID": "47837272",
+        "title": "Hack Monty, Win $5k: Inside PydanticAI's Challenge",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-04-20T17:06:05Z"
+      },
+      {
+        "objectID": "47704585",
+        "title": "We orchestrate our internal AI agent (PydanticAI, Gemini, Jinja2 prompts)",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-04-09T14:56:07Z"
+      },
+      {
+        "objectID": "47394064",
+        "title": "VibeSDK: I ported all features of Pydantic AI to TypeScript in 5hrs",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2026-03-16T01:31:26Z"
+      },
+      {
+        "objectID": "45919374",
+        "title": "Pydantic AI Gateway: Open Beta",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-11-13T19:26:42Z"
+      },
+      {
+        "objectID": "44157675",
+        "title": "We Built an AI Data Team with Pydantic AI",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-06-02T11:24:05Z"
+      },
+      {
+        "objectID": "44117265",
+        "title": "Building a Data Team That Never Sleeps with Pydantic AI",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-05-28T15:45:29Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "project": "CowAgent",
+  "repo": "zhayujie/CowAgent",
+  "collected_at": "2026-05-22T12:47:30.597464+00:00",
+  "total_hits": 7,
+  "results": {
+    "CowAgent": [
+      {
+        "objectID": "42810048",
+        "title": "CogAgent: Open-Source Alternative to OpenAI Operator Agent from China",
+        "points": 5,
+        "num_comments": 0,
+        "created_at": "2025-01-24T02:43:31Z"
+      },
+      {
+        "objectID": "38670281",
+        "title": "CogAgent-18B – visual-based GUI Agent capabilities",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2023-12-17T04:18:44Z"
+      },
+      {
+        "objectID": "45829766",
+        "title": "CoAgent = AI-container, RepoZipper = GitHub backups",
+        "points": 1,
+        "num_comments": 0,
+        "created_at": "2025-11-06T00:04:18Z"
+      },
+      {
+        "objectID": "47885131",
+        "title": "Harnesses Explained: The Inner and Outer Workings of the Coding Agent Harness",
+        "points": 6,
+        "num_comments": 4,
+        "created_at": "2026-04-24T03:26:02Z"
+      },
+      {
+        "objectID": "47691012",
+        "title": "The Landscape of Agentic Coding",
+        "points": 4,
+        "num_comments": 1,
+        "created_at": "2026-04-08T14:48:29Z"
+      },
+      {
+        "objectID": "47628991",
+        "title": "Spec-driven development isn't Waterfall in Markdown – here's what it is",
+        "points": 2,
+        "num_comments": 1,
+        "created_at": "2026-04-03T16:46:05Z"
+      },
+      {
+        "objectID": "44434996",
+        "title": "Building the Agent Economy Part1:A New Chapter in Human-Technology Collaboration",
+        "points": 2,
+        "num_comments": 0,
+        "created_at": "2025-07-01T15:37:42Z"
+      }
+    ]
+  }
+}

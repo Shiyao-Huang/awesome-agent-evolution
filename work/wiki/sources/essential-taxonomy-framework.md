@@ -1,3 +1,12 @@
+---
+title: Essential Taxonomy Framework
+type: source
+rank: A
+tags: [taxonomy, classification, 5d-framework, essential-taxonomy]
+sources: [work/research/essential-classification.md, survey/ch2-ch6]
+updated: 2026-05-26
+---
+
 # Essential Taxonomy Framework: 5D Classification for Self-Evolution
 
 > **Rebuilt**: 2026-05-26 (supervisor rebuild)

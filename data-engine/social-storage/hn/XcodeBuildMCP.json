@@ -1,0 +1,17 @@
+{
+  "project": "XcodeBuildMCP",
+  "repo": "getsentry/XcodeBuildMCP",
+  "collected_at": "2026-05-22T12:43:04.753987+00:00",
+  "total_hits": 1,
+  "results": {
+    "XcodeBuildMCP": [
+      {
+        "objectID": "47929375",
+        "title": "Show HN: AgentSwift – Open-source iOS builder agent",
+        "points": 63,
+        "num_comments": 10,
+        "created_at": "2026-04-28T01:14:31Z"
+      }
+    ]
+  }
+}
