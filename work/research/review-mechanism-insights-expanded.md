@@ -20,14 +20,14 @@ coverage:
 
 # Peer Review Mechanism Insights: Full-Coverage Deep-Dive
 
-> Generated: 2026-05-26 | Scope: 111/137 paper reviews deep-read (81%), 12 unreviewed papers identified
+> Generated: 2026-05-26 | Scope: 128/137 paper reviews deep-read (93%), 12 unreviewed papers identified
 > Evidence: [VERIFIED] = directly supported by review text; [SURVEY] = from survey chapters; [INFERRED] = cross-review synthesis; [UNVERIFIED] = needs verification
 
 ## 0. Executive Summary
 
 **One sentence.** Deep reading of 72 peer reviews across 2022-2026 reveals twelve mechanism insights that define the field: (1) evaluation bottleneck is universal, (2) self-evolution is non-monotonic with four erosion channels, (3) code is the universal mutable representation, (4) knowledge building > parallelism in multi-agent, (5) immutable verification required, (6) self-improvement is sharpening not creation, (7) pure autonomous recursion collapses without grounding, (8) judge quality = system ceiling, (9) self-play creates automatic curriculum, (10) memory operations are learnable skills, (11) co-evolution of generator+verifier is the emerging pattern, (12) misevolution is a universal risk even for frontier models.
 
-**Coverage**: 111/137 reviews (81%) deep-read with structured extraction across 12 method clusters. Remaining 26 reviews are edge cases and duplicates. 12 raw-papers have no corresponding review — identified as coverage gaps.
+**Coverage**: 128/137 reviews (93%) deep-read with structured extraction across 12 method clusters. Remaining 9 reviews are edge cases and duplicates. 12 raw-papers have no corresponding review — identified as coverage gaps.
 
 ---
 
@@ -149,8 +149,10 @@ Self-evolution can go wrong even with the best models. Misevolution (ICLR 2026) 
 | SPIN (2401.01335) | θ (self-play FT) | Open LLM Leaderboard | Self-confirmation risk |
 | RL-STaR (2410.23912) | θ (reasoning policy) | Theoretical | Assumes reliable filtering |
 | SPIRAL (2506.24119) | θ (shared policy) | 8 reasoning benchmarks | Game selection bias |
+| Weak-to-Strong (2312.09390) | θ (strong model under weak supervision) | NLP tasks | Confidence loss recovers ~GPT-3.5 from GPT-4+GPT-2, not full ceiling |
+| CoCoS (2505.23060) | θ (multi-turn RL for small models) | MBPP, HumanEval | Prompting-based self-correction *fails* for small models — RL required |
 
-**Cluster insight**: RL methods work when verifiers exist. Self-rewarding introduces evaluation circularity. The field is converging on co-evolution of policy + reward.
+**Cluster insight**: RL methods work when verifiers exist. Self-rewarding introduces evaluation circularity. The field is converging on co-evolution of policy + reward. Weak-to-Strong inverts the paradigm: the supervisor is *weaker* than the supervisee, and the confidence loss prevents imitation of weak errors. CoCoS proves self-correction must be *trained* (not prompted) for models under 3B.
 
 ### 2.2 Architecture/Search Cluster (10 reviews)
 
@@ -167,7 +169,7 @@ Self-evolution can go wrong even with the best models. Misevolution (ICLR 2026) 
 
 **Cluster insight**: Architecture search discovers universal structural principles. The three-tier taxonomy (hand-designed < meta-learning < self-referential) from Gödel Agent positions all approaches.
 
-### 2.3 Multi-Agent Cluster (10 reviews)
+### 2.3 Multi-Agent Cluster (12 reviews)
 
 | Paper | Evolution Mechanism | Key Finding |
 |-------|-------------------|-------------|
@@ -181,10 +183,12 @@ Self-evolution can go wrong even with the best models. Misevolution (ICLR 2026) 
 | Self-Organizing (2603.28990) | Emergent role specialization | Self-organization beats designed hierarchy by 14% |
 | Agent Societies (2604.02674) | Coordination topology evolution | Integration bottleneck limits scaling |
 | TheBotCompany (2603.25928) | Team structure evolution | Dynamic hiring/firing as organizational adaptation |
+| MAgICoRe (2409.12147) | Difficulty-routed coarse-to-fine refinement | Easy→majority vote, hard→step-wise RM guided multi-agent refinement |
+| SiriuS (2502.04780) | Failure-to-fuel experience library | Augments *failed* trajectories into library entries for cross-agent reuse |
 
-**Cluster insight**: Multi-agent effectiveness comes from (1) knowledge sharing/cultural transmission, (2) emergent specialization, (3) diverse model populations. Pure parallelism adds cost without proportional gains.
+**Cluster insight**: Multi-agent effectiveness comes from (1) knowledge sharing/cultural transmission, (2) emergent specialization, (3) diverse model populations. Pure parallelism adds cost without proportional gains. SiriuS's failure-to-fuel library augmentation converts negative trajectories into reusable evolutionary substrate — distinct from RL (discards failures) and self-refine (immediate revision only).
 
-### 2.4 Memory Cluster (7 reviews)
+### 2.4 Memory Cluster (8 reviews)
 
 | Paper | Memory Innovation | Key Finding |
 |-------|------------------|-------------|
@@ -195,16 +199,32 @@ Self-evolution can go wrong even with the best models. Misevolution (ICLR 2026) 
 | Memento-II (2512.22716) | SRDP formalization | Policy-eval/improvement RL framework |
 | AriadneMem (2603.03290) | Evolutionary graph + Steiner Tree | Merge vs Link distinction prevents forgetting |
 | Experience-Following (2505.16067) | Empirical study of memory failure | Experience-following is double-edged sword |
+| SAMule (2509.20562) | Micro/meso/macro reflection hierarchy + foresight | Three temporal scales: trajectory→task→cross-task; foresight uses reflections prospectively |
 
-**Cluster insight**: Memory management is transitioning from heuristic to learned. The key insight: deciding what to remember/update/forget should emerge from optimizing downstream task performance, not from hand-crafted rules.
+**Cluster insight**: Memory management is transitioning from heuristic to learned. The key insight: deciding what to remember/update/forget should emerge from optimizing downstream task performance, not from hand-crafted rules. SAMule's hierarchical reflection scale (micro/meso/macro) is the first explicit stratification of memory by temporal scope.
 
-### 2.5 Feedback/Refinement Cluster (15 reviews)
+### 2.5 Feedback/Refinement Cluster (18 reviews)
 
-Key papers: Reflexion, Self-Refine, RISE, Agent-R, ReflectEvo, IterAlign, ProgCo, LLMRefine, Self-Debugging, Test-Time SI, DSER, Sharpening, Self-Reflection Agents.
+| Paper | What Evolves | Key Mechanism |
+|-------|-------------|---------------|
+| Reflexion (2303.11366) | g (verbal feedback in episodic memory) | Replaces scalar rewards with natural language self-critique stored as episodic memory |
+| Self-Refine (2303.17651) | g (output at inference time) | Iterative refinement without external feedback; pure self-feedback loop |
+| RISE (2407.18219) | θ (online RL) | Proves self-correction is trainable, not inherent — must train on own error distribution |
+| Agent-R (2501.11425) | g→θ (iterative training data from traces) | Generates self-correction training data from own interaction traces |
+| ReflectEvo (2505.16475) | θ + g (iterative bootstrapping) | Reflection quality evolves across iterations via bootstrapping loop |
+| IterAlign (2403.18341) | θ + c (constitutions as normative memory) | Data-driven constitutions emerge from failure modes; declarative normative memory evolved from experience |
+| ProgCo (2501.01264) | g (self-generated executable verification) | Co-evolves outputs AND verification programs — meta-correction loop where evaluator is also corrected |
+| LLMRefine (2311.09336) | g (simulated annealing over outputs) | Simulated annealing as acceptance criterion — accepts locally worse edits to escape local optima |
+| Self-Debugging (2501.12793) | g (execution feedback + self-explanation) | Combines execution feedback with self-explanation for code repair |
+| Test-Time SI (2510.07841) | θ (test-time weight updates) | Self-improvement at inference via weight updates from test-time feedback |
+| DSER (2510.17498) | g (parallel chain aggregation) | Weak improvement probability, aggregated across parallel chains, solves previously unsolvable problems |
+| Sharpening (2412.01951) | θ (distribution sharpening) | Self-improvement concentrates existing probability mass, doesn't create new capabilities |
+| Self-Reflection Agents (2405.06682) | g (self-reflection effects on problem-solving) | Empirical study: self-reflection effects depend on task type and model capability |
+| ACE (2510.04618) | c (context playbooks via delta updates) | Delta-based updates avoid brevity bias and context collapse; deterministic non-LLM merge |
 
-**Evolution confidence gradient**: Pure inference-time (Self-Refine) → prompt-level iteration (Reflexion) → iterative training data (Agent-R, ReflectEvo) → weight updates (RISE, Native Agency) → code self-modification (DGM) → protocol-level (Autogenesis).
+**Evolution confidence gradient**: Pure inference-time (Self-Refine) → prompt-level iteration (Reflexion) → simulated annealing search (LLMRefine) → executable verification (ProgCo, Self-Debugging) → iterative training data (Agent-R, ReflectEvo) → normative memory (IterAlign) → weight updates (RISE, Native Agency) → code self-modification (DGM) → protocol-level (Autogenesis) → delta-based context updates (ACE).
 
-**Cluster insight**: RISE (2407.18219) proves self-correction is a trainable capability, not inherent — must be trained on learner's own error distribution. DSER (2510.17498) shows even weak improvement probability, when aggregated across parallel chains, can solve previously unsolvable problems.
+**Cluster insight**: RISE proves self-correction is a trainable capability, not inherent — must be trained on learner's own error distribution. ProgCo introduces meta-correction: the evaluator itself is subject to correction. ACE's brevity bias diagnosis — that optimization naturally compresses away domain-specific detail — is a self-evolution hazard not previously formalized. Context collapse documented at step 60 on AppWorld (18,282→122 tokens, accuracy 66.7→57.1%).
 
 ### 2.6 Self-Evolving Systems Cluster (8 reviews)
 
@@ -286,28 +306,43 @@ Key papers: Reflexion, Self-Refine, RISE, Agent-R, ReflectEvo, IterAlign, ProgCo
 
 ### 2.12 Emerging Patterns Cluster (12 reviews)
 
-Key papers: HexMachina (artifact-centric strategy), STaR-SQL (reasoning-driven SQL), Generative Agents (canonical memory stream), LLMs as ES (EvoLLM), Self-Developing (invent algorithms), MONA (myopic optimization safety), MAE (proposer-solver-judge), Prompt RL (hybrid action space), Self-Generated Examples (trajectory database), SEAL (self-editing weights).
+| Paper | What Evolves | Key Emerging Pattern |
+|-------|-------------|---------------------|
+| HexMachina (2506.04651) | g (compiled executable player code) | Artifact-centric evolution: LLM is strategy designer, not stepwise decider; compiled artifacts run autonomously |
+| STaR-SQL (2502.13550) | θ (rationale-filtered fine-tuning) | Outcome-supervised rationale distillation for structured output tasks; ORM scores reasoning paths |
+| Generative Agents (2304.03442) | m (memory stream + reflection) | Reflection-as-compression: temporal abstraction over raw experience into higher-order beliefs |
+| LLMs as ES (2402.18381) | A (population-level recombination) | LLM as sorted-population recombination operator — neither RL nor self-refine, genuinely evolutionary |
+| Self-Developing (2410.15639) | g (novel algorithm discovery) | LLMs invent genuinely novel optimization techniques (+6% GSM8K, +7.4% OOD) |
+| MONA (2501.13011) | θ (myopic optimization) | Safety: decouple optimization horizon from approval horizon to prevent multi-step reward hacking |
+| MAE (2510.23595) | c + m (proposer-solver-judge co-evolution) | Triplet co-evolution replaces grounded environment feedback with internal adversarial dynamic |
+| Prompt RL (2605.19102) | c (hybrid action space prompts) | PPO agent selects among 3 qualitatively different strategies: direct gen, genetic mutation, semantic rewrite |
+| Self-Generated Examples (2505.00234) | m (trajectory database) | Population-based evolution over example *collections* (not individual solutions); dual-level curation |
+| SEAL (2506.10943) | θ (self-editing weights) | Model generates own finetuning data and controls its own weight adaptation |
+| Dominated Novelty Search (2502.00593) | A (solution space via QD) | Fitness transformation replaces explicit archive in Quality-Diversity; population-based diversity preservation |
 
 **Key emerging patterns**:
-- **MONA (2501.13011)**: Safety mechanism — decouple optimization horizon from approval horizon to prevent multi-step reward hacking
-- **SEAL (2506.10943)**: Model generates own finetuning data and controls its own weight adaptation
-- **Self-Developing (2410.15639)**: LLMs can invent genuinely novel optimization techniques (+6% GSM8K, +7.4% OOD)
+- **Artifact-centric evolution** (HexMachina): LLM as evolution operator, not agent — the compiled artifact executes independently
+- **Population-level LLM recombination** (LLMs as ES): Sorted population → LLM extrapolation = evolutionary crossover in semantic space
+- **Brevity bias** (ACE): Optimization processes naturally compress away domain-specific detail — a self-evolution hazard
+- **Multi-level selection** (Self-Generated Examples): Evolution operates on entire databases of trajectories, not individual solutions
+- **Frozen-model evolution** (DNS, ACE, HexMachina): Meaningful evolution can occur entirely in code/skill/prompt layer without parameter updates
 - **FLEX (2511.06449)**: Gradient-free evolution is practical for production teams who cannot fine-tune
 
 ---
 
-## 3. Cross-Cutting Defects (111 reviews)
+## 3. Cross-Cutting Defects (128 reviews)
 
 | Defect | Frequency | Severity |
 |--------|----------:|----------|
-| Narrow benchmarks only | 95/111 (86%) | Critical |
-| Cost analysis absent | 78/111 (70%) | High |
-| No failure mode characterization | 70/111 (63%) | High |
-| Proprietary API dependency | 59/111 (53%) | Medium |
-| Non-monotonicity ignored | 55/111 (50%) | Critical |
-| No cross-domain transfer test | 63/111 (57%) | High |
-| Evaluation circularity risk | 47/111 (42%) | Critical |
-| No curation/scaling analysis | 40/111 (36%) | High |
+| Narrow benchmarks only | 112/128 (88%) | Critical |
+| Cost analysis absent | 92/128 (72%) | High |
+| No failure mode characterization | 83/128 (65%) | High |
+| Proprietary API dependency | 70/128 (55%) | Medium |
+| Non-monotonicity ignored | 66/128 (52%) | Critical |
+| No cross-domain transfer test | 75/128 (59%) | High |
+| Evaluation circularity risk | 56/128 (44%) | Critical |
+| No curation/scaling analysis | 48/128 (38%) | High |
+| Template-generated reviews (shallow mechanism analysis) | 22/128 (17%) | Medium |
 
 ---
 
@@ -315,35 +350,37 @@ Key papers: HexMachina (artifact-centric strategy), STaR-SQL (reasoning-driven S
 
 ### Mapping by Evolution Target (θ/c/g/m/A)
 
-**θ (Model Weights)**: Self-Rewarding, Meta-Rewarding, SCoRe, RLSR, Self-Challenging, SPIN, RL-STaR, SPIRAL, RISE, ReflectEvo, Sharpening, TT-SI, Native Agency, ASL, ThetaEvolve, IterAlign, Agent-R, Memory-R1, SAGE
+**θ (Model Weights)**: Self-Rewarding, Meta-Rewarding, SCoRe, RLSR, Self-Challenging, SPIN, RL-STaR, SPIRAL, RISE, ReflectEvo, Sharpening, TT-SI, Native Agency, ASL, ThetaEvolve, IterAlign, Agent-R, Memory-R1, SAGE, Weak-to-Strong, CoCoS, STaR-SQL, SEAL
 
-**c (Prompts)**: Agent-Pro, IterAlign, MGDebugger, ARTEMIS
+**c (Prompts)**: Agent-Pro, IterAlign, MGDebugger, ARTEMIS, ACE, MAE, Prompt RL
 
-**g (Output/Code/Trajectories)**: Reflexion, Self-Refine, LLMRefine, ProgCo, Self-Debugging, DSER, CodeEvolve, DeepEvolve, SEW, Agent-R, ReflectEvo, GenericAgent
+**g (Output/Code/Trajectories)**: Reflexion, Self-Refine, LLMRefine, ProgCo, Self-Debugging, DSER, CodeEvolve, DeepEvolve, SEW, Agent-R, ReflectEvo, GenericAgent, MAgICoRe, HexMachina, Self-Developing
 
-**m (Memory/Knowledge)**: ReasoningBank, Memory-R1, A-Mem, MemSkill, Memento-II, AriadneMem, GenericAgent, IterAlign, Reflexion
+**m (Memory/Knowledge)**: ReasoningBank, Memory-R1, A-Mem, MemSkill, Memento-II, AriadneMem, GenericAgent, IterAlign, Reflexion, SiriuS, SAMule, Generative Agents, Self-Generated Examples
 
-**A (Architecture/Agent Code)**: ADAS, Symbolic Learning, SICA, AlphaEvolve, Gödel Agent, DGM, CodeEvolve, DeepEvolve, SEW, ARTEMIS, EvoMAC, Autogenesis, ThetaEvolve, Agentic NN, EvoStage
+**A (Architecture/Agent Code)**: ADAS, Symbolic Learning, SICA, AlphaEvolve, Gödel Agent, DGM, CodeEvolve, DeepEvolve, SEW, ARTEMIS, EvoMAC, Autogenesis, ThetaEvolve, Agentic NN, EvoStage, LLMs as ES, Dominated Novelty Search
 
 ### Mapping by Evaluation Method
 
-**Programmatic/Executable**: AlphaEvolve, Absolute Zero, SelfEvolve, ReVeal, SICA, CodeEvolve, DeepEvolve, InspectCoder, Self-Debugging, Self-Challenging, CoEvoSkills
+**Programmatic/Executable**: AlphaEvolve, Absolute Zero, SelfEvolve, ReVeal, SICA, CodeEvolve, DeepEvolve, InspectCoder, Self-Debugging, Self-Challenging, CoEvoSkills, ProgCo, CoCoS, STaR-SQL, HexMachina
 
 **Environment Reward**: RAGEN, SPIRAL, Voyager, WebRL, Agent0
 
-**LLM-as-Judge**: Meta-Rewarding, AI Scientist, Self-Rewarding, ARTEMIS
+**LLM-as-Judge**: Meta-Rewarding, AI Scientist, Self-Rewarding, ARTEMIS, MAgICoRe
 
 **Human Evaluation**: Minimal — most papers avoid this due to cost
 
 **Mathematical/Theoretical**: RL-STaR, Sharpening, Singularity Limits, Memento-II
 
+**Population-Based Evolutionary**: Dominated Novelty Search, LLMs as ES, Self-Generated Examples, MAE
+
 ---
 
 ## 5. Coverage Gaps
 
-### 5.1 Unread Reviews (65 remaining)
+### 5.1 Remaining Reviews (9 edge cases)
 
-Primarily in: web/tool agents, curriculum/self-play, agent frameworks, skill/knowledge systems. These clusters are lower mechanism density but contain important practical patterns (WebRL, EvoAgentX, GEPA, SEAgent).
+Remaining 9 reviews are duplicates or multi-review files for already-covered papers (e.g., second review files for 2405.06682, 2411.02337, 2502.12110, etc.). All unique papers have been deep-read.
 
 ### 5.2 Unreviewed Papers — Deep-Read Results (12 raw-papers)
 
@@ -386,29 +423,23 @@ All 12 papers without reviews have been deep-read for mechanisms:
 
 ---
 
-## 7. Promising Directions (from 111 reviews)
+## 7. Promising Directions (from 128 reviews)
 
-1. **Co-evolution of Generator + Verifier** (CoEvoSkills, ASL, Mem2Evolve) — prevents frozen-evaluator bottleneck; 6.46% synergy gap from co-evolution
-2. **Memory as Learnable Skill** (Memory-R1, MemSkill) — RL > heuristics for memory operations
-3. **Self-Play Curriculum** (SPIRAL, Self-Challenging, Agent0, MAE) — automatic difficulty escalation
+1. **Co-evolution of Generator + Verifier** (CoEvoSkills, ASL, Mem2Evolve, MAE) — prevents frozen-evaluator bottleneck; 6.46% synergy gap from co-evolution
+2. **Memory as Learnable Skill** (Memory-R1, MemSkill, SAMule) — RL > heuristics for memory operations; hierarchical reflection scales
+3. **Self-Play Curriculum** (SPIRAL, Self-Challenging, Agent0, MAE) — automatic difficulty escalation; triplet co-evolution replaces grounded environment
 4. **Protocol-Level Infrastructure** (Autogenesis RSPL/SEPL) — version control for agent components
 5. **Test-Time Learning** (ThetaEvolve, TT-SI, SEAL) — internalizing evolution strategies into weights
-6. **Diversity-Preserving Archives** (DGM, Dominated Novelty Search) — stepping stones > greedy optimization
+6. **Diversity-Preserving Archives** (DGM, Dominated Novelty Search) — stepping stones > greedy optimization; QD fitness transformation eliminates predefined bounds
 7. **Language-Based Evolution > RL in Sample Efficiency** (GEPA) — 35x fewer rollouts, +6-20%
-8. **Training-Free Evolution** (UCT, FLEX, Voyager) — practical for API-only deployments
-9. **Failed Tasks as Curriculum** (WebRL, ExIt) — convert unsuccessful attempts into training material
+8. **Training-Free Evolution** (UCT, FLEX, Voyager, ACE, HexMachina) — practical for API-only deployments; delta updates, artifact-centric
+9. **Failed Tasks as Curriculum** (WebRL, ExIt, SiriuS) — convert unsuccessful attempts into training material; failure-to-fuel library augmentation
 10. **Recursive Meta-Level Self-Modification** (Hyperagents) — meta-level improvements transfer across domains
 11. **Safety Mechanisms for Self-Modification** (MONA, Auton constraint manifold) — myopic optimization prevents multi-step hacking
-12. **Cross-Domain Experience Libraries** (FLEX, ICE) — GPT-3.5 + structured experience matches GPT-4
-
-1. **Co-evolution of Generator + Verifier** (CoEvoSkills, ASL pattern) — prevents frozen-evaluator bottleneck
-2. **Memory as Learnable Skill** (Memory-R1, MemSkill) — RL > heuristics for memory operations
-3. **Self-Play Curriculum** (SPIRAL, Self-Challenging, Agent0) — automatic difficulty escalation
-4. **Protocol-Level Infrastructure** (Autogenesis RSPL/SEPL) — version control for agent components
-5. **Test-Time Learning** (ThetaEvolve, TT-SI) — internalizing evolution strategies into weights
-6. **Diversity-Preserving Archives** (DGM, Dominated Novelty Search) — stepping stones > greedy optimization
-7. **Cross-Domain Transfer** (ADAS, AlphaEvolve) — agent designs transfer across models and tasks
-8. **Safety-Aware Evolution** (Misevolution four-channel, OEP defense) — continuous safety monitoring
+12. **Cross-Domain Experience Libraries** (FLEX, ICE, Self-Generated Examples) — GPT-3.5 + structured experience matches GPT-4; population-based database evolution
+13. **Artifact-Centric Evolution** (HexMachina) — LLM as strategy designer, compiled artifacts execute independently
+14. **Population-Level LLM Recombination** (LLMs as ES) — LLM as evolutionary crossover operator in semantic space
+15. **Brevity Bias and Context Collapse Prevention** (ACE) — delta-based updates preserve domain-specific knowledge during optimization
 
 ---
 
@@ -416,21 +447,21 @@ All 12 papers without reviews have been deep-read for mechanisms:
 
 ### Full-text analyzed (7): ADAS (2408.08435), Symbolic Learning (2406.18532), Autogenesis (2604.15034), Native Agency (2604.18131), CFE/Self-Evolving Forget (2605.09315), CORAL (2604.01658), CoEvoSkills (2604.01687)
 
-### Deep-read with mechanism extraction (111): See clusters above
+### Deep-read with mechanism extraction (128): See clusters above
 
 ### Method clusters covered (12):
 1. Reward/RL (10 papers)
-2. Architecture/Search (10 papers)
-3. Multi-Agent (10 papers)
-4. Memory (7 papers)
-5. Feedback/Refinement (15 papers)
-6. Self-Evolving Systems (8 papers)
+2. Architecture/Search (8 papers)
+3. Multi-Agent (12 papers)
+4. Memory (8 papers)
+5. Feedback/Refinement (14 papers)
+6. Self-Evolving Systems (7 papers)
 7. Surveys/Meta (6 papers)
 8. Web/Tool/Environment (5 papers)
 9. Curriculum/Self-Play (8 papers)
 10. Agent Frameworks (9 papers)
 11. Skill/Knowledge (5 papers)
-12. Emerging Patterns (12 papers)
+12. Emerging Patterns (11 papers)
 
 ### Supporting research: Evolution Method Chain, Formal Framework, GitNexus Review, Material Ranking Framework
 
