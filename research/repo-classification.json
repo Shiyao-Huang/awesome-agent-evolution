@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T22:00:12+08:00",
+  "generated_at": "2026-05-28T04:00:48+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -1425,6 +1425,21 @@
       "content_timestamp": "unknown",
       "evidence": "tool/module/memory/prompt/coding signal",
       "description": "The Metacognitive Integrated Dual-Cycle Architecture (MIDCA)"
+    },
+    {
+      "repo": "coleam00/Archon",
+      "url": "https://github.com/coleam00/Archon",
+      "stars": "21900",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evaluation",
+      "stack": "TypeScript/Bun/YAML/Workflow Engine",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 21.9k stars, 3.3k forks, 1,449 commits, MIT license, and README claims around deterministic workflow gates for coding agents.",
+      "description": "Archon is an open-source harness builder for AI coding that turns development processes into deterministic, reusable workflows."
     },
     {
       "repo": "ComposioHQ/awesome-claude-skills",
@@ -3542,6 +3557,21 @@
       "description": "SciAgents"
     },
     {
+      "repo": "langchain-ai/deepagents",
+      "url": "https://github.com/langchain-ai/deepagents",
+      "stars": "23400",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evaluation",
+      "stack": "Python/TypeScript/LangGraph/LangSmith",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 23.4k stars, 3.3k forks, 1,986 commits, MIT license, and README positioning as an open source agent harness with sub-agents, memory, and production-ready evaluation pathways.",
+      "description": "Deep Agents is a batteries-included agent harness that bundles planning, context management, skills, and persistent memory for long-horizon execution."
+    },
+    {
       "repo": "langchain-ai/langchain",
       "url": "https://github.com/langchain-ai/langchain",
       "stars": "137",
@@ -4395,6 +4425,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web-observed GitHub and Skills Hub evidence showed about 1.9k stars, 131 forks, 5 commits, Python language signal, professional-grade agent skill authoring guidance, progressive disclosure rules, validation workflow, skillgrade linkage and Skills Hub upstream sync on 2026-05-24; metadata is web-observed, not API-verified.",
       "description": "Skills Best Practices packages agent skill authoring into a reusable methodology: trigger-optimized metadata, lean SKILL.md files, deterministic scripts, references/assets and LLM-based validation checks."
+    },
+    {
+      "repo": "microsoft/SkillOpt",
+      "url": "https://github.com/microsoft/SkillOpt",
+      "stars": "1100",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "Python/HTML/Skill Training Loops",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 1.1k stars, 100 forks, 50 commits, MIT license, and README emphasis on trajectory-driven skill optimization without changing base model weights.",
+      "description": "SkillOpt trains reusable natural-language skills for frozen LLM agents through validation-gated iterative optimization loops."
     },
     {
       "repo": "microsoft/skills",
@@ -5537,6 +5582,21 @@
       "description": "TPAMI 2026 | This repository collects awesome survey, resource, and paper for lifelong learning LLM agents"
     },
     {
+      "repo": "QuantaAlpha/GitTaskBench",
+      "url": "https://github.com/QuantaAlpha/GitTaskBench",
+      "stars": "255",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/Jupyter/C++/Benchmark Tooling",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 255 stars, 20 forks, 84 commits, README benchmark framing for repo-level code-agent evaluation, and no explicit repository license marker in the navigation snapshot.",
+      "description": "GitTaskBench is a repository-level benchmark for real-world coding-agent tasks from repository understanding through implementation and task delivery."
+    },
+    {
       "repo": "QuantaAlpha/QuantaAlpha",
       "url": "https://github.com/QuantaAlpha/QuantaAlpha",
       "stars": "702",
@@ -5910,6 +5970,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "[ICLR 2026] Official repository for the paper \"LaSeR: Reinforcement Learning with Last-Token Self-Rewarding\""
+    },
+    {
+      "repo": "RyanAlberts/best-of-Agent-Harnesses",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
+      "stars": "45",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "evaluation",
+      "stack": "Python/Shell/Generated Best-of Lists",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 45 stars, 4 forks, 47 commits, CC-BY-SA-4.0 license, and README framing as a ranked list of agent harnesses updated weekly.",
+      "description": "best-of-Agent-Harnesses curates and ranks 100+ agent harness projects to provide a comparative map of harness engineering options."
     },
     {
       "repo": "sakanaai/ai-scientist",
@@ -6855,6 +6930,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Research works from Tencent AI Lab regarding self-evolving agents"
+    },
+    {
+      "repo": "Tencent/TencentDB-Agent-Memory",
+      "url": "https://github.com/Tencent/TencentDB-Agent-Memory",
+      "stars": "4300",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "TypeScript/Python/OpenClaw Plugin",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 4.3k stars, 354 forks, 74 commits, license badge indicating MIT, and README claims of a 4-tier local memory pipeline with OpenClaw benchmark improvements.",
+      "description": "TencentDB Agent Memory provides a local-first long-term memory pipeline for AI agents with plugin integration and benchmarked efficiency gains."
     },
     {
       "repo": "terryfyl/openclaw-evolution-framework",

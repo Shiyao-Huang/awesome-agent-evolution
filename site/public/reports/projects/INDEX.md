@@ -287,6 +287,13 @@
 | AI Agent Benchmark | [murataslan1/ai-agent-benchmark](https://github.com/murataslan1/ai-agent-benchmark) | Multi-Domain Agent Benchmark Pack | [projects/267-ai-agent-benchmark-multi-domain-pack.md](267-ai-agent-benchmark-multi-domain-pack.md) |
 | holaOS | [holaboss-ai/holaOS](https://github.com/holaboss-ai/holaOS) | Long-Horizon Agent Environment | [projects/268-holaos-long-horizon-agent-environment.md](268-holaos-long-horizon-agent-environment.md) |
 
+| Deep Agents | [langchain-ai/deepagents](https://github.com/langchain-ai/deepagents) | Batteries-included Agent Harness Runtime | [projects/269-deepagents-batteries-included-harness.md](269-deepagents-batteries-included-harness.md) |
+| Archon | [coleam00/Archon](https://github.com/coleam00/Archon) | Deterministic AI Coding Harness Builder | [projects/270-archon-ai-coding-harness-builder.md](270-archon-ai-coding-harness-builder.md) |
+| Best of Agent Harnesses | [RyanAlberts/best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses) | Ranked Agent Harness Landscape Index | [projects/271-best-of-agent-harnesses-ranked-index.md](271-best-of-agent-harnesses-ranked-index.md) |
+| SkillOpt | [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | Self-Evolving Agent Skill Optimizer | [projects/272-skillopt-self-evolving-agent-skills.md](272-skillopt-self-evolving-agent-skills.md) |
+| TencentDB Agent Memory | [Tencent/TencentDB-Agent-Memory](https://github.com/Tencent/TencentDB-Agent-Memory) | Local Long-Term Agent Memory Substrate | [projects/273-tencentdb-agent-memory-local-memory-substrate.md](273-tencentdb-agent-memory-local-memory-substrate.md) |
+| GitTaskBench | [QuantaAlpha/GitTaskBench](https://github.com/QuantaAlpha/GitTaskBench) | Repo-Level Code Agent Benchmark Harness | [projects/274-gittaskbench-repo-level-code-agent-benchmark.md](274-gittaskbench-repo-level-code-agent-benchmark.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

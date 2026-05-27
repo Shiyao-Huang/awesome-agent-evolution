@@ -3829,6 +3829,177 @@ export const projects: Project[] = [
                     "context",
                     "self-evolving"
             ]
+    },
+    {
+            "name": "Deep Agents",
+            "repo": "langchain-ai/deepagents",
+            "url": "https://github.com/langchain-ai/deepagents",
+            "stars": 23400,
+            "forks": 3300,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/269-deepagents-batteries-included-harness.md",
+            "pattern": "opinionated harness runtime -> sub-agent delegation and filesystem actions -> persistent memory plus context management -> evaluation and deployment paths via LangGraph/LangSmith",
+            "description": "Deep Agents is a batteries-included agent harness that bundles planning, context management, skills, and persistent memory for long-horizon execution.",
+            "stack": [
+                    "Python",
+                    "TypeScript",
+                    "LangGraph",
+                    "LangSmith"
+            ],
+            "category": "Batteries-included Agent Harness Runtime",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/langchain-ai_deepagents.md",
+            "status": "candidate",
+            "tags": [
+                    "harness",
+                    "runtime",
+                    "skills",
+                    "memory",
+                    "evaluation"
+            ]
+    },
+    {
+            "name": "Archon",
+            "repo": "coleam00/Archon",
+            "url": "https://github.com/coleam00/Archon",
+            "stars": 21900,
+            "forks": 3300,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/270-archon-ai-coding-harness-builder.md",
+            "pattern": "workflow-defined coding pipeline -> deterministic phases and validation gates -> isolated worktree execution -> artifacted review/PR generation with mixed deterministic and AI nodes",
+            "description": "Archon is an open-source harness builder for AI coding that turns development processes into deterministic, reusable workflows.",
+            "stack": [
+                    "TypeScript",
+                    "Bun",
+                    "YAML",
+                    "Workflow Engine"
+            ],
+            "category": "Deterministic AI Coding Harness Builder",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/coleam00_archon.md",
+            "status": "candidate",
+            "tags": [
+                    "harness",
+                    "workflow-engine",
+                    "coding-agent",
+                    "validation",
+                    "orchestration"
+            ]
+    },
+    {
+            "name": "Best of Agent Harnesses",
+            "repo": "RyanAlberts/best-of-Agent-Harnesses",
+            "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
+            "stars": 45,
+            "forks": 4,
+            "language": "Python",
+            "license": "CC-BY-SA-4.0",
+            "report": "projects/271-best-of-agent-harnesses-ranked-index.md",
+            "pattern": "collect harness projects -> score and rank ecosystem coverage -> expose category tags and update cadence -> provide comparative entrypoint for reliability-oriented harness selection",
+            "description": "best-of-Agent-Harnesses curates and ranks 100+ agent harness projects to provide a comparative map of harness engineering options.",
+            "stack": [
+                    "Python",
+                    "Shell",
+                    "Generated Best-of Lists"
+            ],
+            "category": "Ranked Agent Harness Landscape Index",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/ryanalberts_best-of-agent-harnesses.md",
+            "status": "candidate",
+            "tags": [
+                    "awesome-list",
+                    "harness",
+                    "ranking",
+                    "resource-index",
+                    "evaluation"
+            ]
+    },
+    {
+            "name": "SkillOpt",
+            "repo": "microsoft/SkillOpt",
+            "url": "https://github.com/microsoft/SkillOpt",
+            "stars": 1100,
+            "forks": 100,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/272-skillopt-self-evolving-agent-skills.md",
+            "pattern": "trajectory-driven skill edits -> validation-gated updates -> epoch/batch-style skill training loop -> deployable best_skill artifacts for frozen-agent workflows",
+            "description": "SkillOpt trains reusable natural-language skills for frozen LLM agents through validation-gated iterative optimization loops.",
+            "stack": [
+                    "Python",
+                    "HTML",
+                    "Skill Training Loops"
+            ],
+            "category": "Self-Evolving Agent Skill Optimizer",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/microsoft_skillopt.md",
+            "status": "candidate",
+            "tags": [
+                    "skill",
+                    "self-evolving",
+                    "optimizer",
+                    "agent-training",
+                    "workflow"
+            ]
+    },
+    {
+            "name": "TencentDB Agent Memory",
+            "repo": "Tencent/TencentDB-Agent-Memory",
+            "url": "https://github.com/Tencent/TencentDB-Agent-Memory",
+            "stars": 4300,
+            "forks": 354,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/273-tencentdb-agent-memory-local-memory-substrate.md",
+            "pattern": "symbolic short-term memory plus layered long-term memory -> plugin-based integration into agent runtimes -> local-first persistence pipeline -> benchmarked token and pass-rate impact reporting",
+            "description": "TencentDB Agent Memory provides a local-first long-term memory pipeline for AI agents with plugin integration and benchmarked efficiency gains.",
+            "stack": [
+                    "TypeScript",
+                    "Python",
+                    "OpenClaw Plugin"
+            ],
+            "category": "Local Long-Term Agent Memory Substrate",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/tencent_tencentdb-agent-memory.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "long-term-memory",
+                    "openclaw",
+                    "local-first",
+                    "plugin"
+            ]
+    },
+    {
+            "name": "GitTaskBench",
+            "repo": "QuantaAlpha/GitTaskBench",
+            "url": "https://github.com/QuantaAlpha/GitTaskBench",
+            "stars": 255,
+            "forks": 20,
+            "language": "Python",
+            "license": "Unknown",
+            "report": "projects/274-gittaskbench-repo-level-code-agent-benchmark.md",
+            "pattern": "repo-level task suites -> environment setup and incremental bug-fixing traces -> cost-aware alpha metrics for code-agent performance -> multi-agent runner comparison across real repositories",
+            "description": "GitTaskBench is a repository-level benchmark for real-world coding-agent tasks from repository understanding through implementation and task delivery.",
+            "stack": [
+                    "Python",
+                    "Jupyter",
+                    "C++",
+                    "Benchmark Tooling"
+            ],
+            "category": "Repo-Level Code Agent Benchmark Harness",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/quantaalpha_gittaskbench.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "code-agent",
+                    "repo-level",
+                    "evaluation",
+                    "harness"
+            ]
     }
 ];
 
@@ -3859,7 +4030,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

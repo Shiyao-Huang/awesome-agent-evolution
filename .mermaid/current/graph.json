@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T22:00:12+08:00",
+  "generated_at": "2026-05-28T04:00:48+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -246,7 +246,13 @@
         "raw-github/autojunjie_awesome-agent-harness.md",
         "raw-github/shareai-lab_learn-claude-code.md",
         "raw-github/murataslan1_ai-agent-benchmark.md",
-        "raw-github/holaboss-ai_holaos.md"
+        "raw-github/holaboss-ai_holaos.md",
+        "raw-github/langchain-ai_deepagents.md",
+        "raw-github/coleam00_archon.md",
+        "raw-github/ryanalberts_best-of-agent-harnesses.md",
+        "raw-github/microsoft_skillopt.md",
+        "raw-github/tencent_tencentdb-agent-memory.md",
+        "raw-github/quantaalpha_gittaskbench.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -382,7 +388,8 @@
         "work/research/hourly-public-metadata-update-2026-05-26-2154.md",
         "work/research/hourly-public-metadata-update-2026-05-27-0959.md",
         "work/research/hourly-public-metadata-update-2026-05-27-1600.md",
-        "work/research/hourly-public-metadata-update-2026-05-27-2200.md"
+        "work/research/hourly-public-metadata-update-2026-05-27-2200.md",
+        "work/research/hourly-public-metadata-update-2026-05-28-0400.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -816,7 +823,19 @@
         "projects/267-ai-agent-benchmark-multi-domain-pack.md",
         "site/public/reports/projects/267-ai-agent-benchmark-multi-domain-pack.md",
         "projects/268-holaos-long-horizon-agent-environment.md",
-        "site/public/reports/projects/268-holaos-long-horizon-agent-environment.md"
+        "site/public/reports/projects/268-holaos-long-horizon-agent-environment.md",
+        "projects/269-deepagents-batteries-included-harness.md",
+        "site/public/reports/projects/269-deepagents-batteries-included-harness.md",
+        "projects/270-archon-ai-coding-harness-builder.md",
+        "site/public/reports/projects/270-archon-ai-coding-harness-builder.md",
+        "projects/271-best-of-agent-harnesses-ranked-index.md",
+        "site/public/reports/projects/271-best-of-agent-harnesses-ranked-index.md",
+        "projects/272-skillopt-self-evolving-agent-skills.md",
+        "site/public/reports/projects/272-skillopt-self-evolving-agent-skills.md",
+        "projects/273-tencentdb-agent-memory-local-memory-substrate.md",
+        "site/public/reports/projects/273-tencentdb-agent-memory-local-memory-substrate.md",
+        "projects/274-gittaskbench-repo-level-code-agent-benchmark.md",
+        "site/public/reports/projects/274-gittaskbench-repo-level-code-agent-benchmark.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1142,14 +1161,14 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-27T22:00:12+08:00",
+    "run_at": "2026-05-28T04:00:48+08:00",
     "added_repositories": [
-      "mindfold-ai/Trellis",
-      "Picrew/awesome-agent-harness",
-      "AutoJunjie/awesome-agent-harness",
-      "shareAI-lab/learn-claude-code",
-      "murataslan1/ai-agent-benchmark",
-      "holaboss-ai/holaOS"
+      "langchain-ai/deepagents",
+      "coleam00/Archon",
+      "RyanAlberts/best-of-Agent-Harnesses",
+      "microsoft/SkillOpt",
+      "Tencent/TencentDB-Agent-Memory",
+      "QuantaAlpha/GitTaskBench"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",

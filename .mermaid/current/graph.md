@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-27T22:00:12+08:00
+Generated: 2026-05-28T04:00:48+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-05-27T22:00:12+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: mindfold-ai/Trellis, Picrew/awesome-agent-harness, AutoJunjie/awesome-agent-harness, shareAI-lab/learn-claude-code, murataslan1/ai-agent-benchmark, holaboss-ai/holaOS.
-- New raw files: raw-github/mindfold-ai_trellis.md, raw-github/picrew_awesome-agent-harness.md, raw-github/autojunjie_awesome-agent-harness.md, raw-github/shareai-lab_learn-claude-code.md, raw-github/murataslan1_ai-agent-benchmark.md, raw-github/holaboss-ai_holaos.md.
-- New public model cards and site reports: project/report ids 263, 264, 265, 266, 267, 268.
+- Web-observed repos: langchain-ai/deepagents, coleam00/Archon, RyanAlberts/best-of-Agent-Harnesses, microsoft/SkillOpt, Tencent/TencentDB-Agent-Memory, QuantaAlpha/GitTaskBench.
+- New raw files: raw-github/langchain-ai_deepagents.md, raw-github/coleam00_archon.md, raw-github/ryanalberts_best-of-agent-harnesses.md, raw-github/microsoft_skillopt.md, raw-github/tencent_tencentdb-agent-memory.md, raw-github/quantaalpha_gittaskbench.md.
+- New public model cards and site reports: project/report ids 269, 270, 271, 272, 273, 274.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
 - GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.
