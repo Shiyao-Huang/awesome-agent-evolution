@@ -1,6 +1,6 @@
 # GitHub Project Data Analysis
 
-Generated: 2026-05-27T02:26:55.607Z
+Generated: 2026-05-27T02:28:39.689Z
 
 ## One-Sentence Compression
 
@@ -217,14 +217,14 @@ Formula: `current_value = 0.50*time + 0.20*mechanism + 0.15*evidence + 0.10*adop
 | 4 | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 71.52 | 58.2 | 79 | 100 | 72.25 | 2025-05 | 2026-03 | - |
 | 5 | [JarvisPei/SCOPE](https://github.com/JarvisPei/SCOPE) | 68.73 | 79.58 | 67 | 62 | 35.93 | 2025-12 | 2026-03 | - |
 | 6 | [inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve) | 66.2 | 74.52 | 59 | 68 | 37.9 | 2025-10 | 2026-04 | - |
-| 7 | [JARVIS-Xs/SE-Agent](https://github.com/JARVIS-Xs/SE-Agent) | 64.02 | 49.17 | 77 | 100 | 46.32 | 2025-07 | 2025-09 | - |
+| 7 | [JARVIS-Xs/SE-Agent](https://github.com/JARVIS-Xs/SE-Agent) | 64.01 | 49.17 | 77 | 100 | 46.32 | 2025-07 | 2025-09 | - |
 | 8 | [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | 57.96 | 45 | 87 | 56 | 56.63 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 9 | [EvoAgentX/EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | 57.4 | 30 | 97 | 86 | 56.98 | unknown | 2026-01 | created_at unavailable; time score capped and based on activity/observation only |
 | 10 | [gofenix/nex-agent](https://github.com/gofenix/nex-agent) | 56.84 | 45 | 95 | 56 | 34.43 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 11 | [MaximeRobeyns/self_improving_coding_agent](https://github.com/MaximeRobeyns/self_improving_coding_agent) | 55.32 | 45 | 87 | 56 | 47.7 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 12 | [YunjueTech/Yunjue-Agent](https://github.com/YunjueTech/Yunjue-Agent) | 54.6 | 35.61 | 97 | 56 | 49.95 | unknown | 2026-02 | created_at unavailable; time score capped and based on activity/observation only |
 | 13 | [RangeKing/self-evolving-agent](https://github.com/RangeKing/self-evolving-agent) | 53.8 | 45 | 85 | 56 | 18.99 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 14 | [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) | 53.44 | 29.74 | 59 | 100 | 86.2 | 2023-01 | 2026-05 | - |
+| 14 | [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) | 53.44 | 29.73 | 59 | 100 | 86.2 | 2023-01 | 2026-05 | - |
 | 15 | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 51.7 | 30 | 71 | 86 | 56.98 | unknown | 2026-01 | created_at unavailable; time score capped and based on activity/observation only |
 | 16 | [wazionapps/nexo](https://github.com/wazionapps/nexo) | 51.69 | 45 | 71 | 56 | 25.86 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 17 | [Orchestra-Research/AI-research-SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs) | 50.8 | 45 | 42 | 56 | 75 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |

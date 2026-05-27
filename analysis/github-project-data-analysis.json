@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T02:26:55.607Z",
+  "generated_at": "2026-05-27T02:28:39.689Z",
   "counts": {
     "raw_captures": 538,
     "raw_files_on_disk": 538,
@@ -32595,7 +32595,7 @@
   ],
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-05-27T02:26:55.612Z",
+    "reference_date": "2026-05-27T02:28:39.692Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -32804,7 +32804,7 @@
       "stars": 274,
       "report": "projects/jarvis_xs__se_agent.md",
       "scores": {
-        "current_value": 64.02,
+        "current_value": 64.01,
         "time": 49.17,
         "mechanism": 77,
         "evidence": 100,
@@ -33020,7 +33020,7 @@
       "report": "projects/10-dspy-declarative-llm-programming.md",
       "scores": {
         "current_value": 53.44,
-        "time": 29.74,
+        "time": 29.73,
         "mechanism": 59,
         "evidence": 100,
         "adoption": 86.2,
@@ -36291,7 +36291,7 @@
       "report": "research/projects/52-agentgpt-autonomous.md",
       "scores": {
         "current_value": 22.76,
-        "time": 9.06,
+        "time": 9.05,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 85.81,
@@ -36320,7 +36320,7 @@
       "report": "research/projects/47-openagents-platform.md",
       "scores": {
         "current_value": 21.06,
-        "time": 9.06,
+        "time": 9.05,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 68.81,
