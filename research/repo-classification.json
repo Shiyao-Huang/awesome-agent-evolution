@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T16:00:06+08:00",
+  "generated_at": "2026-05-27T22:00:12+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -810,6 +810,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Autohand Code CLI - Ultra fast self evolving coding agent that runs in your terminal"
+    },
+    {
+      "repo": "AutoJunjie/awesome-agent-harness",
+      "url": "https://github.com/AutoJunjie/awesome-agent-harness",
+      "stars": "423",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "evaluation",
+      "stack": "Markdown/Resource Curation/Benchmark Notes",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 423 stars, 29 forks, 59 commits, and README positioning around comprehensive harness curation for AI agent reliability and benchmarking.",
+      "description": "AutoJunjie/awesome-agent-harness curates the emerging agent harness ecosystem, combining benchmark references and implementation pointers."
     },
     {
       "repo": "AutoX-AI-Labs/AutoR",
@@ -2717,6 +2732,21 @@
       "description": "[EMNLP2025] From Automation to Autonomy: A Survey on Large Language Models in Scientific Discovery"
     },
     {
+      "repo": "holaboss-ai/holaOS",
+      "url": "https://github.com/holaboss-ai/holaOS",
+      "stars": "5400",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evolution",
+      "stack": "TypeScript/Tauri/MCP/Context Management",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 5.4k stars, 328 forks, 572 commits, Modified Apache 2.0 license, and README notes on being an environment for long-horizon work and self-evolving agents.",
+      "description": "holaOS is an agent environment focused on long-horizon continuity, context retention, and self-evolving workflows for autonomous execution."
+    },
+    {
       "repo": "howdymary/hermes-agent-metaharness",
       "url": "https://github.com/howdymary/hermes-agent-metaharness",
       "stars": "86",
@@ -4442,6 +4472,21 @@
       "description": "MicrosoftDocs 的 Azure Agent Skills 仓库，把 Microsoft Learn/Azure 文档组织为 SKILL.md 技能，服务 Copilot、Codex、Claude Code、Cursor 等 coding agents。"
     },
     {
+      "repo": "mindfold-ai/Trellis",
+      "url": "https://github.com/mindfold-ai/Trellis",
+      "stars": "8500",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "memory",
+      "stack": "Python/TypeScript/Rust/CDP/Docker",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 8.5k stars, 466 forks, 1,017 commits, AGPL-3.0 license, and README emphasis on visual agent workspace, memory structure, and high-frequency task loops.",
+      "description": "Trellis is an open-source cognitive workspace for autonomous agents with browser execution, persistent workspace memory, and explicit reasoning workflows."
+    },
+    {
       "repo": "mitchellgordon95/dspy",
       "url": "https://github.com/mitchellgordon95/dspy",
       "stars": "0",
@@ -4515,6 +4560,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 148 commits, MIT license, 1.1k stars and 122 forks; README says it ships a curated library plus CLI/TUI tooling, with 17 house copies and 103 cataloged upstream items visible in the page snapshot.",
       "description": "AI Agent Skills packages a curated skill library plus CLI/TUI workflows for building and managing smaller, provenance-aware agent skill shelves."
+    },
+    {
+      "repo": "murataslan1/ai-agent-benchmark",
+      "url": "https://github.com/murataslan1/ai-agent-benchmark",
+      "stars": "24",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Markdown/JSON/Python Bench Scripts",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 24 stars, 4 forks, 3 commits, MIT license, and README claims for 73 benchmark tasks spanning code, memory, translation, and safety categories.",
+      "description": "ai-agent-benchmark is a compact benchmark repository that evaluates AI agents across coding, math, memory, translation, and safety-oriented task slices."
     },
     {
       "repo": "mwasifanwar/meta-cognitive-learning-system",
@@ -5280,6 +5340,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "application/self-evolving-agent signal",
       "description": "L-AutoDA"
+    },
+    {
+      "repo": "Picrew/awesome-agent-harness",
+      "url": "https://github.com/Picrew/awesome-agent-harness",
+      "stars": "673",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "evaluation",
+      "stack": "Markdown/Benchmark Catalog/Runtime Comparison",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 673 stars, 53 forks, 35 commits, and README sections covering benchmark suites, open-source frameworks, and end-to-end harness ecosystem mapping.",
+      "description": "Picrew/awesome-agent-harness is a curated index of AI agent harness frameworks, benchmark suites, and reliability-oriented evaluation resources."
     },
     {
       "repo": "pinchbench/skill",
@@ -6135,6 +6210,21 @@
       "content_timestamp": "2026-05-26",
       "evidence": "web-observed GitHub page showed 10 stars, 1 fork, 12 commits, Apache-2.0 license, TypeScript/Python/Shell stack, support for SWE, TB2, Tau and SAE benchmarks, built-in harnesses for kode-agent-sdk, codex, claude-code and gemini-cli, generated custom adapters, and standardized run/trace artifacts; shell GitHub API freshness was blocked.",
       "description": "kbench normalizes SWE, Terminal-Bench 2.0, tau-bench and Standardized Agent Exams through one CLI and harness contract, including Codex, Claude Code, Gemini CLI, kode-agent-sdk and custom adapter paths."
+    },
+    {
+      "repo": "shareAI-lab/learn-claude-code",
+      "url": "https://github.com/shareAI-lab/learn-claude-code",
+      "stars": "63000",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "Markdown/CLI Skills/Workflow Playbooks",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 63k stars, 10.3k forks, 87 commits, MIT license, and README curriculum structure from setup to advanced automation practices.",
+      "description": "learn-claude-code provides a staged curriculum and practical exercises for Claude Code users to build reliable agent coding workflows."
     },
     {
       "repo": "shehrum/grf-self-play",

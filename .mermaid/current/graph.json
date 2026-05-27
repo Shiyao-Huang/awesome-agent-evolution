@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T16:00:06+08:00",
+  "generated_at": "2026-05-27T22:00:12+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -240,7 +240,13 @@
         "raw-github/evalops_agent-harness.md",
         "raw-github/harness_harness-evals.md",
         "raw-github/browser-use_browser-harness.md",
-        "raw-github/junminhong_awesome-agent-skills.md"
+        "raw-github/junminhong_awesome-agent-skills.md",
+        "raw-github/mindfold-ai_trellis.md",
+        "raw-github/picrew_awesome-agent-harness.md",
+        "raw-github/autojunjie_awesome-agent-harness.md",
+        "raw-github/shareai-lab_learn-claude-code.md",
+        "raw-github/murataslan1_ai-agent-benchmark.md",
+        "raw-github/holaboss-ai_holaos.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -375,7 +381,8 @@
         ".mermaid/current/graph.json",
         "work/research/hourly-public-metadata-update-2026-05-26-2154.md",
         "work/research/hourly-public-metadata-update-2026-05-27-0959.md",
-        "work/research/hourly-public-metadata-update-2026-05-27-1600.md"
+        "work/research/hourly-public-metadata-update-2026-05-27-1600.md",
+        "work/research/hourly-public-metadata-update-2026-05-27-2200.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -797,7 +804,19 @@
         "projects/261-browser-harness-self-healing-web-agent-runtime.md",
         "site/public/reports/projects/261-browser-harness-self-healing-web-agent-runtime.md",
         "projects/262-awesome-agent-skills-cross-platform-index.md",
-        "site/public/reports/projects/262-awesome-agent-skills-cross-platform-index.md"
+        "site/public/reports/projects/262-awesome-agent-skills-cross-platform-index.md",
+        "projects/263-trellis-cognitive-workspace-runtime.md",
+        "site/public/reports/projects/263-trellis-cognitive-workspace-runtime.md",
+        "projects/264-awesome-agent-harness-picrew-curation.md",
+        "site/public/reports/projects/264-awesome-agent-harness-picrew-curation.md",
+        "projects/265-awesome-agent-harness-autojunjie-curation.md",
+        "site/public/reports/projects/265-awesome-agent-harness-autojunjie-curation.md",
+        "projects/266-learn-claude-code-agent-curriculum.md",
+        "site/public/reports/projects/266-learn-claude-code-agent-curriculum.md",
+        "projects/267-ai-agent-benchmark-multi-domain-pack.md",
+        "site/public/reports/projects/267-ai-agent-benchmark-multi-domain-pack.md",
+        "projects/268-holaos-long-horizon-agent-environment.md",
+        "site/public/reports/projects/268-holaos-long-horizon-agent-environment.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1123,17 +1142,17 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-27T16:00:06+08:00",
+    "run_at": "2026-05-27T22:00:12+08:00",
     "added_repositories": [
-      "OpenBMB/ClawXMemory",
-      "UnicomAI/hexagent",
-      "evalops/agent-harness",
-      "harness/harness-evals",
-      "browser-use/browser-harness",
-      "junminhong/awesome-agent-skills"
+      "mindfold-ai/Trellis",
+      "Picrew/awesome-agent-harness",
+      "AutoJunjie/awesome-agent-harness",
+      "shareAI-lab/learn-claude-code",
+      "murataslan1/ai-agent-benchmark",
+      "holaboss-ai/holaOS"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "status/query available; default analyze EPERM on registry path; temporary-HOME analyze succeeded with FTS extension download blocked"
+    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
   }
 }

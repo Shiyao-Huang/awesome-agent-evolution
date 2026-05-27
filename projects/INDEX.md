@@ -280,6 +280,13 @@
 | Browser Harness | [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | Self-Healing Browser Agent Harness | [projects/261-browser-harness-self-healing-web-agent-runtime.md](261-browser-harness-self-healing-web-agent-runtime.md) |
 | Awesome Agent Skills | [junminhong/awesome-agent-skills](https://github.com/junminhong/awesome-agent-skills) | Cross-Platform Agent Skill Index | [projects/262-awesome-agent-skills-cross-platform-index.md](262-awesome-agent-skills-cross-platform-index.md) |
 
+| Trellis | [mindfold-ai/Trellis](https://github.com/mindfold-ai/Trellis) | Cognitive Workspace Agent Runtime | [projects/263-trellis-cognitive-workspace-runtime.md](263-trellis-cognitive-workspace-runtime.md) |
+| Awesome Agent Harness (Picrew) | [Picrew/awesome-agent-harness](https://github.com/Picrew/awesome-agent-harness) | Awesome Agent Harness Landscape | [projects/264-awesome-agent-harness-picrew-curation.md](264-awesome-agent-harness-picrew-curation.md) |
+| Awesome Agent Harness (AutoJunjie) | [AutoJunjie/awesome-agent-harness](https://github.com/AutoJunjie/awesome-agent-harness) | Harness Curation and Reading Map | [projects/265-awesome-agent-harness-autojunjie-curation.md](265-awesome-agent-harness-autojunjie-curation.md) |
+| Learn Claude Code | [shareAI-lab/learn-claude-code](https://github.com/shareAI-lab/learn-claude-code) | Claude Code Skill Learning Curriculum | [projects/266-learn-claude-code-agent-curriculum.md](266-learn-claude-code-agent-curriculum.md) |
+| AI Agent Benchmark | [murataslan1/ai-agent-benchmark](https://github.com/murataslan1/ai-agent-benchmark) | Multi-Domain Agent Benchmark Pack | [projects/267-ai-agent-benchmark-multi-domain-pack.md](267-ai-agent-benchmark-multi-domain-pack.md) |
+| holaOS | [holaboss-ai/holaOS](https://github.com/holaboss-ai/holaOS) | Long-Horizon Agent Environment | [projects/268-holaos-long-horizon-agent-environment.md](268-holaos-long-horizon-agent-environment.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

@@ -3658,6 +3658,177 @@ export const projects: Project[] = [
                     "claude-code",
                     "workflow templates"
             ]
+    },
+    {
+            "name": "Trellis",
+            "repo": "mindfold-ai/Trellis",
+            "url": "https://github.com/mindfold-ai/Trellis",
+            "stars": 8500,
+            "forks": 466,
+            "language": "Python",
+            "license": "AGPL-3.0",
+            "report": "projects/263-trellis-cognitive-workspace-runtime.md",
+            "pattern": "agent workspace with visual browser timelines -> workspace state and memory graph persistence -> explicit logic layer for plan/edit/review loops -> local execution with web and tool integrations",
+            "description": "Trellis is an open-source cognitive workspace for autonomous agents with browser execution, persistent workspace memory, and explicit reasoning workflows.",
+            "stack": [
+                    "Python",
+                    "TypeScript",
+                    "Rust",
+                    "CDP",
+                    "Docker"
+            ],
+            "category": "Cognitive Workspace Agent Runtime",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/mindfold-ai_trellis.md",
+            "status": "candidate",
+            "tags": [
+                    "agent workspace",
+                    "memory",
+                    "browser automation",
+                    "planner",
+                    "runtime"
+            ]
+    },
+    {
+            "name": "Awesome Agent Harness (Picrew)",
+            "repo": "Picrew/awesome-agent-harness",
+            "url": "https://github.com/Picrew/awesome-agent-harness",
+            "stars": 673,
+            "forks": 53,
+            "language": "Markdown",
+            "license": "Unknown",
+            "report": "projects/264-awesome-agent-harness-picrew-curation.md",
+            "pattern": "aggregate benchmark suites and harness runtimes -> map evaluation dimensions and reliability criteria -> link open-source implementation references -> maintain rapid ecosystem comparison entrypoint",
+            "description": "Picrew/awesome-agent-harness is a curated index of AI agent harness frameworks, benchmark suites, and reliability-oriented evaluation resources.",
+            "stack": [
+                    "Markdown",
+                    "Benchmark Catalog",
+                    "Runtime Comparison"
+            ],
+            "category": "Awesome Agent Harness Landscape",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/picrew_awesome-agent-harness.md",
+            "status": "candidate",
+            "tags": [
+                    "harness",
+                    "awesome-list",
+                    "benchmark",
+                    "evaluation",
+                    "resource-index"
+            ]
+    },
+    {
+            "name": "Awesome Agent Harness (AutoJunjie)",
+            "repo": "AutoJunjie/awesome-agent-harness",
+            "url": "https://github.com/AutoJunjie/awesome-agent-harness",
+            "stars": 423,
+            "forks": 29,
+            "language": "Markdown",
+            "license": "Unknown",
+            "report": "projects/265-awesome-agent-harness-autojunjie-curation.md",
+            "pattern": "collect harness repositories and papers -> classify by benchmark and runtime concerns -> provide quick browse path for reproducibility and safety trends -> keep ecosystem update cadence visible by commit activity",
+            "description": "AutoJunjie/awesome-agent-harness curates the emerging agent harness ecosystem, combining benchmark references and implementation pointers.",
+            "stack": [
+                    "Markdown",
+                    "Resource Curation",
+                    "Benchmark Notes"
+            ],
+            "category": "Harness Curation and Reading Map",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/autojunjie_awesome-agent-harness.md",
+            "status": "candidate",
+            "tags": [
+                    "harness",
+                    "awesome-list",
+                    "benchmark",
+                    "agent-eval",
+                    "curation"
+            ]
+    },
+    {
+            "name": "Learn Claude Code",
+            "repo": "shareAI-lab/learn-claude-code",
+            "url": "https://github.com/shareAI-lab/learn-claude-code",
+            "stars": 63000,
+            "forks": 10300,
+            "language": "Markdown",
+            "license": "MIT",
+            "report": "projects/266-learn-claude-code-agent-curriculum.md",
+            "pattern": "structured learning path -> daily skill tasks with runnable examples -> command and workflow rehearsal -> advanced orchestration patterns for practical coding-agent productivity",
+            "description": "learn-claude-code provides a staged curriculum and practical exercises for Claude Code users to build reliable agent coding workflows.",
+            "stack": [
+                    "Markdown",
+                    "CLI Skills",
+                    "Workflow Playbooks"
+            ],
+            "category": "Claude Code Skill Learning Curriculum",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/shareai-lab_learn-claude-code.md",
+            "status": "candidate",
+            "tags": [
+                    "claude-code",
+                    "skills",
+                    "curriculum",
+                    "workflow",
+                    "coding-agent"
+            ]
+    },
+    {
+            "name": "AI Agent Benchmark",
+            "repo": "murataslan1/ai-agent-benchmark",
+            "url": "https://github.com/murataslan1/ai-agent-benchmark",
+            "stars": 24,
+            "forks": 4,
+            "language": "Markdown",
+            "license": "MIT",
+            "report": "projects/267-ai-agent-benchmark-multi-domain-pack.md",
+            "pattern": "define multi-domain task suites -> evaluate coding/math/memory/translation and safety behavior -> score cross-model outcomes -> expose benchmark schema for reproducible comparisons",
+            "description": "ai-agent-benchmark is a compact benchmark repository that evaluates AI agents across coding, math, memory, translation, and safety-oriented task slices.",
+            "stack": [
+                    "Markdown",
+                    "JSON",
+                    "Python Bench Scripts"
+            ],
+            "category": "Multi-Domain Agent Benchmark Pack",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/murataslan1_ai-agent-benchmark.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "agent-evaluation",
+                    "multi-domain",
+                    "safety",
+                    "comparison"
+            ]
+    },
+    {
+            "name": "holaOS",
+            "repo": "holaboss-ai/holaOS",
+            "url": "https://github.com/holaboss-ai/holaOS",
+            "stars": 5400,
+            "forks": 328,
+            "language": "TypeScript",
+            "license": "Modified Apache-2.0",
+            "report": "projects/268-holaos-long-horizon-agent-environment.md",
+            "pattern": "agent environment as execution substrate -> continuity-oriented context and memory management -> MCP-compatible tooling for long-horizon work -> self-evolving workflow emphasis through environment-level adaptation",
+            "description": "holaOS is an agent environment focused on long-horizon continuity, context retention, and self-evolving workflows for autonomous execution.",
+            "stack": [
+                    "TypeScript",
+                    "Tauri",
+                    "MCP",
+                    "Context Management"
+            ],
+            "category": "Long-Horizon Agent Environment",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/holaboss-ai_holaos.md",
+            "status": "candidate",
+            "tags": [
+                    "agent os",
+                    "long-horizon",
+                    "memory",
+                    "context",
+                    "self-evolving"
+            ]
     }
 ];
 
@@ -3688,7 +3859,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

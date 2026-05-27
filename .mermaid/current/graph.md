@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-27T16:00:06+08:00
+Generated: 2026-05-27T22:00:12+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-05-27T16:00:06+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: OpenBMB/ClawXMemory, UnicomAI/hexagent, evalops/agent-harness, harness/harness-evals, browser-use/browser-harness, junminhong/awesome-agent-skills.
-- New raw files: raw-github/openbmb_clawxmemory.md, raw-github/unicomai_hexagent.md, raw-github/evalops_agent-harness.md, raw-github/harness_harness-evals.md, raw-github/browser-use_browser-harness.md, raw-github/junminhong_awesome-agent-skills.md.
-- New public model cards and site reports: project/report ids 257, 258, 259, 260, 261, 262.
+- Web-observed repos: mindfold-ai/Trellis, Picrew/awesome-agent-harness, AutoJunjie/awesome-agent-harness, shareAI-lab/learn-claude-code, murataslan1/ai-agent-benchmark, holaboss-ai/holaOS.
+- New raw files: raw-github/mindfold-ai_trellis.md, raw-github/picrew_awesome-agent-harness.md, raw-github/autojunjie_awesome-agent-harness.md, raw-github/shareai-lab_learn-claude-code.md, raw-github/murataslan1_ai-agent-benchmark.md, raw-github/holaboss-ai_holaos.md.
+- New public model cards and site reports: project/report ids 263, 264, 265, 266, 267, 268.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
-- GitNexus default analyze remained blocked by `EPERM` on `/Users/copizzah/.gitnexus/registry.json`, but temporary-HOME analyze succeeded (21,212 nodes / 24,066 edges) with FTS extension download blocked.
+- GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

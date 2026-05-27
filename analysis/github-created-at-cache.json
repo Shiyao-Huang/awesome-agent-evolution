@@ -2104,5 +2104,53 @@
     "forks": null,
     "source": "github_api_fetch_error",
     "error": "fetch failed"
+  },
+  "mindfold-ai/trellis": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "picrew/awesome-agent-harness": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "autojunjie/awesome-agent-harness": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "shareai-lab/learn-claude-code": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "murataslan1/ai-agent-benchmark": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "holaboss-ai/holaos": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
   }
 }
