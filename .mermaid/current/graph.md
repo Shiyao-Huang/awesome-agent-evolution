@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-27T09:59:08+08:00
+Generated: 2026-05-27T16:00:06+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-05-27T09:59:08+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: mem9-ai/mem9, CortexReach/memory-lancedb-pro, garrytan/gbrain, sunnja69/akephalos, InternScience/InternAgent.
-- New raw files: raw-github/mem9-ai_mem9.md, raw-github/cortexreach_memory-lancedb-pro.md, raw-github/garrytan_gbrain.md, raw-github/sunnja69_akephalos.md, raw-github/internscience_internagent.md.
-- New public model cards and site reports: project/report ids 252, 253, 254, 255, 256.
+- Web-observed repos: OpenBMB/ClawXMemory, UnicomAI/hexagent, evalops/agent-harness, harness/harness-evals, browser-use/browser-harness, junminhong/awesome-agent-skills.
+- New raw files: raw-github/openbmb_clawxmemory.md, raw-github/unicomai_hexagent.md, raw-github/evalops_agent-harness.md, raw-github/harness_harness-evals.md, raw-github/browser-use_browser-harness.md, raw-github/junminhong_awesome-agent-skills.md.
+- New public model cards and site reports: project/report ids 257, 258, 259, 260, 261, 262.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
-- GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
+- GitNexus default analyze remained blocked by `EPERM` on `/Users/copizzah/.gitnexus/registry.json`, but temporary-HOME analyze succeeded (21,212 nodes / 24,066 edges) with FTS extension download blocked.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

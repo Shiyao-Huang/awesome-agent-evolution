@@ -273,6 +273,13 @@
 | Akephalos | [sunnja69/akephalos](https://github.com/sunnja69/akephalos) | Local-First Agent Passport Memory Bundle | [projects/255-akephalos-local-agent-passport.md](255-akephalos-local-agent-passport.md) |
 | InternAgent-1.5 | [InternScience/InternAgent](https://github.com/InternScience/InternAgent) | Autonomous Scientific Discovery Agent Framework | [projects/256-internagent-autonomous-scientific-discovery.md](256-internagent-autonomous-scientific-discovery.md) |
 
+| ClawXMemory | [OpenBMB/ClawXMemory](https://github.com/OpenBMB/ClawXMemory) | OpenClaw Long-Term Memory Module | [projects/257-clawxmemory-openclaw-long-term-memory-module.md](257-clawxmemory-openclaw-long-term-memory-module.md) |
+| HexAgent | [UnicomAI/hexagent](https://github.com/UnicomAI/hexagent) | LLM Computer Harness Runtime | [projects/258-hexagent-agent-harness-runtime.md](258-hexagent-agent-harness-runtime.md) |
+| Agent Harness (EvalOps) | [evalops/agent-harness](https://github.com/evalops/agent-harness) | Cross-Provider Agent Harness Adapter | [projects/259-evalops-agent-harness-provider-adapter.md](259-evalops-agent-harness-provider-adapter.md) |
+| Harness Evals | [harness/harness-evals](https://github.com/harness/harness-evals) | Agent Reliability Evaluation Framework | [projects/260-harness-evals-agent-reliability-benchmark.md](260-harness-evals-agent-reliability-benchmark.md) |
+| Browser Harness | [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | Self-Healing Browser Agent Harness | [projects/261-browser-harness-self-healing-web-agent-runtime.md](261-browser-harness-self-healing-web-agent-runtime.md) |
+| Awesome Agent Skills | [junminhong/awesome-agent-skills](https://github.com/junminhong/awesome-agent-skills) | Cross-Platform Agent Skill Index | [projects/262-awesome-agent-skills-cross-platform-index.md](262-awesome-agent-skills-cross-platform-index.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

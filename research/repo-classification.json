@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T09:59:08+08:00",
+  "generated_at": "2026-05-27T16:00:06+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -962,6 +962,21 @@
       "description": "Guided Evolutionary Strategies"
     },
     {
+      "repo": "browser-use/browser-harness",
+      "url": "https://github.com/browser-use/browser-harness",
+      "stars": "13900",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/CDP/Chrome Debugging/Playwright",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 13.9k stars, 1.3k forks, 391 commits, MIT license, and README claims for direct browser websocket control, in-run helper authoring, and domain skill workflows.",
+      "description": "browser-use/browser-harness connects LLM agents to real browsers through a thin editable CDP harness and encourages run-time self-healing helper generation."
+    },
+    {
       "repo": "browser-use/browser-use",
       "url": "https://github.com/browser-use/browser-use",
       "stars": "94",
@@ -1877,6 +1892,21 @@
       "description": "[NeurIPS 2025] UI-Genie: A Self-Improving Approach for Iteratively Boosting MLLM-based Mobile GUI Agents"
     },
     {
+      "repo": "evalops/agent-harness",
+      "url": "https://github.com/evalops/agent-harness",
+      "stars": "18",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "framework-runtime",
+      "base_theme": "evaluation",
+      "stack": "Python/Bazel/OpenAI-Agents/Claude-Agent-SDK",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 18 stars, 5 forks, 12 commits, MIT license, and README notes for thread-safe tool registry, lazy provider adapters, and provider comparison helper flows.",
+      "description": "evalops/agent-harness is a lightweight adapter that lets one tool registry run across OpenAI Agents SDK and Anthropic Claude Agent SDK backends."
+    },
+    {
       "repo": "evalops/dspy-0to1-guide",
       "url": "https://github.com/evalops/dspy-0to1-guide",
       "stars": "215",
@@ -2567,6 +2597,21 @@
       "description": "An Easy-to-use, Scalable and High-performance RLHF Framework (70B+ PPO Full Tuning & Iterative DPO & LoRA & RingAttention & RFT)"
     },
     {
+      "repo": "harness/harness-evals",
+      "url": "https://github.com/harness/harness-evals",
+      "stars": "3",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/OTel/LLM-Judge Metrics/CI",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 3 stars, 3 forks, 86 commits, Apache-2.0 license, and README claims for normalized scoring, threshold-based pass/fail, optional LLM metrics, and OTLP/Langfuse integration.",
+      "description": "Harness Evals is an open-source evaluation framework for LLM agents, prompts, and structured outputs with normalized score semantics."
+    },
+    {
       "repo": "harness/harness-skills",
       "url": "https://github.com/harness/harness-skills",
       "stars": "20",
@@ -3195,6 +3240,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 645 commits, Apache-2.0 license, 4 stars and 4 forks; README says Agent Skills Kit exposes 26 skills, 110 generated command handles, rooted runtime projections, ask CLI robot mode, memory search, audits, evals, and proof commands for Codex and AI coding agents",
       "description": "Agent Skills Kit 是面向 Codex 和 AI coding agents 的技能控制平面，用 ask CLI、runtime projections、command handles、repo memory search 和 proof commands 管理技能质量与上下文成本。"
+    },
+    {
+      "repo": "junminhong/awesome-agent-skills",
+      "url": "https://github.com/junminhong/awesome-agent-skills",
+      "stars": "13",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/SKILL.md Templates/Codex/Claude Code",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 13 stars, 7 forks, 8 commits, MIT license, and README sections for skill schema, design patterns, quality checks, and platform-specific usage guidance.",
+      "description": "junminhong/awesome-agent-skills curates reusable skill workflows and templates for Codex, Claude Code, and other agent platforms."
     },
     {
       "repo": "K-Dense-AI/scientific-agent-skills",
@@ -4845,6 +4905,21 @@
       "content_timestamp": "2025-11-24",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Live-SWE-agent: live, runtime self-evolving software engineering agent"
+    },
+    {
+      "repo": "OpenBMB/ClawXMemory",
+      "url": "https://github.com/OpenBMB/ClawXMemory",
+      "stars": "33",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "TypeScript/OpenClaw/Markdown/SQLite",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 33 stars, 8 forks, 50 commits, MIT license, and README architecture notes for markdown memory files, background indexing, Dream reorganization, and selective retrieval.",
+      "description": "ClawXMemory is a multi-level OpenClaw memory plugin that writes durable file-based long-term memory and performs model-guided recall for project/user context."
     },
     {
       "repo": "OpenBMB/EdgeClaw",
@@ -7065,6 +7140,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "framework/runtime/orchestration signal",
       "description": "Emergent multi-agent intelligence — AI agents collaborate via a shared knowledge graph, discovering tensions and synthesizing theses without a central orchestrator."
+    },
+    {
+      "repo": "UnicomAI/hexagent",
+      "url": "https://github.com/UnicomAI/hexagent",
+      "stars": "122",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Python/TypeScript/MCP/Sandboxed Computer",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 122 stars, 12 forks, 105 commits, MIT license, and README claims for runtime/computer isolation, pluggable Computer protocol, middleware pipeline, and skill discovery.",
+      "description": "HexAgent is a harness runtime that gives LLM agents an isolated computer layer and pluggable execution protocol instead of coupling agent runtime and machine state."
     },
     {
       "repo": "vectorize-io/agent-memory-benchmark",

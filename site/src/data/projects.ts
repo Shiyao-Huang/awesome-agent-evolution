@@ -3484,6 +3484,180 @@ export const projects: Project[] = [
                     "benchmark",
                     "memory"
             ]
+    },
+    {
+            "name": "ClawXMemory",
+            "repo": "OpenBMB/ClawXMemory",
+            "url": "https://github.com/OpenBMB/ClawXMemory",
+            "stars": 33,
+            "forks": 8,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/257-clawxmemory-openclaw-long-term-memory-module.md",
+            "pattern": "background indexing of chat sessions -> markdown file memories + sqlite control-plane -> model-guided recall selection -> dashboard traces for recall/index/dream lifecycle",
+            "description": "ClawXMemory is a multi-level OpenClaw memory plugin that writes durable file-based long-term memory and performs model-guided recall for project/user context.",
+            "stack": [
+                    "TypeScript",
+                    "OpenClaw",
+                    "Markdown",
+                    "SQLite"
+            ],
+            "category": "OpenClaw Long-Term Memory Module",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/openbmb_clawxmemory.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "openclaw",
+                    "markdown memory",
+                    "long-term context",
+                    "local-first"
+            ]
+    },
+    {
+            "name": "HexAgent",
+            "repo": "UnicomAI/hexagent",
+            "url": "https://github.com/UnicomAI/hexagent",
+            "stars": 122,
+            "forks": 12,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/258-hexagent-agent-harness-runtime.md",
+            "pattern": "runtime/computer separation -> pluggable local-vm-cloud computer protocol -> middleware hooks and skill injection -> isolated subagent execution with MCP/tool orchestration",
+            "description": "HexAgent is a harness runtime that gives LLM agents an isolated computer layer and pluggable execution protocol instead of coupling agent runtime and machine state.",
+            "stack": [
+                    "Python",
+                    "TypeScript",
+                    "MCP",
+                    "Sandboxed Computer"
+            ],
+            "category": "LLM Computer Harness Runtime",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/unicomai_hexagent.md",
+            "status": "candidate",
+            "tags": [
+                    "harness",
+                    "runtime",
+                    "mcp",
+                    "skills",
+                    "sandbox"
+            ]
+    },
+    {
+            "name": "Agent Harness (EvalOps)",
+            "repo": "evalops/agent-harness",
+            "url": "https://github.com/evalops/agent-harness",
+            "stars": 18,
+            "forks": 5,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/259-evalops-agent-harness-provider-adapter.md",
+            "pattern": "register tools once -> normalize json schema and response shape -> lazy provider adapter import -> run identical prompts across OpenAI/Claude backends for comparison",
+            "description": "evalops/agent-harness is a lightweight adapter that lets one tool registry run across OpenAI Agents SDK and Anthropic Claude Agent SDK backends.",
+            "stack": [
+                    "Python",
+                    "Bazel",
+                    "OpenAI-Agents",
+                    "Claude-Agent-SDK"
+            ],
+            "category": "Cross-Provider Agent Harness Adapter",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/evalops_agent-harness.md",
+            "status": "candidate",
+            "tags": [
+                    "harness",
+                    "provider swap",
+                    "evaluation",
+                    "mcp",
+                    "python"
+            ]
+    },
+    {
+            "name": "Harness Evals",
+            "repo": "harness/harness-evals",
+            "url": "https://github.com/harness/harness-evals",
+            "stars": 3,
+            "forks": 3,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/260-harness-evals-agent-reliability-benchmark.md",
+            "pattern": "evaluate cases with normalized 0-1 scores -> configurable pass thresholds -> optional llm judged metrics and telemetry sinks -> regression export to CI observability pipelines",
+            "description": "Harness Evals is an open-source evaluation framework for LLM agents, prompts, and structured outputs with normalized score semantics.",
+            "stack": [
+                    "Python",
+                    "OTel",
+                    "LLM-Judge Metrics",
+                    "CI"
+            ],
+            "category": "Agent Reliability Evaluation Framework",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/harness_harness-evals.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "evaluation",
+                    "reliability",
+                    "agent metrics",
+                    "observability"
+            ]
+    },
+    {
+            "name": "Browser Harness",
+            "repo": "browser-use/browser-harness",
+            "url": "https://github.com/browser-use/browser-harness",
+            "stars": 13900,
+            "forks": 1300,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/261-browser-harness-self-healing-web-agent-runtime.md",
+            "pattern": "connect llm directly to live browser cdp -> patch missing helpers in agent-workspace during runs -> domain skill playbooks by site -> iteratively improve execution reliability",
+            "description": "browser-use/browser-harness connects LLM agents to real browsers through a thin editable CDP harness and encourages run-time self-healing helper generation.",
+            "stack": [
+                    "Python",
+                    "CDP",
+                    "Chrome Debugging",
+                    "Playwright"
+            ],
+            "category": "Self-Healing Browser Agent Harness",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/browser-use_browser-harness.md",
+            "status": "candidate",
+            "tags": [
+                    "browser harness",
+                    "self-healing",
+                    "cdp",
+                    "automation",
+                    "agent runtime"
+            ]
+    },
+    {
+            "name": "Awesome Agent Skills",
+            "repo": "junminhong/awesome-agent-skills",
+            "url": "https://github.com/junminhong/awesome-agent-skills",
+            "stars": 13,
+            "forks": 7,
+            "language": "Markdown",
+            "license": "MIT",
+            "report": "projects/262-awesome-agent-skills-cross-platform-index.md",
+            "pattern": "curate platform-specific skills -> define skill frontmatter and folder template -> enumerate design patterns and evaluation checklists -> map official docs for reusable implementation",
+            "description": "junminhong/awesome-agent-skills curates reusable skill workflows and templates for Codex, Claude Code, and other agent platforms.",
+            "stack": [
+                    "Markdown",
+                    "SKILL.md Templates",
+                    "Codex",
+                    "Claude Code"
+            ],
+            "category": "Cross-Platform Agent Skill Index",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/junminhong_awesome-agent-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "skills",
+                    "resource-index",
+                    "codex",
+                    "claude-code",
+                    "workflow templates"
+            ]
     }
 ];
 
@@ -3514,7 +3688,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

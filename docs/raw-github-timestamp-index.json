@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-27T00:00:00+08:00",
-  "total": 538,
-  "updated_files": 538,
+  "total": 544,
+  "updated_files": 544,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -581,6 +581,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "browser-use/browser-harness",
+      "url": "https://github.com/browser-use/browser-harness",
+      "file": "raw-github/browser-use_browser-harness.md",
+      "content_timestamp": "2026-05-27",
+      "collected_at": "2026-05-27T16:00:06+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_27"
+    },
+    {
       "repo": "browser-use/browser-use",
       "url": "https://github.com/browser-use/browser-use",
       "file": "raw-github/browser-use_browser-use.md",
@@ -1130,6 +1139,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "evalops/agent-harness",
+      "url": "https://github.com/evalops/agent-harness",
+      "file": "raw-github/evalops_agent-harness.md",
+      "content_timestamp": "2026-05-27",
+      "collected_at": "2026-05-27T16:00:06+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_27"
+    },
+    {
       "repo": "evalops/dspy-0to1-guide",
       "url": "https://github.com/evalops/dspy-0to1-guide",
       "file": "raw-github/evalops_dspy-0to1-guide.md",
@@ -1544,6 +1562,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "harness/harness-evals",
+      "url": "https://github.com/harness/harness-evals",
+      "file": "raw-github/harness_harness-evals.md",
+      "content_timestamp": "2026-05-27",
+      "collected_at": "2026-05-27T16:00:06+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_27"
+    },
+    {
       "repo": "harness/harness-skills",
       "url": "https://github.com/harness/harness-skills",
       "file": "raw-github/harness_harness-skills.md",
@@ -1920,6 +1947,15 @@
       "collected_at": "2026-05-24T19:09:37Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "junminhong/awesome-agent-skills",
+      "url": "https://github.com/junminhong/awesome-agent-skills",
+      "file": "raw-github/junminhong_awesome-agent-skills.md",
+      "content_timestamp": "2026-05-27",
+      "collected_at": "2026-05-27T16:00:06+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_27"
     },
     {
       "repo": "K-Dense-AI/scientific-agent-skills",
@@ -2910,6 +2946,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2025-11",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "OpenBMB/ClawXMemory",
+      "url": "https://github.com/OpenBMB/ClawXMemory",
+      "file": "raw-github/openbmb_clawxmemory.md",
+      "content_timestamp": "2026-05-27",
+      "collected_at": "2026-05-27T16:00:06+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_27"
     },
     {
       "repo": "OpenBMB/EdgeClaw",
@@ -4242,6 +4287,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "UnicomAI/hexagent",
+      "url": "https://github.com/UnicomAI/hexagent",
+      "file": "raw-github/unicomai_hexagent.md",
+      "content_timestamp": "2026-05-27",
+      "collected_at": "2026-05-27T16:00:06+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_27"
     },
     {
       "repo": "vectorize-io/agent-memory-benchmark",
