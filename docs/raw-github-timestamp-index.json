@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-26T00:00:00+08:00",
-  "total": 534,
-  "updated_files": 534,
-  "unknown_content_timestamp": 109,
+  "generated_at": "2026-05-27T00:00:00+08:00",
+  "total": 538,
+  "updated_files": 538,
+  "unknown_content_timestamp": 108,
   "records": [
     {
       "repo": "01-ai/langcrew",
@@ -860,6 +860,15 @@
       "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
+      "repo": "CortexReach/memory-lancedb-pro",
+      "url": "https://github.com/CortexReach/memory-lancedb-pro",
+      "file": "raw-github/cortexreach_memory-lancedb-pro.md",
+      "content_timestamp": "2026-05-27",
+      "collected_at": "2026-05-27T09:59:08+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_27"
+    },
+    {
       "repo": "crewaiinc/crewai",
       "url": "https://github.com/crewaiinc/crewai",
       "file": "raw-github/crewaiinc_crewai.md",
@@ -1346,6 +1355,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "garrytan/gbrain",
+      "url": "https://github.com/garrytan/gbrain",
+      "file": "raw-github/garrytan_gbrain.md",
+      "content_timestamp": "2026-05-27",
+      "collected_at": "2026-05-27T09:59:08+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_27"
+    },
+    {
       "repo": "GeniusHTX/SWE-Skills-Bench",
       "url": "https://github.com/GeniusHTX/SWE-Skills-Bench",
       "file": "raw-github/geniushtx_swe-skills-bench.md",
@@ -1787,13 +1805,13 @@
       "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
-      "repo": "internscience/internagent",
-      "url": "https://github.com/internscience/internagent",
+      "repo": "InternScience/InternAgent",
+      "url": "https://github.com/InternScience/InternAgent",
       "file": "raw-github/internscience_internagent.md",
-      "content_timestamp": "unknown",
-      "collected_at": "2026-05-20T17:44:59Z",
-      "time_slice": "unknown",
-      "timestamp_source": "unknown_not_present_in_raw_capture"
+      "content_timestamp": "2026-05-27",
+      "collected_at": "2026-05-27T09:59:08+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_27"
     },
     {
       "repo": "isenglab/awesomellm4apr",
@@ -2424,6 +2442,15 @@
       "collected_at": "2026-05-24T20:20:00+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_github_page_open_2026-05-24"
+    },
+    {
+      "repo": "mem9-ai/mem9",
+      "url": "https://github.com/mem9-ai/mem9",
+      "file": "raw-github/mem9-ai_mem9.md",
+      "content_timestamp": "2026-05-27",
+      "collected_at": "2026-05-27T09:59:08+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_27"
     },
     {
       "repo": "Memento-Teams/Memento-Skills",
@@ -3864,6 +3891,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "sunnja69/akephalos",
+      "url": "https://github.com/sunnja69/akephalos",
+      "file": "raw-github/sunnja69_akephalos.md",
+      "content_timestamp": "2026-05-27",
+      "collected_at": "2026-05-27T09:59:08+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_27"
     },
     {
       "repo": "sunzey/seagent",

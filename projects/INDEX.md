@@ -267,6 +267,12 @@
 | Hermes Agent Meta-Harness | [howdymary/hermes-agent-metaharness](https://github.com/howdymary/hermes-agent-metaharness) | Hermes Benchmark Outer-Loop Harness | [projects/250-hermes-agent-metaharness-outer-loop.md](250-hermes-agent-metaharness-outer-loop.md) |
 | SkillX | [zjunlp/SkillX](https://github.com/zjunlp/SkillX) | Automated Agent Skill KB Construction | [projects/251-skillx-agent-skill-kb-construction.md](251-skillx-agent-skill-kb-construction.md) |
 
+| mem9 | [mem9-ai/mem9](https://github.com/mem9-ai/mem9) | Persistent Memory Layer for Multi-Agent Runtimes | [projects/252-mem9-persistent-memory-layer.md](252-mem9-persistent-memory-layer.md) |
+| memory-lancedb-pro | [CortexReach/memory-lancedb-pro](https://github.com/CortexReach/memory-lancedb-pro) | OpenClaw Long-Term Memory Plugin | [projects/253-memory-lancedb-pro-openclaw-memory-assistant.md](253-memory-lancedb-pro-openclaw-memory-assistant.md) |
+| GBrain | [garrytan/gbrain](https://github.com/garrytan/gbrain) | Agent Company Brain and Memory OS | [projects/254-gbrain-agent-company-brain.md](254-gbrain-agent-company-brain.md) |
+| Akephalos | [sunnja69/akephalos](https://github.com/sunnja69/akephalos) | Local-First Agent Passport Memory Bundle | [projects/255-akephalos-local-agent-passport.md](255-akephalos-local-agent-passport.md) |
+| InternAgent-1.5 | [InternScience/InternAgent](https://github.com/InternScience/InternAgent) | Autonomous Scientific Discovery Agent Framework | [projects/256-internagent-autonomous-scientific-discovery.md](256-internagent-autonomous-scientific-discovery.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

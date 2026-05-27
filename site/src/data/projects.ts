@@ -3338,6 +3338,152 @@ export const projects: Project[] = [
                     "agent transfer",
                     "benchmark"
             ]
+    },
+    {
+            "name": "mem9",
+            "repo": "mem9-ai/mem9",
+            "url": "https://github.com/mem9-ai/mem9",
+            "stars": 1100,
+            "forks": 111,
+            "language": "Go",
+            "license": "Apache-2.0",
+            "report": "projects/252-mem9-persistent-memory-layer.md",
+            "pattern": "memory write/search/get/update/delete API -> runtime plugins and skills -> cross-session recall -> shared multi-agent memory reuse",
+            "description": "mem9 provides a persistent memory server and plugin integrations so multiple agent runtimes can share durable context instead of isolated session notes.",
+            "stack": [
+                    "Go",
+                    "TypeScript",
+                    "OpenClaw",
+                    "Hermes",
+                    "Codex",
+                    "Dify"
+            ],
+            "category": "Persistent Memory Layer for Multi-Agent Runtimes",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/mem9-ai_mem9.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "multi-agent",
+                    "openclaw",
+                    "codex",
+                    "persistent context"
+            ]
+    },
+    {
+            "name": "memory-lancedb-pro",
+            "repo": "CortexReach/memory-lancedb-pro",
+            "url": "https://github.com/CortexReach/memory-lancedb-pro",
+            "stars": 4400,
+            "forks": 725,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/253-memory-lancedb-pro-openclaw-memory-assistant.md",
+            "pattern": "auto-capture memory -> vector+BM25 retrieval -> rerank/context injection -> scoped memory boundaries -> CLI backup and migration",
+            "description": "memory-lancedb-pro is a production-grade OpenClaw memory plugin that combines long-term storage, hybrid retrieval, and scoped context injection for agent workflows.",
+            "stack": [
+                    "TypeScript",
+                    "LanceDB",
+                    "OpenClaw plugin"
+            ],
+            "category": "OpenClaw Long-Term Memory Plugin",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/cortexreach_memory-lancedb-pro.md",
+            "status": "candidate",
+            "tags": [
+                    "memory plugin",
+                    "lancedb",
+                    "openclaw",
+                    "hybrid retrieval",
+                    "agent context"
+            ]
+    },
+    {
+            "name": "GBrain",
+            "repo": "garrytan/gbrain",
+            "url": "https://github.com/garrytan/gbrain",
+            "stars": 19200,
+            "forks": 2700,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/254-gbrain-agent-company-brain.md",
+            "pattern": "ingest multi-source signals -> synthesize and link entities -> persist memory graph -> query/retrieve for next actions -> recurring maintenance jobs",
+            "description": "GBrain is an opinionated long-term brain layer for OpenClaw and Hermes-style agents, combining structured memory pages, graph linking, and retrieval workflows.",
+            "stack": [
+                    "TypeScript",
+                    "Markdown",
+                    "Knowledge Graph",
+                    "OpenClaw"
+            ],
+            "category": "Agent Company Brain and Memory OS",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/garrytan_gbrain.md",
+            "status": "candidate",
+            "tags": [
+                    "memory substrate",
+                    "knowledge graph",
+                    "openclaw",
+                    "hermes",
+                    "agent ops"
+            ]
+    },
+    {
+            "name": "Akephalos",
+            "repo": "sunnja69/akephalos",
+            "url": "https://github.com/sunnja69/akephalos",
+            "stars": 0,
+            "forks": 1,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/255-akephalos-local-agent-passport.md",
+            "pattern": "local passport init -> markdown/jsonl memory updates -> multi-agent bundle sync -> optional mcp serving",
+            "description": "Akephalos is a markdown-first local passport for AI agents that carries durable user and project context across different tools and machines.",
+            "stack": [
+                    "TypeScript",
+                    "Markdown",
+                    "JSONL",
+                    "CLI"
+            ],
+            "category": "Local-First Agent Passport Memory Bundle",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/sunnja69_akephalos.md",
+            "status": "candidate",
+            "tags": [
+                    "local-first",
+                    "agent passport",
+                    "memory portability",
+                    "markdown",
+                    "mcp"
+            ]
+    },
+    {
+            "name": "InternAgent-1.5",
+            "repo": "InternScience/InternAgent",
+            "url": "https://github.com/InternScience/InternAgent",
+            "stars": 1300,
+            "forks": 116,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/256-internagent-autonomous-scientific-discovery.md",
+            "pattern": "idea generation -> method construction -> experiment planning and execution -> benchmark evaluation -> memory-informed next iteration",
+            "description": "InternAgent-1.5 is a unified multi-agent framework for long-horizon autonomous scientific discovery, spanning discovery runs, QA deep research, and reproducible task execution.",
+            "stack": [
+                    "Python",
+                    "Shell",
+                    "Deep-Research",
+                    "Experiment Orchestration"
+            ],
+            "category": "Autonomous Scientific Discovery Agent Framework",
+            "lastPushed": "2026-05-27T00:00:00Z",
+            "localPath": "raw-github/internscience_internagent.md",
+            "status": "candidate",
+            "tags": [
+                    "research agent",
+                    "scientific discovery",
+                    "multi-agent",
+                    "benchmark",
+                    "memory"
+            ]
     }
 ];
 
@@ -3368,7 +3514,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

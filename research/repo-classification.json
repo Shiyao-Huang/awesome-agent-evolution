@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T21:54:04+08:00",
+  "generated_at": "2026-05-27T09:59:08+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -1427,6 +1427,21 @@
       "description": "Awesome Codex Skills is a high-signal catalog of practical Codex skill folders for workflow automation, including Composio-backed actions across external services."
     },
     {
+      "repo": "CortexReach/memory-lancedb-pro",
+      "url": "https://github.com/CortexReach/memory-lancedb-pro",
+      "stars": "4400",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "TypeScript/LanceDB/OpenClaw plugin",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 4.4k stars, 725 forks, 459 commits, MIT license signal, and README notes for OpenClaw memory assistant behavior with hybrid retrieval and plugin lifecycle tooling.",
+      "description": "memory-lancedb-pro is a production-grade OpenClaw memory plugin that combines long-term storage, hybrid retrieval, and scoped context injection for agent workflows."
+    },
+    {
       "repo": "crewaiinc/crewai",
       "url": "https://github.com/crewaiinc/crewai",
       "stars": "51",
@@ -2237,6 +2252,21 @@
       "description": "Self-aware cognitive AI agent that reads, modifies & verifies its own code. Autonomous planning, episodic memory, emotional state & MCP integration. Runs on Claude, GPT-4 or Ollama. Electron desktop app for Windows, macO"
     },
     {
+      "repo": "garrytan/gbrain",
+      "url": "https://github.com/garrytan/gbrain",
+      "stars": "19200",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "TypeScript/Markdown/Knowledge Graph/OpenClaw",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 19.2k stars, 2.7k forks, 255 commits, MIT license, and README claims for large-scale personal/company brain operations with graph-aware retrieval and synthesis.",
+      "description": "GBrain is an opinionated long-term brain layer for OpenClaw and Hermes-style agents, combining structured memory pages, graph linking, and retrieval workflows."
+    },
+    {
       "repo": "GeniusHTX/SWE-Skills-Bench",
       "url": "https://github.com/GeniusHTX/SWE-Skills-Bench",
       "stars": "42",
@@ -2972,19 +3002,19 @@
       "description": "WildClawBench is an authentic benchmark for LLM agents with real-world-style multi-turn dynamic tasks and anti-overfitting design."
     },
     {
-      "repo": "internscience/internagent",
-      "url": "https://github.com/internscience/internagent",
-      "stars": "1",
+      "repo": "InternScience/InternAgent",
+      "url": "https://github.com/InternScience/InternAgent",
+      "stars": "1300",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "框架/framework",
-      "function_tag": "framework-runtime",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "research-agent-pipeline",
       "base_theme": "research-agent",
-      "stack": "Python",
-      "time_slice": "unknown",
-      "content_timestamp": "unknown",
-      "evidence": "framework/runtime/orchestration signal",
-      "description": "InternAgent-1.5: A Unified Agentic Framework for Long-Horizon Autonomous Scientific Discovery"
+      "stack": "Python/Shell/Deep-Research/Experiment Orchestration",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page (redirect from Alpha-Innovator/InternAgent to InternScience/InternAgent) showed 1.3k stars, 116 forks, 45 commits, Apache-2.0 license, and README news covering open-sourced 1.5 features plus deep-research/benchmark positioning.",
+      "description": "InternAgent-1.5 is a unified multi-agent framework for long-horizon autonomous scientific discovery, spanning discovery runs, QA deep research, and reproducible task execution."
     },
     {
       "repo": "isenglab/awesomellm4apr",
@@ -4035,6 +4065,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed 15 commits, Apache-2.0 license, Python/TypeScript stack, LOCOMO/LongMemEval/BEAM benchmarks, Mem0 cloud and OSS paths, 33 stars and 9 forks",
       "description": "mem0ai/memory-benchmarks 是 memory-augmented LLM systems 的公开评测套件，覆盖 LOCOMO、LongMemEval 和 BEAM，并同时支持 Mem0 cloud 与 OSS self-hosted pipeline。"
+    },
+    {
+      "repo": "mem9-ai/mem9",
+      "url": "https://github.com/mem9-ai/mem9",
+      "stars": "1100",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "Go/TypeScript/OpenClaw/Hermes/Codex/Dify",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 1.1k stars, 111 forks, 433 commits, Apache-2.0 license, and README claims for OpenClaw/Hermes/Claude Code/OpenCode/Codex/Dify integrations with shared API-driven memory.",
+      "description": "mem9 provides a persistent memory server and plugin integrations so multiple agent runtimes can share durable context instead of isolated session notes."
     },
     {
       "repo": "Memento-Teams/Memento-Skills",
@@ -6435,6 +6480,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "framework/runtime/orchestration signal",
       "description": "Where AI agents deliberate, debate & discover"
+    },
+    {
+      "repo": "sunnja69/akephalos",
+      "url": "https://github.com/sunnja69/akephalos",
+      "stars": "0",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "TypeScript/Markdown/JSONL/CLI",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-27",
+      "evidence": "web-observed GitHub page showed 0 stars, 1 fork, 3 commits, MIT license signal, and README workflow for local .akephalos bundles, memory ledgers, and agent bootstrap prompts.",
+      "description": "Akephalos is a markdown-first local passport for AI agents that carries durable user and project context across different tools and machines."
     },
     {
       "repo": "sunzey/seagent",

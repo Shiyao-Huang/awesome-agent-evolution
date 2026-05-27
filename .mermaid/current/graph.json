@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T21:54:04+08:00",
+  "generated_at": "2026-05-27T09:59:08+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -229,7 +229,12 @@
         "raw-github/benchflow-ai_skillsbench.md",
         "raw-github/stanford-iris-lab_meta-harness.md",
         "raw-github/howdymary_hermes-agent-metaharness.md",
-        "raw-github/zjunlp_skillx.md"
+        "raw-github/zjunlp_skillx.md",
+        "raw-github/mem9-ai_mem9.md",
+        "raw-github/cortexreach_memory-lancedb-pro.md",
+        "raw-github/garrytan_gbrain.md",
+        "raw-github/sunnja69_akephalos.md",
+        "raw-github/internscience_internagent.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -362,7 +367,8 @@
         "work/research/hourly-public-metadata-update-2026-05-26-1001.md",
         "work/research/hourly-public-metadata-update-2026-05-26-1618.md",
         ".mermaid/current/graph.json",
-        "work/research/hourly-public-metadata-update-2026-05-26-2154.md"
+        "work/research/hourly-public-metadata-update-2026-05-26-2154.md",
+        "work/research/hourly-public-metadata-update-2026-05-27-0959.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -762,7 +768,17 @@
         "projects/250-hermes-agent-metaharness-outer-loop.md",
         "site/public/reports/projects/250-hermes-agent-metaharness-outer-loop.md",
         "projects/251-skillx-agent-skill-kb-construction.md",
-        "site/public/reports/projects/251-skillx-agent-skill-kb-construction.md"
+        "site/public/reports/projects/251-skillx-agent-skill-kb-construction.md",
+        "projects/252-mem9-persistent-memory-layer.md",
+        "site/public/reports/projects/252-mem9-persistent-memory-layer.md",
+        "projects/253-memory-lancedb-pro-openclaw-memory-assistant.md",
+        "site/public/reports/projects/253-memory-lancedb-pro-openclaw-memory-assistant.md",
+        "projects/254-gbrain-agent-company-brain.md",
+        "site/public/reports/projects/254-gbrain-agent-company-brain.md",
+        "projects/255-akephalos-local-agent-passport.md",
+        "site/public/reports/projects/255-akephalos-local-agent-passport.md",
+        "projects/256-internagent-autonomous-scientific-discovery.md",
+        "site/public/reports/projects/256-internagent-autonomous-scientific-discovery.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1088,12 +1104,13 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-26T21:54:04+08:00",
+    "run_at": "2026-05-27T09:59:08+08:00",
     "added_repositories": [
-      "benchflow-ai/skillsbench",
-      "stanford-iris-lab/meta-harness",
-      "howdymary/hermes-agent-metaharness",
-      "zjunlp/SkillX"
+      "mem9-ai/mem9",
+      "CortexReach/memory-lancedb-pro",
+      "garrytan/gbrain",
+      "sunnja69/akephalos",
+      "InternScience/InternAgent"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",

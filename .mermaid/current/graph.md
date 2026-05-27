@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-26T21:54:04+08:00
+Generated: 2026-05-27T09:59:08+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-05-26T21:54:04+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: benchflow-ai/skillsbench, stanford-iris-lab/meta-harness, howdymary/hermes-agent-metaharness, zjunlp/SkillX.
-- New raw files: raw-github/benchflow-ai_skillsbench.md, raw-github/stanford-iris-lab_meta-harness.md, raw-github/howdymary_hermes-agent-metaharness.md, raw-github/zjunlp_skillx.md.
-- New public model cards and site reports: project/report ids 248, 249, 250, 251.
+- Web-observed repos: mem9-ai/mem9, CortexReach/memory-lancedb-pro, garrytan/gbrain, sunnja69/akephalos, InternScience/InternAgent.
+- New raw files: raw-github/mem9-ai_mem9.md, raw-github/cortexreach_memory-lancedb-pro.md, raw-github/garrytan_gbrain.md, raw-github/sunnja69_akephalos.md, raw-github/internscience_internagent.md.
+- New public model cards and site reports: project/report ids 252, 253, 254, 255, 256.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
 - GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.
