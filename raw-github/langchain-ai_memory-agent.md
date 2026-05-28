@@ -1,6 +1,6 @@
 ---
-repo: mindfold-ai/trellis
-url: https://github.com/mindfold-ai/trellis
+repo: langchain-ai/memory-agent
+url: https://github.com/langchain-ai/memory-agent
 content_timestamp: 2026-05-28
 time_slice: 2026-05
 timestamp_source: web_observed_public_github_page_2026_05_28
@@ -8,9 +8,9 @@ collected_at: 2026-05-28T22:03:48+08:00
 source: github
 ---
 
-## GitHub - mindfold-ai/trellis: Trellis is an open-source harness for running and coordinating AI agents across local and cloud environments with practical workflow execution support.
+## GitHub - langchain-ai/memory-agent: memory-agent is LangChain’s reference memory-aware agent application that demonstrates persistent user context and long-term adaptive behavior.
 
-**Source**: https://github.com/mindfold-ai/trellis
+**Source**: https://github.com/langchain-ai/memory-agent
 
 ---
 
@@ -20,20 +20,20 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 
 ## Visible repository metadata
 
-- Repository: mindfold-ai/trellis
-- URL: https://github.com/mindfold-ai/trellis
-- Stars: 8600
-- Forks: 468
-- Commits: 1017
-- License: AGPL-3.0
-- Primary language / stack signal: TypeScript/Node.js Agent Harness Runtime
+- Repository: langchain-ai/memory-agent
+- URL: https://github.com/langchain-ai/memory-agent
+- Stars: 1800
+- Forks: 51
+- Commits: 33
+- License: MIT
+- Primary language / stack signal: Python/LangGraph/LangMem
 - Collection timestamp: 2026-05-28T22:03:48+08:00
 
 ## Visible README / page excerpts
 
-- Repository tagline explicitly markets Trellis as an open-source AI agent harness.
-- Public metadata shows substantial TypeScript codebase and active maintenance.
-- Positioning covers both local and cloud execution paths for agent workflows.
+- Repository tagline states this is a memory-enabled AI assistant template.
+- README and docs reference LangGraph and LangMem integration for context retention.
+- Project structure emphasizes reproducible local setup and workflow inspection.
 - Counts were taken from the public GitHub page without authenticated API claims.
 
 ## Raw capture boundary

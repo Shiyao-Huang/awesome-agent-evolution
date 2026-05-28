@@ -1,6 +1,6 @@
 ---
-repo: mindfold-ai/trellis
-url: https://github.com/mindfold-ai/trellis
+repo: iflytek/skillhub
+url: https://github.com/iflytek/skillhub
 content_timestamp: 2026-05-28
 time_slice: 2026-05
 timestamp_source: web_observed_public_github_page_2026_05_28
@@ -8,9 +8,9 @@ collected_at: 2026-05-28T22:03:48+08:00
 source: github
 ---
 
-## GitHub - mindfold-ai/trellis: Trellis is an open-source harness for running and coordinating AI agents across local and cloud environments with practical workflow execution support.
+## GitHub - iflytek/skillhub: SkillHub is an open-source AI agent platform focused on skill packaging, orchestration, and reusable execution components.
 
-**Source**: https://github.com/mindfold-ai/trellis
+**Source**: https://github.com/iflytek/skillhub
 
 ---
 
@@ -20,20 +20,20 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 
 ## Visible repository metadata
 
-- Repository: mindfold-ai/trellis
-- URL: https://github.com/mindfold-ai/trellis
-- Stars: 8600
-- Forks: 468
-- Commits: 1017
-- License: AGPL-3.0
-- Primary language / stack signal: TypeScript/Node.js Agent Harness Runtime
+- Repository: iflytek/skillhub
+- URL: https://github.com/iflytek/skillhub
+- Stars: 3200
+- Forks: 443
+- Commits: 903
+- License: Apache-2.0
+- Primary language / stack signal: C++/Go/TypeScript Multi-Agent Skill Platform
 - Collection timestamp: 2026-05-28T22:03:48+08:00
 
 ## Visible README / page excerpts
 
-- Repository tagline explicitly markets Trellis as an open-source AI agent harness.
-- Public metadata shows substantial TypeScript codebase and active maintenance.
-- Positioning covers both local and cloud execution paths for agent workflows.
+- Repository tagline positions SkillHub as an open-source AI agent platform.
+- Language profile shows significant C++, Go, and TypeScript implementation share.
+- Public metadata indicates ongoing engineering activity and issue/PR maintenance.
 - Counts were taken from the public GitHub page without authenticated API claims.
 
 ## Raw capture boundary

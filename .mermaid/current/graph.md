@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-28T10:00:31+08:00
+Generated: 2026-05-28T22:03:48+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-05-28T10:00:31+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: openclaw/clawhub, VoltAgent/awesome-openclaw-skills, ZeroLu/awesome-openclaw, QuantClaw/QuantClaw, InternScience/Awesome-Scientific-Skills, TIGER-AI-Lab/ClawBench.
-- New raw files: raw-github/openclaw_clawhub.md, raw-github/voltagent_awesome-openclaw-skills.md, raw-github/zerolu_awesome-openclaw.md, raw-github/quantclaw_quantclaw.md, raw-github/internscience_awesome-scientific-skills.md, raw-github/tiger-ai-lab_clawbench.md.
-- New public model cards and site reports: project/report ids 275, 276, 277, 278, 279, 280.
+- Web-observed repos: redis/agent-memory-server, langchain-ai/memory-agent, iflytek/skillhub, mindfold-ai/trellis, memodb-io/Acontext, nemori-ai/nemori.
+- New raw files: raw-github/redis_agent-memory-server.md, raw-github/langchain-ai_memory-agent.md, raw-github/iflytek_skillhub.md, raw-github/mindfold-ai_trellis.md, raw-github/memodb-io_acontext.md, raw-github/nemori-ai_nemori.md.
+- New public model cards and site reports: project/report ids 281, 282, 283, 284, 285, 286.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
-- GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
+- GitNexus status/list are available, but `npx gitnexus analyze .` failed with `EPERM` on `/Users/copizzah/.gitnexus/registry.json`; graph-relationship evidence remains stale for this run.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

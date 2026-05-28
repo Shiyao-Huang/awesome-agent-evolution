@@ -301,6 +301,13 @@
 | Awesome Scientific Skills | [InternScience/Awesome-Scientific-Skills](https://github.com/InternScience/Awesome-Scientific-Skills) | Scientific Agent Skill and Tooling Index | [projects/279-awesome-scientific-skills-research-index.md](279-awesome-scientific-skills-research-index.md) |
 | ClawBench | [TIGER-AI-Lab/ClawBench](https://github.com/TIGER-AI-Lab/ClawBench) | Open-Ended Agent Benchmark Harness | [projects/280-clawbench-open-ended-agent-benchmark.md](280-clawbench-open-ended-agent-benchmark.md) |
 
+| Redis Agent Memory Server | [redis/agent-memory-server](https://github.com/redis/agent-memory-server) | Agent Memory Runtime and Context Service | [projects/281-redis-agent-memory-server-runtime.md](281-redis-agent-memory-server-runtime.md) |
+| LangChain Memory Agent | [langchain-ai/memory-agent](https://github.com/langchain-ai/memory-agent) | Memory-Aware Agent Workflow and Evaluation App | [projects/282-langchain-memory-agent-workflow.md](282-langchain-memory-agent-workflow.md) |
+| iFLYTEK SkillHub | [iflytek/skillhub](https://github.com/iflytek/skillhub) | Agent Skill Registry and Open Runtime Platform | [projects/283-iflytek-skillhub-agent-skill-registry.md](283-iflytek-skillhub-agent-skill-registry.md) |
+| Trellis | [mindfold-ai/trellis](https://github.com/mindfold-ai/trellis) | Agent Harness and Local/Cloud Runtime Framework | [projects/284-mindfold-trellis-agent-harness.md](284-mindfold-trellis-agent-harness.md) |
+| Acontext | [memodb-io/Acontext](https://github.com/memodb-io/Acontext) | Agent Skill Memory Layer and Runtime Context Engine | [projects/285-memodb-acontext-memory-layer.md](285-memodb-acontext-memory-layer.md) |
+| Nemori | [nemori-ai/nemori](https://github.com/nemori-ai/nemori) | Episodic Agent Memory Substrate and Knowledge Store | [projects/286-nemori-episodic-memory-substrate.md](286-nemori-episodic-memory-substrate.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

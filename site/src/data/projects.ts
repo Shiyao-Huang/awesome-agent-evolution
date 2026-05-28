@@ -4165,6 +4165,145 @@ export const projects: Project[] = [
                     "evaluation",
                     "agent-harness"
             ]
+    },
+    {
+            "name": "Redis Agent Memory Server",
+            "repo": "redis/agent-memory-server",
+            "url": "https://github.com/redis/agent-memory-server",
+            "stars": 266,
+            "forks": 51,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/281-redis-agent-memory-server-runtime.md",
+            "pattern": "agent event and interaction signals -> Redis-backed memory storage and retrieval -> MCP server exposes memory operations to agents -> memory context reused in downstream task loops",
+            "description": "agent-memory-server is Redis-maintained memory middleware that gives AI agents fast, persistent, and flexible context memory through an MCP service.",
+            "stack": [
+                    "Python",
+                    "Redis",
+                    "MCP Memory Service"
+            ],
+            "category": "Agent Memory Runtime and Context Service",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/redis_agent-memory-server.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "redis",
+                    "mcp",
+                    "agent-runtime",
+                    "context-service"
+            ]
+    },
+    {
+            "name": "LangChain Memory Agent",
+            "repo": "langchain-ai/memory-agent",
+            "url": "https://github.com/langchain-ai/memory-agent",
+            "stars": 1800,
+            "forks": 51,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/282-langchain-memory-agent-workflow.md",
+            "pattern": "long-running conversation and user context -> memory extraction and consolidation via LangMem -> LangGraph workflow execution -> memory-grounded follow-up behavior and replayable traces",
+            "description": "memory-agent is LangChain’s reference memory-aware agent application that demonstrates persistent user context and long-term adaptive behavior.",
+            "stack": [
+                    "Python",
+                    "LangGraph",
+                    "LangMem"
+            ],
+            "category": "Memory-Aware Agent Workflow and Evaluation App",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/langchain-ai_memory-agent.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "langgraph",
+                    "langmem",
+                    "agent-workflow",
+                    "evaluation"
+            ]
+    },
+    {
+            "name": "iFLYTEK SkillHub",
+            "repo": "iflytek/skillhub",
+            "url": "https://github.com/iflytek/skillhub",
+            "stars": 3200,
+            "forks": 443,
+            "language": "C++",
+            "license": "Apache-2.0",
+            "report": "projects/283-iflytek-skillhub-agent-skill-registry.md",
+            "pattern": "structured skill package definition -> runtime orchestration and multi-agent routing -> deployment and plugin integration -> reusable skill asset lifecycle management",
+            "description": "SkillHub is an open-source AI agent platform focused on skill packaging, orchestration, and reusable execution components.",
+            "stack": [
+                    "C++",
+                    "Go",
+                    "TypeScript Multi-Agent Skill Platform"
+            ],
+            "category": "Agent Skill Registry and Open Runtime Platform",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/iflytek_skillhub.md",
+            "status": "candidate",
+            "tags": [
+                    "skill",
+                    "agent-platform",
+                    "multi-agent",
+                    "orchestration",
+                    "runtime"
+            ]
+    },
+    {
+            "name": "Acontext",
+            "repo": "memodb-io/Acontext",
+            "url": "https://github.com/memodb-io/Acontext",
+            "stars": 3500,
+            "forks": 319,
+            "language": "TypeScript",
+            "license": "Apache-2.0",
+            "report": "projects/285-memodb-acontext-memory-layer.md",
+            "pattern": "skill and behavior trace ingestion -> memory indexing and retrieval -> context-aware execution with long-term persistence -> memory-informed agent behavior adaptation",
+            "description": "Acontext provides an agent memory layer designed to persist and retrieve skill-aware context for autonomous AI workflows.",
+            "stack": [
+                    "TypeScript",
+                    "Rust Agent Memory Infrastructure"
+            ],
+            "category": "Agent Skill Memory Layer and Runtime Context Engine",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/memodb-io_Acontext.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "agent-skills",
+                    "context-engine",
+                    "runtime",
+                    "long-term-memory"
+            ]
+    },
+    {
+            "name": "Nemori",
+            "repo": "nemori-ai/nemori",
+            "url": "https://github.com/nemori-ai/nemori",
+            "stars": 202,
+            "forks": 17,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/286-nemori-episodic-memory-substrate.md",
+            "pattern": "episodic interaction capture -> memory graph indexing and retrieval -> semantic recall for future agent plans -> persistent memory feedback into subsequent actions",
+            "description": "Nemori is an episodic memory and persistent context engine for autonomous agents that need durable recall across sessions.",
+            "stack": [
+                    "TypeScript",
+                    "Vector DB",
+                    "Agent Memory Graph"
+            ],
+            "category": "Episodic Agent Memory Substrate and Knowledge Store",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/nemori-ai_nemori.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "episodic",
+                    "knowledge-graph",
+                    "context-retrieval",
+                    "agent-state"
+            ]
     }
 ];
 
@@ -4195,7 +4334,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

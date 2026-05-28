@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T10:00:31+08:00",
+  "generated_at": "2026-05-28T22:03:48+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -2912,6 +2912,21 @@
       "description": "Survey paper: From Static Templates to Dynamic Runtime Graphs: A Survey of Workflow Optimization for LLM Agents."
     },
     {
+      "repo": "iflytek/skillhub",
+      "url": "https://github.com/iflytek/skillhub",
+      "stars": "3200",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "C++/Go/TypeScript Multi-Agent Skill Platform",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 3.2k stars, 443 forks, 903 commits, Apache-2.0 license, and project messaging around an open-source AI Agent platform.",
+      "description": "SkillHub is an open-source AI agent platform focused on skill packaging, orchestration, and reusable execution components."
+    },
+    {
       "repo": "iii-experimental/agentos",
       "url": "https://github.com/iii-experimental/agentos",
       "stars": "145",
@@ -3647,6 +3662,21 @@
       "description": "LangSmith Client SDK Implementations"
     },
     {
+      "repo": "langchain-ai/memory-agent",
+      "url": "https://github.com/langchain-ai/memory-agent",
+      "stars": "1800",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "应用/application",
+      "function_tag": "application-demo",
+      "base_theme": "memory",
+      "stack": "Python/LangGraph/LangMem",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 1.8k stars, 51 forks, 33 commits, MIT license, and README guidance for memory-rich agent workflows.",
+      "description": "memory-agent is LangChain’s reference memory-aware agent application that demonstrates persistent user context and long-term adaptive behavior."
+    },
+    {
       "repo": "langchain-ai/open-swe",
       "url": "https://github.com/langchain-ai/open-swe",
       "stars": "9",
@@ -4232,19 +4262,19 @@
       "description": "Memento-Skills 是 deployment-time learning Agent 框架，让 Agent 在冻结模型参数的前提下通过 skill memory、失败反思和技能重写持续进化。"
     },
     {
-      "repo": "memodb-io/acontext",
-      "url": "https://github.com/memodb-io/acontext",
-      "stars": "3",
+      "repo": "memodb-io/Acontext",
+      "url": "https://github.com/memodb-io/Acontext",
+      "stars": "3500",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "工具/tool",
-      "function_tag": "tool-module",
+      "final_category": "框架/framework",
+      "function_tag": "memory-substrate",
       "base_theme": "memory",
-      "stack": "Markdown",
+      "stack": "TypeScript/Rust Agent Memory Infrastructure",
       "time_slice": "2026-05",
-      "content_timestamp": "2026-05-21",
-      "evidence": "tool/module/memory/prompt/coding signal",
-      "description": "Agent Skills as a Memory Layer"
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 3.5k stars, 319 forks, 1,080 commits, Apache-2.0 license, and README framing as a memory layer for agent skills.",
+      "description": "Acontext provides an agent memory layer designed to persist and retrieve skill-aware context for autonomous AI workflows."
     },
     {
       "repo": "memodb-io/memobase",
@@ -4532,19 +4562,19 @@
       "description": "MicrosoftDocs 的 Azure Agent Skills 仓库，把 Microsoft Learn/Azure 文档组织为 SKILL.md 技能，服务 Copilot、Codex、Claude Code、Cursor 等 coding agents。"
     },
     {
-      "repo": "mindfold-ai/Trellis",
-      "url": "https://github.com/mindfold-ai/Trellis",
-      "stars": "8500",
+      "repo": "mindfold-ai/trellis",
+      "url": "https://github.com/mindfold-ai/trellis",
+      "stars": "8600",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
-      "base_theme": "memory",
-      "stack": "Python/TypeScript/Rust/CDP/Docker",
+      "base_theme": "framework",
+      "stack": "TypeScript/Node.js Agent Harness Runtime",
       "time_slice": "2026-05",
-      "content_timestamp": "2026-05-27",
-      "evidence": "web-observed GitHub page showed 8.5k stars, 466 forks, 1,017 commits, AGPL-3.0 license, and README emphasis on visual agent workspace, memory structure, and high-frequency task loops.",
-      "description": "Trellis is an open-source cognitive workspace for autonomous agents with browser execution, persistent workspace memory, and explicit reasoning workflows."
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 8.6k stars, 468 forks, 1,017 commits, AGPL-3.0 license, and README positioning as an agent harness.",
+      "description": "Trellis is an open-source harness for running and coordinating AI agents across local and cloud environments with practical workflow execution support."
     },
     {
       "repo": "mitchellgordon95/dspy",
@@ -4710,6 +4740,21 @@
       "content_timestamp": "unknown",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Monte Carlo Tree Search Self-Refine (MCTSr)"
+    },
+    {
+      "repo": "nemori-ai/nemori",
+      "url": "https://github.com/nemori-ai/nemori",
+      "stars": "202",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "TypeScript/Vector DB/Agent Memory Graph",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 202 stars, 17 forks, 79 commits, MIT license, and project framing around episodic memory for autonomous agents.",
+      "description": "Nemori is an episodic memory and persistent context engine for autonomous agents that need durable recall across sessions."
     },
     {
       "repo": "neo4j-labs/agent-memory",
@@ -5775,6 +5820,21 @@
       "content_timestamp": "2026-05-26",
       "evidence": "web-observed GitHub page showed 3 commits, Python package layout, 1 star, 0 forks, and README language for graph-native AI agent memory with typed nodes, causal links, capacity-aware decay/compression/removal, JSON persistence and optional embeddings; shell GitHub API freshness was blocked.",
       "description": "state-trace is a graph-native memory engine for AI agents that stores typed memories and causal links, then retrieves state-aware context through graph traversal instead of only vector similarity."
+    },
+    {
+      "repo": "redis/agent-memory-server",
+      "url": "https://github.com/redis/agent-memory-server",
+      "stars": "266",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "Python/Redis/MCP Memory Service",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 266 stars, 51 forks, 735 commits, MIT license, Python-first implementation, and README framing as fast/flexible memory for AI agents.",
+      "description": "agent-memory-server is Redis-maintained memory middleware that gives AI agents fast, persistent, and flexible context memory through an MCP service."
     },
     {
       "repo": "reflexioai/reflexio",

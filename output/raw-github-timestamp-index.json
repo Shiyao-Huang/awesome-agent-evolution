@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-28T00:00:00+08:00",
-  "total": 562,
-  "updated_files": 562,
+  "total": 566,
+  "updated_files": 566,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -1751,6 +1751,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "iflytek/skillhub",
+      "url": "https://github.com/iflytek/skillhub",
+      "file": "raw-github/iflytek_skillhub.md",
+      "content_timestamp": "2026-05-28",
+      "collected_at": "2026-05-28T22:03:48+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_28"
+    },
+    {
       "repo": "iii-experimental/agentos",
       "url": "https://github.com/iii-experimental/agentos",
       "file": "raw-github/iii-experimental_agentos.md",
@@ -2192,6 +2201,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "langchain-ai/memory-agent",
+      "url": "https://github.com/langchain-ai/memory-agent",
+      "file": "raw-github/langchain-ai_memory-agent.md",
+      "content_timestamp": "2026-05-28",
+      "collected_at": "2026-05-28T22:03:48+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_28"
+    },
+    {
       "repo": "langchain-ai/open-swe",
       "url": "https://github.com/langchain-ai/open-swe",
       "file": "raw-github/langchain-ai_open-swe.md",
@@ -2543,13 +2561,13 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
-      "repo": "memodb-io/acontext",
-      "url": "https://github.com/memodb-io/acontext",
+      "repo": "memodb-io/Acontext",
+      "url": "https://github.com/memodb-io/Acontext",
       "file": "raw-github/memodb-io_acontext.md",
-      "content_timestamp": "2026-05-21",
-      "collected_at": "2026-05-20T17:45:19Z",
+      "content_timestamp": "2026-05-28",
+      "collected_at": "2026-05-28T22:03:48+08:00",
       "time_slice": "2026-05",
-      "timestamp_source": "github_latest_commit_or_update_text"
+      "timestamp_source": "web_observed_public_github_page_2026_05_28"
     },
     {
       "repo": "memodb-io/memobase",
@@ -2723,13 +2741,13 @@
       "timestamp_source": "web_github_page_open_2026-05-24"
     },
     {
-      "repo": "mindfold-ai/Trellis",
-      "url": "https://github.com/mindfold-ai/Trellis",
+      "repo": "mindfold-ai/trellis",
+      "url": "https://github.com/mindfold-ai/trellis",
       "file": "raw-github/mindfold-ai_trellis.md",
-      "content_timestamp": "2026-05-27",
-      "collected_at": "2026-05-27T22:00:12+08:00",
+      "content_timestamp": "2026-05-28",
+      "collected_at": "2026-05-28T22:03:48+08:00",
       "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_05_27"
+      "timestamp_source": "web_observed_public_github_page_2026_05_28"
     },
     {
       "repo": "mitchellgordon95/dspy",
@@ -2829,6 +2847,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "nemori-ai/nemori",
+      "url": "https://github.com/nemori-ai/nemori",
+      "file": "raw-github/nemori-ai_nemori.md",
+      "content_timestamp": "2026-05-28",
+      "collected_at": "2026-05-28T22:03:48+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_28"
     },
     {
       "repo": "neo4j-labs/agent-memory",
@@ -3468,6 +3495,15 @@
       "collected_at": "2026-05-26T01:38:44+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page"
+    },
+    {
+      "repo": "redis/agent-memory-server",
+      "url": "https://github.com/redis/agent-memory-server",
+      "file": "raw-github/redis_agent-memory-server.md",
+      "content_timestamp": "2026-05-28",
+      "collected_at": "2026-05-28T22:03:48+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_28"
     },
     {
       "repo": "reflexioai/reflexio",
