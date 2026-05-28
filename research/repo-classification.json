@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T04:00:48+08:00",
+  "generated_at": "2026-05-28T10:00:31+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -3092,6 +3092,21 @@
       "description": "WildClawBench is an authentic benchmark for LLM agents with real-world-style multi-turn dynamic tasks and anti-overfitting design."
     },
     {
+      "repo": "InternScience/Awesome-Scientific-Skills",
+      "url": "https://github.com/InternScience/Awesome-Scientific-Skills",
+      "stars": "400",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/Scientific Workflow Curation",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 400 stars, 23 forks, 19 commits, MIT license, and README positioning as an awesome list for scientific agent skills and methods.",
+      "description": "Awesome-Scientific-Skills is a curated list of scientific-agent skills, tools, and workflows intended for reusable research automation."
+    },
+    {
       "repo": "InternScience/InternAgent",
       "url": "https://github.com/InternScience/InternAgent",
       "stars": "1300",
@@ -5057,6 +5072,21 @@
       "content_timestamp": "2026-04-20"
     },
     {
+      "repo": "openclaw/clawhub",
+      "url": "https://github.com/openclaw/clawhub",
+      "stars": "8800",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "TypeScript/React/OpenClaw Packages",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 8.8k stars, 1.4k forks, 1,709 commits, MIT license, and README positioning as a one-stop OpenClaw package marketplace.",
+      "description": "ClawHub is the OpenClaw package catalog for discovering, rating, and sharing open-source AI coding agent packages and workflows."
+    },
+    {
       "repo": "openclaw/openclaw",
       "url": "https://github.com/openclaw/openclaw",
       "stars": "374000",
@@ -5610,6 +5640,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub evidence observed Apache-2.0 license, Python stack, 702 stars and 83 forks; adjacent SE-Agent raw capture links QuantaAlpha ecosystem repos including RepoMaster and GitTaskBench for repo-level tasks",
       "description": "QuantaAlpha 是面向 repository-level software tasks 的 evolutionary code/repo agent，和 SE-Agent、RepoMaster、GitTaskBench 共同形成真实仓库任务上的自改进链路。"
+    },
+    {
+      "repo": "QuantClaw/QuantClaw",
+      "url": "https://github.com/QuantClaw/QuantClaw",
+      "stars": "31",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "C++/Python/LLM Trading Runtime",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 31 stars, 5 forks, 388 commits, Apache-2.0 license, and README claims around a quantitative-agent system architecture.",
+      "description": "QuantClaw is an autonomous quantitative agent runtime built around OpenClaw-style agent workflows for market analysis and execution tasks."
     },
     {
       "repo": "quantstellarlab/ai-scientist-v2",
@@ -7082,6 +7127,21 @@
       "description": "MadEvolve"
     },
     {
+      "repo": "TIGER-AI-Lab/ClawBench",
+      "url": "https://github.com/TIGER-AI-Lab/ClawBench",
+      "stars": "338",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/Benchmark Harness/OpenClaw",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 338 stars, 21 forks, 310 commits, Apache-2.0 license, and README benchmark framing for open-ended agent evaluation.",
+      "description": "ClawBench is an open-ended agent benchmark built for evaluating long-horizon OpenClaw-style agent performance and generalization."
+    },
+    {
       "repo": "tiger-ai-lab/openresearcher",
       "url": "https://github.com/tiger-ai-lab/openresearcher",
       "stars": "756",
@@ -7545,6 +7605,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "existing raw capture promoted; web GitHub page observed 350 commits, MIT license, official/community Agent Skills index, Claude Code/Codex/Gemini/Cursor/GitHub Copilot compatibility, 22.9k stars and 2.4k forks",
       "description": "VoltAgent awesome-agent-skills 是跨 Claude Code、Codex、Gemini CLI、Cursor、GitHub Copilot、OpenCode 等 agent 的官方与社区技能索引，重点筛选真实团队使用的 Agent Skills。"
+    },
+    {
+      "repo": "VoltAgent/awesome-openclaw-skills",
+      "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "stars": "49400",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/Curated Skill Catalog",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 49.4k stars, 4.8k forks, 390 commits, MIT license, and README claim of a 1000+ item skill catalog.",
+      "description": "awesome-openclaw-skills is a large curated index of OpenClaw skills, prompts, and reusable agent workflow assets."
     },
     {
       "repo": "vsonicv/es-fine-tuning-paper",
@@ -8070,6 +8145,21 @@
       "content_timestamp": "2026-05-20",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter."
+    },
+    {
+      "repo": "ZeroLu/awesome-openclaw",
+      "url": "https://github.com/ZeroLu/awesome-openclaw",
+      "stars": "71",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/Resource Curation",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-28",
+      "evidence": "web-observed GitHub page showed 71 stars, 11 forks, 9 commits, and README framing as a curated OpenClaw ecosystem resource index.",
+      "description": "awesome-openclaw curates OpenClaw ecosystem resources including skills, runtime guidance, and adjacent project links."
     },
     {
       "repo": "zesearch/self-improvement-llm",

@@ -294,6 +294,13 @@
 | TencentDB Agent Memory | [Tencent/TencentDB-Agent-Memory](https://github.com/Tencent/TencentDB-Agent-Memory) | Local Long-Term Agent Memory Substrate | [projects/273-tencentdb-agent-memory-local-memory-substrate.md](273-tencentdb-agent-memory-local-memory-substrate.md) |
 | GitTaskBench | [QuantaAlpha/GitTaskBench](https://github.com/QuantaAlpha/GitTaskBench) | Repo-Level Code Agent Benchmark Harness | [projects/274-gittaskbench-repo-level-code-agent-benchmark.md](274-gittaskbench-repo-level-code-agent-benchmark.md) |
 
+| OpenClaw ClawHub | [openclaw/clawhub](https://github.com/openclaw/clawhub) | OpenClaw Package Catalog and Skill Distribution Hub | [projects/275-openclaw-clawhub-package-catalog.md](275-openclaw-clawhub-package-catalog.md) |
+| Awesome OpenClaw Skills | [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) | OpenClaw Skill and Agent Workflow Index | [projects/276-awesome-openclaw-skills-curated-index.md](276-awesome-openclaw-skills-curated-index.md) |
+| Awesome OpenClaw | [ZeroLu/awesome-openclaw](https://github.com/ZeroLu/awesome-openclaw) | OpenClaw Community Landscape and Resources | [projects/277-awesome-openclaw-community-landscape.md](277-awesome-openclaw-community-landscape.md) |
+| QuantClaw | [QuantClaw/QuantClaw](https://github.com/QuantClaw/QuantClaw) | Quantitative Agent Harness Runtime | [projects/278-quantclaw-quantitative-agent-runtime.md](278-quantclaw-quantitative-agent-runtime.md) |
+| Awesome Scientific Skills | [InternScience/Awesome-Scientific-Skills](https://github.com/InternScience/Awesome-Scientific-Skills) | Scientific Agent Skill and Tooling Index | [projects/279-awesome-scientific-skills-research-index.md](279-awesome-scientific-skills-research-index.md) |
+| ClawBench | [TIGER-AI-Lab/ClawBench](https://github.com/TIGER-AI-Lab/ClawBench) | Open-Ended Agent Benchmark Harness | [projects/280-clawbench-open-ended-agent-benchmark.md](280-clawbench-open-ended-agent-benchmark.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

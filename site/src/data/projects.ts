@@ -4000,6 +4000,171 @@ export const projects: Project[] = [
                     "evaluation",
                     "harness"
             ]
+    },
+    {
+            "name": "OpenClaw ClawHub",
+            "repo": "openclaw/clawhub",
+            "url": "https://github.com/openclaw/clawhub",
+            "stars": 8800,
+            "forks": 1400,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/275-openclaw-clawhub-package-catalog.md",
+            "pattern": "package discovery and rating hub -> curated OpenClaw package metadata -> install and publish flow -> reusable skill and harness package circulation",
+            "description": "ClawHub is the OpenClaw package catalog for discovering, rating, and sharing open-source AI coding agent packages and workflows.",
+            "stack": [
+                    "TypeScript",
+                    "React",
+                    "OpenClaw Packages"
+            ],
+            "category": "OpenClaw Package Catalog and Skill Distribution Hub",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/openclaw_clawhub.md",
+            "status": "candidate",
+            "tags": [
+                    "openclaw",
+                    "package-catalog",
+                    "skills",
+                    "distribution",
+                    "marketplace"
+            ]
+    },
+    {
+            "name": "Awesome OpenClaw Skills",
+            "repo": "VoltAgent/awesome-openclaw-skills",
+            "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+            "stars": 49400,
+            "forks": 4800,
+            "language": "Markdown",
+            "license": "MIT",
+            "report": "projects/276-awesome-openclaw-skills-curated-index.md",
+            "pattern": "collect OpenClaw skills and tools -> categorize by use case and domain -> provide fast lookup and install references -> support reusable skill adoption",
+            "description": "awesome-openclaw-skills is a large curated index of OpenClaw skills, prompts, and reusable agent workflow assets.",
+            "stack": [
+                    "Markdown",
+                    "Curated Skill Catalog"
+            ],
+            "category": "OpenClaw Skill and Agent Workflow Index",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/voltagent_awesome-openclaw-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "openclaw",
+                    "skills",
+                    "awesome-list",
+                    "resource-index",
+                    "catalog"
+            ]
+    },
+    {
+            "name": "Awesome OpenClaw",
+            "repo": "ZeroLu/awesome-openclaw",
+            "url": "https://github.com/ZeroLu/awesome-openclaw",
+            "stars": 71,
+            "forks": 11,
+            "language": "Markdown",
+            "license": "Unknown",
+            "report": "projects/277-awesome-openclaw-community-landscape.md",
+            "pattern": "aggregate OpenClaw links and toolkits -> map onboarding resources and examples -> curate ecosystem entry points for rapid adoption",
+            "description": "awesome-openclaw curates OpenClaw ecosystem resources including skills, runtime guidance, and adjacent project links.",
+            "stack": [
+                    "Markdown",
+                    "Resource Curation"
+            ],
+            "category": "OpenClaw Community Landscape and Resources",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/zerolu_awesome-openclaw.md",
+            "status": "candidate",
+            "tags": [
+                    "openclaw",
+                    "awesome-list",
+                    "skills",
+                    "onboarding",
+                    "resources"
+            ]
+    },
+    {
+            "name": "QuantClaw",
+            "repo": "QuantClaw/QuantClaw",
+            "url": "https://github.com/QuantClaw/QuantClaw",
+            "stars": 31,
+            "forks": 5,
+            "language": "C++",
+            "license": "Apache-2.0",
+            "report": "projects/278-quantclaw-quantitative-agent-runtime.md",
+            "pattern": "market data ingestion -> autonomous analysis and execution planning -> tool and strategy orchestration -> runtime feedback loop for quantitative task workflows",
+            "description": "QuantClaw is an autonomous quantitative agent runtime built around OpenClaw-style agent workflows for market analysis and execution tasks.",
+            "stack": [
+                    "C++",
+                    "Python",
+                    "LLM Trading Runtime"
+            ],
+            "category": "Quantitative Agent Harness Runtime",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/quantclaw_quantclaw.md",
+            "status": "candidate",
+            "tags": [
+                    "agent-runtime",
+                    "quantitative",
+                    "framework",
+                    "workflow-automation",
+                    "trading"
+            ]
+    },
+    {
+            "name": "Awesome Scientific Skills",
+            "repo": "InternScience/Awesome-Scientific-Skills",
+            "url": "https://github.com/InternScience/Awesome-Scientific-Skills",
+            "stars": 400,
+            "forks": 23,
+            "language": "Markdown",
+            "license": "MIT",
+            "report": "projects/279-awesome-scientific-skills-research-index.md",
+            "pattern": "collect scientific task skills and tools -> map reusable research procedures -> connect benchmarks and methodology references -> support skill transfer into research agents",
+            "description": "Awesome-Scientific-Skills is a curated list of scientific-agent skills, tools, and workflows intended for reusable research automation.",
+            "stack": [
+                    "Markdown",
+                    "Scientific Workflow Curation"
+            ],
+            "category": "Scientific Agent Skill and Tooling Index",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/internscience_awesome-scientific-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "scientific-agent",
+                    "skills",
+                    "resource-index",
+                    "research-workflow",
+                    "benchmark"
+            ]
+    },
+    {
+            "name": "ClawBench",
+            "repo": "TIGER-AI-Lab/ClawBench",
+            "url": "https://github.com/TIGER-AI-Lab/ClawBench",
+            "stars": 338,
+            "forks": 21,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/280-clawbench-open-ended-agent-benchmark.md",
+            "pattern": "open-ended task generation -> long-horizon agent execution traces -> verifier-guided scoring -> benchmark snapshots for iterative harness improvement",
+            "description": "ClawBench is an open-ended agent benchmark built for evaluating long-horizon OpenClaw-style agent performance and generalization.",
+            "stack": [
+                    "Python",
+                    "Benchmark Harness",
+                    "OpenClaw"
+            ],
+            "category": "Open-Ended Agent Benchmark Harness",
+            "lastPushed": "2026-05-28T00:00:00Z",
+            "localPath": "raw-github/tiger-ai-lab_clawbench.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "open-ended",
+                    "openclaw",
+                    "evaluation",
+                    "agent-harness"
+            ]
     }
 ];
 
@@ -4030,7 +4195,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

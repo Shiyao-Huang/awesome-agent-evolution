@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-28T00:00:00+08:00",
-  "total": 556,
-  "updated_files": 556,
+  "total": 562,
+  "updated_files": 562,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -1859,6 +1859,15 @@
       "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
+      "repo": "InternScience/Awesome-Scientific-Skills",
+      "url": "https://github.com/InternScience/Awesome-Scientific-Skills",
+      "file": "raw-github/internscience_awesome-scientific-skills.md",
+      "content_timestamp": "2026-05-28",
+      "collected_at": "2026-05-28T10:00:31+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_28"
+    },
+    {
       "repo": "InternScience/InternAgent",
       "url": "https://github.com/InternScience/InternAgent",
       "file": "raw-github/internscience_internagent.md",
@@ -3038,6 +3047,15 @@
       "timestamp_source": "web_github_page_open_2026-05-24"
     },
     {
+      "repo": "openclaw/clawhub",
+      "url": "https://github.com/openclaw/clawhub",
+      "file": "raw-github/openclaw_clawhub.md",
+      "content_timestamp": "2026-05-28",
+      "collected_at": "2026-05-28T10:00:31+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_28"
+    },
+    {
       "repo": "openclaw/openclaw",
       "url": "https://github.com/openclaw/openclaw",
       "file": "raw-github/openclaw_openclaw.md",
@@ -3369,6 +3387,15 @@
       "collected_at": "2026-05-24T23:15:54Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page_or_search_result"
+    },
+    {
+      "repo": "QuantClaw/QuantClaw",
+      "url": "https://github.com/QuantClaw/QuantClaw",
+      "file": "raw-github/quantclaw_quantclaw.md",
+      "content_timestamp": "2026-05-28",
+      "collected_at": "2026-05-28T10:00:31+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_28"
     },
     {
       "repo": "quantstellarlab/ai-scientist-v2",
@@ -4253,6 +4280,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "TIGER-AI-Lab/ClawBench",
+      "url": "https://github.com/TIGER-AI-Lab/ClawBench",
+      "file": "raw-github/tiger-ai-lab_clawbench.md",
+      "content_timestamp": "2026-05-28",
+      "collected_at": "2026-05-28T10:00:31+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_28"
+    },
+    {
       "repo": "tiger-ai-lab/openresearcher",
       "url": "https://github.com/tiger-ai-lab/openresearcher",
       "file": "raw-github/tiger-ai-lab_openresearcher.md",
@@ -4530,6 +4566,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "VoltAgent/awesome-openclaw-skills",
+      "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "file": "raw-github/voltagent_awesome-openclaw-skills.md",
+      "content_timestamp": "2026-05-28",
+      "collected_at": "2026-05-28T10:00:31+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_28"
     },
     {
       "repo": "vsonicv/es-fine-tuning-paper",
@@ -4845,6 +4890,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "ZeroLu/awesome-openclaw",
+      "url": "https://github.com/ZeroLu/awesome-openclaw",
+      "file": "raw-github/zerolu_awesome-openclaw.md",
+      "content_timestamp": "2026-05-28",
+      "collected_at": "2026-05-28T10:00:31+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_28"
     },
     {
       "repo": "zesearch/self-improvement-llm",
