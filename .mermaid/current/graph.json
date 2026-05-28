@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T22:03:48+08:00",
+  "generated_at": "2026-05-29T04:05:21+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -264,7 +264,13 @@
         "raw-github/iflytek_skillhub.md",
         "raw-github/memodb-io_Acontext.md",
         "raw-github/nemori-ai_nemori.md",
-        "raw-github/memodb-io_acontext.md"
+        "raw-github/memodb-io_acontext.md",
+        "raw-github/alienfader_continuity-benchmarks.md",
+        "raw-github/sachinsharma9780_memweave.md",
+        "raw-github/qpiai_proced_mem_bench.md",
+        "raw-github/modelcode-ai_mcode-benchmark.md",
+        "raw-github/sourcegraph_codescalebench.md",
+        "raw-github/mlcommons_modelbench.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -403,7 +409,8 @@
         "work/research/hourly-public-metadata-update-2026-05-27-2200.md",
         "work/research/hourly-public-metadata-update-2026-05-28-0400.md",
         "work/research/hourly-public-metadata-update-2026-05-28-1000.md",
-        "work/research/hourly-public-metadata-update-2026-05-28-2203.md"
+        "work/research/hourly-public-metadata-update-2026-05-28-2203.md",
+        "work/research/hourly-public-metadata-update-2026-05-29-0405.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -873,7 +880,19 @@
         "projects/285-memodb-acontext-memory-layer.md",
         "site/public/reports/projects/285-memodb-acontext-memory-layer.md",
         "projects/286-nemori-episodic-memory-substrate.md",
-        "site/public/reports/projects/286-nemori-episodic-memory-substrate.md"
+        "site/public/reports/projects/286-nemori-episodic-memory-substrate.md",
+        "projects/287-continuity-benchmarks-execution-intent-memory.md",
+        "site/public/reports/projects/287-continuity-benchmarks-execution-intent-memory.md",
+        "projects/288-memweave-markdown-agent-memory.md",
+        "site/public/reports/projects/288-memweave-markdown-agent-memory.md",
+        "projects/289-proced-mem-benchmark-procedural-retrieval.md",
+        "site/public/reports/projects/289-proced-mem-benchmark-procedural-retrieval.md",
+        "projects/290-repomod-bench-repo-translation-eval.md",
+        "site/public/reports/projects/290-repomod-bench-repo-translation-eval.md",
+        "projects/291-codescalebench-enterprise-agent-benchmark.md",
+        "site/public/reports/projects/291-codescalebench-enterprise-agent-benchmark.md",
+        "projects/292-mlcommons-modelbench-safety-eval.md",
+        "site/public/reports/projects/292-mlcommons-modelbench-safety-eval.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1199,17 +1218,17 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-28T22:03:48+08:00",
+    "run_at": "2026-05-29T04:05:21+08:00",
     "added_repositories": [
-      "redis/agent-memory-server",
-      "langchain-ai/memory-agent",
-      "iflytek/skillhub",
-      "mindfold-ai/trellis",
-      "memodb-io/Acontext",
-      "nemori-ai/nemori"
+      "Alienfader/continuity-benchmarks",
+      "sachinsharma9780/memweave",
+      "qpiai/Proced_mem_bench",
+      "Modelcode-ai/mcode-benchmark",
+      "sourcegraph/CodeScaleBench",
+      "mlcommons/modelbench"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "status/list available; npx gitnexus analyze . failed with EPERM on /Users/copizzah/.gitnexus/registry.json, so stale index evidence is retained"
+    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
   }
 }

@@ -308,6 +308,13 @@
 | Acontext | [memodb-io/Acontext](https://github.com/memodb-io/Acontext) | Agent Skill Memory Layer and Runtime Context Engine | [projects/285-memodb-acontext-memory-layer.md](285-memodb-acontext-memory-layer.md) |
 | Nemori | [nemori-ai/nemori](https://github.com/nemori-ai/nemori) | Episodic Agent Memory Substrate and Knowledge Store | [projects/286-nemori-episodic-memory-substrate.md](286-nemori-episodic-memory-substrate.md) |
 
+| Continuity Benchmarks | [Alienfader/continuity-benchmarks](https://github.com/Alienfader/continuity-benchmarks) | Execution-Intent Memory Benchmark Harness | [projects/287-continuity-benchmarks-execution-intent-memory.md](287-continuity-benchmarks-execution-intent-memory.md) |
+| MemWeave | [sachinsharma9780/memweave](https://github.com/sachinsharma9780/memweave) | Persistent Agent Memory Substrate | [projects/288-memweave-markdown-agent-memory.md](288-memweave-markdown-agent-memory.md) |
+| Procedural Memory Benchmark | [qpiai/Proced_mem_bench](https://github.com/qpiai/Proced_mem_bench) | Procedural Memory Retrieval Benchmark | [projects/289-proced-mem-benchmark-procedural-retrieval.md](289-proced-mem-benchmark-procedural-retrieval.md) |
+| RepoMod Bench | [Modelcode-ai/mcode-benchmark](https://github.com/Modelcode-ai/mcode-benchmark) | Repository-Scale Agent Translation Benchmark | [projects/290-repomod-bench-repo-translation-eval.md](290-repomod-bench-repo-translation-eval.md) |
+| CodeScaleBench | [sourcegraph/CodeScaleBench](https://github.com/sourcegraph/CodeScaleBench) | Enterprise-Scale Coding Agent Benchmark Harness | [projects/291-codescalebench-enterprise-agent-benchmark.md](291-codescalebench-enterprise-agent-benchmark.md) |
+| MLCommons ModelBench | [mlcommons/modelbench](https://github.com/mlcommons/modelbench) | Model Safety Benchmark and Reporting Framework | [projects/292-mlcommons-modelbench-safety-eval.md](292-mlcommons-modelbench-safety-eval.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

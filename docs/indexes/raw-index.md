@@ -1,6 +1,6 @@
 # Raw / 原始素材 Index
 
-> Generated: 2026-05-28
+> Generated: 2026-05-29
 
 ## Rule
 
@@ -10,7 +10,7 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `raw-github` | present | 567 | 1 | 0 | 5.2 MB |
+| `raw-github` | present | 573 | 1 | 0 | 5.2 MB |
 | `raw-papers` | present | 201 | 1 | 0 | 1008 KB |
 | `raw-blogs` | present | 1308 | 1 | 0 | 3.2 MB |
 | `raw-social` | present | 1318 | 4 | 0 | 19 MB |

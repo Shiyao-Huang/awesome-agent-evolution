@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-28T00:00:00+08:00",
-  "total": 566,
-  "updated_files": 566,
+  "generated_at": "2026-05-29T00:00:00+08:00",
+  "total": 572,
+  "updated_files": 572,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -345,6 +345,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "Alienfader/continuity-benchmarks",
+      "url": "https://github.com/Alienfader/continuity-benchmarks",
+      "file": "raw-github/alienfader_continuity-benchmarks.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T04:05:21+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
     {
       "repo": "alirezarezvani/claude-skills",
@@ -2759,6 +2768,24 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "mlcommons/modelbench",
+      "url": "https://github.com/mlcommons/modelbench",
+      "file": "raw-github/mlcommons_modelbench.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T04:05:21+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
+      "repo": "Modelcode-ai/mcode-benchmark",
+      "url": "https://github.com/Modelcode-ai/mcode-benchmark",
+      "file": "raw-github/modelcode-ai_mcode-benchmark.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T04:05:21+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
       "repo": "modelcontextprotocol/servers",
       "url": "https://github.com/modelcontextprotocol/servers",
       "file": "raw-github/modelcontextprotocol_servers.md",
@@ -3398,6 +3425,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "qpiai/Proced_mem_bench",
+      "url": "https://github.com/qpiai/Proced_mem_bench",
+      "file": "raw-github/qpiai_proced_mem_bench.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T04:05:21+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
       "repo": "QuantaAlpha/GitTaskBench",
       "url": "https://github.com/QuantaAlpha/GitTaskBench",
       "file": "raw-github/quantaalpha_gittaskbench.md",
@@ -3657,6 +3693,15 @@
       "collected_at": "2026-05-28T04:00:48+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_05_28"
+    },
+    {
+      "repo": "sachinsharma9780/memweave",
+      "url": "https://github.com/sachinsharma9780/memweave",
+      "file": "raw-github/sachinsharma9780_memweave.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T04:05:21+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
     {
       "repo": "sakanaai/ai-scientist-v2",
@@ -3990,6 +4035,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "sourcegraph/CodeScaleBench",
+      "url": "https://github.com/sourcegraph/CodeScaleBench",
+      "file": "raw-github/sourcegraph_codescalebench.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T04:05:21+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
     {
       "repo": "spillwavesolutions/agent-brain",

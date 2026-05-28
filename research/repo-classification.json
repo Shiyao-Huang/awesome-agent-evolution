@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T22:03:48+08:00",
+  "generated_at": "2026-05-29T04:05:21+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -570,6 +570,21 @@
       "content_timestamp": "unknown",
       "evidence": "application/self-evolving-agent signal",
       "description": "Open-source implementation of AlphaEvolve"
+    },
+    {
+      "repo": "Alienfader/continuity-benchmarks",
+      "url": "https://github.com/Alienfader/continuity-benchmarks",
+      "stars": "3",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "TypeScript/Python/LongMemEval-S",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 3 stars, 0 forks, 27 commits, MIT license, and benchmark runners comparing retrieval strategies for coding-agent memory.",
+      "description": "continuity-benchmarks provides reproducible execution-intent memory benchmarks for long-horizon AI coding agents with LongMemEval-S and ID-RAG matrix evaluation."
     },
     {
       "repo": "alirezarezvani/claude-skills",
@@ -4592,6 +4607,36 @@
       "description": "DSPy: The framework for programming—not prompting—foundation models"
     },
     {
+      "repo": "mlcommons/modelbench",
+      "url": "https://github.com/mlcommons/modelbench",
+      "stars": "126",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "safety",
+      "stack": "Python/ModelGauge/Safety Reporting",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 126 stars, 28 forks, 676 commits, Apache-2.0 license, and README positioning modelbench/modelgauge as safety benchmark infrastructure.",
+      "description": "MLCommons modelbench runs safety benchmarks against AI models and publishes detailed hazard-oriented benchmark reports."
+    },
+    {
+      "repo": "Modelcode-ai/mcode-benchmark",
+      "url": "https://github.com/Modelcode-ai/mcode-benchmark",
+      "stars": "1",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/Pytest/Repo Translation Harness",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 1 star, 0 forks, 32 commits; LICENSE.md declares Apache-2.0 and README defines RepoMod-Bench with hidden test evaluation.",
+      "description": "mcode-benchmark (RepoMod-Bench) evaluates repository-scale AI agent translation across languages and frameworks with hidden test validation."
+    },
+    {
       "repo": "modelcontextprotocol/servers",
       "url": "https://github.com/modelcontextprotocol/servers",
       "stars": "86",
@@ -5657,6 +5702,21 @@
       "description": "TPAMI 2026 | This repository collects awesome survey, resource, and paper for lifelong learning LLM agents"
     },
     {
+      "repo": "qpiai/Proced_mem_bench",
+      "url": "https://github.com/qpiai/Proced_mem_bench",
+      "stars": "6",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Python/ALFWorld/OSWorld Retrieval Eval",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 6 stars, 3 forks, 7 commits, Apache-2.0 license, and README framing as a standardized procedural-memory benchmark.",
+      "description": "Proced_mem_bench benchmarks procedural memory retrieval for language agents across ALFWorld trajectories and upcoming OSWorld scenarios."
+    },
+    {
       "repo": "QuantaAlpha/GitTaskBench",
       "url": "https://github.com/QuantaAlpha/GitTaskBench",
       "stars": "255",
@@ -6090,6 +6150,21 @@
       "content_timestamp": "2026-05-28",
       "evidence": "web-observed GitHub page showed 45 stars, 4 forks, 47 commits, CC-BY-SA-4.0 license, and README framing as a ranked list of agent harnesses updated weekly.",
       "description": "best-of-Agent-Harnesses curates and ranks 100+ agent harness projects to provide a comparative map of harness engineering options."
+    },
+    {
+      "repo": "sachinsharma9780/memweave",
+      "url": "https://github.com/sachinsharma9780/memweave",
+      "stars": "39",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Python/SQLite/Markdown Memory Store",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 39 stars, 2 forks, 57 commits, MIT license, and README benchmark claims on LongMemEval-S memory retrieval.",
+      "description": "memweave is a zero-infrastructure async Python memory library for AI agents using markdown files and SQLite-backed searchable persistence."
     },
     {
       "repo": "sakanaai/ai-scientist",
@@ -6645,6 +6720,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "tool/module/memory/prompt/coding signal",
       "description": "RepairAgent is an autonomous LLM-based agent for software repair."
+    },
+    {
+      "repo": "sourcegraph/CodeScaleBench",
+      "url": "https://github.com/sourcegraph/CodeScaleBench",
+      "stars": "25",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/Claude Code Harness/MCP Retrieval",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 25 stars, 3 forks, 1,310 commits, Apache-2.0 license, and README describing 275 tasks with auditable run snapshots.",
+      "description": "CodeScaleBench is a benchmark suite for measuring coding agents with external retrieval tools on large enterprise-scale software tasks."
     },
     {
       "repo": "spillwavesolutions/agent-brain",

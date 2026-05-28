@@ -4304,6 +4304,174 @@ export const projects: Project[] = [
                     "context-retrieval",
                     "agent-state"
             ]
+    },
+    {
+            "name": "Continuity Benchmarks",
+            "repo": "Alienfader/continuity-benchmarks",
+            "url": "https://github.com/Alienfader/continuity-benchmarks",
+            "stars": 3,
+            "forks": 0,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/287-continuity-benchmarks-execution-intent-memory.md",
+            "pattern": "agent action intent -> retrieval keyed by execution intent vs prompt intent -> benchmark runners score recall/alignment -> report deltas and confidence for memory strategy selection",
+            "description": "continuity-benchmarks provides reproducible execution-intent memory benchmarks for long-horizon AI coding agents with LongMemEval-S and ID-RAG matrix evaluation.",
+            "stack": [
+                    "TypeScript",
+                    "Python",
+                    "LongMemEval-S"
+            ],
+            "category": "Execution-Intent Memory Benchmark Harness",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/alienfader_continuity-benchmarks.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "memory",
+                    "longmemeval",
+                    "agent-harness",
+                    "evaluation"
+            ]
+    },
+    {
+            "name": "MemWeave",
+            "repo": "sachinsharma9780/memweave",
+            "url": "https://github.com/sachinsharma9780/memweave",
+            "stars": 39,
+            "forks": 2,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/288-memweave-markdown-agent-memory.md",
+            "pattern": "agent writes memory markdown -> sqlite vector+fts index build -> hybrid retrieval and reranking -> persistent memory feedback for next agent turns",
+            "description": "memweave is a zero-infrastructure async Python memory library for AI agents using markdown files and SQLite-backed searchable persistence.",
+            "stack": [
+                    "Python",
+                    "SQLite",
+                    "Markdown Memory Store"
+            ],
+            "category": "Persistent Agent Memory Substrate",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/sachinsharma9780_memweave.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "sqlite",
+                    "markdown",
+                    "longmemeval",
+                    "agent-state"
+            ]
+    },
+    {
+            "name": "Procedural Memory Benchmark",
+            "repo": "qpiai/Proced_mem_bench",
+            "url": "https://github.com/qpiai/Proced_mem_bench",
+            "stars": 6,
+            "forks": 3,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/289-proced-mem-benchmark-procedural-retrieval.md",
+            "pattern": "task trajectory corpus -> procedural retrieval methods -> LLM-as-judge plus IR metrics -> benchmark reports for procedural memory quality",
+            "description": "Proced_mem_bench benchmarks procedural memory retrieval for language agents across ALFWorld trajectories and upcoming OSWorld scenarios.",
+            "stack": [
+                    "Python",
+                    "ALFWorld",
+                    "OSWorld Retrieval Eval"
+            ],
+            "category": "Procedural Memory Retrieval Benchmark",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/qpiai_proced_mem_bench.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "procedural-memory",
+                    "retrieval",
+                    "alfworld",
+                    "osworld"
+            ]
+    },
+    {
+            "name": "RepoMod Bench",
+            "repo": "Modelcode-ai/mcode-benchmark",
+            "url": "https://github.com/Modelcode-ai/mcode-benchmark",
+            "stars": 1,
+            "forks": 0,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/290-repomod-bench-repo-translation-eval.md",
+            "pattern": "source repository workspace -> agent performs cross-language/framework translation -> hidden tests evaluate functional equivalence -> benchmark outputs per-language/task reliability",
+            "description": "mcode-benchmark (RepoMod-Bench) evaluates repository-scale AI agent translation across languages and frameworks with hidden test validation.",
+            "stack": [
+                    "Python",
+                    "Pytest",
+                    "Repo Translation Harness"
+            ],
+            "category": "Repository-Scale Agent Translation Benchmark",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/modelcode-ai_mcode-benchmark.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "repo-translation",
+                    "code-agents",
+                    "pytest",
+                    "evaluation"
+            ]
+    },
+    {
+            "name": "CodeScaleBench",
+            "repo": "sourcegraph/CodeScaleBench",
+            "url": "https://github.com/sourcegraph/CodeScaleBench",
+            "stars": 25,
+            "forks": 3,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/291-codescalebench-enterprise-agent-benchmark.md",
+            "pattern": "enterprise codebase tasks -> Harbor/Claude harness with baseline vs MCP retrieval configs -> dual-verifier scoring and cost tracking -> auditable snapshots for benchmark governance",
+            "description": "CodeScaleBench is a benchmark suite for measuring coding agents with external retrieval tools on large enterprise-scale software tasks.",
+            "stack": [
+                    "Python",
+                    "Claude Code Harness",
+                    "MCP Retrieval"
+            ],
+            "category": "Enterprise-Scale Coding Agent Benchmark Harness",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/sourcegraph_codescalebench.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "coding-agent",
+                    "harness",
+                    "mcp",
+                    "enterprise-codebase"
+            ]
+    },
+    {
+            "name": "MLCommons ModelBench",
+            "repo": "mlcommons/modelbench",
+            "url": "https://github.com/mlcommons/modelbench",
+            "stars": 126,
+            "forks": 28,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/292-mlcommons-modelbench-safety-eval.md",
+            "pattern": "model responses and annotator judgments -> hazard aggregation into benchmark scores -> safety report generation -> benchmark governance feedback into model evaluation pipeline",
+            "description": "MLCommons modelbench runs safety benchmarks against AI models and publishes detailed hazard-oriented benchmark reports.",
+            "stack": [
+                    "Python",
+                    "ModelGauge",
+                    "Safety Reporting"
+            ],
+            "category": "Model Safety Benchmark and Reporting Framework",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/mlcommons_modelbench.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "safety",
+                    "model-evaluation",
+                    "mlcommons",
+                    "reporting"
+            ]
     }
 ];
 
@@ -4334,7 +4502,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }
