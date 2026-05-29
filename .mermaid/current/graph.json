@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T04:05:21+08:00",
+  "generated_at": "2026-05-29T10:08:08+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -270,7 +270,13 @@
         "raw-github/qpiai_proced_mem_bench.md",
         "raw-github/modelcode-ai_mcode-benchmark.md",
         "raw-github/sourcegraph_codescalebench.md",
-        "raw-github/mlcommons_modelbench.md"
+        "raw-github/mlcommons_modelbench.md",
+        "raw-github/berriai_self-improving-agent.md",
+        "raw-github/llmsecurity_awesome-agent-skills-security.md",
+        "raw-github/composiohq_awesome-agent-clis.md",
+        "raw-github/olshansk_agent-skills.md",
+        "raw-github/axiomhq_agent-memory.md",
+        "raw-github/freedomintelligence_tiermem.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -410,7 +416,8 @@
         "work/research/hourly-public-metadata-update-2026-05-28-0400.md",
         "work/research/hourly-public-metadata-update-2026-05-28-1000.md",
         "work/research/hourly-public-metadata-update-2026-05-28-2203.md",
-        "work/research/hourly-public-metadata-update-2026-05-29-0405.md"
+        "work/research/hourly-public-metadata-update-2026-05-29-0405.md",
+        "work/research/hourly-public-metadata-update-2026-05-29-1008.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -892,7 +899,19 @@
         "projects/291-codescalebench-enterprise-agent-benchmark.md",
         "site/public/reports/projects/291-codescalebench-enterprise-agent-benchmark.md",
         "projects/292-mlcommons-modelbench-safety-eval.md",
-        "site/public/reports/projects/292-mlcommons-modelbench-safety-eval.md"
+        "site/public/reports/projects/292-mlcommons-modelbench-safety-eval.md",
+        "projects/293-berriai-self-improving-agent-loop.md",
+        "site/public/reports/projects/293-berriai-self-improving-agent-loop.md",
+        "projects/294-awesome-agent-skills-security.md",
+        "site/public/reports/projects/294-awesome-agent-skills-security.md",
+        "projects/295-awesome-agent-clis-orchestration.md",
+        "site/public/reports/projects/295-awesome-agent-clis-orchestration.md",
+        "projects/296-olshansk-agent-skills-library.md",
+        "site/public/reports/projects/296-olshansk-agent-skills-library.md",
+        "projects/297-axiom-agent-memory-substrate.md",
+        "site/public/reports/projects/297-axiom-agent-memory-substrate.md",
+        "projects/298-tiermem-provenance-memory-benchmark.md",
+        "site/public/reports/projects/298-tiermem-provenance-memory-benchmark.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1218,14 +1237,14 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-29T04:05:21+08:00",
+    "run_at": "2026-05-29T10:08:08+08:00",
     "added_repositories": [
-      "Alienfader/continuity-benchmarks",
-      "sachinsharma9780/memweave",
-      "qpiai/Proced_mem_bench",
-      "Modelcode-ai/mcode-benchmark",
-      "sourcegraph/CodeScaleBench",
-      "mlcommons/modelbench"
+      "BerriAI/self-improving-agent",
+      "LLMSecurity/awesome-agent-skills-security",
+      "ComposioHQ/awesome-agent-clis",
+      "Olshansk/agent-skills",
+      "axiomhq/agent-memory",
+      "FreedomIntelligence/Tiermem"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",

@@ -1,6 +1,6 @@
 # User Direct Inputs Reference
 
-> Last updated: 2026-05-25. This file extracts direct user inputs only. Do not add team instructions, subagent summaries, tool outputs, assistant summaries, or inferred project state as user input.
+> Last updated: 2026-05-29. This file extracts direct user inputs only. Do not add team instructions, subagent summaries, tool outputs, assistant summaries, or inferred project state as user input.
 
 ## L1
 
@@ -29,6 +29,7 @@
 | 7 | AGENTS/CLAUDE 要引用用户输入 | `用户的输入你得提取出来，然后作为Agent和Claude里边的参考。` |
 | 8 | 每次迭代后主动更新 README、网站并提交 | `修改定时任务 、注意每次迭代后都要主动提交 、主动更新 相关的 readme 、相关的 网站、` |
 | 9 | 非四层材料先归类，不要乱删 | `不符合这些构成的素材怎么归类和清理一下？尽量怎样归类不要乱删` |
+| 10 | 每次修改都要关联更新网站/主页/相关分析并同步 GitHub | `每次修改的时候都要去关联修改 网站、主页、其他方向的分析以及与之对应的内容、修改后 完成 github 同步` |
 
 ## Exact Recent Workspace Inputs
 
@@ -66,6 +67,10 @@ OK，然后用户的输入你得提取出来，然后作为Agent和Claude里边�
 
 ```text
 修改定时任务 、注意每次迭代后都要主动提交 、主动更新 相关的 readme 、相关的 网站、
+```
+
+```text
+每次修改的时候都要去关联修改 网站、主页、其他方向的分析以及与之对应的内容、修改后 完成 github 同步
 ```
 
 ## Longer Historical Goal Signals

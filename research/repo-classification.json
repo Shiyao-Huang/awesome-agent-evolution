@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T04:05:21+08:00",
+  "generated_at": "2026-05-29T10:08:08+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -857,6 +857,21 @@
       "description": "AutoR is a terminal-first research harness where AI handles execution, humans retain direction, and every run is stored as an inspectable artifact on disk."
     },
     {
+      "repo": "axiomhq/agent-memory",
+      "url": "https://github.com/axiomhq/agent-memory",
+      "stars": "5",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "TypeScript/Redis/Memory Pipeline Infrastructure",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 5 stars, 2 forks, 50 commits, and README documenting extraction/storage/retrieval architecture; no explicit license badge was visible on the page snapshot.",
+      "description": "agent-memory is an opinionated TypeScript memory runtime focused on extracting, storing, and retrieving long-lived context for AI agents."
+    },
+    {
       "repo": "bansky-cl/graphrag-arxiv-daily-paper",
       "url": "https://github.com/bansky-cl/graphrag-arxiv-daily-paper",
       "stars": "22",
@@ -945,6 +960,21 @@
       "content_timestamp": "unknown",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "A selective learning and memory substrate for agentic systems — typed, revisable, decayable memory with competence learning and trust-aware retrieval."
+    },
+    {
+      "repo": "BerriAI/self-improving-agent",
+      "url": "https://github.com/BerriAI/self-improving-agent",
+      "stars": "5",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "TypeScript/GitHub Actions/Agent Self-Optimization Loop",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 5 stars, 0 forks, 15 commits, MIT license, and README framing around benchmark-plus-user-feedback self-improvement loops.",
+      "description": "self-improving-agent studies whether coding agents can improve themselves through a repeated eval-and-update loop over real tasks."
     },
     {
       "repo": "bingreeky/memgen",
@@ -1455,6 +1485,21 @@
       "content_timestamp": "2026-05-28",
       "evidence": "web-observed GitHub page showed 21.9k stars, 3.3k forks, 1,449 commits, MIT license, and README claims around deterministic workflow gates for coding agents.",
       "description": "Archon is an open-source harness builder for AI coding that turns development processes into deterministic, reusable workflows."
+    },
+    {
+      "repo": "ComposioHQ/awesome-agent-clis",
+      "url": "https://github.com/ComposioHQ/awesome-agent-clis",
+      "stars": "223",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/CLI Tooling/Agent Workflow Catalog",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 223 stars, 26 forks, 7 commits, CC0-1.0 license, and README sections listing agent CLI stacks.",
+      "description": "awesome-agent-clis tracks command-line agent tools and workflow utilities that can be reused as skill and harness building blocks."
     },
     {
       "repo": "ComposioHQ/awesome-claude-skills",
@@ -2265,6 +2310,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 46 commits, 2.5k stars and 357 forks; README says it is the largest open-source medical AI skill library for OpenClaw, contains 869 curated skills across clinical, genomics, drug discovery, bioinformatics and medical devices, and each SKILL.md module teaches workflows, connects databases/APIs/tools, and produces clinically or scientifically relevant outputs",
       "description": "OpenClaw Medical Skills 是面向 OpenClaw/NanoClaw 的医学与生物信息 agent skills 库，用 869 个 SKILL.md 模块把数据库、API、临床和组学工作流接入通用 Agent。"
+    },
+    {
+      "repo": "FreedomIntelligence/Tiermem",
+      "url": "https://github.com/FreedomIntelligence/Tiermem",
+      "stars": "5",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Python/Memory QA Benchmark/Provenance Evaluation",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 5 stars, 1 fork, 24 commits, MIT license, and README framing around provenance-aware memory evaluation.",
+      "description": "Tiermem introduces benchmark tasks that jointly evaluate memory answer quality and provenance consistency for long-term AI assistants."
     },
     {
       "repo": "fusionbrainlab/gigaevo-core",
@@ -3887,6 +3947,21 @@
       "description": "TextGrad: Automatic ''Differentiation'' via Text -- using large language models to backpropagate textual gradients."
     },
     {
+      "repo": "LLMSecurity/awesome-agent-skills-security",
+      "url": "https://github.com/LLMSecurity/awesome-agent-skills-security",
+      "stars": "8",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/Security Taxonomy/Skill Benchmark References",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 8 stars, 9 forks, 17 commits, CC0-1.0 license, and README sections for benchmarks, attacks, and defenses.",
+      "description": "awesome-agent-skills-security curates security and benchmark resources specifically for agent skill systems and tool-use workflows."
+    },
+    {
       "repo": "lmd0311/awesome-world-model",
       "url": "https://github.com/lmd0311/awesome-world-model",
       "stars": "2",
@@ -5025,6 +5100,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed MIT license, Shell primary language, reflexive co-evolution engine, task/team/system observation levels, OpenClaw native and Claude Code Skill signals, 0 stars and 0 forks",
       "description": "MOLT 是 OpenClaw multi-agent systems 的 reflexive co-evolution engine，用结构化观察发现重复劳动、handoff 断裂、协议偏移和 memory 不读回等系统性摩擦。"
+    },
+    {
+      "repo": "Olshansk/agent-skills",
+      "url": "https://github.com/Olshansk/agent-skills",
+      "stars": "7",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "HTML/JavaScript Skill Bundles/Validation Scripts",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 7 stars, 0 forks, 150 commits, MIT license, and README instructions for curated installable skill sets.",
+      "description": "agent-skills provides reusable operational skill bundles designed to be installed and maintained across agent runtimes."
     },
     {
       "repo": "omdivyatej/self-learning-agents",

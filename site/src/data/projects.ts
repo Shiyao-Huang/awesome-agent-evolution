@@ -4472,6 +4472,174 @@ export const projects: Project[] = [
                     "mlcommons",
                     "reporting"
             ]
+    },
+    {
+            "name": "Self-Improving Agent",
+            "repo": "BerriAI/self-improving-agent",
+            "url": "https://github.com/BerriAI/self-improving-agent",
+            "stars": 5,
+            "forks": 0,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/293-berriai-self-improving-agent-loop.md",
+            "pattern": "agent executes coding tasks -> evaluates outcomes via benchmarks and user feedback -> writes workflow/self changes -> reruns tasks to measure iterative improvement",
+            "description": "self-improving-agent studies whether coding agents can improve themselves through a repeated eval-and-update loop over real tasks.",
+            "stack": [
+                    "TypeScript",
+                    "GitHub Actions",
+                    "Agent Self-Optimization Loop"
+            ],
+            "category": "Self-Improving Coding Agent Loop",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/berriai_self-improving-agent.md",
+            "status": "candidate",
+            "tags": [
+                    "self-improving-agent",
+                    "coding-agent",
+                    "evolution-loop",
+                    "github-actions",
+                    "autonomous-iteration"
+            ]
+    },
+    {
+            "name": "Awesome Agent Skills Security",
+            "repo": "LLMSecurity/awesome-agent-skills-security",
+            "url": "https://github.com/LLMSecurity/awesome-agent-skills-security",
+            "stars": 8,
+            "forks": 9,
+            "language": "Markdown",
+            "license": "CC0-1.0",
+            "report": "projects/294-awesome-agent-skills-security.md",
+            "pattern": "collect benchmark and attack references -> map skill-level vulnerabilities and mitigations -> publish curated defense pathways for agent-skill engineering teams",
+            "description": "awesome-agent-skills-security curates security and benchmark resources specifically for agent skill systems and tool-use workflows.",
+            "stack": [
+                    "Markdown",
+                    "Security Taxonomy",
+                    "Skill Benchmark References"
+            ],
+            "category": "Agent Skill Security Resource Index",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/llmsecurity_awesome-agent-skills-security.md",
+            "status": "candidate",
+            "tags": [
+                    "agent-skills",
+                    "security",
+                    "benchmark",
+                    "resource-index",
+                    "llm-security"
+            ]
+    },
+    {
+            "name": "Awesome Agent CLIs",
+            "repo": "ComposioHQ/awesome-agent-clis",
+            "url": "https://github.com/ComposioHQ/awesome-agent-clis",
+            "stars": 223,
+            "forks": 26,
+            "language": "Markdown",
+            "license": "CC0-1.0",
+            "report": "projects/295-awesome-agent-clis-orchestration.md",
+            "pattern": "aggregate production-ready agent CLIs -> expose setup/docs/ecosystem compatibility -> guide teams to reusable command-line workflows for coding and operations agents",
+            "description": "awesome-agent-clis tracks command-line agent tools and workflow utilities that can be reused as skill and harness building blocks.",
+            "stack": [
+                    "Markdown",
+                    "CLI Tooling",
+                    "Agent Workflow Catalog"
+            ],
+            "category": "Agent CLI Orchestration Resource Index",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/composiohq_awesome-agent-clis.md",
+            "status": "candidate",
+            "tags": [
+                    "agent-cli",
+                    "workflow",
+                    "developer-tools",
+                    "skill-catalog",
+                    "resource-index"
+            ]
+    },
+    {
+            "name": "Agent Skills",
+            "repo": "Olshansk/agent-skills",
+            "url": "https://github.com/Olshansk/agent-skills",
+            "stars": 7,
+            "forks": 0,
+            "language": "HTML",
+            "license": "MIT",
+            "report": "projects/296-olshansk-agent-skills-library.md",
+            "pattern": "package reusable operational skills -> validate with local tests and linting -> install into agent runtimes as modular capability units -> iterate via versioned skill updates",
+            "description": "agent-skills provides reusable operational skill bundles designed to be installed and maintained across agent runtimes.",
+            "stack": [
+                    "HTML",
+                    "JavaScript Skill Bundles",
+                    "Validation Scripts"
+            ],
+            "category": "Reusable Agent Skill Library",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/olshansk_agent-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "agent-skills",
+                    "skill-library",
+                    "playbooks",
+                    "workflow",
+                    "reuse"
+            ]
+    },
+    {
+            "name": "Agent Memory",
+            "repo": "axiomhq/agent-memory",
+            "url": "https://github.com/axiomhq/agent-memory",
+            "stars": 5,
+            "forks": 2,
+            "language": "TypeScript",
+            "license": "Unspecified",
+            "report": "projects/297-axiom-agent-memory-substrate.md",
+            "pattern": "capture user/agent interaction state -> extract and store memory artifacts in redis-backed structures -> retrieve context through memory APIs -> feed subsequent agent decisions and orchestration flows",
+            "description": "agent-memory is an opinionated TypeScript memory runtime focused on extracting, storing, and retrieving long-lived context for AI agents.",
+            "stack": [
+                    "TypeScript",
+                    "Redis",
+                    "Memory Pipeline Infrastructure"
+            ],
+            "category": "Persistent Agent Memory Runtime",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/axiomhq_agent-memory.md",
+            "status": "candidate",
+            "tags": [
+                    "agent-memory",
+                    "typescript",
+                    "redis",
+                    "memory-runtime",
+                    "context-persistence"
+            ]
+    },
+    {
+            "name": "Tiermem",
+            "repo": "FreedomIntelligence/Tiermem",
+            "url": "https://github.com/FreedomIntelligence/Tiermem",
+            "stars": 5,
+            "forks": 1,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/298-tiermem-provenance-memory-benchmark.md",
+            "pattern": "construct knowledge-memory tasks with provenance labels -> run language-agent memory retrieval and generation pipelines -> score both answer quality and citation provenance -> compare memory frameworks under standardized settings",
+            "description": "Tiermem introduces benchmark tasks that jointly evaluate memory answer quality and provenance consistency for long-term AI assistants.",
+            "stack": [
+                    "Python",
+                    "Memory QA Benchmark",
+                    "Provenance Evaluation"
+            ],
+            "category": "Provenance-Aware Memory Benchmark Framework",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/freedomintelligence_tiermem.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "memory",
+                    "provenance",
+                    "evaluation",
+                    "long-context"
+            ]
     }
 ];
 
@@ -4502,7 +4670,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

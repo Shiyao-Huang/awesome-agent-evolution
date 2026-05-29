@@ -315,6 +315,13 @@
 | CodeScaleBench | [sourcegraph/CodeScaleBench](https://github.com/sourcegraph/CodeScaleBench) | Enterprise-Scale Coding Agent Benchmark Harness | [projects/291-codescalebench-enterprise-agent-benchmark.md](291-codescalebench-enterprise-agent-benchmark.md) |
 | MLCommons ModelBench | [mlcommons/modelbench](https://github.com/mlcommons/modelbench) | Model Safety Benchmark and Reporting Framework | [projects/292-mlcommons-modelbench-safety-eval.md](292-mlcommons-modelbench-safety-eval.md) |
 
+| Self-Improving Agent | [BerriAI/self-improving-agent](https://github.com/BerriAI/self-improving-agent) | Self-Improving Coding Agent Loop | [projects/293-berriai-self-improving-agent-loop.md](293-berriai-self-improving-agent-loop.md) |
+| Awesome Agent Skills Security | [LLMSecurity/awesome-agent-skills-security](https://github.com/LLMSecurity/awesome-agent-skills-security) | Agent Skill Security Resource Index | [projects/294-awesome-agent-skills-security.md](294-awesome-agent-skills-security.md) |
+| Awesome Agent CLIs | [ComposioHQ/awesome-agent-clis](https://github.com/ComposioHQ/awesome-agent-clis) | Agent CLI Orchestration Resource Index | [projects/295-awesome-agent-clis-orchestration.md](295-awesome-agent-clis-orchestration.md) |
+| Agent Skills | [Olshansk/agent-skills](https://github.com/Olshansk/agent-skills) | Reusable Agent Skill Library | [projects/296-olshansk-agent-skills-library.md](296-olshansk-agent-skills-library.md) |
+| Agent Memory | [axiomhq/agent-memory](https://github.com/axiomhq/agent-memory) | Persistent Agent Memory Runtime | [projects/297-axiom-agent-memory-substrate.md](297-axiom-agent-memory-substrate.md) |
+| Tiermem | [FreedomIntelligence/Tiermem](https://github.com/FreedomIntelligence/Tiermem) | Provenance-Aware Memory Benchmark Framework | [projects/298-tiermem-provenance-memory-benchmark.md](298-tiermem-provenance-memory-benchmark.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.
