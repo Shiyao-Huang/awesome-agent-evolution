@@ -10,7 +10,11 @@ export const site = {
     '自进化智能体',
     'AI 自我进化',
     '代码自我改进',
-    'LLM 迭代优化'
+    'LLM 迭代优化',
+    'Anthropic Claude Code',
+    'Claude Code Dynamic Workflows',
+    'Agent-Swarm Evolve',
+    'AgentOps'
   ],
   github: 'https://github.com/Shiyao-Huang/awesome-agent-evolution',
   discord: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/discussions',

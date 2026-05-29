@@ -1,8 +1,8 @@
 {
-  "generated": "2026-05-29T17:29:39.493Z",
+  "generated": "2026-05-29T17:50:10.902Z",
   "stats": {
     "pages": 52,
-    "keywords": 782
+    "keywords": 783
   },
   "catalog": [
     {
@@ -163,7 +163,9 @@
         "industry",
         "safety",
         "code-agent",
-        "talent-hub"
+        "talent-hub",
+        "agentops",
+        "dynamic-workflows"
       ]
     },
     {
@@ -1301,7 +1303,18 @@
     "talent-hub": [
       "entities/anthropic.md"
     ],
+    "agentops": [
+      "entities/anthropic.md",
+      "sources/anthropic-may-2026-agentops.md"
+    ],
+    "dynamic-workflows": [
+      "entities/anthropic.md",
+      "sources/anthropic-may-2026-agentops.md"
+    ],
     "self-evolution activity": [
+      "entities/anthropic.md"
+    ],
+    "2026-05 hotspot update": [
       "entities/anthropic.md"
     ],
     "key talent events": [
@@ -1348,6 +1361,10 @@
       "entities/meta-fair.md",
       "entities/openai.md",
       "sources/raw-social-blogs-mechanism-analysis.md"
+    ],
+    "agent-swarm-evolve": [
+      "entities/anthropic.md",
+      "sources/anthropic-may-2026-agentops.md"
     ],
     "google deepmind": [
       "entities/google-deepmind.md",
@@ -1540,12 +1557,6 @@
     "claude-code": [
       "sources/anthropic-may-2026-agentops.md"
     ],
-    "dynamic-workflows": [
-      "sources/anthropic-may-2026-agentops.md"
-    ],
-    "agentops": [
-      "sources/anthropic-may-2026-agentops.md"
-    ],
     "containment": [
       "sources/anthropic-may-2026-agentops.md"
     ],
@@ -1562,9 +1573,6 @@
       "sources/anthropic-may-2026-agentops.md"
     ],
     "self evolve implications": [
-      "sources/anthropic-may-2026-agentops.md"
-    ],
-    "agent-swarm-evolve": [
       "sources/anthropic-may-2026-agentops.md"
     ],
     "\"anthropic talent movement analysis\"": [

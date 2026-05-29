@@ -8,7 +8,7 @@
 _People, organizations, projects, products_
 
 <!-- entities auto-indexed here -->
-- [Anthropic](entities/anthropic.md) — LLM→Agent转型, SICA论文, Karpathy加入, Claude Code, talent hub | Rank: A | 2026-05-26
+- [Anthropic](entities/anthropic.md) — LLM→Agent转型, Claude Code Dynamic Workflows, Stainless/MCP, containment, talent hub | Rank: A | 2026-05-30
 - [Google DeepMind](entities/google-deepmind.md) — AlphaEvolve/FunSearch/OpenELM, code-agent, search-evolution | Rank: A | 2026-05-26
 - [Jeff Clune](entities/jeff-clune.md) — UBC/Vector/Recursive, ADAS/AI-Scientist/open-ended evolution pioneer | Rank: A | 2026-05-26
 - [Meta FAIR](entities/meta-fair.md) — Self-improving agents/Hyperagents, MSL 44-person team | Rank: A | 2026-05-26
@@ -43,6 +43,7 @@ _Processed raw sources with extracted insights_
 - [Raw-Papers Mechanism Analysis](sources/raw-papers-mechanism-analysis.md) — 128论文深挖: 7机制族F1-F7, Top-10论文, 5引用谱系, T1-T4证据分级, 效果/实现分类 | Rank: A | 2026-05-26
 - [Talent Flow Analysis](sources/talent-flow-analysis.md) — 2024-2026 人才流动: Meta虹吸, Anthropic净流入, 中国4高校集群 | Rank: A | 2026-05-26
 - [Anthropic Talent Movement](sources/anthropic-talent-movement.md) — Anthropic LLM→Agent转型, SICA论文, Karpathy加入, HBS案例 | Rank: A | 2026-05-26
+- [Anthropic May 2026 AgentOps Hotspot](sources/anthropic-may-2026-agentops.md) — Opus 4.8 + Dynamic Workflows + Stainless/MCP + containment + Series H: AgentOps stack signal | Rank: A | 2026-05-30
 - [China Self-Evolution Teams](sources/china-self-evolution-teams.md) — 4高校集群 + 2产业力量 + CAICT标准, 学术界驱动模式 | Rank: A | 2026-05-26
 - [Combined Talent Landscape](sources/combined-talent-landscape.md) — 三维整合(论文×工程×人才) Top-5机构评分 | Rank: A | 2026-05-26
 - [Material Ranking Framework](sources/material-ranking-framework.md) — 统一6套分类系统→四维评分, 137 reviews + 527 repos + 196 papers | Rank: A | 2026-05-26
@@ -85,6 +86,6 @@ _Cross-cutting analyses, comparisons, evolving theses_
 |--------|-------|
 | Entities | 8 |
 | Concepts | 10 |
-| Sources | 29 |
+| Sources | 30 |
 | Synthesis pages | 3 |
 | Last updated | 2026-05-30 |

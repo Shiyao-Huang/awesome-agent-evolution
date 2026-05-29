@@ -236,3 +236,12 @@
 - Updated `concepts/multi-agent-coevolution.md` to link the organization-level swarm-evolution part.
 - Updated README, README-ZH, README-EN, and site homepage entry points.
 **产出:** `analysis/agent-swarm-evolve.md`, `work/wiki/concepts/agent-swarm-evolve.md`
+
+## [2026-05-30 01:45] source+seo | Anthropic May 2026 AgentOps Hotspot
+
+**操作:** Combined current Anthropic hotspot news with the Self Evolve theme.
+**详情:**
+- Created `sources/anthropic-may-2026-agentops.md` with official sources for Opus 4.8, Dynamic Workflows, Stainless, containment engineering, Small Business workflows, and Series H.
+- Published two SEO blog posts: Dynamic Workflows as Agent-Swarm Evolve evidence, and Anthropic's May 2026 AgentOps platform shift.
+- Updated Anthropic entity page and README trend trackers so the hotspot maps to Agent-Swarm Evolve, tool connectivity, containment, cost, and verification loops.
+**产出:** `site/src/content/blog/anthropic-dynamic-workflows-agent-swarm-evolve.mdx`, `site/src/content/blog/anthropic-may-2026-agentops-platform-shift.mdx`, `work/wiki/sources/anthropic-may-2026-agentops.md`

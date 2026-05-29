@@ -135,6 +135,7 @@ flowchart LR
 | Benchmark 覆盖 | 125 benchmark-eval function-tagged repos | README benchmark 表 + `analysis/github-project-data-analysis.md` | benchmark 增加要看是否有隐藏测试、失败轨迹、成本和跨域迁移，不能只数 leaderboard。 |
 | 论文前沿 | 108 detailed paper references，含 2026 补充前沿 | `research/agent-self-evolution-papers-detailed-ZH.md` | 新论文进入 README 前要抽取改进对象、feedback、update、benchmark、限制。 |
 | 产品可用性 | 187 site-data projects / 389 public project reports | `projects/INDEX.md` + `site/public/reports/projects/INDEX.md` | 趋势判断要同时看能否运行、文档、真实 workflow、维护活跃度和用户价值，不只看 star。 |
+| Anthropic 热点 | Opus 4.8 + Dynamic Workflows + Stainless/MCP + containment + $65B Series H | [Dynamic Workflows SEO](site/src/content/blog/anthropic-dynamic-workflows-agent-swarm-evolve.mdx), [AgentOps SEO](site/src/content/blog/anthropic-may-2026-agentops-platform-shift.mdx), [wiki evidence](work/wiki/sources/anthropic-may-2026-agentops.md) | 热点必须回到本项目主题：模型发布只是入口，真正要看 Agent-Swarm Evolve、tool connectivity、containment、成本和验证闭环。 |
 
 每次追踪这个板块时，先新增 raw 证据，再更新 processed 分类和 README 判断，最后同步 `docs/indexes/` 与网站构建；如果 trend 判断改变，要写明证据变化，而不是只改结论。
 
