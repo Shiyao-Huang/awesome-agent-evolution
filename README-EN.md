@@ -24,6 +24,33 @@ This repository is a Chinese-first Awesome index, survey entry point, project mo
 4. Benchmarking is one of the main contradictions of this project: SWE-Bench, HumanEval, OSWorld, BrowserGym, AgentBench, LongMemEval, STATE-Bench, and related benchmarks must be compared in one table rather than scattered across project pages.
 5. The goal of this README is to give readers the cognitive structure directly; links serve as evidence and expanded material, not as prerequisites for understanding.
 
+## Project Value: Turning Awesome Into A Judgment System
+
+One sentence: the value of this project is not how many links it collects, but how well it turns each self-evolution claim into a traceable judgment: what changed, what feedback justified it, who verified it, what it cost, what risks it introduced, and how it can be audited or rolled back.
+
+Three sentences: the central finding of the English survey is that self-evolution must be evaluated as a controlled systems process, not as a demo label or a prettier leaderboard. This README therefore gives readers a judgment system: identify the mutable object, inspect the feedback and verifier, then check cost, failures, transfer, lineage, and rollback. For open-source readers it answers which projects are genuinely useful; for researchers it names the mechanisms worth studying; for maintainers it connects raw, processed, work, and results into a buildable evidence pipeline.
+
+```mermaid
+flowchart LR
+  C["Claim: agent improved"] --> O["Mutable object<br/>prompt / memory / skill / code / workflow / weights"]
+  O --> F["Feedback signal<br/>tests / reward / user pain / environment / judge"]
+  F --> V["Independent verification<br/>hidden tests / transfer / regression / audit"]
+  V --> R["Retained change<br/>model card / lineage / rollback / report"]
+  R --> P["Project value<br/>usable, comparable, reusable, publishable"]
+```
+
+### High-Value Findings From The English Survey
+
+| Rank | Finding | Direct README use | Evidence entry |
+|---:|---|---|---|
+| 1 | Self-evolution should be evaluated as a controlled systems process: every improvement must name the changed object, feedback, evaluator, cost, risk, and audit/rollback path. | Rankings and project pages should explain why a claim is credible, not only say the system got stronger. | [English paper abstract](paper-drafts/main.tex), [survey intro](paper-drafts/ch1-intro.tex) |
+| 2 | The Five Evolution Loops explain the field better than buzzwords: reflection/memory, symbolic components, verification-driven code, architecture design, and curriculum/weights/population. | README categories should support mechanism comparison instead of sorting only by project names or marketing labels. | [Five Evolution Loops](paper-drafts/ch1-intro.tex) |
+| 3 | Score gain is not capability gain; durable capability must transfer to held-out tasks, new environments, or later evolution steps. | Benchmark tables must include transfer, variance, failed candidates, cost, and regressions instead of only final scores. | [capability accumulation](paper-drafts/ch1-intro.tex), [evaluation chapter](survey/latex/chapters/ch5-evaluation-expanded.tex) |
+| 4 | Evaluation is both selection pressure and safety gate; a weak evaluator pushes agents toward Goodharting, echo traps, or benchmark-specific hacks. | Evaluation, harnesses, and verifier projects belong in the highest-value infrastructure layer. | [evaluation chapter](survey/latex/chapters/ch5-evaluation-expanded.tex), [survey ch5](survey/ch5-evaluation-cn.md) |
+| 5 | The user pain surface is mainly about trust boundaries, not raw capability: no fake logs, no silent context loss, no unbounded spending, and no unauditable changes. | Project model cards must report runnability, traces, permissions, costs, failure modes, and rollback paths. | [painpoints chapter](paper-drafts/ch7-painpoints.tex), [survey ch7](survey/ch7-painpoints-cn.md) |
+| 6 | The harness layer matters as much as the model layer; edit formats, tool schemas, dry-runs, and argument validation can unlock more real success than another model swap. | Harness engineering, skills, memory, and evaluators are not peripheral; they are self-evolution infrastructure. | [framework gap analysis](paper-drafts/ch7-painpoints.tex), [project groups](#project-taxonomy-table) |
+| 7 | Failed candidates, negative results, and rejected patches are knowledge assets; hiding failures leaves the field with cherry-picked demos. | Future reports and project pages should treat failure, limits, regressions, and non-applicable contexts as first-class information. | [negative evidence](paper-drafts/ch1-intro.tex), [required validation](#required-validation) |
+
 ## Core History, Future, and Trend Tracker
 
 One sentence: the history of AI Agent self-evolution moves from lightweight prompt/reflection self-correction, to engineered memory/skill/harness accumulation, and then toward auditable co-evolution of code, architecture, evaluators, and organizations.

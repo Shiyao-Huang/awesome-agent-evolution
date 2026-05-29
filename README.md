@@ -24,6 +24,33 @@
 4. Benchmark 是本项目的主矛盾之一：SWE-Bench、HumanEval、OSWorld、BrowserGym、AgentBench、LongMemEval、STATE-Bench 等必须被放在同一张比较表里，而不是散在项目页里。
 5. 这个 README 的目标是让读者直接获得认知结构；链接只作为证据来源和展开材料，不作为理解前提。
 
+## 项目价值：把 Awesome 变成判断系统
+
+一句话：这个项目的价值不是“收集了多少链接”，而是把每个 self-evolution claim 压成可追溯判断：改了什么、反馈是什么、谁验证、成本和风险是什么、如何审计或回滚。
+
+三句话：英文 survey 的核心发现是，self-evolution 必须被当作一个 controlled systems process，而不是一个漂亮榜单或 demo 标签。README 因此要直接给读者一套判断系统：先识别可变对象，再看反馈和验证器，再看是否有成本、失败、迁移、lineage 和 rollback。对开源读者，它回答“哪个项目真的有用”；对研究者，它回答“哪种机制值得研究”；对维护者，它把 raw、processed、work、results 接成一条可构建的数据流。
+
+```mermaid
+flowchart LR
+  C["Claim: agent improved"] --> O["Mutable object<br/>prompt / memory / skill / code / workflow / weights"]
+  O --> F["Feedback signal<br/>tests / reward / user pain / environment / judge"]
+  F --> V["Independent verification<br/>hidden tests / transfer / regression / audit"]
+  V --> R["Retained change<br/>model card / lineage / rollback / report"]
+  R --> P["Project value<br/>usable, comparable, reusable, publishable"]
+```
+
+### 英文 Survey 提炼出的高价值发现
+
+| Rank | 发现 | README 里的直接用法 | 证据入口 |
+|---:|---|---|---|
+| 1 | 自进化要按受控系统过程评估：每个 improvement 必须说明 changed object、feedback、evaluator、cost、risk、audit/rollback。 | 所有榜单和项目页都不能只写“更强”，要写“为什么可信”。 | [English paper abstract](paper-drafts/main.tex), [survey intro](paper-drafts/ch1-intro.tex) |
+| 2 | 五类 Evolution Loops 比六个热词更有解释力：reflection/memory、symbolic components、verification-driven code、architecture design、curriculum/weights/population。 | README 分类要服务机制比较，而不是按项目名或营销标签堆叠。 | [Five Evolution Loops](paper-drafts/ch1-intro.tex) |
+| 3 | Score gain 不等于 capability gain；只有能迁移到 held-out tasks、新环境或后续进化步骤，才算能力积累。 | Benchmark 表必须同时看迁移、方差、失败候选、成本和回归，而不是只看最终分数。 | [capability accumulation](paper-drafts/ch1-intro.tex), [evaluation chapter](survey/latex/chapters/ch5-evaluation-expanded.tex) |
+| 4 | Evaluation 是选择压力和安全门；坏 evaluator 会把 agent 推向 Goodhart、echo trap 或 benchmark-specific hack。 | Evaluation / harness / verifier 应排在高价值方向第一层。 | [evaluation chapter](survey/latex/chapters/ch5-evaluation-expanded.tex), [survey ch5](survey/ch5-evaluation-cn.md) |
+| 5 | 用户痛点的核心是 trust boundary，不是单纯能力：不要伪造日志、不要丢上下文、不要无限烧钱、不要做不可审计修改。 | 项目 model card 必须写 runnability、trace、权限、成本、失败模式和 rollback。 | [painpoints chapter](paper-drafts/ch7-painpoints.tex), [survey ch7](survey/ch7-painpoints-cn.md) |
+| 6 | Harness 层和模型层同样重要；edit format、tool schema、dry-run、argument validation 可能比换模型更能提高真实成功率。 | Harness engineering、skills、memory 和 evaluator 项目不能被当成“外围”，它们是自进化基础设施。 | [framework gap analysis](paper-drafts/ch7-painpoints.tex), [project groups](#项目分类总表) |
+| 7 | 失败候选、负结果和 rejected patches 是知识资产；隐藏失败会让 field 只剩 cherry-picked demo。 | 后续报告和项目页要把失败、限制、回归和不适用场景写成一等信息。 | [negative evidence](paper-drafts/ch1-intro.tex), [必要验证](#必要验证) |
+
 ## Star 榜单 — GitHub 项目热度排名
 
 > Rank 不只看 Star 数，还看 Star 质量、增长模式、证据强度。AutoGPT 175K stars 但质量分低于 DSPy 25K。

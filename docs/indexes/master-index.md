@@ -1,6 +1,6 @@
 # Self Evolve Master Index
 
-> Generated: 2026-05-29. Regenerate with `node scripts/generate_project_indexes.mjs`.
+> Generated: 2026-05-30. Regenerate with `node scripts/generate_project_indexes.mjs`.
 
 ## One Sentence
 
@@ -10,11 +10,11 @@ Self Evolve 的项目结构按 `raw -> processed -> work -> results` 管线治�
 
 | Metric | Value |
 |---|---:|
-| Raw GitHub captures | 584 |
-| Classified GitHub repositories | 584 |
-| Analyzed project/model-card reports | 175 |
-| Strict evolution-related repositories | 88 |
-| Broad evolution-related repositories | 193 |
+| Raw GitHub captures | 590 |
+| Classified GitHub repositories | 590 |
+| Analyzed project/model-card reports | 181 |
+| Strict evolution-related repositories | 89 |
+| Broad evolution-related repositories | 194 |
 | Raw paper files on disk | 201 |
 | Paper review files | 171 |
 | Public project report files | 383 |
@@ -26,8 +26,8 @@ Self Evolve 的项目结构按 `raw -> processed -> work -> results` 管线治�
 |---|---:|---:|---:|---:|---:|---|
 | [Raw / 原始素材](./raw-index.md) | 9/9 | 3899 | 9 | 0 | 40 MB | 只保存采集原貌和最小元数据；除时间戳补齐、去重索引外，不在这里写分析结论。 |
 | [Processed / 加工分析](./processed-index.md) | 6/8 | 26155 | 2896 | 0 | 2.9 GB | 清洗、分类、交叉分析、深度项目卡、论文评审都归这里；内容必须能追溯到 raw 或外部 canonical source。 |
-| [Work / 工作产物](./work-index.md) | 10/10 | 2104 | 395 | 0 | 50 MB | 论文草稿、站点源码、脚本、调查图表、工程中间件归这里；可以迭代，但要有构建或验证入口。 |
-| [Results / 结果输出](./results-index.md) | 6/6 | 1202 | 326 | 0 | 21 MB | 可交付、可发布、可下载、可部署的输出归这里；生成物要说明来源和刷新命令。 |
+| [Work / 工作产物](./work-index.md) | 10/10 | 2116 | 401 | 0 | 50 MB | 论文草稿、站点源码、脚本、调查图表、工程中间件归这里；可以迭代，但要有构建或验证入口。 |
+| [Results / 结果输出](./results-index.md) | 6/6 | 1214 | 332 | 0 | 21 MB | 可交付、可发布、可下载、可部署的输出归这里；生成物要说明来源和刷新命令。 |
 | [Mirrors / 外部仓库镜像](./mirrors-index.md) | 2/4 | 208318 | 44347 | 192 | 18 GB | 外部仓库克隆、只读镜像和临时验证仓库归这里；不要把本项目治理文件混入镜像内部。 |
 | [Ops / 管理与协作](./ops-index.md) | 9/9 | 92 | 16 | 0 | 1.9 MB | 项目管理、Agent 手册、云部署、索引、发布规范归这里；任何新长期规则都要能从根 README 找到。 |
 
