@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-30T00:00:00+08:00",
-  "total": 590,
-  "updated_files": 590,
+  "total": 596,
+  "updated_files": 596,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -980,10 +980,10 @@
       "repo": "cxxz/awesome-agent-memory",
       "url": "https://github.com/cxxz/awesome-agent-memory",
       "file": "raw-github/cxxz_awesome-agent-memory.md",
-      "content_timestamp": "2026-05-25",
-      "collected_at": "2026-05-25T23:35:00+08:00",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T01:15:12+08:00",
       "time_slice": "2026-05",
-      "timestamp_source": "web_observed_search_and_public_github_page_2026_05_25"
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
     {
       "repo": "cyijun/agent-smith",
@@ -2795,6 +2795,15 @@
       "timestamp_source": "web_observed_public_github_page_and_skills_hub_sync_2026_05_24"
     },
     {
+      "repo": "microsoft/agent-lightning",
+      "url": "https://github.com/microsoft/agent-lightning",
+      "file": "raw-github/microsoft_agent-lightning.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T01:15:12+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
       "repo": "microsoft/SkillOpt",
       "url": "https://github.com/microsoft/SkillOpt",
       "file": "raw-github/microsoft_skillopt.md",
@@ -3173,6 +3182,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "openai/swarm",
+      "url": "https://github.com/openai/swarm",
+      "file": "raw-github/openai_swarm.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T01:15:12+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
       "repo": "openautocoder/live-swe-agent",
       "url": "https://github.com/openautocoder/live-swe-agent",
       "file": "raw-github/openautocoder_live-swe-agent.md",
@@ -3200,6 +3218,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "openclaw/acpx",
+      "url": "https://github.com/openclaw/acpx",
+      "file": "raw-github/openclaw_acpx.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T01:15:12+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
       "repo": "openclaw/clawbench",
       "url": "https://github.com/openclaw/clawbench",
       "file": "raw-github/openclaw_clawbench.md",
@@ -3223,6 +3250,15 @@
       "file": "raw-github/openclaw_clownfish.md",
       "content_timestamp": "2026-05-29",
       "collected_at": "2026-05-29T22:15:49+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
+      "repo": "openclaw/crabbox",
+      "url": "https://github.com/openclaw/crabbox",
+      "file": "raw-github/openclaw_crabbox.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T01:15:12+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
@@ -3259,6 +3295,15 @@
       "file": "raw-github/openclaw_gitcrawl.md",
       "content_timestamp": "2026-05-29",
       "collected_at": "2026-05-29T22:15:49+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
+      "repo": "openclaw/openclaw-windows-node",
+      "url": "https://github.com/openclaw/openclaw-windows-node",
+      "file": "raw-github/openclaw_openclaw-windows-node.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T01:15:12+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
@@ -3927,6 +3972,15 @@
       "collected_at": "2026-05-26T10:04:13+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_05_26"
+    },
+    {
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills",
+      "file": "raw-github/seb1n_awesome-ai-agent-skills.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T01:15:12+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
     {
       "repo": "sebastianbrzustowicz/robot-sumo-rl",

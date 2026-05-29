@@ -1,6 +1,6 @@
 ---
-repo: cxxz/awesome-agent-memory
-url: https://github.com/cxxz/awesome-agent-memory
+repo: openclaw/crabbox
+url: https://github.com/openclaw/crabbox
 content_timestamp: 2026-05-30
 time_slice: 2026-05
 timestamp_source: web_observed_public_github_page_2026_05_29
@@ -8,9 +8,9 @@ collected_at: 2026-05-30T01:15:12+08:00
 source: github
 ---
 
-## GitHub - cxxz/awesome-agent-memory: awesome-agent-memory is a focused index of agent memory papers, systems, and implementation resources for long-term memory design decisions.
+## GitHub - openclaw/crabbox: crabbox is OpenClaw's browser-agent benchmark framework for reproducible task execution and evaluator-driven comparison.
 
-**Source**: https://github.com/cxxz/awesome-agent-memory
+**Source**: https://github.com/openclaw/crabbox
 
 ---
 
@@ -20,20 +20,20 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 
 ## Visible repository metadata
 
-- Repository: cxxz/awesome-agent-memory
-- URL: https://github.com/cxxz/awesome-agent-memory
-- Stars: 11
-- Forks: 3
-- Commits: 16
-- License: Unspecified (public page metadata)
-- Primary language / stack signal: Markdown/Agent Memory Index/Research Tool Taxonomy
+- Repository: openclaw/crabbox
+- URL: https://github.com/openclaw/crabbox
+- Stars: 539
+- Forks: 61
+- Commits: 945
+- License: MIT
+- Primary language / stack signal: Go/Browser Agent Benchmark Harness/Task Evaluation Pipeline
 - Collection timestamp: 2026-05-30T01:15:12+08:00
 
 ## Visible README / page excerpts
 
-- Repository title and about section frame it as an awesome list dedicated to agent memory.
-- Page metadata shows Markdown-first structure and small but active curation history.
-- Public page count snapshot showed 11 stars, 3 forks, and 16 commits.
+- README labels crabbox as a benchmark framework for browser agents.
+- Repository metadata indicates Go implementation and MIT licensing.
+- Public page count snapshot showed 539 stars, 61 forks, and 945 commits.
 - Counts were taken from the public GitHub page without authenticated API claims.
 
 ## Raw capture boundary

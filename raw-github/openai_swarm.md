@@ -1,6 +1,6 @@
 ---
-repo: cxxz/awesome-agent-memory
-url: https://github.com/cxxz/awesome-agent-memory
+repo: openai/swarm
+url: https://github.com/openai/swarm
 content_timestamp: 2026-05-30
 time_slice: 2026-05
 timestamp_source: web_observed_public_github_page_2026_05_29
@@ -8,9 +8,9 @@ collected_at: 2026-05-30T01:15:12+08:00
 source: github
 ---
 
-## GitHub - cxxz/awesome-agent-memory: awesome-agent-memory is a focused index of agent memory papers, systems, and implementation resources for long-term memory design decisions.
+## GitHub - openai/swarm: swarm is OpenAI's educational multi-agent orchestration framework for lightweight handoffs, routines, and inspectable agent workflow patterns.
 
-**Source**: https://github.com/cxxz/awesome-agent-memory
+**Source**: https://github.com/openai/swarm
 
 ---
 
@@ -20,20 +20,20 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 
 ## Visible repository metadata
 
-- Repository: cxxz/awesome-agent-memory
-- URL: https://github.com/cxxz/awesome-agent-memory
-- Stars: 11
-- Forks: 3
-- Commits: 16
-- License: Unspecified (public page metadata)
-- Primary language / stack signal: Markdown/Agent Memory Index/Research Tool Taxonomy
+- Repository: openai/swarm
+- URL: https://github.com/openai/swarm
+- Stars: 21500
+- Forks: 2300
+- Commits: 29
+- License: MIT
+- Primary language / stack signal: Python/Multi-Agent Orchestration/Function Calling Handoffs
 - Collection timestamp: 2026-05-30T01:15:12+08:00
 
 ## Visible README / page excerpts
 
-- Repository title and about section frame it as an awesome list dedicated to agent memory.
-- Page metadata shows Markdown-first structure and small but active curation history.
-- Public page count snapshot showed 11 stars, 3 forks, and 16 commits.
+- README opens with: an educational framework exploring ergonomic, lightweight multi-agent orchestration.
+- Project metadata panel shows MIT licensing and Python-first implementation signals.
+- Public page count snapshot showed about 21.5k stars, 2.3k forks, and 29 commits.
 - Counts were taken from the public GitHub page without authenticated API claims.
 
 ## Raw capture boundary

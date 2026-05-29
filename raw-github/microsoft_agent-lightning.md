@@ -1,6 +1,6 @@
 ---
-repo: cxxz/awesome-agent-memory
-url: https://github.com/cxxz/awesome-agent-memory
+repo: microsoft/agent-lightning
+url: https://github.com/microsoft/agent-lightning
 content_timestamp: 2026-05-30
 time_slice: 2026-05
 timestamp_source: web_observed_public_github_page_2026_05_29
@@ -8,9 +8,9 @@ collected_at: 2026-05-30T01:15:12+08:00
 source: github
 ---
 
-## GitHub - cxxz/awesome-agent-memory: awesome-agent-memory is a focused index of agent memory papers, systems, and implementation resources for long-term memory design decisions.
+## GitHub - microsoft/agent-lightning: Agent Lightning is Microsoft's framework for turning arbitrary agent execution traces into RL-friendly transitions and optimizing agent behavior with LightningRL.
 
-**Source**: https://github.com/cxxz/awesome-agent-memory
+**Source**: https://github.com/microsoft/agent-lightning
 
 ---
 
@@ -20,20 +20,20 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 
 ## Visible repository metadata
 
-- Repository: cxxz/awesome-agent-memory
-- URL: https://github.com/cxxz/awesome-agent-memory
-- Stars: 11
-- Forks: 3
-- Commits: 16
-- License: Unspecified (public page metadata)
-- Primary language / stack signal: Markdown/Agent Memory Index/Research Tool Taxonomy
+- Repository: microsoft/agent-lightning
+- URL: https://github.com/microsoft/agent-lightning
+- Stars: 17300
+- Forks: 1500
+- Commits: 255
+- License: MIT
+- Primary language / stack signal: Python/RL Training Framework/Agent Finetuning and Observability
 - Collection timestamp: 2026-05-30T01:15:12+08:00
 
 ## Visible README / page excerpts
 
-- Repository title and about section frame it as an awesome list dedicated to agent memory.
-- Page metadata shows Markdown-first structure and small but active curation history.
-- Public page count snapshot showed 11 stars, 3 forks, and 16 commits.
+- README states Agent Lightning can train any AI agents with reinforcement learning and almost zero code modifications.
+- Docs describe Training-Agent Disaggregation and a unified data interface for trajectories.
+- Public page count snapshot showed about 17.3k stars, 1.5k forks, and 255 commits.
 - Counts were taken from the public GitHub page without authenticated API claims.
 
 ## Raw capture boundary

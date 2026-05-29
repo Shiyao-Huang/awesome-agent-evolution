@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T22:15:49+08:00",
+  "generated_at": "2026-05-30T01:15:12+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -288,7 +288,13 @@
         "raw-github/openclaw_gitcrawl.md",
         "raw-github/openclaw_crawlkit.md",
         "raw-github/openclaw_discrawl.md",
-        "raw-github/memtensor_memos-cloud-openclaw-plugin.md"
+        "raw-github/memtensor_memos-cloud-openclaw-plugin.md",
+        "raw-github/openai_swarm.md",
+        "raw-github/microsoft_agent-lightning.md",
+        "raw-github/seb1n_awesome-ai-agent-skills.md",
+        "raw-github/openclaw_acpx.md",
+        "raw-github/openclaw_crabbox.md",
+        "raw-github/openclaw_openclaw-windows-node.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -431,7 +437,8 @@
         "work/research/hourly-public-metadata-update-2026-05-29-0405.md",
         "work/research/hourly-public-metadata-update-2026-05-29-1008.md",
         "work/research/hourly-public-metadata-update-2026-05-29-1612.md",
-        "work/research/hourly-public-metadata-update-2026-05-29-2215.md"
+        "work/research/hourly-public-metadata-update-2026-05-29-2215.md",
+        "work/research/hourly-public-metadata-update-2026-05-30-0115.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -949,7 +956,19 @@
         "projects/309-openclaw-discrawl-discord-archive-memory.md",
         "site/public/reports/projects/309-openclaw-discrawl-discord-archive-memory.md",
         "projects/310-memos-cloud-openclaw-plugin-memory-runtime.md",
-        "site/public/reports/projects/310-memos-cloud-openclaw-plugin-memory-runtime.md"
+        "site/public/reports/projects/310-memos-cloud-openclaw-plugin-memory-runtime.md",
+        "projects/311-openai-swarm-multi-agent-orchestration.md",
+        "site/public/reports/projects/311-openai-swarm-multi-agent-orchestration.md",
+        "projects/312-microsoft-agent-lightning-rl-agent-evolution.md",
+        "site/public/reports/projects/312-microsoft-agent-lightning-rl-agent-evolution.md",
+        "projects/313-awesome-ai-agent-skills-cross-agent-skill-index.md",
+        "site/public/reports/projects/313-awesome-ai-agent-skills-cross-agent-skill-index.md",
+        "projects/315-openclaw-acpx-stateful-agent-runtime.md",
+        "site/public/reports/projects/315-openclaw-acpx-stateful-agent-runtime.md",
+        "projects/316-openclaw-crabbox-browser-agent-benchmark.md",
+        "site/public/reports/projects/316-openclaw-crabbox-browser-agent-benchmark.md",
+        "projects/317-openclaw-windows-node-runner.md",
+        "site/public/reports/projects/317-openclaw-windows-node-runner.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1275,17 +1294,20 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-29T22:15:49+08:00",
+    "run_at": "2026-05-30T01:15:12+08:00",
     "added_repositories": [
-      "openclaw/clownfish",
-      "openclaw/crabpot",
-      "openclaw/gitcrawl",
-      "openclaw/crawlkit",
-      "openclaw/discrawl",
-      "MemTensor/MemOS-Cloud-OpenClaw-Plugin"
+      "openai/swarm",
+      "microsoft/agent-lightning",
+      "seb1n/awesome-ai-agent-skills",
+      "openclaw/acpx",
+      "openclaw/crabbox",
+      "openclaw/openclaw-windows-node"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
+    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration",
+    "refreshed_repositories": [
+      "cxxz/awesome-agent-memory"
+    ]
   }
 }

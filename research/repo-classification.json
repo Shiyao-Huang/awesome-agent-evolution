@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T22:15:49+08:00",
+  "generated_at": "2026-05-30T01:15:12+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -1624,17 +1624,17 @@
     {
       "repo": "cxxz/awesome-agent-memory",
       "url": "https://github.com/cxxz/awesome-agent-memory",
-      "stars": "10",
+      "stars": "11",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "教程/tutorial",
       "function_tag": "resource-index",
       "base_theme": "memory",
-      "stack": "Markdown",
+      "stack": "Markdown/Agent Memory Index/Research Tool Taxonomy",
       "time_slice": "2026-05",
-      "content_timestamp": "2026-05-25",
-      "evidence": "web-observed GitHub page showed MIT license, 10 stars, 3 forks, 16 commits, and an MCP-centric memory server/tool list covering Basic Memory, OpenMemory MCP, graph memory servers and vector-backed memory tools; counts were not API-verified in this shell-blocked run.",
-      "description": "A curated agent-memory resource index that helps separate memory tools, patterns and research signals from runtime claims."
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 11 stars, 3 forks, 16 commits, Markdown language dominance, and repository framing as an awesome list for agent memory.",
+      "description": "awesome-agent-memory is a focused index of agent memory papers, systems, and implementation resources for long-term memory design decisions."
     },
     {
       "repo": "cyijun/agent-smith",
@@ -4652,6 +4652,21 @@
       "description": "Skills Best Practices packages agent skill authoring into a reusable methodology: trigger-optimized metadata, lean SKILL.md files, deterministic scripts, references/assets and LLM-based validation checks."
     },
     {
+      "repo": "microsoft/agent-lightning",
+      "url": "https://github.com/microsoft/agent-lightning",
+      "stars": "17300",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "Python/RL Training Framework/Agent Finetuning and Observability",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed ~17.3k stars, ~1.5k forks, 255 commits, MIT license, and README claims that Agent Lightning can train any AI agents with almost zero code modifications.",
+      "description": "Agent Lightning is Microsoft's framework for turning arbitrary agent execution traces into RL-friendly transitions and optimizing agent behavior with LightningRL."
+    },
+    {
       "repo": "microsoft/SkillOpt",
       "url": "https://github.com/microsoft/SkillOpt",
       "stars": "1100",
@@ -5282,6 +5297,21 @@
       "description": "OpenAI Skills 是 Codex 的官方 skills catalog，把可发现的说明、脚本和资源打包成可安装能力，成为 agent skill 生态的标准入口。"
     },
     {
+      "repo": "openai/swarm",
+      "url": "https://github.com/openai/swarm",
+      "stars": "21500",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Python/Multi-Agent Orchestration/Function Calling Handoffs",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed ~21.5k stars, ~2.3k forks, 29 commits, MIT license, and README positioning Swarm as an experimental educational framework for ergonomic and lightweight multi-agent orchestration.",
+      "description": "swarm is OpenAI's educational multi-agent orchestration framework for lightweight handoffs, routines, and inspectable agent workflow patterns."
+    },
+    {
       "repo": "openautocoder/live-swe-agent",
       "url": "https://github.com/openautocoder/live-swe-agent",
       "stars": "392",
@@ -5327,6 +5357,21 @@
       "description": "EdgeClaw 是 OpenBMB 等机构基于 OpenClaw 的边云协同个人 AI Assistant，把 cost-aware routing、multi-layer memory、skill discovery、tool governance 和 sandbox 组织成个人 Agent runtime。"
     },
     {
+      "repo": "openclaw/acpx",
+      "url": "https://github.com/openclaw/acpx",
+      "stars": "2800",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "TypeScript/ACP Runtime/Stateful Session and Skill Orchestration",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed about 2.8k stars, 272 forks, 411 commits, MIT license, and about text stating acpx preserves complete session context when switching between coding agents.",
+      "description": "acpx is OpenClaw's state-preserving runtime for switching across coding agents while retaining full session context and ACP compatibility."
+    },
+    {
       "repo": "openclaw/clawbench",
       "url": "https://github.com/openclaw/clawbench",
       "stars": "97",
@@ -5370,6 +5415,21 @@
       "content_timestamp": "2026-05-29",
       "evidence": "web-observed GitHub page showed 36 stars, 11 forks, 1,793 commits and JavaScript language signals; page copy states clownfish is a maintainer codex harness for issue clusters.",
       "description": "clownfish is OpenClaw's maintainer codex harness focused on resolving issue clusters at scale with auditable workflows."
+    },
+    {
+      "repo": "openclaw/crabbox",
+      "url": "https://github.com/openclaw/crabbox",
+      "stars": "539",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Go/Browser Agent Benchmark Harness/Task Evaluation Pipeline",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 539 stars, 61 forks, 945 commits, MIT license, and repository framing as a benchmark framework for browser agents.",
+      "description": "crabbox is OpenClaw's browser-agent benchmark framework for reproducible task execution and evaluator-driven comparison."
     },
     {
       "repo": "openclaw/crabpot",
@@ -5445,6 +5505,21 @@
       "prior_unclassified": "true",
       "time_slice": "2026-05",
       "content_timestamp": "2026-05-21"
+    },
+    {
+      "repo": "openclaw/openclaw-windows-node",
+      "url": "https://github.com/openclaw/openclaw-windows-node",
+      "stars": "542",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "应用/application",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "C#/Windows Runtime/Companion Node for OpenClaw Execution",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 542 stars, 95 forks, 914 commits, MIT license, and repository scope as a Windows companion node for OpenClaw.",
+      "description": "openclaw-windows-node provides a Windows companion runtime layer to execute OpenClaw agent workflows in native Windows contexts."
     },
     {
       "repo": "opendatabox/workspace-bench",
@@ -6540,6 +6615,21 @@
       "content_timestamp": "2026-05-26",
       "evidence": "web-observed GitHub page showed 157 stars, 21 forks, 456 commits, MIT license, and README claims for hook-enforced dual review, state-machine gate checks, fail-closed policies, and a large bundled public skill set for coding-agent operations.",
       "description": "sd0x-dev-flow is a harness layer for Claude Code with dual-review gates, state-machine controls and fail-closed safety for coding-agent workflows."
+    },
+    {
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "url": "https://github.com/seb1n/awesome-ai-agent-skills",
+      "stars": "92",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/Skill Registry/Codex Claude Cursor Gemini OpenCode Support",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 92 stars, 17 forks, 4 commits, MIT license, and README framing as a curated list for reusable AI coding agent skills.",
+      "description": "awesome-ai-agent-skills curates reusable skill packs and installation paths across Codex, Claude, Cursor, Gemini CLI, OpenCode, and related agent runtimes."
     },
     {
       "repo": "sebastianbrzustowicz/robot-sumo-rl",

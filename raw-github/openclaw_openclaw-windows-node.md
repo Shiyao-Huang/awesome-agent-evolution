@@ -1,6 +1,6 @@
 ---
-repo: cxxz/awesome-agent-memory
-url: https://github.com/cxxz/awesome-agent-memory
+repo: openclaw/openclaw-windows-node
+url: https://github.com/openclaw/openclaw-windows-node
 content_timestamp: 2026-05-30
 time_slice: 2026-05
 timestamp_source: web_observed_public_github_page_2026_05_29
@@ -8,9 +8,9 @@ collected_at: 2026-05-30T01:15:12+08:00
 source: github
 ---
 
-## GitHub - cxxz/awesome-agent-memory: awesome-agent-memory is a focused index of agent memory papers, systems, and implementation resources for long-term memory design decisions.
+## GitHub - openclaw/openclaw-windows-node: openclaw-windows-node provides a Windows companion runtime layer to execute OpenClaw agent workflows in native Windows contexts.
 
-**Source**: https://github.com/cxxz/awesome-agent-memory
+**Source**: https://github.com/openclaw/openclaw-windows-node
 
 ---
 
@@ -20,20 +20,20 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 
 ## Visible repository metadata
 
-- Repository: cxxz/awesome-agent-memory
-- URL: https://github.com/cxxz/awesome-agent-memory
-- Stars: 11
-- Forks: 3
-- Commits: 16
-- License: Unspecified (public page metadata)
-- Primary language / stack signal: Markdown/Agent Memory Index/Research Tool Taxonomy
+- Repository: openclaw/openclaw-windows-node
+- URL: https://github.com/openclaw/openclaw-windows-node
+- Stars: 542
+- Forks: 95
+- Commits: 914
+- License: MIT
+- Primary language / stack signal: C#/Windows Runtime/Companion Node for OpenClaw Execution
 - Collection timestamp: 2026-05-30T01:15:12+08:00
 
 ## Visible README / page excerpts
 
-- Repository title and about section frame it as an awesome list dedicated to agent memory.
-- Page metadata shows Markdown-first structure and small but active curation history.
-- Public page count snapshot showed 11 stars, 3 forks, and 16 commits.
+- Repository title and about section identify it as OpenClaw's Windows companion node.
+- Metadata panel indicates C#-first implementation and MIT licensing.
+- Public page count snapshot showed 542 stars, 95 forks, and 914 commits.
 - Counts were taken from the public GitHub page without authenticated API claims.
 
 ## Raw capture boundary

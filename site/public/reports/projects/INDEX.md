@@ -336,6 +336,13 @@
 | Discrawl | [openclaw/discrawl](https://github.com/openclaw/discrawl) | Discord Archive and Memory Ingest Harness | [projects/309-openclaw-discrawl-discord-archive-memory.md](309-openclaw-discrawl-discord-archive-memory.md) |
 | MemOS Cloud OpenClaw Plugin | [MemTensor/MemOS-Cloud-OpenClaw-Plugin](https://github.com/MemTensor/MemOS-Cloud-OpenClaw-Plugin) | Hosted Agent Memory Runtime Plugin | [projects/310-memos-cloud-openclaw-plugin-memory-runtime.md](310-memos-cloud-openclaw-plugin-memory-runtime.md) |
 
+| OpenAI Swarm | [openai/swarm](https://github.com/openai/swarm) | Experimental Multi-Agent Orchestration Framework | [projects/311-openai-swarm-multi-agent-orchestration.md](311-openai-swarm-multi-agent-orchestration.md) |
+| Agent Lightning | [microsoft/agent-lightning](https://github.com/microsoft/agent-lightning) | Reinforcement-Learning Agent Training Framework | [projects/312-microsoft-agent-lightning-rl-agent-evolution.md](312-microsoft-agent-lightning-rl-agent-evolution.md) |
+| Awesome AI Agent Skills | [seb1n/awesome-ai-agent-skills](https://github.com/seb1n/awesome-ai-agent-skills) | Cross-Agent Skill Index and Install Guide | [projects/313-awesome-ai-agent-skills-cross-agent-skill-index.md](313-awesome-ai-agent-skills-cross-agent-skill-index.md) |
+| ACPX | [openclaw/acpx](https://github.com/openclaw/acpx) | State-Preserving Agent Runtime and Session Handoff | [projects/315-openclaw-acpx-stateful-agent-runtime.md](315-openclaw-acpx-stateful-agent-runtime.md) |
+| Crabbox | [openclaw/crabbox](https://github.com/openclaw/crabbox) | Browser Agent Benchmark and Evaluation Harness | [projects/316-openclaw-crabbox-browser-agent-benchmark.md](316-openclaw-crabbox-browser-agent-benchmark.md) |
+| OpenClaw Windows Node | [openclaw/openclaw-windows-node](https://github.com/openclaw/openclaw-windows-node) | Windows Companion Runtime for Agent Execution | [projects/317-openclaw-windows-node-runner.md](317-openclaw-windows-node-runner.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

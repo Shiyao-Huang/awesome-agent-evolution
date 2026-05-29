@@ -1,6 +1,6 @@
 ---
-repo: cxxz/awesome-agent-memory
-url: https://github.com/cxxz/awesome-agent-memory
+repo: openclaw/acpx
+url: https://github.com/openclaw/acpx
 content_timestamp: 2026-05-30
 time_slice: 2026-05
 timestamp_source: web_observed_public_github_page_2026_05_29
@@ -8,9 +8,9 @@ collected_at: 2026-05-30T01:15:12+08:00
 source: github
 ---
 
-## GitHub - cxxz/awesome-agent-memory: awesome-agent-memory is a focused index of agent memory papers, systems, and implementation resources for long-term memory design decisions.
+## GitHub - openclaw/acpx: acpx is OpenClaw's state-preserving runtime for switching across coding agents while retaining full session context and ACP compatibility.
 
-**Source**: https://github.com/cxxz/awesome-agent-memory
+**Source**: https://github.com/openclaw/acpx
 
 ---
 
@@ -20,20 +20,20 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 
 ## Visible repository metadata
 
-- Repository: cxxz/awesome-agent-memory
-- URL: https://github.com/cxxz/awesome-agent-memory
-- Stars: 11
-- Forks: 3
-- Commits: 16
-- License: Unspecified (public page metadata)
-- Primary language / stack signal: Markdown/Agent Memory Index/Research Tool Taxonomy
+- Repository: openclaw/acpx
+- URL: https://github.com/openclaw/acpx
+- Stars: 2800
+- Forks: 272
+- Commits: 411
+- License: MIT
+- Primary language / stack signal: TypeScript/ACP Runtime/Stateful Session and Skill Orchestration
 - Collection timestamp: 2026-05-30T01:15:12+08:00
 
 ## Visible README / page excerpts
 
-- Repository title and about section frame it as an awesome list dedicated to agent memory.
-- Page metadata shows Markdown-first structure and small but active curation history.
-- Public page count snapshot showed 11 stars, 3 forks, and 16 commits.
+- About section says acpx preserves complete session context when switching between coding agents.
+- README highlights ACP implementation and stateful session continuity goals.
+- Public page count snapshot showed about 2.8k stars, 272 forks, and 411 commits.
 - Counts were taken from the public GitHub page without authenticated API claims.
 
 ## Raw capture boundary

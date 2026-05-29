@@ -1,6 +1,6 @@
 ---
-repo: cxxz/awesome-agent-memory
-url: https://github.com/cxxz/awesome-agent-memory
+repo: seb1n/awesome-ai-agent-skills
+url: https://github.com/seb1n/awesome-ai-agent-skills
 content_timestamp: 2026-05-30
 time_slice: 2026-05
 timestamp_source: web_observed_public_github_page_2026_05_29
@@ -8,9 +8,9 @@ collected_at: 2026-05-30T01:15:12+08:00
 source: github
 ---
 
-## GitHub - cxxz/awesome-agent-memory: awesome-agent-memory is a focused index of agent memory papers, systems, and implementation resources for long-term memory design decisions.
+## GitHub - seb1n/awesome-ai-agent-skills: awesome-ai-agent-skills curates reusable skill packs and installation paths across Codex, Claude, Cursor, Gemini CLI, OpenCode, and related agent runtimes.
 
-**Source**: https://github.com/cxxz/awesome-agent-memory
+**Source**: https://github.com/seb1n/awesome-ai-agent-skills
 
 ---
 
@@ -20,20 +20,20 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 
 ## Visible repository metadata
 
-- Repository: cxxz/awesome-agent-memory
-- URL: https://github.com/cxxz/awesome-agent-memory
-- Stars: 11
-- Forks: 3
-- Commits: 16
-- License: Unspecified (public page metadata)
-- Primary language / stack signal: Markdown/Agent Memory Index/Research Tool Taxonomy
+- Repository: seb1n/awesome-ai-agent-skills
+- URL: https://github.com/seb1n/awesome-ai-agent-skills
+- Stars: 92
+- Forks: 17
+- Commits: 4
+- License: MIT
+- Primary language / stack signal: Markdown/Skill Registry/Codex Claude Cursor Gemini OpenCode Support
 - Collection timestamp: 2026-05-30T01:15:12+08:00
 
 ## Visible README / page excerpts
 
-- Repository title and about section frame it as an awesome list dedicated to agent memory.
-- Page metadata shows Markdown-first structure and small but active curation history.
-- Public page count snapshot showed 11 stars, 3 forks, and 16 commits.
+- README title frames the repository as a curated list of reusable AI coding agent skills.
+- Install matrix includes Codex CLI, Claude Code, Cursor, Gemini CLI, OpenCode, and others.
+- Public page count snapshot showed 92 stars, 17 forks, and 4 commits.
 - Counts were taken from the public GitHub page without authenticated API claims.
 
 ## Raw capture boundary

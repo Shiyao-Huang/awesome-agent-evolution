@@ -4976,6 +4976,174 @@ export const projects: Project[] = [
                     "long-term-memory",
                     "cloud-memory"
             ]
+    },
+    {
+            "name": "OpenAI Swarm",
+            "repo": "openai/swarm",
+            "url": "https://github.com/openai/swarm",
+            "stars": 21500,
+            "forks": 2300,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/311-openai-swarm-multi-agent-orchestration.md",
+            "pattern": "compose lightweight routines and handoffs -> route user tasks across specialized agents -> keep tool usage explicit and inspectable -> evolve orchestration workflows with reproducible function-call boundaries",
+            "description": "swarm is OpenAI's educational multi-agent orchestration framework for lightweight handoffs, routines, and inspectable agent workflow patterns.",
+            "stack": [
+                    "Python",
+                    "Multi-Agent Orchestration",
+                    "Function Calling Handoffs"
+            ],
+            "category": "Experimental Multi-Agent Orchestration Framework",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/openai_swarm.md",
+            "status": "candidate",
+            "tags": [
+                    "multi-agent",
+                    "orchestration",
+                    "handoff",
+                    "openai",
+                    "framework"
+            ]
+    },
+    {
+            "name": "Agent Lightning",
+            "repo": "microsoft/agent-lightning",
+            "url": "https://github.com/microsoft/agent-lightning",
+            "stars": 17300,
+            "forks": 1500,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/312-microsoft-agent-lightning-rl-agent-evolution.md",
+            "pattern": "decouple agent execution from RL training through unified trajectories -> build a training-agent disaggregation architecture -> optimize downstream agent policies with LightningRL credit assignment -> feed validated gains back into agent runtime loops",
+            "description": "Agent Lightning is Microsoft's framework for turning arbitrary agent execution traces into RL-friendly transitions and optimizing agent behavior with LightningRL.",
+            "stack": [
+                    "Python",
+                    "RL Training Framework",
+                    "Agent Finetuning and Observability"
+            ],
+            "category": "Reinforcement-Learning Agent Training Framework",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/microsoft_agent-lightning.md",
+            "status": "candidate",
+            "tags": [
+                    "reinforcement-learning",
+                    "agent-training",
+                    "self-improvement",
+                    "microsoft",
+                    "evolution"
+            ]
+    },
+    {
+            "name": "Awesome AI Agent Skills",
+            "repo": "seb1n/awesome-ai-agent-skills",
+            "url": "https://github.com/seb1n/awesome-ai-agent-skills",
+            "stars": 92,
+            "forks": 17,
+            "language": "Markdown",
+            "license": "MIT",
+            "report": "projects/313-awesome-ai-agent-skills-cross-agent-skill-index.md",
+            "pattern": "collect reusable agent skills in one registry -> map installation paths for multiple agent runtimes -> standardize skill formatting and metadata -> reduce bootstrapping friction for reproducible skill reuse",
+            "description": "awesome-ai-agent-skills curates reusable skill packs and installation paths across Codex, Claude, Cursor, Gemini CLI, OpenCode, and related agent runtimes.",
+            "stack": [
+                    "Markdown",
+                    "Skill Registry",
+                    "Codex Claude Cursor Gemini OpenCode Support"
+            ],
+            "category": "Cross-Agent Skill Index and Install Guide",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/seb1n_awesome-ai-agent-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "skills",
+                    "awesome-list",
+                    "cross-agent",
+                    "codex",
+                    "claude-code"
+            ]
+    },
+    {
+            "name": "ACPX",
+            "repo": "openclaw/acpx",
+            "url": "https://github.com/openclaw/acpx",
+            "stars": 2800,
+            "forks": 272,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/315-openclaw-acpx-stateful-agent-runtime.md",
+            "pattern": "preserve session state across agent switches -> coordinate skills through ACP-compatible runtime contracts -> maintain continuity for long-running workflows -> turn ad hoc tool use into transferable orchestration assets",
+            "description": "acpx is OpenClaw's state-preserving runtime for switching across coding agents while retaining full session context and ACP compatibility.",
+            "stack": [
+                    "TypeScript",
+                    "ACP Runtime",
+                    "Stateful Session and Skill Orchestration"
+            ],
+            "category": "State-Preserving Agent Runtime and Session Handoff",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/openclaw_acpx.md",
+            "status": "candidate",
+            "tags": [
+                    "openclaw",
+                    "acp",
+                    "stateful-runtime",
+                    "skill-orchestration",
+                    "session-handoff"
+            ]
+    },
+    {
+            "name": "Crabbox",
+            "repo": "openclaw/crabbox",
+            "url": "https://github.com/openclaw/crabbox",
+            "stars": 539,
+            "forks": 61,
+            "language": "Go",
+            "license": "MIT",
+            "report": "projects/316-openclaw-crabbox-browser-agent-benchmark.md",
+            "pattern": "define browser-agent task suites -> execute agent runs with standardized tooling and policies -> score outcomes with reproducible evaluators -> provide benchmark signals for agent iteration and harness tuning",
+            "description": "crabbox is OpenClaw's browser-agent benchmark framework for reproducible task execution and evaluator-driven comparison.",
+            "stack": [
+                    "Go",
+                    "Browser Agent Benchmark Harness",
+                    "Task Evaluation Pipeline"
+            ],
+            "category": "Browser Agent Benchmark and Evaluation Harness",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/openclaw_crabbox.md",
+            "status": "candidate",
+            "tags": [
+                    "openclaw",
+                    "benchmark",
+                    "browser-agent",
+                    "evaluation",
+                    "harness"
+            ]
+    },
+    {
+            "name": "OpenClaw Windows Node",
+            "repo": "openclaw/openclaw-windows-node",
+            "url": "https://github.com/openclaw/openclaw-windows-node",
+            "stars": 542,
+            "forks": 95,
+            "language": "C#",
+            "license": "MIT",
+            "report": "projects/317-openclaw-windows-node-runner.md",
+            "pattern": "bridge OpenClaw workflows into Windows environments -> run companion node services with OS-specific integration -> keep agent operations portable across platform constraints -> feed platform results back into broader harness reliability",
+            "description": "openclaw-windows-node provides a Windows companion runtime layer to execute OpenClaw agent workflows in native Windows contexts.",
+            "stack": [
+                    "C#",
+                    "Windows Runtime",
+                    "Companion Node for OpenClaw Execution"
+            ],
+            "category": "Windows Companion Runtime for Agent Execution",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/openclaw_openclaw-windows-node.md",
+            "status": "candidate",
+            "tags": [
+                    "openclaw",
+                    "windows",
+                    "runtime",
+                    "companion-node",
+                    "cross-platform"
+            ]
     }
 ];
 
@@ -5006,7 +5174,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }
