@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-29T10:08:08+08:00
+Generated: 2026-05-29T16:12:30+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-05-29T10:08:08+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: BerriAI/self-improving-agent, LLMSecurity/awesome-agent-skills-security, ComposioHQ/awesome-agent-clis, Olshansk/agent-skills, axiomhq/agent-memory, FreedomIntelligence/Tiermem.
-- New raw files: raw-github/berriai_self-improving-agent.md, raw-github/llmsecurity_awesome-agent-skills-security.md, raw-github/composiohq_awesome-agent-clis.md, raw-github/olshansk_agent-skills.md, raw-github/axiomhq_agent-memory.md, raw-github/freedomintelligence_tiermem.md.
-- New public model cards and site reports: project/report ids 293, 294, 295, 296, 297, 298.
+- Web-observed repos: itgoyo/awesome-agent-skills, back1ply/agent-skill-loader, Da1yuqin/SEAD, ai-agents-2030/darwin-mobile-agent, YuanchenBei/Mem-Gallery, InfiAgent/InfiAgent.
+- New raw files: raw-github/itgoyo_awesome-agent-skills.md, raw-github/back1ply_agent-skill-loader.md, raw-github/da1yuqin_sead.md, raw-github/ai-agents-2030_darwin-mobile-agent.md, raw-github/yuanchenbei_mem-gallery.md, raw-github/infiagent_infiagent.md.
+- New public model cards and site reports: project/report ids 299, 300, 301, 302, 303, 304.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
 - GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

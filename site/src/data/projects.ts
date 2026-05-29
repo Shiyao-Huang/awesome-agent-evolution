@@ -4640,6 +4640,174 @@ export const projects: Project[] = [
                     "evaluation",
                     "long-context"
             ]
+    },
+    {
+            "name": "Awesome Agent Skills (itgoyo)",
+            "repo": "itgoyo/awesome-agent-skills",
+            "url": "https://github.com/itgoyo/awesome-agent-skills",
+            "stars": 112,
+            "forks": 10,
+            "language": "Markdown",
+            "license": "CC-BY-4.0 (README declared)",
+            "report": "projects/299-itgoyo-awesome-agent-skills.md",
+            "pattern": "curate agent-skill resources across runtimes -> map official and community skill ecosystems -> link install/readme paths -> help teams bootstrap reusable skill workflows quickly",
+            "description": "itgoyo/awesome-agent-skills is a cross-runtime skills index covering Claude Code, Codex, Gemini CLI, Cline, Cursor and MCP-oriented skill resources.",
+            "stack": [
+                    "Markdown",
+                    "MCP-Compatible Skill Registry",
+                    "Workflow Resource Index"
+            ],
+            "category": "Cross-Platform Agent Skills Resource Index",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/itgoyo_awesome-agent-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "agent-skills",
+                    "resource-index",
+                    "mcp",
+                    "workflow",
+                    "cross-runtime"
+            ]
+    },
+    {
+            "name": "Agent Skill Loader",
+            "repo": "back1ply/agent-skill-loader",
+            "url": "https://github.com/back1ply/agent-skill-loader",
+            "stars": 10,
+            "forks": 3,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/300-back1ply-agent-skill-loader.md",
+            "pattern": "ingest skill bundles with uniform loader interfaces -> resolve runtime dependencies and skill metadata -> mount skills into agent execution contexts -> support iteration through modular updates",
+            "description": "agent-skill-loader provides a TypeScript loader pipeline for wiring reusable skill modules into AI agent runtimes.",
+            "stack": [
+                    "TypeScript",
+                    "Skill Loading Pipeline",
+                    "Agent Runtime Integration"
+            ],
+            "category": "Runtime Agent Skill Loader",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/back1ply_agent-skill-loader.md",
+            "status": "candidate",
+            "tags": [
+                    "agent-skills",
+                    "skill-loader",
+                    "typescript",
+                    "runtime",
+                    "orchestration"
+            ]
+    },
+    {
+            "name": "SEAD",
+            "repo": "Da1yuqin/SEAD",
+            "url": "https://github.com/Da1yuqin/SEAD",
+            "stars": 20,
+            "forks": 1,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/301-da1yuqin-sead-benchmark.md",
+            "pattern": "benchmark architecture-level agent design quality -> compare model-generated system designs under controlled tasks -> score design quality and completion behavior -> reveal where self-evolving design loops fail",
+            "description": "SEAD is a benchmark for evaluating LLM-based agents on software system design tasks with an explicit self-evolving-agent framing.",
+            "stack": [
+                    "Python",
+                    "Agent System Design Benchmark",
+                    "Evolution Evaluation"
+            ],
+            "category": "Self-Evolving Agent Design Benchmark",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/da1yuqin_sead.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "self-evolving-agent",
+                    "system-design",
+                    "evaluation",
+                    "llm-agent"
+            ]
+    },
+    {
+            "name": "Darwin Mobile Agent",
+            "repo": "ai-agents-2030/darwin-mobile-agent",
+            "url": "https://github.com/ai-agents-2030/darwin-mobile-agent",
+            "stars": 10,
+            "forks": 0,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/302-darwin-mobile-agent.md",
+            "pattern": "run mobile task execution loops -> record failures and intervention traces -> evolve prompts/skills/action plans -> replay against app tasks to measure iterative gains",
+            "description": "darwin-mobile-agent targets self-evolving mobile automation agents with an explicit iterative improvement workflow.",
+            "stack": [
+                    "Python",
+                    "Mobile Agent Runtime",
+                    "Self-Improvement Loop"
+            ],
+            "category": "Mobile Agent Self-Evolution Framework",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/ai-agents-2030_darwin-mobile-agent.md",
+            "status": "candidate",
+            "tags": [
+                    "mobile-agent",
+                    "self-evolution",
+                    "android",
+                    "agent-runtime",
+                    "evaluation"
+            ]
+    },
+    {
+            "name": "Mem-Gallery",
+            "repo": "YuanchenBei/Mem-Gallery",
+            "url": "https://github.com/YuanchenBei/Mem-Gallery",
+            "stars": 36,
+            "forks": 2,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/303-mem-gallery-memory-benchmark.md",
+            "pattern": "assemble memory-intensive tasks and temporal-context datasets -> run agents with different memory strategies -> score recall/consistency/retrieval behavior -> compare long-term memory robustness across setups",
+            "description": "Mem-Gallery provides a benchmark suite for long-term memory capability in LLM-based agents and assistants.",
+            "stack": [
+                    "Python",
+                    "Long-Term Memory Benchmark",
+                    "LLM Agent Evaluation"
+            ],
+            "category": "Long-Term Memory Benchmark Suite",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/yuanchenbei_mem-gallery.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "benchmark",
+                    "long-term-memory",
+                    "evaluation",
+                    "agent"
+            ]
+    },
+    {
+            "name": "InfiAgent",
+            "repo": "InfiAgent/InfiAgent",
+            "url": "https://github.com/InfiAgent/InfiAgent",
+            "stars": 1900,
+            "forks": 235,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/304-infiagent-framework.md",
+            "pattern": "break complex goals into planner-executor-reflection stages -> execute tasks with tool-use traces -> distill successful trajectories into reusable policies -> iterate to improve completion quality over time",
+            "description": "InfiAgent presents an open-source framework aimed at self-improving AI agent loops with planner/executor/reflection style workflows.",
+            "stack": [
+                    "Python",
+                    "Agent Workflow Infrastructure",
+                    "Self-Improvement Loop"
+            ],
+            "category": "Framework for Self-Improving Agent Loops",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/infiagent_infiagent.md",
+            "status": "candidate",
+            "tags": [
+                    "self-improving-agent",
+                    "framework",
+                    "workflow",
+                    "reflection",
+                    "python"
+            ]
     }
 ];
 
@@ -4670,7 +4838,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

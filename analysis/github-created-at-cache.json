@@ -2384,5 +2384,53 @@
     "forks": null,
     "source": "github_api_fetch_error",
     "error": "fetch failed"
+  },
+  "itgoyo/awesome-agent-skills": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "back1ply/agent-skill-loader": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "da1yuqin/sead": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "ai-agents-2030/darwin-mobile-agent": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "yuanchenbei/mem-gallery": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "infiagent/infiagent": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
   }
 }

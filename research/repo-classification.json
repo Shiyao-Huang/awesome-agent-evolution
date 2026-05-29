@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T10:08:08+08:00",
+  "generated_at": "2026-05-29T16:12:30+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -360,6 +360,21 @@
       "content_timestamp": "2026-05-26",
       "evidence": "web-observed GitHub page showed 31 stars, 14 forks, 4 commits, MIT license, Python primary language, and README language about 62 trading/DeFi/quantitative-finance Agent Skills across 16 categories with Claude Code plugin and manual install paths for Codex, Cursor and Gemini CLI.",
       "description": "Claude Trading Skills packages trading, DeFi and quantitative finance procedures as reusable Agent Skills for Claude Code, Codex, Cursor, Gemini CLI and other compatible runtimes."
+    },
+    {
+      "repo": "ai-agents-2030/darwin-mobile-agent",
+      "url": "https://github.com/ai-agents-2030/darwin-mobile-agent",
+      "stars": "10",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "Python/Mobile Agent Runtime/Self-Improvement Loop",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 10 stars, 0 forks, 4 commits, Apache-2.0 license, and README references to a self-evolving mobile-agent architecture.",
+      "description": "darwin-mobile-agent targets self-evolving mobile automation agents with an explicit iterative improvement workflow."
     },
     {
       "repo": "ai-boost/awesome-ai-for-science",
@@ -870,6 +885,21 @@
       "content_timestamp": "2026-05-29",
       "evidence": "web-observed GitHub page showed 5 stars, 2 forks, 50 commits, and README documenting extraction/storage/retrieval architecture; no explicit license badge was visible on the page snapshot.",
       "description": "agent-memory is an opinionated TypeScript memory runtime focused on extracting, storing, and retrieving long-lived context for AI agents."
+    },
+    {
+      "repo": "back1ply/agent-skill-loader",
+      "url": "https://github.com/back1ply/agent-skill-loader",
+      "stars": "10",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "TypeScript/Skill Loading Pipeline/Agent Runtime Integration",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 10 stars, 3 forks, 16 commits, MIT license, and README docs on loading external skills into agents.",
+      "description": "agent-skill-loader provides a TypeScript loader pipeline for wiring reusable skill modules into AI agent runtimes."
     },
     {
       "repo": "bansky-cl/graphrag-arxiv-daily-paper",
@@ -1620,6 +1650,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 20 commits, MIT license, 18 stars and 2 forks; README describes recursive self-similar multi-agent execution, directory isolation, Claude Code skill entry, OpenCode/OpenClaw topics, max depth 3 and max 5 children constraints",
       "description": "Agent Smith is a self-similar multi-agent collaboration protocol that decomposes work recursively while isolating each agent through inbox/private/outbox/children directories."
+    },
+    {
+      "repo": "Da1yuqin/SEAD",
+      "url": "https://github.com/Da1yuqin/SEAD",
+      "stars": "20",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evolution",
+      "stack": "Python/Agent System Design Benchmark/Evolution Evaluation",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 20 stars, 1 fork, 1 commit, Apache-2.0 license, and README claiming the first benchmark focused on self-evolving system design agents.",
+      "description": "SEAD is a benchmark for evaluating LLM-based agents on software system design tasks with an explicit self-evolving-agent framing."
     },
     {
       "repo": "darkrishabh/agent-skills-eval",
@@ -3137,6 +3182,21 @@
       "description": "Search, understand, reproduce, and improve an idea with ease"
     },
     {
+      "repo": "InfiAgent/InfiAgent",
+      "url": "https://github.com/InfiAgent/InfiAgent",
+      "stars": "1900",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "Python/Agent Workflow Infrastructure/Self-Improvement Loop",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 1.9k stars, 235 forks, 12 commits, MIT license, and README framing around self-improving agent workflows.",
+      "description": "InfiAgent presents an open-source framework aimed at self-improving AI agent loops with planner/executor/reflection style workflows."
+    },
+    {
       "repo": "inngest/utah",
       "url": "https://github.com/inngest/utah",
       "stars": "116",
@@ -3225,6 +3285,21 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[TOSEM 2026]A Systematic Literature Review on Large Language Models for Automated Program Repair"
+    },
+    {
+      "repo": "itgoyo/awesome-agent-skills",
+      "url": "https://github.com/itgoyo/awesome-agent-skills",
+      "stars": "112",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/MCP-Compatible Skill Registry/Workflow Resource Index",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 112 stars, 10 forks, 4 commits, and README sections for multi-runtime skill resources; repository license was not explicit in metadata but README includes a CC BY 4.0 note.",
+      "description": "itgoyo/awesome-agent-skills is a cross-runtime skills index covering Claude Code, Codex, Gemini CLI, Cline, Cursor and MCP-oriented skill resources."
     },
     {
       "repo": "jakenuts/agent-skills",
@@ -8265,6 +8340,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "This is the reading list for the survey \"A Survey on the Optimization of LLM-based Agents \". We will keep adding papers and improving the list. Any suggestions and PRs are welcome!"
+    },
+    {
+      "repo": "YuanchenBei/Mem-Gallery",
+      "url": "https://github.com/YuanchenBei/Mem-Gallery",
+      "stars": "36",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Python/Long-Term Memory Benchmark/LLM Agent Evaluation",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 36 stars, 2 forks, 12 commits, MIT license, and README sections for benchmark datasets and evaluation pipelines.",
+      "description": "Mem-Gallery provides a benchmark suite for long-term memory capability in LLM-based agents and assistants."
     },
     {
       "repo": "YunjueTech/Yunjue-Agent",

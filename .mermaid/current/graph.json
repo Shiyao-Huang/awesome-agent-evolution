@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T10:08:08+08:00",
+  "generated_at": "2026-05-29T16:12:30+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -276,7 +276,13 @@
         "raw-github/composiohq_awesome-agent-clis.md",
         "raw-github/olshansk_agent-skills.md",
         "raw-github/axiomhq_agent-memory.md",
-        "raw-github/freedomintelligence_tiermem.md"
+        "raw-github/freedomintelligence_tiermem.md",
+        "raw-github/itgoyo_awesome-agent-skills.md",
+        "raw-github/back1ply_agent-skill-loader.md",
+        "raw-github/da1yuqin_sead.md",
+        "raw-github/ai-agents-2030_darwin-mobile-agent.md",
+        "raw-github/yuanchenbei_mem-gallery.md",
+        "raw-github/infiagent_infiagent.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -417,7 +423,8 @@
         "work/research/hourly-public-metadata-update-2026-05-28-1000.md",
         "work/research/hourly-public-metadata-update-2026-05-28-2203.md",
         "work/research/hourly-public-metadata-update-2026-05-29-0405.md",
-        "work/research/hourly-public-metadata-update-2026-05-29-1008.md"
+        "work/research/hourly-public-metadata-update-2026-05-29-1008.md",
+        "work/research/hourly-public-metadata-update-2026-05-29-1612.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -911,7 +918,19 @@
         "projects/297-axiom-agent-memory-substrate.md",
         "site/public/reports/projects/297-axiom-agent-memory-substrate.md",
         "projects/298-tiermem-provenance-memory-benchmark.md",
-        "site/public/reports/projects/298-tiermem-provenance-memory-benchmark.md"
+        "site/public/reports/projects/298-tiermem-provenance-memory-benchmark.md",
+        "projects/299-itgoyo-awesome-agent-skills.md",
+        "site/public/reports/projects/299-itgoyo-awesome-agent-skills.md",
+        "projects/300-back1ply-agent-skill-loader.md",
+        "site/public/reports/projects/300-back1ply-agent-skill-loader.md",
+        "projects/301-da1yuqin-sead-benchmark.md",
+        "site/public/reports/projects/301-da1yuqin-sead-benchmark.md",
+        "projects/302-darwin-mobile-agent.md",
+        "site/public/reports/projects/302-darwin-mobile-agent.md",
+        "projects/303-mem-gallery-memory-benchmark.md",
+        "site/public/reports/projects/303-mem-gallery-memory-benchmark.md",
+        "projects/304-infiagent-framework.md",
+        "site/public/reports/projects/304-infiagent-framework.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1237,14 +1256,14 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-29T10:08:08+08:00",
+    "run_at": "2026-05-29T16:12:30+08:00",
     "added_repositories": [
-      "BerriAI/self-improving-agent",
-      "LLMSecurity/awesome-agent-skills-security",
-      "ComposioHQ/awesome-agent-clis",
-      "Olshansk/agent-skills",
-      "axiomhq/agent-memory",
-      "FreedomIntelligence/Tiermem"
+      "itgoyo/awesome-agent-skills",
+      "back1ply/agent-skill-loader",
+      "Da1yuqin/SEAD",
+      "ai-agents-2030/darwin-mobile-agent",
+      "YuanchenBei/Mem-Gallery",
+      "InfiAgent/InfiAgent"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",

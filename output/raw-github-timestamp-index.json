@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-29T00:00:00+08:00",
-  "total": 578,
-  "updated_files": 578,
+  "total": 584,
+  "updated_files": 584,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -219,6 +219,15 @@
       "collected_at": "2026-05-26T07:45:34+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_05_26"
+    },
+    {
+      "repo": "ai-agents-2030/darwin-mobile-agent",
+      "url": "https://github.com/ai-agents-2030/darwin-mobile-agent",
+      "file": "raw-github/ai-agents-2030_darwin-mobile-agent.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T16:12:30+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
     {
       "repo": "ai-boost/awesome-ai-for-science",
@@ -523,6 +532,15 @@
       "file": "raw-github/axiomhq_agent-memory.md",
       "content_timestamp": "2026-05-29",
       "collected_at": "2026-05-29T10:08:08+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
+      "repo": "back1ply/agent-skill-loader",
+      "url": "https://github.com/back1ply/agent-skill-loader",
+      "file": "raw-github/back1ply_agent-skill-loader.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T16:12:30+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
@@ -975,6 +993,15 @@
       "collected_at": "2026-05-25T12:21:31+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T12:21:31+08:00; shell DNS for api.github.com failed and gh token was invalid"
+    },
+    {
+      "repo": "Da1yuqin/SEAD",
+      "url": "https://github.com/Da1yuqin/SEAD",
+      "file": "raw-github/da1yuqin_sead.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T16:12:30+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
     {
       "repo": "darkrishabh/agent-skills-eval",
@@ -1886,6 +1913,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "InfiAgent/InfiAgent",
+      "url": "https://github.com/InfiAgent/InfiAgent",
+      "file": "raw-github/infiagent_infiagent.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T16:12:30+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
       "repo": "inngest/utah",
       "url": "https://github.com/inngest/utah",
       "file": "raw-github/inngest_utah.md",
@@ -1938,6 +1974,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "itgoyo/awesome-agent-skills",
+      "url": "https://github.com/itgoyo/awesome-agent-skills",
+      "file": "raw-github/itgoyo_awesome-agent-skills.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T16:12:30+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
     {
       "repo": "jakenuts/agent-skills",
@@ -4962,6 +5007,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "YuanchenBei/Mem-Gallery",
+      "url": "https://github.com/YuanchenBei/Mem-Gallery",
+      "file": "raw-github/yuanchenbei_mem-gallery.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T16:12:30+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
     {
       "repo": "YunjueTech/Yunjue-Agent",

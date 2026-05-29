@@ -322,6 +322,13 @@
 | Agent Memory | [axiomhq/agent-memory](https://github.com/axiomhq/agent-memory) | Persistent Agent Memory Runtime | [projects/297-axiom-agent-memory-substrate.md](297-axiom-agent-memory-substrate.md) |
 | Tiermem | [FreedomIntelligence/Tiermem](https://github.com/FreedomIntelligence/Tiermem) | Provenance-Aware Memory Benchmark Framework | [projects/298-tiermem-provenance-memory-benchmark.md](298-tiermem-provenance-memory-benchmark.md) |
 
+| Awesome Agent Skills (itgoyo) | [itgoyo/awesome-agent-skills](https://github.com/itgoyo/awesome-agent-skills) | Cross-Platform Agent Skills Resource Index | [projects/299-itgoyo-awesome-agent-skills.md](299-itgoyo-awesome-agent-skills.md) |
+| Agent Skill Loader | [back1ply/agent-skill-loader](https://github.com/back1ply/agent-skill-loader) | Runtime Agent Skill Loader | [projects/300-back1ply-agent-skill-loader.md](300-back1ply-agent-skill-loader.md) |
+| SEAD | [Da1yuqin/SEAD](https://github.com/Da1yuqin/SEAD) | Self-Evolving Agent Design Benchmark | [projects/301-da1yuqin-sead-benchmark.md](301-da1yuqin-sead-benchmark.md) |
+| Darwin Mobile Agent | [ai-agents-2030/darwin-mobile-agent](https://github.com/ai-agents-2030/darwin-mobile-agent) | Mobile Agent Self-Evolution Framework | [projects/302-darwin-mobile-agent.md](302-darwin-mobile-agent.md) |
+| Mem-Gallery | [YuanchenBei/Mem-Gallery](https://github.com/YuanchenBei/Mem-Gallery) | Long-Term Memory Benchmark Suite | [projects/303-mem-gallery-memory-benchmark.md](303-mem-gallery-memory-benchmark.md) |
+| InfiAgent | [InfiAgent/InfiAgent](https://github.com/InfiAgent/InfiAgent) | Framework for Self-Improving Agent Loops | [projects/304-infiagent-framework.md](304-infiagent-framework.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.
