@@ -1,10 +1,25 @@
 {
-  "generated": "2026-05-26T15:50:36.174Z",
+  "generated": "2026-05-29T17:29:39.493Z",
   "stats": {
-    "pages": 50,
-    "keywords": 760
+    "pages": 52,
+    "keywords": 782
   },
   "catalog": [
+    {
+      "path": "concepts/agent-swarm-evolve.md",
+      "title": "\"Agent-Swarm Evolve Part\"",
+      "rank": "B",
+      "type": "concept",
+      "tags": [
+        "mechanism",
+        "multi-agent",
+        "swarm",
+        "organization",
+        "topology",
+        "harness",
+        "self-evolution"
+      ]
+    },
     {
       "path": "concepts/architecture-search.md",
       "title": "\"架构搜索与自动化Agent设计 (Architecture Search)\"",
@@ -238,6 +253,21 @@
         "ucsd",
         "adas",
         "m1-search"
+      ]
+    },
+    {
+      "path": "sources/anthropic-may-2026-agentops.md",
+      "title": "Anthropic May 2026 AgentOps Hotspot",
+      "rank": "A",
+      "type": "source",
+      "tags": [
+        "anthropic",
+        "claude-code",
+        "dynamic-workflows",
+        "agentops",
+        "mcp",
+        "containment",
+        "seo-hotspot"
       ]
     },
     {
@@ -552,10 +582,11 @@
     }
   ],
   "index": {
-    "\"架构搜索与自动化agent设计 (architecture search)\"": [
-      "concepts/architecture-search.md"
+    "\"agent-swarm evolve part\"": [
+      "concepts/agent-swarm-evolve.md"
     ],
     "mechanism": [
+      "concepts/agent-swarm-evolve.md",
       "concepts/architecture-search.md",
       "concepts/emergent-behavior.md",
       "concepts/multi-agent-coevolution.md",
@@ -568,13 +599,107 @@
       "sources/raw-papers-mechanism-analysis.md",
       "synthesis/mechanism-framework.md"
     ],
+    "multi-agent": [
+      "concepts/agent-swarm-evolve.md",
+      "concepts/multi-agent-coevolution.md",
+      "concepts/self-play-evolution.md"
+    ],
+    "swarm": [
+      "concepts/agent-swarm-evolve.md"
+    ],
+    "organization": [
+      "concepts/agent-swarm-evolve.md"
+    ],
+    "topology": [
+      "concepts/agent-swarm-evolve.md"
+    ],
+    "harness": [
+      "concepts/agent-swarm-evolve.md"
+    ],
+    "self-evolution": [
+      "concepts/agent-swarm-evolve.md",
+      "entities/sakana-ai.md",
+      "sources/github-digest.md",
+      "sources/raw-github-mechanism-analysis.md",
+      "sources/review-mechanism-insights-enhanced.md"
+    ],
+    "agent-swarm evolve part": [
+      "concepts/agent-swarm-evolve.md"
+    ],
+    "definition": [
+      "concepts/agent-swarm-evolve.md"
+    ],
+    "boundary": [
+      "concepts/agent-swarm-evolve.md"
+    ],
+    "evidence": [
+      "concepts/agent-swarm-evolve.md",
+      "sources/papers-digest.md",
+      "sources/raw-papers-mechanism-analysis.md"
+    ],
+    "cross-references": [
+      "concepts/agent-swarm-evolve.md",
+      "concepts/architecture-search.md",
+      "concepts/emergent-behavior.md",
+      "concepts/multi-agent-coevolution.md",
+      "concepts/reward-based-evolution.md",
+      "concepts/self-evaluation.md",
+      "concepts/self-improvement.md",
+      "concepts/self-observation.md",
+      "concepts/self-play-evolution.md",
+      "entities/anthropic.md",
+      "entities/google-deepmind.md",
+      "entities/jeff-clune.md",
+      "entities/meta-fair.md",
+      "entities/noah-shinn.md",
+      "entities/openai.md",
+      "entities/sakana-ai.md",
+      "entities/shengran-hu.md",
+      "sources/anthropic-may-2026-agentops.md",
+      "sources/anthropic-talent-movement.md",
+      "sources/capital-talent-supply-2026.md",
+      "sources/china-self-evolution-teams.md",
+      "sources/combined-talent-landscape.md",
+      "sources/material-ranking-framework.md",
+      "sources/paper-undercoverage-followup.md",
+      "sources/raw-papers-mechanism-analysis.md",
+      "sources/raw-social-blogs-mechanism-analysis.md",
+      "sources/review-mechanism-insights.md",
+      "sources/talent-capital-structure.md",
+      "sources/talent-flow-analysis.md",
+      "synthesis/mechanism-framework.md",
+      "synthesis/talent-landscape.md"
+    ],
+    "multi-agent-coevolution": [
+      "concepts/agent-swarm-evolve.md",
+      "concepts/self-improvement.md",
+      "concepts/self-play-evolution.md",
+      "sources/anthropic-may-2026-agentops.md",
+      "synthesis/mechanism-framework.md"
+    ],
+    "architecture-search": [
+      "concepts/agent-swarm-evolve.md",
+      "concepts/architecture-search.md",
+      "concepts/self-improvement.md"
+    ],
+    "self-evaluation": [
+      "concepts/agent-swarm-evolve.md",
+      "concepts/multi-agent-coevolution.md",
+      "concepts/reward-based-evolution.md",
+      "concepts/self-improvement.md",
+      "concepts/self-observation.md",
+      "sources/anthropic-may-2026-agentops.md",
+      "synthesis/mechanism-framework.md"
+    ],
+    "llm-agent-knowledge-delivery": [
+      "concepts/agent-swarm-evolve.md"
+    ],
+    "\"架构搜索与自动化agent设计 (architecture search)\"": [
+      "concepts/architecture-search.md"
+    ],
     "m4": [
       "concepts/architecture-search.md",
       "concepts/multi-agent-coevolution.md"
-    ],
-    "architecture-search": [
-      "concepts/architecture-search.md",
-      "concepts/self-improvement.md"
     ],
     "nas": [
       "concepts/architecture-search.md"
@@ -635,37 +760,6 @@
       "concepts/self-evaluation.md",
       "concepts/self-improvement.md",
       "concepts/self-observation.md"
-    ],
-    "cross-references": [
-      "concepts/architecture-search.md",
-      "concepts/emergent-behavior.md",
-      "concepts/multi-agent-coevolution.md",
-      "concepts/reward-based-evolution.md",
-      "concepts/self-evaluation.md",
-      "concepts/self-improvement.md",
-      "concepts/self-observation.md",
-      "concepts/self-play-evolution.md",
-      "entities/anthropic.md",
-      "entities/google-deepmind.md",
-      "entities/jeff-clune.md",
-      "entities/meta-fair.md",
-      "entities/noah-shinn.md",
-      "entities/openai.md",
-      "entities/sakana-ai.md",
-      "entities/shengran-hu.md",
-      "sources/anthropic-talent-movement.md",
-      "sources/capital-talent-supply-2026.md",
-      "sources/china-self-evolution-teams.md",
-      "sources/combined-talent-landscape.md",
-      "sources/material-ranking-framework.md",
-      "sources/paper-undercoverage-followup.md",
-      "sources/raw-papers-mechanism-analysis.md",
-      "sources/raw-social-blogs-mechanism-analysis.md",
-      "sources/review-mechanism-insights.md",
-      "sources/talent-capital-structure.md",
-      "sources/talent-flow-analysis.md",
-      "synthesis/mechanism-framework.md",
-      "synthesis/talent-landscape.md"
     ],
     "方法": [
       "concepts/architecture-search.md"
@@ -788,7 +882,8 @@
       "concepts/llm-agent-knowledge-delivery.md"
     ],
     "mcp": [
-      "concepts/llm-agent-knowledge-delivery.md"
+      "concepts/llm-agent-knowledge-delivery.md",
+      "sources/anthropic-may-2026-agentops.md"
     ],
     "llm agent 知识交付架构": [
       "concepts/llm-agent-knowledge-delivery.md"
@@ -853,10 +948,6 @@
     "\"多智能体协作进化 (multi-agent co-evolution)\"": [
       "concepts/multi-agent-coevolution.md"
     ],
-    "multi-agent": [
-      "concepts/multi-agent-coevolution.md",
-      "concepts/self-play-evolution.md"
-    ],
     "co-evolution": [
       "concepts/multi-agent-coevolution.md"
     ],
@@ -888,6 +979,9 @@
     "evomac 多agent网络": [
       "concepts/multi-agent-coevolution.md"
     ],
+    "agent-swarm evolve 部分": [
+      "concepts/multi-agent-coevolution.md"
+    ],
     "同体自博弈": [
       "concepts/multi-agent-coevolution.md"
     ],
@@ -895,6 +989,9 @@
       "concepts/multi-agent-coevolution.md"
     ],
     "archive生态": [
+      "concepts/multi-agent-coevolution.md"
+    ],
+    "swarm组织进化": [
       "concepts/multi-agent-coevolution.md"
     ],
     "共识幻觉": [
@@ -910,33 +1007,13 @@
     "协调失败": [
       "concepts/multi-agent-coevolution.md"
     ],
-    "self-evaluation": [
-      "concepts/multi-agent-coevolution.md",
-      "concepts/reward-based-evolution.md",
-      "concepts/self-improvement.md",
-      "concepts/self-observation.md",
-      "synthesis/mechanism-framework.md"
-    ],
     "self-improvement": [
       "concepts/multi-agent-coevolution.md",
       "concepts/reward-based-evolution.md",
       "concepts/self-evaluation.md",
       "concepts/self-observation.md",
+      "sources/anthropic-may-2026-agentops.md",
       "synthesis/mechanism-framework.md"
-    ],
-    "emergent-behavior": [
-      "concepts/multi-agent-coevolution.md",
-      "concepts/self-evaluation.md",
-      "concepts/self-improvement.md",
-      "synthesis/mechanism-framework.md"
-    ],
-    "mechanism-framework": [
-      "concepts/multi-agent-coevolution.md",
-      "concepts/reward-based-evolution.md",
-      "concepts/self-evaluation.md",
-      "concepts/self-improvement.md",
-      "concepts/self-observation.md",
-      "concepts/self-play-evolution.md"
     ],
     "\"奖励驱动进化 (reward-based evolution)\"": [
       "concepts/reward-based-evolution.md"
@@ -1011,6 +1088,13 @@
     "self-play-evolution": [
       "concepts/reward-based-evolution.md"
     ],
+    "mechanism-framework": [
+      "concepts/reward-based-evolution.md",
+      "concepts/self-evaluation.md",
+      "concepts/self-improvement.md",
+      "concepts/self-observation.md",
+      "concepts/self-play-evolution.md"
+    ],
     "\"自我评估 (self-evaluation)\"": [
       "concepts/self-evaluation.md"
     ],
@@ -1057,6 +1141,11 @@
       "concepts/self-observation.md",
       "synthesis/mechanism-framework.md"
     ],
+    "emergent-behavior": [
+      "concepts/self-evaluation.md",
+      "concepts/self-improvement.md",
+      "synthesis/mechanism-framework.md"
+    ],
     "\"自我改进 (self-improvement)\"": [
       "concepts/self-improvement.md"
     ],
@@ -1101,11 +1190,6 @@
     ],
     "成本爆炸": [
       "concepts/self-improvement.md"
-    ],
-    "multi-agent-coevolution": [
-      "concepts/self-improvement.md",
-      "concepts/self-play-evolution.md",
-      "synthesis/mechanism-framework.md"
     ],
     "\"自我观察 (self-observation)\"": [
       "concepts/self-observation.md"
@@ -1190,6 +1274,7 @@
       "entities/noah-shinn.md",
       "entities/openai.md",
       "entities/sakana-ai.md",
+      "sources/anthropic-may-2026-agentops.md",
       "sources/raw-social-blogs-mechanism-analysis.md"
     ],
     "org": [
@@ -1422,12 +1507,6 @@
     "japan": [
       "entities/sakana-ai.md"
     ],
-    "self-evolution": [
-      "entities/sakana-ai.md",
-      "sources/github-digest.md",
-      "sources/raw-github-mechanism-analysis.md",
-      "sources/review-mechanism-insights-enhanced.md"
-    ],
     "funding": [
       "entities/sakana-ai.md"
     ],
@@ -1454,6 +1533,39 @@
     ],
     "high order adas": [
       "entities/shengran-hu.md"
+    ],
+    "anthropic may 2026 agentops hotspot": [
+      "sources/anthropic-may-2026-agentops.md"
+    ],
+    "claude-code": [
+      "sources/anthropic-may-2026-agentops.md"
+    ],
+    "dynamic-workflows": [
+      "sources/anthropic-may-2026-agentops.md"
+    ],
+    "agentops": [
+      "sources/anthropic-may-2026-agentops.md"
+    ],
+    "containment": [
+      "sources/anthropic-may-2026-agentops.md"
+    ],
+    "seo-hotspot": [
+      "sources/anthropic-may-2026-agentops.md"
+    ],
+    "one-sentence compression": [
+      "sources/anthropic-may-2026-agentops.md"
+    ],
+    "event table": [
+      "sources/anthropic-may-2026-agentops.md"
+    ],
+    "trust chain claims": [
+      "sources/anthropic-may-2026-agentops.md"
+    ],
+    "self evolve implications": [
+      "sources/anthropic-may-2026-agentops.md"
+    ],
+    "agent-swarm-evolve": [
+      "sources/anthropic-may-2026-agentops.md"
     ],
     "\"anthropic talent movement analysis\"": [
       "sources/anthropic-talent-movement.md"
@@ -2227,10 +2339,6 @@
     ],
     "mechanism-families": [
       "sources/papers-digest.md"
-    ],
-    "evidence": [
-      "sources/papers-digest.md",
-      "sources/raw-papers-mechanism-analysis.md"
     ],
     "7 mechanism families": [
       "sources/papers-digest.md",

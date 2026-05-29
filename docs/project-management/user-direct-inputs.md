@@ -1,6 +1,6 @@
 # User Direct Inputs Reference
 
-> Last updated: 2026-05-29. This file extracts direct user inputs only. Do not add team instructions, subagent summaries, tool outputs, assistant summaries, or inferred project state as user input.
+> Last updated: 2026-05-30. This file extracts direct user inputs only. Do not add team instructions, subagent summaries, tool outputs, assistant summaries, or inferred project state as user input.
 
 ## L1
 
@@ -15,6 +15,7 @@
 5. AGENTS 和 CLAUDE 必须把这些用户原话作为工作参考。
 6. 不符合四层构成的材料也要先归类、查引用、索引化，不要直接删除。
 7. 定时任务和每次迭代都要形成闭环：主动更新相关 README、网站和索引，并主动提交本轮改动。
+8. 新增 `agent-swarm` / `agent-swarm evolve` 作为 multi-agent / harness 下面的一个内容部分，纳入 README、分析、wiki 和网站入口。
 
 ## High-Priority User Requirements
 
@@ -30,6 +31,7 @@
 | 8 | 每次迭代后主动更新 README、网站并提交 | `修改定时任务 、注意每次迭代后都要主动提交 、主动更新 相关的 readme 、相关的 网站、` |
 | 9 | 非四层材料先归类，不要乱删 | `不符合这些构成的素材怎么归类和清理一下？尽量怎样归类不要乱删` |
 | 10 | 每次修改都要关联更新网站/主页/相关分析并同步 GitHub | `每次修改的时候都要去关联修改 网站、主页、其他方向的分析以及与之对应的内容、修改后 完成 github 同步` |
+| 11 | 增加 agent-swarm / agent-swarm evolve 部分 | `增加 一部分 去做 agent-swarm` / `增加一部分去做 agent-swarm evolve` |
 
 ## Exact Recent Workspace Inputs
 
@@ -73,6 +75,12 @@ OK，然后用户的输入你得提取出来，然后作为Agent和Claude里边�
 每次修改的时候都要去关联修改 网站、主页、其他方向的分析以及与之对应的内容、修改后 完成 github 同步
 ```
 
+```text
+增加 一部分 去做 agent-swarm
+
+增加一部分去做 agent-swarm evolve
+```
+
 ## Longer Historical Goal Signals
 
 这些输入已经在 [../../CURRENT_GOAL.md](../../CURRENT_GOAL.md) 中保留完整列表。AGENTS/CLAUDE 执行时优先读本文件的近期目标，再回到 CURRENT_GOAL 查看更长历史。
@@ -85,6 +93,7 @@ OK，然后用户的输入你得提取出来，然后作为Agent和Claude里边�
 - 可视化图谱质量要提高，网站可参考 `x.mitbunny.ai` 的交互方向。
 - 输出要分层：一句话、三句话、五句话、完整展开。
 - 自动化和人工迭代都要闭环：相关 README、网站、索引更新后主动提交；没有可提交变化也要明确说明。
+- 增加 agent-swarm / agent-swarm evolve 部分，并把它接入分析、README、wiki 和网站。
 
 ## Agent Usage Rule
 

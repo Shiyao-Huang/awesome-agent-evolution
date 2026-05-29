@@ -27,6 +27,7 @@ Agent Evolution 中 M4 层机制：进化本身需要多样性、竞争、协作
 | 辩论与批判 | 多实例提出不同答案并相互质询 | Multi-Agent Debate, SAGE | survey/Ch3.2 |
 | Archive生态搜索 | 保留多样化变体，跨代组合搜索 | DGM, ADAS | survey/Ch3.4, Ch4.1-4.2 |
 | 组织级协同 | 按角色分工，嵌入组织流程 | CrewAI, LangGraph | survey/Ch6.1, Ch8.2 |
+| Agent-Swarm Evolve | 把角色、拓扑、共享状态、验证器和handoff协议作为可进化对象 | CORAL, GPTSwarm, metaswarm, swarmclaw | analysis/agent-swarm-evolve.md |
 | 跨社区知识共享 | 开源生态共享验证器和失败样本 | 框架生态 | survey/Ch6.3 |
 
 ## 三种拓扑形态
@@ -34,6 +35,7 @@ Agent Evolution 中 M4 层机制：进化本身需要多样性、竞争、协作
 1. **同体自博弈**：Proposer → Solver → Judge（同一模型多角色）
 2. **异体对抗**：生成者Agent ↔ 验证者Agent ↔ 红队Agent
 3. **Archive生态**：变体A/B/C → Archive → 采样组合 → 变体D
+4. **Swarm组织进化**：角色/拓扑/共享状态 → 独立评估 → 更新组织协议 → 保留lineage
 
 ## 典型案例
 
@@ -44,6 +46,9 @@ Agent Evolution 中 M4 层机制：进化本身需要多样性、竞争、协作
 ### EvoMAC 多agent网络
 把协作网络中的节点和边视为可更新单元，用文本反馈调整协作结构。
 软件开发中，开发团队和测试团队形成生成者-验证者共进化。 — Source: survey/ch3-methods-cn.md §3.4
+
+### Agent-Swarm Evolve 部分
+把单次多 agent 协作推进到组织级持续改进：角色库、通信边、共享知识、review gate、任务分解和运行时权限都可以成为可验证的更新对象。— Source: analysis/agent-swarm-evolve.md
 
 ## 局限性
 
@@ -57,3 +62,4 @@ Agent Evolution 中 M4 层机制：进化本身需要多样性、竞争、协作
 - [[self-improvement]] — 个体改进积累为群体能力
 - [[emergent-behavior]] — 多agent交互产生涌现行为
 - [[mechanism-framework]] — 全景机制关系DAG
+- [[agent-swarm-evolve]] — 组织级 swarm 进化专题

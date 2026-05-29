@@ -13,12 +13,12 @@
 | `paper-drafts` | present | 31 | 2 | 0 | 2.3 MB |
 | `paper` | present | 15 | 2 | 0 | 1023 KB |
 | `latex` | present | 9 | 2 | 0 | 53 KB |
-| `site` | present | 1356 | 368 | 0 | 30 MB |
+| `site` | present | 1358 | 369 | 0 | 30 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
 | `scripts` | present | 36 | 1 | 0 | 940 KB |
 | `data-engine` | present | 479 | 18 | 0 | 5.9 MB |
 | `work/research` | present | 55 | 2 | 0 | 2.1 MB |
-| `work/wiki` | present | 54 | 6 | 0 | 402 KB |
+| `work/wiki` | present | 56 | 6 | 0 | 412 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files
@@ -128,6 +128,7 @@
 
 ### `work/wiki`
 
+- `work/wiki/concepts/agent-swarm-evolve.md`
 - `work/wiki/concepts/architecture-search.md`
 - `work/wiki/concepts/emergent-behavior.md`
 - `work/wiki/concepts/llm-agent-knowledge-delivery.md`
@@ -137,7 +138,6 @@
 - `work/wiki/concepts/self-improvement.md`
 - `work/wiki/concepts/self-observation.md`
 - `work/wiki/concepts/self-play-evolution.md`
-- `work/wiki/entities/anthropic.md`
 
 ### `wiki`
 

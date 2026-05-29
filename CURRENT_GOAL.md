@@ -1,6 +1,6 @@
 # Current Goal From Direct User Inputs
 
-Last updated: 2026-05-25
+Last updated: 2026-05-30
 
 ## Precision Rule
 
@@ -47,6 +47,7 @@ Inference is allowed only after the exact direct user inputs are separated first
 - 维护项目结构边界：raw 归 raw，加工后的归加工，work 产物归 work，结果输出归 results，全部索引化覆盖。
 - 对不符合四层构成的材料，先查引用、归入 support/compatibility/mirrors/local/needs-review 等类别并更新索引；默认不要乱删。
 - 每次定时任务或人工迭代结束前，主动更新受影响的 README、i18n、网站、索引和发布面，并提交本轮相关改动。
+- 新增 `agent-swarm` / `agent-swarm evolve` 作为 multi-agent / harness 下面的内容部分：把 swarm 组织结构、角色、拓扑、共享状态、验证器、handoff 和 lineage 纳入 README、wiki、分析和网站。
 
 ## High-Priority Threads
 
@@ -56,6 +57,7 @@ Inference is allowed only after the exact direct user inputs are separated first
 - Benchmark 对比：把论文和项目里已经测过的 benchmark 单独提取成表，比较任务、指标、结果、可信度。
 - 产品性判断：每个项目要标明是否能运行、是否有文档、是否有真实用户价值、成熟度和开源增长潜力。
 - 网站体验：参考 `http://x.mitbunny.ai`，考虑 React/GSAP/知识图谱动画，但服务于信息理解，不做空洞视觉。
+- Agent-swarm evolve：把 CORAL、GPTSwarm、metaswarm、swarmclaw、OpenClaw Multi-Agent Team、Insight Swarm 等项目作为种子，分析 agent 组织结构如何随反馈进化。
 
 ## Operating Style
 
@@ -112,6 +114,8 @@ Inference is allowed only after the exact direct user inputs are separated first
 - `OK，然后用户的输入你得提取出来，然后作为Agent和Claude里边的参考。`
 - `不符合这些构成的素材怎么归类和清理一下？尽量怎样归类不要乱删`
 - `修改定时任务 、注意每次迭代后都要主动提交 、主动更新 相关的 readme 、相关的 网站、`
+- `增加 一部分 去做 agent-swarm`
+- `增加一部分去做 agent-swarm evolve`
 
 ## Source Boundary And Redaction Note
 

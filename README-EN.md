@@ -218,6 +218,18 @@ This section is intentionally placed first and contains only processed informati
 | Multi-agent reflection / debate | roles, communication edges, critics, review workflows, collaboration protocols | debate score, peer review, task success, review gate | EvoMAC, Agent Symbolic Learning, MetaGPT, AutoGen, CORAL, MOLT | [Agent Symbolic Learning](research/papers/01-agent-symbolic-learning.md), [MetaGPT](projects/07-metagpt-multi-agent-framework.md), [AutoGen](site/public/reports/projects/11-autogen-multi-agent-conversation.md), [CORAL](projects/89-coral-multi-agent-evolution.md) |
 | Evaluation / safety / governance | evaluators, permissions, rollback, audit, red lines, cost models | regression tests, safety rules, human review, cross-domain transfer | REVEAL, RAGEN, Claw-Eval, AgentBench, SKILL-INJECT, HaluMem | [evaluation chapter](survey/ch5-evaluation-cn.md), [REVEAL](research/papers/12-reveal.md), [Claw-Eval](projects/55-claw-eval-agent-evaluation.md), [HaluMem](projects/177-halumem-agent-memory-hallucination-benchmark.md) |
 
+### Agent-Swarm Evolve Part
+
+One sentence: this is a part under multi-agent / harness focused on whether the agent-team organization updates from feedback.
+
+| What to inspect | Judgment question | Seed evidence |
+|---|---|---|
+| Topology and roles | Do agent nodes, communication edges, role libraries, or task routing change after evaluation? | GPTSwarm, EvoMAC |
+| Shared state and organization memory | Can shared state, knowledge graphs, and lesson archives retain both successful and failed experience? | CORAL, Insight Swarm |
+| Verification and handoff | Are graders, verifiers, review gates, and handoff protocols independent, replayable, and rollbackable? | metaswarm, OpenClaw Multi-Agent Team, swarmclaw |
+
+Full note: [analysis/agent-swarm-evolve.md](analysis/agent-swarm-evolve.md); wiki entry: [work/wiki/concepts/agent-swarm-evolve.md](work/wiki/concepts/agent-swarm-evolve.md).
+
 ## Method Family Details
 
 | Method family | How it works | When to prioritize it | Main failure mode |

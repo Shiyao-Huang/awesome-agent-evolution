@@ -26,6 +26,7 @@ _Ideas, mechanisms, patterns, taxonomies_
 - [自我评估 (Self-Evaluation)](concepts/self-evaluation.md) — M2: 评估行为质量，自评/环境反馈/程序化验证/元评估/人类审查 | Rank: A | 2026-05-26
 - [自我改进 (Self-Improvement)](concepts/self-improvement.md) — M3: 改变自身分布，提示词→记忆→权重→代码 4层深度谱系 | Rank: A | 2026-05-26
 - [多智能体协作进化 (Multi-Agent Co-Evolution)](concepts/multi-agent-coevolution.md) — M4: 竞争/协作/批判/分工/知识共享 5子机制 | Rank: A | 2026-05-26
+- [Agent-Swarm Evolve](concepts/agent-swarm-evolve.md) — swarm组织结构、角色、拓扑、共享状态、验证器、handoff和lineage作为可进化对象 | Rank: B | 2026-05-30
 - [涌现行为分析 (Emergent Behavior)](concepts/emergent-behavior.md) — M5: 正向/负向涌现，开放式探索/递归反馈/stepping stones/风险 | Rank: A | 2026-05-26
 - [LLM Agent 知识交付架构](concepts/llm-agent-knowledge-delivery.md) — Wiki-First三层架构：Raw→Wiki→Schema，搜索索引+CLAUDE.md集成+MCP扩展路径 | Rank: A | 2026-05-26
 - [奖励驱动进化](concepts/reward-based-evolution.md) — Generate→Evaluate→Train闭环，STaR/RISE/Absolute Zero/Self-Rewarding/Meta-Rewarding | Rank: A | 2026-05-26
@@ -83,7 +84,7 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Metric | Count |
 |--------|-------|
 | Entities | 8 |
-| Concepts | 9 |
+| Concepts | 10 |
 | Sources | 29 |
 | Synthesis pages | 3 |
-| Last updated | 2026-05-26 |
+| Last updated | 2026-05-30 |

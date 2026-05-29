@@ -226,3 +226,13 @@
 - Added unknown `created_at` caveat and capped missing-date time score at 45/100
 - Public `/rankings/` now reads `recency_weighted_project_ranking`
 **Results:** Top project becomes `modelscope/AgentEvolver`; `stanfordnlp/dspy` moves to rank 14 under current-value scoring.
+
+## [2026-05-30 01:21] concept | Agent-Swarm Evolve
+
+**操作:** Added `agent-swarm evolve` as a content part under multi-agent / harness after direct user input.
+**详情:**
+- Created `analysis/agent-swarm-evolve.md` as processed analysis for swarm organization evolution.
+- Created `concepts/agent-swarm-evolve.md` with evidence from CORAL, GPTSwarm, metaswarm, swarmclaw, OpenClaw Multi-Agent Team, and Insight Swarm raw captures.
+- Updated `concepts/multi-agent-coevolution.md` to link the organization-level swarm-evolution part.
+- Updated README, README-ZH, README-EN, and site homepage entry points.
+**产出:** `analysis/agent-swarm-evolve.md`, `work/wiki/concepts/agent-swarm-evolve.md`

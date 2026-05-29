@@ -112,6 +112,33 @@ const directionMap = [
   },
 ];
 
+const swarmEvolveMap = [
+  {
+    track: '拓扑优化',
+    systems: 'GPTSwarm / EvoMAC',
+    signal: 'agent 节点、通信边和路由概率会随任务反馈更新',
+    evidence: '看 held-out tasks、edge ablation、环境反馈',
+  },
+  {
+    track: '自主组织基础设施',
+    systems: 'CORAL / metaswarm',
+    signal: 'worktree、shared state、grader、heartbeat 和 archive 形成组织级闭环',
+    evidence: '看 grader 独立性、lineage replay、跨模型 review',
+  },
+  {
+    track: '生产型 swarm runtime',
+    systems: 'swarmclaw / OpenClaw team',
+    signal: 'schedules、delegation、memory、provider routing 和工具权限进入运行时',
+    evidence: '看真实 workflow、权限审计、成本上限和可观测性',
+  },
+  {
+    track: '图谱涌现协作',
+    systems: 'Insight Swarm',
+    signal: 'shared knowledge graph、tension links、challenge votes 代替中心 orchestrator',
+    evidence: '看反共识指标、证据链和 contested thesis 处理',
+  },
+];
+
 const growthEmoji: Record<string, string> = {
   organic: '🌱',
   viral: '🚀',
@@ -139,6 +166,7 @@ const growthLabel: Record<string, string> = {
           <a class="button primary" href="#star-ranking">Star 榜单</a>
           <a class="button" href="#trend-board">Trend 榜单</a>
           <a class="button" href="#direction-map">方向 Map</a>
+          <a class="button" href="#agent-swarm-evolve">Agent-Swarm</a>
           <a class="text-link" href="/graph/">知识图谱</a>
         </div>
         <div class="metrics" aria-label="研究站点指标">
@@ -284,6 +312,33 @@ const growthLabel: Record<string, string> = {
             </div>
             <div class="pill-row" style="margin-top: 6px;">
               <span class="pill">{d.paperCount} 篇论文</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Agent-Swarm Evolve ═══ -->
+  <section class="section" id="agent-swarm-evolve">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Agent-Swarm Evolve</div>
+          <h2>把 Agent 团队本身变成可进化对象</h2>
+        </div>
+        <a class="text-link" href="/reports/projects/89-coral-multi-agent-evolution.md">CORAL model card →</a>
+      </div>
+      <p style="color: var(--muted); margin-bottom: 20px;">这一部分不是“多开几个角色”，而是看角色库、拓扑、共享状态、验证队列、handoff 协议和组织记忆是否会在独立反馈后更新，并且能留下 lineage、失败候选和回滚路径。</p>
+
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+        {swarmEvolveMap.map((item) => (
+          <article class="card">
+            <div class="eyebrow">{item.track}</div>
+            <h3>{item.systems}</h3>
+            <p>{item.signal}</p>
+            <div class="pill-row">
+              <span class="pill">{item.evidence}</span>
             </div>
           </article>
         ))}

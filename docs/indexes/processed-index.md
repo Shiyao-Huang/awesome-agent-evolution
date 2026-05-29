@@ -10,7 +10,7 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `analysis` | present | 10 | 1 | 0 | 2.3 MB |
+| `analysis` | present | 11 | 1 | 0 | 2.3 MB |
 | `research` | present | 141 | 8 | 0 | 2.4 MB |
 | `projects` | present | 25833 | 2882 | 0 | 2.9 GB |
 | `paper-reviews` | present | 171 | 1 | 0 | 1.6 MB |
@@ -23,6 +23,7 @@
 
 ### `analysis`
 
+- `analysis/agent-swarm-evolve.md`
 - `analysis/essential-taxonomy-framework.md`
 - `analysis/framework-painpoint-crosswalk.csv`
 - `analysis/github-analysis.tex`
@@ -32,7 +33,6 @@
 - `analysis/github-project-data-analysis.tex`
 - `analysis/paper-review-coverage.md`
 - `analysis/repo-cross-analysis.csv`
-- `analysis/repo-techstack-cross-analysis.csv`
 
 ### `research`
 

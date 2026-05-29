@@ -266,6 +266,18 @@ flowchart LR
 | Multi-agent reflection / debate | 角色、通信边、critic、审查流程、协作协议 | debate score、互评、任务成功、review gate | EvoMAC、Agent Symbolic Learning、MetaGPT、AutoGen、CORAL、MOLT | [Agent Symbolic Learning](research/papers/01-agent-symbolic-learning.md), [MetaGPT](projects/07-metagpt-multi-agent-framework.md), [AutoGen](site/public/reports/projects/11-autogen-multi-agent-conversation.md), [CORAL](projects/89-coral-multi-agent-evolution.md) |
 | Evaluation / safety / governance | evaluator、权限、回滚、审计、红线、成本模型 | 回归测试、安全规则、人工审核、跨域迁移 | REVEAL、RAGEN、Claw-Eval、AgentBench、SKILL-INJECT、HaluMem | [评估章](survey/ch5-evaluation-cn.md), [REVEAL](research/papers/12-reveal.md), [Claw-Eval](projects/55-claw-eval-agent-evaluation.md), [HaluMem](projects/177-halumem-agent-memory-hallucination-benchmark.md) |
 
+### Agent-Swarm Evolve 部分
+
+一句话：这是 multi-agent / harness 下面的一部分，专门看 agent 团队组织结构是否会随反馈更新。
+
+| 看什么 | 判断问题 | 种子证据 |
+|---|---|---|
+| 拓扑与角色 | agent 节点、通信边、角色库、任务路由是否会根据评估结果改变？ | GPTSwarm、EvoMAC |
+| 共享状态与组织记忆 | shared state、knowledge graph、lesson archive 是否能保留成功和失败经验？ | CORAL、Insight Swarm |
+| 验证与 handoff | grader、verifier、review gate、handoff 协议是否独立、可回放、可回滚？ | metaswarm、OpenClaw Multi-Agent Team、swarmclaw |
+
+完整笔记见 [analysis/agent-swarm-evolve.md](analysis/agent-swarm-evolve.md)，wiki 入口见 [work/wiki/concepts/agent-swarm-evolve.md](work/wiki/concepts/agent-swarm-evolve.md)。
+
 ## 方法族展开
 
 | 方法族 | 它怎么工作 | 什么时候优先用 | 主要失败模式 |
