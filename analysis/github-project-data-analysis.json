@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-29T23:40:48.618Z",
+  "generated_at": "2026-05-29T23:47:40.271Z",
   "counts": {
-    "raw_captures": 596,
+    "raw_captures": 602,
     "raw_files_on_disk": 602,
     "classified_repos": 602,
     "analyzed_projects": 193,
-    "analyzed_in_raw_timestamp_index": 135,
+    "analyzed_in_raw_timestamp_index": 141,
     "analyzed_in_classification": 141,
     "analyzed_evolution_focused": 66,
     "analyzed_with_verified_created_at": 25,
@@ -24393,11 +24393,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/first-fluke_oh-my-agent.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
@@ -24440,11 +24440,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/agentscope-ai_reme.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "memory-runtime",
@@ -24487,11 +24487,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/openmemoryspec_oms.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "教程/tutorial",
       "classification_function_tag": "memory-substrate",
@@ -24534,11 +24534,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/memtomem_memtomem.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "memory-runtime",
@@ -24581,11 +24581,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/skillmatic-ai_awesome-agent-skills.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "教程/tutorial",
       "classification_function_tag": "resource-index",
@@ -24628,11 +24628,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/sevenschulte_agentic-harness.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "tool-module",
@@ -27703,11 +27703,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/agentscope-ai_reme.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "memory-runtime",
@@ -28818,11 +28818,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/first-fluke_oh-my-agent.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
@@ -28865,11 +28865,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/skillmatic-ai_awesome-agent-skills.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "教程/tutorial",
       "classification_function_tag": "resource-index",
@@ -33486,11 +33486,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/memtomem_memtomem.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "memory-runtime",
@@ -33533,11 +33533,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/openmemoryspec_oms.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "教程/tutorial",
       "classification_function_tag": "memory-substrate",
@@ -33766,11 +33766,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/sevenschulte_agentic-harness.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "tool-module",
@@ -35356,11 +35356,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/agentscope-ai_reme.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "memory-runtime",
@@ -37313,11 +37313,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/first-fluke_oh-my-agent.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
@@ -38986,11 +38986,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/memtomem_memtomem.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "memory-runtime",
@@ -40460,11 +40460,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/openmemoryspec_oms.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "教程/tutorial",
       "classification_function_tag": "memory-substrate",
@@ -41307,11 +41307,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/sevenschulte_agentic-harness.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "tool-module",
@@ -41496,11 +41496,11 @@
       "github_api_forks": null,
       "github_pushed_at": null,
       "github_error": "fetch failed",
-      "in_raw_timestamp_index": false,
-      "raw_file": null,
-      "raw_collected_at": null,
-      "raw_content_timestamp": null,
-      "raw_timestamp_source": null,
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/skillmatic-ai_awesome-agent-skills.md",
+      "raw_collected_at": "2026-05-30T07:15:19+08:00",
+      "raw_content_timestamp": "2026-05-30",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_30",
       "in_classification": true,
       "classification_category": "教程/tutorial",
       "classification_function_tag": "resource-index",
@@ -43198,7 +43198,7 @@
   ],
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-05-29T23:40:48.619Z",
+    "reference_date": "2026-05-29T23:47:40.272Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -43238,7 +43238,7 @@
       "report": "projects/modelscope__agentevolver.md",
       "scores": {
         "current_value": 83.52,
-        "time": 76.25,
+        "time": 76.24,
         "mechanism": 100,
         "evidence": 100,
         "adoption": 59.98,
@@ -43266,7 +43266,7 @@
       "report": "projects/zju_llm_safety__darwin.md",
       "scores": {
         "current_value": 77.1,
-        "time": 94.13,
+        "time": 94.12,
         "mechanism": 75,
         "evidence": 62,
         "adoption": 30.83,
@@ -44521,6 +44521,37 @@
     },
     {
       "rank": 44,
+      "repo": "agentscope-ai/ReMe",
+      "name": "ReMe",
+      "url": "https://github.com/agentscope-ai/ReMe",
+      "category": "Long-Term Agent Memory and Context Compression Framework",
+      "pattern": "compress long context into structured summaries -> persist long-term memory in file/vector backends -> recall relevant memory with hybrid retrieval -> reuse memory traces across sessions and benchmark loops",
+      "tags": [
+        "memory",
+        "context-compression",
+        "long-term-memory",
+        "benchmark",
+        "agentscope"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-05-30T00:00:00Z",
+      "stars": 3000,
+      "report": "projects/319-agentscope-reme-long-term-memory-framework.md",
+      "scores": {
+        "current_value": 47.1,
+        "time": 45,
+        "mechanism": 28,
+        "evidence": 56,
+        "adoption": 66.03,
+        "usefulness": 80
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 45,
       "repo": "howdymary/hermes-agent-metaharness",
       "name": "Hermes Agent Meta-Harness",
       "url": "https://github.com/howdymary/hermes-agent-metaharness",
@@ -44551,7 +44582,38 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 45,
+      "rank": 46,
+      "repo": "sevenschulte/agentic-harness",
+      "name": "Agentic Harness",
+      "url": "https://github.com/sevenschulte/agentic-harness",
+      "category": "Python Agent Workflow Testing Harness",
+      "pattern": "define reusable workflow nodes for agent pipelines -> attach deterministic tests to workflow behavior -> run harness checks before production rollout -> use failures as fast feedback for agent workflow evolution",
+      "tags": [
+        "harness",
+        "workflow",
+        "python",
+        "testing",
+        "harness"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-05-30T00:00:00Z",
+      "stars": 2,
+      "report": "projects/323-agentic-harness-python-workflow-test-harness.md",
+      "scores": {
+        "current_value": 46.71,
+        "time": 45,
+        "mechanism": 57,
+        "evidence": 56,
+        "adoption": 9.06,
+        "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 47,
       "repo": "langchain-ai/memory-agent",
       "name": "LangChain Memory Agent",
       "url": "https://github.com/langchain-ai/memory-agent",
@@ -44582,7 +44644,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 46,
+      "rank": 48,
       "repo": "coleam00/Archon",
       "name": "Archon",
       "url": "https://github.com/coleam00/Archon",
@@ -44613,7 +44675,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 47,
+      "rank": 49,
       "repo": "mem9-ai/mem9",
       "name": "mem9",
       "url": "https://github.com/mem9-ai/mem9",
@@ -44644,7 +44706,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 48,
+      "rank": 50,
       "repo": "benchflow-ai/skillsbench",
       "name": "SkillsBench",
       "url": "https://github.com/benchflow-ai/skillsbench",
@@ -44675,7 +44737,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 49,
+      "rank": 51,
       "repo": "sachinsharma9780/memweave",
       "name": "MemWeave",
       "url": "https://github.com/sachinsharma9780/memweave",
@@ -44706,7 +44768,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 50,
+      "rank": 52,
       "repo": "n8n-io/n8n",
       "name": "n8n",
       "url": "https://github.com/n8n-io/n8n",
@@ -44735,7 +44797,38 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 51,
+      "rank": 53,
+      "repo": "first-fluke/oh-my-agent",
+      "name": "Oh My Agent",
+      "url": "https://github.com/first-fluke/oh-my-agent",
+      "category": "Open Multi-Agent Runtime and Benchmark Harness",
+      "pattern": "build agent workflows through composable nodes -> run memory, planner, and tool execution as auditable modules -> benchmark agents with repeatable evaluation entries -> iterate runtime policies using harness feedback and workflow traces",
+      "tags": [
+        "multi-agent",
+        "workflow",
+        "harness",
+        "benchmark",
+        "framework"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-05-30T00:00:00Z",
+      "stars": 1000,
+      "report": "projects/318-oh-my-agent-multi-agent-runtime-and-harness.md",
+      "scores": {
+        "current_value": 46.2,
+        "time": 45,
+        "mechanism": 28,
+        "evidence": 56,
+        "adoption": 56.98,
+        "usefulness": 80
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 54,
       "repo": "openclaw/clownfish",
       "name": "Clownfish",
       "url": "https://github.com/openclaw/clownfish",
@@ -44766,7 +44859,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 52,
+      "rank": 55,
       "repo": "microsoft/waza",
       "name": "Waza",
       "url": "https://github.com/microsoft/waza",
@@ -44796,7 +44889,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 53,
+      "rank": 56,
       "repo": "agent0ai/agent-zero",
       "name": "Agent Zero",
       "url": "https://github.com/agent0ai/agent-zero",
@@ -44827,7 +44920,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 54,
+      "rank": 57,
       "repo": "aiwaves-cn/agents",
       "name": "agents",
       "url": "https://github.com/aiwaves-cn/agents",
@@ -44856,7 +44949,7 @@
       "caveat": ""
     },
     {
-      "rank": 55,
+      "rank": 58,
       "repo": "mgechev/skillgrade",
       "name": "Skillgrade Agent Skill Evaluation",
       "url": "https://github.com/mgechev/skillgrade",
@@ -44886,7 +44979,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 56,
+      "rank": 59,
       "repo": "openclaw/clawhub",
       "name": "OpenClaw ClawHub",
       "url": "https://github.com/openclaw/clawhub",
@@ -44917,7 +45010,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 57,
+      "rank": 60,
       "repo": "mindfold-ai/Trellis",
       "name": "Trellis",
       "url": "https://github.com/mindfold-ai/Trellis",
@@ -44948,7 +45041,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 58,
+      "rank": 61,
       "repo": "SWE-bench/SWE-bench",
       "name": "swe-bench",
       "url": "https://github.com/SWE-bench/SWE-bench",
@@ -44968,7 +45061,7 @@
       "report": "research/projects/60-swe-bench-evaluation.md",
       "scores": {
         "current_value": 45.21,
-        "time": 41.93,
+        "time": 41.92,
         "mechanism": 20,
         "evidence": 68,
         "adoption": 65.46,
@@ -44977,7 +45070,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 59,
+      "rank": 62,
       "repo": "zhangfengcdt/memoir",
       "name": "Memoir",
       "url": "https://github.com/zhangfengcdt/memoir",
@@ -45006,7 +45099,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 60,
+      "rank": 63,
       "repo": "redis/agent-memory-server",
       "name": "Redis Agent Memory Server",
       "url": "https://github.com/redis/agent-memory-server",
@@ -45037,7 +45130,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 61,
+      "rank": 64,
       "repo": "QuantaAlpha/GitTaskBench",
       "name": "GitTaskBench",
       "url": "https://github.com/QuantaAlpha/GitTaskBench",
@@ -45068,7 +45161,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 62,
+      "rank": 65,
       "repo": "princeton-nlp/SWE-agent",
       "name": "SWE-Agent",
       "url": "https://github.com/princeton-nlp/SWE-agent",
@@ -45097,38 +45190,7 @@
       "caveat": ""
     },
     {
-      "rank": 63,
-      "repo": "agentscope-ai/ReMe",
-      "name": "ReMe",
-      "url": "https://github.com/agentscope-ai/ReMe",
-      "category": "Long-Term Agent Memory and Context Compression Framework",
-      "pattern": "compress long context into structured summaries -> persist long-term memory in file/vector backends -> recall relevant memory with hybrid retrieval -> reuse memory traces across sessions and benchmark loops",
-      "tags": [
-        "memory",
-        "context-compression",
-        "long-term-memory",
-        "benchmark",
-        "agentscope"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-05-30T00:00:00Z",
-      "stars": 3000,
-      "report": "projects/319-agentscope-reme-long-term-memory-framework.md",
-      "scores": {
-        "current_value": 45,
-        "time": 45,
-        "mechanism": 28,
-        "evidence": 42,
-        "adoption": 66.03,
-        "usefulness": 80
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 64,
+      "rank": 66,
       "repo": "nemori-ai/nemori",
       "name": "Nemori",
       "url": "https://github.com/nemori-ai/nemori",
@@ -45159,7 +45221,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 65,
+      "rank": 67,
       "repo": "MemTensor/MemOS-Cloud-OpenClaw-Plugin",
       "name": "MemOS Cloud OpenClaw Plugin",
       "url": "https://github.com/MemTensor/MemOS-Cloud-OpenClaw-Plugin",
@@ -45190,7 +45252,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 66,
+      "rank": 68,
       "repo": "AutoX-AI-Labs/AutoR",
       "name": "AutoR",
       "url": "https://github.com/AutoX-AI-Labs/AutoR",
@@ -45220,7 +45282,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 67,
+      "rank": 69,
       "repo": "zjunlp/SkillX",
       "name": "SkillX",
       "url": "https://github.com/zjunlp/SkillX",
@@ -45251,7 +45313,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 68,
+      "rank": 70,
       "repo": "iflytek/skillhub",
       "name": "iFLYTEK SkillHub",
       "url": "https://github.com/iflytek/skillhub",
@@ -45282,7 +45344,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 69,
+      "rank": 71,
       "repo": "InternScience/Awesome-Scientific-Skills",
       "name": "Awesome Scientific Skills",
       "url": "https://github.com/InternScience/Awesome-Scientific-Skills",
@@ -45313,38 +45375,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 70,
-      "repo": "sevenschulte/agentic-harness",
-      "name": "Agentic Harness",
-      "url": "https://github.com/sevenschulte/agentic-harness",
-      "category": "Python Agent Workflow Testing Harness",
-      "pattern": "define reusable workflow nodes for agent pipelines -> attach deterministic tests to workflow behavior -> run harness checks before production rollout -> use failures as fast feedback for agent workflow evolution",
-      "tags": [
-        "harness",
-        "workflow",
-        "python",
-        "testing",
-        "harness"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-05-30T00:00:00Z",
-      "stars": 2,
-      "report": "projects/323-agentic-harness-python-workflow-test-harness.md",
-      "scores": {
-        "current_value": 44.61,
-        "time": 45,
-        "mechanism": 57,
-        "evidence": 42,
-        "adoption": 9.06,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 71,
+      "rank": 72,
       "repo": "crewAIInc/crewAI",
       "name": "CrewAI",
       "url": "https://github.com/crewAIInc/crewAI",
@@ -45364,7 +45395,7 @@
       "report": "projects/09-crewai-multi-agent-framework.md",
       "scores": {
         "current_value": 44.6,
-        "time": 29.5,
+        "time": 29.49,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 89.56,
@@ -45373,7 +45404,7 @@
       "caveat": ""
     },
     {
-      "rank": 72,
+      "rank": 73,
       "repo": "openclaw/acpx",
       "name": "ACPX",
       "url": "https://github.com/openclaw/acpx",
@@ -45404,7 +45435,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 73,
+      "rank": 74,
       "repo": "Significant-Gravitas/AutoGPT",
       "name": "AutoGPT",
       "url": "https://github.com/Significant-Gravitas/AutoGPT",
@@ -45433,7 +45464,7 @@
       "caveat": ""
     },
     {
-      "rank": 74,
+      "rank": 75,
       "repo": "openclaw/gitcrawl",
       "name": "Gitcrawl",
       "url": "https://github.com/openclaw/gitcrawl",
@@ -45464,7 +45495,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 75,
+      "rank": 76,
       "repo": "suyoumo/ClawProBench",
       "name": "ClawProBench",
       "url": "https://github.com/suyoumo/ClawProBench",
@@ -45494,7 +45525,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 76,
+      "rank": 77,
       "repo": "InternLM/WildClawBench",
       "name": "WildClawBench",
       "url": "https://github.com/InternLM/WildClawBench",
@@ -45524,7 +45555,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 77,
+      "rank": 78,
       "repo": "mgechev/skills-best-practices",
       "name": "Skills Best Practices",
       "url": "https://github.com/mgechev/skills-best-practices",
@@ -45551,37 +45582,6 @@
         "evidence": 56,
         "adoption": 62.27,
         "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 78,
-      "repo": "first-fluke/oh-my-agent",
-      "name": "Oh My Agent",
-      "url": "https://github.com/first-fluke/oh-my-agent",
-      "category": "Open Multi-Agent Runtime and Benchmark Harness",
-      "pattern": "build agent workflows through composable nodes -> run memory, planner, and tool execution as auditable modules -> benchmark agents with repeatable evaluation entries -> iterate runtime policies using harness feedback and workflow traces",
-      "tags": [
-        "multi-agent",
-        "workflow",
-        "harness",
-        "benchmark",
-        "framework"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-05-30T00:00:00Z",
-      "stars": 1000,
-      "report": "projects/318-oh-my-agent-multi-agent-runtime-and-harness.md",
-      "scores": {
-        "current_value": 44.1,
-        "time": 45,
-        "mechanism": 28,
-        "evidence": 42,
-        "adoption": 56.98,
-        "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -46593,6 +46593,37 @@
     },
     {
       "rank": 112,
+      "repo": "memtomem/memtomem",
+      "name": "MemToMem",
+      "url": "https://github.com/memtomem/memtomem",
+      "category": "Hierarchical Agent Memory Framework",
+      "pattern": "capture episodic and semantic memory traces -> structure memory in hierarchical graphs -> retrieve context by relevance and recency -> feed persistent memory context back into ongoing autonomous task execution",
+      "tags": [
+        "memory",
+        "hierarchical-memory",
+        "graph-memory",
+        "agent-runtime",
+        "python"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-05-30T00:00:00Z",
+      "stars": 5,
+      "report": "projects/321-memtomem-hierarchical-memory-for-agents.md",
+      "scores": {
+        "current_value": 41.48,
+        "time": 45,
+        "mechanism": 28,
+        "evidence": 56,
+        "adoption": 14.78,
+        "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 113,
       "repo": "OpenDevin/OpenDevin",
       "name": "OpenDevin",
       "url": "https://github.com/OpenDevin/OpenDevin",
@@ -46622,7 +46653,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 113,
+      "rank": 114,
       "repo": "paradigmxyz/centaur",
       "name": "Centaur",
       "url": "https://github.com/paradigmxyz/centaur",
@@ -46653,7 +46684,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 114,
+      "rank": 115,
       "repo": "langflow-ai/langflow",
       "name": "langflow",
       "url": "https://github.com/langflow-ai/langflow",
@@ -46682,7 +46713,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 115,
+      "rank": 116,
       "repo": "OpenBMB/ChatDev",
       "name": "chatdev",
       "url": "https://github.com/OpenBMB/ChatDev",
@@ -46711,7 +46742,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 116,
+      "rank": 117,
       "repo": "razroo/state-trace",
       "name": "state-trace",
       "url": "https://github.com/razroo/state-trace",
@@ -46740,7 +46771,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 117,
+      "rank": 118,
       "repo": "Chainlit/chainlit",
       "name": "chainlit",
       "url": "https://github.com/Chainlit/chainlit",
@@ -46769,7 +46800,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 118,
+      "rank": 119,
       "repo": "OpenBMB/ClawXMemory",
       "name": "ClawXMemory",
       "url": "https://github.com/OpenBMB/ClawXMemory",
@@ -46800,7 +46831,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 119,
+      "rank": 120,
       "repo": "shareAI-lab/kbench",
       "name": "kbench",
       "url": "https://github.com/shareAI-lab/kbench",
@@ -46831,7 +46862,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 120,
+      "rank": 121,
       "repo": "agiprolabs/claude-trading-skills",
       "name": "Claude Trading Skills",
       "url": "https://github.com/agiprolabs/claude-trading-skills",
@@ -46862,7 +46893,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 121,
+      "rank": 122,
       "repo": "webmaxru/Agent-Skills",
       "name": "Webmaxru Agent Skills",
       "url": "https://github.com/webmaxru/Agent-Skills",
@@ -46892,7 +46923,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 122,
+      "rank": 123,
       "repo": "FlowiseAI/Flowise",
       "name": "flowise",
       "url": "https://github.com/FlowiseAI/Flowise",
@@ -46921,7 +46952,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 123,
+      "rank": 124,
       "repo": "YoungDubbyDu/LLM-Agent-Optimization",
       "name": "LLM-Agent-Optimization",
       "url": "https://github.com/YoungDubbyDu/LLM-Agent-Optimization",
@@ -46951,7 +46982,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 124,
+      "rank": 125,
       "repo": "ag2ai/ag2",
       "name": "ag2",
       "url": "https://github.com/ag2ai/ag2",
@@ -46980,7 +47011,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 125,
+      "rank": 126,
       "repo": "Zijian-Ni/awesome-ai-agents-2026",
       "name": "awesome-ai-agents-2026",
       "url": "https://github.com/Zijian-Ni/awesome-ai-agents-2026",
@@ -47009,7 +47040,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 126,
+      "rank": 127,
       "repo": "BerriAI/litellm",
       "name": "litellm",
       "url": "https://github.com/BerriAI/litellm",
@@ -47038,7 +47069,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 127,
+      "rank": 128,
       "repo": "iliaal/ai-skills",
       "name": "ai-skills",
       "url": "https://github.com/iliaal/ai-skills",
@@ -47069,7 +47100,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 128,
+      "rank": 129,
       "repo": "flagos-ai/skills",
       "name": "FlagoS Skills",
       "url": "https://github.com/flagos-ai/skills",
@@ -47100,7 +47131,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 129,
+      "rank": 130,
       "repo": "cheshire-cat-ai/core",
       "name": "cheshire-cat",
       "url": "https://github.com/cheshire-cat-ai/core",
@@ -47129,7 +47160,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 130,
+      "rank": 131,
       "repo": "harness/harness-evals",
       "name": "Harness Evals",
       "url": "https://github.com/harness/harness-evals",
@@ -47160,7 +47191,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 131,
+      "rank": 132,
       "repo": "FoundationAgents/MetaGPT",
       "name": "MetaGPT",
       "url": "https://github.com/FoundationAgents/MetaGPT",
@@ -47190,7 +47221,7 @@
       "caveat": ""
     },
     {
-      "rank": 132,
+      "rank": 133,
       "repo": "back1ply/agent-skill-loader",
       "name": "Agent Skill Loader",
       "url": "https://github.com/back1ply/agent-skill-loader",
@@ -47221,7 +47252,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 133,
+      "rank": 134,
       "repo": "noahshinn/reflexion",
       "name": "reflexion",
       "url": "https://github.com/noahshinn/reflexion",
@@ -47252,7 +47283,7 @@
       "caveat": ""
     },
     {
-      "rank": 134,
+      "rank": 135,
       "repo": "Olshansk/agent-skills",
       "name": "Agent Skills",
       "url": "https://github.com/Olshansk/agent-skills",
@@ -47283,7 +47314,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 135,
+      "rank": 136,
       "repo": "Picrew/awesome-agent-harness",
       "name": "Awesome Agent Harness (Picrew)",
       "url": "https://github.com/Picrew/awesome-agent-harness",
@@ -47314,7 +47345,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 136,
+      "rank": 137,
       "repo": "dataelement/bisheng",
       "name": "bisheng",
       "url": "https://github.com/dataelement/bisheng",
@@ -47343,7 +47374,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 137,
+      "rank": 138,
       "repo": "axiomhq/agent-memory",
       "name": "Agent Memory",
       "url": "https://github.com/axiomhq/agent-memory",
@@ -47374,7 +47405,38 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 138,
+      "rank": 139,
+      "repo": "openmemoryspec/oms",
+      "name": "Open Memory Specification (OMS)",
+      "url": "https://github.com/openmemoryspec/oms",
+      "category": "Portable Agent Memory Interoperability Standard",
+      "pattern": "define immutable memory grain containers -> standardize query and context-assembly languages -> enforce portable and auditable memory exchange across runtimes -> reduce lock-in and memory migration friction for long-lived agents",
+      "tags": [
+        "memory",
+        "interoperability",
+        "specification",
+        "cal",
+        "sml"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-05-30T00:00:00Z",
+      "stars": 5,
+      "report": "projects/320-open-memory-spec-oms-interoperability-standard.md",
+      "scores": {
+        "current_value": 39.48,
+        "time": 45,
+        "mechanism": 18,
+        "evidence": 56,
+        "adoption": 14.78,
+        "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 140,
       "repo": "Modelcode-ai/mcode-benchmark",
       "name": "RepoMod Bench",
       "url": "https://github.com/Modelcode-ai/mcode-benchmark",
@@ -47405,7 +47467,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 139,
+      "rank": 141,
       "repo": "e2b-dev/e2b",
       "name": "e2b",
       "url": "https://github.com/e2b-dev/e2b",
@@ -47434,38 +47496,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 140,
-      "repo": "memtomem/memtomem",
-      "name": "MemToMem",
-      "url": "https://github.com/memtomem/memtomem",
-      "category": "Hierarchical Agent Memory Framework",
-      "pattern": "capture episodic and semantic memory traces -> structure memory in hierarchical graphs -> retrieve context by relevance and recency -> feed persistent memory context back into ongoing autonomous task execution",
-      "tags": [
-        "memory",
-        "hierarchical-memory",
-        "graph-memory",
-        "agent-runtime",
-        "python"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-05-30T00:00:00Z",
-      "stars": 5,
-      "report": "projects/321-memtomem-hierarchical-memory-for-agents.md",
-      "scores": {
-        "current_value": 39.38,
-        "time": 45,
-        "mechanism": 28,
-        "evidence": 42,
-        "adoption": 14.78,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 141,
+      "rank": 142,
       "repo": "AutoJunjie/awesome-agent-harness",
       "name": "Awesome Agent Harness (AutoJunjie)",
       "url": "https://github.com/AutoJunjie/awesome-agent-harness",
@@ -47496,7 +47527,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 142,
+      "rank": 143,
       "repo": "QuantClaw/QuantClaw",
       "name": "QuantClaw",
       "url": "https://github.com/QuantClaw/QuantClaw",
@@ -47527,7 +47558,38 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 143,
+      "rank": 144,
+      "repo": "skillmatic-ai/awesome-agent-skills",
+      "name": "Awesome Agent Skills (Skillmatic)",
+      "url": "https://github.com/skillmatic-ai/awesome-agent-skills",
+      "category": "Cross-Framework Agent Skills Registry",
+      "pattern": "curate reusable skills in one index -> map installation paths for multiple agent runtimes -> standardize skill packaging and integration hints -> reduce onboarding and reproducibility cost for skill reuse",
+      "tags": [
+        "skills",
+        "awesome-list",
+        "codex",
+        "claude-code",
+        "cursor"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-05-30T00:00:00Z",
+      "stars": 1000,
+      "report": "projects/322-skillmatic-awesome-agent-skills-registry.md",
+      "scores": {
+        "current_value": 39.1,
+        "time": 45,
+        "mechanism": 0,
+        "evidence": 56,
+        "adoption": 56.98,
+        "usefulness": 50
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 145,
       "repo": "junminhong/awesome-agent-skills",
       "name": "Awesome Agent Skills",
       "url": "https://github.com/junminhong/awesome-agent-skills",
@@ -47558,7 +47620,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 144,
+      "rank": 146,
       "repo": "DEEP-PolyU/Awesome-GraphMemory",
       "name": "Awesome GraphMemory",
       "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
@@ -47587,7 +47649,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 145,
+      "rank": 147,
       "repo": "All-Hands-AI/OpenHands",
       "name": "OpenHands",
       "url": "https://github.com/All-Hands-AI/OpenHands",
@@ -47616,7 +47678,7 @@
       "caveat": ""
     },
     {
-      "rank": 146,
+      "rank": 148,
       "repo": "microsoft/autogen",
       "name": "AutoGen",
       "url": "https://github.com/microsoft/autogen",
@@ -47645,7 +47707,7 @@
       "caveat": ""
     },
     {
-      "rank": 147,
+      "rank": 149,
       "repo": "cxxz/awesome-agent-memory",
       "name": "Awesome Agent Memory by cxxz",
       "url": "https://github.com/cxxz/awesome-agent-memory",
@@ -47674,7 +47736,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 148,
+      "rank": 150,
       "repo": "vilmire/adhdev",
       "name": "ADHDev",
       "url": "https://github.com/vilmire/adhdev",
@@ -47705,7 +47767,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 149,
+      "rank": 151,
       "repo": "sunnja69/akephalos",
       "name": "Akephalos",
       "url": "https://github.com/sunnja69/akephalos",
@@ -47736,7 +47798,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 150,
+      "rank": 152,
       "repo": "ai4co/awesome-fm4co",
       "name": "Awesome-FM4CO",
       "url": "https://github.com/ai4co/awesome-fm4co",
@@ -47765,7 +47827,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 151,
+      "rank": 153,
       "repo": "ComposioHQ/awesome-agent-clis",
       "name": "Awesome Agent CLIs",
       "url": "https://github.com/ComposioHQ/awesome-agent-clis",
@@ -47796,7 +47858,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 152,
+      "rank": 154,
       "repo": "LLMSecurity/awesome-agent-skills-security",
       "name": "Awesome Agent Skills Security",
       "url": "https://github.com/LLMSecurity/awesome-agent-skills-security",
@@ -47827,7 +47889,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 153,
+      "rank": 155,
       "repo": "RyanAlberts/best-of-Agent-Harnesses",
       "name": "Best of Agent Harnesses",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
@@ -47858,7 +47920,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 154,
+      "rank": 156,
       "repo": "xlang-ai/OSWorld",
       "name": "osworld",
       "url": "https://github.com/xlang-ai/OSWorld",
@@ -47887,38 +47949,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 155,
-      "repo": "openmemoryspec/oms",
-      "name": "Open Memory Specification (OMS)",
-      "url": "https://github.com/openmemoryspec/oms",
-      "category": "Portable Agent Memory Interoperability Standard",
-      "pattern": "define immutable memory grain containers -> standardize query and context-assembly languages -> enforce portable and auditable memory exchange across runtimes -> reduce lock-in and memory migration friction for long-lived agents",
-      "tags": [
-        "memory",
-        "interoperability",
-        "specification",
-        "cal",
-        "sml"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-05-30T00:00:00Z",
-      "stars": 5,
-      "report": "projects/320-open-memory-spec-oms-interoperability-standard.md",
-      "scores": {
-        "current_value": 37.38,
-        "time": 45,
-        "mechanism": 18,
-        "evidence": 42,
-        "adoption": 14.78,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 156,
+      "rank": 157,
       "repo": "itgoyo/awesome-agent-skills",
       "name": "Awesome Agent Skills (itgoyo)",
       "url": "https://github.com/itgoyo/awesome-agent-skills",
@@ -47949,7 +47980,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 157,
+      "rank": 158,
       "repo": "seb1n/awesome-ai-agent-skills",
       "name": "Awesome AI Agent Skills",
       "url": "https://github.com/seb1n/awesome-ai-agent-skills",
@@ -47975,37 +48006,6 @@
         "mechanism": 0,
         "evidence": 56,
         "adoption": 37.38,
-        "usefulness": 50
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 158,
-      "repo": "skillmatic-ai/awesome-agent-skills",
-      "name": "Awesome Agent Skills (Skillmatic)",
-      "url": "https://github.com/skillmatic-ai/awesome-agent-skills",
-      "category": "Cross-Framework Agent Skills Registry",
-      "pattern": "curate reusable skills in one index -> map installation paths for multiple agent runtimes -> standardize skill packaging and integration hints -> reduce onboarding and reproducibility cost for skill reuse",
-      "tags": [
-        "skills",
-        "awesome-list",
-        "codex",
-        "claude-code",
-        "cursor"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-05-30T00:00:00Z",
-      "stars": 1000,
-      "report": "projects/322-skillmatic-awesome-agent-skills-registry.md",
-      "scores": {
-        "current_value": 37,
-        "time": 45,
-        "mechanism": 0,
-        "evidence": 42,
-        "adoption": 56.98,
         "usefulness": 50
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"

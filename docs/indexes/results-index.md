@@ -13,7 +13,7 @@
 | `reports` | present | 13 | 2 | 0 | 94 KB |
 | `output` | present | 8 | 1 | 0 | 625 KB |
 | `site/public/reports` | present | 428 | 6 | 0 | 2.8 MB |
-| `site/dist` | present | 798 | 340 | 0 | 17 MB |
+| `site/dist` | present | 810 | 346 | 0 | 17 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 983 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 

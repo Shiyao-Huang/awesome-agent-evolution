@@ -1,16 +1,16 @@
 # GitHub Project Data Analysis
 
-Generated: 2026-05-29T23:40:48.618Z
+Generated: 2026-05-29T23:47:40.271Z
 
 ## One-Sentence Compression
 
-The project corpus has 596 timestamp-indexed raw GitHub captures, 602 classified repositories, 193 site/paper model-card projects, 90 strict evolution-theme repositories, and 195 broad evolution-related repositories.
+The project corpus has 602 timestamp-indexed raw GitHub captures, 602 classified repositories, 193 site/paper model-card projects, 90 strict evolution-theme repositories, and 195 broad evolution-related repositories.
 
 ## Corpus Funnel
 
 | Layer | Count | Definition |
 |---|---:|---|
-| Raw GitHub captures | 596 | Records in `output/raw-github-timestamp-index.json`; each points to one `raw-github/*.md` capture. |
+| Raw GitHub captures | 602 | Records in `output/raw-github-timestamp-index.json`; each points to one `raw-github/*.md` capture. |
 | Classified repositories | 602 | Rows in `research/repo-classification.json` with category, theme, stack, and time slice. |
 | Analyzed model-card projects | 193 | Repositories in `site/src/data/projects.ts` that receive public project pages and reports. |
 | Strict evolution-theme repositories | 90 | Classified rows whose `base_theme` is `evolution`. |
@@ -276,8 +276,8 @@ Formula: `current_value = 0.50*time + 0.20*mechanism + 0.15*evidence + 0.10*adop
 
 | Rank | Repo | Score | Time | Mechanism | Evidence | Adoption | Created | Activity | Caveat |
 |---:|---|---:|---:|---:|---:|---:|---|---|---|
-| 1 | [modelscope/AgentEvolver](https://github.com/modelscope/AgentEvolver) | 83.52 | 76.25 | 100 | 100 | 59.98 | 2025-11 | 2026-04 | - |
-| 2 | [ZJU-LLM-Safety/DARWIN](https://github.com/ZJU-LLM-Safety/DARWIN) | 77.1 | 94.13 | 75 | 62 | 30.83 | 2026-04 | 2026-05 | - |
+| 1 | [modelscope/AgentEvolver](https://github.com/modelscope/AgentEvolver) | 83.52 | 76.24 | 100 | 100 | 59.98 | 2025-11 | 2026-04 | - |
+| 2 | [ZJU-LLM-Safety/DARWIN](https://github.com/ZJU-LLM-Safety/DARWIN) | 77.1 | 94.12 | 75 | 62 | 30.83 | 2026-04 | 2026-05 | - |
 | 3 | [OPPO-Mente-Lab/LLM-Self-Judge](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge) | 76.05 | 86.97 | 85 | 62 | 31.21 | 2026-03 | 2026-03 | - |
 | 4 | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 71.27 | 57.68 | 79 | 100 | 72.25 | 2025-05 | 2026-03 | - |
 | 5 | [JarvisPei/SCOPE](https://github.com/JarvisPei/SCOPE) | 68.48 | 79.06 | 67 | 62 | 35.93 | 2025-12 | 2026-03 | - |
@@ -325,7 +325,7 @@ This table joins each public model-card project back to raw capture, classificat
 |---|---:|---|
 | GitHub API/cache metadata | 25 | Projects with verified `github_api` metadata in `analysis/github-created-at-cache.json`. |
 | Local git mirror evidence | 76 | Projects whose `localPath` points to a local git clone and can report first/last commit, count, branch, and HEAD. |
-| Raw timestamp capture | 135 | Public projects that also appear in `output/raw-github-timestamp-index.json`. |
+| Raw timestamp capture | 141 | Public projects that also appear in `output/raw-github-timestamp-index.json`. |
 | Classification row | 141 | Public projects that also appear in `research/repo-classification.json`. |
 | Public model-card report | 193 | Public projects with a generated report under `site/public/reports/projects/`. |
 
@@ -392,7 +392,7 @@ This table joins each public model-card project back to raw capture, classificat
 | [cheshire-cat-ai/core](https://github.com/cheshire-cat-ai/core) | - | missing | [report](../research/projects/67-cheshire-cat-ai-framework.md) | github_api_403 | unknown | 2026-05 | 3200/380 | 1 commits @ f8025c9 (2025-06 -> 2025-06) |
 | [iflytek/skillhub](https://github.com/iflytek/skillhub) | [raw](../raw-github/iflytek_skillhub.md) | skill | [report](../projects/283-iflytek-skillhub-agent-skill-registry.md) | github_api_fetch_error | unknown | 2026-05 | 3200/443 | - |
 | [noahshinn/reflexion](https://github.com/noahshinn/reflexion) | [raw](../raw-github/noahshinn_reflexion.md) | memory | [report](../projects/noahshinn__reflexion.md) | github_api | 2023-03 | 2025-01 | 3159/306 | 1 commits @ 218cf0e (2025-01 -> 2025-01) |
-| [agentscope-ai/ReMe](https://github.com/agentscope-ai/ReMe) | - | memory | [report](../projects/319-agentscope-reme-long-term-memory-framework.md) | github_api_fetch_error | unknown | 2026-05 | 3000/248 | - |
+| [agentscope-ai/ReMe](https://github.com/agentscope-ai/ReMe) | [raw](../raw-github/agentscope-ai_reme.md) | memory | [report](../projects/319-agentscope-reme-long-term-memory-framework.md) | github_api_fetch_error | unknown | 2026-05 | 3000/248 | - |
 | [THUDM/AgentBench](https://github.com/THUDM/AgentBench) | - | missing | [report](../projects/38-agentbench.md) | github_api_403 | unknown | 2025-01 | 3000/300 | 1 commits @ d1e4a10 (2026-02 -> 2026-02) |
 | [openclaw/acpx](https://github.com/openclaw/acpx) | [raw](../raw-github/openclaw_acpx.md) | skill | [report](../projects/315-openclaw-acpx-stateful-agent-runtime.md) | github_api_fetch_error | unknown | 2026-05 | 2800/272 | - |
 | [SWE-bench/SWE-bench](https://github.com/SWE-bench/SWE-bench) | [raw](../raw-github/swe-bench_swe-bench.md) | evaluation | [report](../research/projects/60-swe-bench-evaluation.md) | github_api_403 | unknown | 2026-04 | 2800/420 | 1 commits @ f7bbbb2 (2026-03 -> 2026-03) |
@@ -415,8 +415,8 @@ This table joins each public model-card project back to raw capture, classificat
 | [CMA-ES/pycma](https://github.com/CMA-ES/pycma) | - | missing | [report](../projects/30-pycma-cma-es.md) | github_api_403 | unknown | 2025-01 | 1000/250 | 1 commits @ 83089d1 (2026-02 -> 2026-02) |
 | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | [raw](../raw-github/evermind-ai_everos.md) | evaluation | [report](../projects/23-everos-self-evolving-agents.md) | github_api_403 | unknown | 2026-01 | 1000/100 | 1 commits @ e37205f (2026-05 -> 2026-05) |
 | [EvoAgentX/EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | [raw](../raw-github/evoagentx_evoagentx.md) | evolution | [report](../projects/22-evoagentx-agent-evolution-framework.md) | github_api_403 | unknown | 2026-01 | 1000/100 | 1 commits @ f542ce4 (2026-05 -> 2026-05) |
-| [first-fluke/oh-my-agent](https://github.com/first-fluke/oh-my-agent) | - | framework | [report](../projects/318-oh-my-agent-multi-agent-runtime-and-harness.md) | github_api_fetch_error | unknown | 2026-05 | 1000/118 | - |
-| [skillmatic-ai/awesome-agent-skills](https://github.com/skillmatic-ai/awesome-agent-skills) | - | skill | [report](../projects/322-skillmatic-awesome-agent-skills-registry.md) | github_api_fetch_error | unknown | 2026-05 | 1000/98 | - |
+| [first-fluke/oh-my-agent](https://github.com/first-fluke/oh-my-agent) | [raw](../raw-github/first-fluke_oh-my-agent.md) | framework | [report](../projects/318-oh-my-agent-multi-agent-runtime-and-harness.md) | github_api_fetch_error | unknown | 2026-05 | 1000/118 | - |
+| [skillmatic-ai/awesome-agent-skills](https://github.com/skillmatic-ai/awesome-agent-skills) | [raw](../raw-github/skillmatic-ai_awesome-agent-skills.md) | skill | [report](../projects/322-skillmatic-awesome-agent-skills-registry.md) | github_api_fetch_error | unknown | 2026-05 | 1000/98 | - |
 | [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | [raw](../raw-github/stanford-iris-lab_meta-harness.md) | evolution | [report](../projects/249-stanford-meta-harness-framework.md) | github_api_fetch_error | unknown | 2026-05 | 959/92 | - |
 | [Chorus-AIDLC/Chorus](https://github.com/Chorus-AIDLC/Chorus) | [raw](../raw-github/chorus-aidlc_chorus.md) | workflow-automation | [report](../projects/239-chorus-ai-human-collaboration-harness.md) | github_api_fetch_error | unknown | 2026-05 | 909/84 | - |
 | [microsoft/waza](https://github.com/microsoft/waza) | [raw](../raw-github/microsoft_waza.md) | skill | [report](../projects/217-waza-agent-skill-evaluation-cli.md) | github_api_fetch_error | unknown | 2026-05 | 904/49 | - |
@@ -514,13 +514,13 @@ This table joins each public model-card project back to raw capture, classificat
 | [axiomhq/agent-memory](https://github.com/axiomhq/agent-memory) | [raw](../raw-github/axiomhq_agent-memory.md) | memory | [report](../projects/297-axiom-agent-memory-substrate.md) | github_api_fetch_error | unknown | 2026-05 | 5/2 | - |
 | [BerriAI/self-improving-agent](https://github.com/BerriAI/self-improving-agent) | [raw](../raw-github/berriai_self-improving-agent.md) | evolution | [report](../projects/293-berriai-self-improving-agent-loop.md) | github_api_fetch_error | unknown | 2026-05 | 5/0 | - |
 | [FreedomIntelligence/Tiermem](https://github.com/FreedomIntelligence/Tiermem) | [raw](../raw-github/freedomintelligence_tiermem.md) | memory | [report](../projects/298-tiermem-provenance-memory-benchmark.md) | github_api_fetch_error | unknown | 2026-05 | 5/1 | - |
-| [memtomem/memtomem](https://github.com/memtomem/memtomem) | - | memory | [report](../projects/321-memtomem-hierarchical-memory-for-agents.md) | github_api_fetch_error | unknown | 2026-05 | 5/24 | - |
-| [openmemoryspec/oms](https://github.com/openmemoryspec/oms) | - | memory | [report](../projects/320-open-memory-spec-oms-interoperability-standard.md) | github_api_fetch_error | unknown | 2026-05 | 5/0 | - |
+| [memtomem/memtomem](https://github.com/memtomem/memtomem) | [raw](../raw-github/memtomem_memtomem.md) | memory | [report](../projects/321-memtomem-hierarchical-memory-for-agents.md) | github_api_fetch_error | unknown | 2026-05 | 5/24 | - |
+| [openmemoryspec/oms](https://github.com/openmemoryspec/oms) | [raw](../raw-github/openmemoryspec_oms.md) | memory | [report](../projects/320-open-memory-spec-oms-interoperability-standard.md) | github_api_fetch_error | unknown | 2026-05 | 5/0 | - |
 | [swapedoc/hermes2anti](https://github.com/swapedoc/hermes2anti) | [raw](../raw-github/swapedoc_hermes2anti.md) | memory | [report](../projects/231-hermes2anti-self-improve-agent-memory-skills.md) | github_api_fetch_error | unknown | 2026-05 | 4/0 | - |
 | [Alienfader/continuity-benchmarks](https://github.com/Alienfader/continuity-benchmarks) | [raw](../raw-github/alienfader_continuity-benchmarks.md) | evaluation | [report](../projects/287-continuity-benchmarks-execution-intent-memory.md) | github_api_fetch_error | unknown | 2026-05 | 3/0 | - |
 | [harness/harness-evals](https://github.com/harness/harness-evals) | [raw](../raw-github/harness_harness-evals.md) | evaluation | [report](../projects/260-harness-evals-agent-reliability-benchmark.md) | github_api_fetch_error | unknown | 2026-05 | 3/3 | - |
 | [Kenotic-Labs/ATANT](https://github.com/Kenotic-Labs/ATANT) | [raw](../raw-github/kenotic-labs_atant.md) | evaluation | [report](../projects/212-atant-agent-continuity-eval.md) | github_api_fetch_error | unknown | 2026-05 | 3/0 | - |
-| [sevenschulte/agentic-harness](https://github.com/sevenschulte/agentic-harness) | - | workflow-automation | [report](../projects/323-agentic-harness-python-workflow-test-harness.md) | github_api_fetch_error | unknown | 2026-05 | 2/0 | - |
+| [sevenschulte/agentic-harness](https://github.com/sevenschulte/agentic-harness) | [raw](../raw-github/sevenschulte_agentic-harness.md) | workflow-automation | [report](../projects/323-agentic-harness-python-workflow-test-harness.md) | github_api_fetch_error | unknown | 2026-05 | 2/0 | - |
 | [Modelcode-ai/mcode-benchmark](https://github.com/Modelcode-ai/mcode-benchmark) | [raw](../raw-github/modelcode-ai_mcode-benchmark.md) | evaluation | [report](../projects/290-repomod-bench-repo-translation-eval.md) | github_api_fetch_error | unknown | 2026-05 | 1/0 | - |
 | [razroo/state-trace](https://github.com/razroo/state-trace) | [raw](../raw-github/razroo_state-trace.md) | memory | [report](../projects/219-state-trace-agent-memory-engine.md) | github_api_fetch_error | unknown | 2026-05 | 1/0 | - |
 | [sunnja69/akephalos](https://github.com/sunnja69/akephalos) | [raw](../raw-github/sunnja69_akephalos.md) | memory | [report](../projects/255-akephalos-local-agent-passport.md) | github_api_fetch_error | unknown | 2026-05 | 0/1 | - |
