@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T17:17:56.154Z",
+  "generated_at": "2026-05-29T17:39:13.276Z",
   "counts": {
     "raw_captures": 596,
     "raw_files_on_disk": 596,
@@ -42238,7 +42238,7 @@
   ],
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-05-29T17:17:56.155Z",
+    "reference_date": "2026-05-29T17:39:13.279Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -42336,7 +42336,7 @@
       "report": "projects/oppo_mente_lab__llm_self_judge.md",
       "scores": {
         "current_value": 76.08,
-        "time": 87.02,
+        "time": 87.01,
         "mechanism": 85,
         "evidence": 62,
         "adoption": 31.21,
@@ -43427,7 +43427,7 @@
       "report": "projects/05-automl-agent-multi-agent.md",
       "scores": {
         "current_value": 47.48,
-        "time": 36.54,
+        "time": 36.53,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 40.58,
@@ -44646,7 +44646,7 @@
       "report": "projects/12-camel-ai-communicative-agents.md",
       "scores": {
         "current_value": 43.71,
-        "time": 29.16,
+        "time": 29.15,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 80.35,
@@ -45648,7 +45648,7 @@
       "stars": 26000,
       "report": "research/projects/46-chatdev-multi-agent-platform.md",
       "scores": {
-        "current_value": 41.12,
+        "current_value": 41.11,
         "time": 30.46,
         "mechanism": 43,
         "evidence": 36,
@@ -47028,7 +47028,7 @@
       "stars": 1581,
       "report": "projects/03-adas-automated-design-agentic-systems.md",
       "scores": {
-        "current_value": 34.27,
+        "current_value": 34.26,
         "time": 6.08,
         "mechanism": 59,
         "evidence": 68,
@@ -47705,7 +47705,7 @@
       "report": "research/projects/43-future-agi-self-improving.md",
       "scores": {
         "current_value": 23.13,
-        "time": 0.35,
+        "time": 0.34,
         "mechanism": 35,
         "evidence": 36,
         "adoption": 70.57,
@@ -47763,7 +47763,7 @@
       "report": "research/projects/52-agentgpt-autonomous.md",
       "scores": {
         "current_value": 22.58,
-        "time": 8.7,
+        "time": 8.69,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 85.81,
@@ -47792,7 +47792,7 @@
       "report": "research/projects/47-openagents-platform.md",
       "scores": {
         "current_value": 20.88,
-        "time": 8.7,
+        "time": 8.69,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 68.81,
@@ -47879,7 +47879,7 @@
       "report": "research/projects/50-smol-developer.md",
       "scores": {
         "current_value": 17.7,
-        "time": 0.35,
+        "time": 0.34,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 78.74,

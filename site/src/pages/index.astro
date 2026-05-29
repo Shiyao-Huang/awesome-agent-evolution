@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { projects, projectGroups } from '@/data/projects';
 import { featuredResearch } from '@/data/research';
 import { knowledgeGraphStats } from '@/data/knowledgeGraph';
-import { rankedProfiles, tierColors } from '@/data/rankings';
+import { rankedProfiles } from '@/data/rankings';
 import { starQualityScores } from '@/data/starAnalysis';
+import { evolveAgiIndex, evolveAgiIndexSignals } from '@/data/evolveAgiIndex';
 import { getCollection } from 'astro:content';
-const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf()).slice(0,3);
 
 // ── Star Rankings (Top 15 by star count) ──
@@ -164,6 +163,7 @@ const growthLabel: Record<string, string> = {
         <p class="lead">Star 榜单、趋势追踪、方向 Map——用 Rank 过滤信息，一页看到整个自进化领域最有价值的项目和论文。</p>
         <div class="hero-actions">
           <a class="button primary" href="#star-ranking">Star 榜单</a>
+          <a class="button" href="#evolve-agi-index">自进化系数</a>
           <a class="button" href="#trend-board">Trend 榜单</a>
           <a class="button" href="#direction-map">方向 Map</a>
           <a class="button" href="#agent-swarm-evolve">Agent-Swarm</a>
@@ -188,8 +188,41 @@ const growthLabel: Record<string, string> = {
     </div>
   </section>
 
+  <!-- ═══ Evolve-AGI Index ═══ -->
+  <section class="section" id="evolve-agi-index" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Evolve-AGI Index</div>
+          <h2>自进化系数：把领域成熟度压成一个可解释指数</h2>
+        </div>
+        <a class="text-link" href="/evolve-agi-index/">完整指数 →</a>
+      </div>
+      <div class="eai-home-grid">
+        <a class="eai-home-score" href="/evolve-agi-index/" aria-label="Open Evolve-AGI Index page">
+          <span>{evolveAgiIndex.zhName}</span>
+          <strong>{evolveAgiIndex.score}</strong>
+          <em>Grade {evolveAgiIndex.grade}</em>
+          <p>{evolveAgiIndex.oneSentence}</p>
+        </a>
+        <div class="eai-home-signals" aria-label="Evolve-AGI Index signals">
+          {evolveAgiIndexSignals.slice(0, 4).map((signal) => (
+            <article>
+              <div>
+                <span>{signal.shortLabel}</span>
+                <strong>{signal.score}</strong>
+              </div>
+              <div class="eai-home-bar"><span style={`width:${signal.score}%;`} /></div>
+              <p>{signal.label} · 权重 {signal.weight}%</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ Star Rankings ═══ -->
-  <section class="section" id="star-ranking" style="background: var(--surface-1);">
+  <section class="section" id="star-ranking">
     <div class="container">
       <div class="section-head">
         <div>
@@ -487,5 +520,103 @@ const growthLabel: Record<string, string> = {
   }
   .champion-block {
     transition: var(--transition);
+  }
+  .eai-home-grid {
+    display: grid;
+    grid-template-columns: minmax(0, .78fr) minmax(360px, 1.22fr);
+    gap: 16px;
+    align-items: stretch;
+  }
+  .eai-home-score {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-card);
+    padding: 24px;
+    color: inherit;
+    box-shadow: var(--shadow-mockup);
+  }
+  .eai-home-score:hover {
+    border-color: rgba(0, 0, 0, .16);
+    background: var(--surface-2);
+  }
+  .eai-home-score span,
+  .eai-home-signals article > div:first-child span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .eai-home-score strong {
+    margin-top: 10px;
+    color: var(--fg);
+    font-family: var(--font-display);
+    font-size: 72px;
+    font-weight: 400;
+    line-height: .9;
+  }
+  .eai-home-score em {
+    margin-top: 10px;
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 800;
+  }
+  .eai-home-score p {
+    margin-top: 14px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .eai-home-signals {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .eai-home-signals article {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-card);
+    padding: 18px;
+    box-shadow: var(--shadow-mockup);
+  }
+  .eai-home-signals article > div:first-child {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .eai-home-signals article > div:first-child strong {
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .eai-home-bar {
+    height: 7px;
+    margin: 14px 0 10px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--surface-3);
+  }
+  .eai-home-bar span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--accent);
+  }
+  .eai-home-signals p {
+    color: var(--muted);
+    font-size: .85rem;
+    line-height: 1.45;
+  }
+  @media (max-width: 980px) {
+    .eai-home-grid,
+    .eai-home-signals {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

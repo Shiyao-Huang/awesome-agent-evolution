@@ -1,6 +1,6 @@
 # GitHub Project Data Analysis
 
-Generated: 2026-05-29T17:17:56.154Z
+Generated: 2026-05-29T17:39:13.276Z
 
 ## One-Sentence Compression
 
@@ -272,7 +272,7 @@ Formula: `current_value = 0.50*time + 0.20*mechanism + 0.15*evidence + 0.10*adop
 |---:|---|---:|---:|---:|---:|---:|---|---|---|
 | 1 | [modelscope/AgentEvolver](https://github.com/modelscope/AgentEvolver) | 83.54 | 76.29 | 100 | 100 | 59.98 | 2025-11 | 2026-04 | - |
 | 2 | [ZJU-LLM-Safety/DARWIN](https://github.com/ZJU-LLM-Safety/DARWIN) | 77.12 | 94.17 | 75 | 62 | 30.83 | 2026-04 | 2026-05 | - |
-| 3 | [OPPO-Mente-Lab/LLM-Self-Judge](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge) | 76.08 | 87.02 | 85 | 62 | 31.21 | 2026-03 | 2026-03 | - |
+| 3 | [OPPO-Mente-Lab/LLM-Self-Judge](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge) | 76.08 | 87.01 | 85 | 62 | 31.21 | 2026-03 | 2026-03 | - |
 | 4 | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 71.29 | 57.73 | 79 | 100 | 72.25 | 2025-05 | 2026-03 | - |
 | 5 | [JarvisPei/SCOPE](https://github.com/JarvisPei/SCOPE) | 68.5 | 79.11 | 67 | 62 | 35.93 | 2025-12 | 2026-03 | - |
 | 6 | [inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve) | 65.96 | 74.05 | 59 | 68 | 37.9 | 2025-10 | 2026-04 | - |
@@ -308,7 +308,7 @@ Formula: `current_value = 0.50*time + 0.20*mechanism + 0.15*evidence + 0.10*adop
 | 36 | [swapedoc/hermes2anti](https://github.com/swapedoc/hermes2anti) | 47.93 | 45 | 61 | 56 | 13.27 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 37 | [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | 47.87 | 45 | 28 | 56 | 78.68 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 38 | [Zesearch/self-improvement-llm](https://github.com/Zesearch/self-improvement-llm) | 47.54 | 29.64 | 69 | 86 | 43.74 | unknown | 2026-01 | created_at unavailable; time score capped and based on activity/observation only |
-| 39 | [DeepAuto-AI/automl-agent](https://github.com/DeepAuto-AI/automl-agent) | 47.48 | 36.54 | 59 | 68 | 40.58 | 2025-05 | 2025-07 | - |
+| 39 | [DeepAuto-AI/automl-agent](https://github.com/DeepAuto-AI/automl-agent) | 47.48 | 36.53 | 59 | 68 | 40.58 | 2025-05 | 2025-07 | - |
 | 40 | [CortexReach/memory-lancedb-pro](https://github.com/CortexReach/memory-lancedb-pro) | 47.42 | 45 | 28 | 56 | 69.19 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 
 ## Git Evidence Join
