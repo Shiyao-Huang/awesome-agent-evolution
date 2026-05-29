@@ -2528,5 +2528,53 @@
     "forks": null,
     "source": "github_api_fetch_error",
     "error": "fetch failed"
+  },
+  "first-fluke/oh-my-agent": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "agentscope-ai/reme": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "openmemoryspec/oms": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "memtomem/memtomem": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "skillmatic-ai/awesome-agent-skills": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "sevenschulte/agentic-harness": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
   }
 }

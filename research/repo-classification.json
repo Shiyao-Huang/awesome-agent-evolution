@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T01:15:12+08:00",
+  "generated_at": "2026-05-30T07:15:19+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -300,6 +300,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web search/public GitHub page observed agentreplay/agentreplay as a local-first desktop evals, observability and AI memory project for Claude Code, Cursor, Windsurf, Cline, VS Code agents and custom SDK integrations; visible snippet listed fork count 2 and emphasized no Docker/server/cloud requirement.",
       "description": "Agent Replay is a local-first desktop evals, observability and AI memory stack for coding agents, with traces, embedded storage, vector memory, MCP/Claude Code integration and no cloud dependency."
+    },
+    {
+      "repo": "agentscope-ai/ReMe",
+      "url": "https://github.com/agentscope-ai/ReMe",
+      "stars": "3000",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "Python/Agent Memory Runtime/Temporal Context Compression and Recall",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed about 3k stars, 248 forks, 841 commits, Apache-2.0 licensing, and README claims of state-of-the-art memory benchmark performance.",
+      "description": "ReMe is a memory management toolkit for AI agents that provides long-term memory retention, context compression, and benchmark-backed retrieval quality signals."
     },
     {
       "repo": "agentskills/agentskills",
@@ -2310,6 +2325,21 @@
       "content_timestamp": "unknown",
       "evidence": "application/self-evolving-agent signal",
       "description": "A Collection on Large Language Models for Optimization"
+    },
+    {
+      "repo": "first-fluke/oh-my-agent",
+      "url": "https://github.com/first-fluke/oh-my-agent",
+      "stars": "1000",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Python/Multi-Agent Runtime/Workflow and Benchmark Harness",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed about 1k stars, 118 forks, 2,038 commits, MIT license, and repository folders for benchmark, docs, and workflow tooling.",
+      "description": "oh-my-agent is an open source multi-agent AI framework with workflow orchestration, memory modules, tooling integration, and built-in benchmark surfaces."
     },
     {
       "repo": "flagos-ai/skills",
@@ -4562,6 +4592,21 @@
       "description": "MemRL 是自进化 agent 的论文代码，用 episodic memory 上的 runtime reinforcement learning 代替参数微调，通过环境反馈筛选高效策略并在多个 benchmark 上验证持续改进。"
     },
     {
+      "repo": "memtomem/memtomem",
+      "url": "https://github.com/memtomem/memtomem",
+      "stars": "5",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "Python/Hierarchical Memory/Graph-Based Long-Term Agent Recall",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 5 stars, 24 forks, 1,025 commits, Apache-2.0 licensing, and README positioning around hierarchical memory for autonomous agents.",
+      "description": "memtomem provides a hierarchical long-term memory framework to improve context retention, retrieval quality, and continuity in autonomous agent workflows."
+    },
+    {
       "repo": "memvid/memvid",
       "url": "https://github.com/memvid/memvid",
       "stars": "12400",
@@ -5610,6 +5655,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Self-evolving cognitive memory and context engine for AI agents in Java. Empowering 24/7 proactive agents like OpenClaw with understanding and SOTA performance."
+    },
+    {
+      "repo": "openmemoryspec/oms",
+      "url": "https://github.com/openmemoryspec/oms",
+      "stars": "5",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Specification/Memory Grain Standard/CAL and SML Context Assembly",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 5 stars, 0 forks, 18 commits, and README text declaring OMS as an open standard for interoperable and auditable agent memory.",
+      "description": "OMS defines a portable and auditable memory standard for autonomous agents, including a binary memory grain format and context assembly language."
     },
     {
       "repo": "openning07/awesome-curriculum-learning",
@@ -6767,6 +6827,21 @@
       "description": "Official repository of the paper: Continual Harness: Online Adaptation for Self-Improving Foundation Agents and PokeAgent Speedrun Track 2"
     },
     {
+      "repo": "sevenschulte/agentic-harness",
+      "url": "https://github.com/sevenschulte/agentic-harness",
+      "stars": "2",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "workflow-automation",
+      "stack": "Python/Workflow Harness/Composable Agent Testing",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 2 stars, 0 forks, 2 commits, MIT license, and README framing as a package for building and testing agentic workflows.",
+      "description": "agentic-harness is a Python package for building and testing AI workflows with composable harness primitives and lightweight runtime checks."
+    },
+    {
       "repo": "shadowrootdev/awesome-agent-skills-mcp",
       "url": "https://github.com/shadowrootdev/awesome-agent-skills-mcp",
       "stars": "23",
@@ -7005,6 +7080,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed 86 commits, MIT license, TypeScript primary language, SkVM profiling/AOT/JIT/benchmark flow, OpenClaw/Hermes/pi skill install paths, 480 stars and 41 forks",
       "description": "SkVM 是面向 agent skills 的语言虚拟机，把技能编译、优化并运行到不同模型和 harness 上，使 skill 在 OpenClaw、Hermes、pi Agent 等环境里可迁移和可评测。"
+    },
+    {
+      "repo": "skillmatic-ai/awesome-agent-skills",
+      "url": "https://github.com/skillmatic-ai/awesome-agent-skills",
+      "stars": "1000",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/Agent Skill Catalog/Codex Claude Cursor Gemini OpenCode",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed about 1k stars, 98 forks, 70 commits, CC0-1.0 license, and README guidance for installing skill packs across multiple agent runtimes.",
+      "description": "skillmatic-awesome-agent-skills is a large cross-framework directory of reusable agent skills spanning Codex, Claude Code, Cursor, Gemini, and other runtimes."
     },
     {
       "repo": "skills-mcp/skills-mcp",

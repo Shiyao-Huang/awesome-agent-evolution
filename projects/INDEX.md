@@ -343,6 +343,13 @@
 | Crabbox | [openclaw/crabbox](https://github.com/openclaw/crabbox) | Browser Agent Benchmark and Evaluation Harness | [projects/316-openclaw-crabbox-browser-agent-benchmark.md](316-openclaw-crabbox-browser-agent-benchmark.md) |
 | OpenClaw Windows Node | [openclaw/openclaw-windows-node](https://github.com/openclaw/openclaw-windows-node) | Windows Companion Runtime for Agent Execution | [projects/317-openclaw-windows-node-runner.md](317-openclaw-windows-node-runner.md) |
 
+| Oh My Agent | [first-fluke/oh-my-agent](https://github.com/first-fluke/oh-my-agent) | Open Multi-Agent Runtime and Benchmark Harness | [projects/318-oh-my-agent-multi-agent-runtime-and-harness.md](318-oh-my-agent-multi-agent-runtime-and-harness.md) |
+| ReMe | [agentscope-ai/ReMe](https://github.com/agentscope-ai/ReMe) | Long-Term Agent Memory and Context Compression Framework | [projects/319-agentscope-reme-long-term-memory-framework.md](319-agentscope-reme-long-term-memory-framework.md) |
+| Open Memory Specification (OMS) | [openmemoryspec/oms](https://github.com/openmemoryspec/oms) | Portable Agent Memory Interoperability Standard | [projects/320-open-memory-spec-oms-interoperability-standard.md](320-open-memory-spec-oms-interoperability-standard.md) |
+| MemToMem | [memtomem/memtomem](https://github.com/memtomem/memtomem) | Hierarchical Agent Memory Framework | [projects/321-memtomem-hierarchical-memory-for-agents.md](321-memtomem-hierarchical-memory-for-agents.md) |
+| Awesome Agent Skills (Skillmatic) | [skillmatic-ai/awesome-agent-skills](https://github.com/skillmatic-ai/awesome-agent-skills) | Cross-Framework Agent Skills Registry | [projects/322-skillmatic-awesome-agent-skills-registry.md](322-skillmatic-awesome-agent-skills-registry.md) |
+| Agentic Harness | [sevenschulte/agentic-harness](https://github.com/sevenschulte/agentic-harness) | Python Agent Workflow Testing Harness | [projects/323-agentic-harness-python-workflow-test-harness.md](323-agentic-harness-python-workflow-test-harness.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

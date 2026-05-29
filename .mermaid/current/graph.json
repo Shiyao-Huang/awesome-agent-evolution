@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T01:15:12+08:00",
+  "generated_at": "2026-05-30T07:15:19+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -294,7 +294,13 @@
         "raw-github/seb1n_awesome-ai-agent-skills.md",
         "raw-github/openclaw_acpx.md",
         "raw-github/openclaw_crabbox.md",
-        "raw-github/openclaw_openclaw-windows-node.md"
+        "raw-github/openclaw_openclaw-windows-node.md",
+        "raw-github/first-fluke_oh-my-agent.md",
+        "raw-github/agentscope-ai_reme.md",
+        "raw-github/openmemoryspec_oms.md",
+        "raw-github/memtomem_memtomem.md",
+        "raw-github/skillmatic-ai_awesome-agent-skills.md",
+        "raw-github/sevenschulte_agentic-harness.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -438,7 +444,8 @@
         "work/research/hourly-public-metadata-update-2026-05-29-1008.md",
         "work/research/hourly-public-metadata-update-2026-05-29-1612.md",
         "work/research/hourly-public-metadata-update-2026-05-29-2215.md",
-        "work/research/hourly-public-metadata-update-2026-05-30-0115.md"
+        "work/research/hourly-public-metadata-update-2026-05-30-0115.md",
+        "work/research/hourly-public-metadata-update-2026-05-30-0715.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -968,7 +975,19 @@
         "projects/316-openclaw-crabbox-browser-agent-benchmark.md",
         "site/public/reports/projects/316-openclaw-crabbox-browser-agent-benchmark.md",
         "projects/317-openclaw-windows-node-runner.md",
-        "site/public/reports/projects/317-openclaw-windows-node-runner.md"
+        "site/public/reports/projects/317-openclaw-windows-node-runner.md",
+        "projects/318-oh-my-agent-multi-agent-runtime-and-harness.md",
+        "site/public/reports/projects/318-oh-my-agent-multi-agent-runtime-and-harness.md",
+        "projects/319-agentscope-reme-long-term-memory-framework.md",
+        "site/public/reports/projects/319-agentscope-reme-long-term-memory-framework.md",
+        "projects/320-open-memory-spec-oms-interoperability-standard.md",
+        "site/public/reports/projects/320-open-memory-spec-oms-interoperability-standard.md",
+        "projects/321-memtomem-hierarchical-memory-for-agents.md",
+        "site/public/reports/projects/321-memtomem-hierarchical-memory-for-agents.md",
+        "projects/322-skillmatic-awesome-agent-skills-registry.md",
+        "site/public/reports/projects/322-skillmatic-awesome-agent-skills-registry.md",
+        "projects/323-agentic-harness-python-workflow-test-harness.md",
+        "site/public/reports/projects/323-agentic-harness-python-workflow-test-harness.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1294,20 +1313,17 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-30T01:15:12+08:00",
+    "run_at": "2026-05-30T07:15:19+08:00",
     "added_repositories": [
-      "openai/swarm",
-      "microsoft/agent-lightning",
-      "seb1n/awesome-ai-agent-skills",
-      "openclaw/acpx",
-      "openclaw/crabbox",
-      "openclaw/openclaw-windows-node"
+      "first-fluke/oh-my-agent",
+      "agentscope-ai/ReMe",
+      "openmemoryspec/oms",
+      "memtomem/memtomem",
+      "skillmatic-ai/awesome-agent-skills",
+      "sevenschulte/agentic-harness"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration",
-    "refreshed_repositories": [
-      "cxxz/awesome-agent-memory"
-    ]
+    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
   }
 }

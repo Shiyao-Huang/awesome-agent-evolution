@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-30T00:00:00+08:00",
-  "total": 596,
-  "updated_files": 596,
+  "total": 602,
+  "updated_files": 602,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -183,6 +183,15 @@
       "collected_at": "2026-05-25T15:22:43+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_search_and_public_github_page_2026_05_25"
+    },
+    {
+      "repo": "agentscope-ai/ReMe",
+      "url": "https://github.com/agentscope-ai/ReMe",
+      "file": "raw-github/agentscope-ai_reme.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T07:15:19+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
       "repo": "agentskills/agentskills",
@@ -1389,6 +1398,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "first-fluke/oh-my-agent",
+      "url": "https://github.com/first-fluke/oh-my-agent",
+      "file": "raw-github/first-fluke_oh-my-agent.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T07:15:19+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
       "repo": "flagos-ai/skills",
@@ -2741,6 +2759,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "memtomem/memtomem",
+      "url": "https://github.com/memtomem/memtomem",
+      "file": "raw-github/memtomem_memtomem.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T07:15:19+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
+    },
+    {
       "repo": "memvid/memvid",
       "url": "https://github.com/memvid/memvid",
       "file": "raw-github/memvid_memvid.md",
@@ -3369,6 +3396,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "openmemoryspec/oms",
+      "url": "https://github.com/openmemoryspec/oms",
+      "file": "raw-github/openmemoryspec_oms.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T07:15:19+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
       "repo": "openning07/awesome-curriculum-learning",
@@ -4064,6 +4100,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "sevenschulte/agentic-harness",
+      "url": "https://github.com/sevenschulte/agentic-harness",
+      "file": "raw-github/sevenschulte_agentic-harness.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T07:15:19+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
+    },
+    {
       "repo": "shadowrootdev/awesome-agent-skills-mcp",
       "url": "https://github.com/shadowrootdev/awesome-agent-skills-mcp",
       "file": "raw-github/shadowrootdev_awesome-agent-skills-mcp.md",
@@ -4206,6 +4251,15 @@
       "collected_at": "2026-05-24T20:20:00+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_github_page_open_2026-05-24"
+    },
+    {
+      "repo": "skillmatic-ai/awesome-agent-skills",
+      "url": "https://github.com/skillmatic-ai/awesome-agent-skills",
+      "file": "raw-github/skillmatic-ai_awesome-agent-skills.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T07:15:19+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
       "repo": "skills-mcp/skills-mcp",

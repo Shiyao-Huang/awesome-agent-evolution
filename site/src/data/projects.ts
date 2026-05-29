@@ -5144,6 +5144,174 @@ export const projects: Project[] = [
                     "companion-node",
                     "cross-platform"
             ]
+    },
+    {
+            "name": "Oh My Agent",
+            "repo": "first-fluke/oh-my-agent",
+            "url": "https://github.com/first-fluke/oh-my-agent",
+            "stars": 1000,
+            "forks": 118,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/318-oh-my-agent-multi-agent-runtime-and-harness.md",
+            "pattern": "build agent workflows through composable nodes -> run memory, planner, and tool execution as auditable modules -> benchmark agents with repeatable evaluation entries -> iterate runtime policies using harness feedback and workflow traces",
+            "description": "oh-my-agent is an open source multi-agent AI framework with workflow orchestration, memory modules, tooling integration, and built-in benchmark surfaces.",
+            "stack": [
+                    "Python",
+                    "Multi-Agent Runtime",
+                    "Workflow and Benchmark Harness"
+            ],
+            "category": "Open Multi-Agent Runtime and Benchmark Harness",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/first-fluke_oh-my-agent.md",
+            "status": "candidate",
+            "tags": [
+                    "multi-agent",
+                    "workflow",
+                    "harness",
+                    "benchmark",
+                    "framework"
+            ]
+    },
+    {
+            "name": "ReMe",
+            "repo": "agentscope-ai/ReMe",
+            "url": "https://github.com/agentscope-ai/ReMe",
+            "stars": 3000,
+            "forks": 248,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/319-agentscope-reme-long-term-memory-framework.md",
+            "pattern": "compress long context into structured summaries -> persist long-term memory in file/vector backends -> recall relevant memory with hybrid retrieval -> reuse memory traces across sessions and benchmark loops",
+            "description": "ReMe is a memory management toolkit for AI agents that provides long-term memory retention, context compression, and benchmark-backed retrieval quality signals.",
+            "stack": [
+                    "Python",
+                    "Agent Memory Runtime",
+                    "Temporal Context Compression and Recall"
+            ],
+            "category": "Long-Term Agent Memory and Context Compression Framework",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/agentscope-ai_reme.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "context-compression",
+                    "long-term-memory",
+                    "benchmark",
+                    "agentscope"
+            ]
+    },
+    {
+            "name": "Open Memory Specification (OMS)",
+            "repo": "openmemoryspec/oms",
+            "url": "https://github.com/openmemoryspec/oms",
+            "stars": 5,
+            "forks": 0,
+            "language": "Markdown",
+            "license": "CC0-1.0",
+            "report": "projects/320-open-memory-spec-oms-interoperability-standard.md",
+            "pattern": "define immutable memory grain containers -> standardize query and context-assembly languages -> enforce portable and auditable memory exchange across runtimes -> reduce lock-in and memory migration friction for long-lived agents",
+            "description": "OMS defines a portable and auditable memory standard for autonomous agents, including a binary memory grain format and context assembly language.",
+            "stack": [
+                    "Specification",
+                    "Memory Grain Standard",
+                    "CAL and SML Context Assembly"
+            ],
+            "category": "Portable Agent Memory Interoperability Standard",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/openmemoryspec_oms.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "interoperability",
+                    "specification",
+                    "cal",
+                    "sml"
+            ]
+    },
+    {
+            "name": "MemToMem",
+            "repo": "memtomem/memtomem",
+            "url": "https://github.com/memtomem/memtomem",
+            "stars": 5,
+            "forks": 24,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/321-memtomem-hierarchical-memory-for-agents.md",
+            "pattern": "capture episodic and semantic memory traces -> structure memory in hierarchical graphs -> retrieve context by relevance and recency -> feed persistent memory context back into ongoing autonomous task execution",
+            "description": "memtomem provides a hierarchical long-term memory framework to improve context retention, retrieval quality, and continuity in autonomous agent workflows.",
+            "stack": [
+                    "Python",
+                    "Hierarchical Memory",
+                    "Graph-Based Long-Term Agent Recall"
+            ],
+            "category": "Hierarchical Agent Memory Framework",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/memtomem_memtomem.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "hierarchical-memory",
+                    "graph-memory",
+                    "agent-runtime",
+                    "python"
+            ]
+    },
+    {
+            "name": "Awesome Agent Skills (Skillmatic)",
+            "repo": "skillmatic-ai/awesome-agent-skills",
+            "url": "https://github.com/skillmatic-ai/awesome-agent-skills",
+            "stars": 1000,
+            "forks": 98,
+            "language": "Markdown",
+            "license": "CC0-1.0",
+            "report": "projects/322-skillmatic-awesome-agent-skills-registry.md",
+            "pattern": "curate reusable skills in one index -> map installation paths for multiple agent runtimes -> standardize skill packaging and integration hints -> reduce onboarding and reproducibility cost for skill reuse",
+            "description": "skillmatic-awesome-agent-skills is a large cross-framework directory of reusable agent skills spanning Codex, Claude Code, Cursor, Gemini, and other runtimes.",
+            "stack": [
+                    "Markdown",
+                    "Agent Skill Catalog",
+                    "Codex Claude Cursor Gemini OpenCode"
+            ],
+            "category": "Cross-Framework Agent Skills Registry",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/skillmatic-ai_awesome-agent-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "skills",
+                    "awesome-list",
+                    "codex",
+                    "claude-code",
+                    "cursor"
+            ]
+    },
+    {
+            "name": "Agentic Harness",
+            "repo": "sevenschulte/agentic-harness",
+            "url": "https://github.com/sevenschulte/agentic-harness",
+            "stars": 2,
+            "forks": 0,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/323-agentic-harness-python-workflow-test-harness.md",
+            "pattern": "define reusable workflow nodes for agent pipelines -> attach deterministic tests to workflow behavior -> run harness checks before production rollout -> use failures as fast feedback for agent workflow evolution",
+            "description": "agentic-harness is a Python package for building and testing AI workflows with composable harness primitives and lightweight runtime checks.",
+            "stack": [
+                    "Python",
+                    "Workflow Harness",
+                    "Composable Agent Testing"
+            ],
+            "category": "Python Agent Workflow Testing Harness",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/sevenschulte_agentic-harness.md",
+            "status": "candidate",
+            "tags": [
+                    "harness",
+                    "workflow",
+                    "python",
+                    "testing",
+                    "harness"
+            ]
     }
 ];
 
@@ -5174,7 +5342,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }
