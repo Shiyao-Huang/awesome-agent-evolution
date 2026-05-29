@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T16:12:30+08:00",
+  "generated_at": "2026-05-29T22:15:49+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -4532,6 +4532,21 @@
       "description": "MemOS 是面向 LLM 和 Agent 的 memory operating system，把 memory API、memory cube、插件、dashboard 和 self-evolving memory layers 合成可治理的长期记忆基础设施。"
     },
     {
+      "repo": "MemTensor/MemOS-Cloud-OpenClaw-Plugin",
+      "url": "https://github.com/MemTensor/MemOS-Cloud-OpenClaw-Plugin",
+      "stars": "367",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "JavaScript/OpenClaw Plugin/MemOS Cloud Long-Term Memory Runtime",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 367 stars, 56 forks, 225 commits, Apache-2.0 license, and README docs for before-run recall plus post-run save workflows.",
+      "description": "MemOS-Cloud-OpenClaw-Plugin is an official OpenClaw plugin that adds hosted long-term memory retrieval and persistence through MemOS Cloud."
+    },
+    {
       "repo": "memtensor/memrl",
       "url": "https://github.com/memtensor/memrl",
       "stars": "117",
@@ -5340,6 +5355,81 @@
       "content_timestamp": "2026-05-28",
       "evidence": "web-observed GitHub page showed 8.8k stars, 1.4k forks, 1,709 commits, MIT license, and README positioning as a one-stop OpenClaw package marketplace.",
       "description": "ClawHub is the OpenClaw package catalog for discovering, rating, and sharing open-source AI coding agent packages and workflows."
+    },
+    {
+      "repo": "openclaw/clownfish",
+      "url": "https://github.com/openclaw/clownfish",
+      "stars": "36",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "JavaScript/Maintainer Codex Harness/Issue-Cluster Resolution",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 36 stars, 11 forks, 1,793 commits and JavaScript language signals; page copy states clownfish is a maintainer codex harness for issue clusters.",
+      "description": "clownfish is OpenClaw's maintainer codex harness focused on resolving issue clusters at scale with auditable workflows."
+    },
+    {
+      "repo": "openclaw/crabpot",
+      "url": "https://github.com/openclaw/crabpot",
+      "stars": "9",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "JavaScript/Plugin Compatibility Harness/OpenClaw Extension Testing",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 9 stars, 8 forks, 527 commits, MIT license, and about text describing crabpot as an OpenClaw plugin compatibility testbed.",
+      "description": "crabpot is a compatibility testbed repository for OpenClaw community plugins and plugin seam validation."
+    },
+    {
+      "repo": "openclaw/crawlkit",
+      "url": "https://github.com/openclaw/crawlkit",
+      "stars": "33",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "framework",
+      "stack": "Go/Crawl Infrastructure/Archive Processing Toolkit",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 33 stars, 5 forks, 186 commits, MIT license, and about text describing shared crawl infrastructure.",
+      "description": "crawlkit is OpenClaw's shared Go infrastructure for local-first crawler and archive processing workflows."
+    },
+    {
+      "repo": "openclaw/discrawl",
+      "url": "https://github.com/openclaw/discrawl",
+      "stars": "761",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "Go/SQLite/Discord CLI Crawl and Archive Pipeline",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 761 stars, 81 forks, 329 commits, MIT license, and about text describing a Discord CLI crawler with SQLite backend.",
+      "description": "discrawl is a Discord CLI crawler with SQLite-backed archival pipelines for building reusable organizational memory datasets."
+    },
+    {
+      "repo": "openclaw/gitcrawl",
+      "url": "https://github.com/openclaw/gitcrawl",
+      "stars": "76",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "framework",
+      "stack": "Go/SQLite/GitHub Issue and PR Crawl Pipeline",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-29",
+      "evidence": "web-observed GitHub page showed 76 stars, 15 forks, 435 commits, MIT license, and about text emphasizing local-first issue/PR crawling.",
+      "description": "gitcrawl is a local-first issue and pull-request crawler for creating reusable repository archives used by maintainer and agent workflows."
     },
     {
       "repo": "openclaw/openclaw",

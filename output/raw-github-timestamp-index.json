@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-29T00:00:00+08:00",
-  "total": 584,
-  "updated_files": 584,
+  "total": 590,
+  "updated_files": 590,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -2714,6 +2714,15 @@
       "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T11:20:46+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
+      "repo": "MemTensor/MemOS-Cloud-OpenClaw-Plugin",
+      "url": "https://github.com/MemTensor/MemOS-Cloud-OpenClaw-Plugin",
+      "file": "raw-github/memtensor_memos-cloud-openclaw-plugin.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T22:15:49+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
       "repo": "memtensor/memos",
       "url": "https://github.com/memtensor/memos",
       "file": "raw-github/memtensor_memos.md",
@@ -3207,6 +3216,51 @@
       "collected_at": "2026-05-28T10:00:31+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_05_28"
+    },
+    {
+      "repo": "openclaw/clownfish",
+      "url": "https://github.com/openclaw/clownfish",
+      "file": "raw-github/openclaw_clownfish.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T22:15:49+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
+      "repo": "openclaw/crabpot",
+      "url": "https://github.com/openclaw/crabpot",
+      "file": "raw-github/openclaw_crabpot.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T22:15:49+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
+      "repo": "openclaw/crawlkit",
+      "url": "https://github.com/openclaw/crawlkit",
+      "file": "raw-github/openclaw_crawlkit.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T22:15:49+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
+      "repo": "openclaw/discrawl",
+      "url": "https://github.com/openclaw/discrawl",
+      "file": "raw-github/openclaw_discrawl.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T22:15:49+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+    },
+    {
+      "repo": "openclaw/gitcrawl",
+      "url": "https://github.com/openclaw/gitcrawl",
+      "file": "raw-github/openclaw_gitcrawl.md",
+      "content_timestamp": "2026-05-29",
+      "collected_at": "2026-05-29T22:15:49+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
     {
       "repo": "openclaw/openclaw",

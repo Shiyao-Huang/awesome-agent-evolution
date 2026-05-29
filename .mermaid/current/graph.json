@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T16:12:30+08:00",
+  "generated_at": "2026-05-29T22:15:49+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -282,7 +282,13 @@
         "raw-github/da1yuqin_sead.md",
         "raw-github/ai-agents-2030_darwin-mobile-agent.md",
         "raw-github/yuanchenbei_mem-gallery.md",
-        "raw-github/infiagent_infiagent.md"
+        "raw-github/infiagent_infiagent.md",
+        "raw-github/openclaw_clownfish.md",
+        "raw-github/openclaw_crabpot.md",
+        "raw-github/openclaw_gitcrawl.md",
+        "raw-github/openclaw_crawlkit.md",
+        "raw-github/openclaw_discrawl.md",
+        "raw-github/memtensor_memos-cloud-openclaw-plugin.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -424,7 +430,8 @@
         "work/research/hourly-public-metadata-update-2026-05-28-2203.md",
         "work/research/hourly-public-metadata-update-2026-05-29-0405.md",
         "work/research/hourly-public-metadata-update-2026-05-29-1008.md",
-        "work/research/hourly-public-metadata-update-2026-05-29-1612.md"
+        "work/research/hourly-public-metadata-update-2026-05-29-1612.md",
+        "work/research/hourly-public-metadata-update-2026-05-29-2215.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -930,7 +937,19 @@
         "projects/303-mem-gallery-memory-benchmark.md",
         "site/public/reports/projects/303-mem-gallery-memory-benchmark.md",
         "projects/304-infiagent-framework.md",
-        "site/public/reports/projects/304-infiagent-framework.md"
+        "site/public/reports/projects/304-infiagent-framework.md",
+        "projects/305-openclaw-clownfish-maintainer-harness.md",
+        "site/public/reports/projects/305-openclaw-clownfish-maintainer-harness.md",
+        "projects/306-openclaw-crabpot-plugin-compatibility-testbed.md",
+        "site/public/reports/projects/306-openclaw-crabpot-plugin-compatibility-testbed.md",
+        "projects/307-openclaw-gitcrawl-repo-memory-ingest.md",
+        "site/public/reports/projects/307-openclaw-gitcrawl-repo-memory-ingest.md",
+        "projects/308-openclaw-crawlkit-shared-crawl-infra.md",
+        "site/public/reports/projects/308-openclaw-crawlkit-shared-crawl-infra.md",
+        "projects/309-openclaw-discrawl-discord-archive-memory.md",
+        "site/public/reports/projects/309-openclaw-discrawl-discord-archive-memory.md",
+        "projects/310-memos-cloud-openclaw-plugin-memory-runtime.md",
+        "site/public/reports/projects/310-memos-cloud-openclaw-plugin-memory-runtime.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1256,14 +1275,14 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-29T16:12:30+08:00",
+    "run_at": "2026-05-29T22:15:49+08:00",
     "added_repositories": [
-      "itgoyo/awesome-agent-skills",
-      "back1ply/agent-skill-loader",
-      "Da1yuqin/SEAD",
-      "ai-agents-2030/darwin-mobile-agent",
-      "YuanchenBei/Mem-Gallery",
-      "InfiAgent/InfiAgent"
+      "openclaw/clownfish",
+      "openclaw/crabpot",
+      "openclaw/gitcrawl",
+      "openclaw/crawlkit",
+      "openclaw/discrawl",
+      "MemTensor/MemOS-Cloud-OpenClaw-Plugin"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",

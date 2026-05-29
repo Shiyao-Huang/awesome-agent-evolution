@@ -4808,6 +4808,174 @@ export const projects: Project[] = [
                     "reflection",
                     "python"
             ]
+    },
+    {
+            "name": "Clownfish",
+            "repo": "openclaw/clownfish",
+            "url": "https://github.com/openclaw/clownfish",
+            "stars": 36,
+            "forks": 11,
+            "language": "JavaScript",
+            "license": "Unspecified (public page metadata)",
+            "report": "projects/305-openclaw-clownfish-maintainer-harness.md",
+            "pattern": "crawl and cluster large issue queues -> route clusters into codex-maintainer workflows -> execute fixes and verification steps -> feed resolved cases back into maintainable engineering loops",
+            "description": "clownfish is OpenClaw's maintainer codex harness focused on resolving issue clusters at scale with auditable workflows.",
+            "stack": [
+                    "JavaScript",
+                    "Maintainer Codex Harness",
+                    "Issue-Cluster Resolution"
+            ],
+            "category": "Maintainer Codex Harness for Issue Clusters",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/openclaw_clownfish.md",
+            "status": "candidate",
+            "tags": [
+                    "harness",
+                    "maintainer-codex",
+                    "issue-clustering",
+                    "openclaw",
+                    "agent-workflow"
+            ]
+    },
+    {
+            "name": "Crabpot",
+            "repo": "openclaw/crabpot",
+            "url": "https://github.com/openclaw/crabpot",
+            "stars": 9,
+            "forks": 8,
+            "language": "JavaScript",
+            "license": "MIT",
+            "report": "projects/306-openclaw-crabpot-plugin-compatibility-testbed.md",
+            "pattern": "assemble community plugin scenarios -> run compatibility checks across plugin boundaries -> surface breakage and integration regressions -> guide stable skill/plugin release pipelines",
+            "description": "crabpot is a compatibility testbed repository for OpenClaw community plugins and plugin seam validation.",
+            "stack": [
+                    "JavaScript",
+                    "Plugin Compatibility Harness",
+                    "OpenClaw Extension Testing"
+            ],
+            "category": "OpenClaw Plugin Compatibility Testbed",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/openclaw_crabpot.md",
+            "status": "candidate",
+            "tags": [
+                    "plugin-compatibility",
+                    "openclaw",
+                    "harness",
+                    "evaluation",
+                    "extensions"
+            ]
+    },
+    {
+            "name": "Gitcrawl",
+            "repo": "openclaw/gitcrawl",
+            "url": "https://github.com/openclaw/gitcrawl",
+            "stars": 76,
+            "forks": 15,
+            "language": "Go",
+            "license": "MIT",
+            "report": "projects/307-openclaw-gitcrawl-repo-memory-ingest.md",
+            "pattern": "crawl GitHub issues and pull requests locally -> normalize and archive repository discourse -> expose structured artifacts for triage and analysis -> feed downstream maintainer and agent memory workflows",
+            "description": "gitcrawl is a local-first issue and pull-request crawler for creating reusable repository archives used by maintainer and agent workflows.",
+            "stack": [
+                    "Go",
+                    "SQLite",
+                    "GitHub Issue and PR Crawl Pipeline"
+            ],
+            "category": "Local-First GitHub Crawl and Archive Harness",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/openclaw_gitcrawl.md",
+            "status": "candidate",
+            "tags": [
+                    "github-crawler",
+                    "local-first",
+                    "go",
+                    "archive",
+                    "harness-tooling"
+            ]
+    },
+    {
+            "name": "Crawlkit",
+            "repo": "openclaw/crawlkit",
+            "url": "https://github.com/openclaw/crawlkit",
+            "stars": 33,
+            "forks": 5,
+            "language": "Go",
+            "license": "MIT",
+            "report": "projects/308-openclaw-crawlkit-shared-crawl-infra.md",
+            "pattern": "provide shared crawl primitives and storage abstractions -> standardize archive generation across crawler services -> reduce duplicate data-ingest logic -> improve reuse for harness and memory data pipelines",
+            "description": "crawlkit is OpenClaw's shared Go infrastructure for local-first crawler and archive processing workflows.",
+            "stack": [
+                    "Go",
+                    "Crawl Infrastructure",
+                    "Archive Processing Toolkit"
+            ],
+            "category": "Shared Crawl Infrastructure Toolkit",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/openclaw_crawlkit.md",
+            "status": "candidate",
+            "tags": [
+                    "crawlkit",
+                    "go",
+                    "toolkit",
+                    "archive",
+                    "openclaw"
+            ]
+    },
+    {
+            "name": "Discrawl",
+            "repo": "openclaw/discrawl",
+            "url": "https://github.com/openclaw/discrawl",
+            "stars": 761,
+            "forks": 81,
+            "language": "Go",
+            "license": "MIT",
+            "report": "projects/309-openclaw-discrawl-discord-archive-memory.md",
+            "pattern": "crawl Discord channels through CLI workflows -> persist conversations into SQLite archives -> expose query-ready organizational memory artifacts -> support agent learning and maintainer context retrieval loops",
+            "description": "discrawl is a Discord CLI crawler with SQLite-backed archival pipelines for building reusable organizational memory datasets.",
+            "stack": [
+                    "Go",
+                    "SQLite",
+                    "Discord CLI Crawl and Archive Pipeline"
+            ],
+            "category": "Discord Archive and Memory Ingest Harness",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/openclaw_discrawl.md",
+            "status": "candidate",
+            "tags": [
+                    "discord-crawler",
+                    "memory-ingest",
+                    "sqlite",
+                    "go",
+                    "openclaw"
+            ]
+    },
+    {
+            "name": "MemOS Cloud OpenClaw Plugin",
+            "repo": "MemTensor/MemOS-Cloud-OpenClaw-Plugin",
+            "url": "https://github.com/MemTensor/MemOS-Cloud-OpenClaw-Plugin",
+            "stars": 367,
+            "forks": 56,
+            "language": "JavaScript",
+            "license": "Apache-2.0",
+            "report": "projects/310-memos-cloud-openclaw-plugin-memory-runtime.md",
+            "pattern": "intercept agent execution context before task start -> recall long-term memories from hosted MemOS service -> run tasks with enriched context -> persist post-run conversations for cumulative memory growth",
+            "description": "MemOS-Cloud-OpenClaw-Plugin is an official OpenClaw plugin that adds hosted long-term memory retrieval and persistence through MemOS Cloud.",
+            "stack": [
+                    "JavaScript",
+                    "OpenClaw Plugin",
+                    "MemOS Cloud Long-Term Memory Runtime"
+            ],
+            "category": "Hosted Agent Memory Runtime Plugin",
+            "lastPushed": "2026-05-29T00:00:00Z",
+            "localPath": "raw-github/memtensor_memos-cloud-openclaw-plugin.md",
+            "status": "candidate",
+            "tags": [
+                    "memos",
+                    "openclaw-plugin",
+                    "memory-runtime",
+                    "long-term-memory",
+                    "cloud-memory"
+            ]
     }
 ];
 
@@ -4838,7 +5006,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

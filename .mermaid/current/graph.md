@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-29T16:12:30+08:00
+Generated: 2026-05-29T22:15:49+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-05-29T16:12:30+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: itgoyo/awesome-agent-skills, back1ply/agent-skill-loader, Da1yuqin/SEAD, ai-agents-2030/darwin-mobile-agent, YuanchenBei/Mem-Gallery, InfiAgent/InfiAgent.
-- New raw files: raw-github/itgoyo_awesome-agent-skills.md, raw-github/back1ply_agent-skill-loader.md, raw-github/da1yuqin_sead.md, raw-github/ai-agents-2030_darwin-mobile-agent.md, raw-github/yuanchenbei_mem-gallery.md, raw-github/infiagent_infiagent.md.
-- New public model cards and site reports: project/report ids 299, 300, 301, 302, 303, 304.
+- Web-observed repos: openclaw/clownfish, openclaw/crabpot, openclaw/gitcrawl, openclaw/crawlkit, openclaw/discrawl, MemTensor/MemOS-Cloud-OpenClaw-Plugin.
+- New raw files: raw-github/openclaw_clownfish.md, raw-github/openclaw_crabpot.md, raw-github/openclaw_gitcrawl.md, raw-github/openclaw_crawlkit.md, raw-github/openclaw_discrawl.md, raw-github/memtensor_memos-cloud-openclaw-plugin.md.
+- New public model cards and site reports: project/report ids 305, 306, 307, 308, 309, 310.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
 - GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

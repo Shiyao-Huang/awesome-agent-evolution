@@ -329,6 +329,13 @@
 | Mem-Gallery | [YuanchenBei/Mem-Gallery](https://github.com/YuanchenBei/Mem-Gallery) | Long-Term Memory Benchmark Suite | [projects/303-mem-gallery-memory-benchmark.md](303-mem-gallery-memory-benchmark.md) |
 | InfiAgent | [InfiAgent/InfiAgent](https://github.com/InfiAgent/InfiAgent) | Framework for Self-Improving Agent Loops | [projects/304-infiagent-framework.md](304-infiagent-framework.md) |
 
+| Clownfish | [openclaw/clownfish](https://github.com/openclaw/clownfish) | Maintainer Codex Harness for Issue Clusters | [projects/305-openclaw-clownfish-maintainer-harness.md](305-openclaw-clownfish-maintainer-harness.md) |
+| Crabpot | [openclaw/crabpot](https://github.com/openclaw/crabpot) | OpenClaw Plugin Compatibility Testbed | [projects/306-openclaw-crabpot-plugin-compatibility-testbed.md](306-openclaw-crabpot-plugin-compatibility-testbed.md) |
+| Gitcrawl | [openclaw/gitcrawl](https://github.com/openclaw/gitcrawl) | Local-First GitHub Crawl and Archive Harness | [projects/307-openclaw-gitcrawl-repo-memory-ingest.md](307-openclaw-gitcrawl-repo-memory-ingest.md) |
+| Crawlkit | [openclaw/crawlkit](https://github.com/openclaw/crawlkit) | Shared Crawl Infrastructure Toolkit | [projects/308-openclaw-crawlkit-shared-crawl-infra.md](308-openclaw-crawlkit-shared-crawl-infra.md) |
+| Discrawl | [openclaw/discrawl](https://github.com/openclaw/discrawl) | Discord Archive and Memory Ingest Harness | [projects/309-openclaw-discrawl-discord-archive-memory.md](309-openclaw-discrawl-discord-archive-memory.md) |
+| MemOS Cloud OpenClaw Plugin | [MemTensor/MemOS-Cloud-OpenClaw-Plugin](https://github.com/MemTensor/MemOS-Cloud-OpenClaw-Plugin) | Hosted Agent Memory Runtime Plugin | [projects/310-memos-cloud-openclaw-plugin-memory-runtime.md](310-memos-cloud-openclaw-plugin-memory-runtime.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.
