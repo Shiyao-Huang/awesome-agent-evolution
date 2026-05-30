@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T07:15:19+08:00",
+  "generated_at": "2026-05-30T13:16:52+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -300,7 +300,13 @@
         "raw-github/openmemoryspec_oms.md",
         "raw-github/memtomem_memtomem.md",
         "raw-github/skillmatic-ai_awesome-agent-skills.md",
-        "raw-github/sevenschulte_agentic-harness.md"
+        "raw-github/sevenschulte_agentic-harness.md",
+        "raw-github/dotnet_skills.md",
+        "raw-github/datalayer_agent-skills.md",
+        "raw-github/block_agent-skills.md",
+        "raw-github/corbell-ai_evalmonkey.md",
+        "raw-github/nomic-ai_aec-bench.md",
+        "raw-github/google_ax.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -445,7 +451,8 @@
         "work/research/hourly-public-metadata-update-2026-05-29-1612.md",
         "work/research/hourly-public-metadata-update-2026-05-29-2215.md",
         "work/research/hourly-public-metadata-update-2026-05-30-0115.md",
-        "work/research/hourly-public-metadata-update-2026-05-30-0715.md"
+        "work/research/hourly-public-metadata-update-2026-05-30-0715.md",
+        "work/research/hourly-public-metadata-update-2026-05-30-1316.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -987,7 +994,19 @@
         "projects/322-skillmatic-awesome-agent-skills-registry.md",
         "site/public/reports/projects/322-skillmatic-awesome-agent-skills-registry.md",
         "projects/323-agentic-harness-python-workflow-test-harness.md",
-        "site/public/reports/projects/323-agentic-harness-python-workflow-test-harness.md"
+        "site/public/reports/projects/323-agentic-harness-python-workflow-test-harness.md",
+        "projects/324-dotnet-skills-runtime-pack.md",
+        "site/public/reports/projects/324-dotnet-skills-runtime-pack.md",
+        "projects/325-datalayer-agent-skills-pack.md",
+        "site/public/reports/projects/325-datalayer-agent-skills-pack.md",
+        "projects/326-block-agent-skills-enterprise-playbook.md",
+        "site/public/reports/projects/326-block-agent-skills-enterprise-playbook.md",
+        "projects/327-evalmonkey-agent-evaluation-harness.md",
+        "site/public/reports/projects/327-evalmonkey-agent-evaluation-harness.md",
+        "projects/328-aec-bench-agentic-context-benchmark.md",
+        "site/public/reports/projects/328-aec-bench-agentic-context-benchmark.md",
+        "projects/329-google-ax-agent-runtime.md",
+        "site/public/reports/projects/329-google-ax-agent-runtime.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1313,14 +1332,14 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-30T07:15:19+08:00",
+    "run_at": "2026-05-30T13:16:52+08:00",
     "added_repositories": [
-      "first-fluke/oh-my-agent",
-      "agentscope-ai/ReMe",
-      "openmemoryspec/oms",
-      "memtomem/memtomem",
-      "skillmatic-ai/awesome-agent-skills",
-      "sevenschulte/agentic-harness"
+      "dotnet/skills",
+      "datalayer/agent-skills",
+      "block/agent-skills",
+      "Corbell-AI/evalmonkey",
+      "nomic-ai/aec-bench",
+      "google/ax"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",

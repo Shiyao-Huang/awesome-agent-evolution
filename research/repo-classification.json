@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T07:15:19+08:00",
+  "generated_at": "2026-05-30T13:16:52+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -1037,6 +1037,21 @@
       "description": "MemGen: Weaving Generative Latent Memory for Self-Evolving Agents"
     },
     {
+      "repo": "block/agent-skills",
+      "url": "https://github.com/block/agent-skills",
+      "stars": "96",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/Agent Skill Playbooks/Claude and Codex",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 96 stars, 25 forks, 60 commits, Apache-2.0 license, and repository messaging around enterprise-ready agent skills.",
+      "description": "block/agent-skills is a public enterprise-oriented skill library that packages repeatable coding-agent playbooks for safer and faster software delivery."
+    },
+    {
       "repo": "bobxwu/learning-from-rewards-llm-papers",
       "url": "https://github.com/bobxwu/learning-from-rewards-llm-papers",
       "stars": "71",
@@ -1577,6 +1592,21 @@
       "description": "Awesome Codex Skills is a high-signal catalog of practical Codex skill folders for workflow automation, including Composio-backed actions across external services."
     },
     {
+      "repo": "Corbell-AI/evalmonkey",
+      "url": "https://github.com/Corbell-AI/evalmonkey",
+      "stars": "36",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/LLM Evaluation Harness/Continuous Regression Tests",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 36 stars, 4 forks, 30 commits, Apache-2.0 license, and README focus on evaluating LLM agent performance.",
+      "description": "EvalMonkey provides a lightweight evaluation harness for LLM agents with regression workflows and reusable benchmark checks."
+    },
+    {
       "repo": "CortexReach/memory-lancedb-pro",
       "url": "https://github.com/CortexReach/memory-lancedb-pro",
       "stars": "4400",
@@ -1695,6 +1725,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web search result observed darkrishabh/agent-skills-eval as a public GitHub repository for evaluating agent skills; included because benchmark/eval coverage is a first-class user requirement",
       "description": "agent-skills-eval 是面向 agent skills 的轻量评测 harness，用任务执行和结果检查把技能目录转成可比较的质量证据。"
+    },
+    {
+      "repo": "datalayer/agent-skills",
+      "url": "https://github.com/datalayer/agent-skills",
+      "stars": "9",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "Python/Markdown/Claude Code and Codex Skill Packs",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 9 stars, 1 fork, 17 commits, BSD-3-Clause license, and README focus on agent skill packs for practical coding workflows.",
+      "description": "datalayer/agent-skills provides composable skill packs and runtime recipes for coding agents with an emphasis on reproducible installation and workflow reuse."
     },
     {
       "repo": "davidzwz/awesome-rag-reasoning",
@@ -1845,6 +1890,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 2,728 commits, Apache-2.0 license, 1.9k stars and 291 forks, 337 releases with v10.65.0 latest on 2026-05-24; README says it is a persistent shared memory backend with REST API, MCP, OAuth, CLI, dashboard, typed knowledge graph, local embeddings, 76 endpoints, and real-world multi-agent cluster use",
       "description": "MCP Memory Service 是面向 LangGraph、CrewAI、AutoGen、Claude、OpenCode、Codex CLI 等 agent 的共享记忆后端，提供 REST API、MCP、OAuth、dashboard、知识图谱和本地 embedding。"
+    },
+    {
+      "repo": "dotnet/skills",
+      "url": "https://github.com/dotnet/skills",
+      "stars": "3200",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "Markdown/.NET C#/Agent Skills Packs and Scoring Dashboard",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed about 3.2k stars, 236 forks, 463 commits, MIT license, and README positioning as the official .NET agent skills repository.",
+      "description": "dotnet/skills curates production-grade coding-agent skill packs with .NET-focused workflows, scoring guidance, and multi-runtime installation support."
     },
     {
       "repo": "DSAIL-Memory/EvoMemBench",
@@ -2640,6 +2700,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web-observed GitHub page showed Apache-2.0 license, 105k stars, 13.9k forks, 6,224 commits, memory-tests/evals directories, v0.43.0 latest release on 2026-05-22, and README claims for an open-source terminal AI agent; Auto Memory docs say it mines past sessions for durable memory and reusable Agent Skills, drafts patches or SKILL.md files, and never applies them without approval.",
       "description": "Gemini CLI is a major open-source terminal agent; its Auto Memory docs add a mainstream implementation path for mining past sessions into reviewable durable memory and reusable Agent Skills."
+    },
+    {
+      "repo": "google/ax",
+      "url": "https://github.com/google/ax",
+      "stars": "1300",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Go/TypeScript/Agent Runtime and Context Engineering",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed about 1.3k stars, 70 forks, 454 commits, Apache-2.0 license, and README framing around production AI agent infrastructure.",
+      "description": "google/ax is a production-focused agent runtime framework that packages context engineering, orchestration, and evaluation-friendly primitives for real systems."
     },
     {
       "repo": "graph-rag/graphrag",
@@ -5175,6 +5250,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "[NeurIPS 2023] Reflexion: Language Agents with Verbal Reinforcement Learning"
+    },
+    {
+      "repo": "nomic-ai/aec-bench",
+      "url": "https://github.com/nomic-ai/aec-bench",
+      "stars": "54",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/Benchmark Harness/Agentic Context Evaluation",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 54 stars, 3 forks, 15 commits, Apache-2.0 license, and README framing around benchmark-heavy agent context evaluation.",
+      "description": "aec-bench is an agentic context engineering benchmark suite for measuring long-context agent behavior and retrieval-aware execution quality."
     },
     {
       "repo": "nousresearch/hermes-agent",

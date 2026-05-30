@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-30T07:15:19+08:00
+Generated: 2026-05-30T13:16:52+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-05-30T07:15:19+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: first-fluke/oh-my-agent, agentscope-ai/ReMe, openmemoryspec/oms, memtomem/memtomem, skillmatic-ai/awesome-agent-skills, sevenschulte/agentic-harness.
-- New raw files: raw-github/first-fluke_oh-my-agent.md, raw-github/agentscope-ai_reme.md, raw-github/openmemoryspec_oms.md, raw-github/memtomem_memtomem.md, raw-github/skillmatic-ai_awesome-agent-skills.md, raw-github/sevenschulte_agentic-harness.md.
-- New public model cards and site reports: project/report ids 318, 319, 320, 321, 322, 323.
+- Web-observed repos: dotnet/skills, datalayer/agent-skills, block/agent-skills, Corbell-AI/evalmonkey, nomic-ai/aec-bench, google/ax.
+- New raw files: raw-github/dotnet_skills.md, raw-github/datalayer_agent-skills.md, raw-github/block_agent-skills.md, raw-github/corbell-ai_evalmonkey.md, raw-github/nomic-ai_aec-bench.md, raw-github/google_ax.md.
+- New public model cards and site reports: project/report ids 324, 325, 326, 327, 328, 329.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
 - GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

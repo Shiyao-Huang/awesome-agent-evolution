@@ -350,6 +350,13 @@
 | Awesome Agent Skills (Skillmatic) | [skillmatic-ai/awesome-agent-skills](https://github.com/skillmatic-ai/awesome-agent-skills) | Cross-Framework Agent Skills Registry | [projects/322-skillmatic-awesome-agent-skills-registry.md](322-skillmatic-awesome-agent-skills-registry.md) |
 | Agentic Harness | [sevenschulte/agentic-harness](https://github.com/sevenschulte/agentic-harness) | Python Agent Workflow Testing Harness | [projects/323-agentic-harness-python-workflow-test-harness.md](323-agentic-harness-python-workflow-test-harness.md) |
 
+| .NET Skills | [dotnet/skills](https://github.com/dotnet/skills) | Cross-IDE .NET Agent Skills Runtime Pack | [projects/324-dotnet-skills-runtime-pack.md](324-dotnet-skills-runtime-pack.md) |
+| Datalayer Agent Skills | [datalayer/agent-skills](https://github.com/datalayer/agent-skills) | Composable Agent Skills Pack and Runtime Recipes | [projects/325-datalayer-agent-skills-pack.md](325-datalayer-agent-skills-pack.md) |
+| Agent Skills (Block) | [block/agent-skills](https://github.com/block/agent-skills) | Enterprise Agent Skills and Playbook Library | [projects/326-block-agent-skills-enterprise-playbook.md](326-block-agent-skills-enterprise-playbook.md) |
+| EvalMonkey | [Corbell-AI/evalmonkey](https://github.com/Corbell-AI/evalmonkey) | Agent Evaluation Harness and Regression Pipeline | [projects/327-evalmonkey-agent-evaluation-harness.md](327-evalmonkey-agent-evaluation-harness.md) |
+| AEC Bench | [nomic-ai/aec-bench](https://github.com/nomic-ai/aec-bench) | Agentic Context Engineering Benchmark Suite | [projects/328-aec-bench-agentic-context-benchmark.md](328-aec-bench-agentic-context-benchmark.md) |
+| Google AX | [google/ax](https://github.com/google/ax) | Production Agent Runtime and Context Engineering Framework | [projects/329-google-ax-agent-runtime.md](329-google-ax-agent-runtime.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

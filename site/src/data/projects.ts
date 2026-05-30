@@ -5312,6 +5312,174 @@ export const projects: Project[] = [
                     "testing",
                     "harness"
             ]
+    },
+    {
+            "name": ".NET Skills",
+            "repo": "dotnet/skills",
+            "url": "https://github.com/dotnet/skills",
+            "stars": 3200,
+            "forks": 236,
+            "language": "Markdown",
+            "license": "MIT",
+            "report": "projects/324-dotnet-skills-runtime-pack.md",
+            "pattern": "publish reusable coding-agent skill packs for multiple runtimes -> provide strict .NET engineering workflows and reusable prompts -> score and compare skill quality with benchmark harness integration -> transfer high-quality skill behavior across sessions and tools",
+            "description": "dotnet/skills curates production-grade coding-agent skill packs with .NET-focused workflows, scoring guidance, and multi-runtime installation support.",
+            "stack": [
+                    "Markdown",
+                    ".NET C#",
+                    "Agent Skills Packs and Scoring Dashboard"
+            ],
+            "category": "Cross-IDE .NET Agent Skills Runtime Pack",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/dotnet_skills.md",
+            "status": "candidate",
+            "tags": [
+                    "skills",
+                    "dotnet",
+                    "csharp",
+                    "agent-runtime",
+                    "skill-pack"
+            ]
+    },
+    {
+            "name": "Datalayer Agent Skills",
+            "repo": "datalayer/agent-skills",
+            "url": "https://github.com/datalayer/agent-skills",
+            "stars": 9,
+            "forks": 1,
+            "language": "Python",
+            "license": "BSD-3-Clause",
+            "report": "projects/325-datalayer-agent-skills-pack.md",
+            "pattern": "collect reusable skills as installable packs -> map skills to real workflows and runtime contexts -> version skill definitions to preserve reproducibility -> compose skills into controllable agent workflows with lower setup cost",
+            "description": "datalayer/agent-skills provides composable skill packs and runtime recipes for coding agents with an emphasis on reproducible installation and workflow reuse.",
+            "stack": [
+                    "Python",
+                    "Markdown",
+                    "Claude Code and Codex Skill Packs"
+            ],
+            "category": "Composable Agent Skills Pack and Runtime Recipes",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/datalayer_agent-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "skills",
+                    "claude-code",
+                    "codex",
+                    "workflow",
+                    "runtime"
+            ]
+    },
+    {
+            "name": "Agent Skills (Block)",
+            "repo": "block/agent-skills",
+            "url": "https://github.com/block/agent-skills",
+            "stars": 96,
+            "forks": 25,
+            "language": "Markdown",
+            "license": "Apache-2.0",
+            "report": "projects/326-block-agent-skills-enterprise-playbook.md",
+            "pattern": "standardize reusable skills as enterprise playbooks -> encode engineering policy and risk checks into skill procedures -> distribute skills across codex/claude workflows -> reduce variance and onboarding cost in large agent teams",
+            "description": "block/agent-skills is a public enterprise-oriented skill library that packages repeatable coding-agent playbooks for safer and faster software delivery.",
+            "stack": [
+                    "Markdown",
+                    "Agent Skill Playbooks",
+                    "Claude and Codex"
+            ],
+            "category": "Enterprise Agent Skills and Playbook Library",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/block_agent-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "skills",
+                    "enterprise",
+                    "playbook",
+                    "claude",
+                    "codex"
+            ]
+    },
+    {
+            "name": "EvalMonkey",
+            "repo": "Corbell-AI/evalmonkey",
+            "url": "https://github.com/Corbell-AI/evalmonkey",
+            "stars": 36,
+            "forks": 4,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/327-evalmonkey-agent-evaluation-harness.md",
+            "pattern": "define task-level agent evaluation suites -> run LLM-based and deterministic regression checks -> aggregate quality metrics into repeatable reports -> feed benchmark regressions back into skill/harness improvement loops",
+            "description": "EvalMonkey provides a lightweight evaluation harness for LLM agents with regression workflows and reusable benchmark checks.",
+            "stack": [
+                    "Python",
+                    "LLM Evaluation Harness",
+                    "Continuous Regression Tests"
+            ],
+            "category": "Agent Evaluation Harness and Regression Pipeline",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/corbell-ai_evalmonkey.md",
+            "status": "candidate",
+            "tags": [
+                    "evaluation",
+                    "benchmark",
+                    "harness",
+                    "regression",
+                    "agent"
+            ]
+    },
+    {
+            "name": "AEC Bench",
+            "repo": "nomic-ai/aec-bench",
+            "url": "https://github.com/nomic-ai/aec-bench",
+            "stars": 54,
+            "forks": 3,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/328-aec-bench-agentic-context-benchmark.md",
+            "pattern": "construct realistic context-heavy agent tasks -> compare retrieval, memory, and orchestration strategies -> benchmark long-context reasoning under controlled settings -> convert benchmark outcomes into actionable harness/memory optimizations",
+            "description": "aec-bench is an agentic context engineering benchmark suite for measuring long-context agent behavior and retrieval-aware execution quality.",
+            "stack": [
+                    "Python",
+                    "Benchmark Harness",
+                    "Agentic Context Evaluation"
+            ],
+            "category": "Agentic Context Engineering Benchmark Suite",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/nomic-ai_aec-bench.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "evaluation",
+                    "context-engineering",
+                    "memory",
+                    "agent"
+            ]
+    },
+    {
+            "name": "Google AX",
+            "repo": "google/ax",
+            "url": "https://github.com/google/ax",
+            "stars": 1300,
+            "forks": 70,
+            "language": "Go",
+            "license": "Apache-2.0",
+            "report": "projects/329-google-ax-agent-runtime.md",
+            "pattern": "build modular agent execution runtime primitives -> encode context engineering into reusable runtime components -> integrate evaluation and tracing for production reliability -> iterate runtime behavior using measured workflow outcomes",
+            "description": "google/ax is a production-focused agent runtime framework that packages context engineering, orchestration, and evaluation-friendly primitives for real systems.",
+            "stack": [
+                    "Go",
+                    "TypeScript",
+                    "Agent Runtime and Context Engineering"
+            ],
+            "category": "Production Agent Runtime and Context Engineering Framework",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/google_ax.md",
+            "status": "candidate",
+            "tags": [
+                    "agent-runtime",
+                    "framework",
+                    "context-engineering",
+                    "production",
+                    "google"
+            ]
     }
 ];
 
@@ -5342,7 +5510,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness', 'dotnet/skills', 'datalayer/agent-skills', 'block/agent-skills', 'Corbell-AI/evalmonkey', 'nomic-ai/aec-bench', 'google/ax'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

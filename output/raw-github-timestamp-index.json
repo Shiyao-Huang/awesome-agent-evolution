@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-30T00:00:00+08:00",
-  "total": 602,
-  "updated_files": 602,
+  "total": 608,
+  "updated_files": 608,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -626,6 +626,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "block/agent-skills",
+      "url": "https://github.com/block/agent-skills",
+      "file": "raw-github/block_agent-skills.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T13:16:52+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
+    },
+    {
       "repo": "bobxwu/learning-from-rewards-llm-papers",
       "url": "https://github.com/bobxwu/learning-from-rewards-llm-papers",
       "file": "raw-github/bobxwu_learning-from-rewards-llm-papers.md",
@@ -950,6 +959,15 @@
       "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
+      "repo": "Corbell-AI/evalmonkey",
+      "url": "https://github.com/Corbell-AI/evalmonkey",
+      "file": "raw-github/corbell-ai_evalmonkey.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T13:16:52+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
+    },
+    {
       "repo": "CortexReach/memory-lancedb-pro",
       "url": "https://github.com/CortexReach/memory-lancedb-pro",
       "file": "raw-github/cortexreach_memory-lancedb-pro.md",
@@ -1020,6 +1038,15 @@
       "collected_at": "2026-05-24T23:15:54Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page_or_search_result"
+    },
+    {
+      "repo": "datalayer/agent-skills",
+      "url": "https://github.com/datalayer/agent-skills",
+      "file": "raw-github/datalayer_agent-skills.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T13:16:52+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
       "repo": "davidzwz/awesome-rag-reasoning",
@@ -1110,6 +1137,15 @@
       "collected_at": "2026-05-24T19:09:37Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "dotnet/skills",
+      "url": "https://github.com/dotnet/skills",
+      "file": "raw-github/dotnet_skills.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T13:16:52+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
       "repo": "DSAIL-Memory/EvoMemBench",
@@ -1578,6 +1614,15 @@
       "collected_at": "2026-05-26T05:44:07+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "google/ax",
+      "url": "https://github.com/google/ax",
+      "file": "raw-github/google_ax.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T13:16:52+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
       "repo": "google-gemini/gemini-cli",
@@ -3108,6 +3153,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "nomic-ai/aec-bench",
+      "url": "https://github.com/nomic-ai/aec-bench",
+      "file": "raw-github/nomic-ai_aec-bench.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T13:16:52+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
       "repo": "nousresearch/hermes-agent-self-evolution",
