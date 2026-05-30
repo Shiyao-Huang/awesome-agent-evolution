@@ -10,10 +10,10 @@ Self Evolve 的项目结构按 `raw -> processed -> work -> results` 管线治�
 
 | Metric | Value |
 |---|---:|
-| Raw GitHub captures | 614 |
-| Classified GitHub repositories | 614 |
-| Analyzed project/model-card reports | 205 |
-| Strict evolution-related repositories | 92 |
+| Raw GitHub captures | 618 |
+| Classified GitHub repositories | 618 |
+| Analyzed project/model-card reports | 211 |
+| Strict evolution-related repositories | 91 |
 | Broad evolution-related repositories | 197 |
 | Raw paper files on disk | 201 |
 | Paper review files | 171 |
