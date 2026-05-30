@@ -10,10 +10,10 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `reports` | present | 13 | 2 | 0 | 94 KB |
+| `reports` | present | 14 | 2 | 0 | 97 KB |
 | `output` | present | 8 | 1 | 0 | 625 KB |
 | `site/public/reports` | present | 428 | 6 | 0 | 2.8 MB |
-| `site/dist` | present | 810 | 346 | 0 | 17 MB |
+| `site/dist` | present | 811 | 346 | 0 | 17 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 983 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
@@ -24,13 +24,13 @@
 - `reports/academic-propagation-analysis.md`
 - `reports/cross-validation-report.md`
 - `reports/current-value-ranking-reanalysis.md`
+- `reports/evolve-agi-index-trend.json`
 - `reports/project-discovery-leads.md`
 - `reports/propagation-chain-evidence.md`
 - `reports/star-analysis-report.md`
 - `reports/survey-publication/01-field-map.md`
 - `reports/survey-publication/02-true-vs-pseudo-evolution.md`
 - `reports/survey-publication/03-evaluation-bottleneck.md`
-- `reports/survey-publication/04-demo-to-production-gap.md`
 
 ### `output`
 
@@ -62,12 +62,12 @@
 - `site/dist/_astro/BaseLayout.Dnh_NTE-.css`
 - `site/dist/_astro/RankTable.Cde92VTF.css`
 - `site/dist/_astro/client.BpEju3qh.js`
+- `site/dist/_astro/index.CBk-yZE3.css`
 - `site/dist/_astro/index.CmLyJJUK.css`
 - `site/dist/_astro/star-analysis.B9Ar3sAv.css`
 - `site/dist/benchmark/index.html`
 - `site/dist/blog/adas-to-dgm-evolution/index.html`
 - `site/dist/blog/agent-evolution-layer/index.html`
-- `site/dist/blog/agent-frameworks-evolution-layer/index.html`
 
 ### `paper-drafts/main.pdf`
 

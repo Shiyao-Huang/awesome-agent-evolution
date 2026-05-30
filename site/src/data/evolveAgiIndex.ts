@@ -12,6 +12,30 @@ type ScoreSignal = {
   evidence: string;
 };
 
+type BenchmarkEvidence = {
+  system: string;
+  benchmark: string;
+  before: string;
+  after: string;
+  gain: string;
+  indexScore: number;
+  source: string;
+  note: string;
+};
+
+type TrendPoint = {
+  date: string;
+  label: string;
+  score: number;
+  benchmarkScore: number;
+  strictRepos: number;
+  broadRepos: number;
+  publicReports: number;
+  source: string;
+  note: string;
+  backfilled?: boolean;
+};
+
 type CountSnapshot = {
   classified_repos?: number;
   analyzed_projects?: number;
@@ -59,9 +83,117 @@ const average = (values: number[]) => {
   return valid.reduce((sum, value) => sum + value, 0) / valid.length;
 };
 
+export const benchmarkEvidence: BenchmarkEvidence[] = [
+  {
+    system: 'Reflexion',
+    benchmark: 'HumanEval pass@1',
+    before: '80.0% GPT-4 baseline',
+    after: '91.0%',
+    gain: '+11.0pp',
+    indexScore: 91,
+    source: 'paper-drafts/appendix.tex; site/src/data/survey.ts',
+    note: 'Code-generation pass rate with language reflection memory.'
+  },
+  {
+    system: 'Reflexion',
+    benchmark: 'ALFWorld success',
+    before: '77%',
+    after: '97%',
+    gain: '+20pp',
+    indexScore: 97,
+    source: 'site/src/data/survey.ts; research/ranking-framework/radar-profiles.json',
+    note: 'Embodied/web-style task success, used as cross-domain evidence.'
+  },
+  {
+    system: 'SelfEvolve',
+    benchmark: 'HumanEval pass@1',
+    before: '74.39% ChatGPT baseline',
+    after: '85.98%',
+    gain: '+11.59pp',
+    indexScore: 86,
+    source: 'paper-drafts/appendix.tex',
+    note: 'Self-improvement loop on coding benchmark.'
+  },
+  {
+    system: 'DGM',
+    benchmark: 'SWE-bench Verified',
+    before: '20.0%',
+    after: '50.0%',
+    gain: '+30.0pp',
+    indexScore: 86,
+    source: 'paper-drafts/appendix.tex; research/ranking-framework/radar-profiles.json',
+    note: 'Hard software-engineering benchmark; gain is weighted heavily.'
+  },
+  {
+    system: 'SICA',
+    benchmark: 'SWE-bench Verified',
+    before: '17.0%',
+    after: '53.0%',
+    gain: '+36.0pp',
+    indexScore: 88,
+    source: 'paper-drafts/appendix.tex',
+    note: 'Self-modifying coding agent result in software repair.'
+  },
+  {
+    system: 'DGM',
+    benchmark: 'Polyglot Coding',
+    before: '14.2%',
+    after: '30.7%',
+    gain: '+16.5pp',
+    indexScore: 72,
+    source: 'site/src/data/survey.ts; paper-drafts/appendix.tex',
+    note: 'Cross-language transfer evidence.'
+  },
+  {
+    system: 'SAGE',
+    benchmark: 'LiveCodeBench',
+    before: 'backbone model',
+    after: '+8.9%',
+    gain: '+8.9%',
+    indexScore: 71,
+    source: 'paper-drafts/appendix.tex',
+    note: 'Turn-based self-evolution reasoning improvement.'
+  },
+  {
+    system: 'WebRL',
+    benchmark: 'WebArena-Lite',
+    before: '4.8%',
+    after: '42.4%',
+    gain: '+37.6pp',
+    indexScore: 82,
+    source: 'paper-drafts/appendix.tex',
+    note: 'Web-agent benchmark with large absolute improvement.'
+  },
+  {
+    system: 'AgentEvolver',
+    benchmark: 'AppWorld',
+    before: '1.8%',
+    after: '23.2%',
+    gain: '+21.4pp',
+    indexScore: 67,
+    source: 'paper-drafts/appendix.tex',
+    note: 'App-agent environment improvement; still low absolute final score.'
+  },
+  {
+    system: 'AlphaEvolve',
+    benchmark: 'Algorithm / infra discovery',
+    before: 'prior best systems',
+    after: '48 multiplications; Borg +0.7%; FlashAttention +23%',
+    gain: 'new record / infra gains',
+    indexScore: 89,
+    source: 'paper-drafts/appendix.tex; research/ranking-framework/radar-profiles.json',
+    note: 'Non-pass-rate benchmark family normalized by impact and verification.'
+  }
+];
+
 const topSystemStrength = clamp(
   (average(topSystemProfiles.map((profile) => profile.metadata.composite_score)) / 8) * 100
 );
+const benchmarkEvidenceScore = clamp(average(benchmarkEvidence.map((item) => item.indexScore)));
+const benchmarkProfileStrength = clamp(
+  average(topSystemProfiles.map((profile) => (profile.dimensions.D1 ?? 0) * 10))
+);
+const benchmarkPerformance = clamp(benchmarkEvidenceScore * 0.64 + benchmarkProfileStrength * 0.36);
 const reportCoverage = counts.analyzed_projects
   ? clamp(((counts.analyzed_with_public_report ?? 0) / counts.analyzed_projects) * 100)
   : 0;
@@ -104,11 +236,20 @@ const governanceReadiness = clamp(
 
 export const evolveAgiIndexSignals: ScoreSignal[] = [
   {
+    id: 'benchmark-performance',
+    label: 'Benchmark 表现',
+    shortLabel: 'Bench',
+    score: round(benchmarkPerformance),
+    weight: 18,
+    description: 'HumanEval、SWE-bench、LiveCodeBench、WebArena、AppWorld 和算法/基础设施 benchmark 的实测表现参与总分。',
+    evidence: 'paper-drafts/appendix.tex + site/src/data/survey.ts + research/ranking-framework/radar-profiles.json'
+  },
+  {
     id: 'loop-strength',
     label: '核心闭环强度',
     shortLabel: 'Loop',
     score: round(topSystemStrength),
-    weight: 24,
+    weight: 20,
     description: 'Top 自进化系统是否真的有可变对象、反馈信号、选择机制和保留机制。',
     evidence: 'site/src/data/rankings.ts + research/ranking-framework/README.md'
   },
@@ -117,7 +258,7 @@ export const evolveAgiIndexSignals: ScoreSignal[] = [
     label: '证据链可信度',
     shortLabel: 'Evidence',
     score: round(evidenceStrength),
-    weight: 22,
+    weight: 18,
     description: '综合 D2 证据强度与项目报告覆盖率，防止只有口号没有 raw / report。',
     evidence: 'analysis/github-project-data-analysis.json + projects/INDEX.md'
   },
@@ -126,7 +267,7 @@ export const evolveAgiIndexSignals: ScoreSignal[] = [
     label: '迁移与验证',
     shortLabel: 'Transfer',
     score: round(transferVerification),
-    weight: 16,
+    weight: 14,
     description: '改进是否能跨任务、跨环境或跨时间切片迁移，并有验证门约束。',
     evidence: 'paper-drafts/ch5-evaluation.tex + site/src/data/rankings.ts'
   },
@@ -135,7 +276,7 @@ export const evolveAgiIndexSignals: ScoreSignal[] = [
     label: '可运行与可复用',
     shortLabel: 'Access',
     score: round(implementationAccess),
-    weight: 14,
+    weight: 12,
     description: '系统是否有开源实现、文档、成本效率和实际采用价值。',
     evidence: 'site/src/data/rankings.ts + site/src/data/starAnalysis.ts'
   },
@@ -144,7 +285,7 @@ export const evolveAgiIndexSignals: ScoreSignal[] = [
     label: '领域动量',
     shortLabel: 'Momentum',
     score: round(fieldMomentum),
-    weight: 14,
+    weight: 10,
     description: '结合当前价值排名与 Star 活跃度，衡量近期研究和工程热度。',
     evidence: 'site/src/data/analysis.json + site/src/data/starAnalysis.ts'
   },
@@ -153,7 +294,7 @@ export const evolveAgiIndexSignals: ScoreSignal[] = [
     label: '治理成熟度',
     shortLabel: 'Governance',
     score: round(governanceReadiness),
-    weight: 10,
+    weight: 8,
     description: '看安全、成本、时间戳置信度和可审计边界是否跟上能力增长。',
     evidence: 'site/src/data/rankings.ts + output/raw-github-timestamp-index.md'
   }
@@ -177,9 +318,9 @@ export const evolveAgiIndex = {
   grade: gradeFor(weightedScore),
   formula: 'EAI = Σ(signal_score × signal_weight)',
   oneSentence:
-    '自进化系数不是 AGI 能力分，而是用 AGI Index 风格衡量 AI Agent 自进化领域的闭环成熟度、证据质量和可落地程度。',
+    '自进化系数不是 AGI 能力分，而是用 AGI Index 风格衡量 AI Agent 自进化领域的 benchmark 表现、闭环成熟度、证据质量和可落地程度。',
   thesis:
-    '当前领域已经有强闭环原型和快速增长的开源生态，但治理、跨域迁移和可复用工程仍是短板；指数应优先奖励可验证、可回滚、可复跑的进化系统。',
+    '当前领域已经有强闭环原型和明确 benchmark 增益，但治理、跨域迁移和可复用工程仍是短板；指数应优先奖励可验证、可回滚、可复跑的进化系统。',
   counts: {
     classifiedRepos: counts.classified_repos ?? 0,
     analyzedProjects: counts.analyzed_projects ?? 0,
@@ -188,7 +329,18 @@ export const evolveAgiIndex = {
     broadEvolutionRepos: counts.raw_broad_evolution ?? 0,
     unknownTimeSlice: counts.raw_unknown_time_slice ?? 0
   },
+  benchmark: {
+    score: round(benchmarkPerformance),
+    evidenceScore: round(benchmarkEvidenceScore),
+    profileScore: round(benchmarkProfileStrength),
+    evidenceCount: benchmarkEvidence.length
+  },
   supportingMetrics: [
+    {
+      label: 'Benchmark evidence',
+      value: benchmarkEvidence.length,
+      detail: `${round(benchmarkPerformance)} weighted benchmark signal`
+    },
     {
       label: 'Strict self-evolution',
       value: counts.raw_core_evolution ?? 0,
@@ -223,6 +375,7 @@ export const evolveAgiIndex = {
   })),
   evidenceLinks: [
     { label: '系统 Rank', href: '/rank/' },
+    { label: 'Benchmark 追踪', href: '/evolve-agi-index/#benchmark-performance' },
     { label: '当前价值排名', href: '/rankings/' },
     { label: 'GitHub 证据链', href: '/github/' },
     {
@@ -230,4 +383,51 @@ export const evolveAgiIndex = {
       href: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/evolve-agi-index.md'
     }
   ]
+};
+
+export const evolveAgiTrend: TrendPoint[] = [
+  {
+    date: '2026-05-26',
+    label: 'Archived baseline',
+    score: 67.4,
+    benchmarkScore: 72.2,
+    strictRepos: 82,
+    broadRepos: 186,
+    publicReports: 90,
+    source: 'work/research/archived-analysis/github-project-data-analysis.json',
+    note: 'Backfilled with current formula over archived corpus counts.',
+    backfilled: true
+  },
+  {
+    date: '2026-05-29',
+    label: 'Site snapshot',
+    score: 71.3,
+    benchmarkScore: 76.4,
+    strictRepos: 90,
+    broadRepos: 195,
+    publicReports: 187,
+    source: 'site/src/data/analysis.json',
+    note: 'Previous site snapshot before benchmark became a weighted signal.',
+    backfilled: true
+  },
+  {
+    date: evolveAgiIndex.updated,
+    label: 'Benchmark-weighted',
+    score: evolveAgiIndex.score,
+    benchmarkScore: evolveAgiIndex.benchmark.score,
+    strictRepos: counts.raw_core_evolution ?? 0,
+    broadRepos: counts.raw_broad_evolution ?? 0,
+    publicReports: counts.analyzed_with_public_report ?? 0,
+    source: 'site/src/data/evolveAgiIndex.ts',
+    note: 'Benchmark performance now participates directly in the total index.'
+  }
+];
+
+export const evolveAgiTrendSummary = {
+  delta: round(evolveAgiTrend[evolveAgiTrend.length - 1].score - evolveAgiTrend[0].score),
+  benchmarkDelta: round(
+    evolveAgiTrend[evolveAgiTrend.length - 1].benchmarkScore - evolveAgiTrend[0].benchmarkScore
+  ),
+  latestLabel: evolveAgiTrend[evolveAgiTrend.length - 1].label,
+  caveat: 'Trend points before 2026-05-30 are backfilled for comparability; future points should be written as real snapshots.'
 };

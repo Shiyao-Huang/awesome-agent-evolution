@@ -1,13 +1,42 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { evolveAgiIndex, evolveAgiIndexSignals } from '@/data/evolveAgiIndex';
+import {
+  benchmarkEvidence,
+  evolveAgiIndex,
+  evolveAgiIndexSignals,
+  evolveAgiTrend,
+  evolveAgiTrendSummary
+} from '@/data/evolveAgiIndex';
 
 const external = (href: string) => href.startsWith('http');
+const chartWidth = 760;
+const chartHeight = 300;
+const chartPadding = { top: 22, right: 26, bottom: 52, left: 44 };
+const chartInnerWidth = chartWidth - chartPadding.left - chartPadding.right;
+const chartInnerHeight = chartHeight - chartPadding.top - chartPadding.bottom;
+const allTrendScores = evolveAgiTrend.flatMap((point) => [point.score, point.benchmarkScore]);
+const yMin = Math.max(0, Math.floor((Math.min(...allTrendScores) - 4) / 5) * 5);
+const yMax = Math.min(100, Math.ceil((Math.max(...allTrendScores) + 4) / 5) * 5);
+const ySpan = Math.max(1, yMax - yMin);
+const xFor = (index: number) =>
+  chartPadding.left + (chartInnerWidth * index) / Math.max(1, evolveAgiTrend.length - 1);
+const yFor = (score: number) =>
+  chartPadding.top + chartInnerHeight - ((score - yMin) / ySpan) * chartInnerHeight;
+const indexPath = evolveAgiTrend
+  .map((point, index) => `${index === 0 ? 'M' : 'L'} ${xFor(index).toFixed(2)} ${yFor(point.score).toFixed(2)}`)
+  .join(' ');
+const benchmarkPath = evolveAgiTrend
+  .map(
+    (point, index) =>
+      `${index === 0 ? 'M' : 'L'} ${xFor(index).toFixed(2)} ${yFor(point.benchmarkScore).toFixed(2)}`
+  )
+  .join(' ');
+const gridTicks = Array.from(new Set([yMin, Math.round((yMin + yMax) / 2), yMax])).sort((a, b) => a - b);
 ---
 
 <BaseLayout
   title="Evolve-AGI Index 自进化系数 — Self Evolve"
-  description="Evolve-AGI Index 自进化系数：用 AGI Index 风格衡量 AI Agent 自进化领域的闭环成熟度、证据链、迁移验证、可运行性、动量和治理成熟度。"
+  description="Evolve-AGI Index 自进化系数：用 AGI Index 风格追踪 AI Agent 自进化领域的 benchmark 表现、闭环成熟度、证据链、迁移验证、可运行性、动量和治理成熟度。"
   pageKeywords={['Evolve-AGI Index', '自进化系数', 'AI Agent 自进化', 'Self Evolve rank']}
 >
   <section class="section evolve-hero">
@@ -65,6 +94,130 @@ const external = (href: string) => href.startsWith('http');
               <span class="pill">权重 {signal.weight}%</span>
               <span class="pill">{signal.evidence}</span>
             </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="benchmark-performance">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Trend + Benchmark</div>
+          <h2>趋势折线图：Benchmark 分数参与总指数</h2>
+        </div>
+      </div>
+
+      <div class="eai-trend-panel">
+        <div class="eai-chart-layout">
+          <div>
+            <div class="eai-chart-legend" aria-hidden="true">
+              <span><i class="legend-index"></i> Evolve-AGI Index</span>
+              <span><i class="legend-benchmark"></i> Benchmark Performance</span>
+            </div>
+            <div class="eai-chart-wrap">
+              <svg class="eai-chart" viewBox={`0 0 ${chartWidth} ${chartHeight}`} role="img" aria-labelledby="eai-trend-title eai-trend-desc">
+                <title id="eai-trend-title">Evolve-AGI Index trend and benchmark performance trend</title>
+                <desc id="eai-trend-desc">A two-line chart tracking the total index and benchmark performance from 2026-05-26 to 2026-05-30.</desc>
+                {gridTicks.map((tick) => (
+                  <g>
+                    <line class="eai-chart-grid" x1={chartPadding.left} x2={chartWidth - chartPadding.right} y1={yFor(tick)} y2={yFor(tick)} />
+                    <text class="eai-chart-axis" x={chartPadding.left - 10} y={yFor(tick) + 4} text-anchor="end">{tick}</text>
+                  </g>
+                ))}
+                <path class="eai-chart-line eai-chart-line-index" d={indexPath} />
+                <path class="eai-chart-line eai-chart-line-benchmark" d={benchmarkPath} />
+                {evolveAgiTrend.map((point, index) => (
+                  <g>
+                    <circle class="eai-chart-dot eai-chart-dot-index" cx={xFor(index)} cy={yFor(point.score)} r="5">
+                      <title>{`${point.date} index ${point.score}`}</title>
+                    </circle>
+                    <circle class="eai-chart-dot eai-chart-dot-benchmark" cx={xFor(index)} cy={yFor(point.benchmarkScore)} r="5">
+                      <title>{`${point.date} benchmark ${point.benchmarkScore}`}</title>
+                    </circle>
+                    <text class="eai-chart-date" x={xFor(index)} y={chartHeight - 24} text-anchor="middle">{point.date.slice(5)}</text>
+                    <text class="eai-chart-point-label" x={xFor(index)} y={yFor(point.score) - 12} text-anchor="middle">{point.score}</text>
+                  </g>
+                ))}
+              </svg>
+            </div>
+          </div>
+
+          <aside class="eai-trend-summary">
+            <div>
+              <span>Index delta</span>
+              <strong>+{evolveAgiTrendSummary.delta}</strong>
+            </div>
+            <div>
+              <span>Benchmark delta</span>
+              <strong>+{evolveAgiTrendSummary.benchmarkDelta}</strong>
+            </div>
+            <div>
+              <span>Benchmark signal</span>
+              <strong>{evolveAgiIndex.benchmark.score}</strong>
+            </div>
+            <p>{evolveAgiTrendSummary.caveat}</p>
+          </aside>
+        </div>
+
+        <div class="eai-table-wrap">
+          <table class="eai-trend-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Index</th>
+                <th>Benchmark</th>
+                <th>Strict / broad repos</th>
+                <th>Reports</th>
+                <th>Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              {evolveAgiTrend.map((point) => (
+                <tr>
+                  <td>
+                    <strong>{point.date}</strong>
+                    <small>{point.label}{point.backfilled ? ' · backfilled' : ''}</small>
+                  </td>
+                  <td>{point.score}</td>
+                  <td>{point.benchmarkScore}</td>
+                  <td>{point.strictRepos} / {point.broadRepos}</td>
+                  <td>{point.publicReports}</td>
+                  <td>
+                    <small>{point.source}</small>
+                    <small>{point.note}</small>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section-head eai-benchmark-head">
+        <div>
+          <div class="eyebrow">Benchmark Evidence</div>
+          <h2>参与计算的分数表现</h2>
+        </div>
+      </div>
+      <div class="eai-benchmark-grid">
+        {benchmarkEvidence.map((item) => (
+          <article class="eai-benchmark-card">
+            <header>
+              <div>
+                <span>{item.system}</span>
+                <h3>{item.benchmark}</h3>
+              </div>
+              <strong>{item.indexScore}</strong>
+            </header>
+            <div class="eai-benchmark-metrics">
+              <div><span>Before</span><b>{item.before}</b></div>
+              <div><span>After</span><b>{item.after}</b></div>
+              <div><span>Gain</span><b>{item.gain}</b></div>
+            </div>
+            <p>{item.note}</p>
+            <small>{item.source}</small>
           </article>
         ))}
       </div>
@@ -160,7 +313,9 @@ const external = (href: string) => href.startsWith('http');
 
   .eai-score-panel,
   .eai-signal,
-  .eai-row {
+  .eai-row,
+  .eai-trend-panel,
+  .eai-benchmark-card {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     background: var(--surface-card);
@@ -251,9 +406,245 @@ const external = (href: string) => href.startsWith('http');
   }
 
   .eai-signal p,
-  .eai-row p {
+  .eai-row p,
+  .eai-benchmark-card p {
     color: var(--muted);
     line-height: 1.6;
+  }
+
+  .eai-trend-panel {
+    padding: 22px;
+  }
+
+  .eai-chart-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 230px;
+    gap: 22px;
+    align-items: start;
+  }
+
+  .eai-chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .eai-chart-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .eai-chart-legend i {
+    display: inline-block;
+    width: 28px;
+    height: 3px;
+    border-radius: 999px;
+  }
+
+  .legend-index {
+    background: var(--accent);
+  }
+
+  .legend-benchmark {
+    background: var(--caret-blue);
+  }
+
+  .eai-chart-wrap {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .eai-chart {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+
+  .eai-chart-grid {
+    stroke: var(--line);
+    stroke-width: 1;
+  }
+
+  .eai-chart-axis,
+  .eai-chart-date,
+  .eai-chart-point-label {
+    fill: var(--meta);
+    font-family: var(--font-mono);
+    font-size: 11px;
+  }
+
+  .eai-chart-point-label {
+    fill: var(--accent);
+    font-weight: 800;
+  }
+
+  .eai-chart-line {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3.5;
+  }
+
+  .eai-chart-line-index {
+    stroke: var(--accent);
+  }
+
+  .eai-chart-line-benchmark {
+    stroke: var(--caret-blue);
+  }
+
+  .eai-chart-dot {
+    stroke: var(--surface-card);
+    stroke-width: 3;
+  }
+
+  .eai-chart-dot-index {
+    fill: var(--accent);
+  }
+
+  .eai-chart-dot-benchmark {
+    fill: var(--caret-blue);
+  }
+
+  .eai-trend-summary {
+    display: grid;
+    gap: 12px;
+  }
+
+  .eai-trend-summary div {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 12px;
+  }
+
+  .eai-trend-summary span,
+  .eai-benchmark-card header span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .eai-trend-summary strong {
+    display: block;
+    margin-top: 4px;
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .eai-trend-summary p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .eai-table-wrap {
+    margin-top: 18px;
+    overflow-x: auto;
+  }
+
+  .eai-trend-table {
+    width: 100%;
+    min-width: 780px;
+    border-collapse: collapse;
+    color: var(--fg);
+    font-size: 13px;
+  }
+
+  .eai-trend-table th,
+  .eai-trend-table td {
+    border-top: 1px solid var(--line);
+    padding: 12px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .eai-trend-table th {
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+
+  .eai-trend-table small,
+  .eai-benchmark-card small {
+    display: block;
+    color: var(--meta);
+    font-size: 11px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  .eai-benchmark-head {
+    margin-top: 34px;
+  }
+
+  .eai-benchmark-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .eai-benchmark-card {
+    padding: 16px;
+  }
+
+  .eai-benchmark-card header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .eai-benchmark-card h3 {
+    margin: 4px 0 0;
+    color: var(--fg);
+    font-size: 17px;
+    line-height: 1.25;
+  }
+
+  .eai-benchmark-card header strong {
+    color: var(--caret-blue);
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .eai-benchmark-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin: 14px 0 10px;
+  }
+
+  .eai-benchmark-metrics div {
+    border-radius: var(--radius);
+    background: var(--surface-2);
+    padding: 8px;
+    min-width: 0;
+  }
+
+  .eai-benchmark-metrics span {
+    display: block;
+    color: var(--meta);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .eai-benchmark-metrics b {
+    display: block;
+    margin-top: 4px;
+    color: var(--fg);
+    font-size: 12px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
   }
 
   .eai-metrics small {
@@ -294,7 +685,9 @@ const external = (href: string) => href.startsWith('http');
   @media (max-width: 980px) {
     .evolve-hero-grid,
     .eai-two-column,
-    .eai-signal-grid {
+    .eai-signal-grid,
+    .eai-chart-layout,
+    .eai-benchmark-grid {
       grid-template-columns: 1fr;
     }
   }
@@ -305,6 +698,14 @@ const external = (href: string) => href.startsWith('http');
     }
 
     .eai-row {
+      grid-template-columns: 1fr;
+    }
+
+    .eai-trend-panel {
+      padding: 16px;
+    }
+
+    .eai-benchmark-metrics {
       grid-template-columns: 1fr;
     }
   }

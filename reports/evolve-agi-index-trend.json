@@ -1,0 +1,76 @@
+{
+  "id": "evolve-agi-index-trend",
+  "name": "Evolve-AGI Index Trend",
+  "zhName": "自进化系数趋势追踪",
+  "updated": "2026-05-30",
+  "formulaVersion": "2026-05-30-benchmark-weighted",
+  "formula": "EAI = sum(signal_score * signal_weight)",
+  "weights": {
+    "benchmarkPerformance": 18,
+    "loopStrength": 20,
+    "evidenceChain": 18,
+    "transferVerification": 14,
+    "implementationAccess": 12,
+    "fieldMomentum": 10,
+    "governanceReadiness": 8
+  },
+  "current": {
+    "date": "2026-05-30",
+    "score": 72.9,
+    "grade": "B+",
+    "benchmarkScore": 80.1,
+    "benchmarkEvidenceCount": 10,
+    "classifiedRepos": 602,
+    "strictEvolutionRepos": 90,
+    "broadEvolutionRepos": 195,
+    "publicReports": 193
+  },
+  "snapshots": [
+    {
+      "date": "2026-05-26",
+      "label": "Archived baseline",
+      "score": 67.4,
+      "benchmarkScore": 72.2,
+      "strictRepos": 82,
+      "broadRepos": 186,
+      "publicReports": 90,
+      "source": "work/research/archived-analysis/github-project-data-analysis.json",
+      "status": "backfilled",
+      "note": "Comparable historical point backfilled with the 2026-05-30 formula over archived corpus counts."
+    },
+    {
+      "date": "2026-05-29",
+      "label": "Site snapshot",
+      "score": 71.3,
+      "benchmarkScore": 76.4,
+      "strictRepos": 90,
+      "broadRepos": 195,
+      "publicReports": 187,
+      "source": "site/src/data/analysis.json",
+      "status": "backfilled",
+      "note": "Previous site snapshot before benchmark performance became a weighted signal."
+    },
+    {
+      "date": "2026-05-30",
+      "label": "Benchmark-weighted",
+      "score": 72.9,
+      "benchmarkScore": 80.1,
+      "strictRepos": 90,
+      "broadRepos": 195,
+      "publicReports": 193,
+      "source": "site/src/data/evolveAgiIndex.ts",
+      "status": "current",
+      "note": "Benchmark performance participates directly in the total index."
+    }
+  ],
+  "benchmarkSources": [
+    "paper-drafts/appendix.tex",
+    "site/src/data/survey.ts",
+    "research/ranking-framework/radar-profiles.json"
+  ],
+  "limitations": [
+    "Snapshots before 2026-05-30 are backfilled for comparability and should not be read as independent historical API measurements.",
+    "Benchmark score is a normalized cross-benchmark input score, not a raw pass@1 or success-rate average.",
+    "Future automation should append new real snapshots rather than replacing prior points."
+  ]
+}
