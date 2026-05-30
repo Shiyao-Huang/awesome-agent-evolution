@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-30T00:00:00+08:00",
-  "total": 608,
-  "updated_files": 608,
+  "total": 614,
+  "updated_files": 614,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -75,6 +75,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "file": "raw-github/addyosmani_agent-skills.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T19:17:15+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
       "repo": "aden-hive/hive",
@@ -291,6 +300,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "aiming-lab/AutoHarness",
+      "url": "https://github.com/aiming-lab/AutoHarness",
+      "file": "raw-github/aiming-lab_autoharness.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T19:17:15+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
       "repo": "aiming-lab/AutoResearchClaw",
@@ -3524,6 +3542,15 @@
       "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T12:21:31+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
+      "repo": "OWASP/www-project-agent-memory-guard",
+      "url": "https://github.com/OWASP/www-project-agent-memory-guard",
+      "file": "raw-github/owasp_www-project-agent-memory-guard.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T19:17:15+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
+    },
+    {
       "repo": "oxen-ai/self-rewarding-language-models",
       "url": "https://github.com/oxen-ai/self-rewarding-language-models",
       "file": "raw-github/oxen-ai_self-rewarding-language-models.md",
@@ -3702,6 +3729,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "QF-Bench/QuantitativeFinance-Bench",
+      "url": "https://github.com/QF-Bench/QuantitativeFinance-Bench",
+      "file": "raw-github/qf-bench_quantitativefinance-bench.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T19:17:15+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
       "repo": "qianlima-lab/awesome-lifelong-llm-agent",
@@ -5387,6 +5423,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "zikuicai/aegisllm",
+      "url": "https://github.com/zikuicai/aegisllm",
+      "file": "raw-github/zikuicai_aegisllm.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T19:17:15+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
+    },
+    {
       "repo": "zilliztech/memsearch",
       "url": "https://github.com/zilliztech/memsearch",
       "file": "raw-github/zilliztech_memsearch.md",
@@ -5430,6 +5475,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "zocomputer/skills",
+      "url": "https://github.com/zocomputer/skills",
+      "file": "raw-github/zocomputer_skills.md",
+      "content_timestamp": "2026-05-30",
+      "collected_at": "2026-05-30T19:17:15+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
       "repo": "zoe-yyx/agentnet",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T13:16:52+08:00",
+  "generated_at": "2026-05-30T19:17:15+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -120,6 +120,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Turn any website into a typed JSON API using self improving agents"
+    },
+    {
+      "repo": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "stars": "47000",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "Shell/JavaScript/Structured Skill Workflows",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 47k stars, 5.2k forks, 201 commits, MIT license, and a documented pack of 23 structured skills.",
+      "description": "addyosmani/agent-skills is a large-scale production skill pack that standardizes coding-agent engineering workflows and quality gates."
     },
     {
       "repo": "aden-hive/hive",
@@ -480,6 +495,21 @@
       "content_timestamp": "unknown",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Alignment Tipping Process: How Self-Evolution Pushes LLM Agents Off the Rails"
+    },
+    {
+      "repo": "aiming-lab/AutoHarness",
+      "url": "https://github.com/aiming-lab/AutoHarness",
+      "stars": "295",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evolution",
+      "stack": "Python/TypeScript/Harness Governance Runtime",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 295 stars, 23 forks, 8 commits, MIT license, and the explicit principle 'Agent = Model + Harness' with multi-mode governance.",
+      "description": "AutoHarness provides a governance-oriented runtime that wraps LLM clients and upgrades demo agents into auditable, policy-controlled production loops."
     },
     {
       "repo": "aiming-lab/AutoResearchClaw",
@@ -5867,6 +5897,21 @@
       "description": "Planning with Files is a cross-agent skill for persistent markdown planning, session recovery, plan attestation and platform-specific hooks across Claude Code, Codex, OpenCode, Gemini, Kiro and other agent runtimes."
     },
     {
+      "repo": "OWASP/www-project-agent-memory-guard",
+      "url": "https://github.com/OWASP/www-project-agent-memory-guard",
+      "stars": "17",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-safety",
+      "base_theme": "memory",
+      "stack": "Python/Agent Memory Security Middleware/Benchmarkable Guard",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 17 stars, 10 forks, 140 commits, Apache-2.0 license, and README claims as OWASP reference implementation for ASI06 memory poisoning.",
+      "description": "OWASP Agent Memory Guard is a runtime protection layer for agent memory operations, targeting memory poisoning, leakage, and integrity tampering."
+    },
+    {
       "repo": "oxen-ai/self-rewarding-language-models",
       "url": "https://github.com/oxen-ai/self-rewarding-language-models",
       "stars": "134",
@@ -6165,6 +6210,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "A collection of MCP servers."
+    },
+    {
+      "repo": "QF-Bench/QuantitativeFinance-Bench",
+      "url": "https://github.com/QF-Bench/QuantitativeFinance-Bench",
+      "stars": "28",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/Harbor-based Benchmark Dataset/Sandbox Evaluation",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 28 stars, 35 forks, 372 commits, and README documentation that the benchmark runs on Harbor with verifiable task outputs.",
+      "description": "QF-Bench is a state-aware benchmark dataset for evaluating AI agents on realistic quantitative finance workflows under sandboxed verification."
     },
     {
       "repo": "qianlima-lab/awesome-lifelong-llm-agent",
@@ -8972,6 +9032,21 @@
       "description": "🤖 A curated list of AI Agent frameworks, tools, platforms, and resources for 2026 — the year agents went mainstream"
     },
     {
+      "repo": "zikuicai/aegisllm",
+      "url": "https://github.com/zikuicai/aegisllm",
+      "stars": "34",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evolution",
+      "stack": "Python/Multi-Agent Defense Pipelines/DSPy Optimization",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 34 stars, 4 forks, 49 commits, MIT license, and README claims of self-improving multi-agent defense via prompt optimization.",
+      "description": "AegisLLM is a cooperative multi-agent security framework that claims self-improving defensive behavior through test-time prompt optimization."
+    },
+    {
       "repo": "zilliztech/memsearch",
       "url": "https://github.com/zilliztech/memsearch",
       "stars": "1800",
@@ -9045,6 +9120,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "Aligning Agentic World Models via Knowledgeable Experience Learning"
+    },
+    {
+      "repo": "zocomputer/skills",
+      "url": "https://github.com/zocomputer/skills",
+      "stars": "40",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "TypeScript/Python/Skill Registry and Manifest Pipeline",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-30",
+      "evidence": "web-observed GitHub page showed 40 stars, 40 forks, 126 commits, MIT license, and README positioning as an agent skills registry.",
+      "description": "zocomputer/skills is an agent skills registry that unifies official, external, and community skill packages with validation and manifest generation."
     },
     {
       "repo": "zoe-yyx/agentnet",

@@ -5480,6 +5480,174 @@ export const projects: Project[] = [
                     "production",
                     "google"
             ]
+    },
+    {
+            "name": "AutoHarness",
+            "repo": "aiming-lab/AutoHarness",
+            "url": "https://github.com/aiming-lab/AutoHarness",
+            "stars": 295,
+            "forks": 23,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/330-autoharness-agent-harness-engineering-framework.md",
+            "pattern": "treat harness as the controllable layer around model reasoning -> enforce multi-step governance and risk checks on tool execution -> track costs, logs, and sessions -> feed failures back into harness policies to improve future agent runs",
+            "description": "AutoHarness provides a governance-oriented runtime that wraps LLM clients and upgrades demo agents into auditable, policy-controlled production loops.",
+            "stack": [
+                    "Python",
+                    "TypeScript",
+                    "Harness Governance Runtime"
+            ],
+            "category": "Automated Agent Harness Engineering Framework",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/aiming-lab_autoharness.md",
+            "status": "candidate",
+            "tags": [
+                    "harness",
+                    "governance",
+                    "multi-agent",
+                    "self-improvement",
+                    "runtime"
+            ]
+    },
+    {
+            "name": "OWASP Agent Memory Guard",
+            "repo": "OWASP/www-project-agent-memory-guard",
+            "url": "https://github.com/OWASP/www-project-agent-memory-guard",
+            "stars": 17,
+            "forks": 10,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/331-owasp-agent-memory-guard-defense-layer.md",
+            "pattern": "screen every memory read/write through detectors -> enforce declarative security policy -> emit forensics-ready events and snapshots -> block persistent memory poisoning before it propagates across sessions",
+            "description": "OWASP Agent Memory Guard is a runtime protection layer for agent memory operations, targeting memory poisoning, leakage, and integrity tampering.",
+            "stack": [
+                    "Python",
+                    "Agent Memory Security Middleware",
+                    "Benchmarkable Guard"
+            ],
+            "category": "Agent Memory Poisoning Defense and Guard Layer",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/owasp_www-project-agent-memory-guard.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "security",
+                    "owasp",
+                    "prompt-injection",
+                    "agentic-ai"
+            ]
+    },
+    {
+            "name": "Addy Agent Skills",
+            "repo": "addyosmani/agent-skills",
+            "url": "https://github.com/addyosmani/agent-skills",
+            "stars": 47000,
+            "forks": 5200,
+            "language": "Shell",
+            "license": "MIT",
+            "report": "projects/332-addy-agent-skills-production-pack.md",
+            "pattern": "encode senior engineering workflows as reusable agent skills -> map tasks to explicit process gates -> force verification evidence before ship -> compound quality through consistent command-level behavior",
+            "description": "addyosmani/agent-skills is a large-scale production skill pack that standardizes coding-agent engineering workflows and quality gates.",
+            "stack": [
+                    "Shell",
+                    "JavaScript",
+                    "Structured Skill Workflows"
+            ],
+            "category": "Production Engineering Skill Pack for Coding Agents",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/addyosmani_agent-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "skills",
+                    "workflow",
+                    "coding-agent",
+                    "quality-gates",
+                    "playbook"
+            ]
+    },
+    {
+            "name": "Zo Skills Registry",
+            "repo": "zocomputer/skills",
+            "url": "https://github.com/zocomputer/skills",
+            "stars": 40,
+            "forks": 40,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/333-zo-skills-registry.md",
+            "pattern": "maintain a curated multi-source skills registry -> validate skill package structure -> sync external skill feeds into a manifest -> distribute reusable skills into agent runtimes with consistent metadata",
+            "description": "zocomputer/skills is an agent skills registry that unifies official, external, and community skill packages with validation and manifest generation.",
+            "stack": [
+                    "TypeScript",
+                    "Python",
+                    "Skill Registry and Manifest Pipeline"
+            ],
+            "category": "Open Agent Skills Registry and Distribution Layer",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/zocomputer_skills.md",
+            "status": "candidate",
+            "tags": [
+                    "skills",
+                    "registry",
+                    "manifest",
+                    "agent-runtime",
+                    "distribution"
+            ]
+    },
+    {
+            "name": "QF-Bench",
+            "repo": "QF-Bench/QuantitativeFinance-Bench",
+            "url": "https://github.com/QF-Bench/QuantitativeFinance-Bench",
+            "stars": 28,
+            "forks": 35,
+            "language": "Python",
+            "license": "CC-BY-NC-4.0",
+            "report": "projects/334-qf-bench-financial-agent-evaluation.md",
+            "pattern": "package stateful quantitative tasks in reproducible sandboxes -> run oracle and real-agent evaluation paths -> enforce test-based numeric verification -> use benchmark deltas to tune agent harness and reasoning reliability",
+            "description": "QF-Bench is a state-aware benchmark dataset for evaluating AI agents on realistic quantitative finance workflows under sandboxed verification.",
+            "stack": [
+                    "Python",
+                    "Harbor-based Benchmark Dataset",
+                    "Sandbox Evaluation"
+            ],
+            "category": "State-Aware Financial Agent Benchmark Suite",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/qf-bench_quantitativefinance-bench.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "evaluation",
+                    "harbor",
+                    "agent",
+                    "finance"
+            ]
+    },
+    {
+            "name": "AegisLLM",
+            "repo": "zikuicai/aegisllm",
+            "url": "https://github.com/zikuicai/aegisllm",
+            "stars": 34,
+            "forks": 4,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/335-aegisllm-self-reflective-defense-agents.md",
+            "pattern": "coordinate orchestrator-deflector-responder-evaluator roles -> evaluate adversarial and unlearning threats -> optimize prompts with DSPy loops -> improve runtime defense quality without model retraining",
+            "description": "AegisLLM is a cooperative multi-agent security framework that claims self-improving defensive behavior through test-time prompt optimization.",
+            "stack": [
+                    "Python",
+                    "Multi-Agent Defense Pipelines",
+                    "DSPy Optimization"
+            ],
+            "category": "Self-Reflective Multi-Agent Defense System",
+            "lastPushed": "2026-05-30T00:00:00Z",
+            "localPath": "raw-github/zikuicai_aegisllm.md",
+            "status": "candidate",
+            "tags": [
+                    "multi-agent",
+                    "security",
+                    "self-improvement",
+                    "dspy",
+                    "evaluation"
+            ]
     }
 ];
 
@@ -5510,7 +5678,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness', 'dotnet/skills', 'datalayer/agent-skills', 'block/agent-skills', 'Corbell-AI/evalmonkey', 'nomic-ai/aec-bench', 'google/ax'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness', 'dotnet/skills', 'datalayer/agent-skills', 'block/agent-skills', 'Corbell-AI/evalmonkey', 'nomic-ai/aec-bench', 'google/ax', 'aiming-lab/AutoHarness', 'OWASP/www-project-agent-memory-guard', 'addyosmani/agent-skills', 'zocomputer/skills', 'QF-Bench/QuantitativeFinance-Bench', 'zikuicai/aegisllm'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

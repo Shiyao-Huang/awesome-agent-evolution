@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-30T13:16:52+08:00
+Generated: 2026-05-30T19:17:15+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-05-30T13:16:52+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: dotnet/skills, datalayer/agent-skills, block/agent-skills, Corbell-AI/evalmonkey, nomic-ai/aec-bench, google/ax.
-- New raw files: raw-github/dotnet_skills.md, raw-github/datalayer_agent-skills.md, raw-github/block_agent-skills.md, raw-github/corbell-ai_evalmonkey.md, raw-github/nomic-ai_aec-bench.md, raw-github/google_ax.md.
-- New public model cards and site reports: project/report ids 324, 325, 326, 327, 328, 329.
+- Web-observed repos: aiming-lab/AutoHarness, OWASP/www-project-agent-memory-guard, addyosmani/agent-skills, zocomputer/skills, QF-Bench/QuantitativeFinance-Bench, zikuicai/aegisllm.
+- New raw files: raw-github/aiming-lab_autoharness.md, raw-github/owasp_www-project-agent-memory-guard.md, raw-github/addyosmani_agent-skills.md, raw-github/zocomputer_skills.md, raw-github/qf-bench_quantitativefinance-bench.md, raw-github/zikuicai_aegisllm.md.
+- New public model cards and site reports: project/report ids 330, 331, 332, 333, 334, 335.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
 - GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

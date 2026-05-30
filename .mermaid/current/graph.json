@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T13:16:52+08:00",
+  "generated_at": "2026-05-30T19:17:15+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -306,7 +306,13 @@
         "raw-github/block_agent-skills.md",
         "raw-github/corbell-ai_evalmonkey.md",
         "raw-github/nomic-ai_aec-bench.md",
-        "raw-github/google_ax.md"
+        "raw-github/google_ax.md",
+        "raw-github/aiming-lab_autoharness.md",
+        "raw-github/owasp_www-project-agent-memory-guard.md",
+        "raw-github/addyosmani_agent-skills.md",
+        "raw-github/zocomputer_skills.md",
+        "raw-github/qf-bench_quantitativefinance-bench.md",
+        "raw-github/zikuicai_aegisllm.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -452,7 +458,8 @@
         "work/research/hourly-public-metadata-update-2026-05-29-2215.md",
         "work/research/hourly-public-metadata-update-2026-05-30-0115.md",
         "work/research/hourly-public-metadata-update-2026-05-30-0715.md",
-        "work/research/hourly-public-metadata-update-2026-05-30-1316.md"
+        "work/research/hourly-public-metadata-update-2026-05-30-1316.md",
+        "work/research/hourly-public-metadata-update-2026-05-30-1917.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -1006,7 +1013,19 @@
         "projects/328-aec-bench-agentic-context-benchmark.md",
         "site/public/reports/projects/328-aec-bench-agentic-context-benchmark.md",
         "projects/329-google-ax-agent-runtime.md",
-        "site/public/reports/projects/329-google-ax-agent-runtime.md"
+        "site/public/reports/projects/329-google-ax-agent-runtime.md",
+        "projects/330-autoharness-agent-harness-engineering-framework.md",
+        "site/public/reports/projects/330-autoharness-agent-harness-engineering-framework.md",
+        "projects/331-owasp-agent-memory-guard-defense-layer.md",
+        "site/public/reports/projects/331-owasp-agent-memory-guard-defense-layer.md",
+        "projects/332-addy-agent-skills-production-pack.md",
+        "site/public/reports/projects/332-addy-agent-skills-production-pack.md",
+        "projects/333-zo-skills-registry.md",
+        "site/public/reports/projects/333-zo-skills-registry.md",
+        "projects/334-qf-bench-financial-agent-evaluation.md",
+        "site/public/reports/projects/334-qf-bench-financial-agent-evaluation.md",
+        "projects/335-aegisllm-self-reflective-defense-agents.md",
+        "site/public/reports/projects/335-aegisllm-self-reflective-defense-agents.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1332,14 +1351,14 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-30T13:16:52+08:00",
+    "run_at": "2026-05-30T19:17:15+08:00",
     "added_repositories": [
-      "dotnet/skills",
-      "datalayer/agent-skills",
-      "block/agent-skills",
-      "Corbell-AI/evalmonkey",
-      "nomic-ai/aec-bench",
-      "google/ax"
+      "aiming-lab/AutoHarness",
+      "OWASP/www-project-agent-memory-guard",
+      "addyosmani/agent-skills",
+      "zocomputer/skills",
+      "QF-Bench/QuantitativeFinance-Bench",
+      "zikuicai/aegisllm"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",

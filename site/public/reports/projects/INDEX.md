@@ -357,6 +357,13 @@
 | AEC Bench | [nomic-ai/aec-bench](https://github.com/nomic-ai/aec-bench) | Agentic Context Engineering Benchmark Suite | [projects/328-aec-bench-agentic-context-benchmark.md](328-aec-bench-agentic-context-benchmark.md) |
 | Google AX | [google/ax](https://github.com/google/ax) | Production Agent Runtime and Context Engineering Framework | [projects/329-google-ax-agent-runtime.md](329-google-ax-agent-runtime.md) |
 
+| AutoHarness | [aiming-lab/AutoHarness](https://github.com/aiming-lab/AutoHarness) | Automated Agent Harness Engineering Framework | [projects/330-autoharness-agent-harness-engineering-framework.md](330-autoharness-agent-harness-engineering-framework.md) |
+| OWASP Agent Memory Guard | [OWASP/www-project-agent-memory-guard](https://github.com/OWASP/www-project-agent-memory-guard) | Agent Memory Poisoning Defense and Guard Layer | [projects/331-owasp-agent-memory-guard-defense-layer.md](331-owasp-agent-memory-guard-defense-layer.md) |
+| Addy Agent Skills | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | Production Engineering Skill Pack for Coding Agents | [projects/332-addy-agent-skills-production-pack.md](332-addy-agent-skills-production-pack.md) |
+| Zo Skills Registry | [zocomputer/skills](https://github.com/zocomputer/skills) | Open Agent Skills Registry and Distribution Layer | [projects/333-zo-skills-registry.md](333-zo-skills-registry.md) |
+| QF-Bench | [QF-Bench/QuantitativeFinance-Bench](https://github.com/QF-Bench/QuantitativeFinance-Bench) | State-Aware Financial Agent Benchmark Suite | [projects/334-qf-bench-financial-agent-evaluation.md](334-qf-bench-financial-agent-evaluation.md) |
+| AegisLLM | [zikuicai/aegisllm](https://github.com/zikuicai/aegisllm) | Self-Reflective Multi-Agent Defense System | [projects/335-aegisllm-self-reflective-defense-agents.md](335-aegisllm-self-reflective-defense-agents.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.
