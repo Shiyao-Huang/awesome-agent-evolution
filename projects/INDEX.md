@@ -364,6 +364,13 @@
 | QF-Bench | [QF-Bench/QuantitativeFinance-Bench](https://github.com/QF-Bench/QuantitativeFinance-Bench) | State-Aware Financial Agent Benchmark Suite | [projects/334-qf-bench-financial-agent-evaluation.md](334-qf-bench-financial-agent-evaluation.md) |
 | AegisLLM | [zikuicai/aegisllm](https://github.com/zikuicai/aegisllm) | Self-Reflective Multi-Agent Defense System | [projects/335-aegisllm-self-reflective-defense-agents.md](335-aegisllm-self-reflective-defense-agents.md) |
 
+| Lossless Claw Context Management | [Martian-Engineering/lossless-claw](https://github.com/Martian-Engineering/lossless-claw) | Persistent Context and Memory Orchestration for OpenClaw | [projects/342-lossless-claw-context-management.md](342-lossless-claw-context-management.md) |
+| AgentsMeetRL Benchmark Index | [thinkwee/AgentsMeetRL](https://github.com/thinkwee/AgentsMeetRL) | Agentic RL and Benchmark Knowledge Index | [projects/343-agentsmeetrl-benchmark-index.md](343-agentsmeetrl-benchmark-index.md) |
+| OpenHarness Agent Harness Fork | [syntax-syndicate/OpenHarness-agent-harness](https://github.com/syntax-syndicate/OpenHarness-agent-harness) | Open Agent Harness Runtime and Evaluation Workflow | [projects/344-openharness-agent-harness-fork.md](344-openharness-agent-harness-fork.md) |
+| OpenClaw Arcade Plugin | [ArcadeAI/openclaw-arcade-plugin](https://github.com/ArcadeAI/openclaw-arcade-plugin) | OpenClaw Skill Plugin for Arcade Tool Connectivity | [projects/345-openclaw-arcade-plugin.md](345-openclaw-arcade-plugin.md) |
+| ObsidianClaw Knowledge Plugin | [humanitylabs-org/obsidianclaw](https://github.com/humanitylabs-org/obsidianclaw) | OpenClaw Knowledge and Notes Integration Plugin | [projects/346-obsidianclaw-knowledge-plugin.md](346-obsidianclaw-knowledge-plugin.md) |
+| Momo OpenClaw Plugin | [momo-personal-assistant/openclaw-plugin](https://github.com/momo-personal-assistant/openclaw-plugin) | Personal Assistant Plugin for OpenClaw Workflows | [projects/347-momo-openclaw-plugin.md](347-momo-openclaw-plugin.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

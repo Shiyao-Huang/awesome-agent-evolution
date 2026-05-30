@@ -5816,6 +5816,174 @@ export const projects: Project[] = [
                     "catalog",
                     "agent-workflow"
             ]
+    },
+    {
+            "name": "Lossless Claw Context Management",
+            "repo": "Martian-Engineering/lossless-claw",
+            "url": "https://github.com/Martian-Engineering/lossless-claw",
+            "stars": 4800,
+            "forks": 410,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/342-lossless-claw-context-management.md",
+            "pattern": "capture task and conversation traces into structured context artifacts -> rank and compress context for retrieval fidelity -> inject curated context into follow-up agent/tool calls -> keep a replayable context lineage that reduces drift across long-running workflows",
+            "description": "Martian-Engineering/lossless-claw provides persistent context-management primitives for OpenClaw-style agent workflows with explicit long-horizon memory handling.",
+            "stack": [
+                    "TypeScript",
+                    "OpenClaw Plugin",
+                    "Context Management Runtime"
+            ],
+            "category": "Persistent Context and Memory Orchestration for OpenClaw",
+            "lastPushed": "2026-05-31T00:00:00Z",
+            "localPath": "raw-github/martian-engineering_lossless-claw.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "context",
+                    "openclaw",
+                    "plugin",
+                    "lineage"
+            ]
+    },
+    {
+            "name": "AgentsMeetRL Benchmark Index",
+            "repo": "thinkwee/AgentsMeetRL",
+            "url": "https://github.com/thinkwee/AgentsMeetRL",
+            "stars": 1500,
+            "forks": 203,
+            "language": "Markdown",
+            "license": "Not listed",
+            "report": "projects/343-agentsmeetrl-benchmark-index.md",
+            "pattern": "aggregate agentic-RL methods and benchmark references into a structured index -> cluster methods by training/evaluation setting -> expose comparison anchors for harness design and evaluator selection -> support downstream pipeline choices with curated benchmark evidence",
+            "description": "thinkwee/AgentsMeetRL is an awesome-style collection focused on agentic RL papers, methods, and benchmark references for agent training/evaluation loops.",
+            "stack": [
+                    "Markdown",
+                    "Awesome List",
+                    "Agentic RL Benchmark Survey"
+            ],
+            "category": "Agentic RL and Benchmark Knowledge Index",
+            "lastPushed": "2026-05-31T00:00:00Z",
+            "localPath": "raw-github/thinkwee_agentsmeetrl.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "agentic-rl",
+                    "evaluation",
+                    "awesome-list",
+                    "survey"
+            ]
+    },
+    {
+            "name": "OpenHarness Agent Harness Fork",
+            "repo": "syntax-syndicate/OpenHarness-agent-harness",
+            "url": "https://github.com/syntax-syndicate/OpenHarness-agent-harness",
+            "stars": 1,
+            "forks": 0,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/344-openharness-agent-harness-fork.md",
+            "pattern": "define standardized harness interfaces for task setup, execution, and judging -> route agent actions through controlled runtime adapters -> log traces and outcomes for comparable replay -> make harness-level protocol changes testable before model-level retraining",
+            "description": "syntax-syndicate/OpenHarness-agent-harness tracks an OpenHarness runtime fork for controlled agent execution and evaluation workflow standardization.",
+            "stack": [
+                    "Python",
+                    "Agent Harness Runtime",
+                    "Evaluation Pipeline"
+            ],
+            "category": "Open Agent Harness Runtime and Evaluation Workflow",
+            "lastPushed": "2026-05-31T00:00:00Z",
+            "localPath": "raw-github/syntax-syndicate_openharness-agent-harness.md",
+            "status": "candidate",
+            "tags": [
+                    "harness",
+                    "framework",
+                    "runtime",
+                    "evaluation",
+                    "workflow"
+            ]
+    },
+    {
+            "name": "OpenClaw Arcade Plugin",
+            "repo": "ArcadeAI/openclaw-arcade-plugin",
+            "url": "https://github.com/ArcadeAI/openclaw-arcade-plugin",
+            "stars": 4,
+            "forks": 2,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/345-openclaw-arcade-plugin.md",
+            "pattern": "bridge OpenClaw runtime calls to Arcade.dev tool endpoints -> register reusable tool skills through plugin contracts -> execute constrained external actions with typed interfaces -> feed tool outcomes back into agent planning loops for iterative skill reuse",
+            "description": "ArcadeAI/openclaw-arcade-plugin connects OpenClaw agents to Arcade.dev tool APIs as reusable plugin skills.",
+            "stack": [
+                    "TypeScript",
+                    "OpenClaw Plugin",
+                    "Arcade Tool Bridge"
+            ],
+            "category": "OpenClaw Skill Plugin for Arcade Tool Connectivity",
+            "lastPushed": "2026-05-31T00:00:00Z",
+            "localPath": "raw-github/arcadeai_openclaw-arcade-plugin.md",
+            "status": "candidate",
+            "tags": [
+                    "openclaw",
+                    "plugin",
+                    "skills",
+                    "tools",
+                    "integration"
+            ]
+    },
+    {
+            "name": "ObsidianClaw Knowledge Plugin",
+            "repo": "humanitylabs-org/obsidianclaw",
+            "url": "https://github.com/humanitylabs-org/obsidianclaw",
+            "stars": 6,
+            "forks": 0,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/346-obsidianclaw-knowledge-plugin.md",
+            "pattern": "connect OpenClaw sessions with Obsidian-backed knowledge notes -> store interaction artifacts as structured vault entries -> retrieve linked notes into future planning/context windows -> preserve durable memory across episodic agent runs",
+            "description": "humanitylabs-org/obsidianclaw is an archived OpenClaw plugin that links agent workflows with Obsidian-style knowledge memory.",
+            "stack": [
+                    "TypeScript",
+                    "OpenClaw Plugin",
+                    "Obsidian Knowledge Sync"
+            ],
+            "category": "OpenClaw Knowledge and Notes Integration Plugin",
+            "lastPushed": "2026-05-31T00:00:00Z",
+            "localPath": "raw-github/humanitylabs-org_obsidianclaw.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "obsidian",
+                    "openclaw",
+                    "knowledge-base",
+                    "plugin"
+            ]
+    },
+    {
+            "name": "Momo OpenClaw Plugin",
+            "repo": "momo-personal-assistant/openclaw-plugin",
+            "url": "https://github.com/momo-personal-assistant/openclaw-plugin",
+            "stars": 15,
+            "forks": 10,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/347-momo-openclaw-plugin.md",
+            "pattern": "encode assistant behaviors as plugin capabilities inside OpenClaw -> retain user/task state and reminders across sessions -> orchestrate personal productivity actions through constrained tool calls -> evolve assistant behavior from interaction feedback and retained context",
+            "description": "momo-personal-assistant/openclaw-plugin provides an OpenClaw plugin layer for personal-assistant style workflows with persistent task context.",
+            "stack": [
+                    "TypeScript",
+                    "OpenClaw Personal Assistant Plugin",
+                    "Task Memory"
+            ],
+            "category": "Personal Assistant Plugin for OpenClaw Workflows",
+            "lastPushed": "2026-05-31T00:00:00Z",
+            "localPath": "raw-github/momo-personal-assistant_openclaw-plugin.md",
+            "status": "candidate",
+            "tags": [
+                    "assistant",
+                    "openclaw",
+                    "plugin",
+                    "memory",
+                    "application"
+            ]
     }
 ];
 
@@ -5846,7 +6014,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness', 'dotnet/skills', 'datalayer/agent-skills', 'block/agent-skills', 'Corbell-AI/evalmonkey', 'nomic-ai/aec-bench', 'google/ax', 'aiming-lab/AutoHarness', 'OWASP/www-project-agent-memory-guard', 'addyosmani/agent-skills', 'zocomputer/skills', 'QF-Bench/QuantitativeFinance-Bench', 'zikuicai/aegisllm', 'EvoMap/evolver', 'NousResearch/hermes-agent-self-evolution', 'knowall-ai/mcp-neo4j-agent-memory', 'LearnPrompt/cc-harness-skills', 'aiming-lab/ClawArena', 'kodustech/awesome-agent-skills'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness', 'dotnet/skills', 'datalayer/agent-skills', 'block/agent-skills', 'Corbell-AI/evalmonkey', 'nomic-ai/aec-bench', 'google/ax', 'aiming-lab/AutoHarness', 'OWASP/www-project-agent-memory-guard', 'addyosmani/agent-skills', 'zocomputer/skills', 'QF-Bench/QuantitativeFinance-Bench', 'zikuicai/aegisllm', 'EvoMap/evolver', 'NousResearch/hermes-agent-self-evolution', 'knowall-ai/mcp-neo4j-agent-memory', 'LearnPrompt/cc-harness-skills', 'aiming-lab/ClawArena', 'kodustech/awesome-agent-skills', 'Martian-Engineering/lossless-claw', 'thinkwee/AgentsMeetRL', 'syntax-syndicate/OpenHarness-agent-harness', 'ArcadeAI/openclaw-arcade-plugin', 'humanitylabs-org/obsidianclaw', 'momo-personal-assistant/openclaw-plugin'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-31T00:00:00+08:00",
-  "total": 618,
-  "updated_files": 618,
+  "total": 624,
+  "updated_files": 624,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -462,6 +462,15 @@
       "collected_at": "2026-05-24T16:59:40+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_github_page_open_2026-05-24"
+    },
+    {
+      "repo": "ArcadeAI/openclaw-arcade-plugin",
+      "url": "https://github.com/ArcadeAI/openclaw-arcade-plugin",
+      "file": "raw-github/arcadeai_openclaw-arcade-plugin.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T07:20:36+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
     },
     {
       "repo": "archishmansengupta/autovoiceevals",
@@ -1877,6 +1886,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "humanitylabs-org/obsidianclaw",
+      "url": "https://github.com/humanitylabs-org/obsidianclaw",
+      "file": "raw-github/humanitylabs-org_obsidianclaw.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T07:20:36+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
+    },
+    {
       "repo": "HUST-AI-HYZ/MemoryAgentBench",
       "url": "https://github.com/HUST-AI-HYZ/MemoryAgentBench",
       "file": "raw-github/hust-ai-hyz_memoryagentbench.md",
@@ -2660,6 +2678,15 @@
       "timestamp_source": "web_observed_github_page_2026_05_25"
     },
     {
+      "repo": "Martian-Engineering/lossless-claw",
+      "url": "https://github.com/Martian-Engineering/lossless-claw",
+      "file": "raw-github/martian-engineering_lossless-claw.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T07:20:36+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
+    },
+    {
       "repo": "matebenyovszky/healing-agent",
       "url": "https://github.com/matebenyovszky/healing-agent",
       "file": "raw-github/matebenyovszky_healing-agent.md",
@@ -3054,6 +3081,15 @@
       "collected_at": "2026-05-25T13:21:00+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid"
+    },
+    {
+      "repo": "momo-personal-assistant/openclaw-plugin",
+      "url": "https://github.com/momo-personal-assistant/openclaw-plugin",
+      "file": "raw-github/momo-personal-assistant_openclaw-plugin.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T07:20:36+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
     },
     {
       "repo": "murataslan1/ai-agent-benchmark",
@@ -4631,6 +4667,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "syntax-syndicate/OpenHarness-agent-harness",
+      "url": "https://github.com/syntax-syndicate/OpenHarness-agent-harness",
+      "file": "raw-github/syntax-syndicate_openharness-agent-harness.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T07:20:36+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
+    },
+    {
       "repo": "taishi-n324/awesome-rl-reasoning",
       "url": "https://github.com/taishi-n324/awesome-rl-reasoning",
       "file": "raw-github/taishi-n324_awesome-rl-reasoning.md",
@@ -4719,6 +4764,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "thinkwee/AgentsMeetRL",
+      "url": "https://github.com/thinkwee/AgentsMeetRL",
+      "file": "raw-github/thinkwee_agentsmeetrl.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T07:20:36+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
     },
     {
       "repo": "thu-nics/mars",

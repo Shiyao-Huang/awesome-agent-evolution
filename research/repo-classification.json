@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T01:21:52+08:00",
+  "generated_at": "2026-05-31T07:20:36+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -765,6 +765,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed official Agent Skills repository, spec/template folders, Claude Code plugin marketplace instructions, and public star/fork snapshot",
       "description": "Anthropic 官方 Agent Skills 公共仓库，提供技能规范、模板、示例技能与 Claude Code 插件市场安装入口，是技能生态的上游参考实现。"
+    },
+    {
+      "repo": "ArcadeAI/openclaw-arcade-plugin",
+      "url": "https://github.com/ArcadeAI/openclaw-arcade-plugin",
+      "stars": "4",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "TypeScript/OpenClaw Plugin/Arcade Tool Bridge",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 4 stars, 2 forks, 7 commits, MIT license, and README text about connecting OpenClaw to Arcade.dev tools.",
+      "description": "ArcadeAI/openclaw-arcade-plugin connects OpenClaw agents to Arcade.dev tool APIs as reusable plugin skills."
     },
     {
       "repo": "archishmansengupta/autovoiceevals",
@@ -3122,6 +3137,21 @@
       "description": "CORAL 是面向 open-ended discovery 的多代理自主演化基础设施，用隔离 git worktrees、共享状态目录、grader daemon、heartbeat prompt 和多 runtime 集成推动 agent teams 连续改进。"
     },
     {
+      "repo": "humanitylabs-org/obsidianclaw",
+      "url": "https://github.com/humanitylabs-org/obsidianclaw",
+      "stars": "6",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "TypeScript/OpenClaw Plugin/Obsidian Knowledge Sync",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 6 stars, 0 forks, 20 commits, MIT license, and archived status with an OpenClaw + Obsidian plugin description.",
+      "description": "humanitylabs-org/obsidianclaw is an archived OpenClaw plugin that links agent workflows with Obsidian-style knowledge memory."
+    },
+    {
       "repo": "HUST-AI-HYZ/MemoryAgentBench",
       "url": "https://github.com/HUST-AI-HYZ/MemoryAgentBench",
       "stars": "341",
@@ -4427,6 +4457,21 @@
       "description": "dotnet-skills 是面向 Codex、Claude Code、GitHub Copilot、Gemini、Junie 的 .NET skill catalog 和 CLI，把现代 .NET 官方文档、包、agents 与 upstream watch 组合成可安装技能供应链。"
     },
     {
+      "repo": "Martian-Engineering/lossless-claw",
+      "url": "https://github.com/Martian-Engineering/lossless-claw",
+      "stars": "4800",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "TypeScript/OpenClaw Plugin/Context Management Runtime",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 4.8k stars, 410 forks, 376 commits, MIT license, and README framing around preserving and structuring AI agent context.",
+      "description": "Martian-Engineering/lossless-claw provides persistent context-management primitives for OpenClaw-style agent workflows with explicit long-horizon memory handling."
+    },
+    {
       "repo": "matebenyovszky/healing-agent",
       "url": "https://github.com/matebenyovszky/healing-agent",
       "stars": "23",
@@ -5085,6 +5130,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 148 commits, MIT license, 1.1k stars and 122 forks; README says it ships a curated library plus CLI/TUI tooling, with 17 house copies and 103 cataloged upstream items visible in the page snapshot.",
       "description": "AI Agent Skills packages a curated skill library plus CLI/TUI workflows for building and managing smaller, provenance-aware agent skill shelves."
+    },
+    {
+      "repo": "momo-personal-assistant/openclaw-plugin",
+      "url": "https://github.com/momo-personal-assistant/openclaw-plugin",
+      "stars": "15",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "应用/application",
+      "function_tag": "application-demo",
+      "base_theme": "memory",
+      "stack": "TypeScript/OpenClaw Personal Assistant Plugin/Task Memory",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 15 stars, 10 forks, 7 commits, MIT license, and README context as an OpenClaw plugin for the Momo assistant project.",
+      "description": "momo-personal-assistant/openclaw-plugin provides an OpenClaw plugin layer for personal-assistant style workflows with persistent task context."
     },
     {
       "repo": "murataslan1/ai-agent-benchmark",
@@ -7712,6 +7772,21 @@
       "description": "Omnivorous Multi Agent Decision Making Engine - Ingest from any source, query from any channel, get multi-agent consensus"
     },
     {
+      "repo": "syntax-syndicate/OpenHarness-agent-harness",
+      "url": "https://github.com/syntax-syndicate/OpenHarness-agent-harness",
+      "stars": "1",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Python/Agent Harness Runtime/Evaluation Pipeline",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 1 star, 0 forks, 378 commits, MIT license, and explicit fork linkage to HKUDS/OpenHarness.",
+      "description": "syntax-syndicate/OpenHarness-agent-harness tracks an OpenHarness runtime fork for controlled agent execution and evaluation workflow standardization."
+    },
+    {
       "repo": "taishi-n324/awesome-rl-reasoning",
       "url": "https://github.com/taishi-n324/awesome-rl-reasoning",
       "stars": "13",
@@ -7860,6 +7935,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "TextGrad: Automatic ''Differentiation'' via Text -- using large language models to backpropagate textual gradients."
+    },
+    {
+      "repo": "thinkwee/AgentsMeetRL",
+      "url": "https://github.com/thinkwee/AgentsMeetRL",
+      "stars": "1500",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Markdown/Awesome List/Agentic RL Benchmark Survey",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 1.5k stars, 203 forks, 146 commits, and repository messaging as an awesome list for Agentic RL resources.",
+      "description": "thinkwee/AgentsMeetRL is an awesome-style collection focused on agentic RL papers, methods, and benchmark references for agent training/evaluation loops."
     },
     {
       "repo": "thu-nics/mars",

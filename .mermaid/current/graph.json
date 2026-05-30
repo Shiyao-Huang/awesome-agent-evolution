@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T01:21:52+08:00",
+  "generated_at": "2026-05-31T07:20:36+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -318,7 +318,13 @@
         "raw-github/knowall-ai_mcp-neo4j-agent-memory.md",
         "raw-github/learnprompt_cc-harness-skills.md",
         "raw-github/aiming-lab_clawarena.md",
-        "raw-github/kodustech_awesome-agent-skills.md"
+        "raw-github/kodustech_awesome-agent-skills.md",
+        "raw-github/martian-engineering_lossless-claw.md",
+        "raw-github/thinkwee_agentsmeetrl.md",
+        "raw-github/syntax-syndicate_openharness-agent-harness.md",
+        "raw-github/arcadeai_openclaw-arcade-plugin.md",
+        "raw-github/humanitylabs-org_obsidianclaw.md",
+        "raw-github/momo-personal-assistant_openclaw-plugin.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -466,7 +472,8 @@
         "work/research/hourly-public-metadata-update-2026-05-30-0715.md",
         "work/research/hourly-public-metadata-update-2026-05-30-1316.md",
         "work/research/hourly-public-metadata-update-2026-05-30-1917.md",
-        "work/research/hourly-public-metadata-update-2026-05-31-0121.md"
+        "work/research/hourly-public-metadata-update-2026-05-31-0121.md",
+        "work/research/hourly-public-metadata-update-2026-05-31-0720.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -1044,7 +1051,19 @@
         "projects/340-clawarena-computer-use-benchmark.md",
         "site/public/reports/projects/340-clawarena-computer-use-benchmark.md",
         "projects/341-kodu-awesome-agent-skills-index.md",
-        "site/public/reports/projects/341-kodu-awesome-agent-skills-index.md"
+        "site/public/reports/projects/341-kodu-awesome-agent-skills-index.md",
+        "projects/342-lossless-claw-context-management.md",
+        "site/public/reports/projects/342-lossless-claw-context-management.md",
+        "projects/343-agentsmeetrl-benchmark-index.md",
+        "site/public/reports/projects/343-agentsmeetrl-benchmark-index.md",
+        "projects/344-openharness-agent-harness-fork.md",
+        "site/public/reports/projects/344-openharness-agent-harness-fork.md",
+        "projects/345-openclaw-arcade-plugin.md",
+        "site/public/reports/projects/345-openclaw-arcade-plugin.md",
+        "projects/346-obsidianclaw-knowledge-plugin.md",
+        "site/public/reports/projects/346-obsidianclaw-knowledge-plugin.md",
+        "projects/347-momo-openclaw-plugin.md",
+        "site/public/reports/projects/347-momo-openclaw-plugin.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1370,14 +1389,14 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-31T01:21:52+08:00",
+    "run_at": "2026-05-31T07:20:36+08:00",
     "added_repositories": [
-      "EvoMap/evolver",
-      "NousResearch/hermes-agent-self-evolution",
-      "knowall-ai/mcp-neo4j-agent-memory",
-      "LearnPrompt/cc-harness-skills",
-      "aiming-lab/ClawArena",
-      "kodustech/awesome-agent-skills"
+      "Martian-Engineering/lossless-claw",
+      "thinkwee/AgentsMeetRL",
+      "syntax-syndicate/OpenHarness-agent-harness",
+      "ArcadeAI/openclaw-arcade-plugin",
+      "humanitylabs-org/obsidianclaw",
+      "momo-personal-assistant/openclaw-plugin"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
