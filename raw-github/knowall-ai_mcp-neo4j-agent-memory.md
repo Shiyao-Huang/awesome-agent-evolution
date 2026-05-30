@@ -1,6 +1,6 @@
 ---
-repo: NousResearch/hermes-agent-self-evolution
-url: https://github.com/NousResearch/hermes-agent-self-evolution
+repo: knowall-ai/mcp-neo4j-agent-memory
+url: https://github.com/knowall-ai/mcp-neo4j-agent-memory
 content_timestamp: 2026-05-31
 time_slice: 2026-05
 timestamp_source: web_observed_public_github_page_2026_05_31
@@ -8,9 +8,9 @@ collected_at: 2026-05-31T01:21:52+08:00
 source: github
 ---
 
-## GitHub - NousResearch/hermes-agent-self-evolution: NousResearch/hermes-agent-self-evolution packages a self-evolving RL training workflow that distills improved interaction behavior into Hermes model variants.
+## GitHub - knowall-ai/mcp-neo4j-agent-memory: knowall-ai/mcp-neo4j-agent-memory provides an MCP server that gives agents persistent graph memory backed by Neo4j plus vector retrieval.
 
-**Source**: https://github.com/NousResearch/hermes-agent-self-evolution
+**Source**: https://github.com/knowall-ai/mcp-neo4j-agent-memory
 
 ---
 
@@ -20,20 +20,20 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 
 ## Visible repository metadata
 
-- Repository: NousResearch/hermes-agent-self-evolution
-- URL: https://github.com/NousResearch/hermes-agent-self-evolution
-- Stars: 3700
-- Forks: 422
-- Commits: 7
+- Repository: knowall-ai/mcp-neo4j-agent-memory
+- URL: https://github.com/knowall-ai/mcp-neo4j-agent-memory
+- Stars: 68
+- Forks: 15
+- Commits: 52
 - License: MIT
-- Primary language / stack signal: Python/RL Distillation Pipeline/Self-Evolution Agent Training
+- Primary language / stack signal: TypeScript/Neo4j MCP Server/Vector Memory Store
 - Collection timestamp: 2026-05-31T01:21:52+08:00
 
 ## Visible README / page excerpts
 
-- README reports self-evolution training on top of Hermes and cites coding benchmark gains.
-- Repository framing highlights iterative on-policy adaptation rather than static prompting only.
-- Public page snapshot showed 3.7k stars, 422 forks, and 7 commits.
+- README states the server gives AI agents memory using Neo4j and a vector store.
+- Project documentation positions MCP as the runtime interface for memory read/write and search.
+- Public page snapshot showed 68 stars, 15 forks, and 52 commits.
 - Counts were taken from the public GitHub page without authenticated API claims.
 
 ## Raw capture boundary

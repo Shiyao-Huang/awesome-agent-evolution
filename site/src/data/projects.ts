@@ -5648,6 +5648,174 @@ export const projects: Project[] = [
                     "dspy",
                     "evaluation"
             ]
+    },
+    {
+            "name": "EvoMap Evolver",
+            "repo": "EvoMap/evolver",
+            "url": "https://github.com/EvoMap/evolver",
+            "stars": 7600,
+            "forks": 773,
+            "language": "JavaScript",
+            "license": "GPL-3.0",
+            "report": "projects/336-evomap-evolver-self-evolving-memory-framework.md",
+            "pattern": "represent knowledge as evolving graph maps -> apply reinforcement and relation updates from interaction feedback -> optimize memory retrieval paths for downstream reasoning -> persist the updated map structure as a reusable long-horizon state substrate",
+            "description": "EvoMap/evolver presents a memory-map framework that keeps updating graph structures from user and task feedback to improve retrieval and reasoning quality over time.",
+            "stack": [
+                    "JavaScript",
+                    "Graph Memory Evolution Runtime",
+                    "Reasoning Retrieval"
+            ],
+            "category": "Self-Evolving Memory and Reasoning Map Framework",
+            "lastPushed": "2026-05-31T00:00:00Z",
+            "localPath": "raw-github/evomap_evolver.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "graph",
+                    "self-evolving",
+                    "retrieval",
+                    "reasoning"
+            ]
+    },
+    {
+            "name": "Hermes Agent Self-Evolution",
+            "repo": "NousResearch/hermes-agent-self-evolution",
+            "url": "https://github.com/NousResearch/hermes-agent-self-evolution",
+            "stars": 3700,
+            "forks": 422,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/337-hermes-agent-self-evolution-rl-model-card.md",
+            "pattern": "collect trajectories from environment interaction -> run self-play and reward-driven filtering -> distill improved policy behavior into Hermes checkpoints -> iterate closed-loop updates to increase task-level coding and reasoning performance",
+            "description": "NousResearch/hermes-agent-self-evolution packages a self-evolving RL training workflow that distills improved interaction behavior into Hermes model variants.",
+            "stack": [
+                    "Python",
+                    "RL Distillation Pipeline",
+                    "Self-Evolution Agent Training"
+            ],
+            "category": "On-Policy RL Self-Evolution Pipeline for Agent Models",
+            "lastPushed": "2026-05-31T00:00:00Z",
+            "localPath": "raw-github/nousresearch_hermes-agent-self-evolution.md",
+            "status": "candidate",
+            "tags": [
+                    "self-evolution",
+                    "rl",
+                    "agent-training",
+                    "distillation",
+                    "hermes"
+            ]
+    },
+    {
+            "name": "MCP Neo4j Agent Memory",
+            "repo": "knowall-ai/mcp-neo4j-agent-memory",
+            "url": "https://github.com/knowall-ai/mcp-neo4j-agent-memory",
+            "stars": 68,
+            "forks": 15,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/338-mcp-neo4j-agent-memory-server.md",
+            "pattern": "capture chat events and tool outputs into a graph memory store -> expose semantic and structural retrieval through MCP endpoints -> keep temporal and entity relations queryable -> feed retrieved memories back into agent planning and execution loops",
+            "description": "knowall-ai/mcp-neo4j-agent-memory provides an MCP server that gives agents persistent graph memory backed by Neo4j plus vector retrieval.",
+            "stack": [
+                    "TypeScript",
+                    "Neo4j MCP Server",
+                    "Vector Memory Store"
+            ],
+            "category": "Graph-Memory MCP Server for Long-Horizon Agents",
+            "lastPushed": "2026-05-31T00:00:00Z",
+            "localPath": "raw-github/knowall-ai_mcp-neo4j-agent-memory.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "neo4j",
+                    "mcp",
+                    "graph",
+                    "long-context"
+            ]
+    },
+    {
+            "name": "CC Harness Skills",
+            "repo": "LearnPrompt/cc-harness-skills",
+            "url": "https://github.com/LearnPrompt/cc-harness-skills",
+            "stars": 217,
+            "forks": 63,
+            "language": "Markdown",
+            "license": "MIT",
+            "report": "projects/339-cc-harness-skills-operational-playbooks.md",
+            "pattern": "encode recurring coding-agent execution patterns as reusable markdown skills -> bind each playbook to harness-level commands and quality checks -> reuse these skills across sessions to reduce setup entropy -> iterate skill prompts based on failure and review feedback",
+            "description": "LearnPrompt/cc-harness-skills curates reusable harness playbooks for Codex and Claude Code workflows, emphasizing skill reuse over one-off prompts.",
+            "stack": [
+                    "Markdown",
+                    "Harness Skill Playbooks",
+                    "Codex-Claude Workflows"
+            ],
+            "category": "Codex/Claude Harness Skill Playbooks",
+            "lastPushed": "2026-05-31T00:00:00Z",
+            "localPath": "raw-github/learnprompt_cc-harness-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "skills",
+                    "harness",
+                    "codex",
+                    "claude-code",
+                    "playbook"
+            ]
+    },
+    {
+            "name": "ClawArena",
+            "repo": "aiming-lab/ClawArena",
+            "url": "https://github.com/aiming-lab/ClawArena",
+            "stars": 47,
+            "forks": 0,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/340-clawarena-computer-use-benchmark.md",
+            "pattern": "run interactive browser/desktop tasks in benchmark arenas -> score agent behavior across controlled environments -> compare policy and harness variants with reproducible evaluation traces -> feed benchmark deltas back into harness and skill updates",
+            "description": "aiming-lab/ClawArena focuses on benchmark-centric evaluation for computer-use agents under controlled interactive environments.",
+            "stack": [
+                    "Python",
+                    "Computer-Use Benchmark Arena",
+                    "Multi-Agent Harness"
+            ],
+            "category": "Interactive Computer-Use Benchmark Harness Arena",
+            "lastPushed": "2026-05-31T00:00:00Z",
+            "localPath": "raw-github/aiming-lab_clawarena.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "computer-use",
+                    "harness",
+                    "evaluation",
+                    "agent"
+            ]
+    },
+    {
+            "name": "Kodu Awesome Agent Skills",
+            "repo": "kodustech/awesome-agent-skills",
+            "url": "https://github.com/kodustech/awesome-agent-skills",
+            "stars": 71,
+            "forks": 29,
+            "language": "Markdown",
+            "license": "CC0-1.0",
+            "report": "projects/341-kodu-awesome-agent-skills-index.md",
+            "pattern": "curate reusable coding-agent skills into an index with reproducible examples -> normalize prompt and workflow patterns across domains -> make skills discoverable and composable for harness integration -> accelerate agent improvement by reusing validated skill modules",
+            "description": "kodustech/awesome-agent-skills is a curated index of reusable AI coding-agent skills and prompt workflow patterns.",
+            "stack": [
+                    "Markdown",
+                    "Agent Skill Catalog",
+                    "Reusable Prompt Patterns"
+            ],
+            "category": "Curated Agent Skill Catalog and Prompt Workflow Patterns",
+            "lastPushed": "2026-05-31T00:00:00Z",
+            "localPath": "raw-github/kodustech_awesome-agent-skills.md",
+            "status": "candidate",
+            "tags": [
+                    "skills",
+                    "awesome-list",
+                    "prompt-patterns",
+                    "catalog",
+                    "agent-workflow"
+            ]
     }
 ];
 
@@ -5678,7 +5846,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness', 'dotnet/skills', 'datalayer/agent-skills', 'block/agent-skills', 'Corbell-AI/evalmonkey', 'nomic-ai/aec-bench', 'google/ax', 'aiming-lab/AutoHarness', 'OWASP/www-project-agent-memory-guard', 'addyosmani/agent-skills', 'zocomputer/skills', 'QF-Bench/QuantitativeFinance-Bench', 'zikuicai/aegisllm'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness', 'dotnet/skills', 'datalayer/agent-skills', 'block/agent-skills', 'Corbell-AI/evalmonkey', 'nomic-ai/aec-bench', 'google/ax', 'aiming-lab/AutoHarness', 'OWASP/www-project-agent-memory-guard', 'addyosmani/agent-skills', 'zocomputer/skills', 'QF-Bench/QuantitativeFinance-Bench', 'zikuicai/aegisllm', 'EvoMap/evolver', 'NousResearch/hermes-agent-self-evolution', 'knowall-ai/mcp-neo4j-agent-memory', 'LearnPrompt/cc-harness-skills', 'aiming-lab/ClawArena', 'kodustech/awesome-agent-skills'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

@@ -1,6 +1,6 @@
 ---
-repo: NousResearch/hermes-agent-self-evolution
-url: https://github.com/NousResearch/hermes-agent-self-evolution
+repo: LearnPrompt/cc-harness-skills
+url: https://github.com/LearnPrompt/cc-harness-skills
 content_timestamp: 2026-05-31
 time_slice: 2026-05
 timestamp_source: web_observed_public_github_page_2026_05_31
@@ -8,9 +8,9 @@ collected_at: 2026-05-31T01:21:52+08:00
 source: github
 ---
 
-## GitHub - NousResearch/hermes-agent-self-evolution: NousResearch/hermes-agent-self-evolution packages a self-evolving RL training workflow that distills improved interaction behavior into Hermes model variants.
+## GitHub - LearnPrompt/cc-harness-skills: LearnPrompt/cc-harness-skills curates reusable harness playbooks for Codex and Claude Code workflows, emphasizing skill reuse over one-off prompts.
 
-**Source**: https://github.com/NousResearch/hermes-agent-self-evolution
+**Source**: https://github.com/LearnPrompt/cc-harness-skills
 
 ---
 
@@ -20,20 +20,20 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 
 ## Visible repository metadata
 
-- Repository: NousResearch/hermes-agent-self-evolution
-- URL: https://github.com/NousResearch/hermes-agent-self-evolution
-- Stars: 3700
-- Forks: 422
-- Commits: 7
+- Repository: LearnPrompt/cc-harness-skills
+- URL: https://github.com/LearnPrompt/cc-harness-skills
+- Stars: 217
+- Forks: 63
+- Commits: 2
 - License: MIT
-- Primary language / stack signal: Python/RL Distillation Pipeline/Self-Evolution Agent Training
+- Primary language / stack signal: Markdown/Harness Skill Playbooks/Codex-Claude Workflows
 - Collection timestamp: 2026-05-31T01:21:52+08:00
 
 ## Visible README / page excerpts
 
-- README reports self-evolution training on top of Hermes and cites coding benchmark gains.
-- Repository framing highlights iterative on-policy adaptation rather than static prompting only.
-- Public page snapshot showed 3.7k stars, 422 forks, and 7 commits.
+- README presents practical Codex and Claude Code skill files for recurring engineering workflows.
+- Repository structure centers on reusable harness skills instead of a single app runtime.
+- Public page snapshot showed 217 stars, 63 forks, and 2 commits.
 - Counts were taken from the public GitHub page without authenticated API claims.
 
 ## Raw capture boundary

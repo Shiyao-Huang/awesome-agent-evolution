@@ -1,6 +1,6 @@
 ---
-repo: NousResearch/hermes-agent-self-evolution
-url: https://github.com/NousResearch/hermes-agent-self-evolution
+repo: aiming-lab/ClawArena
+url: https://github.com/aiming-lab/ClawArena
 content_timestamp: 2026-05-31
 time_slice: 2026-05
 timestamp_source: web_observed_public_github_page_2026_05_31
@@ -8,9 +8,9 @@ collected_at: 2026-05-31T01:21:52+08:00
 source: github
 ---
 
-## GitHub - NousResearch/hermes-agent-self-evolution: NousResearch/hermes-agent-self-evolution packages a self-evolving RL training workflow that distills improved interaction behavior into Hermes model variants.
+## GitHub - aiming-lab/ClawArena: aiming-lab/ClawArena focuses on benchmark-centric evaluation for computer-use agents under controlled interactive environments.
 
-**Source**: https://github.com/NousResearch/hermes-agent-self-evolution
+**Source**: https://github.com/aiming-lab/ClawArena
 
 ---
 
@@ -20,20 +20,20 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 
 ## Visible repository metadata
 
-- Repository: NousResearch/hermes-agent-self-evolution
-- URL: https://github.com/NousResearch/hermes-agent-self-evolution
-- Stars: 3700
-- Forks: 422
-- Commits: 7
+- Repository: aiming-lab/ClawArena
+- URL: https://github.com/aiming-lab/ClawArena
+- Stars: 47
+- Forks: 0
+- Commits: 4
 - License: MIT
-- Primary language / stack signal: Python/RL Distillation Pipeline/Self-Evolution Agent Training
+- Primary language / stack signal: Python/Computer-Use Benchmark Arena/Multi-Agent Harness
 - Collection timestamp: 2026-05-31T01:21:52+08:00
 
 ## Visible README / page excerpts
 
-- README reports self-evolution training on top of Hermes and cites coding benchmark gains.
-- Repository framing highlights iterative on-policy adaptation rather than static prompting only.
-- Public page snapshot showed 3.7k stars, 422 forks, and 7 commits.
+- Repository description frames ClawArena as a benchmark for computer-use agents.
+- Public page emphasizes evaluation-centric setup rather than model pretraining claims.
+- Public page snapshot showed 47 stars, 0 forks, and 4 commits.
 - Counts were taken from the public GitHub page without authenticated API claims.
 
 ## Raw capture boundary

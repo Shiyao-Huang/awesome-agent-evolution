@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T19:17:15+08:00",
+  "generated_at": "2026-05-31T01:21:52+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -312,7 +312,13 @@
         "raw-github/addyosmani_agent-skills.md",
         "raw-github/zocomputer_skills.md",
         "raw-github/qf-bench_quantitativefinance-bench.md",
-        "raw-github/zikuicai_aegisllm.md"
+        "raw-github/zikuicai_aegisllm.md",
+        "raw-github/evomap_evolver.md",
+        "raw-github/nousresearch_hermes-agent-self-evolution.md",
+        "raw-github/knowall-ai_mcp-neo4j-agent-memory.md",
+        "raw-github/learnprompt_cc-harness-skills.md",
+        "raw-github/aiming-lab_clawarena.md",
+        "raw-github/kodustech_awesome-agent-skills.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -459,7 +465,8 @@
         "work/research/hourly-public-metadata-update-2026-05-30-0115.md",
         "work/research/hourly-public-metadata-update-2026-05-30-0715.md",
         "work/research/hourly-public-metadata-update-2026-05-30-1316.md",
-        "work/research/hourly-public-metadata-update-2026-05-30-1917.md"
+        "work/research/hourly-public-metadata-update-2026-05-30-1917.md",
+        "work/research/hourly-public-metadata-update-2026-05-31-0121.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -1025,7 +1032,19 @@
         "projects/334-qf-bench-financial-agent-evaluation.md",
         "site/public/reports/projects/334-qf-bench-financial-agent-evaluation.md",
         "projects/335-aegisllm-self-reflective-defense-agents.md",
-        "site/public/reports/projects/335-aegisllm-self-reflective-defense-agents.md"
+        "site/public/reports/projects/335-aegisllm-self-reflective-defense-agents.md",
+        "projects/336-evomap-evolver-self-evolving-memory-framework.md",
+        "site/public/reports/projects/336-evomap-evolver-self-evolving-memory-framework.md",
+        "projects/337-hermes-agent-self-evolution-rl-model-card.md",
+        "site/public/reports/projects/337-hermes-agent-self-evolution-rl-model-card.md",
+        "projects/338-mcp-neo4j-agent-memory-server.md",
+        "site/public/reports/projects/338-mcp-neo4j-agent-memory-server.md",
+        "projects/339-cc-harness-skills-operational-playbooks.md",
+        "site/public/reports/projects/339-cc-harness-skills-operational-playbooks.md",
+        "projects/340-clawarena-computer-use-benchmark.md",
+        "site/public/reports/projects/340-clawarena-computer-use-benchmark.md",
+        "projects/341-kodu-awesome-agent-skills-index.md",
+        "site/public/reports/projects/341-kodu-awesome-agent-skills-index.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1351,14 +1370,14 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-30T19:17:15+08:00",
+    "run_at": "2026-05-31T01:21:52+08:00",
     "added_repositories": [
-      "aiming-lab/AutoHarness",
-      "OWASP/www-project-agent-memory-guard",
-      "addyosmani/agent-skills",
-      "zocomputer/skills",
-      "QF-Bench/QuantitativeFinance-Bench",
-      "zikuicai/aegisllm"
+      "EvoMap/evolver",
+      "NousResearch/hermes-agent-self-evolution",
+      "knowall-ai/mcp-neo4j-agent-memory",
+      "LearnPrompt/cc-harness-skills",
+      "aiming-lab/ClawArena",
+      "kodustech/awesome-agent-skills"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",

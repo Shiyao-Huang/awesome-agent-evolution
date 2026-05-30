@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T19:17:15+08:00",
+  "generated_at": "2026-05-31T01:21:52+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -525,6 +525,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 239 commits, MIT license, Python primary language, v0.5.0 latest May 20 2026, 12.6k stars and 1.5k forks; README describes 23-stage autonomous/co-pilot research pipeline, PIVOT/REFINE loop, self-learning lessons, ARC-Bench, and A-Evolve skill integration",
       "description": "AutoResearchClaw 是从 research idea 到 paper 的自主/协作式科研 agent 管线，结合多 agent debate、实验沙箱、claim verification、HITL co-pilot、MetaClaw cross-run learning 和 ARC-Bench。"
+    },
+    {
+      "repo": "aiming-lab/ClawArena",
+      "url": "https://github.com/aiming-lab/ClawArena",
+      "stars": "47",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/Computer-Use Benchmark Arena/Multi-Agent Harness",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 47 stars, 0 forks, 4 commits, MIT license, and explicit benchmark arena framing for computer-use agents.",
+      "description": "aiming-lab/ClawArena focuses on benchmark-centric evaluation for computer-use agents under controlled interactive environments."
     },
     {
       "repo": "aiming-lab/SimpleMem",
@@ -2252,19 +2267,19 @@
       "description": "A curated list of AI Agent evolution, memory systems, multi-agent architectures, and self-improvement projects. | evomap.ai"
     },
     {
-      "repo": "evomap/evolver",
-      "url": "https://github.com/evomap/evolver",
-      "stars": "7",
-      "prior_category": "框架",
-      "prior_unclassified": "false",
+      "repo": "EvoMap/evolver",
+      "url": "https://github.com/EvoMap/evolver",
+      "stars": "7600",
+      "prior_category": "-",
+      "prior_unclassified": "true",
       "final_category": "框架/framework",
-      "function_tag": "tool-module",
-      "base_theme": "evolution",
-      "stack": "Markdown",
-      "time_slice": "2026-02",
-      "content_timestamp": "2026-02-01",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "The GEP-powered self-evolving engine for AI agents. Auditable evolution with Genes, Capsules, and Events. | evomap.ai"
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "JavaScript/Graph Memory Evolution Runtime/Reasoning Retrieval",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 7.6k stars, 773 forks, 87 commits, GPL-3.0 license, and README positioning around self-evolving memory maps for AI reasoning.",
+      "description": "EvoMap/evolver presents a memory-map framework that keeps updating graph structures from user and task feedback to improve retrieval and reasoning quality over time."
     },
     {
       "repo": "evotai/evot",
@@ -3782,6 +3797,21 @@
       "description": "A Curated List of Awesome Works in World Modeling, Aiming to Serve as a One-stop Resource for Researchers, Practitioners, and Enthusiasts Interested in World Modeling."
     },
     {
+      "repo": "knowall-ai/mcp-neo4j-agent-memory",
+      "url": "https://github.com/knowall-ai/mcp-neo4j-agent-memory",
+      "stars": "68",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
+      "base_theme": "memory",
+      "stack": "TypeScript/Neo4j MCP Server/Vector Memory Store",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 68 stars, 15 forks, 52 commits, MIT license, and README claims about long-term graph memory for AI agents.",
+      "description": "knowall-ai/mcp-neo4j-agent-memory provides an MCP server that gives agents persistent graph memory backed by Neo4j plus vector retrieval."
+    },
+    {
       "repo": "knowledgexlab/muse",
       "url": "https://github.com/knowledgexlab/muse",
       "stars": "88",
@@ -3810,6 +3840,21 @@
       "content_timestamp": "2025-11-13",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "🚀 **2026 Roadmap: Machine Learning, Artificial Intelligence, Generative AI & Agentic AI**"
+    },
+    {
+      "repo": "kodustech/awesome-agent-skills",
+      "url": "https://github.com/kodustech/awesome-agent-skills",
+      "stars": "71",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/Agent Skill Catalog/Reusable Prompt Patterns",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 71 stars, 29 forks, 36 commits, CC0-1.0 license, and README positioning as an awesome list of coding-agent skills.",
+      "description": "kodustech/awesome-agent-skills is a curated index of reusable AI coding-agent skills and prompt workflow patterns."
     },
     {
       "repo": "krzysztofdudek/researcherskill",
@@ -4020,6 +4065,21 @@
       "content_timestamp": "unknown",
       "evidence": "framework/runtime/orchestration signal",
       "description": "LeanAgent is a novel lifelong learning framework for formal theorem proving that continuously generalizes to and improves on ever-expanding mathematical knowledge without forgetting previously learned knowledge."
+    },
+    {
+      "repo": "LearnPrompt/cc-harness-skills",
+      "url": "https://github.com/LearnPrompt/cc-harness-skills",
+      "stars": "217",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "Markdown/Harness Skill Playbooks/Codex-Claude Workflows",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 217 stars, 63 forks, 2 commits, MIT license, and repository messaging focused on installable harness skills.",
+      "description": "LearnPrompt/cc-harness-skills curates reusable harness playbooks for Codex and Claude Code workflows, emphasizing skill reuse over one-off prompts."
     },
     {
       "repo": "legionio/lex-metacognition",
@@ -5312,19 +5372,19 @@
       "content_timestamp": "2026-05-16"
     },
     {
-      "repo": "nousresearch/hermes-agent-self-evolution",
-      "url": "https://github.com/nousresearch/hermes-agent-self-evolution",
-      "stars": "3",
-      "prior_category": "应用",
-      "prior_unclassified": "false",
-      "final_category": "应用/application",
-      "function_tag": "research-artifact",
+      "repo": "NousResearch/hermes-agent-self-evolution",
+      "url": "https://github.com/NousResearch/hermes-agent-self-evolution",
+      "stars": "3700",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "agent-evolution-infra",
       "base_theme": "evolution",
-      "stack": "Python",
+      "stack": "Python/RL Distillation Pipeline/Self-Evolution Agent Training",
       "time_slice": "2026-05",
-      "content_timestamp": "2026-05-21",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "⚒ Evolutionary self-improvement for Hermes Agent — optimize skills, prompts, and code using DSPy + GEPA"
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 3.7k stars, 422 forks, 7 commits, MIT-licensed model card references, and explicit self-evolution benchmark claims.",
+      "description": "NousResearch/hermes-agent-self-evolution packages a self-evolving RL training workflow that distills improved interaction behavior into Hermes model variants."
     },
     {
       "repo": "obra/superpowers",

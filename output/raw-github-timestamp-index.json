@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-30T00:00:00+08:00",
-  "total": 614,
-  "updated_files": 614,
+  "generated_at": "2026-05-31T00:00:00+08:00",
+  "total": 618,
+  "updated_files": 618,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -318,6 +318,15 @@
       "collected_at": "2026-05-24T17:06:44Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "aiming-lab/ClawArena",
+      "url": "https://github.com/aiming-lab/ClawArena",
+      "file": "raw-github/aiming-lab_clawarena.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T01:21:52+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
     },
     {
       "repo": "aiming-lab/SimpleMem",
@@ -1355,13 +1364,13 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
-      "repo": "evomap/evolver",
-      "url": "https://github.com/evomap/evolver",
+      "repo": "EvoMap/evolver",
+      "url": "https://github.com/EvoMap/evolver",
       "file": "raw-github/evomap_evolver.md",
-      "content_timestamp": "2026-02-01",
-      "collected_at": "2026-05-20T17:45:19Z",
-      "time_slice": "2026-02",
-      "timestamp_source": "github_latest_commit_or_update_text"
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T01:21:52+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
     },
     {
       "repo": "evotai/evot",
@@ -2273,6 +2282,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "knowall-ai/mcp-neo4j-agent-memory",
+      "url": "https://github.com/knowall-ai/mcp-neo4j-agent-memory",
+      "file": "raw-github/knowall-ai_mcp-neo4j-agent-memory.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T01:21:52+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
+    },
+    {
       "repo": "knowledgexlab/muse",
       "url": "https://github.com/knowledgexlab/muse",
       "file": "raw-github/knowledgexlab_muse.md",
@@ -2289,6 +2307,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "2025-11",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "kodustech/awesome-agent-skills",
+      "url": "https://github.com/kodustech/awesome-agent-skills",
+      "file": "raw-github/kodustech_awesome-agent-skills.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T01:21:52+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
     },
     {
       "repo": "krzysztofdudek/researcherskill",
@@ -2415,6 +2442,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "LearnPrompt/cc-harness-skills",
+      "url": "https://github.com/LearnPrompt/cc-harness-skills",
+      "file": "raw-github/learnprompt_cc-harness-skills.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T01:21:52+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
     },
     {
       "repo": "legionio/lex-metacognition",
@@ -3182,13 +3218,13 @@
       "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
-      "repo": "nousresearch/hermes-agent-self-evolution",
-      "url": "https://github.com/nousresearch/hermes-agent-self-evolution",
+      "repo": "NousResearch/hermes-agent-self-evolution",
+      "url": "https://github.com/NousResearch/hermes-agent-self-evolution",
       "file": "raw-github/nousresearch_hermes-agent-self-evolution.md",
-      "content_timestamp": "2026-05-21",
-      "collected_at": "2026-05-20T17:45:19Z",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T01:21:52+08:00",
       "time_slice": "2026-05",
-      "timestamp_source": "github_latest_commit_or_update_text"
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
     },
     {
       "repo": "nousresearch/hermes-agent",

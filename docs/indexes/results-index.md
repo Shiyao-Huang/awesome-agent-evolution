@@ -1,6 +1,6 @@
 # Results / 结果输出 Index
 
-> Generated: 2026-05-30
+> Generated: 2026-05-31
 
 ## Rule
 
@@ -11,8 +11,8 @@
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
 | `reports` | present | 14 | 2 | 0 | 97 KB |
-| `output` | present | 8 | 1 | 0 | 634 KB |
-| `site/public/reports` | present | 440 | 6 | 0 | 2.8 MB |
+| `output` | present | 8 | 1 | 0 | 638 KB |
+| `site/public/reports` | present | 446 | 6 | 0 | 2.8 MB |
 | `site/dist` | present | 835 | 358 | 0 | 17 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 983 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
