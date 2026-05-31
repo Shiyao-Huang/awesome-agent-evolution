@@ -24,6 +24,7 @@ Claude/Claude Code 在本仓库工作时，以 [AGENTS.md](AGENTS.md) 为最高�
 - **Mom Test**：README 和面向用户的内容必须让非专业人士能理解项目做什么、为什么重要。
 - **证据链**：每个分析结论标注数据来源。无法追溯的标注 `[UNVERIFIED]`。
 - **中文调查同步**：`survey/` 是中文版调查，与 `paper-drafts/` 平行。修改一方时检查另一方是否需要同步。
+- **读者/Agent 边界**：README、网站首页、论文页、SEO 页面是给外部读者/消费者看的；不要把 agent 启动检查、内部构建命令、wiki ingest 流程、handoff 或自我系统说明塞进 README 主体。Agent 操作规则写在 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md` 或 `docs/ops/`。
 
 ## Website Style Baseline
 

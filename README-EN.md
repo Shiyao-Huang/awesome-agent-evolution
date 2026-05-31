@@ -46,7 +46,7 @@ Five-sentence expansion:
 2. The survey is not just a literature summary; it cross-checks papers, projects, benchmarks, social/blog signals, and user pain points.
 3. The key judgment is no longer whether a project name includes "evolution"; it is whether the system forms an Observe -> Interpret -> Modify -> Verify -> Retain loop.
 4. The AGI-index work is no longer just a site module; it becomes a paper contribution that gives the field an interpretable maturity coordinate system.
-5. Future material must enter raw or processed layers before changing the README, paper, site, or results; unsupported claims are marked `[UNVERIFIED]`.
+5. Every core claim exposed to readers should trace back to the paper, project reports, data indexes, or benchmark evidence; unsupported claims are marked `[UNVERIFIED]`.
 
 ## Core Findings
 
@@ -88,7 +88,7 @@ The current snapshot in [reports/evolve-agi-index-trend.json](reports/evolve-agi
 | Processed analysis | Converts raw material into classifications, mechanisms, model cards, paper reviews, rankings, and the Evolve-AGI Index. | [processed index](docs/indexes/processed-index.md), [GitHub analysis](analysis/github-project-data-analysis.md), [projects index](projects/INDEX.md) |
 | Survey work | Turns mechanisms, systems, evaluation, industry practice, pain points, and futures into paper structure. | [survey CN chapters](survey/ch1-intro-cn.md), [paper drafts](paper-drafts/main.tex), [survey latex](survey/latex/main.tex) |
 | Results | Publishes PDFs, site pages, reports, graphs, trend snapshots, and SEO material. | [results index](docs/indexes/results-index.md), [site](site/src/pages/index.astro), [reports](reports/) |
-| Wiki mirror | Stores key judgments as searchable long-term knowledge for agents. | [wiki index](work/wiki/index.md), [wiki schema](work/wiki/schema.md) |
+| Evidence catalog | Lets readers inspect evidence chains, indexes, and public results. | [CONTENT_INDEX.md](CONTENT_INDEX.md), [master index](docs/indexes/master-index.md) |
 
 ```mermaid
 flowchart TB
@@ -134,26 +134,17 @@ flowchart TB
 - [KNOWN] Survey chapters and the paper draft come from [paper-drafts/main.tex](paper-drafts/main.tex) and [survey/latex/main.tex](survey/latex/main.tex).
 - [INFERRED] The "new Spark" is a synthesis over those sources: upgrading the Awesome repository into a survey + index + evidence graph for controlled self-evolution, not a simple link site.
 
-## Maintenance Rules
+## Reader Next Steps
 
-1. New source material enters `raw-*`; raw material is not rewritten as analysis.
-2. New judgments enter `analysis/`, `research/`, `projects/`, or `work/wiki/` with sources.
-3. Changes that affect the README, paper, or site must refresh indexes and run the relevant build.
-4. Historical Evolve-AGI Index snapshots should be appended to `reports/evolve-agi-index-trend.json`, not overwritten.
-5. The README carries survey results and evidence navigation; generated indexes and site pages carry full tables.
+| Goal | Recommended entry |
+|---|---|
+| Understand the field quickly | Start with the core findings and the Evolve-AGI Index in this README. |
+| Read the paper deeply | Open [paper-drafts/main.pdf](paper-drafts/main.pdf) or the [paper page](site/src/pages/paper/index.astro). |
+| Inspect project evidence | Use [projects/INDEX.md](projects/INDEX.md) and [public project reports](site/public/reports/projects/INDEX.md). |
+| Check data coverage | Use [docs/indexes/master-index.md](docs/indexes/master-index.md) and [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md). |
+| Browse the website | Open the [Self Evolve site](https://shiyao-huang.github.io/awesome-agent-evolution/) or the [site source](site/). |
 
-## Verification
-
-```bash
-node scripts/generate_project_indexes.mjs
-python3 scripts/enforce_raw_timestamps.py
-node scripts/analyze_github_project_data.mjs
-(cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex)
-(cd survey/latex && xelatex -interaction=nonstopmode -halt-on-error main.tex)
-(cd site && npm run build)
-```
-
-For a documentation-only iteration, refresh indexes and build the site at minimum. If LaTeX paper files change, build `paper-drafts/main.tex`.
+Internal operating rules for agents, automation, builds, and release gates are not part of the README body; see [AGENTS.md](AGENTS.md) and [CLOUD.md](CLOUD.md).
 
 ## Citation
 

@@ -46,7 +46,7 @@ flowchart LR
 2. Survey 不是“总结已有论文”，而是把论文、项目、benchmark、社交/博客信号和用户痛点互相校验。
 3. 关键判断不再是“项目名字里有没有 evolution”，而是“系统是否形成 Observe -> Interpret -> Modify -> Verify -> Retain 的闭环”。
 4. AGI index 相关成果不再只是网站模块，而是论文的核心贡献之一：给这个领域一个可解释的成熟度坐标系。
-5. 后续新增材料必须先进入 raw 或 processed，再影响 README、论文、网站和结果层；没有证据链的结论标记为 `[UNVERIFIED]`。
+5. 对外读者看到的每个核心判断都应该能回到论文、项目报告、数据索引或 benchmark 证据；没有证据链的结论标记为 `[UNVERIFIED]`。
 
 ## 核心结论
 
@@ -88,7 +88,7 @@ EAI = Σ(signal_score × signal_weight)
 | Processed analysis | 把 raw 转成分类、机制、model card、paper review、ranking 和 Evolve-AGI Index。 | [processed index](docs/indexes/processed-index.md), [GitHub analysis](analysis/github-project-data-analysis.md), [projects index](projects/INDEX.md) |
 | Survey work | 把机制、系统、评估、工业实践、痛点和未来方向写成论文结构。 | [survey CN chapters](survey/ch1-intro-cn.md), [paper drafts](paper-drafts/main.tex), [survey latex](survey/latex/main.tex) |
 | Results | 对外发布 PDF、网站、报告、图谱、趋势快照和 SEO 页面。 | [results index](docs/indexes/results-index.md), [site](site/src/pages/index.astro), [reports](reports/) |
-| Wiki mirror | 把关键判断沉淀成 agent 可检索的长期知识。 | [wiki index](work/wiki/index.md), [wiki schema](work/wiki/schema.md) |
+| Evidence catalog | 给读者检查证据链、索引和公开结果的入口。 | [CONTENT_INDEX.md](CONTENT_INDEX.md), [master index](docs/indexes/master-index.md) |
 
 ```mermaid
 flowchart TB
@@ -134,26 +134,17 @@ flowchart TB
 - [KNOWN] Survey 章节和论文主稿来自 [paper-drafts/main.tex](paper-drafts/main.tex) 与 [survey/latex/main.tex](survey/latex/main.tex)。
 - [INFERRED] “新 Spark”是对上述证据的综合判断：把 Awesome 仓库升级为受控自进化领域的 survey + index + evidence graph，而不是一个单纯链接站。
 
-## 维护规则
+## 给读者的下一步
 
-1. 新素材先进 `raw-*`，不要把 raw 改写成分析。
-2. 新判断进 `analysis/`、`research/`、`projects/` 或 `work/wiki/`，并写清 sources。
-3. 影响 README、论文或网站的改动，要同步索引并跑对应构建。
-4. Evolve-AGI Index 的历史快照应追加到 `reports/evolve-agi-index-trend.json`，不要覆盖旧点。
-5. README 只承载 survey 成果和证据导航；全量表格交给生成索引和网站页面。
+| 目标 | 推荐入口 |
+|---|---|
+| 快速理解领域 | 先读本 README 的核心结论和 Evolve-AGI Index。 |
+| 深入阅读论文 | 打开 [paper-drafts/main.pdf](paper-drafts/main.pdf) 或 [paper page](site/src/pages/paper/index.astro)。 |
+| 查项目证据 | 使用 [projects/INDEX.md](projects/INDEX.md) 和 [public project reports](site/public/reports/projects/INDEX.md)。 |
+| 查数据范围 | 使用 [docs/indexes/master-index.md](docs/indexes/master-index.md) 和 [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md)。 |
+| 浏览网站 | 打开 [Self Evolve site](https://shiyao-huang.github.io/awesome-agent-evolution/) 或本仓库的 [site source](site/)。 |
 
-## 验证入口
-
-```bash
-node scripts/generate_project_indexes.mjs
-python3 scripts/enforce_raw_timestamps.py
-node scripts/analyze_github_project_data.mjs
-(cd paper-drafts && xelatex -interaction=nonstopmode -halt-on-error main.tex)
-(cd survey/latex && xelatex -interaction=nonstopmode -halt-on-error main.tex)
-(cd site && npm run build)
-```
-
-本轮 README 改动以 survey/论文/索引为主；如果只改文档，至少刷新索引并构建网站。涉及论文 LaTeX 时，构建 `paper-drafts/main.tex`。
+面向 agent、自动化、构建和发布的内部操作规则不写在 README 主体里；请看 [AGENTS.md](AGENTS.md) 和 [CLOUD.md](CLOUD.md)。
 
 ## Citation
 

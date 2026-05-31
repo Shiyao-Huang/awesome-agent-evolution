@@ -36,6 +36,8 @@
 - **Mom Test usability**: README 和面向用户的内容必须通过 "Mom Test"——一个非专业人士能否理解这个项目做什么、为什么重要？
 - **Evidence chain**: 每个分析结论必须可追溯到 raw 数据源。如果无法追溯，标注 `[UNVERIFIED]`。
 - **Layered output**: 判断用 1 句话，证据用 3 句话，完整论证用 5+ 句话。
+- **Audience boundary**: README、网站首页、论文页和 SEO 内容是给外部读者/消费者看的，不是 agent 操作手册。不要把启动检查、内部构建命令、agent wiki 流程、handoff 规则或自我系统说明写进 README 主体；这些规则进入 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md` 或 `docs/ops/`。
+- **Consumer-facing README**: README 只回答读者关心的问题：这个项目是什么、为什么重要、核心结论是什么、证据在哪里、下一步读什么。内部维护规则可以链接到 agent/cloud 手册，但不要占据 README 叙事。
 
 ## Website Style Lock
 

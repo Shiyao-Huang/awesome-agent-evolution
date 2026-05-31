@@ -31,6 +31,7 @@
 - 博客、研究、项目、论文页面都应从导航或索引页进入。
 - 深度项目页面必须链接公开报告或 model-card 内容。
 - 论文页面必须展示数据范围、PDF、关键发现和限制。
+- README 和公开站点页面默认面向读者/消费者：解释项目价值、核心结论、证据入口和下一步阅读。Agent 操作、自动化验证、发布门禁和内部 handoff 规则只放在 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md`、`docs/ops/`，不要写进 README 主体。
 
 ## Release Gates
 
