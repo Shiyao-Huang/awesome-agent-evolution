@@ -1,8 +1,8 @@
 {
-  "generated": "2026-05-31T16:30:42.230Z",
+  "generated": "2026-05-31T17:08:13.130Z",
   "stats": {
-    "pages": 54,
-    "keywords": 796
+    "pages": 55,
+    "keywords": 800
   },
   "catalog": [
     {
@@ -580,6 +580,18 @@
         "evidence-chain",
         "resource-library",
         "public-readme"
+      ]
+    },
+    {
+      "path": "synthesis/survey-seo-topic-map.md",
+      "title": "Survey SEO Topic Map",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "seo",
+        "survey",
+        "topic-map",
+        "evidence-chain"
       ]
     },
     {
@@ -2400,6 +2412,7 @@
       "sources/raw-social-blogs-mechanism-analysis.md",
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/resource-library-coverage-audit.md",
+      "synthesis/survey-seo-topic-map.md",
       "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "1. paper landscape overview": [
@@ -3193,10 +3206,12 @@
     ],
     "survey": [
       "synthesis/resource-library-coverage-audit.md",
+      "synthesis/survey-seo-topic-map.md",
       "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "evidence-chain": [
-      "synthesis/resource-library-coverage-audit.md"
+      "synthesis/resource-library-coverage-audit.md",
+      "synthesis/survey-seo-topic-map.md"
     ],
     "resource-library": [
       "synthesis/resource-library-coverage-audit.md"
@@ -3208,7 +3223,20 @@
       "synthesis/resource-library-coverage-audit.md"
     ],
     "use in future work": [
-      "synthesis/resource-library-coverage-audit.md"
+      "synthesis/resource-library-coverage-audit.md",
+      "synthesis/survey-seo-topic-map.md"
+    ],
+    "survey seo topic map": [
+      "synthesis/survey-seo-topic-map.md"
+    ],
+    "seo": [
+      "synthesis/survey-seo-topic-map.md"
+    ],
+    "topic-map": [
+      "synthesis/survey-seo-topic-map.md"
+    ],
+    "key clusters": [
+      "synthesis/survey-seo-topic-map.md"
     ],
     "survey spark and evolve-agi core": [
       "synthesis/survey-spark-evolve-agi-core.md"

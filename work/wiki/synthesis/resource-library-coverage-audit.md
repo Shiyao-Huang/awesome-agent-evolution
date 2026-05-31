@@ -5,11 +5,13 @@ rank: A
 tags: [coverage, survey, evidence-chain, resource-library, public-readme]
 sources:
   - analysis/resource-library-coverage-audit.md
+  - analysis/survey-seo-topic-map.md
   - docs/indexes/master-index.md
   - analysis/github-project-data-analysis.md
   - site/src/data/survey.ts
   - site/src/data/projects.ts
   - site/src/pages/resource-library/index.astro
+  - site/src/pages/topics/index.astro
 updated: 2026-06-01
 ---
 
@@ -40,6 +42,7 @@ updated: 2026-06-01
 
 - README/site public language should say what each count means before claiming coverage.
 - The consumer-facing coverage page now lives at `site/src/pages/resource-library/index.astro`.
+- The public topic map now lives at `site/src/pages/topics/index.astro` and turns coverage into survey/SEO clusters.
 - Paper/survey methodology should cite the audit when explaining corpus boundaries.
 - Agent docs can use this page as the persistent memory of what the repo already contains.
 - SEO pages should be generated from evidence clusters in the audit, not from ungrounded keywords.

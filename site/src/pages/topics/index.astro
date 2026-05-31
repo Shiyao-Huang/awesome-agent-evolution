@@ -1,0 +1,230 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { topicClusters, topicMapStats } from '@/data/topicMap';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Self-Evolving AI Agents Topic Map',
+  alternateName: 'AI 自进化 Survey 与 SEO 主题地图',
+  description: 'Evidence-backed topic map for the Self Evolve survey: definitions, five evolution loops, code self-improvement, memory, agent swarm evolution, evaluation, production pain points, and resource coverage.',
+  url: `${site.url}/topics/`,
+  inLanguage: 'zh-CN',
+  isPartOf: { '@id': `${site.url}/#website` },
+  about: topicClusters.map((topic) => topic.titleEn),
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: topicClusters.map((topic) => ({
+      '@type': 'ListItem',
+      position: topic.rank,
+      name: topic.titleEn,
+      url: `${site.url}/topics/#${topic.id}`,
+      description: topic.readerQuestion,
+    })),
+  },
+};
+---
+
+<BaseLayout
+  title="AI 自进化主题地图 — Self-Evolving Agents Survey、SEO 与证据簇"
+  description="从 Self Evolve 资料库反推的 Survey/SEO 主题地图：定义、五类进化回路、代码自我改进、记忆技能、Agent-Swarm、评估治理、生产痛点和证据覆盖。"
+  pageKeywords={['AI 自进化主题地图', 'Self-Evolving AI Agents Topic Map', 'AI Agent SEO', '自进化智能体 Survey', 'AI agent evidence clusters']}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+
+  <style>
+    .topics-page {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .topics-page :is(h1, h2, h3, p, strong, td, a) {
+      overflow-wrap: anywhere;
+    }
+
+    .topic-cluster-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+      gap: 16px;
+    }
+
+    .topic-query-list {
+      display: grid;
+      gap: 8px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .topic-query-list li {
+      border-left: 2px solid var(--caret-blue);
+      padding-left: 10px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .topic-link-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .topic-link-list a {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 7px 10px;
+      background: var(--surface-2);
+      color: var(--fg);
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    @media (max-width: 800px) {
+      .topic-cluster-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topics-page .hero h1 {
+        font-size: 34px;
+        line-height: 1.12;
+      }
+
+      .topics-page .hero-actions .button {
+        flex: 1 1 100%;
+        min-width: 100%;
+        padding-inline: 12px;
+      }
+    }
+  </style>
+
+  <div class="topics-page">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Topic Map / Survey SEO</div>
+          <h1>把资料库反推成读者真正会搜索的问题。</h1>
+          <p class="lead">Self Evolve 的 SEO 不应该从关键词表开始，而应该从证据簇开始：哪些问题有 raw 证据、项目报告、论文章节、benchmark 和公开页面支撑，哪些问题还只是空泛口号。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#topic-clusters">看主题簇</a>
+            <a class="button" href="/resource-library/">资料库覆盖</a>
+            <a class="button" href="/survey/">Survey</a>
+            <a class="text-link" href="/search/">站内搜索</a>
+          </div>
+          <div class="metrics" aria-label="主题地图指标">
+            <div class="metric"><strong>{topicMapStats.clusters}</strong><span>个核心主题簇</span></div>
+            <div class="metric"><strong>{topicMapStats.publicReports}</strong><span>个公开项目报告</span></div>
+            <div class="metric"><strong>{topicMapStats.painPoints}</strong><span>个用户痛点</span></div>
+          </div>
+        </div>
+        <aside class="hero-evidence" aria-label="Topic map rule">
+          <div class="eyebrow">Rule</div>
+          <ol>
+            <li><span>Question</span><strong>先写读者真实问题，不先写营销词。</strong></li>
+            <li><span>Evidence</span><strong>每个主题必须能回到 raw、analysis、survey、reports 或 index。</strong></li>
+            <li><span>Asset</span><strong>每个主题都要说明下一步应该变成什么公开页面。</strong></li>
+            <li><span>Boundary</span><strong>没有证据链的主题不进入核心 SEO。</strong></li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface-1);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Evidence-backed SEO</div>
+            <h2>主题不是关键词，而是证据的组织方式</h2>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="eyebrow">Raw</div>
+            <h3>{topicMapStats.rawGithubCaptures} 个 GitHub raw captures</h3>
+            <p>支撑项目、工具、runtime、harness 和 benchmark 相关主题，不把项目名当成唯一入口。</p>
+          </article>
+          <article class="card">
+            <div class="eyebrow">Survey</div>
+            <h3>{topicMapStats.surveyPapers} papers + {topicMapStats.evolutionLoops} loops</h3>
+            <p>支撑定义、机制、方法族、case studies 和论文主线，让主题能服务 survey，而不只是 SEO。</p>
+          </article>
+          <article class="card">
+            <div class="eyebrow">Index</div>
+            <h3>{topicMapStats.strictEvolutionRepos}/{topicMapStats.broadEvolutionRepos}</h3>
+            <p>strict/broad evolution 口径帮助读者理解哪些项目是核心自进化，哪些是邻近基础设施。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="topic-clusters">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Ranked clusters</div>
+            <h2>八个优先主题簇</h2>
+          </div>
+          <a class="text-link" href="https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/survey-seo-topic-map.md" target="_blank" rel="noopener">分析来源</a>
+        </div>
+        <div class="post-stack">
+          {topicClusters.map((topic) => (
+            <article class="card" id={topic.id}>
+              <div class="topic-cluster-grid">
+                <div>
+                  <div class="eyebrow">Rank {topic.rank} · {topic.seoIntent}</div>
+                  <h3>{topic.title}</h3>
+                  <p><strong>{topic.titleEn}</strong></p>
+                  <p>{topic.readerQuestion}</p>
+                  <div class="topic-link-list">
+                    {topic.evidenceLinks.map((link) => (
+                      <a href={link.href}>{link.label}</a>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p><strong>Survey 角色：</strong>{topic.surveyRole}</p>
+                  <p><strong>证据基础：</strong>{topic.evidence}</p>
+                  <p><strong>下一步资产：</strong>{topic.nextAsset}</p>
+                  <ul class="topic-query-list" aria-label={`${topic.title} seed queries`}>
+                    {topic.seedQueries.map((query) => (
+                      <li>{query}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface-1);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Publication path</div>
+            <h2>下一批内容应该从这里长出来</h2>
+          </div>
+        </div>
+        <div class="score-table-wrap">
+          <table class="score-table">
+            <thead>
+              <tr><th>主题</th><th>先发布什么</th><th>为什么值得做</th></tr>
+            </thead>
+            <tbody>
+              {topicClusters.slice(0, 5).map((topic) => (
+                <tr>
+                  <td><strong>{topic.title}</strong></td>
+                  <td>{topic.nextAsset}</td>
+                  <td>{topic.surveyRole}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

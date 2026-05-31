@@ -152,6 +152,7 @@ flowchart TB
 | 深入阅读论文 | 打开 [paper-drafts/main.pdf](paper-drafts/main.pdf) 或 [paper page](site/src/pages/paper/index.astro)。 |
 | 查项目证据 | 使用 [projects/INDEX.md](projects/INDEX.md) 和 [public project reports](site/public/reports/projects/INDEX.md)。 |
 | 查数据范围 | 先看 [资料库覆盖页](https://shiyao-huang.github.io/awesome-agent-evolution/resource-library/)，再查 [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md)、[docs/indexes/master-index.md](docs/indexes/master-index.md) 和 [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md)。 |
+| 按问题找主题 | 打开 [Survey/SEO 主题地图](https://shiyao-huang.github.io/awesome-agent-evolution/topics/)，从定义、五类回路、代码自改进、Agent-Swarm、评估治理和生产痛点进入证据。 |
 | 浏览网站 | 打开 [Self Evolve site](https://shiyao-huang.github.io/awesome-agent-evolution/) 或本仓库的 [site source](site/)。 |
 
 ## Citation

@@ -10,7 +10,7 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `analysis` | present | 14 | 1 | 0 | 2.7 MB |
+| `analysis` | present | 15 | 1 | 0 | 2.7 MB |
 | `research` | present | 141 | 8 | 0 | 2.5 MB |
 | `projects` | present | 25870 | 2882 | 0 | 2.9 GB |
 | `paper-reviews` | present | 171 | 1 | 0 | 1.6 MB |

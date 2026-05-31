@@ -27,6 +27,7 @@
 | English i18n 入口 | [README-EN.md](README-EN.md) | 根 README 的英文镜像，保留 Survey 成果、Evolve-AGI Index、证据边界和维护闭环 |
 | Survey 资源重组 | [analysis/survey-resource-spark.md](analysis/survey-resource-spark.md) | processed synthesis：把 raw/processed/survey/results 资源重排为 Survey Spark，并说明 Evolve-AGI Index 如何进入论文核心 |
 | 资料库覆盖审计 | [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md) | processed audit：盘点 raw/processed/work/results/site/wiki 当前资产，解释 631、224、426、119、793 等不同计数口径 |
+| Survey/SEO 主题地图 | [analysis/survey-seo-topic-map.md](analysis/survey-seo-topic-map.md) | processed synthesis：把资料库资产反推出定义、五类回路、代码自改进、Agent-Swarm、评估治理等 SEO/Survey 主题簇 |
 | 用户输入记忆 | local-only, ignored | 本地保留，不发布、不提交；公开仓库只保留抽象操作原则 |
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |
 | GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 631 个 raw GitHub captures、分类、进化相关、时间序列 |
@@ -39,6 +40,7 @@
 | 论文 PDF | [paper-drafts/main.pdf](paper-drafts/main.pdf) | 当前生成版 |
 | 网站源码 | [site/](site/) | Astro 博客/SEO 网站 |
 | 公开资料库覆盖页 | [site/src/pages/resource-library/index.astro](site/src/pages/resource-library/index.astro) | 面向消费者和 SEO 的资料库覆盖说明：解释 raw/processed/survey/report/Evolve-AGI Index 的证据链和计数口径 |
+| 公开主题地图页 | [site/src/pages/topics/index.astro](site/src/pages/topics/index.astro) | 面向消费者和 SEO 的 topic map：从读者问题进入 survey、项目报告、benchmark、AGI index 和后续内容资产 |
 | 公开项目报告 | [site/public/reports/projects/](site/public/reports/projects/) | 426 个公开项目报告供静态站点下载/引用 |
 
 ## 历史索引

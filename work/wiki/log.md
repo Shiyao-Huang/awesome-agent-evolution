@@ -273,3 +273,12 @@
 - Linked the page from the homepage hero, footer, README/README-ZH/README-EN, and `CONTENT_INDEX.md`.
 - Updated the coverage audit and wiki synthesis so future agents know the public explanation now exists.
 **产出:** `site/src/pages/resource-library/index.astro`
+
+## [2026-06-01 00:52] site+seo | Survey SEO Topic Map
+
+**操作:** Turned the resource library into an evidence-backed topic map for survey, SEO, and reader questions.
+**详情:**
+- Added `analysis/survey-seo-topic-map.md` and `work/wiki/synthesis/survey-seo-topic-map.md` so topic clusters have a processed and wiki memory.
+- Added reusable site data in `site/src/data/topicMap.ts` and published `/topics/`.
+- Linked the topic map from README/README-ZH/README-EN, navigation, footer, search, resource library, and `CONTENT_INDEX.md`.
+**产出:** `site/src/pages/topics/index.astro`, `site/src/data/topicMap.ts`
