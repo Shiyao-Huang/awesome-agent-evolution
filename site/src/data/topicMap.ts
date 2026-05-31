@@ -43,11 +43,11 @@ export const topicClusters: TopicCluster[] = [
     evidence: 'README、paper introduction、resource coverage audit 已经把 self-evolution 从标签改写成可审计系统过程。',
     seedQueries: ['self-evolving AI agents', 'AI 自进化智能体是什么', 'AI agent self improvement survey'],
     evidenceLinks: [
+      { label: 'Definition guide', href: '/topics/self-evolving-ai-agents/' },
       { label: 'Survey definition', href: '/survey/' },
       { label: 'Paper', href: '/paper/' },
-      { label: 'Resource library', href: '/resource-library/' },
     ],
-    nextAsset: '做一个定义型 evergreen 页面，专门区分 self-evolution、AutoML、online learning、reflection 和普通 agent workflow。',
+    nextAsset: '定义页已上线；下一步补 self-evolution vs AutoML / online learning / ordinary workflow 的对照页。',
   },
   {
     id: 'five-loops',

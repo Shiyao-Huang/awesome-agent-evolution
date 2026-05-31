@@ -282,3 +282,12 @@
 - Added reusable site data in `site/src/data/topicMap.ts` and published `/topics/`.
 - Linked the topic map from README/README-ZH/README-EN, navigation, footer, search, resource library, and `CONTENT_INDEX.md`.
 **产出:** `site/src/pages/topics/index.astro`, `site/src/data/topicMap.ts`
+
+## [2026-06-01 01:24] site+seo | Self-Evolution Definition Page
+
+**操作:** Published the Rank 1 topic cluster as an evergreen definition page.
+**详情:**
+- Added `analysis/self-evolution-definition-criteria.md` and `work/wiki/synthesis/self-evolution-definition-criteria.md`.
+- Added `/topics/self-evolving-ai-agents/` with six definition gates: mutable object, feedback, candidate generation, verification, retention, audit/rollback.
+- Linked the page from topic map data, README i18n, search, and `CONTENT_INDEX.md`.
+**产出:** `site/src/pages/topics/self-evolving-ai-agents/index.astro`

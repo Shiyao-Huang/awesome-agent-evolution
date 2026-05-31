@@ -1,8 +1,8 @@
 {
-  "generated": "2026-05-31T17:08:13.130Z",
+  "generated": "2026-05-31T17:37:02.618Z",
   "stats": {
-    "pages": 55,
-    "keywords": 800
+    "pages": 56,
+    "keywords": 803
   },
   "catalog": [
     {
@@ -583,6 +583,18 @@
       ]
     },
     {
+      "path": "synthesis/self-evolution-definition-criteria.md",
+      "title": "Self-Evolution Definition Criteria",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "definition",
+        "survey",
+        "self-evolution",
+        "evidence-chain"
+      ]
+    },
+    {
       "path": "synthesis/survey-seo-topic-map.md",
       "title": "Survey SEO Topic Map",
       "rank": "A",
@@ -661,13 +673,15 @@
       "entities/sakana-ai.md",
       "sources/github-digest.md",
       "sources/raw-github-mechanism-analysis.md",
-      "sources/review-mechanism-insights-enhanced.md"
+      "sources/review-mechanism-insights-enhanced.md",
+      "synthesis/self-evolution-definition-criteria.md"
     ],
     "agent-swarm evolve part": [
       "concepts/agent-swarm-evolve.md"
     ],
     "definition": [
-      "concepts/agent-swarm-evolve.md"
+      "concepts/agent-swarm-evolve.md",
+      "synthesis/self-evolution-definition-criteria.md"
     ],
     "boundary": [
       "concepts/agent-swarm-evolve.md"
@@ -2412,6 +2426,7 @@
       "sources/raw-social-blogs-mechanism-analysis.md",
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/resource-library-coverage-audit.md",
+      "synthesis/self-evolution-definition-criteria.md",
       "synthesis/survey-seo-topic-map.md",
       "synthesis/survey-spark-evolve-agi-core.md"
     ],
@@ -3206,11 +3221,13 @@
     ],
     "survey": [
       "synthesis/resource-library-coverage-audit.md",
+      "synthesis/self-evolution-definition-criteria.md",
       "synthesis/survey-seo-topic-map.md",
       "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "evidence-chain": [
       "synthesis/resource-library-coverage-audit.md",
+      "synthesis/self-evolution-definition-criteria.md",
       "synthesis/survey-seo-topic-map.md"
     ],
     "resource-library": [
@@ -3224,7 +3241,17 @@
     ],
     "use in future work": [
       "synthesis/resource-library-coverage-audit.md",
+      "synthesis/self-evolution-definition-criteria.md",
       "synthesis/survey-seo-topic-map.md"
+    ],
+    "self-evolution definition criteria": [
+      "synthesis/self-evolution-definition-criteria.md"
+    ],
+    "six gates": [
+      "synthesis/self-evolution-definition-criteria.md"
+    ],
+    "public surface": [
+      "synthesis/self-evolution-definition-criteria.md"
     ],
     "survey seo topic map": [
       "synthesis/survey-seo-topic-map.md"

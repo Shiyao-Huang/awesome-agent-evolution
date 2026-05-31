@@ -5,8 +5,10 @@ rank: A
 tags: [seo, survey, topic-map, evidence-chain]
 sources:
   - analysis/survey-seo-topic-map.md
+  - analysis/self-evolution-definition-criteria.md
   - site/src/data/topicMap.ts
   - site/src/pages/topics/index.astro
+  - site/src/pages/topics/self-evolving-ai-agents/index.astro
 updated: 2026-06-01
 ---
 
@@ -31,5 +33,6 @@ updated: 2026-06-01
 
 - New blog/SEO pages should map to one of these clusters or explicitly explain why a new cluster is needed.
 - The public topic map lives at `site/src/pages/topics/index.astro`.
+- Rank 1 definition page lives at `site/src/pages/topics/self-evolving-ai-agents/index.astro`.
 - The reusable data layer lives at `site/src/data/topicMap.ts`.
 - Topic pages should carry evidence links, seed queries, survey role, and a next public asset.

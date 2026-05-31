@@ -5,6 +5,7 @@ updated: 2026-06-01
 sources:
   - docs/indexes/master-index.md
   - README.md
+  - analysis/self-evolution-definition-criteria.md
   - analysis/resource-library-coverage-audit.md
   - analysis/survey-resource-spark.md
   - analysis/github-project-data-analysis.md
@@ -38,7 +39,7 @@ sources:
 
 | Rank | Topic | Reader Question | Survey Role | Next Public Asset |
 |---:|---|---|---|---|
-| 1 | 什么才算真正的自进化智能体 | 这个系统真的在改进自己，还是只是固定 workflow? | Survey 定义入口。 | Evergreen definition page |
+| 1 | 什么才算真正的自进化智能体 | 这个系统真的在改进自己，还是只是固定 workflow? | Survey 定义入口。 | Definition page live at `/topics/self-evolving-ai-agents/`; next compare with AutoML/online learning/static workflow |
 | 2 | 五类进化回路 | 不同项目到底在用哪一种反馈闭环? | 机制分类和方法族入口。 | One page per loop |
 | 3 | 代码自我改进与算法发现 | 哪些系统真的会改代码、发现算法，并留下 benchmark 证据? | DGM/ADAS/AlphaEvolve/OpenEvolve/FunSearch 证据簇。 | Code-evolution benchmark matrix |
 | 4 | 记忆、技能与知识进化 | agent 怎样把一次失败变成未来可复用经验? | memory/skill/tool policy substrate。 | Memory and skill substrate guide |
@@ -49,7 +50,7 @@ sources:
 
 ## Publication Rules
 
-- [KNOWN] 每个主题必须能链接至少一个公开站点入口和一个仓库证据入口。Source: `site/src/pages/topics/index.astro`, `CONTENT_INDEX.md`
+- [KNOWN] 每个主题必须能链接至少一个公开站点入口和一个仓库证据入口；Rank 1 定义主题已经有公开 evergreen 页面。Source: `site/src/pages/topics/index.astro`, `site/src/pages/topics/self-evolving-ai-agents/index.astro`, `CONTENT_INDEX.md`
 - [INFERRED] 每个主题最好同时服务三类读者：研究者查 survey、工程师查项目/benchmark、普通读者查定义/风险/价值。
 - [INFERRED] 如果一个 SEO 页面无法写出 evidence links、seed queries、survey role 和 next asset，就先不要发布成核心主题。
 

@@ -1,0 +1,288 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { topicMapStats } from '@/data/topicMap';
+
+const gates = [
+  ['可变对象', '系统能修改 prompt、memory、tool policy、workflow、code、curriculum、weights 或 population。', '只是在一次推理里生成更好的答案。'],
+  ['反馈信号', '改动由 benchmark、环境、用户反馈、执行器、测试、judge 或 verifier 驱动。', '只靠模型自评说“我变好了”。'],
+  ['候选生成', '系统参与提出候选改动，而不是完全由人类离线重写。', '人类手动 patch，agent 只执行新版本。'],
+  ['独立验证', '候选改动被外部测试、隐藏集、环境反馈或独立 judge 检查。', '同一个模型提出改动又批准改动。'],
+  ['保留机制', '通过的改动被写入记忆、仓库、archive、技能库、权重或配置，并影响后续行为。', '会话结束后没有任何可复用状态。'],
+  ['审计与回滚', '有版本、lineage、失败候选、成本或回滚边界。', '只有最终分数，没有过程记录。'],
+];
+
+const boundaries = [
+  ['普通 Agent workflow', '可以动态调用工具，但 workflow、memory、prompt、code 或 policy 没有被反馈驱动地改变。', '通常不是自进化'],
+  ['AutoML / NAS', '能自动搜索模型或架构，但常发生在部署前，系统本身未必继续改进自己的运行机制。', '祖先技术或邻近方法'],
+  ['Online learning', '持续接收数据并按固定规则更新，不代表系统参与生成和选择改动。', '需要看是否有自我修改闭环'],
+  ['Reflection / memory', '如果反思被保留并影响后续策略，它可以是轻量自进化；如果只是一轮思考，则不够。', '取决于 retention'],
+  ['代码自修改', '如果代码改动经过测试、保留、回滚和审计，是当前最清晰的自进化形态之一。', '强证据候选'],
+];
+
+const faqs = [
+  ['自进化 AI Agent 等于 AGI 吗?', '不等于。Self Evolve 把它视为一种受控改进过程；Evolve-AGI Index 衡量的是领域成熟度，不是 AGI 终局能力分。'],
+  ['模型权重不变，还能算自进化吗?', '可以。很多 agent 的真实控制面在 prompt、memory、tools、workflow 和 code，只要这些对象被反馈驱动地修改并保留，就进入讨论范围。'],
+  ['名字里没有 evolution 的项目会被纳入吗?', '会。判断标准不是项目名，而是是否回答了可变对象、反馈、验证、保留和回滚这几个问题。'],
+  ['为什么 demo 不够?', 'demo 通常展示一次成功结果；自进化需要展示改动过程、失败候选、评估器、成本、回归和可复用状态。'],
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'What Counts as a Self-Evolving AI Agent?',
+  name: '什么才算真正的自进化智能体',
+  description: 'A consumer-facing definition and checklist for self-evolving AI agents: mutable objects, feedback, candidate generation, verification, retention, audit, and rollback.',
+  url: `${site.url}/topics/self-evolving-ai-agents/`,
+  inLanguage: 'zh-CN',
+  isPartOf: { '@id': `${site.url}/#website` },
+  about: ['Self-Evolving AI Agents', 'AI Self Evolution', 'Agent Evaluation', 'Evolve-AGI Index'],
+  mainEntity: faqs.map(([question, answer]) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: { '@type': 'Answer', text: answer },
+  })),
+};
+---
+
+<BaseLayout
+  title="什么才算自进化 AI Agent — 定义、边界、判断表与 Evolve-AGI Index"
+  description="判断一个 AI Agent 是否真的自进化：看它改了什么、反馈来自哪里、谁验证、如何保留、能否审计和回滚。"
+  pageKeywords={['什么是自进化 AI Agent', 'Self-Evolving AI Agents definition', 'AI 自进化定义', 'AI Agent 自我改进', 'Evolve-AGI Index']}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+
+  <style>
+    .definition-page {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .definition-page :is(h1, h2, h3, p, strong, td, a) {
+      overflow-wrap: anywhere;
+    }
+
+    .definition-flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .definition-flow span {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--surface-1);
+      padding: 14px 10px;
+      color: var(--fg);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .definition-note {
+      border-left: 3px solid var(--accent);
+      margin-top: 18px;
+      padding-left: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .boundary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 840px) {
+      .definition-flow,
+      .boundary-grid,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .definition-page .hero h1 {
+        font-size: 34px;
+        line-height: 1.12;
+      }
+
+      .definition-page .hero-actions .button {
+        flex: 1 1 100%;
+        min-width: 100%;
+        padding-inline: 12px;
+      }
+    }
+  </style>
+
+  <div class="definition-page">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Definition / Survey Rank 1</div>
+          <h1>什么才算真正的自进化 AI Agent?</h1>
+          <p class="lead">不要先看项目名、star 或 demo。先问它是否在反馈中修改自己的运行机制，并且能验证、保留、审计或回滚这些修改。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#checklist">判断表</a>
+            <a class="button" href="/topics/">主题地图</a>
+            <a class="button" href="/evolve-agi-index/">Evolve-AGI Index</a>
+            <a class="text-link" href="/survey/">Survey</a>
+          </div>
+          <div class="definition-flow" aria-label="Self-evolution loop">
+            <span>Observe</span>
+            <span>Interpret</span>
+            <span>Modify</span>
+            <span>Verify</span>
+            <span>Retain</span>
+          </div>
+        </div>
+        <aside class="hero-evidence" aria-label="Definition summary">
+          <div class="eyebrow">One sentence</div>
+          <p><strong>自进化不是“更聪明”的形容词，而是一个受控改进过程。</strong></p>
+          <ol>
+            <li><span>Object</span><strong>改了什么?</strong></li>
+            <li><span>Signal</span><strong>为什么改?</strong></li>
+            <li><span>Verifier</span><strong>谁批准?</strong></li>
+            <li><span>Lineage</span><strong>如何保留和回滚?</strong></li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface-1);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Definition</div>
+            <h2>本 Survey 的工作定义</h2>
+          </div>
+        </div>
+        <article class="card">
+          <p style="font-size: 1.18rem; color: var(--fg); line-height: 1.75;">一个 self-evolving AI agent 是这样的系统：它把任务执行、失败、用户反馈、benchmark 或环境信号转成候选改动，并把通过验证的改动保留到 prompt、memory、tool policy、workflow、code、curriculum、weights 或 population 中，影响后续行为。</p>
+          <p class="definition-note">这一定义来自论文主线和 README 的共同判断：self-evolution 要被评估为 controlled systems process，而不是 demo 标签或项目营销词。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="checklist">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Checklist</div>
+            <h2>六个门槛：答不上来就不要叫自进化</h2>
+          </div>
+          <a class="text-link" href="https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/self-evolution-definition-criteria.md" target="_blank" rel="noopener">定义证据</a>
+        </div>
+        <div class="score-table-wrap">
+          <table class="score-table">
+            <thead>
+              <tr><th>门槛</th><th>通过条件</th><th>常见失败</th></tr>
+            </thead>
+            <tbody>
+              {gates.map(([gate, pass, fail]) => (
+                <tr>
+                  <td><strong>{gate}</strong></td>
+                  <td>{pass}</td>
+                  <td>{fail}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface-1);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Boundaries</div>
+            <h2>相邻概念怎么区分</h2>
+          </div>
+        </div>
+        <div class="boundary-grid">
+          {boundaries.map(([name, boundary, verdict]) => (
+            <article class="card">
+              <div class="eyebrow">{verdict}</div>
+              <h3>{name}</h3>
+              <p>{boundary}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Why it matters</div>
+            <h2>定义边界决定 Evolve-AGI Index 是否可信</h2>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="eyebrow">Coverage</div>
+            <h3>{topicMapStats.rawGithubCaptures} raw captures 不能直接等于自进化项目</h3>
+            <p>raw 说明收了什么；是否进入 self-evolution，要看六个门槛和 strict/broad 口径。</p>
+          </article>
+          <article class="card">
+            <div class="eyebrow">Signal</div>
+            <h3>Loop strength 比项目名更重要</h3>
+            <p>名字里有 evolve 只是弱信号；没有这个词的 Reflexion、Self-Refine、DSPy 或 harness 项目也可能提供核心证据。</p>
+          </article>
+          <article class="card">
+            <div class="eyebrow">Governance</div>
+            <h3>越能改自己，越需要回滚和审计</h3>
+            <p>没有 lineage、成本、失败候选和权限边界的系统，不能被误读成成熟自进化。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface-1);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">FAQ</div>
+            <h2>读者最容易混淆的四个问题</h2>
+          </div>
+        </div>
+        <div class="faq-grid">
+          {faqs.map(([question, answer]) => (
+            <article class="card">
+              <h3>{question}</h3>
+              <p>{answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid">
+          <a class="card" href="/survey/mechanisms/" style="text-decoration: none; color: inherit;">
+            <div class="eyebrow">Next</div>
+            <h3>继续看五类进化回路</h3>
+            <p>定义回答“算不算”，机制页回答“怎么进化”。</p>
+          </a>
+          <a class="card" href="/benchmark/" style="text-decoration: none; color: inherit;">
+            <div class="eyebrow">Evidence</div>
+            <h3>继续看 benchmark 与评估</h3>
+            <p>真正的自进化必须接受测试、迁移、成本和回归检查。</p>
+          </a>
+          <a class="card" href="/resource-library/" style="text-decoration: none; color: inherit;">
+            <div class="eyebrow">Trace</div>
+            <h3>回到资料库覆盖</h3>
+            <p>查 raw、processed、survey、reports 和公开页面的口径边界。</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

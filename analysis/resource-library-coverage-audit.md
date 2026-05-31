@@ -6,10 +6,12 @@ sources:
   - docs/indexes/master-index.md
   - analysis/github-project-data-analysis.md
   - analysis/survey-seo-topic-map.md
+  - analysis/self-evolution-definition-criteria.md
   - site/src/data/survey.ts
   - site/src/data/projects.ts
   - site/src/pages/resource-library/index.astro
   - site/src/pages/topics/index.astro
+  - site/src/pages/topics/self-evolving-ai-agents/index.astro
   - projects/INDEX.md
   - CONTENT_INDEX.md
   - work/wiki/index.md
@@ -54,10 +56,10 @@ sources:
 | Work | Survey website data papers | 196 | 网站 survey 页面使用的 paper 展示口径。 | `site/src/data/survey.ts` |
 | Work | Survey website data repos | 348 | 网站 survey 页面使用的 repository 展示口径。 | `site/src/data/survey.ts` |
 | Work | Site project records | 119 | `site/src/data/projects.ts` 当前项目数组条目；是精选展示口径。 | `rg -n 'repo: "' site/src/data/projects.ts` |
-| Work | Site route source files | 32 | `site/src/pages` 页面源码数。 | `rg --files site/src/pages` |
+| Work | Site route source files | 33 | `site/src/pages` 页面源码数。 | `rg --files site/src/pages` |
 | Work | Blog MDX posts | 25 | 面向 SEO/趋势的博客内容页。 | `rg --files site/src/content/blog -g '*.mdx'` |
 | Work | Research MDX pages | 15 | 面向网站的研究内容页。 | `rg --files site/src/content/research -g '*.mdx'` |
-| Work | Wiki files | 59 | LLM Wiki 页面与搜索索引文件数，包含 coverage synthesis 和 topic-map synthesis。 | `rg --files work/wiki -g '*.md' -g '*.json'` |
+| Work | Wiki files | 60 | LLM Wiki 页面与搜索索引文件数，包含 coverage、topic-map 和 definition synthesis。 | `rg --files work/wiki -g '*.md' -g '*.json'` |
 | Results | Public project reports | 426 | 静态站点可引用/下载的公开项目报告文件。 | `docs/indexes/master-index.md` |
 
 ## Same Number, Different Meaning / 口径边界
@@ -76,7 +78,7 @@ sources:
 - [KNOWN] Raw corpus: GitHub、论文、社交、博客和 ranked social 子集已经按 raw 层保留，并有全仓库索引。Source: `docs/indexes/raw-index.md`
 - [KNOWN] Processed analyses: GitHub 分类、strict/broad evolution 子集、项目 model card、paper reviews、Evolve-AGI Index 和 survey spark 已经存在。Source: `analysis/`, `research/`, `projects/`, `paper-reviews/`
 - [KNOWN] Survey/paper work: 英文 paper draft、中文 survey、LaTeX PDF 构建入口和 Evolve-AGI Index integration 已经接上。Source: `paper-drafts/main.tex`, `survey/latex/main.tex`
-- [KNOWN] Public surface: Astro site、资料库覆盖页、主题地图页、博客/SEO、research pages、project reports、graph、paper page、survey page、rankings 和 Evolve-AGI Index page 已经存在。Source: `site/src/`, `site/public/reports/`
+- [KNOWN] Public surface: Astro site、资料库覆盖页、主题地图页、定义主题页、博客/SEO、research pages、project reports、graph、paper page、survey page、rankings 和 Evolve-AGI Index page 已经存在。Source: `site/src/`, `site/public/reports/`
 - [KNOWN] Agent knowledge memory: LLM Wiki 维护了 entities、concepts、sources、synthesis 四类页面，供 agent 查询和累积。Source: `work/wiki/index.md`
 
 ## What Still Needs Work / 主要缺口
@@ -85,7 +87,7 @@ sources:
 |---:|---|---|---|
 | 1 | 计数口径容易混淆 | 对外读者会把 raw、analysis、site、report 数字误解成同一件事。 | 在 README、paper/survey 方法和网站数据页统一引用本审计。 |
 | 2 | 资料库覆盖页已有初版，但仍需持续同步 | 读者需要先知道“仓库里到底有什么”，再进入具体项目。 | 后续把 coverage page 接入搜索、topic map 和站点数据自动刷新。 |
-| 3 | SEO 主题簇已有初版 topic map，但还没拆成完整页面簇 | SEO 页面应来自真实证据簇，而不是泛泛关键词。 | 从 `/topics/` 的八个主题簇继续生成定义页、loop 页、benchmark matrix 和 pain-point FAQ。 |
+| 3 | SEO 主题簇已有 topic map 和 Rank 1 定义页，但还没拆成完整页面簇 | SEO 页面应来自真实证据簇，而不是泛泛关键词。 | 继续生成 loop 页、benchmark matrix、Agent-Swarm topology matrix 和 pain-point FAQ。 |
 | 4 | 项目展示数组小于分析/report 库 | 网站 `/projects/` 当前是精选口径，不能代表全部资料库。 | 增加 all reports / coverage entry，避免读者误会只有 119 个项目。 |
 | 5 | 发布状态需要和 git 事实同步 | coverage 页面、README 入口和索引只有在提交并推送后才算公开发布。 | 每次资料库入口改动后检查 `git status --short --branch`，提交并推送后再写成已发布。 |
 
@@ -107,4 +109,5 @@ sources:
 - [KNOWN] Site project display count was measured from `site/src/data/projects.ts` using `rg -n 'repo: "'`.
 - [KNOWN] File counts were measured with `rg --files` under the named directories on 2026-06-01.
 - [KNOWN] Public topic map now lives at `site/src/pages/topics/index.astro` with reusable data in `site/src/data/topicMap.ts`.
+- [KNOWN] Public definition page now lives at `site/src/pages/topics/self-evolving-ai-agents/index.astro`.
 - [INFERRED] Recommendations are synthesis over those local sources and should be revised when generated indexes change.

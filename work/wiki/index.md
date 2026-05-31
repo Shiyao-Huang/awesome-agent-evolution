@@ -80,6 +80,7 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [Survey Spark and Evolve-AGI Core](synthesis/survey-spark-evolve-agi-core.md) — README转为Survey成果入口，Evolve-AGI Index进入论文核心测量脊柱 | Rank: A | 2026-05-31
 - [Resource Library Coverage Audit](synthesis/resource-library-coverage-audit.md) — 盘点 raw/processed/work/results/site/wiki 当前资产，解释 631/224/426/119/793 等计数口径 | Rank: A | 2026-05-31
 - [Survey SEO Topic Map](synthesis/survey-seo-topic-map.md) — 从资料库资产反推 SEO/Survey 主题簇：定义、五类回路、代码自改进、记忆技能、Agent-Swarm、评估治理、生产痛点 | Rank: A | 2026-06-01
+- [Self-Evolution Definition Criteria](synthesis/self-evolution-definition-criteria.md) — 用六个 gate 定义真正 self-evolving agent：可变对象、反馈、候选生成、验证、保留、审计/回滚 | Rank: A | 2026-06-01
 
 ---
 
@@ -90,5 +91,5 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Entities | 8 |
 | Concepts | 10 |
 | Sources | 30 |
-| Synthesis pages | 6 |
+| Synthesis pages | 7 |
 | Last updated | 2026-06-01 |
