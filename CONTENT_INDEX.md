@@ -23,8 +23,9 @@
 
 | 类型 | 路径 | 状态 |
 |---|---|---|
-| README 主入口 | [README.md](README.md) | 中文优先，开头前置加工后的完整分类总览，并聚合综述、方法、benchmark、项目分类、核心链接、完整列表索取区和迭代闭环 |
-| English i18n 入口 | [README-EN.md](README-EN.md) | 根 README 的完整英文镜像，包含同等结构、完整列表和维护闭环 |
+| README 主入口 | [README.md](README.md) | 中文优先，改为 Survey 成果入口：核心 Spark、Evolve-AGI Index、资源 DAG、论文主线、证据边界和验证入口 |
+| English i18n 入口 | [README-EN.md](README-EN.md) | 根 README 的英文镜像，保留 Survey 成果、Evolve-AGI Index、证据边界和维护闭环 |
+| Survey 资源重组 | [analysis/survey-resource-spark.md](analysis/survey-resource-spark.md) | processed synthesis：把 raw/processed/survey/results 资源重排为 Survey Spark，并说明 Evolve-AGI Index 如何进入论文核心 |
 | 用户输入记忆 | local-only, ignored | 本地保留，不发布、不提交；公开仓库只保留抽象操作原则 |
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |
 | GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 631 个 raw GitHub captures、分类、进化相关、时间序列 |

@@ -77,6 +77,7 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [Agent进化机制分析框架](synthesis/mechanism-framework.md) — M1-M5全景DAG + 8系统覆盖矩阵 + 97痛点映射 | Rank: A | 2026-05-26
 - [硅谷人才版图](synthesis/talent-landscape.md) — 用户直接输入的硅谷AI Agent人才市场分析 | Rank: A | 2026-05-26
 - [Current-Value Ranking Reanalysis](synthesis/current-value-ranking-reanalysis.md) — GitHub项目当前价值榜重算: 时间/新鲜度50%, 历史星标降为10% adoption, unknown created_at capped | Rank: A | 2026-05-26
+- [Survey Spark and Evolve-AGI Core](synthesis/survey-spark-evolve-agi-core.md) — README转为Survey成果入口，Evolve-AGI Index进入论文核心测量脊柱 | Rank: A | 2026-05-31
 
 ---
 
@@ -87,5 +88,5 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Entities | 8 |
 | Concepts | 10 |
 | Sources | 30 |
-| Synthesis pages | 3 |
-| Last updated | 2026-05-30 |
+| Synthesis pages | 4 |
+| Last updated | 2026-05-31 |

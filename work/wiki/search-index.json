@@ -1,8 +1,8 @@
 {
-  "generated": "2026-05-29T17:50:10.902Z",
+  "generated": "2026-05-31T14:46:07.109Z",
   "stats": {
-    "pages": 52,
-    "keywords": 783
+    "pages": 53,
+    "keywords": 790
   },
   "catalog": [
     {
@@ -570,6 +570,19 @@
       ]
     },
     {
+      "path": "synthesis/survey-spark-evolve-agi-core.md",
+      "title": "Survey Spark and Evolve-AGI Core",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "survey",
+        "evolve-agi-index",
+        "readme",
+        "paper-core",
+        "evidence-graph"
+      ]
+    },
+    {
       "path": "synthesis/talent-landscape.md",
       "title": "SV Self-Evolution Talent & Paper Landscape",
       "rank": "A",
@@ -670,6 +683,7 @@
       "sources/talent-capital-structure.md",
       "sources/talent-flow-analysis.md",
       "synthesis/mechanism-framework.md",
+      "synthesis/survey-spark-evolve-agi-core.md",
       "synthesis/talent-landscape.md"
     ],
     "multi-agent-coevolution": [
@@ -1095,7 +1109,8 @@
       "concepts/self-evaluation.md",
       "concepts/self-improvement.md",
       "concepts/self-observation.md",
-      "concepts/self-play-evolution.md"
+      "concepts/self-play-evolution.md",
+      "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "\"自我评估 (self-evaluation)\"": [
       "concepts/self-evaluation.md"
@@ -1364,7 +1379,8 @@
     ],
     "agent-swarm-evolve": [
       "entities/anthropic.md",
-      "sources/anthropic-may-2026-agentops.md"
+      "sources/anthropic-may-2026-agentops.md",
+      "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "google deepmind": [
       "entities/google-deepmind.md",
@@ -1614,7 +1630,8 @@
       "sources/social-digest.md",
       "sources/talent-capital-structure.md",
       "sources/talent-flow-analysis.md",
-      "synthesis/current-value-ranking-reanalysis.md"
+      "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "type": [
       "sources/anthropic-talent-movement.md",
@@ -2368,7 +2385,8 @@
       "sources/papers-mechanism-analysis.md",
       "sources/raw-papers-mechanism-analysis.md",
       "sources/raw-social-blogs-mechanism-analysis.md",
-      "synthesis/current-value-ranking-reanalysis.md"
+      "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "1. paper landscape overview": [
       "sources/papers-mechanism-analysis.md"
@@ -3126,13 +3144,15 @@
       "synthesis/current-value-ranking-reanalysis.md"
     ],
     "three sentences": [
-      "synthesis/current-value-ranking-reanalysis.md"
+      "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "corrected top signal": [
       "synthesis/current-value-ranking-reanalysis.md"
     ],
     "operational rule": [
-      "synthesis/current-value-ranking-reanalysis.md"
+      "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "m1-m5": [
       "synthesis/mechanism-framework.md"
@@ -3151,6 +3171,27 @@
     ],
     "97痛点映射": [
       "synthesis/mechanism-framework.md"
+    ],
+    "survey spark and evolve-agi core": [
+      "synthesis/survey-spark-evolve-agi-core.md"
+    ],
+    "survey": [
+      "synthesis/survey-spark-evolve-agi-core.md"
+    ],
+    "evolve-agi-index": [
+      "synthesis/survey-spark-evolve-agi-core.md"
+    ],
+    "readme": [
+      "synthesis/survey-spark-evolve-agi-core.md"
+    ],
+    "paper-core": [
+      "synthesis/survey-spark-evolve-agi-core.md"
+    ],
+    "evidence-graph": [
+      "synthesis/survey-spark-evolve-agi-core.md"
+    ],
+    "current-value-ranking-reanalysis": [
+      "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "sv self-evolution talent & paper landscape": [
       "synthesis/talent-landscape.md"

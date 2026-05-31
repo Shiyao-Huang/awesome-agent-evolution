@@ -245,3 +245,12 @@
 - Published two SEO blog posts: Dynamic Workflows as Agent-Swarm Evolve evidence, and Anthropic's May 2026 AgentOps platform shift.
 - Updated Anthropic entity page and README trend trackers so the hotspot maps to Agent-Swarm Evolve, tool connectivity, containment, cost, and verification loops.
 **产出:** `site/src/content/blog/anthropic-dynamic-workflows-agent-swarm-evolve.mdx`, `site/src/content/blog/anthropic-may-2026-agentops-platform-shift.mdx`, `work/wiki/sources/anthropic-may-2026-agentops.md`
+
+## [2026-05-31 23:20] synthesis | Survey Spark and Evolve-AGI Core
+
+**操作:** Reframed README as a survey-result entry point and promoted Evolve-AGI Index into the paper core.
+**详情:**
+- Created `analysis/survey-resource-spark.md` to map raw/processed/survey/results resources into the new survey Spark.
+- Created `work/wiki/synthesis/survey-spark-evolve-agi-core.md` so future agents can retrieve the README/paper/EAI integration.
+- Updated README/README-ZH/README-EN to publish survey conclusions, resource DAGs, Evolve-AGI Index weights, evidence boundaries, and verification entry points.
+**产出:** `analysis/survey-resource-spark.md`, `work/wiki/synthesis/survey-spark-evolve-agi-core.md`
