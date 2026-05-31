@@ -264,3 +264,12 @@
 - Added `work/wiki/synthesis/resource-library-coverage-audit.md` so future agents can reuse the coverage story without confusing consumer-facing README with agent operations.
 - Updated README/README-ZH/README-EN and `CONTENT_INDEX.md` with reader-facing evidence entry points.
 **产出:** `analysis/resource-library-coverage-audit.md`, `work/wiki/synthesis/resource-library-coverage-audit.md`
+
+## [2026-06-01 00:18] site+seo | Public Resource Library Coverage Page
+
+**操作:** Turned the coverage audit into a consumer-facing SEO page.
+**详情:**
+- Added `site/src/pages/resource-library/index.astro` as a public entry for raw corpus, processed analysis, survey synthesis, public reports, and Evolve-AGI Index.
+- Linked the page from the homepage hero, footer, README/README-ZH/README-EN, and `CONTENT_INDEX.md`.
+- Updated the coverage audit and wiki synthesis so future agents know the public explanation now exists.
+**产出:** `site/src/pages/resource-library/index.astro`

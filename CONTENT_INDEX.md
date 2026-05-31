@@ -38,6 +38,7 @@
 | 英文 GitHub corpus 快照 | [paper-drafts/github-project-data-analysis-en.tex](paper-drafts/github-project-data-analysis-en.tex) | 从 `analysis/github-project-data-analysis.*` 派生的英文 LaTeX 论文快照 |
 | 论文 PDF | [paper-drafts/main.pdf](paper-drafts/main.pdf) | 当前生成版 |
 | 网站源码 | [site/](site/) | Astro 博客/SEO 网站 |
+| 公开资料库覆盖页 | [site/src/pages/resource-library/index.astro](site/src/pages/resource-library/index.astro) | 面向消费者和 SEO 的资料库覆盖说明：解释 raw/processed/survey/report/Evolve-AGI Index 的证据链和计数口径 |
 | 公开项目报告 | [site/public/reports/projects/](site/public/reports/projects/) | 426 个公开项目报告供静态站点下载/引用 |
 
 ## 历史索引

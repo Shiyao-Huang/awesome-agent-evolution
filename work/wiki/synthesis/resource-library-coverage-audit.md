@@ -9,7 +9,8 @@ sources:
   - analysis/github-project-data-analysis.md
   - site/src/data/survey.ts
   - site/src/data/projects.ts
-updated: 2026-05-31
+  - site/src/pages/resource-library/index.astro
+updated: 2026-06-01
 ---
 
 # Resource Library Coverage Audit
@@ -38,6 +39,7 @@ updated: 2026-05-31
 ## Use In Future Work
 
 - README/site public language should say what each count means before claiming coverage.
+- The consumer-facing coverage page now lives at `site/src/pages/resource-library/index.astro`.
 - Paper/survey methodology should cite the audit when explaining corpus boundaries.
 - Agent docs can use this page as the persistent memory of what the repo already contains.
 - SEO pages should be generated from evidence clusters in the audit, not from ungrounded keywords.

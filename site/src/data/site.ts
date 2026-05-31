@@ -11,6 +11,8 @@ export const site = {
     'AI 自我进化',
     '代码自我改进',
     'LLM 迭代优化',
+    'AI 自进化资料库',
+    'Self-Evolving Agents Resource Library',
     'Anthropic Claude Code',
     'Claude Code Dynamic Workflows',
     'Agent-Swarm Evolve',
