@@ -54,7 +54,7 @@ sources:
 | Work | Site route source files | 30 | `site/src/pages` 页面源码数。 | `rg --files site/src/pages` |
 | Work | Blog MDX posts | 25 | 面向 SEO/趋势的博客内容页。 | `rg --files site/src/content/blog -g '*.mdx'` |
 | Work | Research MDX pages | 15 | 面向网站的研究内容页。 | `rg --files site/src/content/research -g '*.mdx'` |
-| Work | Wiki files | 57 | LLM Wiki 页面与搜索索引文件数。 | `rg --files work/wiki -g '*.md' -g '*.json'` |
+| Work | Wiki files | 58 | LLM Wiki 页面与搜索索引文件数，包含本次新增的 coverage synthesis。 | `rg --files work/wiki -g '*.md' -g '*.json'` |
 | Results | Public project reports | 426 | 静态站点可引用/下载的公开项目报告文件。 | `docs/indexes/master-index.md` |
 
 ## Same Number, Different Meaning / 口径边界
