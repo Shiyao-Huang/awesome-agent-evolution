@@ -1,28 +1,37 @@
-# Awesome Self-Evolving AI Agents / AI Agent 自进化 Survey 成果
+# Awesome Self-Evolving AI Agents
 
-**Author / 归属:** aha team
+**AI Agent 自进化领域的 Survey、证据图谱和 Evolve-AGI Index。**
 
-[中文主入口](README.md) | [English](README-EN.md) | [中文兼容镜像](README-ZH.md)
+[中文主入口](README.md) | [English](README-EN.md) | [网站](https://shiyao-huang.github.io/awesome-agent-evolution/) | [论文 PDF](paper-drafts/main.pdf) | [Evolve-AGI Index](analysis/evolve-agi-index.md) | [项目索引](projects/INDEX.md)
 
 ![Self Evolve 公开研究管线](site/public/visuals/self-evolve-readme-banner.png)
 
 ## 一句话
 
-这个仓库现在以 Survey 成果为主入口：用 raw 证据、项目 model card、论文评审、benchmark、用户痛点和 Evolve-AGI Index 解释 AI Agent 自进化是否真的形成了可验证、可复用、可治理的改进闭环。
+如果你想判断一个 AI Agent 是否真的会自我进化，而不是只在 demo 里显得更聪明，这个仓库给你一套可追溯的 Survey 答案：看它改了什么、用什么反馈、谁验证、能否迁移、如何回滚。
 
 ## 三句话
 
-1. README 不再扮演“全量链接清单”，而是扮演 survey 摘要、核心判断和证据导航；完整列表进入 `docs/indexes/`、`projects/`、`research/`、`analysis/` 和网站。
-2. Survey 的新 Spark 是把自进化从“会不会更强”的口号，改写成一个受控系统问题：改了什么、反馈是什么、谁验证、成本多少、能否迁移、如何回滚。
-3. 已有的 [Evolve-AGI Index](analysis/evolve-agi-index.md) 纳入论文核心：它不是 AGI 能力分，而是衡量 self-evolving agent 领域成熟度的证据指数。
+1. 我们把论文、开源项目、benchmark、博客/社交信号和用户痛点整理成同一条证据链，避免只按 star、标题或热度判断。
+2. 核心问题不是“它有没有写 evolution”，而是“它是否形成 Observe -> Interpret -> Modify -> Verify -> Retain 的闭环”。
+3. [Evolve-AGI Index](analysis/evolve-agi-index.md) 已进入论文核心：它不是 AGI 能力分，而是衡量 self-evolving agent 领域成熟度的证据指数。
 
 ## 五句话
 
-1. AI Agent 自进化不是一个项目榜单，而是一条证据链：raw 素材进入加工分析，形成 survey 机制框架，再进入论文、网站、图谱和可发布报告。
-2. 真正的自进化系统必须同时说明 mutable object、feedback signal、update operator、independent evaluator、retention/lineage 和 rollback。
-3. 五类 evolution loops 是当前最清晰的机制骨架：reflection/memory、symbolic components、verification-driven code、architecture design、curriculum/weights/population。
-4. Evolve-AGI Index 把 benchmark、闭环强度、证据链、迁移验证、可运行性、领域动量和治理成熟度放进同一个可审计指标，避免把 star 或 demo 热度误读成能力成熟。
-5. README 的任务是让读者先获得认知结构，再顺着证据入口进入完整列表、论文、网站和项目深度分析。
+1. 这不是一个普通 Awesome List，而是一份围绕“AI Agent 如何可靠地改进自己”的开放 Survey。
+2. 真正的自进化系统必须说明可变对象、反馈信号、更新算子、独立评估器、保留机制和回滚路径。
+3. 当前最清晰的机制骨架是五类 evolution loops：reflection/memory、symbolic components、verification-driven code、architecture design、curriculum/weights/population。
+4. Evolve-AGI Index 把 benchmark、闭环强度、证据可信度、迁移验证、可运行性、领域动量和治理成熟度放进同一个可审计指标，避免把热度误读成能力成熟。
+5. 读者可以从这里快速进入论文、项目 model card、公开报告、知识图谱和网站，而不是被几百个链接淹没。
+
+## 你可以直接用它做什么
+
+| 读者 | 你会得到什么 |
+|---|---|
+| 研究者 | 一套从 taxonomy、methods、systems、evaluation 到 future roadmap 的 Survey 主线。 |
+| 工程师 | 判断一个 agent 项目是否具备可验证反馈、可审计记忆、评估 harness 和回滚能力。 |
+| 产品/投资/行业读者 | 区分真实能力积累、benchmark 游戏、demo 热度和治理成熟度。 |
+| 内容创作者 | 获得带证据入口的选题地图：项目、论文、趋势、痛点、图谱和 SEO 页面。 |
 
 ```mermaid
 flowchart LR
@@ -42,10 +51,10 @@ flowchart LR
 
 五句话展开：
 
-1. 过去的 Awesome 入口容易把 raw links、star 排名、paper 列表和网站材料混在一起；新的 README 只发布 survey 已经推敲出的判断。
-2. Survey 不是“总结已有论文”，而是把论文、项目、benchmark、社交/博客信号和用户痛点互相校验。
+1. 过去读者需要在链接、star 排名、论文列表和网站材料之间自行判断；现在先看到结论，再进入证据。
+2. Survey 不是“论文综述合集”，而是把论文、项目、benchmark、社交/博客信号和用户痛点互相校验。
 3. 关键判断不再是“项目名字里有没有 evolution”，而是“系统是否形成 Observe -> Interpret -> Modify -> Verify -> Retain 的闭环”。
-4. AGI index 相关成果不再只是网站模块，而是论文的核心贡献之一：给这个领域一个可解释的成熟度坐标系。
+4. Evolve-AGI Index 不只是网站模块，而是论文的核心贡献之一：给这个领域一个可解释的成熟度坐标系。
 5. 对外读者看到的每个核心判断都应该能回到论文、项目报告、数据索引或 benchmark 证据；没有证据链的结论标记为 `[UNVERIFIED]`。
 
 ## 核心结论
@@ -58,7 +67,7 @@ flowchart LR
 | 4 | 五类 evolution loops 比项目名更稳定。 | 新项目可以按机制归类，而不是被营销词牵着走。 | [survey methods](survey/ch3-methods-cn.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) |
 | 5 | Evolve-AGI Index 应成为论文核心指标。 | 它把成熟度拆成 benchmark、闭环、证据、迁移、可运行、动量、治理七个信号。 | [Evolve-AGI Index](analysis/evolve-agi-index.md), [trend snapshot](reports/evolve-agi-index-trend.json) |
 | 6 | 用户真正关心 trust boundary。 | 产品价值来自可靠、透明、可控、低成本，不来自“更自主”的口号。 | [survey ch7](survey/ch7-painpoints-cn.md), [site survey](site/src/pages/survey/index.astro) |
-| 7 | 失败候选和负结果是资产。 | 没有 rejected patches、regressions、lineage，无法判断系统是否真的会进化。 | [ch8 future](paper-drafts/ch8-future.tex), [wiki schema](work/wiki/schema.md) |
+| 7 | 失败候选和负结果是资产。 | 没有 rejected patches、regressions、lineage，无法判断系统是否真的会进化。 | [ch8 future](paper-drafts/ch8-future.tex), [survey spark analysis](analysis/survey-resource-spark.md) |
 
 ## Evolve-AGI Index 进入论文核心
 
@@ -80,15 +89,15 @@ EAI = Σ(signal_score × signal_weight)
 
 当前快照来自 [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json)：2026-05-30 的指数为 `72.9`，benchmark 子指数为 `80.1`，对应 `90` 个 strict evolution repos、`195` 个 broad evolution repos 和 `193` 个 trend 快照中的 public reports。这个快照与 [docs/indexes/master-index.md](docs/indexes/master-index.md) 的全仓库计数共同使用；前者服务趋势页，后者服务仓库治理。
 
-## Survey 资源重组
+## Survey 证据地图
 
-| Layer | 当前角色 | 关键证据 |
+| 层级 | 当前角色 | 关键证据 |
 |---|---|---|
-| Raw sources | 不可变证据层，保留 GitHub、论文、博客、社交素材。 | [raw index](docs/indexes/raw-index.md), `raw-github/`, `raw-papers/`, `raw-social/`, `raw-blogs/` |
-| Processed analysis | 把 raw 转成分类、机制、model card、paper review、ranking 和 Evolve-AGI Index。 | [processed index](docs/indexes/processed-index.md), [GitHub analysis](analysis/github-project-data-analysis.md), [projects index](projects/INDEX.md) |
-| Survey work | 把机制、系统、评估、工业实践、痛点和未来方向写成论文结构。 | [survey CN chapters](survey/ch1-intro-cn.md), [paper drafts](paper-drafts/main.tex), [survey latex](survey/latex/main.tex) |
-| Results | 对外发布 PDF、网站、报告、图谱、趋势快照和 SEO 页面。 | [results index](docs/indexes/results-index.md), [site](site/src/pages/index.astro), [reports](reports/) |
-| Evidence catalog | 给读者检查证据链、索引和公开结果的入口。 | [CONTENT_INDEX.md](CONTENT_INDEX.md), [master index](docs/indexes/master-index.md) |
+| 原始证据 | 保留 GitHub、论文、博客、社交素材，作为判断起点。 | [raw index](docs/indexes/raw-index.md), `raw-github/`, `raw-papers/`, `raw-social/`, `raw-blogs/` |
+| 加工分析 | 把素材转成分类、机制、model card、paper review、ranking 和 Evolve-AGI Index。 | [processed index](docs/indexes/processed-index.md), [GitHub analysis](analysis/github-project-data-analysis.md), [projects index](projects/INDEX.md) |
+| Survey 论文 | 把机制、系统、评估、工业实践、痛点和未来方向写成论文结构。 | [survey CN chapters](survey/ch1-intro-cn.md), [paper drafts](paper-drafts/main.tex), [survey latex](survey/latex/main.tex) |
+| 公开结果 | 发布 PDF、网站、报告、图谱、趋势快照和 SEO 页面。 | [results index](docs/indexes/results-index.md), [site](site/src/pages/index.astro), [reports](reports/) |
+| 证据目录 | 给读者检查证据链、索引和公开结果的入口。 | [CONTENT_INDEX.md](CONTENT_INDEX.md), [master index](docs/indexes/master-index.md) |
 
 ```mermaid
 flowchart TB
@@ -143,8 +152,6 @@ flowchart TB
 | 查项目证据 | 使用 [projects/INDEX.md](projects/INDEX.md) 和 [public project reports](site/public/reports/projects/INDEX.md)。 |
 | 查数据范围 | 使用 [docs/indexes/master-index.md](docs/indexes/master-index.md) 和 [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md)。 |
 | 浏览网站 | 打开 [Self Evolve site](https://shiyao-huang.github.io/awesome-agent-evolution/) 或本仓库的 [site source](site/)。 |
-
-面向 agent、自动化、构建和发布的内部操作规则不写在 README 主体里；请看 [AGENTS.md](AGENTS.md) 和 [CLOUD.md](CLOUD.md)。
 
 ## Citation
 
