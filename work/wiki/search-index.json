@@ -1,8 +1,8 @@
 {
-  "generated": "2026-05-31T14:46:07.109Z",
+  "generated": "2026-05-31T15:51:21.994Z",
   "stats": {
-    "pages": 53,
-    "keywords": 790
+    "pages": 54,
+    "keywords": 796
   },
   "catalog": [
     {
@@ -567,6 +567,19 @@
         "DAG",
         "taxonomy",
         "architecture"
+      ]
+    },
+    {
+      "path": "synthesis/resource-library-coverage-audit.md",
+      "title": "Resource Library Coverage Audit",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "coverage",
+        "survey",
+        "evidence-chain",
+        "resource-library",
+        "public-readme"
       ]
     },
     {
@@ -2386,6 +2399,7 @@
       "sources/raw-papers-mechanism-analysis.md",
       "sources/raw-social-blogs-mechanism-analysis.md",
       "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/resource-library-coverage-audit.md",
       "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "1. paper landscape overview": [
@@ -2904,7 +2918,8 @@
       "sources/review-mechanism-insights.md"
     ],
     "coverage": [
-      "sources/review-mechanism-insights.md"
+      "sources/review-mechanism-insights.md",
+      "synthesis/resource-library-coverage-audit.md"
     ],
     "evaluation bottleneck is universal": [
       "sources/review-mechanism-insights.md"
@@ -3145,6 +3160,7 @@
     ],
     "three sentences": [
       "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/resource-library-coverage-audit.md",
       "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "corrected top signal": [
@@ -3172,10 +3188,29 @@
     "97痛点映射": [
       "synthesis/mechanism-framework.md"
     ],
-    "survey spark and evolve-agi core": [
-      "synthesis/survey-spark-evolve-agi-core.md"
+    "resource library coverage audit": [
+      "synthesis/resource-library-coverage-audit.md"
     ],
     "survey": [
+      "synthesis/resource-library-coverage-audit.md",
+      "synthesis/survey-spark-evolve-agi-core.md"
+    ],
+    "evidence-chain": [
+      "synthesis/resource-library-coverage-audit.md"
+    ],
+    "resource-library": [
+      "synthesis/resource-library-coverage-audit.md"
+    ],
+    "public-readme": [
+      "synthesis/resource-library-coverage-audit.md"
+    ],
+    "count boundary": [
+      "synthesis/resource-library-coverage-audit.md"
+    ],
+    "use in future work": [
+      "synthesis/resource-library-coverage-audit.md"
+    ],
+    "survey spark and evolve-agi core": [
       "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "evolve-agi-index": [

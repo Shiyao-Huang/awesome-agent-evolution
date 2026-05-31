@@ -254,3 +254,13 @@
 - Created `work/wiki/synthesis/survey-spark-evolve-agi-core.md` so future agents can retrieve the README/paper/EAI integration.
 - Updated README/README-ZH/README-EN to publish survey conclusions, resource DAGs, Evolve-AGI Index weights, evidence boundaries, and verification entry points.
 **产出:** `analysis/survey-resource-spark.md`, `work/wiki/synthesis/survey-spark-evolve-agi-core.md`
+
+## [2026-05-31 23:58] synthesis | Resource Library Coverage Audit
+
+**操作:** Audited what the repository already contains before expanding README/survey/SEO claims.
+**详情:**
+- Created `analysis/resource-library-coverage-audit.md` to separate raw, processed, work, results, site, and wiki coverage.
+- Clarified count boundaries: 631 raw/classified GitHub entries, 224 analyzed model-card reports, 426 public report files, 119 curated site project records, 793 project markdown files, 196 survey-display papers, and 201 raw paper files.
+- Added `work/wiki/synthesis/resource-library-coverage-audit.md` so future agents can reuse the coverage story without confusing consumer-facing README with agent operations.
+- Updated README/README-ZH/README-EN and `CONTENT_INDEX.md` with reader-facing evidence entry points.
+**产出:** `analysis/resource-library-coverage-audit.md`, `work/wiki/synthesis/resource-library-coverage-audit.md`
