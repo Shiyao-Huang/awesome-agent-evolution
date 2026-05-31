@@ -1,28 +1,28 @@
 # Awesome Self-Evolving AI Agents
 
-**A survey-first evidence map for self-evolving AI agents, with project reports, paper reviews, benchmarks, and the Evolve-AGI Index.**
+**A survey-first map of self-evolving AI agents: papers, projects, benchmarks, public reports, and the Evolve-AGI Index in one evidence chain.**
 
-[中文主入口](README.md) | [English](README-EN.md) | [Website](https://shiyao-huang.github.io/awesome-agent-evolution/) | [Paper PDF](paper-drafts/main.pdf) | [Evolve-AGI Index](analysis/evolve-agi-index.md) | [Project Index](projects/INDEX.md)
+[Chinese](README.md) | [English](README-EN.md) | [Website](https://shiyao-huang.github.io/awesome-agent-evolution/) | [Paper PDF](paper-drafts/main.pdf) | [Evolve-AGI Index](analysis/evolve-agi-index.md) | [Project Index](projects/INDEX.md)
 
 ![Self Evolve public research pipeline](site/public/visuals/self-evolve-readme-banner.png)
 
 ## One Sentence
 
-If you want to know whether an AI agent truly improves itself instead of merely looking impressive in a demo, this repository gives you a traceable survey answer: what changes, what feedback drives it, who verifies it, whether it transfers, and how it rolls back.
+Want to know whether an AI agent is actually improving itself, or just looking impressive in a demo? This survey gives you a traceable answer: what changes, what feedback drives the change, who verifies it, whether it transfers, and how it rolls back.
 
 ## Three Sentences
 
-1. We connect papers, open-source projects, benchmarks, blog/social signals, and user pain points into one evidence chain, so readers do not have to judge by stars, titles, or hype alone.
-2. The core question is not whether a project says "evolution"; it is whether the system forms an Observe -> Interpret -> Modify -> Verify -> Retain loop.
-3. The [Evolve-AGI Index](analysis/evolve-agi-index.md) is now part of the paper core: it is not an AGI capability score, but an evidence index for field maturity in self-evolving agents.
+1. We connect papers, open-source projects, benchmarks, blog/social signals, and real user pain points into one evidence chain, so readers can start with the judgment and then inspect the proof.
+2. The standard is simple: do not stop at names, stars, or demos; ask whether the system forms an Observe -> Interpret -> Modify -> Verify -> Retain loop.
+3. The [Evolve-AGI Index](analysis/evolve-agi-index.md) is now part of the paper core: it is not an AGI capability score, but an evidence index for the maturity of self-evolving agents.
 
 ## Five Sentences
 
-1. This is not a standard Awesome List; it is an open survey about how AI agents can reliably improve themselves.
+1. This is not a standard Awesome List; it is an open survey of how AI agents can reliably improve themselves.
 2. A genuine self-evolving system must identify its mutable object, feedback signal, update operator, independent evaluator, retention mechanism, and rollback path.
-3. The clearest mechanism skeleton is the Five Evolution Loops: reflection/memory, symbolic components, verification-driven code, architecture design, and curriculum/weights/population.
+3. The clearest mechanism skeleton is the Five Evolution Loops: reflection/memory, symbolic components, verification-driven code, architecture search, and curriculum/weights/population.
 4. The Evolve-AGI Index puts benchmark performance, loop strength, evidence credibility, transfer verification, implementation access, field momentum, and governance readiness into one auditable metric, so hype does not masquerade as maturity.
-5. Readers can use this page to reach the paper, project model cards, public reports, knowledge graph, and website without drowning in hundreds of links.
+5. Use this page to reach the paper, project model cards, public reports, knowledge graph, and website without drowning in hundreds of links.
 
 ## What You Can Use It For
 
@@ -31,21 +31,21 @@ If you want to know whether an AI agent truly improves itself instead of merely 
 | Researchers | A survey spine from taxonomy, methods, systems, and evaluation to the future roadmap. |
 | Builders | A way to judge whether an agent project has verifiable feedback, auditable memory, evaluator harnesses, and rollback paths. |
 | Product, investment, and industry readers | A way to separate real capability accumulation from benchmark gaming, demos, and governance gaps. |
-| Writers and educators | An evidence-backed topic map across projects, papers, trends, pain points, graphs, and SEO-ready pages. |
+| Writers and educators | An evidence-backed topic map across projects, papers, trends, pain points, graphs, and long-tail SEO pages. |
 
 ```mermaid
 flowchart LR
   RAW["raw sources<br/>GitHub / papers / blogs / social"] --> PROC["processed evidence<br/>analysis / research / projects"]
   PROC --> SURVEY["survey synthesis<br/>five loops + pain points + benchmarks"]
-  SURVEY --> SPARK["new Spark<br/>controlled self-evolution"]
+  SURVEY --> SPARK["core insight<br/>controlled self-evolution"]
   SPARK --> EAI["Evolve-AGI Index<br/>field maturity score"]
   EAI --> PAPER["paper core<br/>thesis + contribution + roadmap"]
   SURVEY --> SITE["site + graph + reports"]
 ```
 
-## New Survey Spark
+## Core Insight
 
-One sentence: the central spark is to turn Self-Evolving AI Agents from a story about self-improvement into an auditable improvement system.
+One sentence: the core insight is to turn Self-Evolving AI Agents from a story about self-improvement into an auditable improvement system.
 
 Three sentences: A system enters this survey's self-evolution scope only when feedback changes its prompt, memory, tool policy, workflow, code, weights, or population and leaves verifiable evidence. All resources behind the survey are now reorganized around one question: what object changes, what signal drives it, and what prevents the change from becoming harmful. The Evolve-AGI Index is the measurement spine for that reorganization, connecting paper findings, the GitHub corpus, benchmarks, and governance requirements into a reproducible data flow.
 
@@ -128,7 +128,7 @@ flowchart TB
 
 | You want to know | Read first | Then read |
 |---|---|---|
-| The one-line field thesis | [New Survey Spark](#new-survey-spark) | [paper abstract](paper-drafts/main.tex) |
+| The one-line field thesis | [Core Insight](#core-insight) | [paper abstract](paper-drafts/main.tex) |
 | Which projects truly count as self-evolving | [Core Findings](#core-findings) | [projects/INDEX.md](projects/INDEX.md), [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) |
 | How the paper is organized | [Paper Spine](#paper-spine) | [paper-drafts/main.tex](paper-drafts/main.tex), [survey/latex/main.tex](survey/latex/main.tex) |
 | How the AGI index enters the core | [Evolve-AGI Index In The Paper Core](#evolve-agi-index-in-the-paper-core) | [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [site page](site/src/pages/evolve-agi-index/index.astro) |
@@ -141,7 +141,7 @@ flowchart TB
 - [KNOWN] GitHub corpus counts, strict/broad evolution subsets, and time slices come from [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) and the paired JSON.
 - [KNOWN] Evolve-AGI Index methodology, weights, and benchmark inputs come from [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [site/src/data/evolveAgiIndex.ts](site/src/data/evolveAgiIndex.ts), and [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json).
 - [KNOWN] Survey chapters and the paper draft come from [paper-drafts/main.tex](paper-drafts/main.tex) and [survey/latex/main.tex](survey/latex/main.tex).
-- [INFERRED] The "new Spark" is a synthesis over those sources: upgrading the Awesome repository into a survey + index + evidence graph for controlled self-evolution, not a simple link site.
+- [INFERRED] The "core insight" is a synthesis over those sources: upgrading the Awesome repository into a survey + index + evidence graph for controlled self-evolution, not a simple link site.
 
 ## Reader Next Steps
 
