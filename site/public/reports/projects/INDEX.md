@@ -371,6 +371,14 @@
 | ObsidianClaw Knowledge Plugin | [humanitylabs-org/obsidianclaw](https://github.com/humanitylabs-org/obsidianclaw) | OpenClaw Knowledge and Notes Integration Plugin | [projects/346-obsidianclaw-knowledge-plugin.md](346-obsidianclaw-knowledge-plugin.md) |
 | Momo OpenClaw Plugin | [momo-personal-assistant/openclaw-plugin](https://github.com/momo-personal-assistant/openclaw-plugin) | Personal Assistant Plugin for OpenClaw Workflows | [projects/347-momo-openclaw-plugin.md](347-momo-openclaw-plugin.md) |
 
+| NVIDIA Agent Skills Registry | [NVIDIA/skills](https://github.com/NVIDIA/skills) | Enterprise Agent Skill Registry and Runtime Templates | [projects/348-nvidia-agent-skills-registry.md](348-nvidia-agent-skills-registry.md) |
+| Supabase Agent Skills | [supabase/agent-skills](https://github.com/supabase/agent-skills) | Agent Skill Packs and Prompt Compression Patterns | [projects/349-supabase-agent-skills.md](349-supabase-agent-skills.md) |
+| Skills Vote Evolution Benchmark | [MemTensor/skills-vote](https://github.com/MemTensor/skills-vote) | Self-Evolving Skill Selection and Benchmark Pipeline | [projects/350-skills-vote-evolution-benchmark.md](350-skills-vote-evolution-benchmark.md) |
+| Ori Mnemos Memory Harness | [aayoawoyemi/ori-mnemos](https://github.com/aayoawoyemi/ori-mnemos) | Agent Memory Substrate and Runtime Tracing Harness | [projects/351-ori-mnemos-memory-harness.md](351-ori-mnemos-memory-harness.md) |
+| OpenClaw DingTalk Channel Plugin | [soimy/openclaw-channel-dingtalk](https://github.com/soimy/openclaw-channel-dingtalk) | Agent Channel Plugin for Enterprise Messaging Runtime | [projects/352-openclaw-dingtalk-channel-plugin.md](352-openclaw-dingtalk-channel-plugin.md) |
+| OpenClaw Codex App Server | [pwrdrvr/openclaw-codex-app-server](https://github.com/pwrdrvr/openclaw-codex-app-server) | Harness-Oriented App Server for OpenClaw and Codex Workflows | [projects/353-openclaw-codex-app-server.md](353-openclaw-codex-app-server.md) |
+| OpenClaw Observability Plugin | [henrikrexed/openclaw-observability-plugin](https://github.com/henrikrexed/openclaw-observability-plugin) | Agent Runtime Observability and Trace Monitoring Plugin | [projects/354-openclaw-observability-plugin.md](354-openclaw-observability-plugin.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

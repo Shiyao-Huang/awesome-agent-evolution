@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-05-31T00:00:00+08:00",
-  "total": 624,
-  "updated_files": 624,
+  "total": 631,
+  "updated_files": 631,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -57,6 +57,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "2024-Q2",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "aayoawoyemi/ori-mnemos",
+      "url": "https://github.com/aayoawoyemi/ori-mnemos",
+      "file": "raw-github/aayoawoyemi_ori-mnemos.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T19:50:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
     },
     {
       "repo": "abhisakh/ai-scientist-v2",
@@ -1787,6 +1796,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "henrikrexed/openclaw-observability-plugin",
+      "url": "https://github.com/henrikrexed/openclaw-observability-plugin",
+      "file": "raw-github/henrikrexed_openclaw-observability-plugin.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T19:50:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
+    },
+    {
       "repo": "hkuds/ai-researcher",
       "url": "https://github.com/hkuds/ai-researcher",
       "file": "raw-github/hkuds_ai-researcher.md",
@@ -2885,6 +2903,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "MemTensor/skills-vote",
+      "url": "https://github.com/MemTensor/skills-vote",
+      "file": "raw-github/memtensor_skills-vote.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T19:50:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
+    },
+    {
       "repo": "memtomem/memtomem",
       "url": "https://github.com/memtomem/memtomem",
       "file": "raw-github/memtomem_memtomem.md",
@@ -3270,6 +3297,15 @@
       "collected_at": "2026-05-22T13:00:00+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "AnySearch GitHub extract: latest release v2026.5.16 on 2026-05-16"
+    },
+    {
+      "repo": "NVIDIA/skills",
+      "url": "https://github.com/NVIDIA/skills",
+      "file": "raw-github/nvidia_skills.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T19:50:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
     },
     {
       "repo": "obra/superpowers",
@@ -3801,6 +3837,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "pwrdrvr/openclaw-codex-app-server",
+      "url": "https://github.com/pwrdrvr/openclaw-codex-app-server",
+      "file": "raw-github/pwrdrvr_openclaw-codex-app-server.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T19:50:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
     },
     {
       "repo": "QF-Bench/QuantitativeFinance-Bench",
@@ -4451,6 +4496,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "soimy/openclaw-channel-dingtalk",
+      "url": "https://github.com/soimy/openclaw-channel-dingtalk",
+      "file": "raw-github/soimy_openclaw-channel-dingtalk.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T19:50:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
+    },
+    {
       "repo": "sola-st/repairagent",
       "url": "https://github.com/sola-st/repairagent",
       "file": "raw-github/sola-st_repairagent.md",
@@ -4593,6 +4647,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "supabase/agent-skills",
+      "url": "https://github.com/supabase/agent-skills",
+      "file": "raw-github/supabase_agent-skills.md",
+      "content_timestamp": "2026-05-31",
+      "collected_at": "2026-05-31T19:50:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_05_31"
     },
     {
       "repo": "SuperagenticAI/metaharness",

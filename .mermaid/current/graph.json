@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T07:20:36+08:00",
+  "generated_at": "2026-05-31T19:50:00+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -324,7 +324,14 @@
         "raw-github/syntax-syndicate_openharness-agent-harness.md",
         "raw-github/arcadeai_openclaw-arcade-plugin.md",
         "raw-github/humanitylabs-org_obsidianclaw.md",
-        "raw-github/momo-personal-assistant_openclaw-plugin.md"
+        "raw-github/momo-personal-assistant_openclaw-plugin.md",
+        "raw-github/nvidia_skills.md",
+        "raw-github/supabase_agent-skills.md",
+        "raw-github/memtensor_skills-vote.md",
+        "raw-github/aayoawoyemi_ori-mnemos.md",
+        "raw-github/soimy_openclaw-channel-dingtalk.md",
+        "raw-github/pwrdrvr_openclaw-codex-app-server.md",
+        "raw-github/henrikrexed_openclaw-observability-plugin.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -473,7 +480,8 @@
         "work/research/hourly-public-metadata-update-2026-05-30-1316.md",
         "work/research/hourly-public-metadata-update-2026-05-30-1917.md",
         "work/research/hourly-public-metadata-update-2026-05-31-0121.md",
-        "work/research/hourly-public-metadata-update-2026-05-31-0720.md"
+        "work/research/hourly-public-metadata-update-2026-05-31-0720.md",
+        "work/research/hourly-public-metadata-update-2026-05-31-1950.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -1063,7 +1071,21 @@
         "projects/346-obsidianclaw-knowledge-plugin.md",
         "site/public/reports/projects/346-obsidianclaw-knowledge-plugin.md",
         "projects/347-momo-openclaw-plugin.md",
-        "site/public/reports/projects/347-momo-openclaw-plugin.md"
+        "site/public/reports/projects/347-momo-openclaw-plugin.md",
+        "projects/348-nvidia-agent-skills-registry.md",
+        "site/public/reports/projects/348-nvidia-agent-skills-registry.md",
+        "projects/349-supabase-agent-skills.md",
+        "site/public/reports/projects/349-supabase-agent-skills.md",
+        "projects/350-skills-vote-evolution-benchmark.md",
+        "site/public/reports/projects/350-skills-vote-evolution-benchmark.md",
+        "projects/351-ori-mnemos-memory-harness.md",
+        "site/public/reports/projects/351-ori-mnemos-memory-harness.md",
+        "projects/352-openclaw-dingtalk-channel-plugin.md",
+        "site/public/reports/projects/352-openclaw-dingtalk-channel-plugin.md",
+        "projects/353-openclaw-codex-app-server.md",
+        "site/public/reports/projects/353-openclaw-codex-app-server.md",
+        "projects/354-openclaw-observability-plugin.md",
+        "site/public/reports/projects/354-openclaw-observability-plugin.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1389,14 +1411,15 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-05-31T07:20:36+08:00",
+    "run_at": "2026-05-31T19:50:00+08:00",
     "added_repositories": [
-      "Martian-Engineering/lossless-claw",
-      "thinkwee/AgentsMeetRL",
-      "syntax-syndicate/OpenHarness-agent-harness",
-      "ArcadeAI/openclaw-arcade-plugin",
-      "humanitylabs-org/obsidianclaw",
-      "momo-personal-assistant/openclaw-plugin"
+      "NVIDIA/skills",
+      "supabase/agent-skills",
+      "MemTensor/skills-vote",
+      "aayoawoyemi/ori-mnemos",
+      "soimy/openclaw-channel-dingtalk",
+      "pwrdrvr/openclaw-codex-app-server",
+      "henrikrexed/openclaw-observability-plugin"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",

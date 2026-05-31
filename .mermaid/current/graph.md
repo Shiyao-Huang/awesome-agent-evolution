@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-31T07:20:36+08:00
+Generated: 2026-05-31T19:50:00+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-05-31T07:20:36+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: Martian-Engineering/lossless-claw, thinkwee/AgentsMeetRL, syntax-syndicate/OpenHarness-agent-harness, ArcadeAI/openclaw-arcade-plugin, humanitylabs-org/obsidianclaw, momo-personal-assistant/openclaw-plugin.
-- New raw files: raw-github/martian-engineering_lossless-claw.md, raw-github/thinkwee_agentsmeetrl.md, raw-github/syntax-syndicate_openharness-agent-harness.md, raw-github/arcadeai_openclaw-arcade-plugin.md, raw-github/humanitylabs-org_obsidianclaw.md, raw-github/momo-personal-assistant_openclaw-plugin.md.
-- New public model cards and site reports: project/report ids 342, 343, 344, 345, 346, 347.
+- Web-observed repos: NVIDIA/skills, supabase/agent-skills, MemTensor/skills-vote, aayoawoyemi/ori-mnemos, soimy/openclaw-channel-dingtalk, pwrdrvr/openclaw-codex-app-server, henrikrexed/openclaw-observability-plugin.
+- New raw files: raw-github/nvidia_skills.md, raw-github/supabase_agent-skills.md, raw-github/memtensor_skills-vote.md, raw-github/aayoawoyemi_ori-mnemos.md, raw-github/soimy_openclaw-channel-dingtalk.md, raw-github/pwrdrvr_openclaw-codex-app-server.md, raw-github/henrikrexed_openclaw-observability-plugin.md.
+- New public model cards and site reports: project/report ids 348, 349, 350, 351, 352, 353, 354.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
 - GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

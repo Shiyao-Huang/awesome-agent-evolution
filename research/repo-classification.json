@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T07:20:36+08:00",
+  "generated_at": "2026-05-31T19:50:00+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -90,6 +90,21 @@
       "content_timestamp": "2024-05-13",
       "evidence": "application/self-evolving-agent signal",
       "description": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search"
+    },
+    {
+      "repo": "aayoawoyemi/ori-mnemos",
+      "url": "https://github.com/aayoawoyemi/ori-mnemos",
+      "stars": "10",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "TypeScript/Agent Memory Runtime/Prompt and Event Tracing",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 10 stars, 0 forks, 17 commits, MIT license, and TypeScript-dominant code focused on memory and prompts.",
+      "description": "aayoawoyemi/ori-mnemos provides a memory substrate that records agent traces and feeds retrieval into future steps."
     },
     {
       "repo": "abhisakh/ai-scientist-v2",
@@ -2972,6 +2987,21 @@
       "description": "HEBBS 是面向 AI agents 的 Rust 记忆引擎，把项目旁路的 .hebbs cognition layer、四种召回、原生 consolidation、decay 与 Claude Code/OpenClaw skill surface 组合起来。"
     },
     {
+      "repo": "henrikrexed/openclaw-observability-plugin",
+      "url": "https://github.com/henrikrexed/openclaw-observability-plugin",
+      "stars": "0",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "framework-runtime",
+      "base_theme": "evaluation",
+      "stack": "TypeScript/OpenClaw Plugin/Observability Tracing",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 0 stars, 0 forks, 13 commits, MIT license, and TypeScript plugin code for runtime monitoring.",
+      "description": "henrikrexed/openclaw-observability-plugin adds observability and trace-monitoring capabilities to OpenClaw agent runtimes."
+    },
+    {
       "repo": "hkuds/ai-researcher",
       "url": "https://github.com/hkuds/ai-researcher",
       "stars": "5",
@@ -4802,6 +4832,21 @@
       "description": "MemRL 是自进化 agent 的论文代码，用 episodic memory 上的 runtime reinforcement learning 代替参数微调，通过环境反馈筛选高效策略并在多个 benchmark 上验证持续改进。"
     },
     {
+      "repo": "MemTensor/skills-vote",
+      "url": "https://github.com/MemTensor/skills-vote",
+      "stars": "267",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/Evolution Framework/Benchmark Evaluation",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 267 stars, 14 forks, 35 commits, MIT license, and Python-first implementation for skills-vote evolution loops.",
+      "description": "MemTensor/skills-vote focuses on self-evolving skill selection and evaluation loops for agent improvement experiments."
+    },
+    {
       "repo": "memtomem/memtomem",
       "url": "https://github.com/memtomem/memtomem",
       "stars": "5",
@@ -5445,6 +5490,21 @@
       "content_timestamp": "2026-05-31",
       "evidence": "web-observed GitHub page showed 3.7k stars, 422 forks, 7 commits, MIT-licensed model card references, and explicit self-evolution benchmark claims.",
       "description": "NousResearch/hermes-agent-self-evolution packages a self-evolving RL training workflow that distills improved interaction behavior into Hermes model variants."
+    },
+    {
+      "repo": "NVIDIA/skills",
+      "url": "https://github.com/NVIDIA/skills",
+      "stars": "692",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "Jupyter Notebook/Python/Agent Skill Registry",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 692 stars, 91 forks, 245 commits, Apache-2.0 license, and Jupyter Notebook/Python-heavy implementation.",
+      "description": "NVIDIA/skills curates reusable agent skill modules and templates for enterprise-grade assistant and coding workflows."
     },
     {
       "repo": "obra/superpowers",
@@ -6330,6 +6390,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "A collection of MCP servers."
+    },
+    {
+      "repo": "pwrdrvr/openclaw-codex-app-server",
+      "url": "https://github.com/pwrdrvr/openclaw-codex-app-server",
+      "stars": "258",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "TypeScript/OpenClaw App Server/Runpod-Together Integration",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 258 stars, 35 forks, 113 commits, MIT license, and TypeScript-based app-server architecture.",
+      "description": "pwrdrvr/openclaw-codex-app-server exposes an app-server runtime linking OpenClaw workflows with Codex and provider integrations."
     },
     {
       "repo": "QF-Bench/QuantitativeFinance-Bench",
@@ -7412,6 +7487,21 @@
       "description": "Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning"
     },
     {
+      "repo": "soimy/openclaw-channel-dingtalk",
+      "url": "https://github.com/soimy/openclaw-channel-dingtalk",
+      "stars": "87",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "应用/application",
+      "function_tag": "application-demo",
+      "base_theme": "skill",
+      "stack": "TypeScript/OpenClaw Channel Plugin/DingTalk Integration",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 87 stars, 38 forks, 22 commits, MIT license, and TypeScript-first OpenClaw channel integration.",
+      "description": "soimy/openclaw-channel-dingtalk integrates OpenClaw agents with DingTalk channels for enterprise communication workflows."
+    },
+    {
       "repo": "sola-st/repairagent",
       "url": "https://github.com/sola-st/repairagent",
       "stars": "95",
@@ -7650,6 +7740,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "[ICML-2026] Official implementation of \"SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience\""
+    },
+    {
+      "repo": "supabase/agent-skills",
+      "url": "https://github.com/supabase/agent-skills",
+      "stars": "2200",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "skill-orchestration",
+      "base_theme": "skill",
+      "stack": "Markdown/Prompt Assets/Agent Skill Packs",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-31",
+      "evidence": "web-observed GitHub page showed 2.2k stars, 146 forks, 79 commits, MIT license, and markdown-first skill package design.",
+      "description": "supabase/agent-skills publishes composable skill packs for coding and product-support agent workflows with reusable prompt structures."
     },
     {
       "repo": "SuperagenticAI/metaharness",
