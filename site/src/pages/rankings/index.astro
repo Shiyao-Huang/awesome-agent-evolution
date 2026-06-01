@@ -5,8 +5,115 @@ import analysis from '@/data/analysis.json';
 const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const method = analysis.ranking_method;
 const ranked = [...(analysis.recency_weighted_project_ranking ?? [])].slice(0, 30);
+const rankedTotal = ranked.length || 1;
+type RankedProject = (typeof ranked)[number];
 
-const topCategories = [...new Set(ranked.map(p => p.category))];
+const average = (values: number[]) => values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0;
+const percentOfTop30 = (count: number) => Math.round((count / rankedTotal) * 100);
+
+const valueBands = [
+  {
+    label: '优先深读',
+    range: '80+',
+    description: '机制、证据和近期性都强，适合优先阅读源码和项目报告。',
+    min: 80,
+    max: Infinity
+  },
+  {
+    label: '重点跟踪',
+    range: '70-79',
+    description: '方向清楚，但还需要补足报告、对照实验或长期活跃度。',
+    min: 70,
+    max: 80
+  },
+  {
+    label: '补证据',
+    range: '60-69',
+    description: '可能有价值，当前更适合回到原始仓库和报告验证机制。',
+    min: 60,
+    max: 70
+  },
+  {
+    label: '背景观察',
+    range: '<60',
+    description: '作为生态背景，不应抢占当前研究优先级。',
+    min: -Infinity,
+    max: 60
+  }
+].map(band => {
+  const items = ranked.filter(project => project.scores.current_value >= band.min && project.scores.current_value < band.max);
+  return {
+    ...band,
+    count: items.length,
+    pct: percentOfTop30(items.length),
+    examples: items.slice(0, 3).map(project => project.name)
+  };
+});
+
+const signalText = (project: RankedProject) => [
+  project.name,
+  project.category,
+  project.pattern,
+  ...(project.tags ?? [])
+].join(' ');
+
+const signalRules = [
+  {
+    label: '进化闭环',
+    color: '#FF5B00',
+    description: '候选生成、搜索、反馈精炼、自我改进。',
+    test: /进化|演化|自进化|自改进|反馈|搜索循环|self-evol|self-improv|evolution|evolve|reflection|outer-loop|autonomous-iteration/i
+  },
+  {
+    label: '评估/基准',
+    color: '#007AFF',
+    description: '评估器、benchmark、harness、可复现验证。',
+    test: /评估|评测|基准|打分|验证|evaluation|benchmark|harness|grader|score|reproducibility|eval/i
+  },
+  {
+    label: '训练/RL',
+    color: '#7C3AED',
+    description: '训练循环、强化学习、蒸馏、数据回流。',
+    test: /训练|training|reinforcement|rl|distillation|agent-training|data loop/i
+  },
+  {
+    label: '多 Agent/编排',
+    color: '#0891B2',
+    description: '多智能体协作、工作流、handoff、subagent。',
+    test: /智能体编排|multi-agent|workflow|orchestration|handoff|subagents|open-ended tasks/i
+  },
+  {
+    label: '记忆/上下文',
+    color: '#2E6F4E',
+    description: '记忆、上下文、检索、图结构和推理状态。',
+    test: /记忆|上下文|memory|context|retrieval|graph|reasoning|persistent/i
+  },
+  {
+    label: '代码/技能/工具',
+    color: '#A56117',
+    description: '代码自修改、技能选择、工具与插件优化。',
+    test: /代码|技能|工具|code|coding|skill|tool|plugin|prompt|optimizer|teleprompter|python|typescript|github-actions/i
+  },
+  {
+    label: '安全/治理',
+    color: '#B83224',
+    description: '安全策略、权限、policy、治理和防御。',
+    test: /安全|治理|策略|security|policy|governance|defense/i
+  }
+].map(signal => {
+    const items = ranked.filter(project => signal.test.test(signalText(project)));
+    const avgScore = average(items.map(project => project.scores.current_value));
+    const topProject = [...items].sort((a, b) => b.scores.current_value - a.scores.current_value)[0];
+    return {
+      ...signal,
+      count: items.length,
+      pct: percentOfTop30(items.length),
+      avgScore,
+      topProject: topProject?.name ?? ''
+    };
+  })
+  .filter(signal => signal.count > 0)
+  .sort((a, b) => b.count - a.count || b.avgScore - a.avgScore || a.label.localeCompare(b.label));
 ---
 
 <BaseLayout
@@ -107,20 +214,44 @@ const topCategories = [...new Set(ranked.map(p => p.category))];
             </tbody>
           </table>
         </div>
-        <div class="rank-cats">
-          {topCategories.map(cat => {
-            const count = ranked.filter(p => p.category === cat).length;
-            const pct = Math.round((count / 30) * 100);
-            return (
-              <div class="rank-cat-row">
-                <span class="rank-cat-label">{cat}</span>
-                <div class="rank-cat-bar-wrap">
-                  <div class="rank-cat-bar" style={`width:${pct}%`}></div>
+        <div class="rank-usage-grid">
+          <div class="rank-usage-panel">
+            <div class="rank-usage-title">怎么用这个排名</div>
+            <div class="rank-bands">
+              {valueBands.map(band => (
+                <div class="rank-band-row">
+                  <div class="rank-band-head">
+                    <span>{band.label}</span>
+                    <strong>{band.count}</strong>
+                  </div>
+                  <div class="rank-cat-bar-wrap" aria-label={`${band.label}: ${band.count} projects`}>
+                    <div class="rank-cat-bar" style={`width:${band.pct}%`}></div>
+                  </div>
+                  <div class="rank-band-meta">
+                    <span>{band.range} 分</span>
+                    <span>{band.description}</span>
+                  </div>
+                  {band.examples.length > 0 && <div class="rank-band-examples">{band.examples.join(' · ')}</div>}
                 </div>
-                <span class="rank-cat-count">{count}</span>
-              </div>
-            );
-          })}
+              ))}
+            </div>
+          </div>
+
+          <div class="rank-usage-panel">
+            <div class="rank-usage-title">Top 30 机制信号覆盖</div>
+            <div class="rank-cats">
+              {signalRules.map(signal => (
+                <div class="rank-cat-row">
+                  <span class="rank-cat-label" title={signal.description}>{signal.label}</span>
+                  <div class="rank-cat-bar-wrap" aria-label={`${signal.label}: ${signal.count} projects`}>
+                    <div class="rank-cat-bar" style={`width:${signal.pct}%; background:${signal.color}`}></div>
+                  </div>
+                  <span class="rank-cat-count">{signal.count}</span>
+                  <span class="rank-cat-note">{Math.round(signal.avgScore)} avg · {signal.topProject}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -151,16 +282,30 @@ const topCategories = [...new Set(ranked.map(p => p.category))];
 .rank-tag{display:inline-block;padding:2px 6px;margin:1px 2px;border:1px solid var(--line);border-radius:4px;font-size:11px;font-weight:650;color:var(--muted);white-space:nowrap}
 .rank-date{white-space:nowrap;color:var(--muted);font-size:12px}
 
-.rank-cats{display:flex;flex-direction:column;gap:6px}
-.rank-cat-row{display:grid;grid-template-columns:140px 1fr 36px;gap:8px;align-items:center}
+.rank-usage-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;margin-top:18px}
+.rank-usage-panel{border:1px solid var(--line);border-radius:8px;padding:14px;background:color-mix(in srgb,var(--surface-2) 55%,transparent)}
+.rank-usage-title{font-size:13px;font-weight:850;color:var(--fg);margin-bottom:12px}
+.rank-bands{display:flex;flex-direction:column;gap:12px}
+.rank-band-row{display:grid;grid-template-columns:1fr;gap:6px}
+.rank-band-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px;font-weight:800;color:var(--fg)}
+.rank-band-head strong{font-variant-numeric:tabular-nums;color:var(--accent)}
+.rank-band-meta{display:grid;grid-template-columns:64px 1fr;gap:8px;font-size:12px;line-height:1.45;color:var(--muted)}
+.rank-band-meta span:first-child{font-weight:800;color:var(--meta);white-space:nowrap}
+.rank-band-examples{font-size:11px;line-height:1.45;color:var(--meta);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-cats{display:flex;flex-direction:column;gap:10px}
+.rank-cat-row{display:grid;grid-template-columns:110px 1fr 34px;gap:8px;align-items:center}
 .rank-cat-label{font-size:13px;font-weight:650;color:var(--fg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.rank-cat-bar-wrap{height:24px;background:var(--surface-2);border-radius:6px;overflow:hidden}
+.rank-cat-bar-wrap{height:18px;background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden}
 .rank-cat-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--brand2));border-radius:6px;transition:width .6s cubic-bezier(.4,0,.2,1)}
 .rank-cat-count{font-size:13px;font-weight:800;color:var(--meta);text-align:right}
+.rank-cat-note{grid-column:2 / 4;font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 @media(max-width:760px){
   .rank-podium{grid-template-columns:1fr}
   .rank-table{font-size:12px}
-  .rank-cat-row{grid-template-columns:100px 1fr 30px}
+  .rank-usage-grid{grid-template-columns:1fr}
+  .rank-cat-row{grid-template-columns:96px 1fr 30px}
+  .rank-band-meta{grid-template-columns:1fr}
+  .rank-band-examples{white-space:normal}
 }
 </style>
