@@ -2928,5 +2928,103 @@
     "forks": null,
     "source": "github_api_fetch_error",
     "error": "fetch failed"
+  },
+  "team-commonly/commonly": {
+    "created_at": "2025-02-03T02:13:30Z",
+    "pushed_at": "2026-06-01T10:55:31Z",
+    "stars": 691,
+    "forks": 97,
+    "source": "github_api"
+  },
+  "matevip/mateclaw": {
+    "created_at": "2026-04-04T10:53:35Z",
+    "pushed_at": "2026-06-01T12:21:54Z",
+    "stars": 538,
+    "forks": 184,
+    "source": "github_api"
+  },
+  "christinminor459/onionclaw": {
+    "created_at": "2026-03-28T20:40:47Z",
+    "pushed_at": "2026-06-01T09:06:45Z",
+    "stars": 199,
+    "forks": 56,
+    "source": "github_api"
+  },
+  "nowledge-co/community": {
+    "created_at": "2025-08-07T07:22:05Z",
+    "pushed_at": "2026-05-28T10:12:37Z",
+    "stars": 86,
+    "forks": 21,
+    "source": "github_api"
+  },
+  "0xnyk/lacp": {
+    "created_at": "2026-02-20T07:42:31Z",
+    "pushed_at": "2026-05-31T05:07:04Z",
+    "stars": 262,
+    "forks": 33,
+    "source": "github_api"
+  },
+  "manthanguptaa/water": {
+    "created_at": "2025-06-03T11:33:27Z",
+    "pushed_at": "2026-03-24T07:09:57Z",
+    "stars": 289,
+    "forks": 38,
+    "source": "github_api"
+  },
+  "sponsiolabs/sponsio": {
+    "created_at": "2026-04-04T18:05:47Z",
+    "pushed_at": "2026-05-29T20:41:28Z",
+    "stars": 470,
+    "forks": 28,
+    "source": "github_api"
+  },
+  "opensquilla/opensquilla": {
+    "created_at": "2026-05-06T17:43:05Z",
+    "pushed_at": "2026-06-01T12:23:06Z",
+    "stars": 2184,
+    "forks": 148,
+    "source": "github_api"
+  },
+  "gcwing/bitfun": {
+    "created_at": "2026-02-02T09:52:10Z",
+    "pushed_at": "2026-06-01T11:53:23Z",
+    "stars": 799,
+    "forks": 99,
+    "source": "github_api"
+  },
+  "oceanbase/powermem": {
+    "created_at": "2025-11-10T02:46:06Z",
+    "pushed_at": "2026-06-01T11:06:48Z",
+    "stars": 688,
+    "forks": 83,
+    "source": "github_api"
+  },
+  "mnemon-dev/mnemon": {
+    "created_at": "2026-02-20T02:26:17Z",
+    "pushed_at": "2026-06-01T11:22:31Z",
+    "stars": 322,
+    "forks": 46,
+    "source": "github_api"
+  },
+  "alibaizhanov/mengram": {
+    "created_at": "2026-02-10T19:20:33Z",
+    "pushed_at": "2026-06-01T12:22:45Z",
+    "stars": 172,
+    "forks": 27,
+    "source": "github_api"
+  },
+  "im4codes/imcodes": {
+    "created_at": "2026-03-18T11:24:08Z",
+    "pushed_at": "2026-06-01T12:24:14Z",
+    "stars": 131,
+    "forks": 11,
+    "source": "github_api"
+  },
+  "weaviate/query-agent-benchmarking": {
+    "created_at": "2025-02-15T19:01:02Z",
+    "pushed_at": "2026-06-01T11:31:16Z",
+    "stars": 15,
+    "forks": 3,
+    "source": "github_api"
   }
 }

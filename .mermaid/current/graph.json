@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T19:51:04+08:00",
+  "generated_at": "2026-06-01T20:27:31+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -353,7 +353,14 @@
         "raw-github/nowledge-co_community.md",
         "raw-github/0xnyk_lacp.md",
         "raw-github/manthanguptaa_water.md",
-        "raw-github/sponsiolabs_sponsio.md"
+        "raw-github/sponsiolabs_sponsio.md",
+        "raw-github/opensquilla_opensquilla.md",
+        "raw-github/gcwing_bitfun.md",
+        "raw-github/oceanbase_powermem.md",
+        "raw-github/mnemon-dev_mnemon.md",
+        "raw-github/alibaizhanov_mengram.md",
+        "raw-github/im4codes_imcodes.md",
+        "raw-github/weaviate_query-agent-benchmarking.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -506,7 +513,8 @@
         "work/research/hourly-public-metadata-update-2026-05-31-1950.md",
         "work/research/hourly-public-metadata-update-2026-06-01-0150.md",
         "work/research/hourly-public-metadata-update-2026-06-01-1352.md",
-        "work/research/hourly-public-metadata-update-2026-06-01-1951.md"
+        "work/research/hourly-public-metadata-update-2026-06-01-1951.md",
+        "work/research/hourly-public-metadata-update-2026-06-01-2027.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -1154,7 +1162,21 @@
         "projects/375-water-self-improving-coding-agent.md",
         "site/public/reports/projects/375-water-self-improving-coding-agent.md",
         "projects/376-sponsio-workflow-and-multi-agent-control.md",
-        "site/public/reports/projects/376-sponsio-workflow-and-multi-agent-control.md"
+        "site/public/reports/projects/376-sponsio-workflow-and-multi-agent-control.md",
+        "projects/377-opensquilla-token-efficient-agent-runtime.md",
+        "site/public/reports/projects/377-opensquilla-token-efficient-agent-runtime.md",
+        "projects/378-bitfun-desktop-agent-runtime-suite.md",
+        "site/public/reports/projects/378-bitfun-desktop-agent-runtime-suite.md",
+        "projects/379-powermem-agent-memory-plugin.md",
+        "site/public/reports/projects/379-powermem-agent-memory-plugin.md",
+        "projects/380-mnemon-persistent-memory-substrate.md",
+        "site/public/reports/projects/380-mnemon-persistent-memory-substrate.md",
+        "projects/381-mengram-human-like-agent-memory.md",
+        "site/public/reports/projects/381-mengram-human-like-agent-memory.md",
+        "projects/382-imcodes-shared-agent-context-layer.md",
+        "site/public/reports/projects/382-imcodes-shared-agent-context-layer.md",
+        "projects/383-weaviate-query-agent-benchmarking-toolkit.md",
+        "site/public/reports/projects/383-weaviate-query-agent-benchmarking-toolkit.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1479,17 +1501,17 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-06-01T19:51:04+08:00",
+    "run_at": "2026-06-01T20:27:31+08:00",
     "added_repositories": [
-      "Team-Commonly/commonly",
-      "matevip/mateclaw",
-      "christinminor459/OnionClaw",
-      "nowledge-co/community",
-      "0xNyk/lacp",
-      "manthanguptaa/water",
-      "SponsioLabs/Sponsio"
+      "opensquilla/opensquilla",
+      "GCWing/BitFun",
+      "oceanbase/powermem",
+      "mnemon-dev/mnemon",
+      "alibaizhanov/mengram",
+      "im4codes/imcodes",
+      "weaviate/query-agent-benchmarking"
     ],
-    "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
+    "evidence_quality": "public_github_api_metadata_observed; unauthenticated_rate_limit_possible; gh_token_invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
     "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
   }

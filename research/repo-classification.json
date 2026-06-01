@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T19:51:04+08:00",
+  "generated_at": "2026-06-01T20:27:31+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -675,6 +675,21 @@
       "content_timestamp": "unknown",
       "evidence": "application/self-evolving-agent signal",
       "description": "Open-source implementation of AlphaEvolve"
+    },
+    {
+      "repo": "alibaizhanov/mengram",
+      "url": "https://github.com/alibaizhanov/mengram",
+      "stars": "172",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "Python/Memory API/SDK Integrations",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "public GitHub API metadata showed 172 stars, 27 forks, 528 commit pages, Apache-2.0 license, and Python-led memory platform implementation.",
+      "description": "alibaizhanov/mengram offers human-like semantic/episodic/procedural memory infrastructure for AI agents with multi-framework integrations."
     },
     {
       "repo": "Alienfader/continuity-benchmarks",
@@ -2717,6 +2732,21 @@
       "description": "GBrain is an opinionated long-term brain layer for OpenClaw and Hermes-style agents, combining structured memory pages, graph linking, and retrieval workflows."
     },
     {
+      "repo": "GCWing/BitFun",
+      "url": "https://github.com/GCWing/BitFun",
+      "stars": "799",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evolution",
+      "stack": "Rust/Desktop Agent Runtime/Computer Use/Memory",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "public GitHub API metadata showed 799 stars, 99 forks, 1,627 commit pages, MIT license, and Rust-led implementation.",
+      "description": "GCWing/BitFun provides a desktop-grade agent runtime suite with built-in code/cowork/computer-use flows plus persistent memory and evolving behavior claims."
+    },
+    {
       "repo": "GeniusHTX/SWE-Skills-Bench",
       "url": "https://github.com/GeniusHTX/SWE-Skills-Bench",
       "stars": "42",
@@ -3435,6 +3465,21 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "A Curated Collection of resources for applied AI engineering (work in progress)."
+    },
+    {
+      "repo": "im4codes/imcodes",
+      "url": "https://github.com/im4codes/imcodes",
+      "stars": "131",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "TypeScript/Shared Context Bus/Cross-Agent Audit",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "public GitHub API metadata showed 131 stars, 11 forks, 1,818 commit pages, MIT license, and TypeScript-first implementation.",
+      "description": "im4codes/imcodes focuses on shared agent context and memory with supervised execution and cross-agent audit capabilities."
     },
     {
       "repo": "imgeorgiev/pwm",
@@ -5297,6 +5342,21 @@
       "description": "MLCommons modelbench runs safety benchmarks against AI models and publishes detailed hazard-oriented benchmark reports."
     },
     {
+      "repo": "mnemon-dev/mnemon",
+      "url": "https://github.com/mnemon-dev/mnemon",
+      "stars": "322",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "Go/Graph Memory/CLI Agent Memory Runtime",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "public GitHub API metadata showed 322 stars, 46 forks, 234 commit pages, Apache-2.0 license, and Go-based memory substrate implementation.",
+      "description": "mnemon-dev/mnemon provides LLM-supervised persistent graph memory for agents across Claude Code, OpenClaw, and other CLI runtimes."
+    },
+    {
       "repo": "Modelcode-ai/mcode-benchmark",
       "url": "https://github.com/Modelcode-ai/mcode-benchmark",
       "stars": "1",
@@ -5745,6 +5805,21 @@
       "prior_unclassified": "true",
       "time_slice": "2026-05",
       "content_timestamp": "2026-05-04"
+    },
+    {
+      "repo": "oceanbase/powermem",
+      "url": "https://github.com/oceanbase/powermem",
+      "stars": "688",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "Python/Memory Plugin/Agent Retrieval",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "public GitHub API metadata showed 688 stars, 83 forks, about 200 commit pages, Python codebase, and memory-plugin positioning.",
+      "description": "oceanbase/powermem is an agent memory plugin focused on improving accuracy, agility, and affordability for AI agent memory retrieval."
     },
     {
       "repo": "octobrist/cope",
@@ -6225,6 +6300,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 7 stars and 0 forks, no releases, Python/Shell stack; About text says it is an AI agent skills library built by OpenSite AI, a single git repo that keeps Claude, Codex, Cursor, Copilot and Perplexity Computer in sync with persistent cross-session memory and automated cloud upload via Playwright; topics include multi-agent, persistent-memory, codex, rag, github-copilot, ai-workflow, claude-code, and agent-skills-standard",
       "description": "OpenSite Skills 把 Claude、Codex、Cursor、Copilot 与 Perplexity Computer 的技能保持在一个 Git 真相源中，并加入跨会话记忆、RAG 与 Playwright 云端上传自动化。"
+    },
+    {
+      "repo": "opensquilla/opensquilla",
+      "url": "https://github.com/opensquilla/opensquilla",
+      "stars": "2184",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evolution",
+      "stack": "Python/Agent Runtime/MCP/OpenClaw/Memory",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "public GitHub API metadata showed 2,184 stars, 148 forks, 48 commit pages, Apache-2.0 license, and Python-first runtime composition.",
+      "description": "opensquilla/opensquilla is a token-efficient AI agent runtime focused on higher intelligence density with OpenClaw, memory, and MCP integration signals."
     },
     {
       "repo": "opentracy/opentracy",
@@ -8970,6 +9060,21 @@
       "content_timestamp": "2026-05-26",
       "evidence": "web-observed GitHub page showed 22 stars, 9 forks, Python/MCP runtime positioning, persistent semantic memory, natural forgetting, trust scoring, 150+ MCP tools, LoCoMo benchmark claims, and recovery-aware background jobs including weekly evolution; shell GitHub API freshness was blocked.",
       "description": "NEXO Brain is a local shared-brain memory runtime for Claude Code, Codex, Claude Desktop and MCP clients, combining persistent memory, RAG, temporal recall, forgetting, trust scoring, benchmark reporting and background self-improvement jobs."
+    },
+    {
+      "repo": "weaviate/query-agent-benchmarking",
+      "url": "https://github.com/weaviate/query-agent-benchmarking",
+      "stars": "15",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-suite",
+      "base_theme": "evaluation",
+      "stack": "Jupyter Notebook/Benchmark Toolkit/Query Agent Evaluation",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "public GitHub API metadata showed 15 stars, 3 forks, 595 commit pages, BSD-3-Clause license, and benchmark-oriented notebook assets.",
+      "description": "weaviate/query-agent-benchmarking provides benchmarking scenarios and tooling for evaluating Weaviate query-agent behavior."
     },
     {
       "repo": "webmaxru/Agent-Skills",

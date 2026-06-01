@@ -6799,6 +6799,205 @@ export const projects: Project[] = [
                     "harness",
                     "automation"
             ]
+    },
+    {
+            "name": "OpenSquilla Token-Efficient Agent Runtime",
+            "repo": "opensquilla/opensquilla",
+            "url": "https://github.com/opensquilla/opensquilla",
+            "stars": 2184,
+            "forks": 148,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/377-opensquilla-token-efficient-agent-runtime.md",
+            "pattern": "optimize agent intelligence density under fixed token budgets -> combine runtime controls with memory and MCP connectivity -> keep execution quality stable while reducing context waste -> improve long-horizon self-improving loops with explicit efficiency constraints",
+            "description": "opensquilla/opensquilla is a token-efficient AI agent runtime focused on higher intelligence density with OpenClaw, memory, and MCP integration signals.",
+            "stack": [
+                    "Python",
+                    "Agent Runtime",
+                    "MCP",
+                    "OpenClaw",
+                    "Memory"
+            ],
+            "category": "Token-Efficient Agent Runtime with OpenClaw/MCP/Memory Integration",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/opensquilla_opensquilla.md",
+            "status": "candidate",
+            "tags": [
+                    "runtime",
+                    "openclaw",
+                    "memory",
+                    "mcp",
+                    "token-efficiency"
+            ]
+    },
+    {
+            "name": "BitFun Desktop Agent Runtime Suite",
+            "repo": "GCWing/BitFun",
+            "url": "https://github.com/GCWing/BitFun",
+            "stars": 799,
+            "forks": 99,
+            "language": "Rust",
+            "license": "MIT",
+            "report": "projects/378-bitfun-desktop-agent-runtime-suite.md",
+            "pattern": "provide desktop-native agent runtime with code, cowork, and computer-use modalities -> preserve memory and personality state across sessions -> support long-running service mode for continuous operation -> compound capabilities through repeated task execution and context retention",
+            "description": "GCWing/BitFun provides a desktop-grade agent runtime suite with built-in code/cowork/computer-use flows plus persistent memory and evolving behavior claims.",
+            "stack": [
+                    "Rust",
+                    "Desktop Agent Runtime",
+                    "Computer Use",
+                    "Memory"
+            ],
+            "category": "Desktop Agent Runtime and Multi-Mode Execution Environment",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/gcwing_bitfun.md",
+            "status": "candidate",
+            "tags": [
+                    "desktop",
+                    "runtime",
+                    "computer-use",
+                    "memory",
+                    "multi-mode"
+            ]
+    },
+    {
+            "name": "PowerMem Agent Memory Plugin",
+            "repo": "oceanbase/powermem",
+            "url": "https://github.com/oceanbase/powermem",
+            "stars": 688,
+            "forks": 83,
+            "language": "Python",
+            "license": "NOASSERTION",
+            "report": "projects/379-powermem-agent-memory-plugin.md",
+            "pattern": "augment agent pipelines with explicit memory plugin boundaries -> optimize recall quality and retrieval cost across workflows -> provide reusable memory layer for multi-step decisions -> increase agent consistency through persistent context integration",
+            "description": "oceanbase/powermem is an agent memory plugin focused on improving accuracy, agility, and affordability for AI agent memory retrieval.",
+            "stack": [
+                    "Python",
+                    "Memory Plugin",
+                    "Agent Retrieval"
+            ],
+            "category": "Agent Memory Plugin and Retrieval Augmentation Layer",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/oceanbase_powermem.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "plugin",
+                    "retrieval",
+                    "agent",
+                    "runtime"
+            ]
+    },
+    {
+            "name": "Mnemon Persistent Memory Substrate",
+            "repo": "mnemon-dev/mnemon",
+            "url": "https://github.com/mnemon-dev/mnemon",
+            "stars": 322,
+            "forks": 46,
+            "language": "Go",
+            "license": "Apache-2.0",
+            "report": "projects/380-mnemon-persistent-memory-substrate.md",
+            "pattern": "store agent knowledge in graph-shaped persistent memory -> enable cross-session recall with LLM-supervised consolidation -> feed historical memory into current task reasoning -> improve continuity for multi-agent CLI operations over time",
+            "description": "mnemon-dev/mnemon provides LLM-supervised persistent graph memory for agents across Claude Code, OpenClaw, and other CLI runtimes.",
+            "stack": [
+                    "Go",
+                    "Graph Memory",
+                    "CLI Agent Memory Runtime"
+            ],
+            "category": "Persistent Memory Substrate for Cross-Session Agent Recall",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/mnemon-dev_mnemon.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "graph",
+                    "cross-session",
+                    "openclaw",
+                    "cli-agent"
+            ]
+    },
+    {
+            "name": "Mengram Human-Like Agent Memory",
+            "repo": "alibaizhanov/mengram",
+            "url": "https://github.com/alibaizhanov/mengram",
+            "stars": 172,
+            "forks": 27,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "report": "projects/381-mengram-human-like-agent-memory.md",
+            "pattern": "model semantic, episodic, and procedural memories as explicit agent assets -> learn procedures from failures and feedback traces -> integrate memory services into LangChain/CrewAI/OpenClaw flows -> improve adaptation quality through structured memory retention",
+            "description": "alibaizhanov/mengram offers human-like semantic/episodic/procedural memory infrastructure for AI agents with multi-framework integrations.",
+            "stack": [
+                    "Python",
+                    "Memory API",
+                    "SDK Integrations"
+            ],
+            "category": "Semantic/Episodic/Procedural Memory Runtime for Agents",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/alibaizhanov_mengram.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "semantic",
+                    "episodic",
+                    "procedural",
+                    "sdk"
+            ]
+    },
+    {
+            "name": "IMCodes Shared Agent Context Layer",
+            "repo": "im4codes/imcodes",
+            "url": "https://github.com/im4codes/imcodes",
+            "stars": 131,
+            "forks": 11,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/382-imcodes-shared-agent-context-layer.md",
+            "pattern": "establish shared context and memory channels across agent providers -> supervise execution and record cross-agent audit trails -> standardize communication primitives for multi-agent collaboration -> reduce fragmentation and improve reproducibility in mixed-agent systems",
+            "description": "im4codes/imcodes focuses on shared agent context and memory with supervised execution and cross-agent audit capabilities.",
+            "stack": [
+                    "TypeScript",
+                    "Shared Context Bus",
+                    "Cross-Agent Audit"
+            ],
+            "category": "Shared Agent Context, Memory, and Supervised Execution Layer",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/im4codes_imcodes.md",
+            "status": "candidate",
+            "tags": [
+                    "context",
+                    "memory",
+                    "audit",
+                    "cross-agent",
+                    "tooling"
+            ]
+    },
+    {
+            "name": "Weaviate Query Agent Benchmarking Toolkit",
+            "repo": "weaviate/query-agent-benchmarking",
+            "url": "https://github.com/weaviate/query-agent-benchmarking",
+            "stars": 15,
+            "forks": 3,
+            "language": "Jupyter Notebook",
+            "license": "BSD-3-Clause",
+            "report": "projects/383-weaviate-query-agent-benchmarking-toolkit.md",
+            "pattern": "package benchmark scenarios for query-agent evaluation -> measure retrieval and answer quality across controlled tasks -> make evaluation pipelines reusable and comparable -> provide practical evidence surface for agent benchmark governance",
+            "description": "weaviate/query-agent-benchmarking provides benchmarking scenarios and tooling for evaluating Weaviate query-agent behavior.",
+            "stack": [
+                    "Jupyter Notebook",
+                    "Benchmark Toolkit",
+                    "Query Agent Evaluation"
+            ],
+            "category": "Agent Benchmark Toolkit for Query/Retrieval Evaluation",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/weaviate_query-agent-benchmarking.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "evaluation",
+                    "query-agent",
+                    "retrieval",
+                    "toolkit"
+            ]
     }
 ];
 
@@ -6829,7 +7028,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness', 'dotnet/skills', 'datalayer/agent-skills', 'block/agent-skills', 'Corbell-AI/evalmonkey', 'nomic-ai/aec-bench', 'google/ax', 'aiming-lab/AutoHarness', 'OWASP/www-project-agent-memory-guard', 'addyosmani/agent-skills', 'zocomputer/skills', 'QF-Bench/QuantitativeFinance-Bench', 'zikuicai/aegisllm', 'EvoMap/evolver', 'NousResearch/hermes-agent-self-evolution', 'knowall-ai/mcp-neo4j-agent-memory', 'LearnPrompt/cc-harness-skills', 'aiming-lab/ClawArena', 'kodustech/awesome-agent-skills', 'Martian-Engineering/lossless-claw', 'thinkwee/AgentsMeetRL', 'syntax-syndicate/OpenHarness-agent-harness', 'ArcadeAI/openclaw-arcade-plugin', 'humanitylabs-org/obsidianclaw', 'momo-personal-assistant/openclaw-plugin', 'NVIDIA/skills', 'supabase/agent-skills', 'MemTensor/skills-vote', 'aayoawoyemi/ori-mnemos', 'soimy/openclaw-channel-dingtalk', 'pwrdrvr/openclaw-codex-app-server', 'henrikrexed/openclaw-observability-plugin', 'longmans/self-evolve', 'MCKRUZ/openclaw-langfuse', 'hyperspell/hyperspell-openclaw', 'composio-community/awesome-openclaw-plugins', 'mvanhorn/last30days-skill', 'EESIZ/clawdreamer', 'ThisIsJeron/awesome-openclaw-plugins', 'BlockRunAI/awesome-OpenClaw-Money-Maker', 'SamurAIGPT/awesome-openclaw', 'LHL3341/awesome-claws', 'pegasi-ai/reins', 'cloudllm-ai/mentisdb', 'rohitg00/awesome-openclaw', 'yoloshii/ClawMem', 'clawsouls/soulclaw', 'Team-Commonly/commonly', 'matevip/mateclaw', 'christinminor459/OnionClaw', 'nowledge-co/community', '0xNyk/lacp', 'manthanguptaa/water', 'SponsioLabs/Sponsio'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness', 'dotnet/skills', 'datalayer/agent-skills', 'block/agent-skills', 'Corbell-AI/evalmonkey', 'nomic-ai/aec-bench', 'google/ax', 'aiming-lab/AutoHarness', 'OWASP/www-project-agent-memory-guard', 'addyosmani/agent-skills', 'zocomputer/skills', 'QF-Bench/QuantitativeFinance-Bench', 'zikuicai/aegisllm', 'EvoMap/evolver', 'NousResearch/hermes-agent-self-evolution', 'knowall-ai/mcp-neo4j-agent-memory', 'LearnPrompt/cc-harness-skills', 'aiming-lab/ClawArena', 'kodustech/awesome-agent-skills', 'Martian-Engineering/lossless-claw', 'thinkwee/AgentsMeetRL', 'syntax-syndicate/OpenHarness-agent-harness', 'ArcadeAI/openclaw-arcade-plugin', 'humanitylabs-org/obsidianclaw', 'momo-personal-assistant/openclaw-plugin', 'NVIDIA/skills', 'supabase/agent-skills', 'MemTensor/skills-vote', 'aayoawoyemi/ori-mnemos', 'soimy/openclaw-channel-dingtalk', 'pwrdrvr/openclaw-codex-app-server', 'henrikrexed/openclaw-observability-plugin', 'longmans/self-evolve', 'MCKRUZ/openclaw-langfuse', 'hyperspell/hyperspell-openclaw', 'composio-community/awesome-openclaw-plugins', 'mvanhorn/last30days-skill', 'EESIZ/clawdreamer', 'ThisIsJeron/awesome-openclaw-plugins', 'BlockRunAI/awesome-OpenClaw-Money-Maker', 'SamurAIGPT/awesome-openclaw', 'LHL3341/awesome-claws', 'pegasi-ai/reins', 'cloudllm-ai/mentisdb', 'rohitg00/awesome-openclaw', 'yoloshii/ClawMem', 'clawsouls/soulclaw', 'Team-Commonly/commonly', 'matevip/mateclaw', 'christinminor459/OnionClaw', 'nowledge-co/community', '0xNyk/lacp', 'manthanguptaa/water', 'SponsioLabs/Sponsio', 'opensquilla/opensquilla', 'GCWing/BitFun', 'oceanbase/powermem', 'mnemon-dev/mnemon', 'alibaizhanov/mengram', 'im4codes/imcodes', 'weaviate/query-agent-benchmarking'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }

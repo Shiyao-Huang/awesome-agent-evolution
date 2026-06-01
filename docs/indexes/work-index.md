@@ -10,15 +10,15 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `paper-drafts` | present | 31 | 2 | 0 | 2.3 MB |
+| `paper-drafts` | present | 25 | 2 | 0 | 2.2 MB |
 | `paper` | present | 15 | 2 | 0 | 1023 KB |
 | `latex` | present | 9 | 2 | 0 | 53 KB |
-| `site` | present | 1560 | 449 | 0 | 33 MB |
-| `survey` | present | 94 | 4 | 0 | 3.4 MB |
+| `site` | present | 636 | 42 | 0 | 14 MB |
+| `survey` | present | 87 | 4 | 0 | 1.9 MB |
 | `scripts` | present | 47 | 1 | 0 | 1.3 MB |
-| `data-engine` | present | 486 | 19 | 0 | 6.4 MB |
-| `work/research` | present | 64 | 2 | 0 | 2.2 MB |
-| `work/wiki` | present | 68 | 6 | 0 | 473 KB |
+| `data-engine` | present | 486 | 16 | 0 | 6.4 MB |
+| `work/research` | present | 65 | 2 | 0 | 2.2 MB |
+| `work/wiki` | present | 68 | 5 | 0 | 473 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files
@@ -63,16 +63,16 @@
 
 ### `site`
 
-- `site/.astro/collections/blog.schema.json`
-- `site/.astro/collections/research.schema.json`
-- `site/.astro/content-assets.mjs`
-- `site/.astro/content-modules.mjs`
-- `site/.astro/content.d.ts`
-- `site/.astro/data-store.json`
-- `site/.astro/settings.json`
-- `site/.astro/types.d.ts`
 - `site/BUILD_SEO_VALIDATION.md`
 - `site/README.md`
+- `site/astro.config.mjs`
+- `site/package-lock.json`
+- `site/package.json`
+- `site/public/CNAME`
+- `site/public/og.svg`
+- `site/public/reports/papers/cross-domain/README.md`
+- `site/public/reports/papers/cross-domain/relationship-map.mmd`
+- `site/public/reports/papers/cross-domain/sources.md`
 
 ### `survey`
 
@@ -116,6 +116,7 @@
 ### `work/research`
 
 - `work/research/INDEX.md`
+- `work/research/_hourly_20260601_2027_repos.json`
 - `work/research/ai-talent-flow-analysis.md`
 - `work/research/anthropic-talent-movement.md`
 - `work/research/archived-analysis/benchmark-comparison.md`
@@ -124,7 +125,6 @@
 - `work/research/archived-analysis/framework-painpoint-crosswalk.md`
 - `work/research/archived-analysis/github-agent-evolution-repos-ZH.md`
 - `work/research/archived-analysis/github-agent-evolution-repos.md`
-- `work/research/archived-analysis/github-project-data-analysis.json`
 
 ### `work/wiki`
 

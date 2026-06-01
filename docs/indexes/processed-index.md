@@ -10,9 +10,9 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `analysis` | present | 26 | 2 | 0 | 5.6 MB |
-| `research` | present | 141 | 8 | 0 | 2.5 MB |
-| `projects` | present | 25892 | 2882 | 0 | 2.9 GB |
+| `analysis` | present | 26 | 2 | 0 | 5.4 MB |
+| `research` | present | 139 | 8 | 0 | 2.5 MB |
+| `projects` | present | 825 | 5 | 0 | 1.9 MB |
 | `paper-reviews` | present | 171 | 1 | 0 | 1.6 MB |
 | `academic-reviews` | missing | 0 | 0 | 0 | 0 B |
 | `papers` | present | 3 | 2 | 0 | 16 KB |
@@ -36,8 +36,6 @@
 
 ### `research`
 
-- `research/.anysearch-author-cache.json`
-- `research/.anysearch-targeted-author-cache.json`
 - `research/agent-self-evolution-papers-detailed-ZH.md`
 - `research/agent-self-evolution-papers-detailed.md`
 - `research/anysearch-verification-audit.md`
@@ -46,6 +44,8 @@
 - `research/author-network.md`
 - `research/blog-author-anysearch-validation.md`
 - `research/blog-author-profiles-all.csv`
+- `research/blog-author-profiles-all.md`
+- `research/blog-author-profiles-anysearch-validation.md`
 
 ### `projects`
 

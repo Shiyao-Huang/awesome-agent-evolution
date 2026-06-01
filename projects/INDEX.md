@@ -404,6 +404,14 @@
 | WATER Self-Improving Coding Agent | [manthanguptaa/water](https://github.com/manthanguptaa/water) | Self-Improving Coding Agent with Benchmark-Oriented Execution | [projects/375-water-self-improving-coding-agent.md](375-water-self-improving-coding-agent.md) |
 | Sponsio Workflow and Multi-Agent Control Plane | [SponsioLabs/Sponsio](https://github.com/SponsioLabs/Sponsio) | Workflow Automation and Multi-Agent Control Infrastructure | [projects/376-sponsio-workflow-and-multi-agent-control.md](376-sponsio-workflow-and-multi-agent-control.md) |
 
+| OpenSquilla Token-Efficient Agent Runtime | [opensquilla/opensquilla](https://github.com/opensquilla/opensquilla) | Token-Efficient Agent Runtime with OpenClaw/MCP/Memory Integration | [projects/377-opensquilla-token-efficient-agent-runtime.md](377-opensquilla-token-efficient-agent-runtime.md) |
+| BitFun Desktop Agent Runtime Suite | [GCWing/BitFun](https://github.com/GCWing/BitFun) | Desktop Agent Runtime and Multi-Mode Execution Environment | [projects/378-bitfun-desktop-agent-runtime-suite.md](378-bitfun-desktop-agent-runtime-suite.md) |
+| PowerMem Agent Memory Plugin | [oceanbase/powermem](https://github.com/oceanbase/powermem) | Agent Memory Plugin and Retrieval Augmentation Layer | [projects/379-powermem-agent-memory-plugin.md](379-powermem-agent-memory-plugin.md) |
+| Mnemon Persistent Memory Substrate | [mnemon-dev/mnemon](https://github.com/mnemon-dev/mnemon) | Persistent Memory Substrate for Cross-Session Agent Recall | [projects/380-mnemon-persistent-memory-substrate.md](380-mnemon-persistent-memory-substrate.md) |
+| Mengram Human-Like Agent Memory | [alibaizhanov/mengram](https://github.com/alibaizhanov/mengram) | Semantic/Episodic/Procedural Memory Runtime for Agents | [projects/381-mengram-human-like-agent-memory.md](381-mengram-human-like-agent-memory.md) |
+| IMCodes Shared Agent Context Layer | [im4codes/imcodes](https://github.com/im4codes/imcodes) | Shared Agent Context, Memory, and Supervised Execution Layer | [projects/382-imcodes-shared-agent-context-layer.md](382-imcodes-shared-agent-context-layer.md) |
+| Weaviate Query Agent Benchmarking Toolkit | [weaviate/query-agent-benchmarking](https://github.com/weaviate/query-agent-benchmarking) | Agent Benchmark Toolkit for Query/Retrieval Evaluation | [projects/383-weaviate-query-agent-benchmarking-toolkit.md](383-weaviate-query-agent-benchmarking-toolkit.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

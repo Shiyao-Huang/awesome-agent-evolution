@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-01T00:00:00+08:00",
-  "total": 653,
-  "updated_files": 653,
+  "total": 660,
+  "updated_files": 660,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -408,6 +408,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "alibaizhanov/mengram",
+      "url": "https://github.com/alibaizhanov/mengram",
+      "file": "raw-github/alibaizhanov_mengram.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T20:27:31+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "github_public_api_observed_2026_06_01"
     },
     {
       "repo": "Alienfader/continuity-benchmarks",
@@ -1634,6 +1643,15 @@
       "timestamp_source": "web_observed_public_github_page_2026_05_27"
     },
     {
+      "repo": "GCWing/BitFun",
+      "url": "https://github.com/GCWing/BitFun",
+      "file": "raw-github/gcwing_bitfun.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T20:27:31+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "github_public_api_observed_2026_06_01"
+    },
+    {
       "repo": "GeniusHTX/SWE-Skills-Bench",
       "url": "https://github.com/GeniusHTX/SWE-Skills-Bench",
       "file": "raw-github/geniushtx_swe-skills-bench.md",
@@ -2064,6 +2082,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "im4codes/imcodes",
+      "url": "https://github.com/im4codes/imcodes",
+      "file": "raw-github/im4codes_imcodes.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T20:27:31+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "github_public_api_observed_2026_06_01"
     },
     {
       "repo": "imgeorgiev/pwm",
@@ -3182,6 +3209,15 @@
       "timestamp_source": "web_observed_public_github_page_2026_05_29"
     },
     {
+      "repo": "mnemon-dev/mnemon",
+      "url": "https://github.com/mnemon-dev/mnemon",
+      "file": "raw-github/mnemon-dev_mnemon.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T20:27:31+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "github_public_api_observed_2026_06_01"
+    },
+    {
       "repo": "Modelcode-ai/mcode-benchmark",
       "url": "https://github.com/Modelcode-ai/mcode-benchmark",
       "file": "raw-github/modelcode-ai_mcode-benchmark.md",
@@ -3450,6 +3486,15 @@
       "collected_at": "2026-05-22T13:00:00+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "AnySearch GitHub extract: latest release v5.1.0 on 2026-05-04"
+    },
+    {
+      "repo": "oceanbase/powermem",
+      "url": "https://github.com/oceanbase/powermem",
+      "file": "raw-github/oceanbase_powermem.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T20:27:31+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "github_public_api_observed_2026_06_01"
     },
     {
       "repo": "octobrist/cope",
@@ -3738,6 +3783,15 @@
       "collected_at": "2026-05-24T20:12:04Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "opensquilla/opensquilla",
+      "url": "https://github.com/opensquilla/opensquilla",
+      "file": "raw-github/opensquilla_opensquilla.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T20:27:31+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "github_public_api_observed_2026_06_01"
     },
     {
       "repo": "opentracy/opentracy",
@@ -5385,6 +5439,15 @@
       "collected_at": "2026-05-26T01:38:44+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page"
+    },
+    {
+      "repo": "weaviate/query-agent-benchmarking",
+      "url": "https://github.com/weaviate/query-agent-benchmarking",
+      "file": "raw-github/weaviate_query-agent-benchmarking.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T20:27:31+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "github_public_api_observed_2026_06_01"
     },
     {
       "repo": "webmaxru/Agent-Skills",
