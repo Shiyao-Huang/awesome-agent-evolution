@@ -28,6 +28,7 @@
 | Survey 资源重组 | [analysis/survey-resource-spark.md](analysis/survey-resource-spark.md) | processed synthesis：把 raw/processed/survey/results 资源重排为 Survey Spark，并说明 Evolve-AGI Index 如何进入论文核心 |
 | 资料库覆盖审计 | [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md) | processed audit：盘点 raw/processed/work/results/site/wiki 当前资产，解释 639 raw captures、232 analyzed reports、434 public reports、232 site records、801 project markdown files 等不同计数口径 |
 | Survey/SEO 主题地图 | [analysis/survey-seo-topic-map.md](analysis/survey-seo-topic-map.md) | processed synthesis：把资料库资产反推出定义、五类回路、代码自改进、Agent-Swarm、评估治理等 SEO/Survey 主题簇 |
+| 价值筛选双链知识库 | [analysis/value-screening-dual-chain-knowledge-base.md](analysis/value-screening-dual-chain-knowledge-base.md) | processed protocol：用 Self Mirror 风格把 evidence chain 与 mirror chain 分开，按时间、延续性、实现证据、issue/resource 信号筛选下一批 GitHub 深挖对象 |
 | 自进化定义判据 | [analysis/self-evolution-definition-criteria.md](analysis/self-evolution-definition-criteria.md) | processed synthesis：用可变对象、反馈、候选生成、验证、保留和回滚六个 gate 定义什么才算 self-evolving agent |
 | 五类进化回路主题分析 | [analysis/five-evolution-loops-topic.md](analysis/five-evolution-loops-topic.md) | processed synthesis：把五类回路整理成可读的机制地图，说明可变对象、反馈、验证器、保留和失败模式 |
 | 用户输入记忆 | local-only, ignored | 本地保留，不发布、不提交；公开仓库只保留抽象操作原则 |

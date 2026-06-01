@@ -82,6 +82,7 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [Survey SEO Topic Map](synthesis/survey-seo-topic-map.md) — 从资料库资产反推 SEO/Survey 主题簇：定义、五类回路、代码自改进、记忆技能、Agent-Swarm、评估治理、生产痛点 | Rank: A | 2026-06-01
 - [Self-Evolution Definition Criteria](synthesis/self-evolution-definition-criteria.md) — 用六个 gate 定义真正 self-evolving agent：可变对象、反馈、候选生成、验证、保留、审计/回滚 | Rank: A | 2026-06-01
 - [Five Evolution Loops Topic](synthesis/five-evolution-loops-topic.md) — Rank 2 SEO/Survey 机制页：规范到执行、搜索、评估、反思、种群五类回路的可变对象、反馈、验证与失败模式 | Rank: A | 2026-06-01
+- [Value Screening and Dual-Chain Knowledge Base](synthesis/value-screening-dual-chain-knowledge-base.md) — 时间/延续性优先的 GitHub 深挖协议：evidence chain + mirror chain + frontier queue | Rank: A | 2026-06-01
 
 ---
 
@@ -92,5 +93,5 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Entities | 8 |
 | Concepts | 10 |
 | Sources | 30 |
-| Synthesis pages | 8 |
+| Synthesis pages | 9 |
 | Last updated | 2026-06-01 |

@@ -309,3 +309,12 @@
 - Rewrote public site copy that exposed internal labels such as `Workflow A/B` and `CLAUDE.md Iron Rules`.
 - Updated topic map counts to the current master-index/GitHub analysis boundary: 639 raw captures, 92 strict repos, 199 broad repos, 232 analyzed/site records, and 434 public reports.
 **产出:** `docs/ops/audience-boundary-workflow.md`
+
+## [2026-06-01 13:35] synthesis | Value Screening and Dual-Chain Knowledge Base
+
+**操作:** Converted the user's recency/continuity/code/issue exploration request into a durable processed protocol.
+**详情:**
+- Added `analysis/value-screening-dual-chain-knowledge-base.md` to define evidence chain vs mirror chain, a frontier-value score, and the next GitHub deep-dive queue.
+- Added `work/wiki/synthesis/value-screening-dual-chain-knowledge-base.md` so future agents can retrieve the time-weighted screening rule without rereading the full discussion.
+- Updated `CONTENT_INDEX.md` and wiki index so the new protocol is visible from repository entry points.
+**产出:** `analysis/value-screening-dual-chain-knowledge-base.md`, `work/wiki/synthesis/value-screening-dual-chain-knowledge-base.md`

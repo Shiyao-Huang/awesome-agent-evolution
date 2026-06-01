@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-01T03:03:40.124Z",
+  "generated": "2026-06-01T05:34:53.144Z",
   "stats": {
-    "pages": 57,
-    "keywords": 807
+    "pages": 58,
+    "keywords": 817
   },
   "catalog": [
     {
@@ -643,6 +643,20 @@
         "capital",
         "synthesis"
       ]
+    },
+    {
+      "path": "synthesis/value-screening-dual-chain-knowledge-base.md",
+      "title": "Value Screening and Dual-Chain Knowledge Base",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "value-screening",
+        "dual-chain",
+        "self-mirror",
+        "github-projects",
+        "recency",
+        "continuity"
+      ]
     }
   ],
   "index": {
@@ -735,7 +749,8 @@
       "sources/talent-flow-analysis.md",
       "synthesis/mechanism-framework.md",
       "synthesis/survey-spark-evolve-agi-core.md",
-      "synthesis/talent-landscape.md"
+      "synthesis/talent-landscape.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "multi-agent-coevolution": [
       "concepts/agent-swarm-evolve.md",
@@ -1431,7 +1446,8 @@
     "agent-swarm-evolve": [
       "entities/anthropic.md",
       "sources/anthropic-may-2026-agentops.md",
-      "synthesis/survey-spark-evolve-agi-core.md"
+      "synthesis/survey-spark-evolve-agi-core.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "google deepmind": [
       "entities/google-deepmind.md",
@@ -2442,7 +2458,8 @@
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/self-evolution-definition-criteria.md",
       "synthesis/survey-seo-topic-map.md",
-      "synthesis/survey-spark-evolve-agi-core.md"
+      "synthesis/survey-spark-evolve-agi-core.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "1. paper landscape overview": [
       "sources/papers-mechanism-analysis.md"
@@ -3186,13 +3203,15 @@
       "synthesis/current-value-ranking-reanalysis.md"
     ],
     "github-projects": [
-      "synthesis/current-value-ranking-reanalysis.md"
+      "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "ranking": [
       "synthesis/current-value-ranking-reanalysis.md"
     ],
     "recency": [
-      "synthesis/current-value-ranking-reanalysis.md"
+      "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "current-value": [
       "synthesis/current-value-ranking-reanalysis.md"
@@ -3203,7 +3222,8 @@
     "three sentences": [
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/resource-library-coverage-audit.md",
-      "synthesis/survey-spark-evolve-agi-core.md"
+      "synthesis/survey-spark-evolve-agi-core.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "corrected top signal": [
       "synthesis/current-value-ranking-reanalysis.md"
@@ -3311,7 +3331,8 @@
       "synthesis/survey-spark-evolve-agi-core.md"
     ],
     "current-value-ranking-reanalysis": [
-      "synthesis/survey-spark-evolve-agi-core.md"
+      "synthesis/survey-spark-evolve-agi-core.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "sv self-evolution talent & paper landscape": [
       "synthesis/talent-landscape.md"
@@ -3378,6 +3399,36 @@
     ],
     "academic-industry bridge accelerates m1": [
       "synthesis/talent-landscape.md"
+    ],
+    "value screening and dual-chain knowledge base": [
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "value-screening": [
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "dual-chain": [
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "self-mirror": [
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "continuity": [
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "frontier investigation queue": [
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "operating rule": [
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "survey-seo-topic-map": [
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "self-evolution-definition-criteria": [
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "five-evolution-loops-topic": [
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ]
   }
 }
