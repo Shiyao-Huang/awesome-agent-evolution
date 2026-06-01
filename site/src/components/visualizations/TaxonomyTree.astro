@@ -16,7 +16,7 @@ const cb=document.createElement('div');cb.className='viz-tch collapsed';n.childr
 h.addEventListener('click',()=>{const s=cb.classList.contains('collapsed');cb.classList.toggle('collapsed',!s);cb.classList.toggle('expanded',s);ch.textContent=s?'\u25BE':'\u25B8'})}else el.appendChild(h);return el}
 tree.forEach((n,i)=>{const g=document.createElement('div');g.appendChild(rn(n,0,i));c.appendChild(g)});
 </script>
-<style>
+<style is:global>
 .viz-tax{margin-top:32px}.viz-tt{display:flex;flex-direction:column;gap:6px}.viz-th{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:var(--radius);transition:background var(--transition);user-select:none}.viz-th:hover{background:var(--surface-2)}
 .viz-tb{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:28px;padding:0 8px;border-radius:6px;font-size:12px;font-weight:800;flex-shrink:0}.viz-tl{font-size:14px;font-weight:650;color:var(--fg);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .depth-1 .viz-tl{font-weight:550;font-size:13px}.viz-tc{font-size:14px;font-weight:800;flex-shrink:0}.viz-tch{display:grid;gap:2px;padding-left:24px;border-left:2px solid var(--line);margin-left:16px}.viz-tch.collapsed{display:none}.viz-tch.expanded{display:grid}

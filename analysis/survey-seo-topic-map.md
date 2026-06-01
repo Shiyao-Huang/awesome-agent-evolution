@@ -7,6 +7,7 @@ sources:
   - README.md
   - analysis/self-evolution-definition-criteria.md
   - analysis/five-evolution-loops-topic.md
+  - analysis/code-evolution-benchmark-matrix.md
   - analysis/resource-library-coverage-audit.md
   - analysis/survey-resource-spark.md
   - analysis/github-project-data-analysis.md
@@ -15,6 +16,7 @@ sources:
   - site/src/data/topicMap.ts
   - site/src/pages/topics/index.astro
   - site/src/pages/topics/five-evolution-loops/index.astro
+  - site/src/pages/topics/code-evolution-benchmark/index.astro
 ---
 
 # Survey SEO Topic Map / Survey 与 SEO 主题地图
@@ -43,7 +45,7 @@ sources:
 |---:|---|---|---|---|
 | 1 | 什么才算真正的自进化智能体 | 这个系统真的在改进自己，还是只是固定 workflow? | Survey 定义入口。 | Definition page live at `/topics/self-evolving-ai-agents/`; next compare with AutoML/online learning/static workflow |
 | 2 | 五类进化回路 | 不同项目到底在用哪一种反馈闭环? | 机制分类和方法族入口。 | Five-loop guide live at `/topics/five-evolution-loops/`; next one page per loop |
-| 3 | 代码自我改进与算法发现 | 哪些系统真的会改代码、发现算法，并留下 benchmark 证据? | DGM/ADAS/AlphaEvolve/OpenEvolve/FunSearch 证据簇。 | Code-evolution benchmark matrix |
+| 3 | 代码自我改进与算法发现 | 哪些系统真的会改代码、发现算法，并留下 benchmark 证据? | DGM/ADAS/AlphaEvolve/OpenEvolve/FunSearch 证据簇。 | Benchmark matrix live at `/topics/code-evolution-benchmark/`; next representative system pages |
 | 4 | 记忆、技能与知识进化 | agent 怎样把一次失败变成未来可复用经验? | memory/skill/tool policy substrate。 | Memory and skill substrate guide |
 | 5 | Agent-Swarm Evolve 与 harness 进化 | 多智能体组织结构能不能一起进化? | 用户指定新增方向；连接 multi-agent、harness、runtime。 | Swarm topology matrix |
 | 6 | 评估、治理与 Evolve-AGI Index | 怎么避免把 benchmark 热度误读成成熟度? | Index 与 benchmark/goodhart/governance 的桥。 | Index signal explainer pages |
@@ -52,12 +54,12 @@ sources:
 
 ## Publication Rules
 
-- [KNOWN] 每个主题必须能链接至少一个公开站点入口和一个仓库证据入口；Rank 1 定义主题和 Rank 2 五类回路主题已经有公开 evergreen 页面。Source: `site/src/pages/topics/index.astro`, `site/src/pages/topics/self-evolving-ai-agents/index.astro`, `site/src/pages/topics/five-evolution-loops/index.astro`, `CONTENT_INDEX.md`
+- [KNOWN] 每个主题必须能链接至少一个公开站点入口和一个仓库证据入口；Rank 1 定义主题、Rank 2 五类回路主题和 Rank 3 code-evolution benchmark matrix 已经有公开 evergreen 页面。Source: `site/src/pages/topics/index.astro`, `site/src/pages/topics/self-evolving-ai-agents/index.astro`, `site/src/pages/topics/five-evolution-loops/index.astro`, `site/src/pages/topics/code-evolution-benchmark/index.astro`, `CONTENT_INDEX.md`
 - [INFERRED] 每个主题最好同时服务三类读者：研究者查 survey、工程师查项目/benchmark、普通读者查定义/风险/价值。
 - [INFERRED] 如果一个 SEO 页面无法写出 evidence links、seed queries、survey role 和 next asset，就先不要发布成核心主题。
 
 ## Trust Chain
 
 - [KNOWN] Counts were read from `docs/indexes/master-index.md`, `analysis/resource-library-coverage-audit.md`, and `site/src/data/survey.ts` on 2026-06-01.
-- [KNOWN] Public implementation lives in `site/src/data/topicMap.ts` and `site/src/pages/topics/index.astro`.
+- [KNOWN] Public implementation lives in `site/src/data/topicMap.ts`, `site/src/pages/topics/index.astro`, and `site/src/pages/topics/code-evolution-benchmark/index.astro`.
 - [INFERRED] Ranking is editorial synthesis over existing evidence; it should change when new raw/paper/project evidence changes the survey spine.

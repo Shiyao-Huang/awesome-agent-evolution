@@ -17,7 +17,7 @@ series.forEach((s,si)=>{const col=cl[si%cl.length];let p='';s.values.forEach((v,
 s.values.forEach((v,i)=>{const q=pt(i,v);const cr=document.createElementNS('http://www.w3.org/2000/svg','circle');cr.setAttribute('cx',q.x);cr.setAttribute('cy',q.y);cr.setAttribute('r','3');cr.setAttribute('fill',col);svg.appendChild(cr)});
 const it=document.createElement('div');it.className='viz-rli';it.innerHTML='<span class="viz-rd" style="background:'+col+'"></span><span>'+s.name+'</span>';lg.appendChild(it)});
 </script>
-<style>
+<style is:global>
 .viz-radar{margin-top:32px}.viz-rc{display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap}#viz-rs{width:100%;max-width:460px;height:auto}
 .viz-rl{display:flex;flex-direction:column;gap:8px;min-width:140px}.viz-rli{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:650;color:var(--fg)}.viz-rd{width:10px;height:10px;border-radius:50%;flex-shrink:0}
 @media(max-width:760px){.viz-rc{flex-direction:column}.viz-rl{flex-direction:row;flex-wrap:wrap;justify-content:center}}

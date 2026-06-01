@@ -8,6 +8,7 @@ sources:
   - analysis/survey-seo-topic-map.md
   - analysis/self-evolution-definition-criteria.md
   - analysis/five-evolution-loops-topic.md
+  - analysis/code-evolution-benchmark-matrix.md
   - docs/indexes/master-index.md
   - analysis/github-project-data-analysis.md
   - site/src/data/survey.ts
@@ -16,6 +17,7 @@ sources:
   - site/src/pages/topics/index.astro
   - site/src/pages/topics/self-evolving-ai-agents/index.astro
   - site/src/pages/topics/five-evolution-loops/index.astro
+  - site/src/pages/topics/code-evolution-benchmark/index.astro
   - docs/ops/audience-boundary-workflow.md
 updated: 2026-06-01
 ---
@@ -50,6 +52,7 @@ updated: 2026-06-01
 - The public topic map now lives at `site/src/pages/topics/index.astro` and turns coverage into survey/SEO clusters.
 - The public definition page now lives at `site/src/pages/topics/self-evolving-ai-agents/index.astro`.
 - The public five-loop page now lives at `site/src/pages/topics/five-evolution-loops/index.astro`.
+- The public code-evolution benchmark page now lives at `site/src/pages/topics/code-evolution-benchmark/index.astro`.
 - Reader-facing and internal workflow boundaries now live at `docs/ops/audience-boundary-workflow.md`.
 - Paper/survey methodology should cite the audit when explaining corpus boundaries.
 - Agent docs can use this page as the persistent memory of what the repo already contains.

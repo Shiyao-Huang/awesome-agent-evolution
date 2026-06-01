@@ -9,7 +9,7 @@ stages.forEach(s=>{const p=(s.count/mx)*100,r=document.createElement('div');r.cl
 r.innerHTML='<div class="viz-fl"><span class="viz-fn">'+s.label+'</span><span class="viz-fd">'+s.description+'</span></div><div class="viz-bt"><div class="viz-bb" style="width:0%;max-width:'+p+'%"></div><span class="viz-bc">'+s.count.toLocaleString()+'</span></div>';c.appendChild(r)});
 const o=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){c.querySelectorAll('.viz-bb').forEach(b=>{b.style.width=b.style.maxWidth});o.unobserve(en.target)}})},{threshold:.2});o.observe(c);
 </script>
-<style>
+<style is:global>
 .viz-funnel{margin-top:32px}.viz-sh{margin-bottom:16px}.viz-sh .eyebrow{color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.viz-sh h2{font-family:var(--font-display);font-size:24px;font-weight:400;color:var(--fg);margin-top:4px}.viz-sh p{color:var(--muted);font-size:14px;margin-top:4px}
 .viz-fc{display:flex;flex-direction:column;gap:12px}.viz-fr{display:grid;grid-template-columns:200px 1fr;gap:14px;align-items:center}.viz-fn{display:block;font-weight:750;font-size:14px;color:var(--fg)}.viz-fd{display:block;margin-top:2px;font-size:12px;color:var(--muted)}
 .viz-bt{position:relative;height:36px;background:var(--surface-2);border-radius:8px;overflow:hidden}.viz-bb{height:100%;background:linear-gradient(90deg,var(--accent),var(--brand2));border-radius:8px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}.viz-bc{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-weight:800;font-size:14px;color:var(--fg)}

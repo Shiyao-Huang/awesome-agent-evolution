@@ -31,6 +31,7 @@
 | 价值筛选双链知识库 | [analysis/value-screening-dual-chain-knowledge-base.md](analysis/value-screening-dual-chain-knowledge-base.md) | processed protocol：用 Self Mirror 风格把 evidence chain 与 mirror chain 分开，按时间、延续性、实现证据、issue/resource 信号筛选下一批 GitHub 深挖对象 |
 | 自进化定义判据 | [analysis/self-evolution-definition-criteria.md](analysis/self-evolution-definition-criteria.md) | processed synthesis：用可变对象、反馈、候选生成、验证、保留和回滚六个 gate 定义什么才算 self-evolving agent |
 | 五类进化回路主题分析 | [analysis/five-evolution-loops-topic.md](analysis/five-evolution-loops-topic.md) | processed synthesis：把五类回路整理成可读的机制地图，说明可变对象、反馈、验证器、保留和失败模式 |
+| 代码自改进 Benchmark 矩阵 | [analysis/code-evolution-benchmark-matrix.md](analysis/code-evolution-benchmark-matrix.md) | processed synthesis：区分自修改 coding agent、算法发现、架构搜索、prompt/program 优化和反思修复回路的 benchmark 证据 |
 | 用户输入记忆 | local-only, ignored | 本地保留，不发布、不提交；公开仓库只保留抽象操作原则 |
 | 读者/Agent 边界规则 | [docs/ops/audience-boundary-workflow.md](docs/ops/audience-boundary-workflow.md) | ops guide：区分公开读者页面、证据索引和内部 workflow，防止 README/site 混入 agent 操作手册 |
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |
@@ -47,6 +48,7 @@
 | 公开主题地图页 | [site/src/pages/topics/index.astro](site/src/pages/topics/index.astro) | 面向消费者和 SEO 的 topic map：从读者问题进入 survey、项目报告、benchmark、AGI index 和后续内容资产 |
 | 公开定义主题页 | [site/src/pages/topics/self-evolving-ai-agents/index.astro](site/src/pages/topics/self-evolving-ai-agents/index.astro) | 面向消费者和 SEO 的 evergreen 定义页：判断一个 AI Agent 是否真的自进化 |
 | 公开五类回路主题页 | [site/src/pages/topics/five-evolution-loops/index.astro](site/src/pages/topics/five-evolution-loops/index.astro) | 面向消费者和 SEO 的 evergreen 机制页：用五类进化回路解释反馈如何变成可保留改进 |
+| 公开代码自改进 Benchmark 页 | [site/src/pages/topics/code-evolution-benchmark/index.astro](site/src/pages/topics/code-evolution-benchmark/index.astro) | 面向消费者和 SEO 的 evergreen benchmark 页：判断代码自改进和算法发现声明的证据强度 |
 | 公开项目报告 | [site/public/reports/projects/](site/public/reports/projects/) | 441 个公开项目报告供静态站点下载/引用 |
 
 ## 历史索引

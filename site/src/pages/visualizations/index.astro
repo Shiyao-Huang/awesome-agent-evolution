@@ -123,7 +123,8 @@ const topTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20
 </BaseLayout>
 
 <style>
-.viz-grid-2col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.viz-grid-2col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.viz-grid-2col>*{min-width:0}
 .viz-bars{display:flex;flex-direction:column;gap:6px}
 .viz-bar-row{display:grid;grid-template-columns:120px 1fr 40px;gap:8px;align-items:center}
 .viz-bar-label{font-size:13px;font-weight:650;color:var(--fg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -136,5 +137,5 @@ const topTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20
 .viz-sh{margin-bottom:24px}
 .viz-sh .eyebrow{color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
 .viz-sh h2{font-family:var(--font-display);font-size:24px;font-weight:400;color:var(--fg);margin-top:4px}
-@media(max-width:760px){.viz-grid-2col{grid-template-columns:1fr}.viz-bar-row{grid-template-columns:80px 1fr 36px}}
+@media(max-width:760px){.viz-grid-2col{grid-template-columns:minmax(0,1fr)}.viz-bar-row{grid-template-columns:80px minmax(0,1fr) 36px}}
 </style>

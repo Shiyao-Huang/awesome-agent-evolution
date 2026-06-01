@@ -1,0 +1,414 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { surveyStats } from '@/data/survey';
+
+const matrixRows = [
+  {
+    mode: 'Self-modifying coding agent',
+    title: '自修改 coding agent',
+    mutableObject: 'agent code, tool policy, patch loop, review logic',
+    systems: 'DGM, SICA, A-Evolve',
+    evidence: 'SWE-Bench / SWE-Bench Verified, Polyglot, repository regression tests',
+    question: '它是在提高自己的软件工程能力，还是只解了一道题?',
+    risk: 'benchmark-specific patch, hidden regressions, unsafe self-modification',
+  },
+  {
+    mode: 'Algorithm and program discovery',
+    title: '算法与程序发现',
+    mutableObject: 'candidate programs, kernels, heuristics, optimization code',
+    systems: 'AlphaEvolve, FunSearch, OpenEvolve, Science-CodeEvolve, OpenTreeSearch',
+    evidence: 'matrix multiplication, Borg scheduling, FlashAttention, attention kernels, circle packing',
+    question: '是否有可执行 evaluator 拒绝漂亮但错误的程序?',
+    risk: 'narrow metric optimization, weak maintainability, incomplete constraints',
+  },
+  {
+    mode: 'Agent architecture search',
+    title: 'Agent 架构搜索',
+    mutableObject: 'Python-coded agent design, tool topology, control flow',
+    systems: 'ADAS, Agent Symbolic Learning, A-Evolve',
+    evidence: 'ARC, GFootball, cross-task transfer, cross-model transfer',
+    question: '搜索到的是可迁移架构，还是一个 benchmark prompt trick?',
+    risk: 'expensive evaluation, weak transfer, generated-agent safety gaps',
+  },
+  {
+    mode: 'Prompt and program optimizer',
+    title: 'Prompt / program 优化器',
+    mutableObject: 'prompt, symbolic module, program graph, optimizer state',
+    systems: 'OPRO, DSPy, GEPA, EvoPrompting',
+    evidence: 'task validation sets, HumanEval-style tests, QA/reasoning benchmarks',
+    question: '优化产物是否可复用，还是只贴合验证集?',
+    risk: 'prompt overfitting, judge bias, unstable gains',
+  },
+  {
+    mode: 'Reflection and repair loop',
+    title: '反思与修复回路',
+    mutableObject: 'reflection memory, tests, generated critiques, retry strategy',
+    systems: 'Reflexion, SelfEvolve, ReVeal, EvoMAC',
+    evidence: 'HumanEval, MBPP, LiveCodeBench, generated-unit-test audits',
+    question: '失败是否真的转成了下一次更好的尝试?',
+    risk: 'false-positive tests, memory pollution, context growth',
+  },
+];
+
+const ladder = [
+  ['1', '能生成代码', 'HumanEval, MBPP, unit tests', 'demo-only snippets'],
+  ['2', '能修复真实软件任务', 'SWE-Bench, repository tests', 'single issue without held-out checks'],
+  ['3', '能在可执行约束下发现算法', 'programmatic evaluator, reproducible scorer', 'LLM-as-judge only'],
+  ['4', '能跨代保留改进', 'archive, lineage, best-so-far curve', 'final score only'],
+  ['5', '能泛化并控制风险', 'hidden tests, transfer, cost and regression report', 'one public benchmark'],
+];
+
+const readerRules = [
+  ['先看可变对象', '代码补丁、候选程序、agent 架构、prompt、memory 不是同一种自进化。先问系统到底改了什么。'],
+  ['再看评估器', '最强信号来自可执行测试、隐藏任务、程序化 scorer 和独立评估。只有 LLM 自评时要降低可信度。'],
+  ['最后看保留机制', '真正的自进化会留下 archive、lineage、best-so-far 曲线、失败候选或可回滚资产。'],
+  ['不要只看分数', '分数提升必须同时报告成本、迁移、回归和失败模式，否则容易把 benchmark 热度当成熟度。'],
+];
+
+const evidenceLinks = [
+  ['DGM paper note', 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/research/papers/02-darwin-godel-machine.md'],
+  ['ADAS paper note', 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/research/papers/04-adas.md'],
+  ['AlphaEvolve paper note', 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/research/papers/08-alphaevolve.md'],
+  ['Processed matrix', 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/code-evolution-benchmark-matrix.md'],
+];
+
+const faqs = [
+  ['Is AlphaEvolve the same kind of evidence as DGM?', 'No. AlphaEvolve is strongest for executable algorithm discovery; DGM is strongest for self-modifying coding agents and archive-based agent improvement.'],
+  ['Why is SWE-Bench not enough by itself?', 'SWE-Bench is valuable, but self-evolution also needs hidden tests, transfer, cost, regression, rejected candidates, and lineage evidence.'],
+  ['Can prompt optimization count as code evolution?', 'Only when the optimized artifact changes a reusable program or symbolic module and survives independent validation. Otherwise it is prompt tuning, not code self-improvement.'],
+  ['What should readers distrust first?', 'Distrust claims where the same model proposes, judges, stores, and celebrates the change without executable checks or external validation.'],
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Code Evolution Benchmark Matrix',
+  name: '代码自我改进 Benchmark Matrix',
+  description: 'A public guide for judging code self-improvement and algorithm discovery evidence across DGM, ADAS, AlphaEvolve, OpenEvolve, FunSearch, SICA and related systems.',
+  url: `${site.url}/topics/code-evolution-benchmark/`,
+  inLanguage: 'zh-CN',
+  isPartOf: { '@id': `${site.url}/#website` },
+  about: ['Code self-improvement', 'Algorithm discovery', 'SWE-Bench', 'AlphaEvolve', 'Darwin Godel Machine'],
+  mainEntity: faqs.map(([question, answer]) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: { '@type': 'Answer', text: answer },
+  })),
+};
+---
+
+<BaseLayout
+  title="代码自我改进 Benchmark Matrix — Self Evolve"
+  description="用 benchmark matrix 判断 DGM、ADAS、AlphaEvolve、OpenEvolve、FunSearch、SICA 等系统的代码自我改进和算法发现证据。"
+  pageKeywords={['代码自我改进', 'AI code self improvement', 'AlphaEvolve benchmark', 'Darwin Godel Machine benchmark', 'SWE-Bench self-evolving agents']}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+
+  <style>
+    .code-topic {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .code-topic :is(h1, h2, h3, p, strong, td, th, a, li) {
+      overflow-wrap: anywhere;
+    }
+
+    .signal-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .signal-strip span {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--surface-1);
+      padding: 14px 10px;
+      color: var(--fg);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .matrix-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .matrix-card-grid .card:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .evidence-list {
+      display: grid;
+      gap: 8px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .evidence-list li {
+      border-left: 2px solid var(--caret-blue);
+      padding-left: 10px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .compact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 840px) {
+      .signal-strip,
+      .matrix-card-grid,
+      .compact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .code-topic .hero h1 {
+        font-size: 34px;
+        line-height: 1.12;
+      }
+
+      .code-topic .hero-actions .button {
+        flex: 1 1 100%;
+        min-width: 100%;
+        padding-inline: 12px;
+      }
+    }
+  </style>
+
+  <div class="code-topic">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Benchmark / Survey Rank 3</div>
+          <h1>代码自我改进，不是一张榜单能说明白。</h1>
+          <p class="lead">同样叫 code evolution，DGM 在改 agent 自身，AlphaEvolve 在发现可执行算法，ADAS 在搜索 agent 架构，OPRO/DSPy/GEPA 在优化 prompt 或程序。判断证据时先分清可变对象，再看 evaluator 和保留机制。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#benchmark-matrix">看矩阵</a>
+            <a class="button" href="/benchmark/">Benchmark 总览</a>
+            <a class="button" href="/projects/">项目报告</a>
+            <a class="text-link" href="/topics/">主题地图</a>
+          </div>
+          <div class="signal-strip" aria-label="Evidence flow">
+            <span>Object</span>
+            <span>Evaluator</span>
+            <span>Selection</span>
+            <span>Archive</span>
+            <span>Transfer</span>
+          </div>
+        </div>
+        <aside class="hero-evidence" aria-label="Code evolution evidence summary">
+          <div class="eyebrow">Survey evidence</div>
+          <ol>
+            <li><span>Papers</span><strong>{surveyStats.papers} survey papers</strong></li>
+            <li><span>Repos</span><strong>{surveyStats.repos} displayed repos</strong></li>
+            <li><span>Benchmarks</span><strong>SWE-Bench / HumanEval / Polyglot</strong></li>
+            <li><span>Discovery</span><strong>AlphaEvolve / FunSearch / OpenEvolve</strong></li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface-1);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">One sentence</div>
+            <h2>先问“它改了什么”，再问“分数涨了多少”</h2>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>一句话</h3>
+            <p>代码自我改进的可信证据来自可执行验证、跨代保留、失败候选和迁移检查，而不是单个 benchmark 分数。</p>
+          </article>
+          <article class="card">
+            <h3>三句话</h3>
+            <p>DGM/SICA 证明的是 agent 自身代码或工具链能否变好。AlphaEvolve/OpenEvolve/FunSearch 证明的是候选程序能否在强 evaluator 下被发现和保留。ADAS/A-Evolve 证明的是 agent 架构和 workspace 是否能被搜索。</p>
+          </article>
+          <article class="card">
+            <h3>边界</h3>
+            <p>本页只服务读者判断证据强弱；维护流程、构建命令和 agent 操作手册留在 ops 文档，不进入公开叙事。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="benchmark-matrix">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Benchmark matrix</div>
+            <h2>五类 code-evolution 证据，不要混成一个标签</h2>
+          </div>
+          <a class="text-link" href="https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/code-evolution-benchmark-matrix.md" target="_blank" rel="noopener">分析来源</a>
+        </div>
+        <div class="score-table-wrap">
+          <table class="score-table">
+            <thead>
+              <tr>
+                <th>Mode</th>
+                <th>可变对象</th>
+                <th>代表系统</th>
+                <th>强证据</th>
+                <th>主要风险</th>
+              </tr>
+            </thead>
+            <tbody>
+              {matrixRows.map((row) => (
+                <tr>
+                  <td><strong>{row.title}</strong><br /><span>{row.mode}</span></td>
+                  <td>{row.mutableObject}</td>
+                  <td>{row.systems}</td>
+                  <td>{row.evidence}</td>
+                  <td>{row.risk}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface-1);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Evidence modes</div>
+            <h2>逐类看：同样是代码进化，证据焦点不同</h2>
+          </div>
+        </div>
+        <div class="matrix-card-grid">
+          {matrixRows.map((row, index) => (
+            <article class="card">
+              <div class="eyebrow">Mode {index + 1} / {row.mode}</div>
+              <h3>{row.title}</h3>
+              <p>{row.question}</p>
+              <ul class="evidence-list">
+                <li><strong>可变对象：</strong>{row.mutableObject}</li>
+                <li><strong>代表系统：</strong>{row.systems}</li>
+                <li><strong>强证据：</strong>{row.evidence}</li>
+                <li><strong>主要风险：</strong>{row.risk}</li>
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Evidence ladder</div>
+            <h2>从 demo 到强证据的五级台阶</h2>
+          </div>
+        </div>
+        <div class="score-table-wrap">
+          <table class="score-table">
+            <thead>
+              <tr><th>Level</th><th>证明什么</th><th>可接受证据</th><th>弱证据</th></tr>
+            </thead>
+            <tbody>
+              {ladder.map(([level, claim, strong, weak]) => (
+                <tr>
+                  <td><strong>{level}</strong></td>
+                  <td>{claim}</td>
+                  <td>{strong}</td>
+                  <td>{weak}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface-1);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">How to read</div>
+            <h2>读一个 claim 时按这个顺序拆</h2>
+          </div>
+        </div>
+        <div class="compact-grid">
+          {readerRules.map(([question, answer]) => (
+            <article class="card">
+              <h3>{question}</h3>
+              <p>{answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Evidence links</div>
+            <h2>证据入口</h2>
+          </div>
+        </div>
+        <div class="grid">
+          {evidenceLinks.map(([label, href]) => (
+            <a class="card" href={href} target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+              <div class="eyebrow">Repository evidence</div>
+              <h3>{label}</h3>
+              <p>打开仓库中的 processed evidence，继续检查来源、方法和限制。</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface-1);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">FAQ</div>
+            <h2>四个常见误读</h2>
+          </div>
+        </div>
+        <div class="compact-grid">
+          {faqs.map(([question, answer]) => (
+            <article class="card">
+              <h3>{question}</h3>
+              <p>{answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid">
+          <a class="card" href="/topics/five-evolution-loops/" style="text-decoration: none; color: inherit;">
+            <div class="eyebrow">Mechanisms</div>
+            <h3>先看五类进化回路</h3>
+            <p>把代码自改进放回搜索、评估、反思和种群回路里理解。</p>
+          </a>
+          <a class="card" href="/benchmark/" style="text-decoration: none; color: inherit;">
+            <div class="eyebrow">Benchmark</div>
+            <h3>继续看评估总览</h3>
+            <p>评估页汇总代码、推理、agent task 和开放发现 benchmark。</p>
+          </a>
+          <a class="card" href="/search/?q=AlphaEvolve" style="text-decoration: none; color: inherit;">
+            <div class="eyebrow">Search</div>
+            <h3>搜索代表系统</h3>
+            <p>从 AlphaEvolve、DGM、ADAS、OpenEvolve、SICA 等关键词进入项目和研究记录。</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

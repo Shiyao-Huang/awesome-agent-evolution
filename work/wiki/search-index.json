@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-01T06:22:28.318Z",
+  "generated": "2026-06-01T07:01:41.873Z",
   "stats": {
-    "pages": 58,
-    "keywords": 817
+    "pages": 59,
+    "keywords": 821
   },
   "catalog": [
     {
@@ -541,6 +541,19 @@
       "rank": "A",
       "type": "source",
       "tags": []
+    },
+    {
+      "path": "synthesis/code-evolution-benchmark-matrix.md",
+      "title": "Code Evolution Benchmark Matrix",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "benchmark",
+        "code-evolution",
+        "algorithm-discovery",
+        "seo",
+        "evidence-chain"
+      ]
     },
     {
       "path": "synthesis/current-value-ranking-reanalysis.md",
@@ -1189,7 +1202,8 @@
       "concepts/self-evaluation.md"
     ],
     "benchmark": [
-      "concepts/self-evaluation.md"
+      "concepts/self-evaluation.md",
+      "synthesis/code-evolution-benchmark-matrix.md"
     ],
     "goodhart": [
       "concepts/self-evaluation.md"
@@ -1697,6 +1711,7 @@
       "sources/social-digest.md",
       "sources/talent-capital-structure.md",
       "sources/talent-flow-analysis.md",
+      "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/survey-spark-evolve-agi-core.md"
     ],
@@ -2453,6 +2468,7 @@
       "sources/papers-mechanism-analysis.md",
       "sources/raw-papers-mechanism-analysis.md",
       "sources/raw-social-blogs-mechanism-analysis.md",
+      "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/five-evolution-loops-topic.md",
       "synthesis/resource-library-coverage-audit.md",
@@ -3199,6 +3215,36 @@
     "新 surveys": [
       "sources/talent-flow-analysis.md"
     ],
+    "code evolution benchmark matrix": [
+      "synthesis/code-evolution-benchmark-matrix.md"
+    ],
+    "code-evolution": [
+      "synthesis/code-evolution-benchmark-matrix.md"
+    ],
+    "algorithm-discovery": [
+      "synthesis/code-evolution-benchmark-matrix.md"
+    ],
+    "seo": [
+      "synthesis/code-evolution-benchmark-matrix.md",
+      "synthesis/five-evolution-loops-topic.md",
+      "synthesis/survey-seo-topic-map.md"
+    ],
+    "evidence-chain": [
+      "synthesis/code-evolution-benchmark-matrix.md",
+      "synthesis/resource-library-coverage-audit.md",
+      "synthesis/self-evolution-definition-criteria.md",
+      "synthesis/survey-seo-topic-map.md"
+    ],
+    "three sentences": [
+      "synthesis/code-evolution-benchmark-matrix.md",
+      "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/resource-library-coverage-audit.md",
+      "synthesis/survey-spark-evolve-agi-core.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "reuse notes": [
+      "synthesis/code-evolution-benchmark-matrix.md"
+    ],
     "current-value ranking reanalysis": [
       "synthesis/current-value-ranking-reanalysis.md"
     ],
@@ -3219,12 +3265,6 @@
     "release-attention": [
       "synthesis/current-value-ranking-reanalysis.md"
     ],
-    "three sentences": [
-      "synthesis/current-value-ranking-reanalysis.md",
-      "synthesis/resource-library-coverage-audit.md",
-      "synthesis/survey-spark-evolve-agi-core.md",
-      "synthesis/value-screening-dual-chain-knowledge-base.md"
-    ],
     "corrected top signal": [
       "synthesis/current-value-ranking-reanalysis.md"
     ],
@@ -3241,10 +3281,6 @@
       "synthesis/self-evolution-definition-criteria.md",
       "synthesis/survey-seo-topic-map.md",
       "synthesis/survey-spark-evolve-agi-core.md"
-    ],
-    "seo": [
-      "synthesis/five-evolution-loops-topic.md",
-      "synthesis/survey-seo-topic-map.md"
     ],
     "evolution-loops": [
       "synthesis/five-evolution-loops-topic.md"
@@ -3285,11 +3321,6 @@
     ],
     "resource library coverage audit": [
       "synthesis/resource-library-coverage-audit.md"
-    ],
-    "evidence-chain": [
-      "synthesis/resource-library-coverage-audit.md",
-      "synthesis/self-evolution-definition-criteria.md",
-      "synthesis/survey-seo-topic-map.md"
     ],
     "resource-library": [
       "synthesis/resource-library-coverage-audit.md"

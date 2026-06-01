@@ -77,11 +77,11 @@ export const topicClusters: TopicCluster[] = [
     evidence: '项目报告、case studies 和 evaluation 章节已经覆盖 code mutation、archive、SWE-bench、HumanEval、算法搜索。',
     seedQueries: ['AI code self improvement', 'Darwin Godel Machine benchmark', 'AlphaEvolve algorithm discovery'],
     evidenceLinks: [
+      { label: 'Benchmark matrix', href: '/topics/code-evolution-benchmark/' },
       { label: 'Benchmark', href: '/benchmark/' },
       { label: 'Projects', href: '/projects/' },
-      { label: 'Rankings', href: '/rankings/' },
     ],
-    nextAsset: '做一页 code-evolution benchmark matrix，区分代码补丁、算法搜索、架构搜索和工具脚本生成。',
+    nextAsset: 'Code-evolution benchmark matrix 已上线；下一步拆 DGM/SICA、AlphaEvolve/OpenEvolve、ADAS/A-Evolve 的代表系统页。',
   },
   {
     id: 'memory-skills',

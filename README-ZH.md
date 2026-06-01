@@ -131,6 +131,7 @@ flowchart TB
 | 这个领域一句话是什么 | 本 README 的 [核心洞察](#核心洞察) | [paper abstract](paper-drafts/main.tex) |
 | 什么才算真正自进化 | [定义主题页](https://shiyao-huang.github.io/awesome-agent-evolution/topics/self-evolving-ai-agents/) | [definition criteria](analysis/self-evolution-definition-criteria.md), [ch1 intro](paper-drafts/ch1-intro.tex) |
 | 自进化到底怎么发生 | [五类进化回路](https://shiyao-huang.github.io/awesome-agent-evolution/topics/five-evolution-loops/) | [five-loop analysis](analysis/five-evolution-loops-topic.md), [survey mechanisms](site/src/pages/survey/mechanisms.astro) |
+| 哪些系统真的会改代码 | [代码自我改进 Benchmark Matrix](https://shiyao-huang.github.io/awesome-agent-evolution/topics/code-evolution-benchmark/) | [code benchmark matrix](analysis/code-evolution-benchmark-matrix.md), [benchmark page](site/src/pages/benchmark/index.astro) |
 | 什么项目真的算自进化 | [核心结论](#核心结论) | [projects/INDEX.md](projects/INDEX.md), [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) |
 | 论文现在怎么组织 | [论文主线](#论文主线) | [paper-drafts/main.tex](paper-drafts/main.tex), [survey/latex/main.tex](survey/latex/main.tex) |
 | Evolve-AGI Index 怎么进入核心 | [Evolve-AGI Index 进入论文核心](#evolve-agi-index-进入论文核心) | [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [网站页面](site/src/pages/evolve-agi-index/index.astro) |
@@ -154,7 +155,7 @@ flowchart TB
 | 深入阅读论文 | 打开 [paper-drafts/main.pdf](paper-drafts/main.pdf) 或 [paper page](site/src/pages/paper/index.astro)。 |
 | 查项目证据 | 使用 [projects/INDEX.md](projects/INDEX.md) 和 [public project reports](site/public/reports/projects/INDEX.md)。 |
 | 查数据范围 | 先看 [资料库覆盖页](https://shiyao-huang.github.io/awesome-agent-evolution/resource-library/)，再查 [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md)、[docs/indexes/master-index.md](docs/indexes/master-index.md) 和 [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md)。 |
-| 按问题找主题 | 打开 [Survey/SEO 主题地图](https://shiyao-huang.github.io/awesome-agent-evolution/topics/)，从定义、五类回路、代码自改进、Agent-Swarm、评估治理和生产痛点进入证据。 |
+| 按问题找主题 | 打开 [Survey/SEO 主题地图](https://shiyao-huang.github.io/awesome-agent-evolution/topics/)，从定义、五类回路、[代码自改进](https://shiyao-huang.github.io/awesome-agent-evolution/topics/code-evolution-benchmark/)、Agent-Swarm、评估治理和生产痛点进入证据。 |
 | 浏览网站 | 打开 [Self Evolve site](https://shiyao-huang.github.io/awesome-agent-evolution/) 或本仓库的 [site source](site/)。 |
 
 ## Citation

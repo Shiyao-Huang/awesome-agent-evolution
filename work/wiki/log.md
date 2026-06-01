@@ -326,3 +326,12 @@
 - Added `work/wiki/synthesis/value-screening-dual-chain-knowledge-base.md` so future agents can retrieve the time-weighted screening rule without rereading the full discussion.
 - Updated `CONTENT_INDEX.md` and wiki index so the new protocol is visible from repository entry points.
 **产出:** `analysis/value-screening-dual-chain-knowledge-base.md`, `work/wiki/synthesis/value-screening-dual-chain-knowledge-base.md`
+
+## [2026-06-01 14:44] site+seo | Code Evolution Benchmark Matrix
+
+**操作:** Published Rank 3 topic cluster as a public benchmark matrix while keeping internal workflow separate.
+**详情:**
+- Added `analysis/code-evolution-benchmark-matrix.md` to distinguish self-modifying coding agents, algorithm discovery, agent architecture search, prompt/program optimization, and reflection/repair loops.
+- Added `work/wiki/synthesis/code-evolution-benchmark-matrix.md` so future agents can reuse the evidence ladder and public/internal boundary.
+- Added `/topics/code-evolution-benchmark/` and linked it from topic map data, search, README i18n, coverage audit, and `CONTENT_INDEX.md`.
+**产出:** `analysis/code-evolution-benchmark-matrix.md`, `work/wiki/synthesis/code-evolution-benchmark-matrix.md`, `site/src/pages/topics/code-evolution-benchmark/index.astro`

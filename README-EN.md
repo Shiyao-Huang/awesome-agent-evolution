@@ -131,6 +131,7 @@ flowchart TB
 | The one-line field thesis | [Core Insight](#core-insight) | [paper abstract](paper-drafts/main.tex) |
 | What truly counts as self-evolving | [Definition topic page](https://shiyao-huang.github.io/awesome-agent-evolution/topics/self-evolving-ai-agents/) | [definition criteria](analysis/self-evolution-definition-criteria.md), [ch1 intro](paper-drafts/ch1-intro.tex) |
 | How self-evolution actually happens | [Five evolution loops](https://shiyao-huang.github.io/awesome-agent-evolution/topics/five-evolution-loops/) | [five-loop analysis](analysis/five-evolution-loops-topic.md), [survey mechanisms](site/src/pages/survey/mechanisms.astro) |
+| Which systems really improve code | [Code self-improvement Benchmark Matrix](https://shiyao-huang.github.io/awesome-agent-evolution/topics/code-evolution-benchmark/) | [code benchmark matrix](analysis/code-evolution-benchmark-matrix.md), [benchmark page](site/src/pages/benchmark/index.astro) |
 | Which projects truly count as self-evolving | [Core Findings](#core-findings) | [projects/INDEX.md](projects/INDEX.md), [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) |
 | How the paper is organized | [Paper Spine](#paper-spine) | [paper-drafts/main.tex](paper-drafts/main.tex), [survey/latex/main.tex](survey/latex/main.tex) |
 | How the AGI index enters the core | [Evolve-AGI Index In The Paper Core](#evolve-agi-index-in-the-paper-core) | [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [site page](site/src/pages/evolve-agi-index/index.astro) |
@@ -154,7 +155,7 @@ flowchart TB
 | Read the paper deeply | Open [paper-drafts/main.pdf](paper-drafts/main.pdf) or the [paper page](site/src/pages/paper/index.astro). |
 | Inspect project evidence | Use [projects/INDEX.md](projects/INDEX.md) and [public project reports](site/public/reports/projects/INDEX.md). |
 | Check data coverage | Start with the [resource library page](https://shiyao-huang.github.io/awesome-agent-evolution/resource-library/), then inspect [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md), [docs/indexes/master-index.md](docs/indexes/master-index.md), and [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md). |
-| Find topics by question | Open the [Survey/SEO topic map](https://shiyao-huang.github.io/awesome-agent-evolution/topics/) for definitions, five loops, code self-improvement, Agent-Swarm, evaluation governance, and production pain points. |
+| Find topics by question | Open the [Survey/SEO topic map](https://shiyao-huang.github.io/awesome-agent-evolution/topics/) for definitions, five loops, [code self-improvement](https://shiyao-huang.github.io/awesome-agent-evolution/topics/code-evolution-benchmark/), Agent-Swarm, evaluation governance, and production pain points. |
 | Browse the website | Open the [Self Evolve site](https://shiyao-huang.github.io/awesome-agent-evolution/) or the [site source](site/). |
 
 ## Citation

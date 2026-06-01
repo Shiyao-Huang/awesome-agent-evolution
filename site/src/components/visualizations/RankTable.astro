@@ -17,9 +17,9 @@ tb.innerHTML=f.slice(0,50).map((p,i)=>{const tg=(p.tags||[]).slice(0,3).map(t=>'
 return '<tr><td class="viz-rn">'+(i+1)+'</td><td class="viz-rnm"><a href="'+p.url+'" target="_blank" rel="noopener">'+p.name+'</a><span class="viz-rr">'+p.repo+'</span></td><td class="viz-rs">'+p.stars.toLocaleString()+'</td><td>'+p.category+'</td><td class="viz-rm">'+tg+'</td><td class="viz-rd">'+(p.lastPushed?p.lastPushed.slice(0,10):'\u2014')+'</td></tr>'}).join('')}
 ren();si.addEventListener('input',ren);cs.addEventListener('change',ren);so.addEventListener('change',ren);
 </script>
-<style>
-.viz-rc{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}.viz-rc input,.viz-rc select{border:1px solid var(--line);border-radius:var(--radius-cta);background:var(--surface-1);color:var(--fg);padding:8px 12px;font:600 13px/1.2 var(--font-body)}.viz-rc input{flex:1;min-width:180px}.viz-rc input:focus,.viz-rc select:focus{outline:none;box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--accent)}
-.viz-rco{color:var(--muted);font-size:12px;font-weight:750;margin-bottom:10px}.viz-rtw{overflow-x:auto;-webkit-overflow-scrolling:touch}.viz-rt{width:100%;border-collapse:collapse;font-size:13px}
+<style is:global>
+.viz-rank{max-width:100%;overflow-x:hidden}.viz-rc{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}.viz-rc input,.viz-rc select{border:1px solid var(--line);border-radius:var(--radius-cta);background:var(--surface-1);color:var(--fg);padding:8px 12px;font:600 13px/1.2 var(--font-body)}.viz-rc input{flex:1;min-width:180px}.viz-rc input:focus,.viz-rc select:focus{outline:none;box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--accent)}
+.viz-rco{color:var(--muted);font-size:12px;font-weight:750;margin-bottom:10px}.viz-rtw{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;contain:inline-size}.viz-rt{width:100%;border-collapse:collapse;font-size:13px}
 .viz-rt th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
 .viz-rt td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}.viz-rt tr:hover td{background:var(--surface-2)}
 .viz-rn{font-weight:800;color:var(--meta);width:36px}.viz-rnm a{font-weight:700;color:var(--fg);text-decoration:none}.viz-rnm a:hover{color:var(--accent)}.viz-rr{display:block;font-size:11px;color:var(--meta);margin-top:2px}
