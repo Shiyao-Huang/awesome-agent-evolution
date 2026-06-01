@@ -484,5 +484,5 @@ md.push('- [UNVERIFIED] Remote issues, PRs, releases, and discussions still requ
 md.push('');
 
 fs.writeFileSync(jsonOut, `${JSON.stringify(queue, null, 2)}\n`);
-fs.writeFileSync(mdOut, `${md.join('\n')}\n`);
+fs.writeFileSync(mdOut, `${md.join('\n').replace(/\n+$/u, '')}\n`);
 console.log(`Generated ${path.relative(root, jsonOut)} and ${path.relative(root, mdOut)} (${rows.length} projects)`);
