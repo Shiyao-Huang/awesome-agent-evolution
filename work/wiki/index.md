@@ -78,13 +78,16 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [硅谷人才版图](synthesis/talent-landscape.md) — 用户直接输入的硅谷AI Agent人才市场分析 | Rank: A | 2026-05-26
 - [Current-Value Ranking Reanalysis](synthesis/current-value-ranking-reanalysis.md) — GitHub项目当前价值榜重算: 时间/新鲜度50%, 历史星标降为10% adoption, unknown created_at capped | Rank: A | 2026-05-26
 - [Survey Spark and Evolve-AGI Core](synthesis/survey-spark-evolve-agi-core.md) — README转为Survey成果入口，Evolve-AGI Index进入论文核心测量脊柱 | Rank: A | 2026-05-31
-- [Resource Library Coverage Audit](synthesis/resource-library-coverage-audit.md) — 盘点 raw/processed/work/results/site/wiki 当前资产，解释 646 raw captures、239 analyzed reports、441 public reports、239 site records、808 project markdown files 等计数口径 | Rank: A | 2026-06-01
+- [Resource Library Coverage Audit](synthesis/resource-library-coverage-audit.md) — 盘点 raw/processed/work/results/site/wiki 当前资产，解释 653 raw captures、246 analyzed reports、448 public reports、site records、815 project markdown files 等计数口径 | Rank: A | 2026-06-01
 - [Survey SEO Topic Map](synthesis/survey-seo-topic-map.md) — 从资料库资产反推 SEO/Survey 主题簇：定义、五类回路、代码自改进、记忆技能、Agent-Swarm、评估治理、生产痛点 | Rank: A | 2026-06-01
 - [Self-Evolution Definition Criteria](synthesis/self-evolution-definition-criteria.md) — 用六个 gate 定义真正 self-evolving agent：可变对象、反馈、候选生成、验证、保留、审计/回滚 | Rank: A | 2026-06-01
 - [Five Evolution Loops Topic](synthesis/five-evolution-loops-topic.md) — Rank 2 SEO/Survey 机制页：规范到执行、搜索、评估、反思、种群五类回路的可变对象、反馈、验证与失败模式 | Rank: A | 2026-06-01
 - [Code Evolution Benchmark Matrix](synthesis/code-evolution-benchmark-matrix.md) — Rank 3 SEO/Survey benchmark 页：区分自修改 coding agent、算法发现、架构搜索、prompt/program 优化和反思修复回路 | Rank: A | 2026-06-01
 - [Value Screening and Dual-Chain Knowledge Base](synthesis/value-screening-dual-chain-knowledge-base.md) — 时间/延续性优先的 GitHub 深挖协议：evidence chain + mirror chain + frontier queue | Rank: A | 2026-06-01
-- [Frontier Value Queue](synthesis/frontier-value-queue.md) — 双链协议的可复跑队列：239 个 analyzed projects 分入 code-ready、clone-needed、metadata-refresh、baseline 等 lane | Rank: A | 2026-06-01
+- [Value LSH Classification System](synthesis/value-lsh-classification-system.md) — 新 value-facet 分类体系：Mom Test 访谈、机制分类、证据链、embedding/gbrain 和离散 LSH 聚类 | Rank: A | 2026-06-01
+- [Value LSH Index](synthesis/value-lsh-index.md) — 2206 个去重后素材的 `-1/0/+1` value matrix、168 个 LSH buckets、3 个 value clusters、855/1055/296 三段价值筛选 | Rank: A | 2026-06-01
+- [Value Evidence Repair Queue](synthesis/value-evidence-repair-queue.md) — 从 704 个 GitHub rows 中找出 675 个证据修复动作，分为 deep-read、issue/resource、raw/meta、loop verification、star-growth lane | Rank: A | 2026-06-01
+- [Frontier Value Queue](synthesis/frontier-value-queue.md) — 双链协议的可复跑队列：246 个 analyzed projects 分入 code-ready、clone-needed、metadata-refresh、baseline 等 lane，并接入 star-growth coverage/backlog | Rank: A | 2026-06-01
 - [modelscope AgentEvolver Frontier Deep Dive](synthesis/modelscope-agentevolver-frontier-deep-dive.md) — 第一个项目级双链深读样本：AgentEvolver 的环境到策略自进化闭环、代码证据、issue/resource 信号和复用风险 | Rank: A | 2026-06-01
 - [GitHub Star Growth Database](synthesis/github-star-growth-database.md) — 把累计 Star 降为历史 adoption prior，用 2026 new-star momentum、coverage status 和 Hugging Face-ready database 重建当前阶段排名 | Rank: A | 2026-06-01
 - [JARVIS-Xs SE-Agent Frontier Deep Dive](synthesis/jarvis-xs-se-agent-frontier-deep-dive.md) — 第二个项目级双链深读样本：SE-Agent 的轨迹池、算子演化、SWE-agent 复用和复现/发布风险 | Rank: A | 2026-06-01
@@ -99,5 +102,5 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Entities | 8 |
 | Concepts | 10 |
 | Sources | 30 |
-| Synthesis pages | 15 |
+| Synthesis pages | 16 |
 | Last updated | 2026-06-01 |

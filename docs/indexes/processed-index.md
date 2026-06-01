@@ -1,6 +1,6 @@
 # Processed / 加工分析 Index
 
-> Generated: 2026-06-01
+> Generated: 2026-06-02
 
 ## Rule
 
@@ -10,7 +10,7 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `analysis` | present | 26 | 2 | 0 | 5.6 MB |
+| `analysis` | present | 33 | 2 | 0 | 8.8 MB |
 | `research` | present | 141 | 8 | 0 | 2.5 MB |
 | `projects` | present | 25892 | 2882 | 0 | 2.9 GB |
 | `paper-reviews` | present | 171 | 1 | 0 | 1.6 MB |
@@ -30,9 +30,9 @@
 - `analysis/five-evolution-loops-topic.md`
 - `analysis/framework-painpoint-crosswalk.csv`
 - `analysis/frontier-projects/jarvis-xs-se-agent-dual-chain.md`
+- `analysis/frontier-projects/kargarisaac-reflexion-dual-chain.md`
 - `analysis/frontier-projects/modelscope-agentevolver-dual-chain.md`
 - `analysis/frontier-value-queue.json`
-- `analysis/frontier-value-queue.md`
 
 ### `research`
 

@@ -3,7 +3,7 @@
 // @sm:feature value-screening.dual-chain
 // @sm:prev github-project-data-analysis
 // @sm:next frontier-project-code-issue-scan
-// @sm:deps analysis/github-project-data-analysis.json,output/raw-github-timestamp-index.json,site/src/data/projects.ts
+// @sm:deps analysis/github-project-data-analysis.json,analysis/github-star-growth-ranking.json,output/raw-github-timestamp-index.json,site/src/data/projects.ts
 // @sm:evidence node scripts/generate_frontier_value_queue.mjs
 
 import fs from 'node:fs';
@@ -13,6 +13,7 @@ import { execFileSync } from 'node:child_process';
 const root = path.resolve(new URL('..', import.meta.url).pathname);
 const analysisPath = path.join(root, 'analysis/github-project-data-analysis.json');
 const rawTimestampPath = path.join(root, 'output/raw-github-timestamp-index.json');
+const starGrowthPath = path.join(root, 'analysis/github-star-growth-ranking.json');
 const jsonOut = path.join(root, 'analysis/frontier-value-queue.json');
 const mdOut = path.join(root, 'analysis/frontier-value-queue.md');
 const W = {
@@ -253,9 +254,11 @@ const classifyLane = (row, score, localScan, currentRank) => {
   return 'park-for-later';
 };
 
-const nextActionFor = (row, lane, localScan) => {
+const nextActionFor = (row, lane, localScan, starGrowthSignal) => {
   const actions = [];
   if (!row.created_at) actions.push('refresh GitHub API metadata');
+  if (starGrowthSignal.coverage_status === 'missing_from_star_history') actions.push('rebuild star-history seed and fetch stargazer events');
+  else if (starGrowthSignal.coverage_status !== 'complete_or_near_complete') actions.push('fetch stargazer history for 2026 growth coverage');
   if (!localScan.exists) actions.push('clone repository for code/architecture scan');
   else actions.push('scan local code for mutable artifact, verifier, retention, rollback');
   actions.push('read issues/PRs/releases/resources for continuity evidence');
@@ -289,6 +292,45 @@ const rawTimestamp = fs.existsSync(rawTimestampPath) ? readJson(rawTimestampPath
 const referenceDate = parseDate(analysis.ranking_method?.reference_date) || parseDate(analysis.generated_at) || new Date();
 const rankingByRepo = new Map((analysis.recency_weighted_project_ranking || []).map((row) => [normalizeRepo(row.repo), row]));
 const rawByRepo = new Map((rawTimestamp.records || []).map((row) => [normalizeRepo(row.repo), row]));
+const starGrowth = fs.existsSync(starGrowthPath) ? readJson(starGrowthPath) : null;
+const starGrowthByRepo = new Map((starGrowth?.ranking || []).map((row) => [normalizeRepo(row.repo), row]));
+
+const starGrowthSignalFor = (repo) => {
+  const row = starGrowthByRepo.get(normalizeRepo(repo));
+  if (!row) {
+    return {
+      coverage_status: 'missing_from_star_history',
+      growth_quality_score: null,
+      coverage_qualified_rank: null,
+      fetch_priority_rank: null,
+      current_total_stars: null,
+      new_stars_year: null,
+      new_stars_recent_90d: null,
+      first_starred_at: null,
+      last_starred_at: null,
+      fetched_star_events: 0,
+      score_bonus: 0,
+      caveat: 'star_history_missing'
+    };
+  }
+
+  const covered = row.coverage_status === 'complete_or_near_complete';
+  const partial = row.coverage_status === 'partial';
+  return {
+    coverage_status: row.coverage_status,
+    growth_quality_score: row.growth_quality_score,
+    coverage_qualified_rank: row.coverage_qualified_rank ?? null,
+    fetch_priority_rank: row.fetch_priority_rank ?? null,
+    current_total_stars: row.current_total_stars ?? null,
+    new_stars_year: row.new_stars_year ?? null,
+    new_stars_recent_90d: row.new_stars_recent_90d ?? null,
+    first_starred_at: row.first_starred_at ?? null,
+    last_starred_at: row.last_starred_at ?? null,
+    fetched_star_events: row.fetched_star_events ?? 0,
+    score_bonus: covered ? Math.min(14, Math.max(4, Number(row.growth_quality_score || 0) * 0.14)) : partial ? 2 : 0,
+    caveat: covered ? null : partial ? 'star_history_partial' : 'star_history_not_fetched'
+  };
+};
 
 const rows = (analysis.analyzed_projects || []).map((row) => {
   const normalized = normalizeRepo(row.repo);
@@ -296,11 +338,12 @@ const rows = (analysis.analyzed_projects || []).map((row) => {
   const raw = rawByRepo.get(normalized);
   const merged = { ...row, ...(raw ? { raw_index_file: raw.file } : {}) };
   const localScan = scanLocalRepo(row.localPath);
+  const starGrowthSignal = starGrowthSignalFor(normalized);
   const gates = detectGates(merged);
   const continuity = scoreContinuity(merged, referenceDate, localScan);
   const scores = {
     recency: clamp(ranking?.scores?.time ?? 0),
-    continuity: continuity.score,
+    continuity: clamp(continuity.score + starGrowthSignal.score_bonus),
     self_evolution_gap_fit: scoreGapFit(merged, gates),
     implementation_evidence: scoreImplementation(merged, localScan),
     discourse_and_resource_signal: scoreDiscourse(merged, localScan),
@@ -324,7 +367,7 @@ const rows = (analysis.analyzed_projects || []).map((row) => {
     frontier_value: Number(frontierValue.toFixed(2)),
     frontier_scores: Object.fromEntries(Object.entries(scores).map(([key, value]) => [key, Number(value.toFixed(2))])),
     why: summarizeWhy(merged, scores, gates, localScan),
-    next_action: nextActionFor(merged, lane, localScan),
+    next_action: nextActionFor(merged, lane, localScan, starGrowthSignal),
     evidence_chain: {
       raw_capture: row.raw_file || row.raw_index_file || raw?.file || null,
       raw_collected_at: row.raw_collected_at || raw?.collected_at || null,
@@ -343,7 +386,8 @@ const rows = (analysis.analyzed_projects || []).map((row) => {
         function_tag: row.classification_function_tag || null,
         evidence: row.classification_evidence || null
       },
-      continuity_signal: continuity
+      continuity_signal: continuity,
+      star_growth_signal: starGrowthSignal
     },
     mirror_chain: {
       node: `project.${normalized.replace(/[^a-z0-9]+/g, '.')}`,
@@ -355,7 +399,8 @@ const rows = (analysis.analyzed_projects || []).map((row) => {
       caveats: [
         !row.created_at ? 'created_at_unverified' : null,
         !localScan.exists ? 'local_clone_missing' : null,
-        localScan.issue_scan_status === 'remote_issue_scan_required' ? 'remote_issue_scan_missing' : null
+        localScan.issue_scan_status === 'remote_issue_scan_required' ? 'remote_issue_scan_missing' : null,
+        starGrowthSignal.caveat
       ].filter(Boolean)
     }
   };
@@ -390,7 +435,10 @@ const queue = {
     local_clone_ready: rows.filter((row) => row.evidence_chain.local_mirror).length,
     clone_needed_frontier: rows.filter((row) => row.lane === 'frontier-clone-needed').length,
     missing_created_at: rows.filter((row) => !row.evidence_chain.created_at).length,
-    remote_issue_scan_missing: rows.filter((row) => row.mirror_chain.caveats.includes('remote_issue_scan_missing')).length
+    remote_issue_scan_missing: rows.filter((row) => row.mirror_chain.caveats.includes('remote_issue_scan_missing')).length,
+    star_growth_covered: rows.filter((row) => row.evidence_chain.star_growth_signal.coverage_status === 'complete_or_near_complete').length,
+    star_history_not_fetched: rows.filter((row) => row.mirror_chain.caveats.includes('star_history_not_fetched')).length,
+    star_history_missing: rows.filter((row) => row.mirror_chain.caveats.includes('star_history_missing')).length
   },
   queues: {
     frontier_code_ready: rows.filter((row) => row.lane === 'frontier-code-ready').slice(0, 20),
@@ -409,6 +457,11 @@ const tableRows = (items, limit = 20) =>
     row.lane,
     row.evidence_chain.created_at ? row.evidence_chain.created_at.slice(0, 10) : 'unknown',
     row.evidence_chain.raw_time_slice || 'unknown',
+    row.evidence_chain.star_growth_signal.coverage_status === 'complete_or_near_complete'
+      ? `${row.evidence_chain.star_growth_signal.new_stars_year || 0} new`
+      : row.evidence_chain.star_growth_signal.fetch_priority_rank
+        ? `fetch #${row.evidence_chain.star_growth_signal.fetch_priority_rank}`
+        : row.evidence_chain.star_growth_signal.coverage_status,
     row.evidence_chain.local_mirror ? 'yes' : 'no',
     esc(row.why),
     esc(row.next_action)
@@ -433,7 +486,7 @@ md.push('The frontier queue turns the dual-chain protocol into a repeatable proj
 md.push('');
 md.push('## Three Sentences');
 md.push('');
-md.push(`The queue scores ${rows.length} analyzed projects with 40% recency, 20% continuity, 15% self-evolution gap fit, 10% implementation evidence, 10% discourse/resource signal, and 5% usefulness. It preserves the existing current-value ranking as one input, then adds local clone readiness, raw timestamp evidence, project reports, and Self Mirror style rank decisions. Because this run is offline, remote issues/PRs/releases are not silently assumed; projects needing that step are marked with explicit next actions.`);
+md.push(`The queue scores ${rows.length} analyzed projects with 40% recency, 20% continuity, 15% self-evolution gap fit, 10% implementation evidence, 10% discourse/resource signal, and 5% usefulness. It preserves the existing current-value ranking as one input, then adds local clone readiness, raw timestamp evidence, project reports, 2026 star-growth coverage, and Self Mirror style rank decisions. Because this run is offline, remote issues/PRs/releases are not silently assumed; projects needing that step are marked with explicit next actions.`);
 md.push('');
 md.push('## Lane Counts');
 md.push('');
@@ -441,19 +494,19 @@ md.push(renderTable(['lane', 'count'], Object.entries(lanes).sort((a, b) => b[1]
 md.push('');
 md.push('## Top Frontier Queue');
 md.push('');
-md.push(renderTable(['rank', 'project', 'score', 'lane', 'created', 'raw time', 'clone', 'why', 'next action'], tableRows(rows, 30)));
+md.push(renderTable(['rank', 'project', 'score', 'lane', 'created', 'raw time', 'star growth', 'clone', 'why', 'next action'], tableRows(rows, 30)));
 md.push('');
 md.push('## Code-Ready Frontier');
 md.push('');
-md.push(renderTable(['rank', 'project', 'score', 'lane', 'created', 'raw time', 'clone', 'why', 'next action'], tableRows(queue.queues.frontier_code_ready, 15)));
+md.push(renderTable(['rank', 'project', 'score', 'lane', 'created', 'raw time', 'star growth', 'clone', 'why', 'next action'], tableRows(queue.queues.frontier_code_ready, 15)));
 md.push('');
 md.push('## Clone-Needed Frontier');
 md.push('');
-md.push(renderTable(['rank', 'project', 'score', 'lane', 'created', 'raw time', 'clone', 'why', 'next action'], tableRows(queue.queues.frontier_clone_needed, 15)));
+md.push(renderTable(['rank', 'project', 'score', 'lane', 'created', 'raw time', 'star growth', 'clone', 'why', 'next action'], tableRows(queue.queues.frontier_clone_needed, 15)));
 md.push('');
 md.push('## Metadata Refresh Queue');
 md.push('');
-md.push(renderTable(['rank', 'project', 'score', 'lane', 'created', 'raw time', 'clone', 'why', 'next action'], tableRows(queue.queues.metadata_refresh, 15)));
+md.push(renderTable(['rank', 'project', 'score', 'lane', 'created', 'raw time', 'star growth', 'clone', 'why', 'next action'], tableRows(queue.queues.metadata_refresh, 15)));
 md.push('');
 md.push('## Dual-Chain Packet Shape');
 md.push('');
@@ -466,6 +519,7 @@ for (const row of rows.slice(0, 5)) {
   md.push(`    raw_capture: ${row.evidence_chain.raw_capture || 'null'}`);
   md.push(`    local_mirror: ${row.evidence_chain.local_mirror || 'null'}`);
   md.push(`    public_report: ${row.evidence_chain.public_report || 'null'}`);
+  md.push(`    star_growth: ${row.evidence_chain.star_growth_signal.coverage_status}`);
   md.push(`  mirror_chain:`);
   md.push(`    node: ${row.mirror_chain.node}`);
   md.push(`    value_gap: [${row.mirror_chain.value_gap.join(', ')}]`);
@@ -478,6 +532,7 @@ md.push('## Trust Chain');
 md.push('');
 md.push('- [KNOWN] Source corpus counts, public reports, local git metadata, and current-value ranking come from `analysis/github-project-data-analysis.json`.');
 md.push('- [KNOWN] Raw capture paths and raw time slices are joined from `output/raw-github-timestamp-index.json` when present.');
+md.push('- [KNOWN] Star-growth coverage and fetch backlog ranks are joined from `analysis/github-star-growth-ranking.json`; `not_fetched` is a data-collection state, not negative demand evidence.');
 md.push('- [KNOWN] Local code scan is an offline filesystem scan of existing `repos/*` mirrors and does not execute project code.');
 md.push('- [INFERRED] Frontier score is a triage heuristic derived from the dual-chain protocol, not a final scientific ranking.');
 md.push('- [UNVERIFIED] Remote issues, PRs, releases, and discussions still require network-backed review for promoted projects.');

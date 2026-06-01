@@ -390,3 +390,57 @@
 - Added `work/wiki/synthesis/jarvis-xs-se-agent-frontier-deep-dive.md` so future agents can retrieve the trajectory-evolution baseline and reproduction/release caveats.
 - Classified SE-Agent as a high-value trajectory-evolution baseline, not the strongest current frontier anchor, because current metadata shows no release, no open PRs, and live reproduction/release-completeness issues.
 **产出:** `analysis/frontier-projects/jarvis-xs-se-agent-dual-chain.md`, `work/wiki/synthesis/jarvis-xs-se-agent-frontier-deep-dive.md`
+
+## [2026-06-01 20:00] data+queue | Frontier Queue Star-Growth Join
+
+**操作:** Joined the GitHub star-history database into the dual-chain frontier queue.
+**详情:**
+- Updated `scripts/generate_frontier_value_queue.mjs` to read `analysis/github-star-growth-ranking.json` and attach `star_growth_signal` to every project evidence chain.
+- Kept `not_fetched` and `missing_from_star_history` as collection states instead of negative demand evidence; these now drive next actions to fetch/rebuild stargazer history.
+- Regenerated `analysis/frontier-value-queue.md/json` for 246 analyzed projects, with 5 code-ready and 15 clone-needed frontier entries.
+**产出:** `analysis/frontier-value-queue.md`, `analysis/frontier-value-queue.json`, `work/wiki/synthesis/frontier-value-queue.md`
+
+## [2026-06-01 20:45] data+classification | Value LSH Classification System
+
+**操作:** Converted the direct user requirement about comparison, discrete LSH, embeddings, gbrain, TSNE, and Mom Test facets into a new value-facet classification pipeline.
+**详情:**
+- Added `scripts/build_value_lsh_index.mjs` to turn GitHub projects, raw papers, social/X captures, and blogs into a `-1/0/+1` value matrix with LSH bands, buckets, clusters, and incremental fingerprints.
+- Added `scripts/build_value_embedding_projection.mjs` to build value/hash/OpenAI embedding views and export a 3D PCA/TSNE-ready graph.
+- Added processed and wiki design notes explaining that Mom Test interviews become facet sources, while embeddings/gbrain provide semantic-neighborhood proposals rather than final value judgements.
+**产出:** `analysis/value-lsh-classification-system.md`, `analysis/value-lsh-index.md`, `analysis/value-lsh-graph-3d.json`, `data-engine/value-lsh-index/`, `work/wiki/synthesis/value-lsh-classification-system.md`
+
+## [2026-06-01 21:00] data+index | Value LSH Index Full Run
+
+**操作:** Ran and calibrated the first all-source value LSH index.
+**详情:**
+- Scanned 2441 materials across GitHub, raw papers, raw social/X plus ranked social, and raw blogs.
+- Generated 26 value lines, 170 LSH buckets, 3 LSH value clusters, and a 2441-node value/PCA 3D graph.
+- Calibrated the class boundary to produce 994 high-value candidates, 1126 needs-review items, and 321 low-signal/risk items; low-signal is treated as current evidence weakness or deprioritization, not permanent uselessness.
+**产出:** `analysis/value-lsh-index.md`, `analysis/value-lsh-index.json`, `analysis/value-lsh-graph-3d.json`, `work/wiki/synthesis/value-lsh-index.md`
+
+## [2026-06-01 21:45] data+index | Value LSH Social-Rank Dedup
+
+**操作:** Removed duplicate voting from `raw-social-rank` in the value LSH corpus.
+**详情:**
+- Treated `raw-social-rank` as a ranked seed subset instead of a second material corpus.
+- Folded matching seed files into canonical `raw-social` rows with `evidence_refs.rank_seed = true` and `alternate_source_paths`.
+- Rebuilt the index as 2206 materials: 704 GitHub, 197 papers, 650 social/X, 655 blogs; result classes are 855 high-value, 1055 needs-review, 296 low-signal/risk.
+**产出:** `analysis/value-lsh-index.md`, `analysis/value-lsh-index.json`, `analysis/value-lsh-graph-3d.json`, `data-engine/value-lsh-index/`
+
+## [2026-06-01 22:10] data+queue | Value Evidence Repair Queue
+
+**操作:** Converted value-LSH GitHub rows into a concrete evidence repair queue.
+**详情:**
+- Added `scripts/build_value_evidence_repair_queue.mjs` to derive repair gaps from `value-matrix.jsonl`.
+- Generated 675 GitHub repair actions from 704 GitHub rows across deep-read-needed, issue-resource-scan, raw-meta-repair, loop-verification, and star-growth-repair lanes.
+- Kept repair score as action priority, not project quality, so high-scoring but under-verified projects move toward clone/code/issue/resource evidence before public claims.
+**产出:** `analysis/value-evidence-repair-queue.md`, `analysis/value-evidence-repair-queue.json`, `work/wiki/synthesis/value-evidence-repair-queue.md`
+
+## [2026-06-02 00:29] site+visualization | Value LSH 3D Public Graph
+
+**操作:** Published the generated value-LSH results as a public-facing 3D visualization surface.
+**详情:**
+- Added a reusable `ValueLshGraph3D.astro` component backed by `analysis/value-lsh-graph-3d.json` and rendered with Three.js.
+- Added `/value-lsh/` as the full visual interface for class split, corpus split, high-value candidates, repair queue, clusters, facets, and largest LSH buckets.
+- Added a compact 3D preview section to the homepage so the new value classification system is visible before readers enter deeper reports.
+**产出:** `site/src/components/ValueLshGraph3D.astro`, `site/src/pages/value-lsh/index.astro`, `site/src/pages/index.astro`

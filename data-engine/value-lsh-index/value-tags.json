@@ -1,0 +1,162 @@
+{
+  "generated_at": "2026-06-01T16:54:33.809Z",
+  "tag_version": "19810f296115",
+  "tags": [
+    {
+      "id": "current_frontier_signal",
+      "weight": 8,
+      "label": "Current frontier signal",
+      "line": "是否是当前阶段值得优先比较的 frontier 信号"
+    },
+    {
+      "id": "self_evolution_loop_fit",
+      "weight": 10,
+      "label": "Self-evolution loop fit",
+      "line": "是否真的靠 Observe/Interpret/Modify/Verify/Retain 闭环产生改进"
+    },
+    {
+      "id": "mutable_artifact_clear",
+      "weight": 6,
+      "label": "Mutable artifact clear",
+      "line": "项目是否说明自己改变 prompt/memory/skill/workflow/code/weights/population/evaluator"
+    },
+    {
+      "id": "feedback_signal_clear",
+      "weight": 6,
+      "label": "Feedback signal clear",
+      "line": "是否有清楚反馈信号，而不是只讲愿景"
+    },
+    {
+      "id": "verifier_or_benchmark",
+      "weight": 8,
+      "label": "Verifier or benchmark",
+      "line": "是否有测试、benchmark、grader、verifier 或可复跑评估"
+    },
+    {
+      "id": "retention_or_memory",
+      "weight": 7,
+      "label": "Retention or memory",
+      "line": "是否有保留机制，例如 memory、archive、checkpoint、skill library"
+    },
+    {
+      "id": "rollback_or_safety",
+      "weight": 5,
+      "label": "Rollback or safety",
+      "line": "是否有回滚、安全边界、regression guard 或 policy"
+    },
+    {
+      "id": "implementation_runnable",
+      "weight": 8,
+      "label": "Runnable implementation",
+      "line": "是否看起来能跑：代码、安装、示例、测试、API、包结构明确"
+    },
+    {
+      "id": "local_code_or_artifact",
+      "weight": 5,
+      "label": "Local code or artifact",
+      "line": "仓库里是否已有本地代码镜像或可发布报告"
+    },
+    {
+      "id": "product_usability",
+      "weight": 5,
+      "label": "Product usability",
+      "line": "是否给读者/工程师直接可用的产品或工作流价值"
+    },
+    {
+      "id": "teaching_model_card",
+      "weight": 4,
+      "label": "Teaching model card",
+      "line": "是否已有 model-card/教学型报告入口"
+    },
+    {
+      "id": "evidence_chain_complete",
+      "weight": 8,
+      "label": "Evidence chain complete",
+      "line": "raw、processed/report、metadata、timestamp 是否能串起来"
+    },
+    {
+      "id": "timestamp_freshness",
+      "weight": 7,
+      "label": "Timestamp freshness",
+      "line": "时间信号是否已知且较新"
+    },
+    {
+      "id": "continuity_active",
+      "weight": 7,
+      "label": "Active continuity",
+      "line": "是否有持续更新、release、issue、roadmap 或后续方向"
+    },
+    {
+      "id": "community_momentum",
+      "weight": 5,
+      "label": "Community momentum",
+      "line": "是否有 stars/forks/discussion/resource 这类社区动量"
+    },
+    {
+      "id": "star_growth_current",
+      "weight": 6,
+      "label": "Current star growth",
+      "line": "是否已有 2026 new-star 覆盖，而不是只看累计 star"
+    },
+    {
+      "id": "paper_quality_signal",
+      "weight": 5,
+      "label": "Paper quality signal",
+      "line": "论文或材料是否有 arXiv/benchmark/citation style 的研究证据"
+    },
+    {
+      "id": "benchmark_result",
+      "weight": 6,
+      "label": "Benchmark result",
+      "line": "是否给出 benchmark 结果、分数、提升、leaderboard 或对比"
+    },
+    {
+      "id": "method_novelty",
+      "weight": 5,
+      "label": "Method novelty",
+      "line": "是否有新方法、新算子、新架构、新范式，而非普通应用壳"
+    },
+    {
+      "id": "open_source_reuse",
+      "weight": 5,
+      "label": "Open-source reuse",
+      "line": "是否有 license、docs、examples、SDK，使其他人可以复用"
+    },
+    {
+      "id": "issue_resource_signal",
+      "weight": 4,
+      "label": "Issue/resource signal",
+      "line": "是否有 issue/resource/PR/release 方向信号"
+    },
+    {
+      "id": "hype_without_evidence",
+      "weight": -8,
+      "label": "Hype without evidence",
+      "line": "是否有热度/口号，但缺少实现、验证或证据链"
+    },
+    {
+      "id": "stale_or_unknown_metadata",
+      "weight": -6,
+      "label": "Stale or unknown metadata",
+      "line": "关键 metadata 是否未知或陈旧"
+    },
+    {
+      "id": "useful_for_survey_seo",
+      "weight": 4,
+      "label": "Survey/SEO usefulness",
+      "line": "是否适合转成 survey、topic、SEO 或 public report 的读者入口"
+    },
+    {
+      "id": "user_need_fit",
+      "weight": 6,
+      "label": "User-need fit",
+      "line": "是否解决真实用户需要：可靠性、成本、可观测性、记忆、权限、自动化"
+    },
+    {
+      "id": "compare_anchor_baseline",
+      "weight": 3,
+      "label": "Comparison anchor baseline",
+      "line": "是否适合作为历史 baseline 或机制对照物"
+    }
+  ]
+}

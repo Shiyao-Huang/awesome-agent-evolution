@@ -5,8 +5,33 @@ import { knowledgeGraphStats } from '@/data/knowledgeGraph';
 import { rankedProfiles } from '@/data/rankings';
 import { starQualityScores } from '@/data/starAnalysis';
 import { evolveAgiIndex, evolveAgiIndexSignals } from '@/data/evolveAgiIndex';
+import ValueLshGraph3D from '@/components/ValueLshGraph3D.astro';
+import valueLshSnapshotJson from '../../../analysis/value-lsh-index.json';
 import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf()).slice(0,3);
+
+interface ValueLshHomeRow {
+  type: string;
+  title: string;
+  score: {
+    value_score: number;
+    confidence: number;
+  };
+}
+
+const valueLshSnapshot = valueLshSnapshotJson as {
+  generated_at: string;
+  summary: {
+    total_materials: number;
+    value_tag_count: number;
+    total_buckets: number;
+    total_clusters: number;
+    value_class_counts: Record<string, number>;
+  };
+  top_high_value_candidates: ValueLshHomeRow[];
+};
+const valueLshSummary = valueLshSnapshot.summary;
+const valueLshTop = valueLshSnapshot.top_high_value_candidates.slice(0, 3);
 
 // ── Star Rankings (Top 15 by star count) ──
 const starRanking = [...starQualityScores]
@@ -164,6 +189,7 @@ const growthLabel: Record<string, string> = {
         <div class="hero-actions">
           <a class="button primary" href="#star-ranking">Star 榜单</a>
           <a class="button" href="/resource-library/">资料库</a>
+          <a class="button" href="/value-lsh/">价值分类</a>
           <a class="button" href="#evolve-agi-index">自进化系数</a>
           <a class="button" href="#trend-board">Trend 榜单</a>
           <a class="button" href="#direction-map">方向 Map</a>
@@ -186,6 +212,45 @@ const growthLabel: Record<string, string> = {
         </ol>
         <p>Rank 不只看 Star 数，还看 Star 质量、增长模式、证据强度和可复现性。</p>
       </aside>
+    </div>
+  </section>
+
+  <!-- ═══ Value LSH 3D Graph ═══ -->
+  <section class="section value-lsh-home-section" id="value-lsh" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Value LSH 3D</div>
+          <h2>用离散 value facets 给所有素材重新分层。</h2>
+        </div>
+        <a class="text-link" href="/value-lsh/">打开完整 3D 图谱 →</a>
+      </div>
+      <div class="value-lsh-home-layout">
+        <div class="value-lsh-home-graph">
+          <ValueLshGraph3D variant="compact" maxNodes={760} height={380} />
+        </div>
+        <div class="value-lsh-home-panel">
+          <p>这不是累计 Star 榜，而是把 GitHub、论文、社交/X、博客放进同一套 `-1 / 0 / +1` value lines：先离散判别，再用 LSH bucket 找相似价值结构，最后用 3D projection 展示聚类。</p>
+          <div class="value-lsh-home-stats">
+            <div><strong>{valueLshSummary.total_materials.toLocaleString()}</strong><span>materials</span></div>
+            <div><strong>{valueLshSummary.value_tag_count}</strong><span>value lines</span></div>
+            <div><strong>{valueLshSummary.total_buckets}</strong><span>LSH buckets</span></div>
+          </div>
+          <div class="value-lsh-home-split">
+            <span>高价值 {valueLshSummary.value_class_counts['high-value-candidate'].toLocaleString()}</span>
+            <span>待复核 {valueLshSummary.value_class_counts['needs-review'].toLocaleString()}</span>
+            <span>修复/风险 {valueLshSummary.value_class_counts['low-signal-or-risk'].toLocaleString()}</span>
+          </div>
+          <div class="value-lsh-home-list" aria-label="Top value LSH candidates">
+            {valueLshTop.map((row) => (
+              <article>
+                <strong>{row.title}</strong>
+                <span>{row.type} · value {row.score.value_score.toFixed(2)} · confidence {row.score.confidence.toFixed(2)}</span>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -461,6 +526,10 @@ const growthLabel: Record<string, string> = {
           <div style="font-size: 1.5rem;">🏆</div>
           <h3>系统排名</h3>
         </a>
+        <a href="/value-lsh/" class="card" style="text-decoration: none; color: inherit; text-align: center;">
+          <div style="font-size: 1.5rem;">▦</div>
+          <h3>价值分类图谱</h3>
+        </a>
         <a href="/survey/" class="card" style="text-decoration: none; color: inherit; text-align: center;">
           <div style="font-size: 1.5rem;">📋</div>
           <h3>Survey 发现</h3>
@@ -524,6 +593,90 @@ const growthLabel: Record<string, string> = {
   }
   .champion-block {
     transition: var(--transition);
+  }
+  .value-lsh-home-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(340px, .65fr);
+    gap: 18px;
+    align-items: stretch;
+  }
+  .value-lsh-home-graph,
+  .value-lsh-home-panel {
+    min-width: 0;
+  }
+  .value-lsh-home-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-card);
+    padding: 20px;
+    box-shadow: var(--shadow-mockup);
+  }
+  .value-lsh-home-panel p {
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .value-lsh-home-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 18px;
+  }
+  .value-lsh-home-stats div {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-1);
+    padding: 12px;
+  }
+  .value-lsh-home-stats strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .value-lsh-home-stats span,
+  .value-lsh-home-split span,
+  .value-lsh-home-list span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 750;
+  }
+  .value-lsh-home-stats span {
+    display: block;
+    margin-top: 6px;
+    text-transform: uppercase;
+  }
+  .value-lsh-home-split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .value-lsh-home-split span {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface-1);
+    padding: 6px 9px;
+  }
+  .value-lsh-home-list {
+    display: grid;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .value-lsh-home-list article {
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+  }
+  .value-lsh-home-list strong,
+  .value-lsh-home-list span {
+    display: block;
+    overflow-wrap: anywhere;
+  }
+  .value-lsh-home-list span {
+    margin-top: 3px;
   }
   .eai-home-grid {
     display: grid;
@@ -618,8 +771,16 @@ const growthLabel: Record<string, string> = {
     line-height: 1.45;
   }
   @media (max-width: 980px) {
+    .value-lsh-home-layout {
+      grid-template-columns: 1fr;
+    }
     .eai-home-grid,
     .eai-home-signals {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 680px) {
+    .value-lsh-home-stats {
       grid-template-columns: 1fr;
     }
   }

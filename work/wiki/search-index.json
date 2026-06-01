@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-01T11:40:11.339Z",
+  "generated": "2026-06-01T16:29:52.393Z",
   "stats": {
-    "pages": 64,
-    "keywords": 853
+    "pages": 67,
+    "keywords": 873
   },
   "catalog": [
     {
@@ -723,6 +723,43 @@
         "papers",
         "capital",
         "synthesis"
+      ]
+    },
+    {
+      "path": "synthesis/value-evidence-repair-queue.md",
+      "title": "Value Evidence Repair Queue",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "value-lsh",
+        "evidence-chain",
+        "github-meta",
+        "repair-queue"
+      ]
+    },
+    {
+      "path": "synthesis/value-lsh-classification-system.md",
+      "title": "Value LSH Classification System",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "value-lsh",
+        "classification",
+        "mom-test",
+        "embedding",
+        "graph"
+      ]
+    },
+    {
+      "path": "synthesis/value-lsh-index.md",
+      "title": "Value LSH Index",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "value-lsh",
+        "comparison",
+        "clustering",
+        "value-screening"
       ]
     },
     {
@@ -1788,7 +1825,9 @@
       "sources/talent-flow-analysis.md",
       "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/current-value-ranking-reanalysis.md",
-      "synthesis/survey-spark-evolve-agi-core.md"
+      "synthesis/survey-spark-evolve-agi-core.md",
+      "synthesis/value-evidence-repair-queue.md",
+      "synthesis/value-lsh-index.md"
     ],
     "type": [
       "sources/anthropic-talent-movement.md",
@@ -2245,7 +2284,8 @@
       "synthesis/mechanism-framework.md"
     ],
     "classification": [
-      "sources/essential-taxonomy-framework.md"
+      "sources/essential-taxonomy-framework.md",
+      "synthesis/value-lsh-classification-system.md"
     ],
     "5d-framework": [
       "sources/essential-taxonomy-framework.md"
@@ -2554,6 +2594,8 @@
       "synthesis/self-evolution-definition-criteria.md",
       "synthesis/survey-seo-topic-map.md",
       "synthesis/survey-spark-evolve-agi-core.md",
+      "synthesis/value-evidence-repair-queue.md",
+      "synthesis/value-lsh-index.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "1. paper landscape overview": [
@@ -3313,7 +3355,8 @@
       "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/self-evolution-definition-criteria.md",
-      "synthesis/survey-seo-topic-map.md"
+      "synthesis/survey-seo-topic-map.md",
+      "synthesis/value-evidence-repair-queue.md"
     ],
     "three sentences": [
       "synthesis/code-evolution-benchmark-matrix.md",
@@ -3323,6 +3366,8 @@
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/survey-spark-evolve-agi-core.md",
+      "synthesis/value-evidence-repair-queue.md",
+      "synthesis/value-lsh-index.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "reuse notes": [
@@ -3397,6 +3442,7 @@
     ],
     "value-screening": [
       "synthesis/frontier-value-queue.md",
+      "synthesis/value-lsh-index.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "dual-chain": [
@@ -3649,6 +3695,69 @@
     ],
     "academic-industry bridge accelerates m1": [
       "synthesis/talent-landscape.md"
+    ],
+    "value evidence repair queue": [
+      "synthesis/value-evidence-repair-queue.md"
+    ],
+    "value-lsh": [
+      "synthesis/value-evidence-repair-queue.md",
+      "synthesis/value-lsh-classification-system.md",
+      "synthesis/value-lsh-index.md"
+    ],
+    "github-meta": [
+      "synthesis/value-evidence-repair-queue.md"
+    ],
+    "repair-queue": [
+      "synthesis/value-evidence-repair-queue.md"
+    ],
+    "flow": [
+      "synthesis/value-evidence-repair-queue.md",
+      "synthesis/value-lsh-index.md"
+    ],
+    "current lane counts": [
+      "synthesis/value-evidence-repair-queue.md"
+    ],
+    "value lsh classification system": [
+      "synthesis/value-lsh-classification-system.md"
+    ],
+    "mom-test": [
+      "synthesis/value-lsh-classification-system.md"
+    ],
+    "embedding": [
+      "synthesis/value-lsh-classification-system.md"
+    ],
+    "graph": [
+      "synthesis/value-lsh-classification-system.md"
+    ],
+    "core claim": [
+      "synthesis/value-lsh-classification-system.md"
+    ],
+    "mom test link": [
+      "synthesis/value-lsh-classification-system.md"
+    ],
+    "granularity": [
+      "synthesis/value-lsh-classification-system.md"
+    ],
+    "current artifacts": [
+      "synthesis/value-lsh-classification-system.md"
+    ],
+    "next iteration": [
+      "synthesis/value-lsh-classification-system.md"
+    ],
+    "value lsh index": [
+      "synthesis/value-lsh-index.md"
+    ],
+    "comparison": [
+      "synthesis/value-lsh-index.md"
+    ],
+    "clustering": [
+      "synthesis/value-lsh-index.md"
+    ],
+    "current boundaries": [
+      "synthesis/value-lsh-index.md"
+    ],
+    "useful next queries": [
+      "synthesis/value-lsh-index.md"
     ],
     "self-mirror": [
       "synthesis/value-screening-dual-chain-knowledge-base.md"

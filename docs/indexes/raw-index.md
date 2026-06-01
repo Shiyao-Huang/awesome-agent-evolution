@@ -1,6 +1,6 @@
 # Raw / 原始素材 Index
 
-> Generated: 2026-06-01
+> Generated: 2026-06-02
 
 ## Rule
 

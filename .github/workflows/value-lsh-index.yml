@@ -1,0 +1,39 @@
+name: Build value LSH index
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  value-lsh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build value LSH matrix and clusters
+        run: node scripts/build_value_lsh_index.mjs --source all
+      - name: Build 3D value graph projection
+        run: node scripts/build_value_embedding_projection.mjs --provider value --projection pca --k 24
+      - name: Build evidence repair queue
+        run: node scripts/build_value_evidence_repair_queue.mjs
+      - name: Refresh repository indexes
+        run: node scripts/generate_project_indexes.mjs
+      - name: Upload value LSH artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: value-lsh-index
+          path: |
+            analysis/value-lsh-index.md
+            analysis/value-lsh-index.json
+            analysis/value-lsh-graph-3d.json
+            analysis/value-evidence-repair-queue.md
+            analysis/value-evidence-repair-queue.json
+            data-engine/value-lsh-index/

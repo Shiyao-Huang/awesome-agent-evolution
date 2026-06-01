@@ -1,6 +1,6 @@
 # Results / 结果输出 Index
 
-> Generated: 2026-06-01
+> Generated: 2026-06-02
 
 ## Rule
 
@@ -13,7 +13,7 @@
 | `reports` | present | 14 | 2 | 0 | 97 KB |
 | `output` | present | 8 | 1 | 0 | 666 KB |
 | `site/public/reports` | present | 481 | 6 | 0 | 2.9 MB |
-| `site/dist` | present | 923 | 404 | 0 | 19 MB |
+| `site/dist` | present | 928 | 406 | 0 | 20 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 986 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
@@ -60,14 +60,14 @@
 
 - `site/dist/CNAME`
 - `site/dist/_astro/BaseLayout.Dnh_NTE-.css`
+- `site/dist/_astro/ValueLshGraph3D.astro_astro_type_script_index_0_lang.mUikB7NJ.js`
 - `site/dist/_astro/client.BpEju3qh.js`
 - `site/dist/_astro/index.B3cpf88e.css`
+- `site/dist/_astro/index.BfFUp1ss.css`
 - `site/dist/_astro/index.CBk-yZE3.css`
 - `site/dist/_astro/index.CmLyJJUK.css`
+- `site/dist/_astro/index.Djbw_tfD.css`
 - `site/dist/_astro/index.DzSMj55x.css`
-- `site/dist/_astro/star-analysis.B9Ar3sAv.css`
-- `site/dist/benchmark/index.html`
-- `site/dist/blog/adas-to-dgm-evolution/index.html`
 
 ### `paper-drafts/main.pdf`
 

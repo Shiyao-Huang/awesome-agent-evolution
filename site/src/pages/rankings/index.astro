@@ -199,21 +199,9 @@ const signalRules = [
       <div class="card">
         <div class="card-head">
           <div class="eyebrow">Method</div>
-          <h3>排序方法</h3>
+          <h3>这个排名怎么用</h3>
         </div>
-        <p>当前价值排名不是历史影响力排名。时间新近性占 50%，自进化机制强度占 20%，证据链完整度占 15%，社区动量占 10%，实用适配度占 5%。GitHub API 无法确认创建时间的项目会被标记 caveat，时间分最高封顶 45/100，避免本地 mirror 或采集时间制造“假新项目”。</p>
-        <div class="score-table-wrap" style="margin:16px 0;">
-          <table class="rank-table">
-            <thead><tr><th>Dimension</th><th>Weight</th><th>Meaning</th></tr></thead>
-            <tbody>
-              <tr><td>Time</td><td>{Math.round(method.weights.time * 100)}%</td><td>创建时间新近性 + 最近活动；创建时间缺失时封顶。</td></tr>
-              <tr><td>Mechanism</td><td>{Math.round(method.weights.mechanism * 100)}%</td><td>是否真的包含进化、评估器、记忆/技能、训练/数据循环。</td></tr>
-              <tr><td>Evidence</td><td>{Math.round(method.weights.evidence * 100)}%</td><td>是否有 raw、classification、公开报告、GitHub API 或本地镜像证据。</td></tr>
-              <tr><td>Adoption</td><td>{Math.round(method.weights.adoption * 100)}%</td><td>log-scaled stars，只作为动量信号，不再主导排名。</td></tr>
-              <tr><td>Usefulness</td><td>{Math.round(method.weights.usefulness * 100)}%</td><td>是否适合工程使用、评测、harness、memory/skill 或自进化实践。</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <p>先用它决定下一步行动：80 分以上优先深读，70-79 分重点跟踪，60-69 分先补证据，60 分以下只作为生态背景。分数不是最终学术结论，而是把时间、机制、证据链和社区动量压成一个研究排队器。</p>
         <div class="rank-usage-grid">
           <div class="rank-usage-panel">
             <div class="rank-usage-title">怎么用这个排名</div>
@@ -253,6 +241,22 @@ const signalRules = [
             </div>
           </div>
         </div>
+        <details class="rank-method-details">
+          <summary>查看评分权重和证据边界</summary>
+          <p>当前价值排名不是历史影响力排名。时间新近性占 50%，自进化机制强度占 20%，证据链完整度占 15%，社区动量占 10%，实用适配度占 5%。GitHub API 无法确认创建时间的项目会被标记 caveat，时间分最高封顶 45/100，避免本地 mirror 或采集时间制造“假新项目”。</p>
+          <div class="score-table-wrap" style="margin:16px 0 0;">
+            <table class="rank-table">
+              <thead><tr><th>Dimension</th><th>Weight</th><th>Meaning</th></tr></thead>
+              <tbody>
+                <tr><td>Time</td><td>{Math.round(method.weights.time * 100)}%</td><td>创建时间新近性 + 最近活动；创建时间缺失时封顶。</td></tr>
+                <tr><td>Mechanism</td><td>{Math.round(method.weights.mechanism * 100)}%</td><td>是否真的包含进化、评估器、记忆/技能、训练/数据循环。</td></tr>
+                <tr><td>Evidence</td><td>{Math.round(method.weights.evidence * 100)}%</td><td>是否有 raw、classification、公开报告、GitHub API 或本地镜像证据。</td></tr>
+                <tr><td>Adoption</td><td>{Math.round(method.weights.adoption * 100)}%</td><td>log-scaled stars，只作为动量信号，不再主导排名。</td></tr>
+                <tr><td>Usefulness</td><td>{Math.round(method.weights.usefulness * 100)}%</td><td>是否适合工程使用、评测、harness、memory/skill 或自进化实践。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
       </div>
     </div>
   </section>
@@ -285,6 +289,9 @@ const signalRules = [
 .rank-usage-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;margin-top:18px}
 .rank-usage-panel{border:1px solid var(--line);border-radius:8px;padding:14px;background:color-mix(in srgb,var(--surface-2) 55%,transparent)}
 .rank-usage-title{font-size:13px;font-weight:850;color:var(--fg);margin-bottom:12px}
+.rank-method-details{margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+.rank-method-details summary{cursor:pointer;color:var(--fg);font-size:13px;font-weight:850}
+.rank-method-details p{margin-top:12px}
 .rank-bands{display:flex;flex-direction:column;gap:12px}
 .rank-band-row{display:grid;grid-template-columns:1fr;gap:6px}
 .rank-band-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px;font-weight:800;color:var(--fg)}

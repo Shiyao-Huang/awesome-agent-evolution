@@ -21,7 +21,7 @@ export interface TopicCluster {
 }
 
 export const topicMapStats = {
-  clusters: 9,
+  clusters: 10,
   rawGithubCaptures: 646,
   strictEvolutionRepos: 93,
   broadEvolutionRepos: 200,
@@ -131,6 +131,7 @@ export const topicClusters: TopicCluster[] = [
       { label: 'Evolve-AGI Index', href: '/evolve-agi-index/' },
       { label: 'Benchmark', href: '/benchmark/' },
       { label: 'Star growth', href: '/star-growth/' },
+      { label: 'Value LSH', href: '/value-lsh/' },
       { label: 'Reports', href: '/reports/' },
     ],
     nextAsset: '把每个 index signal 做成可解释小页，并链接到代表报告和 benchmark 表。',
@@ -153,8 +154,25 @@ export const topicClusters: TopicCluster[] = [
     nextAsset: '扩大 strict evolution repos 的完整 stargazer pagination，并把 complete rows 回灌到 Evolve-AGI Index 和 frontier queue。',
   },
   {
-    id: 'production-pain-points',
+    id: 'value-lsh',
     rank: 8,
+    title: 'Value LSH 价值分类与证据修复',
+    titleEn: 'Value LSH classification and evidence repair',
+    readerQuestion: '这么多项目、论文和内容材料，哪些真的值得先深挖?',
+    surveyRole: '把用户要求的“谁好谁坏、谁有价值谁没价值”转成 26 条 value lines、LSH 近邻、3D projection 和 evidence repair queue。',
+    seoIntent: 'classification / evidence triage',
+    evidence: 'Value LSH 已扫描 2206 个去重素材，覆盖 GitHub、papers、social/X 和 blogs，并生成 855/1055/296 三段 action class。',
+    seedQueries: ['AI agent value classification', 'self evolving agents evidence repair', 'AI project LSH clustering'],
+    evidenceLinks: [
+      { label: 'Value LSH page', href: '/value-lsh/' },
+      { label: 'Value LSH analysis', href: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/value-lsh-index.md' },
+      { label: 'Repair queue', href: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/value-evidence-repair-queue.md' },
+    ],
+    nextAsset: '把 repair queue 的 top projects 逐个转成 model-card 深读，并把稳定 facet 回灌到 Evolve-AGI Index。',
+  },
+  {
+    id: 'production-pain-points',
+    rank: 9,
     title: '生产痛点与用户信任边界',
     titleEn: 'Production pain points and trust boundaries',
     readerQuestion: '用户真的需要更自主的 agent，还是需要更可靠、可控、低成本的系统?',
@@ -171,7 +189,7 @@ export const topicClusters: TopicCluster[] = [
   },
   {
     id: 'resource-library',
-    rank: 9,
+    rank: 10,
     title: '资料库覆盖与证据链复查',
     titleEn: 'Resource coverage and evidence traceability',
     readerQuestion: '这个资料库到底收了什么、分析了什么、哪些能公开阅读?',
@@ -181,6 +199,7 @@ export const topicClusters: TopicCluster[] = [
     seedQueries: ['self-evolving AI agents resource library', 'AI self evolution GitHub projects', 'AI agent survey project reports'],
     evidenceLinks: [
       { label: 'Resource library', href: '/resource-library/' },
+      { label: 'Value LSH', href: '/value-lsh/' },
       { label: 'GitHub evidence', href: '/github/' },
       { label: 'Project reports', href: '/reports/' },
     ],

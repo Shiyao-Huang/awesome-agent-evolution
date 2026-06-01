@@ -1,6 +1,6 @@
 # Work / 工作产物 Index
 
-> Generated: 2026-06-01
+> Generated: 2026-06-02
 
 ## Rule
 
@@ -13,12 +13,12 @@
 | `paper-drafts` | present | 31 | 2 | 0 | 2.3 MB |
 | `paper` | present | 15 | 2 | 0 | 1023 KB |
 | `latex` | present | 9 | 2 | 0 | 53 KB |
-| `site` | present | 1560 | 449 | 0 | 33 MB |
+| `site` | present | 1568 | 453 | 0 | 35 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
-| `scripts` | present | 47 | 1 | 0 | 1.3 MB |
-| `data-engine` | present | 486 | 19 | 0 | 6.4 MB |
+| `scripts` | present | 50 | 1 | 0 | 1.4 MB |
+| `data-engine` | present | 495 | 20 | 0 | 14 MB |
 | `work/research` | present | 64 | 2 | 0 | 2.2 MB |
-| `work/wiki` | present | 68 | 6 | 0 | 473 KB |
+| `work/wiki` | present | 71 | 6 | 0 | 490 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files
@@ -92,13 +92,13 @@
 - `scripts/analyze_github_project_data.mjs`
 - `scripts/auto-commit-shield.sh`
 - `scripts/build_github_star_history_db.mjs`
+- `scripts/build_value_embedding_projection.mjs`
+- `scripts/build_value_evidence_repair_queue.mjs`
+- `scripts/build_value_lsh_index.mjs`
 - `scripts/enforce_raw_timestamps.py`
 - `scripts/generate-site-knowledge-graph.mjs`
 - `scripts/generate-wiki-index.mjs`
 - `scripts/generate_blog_author_profiles.py`
-- `scripts/generate_charts.py`
-- `scripts/generate_frontier_value_queue.mjs`
-- `scripts/generate_project_indexes.mjs`
 
 ### `data-engine`
 

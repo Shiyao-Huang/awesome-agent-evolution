@@ -1,0 +1,367 @@
+---
+import graphSnapshotJson from '../../../analysis/value-lsh-graph-3d.json';
+
+type ValueClass = 'high-value-candidate' | 'needs-review' | 'low-signal-or-risk';
+
+interface GraphNode {
+  id: string;
+  type: string;
+  title: string;
+  value_score: number;
+  confidence: number;
+  value_class: ValueClass;
+  embedding_cluster: string;
+  x: number;
+  y: number;
+  z: number;
+}
+
+interface GraphSnapshot {
+  generated_at: string;
+  method: {
+    provider: string;
+    projection: string;
+    k: number;
+  };
+  summary: {
+    nodes: number;
+    embedding_clusters: number;
+    value_classes: Record<ValueClass, number>;
+  };
+  nodes: GraphNode[];
+}
+
+interface Props {
+  variant?: 'compact' | 'full';
+  maxNodes?: number;
+  height?: number;
+}
+
+const graphSnapshot = graphSnapshotJson as GraphSnapshot;
+const { variant = 'full', maxNodes = variant === 'compact' ? 760 : 2206, height = variant === 'compact' ? 360 : 560 } = Astro.props;
+const allNodes = graphSnapshot.nodes ?? [];
+const sampleStep = Math.max(1, Math.ceil(allNodes.length / maxNodes));
+const sceneNodes = allNodes
+  .filter((_, index) => index % sampleStep === 0)
+  .slice(0, maxNodes)
+  .map((node) => ({
+    id: node.id,
+    type: node.type,
+    title: node.title,
+    score: node.value_score,
+    confidence: node.confidence,
+    valueClass: node.value_class,
+    embeddingCluster: node.embedding_cluster,
+    x: Number(node.x.toFixed(6)),
+    y: Number(node.y.toFixed(6)),
+    z: Number(node.z.toFixed(6)),
+  }));
+
+const classLabels: Record<ValueClass, string> = {
+  'high-value-candidate': 'High value',
+  'needs-review': 'Needs review',
+  'low-signal-or-risk': 'Repair / risk',
+};
+
+const classColors: Record<ValueClass, string> = {
+  'high-value-candidate': '#2E6F4E',
+  'needs-review': '#007AFF',
+  'low-signal-or-risk': '#B83224',
+};
+
+const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
+const fallbackNodes = [...sceneNodes]
+  .sort((a, b) => a.z - b.z)
+  .slice(0, variant === 'compact' ? 220 : 420)
+  .map((node) => ({
+    ...node,
+    sx: clamp(500 + node.x * 390 + node.z * 72, 36, 964),
+    sy: clamp(270 - node.y * 190 + node.z * 34, 30, 510),
+    r: clamp(2.2 + (node.score - 50) / 14 + node.z * 1.1, 1.8, 7.4),
+    opacity: clamp(0.38 + (node.z + 1) * 0.24, 0.28, 0.92),
+  }));
+
+const scenePayload = {
+  variant,
+  nodes: sceneNodes,
+  colors: classColors,
+};
+---
+
+<div class={`value-lsh-three ${variant}`} data-value-lsh-three style={`--value-graph-height:${height}px;`}>
+  <script type="application/json" data-value-lsh-points set:html={JSON.stringify(scenePayload)} is:inline />
+  <div class="value-lsh-stage" data-value-lsh-stage>
+    <canvas data-value-lsh-canvas aria-label="Value LSH 3D graph"></canvas>
+    <div class="value-lsh-fallback" aria-hidden="true">
+      <svg viewBox="0 0 1000 540" role="img">
+        <defs>
+          <radialGradient id={`value-lsh-glow-${variant}`} cx="50%" cy="45%" r="62%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="72%" stop-color="#FFF5EB" />
+            <stop offset="100%" stop-color="#FAF7F2" />
+          </radialGradient>
+        </defs>
+        <rect width="1000" height="540" rx="8" fill={`url(#value-lsh-glow-${variant})`} />
+        <circle cx="500" cy="270" r="212" fill="none" stroke="rgba(0,0,0,.08)" />
+        <ellipse cx="500" cy="270" rx="360" ry="120" fill="none" stroke="rgba(0,122,255,.12)" />
+        <ellipse cx="500" cy="270" rx="210" ry="318" fill="none" stroke="rgba(255,91,0,.12)" transform="rotate(-18 500 270)" />
+        {fallbackNodes.map((node) => (
+          <circle
+            cx={node.sx}
+            cy={node.sy}
+            r={node.r}
+            fill={classColors[node.valueClass]}
+            fill-opacity={node.opacity}
+          />
+        ))}
+      </svg>
+    </div>
+  </div>
+  <div class="value-lsh-legend" aria-label="Value LSH legend">
+    {(Object.keys(classLabels) as ValueClass[]).map((valueClass) => (
+      <span><i style={`background:${classColors[valueClass]}`}></i>{classLabels[valueClass]} <strong>{graphSnapshot.summary.value_classes[valueClass].toLocaleString()}</strong></span>
+    ))}
+    <span><i class="projection-dot"></i>{graphSnapshot.method.provider} + {graphSnapshot.method.projection.toUpperCase()}</span>
+    <span><i class="cluster-dot"></i>{graphSnapshot.summary.embedding_clusters} embedding clusters</span>
+    <span><i class="node-dot"></i>{graphSnapshot.summary.nodes.toLocaleString()} nodes</span>
+  </div>
+</div>
+
+<script>
+  import * as THREE from 'three';
+
+  type SceneNode = { x: number; y: number; z: number; valueClass: string };
+  type ScenePayload = { variant?: string; nodes?: SceneNode[]; colors: Record<string, string> };
+
+  const roots = document.querySelectorAll('[data-value-lsh-three]');
+  roots.forEach((root) => {
+    if (!(root instanceof HTMLElement) || root.dataset.valueLshReady === 'true') return;
+    root.dataset.valueLshReady = 'true';
+
+    const payloadElement = root.querySelector('[data-value-lsh-points]');
+    const stage = root.querySelector('[data-value-lsh-stage]');
+    const canvas = root.querySelector('[data-value-lsh-canvas]');
+    if (!(payloadElement instanceof HTMLScriptElement) || !(stage instanceof HTMLElement) || !(canvas instanceof HTMLCanvasElement)) return;
+
+    let payload: ScenePayload;
+    try {
+      payload = JSON.parse(payloadElement.textContent || '{}');
+    } catch {
+      return;
+    }
+    const nodes: SceneNode[] = Array.isArray(payload.nodes) ? payload.nodes : [];
+    if (!nodes.length) return;
+
+    let renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
+    } catch {
+      return;
+    }
+
+    renderer.setClearColor(0x000000, 0);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(44, 1, 0.1, 100);
+    camera.position.set(0, 0, payload.variant === 'compact' ? 4.25 : 4.75);
+
+    const group = new THREE.Group();
+    group.rotation.x = -0.26;
+    group.rotation.y = 0.34;
+    scene.add(group);
+
+    const positions = new Float32Array(nodes.length * 3);
+    const colors = new Float32Array(nodes.length * 3);
+    const color = new THREE.Color();
+    nodes.forEach((node: SceneNode, index: number) => {
+      const i = index * 3;
+      positions[i] = node.x * 1.72;
+      positions[i + 1] = node.y * 1.72;
+      positions[i + 2] = node.z * 1.72;
+      color.set(payload.colors[node.valueClass] || '#007AFF');
+      colors[i] = color.r;
+      colors[i + 1] = color.g;
+      colors[i + 2] = color.b;
+    });
+
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+    const material = new THREE.PointsMaterial({
+      size: payload.variant === 'compact' ? 0.072 : 0.062,
+      vertexColors: true,
+      transparent: true,
+      opacity: 0.96,
+      depthWrite: false,
+      sizeAttenuation: true,
+    });
+    group.add(new THREE.Points(geometry, material));
+
+    const ringMaterial = new THREE.LineBasicMaterial({ color: 0x7a6b5e, transparent: true, opacity: 0.18 });
+    const makeRing = (radius: number, rotation: [number, number, number]) => {
+      const points = [];
+      for (let i = 0; i < 144; i += 1) {
+        const angle = (i / 144) * Math.PI * 2;
+        points.push(new THREE.Vector3(Math.cos(angle) * radius, Math.sin(angle) * radius, 0));
+      }
+      const ring = new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(points), ringMaterial);
+      ring.rotation.set(rotation[0], rotation[1], rotation[2]);
+      return ring;
+    };
+    group.add(makeRing(1.94, [0, 0, 0]));
+    group.add(makeRing(1.94, [Math.PI / 2, 0, 0]));
+    group.add(makeRing(1.94, [0, Math.PI / 2, 0]));
+
+    const resize = () => {
+      const rect = stage.getBoundingClientRect();
+      const width = Math.max(1, Math.floor(rect.width));
+      const height = Math.max(1, Math.floor(rect.height));
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    };
+    resize();
+    new ResizeObserver(resize).observe(stage);
+
+    let pointerActive = false;
+    let lastX = 0;
+    let lastY = 0;
+    let targetX = group.rotation.x;
+    let targetY = group.rotation.y;
+    const motionEnabled = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    stage.addEventListener('pointerdown', (event) => {
+      pointerActive = true;
+      lastX = event.clientX;
+      lastY = event.clientY;
+      stage.setPointerCapture(event.pointerId);
+    });
+    stage.addEventListener('pointermove', (event) => {
+      if (!pointerActive) return;
+      targetY += (event.clientX - lastX) * 0.006;
+      targetX += (event.clientY - lastY) * 0.004;
+      targetX = Math.max(-1.15, Math.min(1.15, targetX));
+      lastX = event.clientX;
+      lastY = event.clientY;
+    });
+    stage.addEventListener('pointerup', () => {
+      pointerActive = false;
+    });
+    stage.addEventListener('pointercancel', () => {
+      pointerActive = false;
+    });
+
+    root.classList.add('is-canvas-ready');
+    const tick = () => {
+      if (motionEnabled && !pointerActive) {
+        targetY += payload.variant === 'compact' ? 0.0016 : 0.0011;
+      }
+      group.rotation.x += (targetX - group.rotation.x) * 0.08;
+      group.rotation.y += (targetY - group.rotation.y) * 0.08;
+      renderer.render(scene, camera);
+      requestAnimationFrame(tick);
+    };
+    tick();
+  });
+</script>
+
+<style>
+  .value-lsh-three {
+    display: grid;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .value-lsh-stage {
+    position: relative;
+    min-height: min(var(--value-graph-height), 70vh);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background:
+      radial-gradient(circle at 50% 44%, rgba(255, 255, 255, .88), rgba(255, 245, 235, .96) 60%, rgba(250, 247, 242, .98) 100%);
+    box-shadow: var(--shadow-mockup);
+    touch-action: none;
+  }
+
+  .value-lsh-stage canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .value-lsh-fallback {
+    position: absolute;
+    inset: 0;
+  }
+
+  .value-lsh-fallback svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .value-lsh-three.is-canvas-ready .value-lsh-fallback {
+    display: none;
+  }
+
+  .value-lsh-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 1.2;
+  }
+
+  .value-lsh-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 30px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface-card);
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+
+  .value-lsh-legend i {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    flex: 0 0 auto;
+    border-radius: 999px;
+  }
+
+  .value-lsh-legend strong {
+    font-weight: 850;
+  }
+
+  .cluster-dot {
+    background: var(--accent);
+  }
+
+  .projection-dot {
+    background: var(--fg);
+  }
+
+  .node-dot {
+    background: var(--caret-blue);
+  }
+
+  @media (max-width: 760px) {
+    .value-lsh-stage {
+      min-height: min(calc(var(--value-graph-height) * .76), 58vh);
+    }
+
+    .value-lsh-legend {
+      gap: 6px;
+      font-size: 11px;
+    }
+  }
+</style>

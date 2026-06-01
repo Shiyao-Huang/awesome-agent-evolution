@@ -31,18 +31,18 @@ The corpus already has enough volume; the bottleneck is value selection under ti
 
 ## Current Corpus Snapshot
 
-Source: `analysis/github-project-data-analysis.json`, generated `2026-06-01T07:26:26.411Z`.
+Source: `analysis/github-project-data-analysis.json`, generated `2026-06-01T11:54:17.396Z`.
 
 | Metric | Count |
 |---|---:|
-| Raw GitHub captures | 646 |
-| Classified repositories | 646 |
-| Analyzed public model-card projects | 239 |
-| Strict evolution-theme repositories | 93 |
-| Broad evolution-related repositories | 200 |
+| Raw GitHub captures | 653 |
+| Classified repositories | 653 |
+| Analyzed public model-card projects | 246 |
+| Strict evolution-theme repositories | 95 |
+| Broad evolution-related repositories | 202 |
 | Analyzed projects with verified GitHub `created_at` | 25 |
 | Analyzed projects with local git mirror evidence | 76 |
-| Analyzed projects with public reports | 239 |
+| Analyzed projects with public reports | 246 |
 | Raw repositories with unknown time slice | 108 |
 
 Current ranking already uses `current_value = 0.50*time + 0.20*mechanism + 0.15*evidence + 0.10*adoption + 0.05*usefulness`. That is the right direction, but the next layer should add continuity and code/issue evidence rather than letting metadata alone decide final research value.
@@ -121,7 +121,7 @@ This protocol now has a repeatable implementation:
 - JSON output: `analysis/frontier-value-queue.json`
 - Wiki synthesis: `work/wiki/synthesis/frontier-value-queue.md`
 
-The first generated run scores 239 analyzed projects and splits them into 5 `frontier-code-ready`, 14 `frontier-clone-needed`, 100 `metadata-refresh`, 60 `watch-current-raw`, 17 `historical-baseline`, and 43 `park-for-later` entries.
+The current generated run scores 246 analyzed projects and splits them into 5 `frontier-code-ready`, 15 `frontier-clone-needed`, 102 `metadata-refresh`, 64 `watch-current-raw`, 17 `historical-baseline`, and 43 `park-for-later` entries. It now joins `analysis/github-star-growth-ranking.json` into each evidence chain: `complete_or_near_complete` rows can add current-momentum evidence, while `not_fetched` and `missing_from_star_history` rows are explicit collection states that drive the next action to fetch/rebuild stargazer history.
 
 ## Immediate Frontier Queue
 

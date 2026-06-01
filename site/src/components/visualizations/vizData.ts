@@ -267,22 +267,29 @@ const themeTests: Record<string, RegExp> = {
   safety: /safety|security|governance|policy|安全|治理/i
 };
 
-export const radarAxes = themeDistribution.slice(0, 10).map((entry) => ({
-  key: entry.key,
-  label: themeLabels[entry.key] || entry.key,
-  rawCount: entry.count
-}));
+export const radarAxes = themeDistribution.slice(0, 10).map((entry) => {
+  const modelCount = projects.filter((project) => (themeTests[entry.key] || new RegExp(entry.key, 'i')).test(projectText(project))).length;
+  return {
+    key: entry.key,
+    label: themeLabels[entry.key] || entry.key,
+    rawCount: entry.count,
+    modelCount
+  };
+});
+
+const shareOf = (count: number, total: number) =>
+  total > 0 ? Math.round((count / total) * 1000) / 10 : 0;
 
 export const radarSeries = [
   {
-    name: 'Raw corpus',
+    name: 'Raw corpus share',
     total: analysis.counts.raw_captures,
-    values: radarAxes.map((axis) => axis.rawCount)
+    values: radarAxes.map((axis) => shareOf(axis.rawCount, analysis.counts.raw_captures))
   },
   {
-    name: 'Model cards',
+    name: 'Model card share',
     total: analysis.counts.analyzed_projects,
-    values: radarAxes.map((axis) => projects.filter((project) => (themeTests[axis.key] || new RegExp(axis.key, 'i')).test(projectText(project))).length)
+    values: radarAxes.map((axis) => shareOf(axis.modelCount, analysis.counts.analyzed_projects))
   }
 ];
 

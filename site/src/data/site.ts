@@ -18,6 +18,8 @@ export const site = {
     'Self-Evolving Agents Resource Library',
     'AI 自进化主题地图',
     'Self-Evolving Agents Topic Map',
+    'Value LSH',
+    'AI Agent Value Classification',
     'Anthropic Claude Code',
     'Claude Code Dynamic Workflows',
     'Agent-Swarm Evolve',

@@ -9,7 +9,7 @@ const seriesPayload = JSON.stringify(radarSeries);
   <div class="viz-sh">
     <div class="eyebrow">Evidence Radar</div>
     <h2>主题证据雷达</h2>
-    <p>用当前 646 条 raw 语料和 239 份分析报告对比主题覆盖。</p>
+    <p>用主题占比对比 raw 语料和 model card，避免 raw 绝对数量把分析报告压成一个点。</p>
   </div>
   <div class="viz-radar-body">
     <svg id="viz-rs" viewBox="0 0 560 520" role="img" aria-label="Self-evolution corpus evidence radar"></svg>
@@ -116,7 +116,7 @@ if (svg && legend && axes.length > 2) {
     swatch.className = 'viz-rd';
     swatch.style.background = color;
     const label = document.createElement('span');
-    label.textContent = `${item.name} (${item.total.toLocaleString()})`;
+    label.textContent = `${item.name} · n=${item.total.toLocaleString()}`;
     row.appendChild(swatch);
     row.appendChild(label);
     legend.appendChild(row);
@@ -127,7 +127,9 @@ if (svg && legend && axes.length > 2) {
   axes.slice(0, 6).forEach(axis => {
     const item = document.createElement('div');
     item.className = 'viz-rmetric';
-    item.innerHTML = `<strong>${axis.rawCount.toLocaleString()}</strong><span>${axis.label}</span>`;
+    const rawShare = series[0]?.values?.[axes.indexOf(axis)] ?? 0;
+    const modelShare = series[1]?.values?.[axes.indexOf(axis)] ?? 0;
+    item.innerHTML = `<strong>${rawShare}% / ${modelShare}%</strong><span>${axis.label} · raw/model</span>`;
     axisList.appendChild(item);
   });
   legend.appendChild(axisList);

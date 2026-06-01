@@ -1,0 +1,336 @@
+{
+  "generated_at": "2026-06-01T16:54:33.809Z",
+  "threshold": 0.52,
+  "total": 3,
+  "clusters": [
+    {
+      "cluster_id": "vlsh-0001",
+      "label": "+local_code_or_artifact / +timestamp_freshness / +current_frontier_signal",
+      "size": 1524,
+      "type_counts": {
+        "github": 647,
+        "paper": 197,
+        "social": 415,
+        "blog": 265
+      },
+      "value_class_counts": {
+        "needs-review": 611,
+        "high-value-candidate": 802,
+        "low-signal-or-risk": 111
+      },
+      "score_avg": 71.52,
+      "confidence_avg": 52.32,
+      "top_tags": [
+        {
+          "id": "local_code_or_artifact",
+          "average": 1,
+          "label": "Local code or artifact"
+        },
+        {
+          "id": "timestamp_freshness",
+          "average": 0.991,
+          "label": "Timestamp freshness"
+        },
+        {
+          "id": "current_frontier_signal",
+          "average": 0.976,
+          "label": "Current frontier signal"
+        },
+        {
+          "id": "mutable_artifact_clear",
+          "average": 0.803,
+          "label": "Mutable artifact clear"
+        },
+        {
+          "id": "community_momentum",
+          "average": 0.742,
+          "label": "Community momentum"
+        },
+        {
+          "id": "product_usability",
+          "average": 0.729,
+          "label": "Product usability"
+        },
+        {
+          "id": "open_source_reuse",
+          "average": 0.728,
+          "label": "Open-source reuse"
+        },
+        {
+          "id": "implementation_runnable",
+          "average": 0.698,
+          "label": "Runnable implementation"
+        }
+      ],
+      "representatives": [
+        {
+          "id": "github:modelscope/agentevolver",
+          "type": "github",
+          "title": "AgentEvolver",
+          "url": "https://github.com/modelscope/AgentEvolver",
+          "value_score": 88.54,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-github/modelscope_agentevolver.md"
+        },
+        {
+          "id": "github:cuga-project/cuga-agent",
+          "type": "github",
+          "title": "CUGA Agent",
+          "url": "https://github.com/cuga-project/cuga-agent",
+          "value_score": 87.58,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-github/cuga-project_cuga-agent.md"
+        },
+        {
+          "id": "github:yunjuetech/yunjue-agent",
+          "type": "github",
+          "title": "Yunjue Agent",
+          "url": "https://github.com/YunjueTech/Yunjue-Agent",
+          "value_score": 87.26,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-github/yunjuetech_yunjue-agent.md"
+        },
+        {
+          "id": "social:0166-cloud-tencent-com-AI-100",
+          "type": "social",
+          "title": "0166 cloud tencent com AI 100",
+          "url": null,
+          "value_score": 87.26,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-social/0166-cloud-tencent-com-AI-100.md"
+        },
+        {
+          "id": "social:0171-36kr-com-7-GPU-36",
+          "type": "social",
+          "title": "0171 36kr com 7 GPU 36",
+          "url": null,
+          "value_score": 87.26,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-social/0171-36kr-com-7-GPU-36.md"
+        },
+        {
+          "id": "github:evoagentx/evoagentx",
+          "type": "github",
+          "title": "EvoAgentX",
+          "url": "https://github.com/EvoAgentX/EvoAgentX",
+          "value_score": 86.94,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-github/evoagentx_evoagentx.md"
+        },
+        {
+          "id": "github:xai-liacs/llamea",
+          "type": "github",
+          "title": "LLaMEA",
+          "url": "https://github.com/XAI-liacs/LLaMEA",
+          "value_score": 86.94,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-github/xai-liacs_llamea.md"
+        },
+        {
+          "id": "github:freedomintelligence/tiermem",
+          "type": "github",
+          "title": "Tiermem",
+          "url": "https://github.com/FreedomIntelligence/Tiermem",
+          "value_score": 86.31,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-github/freedomintelligence_tiermem.md"
+        },
+        {
+          "id": "github:murataslan1/ai-agent-benchmark",
+          "type": "github",
+          "title": "AI Agent Benchmark",
+          "url": "https://github.com/murataslan1/ai-agent-benchmark",
+          "value_score": 86.31,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-github/murataslan1_ai-agent-benchmark.md"
+        },
+        {
+          "id": "paper:2303-11366",
+          "type": "paper",
+          "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+          "url": null,
+          "value_score": 86.31,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-papers/2303-11366.md"
+        },
+        {
+          "id": "social:0176-36kr-com-Anthropic-Meta-36",
+          "type": "social",
+          "title": "0176 36kr com Anthropic Meta 36",
+          "url": null,
+          "value_score": 86.31,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-social/0176-36kr-com-Anthropic-Meta-36.md"
+        },
+        {
+          "id": "social:0178-36kr-com-Skills-Skill-Agent-36",
+          "type": "social",
+          "title": "0178 36kr com Skills Skill Agent 36",
+          "url": null,
+          "value_score": 86.31,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-social/0178-36kr-com-Skills-Skill-Agent-36.md"
+        }
+      ]
+    },
+    {
+      "cluster_id": "vlsh-0002",
+      "label": "+current_frontier_signal / +implementation_runnable / +local_code_or_artifact",
+      "size": 3,
+      "type_counts": {
+        "social": 3
+      },
+      "value_class_counts": {
+        "needs-review": 3
+      },
+      "score_avg": 63.27,
+      "confidence_avg": 44.87,
+      "top_tags": [
+        {
+          "id": "current_frontier_signal",
+          "average": 1,
+          "label": "Current frontier signal"
+        },
+        {
+          "id": "implementation_runnable",
+          "average": 1,
+          "label": "Runnable implementation"
+        },
+        {
+          "id": "local_code_or_artifact",
+          "average": 1,
+          "label": "Local code or artifact"
+        },
+        {
+          "id": "product_usability",
+          "average": 1,
+          "label": "Product usability"
+        },
+        {
+          "id": "evidence_chain_complete",
+          "average": -1,
+          "label": "Evidence chain complete"
+        },
+        {
+          "id": "timestamp_freshness",
+          "average": 1,
+          "label": "Timestamp freshness"
+        },
+        {
+          "id": "open_source_reuse",
+          "average": 1,
+          "label": "Open-source reuse"
+        },
+        {
+          "id": "hype_without_evidence",
+          "average": 1,
+          "label": "Hype without evidence"
+        }
+      ],
+      "representatives": [
+        {
+          "id": "social:0194-Linux-do-agent-LINUX-DO",
+          "type": "social",
+          "title": "0194 Linux do agent LINUX DO",
+          "url": null,
+          "value_score": 63.69,
+          "value_class": "needs-review",
+          "source_path": "raw-social/0194-Linux-do-agent-LINUX-DO.md"
+        },
+        {
+          "id": "social:0251-Hacker-News-DeepSeek-and-Tsinghua-Developing-Self-Improving-AI-Models",
+          "type": "social",
+          "title": "0251 Hacker News DeepSeek and Tsinghua Developing Self Improving AI Models",
+          "url": null,
+          "value_score": 63.06,
+          "value_class": "needs-review",
+          "source_path": "raw-social/0251-Hacker-News-DeepSeek-and-Tsinghua-Developing-Self-Improving-AI-Models.md"
+        },
+        {
+          "id": "social:0334-Hacker-News-Crewai-Raises-18M-But-Are-AI-Agents-Ready-for-Prime-Time",
+          "type": "social",
+          "title": "0334 Hacker News Crewai Raises 18M But Are AI Agents Ready for Prime Time",
+          "url": null,
+          "value_score": 63.06,
+          "value_class": "needs-review",
+          "source_path": "raw-social/0334-Hacker-News-Crewai-Raises-18M-But-Are-AI-Agents-Ready-for-Prime-Time.md"
+        }
+      ]
+    },
+    {
+      "cluster_id": "vlsh-0003",
+      "label": "+current_frontier_signal / +self_evolution_loop_fit / +implementation_runnable",
+      "size": 2,
+      "type_counts": {
+        "blog": 2
+      },
+      "value_class_counts": {
+        "needs-review": 2
+      },
+      "score_avg": 64.33,
+      "confidence_avg": 34.62,
+      "top_tags": [
+        {
+          "id": "current_frontier_signal",
+          "average": 1,
+          "label": "Current frontier signal"
+        },
+        {
+          "id": "self_evolution_loop_fit",
+          "average": 1,
+          "label": "Self-evolution loop fit"
+        },
+        {
+          "id": "implementation_runnable",
+          "average": 1,
+          "label": "Runnable implementation"
+        },
+        {
+          "id": "local_code_or_artifact",
+          "average": 1,
+          "label": "Local code or artifact"
+        },
+        {
+          "id": "product_usability",
+          "average": 1,
+          "label": "Product usability"
+        },
+        {
+          "id": "evidence_chain_complete",
+          "average": -1,
+          "label": "Evidence chain complete"
+        },
+        {
+          "id": "timestamp_freshness",
+          "average": 1,
+          "label": "Timestamp freshness"
+        },
+        {
+          "id": "community_momentum",
+          "average": 1,
+          "label": "Community momentum"
+        }
+      ],
+      "representatives": [
+        {
+          "id": "blog:0190-36Kr-7-GPU-36",
+          "type": "blog",
+          "title": "0190 36Kr 7 GPU 36",
+          "url": null,
+          "value_score": 64.33,
+          "value_class": "needs-review",
+          "source_path": "raw-blogs/0190-36Kr-7-GPU-36.md"
+        },
+        {
+          "id": "blog:0425-Tencent-Cloud-Dev",
+          "type": "blog",
+          "title": "0425 Tencent Cloud Dev",
+          "url": null,
+          "value_score": 64.33,
+          "value_class": "needs-review",
+          "source_path": "raw-blogs/0425-Tencent-Cloud-Dev.md"
+        }
+      ]
+    }
+  ]
+}
