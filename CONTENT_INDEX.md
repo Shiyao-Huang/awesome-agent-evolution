@@ -31,6 +31,7 @@
 | Survey/SEO 主题地图 | [analysis/survey-seo-topic-map.md](analysis/survey-seo-topic-map.md) | processed synthesis：把资料库资产反推出定义、五类回路、代码自改进、Agent-Swarm、评估治理等 SEO/Survey 主题簇 |
 | 价值筛选双链知识库 | [analysis/value-screening-dual-chain-knowledge-base.md](analysis/value-screening-dual-chain-knowledge-base.md) | processed protocol：用 Self Mirror 风格把 evidence chain 与 mirror chain 分开，按时间、延续性、实现证据、issue/resource 信号筛选下一批 GitHub 深挖对象 |
 | Frontier value queue | [analysis/frontier-value-queue.md](analysis/frontier-value-queue.md) | processed queue：把 239 个 analyzed projects 分到 code-ready、clone-needed、metadata-refresh、baseline、parked 等深挖 lane |
+| AgentEvolver 双链深读 | [analysis/frontier-projects/modelscope-agentevolver-dual-chain.md](analysis/frontier-projects/modelscope-agentevolver-dual-chain.md) | processed project packet：第一个项目级双链样本，连接 raw/meta/本地代码/GitHub issue-resource 信号并判定其 frontier archetype 价值 |
 | Frontier queue generator | [scripts/generate_frontier_value_queue.mjs](scripts/generate_frontier_value_queue.mjs) | work script：从 GitHub analysis、timestamp index 和本地 clone evidence 生成下一批项目深挖队列 |
 | 自进化定义判据 | [analysis/self-evolution-definition-criteria.md](analysis/self-evolution-definition-criteria.md) | processed synthesis：用可变对象、反馈、候选生成、验证、保留和回滚六个 gate 定义什么才算 self-evolving agent |
 | 五类进化回路主题分析 | [analysis/five-evolution-loops-topic.md](analysis/five-evolution-loops-topic.md) | processed synthesis：把五类回路整理成可读的机制地图，说明可变对象、反馈、验证器、保留和失败模式 |

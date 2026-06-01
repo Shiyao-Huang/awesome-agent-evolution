@@ -85,6 +85,7 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [Code Evolution Benchmark Matrix](synthesis/code-evolution-benchmark-matrix.md) — Rank 3 SEO/Survey benchmark 页：区分自修改 coding agent、算法发现、架构搜索、prompt/program 优化和反思修复回路 | Rank: A | 2026-06-01
 - [Value Screening and Dual-Chain Knowledge Base](synthesis/value-screening-dual-chain-knowledge-base.md) — 时间/延续性优先的 GitHub 深挖协议：evidence chain + mirror chain + frontier queue | Rank: A | 2026-06-01
 - [Frontier Value Queue](synthesis/frontier-value-queue.md) — 双链协议的可复跑队列：239 个 analyzed projects 分入 code-ready、clone-needed、metadata-refresh、baseline 等 lane | Rank: A | 2026-06-01
+- [modelscope AgentEvolver Frontier Deep Dive](synthesis/modelscope-agentevolver-frontier-deep-dive.md) — 第一个项目级双链深读样本：AgentEvolver 的环境到策略自进化闭环、代码证据、issue/resource 信号和复用风险 | Rank: A | 2026-06-01
 
 ---
 
@@ -95,5 +96,5 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Entities | 8 |
 | Concepts | 10 |
 | Sources | 30 |
-| Synthesis pages | 11 |
+| Synthesis pages | 12 |
 | Last updated | 2026-06-01 |

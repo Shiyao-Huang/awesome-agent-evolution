@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-01T08:27:00.956Z",
+  "generated": "2026-06-01T08:52:35.760Z",
   "stats": {
-    "pages": 60,
-    "keywords": 829
+    "pages": 61,
+    "keywords": 834
   },
   "catalog": [
     {
@@ -609,6 +609,20 @@
       ]
     },
     {
+      "path": "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
+      "title": "modelscope AgentEvolver Frontier Deep Dive",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "agentevolver",
+        "frontier-project",
+        "dual-chain",
+        "self-evolution",
+        "code-scan",
+        "github-issues"
+      ]
+    },
+    {
       "path": "synthesis/resource-library-coverage-audit.md",
       "title": "Resource Library Coverage Audit",
       "rank": "A",
@@ -727,6 +741,7 @@
       "sources/github-digest.md",
       "sources/raw-github-mechanism-analysis.md",
       "sources/review-mechanism-insights-enhanced.md",
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/self-evolution-definition-criteria.md"
     ],
     "agent-swarm evolve part": [
@@ -776,6 +791,7 @@
       "sources/talent-flow-analysis.md",
       "synthesis/frontier-value-queue.md",
       "synthesis/mechanism-framework.md",
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/survey-spark-evolve-agi-core.md",
       "synthesis/talent-landscape.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
@@ -2487,6 +2503,7 @@
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/five-evolution-loops-topic.md",
       "synthesis/frontier-value-queue.md",
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/self-evolution-definition-criteria.md",
       "synthesis/survey-seo-topic-map.md",
@@ -3255,6 +3272,7 @@
       "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/frontier-value-queue.md",
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/survey-spark-evolve-agi-core.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
@@ -3332,10 +3350,12 @@
     ],
     "dual-chain": [
       "synthesis/frontier-value-queue.md",
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "code-scan": [
-      "synthesis/frontier-value-queue.md"
+      "synthesis/frontier-value-queue.md",
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
     ],
     "lane counts": [
       "synthesis/frontier-value-queue.md"
@@ -3344,7 +3364,8 @@
       "synthesis/frontier-value-queue.md"
     ],
     "value-screening-dual-chain-knowledge-base": [
-      "synthesis/frontier-value-queue.md"
+      "synthesis/frontier-value-queue.md",
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
     ],
     "current-value-ranking-reanalysis": [
       "synthesis/frontier-value-queue.md",
@@ -3352,10 +3373,12 @@
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "code-evolution-benchmark-matrix": [
-      "synthesis/frontier-value-queue.md"
+      "synthesis/frontier-value-queue.md",
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
     ],
     "self-evolution-definition-criteria": [
       "synthesis/frontier-value-queue.md",
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "m1-m5": [
@@ -3375,6 +3398,25 @@
     ],
     "97痛点映射": [
       "synthesis/mechanism-framework.md"
+    ],
+    "modelscope agentevolver frontier deep dive": [
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
+    ],
+    "agentevolver": [
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
+    ],
+    "frontier-project": [
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
+    ],
+    "github-issues": [
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
+    ],
+    "gate summary": [
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
+    ],
+    "frontier-value-queue": [
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "resource library coverage audit": [
       "synthesis/resource-library-coverage-audit.md"
@@ -3497,9 +3539,6 @@
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "operating rule": [
-      "synthesis/value-screening-dual-chain-knowledge-base.md"
-    ],
-    "frontier-value-queue": [
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "survey-seo-topic-map": [
