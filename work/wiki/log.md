@@ -291,3 +291,21 @@
 - Added `/topics/self-evolving-ai-agents/` with six definition gates: mutable object, feedback, candidate generation, verification, retention, audit/rollback.
 - Linked the page from topic map data, README i18n, search, and `CONTENT_INDEX.md`.
 **产出:** `site/src/pages/topics/self-evolving-ai-agents/index.astro`
+
+## [2026-06-01 02:05] site+seo | Five Evolution Loops Topic Page
+
+**操作:** Published the Rank 2 topic cluster as an evergreen mechanism page.
+**详情:**
+- Added `analysis/five-evolution-loops-topic.md` and `work/wiki/synthesis/five-evolution-loops-topic.md`.
+- Added `/topics/five-evolution-loops/` with a loop matrix covering mutable object, feedback signal, verifier, retention, and failure mode.
+- Linked the page from topic map data, README i18n, search, coverage audit, and `CONTENT_INDEX.md`.
+**产出:** `site/src/pages/topics/five-evolution-loops/index.astro`
+
+## [2026-06-01 02:32] ops+site | Audience Boundary Workflow Split
+
+**操作:** Separated reader-facing surfaces from internal agent workflow after direct user instruction.
+**详情:**
+- Added `docs/ops/audience-boundary-workflow.md` as the internal rule for public copy, evidence surfaces, and agent workflow surfaces.
+- Rewrote public site copy that exposed internal labels such as `Workflow A/B` and `CLAUDE.md Iron Rules`.
+- Updated topic map counts to the current master-index/GitHub analysis boundary: 639 raw captures, 92 strict repos, 199 broad repos, 232 analyzed/site records, and 434 public reports.
+**产出:** `docs/ops/audience-boundary-workflow.md`

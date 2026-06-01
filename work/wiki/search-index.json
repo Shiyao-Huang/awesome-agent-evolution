@@ -1,8 +1,8 @@
 {
-  "generated": "2026-05-31T17:37:02.618Z",
+  "generated": "2026-06-01T03:03:40.124Z",
   "stats": {
-    "pages": 56,
-    "keywords": 803
+    "pages": 57,
+    "keywords": 807
   },
   "catalog": [
     {
@@ -553,6 +553,18 @@
         "recency",
         "current-value",
         "release-attention"
+      ]
+    },
+    {
+      "path": "synthesis/five-evolution-loops-topic.md",
+      "title": "Five Evolution Loops Topic",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "survey",
+        "seo",
+        "taxonomy",
+        "evolution-loops"
       ]
     },
     {
@@ -2122,6 +2134,7 @@
       "sources/raw-github-mechanism-analysis.md",
       "sources/raw-papers-mechanism-analysis.md",
       "sources/review-mechanism-insights-enhanced.md",
+      "synthesis/five-evolution-loops-topic.md",
       "synthesis/mechanism-framework.md"
     ],
     "classification": [
@@ -2425,6 +2438,7 @@
       "sources/raw-papers-mechanism-analysis.md",
       "sources/raw-social-blogs-mechanism-analysis.md",
       "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/five-evolution-loops-topic.md",
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/self-evolution-definition-criteria.md",
       "synthesis/survey-seo-topic-map.md",
@@ -3198,6 +3212,39 @@
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/survey-spark-evolve-agi-core.md"
     ],
+    "five evolution loops topic": [
+      "synthesis/five-evolution-loops-topic.md"
+    ],
+    "survey": [
+      "synthesis/five-evolution-loops-topic.md",
+      "synthesis/resource-library-coverage-audit.md",
+      "synthesis/self-evolution-definition-criteria.md",
+      "synthesis/survey-seo-topic-map.md",
+      "synthesis/survey-spark-evolve-agi-core.md"
+    ],
+    "seo": [
+      "synthesis/five-evolution-loops-topic.md",
+      "synthesis/survey-seo-topic-map.md"
+    ],
+    "evolution-loops": [
+      "synthesis/five-evolution-loops-topic.md"
+    ],
+    "key claim": [
+      "synthesis/five-evolution-loops-topic.md"
+    ],
+    "loop memory": [
+      "synthesis/five-evolution-loops-topic.md"
+    ],
+    "public surface": [
+      "synthesis/five-evolution-loops-topic.md",
+      "synthesis/self-evolution-definition-criteria.md"
+    ],
+    "use in future work": [
+      "synthesis/five-evolution-loops-topic.md",
+      "synthesis/resource-library-coverage-audit.md",
+      "synthesis/self-evolution-definition-criteria.md",
+      "synthesis/survey-seo-topic-map.md"
+    ],
     "m1-m5": [
       "synthesis/mechanism-framework.md"
     ],
@@ -3219,12 +3266,6 @@
     "resource library coverage audit": [
       "synthesis/resource-library-coverage-audit.md"
     ],
-    "survey": [
-      "synthesis/resource-library-coverage-audit.md",
-      "synthesis/self-evolution-definition-criteria.md",
-      "synthesis/survey-seo-topic-map.md",
-      "synthesis/survey-spark-evolve-agi-core.md"
-    ],
     "evidence-chain": [
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/self-evolution-definition-criteria.md",
@@ -3239,24 +3280,13 @@
     "count boundary": [
       "synthesis/resource-library-coverage-audit.md"
     ],
-    "use in future work": [
-      "synthesis/resource-library-coverage-audit.md",
-      "synthesis/self-evolution-definition-criteria.md",
-      "synthesis/survey-seo-topic-map.md"
-    ],
     "self-evolution definition criteria": [
       "synthesis/self-evolution-definition-criteria.md"
     ],
     "six gates": [
       "synthesis/self-evolution-definition-criteria.md"
     ],
-    "public surface": [
-      "synthesis/self-evolution-definition-criteria.md"
-    ],
     "survey seo topic map": [
-      "synthesis/survey-seo-topic-map.md"
-    ],
-    "seo": [
       "synthesis/survey-seo-topic-map.md"
     ],
     "topic-map": [

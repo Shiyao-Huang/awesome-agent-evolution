@@ -22,9 +22,9 @@ export interface TopicCluster {
 
 export const topicMapStats = {
   clusters: 8,
-  rawGithubCaptures: 631,
-  strictEvolutionRepos: 91,
-  broadEvolutionRepos: 198,
+  rawGithubCaptures: 639,
+  strictEvolutionRepos: 92,
+  broadEvolutionRepos: 199,
   publicReports: projectReports.length,
   surveyPapers: surveyStats.papers,
   painPoints: surveyStats.painPoints,
@@ -60,11 +60,11 @@ export const topicClusters: TopicCluster[] = [
     evidence: 'Survey data 层有 5 loops、7 method families、6 case studies；mechanisms 页面已经可公开阅读。',
     seedQueries: ['AI self evolution loops', 'agent reflection loop', 'LLM code self modification'],
     evidenceLinks: [
+      { label: 'Five-loop guide', href: '/topics/five-evolution-loops/' },
       { label: 'Mechanisms', href: '/survey/mechanisms/' },
       { label: 'Case studies', href: '/survey/case-studies/' },
-      { label: 'Graph', href: '/graph/' },
     ],
-    nextAsset: '把每个 loop 拆成单独长尾页，并在每页给出代表论文、项目、benchmark 和失败模式。',
+    nextAsset: '五类回路主题页已上线；下一步把每个 loop 拆成长尾页，并补代表论文、项目、benchmark 和失败模式。',
   },
   {
     id: 'code-algorithm-discovery',
@@ -159,7 +159,7 @@ export const topicClusters: TopicCluster[] = [
     readerQuestion: '这个资料库到底收了什么、分析了什么、哪些能公开阅读?',
     surveyRole: '把 raw、processed、work、results 的口径分开，防止 survey 和 SEO 夸大覆盖。',
     seoIntent: 'resource library / trust page',
-    evidence: 'Coverage audit 和 public resource library page 已解释 631、224、426、119、196 等计数边界。',
+    evidence: 'Coverage audit 和 public resource library page 已解释 639 raw captures、232 analyzed records、434 public reports、232 site records、196 survey papers 等计数边界。',
     seedQueries: ['self-evolving AI agents resource library', 'AI self evolution GitHub projects', 'AI agent survey project reports'],
     evidenceLinks: [
       { label: 'Resource library', href: '/resource-library/' },

@@ -379,6 +379,15 @@
 | OpenClaw Codex App Server | [pwrdrvr/openclaw-codex-app-server](https://github.com/pwrdrvr/openclaw-codex-app-server) | Harness-Oriented App Server for OpenClaw and Codex Workflows | [projects/353-openclaw-codex-app-server.md](353-openclaw-codex-app-server.md) |
 | OpenClaw Observability Plugin | [henrikrexed/openclaw-observability-plugin](https://github.com/henrikrexed/openclaw-observability-plugin) | Agent Runtime Observability and Trace Monitoring Plugin | [projects/354-openclaw-observability-plugin.md](354-openclaw-observability-plugin.md) |
 
+| Self Evolve OpenClaw Playground | [longmans/self-evolve](https://github.com/longmans/self-evolve) | Self-Evolving OpenClaw Workflow Playground and Benchmark Harness | [projects/355-self-evolve-openclaw-playground.md](355-self-evolve-openclaw-playground.md) |
+| OpenClaw Langfuse Observability Plugin | [MCKRUZ/openclaw-langfuse](https://github.com/MCKRUZ/openclaw-langfuse) | OpenClaw Tracing Plugin for Langfuse Observability | [projects/356-openclaw-langfuse-observability-plugin.md](356-openclaw-langfuse-observability-plugin.md) |
+| HyperSpell OpenClaw Memory Engine | [hyperspell/hyperspell-openclaw](https://github.com/hyperspell/hyperspell-openclaw) | OpenClaw Memory and Context Enhancement Runtime | [projects/357-hyperspell-openclaw-memory-engine.md](357-hyperspell-openclaw-memory-engine.md) |
+| Awesome OpenClaw Plugins (Composio Community) | [composio-community/awesome-openclaw-plugins](https://github.com/composio-community/awesome-openclaw-plugins) | OpenClaw Plugin Ecosystem Index and Skill Resource Map | [projects/358-awesome-openclaw-plugins-composio-community.md](358-awesome-openclaw-plugins-composio-community.md) |
+| Last30Days Skill Benchmark Harness | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | Reproducible Agent Skill Benchmark and Evaluation Harness | [projects/359-last30days-skill-benchmark-harness.md](359-last30days-skill-benchmark-harness.md) |
+| ClawDreamer Automation Plugin | [EESIZ/clawdreamer](https://github.com/EESIZ/clawdreamer) | OpenClaw Automation App and Productivity Workflow Plugin | [projects/360-clawdreamer-automation-plugin.md](360-clawdreamer-automation-plugin.md) |
+| Awesome OpenClaw Plugins (ThisIsJeron) | [ThisIsJeron/awesome-openclaw-plugins](https://github.com/ThisIsJeron/awesome-openclaw-plugins) | OpenClaw Plugin Catalog and Community Knowledge Index | [projects/361-awesome-openclaw-plugins-thisisjeron.md](361-awesome-openclaw-plugins-thisisjeron.md) |
+| Awesome OpenClaw Money Maker Index | [BlockRunAI/awesome-OpenClaw-Money-Maker](https://github.com/BlockRunAI/awesome-OpenClaw-Money-Maker) | Agent Monetization Workflow and OpenClaw Use-Case Index | [projects/362-awesome-openclaw-money-maker-index.md](362-awesome-openclaw-money-maker-index.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

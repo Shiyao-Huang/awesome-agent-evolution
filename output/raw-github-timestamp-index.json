@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-01T00:00:00+08:00",
-  "total": 631,
-  "updated_files": 631,
+  "total": 639,
+  "updated_files": 639,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -680,6 +680,15 @@
       "timestamp_source": "web_observed_public_github_page_2026_05_30"
     },
     {
+      "repo": "BlockRunAI/awesome-OpenClaw-Money-Maker",
+      "url": "https://github.com/BlockRunAI/awesome-OpenClaw-Money-Maker",
+      "file": "raw-github/blockrunai_awesome-openclaw-money-maker.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T01:50:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
+    },
+    {
       "repo": "bobxwu/learning-from-rewards-llm-papers",
       "url": "https://github.com/bobxwu/learning-from-rewards-llm-papers",
       "file": "raw-github/bobxwu_learning-from-rewards-llm-papers.md",
@@ -977,6 +986,15 @@
       "timestamp_source": "web_observed_public_github_page_2026_05_28"
     },
     {
+      "repo": "composio-community/awesome-openclaw-plugins",
+      "url": "https://github.com/composio-community/awesome-openclaw-plugins",
+      "file": "raw-github/composio-community_awesome-openclaw-plugins.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T01:50:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
+    },
+    {
       "repo": "ComposioHQ/awesome-agent-clis",
       "url": "https://github.com/ComposioHQ/awesome-agent-clis",
       "file": "raw-github/composiohq_awesome-agent-clis.md",
@@ -1227,6 +1245,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "EESIZ/clawdreamer",
+      "url": "https://github.com/EESIZ/clawdreamer",
+      "file": "raw-github/eesiz_clawdreamer.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T01:50:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
     },
     {
       "repo": "egmaminta/gepa-lite",
@@ -1940,6 +1967,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "hyperspell/hyperspell-openclaw",
+      "url": "https://github.com/hyperspell/hyperspell-openclaw",
+      "file": "raw-github/hyperspell_hyperspell-openclaw.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T01:50:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
+    },
+    {
       "repo": "ibm/awesome-agentic-workflow-optimization",
       "url": "https://github.com/ibm/awesome-agentic-workflow-optimization",
       "file": "raw-github/ibm_awesome-agentic-workflow-optimization.md",
@@ -2606,6 +2642,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "longmans/self-evolve",
+      "url": "https://github.com/longmans/self-evolve",
+      "file": "raw-github/longmans_self-evolve.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T01:50:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
+    },
+    {
       "repo": "longyunfeigu/learn-hermes-agent",
       "url": "https://github.com/longyunfeigu/learn-hermes-agent",
       "file": "raw-github/longyunfeigu_learn-hermes-agent.md",
@@ -2766,6 +2811,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "MCKRUZ/openclaw-langfuse",
+      "url": "https://github.com/MCKRUZ/openclaw-langfuse",
+      "file": "raw-github/mckruz_openclaw-langfuse.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T01:50:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
     },
     {
       "repo": "mdalamin5/end-to-end-agentic-ai-automation-lab",
@@ -3126,6 +3180,15 @@
       "collected_at": "2026-05-27T22:00:12+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_05_27"
+    },
+    {
+      "repo": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "file": "raw-github/mvanhorn_last30days-skill.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T01:50:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
     },
     {
       "repo": "mwasifanwar/meta-cognitive-learning-system",
@@ -4836,6 +4899,15 @@
       "collected_at": "2026-05-31T07:20:36+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_05_31"
+    },
+    {
+      "repo": "ThisIsJeron/awesome-openclaw-plugins",
+      "url": "https://github.com/ThisIsJeron/awesome-openclaw-plugins",
+      "file": "raw-github/thisisjeron_awesome-openclaw-plugins.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T01:50:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
     },
     {
       "repo": "thu-nics/mars",

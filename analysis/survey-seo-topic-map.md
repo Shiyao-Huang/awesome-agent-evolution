@@ -6,6 +6,7 @@ sources:
   - docs/indexes/master-index.md
   - README.md
   - analysis/self-evolution-definition-criteria.md
+  - analysis/five-evolution-loops-topic.md
   - analysis/resource-library-coverage-audit.md
   - analysis/survey-resource-spark.md
   - analysis/github-project-data-analysis.md
@@ -13,6 +14,7 @@ sources:
   - site/src/data/survey.ts
   - site/src/data/topicMap.ts
   - site/src/pages/topics/index.astro
+  - site/src/pages/topics/five-evolution-loops/index.astro
 ---
 
 # Survey SEO Topic Map / Survey 与 SEO 主题地图
@@ -23,13 +25,13 @@ sources:
 
 ## 三句话
 
-1. [KNOWN] 仓库已有 631 个 raw GitHub captures、91 个 strict evolution repositories、198 个 broad evolution repositories、201 个 raw paper files 和 426 个 public project reports。 — Source: `docs/indexes/master-index.md`
+1. [KNOWN] 仓库已有 639 个 raw GitHub captures、92 个 strict evolution repositories、199 个 broad evolution repositories、201 个 raw paper files 和 434 个 public project reports。 — Source: `docs/indexes/master-index.md`
 2. [KNOWN] Survey 展示层已有 196 papers、348 repos、97 pain points、5 evolution loops、7 method families 和 6 case studies。 — Source: `site/src/data/survey.ts`
 3. [INFERRED] 因此下一批公开内容应按“读者问题 -> survey 章节 -> 证据入口 -> 下一步页面”组织，而不是把博客写成互相孤立的长尾词页面。
 
 ## 五句话
 
-1. [KNOWN] Coverage audit 已经解释 raw、processed、work、results 的计数口径，避免读者把 631、224、426、119、196 混成一个数字。 — Source: `analysis/resource-library-coverage-audit.md`
+1. [KNOWN] Coverage audit 已经解释 raw、processed、work、results 的计数口径，避免读者把 639 raw captures、232 analyzed reports、434 public reports、232 site records、196 survey-display papers 混成一个数字。 — Source: `analysis/resource-library-coverage-audit.md`
 2. [KNOWN] Survey resource spark 已经把核心判断压成 controlled improvement system：改什么、用什么反馈、谁验证、如何保留、能否回滚。 — Source: `analysis/survey-resource-spark.md`
 3. [KNOWN] Agent-Swarm Evolve 是用户明确要求新增的内容部分，应当进入 topic map，而不是只留在内部分析页。 — Source: `analysis/agent-swarm-evolve.md`
 4. [INFERRED] SEO 主题簇的 rank 应由 survey 贡献、证据强度、读者需求、可发布资产和与 Evolve-AGI Index 的关系共同决定。
@@ -40,7 +42,7 @@ sources:
 | Rank | Topic | Reader Question | Survey Role | Next Public Asset |
 |---:|---|---|---|---|
 | 1 | 什么才算真正的自进化智能体 | 这个系统真的在改进自己，还是只是固定 workflow? | Survey 定义入口。 | Definition page live at `/topics/self-evolving-ai-agents/`; next compare with AutoML/online learning/static workflow |
-| 2 | 五类进化回路 | 不同项目到底在用哪一种反馈闭环? | 机制分类和方法族入口。 | One page per loop |
+| 2 | 五类进化回路 | 不同项目到底在用哪一种反馈闭环? | 机制分类和方法族入口。 | Five-loop guide live at `/topics/five-evolution-loops/`; next one page per loop |
 | 3 | 代码自我改进与算法发现 | 哪些系统真的会改代码、发现算法，并留下 benchmark 证据? | DGM/ADAS/AlphaEvolve/OpenEvolve/FunSearch 证据簇。 | Code-evolution benchmark matrix |
 | 4 | 记忆、技能与知识进化 | agent 怎样把一次失败变成未来可复用经验? | memory/skill/tool policy substrate。 | Memory and skill substrate guide |
 | 5 | Agent-Swarm Evolve 与 harness 进化 | 多智能体组织结构能不能一起进化? | 用户指定新增方向；连接 multi-agent、harness、runtime。 | Swarm topology matrix |
@@ -50,7 +52,7 @@ sources:
 
 ## Publication Rules
 
-- [KNOWN] 每个主题必须能链接至少一个公开站点入口和一个仓库证据入口；Rank 1 定义主题已经有公开 evergreen 页面。Source: `site/src/pages/topics/index.astro`, `site/src/pages/topics/self-evolving-ai-agents/index.astro`, `CONTENT_INDEX.md`
+- [KNOWN] 每个主题必须能链接至少一个公开站点入口和一个仓库证据入口；Rank 1 定义主题和 Rank 2 五类回路主题已经有公开 evergreen 页面。Source: `site/src/pages/topics/index.astro`, `site/src/pages/topics/self-evolving-ai-agents/index.astro`, `site/src/pages/topics/five-evolution-loops/index.astro`, `CONTENT_INDEX.md`
 - [INFERRED] 每个主题最好同时服务三类读者：研究者查 survey、工程师查项目/benchmark、普通读者查定义/风险/价值。
 - [INFERRED] 如果一个 SEO 页面无法写出 evidence links、seed queries、survey role 和 next asset，就先不要发布成核心主题。
 

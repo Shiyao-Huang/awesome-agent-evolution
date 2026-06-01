@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-05-31T19:50:00+08:00
+Generated: 2026-06-01T01:50:26+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-05-31T19:50:00+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: NVIDIA/skills, supabase/agent-skills, MemTensor/skills-vote, aayoawoyemi/ori-mnemos, soimy/openclaw-channel-dingtalk, pwrdrvr/openclaw-codex-app-server, henrikrexed/openclaw-observability-plugin.
-- New raw files: raw-github/nvidia_skills.md, raw-github/supabase_agent-skills.md, raw-github/memtensor_skills-vote.md, raw-github/aayoawoyemi_ori-mnemos.md, raw-github/soimy_openclaw-channel-dingtalk.md, raw-github/pwrdrvr_openclaw-codex-app-server.md, raw-github/henrikrexed_openclaw-observability-plugin.md.
-- New public model cards and site reports: project/report ids 348, 349, 350, 351, 352, 353, 354.
+- Web-observed repos: longmans/self-evolve, MCKRUZ/openclaw-langfuse, hyperspell/hyperspell-openclaw, composio-community/awesome-openclaw-plugins, mvanhorn/last30days-skill, EESIZ/clawdreamer, ThisIsJeron/awesome-openclaw-plugins, BlockRunAI/awesome-OpenClaw-Money-Maker.
+- New raw files: raw-github/longmans_self-evolve.md, raw-github/mckruz_openclaw-langfuse.md, raw-github/hyperspell_hyperspell-openclaw.md, raw-github/composio-community_awesome-openclaw-plugins.md, raw-github/mvanhorn_last30days-skill.md, raw-github/eesiz_clawdreamer.md, raw-github/thisisjeron_awesome-openclaw-plugins.md, raw-github/blockrunai_awesome-openclaw-money-maker.md.
+- New public model cards and site reports: project/report ids 355, 356, 357, 358, 359, 360, 361, 362.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
-- GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
+- GitNexus status/list worked but analyze failed due LadybugDB lock (`.gitnexus/lbug`) and blocked FTS extension download in fallback HOME mode.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

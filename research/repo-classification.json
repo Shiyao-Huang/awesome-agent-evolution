@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T19:50:00+08:00",
+  "generated_at": "2026-06-01T01:50:26+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -1127,6 +1127,21 @@
       "description": "block/agent-skills is a public enterprise-oriented skill library that packages repeatable coding-agent playbooks for safer and faster software delivery."
     },
     {
+      "repo": "BlockRunAI/awesome-OpenClaw-Money-Maker",
+      "url": "https://github.com/BlockRunAI/awesome-OpenClaw-Money-Maker",
+      "stars": "261",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/OpenClaw Use-Case Index/Monetization Workflow Guide",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 261 stars, 45 forks, 25 commits, CC0 licensing signal, and a curated OpenClaw workflow index.",
+      "description": "BlockRunAI/awesome-OpenClaw-Money-Maker curates OpenClaw-centric automation and skill pathways oriented toward real-world monetization scenarios."
+    },
+    {
       "repo": "bobxwu/learning-from-rewards-llm-papers",
       "url": "https://github.com/bobxwu/learning-from-rewards-llm-papers",
       "stars": "71",
@@ -1622,6 +1637,21 @@
       "description": "Archon is an open-source harness builder for AI coding that turns development processes into deterministic, reusable workflows."
     },
     {
+      "repo": "composio-community/awesome-openclaw-plugins",
+      "url": "https://github.com/composio-community/awesome-openclaw-plugins",
+      "stars": "43",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "TypeScript/OpenClaw Plugin Registry/Resource Index",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 43 stars, 10 forks, 6 commits, CC0-1.0 license, and TypeScript-based plugin resource structure.",
+      "description": "composio-community/awesome-openclaw-plugins curates OpenClaw plugin assets and operational playbooks into a structured ecosystem index."
+    },
+    {
       "repo": "ComposioHQ/awesome-agent-clis",
       "url": "https://github.com/ComposioHQ/awesome-agent-clis",
       "stars": "223",
@@ -2040,6 +2070,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Self-Evolving Agent via Experience-Driven Lifelong Learning"
+    },
+    {
+      "repo": "EESIZ/clawdreamer",
+      "url": "https://github.com/EESIZ/clawdreamer",
+      "stars": "23",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "应用/application",
+      "function_tag": "application-demo",
+      "base_theme": "skill",
+      "stack": "Python/OpenClaw Automation Plugin/Workflow Assistant",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 23 stars, 5 forks, 9 commits, MIT license, and Python-only implementation.",
+      "description": "EESIZ/clawdreamer offers an OpenClaw-oriented automation app/plugin for productivity and workflow execution."
     },
     {
       "repo": "egmaminta/gepa-lite",
@@ -3227,6 +3272,21 @@
       "description": "Lightweight, auditable Python code agent (~1500 LOC) — ReAct + Planner + Reflexion + Hybrid RAG, with SWE-bench Lite eval and trace replay."
     },
     {
+      "repo": "hyperspell/hyperspell-openclaw",
+      "url": "https://github.com/hyperspell/hyperspell-openclaw",
+      "stars": "181",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "TypeScript/OpenClaw Memory Plugin/Context Synchronization",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 181 stars, 35 forks, 60 commits, MIT license, and TypeScript-only implementation.",
+      "description": "hyperspell/hyperspell-openclaw extends OpenClaw with memory/context synchronization and retrieval enhancements."
+    },
+    {
       "repo": "ibm/awesome-agentic-workflow-optimization",
       "url": "https://github.com/ibm/awesome-agentic-workflow-optimization",
       "stars": "51",
@@ -4337,6 +4397,21 @@
       "description": "A program that \"thinks it's a program that can think more than a program.\""
     },
     {
+      "repo": "longmans/self-evolve",
+      "url": "https://github.com/longmans/self-evolve",
+      "stars": "96",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evolution",
+      "stack": "TypeScript/OpenClaw Playground/Workflow Benchmark Harness",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 96 stars, 5 forks, 27 commits, MIT license, and TypeScript code with explicit OpenClaw self-evolve workflow positioning.",
+      "description": "longmans/self-evolve is a vibe-coding playground for building, running, and benchmarking OpenClaw plugins and workflows with local agents and MCP integrations."
+    },
+    {
       "repo": "longyunfeigu/learn-hermes-agent",
       "url": "https://github.com/longyunfeigu/learn-hermes-agent",
       "stars": "113",
@@ -4605,6 +4680,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "Awesome Reasoning LLM Tutorial/Survey/Guide"
+    },
+    {
+      "repo": "MCKRUZ/openclaw-langfuse",
+      "url": "https://github.com/MCKRUZ/openclaw-langfuse",
+      "stars": "1",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "observability-telemetry",
+      "base_theme": "evaluation",
+      "stack": "JavaScript/OpenClaw Plugin/Langfuse Tracing",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 1 star, 0 forks, 2 commits, MIT license, and JavaScript implementation for OpenClaw-Langfuse integration.",
+      "description": "MCKRUZ/openclaw-langfuse adds Langfuse observability to OpenClaw through a lightweight plugin bridge."
     },
     {
       "repo": "mdalamin5/end-to-end-agentic-ai-automation-lab",
@@ -5205,6 +5295,21 @@
       "content_timestamp": "2026-05-27",
       "evidence": "web-observed GitHub page showed 24 stars, 4 forks, 3 commits, MIT license, and README claims for 73 benchmark tasks spanning code, memory, translation, and safety categories.",
       "description": "ai-agent-benchmark is a compact benchmark repository that evaluates AI agents across coding, math, memory, translation, and safety-oriented task slices."
+    },
+    {
+      "repo": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "stars": "1300",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "evaluation",
+      "stack": "Python/Benchmark Harness/Agent Skill Evaluation",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 1.3k stars, 147 forks, 620 commits, MIT license, and Python-dominant benchmark implementation.",
+      "description": "mvanhorn/last30days-skill provides a mature Python benchmark harness for evaluating agent skill performance over time."
     },
     {
       "repo": "mwasifanwar/meta-cognitive-learning-system",
@@ -8055,6 +8160,21 @@
       "content_timestamp": "2026-05-31",
       "evidence": "web-observed GitHub page showed 1.5k stars, 203 forks, 146 commits, and repository messaging as an awesome list for Agentic RL resources.",
       "description": "thinkwee/AgentsMeetRL is an awesome-style collection focused on agentic RL papers, methods, and benchmark references for agent training/evaluation loops."
+    },
+    {
+      "repo": "ThisIsJeron/awesome-openclaw-plugins",
+      "url": "https://github.com/ThisIsJeron/awesome-openclaw-plugins",
+      "stars": "13",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Markdown/OpenClaw Plugin Catalog/Community Resource Index",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 13 stars, 12 forks, 31 commits, CC0 licensing signal, and a plugin-category focused README index.",
+      "description": "ThisIsJeron/awesome-openclaw-plugins is a curated OpenClaw plugin knowledge index with operational categories and install references."
     },
     {
       "repo": "thu-nics/mars",

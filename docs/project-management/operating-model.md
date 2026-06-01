@@ -19,9 +19,10 @@
 2. 本地私有用户输入记忆只能辅助对齐，禁止提交或发布。
 3. 用 `rg` 找到相关素材、脚本和引用，避免只凭目录名判断。
 4. 判断产物层级：raw、processed、work、results、ops、mirrors。
-5. 修改文件后刷新索引：`node scripts/generate_project_indexes.mjs`。
-6. 按影响面跑验证：raw 时间戳、GitHub 分析、论文编译、站点构建。
-7. 最终汇报只讲完成了什么、验证了什么、还剩什么风险。
+5. 判断受众边界：公开叙事进 README/site/paper/report；内部 workflow 进 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md`、`docs/ops/` 或 `work/wiki/`。详细规则见 [../ops/audience-boundary-workflow.md](../ops/audience-boundary-workflow.md)。
+6. 修改文件后刷新索引：`node scripts/generate_project_indexes.mjs`。
+7. 按影响面跑验证：raw 时间戳、GitHub 分析、论文编译、站点构建。
+8. 最终汇报只讲完成了什么、验证了什么、还剩什么风险。
 
 ## Quality Gates
 

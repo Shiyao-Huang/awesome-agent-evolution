@@ -1,0 +1,420 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { evolutionLoops, methodFamilies, surveyStats } from '@/data/survey';
+
+const loopLens = [
+  {
+    id: 'spec-exec',
+    plainName: 'Specification-to-Execution',
+    mutableObject: 'task spec, workflow, pipeline, tool plan',
+    feedbackSignal: 'execution success, user goal fit, pipeline result',
+    verifier: 'runner, tests, task acceptance',
+    retention: 'reusable workflow template or execution trace',
+    failureMode: 'The system optimizes a distorted specification, or never creates a runnable artifact.',
+    useWhen: 'Use this lens when the question is whether an agent can turn a fuzzy goal into a repeatable process.',
+  },
+  {
+    id: 'search',
+    plainName: 'Search',
+    mutableObject: 'prompt, code, architecture, routing, hyperparameters',
+    feedbackSignal: 'score, benchmark, cost, transfer result',
+    verifier: 'evaluator, benchmark, validation suite',
+    retention: 'best candidate, archive, design pattern',
+    failureMode: 'The search space becomes random walk, local optimum, or benchmark overfitting.',
+    useWhen: 'Use this lens when the system proposes multiple candidates and selects among them.',
+  },
+  {
+    id: 'evaluator',
+    plainName: 'Evaluator',
+    mutableObject: 'test harness, judge, benchmark gate, acceptance policy',
+    feedbackSignal: 'pass/fail, score, regression, safety signal',
+    verifier: 'independent evaluator or hidden task',
+    retention: 'promotion gate and evidence log',
+    failureMode: 'The agent learns the evaluator rather than the task: Goodhart, leakage, weak tests.',
+    useWhen: 'Use this lens before trusting any claimed self-improvement result.',
+  },
+  {
+    id: 'reflection',
+    plainName: 'Reflection',
+    mutableObject: 'memory, lesson, prompt context, skill note',
+    feedbackSignal: 'failed trajectory, critique, environment feedback',
+    verifier: 'retry result, external check, human review',
+    retention: 'typed memory, skill, retrieval item',
+    failureMode: 'Incorrect reflections become reusable errors, causing memory pollution or self-confirmation.',
+    useWhen: 'Use this lens when failures are converted into future context.',
+  },
+  {
+    id: 'population',
+    plainName: 'Population',
+    mutableObject: 'candidate pool, archive, lineage, variants',
+    feedbackSignal: 'fitness, diversity, novelty, robustness',
+    verifier: 'evaluator plus archive policy',
+    retention: 'parent-child lineage and elite archive',
+    failureMode: 'The population collapses too early, or diversity is kept without useful selection pressure.',
+    useWhen: 'Use this lens when multiple candidate lineages survive across generations.',
+  },
+];
+
+const loopCards = evolutionLoops.map((loop) => ({
+  ...loop,
+  ...loopLens.find((lens) => lens.id === loop.id)!,
+}));
+
+const compositionPatterns = [
+  ['Prompt and memory agent', 'Reflection + Evaluator', 'The agent learns from failures only if memories are typed, scoped, and re-tested.'],
+  ['Code repair agent', 'Specification-to-Execution + Evaluator + Reflection', 'The strongest feedback comes from execution traces, tests, hidden cases, and rollback logs.'],
+  ['Architecture search system', 'Search + Evaluator + Population', 'Candidate agent designs need a reliable benchmark and an archive, not only a best-so-far score.'],
+  ['Algorithm discovery system', 'Search + Evaluator + Population', 'The evaluator must be strong enough to reject beautiful but wrong programs.'],
+  ['Agent-swarm harness', 'Specification-to-Execution + Search + Evaluator', 'Roles, topology, handoff, shared state, and review gates become the mutable design space.'],
+];
+
+const decisionRules = [
+  ['Does it count as self-evolving?', 'Start with the definition page, then check whether any loop retains a verified change.'],
+  ['Which project category is it?', 'Classify by mutable object and feedback signal, not by project name.'],
+  ['Where is the strongest evidence?', 'Prefer evaluator and population loops when tests, benchmarks, archives, and lineage are visible.'],
+  ['What should engineers build first?', 'Build the evaluator loop before expanding search or reflection.'],
+  ['What should reviewers distrust?', 'Distrust loops where the same model proposes, judges, stores, and celebrates the change alone.'],
+];
+
+const faqs = [
+  ['Are the five loops mutually exclusive?', 'No. Real systems usually combine them. The loops are lenses for asking what changed, what selected it, and how the change survived.'],
+  ['Why is evaluator loop treated as central?', 'Because every other loop depends on a trustworthy signal. Without an evaluator, self-improvement is indistinguishable from drift.'],
+  ['Can a system be self-evolving without changing weights?', 'Yes. Prompt, memory, workflow, tool policy, code, and archive changes can be self-evolution if they are feedback-driven, verified, and retained.'],
+  ['Why make this a topic page when a mechanisms page already exists?', 'The mechanisms page serves survey navigation; this page is an evergreen reader guide that connects definitions, SEO, paper framing, and evidence boundaries.'],
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Five Evolution Loops for Self-Evolving AI Agents',
+  name: '五类进化回路',
+  description: 'A consumer-facing guide to the five evolution loops behind self-evolving AI agents: specification-to-execution, search, evaluator, reflection, and population.',
+  url: `${site.url}/topics/five-evolution-loops/`,
+  inLanguage: 'zh-CN',
+  isPartOf: { '@id': `${site.url}/#website` },
+  about: ['Self-Evolving AI Agents', 'Five Evolution Loops', 'AI Agent Evaluation', 'AI Self Evolution'],
+  mainEntity: faqs.map(([question, answer]) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: { '@type': 'Answer', text: answer },
+  })),
+};
+---
+
+<BaseLayout
+  title="五类进化回路 — Self-Evolving AI Agents 的机制地图"
+  description="用五类进化回路理解 self-evolving AI agents：规范到执行、搜索、评估、反思和种群。看每个系统改了什么、用什么反馈、谁验证、如何保留、常见失败是什么。"
+  pageKeywords={['五类进化回路', 'Five Evolution Loops', 'Self-Evolving AI Agents taxonomy', 'AI 自进化机制', 'AI agent feedback loop']}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+
+  <style>
+    .loops-page {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .loops-page :is(h1, h2, h3, p, strong, td, th, a, li) {
+      overflow-wrap: anywhere;
+    }
+
+    .loop-flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .loop-flow span {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--surface-1);
+      padding: 14px 10px;
+      color: var(--fg);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .loop-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .loop-card-grid .card:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .loop-lens-list {
+      display: grid;
+      gap: 8px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .loop-lens-list li {
+      border-left: 2px solid var(--caret-blue);
+      padding-left: 10px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .compact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 840px) {
+      .loop-flow,
+      .loop-card-grid,
+      .compact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .loops-page .hero h1 {
+        font-size: 34px;
+        line-height: 1.12;
+      }
+
+      .loops-page .hero-actions .button {
+        flex: 1 1 100%;
+        min-width: 100%;
+        padding-inline: 12px;
+      }
+    }
+  </style>
+
+  <div class="loops-page">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Taxonomy / Survey Rank 2</div>
+          <h1>五类进化回路：把自进化从口号变成机制地图。</h1>
+          <p class="lead">定义页回答“这个系统算不算自进化”。五类进化回路回答下一层问题：它到底通过哪一种反馈闭环变强，哪里最容易失控，证据应该去哪查。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#loop-matrix">看判断表</a>
+            <a class="button" href="/topics/self-evolving-ai-agents/">先看定义</a>
+            <a class="button" href="/survey/mechanisms/">Survey 机制页</a>
+            <a class="text-link" href="/topics/">主题地图</a>
+          </div>
+          <div class="loop-flow" aria-label="Five evolution loops">
+            <span>Specify</span>
+            <span>Search</span>
+            <span>Evaluate</span>
+            <span>Reflect</span>
+            <span>Archive</span>
+          </div>
+        </div>
+        <aside class="hero-evidence" aria-label="Five loops summary">
+          <div class="eyebrow">Survey evidence</div>
+          <ol>
+            <li><span>Loops</span><strong>{surveyStats.evolutionLoops} evolution loops</strong></li>
+            <li><span>Methods</span><strong>{surveyStats.methodFamilies} method families</strong></li>
+            <li><span>Papers</span><strong>{surveyStats.papers} survey papers</strong></li>
+            <li><span>Repos</span><strong>{surveyStats.repos} displayed repos</strong></li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface-1);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">One sentence</div>
+            <h2>五类回路不是五个标签，而是五种“反馈变成改进”的路径</h2>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>一句话</h3>
+            <p>自进化系统要么把目标变成可执行流程，要么搜索候选，要么评估候选，要么把失败写成可复用经验，要么在种群和 archive 中保留多条改进路径。</p>
+          </article>
+          <article class="card">
+            <h3>三句话</h3>
+            <p>只会反思的系统可能只是会写复盘。只会搜索的系统可能很快过拟合评估器。把五类回路分清楚，读者才知道一个项目到底改了什么、谁在选择、结果是否能复用。</p>
+          </article>
+          <article class="card">
+            <h3>给读者的核心问题</h3>
+            <p>不要问“它是不是用了 agent”。问：mutable object 是什么，feedback signal 是什么，verifier 是否独立，retention 是否影响下一次行为。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="loop-matrix">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Loop matrix</div>
+            <h2>五类回路速查表</h2>
+          </div>
+          <a class="text-link" href="https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/five-evolution-loops-topic.md" target="_blank" rel="noopener">分析来源</a>
+        </div>
+        <div class="score-table-wrap">
+          <table class="score-table">
+            <thead>
+              <tr>
+                <th>Loop</th>
+                <th>可变对象</th>
+                <th>反馈信号</th>
+                <th>验证器</th>
+                <th>保留机制</th>
+              </tr>
+            </thead>
+            <tbody>
+              {loopCards.map((loop) => (
+                <tr>
+                  <td><strong>{loop.nameZh}</strong><br /><span>{loop.plainName}</span></td>
+                  <td>{loop.mutableObject}</td>
+                  <td>{loop.feedbackSignal}</td>
+                  <td>{loop.verifier}</td>
+                  <td>{loop.retention}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface-1);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Five loops</div>
+            <h2>逐个看：每个 loop 真正回答什么</h2>
+          </div>
+        </div>
+        <div class="loop-card-grid">
+          {loopCards.map((loop, index) => (
+            <article class="card">
+              <div class="eyebrow">Loop {index + 1} / {loop.plainName}</div>
+              <h3>{loop.icon} {loop.nameZh}</h3>
+              <p><strong>{loop.name}</strong></p>
+              <p>{loop.descriptionZh}</p>
+              <ul class="loop-lens-list">
+                <li><strong>什么时候用：</strong>{loop.useWhen}</li>
+                <li><strong>代表系统：</strong>{loop.examples.join(' · ')}</li>
+                <li><strong>常见失败：</strong>{loop.failureMode}</li>
+                <li><strong>核心洞察：</strong>{loop.keyInsight}</li>
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Composition</div>
+            <h2>真实系统通常是回路组合，不是单环表演</h2>
+          </div>
+        </div>
+        <div class="score-table-wrap">
+          <table class="score-table">
+            <thead>
+              <tr><th>系统类型</th><th>常见组合</th><th>判断重点</th></tr>
+            </thead>
+            <tbody>
+              {compositionPatterns.map(([system, pattern, focus]) => (
+                <tr>
+                  <td><strong>{system}</strong></td>
+                  <td>{pattern}</td>
+                  <td>{focus}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface-1);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">How to use</div>
+            <h2>读项目、写论文、做产品时怎么用</h2>
+          </div>
+        </div>
+        <div class="compact-grid">
+          {decisionRules.map(([question, answer]) => (
+            <article class="card">
+              <h3>{question}</h3>
+              <p>{answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Method families</div>
+            <h2>五类回路和七个方法族怎样连接</h2>
+          </div>
+        </div>
+        <div class="grid">
+          {methodFamilies.map((family) => (
+            <article class="card">
+              <div class="eyebrow">{family.papers} papers / {family.share}</div>
+              <h3>{family.nameZh}</h3>
+              <p><strong>{family.name}</strong></p>
+              <p>{family.oneLineInsight}</p>
+              <p style="color: var(--muted);">{family.keyMethods.join(' · ')}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface-1);">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">FAQ</div>
+            <h2>四个常见误读</h2>
+          </div>
+        </div>
+        <div class="compact-grid">
+          {faqs.map(([question, answer]) => (
+            <article class="card">
+              <h3>{question}</h3>
+              <p>{answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid">
+          <a class="card" href="/topics/self-evolving-ai-agents/" style="text-decoration: none; color: inherit;">
+            <div class="eyebrow">Definition</div>
+            <h3>先判断它算不算自进化</h3>
+            <p>定义页提供六个 gate：可变对象、反馈、候选生成、验证、保留、审计/回滚。</p>
+          </a>
+          <a class="card" href="/survey/mechanisms/" style="text-decoration: none; color: inherit;">
+            <div class="eyebrow">Mechanisms</div>
+            <h3>继续看 Survey 机制页</h3>
+            <p>机制页展开状态机、五个 loop、方法族和原始 survey 图表。</p>
+          </a>
+          <a class="card" href="/benchmark/" style="text-decoration: none; color: inherit;">
+            <div class="eyebrow">Evidence</div>
+            <h3>继续看 benchmark</h3>
+            <p>评估、隐藏测试、迁移、成本和回归决定自进化声明是否可信。</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
