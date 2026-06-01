@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-01T19:51:04+08:00
+Generated: 2026-06-02T01:55:44+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-06-01T19:51:04+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: Team-Commonly/commonly, matevip/mateclaw, christinminor459/OnionClaw, nowledge-co/community, 0xNyk/lacp, manthanguptaa/water, SponsioLabs/Sponsio.
-- New raw files: raw-github/team-commonly_commonly.md, raw-github/matevip_mateclaw.md, raw-github/christinminor459_onionclaw.md, raw-github/nowledge-co_community.md, raw-github/0xnyk_lacp.md, raw-github/manthanguptaa_water.md, raw-github/sponsiolabs_sponsio.md.
-- New public model cards and site reports: project/report ids 370, 371, 372, 373, 374, 375, 376.
+- Web-observed repos: zorazrw/agent-workflow-memory, webzler/agentMemory, agiresearch/A-mem, elizaOS/agentmemory, apify/agent-skills, openswarm-ai/openswarm.
+- New raw files: raw-github/zorazrw_agent-workflow-memory.md, raw-github/webzler_agentmemory.md, raw-github/agiresearch_a-mem.md, raw-github/elizaos_agentmemory.md, raw-github/apify_agent-skills.md, raw-github/openswarm-ai_openswarm.md.
+- New public model cards and site reports: project/report ids 377, 378, 379, 380, 381, 382.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
 - GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

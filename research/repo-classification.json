@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T19:51:04+08:00",
+  "generated_at": "2026-06-02T01:55:44+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -422,6 +422,21 @@
       "description": "Claude Trading Skills packages trading, DeFi and quantitative finance procedures as reusable Agent Skills for Claude Code, Codex, Cursor, Gemini CLI and other compatible runtimes."
     },
     {
+      "repo": "agiresearch/A-mem",
+      "url": "https://github.com/agiresearch/A-mem",
+      "stars": "1000",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "Python/LLM Agent Memory/Long-Term Retention",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 1k stars, 86 forks, 31 commits, MIT license, and explicit A-MEM agentic memory positioning for LLM agents.",
+      "description": "agiresearch/A-mem presents agentic memory infrastructure for LLM agents and targets long-term context quality in autonomous task loops."
+    },
+    {
       "repo": "ai-agents-2030/darwin-mobile-agent",
       "url": "https://github.com/ai-agents-2030/darwin-mobile-agent",
       "stars": "10",
@@ -795,6 +810,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed official Agent Skills repository, spec/template folders, Claude Code plugin marketplace instructions, and public star/fork snapshot",
       "description": "Anthropic 官方 Agent Skills 公共仓库，提供技能规范、模板、示例技能与 Claude Code 插件市场安装入口，是技能生态的上游参考实现。"
+    },
+    {
+      "repo": "apify/agent-skills",
+      "url": "https://github.com/apify/agent-skills",
+      "stars": "2100",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Python/Agent Skills/Developer Workflow Library",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 2.1k stars, 228 forks, 152 commits, Apache-2.0 license, and explicit reusable coding-agent skills positioning.",
+      "description": "apify/agent-skills curates reusable skills for coding agents to improve execution quality across software and automation tasks."
     },
     {
       "repo": "ArcadeAI/openclaw-arcade-plugin",
@@ -2205,6 +2235,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "Turn your Git repository into a self-improving autonomous agent. Open issues to assign tasks, review PRs, merge to teach. Gemini is the brain, Git is the backend."
+    },
+    {
+      "repo": "elizaOS/agentmemory",
+      "url": "https://github.com/elizaOS/agentmemory",
+      "stars": "236",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "Python/ElizaOS Plugin/Memory Runtime Integration",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 236 stars, 57 forks, 123 commits, MIT license, and explicit plugin-level memory management framing for ElizaOS agents.",
+      "description": "elizaOS/agentmemory is a plugin module that enables memory management capabilities inside ElizaOS-based agent runtimes."
     },
     {
       "repo": "elizaOS/eliza",
@@ -6227,6 +6272,21 @@
       "description": "OpenSite Skills 把 Claude、Codex、Cursor、Copilot 与 Perplexity Computer 的技能保持在一个 Git 真相源中，并加入跨会话记忆、RAG 与 Playwright 云端上传自动化。"
     },
     {
+      "repo": "openswarm-ai/openswarm",
+      "url": "https://github.com/openswarm-ai/openswarm",
+      "stars": "129",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "harness",
+      "stack": "Python/Multi-Agent Swarm/Runtime Orchestration",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 129 stars, 16 forks, 91 commits, MIT license, and explicit lightweight multi-agent orchestration framing.",
+      "description": "openswarm-ai/openswarm provides lightweight multi-agent orchestration primitives for building swarm-style autonomous workflows."
+    },
+    {
       "repo": "opentracy/opentracy",
       "url": "https://github.com/opentracy/opentracy",
       "stars": "101",
@@ -8987,6 +9047,21 @@
       "description": "Webmaxru Agent Skills collects reviewed Web API skills and documents a creation, validation, remediation and install-check lifecycle for reusable agent know-how."
     },
     {
+      "repo": "webzler/agentMemory",
+      "url": "https://github.com/webzler/agentMemory",
+      "stars": "28",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-suite",
+      "base_theme": "evaluation",
+      "stack": "TypeScript/Benchmark Harness/Memory Evaluation",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 28 stars, 4 forks, 3 commits, MIT license, and explicit benchmark framing for evaluating memory capabilities in AI agents.",
+      "description": "webzler/agentMemory provides a benchmark framework focused on agent memory capability and hallucination-aware evaluation workflows."
+    },
+    {
       "repo": "werner-duvaud/muzero-general",
       "url": "https://github.com/werner-duvaud/muzero-general",
       "stars": "2",
@@ -9735,6 +9810,21 @@
       "content_timestamp": "2025-04-22",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "[NIPS2025] A decentralized, RAG-enhanced multi-agent framework for LLMs with dynamic task routing and agent evolution."
+    },
+    {
+      "repo": "zorazrw/agent-workflow-memory",
+      "url": "https://github.com/zorazrw/agent-workflow-memory",
+      "stars": "440",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "Python/FastAPI/LangChain/Neo4j/Workflow Memory",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 440 stars, 50 forks, 25 commits, Apache-2.0 license, and explicit memory manager plus knowledge-graph workflow framing.",
+      "description": "zorazrw/agent-workflow-memory builds an agent workflow memory system with a graph-backed memory manager and FastAPI execution surface."
     },
     {
       "repo": "zou-group/sirius",

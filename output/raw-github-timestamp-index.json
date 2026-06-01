@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-02T00:00:00+08:00",
-  "total": 653,
-  "updated_files": 653,
+  "total": 659,
+  "updated_files": 659,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -257,6 +257,15 @@
       "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
+      "repo": "agiresearch/A-mem",
+      "url": "https://github.com/agiresearch/A-mem",
+      "file": "raw-github/agiresearch_a-mem.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T01:55:44+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
+    },
+    {
       "repo": "ai-agents-2030/darwin-mobile-agent",
       "url": "https://github.com/ai-agents-2030/darwin-mobile-agent",
       "file": "raw-github/ai-agents-2030_darwin-mobile-agent.md",
@@ -480,6 +489,15 @@
       "collected_at": "2026-05-24T16:59:40+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_github_page_open_2026-05-24"
+    },
+    {
+      "repo": "apify/agent-skills",
+      "url": "https://github.com/apify/agent-skills",
+      "file": "raw-github/apify_agent-skills.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T01:55:44+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
     },
     {
       "repo": "ArcadeAI/openclaw-arcade-plugin",
@@ -1326,6 +1344,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "elizaOS/agentmemory",
+      "url": "https://github.com/elizaOS/agentmemory",
+      "file": "raw-github/elizaos_agentmemory.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T01:55:44+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
     },
     {
       "repo": "elizaOS/eliza",
@@ -3740,6 +3767,15 @@
       "timestamp_source": "web_observed_github_page"
     },
     {
+      "repo": "openswarm-ai/openswarm",
+      "url": "https://github.com/openswarm-ai/openswarm",
+      "file": "raw-github/openswarm-ai_openswarm.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T01:55:44+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
+    },
+    {
       "repo": "opentracy/opentracy",
       "url": "https://github.com/opentracy/opentracy",
       "file": "raw-github/opentracy_opentracy.md",
@@ -5396,6 +5432,15 @@
       "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
+      "repo": "webzler/agentMemory",
+      "url": "https://github.com/webzler/agentMemory",
+      "file": "raw-github/webzler_agentmemory.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T01:55:44+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
+    },
+    {
       "repo": "werner-duvaud/muzero-general",
       "url": "https://github.com/werner-duvaud/muzero-general",
       "file": "raw-github/werner-duvaud_muzero-general.md",
@@ -5844,6 +5889,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "2025-04",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "zorazrw/agent-workflow-memory",
+      "url": "https://github.com/zorazrw/agent-workflow-memory",
+      "file": "raw-github/zorazrw_agent-workflow-memory.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T01:55:44+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
     },
     {
       "repo": "zou-group/sirius",

@@ -404,6 +404,13 @@
 | WATER Self-Improving Coding Agent | [manthanguptaa/water](https://github.com/manthanguptaa/water) | Self-Improving Coding Agent with Benchmark-Oriented Execution | [projects/375-water-self-improving-coding-agent.md](375-water-self-improving-coding-agent.md) |
 | Sponsio Workflow and Multi-Agent Control Plane | [SponsioLabs/Sponsio](https://github.com/SponsioLabs/Sponsio) | Workflow Automation and Multi-Agent Control Infrastructure | [projects/376-sponsio-workflow-and-multi-agent-control.md](376-sponsio-workflow-and-multi-agent-control.md) |
 
+| Agent Workflow Memory Knowledge Graph Runtime | [zorazrw/agent-workflow-memory](https://github.com/zorazrw/agent-workflow-memory) | Agent Workflow Memory Runtime with Knowledge Graph Integration | [projects/377-agent-workflow-memory-knowledge-graph-runtime.md](377-agent-workflow-memory-knowledge-graph-runtime.md) |
+| AgentMemory Benchmark Framework | [webzler/agentMemory](https://github.com/webzler/agentMemory) | Benchmark Framework for Agent Memory Evaluation and Hallucination Testing | [projects/378-agentmemory-benchmark-framework.md](378-agentmemory-benchmark-framework.md) |
+| A-MEM Agentic Memory for LLM Agents | [agiresearch/A-mem](https://github.com/agiresearch/A-mem) | Agentic Memory Architecture for LLM Agent Long-Term Context Retention | [projects/379-a-mem-agentic-memory-llm-agents.md](379-a-mem-agentic-memory-llm-agents.md) |
+| ElizaOS AgentMemory Plugin | [elizaOS/agentmemory](https://github.com/elizaOS/agentmemory) | Agent Memory Plugin for ElizaOS Runtime and Persistent Context Handling | [projects/380-elizaos-agentmemory-plugin.md](380-elizaos-agentmemory-plugin.md) |
+| Apify Agent Skills Library | [apify/agent-skills](https://github.com/apify/agent-skills) | Reusable Skills Library for Coding Agents and Automation Workflows | [projects/381-apify-agent-skills-library.md](381-apify-agent-skills-library.md) |
+| OpenSwarm Multi-Agent Orchestration Framework | [openswarm-ai/openswarm](https://github.com/openswarm-ai/openswarm) | Multi-Agent Swarm Orchestration Framework with Lightweight Runtime Control | [projects/382-openswarm-multi-agent-orchestration-framework.md](382-openswarm-multi-agent-orchestration-framework.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.
