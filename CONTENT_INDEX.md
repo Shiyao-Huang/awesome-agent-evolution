@@ -46,6 +46,7 @@
 | GitHub Star 增长数据库计划 | [analysis/github-star-growth-database-plan.md](analysis/github-star-growth-database-plan.md) | processed plan：把累计 Star 降为历史 adoption prior，改用 2026 新增 Star、recent velocity 和覆盖完整性做当前阶段排名 |
 | GitHub Star 增长排名 | [analysis/github-star-growth-ranking.md](analysis/github-star-growth-ranking.md) | processed aggregate：由 `data-engine/github-star-history/` 生成的 year-specific new-star ranking，未抓取项目标为 `not_fetched` |
 | GitHub Star history 数据库 | [data-engine/github-star-history/README.md](data-engine/github-star-history/README.md) | work dataset：stargazer events、repo snapshots、monthly growth、fetch runs、manifest，预留 Hugging Face 发布 |
+| 公开 Star 增长数据库页 | [site/src/pages/star-growth/index.astro](site/src/pages/star-growth/index.astro) | 面向消费者和 SEO 的 2026 GitHub new-star momentum 页面：公开 coverage-qualified ranking、fetch backlog、dataset path 和 Evolve-AGI Index 回灌边界 |
 | Frontier 价值队列 JSON | [analysis/frontier-value-queue.json](analysis/frontier-value-queue.json) | 脚本生成，可复跑；保存每个项目的 evidence_chain、mirror_chain、frontier_score、lane 和 next_action |
 | 项目深度分析 | [projects/](projects/) | model-card/教学型项目分析 |
 | 项目清单 | [projects/INDEX.md](projects/INDEX.md) | model-card/项目报告入口；最新公共报告计数见 master index |

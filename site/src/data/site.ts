@@ -39,6 +39,6 @@ export const nav = [
   { href: '/blog/', label: '博客' },
   { href: '/search/', label: '搜索' },
   { href: '/github/', label: 'GitHub' },
-  { href: '/star-analysis/', label: 'Star 分析' },
+  { href: '/star-growth/', label: '增长' },
   { href: '/#community', label: '社区' }
 ];

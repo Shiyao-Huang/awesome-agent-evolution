@@ -21,7 +21,7 @@ export interface TopicCluster {
 }
 
 export const topicMapStats = {
-  clusters: 8,
+  clusters: 9,
   rawGithubCaptures: 646,
   strictEvolutionRepos: 93,
   broadEvolutionRepos: 200,
@@ -130,13 +130,31 @@ export const topicClusters: TopicCluster[] = [
     evidenceLinks: [
       { label: 'Evolve-AGI Index', href: '/evolve-agi-index/' },
       { label: 'Benchmark', href: '/benchmark/' },
+      { label: 'Star growth', href: '/star-growth/' },
       { label: 'Reports', href: '/reports/' },
     ],
     nextAsset: '把每个 index signal 做成可解释小页，并链接到代表报告和 benchmark 表。',
   },
   {
-    id: 'production-pain-points',
+    id: 'github-growth',
     rank: 7,
+    title: '2026 GitHub 增长与当前动量',
+    titleEn: '2026 GitHub growth and current momentum',
+    readerQuestion: '哪些自进化项目正在当前阶段获得真实关注，而不是只靠历史累计 Star?',
+    surveyRole: '把 GitHub 语料从累计热度榜升级成当前动量数据库，为 Evolve-AGI Index 的 field momentum 信号提供证据边界。',
+    seoIntent: 'data / momentum ranking',
+    evidence: 'Star-history database 已有 seed、snapshot、star-events、monthly growth 和 coverage-qualified ranking；当前公开页明确区分 final evidence 与 fetch backlog。',
+    seedQueries: ['AI agent GitHub star growth 2026', 'self evolving agents new stars', 'AI agent momentum ranking'],
+    evidenceLinks: [
+      { label: 'Star growth page', href: '/star-growth/' },
+      { label: 'Growth ranking', href: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/github-star-growth-ranking.md' },
+      { label: 'Evolve-AGI Index', href: '/evolve-agi-index/' },
+    ],
+    nextAsset: '扩大 strict evolution repos 的完整 stargazer pagination，并把 complete rows 回灌到 Evolve-AGI Index 和 frontier queue。',
+  },
+  {
+    id: 'production-pain-points',
+    rank: 8,
     title: '生产痛点与用户信任边界',
     titleEn: 'Production pain points and trust boundaries',
     readerQuestion: '用户真的需要更自主的 agent，还是需要更可靠、可控、低成本的系统?',
@@ -153,7 +171,7 @@ export const topicClusters: TopicCluster[] = [
   },
   {
     id: 'resource-library',
-    rank: 8,
+    rank: 9,
     title: '资料库覆盖与证据链复查',
     titleEn: 'Resource coverage and evidence traceability',
     readerQuestion: '这个资料库到底收了什么、分析了什么、哪些能公开阅读?',

@@ -228,11 +228,14 @@ const growthLabel: Record<string, string> = {
       <div class="section-head">
         <div>
           <div class="eyebrow">Star 榜单</div>
-          <h2>GitHub 项目 Star 排名</h2>
+          <h2>GitHub 项目 Star 排名与当前增长</h2>
         </div>
-        <a class="text-link" href="/star-analysis/">完整质量分析 →</a>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a class="text-link" href="/star-growth/">2026 增长数据库 →</a>
+          <a class="text-link" href="/star-analysis/">完整质量分析 →</a>
+        </div>
       </div>
-      <p style="color: var(--muted); margin-bottom: 20px;">按 Star 数排名，同时标注质量评分和增长模式。Star 多不等于质量高——AutoGPT 175K stars 但质量分低于 DSPy 25K。</p>
+      <p style="color: var(--muted); margin-bottom: 20px;">累计 Star 只说明历史 adoption，不能直接说明当前价值；2026 新增 Star、近 90 天增长和 coverage status 已单独进入增长数据库。</p>
       <div style="overflow-x: auto;">
         <table class="panorama-table">
           <thead>
@@ -450,9 +453,9 @@ const growthLabel: Record<string, string> = {
   <section class="section">
     <div class="container">
       <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-        <a href="/star-analysis/" class="card" style="text-decoration: none; color: inherit; text-align: center;">
+        <a href="/star-growth/" class="card" style="text-decoration: none; color: inherit; text-align: center;">
           <div style="font-size: 1.5rem;">⭐</div>
-          <h3>Star 质量分析</h3>
+          <h3>2026 Star 增长</h3>
         </a>
         <a href="/rank/" class="card" style="text-decoration: none; color: inherit; text-align: center;">
           <div style="font-size: 1.5rem;">🏆</div>
