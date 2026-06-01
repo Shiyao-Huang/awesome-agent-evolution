@@ -310,6 +310,14 @@
 - Updated topic map counts to the current master-index/GitHub analysis boundary: 639 raw captures, 92 strict repos, 199 broad repos, 232 analyzed/site records, and 434 public reports.
 **产出:** `docs/ops/audience-boundary-workflow.md`
 
+## [2026-06-01 14:12] lint | Coverage Count Boundary Sync
+
+**操作:** Re-synced coverage/topic-map counts after the latest public metadata loop advanced the corpus.
+**详情:**
+- Updated topic map and coverage audit surfaces from 639/232/434 to 646 raw captures, 239 analyzed/site records, 441 public reports, 93 strict repos, and 200 broad repos.
+- Updated wiki synthesis and index wording so future agents do not reuse stale count boundaries.
+**产出:** `analysis/resource-library-coverage-audit.md`, `analysis/survey-seo-topic-map.md`, `site/src/data/topicMap.ts`
+
 ## [2026-06-01 13:35] synthesis | Value Screening and Dual-Chain Knowledge Base
 
 **操作:** Converted the user's recency/continuity/code/issue exploration request into a durable processed protocol.

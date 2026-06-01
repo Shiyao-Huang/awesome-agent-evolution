@@ -22,9 +22,9 @@ export interface TopicCluster {
 
 export const topicMapStats = {
   clusters: 8,
-  rawGithubCaptures: 639,
-  strictEvolutionRepos: 92,
-  broadEvolutionRepos: 199,
+  rawGithubCaptures: 646,
+  strictEvolutionRepos: 93,
+  broadEvolutionRepos: 200,
   publicReports: projectReports.length,
   surveyPapers: surveyStats.papers,
   painPoints: surveyStats.painPoints,
@@ -159,7 +159,7 @@ export const topicClusters: TopicCluster[] = [
     readerQuestion: '这个资料库到底收了什么、分析了什么、哪些能公开阅读?',
     surveyRole: '把 raw、processed、work、results 的口径分开，防止 survey 和 SEO 夸大覆盖。',
     seoIntent: 'resource library / trust page',
-    evidence: 'Coverage audit 和 public resource library page 已解释 639 raw captures、232 analyzed records、434 public reports、232 site records、196 survey papers 等计数边界。',
+    evidence: 'Coverage audit 和 public resource library page 已解释 646 raw captures、239 analyzed records、441 public reports、239 site records、196 survey papers 等计数边界。',
     seedQueries: ['self-evolving AI agents resource library', 'AI self evolution GitHub projects', 'AI agent survey project reports'],
     evidenceLinks: [
       { label: 'Resource library', href: '/resource-library/' },

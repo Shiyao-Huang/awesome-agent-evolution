@@ -28,7 +28,7 @@ updated: 2026-06-01
 
 ## Three Sentences
 
-1. [KNOWN] Governance counts currently include 639 raw GitHub captures, 639 classified repositories, 232 analyzed model-card reports, 92 strict evolution repositories, 199 broad evolution repositories, 201 raw paper files, 171 paper reviews, and 434 public project reports. Source: `docs/indexes/master-index.md`
+1. [KNOWN] Governance counts currently include 646 raw GitHub captures, 646 classified repositories, 239 analyzed model-card reports, 93 strict evolution repositories, 200 broad evolution repositories, 201 raw paper files, 171 paper reviews, and 441 public project reports. Source: `docs/indexes/master-index.md`
 2. [KNOWN] The site survey layer uses a separate display-oriented count: 196 papers, 348 repos, 97 pain points, 1306 blog artifacts, 5 evolution loops, 7 method families, and 6 case studies. Source: `site/src/data/survey.ts`
 3. [INFERRED] These counts should be treated as complementary coverage surfaces, not contradictions: raw answers what was collected, processed answers what was analyzed, site/report answers what readers can browse, and survey answers how evidence becomes thesis.
 
@@ -36,11 +36,11 @@ updated: 2026-06-01
 
 | Count | Meaning |
 |---:|---|
-| 639 | Raw GitHub captures and classified repository rows. |
-| 232 | Repositories in the analyzed model-card report funnel. |
-| 434 | Public project report files under `site/public/reports/projects/`. |
-| 232 | Current website project records in `site/src/data/projects.ts`. |
-| 801 | Markdown files under `projects/`, including indexes/support/history. |
+| 646 | Raw GitHub captures and classified repository rows. |
+| 239 | Repositories in the analyzed model-card report funnel. |
+| 441 | Public project report files under `site/public/reports/projects/`. |
+| 239 | Current website project records in `site/src/data/projects.ts`. |
+| 808 | Markdown files under `projects/`, including indexes/support/history. |
 | 196 | Site survey paper display count; raw paper files are 201. |
 
 ## Use In Future Work

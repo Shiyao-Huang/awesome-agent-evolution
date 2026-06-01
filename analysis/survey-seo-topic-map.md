@@ -25,13 +25,13 @@ sources:
 
 ## 三句话
 
-1. [KNOWN] 仓库已有 639 个 raw GitHub captures、92 个 strict evolution repositories、199 个 broad evolution repositories、201 个 raw paper files 和 434 个 public project reports。 — Source: `docs/indexes/master-index.md`
+1. [KNOWN] 仓库已有 646 个 raw GitHub captures、93 个 strict evolution repositories、200 个 broad evolution repositories、201 个 raw paper files 和 441 个 public project reports。 — Source: `docs/indexes/master-index.md`
 2. [KNOWN] Survey 展示层已有 196 papers、348 repos、97 pain points、5 evolution loops、7 method families 和 6 case studies。 — Source: `site/src/data/survey.ts`
 3. [INFERRED] 因此下一批公开内容应按“读者问题 -> survey 章节 -> 证据入口 -> 下一步页面”组织，而不是把博客写成互相孤立的长尾词页面。
 
 ## 五句话
 
-1. [KNOWN] Coverage audit 已经解释 raw、processed、work、results 的计数口径，避免读者把 639 raw captures、232 analyzed reports、434 public reports、232 site records、196 survey-display papers 混成一个数字。 — Source: `analysis/resource-library-coverage-audit.md`
+1. [KNOWN] Coverage audit 已经解释 raw、processed、work、results 的计数口径，避免读者把 646 raw captures、239 analyzed reports、441 public reports、239 site records、196 survey-display papers 混成一个数字。 — Source: `analysis/resource-library-coverage-audit.md`
 2. [KNOWN] Survey resource spark 已经把核心判断压成 controlled improvement system：改什么、用什么反馈、谁验证、如何保留、能否回滚。 — Source: `analysis/survey-resource-spark.md`
 3. [KNOWN] Agent-Swarm Evolve 是用户明确要求新增的内容部分，应当进入 topic map，而不是只留在内部分析页。 — Source: `analysis/agent-swarm-evolve.md`
 4. [INFERRED] SEO 主题簇的 rank 应由 survey 贡献、证据强度、读者需求、可发布资产和与 Evolve-AGI Index 的关系共同决定。
