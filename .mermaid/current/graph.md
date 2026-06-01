@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-01T13:52:26+08:00
+Generated: 2026-06-01T19:51:04+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-06-01T13:52:26+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: SamurAIGPT/awesome-openclaw, LHL3341/awesome-claws, pegasi-ai/reins, cloudllm-ai/mentisdb, rohitg00/awesome-openclaw, yoloshii/ClawMem, clawsouls/soulclaw.
-- New raw files: raw-github/samuraigpt_awesome-openclaw.md, raw-github/lhl3341_awesome-claws.md, raw-github/pegasi-ai_reins.md, raw-github/cloudllm-ai_mentisdb.md, raw-github/rohitg00_awesome-openclaw.md, raw-github/yoloshii_clawmem.md, raw-github/clawsouls_soulclaw.md.
-- New public model cards and site reports: project/report ids 363, 364, 365, 366, 367, 368, 369.
+- Web-observed repos: Team-Commonly/commonly, matevip/mateclaw, christinminor459/OnionClaw, nowledge-co/community, 0xNyk/lacp, manthanguptaa/water, SponsioLabs/Sponsio.
+- New raw files: raw-github/team-commonly_commonly.md, raw-github/matevip_mateclaw.md, raw-github/christinminor459_onionclaw.md, raw-github/nowledge-co_community.md, raw-github/0xnyk_lacp.md, raw-github/manthanguptaa_water.md, raw-github/sponsiolabs_sponsio.md.
+- New public model cards and site reports: project/report ids 370, 371, 372, 373, 374, 375, 376.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
 - GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

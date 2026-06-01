@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T13:52:26+08:00",
+  "generated_at": "2026-06-01T19:51:04+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -15,6 +15,21 @@
       "content_timestamp": "unknown",
       "evidence": "framework/runtime/orchestration signal",
       "description": "A high-level multi-agent development framework built on LangGraph, combining CrewAI’s intuitive concepts with enterprise-grade features, ready-to-use templates, and full-stack UI for rapid productization."
+    },
+    {
+      "repo": "0xNyk/lacp",
+      "url": "https://github.com/0xNyk/lacp",
+      "stars": "261",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "TypeScript/Protocol/Agent Context Exchange",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 261 stars, 33 forks, 249 commits, and protocol-oriented positioning for agent context exchange.",
+      "description": "0xNyk/lacp provides a lightweight agent context protocol aimed at reusable context passing and tool interoperability."
     },
     {
       "repo": "0xsanei/darwinia",
@@ -1410,6 +1425,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed 15 commits, MIT license, Shell primary language, Claude Code/Codex/Gemini/OpenClaw support, project-planner and docs-sync workflow signals, 10 stars and 2 forks",
       "description": "chriscox/agent-skills 是可复用的 AI coding agent skill 库，重点覆盖 project-planner、docs-sync 和跨 Claude Code、Codex、Gemini CLI、OpenClaw 的共享工作流。"
+    },
+    {
+      "repo": "christinminor459/OnionClaw",
+      "url": "https://github.com/christinminor459/OnionClaw",
+      "stars": "198",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "skill",
+      "stack": "Python/OpenClaw Plugin/Security Workflow",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 198 stars, 56 forks, 48 commits, and explicit OPSEC plugin framing for OpenClaw.",
+      "description": "christinminor459/OnionClaw is an OPSEC-focused OpenClaw plugin layer for secure agent execution and operational hardening."
     },
     {
       "repo": "chrisworsey55/atlas-gic",
@@ -4607,6 +4637,21 @@
       "description": "dotnet-skills 是面向 Codex、Claude Code、GitHub Copilot、Gemini、Junie 的 .NET skill catalog 和 CLI，把现代 .NET 官方文档、包、agents 与 upstream watch 组合成可安装技能供应链。"
     },
     {
+      "repo": "manthanguptaa/water",
+      "url": "https://github.com/manthanguptaa/water",
+      "stars": "288",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-suite",
+      "base_theme": "evolution",
+      "stack": "Python/Coding Agent/Self-Improvement Evaluation",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 288 stars, 38 forks, 174 commits, Apache-2.0 license, and explicit self-improving coding-agent framing.",
+      "description": "manthanguptaa/water targets self-improving coding agents with benchmark-linked execution loops and iterative optimization behavior."
+    },
+    {
       "repo": "Martian-Engineering/lossless-claw",
       "url": "https://github.com/Martian-Engineering/lossless-claw",
       "stars": "4800",
@@ -4635,6 +4680,21 @@
       "content_timestamp": "2024-02-01",
       "evidence": "benchmark/evaluation/harness signal",
       "description": "AI powered automatic software healing agent"
+    },
+    {
+      "repo": "matevip/mateclaw",
+      "url": "https://github.com/matevip/mateclaw",
+      "stars": "537",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "Java/TypeScript/Spring AI Alibaba/OpenClaw Runtime",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 537 stars, 184 forks, 1,020 commits, Apache-2.0 license, and OpenClaw runtime positioning.",
+      "description": "matevip/mateclaw extends the OpenClaw ecosystem with memory-aware runtime controls, rule-engine automation, and agent execution governance."
     },
     {
       "repo": "matrixorigin/Memoria",
@@ -5640,6 +5700,21 @@
       "content_timestamp": "2026-05-31",
       "evidence": "web-observed GitHub page showed 3.7k stars, 422 forks, 7 commits, MIT-licensed model card references, and explicit self-evolution benchmark claims.",
       "description": "NousResearch/hermes-agent-self-evolution packages a self-evolving RL training workflow that distills improved interaction behavior into Hermes model variants."
+    },
+    {
+      "repo": "nowledge-co/community",
+      "url": "https://github.com/nowledge-co/community",
+      "stars": "86",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "TypeScript/OpenClaw Skills Hub/Community Runtime Patterns",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 86 stars, 21 forks, 492 commits, and explicit community resource positioning around OpenClaw.",
+      "description": "nowledge-co/community acts as a community hub for OpenClaw skills, runtime integrations, and ecosystem collaboration resources."
     },
     {
       "repo": "NVIDIA/skills",
@@ -7757,6 +7832,21 @@
       "description": "SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning"
     },
     {
+      "repo": "SponsioLabs/Sponsio",
+      "url": "https://github.com/SponsioLabs/Sponsio",
+      "stars": "469",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "harness",
+      "stack": "TypeScript/Multi-Agent Workflow Control Plane",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 469 stars, 28 forks, 119 commits, and explicit workflow/multi-agent control-plane positioning.",
+      "description": "SponsioLabs/Sponsio provides workflow-centric multi-agent control infrastructure for orchestrated autonomous task execution."
+    },
+    {
       "repo": "square-mind/squaremind",
       "url": "https://github.com/square-mind/squaremind",
       "stars": "0",
@@ -8100,6 +8190,21 @@
       "content_timestamp": "2025-09-22",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "Awesome-RL-Reasoning"
+    },
+    {
+      "repo": "Team-Commonly/commonly",
+      "url": "https://github.com/Team-Commonly/commonly",
+      "stars": "685",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evolution",
+      "stack": "TypeScript/Node.js/Agent Swarm Runtime",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 685 stars, 97 forks, 1,075 commits, and explicit AI swarm workflow operating system positioning.",
+      "description": "Team-Commonly/commonly positions itself as an AI swarm workflow operating system with built-in orchestration and repository-first execution patterns."
     },
     {
       "repo": "tech-leads-club/agent-skills",

@@ -10,7 +10,7 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `raw-github` | present | 647 | 1 | 0 | 5.3 MB |
+| `raw-github` | present | 654 | 1 | 0 | 5.3 MB |
 | `raw-papers` | present | 201 | 1 | 0 | 1008 KB |
 | `raw-blogs` | present | 1308 | 1 | 0 | 3.2 MB |
 | `raw-social` | present | 1318 | 4 | 0 | 19 MB |
@@ -25,6 +25,7 @@
 ### `raw-github`
 
 - `raw-github/01-ai_langcrew.md`
+- `raw-github/0xnyk_lacp.md`
 - `raw-github/0xsanei_darwinia.md`
 - `raw-github/28naem-del_mnemosyne.md`
 - `raw-github/803_skills-supply.md`
@@ -33,7 +34,6 @@
 - `raw-github/aaronowh_ai-scientist-v2.md`
 - `raw-github/aayoawoyemi_ori-mnemos.md`
 - `raw-github/abhisakh_ai-scientist-v2.md`
-- `raw-github/adam-s_intercept.md`
 
 ### `raw-papers`
 

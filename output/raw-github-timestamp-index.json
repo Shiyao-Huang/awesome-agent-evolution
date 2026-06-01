@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-01T00:00:00+08:00",
-  "total": 646,
-  "updated_files": 646,
+  "total": 653,
+  "updated_files": 653,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -12,6 +12,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "0xNyk/lacp",
+      "url": "https://github.com/0xNyk/lacp",
+      "file": "raw-github/0xnyk_lacp.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T19:51:04+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
     },
     {
       "repo": "0xsanei/darwinia",
@@ -849,6 +858,15 @@
       "collected_at": "2026-05-24T15:06:00Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "christinminor459/OnionClaw",
+      "url": "https://github.com/christinminor459/OnionClaw",
+      "file": "raw-github/christinminor459_onionclaw.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T19:51:04+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
     },
     {
       "repo": "chrisworsey55/atlas-gic",
@@ -2768,6 +2786,15 @@
       "timestamp_source": "web_observed_github_page_2026_05_25"
     },
     {
+      "repo": "manthanguptaa/water",
+      "url": "https://github.com/manthanguptaa/water",
+      "file": "raw-github/manthanguptaa_water.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T19:51:04+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
+    },
+    {
       "repo": "Martian-Engineering/lossless-claw",
       "url": "https://github.com/Martian-Engineering/lossless-claw",
       "file": "raw-github/martian-engineering_lossless-claw.md",
@@ -2784,6 +2811,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2024-Q1",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "matevip/mateclaw",
+      "url": "https://github.com/matevip/mateclaw",
+      "file": "raw-github/matevip_mateclaw.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T19:51:04+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
     },
     {
       "repo": "matrixorigin/Memoria",
@@ -3387,6 +3423,15 @@
       "collected_at": "2026-05-22T13:00:00+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "AnySearch GitHub extract: latest release v2026.5.16 on 2026-05-16"
+    },
+    {
+      "repo": "nowledge-co/community",
+      "url": "https://github.com/nowledge-co/community",
+      "file": "raw-github/nowledge-co_community.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T19:51:04+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
     },
     {
       "repo": "NVIDIA/skills",
@@ -4658,6 +4703,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "SponsioLabs/Sponsio",
+      "url": "https://github.com/SponsioLabs/Sponsio",
+      "file": "raw-github/sponsiolabs_sponsio.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T19:51:04+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
+    },
+    {
       "repo": "square-mind/squaremind",
       "url": "https://github.com/square-mind/squaremind",
       "file": "raw-github/square-mind_squaremind.md",
@@ -4863,6 +4917,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2025-09",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "Team-Commonly/commonly",
+      "url": "https://github.com/Team-Commonly/commonly",
+      "file": "raw-github/team-commonly_commonly.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T19:51:04+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
     },
     {
       "repo": "tech-leads-club/agent-skills",

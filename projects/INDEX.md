@@ -396,6 +396,14 @@
 | ClawMem On-Device Memory Layer | [yoloshii/ClawMem](https://github.com/yoloshii/ClawMem) | On-Device Memory Layer and Retrieval Runtime for Agents | [projects/368-clawmem-on-device-memory-layer.md](368-clawmem-on-device-memory-layer.md) |
 | SoulClaw OpenClaw Fork with Soul Memory | [clawsouls/soulclaw](https://github.com/clawsouls/soulclaw) | OpenClaw Fork with Multi-Tier Memory and Persona Runtime | [projects/369-soulclaw-openclaw-fork-with-soul-memory.md](369-soulclaw-openclaw-fork-with-soul-memory.md) |
 
+| Commonly Agent Swarm Operating System | [Team-Commonly/commonly](https://github.com/Team-Commonly/commonly) | Multi-Agent Swarm Orchestration Runtime and Workflow Infrastructure | [projects/370-commonly-agent-swarm-operating-system.md](370-commonly-agent-swarm-operating-system.md) |
+| MateClaw OpenClaw Memory and Rule Engine | [matevip/mateclaw](https://github.com/matevip/mateclaw) | OpenClaw Runtime Extension with Memory Control and Automation Rules | [projects/371-mateclaw-openclaw-memory-and-rule-engine.md](371-mateclaw-openclaw-memory-and-rule-engine.md) |
+| OnionClaw OPSEC Agent Plugin | [christinminor459/OnionClaw](https://github.com/christinminor459/OnionClaw) | Security/Privacy Agent Plugin with Tooling and Channel Hardening | [projects/372-onionclaw-opsec-agent-plugin.md](372-onionclaw-opsec-agent-plugin.md) |
+| Nowledge Community OpenClaw Skills Hub | [nowledge-co/community](https://github.com/nowledge-co/community) | OpenClaw Community Skills and Runtime Integration Hub | [projects/373-nowledge-community-openclaw-skills-hub.md](373-nowledge-community-openclaw-skills-hub.md) |
+| LACP Lightweight Agent Context Protocol | [0xNyk/lacp](https://github.com/0xNyk/lacp) | Agent Context Protocol and Interoperability Tooling | [projects/374-lacp-lightweight-agent-context-protocol.md](374-lacp-lightweight-agent-context-protocol.md) |
+| WATER Self-Improving Coding Agent | [manthanguptaa/water](https://github.com/manthanguptaa/water) | Self-Improving Coding Agent with Benchmark-Oriented Execution | [projects/375-water-self-improving-coding-agent.md](375-water-self-improving-coding-agent.md) |
+| Sponsio Workflow and Multi-Agent Control Plane | [SponsioLabs/Sponsio](https://github.com/SponsioLabs/Sponsio) | Workflow Automation and Multi-Agent Control Infrastructure | [projects/376-sponsio-workflow-and-multi-agent-control.md](376-sponsio-workflow-and-multi-agent-control.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

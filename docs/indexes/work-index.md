@@ -13,12 +13,12 @@
 | `paper-drafts` | present | 31 | 2 | 0 | 2.3 MB |
 | `paper` | present | 15 | 2 | 0 | 1023 KB |
 | `latex` | present | 9 | 2 | 0 | 53 KB |
-| `site` | present | 1537 | 442 | 0 | 33 MB |
+| `site` | present | 1546 | 442 | 0 | 33 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
-| `scripts` | present | 45 | 1 | 0 | 1.2 MB |
-| `data-engine` | present | 479 | 18 | 0 | 5.9 MB |
-| `work/research` | present | 63 | 2 | 0 | 2.2 MB |
-| `work/wiki` | present | 66 | 6 | 0 | 463 KB |
+| `scripts` | present | 47 | 1 | 0 | 1.3 MB |
+| `data-engine` | present | 486 | 19 | 0 | 6.4 MB |
+| `work/research` | present | 64 | 2 | 0 | 2.2 MB |
+| `work/wiki` | present | 68 | 6 | 0 | 473 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files
@@ -91,6 +91,7 @@
 
 - `scripts/analyze_github_project_data.mjs`
 - `scripts/auto-commit-shield.sh`
+- `scripts/build_github_star_history_db.mjs`
 - `scripts/enforce_raw_timestamps.py`
 - `scripts/generate-site-knowledge-graph.mjs`
 - `scripts/generate-wiki-index.mjs`
@@ -98,7 +99,6 @@
 - `scripts/generate_charts.py`
 - `scripts/generate_frontier_value_queue.mjs`
 - `scripts/generate_project_indexes.mjs`
-- `scripts/generate_repo_classification.py`
 
 ### `data-engine`
 

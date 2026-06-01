@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T13:52:26+08:00",
+  "generated_at": "2026-06-01T19:51:04+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -346,7 +346,14 @@
         "raw-github/cloudllm-ai_mentisdb.md",
         "raw-github/rohitg00_awesome-openclaw.md",
         "raw-github/yoloshii_clawmem.md",
-        "raw-github/clawsouls_soulclaw.md"
+        "raw-github/clawsouls_soulclaw.md",
+        "raw-github/team-commonly_commonly.md",
+        "raw-github/matevip_mateclaw.md",
+        "raw-github/christinminor459_onionclaw.md",
+        "raw-github/nowledge-co_community.md",
+        "raw-github/0xnyk_lacp.md",
+        "raw-github/manthanguptaa_water.md",
+        "raw-github/sponsiolabs_sponsio.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -498,7 +505,8 @@
         "work/research/hourly-public-metadata-update-2026-05-31-0720.md",
         "work/research/hourly-public-metadata-update-2026-05-31-1950.md",
         "work/research/hourly-public-metadata-update-2026-06-01-0150.md",
-        "work/research/hourly-public-metadata-update-2026-06-01-1352.md"
+        "work/research/hourly-public-metadata-update-2026-06-01-1352.md",
+        "work/research/hourly-public-metadata-update-2026-06-01-1951.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -1132,7 +1140,21 @@
         "projects/368-clawmem-on-device-memory-layer.md",
         "site/public/reports/projects/368-clawmem-on-device-memory-layer.md",
         "projects/369-soulclaw-openclaw-fork-with-soul-memory.md",
-        "site/public/reports/projects/369-soulclaw-openclaw-fork-with-soul-memory.md"
+        "site/public/reports/projects/369-soulclaw-openclaw-fork-with-soul-memory.md",
+        "projects/370-commonly-agent-swarm-operating-system.md",
+        "site/public/reports/projects/370-commonly-agent-swarm-operating-system.md",
+        "projects/371-mateclaw-openclaw-memory-and-rule-engine.md",
+        "site/public/reports/projects/371-mateclaw-openclaw-memory-and-rule-engine.md",
+        "projects/372-onionclaw-opsec-agent-plugin.md",
+        "site/public/reports/projects/372-onionclaw-opsec-agent-plugin.md",
+        "projects/373-nowledge-community-openclaw-skills-hub.md",
+        "site/public/reports/projects/373-nowledge-community-openclaw-skills-hub.md",
+        "projects/374-lacp-lightweight-agent-context-protocol.md",
+        "site/public/reports/projects/374-lacp-lightweight-agent-context-protocol.md",
+        "projects/375-water-self-improving-coding-agent.md",
+        "site/public/reports/projects/375-water-self-improving-coding-agent.md",
+        "projects/376-sponsio-workflow-and-multi-agent-control.md",
+        "site/public/reports/projects/376-sponsio-workflow-and-multi-agent-control.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1457,15 +1479,15 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-06-01T13:52:26+08:00",
+    "run_at": "2026-06-01T19:51:04+08:00",
     "added_repositories": [
-      "SamurAIGPT/awesome-openclaw",
-      "LHL3341/awesome-claws",
-      "pegasi-ai/reins",
-      "cloudllm-ai/mentisdb",
-      "rohitg00/awesome-openclaw",
-      "yoloshii/ClawMem",
-      "clawsouls/soulclaw"
+      "Team-Commonly/commonly",
+      "matevip/mateclaw",
+      "christinminor459/OnionClaw",
+      "nowledge-co/community",
+      "0xNyk/lacp",
+      "manthanguptaa/water",
+      "SponsioLabs/Sponsio"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",

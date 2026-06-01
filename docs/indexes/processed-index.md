@@ -10,9 +10,9 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `analysis` | present | 22 | 2 | 0 | 4.0 MB |
+| `analysis` | present | 26 | 2 | 0 | 5.3 MB |
 | `research` | present | 141 | 8 | 0 | 2.5 MB |
-| `projects` | present | 25885 | 2882 | 0 | 2.9 GB |
+| `projects` | present | 25892 | 2882 | 0 | 2.9 GB |
 | `paper-reviews` | present | 171 | 1 | 0 | 1.6 MB |
 | `academic-reviews` | missing | 0 | 0 | 0 | 0 B |
 | `papers` | present | 3 | 2 | 0 | 16 KB |
@@ -29,10 +29,10 @@
 - `analysis/evolve-agi-index.md`
 - `analysis/five-evolution-loops-topic.md`
 - `analysis/framework-painpoint-crosswalk.csv`
+- `analysis/frontier-projects/jarvis-xs-se-agent-dual-chain.md`
 - `analysis/frontier-projects/modelscope-agentevolver-dual-chain.md`
 - `analysis/frontier-value-queue.json`
 - `analysis/frontier-value-queue.md`
-- `analysis/github-analysis.tex`
 
 ### `research`
 
