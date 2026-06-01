@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-01T01:50:26+08:00
+Generated: 2026-06-01T13:52:26+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-06-01T01:50:26+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: longmans/self-evolve, MCKRUZ/openclaw-langfuse, hyperspell/hyperspell-openclaw, composio-community/awesome-openclaw-plugins, mvanhorn/last30days-skill, EESIZ/clawdreamer, ThisIsJeron/awesome-openclaw-plugins, BlockRunAI/awesome-OpenClaw-Money-Maker.
-- New raw files: raw-github/longmans_self-evolve.md, raw-github/mckruz_openclaw-langfuse.md, raw-github/hyperspell_hyperspell-openclaw.md, raw-github/composio-community_awesome-openclaw-plugins.md, raw-github/mvanhorn_last30days-skill.md, raw-github/eesiz_clawdreamer.md, raw-github/thisisjeron_awesome-openclaw-plugins.md, raw-github/blockrunai_awesome-openclaw-money-maker.md.
-- New public model cards and site reports: project/report ids 355, 356, 357, 358, 359, 360, 361, 362.
+- Web-observed repos: SamurAIGPT/awesome-openclaw, LHL3341/awesome-claws, pegasi-ai/reins, cloudllm-ai/mentisdb, rohitg00/awesome-openclaw, yoloshii/ClawMem, clawsouls/soulclaw.
+- New raw files: raw-github/samuraigpt_awesome-openclaw.md, raw-github/lhl3341_awesome-claws.md, raw-github/pegasi-ai_reins.md, raw-github/cloudllm-ai_mentisdb.md, raw-github/rohitg00_awesome-openclaw.md, raw-github/yoloshii_clawmem.md, raw-github/clawsouls_soulclaw.md.
+- New public model cards and site reports: project/report ids 363, 364, 365, 366, 367, 368, 369.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
-- GitNexus status/list worked but analyze failed due LadybugDB lock (`.gitnexus/lbug`) and blocked FTS extension download in fallback HOME mode.
+- GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

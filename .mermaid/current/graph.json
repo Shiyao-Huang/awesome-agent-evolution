@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T01:50:26+08:00",
+  "generated_at": "2026-06-01T13:52:26+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -339,7 +339,14 @@
         "raw-github/mvanhorn_last30days-skill.md",
         "raw-github/eesiz_clawdreamer.md",
         "raw-github/thisisjeron_awesome-openclaw-plugins.md",
-        "raw-github/blockrunai_awesome-openclaw-money-maker.md"
+        "raw-github/blockrunai_awesome-openclaw-money-maker.md",
+        "raw-github/samuraigpt_awesome-openclaw.md",
+        "raw-github/lhl3341_awesome-claws.md",
+        "raw-github/pegasi-ai_reins.md",
+        "raw-github/cloudllm-ai_mentisdb.md",
+        "raw-github/rohitg00_awesome-openclaw.md",
+        "raw-github/yoloshii_clawmem.md",
+        "raw-github/clawsouls_soulclaw.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -490,7 +497,8 @@
         "work/research/hourly-public-metadata-update-2026-05-31-0121.md",
         "work/research/hourly-public-metadata-update-2026-05-31-0720.md",
         "work/research/hourly-public-metadata-update-2026-05-31-1950.md",
-        "work/research/hourly-public-metadata-update-2026-06-01-0150.md"
+        "work/research/hourly-public-metadata-update-2026-06-01-0150.md",
+        "work/research/hourly-public-metadata-update-2026-06-01-1352.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -1110,7 +1118,21 @@
         "projects/361-awesome-openclaw-plugins-thisisjeron.md",
         "site/public/reports/projects/361-awesome-openclaw-plugins-thisisjeron.md",
         "projects/362-awesome-openclaw-money-maker-index.md",
-        "site/public/reports/projects/362-awesome-openclaw-money-maker-index.md"
+        "site/public/reports/projects/362-awesome-openclaw-money-maker-index.md",
+        "projects/363-awesome-openclaw-ecosystem-index-samuraigpt.md",
+        "site/public/reports/projects/363-awesome-openclaw-ecosystem-index-samuraigpt.md",
+        "projects/364-awesome-claws-collection-lhl3341.md",
+        "site/public/reports/projects/364-awesome-claws-collection-lhl3341.md",
+        "projects/365-reins-self-improving-model-framework.md",
+        "site/public/reports/projects/365-reins-self-improving-model-framework.md",
+        "projects/366-mentisdb-agent-memory-graph-database.md",
+        "site/public/reports/projects/366-mentisdb-agent-memory-graph-database.md",
+        "projects/367-awesome-openclaw-plugin-index-rohitg00.md",
+        "site/public/reports/projects/367-awesome-openclaw-plugin-index-rohitg00.md",
+        "projects/368-clawmem-on-device-memory-layer.md",
+        "site/public/reports/projects/368-clawmem-on-device-memory-layer.md",
+        "projects/369-soulclaw-openclaw-fork-with-soul-memory.md",
+        "site/public/reports/projects/369-soulclaw-openclaw-fork-with-soul-memory.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1435,19 +1457,18 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-06-01T01:50:26+08:00",
+    "run_at": "2026-06-01T13:52:26+08:00",
     "added_repositories": [
-      "longmans/self-evolve",
-      "MCKRUZ/openclaw-langfuse",
-      "hyperspell/hyperspell-openclaw",
-      "composio-community/awesome-openclaw-plugins",
-      "mvanhorn/last30days-skill",
-      "EESIZ/clawdreamer",
-      "ThisIsJeron/awesome-openclaw-plugins",
-      "BlockRunAI/awesome-OpenClaw-Money-Maker"
+      "SamurAIGPT/awesome-openclaw",
+      "LHL3341/awesome-claws",
+      "pegasi-ai/reins",
+      "cloudllm-ai/mentisdb",
+      "rohitg00/awesome-openclaw",
+      "yoloshii/ClawMem",
+      "clawsouls/soulclaw"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "available; status/list worked, but analyze failed due LadybugDB lock + FTS extension download blocker"
+    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
   }
 }

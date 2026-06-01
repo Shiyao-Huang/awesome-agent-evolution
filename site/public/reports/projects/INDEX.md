@@ -388,6 +388,14 @@
 | Awesome OpenClaw Plugins (ThisIsJeron) | [ThisIsJeron/awesome-openclaw-plugins](https://github.com/ThisIsJeron/awesome-openclaw-plugins) | OpenClaw Plugin Catalog and Community Knowledge Index | [projects/361-awesome-openclaw-plugins-thisisjeron.md](361-awesome-openclaw-plugins-thisisjeron.md) |
 | Awesome OpenClaw Money Maker Index | [BlockRunAI/awesome-OpenClaw-Money-Maker](https://github.com/BlockRunAI/awesome-OpenClaw-Money-Maker) | Agent Monetization Workflow and OpenClaw Use-Case Index | [projects/362-awesome-openclaw-money-maker-index.md](362-awesome-openclaw-money-maker-index.md) |
 
+| Awesome OpenClaw Ecosystem Index (SamurAIGPT) | [SamurAIGPT/awesome-openclaw](https://github.com/SamurAIGPT/awesome-openclaw) | OpenClaw Ecosystem Curation and Skill Resource Index | [projects/363-awesome-openclaw-ecosystem-index-samuraigpt.md](363-awesome-openclaw-ecosystem-index-samuraigpt.md) |
+| Awesome Claws Collection (LHL3341) | [LHL3341/awesome-claws](https://github.com/LHL3341/awesome-claws) | OpenClaw Ecosystem Collection and Skill/Tool Index | [projects/364-awesome-claws-collection-lhl3341.md](364-awesome-claws-collection-lhl3341.md) |
+| REINS Self-Improving Model Framework | [pegasi-ai/reins](https://github.com/pegasi-ai/reins) | Self-Improving Agent Policy Framework and Training Harness | [projects/365-reins-self-improving-model-framework.md](365-reins-self-improving-model-framework.md) |
+| MentisDB Agent Memory Graph Database | [cloudllm-ai/mentisdb](https://github.com/cloudllm-ai/mentisdb) | Durable Agent Memory Graph Database and Skill Registry Runtime | [projects/366-mentisdb-agent-memory-graph-database.md](366-mentisdb-agent-memory-graph-database.md) |
+| Awesome OpenClaw Plugin Index (rohitg00) | [rohitg00/awesome-openclaw](https://github.com/rohitg00/awesome-openclaw) | OpenClaw Plugin and Agent Skills Resource Index | [projects/367-awesome-openclaw-plugin-index-rohitg00.md](367-awesome-openclaw-plugin-index-rohitg00.md) |
+| ClawMem On-Device Memory Layer | [yoloshii/ClawMem](https://github.com/yoloshii/ClawMem) | On-Device Memory Layer and Retrieval Runtime for Agents | [projects/368-clawmem-on-device-memory-layer.md](368-clawmem-on-device-memory-layer.md) |
+| SoulClaw OpenClaw Fork with Soul Memory | [clawsouls/soulclaw](https://github.com/clawsouls/soulclaw) | OpenClaw Fork with Multi-Tier Memory and Persona Runtime | [projects/369-soulclaw-openclaw-fork-with-soul-memory.md](369-soulclaw-openclaw-fork-with-soul-memory.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

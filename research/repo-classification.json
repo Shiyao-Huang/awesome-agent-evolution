@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T01:50:26+08:00",
+  "generated_at": "2026-06-01T13:52:26+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -1547,6 +1547,21 @@
       "description": "Self-evolving AI agent framework with 5-layer safety gatekeeper. Agents observe failures, propose fixes, and safely apply them. Built on HKUDS/nanobot."
     },
     {
+      "repo": "clawsouls/soulclaw",
+      "url": "https://github.com/clawsouls/soulclaw",
+      "stars": "7",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "memory",
+      "stack": "TypeScript/Swift/Kotlin/OpenClaw Fork with Soul Memory",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 7 stars, 0 forks, 17,210 commits, MIT license, and TypeScript-major language distribution.",
+      "description": "clawsouls/soulclaw is an OpenClaw-derived framework emphasizing persistent identity, multi-tier memory, and channel-ready agent runtime."
+    },
+    {
       "repo": "clint-kristopher-morris/llm-guided-evolution",
       "url": "https://github.com/clint-kristopher-morris/llm-guided-evolution",
       "stars": "19",
@@ -1560,6 +1575,21 @@
       "content_timestamp": "2024-07-08",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "LLM Guided Evolution - The Automation of Models Advancing Models"
+    },
+    {
+      "repo": "cloudllm-ai/mentisdb",
+      "url": "https://github.com/cloudllm-ai/mentisdb",
+      "stars": "71",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "Rust/Graph Memory Database/Versioned Skill Registry",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 71 stars, 8 forks, 641 commits, MIT license, Rust codebase, and explicit durable memory positioning.",
+      "description": "cloudllm-ai/mentisdb is a durable semantic memory engine and versioned skill registry for long-horizon AI agent operation."
     },
     {
       "repo": "CodeAlive-AI/ai-driven-development",
@@ -4277,6 +4307,21 @@
       "description": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search"
     },
     {
+      "repo": "LHL3341/awesome-claws",
+      "url": "https://github.com/LHL3341/awesome-claws",
+      "stars": "129",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "TypeScript/OpenClaw Ecosystem Index/Curated Collection",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 129 stars, 12 forks, 48 commits, CC0-1.0 licensing, and TypeScript-dominant repository composition.",
+      "description": "LHL3341/awesome-claws curates OpenClaw products, skills, communities, and ecosystem resources in bilingual scenario-focused structure."
+    },
+    {
       "repo": "lightchen233/awesome-ai4research",
       "url": "https://github.com/lightchen233/awesome-ai4research",
       "stars": "230",
@@ -6287,6 +6332,21 @@
       "description": "PRB Agent Skills is a compact personal skill pack for Claude Code and Codex, with executable workflow guidance for review, commits, docs, release work and task execution."
     },
     {
+      "repo": "pegasi-ai/reins",
+      "url": "https://github.com/pegasi-ai/reins",
+      "stars": "84",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "evolution",
+      "stack": "Python/Self-Improving Model Framework/Training Harness",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub search snapshot showed 84 stars, 7 forks, 41 commits, MIT license, and Python implementation for REINS.",
+      "description": "pegasi-ai/reins provides a self-improving control framework aimed at reducing undesired agent behavior during iterative execution."
+    },
+    {
       "repo": "pgg3/evotoolkit",
       "url": "https://github.com/pgg3/evotoolkit",
       "stars": "68",
@@ -6932,6 +6992,21 @@
       "content_timestamp": "2026-05-18"
     },
     {
+      "repo": "rohitg00/awesome-openclaw",
+      "url": "https://github.com/rohitg00/awesome-openclaw",
+      "stars": "512",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Python/OpenClaw Plugin Catalog/Resource Index",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 512 stars, 123 forks, 258 commits, CC0-1.0 licensing signal, and Python repository composition.",
+      "description": "rohitg00/awesome-openclaw is a high-activity curated index for OpenClaw plugins, skills, deployment patterns, and ecosystem resources."
+    },
+    {
       "repo": "ronit26mehta/argus-ai-debate",
       "url": "https://github.com/ronit26mehta/argus-ai-debate",
       "stars": "3",
@@ -7080,6 +7155,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "A collection of the the best ML and AI news every week (research, news, resources)"
+    },
+    {
+      "repo": "SamurAIGPT/awesome-openclaw",
+      "url": "https://github.com/SamurAIGPT/awesome-openclaw",
+      "stars": "410",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "skill",
+      "stack": "Shell/JavaScript/HTML/OpenClaw Resource Index",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 410 stars, 72 forks, 111 commits, multi-language repository composition, and explicit OpenClaw ecosystem curation scope.",
+      "description": "SamurAIGPT/awesome-openclaw is a curated index of OpenClaw resources, tools, skills, tutorials, and community projects."
     },
     {
       "repo": "sasleee/tencentdb-agent-memory",
@@ -9105,6 +9195,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "A Truman Show of a self-evolving AI coding agent. It writes its own code. Growing up in public."
+    },
+    {
+      "repo": "yoloshii/ClawMem",
+      "url": "https://github.com/yoloshii/ClawMem",
+      "stars": "179",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "TypeScript/Bun/On-Device Memory Layer/RAG Hooks",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 179 stars, 26 forks, 252 commits, MIT license, and TypeScript-dominant implementation.",
+      "description": "yoloshii/ClawMem provides an on-device memory layer for Claude Code, Hermes, and OpenClaw agents with hybrid retrieval and hooks."
     },
     {
       "repo": "yonkoo11/hermes-dojo",

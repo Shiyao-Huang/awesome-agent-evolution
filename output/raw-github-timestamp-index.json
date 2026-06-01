@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-01T00:00:00+08:00",
-  "total": 639,
-  "updated_files": 639,
+  "total": 646,
+  "updated_files": 646,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -932,6 +932,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "clawsouls/soulclaw",
+      "url": "https://github.com/clawsouls/soulclaw",
+      "file": "raw-github/clawsouls_soulclaw.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T13:52:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
+    },
+    {
       "repo": "clint-kristopher-morris/llm-guided-evolution",
       "url": "https://github.com/clint-kristopher-morris/llm-guided-evolution",
       "file": "raw-github/clint-kristopher-morris_llm-guided-evolution.md",
@@ -939,6 +948,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "2024-Q3",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "cloudllm-ai/mentisdb",
+      "url": "https://github.com/cloudllm-ai/mentisdb",
+      "file": "raw-github/cloudllm-ai_mentisdb.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T13:52:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
     },
     {
       "repo": "CodeAlive-AI/ai-driven-development",
@@ -2570,6 +2588,15 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
+      "repo": "LHL3341/awesome-claws",
+      "url": "https://github.com/LHL3341/awesome-claws",
+      "file": "raw-github/lhl3341_awesome-claws.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T13:52:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
+    },
+    {
       "repo": "lightchen233/awesome-ai4research",
       "url": "https://github.com/lightchen233/awesome-ai4research",
       "file": "raw-github/lightchen233_awesome-ai4research.md",
@@ -3776,6 +3803,15 @@
       "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid"
     },
     {
+      "repo": "pegasi-ai/reins",
+      "url": "https://github.com/pegasi-ai/reins",
+      "file": "raw-github/pegasi-ai_reins.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T13:52:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
+    },
+    {
       "repo": "pgg3/evotoolkit",
       "url": "https://github.com/pgg3/evotoolkit",
       "file": "raw-github/pgg3_evotoolkit.md",
@@ -4163,6 +4199,15 @@
       "timestamp_source": "AnySearch GitHub result: last push 2026-05-18; latest release v0.9.20 on 2026-05-18"
     },
     {
+      "repo": "rohitg00/awesome-openclaw",
+      "url": "https://github.com/rohitg00/awesome-openclaw",
+      "file": "raw-github/rohitg00_awesome-openclaw.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T13:52:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
+    },
+    {
       "repo": "ronit26mehta/argus-ai-debate",
       "url": "https://github.com/ronit26mehta/argus-ai-debate",
       "file": "raw-github/ronit26mehta_argus-ai-debate.md",
@@ -4251,6 +4296,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "SamurAIGPT/awesome-openclaw",
+      "url": "https://github.com/SamurAIGPT/awesome-openclaw",
+      "file": "raw-github/samuraigpt_awesome-openclaw.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T13:52:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
     },
     {
       "repo": "sasleee/tencentdb-agent-memory",
@@ -5466,6 +5520,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "yoloshii/ClawMem",
+      "url": "https://github.com/yoloshii/ClawMem",
+      "file": "raw-github/yoloshii_clawmem.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-01T13:52:26+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_01"
     },
     {
       "repo": "yonkoo11/hermes-dojo",

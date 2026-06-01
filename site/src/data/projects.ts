@@ -6404,6 +6404,205 @@ export const projects: Project[] = [
                     "resource-index",
                     "monetization"
             ]
+    },
+    {
+            "name": "Awesome OpenClaw Ecosystem Index (SamurAIGPT)",
+            "repo": "SamurAIGPT/awesome-openclaw",
+            "url": "https://github.com/SamurAIGPT/awesome-openclaw",
+            "stars": 410,
+            "forks": 72,
+            "language": "Shell/JavaScript/HTML",
+            "license": "License file present (public page)",
+            "report": "projects/363-awesome-openclaw-ecosystem-index-samuraigpt.md",
+            "pattern": "curate OpenClaw tools, skills, tutorials, and ecosystem modules into one navigable index -> group resources by workflow role and operating context -> shorten adoption path for newcomers and operators -> turn fragmented community assets into reusable skill discovery infrastructure",
+            "description": "SamurAIGPT/awesome-openclaw is a curated index of OpenClaw resources, tools, skills, tutorials, and community projects.",
+            "stack": [
+                    "Shell",
+                    "JavaScript",
+                    "HTML",
+                    "OpenClaw Resource Index"
+            ],
+            "category": "OpenClaw Ecosystem Curation and Skill Resource Index",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/samuraigpt_awesome-openclaw.md",
+            "status": "candidate",
+            "tags": [
+                    "openclaw",
+                    "skills",
+                    "resource-index",
+                    "tutorial",
+                    "ecosystem"
+            ]
+    },
+    {
+            "name": "Awesome Claws Collection (LHL3341)",
+            "repo": "LHL3341/awesome-claws",
+            "url": "https://github.com/LHL3341/awesome-claws",
+            "stars": 129,
+            "forks": 12,
+            "language": "TypeScript",
+            "license": "CC0-1.0",
+            "report": "projects/364-awesome-claws-collection-lhl3341.md",
+            "pattern": "organize OpenClaw products, skills, communities, and ecosystem resources into scenario-based sections -> keep practical references and links continuously discoverable -> reduce search overhead for builders selecting tools -> accelerate workflow assembly for multi-agent and channel deployments",
+            "description": "LHL3341/awesome-claws curates OpenClaw products, skills, communities, and ecosystem resources in bilingual scenario-focused structure.",
+            "stack": [
+                    "TypeScript",
+                    "OpenClaw Ecosystem Index",
+                    "Curated Collection"
+            ],
+            "category": "OpenClaw Ecosystem Collection and Skill/Tool Index",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/lhl3341_awesome-claws.md",
+            "status": "candidate",
+            "tags": [
+                    "openclaw",
+                    "skills",
+                    "resource-index",
+                    "ecosystem",
+                    "tutorial"
+            ]
+    },
+    {
+            "name": "REINS Self-Improving Model Framework",
+            "repo": "pegasi-ai/reins",
+            "url": "https://github.com/pegasi-ai/reins",
+            "stars": 84,
+            "forks": 7,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/365-reins-self-improving-model-framework.md",
+            "pattern": "constrain and optimize agent behavior with explicit reinforcement policies -> score behavior against undesired actions and alignment constraints -> update control policies as reusable guardrails -> compound safer self-improving behavior in repeated execution loops",
+            "description": "pegasi-ai/reins provides a self-improving control framework aimed at reducing undesired agent behavior during iterative execution.",
+            "stack": [
+                    "Python",
+                    "Self-Improving Model Framework",
+                    "Training Harness"
+            ],
+            "category": "Self-Improving Agent Policy Framework and Training Harness",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/pegasi-ai_reins.md",
+            "status": "candidate",
+            "tags": [
+                    "evolution",
+                    "framework",
+                    "reinforcement",
+                    "policy",
+                    "harness"
+            ]
+    },
+    {
+            "name": "MentisDB Agent Memory Graph Database",
+            "repo": "cloudllm-ai/mentisdb",
+            "url": "https://github.com/cloudllm-ai/mentisdb",
+            "stars": 71,
+            "forks": 8,
+            "language": "Rust",
+            "license": "MIT",
+            "report": "projects/366-mentisdb-agent-memory-graph-database.md",
+            "pattern": "store append-only semantic memory and thought chains in a durable graph substrate -> version skills as integrity-checked artifacts similar to a registry -> retrieve and merge high-signal historical context into active agent decisions -> preserve learning continuity across sessions, models, and team handoffs",
+            "description": "cloudllm-ai/mentisdb is a durable semantic memory engine and versioned skill registry for long-horizon AI agent operation.",
+            "stack": [
+                    "Rust",
+                    "Graph Memory Database",
+                    "Versioned Skill Registry"
+            ],
+            "category": "Durable Agent Memory Graph Database and Skill Registry Runtime",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/cloudllm-ai_mentisdb.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "graph-database",
+                    "skills",
+                    "registry",
+                    "rust"
+            ]
+    },
+    {
+            "name": "Awesome OpenClaw Plugin Index (rohitg00)",
+            "repo": "rohitg00/awesome-openclaw",
+            "url": "https://github.com/rohitg00/awesome-openclaw",
+            "stars": 512,
+            "forks": 123,
+            "language": "Python",
+            "license": "CC0-1.0",
+            "report": "projects/367-awesome-openclaw-plugin-index-rohitg00.md",
+            "pattern": "aggregate plugin, memory, observability, deployment, and benchmark resources around OpenClaw workflows -> structure links by operational problem class -> give installable and reusable pathways for skills and channels -> increase reproducibility of agent capability composition",
+            "description": "rohitg00/awesome-openclaw is a high-activity curated index for OpenClaw plugins, skills, deployment patterns, and ecosystem resources.",
+            "stack": [
+                    "Python",
+                    "OpenClaw Plugin Catalog",
+                    "Resource Index"
+            ],
+            "category": "OpenClaw Plugin and Agent Skills Resource Index",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/rohitg00_awesome-openclaw.md",
+            "status": "candidate",
+            "tags": [
+                    "openclaw",
+                    "plugins",
+                    "skills",
+                    "resource-index",
+                    "operations"
+            ]
+    },
+    {
+            "name": "ClawMem On-Device Memory Layer",
+            "repo": "yoloshii/ClawMem",
+            "url": "https://github.com/yoloshii/ClawMem",
+            "stars": 179,
+            "forks": 26,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/368-clawmem-on-device-memory-layer.md",
+            "pattern": "index local documents and session artifacts into a persistent memory substrate -> combine hybrid retrieval, hooks, and MCP tooling to surface relevant context automatically -> preserve decisions and handoffs across sessions and agents -> enable compounding memory quality through repeated retrieval and feedback loops",
+            "description": "yoloshii/ClawMem provides an on-device memory layer for Claude Code, Hermes, and OpenClaw agents with hybrid retrieval and hooks.",
+            "stack": [
+                    "TypeScript",
+                    "Bun",
+                    "On-Device Memory Layer",
+                    "RAG Hooks"
+            ],
+            "category": "On-Device Memory Layer and Retrieval Runtime for Agents",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/yoloshii_clawmem.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "openclaw",
+                    "claude-code",
+                    "mcp",
+                    "rag"
+            ]
+    },
+    {
+            "name": "SoulClaw OpenClaw Fork with Soul Memory",
+            "repo": "clawsouls/soulclaw",
+            "url": "https://github.com/clawsouls/soulclaw",
+            "stars": 7,
+            "forks": 0,
+            "language": "TypeScript",
+            "license": "MIT",
+            "report": "projects/369-soulclaw-openclaw-fork-with-soul-memory.md",
+            "pattern": "extend OpenClaw with persistent identity and multi-tier memory boundaries -> separate immutable soul identity from working and session memories -> synchronize persona and memory policies across channels and teams -> reduce drift while enabling long-horizon behavior consistency",
+            "description": "clawsouls/soulclaw is an OpenClaw-derived framework emphasizing persistent identity, multi-tier memory, and channel-ready agent runtime.",
+            "stack": [
+                    "TypeScript",
+                    "Swift",
+                    "Kotlin",
+                    "OpenClaw Fork with Soul Memory"
+            ],
+            "category": "OpenClaw Fork with Multi-Tier Memory and Persona Runtime",
+            "lastPushed": "2026-06-01T00:00:00Z",
+            "localPath": "raw-github/clawsouls_soulclaw.md",
+            "status": "candidate",
+            "tags": [
+                    "openclaw",
+                    "memory",
+                    "persona",
+                    "framework",
+                    "multi-agent"
+            ]
     }
 ];
 
@@ -6434,7 +6633,7 @@ export const projectGroups = [
   ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
   ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench'] }
   ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness', 'dotnet/skills', 'datalayer/agent-skills', 'block/agent-skills', 'Corbell-AI/evalmonkey', 'nomic-ai/aec-bench', 'google/ax', 'aiming-lab/AutoHarness', 'OWASP/www-project-agent-memory-guard', 'addyosmani/agent-skills', 'zocomputer/skills', 'QF-Bench/QuantitativeFinance-Bench', 'zikuicai/aegisllm', 'EvoMap/evolver', 'NousResearch/hermes-agent-self-evolution', 'knowall-ai/mcp-neo4j-agent-memory', 'LearnPrompt/cc-harness-skills', 'aiming-lab/ClawArena', 'kodustech/awesome-agent-skills', 'Martian-Engineering/lossless-claw', 'thinkwee/AgentsMeetRL', 'syntax-syndicate/OpenHarness-agent-harness', 'ArcadeAI/openclaw-arcade-plugin', 'humanitylabs-org/obsidianclaw', 'momo-personal-assistant/openclaw-plugin', 'NVIDIA/skills', 'supabase/agent-skills', 'MemTensor/skills-vote', 'aayoawoyemi/ori-mnemos', 'soimy/openclaw-channel-dingtalk', 'pwrdrvr/openclaw-codex-app-server', 'henrikrexed/openclaw-observability-plugin', 'longmans/self-evolve', 'MCKRUZ/openclaw-langfuse', 'hyperspell/hyperspell-openclaw', 'composio-community/awesome-openclaw-plugins', 'mvanhorn/last30days-skill', 'EESIZ/clawdreamer', 'ThisIsJeron/awesome-openclaw-plugins', 'BlockRunAI/awesome-OpenClaw-Money-Maker'] }
+  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness', 'dotnet/skills', 'datalayer/agent-skills', 'block/agent-skills', 'Corbell-AI/evalmonkey', 'nomic-ai/aec-bench', 'google/ax', 'aiming-lab/AutoHarness', 'OWASP/www-project-agent-memory-guard', 'addyosmani/agent-skills', 'zocomputer/skills', 'QF-Bench/QuantitativeFinance-Bench', 'zikuicai/aegisllm', 'EvoMap/evolver', 'NousResearch/hermes-agent-self-evolution', 'knowall-ai/mcp-neo4j-agent-memory', 'LearnPrompt/cc-harness-skills', 'aiming-lab/ClawArena', 'kodustech/awesome-agent-skills', 'Martian-Engineering/lossless-claw', 'thinkwee/AgentsMeetRL', 'syntax-syndicate/OpenHarness-agent-harness', 'ArcadeAI/openclaw-arcade-plugin', 'humanitylabs-org/obsidianclaw', 'momo-personal-assistant/openclaw-plugin', 'NVIDIA/skills', 'supabase/agent-skills', 'MemTensor/skills-vote', 'aayoawoyemi/ori-mnemos', 'soimy/openclaw-channel-dingtalk', 'pwrdrvr/openclaw-codex-app-server', 'henrikrexed/openclaw-observability-plugin', 'longmans/self-evolve', 'MCKRUZ/openclaw-langfuse', 'hyperspell/hyperspell-openclaw', 'composio-community/awesome-openclaw-plugins', 'mvanhorn/last30days-skill', 'EESIZ/clawdreamer', 'ThisIsJeron/awesome-openclaw-plugins', 'BlockRunAI/awesome-OpenClaw-Money-Maker', 'SamurAIGPT/awesome-openclaw', 'LHL3341/awesome-claws', 'pegasi-ai/reins', 'cloudllm-ai/mentisdb', 'rohitg00/awesome-openclaw', 'yoloshii/ClawMem', 'clawsouls/soulclaw'] }
   ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
   ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
   ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }
