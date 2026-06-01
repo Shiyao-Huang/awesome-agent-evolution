@@ -13,7 +13,7 @@
 | `reports` | present | 14 | 2 | 0 | 97 KB |
 | `output` | present | 6 | 1 | 0 | 609 KB |
 | `site/public/reports` | present | 488 | 6 | 0 | 2.9 MB |
-| `site/dist` | missing | 0 | 0 | 0 | 0 B |
+| `site/dist` | present | 937 | 411 | 0 | 19 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 989 KB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
@@ -53,6 +53,19 @@
 - `site/public/reports/projects/05-automl-agent-multi-agent.md`
 - `site/public/reports/projects/06-coml-mlcopilot.md`
 - `site/public/reports/projects/07-metagpt-multi-agent-framework.md`
+
+### `site/dist`
+
+- `site/dist/CNAME`
+- `site/dist/_astro/BaseLayout.Dnh_NTE-.css`
+- `site/dist/_astro/client.BpEju3qh.js`
+- `site/dist/_astro/index.B3cpf88e.css`
+- `site/dist/_astro/index.CBk-yZE3.css`
+- `site/dist/_astro/index.CmLyJJUK.css`
+- `site/dist/_astro/index.DzSMj55x.css`
+- `site/dist/_astro/star-analysis.B9Ar3sAv.css`
+- `site/dist/benchmark/index.html`
+- `site/dist/blog/adas-to-dgm-evolution/index.html`
 
 ### `paper-drafts/main.pdf`
 
