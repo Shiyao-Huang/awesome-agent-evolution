@@ -32,6 +32,8 @@ const benchmarkPath = evolveAgiTrend
   )
   .join(' ');
 const gridTicks = Array.from(new Set([yMin, Math.round((yMin + yMax) / 2), yMax])).sort((a, b) => a - b);
+const trendStart = evolveAgiTrend[0]?.date ?? '';
+const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
 ---
 
 <BaseLayout
@@ -119,7 +121,7 @@ const gridTicks = Array.from(new Set([yMin, Math.round((yMin + yMax) / 2), yMax]
             <div class="eai-chart-wrap">
               <svg class="eai-chart" viewBox={`0 0 ${chartWidth} ${chartHeight}`} role="img" aria-labelledby="eai-trend-title eai-trend-desc">
                 <title id="eai-trend-title">Evolve-AGI Index trend and benchmark performance trend</title>
-                <desc id="eai-trend-desc">A two-line chart tracking the total index and benchmark performance from 2026-05-26 to 2026-05-30.</desc>
+                <desc id="eai-trend-desc">{`A two-line chart tracking the total index and benchmark performance from ${trendStart} to ${trendEnd}.`}</desc>
                 {gridTicks.map((tick) => (
                   <g>
                     <line class="eai-chart-grid" x1={chartPadding.left} x2={chartWidth - chartPadding.right} y1={yFor(tick)} y2={yFor(tick)} />

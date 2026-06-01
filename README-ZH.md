@@ -87,7 +87,7 @@ EAI = Σ(signal_score × signal_weight)
 | 领域动量 | 10% | 新项目和社区动量是趋势信号，但不能覆盖证据质量。 |
 | 治理准备度 | 8% | 自修改系统必须有安全边界、日志、回滚和时间戳信心。 |
 
-当前快照来自 [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json)：2026-05-30 的指数为 `72.9`，benchmark 子指数为 `80.1`，对应 `90` 个 strict evolution repos、`195` 个 broad evolution repos 和 `193` 个 trend 快照中的 public reports。这个快照与 [docs/indexes/master-index.md](docs/indexes/master-index.md) 的全仓库计数共同使用；前者服务趋势页，后者服务仓库治理。
+当前快照来自 [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json)：2026-06-01 的指数为 `72.9`，benchmark 子指数为 `80.1`，对应 `93` 个 strict evolution repos、`200` 个 broad evolution repos 和 `239` 个 trend 输入中的 analyzed public-report records。这个快照与 [docs/indexes/master-index.md](docs/indexes/master-index.md) 的全仓库计数共同使用；前者服务指数趋势，后者服务仓库治理和完整 public-report 文件口径。
 
 ## Survey 证据地图
 

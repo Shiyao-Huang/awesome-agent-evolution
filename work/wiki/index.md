@@ -84,6 +84,7 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [Five Evolution Loops Topic](synthesis/five-evolution-loops-topic.md) — Rank 2 SEO/Survey 机制页：规范到执行、搜索、评估、反思、种群五类回路的可变对象、反馈、验证与失败模式 | Rank: A | 2026-06-01
 - [Code Evolution Benchmark Matrix](synthesis/code-evolution-benchmark-matrix.md) — Rank 3 SEO/Survey benchmark 页：区分自修改 coding agent、算法发现、架构搜索、prompt/program 优化和反思修复回路 | Rank: A | 2026-06-01
 - [Value Screening and Dual-Chain Knowledge Base](synthesis/value-screening-dual-chain-knowledge-base.md) — 时间/延续性优先的 GitHub 深挖协议：evidence chain + mirror chain + frontier queue | Rank: A | 2026-06-01
+- [Frontier Value Queue](synthesis/frontier-value-queue.md) — 双链协议的可复跑队列：239 个 analyzed projects 分入 code-ready、clone-needed、metadata-refresh、baseline 等 lane | Rank: A | 2026-06-01
 
 ---
 
@@ -94,5 +95,5 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Entities | 8 |
 | Concepts | 10 |
 | Sources | 30 |
-| Synthesis pages | 10 |
+| Synthesis pages | 11 |
 | Last updated | 2026-06-01 |

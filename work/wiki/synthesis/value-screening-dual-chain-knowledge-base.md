@@ -18,7 +18,7 @@ updated: 2026-06-01
 
 ## One Sentence
 
-[KNOWN] The corpus has 639 raw GitHub captures, 232 public model-card projects, 92 strict evolution-theme repositories, and 199 broad evolution-related repositories; the next bottleneck is selecting which current projects deserve code/issue-level analysis first. — Source: `analysis/github-project-data-analysis.json`
+[KNOWN] The corpus has 646 raw GitHub captures, 239 public model-card projects, 93 strict evolution-theme repositories, and 200 broad evolution-related repositories; the next bottleneck is selecting which current projects deserve code/issue-level analysis first. — Source: `analysis/github-project-data-analysis.json`
 
 ## Three Sentences
 
@@ -27,6 +27,8 @@ updated: 2026-06-01
 [INFERRED] For research execution, time should be combined with continuity, gap fit, implementation evidence, issue/resource signal, and benchmark/product usefulness so that a 2026 frontier project and a 2023 baseline project are not judged by the same lane. — Source: `analysis/value-screening-dual-chain-knowledge-base.md`
 
 [INFERRED] The dual-chain model pairs an evidence chain (`raw -> metadata -> code -> issues/resources -> model card -> public result`) with a mirror chain (`intent -> value gap -> dependency -> rank -> next action`) so future agents can audit both facts and judgement. — Source: `analysis/value-screening-dual-chain-knowledge-base.md`
+
+[KNOWN] The protocol now has a generated frontier queue with 5 `frontier-code-ready` and 14 `frontier-clone-needed` projects. — Source: `analysis/frontier-value-queue.json`
 
 ## Frontier Investigation Queue
 
@@ -46,6 +48,7 @@ Older systems such as Reflexion, Self-Refine, DSPy, OPRO, ADAS, FunSearch, and O
 ## Cross-references
 
 - [[current-value-ranking-reanalysis]]
+- [[frontier-value-queue]]
 - [[survey-seo-topic-map]]
 - [[self-evolution-definition-criteria]]
 - [[five-evolution-loops-topic]]

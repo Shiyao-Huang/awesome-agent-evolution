@@ -69,7 +69,7 @@ flowchart TB
 
 [KNOWN] The current formula is `EAI = sum(signal_score * signal_weight)` with weights 18/20/18/14/12/10/8 across benchmark, loop, evidence, transfer, access, momentum, and governance. — Source: `analysis/evolve-agi-index.md`
 
-[KNOWN] The 2026-05-30 trend snapshot reports score `72.9`, benchmark score `80.1`, strict repos `90`, broad repos `195`, and public reports `193` in the trend snapshot. — Source: `reports/evolve-agi-index-trend.json`
+[KNOWN] The 2026-06-01 trend snapshot reports score `72.9`, benchmark score `80.1`, strict repos `93`, broad repos `200`, and analyzed public-report records `239` in the trend input. — Source: `reports/evolve-agi-index-trend.json`
 
 [INFERRED] In the paper, the index should be framed as a field maturity instrument: it operationalizes the survey thesis that self-evolution must be measured as a controlled system process rather than a single leaderboard result.
 
@@ -87,7 +87,7 @@ The README should preserve four things and drop one old habit:
 
 ## Next Checks
 
-- [ ] Keep Evolve-AGI Index snapshots append-only.
+- [x] Keep Evolve-AGI Index snapshots append-only through the 2026-06-01 corpus-sync point.
 - [ ] Add AGI-index language to paper abstract or contribution section when the index becomes stable enough for publication.
 - [ ] Consider a compact EAI table in the appendix if reviewers ask for metric reproducibility.
 - [ ] Keep README-ZH and README-EN aligned after survey spine changes.

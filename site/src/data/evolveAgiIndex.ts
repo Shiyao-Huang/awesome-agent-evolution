@@ -313,7 +313,7 @@ export const evolveAgiIndex = {
   id: 'evolve-agi-index',
   name: 'Evolve-AGI Index',
   zhName: '自进化系数',
-  updated: '2026-05-30',
+  updated: '2026-06-01',
   score: round(weightedScore),
   grade: gradeFor(weightedScore),
   formula: 'EAI = Σ(signal_score × signal_weight)',
@@ -411,15 +411,26 @@ export const evolveAgiTrend: TrendPoint[] = [
     backfilled: true
   },
   {
-    date: evolveAgiIndex.updated,
+    date: '2026-05-30',
     label: 'Benchmark-weighted',
+    score: 72.9,
+    benchmarkScore: 80.1,
+    strictRepos: 90,
+    broadRepos: 195,
+    publicReports: 193,
+    source: 'reports/evolve-agi-index-trend.json',
+    note: 'First benchmark-weighted snapshot before the public site data snapshot was synced.'
+  },
+  {
+    date: evolveAgiIndex.updated,
+    label: 'Corpus-synced',
     score: evolveAgiIndex.score,
     benchmarkScore: evolveAgiIndex.benchmark.score,
     strictRepos: counts.raw_core_evolution ?? 0,
     broadRepos: counts.raw_broad_evolution ?? 0,
     publicReports: counts.analyzed_with_public_report ?? 0,
-    source: 'site/src/data/evolveAgiIndex.ts',
-    note: 'Benchmark performance now participates directly in the total index.'
+    source: 'analysis/github-project-data-analysis.json + site/src/data/analysis.json',
+    note: 'Public site data snapshot synced to the latest GitHub analysis corpus.'
   }
 ];
 

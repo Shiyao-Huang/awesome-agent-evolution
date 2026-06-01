@@ -31,18 +31,18 @@ The corpus already has enough volume; the bottleneck is value selection under ti
 
 ## Current Corpus Snapshot
 
-Source: `analysis/github-project-data-analysis.json`, generated `2026-06-01T03:03:49.932Z`.
+Source: `analysis/github-project-data-analysis.json`, generated `2026-06-01T07:26:26.411Z`.
 
 | Metric | Count |
 |---|---:|
-| Raw GitHub captures | 639 |
-| Classified repositories | 639 |
-| Analyzed public model-card projects | 232 |
-| Strict evolution-theme repositories | 92 |
-| Broad evolution-related repositories | 199 |
+| Raw GitHub captures | 646 |
+| Classified repositories | 646 |
+| Analyzed public model-card projects | 239 |
+| Strict evolution-theme repositories | 93 |
+| Broad evolution-related repositories | 200 |
 | Analyzed projects with verified GitHub `created_at` | 25 |
 | Analyzed projects with local git mirror evidence | 76 |
-| Analyzed projects with public reports | 232 |
+| Analyzed projects with public reports | 239 |
 | Raw repositories with unknown time slice | 108 |
 
 Current ranking already uses `current_value = 0.50*time + 0.20*mechanism + 0.15*evidence + 0.10*adoption + 0.05*usefulness`. That is the right direction, but the next layer should add continuity and code/issue evidence rather than letting metadata alone decide final research value.
@@ -111,6 +111,17 @@ frontier_value =
 | Implementation evidence | Whether code actually exposes the claimed loop | Prefer eval scripts, tests, examples, architecture docs, prompt/skill/code mutation artifacts, reproducible configs. |
 | Discourse/resource signal | Whether issues/resources reveal real demand or failure | Read issue clusters, PRs, discussions, release notes, related resource indexes, and external docs. |
 | Benchmark/product usefulness | Whether it helps readers choose or build | Prefer runnable systems, published benchmark deltas, production adoption, clear product workflow, or reusable harness. |
+
+## Generated Frontier Queue
+
+This protocol now has a repeatable implementation:
+
+- Script: `scripts/generate_frontier_value_queue.mjs`
+- Markdown output: `analysis/frontier-value-queue.md`
+- JSON output: `analysis/frontier-value-queue.json`
+- Wiki synthesis: `work/wiki/synthesis/frontier-value-queue.md`
+
+The first generated run scores 239 analyzed projects and splits them into 5 `frontier-code-ready`, 14 `frontier-clone-needed`, 100 `metadata-refresh`, 60 `watch-current-raw`, 17 `historical-baseline`, and 43 `park-for-later` entries.
 
 ## Immediate Frontier Queue
 
@@ -183,7 +194,7 @@ The dangerous shortcut is to let stars, names, or "self-evolution" labels decide
 | Node | Goal | Suggested path |
 |---|---|---|
 | `metadata-enrichment` | Add fuller GitHub metadata fields for strict/broad evolution repos. | Extend `scripts/analyze_github_project_data.mjs` or add a focused metadata refresh script. |
-| `frontier-queue` | Produce frontier/baseline/stale/unknown-time queues. | Add JSON + markdown under `analysis/` and `reports/`. |
+| `frontier-queue` | Produce frontier/baseline/stale/unknown-time queues. | Done for analyzed projects: `analysis/frontier-value-queue.md` and `analysis/frontier-value-queue.json`. |
 | `code-scan-template` | Standardize cloned repo inspection. | Add template under `docs/project-management/` or `work/wiki/schema.md` appendix. |
 | `issue-scan-template` | Standardize issue/PR/resource reading. | Store batch notes under `work/research/issues/` or `analysis/`. |
 | `project-packet-sync` | Keep project report, wiki, site/public report aligned. | Update model-card generation path after the first manual batch proves the schema. |

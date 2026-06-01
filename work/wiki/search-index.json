@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-01T07:01:41.873Z",
+  "generated": "2026-06-01T08:27:00.956Z",
   "stats": {
-    "pages": 59,
-    "keywords": 821
+    "pages": 60,
+    "keywords": 829
   },
   "catalog": [
     {
@@ -581,6 +581,20 @@
       ]
     },
     {
+      "path": "synthesis/frontier-value-queue.md",
+      "title": "Frontier Value Queue",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "frontier-queue",
+        "value-screening",
+        "dual-chain",
+        "github-projects",
+        "recency",
+        "code-scan"
+      ]
+    },
+    {
       "path": "synthesis/mechanism-framework.md",
       "title": "\"Agent进化机制分析框架\"",
       "rank": "A",
@@ -760,6 +774,7 @@
       "sources/review-mechanism-insights.md",
       "sources/talent-capital-structure.md",
       "sources/talent-flow-analysis.md",
+      "synthesis/frontier-value-queue.md",
       "synthesis/mechanism-framework.md",
       "synthesis/survey-spark-evolve-agi-core.md",
       "synthesis/talent-landscape.md",
@@ -2471,6 +2486,7 @@
       "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/five-evolution-loops-topic.md",
+      "synthesis/frontier-value-queue.md",
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/self-evolution-definition-criteria.md",
       "synthesis/survey-seo-topic-map.md",
@@ -3238,6 +3254,7 @@
     "three sentences": [
       "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/frontier-value-queue.md",
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/survey-spark-evolve-agi-core.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
@@ -3250,6 +3267,7 @@
     ],
     "github-projects": [
       "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/frontier-value-queue.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "ranking": [
@@ -3257,6 +3275,7 @@
     ],
     "recency": [
       "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/frontier-value-queue.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "current-value": [
@@ -3300,6 +3319,44 @@
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/self-evolution-definition-criteria.md",
       "synthesis/survey-seo-topic-map.md"
+    ],
+    "frontier value queue": [
+      "synthesis/frontier-value-queue.md"
+    ],
+    "frontier-queue": [
+      "synthesis/frontier-value-queue.md"
+    ],
+    "value-screening": [
+      "synthesis/frontier-value-queue.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "dual-chain": [
+      "synthesis/frontier-value-queue.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "code-scan": [
+      "synthesis/frontier-value-queue.md"
+    ],
+    "lane counts": [
+      "synthesis/frontier-value-queue.md"
+    ],
+    "top frontier": [
+      "synthesis/frontier-value-queue.md"
+    ],
+    "value-screening-dual-chain-knowledge-base": [
+      "synthesis/frontier-value-queue.md"
+    ],
+    "current-value-ranking-reanalysis": [
+      "synthesis/frontier-value-queue.md",
+      "synthesis/survey-spark-evolve-agi-core.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "code-evolution-benchmark-matrix": [
+      "synthesis/frontier-value-queue.md"
+    ],
+    "self-evolution-definition-criteria": [
+      "synthesis/frontier-value-queue.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "m1-m5": [
       "synthesis/mechanism-framework.md"
@@ -3360,10 +3417,6 @@
     ],
     "evidence-graph": [
       "synthesis/survey-spark-evolve-agi-core.md"
-    ],
-    "current-value-ranking-reanalysis": [
-      "synthesis/survey-spark-evolve-agi-core.md",
-      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "sv self-evolution talent & paper landscape": [
       "synthesis/talent-landscape.md"
@@ -3434,12 +3487,6 @@
     "value screening and dual-chain knowledge base": [
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
-    "value-screening": [
-      "synthesis/value-screening-dual-chain-knowledge-base.md"
-    ],
-    "dual-chain": [
-      "synthesis/value-screening-dual-chain-knowledge-base.md"
-    ],
     "self-mirror": [
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
@@ -3452,10 +3499,10 @@
     "operating rule": [
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
-    "survey-seo-topic-map": [
+    "frontier-value-queue": [
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
-    "self-evolution-definition-criteria": [
+    "survey-seo-topic-map": [
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "five-evolution-loops-topic": [

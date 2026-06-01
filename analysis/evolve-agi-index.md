@@ -1,7 +1,7 @@
 ---
 title: Evolve-AGI Index / 自进化系数
 layer: processed
-updated: 2026-05-30
+updated: 2026-06-01
 sources:
   - analysis/github-project-data-analysis.json
   - site/src/data/rankings.ts
@@ -93,7 +93,8 @@ The `/evolve-agi-index/` page now tracks two lines:
 |---|---:|---:|---:|---:|---|---|
 | 2026-05-26 | 67.4 | 72.2 | 82 / 186 | 90 | `work/research/archived-analysis/github-project-data-analysis.json` | Backfilled with current formula over archived corpus counts. |
 | 2026-05-29 | 71.3 | 76.4 | 90 / 195 | 187 | `site/src/data/analysis.json` | Previous site snapshot before benchmark became a weighted signal. |
-| 2026-05-30 | live | live | live | live | `site/src/data/evolveAgiIndex.ts` | Benchmark performance now participates directly in the total index. |
+| 2026-05-30 | 72.9 | 80.1 | 90 / 195 | 193 | `reports/evolve-agi-index-trend.json` | First benchmark-weighted snapshot before the public site data snapshot was synced. |
+| 2026-06-01 | 72.9 | 80.1 | 93 / 200 | 239 | `analysis/github-project-data-analysis.json`, `site/src/data/analysis.json` | Public site data snapshot synced to the latest GitHub analysis corpus. |
 
 Backfilled points are marked as comparable historical snapshots, not as independent historical APIs. The current result-layer snapshot is `reports/evolve-agi-index-trend.json`; future iterations should append real snapshots there so the trend line becomes fully append-only.
 
@@ -125,5 +126,5 @@ flowchart LR
 - 当前指数是领域成熟度指数，不是单一模型或单一产品的 AGI 能力评估。
 - Benchmark input score 是跨 benchmark 家族的归一化分，不等同于原始 pass@1 或 success rate；页面保留 raw before/after/gain 以便审计。
 - Star 活跃度只作为动量信号，不直接证明技术质量。
-- 如果 `site/src/data/analysis.json` 没有同步根部 GitHub analysis，首页指数会落后；本轮需要同步该站点快照。
+- `site/src/data/analysis.json` 已在 2026-06-01 同步到根部 GitHub analysis：646 classified repos、93 strict evolution repos、200 broad evolution repos、239 analyzed public-report records。
 - 后续应把每个 signal 的历史值追加写入 `reports/evolve-agi-index-trend.json`，形成 append-only 趋势快照，而不是替换历史 points。

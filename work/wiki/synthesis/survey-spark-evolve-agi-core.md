@@ -10,7 +10,7 @@ sources:
   - reports/evolve-agi-index-trend.json
   - paper-drafts/ch1-intro.tex
   - paper-drafts/ch8-future.tex
-updated: 2026-05-31
+updated: 2026-06-01
 ---
 
 # Survey Spark and Evolve-AGI Core
@@ -24,6 +24,8 @@ updated: 2026-05-31
 [KNOWN] The survey's central thesis is that self-evolution should be evaluated as a controlled systems process: what changed, what feedback justified it, who verified it, what it cost, what risk it introduced, and how it rolls back. — Source: `paper-drafts/main.tex`
 
 [KNOWN] Evolve-AGI Index operationalizes that thesis with seven weighted signals: benchmark performance, loop strength, evidence-chain credibility, transfer verification, implementation access, field momentum, and governance readiness. — Source: `analysis/evolve-agi-index.md`
+
+[KNOWN] The latest 2026-06-01 corpus-synced snapshot reports index `72.9`, benchmark sub-index `80.1`, `93` strict evolution repos, `200` broad evolution repos, and `239` analyzed public-report records in the trend input. — Source: `reports/evolve-agi-index-trend.json`, `site/src/data/analysis.json`
 
 [INFERRED] The new Spark is therefore the conversion of an Awesome repository into a survey + evidence graph + maturity index for controlled self-evolving AI agents.
 

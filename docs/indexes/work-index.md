@@ -15,10 +15,10 @@
 | `latex` | present | 9 | 2 | 0 | 53 KB |
 | `site` | present | 1537 | 442 | 0 | 33 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
-| `scripts` | present | 44 | 1 | 0 | 1.2 MB |
+| `scripts` | present | 45 | 1 | 0 | 1.2 MB |
 | `data-engine` | present | 479 | 18 | 0 | 5.9 MB |
 | `work/research` | present | 63 | 2 | 0 | 2.2 MB |
-| `work/wiki` | present | 63 | 6 | 0 | 448 KB |
+| `work/wiki` | present | 64 | 6 | 0 | 454 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files
@@ -96,9 +96,9 @@
 - `scripts/generate-wiki-index.mjs`
 - `scripts/generate_blog_author_profiles.py`
 - `scripts/generate_charts.py`
+- `scripts/generate_frontier_value_queue.mjs`
 - `scripts/generate_project_indexes.mjs`
 - `scripts/generate_repo_classification.py`
-- `scripts/generate_survey_figures.py`
 
 ### `data-engine`
 

@@ -25,10 +25,13 @@
 |---|---|---|
 | README 主入口 | [README.md](README.md) | 中文优先，改为 Survey 成果入口：核心 Spark、Evolve-AGI Index、资源 DAG、论文主线、证据边界和验证入口 |
 | English i18n 入口 | [README-EN.md](README-EN.md) | 根 README 的英文镜像，保留 Survey 成果、Evolve-AGI Index、证据边界和维护闭环 |
+| Evolve-AGI Index | [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md) | processed index methodology：把 benchmark、闭环强度、证据链、迁移验证、可运行性、领域动量和治理成熟度合成可审计的领域成熟度指数 |
 | Survey 资源重组 | [analysis/survey-resource-spark.md](analysis/survey-resource-spark.md) | processed synthesis：把 raw/processed/survey/results 资源重排为 Survey Spark，并说明 Evolve-AGI Index 如何进入论文核心 |
 | 资料库覆盖审计 | [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md) | processed audit：盘点 raw/processed/work/results/site/wiki 当前资产并解释计数口径边界；最新数量以 master-index 与 GitHub analysis 为准 |
 | Survey/SEO 主题地图 | [analysis/survey-seo-topic-map.md](analysis/survey-seo-topic-map.md) | processed synthesis：把资料库资产反推出定义、五类回路、代码自改进、Agent-Swarm、评估治理等 SEO/Survey 主题簇 |
 | 价值筛选双链知识库 | [analysis/value-screening-dual-chain-knowledge-base.md](analysis/value-screening-dual-chain-knowledge-base.md) | processed protocol：用 Self Mirror 风格把 evidence chain 与 mirror chain 分开，按时间、延续性、实现证据、issue/resource 信号筛选下一批 GitHub 深挖对象 |
+| Frontier value queue | [analysis/frontier-value-queue.md](analysis/frontier-value-queue.md) | processed queue：把 239 个 analyzed projects 分到 code-ready、clone-needed、metadata-refresh、baseline、parked 等深挖 lane |
+| Frontier queue generator | [scripts/generate_frontier_value_queue.mjs](scripts/generate_frontier_value_queue.mjs) | work script：从 GitHub analysis、timestamp index 和本地 clone evidence 生成下一批项目深挖队列 |
 | 自进化定义判据 | [analysis/self-evolution-definition-criteria.md](analysis/self-evolution-definition-criteria.md) | processed synthesis：用可变对象、反馈、候选生成、验证、保留和回滚六个 gate 定义什么才算 self-evolving agent |
 | 五类进化回路主题分析 | [analysis/five-evolution-loops-topic.md](analysis/five-evolution-loops-topic.md) | processed synthesis：把五类回路整理成可读的机制地图，说明可变对象、反馈、验证器、保留和失败模式 |
 | 代码自改进 Benchmark 矩阵 | [analysis/code-evolution-benchmark-matrix.md](analysis/code-evolution-benchmark-matrix.md) | processed synthesis：区分自修改 coding agent、算法发现、架构搜索、prompt/program 优化和反思修复回路的 benchmark 证据 |
@@ -37,6 +40,7 @@
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |
 | GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 646 个 raw GitHub captures、分类、进化相关、时间序列 |
 | GitHub 数据 JSON | [analysis/github-project-data-analysis.json](analysis/github-project-data-analysis.json) | 脚本生成，可复跑 |
+| Frontier 价值队列 JSON | [analysis/frontier-value-queue.json](analysis/frontier-value-queue.json) | 脚本生成，可复跑；保存每个项目的 evidence_chain、mirror_chain、frontier_score、lane 和 next_action |
 | 项目深度分析 | [projects/](projects/) | model-card/教学型项目分析 |
 | 项目清单 | [projects/INDEX.md](projects/INDEX.md) | model-card/项目报告入口；最新公共报告计数见 master index |
 | 论文主稿 | [paper-drafts/main.tex](paper-drafts/main.tex) | 英文 arXiv-facing XeLaTeX 构建入口 |
@@ -45,6 +49,7 @@
 | 论文 PDF | [paper-drafts/main.pdf](paper-drafts/main.pdf) | 当前生成版 |
 | 网站源码 | [site/](site/) | Astro 博客/SEO 网站 |
 | 公开资料库覆盖页 | [site/src/pages/resource-library/index.astro](site/src/pages/resource-library/index.astro) | 面向消费者和 SEO 的资料库覆盖说明：解释 raw/processed/survey/report/Evolve-AGI Index 的证据链和计数口径 |
+| 公开 Evolve-AGI Index 页 | [site/src/pages/evolve-agi-index/index.astro](site/src/pages/evolve-agi-index/index.astro) | 面向消费者和 SEO 的 AGI index 页面：展示 2026-06-01 corpus-synced 指数、信号权重、趋势线、benchmark 证据和当前价值信号 |
 | 公开主题地图页 | [site/src/pages/topics/index.astro](site/src/pages/topics/index.astro) | 面向消费者和 SEO 的 topic map：从读者问题进入 survey、项目报告、benchmark、AGI index 和后续内容资产 |
 | 公开定义主题页 | [site/src/pages/topics/self-evolving-ai-agents/index.astro](site/src/pages/topics/self-evolving-ai-agents/index.astro) | 面向消费者和 SEO 的 evergreen 定义页：判断一个 AI Agent 是否真的自进化 |
 | 公开五类回路主题页 | [site/src/pages/topics/five-evolution-loops/index.astro](site/src/pages/topics/five-evolution-loops/index.astro) | 面向消费者和 SEO 的 evergreen 机制页：用五类进化回路解释反馈如何变成可保留改进 |

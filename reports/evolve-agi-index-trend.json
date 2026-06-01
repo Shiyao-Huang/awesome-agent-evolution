@@ -2,7 +2,7 @@
   "id": "evolve-agi-index-trend",
   "name": "Evolve-AGI Index Trend",
   "zhName": "自进化系数趋势追踪",
-  "updated": "2026-05-30",
+  "updated": "2026-06-01",
   "formulaVersion": "2026-05-30-benchmark-weighted",
   "formula": "EAI = sum(signal_score * signal_weight)",
   "weights": {
@@ -15,15 +15,15 @@
     "governanceReadiness": 8
   },
   "current": {
-    "date": "2026-05-30",
+    "date": "2026-06-01",
     "score": 72.9,
     "grade": "B+",
     "benchmarkScore": 80.1,
     "benchmarkEvidenceCount": 10,
-    "classifiedRepos": 602,
-    "strictEvolutionRepos": 90,
-    "broadEvolutionRepos": 195,
-    "publicReports": 193
+    "classifiedRepos": 646,
+    "strictEvolutionRepos": 93,
+    "broadEvolutionRepos": 200,
+    "publicReports": 239
   },
   "snapshots": [
     {
@@ -59,8 +59,20 @@
       "broadRepos": 195,
       "publicReports": 193,
       "source": "site/src/data/evolveAgiIndex.ts",
-      "status": "current",
+      "status": "snapshot",
       "note": "Benchmark performance participates directly in the total index."
+    },
+    {
+      "date": "2026-06-01",
+      "label": "Corpus-synced",
+      "score": 72.9,
+      "benchmarkScore": 80.1,
+      "strictRepos": 93,
+      "broadRepos": 200,
+      "publicReports": 239,
+      "source": "analysis/github-project-data-analysis.json + site/src/data/analysis.json",
+      "status": "current",
+      "note": "Public site data snapshot synced to the latest GitHub analysis corpus: 646 classified repos, 93 strict evolution repos, 200 broad evolution repos, 239 analyzed public-report records."
     }
   ],
   "benchmarkSources": [

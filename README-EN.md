@@ -87,7 +87,7 @@ EAI = Σ(signal_score × signal_weight)
 | Field momentum | 10% | New projects and community motion are trend signals, but cannot override evidence quality. |
 | Governance readiness | 8% | Self-modifying systems need safety boundaries, logs, rollback, and timestamp confidence. |
 
-The current snapshot in [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json) reports a 2026-05-30 index of `72.9`, a benchmark sub-index of `80.1`, `90` strict evolution repos, `195` broad evolution repos, and `193` public reports in the trend snapshot. Use it together with the repository-wide counts in [docs/indexes/master-index.md](docs/indexes/master-index.md): the former powers trend analysis, while the latter governs repository structure.
+The current snapshot in [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json) reports a 2026-06-01 index of `72.9`, a benchmark sub-index of `80.1`, `93` strict evolution repos, `200` broad evolution repos, and `239` analyzed public-report records in the trend input. Use it together with the repository-wide counts in [docs/indexes/master-index.md](docs/indexes/master-index.md): the former powers index trends, while the latter governs repository structure and the full public-report file count.
 
 ## Survey Evidence Map
 
