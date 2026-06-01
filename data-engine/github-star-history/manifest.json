@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-06-01T11:37:51.777Z",
+  "dataset_name": "awesome-agent-evolution/github-star-history",
+  "local_paths": {
+    "seeds": "data-engine/github-star-history/repos.seed.jsonl",
+    "star_events": "data-engine/github-star-history/star-events.jsonl",
+    "repo_snapshots": "data-engine/github-star-history/repo-star-snapshots.jsonl",
+    "fetch_runs": "data-engine/github-star-history/fetch-runs.jsonl",
+    "monthly_repo_star_growth": "data-engine/github-star-history/monthly-repo-star-growth.csv",
+    "ranking_json": "analysis/github-star-growth-ranking.json",
+    "ranking_markdown": "analysis/github-star-growth-ranking.md"
+  },
+  "intended_huggingface_tables": [
+    "repos.seed.jsonl",
+    "star-events.jsonl",
+    "repo-star-snapshots.jsonl",
+    "monthly-repo-star-growth.csv",
+    "github-star-growth-ranking.json"
+  ],
+  "coverage": {
+    "seed_repositories": 697,
+    "repositories_in_database": 697,
+    "star_events_deduped": 45,
+    "snapshots": 1,
+    "repos_with_any_star_events": 1,
+    "repos_complete_or_near_complete": 1,
+    "repos_partial": 0,
+    "repos_not_fetched": 696,
+    "coverage_qualified_rows": 1,
+    "fetch_backlog_rows": 696
+  },
+  "source_docs": [
+    "https://docs.github.com/en/rest/activity/starring#list-stargazers"
+  ]
+}

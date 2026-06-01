@@ -86,6 +86,8 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [Value Screening and Dual-Chain Knowledge Base](synthesis/value-screening-dual-chain-knowledge-base.md) — 时间/延续性优先的 GitHub 深挖协议：evidence chain + mirror chain + frontier queue | Rank: A | 2026-06-01
 - [Frontier Value Queue](synthesis/frontier-value-queue.md) — 双链协议的可复跑队列：239 个 analyzed projects 分入 code-ready、clone-needed、metadata-refresh、baseline 等 lane | Rank: A | 2026-06-01
 - [modelscope AgentEvolver Frontier Deep Dive](synthesis/modelscope-agentevolver-frontier-deep-dive.md) — 第一个项目级双链深读样本：AgentEvolver 的环境到策略自进化闭环、代码证据、issue/resource 信号和复用风险 | Rank: A | 2026-06-01
+- [GitHub Star Growth Database](synthesis/github-star-growth-database.md) — 把累计 Star 降为历史 adoption prior，用 2026 new-star momentum、coverage status 和 Hugging Face-ready database 重建当前阶段排名 | Rank: A | 2026-06-01
+- [JARVIS-Xs SE-Agent Frontier Deep Dive](synthesis/jarvis-xs-se-agent-frontier-deep-dive.md) — 第二个项目级双链深读样本：SE-Agent 的轨迹池、算子演化、SWE-agent 复用和复现/发布风险 | Rank: A | 2026-06-01
 - [Google Indexing Custom Domain Triage](synthesis/google-indexing-custom-domain-triage.md) — `agent-evolution.com` 是公开 canonical 域；sitemap 有 URL，当前阻断点是 GitHub Pages 自定义域名 HTTPS 证书 | Rank: B | 2026-06-01
 
 ---
@@ -97,5 +99,5 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Entities | 8 |
 | Concepts | 10 |
 | Sources | 30 |
-| Synthesis pages | 13 |
+| Synthesis pages | 15 |
 | Last updated | 2026-06-01 |

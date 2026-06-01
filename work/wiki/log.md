@@ -372,3 +372,21 @@
 - Recorded that the live sitemap is populated, while strict HTTPS fetches fail because the served certificate is still `*.github.io`.
 - Clarified that `/graph/#coverage-debt` is a section anchor and should be inspected as `/graph/`.
 **产出:** `docs/seo/google-indexing-triage-2026-06-01.md`, `work/wiki/synthesis/google-indexing-custom-domain-triage.md`
+
+## [2026-06-01 17:48] data+ranking | GitHub Star Growth Database
+
+**操作:** Converted the direct user requirement about 2026 new-star momentum into a work-layer star-history database and processed ranking plan.
+**详情:**
+- Added `scripts/build_github_star_history_db.mjs` to seed all GitHub repos, fetch `starred_at` stargazer events, aggregate monthly growth, and rebuild coverage-aware ranking outputs.
+- Added `data-engine/github-star-history/` with dataset README, seed JSONL, hashed star-event rows, repo snapshots, monthly growth CSV, fetch log, and manifest for future Hugging Face publication.
+- Added `analysis/github-star-growth-database-plan.md`, `analysis/github-star-growth-ranking.md`, and wiki synthesis so future agents do not fall back to total-star ranking.
+**产出:** `analysis/github-star-growth-database-plan.md`, `analysis/github-star-growth-ranking.md`, `work/wiki/synthesis/github-star-growth-database.md`
+
+## [2026-06-01 17:58] synthesis | SE-Agent Frontier Deep Dive
+
+**操作:** Turned the second code-ready frontier project into a project-level dual-chain deep-dive packet.
+**详情:**
+- Added `analysis/frontier-projects/jarvis-xs-se-agent-dual-chain.md` to compare SE-Agent against the AgentEvolver archetype using the same evidence-chain/mirror-chain gate table.
+- Added `work/wiki/synthesis/jarvis-xs-se-agent-frontier-deep-dive.md` so future agents can retrieve the trajectory-evolution baseline and reproduction/release caveats.
+- Classified SE-Agent as a high-value trajectory-evolution baseline, not the strongest current frontier anchor, because current metadata shows no release, no open PRs, and live reproduction/release-completeness issues.
+**产出:** `analysis/frontier-projects/jarvis-xs-se-agent-dual-chain.md`, `work/wiki/synthesis/jarvis-xs-se-agent-frontier-deep-dive.md`

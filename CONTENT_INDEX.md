@@ -33,6 +33,7 @@
 | 价值筛选双链知识库 | [analysis/value-screening-dual-chain-knowledge-base.md](analysis/value-screening-dual-chain-knowledge-base.md) | processed protocol：用 Self Mirror 风格把 evidence chain 与 mirror chain 分开，按时间、延续性、实现证据、issue/resource 信号筛选下一批 GitHub 深挖对象 |
 | Frontier value queue | [analysis/frontier-value-queue.md](analysis/frontier-value-queue.md) | processed queue：把 239 个 analyzed projects 分到 code-ready、clone-needed、metadata-refresh、baseline、parked 等深挖 lane |
 | AgentEvolver 双链深读 | [analysis/frontier-projects/modelscope-agentevolver-dual-chain.md](analysis/frontier-projects/modelscope-agentevolver-dual-chain.md) | processed project packet：第一个项目级双链样本，连接 raw/meta/本地代码/GitHub issue-resource 信号并判定其 frontier archetype 价值 |
+| SE-Agent 双链深读 | [analysis/frontier-projects/jarvis-xs-se-agent-dual-chain.md](analysis/frontier-projects/jarvis-xs-se-agent-dual-chain.md) | processed project packet：第二个项目级双链样本，判定 SE-Agent 是 trajectory-evolution baseline 而非最高 current frontier |
 | Frontier queue generator | [scripts/generate_frontier_value_queue.mjs](scripts/generate_frontier_value_queue.mjs) | work script：从 GitHub analysis、timestamp index 和本地 clone evidence 生成下一批项目深挖队列 |
 | 自进化定义判据 | [analysis/self-evolution-definition-criteria.md](analysis/self-evolution-definition-criteria.md) | processed synthesis：用可变对象、反馈、候选生成、验证、保留和回滚六个 gate 定义什么才算 self-evolving agent |
 | 五类进化回路主题分析 | [analysis/five-evolution-loops-topic.md](analysis/five-evolution-loops-topic.md) | processed synthesis：把五类回路整理成可读的机制地图，说明可变对象、反馈、验证器、保留和失败模式 |
@@ -42,6 +43,9 @@
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |
 | GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 646 个 raw GitHub captures、分类、进化相关、时间序列 |
 | GitHub 数据 JSON | [analysis/github-project-data-analysis.json](analysis/github-project-data-analysis.json) | 脚本生成，可复跑 |
+| GitHub Star 增长数据库计划 | [analysis/github-star-growth-database-plan.md](analysis/github-star-growth-database-plan.md) | processed plan：把累计 Star 降为历史 adoption prior，改用 2026 新增 Star、recent velocity 和覆盖完整性做当前阶段排名 |
+| GitHub Star 增长排名 | [analysis/github-star-growth-ranking.md](analysis/github-star-growth-ranking.md) | processed aggregate：由 `data-engine/github-star-history/` 生成的 year-specific new-star ranking，未抓取项目标为 `not_fetched` |
+| GitHub Star history 数据库 | [data-engine/github-star-history/README.md](data-engine/github-star-history/README.md) | work dataset：stargazer events、repo snapshots、monthly growth、fetch runs、manifest，预留 Hugging Face 发布 |
 | Frontier 价值队列 JSON | [analysis/frontier-value-queue.json](analysis/frontier-value-queue.json) | 脚本生成，可复跑；保存每个项目的 evidence_chain、mirror_chain、frontier_score、lane 和 next_action |
 | 项目深度分析 | [projects/](projects/) | model-card/教学型项目分析 |
 | 项目清单 | [projects/INDEX.md](projects/INDEX.md) | model-card/项目报告入口；最新公共报告计数见 master index |

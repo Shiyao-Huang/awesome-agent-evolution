@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-01T09:06:31.266Z",
+  "generated": "2026-06-01T11:40:11.339Z",
   "stats": {
-    "pages": 62,
-    "keywords": 840
+    "pages": 64,
+    "keywords": 853
   },
   "catalog": [
     {
@@ -595,6 +595,20 @@
       ]
     },
     {
+      "path": "synthesis/github-star-growth-database.md",
+      "title": "GitHub Star Growth Database",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "github",
+        "star-growth",
+        "ranking",
+        "database",
+        "huggingface",
+        "current-value"
+      ]
+    },
+    {
       "path": "synthesis/google-indexing-custom-domain-triage.md",
       "title": "Google Indexing Custom Domain Triage",
       "rank": "B",
@@ -604,6 +618,20 @@
         "google-search-console",
         "github-pages",
         "canonical"
+      ]
+    },
+    {
+      "path": "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
+      "title": "JARVIS-Xs SE-Agent Frontier Deep Dive",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "se-agent",
+        "frontier-project",
+        "dual-chain",
+        "trajectory-evolution",
+        "code-agent",
+        "reproduction-risk"
       ]
     },
     {
@@ -802,7 +830,9 @@
       "sources/talent-capital-structure.md",
       "sources/talent-flow-analysis.md",
       "synthesis/frontier-value-queue.md",
+      "synthesis/github-star-growth-database.md",
       "synthesis/google-indexing-custom-domain-triage.md",
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
       "synthesis/mechanism-framework.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/survey-spark-evolve-agi-core.md",
@@ -1437,7 +1467,8 @@
     "code-agent": [
       "entities/anthropic.md",
       "entities/google-deepmind.md",
-      "entities/openai.md"
+      "entities/openai.md",
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md"
     ],
     "talent-hub": [
       "entities/anthropic.md"
@@ -2129,7 +2160,8 @@
     "github": [
       "sources/employee-social-intelligence.md",
       "sources/github-digest.md",
-      "sources/raw-github-mechanism-analysis.md"
+      "sources/raw-github-mechanism-analysis.md",
+      "synthesis/github-star-growth-database.md"
     ],
     "talent": [
       "sources/employee-social-intelligence.md",
@@ -2516,6 +2548,7 @@
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/five-evolution-loops-topic.md",
       "synthesis/frontier-value-queue.md",
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/self-evolution-definition-criteria.md",
@@ -3286,6 +3319,7 @@
       "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/frontier-value-queue.md",
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/survey-spark-evolve-agi-core.md",
@@ -3303,7 +3337,8 @@
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "ranking": [
-      "synthesis/current-value-ranking-reanalysis.md"
+      "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/github-star-growth-database.md"
     ],
     "recency": [
       "synthesis/current-value-ranking-reanalysis.md",
@@ -3311,7 +3346,8 @@
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "current-value": [
-      "synthesis/current-value-ranking-reanalysis.md"
+      "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/github-star-growth-database.md"
     ],
     "release-attention": [
       "synthesis/current-value-ranking-reanalysis.md"
@@ -3353,7 +3389,8 @@
       "synthesis/survey-seo-topic-map.md"
     ],
     "frontier value queue": [
-      "synthesis/frontier-value-queue.md"
+      "synthesis/frontier-value-queue.md",
+      "synthesis/github-star-growth-database.md"
     ],
     "frontier-queue": [
       "synthesis/frontier-value-queue.md"
@@ -3364,6 +3401,7 @@
     ],
     "dual-chain": [
       "synthesis/frontier-value-queue.md",
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
@@ -3379,6 +3417,7 @@
     ],
     "value-screening-dual-chain-knowledge-base": [
       "synthesis/frontier-value-queue.md",
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
     ],
     "current-value-ranking-reanalysis": [
@@ -3388,12 +3427,46 @@
     ],
     "code-evolution-benchmark-matrix": [
       "synthesis/frontier-value-queue.md",
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
     ],
     "self-evolution-definition-criteria": [
       "synthesis/frontier-value-queue.md",
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "github star growth database": [
+      "synthesis/github-star-growth-database.md"
+    ],
+    "star-growth": [
+      "synthesis/github-star-growth-database.md"
+    ],
+    "database": [
+      "synthesis/github-star-growth-database.md"
+    ],
+    "huggingface": [
+      "synthesis/github-star-growth-database.md"
+    ],
+    "core shift": [
+      "synthesis/github-star-growth-database.md"
+    ],
+    "implemented objects": [
+      "synthesis/github-star-growth-database.md"
+    ],
+    "current smoke-test state": [
+      "synthesis/github-star-growth-database.md"
+    ],
+    "rank rule": [
+      "synthesis/github-star-growth-database.md"
+    ],
+    "value screening and dual-chain knowledge base": [
+      "synthesis/github-star-growth-database.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "modelscope agentevolver frontier deep dive": [
+      "synthesis/github-star-growth-database.md",
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
     ],
     "google indexing custom domain triage": [
       "synthesis/google-indexing-custom-domain-triage.md"
@@ -3417,6 +3490,34 @@
     "resource-library-coverage-audit": [
       "synthesis/google-indexing-custom-domain-triage.md"
     ],
+    "jarvis-xs se-agent frontier deep dive": [
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md"
+    ],
+    "se-agent": [
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md"
+    ],
+    "frontier-project": [
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
+    ],
+    "trajectory-evolution": [
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md"
+    ],
+    "reproduction-risk": [
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md"
+    ],
+    "gate summary": [
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
+    ],
+    "frontier-value-queue": [
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
+      "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "modelscope-agentevolver-frontier-deep-dive": [
+      "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md"
+    ],
     "m1-m5": [
       "synthesis/mechanism-framework.md"
     ],
@@ -3435,24 +3536,11 @@
     "97痛点映射": [
       "synthesis/mechanism-framework.md"
     ],
-    "modelscope agentevolver frontier deep dive": [
-      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
-    ],
     "agentevolver": [
-      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
-    ],
-    "frontier-project": [
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
     ],
     "github-issues": [
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
-    ],
-    "gate summary": [
-      "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
-    ],
-    "frontier-value-queue": [
-      "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
-      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "resource library coverage audit": [
       "synthesis/resource-library-coverage-audit.md"
@@ -3561,9 +3649,6 @@
     ],
     "academic-industry bridge accelerates m1": [
       "synthesis/talent-landscape.md"
-    ],
-    "value screening and dual-chain knowledge base": [
-      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "self-mirror": [
       "synthesis/value-screening-dual-chain-knowledge-base.md"
