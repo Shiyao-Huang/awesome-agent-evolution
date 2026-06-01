@@ -79,6 +79,58 @@ const localGitStats = (localPath) => {
   };
 };
 
+const localGitHistoryLookback = (localPath, referenceDate, windowMonths = 24) => {
+  if (!localPath) return null;
+  const repoPath = path.join(root, localPath);
+  if (!fs.existsSync(path.join(repoPath, '.git'))) return null;
+  const sinceDate = new Date(Date.UTC(referenceDate.getUTCFullYear(), referenceDate.getUTCMonth() - (windowMonths - 1), 1));
+  const sinceIso = sinceDate.toISOString().slice(0, 10);
+
+  const runGit = (...args) => {
+    try {
+      return execFileSync('git', ['-C', repoPath, ...args], {
+        encoding: 'utf8',
+        stdio: ['ignore', 'pipe', 'ignore']
+      }).trim();
+    } catch {
+      return null;
+    }
+  };
+
+  const commitLines = (runGit('log', `--since=${sinceIso}`, '--date=format:%Y-%m', '--pretty=format:%ad') || '')
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const commitMonthCounts = countBy(commitLines.map((month) => ({ month })), (row) => row.month)
+    .map((row) => ({ month: row.key, count: row.count }));
+
+  const tagLines = (runGit('for-each-ref', 'refs/tags', '--format=%(creatordate:short)|%(refname:short)', '--sort=creatordate') || '')
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const tagEvents = tagLines
+    .map((line) => {
+      const [dateText, tag] = line.split('|');
+      const date = parseDate(dateText);
+      if (!date) return null;
+      return { tag, date, month: monthKeyUTC(date), dateText };
+    })
+    .filter(Boolean);
+  const tagMonthCounts = countBy(tagEvents.map((item) => ({ month: item.month })), (row) => row.month)
+    .map((row) => ({ month: row.key, count: row.count }));
+  const latestTag = tagEvents.length ? tagEvents[tagEvents.length - 1] : null;
+
+  return {
+    since: sinceIso,
+    commits_24m: commitLines.length,
+    commit_month_counts: commitMonthCounts,
+    tags_total: tagEvents.length,
+    tags_24m: tagEvents.filter((item) => item.date >= sinceDate).length,
+    tag_month_counts: tagMonthCounts.filter((item) => item.month >= monthKeyUTC(sinceDate)),
+    latest_tag: latestTag ? { name: latestTag.tag, date: latestTag.dateText, month: latestTag.month } : null
+  };
+};
+
 const fetchRepoCreatedAt = async (repo, cache) => {
   const normalized = normalizeRepo(repo);
   if (cache[normalized]) return cache[normalized];
@@ -142,6 +194,172 @@ const parseDate = (value) => {
   if (!value || value === 'unknown') return null;
   const date = new Date(value);
   return Number.isNaN(date.valueOf()) ? null : date;
+};
+
+const monthKeyUTC = (date) => `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, '0')}`;
+
+const buildMonthWindow = (referenceDate, months = 24) => {
+  const end = new Date(Date.UTC(referenceDate.getUTCFullYear(), referenceDate.getUTCMonth(), 1));
+  const keys = [];
+  for (let i = months - 1; i >= 0; i -= 1) {
+    const d = new Date(Date.UTC(end.getUTCFullYear(), end.getUTCMonth() - i, 1));
+    keys.push(monthKeyUTC(d));
+  }
+  return keys;
+};
+
+const LOOKBACK_SIGNAL_ORDER = [
+  ['github_created_at', 'created_at'],
+  ['local_first_observed', 'first_observed_at'],
+  ['github_pushed_at', 'github_pushed_at'],
+  ['site_last_pushed', 'lastPushed'],
+  ['raw_content_timestamp', 'raw_content_timestamp'],
+  ['raw_collected_at', 'raw_collected_at']
+];
+
+const chooseTemporalSignal = (row) => {
+  for (const [source, field] of LOOKBACK_SIGNAL_ORDER) {
+    const value = row[field];
+    const date = parseDate(value);
+    if (date) {
+      return {
+        source,
+        field,
+        value,
+        date,
+        month: monthKeyUTC(date)
+      };
+    }
+  }
+  return null;
+};
+
+const buildTwoYearLookback = (rows, referenceDate = new Date(), windowMonths = 24) => {
+  const months = buildMonthWindow(referenceDate, windowMonths);
+  const startMonth = months[0];
+  const endMonth = months[months.length - 1];
+  const monthlyMap = new Map(
+    months.map((month) => [
+      month,
+      {
+        month,
+        total: 0,
+        source_counts: Object.fromEntries(LOOKBACK_SIGNAL_ORDER.map(([source]) => [source, 0]))
+      }
+    ])
+  );
+  const sourceCounts = Object.fromEntries(LOOKBACK_SIGNAL_ORDER.map(([source]) => [source, 0]));
+  const coverage = {
+    inside_window: 0,
+    older_than_window: 0,
+    future_window: 0,
+    unknown: 0
+  };
+
+  for (const row of rows) {
+    const signal = chooseTemporalSignal(row);
+    if (!signal) {
+      coverage.unknown += 1;
+      continue;
+    }
+    sourceCounts[signal.source] += 1;
+    if (signal.month < startMonth) {
+      coverage.older_than_window += 1;
+      continue;
+    }
+    if (signal.month > endMonth) {
+      coverage.future_window += 1;
+      continue;
+    }
+    coverage.inside_window += 1;
+    const bucket = monthlyMap.get(signal.month);
+    if (!bucket) continue;
+    bucket.total += 1;
+    bucket.source_counts[signal.source] += 1;
+  }
+
+  return {
+    window: {
+      months: windowMonths,
+      start_month: startMonth,
+      end_month: endMonth,
+      reference_month: monthKeyUTC(referenceDate)
+    },
+    coverage,
+    source_counts: LOOKBACK_SIGNAL_ORDER.map(([source]) => ({ source, count: sourceCounts[source] }))
+      .sort((a, b) => b.count - a.count || a.source.localeCompare(b.source)),
+    monthly_counts: months.map((month) => monthlyMap.get(month))
+  };
+};
+
+const aggregateLocalGitLookback = (rows, referenceDate = new Date(), windowMonths = 24) => {
+  const months = buildMonthWindow(referenceDate, windowMonths);
+  const monthSet = new Set(months);
+  const commitMap = new Map(months.map((month) => [month, 0]));
+  const tagMap = new Map(months.map((month) => [month, 0]));
+  let repositoriesWithLocalGit = 0;
+  let repositoriesWithHistory = 0;
+  let repositoriesWithCommits24m = 0;
+  let repositoriesWithTags24m = 0;
+  let totalCommits24m = 0;
+  let totalTags24m = 0;
+  const latestTags = [];
+
+  for (const row of rows) {
+    if (row.local_git) repositoriesWithLocalGit += 1;
+    const history = row.local_git_history_24m;
+    if (!history) continue;
+    repositoriesWithHistory += 1;
+    totalCommits24m += Number(history.commits_24m || 0);
+    totalTags24m += Number(history.tags_24m || 0);
+    if (Number(history.commits_24m || 0) > 0) repositoriesWithCommits24m += 1;
+    if (Number(history.tags_24m || 0) > 0) repositoriesWithTags24m += 1;
+
+    for (const item of history.commit_month_counts || []) {
+      if (!monthSet.has(item.month)) continue;
+      commitMap.set(item.month, (commitMap.get(item.month) || 0) + Number(item.count || 0));
+    }
+    for (const item of history.tag_month_counts || []) {
+      if (!monthSet.has(item.month)) continue;
+      tagMap.set(item.month, (tagMap.get(item.month) || 0) + Number(item.count || 0));
+    }
+    if (history.latest_tag) {
+      latestTags.push({
+        repo: row.repo,
+        tag: history.latest_tag.name,
+        date: history.latest_tag.date,
+        month: history.latest_tag.month
+      });
+    }
+  }
+
+  latestTags.sort((a, b) => {
+    const at = parseDate(a.date)?.valueOf() ?? 0;
+    const bt = parseDate(b.date)?.valueOf() ?? 0;
+    return bt - at || a.repo.localeCompare(b.repo);
+  });
+
+  return {
+    window: {
+      months: windowMonths,
+      start_month: months[0],
+      end_month: months[months.length - 1],
+      reference_month: monthKeyUTC(referenceDate)
+    },
+    coverage: {
+      repositories_with_local_git: repositoriesWithLocalGit,
+      repositories_with_history: repositoriesWithHistory,
+      repositories_with_commits_24m: repositoriesWithCommits24m,
+      repositories_with_tags_24m: repositoriesWithTags24m
+    },
+    totals: {
+      commits_24m: totalCommits24m,
+      tags_24m: totalTags24m
+    },
+    monthly_commit_counts: months.map((month) => ({ month, count: commitMap.get(month) || 0 })),
+    monthly_tag_counts: months.map((month) => ({ month, count: tagMap.get(month) || 0 })),
+    latest_tags: latestTags.slice(0, 40)
+  };
 };
 
 const monthsAgo = (value, referenceDate) => {
@@ -333,6 +551,39 @@ const writeMarkdown = (analysis) => {
   lines.push('|---|---:|');
   for (const row of analysis.raw_time_slice_counts.slice(0, 20)) lines.push(`| ${row.key} | ${row.count} |`);
   lines.push('');
+  lines.push('## Two-Year Timeline (24-Month Window)');
+  lines.push('');
+  lines.push('This section extends index coverage beyond recent raw-capture timestamps by combining project temporal signals and local git commit/tag history over a fixed 24-month window.');
+  lines.push('');
+  lines.push('| Metric | Value |');
+  lines.push('|---|---:|');
+  lines.push(`| Window start month | ${analysis.two_year_project_timeline.window.start_month} |`);
+  lines.push(`| Window end month | ${analysis.two_year_project_timeline.window.end_month} |`);
+  lines.push(`| Projects with temporal signal inside window | ${analysis.two_year_project_timeline.coverage.inside_window} |`);
+  lines.push(`| Projects older than window | ${analysis.two_year_project_timeline.coverage.older_than_window} |`);
+  lines.push(`| Projects with unknown temporal signal | ${analysis.two_year_project_timeline.coverage.unknown} |`);
+  lines.push(`| Local-mirror repositories with 24m git history | ${analysis.local_git_history_24m.coverage.repositories_with_history} / ${analysis.local_git_history_24m.coverage.repositories_with_local_git} |`);
+  lines.push(`| Total local git commits in 24m | ${analysis.local_git_history_24m.totals.commits_24m} |`);
+  lines.push(`| Total local git tags in 24m | ${analysis.local_git_history_24m.totals.tags_24m} |`);
+  lines.push('');
+  lines.push('| Temporal signal source | Project count |');
+  lines.push('|---|---:|');
+  for (const row of analysis.two_year_project_timeline.source_counts) lines.push(`| ${row.source} | ${row.count} |`);
+  lines.push('');
+  lines.push('| Month | Project temporal signals | Local git commits | Local git tags |');
+  lines.push('|---|---:|---:|---:|');
+  const gitCommitByMonth = new Map(analysis.local_git_history_24m.monthly_commit_counts.map((row) => [row.month, row.count]));
+  const gitTagByMonth = new Map(analysis.local_git_history_24m.monthly_tag_counts.map((row) => [row.month, row.count]));
+  for (const row of analysis.two_year_project_timeline.monthly_counts) {
+    lines.push(`| ${row.month} | ${row.total} | ${gitCommitByMonth.get(row.month) || 0} | ${gitTagByMonth.get(row.month) || 0} |`);
+  }
+  lines.push('');
+  lines.push('| Repo | Latest observed tag | Month |');
+  lines.push('|---|---|---|');
+  for (const row of analysis.local_git_history_24m.latest_tags.slice(0, 20)) {
+    lines.push(`| [${row.repo}](https://github.com/${row.repo}) | ${row.tag} | ${row.month} |`);
+  }
+  lines.push('');
   lines.push('## Analyzed Project Release Timeline');
   lines.push('');
   lines.push('Only GitHub API `created_at` is treated as repository creation time. Local mirror first commit is reported as `first_observed_at` only, because many mirrors are shallow or regenerated and would otherwise create false 2026 projects.');
@@ -475,6 +726,27 @@ const writeTex = (analysis) => {
   lines.push('\\end{tabular}');
   lines.push('\\end{table}');
   lines.push('');
+  lines.push(`To avoid a misleading recent-weeks-only view, we add a fixed 24-month index window that mixes repository-level temporal signals with local git commit and tag timelines. Within ${analysis.two_year_project_timeline.window.start_month} to ${analysis.two_year_project_timeline.window.end_month}, ${analysis.two_year_project_timeline.coverage.inside_window} analyzed projects have at least one temporal signal inside the window, while ${analysis.two_year_project_timeline.coverage.older_than_window} projects are older and ${analysis.two_year_project_timeline.coverage.unknown} remain unknown. Across local mirrors, ${analysis.local_git_history_24m.totals.commits_24m} commits and ${analysis.local_git_history_24m.totals.tags_24m} tag events are observed in the same window.`);
+  lines.push('');
+  lines.push('\\begin{table}[t]');
+  lines.push('\\centering');
+  lines.push('\\caption{Two-year timeline summary (24-month window).}');
+  lines.push('\\label{tab:two-year-git-timeline-summary}');
+  lines.push('\\begin{tabular}{lr}');
+  lines.push('\\toprule');
+  lines.push('Metric & Value \\\\');
+  lines.push('\\midrule');
+  lines.push(`Window start month & ${escapeTex(analysis.two_year_project_timeline.window.start_month)} \\\\`);
+  lines.push(`Window end month & ${escapeTex(analysis.two_year_project_timeline.window.end_month)} \\\\`);
+  lines.push(`Projects inside window & ${analysis.two_year_project_timeline.coverage.inside_window} \\\\`);
+  lines.push(`Older than window & ${analysis.two_year_project_timeline.coverage.older_than_window} \\\\`);
+  lines.push(`Unknown temporal signal & ${analysis.two_year_project_timeline.coverage.unknown} \\\\`);
+  lines.push(`Local git commits (24m) & ${analysis.local_git_history_24m.totals.commits_24m} \\\\`);
+  lines.push(`Local git tag events (24m) & ${analysis.local_git_history_24m.totals.tags_24m} \\\\`);
+  lines.push('\\bottomrule');
+  lines.push('\\end{tabular}');
+  lines.push('\\end{table}');
+  lines.push('');
   lines.push(`The time analysis deliberately separates repository creation from activity timestamps. The raw corpus time-slice field is an activity/content timestamp extracted from GitHub captures, so it measures when the captured page exposed recent activity. The analyzed-project timeline uses GitHub API \\texttt{created\\_at} where available. Local mirror first commit is reported only as a first-observed timestamp, not as repository creation time, because many local mirrors are shallow or regenerated. In the current run, ${analysis.counts.analyzed_with_verified_created_at} of ${analysis.counts.analyzed_projects} analyzed projects have verified GitHub creation time, while ${analysis.counts.analyzed_with_first_observed_fallback} have only first-observed local fallback evidence.`);
   lines.push(` Git metadata is also joined at the project level: ${analysis.counts.analyzed_with_github_api_metadata} analyzed projects have GitHub API/cache metadata, ${analysis.counts.analyzed_with_local_git_mirror} have local git mirror evidence, and ${analysis.counts.analyzed_with_public_report} have a public report path.`);
   lines.push('');
@@ -536,6 +808,7 @@ const main = async () => {
   const classifiedByRepo = new Map(classified.map((row) => [normalizeRepo(row.repo), row]));
   const rawByRepo = new Map(rawTimestampIndex.records.map((row) => [normalizeRepo(row.repo), row]));
 
+  const referenceDate = new Date();
   const enrichedProjects = [];
   for (const project of projects) {
     const normalized = normalizeRepo(project.repo);
@@ -544,6 +817,7 @@ const main = async () => {
     const rawRow = rawByRepo.get(normalized);
     const fallbackFirstCommit = apiMeta.created_at ? null : localGitFirstCommit(project.localPath);
     const localGit = localGitStats(project.localPath);
+    const localGitHistory24m = localGitHistoryLookback(project.localPath, referenceDate, 24);
     const reportPath = project.report ?? null;
     const publicReportPath = reportPath ? path.join('site/public/reports', reportPath) : null;
     enrichedProjects.push({
@@ -560,6 +834,7 @@ const main = async () => {
       lastPushed: project.lastPushed,
       localPath: project.localPath,
       local_git: localGit,
+      local_git_history_24m: localGitHistory24m,
       report: reportPath,
       public_report: publicReportPath,
       public_report_exists: publicReportPath ? fs.existsSync(path.join(root, publicReportPath)) : false,
@@ -600,8 +875,11 @@ const main = async () => {
       return at.localeCompare(bt) || a.repo.localeCompare(b.repo);
     });
 
+  const twoYearProjectTimeline = buildTwoYearLookback(enrichedProjects, referenceDate, 24);
+  const localGitHistoryTimeline = aggregateLocalGitLookback(enrichedProjects, referenceDate, 24);
+
   const analysis = {
-    generated_at: new Date().toISOString(),
+    generated_at: referenceDate.toISOString(),
     counts: {
       raw_captures: rawTimestampIndex.records.length,
       raw_files_on_disk: fs.readdirSync(path.join(root, 'raw-github')).filter((name) => name.endsWith('.md') && name !== 'INDEX.md').length,
@@ -614,6 +892,9 @@ const main = async () => {
       analyzed_with_first_observed_fallback: enrichedProjects.filter((row) => row.first_observed_at).length,
       analyzed_with_github_api_metadata: enrichedProjects.filter((row) => row.github_source === 'github_api').length,
       analyzed_with_local_git_mirror: enrichedProjects.filter((row) => row.local_git).length,
+      analyzed_with_local_git_history_24m: enrichedProjects.filter((row) => row.local_git_history_24m).length,
+      analyzed_with_local_git_commits_24m: enrichedProjects.filter((row) => Number(row.local_git_history_24m?.commits_24m || 0) > 0).length,
+      analyzed_with_local_git_tags_24m: enrichedProjects.filter((row) => Number(row.local_git_history_24m?.tags_24m || 0) > 0).length,
       analyzed_with_public_report: enrichedProjects.filter((row) => row.public_report_exists).length,
       raw_core_evolution: rawCoreEvolution.length,
       raw_broad_evolution: rawBroadEvolution.length,
@@ -635,9 +916,11 @@ const main = async () => {
       .slice()
       .sort((a, b) => Number(b.github_api_stars ?? b.site_stars ?? 0) - Number(a.github_api_stars ?? a.site_stars ?? 0) || a.repo.localeCompare(b.repo)),
     analyzed_timeline: analyzedTimeline,
+    two_year_project_timeline: twoYearProjectTimeline,
+    local_git_history_24m: localGitHistoryTimeline,
     ranking_method: {
       name: 'recency_weighted_current_value',
-      reference_date: new Date().toISOString(),
+      reference_date: referenceDate.toISOString(),
       weights: {
         time: 0.50,
         mechanism: 0.20,
@@ -654,7 +937,7 @@ const main = async () => {
       },
       note: 'Historical influence and current release attention are intentionally separated; star-only ranking is not used.'
     },
-    recency_weighted_project_ranking: rankAnalyzedProjects(enrichedProjects, new Date())
+    recency_weighted_project_ranking: rankAnalyzedProjects(enrichedProjects, referenceDate)
   };
 
   fs.writeFileSync(jsonOut, `${JSON.stringify(analysis, null, 2)}\n`);
