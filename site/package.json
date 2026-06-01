@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build && node scripts/apply-base-path.mjs",
+    "build": "astro check && astro build && node scripts/apply-base-path.mjs && node scripts/sync-custom-domain.mjs",
     "seo:audit": "node scripts/seo-audit.mjs",
     "preview": "astro preview",
     "astro": "astro"

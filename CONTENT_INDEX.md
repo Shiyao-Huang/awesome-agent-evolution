@@ -29,6 +29,7 @@
 | Survey 资源重组 | [analysis/survey-resource-spark.md](analysis/survey-resource-spark.md) | processed synthesis：把 raw/processed/survey/results 资源重排为 Survey Spark，并说明 Evolve-AGI Index 如何进入论文核心 |
 | 资料库覆盖审计 | [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md) | processed audit：盘点 raw/processed/work/results/site/wiki 当前资产并解释计数口径边界；最新数量以 master-index 与 GitHub analysis 为准 |
 | Survey/SEO 主题地图 | [analysis/survey-seo-topic-map.md](analysis/survey-seo-topic-map.md) | processed synthesis：把资料库资产反推出定义、五类回路、代码自改进、Agent-Swarm、评估治理等 SEO/Survey 主题簇 |
+| Google 索引诊断 | [docs/seo/google-indexing-triage-2026-06-01.md](docs/seo/google-indexing-triage-2026-06-01.md) | ops+seo triage：确认 `agent-evolution.com` 是公开 canonical 域，sitemap 非空，当前阻断点是 GitHub Pages 自定义域名 HTTPS 证书 |
 | 价值筛选双链知识库 | [analysis/value-screening-dual-chain-knowledge-base.md](analysis/value-screening-dual-chain-knowledge-base.md) | processed protocol：用 Self Mirror 风格把 evidence chain 与 mirror chain 分开，按时间、延续性、实现证据、issue/resource 信号筛选下一批 GitHub 深挖对象 |
 | Frontier value queue | [analysis/frontier-value-queue.md](analysis/frontier-value-queue.md) | processed queue：把 239 个 analyzed projects 分到 code-ready、clone-needed、metadata-refresh、baseline、parked 等深挖 lane |
 | AgentEvolver 双链深读 | [analysis/frontier-projects/modelscope-agentevolver-dual-chain.md](analysis/frontier-projects/modelscope-agentevolver-dual-chain.md) | processed project packet：第一个项目级双链样本，连接 raw/meta/本地代码/GitHub issue-resource 信号并判定其 frontier archetype 价值 |

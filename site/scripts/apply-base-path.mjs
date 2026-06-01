@@ -2,7 +2,10 @@ import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve('dist');
-const base = (process.env.SITE_BASE_PATH || '/').replace(/\/$/, '');
+const defaultSiteUrl = 'https://agent-evolution.com';
+const publicSiteUrl = process.env.PUBLIC_SITE_URL || defaultSiteUrl;
+const baseFromSiteUrl = new URL(publicSiteUrl).pathname;
+const base = (process.env.SITE_BASE_PATH || baseFromSiteUrl || '/').replace(/\/$/, '');
 
 if (!base || base === '/') process.exit(0);
 

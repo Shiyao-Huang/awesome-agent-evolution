@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build Astro site
+        env:
+          PUBLIC_SITE_URL: https://agent-evolution.com
+          GITHUB_PAGES_CUSTOM_DOMAIN: agent-evolution.com
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5

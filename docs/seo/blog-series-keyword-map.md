@@ -1,6 +1,6 @@
 # Self Evolve SEO Blog Series Keyword Map
 
-> Updated: 2026-05-26. Source layer: `paper-drafts/ch1-intro.tex` through `paper-drafts/ch8-future.tex`; site layer: `site/src/content/blog/`.
+> Updated: 2026-06-01. Source layer: `paper-drafts/ch1-intro.tex` through `paper-drafts/ch8-future.tex`; site layer: `site/src/content/blog/`.
 
 ## One Sentence
 
@@ -85,9 +85,9 @@ flowchart TD
 |---|---|---|
 | GitHub Pages | Custom domain set to `agent-evolution.com` | Done |
 | Hostinger DNS | A records for apex + `www` CNAME to GitHub Pages | Done; Google/Cloudflare DNS-over-HTTPS see GitHub Pages records |
-| GitHub Pages HTTPS | Wait for GitHub certificate, then enable Enforce HTTPS | Pending certificate (`The certificate does not exist yet`) |
+| GitHub Pages HTTPS | Wait for / re-request GitHub certificate, then enable Enforce HTTPS | Blocking SEO validation: 2026-06-01 live TLS still serves `*.github.io`, not `agent-evolution.com` |
 | Google Search Console | Add Domain property for `agent-evolution.com`; add DNS TXT verification in Hostinger | Token received; DNS TXT still needs verification wait |
-| Google Search Console | Submit `https://agent-evolution.com/sitemap-index.xml` | Pending GitHub Pages HTTPS certificate |
+| Google Search Console | Submit `https://agent-evolution.com/sitemap-index.xml` | Use after HTTPS certificate passes; sitemap currently has URLs, but HTTPS fetch fails strict certificate verification |
 | Bing Webmaster Tools | Add site or import from Search Console; add DNS TXT if needed | Pending token |
 | Rich Results Test | Test one blog post and one project model-card page | Pending deployment |
 | URL Inspection | Request indexing for `/`, `/blog/`, `/search/`, top 8 blog posts | Pending Search Console ownership |

@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://agent-evolution.com/sitemap-index.xml

@@ -363,3 +363,12 @@
 - Added `work/wiki/synthesis/modelscope-agentevolver-frontier-deep-dive.md` so future agents can retrieve the AgentEvolver gate summary without rereading the long packet.
 - Promoted AgentEvolver as a frontier archetype for environment-to-policy self-evolution, with caveats around ReMe startup, AppWorld data, GRPO UUID grouping, memory pressure, and weak rollback evidence.
 **产出:** `analysis/frontier-projects/modelscope-agentevolver-dual-chain.md`, `work/wiki/synthesis/modelscope-agentevolver-frontier-deep-dive.md`
+
+## [2026-06-01 17:02] site+seo | Google Indexing Custom Domain Triage
+
+**操作:** Diagnosed Google Search Console indexing and sitemap symptoms for the public domain.
+**详情:**
+- Confirmed `agent-evolution.com` is the public canonical domain and should remain the site URL.
+- Recorded that the live sitemap is populated, while strict HTTPS fetches fail because the served certificate is still `*.github.io`.
+- Clarified that `/graph/#coverage-debt` is a section anchor and should be inspected as `/graph/`.
+**产出:** `docs/seo/google-indexing-triage-2026-06-01.md`, `work/wiki/synthesis/google-indexing-custom-domain-triage.md`

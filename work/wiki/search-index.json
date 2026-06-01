@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-01T08:52:35.760Z",
+  "generated": "2026-06-01T09:06:31.266Z",
   "stats": {
-    "pages": 61,
-    "keywords": 834
+    "pages": 62,
+    "keywords": 840
   },
   "catalog": [
     {
@@ -595,6 +595,18 @@
       ]
     },
     {
+      "path": "synthesis/google-indexing-custom-domain-triage.md",
+      "title": "Google Indexing Custom Domain Triage",
+      "rank": "B",
+      "type": "synthesis",
+      "tags": [
+        "seo",
+        "google-search-console",
+        "github-pages",
+        "canonical"
+      ]
+    },
+    {
       "path": "synthesis/mechanism-framework.md",
       "title": "\"Agent进化机制分析框架\"",
       "rank": "A",
@@ -790,6 +802,7 @@
       "sources/talent-capital-structure.md",
       "sources/talent-flow-analysis.md",
       "synthesis/frontier-value-queue.md",
+      "synthesis/google-indexing-custom-domain-triage.md",
       "synthesis/mechanism-framework.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/survey-spark-evolve-agi-core.md",
@@ -3260,6 +3273,7 @@
     "seo": [
       "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/five-evolution-loops-topic.md",
+      "synthesis/google-indexing-custom-domain-triage.md",
       "synthesis/survey-seo-topic-map.md"
     ],
     "evidence-chain": [
@@ -3380,6 +3394,28 @@
       "synthesis/frontier-value-queue.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "google indexing custom domain triage": [
+      "synthesis/google-indexing-custom-domain-triage.md"
+    ],
+    "google-search-console": [
+      "synthesis/google-indexing-custom-domain-triage.md"
+    ],
+    "github-pages": [
+      "synthesis/google-indexing-custom-domain-triage.md"
+    ],
+    "canonical": [
+      "synthesis/google-indexing-custom-domain-triage.md"
+    ],
+    "claims": [
+      "synthesis/google-indexing-custom-domain-triage.md"
+    ],
+    "survey-seo-topic-map": [
+      "synthesis/google-indexing-custom-domain-triage.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "resource-library-coverage-audit": [
+      "synthesis/google-indexing-custom-domain-triage.md"
     ],
     "m1-m5": [
       "synthesis/mechanism-framework.md"
@@ -3539,9 +3575,6 @@
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "operating rule": [
-      "synthesis/value-screening-dual-chain-knowledge-base.md"
-    ],
-    "survey-seo-topic-map": [
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "five-evolution-loops-topic": [
