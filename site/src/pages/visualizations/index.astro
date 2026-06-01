@@ -1,32 +1,20 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { projects } from '@/data/projects';
 import FunnelChart from '@/components/visualizations/FunnelChart.astro';
 import TaxonomyTree from '@/components/visualizations/TaxonomyTree.astro';
 import RadarChart from '@/components/visualizations/RadarChart.astro';
 import TimelineHeatmap from '@/components/visualizations/TimelineHeatmap.astro';
 import RankTable from '@/components/visualizations/RankTable.astro';
+import { categoryDistribution, themeDistribution, summaryStats, methodFamilyOptions } from '@/components/visualizations/vizData';
 
-const catCounts = new Map<string, { count: number; totalStars: number }>();
-const langCounts = new Map<string, number>();
-const tagCounts = new Map<string, number>();
-
-for (const p of projects) {
-  const ce = catCounts.get(p.category) || { count: 0, totalStars: 0 };
-  ce.count++; ce.totalStars += Number(p.stars || 0);
-  catCounts.set(p.category, ce);
-
-  const lang = p.language || 'Unknown';
-  langCounts.set(lang, (langCounts.get(lang) || 0) + 1);
-
-  for (const t of p.tags) tagCounts.set(t, (tagCounts.get(t) || 0) + 1);
-}
-
-const categories = [...catCounts.entries()]
-  .sort((a, b) => b[1].count - a[1].count)
-  .map(([category, data]) => ({ category, count: data.count, totalStars: data.totalStars }));
-const languages = [...langCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
-const topTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20);
+type DistributionEntry = { key: string; count: number };
+type MethodFamilyOption = typeof methodFamilyOptions[number];
+const overviewStats = [
+  { label: 'Raw corpus', value: summaryStats.totalRaw, detail: 'classified repositories' },
+  { label: 'Model cards', value: summaryStats.totalProjects, detail: 'public analysis reports' },
+  { label: 'Strict evolution', value: summaryStats.coreEvolution, detail: 'core self-evolution projects' },
+  { label: 'Broad context', value: summaryStats.broadEvolution, detail: 'adjacent AGI index evidence' }
+];
 ---
 
 <BaseLayout
@@ -37,26 +25,35 @@ const topTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20
     <div class="container">
       <div class="eyebrow">Data Visualizations</div>
       <h1 class="gradient-text">数据可视化</h1>
-      <p class="lead">{projects.length} 个自进化项目的交互式图表与探索工具</p>
+      <p class="lead">{summaryStats.totalRaw} 条 raw 语料、{summaryStats.totalProjects} 份项目分析报告的证据图谱。</p>
     </div>
   </section>
 
-  <!-- Static Overview Cards -->
   <section class="section">
     <div class="container">
+      <div class="viz-stat-grid">
+        {overviewStats.map(stat => (
+          <div class="viz-stat">
+            <strong>{stat.value.toLocaleString()}</strong>
+            <span>{stat.label}</span>
+            <small>{stat.detail}</small>
+          </div>
+        ))}
+      </div>
+
       <div class="viz-grid-2col">
         <div class="card">
           <div class="card-head">
-            <div class="eyebrow">Categories</div>
-            <h3>项目分类分布</h3>
+            <div class="eyebrow">Raw Buckets</div>
+            <h3>语料功能桶</h3>
           </div>
           <div class="viz-bars">
-            {categories.slice(0, 10).map((cat: { category: string; count: number; totalStars: number }) => {
-              const maxCount = categories[0]?.count || 1;
-              const pct = Math.round((cat.count / maxCount) * 100);
+            {categoryDistribution.map((cat: DistributionEntry) => {
+              const maxCount = categoryDistribution[0]?.count || 1;
+              const pct = Math.max(4, Math.round((cat.count / maxCount) * 100));
               return (
                 <div class="viz-bar-row">
-                  <span class="viz-bar-label">{cat.category}</span>
+                  <span class="viz-bar-label">{cat.key}</span>
                   <div class="viz-bar-track">
                     <div class="viz-bar-fill" style={`width:${pct}%`}></div>
                   </div>
@@ -69,20 +66,20 @@ const topTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20
 
         <div class="card">
           <div class="card-head">
-            <div class="eyebrow">Languages</div>
-            <h3>编程语言分布</h3>
+            <div class="eyebrow">Theme Coverage</div>
+            <h3>主题覆盖</h3>
           </div>
           <div class="viz-bars">
-            {languages.map(([lang, count]: [string, number]) => {
-              const maxLang = languages[0]?.[1] || 1;
-              const pct = Math.round((count / maxLang) * 100);
+            {themeDistribution.slice(0, 11).map((theme: DistributionEntry) => {
+              const maxTheme = themeDistribution[0]?.count || 1;
+              const pct = Math.max(4, Math.round((theme.count / maxTheme) * 100));
               return (
                 <div class="viz-bar-row">
-                  <span class="viz-bar-label">{lang}</span>
+                  <span class="viz-bar-label">{theme.key}</span>
                   <div class="viz-bar-track">
                     <div class="viz-bar-fill" style={`width:${pct}%`}></div>
                   </div>
-                  <span class="viz-bar-count">{count}</span>
+                  <span class="viz-bar-count">{theme.count}</span>
                 </div>
               );
             })}
@@ -92,12 +89,14 @@ const topTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20
 
       <div class="card" style="margin-top:20px">
         <div class="card-head">
-          <div class="eyebrow">Top Tags</div>
-          <h3>高频进化机制标签</h3>
+          <div class="eyebrow">Comparable Families</div>
+          <h3>统一方法族</h3>
         </div>
-        <div class="viz-tags">
-          {topTags.map(([tag, count]: [string, number]) => (
-            <span class="viz-pill">{tag} <small>{count}</small></span>
+        <div class="viz-family-pills">
+          {methodFamilyOptions.map((family: MethodFamilyOption) => (
+            <span class="viz-pill" style={`--pill-color:${family.color}`}>
+              <i></i>{family.shortLabel} <small>{family.count}</small>
+            </span>
           ))}
         </div>
       </div>
@@ -123,19 +122,26 @@ const topTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20
 </BaseLayout>
 
 <style>
+.viz-stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:20px}
+.viz-stat{border:1px solid var(--line);border-radius:8px;background:var(--surface-1);padding:14px}
+.viz-stat strong{display:block;font-size:28px;line-height:1;font-weight:850;color:var(--fg);font-variant-numeric:tabular-nums}
+.viz-stat span{display:block;margin-top:8px;font-size:13px;font-weight:800;color:var(--fg)}
+.viz-stat small{display:block;margin-top:3px;font-size:11px;font-weight:650;color:var(--muted);line-height:1.35}
 .viz-grid-2col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
 .viz-grid-2col>*{min-width:0}
 .viz-bars{display:flex;flex-direction:column;gap:6px}
-.viz-bar-row{display:grid;grid-template-columns:120px 1fr 40px;gap:8px;align-items:center}
+.viz-bar-row{display:grid;grid-template-columns:minmax(128px,180px) 1fr 44px;gap:8px;align-items:center}
 .viz-bar-label{font-size:13px;font-weight:650;color:var(--fg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .viz-bar-track{height:24px;background:var(--surface-2);border-radius:6px;overflow:hidden}
 .viz-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--brand2));border-radius:6px;transition:width .6s cubic-bezier(.4,0,.2,1)}
 .viz-bar-count{font-size:13px;font-weight:800;color:var(--meta);text-align:right;font-variant-numeric:tabular-nums}
-.viz-tags{display:flex;flex-wrap:wrap;gap:8px}
-.viz-pill{display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border:1px solid var(--line);border-radius:20px;font-size:13px;font-weight:650;color:var(--fg)}
+.viz-family-pills{display:flex;flex-wrap:wrap;gap:8px}
+.viz-pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;font-weight:700;color:var(--fg);background:var(--surface-1)}
+.viz-pill i{width:8px;height:8px;border-radius:50%;background:var(--pill-color);flex-shrink:0}
 .viz-pill small{color:var(--meta);font-weight:800}
 .viz-sh{margin-bottom:24px}
 .viz-sh .eyebrow{color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
 .viz-sh h2{font-family:var(--font-display);font-size:24px;font-weight:400;color:var(--fg);margin-top:4px}
-@media(max-width:760px){.viz-grid-2col{grid-template-columns:minmax(0,1fr)}.viz-bar-row{grid-template-columns:80px minmax(0,1fr) 36px}}
+@media(max-width:900px){.viz-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.viz-grid-2col{grid-template-columns:minmax(0,1fr)}.viz-bar-row{grid-template-columns:minmax(96px,128px) minmax(0,1fr) 36px}.viz-bar-label{font-size:12px}}
 </style>

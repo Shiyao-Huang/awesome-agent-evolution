@@ -1,24 +1,150 @@
 ---
-import { projects } from '@/data/projects';
-const themes=['evolution','skill','memory','evaluation','framework','prompt-optimization'];const tc=new Map<string,Map<string,number>>();const ac=new Set<string>();
-for(const p of projects){ac.add(p.category);for(const t of themes){if(!tc.has(t))tc.set(t,new Map());const pt=p.tags.map(x=>x.toLowerCase());if(pt.some(x=>x.includes(t))||p.category.toLowerCase().includes(t)){const m=tc.get(t)!;m.set(p.category,(m.get(p.category)||0)+1)}}}
-const axes=[...ac].slice(0,8);const series=themes.slice(0,6).map(t=>({name:t,values:axes.map(c=>tc.get(t)?.get(c)||0)}));
-const ap=JSON.stringify(axes);const sp=JSON.stringify(series);
+import { radarAxes, radarSeries } from './vizData';
+
+const axesPayload = JSON.stringify(radarAxes);
+const seriesPayload = JSON.stringify(radarSeries);
 ---
-<div class="viz-radar"><div class="viz-sh"><div class="eyebrow">Theme Radar</div><h2>主题覆盖雷达</h2><p>各研究主题在不同项目类别中的分布</p></div><div class="viz-rc"><svg id="viz-rs" viewBox="0 0 500 500" role="img" aria-label="Theme radar"></svg><div class="viz-rl" id="viz-rl"></div></div></div>
-<script is:inline define:vars={{ ap, sp }}>
-const axes=JSON.parse(ap),series=JSON.parse(sp),svg=document.getElementById('viz-rs'),lg=document.getElementById('viz-rl');if(!svg||!lg)return;
-const cx=250,cy=240,mR=180,n=axes.length,st=(Math.PI*2)/n,cl=['#FF5B00','#007AFF','#2E6F4E','#A56117','#B83224','#8B5CF6'];let mv=1;series.forEach(s=>s.values.forEach(v=>{if(v>mv)mv=v}));
-function pt(i,v){const a=st*i-Math.PI/2,r=(v/mv)*mR;return{x:cx+Math.cos(a)*r,y:cy+Math.sin(a)*r}}
-[.2,.4,.6,.8,1].forEach(rg=>{let p='';for(let i=0;i<n;i++){const q=pt(i,mv*rg);p+=q.x+','+q.y+' '}const pg=document.createElementNS('http://www.w3.org/2000/svg','polygon');pg.setAttribute('points',p.trim());pg.setAttribute('fill','none');pg.setAttribute('stroke','rgba(26,26,26,0.1)');svg.appendChild(pg)});
-axes.forEach((a,i)=>{const p=pt(i,mv);const ln=document.createElementNS('http://www.w3.org/2000/svg','line');ln.setAttribute('x1',cx);ln.setAttribute('y1',cy);ln.setAttribute('x2',p.x);ln.setAttribute('y2',p.y);ln.setAttribute('stroke','rgba(26,26,26,0.12)');svg.appendChild(ln);
-const lp=pt(i,mv*1.18);const tx=document.createElementNS('http://www.w3.org/2000/svg','text');tx.setAttribute('x',lp.x);tx.setAttribute('y',lp.y);tx.setAttribute('text-anchor','middle');tx.setAttribute('dominant-baseline','middle');tx.setAttribute('fill','var(--muted)');tx.setAttribute('font-size','11');tx.setAttribute('font-weight','700');tx.textContent=a.length>14?a.slice(0,13)+'\u2026':a;svg.appendChild(tx)});
-series.forEach((s,si)=>{const col=cl[si%cl.length];let p='';s.values.forEach((v,i)=>{const q=pt(i,v);p+=q.x+','+q.y+' '});const pg=document.createElementNS('http://www.w3.org/2000/svg','polygon');pg.setAttribute('points',p.trim());pg.setAttribute('fill',col+'20');pg.setAttribute('stroke',col);pg.setAttribute('stroke-width','2');svg.appendChild(pg);
-s.values.forEach((v,i)=>{const q=pt(i,v);const cr=document.createElementNS('http://www.w3.org/2000/svg','circle');cr.setAttribute('cx',q.x);cr.setAttribute('cy',q.y);cr.setAttribute('r','3');cr.setAttribute('fill',col);svg.appendChild(cr)});
-const it=document.createElement('div');it.className='viz-rli';it.innerHTML='<span class="viz-rd" style="background:'+col+'"></span><span>'+s.name+'</span>';lg.appendChild(it)});
+
+<div class="viz-radar">
+  <div class="viz-sh">
+    <div class="eyebrow">Evidence Radar</div>
+    <h2>主题证据雷达</h2>
+    <p>用当前 646 条 raw 语料和 239 份分析报告对比主题覆盖。</p>
+  </div>
+  <div class="viz-radar-body">
+    <svg id="viz-rs" viewBox="0 0 560 520" role="img" aria-label="Self-evolution corpus evidence radar"></svg>
+    <div class="viz-rl" id="viz-rl"></div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ axesPayload, seriesPayload }}>
+const axes = JSON.parse(axesPayload);
+const series = JSON.parse(seriesPayload);
+const svg = document.getElementById('viz-rs');
+const legend = document.getElementById('viz-rl');
+const palette = ['#FF5B00', '#007AFF'];
+
+function svgEl(name, attrs) {
+  const el = document.createElementNS('http://www.w3.org/2000/svg', name);
+  Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, String(value)));
+  return el;
+}
+
+function wrapLabel(label) {
+  if (label.length <= 6) return [label];
+  return [label.slice(0, 6), label.slice(6, 12)];
+}
+
+if (svg && legend && axes.length > 2) {
+  const cx = 280;
+  const cy = 250;
+  const maxRadius = 170;
+  const step = (Math.PI * 2) / axes.length;
+  const maxValue = Math.max(1, ...series.flatMap(item => item.values));
+
+  function point(index, value, radiusScale = 1) {
+    const angle = step * index - Math.PI / 2;
+    const radius = (value / maxValue) * maxRadius * radiusScale;
+    return {
+      x: cx + Math.cos(angle) * radius,
+      y: cy + Math.sin(angle) * radius
+    };
+  }
+
+  [0.2, 0.4, 0.6, 0.8, 1].forEach(level => {
+    const points = axes.map((_, index) => point(index, maxValue * level)).map(p => `${p.x},${p.y}`).join(' ');
+    svg.appendChild(svgEl('polygon', {
+      points,
+      fill: 'none',
+      stroke: 'rgba(26,26,26,0.1)',
+      'stroke-width': 1
+    }));
+  });
+
+  axes.forEach((axis, index) => {
+    const edge = point(index, maxValue);
+    svg.appendChild(svgEl('line', {
+      x1: cx,
+      y1: cy,
+      x2: edge.x,
+      y2: edge.y,
+      stroke: 'rgba(26,26,26,0.14)',
+      'stroke-width': 1
+    }));
+
+    const labelPoint = point(index, maxValue, 1.2);
+    const text = svgEl('text', {
+      x: labelPoint.x,
+      y: labelPoint.y - 7,
+      'text-anchor': 'middle',
+      'dominant-baseline': 'middle',
+      fill: 'var(--muted)',
+      'font-size': 11,
+      'font-weight': 750
+    });
+    wrapLabel(axis.label).forEach((part, lineIndex) => {
+      const tspan = svgEl('tspan', { x: labelPoint.x, dy: lineIndex === 0 ? 0 : 13 });
+      tspan.textContent = part;
+      text.appendChild(tspan);
+    });
+    svg.appendChild(text);
+  });
+
+  series.forEach((item, seriesIndex) => {
+    const color = palette[seriesIndex % palette.length];
+    const points = item.values.map((value, index) => point(index, value)).map(p => `${p.x},${p.y}`).join(' ');
+    svg.appendChild(svgEl('polygon', {
+      points,
+      fill: `${color}24`,
+      stroke: color,
+      'stroke-width': 2.5
+    }));
+
+    item.values.forEach((value, index) => {
+      const dot = point(index, value);
+      svg.appendChild(svgEl('circle', {
+        cx: dot.x,
+        cy: dot.y,
+        r: 3.5,
+        fill: color
+      }));
+    });
+
+    const row = document.createElement('div');
+    row.className = 'viz-rli';
+    const swatch = document.createElement('span');
+    swatch.className = 'viz-rd';
+    swatch.style.background = color;
+    const label = document.createElement('span');
+    label.textContent = `${item.name} (${item.total.toLocaleString()})`;
+    row.appendChild(swatch);
+    row.appendChild(label);
+    legend.appendChild(row);
+  });
+
+  const axisList = document.createElement('div');
+  axisList.className = 'viz-rmetrics';
+  axes.slice(0, 6).forEach(axis => {
+    const item = document.createElement('div');
+    item.className = 'viz-rmetric';
+    item.innerHTML = `<strong>${axis.rawCount.toLocaleString()}</strong><span>${axis.label}</span>`;
+    axisList.appendChild(item);
+  });
+  legend.appendChild(axisList);
+}
 </script>
+
 <style is:global>
-.viz-radar{margin-top:32px}.viz-rc{display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap}#viz-rs{width:100%;max-width:460px;height:auto}
-.viz-rl{display:flex;flex-direction:column;gap:8px;min-width:140px}.viz-rli{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:650;color:var(--fg)}.viz-rd{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-@media(max-width:760px){.viz-rc{flex-direction:column}.viz-rl{flex-direction:row;flex-wrap:wrap;justify-content:center}}
+.viz-radar{margin-top:32px}
+.viz-radar-body{display:flex;gap:24px;align-items:center;justify-content:center;flex-wrap:wrap}
+#viz-rs{width:100%;max-width:520px;height:auto}
+.viz-rl{display:grid;gap:10px;min-width:210px}
+.viz-rli{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--fg)}
+.viz-rd{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.viz-rmetrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:4px}
+.viz-rmetric{padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--surface-1)}
+.viz-rmetric strong{display:block;font-size:15px;font-weight:850;color:var(--fg);font-variant-numeric:tabular-nums}
+.viz-rmetric span{display:block;margin-top:2px;font-size:11px;font-weight:650;color:var(--muted)}
+@media(max-width:760px){.viz-radar-body{flex-direction:column}.viz-rl{width:100%;min-width:0}.viz-rmetrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:520px){.viz-rmetrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>

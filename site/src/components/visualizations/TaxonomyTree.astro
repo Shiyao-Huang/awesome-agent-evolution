@@ -1,23 +1,99 @@
 ---
-import { projects } from '@/data/projects';
-const cg = new Map<string, {count:number;tags:Map<string,number>}>();
-for(const p of projects){const e=cg.get(p.category);if(e){e.count++;for(const t of p.tags)e.tags.set(t,(e.tags.get(t)||0)+1)}else{const m=new Map<string,number>();for(const t of p.tags)m.set(t,1);cg.set(p.category,{count:1,tags:m})}}
-const tree=[...cg.entries()].sort((a,b)=>b[1].count-a[1].count).map(([c,d])=>({id:'c:'+c,label:c,count:d.count,children:[...d.tags.entries()].sort((a,b)=>b[1]-a[1]).slice(0,8).map(([t,n])=>({id:'t:'+t,label:t,count:n}))}));
-const tp=JSON.stringify(tree);
+import { taxonomyTree } from './vizData';
+
+const treePayload = JSON.stringify(taxonomyTree);
 ---
-<div class="viz-tax"><div class="viz-sh"><div class="eyebrow">Method Taxonomy</div><h2>方法分类体系</h2><p>点击展开方法族，探索进化机制</p></div><div class="viz-tt" id="viz-tt"></div></div>
-<script is:inline define:vars={{ tp }}>
-const tree=JSON.parse(tp),c=document.getElementById('viz-tt');if(!c)return;const cl=['#FF5B00','#007AFF','#2E6F4E','#A56117','#B83224','#8B5CF6','#0891B2','#BE185D'];
-function rn(n,dp,ci){const col=dp===0?cl[ci%cl.length]:'var(--muted)',el=document.createElement('div');el.className='viz-tn depth-'+dp;const h=document.createElement('div');h.className='viz-th';if(dp===0)h.style.cursor='pointer';
-const b=document.createElement('span');b.className='viz-tb';b.style.background=dp===0?col:'var(--surface-3)';b.style.color=dp===0?'#fff':'var(--fg)';b.textContent=n.count;
-const l=document.createElement('span');l.className='viz-tl';l.textContent=n.label;h.appendChild(b);h.appendChild(l);
-if(n.children&&n.children.length>0){const ch=document.createElement('span');ch.className='viz-tc';ch.textContent='\u25B8';ch.style.color=col;h.appendChild(ch);
-const cb=document.createElement('div');cb.className='viz-tch collapsed';n.children.forEach(x=>cb.appendChild(rn(x,dp+1,ci)));el.appendChild(h);el.appendChild(cb);
-h.addEventListener('click',()=>{const s=cb.classList.contains('collapsed');cb.classList.toggle('collapsed',!s);cb.classList.toggle('expanded',s);ch.textContent=s?'\u25BE':'\u25B8'})}else el.appendChild(h);return el}
-tree.forEach((n,i)=>{const g=document.createElement('div');g.appendChild(rn(n,0,i));c.appendChild(g)});
+
+<div class="viz-tax">
+  <div class="viz-sh">
+    <div class="eyebrow">Method Taxonomy</div>
+    <h2>统一方法族</h2>
+    <p>把项目短描述归并成可比较的方法族，避免一项目一类别。</p>
+  </div>
+  <div class="viz-tt" id="viz-tt"></div>
+</div>
+
+<script is:inline define:vars={{ treePayload }}>
+const tree = JSON.parse(treePayload);
+const container = document.getElementById('viz-tt');
+const colors = ['#FF5B00', '#2E6F4E', '#007AFF', '#8B5CF6', '#0891B2', '#A56117', '#BE185D', '#586069'];
+
+function nodeEl(node, depth, color) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'viz-tn depth-' + depth;
+
+  const header = document.createElement('button');
+  header.type = 'button';
+  header.className = 'viz-th';
+  header.style.setProperty('--node-color', color);
+  header.setAttribute('aria-expanded', depth === 0 ? 'false' : 'true');
+
+  const count = document.createElement('span');
+  count.className = 'viz-tb';
+  count.textContent = String(node.count);
+
+  const copy = document.createElement('span');
+  copy.className = 'viz-tcopy';
+  const label = document.createElement('span');
+  label.className = 'viz-tl';
+  label.textContent = node.label;
+  const description = document.createElement('span');
+  description.className = 'viz-td';
+  description.textContent = node.description || '';
+  copy.appendChild(label);
+  copy.appendChild(description);
+
+  header.appendChild(count);
+  header.appendChild(copy);
+
+  if (node.children && node.children.length > 0) {
+    const chevron = document.createElement('span');
+    chevron.className = 'viz-tc';
+    chevron.textContent = '›';
+    header.appendChild(chevron);
+
+    const children = document.createElement('div');
+    children.className = 'viz-tch collapsed';
+    node.children.forEach(child => children.appendChild(nodeEl(child, depth + 1, color)));
+    wrapper.appendChild(header);
+    wrapper.appendChild(children);
+
+    header.addEventListener('click', () => {
+      const isOpen = !children.classList.contains('collapsed');
+      children.classList.toggle('collapsed', isOpen);
+      header.setAttribute('aria-expanded', String(!isOpen));
+      chevron.textContent = isOpen ? '›' : '⌄';
+    });
+  } else {
+    header.classList.add('leaf');
+    wrapper.appendChild(header);
+  }
+
+  return wrapper;
+}
+
+if (container) {
+  tree.forEach((node, index) => {
+    container.appendChild(nodeEl(node, 0, colors[index % colors.length]));
+  });
+}
 </script>
+
 <style is:global>
-.viz-tax{margin-top:32px}.viz-tt{display:flex;flex-direction:column;gap:6px}.viz-th{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:var(--radius);transition:background var(--transition);user-select:none}.viz-th:hover{background:var(--surface-2)}
-.viz-tb{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:28px;padding:0 8px;border-radius:6px;font-size:12px;font-weight:800;flex-shrink:0}.viz-tl{font-size:14px;font-weight:650;color:var(--fg);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.depth-1 .viz-tl{font-weight:550;font-size:13px}.viz-tc{font-size:14px;font-weight:800;flex-shrink:0}.viz-tch{display:grid;gap:2px;padding-left:24px;border-left:2px solid var(--line);margin-left:16px}.viz-tch.collapsed{display:none}.viz-tch.expanded{display:grid}
+.viz-tax{margin-top:32px}
+.viz-tt{display:grid;gap:8px}
+.viz-th{width:100%;display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid transparent;border-radius:8px;background:transparent;color:var(--fg);text-align:left;transition:background var(--transition),border-color var(--transition);cursor:pointer}
+.viz-th:hover,.viz-th:focus-visible{background:var(--surface-2);border-color:var(--line);outline:none}
+.viz-tb{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:30px;padding:0 8px;border-radius:6px;background:var(--node-color);color:#fff;font-size:12px;font-weight:800;flex-shrink:0;font-variant-numeric:tabular-nums}
+.depth-1 .viz-tb{background:var(--surface-3);color:var(--fg);border:1px solid var(--line)}
+.viz-tcopy{display:grid;gap:2px;min-width:0;flex:1}
+.viz-tl{font-size:14px;font-weight:750;color:var(--fg);line-height:1.25}
+.viz-td{font-size:12px;font-weight:550;color:var(--muted);line-height:1.35}
+.depth-1 .viz-tl{font-size:13px;font-weight:700}
+.depth-1 .viz-td{font-size:11px}
+.viz-tc{color:var(--node-color);font-size:20px;font-weight:800;line-height:1;flex-shrink:0}
+.viz-tch{display:grid;gap:3px;margin-left:16px;padding-left:22px;border-left:2px solid color-mix(in srgb,var(--node-color) 45%,var(--line))}
+.viz-tch.collapsed{display:none}
+.viz-th.leaf{cursor:default}
+@media(max-width:760px){.viz-th{padding:9px 8px}.viz-td{display:none}.viz-tch{margin-left:10px;padding-left:14px}}
 </style>

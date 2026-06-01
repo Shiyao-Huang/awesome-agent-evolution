@@ -1,19 +1,141 @@
 ---
-import { timelineData, timeSliceData } from './vizData';
-const tlp=JSON.stringify(timelineData);const tsp=JSON.stringify(timeSliceData);
+import { timelineData, timeSliceData, timeCoverage } from './vizData';
+
+const createdPayload = JSON.stringify(timelineData);
+const activityPayload = JSON.stringify(timeSliceData);
+const coveragePayload = JSON.stringify(timeCoverage);
 ---
-<div class="viz-tl"><div class="viz-sh"><div class="eyebrow">Timeline Heatmap</div><h2>时间线热力图</h2><p>仓库创建/活跃度按时间分布</p></div>
-<div class="viz-tabs"><button class="viz-tab active" id="tc">By Created Date</button><button class="viz-tab" id="ta">By Activity</button></div>
-<div class="viz-hg" id="viz-hg"></div></div>
-<script is:inline define:vars={{ tlp, tsp }}>
-const cd=JSON.parse(tlp),ad=JSON.parse(tsp),g=document.getElementById('viz-hg'),tc=document.getElementById('tc'),ta=document.getElementById('ta');if(!g)return;
-function ren(data){g.innerHTML='';if(!data.length){g.innerHTML='<p style="color:var(--muted);padding:20px">No data</p>';return}
-const mc=Math.max(...data.map(d=>d.count));data.forEach(e=>{const i=mc>0?e.count/mc:0;const c=document.createElement('div');c.className='viz-hc';const b=document.createElement('div');b.className='viz-hb';b.style.height='0%';b.style.maxHeight=Math.max(8,i*100)+'%';b.style.opacity=String(.15+i*.85);const l=document.createElement('span');l.className='viz-hl';l.textContent=e.key.slice(2);c.appendChild(b);c.appendChild(l);g.appendChild(c)});
-const o=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){g.querySelectorAll('.viz-hb').forEach(b=>{b.style.height=b.style.maxHeight});o.unobserve(e.target)}})},{threshold:.2});o.observe(g)}
-ren(cd);tc.addEventListener('click',()=>{tc.classList.add('active');ta.classList.remove('active');ren(cd)});ta.addEventListener('click',()=>{ta.classList.add('active');tc.classList.remove('active');ren(ad)});
+
+<div class="viz-timeline">
+  <div class="viz-sh">
+    <div class="eyebrow">Timeline Heatmap</div>
+    <h2>时间线热力图</h2>
+    <p>默认显示 raw 语料采集/活跃时间；创建时间因 GitHub API 覆盖不足单独标注。</p>
+  </div>
+  <div class="viz-tabs" role="tablist" aria-label="时间线视图">
+    <button class="viz-tab active" id="ta" type="button">Raw Activity</button>
+    <button class="viz-tab" id="tc" type="button">Known Created Date</button>
+  </div>
+  <div class="viz-tstats" id="viz-tstats"></div>
+  <div class="viz-hg" id="viz-hg" aria-live="polite"></div>
+</div>
+
+<script is:inline define:vars={{ createdPayload, activityPayload, coveragePayload }}>
+const created = JSON.parse(createdPayload);
+const activity = JSON.parse(activityPayload);
+const coverage = JSON.parse(coveragePayload);
+const graph = document.getElementById('viz-hg');
+const createdButton = document.getElementById('tc');
+const activityButton = document.getElementById('ta');
+const stats = document.getElementById('viz-tstats');
+
+function labelForKey(key) {
+  if (key === 'early') return 'early';
+  return key.replace(/^20/, '');
+}
+
+function statLine(mode) {
+  if (mode === 'created') {
+    return [
+      ['known', coverage.createdKnown],
+      ['unknown', coverage.createdUnknown],
+      ['verified', coverage.verifiedCreated],
+      ['fallback', coverage.fallbackCreated]
+    ];
+  }
+  return [
+    ['known slices', coverage.rawKnown],
+    ['unknown', coverage.rawUnknown],
+    ['buckets', activity.length]
+  ];
+}
+
+function renderStats(mode) {
+  if (!stats) return;
+  stats.innerHTML = '';
+  statLine(mode).forEach(([label, value]) => {
+    const item = document.createElement('span');
+    item.className = 'viz-tstat';
+    item.innerHTML = `<strong>${Number(value).toLocaleString()}</strong>${label}`;
+    stats.appendChild(item);
+  });
+}
+
+function render(data, mode) {
+  if (!graph) return;
+  graph.innerHTML = '';
+  renderStats(mode);
+  if (!data.length) {
+    const empty = document.createElement('p');
+    empty.className = 'viz-empty';
+    empty.textContent = 'No dated evidence yet';
+    graph.appendChild(empty);
+    return;
+  }
+
+  const maxCount = Math.max(...data.map(item => item.count));
+  data.forEach(item => {
+    const intensity = maxCount > 0 ? item.count / maxCount : 0;
+    const cell = document.createElement('div');
+    cell.className = 'viz-hc';
+    cell.title = `${item.key}: ${item.count.toLocaleString()}`;
+
+    const bar = document.createElement('div');
+    bar.className = 'viz-hb';
+    bar.style.height = '0%';
+    bar.style.setProperty('--bar-height', `${Math.max(8, intensity * 100)}%`);
+    bar.style.opacity = String(0.22 + intensity * 0.78);
+
+    const value = document.createElement('span');
+    value.className = 'viz-hv';
+    value.textContent = item.count >= 100 ? item.count.toLocaleString() : String(item.count);
+
+    const label = document.createElement('span');
+    label.className = 'viz-hl';
+    label.textContent = labelForKey(item.key);
+
+    cell.appendChild(value);
+    cell.appendChild(bar);
+    cell.appendChild(label);
+    graph.appendChild(cell);
+  });
+
+  requestAnimationFrame(() => {
+    graph.querySelectorAll('.viz-hb').forEach(bar => {
+      bar.style.height = bar.style.getPropertyValue('--bar-height');
+    });
+  });
+}
+
+if (graph && createdButton && activityButton) {
+  render(activity, 'activity');
+  activityButton.addEventListener('click', () => {
+    activityButton.classList.add('active');
+    createdButton.classList.remove('active');
+    render(activity, 'activity');
+  });
+  createdButton.addEventListener('click', () => {
+    createdButton.classList.add('active');
+    activityButton.classList.remove('active');
+    render(created, 'created');
+  });
+}
 </script>
+
 <style is:global>
-.viz-tl{margin-top:32px;max-width:100%;overflow-x:hidden}.viz-tabs{display:flex;gap:8px;margin-bottom:16px}.viz-tab{padding:6px 14px;border:1px solid var(--line);border-radius:var(--radius-cta);background:var(--surface-1);color:var(--muted);font-size:13px;font-weight:700;cursor:pointer;transition:all var(--transition)}.viz-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}.viz-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
-.viz-hg{display:flex;gap:4px;align-items:flex-end;width:100%;max-width:100%;height:200px;overflow-x:auto;contain:inline-size}.viz-hc{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:36px;flex:1;height:100%;justify-content:flex-end}.viz-hb{width:100%;border-radius:4px 4px 0 0;background:var(--accent);transition:height .8s cubic-bezier(.4,0,.2,1)}.viz-hl{font-size:10px;font-weight:700;color:var(--meta);white-space:nowrap}
-@media(max-width:760px){.viz-hg{gap:2px;overflow-x:hidden}.viz-hc{min-width:0;flex:1 1 0}.viz-hl{height:28px;font-size:8px;writing-mode:vertical-rl;transform:rotate(180deg)}}
+.viz-timeline{margin-top:32px;max-width:100%;overflow-x:hidden}
+.viz-tabs{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.viz-tab{padding:6px 14px;border:1px solid var(--line);border-radius:var(--radius-cta);background:var(--surface-1);color:var(--muted);font-size:13px;font-weight:750;cursor:pointer;transition:all var(--transition)}
+.viz-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.viz-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.viz-tstats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.viz-tstat{display:inline-flex;align-items:baseline;gap:4px;padding:5px 8px;border:1px solid var(--line);border-radius:8px;background:var(--surface-1);font-size:11px;font-weight:700;color:var(--muted)}
+.viz-tstat strong{font-size:13px;font-weight:850;color:var(--fg);font-variant-numeric:tabular-nums}
+.viz-hg{display:flex;gap:5px;align-items:flex-end;width:100%;max-width:100%;height:220px;overflow-x:auto;padding-top:18px;contain:inline-size}
+.viz-hc{display:grid;grid-template-rows:18px 1fr 18px;align-items:end;justify-items:center;gap:4px;min-width:42px;flex:1;height:100%}
+.viz-hb{width:100%;border-radius:4px 4px 0 0;background:var(--accent);transition:height .65s cubic-bezier(.4,0,.2,1)}
+.viz-hv{font-size:10px;font-weight:800;color:var(--meta);font-variant-numeric:tabular-nums}
+.viz-hl{font-size:10px;font-weight:750;color:var(--meta);white-space:nowrap}
+.viz-empty{color:var(--muted);padding:20px;font-weight:650}
+@media(max-width:760px){.viz-hg{gap:3px;overflow-x:auto}.viz-hc{min-width:34px}.viz-hl{height:28px;font-size:8px;writing-mode:vertical-rl;transform:rotate(180deg)}.viz-hv{display:none}}
 </style>
