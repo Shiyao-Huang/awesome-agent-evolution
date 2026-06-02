@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-06-02T06:12:58.689Z",
+  "generated_at": "2026-06-02T07:22:44.747Z",
   "method": {
     "name": "value_evidence_repair_queue_v0",
     "source": "data-engine/value-lsh-index/value-matrix.jsonl",
     "note": "Prioritizes evidence repair work after value-LSH comparison; repair score is not a quality score."
   },
   "summary": {
-    "generated_at": "2026-06-02T06:12:58.689Z",
-    "source_lsh_generated_at": "2026-06-02T06:11:59.058Z",
+    "generated_at": "2026-06-02T07:22:44.747Z",
+    "source_lsh_generated_at": "2026-06-02T07:22:32.173Z",
     "github_projects": 721,
-    "projects_with_gaps": 684,
+    "projects_with_gaps": 683,
     "lane_counts": {
-      "deep-read-needed": 450,
+      "deep-read-needed": 449,
       "issue-resource-scan": 141,
       "raw-meta-repair": 52,
       "loop-verification": 36,
       "star-growth-repair": 5
     },
     "gap_counts": {
-      "deep_report_missing": 450,
-      "frontier_queue_missing": 467,
-      "issue_resource_unclear": 330,
-      "self_evolution_unclear": 437,
-      "evidence_chain_incomplete": 502,
+      "deep_report_missing": 449,
+      "frontier_queue_missing": 466,
+      "issue_resource_unclear": 329,
+      "self_evolution_unclear": 436,
+      "evidence_chain_incomplete": 501,
       "implementation_unclear": 55,
       "star_growth_missing": 24,
       "raw_meta_missing": 52
@@ -30,53 +30,6 @@
     "top_repair_score": 134.8
   },
   "queue": [
-    {
-      "id": "github:krzysztofdudek/researcherskill",
-      "repo": "krzysztofdudek/researcherskill",
-      "title": "krzysztofdudek/researcherskill",
-      "url": "https://github.com/krzysztofdudek/researcherskill",
-      "value_score": 75.8,
-      "value_class": "high-value-candidate",
-      "repair_score": 134.8,
-      "lane": "deep-read-needed",
-      "gaps": [
-        {
-          "id": "deep_report_missing",
-          "label": "Deep report missing",
-          "action": "clone/read code and create model-card style deep report"
-        },
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": null,
-        "public_report": null,
-        "raw_file": "raw-github/krzysztofdudek_researcherskill.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": 282
-      }
-    },
     {
       "id": "github:sola-st/repairagent",
       "repo": "sola-st/repairagent",

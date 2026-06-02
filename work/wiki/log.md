@@ -625,3 +625,22 @@
 - Removed the target from the generic repair queue; the next top repair targets are `krzysztofdudek/researcherskill`, `sola-st/repairagent`, `zhang677/accelopt`, `hwfengcs/dm-code-agent`, and `rucbm/laser`.
 - The rebuilt value matrix has 2223 materials, 721 GitHub rows, 171 LSH buckets, 3 clusters, and 684 GitHub projects still carrying repair gaps; note that automatic value facets remain keyword/metadata heuristics, so the manual report's weak-continuity/verifier caveat is the stronger interpretation layer for this target.
 **产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`
+
+## [2026-06-02 15:21] project+deep-read | krzysztofdudek ResearcherSkill
+
+**操作:** Completed the next value-LSH repair-queue deep read for `krzysztofdudek/researcherskill`.
+**详情:**
+- Verified live GitHub metadata: created `2026-03-22`, pushed `2026-05-31`, updated `2026-06-02`, 230 stars, 26 forks, 0 open issues, MIT license, 12 tags, latest release `v1.7.0`, discussions enabled, and no standalone issues.
+- Inspected local shallow mirror `projects/repos/krzysztofdudek__researcherskill` at `3a70df8`, including `skills/researcher/SKILL.md`, `README.md`, `GUIDE.md`, `CHANGELOG.md`, plugin manifests, and archived Lab 1/Lab 2 validation artifacts.
+- Classified ResearcherSkill as `frontier-skill-mediated-experiment-harness / controlled-self-improvement-protocol`: strong `.lab` lineage, measured keep/discard loop, branch genealogy and metric-retention value, but not an independent self-evolving runtime and still carrying star-history/reproduction/destructive-reset trust boundaries.
+**产出:** `analysis/frontier-projects/krzysztofdudek-researcherskill-dual-chain.md`, `work/wiki/synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md`, `projects/repos/krzysztofdudek__researcherskill`
+
+## [2026-06-02 15:23] data+index | ResearcherSkill Repair Queue Resolution
+
+**操作:** Rebuilt value-LSH, projection, repair queue, wiki search index, project indexes, and site build after the ResearcherSkill deep-read packet.
+**详情:**
+- Verified `krzysztofdudek/researcherskill` now has `evidence_refs.analysis_report = analysis/frontier-projects/krzysztofdudek-researcherskill-dual-chain.md` in `data-engine/value-lsh-index/value-matrix.jsonl`.
+- Removed the target from the generic repair queue; GitHub projects with repair gaps decreased from 684 to 683, and `deep-read-needed` decreased from 450 to 449.
+- The target's value score/confidence became `79.62 / 69.23`, with `implementation_runnable=1`, `teaching_model_card=1`, `evidence_chain_complete=1`, and `star_growth_current=-1` because stargazer history is still not fetched.
+- The next top repair targets are `sola-st/repairagent`, `zhang677/accelopt`, `hwfengcs/dm-code-agent`, `rucbm/laser`, and `arthurmgraf/graphmind`.
+**产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`, `site/dist/`

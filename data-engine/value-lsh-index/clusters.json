@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T06:11:59.058Z",
+  "generated_at": "2026-06-02T07:22:32.173Z",
   "threshold": 0.52,
   "total": 3,
   "clusters": [
@@ -18,7 +18,7 @@
         "high-value-candidate": 803,
         "low-signal-or-risk": 112
       },
-      "score_avg": 71.55,
+      "score_avg": 71.56,
       "confidence_avg": 52.47,
       "top_tags": [
         {

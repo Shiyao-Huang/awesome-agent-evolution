@@ -91,6 +91,7 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [Awesome-Self-Evolving-Agents Collaboration Learning](synthesis/awesome-self-evolving-agents-collaboration-learning.md) — 学习 EvoAgentX awesome list 的协作/分类逻辑：source-router、definition gate、empirical-matrix 和 value-LSH intake，而不复制条目 | Rank: A | 2026-06-02
 - [inclusionAI AWorld-RL Frontier Deep Dive](synthesis/inclusionai-aworld-rl-frontier-deep-dive.md) — repair queue 当前第一项：从 stale `agenticlearning` 元数据修复到 canonical `AWorld-RL`，定性为 agentic-RL training/eval bundle 而非完整 self-evolving runtime | Rank: A | 2026-06-02
 - [tylerdotai Meta-Harness Evolver Frontier Deep Dive](synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md) — repair queue 当前第一项：OpenClaw/Hoss harness-evolution 原型，强 self-mirror 机制启发但 verifier/continuity 证据弱 | Rank: A | 2026-06-02
+- [krzysztofdudek ResearcherSkill Frontier Deep Dive](synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md) — repair queue 当前第一项：技能媒介的受控实验/自改进协议，强 `.lab` lineage 与 metric-retention 价值，但不是独立自进化 runtime | Rank: A | 2026-06-02
 - [kargarisaac Reflexion Deep Dive](synthesis/kargarisaac-reflexion-deep-dive.md) — repair queue 第一项样本：小型 smolagents Reflexion adapter，被降级为 baseline teaching anchor 而非当前 frontier | Rank: A | 2026-06-01
 - [synaptent Aragora Frontier Deep Dive](synthesis/synaptent-aragora-frontier-deep-dive.md) — repair queue 第二项样本：高延续性的 2026 governance-control-plane anchor，需继续做 queue-health/adoption audit | Rank: A | 2026-06-02
 - [gepa-ai GEPA Frontier Deep Dive](synthesis/gepa-ai-gepa-frontier-deep-dive.md) — repair queue 第三项样本：高活跃 prompt/program/skill optimizer anchor，需继续用 optimize-anything artifact 做独立复现审查 | Rank: A | 2026-06-02
@@ -112,5 +113,5 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Entities | 8 |
 | Concepts | 10 |
 | Sources | 31 |
-| Synthesis pages | 27 |
+| Synthesis pages | 28 |
 | Last updated | 2026-06-02 |

@@ -1,6 +1,6 @@
 # Value LSH Index
 
-> Generated: 2026-06-02T06:11:59.058Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
+> Generated: 2026-06-02T07:22:32.173Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
 
 ## One Sentence
 
@@ -8,7 +8,7 @@ Value LSH turns comparison into a fast discrete scan: each material gets a `-1/0
 
 ## Three Sentences
 
-This run scanned 2223 materials across GitHub, papers, social/X, and blogs, then generated 171 non-empty LSH buckets and 3 clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the value score and evidence refs keep the ranking auditable. Incremental state is tracked in `data-engine/value-lsh-index/manifest.json`: 4 added, 18 changed, 0 removed, 2201 unchanged versus the previous run.
+This run scanned 2223 materials across GitHub, papers, social/X, and blogs, then generated 171 non-empty LSH buckets and 3 clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the value score and evidence refs keep the ranking auditable. Incremental state is tracked in `data-engine/value-lsh-index/manifest.json`: 0 added, 0 changed, 0 removed, 2223 unchanged versus the previous run.
 
 ## Why Discrete LSH
 
@@ -37,8 +37,8 @@ flowchart LR
 | value tags | 26 |
 | LSH buckets | 171 |
 | clusters | 3 |
-| candidate pairs scanned | 64602 |
-| accepted pairs | 55010 |
+| candidate pairs scanned | 64648 |
+| accepted pairs | 55053 |
 | broad buckets skipped | 27 |
 | tag version | 19810f296115 |
 
@@ -119,7 +119,7 @@ flowchart LR
 
 | cluster | size | score avg | types | top tags | representatives |
 | --- | ---: | ---: | --- | --- | --- |
-| vlsh-0001 | 1540 | 71.55 | github:663, paper:197, social:415, blog:265 | +local_code_or_artifact, +timestamp_freshness, +current_frontier_signal, +mutable_artifact_clear, +community_momentum, +product_usability, +open_source_reuse, +useful_for_survey_seo | AgentEvolver; CUGA Agent; Yunjue Agent |
+| vlsh-0001 | 1540 | 71.56 | github:663, paper:197, social:415, blog:265 | +local_code_or_artifact, +timestamp_freshness, +current_frontier_signal, +mutable_artifact_clear, +community_momentum, +product_usability, +open_source_reuse, +useful_for_survey_seo | AgentEvolver; CUGA Agent; Yunjue Agent |
 | vlsh-0002 | 3 | 63.27 | social:3 | +current_frontier_signal, +implementation_runnable, +local_code_or_artifact, +product_usability, -evidence_chain_complete, +timestamp_freshness, +open_source_reuse, +hype_without_evidence | 0194 Linux do agent LINUX DO; 0251 Hacker News DeepSeek and Tsinghua Developing Self Improving AI Models; 0334 Hacker News Crewai Raises 18M But Are AI Agents Ready for Prime Time |
 | vlsh-0003 | 2 | 64.33 | blog:2 | +current_frontier_signal, +self_evolution_loop_fit, +implementation_runnable, +local_code_or_artifact, +product_usability, -evidence_chain_complete, +timestamp_freshness, +community_momentum | 0190 36Kr 7 GPU 36; 0425 Tencent Cloud Dev |
 

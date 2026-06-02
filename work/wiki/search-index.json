@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-02T06:15:33.977Z",
+  "generated": "2026-06-02T07:24:38.093Z",
   "stats": {
-    "pages": 76,
-    "keywords": 936
+    "pages": 77,
+    "keywords": 940
   },
   "catalog": [
     {
@@ -703,6 +703,20 @@
       ]
     },
     {
+      "path": "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md",
+      "title": "krzysztofdudek ResearcherSkill Frontier Deep Dive",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "github",
+        "researcher-skill",
+        "agent-skill",
+        "experimentation",
+        "value-lsh",
+        "self-evolution"
+      ]
+    },
+    {
       "path": "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
       "title": "langchain-ai Open SWE Frontier Deep Dive",
       "rank": "A",
@@ -943,6 +957,7 @@
       "sources/raw-github-mechanism-analysis.md",
       "sources/review-mechanism-insights-enhanced.md",
       "synthesis/gepa-ai-gepa-frontier-deep-dive.md",
+      "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/self-evolution-definition-criteria.md"
     ],
@@ -961,6 +976,7 @@
       "sources/papers-digest.md",
       "sources/raw-papers-mechanism-analysis.md",
       "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md",
       "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
       "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
       "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
@@ -2341,6 +2357,7 @@
       "synthesis/github-star-growth-database.md",
       "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
       "synthesis/kargarisaac-reflexion-deep-dive.md",
+      "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md",
       "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
       "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
       "synthesis/synaptent-aragora-frontier-deep-dive.md",
@@ -3813,6 +3830,7 @@
     ],
     "value-lsh": [
       "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md",
       "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
       "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
       "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md",
@@ -3822,30 +3840,35 @@
     ],
     "1 sentence": [
       "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md",
       "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
       "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
       "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
     ],
     "3 sentences": [
       "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md",
       "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
       "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
       "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
     ],
     "value decision": [
       "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md",
       "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
       "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
       "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
     ],
     "mirror note": [
       "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md",
       "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
       "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
       "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
     ],
     "follow-up": [
       "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md",
       "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
       "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
       "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
@@ -3883,6 +3906,18 @@
     ],
     "baseline": [
       "synthesis/kargarisaac-reflexion-deep-dive.md"
+    ],
+    "krzysztofdudek researcherskill frontier deep dive": [
+      "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md"
+    ],
+    "researcher-skill": [
+      "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md"
+    ],
+    "agent-skill": [
+      "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md"
+    ],
+    "experimentation": [
+      "synthesis/krzysztofdudek-researcherskill-frontier-deep-dive.md"
     ],
     "langchain-ai open swe frontier deep dive": [
       "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"

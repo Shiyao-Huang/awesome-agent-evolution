@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-02T06:11:59.058Z",
+  "generated_at": "2026-06-02T07:22:32.173Z",
   "source": "all",
   "tag_version": "19810f296115",
   "band_size": 6,
   "threshold": 0.52,
   "summary": {
-    "previous_generated_at": "2026-06-02T05:50:44.329Z",
-    "added": 4,
-    "changed": 18,
-    "unchanged": 2201,
+    "previous_generated_at": "2026-06-02T06:11:59.058Z",
+    "added": 0,
+    "changed": 0,
+    "unchanged": 2223,
     "removed": 0
   },
   "items": {
@@ -2448,8 +2448,8 @@
       "type": "github",
       "source_path": "raw-github/krzysztofdudek_researcherskill.md",
       "fingerprint": "509487297291fce408f8539366043bc8aa167c08",
-      "signature_hash": "07347591b7e196f20764",
-      "value_score": 75.8,
+      "signature_hash": "b61d9839b1aa343c023f",
+      "value_score": 79.62,
       "value_class": "high-value-candidate"
     },
     "github:kweaver-ai/kweaver-core": {
