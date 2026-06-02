@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-02T13:53:05+08:00
+Generated: 2026-06-01T20:27:31+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-06-02T13:53:05+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: plaited/agent-eval-harness, najeed/ai-agent-eval-harness, Arc-Computer/CL-Bench, Versatly/clawvault.
-- New raw files: raw-github/plaited_agent-eval-harness.md, raw-github/najeed_ai-agent-eval-harness.md, raw-github/arc-computer_cl-bench.md, raw-github/versatly_clawvault.md.
-- New public model cards and site reports: project/report ids 390, 391, 392, 393.
-- Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
-- GitNexus CLI is available locally; status was stale before this iteration and a reanalysis attempt was started.
+- API-observed repos: opensquilla/opensquilla, GCWing/BitFun, oceanbase/powermem, mnemon-dev/mnemon, alibaizhanov/mengram, im4codes/imcodes, weaviate/query-agent-benchmarking.
+- New raw files: raw-github/opensquilla_opensquilla.md, raw-github/gcwing_bitfun.md, raw-github/oceanbase_powermem.md, raw-github/mnemon-dev_mnemon.md, raw-github/alibaizhanov_mengram.md, raw-github/im4codes_imcodes.md, raw-github/weaviate_query-agent-benchmarking.md.
+- New public model cards and site reports: project/report ids 377, 378, 379, 380, 381, 382, 383.
+- Public GitHub API metadata was reachable; local `gh` token remains invalid for authenticated paths.
+- GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T13:53:05+08:00",
+  "generated_at": "2026-06-01T20:27:31+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -370,7 +370,14 @@
         "raw-github/plaited_agent-eval-harness.md",
         "raw-github/najeed_ai-agent-eval-harness.md",
         "raw-github/arc-computer_cl-bench.md",
-        "raw-github/versatly_clawvault.md"
+        "raw-github/versatly_clawvault.md",
+        "raw-github/opensquilla_opensquilla.md",
+        "raw-github/gcwing_bitfun.md",
+        "raw-github/oceanbase_powermem.md",
+        "raw-github/mnemon-dev_mnemon.md",
+        "raw-github/alibaizhanov_mengram.md",
+        "raw-github/im4codes_imcodes.md",
+        "raw-github/weaviate_query-agent-benchmarking.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -526,7 +533,8 @@
         "work/research/hourly-public-metadata-update-2026-06-01-1951.md",
         "work/research/hourly-public-metadata-update-2026-06-02-0155.md",
         "work/research/hourly-public-metadata-update-2026-06-02-0754.md",
-        "work/research/hourly-public-metadata-update-2026-06-02-1353.md"
+        "work/research/hourly-public-metadata-update-2026-06-02-1353.md",
+        "work/research/hourly-public-metadata-update-2026-06-01-2027.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -1208,7 +1216,21 @@
         "projects/392-arc-continual-learning-benchmark.md",
         "site/public/reports/projects/392-arc-continual-learning-benchmark.md",
         "projects/393-clawvault-memory-runtime.md",
-        "site/public/reports/projects/393-clawvault-memory-runtime.md"
+        "site/public/reports/projects/393-clawvault-memory-runtime.md",
+        "projects/377-opensquilla-token-efficient-agent-runtime.md",
+        "site/public/reports/projects/377-opensquilla-token-efficient-agent-runtime.md",
+        "projects/378-bitfun-desktop-agent-runtime-suite.md",
+        "site/public/reports/projects/378-bitfun-desktop-agent-runtime-suite.md",
+        "projects/379-powermem-agent-memory-plugin.md",
+        "site/public/reports/projects/379-powermem-agent-memory-plugin.md",
+        "projects/380-mnemon-persistent-memory-substrate.md",
+        "site/public/reports/projects/380-mnemon-persistent-memory-substrate.md",
+        "projects/381-mengram-human-like-agent-memory.md",
+        "site/public/reports/projects/381-mengram-human-like-agent-memory.md",
+        "projects/382-imcodes-shared-agent-context-layer.md",
+        "site/public/reports/projects/382-imcodes-shared-agent-context-layer.md",
+        "projects/383-weaviate-query-agent-benchmarking-toolkit.md",
+        "site/public/reports/projects/383-weaviate-query-agent-benchmarking-toolkit.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1533,15 +1555,18 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-06-02T13:53:05+08:00",
+    "run_at": "2026-06-01T20:27:31+08:00",
     "added_repositories": [
-      "plaited/agent-eval-harness",
-      "najeed/ai-agent-eval-harness",
-      "Arc-Computer/CL-Bench",
-      "Versatly/clawvault"
+      "opensquilla/opensquilla",
+      "GCWing/BitFun",
+      "oceanbase/powermem",
+      "mnemon-dev/mnemon",
+      "alibaizhanov/mengram",
+      "im4codes/imcodes",
+      "weaviate/query-agent-benchmarking"
     ],
-    "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
+    "evidence_quality": "public_github_api_metadata_observed; unauthenticated_rate_limit_possible; gh_token_invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "available; local CLI exists, initial status was stale, reanalysis attempted in this iteration"
+    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
   }
 }
