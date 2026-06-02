@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-02T02:27:29.566Z",
+  "generated_at": "2026-06-02T02:53:10.310Z",
   "source": "all",
   "tag_version": "19810f296115",
   "band_size": 6,
   "threshold": 0.52,
   "summary": {
-    "previous_generated_at": "2026-06-02T01:45:11.370Z",
+    "previous_generated_at": "2026-06-02T02:27:29.566Z",
     "added": 0,
     "changed": 0,
     "unchanged": 2219,
@@ -2528,8 +2528,8 @@
       "type": "github",
       "source_path": "raw-github/langchain-ai_open-swe.md",
       "fingerprint": "9e176929aa0ed42d6d2ea15903c594f4d0a9652d",
-      "signature_hash": "574d9520ee5114633d7e",
-      "value_score": 77.39,
+      "signature_hash": "5254a270b85748e23351",
+      "value_score": 81.21,
       "value_class": "high-value-candidate"
     },
     "github:langflow-ai/langflow": {

@@ -1,82 +1,35 @@
 {
-  "generated_at": "2026-06-02T02:27:53.450Z",
+  "generated_at": "2026-06-02T02:53:27.634Z",
   "method": {
     "name": "value_evidence_repair_queue_v0",
     "source": "data-engine/value-lsh-index/value-matrix.jsonl",
     "note": "Prioritizes evidence repair work after value-LSH comparison; repair score is not a quality score."
   },
   "summary": {
-    "generated_at": "2026-06-02T02:27:53.450Z",
-    "source_lsh_generated_at": "2026-06-02T02:27:29.566Z",
+    "generated_at": "2026-06-02T02:53:27.634Z",
+    "source_lsh_generated_at": "2026-06-02T02:53:10.310Z",
     "github_projects": 717,
-    "projects_with_gaps": 683,
+    "projects_with_gaps": 682,
     "lane_counts": {
-      "deep-read-needed": 454,
+      "deep-read-needed": 453,
       "issue-resource-scan": 138,
       "raw-meta-repair": 52,
       "loop-verification": 35,
       "star-growth-repair": 4
     },
     "gap_counts": {
-      "deep_report_missing": 454,
-      "frontier_queue_missing": 467,
-      "issue_resource_unclear": 331,
-      "self_evolution_unclear": 436,
-      "evidence_chain_incomplete": 506,
+      "deep_report_missing": 453,
+      "frontier_queue_missing": 466,
+      "issue_resource_unclear": 330,
       "implementation_unclear": 52,
+      "evidence_chain_incomplete": 505,
+      "self_evolution_unclear": 435,
       "star_growth_missing": 20,
       "raw_meta_missing": 52
     },
-    "top_repair_score": 136.39
+    "top_repair_score": 135.75
   },
   "queue": [
-    {
-      "id": "github:langchain-ai/open-swe",
-      "repo": "langchain-ai/open-swe",
-      "title": "langchain-ai/open-swe",
-      "url": "https://github.com/langchain-ai/open-swe",
-      "value_score": 77.39,
-      "value_class": "high-value-candidate",
-      "repair_score": 136.39,
-      "lane": "deep-read-needed",
-      "gaps": [
-        {
-          "id": "deep_report_missing",
-          "label": "Deep report missing",
-          "action": "clone/read code and create model-card style deep report"
-        },
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": null,
-        "public_report": null,
-        "raw_file": "raw-github/langchain-ai_open-swe.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": 549
-      }
-    },
     {
       "id": "github:sethkarten/continual-harness",
       "repo": "sethkarten/continual-harness",

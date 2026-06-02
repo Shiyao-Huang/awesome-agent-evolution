@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T23:56:51.055Z",
+  "generated_at": "2026-06-02T03:11:36.099Z",
   "counts": {
     "raw_captures": 666,
     "raw_files_on_disk": 666,
@@ -58291,7 +58291,7 @@
   },
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-06-01T23:56:51.055Z",
+    "reference_date": "2026-06-02T03:11:36.099Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -58330,8 +58330,8 @@
       "stars": 1440,
       "report": "projects/modelscope__agentevolver.md",
       "scores": {
-        "current_value": 83.25,
-        "time": 75.71,
+        "current_value": 83.24,
+        "time": 75.69,
         "mechanism": 100,
         "evidence": 100,
         "adoption": 59.98,
@@ -58358,8 +58358,8 @@
       "stars": 41,
       "report": "projects/zju_llm_safety__darwin.md",
       "scores": {
-        "current_value": 76.83,
-        "time": 93.59,
+        "current_value": 76.82,
+        "time": 93.57,
         "mechanism": 75,
         "evidence": 62,
         "adoption": 30.83,
@@ -58388,8 +58388,8 @@
       "stars": 43,
       "report": "projects/oppo_mente_lab__llm_self_judge.md",
       "scores": {
-        "current_value": 75.79,
-        "time": 86.43,
+        "current_value": 75.77,
+        "time": 86.41,
         "mechanism": 85,
         "evidence": 62,
         "adoption": 31.21,
@@ -58416,8 +58416,8 @@
       "stars": 6377,
       "report": "projects/algorithmicsuperintelligence__openevolve.md",
       "scores": {
-        "current_value": 71,
-        "time": 57.15,
+        "current_value": 70.99,
+        "time": 57.12,
         "mechanism": 79,
         "evidence": 100,
         "adoption": 72.25,
@@ -58443,8 +58443,8 @@
       "stars": 77,
       "report": "projects/jarvispei__scope.md",
       "scores": {
-        "current_value": 68.21,
-        "time": 78.53,
+        "current_value": 68.2,
+        "time": 78.5,
         "mechanism": 67,
         "evidence": 62,
         "adoption": 35.93,
@@ -58471,8 +58471,8 @@
       "stars": 98,
       "report": "projects/inter_co__science_codeevolve.md",
       "scores": {
-        "current_value": 65.67,
-        "time": 73.47,
+        "current_value": 65.66,
+        "time": 73.44,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 37.9,
@@ -58500,8 +58500,8 @@
       "stars": 274,
       "report": "projects/jarvis_xs__se_agent.md",
       "scores": {
-        "current_value": 63.49,
-        "time": 48.12,
+        "current_value": 63.48,
+        "time": 48.09,
         "mechanism": 77,
         "evidence": 100,
         "adoption": 46.32,
@@ -58810,8 +58810,8 @@
       "stars": 1000,
       "report": "projects/22-evoagentx-agent-evolution-framework.md",
       "scores": {
-        "current_value": 56.99,
-        "time": 29.19,
+        "current_value": 56.98,
+        "time": 29.17,
         "mechanism": 97,
         "evidence": 86,
         "adoption": 56.98,
@@ -59119,8 +59119,8 @@
       "stars": 426,
       "report": "projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
       "scores": {
-        "current_value": 54.2,
-        "time": 34.81,
+        "current_value": 54.19,
+        "time": 34.79,
         "mechanism": 97,
         "evidence": 56,
         "adoption": 49.95,
@@ -59180,8 +59180,8 @@
       "stars": 34604,
       "report": "projects/10-dspy-declarative-llm-programming.md",
       "scores": {
-        "current_value": 53.2,
-        "time": 29.25,
+        "current_value": 53.19,
+        "time": 29.24,
         "mechanism": 59,
         "evidence": 100,
         "adoption": 86.2,
@@ -59302,8 +59302,8 @@
       "stars": 1000,
       "report": "projects/23-everos-self-evolving-agents.md",
       "scores": {
-        "current_value": 51.29,
-        "time": 29.19,
+        "current_value": 51.28,
+        "time": 29.17,
         "mechanism": 71,
         "evidence": 86,
         "adoption": 56.98,
@@ -59486,8 +59486,8 @@
       "stars": 3800,
       "report": "research/projects/44-xmu-self-evolving-agents.md",
       "scores": {
-        "current_value": 48.85,
-        "time": 31.11,
+        "current_value": 48.84,
+        "time": 31.09,
         "mechanism": 69,
         "evidence": 68,
         "adoption": 67.98,
@@ -59884,8 +59884,8 @@
       "stars": 200,
       "report": "projects/33-self-improvement-llm.md",
       "scores": {
-        "current_value": 47.32,
-        "time": 29.19,
+        "current_value": 47.31,
+        "time": 29.17,
         "mechanism": 69,
         "evidence": 86,
         "adoption": 43.74,
@@ -59944,8 +59944,8 @@
       "stars": 136,
       "report": "projects/05-automl-agent-multi-agent.md",
       "scores": {
-        "current_value": 47.18,
-        "time": 35.95,
+        "current_value": 47.17,
+        "time": 35.93,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 40.58,
@@ -60895,8 +60895,8 @@
       "stars": 2800,
       "report": "research/projects/60-swe-bench-evaluation.md",
       "scores": {
-        "current_value": 45,
-        "time": 41.51,
+        "current_value": 44.99,
+        "time": 41.49,
         "mechanism": 20,
         "evidence": 68,
         "adoption": 65.46,
@@ -60925,7 +60925,7 @@
       "report": "projects/14-swe-agent-software-engineering.md",
       "scores": {
         "current_value": 44.91,
-        "time": 28.85,
+        "time": 28.84,
         "mechanism": 45,
         "evidence": 68,
         "adoption": 81.37,
@@ -61231,8 +61231,8 @@
       "stars": 52041,
       "report": "projects/09-crewai-multi-agent-framework.md",
       "scores": {
-        "current_value": 44.48,
-        "time": 29.25,
+        "current_value": 44.47,
+        "time": 29.24,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 89.56,
@@ -61414,8 +61414,8 @@
       "stars": 184482,
       "report": "projects/08-autogpt-autonomous-agent.md",
       "scores": {
-        "current_value": 44.29,
-        "time": 29.27,
+        "current_value": 44.28,
+        "time": 29.26,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 100,
@@ -61814,8 +61814,8 @@
       "stars": 17025,
       "report": "projects/12-camel-ai-communicative-agents.md",
       "scores": {
-        "current_value": 43.58,
-        "time": 28.89,
+        "current_value": 43.57,
+        "time": 28.88,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 80.35,
@@ -62241,8 +62241,8 @@
       "stars": 32784,
       "report": "projects/13-langgraph-agent-workflows.md",
       "scores": {
-        "current_value": 42.86,
-        "time": 29.27,
+        "current_value": 42.85,
+        "time": 29.25,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 85.75,
@@ -62531,36 +62531,6 @@
     },
     {
       "rank": 139,
-      "repo": "Genentech/OpenTreeSearch",
-      "name": "OpenTreeSearch",
-      "url": "https://github.com/Genentech/opentreesearch",
-      "category": "LLM 引导代码进化",
-      "pattern": "进化/搜索循环 → 评估器/打分器",
-      "tags": [
-        "进化/搜索循环",
-        "评估器/打分器",
-        "树搜索",
-        "代码进化"
-      ],
-      "status": "verified",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-19T09:51:47-04:00",
-      "activity_at": "2026-01-01T00:00:00Z",
-      "stars": 200,
-      "report": "projects/24-opentreesearch-llm-code-evolution.md",
-      "scores": {
-        "current_value": 42.02,
-        "time": 29.19,
-        "mechanism": 59,
-        "evidence": 54,
-        "adoption": 43.74,
-        "usefulness": 63
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 140,
       "repo": "openswarm-ai/openswarm",
       "name": "OpenSwarm Multi-Agent Orchestration Framework",
       "url": "https://github.com/openswarm-ai/openswarm",
@@ -62587,6 +62557,36 @@
         "evidence": 56,
         "adoption": 40.14,
         "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 140,
+      "repo": "Genentech/OpenTreeSearch",
+      "name": "OpenTreeSearch",
+      "url": "https://github.com/Genentech/opentreesearch",
+      "category": "LLM 引导代码进化",
+      "pattern": "进化/搜索循环 → 评估器/打分器",
+      "tags": [
+        "进化/搜索循环",
+        "评估器/打分器",
+        "树搜索",
+        "代码进化"
+      ],
+      "status": "verified",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-05-19T09:51:47-04:00",
+      "activity_at": "2026-01-01T00:00:00Z",
+      "stars": 200,
+      "report": "projects/24-opentreesearch-llm-code-evolution.md",
+      "scores": {
+        "current_value": 42.01,
+        "time": 29.17,
+        "mechanism": 59,
+        "evidence": 54,
+        "adoption": 43.74,
+        "usefulness": 63
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -63286,8 +63286,8 @@
       "stars": 50000,
       "report": "projects/41-opendevin-ai-software.md",
       "scores": {
-        "current_value": 41.27,
-        "time": 29.19,
+        "current_value": 41.26,
+        "time": 29.17,
         "mechanism": 35,
         "evidence": 54,
         "adoption": 89.23,
@@ -63570,35 +63570,6 @@
     },
     {
       "rank": 173,
-      "repo": "OpenBMB/ChatDev",
-      "name": "chatdev",
-      "url": "https://github.com/OpenBMB/ChatDev",
-      "category": "多 Agent 协作框架",
-      "pattern": "虚拟公司 → 角色对话链 → 软件开发",
-      "tags": [
-        "多 Agent",
-        "角色扮演",
-        "RL 编排"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-12T21:23:48+08:00",
-      "activity_at": "2026-01-07T00:00:00Z",
-      "stars": 26000,
-      "report": "research/projects/46-chatdev-multi-agent-platform.md",
-      "scores": {
-        "current_value": 40.89,
-        "time": 30.01,
-        "mechanism": 43,
-        "evidence": 36,
-        "adoption": 83.84,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 174,
       "repo": "shareAI-lab/kbench",
       "name": "kbench",
       "url": "https://github.com/shareAI-lab/kbench",
@@ -63625,6 +63596,35 @@
         "evidence": 56,
         "adoption": 19.78,
         "usefulness": 80
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 174,
+      "repo": "OpenBMB/ChatDev",
+      "name": "chatdev",
+      "url": "https://github.com/OpenBMB/ChatDev",
+      "category": "多 Agent 协作框架",
+      "pattern": "虚拟公司 → 角色对话链 → 软件开发",
+      "tags": [
+        "多 Agent",
+        "角色扮演",
+        "RL 编排"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-05-12T21:23:48+08:00",
+      "activity_at": "2026-01-07T00:00:00Z",
+      "stars": 26000,
+      "report": "research/projects/46-chatdev-multi-agent-platform.md",
+      "scores": {
+        "current_value": 40.88,
+        "time": 30,
+        "mechanism": 43,
+        "evidence": 36,
+        "adoption": 83.84,
+        "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -63782,36 +63782,6 @@
     },
     {
       "rank": 180,
-      "repo": "YoungDubbyDu/LLM-Agent-Optimization",
-      "name": "LLM-Agent-Optimization",
-      "url": "https://github.com/YoungDubbyDu/LLM-Agent-Optimization",
-      "category": "LLM Agent 优化综述",
-      "pattern": "文献综述",
-      "tags": [
-        "文献综述",
-        "Agent优化",
-        "参数优化",
-        "无参数优化"
-      ],
-      "status": "verified",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-02-26T07:07:46Z",
-      "activity_at": "2026-01-01T00:00:00Z",
-      "stars": 500,
-      "report": "projects/36-llm-agent-optimization.md",
-      "scores": {
-        "current_value": 40.47,
-        "time": 29.19,
-        "mechanism": 31,
-        "evidence": 86,
-        "adoption": 51.27,
-        "usefulness": 33
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 181,
       "repo": "ag2ai/ag2",
       "name": "ag2",
       "url": "https://github.com/ag2ai/ag2",
@@ -63840,7 +63810,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 182,
+      "rank": 181,
       "repo": "Zijian-Ni/awesome-ai-agents-2026",
       "name": "awesome-ai-agents-2026",
       "url": "https://github.com/Zijian-Ni/awesome-ai-agents-2026",
@@ -63865,6 +63835,36 @@
         "evidence": 68,
         "adoption": 55.14,
         "usefulness": 45
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 182,
+      "repo": "YoungDubbyDu/LLM-Agent-Optimization",
+      "name": "LLM-Agent-Optimization",
+      "url": "https://github.com/YoungDubbyDu/LLM-Agent-Optimization",
+      "category": "LLM Agent 优化综述",
+      "pattern": "文献综述",
+      "tags": [
+        "文献综述",
+        "Agent优化",
+        "参数优化",
+        "无参数优化"
+      ],
+      "status": "verified",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-02-26T07:07:46Z",
+      "activity_at": "2026-01-01T00:00:00Z",
+      "stars": 500,
+      "report": "projects/36-llm-agent-optimization.md",
+      "scores": {
+        "current_value": 40.46,
+        "time": 29.17,
+        "mechanism": 31,
+        "evidence": 86,
+        "adoption": 51.27,
+        "usefulness": 33
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -64164,8 +64164,8 @@
       "stars": 68239,
       "report": "projects/07-metagpt-multi-agent-framework.md",
       "scores": {
-        "current_value": 39.88,
-        "time": 19.19,
+        "current_value": 39.87,
+        "time": 19.18,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 91.8,
@@ -64715,7 +64715,7 @@
       "report": "projects/15-openhands-ai-software-dev.md",
       "scores": {
         "current_value": 38.73,
-        "time": 29.26,
+        "time": 29.25,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 92.54,
@@ -64805,8 +64805,8 @@
       "stars": 58330,
       "report": "projects/11-autogen-multi-agent-conversation.md",
       "scores": {
-        "current_value": 38.2,
-        "time": 26.1,
+        "current_value": 38.19,
+        "time": 26.09,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 90.5,
@@ -64987,8 +64987,8 @@
       "stars": 500,
       "report": "projects/40-awesome-fm4co.md",
       "scores": {
-        "current_value": 37.67,
-        "time": 29.19,
+        "current_value": 37.66,
+        "time": 29.17,
         "mechanism": 17,
         "evidence": 86,
         "adoption": 51.27,
@@ -65078,8 +65078,8 @@
       "stars": 2200,
       "report": "research/projects/61-osworld-agent-evaluation.md",
       "scores": {
-        "current_value": 37.22,
-        "time": 24.95,
+        "current_value": 37.21,
+        "time": 24.93,
         "mechanism": 28,
         "evidence": 62,
         "adoption": 63.48,
@@ -65199,8 +65199,8 @@
       "stars": 1200,
       "report": "research/projects/59-awesome-agent-papers.md",
       "scores": {
-        "current_value": 35.93,
-        "time": 37.27,
+        "current_value": 35.92,
+        "time": 37.25,
         "mechanism": 0,
         "evidence": 68,
         "adoption": 58.48,
@@ -65257,8 +65257,8 @@
       "stars": 2000,
       "report": "projects/37-awesome-code-llm.md",
       "scores": {
-        "current_value": 34.72,
-        "time": 29.19,
+        "current_value": 34.71,
+        "time": 29.17,
         "mechanism": 25,
         "evidence": 48,
         "adoption": 62.69,
@@ -65313,8 +65313,8 @@
       "stars": 1581,
       "report": "projects/03-adas-automated-design-agentic-systems.md",
       "scores": {
-        "current_value": 34.11,
-        "time": 5.77,
+        "current_value": 34.1,
+        "time": 5.75,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 60.75,
@@ -65873,8 +65873,8 @@
       "stars": 2800,
       "report": "research/projects/62-webarena-web-evaluation.md",
       "scores": {
-        "current_value": 25.75,
-        "time": 16.6,
+        "current_value": 25.74,
+        "time": 16.58,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 65.46,
@@ -66048,7 +66048,7 @@
       "report": "research/projects/52-agentgpt-autonomous.md",
       "scores": {
         "current_value": 22.35,
-        "time": 8.25,
+        "time": 8.23,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 85.81,
@@ -66106,7 +66106,7 @@
       "report": "research/projects/47-openagents-platform.md",
       "scores": {
         "current_value": 20.65,
-        "time": 8.25,
+        "time": 8.23,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 68.81,

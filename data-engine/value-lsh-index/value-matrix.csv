@@ -313,7 +313,7 @@ github:langchain-ai/langgraph,github,LangGraph,76.75,80.77,low-signal-or-risk,1,
 github:langchain-ai/langmem,github,langchain-ai/langmem,70.38,46.15,high-value-candidate,1,0,1,0,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,0,1,0
 github:langchain-ai/langsmith-sdk,github,langchain-ai/langsmith-sdk,70.38,50,high-value-candidate,1,0,1,0,1,0,1,1,1,1,0,0,1,0,1,-1,0,0,0,1,1,0,0,1,0,0
 github:langchain-ai/memory-agent,github,LangChain Memory Agent,74.84,73.08,low-signal-or-risk,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,-1,1,0,0,0,1,1,0
-github:langchain-ai/open-swe,github,langchain-ai/open-swe,77.39,61.54,high-value-candidate,1,0,1,1,1,1,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
+github:langchain-ai/open-swe,github,langchain-ai/open-swe,81.21,69.23,high-value-candidate,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:langflow-ai/langflow,github,langflow,66.24,69.23,low-signal-or-risk,1,-1,1,0,1,1,1,1,1,1,1,-1,1,0,1,-1,0,0,0,1,1,0,1,1,0,0
 github:langgenius/dify,github,dify,66.24,69.23,low-signal-or-risk,1,-1,1,0,1,1,1,1,1,1,1,-1,1,0,1,-1,0,0,0,1,1,0,1,1,0,0
 github:large-model-rl-lib/openrlhf,github,large-model-rl-lib/openrlhf,76.11,61.54,high-value-candidate,1,0,1,1,1,0,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,0,1,1

@@ -1,6 +1,6 @@
 # Value LSH Index
 
-> Generated: 2026-06-02T02:27:29.566Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
+> Generated: 2026-06-02T02:53:10.310Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
 
 ## One Sentence
 
@@ -37,8 +37,8 @@ flowchart LR
 | value tags | 26 |
 | LSH buckets | 168 |
 | clusters | 3 |
-| candidate pairs scanned | 64556 |
-| accepted pairs | 55029 |
+| candidate pairs scanned | 64601 |
+| accepted pairs | 55073 |
 | broad buckets skipped | 27 |
 | tag version | 19810f296115 |
 

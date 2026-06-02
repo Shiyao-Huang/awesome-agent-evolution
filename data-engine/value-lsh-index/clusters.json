@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T02:27:29.566Z",
+  "generated_at": "2026-06-02T02:53:10.310Z",
   "threshold": 0.52,
   "total": 3,
   "clusters": [
@@ -19,7 +19,7 @@
         "low-signal-or-risk": 112
       },
       "score_avg": 71.55,
-      "confidence_avg": 52.43,
+      "confidence_avg": 52.44,
       "top_tags": [
         {
           "id": "local_code_or_artifact",

@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-02T02:30:48.632Z",
+  "generated": "2026-06-02T03:11:36.102Z",
   "stats": {
-    "pages": 71,
-    "keywords": 888
+    "pages": 72,
+    "keywords": 899
   },
   "catalog": [
     {
@@ -675,6 +675,21 @@
       ]
     },
     {
+      "path": "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
+      "title": "langchain-ai Open SWE Frontier Deep Dive",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "github",
+        "coding-agent",
+        "control-plane",
+        "reviewer",
+        "sandbox",
+        "continual-learning",
+        "value-lsh"
+      ]
+    },
+    {
       "path": "synthesis/mechanism-framework.md",
       "title": "\"Agent进化机制分析框架\"",
       "rank": "A",
@@ -888,7 +903,8 @@
     "evidence": [
       "concepts/agent-swarm-evolve.md",
       "sources/papers-digest.md",
-      "sources/raw-papers-mechanism-analysis.md"
+      "sources/raw-papers-mechanism-analysis.md",
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"
     ],
     "cross-references": [
       "concepts/agent-swarm-evolve.md",
@@ -2265,6 +2281,7 @@
       "synthesis/gepa-ai-optimize-anything-artifact-frontier-deep-dive.md",
       "synthesis/github-star-growth-database.md",
       "synthesis/kargarisaac-reflexion-deep-dive.md",
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
       "synthesis/synaptent-aragora-frontier-deep-dive.md"
     ],
     "talent": [
@@ -3679,6 +3696,45 @@
     "baseline": [
       "synthesis/kargarisaac-reflexion-deep-dive.md"
     ],
+    "langchain-ai open swe frontier deep dive": [
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"
+    ],
+    "coding-agent": [
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"
+    ],
+    "control-plane": [
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"
+    ],
+    "reviewer": [
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"
+    ],
+    "sandbox": [
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"
+    ],
+    "continual-learning": [
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"
+    ],
+    "value-lsh": [
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
+      "synthesis/value-evidence-repair-queue.md",
+      "synthesis/value-lsh-classification-system.md",
+      "synthesis/value-lsh-index.md"
+    ],
+    "1 sentence": [
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"
+    ],
+    "3 sentences": [
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"
+    ],
+    "value decision": [
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"
+    ],
+    "mirror note": [
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"
+    ],
+    "follow-up": [
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"
+    ],
     "m1-m5": [
       "synthesis/mechanism-framework.md"
     ],
@@ -3822,11 +3878,6 @@
     ],
     "value evidence repair queue": [
       "synthesis/value-evidence-repair-queue.md"
-    ],
-    "value-lsh": [
-      "synthesis/value-evidence-repair-queue.md",
-      "synthesis/value-lsh-classification-system.md",
-      "synthesis/value-lsh-index.md"
     ],
     "github-meta": [
       "synthesis/value-evidence-repair-queue.md"

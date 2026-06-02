@@ -86,11 +86,12 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [Value Screening and Dual-Chain Knowledge Base](synthesis/value-screening-dual-chain-knowledge-base.md) — 时间/延续性优先的 GitHub 深挖协议：evidence chain + mirror chain + frontier queue | Rank: A | 2026-06-01
 - [Value LSH Classification System](synthesis/value-lsh-classification-system.md) — 新 value-facet 分类体系：Mom Test 访谈、机制分类、证据链、embedding/gbrain 和离散 LSH 聚类 | Rank: A | 2026-06-01
 - [Value LSH Index](synthesis/value-lsh-index.md) — 2219 个去重后素材的 `-1/0/+1` value matrix、168 个 LSH buckets、3 个 value clusters、856/1066/297 三段价值筛选 | Rank: A | 2026-06-02
-- [Value Evidence Repair Queue](synthesis/value-evidence-repair-queue.md) — 从 717 个 GitHub rows 中找出 683 个证据修复动作，分为 deep-read、issue/resource、raw/meta、loop verification、star-growth lane | Rank: A | 2026-06-02
+- [Value Evidence Repair Queue](synthesis/value-evidence-repair-queue.md) — 从 717 个 GitHub rows 中找出 682 个证据修复动作，分为 deep-read、issue/resource、raw/meta、loop verification、star-growth lane | Rank: A | 2026-06-02
 - [kargarisaac Reflexion Deep Dive](synthesis/kargarisaac-reflexion-deep-dive.md) — repair queue 第一项样本：小型 smolagents Reflexion adapter，被降级为 baseline teaching anchor 而非当前 frontier | Rank: A | 2026-06-01
 - [synaptent Aragora Frontier Deep Dive](synthesis/synaptent-aragora-frontier-deep-dive.md) — repair queue 第二项样本：高延续性的 2026 governance-control-plane anchor，需继续做 queue-health/adoption audit | Rank: A | 2026-06-02
 - [gepa-ai GEPA Frontier Deep Dive](synthesis/gepa-ai-gepa-frontier-deep-dive.md) — repair queue 第三项样本：高活跃 prompt/program/skill optimizer anchor，需继续用 optimize-anything artifact 做独立复现审查 | Rank: A | 2026-06-02
 - [gepa-ai optimize-anything Artifact Frontier Deep Dive](synthesis/gepa-ai-optimize-anything-artifact-frontier-deep-dive.md) — repair queue 第四项样本：低社区信号但高 offline verifier/log/checkpoint 证据密度的 GEPA paired reproducibility anchor | Rank: A | 2026-06-02
+- [langchain-ai Open SWE Frontier Deep Dive](synthesis/langchain-ai-open-swe-frontier-deep-dive.md) — repair queue 第五项样本：高活跃 internal coding-agent control-plane 与 reviewer-outcomes-learning anchor，需继续验证 Docker/MCP/warm-sandbox/回归门禁缺口 | Rank: A | 2026-06-02
 - [Frontier Value Queue](synthesis/frontier-value-queue.md) — 双链协议的可复跑队列：246 个 analyzed projects 分入 code-ready、clone-needed、metadata-refresh、baseline 等 lane，并接入 star-growth coverage/backlog | Rank: A | 2026-06-01
 - [modelscope AgentEvolver Frontier Deep Dive](synthesis/modelscope-agentevolver-frontier-deep-dive.md) — 第一个项目级双链深读样本：AgentEvolver 的环境到策略自进化闭环、代码证据、issue/resource 信号和复用风险 | Rank: A | 2026-06-01
 - [GitHub Star Growth Database](synthesis/github-star-growth-database.md) — 把累计 Star 降为历史 adoption prior，用 2026 new-star momentum、coverage status 和 Hugging Face-ready database 重建当前阶段排名 | Rank: A | 2026-06-01
@@ -106,5 +107,5 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Entities | 8 |
 | Concepts | 10 |
 | Sources | 30 |
-| Synthesis pages | 19 |
+| Synthesis pages | 20 |
 | Last updated | 2026-06-02 |

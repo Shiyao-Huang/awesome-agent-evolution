@@ -525,3 +525,21 @@
 - Removed `gepa-ai/optimize-anything-artifact` from the generic repair queue; the rebuilt value matrix now has 2219 materials and 717 GitHub rows, with 683 GitHub projects still carrying repair gaps.
 - The target's value score/confidence became `86.62 / 80.77`, and the next top repair targets are `langchain-ai/open-swe`, `sethkarten/continual-harness`, `inclusionai/agenticlearning`, `tylerdotai/meta-harness-evolver`, and `krzysztofdudek/researcherskill`.
 **产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`
+
+## [2026-06-02 10:50] project+deep-read | langchain-ai Open SWE Coding-Agent Control Plane
+
+**操作:** Completed the fifth repair-queue project deep read.
+**详情:**
+- Investigated `langchain-ai/open-swe` with live GitHub metadata, release/tag APIs, issue/PR evidence, commit stream, raw capture, generated classification row, and local source clone.
+- Inspected the `agent`, `reviewer`, and `analyzer` LangGraph graphs, sandbox lifecycle, webhook routes, SSRF-protected HTTP tool, reviewer finding outcomes, and continual analyzer loop.
+- Classified Open SWE as a high-value internal coding-agent control-plane and reviewer-outcomes-learning anchor, with bounded self-evolution claims and remaining Docker/MCP/warm-sandbox/regression-gate gaps.
+**产出:** `analysis/frontier-projects/langchain-ai-open-swe-dual-chain.md`, `work/wiki/synthesis/langchain-ai-open-swe-frontier-deep-dive.md`, `projects/repos/langchain-ai__open-swe`
+
+## [2026-06-02 10:55] data+index | Open SWE Repair Queue Resolution
+
+**操作:** Rebuilt value-LSH, projection, repair queue, wiki search index, project indexes, and site build after the fifth deep-read packet.
+**详情:**
+- Verified `langchain-ai/open-swe` now has `evidence_refs.analysis_report = analysis/frontier-projects/langchain-ai-open-swe-dual-chain.md`.
+- Removed `langchain-ai/open-swe` from the generic repair queue; the rebuilt value matrix still has 2219 materials and 717 GitHub rows, with 682 GitHub projects still carrying repair gaps.
+- The target's value score/confidence became `81.21 / 69.23`, and the next top repair targets are `sethkarten/continual-harness`, `inclusionai/agenticlearning`, `tylerdotai/meta-harness-evolver`, `krzysztofdudek/researcherskill`, and `sola-st/repairagent`.
+**产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`
