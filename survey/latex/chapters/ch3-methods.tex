@@ -524,7 +524,7 @@ ExPeL 的两阶段流程：
 
 \paragraph{Agent Symbolic Learning}
 
-\textbf{Agent Symbolic Learning}~\citep{agentsymbolic2024}将反向传播和梯度下降完全映射到自然语言空间。其核心创新是"\textbf{语言梯度}"——用文本描述如何改进每个组件：
+\textbf{Agent Symbolic Learning}~\citep{agentsymboliclearning2024}将反向传播和梯度下降完全映射到自然语言空间。其核心创新是"\textbf{语言梯度}"——用文本描述如何改进每个组件：
 
 \begin{definition}[语言梯度]
 给定语言损失 $\mathcal{L}_{\mathrm{lang}} = \mathrm{LLM}(P_{\mathrm{loss}}, \text{trajectory})$，语言梯度通过链式反向传播计算：
@@ -594,7 +594,7 @@ a^* = \arg\max_{a \in \mathcal{S}} \text{Fitness}(a, \mathcal{T})
 
 \paragraph{ADAS: 自动化智能体系统设计}
 
-\textbf{ADAS}~\citep{adas2024}（ICLR 2025，414+ 引用）定义了"自动化智能体系统设计"这一研究领域，并提出了"Meta Agent Search"方法：
+\textbf{ADAS}~\citep{adas2025}（ICLR 2025，414+ 引用）定义了"自动化智能体系统设计"这一研究领域，并提出了"Meta Agent Search"方法：
 
 \begin{enumerate}
 \item \textbf{搜索空间}：$\mathcal{S} = \{\text{所有有效 Python 程序}\}$——这是图灵完备的搜索空间，包含所有可能的智能体设计
@@ -643,7 +643,7 @@ a_{\mathrm{new}} = \mathrm{LLM}(\mathcal{D}, \text{history}, \text{search\_strat
 
 \paragraph{DGM: Darwin Gödel Machine}
 
-\textbf{DGM}~\citep{dgm2025}结合了达尔文进化与 Gödel Machine 的自指特性。维护一个开放式的 agent 实现存档：
+\textbf{DGM}~\citep{darwingodelmachine2025}结合了达尔文进化与 Gödel Machine 的自指特性。维护一个开放式的 agent 实现存档：
 
 \begin{enumerate}
 \item \textbf{Archive}：$\mathcal{A} = \{a_1, \ldots, a_n\}$，每个 agent 带有适应度分数
@@ -688,7 +688,7 @@ Archive 更新采用 MAP-Elites 规则：
 
 \paragraph{FunSearch}
 
-\textbf{FunSearch}~\citep{funsearch2023}（Nature 2023）是 AlphaEvolve 的前身，使用进化搜索发现数学函数。其核心思想是将 LLM 作为变异算子，在函数空间中搜索。
+\textbf{FunSearch}~\citep{funsearch2024}（Nature 2023）是 AlphaEvolve 的前身，使用进化搜索发现数学函数。其核心思想是将 LLM 作为变异算子，在函数空间中搜索。
 
 \paragraph{EvoMAC}
 

@@ -6,7 +6,7 @@
 
 人工智能正从静态推理走向能够通过自身经验改进的系统。AI 系统的主导公众形象仍然是一个接收提示并产生答案的模型。这个形象已不再充分。现代 AI 应用日益将基础模型与工具、记忆、代码执行、检索、评估器、规划器、批评器、沙盒、基准测试和多智能体工作流组合在一起。一旦这些组件被组装成一个智能体，核心问题就发生了变化。问题不再仅仅是模型能否回答一个查询，而是整个系统能否观察其失败、诊断原因、提出修改、验证修改并在不破坏先前能力的情况下保留改进。
 
-我们使用 \emph{AI Self-Evolution}（AI 自进化）这一术语来描述这一系列反馈驱动的累积改进过程。该术语有意比自训练更宽泛，比递归自我改进更具操作性。它包括更新模型权重的系统，但也包括保持模型固定并更新外部状态的系统：提示、记忆、技能、工具、代码、智能体拓扑、评估器或归档。例如，Reflexion 通过存储语言反思而非改变参数来改进行为~\citep{shinn2023reflexion}。Voyager 在开放式交互中积累可重用技能~\citep{wang2023voyager}。ADAS 在 Python 级别的智能体设计上搜索~\citep{hu2024adas}。Darwin G\"{o}del Machine 维护一个自修改编码智能体的归档~\citep{zhang2025dgm}。AlphaEvolve 将 LLM 生成的程序变异与自动评估和进化选择耦合~\citep{novikov2025alphaevolve}。这些系统在机制上各不相同，但共享一个循环：生成候选行为、评估它、决定什么应该存活，并将存活的信息传递下去。
+我们使用 \emph{AI Self-Evolution}（AI 自进化）这一术语来描述这一系列反馈驱动的累积改进过程。该术语有意比自训练更宽泛，比递归自我改进更具操作性。它包括更新模型权重的系统，但也包括保持模型固定并更新外部状态的系统：提示、记忆、技能、工具、代码、智能体拓扑、评估器或归档。例如，Reflexion 通过存储语言反思而非改变参数来改进行为~\citep{reflexion2023}。Voyager 在开放式交互中积累可重用技能~\citep{voyager2023}。ADAS 在 Python 级别的智能体设计上搜索~\citep{adas2025}。Darwin G\"{o}del Machine 维护一个自修改编码智能体的归档~\citep{darwingodelmachine2025}。AlphaEvolve 将 LLM 生成的程序变异与自动评估和进化选择耦合~\citep{alphaevolve2025}。这些系统在机制上各不相同，但共享一个循环：生成候选行为、评估它、决定什么应该存活，并将存活的信息传递下去。
 
 本综述将自进化视为一个新兴的系统学科。它不是单一算法，也不是单一基准结果。它是一种设计模式，连接了机器学习、进化计算、程序合成、AutoML、强化学习、在线学习、记忆系统和软件工程。该领域足够年轻，术语仍然不稳定。论文谈论自我精炼（self-refinement）、自我奖励（self-rewarding）、自博弈（self-play）、终身学习（lifelong learning）、开放式（open-endedness）、测试时改进（test-time improvement）、智能体优化（agent optimization）和自指智能体（self-referential agents）。我们认为，当沿着五个问题分析每种方法时，这些名称变得更容易比较：系统的哪个部分是可变的，什么反馈信号驱动变化，如何生成变异，如何执行选择，以及如何保留和审计改进。
 
@@ -30,37 +30,37 @@ Turing 的模仿游戏将行为——而非内在机制——作为机器智能�
 
 \subsubsection{自指与 G\"{o}del 机}
 
-G\"{o}del 机传统提出了一个更尖锐的问题：系统能否推理对自身的修改，并仅在修改改善期望效用时接受它？原始愿景依赖于证明搜索和形式化保证。当代语言智能体系统很少达到那种证明水平，但它们以经验形式复活了自指结构。G\"{o}del Agent、Darwin G\"{o}del Machine 和相关系统允许智能体修改将管理后续尝试的代码或过程，同时使用沙盒评估而非形式证明作为接受门~\citep{zhang2025dgm}。
+G\"{o}del 机传统提出了一个更尖锐的问题：系统能否推理对自身的修改，并仅在修改改善期望效用时接受它？原始愿景依赖于证明搜索和形式化保证。当代语言智能体系统很少达到那种证明水平，但它们以经验形式复活了自指结构。G\"{o}del Agent、Darwin G\"{o}del Machine 和相关系统允许智能体修改将管理后续尝试的代码或过程，同时使用沙盒评估而非形式证明作为接受门~\citep{darwingodelmachine2025}。
 
 \subsubsection{AutoML 与神经架构搜索}
 
 第二条谱系来自自动化学习系统的设计。AutoML 探索将数据转化为模型的流水线本身能否被优化。神经架构搜索（NAS）将问题聚焦于架构，通常使用强化学习、进化算法、可微松弛或权重共享。诸如 NASNet~\citep{zoph2018learning}、Efficient NAS~\citep{pham2018efficient}、DARTS~\citep{liu2018darts} 和图像分类器的正则化进化~\citep{real2019regularized} 等方法表明搜索可以发现与人类设计竞争的架构。
 
-当搜索目标是智能体系统而非神经网络时，类比变得更加紧密。ADAS 将智能体系统的自动化设计框定为对实现智能体的程序的搜索~\citep{hu2024adas}。元智能体为新智能体架构编写代码，在任务上评估它们，并存储成功的设计。搜索空间是图灵完备的，因为智能体被表达为 Python 程序。这是智能体软件的 NAS：系统不再选择卷积单元或 Transformer 块，而是搜索提示、工具调用、记忆策略、分解例程、反思过程和控制流。Agent Symbolic Learning 做了类似的举措，将智能体视为符号网络，其可学习元素是提示、工具和流水线，而非可微分权重~\citep{zhou2024symbolic}。
+当搜索目标是智能体系统而非神经网络时，类比变得更加紧密。ADAS 将智能体系统的自动化设计框定为对实现智能体的程序的搜索~\citep{adas2025}。元智能体为新智能体架构编写代码，在任务上评估它们，并存储成功的设计。搜索空间是图灵完备的，因为智能体被表达为 Python 程序。这是智能体软件的 NAS：系统不再选择卷积单元或 Transformer 块，而是搜索提示、工具调用、记忆策略、分解例程、反思过程和控制流。Agent Symbolic Learning 做了类似的举措，将智能体视为符号网络，其可学习元素是提示、工具和流水线，而非可微分权重~\citep{agentsymboliclearning2024}。
 
-Darwin G\"{o}del Machine 是最清晰的合成。它维护智能体实现的归档，采样父智能体，要求基础模型修改其代码，评估子智能体，并将改进的变体添加到归档中~\citep{zhang2025dgm}。其报告的 SWE-bench 从 20.0\% 提升到 50.0\% 和 Polyglot 从 14.2\% 提升到 30.7\% 表明智能体架构本身可以成为累积的进化对象。AlphaEvolve 提供了工业规模的对应物：一个由 Gemini 驱动的进化编码智能体，结合广泛探索与更深层推理以及 MAP-Elites 风格的质量多样性，报告了矩阵乘法、数据中心调度、芯片设计和 LLM 训练内核方面的改进~\citep{novikov2025alphaevolve}。
+Darwin G\"{o}del Machine 是最清晰的合成。它维护智能体实现的归档，采样父智能体，要求基础模型修改其代码，评估子智能体，并将改进的变体添加到归档中~\citep{darwingodelmachine2025}。其报告的 SWE-bench 从 20.0\% 提升到 50.0\% 和 Polyglot 从 14.2\% 提升到 30.7\% 表明智能体架构本身可以成为累积的进化对象。AlphaEvolve 提供了工业规模的对应物：一个由 Gemini 驱动的进化编码智能体，结合广泛探索与更深层推理以及 MAP-Elites 风格的质量多样性，报告了矩阵乘法、数据中心调度、芯片设计和 LLM 训练内核方面的改进~\citep{alphaevolve2025}。
 
 \subsubsection{大语言模型革命作为自进化的使能器}
 
 大语言模型的兴起改变了自进化的实际可行性。早期系统可以优化数值参数、离散架构或符号规则，但它们难以操作构成现代 AI 系统的异构人工制品：提示、工具 API、日志、源代码、测试结果、科学原理和自然语言反馈。GPT-4、Claude、Gemini 和相关前沿模型不仅是更强的文本预测器；它们是广泛胜任的软件和语言介导过程的操作器。它们可以读取堆栈跟踪、推断缺陷、生成补丁、产生单元测试、批评解决方案、重写提示、总结基准失败并提出新的实验。
 
-这种能力将语言转化为自我修改的通用接口。在 Self-Refine 中，模型生成输出、批评它并使用自身反馈精炼它~\citep{madaan2023selfrefine}。没有权重改变，但输出过程在一个回合内进化。Reflexion 添加了记忆：失败的尝试产生语言反思，作为后续尝试的条件~\citep{shinn2023reflexion}。Agent Symbolic Learning 进一步推动类比，在智能体计算图的节点上定义语言梯度~\citep{zhou2024symbolic}。RISE 使用强化学习训练递归内省作为学习的多轮行为~\citep{qu2024rise}。RAGEN 将轨迹分解为状态、思考、动作和奖励，同时识别``回声陷阱''（Echo Trap），即智能体似乎通过重复自己而非推理来改进~\citep{wang2025ragen}。ReVeal 将自我验证视为代码智能体中的一等公民学习能力，同时优化生成和验证~\citep{jin2025reveal}。
+这种能力将语言转化为自我修改的通用接口。在 Self-Refine 中，模型生成输出、批评它并使用自身反馈精炼它~\citep{selfrefine2023}。没有权重改变，但输出过程在一个回合内进化。Reflexion 添加了记忆：失败的尝试产生语言反思，作为后续尝试的条件~\citep{reflexion2023}。Agent Symbolic Learning 进一步推动类比，在智能体计算图的节点上定义语言梯度~\citep{agentsymboliclearning2024}。RISE 使用强化学习训练递归内省作为学习的多轮行为~\citep{rise2024}。RAGEN 将轨迹分解为状态、思考、动作和奖励，同时识别``回声陷阱''（Echo Trap），即智能体似乎通过重复自己而非推理来改进~\citep{ragen2025}。ReVeal 将自我验证视为代码智能体中的一等公民学习能力，同时优化生成和验证~\citep{reveal2025}。
 
-LLM 革命还使将代码作为进化基质的系统成为可能。SelfEvolve 使用自生成的 API 知识和执行反馈迭代修复代码~\citep{jiang2023selfevolve}。ADAS 要求 LLM 元智能体编写新的智能体代码~\citep{hu2024adas}。G\"{o}del Agent 通过 monkey patching 修改自身的运行时行为~\citep{yin2025godelagent}。Darwin G\"{o}del Machine 和 AlphaEvolve 使用基础模型作为智能体实现和算法代码上的语义变异算子~\citep{zhang2025dgm,novikov2025alphaevolve}。AI Scientist 使用 LLM 智能体遍历更广泛的研究循环：想法生成、实验设计、代码执行、论文撰写和同行评审~\citep{lu2024ai}。
+LLM 革命还使将代码作为进化基质的系统成为可能。SelfEvolve 使用自生成的 API 知识和执行反馈迭代修复代码~\citep{selfevolve2023}。ADAS 要求 LLM 元智能体编写新的智能体代码~\citep{adas2025}。G\"{o}del Agent 通过 monkey patching 修改自身的运行时行为~\citep{godelagent2024}。Darwin G\"{o}del Machine 和 AlphaEvolve 使用基础模型作为智能体实现和算法代码上的语义变异算子~\citep{darwingodelmachine2025,alphaevolve2025}。AI Scientist 使用 LLM 智能体遍历更广泛的研究循环：想法生成、实验设计、代码执行、论文撰写和同行评审~\citep{aiscientist2024}。
 
-重要的是，LLM 并没有消除对评估的需求。它们使变异变得廉价且具有语义信息，但它们也会产生幻觉、过拟合规程、利用漏洞并产生看似合理但无效的理由。因此，最强系统将 LLM 生成与外部反馈配对。代码执行器、测试套件、基准测试工具、环境奖励以及人类或基于模型的评判器提供选择压力。Absolute Zero 的零数据自博弈依赖于验证提议任务和解的代码执行器~\citep{zhao2025absolutezero}。AlphaEvolve 依赖自动评估器~\citep{novikov2025alphaevolve}。ReVeal 强调可靠的自我验证~\citep{jin2025reveal}。DGM 在软件工程基准上评估修改后的智能体~\citep{zhang2025dgm}。教训是 LLM 使自进化成为可能，但验证器使其累积。
+重要的是，LLM 并没有消除对评估的需求。它们使变异变得廉价且具有语义信息，但它们也会产生幻觉、过拟合规程、利用漏洞并产生看似合理但无效的理由。因此，最强系统将 LLM 生成与外部反馈配对。代码执行器、测试套件、基准测试工具、环境奖励以及人类或基于模型的评判器提供选择压力。Absolute Zero 的零数据自博弈依赖于验证提议任务和解的代码执行器~\citep{absolutezero2025}。AlphaEvolve 依赖自动评估器~\citep{alphaevolve2025}。ReVeal 强调可靠的自我验证~\citep{reveal2025}。DGM 在软件工程基准上评估修改后的智能体~\citep{darwingodelmachine2025}。教训是 LLM 使自进化成为可能，但验证器使其累积。
 
 \subsubsection{从孤立技巧到自我改进系统}
 
 最有形的早期 LLM 自我改进方法是局部循环。单个答案被批评和修改。一个失败的代码样本被调试。一条反思被存储在记忆中。这些循环很重要，因为它们表明模型可以使用自身输出作为改进的材料。但它们不是该领域的最终状态。最近的工作越来越多地将多个循环集成到跨回合、跨组件或跨种群改进的系统中。
 
-一个有用的递进从输出级精炼开始。Self-Refine 通过生成-批评-精炼迭代改进候选输出~\citep{madaan2023selfrefine}。Reflexion 通过存储先前失败的语言教训来改进未来尝试~\citep{shinn2023reflexion}。SelfEvolve 通过结合自生成的知识和解释器反馈来改进代码~\citep{jiang2023selfevolve}。这些系统修改任务的上下文或人工制品，而不一定修改智能体的源代码或权重。它们表明反馈可以被语言化表示和重用。
+一个有用的递进从输出级精炼开始。Self-Refine 通过生成-批评-精炼迭代改进候选输出~\citep{selfrefine2023}。Reflexion 通过存储先前失败的语言教训来改进未来尝试~\citep{reflexion2023}。SelfEvolve 通过结合自生成的知识和解释器反馈来改进代码~\citep{selfevolve2023}。这些系统修改任务的上下文或人工制品，而不一定修改智能体的源代码或权重。它们表明反馈可以被语言化表示和重用。
 
-下一步是组件级优化。Agent Symbolic Learning 将提示、工具和流水线视为可学习的符号权重，允许已部署的智能体在观察轨迹后调整内部组件~\citep{zhou2024symbolic}。DSPy 风格的提示编译、文本反向传播和多智能体提示进化属于同一家族。这里被改进的对象不仅是答案，而是智能体产生答案的过程。推理和学习之间的边界变得不那么清晰：智能体可以在执行任务的同时更新符号控制参数。
+下一步是组件级优化。Agent Symbolic Learning 将提示、工具和流水线视为可学习的符号权重，允许已部署的智能体在观察轨迹后调整内部组件~\citep{agentsymboliclearning2024}。DSPy 风格的提示编译、文本反向传播和多智能体提示进化属于同一家族。这里被改进的对象不仅是答案，而是智能体产生答案的过程。推理和学习之间的边界变得不那么清晰：智能体可以在执行任务的同时更新符号控制参数。
 
-第三步是架构和代码级进化。ADAS 使用元智能体编写新智能体~\citep{hu2024adas}。G\"{o}del Agent 修改运行时逻辑~\citep{yin2025godelagent}。DGM 通过归档进化智能体实现~\citep{zhang2025dgm}。AlphaEvolve 大规模进化算法代码~\citep{novikov2025alphaevolve}。这些系统将软件视为智能的基因组。基因组可由基础模型读取和编辑；评估决定哪些变体存活。
+第三步是架构和代码级进化。ADAS 使用元智能体编写新智能体~\citep{adas2025}。G\"{o}del Agent 修改运行时逻辑~\citep{godelagent2024}。DGM 通过归档进化智能体实现~\citep{darwingodelmachine2025}。AlphaEvolve 大规模进化算法代码~\citep{alphaevolve2025}。这些系统将软件视为智能的基因组。基因组可由基础模型读取和编辑；评估决定哪些变体存活。
 
-第四步是权重和课程级自我改进。RISE 通过多轮强化学习训练模型内省和修改其推理~\citep{qu2024rise}。RAGEN 将 RL 适配到多轮智能体，同时警告回声陷阱~\citep{wang2025ragen}。Absolute Zero 通过让模型在可验证奖励下提出任务并解决它们来消除外部训练数据~\citep{zhao2025absolutezero}。ReVeal 共同优化代码生成和自我验证~\citep{jin2025reveal}。这些方法修改神经权重、任务课程或验证行为。它们表明自进化不仅可以发生在提示或代码层，也可以发生在模型的学习策略内部。
+第四步是权重和课程级自我改进。RISE 通过多轮强化学习训练模型内省和修改其推理~\citep{rise2024}。RAGEN 将 RL 适配到多轮智能体，同时警告回声陷阱~\citep{ragen2025}。Absolute Zero 通过让模型在可验证奖励下提出任务并解决它们来消除外部训练数据~\citep{absolutezero2025}。ReVeal 共同优化代码生成和自我验证~\citep{reveal2025}。这些方法修改神经权重、任务课程或验证行为。它们表明自进化不仅可以发生在提示或代码层，也可以发生在模型的学习策略内部。
 
 \subsection{核心定义：形式化 AI 自进化}\label{sec:intro-definition}
 
@@ -101,7 +101,7 @@ S_{t+1} &= \mathrm{Accept}(S_t, \Delta_t, F_t, \mathcal{G}).
 \begin{equation}
 \max_{S\in\mathcal{A}} \left( f(S),\; n(S),\; r(S),\; c(S)^{-1} \right),
 \end{equation}
-其中 $\mathcal{A}$ 是归档，$f$ 是任务适应度，$n$ 是新颖性或多样性，$r$ 是鲁棒性，$c$ 是计算成本。这种形式捕获了质量-多样性方法如 MAP-Elites~\citep{mouret2015illuminating} 及其在 AlphaEvolve~\citep{novikov2025alphaevolve} 中的现代使用。
+其中 $\mathcal{A}$ 是归档，$f$ 是任务适应度，$n$ 是新颖性或多样性，$r$ 是鲁棒性，$c$ 是计算成本。这种形式捕获了质量-多样性方法如 MAP-Elites~\citep{mouret2015illuminating} 及其在 AlphaEvolve~\citep{alphaevolve2025} 中的现代使用。
 
 ``自身组件''这一短语应在操作层面而非形而上学层面解释。自进化智能体不需要是有意识的、法律意义上自主的，或不受人类设计约束的。它只需具有一个循环，通过该循环，执行任务的系统由一个该系统或紧密耦合的元系统参与的过程修改。
 
@@ -128,7 +128,7 @@ S_{t+1} &= \mathrm{Accept}(S_t, \Delta_t, F_t, \mathcal{G}).
 \end{equation}
 其中 $H_t$ 是历史、归档上下文或指令。此算子功能强大，因为它可以对异构人工制品进行语义一致的编辑。它也是危险的，因为它是随机的、对提示敏感的，并且能够引入隐藏的失败。修补缺陷的同一 LLM 可能移除护栏；改进基准的同一智能体可能过拟合其公开测试。
 
-保留机制定义改进是否累积。天真的系统可能在每次自我批评后覆盖自身，产生漂移。更鲁棒的系统在验证任务上评估候选变更、与基线比较、存储回滚点并保留多样性。Reflexion 的记忆缓冲区保留反思但必须管理上下文限制~\citep{shinn2023reflexion}。G\"{o}del Agent 仅在验证后接受修改，并可回滚失败的补丁~\citep{yin2025godelagent}。DGM 在归档中存储变体而非单条可变谱系~\citep{zhang2025dgm}。AlphaEvolve 使用质量-多样性选择在行为生态位中保留精英~\citep{novikov2025alphaevolve}。保留是学习变为进化的地方。
+保留机制定义改进是否累积。天真的系统可能在每次自我批评后覆盖自身，产生漂移。更鲁棒的系统在验证任务上评估候选变更、与基线比较、存储回滚点并保留多样性。Reflexion 的记忆缓冲区保留反思但必须管理上下文限制~\citep{reflexion2023}。G\"{o}del Agent 仅在验证后接受修改，并可回滚失败的补丁~\citep{godelagent2024}。DGM 在归档中存储变体而非单条可变谱系~\citep{darwingodelmachine2025}。AlphaEvolve 使用质量-多样性选择在行为生态位中保留精英~\citep{alphaevolve2025}。保留是学习变为进化的地方。
 
 最后，自进化必须随时间评估。单次更新后的静态基准分数是不够的。我们必须追问系统是单调改进还是循环的，收益是否跨任务迁移，是否维护安全约束，是否坍缩到重复行为，是否过拟合评估器，以及进化成本是否被收益证明合理。对于进化轨迹 $S_0,S_1,\ldots,S_T$，相关指标包括累积改进，
 \begin{equation}
@@ -152,7 +152,7 @@ AI 自进化与若干已建立领域重叠，但不等同于其中任何一个�
 
 \paragraph{在线学习。} 在线学习随着样本到达更新预测。它通常以对比较器的遗憾界限形式化。学习器接收输入、预测、观察损失并更新。这是反馈驱动的，但反馈通常由固定算法使用。自进化需要一个额外的层：系统可以改变表示、提示、代码、架构或更新规则本身。
 
-\paragraph{自监督学习。} 自监督学习从数据本身构建标签。它是``自我''的，因为监督是自动派生的，而非人工标注的。它不一定是自进化的，因为模型不会通过关于任务性能的反馈修改自身操作组件。Absolute Zero 是一个有教益的对比：它生成任务和解、用代码执行器验证它们并通过强化学习更新~\citep{zhao2025absolutezero}。这不仅是自监督，因为模型在可验证奖励下塑造自己的课程。
+\paragraph{自监督学习。} 自监督学习从数据本身构建标签。它是``自我''的，因为监督是自动派生的，而非人工标注的。它不一定是自进化的，因为模型不会通过关于任务性能的反馈修改自身操作组件。Absolute Zero 是一个有教益的对比：它生成任务和解、用代码执行器验证它们并通过强化学习更新~\citep{absolutezero2025}。这不仅是自监督，因为模型在可验证奖励下塑造自己的课程。
 
 \paragraph{元学习。} 元学习训练跨任务学习如何学习的系统。它与自进化密切相关，因为它关注适应机制。然而，许多元学习仍然是离线的。自进化强调部署后或系统内的组件修改，通常包括可微元学习未捕获的符号和代码人工制品。
 
@@ -192,15 +192,15 @@ Agent 记忆 & 情景或语义上下文 & 用户交互、反思 & 若记忆源�
 
 第一个贡献是一个框架，按执行修改和选择的循环分类自进化 AI。我们使用五个循环，因为它们捕获了文献中的主要机制，同时保持足够通用以比较混合系统。
 
-\paragraph{循环 I：反射性输出和记忆进化。} 系统通过批评输出、存储反馈和调节未来尝试来改进。Self-Refine 和 Reflexion 是代表性系统~\citep{madaan2023selfrefine,shinn2023reflexion}。被修改的组件通常是当前输出、情景记忆或反思缓冲区。此循环成本低且易于部署，但受上下文长度、自我批评质量和评估器可靠性限制。
+\paragraph{循环 I：反射性输出和记忆进化。} 系统通过批评输出、存储反馈和调节未来尝试来改进。Self-Refine 和 Reflexion 是代表性系统~\citep{selfrefine2023,reflexion2023}。被修改的组件通常是当前输出、情景记忆或反思缓冲区。此循环成本低且易于部署，但受上下文长度、自我批评质量和评估器可靠性限制。
 
-\paragraph{循环 II：符号组件进化。} 系统将提示、工具、工作流和流水线视为可学习的符号参数。Agent Symbolic Learning 是核心示例~\citep{zhou2024symbolic}。此循环在基于梯度的学习和智能体工程之间搭建桥梁。它使智能体的设计表面可优化，而不需要神经权重更新。
+\paragraph{循环 II：符号组件进化。} 系统将提示、工具、工作流和流水线视为可学习的符号参数。Agent Symbolic Learning 是核心示例~\citep{agentsymboliclearning2024}。此循环在基于梯度的学习和智能体工程之间搭建桥梁。它使智能体的设计表面可优化，而不需要神经权重更新。
 
-\paragraph{循环 III：验证驱动的代码进化。} 系统生成、测试、修复和保留代码。SelfEvolve 使用自生成的知识加解释器错误~\citep{jiang2023selfevolve}；ReVeal 共同优化生成和自我验证~\citep{jin2025reveal}；AlphaEvolve 使用自动评估器选择算法程序~\citep{novikov2025alphaevolve}。此循环功能强大，因为代码可以机械检查。其局限是领域依赖性。
+\paragraph{循环 III：验证驱动的代码进化。} 系统生成、测试、修复和保留代码。SelfEvolve 使用自生成的知识加解释器错误~\citep{selfevolve2023}；ReVeal 共同优化生成和自我验证~\citep{reveal2025}；AlphaEvolve 使用自动评估器选择算法程序~\citep{alphaevolve2025}。此循环功能强大，因为代码可以机械检查。其局限是领域依赖性。
 
-\paragraph{循环 IV：架构和智能体设计进化。} 系统在智能体架构、控制流、工具使用和自修改代码上搜索。ADAS、G\"{o}del Agent 和 DGM 是代表性系统~\citep{hu2024adas,yin2025godelagent,zhang2025dgm}。被修改的组件是智能体本身。此循环最接近自我重设计的直觉概念。
+\paragraph{循环 IV：架构和智能体设计进化。} 系统在智能体架构、控制流、工具使用和自修改代码上搜索。ADAS、G\"{o}del Agent 和 DGM 是代表性系统~\citep{adas2025,godelagent2024,darwingodelmachine2025}。被修改的组件是智能体本身。此循环最接近自我重设计的直觉概念。
 
-\paragraph{循环 V：课程、权重和种群进化。} 系统改变数据分布、训练课程、神经权重或种群归档。RISE、RAGEN、Absolute Zero、DGM 和 AlphaEvolve 都实例化了此循环的部分~\citep{qu2024rise,wang2025ragen,zhao2025absolutezero,zhang2025dgm,novikov2025alphaevolve}。此循环可以产生比仅提示方法更深层的行为变化，但需要仔细的奖励设计和防止坍缩保护。
+\paragraph{循环 V：课程、权重和种群进化。} 系统改变数据分布、训练课程、神经权重或种群归档。RISE、RAGEN、Absolute Zero、DGM 和 AlphaEvolve 都实例化了此循环的部分~\citep{rise2024,ragen2025,absolutezero2025,darwingodelmachine2025,alphaevolve2025}。此循环可以产生比仅提示方法更深层的行为变化，但需要仔细的奖励设计和防止坍缩保护。
 
 这些循环可以总结为
 \begin{equation}

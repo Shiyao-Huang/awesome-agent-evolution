@@ -30,7 +30,7 @@ LLM 驱动进化的最简单形式是对\emph{文本}进行优化：提示词、
 
 \subsubsection{OPRO：通过提示进行优化}
 
-OPRO~\citep{yang2023opro}（Google DeepMind，2023）确立了 LLM 在问题以自然语言表达时可作为通用优化器的基础性结论。OPRO 不设计基于梯度或组合优化的算法，而是简单地向 LLM 呈现解决方案--得分对的历史记录，要求其提出更高得分的解决方案。
+OPRO~\citep{opro2023}（Google DeepMind，2023）确立了 LLM 在问题以自然语言表达时可作为通用优化器的基础性结论。OPRO 不设计基于梯度或组合优化的算法，而是简单地向 LLM 呈现解决方案--得分对的历史记录，要求其提出更高得分的解决方案。
 
 \paragraph{算法框架。}
 给定目标函数 $f$ 和解决方案--得分历史 $\mathcal{H}=\{(s_i, f(s_i))\}_{i=1}^{K}$，OPRO 构建一个\textbf{元提示} $\mathcal{M}$，将得分对按升序排列，最优解决方案出现在最后：
@@ -64,7 +64,7 @@ OPRO 表明 LLM 可以在文本空间中进行优化，但其采用的仍是相�
 
 \subsubsection{EvoPrompt：基于进化的提示词优化}
 
-EvoPrompt~\citep{guo2023evoprompt}（ICLR 2024）将提示词优化框架化为进化计算，用 LLM 充当交叉和变异算子来实例化两种经典进化算法——遗传算法（GA）和差分进化（DE）。
+EvoPrompt~\citep{evoprompt2024}（ICLR 2024）将提示词优化框架化为进化计算，用 LLM 充当交叉和变异算子来实例化两种经典进化算法——遗传算法（GA）和差分进化（DE）。
 
 \paragraph{GA 实例化。}
 在 GA 变体中，EvoPrompt 维护一个包含 $N$ 个提示词的种群。每一代：(1) \textbf{选择}：通过锦标赛选择选取父代提示词对（支持轮盘赌、随机和锦标赛策略）；(2) \textbf{交叉}：LLM 接收两个父代提示词，在结构化交叉模板的指导下生成结合两者优势的子代；(3) \textbf{变异}：LLM 接收单个父代，在变异模板的指导下生成改进变体；(4) \textbf{替换}：精英选择从父代-子代合并池中保留前 $N$ 个提示词。
@@ -92,7 +92,7 @@ EvoPrompt 的洞见——LLM 作为语言空间中的智能进化算子——自
 
 \subsubsection{FunSearch：通过程序搜索实现数学发现}
 
-FunSearch~\citep{romera2024funsearch}（Google DeepMind，\textit{Nature} 2023）代表了一项里程碑式成就：首次证明 LLM 可以通过进化式程序搜索做出\emph{新的数学发现}。FunSearch 不直接搜索解，而是搜索\emph{生成解的程序}空间——这一关键区别使其能够泛化到个别问题实例之外。
+FunSearch~\citep{funsearch2024}（Google DeepMind，\textit{Nature} 2023）代表了一项里程碑式成就：首次证明 LLM 可以通过进化式程序搜索做出\emph{新的数学发现}。FunSearch 不直接搜索解，而是搜索\emph{生成解的程序}空间——这一关键区别使其能够泛化到个别问题实例之外。
 
 \paragraph{系统架构。}
 FunSearch 由四个并行运行的异步组件组成：
@@ -123,7 +123,7 @@ FunSearch 的范围仅限于单函数优化：只有目标函数进化，而周�
 
 \subsubsection{AlphaEvolve：基于 Gemini 的算法发现}
 
-AlphaEvolve~\citep{novikov2025alphaevolve}（Google DeepMind，2025）将 FunSearch 从单函数扩展到\textbf{全程序优化}，并引入了多项架构创新，显著提升了搜索效率和结果质量。
+AlphaEvolve~\citep{alphaevolve2025}（Google DeepMind，2025）将 FunSearch 从单函数扩展到\textbf{全程序优化}，并引入了多项架构创新，显著提升了搜索效率和结果质量。
 
 \paragraph{双模型架构。}
 关键创新是\textbf{双 LLM 设计}：Gemini Flash 作为\emph{广度}模型，以高吞吐量和低成本生成多样化的候选修改；Gemini Pro 作为\emph{深度}模型，对有前景的候选应用聚焦的、有针对性的改进。这种广度-深度分离使 AlphaEvolve 既能广泛探索又能深度精炼，这是单模型方法无法高效实现的能力。
@@ -191,7 +191,7 @@ OpenELM 实现了三种 MAP-Elites 算法变体，每种适合不同的探索特
 
 \subsubsection{DGM：Darwin G\"{o}del Machine}
 
-DGM~\citep{zhang2025dgm}（UBC / Vector Institute，Jeff Clune 实验室）将达尔文进化与 Schmidhuber 的理论 G\"{o}del 机框架~\citep{schmidhuber2003godel} 结合，用经验评估替代自改进的形式化数学证明。
+DGM~\citep{darwingodelmachine2025}（UBC / Vector Institute，Jeff Clune 实验室）将达尔文进化与 Schmidhuber 的理论 G\"{o}del 机框架~\citep{schmidhuber2003godel} 结合，用经验评估替代自改进的形式化数学证明。
 
 \begin{figure}[htbp]
 \centering
@@ -247,7 +247,7 @@ DGM 的开放式自我修改能力引发了值得详细讨论的重要安全问�
 
 \subsubsection{ADAS：智能体系统的自动化设计}
 
-ADAS~\citep{hu2024adas}（ICLR 2025）采用了一种互补的智能体自我进化方法，在\textbf{图灵完备的 Python 代码空间}中搜索智能体架构。与 DGM 进化现有智能体的代码不同，ADAS 使用\textbf{元智能体}从零开始编写完整的智能体架构。
+ADAS~\citep{adas2025}（ICLR 2025）采用了一种互补的智能体自我进化方法，在\textbf{图灵完备的 Python 代码空间}中搜索智能体架构。与 DGM 进化现有智能体的代码不同，ADAS 使用\textbf{元智能体}从零开始编写完整的智能体架构。
 
 \paragraph{搜索空间与算法。}
 搜索空间 $S$ 定义为实现智能体控制流的所有有效 Python 程序，使其理论上能够表达任何可计算的智能体架构。元智能体迭代执行：(1) 以 Python 代码提出新的智能体架构；(2) 在一组基准任务上评估；(3) 接收评估结果并提出改进的架构。此过程持续固定次数的迭代（可配置，通常为 20--50 次）。
@@ -265,7 +265,7 @@ ADAS 的质量严重依赖于元智能体 LLM 的代码生成能力。搜索计�
 
 \subsubsection{G\"{o}del Agent：通过 Monkey Patching 实现运行时自我修改}
 
-G\"{o}del Agent~\citep{yin2025godelagent}（北京大学 / UCSB，ACL 2025）使用 Python 的 monkey patching 机制实现自我指涉式修改，实现\textbf{原位运行时自我修改}而无需重启智能体进程。
+G\"{o}del Agent~\citep{godelagent2024}（北京大学 / UCSB，ACL 2025）使用 Python 的 monkey patching 机制实现自我指涉式修改，实现\textbf{原位运行时自我修改}而无需重启智能体进程。
 
 \paragraph{自我修改循环。}
 修改周期包含四个步骤：(1) \textbf{内省}：智能体读取自身的源代码和执行历史；(2) \textbf{提案}：LLM 分析代码并提出具体的修改建议；(3) \textbf{应用}：通过 Python 的 \texttt{exec()} 函数应用修改，在运行时直接修补方法和属性；(4) \textbf{验证}：修改后的智能体在验证集上测试，如果性能下降则自动回滚。
@@ -281,7 +281,7 @@ Monkey patching 是 Python 特有的，限制了到其他语言的可移植性�
 
 \subsubsection{Agent Symbolic Learning：语言反向传播}
 
-Agent Symbolic Learning~\citep{zhou2024symbolic}（NeurIPS 2024，AIWaves / 浙江大学）在神经网络训练和智能体优化之间建立了明确的类比。它将智能体视为\textbf{符号网络}，其中``权重''是离散的文本组件：提示词 $\mathcal{P}$、工具描述 $\mathcal{T}$ 和输入/输出流水线 $\mathcal{I}/\mathcal{O}$。
+Agent Symbolic Learning~\citep{agentsymboliclearning2024}（NeurIPS 2024，AIWaves / 浙江大学）在神经网络训练和智能体优化之间建立了明确的类比。它将智能体视为\textbf{符号网络}，其中``权重''是离散的文本组件：提示词 $\mathcal{P}$、工具描述 $\mathcal{T}$ 和输入/输出流水线 $\mathcal{I}/\mathcal{O}$。
 
 \paragraph{语言反向传播。}
 关键创新是在语言空间中执行类梯度优化。给定任务轨迹，系统计算语言损失，然后通过智能体的符号结构反向传播改进信号：
@@ -307,7 +307,7 @@ Agent Symbolic Learning~\citep{zhou2024symbolic}（NeurIPS 2024，AIWaves / 浙�
 
 \subsubsection{SelfEvolve：自引导代码进化}
 
-SelfEvolve~\citep{jiang2023selfevolve}（上海交通大学，2023）引入了两阶段自改进代码生成流水线。在第一阶段，模型在生成代码之前生成关于问题的\textbf{自我知识} $K$：
+SelfEvolve~\citep{selfevolve2023}（上海交通大学，2023）引入了两阶段自改进代码生成流水线。在第一阶段，模型在生成代码之前生成关于问题的\textbf{自我知识} $K$：
 \begin{equation}
 p(K) = \prod_i p_\theta(K_i | X, K_{<i}), \quad P(Y|K) = \prod_i p_\theta(Y_i | Y_{<i}, X, K)
 \end{equation}
@@ -324,7 +324,7 @@ SelfEvolve 的提示模板是手写的，可能无法泛化到所有任务类型
 
 \subsubsection{Absolute Zero：自博弈强化学习}
 
-Absolute Zero~\citep{zhao2025absolutezero}（清华大学，NeurIPS 2025 获奖）采用了一种截然不同的方法：单一模型同时充当\textbf{任务提出者}和\textbf{任务求解者}，创建一个需要零外部训练数据的自博弈循环。
+Absolute Zero~\citep{absolutezero2025}（清华大学，NeurIPS 2025 获奖）采用了一种截然不同的方法：单一模型同时充当\textbf{任务提出者}和\textbf{任务求解者}，创建一个需要零外部训练数据的自博弈循环。
 
 \paragraph{双重角色架构。}
 任务提出者生成任务 $t$，使用平衡难度和可解性的课程奖励：
@@ -344,7 +344,7 @@ AZR-Coder-7B（基于 Qwen）在编码基准（HumanEval+、MBPP+、LiveCodeBenc
 
 \subsubsection{Reflexion：语言强化学习}
 
-Reflexion~\citep{shinn2023reflexion} 引入了带有情节记忆的\textbf{语言强化学习}。系统将智能体分为三个组件：生成动作的\textbf{执行者}（Actor）、评估结果的\textbf{评估器}（Evaluator），以及将失败经验转化为存储在情节记忆中的自然语言摘要的\textbf{反思器}（Reflector）。在每次新轮次之前，执行者检索相关的过去反思以避免重复错误。
+Reflexion~\citep{reflexion2023} 引入了带有情节记忆的\textbf{语言强化学习}。系统将智能体分为三个组件：生成动作的\textbf{执行者}（Actor）、评估结果的\textbf{评估器}（Evaluator），以及将失败经验转化为存储在情节记忆中的自然语言摘要的\textbf{反思器}（Reflector）。在每次新轮次之前，执行者检索相关的过去反思以避免重复错误。
 
 \paragraph{结果。}
 Reflexion 在 HumanEval 上实现了 \textbf{91\% pass@1}，超越了当时 GPT-4 的 80\%；在 AlfWorld 上达到 97\% 成功率，而基础 ReAct 智能体仅为 75\%。核心洞察是自然语言反思提供了比标量奖励或轨迹回放更紧凑、更可迁移的经验表示。在 HumanEval 上，Reflexion 在 2--3 次反思迭代内就实现了大部分改进，表明前几次反思捕获了最重要的教训。后续迭代的收益递减，这与在其他自进化系统中观察到的对数缩放模式一致。
@@ -357,7 +357,7 @@ Reflexion 在 HumanEval 上实现了 \textbf{91\% pass@1}，超越了当时 GPT-
 
 \subsubsection{Voyager：基于技能库的终身学习}
 
-Voyager~\citep{wang2023voyager}通过三个集成组件在 Minecraft 中实现终身学习：(1) 提出越来越复杂的任务以最大化探索的\textbf{自动课程}；(2) 存储可重用代码模块（如"制作木镐"、"导航到村庄"）的\textbf{技能库}；(3) 为每个任务生成和调试代码的\textbf{迭代提示}机制。
+Voyager~\citep{voyager2023}通过三个集成组件在 Minecraft 中实现终身学习：(1) 提出越来越复杂的任务以最大化探索的\textbf{自动课程}；(2) 存储可重用代码模块（如"制作木镐"、"导航到村庄"）的\textbf{技能库}；(3) 为每个任务生成和调试代码的\textbf{迭代提示}机制。
 
 \paragraph{结果。}
 Voyager 发现了 \textbf{3.3$\times$ 更多独特物品}（42 vs.\ 最强基线的 13，该基线使用不带技能库的 GPT-4），并以 \textbf{15.3$\times$ 更快}的速度达到科技树里程碑。在完整游戏过程中，技能库积累了约 40 个可复用代码模块，从基本动作（``mine\_wood''、``craft\_planks''）到复杂策略（``find\_diamonds''、``navigate\_nether''）。技能以构建模块的方式累积：早期学到的技能（采集木材、制作物品）被组合成复杂行为（钻石开采、下界探索）。技能库提供了自然的课程结构，已掌握的技能为学习新技能奠定基础。
@@ -370,7 +370,7 @@ Voyager 的设计针对 Minecraft 特定：技能表示（调用 Minecraft API �
 
 \subsubsection{Self-Rewarding Language Models：自奖励语言模型}
 
-Self-Rewarding LM~\citep{meta2024selfrewarding}将策略模型和奖励模型统一到单个 LLM 中，使用\textbf{迭代 DPO}（Direct Preference Optimization）进行自我改进。在每次迭代中，模型生成候选响应，使用自身的奖励头对其进行评分，从高分和低分响应构建偏好对，并在这些对上微调。Meta-Rewarding 扩展添加了元奖励评估层以减少奖励作弊。
+Self-Rewarding LM~\citep{selfrewarding2024}将策略模型和奖励模型统一到单个 LLM 中，使用\textbf{迭代 DPO}（Direct Preference Optimization）进行自我改进。在每次迭代中，模型生成候选响应，使用自身的奖励头对其进行评分，从高分和低分响应构建偏好对，并在这些对上微调。Meta-Rewarding 扩展添加了元奖励评估层以减少奖励作弊。
 
 \paragraph{结果。}
 Llama-3-8B 在 AlpacaEval 2.0 上通过自奖励迭代从 22.9\% 提升至 	extbf{39.4\%}。这表明模型可以仅使用自生成的偏好数据改进其指令跟随能力，无需外部人类标注。这一改进发生在 3 轮自奖励 DPO 迭代中，第二轮之后的收益逐渐递减。添加第二个模型来评估奖励模型判断的 Meta-Rewarding 扩展通过减少奖励作弊进一步改善了结果。

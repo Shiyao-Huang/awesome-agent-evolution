@@ -30,7 +30,7 @@ The simplest form of LLM-driven evolution optimizes over \emph{text}: prompts, i
 
 \subsubsection{OPRO: Optimization by PROmpting}
 
-OPRO~\citep{yang2023opro} (Google DeepMind, 2023) establishes the foundational result that LLMs can serve as general-purpose optimizers when problems are expressed in natural language. Rather than designing gradient-based or combinatorial optimization algorithms, OPRO simply presents the LLM with a history of solution--score pairs and asks it to propose higher-scoring solutions.
+OPRO~\citep{opro2023} (Google DeepMind, 2023) establishes the foundational result that LLMs can serve as general-purpose optimizers when problems are expressed in natural language. Rather than designing gradient-based or combinatorial optimization algorithms, OPRO simply presents the LLM with a history of solution--score pairs and asks it to propose higher-scoring solutions.
 
 \paragraph{Algorithmic Framework.}
 Given an objective function $f$ and a solution--score history $\mathcal{H}=\{(s_i, f(s_i))\}_{i=1}^{K}$, OPRO constructs a \textbf{meta-prompt} $\mathcal{M}$ that formats the pairs in ascending score order with the best solution appearing last:
@@ -64,7 +64,7 @@ OPRO demonstrates that LLMs can optimize over text, but it uses a relatively sim
 
 \subsubsection{EvoPrompt: Evolutionary Prompt Optimization}
 
-EvoPrompt~\citep{guo2023evoprompt} (ICLR 2024) frames prompt optimization as evolutionary computation, instantiating two classical evolutionary algorithms---Genetic Algorithm (GA) and Differential Evolution (DE)---with LLMs serving as crossover and mutation operators.
+EvoPrompt~\citep{evoprompt2024} (ICLR 2024) frames prompt optimization as evolutionary computation, instantiating two classical evolutionary algorithms---Genetic Algorithm (GA) and Differential Evolution (DE)---with LLMs serving as crossover and mutation operators.
 
 \paragraph{GA Instantiation.}
 In the GA variant, EvoPrompt maintains a population of $N$ prompts. At each generation: (1) \textbf{Selection}: pairs of parent prompts are selected via tournament selection (supporting roulette wheel, random, and tournament strategies); (2) \textbf{Crossover}: an LLM receives both parent prompts and generates a child that combines their strengths, guided by a structured crossover template; (3) \textbf{Mutation}: an LLM receives a single parent and generates an improved variant, guided by a mutation template; (4) \textbf{Replacement}: elitist selection retains the top-$N$ prompts from the combined parent--offspring pool.
@@ -92,7 +92,7 @@ Moving beyond text optimization, a second class of systems uses LLMs to evolve \
 
 \subsubsection{FunSearch: Mathematical Discovery via Program Search}
 
-FunSearch~\citep{romera2024funsearch} (Google DeepMind, \textit{Nature} 2023) represents a landmark achievement: the first demonstration that LLMs can make \emph{new mathematical discoveries} through evolutionary program search. Rather than searching for solutions directly, FunSearch searches the space of \emph{programs that generate solutions}---a crucial distinction that enables generalization beyond individual problem instances.
+FunSearch~\citep{funsearch2024} (Google DeepMind, \textit{Nature} 2023) represents a landmark achievement: the first demonstration that LLMs can make \emph{new mathematical discoveries} through evolutionary program search. Rather than searching for solutions directly, FunSearch searches the space of \emph{programs that generate solutions}---a crucial distinction that enables generalization beyond individual problem instances.
 
 \paragraph{System Architecture.}
 FunSearch comprises four parallel components operating asynchronously:
@@ -123,7 +123,7 @@ FunSearch's scope is restricted to single-function optimization: only the target
 
 \subsubsection{AlphaEvolve: Gemini-Powered Algorithm Discovery}
 
-AlphaEvolve~\citep{novikov2025alphaevolve} (Google DeepMind, 2025) extends FunSearch from single-function to \textbf{whole-program optimization} and introduces several architectural innovations that substantially improve search efficiency and result quality.
+AlphaEvolve~\citep{alphaevolve2025} (Google DeepMind, 2025) extends FunSearch from single-function to \textbf{whole-program optimization} and introduces several architectural innovations that substantially improve search efficiency and result quality.
 
 \paragraph{Dual-Model Architecture.}
 The key innovation is a \textbf{dual LLM design}: Gemini Flash serves as the \emph{breadth} model, generating many diverse candidate modifications with high throughput and low cost; Gemini Pro serves as the \emph{depth} model, applying focused, targeted improvements to promising candidates. This breadth--depth separation allows AlphaEvolve to both explore widely and refine deeply, a capability that single-model approaches cannot efficiently provide.
@@ -192,7 +192,7 @@ The most ambitious class of evolutionary systems targets \emph{agent architectur
 
 \subsubsection{DGM: Darwin G\"{o}del Machine}
 
-DGM~\citep{zhang2025dgm} (UBC / Vector Institute, Jeff Clune's lab) combines Darwinian evolution with Schmidhuber's theoretical G\"{o}del machine framework~\citep{schmidhuber2003godel}, replacing formal mathematical proofs of self-improvement with empirical evaluation.
+DGM~\citep{darwingodelmachine2025} (UBC / Vector Institute, Jeff Clune's lab) combines Darwinian evolution with Schmidhuber's theoretical G\"{o}del machine framework~\citep{schmidhuber2003godel}, replacing formal mathematical proofs of self-improvement with empirical evaluation.
 
 \begin{figure}[htbp]
 \centering
@@ -248,7 +248,7 @@ DGM's open-ended self-modification capability raises significant safety concerns
 
 \subsubsection{ADAS: Automated Design of Agentic Systems}
 
-ADAS~\citep{hu2024adas} (ICLR 2025) takes a complementary approach to agent self-evolution by searching over \textbf{Turing-complete Python code space} for agent architectures. Rather than evolving an existing agent's code (as DGM does), ADAS uses a \textbf{meta-agent} that writes complete agent architectures from scratch.
+ADAS~\citep{adas2025} (ICLR 2025) takes a complementary approach to agent self-evolution by searching over \textbf{Turing-complete Python code space} for agent architectures. Rather than evolving an existing agent's code (as DGM does), ADAS uses a \textbf{meta-agent} that writes complete agent architectures from scratch.
 
 \paragraph{Search Space and Algorithm.}
 The search space $S$ is defined as all valid Python programs implementing agent control flow, making it theoretically capable of expressing any computable agent architecture. The meta-agent iteratively: (1) proposes a new agent architecture as Python code; (2) evaluates it on a set of benchmark tasks; (3) receives the evaluation results and proposes an improved architecture. This process continues for a fixed number of iterations (configurable, typically 20--50).
@@ -266,7 +266,7 @@ ADAS's quality depends heavily on the meta-agent LLM's code generation capabilit
 
 \subsubsection{G\"{o}del Agent: Runtime Self-Modification via Monkey Patching}
 
-G\"{o}del Agent~\citep{yin2025godelagent} (Peking University / UCSB, ACL 2025) implements self-referential modification using Python's monkey patching mechanism, enabling \textbf{in-place runtime self-modification} without restarting the agent process.
+G\"{o}del Agent~\citep{godelagent2024} (Peking University / UCSB, ACL 2025) implements self-referential modification using Python's monkey patching mechanism, enabling \textbf{in-place runtime self-modification} without restarting the agent process.
 
 \paragraph{Self-Modification Loop.}
 The modification cycle consists of four steps: (1) \textbf{Introspection}: the agent reads its own source code and execution history; (2) \textbf{Proposal}: an LLM analyzes the code and proposes specific modifications; (3) \textbf{Application}: modifications are applied via Python's \texttt{exec()} function, directly patching methods and attributes at runtime; (4) \textbf{Validation}: the modified agent is tested on a validation set, with automatic rollback if performance degrades.
@@ -282,7 +282,7 @@ Monkey patching is Python-specific, limiting portability to other languages. Run
 
 \subsubsection{Agent Symbolic Learning: Language Backpropagation}
 
-Agent Symbolic Learning~\citep{zhou2024symbolic} (NeurIPS 2024, AIWaves / Zhejiang University) draws an explicit analogy between neural network training and agent optimization. It treats agents as \textbf{symbolic networks} where the ``weights'' are discrete textual components: prompts $\mathcal{P}$, tool descriptions $\mathcal{T}$, and input/output pipelines $\mathcal{I}/\mathcal{O}$.
+Agent Symbolic Learning~\citep{agentsymboliclearning2024} (NeurIPS 2024, AIWaves / Zhejiang University) draws an explicit analogy between neural network training and agent optimization. It treats agents as \textbf{symbolic networks} where the ``weights'' are discrete textual components: prompts $\mathcal{P}$, tool descriptions $\mathcal{T}$, and input/output pipelines $\mathcal{I}/\mathcal{O}$.
 
 \paragraph{Language Backpropagation.}
 The key innovation is performing gradient-like optimization entirely in language space. Given a task trajectory, the system computes a language loss, then propagates improvement signals backward through the agent's symbolic structure:
@@ -308,7 +308,7 @@ The approach requires a strong LLM backbone (GPT-4 level) for both forward execu
 
 \subsubsection{SelfEvolve: Self-Guided Code Evolution}
 
-SelfEvolve~\citep{jiang2023selfevolve} (Shanghai Jiao Tong University, 2023) introduces a two-stage pipeline for self-improving code generation. In Stage 1, the model generates \textbf{self-knowledge} $K$ about the problem before producing code:
+SelfEvolve~\citep{selfevolve2023} (Shanghai Jiao Tong University, 2023) introduces a two-stage pipeline for self-improving code generation. In Stage 1, the model generates \textbf{self-knowledge} $K$ about the problem before producing code:
 \begin{equation}
 p(K) = \prod_i p_\theta(K_i | X, K_{<i}), \quad P(Y|K) = \prod_i p_\theta(Y_i | Y_{<i}, X, K)
 \end{equation}
@@ -325,7 +325,7 @@ SelfEvolve's prompt templates are hand-written and may not generalize across all
 
 \subsubsection{Absolute Zero: Self-Play Reinforcement Learning}
 
-Absolute Zero~\citep{zhao2025absolutezero} (Tsinghua University, NeurIPS 2025 award) takes a radically different approach: a single model simultaneously acts as \textbf{task proposer} and \textbf{task solver}, creating a self-play loop that requires zero external training data.
+Absolute Zero~\citep{absolutezero2025} (Tsinghua University, NeurIPS 2025 award) takes a radically different approach: a single model simultaneously acts as \textbf{task proposer} and \textbf{task solver}, creating a self-play loop that requires zero external training data.
 
 \paragraph{Dual-Role Architecture.}
 The proposer generates tasks $t$ with a curriculum reward that balances difficulty and solvability:
@@ -345,7 +345,7 @@ The bootstrapping challenge is fundamental: early in training, the proposer's ca
 
 \subsubsection{Reflexion: Verbal Reinforcement Learning}
 
-Reflexion~\citep{shinn2023reflexion} introduces \textbf{verbal reinforcement learning} with episodic memory. The system separates the agent into three components: an \textbf{Actor} that generates actions, an \textbf{Evaluator} that assesses outcomes, and a \textbf{Reflector} that converts failure experiences into natural language summaries stored in episodic memory. Before each new episode, the actor retrieves relevant past reflections to avoid repeating mistakes.
+Reflexion~\citep{reflexion2023} introduces \textbf{verbal reinforcement learning} with episodic memory. The system separates the agent into three components: an \textbf{Actor} that generates actions, an \textbf{Evaluator} that assesses outcomes, and a \textbf{Reflector} that converts failure experiences into natural language summaries stored in episodic memory. Before each new episode, the actor retrieves relevant past reflections to avoid repeating mistakes.
 
 \paragraph{Results.}
 Reflexion achieves \textbf{91\% pass@1 on HumanEval}, surpassing GPT-4's 80\% at the time of publication, and 97\% success on AlfWorld compared to 75\% with the base ReAct agent. The key insight is that natural language reflections provide a more compact and transferable representation of experience than scalar rewards or trajectory replays. On HumanEval, Reflexion achieves most of its improvement within 2--3 reflection iterations, suggesting that the first few reflections capture the most important lessons. The remaining iterations provide diminishing returns, consistent with the logarithmic scaling pattern observed across other self-evolution systems.
@@ -358,7 +358,7 @@ The primary limitation is \textbf{unbounded memory growth}: as the agent accumul
 
 \subsubsection{Voyager: Lifelong Learning via Skill Libraries}
 
-Voyager~\citep{wang2023voyager} implements lifelong learning in Minecraft through three integrated components: (1) an \textbf{automatic curriculum} that proposes increasingly complex tasks to maximize exploration; (2) a \textbf{skill library} that stores reusable code modules (e.g., ``craft wooden pickaxe,'' ``navigate to village''); (3) an \textbf{iterative prompting} mechanism that generates and debugs code for each task.
+Voyager~\citep{voyager2023} implements lifelong learning in Minecraft through three integrated components: (1) an \textbf{automatic curriculum} that proposes increasingly complex tasks to maximize exploration; (2) a \textbf{skill library} that stores reusable code modules (e.g., ``craft wooden pickaxe,'' ``navigate to village''); (3) an \textbf{iterative prompting} mechanism that generates and debugs code for each task.
 
 \paragraph{Results.}
 Voyager discovers \textbf{3.3$\times$ more unique items} (42 vs.\ 13 for the strongest baseline, which uses GPT-4 without skill libraries) and reaches technology tree milestones \textbf{15.3$\times$ faster}. Over a full playthrough, the skill library accumulates $\sim$40 reusable code modules, ranging from basic actions (``mine\_wood,'' ``craft\_planks'') to complex strategies (``find\_diamonds,'' ``navigate\_nether''). Skills accumulate as building blocks: early-learned skills (wood gathering, crafting) are composed into complex behaviors (diamond mining, Nether exploration). The skill library provides a natural curriculum structure where mastered skills enable new ones.
@@ -371,7 +371,7 @@ Voyager's design is Minecraft-specific: the skill representation (Python functio
 
 \subsubsection{Self-Rewarding Language Models}
 
-Self-Rewarding LM~\citep{meta2024selfrewarding} unifies the policy model and reward model into a single LLM, using \textbf{Iterative DPO} (Direct Preference Optimization) for self-improvement. At each iteration, the model generates candidate responses, scores them using its own reward head, constructs preference pairs from high-scoring and low-scoring responses, and fine-tunes on these pairs. The Meta-Rewarding extension adds a meta-reward evaluation layer to reduce reward hacking.
+Self-Rewarding LM~\citep{selfrewarding2024} unifies the policy model and reward model into a single LLM, using \textbf{Iterative DPO} (Direct Preference Optimization) for self-improvement. At each iteration, the model generates candidate responses, scores them using its own reward head, constructs preference pairs from high-scoring and low-scoring responses, and fine-tunes on these pairs. The Meta-Rewarding extension adds a meta-reward evaluation layer to reduce reward hacking.
 
 \paragraph{Results.}
 Llama-3-8B improves from 22.9\% to \textbf{39.4\%} on AlpacaEval 2.0 through self-rewarding iterations. This demonstrates that models can improve their instruction-following ability using only self-generated preference data, without external human annotations. The improvement occurs over 3 iterations of self-rewarding DPO, with diminishing returns after the second iteration. The Meta-Rewarding extension, which adds a second model to evaluate the reward model's judgments, further improves results by reducing reward hacking.

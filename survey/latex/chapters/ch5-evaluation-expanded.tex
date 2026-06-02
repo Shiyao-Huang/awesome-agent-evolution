@@ -133,7 +133,7 @@ Based on our analysis of the literature, we identify five common evaluation pitf
 
 \subsubsection{HumanEval}
 
-HumanEval~\citep{chen2021codex} is the most widely used benchmark for evaluating code generation capabilities. It consists of 164 hand-crafted Python programming problems with unit tests, measuring functional correctness via pass@$k$ metrics.
+HumanEval~\citep{chen2021humaneval} is the most widely used benchmark for evaluating code generation capabilities. It consists of 164 hand-crafted Python programming problems with unit tests, measuring functional correctness via pass@$k$ metrics.
 
 \begin{table}[htbp]
 \centering
@@ -178,7 +178,7 @@ SelfEvolve & TransCoder (C++$\to$Py) & 88.3 & \textbf{90.4} & +2.1pp \\
 
 \subsubsection{SWE-Bench}
 
-SWE-Bench~\citep{swebench2023} is the most demanding code benchmark, requiring systems to locate issues in real open-source repositories, modify code, run tests, and submit verifiable patches. It represents the gold standard for evaluating whether self-evolution methods can produce real-world value.
+SWE-Bench~\citep{jimenez2024swebench} is the most demanding code benchmark, requiring systems to locate issues in real open-source repositories, modify code, run tests, and submit verifiable patches. It represents the gold standard for evaluating whether self-evolution methods can produce real-world value.
 
 \begin{table}[htbp]
 \centering

@@ -541,7 +541,7 @@ ExPeL's two-phase process:
 
 \paragraph{Agent Symbolic Learning}
 
-\textbf{Agent Symbolic Learning}~\citep{agentsymbolic2024} maps backpropagation and gradient descent entirely into natural language space. Its core innovation is the \textbf{``language gradient''}---using text to describe how to improve each component:
+\textbf{Agent Symbolic Learning}~\citep{agentsymboliclearning2024} maps backpropagation and gradient descent entirely into natural language space. Its core innovation is the \textbf{``language gradient''}---using text to describe how to improve each component:
 
 \begin{definition}[Language Gradient]
 Given a language loss $\mathcal{L}_{\mathrm{lang}} = \mathrm{LLM}(P_{\mathrm{loss}}, \text{trajectory})$, the language gradient is computed through chain-style backpropagation:
@@ -603,7 +603,7 @@ where $\mathcal{T}$ is the evaluation task set. The search process iterates thro
 
 \paragraph{ADAS: Automated Agent System Design}
 
-\textbf{ADAS}~\citep{adas2024} (ICLR 2025, 414+ citations) defines the research area of ``automated agent system design'' and proposes the ``Meta Agent Search'' method:
+\textbf{ADAS}~\citep{adas2025} (ICLR 2025, 414+ citations) defines the research area of ``automated agent system design'' and proposes the ``Meta Agent Search'' method:
 
 \begin{enumerate}
 \item \textbf{Search Space}: $\mathcal{S} = \{\text{all valid Python programs}\}$---a Turing-complete search space encompassing all possible agent designs
@@ -652,7 +652,7 @@ Cross-model transfer is a particularly noteworthy finding---it suggests that LLM
 
 \paragraph{DGM: Darwin G\"{o}del Machine}
 
-\textbf{DGM}~\citep{dgm2025} combines Darwinian evolution with the self-referential properties of the G\"{o}del Machine, maintaining an open-ended archive of agent implementations:
+\textbf{DGM}~\citep{darwingodelmachine2025} combines Darwinian evolution with the self-referential properties of the G\"{o}del Machine, maintaining an open-ended archive of agent implementations:
 
 \begin{enumerate}
 \item \textbf{Archive}: $\mathcal{A} = \{a_1, \ldots, a_n\}$, each agent with fitness scores
@@ -699,7 +699,7 @@ Archive updates follow MAP-Elites rules:
 
 \paragraph{FunSearch}
 
-\textbf{FunSearch}~\citep{funsearch2023} (Nature 2023) is AlphaEvolve's predecessor, using evolutionary search to discover mathematical functions. Its core idea is to use LLMs as mutation operators, searching through function space. FunSearch demonstrated that LLM-guided evolution could make genuine mathematical discoveries, setting the stage for AlphaEvolve's more ambitious scope.
+\textbf{FunSearch}~\citep{funsearch2024} (Nature 2023) is AlphaEvolve's predecessor, using evolutionary search to discover mathematical functions. Its core idea is to use LLMs as mutation operators, searching through function space. FunSearch demonstrated that LLM-guided evolution could make genuine mathematical discoveries, setting the stage for AlphaEvolve's more ambitious scope.
 
 \paragraph{EvoMAC}
 

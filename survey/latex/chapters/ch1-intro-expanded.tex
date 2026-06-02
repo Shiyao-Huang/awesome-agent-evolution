@@ -217,7 +217,7 @@ Agent Evolution 兴起的第一个背景，是基础模型能力增长与静态�
 
 第三个背景，是真实应用场景要求长期适应。软件工程智能体要面对不断变化的代码库、依赖、测试和需求；网页智能体要适应动态网页、API 与用户目标；科研智能体要在开放问题空间中提出假设并执行实验；企业智能体要记住历史流程、合规要求与组织偏好。静态 benchmark 难以覆盖这些变化。SICA 和 DGM 把编码 agent 的自修改能力放到 SWE-Bench、Polyglot 等环境中验证；WebEvolver 面向 web 环境中的世界模型协同进化；Memory-R1、ReasoningBank 和 AriadneMem 则说明长期记忆不是附属模块，而是 agent 能否持续学习的核心基础设施。
 
-第四个背景，是安全与可控性问题变得更加尖锐。自演化系统可能修改自己的提示、代码、工具调用策略和记忆，因而不仅可能变强，也可能产生 reward hacking、benchmark overfitting、权限扩大、隐藏回归或错误自我强化。Gödel Agent、DGM 和 SICA 继承了 Gödel 机器关于递归自我改进的雄心，但它们用经验验证替代形式证明，也因此必须面对评估不完备、沙箱隔离、回滚机制和审计日志等工程问题。Constitutional AI~\citep{cai2022}展示了用"宪法原则"约束自评行为的路径——AI 在原则框架内进行自我批评和修正，而非完全自由地改进。Agent Evolution 的研究动机并非无条件追求"让系统自己变强"，而是在可验证、可回滚、可解释、可约束的条件下，把自我改进转化为可工程化的能力增长。
+第四个背景，是安全与可控性问题变得更加尖锐。自演化系统可能修改自己的提示、代码、工具调用策略和记忆，因而不仅可能变强，也可能产生 reward hacking、benchmark overfitting、权限扩大、隐藏回归或错误自我强化。Gödel Agent、DGM 和 SICA 继承了 Gödel 机器关于递归自我改进的雄心，但它们用经验验证替代形式证明，也因此必须面对评估不完备、沙箱隔离、回滚机制和审计日志等工程问题。Constitutional AI~\citep{constitutionalai2022}展示了用"宪法原则"约束自评行为的路径——AI 在原则框架内进行自我批评和修正，而非完全自由地改进。Agent Evolution 的研究动机并非无条件追求"让系统自己变强"，而是在可验证、可回滚、可解释、可约束的条件下，把自我改进转化为可工程化的能力增长。
 
 第五个背景，是进化计算与 LLM 的互补性越来越明显。进化算法擅长在非可微、离散、开放式空间中进行变异、选择和保持多样性，但传统进化搜索往往需要精心编码的基因表示和大量评估；LLM 擅长提出语义丰富的候选程序、策略、解释和工具组合，却容易缺乏稳定的外部选择压力。AlphaEvolve、FunSearch、ADAS 和 DGM 展示了二者结合的优势：LLM 负责生成高层候选，评估器负责选择，archive 负责保留 stepping stones，多轮迭代负责积累改进。这一范式使"进化"不再只是随机扰动参数，而成为对可读代码、自然语言策略和 agent 结构的语义搜索。
 
@@ -1026,13 +1026,13 @@ Agent Evolution 的终极挑战是：如何确保一个能持续自我改进的�
 
 本综述引用的 88 篇核心论文按方法类别分类如下：
 
-\textbf{基于奖励的进化}（15 篇）：STaR~\citep{star2022}、Self-Rewarding~\citep{selfrewarding2024}、Meta-Rewarding~\citep{metarewarding2024}、RISE~\citep{rise2024}、RAGEN~\citep{ragen2025}、SPIN~\citep{spin2024}、ReST~\citep{rest2023}、Agent-R~\citep{agentr2024}、IterAlign~\citep{iteralign2024}、Constitutional AI~\citep{cai2022} 等。
+\textbf{基于奖励的进化}（15 篇）：STaR~\citep{star2022}、Self-Rewarding~\citep{selfrewarding2024}、Meta-Rewarding~\citep{metarewarding2024}、RISE~\citep{rise2024}、RAGEN~\citep{ragen2025}、SPIN~\citep{spin2024}、ReST~\citep{rest2023}、Agent-R~\citep{agentr2024}、IterAlign~\citep{iteralign2024}、Constitutional AI~\citep{constitutionalai2022} 等。
 
 \textbf{自博弈进化}（8 篇）：Absolute Zero~\citep{absolutezero2025}、SPIRAL~\citep{spiral2024}、Multi-Agent Debate~\citep{madd2023}、Self-Play Fine-Tuning~\citep{spin2024} 等。
 
-\textbf{提示词进化}（12 篇）：Reflexion~\citep{reflexion2023}、Self-Refine~\citep{selfrefine2023}、Self-Debug~\citep{selfdebug2023}、ExPeL~\citep{expel2023}、ACE~\citep{ace2024}、Agent Symbolic Learning~\citep{agentsymbolic2024}、DSPy~\citep{dspy2023} 等。
+\textbf{提示词进化}（12 篇）：Reflexion~\citep{reflexion2023}、Self-Refine~\citep{selfrefine2023}、Self-Debug~\citep{selfdebug2023}、ExPeL~\citep{expel2023}、ACE~\citep{ace2024}、Agent Symbolic Learning~\citep{agentsymboliclearning2024}、DSPy~\citep{khattab2023dspy} 等。
 
-\textbf{架构搜索}（10 篇）：ADAS~\citep{adas2024}、Gödel Agent~\citep{godelagent2024}、DGM~\citep{dgm2025}、AlphaEvolve~\citep{alphaevolve2025}、FunSearch~\citep{funsearch2023}、EvoMAC~\citep{evomac2024}、SICA~\citep{sica2025} 等。
+\textbf{架构搜索}（10 篇）：ADAS~\citep{adas2025}、Gödel Agent~\citep{godelagent2024}、DGM~\citep{darwingodelmachine2025}、AlphaEvolve~\citep{alphaevolve2025}、FunSearch~\citep{funsearch2024}、EvoMAC~\citep{evomac2024}、SICA~\citep{sica2025} 等。
 
 \textbf{记忆进化}（8 篇）：Voyager~\citep{voyager2023}、Memory-R1~\citep{memoryr1_2025}、AriadneMem~\citep{ariadnemem2025}、ReasoningBank~\citep{reasoningbank2024} 等。
 
