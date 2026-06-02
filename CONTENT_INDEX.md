@@ -45,6 +45,8 @@
 | 自进化定义判据 | [analysis/self-evolution-definition-criteria.md](analysis/self-evolution-definition-criteria.md) | processed synthesis：用可变对象、反馈、候选生成、验证、保留和回滚六个 gate 定义什么才算 self-evolving agent |
 | 五类进化回路主题分析 | [analysis/five-evolution-loops-topic.md](analysis/five-evolution-loops-topic.md) | processed synthesis：把五类回路整理成可读的机制地图，说明可变对象、反馈、验证器、保留和失败模式 |
 | 代码自改进 Benchmark 矩阵 | [analysis/code-evolution-benchmark-matrix.md](analysis/code-evolution-benchmark-matrix.md) | processed synthesis：区分自修改 coding agent、算法发现、架构搜索、prompt/program 优化和反思修复回路的 benchmark 证据 |
+| Survey Figure Atlas | [survey/figures/README.md](survey/figures/README.md) | work/result bridge：整理 Survey 的 corpus funnel、method distribution、cross-source gap、framework radar、painpoint platform 等图谱资产及数据口径 |
+| Paper figure exporter | [scripts/export_survey_figures_for_paper.mjs](scripts/export_survey_figures_for_paper.mjs) | work script：把 `survey/figures/*.svg` 转成 `paper-drafts/figures/*.png`，供英文 paper-drafts/main.tex 直接 includegraphics |
 | 用户输入记忆 | local-only, ignored | 本地保留，不发布、不提交；公开仓库只保留抽象操作原则 |
 | 读者/Agent 边界规则 | [docs/ops/audience-boundary-workflow.md](docs/ops/audience-boundary-workflow.md) | ops guide：区分公开读者页面、证据索引和内部 workflow，防止 README/site 混入 agent 操作手册 |
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |

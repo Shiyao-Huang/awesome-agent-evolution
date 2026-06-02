@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { surveyStats, evolutionLoops, methodFamilies, painPoints, surveyFigurePaths } from '@/data/survey';
+import { surveyStats, evolutionLoops, methodFamilies, painPoints, surveyFigurePaths, surveyFigureAtlas } from '@/data/survey';
 
 const surveyLd = {
   '@context': 'https://schema.org',
@@ -35,6 +35,27 @@ const surveyLd = {
         <a class="button primary" href="/survey/mechanisms/">五大进化环详解</a>
         <a class="button" href="/survey/case-studies/">六大案例研究</a>
         <a class="text-link" href="/paper/">论文下载</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Figure Atlas</div>
+          <h2>Survey 图谱现在是证据主干。</h2>
+        </div>
+        <a class="text-link" href="https://github.com/Shiyao-Huang/awesome-agent-evolution/tree/main/survey/figures" target="_blank" rel="noopener">figure source →</a>
+      </div>
+      <p style="margin-bottom: 24px; color: var(--muted);">这些图不是装饰图，而是把论文章节、网站页面和数据资产连起来的 reader-facing evidence map：先看图，读者才知道每章为什么存在。</p>
+      <div class="visual-grid">
+        {surveyFigureAtlas.slice(0, 6).map((figure) => (
+          <figure class="visual-panel">
+            <img src={figure.path} alt={`${figure.title}: ${figure.insight}`} loading="lazy" />
+            <figcaption><strong>{figure.titleZh}</strong> · {figure.chapter}<br />{figure.insight}</figcaption>
+          </figure>
+        ))}
       </div>
     </div>
   </section>

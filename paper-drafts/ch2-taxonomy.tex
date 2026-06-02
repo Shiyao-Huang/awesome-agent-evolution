@@ -9,6 +9,13 @@ The central distinction is between \emph{where} the update happens and \emph{wha
 
 The five-loop view is useful for survey work because it connects several research traditions that often use different terminology.  AutoML~\cite{zoph2018learning} emphasizes task specification, pipeline construction, and metric-driven optimization.  Neural architecture search~\cite{liu2018darts,real2019regularized} emphasizes candidate generation, search spaces, and performance estimation.  Evolutionary computation~\cite{stanley2002evolving,lehman2011abandoning} emphasizes populations, mutation, crossover, diversity preservation, and selection.  Program synthesis emphasizes executable candidates and test-based repair.  Agent research emphasizes planning, tool use, memory, multi-agent coordination, and reflection.  LLM self-improvement emphasizes iterative feedback, synthetic data, self-play, and model updates.  Self-evolution emerges when these traditions are combined into a system that can repeatedly improve its own artifacts or behavior under evaluation.
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\linewidth]{survey-method-distribution.png}
+\caption{Survey method-family distribution over the paper corpus. Prompt/search optimization and reward/self-play dominate the literature, while governance and safety remain a small but high-leverage slice of the field.}
+\label{fig:survey-method-distribution}
+\end{figure}
+
 \subsection{Unified Formalization}
 \label{subsec:taxonomy-formalization}
 

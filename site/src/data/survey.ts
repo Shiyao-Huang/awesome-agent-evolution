@@ -330,3 +330,62 @@ export const surveyFigurePaths = {
   starDistribution: '/visuals/star-distribution.svg',
   themeStar: '/visuals/theme-star-comparison.svg',
 };
+
+export const surveyFigureAtlas = [
+  {
+    title: 'Corpus funnel',
+    titleZh: '语料筛选漏斗',
+    path: surveyFigurePaths.corpusFunnel,
+    chapter: 'Paper Ch.1 / Survey evidence base',
+    insight: '把 raw captures、classified repositories、model cards、strict evolution 和 broad evolution 连接成一条可追溯管线。',
+  },
+  {
+    title: 'Method distribution',
+    titleZh: '方法族分布',
+    path: surveyFigurePaths.methodDistribution,
+    chapter: 'Paper Ch.2 / Taxonomy',
+    insight: '提示词/搜索优化和奖励/自博弈占多数，安全治理虽然占比小但决定 self-evolution 是否可部署。',
+  },
+  {
+    title: 'Method trend',
+    titleZh: '方法时间趋势',
+    path: surveyFigurePaths.methodTrend,
+    chapter: 'Paper Ch.3 / Methods',
+    insight: '2025 年以后代码自修改、评估闭环和自博弈方向明显升温，说明字段从 prompt trick 走向系统级 loop。',
+  },
+  {
+    title: 'Category-theme heatmap',
+    titleZh: '类别主题热力图',
+    path: surveyFigurePaths.categoryTheme,
+    chapter: 'Paper Ch.4 / Systems',
+    insight: 'GitHub 项目不是按自带 category 可读，必须交叉看 theme 与 mechanism 才能找出真实自进化信号。',
+  },
+  {
+    title: 'Cross-source gap',
+    titleZh: '交叉证据缺口',
+    path: surveyFigurePaths.crossSourceGap,
+    chapter: 'Paper Ch.5 / Evaluation',
+    insight: '论文分数、开源实现、用户痛点和传播热度之间存在缺口，benchmark 不能独自代表系统价值。',
+  },
+  {
+    title: 'Framework radar',
+    titleZh: '框架雷达',
+    path: surveyFigurePaths.frameworkRadar,
+    chapter: 'Paper Ch.6 / Frameworks',
+    insight: '框架要同时看 adoption、observability、production、evolution fit 和 governance，不是 star 越多越适合自进化。',
+  },
+  {
+    title: 'Pain-point platform',
+    titleZh: '痛点平台分布',
+    path: surveyFigurePaths.painpointPlatform,
+    chapter: 'Paper Ch.7 / Pain points',
+    insight: 'Mom Test 层把论坛抱怨转成需求信号：可靠性、可观测、循环控制、成本和安全是 deployment gate。',
+  },
+  {
+    title: 'Theme-star comparison',
+    titleZh: '主题 Star 对比',
+    path: surveyFigurePaths.themeStar,
+    chapter: 'Paper Ch.8 / Future directions',
+    insight: '热门主题与研究价值不总一致，未来路线图需要把 adoption prior 和 evidence quality 分开。',
+  },
+];

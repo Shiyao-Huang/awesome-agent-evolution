@@ -18,6 +18,13 @@ The evidence base used here comes from Mom Test-style analysis of public practit
 
 A striking pattern emerges across all sources: users have already built informal defenses against unreliable autonomy. They add hard iteration caps, run agents only in sandboxes, paste context manually at the start of each session, replace frameworks with plain API calls, write bespoke evaluation harnesses, demand human approval for risky actions, and inspect every claimed success. These workarounds are valuable because they reveal the actual missing product surface. If users keep adding loop detectors by hand, then loop awareness is a core agent capability. If users abandon frameworks because prompts are hidden, then prompt visibility is not a debugging luxury but a production requirement. If users distrust benchmark improvements because regression counts and seed variance are omitted, then self-evolution needs experimental reporting standards, not just stronger search algorithms.
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\linewidth]{survey-painpoint-platform.png}
+\caption{Pain-point evidence by public discussion platform. The Mom Test layer is used as a demand signal for reliability, observability, loop control, cost governance, and security requirements.}
+\label{fig:survey-painpoint-platform}
+\end{figure}
+
 The chapter is organized around seven practical questions. Section~\ref{subsec:mom-test-methodology} describes the research methodology and explains why Mom Test principles are useful for agent research. Section~\ref{subsec:pain-taxonomy} proposes a severity-coded taxonomy. Section~\ref{subsec:reliability-robustness} analyzes reliability and robustness failures: hallucination, infinite loops, incorrect tool use, context overflow, drift, and false self-reporting. Section~\ref{subsec:development-debugging} covers development and debugging pain: hidden prompts, opaque chains, testing difficulties, state management, and source control for self-modifying systems. Section~\ref{subsec:production-deployment} discusses production and deployment: cost unpredictability, latency, scaling, monitoring, security, and governance. Section~\ref{subsec:framework-crosswalk} maps pain points to framework families and identifies which issues are addressed, partially addressed, or largely unaddressed. Section~\ref{subsec:data-quantification} quantifies frequencies across HN, Reddit, and the Chinese sample, including the HN mention-scale signal of 4,351 relevant mentions used for frequency analysis.
 
 \subsection{Research Methodology: Mom Test Extraction of Real Pain Points}

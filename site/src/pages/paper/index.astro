@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { surveyFigureAtlas } from '@/data/survey';
 
 const surveyLd = {
   '@context': 'https://schema.org',
@@ -127,34 +128,23 @@ const starProjects = [
     </div>
   </section>
 
-  <!-- Key Figures: Existing SVGs -->
+  <!-- Key Figures: Survey Figure Atlas -->
   <section class="section">
     <div class="container">
       <div class="section-head">
         <div>
           <div class="eyebrow">Figures</div>
-          <h2>论文核心数据流图</h2>
+          <h2>论文现在直接使用 Survey Figure Atlas。</h2>
         </div>
       </div>
+      <p style="margin-bottom: 24px; color: var(--muted);">这里不再只放旧的站点装饰图；每张图都对应一个 paper chapter 和一个公开 evidence boundary。</p>
       <div class="visual-grid">
-        <figure class="visual-panel">
-          <img src="/visuals/github-corpus-funnel.svg" alt="GitHub corpus funnel: 486 raw repos filtered to 63 strict evolution projects" loading="lazy" />
-          <figcaption>GitHub 数据漏斗：从 486 个原始仓库到 63 个严格自进化项目，层层筛选的分析流水线。</figcaption>
-        </figure>
-        <figure class="visual-panel">
-          <img src="/visuals/raw-theme-distribution.svg" alt="Raw theme distribution across categories" loading="lazy" />
-          <figcaption>主题分布图：当前 corpus 的技术主题覆盖，识别偏科方向。</figcaption>
-        </figure>
-      </div>
-      <div class="visual-grid" style="margin-top: 20px;">
-        <figure class="visual-panel">
-          <img src="/visuals/project-group-map.svg" alt="Project group map showing evolution stages" loading="lazy" />
-          <figcaption>项目分组图：从代码进化到 Agent 组织进化的层级结构。</figcaption>
-        </figure>
-        <figure class="visual-panel">
-          <img src="/visuals/raw-to-public-data-flow.svg" alt="Raw to public data flow pipeline" loading="lazy" />
-          <figcaption>数据流管线：raw → processed → work → results 的四层数据治理架构。</figcaption>
-        </figure>
+        {surveyFigureAtlas.map((figure) => (
+          <figure class="visual-panel">
+            <img src={figure.path} alt={`${figure.title}: ${figure.insight}`} loading="lazy" />
+            <figcaption><strong>{figure.titleZh}</strong> · {figure.chapter}<br />{figure.insight}</figcaption>
+          </figure>
+        ))}
       </div>
     </div>
   </section>
@@ -347,7 +337,7 @@ const starProjects = [
         {[
           'Citation gate: merge aliases back into canonical BibTeX keys.',
           'Evidence gate: every benchmark number points to a paper review, raw paper, or official source.',
-          'Figure gate: convert Mermaid/CSV assets into publication-grade figures.',
+          'Figure gate: Survey Figure Atlas now appears on the site and key SVG assets are exported into paper-drafts/figures for the English manuscript.',
           'Consistency gate: unify terminology across README, site, paper, and survey LaTeX.',
           'Release gate: PDF compile now passes; next produce an arXiv source bundle after warning cleanup.'
         ].map((item) => (
