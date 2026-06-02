@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-06-01T17:52:06.783Z",
+  "generated_at": "2026-06-02T01:45:11.370Z",
   "threshold": 0.52,
   "total": 3,
   "clusters": [
     {
       "cluster_id": "vlsh-0001",
       "label": "+local_code_or_artifact / +timestamp_freshness / +current_frontier_signal",
-      "size": 1524,
+      "size": 1537,
       "type_counts": {
-        "github": 647,
+        "github": 660,
         "paper": 197,
         "social": 415,
         "blog": 265
       },
       "value_class_counts": {
-        "needs-review": 611,
-        "high-value-candidate": 802,
-        "low-signal-or-risk": 111
+        "needs-review": 622,
+        "high-value-candidate": 803,
+        "low-signal-or-risk": 112
       },
-      "score_avg": 71.53,
-      "confidence_avg": 52.32,
+      "score_avg": 71.55,
+      "confidence_avg": 52.43,
       "top_tags": [
         {
           "id": "local_code_or_artifact",
@@ -38,27 +38,27 @@
         },
         {
           "id": "mutable_artifact_clear",
-          "average": 0.803,
+          "average": 0.805,
           "label": "Mutable artifact clear"
         },
         {
           "id": "community_momentum",
-          "average": 0.742,
+          "average": 0.744,
           "label": "Community momentum"
         },
         {
           "id": "product_usability",
-          "average": 0.729,
+          "average": 0.731,
           "label": "Product usability"
         },
         {
           "id": "open_source_reuse",
-          "average": 0.728,
+          "average": 0.73,
           "label": "Open-source reuse"
         },
         {
           "id": "implementation_runnable",
-          "average": 0.698,
+          "average": 0.701,
           "label": "Runnable implementation"
         }
       ],
@@ -127,6 +127,15 @@
           "source_path": "raw-github/xai-liacs_llamea.md"
         },
         {
+          "id": "github:gepa-ai/gepa",
+          "type": "github",
+          "title": "gepa-ai/gepa",
+          "url": "https://github.com/gepa-ai/gepa",
+          "value_score": 86.62,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-github/gepa-ai_gepa.md"
+        },
+        {
           "id": "github:freedomintelligence/tiermem",
           "type": "github",
           "title": "Tiermem",
@@ -161,15 +170,6 @@
           "value_score": 86.31,
           "value_class": "high-value-candidate",
           "source_path": "raw-social/0176-36kr-com-Anthropic-Meta-36.md"
-        },
-        {
-          "id": "social:0178-36kr-com-Skills-Skill-Agent-36",
-          "type": "social",
-          "title": "0178 36kr com Skills Skill Agent 36",
-          "url": null,
-          "value_score": 86.31,
-          "value_class": "high-value-candidate",
-          "source_path": "raw-social/0178-36kr-com-Skills-Skill-Agent-36.md"
         }
       ]
     },

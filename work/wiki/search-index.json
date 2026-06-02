@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-01T17:57:12.306Z",
+  "generated": "2026-06-02T01:48:59.777Z",
   "stats": {
-    "pages": 69,
-    "keywords": 880
+    "pages": 70,
+    "keywords": 884
   },
   "catalog": [
     {
@@ -595,6 +595,20 @@
       ]
     },
     {
+      "path": "synthesis/gepa-ai-gepa-frontier-deep-dive.md",
+      "title": "gepa-ai GEPA Frontier Deep Dive",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "github",
+        "gepa",
+        "prompt-optimization",
+        "pareto",
+        "self-evolution",
+        "evidence-repair"
+      ]
+    },
+    {
       "path": "synthesis/github-star-growth-database.md",
       "title": "GitHub Star Growth Database",
       "rank": "A",
@@ -843,6 +857,7 @@
       "sources/github-digest.md",
       "sources/raw-github-mechanism-analysis.md",
       "sources/review-mechanism-insights-enhanced.md",
+      "synthesis/gepa-ai-gepa-frontier-deep-dive.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/self-evolution-definition-criteria.md"
     ],
@@ -1852,6 +1867,7 @@
       "sources/talent-flow-analysis.md",
       "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/gepa-ai-gepa-frontier-deep-dive.md",
       "synthesis/kargarisaac-reflexion-deep-dive.md",
       "synthesis/survey-spark-evolve-agi-core.md",
       "synthesis/synaptent-aragora-frontier-deep-dive.md",
@@ -2229,6 +2245,7 @@
       "sources/employee-social-intelligence.md",
       "sources/github-digest.md",
       "sources/raw-github-mechanism-analysis.md",
+      "synthesis/gepa-ai-gepa-frontier-deep-dive.md",
       "synthesis/github-star-growth-database.md",
       "synthesis/kargarisaac-reflexion-deep-dive.md",
       "synthesis/synaptent-aragora-frontier-deep-dive.md"
@@ -2619,6 +2636,7 @@
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/five-evolution-loops-topic.md",
       "synthesis/frontier-value-queue.md",
+      "synthesis/gepa-ai-gepa-frontier-deep-dive.md",
       "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
       "synthesis/kargarisaac-reflexion-deep-dive.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
@@ -3395,6 +3413,7 @@
       "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/frontier-value-queue.md",
+      "synthesis/gepa-ai-gepa-frontier-deep-dive.md",
       "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
       "synthesis/kargarisaac-reflexion-deep-dive.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
@@ -3517,6 +3536,28 @@
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
+    "gepa-ai gepa frontier deep dive": [
+      "synthesis/gepa-ai-gepa-frontier-deep-dive.md"
+    ],
+    "gepa": [
+      "synthesis/gepa-ai-gepa-frontier-deep-dive.md"
+    ],
+    "prompt-optimization": [
+      "synthesis/gepa-ai-gepa-frontier-deep-dive.md"
+    ],
+    "pareto": [
+      "synthesis/gepa-ai-gepa-frontier-deep-dive.md"
+    ],
+    "evidence-repair": [
+      "synthesis/gepa-ai-gepa-frontier-deep-dive.md",
+      "synthesis/kargarisaac-reflexion-deep-dive.md",
+      "synthesis/synaptent-aragora-frontier-deep-dive.md"
+    ],
+    "decision": [
+      "synthesis/gepa-ai-gepa-frontier-deep-dive.md",
+      "synthesis/kargarisaac-reflexion-deep-dive.md",
+      "synthesis/synaptent-aragora-frontier-deep-dive.md"
+    ],
     "github star growth database": [
       "synthesis/github-star-growth-database.md"
     ],
@@ -3604,14 +3645,6 @@
     ],
     "baseline": [
       "synthesis/kargarisaac-reflexion-deep-dive.md"
-    ],
-    "evidence-repair": [
-      "synthesis/kargarisaac-reflexion-deep-dive.md",
-      "synthesis/synaptent-aragora-frontier-deep-dive.md"
-    ],
-    "decision": [
-      "synthesis/kargarisaac-reflexion-deep-dive.md",
-      "synthesis/synaptent-aragora-frontier-deep-dive.md"
     ],
     "m1-m5": [
       "synthesis/mechanism-framework.md"

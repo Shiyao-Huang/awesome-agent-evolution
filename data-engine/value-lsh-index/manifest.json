@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-01T17:52:06.783Z",
+  "generated_at": "2026-06-02T01:45:11.370Z",
   "source": "all",
   "tag_version": "19810f296115",
   "band_size": 6,
   "threshold": 0.52,
   "summary": {
-    "previous_generated_at": "2026-06-01T17:41:22.133Z",
+    "previous_generated_at": "2026-06-02T01:45:09.013Z",
     "added": 0,
     "changed": 0,
-    "unchanged": 2206,
+    "unchanged": 2219,
     "removed": 0
   },
   "items": {
@@ -188,6 +188,14 @@
       "value_score": 68.15,
       "value_class": "low-signal-or-risk"
     },
+    "github:agentevals-dev/agentevals": {
+      "type": "github",
+      "source_path": "raw-github/agentevals-dev_agentevals.md",
+      "fingerprint": "ac1678bbe4a6af69f57c9833332419c34650af89",
+      "signature_hash": "38cf158f57616c298603",
+      "value_score": 70.06,
+      "value_class": "needs-review"
+    },
     "github:agentic-in/elephant-agent": {
       "type": "github",
       "source_path": "raw-github/agentic-in_elephant-agent.md",
@@ -203,6 +211,14 @@
       "signature_hash": "057c1529e0a5b0e9c409",
       "value_score": 72.61,
       "value_class": "high-value-candidate"
+    },
+    "github:agentralabs/agentic-memory": {
+      "type": "github",
+      "source_path": "raw-github/agentralabs_agentic-memory.md",
+      "fingerprint": "36f9e262612ac57a7baf7e2cccbf9bca0d8df16b",
+      "signature_hash": "e59585164a64a900dd8d",
+      "value_score": 72.29,
+      "value_class": "needs-review"
     },
     "github:agentreplay/agentreplay": {
       "type": "github",
@@ -251,6 +267,14 @@
       "signature_hash": "b21a599925ef63e1d725",
       "value_score": 78.66,
       "value_class": "high-value-candidate"
+    },
+    "github:agiresearch/a-mem": {
+      "type": "github",
+      "source_path": "raw-github/agiresearch_a-mem.md",
+      "fingerprint": "497f36f54c59263ee08a371adade2bd3797d17b3",
+      "signature_hash": "6fc74fbe066989712a6f",
+      "value_score": 74.2,
+      "value_class": "needs-review"
     },
     "github:ai-agents-2030/darwin-mobile-agent": {
       "type": "github",
@@ -431,7 +455,7 @@
     "github:all-hands-ai/openhands": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "9a59833139667d5b79af2034f12e663c2424ee0b",
+      "fingerprint": "d21d1c1a3e14ac023012bd44d8978a2188cf2e4b",
       "signature_hash": "742844fe45453c4bc0d2",
       "value_score": 65.61,
       "value_class": "low-signal-or-risk"
@@ -443,6 +467,14 @@
       "signature_hash": "0a72f6924737e2174d13",
       "value_score": 70.06,
       "value_class": "high-value-candidate"
+    },
+    "github:alucek/agentic-memory": {
+      "type": "github",
+      "source_path": "raw-github/alucek_agentic-memory.md",
+      "fingerprint": "f69683968ce022d8bd85261fbd32c690d270d5fa",
+      "signature_hash": "3f59adea829f668e9e86",
+      "value_score": 71.97,
+      "value_class": "low-signal-or-risk"
     },
     "github:ama-bench/ama-bench": {
       "type": "github",
@@ -482,6 +514,14 @@
       "fingerprint": "04de8463d82f9b46719fb9dc0753e626595613c0",
       "signature_hash": "ad455c81ef6f9c09f7e0",
       "value_score": 68.79,
+      "value_class": "needs-review"
+    },
+    "github:apify/agent-skills": {
+      "type": "github",
+      "source_path": "raw-github/apify_agent-skills.md",
+      "fingerprint": "1a6a877df2fa027280983cada6a1b4ae1c694e70",
+      "signature_hash": "8464888f633c394f5ddb",
+      "value_score": 71.34,
       "value_class": "needs-review"
     },
     "github:arcadeai/openclaw-arcade-plugin": {
@@ -759,7 +799,7 @@
     "github:camel-ai/camel": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "91aa6f535b1bd2532c651d29e4e368539a91739f",
+      "fingerprint": "331926a974870ebf69235b13647eba9f2a00c5ab",
       "signature_hash": "5e1a2872856aba678388",
       "value_score": 70.38,
       "value_class": "low-signal-or-risk"
@@ -991,7 +1031,7 @@
     "github:codefuse-ml/awesome-code-llm": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "35b91ced103aac4ac84ceca39d31bb5566095e2d",
+      "fingerprint": "5c49fb4c06f44598c82a16f10711797eb3fee2dd",
       "signature_hash": "b12270327eb3f1f7c78a",
       "value_score": 65.61,
       "value_class": "low-signal-or-risk"
@@ -1148,6 +1188,14 @@
       "value_score": 72.29,
       "value_class": "needs-review"
     },
+    "github:dataojitori/nocturne_memory": {
+      "type": "github",
+      "source_path": "raw-github/dataojitori_nocturne_memory.md",
+      "fingerprint": "5545f688f8412011504cff34e79036d7c1d908b3",
+      "signature_hash": "6fc74fbe066989712a6f",
+      "value_score": 74.2,
+      "value_class": "needs-review"
+    },
     "github:davidzwz/awesome-rag-reasoning": {
       "type": "github",
       "source_path": "raw-github/davidzwz_awesome-rag-reasoning.md",
@@ -1191,7 +1239,7 @@
     "github:deepauto-ai/automl-agent": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "5a18a424d8e4f207320f66a2c6bc25d03784cf9d",
+      "fingerprint": "b2bab017dce9333aa224d6ddf8b4241d928f3ec4",
       "signature_hash": "69c54a58c5f7e68405a7",
       "value_score": 64.97,
       "value_class": "low-signal-or-risk"
@@ -1330,6 +1378,14 @@
       "fingerprint": "5ed1f6afdb91cf3ea9b4026c13d6dadcdd08fb20",
       "signature_hash": "6dc4251b5e8f490ee88b",
       "value_score": 76.11,
+      "value_class": "needs-review"
+    },
+    "github:elizaos/agentmemory": {
+      "type": "github",
+      "source_path": "raw-github/elizaos_agentmemory.md",
+      "fingerprint": "ddea5ad0b673427d94cd9b722557989b0df3f99e",
+      "signature_hash": "6fc74fbe066989712a6f",
+      "value_score": 74.2,
       "value_class": "needs-review"
     },
     "github:elizaos/eliza": {
@@ -1559,7 +1615,7 @@
     "github:foundationagents/metagpt": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "4c2387af715051ca32c7b422439e3984d951c42c",
+      "fingerprint": "6c499b76b5ca40108efa492be855403149a51f11",
       "signature_hash": "cdf2abf299d9601ebe83",
       "value_score": 72.29,
       "value_class": "low-signal-or-risk"
@@ -1631,7 +1687,7 @@
     "github:genentech/opentreesearch": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "75839353c327d1c9bc721ef467b4dbf64a0aca39",
+      "fingerprint": "44a567d57920867d5fa258d74a2ae5b79554ab62",
       "signature_hash": "6aefadb3c3a5a649f2af",
       "value_score": 67.52,
       "value_class": "low-signal-or-risk"
@@ -1672,8 +1728,8 @@
       "type": "github",
       "source_path": "raw-github/gepa-ai_gepa.md",
       "fingerprint": "4d3e34e2d3d491cc04c448fbeedeb8613e9ea329",
-      "signature_hash": "16bac5e149a93b6a487e",
-      "value_score": 82.8,
+      "signature_hash": "853e6c3436c0512524a2",
+      "value_score": 86.62,
       "value_class": "high-value-candidate"
     },
     "github:gepa-ai/optimize-anything-artifact": {
@@ -2103,7 +2159,7 @@
     "github:inter-co/science-codeevolve": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "c10db4ed4b2f66ffcd0a9907eeb95d97b534c720",
+      "fingerprint": "6d34380e144b62e8767da97044f27675ec3ff58d",
       "signature_hash": "f0c2f2e5b93435719b7a",
       "value_score": 64.33,
       "value_class": "low-signal-or-risk"
@@ -2175,7 +2231,7 @@
     "github:jarvispei/scope": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "83c229fc20bb5679295c04a13177eddc6c151de5",
+      "fingerprint": "1902987cd0803f0e0bd56171ba42cbaad165b2c7",
       "signature_hash": "108f2ea8532143efb3eb",
       "value_score": 61.78,
       "value_class": "low-signal-or-risk"
@@ -2412,6 +2468,14 @@
       "value_score": 67.52,
       "value_class": "needs-review"
     },
+    "github:langchain-ai/agentevals": {
+      "type": "github",
+      "source_path": "raw-github/langchain-ai_agentevals.md",
+      "fingerprint": "3312514f02ba8082ca5af3c890a9e89a6aed11f5",
+      "signature_hash": "9182259fb03227546b72",
+      "value_score": 75.16,
+      "value_class": "needs-review"
+    },
     "github:langchain-ai/deepagents": {
       "type": "github",
       "source_path": "raw-github/langchain-ai_deepagents.md",
@@ -2554,6 +2618,14 @@
       "fingerprint": "f2f447f93ab416f9e17fb4b2afe5b65115ed2cac",
       "signature_hash": "abfc88f602c0cc91281e",
       "value_score": 74.84,
+      "value_class": "high-value-candidate"
+    },
+    "github:lhl/agentic-memory": {
+      "type": "github",
+      "source_path": "raw-github/lhl_agentic-memory.md",
+      "fingerprint": "732cbfe550fdeb7467a9fef95dc21170c1a05b18",
+      "signature_hash": "6cb32b54fc573e926dd1",
+      "value_score": 78.66,
       "value_class": "high-value-candidate"
     },
     "github:lhl3341/awesome-claws": {
@@ -2999,7 +3071,7 @@
     "github:microsoft/autogen": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "1e610e40bfde9a777c058c3599a83264a8db8c9b",
+      "fingerprint": "67745532a092194a7d3fda35c3d938ca2be601b1",
       "signature_hash": "3563bdcdc07b6c2a5b7f",
       "value_score": 65.29,
       "value_class": "low-signal-or-risk"
@@ -3431,7 +3503,7 @@
     "github:openbmb/chatdev": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "e8837092dae35b43e9d8c122188007863956cf15",
+      "fingerprint": "6cf085a630c7dc64180159b632c700a59119644a",
       "signature_hash": "832f123a27c47e63be5d",
       "value_score": 66.56,
       "value_class": "low-signal-or-risk"
@@ -3551,7 +3623,7 @@
     "github:opendevin/opendevin": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "2cc4bed4b4000ddd32363e75446dc65dd8a9569c",
+      "fingerprint": "7d4cc81609fc120bfc13a606a8a9ca9453088cd1",
       "signature_hash": "a42217fd2977cce17a61",
       "value_score": 69.75,
       "value_class": "low-signal-or-risk"
@@ -3620,6 +3692,14 @@
       "value_score": 76.75,
       "value_class": "high-value-candidate"
     },
+    "github:openswarm-ai/openswarm": {
+      "type": "github",
+      "source_path": "raw-github/openswarm-ai_openswarm.md",
+      "fingerprint": "6d2165f8c4353d21fc33b189b740146d6e3cb381",
+      "signature_hash": "38cf158f57616c298603",
+      "value_score": 70.06,
+      "value_class": "needs-review"
+    },
     "github:opentracy/opentracy": {
       "type": "github",
       "source_path": "raw-github/opentracy_opentracy.md",
@@ -3631,7 +3711,7 @@
     "github:oppo-mente-lab/llm-self-judge": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "63173169a03523e21660247987f7fae542fe57ee",
+      "fingerprint": "45ecbefface00171ea87ab062df17dbbcccbe8a8",
       "signature_hash": "90a4d7a2abebddf61c1d",
       "value_score": 66.24,
       "value_class": "low-signal-or-risk"
@@ -3823,7 +3903,7 @@
     "github:princeton-nlp/swe-agent": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "e434d61d1b5c98bef5125abd07040d111c5b0eb3",
+      "fingerprint": "4314a4dfb608b22bdf19a2b69f77849cde4aa656",
       "signature_hash": "6b6c47358eaadce2ad79",
       "value_score": 71.02,
       "value_class": "low-signal-or-risk"
@@ -4039,7 +4119,7 @@
     "github:reworkd/agentgpt": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "3df7d6aa0805d627532a776bd7488f8a5f147393",
+      "fingerprint": "76d5ed6128a24f31145bf9cc7614c70c35f4ed33",
       "signature_hash": "34173c1e842140a09f90",
       "value_score": 58.6,
       "value_class": "low-signal-or-risk"
@@ -4359,7 +4439,7 @@
     "github:shengranhu/adas": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "e373bebf7b847ce30bfba8510b445bc81d8c7b05",
+      "fingerprint": "272d66a9a99a87797ff757bd71920ed89371aed9",
       "signature_hash": "b0174f9d62a964210530",
       "value_score": 61.78,
       "value_class": "low-signal-or-risk"
@@ -5036,6 +5116,14 @@
       "value_score": 71.02,
       "value_class": "high-value-candidate"
     },
+    "github:vectorspacelab/general-agentic-memory": {
+      "type": "github",
+      "source_path": "raw-github/vectorspacelab_general-agentic-memory.md",
+      "fingerprint": "686916ea07389ca5659eca460016c1c61f2cb3af",
+      "signature_hash": "e59585164a64a900dd8d",
+      "value_score": 72.29,
+      "value_class": "needs-review"
+    },
     "github:ventr1c/memma": {
       "type": "github",
       "source_path": "raw-github/ventr1c_memma.md",
@@ -5167,7 +5255,7 @@
     "github:web-arena-x/webarena": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "0c8eebe9fa42f7179cc929e63e5e7c5abd063da4",
+      "fingerprint": "dc59c754a31a41ec72584b4eb3112a8d619f3bc6",
       "signature_hash": "38823937eab7e5aeb94c",
       "value_score": 58.6,
       "value_class": "low-signal-or-risk"
@@ -5179,6 +5267,14 @@
       "signature_hash": "356395f334c2db0b1d8b",
       "value_score": 71.97,
       "value_class": "low-signal-or-risk"
+    },
+    "github:webzler/agentmemory": {
+      "type": "github",
+      "source_path": "raw-github/webzler_agentmemory.md",
+      "fingerprint": "dc10bc8f1ca4644c043d1a2ed26c9b659af4188c",
+      "signature_hash": "96c83e7869aad2058331",
+      "value_score": 77.07,
+      "value_class": "needs-review"
     },
     "github:werner-duvaud/muzero-general": {
       "type": "github",
@@ -5279,7 +5375,7 @@
     "github:xlang-ai/openagents": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "2b3a86d2b0b7f725d7678d8668d8259f8139f480",
+      "fingerprint": "6418a05a7fc56c8030ea0581b67d3904432bc6c6",
       "signature_hash": "4f13f2cebcb473e570e6",
       "value_score": 59.24,
       "value_class": "low-signal-or-risk"
@@ -5567,7 +5663,7 @@
     "github:zju-llm-safety/darwin": {
       "type": "github",
       "source_path": null,
-      "fingerprint": "76d8aa015a976d0a524a8e25fc55af1a98fc2bb5",
+      "fingerprint": "84f217be15c3cc7febf76551846be465ca48d2d7",
       "signature_hash": "2f7e3ca400b856133faf",
       "value_score": 75.16,
       "value_class": "needs-review"
@@ -5611,6 +5707,14 @@
       "signature_hash": "c7e409199709da6ab967",
       "value_score": 75.16,
       "value_class": "high-value-candidate"
+    },
+    "github:zorazrw/agent-workflow-memory": {
+      "type": "github",
+      "source_path": "raw-github/zorazrw_agent-workflow-memory.md",
+      "fingerprint": "69d99311f9fc87adaf0368d25e071da7192dd22b",
+      "signature_hash": "6fc74fbe066989712a6f",
+      "value_score": 74.2,
+      "value_class": "needs-review"
     },
     "github:zou-group/sirius": {
       "type": "github",

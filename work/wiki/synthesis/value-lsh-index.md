@@ -4,12 +4,12 @@ type: synthesis
 rank: A
 tags: [value-lsh, comparison, clustering, value-screening]
 sources: [analysis/value-lsh-index.md, analysis/value-lsh-index.json, data-engine/value-lsh-index/manifest.json, analysis/value-lsh-graph-3d.json]
-updated: 2026-06-01
+updated: 2026-06-02
 ---
 
 # Value LSH Index
 
-> 2206 个去重后素材已经被同一套 `-1/0/+1` value lines 遍历，形成可复跑的局部哈希索引、风险队列和 3D 映射入口。
+> 2219 个去重后素材已经被同一套 `-1/0/+1` value lines 遍历，形成可复跑的局部哈希索引、风险队列和 3D 映射入口。
 
 ## One Sentence
 
@@ -17,11 +17,11 @@ updated: 2026-06-01
 
 ## Three Sentences
 
-[CLAIM] 当前全量运行扫描 2206 条去重后材料：704 GitHub、197 papers、650 social/X、655 blogs。 — Source: `analysis/value-lsh-index.json`
+[CLAIM] 当前全量运行扫描 2219 条去重后材料：717 GitHub、197 papers、650 social/X、655 blogs。 — Source: `analysis/value-lsh-index.json`
 
-[CLAIM] 结果分为 855 个 `high-value-candidate`、1055 个 `needs-review`、296 个 `low-signal-or-risk`；low-signal 表示当前优先级证据弱或风险多，不等于永久无价值。 — Source: `analysis/value-lsh-index.json`
+[CLAIM] 结果分为 856 个 `high-value-candidate`、1066 个 `needs-review`、297 个 `low-signal-or-risk`；low-signal 表示当前优先级证据弱或风险多，不等于永久无价值。 — Source: `analysis/value-lsh-index.json`
 
-[CLAIM] 同一矩阵还生成 168 个 LSH buckets、3 个 LSH value clusters，以及 2206 节点的 value/PCA 3D graph。 — Source: `analysis/value-lsh-index.json`; `analysis/value-lsh-graph-3d.json`
+[CLAIM] 同一矩阵还生成 168 个 LSH buckets、3 个 LSH value clusters，以及 2219 节点的 value/PCA 3D graph。 — Source: `analysis/value-lsh-index.json`; `analysis/value-lsh-graph-3d.json`
 
 ## Flow
 

@@ -10,9 +10,9 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `analysis` | present | 34 | 2 | 0 | 23 MB |
+| `analysis` | present | 35 | 2 | 0 | 23 MB |
 | `research` | present | 141 | 8 | 0 | 2.5 MB |
-| `projects` | present | 41151 | 4633 | 1 | 3.2 GB |
+| `projects` | present | 41660 | 4740 | 1 | 3.3 GB |
 | `paper-reviews` | present | 171 | 1 | 0 | 1.6 MB |
 | `academic-reviews` | missing | 0 | 0 | 0 | 0 B |
 | `papers` | present | 3 | 2 | 0 | 16 KB |
@@ -29,10 +29,10 @@
 - `analysis/evolve-agi-index.md`
 - `analysis/five-evolution-loops-topic.md`
 - `analysis/framework-painpoint-crosswalk.csv`
+- `analysis/frontier-projects/gepa-ai-gepa-dual-chain.md`
 - `analysis/frontier-projects/jarvis-xs-se-agent-dual-chain.md`
 - `analysis/frontier-projects/kargarisaac-reflexion-dual-chain.md`
 - `analysis/frontier-projects/modelscope-agentevolver-dual-chain.md`
-- `analysis/frontier-projects/synaptent-aragora-dual-chain.md`
 
 ### `research`
 

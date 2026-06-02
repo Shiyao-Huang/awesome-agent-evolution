@@ -1,77 +1,35 @@
 {
-  "generated_at": "2026-06-01T17:52:23.794Z",
+  "generated_at": "2026-06-02T01:46:13.233Z",
   "method": {
     "name": "value_evidence_repair_queue_v0",
     "source": "data-engine/value-lsh-index/value-matrix.jsonl",
     "note": "Prioritizes evidence repair work after value-LSH comparison; repair score is not a quality score."
   },
   "summary": {
-    "generated_at": "2026-06-01T17:52:23.794Z",
-    "source_lsh_generated_at": "2026-06-01T17:52:06.783Z",
-    "github_projects": 704,
-    "projects_with_gaps": 672,
+    "generated_at": "2026-06-02T01:46:13.233Z",
+    "source_lsh_generated_at": "2026-06-02T01:45:11.370Z",
+    "github_projects": 717,
+    "projects_with_gaps": 684,
     "lane_counts": {
-      "deep-read-needed": 456,
-      "issue-resource-scan": 128,
+      "deep-read-needed": 455,
+      "issue-resource-scan": 138,
       "raw-meta-repair": 52,
       "loop-verification": 35,
-      "star-growth-repair": 1
+      "star-growth-repair": 4
     },
     "gap_counts": {
-      "deep_report_missing": 456,
-      "frontier_queue_missing": 456,
-      "issue_resource_unclear": 323,
-      "evidence_chain_incomplete": 508,
-      "self_evolution_unclear": 424,
+      "deep_report_missing": 455,
+      "frontier_queue_missing": 468,
+      "issue_resource_unclear": 332,
+      "evidence_chain_incomplete": 507,
+      "self_evolution_unclear": 436,
       "implementation_unclear": 52,
-      "star_growth_missing": 7,
+      "star_growth_missing": 20,
       "raw_meta_missing": 52
     },
     "top_repair_score": 136.8
   },
   "queue": [
-    {
-      "id": "github:gepa-ai/gepa",
-      "repo": "gepa-ai/gepa",
-      "title": "gepa-ai/gepa",
-      "url": "https://github.com/gepa-ai/gepa",
-      "value_score": 82.8,
-      "value_class": "high-value-candidate",
-      "repair_score": 136.8,
-      "lane": "deep-read-needed",
-      "gaps": [
-        {
-          "id": "deep_report_missing",
-          "label": "Deep report missing",
-          "action": "clone/read code and create model-card style deep report"
-        },
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": null,
-        "public_report": null,
-        "raw_file": "raw-github/gepa-ai_gepa.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": 581
-      }
-    },
     {
       "id": "github:gepa-ai/optimize-anything-artifact",
       "repo": "gepa-ai/optimize-anything-artifact",
@@ -15338,6 +15296,43 @@
       }
     },
     {
+      "id": "github:lhl/agentic-memory",
+      "repo": "lhl/agentic-memory",
+      "title": "LHL Agentic Memory Module",
+      "url": "https://github.com/lhl/agentic-memory",
+      "value_score": 78.66,
+      "value_class": "high-value-candidate",
+      "repair_score": 120.66,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/384-lhl-agentic-memory-module.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/384-lhl-agentic-memory-module.md",
+        "raw_file": "raw-github/lhl_agentic-memory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
+      }
+    },
+    {
       "id": "github:george-salafatinos/tictactoe-self-play",
       "repo": "george-salafatinos/tictactoe-self-play",
       "title": "george-salafatinos/tictactoe-self-play",
@@ -18228,6 +18223,48 @@
       }
     },
     {
+      "id": "github:webzler/agentmemory",
+      "repo": "webzler/agentmemory",
+      "title": "AgentMemory Benchmark Framework",
+      "url": "https://github.com/webzler/agentMemory",
+      "value_score": 77.07,
+      "value_class": "needs-review",
+      "repair_score": 112.07,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/378-agentmemory-benchmark-framework.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/378-agentmemory-benchmark-framework.md",
+        "raw_file": "raw-github/webzler_agentmemory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
+      }
+    },
+    {
       "id": "github:sakutepov/ai-scientist-v2",
       "repo": "sakutepov/ai-scientist-v2",
       "title": "sakutepov/ai-scientist-v2",
@@ -19167,6 +19204,174 @@
       }
     },
     {
+      "id": "github:agiresearch/a-mem",
+      "repo": "agiresearch/a-mem",
+      "title": "A-MEM Agentic Memory for LLM Agents",
+      "url": "https://github.com/agiresearch/A-mem",
+      "value_score": 74.2,
+      "value_class": "needs-review",
+      "repair_score": 109.2,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/379-a-mem-agentic-memory-llm-agents.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/379-a-mem-agentic-memory-llm-agents.md",
+        "raw_file": "raw-github/agiresearch_a-mem.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:dataojitori/nocturne_memory",
+      "repo": "dataojitori/nocturne_memory",
+      "title": "Nocturne Memory Context Engine",
+      "url": "https://github.com/Dataojitori/nocturne_memory",
+      "value_score": 74.2,
+      "value_class": "needs-review",
+      "repair_score": 109.2,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/389-nocturne-memory-context-engine.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/389-nocturne-memory-context-engine.md",
+        "raw_file": "raw-github/dataojitori_nocturne_memory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:elizaos/agentmemory",
+      "repo": "elizaos/agentmemory",
+      "title": "ElizaOS AgentMemory Plugin",
+      "url": "https://github.com/elizaOS/agentmemory",
+      "value_score": 74.2,
+      "value_class": "needs-review",
+      "repair_score": 109.2,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/380-elizaos-agentmemory-plugin.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/380-elizaos-agentmemory-plugin.md",
+        "raw_file": "raw-github/elizaos_agentmemory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:zorazrw/agent-workflow-memory",
+      "repo": "zorazrw/agent-workflow-memory",
+      "title": "Agent Workflow Memory Knowledge Graph Runtime",
+      "url": "https://github.com/zorazrw/agent-workflow-memory",
+      "value_score": 74.2,
+      "value_class": "needs-review",
+      "repair_score": 109.2,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/377-agent-workflow-memory-knowledge-graph-runtime.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/377-agent-workflow-memory-knowledge-graph-runtime.md",
+        "raw_file": "raw-github/zorazrw_agent-workflow-memory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
+      }
+    },
+    {
       "id": "github:hyperspell/hyperspell-openclaw",
       "repo": "hyperspell/hyperspell-openclaw",
       "title": "HyperSpell OpenClaw Memory Engine",
@@ -19999,6 +20204,90 @@
       }
     },
     {
+      "id": "github:agentralabs/agentic-memory",
+      "repo": "agentralabs/agentic-memory",
+      "title": "AgentraLabs Agentic Memory Runtime",
+      "url": "https://github.com/agentralabs/agentic-memory",
+      "value_score": 72.29,
+      "value_class": "needs-review",
+      "repair_score": 107.29,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/383-agentralabs-agentic-memory-runtime.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/383-agentralabs-agentic-memory-runtime.md",
+        "raw_file": "raw-github/agentralabs_agentic-memory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:vectorspacelab/general-agentic-memory",
+      "repo": "vectorspacelab/general-agentic-memory",
+      "title": "VectorSpaceLab General Agentic Memory",
+      "url": "https://github.com/VectorSpaceLab/general-agentic-memory",
+      "value_score": 72.29,
+      "value_class": "needs-review",
+      "repair_score": 107.29,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/388-vectorspacelab-general-agentic-memory.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/388-vectorspacelab-general-agentic-memory.md",
+        "raw_file": "raw-github/vectorspacelab_general-agentic-memory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
+      }
+    },
+    {
       "id": "github:agiprolabs/claude-trading-skills",
       "repo": "agiprolabs/claude-trading-skills",
       "title": "Claude Trading Skills",
@@ -20548,6 +20837,90 @@
       }
     },
     {
+      "id": "github:agentevals-dev/agentevals",
+      "repo": "agentevals-dev/agentevals",
+      "title": "AgentEvals.dev Benchmark Framework",
+      "url": "https://github.com/agentevals-dev/agentevals",
+      "value_score": 70.06,
+      "value_class": "needs-review",
+      "repair_score": 105.06,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/386-agentevals-dev-benchmark-framework.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/386-agentevals-dev-benchmark-framework.md",
+        "raw_file": "raw-github/agentevals-dev_agentevals.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:openswarm-ai/openswarm",
+      "repo": "openswarm-ai/openswarm",
+      "title": "OpenSwarm Multi-Agent Orchestration Framework",
+      "url": "https://github.com/openswarm-ai/openswarm",
+      "value_score": 70.06,
+      "value_class": "needs-review",
+      "repair_score": 105.06,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/382-openswarm-multi-agent-orchestration-framework.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/382-openswarm-multi-agent-orchestration-framework.md",
+        "raw_file": "raw-github/openswarm-ai_openswarm.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
+      }
+    },
+    {
       "id": "github:charlesq9/self-evolving-agents",
       "repo": "charlesq9/self-evolving-agents",
       "title": "Self-Evolving-Agents",
@@ -20635,6 +21008,43 @@
         "rank_seed": null,
         "alternate_source_paths": [],
         "frontier_rank": 104,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:langchain-ai/agentevals",
+      "repo": "langchain-ai/agentevals",
+      "title": "LangChain AgentEvals Harness",
+      "url": "https://github.com/langchain-ai/agentevals",
+      "value_score": 75.16,
+      "value_class": "needs-review",
+      "repair_score": 104.16,
+      "lane": "star-growth-repair",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/385-langchain-agentevals-harness.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/385-langchain-agentevals-harness.md",
+        "raw_file": "raw-github/langchain-ai_agentevals.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
         "star_growth_rank": null
       }
     },
@@ -21300,6 +21710,43 @@
         "alternate_source_paths": [],
         "frontier_rank": null,
         "star_growth_rank": 195
+      }
+    },
+    {
+      "id": "github:apify/agent-skills",
+      "repo": "apify/agent-skills",
+      "title": "Apify Agent Skills Library",
+      "url": "https://github.com/apify/agent-skills",
+      "value_score": 71.34,
+      "value_class": "needs-review",
+      "repair_score": 100.34,
+      "lane": "star-growth-repair",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/381-apify-agent-skills-library.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/381-apify-agent-skills-library.md",
+        "raw_file": "raw-github/apify_agent-skills.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
       }
     },
     {
@@ -23322,6 +23769,43 @@
         "alternate_source_paths": [],
         "frontier_rank": 64,
         "star_growth_rank": 652
+      }
+    },
+    {
+      "id": "github:alucek/agentic-memory",
+      "repo": "alucek/agentic-memory",
+      "title": "ALucek Agentic Memory Methods Library",
+      "url": "https://github.com/ALucek/agentic-memory",
+      "value_score": 71.97,
+      "value_class": "low-signal-or-risk",
+      "repair_score": 94.97,
+      "lane": "star-growth-repair",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/387-alucek-agentic-memory-methods-library.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/387-alucek-agentic-memory-methods-library.md",
+        "raw_file": "raw-github/alucek_agentic-memory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
       }
     },
     {

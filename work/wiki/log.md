@@ -489,3 +489,21 @@
 - Added per-node `top_lsh_neighbors` from shared LSH buckets so clicking a point can show related materials, shared value facets, and relation weights.
 - Added a right-side inspector and fallback default sample, keeping the graph usable even when WebGL falls back to the static SVG.
 **产出:** `site/src/components/ValueLshGraph3D.astro`, `analysis/value-lsh-graph-3d.json`, `scripts/build_value_embedding_projection.mjs`
+
+## [2026-06-02 09:45] project+deep-read | gepa-ai GEPA Prompt/Program Optimizer
+
+**操作:** Completed the third repair-queue project deep read.
+**详情:**
+- Investigated `gepa-ai/gepa` with live GitHub metadata, issues, PRs, releases, tags, commits, languages, root contents, raw capture, generated classification row, and source mirror inspection.
+- Direct `git clone` timed out twice on `github.com:443`; GitHub tarball API succeeded and was extracted to `projects/repos/gepa-ai__gepa` for local source inspection.
+- Classified GEPA as a high-value prompt/program/skill optimizer frontier anchor, with `gepa-ai/optimize-anything-artifact` remaining as the paired independent reproduction target.
+**产出:** `analysis/frontier-projects/gepa-ai-gepa-dual-chain.md`, `work/wiki/synthesis/gepa-ai-gepa-frontier-deep-dive.md`, `projects/repos/gepa-ai__gepa`
+
+## [2026-06-02 09:50] data+index | gepa-ai GEPA Repair Queue Resolution
+
+**操作:** Rebuilt value-LSH, projection, repair queue, wiki search index, and project indexes after the third deep-read packet.
+**详情:**
+- Verified `gepa-ai/gepa` now has `evidence_refs.analysis_report = analysis/frontier-projects/gepa-ai-gepa-dual-chain.md`.
+- Removed `gepa-ai/gepa` from the generic repair queue; the rebuilt value matrix now has 2219 materials and 717 GitHub rows, with 684 GitHub projects still carrying repair gaps.
+- The next top repair targets are `gepa-ai/optimize-anything-artifact`, `langchain-ai/open-swe`, `sethkarten/continual-harness`, `inclusionai/agenticlearning`, and `tylerdotai/meta-harness-evolver`.
+**产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`
