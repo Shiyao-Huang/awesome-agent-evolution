@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T01:55:44+08:00",
+  "generated_at": "2026-06-02T07:54:27+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -359,7 +359,14 @@
         "raw-github/agiresearch_a-mem.md",
         "raw-github/elizaos_agentmemory.md",
         "raw-github/apify_agent-skills.md",
-        "raw-github/openswarm-ai_openswarm.md"
+        "raw-github/openswarm-ai_openswarm.md",
+        "raw-github/agentralabs_agentic-memory.md",
+        "raw-github/lhl_agentic-memory.md",
+        "raw-github/langchain-ai_agentevals.md",
+        "raw-github/agentevals-dev_agentevals.md",
+        "raw-github/alucek_agentic-memory.md",
+        "raw-github/vectorspacelab_general-agentic-memory.md",
+        "raw-github/dataojitori_nocturne_memory.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -513,7 +520,8 @@
         "work/research/hourly-public-metadata-update-2026-06-01-0150.md",
         "work/research/hourly-public-metadata-update-2026-06-01-1352.md",
         "work/research/hourly-public-metadata-update-2026-06-01-1951.md",
-        "work/research/hourly-public-metadata-update-2026-06-02-0155.md"
+        "work/research/hourly-public-metadata-update-2026-06-02-0155.md",
+        "work/research/hourly-public-metadata-update-2026-06-02-0754.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -1173,7 +1181,21 @@
         "projects/381-apify-agent-skills-library.md",
         "site/public/reports/projects/381-apify-agent-skills-library.md",
         "projects/382-openswarm-multi-agent-orchestration-framework.md",
-        "site/public/reports/projects/382-openswarm-multi-agent-orchestration-framework.md"
+        "site/public/reports/projects/382-openswarm-multi-agent-orchestration-framework.md",
+        "projects/383-agentralabs-agentic-memory-runtime.md",
+        "site/public/reports/projects/383-agentralabs-agentic-memory-runtime.md",
+        "projects/384-lhl-agentic-memory-module.md",
+        "site/public/reports/projects/384-lhl-agentic-memory-module.md",
+        "projects/385-langchain-agentevals-harness.md",
+        "site/public/reports/projects/385-langchain-agentevals-harness.md",
+        "projects/386-agentevals-dev-benchmark-framework.md",
+        "site/public/reports/projects/386-agentevals-dev-benchmark-framework.md",
+        "projects/387-alucek-agentic-memory-methods-library.md",
+        "site/public/reports/projects/387-alucek-agentic-memory-methods-library.md",
+        "projects/388-vectorspacelab-general-agentic-memory.md",
+        "site/public/reports/projects/388-vectorspacelab-general-agentic-memory.md",
+        "projects/389-nocturne-memory-context-engine.md",
+        "site/public/reports/projects/389-nocturne-memory-context-engine.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1498,14 +1520,15 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-06-02T01:55:44+08:00",
+    "run_at": "2026-06-02T07:54:27+08:00",
     "added_repositories": [
-      "zorazrw/agent-workflow-memory",
-      "webzler/agentMemory",
-      "agiresearch/A-mem",
-      "elizaOS/agentmemory",
-      "apify/agent-skills",
-      "openswarm-ai/openswarm"
+      "agentralabs/agentic-memory",
+      "lhl/agentic-memory",
+      "langchain-ai/agentevals",
+      "agentevals-dev/agentevals",
+      "ALucek/agentic-memory",
+      "VectorSpaceLab/general-agentic-memory",
+      "Dataojitori/nocturne_memory"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",

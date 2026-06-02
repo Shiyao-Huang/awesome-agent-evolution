@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-02T00:00:00+08:00",
-  "total": 659,
-  "updated_files": 659,
+  "total": 666,
+  "updated_files": 666,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -185,6 +185,15 @@
       "timestamp_source": "web_observed_github_search_result_2026_05_26"
     },
     {
+      "repo": "agentevals-dev/agentevals",
+      "url": "https://github.com/agentevals-dev/agentevals",
+      "file": "raw-github/agentevals-dev_agentevals.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T07:54:27+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
+    },
+    {
       "repo": "agentic-in/elephant-agent",
       "url": "https://github.com/agentic-in/elephant-agent",
       "file": "raw-github/agentic-in_elephant-agent.md",
@@ -201,6 +210,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "agentralabs/agentic-memory",
+      "url": "https://github.com/agentralabs/agentic-memory",
+      "file": "raw-github/agentralabs_agentic-memory.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T07:54:27+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
     },
     {
       "repo": "agentreplay/agentreplay",
@@ -444,6 +462,15 @@
       "collected_at": "2026-05-20T17:44:59Z",
       "time_slice": "unknown",
       "timestamp_source": "unknown_not_present_in_raw_capture"
+    },
+    {
+      "repo": "ALucek/agentic-memory",
+      "url": "https://github.com/ALucek/agentic-memory",
+      "file": "raw-github/alucek_agentic-memory.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T07:54:27+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
     },
     {
       "repo": "AMA-Bench/AMA-Bench",
@@ -1164,6 +1191,15 @@
       "collected_at": "2026-05-30T13:16:52+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_05_30"
+    },
+    {
+      "repo": "Dataojitori/nocturne_memory",
+      "url": "https://github.com/Dataojitori/nocturne_memory",
+      "file": "raw-github/dataojitori_nocturne_memory.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T07:54:27+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
     },
     {
       "repo": "davidzwz/awesome-rag-reasoning",
@@ -2489,6 +2525,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "langchain-ai/agentevals",
+      "url": "https://github.com/langchain-ai/agentevals",
+      "file": "raw-github/langchain-ai_agentevals.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T07:54:27+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
+    },
+    {
       "repo": "langchain-ai/deepagents",
       "url": "https://github.com/langchain-ai/deepagents",
       "file": "raw-github/langchain-ai_deepagents.md",
@@ -2631,6 +2676,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2024-Q2",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "lhl/agentic-memory",
+      "url": "https://github.com/lhl/agentic-memory",
+      "file": "raw-github/lhl_agentic-memory.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T07:54:27+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
     },
     {
       "repo": "LHL3341/awesome-claws",
@@ -5277,6 +5331,15 @@
       "collected_at": "2026-05-25T11:20:46+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "browser-observed GitHub page/search snapshot during 2026-05-25T11:20:46+08:00; shell DNS for api.github.com failed and gh token was invalid"
+    },
+    {
+      "repo": "VectorSpaceLab/general-agentic-memory",
+      "url": "https://github.com/VectorSpaceLab/general-agentic-memory",
+      "file": "raw-github/vectorspacelab_general-agentic-memory.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T07:54:27+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
     },
     {
       "repo": "ventr1c/memma",

@@ -411,6 +411,14 @@
 | Apify Agent Skills Library | [apify/agent-skills](https://github.com/apify/agent-skills) | Reusable Skills Library for Coding Agents and Automation Workflows | [projects/381-apify-agent-skills-library.md](381-apify-agent-skills-library.md) |
 | OpenSwarm Multi-Agent Orchestration Framework | [openswarm-ai/openswarm](https://github.com/openswarm-ai/openswarm) | Multi-Agent Swarm Orchestration Framework with Lightweight Runtime Control | [projects/382-openswarm-multi-agent-orchestration-framework.md](382-openswarm-multi-agent-orchestration-framework.md) |
 
+| AgentraLabs Agentic Memory Runtime | [agentralabs/agentic-memory](https://github.com/agentralabs/agentic-memory) | Agentic Memory Runtime Framework for Persistent Context | [projects/383-agentralabs-agentic-memory-runtime.md](383-agentralabs-agentic-memory-runtime.md) |
+| LHL Agentic Memory Module | [lhl/agentic-memory](https://github.com/lhl/agentic-memory) | Pluggable Agentic Memory Module for Any Agent System | [projects/384-lhl-agentic-memory-module.md](384-lhl-agentic-memory-module.md) |
+| LangChain AgentEvals Harness | [langchain-ai/agentevals](https://github.com/langchain-ai/agentevals) | Agent Evaluation Harness with LangGraph Integrations | [projects/385-langchain-agentevals-harness.md](385-langchain-agentevals-harness.md) |
+| AgentEvals.dev Benchmark Framework | [agentevals-dev/agentevals](https://github.com/agentevals-dev/agentevals) | Benchmark and Evaluation Framework for Agent Systems | [projects/386-agentevals-dev-benchmark-framework.md](386-agentevals-dev-benchmark-framework.md) |
+| ALucek Agentic Memory Methods Library | [ALucek/agentic-memory](https://github.com/ALucek/agentic-memory) | Memory Methods Library for Cognitive Agent Architectures | [projects/387-alucek-agentic-memory-methods-library.md](387-alucek-agentic-memory-methods-library.md) |
+| VectorSpaceLab General Agentic Memory | [VectorSpaceLab/general-agentic-memory](https://github.com/VectorSpaceLab/general-agentic-memory) | General Agentic Memory Framework with Cross-Task Reuse | [projects/388-vectorspacelab-general-agentic-memory.md](388-vectorspacelab-general-agentic-memory.md) |
+| Nocturne Memory Context Engine | [Dataojitori/nocturne_memory](https://github.com/Dataojitori/nocturne_memory) | Context-Aware Long-Term Memory Engine for AI Agents | [projects/389-nocturne-memory-context-engine.md](389-nocturne-memory-context-engine.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

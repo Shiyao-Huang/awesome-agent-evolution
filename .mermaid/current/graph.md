@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-02T01:55:44+08:00
+Generated: 2026-06-02T07:54:27+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-06-02T01:55:44+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: zorazrw/agent-workflow-memory, webzler/agentMemory, agiresearch/A-mem, elizaOS/agentmemory, apify/agent-skills, openswarm-ai/openswarm.
-- New raw files: raw-github/zorazrw_agent-workflow-memory.md, raw-github/webzler_agentmemory.md, raw-github/agiresearch_a-mem.md, raw-github/elizaos_agentmemory.md, raw-github/apify_agent-skills.md, raw-github/openswarm-ai_openswarm.md.
-- New public model cards and site reports: project/report ids 377, 378, 379, 380, 381, 382.
+- Web-observed repos: agentralabs/agentic-memory, lhl/agentic-memory, langchain-ai/agentevals, agentevals-dev/agentevals, ALucek/agentic-memory, VectorSpaceLab/general-agentic-memory, Dataojitori/nocturne_memory.
+- New raw files: raw-github/agentralabs_agentic-memory.md, raw-github/lhl_agentic-memory.md, raw-github/langchain-ai_agentevals.md, raw-github/agentevals-dev_agentevals.md, raw-github/alucek_agentic-memory.md, raw-github/vectorspacelab_general-agentic-memory.md, raw-github/dataojitori_nocturne_memory.md.
+- New public model cards and site reports: project/report ids 383, 384, 385, 386, 387, 388, 389.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
 - GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

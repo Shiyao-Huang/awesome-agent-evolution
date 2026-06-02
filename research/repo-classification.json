@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T01:55:44+08:00",
+  "generated_at": "2026-06-02T07:54:27+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -302,6 +302,21 @@
       "description": "Agent Zero is an autonomous agent runtime with inspectable Linux workspace, memory, skills, plugins, browser automation and subordinate agents."
     },
     {
+      "repo": "agentevals-dev/agentevals",
+      "url": "https://github.com/agentevals-dev/agentevals",
+      "stars": "98",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-suite",
+      "base_theme": "evaluation",
+      "stack": "Python/Agent Benchmark Framework",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 98 stars, 6 forks, 90 commits, Apache-2.0 license, and benchmark/evaluation positioning.",
+      "description": "agentevals-dev/agentevals provides an Apache-licensed benchmark framework for evaluating agent behavior and quality changes."
+    },
+    {
       "repo": "agentic-in/elephant-agent",
       "url": "https://github.com/agentic-in/elephant-agent",
       "stars": "361",
@@ -330,6 +345,21 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[Up-To-Date] Awesome Agent Memory Paper Resource"
+    },
+    {
+      "repo": "agentralabs/agentic-memory",
+      "url": "https://github.com/agentralabs/agentic-memory",
+      "stars": "18",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "TypeScript/Python/Agent Memory Runtime",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 18 stars, 4 forks, 21 commits, MIT license, and runtime-focused memory positioning.",
+      "description": "agentralabs/agentic-memory provides an agent memory runtime package focused on persistent context and reusable memory APIs."
     },
     {
       "repo": "agentreplay/agentreplay",
@@ -735,6 +765,21 @@
       "content_timestamp": "unknown",
       "evidence": "paper/artifact/research-code signal",
       "description": "SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024]"
+    },
+    {
+      "repo": "ALucek/agentic-memory",
+      "url": "https://github.com/ALucek/agentic-memory",
+      "stars": "462",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "memory",
+      "stack": "Python/Memory Methods/Agent Architecture",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 462 stars, 91 forks, 130 commits, and explicit cognitive-memory implementation framing.",
+      "description": "ALucek/agentic-memory curates practical memory implementation methods for agentic LLM systems inspired by cognitive architecture concepts."
     },
     {
       "repo": "AMA-Bench/AMA-Bench",
@@ -1935,6 +1980,21 @@
       "content_timestamp": "2026-05-30",
       "evidence": "web-observed GitHub page showed 9 stars, 1 fork, 17 commits, BSD-3-Clause license, and README focus on agent skill packs for practical coding workflows.",
       "description": "datalayer/agent-skills provides composable skill packs and runtime recipes for coding agents with an emphasis on reproducible installation and workflow reuse."
+    },
+    {
+      "repo": "Dataojitori/nocturne_memory",
+      "url": "https://github.com/Dataojitori/nocturne_memory",
+      "stars": "1200",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "Python/Context Memory Engine",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 1.2k stars, 147 forks, 280 commits, MIT license, and context-aware long-term memory framing.",
+      "description": "Dataojitori/nocturne_memory is a context-aware long-term memory engine for AI agents with sustained repository activity."
     },
     {
       "repo": "davidzwz/awesome-rag-reasoning",
@@ -4142,6 +4202,21 @@
       "description": "SciAgents"
     },
     {
+      "repo": "langchain-ai/agentevals",
+      "url": "https://github.com/langchain-ai/agentevals",
+      "stars": "76",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-suite",
+      "base_theme": "evaluation",
+      "stack": "Python/LangGraph/Agent Evaluation Harness",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 76 stars, 9 forks, 81 commits, MIT license, and explicit AgentEvals framing.",
+      "description": "langchain-ai/agentevals is a LangChain ecosystem harness for running repeatable agent evaluation suites."
+    },
+    {
       "repo": "langchain-ai/deepagents",
       "url": "https://github.com/langchain-ai/deepagents",
       "stars": "23400",
@@ -4380,6 +4455,21 @@
       "content_timestamp": "2024-05-13",
       "evidence": "application/self-evolving-agent signal",
       "description": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search"
+    },
+    {
+      "repo": "lhl/agentic-memory",
+      "url": "https://github.com/lhl/agentic-memory",
+      "stars": "246",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "工具/tool",
+      "function_tag": "tool-module",
+      "base_theme": "memory",
+      "stack": "TypeScript/Agent Memory Module",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 246 stars, 25 forks, 29 commits, and a simple pluggable memory-system description.",
+      "description": "lhl/agentic-memory is a simple memory implementation designed to be slotted into any agentic system."
     },
     {
       "repo": "LHL3341/awesome-claws",
@@ -8790,6 +8880,21 @@
       "content_timestamp": "2026-05-14",
       "evidence": "web GitHub page observed 1,408 commits, MIT license, Python/TypeScript/Rust stack, 14.4k stars and 821 forks, v0.6.2 latest on 2026-05-14; README describes retain/recall/reflect, memory banks, semantic/keyword/graph/temporal retrieval, LongMemEval claims and coding-agent documentation skill support",
       "description": "Hindsight is an agent memory system focused on agents that learn over time, with retain/recall/reflect APIs, memory banks, hybrid retrieval and LongMemEval-style performance claims."
+    },
+    {
+      "repo": "VectorSpaceLab/general-agentic-memory",
+      "url": "https://github.com/VectorSpaceLab/general-agentic-memory",
+      "stars": "390",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "memory",
+      "stack": "Python/Generalized Agent Memory Framework",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 390 stars, 32 forks, 481 commits, and generalized memory-framework framing.",
+      "description": "VectorSpaceLab/general-agentic-memory focuses on generalized memory abstractions that can be reused across varied agent workloads."
     },
     {
       "repo": "ventr1c/memma",
