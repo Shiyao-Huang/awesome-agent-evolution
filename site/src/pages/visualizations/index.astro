@@ -5,7 +5,7 @@ import TaxonomyTree from '@/components/visualizations/TaxonomyTree.astro';
 import RadarChart from '@/components/visualizations/RadarChart.astro';
 import TimelineHeatmap from '@/components/visualizations/TimelineHeatmap.astro';
 import RankTable from '@/components/visualizations/RankTable.astro';
-import { categoryDistribution, themeDistribution, summaryStats, methodFamilyOptions } from '@/components/visualizations/vizData';
+import { categoryDistribution, summaryStats, methodFamilyOptions, mechanismFamilyDistribution } from '@/components/visualizations/vizData';
 import { surveyFigureAtlas, surveyStats } from '@/data/survey';
 
 type DistributionEntry = { key: string; count: number };
@@ -26,7 +26,7 @@ const overviewStats = [
     <div class="container">
       <div class="eyebrow">Data Visualizations</div>
       <h1 class="gradient-text">数据可视化</h1>
-      <p class="lead">Survey 图表连接 paper、网站和读者判断：Figure Atlas 展示证据主干，corpus inspector 展示 raw 语料与项目分类边界。</p>
+      <p class="lead">Survey 图表连接 paper、网站和读者判断：Figure Atlas 展示证据主干，taxonomy inspector 把 raw 标签折叠成可解释机制族。</p>
     </div>
   </section>
 
@@ -61,10 +61,13 @@ const overviewStats = [
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Corpus Inspector</div>
-          <h2>raw corpus 与项目分类检查</h2>
+          <div class="eyebrow">Taxonomy Inspector</div>
+          <h2>机制族先于原始标签</h2>
         </div>
       </div>
+      <p class="viz-note">
+        页面给读者看的分类是机制族：它回答项目在 self-evolving agent 系统中承担什么角色。raw category 仍保留为审计字段，但不再作为主导航，因为它们来自采集和短描述，天然会重复、近似和不可读。
+      </p>
       <div class="viz-stat-grid">
         {overviewStats.map(stat => (
           <div class="viz-stat">
@@ -78,12 +81,12 @@ const overviewStats = [
       <div class="viz-grid-2col">
         <div class="card">
           <div class="card-head">
-            <div class="eyebrow">Raw Buckets</div>
-            <h3>语料功能桶</h3>
+            <div class="eyebrow">Mechanism Families</div>
+            <h3>可读机制族覆盖</h3>
           </div>
           <div class="viz-bars">
-            {categoryDistribution.map((cat: DistributionEntry) => {
-              const maxCount = categoryDistribution[0]?.count || 1;
+            {mechanismFamilyDistribution.map((cat: DistributionEntry) => {
+              const maxCount = mechanismFamilyDistribution[0]?.count || 1;
               const pct = Math.max(4, Math.round((cat.count / maxCount) * 100));
               return (
                 <div class="viz-bar-row">
@@ -100,12 +103,12 @@ const overviewStats = [
 
         <div class="card">
           <div class="card-head">
-            <div class="eyebrow">Theme Coverage</div>
-            <h3>主题覆盖</h3>
+            <div class="eyebrow">Raw Label Audit</div>
+            <h3>原始标签审计</h3>
           </div>
           <div class="viz-bars">
-            {themeDistribution.slice(0, 11).map((theme: DistributionEntry) => {
-              const maxTheme = themeDistribution[0]?.count || 1;
+            {categoryDistribution.slice(0, 11).map((theme: DistributionEntry) => {
+              const maxTheme = categoryDistribution[0]?.count || 1;
               const pct = Math.max(4, Math.round((theme.count / maxTheme) * 100));
               return (
                 <div class="viz-bar-row">
@@ -124,7 +127,7 @@ const overviewStats = [
       <div class="card" style="margin-top:20px">
         <div class="card-head">
           <div class="eyebrow">Comparable Families</div>
-          <h3>统一方法族</h3>
+          <h3>统一机制族</h3>
         </div>
         <div class="viz-family-pills">
           {methodFamilyOptions.map((family: MethodFamilyOption) => (
@@ -156,6 +159,7 @@ const overviewStats = [
 </BaseLayout>
 
 <style>
+.viz-note{margin:-4px 0 18px;color:var(--muted);line-height:1.55;max-width:900px}
 .viz-stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:20px}
 .viz-stat{border:1px solid var(--line);border-radius:8px;background:var(--surface-1);padding:14px}
 .viz-stat strong{display:block;font-size:28px;line-height:1;font-weight:850;color:var(--fg);font-variant-numeric:tabular-nums}

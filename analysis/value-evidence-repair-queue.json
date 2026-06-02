@@ -1,129 +1,35 @@
 {
-  "generated_at": "2026-06-02T03:55:28.984Z",
+  "generated_at": "2026-06-02T06:12:58.689Z",
   "method": {
     "name": "value_evidence_repair_queue_v0",
     "source": "data-engine/value-lsh-index/value-matrix.jsonl",
     "note": "Prioritizes evidence repair work after value-LSH comparison; repair score is not a quality score."
   },
   "summary": {
-    "generated_at": "2026-06-02T03:55:28.984Z",
-    "source_lsh_generated_at": "2026-06-02T03:55:10.739Z",
-    "github_projects": 717,
-    "projects_with_gaps": 681,
+    "generated_at": "2026-06-02T06:12:58.689Z",
+    "source_lsh_generated_at": "2026-06-02T06:11:59.058Z",
+    "github_projects": 721,
+    "projects_with_gaps": 684,
     "lane_counts": {
-      "deep-read-needed": 452,
-      "issue-resource-scan": 138,
+      "deep-read-needed": 450,
+      "issue-resource-scan": 141,
       "raw-meta-repair": 52,
-      "loop-verification": 35,
-      "star-growth-repair": 4
+      "loop-verification": 36,
+      "star-growth-repair": 5
     },
     "gap_counts": {
-      "deep_report_missing": 452,
-      "frontier_queue_missing": 465,
-      "issue_resource_unclear": 329,
-      "self_evolution_unclear": 435,
+      "deep_report_missing": 450,
+      "frontier_queue_missing": 467,
+      "issue_resource_unclear": 330,
+      "self_evolution_unclear": 437,
+      "evidence_chain_incomplete": 502,
       "implementation_unclear": 55,
-      "evidence_chain_incomplete": 504,
-      "star_growth_missing": 20,
+      "star_growth_missing": 24,
       "raw_meta_missing": 52
     },
-    "top_repair_score": 135.02
+    "top_repair_score": 134.8
   },
   "queue": [
-    {
-      "id": "github:inclusionai/agenticlearning",
-      "repo": "inclusionai/agenticlearning",
-      "title": "inclusionai/agenticlearning",
-      "url": "https://github.com/inclusionai/agenticlearning",
-      "value_score": 71.02,
-      "value_class": "high-value-candidate",
-      "repair_score": 135.02,
-      "lane": "deep-read-needed",
-      "gaps": [
-        {
-          "id": "deep_report_missing",
-          "label": "Deep report missing",
-          "action": "clone/read code and create model-card style deep report"
-        },
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        },
-        {
-          "id": "implementation_unclear",
-          "label": "Implementation unclear",
-          "action": "inspect install path, tests/evals, examples, package layout, and runnable entrypoints"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": null,
-        "public_report": null,
-        "raw_file": "raw-github/inclusionai_agenticlearning.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": 347
-      }
-    },
-    {
-      "id": "github:tylerdotai/meta-harness-evolver",
-      "repo": "tylerdotai/meta-harness-evolver",
-      "title": "tylerdotai/meta-harness-evolver",
-      "url": "https://github.com/tylerdotai/meta-harness-evolver",
-      "value_score": 80.89,
-      "value_class": "high-value-candidate",
-      "repair_score": 134.89,
-      "lane": "deep-read-needed",
-      "gaps": [
-        {
-          "id": "deep_report_missing",
-          "label": "Deep report missing",
-          "action": "clone/read code and create model-card style deep report"
-        },
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": null,
-        "public_report": null,
-        "raw_file": "raw-github/tylerdotai_meta-harness-evolver.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": 519
-      }
-    },
     {
       "id": "github:krzysztofdudek/researcherskill",
       "repo": "krzysztofdudek/researcherskill",
@@ -14224,6 +14130,43 @@
       }
     },
     {
+      "id": "github:arc-computer/cl-bench",
+      "repo": "arc-computer/cl-bench",
+      "title": "Arc Continual Learning Benchmark",
+      "url": "https://github.com/Arc-Computer/CL-Bench",
+      "value_score": 80.57,
+      "value_class": "high-value-candidate",
+      "repair_score": 122.57,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/392-arc-continual-learning-benchmark.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/392-arc-continual-learning-benchmark.md",
+        "raw_file": "raw-github/arc-computer_cl-bench.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
+      }
+    },
+    {
       "id": "github:adolfousier/opencrabs",
       "repo": "adolfousier/opencrabs",
       "title": "adolfousier/opencrabs",
@@ -20157,6 +20100,90 @@
       }
     },
     {
+      "id": "github:versatly/clawvault",
+      "repo": "versatly/clawvault",
+      "title": "ClawVault Memory Runtime",
+      "url": "https://github.com/Versatly/clawvault",
+      "value_score": 72.29,
+      "value_class": "needs-review",
+      "repair_score": 107.29,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/393-clawvault-memory-runtime.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/393-clawvault-memory-runtime.md",
+        "raw_file": "raw-github/versatly_clawvault.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:najeed/ai-agent-eval-harness",
+      "repo": "najeed/ai-agent-eval-harness",
+      "title": "MultiAgentEval Enterprise Harness",
+      "url": "https://github.com/najeed/ai-agent-eval-harness",
+      "value_score": 71.97,
+      "value_class": "needs-review",
+      "repair_score": 106.97,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/391-multiagenteval-enterprise-harness.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/391-multiagenteval-enterprise-harness.md",
+        "raw_file": "raw-github/najeed_ai-agent-eval-harness.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
+      }
+    },
+    {
       "id": "github:agiprolabs/claude-trading-skills",
       "repo": "agiprolabs/claude-trading-skills",
       "title": "Claude Trading Skills",
@@ -21281,6 +21308,33 @@
       }
     },
     {
+      "id": "github:inclusionai/agenticlearning",
+      "repo": "inclusionai/agenticlearning",
+      "title": "inclusionai/agenticlearning",
+      "url": "https://github.com/inclusionai/agenticlearning",
+      "value_score": 74.84,
+      "value_class": "high-value-candidate",
+      "repair_score": 101.84,
+      "lane": "loop-verification",
+      "gaps": [
+        {
+          "id": "implementation_unclear",
+          "label": "Implementation unclear",
+          "action": "inspect install path, tests/evals, examples, package layout, and runnable entrypoints"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": null,
+        "analysis_report": "analysis/frontier-projects/inclusionai-agenticlearning-dual-chain.md",
+        "public_report": null,
+        "raw_file": "raw-github/inclusionai_agenticlearning.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": 347
+      }
+    },
+    {
       "id": "github:openbmb/chatdev",
       "repo": "openbmb/chatdev",
       "title": "chatdev",
@@ -21537,6 +21591,43 @@
         "alternate_source_paths": [],
         "frontier_rank": 95,
         "star_growth_rank": 598
+      }
+    },
+    {
+      "id": "github:plaited/agent-eval-harness",
+      "repo": "plaited/agent-eval-harness",
+      "title": "Plaited Agent Eval Harness",
+      "url": "https://github.com/plaited/agent-eval-harness",
+      "value_score": 71.66,
+      "value_class": "needs-review",
+      "repair_score": 100.66,
+      "lane": "star-growth-repair",
+      "gaps": [
+        {
+          "id": "frontier_queue_missing",
+          "label": "Frontier queue missing",
+          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
+        },
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/390-plaited-agent-eval-harness.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/390-plaited-agent-eval-harness.md",
+        "raw_file": "raw-github/plaited_agent-eval-harness.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": null
       }
     },
     {

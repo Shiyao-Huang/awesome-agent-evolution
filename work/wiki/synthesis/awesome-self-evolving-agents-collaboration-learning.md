@@ -30,8 +30,9 @@ updated: 2026-06-02
 - [KNOWN] The existing project card already classifies it as a survey/resource index rather than runnable code, and summarizes its taxonomy around single-agent, multi-agent, domain-specific optimization, and evaluation. Source: `projects/41-awesome-self-evolving.md`.
 - [KNOWN] Our methodology guide already used this list for implementation snowballing, e.g. `EvoAgentX -> Awesome-Self-Evolving-Agents list -> CharlesQ9/Self-Evolving-Agents`. Source: `research/survey-methodology-guide.md`.
 - [KNOWN] The current value repair queue marks `github:evoagentx/awesome-self-evolving-agents` as a high-value candidate with `value_score: 74.84`, lane `deep-read-needed`, and gaps around deep report, frontier queue, implementation clarity, and evidence chain. Source: `analysis/value-evidence-repair-queue.json`.
-- [KNOWN] Live GitHub API review on 2026-06-02 showed the repo is still recently active: created 2025-05-08, pushed 2026-05-16, updated 2026-06-01, with 2193 stars, 159 forks, MIT license, README and assets only, and no contribution or issue templates. Source: GitHub repo metadata.
-- [KNOWN] Live issue/PR list review on 2026-06-02 showed many community requests to add new works, including a definition challenge in issue #37 and a recent open PR #60 proposing empirical-analysis additions. Source: GitHub issues and PRs.
+- [KNOWN] Live GitHub API review on 2026-06-02 showed the repo is still recently active: created 2025-05-08, pushed 2026-05-16, updated 2026-06-01, with 2193 stars, 159 forks, 24 watchers, 30 issues, 10 pull requests, MIT license, README/assets/LICENSE only, and no issue or pull-request templates. Source: GitHub repo metadata and contents API.
+- [KNOWN] Recent commits are mostly merged contribution intake, including #32 ReasoningBank, #42 Live-SWE-agent, #54 CORAL, and #45 AIDE around 2026-05-16. Source: GitHub commits API.
+- [KNOWN] Live issue/PR list review on 2026-06-02 showed many community requests to add new works, including a definition challenge in issue #37, open 2026 suggestions such as #51 AutoSearch, and a recent open PR #60 proposing empirical-analysis additions. Source: GitHub issues and PRs.
 
 ## Mirror Chain
 
@@ -65,6 +66,22 @@ flowchart LR
 6. **An awesome list is a seed, not proof.** A curated entry should increase discovery priority, but should not by itself raise implementation confidence or self-evolution confidence.
 
 7. **No templates means weak governance.** The repo has active collaboration but lacks visible issue/PR templates; our pipeline can improve on this by turning every suggestion into a typed intake record with required evidence fields.
+
+## 可迁移协作经验
+
+**一句话:** 把别人的 awesome list 当作候选源和协作雷达，不当作价值结论。
+
+**三句话:** 它的强点是先给读者一张机制地图，再让社区通过 issue/PR 补充候选。它的风险是纳入标准会被社区热情稀释，所以每个新条目都要先过 definition gate 和 evidence gate。我们要学的是协作入口、分类组织、争议吸收和 empirical matrix 的升级路径，不学它的条目顺序、表述和资产。
+
+**落地到本仓库:**
+
+| 学到的动作 | 我们的转化方式 | 避免的问题 |
+|---|---|---|
+| 先给 evolution map，再给列表 | README/网站/wiki 先展示机制图、时间轴和证据成熟度 | 读者只看到链接堆 |
+| issue/PR 作为候选入口 | 每个建议进入 typed intake record，再进入 value LSH | 热门建议直接污染 ranking |
+| 定义争议公开暴露 | 把争议映射到 `Self-Evolution Definition Criteria` 六个 gate | 把普通 agent workflow 误判为自进化 |
+| empirical analysis PR 代表成熟阶段 | 在 matrix 中区分 benchmark/reproduction/adoption/user-report | awesome entry 被当成 proof |
+| 没有模板也能协作，但治理弱 | 我们自己的入口要求时间、机制、代码、benchmark、issue/resource 字段 | 后续 agent 无法比较和追溯 |
 
 ## Value LSH Facets To Add Or Emphasize
 

@@ -63,6 +63,7 @@ github:angrysky56/reflective-agent-architecture,github,angrysky56/reflective-age
 github:anthropics/anthropic-sdk-python,github,anthropics/anthropic-sdk-python,69.43,46.15,high-value-candidate,1,0,0,0,1,0,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,0,0,0
 github:anthropics/skills,github,anthropics/skills,68.79,53.85,needs-review,1,0,1,0,0,0,0,1,1,1,0,0,1,1,1,-1,0,0,-1,1,1,0,0,1,1,0
 github:apify/agent-skills,github,Apify Agent Skills Library,71.34,61.54,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,0,1,-1,0,0,0,1,1,0,0,1,1,0
+github:arc-computer/cl-bench,github,Arc Continual Learning Benchmark,80.57,65.38,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
 github:arcadeai/openclaw-arcade-plugin,github,OpenClaw Arcade Plugin,70.38,57.69,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,0,0
 github:archishmansengupta/autovoiceevals,github,archishmansengupta/autovoiceevals,73.89,53.85,high-value-candidate,1,1,1,1,1,0,0,1,1,1,0,0,1,0,0,-1,0,1,0,1,0,0,0,1,0,1
 github:argus-framework/argus-ai-debate,github,argus-framework/argus-ai-debate,69.43,46.15,high-value-candidate,1,0,1,0,1,1,1,0,1,0,0,0,1,1,1,-1,0,0,0,1,1,0,0,0,0,0
@@ -263,7 +264,7 @@ github:ilsilfverskiold/awesome-llm-resources-list,github,ilsilfverskiold/awesome
 github:imgeorgiev/pwm,github,imgeorgiev/pwm,75.16,61.54,high-value-candidate,1,0,0,1,1,0,1,1,1,0,0,0,1,1,1,-1,1,0,1,1,1,0,0,1,0,1
 github:immanuelxiv/ppo-self-play,github,immanuelxiv/ppo-self-play,72.93,50,high-value-candidate,1,1,1,1,0,1,1,1,1,1,0,0,1,0,0,-1,0,1,0,1,0,0,0,0,0,0
 github:incidentfox/self-learning-ai-agent,github,incidentfox/self-learning-ai-agent,75.16,57.69,high-value-candidate,1,0,1,0,1,1,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
-github:inclusionai/agenticlearning,github,inclusionai/agenticlearning,71.02,50,high-value-candidate,1,0,1,1,1,1,0,0,1,0,0,0,1,0,0,-1,1,0,1,1,0,0,0,1,1,0
+github:inclusionai/agenticlearning,github,inclusionai/agenticlearning,74.84,57.69,high-value-candidate,1,0,1,1,1,1,0,0,1,0,1,1,1,0,0,-1,1,0,1,1,0,0,0,1,1,0
 github:inclusionai/aworld,github,inclusionai/aworld,78.34,61.54,high-value-candidate,1,1,1,0,1,1,1,1,1,1,0,0,1,0,1,-1,0,1,0,1,0,0,0,1,1,0
 github:infiagent/infiagent,github,InfiAgent,82.8,69.23,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:inngest/utah,github,Utah,82.8,69.23,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
@@ -405,6 +406,7 @@ github:mycelium-io/mycelium,github,mycelium-io/mycelium,71.34,50,high-value-cand
 github:n4m3z/forge-council,github,n4m3z/forge-council,72.61,50,high-value-candidate,1,0,1,0,1,1,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,0,0,0,0,1,0
 github:n8n-io/n8n,github,n8n,78.34,76.92,needs-review,1,-1,1,0,1,1,1,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,1
 github:naivoder/mctsr,github,naivoder/mctsr,71.02,50,high-value-candidate,1,0,1,1,1,0,0,1,1,0,0,0,1,1,1,-1,0,0,0,1,1,0,0,0,0,1
+github:najeed/ai-agent-eval-harness,github,MultiAgentEval Enterprise Harness,71.97,61.54,needs-review,1,-1,1,1,1,0,0,1,1,1,1,1,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
 github:nemori-ai/nemori,github,Nemori,76.43,69.23,needs-review,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:neo4j-labs/agent-memory,github,neo4j-labs/agent-memory,75.16,57.69,high-value-candidate,1,0,1,1,1,1,1,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
 github:neosigmaai/auto-harness,github,neosigmaai/auto-harness,77.71,69.23,needs-review,1,1,1,1,1,0,1,1,1,1,0,0,1,1,1,-1,0,1,-1,1,0,0,0,1,0,1
@@ -482,6 +484,7 @@ github:pinchbench/skill,github,pinchbench/skill,76.43,61.54,high-value-candidate
 github:pingcap/ossinsight,github,pingcap/ossinsight,70.7,50,high-value-candidate,1,0,1,0,0,1,1,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
 github:pingcy/ace-langgraph,github,pingcy/ace-langgraph,79.62,65.38,high-value-candidate,1,1,1,1,1,0,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:pjt222/agent-almanac,github,pjt222/agent-almanac,71.02,50,high-value-candidate,1,0,1,0,1,0,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,0,0
+github:plaited/agent-eval-harness,github,Plaited Agent Eval Harness,71.66,61.54,needs-review,1,-1,0,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,1,0,1,1,0,0,1,0,0
 github:plastic-labs/honcho,github,plastic-labs/honcho,67.83,42.31,needs-review,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,0,1,0
 github:polarseeker/openseeker,github,polarseeker/openseeker,78.03,65.38,high-value-candidate,1,0,1,1,1,0,1,1,1,1,0,0,1,1,1,-1,1,1,0,1,1,0,0,1,0,0
 github:polya20/textgrad,github,polya20/textgrad,71.34,50,high-value-candidate,1,0,1,1,1,0,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
@@ -631,7 +634,7 @@ github:tsinghua-fib-lab/world-model,github,tsinghua-fib-lab/world-model,72.93,53
 github:tsinghuac3i/awesome-memory-for-agents,github,tsinghuac3i/awesome-memory-for-agents,72.93,53.85,high-value-candidate,1,0,1,1,0,1,0,1,1,0,0,0,1,1,0,-1,1,0,0,1,1,0,0,1,1,0
 github:tsinghuac3i/awesome-rl-for-lrms,github,tsinghuac3i/awesome-rl-for-lrms,62.74,34.62,needs-review,1,0,0,0,0,0,0,1,1,0,0,0,1,0,1,-1,0,0,0,1,1,0,0,1,0,0
 github:tsukushiai/self-organized-agent,github,tsukushiai/self-organized-agent,75.16,57.69,high-value-candidate,1,0,1,1,1,0,0,1,1,1,0,0,1,1,1,-1,1,1,0,1,1,0,0,0,0,0
-github:tylerdotai/meta-harness-evolver,github,tylerdotai/meta-harness-evolver,80.89,65.38,high-value-candidate,1,1,1,1,1,1,0,1,1,1,0,0,1,1,0,-1,1,1,0,1,0,0,0,1,1,0
+github:tylerdotai/meta-harness-evolver,github,tylerdotai/meta-harness-evolver,84.71,73.08,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,-1,1,1,0,1,0,0,0,1,1,0
 github:tzussman/openevolve,github,tzussman/openevolve,75.48,57.69,high-value-candidate,1,1,1,1,1,0,0,1,1,0,0,0,1,0,1,-1,0,1,1,1,0,0,0,1,0,1
 github:uid4oe/insight-swarm,github,uid4oe/insight-swarm,66.24,38.46,needs-review,1,0,1,1,0,0,0,1,1,0,0,0,1,1,1,-1,0,0,0,1,0,0,0,0,0,0
 github:unicomai/hexagent,github,HexAgent,71.97,61.54,needs-review,1,-1,1,0,1,0,1,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,0,0
@@ -643,6 +646,7 @@ github:vercel-labs/ai,github,vercel-labs/ai,64.01,34.62,needs-review,1,0,1,0,0,0
 github:vercel-labs/skills,github,vercel-labs/skills,72.61,53.85,high-value-candidate,1,0,1,0,1,0,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,0,0
 github:vercel/ai,github,vercel/ai,64.01,34.62,needs-review,1,0,1,0,0,0,0,1,1,1,0,0,1,0,0,-1,0,0,0,1,0,0,0,0,1,0
 github:vercel/workflow,github,vercel/workflow,68.15,46.15,high-value-candidate,1,0,1,0,0,0,1,0,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,0,1,0
+github:versatly/clawvault,github,ClawVault Memory Runtime,72.29,61.54,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
 github:vicsanity623/pyob,github,vicsanity623/pyob,79.94,65.38,high-value-candidate,1,1,1,0,1,1,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:viktoraxelsen/memskill,github,viktoraxelsen/memskill,77.07,57.69,high-value-candidate,1,1,1,1,1,1,0,1,1,1,0,0,1,0,1,-1,1,0,0,1,0,0,0,0,1,0
 github:vilmire/adhdev,github,ADHDev,75.16,69.23,needs-review,1,-1,1,1,1,0,1,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,0,0

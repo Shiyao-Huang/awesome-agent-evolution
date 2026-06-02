@@ -2,7 +2,7 @@
   "id": "evolve-agi-index-trend",
   "name": "Evolve-AGI Index Trend",
   "zhName": "自进化系数趋势追踪",
-  "updated": "2026-06-01",
+  "updated": "2026-06-02",
   "formulaVersion": "2026-05-30-benchmark-weighted",
   "formula": "EAI = sum(signal_score * signal_weight)",
   "weights": {
@@ -15,11 +15,11 @@
     "governanceReadiness": 8
   },
   "current": {
-    "date": "2026-06-01",
+    "date": "2026-06-02",
     "score": 72.9,
     "grade": "B+",
     "benchmarkScore": 80.1,
-    "benchmarkEvidenceCount": 10,
+    "benchmarkEvidenceCount": 11,
     "classifiedRepos": 646,
     "strictEvolutionRepos": 93,
     "broadEvolutionRepos": 200,
@@ -71,18 +71,33 @@
       "broadRepos": 200,
       "publicReports": 239,
       "source": "analysis/github-project-data-analysis.json + site/src/data/analysis.json",
-      "status": "current",
+      "status": "snapshot",
       "note": "Public site data snapshot synced to the latest GitHub analysis corpus: 646 classified repos, 93 strict evolution repos, 200 broad evolution repos, 239 analyzed public-report records."
+    },
+    {
+      "date": "2026-06-02",
+      "label": "MPA evidence added",
+      "score": 72.9,
+      "benchmarkScore": 80.1,
+      "strictRepos": 93,
+      "broadRepos": 200,
+      "publicReports": 239,
+      "source": "https://www.deepprinciple.com/papers/mpa.pdf + https://mp.weixin.qq.com/s/Do3sauQ8oSoRluaCptYe-g",
+      "status": "current",
+      "note": "Added MPA / MIRA as AI-for-science recursive-training benchmark evidence: 35/40 experimental materials-property SOTA, average MAE -15%, up to -55%; corpus counts unchanged."
     }
   ],
   "benchmarkSources": [
     "paper-drafts/appendix.tex",
     "site/src/data/survey.ts",
-    "research/ranking-framework/radar-profiles.json"
+    "research/ranking-framework/radar-profiles.json",
+    "https://www.deepprinciple.com/papers/mpa.pdf",
+    "https://mp.weixin.qq.com/s/Do3sauQ8oSoRluaCptYe-g"
   ],
   "limitations": [
     "Snapshots before 2026-05-30 are backfilled for comparability and should not be read as independent historical API measurements.",
     "Benchmark score is a normalized cross-benchmark input score, not a raw pass@1 or success-rate average.",
+    "MPA / MIRA is domain AI-for-science and recursive-training evidence; it does not by itself prove open-domain autonomous recursive self-improvement.",
     "Future automation should append new real snapshots rather than replacing prior points."
   ]
 }

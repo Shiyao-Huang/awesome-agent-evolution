@@ -28,12 +28,31 @@ export type FamilyOption = {
   count: number;
   color: string;
   description: string;
+  boundary: string;
 };
 export type TaxonomyNode = {
   label: string;
   count: number;
   description?: string;
   children?: TaxonomyNode[];
+};
+export type ProjectTaxonomyInput = {
+  name?: string | null;
+  repo?: string | null;
+  category?: string | null;
+  pattern?: string | null;
+  description?: string | null;
+  tags?: string[] | null;
+};
+export type MechanismClassification = {
+  familyId: string;
+  familyLabel: string;
+  familyShortLabel: string;
+  color: string;
+  familyDescription: string;
+  boundary: string;
+  subtype: string;
+  subtypeDescription: string;
 };
 
 export const summaryStats = {
@@ -64,6 +83,7 @@ const familyRules = [
     shortLabel: '安全治理',
     color: '#B83224',
     description: '权限、策略、沙箱、人类审批和可审计运行边界。',
+    boundary: '限制 agent 如何行动，而不是直接证明任务能力提升。',
     test: /safety|security|governance|policy|permission|approval|hitl|sandbox|安全|治理|权限|审批|隔离/i
   },
   {
@@ -72,6 +92,7 @@ const familyRules = [
     shortLabel: '自进化闭环',
     color: '#FF5B00',
     description: '候选生成、评估打分、反馈精炼和重复优化。',
+    boundary: '必须改变 prompt、策略、代码、技能、记忆或种群中的至少一种对象。',
     test: /进化|演化|搜索循环|反馈-精炼|自改进|自进化|evol|self-improv|self-evolv|darwin|godel|gödel|refine|reflection/i
   },
   {
@@ -80,6 +101,7 @@ const familyRules = [
     shortLabel: '记忆/上下文',
     color: '#2E6F4E',
     description: '长期记忆、检索、连续性、身份与上下文基底。',
+    boundary: '提供可保留状态，但不自动等于自进化；还要看反馈和验证。',
     test: /memory|context|retrieval|rag|knowledge graph|continuity|passport|agent-state|long-term|persistent|记忆|上下文|检索|知识库/i
   },
   {
@@ -88,6 +110,7 @@ const familyRules = [
     shortLabel: '评估/基准',
     color: '#007AFF',
     description: 'Benchmark、harness、grader、验证和可靠性测试。',
+    boundary: '提供选择压力和证据，不等于系统本身会学习或保留改进。',
     test: /评估|评测|验证|基准|打分|benchmark|eval|judge|reward|grader|score|verifier|validation|reliability|harness|quality gate/i
   },
   {
@@ -96,6 +119,7 @@ const familyRules = [
     shortLabel: '技能/工具',
     color: '#8B5CF6',
     description: '可复用 skill、工具、插件、MCP、注册表和分发。',
+    boundary: '让能力可复用；只有技能会被生成、选择、更新或回滚时才是进化证据。',
     test: /skill|skills|tool|tools|plugin|plugins|mcp|registry|resource-index|package|技能|工具|插件|注册表/i
   },
   {
@@ -104,6 +128,7 @@ const familyRules = [
     shortLabel: '多 Agent 编排',
     color: '#0891B2',
     description: '多智能体角色、工作流编排、任务分解和协作。',
+    boundary: '组织多个 agent；是否自进化取决于角色、拓扑或 handoff 是否随反馈改变。',
     test: /multi-agent|orchestrat|workflow|automation|swarm|team|crew|role|智能体编排|多 agent|多 Agent|协作|工作流|任务分解|节点编排/i
   },
   {
@@ -112,6 +137,7 @@ const familyRules = [
     shortLabel: '代码/SWE',
     color: '#A56117',
     description: '代码生成、软件工程任务、patch、SWE-bench 和开发工具。',
+    boundary: '面向代码任务；只有补丁进入验证、保留和回归门禁时才是强自进化证据。',
     test: /coding|code|software|swe|patch|developer|dev|代码|软件工程|开发助手/i
   },
   {
@@ -120,6 +146,7 @@ const familyRules = [
     shortLabel: '综述/索引',
     color: '#BE185D',
     description: '论文、survey、教程、awesome list、研究地图和资源索引。',
+    boundary: '是发现入口和分类证据，不能单独证明被收录项目可运行或会自我改进。',
     test: /survey|tutorial|awesome|paper|research|curriculum|education|literature|index|resource|综述|教程|论文|索引|文献|资源/i
   },
   {
@@ -128,14 +155,15 @@ const familyRules = [
     shortLabel: '平台/运行时',
     color: '#586069',
     description: 'Agent 框架、运行时、LLM 平台、UI、基础设施和应用。',
+    boundary: '提供执行环境；需要额外证据说明反馈如何改变系统行为。',
     test: /framework|runtime|platform|infrastructure|application|ui|llm|self-hosted|框架|平台|运行时|基础设施|应用|自托管/i
   }
 ] as const;
 
-const projectText = (project: (typeof projects)[number]) =>
-  [project.name, project.repo, project.category, project.pattern, project.description, ...(project.tags || [])].join(' ');
+const projectText = (project: ProjectTaxonomyInput) =>
+  [project.name, project.repo, project.category, project.pattern, project.description, ...(project.tags || [])].filter(Boolean).join(' ');
 
-const familyForProject = (project: (typeof projects)[number]) =>
+const familyForProject = (project: ProjectTaxonomyInput) =>
   familyRules.find((family) => family.test.test(projectText(project))) || familyRules.find((family) => family.id === 'platform-runtime')!;
 
 const familyCounts = new Map<string, number>();
@@ -150,27 +178,14 @@ export const methodFamilyOptions: FamilyOption[] = familyRules.map((family) => (
   shortLabel: family.shortLabel,
   color: family.color,
   description: family.description,
+  boundary: family.boundary,
   count: familyCounts.get(family.id) || 0
 })).filter((family) => family.count > 0);
 
-export const projectRankData = projects
-  .map((project) => {
-    const family = familyForProject(project);
-    return {
-      name: project.name,
-      repo: project.repo,
-      url: project.url,
-      stars: Number(project.stars || 0),
-      category: family.shortLabel,
-      rawCategory: project.category,
-      methodFamilyId: family.id,
-      methodFamily: family.label,
-      pattern: project.pattern,
-      tags: project.tags,
-      lastPushed: project.lastPushed
-    };
-  })
-  .sort((a, b) => b.stars - a.stars || a.name.localeCompare(b.name));
+export const mechanismFamilyDistribution: CountEntry[] = methodFamilyOptions.map((family) => ({
+  key: family.shortLabel,
+  count: family.count
+}));
 
 const taxonomySignals: Record<string, Array<{ label: string; description: string; test: RegExp }>> = {
   'safety-governance': [
@@ -220,6 +235,53 @@ const taxonomySignals: Record<string, Array<{ label: string; description: string
     { label: 'LLM 应用平台', description: '自托管平台、UI、RAG 和应用。', test: /platform|application|ui|rag|llm|平台|应用|自托管/i }
   ]
 };
+
+const subtypeForProject = (familyId: string, project: ProjectTaxonomyInput) => {
+  const text = projectText(project);
+  const rules = taxonomySignals[familyId] || [];
+  return rules.find((rule) => rule.test.test(text)) || {
+    label: '综合型',
+    description: '该项目跨多个信号，保留在主机制族中继续用 evidence chain 细分。'
+  };
+};
+
+export const classifyProjectMechanism = (project: ProjectTaxonomyInput): MechanismClassification => {
+  const family = familyForProject(project);
+  const subtype = subtypeForProject(family.id, project);
+  return {
+    familyId: family.id,
+    familyLabel: family.label,
+    familyShortLabel: family.shortLabel,
+    color: family.color,
+    familyDescription: family.description,
+    boundary: family.boundary,
+    subtype: subtype.label,
+    subtypeDescription: subtype.description
+  };
+};
+
+export const projectRankData = projects
+  .map((project) => {
+    const taxonomy = classifyProjectMechanism(project);
+    return {
+      name: project.name,
+      repo: project.repo,
+      url: project.url,
+      stars: Number(project.stars || 0),
+      category: taxonomy.familyShortLabel,
+      rawCategory: project.category,
+      methodFamilyId: taxonomy.familyId,
+      methodFamily: taxonomy.familyLabel,
+      methodFamilyDescription: taxonomy.familyDescription,
+      taxonomyBoundary: taxonomy.boundary,
+      subtype: taxonomy.subtype,
+      subtypeDescription: taxonomy.subtypeDescription,
+      pattern: project.pattern,
+      tags: project.tags,
+      lastPushed: project.lastPushed
+    };
+  })
+  .sort((a, b) => b.stars - a.stars || a.name.localeCompare(b.name));
 
 export const taxonomyTree: TaxonomyNode[] = methodFamilyOptions.map((family) => {
   const scopedProjects = projects.filter((project) => familyForProject(project).id === family.id);

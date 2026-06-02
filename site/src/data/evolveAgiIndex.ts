@@ -183,6 +183,16 @@ export const benchmarkEvidence: BenchmarkEvidence[] = [
     indexScore: 89,
     source: 'paper-drafts/appendix.tex; research/ranking-framework/radar-profiles.json',
     note: 'Non-pass-rate benchmark family normalized by impact and verification.'
+  },
+  {
+    system: 'MPA / MIRA',
+    benchmark: 'Experimental materials properties',
+    before: 'direct fine-tuning baseline',
+    after: '35/40 SOTA; average MAE -15%; up to -55%',
+    gain: 'AI-for-science model improvement',
+    indexScore: 84,
+    source: 'https://www.deepprinciple.com/papers/mpa.pdf; https://mp.weixin.qq.com/s/Do3sauQ8oSoRluaCptYe-g',
+    note: 'Materials Property Axiom evidence is treated as domain AI-for-science recursive-training evidence, not proof of general autonomous AGI.'
   }
 ];
 
@@ -241,7 +251,7 @@ export const evolveAgiIndexSignals: ScoreSignal[] = [
     shortLabel: 'Bench',
     score: round(benchmarkPerformance),
     weight: 18,
-    description: 'HumanEval、SWE-bench、LiveCodeBench、WebArena、AppWorld 和算法/基础设施 benchmark 的实测表现参与总分。',
+    description: 'HumanEval、SWE-bench、LiveCodeBench、WebArena、AppWorld、AI4S/materials 和算法/基础设施 benchmark 的实测表现参与总分。',
     evidence: 'paper-drafts/appendix.tex + site/src/data/survey.ts + research/ranking-framework/radar-profiles.json'
   },
   {
@@ -313,7 +323,7 @@ export const evolveAgiIndex = {
   id: 'evolve-agi-index',
   name: 'Evolve-AGI Index',
   zhName: '自进化系数',
-  updated: '2026-06-01',
+  updated: '2026-06-02',
   score: round(weightedScore),
   grade: gradeFor(weightedScore),
   formula: 'EAI = Σ(signal_score × signal_weight)',
@@ -422,15 +432,26 @@ export const evolveAgiTrend: TrendPoint[] = [
     note: 'First benchmark-weighted snapshot before the public site data snapshot was synced.'
   },
   {
-    date: evolveAgiIndex.updated,
+    date: '2026-06-01',
     label: 'Corpus-synced',
+    score: 72.9,
+    benchmarkScore: 80.1,
+    strictRepos: 93,
+    broadRepos: 200,
+    publicReports: 239,
+    source: 'analysis/github-project-data-analysis.json + site/src/data/analysis.json',
+    note: 'Public site data snapshot synced to the latest GitHub analysis corpus.'
+  },
+  {
+    date: evolveAgiIndex.updated,
+    label: 'MPA evidence added',
     score: evolveAgiIndex.score,
     benchmarkScore: evolveAgiIndex.benchmark.score,
     strictRepos: counts.raw_core_evolution ?? 0,
     broadRepos: counts.raw_broad_evolution ?? 0,
     publicReports: counts.analyzed_with_public_report ?? 0,
-    source: 'analysis/github-project-data-analysis.json + site/src/data/analysis.json',
-    note: 'Public site data snapshot synced to the latest GitHub analysis corpus.'
+    source: 'https://www.deepprinciple.com/papers/mpa.pdf + https://mp.weixin.qq.com/s/Do3sauQ8oSoRluaCptYe-g',
+    note: 'Added MPA / MIRA materials-property benchmark evidence; corpus counts unchanged.'
   }
 ];
 

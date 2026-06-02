@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-02T03:55:10.739Z",
+  "generated_at": "2026-06-02T06:11:59.058Z",
   "band_size": 6,
-  "total": 170,
+  "total": 171,
   "buckets": [
     {
       "key": "v0:b4:421658a47e32aadc",
@@ -53,6 +53,7 @@
         "github:angrysky56/reflective-agent-architecture",
         "github:anthropics/skills",
         "github:apify/agent-skills",
+        "github:arc-computer/cl-bench",
         "github:arthurmgraf/graphmind",
         "github:arunagirinathan-k/awesome-ai-agents-2026",
         "github:ashish-kamboj/agentic-ai-workflows",
@@ -274,6 +275,7 @@
         "github:mwasifanwar/meta-cognitive-learning-system",
         "github:mycelium-io/mycelium",
         "github:n4m3z/forge-council",
+        "github:najeed/ai-agent-eval-harness",
         "github:nemori-ai/nemori",
         "github:neo4j-labs/agent-memory",
         "github:nevamind-ai/memu",
@@ -409,6 +411,7 @@
         "github:vercel-labs/ai",
         "github:vercel/ai",
         "github:vercel/workflow",
+        "github:versatly/clawvault",
         "github:vicsanity623/pyob",
         "github:viktoraxelsen/memskill",
         "github:vision-intelligence-and-robots-group/best-incremental-learning",
@@ -929,7 +932,7 @@
         "blog:README",
         "blog:TEMPLATE"
       ],
-      "size": 916,
+      "size": 919,
       "sample_members": [
         "github:01-ai/langcrew",
         "github:0xnyk/lacp",
@@ -2453,6 +2456,7 @@
         "github:aiming-lab/clawarena",
         "github:aisa-group/skill-inject",
         "github:alienfader/continuity-benchmarks",
+        "github:arc-computer/cl-bench",
         "github:arcadeai/openclaw-arcade-plugin",
         "github:archishmansengupta/autovoiceevals",
         "github:arthurmgraf/graphmind",
@@ -2551,6 +2555,7 @@
         "github:modelscope/agentjet",
         "github:murataslan1/ai-agent-benchmark",
         "github:mvanhorn/last30days-skill",
+        "github:najeed/ai-agent-eval-harness",
         "github:nemori-ai/nemori",
         "github:neo4j-labs/agent-memory",
         "github:nomic-ai/aec-bench",
@@ -2623,6 +2628,7 @@
         "github:vectorize-io/agent-memory-benchmark",
         "github:vectorspacelab/general-agentic-memory",
         "github:ventr1c/memma",
+        "github:versatly/clawvault",
         "github:wazionapps/nexo",
         "github:webzler/agentmemory",
         "github:werner-duvaud/muzero-general",
@@ -2792,7 +2798,7 @@
         "blog:0645-weave-docs-wandb-ai-OpenAI-Agents-SDK-Weights-Biases-Documentation",
         "blog:raw-blogs-index"
       ],
-      "size": 360,
+      "size": 363,
       "sample_members": [
         "github:0xnyk/lacp",
         "github:803/skills-supply",
@@ -3349,6 +3355,7 @@
         "github:pinchbench/skill",
         "github:pingcy/ace-langgraph",
         "github:pjt222/agent-almanac",
+        "github:plaited/agent-eval-harness",
         "github:polarseeker/openseeker",
         "github:psenger/ai-agent-skills",
         "github:punkpeye/awesome-mcp-servers",
@@ -3557,7 +3564,7 @@
         "blog:0104-YouTube-How-to-Build-AI-Agents-with-PydanticAI-Beginner-Tutorial-YouTube",
         "blog:0137-YouTube-OpenAI-s-BRAND-NEW-Agents-SDK-Crash-Course-YouTube"
       ],
-      "size": 343,
+      "size": 344,
       "sample_members": [
         "github:agent-ecosystem/skill-validator",
         "github:agent-on-the-fly/memento",
@@ -4770,7 +4777,6 @@
         "github:trustgraph-ai/trustgraph",
         "github:tsinghua-fib-lab/awesome-ai-scientists",
         "github:tsukushiai/self-organized-agent",
-        "github:tylerdotai/meta-harness-evolver",
         "github:vectorize-io/agent-memory-benchmark",
         "github:vectorize-io/hindsight",
         "github:ventr1c/memma",
@@ -4800,7 +4806,7 @@
         "github:zou-group/sirius",
         "github:zou-group/textgrad"
       ],
-      "size": 219,
+      "size": 218,
       "sample_members": [
         "github:0xsanei/darwinia",
         "github:28naem-del/mnemosyne",
@@ -5796,6 +5802,7 @@
         "github:aiwaves-cn/agents",
         "github:alienfader/continuity-benchmarks",
         "github:amap-ml/skillclaw",
+        "github:arc-computer/cl-bench",
         "github:bingreeky/memgen",
         "github:budecosystem/claudeevolve",
         "github:cellium-project/cellium-agent",
@@ -5974,7 +5981,7 @@
         "social:x-trending",
         "social:x-twitter-posts"
       ],
-      "size": 184,
+      "size": 185,
       "sample_members": [
         "github:28naem-del/mnemosyne",
         "github:adiban17/ppo-ping-pong-agent-",
@@ -5983,6 +5990,7 @@
         "github:aiwaves-cn/agents",
         "github:alienfader/continuity-benchmarks",
         "github:amap-ml/skillclaw",
+        "github:arc-computer/cl-bench",
         "github:bingreeky/memgen",
         "github:budecosystem/claudeevolve",
         "github:cellium-project/cellium-agent",
@@ -5994,8 +6002,7 @@
         "github:dsail-memory/evomembench",
         "github:ecnu-icalk/autoskill",
         "github:ecnu-icalk/ell-stulife",
-        "github:evoagentx/evoagentx",
-        "github:evomap/awesome-agent-evolution"
+        "github:evoagentx/evoagentx"
       ]
     },
     {
@@ -6026,6 +6033,7 @@
         "github:alienfader/continuity-benchmarks",
         "github:alucek/agentic-memory",
         "github:apify/agent-skills",
+        "github:arc-computer/cl-bench",
         "github:arcadeai/openclaw-arcade-plugin",
         "github:axiomhq/agent-memory",
         "github:back1ply/agent-skill-loader",
@@ -6103,6 +6111,7 @@
         "github:mindfold-ai/trellis",
         "github:modelcode-ai/mcode-benchmark",
         "github:momo-personal-assistant/openclaw-plugin",
+        "github:najeed/ai-agent-eval-harness",
         "github:nemori-ai/nemori",
         "github:nirdiamant/agent_memory_techniques",
         "github:noahshinn/reflexion",
@@ -6124,6 +6133,7 @@
         "github:openmemoryspec/oms",
         "github:openswarm-ai/openswarm",
         "github:picrew/awesome-agent-harness",
+        "github:plaited/agent-eval-harness",
         "github:pwrdrvr/openclaw-codex-app-server",
         "github:qpiai/proced_mem_bench",
         "github:quantaalpha/gittaskbench",
@@ -6157,7 +6167,9 @@
         "github:thisisjeron/awesome-openclaw-plugins",
         "github:tiger-ai-lab/clawbench",
         "github:transformeroptimus/superagi",
+        "github:tylerdotai/meta-harness-evolver",
         "github:vectorspacelab/general-agentic-memory",
+        "github:versatly/clawvault",
         "github:voltagent/awesome-openclaw-skills",
         "github:webmaxru/agent-skills",
         "github:webzler/agentmemory",
@@ -6172,7 +6184,7 @@
         "github:zocomputer/skills",
         "github:zorazrw/agent-workflow-memory"
       ],
-      "size": 160,
+      "size": 165,
       "sample_members": [
         "github:0xnyk/lacp",
         "github:aayoawoyemi/ori-mnemos",
@@ -6189,11 +6201,11 @@
         "github:alienfader/continuity-benchmarks",
         "github:alucek/agentic-memory",
         "github:apify/agent-skills",
+        "github:arc-computer/cl-bench",
         "github:arcadeai/openclaw-arcade-plugin",
         "github:axiomhq/agent-memory",
         "github:back1ply/agent-skill-loader",
-        "github:beeevita/evoprompt",
-        "github:benchflow-ai/skillsbench"
+        "github:beeevita/evoprompt"
       ]
     },
     {
@@ -6771,6 +6783,7 @@
         "github:alucek/agentic-memory",
         "github:angrysky56/reflective-agent-architecture",
         "github:apify/agent-skills",
+        "github:arc-computer/cl-bench",
         "github:arunagirinathan-k/awesome-ai-agents-2026",
         "github:automl/auto-sklearn",
         "github:berriai/litellm",
@@ -6831,6 +6844,7 @@
         "github:microsoftdocs/agent-skills",
         "github:modelscope/agentjet",
         "github:moizibnyousaf/ai-agent-skills",
+        "github:najeed/ai-agent-eval-harness",
         "github:neo4j-labs/agent-memory",
         "github:ollama/ollama",
         "github:omdivyatej/self-learning-agents",
@@ -6876,6 +6890,7 @@
         "github:tsinghuac3i/awesome-rl-for-lrms",
         "github:vectorize-io/hindsight",
         "github:vectorspacelab/general-agentic-memory",
+        "github:versatly/clawvault",
         "github:vivy-yi/awesome-agent-orchestration",
         "github:volcengine/openviking",
         "github:voltagent/awesome-agent-skills",
@@ -6887,7 +6902,7 @@
         "github:zjunlp/worldmind",
         "github:zorazrw/agent-workflow-memory"
       ],
-      "size": 130,
+      "size": 133,
       "sample_members": [
         "github:01-ai/langcrew",
         "github:0xsanei/darwinia",
@@ -6904,11 +6919,11 @@
         "github:alucek/agentic-memory",
         "github:angrysky56/reflective-agent-architecture",
         "github:apify/agent-skills",
+        "github:arc-computer/cl-bench",
         "github:arunagirinathan-k/awesome-ai-agents-2026",
         "github:automl/auto-sklearn",
         "github:berriai/litellm",
-        "github:browser-use/web-ui",
-        "github:bruno686/visplay"
+        "github:browser-use/web-ui"
       ]
     },
     {
@@ -10387,6 +10402,7 @@
         "github:openhands/benchmarks",
         "github:pegasi-ai/reins",
         "github:pinchbench/skill",
+        "github:plaited/agent-eval-harness",
         "github:rlhflow/online-rlhf",
         "github:ryanalberts/best-of-agent-harnesses",
         "github:shareai-lab/kbench",
@@ -10397,7 +10413,7 @@
         "github:yologdev/yoyo-evolve",
         "github:yuanchenbei/mem-gallery"
       ],
-      "size": 43,
+      "size": 44,
       "sample_members": [
         "github:aiming-lab/clawarena",
         "github:aiming-lab/simplemem",
@@ -10706,9 +10722,10 @@
         "github:sunnja69/akephalos",
         "github:team-commonly/commonly",
         "github:tencent/tencentdb-agent-memory",
-        "github:vectorspacelab/general-agentic-memory"
+        "github:vectorspacelab/general-agentic-memory",
+        "github:versatly/clawvault"
       ],
-      "size": 37,
+      "size": 38,
       "sample_members": [
         "github:0xnyk/lacp",
         "github:agenta-ai/agenta",
@@ -11799,64 +11816,6 @@
       ]
     },
     {
-      "key": "v0:b1:59b4e23821d80c19",
-      "band": 1,
-      "features": [
-        "rollback_or_safety",
-        "implementation_runnable",
-        "local_code_or_artifact",
-        "product_usability",
-        "teaching_model_card",
-        "evidence_chain_complete"
-      ],
-      "chars": "00+000",
-      "members": [
-        "github:dongxiangjue/awesome-llm-self-improvement",
-        "github:ecnu-icalk/ell-stulife",
-        "github:emson/elfmem",
-        "github:fareedkhan-dev/autonomous-agentic-rag",
-        "github:graph-rag/graphrag",
-        "github:inclusionai/agenticlearning",
-        "github:keskival/recursive-self-improvement-suite",
-        "github:lamm-mit/sciagentsdiscovery",
-        "github:linear95/spag",
-        "github:mitchellgordon95/dspy",
-        "github:mwasifanwar/meta-cognitive-learning-system",
-        "github:ngoodman/metaprompt",
-        "github:noahshinn/reflexion-draft",
-        "github:nousresearch/hermes-agent",
-        "github:oxen-ai/self-rewarding-language-models",
-        "github:ronit26mehta/argus-ai-debate",
-        "github:tencent/selfevolvingagent",
-        "github:tinyhumansai/openhuman",
-        "github:vision-intelligence-and-robots-group/best-incremental-learning",
-        "github:xiaofangxd/llm/ea"
-      ],
-      "size": 20,
-      "sample_members": [
-        "github:dongxiangjue/awesome-llm-self-improvement",
-        "github:ecnu-icalk/ell-stulife",
-        "github:emson/elfmem",
-        "github:fareedkhan-dev/autonomous-agentic-rag",
-        "github:graph-rag/graphrag",
-        "github:inclusionai/agenticlearning",
-        "github:keskival/recursive-self-improvement-suite",
-        "github:lamm-mit/sciagentsdiscovery",
-        "github:linear95/spag",
-        "github:mitchellgordon95/dspy",
-        "github:mwasifanwar/meta-cognitive-learning-system",
-        "github:ngoodman/metaprompt",
-        "github:noahshinn/reflexion-draft",
-        "github:nousresearch/hermes-agent",
-        "github:oxen-ai/self-rewarding-language-models",
-        "github:ronit26mehta/argus-ai-debate",
-        "github:tencent/selfevolvingagent",
-        "github:tinyhumansai/openhuman",
-        "github:vision-intelligence-and-robots-group/best-incremental-learning",
-        "github:xiaofangxd/llm/ea"
-      ]
-    },
-    {
       "key": "v0:b2:b6dcf58888f99730",
       "band": 2,
       "features": [
@@ -11912,6 +11871,62 @@
         "social:0129-blog-segmentfault-com-AI-Agent-Lightning-deephub-SegmentFault",
         "social:0303-Hacker-News-Claude-Code-s-new-hidden-feature-Swarms-Hacker-News",
         "blog:raw-blogs-index"
+      ]
+    },
+    {
+      "key": "v0:b1:59b4e23821d80c19",
+      "band": 1,
+      "features": [
+        "rollback_or_safety",
+        "implementation_runnable",
+        "local_code_or_artifact",
+        "product_usability",
+        "teaching_model_card",
+        "evidence_chain_complete"
+      ],
+      "chars": "00+000",
+      "members": [
+        "github:dongxiangjue/awesome-llm-self-improvement",
+        "github:ecnu-icalk/ell-stulife",
+        "github:emson/elfmem",
+        "github:fareedkhan-dev/autonomous-agentic-rag",
+        "github:graph-rag/graphrag",
+        "github:keskival/recursive-self-improvement-suite",
+        "github:lamm-mit/sciagentsdiscovery",
+        "github:linear95/spag",
+        "github:mitchellgordon95/dspy",
+        "github:mwasifanwar/meta-cognitive-learning-system",
+        "github:ngoodman/metaprompt",
+        "github:noahshinn/reflexion-draft",
+        "github:nousresearch/hermes-agent",
+        "github:oxen-ai/self-rewarding-language-models",
+        "github:ronit26mehta/argus-ai-debate",
+        "github:tencent/selfevolvingagent",
+        "github:tinyhumansai/openhuman",
+        "github:vision-intelligence-and-robots-group/best-incremental-learning",
+        "github:xiaofangxd/llm/ea"
+      ],
+      "size": 19,
+      "sample_members": [
+        "github:dongxiangjue/awesome-llm-self-improvement",
+        "github:ecnu-icalk/ell-stulife",
+        "github:emson/elfmem",
+        "github:fareedkhan-dev/autonomous-agentic-rag",
+        "github:graph-rag/graphrag",
+        "github:keskival/recursive-self-improvement-suite",
+        "github:lamm-mit/sciagentsdiscovery",
+        "github:linear95/spag",
+        "github:mitchellgordon95/dspy",
+        "github:mwasifanwar/meta-cognitive-learning-system",
+        "github:ngoodman/metaprompt",
+        "github:noahshinn/reflexion-draft",
+        "github:nousresearch/hermes-agent",
+        "github:oxen-ai/self-rewarding-language-models",
+        "github:ronit26mehta/argus-ai-debate",
+        "github:tencent/selfevolvingagent",
+        "github:tinyhumansai/openhuman",
+        "github:vision-intelligence-and-robots-group/best-incremental-learning",
+        "github:xiaofangxd/llm/ea"
       ]
     },
     {
@@ -12219,6 +12234,54 @@
       ]
     },
     {
+      "key": "v0:b0:d5ea7a2e544c2071",
+      "band": 0,
+      "features": [
+        "current_frontier_signal",
+        "self_evolution_loop_fit",
+        "mutable_artifact_clear",
+        "feedback_signal_clear",
+        "verifier_or_benchmark",
+        "retention_or_memory"
+      ],
+      "chars": "+-+++0",
+      "members": [
+        "github:christinminor459/onionclaw",
+        "github:henrikrexed/openclaw-observability-plugin",
+        "github:learnprompt/cc-harness-skills",
+        "github:mckruz/openclaw-langfuse",
+        "github:najeed/ai-agent-eval-harness",
+        "github:openclaw/crabbox",
+        "github:openclaw/openclaw-windows-node",
+        "github:paradigmxyz/evmbench",
+        "github:pwrdrvr/openclaw-codex-app-server",
+        "github:quantaalpha/gittaskbench",
+        "github:quantclaw/quantclaw",
+        "github:shareai-lab/kbench",
+        "github:sourcegraph/codescalebench",
+        "github:syntax-syndicate/openharness-agent-harness",
+        "github:vilmire/adhdev"
+      ],
+      "size": 15,
+      "sample_members": [
+        "github:christinminor459/onionclaw",
+        "github:henrikrexed/openclaw-observability-plugin",
+        "github:learnprompt/cc-harness-skills",
+        "github:mckruz/openclaw-langfuse",
+        "github:najeed/ai-agent-eval-harness",
+        "github:openclaw/crabbox",
+        "github:openclaw/openclaw-windows-node",
+        "github:paradigmxyz/evmbench",
+        "github:pwrdrvr/openclaw-codex-app-server",
+        "github:quantaalpha/gittaskbench",
+        "github:quantclaw/quantclaw",
+        "github:shareai-lab/kbench",
+        "github:sourcegraph/codescalebench",
+        "github:syntax-syndicate/openharness-agent-harness",
+        "github:vilmire/adhdev"
+      ]
+    },
+    {
       "key": "v0:b2:c2138b64453902d1",
       "band": 2,
       "features": [
@@ -12450,52 +12513,6 @@
         "blog:0424-Tencent-Cloud-Dev-73-7-89-5-HALO",
         "blog:0607-runoob-com-Python",
         "blog:0644-warpmetrics-com-Building-a-Self-Improving-AI-Agent-with-Feedback-Loops-Warpmetrics"
-      ]
-    },
-    {
-      "key": "v0:b0:d5ea7a2e544c2071",
-      "band": 0,
-      "features": [
-        "current_frontier_signal",
-        "self_evolution_loop_fit",
-        "mutable_artifact_clear",
-        "feedback_signal_clear",
-        "verifier_or_benchmark",
-        "retention_or_memory"
-      ],
-      "chars": "+-+++0",
-      "members": [
-        "github:christinminor459/onionclaw",
-        "github:henrikrexed/openclaw-observability-plugin",
-        "github:learnprompt/cc-harness-skills",
-        "github:mckruz/openclaw-langfuse",
-        "github:openclaw/crabbox",
-        "github:openclaw/openclaw-windows-node",
-        "github:paradigmxyz/evmbench",
-        "github:pwrdrvr/openclaw-codex-app-server",
-        "github:quantaalpha/gittaskbench",
-        "github:quantclaw/quantclaw",
-        "github:shareai-lab/kbench",
-        "github:sourcegraph/codescalebench",
-        "github:syntax-syndicate/openharness-agent-harness",
-        "github:vilmire/adhdev"
-      ],
-      "size": 14,
-      "sample_members": [
-        "github:christinminor459/onionclaw",
-        "github:henrikrexed/openclaw-observability-plugin",
-        "github:learnprompt/cc-harness-skills",
-        "github:mckruz/openclaw-langfuse",
-        "github:openclaw/crabbox",
-        "github:openclaw/openclaw-windows-node",
-        "github:paradigmxyz/evmbench",
-        "github:pwrdrvr/openclaw-codex-app-server",
-        "github:quantaalpha/gittaskbench",
-        "github:quantclaw/quantclaw",
-        "github:shareai-lab/kbench",
-        "github:sourcegraph/codescalebench",
-        "github:syntax-syndicate/openharness-agent-harness",
-        "github:vilmire/adhdev"
       ]
     },
     {
@@ -13701,6 +13718,30 @@
       ]
     },
     {
+      "key": "v0:b0:fa33a409465b299e",
+      "band": 0,
+      "features": [
+        "current_frontier_signal",
+        "self_evolution_loop_fit",
+        "mutable_artifact_clear",
+        "feedback_signal_clear",
+        "verifier_or_benchmark",
+        "retention_or_memory"
+      ],
+      "chars": "+-00+0",
+      "members": [
+        "github:plaited/agent-eval-harness",
+        "github:suyoumo/clawprobench",
+        "github:zijian-ni/awesome-ai-agents-2026"
+      ],
+      "size": 3,
+      "sample_members": [
+        "github:plaited/agent-eval-harness",
+        "github:suyoumo/clawprobench",
+        "github:zijian-ni/awesome-ai-agents-2026"
+      ]
+    },
+    {
       "key": "v0:b1:2ece3ae42e8ff468",
       "band": 1,
       "features": [
@@ -14018,28 +14059,6 @@
       "sample_members": [
         "github:terryfyl/openclaw-evolution-framework",
         "paper:2502.00593"
-      ]
-    },
-    {
-      "key": "v0:b0:fa33a409465b299e",
-      "band": 0,
-      "features": [
-        "current_frontier_signal",
-        "self_evolution_loop_fit",
-        "mutable_artifact_clear",
-        "feedback_signal_clear",
-        "verifier_or_benchmark",
-        "retention_or_memory"
-      ],
-      "chars": "+-00+0",
-      "members": [
-        "github:suyoumo/clawprobench",
-        "github:zijian-ni/awesome-ai-agents-2026"
-      ],
-      "size": 2,
-      "sample_members": [
-        "github:suyoumo/clawprobench",
-        "github:zijian-ni/awesome-ai-agents-2026"
       ]
     },
     {
@@ -14450,6 +14469,26 @@
       "size": 1,
       "sample_members": [
         "paper:2601.05280"
+      ]
+    },
+    {
+      "key": "v0:b1:1c5f60a5cc4b72cb",
+      "band": 1,
+      "features": [
+        "rollback_or_safety",
+        "implementation_runnable",
+        "local_code_or_artifact",
+        "product_usability",
+        "teaching_model_card",
+        "evidence_chain_complete"
+      ],
+      "chars": "00+0++",
+      "members": [
+        "github:inclusionai/agenticlearning"
+      ],
+      "size": 1,
+      "sample_members": [
+        "github:inclusionai/agenticlearning"
       ]
     },
     {

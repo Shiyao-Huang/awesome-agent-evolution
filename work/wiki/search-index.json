@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-02T04:15:43.257Z",
+  "generated": "2026-06-02T06:15:33.977Z",
   "stats": {
-    "pages": 74,
-    "keywords": 926
+    "pages": 76,
+    "keywords": 936
   },
   "catalog": [
     {
@@ -663,6 +663,20 @@
       ]
     },
     {
+      "path": "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "title": "inclusionAI AWorld-RL Frontier Deep Dive",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "github",
+        "aworld-rl",
+        "agentic-rl",
+        "environment-tuning",
+        "tool-use",
+        "value-lsh"
+      ]
+    },
+    {
       "path": "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
       "title": "JARVIS-Xs SE-Agent Frontier Deep Dive",
       "rank": "A",
@@ -822,6 +836,20 @@
       ]
     },
     {
+      "path": "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md",
+      "title": "tylerdotai Meta-Harness Evolver Frontier Deep Dive",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "github",
+        "meta-harness",
+        "openclaw",
+        "harness-evolution",
+        "self-mirror",
+        "value-lsh"
+      ]
+    },
+    {
       "path": "synthesis/value-evidence-repair-queue.md",
       "title": "Value Evidence Repair Queue",
       "rank": "A",
@@ -932,8 +960,10 @@
       "concepts/agent-swarm-evolve.md",
       "sources/papers-digest.md",
       "sources/raw-papers-mechanism-analysis.md",
+      "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
       "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
-      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md"
+      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
+      "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
     ],
     "cross-references": [
       "concepts/agent-swarm-evolve.md",
@@ -2309,10 +2339,12 @@
       "synthesis/gepa-ai-gepa-frontier-deep-dive.md",
       "synthesis/gepa-ai-optimize-anything-artifact-frontier-deep-dive.md",
       "synthesis/github-star-growth-database.md",
+      "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
       "synthesis/kargarisaac-reflexion-deep-dive.md",
       "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
       "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
-      "synthesis/synaptent-aragora-frontier-deep-dive.md"
+      "synthesis/synaptent-aragora-frontier-deep-dive.md",
+      "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
     ],
     "talent": [
       "sources/employee-social-intelligence.md",
@@ -3491,6 +3523,9 @@
     "what to learn": [
       "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
     ],
+    "可迁移协作经验": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
     "value lsh facets to add or emphasize": [
       "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
     ],
@@ -3761,6 +3796,60 @@
     "resource-library-coverage-audit": [
       "synthesis/google-indexing-custom-domain-triage.md"
     ],
+    "inclusionai aworld-rl frontier deep dive": [
+      "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md"
+    ],
+    "aworld-rl": [
+      "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md"
+    ],
+    "agentic-rl": [
+      "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md"
+    ],
+    "environment-tuning": [
+      "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md"
+    ],
+    "tool-use": [
+      "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md"
+    ],
+    "value-lsh": [
+      "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
+      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
+      "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md",
+      "synthesis/value-evidence-repair-queue.md",
+      "synthesis/value-lsh-classification-system.md",
+      "synthesis/value-lsh-index.md"
+    ],
+    "1 sentence": [
+      "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
+      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
+      "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
+    ],
+    "3 sentences": [
+      "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
+      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
+      "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
+    ],
+    "value decision": [
+      "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
+      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
+      "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
+    ],
+    "mirror note": [
+      "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
+      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
+      "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
+    ],
+    "follow-up": [
+      "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
+      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
+      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
+      "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
+    ],
     "jarvis-xs se-agent frontier deep dive": [
       "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md"
     ],
@@ -3812,33 +3901,6 @@
     ],
     "continual-learning": [
       "synthesis/langchain-ai-open-swe-frontier-deep-dive.md"
-    ],
-    "value-lsh": [
-      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
-      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md",
-      "synthesis/value-evidence-repair-queue.md",
-      "synthesis/value-lsh-classification-system.md",
-      "synthesis/value-lsh-index.md"
-    ],
-    "1 sentence": [
-      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
-      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md"
-    ],
-    "3 sentences": [
-      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
-      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md"
-    ],
-    "value decision": [
-      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
-      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md"
-    ],
-    "mirror note": [
-      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
-      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md"
-    ],
-    "follow-up": [
-      "synthesis/langchain-ai-open-swe-frontier-deep-dive.md",
-      "synthesis/sethkarten-continual-harness-frontier-deep-dive.md"
     ],
     "m1-m5": [
       "synthesis/mechanism-framework.md"
@@ -3996,6 +4058,22 @@
     "academic-industry bridge accelerates m1": [
       "synthesis/talent-landscape.md"
     ],
+    "tylerdotai meta-harness evolver frontier deep dive": [
+      "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
+    ],
+    "meta-harness": [
+      "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
+    ],
+    "openclaw": [
+      "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
+    ],
+    "harness-evolution": [
+      "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"
+    ],
+    "self-mirror": [
+      "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
     "value evidence repair queue": [
       "synthesis/value-evidence-repair-queue.md"
     ],
@@ -4053,9 +4131,6 @@
     ],
     "useful next queries": [
       "synthesis/value-lsh-index.md"
-    ],
-    "self-mirror": [
-      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "continuity": [
       "synthesis/value-screening-dual-chain-knowledge-base.md"

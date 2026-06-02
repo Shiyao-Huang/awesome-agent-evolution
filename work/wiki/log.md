@@ -580,3 +580,48 @@
 - Classified the repo as a source-router/resource-index rather than runnable implementation, preserving the current `implementation_unclear` repair gap.
 - Extracted reusable logic for taxonomy-first navigation, issue/PR intake, definition-dispute routing, empirical-matrix maturity, and value-LSH candidate intake.
 **产出:** `work/wiki/synthesis/awesome-self-evolving-agents-collaboration-learning.md`
+
+## [2026-06-02 13:47] project+deep-read | inclusionAI AWorld-RL Agentic RL Bundle
+
+**操作:** Completed the next repair-queue deep read for `inclusionai/agenticlearning`, resolving it to canonical `inclusionAI/AWorld-RL`.
+**详情:**
+- Verified live metadata: 2025-07 creation, 2026-04 push, 2026-05 update, Python primary language, 106 stars, 10 forks, MIT license, no releases/tags, and stale local raw timestamp/identity.
+- Tried both regular and blobless sparse clones; both failed due GitHub network/RPC errors, so this pass used local raw plus GitHub API metadata/tree/issues/PRs/commits/key-file content.
+- Classified AWorld-RL as an agentic-RL training/evaluation bundle spanning EnvTuning, RAG-R1, StressWeb, V2P, and FunReason assets, with partial self-evolution fit but no verified persistent online self-modification loop.
+**产出:** `analysis/frontier-projects/inclusionai-agenticlearning-dual-chain.md`, `work/wiki/synthesis/inclusionai-aworld-rl-frontier-deep-dive.md`
+
+## [2026-06-02 13:51] data+index | AWorld-RL Repair Queue Resolution
+
+**操作:** Rebuilt value-LSH, projection, repair queue, wiki search index, and project indexes after the AWorld-RL deep-read packet.
+**详情:**
+- Verified `inclusionai/agenticlearning` now has `evidence_refs.analysis_report = analysis/frontier-projects/inclusionai-agenticlearning-dual-chain.md`.
+- Removed the target from `deep-read-needed`; it remains in `loop-verification` with only `implementation_unclear` because both regular and sparse clone attempts failed.
+- The generic repair queue now has 681 GitHub projects with gaps, `deep-read-needed` decreased to 451, `loop-verification` increased to 36, and the next top target is `tylerdotai/meta-harness-evolver`.
+**产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`
+
+## [2026-06-02 14:01] synthesis+learning | EvoAgentX Collaboration Logic Refresh
+
+**操作:** Refreshed the non-copying learning note for `EvoAgentX/Awesome-Self-Evolving-Agents`.
+**详情:**
+- Rechecked live GitHub metadata: 2193 stars, 159 forks, 30 issues, 10 pull requests, README/assets/LICENSE only, no issue or pull-request templates, latest push on 2026-05-16.
+- Added a Chinese operational section that converts taxonomy-first navigation, issue/PR intake, definition disputes, and empirical-analysis PRs into our own value-LSH intake rules.
+- Kept the learning process out of git staging/commit; only the distilled wiki experience changed.
+**产出:** `work/wiki/synthesis/awesome-self-evolving-agents-collaboration-learning.md`
+
+## [2026-06-02 14:14] project+deep-read | tylerdotai Meta-Harness Evolver
+
+**操作:** Completed the next repair-queue deep read for `tylerdotai/meta-harness-evolver`.
+**详情:**
+- Verified live metadata: created/pushed 2026-03-31, updated 2026-04-06, 14 stars, 2 forks, 0 issues, 0 PRs, MIT, Python primary language, no releases/tags/topics/templates.
+- Inspected local clone `projects/repos/tylerdotai__meta-harness-evolver` at `12f3b1d`, including `SKILL.md`, `run_evolution.py`, `evaluate.py`, `post_to_research.py`, `validate.sh`, and three reference docs.
+- Classified it as `frontier-harness-evolution-prototype / verifier-repair-needed`: high self-mirror/harness mechanism value, low public continuity, low benchmark confidence because scoring is heuristic and weights sum to 1.28.
+**产出:** `analysis/frontier-projects/tylerdotai-meta-harness-evolver-dual-chain.md`, `work/wiki/synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md`
+
+## [2026-06-02 14:14] data+index | Meta-Harness Evolver Repair Queue Resolution
+
+**操作:** Rebuilt value-LSH, projection, repair queue, wiki search index, and project indexes after the Meta-Harness deep-read packet.
+**详情:**
+- Verified `tylerdotai/meta-harness-evolver` now has `evidence_refs.analysis_report = analysis/frontier-projects/tylerdotai-meta-harness-evolver-dual-chain.md` in `analysis/value-lsh-index.json`.
+- Removed the target from the generic repair queue; the next top repair targets are `krzysztofdudek/researcherskill`, `sola-st/repairagent`, `zhang677/accelopt`, `hwfengcs/dm-code-agent`, and `rucbm/laser`.
+- The rebuilt value matrix has 2223 materials, 721 GitHub rows, 171 LSH buckets, 3 clusters, and 684 GitHub projects still carrying repair gaps; note that automatic value facets remain keyword/metadata heuristics, so the manual report's weak-continuity/verifier caveat is the stronger interpretation layer for this target.
+**产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`

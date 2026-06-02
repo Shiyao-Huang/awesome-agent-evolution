@@ -11,12 +11,12 @@ const familiesPayload = JSON.stringify(methodFamilyOptions);
   <div class="viz-sh">
     <div class="eyebrow">Project Rankings</div>
     <h2>项目排行榜</h2>
-    <p>按统一方法族过滤，而不是按项目自带短描述过滤。</p>
+    <p>按机制族和子类型过滤；项目自带 category 只作为原始证据旁注，不作为读者导航。</p>
   </div>
   <div class="viz-rank-controls">
     <input id="vr-s" type="search" placeholder="搜索项目、repo、机制..." aria-label="搜索项目" />
-    <select id="vr-c" aria-label="方法族">
-      <option value="">所有方法族</option>
+    <select id="vr-c" aria-label="机制族">
+      <option value="">所有机制族</option>
       {methodFamilyOptions.map((family: MethodFamilyOption) => <option value={family.id}>{family.shortLabel} · {family.count}</option>)}
     </select>
     <select id="vr-so" aria-label="排序">
@@ -27,6 +27,7 @@ const familiesPayload = JSON.stringify(methodFamilyOptions);
     </select>
   </div>
   <div class="viz-rco" id="vr-co" aria-live="polite"></div>
+  <div class="viz-family-note" id="vr-fn" aria-live="polite"></div>
   <div class="viz-rtw">
     <table class="viz-rt">
       <thead>
@@ -34,8 +35,8 @@ const familiesPayload = JSON.stringify(methodFamilyOptions);
           <th>#</th>
           <th>项目</th>
           <th>Stars</th>
-          <th>方法族</th>
-          <th>机制证据</th>
+          <th>机制族</th>
+          <th>子类型 / 证据边界</th>
           <th>更新</th>
         </tr>
       </thead>
@@ -53,6 +54,7 @@ const searchInput = document.getElementById('vr-s');
 const familySelect = document.getElementById('vr-c');
 const sortSelect = document.getElementById('vr-so');
 const countOutput = document.getElementById('vr-co');
+const familyNote = document.getElementById('vr-fn');
 
 function esc(value) {
   return String(value ?? '').replace(/[&<>"']/g, char => ({
@@ -78,11 +80,13 @@ function row(project, index) {
     <td class="viz-rf">
       <span class="viz-family-dot" style="background:${esc(color)}"></span>
       <span>${esc(project.category)}</span>
-      <small>${esc(project.rawCategory)}</small>
+      <small>${esc(project.subtype)}</small>
     </td>
     <td class="viz-rm">
       <span class="viz-pattern">${esc(project.pattern || '未标注')}</span>
+      <span class="viz-boundary">${esc(project.subtypeDescription || project.taxonomyBoundary || '')}</span>
       <span class="viz-tags-line">${tags}</span>
+      <span class="viz-raw-label">raw label: ${esc(project.rawCategory)}</span>
     </td>
     <td class="viz-rd">${project.lastPushed ? esc(project.lastPushed.slice(0, 10)) : '—'}</td>
   </tr>`;
@@ -114,6 +118,12 @@ function render() {
   if (sortKey === 'ud') filtered.sort((a, b) => (b.lastPushed || '').localeCompare(a.lastPushed || ''));
 
   countOutput.textContent = `${filtered.length} / ${allProjects.length} 个项目`;
+  if (familyNote) {
+    const family = familyMap.get(familyId);
+    familyNote.textContent = family
+      ? `${family.label}: ${family.description} 边界: ${family.boundary}`
+      : '机制族是面向读者的共性分类；raw category 保留在每行作为可追溯证据。';
+  }
   tableBody.innerHTML = filtered.slice(0, 80).map(row).join('');
 }
 
@@ -133,6 +143,7 @@ if (tableBody && searchInput && familySelect && sortSelect) {
 .viz-rank-controls select{min-width:180px}
 .viz-rank-controls input:focus,.viz-rank-controls select:focus{outline:none;box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--accent)}
 .viz-rco{color:var(--muted);font-size:12px;font-weight:750;margin-bottom:10px}
+.viz-family-note{margin:-4px 0 12px;color:var(--muted);font-size:12px;line-height:1.45;max-width:860px}
 .viz-rtw{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;contain:inline-size}
 .viz-rt{width:100%;border-collapse:collapse;font-size:13px}
 .viz-rt th{text-align:left;padding:9px 10px;border-bottom:2px solid var(--line);color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
@@ -149,8 +160,10 @@ if (tableBody && searchInput && familySelect && sortSelect) {
 .viz-family-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
 .viz-rm{max-width:280px}
 .viz-pattern{display:block;font-size:12px;font-weight:650;color:var(--fg);line-height:1.35}
+.viz-boundary{display:block;margin-top:3px;font-size:11px;line-height:1.4;color:var(--muted)}
 .viz-tags-line{display:block;margin-top:4px}
 .viz-rtg{display:inline-block;padding:2px 6px;margin:1px 2px 1px 0;border:1px solid var(--line);border-radius:4px;font-size:11px;font-weight:650;color:var(--muted);white-space:nowrap}
+.viz-raw-label{display:block;margin-top:4px;font-size:10px;line-height:1.35;color:var(--meta)}
 .viz-rd{white-space:nowrap;color:var(--muted);font-size:12px}
 @media(max-width:760px){.viz-rank-controls{flex-direction:column}.viz-rank-controls input,.viz-rank-controls select{width:100%;min-width:0}.viz-rt{font-size:12px}.viz-rm{min-width:220px}}
 </style>

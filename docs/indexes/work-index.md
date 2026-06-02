@@ -18,7 +18,7 @@
 | `scripts` | present | 54 | 1 | 0 | 1.5 MB |
 | `data-engine` | present | 495 | 20 | 0 | 28 MB |
 | `work/research` | present | 67 | 2 | 0 | 2.2 MB |
-| `work/wiki` | present | 80 | 6 | 0 | 560 KB |
+| `work/wiki` | present | 80 | 6 | 0 | 561 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files

@@ -1,10 +1,15 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import analysis from '@/data/analysis.json';
+import { classifyProjectMechanism, methodFamilyOptions } from '@/components/visualizations/vizData';
 
 const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const method = analysis.ranking_method;
-const ranked = [...(analysis.recency_weighted_project_ranking ?? [])].slice(0, 30);
+const rankedRaw = [...(analysis.recency_weighted_project_ranking ?? [])].slice(0, 30);
+const ranked = rankedRaw.map((project) => ({
+  ...project,
+  taxonomy: classifyProjectMechanism(project)
+}));
 const rankedTotal = ranked.length || 1;
 type RankedProject = (typeof ranked)[number];
 
@@ -50,62 +55,14 @@ const valueBands = [
   };
 });
 
-const signalText = (project: RankedProject) => [
-  project.name,
-  project.category,
-  project.pattern,
-  ...(project.tags ?? [])
-].join(' ');
-
-const signalRules = [
-  {
-    label: '进化闭环',
-    color: '#FF5B00',
-    description: '候选生成、搜索、反馈精炼、自我改进。',
-    test: /进化|演化|自进化|自改进|反馈|搜索循环|self-evol|self-improv|evolution|evolve|reflection|outer-loop|autonomous-iteration/i
-  },
-  {
-    label: '评估/基准',
-    color: '#007AFF',
-    description: '评估器、benchmark、harness、可复现验证。',
-    test: /评估|评测|基准|打分|验证|evaluation|benchmark|harness|grader|score|reproducibility|eval/i
-  },
-  {
-    label: '训练/RL',
-    color: '#7C3AED',
-    description: '训练循环、强化学习、蒸馏、数据回流。',
-    test: /训练|training|reinforcement|rl|distillation|agent-training|data loop/i
-  },
-  {
-    label: '多 Agent/编排',
-    color: '#0891B2',
-    description: '多智能体协作、工作流、handoff、subagent。',
-    test: /智能体编排|multi-agent|workflow|orchestration|handoff|subagents|open-ended tasks/i
-  },
-  {
-    label: '记忆/上下文',
-    color: '#2E6F4E',
-    description: '记忆、上下文、检索、图结构和推理状态。',
-    test: /记忆|上下文|memory|context|retrieval|graph|reasoning|persistent/i
-  },
-  {
-    label: '代码/技能/工具',
-    color: '#A56117',
-    description: '代码自修改、技能选择、工具与插件优化。',
-    test: /代码|技能|工具|code|coding|skill|tool|plugin|prompt|optimizer|teleprompter|python|typescript|github-actions/i
-  },
-  {
-    label: '安全/治理',
-    color: '#B83224',
-    description: '安全策略、权限、policy、治理和防御。',
-    test: /安全|治理|策略|security|policy|governance|defense/i
-  }
-].map(signal => {
-    const items = ranked.filter(project => signal.test.test(signalText(project)));
+const signalRules = methodFamilyOptions.map(family => {
+    const items = ranked.filter(project => project.taxonomy.familyId === family.id);
     const avgScore = average(items.map(project => project.scores.current_value));
     const topProject = [...items].sort((a, b) => b.scores.current_value - a.scores.current_value)[0];
     return {
-      ...signal,
+      label: family.shortLabel,
+      color: family.color,
+      description: `${family.description} ${family.boundary}`,
       count: items.length,
       pct: percentOfTop30(items.length),
       avgScore,

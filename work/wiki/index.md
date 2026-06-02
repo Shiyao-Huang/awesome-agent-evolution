@@ -49,6 +49,7 @@ _Processed raw sources with extracted insights_
 - [Material Ranking Framework](sources/material-ranking-framework.md) — 统一6套分类系统→四维评分, 137 reviews + 527 repos + 196 papers | Rank: A | 2026-05-26
 - [Review Mechanism Insights](sources/review-mechanism-insights.md) — 137评审深读6机制洞察: 评估瓶颈/非单调/代码通用/知识构建/验证不可变/协议收敛 | Rank: A | 2026-05-26
 - [Talent Capital Structure](sources/talent-capital-structure.md) — 极端金字塔: <50 L4研究者, $852B OpenAI + $900B Anthropic资本集中 | Rank: A | 2026-05-26
+- [Capital, Talent Supply & Stakeholder Perspectives 2026](sources/capital-talent-supply-2026.md) — 资本/人才供给/利益相关者视角：AI人才流入下降、资本错配、自进化资金集中、Recursive thesis | Rank: A | 2026-05-26
 - [Paper Undercoverage Follow-up](sources/paper-undercoverage-followup.md) — 补充8篇2026论文: EvoMemBench/SEA-Eval/Group-Evolving/Safety degradation | Rank: B | 2026-05-26
 - [Blogs Brainstorm](sources/blogs-brainstorm.md) — 20 blog entries × industry insights: evaluation gap/memory evolution/self-modification safety | Rank: B | 2026-05-26
 - [Cross-Pollination](sources/cross-pollination.md) — Papers×Blogs×Reviews交叉: 13 clusters from evaluation-production gap to verification arms race | Rank: B | 2026-05-26
@@ -88,6 +89,8 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [Value LSH Index](synthesis/value-lsh-index.md) — 2219 个去重后素材的 `-1/0/+1` value matrix、168 个 LSH buckets、3 个 value clusters、856/1066/297 三段价值筛选 | Rank: A | 2026-06-02
 - [Value Evidence Repair Queue](synthesis/value-evidence-repair-queue.md) — 从 717 个 GitHub rows 中找出 682 个证据修复动作，分为 deep-read、issue/resource、raw/meta、loop verification、star-growth lane | Rank: A | 2026-06-02
 - [Awesome-Self-Evolving-Agents Collaboration Learning](synthesis/awesome-self-evolving-agents-collaboration-learning.md) — 学习 EvoAgentX awesome list 的协作/分类逻辑：source-router、definition gate、empirical-matrix 和 value-LSH intake，而不复制条目 | Rank: A | 2026-06-02
+- [inclusionAI AWorld-RL Frontier Deep Dive](synthesis/inclusionai-aworld-rl-frontier-deep-dive.md) — repair queue 当前第一项：从 stale `agenticlearning` 元数据修复到 canonical `AWorld-RL`，定性为 agentic-RL training/eval bundle 而非完整 self-evolving runtime | Rank: A | 2026-06-02
+- [tylerdotai Meta-Harness Evolver Frontier Deep Dive](synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md) — repair queue 当前第一项：OpenClaw/Hoss harness-evolution 原型，强 self-mirror 机制启发但 verifier/continuity 证据弱 | Rank: A | 2026-06-02
 - [kargarisaac Reflexion Deep Dive](synthesis/kargarisaac-reflexion-deep-dive.md) — repair queue 第一项样本：小型 smolagents Reflexion adapter，被降级为 baseline teaching anchor 而非当前 frontier | Rank: A | 2026-06-01
 - [synaptent Aragora Frontier Deep Dive](synthesis/synaptent-aragora-frontier-deep-dive.md) — repair queue 第二项样本：高延续性的 2026 governance-control-plane anchor，需继续做 queue-health/adoption audit | Rank: A | 2026-06-02
 - [gepa-ai GEPA Frontier Deep Dive](synthesis/gepa-ai-gepa-frontier-deep-dive.md) — repair queue 第三项样本：高活跃 prompt/program/skill optimizer anchor，需继续用 optimize-anything artifact 做独立复现审查 | Rank: A | 2026-06-02
@@ -108,6 +111,6 @@ _Cross-cutting analyses, comparisons, evolving theses_
 |--------|-------|
 | Entities | 8 |
 | Concepts | 10 |
-| Sources | 30 |
-| Synthesis pages | 25 |
+| Sources | 31 |
+| Synthesis pages | 27 |
 | Last updated | 2026-06-02 |
