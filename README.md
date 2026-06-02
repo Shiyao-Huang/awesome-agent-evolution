@@ -136,7 +136,7 @@ flowchart TB
 | 哪些项目在 2026 年正在增长 | [公开增长数据库](https://shiyao-huang.github.io/awesome-agent-evolution/star-growth/) | [GitHub star growth ranking](analysis/github-star-growth-ranking.md), [data-engine schema](data-engine/github-star-history/README.md) |
 | 哪些素材最值得先深挖 | [Value LSH 价值分类图谱](https://shiyao-huang.github.io/awesome-agent-evolution/value-lsh/) | [value LSH index](analysis/value-lsh-index.md), [evidence repair queue](analysis/value-evidence-repair-queue.md) |
 | 论文现在怎么组织 | [论文主线](#论文主线) | [paper-drafts/main.tex](paper-drafts/main.tex), [survey/latex/main.tex](survey/latex/main.tex) |
-| 哪些图支撑 Survey/Paper | [论文图谱页](https://shiyao-huang.github.io/awesome-agent-evolution/paper/) | [survey figures](survey/figures/README.md), [paper figure exporter](scripts/export_survey_figures_for_paper.mjs) |
+| 哪些图支撑 Survey/Paper | [论文图谱页](https://shiyao-huang.github.io/awesome-agent-evolution/paper/) 和 [可视化页](https://shiyao-huang.github.io/awesome-agent-evolution/visualizations/) | [survey figures](survey/figures/README.md), [paper figure exporter](scripts/export_survey_figures_for_paper.mjs), [paper figure assets](paper-drafts/figures/) |
 | Evolve-AGI Index 怎么进入核心 | [Evolve-AGI Index 进入论文核心](#evolve-agi-index-进入论文核心) | [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [网站页面](site/src/pages/evolve-agi-index/index.astro) |
 | 全量文件在哪里 | [CONTENT_INDEX.md](CONTENT_INDEX.md) | [docs/indexes/master-index.md](docs/indexes/master-index.md) |
 | 网站和 SEO 在哪里 | [site](site/) | [site survey page](site/src/pages/survey/index.astro), [graph page](site/src/pages/graph/index.astro) |

@@ -357,7 +357,7 @@ export const surveyFigureAtlas = [
     title: 'Category-theme heatmap',
     titleZh: '类别主题热力图',
     path: surveyFigurePaths.categoryTheme,
-    chapter: 'Paper Ch.4 / Systems',
+    chapter: 'Paper Ch.4 / Evolutionary systems',
     insight: 'GitHub 项目不是按自带 category 可读，必须交叉看 theme 与 mechanism 才能找出真实自进化信号。',
   },
   {

@@ -12,9 +12,9 @@
 |---|---|---:|---:|---:|---:|
 | `reports` | present | 14 | 2 | 0 | 97 KB |
 | `output` | present | 8 | 1 | 0 | 676 KB |
-| `site/public/reports` | present | 494 | 6 | 0 | 3.2 MB |
-| `site/dist` | present | 955 | 419 | 0 | 28 MB |
-| `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 1.2 MB |
+| `site/public/reports` | present | 494 | 6 | 0 | 3.6 MB |
+| `site/dist` | present | 955 | 419 | 0 | 29 MB |
+| `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 1.6 MB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
 ## Representative Files
@@ -62,7 +62,7 @@
 - `site/dist/_astro/BaseLayout.Dnh_NTE-.css`
 - `site/dist/_astro/ValueLshGraph3D.astro_astro_type_script_index_0_lang.CdK3HLzW.js`
 - `site/dist/_astro/client.BpEju3qh.js`
-- `site/dist/_astro/index.B3cpf88e.css`
+- `site/dist/_astro/index.27P3Djg4.css`
 - `site/dist/_astro/index.BIbOj7I9.css`
 - `site/dist/_astro/index.BfFUp1ss.css`
 - `site/dist/_astro/index.CBk-yZE3.css`

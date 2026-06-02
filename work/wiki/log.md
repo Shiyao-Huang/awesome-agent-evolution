@@ -543,3 +543,40 @@
 - Removed `langchain-ai/open-swe` from the generic repair queue; the rebuilt value matrix still has 2219 materials and 717 GitHub rows, with 682 GitHub projects still carrying repair gaps.
 - The target's value score/confidence became `81.21 / 69.23`, and the next top repair targets are `sethkarten/continual-harness`, `inclusionai/agenticlearning`, `tylerdotai/meta-harness-evolver`, `krzysztofdudek/researcherskill`, and `sola-st/repairagent`.
 **产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`
+
+## [2026-06-02 11:25] project+deep-read | sethkarten Continual Harness Reset-Free Harness Evolution
+
+**操作:** Completed the sixth repair-queue project deep read.
+**详情:**
+- Investigated `sethkarten/continual-harness` with raw capture, live GitHub metadata, release/tag history, issue/PR evidence, arXiv/release claims, and local source clone.
+- Inspected `HarnessEvolver`, `PromptOptimizer`, scaffold tool declarations, persistent memory/skill/subagent stores, bootstrap import/export, run-skill sandbox, and prompt contracts.
+- Classified Continual Harness as a high-value reset-free harness-evolution and game-agent self-improvement benchmark anchor, while marking evolver add-path defects, model-capability dependence, emulator/API/ROM setup, and independent reproduction as current trust boundaries.
+**产出:** `analysis/frontier-projects/sethkarten-continual-harness-dual-chain.md`, `work/wiki/synthesis/sethkarten-continual-harness-frontier-deep-dive.md`, `projects/repos/sethkarten__continual-harness`
+
+## [2026-06-02 11:35] site+paper | Survey Figure Atlas Paper/Site Bridge
+
+**操作:** Wired existing Survey Figure Atlas assets into the public paper and visualization surfaces.
+**详情:**
+- Added `survey-category-theme-heatmap.png` to English paper Chapter 4 and `survey-framework-radar.png` to Chapter 6, completing use of the six exported `paper-drafts/figures/survey-*.png` assets in the manuscript.
+- Upgraded `/visualizations/` so readers first see the Survey Figure Atlas with chapter/evidence-boundary captions before the corpus inspector charts.
+- Updated README/README-EN and `CONTENT_INDEX.md` to point readers from Survey/Paper figure questions to `/paper/`, `/visualizations/`, `survey/figures/`, and `paper-drafts/figures/`.
+**产出:** `paper-drafts/ch4-evolutionary.tex`, `paper-drafts/ch6-frameworks.tex`, `site/src/pages/visualizations/index.astro`, `README.md`, `README-EN.md`, `CONTENT_INDEX.md`
+
+## [2026-06-02 11:58] data+index | Continual Harness Repair Queue Resolution
+
+**操作:** Rebuilt value-LSH, projection, repair queue, wiki search index, project indexes, and site build after the sixth deep-read packet.
+**详情:**
+- Verified `sethkarten/continual-harness` now has `evidence_refs.analysis_report = analysis/frontier-projects/sethkarten-continual-harness-dual-chain.md`.
+- Added local source mirror detection to `scripts/build_value_lsh_index.mjs` so `projects/repos/<owner>__<repo>` contributes to `implementation_runnable`; GitNexus impact for `collectGithubMaterials` was LOW.
+- Removed `sethkarten/continual-harness` from the repair queue; the rebuilt value matrix still has 2219 materials and 717 GitHub rows, with 681 GitHub projects still carrying repair gaps.
+- The target's value score/confidence became `83.12 / 73.08`, with `implementation_runnable=1`, `evidence_chain_complete=1`, and the next top repair targets now led by `inclusionai/agenticlearning`, `tylerdotai/meta-harness-evolver`, `krzysztofdudek/researcherskill`, `sola-st/repairagent`, and `zhang677/accelopt`.
+**产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`
+
+## [2026-06-02 12:13] synthesis+learning | EvoAgentX Awesome List Collaboration Logic
+
+**操作:** Learned collaboration and analysis logic from `EvoAgentX/Awesome-Self-Evolving-Agents` without copying its catalog.
+**详情:**
+- Kept the learning process outside git: public clone failed on GitHub 443, so the review used existing local raw capture plus GitHub API metadata/issue/PR/commit evidence.
+- Classified the repo as a source-router/resource-index rather than runnable implementation, preserving the current `implementation_unclear` repair gap.
+- Extracted reusable logic for taxonomy-first navigation, issue/PR intake, definition-dispute routing, empirical-matrix maturity, and value-LSH candidate intake.
+**产出:** `work/wiki/synthesis/awesome-self-evolving-agents-collaboration-learning.md`

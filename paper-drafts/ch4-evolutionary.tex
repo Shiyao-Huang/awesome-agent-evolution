@@ -12,6 +12,13 @@ A useful abstraction is to separate the \emph{inner solver} from the \emph{outer
 
 The strongest systems therefore combine neural creativity with hard verification.  OPRO evaluates candidate instructions on held-out tasks.  FunSearch executes programs in a sandbox and admits only candidates that pass syntactic and semantic filters.  AlphaEvolve and its open-source descendants rely on automated evaluators for objective scores.  SE-Agent evaluates evolved reasoning trajectories on SWE-bench Verified.  Absolute Zero uses a code executor to verify self-generated tasks and solutions.  The common lesson is that self-evolution is not merely ``asking the model to improve itself.''  It is the design of an evaluation ecology in which generated artifacts can safely compete, fail, and leave traces that shape future generations.
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\linewidth]{survey-category-theme-heatmap.png}
+\caption{Category--theme heatmap from the survey corpus.  The figure shows why system-level evidence cannot be read from repository labels alone: coding agents, memory substrates, benchmarks, prompt optimizers, and framework projects overlap across multiple self-evolution themes.}
+\label{fig:survey-category-theme-heatmap}
+\end{figure}
+
 \subsection{LLM as Optimizer: OPRO}
 \label{subsec:opro}
 

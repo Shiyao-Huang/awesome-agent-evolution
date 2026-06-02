@@ -13,7 +13,7 @@
 | `README.md` | present | 1 | 0 | 0 | 17 KB |
 | `README-ZH.md` | present | 1 | 0 | 0 | 15 KB |
 | `README-EN.md` | present | 1 | 0 | 0 | 18 KB |
-| `CONTENT_INDEX.md` | present | 1 | 0 | 0 | 14 KB |
+| `CONTENT_INDEX.md` | present | 1 | 0 | 0 | 15 KB |
 | `AGENTS.md` | present | 1 | 0 | 0 | 21 KB |
 | `CLAUDE.md` | present | 1 | 0 | 0 | 14 KB |
 | `CLOUD.md` | present | 1 | 0 | 0 | 372 B |

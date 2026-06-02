@@ -87,6 +87,7 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [Value LSH Classification System](synthesis/value-lsh-classification-system.md) — 新 value-facet 分类体系：Mom Test 访谈、机制分类、证据链、embedding/gbrain 和离散 LSH 聚类 | Rank: A | 2026-06-01
 - [Value LSH Index](synthesis/value-lsh-index.md) — 2219 个去重后素材的 `-1/0/+1` value matrix、168 个 LSH buckets、3 个 value clusters、856/1066/297 三段价值筛选 | Rank: A | 2026-06-02
 - [Value Evidence Repair Queue](synthesis/value-evidence-repair-queue.md) — 从 717 个 GitHub rows 中找出 682 个证据修复动作，分为 deep-read、issue/resource、raw/meta、loop verification、star-growth lane | Rank: A | 2026-06-02
+- [Awesome-Self-Evolving-Agents Collaboration Learning](synthesis/awesome-self-evolving-agents-collaboration-learning.md) — 学习 EvoAgentX awesome list 的协作/分类逻辑：source-router、definition gate、empirical-matrix 和 value-LSH intake，而不复制条目 | Rank: A | 2026-06-02
 - [kargarisaac Reflexion Deep Dive](synthesis/kargarisaac-reflexion-deep-dive.md) — repair queue 第一项样本：小型 smolagents Reflexion adapter，被降级为 baseline teaching anchor 而非当前 frontier | Rank: A | 2026-06-01
 - [synaptent Aragora Frontier Deep Dive](synthesis/synaptent-aragora-frontier-deep-dive.md) — repair queue 第二项样本：高延续性的 2026 governance-control-plane anchor，需继续做 queue-health/adoption audit | Rank: A | 2026-06-02
 - [gepa-ai GEPA Frontier Deep Dive](synthesis/gepa-ai-gepa-frontier-deep-dive.md) — repair queue 第三项样本：高活跃 prompt/program/skill optimizer anchor，需继续用 optimize-anything artifact 做独立复现审查 | Rank: A | 2026-06-02
@@ -108,5 +109,5 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Entities | 8 |
 | Concepts | 10 |
 | Sources | 30 |
-| Synthesis pages | 21 |
+| Synthesis pages | 25 |
 | Last updated | 2026-06-02 |

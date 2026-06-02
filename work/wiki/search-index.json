@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-02T03:59:11.532Z",
+  "generated": "2026-06-02T04:15:43.257Z",
   "stats": {
-    "pages": 73,
-    "keywords": 904
+    "pages": 74,
+    "keywords": 926
   },
   "catalog": [
     {
@@ -541,6 +541,20 @@
       "rank": "A",
       "type": "source",
       "tags": []
+    },
+    {
+      "path": "synthesis/awesome-self-evolving-agents-collaboration-learning.md",
+      "title": "Awesome-Self-Evolving-Agents Collaboration Learning",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "awesome-list",
+        "collaboration",
+        "taxonomy",
+        "value-screening",
+        "evidence-chain",
+        "mirror-chain"
+      ]
     },
     {
       "path": "synthesis/code-evolution-benchmark-matrix.md",
@@ -2378,6 +2392,7 @@
       "sources/raw-github-mechanism-analysis.md",
       "sources/raw-papers-mechanism-analysis.md",
       "sources/review-mechanism-insights-enhanced.md",
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md",
       "synthesis/five-evolution-loops-topic.md",
       "synthesis/mechanism-framework.md"
     ],
@@ -3438,6 +3453,86 @@
     "新 surveys": [
       "sources/talent-flow-analysis.md"
     ],
+    "awesome-self-evolving-agents collaboration learning": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "awesome-list": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "collaboration": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "value-screening": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md",
+      "synthesis/frontier-value-queue.md",
+      "synthesis/value-lsh-index.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "evidence-chain": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md",
+      "synthesis/code-evolution-benchmark-matrix.md",
+      "synthesis/resource-library-coverage-audit.md",
+      "synthesis/self-evolution-definition-criteria.md",
+      "synthesis/survey-seo-topic-map.md",
+      "synthesis/value-evidence-repair-queue.md"
+    ],
+    "mirror-chain": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "layered compression": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "evidence chain": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "mirror chain": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "what to learn": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "value lsh facets to add or emphasize": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "what not to copy": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "pipeline adaptation": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "bottom line": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "1 sentence:": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "3 sentences:": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "5 sentences:": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "taxonomy before inventory.": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "visual map before detail.": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "community intake is a signal stream.": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "definition disputes are high-value evidence.": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "empirical analysis is the maturity jump.": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "an awesome list is a seed, not proof.": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
+    "no templates means weak governance.": [
+      "synthesis/awesome-self-evolving-agents-collaboration-learning.md"
+    ],
     "code evolution benchmark matrix": [
       "synthesis/code-evolution-benchmark-matrix.md"
     ],
@@ -3452,13 +3547,6 @@
       "synthesis/five-evolution-loops-topic.md",
       "synthesis/google-indexing-custom-domain-triage.md",
       "synthesis/survey-seo-topic-map.md"
-    ],
-    "evidence-chain": [
-      "synthesis/code-evolution-benchmark-matrix.md",
-      "synthesis/resource-library-coverage-audit.md",
-      "synthesis/self-evolution-definition-criteria.md",
-      "synthesis/survey-seo-topic-map.md",
-      "synthesis/value-evidence-repair-queue.md"
     ],
     "three sentences": [
       "synthesis/code-evolution-benchmark-matrix.md",
@@ -3545,11 +3633,6 @@
     ],
     "frontier-queue": [
       "synthesis/frontier-value-queue.md"
-    ],
-    "value-screening": [
-      "synthesis/frontier-value-queue.md",
-      "synthesis/value-lsh-index.md",
-      "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "dual-chain": [
       "synthesis/frontier-value-queue.md",

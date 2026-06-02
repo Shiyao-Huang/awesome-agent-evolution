@@ -6,6 +6,7 @@ import RadarChart from '@/components/visualizations/RadarChart.astro';
 import TimelineHeatmap from '@/components/visualizations/TimelineHeatmap.astro';
 import RankTable from '@/components/visualizations/RankTable.astro';
 import { categoryDistribution, themeDistribution, summaryStats, methodFamilyOptions } from '@/components/visualizations/vizData';
+import { surveyFigureAtlas, surveyStats } from '@/data/survey';
 
 type DistributionEntry = { key: string; count: number };
 type MethodFamilyOption = typeof methodFamilyOptions[number];
@@ -25,12 +26,45 @@ const overviewStats = [
     <div class="container">
       <div class="eyebrow">Data Visualizations</div>
       <h1 class="gradient-text">数据可视化</h1>
-      <p class="lead">{summaryStats.totalRaw} 条 raw 语料、{summaryStats.totalProjects} 份项目分析报告的证据图谱。</p>
+      <p class="lead">Survey 图表连接 paper、网站和读者判断：Figure Atlas 展示证据主干，corpus inspector 展示 raw 语料与项目分类边界。</p>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Survey Figure Atlas</div>
+          <h2>论文图谱就是证据入口。</h2>
+        </div>
+        <a class="text-link" href="/paper/">paper figure page →</a>
+      </div>
+      <p style="margin-bottom: 20px; color: var(--muted);">
+        这组图连接 {surveyStats.papers} 篇论文、{summaryStats.totalRaw} 条 raw GitHub 语料、{summaryStats.totalProjects} 份项目分析和 {surveyStats.painPoints} 个 Mom Test 痛点。每张图都对应一个 paper chapter 和一个明确的 evidence boundary。
+      </p>
+      <div class="viz-atlas-grid">
+        {surveyFigureAtlas.map((figure) => (
+          <figure class="viz-atlas-panel">
+            <img src={figure.path} alt={`${figure.title}: ${figure.insight}`} loading="lazy" />
+            <figcaption>
+              <strong>{figure.titleZh}</strong>
+              <span>{figure.chapter}</span>
+              <small>{figure.insight}</small>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Corpus Inspector</div>
+          <h2>raw corpus 与项目分类检查</h2>
+        </div>
+      </div>
       <div class="viz-stat-grid">
         {overviewStats.map(stat => (
           <div class="viz-stat">
@@ -142,6 +176,13 @@ const overviewStats = [
 .viz-sh{margin-bottom:24px}
 .viz-sh .eyebrow{color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
 .viz-sh h2{font-family:var(--font-display);font-size:24px;font-weight:400;color:var(--fg);margin-top:4px}
+.viz-atlas-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.viz-atlas-panel{margin:0;border:1px solid var(--line);border-radius:8px;background:var(--bg);overflow:hidden}
+.viz-atlas-panel img{display:block;width:100%;height:260px;object-fit:contain;background:var(--surface-2);padding:12px}
+.viz-atlas-panel figcaption{border-top:1px solid var(--line);padding:12px 14px}
+.viz-atlas-panel figcaption strong{display:block;font-size:14px;color:var(--fg)}
+.viz-atlas-panel figcaption span{display:block;margin-top:4px;font-size:12px;font-weight:800;color:var(--accent)}
+.viz-atlas-panel figcaption small{display:block;margin-top:6px;font-size:12px;line-height:1.45;color:var(--muted)}
 @media(max-width:900px){.viz-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:760px){.viz-grid-2col{grid-template-columns:minmax(0,1fr)}.viz-bar-row{grid-template-columns:minmax(96px,128px) minmax(0,1fr) 36px}.viz-bar-label{font-size:12px}}
+@media(max-width:760px){.viz-grid-2col,.viz-atlas-grid{grid-template-columns:minmax(0,1fr)}.viz-bar-row{grid-template-columns:minmax(96px,128px) minmax(0,1fr) 36px}.viz-bar-label{font-size:12px}.viz-atlas-panel img{height:220px}}
 </style>
