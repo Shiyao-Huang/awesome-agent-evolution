@@ -419,6 +419,11 @@
 | VectorSpaceLab General Agentic Memory | [VectorSpaceLab/general-agentic-memory](https://github.com/VectorSpaceLab/general-agentic-memory) | General Agentic Memory Framework with Cross-Task Reuse | [projects/388-vectorspacelab-general-agentic-memory.md](388-vectorspacelab-general-agentic-memory.md) |
 | Nocturne Memory Context Engine | [Dataojitori/nocturne_memory](https://github.com/Dataojitori/nocturne_memory) | Context-Aware Long-Term Memory Engine for AI Agents | [projects/389-nocturne-memory-context-engine.md](389-nocturne-memory-context-engine.md) |
 
+| Plaited Agent Eval Harness | [plaited/agent-eval-harness](https://github.com/plaited/agent-eval-harness) | CLI Agent Evaluation Harness with Schema-Driven Trial Pipelines | [projects/390-plaited-agent-eval-harness.md](390-plaited-agent-eval-harness.md) |
+| MultiAgentEval Enterprise Harness | [najeed/ai-agent-eval-harness](https://github.com/najeed/ai-agent-eval-harness) | Enterprise Multi-Agent Evaluation and Verification Harness | [projects/391-multiagenteval-enterprise-harness.md](391-multiagenteval-enterprise-harness.md) |
+| Arc Continual Learning Benchmark | [Arc-Computer/CL-Bench](https://github.com/Arc-Computer/CL-Bench) | Stateful Continual-Learning Benchmark for LLM Agents | [projects/392-arc-continual-learning-benchmark.md](392-arc-continual-learning-benchmark.md) |
+| ClawVault Memory Runtime | [Versatly/clawvault](https://github.com/Versatly/clawvault) | Persistent Memory Runtime for OpenClaw-Style AI Agents | [projects/393-clawvault-memory-runtime.md](393-clawvault-memory-runtime.md) |
+
 ## Data Use
 
 Project files are teaching/model-card entries. Public copies under `site/public/reports/projects/` are the website-facing result layer.

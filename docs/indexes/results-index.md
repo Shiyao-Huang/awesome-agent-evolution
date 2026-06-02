@@ -10,10 +10,10 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `reports` | present | 14 | 2 | 0 | 97 KB |
-| `output` | present | 8 | 1 | 0 | 676 KB |
-| `site/public/reports` | present | 494 | 6 | 0 | 3.6 MB |
-| `site/dist` | present | 955 | 419 | 0 | 29 MB |
+| `reports` | present | 14 | 2 | 0 | 98 KB |
+| `output` | present | 8 | 1 | 0 | 679 KB |
+| `site/public/reports` | present | 498 | 6 | 0 | 3.6 MB |
+| `site/dist` | present | 963 | 423 | 0 | 29 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 1.6 MB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 

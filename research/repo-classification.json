@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T07:54:27+08:00",
+  "generated_at": "2026-06-02T13:53:05+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -870,6 +870,21 @@
       "content_timestamp": "2026-06-02",
       "evidence": "web-observed GitHub page showed 2.1k stars, 228 forks, 152 commits, Apache-2.0 license, and explicit reusable coding-agent skills positioning.",
       "description": "apify/agent-skills curates reusable skills for coding agents to improve execution quality across software and automation tasks."
+    },
+    {
+      "repo": "Arc-Computer/CL-Bench",
+      "url": "https://github.com/Arc-Computer/CL-Bench",
+      "stars": "19",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-suite",
+      "base_theme": "evaluation",
+      "stack": "Python/SQL/CRM Workflow Benchmark",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 19 stars, 3 forks, 50 commits, Apache-2.0 license, and explicit continual-learning benchmark framing for stateful environments.",
+      "description": "Arc-Computer/CL-Bench is a benchmark framework for evaluating LLM agent continual learning in stateful environments with CRM-style workflows."
     },
     {
       "repo": "ArcadeAI/openclaw-arcade-plugin",
@@ -5627,6 +5642,21 @@
       "description": "Monte Carlo Tree Search Self-Refine (MCTSr)"
     },
     {
+      "repo": "najeed/ai-agent-eval-harness",
+      "url": "https://github.com/najeed/ai-agent-eval-harness",
+      "stars": "28",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-suite",
+      "base_theme": "evaluation",
+      "stack": "Python/Docker/Enterprise Agent Eval Harness",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 28 stars, 6 forks, 252 commits, Apache-2.0 license, and MultiAgentEval reliability-framework positioning.",
+      "description": "najeed/ai-agent-eval-harness is an enterprise-grade reliability framework for AI agents with benchmark, replay, and verification surfaces."
+    },
+    {
       "repo": "nemori-ai/nemori",
       "url": "https://github.com/nemori-ai/nemori",
       "stars": "202",
@@ -6675,6 +6705,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 462 commits, MIT license, R/JavaScript/CSS/Shell stack, .claude-plugin/skills/agents/teams/viz folders, 350-skill and 72-agent README claims from search snippet, release v1.3.0 latest May 4 2026, 17 stars and 2 forks",
       "description": "Agent Almanac 是 executable skills、specialist agents 和 pre-built teams 的索引库，用技能目录、agent/team 编排和交互可视化帮助 AI-assisted development 复用操作流程。"
+    },
+    {
+      "repo": "plaited/agent-eval-harness",
+      "url": "https://github.com/plaited/agent-eval-harness",
+      "stars": "3",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-suite",
+      "base_theme": "evaluation",
+      "stack": "TypeScript/Bun/CLI Agent Eval Harness",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 3 stars, 1 fork, 73 commits, ISC license, and explicit run/grade/compare/calibrate eval pipeline framing.",
+      "description": "plaited/agent-eval-harness provides a Unix-style, schema-driven evaluation harness for CLI agents with run, grade, compare, and calibrate modes."
     },
     {
       "repo": "plastic-labs/honcho",
@@ -8970,6 +9015,21 @@
       "content_timestamp": "2026-04-17",
       "evidence": "framework/runtime/orchestration signal",
       "description": "Workflow SDK: Build durable, reliable, and observable apps and AI Agents in TypeScript"
+    },
+    {
+      "repo": "Versatly/clawvault",
+      "url": "https://github.com/Versatly/clawvault",
+      "stars": "646",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "TypeScript/Node/OpenClaw Memory Runtime",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 646 stars, 62 forks, 689 commits, MIT license, benchmark and eval directories, and OpenClaw-oriented persistent-memory framing with a deprecation boundary for fresh deployments.",
+      "description": "Versatly/clawvault provides structured persistent memory for AI agents and exposes benchmarks, docs, and eval surfaces around that memory stack."
     },
     {
       "repo": "vicsanity623/pyob",

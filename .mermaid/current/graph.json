@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T07:54:27+08:00",
+  "generated_at": "2026-06-02T13:53:05+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -366,7 +366,11 @@
         "raw-github/agentevals-dev_agentevals.md",
         "raw-github/alucek_agentic-memory.md",
         "raw-github/vectorspacelab_general-agentic-memory.md",
-        "raw-github/dataojitori_nocturne_memory.md"
+        "raw-github/dataojitori_nocturne_memory.md",
+        "raw-github/plaited_agent-eval-harness.md",
+        "raw-github/najeed_ai-agent-eval-harness.md",
+        "raw-github/arc-computer_cl-bench.md",
+        "raw-github/versatly_clawvault.md"
       ],
       "intent": {
         "one_sentence": "Keep public GitHub evidence raw and timestamped before analysis.",
@@ -521,7 +525,8 @@
         "work/research/hourly-public-metadata-update-2026-06-01-1352.md",
         "work/research/hourly-public-metadata-update-2026-06-01-1951.md",
         "work/research/hourly-public-metadata-update-2026-06-02-0155.md",
-        "work/research/hourly-public-metadata-update-2026-06-02-0754.md"
+        "work/research/hourly-public-metadata-update-2026-06-02-0754.md",
+        "work/research/hourly-public-metadata-update-2026-06-02-1353.md"
       ],
       "intent": {
         "one_sentence": "Record blockers, evidence quality, and working principle for the next agent.",
@@ -1195,7 +1200,15 @@
         "projects/388-vectorspacelab-general-agentic-memory.md",
         "site/public/reports/projects/388-vectorspacelab-general-agentic-memory.md",
         "projects/389-nocturne-memory-context-engine.md",
-        "site/public/reports/projects/389-nocturne-memory-context-engine.md"
+        "site/public/reports/projects/389-nocturne-memory-context-engine.md",
+        "projects/390-plaited-agent-eval-harness.md",
+        "site/public/reports/projects/390-plaited-agent-eval-harness.md",
+        "projects/391-multiagenteval-enterprise-harness.md",
+        "site/public/reports/projects/391-multiagenteval-enterprise-harness.md",
+        "projects/392-arc-continual-learning-benchmark.md",
+        "site/public/reports/projects/392-arc-continual-learning-benchmark.md",
+        "projects/393-clawvault-memory-runtime.md",
+        "site/public/reports/projects/393-clawvault-memory-runtime.md"
       ],
       "intent": {
         "one_sentence": "Expose the metadata delta to the SEO/project site instead of leaving it internal.",
@@ -1520,18 +1533,15 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-06-02T07:54:27+08:00",
+    "run_at": "2026-06-02T13:53:05+08:00",
     "added_repositories": [
-      "agentralabs/agentic-memory",
-      "lhl/agentic-memory",
-      "langchain-ai/agentevals",
-      "agentevals-dev/agentevals",
-      "ALucek/agentic-memory",
-      "VectorSpaceLab/general-agentic-memory",
-      "Dataojitori/nocturne_memory"
+      "plaited/agent-eval-harness",
+      "najeed/ai-agent-eval-harness",
+      "Arc-Computer/CL-Bench",
+      "Versatly/clawvault"
     ],
     "evidence_quality": "web_observed_public_github_pages; shell GitHub API DNS failed and gh token invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
+    "gitnexus_status": "available; local CLI exists, initial status was stale, reanalysis attempted in this iteration"
   }
 }

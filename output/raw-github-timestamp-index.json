@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-02T00:00:00+08:00",
-  "total": 666,
-  "updated_files": 666,
+  "total": 670,
+  "updated_files": 670,
   "unknown_content_timestamp": 108,
   "records": [
     {
@@ -523,6 +523,15 @@
       "file": "raw-github/apify_agent-skills.md",
       "content_timestamp": "2026-06-02",
       "collected_at": "2026-06-02T01:55:44+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
+    },
+    {
+      "repo": "Arc-Computer/CL-Bench",
+      "url": "https://github.com/Arc-Computer/CL-Bench",
+      "file": "raw-github/arc-computer_cl-bench.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T13:53:05+08:00",
       "time_slice": "2026-06",
       "timestamp_source": "web_observed_public_github_page_2026_06_02"
     },
@@ -3380,6 +3389,15 @@
       "timestamp_source": "unknown_not_present_in_raw_capture"
     },
     {
+      "repo": "najeed/ai-agent-eval-harness",
+      "url": "https://github.com/najeed/ai-agent-eval-harness",
+      "file": "raw-github/najeed_ai-agent-eval-harness.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T13:53:05+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
+    },
+    {
       "repo": "nemori-ai/nemori",
       "url": "https://github.com/nemori-ai/nemori",
       "file": "raw-github/nemori-ai_nemori.md",
@@ -4008,6 +4026,15 @@
       "collected_at": "2026-05-24T16:06:00Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "plaited/agent-eval-harness",
+      "url": "https://github.com/plaited/agent-eval-harness",
+      "file": "raw-github/plaited_agent-eval-harness.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T13:53:05+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
     },
     {
       "repo": "plastic-labs/honcho",
@@ -5385,6 +5412,15 @@
       "collected_at": "2026-05-24T19:09:37Z",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_github_page"
+    },
+    {
+      "repo": "Versatly/clawvault",
+      "url": "https://github.com/Versatly/clawvault",
+      "file": "raw-github/versatly_clawvault.md",
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T13:53:05+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_02"
     },
     {
       "repo": "vicsanity623/pyob",

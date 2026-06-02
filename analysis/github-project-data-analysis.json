@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-02T03:11:36.099Z",
+  "generated_at": "2026-06-02T06:07:58.086Z",
   "counts": {
-    "raw_captures": 666,
-    "raw_files_on_disk": 666,
-    "classified_repos": 666,
-    "analyzed_projects": 259,
-    "analyzed_in_raw_timestamp_index": 207,
-    "analyzed_in_classification": 207,
+    "raw_captures": 670,
+    "raw_files_on_disk": 670,
+    "classified_repos": 670,
+    "analyzed_projects": 263,
+    "analyzed_in_raw_timestamp_index": 211,
+    "analyzed_in_classification": 211,
     "analyzed_evolution_focused": 78,
     "analyzed_with_verified_created_at": 25,
     "analyzed_with_first_observed_fallback": 54,
@@ -15,7 +15,7 @@
     "analyzed_with_local_git_history_24m": 76,
     "analyzed_with_local_git_commits_24m": 72,
     "analyzed_with_local_git_tags_24m": 5,
-    "analyzed_with_public_report": 259,
+    "analyzed_with_public_report": 263,
     "raw_core_evolution": 95,
     "raw_broad_evolution": 202,
     "raw_unknown_time_slice": 108
@@ -23,14 +23,14 @@
   "raw_category_counts": [
     {
       "key": "框架/framework",
-      "count": 196
-    },
-    {
-      "key": "教程/tutorial",
-      "count": 131
+      "count": 197
     },
     {
       "key": "评测/evaluation",
+      "count": 134
+    },
+    {
+      "key": "教程/tutorial",
       "count": 131
     },
     {
@@ -53,11 +53,11 @@
   "raw_theme_counts": [
     {
       "key": "memory",
-      "count": 145
+      "count": 146
     },
     {
       "key": "evaluation",
-      "count": 126
+      "count": 129
     },
     {
       "key": "skill",
@@ -514,6 +514,10 @@
       "count": 1
     },
     {
+      "key": "Python/Docker/Enterprise Agent Eval Harness",
+      "count": 1
+    },
+    {
       "key": "Python/ElizaOS Plugin/Memory Runtime Integration",
       "count": 1
     },
@@ -710,6 +714,10 @@
       "count": 1
     },
     {
+      "key": "Python/SQL/CRM Workflow Benchmark",
+      "count": 1
+    },
+    {
       "key": "Python/SQLite/Markdown Memory Store",
       "count": 1
     },
@@ -806,6 +814,10 @@
       "count": 1
     },
     {
+      "key": "TypeScript/Bun/CLI Agent Eval Harness",
+      "count": 1
+    },
+    {
       "key": "TypeScript/Bun/On-Device Memory Layer/RAG Hooks",
       "count": 1
     },
@@ -863,6 +875,10 @@
     },
     {
       "key": "TypeScript/Node.js/Docker/Agent Skills",
+      "count": 1
+    },
+    {
+      "key": "TypeScript/Node/OpenClaw Memory Runtime",
       "count": 1
     },
     {
@@ -1001,7 +1017,7 @@
     },
     {
       "key": "2026-06",
-      "count": 35
+      "count": 39
     },
     {
       "key": "2024-Q2",
@@ -1074,12 +1090,12 @@
   ],
   "analyzed_theme_counts": [
     {
-      "key": "not-classified",
+      "key": "memory",
       "count": 52
     },
     {
-      "key": "memory",
-      "count": 51
+      "key": "not-classified",
+      "count": 52
     },
     {
       "key": "skill",
@@ -1087,7 +1103,7 @@
     },
     {
       "key": "evaluation",
-      "count": 43
+      "count": 46
     },
     {
       "key": "evolution",
@@ -1125,7 +1141,7 @@
   "analyzed_created_month_counts": [
     {
       "key": "unknown",
-      "count": 234
+      "count": 238
     },
     {
       "key": "2023-03",
@@ -3203,6 +3219,21 @@
       "content_timestamp": "2026-06-02",
       "evidence": "web-observed GitHub page showed 2.1k stars, 228 forks, 152 commits, Apache-2.0 license, and explicit reusable coding-agent skills positioning.",
       "description": "apify/agent-skills curates reusable skills for coding agents to improve execution quality across software and automation tasks."
+    },
+    {
+      "repo": "Arc-Computer/CL-Bench",
+      "url": "https://github.com/Arc-Computer/CL-Bench",
+      "stars": "19",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-suite",
+      "base_theme": "evaluation",
+      "stack": "Python/SQL/CRM Workflow Benchmark",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 19 stars, 3 forks, 50 commits, Apache-2.0 license, and explicit continual-learning benchmark framing for stateful environments.",
+      "description": "Arc-Computer/CL-Bench is a benchmark framework for evaluating LLM agent continual learning in stateful environments with CRM-style workflows."
     },
     {
       "repo": "ArcadeAI/openclaw-arcade-plugin",
@@ -7960,6 +7991,21 @@
       "description": "Monte Carlo Tree Search Self-Refine (MCTSr)"
     },
     {
+      "repo": "najeed/ai-agent-eval-harness",
+      "url": "https://github.com/najeed/ai-agent-eval-harness",
+      "stars": "28",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-suite",
+      "base_theme": "evaluation",
+      "stack": "Python/Docker/Enterprise Agent Eval Harness",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 28 stars, 6 forks, 252 commits, Apache-2.0 license, and MultiAgentEval reliability-framework positioning.",
+      "description": "najeed/ai-agent-eval-harness is an enterprise-grade reliability framework for AI agents with benchmark, replay, and verification surfaces."
+    },
+    {
       "repo": "nemori-ai/nemori",
       "url": "https://github.com/nemori-ai/nemori",
       "stars": "202",
@@ -9008,6 +9054,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 462 commits, MIT license, R/JavaScript/CSS/Shell stack, .claude-plugin/skills/agents/teams/viz folders, 350-skill and 72-agent README claims from search snippet, release v1.3.0 latest May 4 2026, 17 stars and 2 forks",
       "description": "Agent Almanac 是 executable skills、specialist agents 和 pre-built teams 的索引库，用技能目录、agent/team 编排和交互可视化帮助 AI-assisted development 复用操作流程。"
+    },
+    {
+      "repo": "plaited/agent-eval-harness",
+      "url": "https://github.com/plaited/agent-eval-harness",
+      "stars": "3",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-suite",
+      "base_theme": "evaluation",
+      "stack": "TypeScript/Bun/CLI Agent Eval Harness",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 3 stars, 1 fork, 73 commits, ISC license, and explicit run/grade/compare/calibrate eval pipeline framing.",
+      "description": "plaited/agent-eval-harness provides a Unix-style, schema-driven evaluation harness for CLI agents with run, grade, compare, and calibrate modes."
     },
     {
       "repo": "plastic-labs/honcho",
@@ -11303,6 +11364,21 @@
       "content_timestamp": "2026-04-17",
       "evidence": "framework/runtime/orchestration signal",
       "description": "Workflow SDK: Build durable, reliable, and observable apps and AI Agents in TypeScript"
+    },
+    {
+      "repo": "Versatly/clawvault",
+      "url": "https://github.com/Versatly/clawvault",
+      "stars": "646",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "memory-runtime",
+      "base_theme": "memory",
+      "stack": "TypeScript/Node/OpenClaw Memory Runtime",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 646 stars, 62 forks, 689 commits, MIT license, benchmark and eval directories, and OpenClaw-oriented persistent-memory framing with a deprecation boundary for fresh deployments.",
+      "description": "Versatly/clawvault provides structured persistent memory for AI agents and exposes benchmarks, docs, and eval surfaces around that memory stack."
     },
     {
       "repo": "vicsanity623/pyob",
@@ -30425,6 +30501,198 @@
       "raw_time_slice": "2026-06",
       "classified_theme": "memory",
       "evolution_focused": false
+    },
+    {
+      "name": "Plaited Agent Eval Harness",
+      "repo": "plaited/agent-eval-harness",
+      "normalized_repo": "plaited/agent-eval-harness",
+      "url": "https://github.com/plaited/agent-eval-harness",
+      "category": "CLI Agent Evaluation Harness with Schema-Driven Trial Pipelines",
+      "pattern": "define adapter schemas for any CLI agent -> capture raw trajectories over task suites -> grade and compare multi-run outputs -> turn agent release quality into repeatable pass@k-style evidence",
+      "tags": [
+        "evaluation",
+        "harness",
+        "cli-agent",
+        "schema",
+        "benchmark"
+      ],
+      "site_stars": 3,
+      "site_forks": 1,
+      "license": "ISC",
+      "lastPushed": "2026-06-02T00:00:00Z",
+      "localPath": "raw-github/plaited_agent-eval-harness.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/390-plaited-agent-eval-harness.md",
+      "public_report": "site/public/reports/projects/390-plaited-agent-eval-harness.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "plaited/agent-eval-harness provides a Unix-style, schema-driven evaluation harness for CLI agents with run, grade, compare, and calibrate modes.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/plaited_agent-eval-harness.md",
+      "raw_collected_at": "2026-06-02T13:53:05+08:00",
+      "raw_content_timestamp": "2026-06-02",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_02",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-suite",
+      "classification_evidence": "web-observed GitHub page showed 3 stars, 1 fork, 73 commits, ISC license, and explicit run/grade/compare/calibrate eval pipeline framing.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
+      "name": "MultiAgentEval Enterprise Harness",
+      "repo": "najeed/ai-agent-eval-harness",
+      "normalized_repo": "najeed/ai-agent-eval-harness",
+      "url": "https://github.com/najeed/ai-agent-eval-harness",
+      "category": "Enterprise Multi-Agent Evaluation and Verification Harness",
+      "pattern": "simulate business workflows through benchmark scenarios and shims -> replay deep traces for verification and debugging -> compare agent reliability across environments and workflows -> close the agentic reliability gap with explicit eval infrastructure",
+      "tags": [
+        "evaluation",
+        "verification",
+        "enterprise",
+        "multi-agent",
+        "harness"
+      ],
+      "site_stars": 28,
+      "site_forks": 6,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-06-02T00:00:00Z",
+      "localPath": "raw-github/najeed_ai-agent-eval-harness.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/391-multiagenteval-enterprise-harness.md",
+      "public_report": "site/public/reports/projects/391-multiagenteval-enterprise-harness.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "najeed/ai-agent-eval-harness is an enterprise-grade reliability framework for AI agents with benchmark, replay, and verification surfaces.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/najeed_ai-agent-eval-harness.md",
+      "raw_collected_at": "2026-06-02T13:53:05+08:00",
+      "raw_content_timestamp": "2026-06-02",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_02",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-suite",
+      "classification_evidence": "web-observed GitHub page showed 28 stars, 6 forks, 252 commits, Apache-2.0 license, and MultiAgentEval reliability-framework positioning.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
+      "name": "Arc Continual Learning Benchmark",
+      "repo": "Arc-Computer/CL-Bench",
+      "normalized_repo": "arc-computer/cl-bench",
+      "url": "https://github.com/Arc-Computer/CL-Bench",
+      "category": "Stateful Continual-Learning Benchmark for LLM Agents",
+      "pattern": "place agents inside stateful multi-turn workflows -> mutate persistent entities under production-style constraints -> evaluate adaptation and reliability under cross-turn dependencies -> use continual-learning pressure instead of one-shot benchmark snapshots",
+      "tags": [
+        "benchmark",
+        "continual-learning",
+        "stateful",
+        "agent",
+        "crm-workflow"
+      ],
+      "site_stars": 19,
+      "site_forks": 3,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-06-02T00:00:00Z",
+      "localPath": "raw-github/arc-computer_cl-bench.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/392-arc-continual-learning-benchmark.md",
+      "public_report": "site/public/reports/projects/392-arc-continual-learning-benchmark.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "Arc-Computer/CL-Bench is a benchmark framework for evaluating LLM agent continual learning in stateful environments with CRM-style workflows.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/arc-computer_cl-bench.md",
+      "raw_collected_at": "2026-06-02T13:53:05+08:00",
+      "raw_content_timestamp": "2026-06-02",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_02",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-suite",
+      "classification_evidence": "web-observed GitHub page showed 19 stars, 3 forks, 50 commits, Apache-2.0 license, and explicit continual-learning benchmark framing for stateful environments.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
+      "name": "ClawVault Memory Runtime",
+      "repo": "Versatly/clawvault",
+      "normalized_repo": "versatly/clawvault",
+      "url": "https://github.com/Versatly/clawvault",
+      "category": "Persistent Memory Runtime for OpenClaw-Style AI Agents",
+      "pattern": "store structured memory for autonomous agent workflows -> expose retrieval and evaluation surfaces to long-horizon tasks -> integrate memory into OpenClaw-style execution loops -> treat persistence as a runtime subsystem rather than a prompt-only trick",
+      "tags": [
+        "memory",
+        "runtime",
+        "openclaw",
+        "persistent-context",
+        "agent"
+      ],
+      "site_stars": 646,
+      "site_forks": 62,
+      "license": "MIT",
+      "lastPushed": "2026-06-02T00:00:00Z",
+      "localPath": "raw-github/versatly_clawvault.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/393-clawvault-memory-runtime.md",
+      "public_report": "site/public/reports/projects/393-clawvault-memory-runtime.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "Versatly/clawvault provides structured persistent memory for AI agents and exposes benchmarks, docs, and eval surfaces around that memory stack.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/versatly_clawvault.md",
+      "raw_collected_at": "2026-06-02T13:53:05+08:00",
+      "raw_content_timestamp": "2026-06-02",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_02",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "memory-runtime",
+      "classification_evidence": "web-observed GitHub page showed 646 stars, 62 forks, 689 commits, MIT license, benchmark and eval directories, and OpenClaw-oriented persistent-memory framing with a deprecation boundary for fresh deployments.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "memory",
+      "evolution_focused": false
     }
   ],
   "analyzed_git_evidence": [
@@ -36904,6 +37172,54 @@
       "evolution_focused": false
     },
     {
+      "name": "ClawVault Memory Runtime",
+      "repo": "Versatly/clawvault",
+      "normalized_repo": "versatly/clawvault",
+      "url": "https://github.com/Versatly/clawvault",
+      "category": "Persistent Memory Runtime for OpenClaw-Style AI Agents",
+      "pattern": "store structured memory for autonomous agent workflows -> expose retrieval and evaluation surfaces to long-horizon tasks -> integrate memory into OpenClaw-style execution loops -> treat persistence as a runtime subsystem rather than a prompt-only trick",
+      "tags": [
+        "memory",
+        "runtime",
+        "openclaw",
+        "persistent-context",
+        "agent"
+      ],
+      "site_stars": 646,
+      "site_forks": 62,
+      "license": "MIT",
+      "lastPushed": "2026-06-02T00:00:00Z",
+      "localPath": "raw-github/versatly_clawvault.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/393-clawvault-memory-runtime.md",
+      "public_report": "site/public/reports/projects/393-clawvault-memory-runtime.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "Versatly/clawvault provides structured persistent memory for AI agents and exposes benchmarks, docs, and eval surfaces around that memory stack.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/versatly_clawvault.md",
+      "raw_collected_at": "2026-06-02T13:53:05+08:00",
+      "raw_content_timestamp": "2026-06-02",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_02",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "memory-runtime",
+      "classification_evidence": "web-observed GitHub page showed 646 stars, 62 forks, 689 commits, MIT license, benchmark and eval directories, and OpenClaw-oriented persistent-memory framing with a deprecation boundary for fresh deployments.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
       "name": "Memoir",
       "repo": "zhangfengcdt/memoir",
       "normalized_repo": "zhangfengcdt/memoir",
@@ -41917,6 +42233,54 @@
       "evolution_focused": false
     },
     {
+      "name": "MultiAgentEval Enterprise Harness",
+      "repo": "najeed/ai-agent-eval-harness",
+      "normalized_repo": "najeed/ai-agent-eval-harness",
+      "url": "https://github.com/najeed/ai-agent-eval-harness",
+      "category": "Enterprise Multi-Agent Evaluation and Verification Harness",
+      "pattern": "simulate business workflows through benchmark scenarios and shims -> replay deep traces for verification and debugging -> compare agent reliability across environments and workflows -> close the agentic reliability gap with explicit eval infrastructure",
+      "tags": [
+        "evaluation",
+        "verification",
+        "enterprise",
+        "multi-agent",
+        "harness"
+      ],
+      "site_stars": 28,
+      "site_forks": 6,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-06-02T00:00:00Z",
+      "localPath": "raw-github/najeed_ai-agent-eval-harness.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/391-multiagenteval-enterprise-harness.md",
+      "public_report": "site/public/reports/projects/391-multiagenteval-enterprise-harness.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "najeed/ai-agent-eval-harness is an enterprise-grade reliability framework for AI agents with benchmark, replay, and verification surfaces.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/najeed_ai-agent-eval-harness.md",
+      "raw_collected_at": "2026-06-02T13:53:05+08:00",
+      "raw_content_timestamp": "2026-06-02",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_02",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-suite",
+      "classification_evidence": "web-observed GitHub page showed 28 stars, 6 forks, 252 commits, Apache-2.0 license, and MultiAgentEval reliability-framework positioning.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
       "name": "QF-Bench",
       "repo": "QF-Bench/QuantitativeFinance-Bench",
       "normalized_repo": "qf-bench/quantitativefinance-bench",
@@ -42250,6 +42614,54 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "evolution",
       "evolution_focused": true
+    },
+    {
+      "name": "Arc Continual Learning Benchmark",
+      "repo": "Arc-Computer/CL-Bench",
+      "normalized_repo": "arc-computer/cl-bench",
+      "url": "https://github.com/Arc-Computer/CL-Bench",
+      "category": "Stateful Continual-Learning Benchmark for LLM Agents",
+      "pattern": "place agents inside stateful multi-turn workflows -> mutate persistent entities under production-style constraints -> evaluate adaptation and reliability under cross-turn dependencies -> use continual-learning pressure instead of one-shot benchmark snapshots",
+      "tags": [
+        "benchmark",
+        "continual-learning",
+        "stateful",
+        "agent",
+        "crm-workflow"
+      ],
+      "site_stars": 19,
+      "site_forks": 3,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-06-02T00:00:00Z",
+      "localPath": "raw-github/arc-computer_cl-bench.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/392-arc-continual-learning-benchmark.md",
+      "public_report": "site/public/reports/projects/392-arc-continual-learning-benchmark.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "Arc-Computer/CL-Bench is a benchmark framework for evaluating LLM agent continual learning in stateful environments with CRM-style workflows.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/arc-computer_cl-bench.md",
+      "raw_collected_at": "2026-06-02T13:53:05+08:00",
+      "raw_content_timestamp": "2026-06-02",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_02",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-suite",
+      "classification_evidence": "web-observed GitHub page showed 19 stars, 3 forks, 50 commits, Apache-2.0 license, and explicit continual-learning benchmark framing for stateful environments.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
     },
     {
       "name": "AgentraLabs Agentic Memory Runtime",
@@ -43732,6 +44144,54 @@
       "classification_function_tag": "benchmark-eval",
       "classification_evidence": "web-observed GitHub page showed 15 commits, 3 stars, 0 forks, Python language, continuity benchmark topics, 250 narrative stories, 1,835 verification questions, 10 checkpoints, no LLM in the evaluation loop, arXiv links and Hugging Face corpus link.",
       "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
+      "name": "Plaited Agent Eval Harness",
+      "repo": "plaited/agent-eval-harness",
+      "normalized_repo": "plaited/agent-eval-harness",
+      "url": "https://github.com/plaited/agent-eval-harness",
+      "category": "CLI Agent Evaluation Harness with Schema-Driven Trial Pipelines",
+      "pattern": "define adapter schemas for any CLI agent -> capture raw trajectories over task suites -> grade and compare multi-run outputs -> turn agent release quality into repeatable pass@k-style evidence",
+      "tags": [
+        "evaluation",
+        "harness",
+        "cli-agent",
+        "schema",
+        "benchmark"
+      ],
+      "site_stars": 3,
+      "site_forks": 1,
+      "license": "ISC",
+      "lastPushed": "2026-06-02T00:00:00Z",
+      "localPath": "raw-github/plaited_agent-eval-harness.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/390-plaited-agent-eval-harness.md",
+      "public_report": "site/public/reports/projects/390-plaited-agent-eval-harness.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "plaited/agent-eval-harness provides a Unix-style, schema-driven evaluation harness for CLI agents with run, grade, compare, and calibrate modes.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/plaited_agent-eval-harness.md",
+      "raw_collected_at": "2026-06-02T13:53:05+08:00",
+      "raw_content_timestamp": "2026-06-02",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_02",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-suite",
+      "classification_evidence": "web-observed GitHub page showed 3 stars, 1 fork, 73 commits, ISC license, and explicit run/grade/compare/calibrate eval pipeline framing.",
+      "raw_time_slice": "2026-06",
       "classified_theme": "evaluation",
       "evolution_focused": false
     },
@@ -46733,6 +47193,54 @@
       "classification_evidence": "web-observed GitHub page showed 2.1k stars, 228 forks, 152 commits, Apache-2.0 license, and explicit reusable coding-agent skills positioning.",
       "raw_time_slice": "2026-06",
       "classified_theme": "skill",
+      "evolution_focused": false
+    },
+    {
+      "name": "Arc Continual Learning Benchmark",
+      "repo": "Arc-Computer/CL-Bench",
+      "normalized_repo": "arc-computer/cl-bench",
+      "url": "https://github.com/Arc-Computer/CL-Bench",
+      "category": "Stateful Continual-Learning Benchmark for LLM Agents",
+      "pattern": "place agents inside stateful multi-turn workflows -> mutate persistent entities under production-style constraints -> evaluate adaptation and reliability under cross-turn dependencies -> use continual-learning pressure instead of one-shot benchmark snapshots",
+      "tags": [
+        "benchmark",
+        "continual-learning",
+        "stateful",
+        "agent",
+        "crm-workflow"
+      ],
+      "site_stars": 19,
+      "site_forks": 3,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-06-02T00:00:00Z",
+      "localPath": "raw-github/arc-computer_cl-bench.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/392-arc-continual-learning-benchmark.md",
+      "public_report": "site/public/reports/projects/392-arc-continual-learning-benchmark.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "Arc-Computer/CL-Bench is a benchmark framework for evaluating LLM agent continual learning in stateful environments with CRM-style workflows.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/arc-computer_cl-bench.md",
+      "raw_collected_at": "2026-06-02T13:53:05+08:00",
+      "raw_content_timestamp": "2026-06-02",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_02",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-suite",
+      "classification_evidence": "web-observed GitHub page showed 19 stars, 3 forks, 50 commits, Apache-2.0 license, and explicit continual-learning benchmark framing for stateful environments.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "evaluation",
       "evolution_focused": false
     },
     {
@@ -52438,6 +52946,54 @@
       "evolution_focused": false
     },
     {
+      "name": "MultiAgentEval Enterprise Harness",
+      "repo": "najeed/ai-agent-eval-harness",
+      "normalized_repo": "najeed/ai-agent-eval-harness",
+      "url": "https://github.com/najeed/ai-agent-eval-harness",
+      "category": "Enterprise Multi-Agent Evaluation and Verification Harness",
+      "pattern": "simulate business workflows through benchmark scenarios and shims -> replay deep traces for verification and debugging -> compare agent reliability across environments and workflows -> close the agentic reliability gap with explicit eval infrastructure",
+      "tags": [
+        "evaluation",
+        "verification",
+        "enterprise",
+        "multi-agent",
+        "harness"
+      ],
+      "site_stars": 28,
+      "site_forks": 6,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-06-02T00:00:00Z",
+      "localPath": "raw-github/najeed_ai-agent-eval-harness.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/391-multiagenteval-enterprise-harness.md",
+      "public_report": "site/public/reports/projects/391-multiagenteval-enterprise-harness.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "najeed/ai-agent-eval-harness is an enterprise-grade reliability framework for AI agents with benchmark, replay, and verification surfaces.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/najeed_ai-agent-eval-harness.md",
+      "raw_collected_at": "2026-06-02T13:53:05+08:00",
+      "raw_content_timestamp": "2026-06-02",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_02",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-suite",
+      "classification_evidence": "web-observed GitHub page showed 28 stars, 6 forks, 252 commits, Apache-2.0 license, and MultiAgentEval reliability-framework positioning.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
       "name": "Nemori",
       "repo": "nemori-ai/nemori",
       "normalized_repo": "nemori-ai/nemori",
@@ -54129,6 +54685,54 @@
       "classification_function_tag": "resource-index",
       "classification_evidence": "web-observed GitHub page showed 673 stars, 53 forks, 35 commits, and README sections covering benchmark suites, open-source frameworks, and end-to-end harness ecosystem mapping.",
       "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
+      "name": "Plaited Agent Eval Harness",
+      "repo": "plaited/agent-eval-harness",
+      "normalized_repo": "plaited/agent-eval-harness",
+      "url": "https://github.com/plaited/agent-eval-harness",
+      "category": "CLI Agent Evaluation Harness with Schema-Driven Trial Pipelines",
+      "pattern": "define adapter schemas for any CLI agent -> capture raw trajectories over task suites -> grade and compare multi-run outputs -> turn agent release quality into repeatable pass@k-style evidence",
+      "tags": [
+        "evaluation",
+        "harness",
+        "cli-agent",
+        "schema",
+        "benchmark"
+      ],
+      "site_stars": 3,
+      "site_forks": 1,
+      "license": "ISC",
+      "lastPushed": "2026-06-02T00:00:00Z",
+      "localPath": "raw-github/plaited_agent-eval-harness.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/390-plaited-agent-eval-harness.md",
+      "public_report": "site/public/reports/projects/390-plaited-agent-eval-harness.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "plaited/agent-eval-harness provides a Unix-style, schema-driven evaluation harness for CLI agents with run, grade, compare, and calibrate modes.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/plaited_agent-eval-harness.md",
+      "raw_collected_at": "2026-06-02T13:53:05+08:00",
+      "raw_content_timestamp": "2026-06-02",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_02",
+      "in_classification": true,
+      "classification_category": "评测/evaluation",
+      "classification_function_tag": "benchmark-suite",
+      "classification_evidence": "web-observed GitHub page showed 3 stars, 1 fork, 73 commits, ISC license, and explicit run/grade/compare/calibrate eval pipeline framing.",
+      "raw_time_slice": "2026-06",
       "classified_theme": "evaluation",
       "evolution_focused": false
     },
@@ -56342,6 +56946,54 @@
       "evolution_focused": false
     },
     {
+      "name": "ClawVault Memory Runtime",
+      "repo": "Versatly/clawvault",
+      "normalized_repo": "versatly/clawvault",
+      "url": "https://github.com/Versatly/clawvault",
+      "category": "Persistent Memory Runtime for OpenClaw-Style AI Agents",
+      "pattern": "store structured memory for autonomous agent workflows -> expose retrieval and evaluation surfaces to long-horizon tasks -> integrate memory into OpenClaw-style execution loops -> treat persistence as a runtime subsystem rather than a prompt-only trick",
+      "tags": [
+        "memory",
+        "runtime",
+        "openclaw",
+        "persistent-context",
+        "agent"
+      ],
+      "site_stars": 646,
+      "site_forks": 62,
+      "license": "MIT",
+      "lastPushed": "2026-06-02T00:00:00Z",
+      "localPath": "raw-github/versatly_clawvault.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/393-clawvault-memory-runtime.md",
+      "public_report": "site/public/reports/projects/393-clawvault-memory-runtime.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "Versatly/clawvault provides structured persistent memory for AI agents and exposes benchmarks, docs, and eval surfaces around that memory stack.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/versatly_clawvault.md",
+      "raw_collected_at": "2026-06-02T13:53:05+08:00",
+      "raw_content_timestamp": "2026-06-02",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_02",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "memory-runtime",
+      "classification_evidence": "web-observed GitHub page showed 646 stars, 62 forks, 689 commits, MIT license, benchmark and eval directories, and OpenClaw-oriented persistent-memory framing with a deprecation boundary for fresh deployments.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
       "name": "ADHDev",
       "repo": "vilmire/adhdev",
       "normalized_repo": "vilmire/adhdev",
@@ -57721,7 +58373,7 @@
       "reference_month": "2026-06"
     },
     "coverage": {
-      "inside_window": 241,
+      "inside_window": 245,
       "older_than_window": 18,
       "future_window": 0,
       "unknown": 0
@@ -57729,7 +58381,7 @@
     "source_counts": [
       {
         "source": "site_last_pushed",
-        "count": 180
+        "count": 184
       },
       {
         "source": "local_first_observed",
@@ -58031,12 +58683,12 @@
       },
       {
         "month": "2026-06",
-        "total": 35,
+        "total": 39,
         "source_counts": {
           "github_created_at": 0,
           "local_first_observed": 0,
           "github_pushed_at": 0,
-          "site_last_pushed": 35,
+          "site_last_pushed": 39,
           "raw_content_timestamp": 0,
           "raw_collected_at": 0
         }
@@ -58291,7 +58943,7 @@
   },
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-06-02T03:11:36.099Z",
+    "reference_date": "2026-06-02T06:07:58.086Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -58330,8 +58982,8 @@
       "stars": 1440,
       "report": "projects/modelscope__agentevolver.md",
       "scores": {
-        "current_value": 83.24,
-        "time": 75.69,
+        "current_value": 83.23,
+        "time": 75.66,
         "mechanism": 100,
         "evidence": 100,
         "adoption": 59.98,
@@ -58358,8 +59010,8 @@
       "stars": 41,
       "report": "projects/zju_llm_safety__darwin.md",
       "scores": {
-        "current_value": 76.82,
-        "time": 93.57,
+        "current_value": 76.8,
+        "time": 93.54,
         "mechanism": 75,
         "evidence": 62,
         "adoption": 30.83,
@@ -58388,8 +59040,8 @@
       "stars": 43,
       "report": "projects/oppo_mente_lab__llm_self_judge.md",
       "scores": {
-        "current_value": 75.77,
-        "time": 86.41,
+        "current_value": 75.76,
+        "time": 86.39,
         "mechanism": 85,
         "evidence": 62,
         "adoption": 31.21,
@@ -58416,8 +59068,8 @@
       "stars": 6377,
       "report": "projects/algorithmicsuperintelligence__openevolve.md",
       "scores": {
-        "current_value": 70.99,
-        "time": 57.12,
+        "current_value": 70.98,
+        "time": 57.1,
         "mechanism": 79,
         "evidence": 100,
         "adoption": 72.25,
@@ -58443,8 +59095,8 @@
       "stars": 77,
       "report": "projects/jarvispei__scope.md",
       "scores": {
-        "current_value": 68.2,
-        "time": 78.5,
+        "current_value": 68.18,
+        "time": 78.48,
         "mechanism": 67,
         "evidence": 62,
         "adoption": 35.93,
@@ -58471,8 +59123,8 @@
       "stars": 98,
       "report": "projects/inter_co__science_codeevolve.md",
       "scores": {
-        "current_value": 65.66,
-        "time": 73.44,
+        "current_value": 65.65,
+        "time": 73.42,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 37.9,
@@ -58500,8 +59152,8 @@
       "stars": 274,
       "report": "projects/jarvis_xs__se_agent.md",
       "scores": {
-        "current_value": 63.48,
-        "time": 48.09,
+        "current_value": 63.47,
+        "time": 48.07,
         "mechanism": 77,
         "evidence": 100,
         "adoption": 46.32,
@@ -58811,7 +59463,7 @@
       "report": "projects/22-evoagentx-agent-evolution-framework.md",
       "scores": {
         "current_value": 56.98,
-        "time": 29.17,
+        "time": 29.16,
         "mechanism": 97,
         "evidence": 86,
         "adoption": 56.98,
@@ -59119,8 +59771,8 @@
       "stars": 426,
       "report": "projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
       "scores": {
-        "current_value": 54.19,
-        "time": 34.79,
+        "current_value": 54.18,
+        "time": 34.77,
         "mechanism": 97,
         "evidence": 56,
         "adoption": 49.95,
@@ -59180,8 +59832,8 @@
       "stars": 34604,
       "report": "projects/10-dspy-declarative-llm-programming.md",
       "scores": {
-        "current_value": 53.19,
-        "time": 29.24,
+        "current_value": 53.18,
+        "time": 29.23,
         "mechanism": 59,
         "evidence": 100,
         "adoption": 86.2,
@@ -59303,7 +59955,7 @@
       "report": "projects/23-everos-self-evolving-agents.md",
       "scores": {
         "current_value": 51.28,
-        "time": 29.17,
+        "time": 29.16,
         "mechanism": 71,
         "evidence": 86,
         "adoption": 56.98,
@@ -59487,7 +60139,7 @@
       "report": "research/projects/44-xmu-self-evolving-agents.md",
       "scores": {
         "current_value": 48.84,
-        "time": 31.09,
+        "time": 31.07,
         "mechanism": 69,
         "evidence": 68,
         "adoption": 67.98,
@@ -59884,8 +60536,8 @@
       "stars": 200,
       "report": "projects/33-self-improvement-llm.md",
       "scores": {
-        "current_value": 47.31,
-        "time": 29.17,
+        "current_value": 47.3,
+        "time": 29.16,
         "mechanism": 69,
         "evidence": 86,
         "adoption": 43.74,
@@ -59926,35 +60578,6 @@
     },
     {
       "rank": 54,
-      "repo": "DeepAuto-AI/automl-agent",
-      "name": "AutoML-Agent",
-      "url": "https://github.com/DeepAuto-AI/automl-agent",
-      "category": "多 Agent AutoML",
-      "pattern": "智能体编排 → 进化/搜索循环 → 评估器/打分器",
-      "tags": [
-        "智能体编排",
-        "Evol-Instruct",
-        "AutoML"
-      ],
-      "status": "verified",
-      "created_at": "2025-05-08T08:36:54Z",
-      "created_at_source": "github_api",
-      "first_observed_at": null,
-      "activity_at": "2025-07-11T19:39:49Z",
-      "stars": 136,
-      "report": "projects/05-automl-agent-multi-agent.md",
-      "scores": {
-        "current_value": 47.17,
-        "time": 35.93,
-        "mechanism": 59,
-        "evidence": 68,
-        "adoption": 40.58,
-        "usefulness": 63
-      },
-      "caveat": ""
-    },
-    {
-      "rank": 55,
       "repo": "dotnet/skills",
       "name": ".NET Skills",
       "url": "https://github.com/dotnet/skills",
@@ -59983,6 +60606,35 @@
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 55,
+      "repo": "DeepAuto-AI/automl-agent",
+      "name": "AutoML-Agent",
+      "url": "https://github.com/DeepAuto-AI/automl-agent",
+      "category": "多 Agent AutoML",
+      "pattern": "智能体编排 → 进化/搜索循环 → 评估器/打分器",
+      "tags": [
+        "智能体编排",
+        "Evol-Instruct",
+        "AutoML"
+      ],
+      "status": "verified",
+      "created_at": "2025-05-08T08:36:54Z",
+      "created_at_source": "github_api",
+      "first_observed_at": null,
+      "activity_at": "2025-07-11T19:39:49Z",
+      "stars": 136,
+      "report": "projects/05-automl-agent-multi-agent.md",
+      "scores": {
+        "current_value": 47.16,
+        "time": 35.91,
+        "mechanism": 59,
+        "evidence": 68,
+        "adoption": 40.58,
+        "usefulness": 63
+      },
+      "caveat": ""
     },
     {
       "rank": 56,
@@ -60601,6 +61253,37 @@
     },
     {
       "rank": 76,
+      "repo": "Versatly/clawvault",
+      "name": "ClawVault Memory Runtime",
+      "url": "https://github.com/Versatly/clawvault",
+      "category": "Persistent Memory Runtime for OpenClaw-Style AI Agents",
+      "pattern": "store structured memory for autonomous agent workflows -> expose retrieval and evaluation surfaces to long-horizon tasks -> integrate memory into OpenClaw-style execution loops -> treat persistence as a runtime subsystem rather than a prompt-only trick",
+      "tags": [
+        "memory",
+        "runtime",
+        "openclaw",
+        "persistent-context",
+        "agent"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-06-02T00:00:00Z",
+      "stars": 646,
+      "report": "projects/393-clawvault-memory-runtime.md",
+      "scores": {
+        "current_value": 45.84,
+        "time": 45,
+        "mechanism": 28,
+        "evidence": 56,
+        "adoption": 53.38,
+        "usefulness": 80
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 77,
       "repo": "mgechev/skillgrade",
       "name": "Skillgrade Agent Skill Evaluation",
       "url": "https://github.com/mgechev/skillgrade",
@@ -60630,7 +61313,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 77,
+      "rank": 78,
       "repo": "openclaw/clawhub",
       "name": "OpenClaw ClawHub",
       "url": "https://github.com/openclaw/clawhub",
@@ -60661,7 +61344,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 78,
+      "rank": 79,
       "repo": "mindfold-ai/Trellis",
       "name": "Trellis",
       "url": "https://github.com/mindfold-ai/Trellis",
@@ -60692,7 +61375,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 79,
+      "rank": 80,
       "repo": "zhangfengcdt/memoir",
       "name": "Memoir",
       "url": "https://github.com/zhangfengcdt/memoir",
@@ -60721,7 +61404,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 80,
+      "rank": 81,
       "repo": "ThisIsJeron/awesome-openclaw-plugins",
       "name": "Awesome OpenClaw Plugins (ThisIsJeron)",
       "url": "https://github.com/ThisIsJeron/awesome-openclaw-plugins",
@@ -60752,7 +61435,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 81,
+      "rank": 82,
       "repo": "redis/agent-memory-server",
       "name": "Redis Agent Memory Server",
       "url": "https://github.com/redis/agent-memory-server",
@@ -60783,7 +61466,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 82,
+      "rank": 83,
       "repo": "Corbell-AI/evalmonkey",
       "name": "EvalMonkey",
       "url": "https://github.com/Corbell-AI/evalmonkey",
@@ -60814,7 +61497,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 83,
+      "rank": 84,
       "repo": "QuantaAlpha/GitTaskBench",
       "name": "GitTaskBench",
       "url": "https://github.com/QuantaAlpha/GitTaskBench",
@@ -60845,7 +61528,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 84,
+      "rank": 85,
       "repo": "elizaOS/agentmemory",
       "name": "ElizaOS AgentMemory Plugin",
       "url": "https://github.com/elizaOS/agentmemory",
@@ -60876,7 +61559,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 85,
+      "rank": 86,
       "repo": "SWE-bench/SWE-bench",
       "name": "swe-bench",
       "url": "https://github.com/SWE-bench/SWE-bench",
@@ -60896,7 +61579,7 @@
       "report": "research/projects/60-swe-bench-evaluation.md",
       "scores": {
         "current_value": 44.99,
-        "time": 41.49,
+        "time": 41.48,
         "mechanism": 20,
         "evidence": 68,
         "adoption": 65.46,
@@ -60905,7 +61588,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 86,
+      "rank": 87,
       "repo": "princeton-nlp/SWE-agent",
       "name": "SWE-Agent",
       "url": "https://github.com/princeton-nlp/SWE-agent",
@@ -60924,8 +61607,8 @@
       "stars": 19280,
       "report": "projects/14-swe-agent-software-engineering.md",
       "scores": {
-        "current_value": 44.91,
-        "time": 28.84,
+        "current_value": 44.9,
+        "time": 28.83,
         "mechanism": 45,
         "evidence": 68,
         "adoption": 81.37,
@@ -60934,7 +61617,7 @@
       "caveat": ""
     },
     {
-      "rank": 87,
+      "rank": 88,
       "repo": "nemori-ai/nemori",
       "name": "Nemori",
       "url": "https://github.com/nemori-ai/nemori",
@@ -60965,7 +61648,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 88,
+      "rank": 89,
       "repo": "MemTensor/MemOS-Cloud-OpenClaw-Plugin",
       "name": "MemOS Cloud OpenClaw Plugin",
       "url": "https://github.com/MemTensor/MemOS-Cloud-OpenClaw-Plugin",
@@ -60996,7 +61679,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 89,
+      "rank": 90,
       "repo": "AutoX-AI-Labs/AutoR",
       "name": "AutoR",
       "url": "https://github.com/AutoX-AI-Labs/AutoR",
@@ -61026,7 +61709,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 90,
+      "rank": 91,
       "repo": "google/ax",
       "name": "Google AX",
       "url": "https://github.com/google/ax",
@@ -61057,7 +61740,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 91,
+      "rank": 92,
       "repo": "zjunlp/SkillX",
       "name": "SkillX",
       "url": "https://github.com/zjunlp/SkillX",
@@ -61088,7 +61771,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 92,
+      "rank": 93,
       "repo": "yoloshii/ClawMem",
       "name": "ClawMem On-Device Memory Layer",
       "url": "https://github.com/yoloshii/ClawMem",
@@ -61119,7 +61802,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 93,
+      "rank": 94,
       "repo": "iflytek/skillhub",
       "name": "iFLYTEK SkillHub",
       "url": "https://github.com/iflytek/skillhub",
@@ -61150,7 +61833,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 94,
+      "rank": 95,
       "repo": "InternScience/Awesome-Scientific-Skills",
       "name": "Awesome Scientific Skills",
       "url": "https://github.com/InternScience/Awesome-Scientific-Skills",
@@ -61181,7 +61864,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 95,
+      "rank": 96,
       "repo": "openclaw/acpx",
       "name": "ACPX",
       "url": "https://github.com/openclaw/acpx",
@@ -61212,7 +61895,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 96,
+      "rank": 97,
       "repo": "crewAIInc/crewAI",
       "name": "CrewAI",
       "url": "https://github.com/crewAIInc/crewAI",
@@ -61232,7 +61915,7 @@
       "report": "projects/09-crewai-multi-agent-framework.md",
       "scores": {
         "current_value": 44.47,
-        "time": 29.24,
+        "time": 29.23,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 89.56,
@@ -61241,7 +61924,7 @@
       "caveat": ""
     },
     {
-      "rank": 97,
+      "rank": 98,
       "repo": "openclaw/gitcrawl",
       "name": "Gitcrawl",
       "url": "https://github.com/openclaw/gitcrawl",
@@ -61272,7 +61955,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 98,
+      "rank": 99,
       "repo": "supabase/agent-skills",
       "name": "Supabase Agent Skills",
       "url": "https://github.com/supabase/agent-skills",
@@ -61303,7 +61986,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 99,
+      "rank": 100,
       "repo": "composio-community/awesome-openclaw-plugins",
       "name": "Awesome OpenClaw Plugins (Composio Community)",
       "url": "https://github.com/composio-community/awesome-openclaw-plugins",
@@ -61334,7 +62017,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 100,
+      "rank": 101,
       "repo": "apify/agent-skills",
       "name": "Apify Agent Skills Library",
       "url": "https://github.com/apify/agent-skills",
@@ -61365,7 +62048,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 101,
+      "rank": 102,
       "repo": "suyoumo/ClawProBench",
       "name": "ClawProBench",
       "url": "https://github.com/suyoumo/ClawProBench",
@@ -61395,7 +62078,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 102,
+      "rank": 103,
       "repo": "Significant-Gravitas/AutoGPT",
       "name": "AutoGPT",
       "url": "https://github.com/Significant-Gravitas/AutoGPT",
@@ -61415,7 +62098,7 @@
       "report": "projects/08-autogpt-autonomous-agent.md",
       "scores": {
         "current_value": 44.28,
-        "time": 29.26,
+        "time": 29.25,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 100,
@@ -61424,7 +62107,7 @@
       "caveat": ""
     },
     {
-      "rank": 103,
+      "rank": 104,
       "repo": "InternLM/WildClawBench",
       "name": "WildClawBench",
       "url": "https://github.com/InternLM/WildClawBench",
@@ -61454,7 +62137,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 104,
+      "rank": 105,
       "repo": "mgechev/skills-best-practices",
       "name": "Skills Best Practices",
       "url": "https://github.com/mgechev/skills-best-practices",
@@ -61485,7 +62168,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 105,
+      "rank": 106,
       "repo": "0xNyk/lacp",
       "name": "LACP Lightweight Agent Context Protocol",
       "url": "https://github.com/0xNyk/lacp",
@@ -61516,7 +62199,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 106,
+      "rank": 107,
       "repo": "lhl/agentic-memory",
       "name": "LHL Agentic Memory Module",
       "url": "https://github.com/lhl/agentic-memory",
@@ -61547,7 +62230,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 107,
+      "rank": 108,
       "repo": "openclaw/crabbox",
       "name": "Crabbox",
       "url": "https://github.com/openclaw/crabbox",
@@ -61578,7 +62261,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 108,
+      "rank": 109,
       "repo": "knowall-ai/mcp-neo4j-agent-memory",
       "name": "MCP Neo4j Agent Memory",
       "url": "https://github.com/knowall-ai/mcp-neo4j-agent-memory",
@@ -61609,7 +62292,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 109,
+      "rank": 110,
       "repo": "paradigmxyz/evmbench",
       "name": "evmbench",
       "url": "https://github.com/paradigmxyz/evmbench",
@@ -61640,7 +62323,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 110,
+      "rank": 111,
       "repo": "Dataojitori/nocturne_memory",
       "name": "Nocturne Memory Context Engine",
       "url": "https://github.com/Dataojitori/nocturne_memory",
@@ -61671,7 +62354,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 111,
+      "rank": 112,
       "repo": "openclaw/crawlkit",
       "name": "Crawlkit",
       "url": "https://github.com/openclaw/crawlkit",
@@ -61702,7 +62385,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 112,
+      "rank": 113,
       "repo": "qpiai/Proced_mem_bench",
       "name": "Procedural Memory Benchmark",
       "url": "https://github.com/qpiai/Proced_mem_bench",
@@ -61733,7 +62416,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 113,
+      "rank": 114,
       "repo": "TIGER-AI-Lab/ClawBench",
       "name": "ClawBench",
       "url": "https://github.com/TIGER-AI-Lab/ClawBench",
@@ -61764,7 +62447,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 114,
+      "rank": 115,
       "repo": "aiming-lab/ClawArena",
       "name": "ClawArena",
       "url": "https://github.com/aiming-lab/ClawArena",
@@ -61795,7 +62478,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 115,
+      "rank": 116,
       "repo": "camel-ai/camel",
       "name": "CAMEL-AI",
       "url": "https://github.com/camel-ai/camel",
@@ -61815,7 +62498,7 @@
       "report": "projects/12-camel-ai-communicative-agents.md",
       "scores": {
         "current_value": 43.57,
-        "time": 28.88,
+        "time": 28.87,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 80.35,
@@ -61824,7 +62507,7 @@
       "caveat": ""
     },
     {
-      "rank": 116,
+      "rank": 117,
       "repo": "YuanchenBei/Mem-Gallery",
       "name": "Mem-Gallery",
       "url": "https://github.com/YuanchenBei/Mem-Gallery",
@@ -61855,7 +62538,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 117,
+      "rank": 118,
       "repo": "cuga-project/cuga-agent",
       "name": "CUGA Agent",
       "url": "https://github.com/cuga-project/cuga-agent",
@@ -61886,7 +62569,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 118,
+      "rank": 119,
       "repo": "Agenta-AI/agenta",
       "name": "agenta",
       "url": "https://github.com/Agenta-AI/agenta",
@@ -61915,7 +62598,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 119,
+      "rank": 120,
       "repo": "webzler/agentMemory",
       "name": "AgentMemory Benchmark Framework",
       "url": "https://github.com/webzler/agentMemory",
@@ -61946,7 +62629,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 120,
+      "rank": 121,
       "repo": "matevip/mateclaw",
       "name": "MateClaw OpenClaw Memory and Rule Engine",
       "url": "https://github.com/matevip/mateclaw",
@@ -61977,7 +62660,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 121,
+      "rank": 122,
       "repo": "murataslan1/ai-agent-benchmark",
       "name": "AI Agent Benchmark",
       "url": "https://github.com/murataslan1/ai-agent-benchmark",
@@ -62008,7 +62691,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 122,
+      "rank": 123,
       "repo": "phidatahq/phidata",
       "name": "phidata",
       "url": "https://github.com/phidatahq/phidata",
@@ -62037,7 +62720,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 123,
+      "rank": 124,
       "repo": "ALucek/agentic-memory",
       "name": "ALucek Agentic Memory Methods Library",
       "url": "https://github.com/ALucek/agentic-memory",
@@ -62068,7 +62751,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 124,
+      "rank": 125,
       "repo": "zorazrw/agent-workflow-memory",
       "name": "Agent Workflow Memory Knowledge Graph Runtime",
       "url": "https://github.com/zorazrw/agent-workflow-memory",
@@ -62099,7 +62782,38 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 125,
+      "rank": 126,
+      "repo": "Arc-Computer/CL-Bench",
+      "name": "Arc Continual Learning Benchmark",
+      "url": "https://github.com/Arc-Computer/CL-Bench",
+      "category": "Stateful Continual-Learning Benchmark for LLM Agents",
+      "pattern": "place agents inside stateful multi-turn workflows -> mutate persistent entities under production-style constraints -> evaluate adaptation and reliability under cross-turn dependencies -> use continual-learning pressure instead of one-shot benchmark snapshots",
+      "tags": [
+        "benchmark",
+        "continual-learning",
+        "stateful",
+        "agent",
+        "crm-workflow"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-06-02T00:00:00Z",
+      "stars": 19,
+      "report": "projects/392-arc-continual-learning-benchmark.md",
+      "scores": {
+        "current_value": 42.97,
+        "time": 45,
+        "mechanism": 28,
+        "evidence": 56,
+        "adoption": 24.71,
+        "usefulness": 80
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 127,
       "repo": "open-gitagent/gitagent",
       "name": "Gitagent",
       "url": "https://github.com/open-gitagent/gitagent",
@@ -62129,7 +62843,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 126,
+      "rank": 128,
       "repo": "evalops/agent-harness",
       "name": "Agent Harness (EvalOps)",
       "url": "https://github.com/evalops/agent-harness",
@@ -62160,7 +62874,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 127,
+      "rank": 129,
       "repo": "VectorSpaceLab/general-agentic-memory",
       "name": "VectorSpaceLab General Agentic Memory",
       "url": "https://github.com/VectorSpaceLab/general-agentic-memory",
@@ -62191,7 +62905,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 128,
+      "rank": 130,
       "repo": "mlcommons/modelbench",
       "name": "MLCommons ModelBench",
       "url": "https://github.com/mlcommons/modelbench",
@@ -62222,7 +62936,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 129,
+      "rank": 131,
       "repo": "langchain-ai/langgraph",
       "name": "LangGraph",
       "url": "https://github.com/langchain-ai/langgraph",
@@ -62242,7 +62956,7 @@
       "report": "projects/13-langgraph-agent-workflows.md",
       "scores": {
         "current_value": 42.85,
-        "time": 29.25,
+        "time": 29.24,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 85.75,
@@ -62251,7 +62965,7 @@
       "caveat": ""
     },
     {
-      "rank": 130,
+      "rank": 132,
       "repo": "agentevals-dev/agentevals",
       "name": "AgentEvals.dev Benchmark Framework",
       "url": "https://github.com/agentevals-dev/agentevals",
@@ -62282,7 +62996,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 131,
+      "rank": 133,
       "repo": "aayoawoyemi/ori-mnemos",
       "name": "Ori Mnemos Memory Harness",
       "url": "https://github.com/aayoawoyemi/ori-mnemos",
@@ -62313,7 +63027,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 132,
+      "rank": 134,
       "repo": "langchain-ai/agentevals",
       "name": "LangChain AgentEvals Harness",
       "url": "https://github.com/langchain-ai/agentevals",
@@ -62344,7 +63058,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 133,
+      "rank": 135,
       "repo": "LearnPrompt/cc-harness-skills",
       "name": "CC Harness Skills",
       "url": "https://github.com/LearnPrompt/cc-harness-skills",
@@ -62375,7 +63089,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 134,
+      "rank": 136,
       "repo": "humanitylabs-org/obsidianclaw",
       "name": "ObsidianClaw Knowledge Plugin",
       "url": "https://github.com/humanitylabs-org/obsidianclaw",
@@ -62406,7 +63120,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 135,
+      "rank": 137,
       "repo": "openclaw/crabpot",
       "name": "Crabpot",
       "url": "https://github.com/openclaw/crabpot",
@@ -62437,7 +63151,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 136,
+      "rank": 138,
       "repo": "VoltAgent/awesome-openclaw-skills",
       "name": "Awesome OpenClaw Skills",
       "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
@@ -62468,7 +63182,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 137,
+      "rank": 139,
       "repo": "sd0xdev/sd0x-dev-flow",
       "name": "sd0x-dev-flow",
       "url": "https://github.com/sd0xdev/sd0x-dev-flow",
@@ -62499,7 +63213,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 138,
+      "rank": 140,
       "repo": "Chorus-AIDLC/Chorus",
       "name": "Chorus",
       "url": "https://github.com/Chorus-AIDLC/Chorus",
@@ -62530,7 +63244,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 139,
+      "rank": 141,
       "repo": "openswarm-ai/openswarm",
       "name": "OpenSwarm Multi-Agent Orchestration Framework",
       "url": "https://github.com/openswarm-ai/openswarm",
@@ -62561,7 +63275,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 140,
+      "rank": 142,
       "repo": "Genentech/OpenTreeSearch",
       "name": "OpenTreeSearch",
       "url": "https://github.com/Genentech/opentreesearch",
@@ -62581,8 +63295,8 @@
       "stars": 200,
       "report": "projects/24-opentreesearch-llm-code-evolution.md",
       "scores": {
-        "current_value": 42.01,
-        "time": 29.17,
+        "current_value": 42,
+        "time": 29.16,
         "mechanism": 59,
         "evidence": 54,
         "adoption": 43.74,
@@ -62591,7 +63305,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 141,
+      "rank": 143,
       "repo": "FreedomIntelligence/Tiermem",
       "name": "Tiermem",
       "url": "https://github.com/FreedomIntelligence/Tiermem",
@@ -62622,7 +63336,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 142,
+      "rank": 144,
       "repo": "UnicomAI/hexagent",
       "name": "HexAgent",
       "url": "https://github.com/UnicomAI/hexagent",
@@ -62653,7 +63367,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 143,
+      "rank": 145,
       "repo": "inngest/utah",
       "name": "Utah",
       "url": "https://github.com/inngest/utah",
@@ -62684,7 +63398,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 144,
+      "rank": 146,
       "repo": "thinkwee/AgentsMeetRL",
       "name": "AgentsMeetRL Benchmark Index",
       "url": "https://github.com/thinkwee/AgentsMeetRL",
@@ -62715,7 +63429,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 145,
+      "rank": 147,
       "repo": "ollama/ollama",
       "name": "ollama",
       "url": "https://github.com/ollama/ollama",
@@ -62744,7 +63458,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 146,
+      "rank": 148,
       "repo": "kweaver-ai/kweaver-core",
       "name": "KWeaver Core",
       "url": "https://github.com/kweaver-ai/kweaver-core",
@@ -62775,7 +63489,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 147,
+      "rank": 149,
       "repo": "NirDiamant/Agent_Memory_Techniques",
       "name": "Agent Memory Techniques",
       "url": "https://github.com/NirDiamant/Agent_Memory_Techniques",
@@ -62806,7 +63520,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 148,
+      "rank": 150,
       "repo": "open-webui/open-webui",
       "name": "open-webui",
       "url": "https://github.com/open-webui/open-webui",
@@ -62836,7 +63550,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 149,
+      "rank": 151,
       "repo": "block/agent-skills",
       "name": "Agent Skills (Block)",
       "url": "https://github.com/block/agent-skills",
@@ -62867,7 +63581,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 150,
+      "rank": 152,
       "repo": "dceoy/speckit-agent-skills",
       "name": "Spec Kit Agent Skills",
       "url": "https://github.com/dceoy/speckit-agent-skills",
@@ -62898,7 +63612,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 151,
+      "rank": 153,
       "repo": "soimy/openclaw-channel-dingtalk",
       "name": "OpenClaw DingTalk Channel Plugin",
       "url": "https://github.com/soimy/openclaw-channel-dingtalk",
@@ -62929,7 +63643,38 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 152,
+      "rank": 154,
+      "repo": "najeed/ai-agent-eval-harness",
+      "name": "MultiAgentEval Enterprise Harness",
+      "url": "https://github.com/najeed/ai-agent-eval-harness",
+      "category": "Enterprise Multi-Agent Evaluation and Verification Harness",
+      "pattern": "simulate business workflows through benchmark scenarios and shims -> replay deep traces for verification and debugging -> compare agent reliability across environments and workflows -> close the agentic reliability gap with explicit eval infrastructure",
+      "tags": [
+        "evaluation",
+        "verification",
+        "enterprise",
+        "multi-agent",
+        "harness"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-06-02T00:00:00Z",
+      "stars": 28,
+      "report": "projects/391-multiagenteval-enterprise-harness.md",
+      "scores": {
+        "current_value": 41.68,
+        "time": 45,
+        "mechanism": 20,
+        "evidence": 56,
+        "adoption": 27.77,
+        "usefulness": 80
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 155,
       "repo": "QF-Bench/QuantitativeFinance-Bench",
       "name": "QF-Bench",
       "url": "https://github.com/QF-Bench/QuantitativeFinance-Bench",
@@ -62960,7 +63705,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 153,
+      "rank": 156,
       "repo": "nowledge-co/community",
       "name": "Nowledge Community OpenClaw Skills Hub",
       "url": "https://github.com/nowledge-co/community",
@@ -62991,7 +63736,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 154,
+      "rank": 157,
       "repo": "Alienfader/continuity-benchmarks",
       "name": "Continuity Benchmarks",
       "url": "https://github.com/Alienfader/continuity-benchmarks",
@@ -63022,7 +63767,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 155,
+      "rank": 158,
       "repo": "Kenotic-Labs/ATANT",
       "name": "ATANT",
       "url": "https://github.com/Kenotic-Labs/ATANT",
@@ -63051,7 +63796,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 156,
+      "rank": 159,
       "repo": "langgenius/dify",
       "name": "dify",
       "url": "https://github.com/langgenius/dify",
@@ -63080,7 +63825,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 157,
+      "rank": 160,
       "repo": "sourcegraph/CodeScaleBench",
       "name": "CodeScaleBench",
       "url": "https://github.com/sourcegraph/CodeScaleBench",
@@ -63111,7 +63856,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 158,
+      "rank": 161,
       "repo": "openclaw/openclaw-windows-node",
       "name": "OpenClaw Windows Node",
       "url": "https://github.com/openclaw/openclaw-windows-node",
@@ -63142,7 +63887,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 159,
+      "rank": 162,
       "repo": "cloudllm-ai/mentisdb",
       "name": "MentisDB Agent Memory Graph Database",
       "url": "https://github.com/cloudllm-ai/mentisdb",
@@ -63173,7 +63918,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 160,
+      "rank": 163,
       "repo": "memtomem/memtomem",
       "name": "MemToMem",
       "url": "https://github.com/memtomem/memtomem",
@@ -63204,7 +63949,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 161,
+      "rank": 164,
       "repo": "paradigmxyz/centaur",
       "name": "Centaur",
       "url": "https://github.com/paradigmxyz/centaur",
@@ -63235,7 +63980,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 162,
+      "rank": 165,
       "repo": "SponsioLabs/Sponsio",
       "name": "Sponsio Workflow and Multi-Agent Control Plane",
       "url": "https://github.com/SponsioLabs/Sponsio",
@@ -63266,7 +64011,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 163,
+      "rank": 166,
       "repo": "OpenDevin/OpenDevin",
       "name": "OpenDevin",
       "url": "https://github.com/OpenDevin/OpenDevin",
@@ -63286,8 +64031,8 @@
       "stars": 50000,
       "report": "projects/41-opendevin-ai-software.md",
       "scores": {
-        "current_value": 41.26,
-        "time": 29.17,
+        "current_value": 41.25,
+        "time": 29.16,
         "mechanism": 35,
         "evidence": 54,
         "adoption": 89.23,
@@ -63296,7 +64041,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 164,
+      "rank": 167,
       "repo": "LHL3341/awesome-claws",
       "name": "Awesome Claws Collection (LHL3341)",
       "url": "https://github.com/LHL3341/awesome-claws",
@@ -63327,7 +64072,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 165,
+      "rank": 168,
       "repo": "langflow-ai/langflow",
       "name": "langflow",
       "url": "https://github.com/langflow-ai/langflow",
@@ -63356,7 +64101,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 166,
+      "rank": 169,
       "repo": "christinminor459/OnionClaw",
       "name": "OnionClaw OPSEC Agent Plugin",
       "url": "https://github.com/christinminor459/OnionClaw",
@@ -63387,7 +64132,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 167,
+      "rank": 170,
       "repo": "razroo/state-trace",
       "name": "state-trace",
       "url": "https://github.com/razroo/state-trace",
@@ -63416,7 +64161,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 168,
+      "rank": 171,
       "repo": "zocomputer/skills",
       "name": "Zo Skills Registry",
       "url": "https://github.com/zocomputer/skills",
@@ -63447,7 +64192,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 169,
+      "rank": 172,
       "repo": "rohitg00/awesome-openclaw",
       "name": "Awesome OpenClaw Plugin Index (rohitg00)",
       "url": "https://github.com/rohitg00/awesome-openclaw",
@@ -63478,7 +64223,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 170,
+      "rank": 173,
       "repo": "Chainlit/chainlit",
       "name": "chainlit",
       "url": "https://github.com/Chainlit/chainlit",
@@ -63507,7 +64252,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 171,
+      "rank": 174,
       "repo": "pwrdrvr/openclaw-codex-app-server",
       "name": "OpenClaw Codex App Server",
       "url": "https://github.com/pwrdrvr/openclaw-codex-app-server",
@@ -63538,7 +64283,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 172,
+      "rank": 175,
       "repo": "OpenBMB/ClawXMemory",
       "name": "ClawXMemory",
       "url": "https://github.com/OpenBMB/ClawXMemory",
@@ -63569,7 +64314,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 173,
+      "rank": 176,
       "repo": "shareAI-lab/kbench",
       "name": "kbench",
       "url": "https://github.com/shareAI-lab/kbench",
@@ -63600,7 +64345,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 174,
+      "rank": 177,
       "repo": "OpenBMB/ChatDev",
       "name": "chatdev",
       "url": "https://github.com/OpenBMB/ChatDev",
@@ -63619,8 +64364,8 @@
       "stars": 26000,
       "report": "research/projects/46-chatdev-multi-agent-platform.md",
       "scores": {
-        "current_value": 40.88,
-        "time": 30,
+        "current_value": 40.87,
+        "time": 29.98,
         "mechanism": 43,
         "evidence": 36,
         "adoption": 83.84,
@@ -63629,7 +64374,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 175,
+      "rank": 178,
       "repo": "agiprolabs/claude-trading-skills",
       "name": "Claude Trading Skills",
       "url": "https://github.com/agiprolabs/claude-trading-skills",
@@ -63660,7 +64405,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 176,
+      "rank": 179,
       "repo": "webmaxru/Agent-Skills",
       "name": "Webmaxru Agent Skills",
       "url": "https://github.com/webmaxru/Agent-Skills",
@@ -63690,7 +64435,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 177,
+      "rank": 180,
       "repo": "FlowiseAI/Flowise",
       "name": "flowise",
       "url": "https://github.com/FlowiseAI/Flowise",
@@ -63719,7 +64464,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 178,
+      "rank": 181,
       "repo": "EESIZ/clawdreamer",
       "name": "ClawDreamer Automation Plugin",
       "url": "https://github.com/EESIZ/clawdreamer",
@@ -63750,7 +64495,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 179,
+      "rank": 182,
       "repo": "BlockRunAI/awesome-OpenClaw-Money-Maker",
       "name": "Awesome OpenClaw Money Maker Index",
       "url": "https://github.com/BlockRunAI/awesome-OpenClaw-Money-Maker",
@@ -63781,7 +64526,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 180,
+      "rank": 183,
       "repo": "ag2ai/ag2",
       "name": "ag2",
       "url": "https://github.com/ag2ai/ag2",
@@ -63810,7 +64555,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 181,
+      "rank": 184,
       "repo": "Zijian-Ni/awesome-ai-agents-2026",
       "name": "awesome-ai-agents-2026",
       "url": "https://github.com/Zijian-Ni/awesome-ai-agents-2026",
@@ -63839,7 +64584,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 182,
+      "rank": 185,
       "repo": "YoungDubbyDu/LLM-Agent-Optimization",
       "name": "LLM-Agent-Optimization",
       "url": "https://github.com/YoungDubbyDu/LLM-Agent-Optimization",
@@ -63860,7 +64605,7 @@
       "report": "projects/36-llm-agent-optimization.md",
       "scores": {
         "current_value": 40.46,
-        "time": 29.17,
+        "time": 29.16,
         "mechanism": 31,
         "evidence": 86,
         "adoption": 51.27,
@@ -63869,7 +64614,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 183,
+      "rank": 186,
       "repo": "agentralabs/agentic-memory",
       "name": "AgentraLabs Agentic Memory Runtime",
       "url": "https://github.com/agentralabs/agentic-memory",
@@ -63900,7 +64645,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 184,
+      "rank": 187,
       "repo": "BerriAI/litellm",
       "name": "litellm",
       "url": "https://github.com/BerriAI/litellm",
@@ -63929,7 +64674,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 185,
+      "rank": 188,
       "repo": "OWASP/www-project-agent-memory-guard",
       "name": "OWASP Agent Memory Guard",
       "url": "https://github.com/OWASP/www-project-agent-memory-guard",
@@ -63960,7 +64705,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 186,
+      "rank": 189,
       "repo": "iliaal/ai-skills",
       "name": "ai-skills",
       "url": "https://github.com/iliaal/ai-skills",
@@ -63991,7 +64736,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 187,
+      "rank": 190,
       "repo": "flagos-ai/skills",
       "name": "FlagoS Skills",
       "url": "https://github.com/flagos-ai/skills",
@@ -64022,7 +64767,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 188,
+      "rank": 191,
       "repo": "cheshire-cat-ai/core",
       "name": "cheshire-cat",
       "url": "https://github.com/cheshire-cat-ai/core",
@@ -64051,7 +64796,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 189,
+      "rank": 192,
       "repo": "harness/harness-evals",
       "name": "Harness Evals",
       "url": "https://github.com/harness/harness-evals",
@@ -64082,7 +64827,38 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 190,
+      "rank": 193,
+      "repo": "plaited/agent-eval-harness",
+      "name": "Plaited Agent Eval Harness",
+      "url": "https://github.com/plaited/agent-eval-harness",
+      "category": "CLI Agent Evaluation Harness with Schema-Driven Trial Pipelines",
+      "pattern": "define adapter schemas for any CLI agent -> capture raw trajectories over task suites -> grade and compare multi-run outputs -> turn agent release quality into repeatable pass@k-style evidence",
+      "tags": [
+        "evaluation",
+        "harness",
+        "cli-agent",
+        "schema",
+        "benchmark"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-06-02T00:00:00Z",
+      "stars": 3,
+      "report": "projects/390-plaited-agent-eval-harness.md",
+      "scores": {
+        "current_value": 40.04,
+        "time": 45,
+        "mechanism": 20,
+        "evidence": 56,
+        "adoption": 11.43,
+        "usefulness": 80
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 194,
       "repo": "back1ply/agent-skill-loader",
       "name": "Agent Skill Loader",
       "url": "https://github.com/back1ply/agent-skill-loader",
@@ -64113,7 +64889,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 191,
+      "rank": 195,
       "repo": "datalayer/agent-skills",
       "name": "Datalayer Agent Skills",
       "url": "https://github.com/datalayer/agent-skills",
@@ -64144,7 +64920,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 192,
+      "rank": 196,
       "repo": "FoundationAgents/MetaGPT",
       "name": "MetaGPT",
       "url": "https://github.com/FoundationAgents/MetaGPT",
@@ -64165,7 +64941,7 @@
       "report": "projects/07-metagpt-multi-agent-framework.md",
       "scores": {
         "current_value": 39.87,
-        "time": 19.18,
+        "time": 19.17,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 91.8,
@@ -64174,7 +64950,7 @@
       "caveat": ""
     },
     {
-      "rank": 193,
+      "rank": 197,
       "repo": "noahshinn/reflexion",
       "name": "reflexion",
       "url": "https://github.com/noahshinn/reflexion",
@@ -64205,7 +64981,7 @@
       "caveat": ""
     },
     {
-      "rank": 194,
+      "rank": 198,
       "repo": "clawsouls/soulclaw",
       "name": "SoulClaw OpenClaw Fork with Soul Memory",
       "url": "https://github.com/clawsouls/soulclaw",
@@ -64236,7 +65012,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 195,
+      "rank": 199,
       "repo": "Olshansk/agent-skills",
       "name": "Agent Skills",
       "url": "https://github.com/Olshansk/agent-skills",
@@ -64267,7 +65043,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 196,
+      "rank": 200,
       "repo": "Picrew/awesome-agent-harness",
       "name": "Awesome Agent Harness (Picrew)",
       "url": "https://github.com/Picrew/awesome-agent-harness",
@@ -64298,7 +65074,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 197,
+      "rank": 201,
       "repo": "dataelement/bisheng",
       "name": "bisheng",
       "url": "https://github.com/dataelement/bisheng",
@@ -64327,7 +65103,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 198,
+      "rank": 202,
       "repo": "axiomhq/agent-memory",
       "name": "Agent Memory",
       "url": "https://github.com/axiomhq/agent-memory",
@@ -64358,7 +65134,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 199,
+      "rank": 203,
       "repo": "openmemoryspec/oms",
       "name": "Open Memory Specification (OMS)",
       "url": "https://github.com/openmemoryspec/oms",
@@ -64389,7 +65165,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 200,
+      "rank": 204,
       "repo": "Modelcode-ai/mcode-benchmark",
       "name": "RepoMod Bench",
       "url": "https://github.com/Modelcode-ai/mcode-benchmark",
@@ -64420,7 +65196,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 201,
+      "rank": 205,
       "repo": "syntax-syndicate/OpenHarness-agent-harness",
       "name": "OpenHarness Agent Harness Fork",
       "url": "https://github.com/syntax-syndicate/OpenHarness-agent-harness",
@@ -64451,7 +65227,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 202,
+      "rank": 206,
       "repo": "e2b-dev/e2b",
       "name": "e2b",
       "url": "https://github.com/e2b-dev/e2b",
@@ -64480,7 +65256,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 203,
+      "rank": 207,
       "repo": "ArcadeAI/openclaw-arcade-plugin",
       "name": "OpenClaw Arcade Plugin",
       "url": "https://github.com/ArcadeAI/openclaw-arcade-plugin",
@@ -64511,7 +65287,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 204,
+      "rank": 208,
       "repo": "MCKRUZ/openclaw-langfuse",
       "name": "OpenClaw Langfuse Observability Plugin",
       "url": "https://github.com/MCKRUZ/openclaw-langfuse",
@@ -64542,7 +65318,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 205,
+      "rank": 209,
       "repo": "AutoJunjie/awesome-agent-harness",
       "name": "Awesome Agent Harness (AutoJunjie)",
       "url": "https://github.com/AutoJunjie/awesome-agent-harness",
@@ -64573,7 +65349,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 206,
+      "rank": 210,
       "repo": "QuantClaw/QuantClaw",
       "name": "QuantClaw",
       "url": "https://github.com/QuantClaw/QuantClaw",
@@ -64604,7 +65380,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 207,
+      "rank": 211,
       "repo": "skillmatic-ai/awesome-agent-skills",
       "name": "Awesome Agent Skills (Skillmatic)",
       "url": "https://github.com/skillmatic-ai/awesome-agent-skills",
@@ -64635,7 +65411,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 208,
+      "rank": 212,
       "repo": "junminhong/awesome-agent-skills",
       "name": "Awesome Agent Skills",
       "url": "https://github.com/junminhong/awesome-agent-skills",
@@ -64666,7 +65442,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 209,
+      "rank": 213,
       "repo": "DEEP-PolyU/Awesome-GraphMemory",
       "name": "Awesome GraphMemory",
       "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
@@ -64695,7 +65471,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 210,
+      "rank": 214,
       "repo": "All-Hands-AI/OpenHands",
       "name": "OpenHands",
       "url": "https://github.com/All-Hands-AI/OpenHands",
@@ -64714,8 +65490,8 @@
       "stars": 74662,
       "report": "projects/15-openhands-ai-software-dev.md",
       "scores": {
-        "current_value": 38.73,
-        "time": 29.25,
+        "current_value": 38.72,
+        "time": 29.24,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 92.54,
@@ -64724,7 +65500,7 @@
       "caveat": ""
     },
     {
-      "rank": 211,
+      "rank": 215,
       "repo": "henrikrexed/openclaw-observability-plugin",
       "name": "OpenClaw Observability Plugin",
       "url": "https://github.com/henrikrexed/openclaw-observability-plugin",
@@ -64755,7 +65531,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 212,
+      "rank": 216,
       "repo": "SamurAIGPT/awesome-openclaw",
       "name": "Awesome OpenClaw Ecosystem Index (SamurAIGPT)",
       "url": "https://github.com/SamurAIGPT/awesome-openclaw",
@@ -64786,7 +65562,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 213,
+      "rank": 217,
       "repo": "microsoft/autogen",
       "name": "AutoGen",
       "url": "https://github.com/microsoft/autogen",
@@ -64806,7 +65582,7 @@
       "report": "projects/11-autogen-multi-agent-conversation.md",
       "scores": {
         "current_value": 38.19,
-        "time": 26.09,
+        "time": 26.08,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 90.5,
@@ -64815,7 +65591,7 @@
       "caveat": ""
     },
     {
-      "rank": 214,
+      "rank": 218,
       "repo": "cxxz/awesome-agent-memory",
       "name": "Awesome Agent Memory by cxxz",
       "url": "https://github.com/cxxz/awesome-agent-memory",
@@ -64844,7 +65620,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 215,
+      "rank": 219,
       "repo": "vilmire/adhdev",
       "name": "ADHDev",
       "url": "https://github.com/vilmire/adhdev",
@@ -64875,7 +65651,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 216,
+      "rank": 220,
       "repo": "sunnja69/akephalos",
       "name": "Akephalos",
       "url": "https://github.com/sunnja69/akephalos",
@@ -64906,7 +65682,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 217,
+      "rank": 221,
       "repo": "ComposioHQ/awesome-agent-clis",
       "name": "Awesome Agent CLIs",
       "url": "https://github.com/ComposioHQ/awesome-agent-clis",
@@ -64937,7 +65713,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 218,
+      "rank": 222,
       "repo": "LLMSecurity/awesome-agent-skills-security",
       "name": "Awesome Agent Skills Security",
       "url": "https://github.com/LLMSecurity/awesome-agent-skills-security",
@@ -64968,7 +65744,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 219,
+      "rank": 223,
       "repo": "ai4co/awesome-fm4co",
       "name": "Awesome-FM4CO",
       "url": "https://github.com/ai4co/awesome-fm4co",
@@ -64988,7 +65764,7 @@
       "report": "projects/40-awesome-fm4co.md",
       "scores": {
         "current_value": 37.66,
-        "time": 29.17,
+        "time": 29.16,
         "mechanism": 17,
         "evidence": 86,
         "adoption": 51.27,
@@ -64997,7 +65773,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 220,
+      "rank": 224,
       "repo": "RyanAlberts/best-of-Agent-Harnesses",
       "name": "Best of Agent Harnesses",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
@@ -65028,7 +65804,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 221,
+      "rank": 225,
       "repo": "itgoyo/awesome-agent-skills",
       "name": "Awesome Agent Skills (itgoyo)",
       "url": "https://github.com/itgoyo/awesome-agent-skills",
@@ -65059,7 +65835,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 222,
+      "rank": 226,
       "repo": "xlang-ai/OSWorld",
       "name": "osworld",
       "url": "https://github.com/xlang-ai/OSWorld",
@@ -65078,8 +65854,8 @@
       "stars": 2200,
       "report": "research/projects/61-osworld-agent-evaluation.md",
       "scores": {
-        "current_value": 37.21,
-        "time": 24.93,
+        "current_value": 37.2,
+        "time": 24.91,
         "mechanism": 28,
         "evidence": 62,
         "adoption": 63.48,
@@ -65088,7 +65864,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 223,
+      "rank": 227,
       "repo": "seb1n/awesome-ai-agent-skills",
       "name": "Awesome AI Agent Skills",
       "url": "https://github.com/seb1n/awesome-ai-agent-skills",
@@ -65119,7 +65895,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 224,
+      "rank": 228,
       "repo": "kodustech/awesome-agent-skills",
       "name": "Kodu Awesome Agent Skills",
       "url": "https://github.com/kodustech/awesome-agent-skills",
@@ -65150,7 +65926,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 225,
+      "rank": 229,
       "repo": "ZeroLu/awesome-openclaw",
       "name": "Awesome OpenClaw",
       "url": "https://github.com/ZeroLu/awesome-openclaw",
@@ -65181,7 +65957,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 226,
+      "rank": 230,
       "repo": "luo-junyu/Awesome-Agent-Papers",
       "name": "awesome-agent-papers",
       "url": "https://github.com/luo-junyu/Awesome-Agent-Papers",
@@ -65200,7 +65976,7 @@
       "report": "research/projects/59-awesome-agent-papers.md",
       "scores": {
         "current_value": 35.92,
-        "time": 37.25,
+        "time": 37.23,
         "mechanism": 0,
         "evidence": 68,
         "adoption": 58.48,
@@ -65209,7 +65985,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 227,
+      "rank": 231,
       "repo": "CharlesQ9/Self-Evolving-Agents",
       "name": "Self-Evolving-Agents",
       "url": "https://github.com/CharlesQ9/Self-Evolving-Agents",
@@ -65238,7 +66014,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 228,
+      "rank": 232,
       "repo": "CodeFuse-ML/awesome-code-llm",
       "name": "Awesome-Code-LLM",
       "url": "https://github.com/CodeFuse-ML/awesome-code-llm",
@@ -65257,8 +66033,8 @@
       "stars": 2000,
       "report": "projects/37-awesome-code-llm.md",
       "scores": {
-        "current_value": 34.71,
-        "time": 29.17,
+        "current_value": 34.7,
+        "time": 29.16,
         "mechanism": 25,
         "evidence": 48,
         "adoption": 62.69,
@@ -65267,7 +66043,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 229,
+      "rank": 233,
       "repo": "madaan/self-refine",
       "name": "self-refine",
       "url": "https://github.com/madaan/self-refine",
@@ -65294,7 +66070,7 @@
       "caveat": ""
     },
     {
-      "rank": 230,
+      "rank": 234,
       "repo": "shengranhu/adas",
       "name": "ADAS",
       "url": "https://github.com/ShengranHu/ADAS",
@@ -65314,7 +66090,7 @@
       "report": "projects/03-adas-automated-design-agentic-systems.md",
       "scores": {
         "current_value": 34.1,
-        "time": 5.75,
+        "time": 5.74,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 60.75,
@@ -65323,7 +66099,7 @@
       "caveat": ""
     },
     {
-      "rank": 231,
+      "rank": 235,
       "repo": "xai-liacs/LLaMEA",
       "name": "LLaMEA",
       "url": "https://github.com/XAI-liacs/LLaMEA",
@@ -65353,7 +66129,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 232,
+      "rank": 236,
       "repo": "beeevita/EvoPrompt",
       "name": "EvoPrompt",
       "url": "https://github.com/beeevita/EvoPrompt",
@@ -65382,7 +66158,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 233,
+      "rank": 237,
       "repo": "automl/auto-sklearn",
       "name": "auto-sklearn",
       "url": "https://github.com/automl/auto-sklearn",
@@ -65412,7 +66188,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 234,
+      "rank": 238,
       "repo": "DEAP/deap",
       "name": "DEAP",
       "url": "https://github.com/DEAP/deap",
@@ -65442,7 +66218,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 235,
+      "rank": 239,
       "repo": "facebookresearch/nevergrad",
       "name": "Nevergrad",
       "url": "https://github.com/facebookresearch/nevergrad",
@@ -65472,7 +66248,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 236,
+      "rank": 240,
       "repo": "google-deepmind/funsearch",
       "name": "FunSearch",
       "url": "https://github.com/google-deepmind/funsearch",
@@ -65501,7 +66277,7 @@
       "caveat": ""
     },
     {
-      "rank": 237,
+      "rank": 241,
       "repo": "google-deepmind/opro",
       "name": "OPRO",
       "url": "https://github.com/google-deepmind/opro",
@@ -65530,7 +66306,7 @@
       "caveat": ""
     },
     {
-      "rank": 238,
+      "rank": 242,
       "repo": "carperai/openelm",
       "name": "OpenELM",
       "url": "https://github.com/carperai/openelm",
@@ -65559,7 +66335,7 @@
       "caveat": ""
     },
     {
-      "rank": 239,
+      "rank": 243,
       "repo": "ai4co/rl4co",
       "name": "RL4CO",
       "url": "https://github.com/ai4co/rl4co",
@@ -65589,7 +66365,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 240,
+      "rank": 244,
       "repo": "ai4co/reevo",
       "name": "ReEvo",
       "url": "https://github.com/ai4co/reevo",
@@ -65619,7 +66395,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 241,
+      "rank": 245,
       "repo": "wuxingyu-ai/LLM4EC",
       "name": "LLM4EC",
       "url": "https://github.com/wuxingyu-ai/LLM4EC",
@@ -65648,7 +66424,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 242,
+      "rank": 246,
       "repo": "CMA-ES/pycma",
       "name": "pycma",
       "url": "https://github.com/CMA-ES/pycma",
@@ -65677,7 +66453,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 243,
+      "rank": 247,
       "repo": "icaros-usc/pyribs",
       "name": "pyribs",
       "url": "https://github.com/icaros-usc/pyribs",
@@ -65707,7 +66483,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 244,
+      "rank": 248,
       "repo": "OpenBMB/AgentVerse",
       "name": "AgentVerse",
       "url": "https://github.com/OpenBMB/AgentVerse",
@@ -65736,7 +66512,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 245,
+      "rank": 249,
       "repo": "alfa-group/tutorial_gp_llm",
       "name": "Tutorial-GP-LLM",
       "url": "https://github.com/alfa-group/tutorial_gp_llm",
@@ -65766,7 +66542,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 246,
+      "rank": 250,
       "repo": "microsoft/CoML",
       "name": "CoML",
       "url": "https://github.com/microsoft/CoML",
@@ -65795,7 +66571,7 @@
       "caveat": ""
     },
     {
-      "rank": 247,
+      "rank": 251,
       "repo": "stitionai/devika",
       "name": "Devika",
       "url": "https://github.com/stitionai/devika",
@@ -65824,7 +66600,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 248,
+      "rank": 252,
       "repo": "pureples/pureples",
       "name": "GP-LLM-Code-Evolution",
       "url": "https://github.com/pureples/pureples",
@@ -65854,7 +66630,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 249,
+      "rank": 253,
       "repo": "web-arena-x/webarena",
       "name": "webarena",
       "url": "https://github.com/web-arena-x/webarena",
@@ -65873,8 +66649,8 @@
       "stars": 2800,
       "report": "research/projects/62-webarena-web-evaluation.md",
       "scores": {
-        "current_value": 25.74,
-        "time": 16.58,
+        "current_value": 25.73,
+        "time": 16.56,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 65.46,
@@ -65883,7 +66659,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 250,
+      "rank": 254,
       "repo": "siyuyuan/evoagent",
       "name": "EvoAgent",
       "url": "https://github.com/siyuyuan/evoagent",
@@ -65912,7 +66688,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 251,
+      "rank": 255,
       "repo": "yoheinakajima/babyagi",
       "name": "babyagi",
       "url": "https://github.com/yoheinakajima/babyagi",
@@ -65941,7 +66717,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 252,
+      "rank": 256,
       "repo": "TransformerOptimus/SuperAGI",
       "name": "superagi",
       "url": "https://github.com/TransformerOptimus/SuperAGI",
@@ -65970,7 +66746,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 253,
+      "rank": 257,
       "repo": "THUDM/AgentBench",
       "name": "AgentBench",
       "url": "https://github.com/THUDM/AgentBench",
@@ -65999,7 +66775,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 254,
+      "rank": 258,
       "repo": "future-agi/future-agi",
       "name": "future-agi",
       "url": "https://github.com/future-agi/future-agi",
@@ -66028,7 +66804,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 255,
+      "rank": 259,
       "repo": "reworkd/AgentGPT",
       "name": "agentgpt",
       "url": "https://github.com/reworkd/AgentGPT",
@@ -66047,8 +66823,8 @@
       "stars": 33000,
       "report": "research/projects/52-agentgpt-autonomous.md",
       "scores": {
-        "current_value": 22.35,
-        "time": 8.23,
+        "current_value": 22.34,
+        "time": 8.21,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 85.81,
@@ -66057,7 +66833,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 256,
+      "rank": 260,
       "repo": "FeiLiu36/LLM4Opt",
       "name": "LLM4Opt",
       "url": "https://github.com/FeiLiu36/LLM4Opt",
@@ -66086,7 +66862,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 257,
+      "rank": 261,
       "repo": "xlang-ai/OpenAgents",
       "name": "openagents",
       "url": "https://github.com/xlang-ai/OpenAgents",
@@ -66105,8 +66881,8 @@
       "stars": 4200,
       "report": "research/projects/47-openagents-platform.md",
       "scores": {
-        "current_value": 20.65,
-        "time": 8.23,
+        "current_value": 20.64,
+        "time": 8.21,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 68.81,
@@ -66115,7 +66891,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 258,
+      "rank": 262,
       "repo": "xiaofangxd/LLM_EA",
       "name": "LLM-EA-Survey",
       "url": "https://github.com/xiaofangxd/LLM_EA",
@@ -66144,7 +66920,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 259,
+      "rank": 263,
       "repo": "smol-ai/developer",
       "name": "smol-developer",
       "url": "https://github.com/smol-ai/developer",

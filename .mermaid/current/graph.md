@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-02T07:54:27+08:00
+Generated: 2026-06-02T13:53:05+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-06-02T07:54:27+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: agentralabs/agentic-memory, lhl/agentic-memory, langchain-ai/agentevals, agentevals-dev/agentevals, ALucek/agentic-memory, VectorSpaceLab/general-agentic-memory, Dataojitori/nocturne_memory.
-- New raw files: raw-github/agentralabs_agentic-memory.md, raw-github/lhl_agentic-memory.md, raw-github/langchain-ai_agentevals.md, raw-github/agentevals-dev_agentevals.md, raw-github/alucek_agentic-memory.md, raw-github/vectorspacelab_general-agentic-memory.md, raw-github/dataojitori_nocturne_memory.md.
-- New public model cards and site reports: project/report ids 383, 384, 385, 386, 387, 388, 389.
+- Web-observed repos: plaited/agent-eval-harness, najeed/ai-agent-eval-harness, Arc-Computer/CL-Bench, Versatly/clawvault.
+- New raw files: raw-github/plaited_agent-eval-harness.md, raw-github/najeed_ai-agent-eval-harness.md, raw-github/arc-computer_cl-bench.md, raw-github/versatly_clawvault.md.
+- New public model cards and site reports: project/report ids 390, 391, 392, 393.
 - Shell GitHub API freshness is blocked by DNS; local `gh` token is invalid.
-- GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
+- GitNexus CLI is available locally; status was stale before this iteration and a reanalysis attempt was started.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.
