@@ -33,6 +33,14 @@ Want to know whether an AI agent is actually improving itself, or just looking i
 | Product, investment, and industry readers | A way to separate real capability accumulation from benchmark gaming, demos, and governance gaps. |
 | Writers and educators | An evidence-backed topic map across projects, papers, trends, pain points, graphs, and long-tail SEO pages. |
 
+## Current GitHub Metadata Repair Packet
+
+| Repository | What this run repaired | Why it matters |
+|---|---|---|
+| [pinchbench/skill](https://github.com/pinchbench/skill) | Added the missing `projects/51-pinchbench-skill.md`, refreshed the raw snapshot, and attached deep/public reports. | It brings the skill/harness/runtime debate back to real tasks, measurable scoring, and transcript evidence. |
+| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | Refreshed stars/forks/issues/PRs, README methodology, and site-facing deep-report coverage. | It shows why memory evaluation must compare accuracy with speed, token cost, and agentic retrieval design. |
+| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | Added an external awesome-list comparator card, deep report, and public/site coverage. | It acts as an external mirror for how we package memory, benchmark, and Agent-Swarm narratives in our own README/site. |
+
 ```mermaid
 flowchart LR
   RAW["raw sources<br/>GitHub / papers / blogs / social"] --> PROC["processed evidence<br/>analysis / research / projects"]

@@ -1,6 +1,6 @@
 # Value LSH Index
 
-> Generated: 2026-06-02T07:22:32.173Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
+> Generated: 2026-06-02T12:35:12.675Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
 
 ## One Sentence
 
@@ -8,7 +8,7 @@ Value LSH turns comparison into a fast discrete scan: each material gets a `-1/0
 
 ## Three Sentences
 
-This run scanned 2223 materials across GitHub, papers, social/X, and blogs, then generated 171 non-empty LSH buckets and 3 clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the value score and evidence refs keep the ranking auditable. Incremental state is tracked in `data-engine/value-lsh-index/manifest.json`: 0 added, 0 changed, 0 removed, 2223 unchanged versus the previous run.
+This run scanned 2230 materials across GitHub, papers, social/X, and blogs, then generated 171 non-empty LSH buckets and 3 clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the value score and evidence refs keep the ranking auditable. Incremental state is tracked in `data-engine/value-lsh-index/manifest.json`: 7 added, 55 changed, 0 removed, 2168 unchanged versus the previous run.
 
 ## Why Discrete LSH
 
@@ -33,12 +33,12 @@ flowchart LR
 
 | metric | value |
 | --- | --- |
-| materials | 2223 |
+| materials | 2230 |
 | value tags | 26 |
 | LSH buckets | 171 |
 | clusters | 3 |
-| candidate pairs scanned | 64648 |
-| accepted pairs | 55053 |
+| candidate pairs scanned | 64931 |
+| accepted pairs | 55334 |
 | broad buckets skipped | 27 |
 | tag version | 19810f296115 |
 
@@ -46,7 +46,7 @@ flowchart LR
 
 | type | count |
 | --- | ---: |
-| github | 721 |
+| github | 728 |
 | blog | 655 |
 | social | 650 |
 | paper | 197 |
@@ -55,8 +55,8 @@ flowchart LR
 
 | class | count |
 | --- | ---: |
-| needs-review | 1069 |
-| high-value-candidate | 857 |
+| needs-review | 1074 |
+| high-value-candidate | 859 |
 | low-signal-or-risk | 297 |
 
 ## Class Boundary
@@ -84,11 +84,11 @@ flowchart LR
 | 13 | [AI Agent Benchmark](https://github.com/murataslan1/ai-agent-benchmark) | github | 86.31 | 76.92 | high-value-candidate | raw-github/murataslan1_ai-agent-benchmark.md |
 | 14 | Reflexion: Language Agents with Verbal Reinforcement Learning | paper | 86.31 | 76.92 | high-value-candidate | raw-papers/2303-11366.md |
 | 15 | Raw Papers Classification Index | paper | 85.99 | 84.62 | high-value-candidate | raw-papers/classification-index.md |
-| 16 | 0113 CSDN 12 | social | 85.67 | 80.77 | high-value-candidate | raw-social/0113-CSDN-12.md |
-| 17 | [hermes2anti](https://github.com/swapedoc/hermes2anti) | github | 85.67 | 76.92 | high-value-candidate | raw-github/swapedoc_hermes2anti.md |
-| 18 | [AI Research SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs) | github | 85.35 | 76.92 | high-value-candidate | raw-github/orchestra-research_ai-research-skills.md |
-| 19 | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models | paper | 85.35 | 73.08 | high-value-candidate | raw-papers/2510-04618.md |
-| 20 | [openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | github | 85.03 | 76.92 | high-value-candidate | raw-github/algorithmicsuperintelligence_openevolve.md |
+| 16 | [PinchBench Skill](https://github.com/pinchbench/skill) | github | 85.99 | 76.92 | high-value-candidate | raw-github/pinchbench_skill.md |
+| 17 | [Agent Memory Benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | github | 85.99 | 76.92 | high-value-candidate | raw-github/vectorize-io_agent-memory-benchmark.md |
+| 18 | 0113 CSDN 12 | social | 85.67 | 80.77 | high-value-candidate | raw-social/0113-CSDN-12.md |
+| 19 | [hermes2anti](https://github.com/swapedoc/hermes2anti) | github | 85.67 | 76.92 | high-value-candidate | raw-github/swapedoc_hermes2anti.md |
+| 20 | [AgentMemory Benchmark Framework](https://github.com/webzler/agentMemory) | github | 85.67 | 76.92 | high-value-candidate | raw-github/webzler_agentmemory.md |
 
 ## Risk / Contradiction Queue
 
@@ -119,7 +119,7 @@ flowchart LR
 
 | cluster | size | score avg | types | top tags | representatives |
 | --- | ---: | ---: | --- | --- | --- |
-| vlsh-0001 | 1540 | 71.56 | github:663, paper:197, social:415, blog:265 | +local_code_or_artifact, +timestamp_freshness, +current_frontier_signal, +mutable_artifact_clear, +community_momentum, +product_usability, +open_source_reuse, +useful_for_survey_seo | AgentEvolver; CUGA Agent; Yunjue Agent |
+| vlsh-0001 | 1546 | 71.61 | github:669, paper:197, social:415, blog:265 | +local_code_or_artifact, +timestamp_freshness, +current_frontier_signal, +mutable_artifact_clear, +community_momentum, +product_usability, +open_source_reuse, +implementation_runnable | AgentEvolver; CUGA Agent; Yunjue Agent |
 | vlsh-0002 | 3 | 63.27 | social:3 | +current_frontier_signal, +implementation_runnable, +local_code_or_artifact, +product_usability, -evidence_chain_complete, +timestamp_freshness, +open_source_reuse, +hype_without_evidence | 0194 Linux do agent LINUX DO; 0251 Hacker News DeepSeek and Tsinghua Developing Self Improving AI Models; 0334 Hacker News Crewai Raises 18M But Are AI Agents Ready for Prime Time |
 | vlsh-0003 | 2 | 64.33 | blog:2 | +current_frontier_signal, +self_evolution_loop_fit, +implementation_runnable, +local_code_or_artifact, +product_usability, -evidence_chain_complete, +timestamp_freshness, +community_momentum | 0190 36Kr 7 GPU 36; 0425 Tencent Cloud Dev |
 
@@ -127,21 +127,21 @@ flowchart LR
 
 | bucket | size | band | features | chars |
 | --- | ---: | --- | --- | --- |
-| v0:b4:421658a47e32aadc | 919 | 4 | user_need_fit, compare_anchor_baseline | +0 |
+| v0:b4:421658a47e32aadc | 926 | 4 | user_need_fit, compare_anchor_baseline | +0 |
 | v0:b1:ffab79b53e3e2b24 | 724 | 1 | rollback_or_safety, implementation_runnable, local_code_or_artifact, product_usability, teaching_model_card, evidence_chain_complete | 0+++0- |
 | v0:b2:753aee4409944ae1 | 665 | 2 | timestamp_freshness, continuity_active, community_momentum, star_growth_current, paper_quality_signal, benchmark_result | +0+000 |
-| v0:b3:d4db65dcbacb56a1 | 363 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 0+000+ |
+| v0:b3:d4db65dcbacb56a1 | 369 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 0+000+ |
 | v0:b0:00f7c10f6056128a | 346 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | +00000 |
 | v0:b3:a4bfae29739268c9 | 344 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 0++00+ |
 | v0:b0:b5ac1c4242079445 | 311 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | ++0000 |
 | v0:b2:cd2d4041a8bcb5b8 | 295 | 2 | timestamp_freshness, continuity_active, community_momentum, star_growth_current, paper_quality_signal, benchmark_result | +00000 |
-| v0:b2:b0cfcf471baa9a30 | 266 | 2 | timestamp_freshness, continuity_active, community_momentum, star_growth_current, paper_quality_signal, benchmark_result | +++-00 |
-| v0:b1:037bd87daa04a195 | 218 | 1 | rollback_or_safety, implementation_runnable, local_code_or_artifact, product_usability, teaching_model_card, evidence_chain_complete | 0+++00 |
+| v0:b2:b0cfcf471baa9a30 | 286 | 2 | timestamp_freshness, continuity_active, community_momentum, star_growth_current, paper_quality_signal, benchmark_result | +++-00 |
 | v0:b3:0ea31210b6d09644 | 218 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 00000+ |
+| v0:b1:037bd87daa04a195 | 217 | 1 | rollback_or_safety, implementation_runnable, local_code_or_artifact, product_usability, teaching_model_card, evidence_chain_complete | 0+++00 |
 | v0:b1:0af6e4c9f59f7de0 | 198 | 1 | rollback_or_safety, implementation_runnable, local_code_or_artifact, product_usability, teaching_model_card, evidence_chain_complete | 00+00- |
 | v0:b0:8088ac357b58efec | 194 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | +0+000 |
 | v0:b3:f0cf96aa4cdb6fc0 | 190 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 000+00 |
-| v0:b0:14cf7a29abb6e554 | 185 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | ++++++ |
+| v0:b0:14cf7a29abb6e554 | 188 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | ++++++ |
 
 ## Value Lines
 

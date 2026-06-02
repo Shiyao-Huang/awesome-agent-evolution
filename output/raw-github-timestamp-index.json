@@ -1520,10 +1520,10 @@
       "repo": "evomap/awesome-agent-evolution",
       "url": "https://github.com/evomap/awesome-agent-evolution",
       "file": "raw-github/evomap_awesome-agent-evolution.md",
-      "content_timestamp": "2026-05-21",
-      "collected_at": "2026-05-20T17:45:19Z",
-      "time_slice": "2026-05",
-      "timestamp_source": "github_latest_commit_or_update_text"
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T19:52:08+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_github_page_open_2026-06-02"
     },
     {
       "repo": "EvoMap/evolver",
@@ -4049,10 +4049,10 @@
       "repo": "pinchbench/skill",
       "url": "https://github.com/pinchbench/skill",
       "file": "raw-github/pinchbench_skill.md",
-      "content_timestamp": "2026-05-06",
-      "collected_at": "2026-05-22T15:30:00+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "AnySearch GitHub extract: latest release v2.0.0 on 2026-05-06"
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T19:52:08+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_github_page_open_2026-06-02"
     },
     {
       "repo": "pingcap/ossinsight",
@@ -5399,10 +5399,10 @@
       "repo": "vectorize-io/agent-memory-benchmark",
       "url": "https://github.com/vectorize-io/agent-memory-benchmark",
       "file": "raw-github/vectorize-io_agent-memory-benchmark.md",
-      "content_timestamp": "2026-05-24",
-      "collected_at": "2026-05-24T19:01:37+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_github_page_open_2026-05-24"
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-02T19:52:08+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_github_page_open_2026-06-02"
     },
     {
       "repo": "vectorize-io/hindsight",

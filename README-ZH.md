@@ -33,6 +33,14 @@
 | 产品/投资/行业读者 | 区分真实能力积累、刷榜、演示热度和治理成熟度。 |
 | 内容创作者 | 获得带证据入口的选题地图：项目、论文、趋势、痛点、图谱和长尾 SEO 页面。 |
 
+## 本轮 GitHub Metadata 修复包
+
+| 仓库 | 这轮补了什么 | 为什么重要 |
+|---|---|---|
+| [pinchbench/skill](https://github.com/pinchbench/skill) | 补了缺失的 `projects/51-pinchbench-skill.md`、public report、deep report 和当前 raw snapshot。 | 它把 skill/harness/runtime 争论拉回真实任务 benchmark 与 transcript evidence。 |
+| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | 刷新 stars/forks/issues/PRs、README 方法论，并补进 deep report 与 site coverage。 | 它说明 memory 评测不能只看准确率，还要看 speed、token cost 和 agentic retrieval。 |
+| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | 新增外部 awesome-list comparator 卡片、deep report、site/public report。 | 它是我们 README/网站分类叙事的外部镜子，尤其能校验 memory、benchmark、Agent-Swarm 的包装方式。 |
+
 ```mermaid
 flowchart LR
   RAW["原始证据<br/>GitHub / 论文 / 博客 / 社交"] --> PROC["加工证据<br/>分析 / 研究 / 项目"]

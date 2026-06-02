@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-01T20:27:31+08:00
+Generated: 2026-06-02T19:52:08+08:00
 
 ## Nodes
 
@@ -24,9 +24,9 @@ Generated: 2026-06-01T20:27:31+08:00
 
 ## Current Run Evidence
 
-- API-observed repos: opensquilla/opensquilla, GCWing/BitFun, oceanbase/powermem, mnemon-dev/mnemon, alibaizhanov/mengram, im4codes/imcodes, weaviate/query-agent-benchmarking.
-- New raw files: raw-github/opensquilla_opensquilla.md, raw-github/gcwing_bitfun.md, raw-github/oceanbase_powermem.md, raw-github/mnemon-dev_mnemon.md, raw-github/alibaizhanov_mengram.md, raw-github/im4codes_imcodes.md, raw-github/weaviate_query-agent-benchmarking.md.
-- New public model cards and site reports: project/report ids 377, 378, 379, 380, 381, 382, 383.
-- Public GitHub API metadata was reachable; local `gh` token remains invalid for authenticated paths.
-- GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
+- Web-observed repos: pinchbench/skill, vectorize-io/agent-memory-benchmark, EvoMap/awesome-agent-evolution.
+- Refreshed raw captures: raw-github/pinchbench_skill.md, raw-github/vectorize-io_agent-memory-benchmark.md, raw-github/evomap_awesome-agent-evolution.md.
+- Repaired public model cards and site reports: projects/51-pinchbench-skill.md, projects/77-agent-memory-benchmark.md, projects/394-evomap-awesome-agent-evolution.md and mirrored public reports.
+- Shell GitHub API freshness is still blocked by DNS; local `gh` token remains invalid.
+- GitNexus status worked and reported the local index is up to date at commit `73a3e96`.
 - graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.

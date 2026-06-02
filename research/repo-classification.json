@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T20:27:31+08:00",
+  "generated_at": "2026-06-02T19:52:08+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -2524,17 +2524,17 @@
     {
       "repo": "evomap/awesome-agent-evolution",
       "url": "https://github.com/evomap/awesome-agent-evolution",
-      "stars": "123",
+      "stars": "130",
       "prior_category": "工具",
       "prior_unclassified": "false",
       "final_category": "工具/tool",
       "function_tag": "resource-index",
       "base_theme": "evolution",
-      "stack": "Markdown",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-21",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "A curated list of AI Agent evolution, memory systems, multi-agent architectures, and self-improvement projects. | evomap.ai"
+      "stack": "JavaScript/Shell/Curated Taxonomy Pipeline",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 130 stars, 17 forks, 57 commits, no releases, JavaScript/Shell implementation, and a maintained taxonomy covering self-evolution, memory, protocols, coding, benchmarks, and community knowledge.",
+      "description": "EvoMap/awesome-agent-evolution is a curated awesome list that maps self-evolving agents, memory systems, benchmarks, protocols, and adjacent infrastructure as a public field taxonomy."
     },
     {
       "repo": "EvoMap/evolver",
@@ -6744,12 +6744,12 @@
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
       "base_theme": "evaluation",
-      "stack": "Python",
-      "evidence": "benchmark/evaluation/harness signal; local raw capture promoted from project supplement",
-      "description": "OpenClaw-oriented real task benchmark covering meetings, code, email, research, files, memory, and skill discovery.",
+      "stack": "Python/Shell/TypeScript/OpenClaw Benchmark Harness",
+      "evidence": "web-observed GitHub page showed about 1.2k stars, 136 forks, 17 issues, 383 commits, MIT license, 14 releases, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents.",
+      "description": "PinchBench is an OpenClaw-oriented real task benchmark that measures coding agents across productivity, research, writing, coding, analysis, email, memory, and skill-discovery tasks.",
       "prior_unclassified": "true",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-06"
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02"
     },
     {
       "repo": "pingcap/ossinsight",
@@ -8989,17 +8989,17 @@
     {
       "repo": "vectorize-io/agent-memory-benchmark",
       "url": "https://github.com/vectorize-io/agent-memory-benchmark",
-      "stars": "43",
+      "stars": "46",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
       "base_theme": "memory",
-      "stack": "Python",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-24",
-      "evidence": "web GitHub page observed 29 commits, Python/Vue stack, benchmark topics, reproducibility claims, uv CLI commands, 43 stars and 15 forks",
-      "description": "AMB 是面向 agent memory 的公开 benchmark，强调可复现的评测 harness、judge prompts、answer prompts 和结果，并同时跟踪 accuracy、speed、token cost。"
+      "stack": "Python/Vue/Memory Benchmark Viewer",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub page showed 46 stars, 17 forks, 6 issues, 4 pull requests, 29 commits, Python/Vue implementation, and README claims for open datasets, prompts, scoring logic, and memory benchmark outputs.",
+      "description": "AMB 是面向 agent memory 的公开 benchmark，强调 agentic memory task 评测、开放 prompts/评分逻辑，以及 accuracy、speed、token cost 的联合比较。"
     },
     {
       "repo": "vectorize-io/hindsight",

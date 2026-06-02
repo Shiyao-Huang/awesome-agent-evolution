@@ -175,7 +175,7 @@ Generated: 2026-06-02T00:00:00+08:00
 | 166 | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 2026-05-24 | 2026-05 | 2026-05-24T19:01:37+08:00 | web_github_page_open_2026-05-24 | raw-github/evermind-ai_everos.md |
 | 167 | [evoagentx/awesome-self-evolving-agents](https://github.com/evoagentx/awesome-self-evolving-agents) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/evoagentx_awesome-self-evolving-agents.md |
 | 168 | [evoagentx/evoagentx](https://github.com/evoagentx/evoagentx) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/evoagentx_evoagentx.md |
-| 169 | [evomap/awesome-agent-evolution](https://github.com/evomap/awesome-agent-evolution) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/evomap_awesome-agent-evolution.md |
+| 169 | [evomap/awesome-agent-evolution](https://github.com/evomap/awesome-agent-evolution) | 2026-06-02 | 2026-06 | 2026-06-02T19:52:08+08:00 | web_github_page_open_2026-06-02 | raw-github/evomap_awesome-agent-evolution.md |
 | 170 | [EvoMap/evolver](https://github.com/EvoMap/evolver) | 2026-05-31 | 2026-05 | 2026-05-31T01:21:52+08:00 | web_observed_public_github_page_2026_05_31 | raw-github/evomap_evolver.md |
 | 171 | [evotai/evot](https://github.com/evotai/evot) | 2026-05-17 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/evotai_evot.md |
 | 172 | [exoskeletonzj/mars](https://github.com/exoskeletonzj/mars) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/exoskeletonzj_mars.md |
@@ -456,7 +456,7 @@ Generated: 2026-06-02T00:00:00+08:00
 | 447 | [pgg3/evotoolkit](https://github.com/pgg3/evotoolkit) | 2026-03-23 | 2026-03 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/pgg3_evotoolkit.md |
 | 448 | [pgg3/l-autoda](https://github.com/pgg3/l-autoda) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/pgg3_l-autoda.md |
 | 449 | [Picrew/awesome-agent-harness](https://github.com/Picrew/awesome-agent-harness) | 2026-05-27 | 2026-05 | 2026-05-27T22:00:12+08:00 | web_observed_public_github_page_2026_05_27 | raw-github/picrew_awesome-agent-harness.md |
-| 450 | [pinchbench/skill](https://github.com/pinchbench/skill) | 2026-05-06 | 2026-05 | 2026-05-22T15:30:00+08:00 | AnySearch GitHub extract: latest release v2.0.0 on 2026-05-06 | raw-github/pinchbench_skill.md |
+| 450 | [pinchbench/skill](https://github.com/pinchbench/skill) | 2026-06-02 | 2026-06 | 2026-06-02T19:52:08+08:00 | web_github_page_open_2026-06-02 | raw-github/pinchbench_skill.md |
 | 451 | [pingcap/ossinsight](https://github.com/pingcap/ossinsight) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/pingcap_ossinsight.md |
 | 452 | [pingcy/ace-langgraph](https://github.com/pingcy/ace-langgraph) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/pingcy_ace-langgraph.md |
 | 453 | [pjt222/agent-almanac](https://github.com/pjt222/agent-almanac) | 2026-05-25 | 2026-05 | 2026-05-24T16:06:00Z | web_observed_github_page | raw-github/pjt222_agent-almanac.md |
@@ -606,7 +606,7 @@ Generated: 2026-06-02T00:00:00+08:00
 | 597 | [tzussman/openevolve](https://github.com/tzussman/openevolve) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/tzussman_openevolve.md |
 | 598 | [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/uid4oe_insight-swarm.md |
 | 599 | [UnicomAI/hexagent](https://github.com/UnicomAI/hexagent) | 2026-05-27 | 2026-05 | 2026-05-27T16:00:06+08:00 | web_observed_public_github_page_2026_05_27 | raw-github/unicomai_hexagent.md |
-| 600 | [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | 2026-05-24 | 2026-05 | 2026-05-24T19:01:37+08:00 | web_github_page_open_2026-05-24 | raw-github/vectorize-io_agent-memory-benchmark.md |
+| 600 | [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | 2026-06-02 | 2026-06 | 2026-06-02T19:52:08+08:00 | web_github_page_open_2026-06-02 | raw-github/vectorize-io_agent-memory-benchmark.md |
 | 601 | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | 2026-05-14 | 2026-05 | 2026-05-25T11:20:46+08:00 | browser-observed GitHub page/search snapshot during 2026-05-25T11:20:46+08:00; shell DNS for api.github.com failed and gh token was invalid | raw-github/vectorize-io_hindsight.md |
 | 602 | [VectorSpaceLab/general-agentic-memory](https://github.com/VectorSpaceLab/general-agentic-memory) | 2026-06-02 | 2026-06 | 2026-06-02T07:54:27+08:00 | web_observed_public_github_page_2026_06_02 | raw-github/vectorspacelab_general-agentic-memory.md |
 | 603 | [ventr1c/memma](https://github.com/ventr1c/memma) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/ventr1c_memma.md |

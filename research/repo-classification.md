@@ -1,6 +1,6 @@
 # Repo 自动分类与技术栈分析（raw-github 677）
 
-- generated_at: 2026-06-01T20:27:31+08:00
+- generated_at: 2026-06-02T19:52:08+08:00
 - companion_csv: `research/repo-classification.csv`
 - companion_json: `research/repo-classification.json`
 
@@ -16,19 +16,15 @@
 | 论文代码/paper-code | 33 |
 | 评测/benchmark | 1 |
 
-## 本轮 hourly public metadata 增量
+## 本轮 metadata repair spotlight
 
 | Repo | Category | Theme | Function | Evidence |
 |---|---|---|---|---|
-| [opensquilla/opensquilla](https://github.com/opensquilla/opensquilla) | 框架/framework | evolution | framework-runtime | public GitHub API metadata showed 2,184 stars, 148 forks, 48 commit pages, Apache-2.0 license, and Python-first runtime composition. |
-| [GCWing/BitFun](https://github.com/GCWing/BitFun) | 框架/framework | evolution | framework-runtime | public GitHub API metadata showed 799 stars, 99 forks, 1,627 commit pages, MIT license, and Rust-led implementation. |
-| [oceanbase/powermem](https://github.com/oceanbase/powermem) | 框架/framework | memory | memory-runtime | public GitHub API metadata showed 688 stars, 83 forks, about 200 commit pages, Python codebase, and memory-plugin positioning. |
-| [mnemon-dev/mnemon](https://github.com/mnemon-dev/mnemon) | 框架/framework | memory | memory-runtime | public GitHub API metadata showed 322 stars, 46 forks, 234 commit pages, Apache-2.0 license, and Go-based memory substrate implementation. |
-| [alibaizhanov/mengram](https://github.com/alibaizhanov/mengram) | 框架/framework | memory | memory-runtime | public GitHub API metadata showed 172 stars, 27 forks, 528 commit pages, Apache-2.0 license, and Python-led memory platform implementation. |
-| [im4codes/imcodes](https://github.com/im4codes/imcodes) | 工具/tool | memory | tool-module | public GitHub API metadata showed 131 stars, 11 forks, 1,818 commit pages, MIT license, and TypeScript-first implementation. |
-| [weaviate/query-agent-benchmarking](https://github.com/weaviate/query-agent-benchmarking) | 评测/evaluation | evaluation | benchmark-suite | public GitHub API metadata showed 15 stars, 3 forks, 595 commit pages, BSD-3-Clause license, and benchmark-oriented notebook assets. |
+| [evomap/awesome-agent-evolution](https://github.com/evomap/awesome-agent-evolution) | 工具/tool | evolution | resource-index | web-observed GitHub page showed 130 stars, 17 forks, 57 commits, no releases, JavaScript/Shell implementation, and a maintained taxonomy covering self-evolution, memory, protocols, coding, benchmarks, and community knowledge. |
+| [pinchbench/skill](https://github.com/pinchbench/skill) | 评测/evaluation | evaluation | benchmark-eval | web-observed GitHub page showed about 1.2k stars, 136 forks, 17 issues, 383 commits, MIT license, 14 releases, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents. |
+| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | 评测/evaluation | memory | benchmark-eval | web-observed GitHub page showed 46 stars, 17 forks, 6 issues, 4 pull requests, 29 commits, Python/Vue implementation, and README claims for open datasets, prompts, scoring logic, and memory benchmark outputs. |
 
-本轮新增 opensquilla/opensquilla、GCWing/BitFun、oceanbase/powermem、mnemon-dev/mnemon、alibaizhanov/mengram、im4codes/imcodes、weaviate/query-agent-benchmarking raw captures，并同步提升为 public site / model-card 覆盖。GitHub API 未验证 freshness 的原因记录在 Mermaid graph 与 work notes 中。
+本轮修复了 `pinchbench/skill`、`vectorize-io/agent-memory-benchmark` 和 `evomap/awesome-agent-evolution` 的 raw metadata、deep report、project/site report 连接。GitHub API 仍未在 shell 环境中恢复，因此 freshness 明确标为 web-observed。
 
 ## 完整分类表
 
@@ -202,7 +198,7 @@
 | 166 | [evermind-ai/everos?tab=readme-ov-file](https://github.com/evermind-ai/everos?tab=readme-ov-file) | 5 | 评测 | 评测/evaluation | Markdown | evaluation | benchmark-eval | 2025-02 | 2025-02-01 | kept prior human/analysis category + README verified |
 | 167 | [evoagentx/awesome-self-evolving-agents](https://github.com/evoagentx/awesome-self-evolving-agents) | 2 | 工具 | 工具/tool | Markdown | evolution | resource-index | 2026-05 | 2026-05-21 | kept prior human/analysis category + README verified |
 | 168 | [evoagentx/evoagentx](https://github.com/evoagentx/evoagentx) | 3 | 框架 | 框架/framework | Markdown | evolution | application-demo | 2026-05 | 2026-05-21 | kept prior human/analysis category + README verified |
-| 169 | [evomap/awesome-agent-evolution](https://github.com/evomap/awesome-agent-evolution) | 123 | 工具 | 工具/tool | Markdown | evolution | resource-index | 2026-05 | 2026-05-21 | kept prior human/analysis category + README verified |
+| 169 | [evomap/awesome-agent-evolution](https://github.com/evomap/awesome-agent-evolution) | 130 | 工具 | 工具/tool | JavaScript/Shell/Curated Taxonomy Pipeline | evolution | resource-index | 2026-06 | 2026-06-02 | web-observed GitHub page showed 130 stars, 17 forks, 57 commits, no releases, JavaScript/Shell implementation, and a maintained taxonomy covering self-evolution, memory, protocols, coding, benchmarks, and community knowledge. |
 | 170 | [EvoMap/evolver](https://github.com/EvoMap/evolver) | 7600 | - | 框架/framework | JavaScript/Graph Memory Evolution Runtime/Reasoning Retrieval | memory | memory-runtime | 2026-05 | 2026-05-31 | web-observed GitHub page showed 7.6k stars, 773 forks, 87 commits, GPL-3.0 license, and README positioning around self-evolving memory maps for AI reasoning. |
 | 171 | [evotai/evot](https://github.com/evotai/evot) | 54 | 框架 | 框架/framework | Markdown | evolution | tool-module | 2026-05 | 2026-05-17 | kept prior human/analysis category + README verified |
 | 172 | [exoskeletonzj/mars](https://github.com/exoskeletonzj/mars) | 18 | 框架 | 框架/framework | Python | prompt-optimization | tool-module | unknown | unknown | kept prior human/analysis category + README verified |
@@ -483,7 +479,7 @@
 | 447 | [pgg3/evotoolkit](https://github.com/pgg3/evotoolkit) | 68 | - | 评测/evaluation | Python | evaluation | benchmark-eval | 2026-03 | 2026-03-23 | benchmark/evaluation/harness signal |
 | 448 | [pgg3/l-autoda](https://github.com/pgg3/l-autoda) | 3 | - | 应用/application | Python | evolution | application-demo | 2026-05 | 2026-05-21 | application/self-evolving-agent signal |
 | 449 | [Picrew/awesome-agent-harness](https://github.com/Picrew/awesome-agent-harness) | 673 | - | 教程/tutorial | Markdown/Benchmark Catalog/Runtime Comparison | evaluation | resource-index | 2026-05 | 2026-05-27 | web-observed GitHub page showed 673 stars, 53 forks, 35 commits, and README sections covering benchmark suites, open-source frameworks, and end-to-end harness ecosystem mapping. |
-| 450 | [pinchbench/skill](https://github.com/pinchbench/skill) | 1200 | - | 评测/evaluation | Python | evaluation | benchmark-eval | 2026-05 | 2026-05-06 | benchmark/evaluation/harness signal; local raw capture promoted from project supplement |
+| 450 | [pinchbench/skill](https://github.com/pinchbench/skill) | 1200 | - | 评测/evaluation | Python/Shell/TypeScript/OpenClaw Benchmark Harness | evaluation | benchmark-eval | 2026-06 | 2026-06-02 | web-observed GitHub page showed about 1.2k stars, 136 forks, 17 issues, 383 commits, MIT license, 14 releases, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents. |
 | 451 | [pingcap/ossinsight](https://github.com/pingcap/ossinsight) | 2 | - | 工具/tool | Markdown | research-agent | tool-module | 2026-05 | 2026-05-21 | tool/module/memory/prompt/coding signal |
 | 452 | [pingcy/ace-langgraph](https://github.com/pingcy/ace-langgraph) | 46 | 框架 | 框架/framework | Python | framework | framework-runtime | unknown | unknown | kept prior human/analysis category + README verified |
 | 453 | [pjt222/agent-almanac](https://github.com/pjt222/agent-almanac) | 17 | - | 教程/tutorial | R/JavaScript/CSS/Shell | skill | resource-index | 2026-05 | 2026-05-25 | web GitHub page observed 462 commits, MIT license, R/JavaScript/CSS/Shell stack, .claude-plugin/skills/agents/teams/viz folders, 350-skill and 72-agent README claims from search snippet, release v1.3.0 latest May 4 2026, 17 stars and 2 forks |
@@ -633,7 +629,7 @@
 | 597 | [tzussman/openevolve](https://github.com/tzussman/openevolve) | 0 | - | 应用/application | Python | evolution | application-demo | 2026-05 | 2026-05-21 | application/self-evolving-agent signal |
 | 598 | [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | 0 | - | 框架/framework | TypeScript/JavaScript | framework | framework-runtime | 2026-05 | 2026-05-21 | framework/runtime/orchestration signal |
 | 599 | [UnicomAI/hexagent](https://github.com/UnicomAI/hexagent) | 122 | - | 框架/framework | Python/TypeScript/MCP/Sandboxed Computer | framework | framework-runtime | 2026-05 | 2026-05-27 | web-observed GitHub page showed 122 stars, 12 forks, 105 commits, MIT license, and README claims for runtime/computer isolation, pluggable Computer protocol, middleware pipeline, and skill discovery. |
-| 600 | [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | 43 | - | 评测/evaluation | Python | memory | benchmark-eval | 2026-05 | 2026-05-24 | web GitHub page observed 29 commits, Python/Vue stack, benchmark topics, reproducibility claims, uv CLI commands, 43 stars and 15 forks |
+| 600 | [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | 46 | - | 评测/evaluation | Python/Vue/Memory Benchmark Viewer | memory | benchmark-eval | 2026-06 | 2026-06-02 | web-observed GitHub page showed 46 stars, 17 forks, 6 issues, 4 pull requests, 29 commits, Python/Vue implementation, and README claims for open datasets, prompts, scoring logic, and memory benchmark outputs. |
 | 601 | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | 14400 | - | 框架/framework | Python | memory | framework-runtime | 2026-05 | 2026-05-14 | web GitHub page observed 1,408 commits, MIT license, Python/TypeScript/Rust stack, 14.4k stars and 821 forks, v0.6.2 latest on 2026-05-14; README describes retain/recall/reflect, memory banks, semantic/keyword/graph/temporal retrieval, LongMemEval claims and coding-agent documentation skill support |
 | 602 | [VectorSpaceLab/general-agentic-memory](https://github.com/VectorSpaceLab/general-agentic-memory) | 390 | - | 框架/framework | Python/Generalized Agent Memory Framework | memory | framework-runtime | 2026-06 | 2026-06-02 | web-observed GitHub page showed 390 stars, 32 forks, 481 commits, and generalized memory-framework framing. |
 | 603 | [ventr1c/memma](https://github.com/ventr1c/memma) | 17 | 论文代码 | 论文代码/paper-code | Python | memory | tool-module | unknown | unknown | kept prior human/analysis category + README verified |

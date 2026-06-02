@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T07:22:32.173Z",
+  "generated_at": "2026-06-02T12:35:12.675Z",
   "method": {
     "name": "discrete_value_lsh_v0",
     "summary": "Ternary value tags (-1/0/+1) are split into local hash bands for approximate near-neighbor recall and cluster discovery.",
@@ -9,31 +9,31 @@
     "threshold": 0.52
   },
   "summary": {
-    "generated_at": "2026-06-02T07:22:32.173Z",
+    "generated_at": "2026-06-02T12:35:12.675Z",
     "source": "all",
-    "total_materials": 2223,
+    "total_materials": 2230,
     "value_tag_count": 26,
     "tag_version": "19810f296115",
     "band_size": 6,
     "threshold": 0.52,
     "type_counts": {
-      "github": 721,
+      "github": 728,
       "paper": 197,
       "social": 650,
       "blog": 655
     },
     "value_class_counts": {
-      "needs-review": 1069,
-      "high-value-candidate": 857,
+      "needs-review": 1074,
+      "high-value-candidate": 859,
       "low-signal-or-risk": 297
     },
     "total_buckets": 171,
     "total_clusters": 3,
-    "score_average": 68.36,
-    "confidence_average": 46.08,
+    "score_average": 68.41,
+    "confidence_average": 46.19,
     "lsh_stats": {
-      "candidate_pairs_scanned": 64648,
-      "accepted_pairs": 55053,
+      "candidate_pairs_scanned": 64931,
+      "accepted_pairs": 55334,
       "skipped_broad_buckets": [
         {
           "key": "v0:b1:226d012686e902e0",
@@ -51,7 +51,7 @@
         {
           "key": "v0:b2:ffc055ea0b2ca1b4",
           "band": 2,
-          "size": 133,
+          "size": 119,
           "features": [
             "timestamp_freshness",
             "continuity_active",
@@ -64,7 +64,7 @@
         {
           "key": "v0:b4:421658a47e32aadc",
           "band": 4,
-          "size": 919,
+          "size": 926,
           "features": [
             "user_need_fit",
             "compare_anchor_baseline"
@@ -73,7 +73,7 @@
         {
           "key": "v0:b1:88062eb178d67991",
           "band": 1,
-          "size": 165,
+          "size": 174,
           "features": [
             "rollback_or_safety",
             "implementation_runnable",
@@ -86,7 +86,7 @@
         {
           "key": "v0:b2:b0cfcf471baa9a30",
           "band": 2,
-          "size": 266,
+          "size": 286,
           "features": [
             "timestamp_freshness",
             "continuity_active",
@@ -99,7 +99,7 @@
         {
           "key": "v0:b3:d4db65dcbacb56a1",
           "band": 3,
-          "size": 363,
+          "size": 369,
           "features": [
             "method_novelty",
             "open_source_reuse",
@@ -112,7 +112,7 @@
         {
           "key": "v0:b1:037bd87daa04a195",
           "band": 1,
-          "size": 218,
+          "size": 217,
           "features": [
             "rollback_or_safety",
             "implementation_runnable",
@@ -125,7 +125,7 @@
         {
           "key": "v0:b0:14cf7a29abb6e554",
           "band": 0,
-          "size": 185,
+          "size": 188,
           "features": [
             "current_frontier_signal",
             "self_evolution_loop_fit",
@@ -138,7 +138,7 @@
         {
           "key": "v0:b4:1f37dc4fdfa07f95",
           "band": 4,
-          "size": 146,
+          "size": 145,
           "features": [
             "user_need_fit",
             "compare_anchor_baseline"
@@ -377,10 +377,10 @@
       ]
     },
     "incremental": {
-      "previous_generated_at": "2026-06-02T06:11:59.058Z",
-      "added": 0,
-      "changed": 0,
-      "unchanged": 2223,
+      "previous_generated_at": "2026-06-02T07:22:32.173Z",
+      "added": 7,
+      "changed": 55,
+      "unchanged": 2168,
       "removed": 0
     }
   },
@@ -965,7 +965,7 @@
         "raw_file": "raw-github/cuga-project_cuga-agent.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 67,
+        "frontier_rank": 75,
         "star_growth_rank": 170
       }
     },
@@ -1611,7 +1611,7 @@
         "raw_file": "raw-github/yunjuetech_yunjue-agent.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 92,
+        "frontier_rank": 105,
         "star_growth_rank": 214
       }
     },
@@ -1821,7 +1821,7 @@
         "raw_file": "raw-github/evoagentx_evoagentx.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 44,
+        "frontier_rank": 48,
         "star_growth_rank": 143
       }
     },
@@ -2031,7 +2031,7 @@
         "raw_file": "raw-github/xai-liacs_llamea.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 215,
+        "frontier_rank": 242,
         "star_growth_rank": 130
       }
     },
@@ -3079,7 +3079,7 @@
         "raw_file": "raw-github/freedomintelligence_tiermem.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 54,
+        "frontier_rank": 59,
         "star_growth_rank": 571
       }
     },
@@ -3283,7 +3283,7 @@
         "raw_file": "raw-github/murataslan1_ai-agent-benchmark.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 36,
+        "frontier_rank": 39,
         "star_growth_rank": 476
       }
     },
@@ -3708,6 +3708,414 @@
       }
     },
     {
+      "id": "github:pinchbench/skill",
+      "type": "github",
+      "title": "PinchBench Skill",
+      "url": "https://github.com/pinchbench/skill",
+      "source_path": "raw-github/pinchbench_skill.md",
+      "score": {
+        "values": {
+          "current_frontier_signal": 1,
+          "self_evolution_loop_fit": 1,
+          "mutable_artifact_clear": 1,
+          "feedback_signal_clear": 1,
+          "verifier_or_benchmark": 1,
+          "retention_or_memory": 1,
+          "rollback_or_safety": 0,
+          "implementation_runnable": 1,
+          "local_code_or_artifact": 1,
+          "product_usability": 1,
+          "teaching_model_card": 1,
+          "evidence_chain_complete": 1,
+          "timestamp_freshness": 1,
+          "continuity_active": 1,
+          "community_momentum": 1,
+          "star_growth_current": -1,
+          "paper_quality_signal": 0,
+          "benchmark_result": 1,
+          "method_novelty": 0,
+          "open_source_reuse": 1,
+          "issue_resource_signal": 1,
+          "hype_without_evidence": 0,
+          "stale_or_unknown_metadata": 0,
+          "useful_for_survey_seo": 1,
+          "user_need_fit": 1,
+          "compare_anchor_baseline": 0
+        },
+        "contributions": {
+          "current_frontier_signal": 8,
+          "self_evolution_loop_fit": 10,
+          "mutable_artifact_clear": 6,
+          "feedback_signal_clear": 6,
+          "verifier_or_benchmark": 8,
+          "retention_or_memory": 7,
+          "rollback_or_safety": 0,
+          "implementation_runnable": 8,
+          "local_code_or_artifact": 5,
+          "product_usability": 5,
+          "teaching_model_card": 4,
+          "evidence_chain_complete": 8,
+          "timestamp_freshness": 7,
+          "continuity_active": 7,
+          "community_momentum": 5,
+          "star_growth_current": -6,
+          "paper_quality_signal": 0,
+          "benchmark_result": 6,
+          "method_novelty": 0,
+          "open_source_reuse": 5,
+          "issue_resource_signal": 4,
+          "hype_without_evidence": 0,
+          "stale_or_unknown_metadata": 0,
+          "useful_for_survey_seo": 4,
+          "user_need_fit": 6,
+          "compare_anchor_baseline": 0
+        },
+        "tagEvidence": {
+          "current_frontier_signal": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "frontier queue top-30"
+            }
+          ],
+          "self_evolution_loop_fit": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "OIMVR gates: observe,interpret,modify,verify,retain"
+            }
+          ],
+          "mutable_artifact_clear": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "mutable artifact terms"
+            }
+          ],
+          "feedback_signal_clear": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "feedback terms"
+            }
+          ],
+          "verifier_or_benchmark": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "benchmark/verifier terms"
+            }
+          ],
+          "retention_or_memory": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "retention terms"
+            }
+          ],
+          "implementation_runnable": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "runnable docs terms"
+            }
+          ],
+          "local_code_or_artifact": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "local mirror or report exists"
+            }
+          ],
+          "product_usability": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "usefulness score high"
+            }
+          ],
+          "teaching_model_card": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "project/public report exists"
+            }
+          ],
+          "evidence_chain_complete": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "raw + processed + time present"
+            }
+          ],
+          "timestamp_freshness": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "2026 timestamp"
+            }
+          ],
+          "continuity_active": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "frontier continuity high"
+            }
+          ],
+          "community_momentum": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "stars >= 1000 (1200)"
+            }
+          ],
+          "star_growth_current": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "star history not fetched"
+            }
+          ],
+          "benchmark_result": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "benchmark result terms"
+            }
+          ],
+          "open_source_reuse": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "license/docs present"
+            }
+          ],
+          "issue_resource_signal": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "issue/resource terms"
+            }
+          ],
+          "useful_for_survey_seo": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "report or paper source"
+            }
+          ],
+          "user_need_fit": [
+            {
+              "source": "raw-github/pinchbench_skill.md",
+              "note": "user-need terms"
+            }
+          ]
+        },
+        "raw_score": 113,
+        "value_score": 85.99,
+        "confidence": 76.92,
+        "nonzero_tags": 20,
+        "positive_tags": 19,
+        "negative_tags": 1,
+        "value_class": "high-value-candidate"
+      },
+      "evidence_refs": {
+        "github_report": "projects/51-pinchbench-skill.md",
+        "analysis_report": "analysis/frontier-projects/pinchbench-skill-dual-chain.md",
+        "public_report": "site/public/reports/projects/51-pinchbench-skill.md",
+        "raw_file": "raw-github/pinchbench_skill.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 19,
+        "star_growth_rank": 134
+      }
+    },
+    {
+      "id": "github:vectorize-io/agent-memory-benchmark",
+      "type": "github",
+      "title": "Agent Memory Benchmark",
+      "url": "https://github.com/vectorize-io/agent-memory-benchmark",
+      "source_path": "raw-github/vectorize-io_agent-memory-benchmark.md",
+      "score": {
+        "values": {
+          "current_frontier_signal": 1,
+          "self_evolution_loop_fit": 1,
+          "mutable_artifact_clear": 1,
+          "feedback_signal_clear": 1,
+          "verifier_or_benchmark": 1,
+          "retention_or_memory": 1,
+          "rollback_or_safety": 0,
+          "implementation_runnable": 1,
+          "local_code_or_artifact": 1,
+          "product_usability": 1,
+          "teaching_model_card": 1,
+          "evidence_chain_complete": 1,
+          "timestamp_freshness": 1,
+          "continuity_active": 1,
+          "community_momentum": 1,
+          "star_growth_current": -1,
+          "paper_quality_signal": 0,
+          "benchmark_result": 1,
+          "method_novelty": 0,
+          "open_source_reuse": 1,
+          "issue_resource_signal": 1,
+          "hype_without_evidence": 0,
+          "stale_or_unknown_metadata": 0,
+          "useful_for_survey_seo": 1,
+          "user_need_fit": 1,
+          "compare_anchor_baseline": 0
+        },
+        "contributions": {
+          "current_frontier_signal": 8,
+          "self_evolution_loop_fit": 10,
+          "mutable_artifact_clear": 6,
+          "feedback_signal_clear": 6,
+          "verifier_or_benchmark": 8,
+          "retention_or_memory": 7,
+          "rollback_or_safety": 0,
+          "implementation_runnable": 8,
+          "local_code_or_artifact": 5,
+          "product_usability": 5,
+          "teaching_model_card": 4,
+          "evidence_chain_complete": 8,
+          "timestamp_freshness": 7,
+          "continuity_active": 7,
+          "community_momentum": 5,
+          "star_growth_current": -6,
+          "paper_quality_signal": 0,
+          "benchmark_result": 6,
+          "method_novelty": 0,
+          "open_source_reuse": 5,
+          "issue_resource_signal": 4,
+          "hype_without_evidence": 0,
+          "stale_or_unknown_metadata": 0,
+          "useful_for_survey_seo": 4,
+          "user_need_fit": 6,
+          "compare_anchor_baseline": 0
+        },
+        "tagEvidence": {
+          "current_frontier_signal": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "2026 raw/activity signal"
+            }
+          ],
+          "self_evolution_loop_fit": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "OIMVR gates: observe,interpret,verify,retain"
+            }
+          ],
+          "mutable_artifact_clear": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "mutable artifact terms"
+            }
+          ],
+          "feedback_signal_clear": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "feedback terms"
+            }
+          ],
+          "verifier_or_benchmark": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "benchmark/verifier terms"
+            }
+          ],
+          "retention_or_memory": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "retention terms"
+            }
+          ],
+          "implementation_runnable": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "runnable docs terms"
+            }
+          ],
+          "local_code_or_artifact": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "local mirror or report exists"
+            }
+          ],
+          "product_usability": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "usefulness score high"
+            }
+          ],
+          "teaching_model_card": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "project/public report exists"
+            }
+          ],
+          "evidence_chain_complete": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "raw + processed + time present"
+            }
+          ],
+          "timestamp_freshness": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "2026 timestamp"
+            }
+          ],
+          "continuity_active": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "frontier continuity high"
+            }
+          ],
+          "community_momentum": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "community terms"
+            }
+          ],
+          "star_growth_current": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "star history not fetched"
+            }
+          ],
+          "benchmark_result": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "benchmark result terms"
+            }
+          ],
+          "open_source_reuse": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "license/docs present"
+            }
+          ],
+          "issue_resource_signal": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "issue/resource terms"
+            }
+          ],
+          "useful_for_survey_seo": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "report or paper source"
+            }
+          ],
+          "user_need_fit": [
+            {
+              "source": "raw-github/vectorize-io_agent-memory-benchmark.md",
+              "note": "user-need terms"
+            }
+          ]
+        },
+        "raw_score": 113,
+        "value_score": 85.99,
+        "confidence": 76.92,
+        "nonzero_tags": 20,
+        "positive_tags": 19,
+        "negative_tags": 1,
+        "value_class": "high-value-candidate"
+      },
+      "evidence_refs": {
+        "github_report": "projects/77-agent-memory-benchmark.md",
+        "analysis_report": "analysis/frontier-projects/vectorize-io-agent-memory-benchmark-dual-chain.md",
+        "public_report": "site/public/reports/projects/77-agent-memory-benchmark.md",
+        "raw_file": "raw-github/vectorize-io_agent-memory-benchmark.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 66,
+        "star_growth_rank": 429
+      }
+    },
+    {
       "id": "social:0113-CSDN-12",
       "type": "social",
       "title": "0113 CSDN 12",
@@ -4119,8 +4527,212 @@
         "raw_file": "raw-github/swapedoc_hermes2anti.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 58,
+        "frontier_rank": 63,
         "star_growth_rank": 577
+      }
+    },
+    {
+      "id": "github:webzler/agentmemory",
+      "type": "github",
+      "title": "AgentMemory Benchmark Framework",
+      "url": "https://github.com/webzler/agentMemory",
+      "source_path": "raw-github/webzler_agentmemory.md",
+      "score": {
+        "values": {
+          "current_frontier_signal": 1,
+          "self_evolution_loop_fit": 1,
+          "mutable_artifact_clear": 1,
+          "feedback_signal_clear": 1,
+          "verifier_or_benchmark": 1,
+          "retention_or_memory": 1,
+          "rollback_or_safety": 0,
+          "implementation_runnable": 1,
+          "local_code_or_artifact": 1,
+          "product_usability": 1,
+          "teaching_model_card": 1,
+          "evidence_chain_complete": 1,
+          "timestamp_freshness": 1,
+          "continuity_active": 1,
+          "community_momentum": 1,
+          "star_growth_current": -1,
+          "paper_quality_signal": 0,
+          "benchmark_result": 1,
+          "method_novelty": 0,
+          "open_source_reuse": 1,
+          "issue_resource_signal": 0,
+          "hype_without_evidence": 0,
+          "stale_or_unknown_metadata": 0,
+          "useful_for_survey_seo": 1,
+          "user_need_fit": 1,
+          "compare_anchor_baseline": 1
+        },
+        "contributions": {
+          "current_frontier_signal": 8,
+          "self_evolution_loop_fit": 10,
+          "mutable_artifact_clear": 6,
+          "feedback_signal_clear": 6,
+          "verifier_or_benchmark": 8,
+          "retention_or_memory": 7,
+          "rollback_or_safety": 0,
+          "implementation_runnable": 8,
+          "local_code_or_artifact": 5,
+          "product_usability": 5,
+          "teaching_model_card": 4,
+          "evidence_chain_complete": 8,
+          "timestamp_freshness": 7,
+          "continuity_active": 7,
+          "community_momentum": 5,
+          "star_growth_current": -6,
+          "paper_quality_signal": 0,
+          "benchmark_result": 6,
+          "method_novelty": 0,
+          "open_source_reuse": 5,
+          "issue_resource_signal": 0,
+          "hype_without_evidence": 0,
+          "stale_or_unknown_metadata": 0,
+          "useful_for_survey_seo": 4,
+          "user_need_fit": 6,
+          "compare_anchor_baseline": 3
+        },
+        "tagEvidence": {
+          "current_frontier_signal": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "2026 raw/activity signal"
+            }
+          ],
+          "self_evolution_loop_fit": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "OIMVR gates: observe,interpret,verify,retain"
+            }
+          ],
+          "mutable_artifact_clear": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "mutable artifact terms"
+            }
+          ],
+          "feedback_signal_clear": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "feedback terms"
+            }
+          ],
+          "verifier_or_benchmark": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "benchmark/verifier terms"
+            }
+          ],
+          "retention_or_memory": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "retention terms"
+            }
+          ],
+          "implementation_runnable": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "runnable docs terms"
+            }
+          ],
+          "local_code_or_artifact": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "local mirror or report exists"
+            }
+          ],
+          "product_usability": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "usefulness score high"
+            }
+          ],
+          "teaching_model_card": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "project/public report exists"
+            }
+          ],
+          "evidence_chain_complete": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "raw + processed + time present"
+            }
+          ],
+          "timestamp_freshness": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "2026 timestamp"
+            }
+          ],
+          "continuity_active": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "frontier continuity high"
+            }
+          ],
+          "community_momentum": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "community terms"
+            }
+          ],
+          "star_growth_current": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "star history not fetched"
+            }
+          ],
+          "benchmark_result": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "benchmark result terms"
+            }
+          ],
+          "open_source_reuse": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "license/docs present"
+            }
+          ],
+          "useful_for_survey_seo": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "report or paper source"
+            }
+          ],
+          "user_need_fit": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "user-need terms"
+            }
+          ],
+          "compare_anchor_baseline": [
+            {
+              "source": "raw-github/webzler_agentmemory.md",
+              "note": "known baseline terms"
+            }
+          ]
+        },
+        "raw_score": 112,
+        "value_score": 85.67,
+        "confidence": 76.92,
+        "nonzero_tags": 20,
+        "positive_tags": 19,
+        "negative_tags": 1,
+        "value_class": "high-value-candidate"
+      },
+      "evidence_refs": {
+        "github_report": "projects/378-agentmemory-benchmark-framework.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/378-agentmemory-benchmark-framework.md",
+        "raw_file": "raw-github/webzler_agentmemory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 56,
+        "star_growth_rank": null
       }
     },
     {
@@ -4323,7 +4935,7 @@
         "raw_file": "raw-github/orchestra-research_ai-research-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 26,
+        "frontier_rank": 27,
         "star_growth_rank": 66
       }
     },
@@ -5747,7 +6359,7 @@
         "raw_file": "raw-github/alienfader_continuity-benchmarks.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 55,
+        "frontier_rank": 60,
         "star_growth_rank": 592
       }
     },
@@ -5945,7 +6557,7 @@
         "raw_file": "raw-github/superagenticai_metaharness.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 6,
+        "frontier_rank": 5,
         "star_growth_rank": 351
       }
     },
@@ -6341,7 +6953,7 @@
         "raw_file": "raw-github/yuanchenbei_mem-gallery.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 51,
+        "frontier_rank": 55,
         "star_growth_rank": 446
       }
     },
@@ -7139,7 +7751,7 @@
         "raw_file": "raw-github/nousresearch_hermes-agent-self-evolution.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 13,
+        "frontier_rank": 12,
         "star_growth_rank": 91
       }
     },
@@ -7337,7 +7949,7 @@
         "raw_file": "raw-github/wazionapps_nexo.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 40,
+        "frontier_rank": 43,
         "star_growth_rank": 486
       }
     },
@@ -8150,608 +8762,6 @@
         "frontier_rank": null,
         "star_growth_rank": null
       }
-    },
-    {
-      "id": "social:0111-CSDN-Darwin-G-del-Machine-AI",
-      "type": "social",
-      "title": "0111 CSDN Darwin G del Machine AI",
-      "url": null,
-      "source_path": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-      "score": {
-        "values": {
-          "current_frontier_signal": 1,
-          "self_evolution_loop_fit": 1,
-          "mutable_artifact_clear": 1,
-          "feedback_signal_clear": 1,
-          "verifier_or_benchmark": 1,
-          "retention_or_memory": 1,
-          "rollback_or_safety": 1,
-          "implementation_runnable": 1,
-          "local_code_or_artifact": 1,
-          "product_usability": 1,
-          "teaching_model_card": 0,
-          "evidence_chain_complete": -1,
-          "timestamp_freshness": 1,
-          "continuity_active": 1,
-          "community_momentum": 1,
-          "star_growth_current": 0,
-          "paper_quality_signal": 1,
-          "benchmark_result": 1,
-          "method_novelty": 0,
-          "open_source_reuse": 0,
-          "issue_resource_signal": 1,
-          "hype_without_evidence": 0,
-          "stale_or_unknown_metadata": 0,
-          "useful_for_survey_seo": 1,
-          "user_need_fit": 1,
-          "compare_anchor_baseline": 1
-        },
-        "contributions": {
-          "current_frontier_signal": 8,
-          "self_evolution_loop_fit": 10,
-          "mutable_artifact_clear": 6,
-          "feedback_signal_clear": 6,
-          "verifier_or_benchmark": 8,
-          "retention_or_memory": 7,
-          "rollback_or_safety": 5,
-          "implementation_runnable": 8,
-          "local_code_or_artifact": 5,
-          "product_usability": 5,
-          "teaching_model_card": 0,
-          "evidence_chain_complete": -8,
-          "timestamp_freshness": 7,
-          "continuity_active": 7,
-          "community_momentum": 5,
-          "star_growth_current": 0,
-          "paper_quality_signal": 5,
-          "benchmark_result": 6,
-          "method_novelty": 0,
-          "open_source_reuse": 0,
-          "issue_resource_signal": 4,
-          "hype_without_evidence": 0,
-          "stale_or_unknown_metadata": 0,
-          "useful_for_survey_seo": 4,
-          "user_need_fit": 6,
-          "compare_anchor_baseline": 3
-        },
-        "tagEvidence": {
-          "current_frontier_signal": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "text contains current/frontier terms"
-            }
-          ],
-          "self_evolution_loop_fit": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "self-evolution terms"
-            }
-          ],
-          "mutable_artifact_clear": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "mutable artifact terms"
-            }
-          ],
-          "feedback_signal_clear": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "feedback terms"
-            }
-          ],
-          "verifier_or_benchmark": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "benchmark/verifier terms"
-            }
-          ],
-          "retention_or_memory": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "retention terms"
-            }
-          ],
-          "rollback_or_safety": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "safety/rollback terms"
-            }
-          ],
-          "implementation_runnable": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "runnable docs terms"
-            }
-          ],
-          "local_code_or_artifact": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "raw/work source exists locally"
-            }
-          ],
-          "product_usability": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "product/workflow terms"
-            }
-          ],
-          "evidence_chain_complete": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "weak evidence chain"
-            }
-          ],
-          "timestamp_freshness": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "fresh year in text"
-            }
-          ],
-          "continuity_active": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "continuity terms"
-            }
-          ],
-          "community_momentum": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "community terms"
-            }
-          ],
-          "paper_quality_signal": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "research-paper terms"
-            }
-          ],
-          "benchmark_result": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "benchmark result terms"
-            }
-          ],
-          "issue_resource_signal": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "issue/resource terms"
-            }
-          ],
-          "useful_for_survey_seo": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "reader-facing topic terms"
-            }
-          ],
-          "user_need_fit": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "user-need terms"
-            }
-          ],
-          "compare_anchor_baseline": [
-            {
-              "source": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-              "note": "known baseline terms"
-            }
-          ]
-        },
-        "raw_score": 107,
-        "value_score": 84.08,
-        "confidence": 76.92,
-        "nonzero_tags": 20,
-        "positive_tags": 19,
-        "negative_tags": 1,
-        "value_class": "high-value-candidate"
-      },
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": null,
-        "public_report": null,
-        "raw_file": "raw-social/0111-CSDN-Darwin-G-del-Machine-AI.md",
-        "rank_seed": true,
-        "alternate_source_paths": [
-          "raw-social-rank/0111-CSDN-Darwin-G-del-Machine-AI.md"
-        ],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
-      "id": "github:agent0ai/agent-zero",
-      "type": "github",
-      "title": "Agent Zero",
-      "url": "https://github.com/agent0ai/agent-zero",
-      "source_path": "raw-github/agent0ai_agent-zero.md",
-      "score": {
-        "values": {
-          "current_frontier_signal": 1,
-          "self_evolution_loop_fit": 1,
-          "mutable_artifact_clear": 1,
-          "feedback_signal_clear": 1,
-          "verifier_or_benchmark": 1,
-          "retention_or_memory": 1,
-          "rollback_or_safety": 0,
-          "implementation_runnable": 1,
-          "local_code_or_artifact": 1,
-          "product_usability": 1,
-          "teaching_model_card": 1,
-          "evidence_chain_complete": 1,
-          "timestamp_freshness": 1,
-          "continuity_active": 1,
-          "community_momentum": 1,
-          "star_growth_current": -1,
-          "paper_quality_signal": 0,
-          "benchmark_result": 0,
-          "method_novelty": 0,
-          "open_source_reuse": 1,
-          "issue_resource_signal": 1,
-          "hype_without_evidence": 0,
-          "stale_or_unknown_metadata": 0,
-          "useful_for_survey_seo": 1,
-          "user_need_fit": 1,
-          "compare_anchor_baseline": 0
-        },
-        "contributions": {
-          "current_frontier_signal": 8,
-          "self_evolution_loop_fit": 10,
-          "mutable_artifact_clear": 6,
-          "feedback_signal_clear": 6,
-          "verifier_or_benchmark": 8,
-          "retention_or_memory": 7,
-          "rollback_or_safety": 0,
-          "implementation_runnable": 8,
-          "local_code_or_artifact": 5,
-          "product_usability": 5,
-          "teaching_model_card": 4,
-          "evidence_chain_complete": 8,
-          "timestamp_freshness": 7,
-          "continuity_active": 7,
-          "community_momentum": 5,
-          "star_growth_current": -6,
-          "paper_quality_signal": 0,
-          "benchmark_result": 0,
-          "method_novelty": 0,
-          "open_source_reuse": 5,
-          "issue_resource_signal": 4,
-          "hype_without_evidence": 0,
-          "stale_or_unknown_metadata": 0,
-          "useful_for_survey_seo": 4,
-          "user_need_fit": 6,
-          "compare_anchor_baseline": 0
-        },
-        "tagEvidence": {
-          "current_frontier_signal": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "2026 raw/activity signal"
-            }
-          ],
-          "self_evolution_loop_fit": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "self-evolution terms"
-            }
-          ],
-          "mutable_artifact_clear": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "mutable artifact terms"
-            }
-          ],
-          "feedback_signal_clear": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "feedback terms"
-            }
-          ],
-          "verifier_or_benchmark": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "benchmark/verifier terms"
-            }
-          ],
-          "retention_or_memory": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "retention terms"
-            }
-          ],
-          "implementation_runnable": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "runnable docs terms"
-            }
-          ],
-          "local_code_or_artifact": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "local mirror or report exists"
-            }
-          ],
-          "product_usability": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "usefulness score high"
-            }
-          ],
-          "teaching_model_card": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "project/public report exists"
-            }
-          ],
-          "evidence_chain_complete": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "raw + processed + time present"
-            }
-          ],
-          "timestamp_freshness": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "2026 timestamp"
-            }
-          ],
-          "continuity_active": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "frontier continuity high"
-            }
-          ],
-          "community_momentum": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "stars >= 1000 (17600)"
-            }
-          ],
-          "star_growth_current": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "star history not fetched"
-            }
-          ],
-          "open_source_reuse": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "license/docs present"
-            }
-          ],
-          "issue_resource_signal": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "issue/resource terms"
-            }
-          ],
-          "useful_for_survey_seo": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "report or paper source"
-            }
-          ],
-          "user_need_fit": [
-            {
-              "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "user-need terms"
-            }
-          ]
-        },
-        "raw_score": 107,
-        "value_score": 84.08,
-        "confidence": 73.08,
-        "nonzero_tags": 19,
-        "positive_tags": 18,
-        "negative_tags": 1,
-        "value_class": "high-value-candidate"
-      },
-      "evidence_refs": {
-        "github_report": "projects/225-agent-zero-runtime.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/225-agent-zero-runtime.md",
-        "raw_file": "raw-github/agent0ai_agent-zero.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": 181,
-        "star_growth_rank": 46
-      }
-    },
-    {
-      "id": "github:harness/harness-evals",
-      "type": "github",
-      "title": "Harness Evals",
-      "url": "https://github.com/harness/harness-evals",
-      "source_path": "raw-github/harness_harness-evals.md",
-      "score": {
-        "values": {
-          "current_frontier_signal": 1,
-          "self_evolution_loop_fit": 1,
-          "mutable_artifact_clear": 1,
-          "feedback_signal_clear": 1,
-          "verifier_or_benchmark": 1,
-          "retention_or_memory": 0,
-          "rollback_or_safety": 1,
-          "implementation_runnable": 1,
-          "local_code_or_artifact": 1,
-          "product_usability": 1,
-          "teaching_model_card": 1,
-          "evidence_chain_complete": 1,
-          "timestamp_freshness": 1,
-          "continuity_active": 1,
-          "community_momentum": 1,
-          "star_growth_current": -1,
-          "paper_quality_signal": 0,
-          "benchmark_result": 1,
-          "method_novelty": 0,
-          "open_source_reuse": 1,
-          "issue_resource_signal": 0,
-          "hype_without_evidence": 0,
-          "stale_or_unknown_metadata": 0,
-          "useful_for_survey_seo": 1,
-          "user_need_fit": 1,
-          "compare_anchor_baseline": 0
-        },
-        "contributions": {
-          "current_frontier_signal": 8,
-          "self_evolution_loop_fit": 10,
-          "mutable_artifact_clear": 6,
-          "feedback_signal_clear": 6,
-          "verifier_or_benchmark": 8,
-          "retention_or_memory": 0,
-          "rollback_or_safety": 5,
-          "implementation_runnable": 8,
-          "local_code_or_artifact": 5,
-          "product_usability": 5,
-          "teaching_model_card": 4,
-          "evidence_chain_complete": 8,
-          "timestamp_freshness": 7,
-          "continuity_active": 7,
-          "community_momentum": 5,
-          "star_growth_current": -6,
-          "paper_quality_signal": 0,
-          "benchmark_result": 6,
-          "method_novelty": 0,
-          "open_source_reuse": 5,
-          "issue_resource_signal": 0,
-          "hype_without_evidence": 0,
-          "stale_or_unknown_metadata": 0,
-          "useful_for_survey_seo": 4,
-          "user_need_fit": 6,
-          "compare_anchor_baseline": 0
-        },
-        "tagEvidence": {
-          "current_frontier_signal": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "2026 raw/activity signal"
-            }
-          ],
-          "self_evolution_loop_fit": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "OIMVR gates: observe,interpret,verify,rollback"
-            }
-          ],
-          "mutable_artifact_clear": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "mutable artifact terms"
-            }
-          ],
-          "feedback_signal_clear": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "feedback terms"
-            }
-          ],
-          "verifier_or_benchmark": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "benchmark/verifier terms"
-            }
-          ],
-          "rollback_or_safety": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "safety/rollback terms"
-            }
-          ],
-          "implementation_runnable": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "runnable docs terms"
-            }
-          ],
-          "local_code_or_artifact": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "local mirror or report exists"
-            }
-          ],
-          "product_usability": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "usefulness score high"
-            }
-          ],
-          "teaching_model_card": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "project/public report exists"
-            }
-          ],
-          "evidence_chain_complete": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "raw + processed + time present"
-            }
-          ],
-          "timestamp_freshness": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "2026 timestamp"
-            }
-          ],
-          "continuity_active": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "frontier continuity high"
-            }
-          ],
-          "community_momentum": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "community terms"
-            }
-          ],
-          "star_growth_current": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "star history not fetched"
-            }
-          ],
-          "benchmark_result": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "benchmark result terms"
-            }
-          ],
-          "open_source_reuse": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "license/docs present"
-            }
-          ],
-          "useful_for_survey_seo": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "report or paper source"
-            }
-          ],
-          "user_need_fit": [
-            {
-              "source": "raw-github/harness_harness-evals.md",
-              "note": "user-need terms"
-            }
-          ]
-        },
-        "raw_score": 107,
-        "value_score": 84.08,
-        "confidence": 73.08,
-        "nonzero_tags": 19,
-        "positive_tags": 18,
-        "negative_tags": 1,
-        "value_class": "high-value-candidate"
-      },
-      "evidence_refs": {
-        "github_report": "projects/260-harness-evals-agent-reliability-benchmark.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/260-harness-evals-agent-reliability-benchmark.md",
-        "raw_file": "raw-github/harness_harness-evals.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": 56,
-        "star_growth_rank": 597
-      }
     }
   ],
   "low_signal_or_risk_queue": [
@@ -8907,7 +8917,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 246,
+        "frontier_rank": 273,
         "star_growth_rank": 55
       }
     },
@@ -9075,7 +9085,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 241,
+        "frontier_rank": 268,
         "star_growth_rank": 25
       }
     },
@@ -9243,7 +9253,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 228,
+        "frontier_rank": 255,
         "star_growth_rank": 103
       }
     },
@@ -9411,7 +9421,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 234,
+        "frontier_rank": 261,
         "star_growth_rank": 356
       }
     },
@@ -9579,7 +9589,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 221,
+        "frontier_rank": 248,
         "star_growth_rank": 171
       }
     },
@@ -9747,7 +9757,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 242,
+        "frontier_rank": 269,
         "star_growth_rank": 87
       }
     },
@@ -9915,7 +9925,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 236,
+        "frontier_rank": 263,
         "star_growth_rank": 140
       }
     },
@@ -10083,7 +10093,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 231,
+        "frontier_rank": 258,
         "star_growth_rank": 169
       }
     },
@@ -10251,7 +10261,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 205,
+        "frontier_rank": 232,
         "star_growth_rank": 70
       }
     },
@@ -10431,7 +10441,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 239,
+        "frontier_rank": 266,
         "star_growth_rank": 100
       }
     },
@@ -10605,7 +10615,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 224,
+        "frontier_rank": 251,
         "star_growth_rank": 118
       }
     },
@@ -10785,7 +10795,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 199,
+        "frontier_rank": 226,
         "star_growth_rank": 23
       }
     },
@@ -10971,7 +10981,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 193,
+        "frontier_rank": 220,
         "star_growth_rank": 80
       }
     },
@@ -11157,7 +11167,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 200,
+        "frontier_rank": 227,
         "star_growth_rank": 35
       }
     },
@@ -11343,7 +11353,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 196,
+        "frontier_rank": 223,
         "star_growth_rank": 64
       }
     },
@@ -11529,7 +11539,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 204,
+        "frontier_rank": 231,
         "star_growth_rank": 6
       }
     },
@@ -11715,7 +11725,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 192,
+        "frontier_rank": 218,
         "star_growth_rank": 95
       }
     },
@@ -11901,7 +11911,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 195,
+        "frontier_rank": 222,
         "star_growth_rank": 7
       }
     },
@@ -12093,7 +12103,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 211,
+        "frontier_rank": 238,
         "star_growth_rank": 15
       }
     },
@@ -12279,7 +12289,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 187,
+        "frontier_rank": 214,
         "star_growth_rank": 73
       }
     },
@@ -12471,7 +12481,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 210,
+        "frontier_rank": 237,
         "star_growth_rank": 11
       }
     },
@@ -12663,7 +12673,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 198,
+        "frontier_rank": 225,
         "star_growth_rank": 16
       }
     },
@@ -12855,7 +12865,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 197,
+        "frontier_rank": 224,
         "star_growth_rank": 9
       }
     },
@@ -13053,7 +13063,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 183,
+        "frontier_rank": 210,
         "star_growth_rank": 69
       }
     },
@@ -13257,7 +13267,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 182,
+        "frontier_rank": 209,
         "star_growth_rank": 45
       }
     },
@@ -13401,7 +13411,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 245,
+        "frontier_rank": 272,
         "star_growth_rank": 251
       }
     },
@@ -13551,7 +13561,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 243,
+        "frontier_rank": 270,
         "star_growth_rank": 39
       }
     },
@@ -13707,7 +13717,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 244,
+        "frontier_rank": 271,
         "star_growth_rank": 357
       }
     },
@@ -13863,7 +13873,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 57,
+        "frontier_rank": 62,
         "star_growth_rank": 382
       }
     },
@@ -14025,7 +14035,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 237,
+        "frontier_rank": 264,
         "star_growth_rank": 417
       }
     },
@@ -14193,7 +14203,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 220,
+        "frontier_rank": 247,
         "star_growth_rank": 111
       }
     },
@@ -14355,7 +14365,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 238,
+        "frontier_rank": 265,
         "star_growth_rank": 290
       }
     },
@@ -14523,7 +14533,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 235,
+        "frontier_rank": 262,
         "star_growth_rank": 34
       }
     },
@@ -14685,7 +14695,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 12,
+        "frontier_rank": 13,
         "star_growth_rank": 428
       }
     },
@@ -14853,7 +14863,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 233,
+        "frontier_rank": 260,
         "star_growth_rank": 81
       }
     },
@@ -15357,7 +15367,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 191,
+        "frontier_rank": 219,
         "star_growth_rank": 325
       }
     },
@@ -15525,7 +15535,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 218,
+        "frontier_rank": 245,
         "star_growth_rank": 161
       }
     },
@@ -15693,7 +15703,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 217,
+        "frontier_rank": 244,
         "star_growth_rank": 203
       }
     }
@@ -15702,20 +15712,20 @@
     {
       "cluster_id": "vlsh-0001",
       "label": "+local_code_or_artifact / +timestamp_freshness / +current_frontier_signal",
-      "size": 1540,
+      "size": 1546,
       "type_counts": {
-        "github": 663,
+        "github": 669,
         "paper": 197,
         "social": 415,
         "blog": 265
       },
       "value_class_counts": {
-        "needs-review": 625,
-        "high-value-candidate": 803,
+        "needs-review": 630,
+        "high-value-candidate": 804,
         "low-signal-or-risk": 112
       },
-      "score_avg": 71.56,
-      "confidence_avg": 52.47,
+      "score_avg": 71.61,
+      "confidence_avg": 52.58,
       "top_tags": [
         {
           "id": "local_code_or_artifact",
@@ -15739,23 +15749,23 @@
         },
         {
           "id": "community_momentum",
-          "average": 0.745,
+          "average": 0.746,
           "label": "Community momentum"
         },
         {
           "id": "product_usability",
-          "average": 0.732,
+          "average": 0.733,
           "label": "Product usability"
         },
         {
           "id": "open_source_reuse",
-          "average": 0.731,
+          "average": 0.732,
           "label": "Open-source reuse"
         },
         {
-          "id": "useful_for_survey_seo",
-          "average": 0.7,
-          "label": "Survey/SEO usefulness"
+          "id": "implementation_runnable",
+          "average": 0.702,
+          "label": "Runnable implementation"
         }
       ],
       "representatives": [
@@ -16072,6 +16082,7 @@
         "github:aiming-lab/skillrl",
         "github:aisa-group/skill-inject",
         "github:alberto-codes/gepa-adk",
+        "github:alibaizhanov/mengram",
         "github:alienfader/continuity-benchmarks",
         "github:alirezarezvani/claude-skills",
         "github:alucek/agentic-memory",
@@ -16158,6 +16169,7 @@
         "github:evalstate/fast-agent",
         "github:evermind-ai/everos",
         "github:evoagentx/awesome-self-evolving-agents",
+        "github:evomap/awesome-agent-evolution",
         "github:evomap/evolver",
         "github:evotai/evot",
         "github:fareedkhan-dev/autonomous-agentic-rag",
@@ -16168,6 +16180,7 @@
         "github:fusionbrainlab/gigaevo-core",
         "github:galyarderlabs/galyarder-framework",
         "github:garrytan/gbrain",
+        "github:gcwing/bitfun",
         "github:geniushtx/swe-skills-bench",
         "github:gensi-thuair/flex",
         "github:gentleman-programming/gentleman-skills",
@@ -16203,6 +16216,7 @@
         "github:iii-experimental/agentos",
         "github:ilearn-lab/evoharness",
         "github:iliaal/ai-skills",
+        "github:im4codes/imcodes",
         "github:incidentfox/self-learning-ai-agent",
         "github:inclusionai/agenticlearning",
         "github:inclusionai/aworld",
@@ -16292,6 +16306,7 @@
         "github:microsoft/windowsagentarena",
         "github:microsoftdocs/agent-skills",
         "github:mindfold-ai/trellis",
+        "github:mnemon-dev/mnemon",
         "github:modelcode-ai/mcode-benchmark",
         "github:modelcontextprotocol/servers",
         "github:modelscope/agentjet",
@@ -16314,6 +16329,7 @@
         "github:nowledge-co/community",
         "github:nvidia/skills",
         "github:obra/superpowers",
+        "github:oceanbase/powermem",
         "github:oiioai/molt",
         "github:olshansk/agent-skills",
         "github:omdivyatej/self-learning-agents",
@@ -16333,6 +16349,7 @@
         "github:openclaw/openclaw-windows-node",
         "github:openmemoryspec/oms",
         "github:opensite-ai/opensite-skills",
+        "github:opensquilla/opensquilla",
         "github:openswarm-ai/openswarm",
         "github:orchestra-research/ai-research-skills",
         "github:os-copilot/os-copilot",
@@ -16959,7 +16976,7 @@
         "blog:README",
         "blog:TEMPLATE"
       ],
-      "size": 919,
+      "size": 926,
       "sample_members": [
         "github:01-ai/langcrew",
         "github:0xnyk/lacp",
@@ -18482,6 +18499,7 @@
         "github:aiming-lab/autoresearchclaw",
         "github:aiming-lab/clawarena",
         "github:aisa-group/skill-inject",
+        "github:alibaizhanov/mengram",
         "github:alienfader/continuity-benchmarks",
         "github:arc-computer/cl-bench",
         "github:arcadeai/openclaw-arcade-plugin",
@@ -18522,6 +18540,7 @@
         "github:first-fluke/oh-my-agent",
         "github:freedomintelligence/tiermem",
         "github:garrytan/gbrain",
+        "github:gcwing/bitfun",
         "github:geniushtx/swe-skills-bench",
         "github:gepa-ai/gepa",
         "github:gepa-ai/optimize-anything-artifact",
@@ -18533,6 +18552,7 @@
         "github:hust-ai-hyz/memoryagentbench",
         "github:hyperspell/hyperspell-openclaw",
         "github:iii-experimental/agentos",
+        "github:im4codes/imcodes",
         "github:inclusionai/aworld",
         "github:infiagent/infiagent",
         "github:inngest/utah",
@@ -18578,6 +18598,7 @@
         "github:microsoft/windowsagentarena",
         "github:mindfold-ai/trellis",
         "github:mlcommons/modelbench",
+        "github:mnemon-dev/mnemon",
         "github:modelcode-ai/mcode-benchmark",
         "github:modelscope/agentjet",
         "github:murataslan1/ai-agent-benchmark",
@@ -18587,6 +18608,7 @@
         "github:neo4j-labs/agent-memory",
         "github:nomic-ai/aec-bench",
         "github:nousresearch/hermes-agent-self-evolution",
+        "github:oceanbase/powermem",
         "github:open-gitagent/gitagent",
         "github:openai/swarm",
         "github:openbmb/clawxmemory",
@@ -18598,6 +18620,7 @@
         "github:openhands/benchmarks",
         "github:openmemind/memind",
         "github:openmemoryspec/oms",
+        "github:opensquilla/opensquilla",
         "github:openswarm-ai/openswarm",
         "github:opentracy/opentracy",
         "github:owasp/www-project-agent-memory-guard",
@@ -18652,11 +18675,11 @@
         "github:tiger-ai-lab/clawbench",
         "github:tylerdotai/meta-harness-evolver",
         "github:unicomai/hexagent",
-        "github:vectorize-io/agent-memory-benchmark",
         "github:vectorspacelab/general-agentic-memory",
         "github:ventr1c/memma",
         "github:versatly/clawvault",
         "github:wazionapps/nexo",
+        "github:weaviate/query-agent-benchmarking",
         "github:webzler/agentmemory",
         "github:werner-duvaud/muzero-general",
         "github:xlang-ai/osworld",
@@ -18825,7 +18848,7 @@
         "blog:0645-weave-docs-wandb-ai-OpenAI-Agents-SDK-Weights-Biases-Documentation",
         "blog:raw-blogs-index"
       ],
-      "size": 363,
+      "size": 369,
       "sample_members": [
         "github:0xnyk/lacp",
         "github:803/skills-supply",
@@ -19298,7 +19321,6 @@
         "github:evermind-ai/everos",
         "github:evoagentx/awesome-self-evolving-agents",
         "github:evoagentx/evoagentx",
-        "github:evomap/awesome-agent-evolution",
         "github:flowersteam/teachmyagent",
         "github:freedomintelligence/openclaw-medical-skills",
         "github:garrus800-stack/genesis-agent",
@@ -19429,6 +19451,7 @@
         "github:tsinghua-fib-lab/world-model",
         "github:tsinghuac3i/awesome-memory-for-agents",
         "github:tsinghuac3i/awesome-rl-for-lrms",
+        "github:vectorize-io/agent-memory-benchmark",
         "github:vercel-labs/skills",
         "github:vicsanity623/pyob",
         "github:vilmire/adhdev",
@@ -20321,16 +20344,23 @@
         "github:agent-sh/agentsys",
         "github:agent-skills-hub/agent-skills-hub",
         "github:agent0ai/agent-zero",
+        "github:agentevals-dev/agentevals",
+        "github:agentralabs/agentic-memory",
         "github:agentscope-ai/reme",
         "github:agentskills/agentskills",
         "github:agiprolabs/claude-trading-skills",
+        "github:agiresearch/a-mem",
         "github:ai-agents-2030/darwin-mobile-agent",
         "github:aiming-lab/autoharness",
         "github:akillness/oh-my-skills",
         "github:alberto-codes/gepa-adk",
+        "github:alibaizhanov/mengram",
         "github:alirezarezvani/claude-skills",
+        "github:alucek/agentic-memory",
         "github:anthropics/anthropic-sdk-python",
         "github:anthropics/skills",
+        "github:apify/agent-skills",
+        "github:arc-computer/cl-bench",
         "github:arcadeai/openclaw-arcade-plugin",
         "github:argus-framework/argus-ai-debate",
         "github:ashish-kamboj/agentic-ai-workflows",
@@ -20362,6 +20392,7 @@
         "github:crewaiinc/crewai",
         "github:darkrishabh/agent-skills-eval",
         "github:datalayer/agent-skills",
+        "github:dataojitori/nocturne_memory",
         "github:dceoy/speckit-agent-skills",
         "github:deepelementlab/clawcode",
         "github:diegosouzapw/awesome-omni-skills",
@@ -20370,6 +20401,7 @@
         "github:eesiz/clawdreamer",
         "github:elastic/agent-skills",
         "github:eliasecchig/gemini-cli-git",
+        "github:elizaos/agentmemory",
         "github:elizaos/eliza",
         "github:evalops/agent-harness",
         "github:evalstate/fast-agent",
@@ -20383,6 +20415,7 @@
         "github:future-agi/future-agi",
         "github:garrus800-stack/genesis-agent",
         "github:garrytan/gbrain",
+        "github:gcwing/bitfun",
         "github:getzep/graphiti",
         "github:gitmaxd/deepagents-cli-codex-skill",
         "github:gofenix/nex-agent",
@@ -20405,6 +20438,7 @@
         "github:hyperspell/hyperspell-openclaw",
         "github:iflytek/skillhub",
         "github:iliaal/ai-skills",
+        "github:im4codes/imcodes",
         "github:incidentfox/self-learning-ai-agent",
         "github:infiagent/infiagent",
         "github:inngest/utah",
@@ -20430,6 +20464,7 @@
         "github:langchain-ai/open-swe",
         "github:large-model-rl-lib/openrlhf",
         "github:learnprompt/cc-harness-skills",
+        "github:lhl/agentic-memory",
         "github:lhl3341/awesome-claws",
         "github:lightchen233/awesome-ai4research",
         "github:llmprogram/textgrad",
@@ -20453,6 +20488,7 @@
         "github:microsoft/state-bench",
         "github:microsoft/waza",
         "github:mindfold-ai/trellis",
+        "github:mnemon-dev/mnemon",
         "github:modelcode-ai/mcode-benchmark",
         "github:modelcontextprotocol/servers",
         "github:momo-personal-assistant/openclaw-plugin",
@@ -20461,6 +20497,7 @@
         "github:n4m3z/forge-council",
         "github:n8n-io/n8n",
         "github:naivoder/mctsr",
+        "github:najeed/ai-agent-eval-harness",
         "github:nemori-ai/nemori",
         "github:nevamind-ai/memu",
         "github:ngoodman/metaprompt",
@@ -20490,6 +20527,8 @@
         "github:openclaw/openclaw-windows-node",
         "github:openmemoryspec/oms",
         "github:opensite-ai/opensite-skills",
+        "github:opensquilla/opensquilla",
+        "github:openswarm-ai/openswarm",
         "github:othmanadi/planning-with-files",
         "github:owasp/www-project-agent-memory-guard",
         "github:paradigmxyz/centaur",
@@ -20555,13 +20594,16 @@
         "github:transformeroptimus/superagi",
         "github:uid4oe/insight-swarm",
         "github:unicomai/hexagent",
+        "github:vectorspacelab/general-agentic-memory",
         "github:vercel-labs/skills",
         "github:vercel/workflow",
+        "github:versatly/clawvault",
         "github:vicsanity623/pyob",
         "github:vilmire/adhdev",
         "github:voltagent/awesome-openclaw-skills",
         "github:wanxingai/lightagent",
         "github:wazionapps/nexo",
+        "github:weaviate/query-agent-benchmarking",
         "github:webmaxru/agent-skills",
         "github:workofart/selfplay-tictactoe",
         "github:wzdnzd/harvester",
@@ -20575,9 +20617,10 @@
         "github:zikuicai/aegisllm",
         "github:zixuanfeng-nyu/textgrad",
         "github:zocomputer/skills",
+        "github:zorazrw/agent-workflow-memory",
         "github:zou-group/textgrad"
       ],
-      "size": 266,
+      "size": 286,
       "sample_members": [
         "github:0xnyk/lacp",
         "github:aayoawoyemi/ori-mnemos",
@@ -20590,271 +20633,15 @@
         "github:agent-sh/agentsys",
         "github:agent-skills-hub/agent-skills-hub",
         "github:agent0ai/agent-zero",
+        "github:agentevals-dev/agentevals",
+        "github:agentralabs/agentic-memory",
         "github:agentscope-ai/reme",
         "github:agentskills/agentskills",
         "github:agiprolabs/claude-trading-skills",
+        "github:agiresearch/a-mem",
         "github:ai-agents-2030/darwin-mobile-agent",
         "github:aiming-lab/autoharness",
-        "github:akillness/oh-my-skills",
-        "github:alberto-codes/gepa-adk",
-        "github:alirezarezvani/claude-skills",
-        "github:anthropics/anthropic-sdk-python"
-      ]
-    },
-    {
-      "key": "v0:b1:037bd87daa04a195",
-      "band": 1,
-      "features": [
-        "rollback_or_safety",
-        "implementation_runnable",
-        "local_code_or_artifact",
-        "product_usability",
-        "teaching_model_card",
-        "evidence_chain_complete"
-      ],
-      "chars": "0+++00",
-      "members": [
-        "github:0xsanei/darwinia",
-        "github:28naem-del/mnemosyne",
-        "github:803/skills-supply",
-        "github:a-evo-lab/a-evolve",
-        "github:adam-s/intercept",
-        "github:aden-hive/hive",
-        "github:adolfousier/opencrabs",
-        "github:affaan-m/ecc",
-        "github:agentic-in/elephant-agent",
-        "github:agentreplay/agentreplay",
-        "github:agentskills/agentskills",
-        "github:ai-boost/awesome-ai-for-science",
-        "github:aimagelab/mammoth",
-        "github:akillness/oh-my-skills",
-        "github:ama-bench/ama-bench",
-        "github:amap-ml/skillclaw",
-        "github:angrysky56/reflective-agent-architecture",
-        "github:anthropics/skills",
-        "github:archishmansengupta/autovoiceevals",
-        "github:arunagirinathan-k/awesome-ai-agents-2026",
-        "github:ashish-kamboj/agentic-ai-workflows",
-        "github:asirwad/dspy-prompt-auto-optimizer",
-        "github:autohandai/code-cli",
-        "github:bansky-cl/graphrag-arxiv-daily-paper",
-        "github:bazilicum/graphltm",
-        "github:beita6969/scienceclaw",
-        "github:bennettschwartz/membrane",
-        "github:bingreeky/memgen",
-        "github:browser-use/browser-use",
-        "github:browser-use/web-ui",
-        "github:callstackincubator/agent-skills",
-        "github:camel-ai/owl",
-        "github:caution724/github-explorer-skill",
-        "github:ce0alex/skill-hunter",
-        "github:centaurioun/crewai",
-        "github:channinglua/prax-agent",
-        "github:china-qijizhifeng/agentic-harness-engineering",
-        "github:chriscox/agent-skills",
-        "github:chrisworsey55/atlas-gic",
-        "github:circlemind-ai/fast-graphrag",
-        "github:claw-bench/claw-bench",
-        "github:clawbio/clawbio",
-        "github:clawdotnet/openclaw.net",
-        "github:clint-kristopher-morris/llm-guided-evolution",
-        "github:codejunkie99/agentic-stack",
-        "github:colab2/midca",
-        "github:composiohq/awesome-claude-skills",
-        "github:composiohq/awesome-codex-skills",
-        "github:cxcscmu/skilllearnbench",
-        "github:cyijun/agent-smith",
-        "github:davidzwz/awesome-rag-reasoning",
-        "github:deep-polyu/awesome-graphrag",
-        "github:deepelementlab/clawcode",
-        "github:developzir/gepa-mcp",
-        "github:dsail-memory/evomembench",
-        "github:dsifry/metaswarm",
-        "github:ecnu-icalk/autoskill",
-        "github:eigent-ai/agent-skills",
-        "github:eliasecchig/gemini-cli-git",
-        "github:enajx/es",
-        "github:evotai/evot",
-        "github:exoskeletonzj/mars",
-        "github:farmage/opencode-skills",
-        "github:faveos8758/reflexion-agent-ts",
-        "github:feiliu36/eoh",
-        "github:flowersteam/teachmyagent",
-        "github:fusionbrainlab/gigaevo-core",
-        "github:galyarderlabs/galyarder-framework",
-        "github:geniushtx/swe-skills-bench",
-        "github:gensi-thuair/flex",
-        "github:gentleman-programming/gentleman-skills",
-        "github:getzep/graphiti",
-        "github:greyhaven-ai/autocontext",
-        "github:hkuds/ai-researcher",
-        "github:hkust-knowcomp/awesome-llm-scientific-discovery",
-        "github:howells/arc",
-        "github:huggingface/agents-course",
-        "github:huggingface/skills",
-        "github:hust-ai-hyz/memoryagentbench",
-        "github:iii-experimental/agentos",
-        "github:incidentfox/self-learning-ai-agent",
-        "github:jakenuts/agent-skills",
-        "github:jayzeng/agentmemory",
-        "github:jordanmccann/agentmemory",
-        "github:k-dense-ai/scientific-agent-skills",
-        "github:kadubon/audit-closed-ai-scientist",
-        "github:kayba-ai/agentic-context-engine",
-        "github:kayba-ai/recursive-improve",
-        "github:kks0488/vibe-codex",
-        "github:langchain-ai/langchain",
-        "github:langchain-ai/langmem",
-        "github:lastmile-ai/mcp-agent",
-        "github:legionio/lex-metacognition",
-        "github:letta-ai/agentic-learning-sdk",
-        "github:lingxi-agent/lingxi",
-        "github:llmprogram/textgrad",
-        "github:logikon-ai/awesome-deliberative-prompting",
-        "github:lsdefine/genericagent",
-        "github:luh-ai-devnerds/llm-guided-curriculum-rl",
-        "github:maitrix-org/promptagent",
-        "github:managedcode/dotnet-skills",
-        "github:matebenyovszky/healing-agent",
-        "github:meituan/evocua",
-        "github:mem0ai/mem0",
-        "github:mem0ai/memory-benchmarks",
-        "github:memodb-io/memobase",
-        "github:memorilabs/memori",
-        "github:mempalace/mempalace",
-        "github:memtensor/halumem",
-        "github:memvid/memvid",
-        "github:metauto-ai/gptswarm",
-        "github:mettamazza/ernosagent",
-        "github:microsoft/windowsagentarena",
-        "github:microsoftdocs/agent-skills",
-        "github:modelscope/agentjet",
-        "github:moizibnyousaf/ai-agent-skills",
-        "github:mycelium-io/mycelium",
-        "github:n4m3z/forge-council",
-        "github:nevamind-ai/memu",
-        "github:nickatomlin/lm-selfplay",
-        "github:nikivanstein/llamea",
-        "github:noahshinn024/reflexion-human-eval",
-        "github:oiioai/molt",
-        "github:omdivyatej/self-learning-agents",
-        "github:onevcat/argue",
-        "github:onewave-ai/claude-skills",
-        "github:openai/skills",
-        "github:openclaw/clawbench",
-        "github:opendatabox/workspace-bench",
-        "github:openmemind/memind",
-        "github:os-copilot/os-copilot",
-        "github:osu-nlp-group/skillweaver",
-        "github:othmanadi/planning-with-files",
-        "github:paulrberg/agent-skills",
-        "github:pgg3/evotoolkit",
-        "github:pjt222/agent-almanac",
-        "github:plastic-labs/honcho",
-        "github:polya20/textgrad",
-        "github:princeton-pli/hal-harness",
-        "github:punkpeye/awesome-mcp-servers",
-        "github:quzhiii/thesis-skills",
-        "github:r4stin/kg-research-agent",
-        "github:randroids-dojo/skills",
-        "github:reflexioai/reflexio",
-        "github:regenrek/codex-1up",
-        "github:rendro/sediment",
-        "github:researai/awesome-ai-scientist",
-        "github:revfactory/harness",
-        "github:richchen-maker/openclaw-multi-agent-team",
-        "github:rinadelph/agent-mcp",
-        "github:rlhflow/online-rlhf",
-        "github:rmanluo/gfm-rag",
-        "github:rohitg00/agentmemory",
-        "github:rtk-ai/icm",
-        "github:rucbm/laser",
-        "github:sakanaai/ai-scientist",
-        "github:sakanaai/shinkaevolve",
-        "github:sakutepov/ai-scientist-v2",
-        "github:sasleee/tencentdb-agent-memory",
-        "github:scienceaix/agentskills",
-        "github:sentient-agi/evoskill",
-        "github:sentrux/sentrux",
-        "github:servicenow/browsergym",
-        "github:shadowrootdev/awesome-agent-skills-mcp",
-        "github:shintaro-sprech/agent-orchestrator-template",
-        "github:signet-ai/signetai",
-        "github:simota/agent-skills",
-        "github:sjtu-ipads/skvm",
-        "github:skills-mcp/skills-mcp",
-        "github:snowflake-labs/agent-world-model",
-        "github:sola-st/repairagent",
-        "github:spillwavesolutions/agent-brain",
-        "github:square-mind/squaremind",
-        "github:sudokrang/aceforge",
-        "github:sunitj/colloquip",
-        "github:swarmclawai/swarmclaw",
-        "github:teleai-uagi/awesome-agent-memory",
-        "github:terryfyl/openclaw-evolution-framework",
-        "github:tfatykhov/awesome-agent-memory",
-        "github:theqtcompanyrnd/agent-skills",
-        "github:thesdes/textgrad",
-        "github:thu-nics/mars",
-        "github:tianyi-stack/madevolve",
-        "github:tiger-ai-lab/openresearcher",
-        "github:timem-ai/timem",
-        "github:togethercomputer/skills",
-        "github:trillskillz/clawdmarket",
-        "github:trustgraph-ai/trustgraph",
-        "github:tsinghua-fib-lab/awesome-ai-scientists",
-        "github:tsukushiai/self-organized-agent",
-        "github:vectorize-io/agent-memory-benchmark",
-        "github:vectorize-io/hindsight",
-        "github:ventr1c/memma",
-        "github:vercel-labs/ai",
-        "github:vercel/ai",
-        "github:viktoraxelsen/memskill",
-        "github:vivy-yi/awesome-agent-orchestration",
-        "github:volcengine/openviking",
-        "github:voltagent/awesome-agent-skills",
-        "github:wzdnzd/harvester",
-        "github:x1aox1a/word2world",
-        "github:xanther-ai/xce-benchmarks",
-        "github:xuchen-li/llm-arxiv-daily",
-        "github:ynulihao/agentskillos",
-        "github:yonkoo11/hermes-dojo",
-        "github:yxf203/awesome-efficient-agents",
-        "github:yyyujintang/awesome-agent-memory-papers",
-        "github:zaixizhang/stella",
-        "github:zazencodes/zazencodes-season-3",
-        "github:zed-industries/zed",
-        "github:zhang677/accelopt",
-        "github:zhentingwang/dump",
-        "github:zhonghaojiang/awesome-issue-solving",
-        "github:zilliztech/memsearch",
-        "github:zixuanfeng-nyu/textgrad",
-        "github:zjunlp/knowself",
-        "github:zou-group/sirius",
-        "github:zou-group/textgrad"
-      ],
-      "size": 218,
-      "sample_members": [
-        "github:0xsanei/darwinia",
-        "github:28naem-del/mnemosyne",
-        "github:803/skills-supply",
-        "github:a-evo-lab/a-evolve",
-        "github:adam-s/intercept",
-        "github:aden-hive/hive",
-        "github:adolfousier/opencrabs",
-        "github:affaan-m/ecc",
-        "github:agentic-in/elephant-agent",
-        "github:agentreplay/agentreplay",
-        "github:agentskills/agentskills",
-        "github:ai-boost/awesome-ai-for-science",
-        "github:aimagelab/mammoth",
-        "github:akillness/oh-my-skills",
-        "github:ama-bench/ama-bench",
-        "github:amap-ml/skillclaw",
-        "github:angrysky56/reflective-agent-architecture",
-        "github:anthropics/skills",
-        "github:archishmansengupta/autovoiceevals",
-        "github:arunagirinathan-k/awesome-ai-agents-2026"
+        "github:akillness/oh-my-skills"
       ]
     },
     {
@@ -21111,6 +20898,261 @@
         "social:0564-github-com-all-agents-tutorials-research-team-autogen-ipynb-at-main-NirDiamant-GenAI-Agents",
         "social:x_more_4",
         "blog:0006-Product-Hunt-BabyAGI-Product-Information-and-Latest-Updates-2025-Product-Hunt"
+      ]
+    },
+    {
+      "key": "v0:b1:037bd87daa04a195",
+      "band": 1,
+      "features": [
+        "rollback_or_safety",
+        "implementation_runnable",
+        "local_code_or_artifact",
+        "product_usability",
+        "teaching_model_card",
+        "evidence_chain_complete"
+      ],
+      "chars": "0+++00",
+      "members": [
+        "github:0xsanei/darwinia",
+        "github:28naem-del/mnemosyne",
+        "github:803/skills-supply",
+        "github:a-evo-lab/a-evolve",
+        "github:adam-s/intercept",
+        "github:aden-hive/hive",
+        "github:adolfousier/opencrabs",
+        "github:affaan-m/ecc",
+        "github:agentic-in/elephant-agent",
+        "github:agentreplay/agentreplay",
+        "github:agentskills/agentskills",
+        "github:ai-boost/awesome-ai-for-science",
+        "github:aimagelab/mammoth",
+        "github:akillness/oh-my-skills",
+        "github:ama-bench/ama-bench",
+        "github:amap-ml/skillclaw",
+        "github:angrysky56/reflective-agent-architecture",
+        "github:anthropics/skills",
+        "github:archishmansengupta/autovoiceevals",
+        "github:arunagirinathan-k/awesome-ai-agents-2026",
+        "github:ashish-kamboj/agentic-ai-workflows",
+        "github:asirwad/dspy-prompt-auto-optimizer",
+        "github:autohandai/code-cli",
+        "github:bansky-cl/graphrag-arxiv-daily-paper",
+        "github:bazilicum/graphltm",
+        "github:beita6969/scienceclaw",
+        "github:bennettschwartz/membrane",
+        "github:bingreeky/memgen",
+        "github:browser-use/browser-use",
+        "github:browser-use/web-ui",
+        "github:callstackincubator/agent-skills",
+        "github:camel-ai/owl",
+        "github:caution724/github-explorer-skill",
+        "github:ce0alex/skill-hunter",
+        "github:centaurioun/crewai",
+        "github:channinglua/prax-agent",
+        "github:china-qijizhifeng/agentic-harness-engineering",
+        "github:chriscox/agent-skills",
+        "github:chrisworsey55/atlas-gic",
+        "github:circlemind-ai/fast-graphrag",
+        "github:claw-bench/claw-bench",
+        "github:clawbio/clawbio",
+        "github:clawdotnet/openclaw.net",
+        "github:clint-kristopher-morris/llm-guided-evolution",
+        "github:codejunkie99/agentic-stack",
+        "github:colab2/midca",
+        "github:composiohq/awesome-claude-skills",
+        "github:composiohq/awesome-codex-skills",
+        "github:cxcscmu/skilllearnbench",
+        "github:cyijun/agent-smith",
+        "github:davidzwz/awesome-rag-reasoning",
+        "github:deep-polyu/awesome-graphrag",
+        "github:deepelementlab/clawcode",
+        "github:developzir/gepa-mcp",
+        "github:dsail-memory/evomembench",
+        "github:dsifry/metaswarm",
+        "github:ecnu-icalk/autoskill",
+        "github:eigent-ai/agent-skills",
+        "github:eliasecchig/gemini-cli-git",
+        "github:enajx/es",
+        "github:evotai/evot",
+        "github:exoskeletonzj/mars",
+        "github:farmage/opencode-skills",
+        "github:faveos8758/reflexion-agent-ts",
+        "github:feiliu36/eoh",
+        "github:flowersteam/teachmyagent",
+        "github:fusionbrainlab/gigaevo-core",
+        "github:galyarderlabs/galyarder-framework",
+        "github:geniushtx/swe-skills-bench",
+        "github:gensi-thuair/flex",
+        "github:gentleman-programming/gentleman-skills",
+        "github:getzep/graphiti",
+        "github:greyhaven-ai/autocontext",
+        "github:hkuds/ai-researcher",
+        "github:hkust-knowcomp/awesome-llm-scientific-discovery",
+        "github:howells/arc",
+        "github:huggingface/agents-course",
+        "github:huggingface/skills",
+        "github:hust-ai-hyz/memoryagentbench",
+        "github:iii-experimental/agentos",
+        "github:incidentfox/self-learning-ai-agent",
+        "github:jakenuts/agent-skills",
+        "github:jayzeng/agentmemory",
+        "github:jordanmccann/agentmemory",
+        "github:k-dense-ai/scientific-agent-skills",
+        "github:kadubon/audit-closed-ai-scientist",
+        "github:kayba-ai/agentic-context-engine",
+        "github:kayba-ai/recursive-improve",
+        "github:kks0488/vibe-codex",
+        "github:langchain-ai/langchain",
+        "github:langchain-ai/langmem",
+        "github:lastmile-ai/mcp-agent",
+        "github:legionio/lex-metacognition",
+        "github:letta-ai/agentic-learning-sdk",
+        "github:lingxi-agent/lingxi",
+        "github:llmprogram/textgrad",
+        "github:logikon-ai/awesome-deliberative-prompting",
+        "github:lsdefine/genericagent",
+        "github:luh-ai-devnerds/llm-guided-curriculum-rl",
+        "github:maitrix-org/promptagent",
+        "github:managedcode/dotnet-skills",
+        "github:matebenyovszky/healing-agent",
+        "github:meituan/evocua",
+        "github:mem0ai/mem0",
+        "github:mem0ai/memory-benchmarks",
+        "github:memodb-io/memobase",
+        "github:memorilabs/memori",
+        "github:mempalace/mempalace",
+        "github:memtensor/halumem",
+        "github:memvid/memvid",
+        "github:metauto-ai/gptswarm",
+        "github:mettamazza/ernosagent",
+        "github:microsoft/windowsagentarena",
+        "github:microsoftdocs/agent-skills",
+        "github:modelscope/agentjet",
+        "github:moizibnyousaf/ai-agent-skills",
+        "github:mycelium-io/mycelium",
+        "github:n4m3z/forge-council",
+        "github:nevamind-ai/memu",
+        "github:nickatomlin/lm-selfplay",
+        "github:nikivanstein/llamea",
+        "github:noahshinn024/reflexion-human-eval",
+        "github:oiioai/molt",
+        "github:omdivyatej/self-learning-agents",
+        "github:onevcat/argue",
+        "github:onewave-ai/claude-skills",
+        "github:openai/skills",
+        "github:openclaw/clawbench",
+        "github:opendatabox/workspace-bench",
+        "github:openmemind/memind",
+        "github:os-copilot/os-copilot",
+        "github:osu-nlp-group/skillweaver",
+        "github:othmanadi/planning-with-files",
+        "github:paulrberg/agent-skills",
+        "github:pgg3/evotoolkit",
+        "github:pjt222/agent-almanac",
+        "github:plastic-labs/honcho",
+        "github:polya20/textgrad",
+        "github:princeton-pli/hal-harness",
+        "github:punkpeye/awesome-mcp-servers",
+        "github:quzhiii/thesis-skills",
+        "github:r4stin/kg-research-agent",
+        "github:randroids-dojo/skills",
+        "github:reflexioai/reflexio",
+        "github:regenrek/codex-1up",
+        "github:rendro/sediment",
+        "github:researai/awesome-ai-scientist",
+        "github:revfactory/harness",
+        "github:richchen-maker/openclaw-multi-agent-team",
+        "github:rinadelph/agent-mcp",
+        "github:rlhflow/online-rlhf",
+        "github:rmanluo/gfm-rag",
+        "github:rohitg00/agentmemory",
+        "github:rtk-ai/icm",
+        "github:rucbm/laser",
+        "github:sakanaai/ai-scientist",
+        "github:sakanaai/shinkaevolve",
+        "github:sakutepov/ai-scientist-v2",
+        "github:sasleee/tencentdb-agent-memory",
+        "github:scienceaix/agentskills",
+        "github:sentient-agi/evoskill",
+        "github:sentrux/sentrux",
+        "github:servicenow/browsergym",
+        "github:shadowrootdev/awesome-agent-skills-mcp",
+        "github:shintaro-sprech/agent-orchestrator-template",
+        "github:signet-ai/signetai",
+        "github:simota/agent-skills",
+        "github:sjtu-ipads/skvm",
+        "github:skills-mcp/skills-mcp",
+        "github:snowflake-labs/agent-world-model",
+        "github:sola-st/repairagent",
+        "github:spillwavesolutions/agent-brain",
+        "github:square-mind/squaremind",
+        "github:sudokrang/aceforge",
+        "github:sunitj/colloquip",
+        "github:swarmclawai/swarmclaw",
+        "github:teleai-uagi/awesome-agent-memory",
+        "github:terryfyl/openclaw-evolution-framework",
+        "github:tfatykhov/awesome-agent-memory",
+        "github:theqtcompanyrnd/agent-skills",
+        "github:thesdes/textgrad",
+        "github:thu-nics/mars",
+        "github:tianyi-stack/madevolve",
+        "github:tiger-ai-lab/openresearcher",
+        "github:timem-ai/timem",
+        "github:togethercomputer/skills",
+        "github:trillskillz/clawdmarket",
+        "github:trustgraph-ai/trustgraph",
+        "github:tsinghua-fib-lab/awesome-ai-scientists",
+        "github:tsukushiai/self-organized-agent",
+        "github:vectorize-io/hindsight",
+        "github:ventr1c/memma",
+        "github:vercel-labs/ai",
+        "github:vercel/ai",
+        "github:viktoraxelsen/memskill",
+        "github:vivy-yi/awesome-agent-orchestration",
+        "github:volcengine/openviking",
+        "github:voltagent/awesome-agent-skills",
+        "github:wzdnzd/harvester",
+        "github:x1aox1a/word2world",
+        "github:xanther-ai/xce-benchmarks",
+        "github:xuchen-li/llm-arxiv-daily",
+        "github:ynulihao/agentskillos",
+        "github:yonkoo11/hermes-dojo",
+        "github:yxf203/awesome-efficient-agents",
+        "github:yyyujintang/awesome-agent-memory-papers",
+        "github:zaixizhang/stella",
+        "github:zazencodes/zazencodes-season-3",
+        "github:zed-industries/zed",
+        "github:zhang677/accelopt",
+        "github:zhentingwang/dump",
+        "github:zhonghaojiang/awesome-issue-solving",
+        "github:zilliztech/memsearch",
+        "github:zixuanfeng-nyu/textgrad",
+        "github:zjunlp/knowself",
+        "github:zou-group/sirius",
+        "github:zou-group/textgrad"
+      ],
+      "size": 217,
+      "sample_members": [
+        "github:0xsanei/darwinia",
+        "github:28naem-del/mnemosyne",
+        "github:803/skills-supply",
+        "github:a-evo-lab/a-evolve",
+        "github:adam-s/intercept",
+        "github:aden-hive/hive",
+        "github:adolfousier/opencrabs",
+        "github:affaan-m/ecc",
+        "github:agentic-in/elephant-agent",
+        "github:agentreplay/agentreplay",
+        "github:agentskills/agentskills",
+        "github:ai-boost/awesome-ai-for-science",
+        "github:aimagelab/mammoth",
+        "github:akillness/oh-my-skills",
+        "github:ama-bench/ama-bench",
+        "github:amap-ml/skillclaw",
+        "github:angrysky56/reflective-agent-architecture",
+        "github:anthropics/skills",
+        "github:archishmansengupta/autovoiceevals",
+        "github:arunagirinathan-k/awesome-ai-agents-2026"
       ]
     },
     {
@@ -21842,10 +21884,10 @@
         "github:ecnu-icalk/autoskill",
         "github:ecnu-icalk/ell-stulife",
         "github:evoagentx/evoagentx",
-        "github:evomap/awesome-agent-evolution",
         "github:evomap/evolver",
         "github:faveos8758/reflexion-agent-ts",
         "github:freedomintelligence/tiermem",
+        "github:gcwing/bitfun",
         "github:gensi-thuair/flex",
         "github:gepa-ai/gepa",
         "github:gepa-ai/optimize-anything-artifact",
@@ -21874,6 +21916,7 @@
         "github:mwasifanwar/meta-cognitive-learning-system",
         "github:noahshinn/reflexion",
         "github:nousresearch/hermes-agent-self-evolution",
+        "github:pinchbench/skill",
         "github:privkeyio/evolve-mcp",
         "github:qianlima-lab/awesome-lifelong-llm-agent",
         "github:qpiai/proced_mem_bench",
@@ -21886,9 +21929,11 @@
         "github:swapedoc/hermes2anti",
         "github:thudm/webrl",
         "github:tylerdotai/meta-harness-evolver",
+        "github:vectorize-io/agent-memory-benchmark",
         "github:ventr1c/memma",
         "github:viktoraxelsen/memskill",
         "github:wazionapps/nexo",
+        "github:webzler/agentmemory",
         "github:xai-liacs/llamea",
         "github:yang1999code/controllable-agent",
         "github:yologdev/yoyo-evolve",
@@ -22008,7 +22053,7 @@
         "social:x-trending",
         "social:x-twitter-posts"
       ],
-      "size": 185,
+      "size": 188,
       "sample_members": [
         "github:28naem-del/mnemosyne",
         "github:adiban17/ppo-ping-pong-agent-",
@@ -22057,6 +22102,7 @@
         "github:ai-agents-2030/darwin-mobile-agent",
         "github:ai4co/awesome-fm4co",
         "github:aiwaves-cn/agents",
+        "github:alibaizhanov/mengram",
         "github:alienfader/continuity-benchmarks",
         "github:alucek/agentic-memory",
         "github:apify/agent-skills",
@@ -22095,6 +22141,7 @@
         "github:flagos-ai/skills",
         "github:freedomintelligence/tiermem",
         "github:garrytan/gbrain",
+        "github:gcwing/bitfun",
         "github:google/ax",
         "github:holaboss-ai/holaos",
         "github:howdymary/hermes-agent-metaharness",
@@ -22102,6 +22149,7 @@
         "github:hyperspell/hyperspell-openclaw",
         "github:iflytek/skillhub",
         "github:iliaal/ai-skills",
+        "github:im4codes/imcodes",
         "github:infiagent/infiagent",
         "github:inngest/utah",
         "github:internlm/wildclawbench",
@@ -22136,6 +22184,7 @@
         "github:microsoft/skillopt",
         "github:microsoft/waza",
         "github:mindfold-ai/trellis",
+        "github:mnemon-dev/mnemon",
         "github:modelcode-ai/mcode-benchmark",
         "github:momo-personal-assistant/openclaw-plugin",
         "github:najeed/ai-agent-eval-harness",
@@ -22145,6 +22194,7 @@
         "github:nomic-ai/aec-bench",
         "github:nowledge-co/community",
         "github:nvidia/skills",
+        "github:oceanbase/powermem",
         "github:olshansk/agent-skills",
         "github:open-gitagent/gitagent",
         "github:openai/swarm",
@@ -22158,8 +22208,10 @@
         "github:openclaw/gitcrawl",
         "github:openclaw/openclaw-windows-node",
         "github:openmemoryspec/oms",
+        "github:opensquilla/opensquilla",
         "github:openswarm-ai/openswarm",
         "github:picrew/awesome-agent-harness",
+        "github:pinchbench/skill",
         "github:plaited/agent-eval-harness",
         "github:pwrdrvr/openclaw-codex-app-server",
         "github:qpiai/proced_mem_bench",
@@ -22195,9 +22247,11 @@
         "github:tiger-ai-lab/clawbench",
         "github:transformeroptimus/superagi",
         "github:tylerdotai/meta-harness-evolver",
+        "github:vectorize-io/agent-memory-benchmark",
         "github:vectorspacelab/general-agentic-memory",
         "github:versatly/clawvault",
         "github:voltagent/awesome-openclaw-skills",
+        "github:weaviate/query-agent-benchmarking",
         "github:webmaxru/agent-skills",
         "github:webzler/agentmemory",
         "github:xai-liacs/llamea",
@@ -22211,7 +22265,7 @@
         "github:zocomputer/skills",
         "github:zorazrw/agent-workflow-memory"
       ],
-      "size": 165,
+      "size": 174,
       "sample_members": [
         "github:0xnyk/lacp",
         "github:aayoawoyemi/ori-mnemos",
@@ -22225,14 +22279,14 @@
         "github:ai-agents-2030/darwin-mobile-agent",
         "github:ai4co/awesome-fm4co",
         "github:aiwaves-cn/agents",
+        "github:alibaizhanov/mengram",
         "github:alienfader/continuity-benchmarks",
         "github:alucek/agentic-memory",
         "github:apify/agent-skills",
         "github:arc-computer/cl-bench",
         "github:arcadeai/openclaw-arcade-plugin",
         "github:axiomhq/agent-memory",
-        "github:back1ply/agent-skill-loader",
-        "github:beeevita/evoprompt"
+        "github:back1ply/agent-skill-loader"
       ]
     },
     {
@@ -22444,7 +22498,6 @@
         "github:crewaiinc/crewai",
         "github:evalops/dspy-0to1-guide",
         "github:evoagentx/evoagentx",
-        "github:evomap/awesome-agent-evolution",
         "github:facebookresearch/drzero",
         "github:facebookresearch/hyperagents",
         "github:faveos8758/reflexion-agent-ts",
@@ -22578,7 +22631,7 @@
         "blog:0026-Product-Hunt-Retool-Build-internal-tools-remarkably-fast-Product-Hunt",
         "blog:0536-digitalhabitats-global-Reflexion-an-autonomous-agent-with-dynamic-memory-and-self-reflection-Digital"
       ],
-      "size": 146,
+      "size": 145,
       "sample_members": [
         "github:a-evo-lab/a-evolve",
         "github:agent-on-the-fly/memento",
@@ -22593,13 +22646,13 @@
         "github:crewaiinc/crewai",
         "github:evalops/dspy-0to1-guide",
         "github:evoagentx/evoagentx",
-        "github:evomap/awesome-agent-evolution",
         "github:facebookresearch/drzero",
         "github:facebookresearch/hyperagents",
         "github:faveos8758/reflexion-agent-ts",
         "github:feesuu/cluerag",
         "github:flowersteam/teachmyagent",
-        "github:garrus800-stack/genesis-agent"
+        "github:garrus800-stack/genesis-agent",
+        "github:george-salafatinos/tictactoe-self-play"
       ]
     },
     {
@@ -22800,17 +22853,11 @@
         "github:803/skills-supply",
         "github:ag2ai/ag2",
         "github:agenta-ai/agenta",
-        "github:agentevals-dev/agentevals",
-        "github:agentralabs/agentic-memory",
         "github:agentreplay/agentreplay",
-        "github:agiresearch/a-mem",
         "github:ai-boost/awesome-harness-engineering",
         "github:ai4co/rl4co",
         "github:all-hands-ai/openhands",
-        "github:alucek/agentic-memory",
         "github:angrysky56/reflective-agent-architecture",
-        "github:apify/agent-skills",
-        "github:arc-computer/cl-bench",
         "github:arunagirinathan-k/awesome-ai-agents-2026",
         "github:automl/auto-sklearn",
         "github:berriai/litellm",
@@ -22827,12 +22874,10 @@
         "github:composiohq/awesome-codex-skills",
         "github:cyijun/agent-smith",
         "github:dataelement/bisheng",
-        "github:dataojitori/nocturne_memory",
         "github:deap/deap",
         "github:dmgrok/agent_skills_directory",
         "github:e2b-dev/e2b",
         "github:eigent-ai/agent-skills",
-        "github:elizaos/agentmemory",
         "github:emson/elfmem",
         "github:evalops/dspy-0to1-guide",
         "github:evotai/evot",
@@ -22858,7 +22903,6 @@
         "github:langflow-ai/langflow",
         "github:langgenius/dify",
         "github:letta-ai/agentic-learning-sdk",
-        "github:lhl/agentic-memory",
         "github:lsdefine/genericagent",
         "github:matrixorigin/memoria",
         "github:mdalamin5/end-to-end-agentic-ai-automation-lab",
@@ -22871,7 +22915,6 @@
         "github:microsoftdocs/agent-skills",
         "github:modelscope/agentjet",
         "github:moizibnyousaf/ai-agent-skills",
-        "github:najeed/ai-agent-eval-harness",
         "github:neo4j-labs/agent-memory",
         "github:ollama/ollama",
         "github:omdivyatej/self-learning-agents",
@@ -22879,7 +22922,6 @@
         "github:openbmb/agentverse",
         "github:openbmb/chatdev",
         "github:openclaw/openclaw",
-        "github:openswarm-ai/openswarm",
         "github:osu-nlp-group/skillweaver",
         "github:pgg3/evotoolkit",
         "github:pingcap/ossinsight",
@@ -22916,8 +22958,6 @@
         "github:trustgraph-ai/trustgraph",
         "github:tsinghuac3i/awesome-rl-for-lrms",
         "github:vectorize-io/hindsight",
-        "github:vectorspacelab/general-agentic-memory",
-        "github:versatly/clawvault",
         "github:vivy-yi/awesome-agent-orchestration",
         "github:volcengine/openviking",
         "github:voltagent/awesome-agent-skills",
@@ -22926,31 +22966,30 @@
         "github:xlang-ai/openagents",
         "github:zilliztech/memsearch",
         "github:zjunlp/knowself",
-        "github:zjunlp/worldmind",
-        "github:zorazrw/agent-workflow-memory"
+        "github:zjunlp/worldmind"
       ],
-      "size": 133,
+      "size": 119,
       "sample_members": [
         "github:01-ai/langcrew",
         "github:0xsanei/darwinia",
         "github:803/skills-supply",
         "github:ag2ai/ag2",
         "github:agenta-ai/agenta",
-        "github:agentevals-dev/agentevals",
-        "github:agentralabs/agentic-memory",
         "github:agentreplay/agentreplay",
-        "github:agiresearch/a-mem",
         "github:ai-boost/awesome-harness-engineering",
         "github:ai4co/rl4co",
         "github:all-hands-ai/openhands",
-        "github:alucek/agentic-memory",
         "github:angrysky56/reflective-agent-architecture",
-        "github:apify/agent-skills",
-        "github:arc-computer/cl-bench",
         "github:arunagirinathan-k/awesome-ai-agents-2026",
         "github:automl/auto-sklearn",
         "github:berriai/litellm",
-        "github:browser-use/web-ui"
+        "github:browser-use/web-ui",
+        "github:bruno686/visplay",
+        "github:callstackincubator/agent-skills",
+        "github:camel-ai/camel",
+        "github:chainlit/chainlit",
+        "github:chriscox/agent-skills",
+        "github:clawdotnet/openclaw.net"
       ]
     },
     {
@@ -24109,7 +24148,6 @@
         "github:memvid/memvid",
         "github:neo4j-labs/agent-memory",
         "github:noahshinn024/reflexion-human-eval",
-        "github:pinchbench/skill",
         "github:princeton-nlp/swe-agent",
         "github:r4stin/kg-research-agent",
         "github:rishab-agrawal/humanoid-curriculum-rl",
@@ -24121,7 +24159,6 @@
         "github:sola-st/repairagent",
         "github:teleai-uagi/awesome-agent-memory",
         "github:tfatykhov/awesome-agent-memory",
-        "github:vectorize-io/agent-memory-benchmark",
         "github:werner-duvaud/muzero-general",
         "github:x1aox1a/word2world",
         "github:xinhuagu/aceclaw",
@@ -24168,7 +24205,7 @@
         "social:0306-Hacker-News-How-to-code-Claude-Code-in-200-lines-of-code-Hacker-News",
         "social:boost_batch_02"
       ],
-      "size": 92,
+      "size": 90,
       "sample_members": [
         "github:01-ai/langcrew",
         "github:agentreplay/agentreplay",
@@ -24462,6 +24499,7 @@
         "github:elizaos/eliza",
         "github:emson/elfmem",
         "github:evermind-ai/everos",
+        "github:evomap/awesome-agent-evolution",
         "github:evotai/evot",
         "github:fusionbrainlab/gigaevo-core",
         "github:gofenix/nex-agent",
@@ -24482,6 +24520,7 @@
         "github:open-gitagent/gitagent",
         "github:openclaw/acpx",
         "github:openmemind/memind",
+        "github:opensquilla/opensquilla",
         "github:orchestra-research/ai-research-skills",
         "github:raphaelchristi/harness-evolver",
         "github:rinadelph/agent-mcp",
@@ -24523,7 +24562,7 @@
         "social:0319-Reddit-Thoughts-on-Kaggle-Competitions-datascience",
         "social:more_batch_11"
       ],
-      "size": 76,
+      "size": 78,
       "sample_members": [
         "github:0xsanei/darwinia",
         "github:a-evo-lab/a-evolve",
@@ -24541,10 +24580,10 @@
         "github:elizaos/eliza",
         "github:emson/elfmem",
         "github:evermind-ai/everos",
+        "github:evomap/awesome-agent-evolution",
         "github:evotai/evot",
         "github:fusionbrainlab/gigaevo-core",
-        "github:gofenix/nex-agent",
-        "github:hkuds/openspace"
+        "github:gofenix/nex-agent"
       ]
     },
     {
@@ -24661,6 +24700,119 @@
       ]
     },
     {
+      "key": "v0:b3:28d4dc07ff4c734c",
+      "band": 3,
+      "features": [
+        "method_novelty",
+        "open_source_reuse",
+        "issue_resource_signal",
+        "hype_without_evidence",
+        "stale_or_unknown_metadata",
+        "useful_for_survey_seo"
+      ],
+      "chars": "-++00+",
+      "members": [
+        "github:01-ai/langcrew",
+        "github:agentskills/agentskills",
+        "github:ai-boost/awesome-harness-engineering",
+        "github:alucek/agentic-memory",
+        "github:anthropics/skills",
+        "github:autojunjie/awesome-agent-harness",
+        "github:callstackincubator/agent-skills",
+        "github:codexstar69/bug-hunter",
+        "github:cxxz/awesome-agent-memory",
+        "github:dceoy/speckit-agent-skills",
+        "github:dsifry/metaswarm",
+        "github:eliasecchig/gemini-cli-git",
+        "github:enajx/es",
+        "github:evalops/dspy-0to1-guide",
+        "github:evomap/awesome-agent-evolution",
+        "github:flagos-ai/skills",
+        "github:gentleman-programming/gentleman-skills",
+        "github:gitmaxd/deepagents-cli-codex-skill",
+        "github:harness/harness-skills",
+        "github:internscience/awesome-scientific-skills",
+        "github:itgoyo/awesome-agent-skills",
+        "github:jdrhyne/agent-skills",
+        "github:junminhong/awesome-agent-skills",
+        "github:khykd/reflector",
+        "github:kodustech/awesome-agent-skills",
+        "github:metauto-ai/gptswarm",
+        "github:microsoft/skills",
+        "github:os-copilot/os-copilot",
+        "github:picrew/awesome-agent-harness",
+        "github:salvatorera/ml-news-of-the-week",
+        "github:shintaro-sprech/agent-orchestrator-template",
+        "github:skillmatic-ai/awesome-agent-skills",
+        "github:sunzey/seagent",
+        "github:thinkwee/agentsmeetrl",
+        "github:thudm/webrl",
+        "github:tiger-ai-lab/openresearcher",
+        "github:webmaxru/agent-skills",
+        "social:0013-developers-openai-com-Self-Evolving-Agents-A-Cookbook-for-Autonomous-Agent-Retraining",
+        "social:0044-mager-co-LangGraph-Build-Stateful-Multi-Agent-Systems-That-Don-t-Crash",
+        "social:0045-docs-langchain-com-LangGraph-overview-Docs-by-LangChain",
+        "social:0050-docs-langchain-com-LangGraph-overview-Docs-by-LangChain",
+        "social:0055-github-com-MaximeRobeyns-self-improving-coding-agent",
+        "social:0063-github-com-ulab-uiuc-Multi-agent-evolve",
+        "social:0069-zenml-io-CrewAI-vs-AutoGen-Which-One-Is-the-Best-Framework-to-Build-AI-Agents-and-Applicat",
+        "social:0078-github-com-lastmile-ai-mcp-agent",
+        "social:0080-makerpulse-ai-MCP-Under-the-Hood-How-the-Model-Context-Protocol-Actually-Wires-Agents-to-E",
+        "social:0081-github-com-SalesforceAIResearch-MCP-Universe",
+        "social:0082-github-com-rinadelph-Agent-MCP",
+        "social:0083-learn-microsoft-com-Build-Agents-using-Model-Context-Protocol-on-Azure-Microsoft-Learn",
+        "social:0096-Zhihu-MiniMax-M2-7",
+        "social:0108-Juejin-AI-Agent-agent-evolution-AI-Agent",
+        "social:0131-segmentfault-com-AI-Agent-Reflection-Reflexion-deephub-SegmentFault",
+        "social:0133-segmentfault-com-AI-SegmentFault",
+        "social:0134-segmentfault-com-AI-Agents",
+        "social:0137-segmentfault-com-GPT-5",
+        "social:0138-segmentfault-com-AI",
+        "social:0144-cnblogs-com-Prompt-31-LLM-Agent",
+        "social:0145-cnblogs-com-Hermes-Agent-AI-ycfenxi",
+        "social:0149-developer-aliyun-com-AI-Agent-Reflection-Reflexion",
+        "social:0151-developer-aliyun-com-AI",
+        "social:0157-developer-aliyun-com-OpenClaw-Windows-EvoMap-AI-Agent",
+        "social:0159-cloud-tencent-com-AI-Agent-Reflection-Reflexion",
+        "social:0164-cloud-tencent-com-73-7-89-5-HALO",
+        "social:0169-36kr-com-AI-36",
+        "social:0182-X-Twitter-Agent-V2EX",
+        "social:0188-X-Twitter-Agent-V2EX",
+        "social:0198-Linux-do-Agentic-Coding-LINUX-DO",
+        "social:0222-Hacker-News-Should-I-Use-a-Framework-to-Build-an-Agent-Code-vs-LangGraph-vs-Workflows-Hack",
+        "social:0263-Hacker-News-OpenAI-adds-MCP-support-to-Agents-SDK-Hacker-News",
+        "social:0279-Hacker-News-Some-uncomfortable-truths-about-AI-coding-agents-Hacker-News",
+        "social:0298-Hacker-News-Notably-not-mentioned-Model-Context-Protocol-https-www",
+        "social:0320-Hacker-News-Building-Effective-AI-Agents-Hacker-News",
+        "social:boost_batch_02",
+        "social:reddit-posts",
+        "social:wechat-articles"
+      ],
+      "size": 75,
+      "sample_members": [
+        "github:01-ai/langcrew",
+        "github:agentskills/agentskills",
+        "github:ai-boost/awesome-harness-engineering",
+        "github:alucek/agentic-memory",
+        "github:anthropics/skills",
+        "github:autojunjie/awesome-agent-harness",
+        "github:callstackincubator/agent-skills",
+        "github:codexstar69/bug-hunter",
+        "github:cxxz/awesome-agent-memory",
+        "github:dceoy/speckit-agent-skills",
+        "github:dsifry/metaswarm",
+        "github:eliasecchig/gemini-cli-git",
+        "github:enajx/es",
+        "github:evalops/dspy-0to1-guide",
+        "github:evomap/awesome-agent-evolution",
+        "github:flagos-ai/skills",
+        "github:gentleman-programming/gentleman-skills",
+        "github:gitmaxd/deepagents-cli-codex-skill",
+        "github:harness/harness-skills",
+        "github:internscience/awesome-scientific-skills"
+      ]
+    },
+    {
       "key": "v0:b0:7a6acec0d385eebb",
       "band": 0,
       "features": [
@@ -24770,118 +24922,6 @@
         "github:langchain-ai/langsmith-sdk",
         "github:microsoft/skills",
         "github:microsoft/windowsagentarena"
-      ]
-    },
-    {
-      "key": "v0:b3:28d4dc07ff4c734c",
-      "band": 3,
-      "features": [
-        "method_novelty",
-        "open_source_reuse",
-        "issue_resource_signal",
-        "hype_without_evidence",
-        "stale_or_unknown_metadata",
-        "useful_for_survey_seo"
-      ],
-      "chars": "-++00+",
-      "members": [
-        "github:01-ai/langcrew",
-        "github:agentskills/agentskills",
-        "github:ai-boost/awesome-harness-engineering",
-        "github:alucek/agentic-memory",
-        "github:anthropics/skills",
-        "github:autojunjie/awesome-agent-harness",
-        "github:callstackincubator/agent-skills",
-        "github:codexstar69/bug-hunter",
-        "github:cxxz/awesome-agent-memory",
-        "github:dceoy/speckit-agent-skills",
-        "github:dsifry/metaswarm",
-        "github:eliasecchig/gemini-cli-git",
-        "github:enajx/es",
-        "github:evalops/dspy-0to1-guide",
-        "github:flagos-ai/skills",
-        "github:gentleman-programming/gentleman-skills",
-        "github:gitmaxd/deepagents-cli-codex-skill",
-        "github:harness/harness-skills",
-        "github:internscience/awesome-scientific-skills",
-        "github:itgoyo/awesome-agent-skills",
-        "github:jdrhyne/agent-skills",
-        "github:junminhong/awesome-agent-skills",
-        "github:khykd/reflector",
-        "github:kodustech/awesome-agent-skills",
-        "github:metauto-ai/gptswarm",
-        "github:microsoft/skills",
-        "github:os-copilot/os-copilot",
-        "github:picrew/awesome-agent-harness",
-        "github:salvatorera/ml-news-of-the-week",
-        "github:shintaro-sprech/agent-orchestrator-template",
-        "github:skillmatic-ai/awesome-agent-skills",
-        "github:sunzey/seagent",
-        "github:thinkwee/agentsmeetrl",
-        "github:thudm/webrl",
-        "github:tiger-ai-lab/openresearcher",
-        "github:webmaxru/agent-skills",
-        "social:0013-developers-openai-com-Self-Evolving-Agents-A-Cookbook-for-Autonomous-Agent-Retraining",
-        "social:0044-mager-co-LangGraph-Build-Stateful-Multi-Agent-Systems-That-Don-t-Crash",
-        "social:0045-docs-langchain-com-LangGraph-overview-Docs-by-LangChain",
-        "social:0050-docs-langchain-com-LangGraph-overview-Docs-by-LangChain",
-        "social:0055-github-com-MaximeRobeyns-self-improving-coding-agent",
-        "social:0063-github-com-ulab-uiuc-Multi-agent-evolve",
-        "social:0069-zenml-io-CrewAI-vs-AutoGen-Which-One-Is-the-Best-Framework-to-Build-AI-Agents-and-Applicat",
-        "social:0078-github-com-lastmile-ai-mcp-agent",
-        "social:0080-makerpulse-ai-MCP-Under-the-Hood-How-the-Model-Context-Protocol-Actually-Wires-Agents-to-E",
-        "social:0081-github-com-SalesforceAIResearch-MCP-Universe",
-        "social:0082-github-com-rinadelph-Agent-MCP",
-        "social:0083-learn-microsoft-com-Build-Agents-using-Model-Context-Protocol-on-Azure-Microsoft-Learn",
-        "social:0096-Zhihu-MiniMax-M2-7",
-        "social:0108-Juejin-AI-Agent-agent-evolution-AI-Agent",
-        "social:0131-segmentfault-com-AI-Agent-Reflection-Reflexion-deephub-SegmentFault",
-        "social:0133-segmentfault-com-AI-SegmentFault",
-        "social:0134-segmentfault-com-AI-Agents",
-        "social:0137-segmentfault-com-GPT-5",
-        "social:0138-segmentfault-com-AI",
-        "social:0144-cnblogs-com-Prompt-31-LLM-Agent",
-        "social:0145-cnblogs-com-Hermes-Agent-AI-ycfenxi",
-        "social:0149-developer-aliyun-com-AI-Agent-Reflection-Reflexion",
-        "social:0151-developer-aliyun-com-AI",
-        "social:0157-developer-aliyun-com-OpenClaw-Windows-EvoMap-AI-Agent",
-        "social:0159-cloud-tencent-com-AI-Agent-Reflection-Reflexion",
-        "social:0164-cloud-tencent-com-73-7-89-5-HALO",
-        "social:0169-36kr-com-AI-36",
-        "social:0182-X-Twitter-Agent-V2EX",
-        "social:0188-X-Twitter-Agent-V2EX",
-        "social:0198-Linux-do-Agentic-Coding-LINUX-DO",
-        "social:0222-Hacker-News-Should-I-Use-a-Framework-to-Build-an-Agent-Code-vs-LangGraph-vs-Workflows-Hack",
-        "social:0263-Hacker-News-OpenAI-adds-MCP-support-to-Agents-SDK-Hacker-News",
-        "social:0279-Hacker-News-Some-uncomfortable-truths-about-AI-coding-agents-Hacker-News",
-        "social:0298-Hacker-News-Notably-not-mentioned-Model-Context-Protocol-https-www",
-        "social:0320-Hacker-News-Building-Effective-AI-Agents-Hacker-News",
-        "social:boost_batch_02",
-        "social:reddit-posts",
-        "social:wechat-articles"
-      ],
-      "size": 74,
-      "sample_members": [
-        "github:01-ai/langcrew",
-        "github:agentskills/agentskills",
-        "github:ai-boost/awesome-harness-engineering",
-        "github:alucek/agentic-memory",
-        "github:anthropics/skills",
-        "github:autojunjie/awesome-agent-harness",
-        "github:callstackincubator/agent-skills",
-        "github:codexstar69/bug-hunter",
-        "github:cxxz/awesome-agent-memory",
-        "github:dceoy/speckit-agent-skills",
-        "github:dsifry/metaswarm",
-        "github:eliasecchig/gemini-cli-git",
-        "github:enajx/es",
-        "github:evalops/dspy-0to1-guide",
-        "github:flagos-ai/skills",
-        "github:gentleman-programming/gentleman-skills",
-        "github:gitmaxd/deepagents-cli-codex-skill",
-        "github:harness/harness-skills",
-        "github:internscience/awesome-scientific-skills",
-        "github:itgoyo/awesome-agent-skills"
       ]
     },
     {
@@ -25405,6 +25445,106 @@
       ]
     },
     {
+      "key": "v0:b2:31d6b884471af89e",
+      "band": 2,
+      "features": [
+        "timestamp_freshness",
+        "continuity_active",
+        "community_momentum",
+        "star_growth_current",
+        "paper_quality_signal",
+        "benchmark_result"
+      ],
+      "chars": "+++-+0",
+      "members": [
+        "github:agentmemoryworld/awesome-agent-memory",
+        "github:aiming-lab/skillrl",
+        "github:aiwaves-cn/agents",
+        "github:allenai/swe-agent",
+        "github:amap-ml/skillclaw",
+        "github:autojunjie/awesome-agent-harness",
+        "github:cxxz/awesome-agent-memory",
+        "github:deep-polyu/awesome-graphmemory",
+        "github:evomap/awesome-agent-evolution",
+        "github:feiliu36/llm4opt",
+        "github:flowersteam/teachmyagent",
+        "github:gensi-thuair/flex",
+        "github:graph-rag/graphrag",
+        "github:haotang1995/worldcoder",
+        "github:huggingface/skills",
+        "github:imgeorgiev/pwm",
+        "github:internlm/polar",
+        "github:internscience/internagent",
+        "github:jennyzzt/awesome-open-ended",
+        "github:kweaver-ai/kweaver-core",
+        "github:labicon/curricullm",
+        "github:langchain-ai/langchain",
+        "github:linear95/spag",
+        "github:ltzheng/curriculummarl",
+        "github:maximerobeyns/self_improving_coding_agent",
+        "github:maxnorm8650/medagentsim",
+        "github:mbchang/meta-prompt",
+        "github:meituan/evocua",
+        "github:memtensor/memrl",
+        "github:mfolsom/rlvr-world",
+        "github:microsoft/skillopt",
+        "github:nikivanstein/llamea",
+        "github:noahshinn/reflexion",
+        "github:noahshinn024/reflexion-human-eval",
+        "github:octobrist/cope",
+        "github:opendilab/awesome-rlhf",
+        "github:openning07/awesome-curriculum-learning",
+        "github:orchestra-research/ai-research-skills",
+        "github:os-copilot/os-copilot",
+        "github:pgg3/l-autoda",
+        "github:quantaalpha/quantaalpha",
+        "github:quzhiii/thesis-skills",
+        "github:r4stin/kg-research-agent",
+        "github:rmanluo/gfm-rag",
+        "github:shichun-liu/agent-memory-paper-list",
+        "github:significant-gravitas/autogpt",
+        "github:snowflake-labs/agent-world-model",
+        "github:stanfordnlp/dspy",
+        "github:star-bob/swe-agent",
+        "github:swe-agent/swe-agent",
+        "github:taishi-n324/awesome-rl-reasoning",
+        "github:tencent/selfevolvingagent",
+        "github:thinkwee/agentsmeetrl",
+        "github:thuml/rlvr-world",
+        "github:vsonicv/es-fine-tuning-paper",
+        "github:xai-liacs/llamea",
+        "github:xmudeeplit/awesome-self-evolving-agents",
+        "github:xuchen-li/llm-arxiv-daily",
+        "github:yf-he/evotest",
+        "github:yunjuetech/yunjue-agent",
+        "github:zoe-yyx/agentnet",
+        "github:zylos-ai/zylos-core"
+      ],
+      "size": 62,
+      "sample_members": [
+        "github:agentmemoryworld/awesome-agent-memory",
+        "github:aiming-lab/skillrl",
+        "github:aiwaves-cn/agents",
+        "github:allenai/swe-agent",
+        "github:amap-ml/skillclaw",
+        "github:autojunjie/awesome-agent-harness",
+        "github:cxxz/awesome-agent-memory",
+        "github:deep-polyu/awesome-graphmemory",
+        "github:evomap/awesome-agent-evolution",
+        "github:feiliu36/llm4opt",
+        "github:flowersteam/teachmyagent",
+        "github:gensi-thuair/flex",
+        "github:graph-rag/graphrag",
+        "github:haotang1995/worldcoder",
+        "github:huggingface/skills",
+        "github:imgeorgiev/pwm",
+        "github:internlm/polar",
+        "github:internscience/internagent",
+        "github:jennyzzt/awesome-open-ended",
+        "github:kweaver-ai/kweaver-core"
+      ]
+    },
+    {
       "key": "v0:b2:d4f8e6529bfd9050",
       "band": 2,
       "features": [
@@ -25502,105 +25642,6 @@
         "paper:2510-17498",
         "paper:2510-18327",
         "paper:2512-09108"
-      ]
-    },
-    {
-      "key": "v0:b2:31d6b884471af89e",
-      "band": 2,
-      "features": [
-        "timestamp_freshness",
-        "continuity_active",
-        "community_momentum",
-        "star_growth_current",
-        "paper_quality_signal",
-        "benchmark_result"
-      ],
-      "chars": "+++-+0",
-      "members": [
-        "github:agentmemoryworld/awesome-agent-memory",
-        "github:aiming-lab/skillrl",
-        "github:aiwaves-cn/agents",
-        "github:allenai/swe-agent",
-        "github:amap-ml/skillclaw",
-        "github:autojunjie/awesome-agent-harness",
-        "github:cxxz/awesome-agent-memory",
-        "github:deep-polyu/awesome-graphmemory",
-        "github:feiliu36/llm4opt",
-        "github:flowersteam/teachmyagent",
-        "github:gensi-thuair/flex",
-        "github:graph-rag/graphrag",
-        "github:haotang1995/worldcoder",
-        "github:huggingface/skills",
-        "github:imgeorgiev/pwm",
-        "github:internlm/polar",
-        "github:internscience/internagent",
-        "github:jennyzzt/awesome-open-ended",
-        "github:kweaver-ai/kweaver-core",
-        "github:labicon/curricullm",
-        "github:langchain-ai/langchain",
-        "github:linear95/spag",
-        "github:ltzheng/curriculummarl",
-        "github:maximerobeyns/self_improving_coding_agent",
-        "github:maxnorm8650/medagentsim",
-        "github:mbchang/meta-prompt",
-        "github:meituan/evocua",
-        "github:memtensor/memrl",
-        "github:mfolsom/rlvr-world",
-        "github:microsoft/skillopt",
-        "github:nikivanstein/llamea",
-        "github:noahshinn/reflexion",
-        "github:noahshinn024/reflexion-human-eval",
-        "github:octobrist/cope",
-        "github:opendilab/awesome-rlhf",
-        "github:openning07/awesome-curriculum-learning",
-        "github:orchestra-research/ai-research-skills",
-        "github:os-copilot/os-copilot",
-        "github:pgg3/l-autoda",
-        "github:quantaalpha/quantaalpha",
-        "github:quzhiii/thesis-skills",
-        "github:r4stin/kg-research-agent",
-        "github:rmanluo/gfm-rag",
-        "github:shichun-liu/agent-memory-paper-list",
-        "github:significant-gravitas/autogpt",
-        "github:snowflake-labs/agent-world-model",
-        "github:stanfordnlp/dspy",
-        "github:star-bob/swe-agent",
-        "github:swe-agent/swe-agent",
-        "github:taishi-n324/awesome-rl-reasoning",
-        "github:tencent/selfevolvingagent",
-        "github:thinkwee/agentsmeetrl",
-        "github:thuml/rlvr-world",
-        "github:vsonicv/es-fine-tuning-paper",
-        "github:xai-liacs/llamea",
-        "github:xmudeeplit/awesome-self-evolving-agents",
-        "github:xuchen-li/llm-arxiv-daily",
-        "github:yf-he/evotest",
-        "github:yunjuetech/yunjue-agent",
-        "github:zoe-yyx/agentnet",
-        "github:zylos-ai/zylos-core"
-      ],
-      "size": 61,
-      "sample_members": [
-        "github:agentmemoryworld/awesome-agent-memory",
-        "github:aiming-lab/skillrl",
-        "github:aiwaves-cn/agents",
-        "github:allenai/swe-agent",
-        "github:amap-ml/skillclaw",
-        "github:autojunjie/awesome-agent-harness",
-        "github:cxxz/awesome-agent-memory",
-        "github:deep-polyu/awesome-graphmemory",
-        "github:feiliu36/llm4opt",
-        "github:flowersteam/teachmyagent",
-        "github:gensi-thuair/flex",
-        "github:graph-rag/graphrag",
-        "github:haotang1995/worldcoder",
-        "github:huggingface/skills",
-        "github:imgeorgiev/pwm",
-        "github:internlm/polar",
-        "github:internscience/internagent",
-        "github:jennyzzt/awesome-open-ended",
-        "github:kweaver-ai/kweaver-core",
-        "github:labicon/curricullm"
       ]
     },
     {
@@ -26068,6 +26109,7 @@
         "github:corbell-ai/evalmonkey",
         "github:crewaiinc/crewai",
         "github:cuga-project/cuga-agent",
+        "github:evomap/awesome-agent-evolution",
         "github:gepa-ai/gepa",
         "github:gepa-ai/optimize-anything-artifact",
         "github:gofenix/nex-agent",
@@ -26107,7 +26149,7 @@
         "github:yunjuetech/yunjue-agent",
         "github:zhangfengcdt/memoir"
       ],
-      "size": 47,
+      "size": 48,
       "sample_members": [
         "github:aiming-lab/autoharness",
         "github:aiming-lab/clawarena",
@@ -26118,6 +26160,7 @@
         "github:corbell-ai/evalmonkey",
         "github:crewaiinc/crewai",
         "github:cuga-project/cuga-agent",
+        "github:evomap/awesome-agent-evolution",
         "github:gepa-ai/gepa",
         "github:gepa-ai/optimize-anything-artifact",
         "github:gofenix/nex-agent",
@@ -26127,8 +26170,7 @@
         "github:huggingface/smolagents",
         "github:krzysztofdudek/researcherskill",
         "github:langchain-ai/agentevals",
-        "github:langchain-ai/open-swe",
-        "github:manthanguptaa/water"
+        "github:langchain-ai/open-swe"
       ]
     },
     {
@@ -26214,6 +26256,90 @@
         "github:jarvis-xs/se-agent",
         "github:jennyzzt/dgm",
         "github:krzysztofdudek/researcherskill"
+      ]
+    },
+    {
+      "key": "v0:b2:b2bce7ef461c23f3",
+      "band": 2,
+      "features": [
+        "timestamp_freshness",
+        "continuity_active",
+        "community_momentum",
+        "star_growth_current",
+        "paper_quality_signal",
+        "benchmark_result"
+      ],
+      "chars": "+++-0+",
+      "members": [
+        "github:aiming-lab/clawarena",
+        "github:aiming-lab/simplemem",
+        "github:algorithmicsuperintelligence/openevolve",
+        "github:alienfader/continuity-benchmarks",
+        "github:benchflow-ai/skillsbench",
+        "github:ce0alex/skill-hunter",
+        "github:cuga-project/cuga-agent",
+        "github:da1yuqin/sead",
+        "github:dotnet/skills",
+        "github:evoagentx/evoagentx",
+        "github:gustolychees/contribai",
+        "github:harness/harness-evals",
+        "github:huggingface/agents-course",
+        "github:internlm/wildclawbench",
+        "github:khykd/reflector",
+        "github:legionio/lex-metacognition",
+        "github:lingxi-agent/lingxi",
+        "github:longman-max/selfthinker",
+        "github:memento-teams/memento-skills",
+        "github:memtensor/memos",
+        "github:memtensor/skills-vote",
+        "github:mlcommons/modelbench",
+        "github:modelscope/agentevolver",
+        "github:murataslan1/ai-agent-benchmark",
+        "github:neosigmaai/auto-harness",
+        "github:oceanbase/powermem",
+        "github:onevcat/argue",
+        "github:openautocoder/live-swe-agent",
+        "github:openclaw/clawbench",
+        "github:openclaw/crabbox",
+        "github:opendatabox/workspace-bench",
+        "github:openhands/benchmarks",
+        "github:pegasi-ai/reins",
+        "github:pinchbench/skill",
+        "github:plaited/agent-eval-harness",
+        "github:rlhflow/online-rlhf",
+        "github:ryanalberts/best-of-agent-harnesses",
+        "github:shareai-lab/kbench",
+        "github:square-mind/squaremind",
+        "github:superagenticai/metaharness",
+        "github:suyoumo/clawprobench",
+        "github:swe-bench/swe-bench",
+        "github:vectorize-io/agent-memory-benchmark",
+        "github:webzler/agentmemory",
+        "github:yologdev/yoyo-evolve",
+        "github:yuanchenbei/mem-gallery"
+      ],
+      "size": 46,
+      "sample_members": [
+        "github:aiming-lab/clawarena",
+        "github:aiming-lab/simplemem",
+        "github:algorithmicsuperintelligence/openevolve",
+        "github:alienfader/continuity-benchmarks",
+        "github:benchflow-ai/skillsbench",
+        "github:ce0alex/skill-hunter",
+        "github:cuga-project/cuga-agent",
+        "github:da1yuqin/sead",
+        "github:dotnet/skills",
+        "github:evoagentx/evoagentx",
+        "github:gustolychees/contribai",
+        "github:harness/harness-evals",
+        "github:huggingface/agents-course",
+        "github:internlm/wildclawbench",
+        "github:khykd/reflector",
+        "github:legionio/lex-metacognition",
+        "github:lingxi-agent/lingxi",
+        "github:longman-max/selfthinker",
+        "github:memento-teams/memento-skills",
+        "github:memtensor/memos"
       ]
     },
     {
@@ -26383,88 +26509,6 @@
       ]
     },
     {
-      "key": "v0:b2:b2bce7ef461c23f3",
-      "band": 2,
-      "features": [
-        "timestamp_freshness",
-        "continuity_active",
-        "community_momentum",
-        "star_growth_current",
-        "paper_quality_signal",
-        "benchmark_result"
-      ],
-      "chars": "+++-0+",
-      "members": [
-        "github:aiming-lab/clawarena",
-        "github:aiming-lab/simplemem",
-        "github:algorithmicsuperintelligence/openevolve",
-        "github:alienfader/continuity-benchmarks",
-        "github:benchflow-ai/skillsbench",
-        "github:ce0alex/skill-hunter",
-        "github:cuga-project/cuga-agent",
-        "github:da1yuqin/sead",
-        "github:dotnet/skills",
-        "github:evoagentx/evoagentx",
-        "github:evomap/awesome-agent-evolution",
-        "github:gustolychees/contribai",
-        "github:harness/harness-evals",
-        "github:huggingface/agents-course",
-        "github:internlm/wildclawbench",
-        "github:khykd/reflector",
-        "github:legionio/lex-metacognition",
-        "github:lingxi-agent/lingxi",
-        "github:longman-max/selfthinker",
-        "github:memento-teams/memento-skills",
-        "github:memtensor/memos",
-        "github:memtensor/skills-vote",
-        "github:mlcommons/modelbench",
-        "github:modelscope/agentevolver",
-        "github:murataslan1/ai-agent-benchmark",
-        "github:neosigmaai/auto-harness",
-        "github:onevcat/argue",
-        "github:openautocoder/live-swe-agent",
-        "github:openclaw/clawbench",
-        "github:openclaw/crabbox",
-        "github:opendatabox/workspace-bench",
-        "github:openhands/benchmarks",
-        "github:pegasi-ai/reins",
-        "github:pinchbench/skill",
-        "github:plaited/agent-eval-harness",
-        "github:rlhflow/online-rlhf",
-        "github:ryanalberts/best-of-agent-harnesses",
-        "github:shareai-lab/kbench",
-        "github:square-mind/squaremind",
-        "github:superagenticai/metaharness",
-        "github:suyoumo/clawprobench",
-        "github:swe-bench/swe-bench",
-        "github:yologdev/yoyo-evolve",
-        "github:yuanchenbei/mem-gallery"
-      ],
-      "size": 44,
-      "sample_members": [
-        "github:aiming-lab/clawarena",
-        "github:aiming-lab/simplemem",
-        "github:algorithmicsuperintelligence/openevolve",
-        "github:alienfader/continuity-benchmarks",
-        "github:benchflow-ai/skillsbench",
-        "github:ce0alex/skill-hunter",
-        "github:cuga-project/cuga-agent",
-        "github:da1yuqin/sead",
-        "github:dotnet/skills",
-        "github:evoagentx/evoagentx",
-        "github:evomap/awesome-agent-evolution",
-        "github:gustolychees/contribai",
-        "github:harness/harness-evals",
-        "github:huggingface/agents-course",
-        "github:internlm/wildclawbench",
-        "github:khykd/reflector",
-        "github:legionio/lex-metacognition",
-        "github:lingxi-agent/lingxi",
-        "github:longman-max/selfthinker",
-        "github:memento-teams/memento-skills"
-      ]
-    },
-    {
       "key": "v0:b1:6cb727760f2c9abb",
       "band": 1,
       "features": [
@@ -26542,6 +26586,85 @@
         "paper:2504.01990",
         "paper:2504.21024",
         "paper:2505-14970"
+      ]
+    },
+    {
+      "key": "v0:b0:60cd1130eb236ccf",
+      "band": 0,
+      "features": [
+        "current_frontier_signal",
+        "self_evolution_loop_fit",
+        "mutable_artifact_clear",
+        "feedback_signal_clear",
+        "verifier_or_benchmark",
+        "retention_or_memory"
+      ],
+      "chars": "+-+0++",
+      "members": [
+        "github:0xnyk/lacp",
+        "github:agenta-ai/agenta",
+        "github:agentralabs/agentic-memory",
+        "github:alucek/agentic-memory",
+        "github:axiomhq/agent-memory",
+        "github:block/agent-skills",
+        "github:clawsouls/soulclaw",
+        "github:cloudllm-ai/mentisdb",
+        "github:cortexreach/memory-lancedb-pro",
+        "github:cxxz/awesome-agent-memory",
+        "github:deep-polyu/awesome-graphmemory",
+        "github:eesiz/clawdreamer",
+        "github:garrytan/gbrain",
+        "github:google-gemini/gemini-cli",
+        "github:humanitylabs-org/obsidianclaw",
+        "github:im4codes/imcodes",
+        "github:knowall-ai/mcp-neo4j-agent-memory",
+        "github:langchain-ai/deepagents",
+        "github:langflow-ai/langflow",
+        "github:langgenius/dify",
+        "github:matevip/mateclaw",
+        "github:mem9-ai/mem9",
+        "github:memtensor/memos-cloud-openclaw-plugin",
+        "github:mnemon-dev/mnemon",
+        "github:n8n-io/n8n",
+        "github:oceanbase/powermem",
+        "github:openclaw/crawlkit",
+        "github:openclaw/discrawl",
+        "github:openclaw/gitcrawl",
+        "github:openmemoryspec/oms",
+        "github:owasp/www-project-agent-memory-guard",
+        "github:phidatahq/phidata",
+        "github:redis/agent-memory-server",
+        "github:significant-gravitas/autogpt",
+        "github:soimy/openclaw-channel-dingtalk",
+        "github:sponsiolabs/sponsio",
+        "github:sunnja69/akephalos",
+        "github:team-commonly/commonly",
+        "github:tencent/tencentdb-agent-memory",
+        "github:vectorspacelab/general-agentic-memory",
+        "github:versatly/clawvault"
+      ],
+      "size": 41,
+      "sample_members": [
+        "github:0xnyk/lacp",
+        "github:agenta-ai/agenta",
+        "github:agentralabs/agentic-memory",
+        "github:alucek/agentic-memory",
+        "github:axiomhq/agent-memory",
+        "github:block/agent-skills",
+        "github:clawsouls/soulclaw",
+        "github:cloudllm-ai/mentisdb",
+        "github:cortexreach/memory-lancedb-pro",
+        "github:cxxz/awesome-agent-memory",
+        "github:deep-polyu/awesome-graphmemory",
+        "github:eesiz/clawdreamer",
+        "github:garrytan/gbrain",
+        "github:google-gemini/gemini-cli",
+        "github:humanitylabs-org/obsidianclaw",
+        "github:im4codes/imcodes",
+        "github:knowall-ai/mcp-neo4j-agent-memory",
+        "github:langchain-ai/deepagents",
+        "github:langflow-ai/langflow",
+        "github:langgenius/dify"
       ]
     },
     {
@@ -26698,82 +26821,6 @@
         "social:0282-Hacker-News-Ask-HN-Thinking-about-memory-for-AI-coding-agents-Hacker-News",
         "social:0284-Hacker-News-An-AI-coding-agent-used-to-write-code-needs-to-reduce-your",
         "social:0295-Hacker-News-Show-HN-AgentKit-JavaScript-Alternative-to-OpenAI-Agents-SDK"
-      ]
-    },
-    {
-      "key": "v0:b0:60cd1130eb236ccf",
-      "band": 0,
-      "features": [
-        "current_frontier_signal",
-        "self_evolution_loop_fit",
-        "mutable_artifact_clear",
-        "feedback_signal_clear",
-        "verifier_or_benchmark",
-        "retention_or_memory"
-      ],
-      "chars": "+-+0++",
-      "members": [
-        "github:0xnyk/lacp",
-        "github:agenta-ai/agenta",
-        "github:agentralabs/agentic-memory",
-        "github:alucek/agentic-memory",
-        "github:axiomhq/agent-memory",
-        "github:block/agent-skills",
-        "github:clawsouls/soulclaw",
-        "github:cloudllm-ai/mentisdb",
-        "github:cortexreach/memory-lancedb-pro",
-        "github:cxxz/awesome-agent-memory",
-        "github:deep-polyu/awesome-graphmemory",
-        "github:eesiz/clawdreamer",
-        "github:garrytan/gbrain",
-        "github:google-gemini/gemini-cli",
-        "github:humanitylabs-org/obsidianclaw",
-        "github:knowall-ai/mcp-neo4j-agent-memory",
-        "github:langchain-ai/deepagents",
-        "github:langflow-ai/langflow",
-        "github:langgenius/dify",
-        "github:matevip/mateclaw",
-        "github:mem9-ai/mem9",
-        "github:memtensor/memos-cloud-openclaw-plugin",
-        "github:n8n-io/n8n",
-        "github:openclaw/crawlkit",
-        "github:openclaw/discrawl",
-        "github:openclaw/gitcrawl",
-        "github:openmemoryspec/oms",
-        "github:owasp/www-project-agent-memory-guard",
-        "github:phidatahq/phidata",
-        "github:redis/agent-memory-server",
-        "github:significant-gravitas/autogpt",
-        "github:soimy/openclaw-channel-dingtalk",
-        "github:sponsiolabs/sponsio",
-        "github:sunnja69/akephalos",
-        "github:team-commonly/commonly",
-        "github:tencent/tencentdb-agent-memory",
-        "github:vectorspacelab/general-agentic-memory",
-        "github:versatly/clawvault"
-      ],
-      "size": 38,
-      "sample_members": [
-        "github:0xnyk/lacp",
-        "github:agenta-ai/agenta",
-        "github:agentralabs/agentic-memory",
-        "github:alucek/agentic-memory",
-        "github:axiomhq/agent-memory",
-        "github:block/agent-skills",
-        "github:clawsouls/soulclaw",
-        "github:cloudllm-ai/mentisdb",
-        "github:cortexreach/memory-lancedb-pro",
-        "github:cxxz/awesome-agent-memory",
-        "github:deep-polyu/awesome-graphmemory",
-        "github:eesiz/clawdreamer",
-        "github:garrytan/gbrain",
-        "github:google-gemini/gemini-cli",
-        "github:humanitylabs-org/obsidianclaw",
-        "github:knowall-ai/mcp-neo4j-agent-memory",
-        "github:langchain-ai/deepagents",
-        "github:langflow-ai/langflow",
-        "github:langgenius/dify",
-        "github:matevip/mateclaw"
       ]
     },
     {
@@ -27139,74 +27186,6 @@
       ]
     },
     {
-      "key": "v0:b2:3b4244ef3f64e84b",
-      "band": 2,
-      "features": [
-        "timestamp_freshness",
-        "continuity_active",
-        "community_momentum",
-        "star_growth_current",
-        "paper_quality_signal",
-        "benchmark_result"
-      ],
-      "chars": "+0+-0+",
-      "members": [
-        "github:agenttoolkit/altk-evolve",
-        "github:ama-bench/ama-bench",
-        "github:asirwad/dspy-prompt-auto-optimizer",
-        "github:browser-use/browser-use",
-        "github:chrisworsey55/atlas-gic",
-        "github:circlemind-ai/fast-graphrag",
-        "github:claw-bench/claw-bench",
-        "github:claw-eval/claw-eval",
-        "github:clawbio/clawbio",
-        "github:codexstar69/bug-hunter",
-        "github:geniushtx/swe-skills-bench",
-        "github:greyhaven-ai/autocontext",
-        "github:inclusionai/aworld",
-        "github:mem0ai/memory-benchmarks",
-        "github:memorilabs/memori",
-        "github:memtensor/halumem",
-        "github:mitchellgordon95/dspy",
-        "github:opendevin/opendevin",
-        "github:princeton-nlp/swe-agent",
-        "github:princeton-pli/hal-harness",
-        "github:privkeyio/evolve-mcp",
-        "github:rllm-org/rllm",
-        "github:sasleee/tencentdb-agent-memory",
-        "github:shiqichen17/spa",
-        "github:signet-ai/signetai",
-        "github:tiger-ai-lab/openresearcher",
-        "github:tzussman/openevolve",
-        "github:vectorize-io/agent-memory-benchmark",
-        "github:webzler/agentmemory",
-        "github:yang1999code/controllable-agent"
-      ],
-      "size": 30,
-      "sample_members": [
-        "github:agenttoolkit/altk-evolve",
-        "github:ama-bench/ama-bench",
-        "github:asirwad/dspy-prompt-auto-optimizer",
-        "github:browser-use/browser-use",
-        "github:chrisworsey55/atlas-gic",
-        "github:circlemind-ai/fast-graphrag",
-        "github:claw-bench/claw-bench",
-        "github:claw-eval/claw-eval",
-        "github:clawbio/clawbio",
-        "github:codexstar69/bug-hunter",
-        "github:geniushtx/swe-skills-bench",
-        "github:greyhaven-ai/autocontext",
-        "github:inclusionai/aworld",
-        "github:mem0ai/memory-benchmarks",
-        "github:memorilabs/memori",
-        "github:memtensor/halumem",
-        "github:mitchellgordon95/dspy",
-        "github:opendevin/opendevin",
-        "github:princeton-nlp/swe-agent",
-        "github:princeton-pli/hal-harness"
-      ]
-    },
-    {
       "key": "v0:b3:994fe75ef8ad6150",
       "band": 3,
       "features": [
@@ -27272,6 +27251,72 @@
         "github:langflow-ai/langflow",
         "github:langgenius/dify",
         "github:microsoft/autogen"
+      ]
+    },
+    {
+      "key": "v0:b2:3b4244ef3f64e84b",
+      "band": 2,
+      "features": [
+        "timestamp_freshness",
+        "continuity_active",
+        "community_momentum",
+        "star_growth_current",
+        "paper_quality_signal",
+        "benchmark_result"
+      ],
+      "chars": "+0+-0+",
+      "members": [
+        "github:agenttoolkit/altk-evolve",
+        "github:ama-bench/ama-bench",
+        "github:asirwad/dspy-prompt-auto-optimizer",
+        "github:browser-use/browser-use",
+        "github:chrisworsey55/atlas-gic",
+        "github:circlemind-ai/fast-graphrag",
+        "github:claw-bench/claw-bench",
+        "github:claw-eval/claw-eval",
+        "github:clawbio/clawbio",
+        "github:codexstar69/bug-hunter",
+        "github:geniushtx/swe-skills-bench",
+        "github:greyhaven-ai/autocontext",
+        "github:inclusionai/aworld",
+        "github:mem0ai/memory-benchmarks",
+        "github:memorilabs/memori",
+        "github:memtensor/halumem",
+        "github:mitchellgordon95/dspy",
+        "github:opendevin/opendevin",
+        "github:princeton-nlp/swe-agent",
+        "github:princeton-pli/hal-harness",
+        "github:privkeyio/evolve-mcp",
+        "github:rllm-org/rllm",
+        "github:sasleee/tencentdb-agent-memory",
+        "github:shiqichen17/spa",
+        "github:signet-ai/signetai",
+        "github:tiger-ai-lab/openresearcher",
+        "github:tzussman/openevolve",
+        "github:yang1999code/controllable-agent"
+      ],
+      "size": 28,
+      "sample_members": [
+        "github:agenttoolkit/altk-evolve",
+        "github:ama-bench/ama-bench",
+        "github:asirwad/dspy-prompt-auto-optimizer",
+        "github:browser-use/browser-use",
+        "github:chrisworsey55/atlas-gic",
+        "github:circlemind-ai/fast-graphrag",
+        "github:claw-bench/claw-bench",
+        "github:claw-eval/claw-eval",
+        "github:clawbio/clawbio",
+        "github:codexstar69/bug-hunter",
+        "github:geniushtx/swe-skills-bench",
+        "github:greyhaven-ai/autocontext",
+        "github:inclusionai/aworld",
+        "github:mem0ai/memory-benchmarks",
+        "github:memorilabs/memori",
+        "github:memtensor/halumem",
+        "github:mitchellgordon95/dspy",
+        "github:opendevin/opendevin",
+        "github:princeton-nlp/swe-agent",
+        "github:princeton-pli/hal-harness"
       ]
     },
     {
@@ -27672,6 +27717,7 @@
         "github:aayoawoyemi/ori-mnemos",
         "github:agentscope-ai/reme",
         "github:agiresearch/a-mem",
+        "github:alibaizhanov/mengram",
         "github:crewaiinc/crewai",
         "github:dataojitori/nocturne_memory",
         "github:e2b-dev/e2b",
@@ -27690,7 +27736,6 @@
         "github:nirdiamant/agent_memory_techniques",
         "github:openbmb/clawxmemory",
         "github:razroo/state-trace",
-        "github:webzler/agentmemory",
         "github:yoloshii/clawmem",
         "github:zorazrw/agent-workflow-memory"
       ],
@@ -27699,6 +27744,7 @@
         "github:aayoawoyemi/ori-mnemos",
         "github:agentscope-ai/reme",
         "github:agiresearch/a-mem",
+        "github:alibaizhanov/mengram",
         "github:crewaiinc/crewai",
         "github:dataojitori/nocturne_memory",
         "github:e2b-dev/e2b",
@@ -27714,8 +27760,7 @@
         "github:memtomem/memtomem",
         "github:mindfold-ai/trellis",
         "github:nemori-ai/nemori",
-        "github:nirdiamant/agent_memory_techniques",
-        "github:openbmb/clawxmemory"
+        "github:nirdiamant/agent_memory_techniques"
       ]
     },
     {
@@ -28677,50 +28722,6 @@
       ]
     },
     {
-      "key": "v0:b1:8cb78aef0dbd0bac",
-      "band": 1,
-      "features": [
-        "rollback_or_safety",
-        "implementation_runnable",
-        "local_code_or_artifact",
-        "product_usability",
-        "teaching_model_card",
-        "evidence_chain_complete"
-      ],
-      "chars": "00++00",
-      "members": [
-        "github:evoagentx/awesome-self-evolving-agents",
-        "github:evomap/awesome-agent-evolution",
-        "github:hkuds/openspace",
-        "github:khykd/reflector",
-        "github:knowledgexlab/muse",
-        "github:lyl1015/jarvisevo",
-        "github:machuangtao/llm-kg4qa",
-        "github:maxnorm8650/medagentsim",
-        "github:obra/superpowers",
-        "github:openclaw/openclaw",
-        "github:pinchbench/skill",
-        "github:sibyl-research-team/sibyl-research-system",
-        "github:zoe-yyx/agentnet"
-      ],
-      "size": 13,
-      "sample_members": [
-        "github:evoagentx/awesome-self-evolving-agents",
-        "github:evomap/awesome-agent-evolution",
-        "github:hkuds/openspace",
-        "github:khykd/reflector",
-        "github:knowledgexlab/muse",
-        "github:lyl1015/jarvisevo",
-        "github:machuangtao/llm-kg4qa",
-        "github:maxnorm8650/medagentsim",
-        "github:obra/superpowers",
-        "github:openclaw/openclaw",
-        "github:pinchbench/skill",
-        "github:sibyl-research-team/sibyl-research-system",
-        "github:zoe-yyx/agentnet"
-      ]
-    },
-    {
       "key": "v0:b3:f6fab152ea98eb7b",
       "band": 3,
       "features": [
@@ -28846,6 +28847,46 @@
         "blog:0005-Product-Hunt-AutoGPT-An-Autonomous-GPT-4",
         "blog:README",
         "blog:TEMPLATE"
+      ]
+    },
+    {
+      "key": "v0:b1:8cb78aef0dbd0bac",
+      "band": 1,
+      "features": [
+        "rollback_or_safety",
+        "implementation_runnable",
+        "local_code_or_artifact",
+        "product_usability",
+        "teaching_model_card",
+        "evidence_chain_complete"
+      ],
+      "chars": "00++00",
+      "members": [
+        "github:evoagentx/awesome-self-evolving-agents",
+        "github:hkuds/openspace",
+        "github:khykd/reflector",
+        "github:knowledgexlab/muse",
+        "github:lyl1015/jarvisevo",
+        "github:machuangtao/llm-kg4qa",
+        "github:maxnorm8650/medagentsim",
+        "github:obra/superpowers",
+        "github:openclaw/openclaw",
+        "github:sibyl-research-team/sibyl-research-system",
+        "github:zoe-yyx/agentnet"
+      ],
+      "size": 11,
+      "sample_members": [
+        "github:evoagentx/awesome-self-evolving-agents",
+        "github:hkuds/openspace",
+        "github:khykd/reflector",
+        "github:knowledgexlab/muse",
+        "github:lyl1015/jarvisevo",
+        "github:machuangtao/llm-kg4qa",
+        "github:maxnorm8650/medagentsim",
+        "github:obra/superpowers",
+        "github:openclaw/openclaw",
+        "github:sibyl-research-team/sibyl-research-system",
+        "github:zoe-yyx/agentnet"
       ]
     },
     {
@@ -29113,7 +29154,71 @@
       ]
     }
   ],
-  "changed_items": [],
-  "added_items": [],
+  "changed_items": [
+    "github:agentevals-dev/agentevals",
+    "github:agentralabs/agentic-memory",
+    "github:agiresearch/a-mem",
+    "github:ai4co/awesome-fm4co",
+    "github:algorithmicsuperintelligence/openevolve",
+    "github:all-hands-ai/openhands",
+    "github:alucek/agentic-memory",
+    "github:apify/agent-skills",
+    "github:arc-computer/cl-bench",
+    "github:camel-ai/camel",
+    "github:codefuse-ml/awesome-code-llm",
+    "github:crewaiinc/crewai",
+    "github:dataojitori/nocturne_memory",
+    "github:deepauto-ai/automl-agent",
+    "github:elizaos/agentmemory",
+    "github:evermind-ai/everos",
+    "github:evoagentx/evoagentx",
+    "github:evomap/awesome-agent-evolution",
+    "github:foundationagents/metagpt",
+    "github:genentech/opentreesearch",
+    "github:inter-co/science-codeevolve",
+    "github:jarvis-xs/se-agent",
+    "github:jarvispei/scope",
+    "github:langchain-ai/agentevals",
+    "github:langchain-ai/langgraph",
+    "github:lhl/agentic-memory",
+    "github:luo-junyu/awesome-agent-papers",
+    "github:microsoft/autogen",
+    "github:modelscope/agentevolver",
+    "github:najeed/ai-agent-eval-harness",
+    "github:openbmb/chatdev",
+    "github:opendevin/opendevin",
+    "github:openswarm-ai/openswarm",
+    "github:oppo-mente-lab/llm-self-judge",
+    "github:pinchbench/skill",
+    "github:plaited/agent-eval-harness",
+    "github:princeton-nlp/swe-agent",
+    "github:reworkd/agentgpt",
+    "github:shengranhu/adas",
+    "github:significant-gravitas/autogpt",
+    "github:stanfordnlp/dspy",
+    "github:swe-bench/swe-bench",
+    "github:vectorize-io/agent-memory-benchmark",
+    "github:vectorspacelab/general-agentic-memory",
+    "github:versatly/clawvault",
+    "github:web-arena-x/webarena",
+    "github:webzler/agentmemory",
+    "github:xlang-ai/openagents",
+    "github:xlang-ai/osworld",
+    "github:xmudeeplit/awesome-self-evolving-agents",
+    "github:youngdubbydu/llm-agent-optimization",
+    "github:yunjuetech/yunjue-agent",
+    "github:zesearch/self-improvement-llm",
+    "github:zju-llm-safety/darwin",
+    "github:zorazrw/agent-workflow-memory"
+  ],
+  "added_items": [
+    "github:alibaizhanov/mengram",
+    "github:gcwing/bitfun",
+    "github:im4codes/imcodes",
+    "github:mnemon-dev/mnemon",
+    "github:oceanbase/powermem",
+    "github:opensquilla/opensquilla",
+    "github:weaviate/query-agent-benchmarking"
+  ],
   "removed_items": []
 }

@@ -1,39 +1,44 @@
 ---
 repo: pinchbench/skill
 url: https://github.com/pinchbench/skill
-content_timestamp: 2026-05-06
-time_slice: 2026-05
+content_timestamp: 2026-06-02
+time_slice: 2026-06
 timestamp_confidence: explicit
-timestamp_source: AnySearch GitHub extract: latest release v2.0.0 on 2026-05-06
-collected_at: 2026-05-22T15:30:00+08:00
-source: github
-source_tool: anysearch
+timestamp_source: web_github_page_open_2026-06-02
+collected_at: 2026-06-02T19:52:08+08:00
+source: github_web
+source_tool: web.open
 ---
 
 ## GitHub - pinchbench/skill: PinchBench benchmark skill/tasks for OpenClaw coding agents
 
 **Source**: https://github.com/pinchbench/skill
 
-## AnySearch Evidence
+## Collection note
 
-- Stars: 1.2k in extracted GitHub page.
-- Forks: 132 in extracted GitHub page.
-- License: MIT.
-- Latest release: v2.0.0, 2026-05-06.
-- Languages: Python 74.2%, TypeScript 17.0%, HTML 8.7%, Shell 0.1%.
-- Homepage / leaderboard: https://pinchbench.com
+Captured from the public GitHub repository page on 2026-06-02 because local shell access to `api.github.com` still failed DNS resolution and `gh` reported an invalid token. This file records web-observed repository metadata, not authenticated GitHub API freshness.
 
-## Raw Content Summary
+## Public metadata snapshot
 
-PinchBench is a real-world benchmark for AI coding agents. It measures how well LLM models perform as the brain of an OpenClaw agent by running practical tasks such as scheduling meetings, writing code, triaging email, researching topics, managing files, recalling memory, and discovering skills.
+- Repository: `pinchbench/skill`
+- Stars observed: 1.2k
+- Forks observed: 136
+- Issues observed: 17
+- Pull requests observed: 0
+- Commit history observed: 383 commits
+- Releases observed: 14 total; latest `v2.0.0` on 2026-05-06
+- License observed: MIT
+- Primary languages observed: Python 59.8%, Shell 19.5%, TypeScript 13.6%, HTML 7.0%, jq 0.1%
+- Homepage / leaderboard: `https://pinchbench.com`
 
-The README states that the repository contains the benchmark skill/tasks, not the official leaderboard source. It requires Python 3.10+, `uv`, and a running OpenClaw instance. Results are collected on `pinchbench.com`. Tasks are graded automatically, by an LLM judge, or both, and session transcripts are saved for analysis.
+## Raw README signals
 
-This complements the KiloClaw/OpenClaw product signal by adding the benchmark's canonical raw-github evidence.
+- README frames PinchBench as "Real-world benchmarks for AI coding agents" rather than synthetic capability tests.
+- The repository explicitly says it contains benchmark skill/tasks, not the official leaderboard backend.
+- The benchmark measures OpenClaw-style agents on 53 real tasks across productivity, research, writing, coding, analysis, email, memory, and skill discovery.
+- The documented run path is `./scripts/run.sh --model ...`, with provider-prefixed model IDs and a running OpenClaw instance required.
+- Each task can be graded automatically, by an LLM judge, or both; session transcripts are saved under `results/{run_id}_transcripts/` for post-run analysis.
 
-## Classification Notes
+## Raw boundary
 
-- Suggested category: `评测/evaluation`.
-- Function tag: `benchmark-eval`.
-- Primary themes: `agent-benchmark`, `openclaw`, `model-selection`, `tool-use`, `real-world-tasks`.
-- Evidence status: AnySearch search + extract.
+No task was rerun in this iteration, no OpenClaw instance was launched, and no leaderboard claim was independently reproduced. This capture preserves the public benchmark surface for downstream classification, deep reports, README/site summaries, and value-repair triage.

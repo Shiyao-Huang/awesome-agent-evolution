@@ -73,6 +73,23 @@ export const curatedFrontierProjects: CuratedFrontierProject[] = [
     quality: '产品化和 UX 信号不错，更像应用入口和采用信号。',
     role: 'Product/application signal',
     tags: ['product', 'personal-agent', 'ux']
+  },
+  {
+    rank: 8,
+    repo: 'vectorize-io/agent-memory-benchmark',
+    name: 'Agent Memory Benchmark',
+    url: 'https://github.com/vectorize-io/agent-memory-benchmark',
+    quality: 'memory 评测问题定义清楚，把 accuracy、speed、token cost 放到同一张表上。',
+    role: 'Memory benchmark',
+    tags: ['memory', 'benchmark', 'evaluation']
+  },
+  {
+    rank: 9,
+    repo: 'EvoMap/awesome-agent-evolution',
+    name: 'EvoMap Awesome Agent Evolution',
+    url: 'https://github.com/EvoMap/awesome-agent-evolution',
+    quality: '适合作为外部 taxonomy comparator，检查我们公开叙事是否比普通 awesome list 更有证据密度。',
+    role: 'Awesome list mirror',
+    tags: ['taxonomy', 'awesome-list', 'agent-swarm']
   }
 ];
-

@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-06-02T07:22:44.747Z",
+  "generated_at": "2026-06-02T12:35:17.244Z",
   "method": {
     "name": "value_evidence_repair_queue_v0",
     "source": "data-engine/value-lsh-index/value-matrix.jsonl",
     "note": "Prioritizes evidence repair work after value-LSH comparison; repair score is not a quality score."
   },
   "summary": {
-    "generated_at": "2026-06-02T07:22:44.747Z",
-    "source_lsh_generated_at": "2026-06-02T07:22:32.173Z",
-    "github_projects": 721,
-    "projects_with_gaps": 683,
+    "generated_at": "2026-06-02T12:35:17.244Z",
+    "source_lsh_generated_at": "2026-06-02T12:35:12.675Z",
+    "github_projects": 728,
+    "projects_with_gaps": 687,
     "lane_counts": {
-      "deep-read-needed": 449,
-      "issue-resource-scan": 141,
+      "deep-read-needed": 446,
+      "issue-resource-scan": 148,
       "raw-meta-repair": 52,
       "loop-verification": 36,
       "star-growth-repair": 5
     },
     "gap_counts": {
-      "deep_report_missing": 449,
-      "frontier_queue_missing": 466,
-      "issue_resource_unclear": 329,
-      "self_evolution_unclear": 436,
-      "evidence_chain_incomplete": 501,
-      "implementation_unclear": 55,
-      "star_growth_missing": 24,
+      "deep_report_missing": 446,
+      "frontier_queue_missing": 446,
+      "issue_resource_unclear": 335,
+      "self_evolution_unclear": 438,
+      "evidence_chain_incomplete": 498,
+      "implementation_unclear": 53,
+      "star_growth_missing": 31,
       "raw_meta_missing": 52
     },
     "top_repair_score": 134.8
@@ -392,53 +392,6 @@
       }
     },
     {
-      "id": "github:vectorize-io/agent-memory-benchmark",
-      "repo": "vectorize-io/agent-memory-benchmark",
-      "title": "vectorize-io/agent-memory-benchmark",
-      "url": "https://github.com/vectorize-io/agent-memory-benchmark",
-      "value_score": 75.48,
-      "value_class": "high-value-candidate",
-      "repair_score": 134.48,
-      "lane": "deep-read-needed",
-      "gaps": [
-        {
-          "id": "deep_report_missing",
-          "label": "Deep report missing",
-          "action": "clone/read code and create model-card style deep report"
-        },
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": null,
-        "public_report": null,
-        "raw_file": "raw-github/vectorize-io_agent-memory-benchmark.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": 429
-      }
-    },
-    {
       "id": "github:xinhuagu/aceclaw",
       "repo": "xinhuagu/aceclaw",
       "title": "xinhuagu/aceclaw",
@@ -483,53 +436,6 @@
         "alternate_source_paths": [],
         "frontier_rank": null,
         "star_growth_rank": 590
-      }
-    },
-    {
-      "id": "github:pinchbench/skill",
-      "repo": "pinchbench/skill",
-      "title": "pinchbench/skill",
-      "url": "https://github.com/pinchbench/skill",
-      "value_score": 76.43,
-      "value_class": "high-value-candidate",
-      "repair_score": 134.43,
-      "lane": "deep-read-needed",
-      "gaps": [
-        {
-          "id": "deep_report_missing",
-          "label": "Deep report missing",
-          "action": "clone/read code and create model-card style deep report"
-        },
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        },
-        {
-          "id": "implementation_unclear",
-          "label": "Implementation unclear",
-          "action": "inspect install path, tests/evals, examples, package layout, and runnable entrypoints"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": null,
-        "public_report": null,
-        "raw_file": "raw-github/pinchbench_skill.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": 134
       }
     },
     {
@@ -943,48 +849,6 @@
         "alternate_source_paths": [],
         "frontier_rank": null,
         "star_growth_rank": 499
-      }
-    },
-    {
-      "id": "github:evomap/awesome-agent-evolution",
-      "repo": "evomap/awesome-agent-evolution",
-      "title": "evomap/awesome-agent-evolution",
-      "url": "https://github.com/evomap/awesome-agent-evolution",
-      "value_score": 80.57,
-      "value_class": "high-value-candidate",
-      "repair_score": 133.57,
-      "lane": "deep-read-needed",
-      "gaps": [
-        {
-          "id": "deep_report_missing",
-          "label": "Deep report missing",
-          "action": "clone/read code and create model-card style deep report"
-        },
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "implementation_unclear",
-          "label": "Implementation unclear",
-          "action": "inspect install path, tests/evals, examples, package layout, and runnable entrypoints"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": null,
-        "public_report": null,
-        "raw_file": "raw-github/evomap_awesome-agent-evolution.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": 333
       }
     },
     {
@@ -14083,43 +13947,6 @@
       }
     },
     {
-      "id": "github:arc-computer/cl-bench",
-      "repo": "arc-computer/cl-bench",
-      "title": "Arc Continual Learning Benchmark",
-      "url": "https://github.com/Arc-Computer/CL-Bench",
-      "value_score": 80.57,
-      "value_class": "high-value-candidate",
-      "repair_score": 122.57,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/392-arc-continual-learning-benchmark.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/392-arc-continual-learning-benchmark.md",
-        "raw_file": "raw-github/arc-computer_cl-bench.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
       "id": "github:adolfousier/opencrabs",
       "repo": "adolfousier/opencrabs",
       "title": "adolfousier/opencrabs",
@@ -15056,43 +14883,6 @@
       }
     },
     {
-      "id": "github:lhl/agentic-memory",
-      "repo": "lhl/agentic-memory",
-      "title": "LHL Agentic Memory Module",
-      "url": "https://github.com/lhl/agentic-memory",
-      "value_score": 78.66,
-      "value_class": "high-value-candidate",
-      "repair_score": 120.66,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/384-lhl-agentic-memory-module.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/384-lhl-agentic-memory-module.md",
-        "raw_file": "raw-github/lhl_agentic-memory.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
       "id": "github:george-salafatinos/tictactoe-self-play",
       "repo": "george-salafatinos/tictactoe-self-play",
       "title": "george-salafatinos/tictactoe-self-play",
@@ -15253,6 +15043,38 @@
         "alternate_source_paths": [],
         "frontier_rank": null,
         "star_growth_rank": 200
+      }
+    },
+    {
+      "id": "github:webzler/agentmemory",
+      "repo": "webzler/agentmemory",
+      "title": "AgentMemory Benchmark Framework",
+      "url": "https://github.com/webzler/agentMemory",
+      "value_score": 85.67,
+      "value_class": "high-value-candidate",
+      "repair_score": 119.67,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/378-agentmemory-benchmark-framework.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/378-agentmemory-benchmark-framework.md",
+        "raw_file": "raw-github/webzler_agentmemory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 56,
+        "star_growth_rank": null
       }
     },
     {
@@ -15691,6 +15513,70 @@
       }
     },
     {
+      "id": "github:arc-computer/cl-bench",
+      "repo": "arc-computer/cl-bench",
+      "title": "Arc Continual Learning Benchmark",
+      "url": "https://github.com/Arc-Computer/CL-Bench",
+      "value_score": 82.8,
+      "value_class": "high-value-candidate",
+      "repair_score": 116.8,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/392-arc-continual-learning-benchmark.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/392-arc-continual-learning-benchmark.md",
+        "raw_file": "raw-github/arc-computer_cl-bench.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 21,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:gcwing/bitfun",
+      "repo": "gcwing/bitfun",
+      "title": "BitFun Desktop Agent Runtime Suite",
+      "url": "https://github.com/GCWing/BitFun",
+      "value_score": 82.8,
+      "value_class": "high-value-candidate",
+      "repair_score": 116.8,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/378-bitfun-desktop-agent-runtime-suite.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/378-bitfun-desktop-agent-runtime-suite.md",
+        "raw_file": "raw-github/gcwing_bitfun.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 76,
+        "star_growth_rank": null
+      }
+    },
+    {
       "id": "github:sakanaai/ai-scientist",
       "repo": "sakanaai/ai-scientist",
       "title": "sakanaai/ai-scientist",
@@ -16007,8 +15893,72 @@
         "raw_file": "raw-github/xai-liacs_llamea.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 215,
+        "frontier_rank": 242,
         "star_growth_rank": 130
+      }
+    },
+    {
+      "id": "github:lhl/agentic-memory",
+      "repo": "lhl/agentic-memory",
+      "title": "LHL Agentic Memory Module",
+      "url": "https://github.com/lhl/agentic-memory",
+      "value_score": 80.89,
+      "value_class": "high-value-candidate",
+      "repair_score": 114.89,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/384-lhl-agentic-memory-module.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/384-lhl-agentic-memory-module.md",
+        "raw_file": "raw-github/lhl_agentic-memory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 185,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:opensquilla/opensquilla",
+      "repo": "opensquilla/opensquilla",
+      "title": "OpenSquilla Token-Efficient Agent Runtime",
+      "url": "https://github.com/opensquilla/opensquilla",
+      "value_score": 80.89,
+      "value_class": "high-value-candidate",
+      "repair_score": 114.89,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/377-opensquilla-token-efficient-agent-runtime.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/377-opensquilla-token-efficient-agent-runtime.md",
+        "raw_file": "raw-github/opensquilla_opensquilla.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 45,
+        "star_growth_rank": null
       }
     },
     {
@@ -16719,7 +16669,7 @@
         "raw_file": "raw-github/freedomintelligence_tiermem.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 54,
+        "frontier_rank": 59,
         "star_growth_rank": 571
       }
     },
@@ -16746,7 +16696,7 @@
         "raw_file": "raw-github/murataslan1_ai-agent-benchmark.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 36,
+        "frontier_rank": 39,
         "star_growth_rank": 476
       }
     },
@@ -17524,7 +17474,7 @@
         "raw_file": "raw-github/alienfader_continuity-benchmarks.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 55,
+        "frontier_rank": 60,
         "star_growth_rank": 592
       }
     },
@@ -17551,7 +17501,7 @@
         "raw_file": "raw-github/superagenticai_metaharness.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 6,
+        "frontier_rank": 5,
         "star_growth_rank": 351
       }
     },
@@ -17578,7 +17528,7 @@
         "raw_file": "raw-github/yuanchenbei_mem-gallery.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 51,
+        "frontier_rank": 55,
         "star_growth_rank": 446
       }
     },
@@ -17850,7 +17800,7 @@
         "raw_file": "raw-github/nousresearch_hermes-agent-self-evolution.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 13,
+        "frontier_rank": 12,
         "star_growth_rank": 91
       }
     },
@@ -17877,7 +17827,7 @@
         "raw_file": "raw-github/wazionapps_nexo.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 40,
+        "frontier_rank": 43,
         "star_growth_rank": 486
       }
     },
@@ -18020,50 +17970,8 @@
         "raw_file": "raw-github/harness_harness-evals.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 56,
+        "frontier_rank": 61,
         "star_growth_rank": 597
-      }
-    },
-    {
-      "id": "github:webzler/agentmemory",
-      "repo": "webzler/agentmemory",
-      "title": "AgentMemory Benchmark Framework",
-      "url": "https://github.com/webzler/agentMemory",
-      "value_score": 77.07,
-      "value_class": "needs-review",
-      "repair_score": 112.07,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/378-agentmemory-benchmark-framework.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/378-agentmemory-benchmark-framework.md",
-        "raw_file": "raw-github/webzler_agentmemory.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
       }
     },
     {
@@ -18131,7 +18039,7 @@
         "raw_file": "raw-github/mlcommons_modelbench.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 52,
+        "frontier_rank": 57,
         "star_growth_rank": 332
       }
     },
@@ -18363,7 +18271,7 @@
         "raw_file": "raw-github/holaboss-ai_holaos.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 42,
+        "frontier_rank": 46,
         "star_growth_rank": 78
       }
     },
@@ -18390,7 +18298,7 @@
         "raw_file": "raw-github/infiagent_infiagent.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 39,
+        "frontier_rank": 42,
         "star_growth_rank": 113
       }
     },
@@ -18417,7 +18325,7 @@
         "raw_file": "raw-github/inngest_utah.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 32,
+        "frontier_rank": 34,
         "star_growth_rank": 340
       }
     },
@@ -18471,7 +18379,7 @@
         "raw_file": "raw-github/qpiai_proced_mem_bench.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 50,
+        "frontier_rank": 54,
         "star_growth_rank": 565
       }
     },
@@ -18498,7 +18406,7 @@
         "raw_file": "raw-github/sachinsharma9780_memweave.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 29,
+        "frontier_rank": 30,
         "star_growth_rank": 439
       }
     },
@@ -18609,7 +18517,7 @@
         "raw_file": "raw-github/dotnet_skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 46,
+        "frontier_rank": 50,
         "star_growth_rank": 96
       }
     },
@@ -18636,7 +18544,7 @@
         "raw_file": "raw-github/mvanhorn_last30days-skill.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 47,
+        "frontier_rank": 51,
         "star_growth_rank": 128
       }
     },
@@ -18663,7 +18571,7 @@
         "raw_file": "raw-github/zjunlp_skillx.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 30,
+        "frontier_rank": 31,
         "star_growth_rank": 300
       }
     },
@@ -18737,7 +18645,7 @@
         "raw_file": "raw-github/sevenschulte_agentic-harness.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 59,
+        "frontier_rank": 64,
         "star_growth_rank": 606
       }
     },
@@ -18791,7 +18699,7 @@
         "raw_file": "raw-github/microsoft_skillopt.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 22,
+        "frontier_rank": 24,
         "star_growth_rank": 136
       }
     },
@@ -18969,174 +18877,6 @@
       }
     },
     {
-      "id": "github:agiresearch/a-mem",
-      "repo": "agiresearch/a-mem",
-      "title": "A-MEM Agentic Memory for LLM Agents",
-      "url": "https://github.com/agiresearch/A-mem",
-      "value_score": 74.2,
-      "value_class": "needs-review",
-      "repair_score": 109.2,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/379-a-mem-agentic-memory-llm-agents.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/379-a-mem-agentic-memory-llm-agents.md",
-        "raw_file": "raw-github/agiresearch_a-mem.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
-      "id": "github:dataojitori/nocturne_memory",
-      "repo": "dataojitori/nocturne_memory",
-      "title": "Nocturne Memory Context Engine",
-      "url": "https://github.com/Dataojitori/nocturne_memory",
-      "value_score": 74.2,
-      "value_class": "needs-review",
-      "repair_score": 109.2,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/389-nocturne-memory-context-engine.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/389-nocturne-memory-context-engine.md",
-        "raw_file": "raw-github/dataojitori_nocturne_memory.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
-      "id": "github:elizaos/agentmemory",
-      "repo": "elizaos/agentmemory",
-      "title": "ElizaOS AgentMemory Plugin",
-      "url": "https://github.com/elizaOS/agentmemory",
-      "value_score": 74.2,
-      "value_class": "needs-review",
-      "repair_score": 109.2,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/380-elizaos-agentmemory-plugin.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/380-elizaos-agentmemory-plugin.md",
-        "raw_file": "raw-github/elizaos_agentmemory.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
-      "id": "github:zorazrw/agent-workflow-memory",
-      "repo": "zorazrw/agent-workflow-memory",
-      "title": "Agent Workflow Memory Knowledge Graph Runtime",
-      "url": "https://github.com/zorazrw/agent-workflow-memory",
-      "value_score": 74.2,
-      "value_class": "needs-review",
-      "repair_score": 109.2,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/377-agent-workflow-memory-knowledge-graph-runtime.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/377-agent-workflow-memory-knowledge-graph-runtime.md",
-        "raw_file": "raw-github/zorazrw_agent-workflow-memory.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
       "id": "github:hyperspell/hyperspell-openclaw",
       "repo": "hyperspell/hyperspell-openclaw",
       "title": "HyperSpell OpenClaw Memory Engine",
@@ -19159,7 +18899,7 @@
         "raw_file": "raw-github/hyperspell_hyperspell-openclaw.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 37,
+        "frontier_rank": 40,
         "star_growth_rank": 299
       }
     },
@@ -19213,7 +18953,7 @@
         "raw_file": "raw-github/nomic-ai_aec-bench.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 28,
+        "frontier_rank": 29,
         "star_growth_rank": 412
       }
     },
@@ -19240,7 +18980,7 @@
         "raw_file": "raw-github/open-gitagent_gitagent.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 145,
+        "frontier_rank": 165,
         "star_growth_rank": 223
       }
     },
@@ -19267,7 +19007,7 @@
         "raw_file": "raw-github/openclaw_acpx.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 143,
+        "frontier_rank": 159,
         "star_growth_rank": 101
       }
     },
@@ -19321,7 +19061,7 @@
         "raw_file": "raw-github/supermemoryai_supermemory.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 74,
+        "frontier_rank": 83,
         "star_growth_rank": 33
       }
     },
@@ -19459,7 +19199,7 @@
         "raw_file": "raw-github/beeevita_evoprompt.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 232,
+        "frontier_rank": 259,
         "star_growth_rank": 249
       }
     },
@@ -19513,7 +19253,7 @@
         "raw_file": "raw-github/microsoft_agent-lightning.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 41,
+        "frontier_rank": 44,
         "star_growth_rank": 47
       }
     },
@@ -19540,7 +19280,7 @@
         "raw_file": "raw-github/zesearch_self-improvement-llm.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 177,
+        "frontier_rank": 205,
         "star_growth_rank": 292
       }
     },
@@ -19604,7 +19344,7 @@
         "raw_file": "raw-github/corbell-ai_evalmonkey.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 49,
+        "frontier_rank": 53,
         "star_growth_rank": 443
       }
     },
@@ -19631,7 +19371,7 @@
         "raw_file": "raw-github/pegasi-ai_reins.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 20,
+        "frontier_rank": 22,
         "star_growth_rank": 378
       }
     },
@@ -19658,7 +19398,7 @@
         "raw_file": "raw-github/sd0xdev_sd0x-dev-flow.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 62,
+        "frontier_rank": 68,
         "star_growth_rank": 310
       }
     },
@@ -19769,7 +19509,7 @@
         "raw_file": "raw-github/luo-junyu_awesome-agent-papers.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 203,
+        "frontier_rank": 230,
         "star_growth_rank": 132
       }
     },
@@ -19969,174 +19709,6 @@
       }
     },
     {
-      "id": "github:agentralabs/agentic-memory",
-      "repo": "agentralabs/agentic-memory",
-      "title": "AgentraLabs Agentic Memory Runtime",
-      "url": "https://github.com/agentralabs/agentic-memory",
-      "value_score": 72.29,
-      "value_class": "needs-review",
-      "repair_score": 107.29,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/383-agentralabs-agentic-memory-runtime.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/383-agentralabs-agentic-memory-runtime.md",
-        "raw_file": "raw-github/agentralabs_agentic-memory.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
-      "id": "github:vectorspacelab/general-agentic-memory",
-      "repo": "vectorspacelab/general-agentic-memory",
-      "title": "VectorSpaceLab General Agentic Memory",
-      "url": "https://github.com/VectorSpaceLab/general-agentic-memory",
-      "value_score": 72.29,
-      "value_class": "needs-review",
-      "repair_score": 107.29,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/388-vectorspacelab-general-agentic-memory.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/388-vectorspacelab-general-agentic-memory.md",
-        "raw_file": "raw-github/vectorspacelab_general-agentic-memory.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
-      "id": "github:versatly/clawvault",
-      "repo": "versatly/clawvault",
-      "title": "ClawVault Memory Runtime",
-      "url": "https://github.com/Versatly/clawvault",
-      "value_score": 72.29,
-      "value_class": "needs-review",
-      "repair_score": 107.29,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/393-clawvault-memory-runtime.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/393-clawvault-memory-runtime.md",
-        "raw_file": "raw-github/versatly_clawvault.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
-      "id": "github:najeed/ai-agent-eval-harness",
-      "repo": "najeed/ai-agent-eval-harness",
-      "title": "MultiAgentEval Enterprise Harness",
-      "url": "https://github.com/najeed/ai-agent-eval-harness",
-      "value_score": 71.97,
-      "value_class": "needs-review",
-      "repair_score": 106.97,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/391-multiagenteval-enterprise-harness.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/391-multiagenteval-enterprise-harness.md",
-        "raw_file": "raw-github/najeed_ai-agent-eval-harness.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
       "id": "github:agiprolabs/claude-trading-skills",
       "repo": "agiprolabs/claude-trading-skills",
       "title": "Claude Trading Skills",
@@ -20159,7 +19731,7 @@
         "raw_file": "raw-github/agiprolabs_claude-trading-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 107,
+        "frontier_rank": 120,
         "star_growth_rank": 462
       }
     },
@@ -20186,7 +19758,7 @@
         "raw_file": "raw-github/da1yuqin_sead.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 24,
+        "frontier_rank": 26,
         "star_growth_rank": 494
       }
     },
@@ -20213,7 +19785,7 @@
         "raw_file": "raw-github/microsoft_waza.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 48,
+        "frontier_rank": 52,
         "star_growth_rank": 151
       }
     },
@@ -20240,7 +19812,7 @@
         "raw_file": "raw-github/openai_swarm.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 71,
+        "frontier_rank": 80,
         "star_growth_rank": 38
       }
     },
@@ -20351,7 +19923,7 @@
         "raw_file": "raw-github/aiming-lab_autoharness.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 43,
+        "frontier_rank": 47,
         "star_growth_rank": 253
       }
     },
@@ -20378,7 +19950,7 @@
         "raw_file": "raw-github/maximerobeyns_self_improving_coding_agent.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 135,
+        "frontier_rank": 151,
         "star_growth_rank": 246
       }
     },
@@ -20405,7 +19977,7 @@
         "raw_file": "raw-github/xmudeeplit_awesome-self-evolving-agents.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 176,
+        "frontier_rank": 201,
         "star_growth_rank": 89
       }
     },
@@ -20437,7 +20009,7 @@
         "raw_file": "raw-github/ai4co_awesome-fm4co.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 208,
+        "frontier_rank": 235,
         "star_growth_rank": 202
       }
     },
@@ -20464,7 +20036,7 @@
         "raw_file": "raw-github/mgechev_skillgrade.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 93,
+        "frontier_rank": 104,
         "star_growth_rank": 205
       }
     },
@@ -20491,7 +20063,7 @@
         "raw_file": "raw-github/composio-community_awesome-openclaw-plugins.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 68,
+        "frontier_rank": 77,
         "star_growth_rank": 427
       }
     },
@@ -20639,7 +20211,7 @@
         "raw_file": "raw-github/wuxingyu-ai_llm4ec.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 222,
+        "frontier_rank": 249,
         "star_growth_rank": 291
       }
     },
@@ -20686,90 +20258,6 @@
       }
     },
     {
-      "id": "github:agentevals-dev/agentevals",
-      "repo": "agentevals-dev/agentevals",
-      "title": "AgentEvals.dev Benchmark Framework",
-      "url": "https://github.com/agentevals-dev/agentevals",
-      "value_score": 70.06,
-      "value_class": "needs-review",
-      "repair_score": 105.06,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/386-agentevals-dev-benchmark-framework.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/386-agentevals-dev-benchmark-framework.md",
-        "raw_file": "raw-github/agentevals-dev_agentevals.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
-      "id": "github:openswarm-ai/openswarm",
-      "repo": "openswarm-ai/openswarm",
-      "title": "OpenSwarm Multi-Agent Orchestration Framework",
-      "url": "https://github.com/openswarm-ai/openswarm",
-      "value_score": 70.06,
-      "value_class": "needs-review",
-      "repair_score": 105.06,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/382-openswarm-multi-agent-orchestration-framework.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/382-openswarm-multi-agent-orchestration-framework.md",
-        "raw_file": "raw-github/openswarm-ai_openswarm.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
       "id": "github:charlesq9/self-evolving-agents",
       "repo": "charlesq9/self-evolving-agents",
       "title": "Self-Evolving-Agents",
@@ -20792,7 +20280,7 @@
         "raw_file": "raw-github/charlesq9_self-evolving-agents.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 216,
+        "frontier_rank": 243,
         "star_growth_rank": 250
       }
     },
@@ -20819,7 +20307,7 @@
         "raw_file": "raw-github/feiliu36_llm4opt.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 240,
+        "frontier_rank": 267,
         "star_growth_rank": 226
       }
     },
@@ -20856,44 +20344,7 @@
         "raw_file": "raw-github/matevip_mateclaw.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 104,
-        "star_growth_rank": null
-      }
-    },
-    {
-      "id": "github:langchain-ai/agentevals",
-      "repo": "langchain-ai/agentevals",
-      "title": "LangChain AgentEvals Harness",
-      "url": "https://github.com/langchain-ai/agentevals",
-      "value_score": 75.16,
-      "value_class": "needs-review",
-      "repair_score": 104.16,
-      "lane": "star-growth-repair",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/385-langchain-agentevals-harness.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/385-langchain-agentevals-harness.md",
-        "raw_file": "raw-github/langchain-ai_agentevals.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
+        "frontier_rank": 117,
         "star_growth_rank": null
       }
     },
@@ -20920,7 +20371,7 @@
         "raw_file": "raw-github/youngdubbydu_llm-agent-optimization.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 188,
+        "frontier_rank": 216,
         "star_growth_rank": 204
       }
     },
@@ -21048,6 +20499,228 @@
         "alternate_source_paths": [],
         "frontier_rank": null,
         "star_growth_rank": 624
+      }
+    },
+    {
+      "id": "github:agiresearch/a-mem",
+      "repo": "agiresearch/a-mem",
+      "title": "A-MEM Agentic Memory for LLM Agents",
+      "url": "https://github.com/agiresearch/A-mem",
+      "value_score": 76.43,
+      "value_class": "needs-review",
+      "repair_score": 103.43,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/379-a-mem-agentic-memory-llm-agents.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/379-a-mem-agentic-memory-llm-agents.md",
+        "raw_file": "raw-github/agiresearch_a-mem.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 112,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:alibaizhanov/mengram",
+      "repo": "alibaizhanov/mengram",
+      "title": "Mengram Human-Like Agent Memory",
+      "url": "https://github.com/alibaizhanov/mengram",
+      "value_score": 76.43,
+      "value_class": "needs-review",
+      "repair_score": 103.43,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/381-mengram-human-like-agent-memory.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/381-mengram-human-like-agent-memory.md",
+        "raw_file": "raw-github/alibaizhanov_mengram.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 163,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:dataojitori/nocturne_memory",
+      "repo": "dataojitori/nocturne_memory",
+      "title": "Nocturne Memory Context Engine",
+      "url": "https://github.com/Dataojitori/nocturne_memory",
+      "value_score": 76.43,
+      "value_class": "needs-review",
+      "repair_score": 103.43,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/389-nocturne-memory-context-engine.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/389-nocturne-memory-context-engine.md",
+        "raw_file": "raw-github/dataojitori_nocturne_memory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 161,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:elizaos/agentmemory",
+      "repo": "elizaos/agentmemory",
+      "title": "ElizaOS AgentMemory Plugin",
+      "url": "https://github.com/elizaOS/agentmemory",
+      "value_score": 76.43,
+      "value_class": "needs-review",
+      "repair_score": 103.43,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/380-elizaos-agentmemory-plugin.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/380-elizaos-agentmemory-plugin.md",
+        "raw_file": "raw-github/elizaos_agentmemory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 94,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:oceanbase/powermem",
+      "repo": "oceanbase/powermem",
+      "title": "PowerMem Agent Memory Plugin",
+      "url": "https://github.com/oceanbase/powermem",
+      "value_score": 76.43,
+      "value_class": "needs-review",
+      "repair_score": 103.43,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/379-powermem-agent-memory-plugin.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/379-powermem-agent-memory-plugin.md",
+        "raw_file": "raw-github/oceanbase_powermem.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 69,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:zorazrw/agent-workflow-memory",
+      "repo": "zorazrw/agent-workflow-memory",
+      "title": "Agent Workflow Memory Knowledge Graph Runtime",
+      "url": "https://github.com/zorazrw/agent-workflow-memory",
+      "value_score": 76.43,
+      "value_class": "needs-review",
+      "repair_score": 103.43,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/377-agent-workflow-memory-knowledge-graph-runtime.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/377-agent-workflow-memory-knowledge-graph-runtime.md",
+        "raw_file": "raw-github/zorazrw_agent-workflow-memory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 164,
+        "star_growth_rank": null
       }
     },
     {
@@ -21325,7 +20998,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 207,
+        "frontier_rank": 234,
         "star_growth_rank": 28
       }
     },
@@ -21362,7 +21035,118 @@
         "raw_file": "raw-github/0xnyk_lacp.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 162,
+        "frontier_rank": 184,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:agentralabs/agentic-memory",
+      "repo": "agentralabs/agentic-memory",
+      "title": "AgentraLabs Agentic Memory Runtime",
+      "url": "https://github.com/agentralabs/agentic-memory",
+      "value_score": 74.52,
+      "value_class": "needs-review",
+      "repair_score": 101.52,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/383-agentralabs-agentic-memory-runtime.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/383-agentralabs-agentic-memory-runtime.md",
+        "raw_file": "raw-github/agentralabs_agentic-memory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 178,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:im4codes/imcodes",
+      "repo": "im4codes/imcodes",
+      "title": "IMCodes Shared Agent Context Layer",
+      "url": "https://github.com/im4codes/imcodes",
+      "value_score": 74.52,
+      "value_class": "needs-review",
+      "repair_score": 101.52,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/382-imcodes-shared-agent-context-layer.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/382-imcodes-shared-agent-context-layer.md",
+        "raw_file": "raw-github/im4codes_imcodes.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 166,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:mnemon-dev/mnemon",
+      "repo": "mnemon-dev/mnemon",
+      "title": "Mnemon Persistent Memory Substrate",
+      "url": "https://github.com/mnemon-dev/mnemon",
+      "value_score": 74.52,
+      "value_class": "needs-review",
+      "repair_score": 101.52,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/380-mnemon-persistent-memory-substrate.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/380-mnemon-persistent-memory-substrate.md",
+        "raw_file": "raw-github/mnemon-dev_mnemon.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 202,
         "star_growth_rank": null
       }
     },
@@ -21399,7 +21183,7 @@
         "raw_file": "raw-github/sponsiolabs_sponsio.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 164,
+        "frontier_rank": 188,
         "star_growth_rank": null
       }
     },
@@ -21436,7 +21220,81 @@
         "raw_file": "raw-github/team-commonly_commonly.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 120,
+        "frontier_rank": 134,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:vectorspacelab/general-agentic-memory",
+      "repo": "vectorspacelab/general-agentic-memory",
+      "title": "VectorSpaceLab General Agentic Memory",
+      "url": "https://github.com/VectorSpaceLab/general-agentic-memory",
+      "value_score": 74.52,
+      "value_class": "needs-review",
+      "repair_score": 101.52,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/388-vectorspacelab-general-agentic-memory.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/388-vectorspacelab-general-agentic-memory.md",
+        "raw_file": "raw-github/vectorspacelab_general-agentic-memory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 127,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:versatly/clawvault",
+      "repo": "versatly/clawvault",
+      "title": "ClawVault Memory Runtime",
+      "url": "https://github.com/Versatly/clawvault",
+      "value_score": 74.52,
+      "value_class": "needs-review",
+      "repair_score": 101.52,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/393-clawvault-memory-runtime.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/393-clawvault-memory-runtime.md",
+        "raw_file": "raw-github/versatly_clawvault.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 92,
         "star_growth_rank": null
       }
     },
@@ -21473,7 +21331,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 212,
+        "frontier_rank": 239,
         "star_growth_rank": 12
       }
     },
@@ -21510,7 +21368,44 @@
         "raw_file": "raw-github/christinminor459_onionclaw.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 175,
+        "frontier_rank": 200,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:najeed/ai-agent-eval-harness",
+      "repo": "najeed/ai-agent-eval-harness",
+      "title": "MultiAgentEval Enterprise Harness",
+      "url": "https://github.com/najeed/ai-agent-eval-harness",
+      "value_score": 74.2,
+      "value_class": "needs-review",
+      "repair_score": 101.2,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/391-multiagenteval-enterprise-harness.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/391-multiagenteval-enterprise-harness.md",
+        "raw_file": "raw-github/najeed_ai-agent-eval-harness.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 147,
         "star_growth_rank": null
       }
     },
@@ -21542,45 +21437,8 @@
         "raw_file": "raw-github/kenotic-labs_atant.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 95,
+        "frontier_rank": 107,
         "star_growth_rank": 598
-      }
-    },
-    {
-      "id": "github:plaited/agent-eval-harness",
-      "repo": "plaited/agent-eval-harness",
-      "title": "Plaited Agent Eval Harness",
-      "url": "https://github.com/plaited/agent-eval-harness",
-      "value_score": 71.66,
-      "value_class": "needs-review",
-      "repair_score": 100.66,
-      "lane": "star-growth-repair",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/390-plaited-agent-eval-harness.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/390-plaited-agent-eval-harness.md",
-        "raw_file": "raw-github/plaited_agent-eval-harness.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
       }
     },
     {
@@ -21626,43 +21484,6 @@
       }
     },
     {
-      "id": "github:apify/agent-skills",
-      "repo": "apify/agent-skills",
-      "title": "Apify Agent Skills Library",
-      "url": "https://github.com/apify/agent-skills",
-      "value_score": 71.34,
-      "value_class": "needs-review",
-      "repair_score": 100.34,
-      "lane": "star-growth-repair",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/381-apify-agent-skills-library.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/381-apify-agent-skills-library.md",
-        "raw_file": "raw-github/apify_agent-skills.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
-      }
-    },
-    {
       "id": "github:e2b-dev/e2b",
       "repo": "e2b-dev/e2b",
       "title": "e2b",
@@ -21700,7 +21521,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 187,
+        "frontier_rank": 214,
         "star_growth_rank": 73
       }
     },
@@ -21737,7 +21558,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 186,
+        "frontier_rank": 213,
         "star_growth_rank": 43
       }
     },
@@ -21764,7 +21585,7 @@
         "raw_file": "raw-github/aiwaves-cn_agents.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 213,
+        "frontier_rank": 240,
         "star_growth_rank": 77
       }
     },
@@ -21791,7 +21612,7 @@
         "raw_file": "raw-github/noahshinn_reflexion.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 206,
+        "frontier_rank": 233,
         "star_growth_rank": 98
       }
     },
@@ -21828,7 +21649,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 190,
+        "frontier_rank": 217,
         "star_growth_rank": 49
       }
     },
@@ -21865,7 +21686,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 182,
+        "frontier_rank": 209,
         "star_growth_rank": 45
       }
     },
@@ -21907,8 +21728,82 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 233,
+        "frontier_rank": 260,
         "star_growth_rank": 81
+      }
+    },
+    {
+      "id": "github:agentevals-dev/agentevals",
+      "repo": "agentevals-dev/agentevals",
+      "title": "AgentEvals.dev Benchmark Framework",
+      "url": "https://github.com/agentevals-dev/agentevals",
+      "value_score": 72.29,
+      "value_class": "needs-review",
+      "repair_score": 99.29,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/386-agentevals-dev-benchmark-framework.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/386-agentevals-dev-benchmark-framework.md",
+        "raw_file": "raw-github/agentevals-dev_agentevals.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 71,
+        "star_growth_rank": null
+      }
+    },
+    {
+      "id": "github:openswarm-ai/openswarm",
+      "repo": "openswarm-ai/openswarm",
+      "title": "OpenSwarm Multi-Agent Orchestration Framework",
+      "url": "https://github.com/openswarm-ai/openswarm",
+      "value_score": 72.29,
+      "value_class": "needs-review",
+      "repair_score": 99.29,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/382-openswarm-multi-agent-orchestration-framework.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/382-openswarm-multi-agent-orchestration-framework.md",
+        "raw_file": "raw-github/openswarm-ai_openswarm.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 203,
+        "star_growth_rank": null
       }
     },
     {
@@ -21944,7 +21839,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 209,
+        "frontier_rank": 236,
         "star_growth_rank": 20
       }
     },
@@ -21986,7 +21881,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 12,
+        "frontier_rank": 13,
         "star_growth_rank": 428
       }
     },
@@ -22023,7 +21918,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 226,
+        "frontier_rank": 253,
         "star_growth_rank": 79
       }
     },
@@ -22060,7 +21955,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 201,
+        "frontier_rank": 228,
         "star_growth_rank": 289
       }
     },
@@ -22092,7 +21987,7 @@
         "raw_file": "raw-github/aayoawoyemi_ori-mnemos.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 88,
+        "frontier_rank": 99,
         "star_growth_rank": 536
       }
     },
@@ -22124,7 +22019,7 @@
         "raw_file": "raw-github/agentscope-ai_reme.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 94,
+        "frontier_rank": 106,
         "star_growth_rank": 99
       }
     },
@@ -22156,7 +22051,7 @@
         "raw_file": "raw-github/first-fluke_oh-my-agent.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 81,
+        "frontier_rank": 90,
         "star_growth_rank": 144
       }
     },
@@ -22188,7 +22083,7 @@
         "raw_file": "raw-github/martian-engineering_lossless-claw.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 75,
+        "frontier_rank": 84,
         "star_growth_rank": 82
       }
     },
@@ -22220,7 +22115,7 @@
         "raw_file": "raw-github/memodb-io_acontext.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 78,
+        "frontier_rank": 87,
         "star_growth_rank": 92
       }
     },
@@ -22252,7 +22147,7 @@
         "raw_file": "raw-github/memtomem_memtomem.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 114,
+        "frontier_rank": 128,
         "star_growth_rank": 574
       }
     },
@@ -22284,7 +22179,7 @@
         "raw_file": "raw-github/mindfold-ai_trellis.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 141,
+        "frontier_rank": 157,
         "star_growth_rank": 68
       }
     },
@@ -22316,7 +22211,7 @@
         "raw_file": "raw-github/nemori-ai_nemori.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 84,
+        "frontier_rank": 95,
         "star_growth_rank": 288
       }
     },
@@ -22348,7 +22243,7 @@
         "raw_file": "raw-github/openbmb_clawxmemory.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 106,
+        "frontier_rank": 119,
         "star_growth_rank": 455
       }
     },
@@ -22380,7 +22275,7 @@
         "raw_file": "raw-github/razroo_state-trace.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 96,
+        "frontier_rank": 108,
         "star_growth_rank": 646
       }
     },
@@ -22412,7 +22307,7 @@
         "raw_file": "raw-github/yoloshii_clawmem.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 85,
+        "frontier_rank": 96,
         "star_growth_rank": 302
       }
     },
@@ -22449,7 +22344,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 225,
+        "frontier_rank": 252,
         "star_growth_rank": 141
       }
     },
@@ -22486,7 +22381,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 230,
+        "frontier_rank": 257,
         "star_growth_rank": 76
       }
     },
@@ -22523,7 +22418,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 183,
+        "frontier_rank": 210,
         "star_growth_rank": 69
       }
     },
@@ -22555,7 +22450,7 @@
         "raw_file": "raw-github/owasp_www-project-agent-memory-guard.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 108,
+        "frontier_rank": 121,
         "star_growth_rank": 509
       }
     },
@@ -22597,7 +22492,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 220,
+        "frontier_rank": 247,
         "star_growth_rank": 111
       }
     },
@@ -22629,7 +22524,7 @@
         "raw_file": "raw-github/henrikrexed_openclaw-observability-plugin.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 112,
+        "frontier_rank": 125,
         "star_growth_rank": 667
       }
     },
@@ -22661,7 +22556,7 @@
         "raw_file": "raw-github/madaan_self-refine.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 214,
+        "frontier_rank": 241,
         "star_growth_rank": 159
       }
     },
@@ -22693,7 +22588,7 @@
         "raw_file": "raw-github/mckruz_openclaw-langfuse.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 123,
+        "frontier_rank": 137,
         "star_growth_rank": 642
       }
     },
@@ -22725,8 +22620,40 @@
         "raw_file": "raw-github/benchflow-ai_skillsbench.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 80,
+        "frontier_rank": 89,
         "star_growth_rank": 131
+      }
+    },
+    {
+      "id": "github:langchain-ai/agentevals",
+      "repo": "langchain-ai/agentevals",
+      "title": "LangChain AgentEvals Harness",
+      "url": "https://github.com/langchain-ai/agentevals",
+      "value_score": 75.16,
+      "value_class": "needs-review",
+      "repair_score": 96.16,
+      "lane": "star-growth-repair",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/385-langchain-agentevals-harness.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/385-langchain-agentevals-harness.md",
+        "raw_file": "raw-github/langchain-ai_agentevals.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 100,
+        "star_growth_rank": null
       }
     },
     {
@@ -22757,7 +22684,7 @@
         "raw_file": "raw-github/nowledge-co_community.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 163,
+        "frontier_rank": 187,
         "star_growth_rank": null
       }
     },
@@ -22789,7 +22716,7 @@
         "raw_file": "raw-github/sourcegraph_codescalebench.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 133,
+        "frontier_rank": 148,
         "star_growth_rank": 474
       }
     },
@@ -22826,7 +22753,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 217,
+        "frontier_rank": 244,
         "star_growth_rank": 203
       }
     },
@@ -22868,7 +22795,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 244,
+        "frontier_rank": 271,
         "star_growth_rank": 357
       }
     },
@@ -22900,7 +22827,7 @@
         "raw_file": "raw-github/axiomhq_agent-memory.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 110,
+        "frontier_rank": 123,
         "star_growth_rank": 570
       }
     },
@@ -22932,7 +22859,7 @@
         "raw_file": "raw-github/clawsouls_soulclaw.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 160,
+        "frontier_rank": 182,
         "star_growth_rank": 558
       }
     },
@@ -22964,7 +22891,7 @@
         "raw_file": "raw-github/cloudllm-ai_mentisdb.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 154,
+        "frontier_rank": 175,
         "star_growth_rank": 392
       }
     },
@@ -22996,7 +22923,7 @@
         "raw_file": "raw-github/cortexreach_memory-lancedb-pro.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 76,
+        "frontier_rank": 85,
         "star_growth_rank": 83
       }
     },
@@ -23028,7 +22955,7 @@
         "raw_file": "raw-github/garrytan_gbrain.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 97,
+        "frontier_rank": 109,
         "star_growth_rank": 44
       }
     },
@@ -23060,7 +22987,7 @@
         "raw_file": "raw-github/humanitylabs-org_obsidianclaw.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 147,
+        "frontier_rank": 168,
         "star_growth_rank": 564
       }
     },
@@ -23092,7 +23019,7 @@
         "raw_file": "raw-github/knowall-ai_mcp-neo4j-agent-memory.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 87,
+        "frontier_rank": 98,
         "star_growth_rank": 398
       }
     },
@@ -23124,7 +23051,7 @@
         "raw_file": "raw-github/langchain-ai_deepagents.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 72,
+        "frontier_rank": 81,
         "star_growth_rank": 31
       }
     },
@@ -23156,7 +23083,7 @@
         "raw_file": "raw-github/mem9-ai_mem9.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 99,
+        "frontier_rank": 111,
         "star_growth_rank": 138
       }
     },
@@ -23188,7 +23115,7 @@
         "raw_file": "raw-github/memtensor_memos-cloud-openclaw-plugin.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 100,
+        "frontier_rank": 113,
         "star_growth_rank": 234
       }
     },
@@ -23220,7 +23147,7 @@
         "raw_file": "raw-github/openclaw_crawlkit.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 144,
+        "frontier_rank": 162,
         "star_growth_rank": 456
       }
     },
@@ -23252,7 +23179,7 @@
         "raw_file": "raw-github/openclaw_discrawl.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 73,
+        "frontier_rank": 82,
         "star_growth_rank": 166
       }
     },
@@ -23284,7 +23211,7 @@
         "raw_file": "raw-github/openmemoryspec_oms.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 166,
+        "frontier_rank": 190,
         "star_growth_rank": 575
       }
     },
@@ -23316,7 +23243,7 @@
         "raw_file": "raw-github/redis_agent-memory-server.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 83,
+        "frontier_rank": 93,
         "star_growth_rank": 263
       }
     },
@@ -23348,7 +23275,7 @@
         "raw_file": "raw-github/sunnja69_akephalos.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 113,
+        "frontier_rank": 126,
         "star_growth_rank": 686
       }
     },
@@ -23380,8 +23307,45 @@
         "raw_file": "raw-github/tencent_tencentdb-agent-memory.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 77,
+        "frontier_rank": 86,
         "star_growth_rank": 85
+      }
+    },
+    {
+      "id": "github:weaviate/query-agent-benchmarking",
+      "repo": "weaviate/query-agent-benchmarking",
+      "title": "Weaviate Query Agent Benchmarking Toolkit",
+      "url": "https://github.com/weaviate/query-agent-benchmarking",
+      "value_score": 68.47,
+      "value_class": "needs-review",
+      "repair_score": 95.47,
+      "lane": "issue-resource-scan",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/383-weaviate-query-agent-benchmarking-toolkit.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/383-weaviate-query-agent-benchmarking-toolkit.md",
+        "raw_file": "raw-github/weaviate_query-agent-benchmarking.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 199,
+        "star_growth_rank": null
       }
     },
     {
@@ -23412,7 +23376,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 223,
+        "frontier_rank": 250,
         "star_growth_rank": 72
       }
     },
@@ -23439,7 +23403,7 @@
         "raw_file": "raw-github/olshansk_agent-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 33,
+        "frontier_rank": 35,
         "star_growth_rank": 561
       }
     },
@@ -23476,7 +23440,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 198,
+        "frontier_rank": 225,
         "star_growth_rank": 16
       }
     },
@@ -23513,7 +23477,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 197,
+        "frontier_rank": 224,
         "star_growth_rank": 9
       }
     },
@@ -23545,7 +23509,7 @@
         "raw_file": "raw-github/learnprompt_cc-harness-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 146,
+        "frontier_rank": 167,
         "star_growth_rank": 284
       }
     },
@@ -23577,7 +23541,7 @@
         "raw_file": "raw-github/openclaw_crabbox.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 86,
+        "frontier_rank": 97,
         "star_growth_rank": 193
       }
     },
@@ -23609,7 +23573,7 @@
         "raw_file": "raw-github/openclaw_openclaw-windows-node.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 153,
+        "frontier_rank": 174,
         "star_growth_rank": 192
       }
     },
@@ -23641,7 +23605,7 @@
         "raw_file": "raw-github/pwrdrvr_openclaw-codex-app-server.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 178,
+        "frontier_rank": 204,
         "star_growth_rank": 267
       }
     },
@@ -23673,7 +23637,7 @@
         "raw_file": "raw-github/quantaalpha_gittaskbench.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 127,
+        "frontier_rank": 141,
         "star_growth_rank": 268
       }
     },
@@ -23705,7 +23669,7 @@
         "raw_file": "raw-github/quantclaw_quantclaw.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 161,
+        "frontier_rank": 183,
         "star_growth_rank": 463
       }
     },
@@ -23737,7 +23701,7 @@
         "raw_file": "raw-github/shareai-lab_kbench.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 134,
+        "frontier_rank": 149,
         "star_growth_rank": 545
       }
     },
@@ -23769,45 +23733,8 @@
         "raw_file": "raw-github/syntax-syndicate_openharness-agent-harness.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 64,
+        "frontier_rank": 72,
         "star_growth_rank": 652
-      }
-    },
-    {
-      "id": "github:alucek/agentic-memory",
-      "repo": "alucek/agentic-memory",
-      "title": "ALucek Agentic Memory Methods Library",
-      "url": "https://github.com/ALucek/agentic-memory",
-      "value_score": 71.97,
-      "value_class": "low-signal-or-risk",
-      "repair_score": 94.97,
-      "lane": "star-growth-repair",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "star_growth_missing",
-          "label": "Star growth missing",
-          "action": "fetch or rebuild 2026 stargazer history coverage"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/387-alucek-agentic-memory-methods-library.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/387-alucek-agentic-memory-methods-library.md",
-        "raw_file": "raw-github/alucek_agentic-memory.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
       }
     },
     {
@@ -23843,7 +23770,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 191,
+        "frontier_rank": 219,
         "star_growth_rank": 325
       }
     },
@@ -23875,7 +23802,7 @@
         "raw_file": "raw-github/paradigmxyz_evmbench.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 130,
+        "frontier_rank": 144,
         "star_growth_rank": 217
       }
     },
@@ -23907,7 +23834,7 @@
         "raw_file": "raw-github/qf-bench_quantitativefinance-bench.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 136,
+        "frontier_rank": 152,
         "star_growth_rank": 468
       }
     },
@@ -23939,7 +23866,7 @@
         "raw_file": "raw-github/xlang-ai_osworld.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 118,
+        "frontier_rank": 132,
         "star_growth_rank": 109
       }
     },
@@ -23981,7 +23908,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 205,
+        "frontier_rank": 232,
         "star_growth_rank": 70
       }
     },
@@ -24018,8 +23945,40 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 210,
+        "frontier_rank": 237,
         "star_growth_rank": 11
+      }
+    },
+    {
+      "id": "github:apify/agent-skills",
+      "repo": "apify/agent-skills",
+      "title": "Apify Agent Skills Library",
+      "url": "https://github.com/apify/agent-skills",
+      "value_score": 73.57,
+      "value_class": "needs-review",
+      "repair_score": 94.57,
+      "lane": "star-growth-repair",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/381-apify-agent-skills-library.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/381-apify-agent-skills-library.md",
+        "raw_file": "raw-github/apify_agent-skills.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 160,
+        "star_growth_rank": null
       }
     },
     {
@@ -24045,7 +24004,7 @@
         "raw_file": "raw-github/howdymary_hermes-agent-metaharness.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 19,
+        "frontier_rank": 20,
         "star_growth_rank": 374
       }
     },
@@ -24119,7 +24078,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 211,
+        "frontier_rank": 238,
         "star_growth_rank": 15
       }
     },
@@ -24161,7 +24120,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 242,
+        "frontier_rank": 269,
         "star_growth_rank": 87
       }
     },
@@ -24198,7 +24157,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 192,
+        "frontier_rank": 218,
         "star_growth_rank": 95
       }
     },
@@ -24235,7 +24194,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 195,
+        "frontier_rank": 222,
         "star_growth_rank": 7
       }
     },
@@ -24277,7 +24236,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 234,
+        "frontier_rank": 261,
         "star_growth_rank": 356
       }
     },
@@ -24319,7 +24278,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 228,
+        "frontier_rank": 255,
         "star_growth_rank": 103
       }
     },
@@ -24356,7 +24315,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 238,
+        "frontier_rank": 265,
         "star_growth_rank": 290
       }
     },
@@ -24383,7 +24342,7 @@
         "raw_file": "raw-github/n8n-io_n8n.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 124,
+        "frontier_rank": 138,
         "star_growth_rank": 10
       }
     },
@@ -24420,7 +24379,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 193,
+        "frontier_rank": 220,
         "star_growth_rank": 80
       }
     },
@@ -24457,7 +24416,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 200,
+        "frontier_rank": 227,
         "star_growth_rank": 35
       }
     },
@@ -24494,7 +24453,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 196,
+        "frontier_rank": 223,
         "star_growth_rank": 64
       }
     },
@@ -24531,7 +24490,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 204,
+        "frontier_rank": 231,
         "star_growth_rank": 6
       }
     },
@@ -24563,7 +24522,7 @@
         "raw_file": "raw-github/addyosmani_agent-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 98,
+        "frontier_rank": 110,
         "star_growth_rank": 22
       }
     },
@@ -24595,7 +24554,7 @@
         "raw_file": "raw-github/browser-use_browser-harness.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 137,
+        "frontier_rank": 153,
         "star_growth_rank": 56
       }
     },
@@ -24627,7 +24586,7 @@
         "raw_file": "raw-github/chorus-aidlc_chorus.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 148,
+        "frontier_rank": 169,
         "star_growth_rank": 150
       }
     },
@@ -24659,7 +24618,7 @@
         "raw_file": "raw-github/coleam00_archon.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 139,
+        "frontier_rank": 155,
         "star_growth_rank": 37
       }
     },
@@ -24691,7 +24650,7 @@
         "raw_file": "raw-github/datalayer_agent-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 159,
+        "frontier_rank": 181,
         "star_growth_rank": 548
       }
     },
@@ -24723,7 +24682,7 @@
         "raw_file": "raw-github/evalops_agent-harness.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 132,
+        "frontier_rank": 146,
         "star_growth_rank": 505
       }
     },
@@ -24755,7 +24714,7 @@
         "raw_file": "raw-github/google_ax.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 128,
+        "frontier_rank": 142,
         "star_growth_rank": 126
       }
     },
@@ -24787,7 +24746,7 @@
         "raw_file": "raw-github/modelcode-ai_mcode-benchmark.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 90,
+        "frontier_rank": 102,
         "star_growth_rank": 643
       }
     },
@@ -24819,7 +24778,7 @@
         "raw_file": "raw-github/shareai-lab_learn-claude-code.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 138,
+        "frontier_rank": 154,
         "star_growth_rank": 13
       }
     },
@@ -24851,7 +24810,7 @@
         "raw_file": "raw-github/supabase_agent-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 102,
+        "frontier_rank": 115,
         "star_growth_rank": 108
       }
     },
@@ -24883,7 +24842,7 @@
         "raw_file": "raw-github/suyoumo_clawprobench.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 129,
+        "frontier_rank": 143,
         "star_growth_rank": 176
       }
     },
@@ -24915,7 +24874,7 @@
         "raw_file": "raw-github/kweaver-ai_kweaver-core.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 150,
+        "frontier_rank": 171,
         "star_growth_rank": 160
       }
     },
@@ -24947,7 +24906,7 @@
         "raw_file": "raw-github/unicomai_hexagent.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 149,
+        "frontier_rank": 170,
         "star_growth_rank": 336
       }
     },
@@ -24984,7 +24943,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 237,
+        "frontier_rank": 264,
         "star_growth_rank": 417
       }
     },
@@ -25011,7 +24970,7 @@
         "raw_file": "raw-github/iliaal_ai-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 157,
+        "frontier_rank": 179,
         "star_growth_rank": 521
       }
     },
@@ -25038,7 +24997,7 @@
         "raw_file": "raw-github/nirdiamant_agent_memory_techniques.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 89,
+        "frontier_rank": 101,
         "star_growth_rank": 220
       }
     },
@@ -25075,8 +25034,40 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 235,
+        "frontier_rank": 262,
         "star_growth_rank": 34
+      }
+    },
+    {
+      "id": "github:plaited/agent-eval-harness",
+      "repo": "plaited/agent-eval-harness",
+      "title": "Plaited Agent Eval Harness",
+      "url": "https://github.com/plaited/agent-eval-harness",
+      "value_score": 71.66,
+      "value_class": "needs-review",
+      "repair_score": 92.66,
+      "lane": "star-growth-repair",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/390-plaited-agent-eval-harness.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/390-plaited-agent-eval-harness.md",
+        "raw_file": "raw-github/plaited_agent-eval-harness.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 150,
+        "star_growth_rank": null
       }
     },
     {
@@ -25107,7 +25098,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 229,
+        "frontier_rank": 256,
         "star_growth_rank": 129
       }
     },
@@ -25134,7 +25125,7 @@
         "raw_file": "raw-github/block_agent-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 105,
+        "frontier_rank": 118,
         "star_growth_rank": 362
       }
     },
@@ -25161,7 +25152,7 @@
         "raw_file": "raw-github/deep-polyu_awesome-graphmemory.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 116,
+        "frontier_rank": 130,
         "star_growth_rank": 259
       }
     },
@@ -25215,7 +25206,7 @@
         "raw_file": "raw-github/huggingface_smolagents.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 167,
+        "frontier_rank": 191,
         "star_growth_rank": 52
       }
     },
@@ -25257,7 +25248,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 243,
+        "frontier_rank": 270,
         "star_growth_rank": 39
       }
     },
@@ -25294,7 +25285,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 57,
+        "frontier_rank": 62,
         "star_growth_rank": 382
       }
     },
@@ -25331,7 +25322,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 224,
+        "frontier_rank": 251,
         "star_growth_rank": 118
       }
     },
@@ -25368,7 +25359,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 199,
+        "frontier_rank": 226,
         "star_growth_rank": 23
       }
     },
@@ -25400,7 +25391,7 @@
         "raw_file": "raw-github/arcadeai_openclaw-arcade-plugin.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 111,
+        "frontier_rank": 124,
         "star_growth_rank": 578
       }
     },
@@ -25432,7 +25423,7 @@
         "raw_file": "raw-github/back1ply_agent-skill-loader.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 109,
+        "frontier_rank": 122,
         "star_growth_rank": 538
       }
     },
@@ -25464,7 +25455,7 @@
         "raw_file": "raw-github/tiger-ai-lab_clawbench.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 131,
+        "frontier_rank": 145,
         "star_growth_rank": 245
       }
     },
@@ -25491,7 +25482,7 @@
         "raw_file": "raw-github/eesiz_clawdreamer.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 156,
+        "frontier_rank": 177,
         "star_growth_rank": 481
       }
     },
@@ -25518,7 +25509,7 @@
         "raw_file": "raw-github/openclaw_gitcrawl.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 101,
+        "frontier_rank": 114,
         "star_growth_rank": 384
       }
     },
@@ -25545,7 +25536,7 @@
         "raw_file": "raw-github/soimy_openclaw-channel-dingtalk.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 152,
+        "frontier_rank": 173,
         "star_growth_rank": 373
       }
     },
@@ -25582,7 +25573,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 239,
+        "frontier_rank": 266,
         "star_growth_rank": 100
       }
     },
@@ -25614,7 +25605,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 227,
+        "frontier_rank": 254,
         "star_growth_rank": 88
       }
     },
@@ -25641,7 +25632,7 @@
         "raw_file": "raw-github/samuraigpt_awesome-openclaw.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 174,
+        "frontier_rank": 198,
         "star_growth_rank": 221
       }
     },
@@ -25668,7 +25659,7 @@
         "raw_file": "raw-github/vilmire_adhdev.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 184,
+        "frontier_rank": 211,
         "star_growth_rank": 458
       }
     },
@@ -25700,7 +25691,7 @@
         "raw_file": "raw-github/langchain-ai_memory-agent.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 79,
+        "frontier_rank": 88,
         "star_growth_rank": 116
       }
     },
@@ -25737,7 +25728,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 236,
+        "frontier_rank": 263,
         "star_growth_rank": 140
       }
     },
@@ -25774,7 +25765,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 231,
+        "frontier_rank": 258,
         "star_growth_rank": 169
       }
     },
@@ -25816,7 +25807,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 246,
+        "frontier_rank": 273,
         "star_growth_rank": 55
       }
     },
@@ -25848,8 +25839,40 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 218,
+        "frontier_rank": 245,
         "star_growth_rank": 161
+      }
+    },
+    {
+      "id": "github:alucek/agentic-memory",
+      "repo": "alucek/agentic-memory",
+      "title": "ALucek Agentic Memory Methods Library",
+      "url": "https://github.com/ALucek/agentic-memory",
+      "value_score": 74.2,
+      "value_class": "low-signal-or-risk",
+      "repair_score": 89.2,
+      "lane": "star-growth-repair",
+      "gaps": [
+        {
+          "id": "star_growth_missing",
+          "label": "Star growth missing",
+          "action": "fetch or rebuild 2026 stargazer history coverage"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/387-alucek-agentic-memory-methods-library.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/387-alucek-agentic-memory-methods-library.md",
+        "raw_file": "raw-github/alucek_agentic-memory.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 186,
+        "star_growth_rank": null
       }
     },
     {
@@ -25875,7 +25898,7 @@
         "raw_file": "raw-github/blockrunai_awesome-openclaw-money-maker.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 165,
+        "frontier_rank": 189,
         "star_growth_rank": 265
       }
     },
@@ -25902,7 +25925,7 @@
         "raw_file": "raw-github/composiohq_awesome-agent-clis.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 119,
+        "frontier_rank": 133,
         "star_growth_rank": 281
       }
     },
@@ -25929,7 +25952,7 @@
         "raw_file": "raw-github/lhl3341_awesome-claws.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 115,
+        "frontier_rank": 129,
         "star_growth_rank": 329
       }
     },
@@ -25956,7 +25979,7 @@
         "raw_file": "raw-github/llmsecurity_awesome-agent-skills-security.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 117,
+        "frontier_rank": 131,
         "star_growth_rank": 556
       }
     },
@@ -25983,7 +26006,7 @@
         "raw_file": "raw-github/openclaw_clawhub.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 140,
+        "frontier_rank": 156,
         "star_growth_rank": 67
       }
     },
@@ -26010,7 +26033,7 @@
         "raw_file": "raw-github/openclaw_clownfish.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 173,
+        "frontier_rank": 197,
         "star_growth_rank": 444
       }
     },
@@ -26037,7 +26060,7 @@
         "raw_file": "raw-github/swe-bench_swe-bench.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 121,
+        "frontier_rank": 136,
         "star_growth_rank": 102
       }
     },
@@ -26064,7 +26087,7 @@
         "raw_file": "raw-github/voltagent_awesome-openclaw-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 168,
+        "frontier_rank": 192,
         "star_growth_rank": 21
       }
     },
@@ -26101,7 +26124,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 241,
+        "frontier_rank": 268,
         "star_growth_rank": 25
       }
     },
@@ -26128,7 +26151,7 @@
         "raw_file": "raw-github/crewaiinc_crewai.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 202,
+        "frontier_rank": 229,
         "star_growth_rank": 19
       }
     },
@@ -26155,7 +26178,7 @@
         "raw_file": "raw-github/significant-gravitas_autogpt.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 185,
+        "frontier_rank": 212,
         "star_growth_rank": 4
       }
     },
@@ -26192,7 +26215,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 245,
+        "frontier_rank": 272,
         "star_growth_rank": 251
       }
     },
@@ -26219,7 +26242,7 @@
         "raw_file": "raw-github/iflytek_skillhub.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 142,
+        "frontier_rank": 158,
         "star_growth_rank": 97
       }
     },
@@ -26246,7 +26269,7 @@
         "raw_file": "raw-github/seb1n_awesome-ai-agent-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 171,
+        "frontier_rank": 195,
         "star_growth_rank": 368
       }
     },
@@ -26273,7 +26296,7 @@
         "raw_file": "raw-github/zerolu_awesome-openclaw.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 126,
+        "frontier_rank": 140,
         "star_growth_rank": 395
       }
     },
@@ -26300,7 +26323,7 @@
         "raw_file": "raw-github/zocomputer_skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 155,
+        "frontier_rank": 176,
         "star_growth_rank": 437
       }
     },
@@ -26327,7 +26350,7 @@
         "raw_file": "raw-github/langchain-ai_langgraph.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 179,
+        "frontier_rank": 206,
         "star_growth_rank": 26
       }
     },
@@ -26359,7 +26382,7 @@
         "raw_file": "raw-github/nvidia_skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 82,
+        "frontier_rank": 91,
         "star_growth_rank": 175
       }
     },
@@ -26391,7 +26414,7 @@
         "raw_file": "raw-github/zijian-ni_awesome-ai-agents-2026.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 189,
+        "frontier_rank": 215,
         "star_growth_rank": 162
       }
     },
@@ -26418,7 +26441,7 @@
         "raw_file": "raw-github/cxxz_awesome-agent-memory.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 125,
+        "frontier_rank": 139,
         "star_growth_rank": 540
       }
     },
@@ -26450,7 +26473,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 221,
+        "frontier_rank": 248,
         "star_growth_rank": 171
       }
     },
@@ -26477,7 +26500,7 @@
         "raw_file": "raw-github/dceoy_speckit-agent-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 151,
+        "frontier_rank": 172,
         "star_growth_rank": 369
       }
     },
@@ -26504,7 +26527,7 @@
         "raw_file": "raw-github/itgoyo_awesome-agent-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 170,
+        "frontier_rank": 194,
         "star_growth_rank": 343
       }
     },
@@ -26531,7 +26554,7 @@
         "raw_file": "raw-github/junminhong_awesome-agent-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 91,
+        "frontier_rank": 103,
         "star_growth_rank": 522
       }
     },
@@ -26558,7 +26581,7 @@
         "raw_file": "raw-github/kodustech_awesome-agent-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 172,
+        "frontier_rank": 196,
         "star_growth_rank": 393
       }
     },
@@ -26585,7 +26608,7 @@
         "raw_file": "raw-github/skillmatic-ai_awesome-agent-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 169,
+        "frontier_rank": 193,
         "star_growth_rank": 145
       }
     },
@@ -26612,7 +26635,7 @@
         "raw_file": "raw-github/webmaxru_agent-skills.md",
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 122,
+        "frontier_rank": 135,
         "star_growth_rank": 464
       }
     }

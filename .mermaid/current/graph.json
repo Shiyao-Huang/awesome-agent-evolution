@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T20:27:31+08:00",
+  "generated_at": "2026-06-02T19:52:08+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -1547,26 +1547,22 @@
     ]
   },
   "current_run_evidence": [
-    "Web-observed repos: longmans/self-evolve, MCKRUZ/openclaw-langfuse, hyperspell/hyperspell-openclaw, composio-community/awesome-openclaw-plugins, mvanhorn/last30days-skill, EESIZ/clawdreamer, ThisIsJeron/awesome-openclaw-plugins, BlockRunAI/awesome-OpenClaw-Money-Maker.",
-    "New raw files: raw-github/longmans_self-evolve.md, raw-github/mckruz_openclaw-langfuse.md, raw-github/hyperspell_hyperspell-openclaw.md, raw-github/composio-community_awesome-openclaw-plugins.md, raw-github/mvanhorn_last30days-skill.md, raw-github/eesiz_clawdreamer.md, raw-github/thisisjeron_awesome-openclaw-plugins.md, raw-github/blockrunai_awesome-openclaw-money-maker.md.",
-    "New public model cards and site reports: project/report ids 355-362.",
-    "Shell GitHub API freshness is blocked by DNS; local gh token is invalid.",
-    "GitNexus status/list worked (stale index); default analyze failed with LadybugDB lock error on .gitnexus/lbug, and temporary HOME analyze failed when FTS extension could not be downloaded, causing index-copy failure.",
+    "Web-observed repos: pinchbench/skill, vectorize-io/agent-memory-benchmark, EvoMap/awesome-agent-evolution.",
+    "Refreshed raw captures: raw-github/pinchbench_skill.md, raw-github/vectorize-io_agent-memory-benchmark.md, raw-github/evomap_awesome-agent-evolution.md.",
+    "Repaired public model cards and site reports: projects/51-pinchbench-skill.md, projects/77-agent-memory-benchmark.md, projects/394-evomap-awesome-agent-evolution.md and mirrored public reports.",
+    "Shell GitHub API freshness is still blocked by DNS; local gh token remains invalid.",
+    "GitNexus status worked and reported the local index is up to date at commit 73a3e96.",
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-06-01T20:27:31+08:00",
+    "run_at": "2026-06-02T19:52:08+08:00",
     "added_repositories": [
-      "opensquilla/opensquilla",
-      "GCWing/BitFun",
-      "oceanbase/powermem",
-      "mnemon-dev/mnemon",
-      "alibaizhanov/mengram",
-      "im4codes/imcodes",
-      "weaviate/query-agent-benchmarking"
+      "pinchbench/skill",
+      "vectorize-io/agent-memory-benchmark",
+      "EvoMap/awesome-agent-evolution"
     ],
-    "evidence_quality": "public_github_api_metadata_observed; unauthenticated_rate_limit_possible; gh_token_invalid",
+    "evidence_quality": "public_github_page_metadata_observed; shell_api_blocked_dns; gh_token_invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
+    "gitnexus_status": "available; npx gitnexus status reported index up to date at commit 73a3e96"
   }
 }

@@ -7472,6 +7472,92 @@ export const projects: Project[] = [
                     "retrieval",
                     "toolkit"
             ]
+    },
+    {
+            "name": "PinchBench Skill",
+            "repo": "pinchbench/skill",
+            "url": "https://github.com/pinchbench/skill",
+            "stars": 1200,
+            "forks": 136,
+            "language": "Python",
+            "license": "MIT",
+            "report": "projects/51-pinchbench-skill.md",
+            "pattern": "real-world task suite -> OpenClaw agent run -> automatic and/or LLM grading -> transcript retention -> leaderboard upload or local comparison",
+            "description": "PinchBench is a real-world benchmark harness for OpenClaw-style coding agents across coding, memory, email, research, analysis, and skill-discovery tasks.",
+            "stack": [
+                    "Python",
+                    "Shell",
+                    "TypeScript",
+                    "OpenClaw"
+            ],
+            "category": "Real-World Agent Task Benchmark",
+            "lastPushed": "2026-05-06T00:00:00Z",
+            "localPath": "raw-github/pinchbench_skill.md",
+            "status": "candidate",
+            "tags": [
+                    "benchmark",
+                    "evaluation",
+                    "openclaw",
+                    "skills",
+                    "transcripts"
+            ]
+    },
+    {
+            "name": "Agent Memory Benchmark",
+            "repo": "vectorize-io/agent-memory-benchmark",
+            "url": "https://github.com/vectorize-io/agent-memory-benchmark",
+            "stars": 46,
+            "forks": 17,
+            "language": "Python",
+            "license": "Unknown",
+            "report": "projects/77-agent-memory-benchmark.md",
+            "pattern": "ingest documents -> retrieve context -> Gemini answer generation -> second Gemini judge -> compare accuracy, speed, and token cost",
+            "description": "AMB is a public benchmark for agent memory systems that emphasizes reproducible prompts, scoring logic, and cost-aware evaluation on agentic memory tasks.",
+            "stack": [
+                    "Python",
+                    "Vue",
+                    "Gemini",
+                    "Benchmark Viewer"
+            ],
+            "category": "Agent Memory Benchmark",
+            "lastPushed": "2026-05-24T00:00:00Z",
+            "localPath": "raw-github/vectorize-io_agent-memory-benchmark.md",
+            "status": "candidate",
+            "tags": [
+                    "memory",
+                    "benchmark",
+                    "evaluation",
+                    "cost",
+                    "retrieval"
+            ]
+    },
+    {
+            "name": "EvoMap Awesome Agent Evolution",
+            "repo": "EvoMap/awesome-agent-evolution",
+            "url": "https://github.com/EvoMap/awesome-agent-evolution",
+            "stars": 130,
+            "forks": 17,
+            "language": "JavaScript",
+            "license": "View license on GitHub",
+            "report": "projects/394-evomap-awesome-agent-evolution.md",
+            "pattern": "field taxonomy -> curated project/paper/benchmark sections -> related awesome-list pointers -> reader-facing ecosystem navigation",
+            "description": "EvoMap/awesome-agent-evolution is a curated awesome list covering self-evolution, memory, protocols, benchmarks, coding agents, and adjacent infrastructure.",
+            "stack": [
+                    "JavaScript",
+                    "Shell",
+                    "Awesome List Pipeline"
+            ],
+            "category": "External Awesome List and Taxonomy Comparator",
+            "lastPushed": "2026-05-21T00:00:00Z",
+            "localPath": "raw-github/evomap_awesome-agent-evolution.md",
+            "status": "candidate",
+            "tags": [
+                    "taxonomy",
+                    "awesome-list",
+                    "memory",
+                    "benchmark",
+                    "agent-swarm"
+            ]
     }
 ];
 

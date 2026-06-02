@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-06-02T07:22:32.173Z",
+  "generated_at": "2026-06-02T12:35:12.675Z",
   "threshold": 0.52,
   "total": 3,
   "clusters": [
     {
       "cluster_id": "vlsh-0001",
       "label": "+local_code_or_artifact / +timestamp_freshness / +current_frontier_signal",
-      "size": 1540,
+      "size": 1546,
       "type_counts": {
-        "github": 663,
+        "github": 669,
         "paper": 197,
         "social": 415,
         "blog": 265
       },
       "value_class_counts": {
-        "needs-review": 625,
-        "high-value-candidate": 803,
+        "needs-review": 630,
+        "high-value-candidate": 804,
         "low-signal-or-risk": 112
       },
-      "score_avg": 71.56,
-      "confidence_avg": 52.47,
+      "score_avg": 71.61,
+      "confidence_avg": 52.58,
       "top_tags": [
         {
           "id": "local_code_or_artifact",
@@ -43,23 +43,23 @@
         },
         {
           "id": "community_momentum",
-          "average": 0.745,
+          "average": 0.746,
           "label": "Community momentum"
         },
         {
           "id": "product_usability",
-          "average": 0.732,
+          "average": 0.733,
           "label": "Product usability"
         },
         {
           "id": "open_source_reuse",
-          "average": 0.731,
+          "average": 0.732,
           "label": "Open-source reuse"
         },
         {
-          "id": "useful_for_survey_seo",
-          "average": 0.7,
-          "label": "Survey/SEO usefulness"
+          "id": "implementation_runnable",
+          "average": 0.702,
+          "label": "Runnable implementation"
         }
       ],
       "representatives": [
