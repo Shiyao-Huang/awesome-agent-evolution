@@ -1,6 +1,6 @@
 # Repo 自动分类与技术栈分析（raw-github 677）
 
-- generated_at: 2026-06-02T19:52:08+08:00
+- generated_at: 2026-06-01T20:27:31+08:00
 - companion_csv: `research/repo-classification.csv`
 - companion_json: `research/repo-classification.json`
 
@@ -16,15 +16,19 @@
 | 论文代码/paper-code | 33 |
 | 评测/benchmark | 1 |
 
-## 本轮 metadata repair spotlight
+## 本轮 hourly public metadata 增量
 
 | Repo | Category | Theme | Function | Evidence |
 |---|---|---|---|---|
-| [evomap/awesome-agent-evolution](https://github.com/evomap/awesome-agent-evolution) | 工具/tool | evolution | resource-index | web-observed GitHub page showed 130 stars, 17 forks, 57 commits, no releases, JavaScript/Shell implementation, and a maintained taxonomy covering self-evolution, memory, protocols, coding, benchmarks, and community knowledge. |
-| [pinchbench/skill](https://github.com/pinchbench/skill) | 评测/evaluation | evaluation | benchmark-eval | web-observed GitHub page showed about 1.2k stars, 136 forks, 17 issues, 383 commits, MIT license, 14 releases, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents. |
-| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | 评测/evaluation | memory | benchmark-eval | web-observed GitHub page showed 46 stars, 17 forks, 6 issues, 4 pull requests, 29 commits, Python/Vue implementation, and README claims for open datasets, prompts, scoring logic, and memory benchmark outputs. |
+| [opensquilla/opensquilla](https://github.com/opensquilla/opensquilla) | 框架/framework | evolution | framework-runtime | public GitHub API metadata showed 2,184 stars, 148 forks, 48 commit pages, Apache-2.0 license, and Python-first runtime composition. |
+| [GCWing/BitFun](https://github.com/GCWing/BitFun) | 框架/framework | evolution | framework-runtime | public GitHub API metadata showed 799 stars, 99 forks, 1,627 commit pages, MIT license, and Rust-led implementation. |
+| [oceanbase/powermem](https://github.com/oceanbase/powermem) | 框架/framework | memory | memory-runtime | public GitHub API metadata showed 688 stars, 83 forks, about 200 commit pages, Python codebase, and memory-plugin positioning. |
+| [mnemon-dev/mnemon](https://github.com/mnemon-dev/mnemon) | 框架/framework | memory | memory-runtime | public GitHub API metadata showed 322 stars, 46 forks, 234 commit pages, Apache-2.0 license, and Go-based memory substrate implementation. |
+| [alibaizhanov/mengram](https://github.com/alibaizhanov/mengram) | 框架/framework | memory | memory-runtime | public GitHub API metadata showed 172 stars, 27 forks, 528 commit pages, Apache-2.0 license, and Python-led memory platform implementation. |
+| [im4codes/imcodes](https://github.com/im4codes/imcodes) | 工具/tool | memory | tool-module | public GitHub API metadata showed 131 stars, 11 forks, 1,818 commit pages, MIT license, and TypeScript-first implementation. |
+| [weaviate/query-agent-benchmarking](https://github.com/weaviate/query-agent-benchmarking) | 评测/evaluation | evaluation | benchmark-suite | public GitHub API metadata showed 15 stars, 3 forks, 595 commit pages, BSD-3-Clause license, and benchmark-oriented notebook assets. |
 
-本轮修复了 `pinchbench/skill`、`vectorize-io/agent-memory-benchmark` 和 `evomap/awesome-agent-evolution` 的 raw metadata、deep report、project/site report 连接。GitHub API 仍未在 shell 环境中恢复，因此 freshness 明确标为 web-observed。
+本轮新增 opensquilla/opensquilla、GCWing/BitFun、oceanbase/powermem、mnemon-dev/mnemon、alibaizhanov/mengram、im4codes/imcodes、weaviate/query-agent-benchmarking raw captures，并同步提升为 public site / model-card 覆盖。GitHub API 未验证 freshness 的原因记录在 Mermaid graph 与 work notes 中。
 
 ## 完整分类表
 

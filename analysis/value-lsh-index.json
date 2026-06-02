@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T12:35:12.675Z",
+  "generated_at": "2026-06-02T17:23:58.838Z",
   "method": {
     "name": "discrete_value_lsh_v0",
     "summary": "Ternary value tags (-1/0/+1) are split into local hash bands for approximate near-neighbor recall and cluster discovery.",
@@ -9,7 +9,7 @@
     "threshold": 0.52
   },
   "summary": {
-    "generated_at": "2026-06-02T12:35:12.675Z",
+    "generated_at": "2026-06-02T17:23:58.838Z",
     "source": "all",
     "total_materials": 2230,
     "value_tag_count": 26,
@@ -377,10 +377,10 @@
       ]
     },
     "incremental": {
-      "previous_generated_at": "2026-06-02T07:22:32.173Z",
-      "added": 7,
-      "changed": 55,
-      "unchanged": 2168,
+      "previous_generated_at": "2026-06-02T12:35:12.675Z",
+      "added": 0,
+      "changed": 33,
+      "unchanged": 2197,
       "removed": 0
     }
   },
@@ -9253,7 +9253,7 @@
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 255,
+        "frontier_rank": 256,
         "star_growth_rank": 103
       }
     },
@@ -29155,70 +29155,40 @@
     }
   ],
   "changed_items": [
-    "github:agentevals-dev/agentevals",
-    "github:agentralabs/agentic-memory",
-    "github:agiresearch/a-mem",
     "github:ai4co/awesome-fm4co",
     "github:algorithmicsuperintelligence/openevolve",
     "github:all-hands-ai/openhands",
-    "github:alucek/agentic-memory",
-    "github:apify/agent-skills",
-    "github:arc-computer/cl-bench",
     "github:camel-ai/camel",
     "github:codefuse-ml/awesome-code-llm",
-    "github:crewaiinc/crewai",
-    "github:dataojitori/nocturne_memory",
     "github:deepauto-ai/automl-agent",
-    "github:elizaos/agentmemory",
     "github:evermind-ai/everos",
     "github:evoagentx/evoagentx",
-    "github:evomap/awesome-agent-evolution",
     "github:foundationagents/metagpt",
     "github:genentech/opentreesearch",
     "github:inter-co/science-codeevolve",
     "github:jarvis-xs/se-agent",
     "github:jarvispei/scope",
-    "github:langchain-ai/agentevals",
     "github:langchain-ai/langgraph",
-    "github:lhl/agentic-memory",
     "github:luo-junyu/awesome-agent-papers",
     "github:microsoft/autogen",
     "github:modelscope/agentevolver",
-    "github:najeed/ai-agent-eval-harness",
     "github:openbmb/chatdev",
     "github:opendevin/opendevin",
-    "github:openswarm-ai/openswarm",
     "github:oppo-mente-lab/llm-self-judge",
-    "github:pinchbench/skill",
-    "github:plaited/agent-eval-harness",
     "github:princeton-nlp/swe-agent",
     "github:reworkd/agentgpt",
     "github:shengranhu/adas",
     "github:significant-gravitas/autogpt",
-    "github:stanfordnlp/dspy",
     "github:swe-bench/swe-bench",
-    "github:vectorize-io/agent-memory-benchmark",
-    "github:vectorspacelab/general-agentic-memory",
-    "github:versatly/clawvault",
     "github:web-arena-x/webarena",
-    "github:webzler/agentmemory",
     "github:xlang-ai/openagents",
     "github:xlang-ai/osworld",
     "github:xmudeeplit/awesome-self-evolving-agents",
     "github:youngdubbydu/llm-agent-optimization",
     "github:yunjuetech/yunjue-agent",
     "github:zesearch/self-improvement-llm",
-    "github:zju-llm-safety/darwin",
-    "github:zorazrw/agent-workflow-memory"
+    "github:zju-llm-safety/darwin"
   ],
-  "added_items": [
-    "github:alibaizhanov/mengram",
-    "github:gcwing/bitfun",
-    "github:im4codes/imcodes",
-    "github:mnemon-dev/mnemon",
-    "github:oceanbase/powermem",
-    "github:opensquilla/opensquilla",
-    "github:weaviate/query-agent-benchmarking"
-  ],
+  "added_items": [],
   "removed_items": []
 }

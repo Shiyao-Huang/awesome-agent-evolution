@@ -1,6 +1,6 @@
 # Processed / 加工分析 Index
 
-> Generated: 2026-06-02
+> Generated: 2026-06-03
 
 ## Rule
 
@@ -10,7 +10,7 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `analysis` | present | 45 | 2 | 0 | 23 MB |
+| `analysis` | present | 45 | 2 | 0 | 24 MB |
 | `research` | present | 141 | 8 | 0 | 2.6 MB |
 | `projects` | present | 45966 | 6010 | 1 | 3.3 GB |
 | `paper-reviews` | present | 171 | 1 | 0 | 1.6 MB |

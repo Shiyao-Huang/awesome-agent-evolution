@@ -1,6 +1,6 @@
 # Value LSH Index
 
-> Generated: 2026-06-02T12:35:12.675Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
+> Generated: 2026-06-02T17:23:58.838Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
 
 ## One Sentence
 
@@ -8,7 +8,7 @@ Value LSH turns comparison into a fast discrete scan: each material gets a `-1/0
 
 ## Three Sentences
 
-This run scanned 2230 materials across GitHub, papers, social/X, and blogs, then generated 171 non-empty LSH buckets and 3 clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the value score and evidence refs keep the ranking auditable. Incremental state is tracked in `data-engine/value-lsh-index/manifest.json`: 7 added, 55 changed, 0 removed, 2168 unchanged versus the previous run.
+This run scanned 2230 materials across GitHub, papers, social/X, and blogs, then generated 171 non-empty LSH buckets and 3 clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the value score and evidence refs keep the ranking auditable. Incremental state is tracked in `data-engine/value-lsh-index/manifest.json`: 0 added, 33 changed, 0 removed, 2197 unchanged versus the previous run.
 
 ## Why Discrete LSH
 

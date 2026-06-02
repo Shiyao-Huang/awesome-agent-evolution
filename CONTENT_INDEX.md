@@ -79,7 +79,7 @@
 | 公开定义主题页 | [site/src/pages/topics/self-evolving-ai-agents/index.astro](site/src/pages/topics/self-evolving-ai-agents/index.astro) | 面向消费者和 SEO 的 evergreen 定义页：判断一个 AI Agent 是否真的自进化 |
 | 公开五类回路主题页 | [site/src/pages/topics/five-evolution-loops/index.astro](site/src/pages/topics/five-evolution-loops/index.astro) | 面向消费者和 SEO 的 evergreen 机制页：用五类进化回路解释反馈如何变成可保留改进 |
 | 公开代码自改进 Benchmark 页 | [site/src/pages/topics/code-evolution-benchmark/index.astro](site/src/pages/topics/code-evolution-benchmark/index.astro) | 面向消费者和 SEO 的 evergreen benchmark 页：判断代码自改进和算法发现声明的证据强度 |
-| 公开项目报告 | [site/public/reports/projects/](site/public/reports/projects/) | 472 个公开项目报告供静态站点下载/引用 |
+| 公开项目报告 | [site/public/reports/projects/](site/public/reports/projects/) | 473 个公开项目报告供静态站点下载/引用 |
 
 ## 历史索引
 

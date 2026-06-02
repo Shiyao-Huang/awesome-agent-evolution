@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T19:52:08+08:00",
+  "generated_at": "2026-06-01T20:27:31+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -1555,14 +1555,18 @@
     "graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views."
   ],
   "current_run": {
-    "run_at": "2026-06-02T19:52:08+08:00",
+    "run_at": "2026-06-01T20:27:31+08:00",
     "added_repositories": [
-      "pinchbench/skill",
-      "vectorize-io/agent-memory-benchmark",
-      "EvoMap/awesome-agent-evolution"
+      "opensquilla/opensquilla",
+      "GCWing/BitFun",
+      "oceanbase/powermem",
+      "mnemon-dev/mnemon",
+      "alibaizhanov/mengram",
+      "im4codes/imcodes",
+      "weaviate/query-agent-benchmarking"
     ],
-    "evidence_quality": "public_github_page_metadata_observed; shell_api_blocked_dns; gh_token_invalid",
+    "evidence_quality": "public_github_api_metadata_observed; unauthenticated_rate_limit_possible; gh_token_invalid",
     "graph_truth_source": ".mermaid/current/graph.json",
-    "gitnexus_status": "available; npx gitnexus status reported index up to date at commit 73a3e96"
+    "gitnexus_status": "available; npx gitnexus status reported stale index before this iteration"
   }
 }
