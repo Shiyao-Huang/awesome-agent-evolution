@@ -104,6 +104,13 @@ const frontierReportPathForRepo = (repo) => {
   return fs.existsSync(path.join(root, rel)) ? rel : null;
 };
 
+const localRepoMirrorPathForRepo = (repo) => {
+  const normalized = normalizeRepo(repo);
+  if (!normalized.includes('/')) return null;
+  const rel = `projects/repos/${normalized.replace(/\//g, '__')}`;
+  return fs.existsSync(path.join(root, rel)) ? rel : null;
+};
+
 const parseFrontmatter = (text) => {
   if (!text.startsWith('---\n')) return {};
   const end = text.indexOf('\n---', 4);
@@ -544,10 +551,12 @@ const collectGithubMaterials = () => {
     const starRow = starByRepo.get(repo) || null;
     const rawTime = rawTimeByRepo.get(repo) || {};
     const frontierReport = frontierReportPathForRepo(repo);
+    const localPath = localRepoMirrorPathForRepo(repo);
     const merged = {
       ...raw,
       ...analyzed,
       analysis_report: frontierReport,
+      localPath,
       scores: ranking.scores || {},
       raw_time_slice: analyzed.raw_time_slice || raw.time_slice || rawTime.time_slice || null,
       raw_file: analyzed.raw_file || rawTime.file || null

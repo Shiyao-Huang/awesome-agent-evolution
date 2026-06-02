@@ -1,82 +1,35 @@
 {
-  "generated_at": "2026-06-02T02:53:27.634Z",
+  "generated_at": "2026-06-02T03:55:28.984Z",
   "method": {
     "name": "value_evidence_repair_queue_v0",
     "source": "data-engine/value-lsh-index/value-matrix.jsonl",
     "note": "Prioritizes evidence repair work after value-LSH comparison; repair score is not a quality score."
   },
   "summary": {
-    "generated_at": "2026-06-02T02:53:27.634Z",
-    "source_lsh_generated_at": "2026-06-02T02:53:10.310Z",
+    "generated_at": "2026-06-02T03:55:28.984Z",
+    "source_lsh_generated_at": "2026-06-02T03:55:10.739Z",
     "github_projects": 717,
-    "projects_with_gaps": 682,
+    "projects_with_gaps": 681,
     "lane_counts": {
-      "deep-read-needed": 453,
+      "deep-read-needed": 452,
       "issue-resource-scan": 138,
       "raw-meta-repair": 52,
       "loop-verification": 35,
       "star-growth-repair": 4
     },
     "gap_counts": {
-      "deep_report_missing": 453,
-      "frontier_queue_missing": 466,
-      "issue_resource_unclear": 330,
-      "implementation_unclear": 52,
-      "evidence_chain_incomplete": 505,
+      "deep_report_missing": 452,
+      "frontier_queue_missing": 465,
+      "issue_resource_unclear": 329,
       "self_evolution_unclear": 435,
+      "implementation_unclear": 55,
+      "evidence_chain_incomplete": 504,
       "star_growth_missing": 20,
       "raw_meta_missing": 52
     },
-    "top_repair_score": 135.75
+    "top_repair_score": 135.02
   },
   "queue": [
-    {
-      "id": "github:sethkarten/continual-harness",
-      "repo": "sethkarten/continual-harness",
-      "title": "sethkarten/continual-harness",
-      "url": "https://github.com/sethkarten/continual-harness",
-      "value_score": 76.75,
-      "value_class": "high-value-candidate",
-      "repair_score": 135.75,
-      "lane": "deep-read-needed",
-      "gaps": [
-        {
-          "id": "deep_report_missing",
-          "label": "Deep report missing",
-          "action": "clone/read code and create model-card style deep report"
-        },
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "implementation_unclear",
-          "label": "Implementation unclear",
-          "action": "inspect install path, tests/evals, examples, package layout, and runnable entrypoints"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": null,
-        "public_report": null,
-        "raw_file": "raw-github/sethkarten_continual-harness.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": 348
-      }
-    },
     {
       "id": "github:inclusionai/agenticlearning",
       "repo": "inclusionai/agenticlearning",
@@ -17238,6 +17191,48 @@
       }
     },
     {
+      "id": "github:zju-llm-safety/darwin",
+      "repo": "zju-llm-safety/darwin",
+      "title": "DARWIN",
+      "url": "https://github.com/ZJU-LLM-Safety/DARWIN",
+      "value_score": 72.61,
+      "value_class": "needs-review",
+      "repair_score": 113.61,
+      "lane": "raw-meta-repair",
+      "gaps": [
+        {
+          "id": "raw_meta_missing",
+          "label": "Raw/meta missing",
+          "action": "create or repair raw-github capture with complete frontmatter and timestamps"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "implementation_unclear",
+          "label": "Implementation unclear",
+          "action": "inspect install path, tests/evals, examples, package layout, and runnable entrypoints"
+        },
+        {
+          "id": "evidence_chain_incomplete",
+          "label": "Evidence chain incomplete",
+          "action": "connect raw source, processed report, local code evidence, and generated index rows"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/zju_llm_safety__darwin.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/zju_llm_safety__darwin.md",
+        "raw_file": null,
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 2,
+        "star_growth_rank": 1
+      }
+    },
+    {
       "id": "github:sunitj/colloquip",
       "repo": "sunitj/colloquip",
       "title": "sunitj/colloquip",
@@ -18215,43 +18210,6 @@
         "alternate_source_paths": [],
         "frontier_rank": null,
         "star_growth_rank": 681
-      }
-    },
-    {
-      "id": "github:zju-llm-safety/darwin",
-      "repo": "zju-llm-safety/darwin",
-      "title": "DARWIN",
-      "url": "https://github.com/ZJU-LLM-Safety/DARWIN",
-      "value_score": 75.16,
-      "value_class": "needs-review",
-      "repair_score": 111.16,
-      "lane": "raw-meta-repair",
-      "gaps": [
-        {
-          "id": "raw_meta_missing",
-          "label": "Raw/meta missing",
-          "action": "create or repair raw-github capture with complete frontmatter and timestamps"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/zju_llm_safety__darwin.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/zju_llm_safety__darwin.md",
-        "raw_file": null,
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": 2,
-        "star_growth_rank": 1
       }
     },
     {
@@ -21947,6 +21905,48 @@
       }
     },
     {
+      "id": "github:oppo-mente-lab/llm-self-judge",
+      "repo": "oppo-mente-lab/llm-self-judge",
+      "title": "LLM-Self-Judge",
+      "url": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+      "value_score": 63.69,
+      "value_class": "low-signal-or-risk",
+      "repair_score": 98.69,
+      "lane": "raw-meta-repair",
+      "gaps": [
+        {
+          "id": "raw_meta_missing",
+          "label": "Raw/meta missing",
+          "action": "create or repair raw-github capture with complete frontmatter and timestamps"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "implementation_unclear",
+          "label": "Implementation unclear",
+          "action": "inspect install path, tests/evals, examples, package layout, and runnable entrypoints"
+        },
+        {
+          "id": "evidence_chain_incomplete",
+          "label": "Evidence chain incomplete",
+          "action": "connect raw source, processed report, local code evidence, and generated index rows"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/oppo_mente_lab__llm_self_judge.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/oppo_mente_lab__llm_self_judge.md",
+        "raw_file": null,
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 12,
+        "star_growth_rank": 428
+      }
+    },
+    {
       "id": "github:future-agi/future-agi",
       "repo": "future-agi/future-agi",
       "title": "future-agi",
@@ -22516,6 +22516,48 @@
       }
     },
     {
+      "id": "github:codefuse-ml/awesome-code-llm",
+      "repo": "codefuse-ml/awesome-code-llm",
+      "title": "Awesome-Code-LLM",
+      "url": "https://github.com/CodeFuse-ML/awesome-code-llm",
+      "value_score": 63.06,
+      "value_class": "low-signal-or-risk",
+      "repair_score": 97.06,
+      "lane": "raw-meta-repair",
+      "gaps": [
+        {
+          "id": "raw_meta_missing",
+          "label": "Raw/meta missing",
+          "action": "create or repair raw-github capture with complete frontmatter and timestamps"
+        },
+        {
+          "id": "self_evolution_unclear",
+          "label": "Self-evolution unclear",
+          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
+        },
+        {
+          "id": "implementation_unclear",
+          "label": "Implementation unclear",
+          "action": "inspect install path, tests/evals, examples, package layout, and runnable entrypoints"
+        },
+        {
+          "id": "evidence_chain_incomplete",
+          "label": "Evidence chain incomplete",
+          "action": "connect raw source, processed report, local code evidence, and generated index rows"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/37-awesome-code-llm.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/37-awesome-code-llm.md",
+        "raw_file": null,
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 220,
+        "star_growth_rank": 111
+      }
+    },
+    {
       "id": "github:henrikrexed/openclaw-observability-plugin",
       "repo": "henrikrexed/openclaw-observability-plugin",
       "title": "OpenClaw Observability Plugin",
@@ -22609,43 +22651,6 @@
         "alternate_source_paths": [],
         "frontier_rank": 123,
         "star_growth_rank": 642
-      }
-    },
-    {
-      "id": "github:oppo-mente-lab/llm-self-judge",
-      "repo": "oppo-mente-lab/llm-self-judge",
-      "title": "LLM-Self-Judge",
-      "url": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
-      "value_score": 66.24,
-      "value_class": "low-signal-or-risk",
-      "repair_score": 96.24,
-      "lane": "raw-meta-repair",
-      "gaps": [
-        {
-          "id": "raw_meta_missing",
-          "label": "Raw/meta missing",
-          "action": "create or repair raw-github capture with complete frontmatter and timestamps"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/oppo_mente_lab__llm_self_judge.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/oppo_mente_lab__llm_self_judge.md",
-        "raw_file": null,
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": 12,
-        "star_growth_rank": 428
       }
     },
     {
@@ -22779,6 +22784,48 @@
         "alternate_source_paths": [],
         "frontier_rank": 217,
         "star_growth_rank": 203
+      }
+    },
+    {
+      "id": "github:pureples/pureples",
+      "repo": "pureples/pureples",
+      "title": "GP-LLM-Code-Evolution",
+      "url": "https://github.com/pureples/pureples",
+      "value_score": 60.83,
+      "value_class": "low-signal-or-risk",
+      "repair_score": 95.83,
+      "lane": "raw-meta-repair",
+      "gaps": [
+        {
+          "id": "raw_meta_missing",
+          "label": "Raw/meta missing",
+          "action": "create or repair raw-github capture with complete frontmatter and timestamps"
+        },
+        {
+          "id": "issue_resource_unclear",
+          "label": "Issue/resource unclear",
+          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
+        },
+        {
+          "id": "implementation_unclear",
+          "label": "Implementation unclear",
+          "action": "inspect install path, tests/evals, examples, package layout, and runnable entrypoints"
+        },
+        {
+          "id": "evidence_chain_incomplete",
+          "label": "Evidence chain incomplete",
+          "action": "connect raw source, processed report, local code evidence, and generated index rows"
+        }
+      ],
+      "evidence_refs": {
+        "github_report": "projects/42-gp-llm-code-evolution.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/42-gp-llm-code-evolution.md",
+        "raw_file": null,
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 244,
+        "star_growth_rank": 357
       }
     },
     {
@@ -23932,43 +23979,6 @@
       }
     },
     {
-      "id": "github:codefuse-ml/awesome-code-llm",
-      "repo": "codefuse-ml/awesome-code-llm",
-      "title": "Awesome-Code-LLM",
-      "url": "https://github.com/CodeFuse-ML/awesome-code-llm",
-      "value_score": 65.61,
-      "value_class": "low-signal-or-risk",
-      "repair_score": 94.61,
-      "lane": "raw-meta-repair",
-      "gaps": [
-        {
-          "id": "raw_meta_missing",
-          "label": "Raw/meta missing",
-          "action": "create or repair raw-github capture with complete frontmatter and timestamps"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/37-awesome-code-llm.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/37-awesome-code-llm.md",
-        "raw_file": null,
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": 220,
-        "star_growth_rank": 111
-      }
-    },
-    {
       "id": "github:howdymary/hermes-agent-metaharness",
       "repo": "howdymary/hermes-agent-metaharness",
       "title": "Hermes Agent Meta-Harness",
@@ -24267,43 +24277,6 @@
         "alternate_source_paths": [],
         "frontier_rank": 228,
         "star_growth_rank": 103
-      }
-    },
-    {
-      "id": "github:pureples/pureples",
-      "repo": "pureples/pureples",
-      "title": "GP-LLM-Code-Evolution",
-      "url": "https://github.com/pureples/pureples",
-      "value_score": 63.38,
-      "value_class": "low-signal-or-risk",
-      "repair_score": 93.38,
-      "lane": "raw-meta-repair",
-      "gaps": [
-        {
-          "id": "raw_meta_missing",
-          "label": "Raw/meta missing",
-          "action": "create or repair raw-github capture with complete frontmatter and timestamps"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/42-gp-llm-code-evolution.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/42-gp-llm-code-evolution.md",
-        "raw_file": null,
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": 244,
-        "star_growth_rank": 357
       }
     },
     {

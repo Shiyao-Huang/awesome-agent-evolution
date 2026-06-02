@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-02T02:53:10.310Z",
+  "generated_at": "2026-06-02T03:55:10.739Z",
   "band_size": 6,
-  "total": 168,
+  "total": 170,
   "buckets": [
     {
       "key": "v0:b4:421658a47e32aadc",
@@ -6135,6 +6135,7 @@
         "github:sachinsharma9780/memweave",
         "github:samuraigpt/awesome-openclaw",
         "github:seb1n/awesome-ai-agent-skills",
+        "github:sethkarten/continual-harness",
         "github:sevenschulte/agentic-harness",
         "github:shareai-lab/kbench",
         "github:shareai-lab/learn-claude-code",
@@ -6171,7 +6172,7 @@
         "github:zocomputer/skills",
         "github:zorazrw/agent-workflow-memory"
       ],
-      "size": 159,
+      "size": 160,
       "sample_members": [
         "github:0xnyk/lacp",
         "github:aayoawoyemi/ori-mnemos",
@@ -11798,65 +11799,6 @@
       ]
     },
     {
-      "key": "v0:b1:72a6edbe27af7dab",
-      "band": 1,
-      "features": [
-        "rollback_or_safety",
-        "implementation_runnable",
-        "local_code_or_artifact",
-        "product_usability",
-        "teaching_model_card",
-        "evidence_chain_complete"
-      ],
-      "chars": "0++0+-",
-      "members": [
-        "github:ai4co/reevo",
-        "github:carperai/openelm",
-        "github:codefuse-ml/awesome-code-llm",
-        "github:dataelement/bisheng",
-        "github:genentech/opentreesearch",
-        "github:google-deepmind/funsearch",
-        "github:icaros-usc/pyribs",
-        "github:inter-co/science-codeevolve",
-        "github:jarvispei/scope",
-        "github:microsoft/coml",
-        "github:openbmb/agentverse",
-        "github:oppo-mente-lab/llm-self-judge",
-        "github:princeton-nlp/swe-agent",
-        "github:pureples/pureples",
-        "github:reworkd/agentgpt",
-        "github:shengranhu/adas",
-        "github:siyuyuan/evoagent",
-        "github:smol-ai/developer",
-        "github:stitionai/devika",
-        "github:xiaofangxd/llm_ea",
-        "github:xlang-ai/openagents"
-      ],
-      "size": 21,
-      "sample_members": [
-        "github:ai4co/reevo",
-        "github:carperai/openelm",
-        "github:codefuse-ml/awesome-code-llm",
-        "github:dataelement/bisheng",
-        "github:genentech/opentreesearch",
-        "github:google-deepmind/funsearch",
-        "github:icaros-usc/pyribs",
-        "github:inter-co/science-codeevolve",
-        "github:jarvispei/scope",
-        "github:microsoft/coml",
-        "github:openbmb/agentverse",
-        "github:oppo-mente-lab/llm-self-judge",
-        "github:princeton-nlp/swe-agent",
-        "github:pureples/pureples",
-        "github:reworkd/agentgpt",
-        "github:shengranhu/adas",
-        "github:siyuyuan/evoagent",
-        "github:smol-ai/developer",
-        "github:stitionai/devika",
-        "github:xiaofangxd/llm_ea"
-      ]
-    },
-    {
       "key": "v0:b1:59b4e23821d80c19",
       "band": 1,
       "features": [
@@ -11970,6 +11912,60 @@
         "social:0129-blog-segmentfault-com-AI-Agent-Lightning-deephub-SegmentFault",
         "social:0303-Hacker-News-Claude-Code-s-new-hidden-feature-Swarms-Hacker-News",
         "blog:raw-blogs-index"
+      ]
+    },
+    {
+      "key": "v0:b1:72a6edbe27af7dab",
+      "band": 1,
+      "features": [
+        "rollback_or_safety",
+        "implementation_runnable",
+        "local_code_or_artifact",
+        "product_usability",
+        "teaching_model_card",
+        "evidence_chain_complete"
+      ],
+      "chars": "0++0+-",
+      "members": [
+        "github:ai4co/reevo",
+        "github:carperai/openelm",
+        "github:dataelement/bisheng",
+        "github:genentech/opentreesearch",
+        "github:google-deepmind/funsearch",
+        "github:icaros-usc/pyribs",
+        "github:inter-co/science-codeevolve",
+        "github:jarvispei/scope",
+        "github:microsoft/coml",
+        "github:openbmb/agentverse",
+        "github:princeton-nlp/swe-agent",
+        "github:reworkd/agentgpt",
+        "github:shengranhu/adas",
+        "github:siyuyuan/evoagent",
+        "github:smol-ai/developer",
+        "github:stitionai/devika",
+        "github:xiaofangxd/llm_ea",
+        "github:xlang-ai/openagents"
+      ],
+      "size": 18,
+      "sample_members": [
+        "github:ai4co/reevo",
+        "github:carperai/openelm",
+        "github:dataelement/bisheng",
+        "github:genentech/opentreesearch",
+        "github:google-deepmind/funsearch",
+        "github:icaros-usc/pyribs",
+        "github:inter-co/science-codeevolve",
+        "github:jarvispei/scope",
+        "github:microsoft/coml",
+        "github:openbmb/agentverse",
+        "github:princeton-nlp/swe-agent",
+        "github:reworkd/agentgpt",
+        "github:shengranhu/adas",
+        "github:siyuyuan/evoagent",
+        "github:smol-ai/developer",
+        "github:stitionai/devika",
+        "github:xiaofangxd/llm_ea",
+        "github:xlang-ai/openagents"
       ]
     },
     {
@@ -12549,52 +12545,6 @@
       ]
     },
     {
-      "key": "v0:b1:8cb78aef0dbd0bac",
-      "band": 1,
-      "features": [
-        "rollback_or_safety",
-        "implementation_runnable",
-        "local_code_or_artifact",
-        "product_usability",
-        "teaching_model_card",
-        "evidence_chain_complete"
-      ],
-      "chars": "00++00",
-      "members": [
-        "github:evoagentx/awesome-self-evolving-agents",
-        "github:evomap/awesome-agent-evolution",
-        "github:hkuds/openspace",
-        "github:khykd/reflector",
-        "github:knowledgexlab/muse",
-        "github:lyl1015/jarvisevo",
-        "github:machuangtao/llm-kg4qa",
-        "github:maxnorm8650/medagentsim",
-        "github:obra/superpowers",
-        "github:openclaw/openclaw",
-        "github:pinchbench/skill",
-        "github:sethkarten/continual-harness",
-        "github:sibyl-research-team/sibyl-research-system",
-        "github:zoe-yyx/agentnet"
-      ],
-      "size": 14,
-      "sample_members": [
-        "github:evoagentx/awesome-self-evolving-agents",
-        "github:evomap/awesome-agent-evolution",
-        "github:hkuds/openspace",
-        "github:khykd/reflector",
-        "github:knowledgexlab/muse",
-        "github:lyl1015/jarvisevo",
-        "github:machuangtao/llm-kg4qa",
-        "github:maxnorm8650/medagentsim",
-        "github:obra/superpowers",
-        "github:openclaw/openclaw",
-        "github:pinchbench/skill",
-        "github:sethkarten/continual-harness",
-        "github:sibyl-research-team/sibyl-research-system",
-        "github:zoe-yyx/agentnet"
-      ]
-    },
-    {
       "key": "v0:b1:0d24d96976aebe57",
       "band": 1,
       "features": [
@@ -12680,6 +12630,50 @@
         "paper:2604.14972",
         "paper:2604.27264",
         "paper:2605.18421"
+      ]
+    },
+    {
+      "key": "v0:b1:8cb78aef0dbd0bac",
+      "band": 1,
+      "features": [
+        "rollback_or_safety",
+        "implementation_runnable",
+        "local_code_or_artifact",
+        "product_usability",
+        "teaching_model_card",
+        "evidence_chain_complete"
+      ],
+      "chars": "00++00",
+      "members": [
+        "github:evoagentx/awesome-self-evolving-agents",
+        "github:evomap/awesome-agent-evolution",
+        "github:hkuds/openspace",
+        "github:khykd/reflector",
+        "github:knowledgexlab/muse",
+        "github:lyl1015/jarvisevo",
+        "github:machuangtao/llm-kg4qa",
+        "github:maxnorm8650/medagentsim",
+        "github:obra/superpowers",
+        "github:openclaw/openclaw",
+        "github:pinchbench/skill",
+        "github:sibyl-research-team/sibyl-research-system",
+        "github:zoe-yyx/agentnet"
+      ],
+      "size": 13,
+      "sample_members": [
+        "github:evoagentx/awesome-self-evolving-agents",
+        "github:evomap/awesome-agent-evolution",
+        "github:hkuds/openspace",
+        "github:khykd/reflector",
+        "github:knowledgexlab/muse",
+        "github:lyl1015/jarvisevo",
+        "github:machuangtao/llm-kg4qa",
+        "github:maxnorm8650/medagentsim",
+        "github:obra/superpowers",
+        "github:openclaw/openclaw",
+        "github:pinchbench/skill",
+        "github:sibyl-research-team/sibyl-research-system",
+        "github:zoe-yyx/agentnet"
       ]
     },
     {
@@ -12931,44 +12925,6 @@
       ]
     },
     {
-      "key": "v0:b1:28944db28cb00c36",
-      "band": 1,
-      "features": [
-        "rollback_or_safety",
-        "implementation_runnable",
-        "local_code_or_artifact",
-        "product_usability",
-        "teaching_model_card",
-        "evidence_chain_complete"
-      ],
-      "chars": "+++0+-",
-      "members": [
-        "github:ai4co/rl4co",
-        "github:alfa-group/tutorial_gp_llm",
-        "github:all-hands-ai/openhands",
-        "github:cma-es/pycma",
-        "github:deepauto-ai/automl-agent",
-        "github:e2b-dev/e2b",
-        "github:flowiseai/flowise",
-        "github:google-deepmind/opro",
-        "github:opendevin/opendevin",
-        "github:zju-llm-safety/darwin"
-      ],
-      "size": 10,
-      "sample_members": [
-        "github:ai4co/rl4co",
-        "github:alfa-group/tutorial_gp_llm",
-        "github:all-hands-ai/openhands",
-        "github:cma-es/pycma",
-        "github:deepauto-ai/automl-agent",
-        "github:e2b-dev/e2b",
-        "github:flowiseai/flowise",
-        "github:google-deepmind/opro",
-        "github:opendevin/opendevin",
-        "github:zju-llm-safety/darwin"
-      ]
-    },
-    {
       "key": "v0:b0:eac76b3a3870dd46",
       "band": 0,
       "features": [
@@ -13002,6 +12958,42 @@
         "github:microsoft/autogen",
         "github:ollama/ollama",
         "github:open-webui/open-webui"
+      ]
+    },
+    {
+      "key": "v0:b1:28944db28cb00c36",
+      "band": 1,
+      "features": [
+        "rollback_or_safety",
+        "implementation_runnable",
+        "local_code_or_artifact",
+        "product_usability",
+        "teaching_model_card",
+        "evidence_chain_complete"
+      ],
+      "chars": "+++0+-",
+      "members": [
+        "github:ai4co/rl4co",
+        "github:alfa-group/tutorial_gp_llm",
+        "github:all-hands-ai/openhands",
+        "github:cma-es/pycma",
+        "github:deepauto-ai/automl-agent",
+        "github:e2b-dev/e2b",
+        "github:flowiseai/flowise",
+        "github:google-deepmind/opro",
+        "github:opendevin/opendevin"
+      ],
+      "size": 9,
+      "sample_members": [
+        "github:ai4co/rl4co",
+        "github:alfa-group/tutorial_gp_llm",
+        "github:all-hands-ai/openhands",
+        "github:cma-es/pycma",
+        "github:deepauto-ai/automl-agent",
+        "github:e2b-dev/e2b",
+        "github:flowiseai/flowise",
+        "github:google-deepmind/opro",
+        "github:opendevin/opendevin"
       ]
     },
     {
@@ -13733,6 +13725,30 @@
       ]
     },
     {
+      "key": "v0:b1:5048129b4a33564e",
+      "band": 1,
+      "features": [
+        "rollback_or_safety",
+        "implementation_runnable",
+        "local_code_or_artifact",
+        "product_usability",
+        "teaching_model_card",
+        "evidence_chain_complete"
+      ],
+      "chars": "00+0+-",
+      "members": [
+        "github:codefuse-ml/awesome-code-llm",
+        "github:oppo-mente-lab/llm-self-judge",
+        "github:pureples/pureples"
+      ],
+      "size": 3,
+      "sample_members": [
+        "github:codefuse-ml/awesome-code-llm",
+        "github:oppo-mente-lab/llm-self-judge",
+        "github:pureples/pureples"
+      ]
+    },
+    {
       "key": "v0:b2:3721f203d1995056",
       "band": 2,
       "features": [
@@ -14434,6 +14450,26 @@
       "size": 1,
       "sample_members": [
         "paper:2601.05280"
+      ]
+    },
+    {
+      "key": "v0:b1:ac4972f0cd9ea767",
+      "band": 1,
+      "features": [
+        "rollback_or_safety",
+        "implementation_runnable",
+        "local_code_or_artifact",
+        "product_usability",
+        "teaching_model_card",
+        "evidence_chain_complete"
+      ],
+      "chars": "+0+0+-",
+      "members": [
+        "github:zju-llm-safety/darwin"
+      ],
+      "size": 1,
+      "sample_members": [
+        "github:zju-llm-safety/darwin"
       ]
     },
     {

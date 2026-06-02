@@ -92,6 +92,7 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [gepa-ai GEPA Frontier Deep Dive](synthesis/gepa-ai-gepa-frontier-deep-dive.md) — repair queue 第三项样本：高活跃 prompt/program/skill optimizer anchor，需继续用 optimize-anything artifact 做独立复现审查 | Rank: A | 2026-06-02
 - [gepa-ai optimize-anything Artifact Frontier Deep Dive](synthesis/gepa-ai-optimize-anything-artifact-frontier-deep-dive.md) — repair queue 第四项样本：低社区信号但高 offline verifier/log/checkpoint 证据密度的 GEPA paired reproducibility anchor | Rank: A | 2026-06-02
 - [langchain-ai Open SWE Frontier Deep Dive](synthesis/langchain-ai-open-swe-frontier-deep-dive.md) — repair queue 第五项样本：高活跃 internal coding-agent control-plane 与 reviewer-outcomes-learning anchor，需继续验证 Docker/MCP/warm-sandbox/回归门禁缺口 | Rank: A | 2026-06-02
+- [sethkarten Continual Harness Frontier Deep Dive](synthesis/sethkarten-continual-harness-frontier-deep-dive.md) — repair queue 第六项样本：reset-free harness-evolution anchor，需继续修复/验证 evolver add-path、skill code persistence 和独立复现边界 | Rank: A | 2026-06-02
 - [Frontier Value Queue](synthesis/frontier-value-queue.md) — 双链协议的可复跑队列：246 个 analyzed projects 分入 code-ready、clone-needed、metadata-refresh、baseline 等 lane，并接入 star-growth coverage/backlog | Rank: A | 2026-06-01
 - [modelscope AgentEvolver Frontier Deep Dive](synthesis/modelscope-agentevolver-frontier-deep-dive.md) — 第一个项目级双链深读样本：AgentEvolver 的环境到策略自进化闭环、代码证据、issue/resource 信号和复用风险 | Rank: A | 2026-06-01
 - [GitHub Star Growth Database](synthesis/github-star-growth-database.md) — 把累计 Star 降为历史 adoption prior，用 2026 new-star momentum、coverage status 和 Hugging Face-ready database 重建当前阶段排名 | Rank: A | 2026-06-01
@@ -107,5 +108,5 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Entities | 8 |
 | Concepts | 10 |
 | Sources | 30 |
-| Synthesis pages | 20 |
+| Synthesis pages | 21 |
 | Last updated | 2026-06-02 |

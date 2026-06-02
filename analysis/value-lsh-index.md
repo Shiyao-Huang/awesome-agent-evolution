@@ -1,6 +1,6 @@
 # Value LSH Index
 
-> Generated: 2026-06-02T02:53:10.310Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
+> Generated: 2026-06-02T03:55:10.739Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
 
 ## One Sentence
 
@@ -8,7 +8,7 @@ Value LSH turns comparison into a fast discrete scan: each material gets a `-1/0
 
 ## Three Sentences
 
-This run scanned 2219 materials across GitHub, papers, social/X, and blogs, then generated 168 non-empty LSH buckets and 3 clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the value score and evidence refs keep the ranking auditable. Incremental state is tracked in `data-engine/value-lsh-index/manifest.json`: 0 added, 0 changed, 0 removed, 2219 unchanged versus the previous run.
+This run scanned 2219 materials across GitHub, papers, social/X, and blogs, then generated 170 non-empty LSH buckets and 3 clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the value score and evidence refs keep the ranking auditable. Incremental state is tracked in `data-engine/value-lsh-index/manifest.json`: 0 added, 52 changed, 0 removed, 2167 unchanged versus the previous run.
 
 ## Why Discrete LSH
 
@@ -35,10 +35,10 @@ flowchart LR
 | --- | --- |
 | materials | 2219 |
 | value tags | 26 |
-| LSH buckets | 168 |
+| LSH buckets | 170 |
 | clusters | 3 |
-| candidate pairs scanned | 64601 |
-| accepted pairs | 55073 |
+| candidate pairs scanned | 64525 |
+| accepted pairs | 54951 |
 | broad buckets skipped | 27 |
 | tag version | 19810f296115 |
 

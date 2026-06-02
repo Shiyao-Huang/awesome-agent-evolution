@@ -13,13 +13,13 @@ updated: 2026-06-02
 
 ## One Sentence
 
-[CLAIM] 当前 repair queue 从 717 个 GitHub rows 中找出 682 个仍有证据修复动作的项目，并把它们分到 raw-meta-repair、deep-read-needed、issue-resource-scan、star-growth-repair、loop-verification。 — Source: `analysis/value-evidence-repair-queue.json`
+[CLAIM] 当前 repair queue 从 717 个 GitHub rows 中找出 681 个仍有证据修复动作的项目，并把它们分到 raw-meta-repair、deep-read-needed、issue-resource-scan、star-growth-repair、loop-verification。 — Source: `analysis/value-evidence-repair-queue.json`
 
 ## Three Sentences
 
-[CLAIM] 最大行动 lane 是 `deep-read-needed`：453 个 GitHub 项目缺少 clone/code deep read 后形成的 model-card/public report。 — Source: `analysis/value-evidence-repair-queue.json`
+[CLAIM] 最大行动 lane 是 `deep-read-needed`：452 个 GitHub 项目缺少 clone/code deep read 后形成的 model-card/public report。 — Source: `analysis/value-evidence-repair-queue.json`
 
-[CLAIM] 52 个项目缺 raw/meta capture，20 个项目缺 star-growth coverage，330 个项目 issue/resource signal 仍不清楚。 — Source: `analysis/value-evidence-repair-queue.json`
+[CLAIM] 52 个项目缺 raw/meta capture，20 个项目缺 star-growth coverage，329 个项目 issue/resource signal 仍不清楚。 — Source: `analysis/value-evidence-repair-queue.json`
 
 [CLAIM] repair score 是行动优先级，不是质量分；它的作用是把高价值或高矛盾项目推到“补证据”队列前面。 — Source: `analysis/value-evidence-repair-queue.md`
 
@@ -44,7 +44,7 @@ flowchart LR
 
 | Lane | Count | Meaning |
 |---|---:|---|
-| `deep-read-needed` | 453 | clone/read code and create model-card style deep report |
+| `deep-read-needed` | 452 | clone/read code and create model-card style deep report |
 | `issue-resource-scan` | 138 | scan GitHub issues, releases, discussions, PRs, linked resources |
 | `raw-meta-repair` | 52 | create or repair raw GitHub capture with complete metadata |
 | `loop-verification` | 35 | verify mutable artifact, feedback, verifier, retention, rollback |

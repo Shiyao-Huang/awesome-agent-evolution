@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T02:53:10.310Z",
+  "generated_at": "2026-06-02T03:55:10.739Z",
   "method": {
     "name": "discrete_value_lsh_v0",
     "summary": "Ternary value tags (-1/0/+1) are split into local hash bands for approximate near-neighbor recall and cluster discovery.",
@@ -9,7 +9,7 @@
     "threshold": 0.52
   },
   "summary": {
-    "generated_at": "2026-06-02T02:53:10.310Z",
+    "generated_at": "2026-06-02T03:55:10.739Z",
     "source": "all",
     "total_materials": 2219,
     "value_tag_count": 26,
@@ -27,13 +27,13 @@
       "high-value-candidate": 856,
       "low-signal-or-risk": 297
     },
-    "total_buckets": 168,
+    "total_buckets": 170,
     "total_clusters": 3,
     "score_average": 68.34,
     "confidence_average": 46.04,
     "lsh_stats": {
-      "candidate_pairs_scanned": 64601,
-      "accepted_pairs": 55073,
+      "candidate_pairs_scanned": 64525,
+      "accepted_pairs": 54951,
       "skipped_broad_buckets": [
         {
           "key": "v0:b1:226d012686e902e0",
@@ -73,7 +73,7 @@
         {
           "key": "v0:b1:88062eb178d67991",
           "band": 1,
-          "size": 159,
+          "size": 160,
           "features": [
             "rollback_or_safety",
             "implementation_runnable",
@@ -377,10 +377,10 @@
       ]
     },
     "incremental": {
-      "previous_generated_at": "2026-06-02T02:27:29.566Z",
+      "previous_generated_at": "2026-06-02T03:40:33.665Z",
       "added": 0,
-      "changed": 0,
-      "unchanged": 2219,
+      "changed": 52,
+      "unchanged": 2167,
       "removed": 0
     }
   },
@@ -868,7 +868,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/cuga-project_cuga-agent.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -1514,7 +1514,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/yunjuetech_yunjue-agent.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -2144,7 +2144,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/gepa-ai_gepa.md",
-              "note": "runnable docs terms"
+              "note": "local git mirror"
             }
           ],
           "local_code_or_artifact": [
@@ -2982,7 +2982,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/freedomintelligence_tiermem.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -3192,7 +3192,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/murataslan1_ai-agent-benchmark.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -4028,7 +4028,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/swapedoc_hermes2anti.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -4226,7 +4226,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/orchestra-research_ai-research-skills.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -5656,7 +5656,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/alienfader_continuity-benchmarks.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -5854,7 +5854,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/superagenticai_metaharness.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -6052,7 +6052,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/yuanchenbei_mem-gallery.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -6856,7 +6856,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/nousresearch_hermes-agent-self-evolution.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -7054,7 +7054,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/wazionapps_nexo.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -8262,7 +8262,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/agent0ai_agent-zero.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -8460,7 +8460,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/harness_harness-evals.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -8658,7 +8658,7 @@
           "implementation_runnable": [
             {
               "source": "raw-github/momo-personal-assistant_openclaw-plugin.md",
-              "note": "local git mirror"
+              "note": "runnable docs terms"
             }
           ],
           "local_code_or_artifact": [
@@ -13556,6 +13556,162 @@
       }
     },
     {
+      "id": "github:pureples/pureples",
+      "type": "github",
+      "title": "GP-LLM-Code-Evolution",
+      "url": "https://github.com/pureples/pureples",
+      "source_path": null,
+      "score": {
+        "values": {
+          "current_frontier_signal": 0,
+          "self_evolution_loop_fit": 1,
+          "mutable_artifact_clear": 1,
+          "feedback_signal_clear": 0,
+          "verifier_or_benchmark": 1,
+          "retention_or_memory": 0,
+          "rollback_or_safety": 0,
+          "implementation_runnable": 0,
+          "local_code_or_artifact": 1,
+          "product_usability": 0,
+          "teaching_model_card": 1,
+          "evidence_chain_complete": -1,
+          "timestamp_freshness": 1,
+          "continuity_active": 0,
+          "community_momentum": 0,
+          "star_growth_current": -1,
+          "paper_quality_signal": 0,
+          "benchmark_result": 0,
+          "method_novelty": 1,
+          "open_source_reuse": 1,
+          "issue_resource_signal": 0,
+          "hype_without_evidence": 0,
+          "stale_or_unknown_metadata": 1,
+          "useful_for_survey_seo": 1,
+          "user_need_fit": 0,
+          "compare_anchor_baseline": 0
+        },
+        "contributions": {
+          "current_frontier_signal": 0,
+          "self_evolution_loop_fit": 10,
+          "mutable_artifact_clear": 6,
+          "feedback_signal_clear": 0,
+          "verifier_or_benchmark": 8,
+          "retention_or_memory": 0,
+          "rollback_or_safety": 0,
+          "implementation_runnable": 0,
+          "local_code_or_artifact": 5,
+          "product_usability": 0,
+          "teaching_model_card": 4,
+          "evidence_chain_complete": -8,
+          "timestamp_freshness": 7,
+          "continuity_active": 0,
+          "community_momentum": 0,
+          "star_growth_current": -6,
+          "paper_quality_signal": 0,
+          "benchmark_result": 0,
+          "method_novelty": 5,
+          "open_source_reuse": 5,
+          "issue_resource_signal": 0,
+          "hype_without_evidence": 0,
+          "stale_or_unknown_metadata": -6,
+          "useful_for_survey_seo": 4,
+          "user_need_fit": 0,
+          "compare_anchor_baseline": 0
+        },
+        "tagEvidence": {
+          "self_evolution_loop_fit": [
+            {
+              "source": "https://github.com/pureples/pureples",
+              "note": "self-evolution terms"
+            }
+          ],
+          "mutable_artifact_clear": [
+            {
+              "source": "https://github.com/pureples/pureples",
+              "note": "mutable artifact terms"
+            }
+          ],
+          "verifier_or_benchmark": [
+            {
+              "source": "https://github.com/pureples/pureples",
+              "note": "benchmark/verifier terms"
+            }
+          ],
+          "local_code_or_artifact": [
+            {
+              "source": "https://github.com/pureples/pureples",
+              "note": "local mirror or report exists"
+            }
+          ],
+          "teaching_model_card": [
+            {
+              "source": "https://github.com/pureples/pureples",
+              "note": "project/public report exists"
+            }
+          ],
+          "evidence_chain_complete": [
+            {
+              "source": "https://github.com/pureples/pureples",
+              "note": "weak evidence chain"
+            }
+          ],
+          "timestamp_freshness": [
+            {
+              "source": "https://github.com/pureples/pureples",
+              "note": "2025 timestamp"
+            }
+          ],
+          "star_growth_current": [
+            {
+              "source": "https://github.com/pureples/pureples",
+              "note": "star history not fetched"
+            }
+          ],
+          "method_novelty": [
+            {
+              "source": "https://github.com/pureples/pureples",
+              "note": "novel method terms"
+            }
+          ],
+          "open_source_reuse": [
+            {
+              "source": "https://github.com/pureples/pureples",
+              "note": "license/docs present"
+            }
+          ],
+          "stale_or_unknown_metadata": [
+            {
+              "source": "https://github.com/pureples/pureples",
+              "note": "source path missing"
+            }
+          ],
+          "useful_for_survey_seo": [
+            {
+              "source": "https://github.com/pureples/pureples",
+              "note": "report or paper source"
+            }
+          ]
+        },
+        "raw_score": 34,
+        "value_score": 60.83,
+        "confidence": 46.15,
+        "nonzero_tags": 12,
+        "positive_tags": 9,
+        "negative_tags": 3,
+        "value_class": "low-signal-or-risk"
+      },
+      "evidence_refs": {
+        "github_report": "projects/42-gp-llm-code-evolution.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/42-gp-llm-code-evolution.md",
+        "raw_file": null,
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 244,
+        "star_growth_rank": 357
+      }
+    },
+    {
       "id": "github:jarvispei/scope",
       "type": "github",
       "title": "SCOPE",
@@ -13874,34 +14030,34 @@
       }
     },
     {
-      "id": "github:pureples/pureples",
+      "id": "github:codefuse-ml/awesome-code-llm",
       "type": "github",
-      "title": "GP-LLM-Code-Evolution",
-      "url": "https://github.com/pureples/pureples",
+      "title": "Awesome-Code-LLM",
+      "url": "https://github.com/CodeFuse-ML/awesome-code-llm",
       "source_path": null,
       "score": {
         "values": {
-          "current_frontier_signal": 0,
-          "self_evolution_loop_fit": 1,
+          "current_frontier_signal": 1,
+          "self_evolution_loop_fit": 0,
           "mutable_artifact_clear": 1,
           "feedback_signal_clear": 0,
           "verifier_or_benchmark": 1,
           "retention_or_memory": 0,
           "rollback_or_safety": 0,
-          "implementation_runnable": 1,
+          "implementation_runnable": 0,
           "local_code_or_artifact": 1,
           "product_usability": 0,
           "teaching_model_card": 1,
           "evidence_chain_complete": -1,
           "timestamp_freshness": 1,
           "continuity_active": 0,
-          "community_momentum": 0,
+          "community_momentum": 1,
           "star_growth_current": -1,
-          "paper_quality_signal": 0,
+          "paper_quality_signal": 1,
           "benchmark_result": 0,
-          "method_novelty": 1,
+          "method_novelty": 0,
           "open_source_reuse": 1,
-          "issue_resource_signal": 0,
+          "issue_resource_signal": 1,
           "hype_without_evidence": 0,
           "stale_or_unknown_metadata": 1,
           "useful_for_survey_seo": 1,
@@ -13909,27 +14065,27 @@
           "compare_anchor_baseline": 0
         },
         "contributions": {
-          "current_frontier_signal": 0,
-          "self_evolution_loop_fit": 10,
+          "current_frontier_signal": 8,
+          "self_evolution_loop_fit": 0,
           "mutable_artifact_clear": 6,
           "feedback_signal_clear": 0,
           "verifier_or_benchmark": 8,
           "retention_or_memory": 0,
           "rollback_or_safety": 0,
-          "implementation_runnable": 8,
+          "implementation_runnable": 0,
           "local_code_or_artifact": 5,
           "product_usability": 0,
           "teaching_model_card": 4,
           "evidence_chain_complete": -8,
           "timestamp_freshness": 7,
           "continuity_active": 0,
-          "community_momentum": 0,
+          "community_momentum": 5,
           "star_growth_current": -6,
-          "paper_quality_signal": 0,
+          "paper_quality_signal": 5,
           "benchmark_result": 0,
-          "method_novelty": 5,
+          "method_novelty": 0,
           "open_source_reuse": 5,
-          "issue_resource_signal": 0,
+          "issue_resource_signal": 4,
           "hype_without_evidence": 0,
           "stale_or_unknown_metadata": -6,
           "useful_for_survey_seo": 4,
@@ -13937,102 +14093,108 @@
           "compare_anchor_baseline": 0
         },
         "tagEvidence": {
-          "self_evolution_loop_fit": [
+          "current_frontier_signal": [
             {
-              "source": "https://github.com/pureples/pureples",
-              "note": "self-evolution terms"
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
+              "note": "2026 raw/activity signal"
             }
           ],
           "mutable_artifact_clear": [
             {
-              "source": "https://github.com/pureples/pureples",
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
               "note": "mutable artifact terms"
             }
           ],
           "verifier_or_benchmark": [
             {
-              "source": "https://github.com/pureples/pureples",
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
               "note": "benchmark/verifier terms"
-            }
-          ],
-          "implementation_runnable": [
-            {
-              "source": "https://github.com/pureples/pureples",
-              "note": "local git mirror"
             }
           ],
           "local_code_or_artifact": [
             {
-              "source": "https://github.com/pureples/pureples",
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
               "note": "local mirror or report exists"
             }
           ],
           "teaching_model_card": [
             {
-              "source": "https://github.com/pureples/pureples",
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
               "note": "project/public report exists"
             }
           ],
           "evidence_chain_complete": [
             {
-              "source": "https://github.com/pureples/pureples",
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
               "note": "weak evidence chain"
             }
           ],
           "timestamp_freshness": [
             {
-              "source": "https://github.com/pureples/pureples",
-              "note": "2025 timestamp"
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
+              "note": "2026 timestamp"
+            }
+          ],
+          "community_momentum": [
+            {
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
+              "note": "stars >= 1000 (2000)"
             }
           ],
           "star_growth_current": [
             {
-              "source": "https://github.com/pureples/pureples",
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
               "note": "star history not fetched"
             }
           ],
-          "method_novelty": [
+          "paper_quality_signal": [
             {
-              "source": "https://github.com/pureples/pureples",
-              "note": "novel method terms"
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
+              "note": "research-paper terms"
             }
           ],
           "open_source_reuse": [
             {
-              "source": "https://github.com/pureples/pureples",
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
               "note": "license/docs present"
+            }
+          ],
+          "issue_resource_signal": [
+            {
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
+              "note": "issue/resource terms"
             }
           ],
           "stale_or_unknown_metadata": [
             {
-              "source": "https://github.com/pureples/pureples",
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
               "note": "source path missing"
             }
           ],
           "useful_for_survey_seo": [
             {
-              "source": "https://github.com/pureples/pureples",
+              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
               "note": "report or paper source"
             }
           ]
         },
-        "raw_score": 42,
-        "value_score": 63.38,
-        "confidence": 50,
-        "nonzero_tags": 13,
-        "positive_tags": 10,
+        "raw_score": 41,
+        "value_score": 63.06,
+        "confidence": 53.85,
+        "nonzero_tags": 14,
+        "positive_tags": 11,
         "negative_tags": 3,
         "value_class": "low-signal-or-risk"
       },
       "evidence_refs": {
-        "github_report": "projects/42-gp-llm-code-evolution.md",
+        "github_report": "projects/37-awesome-code-llm.md",
         "analysis_report": null,
-        "public_report": "site/public/reports/projects/42-gp-llm-code-evolution.md",
+        "public_report": "site/public/reports/projects/37-awesome-code-llm.md",
         "raw_file": null,
         "rank_seed": null,
         "alternate_source_paths": [],
-        "frontier_rank": 244,
-        "star_growth_rank": 357
+        "frontier_rank": 220,
+        "star_growth_rank": 111
       }
     },
     {
@@ -14363,6 +14525,168 @@
         "alternate_source_paths": [],
         "frontier_rank": 235,
         "star_growth_rank": 34
+      }
+    },
+    {
+      "id": "github:oppo-mente-lab/llm-self-judge",
+      "type": "github",
+      "title": "LLM-Self-Judge",
+      "url": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+      "source_path": null,
+      "score": {
+        "values": {
+          "current_frontier_signal": 1,
+          "self_evolution_loop_fit": 1,
+          "mutable_artifact_clear": 1,
+          "feedback_signal_clear": 1,
+          "verifier_or_benchmark": 1,
+          "retention_or_memory": 0,
+          "rollback_or_safety": 0,
+          "implementation_runnable": 0,
+          "local_code_or_artifact": 1,
+          "product_usability": 0,
+          "teaching_model_card": 1,
+          "evidence_chain_complete": -1,
+          "timestamp_freshness": 1,
+          "continuity_active": 0,
+          "community_momentum": 0,
+          "star_growth_current": -1,
+          "paper_quality_signal": 0,
+          "benchmark_result": 0,
+          "method_novelty": 0,
+          "open_source_reuse": 1,
+          "issue_resource_signal": 0,
+          "hype_without_evidence": 0,
+          "stale_or_unknown_metadata": 1,
+          "useful_for_survey_seo": 1,
+          "user_need_fit": 0,
+          "compare_anchor_baseline": 0
+        },
+        "contributions": {
+          "current_frontier_signal": 8,
+          "self_evolution_loop_fit": 10,
+          "mutable_artifact_clear": 6,
+          "feedback_signal_clear": 6,
+          "verifier_or_benchmark": 8,
+          "retention_or_memory": 0,
+          "rollback_or_safety": 0,
+          "implementation_runnable": 0,
+          "local_code_or_artifact": 5,
+          "product_usability": 0,
+          "teaching_model_card": 4,
+          "evidence_chain_complete": -8,
+          "timestamp_freshness": 7,
+          "continuity_active": 0,
+          "community_momentum": 0,
+          "star_growth_current": -6,
+          "paper_quality_signal": 0,
+          "benchmark_result": 0,
+          "method_novelty": 0,
+          "open_source_reuse": 5,
+          "issue_resource_signal": 0,
+          "hype_without_evidence": 0,
+          "stale_or_unknown_metadata": -6,
+          "useful_for_survey_seo": 4,
+          "user_need_fit": 0,
+          "compare_anchor_baseline": 0
+        },
+        "tagEvidence": {
+          "current_frontier_signal": [
+            {
+              "source": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+              "note": "frontier queue top-30"
+            }
+          ],
+          "self_evolution_loop_fit": [
+            {
+              "source": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+              "note": "self-evolution terms"
+            }
+          ],
+          "mutable_artifact_clear": [
+            {
+              "source": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+              "note": "mutable artifact terms"
+            }
+          ],
+          "feedback_signal_clear": [
+            {
+              "source": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+              "note": "feedback terms"
+            }
+          ],
+          "verifier_or_benchmark": [
+            {
+              "source": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+              "note": "benchmark/verifier terms"
+            }
+          ],
+          "local_code_or_artifact": [
+            {
+              "source": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+              "note": "local mirror or report exists"
+            }
+          ],
+          "teaching_model_card": [
+            {
+              "source": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+              "note": "project/public report exists"
+            }
+          ],
+          "evidence_chain_complete": [
+            {
+              "source": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+              "note": "weak evidence chain"
+            }
+          ],
+          "timestamp_freshness": [
+            {
+              "source": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+              "note": "2026 timestamp"
+            }
+          ],
+          "star_growth_current": [
+            {
+              "source": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+              "note": "star history not fetched"
+            }
+          ],
+          "open_source_reuse": [
+            {
+              "source": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+              "note": "license/docs present"
+            }
+          ],
+          "stale_or_unknown_metadata": [
+            {
+              "source": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+              "note": "source path missing"
+            }
+          ],
+          "useful_for_survey_seo": [
+            {
+              "source": "https://github.com/OPPO-Mente-Lab/LLM-Self-Judge",
+              "note": "report or paper source"
+            }
+          ]
+        },
+        "raw_score": 43,
+        "value_score": 63.69,
+        "confidence": 50,
+        "nonzero_tags": 13,
+        "positive_tags": 10,
+        "negative_tags": 3,
+        "value_class": "low-signal-or-risk"
+      },
+      "evidence_refs": {
+        "github_report": "projects/oppo_mente_lab__llm_self_judge.md",
+        "analysis_report": null,
+        "public_report": "site/public/reports/projects/oppo_mente_lab__llm_self_judge.md",
+        "raw_file": null,
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": 12,
+        "star_growth_rank": 428
       }
     },
     {
@@ -15206,180 +15530,6 @@
       }
     },
     {
-      "id": "github:codefuse-ml/awesome-code-llm",
-      "type": "github",
-      "title": "Awesome-Code-LLM",
-      "url": "https://github.com/CodeFuse-ML/awesome-code-llm",
-      "source_path": null,
-      "score": {
-        "values": {
-          "current_frontier_signal": 1,
-          "self_evolution_loop_fit": 0,
-          "mutable_artifact_clear": 1,
-          "feedback_signal_clear": 0,
-          "verifier_or_benchmark": 1,
-          "retention_or_memory": 0,
-          "rollback_or_safety": 0,
-          "implementation_runnable": 1,
-          "local_code_or_artifact": 1,
-          "product_usability": 0,
-          "teaching_model_card": 1,
-          "evidence_chain_complete": -1,
-          "timestamp_freshness": 1,
-          "continuity_active": 0,
-          "community_momentum": 1,
-          "star_growth_current": -1,
-          "paper_quality_signal": 1,
-          "benchmark_result": 0,
-          "method_novelty": 0,
-          "open_source_reuse": 1,
-          "issue_resource_signal": 1,
-          "hype_without_evidence": 0,
-          "stale_or_unknown_metadata": 1,
-          "useful_for_survey_seo": 1,
-          "user_need_fit": 0,
-          "compare_anchor_baseline": 0
-        },
-        "contributions": {
-          "current_frontier_signal": 8,
-          "self_evolution_loop_fit": 0,
-          "mutable_artifact_clear": 6,
-          "feedback_signal_clear": 0,
-          "verifier_or_benchmark": 8,
-          "retention_or_memory": 0,
-          "rollback_or_safety": 0,
-          "implementation_runnable": 8,
-          "local_code_or_artifact": 5,
-          "product_usability": 0,
-          "teaching_model_card": 4,
-          "evidence_chain_complete": -8,
-          "timestamp_freshness": 7,
-          "continuity_active": 0,
-          "community_momentum": 5,
-          "star_growth_current": -6,
-          "paper_quality_signal": 5,
-          "benchmark_result": 0,
-          "method_novelty": 0,
-          "open_source_reuse": 5,
-          "issue_resource_signal": 4,
-          "hype_without_evidence": 0,
-          "stale_or_unknown_metadata": -6,
-          "useful_for_survey_seo": 4,
-          "user_need_fit": 0,
-          "compare_anchor_baseline": 0
-        },
-        "tagEvidence": {
-          "current_frontier_signal": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "2026 raw/activity signal"
-            }
-          ],
-          "mutable_artifact_clear": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "mutable artifact terms"
-            }
-          ],
-          "verifier_or_benchmark": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "benchmark/verifier terms"
-            }
-          ],
-          "implementation_runnable": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "local git mirror"
-            }
-          ],
-          "local_code_or_artifact": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "local mirror or report exists"
-            }
-          ],
-          "teaching_model_card": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "project/public report exists"
-            }
-          ],
-          "evidence_chain_complete": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "weak evidence chain"
-            }
-          ],
-          "timestamp_freshness": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "2026 timestamp"
-            }
-          ],
-          "community_momentum": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "stars >= 1000 (2000)"
-            }
-          ],
-          "star_growth_current": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "star history not fetched"
-            }
-          ],
-          "paper_quality_signal": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "research-paper terms"
-            }
-          ],
-          "open_source_reuse": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "license/docs present"
-            }
-          ],
-          "issue_resource_signal": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "issue/resource terms"
-            }
-          ],
-          "stale_or_unknown_metadata": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "source path missing"
-            }
-          ],
-          "useful_for_survey_seo": [
-            {
-              "source": "https://github.com/CodeFuse-ML/awesome-code-llm",
-              "note": "report or paper source"
-            }
-          ]
-        },
-        "raw_score": 49,
-        "value_score": 65.61,
-        "confidence": 57.69,
-        "nonzero_tags": 15,
-        "positive_tags": 12,
-        "negative_tags": 3,
-        "value_class": "low-signal-or-risk"
-      },
-      "evidence_refs": {
-        "github_report": "projects/37-awesome-code-llm.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/37-awesome-code-llm.md",
-        "raw_file": null,
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": 220,
-        "star_growth_rank": 111
-      }
-    },
-    {
       "id": "github:ai4co/reevo",
       "type": "github",
       "title": "ReEvo",
@@ -15546,180 +15696,6 @@
         "frontier_rank": 217,
         "star_growth_rank": 203
       }
-    },
-    {
-      "id": "github:facebookresearch/nevergrad",
-      "type": "github",
-      "title": "Nevergrad",
-      "url": "https://github.com/facebookresearch/nevergrad",
-      "source_path": null,
-      "score": {
-        "values": {
-          "current_frontier_signal": 0,
-          "self_evolution_loop_fit": 1,
-          "mutable_artifact_clear": 1,
-          "feedback_signal_clear": 0,
-          "verifier_or_benchmark": 1,
-          "retention_or_memory": 0,
-          "rollback_or_safety": 0,
-          "implementation_runnable": 1,
-          "local_code_or_artifact": 1,
-          "product_usability": 1,
-          "teaching_model_card": 1,
-          "evidence_chain_complete": -1,
-          "timestamp_freshness": 1,
-          "continuity_active": 0,
-          "community_momentum": 1,
-          "star_growth_current": -1,
-          "paper_quality_signal": 0,
-          "benchmark_result": 0,
-          "method_novelty": 0,
-          "open_source_reuse": 1,
-          "issue_resource_signal": 1,
-          "hype_without_evidence": 0,
-          "stale_or_unknown_metadata": 1,
-          "useful_for_survey_seo": 1,
-          "user_need_fit": 0,
-          "compare_anchor_baseline": 0
-        },
-        "contributions": {
-          "current_frontier_signal": 0,
-          "self_evolution_loop_fit": 10,
-          "mutable_artifact_clear": 6,
-          "feedback_signal_clear": 0,
-          "verifier_or_benchmark": 8,
-          "retention_or_memory": 0,
-          "rollback_or_safety": 0,
-          "implementation_runnable": 8,
-          "local_code_or_artifact": 5,
-          "product_usability": 5,
-          "teaching_model_card": 4,
-          "evidence_chain_complete": -8,
-          "timestamp_freshness": 7,
-          "continuity_active": 0,
-          "community_momentum": 5,
-          "star_growth_current": -6,
-          "paper_quality_signal": 0,
-          "benchmark_result": 0,
-          "method_novelty": 0,
-          "open_source_reuse": 5,
-          "issue_resource_signal": 4,
-          "hype_without_evidence": 0,
-          "stale_or_unknown_metadata": -6,
-          "useful_for_survey_seo": 4,
-          "user_need_fit": 0,
-          "compare_anchor_baseline": 0
-        },
-        "tagEvidence": {
-          "self_evolution_loop_fit": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "self-evolution terms"
-            }
-          ],
-          "mutable_artifact_clear": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "mutable artifact terms"
-            }
-          ],
-          "verifier_or_benchmark": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "local tests/evals flags"
-            }
-          ],
-          "implementation_runnable": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "local clone with docs/tests/examples"
-            }
-          ],
-          "local_code_or_artifact": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "local mirror or report exists"
-            }
-          ],
-          "product_usability": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "usefulness score high"
-            }
-          ],
-          "teaching_model_card": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "project/public report exists"
-            }
-          ],
-          "evidence_chain_complete": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "weak evidence chain"
-            }
-          ],
-          "timestamp_freshness": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "2025 timestamp"
-            }
-          ],
-          "community_momentum": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "stars >= 1000 (4000)"
-            }
-          ],
-          "star_growth_current": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "star history not fetched"
-            }
-          ],
-          "open_source_reuse": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "license/docs present"
-            }
-          ],
-          "issue_resource_signal": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "issue templates present"
-            }
-          ],
-          "stale_or_unknown_metadata": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "source path missing"
-            }
-          ],
-          "useful_for_survey_seo": [
-            {
-              "source": "https://github.com/facebookresearch/nevergrad",
-              "note": "report or paper source"
-            }
-          ]
-        },
-        "raw_score": 51,
-        "value_score": 66.24,
-        "confidence": 57.69,
-        "nonzero_tags": 15,
-        "positive_tags": 12,
-        "negative_tags": 3,
-        "value_class": "low-signal-or-risk"
-      },
-      "evidence_refs": {
-        "github_report": "projects/28-nevergrad-derivative-free.md",
-        "analysis_report": null,
-        "public_report": "site/public/reports/projects/28-nevergrad-derivative-free.md",
-        "raw_file": null,
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": 227,
-        "star_growth_rank": 88
-      }
     }
   ],
   "clusters": [
@@ -15778,7 +15754,7 @@
         },
         {
           "id": "implementation_runnable",
-          "average": 0.701,
+          "average": 0.699,
           "label": "Runnable implementation"
         }
       ],
@@ -22186,6 +22162,7 @@
         "github:sachinsharma9780/memweave",
         "github:samuraigpt/awesome-openclaw",
         "github:seb1n/awesome-ai-agent-skills",
+        "github:sethkarten/continual-harness",
         "github:sevenschulte/agentic-harness",
         "github:shareai-lab/kbench",
         "github:shareai-lab/learn-claude-code",
@@ -22222,7 +22199,7 @@
         "github:zocomputer/skills",
         "github:zorazrw/agent-workflow-memory"
       ],
-      "size": 159,
+      "size": 160,
       "sample_members": [
         "github:0xnyk/lacp",
         "github:aayoawoyemi/ori-mnemos",
@@ -27849,65 +27826,6 @@
       ]
     },
     {
-      "key": "v0:b1:72a6edbe27af7dab",
-      "band": 1,
-      "features": [
-        "rollback_or_safety",
-        "implementation_runnable",
-        "local_code_or_artifact",
-        "product_usability",
-        "teaching_model_card",
-        "evidence_chain_complete"
-      ],
-      "chars": "0++0+-",
-      "members": [
-        "github:ai4co/reevo",
-        "github:carperai/openelm",
-        "github:codefuse-ml/awesome-code-llm",
-        "github:dataelement/bisheng",
-        "github:genentech/opentreesearch",
-        "github:google-deepmind/funsearch",
-        "github:icaros-usc/pyribs",
-        "github:inter-co/science-codeevolve",
-        "github:jarvispei/scope",
-        "github:microsoft/coml",
-        "github:openbmb/agentverse",
-        "github:oppo-mente-lab/llm-self-judge",
-        "github:princeton-nlp/swe-agent",
-        "github:pureples/pureples",
-        "github:reworkd/agentgpt",
-        "github:shengranhu/adas",
-        "github:siyuyuan/evoagent",
-        "github:smol-ai/developer",
-        "github:stitionai/devika",
-        "github:xiaofangxd/llm_ea",
-        "github:xlang-ai/openagents"
-      ],
-      "size": 21,
-      "sample_members": [
-        "github:ai4co/reevo",
-        "github:carperai/openelm",
-        "github:codefuse-ml/awesome-code-llm",
-        "github:dataelement/bisheng",
-        "github:genentech/opentreesearch",
-        "github:google-deepmind/funsearch",
-        "github:icaros-usc/pyribs",
-        "github:inter-co/science-codeevolve",
-        "github:jarvispei/scope",
-        "github:microsoft/coml",
-        "github:openbmb/agentverse",
-        "github:oppo-mente-lab/llm-self-judge",
-        "github:princeton-nlp/swe-agent",
-        "github:pureples/pureples",
-        "github:reworkd/agentgpt",
-        "github:shengranhu/adas",
-        "github:siyuyuan/evoagent",
-        "github:smol-ai/developer",
-        "github:stitionai/devika",
-        "github:xiaofangxd/llm_ea"
-      ]
-    },
-    {
       "key": "v0:b1:59b4e23821d80c19",
       "band": 1,
       "features": [
@@ -28021,6 +27939,60 @@
         "social:0129-blog-segmentfault-com-AI-Agent-Lightning-deephub-SegmentFault",
         "social:0303-Hacker-News-Claude-Code-s-new-hidden-feature-Swarms-Hacker-News",
         "blog:raw-blogs-index"
+      ]
+    },
+    {
+      "key": "v0:b1:72a6edbe27af7dab",
+      "band": 1,
+      "features": [
+        "rollback_or_safety",
+        "implementation_runnable",
+        "local_code_or_artifact",
+        "product_usability",
+        "teaching_model_card",
+        "evidence_chain_complete"
+      ],
+      "chars": "0++0+-",
+      "members": [
+        "github:ai4co/reevo",
+        "github:carperai/openelm",
+        "github:dataelement/bisheng",
+        "github:genentech/opentreesearch",
+        "github:google-deepmind/funsearch",
+        "github:icaros-usc/pyribs",
+        "github:inter-co/science-codeevolve",
+        "github:jarvispei/scope",
+        "github:microsoft/coml",
+        "github:openbmb/agentverse",
+        "github:princeton-nlp/swe-agent",
+        "github:reworkd/agentgpt",
+        "github:shengranhu/adas",
+        "github:siyuyuan/evoagent",
+        "github:smol-ai/developer",
+        "github:stitionai/devika",
+        "github:xiaofangxd/llm_ea",
+        "github:xlang-ai/openagents"
+      ],
+      "size": 18,
+      "sample_members": [
+        "github:ai4co/reevo",
+        "github:carperai/openelm",
+        "github:dataelement/bisheng",
+        "github:genentech/opentreesearch",
+        "github:google-deepmind/funsearch",
+        "github:icaros-usc/pyribs",
+        "github:inter-co/science-codeevolve",
+        "github:jarvispei/scope",
+        "github:microsoft/coml",
+        "github:openbmb/agentverse",
+        "github:princeton-nlp/swe-agent",
+        "github:reworkd/agentgpt",
+        "github:shengranhu/adas",
+        "github:siyuyuan/evoagent",
+        "github:smol-ai/developer",
+        "github:stitionai/devika",
+        "github:xiaofangxd/llm_ea",
+        "github:xlang-ai/openagents"
       ]
     },
     {
@@ -28600,52 +28572,6 @@
       ]
     },
     {
-      "key": "v0:b1:8cb78aef0dbd0bac",
-      "band": 1,
-      "features": [
-        "rollback_or_safety",
-        "implementation_runnable",
-        "local_code_or_artifact",
-        "product_usability",
-        "teaching_model_card",
-        "evidence_chain_complete"
-      ],
-      "chars": "00++00",
-      "members": [
-        "github:evoagentx/awesome-self-evolving-agents",
-        "github:evomap/awesome-agent-evolution",
-        "github:hkuds/openspace",
-        "github:khykd/reflector",
-        "github:knowledgexlab/muse",
-        "github:lyl1015/jarvisevo",
-        "github:machuangtao/llm-kg4qa",
-        "github:maxnorm8650/medagentsim",
-        "github:obra/superpowers",
-        "github:openclaw/openclaw",
-        "github:pinchbench/skill",
-        "github:sethkarten/continual-harness",
-        "github:sibyl-research-team/sibyl-research-system",
-        "github:zoe-yyx/agentnet"
-      ],
-      "size": 14,
-      "sample_members": [
-        "github:evoagentx/awesome-self-evolving-agents",
-        "github:evomap/awesome-agent-evolution",
-        "github:hkuds/openspace",
-        "github:khykd/reflector",
-        "github:knowledgexlab/muse",
-        "github:lyl1015/jarvisevo",
-        "github:machuangtao/llm-kg4qa",
-        "github:maxnorm8650/medagentsim",
-        "github:obra/superpowers",
-        "github:openclaw/openclaw",
-        "github:pinchbench/skill",
-        "github:sethkarten/continual-harness",
-        "github:sibyl-research-team/sibyl-research-system",
-        "github:zoe-yyx/agentnet"
-      ]
-    },
-    {
       "key": "v0:b1:0d24d96976aebe57",
       "band": 1,
       "features": [
@@ -28731,6 +28657,50 @@
         "paper:2604.14972",
         "paper:2604.27264",
         "paper:2605.18421"
+      ]
+    },
+    {
+      "key": "v0:b1:8cb78aef0dbd0bac",
+      "band": 1,
+      "features": [
+        "rollback_or_safety",
+        "implementation_runnable",
+        "local_code_or_artifact",
+        "product_usability",
+        "teaching_model_card",
+        "evidence_chain_complete"
+      ],
+      "chars": "00++00",
+      "members": [
+        "github:evoagentx/awesome-self-evolving-agents",
+        "github:evomap/awesome-agent-evolution",
+        "github:hkuds/openspace",
+        "github:khykd/reflector",
+        "github:knowledgexlab/muse",
+        "github:lyl1015/jarvisevo",
+        "github:machuangtao/llm-kg4qa",
+        "github:maxnorm8650/medagentsim",
+        "github:obra/superpowers",
+        "github:openclaw/openclaw",
+        "github:pinchbench/skill",
+        "github:sibyl-research-team/sibyl-research-system",
+        "github:zoe-yyx/agentnet"
+      ],
+      "size": 13,
+      "sample_members": [
+        "github:evoagentx/awesome-self-evolving-agents",
+        "github:evomap/awesome-agent-evolution",
+        "github:hkuds/openspace",
+        "github:khykd/reflector",
+        "github:knowledgexlab/muse",
+        "github:lyl1015/jarvisevo",
+        "github:machuangtao/llm-kg4qa",
+        "github:maxnorm8650/medagentsim",
+        "github:obra/superpowers",
+        "github:openclaw/openclaw",
+        "github:pinchbench/skill",
+        "github:sibyl-research-team/sibyl-research-system",
+        "github:zoe-yyx/agentnet"
       ]
     },
     {
@@ -28982,44 +28952,6 @@
       ]
     },
     {
-      "key": "v0:b1:28944db28cb00c36",
-      "band": 1,
-      "features": [
-        "rollback_or_safety",
-        "implementation_runnable",
-        "local_code_or_artifact",
-        "product_usability",
-        "teaching_model_card",
-        "evidence_chain_complete"
-      ],
-      "chars": "+++0+-",
-      "members": [
-        "github:ai4co/rl4co",
-        "github:alfa-group/tutorial_gp_llm",
-        "github:all-hands-ai/openhands",
-        "github:cma-es/pycma",
-        "github:deepauto-ai/automl-agent",
-        "github:e2b-dev/e2b",
-        "github:flowiseai/flowise",
-        "github:google-deepmind/opro",
-        "github:opendevin/opendevin",
-        "github:zju-llm-safety/darwin"
-      ],
-      "size": 10,
-      "sample_members": [
-        "github:ai4co/rl4co",
-        "github:alfa-group/tutorial_gp_llm",
-        "github:all-hands-ai/openhands",
-        "github:cma-es/pycma",
-        "github:deepauto-ai/automl-agent",
-        "github:e2b-dev/e2b",
-        "github:flowiseai/flowise",
-        "github:google-deepmind/opro",
-        "github:opendevin/opendevin",
-        "github:zju-llm-safety/darwin"
-      ]
-    },
-    {
       "key": "v0:b0:eac76b3a3870dd46",
       "band": 0,
       "features": [
@@ -29053,6 +28985,42 @@
         "github:microsoft/autogen",
         "github:ollama/ollama",
         "github:open-webui/open-webui"
+      ]
+    },
+    {
+      "key": "v0:b1:28944db28cb00c36",
+      "band": 1,
+      "features": [
+        "rollback_or_safety",
+        "implementation_runnable",
+        "local_code_or_artifact",
+        "product_usability",
+        "teaching_model_card",
+        "evidence_chain_complete"
+      ],
+      "chars": "+++0+-",
+      "members": [
+        "github:ai4co/rl4co",
+        "github:alfa-group/tutorial_gp_llm",
+        "github:all-hands-ai/openhands",
+        "github:cma-es/pycma",
+        "github:deepauto-ai/automl-agent",
+        "github:e2b-dev/e2b",
+        "github:flowiseai/flowise",
+        "github:google-deepmind/opro",
+        "github:opendevin/opendevin"
+      ],
+      "size": 9,
+      "sample_members": [
+        "github:ai4co/rl4co",
+        "github:alfa-group/tutorial_gp_llm",
+        "github:all-hands-ai/openhands",
+        "github:cma-es/pycma",
+        "github:deepauto-ai/automl-agent",
+        "github:e2b-dev/e2b",
+        "github:flowiseai/flowise",
+        "github:google-deepmind/opro",
+        "github:opendevin/opendevin"
       ]
     },
     {
@@ -29128,7 +29096,60 @@
       ]
     }
   ],
-  "changed_items": [],
+  "changed_items": [
+    "github:ag2ai/ag2",
+    "github:agenta-ai/agenta",
+    "github:ai4co/reevo",
+    "github:ai4co/rl4co",
+    "github:alfa-group/tutorial_gp_llm",
+    "github:all-hands-ai/openhands",
+    "github:automl/auto-sklearn",
+    "github:berriai/litellm",
+    "github:camel-ai/camel",
+    "github:carperai/openelm",
+    "github:chainlit/chainlit",
+    "github:cheshire-cat-ai/core",
+    "github:cma-es/pycma",
+    "github:codefuse-ml/awesome-code-llm",
+    "github:dataelement/bisheng",
+    "github:deap/deap",
+    "github:deepauto-ai/automl-agent",
+    "github:e2b-dev/e2b",
+    "github:facebookresearch/nevergrad",
+    "github:flowiseai/flowise",
+    "github:foundationagents/metagpt",
+    "github:future-agi/future-agi",
+    "github:genentech/opentreesearch",
+    "github:google-deepmind/funsearch",
+    "github:google-deepmind/opro",
+    "github:icaros-usc/pyribs",
+    "github:inter-co/science-codeevolve",
+    "github:jarvispei/scope",
+    "github:langflow-ai/langflow",
+    "github:langgenius/dify",
+    "github:microsoft/autogen",
+    "github:microsoft/coml",
+    "github:ollama/ollama",
+    "github:open-webui/open-webui",
+    "github:openbmb/agentverse",
+    "github:openbmb/chatdev",
+    "github:opendevin/opendevin",
+    "github:oppo-mente-lab/llm-self-judge",
+    "github:phidatahq/phidata",
+    "github:princeton-nlp/swe-agent",
+    "github:pureples/pureples",
+    "github:reworkd/agentgpt",
+    "github:shengranhu/adas",
+    "github:siyuyuan/evoagent",
+    "github:smol-ai/developer",
+    "github:stitionai/devika",
+    "github:thudm/agentbench",
+    "github:web-arena-x/webarena",
+    "github:xiaofangxd/llm_ea",
+    "github:xlang-ai/openagents",
+    "github:yoheinakajima/babyagi",
+    "github:zju-llm-safety/darwin"
+  ],
   "added_items": [],
   "removed_items": []
 }
