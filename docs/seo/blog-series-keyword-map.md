@@ -84,10 +84,11 @@ flowchart TD
 | Platform | Action | Status |
 |---|---|---|
 | GitHub Pages | Custom domain set to `agent-evolution.com` | Done |
-| Hostinger DNS | A records for apex + `www` CNAME to GitHub Pages | Done; Google/Cloudflare DNS-over-HTTPS see GitHub Pages records |
-| GitHub Pages HTTPS | Wait for / re-request GitHub certificate, then enable Enforce HTTPS | Blocking SEO validation: 2026-06-01 live TLS still serves `*.github.io`, not `agent-evolution.com` |
-| Google Search Console | Add Domain property for `agent-evolution.com`; add DNS TXT verification in Hostinger | Token received; DNS TXT still needs verification wait |
+| Hostinger DNS | A records for apex + `www` CNAME to GitHub Pages | Done; 2026-06-01 live health check says apex and `www` are valid and served by Pages |
+| GitHub Pages HTTPS | Wait for / re-request GitHub certificate, then enable Enforce HTTPS | Blocking SEO validation: 2026-06-01 19:13 +0800 Pages API still shows `https_certificate=null`, `https_enforced=false`; API re-save accepted, but `https_enforced=true` is rejected until the certificate exists |
+| Google Search Console | Add Domain property for `agent-evolution.com`; add DNS TXT verification in Hostinger | Search Console notifications are active; do not request validation until GitHub Pages HTTPS passes strict fetch |
 | Google Search Console | Submit `https://agent-evolution.com/sitemap-index.xml` | Use after HTTPS certificate passes; sitemap currently has URLs, but HTTPS fetch fails strict certificate verification |
+| All-pages SEO audit | Build and inspect generated pages | Done locally: `npm run build` generated 388 pages; `npm run seo:audit` passed 388 HTML pages |
 | Bing Webmaster Tools | Add site or import from Search Console; add DNS TXT if needed | Pending token |
 | Rich Results Test | Test one blog post and one project model-card page | Pending deployment |
 | URL Inspection | Request indexing for `/`, `/blog/`, `/search/`, top 8 blog posts | Pending Search Console ownership |

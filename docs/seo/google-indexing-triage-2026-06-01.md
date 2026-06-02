@@ -26,6 +26,31 @@
 | `openssl s_client -servername agent-evolution.com` | certificate subject `CN=*.github.io`; SAN lacks `agent-evolution.com` | GitHub Pages custom-domain certificate is not serving yet. |
 | `curl -k https://agent-evolution.com/graph/` | canonical `https://agent-evolution.com/graph/`; contains `coverage-debt` | Fragment URL should collapse to `/graph/`. |
 
+## Live Retest — 2026-06-01 18:30 +0800
+
+| Check | Result | Meaning |
+|---|---|---|
+| `gh api repos/Shiyao-Huang/awesome-agent-evolution/pages` | `cname=agent-evolution.com`, `build_type=workflow`, `https_enforced=false`, `https_certificate=null` | GitHub Pages knows the custom domain, but no certificate is attached yet. |
+| `gh api repos/Shiyao-Huang/awesome-agent-evolution/pages/health` | apex and `www` are valid, DNS resolves, both are served by Pages, `responds_to_https=false`, `https_error=peer_failed_verification`, `is_https_eligible=true` | DNS is pointed correctly; the remaining blocker is certificate provisioning / HTTPS enforcement. |
+| `dig agent-evolution.com A` | GitHub Pages IPs `185.199.108.153` through `185.199.111.153` | Apex DNS is correct for GitHub Pages. |
+| `dig www.agent-evolution.com CNAME` | `shiyao-huang.github.io.` | `www` points to the GitHub Pages user domain and redirects to apex. |
+| `curl -fsS https://agent-evolution.com/` | fails with `SSL: no alternative certificate subject name matches target host name` | Strict HTTPS clients, including Googlebot, can still fail the canonical domain. |
+| `curl -k https://agent-evolution.com/sitemap-0.xml` | `388` `<loc>` entries | Sitemap generation remains healthy; do not debug this as an empty sitemap issue. |
+| `curl https://shiyao-huang.github.io/awesome-agent-evolution/` | 301 to `http://agent-evolution.com/` | The GitHub Pages URL should not be submitted as canonical; it funnels back to the custom domain. |
+
+## All-Pages Retest — 2026-06-01 19:13 +0800
+
+| Check | Result | Meaning |
+|---|---|---|
+| `(cd site && npm run build)` | builds `388` static pages | All generated pages are buildable. Existing TypeScript hints remain non-blocking; there are `0 errors`. |
+| `(cd site && npm run seo:audit)` | `SEO audit passed: 388 HTML pages checked.` | All local HTML pages have useful title, meta description, canonical URL, JSON-LD, no conflicting GitHub Pages canonical, and required generated assets. |
+| `site/dist/sitemap-0.xml` | `388` `<loc>` entries | The sitemap covers the generated HTML page set. |
+| `gh api -X PUT .../pages -f cname=agent-evolution.com -f build_type=workflow` | accepted | Re-saved the Pages custom domain via API to nudge certificate provisioning. |
+| `gh api -X PUT .../pages ... -F https_enforced=true` | rejected: `The certificate does not exist yet` | HTTPS cannot be enforced until GitHub creates the certificate. |
+| Pages API after re-save | `https_certificate=null`, `https_enforced=false` | Still waiting on GitHub Pages certificate provisioning. |
+
+Conclusion: the "all pages" indexing blocker is not per-page SEO metadata. It is a domain-wide HTTPS certificate blocker; until the certificate exists, every canonical `https://agent-evolution.com/...` URL can fail strict fetch.
+
 ## Crawl Signal Map
 
 ```mermaid
@@ -47,8 +72,9 @@ The site build keeps `agent-evolution.com` as the default public URL while still
 | Step | Owner Surface | Expected Result |
 |---|---|---|
 | Confirm GitHub Pages custom domain is exactly `agent-evolution.com` | GitHub repo Settings -> Pages | Pages domain matches CNAME. |
-| Wait for / re-request GitHub Pages certificate | GitHub repo Settings -> Pages | Certificate covers `agent-evolution.com`; Enforce HTTPS becomes available. |
-| Enable Enforce HTTPS | GitHub repo Settings -> Pages | `http://agent-evolution.com/*` redirects to `https://agent-evolution.com/*`. |
+| Wait for / re-request GitHub Pages certificate | GitHub repo Settings -> Pages | Certificate covers `agent-evolution.com`; `gh api .../pages` shows a non-null `https_certificate`. |
+| Enable Enforce HTTPS | GitHub repo Settings -> Pages | `https_enforced=true`; `http://agent-evolution.com/*` redirects to `https://agent-evolution.com/*`. |
+| Run all-pages audit | Local site build | `(cd site && npm run build && npm run seo:audit)` passes and sitemap has 388 URLs. |
 | Submit sitemap | Google Search Console domain property | Submit `https://agent-evolution.com/sitemap-index.xml`. |
 | Inspect canonical page, not fragment | Google URL Inspection | Use `https://agent-evolution.com/graph/`, not `https://agent-evolution.com/graph/#coverage-debt`. |
 | Request validation | Google Search Console indexing reports | Re-run validation after HTTPS passes live test. |
@@ -57,3 +83,4 @@ The site build keeps `agent-evolution.com` as the default public URL while still
 
 - Google Search Central: canonicalization uses signals such as HTTPS, redirects, sitemap inclusion, and `rel=canonical`: <https://developers.google.com/search/docs/crawling-indexing/canonicalization>
 - Google Search Central: do not specify URL fragments as canonicals; sitemap URLs are canonical hints: <https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls>
+- GitHub Docs: custom-domain HTTPS can take time after configuration, and removing/re-adding the custom domain may trigger HTTPS provisioning after DNS changes: <https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/troubleshooting-custom-domains-and-github-pages>

@@ -1,6 +1,6 @@
 # User Direct Inputs Reference
 
-> Last updated: 2026-05-30. This file extracts direct user inputs only. Do not add team instructions, subagent summaries, tool outputs, assistant summaries, or inferred project state as user input.
+> Last updated: 2026-06-01. This file extracts direct user inputs only. Do not add team instructions, subagent summaries, tool outputs, assistant summaries, or inferred project state as user input.
 
 ## L1
 
@@ -16,6 +16,9 @@
 6. 不符合四层构成的材料也要先归类、查引用、索引化，不要直接删除。
 7. 定时任务和每次迭代都要形成闭环：主动更新相关 README、网站和索引，并主动提交本轮改动。
 8. 新增 `agent-swarm` / `agent-swarm evolve` 作为 multi-agent / harness 下面的一个内容部分，纳入 README、分析、wiki 和网站入口。
+9. GitHub 项目排序不能再把累计 Star 当成主要价值信号；要挖掘全量项目历史 star 数据，重点看 2026 新增 Star / 当前阶段增长，并形成可发布到 Hugging Face 的数据库。
+10. i18n 是网站和公开内容的核心完成项；AGENTS 和 CLOUD 必须把双语支持写成严格约束。
+11. 建立新的价值分类体系：用离散 LSH 遍历比较所有项目、paper、X/social、GitHub 素材，并把 Mom Test 访谈关注度、分类方法、语言/embedding/gbrain/TSNE 等信号作为 facet 来源。
 
 ## High-Priority User Requirements
 
@@ -32,6 +35,9 @@
 | 9 | 非四层材料先归类，不要乱删 | `不符合这些构成的素材怎么归类和清理一下？尽量怎样归类不要乱删` |
 | 10 | 每次修改都要关联更新网站/主页/相关分析并同步 GitHub | `每次修改的时候都要去关联修改 网站、主页、其他方向的分析以及与之对应的内容、修改后 完成 github 同步` |
 | 11 | 增加 agent-swarm / agent-swarm evolve 部分 | `增加 一部分 去做 agent-swarm` / `增加一部分去做 agent-swarm evolve` |
+| 12 | 建立 GitHub star-history 数据库，按 2026 新增 Star / 当前增长重排项目价值 | `Star没有意义，因为他只是一个历史累计的过程。... 2026年的这个项目是不是在当前阶段的时候。... 形成一个数据库。这个data可以放到HF上。` |
+| 13 | 核心完成 i18n，并把网页/公开内容双语约束写入 AGENTS 和 CLOUD | `核心完成 i18N !!! 对于网页，对于所有东西都需要去严格的约束起来，写到Agents和Cloud的MD当中，这个作为我们需要去约束的双语支持。` |
+| 14 | 用 value facet + LSH + embedding/graph 建立新的分类与聚类体系 | `Compare is anything... LSH局部哈希索引... 无数无数的标签... 把这些项目分成负一和一... 所有的paper、AX以及Gitup项目，都可以用这个方式来进行扫描。` / `新的分类体系` / `openai 的embedding... 三维的graph... TSNE` / `Mom Test... facet维度也就变成了LSH的每一次判别用的维度` |
 
 ## Exact Recent Workspace Inputs
 
@@ -81,6 +87,30 @@ OK，然后用户的输入你得提取出来，然后作为Agent和Claude里边�
 增加一部分去做 agent-swarm evolve
 ```
 
+```text
+Star没有意义，因为他只是一个历史累计的过程。 Star新的新增Star的增长，这样其实最重要的是需要看的是2026年的这个项目是不是在当前阶段的时候。 未来需要制作的是关于这些所有的GitHub project的历史数据挖掘。 这个非常重要，要形成一个数据库。 这个data可以放到HF上。
+```
+
+```text
+核心完成 i18N !!! 对于网页，对于所有东西都需要去严格的约束起来，写到Agents和Cloud的MD当中，这个作为我们需要去约束的双语支持。
+```
+
+```text
+核心来说，对于这些素材里边，谁是好的，谁是坏的，谁有价值，谁没有价值，现在的评价并没有遍历，并没有对比出来。 Compare is anything... LSH局部哈希索引... 无数无数的标签... 把这些项目分成负一和一... 所有的paper、AX以及Gitup项目，都可以用这个方式来进行扫描... 做成定时任务... 增量的处理方式需要考虑。
+```
+
+```text
+是一个新的分类体系。
+```
+
+```text
+然后我们可以为这个新的分类体系结合。 gbreain 以及 对其内容进行 openai 的embeddinG... 展示可以用一种三维的graph的形式展示... 降维和聚类就可以使用。 TSNE
+```
+
+```text
+从用户访谈中的关注度去获取。我们用这个Ask the mom test这个方式去获得的访谈。它就可以得到了各种facet维度，这个facet维度也就变成了LSH的每一次判别用的维度。
+```
+
 ## Longer Historical Goal Signals
 
 这些输入已经在 [../../CURRENT_GOAL.md](../../CURRENT_GOAL.md) 中保留完整列表。AGENTS/CLAUDE 执行时优先读本文件的近期目标，再回到 CURRENT_GOAL 查看更长历史。
@@ -94,6 +124,8 @@ OK，然后用户的输入你得提取出来，然后作为Agent和Claude里边�
 - 输出要分层：一句话、三句话、五句话、完整展开。
 - 自动化和人工迭代都要闭环：相关 README、网站、索引更新后主动提交；没有可提交变化也要明确说明。
 - 增加 agent-swarm / agent-swarm evolve 部分，并把它接入分析、README、wiki 和网站。
+- 建立 GitHub star-history / new-star growth 数据库，把累计 Star 降为历史 adoption prior，重点看 2026 新增 Star、当前增长和覆盖完整性，并预留 Hugging Face dataset 发布路径。
+- 核心完成 i18n：公开网站、README、SEO 页面、论文页、项目入口和 metadata 都要有中文默认入口与英文镜像约束，并写入 AGENTS/CLOUD。
 
 ## Agent Usage Rule
 

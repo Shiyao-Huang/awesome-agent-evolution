@@ -39,6 +39,7 @@
 - **Audience boundary**: README、网站首页、论文页和 SEO 内容是给外部读者/消费者看的，不是 agent 操作手册。不要把启动检查、内部构建命令、agent wiki 流程、handoff 规则或自我系统说明写进 README 主体；这些规则进入 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md` 或 `docs/ops/`。
 - **Consumer-facing README**: README 只回答读者关心的问题：这个项目是什么、为什么重要、核心结论是什么、证据在哪里、下一步读什么。内部维护规则可以链接到 agent/cloud 手册，但不要占据 README 叙事。
 - **Workflow split**: 具体分界见 [docs/ops/audience-boundary-workflow.md](docs/ops/audience-boundary-workflow.md)。公开页出现 `Workflow A/B`、`CLAUDE.md Iron Rules`、handoff、启动检查、内部构建命令等词时，优先改写成读者能理解的证据边界，并把操作细节移到 ops。
+- **Bilingual public surface**: 网站、README、论文页、SEO/topic/blog 入口和发布 metadata 必须按中英双语治理；中文 `zh-CN` 是默认读者入口，英文是同证据链镜像，不允许用英文替换、稀释或删除中文叙事。
 
 ## Website Style Lock
 
@@ -51,12 +52,22 @@
 - 改网页风格前，必须先跑 `git diff 3fd1785 -- site/src/styles/global.css site/src/pages/index.astro site/src/pages/graph/index.astro site/src/layouts/BaseLayout.astro site/src/data/site.ts`，说明为什么要偏离基准。
 - 改完网页必须验证桌面和移动端；至少跑 `(cd site && npm run build)`，并检查首页与 `/graph/` 在约 390px 移动视口没有横向溢出。
 
+## Bilingual i18n Lock
+
+用户当前要求“核心完成 i18N”，因此双语不是可选翻译任务，而是网站发布和公开内容的硬约束。
+
+- **默认语言**：公开网站默认入口、导航、首页叙事和 metadata 保持中文 `zh-CN`；英文内容必须作为镜像或辅助入口存在，不能把中文入口替换成英文。
+- **同证据链**：`README.md` / `README-EN.md`、网站首页、论文页、topic/SEO 页、blog/research/project 入口、`site/src/data/site.ts` metadata 必须表达同一组核心判断、证据入口和限制；英文可以本地化表达，但不能增加无来源承诺或删掉关键证据边界。
+- **新增页面规则**：任何新增或大改的 public-facing 页面，必须同时检查中文 copy、英文入口/摘要、SEO title/description、canonical URL、alternate/hreflang 和站内互链；暂不能完成英文镜像时，必须在 `docs/ops/CLOUD.md` 的发布风险或相关索引中记录缺口，不得静默发布为“已完成 i18n”。
+- **内部/外部分离**：双语页面仍然面向读者，不写 agent 启动检查、handoff、构建命令或内部 workflow；这些内容只进入 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md`、`docs/ops/` 和 wiki。
+- **发布验证**：网页或 metadata 的 i18n 改动至少执行 `node scripts/generate_project_indexes.mjs` 和 `(cd site && npm run build)`；发布前用 `rg -n "TODO i18n|EN-PENDING|未翻译|待翻译|TODO: translate" README.md README-EN.md site/src docs/seo` 检查双语缺口，并汇报结果。
+
 ## Persistence Rule
 
 恢复历史版本、修复样式回退、写入 AGENTS/CLAUDE/CLOUD 或做任何用户明确要求“保留”的改动后，不要让成果只停留在未提交工作区。
 
 - 在执行 `git reset`、`git restore`、`git checkout`、`git clean`、生成索引或大范围脚本前，先跑 `git status --short` 和相关 `git diff --name-status`，确认不会覆盖刚恢复的网页、graph、i18n 或手册改动。
-- 如果改动还不能提交，先生成可恢复补丁：`git diff -- AGENTS.md CLAUDE.md site/src/styles/global.css site/src/pages/index.astro site/src/pages/graph/index.astro site/src/layouts/BaseLayout.astro site/src/data/site.ts > work/recovery-style-lock.patch`。
+- 如果改动还不能提交，先生成可恢复补丁：`git diff -- AGENTS.md CLAUDE.md CLOUD.md docs/ops/CLOUD.md site/src/styles/global.css site/src/pages/index.astro site/src/pages/graph/index.astro site/src/layouts/BaseLayout.astro site/src/data/site.ts > work/recovery-style-lock.patch`。
 - 当用户要求“写入”“持久”“别丢”时，优先建议或创建一个 checkpoint commit；没有提交前，最终汇报必须明确说明这些改动仍可能被 reset 清掉。
 - 任何 reset 后发现丢失，先查 `git reflog --date=iso -20`、`git diff 3fd1785 -- ...` 和本地 `work/*.patch`，再恢复，不要重新设计。
 
@@ -74,12 +85,16 @@
 | 6 | `用户的输入你得提取出来，然后作为Agent和Claude里边的参考。` | AGENTS/CLAUDE 必须链接并使用 [docs/project-management/user-direct-inputs.md](docs/project-management/user-direct-inputs.md)。 |
 | 7 | `找回昨天的那个版本，尤其是在graph的这个上修改的内容。注意 i18N 网页 15:00` | 网站风格和 graph 以 2026-05-25 15:05 附近版本为基准；任何 style/graph/i18n 改动必须先对照历史。 |
 | 8 | `持久建议放入 agent claude ，md` | 用户要求保留的恢复规则必须写入 AGENTS/CLAUDE，并在 reset 前先保存补丁或 checkpoint。 |
+| 9 | `Star没有意义，因为他只是一个历史累计的过程...2026年的这个项目是不是在当前阶段...形成一个数据库...data可以放到HF上` | GitHub 项目排名必须优先看 2026 新增 Star、recent velocity、覆盖完整性和证据质量；累计 Star 只能作为历史 adoption prior。 |
+| 10 | `核心完成 i18N !!! ... 写到Agents和Cloud的MD当中 ... 约束的双语支持。` | i18n 是 public site/README/SEO/metadata 的硬发布门禁；AGENTS 和 CLOUD 必须约束中文默认入口、英文镜像、canonical/alternate、SEO 和验证。 |
 
 开始工作前自问三句：
 
 1. 这次任务对应哪条用户原话？
 2. 产物属于 raw、processed、work、results、ops 的哪一层？
 3. 完成后要更新哪个索引、论文、网站或结果文件？
+4. 如果涉及 GitHub 项目排名，是否已经区分累计 Star 与 2026/new-star growth，并标注 star-history 覆盖状态？
+5. 如果涉及公开网站、README、SEO、论文页或 metadata，是否同步检查了中文默认入口、英文镜像、canonical/alternate 和双语缺口？
 
 研究任务开始前额外检查 wiki：
 
@@ -244,3 +259,47 @@ rg -n "old/path/or/file" -g '!*node_modules*' -g '!site/dist/**'
 - 不把生成结果当唯一事实源。
 - 不移动外部仓库镜像里的文件来满足本项目治理。
 - 不破坏当前论文、网站和脚本构建链。
+
+<!-- gitnexus:start -->
+# GitNexus — Code Intelligence
+
+This project is indexed by GitNexus as **awesome-evolution-workspace-cleanup** (26879 symbols, 31401 relationships, 158 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+
+> If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
+
+## Always Do
+
+- **MUST run impact analysis before editing any symbol.** Before modifying a function, class, or method, run `gitnexus_impact({target: "symbolName", direction: "upstream"})` and report the blast radius (direct callers, affected processes, risk level) to the user.
+- **MUST run `gitnexus_detect_changes()` before committing** to verify your changes only affect expected symbols and execution flows.
+- **MUST warn the user** if impact analysis returns HIGH or CRITICAL risk before proceeding with edits.
+- When exploring unfamiliar code, use `gitnexus_query({query: "concept"})` to find execution flows instead of grepping. It returns process-grouped results ranked by relevance.
+- When you need full context on a specific symbol — callers, callees, which execution flows it participates in — use `gitnexus_context({name: "symbolName"})`.
+
+## Never Do
+
+- NEVER edit a function, class, or method without first running `gitnexus_impact` on it.
+- NEVER ignore HIGH or CRITICAL risk warnings from impact analysis.
+- NEVER rename symbols with find-and-replace — use `gitnexus_rename` which understands the call graph.
+- NEVER commit changes without running `gitnexus_detect_changes()` to check affected scope.
+
+## Resources
+
+| Resource | Use for |
+|----------|---------|
+| `gitnexus://repo/awesome-evolution-workspace-cleanup/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/awesome-evolution-workspace-cleanup/clusters` | All functional areas |
+| `gitnexus://repo/awesome-evolution-workspace-cleanup/processes` | All execution flows |
+| `gitnexus://repo/awesome-evolution-workspace-cleanup/process/{name}` | Step-by-step execution trace |
+
+## CLI
+
+| Task | Read this skill file |
+|------|---------------------|
+| Understand architecture / "How does X work?" | `.claude/skills/gitnexus/gitnexus-exploring/SKILL.md` |
+| Blast radius / "What breaks if I change X?" | `.claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md` |
+| Trace bugs / "Why is X failing?" | `.claude/skills/gitnexus/gitnexus-debugging/SKILL.md` |
+| Rename / extract / split / refactor | `.claude/skills/gitnexus/gitnexus-refactoring/SKILL.md` |
+| Tools, resources, schema reference | `.claude/skills/gitnexus/gitnexus-guide/SKILL.md` |
+| Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
+
+<!-- gitnexus:end -->

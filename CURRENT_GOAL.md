@@ -1,6 +1,6 @@
 # Current Goal From Direct User Inputs
 
-Last updated: 2026-05-30
+Last updated: 2026-06-01
 
 ## Precision Rule
 
@@ -48,6 +48,9 @@ Inference is allowed only after the exact direct user inputs are separated first
 - 对不符合四层构成的材料，先查引用、归入 support/compatibility/mirrors/local/needs-review 等类别并更新索引；默认不要乱删。
 - 每次定时任务或人工迭代结束前，主动更新受影响的 README、i18n、网站、索引和发布面，并提交本轮相关改动。
 - 新增 `agent-swarm` / `agent-swarm evolve` 作为 multi-agent / harness 下面的内容部分：把 swarm 组织结构、角色、拓扑、共享状态、验证器、handoff 和 lineage 纳入 README、wiki、分析和网站。
+- 把 GitHub 项目价值排序从“累计 Star”升级到“2026 新增 Star / 当前增长 / 覆盖完整性”的历史数据挖掘数据库；累计 Star 只作为历史 adoption prior，star-history 数据要能沉淀为 Hugging Face dataset。
+- 核心完成 i18n：把网站、README、SEO 页面、论文页、项目入口和 metadata 的双语支持写成 AGENTS/CLOUD 级别的硬约束。
+- 建立新的 value-facet 分类体系：用离散 LSH 把所有 GitHub、paper、X/social、blog 素材按 `-1/0/+1` 价值维度遍历比较，并用 Mom Test 访谈、机制分类、语言/embedding/gbrain、PCA/TSNE/3D graph 作为可迭代的 facet 和聚类来源。
 
 ## High-Priority Threads
 
@@ -58,6 +61,9 @@ Inference is allowed only after the exact direct user inputs are separated first
 - 产品性判断：每个项目要标明是否能运行、是否有文档、是否有真实用户价值、成熟度和开源增长潜力。
 - 网站体验：参考 `http://x.mitbunny.ai`，考虑 React/GSAP/知识图谱动画，但服务于信息理解，不做空洞视觉。
 - Agent-swarm evolve：把 CORAL、GPTSwarm、metaswarm、swarmclaw、OpenClaw Multi-Agent Team、Insight Swarm 等项目作为种子，分析 agent 组织结构如何随反馈进化。
+- GitHub star-history growth：为所有 GitHub project 建立 stargazer history / monthly growth 数据库，优先跑 strict evolution 和 frontier queue，输出 2026 new-star rank、recent velocity、coverage status，并准备 Hugging Face 发布。
+- Value LSH classification：把“谁好/谁坏/谁有价值/谁没有价值”从主观 ranking 变成可复跑 value matrix；facet 来源包括 Mom Test 访谈关注度、机制分类、证据链、语言信号、OpenAI embedding/gbrain 语义图和 TSNE/3D 聚类。
+- Bilingual i18n gates：中文 `zh-CN` 保持默认入口，英文作为同证据链镜像；public site/README/SEO metadata 变更必须同步检查 canonical/alternate 和双语缺口。
 
 ## Operating Style
 
@@ -116,6 +122,8 @@ Inference is allowed only after the exact direct user inputs are separated first
 - `修改定时任务 、注意每次迭代后都要主动提交 、主动更新 相关的 readme 、相关的 网站、`
 - `增加 一部分 去做 agent-swarm`
 - `增加一部分去做 agent-swarm evolve`
+- `Star没有意义，因为他只是一个历史累计的过程。 Star新的新增Star的增长，这样其实最重要的是需要看的是2026年的这个项目是不是在当前阶段的时候。 未来需要制作的是关于这些所有的GitHub project的历史数据挖掘。 这个非常重要，要形成一个数据库。 这个data可以放到HF上。`
+- `核心完成 i18N !!! 对于网页，对于所有东西都需要去严格的约束起来，写到Agents和Cloud的MD当中，这个作为我们需要去约束的双语支持。`
 
 ## Source Boundary And Redaction Note
 

@@ -18,6 +18,7 @@ Claude/Claude Code 在本仓库工作时，以 [AGENTS.md](AGENTS.md) 为最高�
 
 - 用分层表达输出判断：1 句话、3 句话、5 句话、完整论证。
 - 对论文和项目分析，优先补”数据从哪来、分析了哪些、进化相关有哪些、时间顺序如何”。
+- 对 GitHub 项目排名，禁止把累计 Star 当作主要价值信号；优先查 `analysis/github-star-growth-ranking.md`、`data-engine/github-star-history/` 和覆盖状态，用 2026 新增 Star / recent velocity 判断当前阶段动量。
 - 对网站内容，优先保证 SEO title/description、静态可构建、public reports 可访问。
 - 对项目卡，使用 model-card 类结构：任务、方法、证据、局限、适用场景、教学价值。
 - **图表优先**：当图表比文字更容易表达时，必须使用 Mermaid DAG、SVG 或数据可视化，不要只写文字。
@@ -189,3 +190,47 @@ node scripts/generate-wiki-index.mjs
 ## Handoff
 
 交接时只写当前状态、验证结果、剩余风险和下一步，不重述无关历史。长期信息写入 `docs/` 或生成索引，不依赖对话记忆。
+
+<!-- gitnexus:start -->
+# GitNexus — Code Intelligence
+
+This project is indexed by GitNexus as **awesome-evolution-workspace-cleanup** (26879 symbols, 31401 relationships, 158 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+
+> If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
+
+## Always Do
+
+- **MUST run impact analysis before editing any symbol.** Before modifying a function, class, or method, run `gitnexus_impact({target: "symbolName", direction: "upstream"})` and report the blast radius (direct callers, affected processes, risk level) to the user.
+- **MUST run `gitnexus_detect_changes()` before committing** to verify your changes only affect expected symbols and execution flows.
+- **MUST warn the user** if impact analysis returns HIGH or CRITICAL risk before proceeding with edits.
+- When exploring unfamiliar code, use `gitnexus_query({query: "concept"})` to find execution flows instead of grepping. It returns process-grouped results ranked by relevance.
+- When you need full context on a specific symbol — callers, callees, which execution flows it participates in — use `gitnexus_context({name: "symbolName"})`.
+
+## Never Do
+
+- NEVER edit a function, class, or method without first running `gitnexus_impact` on it.
+- NEVER ignore HIGH or CRITICAL risk warnings from impact analysis.
+- NEVER rename symbols with find-and-replace — use `gitnexus_rename` which understands the call graph.
+- NEVER commit changes without running `gitnexus_detect_changes()` to check affected scope.
+
+## Resources
+
+| Resource | Use for |
+|----------|---------|
+| `gitnexus://repo/awesome-evolution-workspace-cleanup/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/awesome-evolution-workspace-cleanup/clusters` | All functional areas |
+| `gitnexus://repo/awesome-evolution-workspace-cleanup/processes` | All execution flows |
+| `gitnexus://repo/awesome-evolution-workspace-cleanup/process/{name}` | Step-by-step execution trace |
+
+## CLI
+
+| Task | Read this skill file |
+|------|---------------------|
+| Understand architecture / "How does X work?" | `.claude/skills/gitnexus/gitnexus-exploring/SKILL.md` |
+| Blast radius / "What breaks if I change X?" | `.claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md` |
+| Trace bugs / "Why is X failing?" | `.claude/skills/gitnexus/gitnexus-debugging/SKILL.md` |
+| Rename / extract / split / refactor | `.claude/skills/gitnexus/gitnexus-refactoring/SKILL.md` |
+| Tools, resources, schema reference | `.claude/skills/gitnexus/gitnexus-guide/SKILL.md` |
+| Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
+
+<!-- gitnexus:end -->
